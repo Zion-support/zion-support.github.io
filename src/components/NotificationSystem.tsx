@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -23,6 +24,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 export type NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achievement';
 
 export interface Notification {
+
   id: string;
   type: NotificationType;
   title: string;
@@ -48,6 +50,7 @@ interface NotificationSystemProps extends React.PropsWithChildren<{}> {
   defaultDuration?: number}
 
 interface NotificationSettings {
+
   sound: boolean;
   vibration: boolean;
   autoDismiss: boolean;
@@ -81,16 +84,19 @@ enableSound:  true,;
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect ( () => {
+
     if (settings.sound) {
 
       audioRef.current = new Audio('/notification-sound.mp3'); // You can add a custom sound file
       audioRef.current.volume = 0.3}}, [settings.sound]) ;
   // Update unread count
   useEffect ( () => {
+
     setUnreadCount (notifications.filter (n => !n.read) .length) }, [notifications]) ;
 
   // Auto - dismiss notifications
   useEffect ( () => {
+
     if (!settings.autoDismiss) return;
 
     const timeouts: NodeJS.Timeout[] = [];
@@ -99,19 +105,19 @@ enableSound:  true,;
 
       if (notification.duration !== 0) {
 
-        
         }, notification.duration || settings.defaultDuration);
         timeouts.push(timeout)}
     }) ;
     return () => {
+
       timeouts.forEach (timeout => clearTimeout (timeout) ) }}, [notifications, settings.autoDismiss, settings.defaultDuration]) ;
 
   // Play notification sound'
-        // // // // // // // // console.warn('Could not play notification sound:', error)}    }
+        // // // // // // // // // // // console.warn('Could not play notification sound:', error)}    }
   }, [settings.sound]) ;
 
   // Trigger vibration'
-        // // // // // // // // console.warn('Could not trigger vibration:', error)}    }
+        // // // // // // // // // // // console.warn('Could not trigger vibration:', error)}    }
   }, [settings.vibration]) ;
 
   // Add notification'
@@ -194,6 +200,7 @@ enableSound:  true,;
   // Expose addNotification method globally for external use
   useEffect ( () => { (window as) .addNotification = addNotification;
     return () => {
+
       delete (window as) .addNotification}}, [addNotification]) ;
 
   return()
@@ -386,6 +393,7 @@ enableSound:  true,;
 }}
                       layout
                       className = {
+
 `
   `p-4 rounded-xl ${getNotificationStyles(notification.type,;
   notification.priority)
@@ -436,6 +444,7 @@ enableSound:  true,;
                               {notification.action && (
                                 <button
                                   onClick={() => {
+
                                     notification.action!.onClick();
                                     markAsRead(notification.id)}}"                                  className = "text-xs px-2 py-1 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded transition-colors"
                                 >
@@ -495,6 +504,7 @@ export
   },
 
   error: (title: string, message: string, options?: Partial<Notification>) => {
+
     if ((window as ).addNotification) {
 
       (window as ).addNotification({
@@ -508,6 +518,7 @@ export
   },
 
   info: (title: string, message: string, options?: Partial<Notification>) => {
+
     if ((window as ).addNotification) {
 
       (window as ).addNotification({
@@ -521,6 +532,7 @@ export
   },
 
   achievement: (title: string, message: string, options?: Partial<Notification>) => {
+
     if ((window as ).addNotification) {
 
       (window as ).addNotification({

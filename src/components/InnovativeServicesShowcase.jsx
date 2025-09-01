@@ -20,6 +20,7 @@ const InnovativeServicesShowcase = () => {
         { id: 'ai', name: 'AI Services', count: innovativeAIServices2025.length }
     ];
     const getServicesByTab = () => {
+
         switch (activeTab) {
 
             case 'microsaas':
@@ -35,6 +36,7 @@ const InnovativeServicesShowcase = () => {
 
         setSelectedService(service)};
     const closeModal = () => {
+
         setSelectedService(null)};"
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}"

@@ -6,9 +6,12 @@ import { motion } from 'framer-motion';
   outputPath: './public / sitemap.xml',
 =======
 export class SitemapGenerator {
+
     config;
     constructor(config) {
+
         this.config = {
+
 <<<<<<< HEAD
             outputPath: './public/sitemap.xml',
             ...config
@@ -31,6 +34,7 @@ export class SitemapGenerator {
      * Generate XML sitemap content
      */
     generateXML() {
+
         const { baseUrl, urls } = this.config;
 <<<<<<< HEAD
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>;
@@ -59,6 +63,7 @@ export class SitemapGenerator {
      * Generate sitemap index for large sites
      */
     generateIndex(sitemaps) {
+
 <<<<<<< HEAD
 '"
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>;
@@ -66,6 +71,7 @@ export class SitemapGenerator {
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
         const sitemapElements = sitemaps.map(sitemap => {
+
 `
             return `<sitemap>
         <loc>${sitemap}</loc>
@@ -82,6 +88,7 @@ export class SitemapGenerator {
      * Generate robots.txt content
      */
     generateRobotsTxt() {
+
         const { baseUrl } = this.config;`
         return `User-agent: *
 Allow: /
@@ -91,6 +98,7 @@ Sitemap: ${baseUrl}/sitemap.xml
 
 <<<<<<< HEAD
   const generateSitemap = async () => {
+
     setIsGenerating (true) ;
 
 =======
@@ -117,10 +125,13 @@ Crawl-delay: 1`;
      * Generate JSON sitemap for JavaScript applications
      */
     generateJSON() {
+
         const { baseUrl, urls } = this.config;
         const jsonSitemap = {
+
   baseUrl,
             urls: urls.map(url => ({
+
                 ...url,
   fullUrl: `${baseUrl
 
@@ -134,6 +145,7 @@ Crawl-delay: 1`;
      * Generate HTML sitemap for users
      */
     generateHTML() {
+
         const { baseUrl, urls } = this.config;
         const html = `<!DOCTYPE html>
 <html lang="en">
@@ -173,11 +185,13 @@ Crawl-delay: 1`;
                   `).join('')}
 =======
   const generateSitemap = async () => {
+
     setIsGenerating(true);
     
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
     // Simulate sitemap generation
     setTimeout ( () => {
+
       const sitemap = {
 
   pages: ['
@@ -295,7 +309,7 @@ Crawl-delay: 1`;
                 <span className="font-medium">Generated:</span> {new Date(sitemapData.generatedAt).toLocaleDateString()}
               </div>
 <<<<<<< HEAD
-        // // // // // // // // console.error('Error generating sitemaps:', error);
+        // // // // // // // // // // // console.error('Error generating sitemaps:', error);
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
@@ -352,6 +366,7 @@ Crawl-delay: 1`;
 
 // Default sitemap configuration for Zion Tech Group
 export const defaultSitemapConfig = {
+
   baseUrl: 'https://ziontechgroup.com',
     urls: [
         // Main pages
@@ -399,6 +414,7 @@ export const defaultSitemapConfig = {
 // Utility function to generate all sitemap files
 export const generator = new SitemapGenerator(config);
     try {
+
         // Generate XML sitemap
         const xmlSitemap = generator.generateXML();
         // Generate robots.txt
@@ -408,6 +424,7 @@ export const generator = new SitemapGenerator(config);
         // Generate JSON sitemap
         const jsonSitemap = generator.generateJSON();
         return {
+
             xml: xmlSitemap,
             robots: robotsTxt,
             html: htmlSitemap,
@@ -415,10 +432,11 @@ export const generator = new SitemapGenerator(config);
         };
 
     catch (error) {
+
 <<<<<<< HEAD
-        // // // console.error('Error generating sitemaps:', error);
+        // // // // // // console.error('Error generating sitemaps:', error);
 =======
-        // // // // // // // console.error('Error generating sitemaps:', error);
+        // // // // // // // // // // console.error('Error generating sitemaps:', error);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
         throw error;

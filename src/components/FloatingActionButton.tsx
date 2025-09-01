@@ -35,6 +35,7 @@ interface FloatingAction {
   priority: 'high' | 'medium' | 'low'}
 
 interface FloatingActionButtonProps {
+
   actions?: FloatingAction[];
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
   theme?: 'light' | 'dark' | 'auto';
@@ -60,7 +61,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
     if (theme === 'auto') {
 
-      
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')};
       '
       mediaQuery.addEventListener('change', handleChange);
@@ -71,7 +71,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
   // Show scroll to top button when scrolled down
   useEffect ( () => {
-    
+
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -88,7 +88,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         label: 'Contact Us',
         action: () => {
 
-          
           if (contactSection) {
 
             contactSection.scrollIntoView({ behavior: 'smooth' })}
@@ -139,6 +138,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         icon: Bookmark,
         label: 'Bookmark Page',
         action: () => {
+
           if (navigator.share) {
 
             navigator.share({
@@ -150,6 +150,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             // Fallback for browsers without share API
             
             navigator.clipboard.writeText(url).then(() => {
+
               // Show success message'
               showNotification('Page URL copied to clipboard!')})}
         },
@@ -162,6 +163,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         icon: Share2,
         label: 'Share Page',
         action: () => {
+
           if (navigator.share) {
 
             navigator.share({
@@ -185,6 +187,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         icon: Download,
         label: 'Download Brochure',
         action: () => {
+
           // Create a temporary link to trigger download'
           
           link.href = '/brochure.pdf'; // Adjust path as needed'
@@ -201,6 +204,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         icon: Printer,
         label: 'Print Page',
         action: () => {
+
           window.print()},
         color: 'bg-gray-500 hover:bg-gray-600',
         priority: 'low' as const
@@ -243,6 +247,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
       notification.classList.add('translate-x-full');
       setTimeout(() => {
+
         document.body.removeChild(notification)}, 300)}, 3000)}, []);
 
   // Get position classes
@@ -276,6 +281,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                     hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50`
                   `}
                   style={{
+
 `
                     animationDelay: `${index * 100}ms`,
                     animation: 'slideInUp 0.3s ease-out forwards'
@@ -357,11 +363,13 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     </>) ;
 =======
 type FloatingActionButtonProps = {
+
   enabled?: boolean;
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 };
 
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {
+
   const [open, setOpen] = useState(false);
   if (!enabled) return null;
   return (

@@ -1,10 +1,24 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { 
-  Brain, Zap, Rocket, Shield, Globe, Cpu, 
-  ArrowRight, ExternalLink, Check, Star,
-  TrendingUp, Users, Clock, DollarSign, Phone, Mail, MapPin
+import {
+  Brain,
+  Zap,
+  Rocket,
+  Shield,
+  Globe,
+  Cpu,
+  ArrowRight,
+  ExternalLink,
+  Check,
+  Star,
+  TrendingUp,
+  Users,
+  Clock,
+  DollarSign,
+  Phone,
+  Mail,
+  MapPin,
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { innovativeAIServices } from '../data/innovative-ai-services';
@@ -16,7 +30,7 @@ export default function InnovativeServicesShowcase() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com',
   };
 
   const containerVariants = {
@@ -25,9 +39,9 @@ export default function InnovativeServicesShowcase() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -37,9 +51,9 @@ export default function InnovativeServicesShowcase() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut" as const
-      }
-    }
+        ease: 'easeOut' as const,
+      },
+    },
   };
 
   const ServiceCard = ({ service, index }: { service: any; index: number }) => (
@@ -63,12 +77,16 @@ export default function InnovativeServicesShowcase() {
 
       {/* Service Content */}
       <div className="p-6">
-        <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-        
+        <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+          {service.description}
+        </p>
+
         {/* Price */}
         <div className="flex items-center justify-between mb-4">
           <div>
-            <span className="text-2xl font-bold text-white">{service.price}</span>
+            <span className="text-2xl font-bold text-white">
+              {service.price}
+            </span>
             <span className="text-gray-400">{service.period}</span>
           </div>
           <div className="text-right">
@@ -76,7 +94,9 @@ export default function InnovativeServicesShowcase() {
               <Star className="w-4 h-4 mr-1 fill-current" />
               {service.rating}
             </div>
-            <div className="text-gray-400 text-xs">{service.reviews} reviews</div>
+            <div className="text-gray-400 text-xs">
+              {service.reviews} reviews
+            </div>
           </div>
         </div>
 
@@ -84,12 +104,17 @@ export default function InnovativeServicesShowcase() {
         <div className="mb-4">
           <h4 className="text-white font-semibold mb-2">Key Features:</h4>
           <ul className="space-y-1">
-            {service.features.slice(0, 5).map((feature: string, idx: number) => (
-              <li key={idx} className="flex items-center text-gray-300 text-sm">
-                <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                {feature}
-              </li>
-            ))}
+            {service.features
+              .slice(0, 5)
+              .map((feature: string, idx: number) => (
+                <li
+                  key={idx}
+                  className="flex items-center text-gray-300 text-sm"
+                >
+                  <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                  {feature}
+                </li>
+              ))}
           </ul>
         </div>
 
@@ -98,11 +123,15 @@ export default function InnovativeServicesShowcase() {
           <div className="grid grid-cols-2 gap-2 text-xs">
             <div>
               <span className="text-gray-400">Market Size:</span>
-              <div className="text-cyan-400 font-semibold">{service.marketSize}</div>
+              <div className="text-cyan-400 font-semibold">
+                {service.marketSize}
+              </div>
             </div>
             <div>
               <span className="text-gray-400">Growth Rate:</span>
-              <div className="text-green-400 font-semibold">{service.growthRate}</div>
+              <div className="text-green-400 font-semibold">
+                {service.growthRate}
+              </div>
             </div>
           </div>
         </div>
@@ -110,7 +139,9 @@ export default function InnovativeServicesShowcase() {
         {/* ROI */}
         <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-lg p-3 mb-4 border border-green-500/20">
           <div className="text-center">
-            <div className="text-green-400 font-semibold text-sm">Expected ROI</div>
+            <div className="text-green-400 font-semibold text-sm">
+              Expected ROI
+            </div>
             <div className="text-white font-bold">{service.roi}</div>
           </div>
         </div>
@@ -139,17 +170,38 @@ export default function InnovativeServicesShowcase() {
   );
 
   return (
-    <UltraAdvancedFuturisticBackground intensity={1.5} variant="quantum-holographic-advanced">
+    <UltraAdvancedFuturisticBackground
+      intensity={1.5}
+      variant="quantum-holographic-advanced"
+    >
       <div className="min-h-screen">
         <Head>
           <title>Innovative Services Showcase - Zion Tech Group</title>
-          <meta name="description" content="Discover our cutting-edge AI, IT, and micro SaaS services. Transform your business with revolutionary technology solutions." />
-          <meta name="keywords" content="AI services, IT services, micro SaaS, quantum computing, blockchain, cybersecurity, edge computing" />
-          <meta property="og:title" content="Innovative Services Showcase - Zion Tech Group" />
-          <meta property="og:description" content="Cutting-edge AI, IT, and micro SaaS services" />
-          <meta property="og:url" content="https://ziontechgroup.com/innovative-services-showcase" />
+          <meta
+            name="description"
+            content="Discover our cutting-edge AI, IT, and micro SaaS services. Transform your business with revolutionary technology solutions."
+          />
+          <meta
+            name="keywords"
+            content="AI services, IT services, micro SaaS, quantum computing, blockchain, cybersecurity, edge computing"
+          />
+          <meta
+            property="og:title"
+            content="Innovative Services Showcase - Zion Tech Group"
+          />
+          <meta
+            property="og:description"
+            content="Cutting-edge AI, IT, and micro SaaS services"
+          />
+          <meta
+            property="og:url"
+            content="https://ziontechgroup.com/innovative-services-showcase"
+          />
           <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/innovative-services-showcase" />
+          <link
+            rel="canonical"
+            href="https://ziontechgroup.com/innovative-services-showcase"
+          />
         </Head>
 
         {/* Hero Section */}
@@ -158,7 +210,7 @@ export default function InnovativeServicesShowcase() {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              transition={{ duration: 1, ease: 'easeOut' }}
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -167,15 +219,18 @@ export default function InnovativeServicesShowcase() {
                 <br />
                 <span className="text-white">Services Showcase</span>
               </h1>
-              
+
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Experience the future of technology with our revolutionary AI, IT, and micro SaaS services. 
-                Each solution is designed to transform your business and drive unprecedented growth.
+                Experience the future of technology with our revolutionary AI,
+                IT, and micro SaaS services. Each solution is designed to
+                transform your business and drive unprecedented growth.
               </p>
 
               {/* Contact Info */}
               <div className="bg-gray-900/50 backdrop-blur-xl rounded-2xl p-6 border border-gray-800 max-w-2xl mx-auto mb-12">
-                <h3 className="text-white font-semibold mb-4">Ready to Transform Your Business?</h3>
+                <h3 className="text-white font-semibold mb-4">
+                  Ready to Transform Your Business?
+                </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div className="flex items-center justify-center">
                     <Phone className="w-4 h-4 text-cyan-400 mr-2" />
@@ -187,7 +242,9 @@ export default function InnovativeServicesShowcase() {
                   </div>
                   <div className="flex items-center justify-center">
                     <MapPin className="w-4 h-4 text-pink-400 mr-2" />
-                    <span className="text-gray-300 text-xs">{contactInfo.address}</span>
+                    <span className="text-gray-300 text-xs">
+                      {contactInfo.address}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -207,11 +264,14 @@ export default function InnovativeServicesShowcase() {
             >
               <div className="flex items-center justify-center mb-4">
                 <Brain className="w-8 h-8 text-cyan-400 mr-3" />
-                <h2 className="text-4xl font-bold text-white">AI-Powered Services</h2>
+                <h2 className="text-4xl font-bold text-white">
+                  AI-Powered Services
+                </h2>
               </div>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Revolutionary AI solutions that leverage cutting-edge machine learning and neural networks 
-                to solve complex business challenges and unlock new opportunities.
+                Revolutionary AI solutions that leverage cutting-edge machine
+                learning and neural networks to solve complex business
+                challenges and unlock new opportunities.
               </p>
             </motion.div>
 
@@ -241,11 +301,14 @@ export default function InnovativeServicesShowcase() {
             >
               <div className="flex items-center justify-center mb-4">
                 <Cpu className="w-8 h-8 text-purple-400 mr-3" />
-                <h2 className="text-4xl font-bold text-white">Enterprise IT Solutions</h2>
+                <h2 className="text-4xl font-bold text-white">
+                  Enterprise IT Solutions
+                </h2>
               </div>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Next-generation IT infrastructure and security solutions designed for modern enterprises, 
-                featuring quantum computing, blockchain, and zero-trust security architectures.
+                Next-generation IT infrastructure and security solutions
+                designed for modern enterprises, featuring quantum computing,
+                blockchain, and zero-trust security architectures.
               </p>
             </motion.div>
 
@@ -275,11 +338,14 @@ export default function InnovativeServicesShowcase() {
             >
               <div className="flex items-center justify-center mb-4">
                 <Rocket className="w-8 h-8 text-pink-400 mr-3" />
-                <h2 className="text-4xl font-bold text-white">Micro SaaS Solutions</h2>
+                <h2 className="text-4xl font-bold text-white">
+                  Micro SaaS Solutions
+                </h2>
               </div>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Specialized software solutions that address specific business needs with AI-powered automation, 
-                smart contracts, and intelligent workflows designed for maximum efficiency and ROI.
+                Specialized software solutions that address specific business
+                needs with AI-powered automation, smart contracts, and
+                intelligent workflows designed for maximum efficiency and ROI.
               </p>
             </motion.div>
 
@@ -310,10 +376,11 @@ export default function InnovativeServicesShowcase() {
                 Ready to Experience the Future?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses already transforming their operations with our innovative services. 
-                Start your journey today and unlock unprecedented growth potential.
+                Join thousands of businesses already transforming their
+                operations with our innovative services. Start your journey
+                today and unlock unprecedented growth potential.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="/contact"
@@ -322,7 +389,7 @@ export default function InnovativeServicesShowcase() {
                   <Zap className="w-6 h-6 inline mr-2" />
                   Get Started Today
                 </a>
-                
+
                 <a
                   href="/pricing"
                   className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
@@ -334,7 +401,9 @@ export default function InnovativeServicesShowcase() {
 
               {/* Contact Details */}
               <div className="mt-12 bg-gray-900/50 backdrop-blur-xl rounded-2xl p-6 border border-gray-800">
-                <h3 className="text-white font-semibold mb-4">Contact Our Team</h3>
+                <h3 className="text-white font-semibold mb-4">
+                  Contact Our Team
+                </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div className="flex items-center justify-center">
                     <Phone className="w-4 h-4 text-cyan-400 mr-2" />

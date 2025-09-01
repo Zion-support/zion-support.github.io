@@ -24,38 +24,45 @@ import { Target,
 import { SEO              } from '../../components/SEO';
 
 const AIMarketingAutomation = () => {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Audience Targeting",
       description: "Machine learning algorithms identify and target your ideal customers with precision",
       price: "$59/month"
     },
     {
+
       icon: Target,
       title: "Smart Campaign Optimization",
       description: "AI continuously optimizes campaigns for maximum ROI and engagement",
       price: "$79/month"
     },
     {
+
       icon: MessageSquare,
       title: "Personalized Content Generation",
       description: "AI creates personalized marketing content for each customer segment",
       price: "$69/month"
     },
     {
+
       icon: Workflow,
       title: "Automated Marketing Workflows",
       description: "Intelligent automation that nurtures leads and converts prospects",
       price: "$89/month"
     },
     {
+
       icon: BarChart3,
       title: "Predictive Analytics",
       description: "AI predicts customer behavior and campaign performance",
       price: "$99/month"
     },
     {
+
       icon: Users,
       title: "Multi-Channel Orchestration",
       description: "Seamlessly coordinate campaigns across email, social, and web",
@@ -70,6 +77,7 @@ const AIMarketingAutomation = () => {
   ];
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$59",
       period: "/month",
@@ -83,6 +91,7 @@ const AIMarketingAutomation = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$149",
       period: "/month",
@@ -97,6 +106,7 @@ const AIMarketingAutomation = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$399",
       period: "/month",
@@ -113,21 +123,25 @@ const AIMarketingAutomation = () => {
   ];
   const benefits = [
     {
+
       icon: TrendingUp,
       title: "300% Higher ROI",
       description: "AI-optimized campaigns deliver significantly better returns"
     },
     {
+
       icon: Clock,
       title: "80% Time Savings",
       description: "Automate repetitive marketing tasks and focus on strategy"
     },
     {
+
       icon: Target,
       title: "5x Better Targeting",
       description: "AI identifies and reaches your ideal customers with precision"
     },
     {
+
       icon: Heart,
       title: "Personalized Experience",
       description: "Every customer receives relevant, personalized content"
@@ -283,6 +297,7 @@ const AIMarketingAutomation = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                     plan.popular 
                       ? 'border-pink-400 shadow-lg shadow-pink-400/20' 
                       : 'border-slate-700/50'
@@ -316,6 +331,7 @@ const AIMarketingAutomation = () => {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
                         : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white'

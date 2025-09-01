@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Atom, Brain, Cpu, Database, Lock, Shield, Zap, Clock, 
   TrendingUp, CheckCircle, Star, Target, ArrowRight,
   Phone, Mail, MapPin, Globe, Network, Server, Code, 
@@ -9,10 +10,12 @@ import {
 } from 'lucide-react';
 
 const QuantumAIHybridPlatform: React.FC = () => {
+
   const [activeTab, setActiveTab] = useState('overview');
   const [showPricingModal, setShowPricingModal] = useState(false);
 
   const contactInfo = {
+
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -21,6 +24,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
 
   const features = [
     {
+
       category: "Quantum Computing Access",
       items: [
         "1000+ qubit quantum processors",
@@ -32,6 +36,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
       ]
     },
     {
+
       category: "AI-Quantum Hybrid Algorithms",
       items: [
         "Quantum machine learning models",
@@ -43,6 +48,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
       ]
     },
     {
+
       category: "Advanced Analytics",
       items: [
         "Quantum-enhanced data processing",
@@ -54,6 +60,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
       ]
     },
     {
+
       category: "Security & Cryptography",
       items: [
         "Quantum-safe cryptography",
@@ -68,36 +75,42 @@ const QuantumAIHybridPlatform: React.FC = () => {
 
   const benefits = [
     {
+
       title: "Exponential Computational Power",
       description: "Access to quantum computing power that can solve problems in minutes that would take classical computers years.",
       icon: Zap,
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       title: "Unprecedented Problem Solving",
       description: "Tackle previously impossible computational challenges with quantum advantage and AI enhancement.",
       icon: Brain,
       color: "from-purple-500 to-pink-500"
     },
     {
+
       title: "Future-Proof Technology",
       description: "Stay ahead of the curve with cutting-edge quantum technology that will define the next decade.",
       icon: Rocket,
       color: "from-green-500 to-emerald-500"
     },
     {
+
       title: "Competitive Advantage",
       description: "Gain significant competitive edge through quantum-powered insights and solutions.",
       icon: Award,
       color: "from-yellow-500 to-orange-500"
     },
     {
+
       title: "Breakthrough Innovation",
       description: "Enable breakthrough discoveries and innovations across multiple scientific and business domains.",
       icon: Sparkles,
       color: "from-indigo-500 to-purple-500"
     },
     {
+
       title: "Global Quantum Network",
       description: "Access to a worldwide network of quantum computers and research facilities.",
       icon: Globe,
@@ -107,6 +120,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
 
   const useCases = [
     {
+
       industry: "Drug Discovery & Healthcare",
       applications: [
         "Molecular modeling and simulation",
@@ -117,6 +131,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
       ]
     },
     {
+
       industry: "Financial Services",
       applications: [
         "Portfolio optimization",
@@ -127,6 +142,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
       ]
     },
     {
+
       industry: "Climate & Energy",
       applications: [
         "Climate change modeling",
@@ -137,6 +153,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
       ]
     },
     {
+
       industry: "Logistics & Supply Chain",
       applications: [
         "Route optimization",
@@ -150,6 +167,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
 
   const technology = [
     {
+
       category: "Quantum Hardware",
       technologies: [
         "IBM Quantum Experience",
@@ -161,6 +179,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
       ]
     },
     {
+
       category: "Quantum Software",
       technologies: [
         "Qiskit framework",
@@ -172,6 +191,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
       ]
     },
     {
+
       category: "AI Integration",
       technologies: [
         "GPT-4 quantum integration",
@@ -183,6 +203,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
       ]
     },
     {
+
       category: "Infrastructure",
       technologies: [
         "Quantum cloud platforms",
@@ -197,6 +218,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
 
   const pricingPlans = [
     {
+
       name: "Quantum Starter",
       price: "$25,000",
       period: "/month",
@@ -213,6 +235,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
       popular: false
     },
     {
+
       name: "Quantum Professional",
       price: "$75,000",
       period: "/month",
@@ -231,6 +254,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
       popular: true
     },
     {
+
       name: "Quantum Enterprise",
       price: "$150,000",
       period: "/month",
@@ -329,6 +353,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+
                   activeTab === tab.id
                     ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white shadow-lg'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
@@ -546,6 +571,7 @@ const QuantumAIHybridPlatform: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-6 ${
+
                       plan.popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-gray-700/50'
                     }`}
                   >

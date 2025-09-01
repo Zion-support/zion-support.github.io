@@ -1,7 +1,8 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Cloud, Brain, Zap, Target, CheckCircle, ArrowRight, TrendingUp,
   MessageCircle, Phone, Mail, MapPin, Star, Award, Lightbulb,
   Settings, Search, Users, Server, Cpu, Database, Layers, FileText,
@@ -9,38 +10,45 @@ import {
 } from 'lucide-react';
 
 const CloudInfrastructureDevOps: React.FC = () => {
+
   const features = [
     {
+
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud infrastructure solutions',
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       icon: Brain,
       title: 'DevOps Automation',
       description: 'Intelligent CI/CD and automation',
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       icon: Zap,
       title: 'High Performance',
       description: 'Optimized cloud performance and scaling',
       color: 'from-yellow-500 to-orange-500'
     },
     {
+
       icon: Target,
       title: 'Security First',
       description: 'Enterprise-grade security and compliance',
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       icon: Server,
       title: 'Multi-Cloud',
       description: 'Multi-cloud and hybrid solutions',
       color: 'from-indigo-500 to-blue-500'
     },
     {
+
       icon: Database,
       title: 'Data Management',
       description: 'Intelligent data storage and processing',
@@ -50,6 +58,7 @@ const CloudInfrastructureDevOps: React.FC = () => {
 
   const solutions = [
     {
+
       title: 'Cloud Migration',
       description: 'Seamless cloud migration and optimization',
       icon: Cloud,
@@ -57,6 +66,7 @@ const CloudInfrastructureDevOps: React.FC = () => {
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       title: 'DevOps Pipeline',
       description: 'Automated CI/CD and deployment pipelines',
       icon: Code,
@@ -64,6 +74,7 @@ const CloudInfrastructureDevOps: React.FC = () => {
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       title: 'Infrastructure as Code',
       description: 'Terraform and infrastructure automation',
       icon: GitBranch,
@@ -71,6 +82,7 @@ const CloudInfrastructureDevOps: React.FC = () => {
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       title: 'Monitoring & Observability',
       description: 'Comprehensive monitoring and alerting',
       icon: Activity,

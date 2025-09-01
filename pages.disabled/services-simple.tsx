@@ -1,8 +1,10 @@
 import React from 'react';
 
 export default function ServicesSimple() {
+
   const services = [
     {
+
       id: 'ai-autonomous-business-manager-2025',
       name: 'AI Autonomous Business Manager 2025',
       tagline: 'Fully autonomous business operations with AI decision-making',
@@ -33,6 +35,7 @@ export default function ServicesSimple() {
       color: 'from-blue-600 to-purple-700'
     },
     {
+
       id: 'quantum-cybersecurity-suite-2025',
       name: 'Quantum Cybersecurity Suite 2025',
       tagline: 'Quantum-resistant security with AI threat detection',
@@ -63,6 +66,7 @@ export default function ServicesSimple() {
       color: 'from-red-600 to-orange-700'
     },
     {
+
       id: 'quantum-financial-trading-platform-2025',
       name: 'Quantum Financial Trading Platform 2025',
       tagline: 'Quantum-powered trading with AI risk management',
@@ -93,6 +97,7 @@ export default function ServicesSimple() {
       color: 'from-green-600 to-emerald-700'
     },
     {
+
       id: 'autonomous-healthcare-diagnostics-2025',
       name: 'Autonomous Healthcare Diagnostics Platform 2025',
       tagline: 'AI-powered medical diagnostics with FDA approval',
@@ -123,6 +128,7 @@ export default function ServicesSimple() {
       color: 'from-blue-600 to-cyan-700'
     },
     {
+
       id: 'autonomous-supply-chain-platform-2025',
       name: 'Autonomous Supply Chain Platform 2025',
       tagline: 'AI-powered end-to-end supply chain optimization',
@@ -153,6 +159,7 @@ export default function ServicesSimple() {
       color: 'from-orange-600 to-red-700'
     },
     {
+
       id: 'autonomous-energy-management-2025',
       name: 'Autonomous Energy Management Platform 2025',
       tagline: 'AI-powered energy optimization and trading',

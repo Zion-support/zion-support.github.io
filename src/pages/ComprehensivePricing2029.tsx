@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
 export default React.memo (function ComprehensivePricing2029 (...args: any[]) : any {
+
 import { innovativeMicroSAASServices2029  } from '../../data / innovative - micro - saas - 2029';
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 import { revolutionaryAIServices2029  } from '../../data / revolutionary - ai - services - 2029';
@@ -64,6 +65,7 @@ import { Star,
   ];
 
   const filteredServices = allServices.filter (service => {
+
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
                          service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
@@ -73,7 +75,9 @@ import { Star,
 
   // Sort services
   const sortedServices = [...filteredServices].sort ( (a, b) => {
+
     switch (sortBy) {
+
       case 'price':
         return parseFloat (a.price.replace ('$', '') .replace (',', '') ) - parseFloat (b.price.replace ('$', '') .replace (',', '') ) ;
       case 'rating':
@@ -86,7 +90,9 @@ import { Star,
   }) ;
 
   const getCategoryIcon = (category: anystring) => {
+
     const iconMap: { [key: string]: any } = {
+
       'AI & Analytics': Brain,
       'Cybersecurity': Shield,
       'AI & Operations': Workflow,
@@ -120,19 +126,19 @@ import { Star,
               key={i}
               className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30"
               animate={{
+
                 x: [0, 100, 0],
                 y: [0, -100, 0],
-                opacity: [0.3, 0.8, 0.3],
-              }}
+                opacity: [0.3, 0.8, 0.3]}}
               transition={{
+
                 duration: Math.random () * 10 + 10,
                 repeat: Infinity,
-                delay: Math.random () * 5,
-              }}
+                delay: Math.random () * 5}}
               style={{
+
                 left: `${Math.random () * 100}%`,
-                top: `${Math.random () * 100}%`,
-              }}
+                top: `${Math.random () * 100}%`}}
             />) ) }
         </div>
       </div>
@@ -232,6 +238,7 @@ import { Star,
                 {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                     onClick={ () => setSelectedCategory (category) }
                     className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${
+
                       selectedCategory === category
                         ? 'bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white shadow - lg'
                         : 'bg - white / 10 text - gray - 300 hover:bg - white / 20 border border - white / 20'
@@ -259,6 +266,7 @@ import { Star,
               <div role="button" className="flex bg - white / 10 rounded - lg p - 1 border border - white / 20">
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`p - 2 rounded - md transition - all duration - 300 ${
+
                     viewMode === 'grid' ? 'bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white' : 'text - gray - 400 hover:text - white'
                   }`}
                 >
@@ -266,6 +274,7 @@ import { Star,
                 </button>
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`p - 2 rounded - md transition - all duration - 300 ${
+
                     viewMode === 'list' ? 'bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white' : 'text - gray - 400 hover:text - white'
                   }`}
                 >
@@ -285,6 +294,7 @@ import { Star,
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.7 }}
             className={`grid gap - 6 ${
+
               viewMode === 'grid'
                 ? 'grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 3'
                 : 'grid - cols - 1'
@@ -298,10 +308,12 @@ import { Star,
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                   className={`group relative ${
+
                     viewMode === 'list' ? 'flex flex - col lg:flex - row' : ''
                   }`}
                 >
                   <div role="button" className={`bg - white / 10 backdrop - blur - lg rounded - 2xl border border - white / 20 overflow - hidden transition - all duration - 500 hover:scale - 105 hover:shadow - 2xl hover:shadow - cyan - 500 / 25 ${
+
                     viewMode === 'list' ? 'flex - 1' : ''
                   }`}>
                     {/* Service Header */}

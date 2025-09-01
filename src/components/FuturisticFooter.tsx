@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion } from 'framer - motion';
 =======
@@ -50,6 +51,7 @@ export const FuturisticFooter: React.FC = () => {;
       ]
     },;
     {
+
 "
       title: "Solutions",
       links[;"
@@ -64,6 +66,7 @@ export const FuturisticFooter: React.FC = () => {;
       ]
     },;
     {
+
 "
       title: "Comp",
       links[;"
@@ -78,6 +81,7 @@ export const FuturisticFooter: React.FC = () => {;
       ]
     },;
     {
+
 "
       title: "Resources",
       links[;"

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
+
 <<<<<<< HEAD
 import { useAnalytics } from '../hooks / useAnalytics';
 =======
@@ -38,14 +39,17 @@ export const AnalyticsDashboard = ({
   const [analyticsSummary, setAnalyticsSummary] = useState(null);
   // Auto-refresh analytics data
   useEffect(() => {
+
     if (!showRealTime) return;
     const interval = setInterval(() => {
+
       updateAnalyticsSummary();
     }, refreshInterval);
     return () => clearInterval(interval);
   }, [showRealTime, refreshInterval]);
   // Update analytics summary
   const updateAnalyticsSummary = () => {
+
     const summary = getAnalyticsSummary();
     if (summary) {
 
@@ -54,6 +58,7 @@ export const AnalyticsDashboard = ({
   };
   // Update summary when events change
   useEffect(() => {
+
     updateAnalyticsSummary();
   }, [events, currentSession]);
   // Track dashboard interactions
@@ -70,6 +75,7 @@ export const AnalyticsDashboard = ({
   };
   // Get events by category for chart
   const getEventsByCategory = () => {
+
     if (!analyticsSummary?.eventsByCategory) return [];
     return Object.entries(analyticsSummary.eventsByCategory).map()
       ([category, count]) => ({
@@ -80,6 +86,7 @@ export const AnalyticsDashboard = ({
   };
   // Get performance score
   const getPerformanceScore = () => {
+
     if (!performanceMetrics) return 0;
     const score = 100;
     // Deduct points for poor performance
@@ -101,6 +108,7 @@ export const AnalyticsDashboard = ({
   };
   // Format number with K/M suffix
   const formatNumber = num => {
+
 `
     if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;`
     if (num >= 1000) return `${(num / 1000).toFixed(1)}K`;
@@ -341,6 +349,7 @@ export const AnalyticsDashboard = ({
                       <div"
                         className="bg-green-500 h-2 rounded-full transition-all duration-300"
                         style={{
+
 `
                           width: `${(item.count / Math.max(...getEventsByCategory().map(e => e.count))) * 100}%`}}
                       ></div>
@@ -417,6 +426,7 @@ export const AnalyticsDashboard = ({
 
           <button
             onClick={() => {
+
               handleTrackConversion();
               handleDashboardInteraction('conversion_tracked');
             }}"

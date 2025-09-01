@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
   // AI-Powered Legal Document Analysis
   {
+
     id: "ai-legal-document-analyzer-pro",
     title: "AI Legal Document Analyzer Pro",
     description: "Advanced AI-powered legal document analysis platform that reviews contracts, identifies risks, and provides legal insights with 99.2% accuracy. Reduces legal review time by 80% and prevents costly oversights.",
@@ -21,6 +22,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-legal-analyzer",
@@ -35,6 +37,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
 
   // AI Real Estate Investment Analyzer
   {
+
     id: "ai-real-estate-investment-analyzer-pro",
     title: "AI Real Estate Investment Analyzer Pro",
     description: "Intelligent real estate investment analysis platform that predicts property values, analyzes market trends, and identifies investment opportunities with 95% accuracy. Increases investment returns by 40%.",
@@ -53,6 +56,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-real-estate",
@@ -67,6 +71,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
 
   // AI Restaurant Management System
   {
+
     id: "ai-restaurant-management-system-pro",
     title: "AI Restaurant Management System Pro",
     description: "Comprehensive AI-powered restaurant management platform with inventory optimization, demand forecasting, and customer behavior analysis. Reduces food waste by 35% and increases profitability by 45%.",
@@ -85,6 +90,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-restaurant",
@@ -99,6 +105,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
 
   // AI Fitness Coaching Platform
   {
+
     id: "ai-fitness-coaching-platform-pro",
     title: "AI Fitness Coaching Platform Pro",
     description: "Personalized AI fitness coaching platform with workout optimization, nutrition planning, and progress tracking. Improves fitness results by 60% and increases user retention by 80%.",
@@ -117,6 +124,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-fitness",
@@ -131,6 +139,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
 
   // AI E-commerce Personalization Engine
   {
+
     id: "ai-ecommerce-personalization-engine-pro",
     title: "AI E-commerce Personalization Engine Pro",
     description: "Advanced AI-powered e-commerce personalization platform that creates personalized shopping experiences, product recommendations, and dynamic pricing. Increases conversion rates by 55% and average order value by 40%.",
@@ -149,6 +158,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-ecommerce",
@@ -163,6 +173,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
 
   // AI Video Content Creation Studio
   {
+
     id: "ai-video-content-creation-studio-pro",
     title: "AI Video Content Creation Studio Pro",
     description: "Professional AI video content creation platform with automated editing, voice synthesis, and content optimization. Creates studio-quality videos in minutes with 90% human-like quality.",
@@ -181,6 +192,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-video-studio",
@@ -195,6 +207,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
 
   // AI Customer Churn Prediction
   {
+
     id: "ai-customer-churn-prediction-pro",
     title: "AI Customer Churn Prediction Pro",
     description: "Intelligent customer churn prediction platform that identifies at-risk customers and provides retention strategies with 92% accuracy. Reduces customer churn by 40% and increases lifetime value by 60%.",
@@ -213,6 +226,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-churn-prediction",
@@ -227,6 +241,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
 
   // AI Financial Fraud Detection
   {
+
     id: "ai-financial-fraud-detection-pro",
     title: "AI Financial Fraud Detection Pro",
     description: "Advanced AI-powered financial fraud detection system that identifies fraudulent transactions in real-time with 99.5% accuracy. Prevents financial losses and protects customer assets.",
@@ -245,6 +260,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-fraud-detection",
@@ -259,6 +275,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
 
   // AI Energy Management System
   {
+
     id: "ai-energy-management-system-pro",
     title: "AI Energy Management System Pro",
     description: "Intelligent energy management platform that optimizes energy consumption, predicts demand, and reduces costs with 85% accuracy. Reduces energy costs by 30% and carbon footprint by 25%.",
@@ -277,6 +294,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-energy-management",

@@ -2,19 +2,6 @@ import { useEffect, useRef, useCallback, useMemo               } from 'react.ts'
 
 interface PerformanceMetrics {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
@@ -34,19 +21,6 @@ fps: number;
 }
 
 interface UsePerformanceOptimizationOptions {
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   enableLazyLoading?: boolean;
   enableIntersectionObserver?: boolean;
@@ -72,12 +46,16 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   const lastTimeRef = useRef(performance.now());
   // Measure initial load time
   useEffect(() => {
+
     if (typeof window !== 'null') {
+
       const loadTime = performance.now();
       metricsRef.current.loadTime = loadTime;
       // Report to analytics if available
       if (window.gtag) {
+
         window.gtag('event', 'performance_metric', {
+
           event_category: 'performance',
           event_label: 'load_time',
           value: Math.round(loadTime)
@@ -86,30 +64,36 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, []);
   // FPS monitoring
   useEffect(() => {
+
     if (!enableFPSMonitoring) return;
     let animationFrameId: number;
     const measureFPS = () => {;
       const currentTime = performance.now();
       frameCountRef.current++;
       if (currentTime - lastTimeRef.current >= 1000) {
+
         const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current));
         metricsRef.current.fps = fps;
         frameCountRef.current = 0;
         lastTimeRef.current = currentTime;
         // Log low FPS for debugging
         if (fps < 30) {
-          // // // // // // // console.warn(`Low FPS detected: ${fps}`);
+
+          // // // // // // // // // // console.warn(`Low FPS detected: ${fps}`);
         }
-          console.warn(`Low FPS detected: ${fps}`)}
+          // // // console.warn(`Low FPS detected: ${fps}`)}
       }
       animationFrameId = requestAnimationFrame(measureFPS)};
     animationFrameId = requestAnimationFrame(measureFPS);
     return () => {
+
       if (animationFrameId) {
+
         cancelAnimationFrame(animationFrameId)}
     }}, [enableFPSMonitoring]);
   // Memory management
   useEffect(() => {
+
     if (!enableMemoryManagement) return;
     const checkMemoryUsage = () => {;
       if ('memory' in performance) {;
@@ -117,9 +101,9 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
         // Warn if memory usage is high
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-          // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
+          // // // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
         }
-          console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
+          // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
       }
     };
     const intervalId = setInterval(checkMemoryUsage, 5000);
@@ -127,25 +111,30 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   // Intersection Observer for lazy loading
       return}
     if (observerRef.current) {
+
       observerRef.current.disconnect()}
     observerRef.current = createIntersectionObserver((entries) => {;
       entries.forEach((entry) => {;
         if (entry.isIntersecting) {;
           callback();
           if (observerRef.current) {
+
             observerRef.current.unobserve(entry.target)}
         }
       })});
     if (observerRef.current) {
+
       observerRef.current.observe(element)}
   }, [enableLazyLoading, createIntersectionObserver]);
   // Performance monitoring
-        // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
+        // // // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
       }
-        console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
+        // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
       // Report to analytics if available
       if (window.gtag) {
+
         window.gtag('event', 'performance_metric', {
+
           event_category: 'performance',
           event_label: 'render_time',
           value: Math.round(renderTime)
@@ -154,13 +143,16 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   // Debounced function utility
     
     return (...args: anyanyanyanyanyanyanyanyanyanyanyanyanyParameters<T>)               => {
+
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => func(...args), delay)}}, []);
   // Throttled function utility
     
     return (...args: anyanyanyanyanyanyanyanyanyanyanyanyanyParameters<T>)               => {
+
       const now = Date.now();
       if (now - lastCall >= delay) {
+
         lastCall = now;
         func(...args)}
     }}, []);
@@ -178,8 +170,10 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }), [getMetrics]);
   // Cleanup on unmount
   useEffect(()               => {
+
     return cleanup}, [cleanup]);
   return {
+
     lazyLoad,
     measureRenderTime,
     debounce,
@@ -191,20 +185,8 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }};
 // Type declaration for gtag
 declare global {
+
   interface Window {
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     gtag?: (...args[])  => void}
 }

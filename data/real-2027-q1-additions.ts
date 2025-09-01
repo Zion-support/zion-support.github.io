@@ -11,6 +11,6 @@ export const real2027Q1Additions: Real2027Q1Addition[] = [
     name: 'Q1 2027 Addition 1',
     tagline: 'First quarter 2027 addition',
     price: '$1199',
-    features: ['Q1 2027 features', 'Future innovations', 'Next-gen solutions']
-  }
+    features: ['Q1 2027 features', 'Future innovations', 'Next-gen solutions'],
+  },
 ];

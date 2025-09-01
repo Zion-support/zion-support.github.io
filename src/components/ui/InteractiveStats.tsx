@@ -2,42 +2,20 @@ import React from 'react.ts';
 
 interface Stat {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   label: string;
   value: string;
   description: string;
 
 interface InteractiveStatsProps extends React.PropsWithChildren<{
 
-
-
-
-
-
-
-
-
-
-
-
 }> {
+
   stats: Stat[];
   className?: string;
 
 const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = "";
 }) => {
+
   return (
     <div className={`grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 ${className}`}>
       {stats.map((stat, index)               => (

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Search, 
   Eye, 
   Ear, 
@@ -20,6 +21,7 @@ import {
 } from 'lucide-react';
 
 interface SEOAnalysis {
+
   title: string;
   description: string;
   keywords: string[];
@@ -30,6 +32,7 @@ interface SEOAnalysis {
 }
 
 interface AccessibilityAnalysis {
+
   contrastRatio: number;
   hasSkipLinks: boolean;
   hasProperHeadings: boolean;
@@ -41,6 +44,7 @@ interface AccessibilityAnalysis {
 }
 
 export const EnhancedSEOAccessibility: React.FC = () => {
+
   const [isVisible, setIsVisible] = useState(false);
   const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis | null>(null);
   const [accessibilityAnalysis, setAccessibilityAnalysis] = useState<AccessibilityAnalysis | null>(null);
@@ -49,9 +53,11 @@ export const EnhancedSEOAccessibility: React.FC = () => {
 
   // Analyze SEO
   const analyzeSEO = useCallback(async () => {
+
     setIsAnalyzing(true);
     
     try {
+
       // Get page title
       const title = document.title;
       
@@ -64,6 +70,7 @@ export const EnhancedSEOAccessibility: React.FC = () => {
       
       // Get headings
       const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6')).map((heading, index) => ({
+
         level: parseInt(heading.tagName.charAt(1)),
         text: heading.textContent || '',
         id: heading.id || `heading-${index}`
@@ -71,6 +78,7 @@ export const EnhancedSEOAccessibility: React.FC = () => {
       
       // Get images
       const images = Array.from(document.querySelectorAll('img')).map(img => ({
+
         src: img.src,
         alt: img.alt,
         hasAlt: !!img.alt
@@ -78,6 +86,7 @@ export const EnhancedSEOAccessibility: React.FC = () => {
       
       // Get links
       const links = Array.from(document.querySelectorAll('a')).map(link => ({
+
         href: link.href,
         text: link.textContent || '',
         isInternal: link.href.startsWith(window.location.origin) || link.href.startsWith('/')
@@ -85,11 +94,13 @@ export const EnhancedSEOAccessibility: React.FC = () => {
       
       // Get meta tags
       const metaTags = Array.from(document.querySelectorAll('meta')).map(meta => ({
+
         name: meta.getAttribute('name') || meta.getAttribute('property') || '',
         content: meta.getAttribute('content') || ''
       }));
       
       const analysis: SEOAnalysis = {
+
         title,
         description: metaDescription,
         keywords,
@@ -102,17 +113,21 @@ export const EnhancedSEOAccessibility: React.FC = () => {
       setSeoAnalysis(analysis);
       
     } catch (error) {
-      console.error('Error analyzing SEO:', error);
+
+      // // // console.error('Error analyzing SEO:', error);
     } finally {
+
       setIsAnalyzing(false);
     }
   }, []);
 
   // Analyze accessibility
   const analyzeAccessibility = useCallback(async () => {
+
     setIsAnalyzing(true);
     
     try {
+
       const issues: string[] = [];
       
       // Check contrast ratio (simplified)
@@ -127,8 +142,10 @@ export const EnhancedSEOAccessibility: React.FC = () => {
       let currentLevel = 0;
       
       for (let i = 0; i < headings.length; i++) {
+
         const level = parseInt(headings[i].tagName.charAt(1));
         if (level > currentLevel + 1) {
+
           hasProperHeadings = false;
           issues.push(`Heading level ${level} follows level ${currentLevel} (should be level ${currentLevel + 1})`);
         }
@@ -139,7 +156,9 @@ export const EnhancedSEOAccessibility: React.FC = () => {
       const images = document.querySelectorAll('img');
       let hasAltText = true;
       for (let i = 0; i < images.length; i++) {
+
         if (!images[i].alt) {
+
           hasAltText = false;
           issues.push(`Image at ${images[i].src} is missing alt text`);
         }
@@ -155,6 +174,7 @@ export const EnhancedSEOAccessibility: React.FC = () => {
       const hasScreenReaderSupport = !!document.querySelector('[aria-label], [aria-labelledby], [role]');
       
       const analysis: AccessibilityAnalysis = {
+
         contrastRatio,
         hasSkipLinks,
         hasProperHeadings,
@@ -168,19 +188,23 @@ export const EnhancedSEOAccessibility: React.FC = () => {
       setAccessibilityAnalysis(analysis);
       
     } catch (error) {
-      console.error('Error analyzing accessibility:', error);
+
+      // // // console.error('Error analyzing accessibility:', error);
     } finally {
+
       setIsAnalyzing(false);
     }
   }, []);
 
   // Run full analysis
   const runFullAnalysis = useCallback(async () => {
+
     await Promise.all([analyzeSEO(), analyzeAccessibility()]);
   }, [analyzeSEO, analyzeAccessibility]);
 
   // Generate SEO report
   const generateSEOReport = useCallback(() => {
+
     if (!seoAnalysis) return;
     
     const report = `
@@ -211,11 +235,13 @@ External Links: ${seoAnalysis.links.filter(l => !l.isInternal).length}
 
   // Toggle visibility
   const toggleVisibility = useCallback(() => {
+
     setIsVisible(!isVisible);
   }, [isVisible]);
 
   // Get SEO score
   const getSEOScore = useCallback(() => {
+
     if (!seoAnalysis) return 0;
     
     let score = 100;
@@ -232,6 +258,7 @@ External Links: ${seoAnalysis.links.filter(l => !l.isInternal).length}
 
   // Get accessibility score
   const getAccessibilityScore = useCallback(() => {
+
     if (!accessibilityAnalysis) return 0;
     
     let score = 100;
@@ -247,7 +274,9 @@ External Links: ${seoAnalysis.links.filter(l => !l.isInternal).length}
   }, [accessibilityAnalysis]);
 
   useEffect(() => {
+
     if (isVisible) {
+
       runFullAnalysis();
     }
   }, [isVisible, runFullAnalysis]);
@@ -306,6 +335,7 @@ External Links: ${seoAnalysis.links.filter(l => !l.isInternal).length}
                 <button
                   onClick={() => setCurrentTab('seo')}
                   className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
+
                     currentTab === 'seo'
                       ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
                       : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
@@ -316,6 +346,7 @@ External Links: ${seoAnalysis.links.filter(l => !l.isInternal).length}
                 <button
                   onClick={() => setCurrentTab('accessibility')}
                   className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
+
                     currentTab === 'accessibility'
                       ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
                       : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
@@ -437,6 +468,7 @@ External Links: ${seoAnalysis.links.filter(l => !l.isInternal).length}
                       {/* Key Metrics */}
                       <div className="grid grid-cols-2 gap-3">
                         <div className={`p-3 rounded-lg ${
+
                           accessibilityAnalysis.hasSkipLinks ? 'bg-green-50 dark:bg-green-900/20' : 'bg-red-50 dark:bg-red-900/20'
                         }`}>
                           <div className="text-sm text-gray-600 dark:text-gray-400">Skip Links</div>
@@ -445,6 +477,7 @@ External Links: ${seoAnalysis.links.filter(l => !l.isInternal).length}
                           </div>
                         </div>
                         <div className={`p-3 rounded-lg ${
+
                           accessibilityAnalysis.hasProperHeadings ? 'bg-green-50 dark:bg-green-900/20' : 'bg-red-50 dark:bg-red-900/20'
                         }`}>
                           <div className="text-sm text-gray-600 dark:text-gray-400">Heading Structure</div>
@@ -453,6 +486,7 @@ External Links: ${seoAnalysis.links.filter(l => !l.isInternal).length}
                           </div>
                         </div>
                         <div className={`p-3 rounded-lg ${
+
                           accessibilityAnalysis.hasAltText ? 'bg-green-50 dark:bg-green-900/20' : 'bg-red-50 dark:bg-red-900/20'
                         }`}>
                           <div className="text-sm text-gray-600 dark:text-gray-400">Alt Text</div>
@@ -461,6 +495,7 @@ External Links: ${seoAnalysis.links.filter(l => !l.isInternal).length}
                           </div>
                         </div>
                         <div className={`p-3 rounded-lg ${
+
                           accessibilityAnalysis.hasFocusIndicators ? 'bg-green-50 dark:bg-green-900/20' : 'bg-red-50 dark:bg-red-900/20'
                         }`}>
                           <div className="text-sm text-gray-600 dark:text-gray-400">Focus Indicators</div>

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;
@@ -14,6 +15,7 @@ interface SearchResult {
 }
 
 interface SearchComponentProps {
+
   className?: string;
   placeholder?: string;
   showFilters?: boolean;
@@ -21,21 +23,25 @@ interface SearchComponentProps {
 }
 
 interface SearchFilters {
+
   type: string[];
   category: string[];
   tags: string[];
 }
 
 export const SearchComponent: React.FC<SearchComponentProps> = ({
+
   className = '',
   placeholder = 'Search for AI services, solutions, and more...',
   showFilters = true,
   onSearch
 }) => {
+
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [results, setResults] = useState<SearchResult[]>([]);
   const [filters, setFilters] = useState<SearchFilters>({
+
     type: [],
     category: [],
     tags: []
@@ -50,6 +56,7 @@ export const SearchComponent: React.FC<SearchComponentProps> = ({
   // Mock data - in real app, this would come from API
   const mockResults: SearchResult[] = [
     {
+
       id: '1',
       title: 'AI Enterprise Automation Platform',
       description: 'Transform your business operations with AI-powered automation',
@@ -59,6 +66,7 @@ export const SearchComponent: React.FC<SearchComponentProps> = ({
       tags: ['AI', 'Automation', 'Enterprise']
     },
     {
+
       id: '2',
       title: 'Quantum Edge Computing Solutions',
       description: 'Next-generation computing power at the edge',
@@ -68,6 +76,7 @@ export const SearchComponent: React.FC<SearchComponentProps> = ({
       tags: ['Quantum', 'Edge Computing', 'Innovation']
     },
     {
+
       id: '3',
       title: 'AI Cybersecurity Platform',
       description: 'Advanced threat detection and prevention',
@@ -79,14 +88,18 @@ export const SearchComponent: React.FC<SearchComponentProps> = ({
   ];
 
   const filterOptions = {
+
     type: ['service', 'solution', 'page', 'article'],
     category: ['AI & Automation', 'Cybersecurity', 'Quantum Computing', 'Cloud & DevOps', 'Digital Transformation'],
     tags: ['AI', 'Machine Learning', 'Quantum', 'Security', 'Cloud', 'Automation', 'Innovation']
   };
 
   useEffect(() => {
+
     const handleClickOutside = (event: MouseEvent) => {
+
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+
         setIsOpen(false);
       }
     };
@@ -96,9 +109,11 @@ export const SearchComponent: React.FC<SearchComponentProps> = ({
   }, []);
 
   useEffect(() => {
+
     // Load recent searches from localStorage
     const saved = localStorage.getItem('recentSearches');
     if (saved) {
+
       setRecentSearches(JSON.parse(saved));
     }
 
@@ -113,6 +128,7 @@ export const SearchComponent: React.FC<SearchComponentProps> = ({
   }, []);
 
   const handleSearch = (searchQuery: string = query) => {
+
     if (!searchQuery.trim()) return;
 
     // Save to recent searches
@@ -122,6 +138,7 @@ export const SearchComponent: React.FC<SearchComponentProps> = ({
 
     // Filter results based on query and filters
     const filtered = mockResults.filter(result => {
+
       const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.tags?.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -138,14 +155,18 @@ export const SearchComponent: React.FC<SearchComponentProps> = ({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
+
     if (e.key === 'Enter') {
+
       handleSearch();
     } else if (e.key === 'Escape') {
+
       setIsOpen(false);
     }
   };
 
   const clearSearch = () => {
+
     setQuery('');
     setResults([]);
     setIsOpen(false);
@@ -153,11 +174,14 @@ export const SearchComponent: React.FC<SearchComponentProps> = ({
   };
 
   const toggleFilters = () => {
+
     setShowFiltersPanel(!showFiltersPanel);
   };
 
   const updateFilter = (filterType: keyof SearchFilters, value: string) => {
+
     setFilters(prev => ({
+
       ...prev,
       [filterType]: prev[filterType].includes(value)
         ? prev[filterType].filter(v => v !== value)
@@ -194,6 +218,7 @@ export const SearchComponent: React.FC<SearchComponentProps> = ({
           <button
             onClick={toggleFilters}
             className={`absolute right-3 top-1/2 transform -translate-y-1/2 p-1 rounded-full transition-colors duration-200 ${
+
               showFiltersPanel ? 'bg-cyan-100 text-cyan-600' : 'hover:bg-gray-100'
             }`}
           >
@@ -341,6 +366,7 @@ export const SearchComponent: React.FC<SearchComponentProps> = ({
                         <button
                           key={index}
                           onClick={() => {
+
                             setQuery(search);
                             handleSearch(search);
                           }}
@@ -364,6 +390,7 @@ export const SearchComponent: React.FC<SearchComponentProps> = ({
                       <button
                         key={index}
                         onClick={() => {
+
                           setQuery(search);
                           handleSearch(search);
                         }}

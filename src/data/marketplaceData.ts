@@ -1,4 +1,5 @@
 export interface MarketplaceItem {
+
   id: string;
   title: string;
   category: 'products' | 'talent' | 'equipment' | 'services';

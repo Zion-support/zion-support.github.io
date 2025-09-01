@@ -7,55 +7,68 @@ import { getCartKey } from '@/utils/cartUtils';
 import { getStripe } from '@/utils/getStripe';
 import { apiClient } from '@/utils/apiClient';
 export default function CheckoutPage() {
+
     const navigate = useNavigate();
     const { t } = useTranslation();
     const [items, setItems] = useState([]);
     const form = useForm({
-        defaultValues: { name: '', email: '', address: '', city: '', country: '' },
-    });
+
+        defaultValues: { name: '', email: '', address: '', city: '', country: '' }});
     useEffect(() => {
+
         if (sku) {
+
             setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
             return}
         const stored = safeStorage.getItem(getCartKey(user?.id));
         if (stored) {
+
             try {
+
                 setItems(JSON.parse(stored))}
             catch {
+
                 setItems([])}
         }
     }, [sku]);
     const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
     const onSubmit = async (data) => {
+
         try {
+
             const result = await res.json();
             if (!res.ok)
                 throw new Error(result.error || 'Failed');
             const stripe = await getStripe();
             if (stripe && result.clientSecret) {
+
                 const payment = await stripe.confirmCardPayment(result.clientSecret, {
+
                     payment_method: {
+
                         card: { token: 'tok_visa' },
-                        billing_details: { name: data.name, email: data.email },
-                    },
-                });
+                        billing_details: { name: data.name, email: data.email }}});
                 if (payment.error)
                     throw payment.error;
                 if (user?.id) {
+
                     try {
+
                         await fetch('/api/points/add', {
+
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),
-                        })}
+                            body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id })})}
                     catch (e) {
-                        console.error('Failed to add points', e)}
+
+                        // console.error('Failed to add points', e)}
                 }
                 safeStorage.removeItem(getCartKey(user?.id));
                 router(`/orders/${result.id}`)}
         }
         catch (err) {
-            console.error('Payment failed', err)}
+
+            // console.error('Payment failed', err)}
     };
     return (<div className="max-w-2xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-6">Checkout</h1>

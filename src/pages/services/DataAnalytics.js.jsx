@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target export default function DataAnalyticsServices() {
+
     const analyticsServices = [
         {
+
             icon: BarChart3,
             title: 'Business Intelligence & Reporting',
             description: 'Transform raw data into actionable insights with interactive dashboards and automated reporting.',
@@ -25,6 +27,7 @@ import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target expo
             ]
         },
         {
+
             icon: TrendingUp,
             title: 'Predictive Analytics & Forecasting',
             description: 'Leverage machine learning to predict future trends and make data-driven decisions.',
@@ -46,6 +49,7 @@ import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target expo
             ]
         },
         {
+
             icon: Database,
             title: 'Data Engineering & ETL',
             description: 'Build robust data pipelines and warehouses for scalable analytics infrastructure.',
@@ -67,6 +71,7 @@ import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target expo
             ]
         },
         {
+
             icon: Users,
             title: 'Customer Analytics & Segmentation',
             description: 'Understand customer behavior and create targeted marketing strategies.',
@@ -88,6 +93,7 @@ import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target expo
             ]
         },
         {
+
             icon: Shield,
             title: 'Data Governance & Compliance',
             description: 'Ensure data security, privacy, and regulatory compliance across your analytics platform.',
@@ -109,6 +115,7 @@ import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target expo
             ]
         },
         {
+
             icon: Zap,
             title: 'Real-Time Analytics & Monitoring',
             description: 'Monitor business performance in real-time with instant alerts and notifications.',

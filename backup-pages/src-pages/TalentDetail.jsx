@@ -10,7 +10,7 @@ export default function TalentDetail() {
   const { id } = useParams();
   const { data, isLoading } = useQuery(
     ['talent', id],
-    () => api.get(`/talent/${id}`).then((r) => r.data),
+    () => api.get(`/talent/${id}`).then(r => r.data),
     { enabled: !!id }
   );
 

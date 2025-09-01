@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Users, Cog, ArrowRight, CheckCircle, Zap, Shield, BarChart3 } from 'lucide-react';
 const AIAgentOrchestrator = () => {
+
     return (<>
       <Helmet>
         <title>AI Agent Orchestrator - Zion Tech Group</title>
@@ -46,31 +47,37 @@ const AIAgentOrchestrator = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
             {
+
                 icon: Users,
                 title: "Multi-Agent Coordination",
                 description: "Seamlessly coordinate multiple AI agents working on complex tasks and workflows"
             },
             {
+
                 icon: Cog,
                 title: "Workflow Automation",
                 description: "Design and execute sophisticated automated workflows with intelligent routing"
             },
             {
+
                 icon: BarChart3,
                 title: "Performance Analytics",
                 description: "Monitor agent performance, resource utilization, and workflow efficiency in real-time"
             },
             {
+
                 icon: Shield,
                 title: "Security & Compliance",
                 description: "Enterprise-grade security with role-based access control and audit trails"
             },
             {
+
                 icon: Zap,
                 title: "Real-time Processing",
                 description: "Handle high-volume requests with low-latency agent communication and task distribution"
             },
             {
+
                 icon: CheckCircle,
                 title: "Quality Assurance",
                 description: "Built-in quality control mechanisms and validation frameworks for agent outputs"
@@ -97,18 +104,22 @@ const AIAgentOrchestrator = () => {
             <div className="grid md:grid-cols-2 gap-8">
               {[
             {
+
                 title: "Customer Service Automation",
                 description: "Deploy multiple specialized AI agents for different customer service scenarios, from initial inquiry to resolution."
             },
             {
+
                 title: "Content Creation Pipeline",
                 description: "Orchestrate AI agents for research, writing, editing, and publishing content across multiple channels."
             },
             {
+
                 title: "Data Processing Workflows",
                 description: "Coordinate agents for data collection, cleaning, analysis, and reporting with seamless handoffs."
             },
             {
+
                 title: "Business Process Automation",
                 description: "Automate complex business processes with intelligent agents handling different aspects of the workflow."
             }

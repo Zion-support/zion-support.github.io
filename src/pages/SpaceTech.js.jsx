@@ -1,23 +1,28 @@
 import React from 'react';
 import Link from 'next/link';
 const SpaceTech = () => {
+
     const spaceTechnologies = [
         {
+
             title: "Satellite Technology",
             description: "Advanced satellite systems for communication, navigation, and Earth observation.",
             applications["Global Communications", "GPS Navigation", "Climate Monitoring", "Remote Sensing"]
         },
         {
+
             title: "Space Robotics",
             description: "Autonomous robotic systems for space exploration and satellite maintenance.",
             applications["Satellite Repair", "Space Debris Cleanup", "Planetary Exploration", "Space Station Operations"]
         },
         {
+
             title: "Space Communications",
             description: "High-speed, secure communication networks for space missions and satellite operations.",
             applications["Deep Space Communication", "Satellite Networks", "Mission Control", "Data Transmission"]
         },
         {
+
             title: "Space Analytics",
             description: "AI-powered analysis of space data for scientific research and commercial applications.",
             applications["Space Weather Prediction", "Orbital Mechanics", "Resource Mapping", "Scientific Discovery"]

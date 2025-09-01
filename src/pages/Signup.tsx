@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react - router - dom';
 import React, { useState } from 'react';
 export default Signup;
 import {
+
 import { motion } from 'framer - motion';
 
   User,
@@ -23,10 +24,10 @@ import { motion } from 'framer - motion';
   Users,
   Star,
   TrendingUp,
-  Award,
-} from 'lucide - react';
+  Award} from 'lucide - react';
 
 interface SignupForm {
+
   firstName: string;
   lastName: string;
   email: string;
@@ -41,8 +42,10 @@ interface SignupForm {
 }
 
 const Signup: React.FC = () => {
+
   const navigate = useNavigate () ;
   const [formData, setFormData] = useState < SignupForm> ({
+
     firstName: '',
     lastName: '',
     email: '',
@@ -53,8 +56,7 @@ const Signup: React.FC = () => {
     password: '',
     confirmPassword: '',
     agreeToTerms: false,
-    agreeToMarketing: false,
-  }) ;
+    agreeToMarketing: false}) ;
 
   const [showPassword, setShowPassword] = useState (false) ;
   const [showConfirmPassword, setShowConfirmPassword] = useState (false) ;
@@ -85,36 +87,43 @@ const Signup: React.FC = () => {
 
   const handleInputChange = useCallback ( (field: keyof SignupForm,
     value: string | boolean) => {
+
     setFormData (prev => ({
+
       ...prev,
-      [field]: value,
-    }) ) ;
+      [field]: value}) ) ;
     setError ('') ;
   };
 
   const validateForm = () => {
+
     if (!formData.firstName ||
       !formData.lastName ||
       !formData.email ||
       !formData.company ||
       !formData.password ||
       !formData.confirmPassword) {
+
       setError ('Please fill in all required fields') ;
       return false;
     }
     if (!/\S+@\S+\.\S+/.test (formData.email) ) {
+
       setError ('Please enter a valid email address') ;
       return false;
     }
     if (formData.password.length < 8) {
+
       setError ('Password must be at least 8 characters long') ;
       return false;
     }
     if (formData.password !== formData.confirmPassword) {
+
       setError ('Passwords do not match') ;
       return false;
     }
     if (!formData.agreeToTerms) {
+
       setError ('Please agree to the terms and conditions') ;
       return false;
     }
@@ -122,6 +131,7 @@ const Signup: React.FC = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+
     e.preventDefault () ;
     if (!validateForm () ) return;
 
@@ -129,22 +139,27 @@ const Signup: React.FC = () => {
     setError ('') ;
 
     try {
+
       // Simulate API call
       await new Promise (resolve => setTimeout (resolve, 2000) ) ;
 
       // Mock successful signup
       setSuccess ('Account created successfully ! Welcome to Zion Tech Group.') ;
       setTimeout ( () => {
+
         navigate ('/dashboard') ;
       }, 2000) ;
     } catch (err) {
+
       setError ('Failed to create account. Please try again.') ;
     } finally {
+
       setIsLoading (false) ;
     }
   };
 
   const getPasswordStrength = (password: string) => {
+
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text - red - 400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text - yellow - 400' };
@@ -156,25 +171,25 @@ const Signup: React.FC = () => {
 
   const benefits = [
     {
+
       icon: <Brain className="w - 6 h - 6" />,
       title: 'AI - Powered Solutions',
-      description: 'Access cutting - edge AI and machine learning technologies',
-    },
+      description: 'Access cutting - edge AI and machine learning technologies'},
     {
+
       icon: <Cloud className="w - 6 h - 6" />,
       title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions for your business needs',
-    },
+      description: 'Scalable cloud solutions for your business needs'},
     {
+
       icon: <Shield className="w - 6 h - 6" />,
       title: 'Enterprise Security',
-      description: 'Bank - level security and compliance standards',
-    },
+      description: 'Bank - level security and compliance standards'},
     {
+
       icon: <Rocket className="w - 6 h - 6" />,
       title: 'Digital Transformation',
-      description: 'Transform your business with modern technology',
-    },
+      description: 'Transform your business with modern technology'},
   ];
 
   const stats = [
@@ -394,6 +409,7 @@ const Signup: React.FC = () => {
                     <div role="button" className="flex gap - 1 mb - 1">
                       {[1, 2, 3, 4].map (level => (<div role="button" key={level}
                           className={`h - 1 flex - 1 rounded - full transition - all duration - 300 ${
+
                             level <= passwordStrength.score
                               ? passwordStrength.color.replace ('text-', 'bg-') : 'bg - slate - 600 / 30'
                           }`}

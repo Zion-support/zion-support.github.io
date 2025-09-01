@@ -51,7 +51,10 @@ const TalentPage: React.FC = () => {
   if (error && (error as any).status === 404) {
     return (
       <>
-        <NextSeo title="Talent Not Found" description="Talent profile unavailable" />
+        <NextSeo
+          title="Talent Not Found"
+          description="Talent profile unavailable"
+        />
         <NotFound />
       </>
     );
@@ -75,7 +78,10 @@ const TalentPage: React.FC = () => {
   if (!data) {
     return (
       <>
-        <NextSeo title="Talent Not Found" description="Talent profile unavailable" />
+        <NextSeo
+          title="Talent Not Found"
+          description="Talent profile unavailable"
+        />
         <NotFound />
       </>
     );
@@ -90,10 +96,13 @@ const TalentPage: React.FC = () => {
         openGraph={{
           images: undefined,
           title: data.name,
-          description: data.bio ?? undefined // Ensure description is string or undefined
+          description: data.bio ?? undefined, // Ensure description is string or undefined
         }}
       />
-      <main className="min-h-screen bg-zion-blue py-8 text-white" data-testid="talent-details">
+      <main
+        className="min-h-screen bg-zion-blue py-8 text-white"
+        data-testid="talent-details"
+      >
         <div className="container mx-auto px-4 space-y-6">
           <div className="flex items-center gap-4">
             <Avatar className="h-20 w-20">
@@ -109,7 +118,7 @@ const TalentPage: React.FC = () => {
 
           {data.skills && data.skills.length > 0 && (
             <div className="flex flex-wrap gap-2" data-testid="skills">
-              {data.skills.map((skill) => (
+              {data.skills.map(skill => (
                 <Badge key={skill} variant="secondary">
                   {skill}
                 </Badge>
@@ -121,7 +130,7 @@ const TalentPage: React.FC = () => {
             <div>
               <h2 className="text-xl font-semibold mb-2">Portfolio</h2>
               <ul className="list-disc ml-5 space-y-1">
-                {data.portfolio.map((item) => (
+                {data.portfolio.map(item => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>

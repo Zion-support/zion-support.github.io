@@ -1,9 +1,11 @@
 
 interface AdminLayoutProps {
+
   children: React.ReactNode}
 
 
 export function AdminLayout({ children }: AdminLayoutProps) {
+
   return (
     <div className="flex min-h-screen">
       <aside className="w-64 border-r p-6 space-y-2 bg-muted/50">

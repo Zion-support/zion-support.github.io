@@ -13,6 +13,7 @@ export const LinkMonitor = ({
   const [lastScanTime, setLastScanTime] = useState(null);
   // Scan all links on the current page
   const scanPageLinks = async () => {
+
     setIsScanning(true);
     setScanProgress(0);
     const links = Array.from(document.querySelectorAll('a[href]'));
@@ -82,6 +83,7 @@ export const LinkMonitor = ({
   };
   // Fix all broken links
   const fixAllBrokenLinks = async () => {
+
     for (const brokenLink of brokenLinks) {
 
       await fixBrokenLink(brokenLink.url, brokenLink);
@@ -90,6 +92,7 @@ export const LinkMonitor = ({
   };
   // Generate redirect rules for server configuration
   const generateRedirectRules = () => {
+
     const rules = LinkValidator.generateRedirectRules();
     const blob = new Blob([rules], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
@@ -101,6 +104,7 @@ export const LinkMonitor = ({
   };
   // Export broken links report
   const exportReport = () => {
+
     const report = {
 
       scanTime: lastScanTime?.toISOString(),
@@ -119,6 +123,7 @@ export const LinkMonitor = ({
   };
   // Auto-scan on component mount
   useEffect(() => {
+
     if (autoFix) {
 
       scanPageLinks();

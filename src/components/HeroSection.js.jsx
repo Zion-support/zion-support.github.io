@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";"
 import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield } from "lucide-react";"
 import { useRef } from "react";
 export function HeroSection() {
+
     const { t } = useTranslation();
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
@@ -128,6 +129,7 @@ export function HeroSection() {
         {/* Enhanced feature highlights with icons and animations */}"
         <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-8 mb-16 text-zion-slate-light">"
           <motion.div className="flex items-center gap-3 group" whileHover={{ scale: 1.05 }} transition = {
+
 "
   { type: "spring",
   stiffness: 400 
@@ -140,6 +142,7 @@ export function HeroSection() {
           </motion.div>
           "
           <motion.div className="flex items-center gap-3 group" whileHover={{ scale: 1.05 }} transition = {
+
 "
   { type: "spring",
   stiffness: 400 
@@ -152,6 +155,7 @@ export function HeroSection() {
           </motion.div>
           "
           <motion.div className="flex items-center gap-3 group" whileHover={{ scale: 1.05 }} transition = {
+
 "
   { type: "spring",
   stiffness: 400 
@@ -167,6 +171,7 @@ export function HeroSection() {
         {/* Enhanced CTA buttons with better animations and effects */}"
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition = {
+
 "
   { type: "spring", stiffness: 400,
   damping: 10 
@@ -179,6 +184,7 @@ export function HeroSection() {
           </motion.div>
           
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition = {
+
 "
   { type: "spring", stiffness: 400,
   damping: 10 
@@ -201,6 +207,7 @@ export function HeroSection() {
   opacity: 1 
 
 }} transition = {
+
 "
   { type: "spring",
   stiffness: 400 
@@ -212,6 +219,7 @@ export function HeroSection() {
   opacity: 1 
 
 }} transition = {
+
 "
   { type: "spring",
   stiffness: 400 
@@ -223,6 +231,7 @@ export function HeroSection() {
   opacity: 1 
 
 }} transition = {
+
 "
   { type: "spring",
   stiffness: 400 
@@ -234,6 +243,7 @@ export function HeroSection() {
   opacity: 1 
 
 }} transition = {
+
 "
   { type: "spring",
   stiffness: 400 
@@ -245,6 +255,7 @@ export function HeroSection() {
         {/* New stats section */}"
         <motion.div variants={itemVariants} className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">"
           <motion.div className="text-center group" whileHover={{ y: -5 }} transition = {
+
 "
   { type: "spring",
   stiffness: 400 
@@ -257,6 +268,7 @@ export function HeroSection() {
           </motion.div>
           "
           <motion.div className="text-center group" whileHover={{ y: -5 }} transition = {
+
 "
   { type: "spring",
   stiffness: 400 
@@ -269,6 +281,7 @@ export function HeroSection() {
           </motion.div>
           "
           <motion.div className="text-center group" whileHover={{ y: -5 }} transition = {
+
 "
   { type: "spring",
   stiffness: 400 

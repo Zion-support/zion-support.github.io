@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
   // Quantum AI Hybrid Platform
   {
+
     id: "quantum-ai-hybrid-platform-pro",
     title: "Quantum AI Hybrid Platform Pro",
     description: "Revolutionary quantum AI hybrid platform that combines quantum computing with artificial intelligence for solving complex optimization problems. Provides 1000x speed improvement for specific use cases.",
@@ -21,6 +22,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
     availability: "20-24 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-ai-hybrid",
@@ -35,6 +37,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
 
   // Metaverse Development Platform
   {
+
     id: "metaverse-development-platform-pro",
     title: "Metaverse Development Platform Pro",
     description: "Advanced metaverse development platform for creating immersive 3D virtual worlds, VR experiences, and digital twin environments. Enables rapid metaverse development with 90% time savings.",
@@ -53,6 +56,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
     availability: "12-14 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/metaverse-platform",
@@ -67,6 +71,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
 
   // Blockchain Web3 DeFi Platform
   {
+
     id: "blockchain-web3-defi-platform-pro",
     title: "Blockchain Web3 DeFi Platform Pro",
     description: "Enterprise-grade blockchain and Web3 platform with DeFi protocols, smart contracts, and NFT marketplace. Supports multiple blockchains with 99.9% uptime and enterprise security.",
@@ -85,6 +90,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
     availability: "16-18 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/blockchain-web3-defi",
@@ -99,6 +105,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
 
   // Space Technology & Satellite Management
   {
+
     id: "space-technology-satellite-management-pro",
     title: "Space Technology & Satellite Management Pro",
     description: "Advanced space technology platform for satellite management, orbital optimization, and space data analytics. Enables commercial space operations with 99.9% reliability.",
@@ -117,6 +124,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
     availability: "18-20 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/space-technology",
@@ -131,6 +139,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
 
   // Autonomous Vehicle AI Platform
   {
+
     id: "autonomous-vehicle-ai-platform-pro",
     title: "Autonomous Vehicle AI Platform Pro",
     description: "Advanced AI platform for autonomous vehicles with computer vision, sensor fusion, and decision-making algorithms. Enables Level 4-5 autonomy with 99.8% safety accuracy.",
@@ -149,6 +158,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
     availability: "20-24 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/autonomous-vehicle",
@@ -163,6 +173,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
 
   // Brain-Computer Interface Platform
   {
+
     id: "brain-computer-interface-platform-pro",
     title: "Brain-Computer Interface Platform Pro",
     description: "Revolutionary brain-computer interface platform that enables direct communication between the brain and computers. Provides assistive technology solutions with 95% accuracy.",
@@ -181,6 +192,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
     availability: "24-28 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/bci-platform",
@@ -195,6 +207,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
 
   // Synthetic Biology Platform
   {
+
     id: "synthetic-biology-platform-pro",
     title: "Synthetic Biology Platform Pro",
     description: "Advanced synthetic biology platform for designing and engineering biological systems, genetic circuits, and bio-manufacturing processes. Accelerates biotech research by 300%.",
@@ -213,6 +226,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
     availability: "20-24 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/synthetic-biology",
@@ -227,6 +241,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
 
   // Quantum Internet Security Platform
   {
+
     id: "quantum-internet-security-platform-pro",
     title: "Quantum Internet Security Platform Pro",
     description: "Next-generation quantum internet security platform with quantum key distribution, post-quantum cryptography, and quantum-resistant protocols. Provides unbreakable security for the quantum era.",
@@ -245,6 +260,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: ProductListing[] = [
     availability: "18-20 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-internet",

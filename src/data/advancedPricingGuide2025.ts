@@ -1,4 +1,5 @@
 export interface AdvancedPricingTier {
+
   id: string;
   name: string;
   price: number;
@@ -13,6 +14,7 @@ export interface AdvancedPricingTier {
   roi: string;
   marketPrice: string;
   contactInfo: {
+
     phone: string;
     email: string;
     website: string;
@@ -23,6 +25,7 @@ export interface AdvancedPricingTier {
 
 export const ADVANCED_PRICING_GUIDE_2025: AdvancedPricingTier[] = [
   {
+
     id: "starter-tier",
     name: "Starter Tier",
     price: 1999,
@@ -56,6 +59,7 @@ export const ADVANCED_PRICING_GUIDE_2025: AdvancedPricingTier[] = [
     roi: "150-250%",
     marketPrice: "$1,999 - $4,999/month",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -74,6 +78,7 @@ export const ADVANCED_PRICING_GUIDE_2025: AdvancedPricingTier[] = [
     ]
   },
   {
+
     id: "professional-tier",
     name: "Professional Tier",
     price: 3999,
@@ -113,6 +118,7 @@ export const ADVANCED_PRICING_GUIDE_2025: AdvancedPricingTier[] = [
     roi: "250-400%",
     marketPrice: "$3,999 - $9,999/month",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -131,6 +137,7 @@ export const ADVANCED_PRICING_GUIDE_2025: AdvancedPricingTier[] = [
     ]
   },
   {
+
     id: "enterprise-tier",
     name: "Enterprise Tier",
     price: 6999,
@@ -175,6 +182,7 @@ export const ADVANCED_PRICING_GUIDE_2025: AdvancedPricingTier[] = [
     roi: "400-600%",
     marketPrice: "$6,999 - $19,999/month",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -193,6 +201,7 @@ export const ADVANCED_PRICING_GUIDE_2025: AdvancedPricingTier[] = [
     ]
   },
   {
+
     id: "revolutionary-tier",
     name: "Revolutionary Tier",
     price: 12999,
@@ -237,6 +246,7 @@ export const ADVANCED_PRICING_GUIDE_2025: AdvancedPricingTier[] = [
     roi: "600-1000%",
     marketPrice: "$12,999 - $49,999/month",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -259,6 +269,7 @@ export const ADVANCED_PRICING_GUIDE_2025: AdvancedPricingTier[] = [
 
 export const ADVANCED_SERVICE_CATEGORIES = [
   {
+
     name: "AI & FinTech",
     services: [
       "AI FinTech Trading Platform",
@@ -270,6 +281,7 @@ export const ADVANCED_SERVICE_CATEGORIES = [
     marketSize: "$45.2 billion by 2025"
   },
   {
+
     name: "AI & Healthcare",
     services: [
       "AI Healthcare Analytics Platform",
@@ -281,6 +293,7 @@ export const ADVANCED_SERVICE_CATEGORIES = [
     marketSize: "$67.8 billion by 2025"
   },
   {
+
     name: "AI & Legal Tech",
     services: [
       "AI Legal Technology Platform",
@@ -292,6 +305,7 @@ export const ADVANCED_SERVICE_CATEGORIES = [
     marketSize: "$25.6 billion by 2025"
   },
   {
+
     name: "AI & Real Estate",
     services: [
       "AI Real Estate Investment Platform",
@@ -303,6 +317,7 @@ export const ADVANCED_SERVICE_CATEGORIES = [
     marketSize: "$18.7 billion by 2025"
   },
   {
+
     name: "AI & Supply Chain",
     services: [
       "AI Supply Chain Optimization Platform",
@@ -314,6 +329,7 @@ export const ADVANCED_SERVICE_CATEGORIES = [
     marketSize: "$31.2 billion by 2025"
   },
   {
+
     name: "AI & Education",
     services: [
       "AI-Powered Education Platform",
@@ -325,6 +341,7 @@ export const ADVANCED_SERVICE_CATEGORIES = [
     marketSize: "$22.4 billion by 2025"
   },
   {
+
     name: "AI & Entertainment",
     services: [
       "AI-Powered Entertainment Platform",
@@ -336,6 +353,7 @@ export const ADVANCED_SERVICE_CATEGORIES = [
     marketSize: "$28.9 billion by 2025"
   },
   {
+
     name: "AI & Space Technology",
     services: [
       "AI Space Technology Platform",
@@ -347,6 +365,7 @@ export const ADVANCED_SERVICE_CATEGORIES = [
     marketSize: "$15.3 billion by 2025"
   },
   {
+
     name: "AI & Metaverse",
     services: [
       "AI Metaverse Builder Platform",
@@ -358,6 +377,7 @@ export const ADVANCED_SERVICE_CATEGORIES = [
     marketSize: "$42.3 billion by 2025"
   },
   {
+
     name: "AI & Autonomous Systems",
     services: [
       "AI Autonomous Systems Platform",
@@ -371,6 +391,7 @@ export const ADVANCED_SERVICE_CATEGORIES = [
 ];
 
 export const ADVANCED_PRICING_FEATURES = {
+
   commonFeatures: [
     "AI-powered automation",
     "Real-time analytics",
@@ -393,21 +414,25 @@ export const ADVANCED_PRICING_FEATURES = {
   ],
   supportLevels: [
     {
+
       level: "Basic",
       features: ["Email support", "Documentation", "Community forum"],
       responseTime: "24-48 hours"
     },
     {
+
       level: "Professional",
       features: ["Priority support", "Dedicated account manager", "Phone support"],
       responseTime: "4-8 hours"
     },
     {
+
       level: "Enterprise",
       features: ["24/7 support", "Dedicated success manager", "Custom training"],
       responseTime: "1-2 hours"
     },
     {
+
       level: "Revolutionary",
       features: ["24/7 quantum AI specialists", "Custom development", "On-site support"],
       responseTime: "Immediate"

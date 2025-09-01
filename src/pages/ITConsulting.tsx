@@ -1,6 +1,8 @@
 import React from 'react';
 export default React.memo (function ITConsulting () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Lightbulb,
@@ -61,24 +63,28 @@ import { motion } from 'framer - motion';
 
   const features = [
     {
+
       icon: Users,
       title: "Expert Team",
       description: "Experienced IT professionals with deep industry knowledge",
       color: "from - blue - 500 to - cyan - 500"
     },
     {
+
       icon: Cpu,
       title: "Technology Strategy",
       description: "Comprehensive technology roadmaps and planning",
       color: "from - purple - 500 to - pink - 500"
     },
     {
+
       icon: Target,
       title: "Performance Optimization",
       description: "System optimization and performance tuning",
       color: "from - green - 500 to - emerald - 500"
     },
     {
+
       icon: Cloud,
       title: "Cloud Migration",
       description: "Seamless cloud adoption and migration strategies",
@@ -88,24 +94,28 @@ import { motion } from 'framer - motion';
 
   const services = [
     {
+
       title: "Technology Assessment",
       description: "Comprehensive evaluation of current IT infrastructure and systems",
       icon: Eye,
       benefits: ["Infrastructure review", "Technology audit", "Gap analysis"]
     },
     {
+
       title: "Strategic Planning",
       description: "Long - term technology roadmaps aligned with business goals",
       icon: Target,
       benefits: ["Technology strategy", "Implementation roadmap", "ROI analysis"]
     },
     {
+
       title: "Digital Transformation",
       description: "End - to - end digital transformation consulting and implementation",
       icon: Rocket,
       benefits: ["Process optimization", "Technology adoption", "Change management"]
     },
     {
+
       title: "Security & Compliance",
       description: "Cybersecurity assessment and regulatory compliance consulting",
       icon: Shield,
@@ -129,11 +139,13 @@ import { motion } from 'framer - motion';
         <div className="container mx - auto px - 4 text - center relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -152,16 +164,19 @@ import { motion } from 'framer - motion';
             <motion.div
               className="flex flex - col sm:flex - row gap - 6 justify - center mb - 16"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.3
 
@@ -288,11 +303,13 @@ import { motion } from 'framer - motion';
           <motion.div
             className="text - center mb - 16"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -379,11 +396,13 @@ import { motion } from 'framer - motion';
         <div className="max - w-7xl mx - auto text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

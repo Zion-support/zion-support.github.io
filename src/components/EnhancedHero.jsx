@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const EnhancedHero = () => {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
     const [currentSlide, setCurrentSlide] = useState (0) ;
@@ -43,21 +44,26 @@ import { motion, AnimatePresence } from 'framer - motion';
 
     ];
     useEffect ( () => {
+
         if (!isAutoPlaying) return;
         const interval = setInterval ( () => {
+
             if (isPlaying) {
 
                 setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
         }, 5000);
         return () => clearInterval(interval)}, [isPlaying, isAutoPlaying, heroSlides.length]);
     const nextSlide = () => {
+
         setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) };
     const prevSlide = () => {
+
         setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length) };
     const goToSlide = (index) => {
 
         setCurrentSlide(index)};
     const toggleAutoPlay = () => {
+
         setIsAutoPlaying (!isAutoPlaying) ;
         if (!isAutoPlaying) {
 

@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Building2, Shield, Globe, Zap, Users, BarChart3, Lock } from 'lucide-react';
 const EnterpriseSolutions = () => {
+
     const solutions = [
         {
+
             title: 'AI-Powered Business Intelligence',
             description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
             features: [
@@ -17,6 +19,7 @@ const EnterpriseSolutions = () => {
             href: '/services/ai-autonomous-systems'
         },
         {
+
             title: 'Enterprise Cybersecurity Suite',
             description: 'Comprehensive security solutions designed for large organizations.',
             features: [
@@ -30,6 +33,7 @@ const EnterpriseSolutions = () => {
             href: '/services/cybersecurity'
         },
         {
+
             title: 'Cloud Infrastructure Management',
             description: 'Scalable cloud solutions optimized for enterprise workloads.',
             features: [
@@ -43,6 +47,7 @@ const EnterpriseSolutions = () => {
             href: '/services/it-infrastructure'
         },
         {
+
             title: 'AI Process Automation',
             description: 'Streamline operations with intelligent automation across all departments.',
             features: [
@@ -58,24 +63,28 @@ const EnterpriseSolutions = () => {
     ];
     const industries = [
         {
+
             name: 'Healthcare',
             description: 'AI-powered healthcare solutions for hospitals and medical facilities.',
             icon: Users,
             solutions: ['Patient care automation', 'Medical imaging AI', 'Drug discovery', 'Compliance management']
         },
         {
+
             name: 'Financial Services',
             description: 'Secure, compliant solutions for banks and financial institutions.',
             icon: Lock,
             solutions: ['Fraud detection', 'Risk assessment', 'Compliance automation', 'Customer analytics']
         },
         {
+
             name: 'Manufacturing',
             description: 'Smart manufacturing solutions for Industry 4.0 transformation.',
             icon: Building2,
             solutions: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Energy management']
         },
         {
+
             name: 'Retail',
             description: 'Omnichannel retail solutions for modern commerce.',
             icon: Globe,
@@ -113,6 +122,7 @@ const EnterpriseSolutions = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => {
+
             const Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
@@ -152,6 +162,7 @@ const EnterpriseSolutions = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {industries.map((industry, index) => {
+
             const Icon = industry.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
@@ -184,21 +195,25 @@ const EnterpriseSolutions = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
             {
+
                 title: 'Scalable Architecture',
                 description: 'Our solutions grow with your business, from startup to enterprise.',
                 icon: Building2
             },
             {
+
                 title: 'Security First',
                 description: 'Enterprise-grade security with compliance certifications.',
                 icon: Shield
             },
             {
+
                 title: '24/7 Support',
                 description: 'Round-the-clock support with dedicated account managers.',
                 icon: Users
             }
         ].map((benefit, index) => {
+
             const Icon = benefit.icon;
             return (<div key={index} className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">

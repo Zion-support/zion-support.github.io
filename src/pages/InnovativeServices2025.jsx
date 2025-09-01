@@ -3,13 +3,16 @@ import React from 'react';
 export default InnovativeServices2025;
 
 const InnovativeServices2025 = () => {
+
   const innovativeServices = [
     {
+
       category: 'AI - Powered Micro SAAS Solutions',
       description:
         'Intelligent software - as - a-service solutions that automate and optimize business processes',
       services: [
         {
+
           name: 'AI - Powered HR Assistant',
           description:
             'Revolutionary HR automation platform that transforms recruitment, onboarding, and employee management through artificial intelligence.',
@@ -38,9 +41,9 @@ const InnovativeServices2025 = () => {
           ],
           competitors: ['BambooHR', 'Workday', 'Zenefits'],
           competitiveAdvantage:
-            'Advanced AI algorithms, comprehensive automation, and bias - free hiring processes',
-        },
+            'Advanced AI algorithms, comprehensive automation, and bias - free hiring processes'},
         {
+
           name: 'Smart Inventory Management',
           description:
             'AI - driven inventory optimization platform that eliminates stockouts and reduces carrying costs through predictive analytics.',
@@ -69,9 +72,9 @@ const InnovativeServices2025 = () => {
           ],
           competitors: ['TradeGecko', 'Zoho Inventory', 'Fishbowl'],
           competitiveAdvantage:
-            'AI - powered forecasting, real - time optimization, and seamless ERP integration',
-        },
+            'AI - powered forecasting, real - time optimization, and seamless ERP integration'},
         {
+
           name: 'AI Legal Document Analyzer',
           description:
             'Advanced legal AI platform that automates document review, contract analysis, and compliance monitoring.',
@@ -100,16 +103,16 @@ const InnovativeServices2025 = () => {
           ],
           competitors: ['Kira Systems', 'Luminance', 'eBrevia'],
           competitiveAdvantage:
-            'Advanced NLP, comprehensive risk assessment, and seamless legal workflow integration',
-        },
-      ],
-    },
+            'Advanced NLP, comprehensive risk assessment, and seamless legal workflow integration'},
+      ]},
     {
+
       category: 'Advanced AI & Machine Learning',
       description:
         'Enterprise - grade artificial intelligence solutions that drive innovation and competitive advantage',
       services: [
         {
+
           name: 'AI - Powered Fraud Detection',
           description:
             'Next - generation fraud prevention platform using machine learning to detect and prevent fraudulent activities in real - time.',
@@ -138,9 +141,9 @@ const InnovativeServices2025 = () => {
           ],
           competitors: ['Sift', 'Signifyd', 'Forter'],
           competitiveAdvantage:
-            'Advanced ML algorithms, real - time processing, and industry - leading accuracy rates',
-        },
+            'Advanced ML algorithms, real - time processing, and industry - leading accuracy rates'},
         {
+
           name: 'AI Supply Chain Optimization',
           description:
             'Intelligent supply chain platform that optimizes operations, reduces costs, and improves efficiency through AI - powered analytics.',
@@ -164,9 +167,9 @@ const InnovativeServices2025 = () => {
           useCases: ['Manufacturing', 'Logistics', 'Retail', 'Healthcare'],
           competitors: ['Llamasoft', 'AnyLogic', 'FlexSim'],
           competitiveAdvantage:
-            'AI - powered optimization, real - time visibility, and comprehensive risk management',
-        },
+            'AI - powered optimization, real - time visibility, and comprehensive risk management'},
         {
+
           name: 'AI - Powered Healthcare',
           description:
             'Revolutionary healthcare AI platform that improves diagnosis accuracy, patient care, and operational efficiency.',
@@ -199,16 +202,16 @@ const InnovativeServices2025 = () => {
             'Microsoft Healthcare',
           ],
           competitiveAdvantage:
-            'Advanced medical AI, comprehensive healthcare integration, and regulatory compliance',
-        },
-      ],
-    },
+            'Advanced medical AI, comprehensive healthcare integration, and regulatory compliance'},
+      ]},
     {
+
       category: 'Emerging Technology Solutions',
       description:
         'Cutting - edge technology services that position businesses for the future',
       services: [
         {
+
           name: 'Quantum Computing Consulting',
           description:
             'Expert guidance on quantum computing strategy, implementation, and business transformation for forward - thinking organizations.',
@@ -237,9 +240,9 @@ const InnovativeServices2025 = () => {
           ],
           competitors: ['McKinsey', 'BCG', 'Deloitte'],
           competitiveAdvantage:
-            'Deep quantum expertise, practical implementation experience, and strategic business focus',
-        },
+            'Deep quantum expertise, practical implementation experience, and strategic business focus'},
         {
+
           name: 'Metaverse Development',
           description:
             'Complete metaverse platform development including VR / AR experiences, 3D environments, and interactive digital spaces.',
@@ -268,9 +271,9 @@ const InnovativeServices2025 = () => {
           ],
           competitors: ['Meta', 'Microsoft', 'Unity'],
           competitiveAdvantage:
-            'Custom development, rapid prototyping, and comprehensive platform solutions',
-        },
+            'Custom development, rapid prototyping, and comprehensive platform solutions'},
         {
+
           name: 'Web3 Development',
           description:
             'Complete Web3 development services including decentralized applications, DeFi platforms, and blockchain integration.',
@@ -299,16 +302,16 @@ const InnovativeServices2025 = () => {
           ],
           competitors: ['Consensys', 'Chainlink Labs', 'Alchemy'],
           competitiveAdvantage:
-            'Full - stack Web3 development, rapid deployment, and comprehensive blockchain expertise',
-        },
-      ],
-    },
+            'Full - stack Web3 development, rapid deployment, and comprehensive blockchain expertise'},
+      ]},
     {
+
       category: 'Advanced Cybersecurity Solutions',
       description:
         'Next - generation security solutions that protect against evolving cyber threats',
       services: [
         {
+
           name: 'Zero Trust Architecture',
           description:
             'Modern security architecture implementation that eliminates implicit trust and continuously validates every access request.',
@@ -337,9 +340,9 @@ const InnovativeServices2025 = () => {
           ],
           competitors: ['Palo Alto Networks', 'Cisco', 'Microsoft'],
           competitiveAdvantage:
-            'Comprehensive implementation, rapid deployment, and ongoing optimization support',
-        },
+            'Comprehensive implementation, rapid deployment, and ongoing optimization support'},
         {
+
           name: 'AI - Powered Cybersecurity',
           description:
             'Next - generation cybersecurity platform that uses artificial intelligence to detect and respond to threats in real - time.',
@@ -368,10 +371,8 @@ const InnovativeServices2025 = () => {
           ],
           competitors: ['Darktrace', 'CrowdStrike', 'SentinelOne'],
           competitiveAdvantage:
-            'Advanced AI algorithms, real - time protection, and comprehensive threat intelligence',
-        },
-      ],
-    },
+            'Advanced AI algorithms, real - time protection, and comprehensive threat intelligence'},
+      ]},
   ];
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text - white">
       {/* Hero Section */}

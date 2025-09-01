@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Network, Cloud, Smartphone, CheckCircle } from 'lucide-react';
 export default function Marketplace() {
+
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -32,6 +33,7 @@ export default function Marketplace() {
     ];
     const marketplaceProducts = [
         {
+
             id: 1,
             name: 'AI Autonomous Business Manager',
             description: 'Complete AI-powered business management platform with autonomous decision-making capabilities.',
@@ -56,6 +58,7 @@ export default function Marketplace() {
             type: 'software'
         },
         {
+
             id: 2,
             name: 'Quantum Neural Network Framework',
             description: 'Advanced quantum computing framework for neural network development and optimization.',
@@ -80,6 +83,7 @@ export default function Marketplace() {
             type: 'software'
         },
         {
+
             id: 3,
             name: 'SOC2 Compliance Automation Suite',
             description: 'Comprehensive security and compliance automation platform for enterprise organizations.',
@@ -104,6 +108,7 @@ export default function Marketplace() {
             type: 'software'
         },
         {
+
             id: 4,
             name: '5G Enterprise Network Kit',
             description: 'Complete 5G networking solution for enterprise environments with advanced security.',
@@ -128,6 +133,7 @@ export default function Marketplace() {
             type: 'hardware'
         },
         {
+
             id: 5,
             name: 'AI Workflow Templates Pack',
             description: 'Collection of 50+ pre-built AI workflow templates for common business processes.',
@@ -152,6 +158,7 @@ export default function Marketplace() {
             type: 'template'
         },
         {
+
             id: 6,
             name: 'Blockchain DeFi Development Kit',
             description: 'Complete toolkit for building decentralized finance applications on blockchain.',
@@ -176,6 +183,7 @@ export default function Marketplace() {
             type: 'development-kit'
         },
         {
+
             id: 7,
             name: 'IoT Data Analytics Platform',
             description: 'Enterprise IoT platform with advanced analytics and machine learning capabilities.',
@@ -200,6 +208,7 @@ export default function Marketplace() {
             type: 'platform'
         },
         {
+
             id: 8,
             name: 'Cybersecurity Threat Intelligence',
             description: 'Real-time threat intelligence and security monitoring service.',
@@ -225,24 +234,32 @@ export default function Marketplace() {
         }
     ];
     const filteredProducts = marketplaceProducts.filter(product => {
+
         const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             product.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
         let matchesPrice = true;
         if (selectedPriceRange === 'free') {
+
             matchesPrice = product.price === 0}
         else if (selectedPriceRange === 'under-100') {
+
             matchesPrice = product.price < 100}
         else if (selectedPriceRange === '100-500') {
+
             matchesPrice = product.price >= 100 && product.price <= 500}
         else if (selectedPriceRange === '500-1000') {
+
             matchesPrice = product.price >= 500 && product.price <= 1000}
         else if (selectedPriceRange === 'over-1000') {
+
             matchesPrice = product.price > 1000}
         return matchesSearch && matchesCategory && matchesPrice});
     const sortedProducts = [...filteredProducts].sort((a, b) => {
+
         switch (sortBy) {
+
             case 'price-low':
                 return a.price - b.price;
             case 'price-high':
@@ -257,13 +274,16 @@ export default function Marketplace() {
                 return b.featured ? 1 : -1}
     });
     const formatPrice = (price, currency) => {
+
         if (price === 0)
             return 'Free';
         return `${currency} ${price.toLocaleString()}`};
     const getCategoryIcon = (categoryId) => {
+
         const category = categories.find(cat => cat.id === categoryId);
         return category ? category.icon : Globe};
     const getCategoryName = (categoryId) => {
+
         const category = categories.find(cat => cat.id === categoryId);
         return category ? category.name : 'Unknown'};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

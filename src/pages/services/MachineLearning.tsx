@@ -1,7 +1,8 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Zap, 
   CheckCircle,
@@ -106,38 +107,45 @@ import {
 } from 'lucide-react';
 
 export default function MachineLearning() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'Deep Learning',
       description: 'Advanced neural networks for complex pattern recognition',
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       icon: Target,
       title: 'Predictive Analytics',
       description: 'Forecast future trends and behaviors with high accuracy',
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       icon: Search,
       title: 'Natural Language Processing',
       description: 'Understand and process human language intelligently',
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       icon: Eye,
       title: 'Computer Vision',
       description: 'Advanced image and video analysis capabilities',
       color: 'from-yellow-500 to-orange-500'
     },
     {
+
       icon: Zap,
       title: 'Real-Time Learning',
       description: 'Continuous model improvement and adaptation',
       color: 'from-red-500 to-pink-500'
     },
     {
+
       icon: Shield,
       title: 'AI Ethics & Safety',
       description: 'Responsible AI development and deployment',
@@ -156,21 +164,25 @@ export default function MachineLearning() {
 
   const useCases = [
     {
+
       title: 'Customer Analytics',
       description: 'Predict customer behavior and preferences',
       icon: Users
     },
     {
+
       title: 'Fraud Detection',
       description: 'Identify suspicious activities in real-time',
       icon: Shield
     },
     {
+
       title: 'Recommendation Systems',
       description: 'Personalized product and content suggestions',
       icon: Target
     },
     {
+
       title: 'Process Optimization',
       description: 'Streamline operations and reduce inefficiencies',
       icon: Activity
@@ -179,21 +191,25 @@ export default function MachineLearning() {
 
   const mlCapabilities = [
     {
+
       name: 'Supervised Learning',
       description: 'Training models with labeled data for classification and regression',
       examples: ['Classification', 'Regression', 'Object detection', 'Sentiment analysis']
     },
     {
+
       name: 'Unsupervised Learning',
       description: 'Discovering hidden patterns in unlabeled data',
       examples: ['Clustering', 'Dimensionality reduction', 'Anomaly detection']
     },
     {
+
       name: 'Reinforcement Learning',
       description: 'Training agents to make decisions through trial and error',
       examples: ['Game AI', 'Robotics', 'Autonomous systems', 'Resource optimization']
     },
     {
+
       name: 'Neural Networks',
       description: 'Deep learning models for complex pattern recognition',
       examples: ['CNNs', 'RNNs', 'Transformers', 'GANs']
@@ -202,31 +218,37 @@ export default function MachineLearning() {
 
   const industries = [
     {
+
       name: 'Healthcare',
       icon: Heart,
       description: 'Medical diagnosis, drug discovery, and patient care'
     },
     {
+
       name: 'Finance',
       icon: BarChart,
       description: 'Risk assessment, fraud detection, and trading algorithms'
     },
     {
+
       name: 'Retail',
       icon: ShoppingCart,
       description: 'Customer segmentation, inventory optimization, and pricing'
     },
     {
+
       name: 'Manufacturing',
       icon: Factory,
       description: 'Predictive maintenance, quality control, and supply chain'
     },
     {
+
       name: 'Transportation',
       icon: Car,
       description: 'Autonomous vehicles, route optimization, and logistics'
     },
     {
+
       name: 'Entertainment',
       icon: Play,
       description: 'Content recommendation, personalization, and analytics'

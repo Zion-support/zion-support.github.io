@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function AIAutonomousVehicle () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Brain,
@@ -580,6 +582,7 @@ import { motion } from 'framer - motion';
   Brain
 const autonomousVehicleSolutions = [;
   {
+
     id: 1,
     title: "AI Vehicle Perception System",
     description: "Advanced computer vision and sensor fusion for autonomous vehicle perception.",
@@ -596,6 +599,7 @@ const autonomousVehicleSolutions = [;
     technologies["Computer Vision", "AI", "Sensor Fusion", "Machine Learning"];
   },;
   {
+
     id: 2,
     title: "Autonomous Navigation System",
     description: "AI - powered navigation and path planning for autonomous vehicles.",
@@ -612,6 +616,7 @@ const autonomousVehicleSolutions = [;
     technologies["AI Navigation", "Path Planning", "Traffic Analysis", "Machine Learning"];
   },;
   {
+
     id: 3,
     title: "Vehicle Control System",
     description: "Intelligent control systems for autonomous vehicle operation.",
@@ -628,6 +633,7 @@ const autonomousVehicleSolutions = [;
     technologies["AI Control", "Vehicle Systems", "Safety", "Real - time Processing"];
   },;
   {
+
     id: 4,
     title: "Predictive Maintenance System",
     description: "AI - driven predictive maintenance for autonomous vehicle fleets.",
@@ -644,6 +650,7 @@ const autonomousVehicleSolutions = [;
     technologies["Predictive Analytics", "IoT", "Machine Learning", "Fleet Management"];
   },;
   {
+
     id: 5,
     title: "Safety & Security System",
     description: "Comprehensive safety and security systems for autonomous vehicles.",
@@ -660,6 +667,7 @@ const autonomousVehicleSolutions = [;
     technologies["AI Safety", "Security", "Compliance", "Emergency Systems"];
   },;
   {
+
     id: 6,
     title: "Fleet Management Platform",
     description: "AI - powered platform for managing autonomous vehicle fleets.",
@@ -679,6 +687,7 @@ const autonomousVehicleSolutions = [;
 
 const vehicleTechnologies = [
   {
+
     name: "Computer Vision",
     description: "Advanced computer vision for vehicle perception",
     icon: Eye,
@@ -686,6 +695,7 @@ const vehicleTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "AI Navigation",
     description: "Intelligent navigation and path planning",
     icon: Navigation,
@@ -693,6 +703,7 @@ const vehicleTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Sensor Fusion",
     description: "Multi - sensor data fusion and processing",
     icon: Cpu,
@@ -700,6 +711,7 @@ const vehicleTechnologies = [
     reliability: "High"
   },
   {
+
     name: "Machine Learning",
     description: "AI algorithms for autonomous decision making",
     icon: Brain,
@@ -710,6 +722,7 @@ const vehicleTechnologies = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "Autonomous Transport Corp",
     industry: "Transportation",
@@ -719,6 +732,7 @@ const successStories = [
     logo: "ATC"
   },
   {
+
     id: 2,
     comp: "Smart City Solutions",
     industry: "Government",
@@ -728,6 +742,7 @@ const successStories = [
     logo: "SCS"
   },
   {
+
     id: 3,
     comp: "Industrial Automation Ltd",
     industry: "Manufacturing",
@@ -740,6 +755,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Vehicle Assessment",
     description: "Evaluate current vehicle systems and identify AI opportunities",
@@ -747,6 +763,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
   },
   {
+
     step: 2,
     title: "AI Strategy Development",
     description: "Develop AI strategy and implementation roadmap",
@@ -754,6 +771,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
   },
   {
+
     step: 3,
     title: "System Implementation",
     description: "Build and deploy AI autonomous vehicle systems",
@@ -761,6 +779,7 @@ const processSteps = [
     duration: "20 - 44 weeks"
   },
   {
+
     step: 4,
     title: "Testing & Optimization",
     description: "Test systems and optimize performance",
@@ -771,24 +790,28 @@ const processSteps = [
 
 const vehicleBenefits = [
   {
+
     title: "Enhanced Safety",
     description: "AI - powered systems provide superior safety and accident prevention",
     icon: Shield,
     examples["Accident prevention", "Safety monitoring", "Emergency response", "Risk assessment"];
   },;
   {
+
     title: "Improved Efficiency",
     description: "Autonomous systems optimize vehicle performance and operations",
     icon: Zap,
     examples["Route optimization", "Fuel efficiency", "Performance optimization", "Operational efficiency"];
   },;
   {
+
     title: "Cost Reduction",
     description: "AI systems reduce operational costs and improve resource utilization",
     icon: TrendingUp,
     examples["Fuel savings", "Maintenance optimization", "Labor reduction", "Better ROI"];
   },;
   {
+
     title: "24 / 7 Operation",
     description: "Autonomous vehicles enable continuous operation without human limitations",
     icon: Clock,
@@ -817,11 +840,13 @@ const vehicleBenefits = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -831,16 +856,19 @@ const vehicleBenefits = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -883,11 +911,13 @@ const vehicleBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -905,16 +935,19 @@ const vehicleBenefits = [
             {vehicleBenefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -945,11 +978,13 @@ const vehicleBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -967,16 +1002,19 @@ const vehicleBenefits = [
             {vehicleTechnologies.map ( (technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -992,6 +1030,7 @@ const vehicleBenefits = [
                 <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   technology.reliability === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : technology.reliability === 'High'
@@ -1010,11 +1049,13 @@ const vehicleBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1032,16 +1073,19 @@ const vehicleBenefits = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1072,11 +1116,13 @@ const vehicleBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1096,6 +1142,7 @@ const vehicleBenefits = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -1109,16 +1156,19 @@ const vehicleBenefits = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1173,11 +1223,13 @@ const vehicleBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1195,16 +1247,19 @@ const vehicleBenefits = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1250,11 +1305,13 @@ const vehicleBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

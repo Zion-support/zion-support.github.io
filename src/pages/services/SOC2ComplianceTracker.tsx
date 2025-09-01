@@ -5,28 +5,34 @@ import { Shield, CheckCircle, FileText, Users, BarChart3, Zap, Lock, Target, Ale
 import { SEO               } from '@/components/SEO';
 
 export default function SOC2ComplianceTracker(...args: []):  {
+
   const features = [
     {
+
       icon: Shield,
       title: "SOC2 Framework Support",
       description: "Complete coverage of all SOC2 Trust Service Criteria: Security, Availability, Processing Integrity, Confidentiality, and Privacy."
     },
     {
+
       icon: FileText,
       title: "Automated Documentation",
       description: "Generate and maintain compliance documentation, policies, and procedures automatically with AI-powered templates."
     },
     {
+
       icon: Users,
       title: "Access Management",
       description: "Track user access, permissions, and role-based controls with automated provisioning and deprovisioning."
     },
     {
+
       icon: BarChart3,
       title: "Real-time Monitoring",
       description: "Continuous monitoring of security controls, system changes, and compliance status with instant alerts."
     },
     {
+
       icon: Lock,
       title: "Security Controls",
       description: "Comprehensive security control monitoring including encryption, authentication, and network security.";
@@ -39,26 +45,31 @@ export default function SOC2ComplianceTracker(...args: []):  {
   ];
   const complianceAreas = [
     {
+
       icon: Shield,
       title: "Security",
       description: "Access controls, encryption, network security, and vulnerability management"
     },
     {
+
       icon: Clock,
       title: "Availability",
       description: "System uptime, disaster recovery, and business continuity planning"
     },
     {
+
       icon: CheckCircle,
       title: "Processing Integrity",
       description: "Data accuracy, processing completeness, and system reliability"
     },
     {
+
       icon: Lock,
       title: "Confidentiality",
       description: "Data classification, encryption, and information protection"
     },
     {
+
       icon: Users,
       title: "Privacy",
       description: "Data handling, consent management, and privacy controls";
@@ -71,6 +82,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
   ];
   const pricingPlans = [
     {
+
       name: "Compliance Starter",
       price: "$199",
       period: "/month",
@@ -86,6 +98,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
       popular: false
     },
     {
+
       name: "Compliance Professional",
       price: "$499",
       period: "/month",
@@ -102,6 +115,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
       popular: true
     },
     {
+
       name: "Compliance Enterprise",
       price: "$1,299",
       period: "/month",
@@ -120,16 +134,19 @@ export default function SOC2ComplianceTracker(...args: []):  {
   ];
   const benefits = [
     {
+
       title: "Achieve SOC2 Compliance",
       description: "Streamline your SOC2 audit process with automated tools and expert guidance.",
       icon: Award
     },
     {
+
       title: "Reduce Audit Costs",
       description: "Minimize external audit costs with comprehensive internal preparation and monitoring.",
       icon: TrendingUp
     },
     {
+
       title: "Improve Security Posture",
       description: "Strengthen your security controls and risk management with continuous monitoring.",
       icon: Shield;
@@ -142,26 +159,31 @@ export default function SOC2ComplianceTracker(...args: []):  {
   ];
   const complianceSteps = [
     {
+
       step: "01",
       title: "Assessment & Gap Analysis",
       description: "Evaluate current controls against SOC2 requirements and identify gaps"
     },
     {
+
       step: "02",
       title: "Control Implementation",
       description: "Implement and configure necessary security and compliance controls"
     },
     {
+
       step: "03",
       title: "Monitoring & Testing",
       description: "Continuously monitor controls and conduct regular testing"
     },
     {
+
       step: "04",
       title: "Documentation & Evidence",
       description: "Maintain comprehensive documentation and evidence collection"
     },
     {
+
       step: "05",
       title: "Audit Preparation",
       description: "Prepare for external audit with complete documentation and evidence";
@@ -187,10 +209,12 @@ export default function SOC2ComplianceTracker(...args: []):  {
             <div className="text-center">
               <motion.div
                 initial = {
+
   { opacity: 0,
   y: 20 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -237,14 +261,17 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 }}
@@ -276,14 +303,17 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 }}
@@ -315,14 +345,17 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 }}
@@ -354,14 +387,17 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   x: 0 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 }}
@@ -395,18 +431,22 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+
                     plan.popular
                       ? 'border-indigo-500 ring-2 ring-indigo-500/20'
                       : 'border-slate-700'
@@ -437,6 +477,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
                   <Link
                     to="/request-quote"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
@@ -453,10 +494,12 @@ export default function SOC2ComplianceTracker(...args: []):  {
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0 
 }}

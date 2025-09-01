@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 export function AdvancedAnalytics() {
+
     const [analyticsData, setAnalyticsData] = useState({
+
         visitors: 0,
         conversions: 0,
         revenue: 0,
@@ -14,11 +16,14 @@ export function AdvancedAnalytics() {
     const [timeRange, setTimeRange] = useState('7d');
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
+
         // Simulate API call
         const fetchData = async () => {
+
             setIsLoading(true);
             await new Promise(resolve => setTimeout(resolve, 1500));
             setAnalyticsData({
+
                 visitors: Math.floor(Math.random() * 10000) + 5000,
                 conversions: Math.floor(Math.random() * 500) + 100,
                 revenue: Math.floor(Math.random() * 50000) + 10000,
@@ -46,17 +51,21 @@ export function AdvancedAnalytics() {
             setIsLoading(false)};
         fetchData()}, [timeRange]);
     const formatNumber = (num) => {
+
         if (num >= 1000000)
             return (num / 1000000).toFixed(1) + 'M';
         if (num >= 1000)
             return (num / 1000).toFixed(1) + 'K';
         return num.toString()};
     const formatCurrency = (num) => {
+
         return new Intl.NumberFormat('en-US', {
+
             style: 'currency',
             currency: 'USD'
         }).format(num)};
     if (isLoading) {
+
         return (<div className="flex items-center justify-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan"></div>
       </div>)}
@@ -82,10 +91,12 @@ export function AdvancedAnalytics() {
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -98,10 +109,12 @@ export function AdvancedAnalytics() {
         </motion.div>
 
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -114,10 +127,12 @@ export function AdvancedAnalytics() {
         </motion.div>
 
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -130,10 +145,12 @@ export function AdvancedAnalytics() {
         </motion.div>
 
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -150,10 +167,12 @@ export function AdvancedAnalytics() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Top Pages */}
         <motion.div initial = {
+
   { opacity: 0,
   x: -20 
 
 }} animate = {
+
   { opacity: 1,
   x: 0 
 
@@ -180,10 +199,12 @@ export function AdvancedAnalytics() {
 
         {/* Traffic Sources */}
         <motion.div initial = {
+
   { opacity: 0,
   x: 20 
 
 }} animate = {
+
   { opacity: 1,
   x: 0 
 
@@ -207,10 +228,12 @@ export function AdvancedAnalytics() {
 
       {/* Device Types */}
       <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -235,10 +258,12 @@ export function AdvancedAnalytics() {
 
       {/* Performance Insights */}
       <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 

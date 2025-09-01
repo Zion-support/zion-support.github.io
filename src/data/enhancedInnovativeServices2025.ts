@@ -1,10 +1,12 @@
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
   address: string
 };
 export interface MicroSaasService {
+
   id: number;
   name: string;
   category: string;
@@ -27,6 +29,7 @@ export interface MicroSaasService {
   trialPeriod: string
 };
 export interface ITService {
+
   id: number;
   name: string;
   category: string;
@@ -46,6 +49,7 @@ export interface ITService {
   support: string
 };
 export interface AIService {
+
   id: number;
   name: string;
   category: string;
@@ -107,6 +111,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     location: "Global","
     availability: "Limited Availability",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -121,6 +126,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     useCases["Drug discovery", "Financial modeling", "Climate prediction", "Logistics optimization"],;"
     roiMetrics["1000x faster ML training", "90% cost reduction", "3x faster time-to-market"]},;  // Blockchain & Web3 Solutions
   {
+
 "
     id: "decentralized-identity-platform","
     title: "Decentralized Identity Platform","
@@ -159,6 +165,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -173,6 +180,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     useCases["KYC/AML compliance", "Healthcare records", "Academic credentials", "Professional certifications"],;"
     roiMetrics["99% fraud reduction", "80% compliance cost savings", "60% faster onboarding"]},;  // IoT & Edge Computing Services
   {
+
 "
     id: "smart-city-iot-platform","
     title: "Smart City IoT Platform","
@@ -211,6 +219,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -225,6 +234,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     useCases["Traffic management", "Energy optimization", "Public safety", "Environmental monitoring"],;"
     roiMetrics["30% infrastructure cost reduction", "25% energy savings", "40% faster emergency response"]},;  // Advanced Cybersecurity Solutions
   {
+
 "
     id: "ai-threat-hunting-platform","
     title: "AI Threat Hunting Platform","
@@ -263,6 +273,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -277,6 +288,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     useCases["Enterprise security", "Financial fraud detection", "Healthcare data protection", "Government security"],;"
     roiMetrics["10x faster threat detection", "80% false positive reduction", "60% incident response time improvement"]},;  // Green Tech & Sustainability Services
   {
+
 "
     id: "carbon-footprint-tracker","
     title: "Carbon Footprint Tracker Pro","
@@ -315,6 +327,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -329,6 +342,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     useCases["Manufacturing sustainability", "Retail carbon reduction", "Logistics optimization", "Office sustainability"],;"
     roiMetrics["25-40% carbon footprint reduction", "15% operational cost savings", "20% brand value increase"]},;  // Healthcare Tech Solutions
   {
+
 "
     id: "ai-medical-diagnosis-platform","
     title: "AI Medical Diagnosis Platform","
@@ -367,6 +381,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     location: "Global","
     availability: "Limited Availability",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -381,6 +396,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     useCases["Radiology diagnostics", "Pathology analysis", "Cardiology screening", "Oncology detection"],;"
     roiMetrics["30% diagnostic accuracy improvement", "50% faster diagnosis", "25% healthcare cost reduction"]},;  // FinTech & RegTech Services
   {
+
 "
     id: "ai-fraud-detection-engine","
     title: "AI Fraud Detection Engine","
@@ -419,6 +435,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -433,6 +450,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     useCases["Credit card fraud", "Banking fraud", "E-commerce fraud", "Insurance fraud"],;"
     roiMetrics["90% fraud loss reduction", "99.9% fraud detection accuracy", "60% compliance cost savings"]},;  // AR/VR & Metaverse Solutions
   {
+
 "
     id: "enterprise-ar-platform","
     title: "Enterprise AR Platform","
@@ -471,6 +489,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -485,6 +504,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     useCases["Employee training", "Equipment maintenance", "Design collaboration", "Remote assistance"],;"
     roiMetrics["40% training cost reduction", "30% maintenance efficiency improvement", "50% collaboration enhancement"]},;  // Advanced Analytics & Business Intelligence
   {
+
 "
     id: "predictive-analytics-platform","
     title: "Predictive Analytics Platform","
@@ -516,6 +536,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     targetAudience["Enterprise", "Data analysts", "Business leaders", "Consultants"],;"
     tags["Analytics", "Business Intelligence", "Quantum", "AI", "Predictive"],;
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -561,6 +582,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     targetAudience["Enterprises", "Financial institutions", "Healthcare", "Government"],;"
     tags["Cybersecurity", "AI", "Threat Detection", "Compliance", "Automation"],;
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -606,6 +628,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     targetAudience["DevOps teams", "Cloud architects", "IT managers", "Startups"],;"
     tags["Cloud", "DevOps", "Automation", "Cost Management", "Monitoring"],;
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -651,6 +674,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     targetAudience["Data scientists", "Compliance officers", "IT leaders", "Analysts"],;"
     tags["Data Management", "Governance", "Compliance", "AI", "Analytics"],;
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -696,6 +720,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     targetAudience["Business users", "Data scientists", "Developers", "Consultants"],;"
     tags["AI", "No-code", "Machine Learning", "Development", "Automation"],;
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -741,6 +766,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     targetAudience["Corporations", "Manufacturing", "Retail", "Government", "NGOs"],;"
     tags["Sustainability", "ESG", "Carbon Tracking", "AI", "Compliance"],;
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -786,6 +812,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     targetAudience["Manufacturing", "Smart cities", "Energy companies", "Transportation", "Healthcare"],;"
     tags["IoT", "Edge Computing", "AI", "Real-time Analytics", "Predictive Maintenance"],;
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -831,6 +858,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     targetAudience["Manufacturing", "Retail", "Food & Beverage", "Pharmaceuticals", "Luxury goods"],;"
     tags["Blockchain", "Supply Chain", "Transparency", "Smart Contracts", "Traceability"],;
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -876,6 +904,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     targetAudience["Corporate training", "Healthcare", "Manufacturing", "Education", "Military"],;"
     tags["AR/VR", "Training", "Simulation", "Immersive Learning", "3D"],;
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
@@ -921,6 +950,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     targetAudience["Financial services", "Government", "Healthcare", "Defense", "Critical infrastructure"],;"
     tags["Quantum Security", "Cryptography", "Post-Quantum", "Encryption", "Compliance"],;
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","

@@ -12,6 +12,7 @@ export interface Notification {
   message: string;
   duration?: number;
 action?: {
+
     label: string;
     onClick: ()  => void}}
 
@@ -27,6 +28,7 @@ const NotificationContext = createContext<NotificationContextType | null>(null);
 export const useNotifications = () => {;
   const context = useContext(NotificationContext);
   if (!context) {
+
     throw new Error('useNotifications must be used within a NotificationProvider')}
   return context};
 
@@ -35,6 +37,7 @@ interface NotificationProviderProps extends React.PropsWithChildren<{}> {
   children: React.ReactNode}
 
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
+
   const [notifications, setNotifications] = useState<any>([]);
 
         removeNotification(id)}, notification.duration || 5000)}
@@ -50,6 +53,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
 
   return (
     <NotificationContext.Provider value = {
+
   { notifications, addNotification, removeNotification,
   clearAll 
 
@@ -80,6 +84,7 @@ const NotificationContainer: React.FC = () => {;
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: 300, scale: 0.8 }}
             transition={{
+
               duration: 0.3,
               delay: index * 0.1,
               type: "spring",
@@ -102,6 +107,7 @@ const NotificationContainer: React.FC = () => {;
       {notifications.length > 1 && (;
         <motion.button
           initial = {
+
   { opacity: 0,
   y: 10 
 
@@ -112,6 +118,7 @@ const NotificationContainer: React.FC = () => {;
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -136,6 +143,7 @@ const NotificationContainer: React.FC = () => {;
   onRemove: (id: string)  => void}
 
 const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
+
         return <Info className = "w-5 h-5 text-blue-400" />};
   };
 
@@ -186,19 +194,24 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 
 // Utility functions for easy notification creation
 export const notify = {
+
   success: (title: string, message: string, options?: Partial<Notification>)  => {
+
     // This would be used with the context
-    console.log('Success notification: ', { title, message,
+    // // // console.log('Success notification: ', { title, message,
   ...options 
 
 })},
   error: (title: string, message: string, options?: Partial<Notification>) => {
-    console.log('Error notification: ', { title, message, ...options })},
+
+    // // // console.log('Error notification: ', { title, message, ...options })},
   warning: (title: string, message: string, options?: Partial<Notification>)  => {
-    console.log('Warning notification: ', { title, message, ...options })},
+
+    // // // console.log('Warning notification: ', { title, message, ...options })},
   info: (title: string, message: string, options?: Partial<Notification>) => {
-    console.log('Info notification:', { title, message, ...options })};
-    console.log('Success notification:', { title, message,;
+
+    // // // console.log('Info notification:', { title, message, ...options })};
+    // // // console.log('Success notification:', { title, message,;
   ;
   ;
   ;
@@ -210,24 +223,30 @@ export const notify = {
 });
   },
   error: (title: string, message: string, options?: Partial<Notification>) => {
-    // // // console.log('Error notification:', { title, message, ...options });
+
+    // // // // // // console.log('Error notification:', { title, message, ...options });
   },
   warning: (title: string, message: string, options?: Partial<Notification>) => {
-    // // // console.log('Warning notification:', { title, message, ...options });
+
+    // // // // // // console.log('Warning notification:', { title, message, ...options });
   },
   info: (title: string, message: string, options?: Partial<Notification>) => {
-    // // // console.log('Info notification:', { title, message, ...options });
+
+    // // // // // // console.log('Info notification:', { title, message, ...options });
 
 };}}}}}}}}}}}
-    // // // // // // // console.log('Success notification:', { title, message, ...options });
+    // // // // // // // // // // console.log('Success notification:', { title, message, ...options });
   },
   error: (title: string, message: string, options?: Partial<Notification>) => {
-    // // // // // // // console.log('Error notification:', { title, message, ...options });
+
+    // // // // // // // // // // console.log('Error notification:', { title, message, ...options });
   },
   warning: (title: string, message: string, options?: Partial<Notification>) => {
-    // // // // // // // console.log('Warning notification:', { title, message, ...options });
+
+    // // // // // // // // // // console.log('Warning notification:', { title, message, ...options });
   },
   info: (title: string, message: string, options?: Partial<Notification>) => {
-    // // // // // // // console.log('Info notification:', { title, message, ...options });
+
+    // // // // // // // // // // console.log('Info notification:', { title, message, ...options });
   }
 };

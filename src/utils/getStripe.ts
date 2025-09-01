@@ -6,7 +6,6 @@ export function getStripe(): Promise<Stripe | null> {
 
   if (!stripePromise) {
 
-    
     stripePromise = loadStripe(key, { advancedFraudSignals: false })}
   return stripePromise}
 =======
@@ -15,7 +14,9 @@ import { loadStripe, Stripe } from '@stripe/stripe-js';
 let stripePromise: Promise<Stripe | null>;
 
 export function getStripe() {
+
   if (!stripePromise) {
+
 <<<<<<< HEAD
     const key =
       import.meta.env.PROD

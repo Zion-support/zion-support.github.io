@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield } from 'lucide-react';
 
 interface Props {
+
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
@@ -10,6 +11,7 @@ interface Props {
 }
 
 interface State {
+
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
@@ -17,9 +19,12 @@ interface State {
 }
 
 export class ModernErrorBoundary extends Component<Props, State> {
+
   constructor(props: Props) {
+
     super(props);
     this.state = {
+
       hasError: false,
       error: null,
       errorInfo: null,
@@ -28,7 +33,9 @@ export class ModernErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
+
     return {
+
       hasError: true,
       error,
       errorInfo: null,
@@ -37,30 +44,38 @@ export class ModernErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+
     this.setState({
+
       error,
       errorInfo
     });
 
     if (this.props.onError) {
+
       this.props.onError(error, errorInfo);
     }
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by ModernErrorBoundary:', error, errorInfo);
+
+      // // // console.error('Error caught by ModernErrorBoundary:', error, errorInfo);
     }
   }
 
   reportError = () => {
+
     if (this.state.error) {
+
       // In a real app, you would send this to an error reporting service
-      console.error('Error reported:', this.state.error);
+      // // // console.error('Error reported:', this.state.error);
     }
   };
 
   handleRetry = () => {
+
     this.setState({
+
       hasError: false,
       error: null,
       errorInfo: null,
@@ -69,22 +84,29 @@ export class ModernErrorBoundary extends Component<Props, State> {
   };
 
   handleGoHome = () => {
+
     window.location.href = '/';
   };
 
   handleGoBack = () => {
+
     window.history.back();
   };
 
   toggleDetails = () => {
+
     this.setState(prevState => ({
+
       showDetails: !prevState.showDetails
     }));
   };
 
   render() {
+
     if (this.state.hasError) {
+
       if (this.props.fallback) {
+
         return this.props.fallback;
       }
 
@@ -211,6 +233,7 @@ export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
   errorBoundaryProps?: Partial<Props>
 ) => {
+
   const WrappedComponent = (props: P) => (
     <ModernErrorBoundary {...errorBoundaryProps}>
       <Component {...props} />

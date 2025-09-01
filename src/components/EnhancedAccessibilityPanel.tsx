@@ -1,4 +1,5 @@
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 
@@ -7,6 +8,7 @@ import { motion, AnimatePresence } from 'framer - motion';
  * @returns {*} Function return value
  */
 function EnhancedAccessibilityPanel () {
+
 =======
 >>>>>>> main
 
@@ -51,6 +53,7 @@ interface AccessibilitySettings {
   letterSpacing: number;
   wordSpacing: number}
 interface AccessibilityIssue {
+
   id: string;
   type: 'error' | 'warning' | 'info';
   message: string;
@@ -58,6 +61,7 @@ interface AccessibilityIssue {
   recommendation: string;
   severity: 'low' | 'medium' | 'high';
 export function EnhancedAccessibilityPanel() {
+
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -97,6 +101,7 @@ export function EnhancedAccessibilityPanel() {
 
       // Apply reduced motion
       if (updatedSettings.reducedMotion) {
+
         document.documentElement.style.setProperty('
           '--reduced-motion',reduce'
         )} else {
@@ -144,26 +149,29 @@ export function EnhancedAccessibilityPanel() {
 
   // Load settings from localStorage
   useEffect(() => {
+
 <<<<<<< HEAD
 
     
     if (saved) {
+
 =======
 '
     const saved = localStorage.getItem('accessibility-settings');    if (saved) {
+
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       try {
-        
+
         setSettings (savedSettings) ;
         applySettings (savedSettings) } catch (error) {
 
-        // console.warn('Failed to load accessibility settings:', error)}    }
+        // // // // console.warn('Failed to load accessibility settings:', error)}    }
   }, [applySettings]) ;
 
   // Keyboard navigation support
   useEffect ( () => {
-    
+
         document.body.classList.add('keyboard-navigation')}
       // Escape key to close panel'
       if (event.key === 'Escape' && isVisible) {
@@ -173,8 +181,6 @@ export function EnhancedAccessibilityPanel() {
       // Arrow keys for navigation
       if (keyboardMode) {
 
-        
-        
         switch (event.key) {
 
           case 'ArrowDown':
@@ -208,6 +214,7 @@ export function EnhancedAccessibilityPanel() {
     const newIssues: AccessibilityIssue[] = [];
 
     try {
+
       // Check for missing alt text'
 <<<<<<< HEAD
       
@@ -215,11 +222,13 @@ export function EnhancedAccessibilityPanel() {
 
 =======
       const images = document.querySelectorAll('img');      images.forEach((img, index) => {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         if (!img.alt && !img.getAttribute('aria-label')) {
 
           newIssues.push({
+
 `
             id: `alt-${index}`,
             type: 'error',
@@ -238,6 +247,7 @@ export function EnhancedAccessibilityPanel() {
         const level = parseInt(heading.tagName.charAt(1));        if (level > previousLevel + 1) {
 
           newIssues.push({
+
 `
             id: `heading-${index}`,
             type: 'warning',
@@ -257,6 +267,7 @@ export function EnhancedAccessibilityPanel() {
         if (!label && !ariaLabel && !input.getAttribute('aria-labelledby')) {
 
           newIssues.push({
+
 `
             id: `label-${index}`,
             type: 'error',
@@ -270,12 +281,10 @@ export function EnhancedAccessibilityPanel() {
       
       ariaElements.forEach((element, index) => {
 
-        
-        
-        
         if (ariaExpanded && !ariaControls && !ariaOwns) {
 
           newIssues.push({
+
 `
             id: `aria-${index}`,
             type: 'warning',
@@ -291,9 +300,6 @@ export function EnhancedAccessibilityPanel() {
       
       textElements.forEach((element, index) => {
 
-        
-        
-        
 <<<<<<< HEAD
 
         // This is a simplified check - in production you'd want a proper contrast ratio calculation
@@ -303,6 +309,7 @@ export function EnhancedAccessibilityPanel() {
         if (color === backgroundColor) {
 
           newIssues.push({
+
 `
             id: `contrast-${index}`,
             type: 'warning',
@@ -319,11 +326,13 @@ export function EnhancedAccessibilityPanel() {
 
 =======
       );      interactiveElements.forEach((element, index) => {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         if (element.tagName === 'BUTTON' && !element.getAttribute('type')) {
 
           newIssues.push({
+
 `
             id: `button-${index}`,
             type: 'warning',
@@ -333,7 +342,7 @@ export function EnhancedAccessibilityPanel() {
             severity: 'medium'})}
       })} catch (error) {
 
-      // console.error('Accessibility audit failed:', error)}
+      // // // // console.error('Accessibility audit failed:', error)}
 
     setIssues (newIssues) ;
     setIsScanning (false) }, []) ;
@@ -625,6 +634,7 @@ export function EnhancedAccessibilityPanel() {
 
               {/* Reset Button */}
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+
                   const defaultSettings: AccessibilitySettings = {
 
                     highContrast: false,

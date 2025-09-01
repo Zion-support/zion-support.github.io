@@ -7,33 +7,40 @@ import { Button  } from '../../components/ui/button';
 import { CheckCircle, TrendingUp, BarChart3, Zap, Shield, Users, Globe, Clock  } from 'lucide-react';
 
 const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
+
   const features = [
     {
+
       icon: <TrendingUp className="h-6 w-6 text-green-500" />,
       title: "Real-time Analytics",
       description: "Monitor business metrics in real-time with AI-powered insights and predictive analytics"
     },
     {
+
       icon: <BarChart3 className="h-6 w-6 text-blue-500" />,
       title: "Advanced Reporting",
       description: "Generate comprehensive reports with automated insights and actionable recommendations"
     },
     {
+
       icon: <Zap className="h-6 w-6 text-yellow-500" />,
       title: "AI-Powered Insights",
       description: "Get intelligent insights and recommendations based on your data patterns"
     },
     {
+
       icon: <Shield className="h-6 w-6 text-purple-500" />,
       title: "Data Security",
       description: "Enterprise-grade security with role-based access control and data encryption"
     },
     {
+
       icon: <Users className="h-6 w-6 text-indigo-500" />,
       title: "Team Collaboration",
       description: "Share dashboards and insights with your team for better decision-making"
     },
     {
+
       icon: <Globe className="h-6 w-6 text-teal-500" />,
       title: "Multi-platform Access",
       description: "Access your dashboards from where with responsive web and mobile interfaces"
@@ -42,6 +49,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
 
   const pricingTiers = [
     {
+
       name: "Starter",
       price: "$299",
       period: "/month",
@@ -57,6 +65,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$799",
       period: "/month",
@@ -74,6 +83,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,999",
       period: "/month",
@@ -95,18 +105,22 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
 
   const benefits = [
     {
+
       metric: "40%",
       description: "Faster decision making with real-time insights"
     },
     {
+
       metric: "60%",
       description: "Reduction in manual reporting time"
     },
     {
+
       metric: "85%",
       description: "Improvement in data accuracy and reliability"
     },
     {
+
       metric: "3x",
       description: "Increase in team productivity and collaboration"
     }

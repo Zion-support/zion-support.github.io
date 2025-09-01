@@ -17,6 +17,7 @@ import {
   Globe} from 'lucide-react';
 
 const EnhancedContactForm: React.FC = () => {
+
   const [formData, setFormData] = useState({
 
     name: '',
@@ -96,6 +97,7 @@ const EnhancedContactForm: React.FC = () => {
   ];
 
   const validateForm = (...args: unknown[]): unknown => {
+
     const newErrors: Record<string, string> = {};
 
     if (!formData.name.trim()) {
@@ -144,6 +146,7 @@ const EnhancedContactForm: React.FC = () => {
 
     // Reset form after successful submission
     setTimeout(: unknown {
+
       setIsSubmitted(false);
       setFormData({
 
@@ -487,6 +490,7 @@ const EnhancedContactForm: React.FC = () => {
                         key={service.id}"
                         type="button"
                         onClick={() => {
+
                           setFormData(prev => ({
 
                             ...prev,

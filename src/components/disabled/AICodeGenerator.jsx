@@ -4,7 +4,9 @@ import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Ga
 import { useAICodeGeneration } from "../hooks/useAICodeGeneration";
 import { useAnalytics } from "../hooks/useAnalytics";
 export const AICodeGenerator = () => {
+
     const { trackEvent } = useAnalytics({
+
         enableTracking: true,
         enableUserBehaviorTracking: true
     });
@@ -14,6 +16,7 @@ export const AICodeGenerator = () => {
     const [copied, setCopied] = useState(false);
     const { isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode } = useAICodeGeneration();
     const [form, setForm] = useState({
+
         prompt: '',
         language: 'typescript',
         framework: 'react',
@@ -28,11 +31,13 @@ export const AICodeGenerator = () => {
     });
     // Handle form submission
     const handleSubmit = useCallback(async (e) => {
+
         e.preventDefault();
         if (!form.prompt.trim())
             return;
         await generateCode(form.prompt, form);
         trackEvent('ai_code_generator', 'form_submitted', form.language, null, {
+
             framework: form.framework,
             style: form.style,
             target: form.target,
@@ -40,69 +45,80 @@ export const AICodeGenerator = () => {
         })}, [form, generateCode, trackEvent]);
     // Handle custom code analysis
     const handleAnalyzeCustomCode = useCallback(async () => {
+
         if (!customCode.trim())
             return;
         await analyzeCode(customCode, form.language);
         trackEvent('ai_code_generator', 'custom_code_analyzed', form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]);
     // Handle code optimization
     const handleOptimizeCode = useCallback(async (focus) => {
+
         if (!generatedCode && !customCode)
             return;
         const codeToOptimize = generatedCode || customCode;
         const optimizedCode = await optimizeCode(codeToOptimize, focus);
         if (generatedCode) {
+
             // Update generated code
             // Note: In a real implementation, you'd want to update the state properly
         }
         trackEvent('ai_code_generator', 'code_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);
     // Handle test generation
     const handleGenerateTests = useCallback(async () => {
+
         if (!generatedCode && !customCode)
             return;
         const codeToTest = generatedCode || customCode;
         const testCode = await generateTests(codeToTest, form.language);
         // In a real implementation, you'd want to display the test code
-        // // // // // // // console.log('Generated tests:', testCode);
+        // // // // // // // // // // console.log('Generated tests:', testCode);
         trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length);
     }, [generatedCode, customCode, generateTests, form.language, trackEvent]);
 =======
-        console.log('Generated tests:', testCode);
+        // // // console.log('Generated tests:', testCode);
         trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation
     const handleGenerateDocs = useCallback(async () => {
+
         if (!generatedCode && !customCode)
             return;
         const codeToDoc = generatedCode || customCode;
         const docs = await generateDocs(codeToDoc, form.language);
         // In a real implementation, you'd want to display the documentation
-        // // // // // // // console.log('Generated docs:', docs);
+        // // // // // // // // // // console.log('Generated docs:', docs);
         trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length);
     }, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
 =======
-        console.log('Generated docs:', docs);
+        // // // console.log('Generated docs:', docs);
         trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
     // Copy code to clipboard
     const copyToClipboard = useCallback(async (code) => {
+
         try {
+
             await navigator.clipboard.writeText(code);
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
-            // // // // // // // console.error('Failed to copy code:', error);
+            // // // // // // // // // // console.error('Failed to copy code:', error);
         }
 =======
             trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length)}
         catch (error) {
-            console.error('Failed to copy code:', error)}
+
+            // // // console.error('Failed to copy code:', error)}
     }, [trackEvent]);
     // Apply suggestion
     const handleApplySuggestion = useCallback((suggestion) => {
+
         applySuggestion(suggestion);
         trackEvent('ai_code_generator', 'suggestion_applied', suggestion.type, null, {
+
             suggestionId: suggestion.id,
             impact: suggestion.impact
         })}, [applySuggestion, trackEvent]);
     // Clear history
     const handleClearHistory = useCallback(() => {
+
         clearHistory();
         trackEvent('ai_code_generator', 'history_cleared', 'manual')}, [clearHistory, trackEvent]);
     return (<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
@@ -146,12 +162,15 @@ export const AICodeGenerator = () => {
       <div className="p-6">
         <AnimatePresence mode="wait">
           {activeTab === 'generate' && (<motion.div key="generate" initial = {
+
   { opacity: 0,
   y: 20 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 }} exit = {
+
   { opacity: 0,
   y: -20 
 }} className="space-y-6">
@@ -162,6 +181,7 @@ export const AICodeGenerator = () => {
                     Describe what you want to build
                   </label>
                   <textarea value={form.prompt} onChange = {
+
   (e) => setForm(prev => ({ ...prev,
   prompt: e.target.value 
 }))} placeholder="e.g., Create a React component for a user profile card with avatar, name, email, and edit button..." className="w-full h-32 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none" required/>
@@ -173,6 +193,7 @@ export const AICodeGenerator = () => {
                       Language
                     </label>
                     <select value={form.language} onChange = {
+
   (e) => setForm(prev => ({ ...prev,
   language: e.target.value 
 }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
@@ -191,6 +212,7 @@ export const AICodeGenerator = () => {
                       Framework
                     </label>
                     <select value={form.framework || ''} onChange = {
+
   (e) => setForm(prev => ({ ...prev,
   framework: e.target.value || null 
 }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
@@ -210,6 +232,7 @@ export const AICodeGenerator = () => {
                       Style
                     </label>
                     <select value={form.style} onChange = {
+
   (e) => setForm(prev => ({ ...prev,
   style: e.target.value 
 }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
@@ -224,6 +247,7 @@ export const AICodeGenerator = () => {
                       Quality
                     </label>
                     <select value={form.quality} onChange = {
+
   (e) => setForm(prev => ({ ...prev,
   quality: e.target.value 
 }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
@@ -240,12 +264,15 @@ export const AICodeGenerator = () => {
                 </button>
                 {/* Advanced Options */}
                 {showAdvanced && (<motion.div initial = {
+
   { opacity: 0,
   height: 0 
 }} animate = {
+
   { opacity: 1,
   height: 'auto' 
 }} exit = {
+
   { opacity: 0,
   height: 0 
 }} className="grid grid-cols-2 md:grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
@@ -257,6 +284,7 @@ export const AICodeGenerator = () => {
                     { key: 'includeMetrics', label: 'Metrics', icon: Gauge }
                 ].map(({ key, label, icon: Icon }) => (<label key={key} className="flex items-center gap-2 cursor-pointer">
                         <input type="checkbox" checked={form[key]} onChange = {
+
   (e) => setForm(prev => ({ ...prev,
   [key]: e.target.checked 
 }))} className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
@@ -276,9 +304,11 @@ export const AICodeGenerator = () => {
               </form>
               {/* Generated Code Display */}
               {generatedCode && (<motion.div initial = {
+
   { opacity: 0,
   y: 20 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 }} className="space-y-4">
@@ -305,12 +335,15 @@ export const AICodeGenerator = () => {
                 </motion.div>)}
             </motion.div>)}
           {activeTab === 'analyze' && (<motion.div key="analyze" initial = {
+
   { opacity: 0,
   y: 20 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 }} exit = {
+
   { opacity: 0,
   y: -20 
 }} className="space-y-6">
@@ -331,9 +364,11 @@ export const AICodeGenerator = () => {
               </button>
               {/* Analysis Results */}
               {codeAnalysis && (<motion.div initial = {
+
   { opacity: 0,
   y: 20 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 }} className="space-y-6">
@@ -346,8 +381,10 @@ export const AICodeGenerator = () => {
                     { key: 'performance', label: 'Performance', icon: Gauge, color: 'yellow' },
                     { key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'purple' }
                 ].map(({ key, label, icon: Icon, color }) => {
+
                     const value = codeAnalysis[key];
                     if (typeof value === 'number') {
+
                         return (<div key={key} className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                             <Icon className={`w-8 h-8 mx-auto mb-2 text-${color}-500`}/>
                             <div className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -391,12 +428,15 @@ export const AICodeGenerator = () => {
                 </motion.div>)}
             </motion.div>)}
           {activeTab === 'optimize' && (<motion.div key="optimize" initial = {
+
   { opacity: 0,
   y: 20 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 }} exit = {
+
   { opacity: 0,
   y: -20 
 }} className="space-y-6">
@@ -424,12 +464,15 @@ export const AICodeGenerator = () => {
               </div>
             </motion.div>)}
           {activeTab === 'tests' && (<motion.div key="tests" initial = {
+
   { opacity: 0,
   y: 20 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 }} exit = {
+
   { opacity: 0,
   y: -20 
 }} className="space-y-6">
@@ -448,12 +491,15 @@ export const AICodeGenerator = () => {
               </button>
             </motion.div>)}
           {activeTab === 'docs' && (<motion.div key="docs" initial = {
+
   { opacity: 0,
   y: 20 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 }} exit = {
+
   { opacity: 0,
   y: -20 
 }} className="space-y-6">
@@ -474,9 +520,11 @@ export const AICodeGenerator = () => {
         </AnimatePresence>
         {/* Suggestions Panel */}
         {suggestions.length > 0 && (<motion.div initial = {
+
   { opacity: 0,
   y: 20 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 }} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">
@@ -485,9 +533,11 @@ export const AICodeGenerator = () => {
             </h3>
             <div className="grid gap-4">
               {suggestions.map((suggestion) => (<motion.div key={suggestion.id} initial = {
+
   { opacity: 0,
   x: 20 
 }} animate = {
+
   { opacity: 1,
   x: 0 
 }} className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
@@ -531,9 +581,11 @@ export const AICodeGenerator = () => {
           </motion.div>)}
         {/* History Panel */}
         {history.length > 0 && (<motion.div initial = {
+
   { opacity: 0,
   y: 20 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 }} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">

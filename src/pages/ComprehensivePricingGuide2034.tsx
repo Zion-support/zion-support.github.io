@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
+import {
+
   Check, 
   Star, 
   Zap, 
@@ -39,11 +40,14 @@ import {
 import { COMPREHENSIVE_PRICING_GUIDE_2034 } from '../data/comprehensivePricingGuide2034';
 
 export default function ComprehensivePricingGuide2034() {
+
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [selectedTier, setSelectedTier] = useState<string | null>(null);
 
   const getCategoryIcon = (category: string) => {
+
     const iconMap: { [key: string]: any } = {
+
       'Legal Technology': Scale,
       'Healthcare Technology': Heart,
       'Quantum Computing': Atom,
@@ -64,7 +68,9 @@ export default function ComprehensivePricingGuide2034() {
   };
 
   const getCategoryColor = (category: string) => {
+
     const colorMap: { [key: string]: string } = {
+
       'Legal Technology': 'from-blue-400 to-indigo-500',
       'Healthcare Technology': 'from-green-400 to-emerald-500',
       'Quantum Computing': 'from-indigo-400 to-purple-500',
@@ -166,6 +172,7 @@ export default function ComprehensivePricingGuide2034() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {COMPREHENSIVE_PRICING_GUIDE_2034.map((service, index) => {
+
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
               
@@ -263,6 +270,7 @@ export default function ComprehensivePricingGuide2034() {
               </div>
 
               {(() => {
+
                 const service = COMPREHENSIVE_PRICING_GUIDE_2034.find(s => s.id === selectedService);
                 if (!service) return null;
 
@@ -340,6 +348,7 @@ export default function ComprehensivePricingGuide2034() {
                           <div
                             key={idx}
                             className={`relative p-6 rounded-2xl border transition-all duration-200 ${
+
                               tier.popular
                                 ? 'border-cyan-500 bg-gradient-to-br from-cyan-500/10 to-blue-500/10'
                                 : 'border-slate-700 bg-slate-800/50'
@@ -394,6 +403,7 @@ export default function ComprehensivePricingGuide2034() {
                             <button
                               onClick={() => setSelectedTier(tier.name)}
                               className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 ${
+
                                 tier.popular
                                   ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white hover:shadow-lg hover:shadow-cyan-500/25'
                                   : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'

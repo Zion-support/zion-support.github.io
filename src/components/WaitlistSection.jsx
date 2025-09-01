@@ -5,6 +5,7 @@ export function WaitlistSection() {
 <<<<<<< HEAD
     const [email, setEmail] = useState ('') ;
     const handleSubmit = (e) => {
+
         e.preventDefault () ;
         // Handle waitlist signup
         // // // // // // // console.log ('Waitlist signup:', email) ;
@@ -19,9 +20,9 @@ export function WaitlistSection() {
 
     e.preventDefault();
     // Handle waitlist signup'
-    // // // // // // // // console.log('Waitlist signup:', email);
+    // // // // // // // // // // // console.log('Waitlist signup:', email);
   };
-  // console.log('Waitlist signup:', email)};
+  // // // // console.log('Waitlist signup:', email)};
   return()
     <section className="py-16 bg-gradient-to-r from-zion-purple to-zion-cyan">"
       <div className="container mx-auto px-4 text-center">"

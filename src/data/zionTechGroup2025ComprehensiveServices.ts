@@ -1,4 +1,5 @@
 export interface ZionService {
+
   id: string;
   title: string;
   description: string;
@@ -10,6 +11,7 @@ export interface ZionService {
   useCases: string[];
   targetAudience: string[];
   contactInfo: {
+
     mobile: string;
     email: string;
     address: string;
@@ -23,6 +25,7 @@ export interface ZionService {
 export const zionTechGroup2025Services: ZionService[] = [
   // AI-Powered Micro SaaS Solutions
   {
+
     id: 'ai-autonomous-business-manager',
     title: 'AI Autonomous Business Manager',
     description: 'Fully autonomous AI system that manages business operations, decision-making, and strategic planning with minimal human intervention.',
@@ -64,6 +67,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Multi-location businesses'
     ],
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -73,6 +77,7 @@ export const zionTechGroup2025Services: ZionService[] = [
     href: '/services/ai-autonomous-business-manager'
   },
   {
+
     id: 'ai-content-optimization-suite-pro',
     title: 'AI Content Optimization Suite Pro',
     description: 'Advanced AI-powered content creation, optimization, and distribution platform for maximum engagement and conversion.',
@@ -114,6 +119,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Social media teams'
     ],
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -123,6 +129,7 @@ export const zionTechGroup2025Services: ZionService[] = [
     href: '/services/ai-content-optimization-suite'
   },
   {
+
     id: 'ai-customer-success-platform',
     title: 'AI Customer Success Platform',
     description: 'Intelligent customer success management system that predicts churn, automates onboarding, and maximizes customer lifetime value.',
@@ -164,6 +171,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Software companies'
     ],
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -174,6 +182,7 @@ export const zionTechGroup2025Services: ZionService[] = [
   },
   // Cybersecurity & Compliance Solutions
   {
+
     id: 'zero-trust-network-architecture',
     title: 'Zero Trust Network Architecture',
     description: 'Comprehensive zero-trust security implementation with continuous verification, micro-segmentation, and advanced threat detection.',
@@ -215,6 +224,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Compliance-focused businesses'
     ],
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -224,6 +234,7 @@ export const zionTechGroup2025Services: ZionService[] = [
     href: '/services/zero-trust-network-architecture'
   },
   {
+
     id: 'ai-cybersecurity-threat-intelligence',
     title: 'AI Cybersecurity Threat Intelligence',
     description: 'Advanced AI-powered threat intelligence platform that provides real-time threat detection, analysis, and automated response capabilities.',
@@ -265,6 +276,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Healthcare organizations'
     ],
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -275,6 +287,7 @@ export const zionTechGroup2025Services: ZionService[] = [
   },
   // Cloud & DevOps Solutions
   {
+
     id: 'cloud-finops-optimizer',
     title: 'Cloud FinOps Optimizer',
     description: 'Intelligent cloud cost optimization platform that provides real-time cost analysis, optimization recommendations, and automated cost management.',
@@ -316,6 +329,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Startups and scale-ups'
     ],
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -325,6 +339,7 @@ export const zionTechGroup2025Services: ZionService[] = [
     href: '/services/cloud-finops-optimizer'
   },
   {
+
     id: 'ai-devops-automation-platform',
     title: 'AI DevOps Automation Platform',
     description: 'Intelligent DevOps automation platform that streamlines development workflows, automates testing, and optimizes deployment processes.',
@@ -366,6 +381,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Technology startups'
     ],
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -376,6 +392,7 @@ export const zionTechGroup2025Services: ZionService[] = [
   },
   // Enterprise AI Solutions
   {
+
     id: 'ai-business-intelligence-analytics',
     title: 'AI Business Intelligence Analytics',
     description: 'Advanced AI-powered business intelligence platform that provides deep insights, predictive analytics, and automated reporting capabilities.',
@@ -417,6 +434,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Analytics departments'
     ],
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -426,6 +444,7 @@ export const zionTechGroup2025Services: ZionService[] = [
     href: '/services/ai-business-intelligence-analytics'
   },
   {
+
     id: 'ai-workflow-orchestrator',
     title: 'AI Workflow Orchestrator',
     description: 'Intelligent workflow automation platform that optimizes business processes, automates repetitive tasks, and improves operational efficiency.',
@@ -467,6 +486,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Efficiency-focused organizations'
     ],
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -477,6 +497,7 @@ export const zionTechGroup2025Services: ZionService[] = [
   },
   // Industry-Specific Solutions
   {
+
     id: 'ai-healthcare-analytics-platform',
     title: 'AI Healthcare Analytics Platform',
     description: 'Specialized AI platform for healthcare analytics, patient insights, and clinical decision support with HIPAA compliance.',
@@ -518,6 +539,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Clinical teams'
     ],
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -527,6 +549,7 @@ export const zionTechGroup2025Services: ZionService[] = [
     href: '/services/ai-healthcare-analytics-platform'
   },
   {
+
     id: 'ai-financial-risk-management',
     title: 'AI Financial Risk Management',
     description: 'Advanced AI platform for financial risk assessment, fraud detection, and regulatory compliance in financial services.',
@@ -568,6 +591,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Financial services'
     ],
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -578,6 +602,7 @@ export const zionTechGroup2025Services: ZionService[] = [
   },
   // Emerging Technology Solutions
   {
+
     id: 'quantum-computing-platform',
     title: 'Quantum Computing Platform',
     description: 'Next-generation quantum computing platform for complex problem-solving, optimization, and advanced computational tasks.',
@@ -619,6 +644,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Advanced computing users'
     ],
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -628,6 +654,7 @@ export const zionTechGroup2025Services: ZionService[] = [
     href: '/services/quantum-computing-platform'
   },
   {
+
     id: 'blockchain-web3-solutions',
     title: 'Blockchain & Web3 Solutions',
     description: 'Comprehensive blockchain and Web3 platform for decentralized applications, smart contracts, and digital asset management.',
@@ -669,6 +696,7 @@ export const zionTechGroup2025Services: ZionService[] = [
       'Innovation-focused businesses'
     ],
     contactInfo: {
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -680,17 +708,21 @@ export const zionTechGroup2025Services: ZionService[] = [
 ];
 
 export const getServicesByCategory = (category: ZionService['category']) => {
+
   return zionTechGroup2025Services.filter(service => service.category === category);
 };
 
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+
   return zionTechGroup2025Services.filter(service => {
+
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
 };
 
 export const searchServices = (query: string) => {
+
   const lowercaseQuery = query.toLowerCase();
   return zionTechGroup2025Services.filter(service =>
     service.title.toLowerCase().includes(lowercaseQuery) ||

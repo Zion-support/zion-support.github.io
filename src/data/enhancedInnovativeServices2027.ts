@@ -1,4 +1,5 @@
 export interface EnhancedService2027 {
+
   id: string;
   title: string;
   description: string;

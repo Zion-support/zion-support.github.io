@@ -41,8 +41,10 @@ import { Code,
 import { SEO } from '../components/SEO';
 
 export default function Developers(...args: any[]): any {
+
   const apis = [
     {
+
       name: 'AI Analytics API',
       description: 'Access our AI-powered analytics and insights through RESTful APIs',
       category: 'Analytics',
@@ -51,6 +53,7 @@ export default function Developers(...args: any[]): any {
       status: 'Production'
     },
     {
+
       name: 'AI Workflow API',
       description: 'Integrate AI workflow automation into your applications',
       category: 'Automation',
@@ -59,6 +62,7 @@ export default function Developers(...args: any[]): any {
       status: 'Production'
     },
     {
+
       name: 'AI Content API',
       description: 'Generate and manage AI-powered content programmatically',
       category: 'Content',
@@ -67,6 +71,7 @@ export default function Developers(...args: any[]): any {
       status: 'Beta'
     },
     {
+
       name: 'AI Security API',;
       description: 'Integrate AI-powered security and compliance features',;
       category: 'Security',;
@@ -78,6 +83,7 @@ export default function Developers(...args: any[]): any {
 
   const sdks = [
     {
+
       name: 'JavaScript/TypeScript',
       description: 'Official SDK for Node.js and browser environments',
       version: 'v2.1.0',
@@ -86,6 +92,7 @@ export default function Developers(...args: any[]): any {
       documentation: '/docs/sdk/javascript'
     },
     {
+
       name: 'Python',
       description: 'Python SDK for AI and analytics integration',
       version: 'v1.8.0',
@@ -94,6 +101,7 @@ export default function Developers(...args: any[]): any {
       documentation: '/docs/sdk/python'
     },
     {
+
       name: 'Java',
       description: 'Java SDK for enterprise applications',
       version: 'v1.5.0',
@@ -102,6 +110,7 @@ export default function Developers(...args: any[]): any {
       documentation: '/docs/sdk/java'
     },
     {
+
       name: 'Go',;
       description: 'Go SDK for high-performance applications',;
       version: 'v1.2.0',;
@@ -113,6 +122,7 @@ export default function Developers(...args: any[]): any {
 
   const tools = [
     {
+
       name: 'API Playground',
       description: 'Interactive API testing and exploration tool',
       icon: Play,
@@ -120,6 +130,7 @@ export default function Developers(...args: any[]): any {
       category: 'Testing'
     },
     {
+
       name: 'SDK Generator',
       description: 'Generate custom SDKs for your preferred language',
       icon: Code,
@@ -127,6 +138,7 @@ export default function Developers(...args: any[]): any {
       category: 'Development'
     },
     {
+
       name: 'API Documentation',
       description: 'Comprehensive API reference and guides',
       icon: BookOpen,
@@ -144,6 +156,7 @@ export default function Developers(...args: any[]): any {
 
   const quickStartSteps = [
     {
+
       step: 1,
       title: 'Get API Keys',
       description: 'Sign up for a developer account and obtain your API keys',
@@ -151,6 +164,7 @@ export default function Developers(...args: any[]): any {
       href: '/signup'
     },
     {
+
       step: 2,
       title: 'Choose SDK',
       description: 'Select the SDK for your preferred programming language',
@@ -158,6 +172,7 @@ export default function Developers(...args: any[]): any {
       href: '#sdks'
     },
     {
+
       step: 3,
       title: 'Install & Configure',
       description: 'Install the SDK and configure with your API keys',
@@ -270,6 +285,7 @@ export default function Developers(...args: any[]): any {
                     <p className="text-slate-300 text-sm mb-3">{api.description}</p>
                   </div>
                   <span className={`px-3 py-1 text-xs font-medium rounded-full ${
+
                     api.status === 'Production'
                       ? 'bg-green-400/20 text-green-400 border border-green-400/30'
                       : 'bg-yellow-400/20 text-yellow-400 border border-yellow-400/30'

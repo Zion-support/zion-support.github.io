@@ -4,6 +4,7 @@ import { ADVANCED_INNOVATIVE_SERVICES_2025 } from "../data/advancedInnovativeSer
 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from "../data/nextGenInnovativeServices2026";
 
 const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState<any>(null);
@@ -43,6 +44,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
   ];
 
   const filteredServices = allServices.filter(service => {
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -51,10 +53,13 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
   });
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1,
         delayChildren: 0.2
       }
@@ -62,8 +67,10 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
   };
 
   const itemVariants = {
+
     hidden: { opacity: 0, y: 20 },
     visible: {
+
       opacity: 1,
       y: 0,
       transition: { duration: 0.5 }
@@ -71,10 +78,12 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
   };
 
   const handleServiceClick = (service: any) => {
+
     setSelectedService(service);
   };
 
   const closeModal = () => {
+
     setSelectedService(null);
   };
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
 export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, autoAnalyze = true, targetElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div[class*="content"]', 'article', 'section'] }) => {
+
     const [isOpen, setIsOpen] = useState(false);
     const [analysis, setAnalysis] = useState(null);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -9,6 +10,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
     const [selectedElement, setSelectedElement] = useState(null);
     // Analyze content quality
     const analyzeContent = useCallback(async () => {
+
         setIsAnalyzing(true);
         const issues = [];
         const suggestions = [];
@@ -19,12 +21,15 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         // Get all content elements
         const contentElements = document.querySelectorAll(targetElements.join(', '));
         contentElements.forEach((element, index) => {
+
             const text = element.textContent || '';
             const words = text.trim().split(/\s+/).filter(word => word.length > 0);
             wordCount += words.length;
             // Check for empty content
             if (words.length === 0) {
+
                 issues.push({
+
                     id: `empty-content-${index}`,
                     type: 'error',
                     title: 'Empty Content',
@@ -39,7 +44,9 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 engagementScore -= 10}
             // Check for very short content
             if (words.length > 0 && words.length < 10) {
+
                 issues.push({
+
                     id: `short-content-${index}`,
                     type: 'warning',
                     title: 'Very Short Content',
@@ -54,7 +61,9 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 seoScore -= 3}
             // Check for very long paragraphs (hard to read)
             if (words.length > 100) {
+
                 issues.push({
+
                     id: `long-paragraph-${index}`,
                     type: 'warning',
                     title: 'Very Long Paragraph',
@@ -69,12 +78,16 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 engagementScore -= 3}
             // Check for proper heading structure
             if (element.tagName.match(/^H[1-6]$/)) {
+
                 const level = parseInt(element.tagName.charAt(1));
                 const previousHeadings = Array.from(contentElements).slice(0, index).filter(el => el.tagName.match(/^H[1-6]$/));
                 if (previousHeadings.length > 0) {
+
                     const lastLevel = parseInt(previousHeadings[previousHeadings.length - 1].tagName.charAt(1));
                     if (level - lastLevel > 1) {
+
                         issues.push({
+
                             id: `heading-skip-${index}`,
                             type: 'warning',
                             title: 'Heading Level Skipped',
@@ -92,12 +105,17 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             const commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
             const wordFrequency = {};
             commonWords.forEach(word => {
+
                 wordFrequency[word] = (wordFrequency[word] || 0) + 1});
             Object.entries(wordFrequency).forEach(([word, count]) => {
+
                 if (count > 5 && word.length > 3) {
+
                     const density = (count / commonWords.length) * 100;
                     if (density > 3) {
+
                         issues.push({
+
                             id: `keyword-stuffing-${index}-${word}`,
                             type: 'warning',
                             title: 'Potential Keyword Stuffing',
@@ -113,9 +131,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             });
             // Check for proper meta descriptions
             if (element.tagName === 'META' && element.getAttribute('name') === 'description') {
+
                 const content = element.getAttribute('content') || '';
                 if (content.length < 50) {
+
                     issues.push({
+
                         id: `short-meta-${index}`,
                         type: 'warning',
                         title: 'Short Meta Description',
@@ -128,7 +149,9 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     });
                     seoScore -= 5}
                 else if (content.length > 160) {
+
                     issues.push({
+
                         id: `long-meta-${index}`,
                         type: 'warning',
                         title: 'Long Meta Description',
@@ -143,9 +166,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             }
             // Check for broken links
             if (element.tagName === 'A') {
+
                 const href = element.getAttribute('href');
                 if (href && (href.startsWith('#') || href.startsWith('javascript:'))) {
+
                     issues.push({
+
                         id: `broken-link-${index}`,
                         type: 'warning',
                         title: 'Potential Broken Link',
@@ -160,9 +186,12 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             }
             // Check for images without alt text
             if (element.tagName === 'IMG') {
+
                 const alt = element.getAttribute('alt');
                 if (!alt || alt.trim() === '') {
+
                     issues.push({
+
                         id: `missing-alt-${index}`,
                         type: 'error',
                         title: 'Missing Alt Text',
@@ -179,7 +208,9 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         });
         // Generate suggestions based on analysis
         if (wordCount < 300) {
+
             suggestions.push({
+
                 id: 'increase-content',
                 type: 'improvement',
                 title: 'Increase Content Length',
@@ -189,7 +220,9 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 expectedImpact: 15
             })}
         if (readabilityScore < 80) {
+
             suggestions.push({
+
                 id: 'improve-readability',
                 type: 'optimization',
                 title: 'Improve Readability',
@@ -199,7 +232,9 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 expectedImpact: 12
             })}
         if (seoScore < 80) {
+
             suggestions.push({
+
                 id: 'seo-optimization',
                 type: 'enhancement',
                 title: 'SEO Optimization',
@@ -209,7 +244,9 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 expectedImpact: 20
             })}
         if (engagementScore < 80) {
+
             suggestions.push({
+
                 id: 'engagement-improvement',
                 type: 'improvement',
                 title: 'Improve User Engagement',
@@ -221,6 +258,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         // Calculate overall score
         const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
         const analysisResult = {
+
   wordCount,
             readabilityScore: Math.max(0, Math.min(100, readabilityScore)),
             seoScore: Math.max(0, Math.min(100, seoScore)),
@@ -236,21 +274,28 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         setIsAnalyzing(false)}, [targetElements]);
     // Auto-fix content issues
     const autoFixIssues = useCallback(() => {
+
         if (!analysis)
             return;
         const fixedCount = 0;
         fixableIssues.forEach(issue => {
+
             if (issue.element) {
+
                 switch (issue.id.split('-')[0]) {
+
                     case 'empty-content':
                         if (issue.element.textContent?.trim() === '') {
+
                             issue.element.innerHTML = '<em>Content placeholder - please add relevant information</em>';
                             fixedCount++}
                         break;
                     case 'missing-alt':
                         if (issue.element.tagName === 'IMG') {
+
                             const img = issue.element;
                             if (!img.alt) {
+
                                 img.alt = 'Image';
                                 fixedCount++}
                         }
@@ -265,13 +310,16 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             }
         });
         if (fixedCount > 0) {
+
             // Re-analyze content after fixes
             setTimeout(analyzeContent, 500)}
         return fixedCount}, [analysis, analyzeContent]);
     // Highlight element in page
     const highlightElement = useCallback((element) => {
+
         // Remove previous highlights
         document.querySelectorAll('.content-highlight').forEach(el => {
+
             el.classList.remove('content-highlight')});
         // Add highlight to selected element
         element.classList.add('content-highlight');
@@ -280,16 +328,20 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         // Remove highlight after 3 seconds
         setTimeout(() => {
+
             element.classList.remove('content-highlight');
             setSelectedElement(null)}, 3000)}, []);
     // Auto-analyze content
     useEffect(() => {
+
         if (autoAnalyze) {
+
             const timer = setTimeout(analyzeContent, 3000);
             return () => clearTimeout(timer)}
     }, [autoAnalyze, analyzeContent]);
     // Get score color
     const getScoreColor = (score) => {
+
         if (score >= 80)
             return 'text-green-600';
         if (score >= 60)
@@ -297,6 +349,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         return 'text-red-600'};
     // Get score background color
     const getScoreBgColor = (score) => {
+
         if (score >= 80)
             return 'bg-green-100 dark:bg-green-900/20';
         if (score >= 60)
@@ -304,7 +357,9 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         return 'bg-red-100 dark:bg-red-900/20'};
     // Get severity color
     const getSeverityColor = (severity) => {
+
         switch (severity) {
+
             case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
             case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
@@ -312,7 +367,9 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
     };
     // Get priority color
     const getPriorityColor = (priority) => {
+
         switch (priority) {
+
             case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
             case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
@@ -327,14 +384,17 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
       {/* Content Quality Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div initial = {
+
   { opacity: 0, scale: 0.8,
   y: 20 
 
 }} animate = {
+
   { opacity: 1, scale: 1,
   y: 0 
 
 }} exit = {
+
   { opacity: 0, scale: 0.8,
   y: 20 
 
@@ -541,7 +601,9 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
 
                   {/* Export Report */}
                   {analysis && (<button onClick = {
+
   () => {
+
                         const report = JSON.stringify(analysis, null, 2);
                         const blob = new Blob([report],
   { type: 'application/json' 
@@ -563,6 +625,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
       {/* CSS for highlighting */}
       <style>{`
         .content-highlight {
+
           outline: 3px solid #8b5cf6 !important;
           outline-offset: 2px !important;
           background-color: rgba(139, 92, 246, 0.1) !important;

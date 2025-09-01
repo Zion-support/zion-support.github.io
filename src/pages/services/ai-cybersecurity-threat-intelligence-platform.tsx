@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Shield, 
   Eye, 
   AlertTriangle, 
@@ -24,33 +25,40 @@ import {
 } from 'lucide-react';
 
 export default function AICybersecurityThreatIntelligencePlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Threat Detection",
       description: "Machine learning algorithms identify threats before they become attacks"
     },
     {
+
       icon: Eye,
       title: "Real-time Monitoring",
       description: "24/7 surveillance of your entire digital infrastructure"
     },
     {
+
       icon: AlertTriangle,
       title: "Threat Intelligence",
       description: "Global threat feed with contextual analysis and risk scoring"
     },
     {
+
       icon: Zap,
       title: "Automated Response",
       description: "Instant threat mitigation and incident response automation"
     },
     {
+
       icon: Lock,
       title: "Zero Trust Security",
       description: "Advanced authentication and access control systems"
     },
     {
+
       icon: Users,
       title: "Security Operations Center",
       description: "Dedicated team of cybersecurity experts monitoring your systems"
@@ -59,6 +67,7 @@ export default function AICybersecurityThreatIntelligencePlatform() {
 
   const pricingPlans = [
     {
+
       name: "Essential",
       price: "$499",
       period: "/month",
@@ -74,6 +83,7 @@ export default function AICybersecurityThreatIntelligencePlatform() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$1,299",
       period: "/month",
@@ -90,6 +100,7 @@ export default function AICybersecurityThreatIntelligencePlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$2,999",
       period: "/month",
@@ -109,21 +120,25 @@ export default function AICybersecurityThreatIntelligencePlatform() {
 
   const benefits = [
     {
+
       title: "Threat Prevention",
       description: "Stop attacks before they happen with predictive AI",
       metric: "99.9% threat prevention"
     },
     {
+
       title: "Response Time",
       description: "Automated response reduces incident resolution time",
       metric: "90% faster response"
     },
     {
+
       title: "Cost Savings",
       description: "Prevent costly data breaches and downtime",
       metric: "60% cost reduction"
     },
     {
+
       title: "Compliance",
       description: "Meet industry standards and regulatory requirements",
       metric: "100% compliance ready"
@@ -132,18 +147,22 @@ export default function AICybersecurityThreatIntelligencePlatform() {
 
   const securityMetrics = [
     {
+
       metric: "10M+",
       label: "Threats Blocked Daily"
     },
     {
+
       metric: "500+",
       label: "Enterprise Clients"
     },
     {
+
       metric: "24/7",
       label: "Security Monitoring"
     },
     {
+
       metric: "<1min",
       label: "Response Time"
     }
@@ -314,6 +333,7 @@ export default function AICybersecurityThreatIntelligencePlatform() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+
                   plan.popular 
                     ? 'border-red-500/50 ring-2 ring-red-500/20' 
                     : 'border-gray-700'
@@ -346,6 +366,7 @@ export default function AICybersecurityThreatIntelligencePlatform() {
                 </ul>
                 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600'
                     : 'bg-gray-700 text-white hover:bg-gray-600'

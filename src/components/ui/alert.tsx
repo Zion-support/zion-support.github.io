@@ -1,6 +1,7 @@
 import React from 'react';
 
 interface AlertProps extends React.PropsWithChildren<{
+
 }> {
 
   children: React.ReactNode;
@@ -9,6 +10,7 @@ interface AlertProps extends React.PropsWithChildren<{
 }
 
 interface AlertTitleProps {
+
   children: React.ReactNode;
   className?: string;
 =======
@@ -17,11 +19,13 @@ interface AlertTitleProps {
 }
 
 interface AlertDescriptionProps {
+
   children: React.ReactNode;
   className?: string;
 }
 
 export function Alert({ children, className = '' }: AlertProps) {
+
   return (
     <div className={cn('relative w-full rounded-lg border p-4', className)}>
       {children}
@@ -30,6 +34,7 @@ export function Alert({ children, className = '' }: AlertProps) {
 }
 
 export function AlertTitle({ children, className = '' }: AlertTitleProps) {
+
   return (
     <h5 className={cn('mb-1 font-medium leading-none tracking-tight', className)}>
       {children}
@@ -38,6 +43,7 @@ export function AlertTitle({ children, className = '' }: AlertTitleProps) {
 }
 
 export function AlertDescription({ children, className = '' }: AlertDescriptionProps) {
+
   return (
     <div className={cn('text-sm', className)}>
       {children}

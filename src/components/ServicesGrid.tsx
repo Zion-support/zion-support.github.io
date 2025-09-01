@@ -2,6 +2,7 @@ export function ServicesGrid(...args: any[]): any {
 
 <<<<<<< HEAD
 interface Service {
+
   title: string;
   description: string;
   icon: LucideIcon;
@@ -11,6 +12,7 @@ interface Service {
 }
 
 interface ServicesGridProps extends React.PropsWithChildren<{}> {
+
   services: Service[];
 }
 

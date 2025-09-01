@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom.ts';
 import React, { useState, useEffect } from 'react.ts';
 export default UltimateServicesShowcase2028;
 import {
+
 import { INNOVATIVE_SERVICES_2028 } from '../data / innovativeServices2028';
 import { motion, AnimatePresence } from 'framer - motion.ts';
 
@@ -30,10 +31,10 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
   Award,
   Clock,
   DollarSign,
-  BarChart3,
-} from 'lucide - react.ts';
+  BarChart3} from 'lucide - react.ts';
 
 const UltimateServicesShowcase2028: React.FC = () : JSX.Element => {
+
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const [searchTerm, setSearchTerm] = useState ('') ;
   const [sortBy, setSortBy] = useState ('name') ;
@@ -54,7 +55,9 @@ const UltimateServicesShowcase2028: React.FC = () : JSX.Element => {
         service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
         service.tags.some (tag =>
           tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ) .sort ( (a, b) => {
+
       switch (sortBy) {
+
         case 'price':
           return a.price - b.price;
         case 'category':
@@ -68,7 +71,9 @@ const UltimateServicesShowcase2028: React.FC = () : JSX.Element => {
     }) ;
 
   const getCategoryIcon = (category: anystring) => {
+
     const icons: Record < string, any> = {
+
       'AI & Enterprise': <Brain className="w - 5 h - 5" />,
       'Quantum Computing': <Zap className="w - 5 h - 5" />,
       Cybersecurity: <Shield className="w - 5 h - 5" />,
@@ -78,13 +83,14 @@ const UltimateServicesShowcase2028: React.FC = () : JSX.Element => {
       'Content Marketing': <Target className="w - 5 h - 5" />,
       'Project Management': <Rocket className="w - 5 h - 5" />,
       'Customer Support': <Users className="w - 5 h - 5" />,
-      'Marketing Automation': <TrendingUp className="w - 5 h - 5" />,
-    };
+      'Marketing Automation': <TrendingUp className="w - 5 h - 5" />};
     return icons[category] || <Sparkles className="w - 5 h - 5" />;
   };
 
   const getInnovationLevelColor = (level: anystring) => {
+
     switch (level) {
+
       case 'revolutionary':
         return 'from - purple - 500 to - pink - 500';
       case 'cutting - edge':
@@ -95,26 +101,26 @@ const UltimateServicesShowcase2028: React.FC = () : JSX.Element => {
   };
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+
+        staggerChildren: 0.1}}};
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5,
-        ease: 'easeOut',
-      },
-    },
-  };
+        ease: 'easeOut'}}};
 
   return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text - white">
       {/* Futuristic Animated Background */}
@@ -125,21 +131,21 @@ const UltimateServicesShowcase2028: React.FC = () : JSX.Element => {
               key={i}
               className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60 shadow - lg shadow - cyan - 400 / 50"
               animate={{
+
                 x: [0, 100, 0],
                 y: [0, -100, 0],
                 opacity: [0.3, 1, 0.3],
-                scale: [0.5, 1.5, 0.5],
-              }}
+                scale: [0.5, 1.5, 0.5]}}
               transition={{
+
                 duration: 6 + i * 0.2,
                 repeat: Infinity,
                 delay: i * 0.1,
-                ease: 'easeInOut',
-              }}
+                ease: 'easeInOut'}}
               style={{
+
                 left: `${Math.random () * 100}%`,
-                top: `${Math.random () * 100}%`,
-              }}
+                top: `${Math.random () * 100}%`}}
             />) ) }
         </div>
       </div>
@@ -233,6 +239,7 @@ const UltimateServicesShowcase2028: React.FC = () : JSX.Element => {
               <div role="button" className="flex bg - slate - 700 / 50 border border - slate - 600 / 50 rounded - xl p - 1">
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`px - 3 py - 2 rounded - lg transition - colors ${
+
                     viewMode === 'grid'
                       ? 'bg - cyan - 500 / 20 text - cyan - 400'
                       : 'text - gray - 400 hover:text - white'
@@ -242,6 +249,7 @@ const UltimateServicesShowcase2028: React.FC = () : JSX.Element => {
                 </button>
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`px - 3 py - 2 rounded - lg transition - colors ${
+
                     viewMode === 'list'
                       ? 'bg - cyan - 500 / 20 text - cyan - 400'
                       : 'text - gray - 400 hover:text - white'
@@ -263,6 +271,7 @@ const UltimateServicesShowcase2028: React.FC = () : JSX.Element => {
             initial="hidden"
             animate="visible"
             className={
+
               viewMode === 'grid'
                 ? 'grid grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 3 gap - 6'
                 : 'space - y-6'
@@ -272,6 +281,7 @@ const UltimateServicesShowcase2028: React.FC = () : JSX.Element => {
                 key={service.id}
                 variants={itemVariants}
                 className={`bg - slate - 800 / 50 backdrop - blur - xl border border - slate - 700 / 50 rounded - 2xl overflow - hidden hover:border - cyan - 500 / 50 transition - all duration - 300 hover:shadow - 2xl hover:shadow - cyan - 500 / 20 ${
+
                   viewMode === 'list' ? 'flex' : ''
                 }`}
               >

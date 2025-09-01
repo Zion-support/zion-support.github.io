@@ -11,6 +11,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
   const allServices = [
     // AI - Powered Micro SAAS Services
     {
+
       id: 'ai - code - review - security',
       title: 'AI Code Review & Security Analysis',
       description: 'Advanced vulnerability detection with 85% accuracy improvement',
@@ -22,6 +23,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
       benefits['Reduce security incidents by 60%', 'Faster code review process'];
     },;
     {
+
       id: 'ai - customer - experience - analytics',
       title: 'AI Customer Experience Analytics',
       description: 'Transform customer insights into actionable intelligence',
@@ -33,6 +35,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
       benefits['Increase satisfaction by 35%', 'Reduce churn by 25%'];
     },;
     {
+
       id: 'ai - devops - automation - platform',
       title: 'AI DevOps Automation Platform',
       description: 'Revolutionize DevOps workflow with AI - powered automation',
@@ -44,6 +47,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
       benefits['Reduce deployment time by 80%', 'Decrease failures by 90%'];
     },;
     {
+
       id: 'ai - iot - edge - computing - platform',
       title: 'AI IoT Edge Computing Platform',
       description: 'Revolutionize IoT with AI - powered edge computing',
@@ -57,6 +61,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
 
     // Cloud & Infrastructure Services
     {
+
       id: 'cloud - devops',
       title: 'Cloud DevOps',
       description: 'Streamlined cloud deployment and management',
@@ -68,6 +73,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
       benefits['Faster deployments', 'Cost optimization'];
     },;
     {
+
       id: 'it - infrastructure',
       title: 'IT Infrastructure',
       description: 'Enterprise - grade infrastructure solutions',
@@ -79,6 +85,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
       benefits['Reliable infrastructure', 'Scalable solutions'];
     },;
     {
+
       id: 'digital - twin',
       title: 'Digital Twin',
       description: 'Virtual representation of physical systems',
@@ -92,6 +99,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
 
     // Data & Analytics Services
     {
+
       id: 'data - analytics',
       title: 'Data Analytics',
       description: 'Comprehensive data analysis and visualization',
@@ -103,6 +111,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
       benefits['Better insights', 'Data - driven decisions'];
     },;
     {
+
       id: 'ai - business - intelligence',
       title: 'AI Business Intelligence',
       description: 'AI - powered business insights and reporting',
@@ -114,6 +123,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
       benefits['Faster insights', 'Predictive capabilities'];
     },;
     {
+
       id: 'iot - edge',
       title: 'IoT Edge Computing',
       description: 'Real - time edge data processing',
@@ -127,6 +137,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
 
     // Security & Compliance Services
     {
+
       id: 'zero - trust - network - architecture',
       title: 'Zero Trust Network Architecture',
       description: 'Modern security framework for enterprise',
@@ -138,6 +149,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
       benefits['Enhanced security', 'Compliance ready'];
     },;
     {
+
       id: 'ai - cybersecurity - suite',
       title: 'AI Cybersecurity Suite',
       description: 'Comprehensive security solutions',
@@ -149,6 +161,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
       benefits['Proactive security', 'Faster response'];
     },;
     {
+
       id: 'ai - compliance - assistant',
       title: 'AI Compliance Assistant',
       description: 'AI - powered compliance management',
@@ -164,6 +177,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
   const categories = ['all', 'AI - Powered Micro SAAS', 'Cloud & Infrastructure', 'Data & Analytics', 'Security & Compliance'];
 
   const filteredServices = allServices.filter (service => {
+
     const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
                          service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
                          service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
@@ -184,11 +198,13 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
           <div role="button" className="max - w-7xl mx - auto text - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
@@ -237,6 +253,7 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
                   {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                       onClick={ () => setSelectedCategory (category) }
                       className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all duration - 300 ${
+
                         selectedCategory === category
                           ? 'bg - blue - 600 text - white'
                           : 'bg - white / 10 text - gray - 300 hover:bg - white / 20'
@@ -275,16 +292,19 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
                 {filteredServices.map ( (service, index) => (<motion.div
                     key={service.id}
                     initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                     animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                     transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -355,11 +375,13 @@ const AllServicesIndex: React.FC = () : JSX.Element => {;
           <div role="button" className="max - w-4xl mx - auto text - center">
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               whileInView = {
+
   { opacity: 1,
   y: 0
 

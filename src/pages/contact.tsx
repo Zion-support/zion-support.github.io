@@ -14,7 +14,9 @@ import { Phone,
              } from 'lucide-react.ts';
 
 export default function Contact(...args: any[]): any {
+
   const [formData, setFormData] = useState({
+
     name: '',
     email: '',
     company: '',
@@ -29,18 +31,22 @@ export default function Contact(...args: any[]): any {
   const [submitStatus, setSubmitStatus] = useState<any>('idle');
 
   const handleInputChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)              => {
+
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {
+
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
     try {
+
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
+
         name: '',
         email: '',
         company: '',
@@ -52,31 +58,37 @@ export default function Contact(...args: any[]): any {
         preferredContact: 'email'
       });
     } catch (error) {
+
       setSubmitStatus('error');
     } finally {
+
       setIsSubmitting(false);
     }
   };
   const contactInfo = [
     {
+
       icon: Phone,
       title: 'Phone',
       value: '+1 302 464 0950',
       link: 'tel:+13024640950'
     },
     {
+
       icon: Mail,
       title: 'Email',
       value: 'kleber@ziontechgroup.com',
       link: 'mailto:kleber@ziontechgroup.com'
     },
     {
+
       icon: MapPin,
       title: 'Address',
       value: '364 E Main St STE 1008\nMiddletown DE 19709',
       link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
     },
     {
+
       icon: Clock,
       title: 'Business Hours',
       value: 'Mon-Fri: 9AM-6PM EST\nWeekend: By Appointment'
@@ -261,6 +273,7 @@ export default function Contact(...args: any[]): any {
                 type="submit"
                 disabled={!isFormValid || isSubmitting}
                 className={`w-full py-4 px-8 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-2 ${
+
                   isFormValid && !isSubmitting
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white transform hover:scale-105'
                     : 'bg-gray-500 text-gray-300 cursor-not-allowed'

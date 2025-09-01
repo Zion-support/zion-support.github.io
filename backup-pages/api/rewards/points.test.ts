@@ -14,14 +14,23 @@ vi.mock('@supabase/supabase-js', () => ({
     select: mockSupabaseSelect,
     eq: mockSupabaseEq,
     auth: {
-      getUser: vi.fn((token) => {
+      getUser: vi.fn(token => {
         if (token === 'valid-token') {
-          return Promise.resolve({ data: { user: { id: 'user-123' } }, error: null });
+          return Promise.resolve({
+            data: { user: { id: 'user-123' } },
+            error: null,
+          });
         }
         if (token === 'error-token') {
-          return Promise.resolve({ data: { user: null }, error: { message: 'Token processing error' } });
+          return Promise.resolve({
+            data: { user: null },
+            error: { message: 'Token processing error' },
+          });
         }
-        return Promise.resolve({ data: { user: null }, error: { message: 'Invalid token' } });
+        return Promise.resolve({
+          data: { user: null },
+          error: { message: 'Invalid token' },
+        });
       }),
     },
   })),
@@ -36,7 +45,8 @@ describe('/api/rewards/points API Endpoint', () => {
   });
 
   const mockRequest = (method: RequestMethod = 'GET', headers: any = {}) => {
-    return createMocks<NextApiRequest, NextApiResponse>({ method, headers }).req;
+    return createMocks<NextApiRequest, NextApiResponse>({ method, headers })
+      .req;
   };
 
   const mockResponse = () => {
@@ -60,7 +70,9 @@ describe('/api/rewards/points API Endpoint', () => {
     await pointsHandler(req, res);
 
     expect(res.statusCode).toBe(401);
-    expect(res._getJSONData()).toEqual({ error: 'Unauthorized: User not authenticated.' });
+    expect(res._getJSONData()).toEqual({
+      error: 'Unauthorized: User not authenticated.',
+    });
   });
 
   test('should return 401 if auth token processing leads to error', async () => {
@@ -70,7 +82,9 @@ describe('/api/rewards/points API Endpoint', () => {
     await pointsHandler(req, res);
 
     expect(res.statusCode).toBe(401);
-    expect(res._getJSONData()).toEqual({ error: 'Unauthorized: User not authenticated.' });
+    expect(res._getJSONData()).toEqual({
+      error: 'Unauthorized: User not authenticated.',
+    });
   });
 
   test('should return 200 and points balance for a valid user', async () => {
@@ -113,11 +127,16 @@ describe('/api/rewards/points API Endpoint', () => {
   test('should return 500 if Supabase query fails', async () => {
     const req = mockRequest('GET', { authorization: 'Bearer valid-token' });
     const res = mockResponse();
-    mockSupabaseEq.mockResolvedValueOnce({ data: null, error: { message: 'Supabase error' } });
+    mockSupabaseEq.mockResolvedValueOnce({
+      data: null,
+      error: { message: 'Supabase error' },
+    });
 
     await pointsHandler(req, res);
 
     expect(res.statusCode).toBe(500);
-    expect(res._getJSONData()).toEqual(expect.objectContaining({ error: 'Failed to fetch points' }));
+    expect(res._getJSONData()).toEqual(
+      expect.objectContaining({ error: 'Failed to fetch points' })
+    );
   });
 });

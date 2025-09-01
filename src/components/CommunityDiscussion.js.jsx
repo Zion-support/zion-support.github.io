@@ -23,11 +23,13 @@ const initialPosts = [
     body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.'},
 ];
 export const CommunityDiscussion = () => {
+
   const [posts, setPosts] = useState(initialPosts);
   const [showNew, setShowNew] = useState(false);
   const [newTitle, setNewTitle] = useState('');
   const [newBody, setNewBody] = useState('');
   const handleAddPost = () => {
+
     if (!newTitle.trim() || !newBody.trim()) return;
     setPosts([
       {

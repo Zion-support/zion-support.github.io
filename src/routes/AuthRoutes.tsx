@@ -9,6 +9,7 @@ import Onboarding from "@/pages/Onboarding";
 import TalentOnboarding from "@/pages/TalentOnboarding";
 import ServiceOnboarding from "@/pages/ServiceOnboarding";
 const AuthRoutes = () => {
+
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
@@ -17,6 +18,7 @@ const AuthRoutes = () => {
       <Route
         path="/profile"
         element={
+
           <ProtectedRoute>
             <div>Profile Page</div>
           </ProtectedRoute>
@@ -24,6 +26,7 @@ const AuthRoutes = () => {
       <Route
         path="/dashboard"
         element={
+
           <ProtectedRoute>
             <div>Dashboard</div>
           </ProtectedRoute>

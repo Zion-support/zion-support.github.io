@@ -32,6 +32,7 @@ export interface AdditionalService {
     marketPrice: "$900 - $2,200/month"
   },
   {
+
 "
     id: "finops-cost-optimizer","
     title: "FinOps Cost Optimizer","
@@ -41,6 +42,7 @@ export interface AdditionalService {
     marketPrice: "$700 - $2,000/month"
   },
   {
+
 "
     id: "genai-content-studio-pro","
     title: "GenAI Content Studio Pro","

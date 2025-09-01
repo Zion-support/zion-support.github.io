@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Workflow, 
   Brain, 
   Zap, 
@@ -34,33 +35,40 @@ import {
 import { SEO } from '@/components/SEO';
 
 const AIBusinessProcessAutomation: React.FC = () => {
+
   const features = [
     {
+
       icon: Brain,
       title: "Intelligent Process Discovery",
       description: "AI automatically identifies and maps your business processes for optimization opportunities"
     },
     {
+
       icon: Workflow,
       title: "Visual Workflow Designer",
       description: "Drag-and-drop interface to create complex business workflows with AI-powered suggestions"
     },
     {
+
       icon: Bot,
       title: "RPA Integration",
       description: "Seamlessly integrate with existing RPA tools and create intelligent automation bots"
     },
     {
+
       icon: Database,
       title: "Multi-System Integration",
       description: "Connect with 100+ business applications including ERP, CRM, HR, and financial systems"
     },
     {
+
       icon: Shield,
       title: "Enterprise Security",
       description: "Bank-level security with role-based access control, audit trails, and compliance features"
     },
     {
+
       icon: Activity,
       title: "Real-time Monitoring",
       description: "Live dashboards and alerts to monitor process performance and identify bottlenecks"
@@ -69,6 +77,7 @@ const AIBusinessProcessAutomation: React.FC = () => {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$499",
       period: "/month",
@@ -85,6 +94,7 @@ const AIBusinessProcessAutomation: React.FC = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$1,299",
       period: "/month",
@@ -103,6 +113,7 @@ const AIBusinessProcessAutomation: React.FC = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$3,999",
       period: "/month",
@@ -124,21 +135,25 @@ const AIBusinessProcessAutomation: React.FC = () => {
 
   const benefits = [
     {
+
       icon: Clock,
       title: "90% Time Savings",
       description: "Automate repetitive tasks and free up your team for strategic work"
     },
     {
+
       icon: DollarSign,
       title: "60% Cost Reduction",
       description: "Lower operational costs through automation and process optimization"
     },
     {
+
       icon: Star,
       title: "Error Elimination",
       description: "Remove human errors and ensure consistent process execution"
     },
     {
+
       icon: TrendingUp,
       title: "Scalable Operations",
       description: "Scale your business operations without proportional headcount increases"
@@ -147,21 +162,25 @@ const AIBusinessProcessAutomation: React.FC = () => {
 
   const useCases = [
     {
+
       title: "Finance & Accounting",
       description: "Automate invoice processing, expense approvals, financial reporting, and reconciliation",
       examples: ["AP/AR automation", "Expense management", "Financial close", "Compliance reporting"]
     },
     {
+
       title: "Human Resources",
       description: "Streamline recruitment, onboarding, performance management, and payroll processes",
       examples: ["Candidate screening", "Employee onboarding", "Performance reviews", "Benefits administration"]
     },
     {
+
       title: "Customer Service",
       description: "Automate customer inquiries, ticket routing, follow-ups, and satisfaction surveys",
       examples: ["Ticket classification", "Auto-responses", "Escalation routing", "Customer feedback"]
     },
     {
+
       title: "Sales & Marketing",
       description: "Automate lead qualification, follow-up sequences, proposal generation, and reporting",
       examples: ["Lead scoring", "Email campaigns", "Proposal creation", "Sales analytics"]
@@ -170,31 +189,37 @@ const AIBusinessProcessAutomation: React.FC = () => {
 
   const industries = [
     {
+
       name: "Healthcare",
       description: "Patient scheduling, claims processing, medical records management",
       icon: "🏥"
     },
     {
+
       name: "Manufacturing",
       description: "Supply chain management, quality control, production scheduling",
       icon: "🏭"
     },
     {
+
       name: "Retail",
       description: "Inventory management, order processing, customer loyalty programs",
       icon: "🛍️"
     },
     {
+
       name: "Financial Services",
       description: "Loan processing, compliance reporting, risk assessment",
       icon: "💳"
     },
     {
+
       name: "Education",
       description: "Student enrollment, course scheduling, grade management",
       icon: "🎓"
     },
     {
+
       name: "Real Estate",
       description: "Property management, tenant screening, maintenance requests",
       icon: "🏠"
@@ -309,6 +334,7 @@ const AIBusinessProcessAutomation: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-green-500 shadow-lg shadow-green-500/20' 
                     : 'border-slate-700'
@@ -341,6 +367,7 @@ const AIBusinessProcessAutomation: React.FC = () => {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

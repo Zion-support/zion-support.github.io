@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";"
 import { Button } from "@/components/ui/button";"
 import CodeBlock from "./CodeBlock";
 export function ApiPlayground({ method, path, params = [] }) {
+
 "
     const [apiKey, setApiKey] = useLocalStorage("zion_api_key", "");
     const [paramValues, setParamValues] = useState({});"
@@ -15,6 +16,7 @@ export function ApiPlayground({ method, path, params = [] }) {
 
         setParamValues((prev) => ({ ...prev, [name]: value }))};
     const sendRequest = async () => {
+
 "
         const baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
         let url = `${baseUrl}${path}`;
@@ -33,6 +35,7 @@ export function ApiPlayground({ method, path, params = [] }) {
 
   method,
   headers: {
+
 `
                 Authorization: `Bearer ${apiKey
 `
@@ -41,6 +44,7 @@ export function ApiPlayground({ method, path, params = [] }) {
         if (method !== "GET" && method !== "DELETE") {
 
             try {
+
                 options.body = JSON.stringify(JSON.parse(body))}
             catch {
 
@@ -49,10 +53,12 @@ export function ApiPlayground({ method, path, params = [] }) {
         setLoading(true);
         setResponse(null);
         try {
+
             const res = await fetch(url, options);
             const text = await res.text();
             setResponse(text)}
         catch (err) {
+
             setResponse(err.message)}
         finally {
 

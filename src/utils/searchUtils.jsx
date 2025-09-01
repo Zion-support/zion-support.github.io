@@ -1,14 +1,19 @@
 import React from 'react';
 export const calculateRelevanceScore = (result, searchTerm) => {
+
 export const debounceSearch = (func, delay) => {
+
 export const filterSearchResults = (results, filters) => {
+
 export const getSearchSuggestions = (searchHistory = [],
 export const highlightSearchTerms = (text, searchTerm) => {
+
 export const matchesSearchTerm = (text, searchTerm) => {
+
 export const performSearch = (data,
 export const sortSearchResults = (results, sortBy, searchTerm) => {
-export default {
 
+export default {
 
 /**
  * Highlight search terms in text with HTML mark tags
@@ -46,18 +51,22 @@ export default {
   if (description.includes (term) ) score += 30;
   // Tag matches
   if (result.tags?.some (tag => tag.toLowerCase () .includes (term) ) ) {
+
     score += 20;
   }
   // Category match
   if (result.category?.toLowerCase () .includes (term) ) {
+
     score += 15;
   }
   // Boost score based on rating
   if (result.rating) {
+
     score += result.rating * 2;
   }
   // Recent content gets slight boost
   if (result.date) {
+
     const dateScore = Math.max (0,
       10 - (Date.now () - new Date (result.date) .getTime () ) / (1000 * 60 * 60 * 24 * 30) ) ;
     score += dateScore;
@@ -72,6 +81,7 @@ export default {
   const sortedResults = [...results];
 
   switch (sortBy) {
+
     case 'price_asc':
       return sortedResults.sort ( (a, b) => (a.price ?? 0) - (b.price ?? 0) ) ;
     case 'price_desc':
@@ -80,6 +90,7 @@ export default {
       return sortedResults.sort ( (a, b) => (b.rating ?? 0) - (a.rating ?? 0) ) ;
     case 'date':
       return sortedResults.sort ( (a, b) => {
+
         const dateA = a.date ? new Date (a.date) .getTime () : 0;
         const dateB = b.date ? new Date (b.date) .getTime () : 0;
         return dateB - dateA;
@@ -89,6 +100,7 @@ export default {
     case 'relevance':
     default:
       return sortedResults.sort ( (a, b) => {
+
         const scoreA = calculateRelevanceScore (a, searchTerm) ;
         const scoreB = calculateRelevanceScore (b, searchTerm) ;
         return scoreB - scoreA;
@@ -103,19 +115,23 @@ export default {
 
   // Filter by type
   if (filters.types.length > 0) {
+
     filteredResults = filteredResults.filter (result =>
       filters.types.includes (result.type) ) ;
   }
 
   // Filter by category
   if (filters.category) {
+
     filteredResults = filteredResults.filter (result =>
         result.category?.toLowerCase () === filters.category.toLowerCase () ) ;
   }
 
   // Filter by price range
   if (filters.minPrice !== undefined || filters.maxPrice !== undefined) {
+
     filteredResults = filteredResults.filter (result => {
+
       const price = result.price ?? 0;
       if (filters.minPrice !== undefined && price < filters.minPrice) return false;
       if (filters.maxPrice !== undefined && price > filters.maxPrice) return false;
@@ -125,6 +141,7 @@ export default {
 
   // Filter by rating
   if (filters.minRating) {
+
     filteredResults = filteredResults.filter (result => (result.rating ?? 0) >= filters.minRating) ;
   }
 
@@ -137,7 +154,9 @@ export default {
   searchTerm,
   filters = {},
   sortBy = 'relevance') => {
+
   if (!searchTerm.trim () ) {
+
     return sortSearchResults (data, sortBy, searchTerm) ;
   }
 
@@ -159,17 +178,20 @@ export default {
  */
   popularTerms = [],
   currentInput = '') => {
+
   const suggestions = [];
 
   // Add matching search history
   if (currentInput) {
-    const matchingHistory = searchHistory
+
+    const matchingHistory = searchHistory;
       .filter (term => term.toLowerCase () .includes (currentInput.toLowerCase () ) ) .slice (0, 3) ;
     suggestions.push (...matchingHistory) ;
   }
 
   // Add popular terms if no current input
   if (!currentInput) {
+
     suggestions.push (...popularTerms.slice (0, 5) ) ;
   }
 
@@ -182,6 +204,7 @@ export default {
  */
   let timeoutId;
   return (...args) => {
+
     clearTimeout (timeoutId) ;
     timeoutId = setTimeout ( () => func.apply (null, args) , delay) ;
   };
@@ -194,5 +217,4 @@ export default {
   filterSearchResults,
   performSearch,
   getSearchSuggestions,
-  debounceSearch,
-};
+  debounceSearch};

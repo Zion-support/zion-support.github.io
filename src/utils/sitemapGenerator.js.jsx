@@ -1,5 +1,7 @@
 export class SitemapGenerator {
+
 export const defaultSitemapConfig = {
+
 export const generator = new SitemapGenerator (config) ;
 export default SitemapGenerator;
 export default to;
@@ -8,7 +10,9 @@ export default to;
 
     config;
     constructor (config) {
+
         this.config = {
+
   outputPath: './public / sitemap.xml',
   ...config
 
@@ -18,6 +22,7 @@ export default to;
      * Generate XML sitemap content
      */
     generateXML () {
+
         const { baseUrl, urls } = this.config;
         const xmlHeader = '<?xml version="1.0" encoding="UTF - 8"?>';
         const urlElement = `<url>
@@ -34,8 +39,10 @@ export default to;
      * Generate sitemap index for large sites
      */
     generateIndex (sitemaps) {
+
         const xmlHeader = '<?xml version="1.0" encoding="UTF - 8"?>';
         const sitemapElements = sitemaps.map (sitemap => {
+
             return `<sitemap>
         <loc>${sitemap}</loc>
         <lastmod>${new Date () .toISOString () }</lastmod>
@@ -47,6 +54,7 @@ export default to;
      * Generate robots.txt content
      */
     generateRobotsTxt () {
+
         const { baseUrl } = this.config;
         return `User - agent: *
 Allow: /
@@ -67,10 +75,13 @@ Allow: /services / Allow: /solutions / Allow: /about / Allow: /contact / Allow: 
      * Generate JSON sitemap for JavaScript applications
      */
     generateJSON () {
+
         const { baseUrl, urls } = this.config;
         const jsonSitemap = {
+
   baseUrl,
             urls: urls.map (url => ({
+
                 ...url,
   fullUrl: `${baseUrl
 
@@ -82,6 +93,7 @@ Allow: /services / Allow: /solutions / Allow: /about / Allow: /contact / Allow: 
      * Generate HTML sitemap for users
      */
     generateHTML () {
+
         const { baseUrl, urls } = this.config;
         const html = `<!DOCTYPE html>
 <html lang="en">
@@ -213,6 +225,7 @@ Allow: /services / Allow: /solutions / Allow: /about / Allow: /contact / Allow: 
 };
 // Utility function to generate all sitemap files
     try {
+
         // Generate XML sitemap
         const xmlSitemap = generator.generateXML () ;
         // Generate robots.txt
@@ -222,6 +235,7 @@ Allow: /services / Allow: /solutions / Allow: /about / Allow: /contact / Allow: 
         // Generate JSON sitemap
         const jsonSitemap = generator.generateJSON () ;
         return {
+
             xml: xmlSitemap,
             robots: robotsTxt,
             html: htmlSitemap,
@@ -229,6 +243,7 @@ Allow: /services / Allow: /solutions / Allow: /about / Allow: /contact / Allow: 
         };
     }
     catch (error) {
+
         console.error ('Error generating sitemaps:', error) ;
         throw error;
     }

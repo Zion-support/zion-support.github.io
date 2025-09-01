@@ -21,6 +21,7 @@ import {
   Globe,
   MessageCircle} from 'lucide-react';
 export function NewServicesShowcase() {
+
   // Get featured services from each category
   const featuredServices = SERVICE_CATEGORIES.map()
     category => category.services[0]

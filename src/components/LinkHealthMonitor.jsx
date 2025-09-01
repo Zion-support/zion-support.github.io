@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = () => {
+
 <<<<<<< HEAD
 import { motion } from 'framer - motion';
 
@@ -60,6 +61,7 @@ import { motion } from 'framer - motion';
 
     ];
     useEffect ( () => {
+
         setLinkStatuses (sampleLinks) ;
         generateReport (sampleLinks) }, []) ;
     const generateReport = (links) => {
@@ -78,6 +80,7 @@ import { motion } from 'framer - motion';
             averageResponseTime: avgResponseTime,
             lastUpdated: new Date () }) };
     const startMonitoring = async () => {
+
         setIsMonitoring (true) ;
         // Simulate link checking
         await new Promise (resolve => setTimeout (resolve, 2000) ) ;

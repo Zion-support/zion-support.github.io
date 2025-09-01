@@ -3,23 +3,28 @@ import React from 'react';
 export default AIAutonomousBusinessOperations;
 
 const AIAutonomousBusinessOperations = () => {
+
     const features = [
         {
+
             title: "Process Automation",
             description: "AI - powered automation of repetitive business processes",
             icon: "⚙️"
         },
         {
+
             title: "Decision Support",
             description: "Intelligent decision - making assistance and recommendations",
             icon: "🧠"
         },
         {
+
             title: "Resource Optimization",
             description: "AI - driven optimization of business resources and operations",
             icon: "📊"
         },
         {
+
             title: "Predictive Analytics",
             description: "Forecast trends and optimize business performance",
             icon: "🔮"
@@ -27,39 +32,47 @@ const AIAutonomousBusinessOperations = () => {
     ];
     const businessAreas = [
         {
+
             category: "Operations Management",
             capabilities["Process optimization", "Workflow automation", "Quality control", "Performance monitoring"];
         },;
         {
+
             category: "Financial Operations",
             capabilities["Budget optimization", "Cost analysis", "Revenue forecasting", "Risk management"];
         },;
         {
+
             category: "Human Resources",
             capabilities["Talent acquisition", "Performance evaluation", "Training optimization", "Workforce planning"];
         },;
         {
+
             category: "Customer Operations",
             capabilities["Customer service automation", "Support ticket routing", "Feedback analysis", "Customer journey optimization"];
         }
     ];
     const useCases = [
         {
+
             title: "Manufacturing",
             description: "Optimize production processes and quality control",
             icon: "🏭"
         },
         {
+
             title: "Retail",
             description: "Inventory management and customer experience optimization",
             icon: "🛍️"
         },
         {
+
             title: "Healthcare",
             description: "Patient care optimization and resource management",
             icon: "🏥"
         },
         {
+
             title: "Finance",
             description: "Risk assessment and portfolio optimization",
             icon: "💼"
@@ -67,21 +80,25 @@ const AIAutonomousBusinessOperations = () => {
     ];
     const benefits = [
         {
+
             title: "Efficiency Gains",
             description: "Improve operational efficiency by 40%",
             metric: "40%"
         },
         {
+
             title: "Cost Reduction",
             description: "Reduce operational costs through optimization",
             metric: "30%"
         },
         {
+
             title: "Error Reduction",
             description: "Minimize human errors in business processes",
             metric: "90%"
         },
         {
+
             title: "Scalability",
             description: "Easily scale operations as business grows",
             metric: "Unlimited"

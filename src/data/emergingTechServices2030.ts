@@ -2,6 +2,7 @@
 // Revolutionary AI, Quantum Computing, and Next-Generation Solutions
 ;
 export interface EmergingTechService2030 {
+
   id: string;
   title: string;
   description: string;

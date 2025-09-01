@@ -4,11 +4,14 @@ import { cn } from '@/lib/utils';
 const TabsContext = createContext();
 
 export function Tabs({ children, defaultValue, value, onValueChange, className = '' }) {
+
     const [activeTab, setActiveTab] = useState(value || defaultValue || '');
     
     const handleTabChange = (tab) => {
+
         setActiveTab(tab);
         if (onValueChange) {
+
             onValueChange(tab);
         }
     };
@@ -23,6 +26,7 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
 }
 
 export function TabsList({ children, className = '' }) {
+
     return (
         <div className={cn('flex border-b border-gray-200', className)}>
             {children}
@@ -31,8 +35,10 @@ export function TabsList({ children, className = '' }) {
 }
 
 export function TabsTrigger({ children, value, className = '' }) {
+
     const context = useContext(TabsContext);
     if (!context) {
+
         throw new Error('TabsTrigger must be used within Tabs');
     }
     
@@ -55,12 +61,15 @@ export function TabsTrigger({ children, value, className = '' }) {
 }
 
 export function TabsContent({ children, value, className = '' }) {
+
     const context = useContext(TabsContext);
     if (!context) {
+
         throw new Error('TabsContent must be used within Tabs');
     }
     
     if (context.activeTab !== value) {
+
         return null;
     }
     

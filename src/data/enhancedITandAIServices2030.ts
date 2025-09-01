@@ -2,6 +2,7 @@
 // Comprehensive IT infrastructure, consulting, and AI solutions with real market data
 
 export interface EnhancedITService {
+
   id: string;
   title: string;
   description: string;
@@ -21,11 +22,13 @@ export interface EnhancedITService {
   roi: string;
   innovationLevel: string;
   contactInfo: {
+
     phone: string;
     email: string;
     website: string;
     address: string};
   technicalSpecs?: {
+
     technology: string[];
     integrations: string[];
     certifications: string[];
@@ -43,6 +46,7 @@ export interface EnhancedITService {
 export const enhancedITandAIServices2030: EnhancedITService[] = [
   // IT INFRASTRUCTURE SERVICES
   {
+
     id: "zero-trust-network-architecture",
     title: "Zero Trust Network Architecture Implementation",
     description: "Comprehensive zero trust security framework that eliminates implicit trust and continuously validates every stage of digital interactions.",
@@ -90,6 +94,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     innovationLevel: "Advanced",
     contactInfo: zionContact,
     technicalSpecs: {
+
       technology: ["Cisco", "Palo Alto", "Fortinet", "Microsoft", "VMware"],
       integrations: ["Active Directory", "LDAP", "SAML", "OAuth", "SIEM systems"],
       certifications: ["CISSP", "CISM", "CCSP", "Zero Trust"],
@@ -103,6 +108,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"]
   },
   {
+
     id: "multi-cloud-orchestration-platform",
     title: "Multi-Cloud Orchestration Platform",
     description: "Unified platform for managing and orchestrating workloads across multiple cloud providers with automated optimization and cost management.",
@@ -150,6 +156,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     innovationLevel: "Advanced",
     contactInfo: zionContact,
     technicalSpecs: {
+
       technology: ["Terraform", "Kubernetes", "Docker", "AWS", "Azure", "GCP"],
       integrations: ["AWS", "Azure", "GCP", "VMware", "OpenStack", "CI/CD tools"],
       certifications: ["AWS", "Azure", "GCP", "Kubernetes", "Terraform"],
@@ -163,6 +170,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     compliance: ["SOC 2", "ISO 27001", "Cloud security standards"]
   },
   {
+
     id: "edge-computing-infrastructure",
     title: "Edge Computing Infrastructure Solutions",
     description: "Distributed computing infrastructure that brings computation and data storage closer to data sources, reducing latency and improving performance.",
@@ -210,6 +218,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     innovationLevel: "Cutting-edge",
     contactInfo: zionContact,
     technicalSpecs: {
+
       technology: ["Kubernetes", "Docker", "Python", "Node.js", "Redis", "PostgreSQL"],
       integrations: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "MQTT", "CoAP"],
       certifications: ["Kubernetes", "Docker", "Edge Computing", "IoT"],
@@ -223,6 +232,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     compliance: ["ISO 27001", "SOC 2", "IoT security standards"]
   },
   {
+
     id: "quantum-ready-infrastructure",
     title: "Quantum-Ready Infrastructure Preparation",
     description: "Future-proof infrastructure that prepares organizations for quantum computing while maintaining current security and performance standards.",
@@ -270,6 +280,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     innovationLevel: "Revolutionary",
     contactInfo: zionContact,
     technicalSpecs: {
+
       technology: ["Post-quantum algorithms", "Hybrid systems", "Python", "C++", "Quantum simulators"],
       integrations: ["Active Directory", "PKI systems", "Encryption libraries", "Security frameworks"],
       certifications: ["Quantum Computing", "Post-quantum cryptography", "Security"],
@@ -285,6 +296,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
   
   // IT CONSULTING SERVICES
   {
+
     id: "digital-transformation-strategy",
     title: "Digital Transformation Strategy Consulting",
     description: "Comprehensive consulting services to help organizations navigate digital transformation with strategic planning, technology selection, and change management.",
@@ -332,6 +344,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     innovationLevel: "Advanced",
     contactInfo: zionContact,
     technicalSpecs: {
+
       technology: ["Strategic frameworks", "Assessment tools", "Analytics platforms", "Project management tools"],
       integrations: ["Business systems", "Analytics platforms", "Project management", "Communication tools"],
       certifications: ["Digital Transformation", "Change Management", "Strategy", "Project Management"],
@@ -345,6 +358,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     compliance: ["Data protection", "Confidentiality agreements"]
   },
   {
+
     id: "ai-strategy-and-implementation",
     title: "AI Strategy and Implementation Consulting",
     description: "Strategic consulting to help organizations identify, plan, and implement AI solutions that drive business value and competitive advantage.",
@@ -392,6 +406,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     innovationLevel: "Advanced",
     contactInfo: zionContact,
     technicalSpecs: {
+
       technology: ["AI assessment tools", "Analytics platforms", "Machine learning frameworks", "Data platforms"],
       integrations: ["Business systems", "Data sources", "Analytics platforms", "AI platforms"],
       certifications: ["AI Strategy", "Machine Learning", "Data Science", "Change Management"],
@@ -405,6 +420,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     compliance: ["AI ethics", "Data protection", "Bias detection"]
   },
   {
+
     id: "cybersecurity-maturity-assessment",
     title: "Cybersecurity Maturity Assessment",
     description: "Comprehensive cybersecurity assessment to evaluate current security posture and develop improvement roadmap aligned with industry best practices.",
@@ -452,6 +468,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     innovationLevel: "Advanced",
     contactInfo: zionContact,
     technicalSpecs: {
+
       technology: ["Security assessment tools", "Vulnerability scanners", "Compliance frameworks", "Risk assessment tools"],
       integrations: ["Security tools", "Compliance platforms", "Risk management systems", "Reporting tools"],
       certifications: ["CISSP", "CISM", "CISA", "Security frameworks"],
@@ -467,6 +484,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
   
   // AI SOLUTIONS
   {
+
     id: "ai-powered-business-process-automation",
     title: "AI-Powered Business Process Automation",
     description: "Intelligent automation solutions that use AI to streamline business processes, reduce manual work, and improve operational efficiency.",
@@ -514,6 +532,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     innovationLevel: "Advanced",
     contactInfo: zionContact,
     technicalSpecs: {
+
       technology: ["Python", "Machine Learning", "RPA tools", "Workflow engines", "API platforms"],
       integrations: ["ERP systems", "CRM systems", "Document management", "Business applications"],
       certifications: ["AI", "RPA", "Process Automation", "Integration"],
@@ -527,6 +546,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     compliance: ["SOC 2", "GDPR", "Industry-specific regulations"]
   },
   {
+
     id: "predictive-analytics-platform",
     title: "Predictive Analytics Platform",
     description: "Advanced analytics platform that uses machine learning to predict future trends, behaviors, and outcomes based on historical data.",
@@ -574,6 +594,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     innovationLevel: "Advanced",
     contactInfo: zionContact,
     technicalSpecs: {
+
       technology: ["Python", "R", "TensorFlow", "PyTorch", "React", "Node.js"],
       integrations: ["Data warehouses", "Business intelligence tools", "CRM systems", "ERP systems"],
       certifications: ["Data Science", "Machine Learning", "Analytics", "Statistics"],
@@ -587,6 +608,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     compliance: ["SOC 2", "GDPR", "Data protection regulations"]
   },
   {
+
     id: "natural-language-processing-platform",
     title: "Natural Language Processing Platform",
     description: "Advanced NLP platform that understands, interprets, and generates human language for various business applications and use cases.",
@@ -634,6 +656,7 @@ export const enhancedITandAIServices2030: EnhancedITService[] = [
     innovationLevel: "Advanced",
     contactInfo: zionContact,
     technicalSpecs: {
+
       technology: ["Python", "TensorFlow", "PyTorch", "Transformers", "React", "Node.js"],
       integrations: ["CRM systems", "Content management", "Communication platforms", "Analytics tools"],
       certifications: ["NLP", "Machine Learning", "AI", "Language Processing"],

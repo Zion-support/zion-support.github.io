@@ -1,7 +1,6 @@
 ;
 const CTASection: React.FC = (): JSX.Element => {
 
-  
     },;
     {;
       icon: Star,;"

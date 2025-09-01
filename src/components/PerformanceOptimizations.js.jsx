@@ -6,6 +6,7 @@ const LazyExpensiveComponent = lazy(() => import('./ExpensiveComponent'));
 const MemoizedDataGrid = memo(({ data, onItemClick }) => {
 
     const processedData = useMemo(() => {
+
         return data.map(item => ({
 
             ...item,
@@ -34,6 +35,7 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
 
     const [scrollTop, setScrollTop] = React.useState(0);
     const visibleItems = useMemo(() => {
+
         const startIndex = Math.floor(scrollTop / itemHeight);
         const endIndex = Math.min(startIndex + Math.ceil(containerHeight / itemHeight) + 1, items.length);
         return items.slice(startIndex, endIndex).map((item, index) => ({
@@ -73,6 +75,7 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
     </div>)};
 // Main performance optimizations component
 export function PerformanceOptimizations() {
+
     const [showExpensive, setShowExpensive] = React.useState(false);
     const [data, setData] = React.useState(['
         { id: 1, title: 'Service 1', description: 'Description 1', value: 100 },
@@ -83,8 +86,9 @@ export function PerformanceOptimizations() {
     ]);
     const handleItemClick = useCallback((item) => {
 
-        // console.log('Item clicked:', item)}, []);
+        // // // // console.log('Item clicked:', item)}, []);
     const addItem = useCallback(() => {
+
         setData(prev => [...prev, {
 
                 id: Date.now(),
@@ -124,8 +128,7 @@ export function PerformanceOptimizations() {
 
             id: i,`
             title: `Item ${i + 1}`,
-            value: Math.floor (Math.random () * 1000) ,
-          }) ) }
+            value: Math.floor (Math.random () * 1000) }) ) }
           itemHeight={60}
           containerHeight={400}
         />

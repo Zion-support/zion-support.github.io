@@ -1,4 +1,5 @@
 export function UserExperienceOptimizer ({
+
 <<<<<<< HEAD
 import {
 
@@ -69,6 +70,7 @@ interface OptimizationSuggestion {
   estimatedImprovement: number;
   implementation: string}
 interface UserExperienceOptimizerProps {
+
   // Add your props here
 
 
@@ -140,6 +142,7 @@ export function UserExperienceOptimizer({
 
     // Simulate analysis process
     setTimeout(() => {
+
       generateUserBehaviors();
       generateUXMetrics();
       generateOptimizationSuggestions();
@@ -164,19 +167,23 @@ export function UserExperienceOptimizer({
   ]);
   // Auto - analyze when component opens
   useEffect ( () => {
+
     if (autoAnalyze && isOpen && !analysisComplete) {
 
       startUXAnalysis()}
   }, [autoAnalyze, isOpen, analysisComplete, startUXAnalysis]) ;
   // Setup real - time updates
   useEffect ( () => {
+
     if (showRealTime && isOpen && analysisComplete) {
 
       analysisIntervalRef.current = setInterval(() => {
+
         generateUserBehaviors();
         generateUXMetrics()}, 45000); // Update every 45 seconds
 
       return () => {
+
         if (analysisIntervalRef.current) {
 
           clearInterval(analysisIntervalRef.current)}
@@ -352,6 +359,7 @@ export function UserExperienceOptimizer({
                                     : 'bg-red-500'`
                               }`}
                               style={{
+
 `
                                 width: `${Math.min((overallScore / targetScore) * 100, 100)}%`}}
                             ></div>
@@ -461,6 +469,7 @@ export function UserExperienceOptimizer({
                                         : 'bg-red-500'`
                                   }`}
                                   style={{
+
 `
                                     width: `${Math.min((metric.value / metric.target) * 100, 100)}%`}}
                                 ></div>

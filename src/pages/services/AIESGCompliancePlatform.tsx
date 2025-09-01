@@ -1,4 +1,5 @@
 import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Shield, Award export default function AIESGCompliancePlatform(...args: any[]): any {
+
   const features = [
     'AI-powered ESG data collection and analysis',
     'Automated compliance reporting and monitoring',
@@ -23,18 +24,21 @@ import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Pho
 
   const pricing = [
     {
+
       name: 'Starter',
       price: '$399/mo',
       features: ['Up to 50 ESG metrics', 'Basic compliance reporting', 'Standard dashboards', 'Email support', 'Monthly sustainability reports'],
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$899/mo',
       features: ['Up to 200 ESG metrics', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$2,999/mo',
       features: ['Unlimited ESG metrics', 'Full AI suite', 'Custom compliance models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
@@ -171,6 +175,7 @@ import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Pho
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
+
                 plan.popular ? 'border-green-500' : 'border-gray-200'
               } p-8`}>
                 {plan.popular && (
@@ -197,6 +202,7 @@ import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Pho
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+
                   plan.popular
                     ? 'bg-green-600 text-white hover:bg-green-700'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'

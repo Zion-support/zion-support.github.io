@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const INNOVATIVE_EDUCATION_TRAINING_SERVICES_2030: ProductListing[] = [
   // AI-Powered Personalized Learning Platform
   {
+
     id: "ai-personalized-learning",
     title: "AI Personalized Learning Platform",
     description: "Advanced AI-powered personalized learning platform that adapts to individual learning styles, pace, and preferences. Improves learning outcomes by 60% and reduces learning time by 40%.",
@@ -21,6 +22,7 @@ export const INNOVATIVE_EDUCATION_TRAINING_SERVICES_2030: ProductListing[] = [
     availability: "5-7 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-personalized-learning",
@@ -35,6 +37,7 @@ export const INNOVATIVE_EDUCATION_TRAINING_SERVICES_2030: ProductListing[] = [
 
   // Virtual Reality Training Platform
   {
+
     id: "vr-training-platform",
     title: "Virtual Reality Training Platform",
     description: "Immersive VR training platform that provides realistic simulations for skills training, safety training, and experiential learning. Increases training effectiveness by 80% and reduces training costs by 50%.",
@@ -53,6 +56,7 @@ export const INNOVATIVE_EDUCATION_TRAINING_SERVICES_2030: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/vr-training-platform",
@@ -67,6 +71,7 @@ export const INNOVATIVE_EDUCATION_TRAINING_SERVICES_2030: ProductListing[] = [
 
   // AI-Powered Assessment Platform
   {
+
     id: "ai-assessment-platform",
     title: "AI Assessment Platform",
     description: "Intelligent assessment platform that uses AI to create personalized assessments, grade assignments, and provide detailed feedback. Reduces grading time by 90% and improves assessment accuracy by 85%.",
@@ -85,6 +90,7 @@ export const INNOVATIVE_EDUCATION_TRAINING_SERVICES_2030: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-assessment-platform",
@@ -99,6 +105,7 @@ export const INNOVATIVE_EDUCATION_TRAINING_SERVICES_2030: ProductListing[] = [
 
   // Corporate Training Automation Platform
   {
+
     id: "corporate-training-automation",
     title: "Corporate Training Automation Platform",
     description: "Comprehensive corporate training automation platform that streamlines employee onboarding, skill development, and compliance training. Reduces training time by 50% and improves employee retention by 30%.",
@@ -117,6 +124,7 @@ export const INNOVATIVE_EDUCATION_TRAINING_SERVICES_2030: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/corporate-training-automation",
@@ -131,6 +139,7 @@ export const INNOVATIVE_EDUCATION_TRAINING_SERVICES_2030: ProductListing[] = [
 
   // Microlearning Content Platform
   {
+
     id: "microlearning-content-platform",
     title: "Microlearning Content Platform",
     description: "Advanced microlearning platform that delivers bite-sized learning content optimized for retention and engagement. Increases knowledge retention by 70% and improves learning engagement by 80%.",
@@ -149,6 +158,7 @@ export const INNOVATIVE_EDUCATION_TRAINING_SERVICES_2030: ProductListing[] = [
     availability: "4-5 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/microlearning-content",

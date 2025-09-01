@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Users,
   TrendingUp,
   MessageCircle,
@@ -83,32 +84,38 @@ import {
 } from 'lucide-react';
 
 export function AICustomerSuccessPlatform() {
+
   const features = [
     {
+
       icon: Users,
       title: 'AI-Powered Customer Journey Mapping',
       description: 'Intelligent mapping and optimization of customer touchpoints across all channels',
       benefits: ['360° customer view', 'Journey optimization', 'Predictive pathing', 'Personalization']
     },
     {
+
       icon: TrendingUp,
       title: 'Predictive Churn Prevention',
       description: 'Advanced AI algorithms that identify at-risk customers before they churn',
       benefits: ['Early warning system', 'Risk scoring', 'Intervention strategies', 'Success metrics']
     },
     {
+
       icon: MessageCircle,
       title: 'Intelligent Customer Communication',
       description: 'Automated, personalized communication that scales with your business',
       benefits: ['Multi-channel messaging', 'Smart timing', 'Content personalization', 'Response optimization']
     },
     {
+
       icon: BarChart3,
       title: 'Real-Time Success Metrics',
       description: 'Comprehensive dashboards showing customer health and success indicators',
       benefits: ['Health scoring', 'Success metrics', 'Performance tracking', 'ROI measurement']
     },
     {
+
       icon: Rocket,
       title: 'Automated Onboarding & Training',
       description: 'Smart onboarding flows that adapt to customer needs and learning styles',
@@ -118,6 +125,7 @@ export function AICustomerSuccessPlatform() {
 
   const pricingPlans = [
     {
+
       name: 'Starter',
       price: '$299',
       period: '/month',
@@ -135,6 +143,7 @@ export function AICustomerSuccessPlatform() {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$799',
       period: '/month',
@@ -155,6 +164,7 @@ export function AICustomerSuccessPlatform() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$1,999',
       period: '/month',
@@ -178,24 +188,28 @@ export function AICustomerSuccessPlatform() {
 
   const successMetrics = [
     {
+
       title: 'Customer Health Scoring',
       description: 'AI-powered scoring system that tracks customer engagement and satisfaction',
       icon: Heart,
       benefits: ['Real-time scoring', 'Predictive insights', 'Custom metrics', 'Automated alerts']
     },
     {
+
       title: 'Success Playbooks',
       description: 'Automated workflows and best practices for customer success teams',
       icon: BookOpen,
       benefits: ['Template library', 'Custom workflows', 'Automation rules', 'Performance tracking']
     },
     {
+
       title: 'Revenue Expansion',
       description: 'Identify and capitalize on upsell and cross-sell opportunities',
       icon: TrendingUp,
       benefits: ['Opportunity detection', 'Recommendation engine', 'Success tracking', 'ROI measurement']
     },
     {
+
       title: 'Customer Advocacy',
       description: 'Turn satisfied customers into brand advocates and referral sources',
       icon: Star,
@@ -399,6 +413,7 @@ export function AICustomerSuccessPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-gradient-to-br from-cyan-900/20 to-blue-900/20 p-8 rounded-2xl border ${
+
                   plan.popular 
                     ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20' 
                     : 'border-cyan-500/20'
@@ -433,6 +448,7 @@ export function AICustomerSuccessPlatform() {
                 <Link
                   to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                       : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'

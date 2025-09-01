@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Quote, 
   Star, 
   ChevronLeft, 
@@ -13,6 +14,7 @@ import {
 import { ModernCard } from './ui/ModernCard';
 
 interface Testimonial {
+
   id: number;
   name: string;
   position: string;
@@ -26,6 +28,7 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
+
     id: 1,
     name: "Sarah Johnson",
     position: "CTO",
@@ -35,6 +38,7 @@ const testimonials: Testimonial[] = [
     industry: "Technology"
   },
   {
+
     id: 2,
     name: "Michael Chen",
     position: "Director of IT",
@@ -44,6 +48,7 @@ const testimonials: Testimonial[] = [
     industry: "Manufacturing"
   },
   {
+
     id: 3,
     name: "Emily Rodriguez",
     position: "VP of Operations",
@@ -53,6 +58,7 @@ const testimonials: Testimonial[] = [
     industry: "Healthcare"
   },
   {
+
     id: 4,
     name: "David Thompson",
     position: "CEO",
@@ -62,6 +68,7 @@ const testimonials: Testimonial[] = [
     industry: "Financial Services"
   },
   {
+
     id: 5,
     name: "Lisa Wang",
     position: "Head of Digital Transformation",
@@ -82,6 +89,7 @@ const industries = [
 ];
 
 export const ModernTestimonials: React.FC = () => {
+
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -91,9 +99,11 @@ export const ModernTestimonials: React.FC = () => {
     : testimonials.filter(testimonial => testimonial.industry === selectedIndustry);
 
   useEffect(() => {
+
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
+
       setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length);
     }, 5000);
 
@@ -101,16 +111,19 @@ export const ModernTestimonials: React.FC = () => {
   }, [isAutoPlaying, filteredTestimonials.length]);
 
   const nextTestimonial = () => {
+
     setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length);
     setIsAutoPlaying(false);
   };
 
   const prevTestimonial = () => {
+
     setCurrentTestimonial((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length);
     setIsAutoPlaying(false);
   };
 
   const goToTestimonial = (index: number) => {
+
     setCurrentTestimonial(index);
     setIsAutoPlaying(false);
   };
@@ -157,11 +170,13 @@ export const ModernTestimonials: React.FC = () => {
             <button
               key={industry.id}
               onClick={() => {
+
                 setSelectedIndustry(industry.id);
                 setCurrentTestimonial(0);
                 setIsAutoPlaying(true);
               }}
               className={`flex items-center gap-2 px-4 py-2 rounded-full border-2 transition-all duration-300 ${
+
                 selectedIndustry === industry.id
                   ? 'border-zion-cyan bg-zion-cyan/20 text-zion-cyan'
                   : 'border-zion-slate-light/30 text-gray-300 hover:border-zion-cyan/50 hover:text-zion-cyan/70'
@@ -257,6 +272,7 @@ export const ModernTestimonials: React.FC = () => {
                 key={index}
                 onClick={() => goToTestimonial(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
+
                   index === currentTestimonial 
                     ? 'bg-zion-cyan w-8' 
                     : 'bg-gray-600 hover:bg-gray-500'

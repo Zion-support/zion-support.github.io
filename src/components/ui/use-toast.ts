@@ -2,20 +2,6 @@ import { toast                } from 'react-hot-toast.ts'
 
 interface ToastOptions {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 duration?: number;
 position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left";
 
@@ -34,7 +20,9 @@ position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-ce
 }
 
 export function useToast(...args[]: any):  {
+
   const showToast = (message: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, options?: ToastOptions)                => {
+
     return toast(message, options)
   return { showToast };
 };

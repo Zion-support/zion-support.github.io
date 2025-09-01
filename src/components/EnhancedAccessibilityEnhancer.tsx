@@ -1,4 +1,5 @@
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -66,7 +67,9 @@ interface AccessibilitySettings {
 
     // Color blindness simulation
     if (newSettings.colorBlindness !== 'none') {
+
       root.classList.add(`color-blind-${newSettings.colorBlindness}`)} else {
+
       root.classList.remove('color-blind-protanopia',color-blind-deuteranopia',color-blind-tritanopia')}
 
       // Store settings in localStorage
@@ -80,10 +83,8 @@ interface AccessibilitySettings {
   // Load saved settings
   useEffect(() => {
 
-    
     if (savedSettings) {
 
-      
       setSettings(parsedSettings);
       applySettings(parsedSettings)}
   }, [enabled, applySettings]);
@@ -98,10 +99,12 @@ interface AccessibilitySettings {
     document.body.appendChild(announcement);
     
     setTimeout(() => {
+
       document.body.removeChild(announcement)}, 1000)}, [settings.screenReader]);
 
   // Keyboard navigation enhancement
   useEffect(() => {
+
     if (!enabled || !settings.keyboardNavigation) return;
 
     
@@ -141,7 +144,7 @@ interface AccessibilitySettings {
 
   // Enhanced focus management
   useEffect ( () => {
-    
+
       setCurrentFocus (target) ;
 
       if (settings.focusIndicator) {
@@ -181,6 +184,7 @@ interface AccessibilitySettings {
         document.body.appendChild(announcement);
 
         setTimeout(() => {
+
           document.body.removeChild(announcement)}, 1000)}
     },
     [settings.screenReader]

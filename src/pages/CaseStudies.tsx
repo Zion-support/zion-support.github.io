@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default React.memo (function CaseStudies () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   FileText,
@@ -27,8 +29,7 @@ import { motion } from 'framer - motion';
   DollarSign,
   Clock,
   MapPin,
-  Factory,
-} from 'lucide - react';
+  Factory} from 'lucide - react';
 
   const [selectedIndustry, setSelectedIndustry] = useState ('all') ;
   const [selectedService, setSelectedService] = useState ('all') ;
@@ -54,6 +55,7 @@ import { motion } from 'framer - motion';
 
   const caseStudies = [
     {
+
       id: 1,
       title: 'AI - Powered Healthcare Analytics Platform',
       company: 'MedTech Solutions Inc.',
@@ -73,9 +75,9 @@ import { motion } from 'framer - motion';
       teamSize: '8 developers',
       technologies: ['AI / ML', 'Python', 'TensorFlow', 'AWS', 'Healthcare APIs'],
       featured: true,
-      image: '/api / placeholder / 600 / 400',
-    },
+      image: '/api / placeholder / 600 / 400'},
     {
+
       id: 2,
       title: 'Quantum Computing for Financial Risk Modeling',
       company: 'Global Finance Corp.',
@@ -101,9 +103,9 @@ import { motion } from 'framer - motion';
         'Risk Models',
       ],
       featured: true,
-      image: '/api / placeholder / 600 / 400',
-    },
+      image: '/api / placeholder / 600 / 400'},
     {
+
       id: 3,
       title: 'Zero - Trust Security Architecture',
       company: 'SecureNet Bank',
@@ -129,9 +131,9 @@ import { motion } from 'framer - motion';
         'SIEM',
       ],
       featured: false,
-      image: '/api / placeholder / 600 / 400',
-    },
+      image: '/api / placeholder / 600 / 400'},
     {
+
       id: 4,
       title: 'Cloud Migration & DevOps Transformation',
       company: 'TechCorp Manufacturing',
@@ -151,9 +153,9 @@ import { motion } from 'framer - motion';
       teamSize: '15 DevOps engineers',
       technologies: ['AWS', 'Kubernetes', 'Docker', 'Jenkins', 'Terraform'],
       featured: false,
-      image: '/api / placeholder / 600 / 400',
-    },
+      image: '/api / placeholder / 600 / 400'},
     {
+
       id: 5,
       title: 'IoT Edge Computing for Smart Cities',
       company: 'CitySmart Solutions',
@@ -179,28 +181,34 @@ import { motion } from 'framer - motion';
         'Time Series DB',
       ],
       featured: false,
-      image: '/api / placeholder / 600 / 400',
-    },
+      image: '/api / placeholder / 600 / 400'},
   ];
 
   // Calculate counts
   industries.forEach (industry => {
+
     if (industry.id === 'all') {
+
       industry.count = caseStudies.length;
     } else {
+
       industry.count = caseStudies.filter (cs => cs.industry === industry.id) .length;
     }
   }) ;
 
   services.forEach (service => {
+
     if (service.id === 'all') {
+
       service.count = caseStudies.length;
     } else {
+
       service.count = caseStudies.filter (cs => cs.service === service.id) .length;
     }
   }) ;
 
   const filteredCaseStudies = caseStudies.filter (cs => {
+
     const matchesIndustry = selectedIndustry === 'all' || cs.industry === selectedIndustry;
     const matchesService = selectedService === 'all' || cs.service === selectedService;
     const matchesSearch = cs.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||

@@ -6,23 +6,28 @@ import SEO from "@/components/SEO";
 import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function AIContentGenerator() {
+
     const features = [
         {
+
             title: "AI Writing Assistant",
             description: "Generate high-quality content for blogs, social media, and marketing campaigns",
             icon: <PenTool className="h-6 w-6 text-zion-cyan"/>
         },
         {
+
             title: "Multi-Format Support",
             description: "Create content in various formats: text, images, videos, and audio",
             icon: <FileText className="h-6 w-6 text-zion-purple"/>
         },
         {
+
             title: "Brand Voice Consistency",
             description: "Maintain your brand's unique voice across all content pieces",
             icon: <Type className="h-6 w-6 text-zion-blue"/>
         },
         {
+
             title: "SEO Optimization",
             description: "AI-powered SEO suggestions to improve content visibility and ranking",
             icon: <Target className="h-6 w-6 text-zion-cyan"/>
@@ -30,6 +35,7 @@ export default function AIContentGenerator() {
     ];
     const contentTypes = [
         {
+
             import: { SEO }, from, "@/components/SEO": ,
             import: { Button }, from, "@/components/ui/button": ,
             import: { Card, CardContent, CardDescription, CardHeader, CardTitle }, from, "@/components/ui/card": ,
@@ -38,6 +44,7 @@ export default function AIContentGenerator() {
             import: { Link }, from, "react-router-dom": ,
             function: AIContentGenerator()
         }, {
+
             const: features = [
                 "AI-powered content generation for any industry",
                 "SEO-optimized content with keyword research",
@@ -57,26 +64,31 @@ export default function AIContentGenerator() {
             ]
         },
         {
+
             title: "Social Media",
             description: "Posts for all major social platforms",
             icon: <Users className="h-8 w-8 text-zion-purple"/>
         },
         {
+
             title: "Marketing Copy",
             description: "Ads, landing pages, and promotional content",
             icon: <Target className="h-8 w-8 text-zion-blue"/>
         },
         {
+
             title: "Product Descriptions",
             description: "Compelling product and service descriptions",
             icon: <ShoppingBag className="h-8 w-8 text-zion-cyan"/>
         },
         {
+
             title: "Email Campaigns",
             description: "Newsletters and email marketing content",
             icon: <Mail className="h-8 w-8 text-zion-purple"/>
         },
         {
+
             title: "Video Scripts",
             description: "Scripts for video content and presentations",
             icon: <Video className="h-8 w-8 text-zion-blue"/>
@@ -84,6 +96,7 @@ export default function AIContentGenerator() {
     ];
     const pricingPlans = [
         {
+
             name: "Starter",
             price: "$49",
             period: "/month",
@@ -98,6 +111,7 @@ export default function AIContentGenerator() {
             popular: false
         },
         {
+
             name: "Professional",
             price: "$149",
             period: "/month",
@@ -114,22 +128,26 @@ export default function AIContentGenerator() {
             popular: true
         },
         {
+
             name: "Enterprise",
             title: "Blog Content Creation",
             description: "Generate engaging blog posts, articles, and long-form content optimized for SEO and reader engagement.",
             icon: <FileText className="h-8 w-8 text-zion-cyan"/>
         },
         {
+
             title: "Social Media Marketing",
             description: "Create compelling social media posts, captions, and campaigns across all platforms.",
             icon: <Globe className="h-8 w-8 text-zion-purple"/>
         },
         {
+
             title: "Email Marketing",
             description: "Generate personalized email campaigns, newsletters, and automated sequences.",
             icon: <Users className="h-8 w-8 text-zion-cyan"/>
         },
         {
+
             title: "Product Descriptions",
             description: "Create compelling product descriptions, features, and marketing copy.",
             icon: <Zap className="h-8 w-8 text-zion-purple"/>,
@@ -150,18 +168,21 @@ export default function AIContentGenerator() {
     ];
     const testimonials = [
         {
+
             name: "Jennifer Martinez",
             role: "Marketing Director, GrowthBrand",
             content: "Zion's AI Content Generator increased our content output by 300% while maintaining quality. Game-changer!",
             rating: 5
         },
         {
+
             name: "David Kim",
             role: "Content Creator, TechBlog",
             content: "The AI writing assistant is incredibly intuitive. It understands context and generates engaging content.",
             rating: 5
         },
         {
+
             name: "Lisa Thompson",
             role: "CEO, StartupXYZ",
             content: "We've saved countless hours on content creation. The ROI is immediate and substantial.",

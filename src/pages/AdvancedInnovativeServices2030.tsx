@@ -1,13 +1,16 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-import { 
+import {
+
   advancedInnovativeMicroSaasServices2030, 
   advancedITInfrastructureServices2030, 
   advancedAIServices2030 
 } from '../data/advancedInnovativeServices2030';
 
 const AdvancedInnovativeServices2030: React.FC = () => {
+
   const scrollToContact = () => {
+
     document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
   };
 

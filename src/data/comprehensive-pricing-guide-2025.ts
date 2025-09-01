@@ -1,4 +1,5 @@
 export interface PricingTier {
+
     name: string;
     price: string;
     billing: 'monthly' | 'yearly' | 'one-time';
@@ -8,6 +9,7 @@ export interface PricingTier {
 }
 
 export interface ServicePricing {
+
     id: string;
     name: string;
     category: string;
@@ -21,6 +23,7 @@ export interface ServicePricing {
     marketPosition: string;
     competitors: string[];
     contactInfo: {
+
         mobile: string;
         email: string;
         address: string;
@@ -29,6 +32,7 @@ export interface ServicePricing {
 }
 
 const CONTACT = {
+
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -38,12 +42,14 @@ const CONTACT = {
 export const comprehensivePricingGuide2025: ServicePricing[] = [
     // FINANCIAL TECHNOLOGY SERVICES
     {
+
         id: 'ai-powered-invoice-factoring-platform',
         name: 'AI-Powered Invoice Factoring Platform',
         category: 'Fintech',
         description: 'Automated invoice factoring platform with AI credit risk assessment and instant funding approval.',
         pricing: [
             {
+
                 name: 'Starter',
                 price: '$299',
                 billing: 'monthly',
@@ -56,6 +62,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'Professional',
                 price: '$599',
                 billing: 'monthly',
@@ -71,6 +78,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 20% with annual billing'
             },
             {
+
                 name: 'Enterprise',
                 price: 'Custom',
                 billing: 'monthly',
@@ -106,12 +114,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         contactInfo: CONTACT
     },
     {
+
         id: 'crypto-payment-gateway-saas',
         name: 'Crypto Payment Gateway SaaS',
         category: 'Fintech',
         description: 'Enterprise-grade crypto payment gateway with automatic fiat conversion and fraud protection.',
         pricing: [
             {
+
                 name: 'Basic',
                 price: '$199',
                 billing: 'monthly',
@@ -124,6 +134,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'Professional',
                 price: '$399',
                 billing: 'monthly',
@@ -139,6 +150,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 25% with annual billing'
             },
             {
+
                 name: 'Enterprise',
                 price: 'Custom',
                 billing: 'monthly',
@@ -176,12 +188,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 
     // HEALTHCARE TECHNOLOGY SERVICES
     {
+
         id: 'ai-telemedicine-platform',
         name: 'AI Telemedicine Platform',
         category: 'Healthtech',
         description: 'Advanced telemedicine platform with AI symptom analysis and intelligent patient routing.',
         pricing: [
             {
+
                 name: 'Clinic',
                 price: '$399',
                 billing: 'monthly',
@@ -194,6 +208,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'Hospital',
                 price: '$999',
                 billing: 'monthly',
@@ -209,6 +224,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 30% with annual billing'
             },
             {
+
                 name: 'Enterprise',
                 price: 'Custom',
                 billing: 'monthly',
@@ -246,12 +262,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 
     // EDUCATION TECHNOLOGY SERVICES
     {
+
         id: 'ai-personalized-learning-platform',
         name: 'AI Personalized Learning Platform',
         category: 'Edutech',
         description: 'Intelligent learning platform with adaptive algorithms and personalized educational experiences.',
         pricing: [
             {
+
                 name: 'School',
                 price: '$149',
                 billing: 'monthly',
@@ -264,6 +282,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'District',
                 price: '$399',
                 billing: 'monthly',
@@ -279,6 +298,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 25% with annual billing'
             },
             {
+
                 name: 'Enterprise',
                 price: 'Custom',
                 billing: 'monthly',
@@ -316,12 +336,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 
     // MARKETING TECHNOLOGY SERVICES
     {
+
         id: 'ai-content-optimization-engine',
         name: 'AI Content Optimization Engine',
         category: 'Martech',
         description: 'Intelligent content optimization platform with AI-powered suggestions and A/B testing.',
         pricing: [
             {
+
                 name: 'Creator',
                 price: '$179',
                 billing: 'monthly',
@@ -334,6 +356,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'Agency',
                 price: '$399',
                 billing: 'monthly',
@@ -350,6 +373,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 20% with annual billing'
             },
             {
+
                 name: 'Enterprise',
                 price: 'Custom',
                 billing: 'monthly',
@@ -387,12 +411,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 
     // AI SERVICES
     {
+
         id: 'ai-threat-intelligence-platform',
         name: 'AI Threat Intelligence Platform',
         category: 'AI Services',
         description: 'Advanced threat intelligence platform with AI-powered detection and automated response.',
         pricing: [
             {
+
                 name: 'Security Team',
                 price: '$399',
                 billing: 'monthly',
@@ -405,6 +431,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'SOC',
                 price: '$999',
                 billing: 'monthly',
@@ -421,6 +448,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 30% with annual billing'
             },
             {
+
                 name: 'Enterprise',
                 price: 'Custom',
                 billing: 'monthly',
@@ -458,12 +486,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 
     // IT SERVICES
     {
+
         id: 'automated-compliance-monitoring',
         name: 'Automated Compliance Monitoring',
         category: 'IT Services',
         description: 'Intelligent compliance monitoring platform with automated reporting and violation alerts.',
         pricing: [
             {
+
                 name: 'Compliance Team',
                 price: '$299',
                 billing: 'monthly',
@@ -476,6 +506,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'Legal Department',
                 price: '$699',
                 billing: 'monthly',
@@ -492,6 +523,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 25% with annual billing'
             },
             {
+
                 name: 'Enterprise',
                 price: 'Custom',
                 billing: 'monthly',
@@ -529,12 +561,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 
     // MICRO SAAS SERVICES
     {
+
         id: 'ai-project-resource-optimizer',
         name: 'AI Project Resource Optimizer',
         category: 'Micro SaaS',
         description: 'AI-powered project management platform with intelligent resource allocation and optimization.',
         pricing: [
             {
+
                 name: 'Team Lead',
                 price: '$199',
                 billing: 'monthly',
@@ -547,6 +581,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'Project Manager',
                 price: '$399',
                 billing: 'monthly',
@@ -563,6 +598,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 20% with annual billing'
             },
             {
+
                 name: 'Enterprise',
                 price: 'Custom',
                 billing: 'monthly',
@@ -600,12 +636,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 
     // AI Legal Document Automation Platform
     {
+
         id: 'ai-legal-document-automation-platform',
         name: 'AI Legal Document Automation Platform',
         category: 'Legal Technology',
         description: 'Intelligent legal document generation, review, and automation platform with AI-powered contract analysis and compliance checking.',
         pricing: [
             {
+
                 name: 'Starter',
                 price: '$299',
                 billing: 'monthly',
@@ -619,6 +657,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'Professional',
                 price: '$599',
                 billing: 'monthly',
@@ -636,6 +675,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 20% with annual billing'
             },
             {
+
                 name: 'Enterprise',
                 price: 'Custom',
                 billing: 'monthly',
@@ -678,12 +718,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 
     // AI Healthcare Analytics Platform
     {
+
         id: 'ai-healthcare-analytics-platform',
         name: 'AI Healthcare Analytics Platform',
         category: 'Healthcare Technology',
         description: 'Advanced healthcare analytics platform using AI to predict patient outcomes, optimize treatment plans, and improve healthcare delivery.',
         pricing: [
             {
+
                 name: 'Clinical',
                 price: '$499',
                 billing: 'monthly',
@@ -697,6 +739,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'Hospital',
                 price: '$999',
                 billing: 'monthly',
@@ -714,6 +757,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 25% with annual billing'
             },
             {
+
                 name: 'Enterprise',
                 price: 'Custom',
                 billing: 'monthly',
@@ -756,12 +800,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 
     // AI Financial Risk Management Platform
     {
+
         id: 'ai-financial-risk-management-platform',
         name: 'AI Financial Risk Management Platform',
         category: 'Financial Technology',
         description: 'Intelligent financial risk assessment and management platform using AI to predict market risks, credit defaults, and investment opportunities.',
         pricing: [
             {
+
                 name: 'Professional',
                 price: '$399',
                 billing: 'monthly',
@@ -775,6 +821,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'Institutional',
                 price: '$799',
                 billing: 'monthly',
@@ -792,6 +839,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 20% with annual billing'
             },
             {
+
                 name: 'Enterprise',
                 price: 'Custom',
                 billing: 'monthly',
@@ -834,12 +882,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 
     // AI Supply Chain Optimization Platform
     {
+
         id: 'ai-supply-chain-optimization-platform',
         name: 'AI Supply Chain Optimization Platform',
         category: 'Supply Chain',
         description: 'Intelligent supply chain optimization platform using AI to predict demand, optimize inventory, and streamline logistics operations.',
         pricing: [
             {
+
                 name: 'Business',
                 price: '$299',
                 billing: 'monthly',
@@ -853,6 +903,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'Enterprise',
                 price: '$599',
                 billing: 'monthly',
@@ -870,6 +921,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 20% with annual billing'
             },
             {
+
                 name: 'Global',
                 price: 'Custom',
                 billing: 'monthly',
@@ -912,12 +964,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 
     // AI Carbon Footprint Management Platform
     {
+
         id: 'ai-carbon-footprint-management-platform',
         name: 'AI Carbon Footprint Management Platform',
         category: 'Sustainability',
         description: 'Intelligent carbon footprint tracking and management platform using AI to help businesses reduce emissions and achieve sustainability goals.',
         pricing: [
             {
+
                 name: 'Starter',
                 price: '$199',
                 billing: 'monthly',
@@ -931,6 +985,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'Professional',
                 price: '$399',
                 billing: 'monthly',
@@ -948,6 +1003,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 20% with annual billing'
             },
             {
+
                 name: 'Enterprise',
                 price: 'Custom',
                 billing: 'monthly',
@@ -990,12 +1046,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 
     // AI Mental Health Support Platform
     {
+
         id: 'ai-mental-health-support-platform',
         name: 'AI Mental Health Support Platform',
         category: 'Healthcare Technology',
         description: 'Intelligent mental health support platform using AI to provide personalized therapy, mood tracking, and crisis intervention support.',
         pricing: [
             {
+
                 name: 'Individual',
                 price: '$19',
                 billing: 'monthly',
@@ -1009,6 +1067,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'Family',
                 price: '$39',
                 billing: 'monthly',
@@ -1026,6 +1085,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 25% with annual billing'
             },
             {
+
                 name: 'Professional',
                 price: '$99',
                 billing: 'monthly',
@@ -1068,12 +1128,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 
     // AI Smart Home Energy Management Platform
     {
+
         id: 'ai-smart-home-energy-management-platform',
         name: 'AI Smart Home Energy Management Platform',
         category: 'Smart Home',
         description: 'Intelligent smart home energy management platform using AI to optimize energy usage, reduce costs, and improve sustainability.',
         pricing: [
             {
+
                 name: 'Basic',
                 price: '$9',
                 billing: 'monthly',
@@ -1087,6 +1149,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'Premium',
                 price: '$19',
                 billing: 'monthly',
@@ -1104,6 +1167,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 20% with annual billing'
             },
             {
+
                 name: 'Professional',
                 price: '$49',
                 billing: 'monthly',
@@ -1146,12 +1210,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 
     // Quantum Edge Computing Solutions
     {
+
         id: 'quantum-edge-computing-solutions',
         name: 'Quantum Edge Computing Solutions',
         category: 'Quantum Computing',
         description: 'Revolutionary quantum edge computing solutions combining quantum computing with edge computing for ultra-fast, secure, and intelligent processing.',
         pricing: [
             {
+
                 name: 'Research',
                 price: '$999',
                 billing: 'monthly',
@@ -1165,6 +1231,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'Enterprise',
                 price: '$2,499',
                 billing: 'monthly',
@@ -1182,6 +1249,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 25% with annual billing'
             },
             {
+
                 name: 'Government',
                 price: 'Custom',
                 billing: 'monthly',
@@ -1224,12 +1292,14 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 
     // AI Space Technology Platform
     {
+
         id: 'ai-space-technology-platform',
         name: 'AI Space Technology Platform',
         category: 'Space Technology',
         description: 'Intelligent space technology platform using AI to analyze satellite data, optimize space operations, and enable autonomous space missions.',
         pricing: [
             {
+
                 name: 'Satellite',
                 price: '$599',
                 billing: 'monthly',
@@ -1243,6 +1313,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 ]
             },
             {
+
                 name: 'Constellation',
                 price: '$1,299',
                 billing: 'monthly',
@@ -1260,6 +1331,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 savings: 'Save 20% with annual billing'
             },
             {
+
                 name: 'Mission Control',
                 price: 'Custom',
                 billing: 'monthly',

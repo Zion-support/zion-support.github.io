@@ -1,7 +1,9 @@
 import { Link, useSearchParams } from 'react - router - dom';
 import React, { useState, useEffect, useMemo } from 'react';
 export default React.memo (function SearchPage () {
+
 import {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
   Search,
@@ -50,7 +52,7 @@ interface SearchResult {
   tags: string[];
   relevance: number;
   lastUpdated: string;
-  icon: any;
+  icon: unknown;
   featured?: boolean;
 }
 
@@ -66,6 +68,7 @@ interface SearchResult {
   const mockSearchResults: SearchResult[] = [
     // AI Services
     {
+
       id: 'ai - bi',
       title: 'AI Business Intelligence',
       description: 'Advanced AI - powered business intelligence platform that provides real - time insights, predictive analytics, and automated reporting for data - driven decision making.',
@@ -79,6 +82,7 @@ interface SearchResult {
       featured: true
     },
     {
+
       id: 'ai - compliance',
       title: 'AI Compliance Assistant',
       description: 'Automated regulatory compliance solution that helps businesses stay compliant with industry standards and regulations through intelligent monitoring and reporting.',
@@ -91,6 +95,7 @@ interface SearchResult {
       icon: Shield
     },
     {
+
       id: 'ai - sales',
       title: 'AI Sales Copilot',
       description: 'Intelligent sales optimization platform that enhances sales performance through AI - driven insights, lead scoring, and automated follow - up sequences.',
@@ -105,6 +110,7 @@ interface SearchResult {
 
     // Cloud Services
     {
+
       id: 'cloud - devops',
       title: 'Cloud DevOps Platform',
       description: 'Comprehensive cloud DevOps solution that automates infrastructure deployment, scaling, and management across multiple cloud providers.',
@@ -117,6 +123,7 @@ interface SearchResult {
       icon: Cloud
     },
     {
+
       id: 'it - infrastructure',
       title: 'IT Infrastructure Management',
       description: 'Enterprise - grade IT infrastructure solutions including server management, network optimization, and disaster recovery planning.',
@@ -131,6 +138,7 @@ interface SearchResult {
 
     // Security Services
     {
+
       id: 'ai - cybersecurity',
       title: 'AI Cybersecurity Platform',
       description: 'Next - generation cybersecurity solution powered by artificial intelligence for advanced threat detection, prevention, and response.',
@@ -144,6 +152,7 @@ interface SearchResult {
       featured: true
     },
     {
+
       id: 'zero - trust',
       title: 'Zero Trust Network Access',
       description: 'Modern security architecture that implements zero - trust principles for enhanced network security and access control.',
@@ -158,6 +167,7 @@ interface SearchResult {
 
     // Quantum Computing
     {
+
       id: 'quantum - computing',
       title: 'Quantum Computing Solutions',
       description: 'Cutting - edge quantum computing services for optimization problems, cryptography, and scientific simulations.',
@@ -172,6 +182,7 @@ interface SearchResult {
 
     // Blog Posts
     {
+
       id: 'ai - trends - 2024',
       title: 'AI Trends to Watch in 2024',
       description: 'Explore the latest artificial intelligence trends that will shape the technology landscape in 2024 and beyond.',
@@ -184,6 +195,7 @@ interface SearchResult {
       icon: BookOpen
     },
     {
+
       id: 'cloud - migration - guide',
       title: 'Complete Guide to Cloud Migration',
       description: 'A comprehensive guide to migrating your infrastructure to the cloud, including best practices and common pitfalls.',
@@ -198,6 +210,7 @@ interface SearchResult {
 
     // Case Studies
     {
+
       id: 'healthcare - ai - case - study',
       title: 'AI Transformation in Healthcare',
       description: 'How a leading healthcare provider leveraged AI to improve patient outcomes and operational efficiency.',
@@ -223,18 +236,22 @@ interface SearchResult {
   ];
 
   useEffect ( () => {
+
     if (searchQuery) {
+
       performSearch () ;
     }
   }, [searchQuery, selectedFilters, sortBy]) ;
 
   const performSearch = async () => {
+
     setIsSearching (true) ;
 
     // Simulate API call delay
     await new Promise (resolve => setTimeout (resolve, 800) ) ;
 
     let filtered = mockSearchResults.filter (result => {
+
       const matchesQuery = result.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
                           result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
                           result.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ;
@@ -248,7 +265,9 @@ interface SearchResult {
 
     // Sort results
     filtered.sort ( (a, b) => {
+
       switch (sortBy) {
+
         case 'date':
           return new Date (b.lastUpdated) .getTime () - new Date (a.lastUpdated) .getTime () ;
         case 'popularity':
@@ -263,14 +282,18 @@ interface SearchResult {
   };
 
   const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {
+
     setActiveFilters (prev => ({
+
       ...prev,
       [filterType]: prev[filterType].includes (value) ? prev[filterType].filter (v => v !== value) : [...prev[filterType], value]
     }) ) ;
   };
 
   const clearAllFilters = () => {
+
     setActiveFilters ({
+
       type: [],
       category: [],
       location: [],
@@ -281,8 +304,10 @@ interface SearchResult {
 
   // Handle search
   const handleSearch = useCallback ( (e: React.FormEvent) => {
+
     e.preventDefault () ;
     if (searchQuery.trim () ) {
+
       setSearchParams ({ q: searchQuery.trim () }) ;
       setIsSearching (true) ;
       setTimeout ( () => setIsSearching (false) , 1000) ;
@@ -290,10 +315,13 @@ interface SearchResult {
   };
 
   const toggleFilter = (filterId: string) => {
+
     const newFilters = new Set (selectedFilters) ;
     if (newFilters.has (filterId) ) {
+
       newFilters.delete (filterId) ;
     } else {
+
       newFilters.add (filterId) ;
     }
     setSelectedFilters (newFilters) ;
@@ -301,6 +329,7 @@ interface SearchResult {
 
   // Clear all filters
   const clearFilters = () => {
+
     setSelectedCategory ('all') ;
     setSelectedTags ([]) ;
     setSearchQuery ('') ;
@@ -308,7 +337,9 @@ interface SearchResult {
   };
 
   const getResultIcon = (type: string) => {
+
     switch (type) {
+
       case 'service': return Zap;
       case 'page': return FileText;
       case 'blog': return BookOpen;
@@ -319,7 +350,9 @@ interface SearchResult {
   };
 
   const getResultColor = (type: string) => {
+
     switch (type) {
+
       case 'service': return 'from - blue - 500 to - indigo - 500';
       case 'blog': return 'from - green - 500 to - emerald - 500';
       case 'case - study': return 'from - purple - 500 to - pink - 500';
@@ -330,6 +363,7 @@ interface SearchResult {
 
   // Calculate filter counts
   filterOptions.forEach (filter => {
+
     filter.count = mockSearchResults.filter (result =>
       result.category.toLowerCase () .replace (/\s+/g, '-') === filter.id ||
       result.type === filter.id) .length;
@@ -413,6 +447,7 @@ interface SearchResult {
                 {filterOptions.map (filter => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={filter.id}
                     onClick={ () => toggleFilter (filter.id) }
                     className={`w - full flex items - center justify - between p - 3 rounded - lg transition - colors ${
+
                       selectedFilters.has (filter.id) ? 'bg - blue - 50 border border - blue - 200'
                         : 'hover:bg - gray - 50'
                     }`}

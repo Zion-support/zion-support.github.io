@@ -41,7 +41,7 @@ import {
   FileText,
   CreditCard,
   Building,
-  ShoppingCart
+  ShoppingCart,
 } from 'lucide-react';
 
 const AIFraudDetectionPlatform: React.FC = () => {
@@ -50,67 +50,92 @@ const AIFraudDetectionPlatform: React.FC = () => {
   const features = [
     {
       title: 'Real-time Fraud Detection',
-      description: 'AI-powered detection that identifies fraud patterns in milliseconds',
+      description:
+        'AI-powered detection that identifies fraud patterns in milliseconds',
       icon: ShieldCheck,
-      color: 'from-red-500 to-pink-500'
+      color: 'from-red-500 to-pink-500',
     },
     {
       title: 'Machine Learning Models',
-      description: 'Advanced ML algorithms that continuously learn and adapt to new threats',
+      description:
+        'Advanced ML algorithms that continuously learn and adapt to new threats',
       icon: Brain,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-500 to-cyan-500',
     },
     {
       title: 'Behavioral Analysis',
-      description: 'User behavior profiling to detect anomalies and suspicious activities',
+      description:
+        'User behavior profiling to detect anomalies and suspicious activities',
       icon: Activity,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-500 to-emerald-500',
     },
     {
       title: 'Multi-Channel Protection',
       description: 'Protect across web, mobile, API, and offline transactions',
       icon: Shield,
-      color: 'from-purple-500 to-indigo-500'
+      color: 'from-purple-500 to-indigo-500',
     },
     {
       title: 'Risk Scoring Engine',
       description: 'Dynamic risk assessment with real-time scoring updates',
       icon: Gauge,
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-500 to-red-500',
     },
     {
       title: 'Compliance & Reporting',
       description: 'Built-in compliance tools and comprehensive audit trails',
       icon: FileText,
-      color: 'from-teal-500 to-cyan-500'
-    }
+      color: 'from-teal-500 to-cyan-500',
+    },
   ];
 
   const useCases = [
     {
       title: 'Financial Services',
-      description: 'Detect credit card fraud, account takeover, and money laundering',
+      description:
+        'Detect credit card fraud, account takeover, and money laundering',
       icon: CreditCard,
-      examples: ['Credit card fraud', 'Account takeover', 'Money laundering', 'Identity theft']
+      examples: [
+        'Credit card fraud',
+        'Account takeover',
+        'Money laundering',
+        'Identity theft',
+      ],
     },
     {
       title: 'E-commerce',
-      description: 'Prevent fraudulent transactions and protect customer accounts',
+      description:
+        'Prevent fraudulent transactions and protect customer accounts',
       icon: ShoppingCart,
-      examples: ['Payment fraud', 'Account abuse', 'Return fraud', 'Bot attacks']
+      examples: [
+        'Payment fraud',
+        'Account abuse',
+        'Return fraud',
+        'Bot attacks',
+      ],
     },
     {
       title: 'Healthcare',
       description: 'Detect insurance fraud and protect patient data',
       icon: Building,
-      examples: ['Insurance fraud', 'Medical identity theft', 'Billing fraud', 'Data breaches']
+      examples: [
+        'Insurance fraud',
+        'Medical identity theft',
+        'Billing fraud',
+        'Data breaches',
+      ],
     },
     {
       title: 'Insurance',
       description: 'Identify fraudulent claims and prevent abuse',
       icon: Shield,
-      examples: ['Claims fraud', 'Policy abuse', 'Identity fraud', 'Document forgery']
-    }
+      examples: [
+        'Claims fraud',
+        'Policy abuse',
+        'Identity fraud',
+        'Document forgery',
+      ],
+    },
   ];
 
   const pricingPlans = [
@@ -124,9 +149,9 @@ const AIFraudDetectionPlatform: React.FC = () => {
         'Standard alerts',
         'Email support',
         'Basic analytics',
-        'Mobile app access'
+        'Mobile app access',
       ],
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -140,9 +165,9 @@ const AIFraudDetectionPlatform: React.FC = () => {
         'Advanced analytics',
         'Custom dashboards',
         'API access',
-        'Integration support'
+        'Integration support',
       ],
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -156,10 +181,10 @@ const AIFraudDetectionPlatform: React.FC = () => {
         'Custom analytics',
         'White-label solution',
         'On-premise option',
-        'Custom integrations'
+        'Custom integrations',
       ],
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const competitors = [
@@ -169,24 +194,36 @@ const AIFraudDetectionPlatform: React.FC = () => {
       features: ['Basic fraud detection', 'Standard ML', 'Basic reporting'],
       rating: 4.2,
       pros: ['Easy to use', 'Good documentation'],
-      cons: ['Expensive per transaction', 'Limited AI features', 'Basic analytics']
+      cons: [
+        'Expensive per transaction',
+        'Limited AI features',
+        'Basic analytics',
+      ],
     },
     {
       name: 'Signifyd',
       pricing: '$0.15/transaction',
-      features: ['Guaranteed fraud protection', 'Basic ML', 'Standard dashboards'],
+      features: [
+        'Guaranteed fraud protection',
+        'Basic ML',
+        'Standard dashboards',
+      ],
       rating: 4.0,
       pros: ['Fraud guarantee', 'Good support'],
-      cons: ['High cost', 'Limited customization', 'Basic ML models']
+      cons: ['High cost', 'Limited customization', 'Basic ML models'],
     },
     {
       name: 'Zion AI Fraud Detection',
       pricing: '$299/month',
-      features: ['Advanced AI detection', 'Real-time protection', 'Custom ML models'],
+      features: [
+        'Advanced AI detection',
+        'Real-time protection',
+        'Custom ML models',
+      ],
       rating: 4.8,
       pros: ['Advanced AI', 'Cost-effective', 'Customizable'],
-      cons: ['Newer platform', 'Limited enterprise features']
-    }
+      cons: ['Newer platform', 'Limited enterprise features'],
+    },
   ];
 
   return (
@@ -205,17 +242,18 @@ const AIFraudDetectionPlatform: React.FC = () => {
               <Shield className="w-4 h-4 mr-2" />
               AI-Powered Fraud Detection
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Stop Fraud Before
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">
                 It Happens
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Protect your business with AI-powered fraud detection that identifies threats in real-time. 
-              Stop fraudsters before they can cause damage to your bottom line.
+              Protect your business with AI-powered fraud detection that
+              identifies threats in real-time. Stop fraudsters before they can
+              cause damage to your bottom line.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -262,19 +300,21 @@ const AIFraudDetectionPlatform: React.FC = () => {
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {['overview', 'features', 'pricing', 'competitors', 'contact'].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-                  activeTab === tab
-                    ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white shadow-lg shadow-red-500/25'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-                }`}
-              >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </button>
-            ))}
+            {['overview', 'features', 'pricing', 'competitors', 'contact'].map(
+              tab => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                    activeTab === tab
+                      ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white shadow-lg shadow-red-500/25'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                  }`}
+                >
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                </button>
+              )
+            )}
           </div>
         </div>
       </section>
@@ -299,22 +339,34 @@ const AIFraudDetectionPlatform: React.FC = () => {
                     <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <Zap className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">99.9% Detection Rate</h3>
-                    <p className="text-gray-300">Catch fraudsters before they can cause damage</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      99.9% Detection Rate
+                    </h3>
+                    <p className="text-gray-300">
+                      Catch fraudsters before they can cause damage
+                    </p>
                   </div>
                   <div className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <Star className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Real-time Protection</h3>
-                    <p className="text-gray-300">Instant detection and response to threats</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      Real-time Protection
+                    </h3>
+                    <p className="text-gray-300">
+                      Instant detection and response to threats
+                    </p>
                   </div>
                   <div className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <DollarSign className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">90% Cost Reduction</h3>
-                    <p className="text-gray-300">Save money by preventing fraud losses</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      90% Cost Reduction
+                    </h3>
+                    <p className="text-gray-300">
+                      Save money by preventing fraud losses
+                    </p>
                   </div>
                 </div>
               </div>
@@ -337,12 +389,19 @@ const AIFraudDetectionPlatform: React.FC = () => {
                         <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center mr-4">
                           <useCase.icon className="w-6 h-6 text-white" />
                         </div>
-                        <h3 className="text-xl font-semibold text-white">{useCase.title}</h3>
+                        <h3 className="text-xl font-semibold text-white">
+                          {useCase.title}
+                        </h3>
                       </div>
-                      <p className="text-gray-300 mb-4">{useCase.description}</p>
+                      <p className="text-gray-300 mb-4">
+                        {useCase.description}
+                      </p>
                       <div className="space-y-2">
                         {useCase.examples.map((example, idx) => (
-                          <div key={idx} className="flex items-center text-sm text-gray-400">
+                          <div
+                            key={idx}
+                            className="flex items-center text-sm text-gray-400"
+                          >
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {example}
                           </div>
@@ -373,10 +432,14 @@ const AIFraudDetectionPlatform: React.FC = () => {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-red-500/40 transition-all duration-300"
                   >
-                    <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-4`}>
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-4`}
+                    >
                       <feature.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                    <h3 className="text-xl font-semibold text-white mb-3">
+                      {feature.title}
+                    </h3>
                     <p className="text-gray-300">{feature.description}</p>
                   </motion.div>
                 ))}
@@ -401,8 +464,8 @@ const AIFraudDetectionPlatform: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                      plan.popular 
-                        ? 'border-red-500/50 bg-red-500/10' 
+                      plan.popular
+                        ? 'border-red-500/50 bg-red-500/10'
                         : 'border-white/20'
                     }`}
                   >
@@ -413,12 +476,16 @@ const AIFraudDetectionPlatform: React.FC = () => {
                         </span>
                       </div>
                     )}
-                    
+
                     <div className="text-center mb-6">
-                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                      <h3 className="text-2xl font-bold text-white mb-2">
+                        {plan.name}
+                      </h3>
                       <div className="text-4xl font-bold text-white mb-2">
                         ${plan.price}
-                        <span className="text-lg text-gray-400">/{plan.period}</span>
+                        <span className="text-lg text-gray-400">
+                          /{plan.period}
+                        </span>
                       </div>
                     </div>
 
@@ -431,11 +498,13 @@ const AIFraudDetectionPlatform: React.FC = () => {
                       ))}
                     </div>
 
-                    <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white hover:from-red-600 hover:to-pink-600'
-                        : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
-                    }`}>
+                    <button
+                      className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                        plan.popular
+                          ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white hover:from-red-600 hover:to-pink-600'
+                          : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                      }`}
+                    >
                       Get Started
                     </button>
                   </motion.div>
@@ -461,24 +530,31 @@ const AIFraudDetectionPlatform: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`bg-white/10 backdrop-blur-lg rounded-2xl p-6 border ${
-                      competitor.name === 'Zion AI Fraud Detection' 
-                        ? 'border-red-500/50 bg-red-500/10' 
+                      competitor.name === 'Zion AI Fraud Detection'
+                        ? 'border-red-500/50 bg-red-500/10'
                         : 'border-white/20'
                     }`}
                   >
                     <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-xl font-semibold text-white">{competitor.name}</h3>
+                      <h3 className="text-xl font-semibold text-white">
+                        {competitor.name}
+                      </h3>
                       <div className="flex items-center">
                         <Star className="w-5 h-5 text-yellow-400 fill-current mr-1" />
                         <span className="text-white">{competitor.rating}</span>
                       </div>
                     </div>
-                    
-                    <div className="text-2xl font-bold text-red-400 mb-4">{competitor.pricing}</div>
-                    
+
+                    <div className="text-2xl font-bold text-red-400 mb-4">
+                      {competitor.pricing}
+                    </div>
+
                     <div className="space-y-3 mb-6">
                       {competitor.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-gray-300">
+                        <div
+                          key={idx}
+                          className="flex items-center text-sm text-gray-300"
+                        >
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </div>
@@ -487,12 +563,18 @@ const AIFraudDetectionPlatform: React.FC = () => {
 
                     <div className="space-y-2">
                       <div className="text-sm">
-                        <span className="text-green-400 font-medium">Pros:</span>
-                        <div className="text-gray-300 mt-1">{competitor.pros.join(', ')}</div>
+                        <span className="text-green-400 font-medium">
+                          Pros:
+                        </span>
+                        <div className="text-gray-300 mt-1">
+                          {competitor.pros.join(', ')}
+                        </div>
                       </div>
                       <div className="text-sm">
                         <span className="text-red-400 font-medium">Cons:</span>
-                        <div className="text-gray-300 mt-1">{competitor.cons.join(', ')}</div>
+                        <div className="text-gray-300 mt-1">
+                          {competitor.cons.join(', ')}
+                        </div>
                       </div>
                     </div>
                   </motion.div>
@@ -511,11 +593,13 @@ const AIFraudDetectionPlatform: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
                 Ready to Protect Your Business?
               </h2>
-              
+
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">
+                      Contact Information
+                    </h3>
                     <div className="space-y-4">
                       <div className="flex items-center text-gray-300">
                         <Globe className="w-5 h-5 text-red-400 mr-3" />
@@ -535,9 +619,11 @@ const AIFraudDetectionPlatform: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-4">Quick Actions</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">
+                      Quick Actions
+                    </h3>
                     <div className="space-y-3">
                       <button className="w-full py-3 px-6 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-lg font-semibold hover:from-red-600 hover:to-pink-600 transition-all duration-300">
                         Schedule Demo
@@ -570,7 +656,8 @@ const AIFraudDetectionPlatform: React.FC = () => {
               Start Protecting Your Business Today
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses who are already using AI to protect against fraud and secure their operations.
+              Join thousands of businesses who are already using AI to protect
+              against fraud and secure their operations.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button

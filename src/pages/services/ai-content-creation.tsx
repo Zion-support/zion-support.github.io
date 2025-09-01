@@ -2,18 +2,22 @@ import React from 'react.ts';
 import SEO from '../../components/SEO';
 import { motion              } from 'framer-motion.ts';
 import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Sparkles, Zap, Palette, Camera const AIContentCreation: React.FC = (): JSX.Element => {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI Writing Assistant',
       description: 'Generate high-quality content with intelligent assistance'
     },
     {
+
       icon: Image,
       title: 'AI Image Generation',
       description: 'Create stunning visuals from text descriptions'
     },
     {
+
       icon: Video,
       title: 'AI Video Creation',
       description: 'Produce engaging video content automatically';
@@ -27,16 +31,19 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
 
   const contentTypes = [
     {
+
       title: 'Blog Posts & Articles',
       description: 'SEO-optimized content for your website',
       icon: '📝'
     },
     {
+
       title: 'Social Media Content',
       description: 'Engaging posts for all platforms',
       icon: '📱'
     },
     {
+
       title: 'Marketing Materials',
       description: 'Brochures, flyers, and promotional content',
       icon: '📊';
@@ -69,6 +76,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -79,6 +87,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -125,6 +134,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -135,6 +145,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -160,6 +171,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -170,6 +182,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -180,6 +193,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -207,6 +221,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -217,6 +232,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -242,6 +258,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
               <motion.div
                 key={contentType.title}
                 initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
@@ -252,6 +269,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -262,6 +280,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -291,6 +310,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -301,6 +321,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -324,6 +345,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               initial = {
+
   { opacity: 0,
   x: -20 
 
@@ -334,6 +356,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
 
 }}
               whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -359,6 +382,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
 
             <motion.div
               initial = {
+
   { opacity: 0,
   x: 20 
 
@@ -369,6 +393,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
 
 }}
               whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -399,6 +424,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -409,6 +435,7 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

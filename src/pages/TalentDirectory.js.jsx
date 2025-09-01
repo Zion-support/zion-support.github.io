@@ -2,8 +2,10 @@ import React from 'react';
 import SEO from "@/components/SEO";
 import { Search, MapPin, Briefcase, Star } from 'lucide-react';
 const TalentDirectory = () => {
+
     const talents = [
         {
+
             id: 1,
             name: "Sarah Chen",
             role: "Senior AI Engineer",
@@ -15,6 +17,7 @@ const TalentDirectory = () => {
             avatar: "👩‍💻"
         },
         {
+
             id: 2,
             name: "Marcus Rodriguez",
             role: "Cloud Architect",
@@ -26,6 +29,7 @@ const TalentDirectory = () => {
             avatar: "👨‍💻"
         },
         {
+
             id: 3,
             name: "Priya Patel",
             role: "Cybersecurity Specialist",
@@ -37,6 +41,7 @@ const TalentDirectory = () => {
             avatar: "👩‍💻"
         },
         {
+
             id: 4,
             name: "David Kim",
             role: "Data Scientist",
@@ -48,6 +53,7 @@ const TalentDirectory = () => {
             avatar: "👨‍💻"
         },
         {
+
             id: 5,
             name: "Emily Watson",
             role: "Full Stack Developer",
@@ -59,6 +65,7 @@ const TalentDirectory = () => {
             avatar: "👩‍💻"
         },
         {
+
             id: 6,
             name: "Alex Thompson",
             role: "DevOps Engineer",
@@ -88,10 +95,12 @@ const TalentDirectory = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
           <motion.h1 className="text-5xl md:text-6xl font-bold mb-6" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -102,14 +111,17 @@ const TalentDirectory = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl md:text-2xl text-violet-100 max-w-4xl mx-auto leading-relaxed mb-8" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.2 
 
@@ -118,14 +130,17 @@ const TalentDirectory = () => {
             cybersecurity, and more. Find the perfect talent for your next project.
           </motion.p>
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.4 
 
@@ -164,14 +179,17 @@ const TalentDirectory = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {talents.map((talent, index) => (<motion.div key={talent.id} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 

@@ -5,6 +5,7 @@ import { useAnalytics } from "../hooks/useAnalytics";
 
 <<<<<<< HEAD
     const { trackEvent } = useAnalytics ({
+
 =======
 export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
 
@@ -23,6 +24,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     const inputRef = useRef(null);
     // Initialize chatbot
     useEffect ( () => {
+
         if (isOpen && messages.length === 0) {
 
             addBotMessage(welcomeMessage, {
@@ -99,18 +101,23 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         const input = userInput.toLowerCase();
         // Intent recognition'
         if (input.includes('service') || input.includes('offer')) {
+
 "
             return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?"}
         if (input.includes('quote') || input.includes('price') || input.includes('cost')) {
+
 '"
             return "I'd be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate."}
         if (input.includes('contact') || input.includes('phone') || input.includes('email')) {
+
 "
             return "You can reach us at:\n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 https://ziontechgroup.com\n\nWhen would be the best time to call you?"}
         if (input.includes('technology') || input.includes('tech') || input.includes('stack')) {
+
 "
             return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?"}
         if (input.includes('experience') || input.includes('portfolio') || input.includes('work')) {
+
 "
             return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?"}
         // Default response with suggestions'"
@@ -136,6 +143,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         setInputValue('');
         setIsTyping(true);
         try {
+
             // Get AI response
             const response = await simulateAIProcessing (input) ;
             // Add bot response
@@ -157,6 +165,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                 responseLength: response.length
             }) }
         catch (error) {
+
             // Handle error'"
             addBotMessage("I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly.", {
 
@@ -183,14 +192,17 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         trackChatbotInteraction('suggestion_clicked', { suggestion })}, [handleUserInput, trackChatbotInteraction]);
     // Toggle chatbot
     const toggleChatbot = useCallback(() => {
+
         setIsOpen(!isOpen);
         trackChatbotInteraction('chatbot_toggled', { action: !isOpen ? 'opened' : 'closed' })}, [isOpen, trackChatbotInteraction]);
     // Minimize/maximize
     const toggleMinimize = useCallback(() => {
+
         setIsMinimized(!isMinimized);
         trackChatbotInteraction('chatbot_minimized', { action: !isMinimized ? 'minimized' : 'maximized' })}, [isMinimized, trackChatbotInteraction]);
     // Clear conversation
     const clearConversation = useCallback(() => {
+
         setMessages([]);
         // setConversationContext([]); // This line was removed'
         trackChatbotInteraction('conversation_cleared')}, [trackChatbotInteraction]);

@@ -1,6 +1,7 @@
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-import { 
+import {
+
   Heart, 
   Activity, 
   TrendingUp, 
@@ -323,33 +324,40 @@ import {
              } from 'lucide-react.ts';
 
 const AIHealthcareAnalyticsPlatform = () => {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Patient Analytics',
       description: 'Advanced machine learning algorithms analyze patient data for predictive insights'
     },
     {
+
       icon: Heart,
       title: 'Clinical Decision Support',
       description: 'AI-driven recommendations for treatment plans and medication management'
     },
     {
+
       icon: Activity,
       title: 'Real-time Health Monitoring',
       description: 'Continuous monitoring of patient vitals and health indicators'
     },
     {
+
       icon: TrendingUp,
       title: 'Predictive Health Analytics',
       description: 'Forecast patient outcomes and identify at-risk populations'
     },
     {
+
       icon: Shield,
       title: 'HIPAA-Compliant Security',
       description: 'Enterprise-grade security with full HIPAA compliance and data encryption'
     },
     {
+
       icon: BarChart4,
       title: 'Population Health Insights',
       description: 'Comprehensive analytics for population health management and public health'
@@ -365,24 +373,29 @@ const AIHealthcareAnalyticsPlatform = () => {
   ];
   const useCases = [
     {
+
       industry: 'Hospitals & Health Systems',
       description: 'Optimize patient care, reduce readmissions, and improve operational efficiency'
     },
     {
+
       industry: 'Primary Care Practices',
       description: 'Enhance preventive care, manage chronic conditions, and improve patient engagement'
     },
     {
+
       industry: 'Specialty Clinics',
       description: 'Streamline specialty care workflows and improve treatment outcomes'
     },
     {
+
       industry: 'Health Insurance',
       description: 'Risk assessment, fraud detection, and population health management'
     }
   ];
   const pricing = [
     {
+
       plan: 'Starter',
       price: '$2,800/month',
       features: [
@@ -395,6 +408,7 @@ const AIHealthcareAnalyticsPlatform = () => {
       ]
     },
     {
+
       plan: 'Professional',
       price: '$5,500/month',
       features: [
@@ -408,6 +422,7 @@ const AIHealthcareAnalyticsPlatform = () => {
       ]
     },
     {
+
       plan: 'Enterprise',
       price: '$12,000/month',
       features: [
@@ -437,18 +452,22 @@ const AIHealthcareAnalyticsPlatform = () => {
   ];
   const keyMetrics = [
     {
+
       metric: '35%',
       label: 'Patient Outcome Improvement'
     },
     {
+
       metric: '40%',
       label: 'Readmission Rate Reduction'
     },
     {
+
       metric: '30%',
       label: 'Cost Reduction'
     },
     {
+
       metric: '50%',
       label: 'Decision Enhancement'
     }
@@ -692,6 +711,7 @@ const AIHealthcareAnalyticsPlatform = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
+
                   index === 1 
                     ? 'border-pink-500/50 bg-gradient-to-b from-pink-500/10 to-transparent' 
                     : 'border-zion-slate-light/20'

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 export default Documentation;
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -21,10 +22,10 @@ import { SEO } from '../components / SEO';
   Database,
   Cloud,
   Brain,
-  TrendingUp,
-} from 'lucide - react';
+  TrendingUp} from 'lucide - react';
 
 const Documentation: React.FC = () => {
+
   const [searchQuery, setSearchQuery] = useState ('') ;
   const [activeCategory, setActiveCategory] = useState ('all') ;
 
@@ -39,6 +40,7 @@ const Documentation: React.FC = () => {
 
   const documentationItems = [
     {
+
       id: 1,
       title: 'Quick Start Guide',
       description:
@@ -51,9 +53,9 @@ const Documentation: React.FC = () => {
       views: 15420,
       rating: 4.8,
       featured: true,
-      tags: ['quick - start', 'setup', 'beginner'],
-    },
+      tags: ['quick - start', 'setup', 'beginner']},
     {
+
       id: 2,
       title: 'API Authentication',
       description: 'Learn how to authenticate and authorize API requests',
@@ -65,9 +67,9 @@ const Documentation: React.FC = () => {
       views: 12340,
       rating: 4.7,
       featured: true,
-      tags: ['authentication', 'api', 'security'],
-    },
+      tags: ['authentication', 'api', 'security']},
     {
+
       id: 3,
       title: 'Building Your First AI Model',
       description: 'Step - by - step tutorial for creating and deploying AI models',
@@ -79,9 +81,9 @@ const Documentation: React.FC = () => {
       views: 9870,
       rating: 4.6,
       featured: true,
-      tags: ['ai', 'machine - learning', 'tutorial'],
-    },
+      tags: ['ai', 'machine - learning', 'tutorial']},
     {
+
       id: 4,
       title: 'Cloud Deployment Guide',
       description: 'Deploy your applications to cloud infrastructure',
@@ -93,9 +95,9 @@ const Documentation: React.FC = () => {
       views: 7890,
       rating: 4.6,
       featured: false,
-      tags: ['cloud', 'deployment', 'infrastructure'],
-    },
+      tags: ['cloud', 'deployment', 'infrastructure']},
     {
+
       id: 5,
       title: 'Micro - SaaS Platform Setup',
       description: 'Complete guide to setting up a micro - SaaS platform',
@@ -107,9 +109,9 @@ const Documentation: React.FC = () => {
       views: 5670,
       rating: 4.5,
       featured: false,
-      tags: ['micro - saas', 'platform', 'setup'],
-    },
+      tags: ['micro - saas', 'platform', 'setup']},
     {
+
       id: 6,
       title: 'Python SDK Examples',
       description: 'Code examples and best practices for using our Python SDK',
@@ -121,36 +123,37 @@ const Documentation: React.FC = () => {
       views: 5670,
       rating: 4.5,
       featured: false,
-      tags: ['python', 'sdk', 'examples'],
-    },
+      tags: ['python', 'sdk', 'examples']},
   ];
 
   const featuredResources = [
     {
+
       title: 'Zion Tech Group Developer Portal',
       description: 'Access our comprehensive developer resources and tools',
       type: 'portal',
       link: 'https://developers.ziontechgroup.com',
-      featured: true,
-    },
+      featured: true},
     {
+
       title: 'API Playground',
       description: 'Interactive API testing and exploration environment',
       type: 'tool',
       link: '/api - playground',
-      featured: true,
-    },
+      featured: true},
     {
+
       title: 'Community Forum',
       description: 'Connect with other developers and get help',
       type: 'community',
       link: '/community',
-      featured: false,
-    },
+      featured: false},
   ];
 
   const getDifficultyColor = (difficulty: string) => {
+
     switch (difficulty) {
+
       case 'beginner':
         return 'bg - green - 500';
       case 'intermediate':
@@ -163,7 +166,9 @@ const Documentation: React.FC = () => {
   };
 
   const getDifficultyText = (difficulty: string) => {
+
     switch (difficulty) {
+
       case 'beginner':
         return 'Beginner';
       case 'intermediate':
@@ -176,6 +181,7 @@ const Documentation: React.FC = () => {
   };
 
   const filteredItems = documentationItems.filter (item => {
+
     const matchesSearch = item.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       item.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       item.tags.some (tag =>
@@ -188,9 +194,12 @@ const Documentation: React.FC = () => {
 
   // Update counts
   categories.forEach (cat => {
+
     if (cat.id === 'all') {
+
       cat.count = documentationItems.length;
     } else {
+
       cat.count = documentationItems.filter (item => item.category === cat.id) .length;
     }
   }) ;
@@ -250,6 +259,7 @@ const Documentation: React.FC = () => {
                   {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                       onClick={ () => setActiveCategory (category.id) }
                       className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - colors ${
+
                         activeCategory === category.id
                           ? 'bg - blue - 500 text - white'
                           : 'bg - slate - 700 / 50 text - gray - 300 hover:bg - slate - 600 / 50'

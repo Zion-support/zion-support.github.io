@@ -26,6 +26,7 @@ import { ArrowRight,
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface HeroSlide {
+
   title: string;
   subtitle: string;
   description: string;
@@ -67,6 +68,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       ]
     },;
     {
+
 "
       title: "Comprehensive IT Services","
       subtitle: "End-to-end technology solutions for modern businesses","
@@ -84,6 +86,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       ]
     },;
     {
+
 "
       title: "Green IT Solutions","
       subtitle: "Sustainable technology for a better future","
@@ -103,6 +106,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   ];
 
   useEffect(() => {
+
     if (!isAutoPlaying) return;
 
     

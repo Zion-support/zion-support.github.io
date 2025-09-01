@@ -1,4 +1,5 @@
 import { Cpu, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Wifi, TrendingUp, Zap, Target, Clock, Shield, Globe export default function AIIoTEdgeComputing(...args: any[]): any {
+
   const features = [
     'AI-powered edge computing and processing',
     'Real-time IoT device management and monitoring',
@@ -32,16 +33,19 @@ import { Cpu, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Wifi, Tre
 
   const tiers = [
     {
+
       name: 'Edge Starter',
       price: '$499/mo',
       details: ['Up to 100 devices', 'Basic AI processing', 'Standard monitoring', 'Email support']
     },
     {
+
       name: 'Edge Professional',
       price: '$1,299/mo',
       details: ['Up to 1,000 devices', 'Advanced AI features', 'Custom dashboards', 'Priority support']
     },
     {
+
       name: 'Enterprise Edge',
       price: '$3,999/mo',
       details: ['Unlimited devices', 'Full AI suite', 'White-label options', '24/7 support']

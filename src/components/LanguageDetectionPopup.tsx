@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
 import { useTranslation } from 'react-i18next';
 import {
+
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -9,17 +10,18 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogTitle,
-} from '../components/ui/alert-dialog';
+  AlertDialogTitle} from '../components/ui/alert-dialog';
 import { useLanguage, SupportedLanguage, LanguageContextType } from '../context/LanguageContext';
 
 export function LanguageDetectionPopup() {
+
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
   const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType;
   const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null);
 
   useEffect(() => {
+
     const hasVisited = safeStorage.getItem('zion_has_visited');
     if (hasVisited) return;
 
@@ -29,6 +31,7 @@ export function LanguageDetectionPopup() {
     
     const isSupported = supportedLanguages.some(lang => lang.code === browserLang);
     if (isSupported && browserLang !== currentLanguage) {
+
       setDetectedLanguage(browserLang);
       setOpen(true);
     }
@@ -39,6 +42,7 @@ export function LanguageDetectionPopup() {
   const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage;
 
   const handleAccept = async () => {
+
     if (detectedLanguage) { // Ensure detectedLanguage is not null
       await changeLanguage(detectedLanguage);
     }

@@ -53,6 +53,7 @@ const contentSnippets = [
 ];
 
 export function generateRandomBlogPost(): BlogPost {
+
   const topic = topics[Math.floor(Math.random() * topics.length)];
   const adjective = adjectives[Math.floor(Math.random() * topics.length)];
   const noun = nouns[Math.floor(Math.random() * topics.length)];
@@ -61,24 +62,27 @@ export function generateRandomBlogPost(): BlogPost {
   const title = `${adjective} ${noun} for ${topic}`;
   
   return {
+
     id: Math.random().toString(36).substr(2, 9),
     title,
     excerpt: `${contentSnippet} This comprehensive guide explores the latest developments and best practices in ${topic.toLowerCase()}.`,
     content: `${contentSnippet} This comprehensive guide explores the latest developments and best practices in ${topic.toLowerCase()}. We'll dive deep into the fundamentals, examine real-world applications, and provide actionable insights for implementation.`,
     author: {
+
       name: 'Zion Tech Group',
       avatar: '/images/zion-tech-group-logo.png'
     },
     publishedAt: new Date().toISOString(),
     tags: [topic, 'Technology', 'Innovation', 'Guide'],
     image: '/images/blog-placeholder.jpg',
-    readTime: Math.floor(Math.random() * 10) + 5,
-  };
+    readTime: Math.floor(Math.random() * 10) + 5};
 }
 
 export function generateMultipleBlogPosts(count: number): BlogPost[] {
+
   const posts: BlogPost[] = [];
   for (let i = 0; i < count; i++) {
+
     posts.push(generateRandomBlogPost());
   }
   return posts;

@@ -1,38 +1,45 @@
 import React from 'react';
 import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, Lock, Eye, Target } from 'lucide-react';
 const BlockchainWeb3 = () => {
+
     const blockchainServices = [
         {
+
             icon: LinkIcon,
             title: "Smart Contract Development",
             description: "Custom smart contracts for DeFi, NFTs, DAOs, and enterprise blockchain solutions",
             features["Solidity & Rust development", "Security auditing", "Gas optimization", "Multi-chain deployment"]
         },
         {
+
             icon: Shield,
             title: "DeFi Protocol Development",
             description: "Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions",
             features["AMM algorithms", "Liquidity management", "Risk assessment", "Regulatory compliance"]
         },
         {
+
             icon: Users,
             title: "DAO & Governance Systems",
             description: "Decentralized autonomous organizations with voting mechanisms and governance frameworks",
             features["Token-weighted voting", "Proposal management", "Treasury management", "Multi-sig wallets"]
         },
         {
+
             icon: Database,
             title: "NFT Marketplace Development",
             description: "Complete NFT ecosystems with minting, trading, and marketplace functionality",
             features["ERC-721/ERC-1155 standards", "Royalty systems", "Metadata management", "Cross-chain bridges"]
         },
         {
+
             icon: Network,
             title: "Cross-Chain Solutions",
             description: "Interoperability solutions connecting different blockchain networks seamlessly",
             features["Bridge development", "Cross-chain messaging", "Asset transfers", "Liquidity aggregation"]
         },
         {
+
             icon: Lock,
             title: "Enterprise Blockchain",
             description: "Private and consortium blockchain solutions for enterprise applications",
@@ -41,31 +48,37 @@ const BlockchainWeb3 = () => {
     ];
     const web3Technologies = [
         {
+
             name: "Ethereum",
             description: "Smart contracts and DeFi protocols",
             icon: "ETH"
         },
         {
+
             name: "Polygon",
             description: "Scalable Layer 2 solutions",
             icon: "POL"
         },
         {
+
             name: "Solana",
             description: "High-performance blockchain",
             icon: "SOL"
         },
         {
+
             name: "Polkadot",
             description: "Multi-chain interoperability",
             icon: "DOT"
         },
         {
+
             name: "Cosmos",
             description: "Internet of blockchains",
             icon: "ATOM"
         },
         {
+
             name: "Avalanche",
             description: "Fast consensus protocol",
             icon: "AVAX"
@@ -73,31 +86,37 @@ const BlockchainWeb3 = () => {
     ];
     const useCases = [
         {
+
             title: "Financial Services",
             description: "DeFi protocols, payment systems, and asset tokenization",
             icon: TrendingUp
         },
         {
+
             title: "Supply Chain",
             description: "Transparent tracking and verification of goods and materials",
             icon: Network
         },
         {
+
             title: "Digital Identity",
             description: "Self-sovereign identity and verifiable credentials",
             icon: Shield
         },
         {
+
             title: "Gaming & Metaverse",
             description: "NFT gaming, virtual assets, and metaverse infrastructure",
             icon: Users
         },
         {
+
             title: "Healthcare",
             description: "Patient data management and pharmaceutical supply chain",
             icon: Eye
         },
         {
+
             title: "Real Estate",
             description: "Property tokenization and fractional ownership",
             icon: Target

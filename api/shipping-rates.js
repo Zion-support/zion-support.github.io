@@ -15,7 +15,9 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${apiKey}`,
       },
-      body: JSON.stringify({ shipment: { to_address: toAddress, from_address: fromAddress, parcel } }),
+      body: JSON.stringify({
+        shipment: { to_address: toAddress, from_address: fromAddress, parcel },
+      }),
     });
     const data = await response.json();
     if (!response.ok) {

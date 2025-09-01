@@ -76,6 +76,7 @@ const Profile: React.FC = () => {;
   const [error, setError] = useState ('') ;
 
   const [profile, setProfile] = useState < any> ({
+
     firstName: 'John',
     lastName: 'Doe',
     email: 'john.doe@ziontechgroup.com',
@@ -90,6 +91,7 @@ const Profile: React.FC = () => {;
   }) ;
 
   const [notifications, setNotifications] = useState < any> ({
+
     emailNotifications: true,
     pushNotifications: true,
     marketingEmails: false,
@@ -99,6 +101,7 @@ const Profile: React.FC = () => {;
   }) ;
 
   const [security, setSecurity] = useState < any> ({
+
     twoFactorEnabled: true,
     sessionTimeout: 30,
     passwordLastChanged: '2024 - 01 - 15',
@@ -115,6 +118,7 @@ const Profile: React.FC = () => {;
   const [newPassword, setNewPassword] = useState ('') ;
   const [confirmPassword, setConfirmPassword] = useState ('') ;
   const [showPasswords, setShowPasswords] = useState ({
+
     current: false,
     new: false,
     confirm: false
@@ -138,12 +142,15 @@ const Profile: React.FC = () => {;
     setSuccess ('') ;
 
     try {
+
       // Simulate API call
       await new Promise (resolve => setTimeout (resolve, 2000) ) ;
 
       setSuccess ('Profile updated successfully!') ;
       setIsEditing (false) } catch (err) {
+
       setError ('Failed to update profile. Please try again.') } finally {
+
       setIsLoading (false) }
   };
 
@@ -152,9 +159,11 @@ const Profile: React.FC = () => {;
       setError ('Please fill in all password fields') ;
       return}
     if (newPassword.length < 8) {
+
       setError ('New password must be at least 8 characters long') ;
       return}
     if (newPassword !== confirmPassword) {
+
       setError ('New passwords do not match') ;
       return}
 
@@ -163,6 +172,7 @@ const Profile: React.FC = () => {;
     setSuccess ('') ;
 
     try {
+
       // Simulate API call
       await new Promise (resolve => setTimeout (resolve, 2000) ) ;
 
@@ -170,7 +180,9 @@ const Profile: React.FC = () => {;
       setCurrentPassword ('') ;
       setNewPassword ('') ;
       setConfirmPassword ('') } catch (err) {
+
       setError ('Failed to change password. Please try again.') } finally {
+
       setIsLoading (false) }
   };
 
@@ -207,11 +219,13 @@ setNotifications (prev: > ({;
 
   const renderProfileTab = () => (<motion.div
       initial = {
+
   { opacity: 0,
   y: 20
 
 }}
       animate = {
+
   { opacity: 1,
   y: 0
 
@@ -250,16 +264,19 @@ setNotifications (prev: > ({;
           {stats.map ( (stat, index) => (<motion.div
               key={stat.label}
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.1 + index * 0.1
 
@@ -477,33 +494,39 @@ setNotifications (prev: > ({;
           {achievements.map ( (achievement, index) => (<motion.div
               key={achievement.title}
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.1 + index * 0.1
 
 }}
               className={`p - 4 rounded - xl border ${
+
                 achievement.earned
                   ? 'bg - gradient - to - br from - yellow - 500 / 20 to - orange - 500 / 20 border - yellow - 500 / 30'
                   : 'bg - white / 5 border - slate - 600 / 30'
               }`}
 
               <div role="button" className={`flex items - center gap - 3 mb - 3 ${
+
                 achievement.earned ? 'text - yellow - 400' : 'text - slate - 400'
               }`}>
                 {achievement.icon}
                 <h4 className="font - medium">{achievement.title}</h4>
               </div>
               <p className={`text - sm ${
+
                 achievement.earned ? 'text - yellow - 300' : 'text - slate - 400'
               }`}>
                 {achievement.description}
@@ -520,11 +543,13 @@ setNotifications (prev: > ({;
 
   const renderSecurityTab = () => (<motion.div
       initial = {
+
   { opacity: 0,
   y: 20
 
 }}
       animate = {
+
   { opacity: 1,
   y: 0
 
@@ -585,7 +610,9 @@ setNotifications (prev: > ({;
                 <div role="button" className="flex gap - 1 mb - 1">
                   {[1, 2, 3, 4].map ( (level) => (<div role="button" key={level}
                       className = {
+
   `h - 1 flex - 1 rounded - full transition - all duration - 300 ${
+
                         level <= passwordStrength.score
                           ? passwordStrength.color.replace ('text-',
   'bg-') : 'bg - slate - 600 / 30'
@@ -689,6 +716,7 @@ setNotifications (prev: > ({;
           {security.loginHistory.map ( (login, index) => (<div role="button" key={index} className="flex items - center justify - between p - 4 bg - white / 5 rounded - lg border border - slate - 600 / 30">
               <div role="button" className="flex items - center gap - 4">
                 <div role="button" className={`w - 3 h - 3 rounded - full ${
+
                   login.status === 'success' ? 'bg - green - 500' : 'bg - red - 500'
                 }`} />
                 <div>
@@ -697,6 +725,7 @@ setNotifications (prev: > ({;
                 </div>
               </div>
               <span className={`px - 3 py - 1 rounded - full text - xs font - medium ${
+
                 login.status === 'success'
                   ? 'bg - green - 500 / 20 text - green - 400 border border - green - 500 / 30'
                   : 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
@@ -710,11 +739,13 @@ setNotifications (prev: > ({;
 
   const renderNotificationsTab = () => (<motion.div
       initial = {
+
   { opacity: 0,
   y: 20
 
 }}
       animate = {
+
   { opacity: 1,
   y: 0
 
@@ -756,11 +787,13 @@ setNotifications (prev: > ({;
 
   const renderPreferencesTab = () => (<motion.div
       initial = {
+
   { opacity: 0,
   y: 20
 
 }}
       animate = {
+
   { opacity: 1,
   y: 0
 
@@ -848,11 +881,13 @@ setNotifications (prev: > ({;
         {/* Header */}
         <motion.div
           initial = {
+
   { opacity: 0,
   y: 20
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0
 
@@ -867,11 +902,13 @@ setNotifications (prev: > ({;
         {/* Error / Success Messages */}
         {error && (<motion.div
             initial = {
+
   { opacity: 0,
   y: 10
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -884,11 +921,13 @@ setNotifications (prev: > ({;
 
         {success && (<motion.div
             initial = {
+
   { opacity: 0,
   y: 10
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -909,6 +948,7 @@ setNotifications (prev: > ({;
           ].map ( (tab) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={tab.key}
               onClick={ () => setActiveTab (tab.key as) }
               className={`flex items - center gap - 2 px - 6 py - 3 rounded - lg font - medium transition - all duration - 300 ${
+
                 activeTab === tab.key
                   ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white shadow - lg shadow - cyan - 500 / 25'
                   : 'bg - white / 5 text - slate - 300 hover:bg - white / 10 border border - slate - 600 / 30'

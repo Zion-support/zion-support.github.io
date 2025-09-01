@@ -24,6 +24,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     const [showFilters, setShowFilters] = useState(false);
     // Process data based on search, filters, and sorting
     const processedData = useMemo(() => {
+
         let result = [...data];
         // Apply search
         if (searchQuery.trim()) {
@@ -57,6 +58,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                         return value.endsWith(filterValue);
                     case 'regex':
                         try {
+
 <<<<<<<< HEAD:src/components/AdvancedDataTable.js.jsx
 
                             return new RegExp(filterValue,i').test(value)}
@@ -65,6 +67,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                             return new RegExp(filterValue, 'i').test(value);
 
                         catch {
+
                             return false;
 
                     default:
@@ -149,6 +152,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
             const newFilters = prev.filter(f => f.key !== key);
             if (value.trim()) {
+
 <<<<<<<< HEAD:src/components/AdvancedDataTable.js.jsx
 
                 newFilters.push({ key, value, operator })}
@@ -174,6 +178,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         const itemKey = String(item.id || JSON.stringify(item));
         const newSelection = new Set(selectedItems);
         if (checked) {
+
 <<<<<<<< HEAD:src/components/AdvancedDataTable.js.jsx
 
 ========
@@ -181,6 +186,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             newSelection.add(itemKey);
 
         else {
+
             newSelection.delete(itemKey);
 
 =======
@@ -203,6 +209,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             onSelectionChange?.(paginatedData);
 
         else {
+
             setSelectedItems(new Set());
             onSelectionChange?.([]);
 
@@ -216,7 +223,9 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     }, [paginatedData, onSelectionChange]);
     // Export data
     const handleExport = useCallback(() => {
+
         if (onExport) {
+
 <<<<<<<< HEAD:src/components/AdvancedDataTable.js.jsx
 
 ========
@@ -224,6 +233,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             onExport(processedData);
 
         else {
+
             // Default CSV export
             const csvContent = generateCSV(processedData, columns);
             downloadCSV(csvContent, 'table-export.csv');
@@ -268,6 +278,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     const getSortIcon = (key) => {
 
         if (!enableSorting || sortConfig?.key !== key) {
+
 <<<<<<<< HEAD:src/components/AdvancedDataTable.js.jsx
 "
             return <ArrowUpDown className="w-4 h-4 text-gray-400"/>}
@@ -289,6 +300,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
         const value = item[column.key];
         if (column.render) {
+
 <<<<<<<< HEAD:src/components/AdvancedDataTable.js.jsx
 
             return column.render(value, item, index)}'`
@@ -405,6 +417,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                       {column.header}
                     </label>
                     <select onChange = {
+
 <<<<<<<< HEAD:src/components/AdvancedDataTable.js.jsx
 
   (e) => handleFilterChange(column.key, e.target.value,contains')

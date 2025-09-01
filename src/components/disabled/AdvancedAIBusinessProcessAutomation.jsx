@@ -149,6 +149,7 @@ const mockBusinessProcesses = [
     }
 ];
 export function AdvancedAIBusinessProcessAutomation() {
+
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -195,6 +196,7 @@ export function AdvancedAIBusinessProcessAutomation() {
     const getCategoryIcon = (category) => {
 
         switch (category) {
+
 '"
             case 'finance': return <DollarSign className="w-4 h-4"/>;'"
             case 'hr': return <Users className="w-4 h-4"/>;'"
@@ -223,6 +225,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             process.description.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesStatus && matchesSearch});
     if (!isOpen) {
+
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-blue/50 transition-all duration-300 z-50 group">"
         <div className="flex items-center gap-3">"
@@ -234,6 +237,7 @@ export function AdvancedAIBusinessProcessAutomation() {
         </div>
       </button>) }
     if (isMinimized) {
+
 "
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">"
         <div className="flex items-center gap-3 p-3">"

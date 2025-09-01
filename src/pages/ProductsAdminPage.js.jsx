@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AdminLayout from '@/components/admin/AdminLayout';
-import { Table, TableHead, TableHeader, TableRow, TableBody, TableCell, } from '@/components/ui/table';
+import { Table, TableHead, TableHeader, TableRow, TableBody, TableCell} from '@/components/ui/table';
 import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';
 const initialProducts = [
@@ -9,15 +9,17 @@ const initialProducts = [
     { id: 3, name: 'Gamma', category: 'Service', status: 'rejected' },
 ];
 export default function ProductsAdminPage() {
+
     const [search, setSearch] = useState('');
     const [products, setProducts] = useState(initialProducts);
     const filtered = products.filter((p) => p.name.toLowerCase().includes(search.toLowerCase()));
     const toggleApproval = (id) => {
+
         setProducts((prev) => prev.map((p) => p.id === id
             ? {
+
                 ...p,
-                status: p.status === 'approved' ? 'rejected' : 'approved',
-            }
+                status: p.status === 'approved' ? 'rejected' : 'approved'}
             : p))};
     return (<AdminLayout>
       <div className="space-y-4">

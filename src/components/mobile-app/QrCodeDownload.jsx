@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDownload = () => {
+
   const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState('ios');
 
@@ -28,13 +29,14 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
   const handleCopyLink = async (url) => {
 
     try {
+
       await navigator.clipboard.writeText(url);
       setCopied(true);
-      // // // // // // // // console.error('Failed to copy: ', err);
+      // // // // // // // // // // // console.error('Failed to copy: ', err);
     }
       setTimeout(() => setCopied(false), 2000)} catch (err) {
 
-      // console.error('Failed to copy: ', err)}
+      // // // // console.error('Failed to copy: ', err)}
   };
 
   const handleShare = async (platform) => {
@@ -45,12 +47,13 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
     if (navigator.share) {
 
       try {
+
         await navigator.share({
 
           title: 'Zion Mobile App',
           text: text,
           url: url'
-        // // // // // // // // console.error('Error sharing:', err);
+        // // // // // // // // // // // console.error('Error sharing:', err);
       }
     } else {
 
@@ -59,7 +62,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
 
         })} catch (err) {
 
-        // console.error('Error sharing:', err)}
+        // // // // console.error('Error sharing:', err)}
     } else {
 
       // Fallback for browsers that don't support Web Share API

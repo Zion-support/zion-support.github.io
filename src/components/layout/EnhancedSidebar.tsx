@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Menu, 
   X, 
   Home, 
@@ -38,15 +39,18 @@ import {
 } from 'lucide-react';
 
 interface SidebarProps {
+
   isOpen: boolean;
   onClose: () => void;
 }
 
 export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
+
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   const toggleSection = (section: string) => {
+
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -56,6 +60,7 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
 
   const navigationSections = [
     {
+
       id: 'main',
       title: 'Main Navigation',
       items: [
@@ -67,6 +72,7 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
       ]
     },
     {
+
       id: 'ai-services',
       title: 'AI & Machine Learning',
       icon: Brain,
@@ -84,6 +90,7 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
       ]
     },
     {
+
       id: 'cybersecurity',
       title: 'Cybersecurity & Compliance',
       icon: Shield,
@@ -97,6 +104,7 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
       ]
     },
     {
+
       id: 'cloud-infrastructure',
       title: 'Cloud & Infrastructure',
       icon: Cloud,
@@ -110,6 +118,7 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
       ]
     },
     {
+
       id: 'digital-transformation',
       title: 'Digital Transformation',
       icon: Rocket,
@@ -123,6 +132,7 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
       ]
     },
     {
+
       id: 'emerging-tech',
       title: 'Emerging Technologies',
       icon: Zap,
@@ -135,6 +145,7 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
       ]
     },
     {
+
       id: 'micro-saas',
       title: 'Micro SaaS Solutions',
       icon: Settings,
@@ -274,6 +285,7 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
                           <Link
                             to={item.href}
                             className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors ${
+
                               isActive(item.href)
                                 ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
                                 : 'text-gray-400 hover:text-white hover:bg-gray-800'

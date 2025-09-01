@@ -43,7 +43,6 @@ export
 export 
   newItems.forEach(newItem => {
 
-    
     if (existingIndex >= 0 && merged[existingIndex]) {
 
       merged[existingIndex].quantity += newItem.quantity} else {
@@ -77,6 +76,7 @@ export const addToCart = (cart: CartItem[], item: CartItem): CartItem[] => {;
   const existingItem = cart.find(cartItem => cartItem.id === item.id);
 
   if (existingItem) {
+
     return cart.map(cartItem = >;
       cartItem.id === item.id;
         ? { ...cartItem, quantity: cartItem.quantity + item.quantity };
@@ -96,6 +96,7 @@ export const removeFromCart = (cart: CartItem[], itemId: string): CartItem[]  =>
 };
 
 export const updateQuantity = (cart: CartItem[], itemId: string, quantity: number): CartItem[]  => {
+
   if (quantity <= 0) {;
 =======;
 export const removeFromCart = (cart: CartItem[], itemId: string): CartItem[] => {;
@@ -126,13 +127,17 @@ export const getCartKey = (userId: string): string  => {;
 };
 
 export const mergeCartItems = (existingItems: CartItem[], newItems: CartItem[]): CartItem[] => {
+
   const merged = [...existingItems];
 
   newItems.forEach(newItem => {
+
     const existingIndex = merged.findIndex(item => item.id === newItem.id);
     if (existingIndex >= 0 && merged[existingIndex]) {
+
       merged[existingIndex].quantity += newItem.quantity;
     } else {
+
       merged.push(newItem);
 
   });

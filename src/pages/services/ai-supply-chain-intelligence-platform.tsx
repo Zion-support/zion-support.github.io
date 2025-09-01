@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Truck, 
   Package, 
@@ -52,26 +53,31 @@ import {
 } from 'lucide-react';
 
 export default function AISupplyChainIntelligencePlatform() {
+
   const features = [
     {
+
       title: 'Real-Time Supply Chain Visibility',
       description: 'End-to-end visibility across your entire supply chain with real-time tracking and monitoring',
       icon: Eye,
       benefits: ['Live shipment tracking', 'Inventory levels', 'Supplier performance', 'Risk assessment']
     },
     {
+
       title: 'AI-Powered Demand Forecasting',
       description: 'Predictive analytics for accurate demand forecasting and inventory optimization',
       icon: TrendingUp,
       benefits: ['Machine learning models', 'Seasonal patterns', 'Market trends', 'Inventory optimization']
     },
     {
+
       title: 'Intelligent Route Optimization',
       description: 'AI-driven route planning for optimal delivery efficiency and cost reduction',
       icon: Route,
       benefits: ['Dynamic routing', 'Traffic optimization', 'Fuel efficiency', 'Delivery time reduction']
     },
     {
+
       title: 'Risk Management & Compliance',
       description: 'Proactive risk identification and automated compliance monitoring',
       icon: Shield,
@@ -81,6 +87,7 @@ export default function AISupplyChainIntelligencePlatform() {
 
   const pricingPlans = [
     {
+
       name: 'Starter',
       price: '$499/month',
       description: 'Perfect for small businesses and startups',
@@ -96,6 +103,7 @@ export default function AISupplyChainIntelligencePlatform() {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$1,299/month',
       description: 'Ideal for growing companies and mid-market businesses',
@@ -113,6 +121,7 @@ export default function AISupplyChainIntelligencePlatform() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: 'Custom',
       description: 'For large enterprises and global supply chains',
@@ -133,24 +142,28 @@ export default function AISupplyChainIntelligencePlatform() {
 
   const useCases = [
     {
+
       title: 'Manufacturing & Production',
       description: 'Optimize production schedules and manage raw material supply chains efficiently',
       icon: Factory,
       benefits: ['Reduced lead times', 'Better inventory management', 'Cost optimization', 'Quality control']
     },
     {
+
       title: 'E-commerce & Retail',
       description: 'Streamline fulfillment operations and improve customer delivery experiences',
       icon: Package,
       benefits: ['Faster delivery', 'Better inventory accuracy', 'Reduced shipping costs', 'Customer satisfaction']
     },
     {
+
       title: 'Logistics & Transportation',
       description: 'Optimize fleet operations and improve delivery efficiency across all modes of transport',
       icon: Truck,
       benefits: ['Route optimization', 'Fuel efficiency', 'Driver productivity', 'Cost reduction']
     },
     {
+
       title: 'Healthcare & Pharmaceuticals',
       description: 'Ensure critical supply chain resilience for medical supplies and pharmaceuticals',
       icon: Shield,
@@ -160,6 +173,7 @@ export default function AISupplyChainIntelligencePlatform() {
 
   const technicalSpecs = [
     {
+
       category: 'AI & Machine Learning',
       specs: [
         'Deep learning for demand forecasting',
@@ -170,6 +184,7 @@ export default function AISupplyChainIntelligencePlatform() {
       ]
     },
     {
+
       category: 'IoT & Connectivity',
       specs: [
         'Real-time GPS tracking',
@@ -180,6 +195,7 @@ export default function AISupplyChainIntelligencePlatform() {
       ]
     },
     {
+
       category: 'Integration & APIs',
       specs: [
         'ERP system integration',
@@ -193,24 +209,28 @@ export default function AISupplyChainIntelligencePlatform() {
 
   const industrySolutions = [
     {
+
       title: 'Automotive Supply Chain',
       description: 'Manage complex automotive supply chains with just-in-time delivery and quality control',
       icon: Car,
       features: ['Parts tracking', 'Quality assurance', 'Supplier management', 'Cost optimization']
     },
     {
+
       title: 'Food & Beverage',
       description: 'Ensure food safety and freshness with temperature monitoring and traceability',
       icon: Thermometer,
       features: ['Temperature monitoring', 'Traceability', 'Compliance automation', 'Waste reduction']
     },
     {
+
       title: 'Fashion & Apparel',
       description: 'Manage seasonal inventory and fast fashion supply chains efficiently',
       icon: Tag,
       features: ['Seasonal planning', 'Fast fashion optimization', 'Inventory management', 'Trend analysis']
     },
     {
+
       title: 'Electronics & Technology',
       description: 'Handle high-value electronics with security and anti-counterfeiting measures',
       icon: Monitor,
@@ -449,6 +469,7 @@ export default function AISupplyChainIntelligencePlatform() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 rounded-xl p-8 border ${
+
                   plan.popular 
                     ? 'border-blue-500/50 bg-blue-600/10' 
                     : 'border-gray-700 hover:border-blue-500/50'
@@ -480,6 +501,7 @@ export default function AISupplyChainIntelligencePlatform() {
                 <Link
                   to={plan.name === 'Enterprise' ? '/contact' : '/signup'}
                   className={`block w-full text-center px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-600 to-green-600 text-white hover:from-blue-700 hover:to-green-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'

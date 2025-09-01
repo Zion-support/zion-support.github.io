@@ -26,6 +26,7 @@ import {
   Wifi,
   Briefcase} from 'lucide-react';
 export default function RequestQuote() {
+
   const [formData, setFormData] = useState({
 
     firstName: '',
@@ -217,6 +218,7 @@ export default function RequestQuote() {
       setSubmissionStatus('success');
       // Reset form after success
       setTimeout(() => {
+
         setFormData({
 
           firstName: '',

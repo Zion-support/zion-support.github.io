@@ -2,23 +2,28 @@ import React from 'react';
 import SEO from "@/components/SEO";
 import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide-react';
 const Cybersecurity = () => {
+
     const securityFeatures = [
         {
+
             icon: CheckCircle,
             title: "24/7 Monitoring",
             description: "Continuous security monitoring and threat detection"
         },
         {
+
             icon: Zap,
             title: "Real-time Response",
             description: "Instant automated response to security incidents"
         },
         {
+
             icon: Target,
             title: "Proactive Defense",
             description: "Predictive security using AI and machine learning"
         },
         {
+
             icon: BarChart3,
             title: "Comprehensive Reporting",
             description: "Detailed security analytics and compliance reporting"

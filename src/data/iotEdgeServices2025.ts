@@ -1,4 +1,5 @@
 export interface IoTEdgeService {
+
   id: string;
   title: string;
   description: string;
@@ -18,11 +19,13 @@ export interface IoTEdgeService {
   roi: string;
   innovationLevel: string;
   contactInfo: {
+
     phone: string;
     email: string;
     website: string;
   };
   technicalSpecs?: {
+
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
@@ -38,6 +41,7 @@ export interface IoTEdgeService {
 export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [
   // Industrial IoT Platform
   {
+
     id: 'industrial-iot-platform',
     title: 'Industrial IoT Platform',
     description: 'Comprehensive industrial IoT platform that connects, monitors, and optimizes industrial equipment and processes for maximum efficiency.',
@@ -88,11 +92,13 @@ export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [
     roi: '250-400%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['MQTT', 'OPC UA', 'Python', 'React', 'Node.js', 'Kubernetes'],
       integrations: ['SAP', 'Oracle', 'Siemens', 'Rockwell', 'ABB'],
       apiEndpoints: 150,
@@ -107,6 +113,7 @@ export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [
 
   // Smart City Platform
   {
+
     id: 'smart-city-platform',
     title: 'Smart City Platform',
     description: 'Comprehensive smart city platform that integrates IoT sensors, data analytics, and automation to optimize urban infrastructure and services.',
@@ -157,11 +164,13 @@ export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [
     roi: '200-350%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['LoRaWAN', '5G', 'Python', 'React', 'Node.js', 'PostgreSQL'],
       integrations: ['Traffic systems', 'Utility networks', 'Emergency services', 'Public transport'],
       apiEndpoints: 200,
@@ -176,6 +185,7 @@ export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [
 
   // Edge Computing Platform
   {
+
     id: 'edge-computing-platform',
     title: 'Edge Computing Platform',
     description: 'Advanced edge computing platform that processes data locally for real-time applications, reducing latency and bandwidth requirements.',
@@ -226,11 +236,13 @@ export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [
     roi: '180-300%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Kubernetes', 'Docker', 'Python', 'TensorFlow', 'React', 'Node.js'],
       integrations: ['AWS Greengrass', 'Azure IoT Edge', 'Google Edge TPU', 'NVIDIA Jetson'],
       apiEndpoints: 100,
@@ -245,6 +257,7 @@ export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [
 
   // Connected Healthcare Platform
   {
+
     id: 'connected-healthcare-platform',
     title: 'Connected Healthcare Platform',
     description: 'IoT-powered healthcare platform that enables remote patient monitoring, telemedicine, and connected medical devices for improved patient care.',
@@ -295,11 +308,13 @@ export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [
     roi: '200-350%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['HL7 FHIR', 'DICOM', 'Python', 'React', 'Node.js', 'PostgreSQL'],
       integrations: ['Epic', 'Cerner', 'Medical devices', 'Wearables', 'EHR systems'],
       apiEndpoints: 120,
@@ -314,6 +329,7 @@ export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [
 
   // Retail IoT Platform
   {
+
     id: 'retail-iot-platform',
     title: 'Retail IoT Platform',
     description: 'Comprehensive retail IoT platform that optimizes store operations, enhances customer experience, and provides real-time analytics for retail businesses.',
@@ -364,11 +380,13 @@ export const IOT_EDGE_SERVICES_2025: IoTEdgeService[] = [
     roi: '150-300%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Computer Vision', 'Python', 'React', 'Node.js', 'Redis', 'MongoDB'],
       integrations: ['POS systems', 'CRM platforms', 'Inventory systems', 'Payment processors'],
       apiEndpoints: 80,

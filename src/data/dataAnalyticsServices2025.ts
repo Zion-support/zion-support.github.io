@@ -2,6 +2,7 @@ import { ProductListing } from "@/types/listings";
 
 export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [
   {
+
     id: "real-time-data-streaming-platform",
     title: "Real-Time Data Streaming & Analytics Platform",
     description: "High-performance data streaming platform that processes millions of events per second, providing real-time analytics, anomaly detection, and instant insights for time-critical business decisions.",
@@ -20,6 +21,7 @@ export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [
     availability: "5-6 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/real-time-data-streaming",
@@ -32,6 +34,7 @@ export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [
     integrations: ["Apache Kafka", "Apache Spark", "Elasticsearch", "Redis", "PostgreSQL", "MongoDB", "Cloud Platforms"]
   },
   {
+
     id: "ai-powered-data-governance",
     title: "AI-Powered Data Governance & Quality Management Platform",
     description: "Intelligent data governance platform that uses AI to automatically classify data, ensure quality, enforce policies, and maintain compliance with GDPR, CCPA, and other regulatory requirements.",
@@ -50,6 +53,7 @@ export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [
     availability: "4-5 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-data-governance",
@@ -62,6 +66,7 @@ export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [
     integrations: ["Data Warehouses", "Data Lakes", "ETL Tools", "BI Platforms", "CRM Systems", "ERP Systems", "Cloud Storage"]
   },
   {
+
     id: "predictive-analytics-engine",
     title: "Predictive Analytics & Machine Learning Engine",
     description: "Advanced predictive analytics platform that builds, trains, and deploys machine learning models for forecasting, risk assessment, customer behavior prediction, and business optimization.",
@@ -80,6 +85,7 @@ export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [
     availability: "6-7 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/predictive-analytics-engine",
@@ -92,6 +98,7 @@ export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [
     integrations: ["Python", "R", "TensorFlow", "PyTorch", "Scikit-learn", "Jupyter", "Data Sources", "BI Tools"]
   },
   {
+
     id: "data-visualization-studio",
     title: "Interactive Data Visualization & Storytelling Studio",
     description: "Comprehensive data visualization platform that transforms complex data into interactive charts, dashboards, and compelling stories for better understanding and decision-making across organizations.",
@@ -110,6 +117,7 @@ export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/data-visualization-studio",
@@ -122,6 +130,7 @@ export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [
     integrations: ["SQL Databases", "NoSQL Databases", "Cloud Storage", "APIs", "ETL Tools", "CRM Systems", "ERP Systems"]
   },
   {
+
     id: "data-fabric-architecture",
     title: "Data Fabric & Unified Data Architecture Platform",
     description: "Innovative data fabric platform that creates a unified, intelligent data layer across distributed environments, enabling seamless data access, integration, and governance across hybrid and multi-cloud infrastructures.",
@@ -140,6 +149,7 @@ export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/data-fabric-architecture",

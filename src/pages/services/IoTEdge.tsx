@@ -5,38 +5,45 @@ import { motion } from 'framer-motion';
 import { Cpu, Wifi, Database, Shield, Zap, Globe, Server, BarChart3, Settings, Monitor, Activity, Network, Smartphone, Tablet, Laptop, Cloud, Lock, RefreshCw, TrendingUp, AlertTriangle } from 'lucide-react';
 
 export default function IoTEdge() {
+
   const features = [
     {
+
       icon: Cpu,
       title: 'Edge Computing',
       description: 'Process data locally for faster response times and reduced latency',
       color: 'from-blue-500 to-cyan-500'
     },
     {
+
       icon: Wifi,
       title: '5G & IoT Networks',
       description: 'High-speed connectivity for real-time data transmission and device management',
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       icon: Shield,
       title: 'Security First',
       description: 'End-to-end encryption and secure device authentication protocols',
       color: 'from-red-500 to-pink-500'
     },
     {
+
       icon: Database,
       title: 'Data Analytics',
       description: 'Real-time insights and predictive analytics at the edge',
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       icon: Monitor,
       title: 'Remote Monitoring',
       description: '24/7 device monitoring and proactive maintenance alerts',
       color: 'from-yellow-500 to-orange-500'
     },
     {
+
       icon: Zap,
       title: 'Low Power Solutions',
       description: 'Energy-efficient IoT devices for extended battery life',
@@ -46,24 +53,28 @@ export default function IoTEdge() {
 
   const services = [
     {
+
       title: 'IoT Strategy & Consulting',
       description: 'Comprehensive IoT roadmap and implementation strategy',
       price: 'From $3,000',
       features: ['Technology assessment', 'Architecture design', 'Implementation plan', 'ROI analysis']
     },
     {
+
       title: 'Edge Device Development',
       description: 'Custom IoT device design and manufacturing',
       price: 'From $8,000',
       features: ['Hardware design', 'Firmware development', 'Prototyping', 'Testing & validation']
     },
     {
+
       title: 'IoT Platform Development',
       description: 'Scalable IoT platform for device management and data collection',
       price: 'From $15,000',
       features: ['Cloud platform', 'Device management', 'Data visualization', 'API development']
     },
     {
+
       title: 'IoT Integration Services',
       description: 'Seamless integration with existing systems and workflows',
       price: 'From $5,000',

@@ -2,11 +2,32 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star, Users, Award, TrendingUp, Phone, Mail, MapPin, 
-  ArrowRight, Search, Filter, Grid, List, Eye, Heart,
-  Brain, Shield, Rocket, Zap, Globe, Cpu, Target,
-  CheckCircle, Clock, DollarSign, Users as UsersIcon
+import {
+  Star,
+  Users,
+  Award,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Search,
+  Filter,
+  Grid,
+  List,
+  Eye,
+  Heart,
+  Brain,
+  Shield,
+  Rocket,
+  Zap,
+  Globe,
+  Cpu,
+  Target,
+  CheckCircle,
+  Clock,
+  DollarSign,
+  Users as UsersIcon,
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { innovativeNewServices2025 } from '../data/2025-innovative-new-services';
@@ -16,10 +37,13 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
-const allServices = [...innovativeNewServices2025, ...emergingTechBreakthroughs2025];
+const allServices = [
+  ...innovativeNewServices2025,
+  ...emergingTechBreakthroughs2025,
+];
 
 const categories = [
   'All Services',
@@ -31,22 +55,27 @@ const categories = [
   'Metaverse',
   'Healthcare',
   'Edge Computing',
-  'Autonomous Systems'
+  'Autonomous Systems',
 ];
 
 export default function InnovativeNewServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
+  const [sortBy, setSortBy] = useState<
+    'name' | 'price' | 'rating' | 'popularity'
+  >('popularity');
 
   const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    const matchesCategory = selectedCategory === 'All Services' || service.category.includes(selectedCategory);
-    
+    const matchesSearch =
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.category.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const matchesCategory =
+      selectedCategory === 'All Services' ||
+      service.category.includes(selectedCategory);
+
     return matchesSearch && matchesCategory;
   });
 
@@ -55,7 +84,10 @@ export default function InnovativeNewServicesShowcase2025() {
       case 'name':
         return a.name.localeCompare(b.name);
       case 'price':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+        return (
+          parseFloat(a.price.replace(/[^0-9.]/g, '')) -
+          parseFloat(b.price.replace(/[^0-9.]/g, ''))
+        );
       case 'rating':
         return b.rating - a.rating;
       case 'popularity':
@@ -70,9 +102,9 @@ export default function InnovativeNewServicesShowcase2025() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -81,22 +113,40 @@ export default function InnovativeNewServicesShowcase2025() {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5
-      }
-    }
+        duration: 0.5,
+      },
+    },
   };
 
   return (
     <Layout>
       <Head>
         <title>2025 Innovative New Services Showcase | Zion Tech Group</title>
-        <meta name="description" content="Discover our cutting-edge innovative services for 2025. AI, Quantum, Space Tech, Neural Interfaces, and more. Transform your business with next-generation technology." />
-        <meta name="keywords" content="innovative services 2025, AI services, quantum computing, space technology, neural interfaces, blockchain, metaverse, healthcare AI" />
-        <meta property="og:title" content="2025 Innovative New Services Showcase | Zion Tech Group" />
-        <meta property="og:description" content="Discover our cutting-edge innovative services for 2025. Transform your business with next-generation technology." />
-        <meta property="og:url" content="https://ziontechgroup.com/2025-innovative-new-services-showcase" />
+        <meta
+          name="description"
+          content="Discover our cutting-edge innovative services for 2025. AI, Quantum, Space Tech, Neural Interfaces, and more. Transform your business with next-generation technology."
+        />
+        <meta
+          name="keywords"
+          content="innovative services 2025, AI services, quantum computing, space technology, neural interfaces, blockchain, metaverse, healthcare AI"
+        />
+        <meta
+          property="og:title"
+          content="2025 Innovative New Services Showcase | Zion Tech Group"
+        />
+        <meta
+          property="og:description"
+          content="Discover our cutting-edge innovative services for 2025. Transform your business with next-generation technology."
+        />
+        <meta
+          property="og:url"
+          content="https://ziontechgroup.com/2025-innovative-new-services-showcase"
+        />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/2025-innovative-new-services-showcase" />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/2025-innovative-new-services-showcase"
+        />
       </Head>
 
       {/* Hero Section */}
@@ -112,20 +162,27 @@ export default function InnovativeNewServicesShowcase2025() {
               2025 Innovative New Services
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover our revolutionary micro SAAS services, IT solutions, and AI platforms that are transforming industries worldwide
+              Discover our revolutionary micro SAAS services, IT solutions, and
+              AI platforms that are transforming industries worldwide
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
                 <Star className="w-5 h-5 text-yellow-400" />
-                <span className="text-white font-medium">500+ Services Delivered</span>
+                <span className="text-white font-medium">
+                  500+ Services Delivered
+                </span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
                 <Users className="w-5 h-5 text-blue-400" />
-                <span className="text-white font-medium">1000+ Happy Clients</span>
+                <span className="text-white font-medium">
+                  1000+ Happy Clients
+                </span>
               </div>
               <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">
                 <Award className="w-5 h-5 text-green-400" />
-                <span className="text-white font-medium">99.9% Success Rate</span>
+                <span className="text-white font-medium">
+                  99.9% Success Rate
+                </span>
               </div>
             </div>
           </motion.div>
@@ -143,7 +200,7 @@ export default function InnovativeNewServicesShowcase2025() {
                 type="text"
                 placeholder="Search innovative services..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={e => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
@@ -152,11 +209,15 @@ export default function InnovativeNewServicesShowcase2025() {
             <div className="flex items-center space-x-4">
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e => setSelectedCategory(e.target.value)}
                 className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                {categories.map((category) => (
-                  <option key={category} value={category} className="bg-gray-800 text-white">
+                {categories.map(category => (
+                  <option
+                    key={category}
+                    value={category}
+                    className="bg-gray-800 text-white"
+                  >
                     {category}
                   </option>
                 ))}
@@ -167,7 +228,9 @@ export default function InnovativeNewServicesShowcase2025() {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-colors ${
-                    viewMode === 'grid' ? 'bg-blue-500 text-white' : 'text-gray-400 hover:text-white'
+                    viewMode === 'grid'
+                      ? 'bg-blue-500 text-white'
+                      : 'text-gray-400 hover:text-white'
                   }`}
                 >
                   <Grid className="w-5 h-5" />
@@ -175,7 +238,9 @@ export default function InnovativeNewServicesShowcase2025() {
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-colors ${
-                    viewMode === 'list' ? 'bg-blue-500 text-white' : 'text-gray-400 hover:text-white'
+                    viewMode === 'list'
+                      ? 'bg-blue-500 text-white'
+                      : 'text-gray-400 hover:text-white'
                   }`}
                 >
                   <List className="w-5 h-5" />
@@ -185,13 +250,21 @@ export default function InnovativeNewServicesShowcase2025() {
               {/* Sort Options */}
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={e => setSortBy(e.target.value as any)}
                 className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                <option value="popularity" className="bg-gray-800 text-white">Most Popular</option>
-                <option value="rating" className="bg-gray-800 text-white">Highest Rated</option>
-                <option value="price" className="bg-gray-800 text-white">Price: Low to High</option>
-                <option value="name" className="bg-gray-800 text-white">Name A-Z</option>
+                <option value="popularity" className="bg-gray-800 text-white">
+                  Most Popular
+                </option>
+                <option value="rating" className="bg-gray-800 text-white">
+                  Highest Rated
+                </option>
+                <option value="price" className="bg-gray-800 text-white">
+                  Price: Low to High
+                </option>
+                <option value="name" className="bg-gray-800 text-white">
+                  Name A-Z
+                </option>
               </select>
             </div>
           </div>
@@ -205,15 +278,19 @@ export default function InnovativeNewServicesShowcase2025() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+            className={
+              viewMode === 'grid'
+                ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+                : 'space-y-6'
+            }
           >
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
                 className={`group relative ${
-                  viewMode === 'grid' 
-                    ? 'bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105' 
+                  viewMode === 'grid'
+                    ? 'bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105'
                     : 'bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300'
                 }`}
               >
@@ -225,7 +302,9 @@ export default function InnovativeNewServicesShowcase2025() {
                       <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
                         {service.name}
                       </h3>
-                      <p className="text-gray-400 text-sm">{service.category}</p>
+                      <p className="text-gray-400 text-sm">
+                        {service.category}
+                      </p>
                     </div>
                   </div>
                   {service.popular && (
@@ -236,7 +315,9 @@ export default function InnovativeNewServicesShowcase2025() {
                 </div>
 
                 {/* Service Description */}
-                <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
+                <p className="text-gray-300 mb-4 line-clamp-3">
+                  {service.description}
+                </p>
 
                 {/* Service Features */}
                 <div className="mb-6">
@@ -246,7 +327,10 @@ export default function InnovativeNewServicesShowcase2025() {
                   </h4>
                   <div className="grid grid-cols-1 gap-2">
                     {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-400">
+                      <div
+                        key={idx}
+                        className="flex items-center text-sm text-gray-400"
+                      >
                         <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
                         {feature}
                       </div>
@@ -262,11 +346,17 @@ export default function InnovativeNewServicesShowcase2025() {
                 {/* Service Stats */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-400">{service.price}</div>
-                    <div className="text-xs text-gray-400">{service.period}</div>
+                    <div className="text-2xl font-bold text-blue-400">
+                      {service.price}
+                    </div>
+                    <div className="text-xs text-gray-400">
+                      {service.period}
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-green-400">{service.rating}</div>
+                    <div className="text-2xl font-bold text-green-400">
+                      {service.rating}
+                    </div>
                     <div className="text-xs text-gray-400">Rating</div>
                   </div>
                 </div>
@@ -302,8 +392,12 @@ export default function InnovativeNewServicesShowcase2025() {
           {sortedServices.length === 0 && (
             <div className="text-center py-16">
               <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-              <p className="text-gray-400 mb-6">Try adjusting your search criteria or browse all categories</p>
+              <h3 className="text-2xl font-bold text-white mb-2">
+                No services found
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Try adjusting your search criteria or browse all categories
+              </p>
               <button
                 onClick={() => {
                   setSearchTerm('');
@@ -331,7 +425,8 @@ export default function InnovativeNewServicesShowcase2025() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Get in touch with our team to discuss how our innovative services can revolutionize your operations and drive unprecedented growth.
+              Get in touch with our team to discuss how our innovative services
+              can revolutionize your operations and drive unprecedented growth.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="flex flex-col items-center space-y-3">
@@ -392,19 +487,27 @@ export default function InnovativeNewServicesShowcase2025() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">{allServices.length}+</div>
+              <div className="text-4xl font-bold text-blue-400 mb-2">
+                {allServices.length}+
+              </div>
               <div className="text-gray-400">Innovative Services</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+              <div className="text-4xl font-bold text-green-400 mb-2">
+                99.9%
+              </div>
               <div className="text-gray-400">Success Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">
+                24/7
+              </div>
               <div className="text-gray-400">Support Available</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-400 mb-2">500%+</div>
+              <div className="text-4xl font-bold text-orange-400 mb-2">
+                500%+
+              </div>
               <div className="text-gray-400">Average ROI</div>
             </div>
           </motion.div>

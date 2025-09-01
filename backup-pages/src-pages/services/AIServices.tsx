@@ -11,61 +11,67 @@ import {
   ArrowRight,
   CheckCircle,
   Star,
-  Award
+  Award,
 } from 'lucide-react';
 
 const AIServices = () => {
   const aiServices = [
     {
-      title: "AI Quantum Financial Trading",
-      description: "Revolutionary quantum-powered trading algorithms for unprecedented market analysis",
-      path: "/services/AIQuantumFinancialTrading",
+      title: 'AI Quantum Financial Trading',
+      description:
+        'Revolutionary quantum-powered trading algorithms for unprecedented market analysis',
+      path: '/services/AIQuantumFinancialTrading',
       icon: TrendingUp,
       featured: true,
-      tags: ["Quantum Computing", "Financial AI", "Trading"]
+      tags: ['Quantum Computing', 'Financial AI', 'Trading'],
     },
     {
-      title: "AI Business Intelligence",
-      description: "Transform data into actionable insights with advanced AI analytics",
-      path: "/services/ai-business-intelligence",
+      title: 'AI Business Intelligence',
+      description:
+        'Transform data into actionable insights with advanced AI analytics',
+      path: '/services/ai-business-intelligence',
       icon: Database,
-      tags: ["Analytics", "Business Intelligence", "Data Science"]
+      tags: ['Analytics', 'Business Intelligence', 'Data Science'],
     },
     {
-      title: "AI Content Generation",
-      description: "Automated content creation and optimization for marketing and communications",
-      path: "/services/ai-content-generator",
+      title: 'AI Content Generation',
+      description:
+        'Automated content creation and optimization for marketing and communications',
+      path: '/services/ai-content-generator',
       icon: Bot,
-      tags: ["Content AI", "Marketing", "Automation"]
+      tags: ['Content AI', 'Marketing', 'Automation'],
     },
     {
-      title: "AI Cybersecurity Suite",
-      description: "Advanced threat detection and response using machine learning",
-      path: "/services/ai-cybersecurity",
+      title: 'AI Cybersecurity Suite',
+      description:
+        'Advanced threat detection and response using machine learning',
+      path: '/services/ai-cybersecurity',
       icon: Shield,
-      tags: ["Security", "Threat Detection", "ML"]
+      tags: ['Security', 'Threat Detection', 'ML'],
     },
     {
-      title: "AI Healthcare Analytics",
-      description: "Predictive analytics and diagnostic assistance for healthcare providers",
-      path: "/services/ai-healthcare-predictive-analytics",
+      title: 'AI Healthcare Analytics',
+      description:
+        'Predictive analytics and diagnostic assistance for healthcare providers',
+      path: '/services/ai-healthcare-predictive-analytics',
       icon: Award,
-      tags: ["Healthcare", "Predictive Analytics", "Medical AI"]
+      tags: ['Healthcare', 'Predictive Analytics', 'Medical AI'],
     },
     {
-      title: "AI Workflow Automation",
-      description: "Intelligent process automation to streamline business operations",
-      path: "/services/ai-workflow-automation",
+      title: 'AI Workflow Automation',
+      description:
+        'Intelligent process automation to streamline business operations',
+      path: '/services/ai-workflow-automation',
       icon: Zap,
-      tags: ["Automation", "Workflow", "Process Optimization"]
-    }
+      tags: ['Automation', 'Workflow', 'Process Optimization'],
+    },
   ];
 
   const benefits = [
-    { metric: "300%", label: "ROI Improvement" },
-    { metric: "85%", label: "Process Automation" },
-    { metric: "99.9%", label: "Accuracy Rate" },
-    { metric: "24/7", label: "AI Monitoring" }
+    { metric: '300%', label: 'ROI Improvement' },
+    { metric: '85%', label: 'Process Automation' },
+    { metric: '99.9%', label: 'Accuracy Rate' },
+    { metric: '24/7', label: 'AI Monitoring' },
   ];
 
   return (
@@ -84,13 +90,15 @@ const AIServices = () => {
               <h1 className="text-5xl md:text-6xl font-bold">
                 AI & Machine Learning
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                  {' '}Services
+                  {' '}
+                  Services
                 </span>
               </h1>
             </div>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Harness the power of artificial intelligence to transform your business operations, 
-              gain competitive advantages, and unlock new opportunities for growth and innovation.
+              Harness the power of artificial intelligence to transform your
+              business operations, gain competitive advantages, and unlock new
+              opportunities for growth and innovation.
             </p>
           </motion.div>
         </div>
@@ -131,7 +139,8 @@ const AIServices = () => {
           >
             <h2 className="text-4xl font-bold mb-6">Our AI Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI services designed to address your specific business challenges
+              Comprehensive AI services designed to address your specific
+              business challenges
             </p>
           </motion.div>
 
@@ -159,7 +168,7 @@ const AIServices = () => {
                 <service.icon className="w-12 h-12 text-cyan-400 mb-6" />
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {service.tags.map((tag, tagIndex) => (
                     <span
@@ -197,7 +206,7 @@ const AIServices = () => {
               Ready to Transform with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let our AI experts help you identify opportunities and implement 
+              Let our AI experts help you identify opportunities and implement
               solutions that will revolutionize your business operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

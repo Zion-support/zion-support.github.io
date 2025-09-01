@@ -9,8 +9,10 @@ import { <<<<<<< HEAD
 import { SEO              } from '@/components/SEO';
 
 export default function NewServicesShowcase2025(...args: any[]): any {
+
   const newServices = [
     {
+
       name: 'AI Supply Chain Risk Management',
       description: 'Protect your business from supply chain disruptions with AI-driven risk assessment, real-time monitoring, and predictive analytics.',
       features: ['AI-powered risk assessment', 'Real-time disruption alerts', 'Predictive analytics', 'Multi-tier supplier analysis'],
@@ -21,6 +23,7 @@ export default function NewServicesShowcase2025(...args: any[]): any {
       path: '/services/ai-supply-chain-risk-management'
     },
     {
+
       name: 'AI ESG Compliance Platform',
       description: 'Streamline your ESG compliance with AI-driven data collection, automated reporting, and real-time sustainability monitoring.',
       features: ['AI-powered data collection', 'Automated compliance reporting', 'Real-time sustainability tracking', 'Carbon footprint optimization'],
@@ -31,6 +34,7 @@ export default function NewServicesShowcase2025(...args: any[]): any {
       path: '/services/ai-esg-compliance-platform'
     },
     {
+
       name: 'AI Digital Twin Platform',
       description: 'Create intelligent digital replicas of your physical assets with AI-driven monitoring, predictive analytics, and real-time optimization.',
       features: ['AI-powered digital twin creation', 'Real-time IoT integration', 'Predictive maintenance', '3D visualization support'],
@@ -41,6 +45,7 @@ export default function NewServicesShowcase2025(...args: any[]): any {
       path: '/services/ai-digital-twin-platform'
     },
     {
+
       name: 'AI Quantum Computing Platform',
       description: 'Harness the power of quantum computing with AI-driven optimization, hybrid quantum-classical solutions, and breakthrough computational capabilities.',
       features: ['AI-powered quantum optimization', 'Hybrid quantum-classical computing', 'Quantum machine learning', 'Real-time circuit simulation'],
@@ -51,6 +56,7 @@ export default function NewServicesShowcase2025(...args: any[]): any {
       path: '/services/ai-quantum-computing-platform'
     },
     {
+
       name: 'AI Edge Computing Platform',
       description: 'Bring AI processing to the edge with intelligent device management, real-time data processing, and distributed computing capabilities.',
       features: ['AI-powered edge management', 'Real-time data processing', 'Distributed AI deployment', 'Edge-to-cloud synchronization'],
@@ -236,8 +242,11 @@ export default function NewServicesShowcase2025(...args: any[]): any {
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025              } from '../data/innovativeMicroSaasServices2025';
 
 export function NewServicesShowcase2025(...args: any[]): any {
+
   const getIconComponent = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+
     const iconMap: { [key: string]: any } = {
+
       'AI & Content Creation': Brain,
       'AI & Customer Service': Users,
       'AI & Sales': TrendingUp,
@@ -263,6 +272,7 @@ export function NewServicesShowcase2025(...args: any[]): any {
   };
 
   const getGradientColor = (index: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
+
     const gradients = [
       'from-purple-500 to-pink-600',
       'from-blue-500 to-cyan-600',
@@ -330,6 +340,7 @@ export function NewServicesShowcase2025(...args: any[]): any {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {INNOVATIVE_MICRO_SAAS_SERVICES_2025.map((service, index)              => {
+
             const IconComponent = getIconComponent(service.category);
             const gradientColor = getGradientColor(index);
             

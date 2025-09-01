@@ -4,6 +4,7 @@ import { Brain, Database, TrendingUp, Shield, Users, BarChart3, Zap, CheckCircle
 import { SEO } from '@/components/SEO';
 
 const AIEnterpriseResourcePlanning: React.FC = () => {
+
   const features = [
     'AI-powered demand forecasting and inventory optimization',
     'Real-time resource allocation and capacity planning',
@@ -27,6 +28,7 @@ const AIEnterpriseResourcePlanning: React.FC = () => {
 
   const pricing = [
     {
+
       plan: 'Starter',
       price: '$1,299',
       period: 'month',
@@ -34,6 +36,7 @@ const AIEnterpriseResourcePlanning: React.FC = () => {
       popular: false
     },
     {
+
       plan: 'Professional',
       price: '$2,999',
       period: 'month',
@@ -41,6 +44,7 @@ const AIEnterpriseResourcePlanning: React.FC = () => {
       popular: true
     },
     {
+
       plan: 'Enterprise',
       price: '$5,999',
       period: 'month',
@@ -194,6 +198,7 @@ const AIEnterpriseResourcePlanning: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-white rounded-2xl shadow-xl border-2 ${
+
                   plan.popular ? 'border-blue-500 scale-105' : 'border-gray-200'
                 }`}
               >
@@ -224,6 +229,7 @@ const AIEnterpriseResourcePlanning: React.FC = () => {
                   <a
                     href="https://ziontechgroup.com/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-blue-600 text-white hover:bg-blue-700'
                         : 'bg-gray-100 text-gray-900 hover:bg-gray-200'

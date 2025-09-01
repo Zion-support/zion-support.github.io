@@ -2,10 +2,35 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket, Target,
-  Search, Filter, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Lock, Cloud,
-  BarChart3, Settings, Eye, Clock, Heart, Lightbulb, CheckCircle, ChevronDown
+import {
+  Star,
+  TrendingUp,
+  Users,
+  Award,
+  Zap,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Target,
+  Search,
+  Filter,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Cpu,
+  Lock,
+  Cloud,
+  BarChart3,
+  Settings,
+  Eye,
+  Clock,
+  Heart,
+  Lightbulb,
+  CheckCircle,
+  ChevronDown,
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
@@ -16,32 +41,50 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 const heroStats = [
-  { label: 'Cutting-Edge Services', value: '15+', icon: <Star className="w-5 h-5" /> },
-  { label: 'AI-Powered Solutions', value: '100%', icon: <Brain className="w-5 h-5" /> },
-  { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> },
-  { label: 'ROI Average', value: '500%', icon: <TrendingUp className="w-5 h-5" /> }
+  {
+    label: 'Cutting-Edge Services',
+    value: '15+',
+    icon: <Star className="w-5 h-5" />,
+  },
+  {
+    label: 'AI-Powered Solutions',
+    value: '100%',
+    icon: <Brain className="w-5 h-5" />,
+  },
+  {
+    label: 'Success Rate',
+    value: '99.9%',
+    icon: <Award className="w-5 h-5" />,
+  },
+  {
+    label: 'ROI Average',
+    value: '500%',
+    icon: <TrendingUp className="w-5 h-5" />,
+  },
 ];
 
 const serviceCategories = [
   {
     title: 'AI & Machine Learning',
-    description: 'Revolutionary AI services with consciousness and emotional intelligence',
+    description:
+      'Revolutionary AI services with consciousness and emotional intelligence',
     services: cuttingEdgeAIServices2025,
     icon: Brain,
     color: 'from-violet-500 to-purple-600',
-    count: cuttingEdgeAIServices2025.length
+    count: cuttingEdgeAIServices2025.length,
   },
   {
     title: 'IT Infrastructure',
-    description: 'Next-generation infrastructure with quantum computing and edge computing',
+    description:
+      'Next-generation infrastructure with quantum computing and edge computing',
     services: cuttingEdgeITInfrastructure2025,
     icon: Cloud,
     color: 'from-blue-500 to-cyan-600',
-    count: cuttingEdgeITInfrastructure2025.length
+    count: cuttingEdgeITInfrastructure2025.length,
   },
   {
     title: 'Micro SAAS',
@@ -49,14 +92,14 @@ const serviceCategories = [
     services: cuttingEdgeMicroSaas2025,
     icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
-    count: cuttingEdgeMicroSaas2025.length
-  }
+    count: cuttingEdgeMicroSaas2025.length,
+  },
 ];
 
 const allServices = [
   ...cuttingEdgeAIServices2025,
   ...cuttingEdgeITInfrastructure2025,
-  ...cuttingEdgeMicroSaas2025
+  ...cuttingEdgeMicroSaas2025,
 ];
 
 export default function CuttingEdgeServices2025() {
@@ -65,12 +108,14 @@ export default function CuttingEdgeServices2025() {
   const [sortBy, setSortBy] = useState('popular');
 
   const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-    
+    const matchesSearch =
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.category.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const matchesCategory =
+      selectedCategory === 'all' || service.category.includes(selectedCategory);
+
     return matchesSearch && matchesCategory;
   });
 
@@ -79,9 +124,15 @@ export default function CuttingEdgeServices2025() {
       case 'popular':
         return b.popular ? 1 : -1;
       case 'price-low':
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+        return (
+          parseFloat(a.price.replace('$', '').replace(',', '')) -
+          parseFloat(b.price.replace('$', '').replace(',', ''))
+        );
       case 'price-high':
-        return parseFloat(b.price.replace('$', '').replace(',', '')) - parseFloat(a.price.replace('$', '').replace(',', ''));
+        return (
+          parseFloat(b.price.replace('$', '').replace(',', '')) -
+          parseFloat(a.price.replace('$', '').replace(',', ''))
+        );
       case 'rating':
         return b.rating - a.rating;
       default:
@@ -93,11 +144,26 @@ export default function CuttingEdgeServices2025() {
     <Layout>
       <Head>
         <title>Cutting-Edge Services 2025 | Zion Tech Group</title>
-        <meta name="description" content="Discover our revolutionary cutting-edge AI, IT infrastructure, and micro SAAS services for 2025. Transform your business with next-generation technology solutions." />
-        <meta name="keywords" content="AI services, IT infrastructure, micro SAAS, quantum computing, edge computing, blockchain, cybersecurity, Zion Tech Group" />
-        <meta property="og:title" content="Cutting-Edge Services 2025 | Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary technology services for the future. AI, quantum computing, edge computing, and more." />
-        <meta property="og:url" content="https://ziontechgroup.com/cutting-edge-services-2025" />
+        <meta
+          name="description"
+          content="Discover our revolutionary cutting-edge AI, IT infrastructure, and micro SAAS services for 2025. Transform your business with next-generation technology solutions."
+        />
+        <meta
+          name="keywords"
+          content="AI services, IT infrastructure, micro SAAS, quantum computing, edge computing, blockchain, cybersecurity, Zion Tech Group"
+        />
+        <meta
+          property="og:title"
+          content="Cutting-Edge Services 2025 | Zion Tech Group"
+        />
+        <meta
+          property="og:description"
+          content="Revolutionary technology services for the future. AI, quantum computing, edge computing, and more."
+        />
+        <meta
+          property="og:url"
+          content="https://ziontechgroup.com/cutting-edge-services-2025"
+        />
         <meta property="og:type" content="website" />
       </Head>
 
@@ -116,9 +182,11 @@ export default function CuttingEdgeServices2025() {
               </span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionary AI, quantum computing, and next-generation infrastructure solutions that will transform your business and propel you into the future.
+              Revolutionary AI, quantum computing, and next-generation
+              infrastructure solutions that will transform your business and
+              propel you into the future.
             </p>
-            
+
             {/* Hero Stats */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {heroStats.map((stat, index) => (
@@ -132,7 +200,9 @@ export default function CuttingEdgeServices2025() {
                   <div className="flex items-center justify-center mb-3">
                     <div className="text-cyan-400">{stat.icon}</div>
                   </div>
-                  <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+                  <div className="text-3xl font-bold text-white mb-1">
+                    {stat.value}
+                  </div>
                   <div className="text-sm text-gray-300">{stat.label}</div>
                 </motion.div>
               ))}
@@ -140,11 +210,17 @@ export default function CuttingEdgeServices2025() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              <Link
+                href="#services"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
                 Explore Services
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300"
+              >
                 <Phone className="mr-2 w-5 h-5" />
                 Get Started
               </Link>
@@ -166,7 +242,9 @@ export default function CuttingEdgeServices2025() {
               Service Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our cutting-edge services are organized into three revolutionary categories, each designed to transform different aspects of your business.
+              Our cutting-edge services are organized into three revolutionary
+              categories, each designed to transform different aspects of your
+              business.
             </p>
           </motion.div>
 
@@ -179,22 +257,35 @@ export default function CuttingEdgeServices2025() {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="relative group"
               >
-                <div className={`bg-gradient-to-br ${category.color} p-8 rounded-3xl h-full transform transition-all duration-500 group-hover:scale-105`}>
+                <div
+                  className={`bg-gradient-to-br ${category.color} p-8 rounded-3xl h-full transform transition-all duration-500 group-hover:scale-105`}
+                >
                   <div className="flex items-center justify-between mb-6">
-                    <div className="text-4xl">{React.createElement(category.icon, { className: "w-12 h-12 text-white" })}</div>
+                    <div className="text-4xl">
+                      {React.createElement(category.icon, {
+                        className: 'w-12 h-12 text-white',
+                      })}
+                    </div>
                     <div className="bg-white/20 backdrop-blur-lg px-3 py-1 rounded-full text-sm text-white font-semibold">
                       {category.count} Services
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    {category.title}
+                  </h3>
                   <p className="text-white/90 mb-6">{category.description}</p>
                   <div className="space-y-3">
-                    {category.services.slice(0, 3).map((service, serviceIndex) => (
-                      <div key={serviceIndex} className="flex items-center text-white/80">
-                        <CheckCircle className="w-5 h-5 mr-3 text-green-300" />
-                        <span className="text-sm">{service.name}</span>
-                      </div>
-                    ))}
+                    {category.services
+                      .slice(0, 3)
+                      .map((service, serviceIndex) => (
+                        <div
+                          key={serviceIndex}
+                          className="flex items-center text-white/80"
+                        >
+                          <CheckCircle className="w-5 h-5 mr-3 text-green-300" />
+                          <span className="text-sm">{service.name}</span>
+                        </div>
+                      ))}
                   </div>
                   {category.services.length > 3 && (
                     <div className="mt-4 text-white/60 text-sm">
@@ -221,7 +312,9 @@ export default function CuttingEdgeServices2025() {
               All Cutting-Edge Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our complete portfolio of revolutionary services designed to transform your business operations and drive unprecedented growth.
+              Discover our complete portfolio of revolutionary services designed
+              to transform your business operations and drive unprecedented
+              growth.
             </p>
           </motion.div>
 
@@ -234,14 +327,14 @@ export default function CuttingEdgeServices2025() {
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={e => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 />
               </div>
               <div className="flex gap-4">
                 <select
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  onChange={e => setSelectedCategory(e.target.value)}
                   className="px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 >
                   <option value="all">All Categories</option>
@@ -251,7 +344,7 @@ export default function CuttingEdgeServices2025() {
                 </select>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
+                  onChange={e => setSortBy(e.target.value)}
                   className="px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 >
                   <option value="popular">Most Popular</option>
@@ -297,18 +390,25 @@ export default function CuttingEdgeServices2025() {
 
                   {/* Price */}
                   <div className="flex items-baseline mb-6">
-                    <span className="text-3xl font-bold text-white">{service.price}</span>
+                    <span className="text-3xl font-bold text-white">
+                      {service.price}
+                    </span>
                     <span className="text-gray-400 ml-1">{service.period}</span>
                   </div>
 
                   {/* Features */}
                   <div className="space-y-2 mb-6">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />
-                        <span className="line-clamp-1">{feature}</span>
-                      </div>
-                    ))}
+                    {service.features
+                      .slice(0, 4)
+                      .map((feature, featureIndex) => (
+                        <div
+                          key={featureIndex}
+                          className="flex items-center text-gray-300 text-sm"
+                        >
+                          <CheckCircle className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />
+                          <span className="line-clamp-1">{feature}</span>
+                        </div>
+                      ))}
                     {service.features.length > 4 && (
                       <div className="text-gray-500 text-sm">
                         +{service.features.length - 4} more features
@@ -351,9 +451,12 @@ export default function CuttingEdgeServices2025() {
               className="text-center py-20"
             >
               <div className="text-6xl mb-6">🔍</div>
-              <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                No services found
+              </h3>
               <p className="text-gray-400 mb-8">
-                Try adjusting your search terms or filters to find what you're looking for.
+                Try adjusting your search terms or filters to find what you're
+                looking for.
               </p>
               <button
                 onClick={() => {
@@ -382,16 +485,24 @@ export default function CuttingEdgeServices2025() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Our cutting-edge services are designed to propel your business into the future. 
-              Get in touch with our experts to discuss your specific needs and discover how we can help you achieve unprecedented growth.
+              Our cutting-edge services are designed to propel your business
+              into the future. Get in touch with our experts to discuss your
+              specific needs and discover how we can help you achieve
+              unprecedented growth.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
                 <Phone className="mr-2 w-5 h-5" />
                 Contact Us
               </Link>
-              <a href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300"
+              >
                 <Phone className="mr-2 w-5 h-5" />
                 {contactInfo.mobile}
               </a>
@@ -410,7 +521,9 @@ export default function CuttingEdgeServices2025() {
               </div>
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
                 <MapPin className="w-8 h-8 text-pink-400 mx-auto mb-3" />
-                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Address
+                </h3>
                 <p className="text-gray-300 text-sm">{contactInfo.address}</p>
               </div>
             </div>

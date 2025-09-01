@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Scale, 
   Search, 
   FileText, 
@@ -34,38 +35,45 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function AILegalResearchCompliancePlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Legal Research",
       description: "Advanced AI algorithms that analyze millions of legal documents, cases, and regulations to provide instant, accurate legal insights",
       benefits: ["Instant case law analysis", "Regulatory compliance tracking", "Precedent identification"]
     },
     {
+
       icon: Search,
       title: "Intelligent Document Analysis",
       description: "AI-driven document review that identifies key legal issues, risks, and compliance requirements in contracts and legal documents",
       benefits: ["Automated risk assessment", "Compliance gap analysis", "Contract optimization"]
     },
     {
+
       icon: Scale,
       title: "Regulatory Compliance Monitoring",
       description: "Real-time monitoring of regulatory changes across jurisdictions with automated compliance updates and risk alerts",
       benefits: ["Regulatory change tracking", "Compliance automation", "Risk mitigation"]
     },
     {
+
       icon: FileText,
       title: "Legal Document Generation",
       description: "AI-powered document creation with customizable templates, legal clause suggestions, and compliance verification",
       benefits: ["Template library", "Legal clause suggestions", "Compliance verification"]
     },
     {
+
       icon: Shield,
       title: "Risk Assessment & Mitigation",
       description: "Comprehensive risk analysis tools that identify legal and compliance risks with actionable mitigation strategies",
       benefits: ["Risk scoring", "Mitigation strategies", "Compliance monitoring"]
     },
     {
+
       icon: Users,
       title: "Collaborative Legal Workspace",
       description: "Secure, collaborative platform for legal teams to work together on cases, share research, and manage compliance",
@@ -75,6 +83,7 @@ export default function AILegalResearchCompliancePlatform() {
 
   const pricingPlans = [
     {
+
       name: "Professional",
       price: "$399",
       period: "/month",
@@ -92,6 +101,7 @@ export default function AILegalResearchCompliancePlatform() {
       popular: false
     },
     {
+
       name: "Enterprise",
       price: "$899",
       period: "/month",
@@ -110,6 +120,7 @@ export default function AILegalResearchCompliancePlatform() {
       popular: true
     },
     {
+
       name: "Corporate",
       price: "$1,499",
       period: "/month",
@@ -265,6 +276,7 @@ export default function AILegalResearchCompliancePlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-white p-8 rounded-xl shadow-lg border-2 ${
+
                   plan.popular 
                     ? 'border-blue-500 relative' 
                     : 'border-slate-200'
@@ -299,6 +311,7 @@ export default function AILegalResearchCompliancePlatform() {
                 <Link
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-blue-600 hover:bg-blue-700 text-white'
                       : 'bg-slate-100 hover:bg-slate-200 text-slate-900'

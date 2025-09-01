@@ -2,6 +2,7 @@ import { ProductListing } from "@/types/listings";
 
 export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
   {
+
     id: "ai-biotech-drug-discovery",
     title: "AI Biotech Drug Discovery & Molecular Design Platform",
     description: "Revolutionary biotech platform that uses AI to accelerate drug discovery, design novel molecules, and predict drug efficacy for pharmaceutical research and development.",
@@ -20,6 +21,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "10-12 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-biotech-drug-discovery",
@@ -32,6 +34,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     integrations: ["Molecular Modeling Software", "Laboratory Information Systems", "Clinical Trial Platforms", "Drug Databases", "Research Tools"]
   },
   {
+
     id: "ai-quantum-machine-learning",
     title: "AI Quantum Machine Learning & Hybrid Computing Platform",
     description: "Advanced platform that combines quantum computing with machine learning to solve complex optimization problems, accelerate AI training, and enable breakthrough computational capabilities.",
@@ -50,6 +53,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "9-11 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-quantum-ml",
@@ -62,6 +66,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     integrations: ["Quantum Simulators", "ML Frameworks", "Cloud Platforms", "Research Tools", "Optimization Libraries"]
   },
   {
+
     id: "ai-neuromorphic-computing",
     title: "AI Neuromorphic Computing & Brain-Inspired AI Platform",
     description: "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure to create more efficient, adaptive, and intelligent AI systems.",
@@ -80,6 +85,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "8-9 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-neuromorphic",
@@ -92,6 +98,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     integrations: ["Neuromorphic Hardware", "AI Frameworks", "Edge Devices", "IoT Platforms", "Research Tools"]
   },
   {
+
     id: "ai-synthetic-biology",
     title: "AI Synthetic Biology & Genetic Engineering Platform",
     description: "Advanced synthetic biology platform that uses AI to design, simulate, and optimize genetic circuits, organisms, and biological systems for industrial and medical applications.",
@@ -110,6 +117,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "12-14 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-synthetic-biology",
@@ -122,6 +130,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     integrations: ["DNA Synthesis", "Gene Editing Tools", "Laboratory Equipment", "Biological Databases", "Simulation Software"]
   },
   {
+
     id: "ai-fusion-energy-optimization",
     title: "AI Fusion Energy Optimization & Plasma Control Platform",
     description: "Revolutionary fusion energy platform that uses AI to optimize plasma confinement, predict instabilities, and control fusion reactions for clean, sustainable energy generation.",
@@ -140,6 +149,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "14-16 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-fusion-energy",
@@ -152,6 +162,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     integrations: ["Fusion Reactors", "Plasma Diagnostics", "Control Systems", "Energy Grid", "Research Facilities"]
   },
   {
+
     id: "ai-quantum-cryptography",
     title: "AI Quantum Cryptography & Unbreakable Security Platform",
     description: "Advanced quantum cryptography platform that uses quantum mechanics principles to create unbreakable encryption, secure communications, and future-proof security solutions.",
@@ -170,6 +181,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "9-10 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-quantum-cryptography",
@@ -182,6 +194,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     integrations: ["Quantum Networks", "Security Infrastructure", "Communication Systems", "Cloud Platforms", "IoT Devices"]
   },
   {
+
     id: "ai-brain-computer-interface",
     title: "AI Brain-Computer Interface & Neural Control Platform",
     description: "Revolutionary brain-computer interface platform that uses AI to decode brain signals, enable direct neural control of devices, and restore mobility for individuals with disabilities.",
@@ -200,6 +213,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "12-14 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-brain-computer",
@@ -212,6 +226,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     integrations: ["Neural Implants", "EEG Systems", "Medical Devices", "Assistive Technology", "Research Platforms"]
   },
   {
+
     id: "ai-quantum-sensing",
     title: "AI Quantum Sensing & Ultra-Precise Measurement Platform",
     description: "Advanced quantum sensing platform that uses quantum mechanics to achieve unprecedented precision in measurements, enabling breakthroughs in navigation, imaging, and scientific research.",
@@ -230,6 +245,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "7-8 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-quantum-sensing",
@@ -242,6 +258,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     integrations: ["Quantum Sensors", "Measurement Equipment", "Research Tools", "Navigation Systems", "Scientific Instruments"]
   },
   {
+
     id: "ai-quantum-materials",
     title: "AI Quantum Materials & Advanced Material Discovery Platform",
     description: "Revolutionary quantum materials platform that uses AI and quantum computing to discover new materials with extraordinary properties for electronics, energy, and advanced applications.",
@@ -260,6 +277,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "11-13 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-quantum-materials",
@@ -272,6 +290,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     integrations: ["Quantum Simulators", "Material Databases", "Laboratory Equipment", "Research Tools", "Manufacturing Systems"]
   },
   {
+
     id: "ai-quantum-communication",
     title: "AI Quantum Communication & Secure Network Platform",
     description: "Advanced quantum communication platform that enables ultra-secure, unhackable communications using quantum entanglement and AI-optimized network protocols.",
@@ -290,6 +309,7 @@ export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [
     availability: "9-11 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-quantum-communication",

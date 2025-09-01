@@ -73,6 +73,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
     }
     setIsSubmitting(true);
     try {
+
       // Combine date and time'`
       const dateTimeString = `${format(values.date,yyyy-MM-dd')}T${values.time}:00`;
       const scheduledDate = new Date(dateTimeString);
@@ -95,7 +96,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
         description: `Your interview request with ${talent.full_name} has been sent.`});
       onClose();
     } catch (error) {
-      // console.error("Failed to schedule interview:", error);
+
+      // // // // console.error("Failed to schedule interview:", error);
       toast({
 
         title: 'Failed to schedule interview',

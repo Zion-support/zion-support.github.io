@@ -1,8 +1,9 @@
 import { TalentCard } from "@/components/talent/TalentCard";"
 import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
 export function TalentGrid({ talents, isLoading, onTalentClick, isAuthenticated, viewProfile, clearFilters, handleBook, handleMessage }) {
+
 "
-            // // // // // // // // console.log("Book talent:", talent.id);
+            // // // // // // // // // // // console.log("Book talent:", talent.id);
         }
     };
     const handleMessageInternal = (talent) => {
@@ -33,6 +34,7 @@ export function TalentGrid({ talents, isLoading, onTalentClick, isAuthenticated,
 
         return <TalentSkeleton />}
     if (!talents || talents.length === 0) {
+
 "
         return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">"
       <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>"

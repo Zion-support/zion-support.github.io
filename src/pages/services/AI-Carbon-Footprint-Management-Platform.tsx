@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Leaf,
   TrendingDown,
   BarChart3,
@@ -26,38 +27,45 @@ import {
 } from 'lucide-react';
 
 export default function AICarbonFootprintManagementPlatform() {
+
   const features = [
     {
+
       title: 'Real-time Carbon Tracking',
       description: 'Monitor carbon emissions across all business operations in real-time',
       icon: Monitor,
       color: 'from-green-600 to-emerald-600'
     },
     {
+
       title: 'AI-Powered Analytics',
       description: 'Advanced machine learning algorithms for emission prediction and optimization',
       icon: BarChart3,
       color: 'from-blue-600 to-cyan-600'
     },
     {
+
       title: 'Supply Chain Monitoring',
       description: 'Track emissions across your entire supply chain and vendor network',
       icon: Globe,
       color: 'from-purple-600 to-pink-600'
     },
     {
+
       title: 'Automated Reporting',
       description: 'Generate compliance reports for ESG, CDP, and sustainability frameworks',
       icon: Calculator,
       color: 'from-orange-600 to-red-600'
     },
     {
+
       title: 'Carbon Offset Integration',
       description: 'Seamlessly integrate with carbon offset markets and projects',
       icon: Leaf,
       color: 'from-teal-600 to-green-600'
     },
     {
+
       title: 'Sustainability Scoring',
       description: 'AI-driven sustainability scoring and benchmarking against industry peers',
       icon: Award,
@@ -67,6 +75,7 @@ export default function AICarbonFootprintManagementPlatform() {
 
   const pricing = [
     {
+
       plan: 'Starter',
       price: '$199',
       period: '/month',
@@ -82,6 +91,7 @@ export default function AICarbonFootprintManagementPlatform() {
       popular: false
     },
     {
+
       plan: 'Professional',
       price: '$449',
       period: '/month',
@@ -99,6 +109,7 @@ export default function AICarbonFootprintManagementPlatform() {
       popular: true
     },
     {
+
       plan: 'Enterprise',
       price: '$999',
       period: '/month',
@@ -119,21 +130,25 @@ export default function AICarbonFootprintManagementPlatform() {
 
   const benefits = [
     {
+
       icon: Leaf,
       title: 'Environmental Impact',
       description: 'Reduce your carbon footprint and contribute to climate action'
     },
     {
+
       icon: TrendingDown,
       title: 'Cost Reduction',
       description: 'Identify energy inefficiencies and reduce operational costs'
     },
     {
+
       icon: Award,
       title: 'ESG Compliance',
       description: 'Meet regulatory requirements and investor expectations'
     },
     {
+
       icon: Users,
       title: 'Stakeholder Trust',
       description: 'Build trust with customers, investors, and employees'
@@ -142,24 +157,28 @@ export default function AICarbonFootprintManagementPlatform() {
 
   const useCases = [
     {
+
       title: 'Manufacturing',
       description: 'Track emissions from production processes, energy consumption, and waste management',
       icon: Target,
       color: 'from-blue-600 to-cyan-600'
     },
     {
+
       title: 'Logistics & Transportation',
       description: 'Monitor fleet emissions, route optimization, and fuel efficiency',
       icon: Globe,
       color: 'from-green-600 to-emerald-600'
     },
     {
+
       title: 'Retail & E-commerce',
       description: 'Track store operations, packaging, and last-mile delivery emissions',
       icon: ShoppingCart,
       color: 'from-purple-600 to-pink-600'
     },
     {
+
       title: 'Technology & Data Centers',
       description: 'Monitor energy consumption, cooling systems, and renewable energy usage',
       icon: Cloud,
@@ -353,6 +372,7 @@ export default function AICarbonFootprintManagementPlatform() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${
+
                   plan.popular 
                     ? 'border-green-500 bg-gray-800/70 scale-105' 
                     : 'border-gray-700 hover:border-green-500/50'
@@ -388,6 +408,7 @@ export default function AICarbonFootprintManagementPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'
                       : 'border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white'

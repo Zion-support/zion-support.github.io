@@ -29,6 +29,7 @@ import { Users,
               } from 'lucide-react.ts';
 
 export default function AICustomerExperiencePlatform(...args[]: any):  {
+
   const features = [
     'AI-powered sentiment analysis and emotion detection',
     'Real-time customer journey mapping and optimization',;
@@ -41,12 +42,14 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
   ];
   const services = [
     {
+
       title: 'Customer Experience Assessment',
       description: 'Comprehensive analysis of current customer journey and experience optimization opportunities',
       price: 'From $4,500',
       features['Journey mapping', 'Pain point identification', 'Optimization strategy', 'ROI analysis']
     },
     {
+
       title: 'AI Platform Implementation',
       description: 'Full implementation of AI-powered customer experience platform',
       price: 'From $12,000',
@@ -180,10 +183,12 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -203,14 +208,17 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 }}
@@ -230,10 +238,12 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -253,14 +263,17 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 }}
@@ -286,10 +299,12 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -309,14 +324,17 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 }}
@@ -341,10 +359,12 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
@@ -364,14 +384,17 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 }}

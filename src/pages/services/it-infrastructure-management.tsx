@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Server, 
   Shield, 
   Cloud, 
@@ -27,38 +28,45 @@ import {
 import { SEO } from '@/components/SEO';
 
 const ITInfrastructureManagement: React.FC = () => {
+
   const features = [
     {
+
       icon: Server,
       title: 'Server Management',
       description: 'Comprehensive server administration including monitoring, maintenance, and optimization',
       benefits: ['24/7 monitoring', 'Performance optimization', 'Capacity planning', 'Automated maintenance']
     },
     {
+
       icon: Network,
       title: 'Network Infrastructure',
       description: 'End-to-end network management with advanced security and performance monitoring',
       benefits: ['Network design', 'Traffic optimization', 'Security hardening', 'Disaster recovery']
     },
     {
+
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Multi-cloud management and optimization across AWS, Azure, and Google Cloud',
       benefits: ['Cloud migration', 'Cost optimization', 'Multi-cloud strategy', 'Auto-scaling']
     },
     {
+
       icon: Shield,
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with SOC 2 Type II compliance and threat detection',
       benefits: ['Vulnerability management', 'Compliance reporting', 'Incident response', 'Security audits']
     },
     {
+
       icon: Monitor,
       title: '24/7 Monitoring',
       description: 'Round-the-clock infrastructure monitoring with proactive alerting and response',
       benefits: ['Real-time alerts', 'Performance metrics', 'Uptime tracking', 'Predictive maintenance']
     },
     {
+
       icon: RefreshCw,
       title: 'Disaster Recovery',
       description: 'Comprehensive backup and recovery solutions with minimal downtime',
@@ -68,6 +76,7 @@ const ITInfrastructureManagement: React.FC = () => {
 
   const pricingTiers = [
     {
+
       name: 'Basic',
       price: '$3,500',
       period: '/month',
@@ -84,6 +93,7 @@ const ITInfrastructureManagement: React.FC = () => {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$9,500',
       period: '/month',
@@ -102,6 +112,7 @@ const ITInfrastructureManagement: React.FC = () => {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$18,500',
       period: '/month',
@@ -124,21 +135,25 @@ const ITInfrastructureManagement: React.FC = () => {
 
   const benefits = [
     {
+
       icon: TrendingUp,
       title: '99.9% Uptime',
       description: 'Guaranteed high availability with proactive monitoring and maintenance'
     },
     {
+
       icon: Clock,
       title: '40+ Hours Saved Per Week',
       description: 'Time savings for IT teams through automated management and monitoring'
     },
     {
+
       icon: Shield,
       title: 'Enhanced Security',
       description: 'Enterprise-grade security with continuous threat monitoring and response'
     },
     {
+
       icon: Zap,
       title: 'Improved Performance',
       description: 'Optimized infrastructure performance through continuous monitoring and tuning'
@@ -147,18 +162,22 @@ const ITInfrastructureManagement: React.FC = () => {
 
   const services = [
     {
+
       category: 'Infrastructure Management',
       items: ['Server administration', 'Network management', 'Storage optimization', 'Virtualization management']
     },
     {
+
       category: 'Security & Compliance',
       items: ['Security monitoring', 'Vulnerability management', 'Compliance reporting', 'Incident response']
     },
     {
+
       category: 'Monitoring & Alerting',
       items: ['Performance monitoring', 'Real-time alerts', 'Capacity planning', 'Predictive maintenance']
     },
     {
+
       category: 'Backup & Recovery',
       items: ['Automated backups', 'Disaster recovery', 'Business continuity', 'Testing & validation']
     }
@@ -428,6 +447,7 @@ const ITInfrastructureManagement: React.FC = () => {
                 <motion.div
                   key={tier.name}
                   className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                     tier.popular 
                       ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
                       : 'border-gray-700/50'
@@ -466,6 +486,7 @@ const ITInfrastructureManagement: React.FC = () => {
                   
                   <motion.button
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       tier.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                         : 'bg-gray-700 text-white hover:bg-gray-600'

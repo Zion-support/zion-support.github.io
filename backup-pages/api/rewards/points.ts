@@ -26,12 +26,19 @@ if (!supabaseUrl || !supabaseServiceKey) {
 const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
 
 // Helper function to get user from token (example, actual implementation might vary)
-async function getUserIdFromRequest(req: Req, supabase: SupabaseClient): Promise<string | null> {
+async function getUserIdFromRequest(
+  req: Req,
+  supabase: SupabaseClient
+): Promise<string | null> {
   const authHeader = req.headers?.authorization;
 
   let token: string | null = null;
 
-  if (authHeader && typeof authHeader === 'string' && authHeader.startsWith('Bearer ')) {
+  if (
+    authHeader &&
+    typeof authHeader === 'string' &&
+    authHeader.startsWith('Bearer ')
+  ) {
     token = authHeader.split(' ')[1];
   } else if (Array.isArray(authHeader) && authHeader.length > 0) {
     // Handle case where authHeader is an array, e.g., pick the first one
@@ -42,7 +49,10 @@ async function getUserIdFromRequest(req: Req, supabase: SupabaseClient): Promise
   }
 
   if (token) {
-    const { data: { user }, error } = await supabase.auth.getUser(token);
+    const {
+      data: { user },
+      error,
+    } = await supabase.auth.getUser(token);
     if (error || !user) {
       console.warn('Failed to get user from token:', error?.message);
       return null;
@@ -54,10 +64,11 @@ async function getUserIdFromRequest(req: Req, supabase: SupabaseClient): Promise
   // For example, if using Supabase SSR with cookies:
   // const { data: { session }, error: sessionError } = await supabase.auth.getSession();
   // if (session?.user) return session.user.id;
-  console.warn('No valid string Authorization header found or session not available for points API.');
+  console.warn(
+    'No valid string Authorization header found or session not available for points API.'
+  );
   return null;
 }
-
 
 export default async function handler(req: Req, res: Res) {
   if (req.method !== 'GET') {
@@ -90,12 +101,15 @@ export default async function handler(req: Req, res: Res) {
       throw error;
     }
 
-    const balance = data ? data.reduce((sum, entry) => sum + entry.delta, 0) : 0;
+    const balance = data
+      ? data.reduce((sum, entry) => sum + entry.delta, 0)
+      : 0;
 
     res.status(200).json({ points: balance });
-
   } catch (err: any) {
     console.error('API error fetching points:', err);
-    res.status(500).json({ error: 'Failed to fetch points', details: err.message });
+    res
+      .status(500)
+      .json({ error: 'Failed to fetch points', details: err.message });
   }
 }

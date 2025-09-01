@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   BarChart3, 
   Users, 
   Eye, 
@@ -25,6 +26,7 @@ import {
 import { LineChart, Line, AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 interface AnalyticsData {
+
   pageViews: number;
   uniqueVisitors: number;
   bounceRate: number;
@@ -38,16 +40,19 @@ interface AnalyticsData {
 }
 
 interface AnalyticsDashboardProps {
+
   showPanel?: boolean;
   autoRefresh?: boolean;
   refreshInterval?: number;
 }
 
 export function AnalyticsDashboard({
+
   showPanel = true,
   autoRefresh = true,
-  refreshInterval = 30000
+  refreshInterval = 30000;
 }: AnalyticsDashboardProps) {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [timeRange, setTimeRange] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
@@ -55,6 +60,7 @@ export function AnalyticsDashboard({
   const [lastUpdate, setLastUpdate] = useState<Date>(new Date());
 
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
+
     pageViews: 0,
     uniqueVisitors: 0,
     bounceRate: 0,
@@ -69,8 +75,10 @@ export function AnalyticsDashboard({
 
   // Mock data generation for demonstration
   const generateMockData = useCallback(() => {
+
     const now = new Date();
     const mockData: AnalyticsData = {
+
       pageViews: Math.floor(Math.random() * 10000) + 5000,
       uniqueVisitors: Math.floor(Math.random() * 3000) + 1500,
       bounceRate: Math.random() * 0.4 + 0.3, // 30-70%
@@ -101,10 +109,12 @@ export function AnalyticsDashboard({
         { country: 'Australia', visitors: Math.floor(Math.random() * 400) + 200, change: Math.random() * 40 - 20 }
       ],
       hourlyTraffic: Array.from({ length: 24 }, (_, i) => ({
+
         hour: i,
         visitors: Math.floor(Math.random() * 200) + 50
       })),
       weeklyTrends: Array.from({ length: 7 }, (_, i) => ({
+
         week: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'][i],
         visitors: Math.floor(Math.random() * 1000) + 500,
         pageViews: Math.floor(Math.random() * 3000) + 1500
@@ -116,21 +126,26 @@ export function AnalyticsDashboard({
 
   // Load analytics data
   const loadAnalyticsData = useCallback(async () => {
+
     setIsLoading(true);
     try {
+
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       generateMockData();
       setLastUpdate(new Date());
     } catch (error) {
-      console.error('Failed to load analytics data:', error);
+
+      // // // console.error('Failed to load analytics data:', error);
     } finally {
+
       setIsLoading(false);
     }
   }, [generateMockData]);
 
   // Auto-refresh data
   useEffect(() => {
+
     if (!autoRefresh) return;
 
     const intervalId = setInterval(loadAnalyticsData, refreshInterval);
@@ -139,11 +154,13 @@ export function AnalyticsDashboard({
 
   // Initial data load
   useEffect(() => {
+
     loadAnalyticsData();
   }, [loadAnalyticsData]);
 
   // Format numbers with appropriate units
   const formatNumber = (num: number): string => {
+
     if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;
     if (num >= 1000) return `${(num / 1000).toFixed(1)}K`;
     return num.toString();
@@ -151,11 +168,13 @@ export function AnalyticsDashboard({
 
   // Format percentage
   const formatPercentage = (num: number): string => {
+
     return `${(num * 100).toFixed(1)}%`;
   };
 
   // Format duration
   const formatDuration = (seconds: number): string => {
+
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60);
     return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
@@ -163,9 +182,12 @@ export function AnalyticsDashboard({
 
   // Get change indicator
   const getChangeIndicator = (change: number) => {
+
     if (change > 0) {
+
       return <TrendingUp className="w-4 h-4 text-green-500" />;
     } else if (change < 0) {
+
       return <TrendingDown className="w-4 h-4 text-red-500" />;
     }
     return null;
@@ -233,6 +255,7 @@ export function AnalyticsDashboard({
                       key={range}
                       onClick={() => setTimeRange(range)}
                       className={`px-3 py-1 text-xs rounded-lg transition-colors ${
+
                         timeRange === range
                           ? 'bg-zion-cyan text-zion-slate-dark'
                           : 'bg-zion-slate-light/20 text-zion-slate-light hover:bg-zion-slate-light/30'
@@ -289,7 +312,8 @@ export function AnalyticsDashboard({
                       <XAxis dataKey="week" stroke="#9ca3af" />
                       <YAxis stroke="#9ca3af" />
                       <Tooltip 
-                        contentStyle={{ 
+                        contentStyle={{
+
                           backgroundColor: '#1f2937', 
                           border: '1px solid #374151',
                           borderRadius: '8px'
@@ -327,7 +351,8 @@ export function AnalyticsDashboard({
                         ))}
                       </Pie>
                       <Tooltip 
-                        contentStyle={{ 
+                        contentStyle={{
+
                           backgroundColor: '#1f2937', 
                           border: '1px solid #374151',
                           borderRadius: '8px'

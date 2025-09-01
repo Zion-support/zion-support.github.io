@@ -5,24 +5,28 @@ import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, C
 import SEO from '@/components/SEO';
 const features = [
     {
+
         title: "Automated Code Analysis",
         description: "AI-powered code review that identifies bugs, security vulnerabilities, and optimization opportunities.",
         icon: Code,
         color: "from-blue-500 to-cyan-500"
     },
     {
+
         title: "Security Vulnerability Detection",
         description: "Advanced security scanning that detects potential threats and compliance issues in your codebase.",
         icon: Shield,
         color: "from-red-500 to-pink-500"
     },
     {
+
         title: "Performance Optimization",
         description: "Intelligent suggestions for improving code performance, readability, and maintainability.",
         icon: Zap,
         color: "from-green-500 to-emerald-500"
     },
     {
+
         title: "Learning & Adaptation",
         description: "Machine learning algorithms that continuously improve based on your team's coding patterns and preferences.",
         icon: Brain,
@@ -39,21 +43,25 @@ const benefits = [
 ];
 const useCases = [
     {
+
         title: "Development Teams",
         description: "Streamline code review processes for development teams of  size.",
         icon: Users
     },
     {
+
         title: "Open Source Projects",
         description: "Maintain high code quality standards in open source contributions.",
         icon: GitBranch
     },
     {
+
         title: "Enterprise Applications",
         description: "Ensure security and compliance in enterprise-grade applications.",
         icon: Shield
     },
     {
+
         title: "CI/CD Pipelines",
         description: "Integrate automated code review into your continuous integration workflows.",
         icon: Cpu
@@ -61,12 +69,14 @@ const useCases = [
 ];
 const testimonials = [
     {
+
         content: "The AI Autonomous Code Review has transformed our development process. We catch issues much earlier and our code quality has improved significantly.",
         name: "Alex Thompson",
         role: "Lead Developer, CodeFlow Inc",
         rating: 5
     },
     {
+
         content: "This tool is a game-changer for our security team. It catches vulnerabilities that human reviewers might miss.",
         name: "Maria Santos",
         role: "Security Engineer, SecureTech",
@@ -74,6 +84,7 @@ const testimonials = [
     }
 ];
 export default function AIAutonomousCodeReview() {
+
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
       <SEO title="AI Autonomous Code Review - Zion Tech Group" description="Revolutionize your code review process with AI-powered analysis. Automated security scanning, performance optimization, and quality assurance." keywords="AI code review, automated code review, code security, code quality, AI development tools, code analysis" canonical="https://ziontechgroup.com/ai-services/ai-autonomous-code-review/"/>
 
@@ -82,10 +93,12 @@ export default function AIAutonomousCodeReview() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-purple-900/50 to-cyan-900/50"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -124,10 +137,12 @@ export default function AIAutonomousCodeReview() {
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -142,16 +157,20 @@ export default function AIAutonomousCodeReview() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => {
+
             const IconComponent = feature.icon;
             return (<motion.div key={feature.title} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -170,10 +189,12 @@ export default function AIAutonomousCodeReview() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -188,14 +209,17 @@ export default function AIAutonomousCodeReview() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (<motion.div key={benefit} initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -211,10 +235,12 @@ export default function AIAutonomousCodeReview() {
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -229,16 +255,20 @@ export default function AIAutonomousCodeReview() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => {
+
             const IconComponent = useCase.icon;
             return (<motion.div key={useCase.title} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -257,10 +287,12 @@ export default function AIAutonomousCodeReview() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -275,14 +307,17 @@ export default function AIAutonomousCodeReview() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (<motion.div key={testimonial.name} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -306,10 +341,12 @@ export default function AIAutonomousCodeReview() {
       <section className="py-20 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 

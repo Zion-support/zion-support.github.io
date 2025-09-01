@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
   // Cloud-Native Infrastructure Platform
   {
+
     id: "cloud-native-infrastructure-platform",
     title: "Cloud-Native Infrastructure Platform",
     description: "Enterprise-grade cloud-native infrastructure platform that automatically scales, self-heals, and optimizes performance. Features multi-cloud orchestration, zero-downtime deployments, and intelligent resource management.",
@@ -21,6 +22,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/cloud-native-infrastructure",
@@ -35,6 +37,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
 
   // AI-Powered DevOps Automation Suite
   {
+
     id: "ai-devops-automation-suite",
     title: "AI-Powered DevOps Automation Suite",
     description: "Intelligent DevOps automation platform that uses AI to optimize CI/CD pipelines, predict deployment failures, and automatically resolve issues. Reduces deployment time by 80% and failure rate by 90%.",
@@ -53,6 +56,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "5-7 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-devops-automation",
@@ -67,6 +71,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
 
   // Zero-Trust Network Architecture
   {
+
     id: "zero-trust-network-architecture",
     title: "Zero-Trust Network Architecture Platform",
     description: "Comprehensive zero-trust security platform that implements continuous verification, micro-segmentation, and least-privilege access. Provides 99.99% security uptime and reduces attack surface by 95%.",
@@ -85,6 +90,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/zero-trust-network",
@@ -99,6 +105,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
 
   // Edge Computing Infrastructure Platform
   {
+
     id: "edge-computing-infrastructure-platform",
     title: "Edge Computing Infrastructure Platform",
     description: "Distributed edge computing platform that brings computation closer to data sources. Reduces latency by 95%, improves bandwidth efficiency, and enables real-time processing for IoT and mobile applications.",
@@ -117,6 +124,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/edge-computing-infrastructure",
@@ -131,6 +139,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
 
   // Hybrid Cloud Management Platform
   {
+
     id: "hybrid-cloud-management-platform",
     title: "Hybrid Cloud Management Platform",
     description: "Unified platform for managing hybrid cloud environments across public, private, and on-premises infrastructure. Provides centralized governance, cost optimization, and seamless workload migration.",
@@ -149,6 +158,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "5-7 Weeks",
     aiScore: 93,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/hybrid-cloud-management",
@@ -163,6 +173,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
 
   // AI-Powered Data Center Optimization
   {
+
     id: "ai-data-center-optimization",
     title: "AI-Powered Data Center Optimization Platform",
     description: "Intelligent data center management platform that optimizes energy consumption, cooling systems, and resource allocation using AI. Reduces operational costs by 40% and improves efficiency by 60%.",
@@ -181,6 +192,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "7-9 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-data-center-optimization",
@@ -195,6 +207,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
 
   // Container Orchestration Platform
   {
+
     id: "container-orchestration-platform",
     title: "Advanced Container Orchestration Platform",
     description: "Enterprise-grade container orchestration platform with advanced scheduling, auto-scaling, and service mesh capabilities. Supports multi-cluster management and provides 99.99% uptime for containerized applications.",
@@ -213,6 +226,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 92,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/container-orchestration",
@@ -227,6 +241,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
 
   // Network Performance Monitoring Platform
   {
+
     id: "network-performance-monitoring",
     title: "AI-Powered Network Performance Monitoring Platform",
     description: "Intelligent network monitoring platform that uses AI to detect anomalies, predict failures, and optimize network performance. Provides real-time visibility and reduces network downtime by 80%.",
@@ -245,6 +260,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "3-5 Weeks",
     aiScore: 91,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/network-performance-monitoring",
@@ -259,6 +275,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
 
   // Disaster Recovery as a Service
   {
+
     id: "disaster-recovery-as-a-service",
     title: "Enterprise Disaster Recovery as a Service",
     description: "Comprehensive disaster recovery platform with automated backup, replication, and failover capabilities. Provides RPO of 15 minutes and RTO of 1 hour for critical business applications.",
@@ -277,6 +294,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 94,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/disaster-recovery-service",
@@ -291,6 +309,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
 
   // API Gateway and Management Platform
   {
+
     id: "api-gateway-management-platform",
     title: "Enterprise API Gateway and Management Platform",
     description: "Advanced API gateway platform with rate limiting, authentication, monitoring, and analytics. Supports microservices architecture and provides comprehensive API lifecycle management.",
@@ -309,6 +328,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027: ProductListing[] = [
     availability: "3-5 Weeks",
     aiScore: 93,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/api-gateway-management",

@@ -54,6 +54,7 @@ import { Search,
 import { enhancedServicesCatalog2025, EnhancedService              } from '../data/enhancedServicesCatalog2025';
 
 export default function EnhancedServicesShowcase2025(...args: any[]): any {
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
@@ -64,6 +65,7 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
+
     return enhancedServicesCatalog2025
       .filter(service =>
         (selectedCategory === 'all' || service.category === selectedCategory) &&
@@ -92,6 +94,7 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
   }, [searchTerm, selectedCategory, sortBy]);
 
   const contactInfo = {
+
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',;
   ;
@@ -114,6 +117,7 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
       className="neon-card hover:scale-105 transition-all duration-300 cursor-pointer group"
       whileHover={{ y: -10 }}
       initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -124,6 +128,7 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
 
 }}
       animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -262,6 +267,7 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
       className="neon-card p-6 hover:scale-[1.02] transition-all duration-300 cursor-pointer group"
       whileHover={{ x: 10 }}
       initial = {
+
   { opacity: 0,
   x: -20 
 
@@ -272,6 +278,7 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
 
 }}
       animate = {
+
   { opacity: 1,
   x: 0 
 
@@ -368,6 +375,7 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -378,6 +386,7 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -412,6 +421,7 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
                   key={stat.label}
                   className="text-center"
                   initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -422,6 +432,7 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
 
 }}
                   animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -432,6 +443,7 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -597,6 +609,7 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
@@ -607,6 +620,7 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

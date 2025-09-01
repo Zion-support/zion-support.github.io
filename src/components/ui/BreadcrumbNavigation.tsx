@@ -4,42 +4,49 @@ import { ChevronRight, Home } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface BreadcrumbItem {
+
   label: string;
   path: string;
   isCurrent?: boolean;
 }
 
 interface BreadcrumbNavigationProps {
+
   items?: BreadcrumbItem[];
   className?: string;
   showHome?: boolean;
 }
 
 export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({
+
   items = [],
   className = '',
-  showHome = true
+  showHome = true;
 }) => {
+
   const location = useLocation();
   
   // Generate breadcrumbs from current location if no items provided
   const generateBreadcrumbs = (): BreadcrumbItem[] => {
+
     const pathSegments = location.pathname.split('/').filter(Boolean);
     const breadcrumbs: BreadcrumbItem[] = [];
     
     let currentPath = '';
     
     pathSegments.forEach((segment, index) => {
+
       currentPath += `/${segment}`;
       const isLast = index === pathSegments.length - 1;
       
       // Convert segment to readable label
-      const label = segment
+      const label = segment;
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
       
       breadcrumbs.push({
+
         label,
         path: currentPath,
         isCurrent: isLast
@@ -52,6 +59,7 @@ export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({
   const breadcrumbItems = items.length > 0 ? items : generateBreadcrumbs();
   
   if (breadcrumbItems.length === 0) {
+
     return null;
   }
   
@@ -104,13 +112,16 @@ export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({
 
 // Enhanced Breadcrumb with Structured Data
 export const EnhancedBreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = (props) => {
+
   const breadcrumbItems = props.items || [];
   
   // Generate structured data for breadcrumbs
   const structuredData = {
+
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": breadcrumbItems.map((item, index) => ({
+
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,

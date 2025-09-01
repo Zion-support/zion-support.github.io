@@ -26,6 +26,7 @@ interface SEOData {
   structuredData?: object;
 
 interface EnhancedSEOManagerProps {
+
   // Add your props here
 
   seoData: SEOData;
@@ -34,6 +35,7 @@ interface EnhancedSEOManagerProps {
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
 
   useEffect(() => {
+
     // Update meta tags dynamically
     
       // Update title;
@@ -69,6 +71,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       // Update Open Graph tags
       const updateOGTag = (property: string, content: string) => {;"        let ogTag = document.querySelector(`meta[property="${property}"]`);
         if (!ogTag) {
+
 <<<<<<< HEAD
           ogTag = document.createElement ('meta') ;
           ogTag.setAttribute ('property', property) ;
@@ -100,6 +103,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       // Update Twitter Card tags
       const updateTwitterTag = (name: string, content: string) => {;"`        let twitterTag = document.querySelector(`meta[name="${name}"]`);
         if (!twitterTag) {
+
 <<<<<<< HEAD
           twitterTag = document.createElement ('meta') ;
           twitterTag.setAttribute ('name', name) ;
@@ -134,9 +138,11 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 >>>>>>> main
       // Add canonical URL
       if (seoData.canonicalUrl) {
+
 '"
         let canonical = document.querySelector('link[rel="canonical"]');
         if (!canonical) {
+
 <<<<<<< HEAD
           canonical = document.createElement ('link') ;
           canonical.setAttribute ('rel', 'canonical') ;
@@ -154,9 +160,11 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 >>>>>>> main
       // Add structured data
       if (seoData.structuredData) {
+
 '"
         let script = document.querySelector('script[type="application/ld+json"]');
         if (!script) {
+
 <<<<<<< HEAD
           script = document.createElement ('script') ;
           script.setAttribute ('type', 'application / ld + json') ;
@@ -178,6 +186,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 
     // Cleanup function
     return () => {
+
 <<<<<<< HEAD
       // Remove dynamically added meta tags on unmount
       const dynamicTags = document.querySelectorAll ('meta[property^="og:"], meta[name^="twitter:"], link[rel="canonical"]') ;

@@ -3,13 +3,16 @@ import { Link } from 'react - router - dom';
 import React, { useState, useEffect } from 'react';
 import SEO from "@/components / SEO";
 export default function UltimateHomepage2025 () {
+
 import ultimateInnovativeServices2025 from "../../data / 2025 - ultimate - innovative - services - expansion";
 
     const [currentServiceIndex, setCurrentServiceIndex] = useState (0) ;
     const [isVisible, setIsVisible] = useState (false) ;
     useEffect ( () => {
+
         setIsVisible (true) ;
         const interval = setInterval ( () => {
+
             setCurrentServiceIndex ( (prev) => (prev + 1) % ultimateInnovativeServices2025.length) }, 5000) ;
         return () => clearInterval (interval) }, []) ;
     const featuredServices = ultimateInnovativeServices2025.filter (service => service.popular) .slice (0, 6) ;
@@ -22,24 +25,28 @@ import ultimateInnovativeServices2025 from "../../data / 2025 - ultimate - innov
     ];
     const benefits = [
         {
+
             icon: Brain,
             title: 'AI - Powered Intelligence',
             description: 'Advanced artificial intelligence that learns, adapts, and optimizes your business processes automatically.',
             color: 'from - blue - 500 to - cyan - 500'
         },
         {
+
             icon: Shield,
             title: 'Quantum - Secure Protection',
             description: 'Unbreakable security with quantum - resistant encryption and AI - powered threat detection.',
             color: 'from - green - 500 to - emerald - 500'
         },
         {
+
             icon: Zap,
             title: 'Autonomous Operations',
             description: 'Self - managing systems that run your business operations with minimal human intervention.',
             color: 'from - purple - 500 to - indigo - 500'
         },
         {
+
             icon: BarChart3,
             title: 'Predictive Analytics',
             description: 'Forecast trends, identify opportunities, and make data - driven decisions with confidence.',

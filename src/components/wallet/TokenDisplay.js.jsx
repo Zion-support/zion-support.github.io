@@ -11,6 +11,7 @@ import {
 import { Button } from '@/components/ui/button';
 import Skeleton from '@/components/ui/skeleton';
 export function TokenDisplay() {
+
   const { wallet, loading } = useWallet();
   return()
     <Card>

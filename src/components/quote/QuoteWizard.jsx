@@ -42,6 +42,7 @@ export function QuoteWizard({ category }) {
   const delayedError = useDelayedError(error);
   const { toast } = useToast();
   useEffect(() => {
+
     if (delayedError) {
 
       toast({
@@ -53,6 +54,7 @@ export function QuoteWizard({ category }) {
   // Use isLoading from SWR for a more direct loading state
   const loading = isLoading;
   const selectedItem = useMemo(() => {
+
     if (!data || !selectedItemId) return null;
     return data.find(item => item.id === selectedItemId);
   }, [data, selectedItemId]);
@@ -62,6 +64,7 @@ export function QuoteWizard({ category }) {
     setStep(2);
   };
   const handleContinue = () => {
+
     if (!selectedItemId) {
 
       setSelectionError()`
@@ -80,6 +83,7 @@ export function QuoteWizard({ category }) {
     setStep(2);
   };
   const handleSubmit = async () => {
+
     if (!selectedItemId) return;
     let endpoint = '/api/quotes';
     const payload = { user_message: message };
@@ -273,6 +277,7 @@ export function QuoteWizard({ category }) {
         </p>
         <Button
           onClick={() => {
+
             setStep(1);
             setSelectedItemId(null);
             setMessage('');

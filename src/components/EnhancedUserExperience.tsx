@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   User, 
   Heart, 
   Star, 
@@ -41,6 +42,7 @@ import {
 } from 'lucide-react';
 
 interface UserPreference {
+
   theme: 'light' | 'dark' | 'auto';
   fontSize: 'small' | 'medium' | 'large';
   contrast: 'normal' | 'high';
@@ -52,6 +54,7 @@ interface UserPreference {
 }
 
 interface UserFeedback {
+
   rating: number;
   comment: string;
   category: string;
@@ -59,9 +62,11 @@ interface UserFeedback {
 }
 
 export const EnhancedUserExperience: React.FC = () => {
+
   const [isVisible, setIsVisible] = useState(false);
   const [currentTab, setCurrentTab] = useState<'preferences' | 'feedback' | 'analytics' | 'help'>('preferences');
   const [preferences, setPreferences] = useState<UserPreference>({
+
     theme: 'auto',
     fontSize: 'medium',
     contrast: 'normal',
@@ -85,35 +90,43 @@ export const EnhancedUserExperience: React.FC = () => {
 
   // Load preferences from localStorage
   useEffect(() => {
+
     const savedPreferences = localStorage.getItem('userPreferences');
     if (savedPreferences) {
+
       setPreferences(JSON.parse(savedPreferences));
     }
     
     const savedFeedback = localStorage.getItem('userFeedback');
     if (savedFeedback) {
+
       setFeedback(JSON.parse(savedFeedback));
     }
   }, []);
 
   // Save preferences to localStorage
   useEffect(() => {
+
     localStorage.setItem('userPreferences', JSON.stringify(preferences));
   }, [preferences]);
 
   // Apply theme
   useEffect(() => {
+
     const root = document.documentElement;
     if (preferences.theme === 'dark' || 
         (preferences.theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+
       root.classList.add('dark');
     } else {
+
       root.classList.remove('dark');
     }
   }, [preferences.theme]);
 
   // Apply font size
   useEffect(() => {
+
     const root = document.documentElement;
     root.style.fontSize = preferences.fontSize === 'small' ? '14px' : 
                           preferences.fontSize === 'large' ? '18px' : '16px';
@@ -121,17 +134,22 @@ export const EnhancedUserExperience: React.FC = () => {
 
   // Apply contrast
   useEffect(() => {
+
     const root = document.documentElement;
     if (preferences.contrast === 'high') {
+
       root.classList.add('high-contrast');
     } else {
+
       root.classList.remove('high-contrast');
     }
   }, [preferences.contrast]);
 
   // Scroll handler for back to top button
   useEffect(() => {
+
     const handleScroll = () => {
+
       setShowBackToTop(window.scrollY > 300);
     };
     
@@ -141,13 +159,17 @@ export const EnhancedUserExperience: React.FC = () => {
 
   // Handle preference change
   const handlePreferenceChange = useCallback((key: keyof UserPreference, value: any) => {
+
     setPreferences(prev => ({ ...prev, [key]: value }));
   }, []);
 
   // Submit feedback
   const handleFeedbackSubmit = useCallback(() => {
+
     if (newFeedback.comment.trim()) {
+
       const feedbackItem: UserFeedback = {
+
         ...newFeedback,
         timestamp: new Date()
       };
@@ -162,19 +184,23 @@ export const EnhancedUserExperience: React.FC = () => {
 
   // Toggle compact mode
   const toggleCompactMode = useCallback(() => {
+
     setIsCompact(!isCompact);
     document.body.classList.toggle('compact-mode');
   }, [isCompact]);
 
   // Scroll to top
   const scrollToTop = useCallback(() => {
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   // Handle search
   const handleSearch = useCallback((query: string) => {
+
     setSearchQuery(query);
     if (query.trim()) {
+
       // Simulate search results
       const results = [
         { title: 'AI Services', url: '/ai-services', category: 'Services' },
@@ -187,17 +213,20 @@ export const EnhancedUserExperience: React.FC = () => {
       );
       setSearchResults(results);
     } else {
+
       setSearchResults([]);
     }
   }, []);
 
   // Toggle visibility
   const toggleVisibility = useCallback(() => {
+
     setIsVisible(!isVisible);
   }, [isVisible]);
 
   // Get user satisfaction score
   const getSatisfactionScore = useCallback(() => {
+
     if (feedback.length === 0) return 0;
     const totalRating = feedback.reduce((sum, item) => sum + item.rating, 0);
     return Math.round((totalRating / feedback.length) * 20); // Convert to percentage
@@ -254,6 +283,7 @@ export const EnhancedUserExperience: React.FC = () => {
                   <button
                     onClick={toggleCompactMode}
                     className={`p-2 rounded-full transition-colors ${
+
                       isCompact ? 'bg-white/20' : 'bg-white/10'
                     }`}
                     title="Toggle Compact Mode"
@@ -277,6 +307,7 @@ export const EnhancedUserExperience: React.FC = () => {
                 <button
                   onClick={() => setCurrentTab('preferences')}
                   className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
+
                     currentTab === 'preferences'
                       ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
                       : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
@@ -287,6 +318,7 @@ export const EnhancedUserExperience: React.FC = () => {
                 <button
                   onClick={() => setCurrentTab('feedback')}
                   className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
+
                     currentTab === 'feedback'
                       ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
                       : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
@@ -297,6 +329,7 @@ export const EnhancedUserExperience: React.FC = () => {
                 <button
                   onClick={() => setCurrentTab('analytics')}
                   className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
+
                     currentTab === 'analytics'
                       ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
                       : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
@@ -307,6 +340,7 @@ export const EnhancedUserExperience: React.FC = () => {
                 <button
                   onClick={() => setCurrentTab('help')}
                   className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
+
                     currentTab === 'help'
                       ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
                       : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
@@ -328,6 +362,7 @@ export const EnhancedUserExperience: React.FC = () => {
                           key={theme}
                           onClick={() => handlePreferenceChange('theme', theme)}
                           className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
+
                             preferences.theme === theme
                               ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-700'
                               : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
@@ -351,6 +386,7 @@ export const EnhancedUserExperience: React.FC = () => {
                           key={size}
                           onClick={() => handlePreferenceChange('fontSize', size)}
                           className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
+
                             preferences.fontSize === size
                               ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-700'
                               : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
@@ -371,6 +407,7 @@ export const EnhancedUserExperience: React.FC = () => {
                           key={contrast}
                           onClick={() => handlePreferenceChange('contrast', contrast)}
                           className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
+
                             preferences.contrast === contrast
                               ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-700'
                               : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
@@ -389,10 +426,12 @@ export const EnhancedUserExperience: React.FC = () => {
                       <button
                         onClick={() => handlePreferenceChange('animations', !preferences.animations)}
                         className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                           preferences.animations ? 'bg-purple-600' : 'bg-gray-300'
                         }`}
                       >
                         <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                           preferences.animations ? 'translate-x-6' : 'translate-x-1'
                         }`} />
                       </button>
@@ -403,10 +442,12 @@ export const EnhancedUserExperience: React.FC = () => {
                       <button
                         onClick={() => handlePreferenceChange('sound', !preferences.sound)}
                         className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                           preferences.sound ? 'bg-purple-600' : 'bg-gray-300'
                         }`}
                       >
                         <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                           preferences.sound ? 'translate-x-6' : 'translate-x-1'
                         }`} />
                       </button>
@@ -431,6 +472,7 @@ export const EnhancedUserExperience: React.FC = () => {
                         <Star
                           key={star}
                           className={`w-5 h-5 ${
+
                             star <= (getSatisfactionScore() / 20)
                               ? 'text-yellow-400 fill-current'
                               : 'text-gray-300'
@@ -466,6 +508,7 @@ export const EnhancedUserExperience: React.FC = () => {
                                 key={rating}
                                 onClick={() => setNewFeedback(prev => ({ ...prev, rating }))}
                                 className={`p-1 rounded ${
+
                                   newFeedback.rating >= rating
                                     ? 'text-yellow-400'
                                     : 'text-gray-300'
@@ -533,6 +576,7 @@ export const EnhancedUserExperience: React.FC = () => {
                                 <Star
                                   key={star}
                                   className={`w-3 h-3 ${
+
                                     star <= item.rating
                                       ? 'text-yellow-400 fill-current'
                                       : 'text-gray-300'
@@ -577,6 +621,7 @@ export const EnhancedUserExperience: React.FC = () => {
                     <h4 className="font-medium text-gray-900 dark:text-white mb-3">Feedback by Category</h4>
                     <div className="space-y-2">
                       {['general', 'usability', 'design', 'performance', 'bug'].map((category) => {
+
                         const count = feedback.filter(f => f.category === category).length;
                         const percentage = feedback.length > 0 ? Math.round((count / feedback.length) * 100) : 0;
                         

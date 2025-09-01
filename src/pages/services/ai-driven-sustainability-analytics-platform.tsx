@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Leaf, 
   TrendingUp, 
   Brain, 
@@ -74,38 +75,45 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function AIDrivenSustainabilityAnalyticsPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Carbon Footprint Analysis",
       description: "Advanced machine learning algorithms that automatically calculate and track carbon emissions across your entire organization",
       benefits: ["Real-time carbon tracking", "Automated data collection", "Predictive emission modeling"]
     },
     {
+
       icon: Leaf,
       title: "Sustainability Performance Monitoring",
       description: "Comprehensive monitoring of environmental, social, and governance (ESG) metrics with intelligent insights",
       benefits: ["ESG score tracking", "Performance benchmarking", "Goal progress monitoring"]
     },
     {
+
       icon: TrendingUp,
       title: "Predictive Sustainability Analytics",
       description: "AI-driven forecasting that predicts future sustainability trends and identifies optimization opportunities",
       benefits: ["Trend prediction", "Optimization recommendations", "Risk assessment"]
     },
     {
+
       icon: Target,
       title: "Goal Setting & Tracking",
       description: "Set ambitious sustainability goals and track progress with intelligent milestone management",
       benefits: ["Smart goal setting", "Progress tracking", "Automated alerts"]
     },
     {
+
       icon: Zap,
       title: "Energy Efficiency Optimization",
       description: "AI-powered recommendations for reducing energy consumption and improving operational efficiency",
       benefits: ["Energy optimization", "Cost reduction", "Efficiency improvements"]
     },
     {
+
       icon: Shield,
       title: "Compliance & Reporting",
       description: "Automated compliance monitoring and reporting for sustainability standards and regulations",
@@ -115,6 +123,7 @@ export default function AIDrivenSustainabilityAnalyticsPlatform() {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$399",
       period: "/month",
@@ -131,6 +140,7 @@ export default function AIDrivenSustainabilityAnalyticsPlatform() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$999",
       period: "/month",
@@ -149,6 +159,7 @@ export default function AIDrivenSustainabilityAnalyticsPlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$2,499",
       period: "/month",
@@ -170,21 +181,25 @@ export default function AIDrivenSustainabilityAnalyticsPlatform() {
 
   const useCases = [
     {
+
       industry: "Manufacturing",
       description: "Optimize production processes and reduce environmental impact with AI-driven insights",
       metrics: ["Carbon emissions reduction", "Energy efficiency", "Waste reduction"]
     },
     {
+
       industry: "Retail",
       description: "Track supply chain sustainability and optimize operations for environmental impact",
       metrics: ["Supply chain transparency", "Carbon footprint", "Sustainable sourcing"]
     },
     {
+
       industry: "Technology",
       description: "Monitor data center efficiency and optimize cloud infrastructure sustainability",
       metrics: ["Energy efficiency", "Carbon intensity", "Green computing"]
     },
     {
+
       industry: "Transportation",
       description: "Optimize fleet operations and reduce emissions with intelligent routing and maintenance",
       metrics: ["Fleet efficiency", "Emissions reduction", "Route optimization"]
@@ -410,6 +425,7 @@ export default function AIDrivenSustainabilityAnalyticsPlatform() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-green-500/50 shadow-lg shadow-green-500/25' 
                     : 'border-slate-700'
@@ -442,6 +458,7 @@ export default function AIDrivenSustainabilityAnalyticsPlatform() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

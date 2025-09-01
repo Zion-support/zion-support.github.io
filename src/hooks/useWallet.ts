@@ -4,6 +4,7 @@ import { supabase } from '@/integrations/supabase/client';
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 
 export function useWallet() {
+
   const { user } = useAuth();
   const [wallet, setWallet] = useState<Wallet | null>(null);
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]);
@@ -12,6 +13,7 @@ export function useWallet() {
 
   const fetchWallet = useCallback(async () => { // Wrapped in useCallback
     if (!user?.id) {
+
       setWallet(null);
       // setLoading(false); // Loading state handled by calling function or initial useEffect
       return;
@@ -19,6 +21,7 @@ export function useWallet() {
 
     // setLoading(true); // setLoading will be handled by the useEffect calling this
     try {
+
       const { data, error: supabaseError } = await supabase
         .from('wallets')
         .select('*')
@@ -31,7 +34,8 @@ export function useWallet() {
       setWallet(data); // data will be null if not found, which is fine
       // setError(null); // setError will be handled by the useEffect calling this
     } catch (err: any) {
-      console.error('Error fetching wallet:', err);
+
+      // // // console.error('Error fetching wallet:', err);
       setError(err.message);
       setWallet(null); // Ensure wallet is null on error
     } 
@@ -40,10 +44,12 @@ export function useWallet() {
 
   const fetchTransactions = useCallback(async () => { // Wrapped in useCallback
     if (!user?.id) {
+
       setTransactions([]);
       return;
     }
     try {
+
       const { data, error: supabaseError } = await supabase
         .from('token_transactions')
         .select('*')
@@ -53,31 +59,34 @@ export function useWallet() {
       if (supabaseError) throw supabaseError;
       setTransactions((data || []) as TokenTransaction[]);
     } catch (err: any) {
-      console.error('Error fetching transactions:', err);
+
+      // // // console.error('Error fetching transactions:', err);
       // setError(err.message); // Decide if this should set a general error
       setTransactions([]); // Ensure transactions are empty on error
     }
   }, [user?.id]); // Dependency for fetchTransactions
 
   async function earnTokens(amount: number, reason?: string) {
+
     if (!user?.id) return;
     // This is an optimistic update, actual logic might involve backend call
     setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : { balance: amount, user_id: user.id, id: crypto.randomUUID(), updated_at: new Date().toISOString() });
     setTransactions(prev => [
       {
+
         id: crypto.randomUUID(),
         user_id: user.id,
         amount,
         transaction_type: 'earn',
         reason: reason || null,
-        created_at: new Date().toISOString(),
-      },
+        created_at: new Date().toISOString()},
       ...prev,
     ]);
     // TODO: Call actual API to record token earning
   }
 
   async function spendTokens(amount: number, reason?: string) {
+
     if (!user?.id) return;
     // This is an optimistic update
     setWallet(prev =>
@@ -85,26 +94,30 @@ export function useWallet() {
     );
     setTransactions(prev => [
       {
+
         id: crypto.randomUUID(),
         user_id: user.id,
         amount: -amount, // Typically represent spending as negative delta or use a specific column
         transaction_type: 'burn', // or 'spend'
         reason: reason || null,
-        created_at: new Date().toISOString(),
-      },
+        created_at: new Date().toISOString()},
       ...prev,
     ]);
     // TODO: Call actual API to record token spending
   }
 
   useEffect(() => {
+
     async function loadData() {
+
       if (user?.id) {
+
         setLoading(true);
         setError(null);
         await Promise.all([fetchWallet(), fetchTransactions()]);
         setLoading(false);
       } else {
+
         setWallet(null);
         setTransactions([]);
         setLoading(false);
@@ -115,6 +128,7 @@ export function useWallet() {
   }, [user?.id, fetchWallet, fetchTransactions]); // Added fetchWallet and fetchTransactions
 
   return {
+
     wallet,
     transactions,
     loading,
@@ -122,6 +136,5 @@ export function useWallet() {
     fetchWallet,
     fetchTransactions,
     earnTokens,
-    spendTokens,
-  };
+    spendTokens};
 }

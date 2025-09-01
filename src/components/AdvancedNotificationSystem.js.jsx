@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye, EyeOff } from 'lucide-react';
 const mockNotifications = [
     {
+
         id: '1',
         title: 'Project Milestone Achieved',
         message: 'AI E-commerce Platform has reached 75% completion milestone',
@@ -12,11 +13,12 @@ const mockNotifications = [
         isRead: false,
         isArchived: false,
         actions[
-            { label: 'View Details', action: () => console.log('View project'), variant: 'primary' },
-            { label: 'Archive', action: () => console.log('Archive'), variant: 'secondary' }
+            { label: 'View Details', action: () => // // // console.log('View project'), variant: 'primary' },
+            { label: 'Archive', action: () => // // // console.log('Archive'), variant: 'secondary' }
         ]
     },
     {
+
         id: '2',
         title: 'Security Alert',
         message: 'Unusual login attempt detected from new IP address',
@@ -27,11 +29,12 @@ const mockNotifications = [
         isRead: false,
         isArchived: false,
         actions[
-            { label: 'Review Activity', action: () => console.log('Review security'), variant: 'primary' },
-            { label: 'Dismiss', action: () => console.log('Dismiss'), variant: 'secondary' }
+            { label: 'Review Activity', action: () => // // // console.log('Review security'), variant: 'primary' },
+            { label: 'Dismiss', action: () => // // // console.log('Dismiss'), variant: 'secondary' }
         ]
     },
     {
+
         id: '3',
         title: 'Performance Issue Detected',
         message: 'API response time increased by 200% in the last hour',
@@ -42,11 +45,12 @@ const mockNotifications = [
         isRead: false,
         isArchived: false,
         actions[
-            { label: 'Investigate', action: () => console.log('Investigate'), variant: 'primary' },
-            { label: 'Acknowledge', action: () => console.log('Acknowledge'), variant: 'secondary' }
+            { label: 'Investigate', action: () => // // // console.log('Investigate'), variant: 'primary' },
+            { label: 'Acknowledge', action: () => // // // console.log('Acknowledge'), variant: 'secondary' }
         ]
     },
     {
+
         id: '4',
         title: 'System Update Available',
         message: 'New version v2.1.0 is ready for deployment',
@@ -57,12 +61,13 @@ const mockNotifications = [
         isRead: true,
         isArchived: false,
         actions[
-            { label: 'Deploy Now', action: () => console.log('Deploy'), variant: 'primary' },
-            { label: 'Schedule', action: () => console.log('Schedule'), variant: 'secondary' }
+            { label: 'Deploy Now', action: () => // // // console.log('Deploy'), variant: 'primary' },
+            { label: 'Schedule', action: () => // // // console.log('Schedule'), variant: 'secondary' }
         ]
     }
 ];
 export function AdvancedNotificationSystem() {
+
     const [notifications, setNotifications] = useState(mockNotifications);
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
@@ -75,8 +80,10 @@ export function AdvancedNotificationSystem() {
     const [unreadCount, setUnreadCount] = useState(0);
     const containerRef = useRef(null);
     useEffect(() => {
+
         setUnreadCount(notifications.filter(n => !n.isRead).length)}, [notifications]);
     const filteredNotifications = notifications.filter(notification => {
+
         const typeMatch = filterType === 'all' || notification.type === filterType;
         const priorityMatch = filterPriority === 'all' || notification.priority === filterPriority;
         const categoryMatch = filterCategory === 'all' || notification.category === filterCategory;
@@ -85,13 +92,18 @@ export function AdvancedNotificationSystem() {
         const readMatch = showRead || !notification.isRead;
         return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch});
     const markAllAsRead = () => {
+
         setNotifications(prev => prev.map(n => ({ ...n, isRead: true })))};
     const archiveNotification = (id) => {
+
         setNotifications(prev => prev.map(n => n.id === id ? { ...n, isArchived: true } : n))};
     const deleteNotification = (id) => {
+
         setNotifications(prev => prev.filter(n => n.id !== id))};
     const getTypeIcon = (type) => {
+
         switch (type) {
+
             case 'success': return <CheckCircle className="w-5 h-5 text-zion-emerald"/>;
             case 'warning': return <AlertTriangle className="w-5 h-5 text-zion-gold"/>;
             case 'error': return <XCircle className="w-5 h-5 text-red-500"/>;
@@ -99,7 +111,9 @@ export function AdvancedNotificationSystem() {
             default: return <Info className="w-5 h-5 text-zion-slate"/>}
     };
     const getPriorityColor = (priority) => {
+
         switch (priority) {
+
             case 'low': return 'border-l-zion-emerald';
             case 'medium': return 'border-l-zion-cyan';
             case 'high': return 'border-l-zion-gold';
@@ -107,6 +121,7 @@ export function AdvancedNotificationSystem() {
             default: return 'border-l-zion-slate'}
     };
     const getTimeAgo = (timestamp) => {
+
         const now = new Date();
         const diff = now.getTime() - timestamp.getTime();
         const minutes = Math.floor(diff / (1000 * 60));
@@ -119,8 +134,9 @@ export function AdvancedNotificationSystem() {
         if (hours < 24)
             return `${hours}h ago`;
         return `${days}d ago`};
-    const groupedNotifications = groupByCategory
+    const groupedNotifications = groupByCategory;
         ? filteredNotifications.reduce((groups, notification) => {
+
             const category = notification.category;
             if (!groups[category])
                 groups[category] = [];
@@ -128,6 +144,7 @@ export function AdvancedNotificationSystem() {
             return groups}, {})
         : { 'All': filteredNotifications };
     if (!isOpen) {
+
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-36 p-3 bg-zion-emerald hover:bg-zion-emerald-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 relative" title="Notifications">
         <Bell className="w-5 h-5"/>
         {unreadCount > 0 && (<span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
@@ -135,6 +152,7 @@ export function AdvancedNotificationSystem() {
           </span>)}
       </button>)}
     if (isMinimized) {
+
         return (<div className="fixed bottom-4 right-36 z-50">
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">
           <div className="flex items-center gap-3">

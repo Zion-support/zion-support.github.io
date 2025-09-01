@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 export default React.memo (function IoTEdgeComputing (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Wifi,
@@ -52,56 +54,56 @@ import { motion } from 'framer - motion.ts';
   Database,
   Cloud,
   Eye,
-  Brain,
-} from 'lucide - react.ts';
+  Brain} from 'lucide - react.ts';
 
   const features = [
     {
+
       icon: Wifi,
       title: 'IoT Connectivity',
       description: 'Seamless connection of devices and sensors across networks',
-      color: 'from - green - 500 to - emerald - 500',
-    },
+      color: 'from - green - 500 to - emerald - 500'},
     {
+
       icon: Cpu,
       title: 'Edge Processing',
       description: 'Local data processing for faster response times',
-      color: 'from - blue - 500 to - cyan - 500',
-    },
+      color: 'from - blue - 500 to - cyan - 500'},
     {
+
       icon: Zap,
       title: 'Real - time Analytics',
       description: 'Instant insights from connected devices and sensors',
-      color: 'from - yellow - 500 to - orange - 500',
-    },
+      color: 'from - yellow - 500 to - orange - 500'},
     {
+
       icon: Network,
       title: 'Distributed Computing',
       description: 'Efficient resource utilization across edge nodes',
-      color: 'from - purple - 500 to - pink - 500',
-    },
+      color: 'from - purple - 500 to - pink - 500'},
     {
+
       icon: Shield,
       title: 'Security & Privacy',
       description: 'Enterprise - grade security for IoT ecosystems',
-      color: 'from - red - 500 to - pink - 500',
-    },
+      color: 'from - red - 500 to - pink - 500'},
     {
+
       icon: Target,
       title: 'Scalable Architecture',
       description: 'Flexible deployment across diverse environments',
-      color: 'from - indigo - 500 to - blue - 500',
-    },
+      color: 'from - indigo - 500 to - blue - 500'},
   ];
 
   const applications = [
     {
+
       title: 'Smart Cities',
       description: 'Urban infrastructure monitoring and management',
       icon: Building,
-      benefits: ['Traffic optimization', 'Energy management', 'Public safety'],
-    },
+      benefits: ['Traffic optimization', 'Energy management', 'Public safety']},
     {
+
       title: 'Industrial IoT',
       description: 'Manufacturing process optimization and monitoring',
       icon: Factory,
@@ -109,20 +111,19 @@ import { motion } from 'framer - motion.ts';
         'Predictive maintenance',
         'Quality control',
         'Efficiency gains',
-      ],
-    },
+      ]},
     {
+
       title: 'Healthcare',
       description: 'Patient monitoring and medical device management',
       icon: Activity,
-      benefits: ['Remote monitoring', 'Device integration', 'Data analytics'],
-    },
+      benefits: ['Remote monitoring', 'Device integration', 'Data analytics']},
     {
+
       title: 'Agriculture',
       description: 'Precision farming and crop monitoring',
       icon: Globe,
-      benefits: ['Soil monitoring', 'Irrigation control', 'Crop optimization'],
-    },
+      benefits: ['Soil monitoring', 'Irrigation control', 'Crop optimization']},
   ];
 
   const technologies = [

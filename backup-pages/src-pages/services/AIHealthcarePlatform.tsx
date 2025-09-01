@@ -1,13 +1,13 @@
-import { 
-  Heart, 
-  Brain, 
-  Shield, 
-  Users, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Award, 
-  Clock, 
+import {
+  Heart,
+  Brain,
+  Shield,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Award,
+  Clock,
   DollarSign,
   Database,
   BarChart3,
@@ -21,14 +21,10 @@ import {
   FileText,
   Phone,
   Mail,
-  MapPin
+  MapPin,
 } from 'lucide-react';
 
 export default function AIHealthcarePlatform() {
-  
-  
-  
-  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-black text-white">
       {/* Hero Section */}
@@ -41,15 +37,16 @@ export default function AIHealthcarePlatform() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-400/30 rounded-full text-red-400 text-sm font-medium mb-6">
-              <Heart className="w-4 h-4 mr-2"  />
+              <Heart className="w-4 h-4 mr-2" />
               AI Healthcare Platform
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-red-400 via-pink-500 to-purple-600 bg-clip-text text-transparent mb-6">
               AI Healthcare Platform
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize healthcare delivery with our AI-powered platform that provides accurate diagnostics, 
-              personalized treatment plans, and predictive analytics for better patient outcomes.
+              Revolutionize healthcare delivery with our AI-powered platform
+              that provides accurate diagnostics, personalized treatment plans,
+              and predictive analytics for better patient outcomes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -57,7 +54,7 @@ export default function AIHealthcarePlatform() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25"
               >
                 Get Your Custom Quote
-                <ArrowRight className="ml-2 w-5 h-5"  />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/schedule-demo"
@@ -83,8 +80,9 @@ export default function AIHealthcarePlatform() {
               Advanced AI Healthcare Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge AI technology with healthcare expertise to deliver 
-              accurate, reliable, and actionable insights for healthcare professionals.
+              Our platform combines cutting-edge AI technology with healthcare
+              expertise to deliver accurate, reliable, and actionable insights
+              for healthcare professionals.
             </p>
           </motion.div>
 
@@ -100,7 +98,9 @@ export default function AIHealthcarePlatform() {
                 <div className="p-3 rounded-xl bg-gradient-to-br from-red-500/20 to-pink-500/20 mb-4 inline-block">
                   <feature.icon className="w-8 h-8 text-red-400" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-400">{feature.description}</p>
               </motion.div>
             ))}
@@ -121,8 +121,9 @@ export default function AIHealthcarePlatform() {
               Why Choose Our AI Healthcare Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver measurable improvements in healthcare outcomes, efficiency, and cost reduction 
-              through our proven AI technology and dedicated support.
+              We deliver measurable improvements in healthcare outcomes,
+              efficiency, and cost reduction through our proven AI technology
+              and dedicated support.
             </p>
           </motion.div>
 
@@ -138,7 +139,9 @@ export default function AIHealthcarePlatform() {
                 <div className="p-4 rounded-xl bg-gradient-to-br from-red-500/20 to-pink-500/20 mb-4 inline-block">
                   <benefit.icon className="w-12 h-12 text-red-400" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {benefit.title}
+                </h3>
                 <p className="text-gray-400">{benefit.description}</p>
               </motion.div>
             ))}
@@ -159,8 +162,8 @@ export default function AIHealthcarePlatform() {
               Healthcare Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform addresses critical healthcare challenges across various specialties 
-              and practice sizes.
+              Our AI platform addresses critical healthcare challenges across
+              various specialties and practice sizes.
             </p>
           </motion.div>
 
@@ -173,7 +176,9 @@ export default function AIHealthcarePlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6 hover:border-red-400/30 transition-all duration-300"
               >
-                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {useCase.title}
+                </h3>
                 <p className="text-gray-400">{useCase.description}</p>
               </motion.div>
             ))}
@@ -194,7 +199,8 @@ export default function AIHealthcarePlatform() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your healthcare organization's needs and scale as you grow.
+              Choose the plan that best fits your healthcare organization's
+              needs and scale as you grow.
             </p>
           </motion.div>
 
@@ -206,23 +212,27 @@ export default function AIHealthcarePlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-xl rounded-2xl border p-8 ${
-                  plan.popular 
-                    ? 'border-red-400/50 ring-2 ring-red-400/20' 
+                  plan.popular
+                    ? 'border-red-400/50 ring-2 ring-red-400/20'
                     : 'border-slate-700/50'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500 to-pink-600 text-white text-sm font-semibold rounded-full">
-                      <Star className="w-4 h-4 mr-2"  />
+                      <Star className="w-4 h-4 mr-2" />
                       Most Popular
                     </span>
                   </div>
                 )}
 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
-                  <div className="text-4xl font-bold text-red-400 mb-1">{plan.price}</div>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {plan.plan}
+                  </h3>
+                  <div className="text-4xl font-bold text-red-400 mb-1">
+                    {plan.price}
+                  </div>
                   <div className="text-gray-400">{plan.period}</div>
                   <p className="text-gray-300 mt-2">{plan.description}</p>
                 </div>
@@ -230,14 +240,16 @@ export default function AIHealthcarePlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0"  />
+                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
                 <Link
-                  to={plan.plan === 'Enterprise' ? '/contact' : '/request-quote'}
+                  to={
+                    plan.plan === 'Enterprise' ? '/contact' : '/request-quote'
+                  }
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white transform hover:scale-105 shadow-lg hover:shadow-red-500/25'
@@ -245,7 +257,7 @@ export default function AIHealthcarePlatform() {
                   }`}
                 >
                   {plan.cta}
-                  <ArrowRight className="ml-2 w-4 h-4"  />
+                  <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </motion.div>
             ))}
@@ -266,8 +278,9 @@ export default function AIHealthcarePlatform() {
               Ready to Transform Healthcare?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our AI healthcare platform can improve patient outcomes, 
-              reduce costs, and enhance your healthcare delivery capabilities.
+              Let's discuss how our AI healthcare platform can improve patient
+              outcomes, reduce costs, and enhance your healthcare delivery
+              capabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -275,7 +288,7 @@ export default function AIHealthcarePlatform() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25"
               >
                 Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5"  />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/contact"
@@ -288,4 +301,5 @@ export default function AIHealthcarePlatform() {
         </div>
       </section>
     </div>
-  )}
+  );
+}

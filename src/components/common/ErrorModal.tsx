@@ -1,6 +1,7 @@
 import React from 'react';
 import { useUIContext } from '@/context/UIContext';
 import {
+
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -8,8 +9,7 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogTitle,
-} from '@/components/ui/alert-dialog';
+  AlertDialogTitle} from '@/components/ui/alert-dialog';
 import { Button } from '@/components/ui/button';
 import { create as createAxiosInstance } from '@/lib/axios'; // Assuming default export or a way to get the instance
 
@@ -19,13 +19,16 @@ const axiosInstance = createAxiosInstance({ baseURL: import.meta.env.VITE_API_UR
 
 
 export const ErrorModal = () => {
+
   const { state, dispatch } = useUIContext();
 
   const handleClose = () => {
+
     dispatch({ type: 'HIDE_ERROR_MODAL' });
   };
 
   const handleRetry = async () => {
+
     if (!state.errorRetryConfig) return;
 
     const { url, method, data: requestData, headers } = state.errorRetryConfig;
@@ -33,26 +36,33 @@ export const ErrorModal = () => {
     dispatch({ type: 'SET_IS_LOADING', payload: true });
 
     try {
-      console.log('Retrying request:', { url, method, requestData, headers });
+
+      // // // console.log('Retrying request:', { url, method, requestData, headers });
       if (method.toUpperCase() === 'GET') {
+
         // For GET, requestData might be params. The axiosInstance.get method handles params in its config.
         await axiosInstance.get(url, { headers, params: requestData });
       } else if (method.toUpperCase() === 'POST') {
+
         await axiosInstance.post(url, requestData, { headers });
       } else if (method.toUpperCase() === 'PUT') {
+
         await axiosInstance.put(url, requestData, { headers });
       } else if (method.toUpperCase() === 'DELETE') {
+
         await axiosInstance.delete(url, { headers }); // Assuming delete might not have requestData in the same way
       }
       // If retry is successful, the global interceptor won't trigger the error modal again.
       // A success toast could be shown here.
       // For example: toast.success('Operation successful after retry!');
-      console.log('Retry successful');
+      // // // console.log('Retry successful');
     } catch (retryError) {
+
       // The global error interceptor in axios.ts should catch this and
       // potentially show the error modal again if the retry also fails.
-      console.error('Retry failed:', retryError);
+      // // // console.error('Retry failed:', retryError);
     } finally {
+
       // Ensure loading is set to false, even if the SHOW_ERROR_MODAL in context does it,
       // because a successful retry won't call SHOW_ERROR_MODAL.
       dispatch({ type: 'SET_IS_LOADING', payload: false });
@@ -60,6 +70,7 @@ export const ErrorModal = () => {
   };
 
   if (!state.isErrorModalOpen) {
+
     return null;
   }
 

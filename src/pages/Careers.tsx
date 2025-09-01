@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default React.memo (function Careers () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Briefcase,
@@ -20,8 +22,7 @@ import { motion } from 'framer - motion';
   Lightbulb,
   Mail,
   Phone,
-  Search,
-} from 'lucide - react';
+  Search} from 'lucide - react';
 
   const [searchTerm, setSearchTerm] = useState ('') ;
   const [selectedDepartment, setSelectedDepartment] = useState ('all') ;
@@ -60,6 +61,7 @@ import { motion } from 'framer - motion';
 
   const jobListings = [
     {
+
       id: 'senior - ai - engineer',
       title: 'Senior AI Engineer',
       department: 'engineering',
@@ -84,9 +86,9 @@ import { motion } from 'framer - motion';
         '401 (k) with company match',
       ],
       icon: Brain,
-      color: 'from - purple - 500 to - pink - 500',
-    },
+      color: 'from - purple - 500 to - pink - 500'},
     {
+
       id: 'quantum - computing - researcher',
       title: 'Quantum Computing Researcher',
       department: 'engineering',
@@ -111,9 +113,9 @@ import { motion } from 'framer - motion';
         'Comprehensive benefits package',
       ],
       icon: Zap,
-      color: 'from - blue - 500 to - cyan - 500',
-    },
+      color: 'from - blue - 500 to - cyan - 500'},
     {
+
       id: 'cybersecurity - architect',
       title: 'Cybersecurity Architect',
       department: 'engineering',
@@ -138,9 +140,9 @@ import { motion } from 'framer - motion';
         'Flexible work arrangements',
       ],
       icon: Shield,
-      color: 'from - red - 500 to - orange - 500',
-    },
+      color: 'from - red - 500 to - orange - 500'},
     {
+
       id: 'cloud - infrastructure - engineer',
       title: 'Cloud Infrastructure Engineer',
       department: 'engineering',
@@ -165,9 +167,9 @@ import { motion } from 'framer - motion';
         'Remote work flexibility',
       ],
       icon: Cloud,
-      color: 'from - green - 500 to - emerald - 500',
-    },
+      color: 'from - green - 500 to - emerald - 500'},
     {
+
       id: 'senior - software - engineer',
       title: 'Senior Software Engineer',
       department: 'engineering',
@@ -192,9 +194,9 @@ import { motion } from 'framer - motion';
         'Collaborative team environment',
       ],
       icon: Code,
-      color: 'from - indigo - 500 to - purple - 500',
-    },
+      color: 'from - indigo - 500 to - purple - 500'},
     {
+
       id: 'business - development - manager',
       title: 'Business Development Manager',
       department: 'sales',
@@ -219,11 +221,11 @@ import { motion } from 'framer - motion';
         'Flexible work arrangements',
       ],
       icon: Users,
-      color: 'from - blue - 500 to - indigo - 500',
-    },
+      color: 'from - blue - 500 to - indigo - 500'},
   ];
 
   const filteredJobs = jobListings.filter (job => {
+
     const matchesSearch = job.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
       job.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
     const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment;
@@ -235,6 +237,7 @@ import { motion } from 'framer - motion';
   }) ;
 
   const toggleJob = (jobId: string) => {
+
     setExpandedJob (expandedJob === jobId ? null : jobId) ;
   };
 

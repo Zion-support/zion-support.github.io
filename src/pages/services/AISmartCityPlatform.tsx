@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Building2, 
   Zap, 
   BarChart3, 
@@ -45,23 +46,28 @@ import {
 import { SEO } from '@/components/SEO';
 
 export default function AISmartCityPlatform() {
+
   const features = [
     {
+
       icon: Building2,
       title: "Urban Intelligence",
       description: "AI-powered urban planning and infrastructure optimization for smarter cities"
     },
     {
+
       icon: Zap,
       title: "Real-time Monitoring",
       description: "Continuous monitoring of city systems with instant response and optimization"
     },
     {
+
       icon: BarChart3,
       title: "Predictive Analytics",
       description: "Advanced analytics that forecast urban trends and optimize city operations"
     },
     {
+
       icon: Settings,
       title: "Automated Management",
       description: "Intelligent automation of city services and infrastructure management"
@@ -70,24 +76,28 @@ export default function AISmartCityPlatform() {
 
   const services = [
     {
+
       title: "Smart Traffic Management",
       description: "AI-powered traffic optimization with real-time signal control and congestion prediction",
       icon: TrafficCone,
       features: ["Real-time traffic monitoring", "Intelligent signal timing", "Congestion prediction", "Emergency vehicle routing"]
     },
     {
+
       title: "Energy Management",
       description: "Smart grid optimization and renewable energy integration for sustainable urban power",
       icon: Zap,
       features: ["Smart grid management", "Renewable integration", "Demand response", "Energy optimization"]
     },
     {
+
       title: "Public Safety & Security",
       description: "AI-powered surveillance and emergency response systems for enhanced urban security",
       icon: Shield,
       features: ["Intelligent surveillance", "Emergency response", "Crime prevention", "Public safety analytics"]
     },
     {
+
       title: "Environmental Monitoring",
       description: "Real-time environmental monitoring and pollution control for healthier cities",
       icon: Leaf,
@@ -108,6 +118,7 @@ export default function AISmartCityPlatform() {
 
   const pricing = [
     {
+
       name: "City Starter",
       price: "$2,999",
       period: "/month",
@@ -124,6 +135,7 @@ export default function AISmartCityPlatform() {
       popular: false
     },
     {
+
       name: "City Pro",
       price: "$7,999",
       period: "/month",
@@ -142,6 +154,7 @@ export default function AISmartCityPlatform() {
       popular: true
     },
     {
+
       name: "Metropolitan",
       price: "$19,999",
       period: "/month",
@@ -364,6 +377,7 @@ export default function AISmartCityPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-blue-800/50 border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-blue-400/50 shadow-lg shadow-blue-500/20' 
                     : 'border-blue-700/50'
@@ -398,6 +412,7 @@ export default function AISmartCityPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-400 hover:to-cyan-500'
                       : 'bg-blue-700/50 text-blue-100 hover:bg-blue-700/70'

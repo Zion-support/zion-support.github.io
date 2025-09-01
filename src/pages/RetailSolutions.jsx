@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function RetailSolutions () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   ShoppingCart,
@@ -35,24 +37,28 @@ import { motion } from 'framer - motion';
 
 const retailTrends = [
   {
+
     title: "AI - Powered Personalization",
     description: "Machine learning algorithms that provide personalized shopping experiences",
     icon: Brain,
     impact: "High"
   },
   {
+
     title: "Omnichannel Integration",
     description: "Seamless experience across online, mobile, and physical stores",
     icon: Globe,
     impact: "High"
   },
   {
+
     title: "Mobile - First Shopping",
     description: "Mobile devices driving majority of online retail traffic",
     icon: Smartphone,
     impact: "Critical"
   },
   {
+
     title: "Data - Driven Decisions",
     description: "Analytics and insights driving retail strategy and optimization",
     icon: BarChart3,
@@ -62,6 +68,7 @@ const retailTrends = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "Fashion Forward",
     industry: "Apparel Retail",
@@ -71,6 +78,7 @@ const successStories = [
     logo: "FF"
   },
   {
+
     id: 2,
     comp: "Tech Gadgets Pro",
     industry: "Electronics Retail",
@@ -80,6 +88,7 @@ const successStories = [
     logo: "TG"
   },
   {
+
     id: 3,
     comp: "Home & Garden Plus",
     industry: "Home Improvement",
@@ -92,6 +101,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Retail Assessment",
     description: "Analyze current retail operations and identify improvement opportunities",
@@ -99,6 +109,7 @@ const processSteps = [
     duration: "1 - 2 weeks"
   },
   {
+
     step: 2,
     title: "Solution Design",
     description: "Design customized retail technology solution based on requirements",
@@ -106,6 +117,7 @@ const processSteps = [
     duration: "2 - 3 weeks"
   },
   {
+
     step: 3,
     title: "Development & Testing",
     description: "Build and thoroughly test the retail solution",
@@ -113,6 +125,7 @@ const processSteps = [
     duration: "8 - 24 weeks"
   },
   {
+
     step: 4,
     title: "Deployment & Training",
     description: "Deploy solution and provide comprehensive staff training",
@@ -142,11 +155,13 @@ const processSteps = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -156,16 +171,19 @@ const processSteps = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -208,11 +226,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -230,16 +250,19 @@ const processSteps = [
             {retailTrends.map ( (trend, index) => (<motion.div
                 key={trend.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -254,6 +277,7 @@ const processSteps = [
                 <p className="text - zion - slate - light mb - 4 leading - relaxed">{trend.description}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   trend.impact === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : trend.impact === 'High'
@@ -272,11 +296,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -294,16 +320,19 @@ const processSteps = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -334,11 +363,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -358,6 +389,7 @@ const processSteps = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -371,16 +403,19 @@ const processSteps = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -435,11 +470,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -457,16 +494,19 @@ const processSteps = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -512,11 +552,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

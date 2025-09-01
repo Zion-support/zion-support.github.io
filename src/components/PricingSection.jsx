@@ -28,6 +28,7 @@ import { motion } from 'framer - motion';
         cta: "Get Started"
     },
     {
+
 "
         name: "Professional",
         price: 299,"
@@ -53,6 +54,7 @@ import { motion } from 'framer - motion';
         cta: "Start Free Trial"
     },
     {
+
 "
         name: "Enterprise",
         price: 999,"
@@ -80,6 +82,7 @@ import { motion } from 'framer - motion';
 ];
 const addons = [
     {
+
 "
         name: "AI Model Training",
         price: 199,"
@@ -89,6 +92,7 @@ const addons = [
         features["Custom model training", "Performance optimization", "Model monitoring"]
     },
     {
+
 "
         name: "Premium Support",
         price: 99,"
@@ -98,6 +102,7 @@ const addons = [
         features["24/7 phone support", "Guaranteed 2-hour response", "Dedicated support team"]
     },
     {
+
 "
         name: "Advanced Analytics",
         price: 149,"
@@ -197,6 +202,7 @@ export function PricingSection() {
         {/* Pricing Plans */}"
         <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {plans.map((plan, index) => (<motion.div key={plan.name} variants={itemVariants} whileHover={{ y: -8 }} transition = {
+
 "
   { type: "spring",
   stiffness: 300
@@ -293,6 +299,7 @@ export function PricingSection() {
 "
         <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {addons.map((addon, index) => (<motion.div key={addon.name} variants={itemVariants} whileHover={{ y: -4 }} transition = {
+
 "
   { type: "spring",
   stiffness: 300

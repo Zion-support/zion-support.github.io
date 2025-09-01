@@ -49,6 +49,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 responseTime: Date.now () - startTime
             }}
         catch (error) {
+
             return {
 
                 url,
@@ -58,12 +59,14 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             }}
     };
     const checkAllLinks = async () => {
+
         setIsChecking(true);
         setLinkStatuses(links.map(link => ({ url: link.url, status: 'checking' })));
         const statuses = await Promise.all(links.map(link => checkLinkHealth(link.url)));
         setLinkStatuses(statuses);
         setIsChecking(false)};
     useEffect(() => {
+
         // Auto-check links when component mounts
         checkAllLinks()}, [links]);
     const getStatusIcon = (status) => {

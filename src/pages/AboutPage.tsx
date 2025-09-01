@@ -1,7 +1,18 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
+=======
+import { Link } from 'react - router - dom.ts';
+import React from 'react.ts';
+export function AboutPage (...args: any[]) : any {
+
+import {
+
+import { motion } from 'framer - motion.ts';
+
+>>>>>>> 82b8c9da73d581e93549ea90cb9ba854068d51e8
   Users,
   Target,
   Zap,
@@ -23,43 +34,48 @@ import {
   Twitter,
   Github,
   Facebook,
+<<<<<<< HEAD
   Instagram,
 } from 'lucide-react';
+=======
+  Instagram} from 'lucide - react.ts';
+>>>>>>> 82b8c9da73d581e93549ea90cb9ba854068d51e8
 
 export function AboutPage() {
   const values = [
     {
+
       title: 'Innovation First',
       description:
         "We push the boundaries of what's possible with cutting - edge technology",
       icon: Zap,
-      color: 'from - cyan - 500 to - blue - 600',
-    },
+      color: 'from - cyan - 500 to - blue - 600'},
     {
+
       title: 'Excellence',
       description:
         'We strive for excellence in everything we do, from code to customer service',
       icon: Star,
-      color: 'from - yellow - 500 to - orange - 600',
-    },
+      color: 'from - yellow - 500 to - orange - 600'},
     {
+
       title: 'Integrity',
       description:
         'We operate with honesty, transparency, and ethical business practices',
       icon: Shield,
-      color: 'from - green - 500 to - teal - 600',
-    },
+      color: 'from - green - 500 to - teal - 600'},
     {
+
       title: 'Collaboration',
       description:
         'We believe in the power of teamwork and partnership to achieve great things',
       icon: Users,
-      color: 'from - purple - 500 to - pink - 600',
-    },
+      color: 'from - purple - 500 to - pink - 600'},
   ];
 
   const team = [
     {
+
       name: 'Dr. Sarah Chen',
       role: 'Chief Executive Officer',
       bio: "Former AI researcher at Stanford, leading Zion Tech Group's vision for the future of technology.",
@@ -68,9 +84,9 @@ export function AboutPage() {
         'Strategic Leadership',
         'Technology Innovation',
       ],
-      avatar: '👩‍💼',
-    },
+      avatar: '👩‍💼'},
     {
+
       name: 'Michael Rodriguez',
       role: 'Chief Technology Officer',
       bio: 'Quantum computing expert with 15 + years in advanced technology development.',
@@ -79,58 +95,57 @@ export function AboutPage() {
         'System Architecture',
         'Research & Development',
       ],
-      avatar: '👨‍💻',
-    },
+      avatar: '👨‍💻'},
     {
+
       name: 'Dr. Emily Watson',
       role: 'Chief Security Officer',
       bio: 'Cybersecurity specialist with deep expertise in AI - powered threat detection.',
       expertise: ['Cybersecurity', 'AI Security', 'Risk Management'],
-      avatar: '👩‍🔬',
-    },
+      avatar: '👩‍🔬'},
     {
+
       name: 'David Kim',
       role: 'VP of Engineering',
       bio: 'Full - stack engineer passionate about building scalable, secure systems.',
       expertise: ['Software Engineering', 'DevOps', 'Cloud Architecture'],
-      avatar: '👨‍🔧',
-    },
+      avatar: '👨‍🔧'},
   ];
 
   const milestones = [
     {
+
       year: '2020',
       title: 'Company Founded',
       description:
-        'Zion Tech Group was established with a vision to democratize advanced technology',
-    },
+        'Zion Tech Group was established with a vision to democratize advanced technology'},
     {
+
       year: '2021',
       title: 'First AI Solution',
-      description: 'Launched our flagship AI business intelligence platform',
-    },
+      description: 'Launched our flagship AI business intelligence platform'},
     {
+
       year: '2022',
       title: 'Quantum Breakthrough',
       description:
-        'Developed our first quantum computing algorithms for financial modeling',
-    },
+        'Developed our first quantum computing algorithms for financial modeling'},
     {
+
       year: '2023',
       title: 'Enterprise Expansion',
-      description: 'Secured partnerships with Fortune 500 companies',
-    },
+      description: 'Secured partnerships with Fortune 500 companies'},
     {
+
       year: '2024',
       title: 'Global Reach',
-      description: 'Expanded operations to serve clients in 25 + countries',
-    },
+      description: 'Expanded operations to serve clients in 25 + countries'},
     {
+
       year: '2025',
       title: 'Future Vision',
       description:
-        'Leading the next generation of AI and quantum computing solutions',
-    },
+        'Leading the next generation of AI and quantum computing solutions'},
   ];
 
   const stats = [
@@ -308,6 +323,7 @@ export function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`relative flex items - center ${
+
                     index % 2 === 0 ? 'flex - row' : 'flex - row - reverse'
                   }`}
                 >
@@ -385,30 +401,30 @@ export function AboutPage() {
             <div className="flex justify - center space - x-6 mt - 8">
               {[
                 {
+
                   icon: anyLinkedin,
                   href: 'https://linkedin.com / company / ziontechgroup',
-                  label: 'LinkedIn',
-                },
+                  label: 'LinkedIn'},
                 {
+
                   icon: Twitter,
                   href: 'https://twitter.com / ziontechgroup',
-                  label: 'Twitter',
-                },
+                  label: 'Twitter'},
                 {
+
                   icon: Github,
                   href: 'https://github.com / ziontechgroup',
-                  label: 'GitHub',
-                },
+                  label: 'GitHub'},
                 {
+
                   icon: Facebook,
                   href: 'https://facebook.com / ziontechgroup',
-                  label: 'Facebook',
-                },
+                  label: 'Facebook'},
                 {
+
                   icon: Instagram,
                   href: 'https://instagram.com / ziontechgroup',
-                  label: 'Instagram',
-                },
+                  label: 'Instagram'},
               ].map (social => (<a
                   key={social.label}
                   href={social.href}

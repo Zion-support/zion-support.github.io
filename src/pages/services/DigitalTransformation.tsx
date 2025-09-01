@@ -2,6 +2,7 @@ import React from 'react.ts';
 import { SEO              } from '@/components/SEO';
 
 export default function DigitalTransformation(...args: any[]): any {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO title="Digital Transformation - Zion Tech Group" description="Modernize processes with cloud-native platforms, automation, and data-driven operations." />
@@ -17,6 +18,7 @@ export default function DigitalTransformation(...args: any[]): any {
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import {
+
   Rocket,
   Cpu,
   Database,
@@ -38,38 +40,45 @@ import {
   Monitor,
   Smartphone
 export default function DigitalTransformation(...args: any[]): any {
+
   const features = [
     {
+
       title: 'Process Automation',
       description: 'Streamline operations with intelligent automation solutions that reduce manual work and improve efficiency.',
       icon: Workflow,
       features: ['RPA Implementation', 'Workflow Optimization', 'Business Process Mapping', 'Performance Monitoring']
     },
     {
+
       title: 'Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud with minimal disruption and maximum benefits.',
       icon: Cloud,
       features: ['Migration Strategy', 'Data Transfer', 'Application Modernization', 'Performance Optimization']
     },
     {
+
       title: 'Data Strategy',
       description: 'Develop a comprehensive data strategy that turns information into actionable business intelligence.',
       icon: Database,
       features: ['Data Architecture', 'Analytics Implementation', 'Data Governance', 'Business Intelligence']
     },
     {
+
       title: "Business Process Optimization",
       description: "Streamline operations and improve efficiency through digital workflows",
       features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
       icon: Workflow
     },
     {
+
       title: "Customer Experience Enhancement",
       description: "Create seamless digital experiences that delight your customers",
       features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
       icon: Target
     },
     {
+
       title: "Data & Analytics Strategy",
       description: "Leverage data insights to drive informed business decisions",
       features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
@@ -79,21 +88,25 @@ export default function DigitalTransformation(...args: any[]): any {
 
   const benefits = [
     {
+
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and optimize workflows to boost productivity by up to 40%.',
       icon: TrendingUp
     },
     {
+
       title: 'Cost Reduction',
       description: 'Reduce operational costs through automation and cloud optimization.',
       icon: BarChart3
     },
     {
+
       title: 'Better Customer Experience',
       description: 'Deliver faster, more personalized services through digital channels.',
       icon: Star
     },
     {
+
       title: 'Competitive Advantage',
       description: 'Stay ahead of the competition with cutting-edge digital capabilities.',
       icon: Target
@@ -105,6 +118,7 @@ export default function DigitalTransformation(...args: any[]): any {
   ];
 
   const contactInfo = {
+
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008, Middletown DE 19709"
@@ -176,6 +190,7 @@ export default function DigitalTransformation(...args: any[]): any {
                     <service.icon className="w-8 h-8 text-white" />
 =======
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -186,6 +201,7 @@ export default function DigitalTransformation(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -196,6 +212,7 @@ export default function DigitalTransformation(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -223,6 +240,7 @@ export default function DigitalTransformation(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -233,6 +251,7 @@ export default function DigitalTransformation(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -259,6 +278,7 @@ export default function DigitalTransformation(...args: any[]): any {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
@@ -269,6 +289,7 @@ export default function DigitalTransformation(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -279,6 +300,7 @@ export default function DigitalTransformation(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 

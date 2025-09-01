@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Eye, 
   EyeOff, 
   Volume2, 
@@ -21,6 +22,7 @@ import {
 } from 'lucide-react';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -33,6 +35,7 @@ interface AccessibilitySettings {
 }
 
 interface AccessibilityFeature {
+
   id: string;
   name: string;
   description: string;
@@ -42,8 +45,10 @@ interface AccessibilityFeature {
 }
 
 export const AccessibilityEnhancer: React.FC = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
+
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -52,11 +57,11 @@ export const AccessibilityEnhancer: React.FC = () => {
     colorBlindFriendly: false,
     fontSize: 100,
     lineHeight: 1.5,
-    letterSpacing: 0,
-  });
+    letterSpacing: 0});
 
   const [features, setFeatures] = useState<AccessibilityFeature[]>([
     {
+
       id: 'skip-links',
       name: 'Skip Links',
       description: 'Quick navigation to main content areas',
@@ -65,6 +70,7 @@ export const AccessibilityEnhancer: React.FC = () => {
       impact: 'high'
     },
     {
+
       id: 'focus-indicators',
       name: 'Focus Indicators',
       description: 'Clear visual indicators for keyboard navigation',
@@ -73,6 +79,7 @@ export const AccessibilityEnhancer: React.FC = () => {
       impact: 'high'
     },
     {
+
       id: 'alt-text',
       name: 'Alt Text',
       description: 'Descriptive text for images and media',
@@ -81,6 +88,7 @@ export const AccessibilityEnhancer: React.FC = () => {
       impact: 'high'
     },
     {
+
       id: 'semantic-html',
       name: 'Semantic HTML',
       description: 'Proper HTML structure for screen readers',
@@ -89,6 +97,7 @@ export const AccessibilityEnhancer: React.FC = () => {
       impact: 'medium'
     },
     {
+
       id: 'color-contrast',
       name: 'Color Contrast',
       description: 'High contrast ratios for better readability',
@@ -97,6 +106,7 @@ export const AccessibilityEnhancer: React.FC = () => {
       impact: 'high'
     },
     {
+
       id: 'keyboard-shortcuts',
       name: 'Keyboard Shortcuts',
       description: 'Alternative navigation methods',
@@ -108,33 +118,42 @@ export const AccessibilityEnhancer: React.FC = () => {
 
   // Apply accessibility settings to the document
   useEffect(() => {
+
     const root = document.documentElement;
     
     // High contrast mode
     if (settings.highContrast) {
+
       root.classList.add('high-contrast');
     } else {
+
       root.classList.remove('high-contrast');
     }
 
     // Large text mode
     if (settings.largeText) {
+
       root.classList.add('large-text');
     } else {
+
       root.classList.remove('large-text');
     }
 
     // Reduced motion
     if (settings.reducedMotion) {
+
       root.classList.add('reduced-motion');
     } else {
+
       root.classList.remove('reduced-motion');
     }
 
     // Color blind friendly
     if (settings.colorBlindFriendly) {
+
       root.classList.add('color-blind-friendly');
     } else {
+
       root.classList.remove('color-blind-friendly');
     }
 
@@ -151,20 +170,25 @@ export const AccessibilityEnhancer: React.FC = () => {
 
   // Keyboard navigation support
   useEffect(() => {
+
     if (!settings.keyboardNavigation) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
+
       // Skip to main content
       if (e.key === 'Tab' && e.altKey) {
+
         e.preventDefault();
         const mainContent = document.querySelector('main') || document.querySelector('#main-content');
         if (mainContent) {
+
           (mainContent as HTMLElement).focus();
         }
       }
 
       // Toggle accessibility panel
       if (e.key === 'a' && e.altKey) {
+
         e.preventDefault();
         setIsOpen(!isOpen);
       }
@@ -176,6 +200,7 @@ export const AccessibilityEnhancer: React.FC = () => {
 
   // Toggle feature
   const toggleFeature = useCallback((featureId: string) => {
+
     setFeatures(prev => prev.map(feature => 
       feature.id === featureId 
         ? { ...feature, enabled: !feature.enabled }
@@ -185,12 +210,15 @@ export const AccessibilityEnhancer: React.FC = () => {
 
   // Update setting
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
+
     setSettings(prev => ({ ...prev, [key]: value }));
   }, []);
 
   // Reset to defaults
   const resetToDefaults = useCallback(() => {
+
     setSettings({
+
       highContrast: false,
       largeText: false,
       reducedMotion: false,
@@ -199,13 +227,14 @@ export const AccessibilityEnhancer: React.FC = () => {
       colorBlindFriendly: false,
       fontSize: 100,
       lineHeight: 1.5,
-      letterSpacing: 0,
-    });
+      letterSpacing: 0});
   }, []);
 
   // Get impact color
   const getImpactColor = (impact: string) => {
+
     switch (impact) {
+
       case 'high': return 'text-red-500 bg-red-50 border-red-200';
       case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
       case 'low': return 'text-blue-500 bg-blue-50 border-blue-200';
@@ -215,7 +244,9 @@ export const AccessibilityEnhancer: React.FC = () => {
 
   // Get category icon
   const getCategoryIcon = (category: string) => {
+
     switch (category) {
+
       case 'visual': return <Eye className="w-4 h-4" />;
       case 'auditory': return <Volume2 className="w-4 h-4" />;
       case 'motor': return <MousePointer className="w-4 h-4" />;
@@ -274,6 +305,7 @@ export const AccessibilityEnhancer: React.FC = () => {
                   <button
                     onClick={() => updateSetting('highContrast', !settings.highContrast)}
                     className={`p-3 rounded-lg border transition-all duration-200 ${
+
                       settings.highContrast
                         ? 'bg-cyan-50 border-cyan-300 text-cyan-700'
                         : 'bg-gray-50 border-gray-200 text-gray-700 hover:bg-gray-100'
@@ -286,6 +318,7 @@ export const AccessibilityEnhancer: React.FC = () => {
                   <button
                     onClick={() => updateSetting('largeText', !settings.largeText)}
                     className={`p-3 rounded-lg border transition-all duration-200 ${
+
                       settings.largeText
                         ? 'bg-cyan-50 border-cyan-300 text-cyan-700'
                         : 'bg-gray-50 border-gray-200 text-gray-700 hover:bg-gray-100'
@@ -298,6 +331,7 @@ export const AccessibilityEnhancer: React.FC = () => {
                   <button
                     onClick={() => updateSetting('reducedMotion', !settings.reducedMotion)}
                     className={`p-3 rounded-lg border transition-all duration-200 ${
+
                       settings.reducedMotion
                         ? 'bg-cyan-50 border-cyan-300 text-cyan-700'
                         : 'bg-gray-50 border-gray-200 text-gray-700 hover:bg-gray-100'
@@ -310,6 +344,7 @@ export const AccessibilityEnhancer: React.FC = () => {
                   <button
                     onClick={() => updateSetting('colorBlindFriendly', !settings.colorBlindFriendly)}
                     className={`p-3 rounded-lg border transition-all duration-200 ${
+
                       settings.colorBlindFriendly
                         ? 'bg-cyan-50 border-cyan-300 text-cyan-700'
                         : 'bg-gray-50 border-gray-200 text-gray-700 hover:bg-gray-100'
@@ -435,6 +470,7 @@ export const AccessibilityEnhancer: React.FC = () => {
                         <button
                           onClick={() => toggleFeature(feature.id)}
                           className={`px-3 py-1 text-xs rounded-full transition-colors ${
+
                             feature.enabled
                               ? 'bg-green-100 text-green-700 hover:bg-green-200'
                               : 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200'

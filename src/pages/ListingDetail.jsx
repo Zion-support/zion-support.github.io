@@ -28,6 +28,7 @@ export default function ListingDetail () {
     // Find the listing from our shared data source - now also checking equipment listings
     const listing = MARKETPLACE_LISTINGS.find (item => item.id === id) ;
     if (!listing) {
+
         return (<div className="min - h-screen bg - zion - blue py - 12 px - 4">
           <div className="container mx - auto">
             <div className="text - center py - 20">
@@ -40,9 +41,12 @@ export default function ListingDetail () {
           </div>
         </div>) }
     const handleContact = () => {
+
         if (user) {
+
             setIsChatOpen (true) }
         else {
+
             setIsContactDialogOpen (true) }
     };
     return (<div className="min - h-screen bg - zion - blue py - 12 px - 4">
@@ -59,6 +63,7 @@ export default function ListingDetail () {
 
                 {listing.images && listing.images.length > 1 && (<div className="flex p - 4 gap - 2 overflow - x-auto">
                     {listing.images.map ( (image, index) => (<div key={index} onClick={ () => setSelectedImageIndex (index) } className={
+
   cn ("w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2",
   index === selectedImageIndex ? "border - zion - purple" : "border - transparent") }>
                         <ImageWithRetry src={image} alt={`${listing.title} - image ${index + 1}`} className="w - full h - full object - cover" fallbackSrc="/placeholder.svg"/>
@@ -125,6 +130,7 @@ export default function ListingDetail () {
                 {listing.rating && (<div className="flex items - center gap - 2 mb - 6">
                     <div className="flex items - center">
                       {[...Array (5) ].map ( (_, i) => (<Star key={i} className={
+
   cn ("h - 5 w - 5",
   i < Math.floor (listing.rating) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light") }/>) ) }
                     </div>
@@ -144,5 +150,7 @@ export default function ListingDetail () {
                 {/* Action Buttons */}
                 <div className="space - y-3 mb - 8">
                   {listing.price !== null ? (<PaymentButton amount={listing.price} serviceId={listing.id} providerId={listing.author.id} buttonText="Buy Now" className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6" onPaymentInitiated = { () => {
+
                 toast ({
+
                     title: "Payment Processing",

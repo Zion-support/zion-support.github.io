@@ -31,6 +31,7 @@ import { FileText,
 import { SEO              } from '@/components/SEO';
 
 export default function AILegalDocumentAutomation(...args[]: any):  {
+
   const features = [
     'AI-powered contract analysis and generation',
     'Legal document template automation',
@@ -53,24 +54,28 @@ export default function AILegalDocumentAutomation(...args[]: any):  {
 
   const useCases = [
     {
+
       industry: 'Corporate Law',
       description: 'Automated contract generation and management for businesses',
       icon: Building,
       applications: ['M&A contracts', 'Employment agreements', 'Vendor contracts', 'NDAs']
     },
     {
+
       industry: 'Real Estate',
       description: 'Streamlined property transaction documentation',
       icon: Home,
       applications: ['Purchase agreements', 'Lease contracts', 'Title documents', 'Closing paperwork']
     },
     {
+
       industry: 'Healthcare',
       description: 'Compliance-focused medical practice documentation',
       icon: Heart,
       applications: ['Patient consent forms', 'HIPAA compliance', 'Medical contracts', 'Regulatory filings']
     },
     {
+
       industry: 'Startups & SMEs',
       description: 'Cost-effective legal document automation',
       icon: Rocket,
@@ -80,6 +85,7 @@ export default function AILegalDocumentAutomation(...args[]: any):  {
 
   const pricing = [
     {
+
       plan: 'Starter',
       price: '$299',
       period: '/month',
@@ -93,6 +99,7 @@ export default function AILegalDocumentAutomation(...args[]: any):  {
       recommended: false
     },
     {
+
       plan: 'Professional',
       price: '$799',
       period: '/month',
@@ -107,6 +114,7 @@ export default function AILegalDocumentAutomation(...args[]: any):  {
       recommended: true
     },
     {
+
       plan: 'Enterprise',
       price: '$1,999',
       period: '/month',
@@ -315,6 +323,7 @@ export default function AILegalDocumentAutomation(...args[]: any):  {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur border rounded-xl p-8 ${
+
                   plan.recommended 
                     ? 'border-blue-500/50 bg-blue-500/5' 
                     : 'border-slate-700/50'
@@ -348,6 +357,7 @@ export default function AILegalDocumentAutomation(...args[]: any):  {
                 <a
                   href="tel:+13024640950"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+
                     plan.recommended
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-400 hover:to-purple-500'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

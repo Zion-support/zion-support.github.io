@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
+import {
+
   Handshake, 
   Users, 
   Globe, 
@@ -25,10 +26,12 @@ import {
 } from 'lucide-react';
 
 export default function Partnerships() {
+
   const [selectedPartnership, setSelectedPartnership] = useState<string | null>(null);
 
   const partnershipTypes = [
     {
+
       id: 'technology-partners',
       title: 'Technology Partners',
       description: 'Integrate cutting-edge AI and quantum technologies into your solutions',
@@ -48,6 +51,7 @@ export default function Partnerships() {
       ]
     },
     {
+
       id: 'channel-partners',
       title: 'Channel Partners',
       description: 'Resell and implement our solutions in your markets',
@@ -67,6 +71,7 @@ export default function Partnerships() {
       ]
     },
     {
+
       id: 'strategic-partners',
       title: 'Strategic Partners',
       description: 'Deep collaboration on joint ventures and market expansion',
@@ -86,6 +91,7 @@ export default function Partnerships() {
       ]
     },
     {
+
       id: 'ecosystem-partners',
       title: 'Ecosystem Partners',
       description: 'Join our technology ecosystem and innovation network',
@@ -108,18 +114,21 @@ export default function Partnerships() {
 
   const successStories = [
     {
+
       company: 'TechCorp Global',
       partnership: 'Technology Partner',
       result: 'Integrated our AI platform, increasing efficiency by 300%',
       logo: '/images/partners/techcorp.png'
     },
     {
+
       company: 'InnovateTech Solutions',
       partnership: 'Channel Partner',
       result: 'Generated $2M in revenue through our solutions',
       logo: '/images/partners/innovatetech.png'
     },
     {
+
       company: 'FutureSystems Inc',
       partnership: 'Strategic Partner',
       result: 'Co-developed revolutionary AI platform',
@@ -129,24 +138,28 @@ export default function Partnerships() {
 
   const partnershipProcess = [
     {
+
       step: 1,
       title: 'Initial Discussion',
       description: 'Let\'s explore how we can work together',
       icon: MessageCircle
     },
     {
+
       step: 2,
       title: 'Partnership Assessment',
       description: 'Evaluate mutual benefits and alignment',
       icon: CheckCircle
     },
     {
+
       step: 3,
       title: 'Agreement & Onboarding',
       description: 'Formalize partnership and begin collaboration',
       icon: Handshake
     },
     {
+
       step: 4,
       title: 'Growth & Success',
       description: 'Scale together and achieve mutual success',

@@ -10,6 +10,7 @@ Your privacy is important to us. This policy explains how Zion Tech Group collec
 const draft = true;
 export { function };
 export default function PrivacyPolicy() {
+
   return()
     <>
       <SEO

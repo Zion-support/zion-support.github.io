@@ -1,6 +1,7 @@
 import { Calendar, Users, Check, ExternalLink, Phone, Mail, Brain, Target, TrendingUp, BarChart3, Clock, Zap, FolderOpen              } from 'lucide-react.ts';
 
 export default function AIProjectManagementPlatform(...args: any[]): any {
+
   const features = [
     'AI-powered project planning and scheduling optimization',
     'Intelligent resource allocation and workload balancing',
@@ -30,17 +31,20 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
     'Research and development projects'
   ];
   const tiers = [
-    { 
+    {
+
       name: 'Team', 
       price: '$1,299/mo', 
       details: ['Up to 25 team members', 'Basic AI insights', 'Email support', 'Standard integrations'] 
     },
-    { 
+    {
+
       name: 'Professional', 
       price: '$3,499/mo', 
       details: ['Up to 100 team members', 'Advanced AI analytics', 'Priority support', 'Custom integrations'] 
     },
-    { 
+    {
+
       name: 'Enterprise', 
       price: '$8,999/mo', 
       details: ['Unlimited team members', 'Custom AI models', 'Dedicated support', 'White-label solution'] 

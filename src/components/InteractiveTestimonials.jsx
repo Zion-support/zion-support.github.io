@@ -75,6 +75,7 @@ import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, Thu
 ];
 const categories = ['All',AI Infrastructure',Talent Matching',Research & Development',Startup Solutions',Global Operations'];
 export function InteractiveTestimonials() {
+
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -83,13 +84,17 @@ export function InteractiveTestimonials() {
         ? testimonials
         : testimonials.filter (testimonial => testimonial.category === selectedCategory) ;
     useEffect ( () => {
+
         if (!isAutoPlaying) return;
         const interval = setInterval ( () => {
+
             setCurrentIndex ( (prev) => (prev + 1) % filteredTestimonials.length) }, 5000) ;
         return () => clearInterval (interval) }, [isAutoPlaying, filteredTestimonials.length]) ;
     const nextTestimonial = () => {
+
         setCurrentIndex ( (prev) => (prev + 1) % filteredTestimonials.length) };
     const prevTestimonial = () => {
+
         setCurrentIndex ( (prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length) };
     const toggleLike = (testimonialId) => {
 

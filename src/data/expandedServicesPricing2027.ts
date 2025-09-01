@@ -2,6 +2,7 @@
 // Comprehensive pricing information for all expanded innovative services
 ;
 export interface ExpandedServicePricing {
+
   serviceId: string;
   serviceName: string;
   category: string;

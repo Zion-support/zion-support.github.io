@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default ComprehensiveServicesLanding2025;}}}}
 import {
+
 import { INNOVATIVE_SERVICES_2025 } from '../data / innovativeServices2025';
 import { motion } from 'framer - motion';
 import SEO from '../components / SEO';
@@ -124,11 +125,13 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
         <div className="max - w-7xl mx - auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -202,16 +205,19 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
             {featuredCategories.map ( (category, index) => (<motion.div
                 key={categoryData.category}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -259,16 +265,19 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
             {filteredCategories.map ( (category, index) => (<motion.div
                 key={category.id}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.05
 
@@ -326,16 +335,19 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
             {INNOVATIVE_SERVICES_2025.slice (0, 6) .map ( (service, index) => (<motion.div
                 key={service.id}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -423,21 +435,25 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
             {[
               {
+
                 icon: <Sparkles className="w - 8 h - 8" />,
                 title: 'Innovation First',
                 description: 'Leading - edge technology solutions that keep you ahead of the competition'
               },
               {
+
                 icon: <Target className="w - 8 h - 8" />,
                 title: 'Proven ROI',
                 description: 'Measurable business outcomes with transparent ROI projections'
               },
               {
+
                 icon: <Users className="w - 8 h - 8" />,
                 title: 'Expert Support',
                 description: '24 / 7 technical support and dedicated account management'
               },
               {
+
                 icon: <Shield className="w - 8 h - 8" />,
                 title: 'Enterprise Security',
                 description: 'Bank - grade security with compliance certifications and best practices'
@@ -446,16 +462,19 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -477,11 +496,13 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
         <div className="max - w-4xl mx - auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 

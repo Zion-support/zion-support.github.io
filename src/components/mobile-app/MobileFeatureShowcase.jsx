@@ -1,5 +1,6 @@
 import React from 'react';
 import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFeatureShowcase = () => {
+
   const features = [
     {
 

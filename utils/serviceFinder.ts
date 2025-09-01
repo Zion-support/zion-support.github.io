@@ -37,7 +37,9 @@ const allServiceArrays: ServiceRecord[][] = [
 	,real2029Q2Additions
 ];
 export function findServiceBySlug(slug: string): ServiceRecord | null {
+
 	for (const arr of allServiceArrays) {
+
 <<<<<<< HEAD
 		const hit = arr.find((s: any) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -48,6 +50,7 @@ export function findServiceBySlug(slug: string): ServiceRecord | null {
 					const url = new URL(s.link);
 					return url.pathname.replace(/^\/+|\/+$/g, '') === slug;
 				} catch {
+
 					return s.link.endsWith('/' + slug);
 
 
@@ -64,14 +67,18 @@ export function findServiceBySlug(slug: string): ServiceRecord | null {
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function listServicesByCategory(categoryIncludes: string): ServiceRecord[] {
+
 	const results: ServiceRecord[] = [];
 	for (const arr of allServiceArrays) {
+
 		for (const s of arr) {
+
 			if (s && typeof s.category = == 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {;
 				results.push(s);
 	// Deduplicate by id or link
 	const seen = new Set<string>();
 	return results.filter((s) => {
+
 		const key = s.id || s.link || s.name;
 		if (seen.has(key)) return false;
 		seen.add(key);

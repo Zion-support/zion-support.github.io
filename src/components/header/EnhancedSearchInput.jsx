@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export const EnhancedSearchInput = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -26,6 +27,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
   ];
 
   useEffect(() => {
+
     const handleClickOutside = (event) => {
 
       if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -38,6 +40,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
   useEffect(() => {
+
     if (searchQuery.trim()) {
 
       const filtered = allSuggestions.filter(suggestion =>
@@ -96,7 +99,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
       localStorage.setItem('recentSearches', JSON.stringify(newRecent));
 
       // Perform search (in a real app, this would navigate to search results)
-      // // // // // // // // console.log('Searching for:', query);
+      // // // // // // // // // // // console.log('Searching for:', query);
 
       // Close search
       setIsOpen(false);

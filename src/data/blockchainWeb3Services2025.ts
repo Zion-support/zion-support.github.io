@@ -1,4 +1,5 @@
 export interface BlockchainWeb3Service {
+
   id: string;
   title: string;
   description: string;
@@ -18,11 +19,13 @@ export interface BlockchainWeb3Service {
   roi: string;
   innovationLevel: string;
   contactInfo: {
+
     phone: string;
     email: string;
     website: string;
   };
   technicalSpecs?: {
+
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
@@ -38,6 +41,7 @@ export interface BlockchainWeb3Service {
 export const BLOCKCHAIN_WEB3_SERVICES_2025: BlockchainWeb3Service[] = [
   // DeFi Platform Development
   {
+
     id: 'defi-platform-development',
     title: 'DeFi Platform Development',
     description: 'Complete decentralized finance platform development including DEX, lending protocols, yield farming, and liquidity management solutions.',
@@ -88,11 +92,13 @@ export const BLOCKCHAIN_WEB3_SERVICES_2025: BlockchainWeb3Service[] = [
     roi: '300-800%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Solidity', 'Web3.js', 'React', 'Node.js', 'Ethereum', 'Polygon'],
       integrations: ['MetaMask', 'WalletConnect', 'Chainlink', 'Uniswap', 'Aave'],
       apiEndpoints: 100,
@@ -107,6 +113,7 @@ export const BLOCKCHAIN_WEB3_SERVICES_2025: BlockchainWeb3Service[] = [
 
   // NFT Marketplace Platform
   {
+
     id: 'nft-marketplace-platform',
     title: 'NFT Marketplace Platform',
     description: 'Complete NFT marketplace platform with minting, trading, auctions, and royalty distribution capabilities for digital assets.',
@@ -157,11 +164,13 @@ export const BLOCKCHAIN_WEB3_SERVICES_2025: BlockchainWeb3Service[] = [
     roi: '250-600%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Solidity', 'IPFS', 'React', 'Node.js', 'Ethereum', 'Polygon'],
       integrations: ['MetaMask', 'OpenSea API', 'IPFS', 'Arweave', 'WalletConnect'],
       apiEndpoints: 80,
@@ -176,6 +185,7 @@ export const BLOCKCHAIN_WEB3_SERVICES_2025: BlockchainWeb3Service[] = [
 
   // Smart Contract Development
   {
+
     id: 'smart-contract-development',
     title: 'Smart Contract Development Services',
     description: 'Professional smart contract development, auditing, and deployment services for blockchain applications and DeFi protocols.',
@@ -226,11 +236,13 @@ export const BLOCKCHAIN_WEB3_SERVICES_2025: BlockchainWeb3Service[] = [
     roi: '200-500%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Solidity', 'Vyper', 'Hardhat', 'Truffle', 'OpenZeppelin'],
       integrations: ['Chainlink', 'IPFS', 'The Graph', 'Etherscan', 'Polygon'],
       apiEndpoints: 60,
@@ -245,6 +257,7 @@ export const BLOCKCHAIN_WEB3_SERVICES_2025: BlockchainWeb3Service[] = [
 
   // Web3 Infrastructure
   {
+
     id: 'web3-infrastructure-platform',
     title: 'Web3 Infrastructure Platform',
     description: 'Comprehensive Web3 infrastructure platform providing node services, API endpoints, and development tools for blockchain applications.',
@@ -295,11 +308,13 @@ export const BLOCKCHAIN_WEB3_SERVICES_2025: BlockchainWeb3Service[] = [
     roi: '150-300%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Ethereum', 'Polygon', 'BSC', 'Solana', 'Rust', 'Go'],
       integrations: ['MetaMask', 'WalletConnect', 'Chainlink', 'The Graph'],
       apiEndpoints: 200,
@@ -314,6 +329,7 @@ export const BLOCKCHAIN_WEB3_SERVICES_2025: BlockchainWeb3Service[] = [
 
   // DAO Governance Platform
   {
+
     id: 'dao-governance-platform',
     title: 'DAO Governance Platform',
     description: 'Complete DAO governance platform with voting mechanisms, proposal management, and treasury management for decentralized organizations.',
@@ -364,11 +380,13 @@ export const BLOCKCHAIN_WEB3_SERVICES_2025: BlockchainWeb3Service[] = [
     roi: '200-500%',
     innovationLevel: 'Advanced',
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
       technology: ['Solidity', 'React', 'Node.js', 'Ethereum', 'IPFS'],
       integrations: ['Snapshot', 'Gnosis Safe', 'Discord', 'Discourse', 'Telegram'],
       apiEndpoints: 70,

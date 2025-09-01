@@ -7,11 +7,13 @@ import { TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target 
 import { Button } from "./button";
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetricClick, className = '' }) {
+
     const [showTargets, setShowTargets] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
     const [selectedMetric, setSelectedMetric] = useState(null);
     // Mock analytics data
     const [metrics, setMetrics] = useState({
+
         totalUsers: 12450,
         activeUsers: 8920,
         revenue: 456780,
@@ -19,10 +21,13 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
     });
     // Simulate real-time data updates
     useEffect(() => {
+
         if (!enabled || !isExpanded)
             return;
         const interval = setInterval(() => {
+
             setMetrics(prev => ({
+
                 ...prev,
                 revenue: prev.revenue + Math.floor(Math.random() * 1000) - 500,
                 growth: prev.growth + (Math.random() * 2 - 1)
@@ -30,18 +35,22 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
         return () => clearInterval(interval)}, [enabled, isExpanded]);
     // Handle metric click
     const handleMetricClick = useCallback((metricId) => {
+
         setSelectedMetric(metricId);
         onMetricClick?.(metricId)}, [onMetricClick]);
     // Calculate progress percentage
     const calculateProgress = (current, target) => {
+
         return Math.min((current / target) * 100, 100)};
     // Refresh data
     const refreshData = useCallback(async () => {
+
         setIsLoading(true);
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1000));
         // Update metrics with some randomization
         setMetrics(prev => ({
+
             ...prev,
             totalUsers: prev.totalUsers + Math.floor(Math.random() * 100) - 50,
             activeUsers: prev.activeUsers + Math.floor(Math.random() * 50) - 25,
@@ -52,6 +61,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
     if (!enabled)
         return null;
     return (<motion.div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -61,6 +71,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -112,6 +123,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
               </div>
               <div className="w-full bg-zinc-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full transition-all duration-500" style = {
+
   { width: `${calculateProgress(metrics.totalUsers,
   15000)
 
@@ -145,6 +157,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
               </div>
               <div className="w-full bg-zinc-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-500" style = {
+
   { width: `${calculateProgress(metrics.activeUsers,
   12000)
 
@@ -178,6 +191,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
               </div>
               <div className="w-full bg-zinc-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-500" style = {
+
   { width: `${calculateProgress(metrics.revenue,
   500000)
 
@@ -211,6 +225,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
               </div>
               <div className="w-full bg-zinc-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full transition-all duration-500" style = {
+
   { width: `${calculateProgress(metrics.growth,
   25)
 
@@ -228,6 +243,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
       {/* Selected Metric Details */}
       <AnimatePresence>
         {selectedMetric && (<motion.div className="bg-zion-blue/10 border border-zion-blue-light/20 rounded-lg p-4" initial = {
+
   { opacity: 0,
   height: 0 
 
@@ -237,6 +253,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
 
 
 }} animate = {
+
   { opacity: 1,
   height: 'auto' 
 
@@ -246,6 +263,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
 
 
 }} exit = {
+
   { opacity: 0,
   height: 0 
 

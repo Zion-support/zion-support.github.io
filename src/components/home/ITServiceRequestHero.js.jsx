@@ -18,6 +18,7 @@ export function ITServiceRequestHero() {
       setIsSubmitting(true);
       // Simulate API call
       setTimeout(() => {
+
         setIsSubmitting(false);
         router(`/it-onsite-services?location=${encodeURIComponent(location)}`);
       }, 1000);

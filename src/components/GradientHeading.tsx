@@ -7,6 +7,7 @@ export { GradientHeading };
 >>>>>>> main
 
 interface GradientHeadingProps {
+
   // Add your props here
 
 

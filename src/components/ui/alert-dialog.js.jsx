@@ -1,14 +1,19 @@
 import React, { createContext, useContext, useState } from 'react';
 const AlertDialog({ children, open, onOpenChange }) {
+
     const [internalOpen, setInternalOpen] = useState(false);
     const isOpen = isControlled ? open : internalOpen;
     const setIsOpen = (newOpen) => {
+
         if (!isControlled) {
+
             setInternalOpen(newOpen)}
         if (onOpenChange) {
+
             onOpenChange(newOpen)}
     };
     return (<AlertDialogContext.Provider value = {
+
   { isOpen,
   setIsOpen 
 
@@ -18,6 +23,7 @@ const AlertDialog({ children, open, onOpenChange }) {
       </div>
     </AlertDialogContext.Provider>)}
 export function AlertDialogTrigger({ children }) {
+
     const context = useContext(AlertDialogContext);
     if (!context)
         throw new Error('AlertDialogTrigger must be used within AlertDialog');
@@ -25,6 +31,7 @@ export function AlertDialogTrigger({ children }) {
       {children}
     </div>)}
 export function AlertDialogContent({ children, className = '' }) {
+
     const context = useContext(AlertDialogContext);
     if (!context)
         throw new Error('AlertDialogContent must be used within AlertDialog');
@@ -37,10 +44,12 @@ export function AlertDialogContent({ children, className = '' }) {
       </div>
     </div>)}
 export function AlertDialogAction({ children, onClick, className = '' }) {
+
     const context = useContext(AlertDialogContext);
     if (!context)
         throw new Error('AlertDialogAction must be used within AlertDialog');
     const handleClick = () => {
+
         if (onClick)
             onClick();
         context.setIsOpen(false)};
@@ -48,6 +57,7 @@ export function AlertDialogAction({ children, onClick, className = '' }) {
       {children}
     </button>)}
 export function AlertDialogCancel({ children, className = '' }) {
+
     const context = useContext(AlertDialogContext);
     if (!context)
         throw new Error('AlertDialogCancel must be used within AlertDialog');

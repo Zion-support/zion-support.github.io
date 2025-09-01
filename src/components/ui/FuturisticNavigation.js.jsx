@@ -3,12 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Home, Briefcase, Users, Phone, Globe, Zap, Brain, Shield, Rocket, ChevronDown } from 'lucide-react';
 const navigationItems = [
     {
+
         name: 'Home',
         href: '/',
         icon: <Home className="w-5 h-5"/>,
         description: 'Welcome to the future'
     },
     {
+
         name: 'Services',
         href: '/services',
         icon: <Briefcase className="w-5 h-5"/>,
@@ -22,12 +24,14 @@ const navigationItems = [
         ]
     },
     {
+
         name: 'About',
         href: '/about',
         icon: <Users className="w-5 h-5"/>,
         description: 'Our mission and vision'
     },
     {
+
         name: 'Contact',
         href: '/contact',
         icon: <Phone className="w-5 h-5"/>,
@@ -35,11 +39,14 @@ const navigationItems = [
     }
 ];
 export default function FuturisticNavigation() {
+
     const [isOpen, setIsOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [scrolled, setScrolled] = useState(false);
     useEffect(() => {
+
         const handleScroll = () => {
+
             setScrolled(window.scrollY > 20)};
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll)}, []);
@@ -55,10 +62,12 @@ export default function FuturisticNavigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div initial = {
+
   { opacity: 0,
   x: -20 
 
 }} animate = {
+
   { opacity: 1,
   x: 0 
 
@@ -81,10 +90,12 @@ export default function FuturisticNavigation() {
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item, index) => (<div key={item.name} className="relative group">
                 <motion.button initial = {
+
   { opacity: 0,
   y: -20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -96,14 +107,17 @@ export default function FuturisticNavigation() {
 
                 {/* Dropdown Menu */}
                 {item.children && activeDropdown === item.name && (<motion.div initial = {
+
   { opacity: 0, y: 10,
   scale: 0.95 
 
 }} animate = {
+
   { opacity: 1, y: 0,
   scale: 1 
 
 }} exit = {
+
   { opacity: 0, y: 10,
   scale: 0.95 
 
@@ -120,10 +134,12 @@ export default function FuturisticNavigation() {
 
           {/* CTA Button */}
           <motion.div initial = {
+
   { opacity: 0,
   x: 20 
 
 }} animate = {
+
   { opacity: 1,
   x: 0 
 
@@ -145,14 +161,17 @@ export default function FuturisticNavigation() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (<motion.div initial = {
+
   { opacity: 0,
   height: 0 
 
 }} animate = {
+
   { opacity: 1,
   height: 'auto' 
 
 }} exit = {
+
   { opacity: 0,
   height: 0 
 

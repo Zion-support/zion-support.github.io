@@ -66,15 +66,18 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
     { id: any'AI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter (s  => s.category === 'AI & Business Process') .length },;
   ];
 
-  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025
+  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
     .filter (service => {
+
       const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
                            service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
                            service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
     }) .sort ( (a, b) => {
+
       switch (sortBy) {
+
         case 'name':
           return a.title.localeCompare (b.title) ;
         case 'price':
@@ -92,7 +95,9 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
     if (selectedServices.includes (serviceId) ) {;
       setSelectedServices (selectedServices.filter (id => id !== serviceId) ) ;
     } else {
+
       if (selectedServices.length < 5) {
+
         setSelectedServices ([...selectedServices, serviceId]) ;
       }
     }
@@ -102,11 +107,13 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
     if (expandedFeatures.includes (feature) ) {;
       setExpandedFeatures (expandedFeatures.filter (f => f !== feature) ) ;
     } else {
+
       setExpandedFeatures ([...expandedFeatures, feature]) ;
     }
   };
 
   const getInnovationColor = (level: anystring) => {
+
     switch (level) {;
       case 'Revolutionary':;
         return 'text - purple - 600 bg - purple - 100 border - purple - 200';
@@ -147,11 +154,13 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
         <div role="button" className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -268,6 +277,7 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
               <div role="button" className="flex items - center gap - 2">
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('matrix') }
                   className={`p - 2 rounded - lg transition - colors ${
+
                     viewMode === 'matrix'
                       ? 'bg - blue - 100 text - blue - 600'
                       : 'bg - gray - 100 text - gray - 600 hover:bg - gray - 200'
@@ -277,6 +287,7 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
                 </button>
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`p - 2 rounded - lg transition - colors ${
+
                     viewMode === 'list'
                       ? 'bg - blue - 100 text - blue - 600'
                       : 'bg - gray - 100 text - gray - 600 hover:bg - gray - 200'
@@ -322,17 +333,20 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
             {filteredServices.map ( (service) => (<motion.div
                 key={service.id}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition={{ duration: 0.3 }}
                 className={`p - 4 border rounded - lg cursor - pointer transition - all duration - 200 ${
+
                   selectedServices.includes (service.id) ? 'border - blue - 500 bg - blue - 50 shadow - md'
                     : 'border - gray - 200 bg - white hover:border - gray - 300 hover:shadow - sm'
                 }`}
@@ -518,16 +532,19 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
               {selectedServicesData.map ( (service, index) => (<motion.div
                   key={service?.id}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -625,11 +642,13 @@ const ServicesComparisonMatrix2025: React.FC = () : JSX.Element => {;
         <div role="button" className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 16 text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

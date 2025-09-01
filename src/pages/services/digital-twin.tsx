@@ -3,6 +3,7 @@ import { Helmet               } from 'react-helmet-async.ts';
 import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
 export default function DigitalTwin(...args: []):  {
+
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -10,6 +11,7 @@ import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, D
 import { Link } from 'react-router-dom';
 
 export default function DigitalTwin() {
+
   return (
     <>
       <Helmet>
@@ -70,31 +72,37 @@ export default function DigitalTwin() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
+
                   icon: Cpu,
                   title: "Real-time Monitoring",
                   description: "Continuous monitoring of physical assets with instant virtual representation updates."
                 },
                 {
+
                   icon: Eye,
                   title: "Predictive Analytics",
                   description: "AI-powered predictions for maintenance, performance, and failure prevention."
                 },
                 {
+
                   icon: Zap,
                   title: "Simulation & Testing",
                   description: "Test scenarios and changes in the virtual environment before physical implementation."
                 },
                 {
+
                   icon: Settings,
                   title: "Performance Optimization",
                   description: "Identify bottlenecks and optimize operations based on digital twin insights."
                 },
                 {
+
                   icon: Users,
                   title: "Collaborative Planning",
                   description: "Enable teams to work together on virtual models and simulations."
                 },
                 {
+
                   icon: Globe,
                   title: "IoT Integration",
                   description: "Seamlessly connect with IoT sensors and devices for real-time data."
@@ -115,36 +123,42 @@ export default function DigitalTwin() {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
+
                   title: "Manufacturing",
                   description: "Monitor production lines, predict maintenance, and optimize manufacturing processes.",
                   icon: Settings,
                   benefits: ["Production monitoring", "Predictive maintenance", "Quality control"]
                 },
                 {
+
                   title: "Smart Cities",
                   description: "Manage urban infrastructure, traffic systems, and public services efficiently.",
                   icon: Globe,
                   benefits: ["Traffic optimization", "Infrastructure monitoring", "Public services"]
                 },
                 {
+
                   title: "Healthcare",
                   description: "Patient monitoring, medical device management, and treatment optimization.",
                   icon: Users,
                   benefits: ["Patient monitoring", "Device management", "Treatment optimization"]
                 },
                 {
+
                   title: "Energy & Utilities",
                   description: "Grid monitoring, renewable energy optimization, and infrastructure management.",
                   icon: Zap,
                   benefits: ["Grid monitoring", "Energy optimization", "Infrastructure management"]
                 },
                 {
+
                   title: "Transportation",
                   description: "Fleet management, route optimization, and vehicle performance monitoring.",
                   icon: Target,
                   benefits: ["Fleet management", "Route optimization", "Performance monitoring"]
                 },
                 {
+
                   title: "Buildings & Facilities",
                   description: "Building management, energy efficiency, and maintenance optimization.",
                   icon: Activity,

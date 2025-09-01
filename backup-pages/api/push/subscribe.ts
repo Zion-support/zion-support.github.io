@@ -25,18 +25,23 @@ interface ErrorResponse {
 }
 
 export default async function handler(
-  req: NextApiRequest, 
+  req: NextApiRequest,
   res: NextApiResponse<MutationSuccessResponse | ErrorResponse>
 ) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: `Method ${req.method} Not Allowed`});
+    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 
   const subscription = req.body as PushSubscriptionRequestBody;
 
   // Basic validation for the subscription object
-  if (!subscription || !subscription.endpoint || !subscription.keys?.p256dh || !subscription.keys?.auth) {
+  if (
+    !subscription ||
+    !subscription.endpoint ||
+    !subscription.keys?.p256dh ||
+    !subscription.keys?.auth
+  ) {
     console.error('Invalid push subscription object received:', subscription);
     return res.status(400).json({ error: 'Invalid push subscription object.' });
   }
@@ -50,7 +55,7 @@ export default async function handler(
   // await saveSubscriptionToDb(userId, subscription);
 
   console.log('Push subscription received and validated:', subscription);
-  
+
   // Respond with success
   res.status(200).json({ success: true, message: 'Subscription received.' });
 }

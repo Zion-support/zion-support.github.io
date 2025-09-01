@@ -22,6 +22,7 @@ export const ThemeToggle = () => {
   }, []) ;
 
   const toggleTheme = () => {
+
     const newTheme = !isDark;
     setIsDark(newTheme);
 

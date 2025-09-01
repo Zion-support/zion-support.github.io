@@ -1,6 +1,7 @@
 import React, { useEffect, useCallback, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Eye, 
   EyeOff, 
   Volume2, 
@@ -17,6 +18,7 @@ import {
 } from 'lucide-react';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -26,6 +28,7 @@ interface AccessibilitySettings {
 }
 
 interface AccessibilityEnhancerProps {
+
   enableHighContrast?: boolean;
   enableLargeText?: boolean;
   enableReducedMotion?: boolean;
@@ -35,22 +38,23 @@ interface AccessibilityEnhancerProps {
 }
 
 export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+
   enableHighContrast = true,
   enableLargeText = true,
   enableReducedMotion = true,
   enableScreenReader = true,
   enableKeyboardNavigation = true,
-  enableFocusIndicators = true,
-}) => {
+  enableFocusIndicators = true}) => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
+
     highContrast: false,
     largeText: false,
     reducedMotion: false,
     screenReader: false,
     keyboardNavigation: false,
-    focusIndicators: false,
-  });
+    focusIndicators: false});
   const [announcements, setAnnouncements] = useState<string[]>([]);
   const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
   
@@ -59,25 +63,30 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   // Announce changes to screen readers
   const announce = useCallback((message: string) => {
+
     if (!settings.screenReader) return;
     
     setAnnouncements(prev => [...prev, message]);
     
     // Remove announcement after 5 seconds
     setTimeout(() => {
+
       setAnnouncements(prev => prev.filter(msg => msg !== message));
     }, 5000);
   }, [settings.screenReader]);
 
   // High contrast mode
   const toggleHighContrast = useCallback(() => {
+
     const newValue = !settings.highContrast;
     setSettings(prev => ({ ...prev, highContrast: newValue }));
     
     if (newValue) {
+
       document.documentElement.classList.add('high-contrast');
       announce('High contrast mode enabled');
     } else {
+
       document.documentElement.classList.remove('high-contrast');
       announce('High contrast mode disabled');
     }
@@ -85,13 +94,16 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   // Large text mode
   const toggleLargeText = useCallback(() => {
+
     const newValue = !settings.largeText;
     setSettings(prev => ({ ...prev, largeText: newValue }));
     
     if (newValue) {
+
       document.documentElement.classList.add('large-text');
       announce('Large text mode enabled');
     } else {
+
       document.documentElement.classList.remove('large-text');
       announce('Large text mode disabled');
     }
@@ -99,13 +111,16 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   // Reduced motion mode
   const toggleReducedMotion = useCallback(() => {
+
     const newValue = !settings.reducedMotion;
     setSettings(prev => ({ ...prev, reducedMotion: newValue }));
     
     if (newValue) {
+
       document.documentElement.classList.add('reduced-motion');
       announce('Reduced motion mode enabled');
     } else {
+
       document.documentElement.classList.remove('reduced-motion');
       announce('Reduced motion mode disabled');
     }
@@ -113,25 +128,31 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   // Screen reader mode
   const toggleScreenReader = useCallback(() => {
+
     const newValue = !settings.screenReader;
     setSettings(prev => ({ ...prev, screenReader: newValue }));
     
     if (newValue) {
+
       announce('Screen reader mode enabled');
     } else {
+
       announce('Screen reader mode disabled');
     }
   }, [settings.screenReader, announce]);
 
   // Keyboard navigation mode
   const toggleKeyboardNavigation = useCallback(() => {
+
     const newValue = !settings.keyboardNavigation;
     setSettings(prev => ({ ...prev, keyboardNavigation: newValue }));
     
     if (newValue) {
+
       document.documentElement.classList.add('keyboard-navigation');
       announce('Keyboard navigation mode enabled');
     } else {
+
       document.documentElement.classList.remove('keyboard-navigation');
       announce('Keyboard navigation mode disabled');
     }
@@ -139,13 +160,16 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   // Focus indicators mode
   const toggleFocusIndicators = useCallback(() => {
+
     const newValue = !settings.focusIndicators;
     setSettings(prev => ({ ...prev, focusIndicators: newValue }));
     
     if (newValue) {
+
       document.documentElement.classList.add('focus-indicators');
       announce('Focus indicators enabled');
     } else {
+
       document.documentElement.classList.remove('focus-indicators');
       announce('Focus indicators disabled');
     }
@@ -153,18 +177,22 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   // Focus management
   const handleFocusChange = useCallback((event: FocusEvent) => {
+
     const target = event.target as HTMLElement;
     if (target && target !== currentFocus) {
+
       setCurrentFocus(target);
       focusHistoryRef.current.push(target);
       
       // Keep only last 10 focus changes
       if (focusHistoryRef.current.length > 10) {
+
         focusHistoryRef.current.shift();
       }
       
       // Announce focus changes for screen readers
       if (settings.screenReader && target.getAttribute('aria-label')) {
+
         announce(`Focused on ${target.getAttribute('aria-label')}`);
       }
     }
@@ -172,6 +200,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   // Skip links for keyboard navigation
   const createSkipLinks = useCallback(() => {
+
     if (!skipLinksRef.current) return;
     
     const skipLinks = [
@@ -191,24 +220,28 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   // Enhanced keyboard navigation
   const handleKeyboardNavigation = useCallback((event: KeyboardEvent) => {
+
     if (!settings.keyboardNavigation) return;
     
     const { key, ctrlKey, altKey, shiftKey } = event;
     
     // Navigation shortcuts
     if (altKey && key === 'h') {
+
       event.preventDefault();
       document.querySelector('header')?.focus();
       announce('Navigated to header');
     }
     
     if (altKey && key === 'm') {
+
       event.preventDefault();
       document.querySelector('main')?.focus();
       announce('Navigated to main content');
     }
     
     if (altKey && key === 'f') {
+
       event.preventDefault();
       document.querySelector('footer')?.focus();
       announce('Navigated to footer');
@@ -216,9 +249,11 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     
     // Search shortcut
     if (ctrlKey && key === 'k') {
+
       event.preventDefault();
       const searchInput = document.querySelector('input[type="search"], input[placeholder*="search"]') as HTMLInputElement;
       if (searchInput) {
+
         searchInput.focus();
         announce('Search input focused');
       }
@@ -226,6 +261,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     
     // Help shortcut
     if (key === 'F1') {
+
       event.preventDefault();
       setIsOpen(true);
       announce('Accessibility menu opened');
@@ -234,6 +270,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   // Initialize accessibility features
   useEffect(() => {
+
     // Create skip links
     createSkipLinks();
     
@@ -246,6 +283,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     // Check user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) {
+
       setSettings(prev => ({ ...prev, reducedMotion: true }));
       document.documentElement.classList.add('reduced-motion');
     }
@@ -253,11 +291,13 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     // Check high contrast preference
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     if (prefersHighContrast) {
+
       setSettings(prev => ({ ...prev, highContrast: true }));
       document.documentElement.classList.add('high-contrast');
     }
     
     return () => {
+
       document.removeEventListener('focusin', handleFocusChange);
       document.removeEventListener('keydown', handleKeyboardNavigation);
     };
@@ -309,6 +349,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   <button
                     onClick={toggleHighContrast}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                       settings.highContrast ? 'bg-blue-600' : 'bg-gray-200'
                     }`}
                     role="switch"
@@ -317,6 +358,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   >
                     <span
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                         settings.highContrast ? 'translate-x-6' : 'translate-x-1'
                       }`}
                     />
@@ -331,6 +373,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   <button
                     onClick={toggleLargeText}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                       settings.largeText ? 'bg-blue-600' : 'bg-gray-200'
                     }`}
                     role="switch"
@@ -339,6 +382,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   >
                     <span
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                         settings.largeText ? 'translate-x-6' : 'translate-x-1'
                       }`}
                     />
@@ -353,6 +397,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   <button
                     onClick={toggleReducedMotion}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                       settings.reducedMotion ? 'bg-blue-600' : 'bg-gray-200'
                     }`}
                     role="switch"
@@ -361,6 +406,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   >
                     <span
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                         settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
                       }`}
                     />
@@ -379,6 +425,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   <button
                     onClick={toggleKeyboardNavigation}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                       settings.keyboardNavigation ? 'bg-blue-600' : 'bg-gray-200'
                     }`}
                     role="switch"
@@ -387,6 +434,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   >
                     <span
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                         settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'
                       }`}
                     />
@@ -401,6 +449,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   <button
                     onClick={toggleFocusIndicators}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                       settings.focusIndicators ? 'bg-blue-600' : 'bg-gray-200'
                     }`}
                     role="switch"
@@ -409,6 +458,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   >
                     <span
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                         settings.focusIndicators ? 'translate-x-6' : 'translate-x-1'
                       }`}
                     />
@@ -423,6 +473,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   <button
                     onClick={toggleScreenReader}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                       settings.screenReader ? 'bg-blue-600' : 'bg-gray-200'
                     }`}
                     role="switch"
@@ -431,6 +482,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   >
                     <span
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                         settings.screenReader ? 'translate-x-6' : 'translate-x-1'
                       }`}
                     />

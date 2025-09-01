@@ -34,28 +34,34 @@ import { Shield,
              } from 'lucide-react.ts';
 
 const ZeroTrustNetworkAccess = () => {
+
   const features = [
     {
+
       icon: Shield,
       title: 'Identity Verification',
       description: 'Multi-factor authentication and continuous identity validation'
     },
     {
+
       icon: Lock,
       title: 'Least Privilege Access',
       description: 'Granular access controls based on user context and needs'
     },
     {
+
       icon: Eye,
       title: 'Continuous Monitoring',
       description: 'Real-time monitoring of all network activities and access patterns'
     },
     {
+
       icon: Network,
       title: 'Micro-segmentation',
       description: 'Network segmentation at the application and workload level'
     },
     {
+
       icon: Key,
       title: 'Encrypted Communication',
       description: 'End-to-end encryption for all data in transit and at rest';
@@ -78,14 +84,17 @@ const ZeroTrustNetworkAccess = () => {
 
   const useCases = [
     {
+
       industry: 'Financial Services',
       description: 'Secure access to banking systems and customer data'
     },
     {
+
       industry: 'Healthcare',
       description: 'Protected access to patient records and medical systems'
     },
     {
+
       industry: 'Government',;
       description: 'Secure access to classified systems and citizen data';
     },;
@@ -97,16 +106,19 @@ const ZeroTrustNetworkAccess = () => {
 
   const securityLayers = [
     {
+
       icon: Fingerprint,
       title: 'User Identity',
       description: 'Multi-factor authentication, biometric verification, and behavioral analytics'
     },
     {
+
       icon: Device,
       title: 'Device Security',
       description: 'Device health checks, compliance validation, and security posture assessment'
     },
     {
+
       icon: Globe2,
       title: 'Network Security',
       description: 'Encrypted tunnels, micro-segmentation, and traffic inspection';
@@ -126,6 +138,7 @@ const ZeroTrustNetworkAccess = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -136,6 +149,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -182,6 +196,7 @@ const ZeroTrustNetworkAccess = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -192,6 +207,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -218,6 +234,7 @@ const ZeroTrustNetworkAccess = () => {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -228,6 +245,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -238,6 +256,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -265,6 +284,7 @@ const ZeroTrustNetworkAccess = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -275,6 +295,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -301,6 +322,7 @@ const ZeroTrustNetworkAccess = () => {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
@@ -311,6 +333,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -321,6 +344,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -352,6 +376,7 @@ const ZeroTrustNetworkAccess = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -362,6 +387,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -388,6 +414,7 @@ const ZeroTrustNetworkAccess = () => {
                 <motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   x: -20 
 
@@ -398,6 +425,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
                   whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -408,6 +436,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -429,6 +458,7 @@ const ZeroTrustNetworkAccess = () => {
                 <motion.div
                   key={index + 3}
                   initial = {
+
   { opacity: 0,
   x: 20 
 
@@ -439,6 +469,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
                   whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -449,6 +480,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -474,6 +506,7 @@ const ZeroTrustNetworkAccess = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -484,6 +517,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -510,6 +544,7 @@ const ZeroTrustNetworkAccess = () => {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -520,6 +555,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -530,6 +566,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -557,6 +594,7 @@ const ZeroTrustNetworkAccess = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -567,6 +605,7 @@ const ZeroTrustNetworkAccess = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

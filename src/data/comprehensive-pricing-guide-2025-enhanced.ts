@@ -2,6 +2,7 @@
 // Includes all advanced AI services, micro SAAS solutions, and IT services
 
 export interface EnhancedPricingTier {
+
   name: string;
   price: string;
   billing: 'monthly' | 'yearly' | 'one-time' | 'per-user';
@@ -13,6 +14,7 @@ export interface EnhancedPricingTier {
 }
 
 export interface EnhancedServicePricing {
+
   id: string;
   name: string;
   category: string;
@@ -27,6 +29,7 @@ export interface EnhancedServicePricing {
   marketPosition: string;
   competitors: string[];
   contactInfo: {
+
     mobile: string;
     email: string;
     address: string;
@@ -45,6 +48,7 @@ export interface EnhancedServicePricing {
 }
 
 const CONTACT_INFO = {
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -54,6 +58,7 @@ const CONTACT_INFO = {
 export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
   // AI Business Intelligence & Analytics
   {
+
     id: 'ai-business-intelligence-platform',
     name: 'AI Business Intelligence & Predictive Analytics Platform',
     category: 'AI & Analytics',
@@ -61,6 +66,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
     description: 'Advanced BI platform that combines machine learning with traditional analytics to provide predictive insights, automated reporting, and intelligent data visualization for business decision-making.',
     pricing: [
       {
+
         name: 'Starter',
         price: '$1,299',
         billing: 'monthly',
@@ -76,6 +82,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         ]
       },
       {
+
         name: 'Professional',
         price: '$2,499',
         billing: 'monthly',
@@ -93,6 +100,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         savings: 'Save 20% with annual billing'
       },
       {
+
         name: 'Enterprise',
         price: 'Custom',
         billing: 'monthly',
@@ -145,6 +153,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
 
   // AI Compliance & Risk Management
   {
+
     id: 'ai-compliance-risk-management',
     name: 'AI Compliance & Risk Management Platform',
     category: 'AI & Compliance',
@@ -152,6 +161,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
     description: 'Comprehensive compliance platform that uses AI to monitor regulatory changes, assess risks, automate compliance reporting, and ensure adherence to industry standards across multiple jurisdictions.',
     pricing: [
       {
+
         name: 'Basic',
         price: '$899',
         billing: 'monthly',
@@ -166,6 +176,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         ]
       },
       {
+
         name: 'Professional',
         price: '$1,499',
         billing: 'monthly',
@@ -183,6 +194,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         savings: 'Save 25% with annual billing'
       },
       {
+
         name: 'Enterprise',
         price: 'Custom',
         billing: 'monthly',
@@ -235,6 +247,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
 
   // AI Sales & Marketing Automation
   {
+
     id: 'ai-sales-marketing-automation',
     name: 'AI Sales & Marketing Automation Suite',
     category: 'AI & Marketing',
@@ -242,6 +255,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
     description: 'End-to-end sales and marketing automation platform that uses AI to optimize lead generation, personalize customer journeys, automate follow-ups, and increase conversion rates.',
     pricing: [
       {
+
         name: 'Starter',
         price: '$799',
         billing: 'monthly',
@@ -257,6 +271,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         ]
       },
       {
+
         name: 'Professional',
         price: '$1,499',
         billing: 'monthly',
@@ -275,6 +290,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         savings: 'Save 20% with annual billing'
       },
       {
+
         name: 'Enterprise',
         price: 'Custom',
         billing: 'monthly',
@@ -327,6 +343,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
 
   // AI Customer Experience Platform
   {
+
     id: 'ai-customer-experience-platform',
     name: 'AI Customer Experience & Support Platform',
     category: 'AI & Customer Service',
@@ -334,6 +351,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
     description: 'Comprehensive customer experience platform that combines AI-powered support automation, sentiment analysis, customer journey optimization, and predictive analytics to enhance customer satisfaction and loyalty.',
     pricing: [
       {
+
         name: 'Starter',
         price: '$649',
         billing: 'monthly',
@@ -348,6 +366,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         ]
       },
       {
+
         name: 'Professional',
         price: '$1,199',
         billing: 'monthly',
@@ -366,6 +385,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         savings: 'Save 20% with annual billing'
       },
       {
+
         name: 'Enterprise',
         price: 'Custom',
         billing: 'monthly',
@@ -418,6 +438,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
 
   // AI Financial Technology Solutions
   {
+
     id: 'ai-fintech-solutions',
     name: 'AI Financial Technology & Trading Platform',
     category: 'AI & Fintech',
@@ -425,6 +446,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
     description: 'Advanced fintech platform that combines AI-powered trading algorithms, risk management, fraud detection, and financial analytics to optimize investment decisions and operational efficiency.',
     pricing: [
       {
+
         name: 'Professional',
         price: '$1,999',
         billing: 'monthly',
@@ -440,6 +462,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         ]
       },
       {
+
         name: 'Advanced',
         price: '$3,999',
         billing: 'monthly',
@@ -457,6 +480,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         savings: 'Save 25% with annual billing'
       },
       {
+
         name: 'Enterprise',
         price: 'Custom',
         billing: 'monthly',
@@ -509,6 +533,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
 
   // AI Healthcare Solutions
   {
+
     id: 'ai-healthcare-solutions',
     name: 'AI Healthcare & Medical Analytics Platform',
     category: 'AI & Healthcare',
@@ -516,6 +541,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
     description: 'Comprehensive healthcare platform that uses AI to analyze medical data, predict patient outcomes, optimize treatment plans, and improve healthcare delivery efficiency while maintaining strict privacy and compliance standards.',
     pricing: [
       {
+
         name: 'Clinical',
         price: '$1,499',
         billing: 'monthly',
@@ -531,6 +557,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         ]
       },
       {
+
         name: 'Professional',
         price: '$2,999',
         billing: 'monthly',
@@ -549,6 +576,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         savings: 'Save 20% with annual billing'
       },
       {
+
         name: 'Enterprise',
         price: 'Custom',
         billing: 'monthly',
@@ -601,6 +629,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
 
   // AI Manufacturing & IoT
   {
+
     id: 'ai-manufacturing-iot',
     name: 'AI Manufacturing & IoT Intelligence Platform',
     category: 'AI & Manufacturing',
@@ -608,6 +637,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
     description: 'Advanced manufacturing platform that combines AI, IoT sensors, and predictive analytics to optimize production processes, reduce downtime, improve quality control, and enable predictive maintenance.',
     pricing: [
       {
+
         name: 'Production',
         price: '$1,199',
         billing: 'monthly',
@@ -623,6 +653,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         ]
       },
       {
+
         name: 'Advanced',
         price: '$2,499',
         billing: 'monthly',
@@ -641,6 +672,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         savings: 'Save 20% with annual billing'
       },
       {
+
         name: 'Enterprise',
         price: 'Custom',
         billing: 'monthly',
@@ -693,6 +725,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
 
   // AI Cybersecurity Platform
   {
+
     id: 'ai-cybersecurity-platform',
     name: 'AI Cybersecurity & Threat Intelligence Platform',
     category: 'AI & Security',
@@ -700,6 +733,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
     description: 'Comprehensive cybersecurity platform that uses AI and machine learning to detect, analyze, and respond to cyber threats in real-time, providing advanced threat intelligence and automated incident response.',
     pricing: [
       {
+
         name: 'Protect',
         price: '$1,399',
         billing: 'monthly',
@@ -715,6 +749,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         ]
       },
       {
+
         name: 'Advanced',
         price: '$2,999',
         billing: 'monthly',
@@ -733,6 +768,7 @@ export const enhancedComprehensivePricingGuide2025: EnhancedServicePricing[] = [
         savings: 'Save 20% with annual billing'
       },
       {
+
         name: 'Enterprise',
         price: 'Custom',
         billing: 'monthly',

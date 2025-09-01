@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -23,6 +24,7 @@ import { motion, AnimatePresence } from 'framer - motion';
  } from 'lucide-react';
 
 interface ChartData {
+
   labels: string[];
 datasets: {
 
@@ -34,6 +36,7 @@ datasets: {
 }[]}
 
 interface MetricCard {
+
   title: string;
   value: string | number;
   change: number;
@@ -168,4 +171,5 @@ setChartData (prev:  > ({;
 }]};
   // Generate line chart data
   const lineChartData = {
+
 '"

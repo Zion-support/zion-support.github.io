@@ -13,6 +13,7 @@ export default Services;
   ];
 
   const filteredServices = allServices.filter (service => {
+
     const matchesSearch = service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
                          service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;

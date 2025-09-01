@@ -1,6 +1,7 @@
 import { useState, useEffect          } from 'react.ts';
 import { motion, AnimatePresence          } from 'framer-motion.ts';
-import { 
+import {
+
   Accessibility as AccessibilityIcon, 
   Type, 
   Eye, 
@@ -17,14 +18,6 @@ import {
 
 interface AccessibilitySettings {
 
-
-
-
-
-
-
-
-
   fontSize: number;
   highContrast: boolean;
   reducedMotion: boolean;
@@ -34,6 +27,7 @@ interface AccessibilitySettings {
 export function Accessibility(...args: any[]): any {;
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<any>({
+
 fontSize: anyanyanyanyanyanyanyanyany16,;
 highContrast: false,;
 reducedMotion: false,;
@@ -51,9 +45,11 @@ theme: 'auto';
 });
 
   useEffect(()          => {
+
     // Load settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
+
       const parsed = JSON.parse(savedSettings);
       setSettings(parsed);
       applySettings(parsed);
@@ -91,14 +87,18 @@ theme: 'auto';
 
     // Apply high contrast
     if (newSettings.highContrast) {
+
       root.classList.add('high-contrast');
     } else {
+
       root.classList.remove('high-contrast');
 
     // Apply reduced motion
     if (newSettings.reducedMotion) {
+
       root.classList.add('reduced-motion');
     } else {
+
       root.classList.remove('reduced-motion');
 
     // Apply theme
@@ -109,12 +109,15 @@ theme: 'auto';
       root.classList.add('dark-theme');
       root.classList.remove('light-theme');
     } else {
+
       root.classList.remove('light-theme', 'dark-theme');
 
   };
 
   const updateSetting = (key: anyanyanyanyanyanyanyanyanykeyof AccessibilitySettings, value: )          => {
+
     const newSettings = {
+
   ...settings,;
   ;
   ;
@@ -147,7 +150,9 @@ theme: 'auto';
   };
 
   const resetSettings = () => {
+
     const defaultSettings: AccessibilitySettings = {
+
   fontSize: 16,
       highContrast: false,
       reducedMotion: false,
@@ -187,6 +192,7 @@ theme: 'auto';
         {isOpen && (
           <motion.div
             initial = {
+
   { opacity: 0,
   x: -400 
 
@@ -197,6 +203,7 @@ theme: 'auto';
 
 }}
             animate = {
+
   { opacity: 1,
   x: 0 
 
@@ -207,6 +214,7 @@ theme: 'auto';
 
 }}
             exit = {
+
   { opacity: 0,
   x: -400 
 
@@ -217,6 +225,7 @@ theme: 'auto';
 
 }}
             transition = {
+
   { duration: 0.3,
   ease: "easeOut" 
 
@@ -284,6 +293,7 @@ theme: 'auto';
                     type="checkbox"
                     checked={settings.highContrast}
                     onChange = {
+
   (e) => updateSetting('highContrast',
   e.target.checked)
 
@@ -296,9 +306,11 @@ theme: 'auto';
                     className="sr-only"
                   />
                   <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                     settings.highContrast ? 'bg-cyan-500' : 'bg-slate-700'
                   }`}>
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                       settings.highContrast ? 'translate-x-6' : 'translate-x-1'
                     }`} />
                   </div>
@@ -316,6 +328,7 @@ theme: 'auto';
                     type="checkbox"
                     checked={settings.reducedMotion}
                     onChange = {
+
   (e) => updateSetting('reducedMotion',
   e.target.checked)
 
@@ -328,9 +341,11 @@ theme: 'auto';
                     className="sr-only"
                   />
                   <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                     settings.reducedMotion ? 'bg-cyan-500' : 'bg-slate-700'
                   }`}>
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                       settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
                     }`} />
                   </div>
@@ -348,6 +363,7 @@ theme: 'auto';
                     <button
                       key={theme}
                       onClick = {
+
   () => updateSetting('theme',
   theme)
 
@@ -358,6 +374,7 @@ theme: 'auto';
 
 }
                       className={`p-2 rounded-md text-xs font-medium transition-colors ${
+
                         settings.theme === theme
                           ? 'bg-cyan-500 text-white'
                           : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
@@ -382,6 +399,7 @@ theme: 'auto';
                     type="checkbox"
                     checked={settings.soundEnabled}
                     onChange = {
+
   (e) => updateSetting('soundEnabled',
   e.target.checked)
 
@@ -394,9 +412,11 @@ theme: 'auto';
                     className="sr-only"
                   />
                   <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+
                     settings.soundEnabled ? 'bg-cyan-500' : 'bg-slate-700'
                   }`}>
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
                       settings.soundEnabled ? 'translate-x-6' : 'translate-x-1'
                     }`} />
                   </div>

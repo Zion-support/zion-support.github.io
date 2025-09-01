@@ -2,11 +2,11 @@ import React from 'react';
 import { SEO } from '@/components / SEO';
 export default React.memo (function BlogPost () {
 
-
   const { slug } = useParams () ;
 
   // Mock blog post data - in a real app, this would come from an API
   const blogPost = {
+
     id: slug,
     title: 'The Future of AI - Powered Business Intelligence in 2024',
     excerpt:
@@ -140,15 +140,16 @@ export default React.memo (function BlogPost () {
     comments: 23,
     relatedPosts: [
       {
+
         id: 'quantum - computing - business',
         title: 'Quantum Computing: Breaking Down the Hype vs. Reality',
         excerpt:
           "A comprehensive analysis of quantum computing's current state and its practical applications in business.",
         category: 'quantum',
         date: '2024 - 01 - 12',
-        readTime: '12 min read',
-      },
+        readTime: '12 min read'},
       {
+
         id: 'zero - trust - security',
         title:
           'Zero Trust Security: The New Standard for Enterprise Protection',
@@ -156,51 +157,52 @@ export default React.memo (function BlogPost () {
           'Learn why zero trust architecture is becoming essential for modern enterprise security and how to implement it.',
         category: 'security',
         date: '2024 - 01 - 10',
-        readTime: '10 min read',
-      },
+        readTime: '10 min read'},
       {
+
         id: 'micro - saas - future',
         title: 'Micro SaaS: The Future of Niche Software Solutions',
         excerpt:
           "Exploring the rise of micro SaaS platforms and how they're changing the software industry landscape.",
         category: 'business',
         date: '2024 - 01 - 08',
-        readTime: '6 min read',
-      },
-    ],
-  };
+        readTime: '6 min read'},
+    ]};
 
   const formatDate = (dateString: string) => {
+
     return new Date (dateString) .toLocaleDateString ('en - US', {
+
       year: 'numeric',
       month: 'long',
-      day: 'numeric',
-    }) ;
+      day: 'numeric'}) ;
   };
 
   const getCategoryIcon = (category: string) => {
+
     const categoryIcons: { [key: string]: any } = {
+
       ai: Brain,
       quantum: Cpu,
       security: Shield,
       cloud: Cloud,
       business: TrendingUp,
       iot: Network,
-      emerging: Zap,
-    };
+      emerging: Zap};
     return categoryIcons[category] || BookOpen;
   };
 
   const getCategoryName = (category: string) => {
+
     const categoryNames: { [key: string]: string } = {
+
       ai: 'Artificial Intelligence',
       quantum: 'Quantum Computing',
       security: 'Cybersecurity',
       cloud: 'Cloud & DevOps',
       business: 'Business Insights',
       iot: 'IoT & Edge',
-      emerging: 'Emerging Tech',
-    };
+      emerging: 'Emerging Tech'};
     return categoryNames[category] || 'Uncategorized';
   };
 
@@ -236,8 +238,8 @@ export default React.memo (function BlogPost () {
             <div className="flex items - center space - x-3 mb - 6">
               <span className="px - 4 py - 2 bg - cyan - 500 / 20 text - cyan - 400 text - sm rounded - full font - medium flex items - center space - x-2">
                 {React.createElement (getCategoryIcon (blogPost.category) , {
-                  className: 'w - 4 h - 4',
-                }) }
+
+                  className: 'w - 4 h - 4'}) }
                 <span>{getCategoryName (blogPost.category) }</span>
               </span>
               {blogPost.featured && (<span className="px - 4 py - 2 bg - yellow - 500 / 20 text - yellow - 400 text - sm rounded - full font - medium">

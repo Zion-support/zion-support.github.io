@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology Solutions', description = 'Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise. We help businesses thrive in the digital age.', keywords = ['AI solutions',technology consulting',digital transformation',cloud computing',cybersecurity',machine learning'], image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', publishedTime, modifiedTime, section = 'Technology Services', tags = ['AI',Technology',Digital Transformation'] }) => {
 
     useEffect(() => {
+
         // Add structured data to the page
         const structuredData = {
 
@@ -139,16 +140,19 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
             if (hint.crossorigin) link.crossOrigin = hint.crossorigin;
             document.head.appendChild (link) }) ;
         return () => {
+
             // Cleanup on unmount'"
             const addedScript = document.querySelector('script[type="application/ld+json"]');
             if (addedScript)
                 addedScript.remove();
             performanceMeta.forEach(meta => {
+
 "
                 const metaTag = document.querySelector(`meta[name="${meta.name}"]`);
                 if (metaTag)
                     metaTag.remove()});
             resourceHints.forEach(hint => {
+
 "`
                 const link = document.querySelector(`link[rel="${hint.rel}"][href="${hint.href}"]`);
                 if (link)

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
+import {
+
   Code, 
   Search, 
   Filter,
@@ -40,6 +41,7 @@ import {
 } from 'lucide-react';
 
 export default function APIDocumentation() {
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedMethod, setSelectedMethod] = useState('All');
@@ -50,9 +52,11 @@ export default function APIDocumentation() {
 
   const apiEndpoints = [
     {
+
       category: 'Authentication',
       endpoints: [
         {
+
           path: '/auth/login',
           method: 'POST',
           title: 'User Login',
@@ -66,12 +70,14 @@ export default function APIDocumentation() {
             { code: 401, description: 'Invalid credentials', example: '{ "error": "Invalid credentials" }' }
           ],
           examples: {
+
             curl: 'curl -X POST /auth/login -H "Content-Type: application/json" -d \'{"email":"user@example.com","password":"password"}\'',
             python: 'requests.post("/auth/login", json={"email": "user@example.com", "password": "password"})',
             javascript: 'fetch("/auth/login", { method: "POST", body: JSON.stringify({email: "user@example.com", password: "password"}) })'
           }
         },
         {
+
           path: '/auth/register',
           method: 'POST',
           title: 'User Registration',
@@ -86,6 +92,7 @@ export default function APIDocumentation() {
             { code: 400, description: 'Validation error', example: '{ "error": "Email already exists" }' }
           ],
           examples: {
+
             curl: 'curl -X POST /auth/register -H "Content-Type: application/json" -d \'{"email":"new@example.com","password":"password123","name":"John Doe"}\'',
             python: 'requests.post("/auth/register", json={"email": "new@example.com", "password": "password123", "name": "John Doe"})',
             javascript: 'fetch("/auth/register", { method: "POST", body: JSON.stringify({email: "new@example.com", password: "password123", name: "John Doe"}) })'
@@ -94,9 +101,11 @@ export default function APIDocumentation() {
       ]
     },
     {
+
       category: 'AI Services',
       endpoints: [
         {
+
           path: '/ai/generate',
           method: 'POST',
           title: 'AI Content Generation',
@@ -111,6 +120,7 @@ export default function APIDocumentation() {
             { code: 400, description: 'Invalid request', example: '{ "error": "Invalid prompt" }' }
           ],
           examples: {
+
             curl: 'curl -X POST /ai/generate -H "Content-Type: application/json" -d \'{"prompt":"Write a blog post about AI"}\'',
             python: 'requests.post("/ai/generate", json={"prompt": "Write a blog post about AI"})',
             javascript: 'fetch("/ai/generate", { method: "POST", body: JSON.stringify({prompt: "Write a blog post about AI"}) })'
@@ -119,9 +129,11 @@ export default function APIDocumentation() {
       ]
     },
     {
+
       category: 'Data Analytics',
       endpoints: [
         {
+
           path: '/analytics/query',
           method: 'POST',
           title: 'Data Query',
@@ -135,6 +147,7 @@ export default function APIDocumentation() {
             { code: 400, description: 'Invalid query', example: '{ "error": "Syntax error" }' }
           ],
           examples: {
+
             curl: 'curl -X POST /analytics/query -H "Content-Type: application/json" -d \'{"query":"SELECT * FROM users LIMIT 10"}\'',
             python: 'requests.post("/analytics/query", json={"query": "SELECT * FROM users LIMIT 10"})',
             javascript: 'fetch("/analytics/query", { method: "POST", body: JSON.stringify({query: "SELECT * FROM users LIMIT 10"}) })'
@@ -146,6 +159,7 @@ export default function APIDocumentation() {
 
   const sdks = [
     {
+
       name: 'JavaScript SDK',
       description: 'Official JavaScript/Node.js client library',
       version: 'v2.1.0',
@@ -154,6 +168,7 @@ export default function APIDocumentation() {
       features: ['TypeScript support', 'Promise-based', 'Browser & Node.js']
     },
     {
+
       name: 'Python SDK',
       description: 'Python client library with async support',
       version: 'v1.8.2',
@@ -162,6 +177,7 @@ export default function APIDocumentation() {
       features: ['Async/await', 'Type hints', 'Pandas integration']
     },
     {
+
       name: 'Java SDK',
       description: 'Enterprise Java client library',
       version: 'v1.5.1',
@@ -172,11 +188,15 @@ export default function APIDocumentation() {
   ];
 
   const toggleEndpoint = (endpointPath: string) => {
+
     setExpandedEndpoints(prev => {
+
       const newSet = new Set(prev);
       if (newSet.has(endpointPath)) {
+
         newSet.delete(endpointPath);
       } else {
+
         newSet.add(endpointPath);
       }
       return newSet;
@@ -185,6 +205,7 @@ export default function APIDocumentation() {
 
   const filteredEndpoints = apiEndpoints.flatMap(category => 
     category.endpoints.filter(endpoint => {
+
       const matchesSearch = searchQuery === '' || 
         endpoint.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         endpoint.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -318,6 +339,7 @@ export default function APIDocumentation() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className={`px-3 py-1 rounded-full text-sm font-medium ${
+
                         endpoint.method === 'GET' ? 'bg-green-500/20 text-green-400' :
                         endpoint.method === 'POST' ? 'bg-blue-500/20 text-blue-400' :
                         endpoint.method === 'PUT' ? 'bg-yellow-500/20 text-yellow-400' :
@@ -337,6 +359,7 @@ export default function APIDocumentation() {
                     </div>
                     <ChevronRight 
                       className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${
+
                         expandedEndpoints.has(endpoint.path) ? 'rotate-90' : ''
                       }`}
                     />
@@ -384,6 +407,7 @@ export default function APIDocumentation() {
                           {endpoint.responses.map((response, index) => (
                             <div key={index} className="flex items-center gap-3 p-3 bg-slate-700/20 rounded-lg">
                               <span className={`px-2 py-1 rounded text-sm font-medium ${
+
                                 response.code >= 200 && response.code < 300 ? 'bg-green-500/20 text-green-400' :
                                 response.code >= 400 && response.code < 500 ? 'bg-red-500/20 text-red-400' :
                                 'bg-yellow-500/20 text-yellow-400'

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Star,
   CheckCircle,
   X,
@@ -27,6 +28,7 @@ import { SEO } from '../components/SEO';
 import { REVOLUTIONARY_PRICING_GUIDE_2030 } from '../data/revolutionaryPricingGuide2030';
 
 export default function RevolutionaryPricingGuide() {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [priceRange, setPriceRange] = useState('all');
@@ -36,6 +38,7 @@ export default function RevolutionaryPricingGuide() {
     { id: 'all', name: 'All Services', count: REVOLUTIONARY_PRICING_GUIDE_2030.length },
     ...Array.from(new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(service => service.service.category)))
       .map(category => ({
+
         id: category,
         name: category,
         count: REVOLUTIONARY_PRICING_GUIDE_2030.filter(service => service.service.category === category).length
@@ -51,6 +54,7 @@ export default function RevolutionaryPricingGuide() {
   ];
 
   const filteredServices = REVOLUTIONARY_PRICING_GUIDE_2030.filter(service => {
+
     const matchesCategory = activeCategory === 'all' || service.service.category === activeCategory;
     const matchesSearch = service.service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -58,8 +62,10 @@ export default function RevolutionaryPricingGuide() {
     
     let matchesPrice = true;
     if (priceRange !== 'all') {
+
       const range = priceRanges.find(r => r.id === priceRange);
       if (range && range.range !== 'All') {
+
         const [min, max] = range.range.split('-').map(Number);
         matchesPrice = service.pricingTiers.some(tier => tier.price >= min && tier.price <= max);
       }
@@ -69,21 +75,27 @@ export default function RevolutionaryPricingGuide() {
   });
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5,
         ease: "easeOut"
       }
@@ -285,6 +297,7 @@ export default function RevolutionaryPricingGuide() {
                         <div
                           key={tier.name}
                           className={`relative p-6 rounded-xl border transition-all duration-300 ${
+
                             index === 1 
                               ? 'border-cyan-500/50 bg-gradient-to-br from-cyan-500/10 to-blue-500/10' 
                               : 'border-slate-600 bg-slate-800/50'

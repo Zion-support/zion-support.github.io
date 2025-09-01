@@ -2,6 +2,7 @@
 // Advanced AI-powered financial technology solutions
 ;
 export interface FinancialAIService {
+
   id: number;
   name: string;
   category: string;

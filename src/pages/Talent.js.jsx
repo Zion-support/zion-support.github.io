@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const Talent = () => {
+
     return (<>
       <Helmet>
         <title>Talent - Zion Tech Group</title>

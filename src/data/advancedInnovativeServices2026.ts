@@ -1,4 +1,5 @@
 export interface AdvancedInnovativeService2026 {
+
   id: string;
   title: string;
   description: string;
@@ -71,6 +72,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
 <<<<<<< HEAD
 
       technology['Quantum Computing',AI/ML',Neural Networks',Quantum Encryption'],;
@@ -95,6 +97,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       security['Quantum Encryption', 'Zero Trust', 'Multi-factor Authentication']},;'
     competitors['IBM Quantum', 'Google Quantum AI', 'Microsoft Quantum'],;'
     caseStudies['Financial Institution achieved 95% prediction accuracy', 'Research lab reduced drug discovery time by 80%']},;  {
+
 '
     id: 'brain-computer-interface-platform-2026','
     title: 'Brain-Computer Interface Platform','
@@ -130,6 +133,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
 <<<<<<< HEAD
 
       technology['Neural Monitoring',Signal Processing',Machine Learning',Biometrics'],;
@@ -154,6 +158,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       security['HIPAA Compliance', 'Data Encryption', 'Access Control']},;'
     competitors['Neuralink', 'Kernel', 'CTRL-labs'],;'
     caseStudies['Hospital achieved 90% success rate in rehabilitation', 'Gaming comp increased user engagement by 300%']},;  {
+
 '
     id: 'space-mining-autonomous-system-2026','
     title: 'Autonomous Space Mining System','
@@ -189,6 +194,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
 <<<<<<< HEAD
 
       technology['AI/ML',Robotics',Space Systems',Resource Processing'],;
@@ -213,6 +219,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       security['Space-grade Security', 'Encrypted Communications', 'Redundant Systems']},;'
     competitors['Planetary Resources', 'Deep Space Industries', 'Asteroid Mining Corporation'],;'
     caseStudies['Successfully mapped 50+ asteroids', 'Extracted 100kg of rare minerals from lunar surface']},;  {
+
 '
     id: 'synthetic-biology-platform-2026','
     title: 'Synthetic Biology Platform','
@@ -248,6 +255,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
 <<<<<<< HEAD
 
       technology['CRISPR',DNA Synthesis',Bioinformatics',Automation'],;
@@ -272,6 +280,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       security['Biosafety Protocols', 'Data Encryption', 'Access Control', 'Audit Trails']},;'
     competitors['Ginkgo Bioworks', 'Twist Bioscience', 'Synthetic Genomics'],;'
     caseStudies['Developed novel cancer treatment', 'Created biofuel-producing bacteria', 'Designed environmental cleanup organisms']},;  {
+
 '
     id: 'fusion-energy-reactor-2026','
     title: 'Compact Fusion Energy Reactor','
@@ -307,6 +316,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
 <<<<<<< HEAD
 
       technology['Fusion Physics',Plasma Control',Magnetic Confinement',Energy Conversion'],;
@@ -331,6 +341,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       security['Nuclear Safety', 'Radiation Protection', 'Emergency Systems', 'Access Control']},;'
     competitors['ITER', 'Commonwealth Fusion', 'General Fusion'],;'
     caseStudies['Successfully achieved sustained fusion reaction', 'Generated 50MW of clean power', 'Reduced energy costs by 80%']},;  {
+
 '
     id: 'holographic-reality-platform-2026','
     title: 'Holographic Reality Platform','
@@ -366,6 +377,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
 <<<<<<< HEAD
 
       technology['Holographic Display',Computer Vision',3D Rendering',Gesture Recognition'],;
@@ -390,6 +402,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       security['Content Protection', 'User Authentication', 'Data Privacy']},;'
     competitors['Looking Glass', 'RealView Imaging', 'Leia Inc'],;'
     caseStudies['Increased student engagement by 200%', 'Reduced travel costs by 60%', 'Enhanced product presentations']},;  {
+
 '
     id: 'time-crystal-computing-2026','
     title: 'Time Crystal Computing System','
@@ -425,6 +438,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
 <<<<<<< HEAD
 
       technology['Time Crystals',Quantum Computing',Cryogenics',Quantum Memory'],;
@@ -449,6 +463,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       security['Quantum Encryption', 'Physical Security', 'Access Control']},;'
     competitors['IBM Quantum', 'Google Quantum', 'Microsoft Quantum'],;'
     caseStudies['Achieved quantum supremacy', 'Solved complex mathematical problems', 'Advanced cryptography research']},;  {
+
 '
     id: 'dark-matter-detection-2026','
     title: 'Dark Matter Detection System','
@@ -484,6 +499,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
 <<<<<<< HEAD
 
       technology['Particle Detection',Cryogenics',Data Analysis',Machine Learning'],;
@@ -508,6 +524,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       security['Data Integrity', 'Access Control', 'Collaboration Security']},;'
     competitors['CERN', 'Fermilab', 'SLAC'],;'
     caseStudies['Detected new particle signatures', 'Advanced dark matter theories', 'International collaboration success']},;  {
+
 '
     id: 'consciousness-transfer-system-2026','
     title: 'Consciousness Transfer System','
@@ -543,6 +560,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
 <<<<<<< HEAD
 
       technology['Brain Mapping',AI/ML',Quantum Computing',Ethical AI'],;
@@ -567,6 +585,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       security['Ethical AI', 'Data Privacy', 'Access Control', 'Audit Trails']},;'
     competitors['OpenAI', 'Anthropic', 'Research Institutions'],;'
     caseStudies['Advanced consciousness research', 'Ethical framework development', 'International collaboration']},;  {
+
 '
     id: 'multiverse-communication-2026','
     title: 'Multiverse Communication System','
@@ -602,6 +621,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
       website: 'https://ziontechgroup.com'
     },
     technicalSpecs: {
+
 <<<<<<< HEAD
 
       technology['Theoretical Physics',Quantum Mechanics',Simulation',AI/ML'],;

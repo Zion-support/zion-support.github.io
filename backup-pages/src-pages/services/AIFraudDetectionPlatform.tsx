@@ -1,10 +1,10 @@
-import { 
-  Shield, 
-  AlertTriangle, 
-  TrendingUp, 
-  BarChart3, 
-  Smartphone, 
-  CheckCircle, 
+import {
+  Shield,
+  AlertTriangle,
+  TrendingUp,
+  BarChart3,
+  Smartphone,
+  CheckCircle,
   ArrowRight,
   Star,
   Users,
@@ -19,22 +19,18 @@ import {
   Eye,
   Fingerprint,
   LockKeyhole,
-  AlertCircle
+  AlertCircle,
 } from 'lucide-react';
 
 export default function AIFraudDetectionPlatform() {
-  
-  
-  
-  
-  
   return (
     <>
-      <SEO title="AI Fraud Detection Platform - Zion Tech Group"
+      <SEO
+        title="AI Fraud Detection Platform - Zion Tech Group"
         description="Protect your business with AI-powered fraud detection. Reduce fraud losses by 80%, improve detection accuracy by 90%, and prevent fraud in real-time with our intelligent platform."
         canonical="/services/ai-fraud-detection-platform"
-       />
-      
+      />
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -48,15 +44,16 @@ export default function AIFraudDetectionPlatform() {
             >
               <div className="flex justify-center mb-6">
                 <div className="p-3 bg-red-500/20 rounded-full">
-                  <Shield className="h-12 w-12 text-red-400"  />
+                  <Shield className="h-12 w-12 text-red-400" />
                 </div>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 AI Fraud Detection Platform
               </h1>
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Protect your business with AI-powered fraud detection. Reduce fraud losses by 80%, improve 
-                detection accuracy by 90%, and prevent fraud in real-time with our intelligent platform.
+                Protect your business with AI-powered fraud detection. Reduce
+                fraud losses by 80%, improve detection accuracy by 90%, and
+                prevent fraud in real-time with our intelligent platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
@@ -65,7 +62,7 @@ export default function AIFraudDetectionPlatform() {
                   className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-2"
                 >
                   Start Free Trial
-                  <ArrowRight className="h-5 w-5"  />
+                  <ArrowRight className="h-5 w-5" />
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -92,8 +89,9 @@ export default function AIFraudDetectionPlatform() {
                 Advanced Fraud Detection Features
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Our AI platform provides comprehensive fraud detection capabilities designed to 
-                protect your business from various types of fraudulent activities.
+                Our AI platform provides comprehensive fraud detection
+                capabilities designed to protect your business from various
+                types of fraudulent activities.
               </p>
             </motion.div>
 
@@ -108,9 +106,11 @@ export default function AIFraudDetectionPlatform() {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 bg-red-500/20 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-red-400"  />
+                      <CheckCircle className="h-5 w-5 text-red-400" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white">{feature}</h3>
+                    <h3 className="text-lg font-semibold text-white">
+                      {feature}
+                    </h3>
                   </div>
                 </motion.div>
               ))}
@@ -131,8 +131,9 @@ export default function AIFraudDetectionPlatform() {
                 Transform Your Fraud Protection
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Experience significant improvements in fraud detection, loss prevention, and 
-                operational security with our AI-powered platform.
+                Experience significant improvements in fraud detection, loss
+                prevention, and operational security with our AI-powered
+                platform.
               </p>
             </motion.div>
 
@@ -146,7 +147,7 @@ export default function AIFraudDetectionPlatform() {
                   className="text-center"
                 >
                   <div className="p-4 bg-red-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    <TrendingUp className="h-8 w-8 text-red-400"  />
+                    <TrendingUp className="h-8 w-8 text-red-400" />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </motion.div>
@@ -168,7 +169,8 @@ export default function AIFraudDetectionPlatform() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Choose the plan that best fits your fraud detection needs and scale as you grow.
+                Choose the plan that best fits your fraud detection needs and
+                scale as you grow.
               </p>
             </motion.div>
 
@@ -180,22 +182,31 @@ export default function AIFraudDetectionPlatform() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className={`bg-slate-800/50 p-8 rounded-xl border ${
-                    index === 1 ? 'border-red-500/50 bg-red-500/10' : 'border-slate-700'
+                    index === 1
+                      ? 'border-red-500/50 bg-red-500/10'
+                      : 'border-slate-700'
                   }`}
                 >
                   <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {plan.plan}
+                    </h3>
                     <p className="text-slate-400 mb-4">{plan.description}</p>
                     <div className="mb-4">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-4xl font-bold text-white">
+                        {plan.price}
+                      </span>
                       <span className="text-slate-400">/{plan.period}</span>
                     </div>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-3">
-                        <CheckCircle className="h-5 w-5 text-red-400 flex-shrink-0"  />
+                      <li
+                        key={featureIndex}
+                        className="flex items-center gap-3"
+                      >
+                        <CheckCircle className="h-5 w-5 text-red-400 flex-shrink-0" />
                         <span className="text-slate-300">{feature}</span>
                       </li>
                     ))}
@@ -231,8 +242,8 @@ export default function AIFraudDetectionPlatform() {
                 Perfect for Every Industry
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Our AI fraud detection platform is designed to meet the unique needs of various 
-                industries and business types.
+                Our AI fraud detection platform is designed to meet the unique
+                needs of various industries and business types.
               </p>
             </motion.div>
 
@@ -246,13 +257,21 @@ export default function AIFraudDetectionPlatform() {
                   className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 text-center hover:border-red-500/50 transition-colors"
                 >
                   <div className="p-3 bg-red-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    {index === 0 && <Eye className="h-8 w-8 text-red-400"  />}
-                    {index === 1 && <Fingerprint className="h-8 w-8 text-red-400"  />}
-                    {index === 2 && <LockKeyhole className="h-8 w-8 text-red-400"  />}
-                    {index === 3 && <AlertCircle className="h-8 w-8 text-red-400"  />}
-                    {index > 3 && <Shield className="h-8 w-8 text-red-400"  />}
+                    {index === 0 && <Eye className="h-8 w-8 text-red-400" />}
+                    {index === 1 && (
+                      <Fingerprint className="h-8 w-8 text-red-400" />
+                    )}
+                    {index === 2 && (
+                      <LockKeyhole className="h-8 w-8 text-red-400" />
+                    )}
+                    {index === 3 && (
+                      <AlertCircle className="h-8 w-8 text-red-400" />
+                    )}
+                    {index > 3 && <Shield className="h-8 w-8 text-red-400" />}
                   </div>
-                  <h3 className="text-lg font-semibold text-white">{useCase}</h3>
+                  <h3 className="text-lg font-semibold text-white">
+                    {useCase}
+                  </h3>
                 </motion.div>
               ))}
             </div>
@@ -272,8 +291,9 @@ export default function AIFraudDetectionPlatform() {
                 Ready to Protect Your Business?
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Contact our team to learn how AI can transform your fraud detection and help you 
-                achieve significant cost savings and security improvements.
+                Contact our team to learn how AI can transform your fraud
+                detection and help you achieve significant cost savings and
+                security improvements.
               </p>
             </motion.div>
 
@@ -285,9 +305,11 @@ export default function AIFraudDetectionPlatform() {
                 className="text-center"
               >
                 <div className="p-4 bg-red-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Phone className="h-8 w-8 text-red-400"  />
+                  <Phone className="h-8 w-8 text-red-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Call Us
+                </h3>
                 <p className="text-slate-300">{contactInfo.phone}</p>
               </motion.div>
 
@@ -298,9 +320,11 @@ export default function AIFraudDetectionPlatform() {
                 className="text-center"
               >
                 <div className="p-4 bg-red-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Mail className="h-8 w-8 text-red-400"  />
+                  <Mail className="h-8 w-8 text-red-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Email Us
+                </h3>
                 <p className="text-slate-300">{contactInfo.email}</p>
               </motion.div>
 
@@ -311,9 +335,11 @@ export default function AIFraudDetectionPlatform() {
                 className="text-center"
               >
                 <div className="p-4 bg-red-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <MapPin className="h-8 w-8 text-red-400"  />
+                  <MapPin className="h-8 w-8 text-red-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Visit Us
+                </h3>
                 <p className="text-slate-300">{contactInfo.address}</p>
               </motion.div>
             </div>
@@ -330,11 +356,12 @@ export default function AIFraudDetectionPlatform() {
                 className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-2 mx-auto"
               >
                 Schedule a Consultation
-                <ArrowRight className="h-5 w-5"  />
+                <ArrowRight className="h-5 w-5" />
               </motion.button>
             </motion.div>
           </div>
         </section>
       </div>
     </>
-  )}
+  );
+}

@@ -1,4 +1,8 @@
-import { createClient, PostgrestError, SupabaseClient } from '@supabase/supabase-js';
+import {
+  createClient,
+  PostgrestError,
+  SupabaseClient,
+} from '@supabase/supabase-js';
 import { serializeOrders, SerializedOrder } from './orders/serializer'; // Assuming SerializedOrder is exported
 import { sendEmailWithSendGrid } from '../../src/lib/email';
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -35,45 +39,58 @@ const supabaseUrl = process.env.SUPABASE_URL;
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !serviceKey) {
-  const errorMessage = 'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend API (orders). Service cannot start.';
+  const errorMessage =
+    'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend API (orders). Service cannot start.';
   console.error(errorMessage);
   throw new Error(errorMessage);
 }
 const supabase: SupabaseClient = createClient(supabaseUrl, serviceKey); // Explicitly type Supabase client
 
 export default async function handler(
-  req: NextApiRequest, 
-  res: NextApiResponse<OrderPOSTSuccessResponse | OrderGETResponse | ErrorResponse>
+  req: NextApiRequest,
+  res: NextApiResponse<
+    OrderPOSTSuccessResponse | OrderGETResponse | ErrorResponse
+  >
 ) {
   if (req.method === 'POST') {
     const { userId, email, items = [], total = 0 } = req.body as OrderPOSTBody;
 
-    if (!email || !Array.isArray(items) || items.length === 0 || typeof total !== 'number') {
-      return res.status(400).json({ error: 'Missing required fields: email, items array, and total are required.' });
+    if (
+      !email ||
+      !Array.isArray(items) ||
+      items.length === 0 ||
+      typeof total !== 'number'
+    ) {
+      return res.status(400).json({
+        error:
+          'Missing required fields: email, items array, and total are required.',
+      });
     }
 
     try {
       const { data, error } = await supabase
         .from('orders')
         .insert({
-          user_id: userId || null, 
+          user_id: userId || null,
           email,
           items: items, // Removed 'as any'. Supabase client should handle typed arrays for JSONB.
           total,
-          status: 'paid', 
+          status: 'paid',
         })
         .select('id')
         .single();
 
       if (error || !data) {
         console.error('POST Order Error (Supabase):', error);
-        return res.status(500).json({ error: error?.message || 'Failed to create order' });
+        return res
+          .status(500)
+          .json({ error: error?.message || 'Failed to create order' });
       }
 
       const orderId = data.id;
 
       if (userId) {
-        const points = Math.floor(total / 100) * 10; 
+        const points = Math.floor(total / 100) * 10;
         if (points > 0) {
           try {
             await supabase.from('points_ledger').insert({
@@ -97,40 +114,62 @@ export default async function handler(
               .update({ points: currentPoints + points })
               .eq('id', userId);
           } catch (pointError: unknown) {
-            console.error("Error updating points for order:", orderId, pointError);
+            console.error(
+              'Error updating points for order:',
+              orderId,
+              pointError
+            );
           }
         }
       }
 
-      if (process.env.SENDGRID_ORDER_CONFIRMATION_TEMPLATE_ID && process.env.SENDGRID_API_KEY && process.env.SENDGRID_FROM_EMAIL) {
+      if (
+        process.env.SENDGRID_ORDER_CONFIRMATION_TEMPLATE_ID &&
+        process.env.SENDGRID_API_KEY &&
+        process.env.SENDGRID_FROM_EMAIL
+      ) {
         try {
           await sendEmailWithSendGrid({
             to: email,
             templateId: process.env.SENDGRID_ORDER_CONFIRMATION_TEMPLATE_ID,
             dynamicTemplateData: { orderId },
           });
-        } catch(emailError: unknown) {
-            console.error("Error sending order confirmation email for order:", orderId, emailError);
+        } catch (emailError: unknown) {
+          console.error(
+            'Error sending order confirmation email for order:',
+            orderId,
+            emailError
+          );
         }
       } else {
-        console.warn("SendGrid order confirmation not configured, skipping email for order:", orderId);
+        console.warn(
+          'SendGrid order confirmation not configured, skipping email for order:',
+          orderId
+        );
       }
 
       return res.status(200).json({ orderId });
-
-    } catch (dbError: unknown) { 
-        console.error('POST Order Database Error:', dbError);
-        const message = dbError instanceof Error ? dbError.message : 'Database operation failed.';
-        return res.status(500).json({ error: 'Failed to create order due to a database issue.', details: message });
+    } catch (dbError: unknown) {
+      console.error('POST Order Database Error:', dbError);
+      const message =
+        dbError instanceof Error
+          ? dbError.message
+          : 'Database operation failed.';
+      return res.status(500).json({
+        error: 'Failed to create order due to a database issue.',
+        details: message,
+      });
     }
   }
 
-
   if (req.method === 'GET') {
     const idParam = req.query?.userId || req.query?.user_id;
-    const userIdValue = Array.isArray(idParam) ? idParam[0] : idParam; 
-    
-    const effectiveUserId = userIdValue === 'me' ? (req.headers['x-user-id'] as string | undefined) : userIdValue;
+    const userIdValue = Array.isArray(idParam) ? idParam[0] : idParam;
+
+    const effectiveUserId =
+      userIdValue === 'me'
+        ? (req.headers['x-user-id'] as string | undefined)
+        : userIdValue;
 
     if (!effectiveUserId || typeof effectiveUserId !== 'string') {
       return res.status(400).json({ error: 'Missing or invalid userId' });
@@ -139,7 +178,7 @@ export default async function handler(
     try {
       const { data, error } = await supabase
         .from('orders')
-        .select('id, created_at, total, status, invoice_url, tracking_status') 
+        .select('id, created_at, total, status, invoice_url, tracking_status')
         .eq('user_id', effectiveUserId)
         .order('created_at', { ascending: false });
 
@@ -147,13 +186,17 @@ export default async function handler(
         console.error('GET Orders Error:', error);
         return res.status(500).json({ error: error.message });
       }
-      
-      return res.status(200).json(serializeOrders(data || []));
 
+      return res.status(200).json(serializeOrders(data || []));
     } catch (fetchError: unknown) {
-        console.error('GET Orders Fetch Error:', fetchError);
-        const message = fetchError instanceof Error ? fetchError.message : 'An unexpected error occurred.';
-        return res.status(500).json({ error: 'Failed to retrieve orders.', details: message });
+      console.error('GET Orders Fetch Error:', fetchError);
+      const message =
+        fetchError instanceof Error
+          ? fetchError.message
+          : 'An unexpected error occurred.';
+      return res
+        .status(500)
+        .json({ error: 'Failed to retrieve orders.', details: message });
     }
   }
 

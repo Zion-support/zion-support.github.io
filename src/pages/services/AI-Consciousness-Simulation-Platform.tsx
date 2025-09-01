@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Eye, 
   Zap, 
@@ -41,23 +42,28 @@ import {
 import { SEO } from '@/components/SEO';
 
 export default function AIConsciousnessSimulationPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "Consciousness Modeling",
       description: "Advanced AI models that simulate human consciousness and cognitive processes"
     },
     {
+
       icon: Eye,
       title: "Perception Simulation",
       description: "Realistic simulation of human perception, awareness, and sensory processing"
     },
     {
+
       icon: Zap,
       title: "Neural Networks",
       description: "Complex neural network architectures that mimic human brain function"
     },
     {
+
       icon: Shield,
       title: "Ethical AI",
       description: "Built-in ethical frameworks and safety measures for consciousness research"
@@ -66,24 +72,28 @@ export default function AIConsciousnessSimulationPlatform() {
 
   const services = [
     {
+
       title: "Consciousness Research",
       description: "Advanced tools for studying consciousness, awareness, and cognitive processes",
       icon: Brain,
       features: ["Consciousness modeling", "Cognitive simulation", "Awareness analysis", "Research tools"]
     },
     {
+
       title: "Neural Architecture Design",
       description: "Design and optimize neural networks that simulate human consciousness",
       icon: Network,
       features: ["Network architecture", "Learning algorithms", "Memory systems", "Optimization tools"]
     },
     {
+
       title: "Perception Simulation",
       description: "Simulate human perception and sensory processing with AI",
       icon: Eye,
       features: ["Visual perception", "Auditory processing", "Sensory integration", "Reality simulation"]
     },
     {
+
       title: "Cognitive Testing",
       description: "Test and validate consciousness models with comprehensive cognitive assessments",
       icon: Lightbulb,
@@ -106,6 +116,7 @@ export default function AIConsciousnessSimulationPlatform() {
 
   const pricing = [
     {
+
       name: "Research",
       price: "$4,999",
       period: "per month",
@@ -121,6 +132,7 @@ export default function AIConsciousnessSimulationPlatform() {
       popular: false
     },
     {
+
       name: "Academic",
       price: "$12,999",
       period: "per month",
@@ -137,6 +149,7 @@ export default function AIConsciousnessSimulationPlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$29,999",
       period: "per month",
@@ -156,24 +169,28 @@ export default function AIConsciousnessSimulationPlatform() {
 
   const useCases = [
     {
+
       title: "Academic Research",
       description: "Advance consciousness research and cognitive science with AI simulation",
       icon: Brain,
       benefits: ["Breakthrough research", "Academic publications", "Scientific discovery"]
     },
     {
+
       title: "AI Development",
       description: "Develop more human-like AI systems with consciousness simulation",
       icon: Brain,
       benefits: ["Human-like AI", "Better user experience", "Advanced capabilities"]
     },
     {
+
       title: "Psychology Studies",
       description: "Study human psychology and behavior through AI simulation",
       icon: Heart,
       benefits: ["Behavioral insights", "Psychological research", "Treatment development"]
     },
     {
+
       title: "Philosophy Research",
       description: "Explore philosophical questions about consciousness and existence",
       icon: Lightbulb,
@@ -489,6 +506,7 @@ export default function AIConsciousnessSimulationPlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+
                   plan.popular 
                     ? 'border-purple-500/50 ring-2 ring-purple-500/20' 
                     : 'border-gray-700'
@@ -523,6 +541,7 @@ export default function AIConsciousnessSimulationPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full inline-flex justify-center items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
                       : 'bg-gray-700 text-white hover:bg-gray-600'

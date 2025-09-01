@@ -3,33 +3,40 @@ import { motion } from 'framer-motion';
 import { GitFork, Brain, Zap, BarChart3, Users, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, TrendingUp, Clock, DollarSign, Target, Workflow } from 'lucide-react';
 
 const AIWorkflowOrchestrator: React.FC = () => {
+
   const features = [
     {
+
       icon: Brain,
       title: "Process Learning",
       description: "AI that learns from your existing workflows and automatically identifies optimization opportunities"
     },
     {
+
       icon: GitFork,
       title: "Automated Optimization",
       description: "Intelligent workflow automation that continuously improves processes based on performance data"
     },
     {
+
       icon: Globe,
       title: "Integration Hub",
       description: "Connect all your tools and systems with our universal integration platform and API"
     },
     {
+
       icon: BarChart3,
       title: "Performance Analytics",
       description: "Real-time insights into workflow efficiency with predictive analytics and optimization recommendations"
     },
     {
+
       icon: Users,
       title: "Team Collaboration",
       description: "Enhanced team productivity with intelligent task routing, workload balancing, and collaboration tools"
     },
     {
+
       icon: Zap,
       title: "Smart Automation",
       description: "AI-powered decision making that automates complex workflows and reduces manual intervention"
@@ -49,6 +56,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
 
   const pricing = [
     {
+
       plan: "Starter",
       price: "$399",
       period: "/month",
@@ -63,6 +71,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
       popular: false
     },
     {
+
       plan: "Professional",
       price: "$999",
       period: "/month",
@@ -79,6 +88,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
       popular: true
     },
     {
+
       plan: "Enterprise",
       price: "$2,499",
       period: "/month",
@@ -98,24 +108,28 @@ const AIWorkflowOrchestrator: React.FC = () => {
 
   const benefits = [
     {
+
       icon: TrendingUp,
       title: "Process Efficiency",
       value: "40-70%",
       description: "Significant improvements in workflow efficiency and productivity"
     },
     {
+
       icon: Clock,
       title: "Time Savings",
       value: "50-80%",
       description: "Automate repetitive tasks and focus on high-value activities"
     },
     {
+
       icon: DollarSign,
       title: "Cost Reduction",
       value: "30-60%",
       description: "Reduce operational costs through intelligent automation"
     },
     {
+
       icon: Target,
       title: "Error Reduction",
       value: "90%+",
@@ -342,6 +356,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className={`relative bg-white/5 border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-indigo-400/50 bg-gradient-to-b from-indigo-500/10 to-transparent' 
                     : 'border-white/10'
@@ -375,6 +390,7 @@ const AIWorkflowOrchestrator: React.FC = () => {
                 <a
                   href="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white'
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'

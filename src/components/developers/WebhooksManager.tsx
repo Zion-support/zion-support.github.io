@@ -17,7 +17,9 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 export function WebhooksManager() {
+
   const {
+
     webhooks,
     loading,
     testResult,
@@ -42,10 +44,12 @@ export function WebhooksManager() {
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application');
 
   useEffect(() => {
+
     fetchWebhooks();
   }, [fetchWebhooks]); // Added fetchWebhooks
 
   const handleCreateWebhook = async () => {
+
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return;
     
     await createWebhook(
@@ -60,20 +64,24 @@ export function WebhooksManager() {
   };
 
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
+
     await toggleWebhook(webhookId, !currentStatus);
   };
 
   const handleDeleteWebhook = async (webhookId: string) => {
+
     await deleteWebhook(webhookId);
     setShowDeleteConfirm(null);
   };
 
   const handleTestWebhook = async (webhookId: string) => {
+
     await testWebhook(webhookId, testEventType);
     setShowTestResult(true);
   };
 
   const resetWebhookForm = () => {
+
     setWebhookName("");
     setWebhookUrl("");
     setWebhookSecret("");
@@ -88,6 +96,7 @@ export function WebhooksManager() {
   ];
 
   const toggleEvent = (event: WebhookEventType) => {
+
     setSelectedEvents(prev => 
       prev.includes(event) 
         ? prev.filter(e => e !== event) 
@@ -193,12 +202,14 @@ export function WebhooksManager() {
               
               <DialogFooter>
                 <Button variant="outline" onClick={() => {
+
                   setShowCreateDialog(false);
                   resetWebhookForm();
                 }}>
                   Cancel
                 </Button>
                 <Button onClick={handleCreateWebhook} disabled={
+
                   webhookName.trim() === "" || 
                   webhookUrl.trim() === "" || 
                   selectedEvents.length === 0
@@ -305,10 +316,13 @@ export function WebhooksManager() {
       <Dialog 
         open={showTestDialog !== null} 
         onOpenChange={(open) => {
+
           if (!open) {
+
             setShowTestDialog(null);
             setTestEventType('new_application');
             if (showTestResult) {
+
               setShowTestResult(false);
               clearTestResult();
             }
@@ -366,6 +380,7 @@ export function WebhooksManager() {
                     <Label>Response Status</Label>
                     <Badge
                       className={
+
                         testResult && testResult.status >= 200 && testResult.status < 300
                           ? "bg-green-700"
                           : "bg-red-700"
@@ -388,6 +403,7 @@ export function WebhooksManager() {
               
               <DialogFooter>
                 <Button variant="default" onClick={() => {
+
                   setShowTestDialog(null);
                   setShowTestResult(false);
                   clearTestResult();
@@ -395,6 +411,7 @@ export function WebhooksManager() {
                   Close
                 </Button>
                 <Button variant="outline" onClick={() => {
+
                   setShowTestResult(false);
                   clearTestResult();
                 }}>

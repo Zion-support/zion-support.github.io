@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -25,6 +26,7 @@ import { motion, AnimatePresence } from 'framer - motion';
   verified: boolean}
 
 interface FeedbackStats {
+
   totalFeedback: number;
   averageRating: number;
   positivePercentage: number;
@@ -67,6 +69,7 @@ showStats:  true,;
 
   // Sample feedback data
   useEffect(() => {
+
     const sampleFeedback: Feedback[] = [
       {
 
@@ -145,11 +148,9 @@ showStats:  true,;
 
   // Calculate stats
   useEffect(() => {
+
     if (feedback.length > 0) {
 
-      
-      
-      
       const responseRate = 95; // Simulated response rate
 
       const categoryCounts = feedback.reduce ( (acc, f) => {;        acc[f.category] = (acc[f.category] || 0) + 1;
@@ -172,6 +173,7 @@ showStats:  true,;
 
   // Filter feedback
   useEffect ( () => {
+
     let filtered = feedback;
 
     if (selectedCategory !== 'all') {
@@ -652,6 +654,7 @@ showStats:  true,;
 
 =======
                   key={star}`                  className={`w-5 h-5 ${
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`

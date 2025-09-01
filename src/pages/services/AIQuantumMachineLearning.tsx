@@ -1,4 +1,5 @@
 import { Atom, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, TrendingUp, Brain, Target, Clock, Shield, Globe export default function AIQuantumMachineLearning(...args: any[]): any {
+
   const features = [
     'Quantum-enhanced machine learning algorithms',
     'Hybrid quantum-classical computing solutions',
@@ -32,11 +33,13 @@ import { Atom, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Tre
 
   const tiers = [
     {
+
       name: 'Quantum Starter',
       price: '$1,999/mo',
       details: ['Up to 100 quantum operations', 'Basic quantum algorithms', 'Standard support', 'Email support']
     },
-    { 
+    {
+
       name: 'Quantum Professional', 
       price: '$4,999/mo', 
       details: ['Up to 1,000 quantum operations', 'Advanced quantum features', 'Custom algorithms', 'Priority support'] ;

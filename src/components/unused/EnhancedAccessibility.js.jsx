@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SpeakerWaveIcon, AdjustmentsHorizontalIcon, ArrowUpIcon, ArrowDownIcon } from '@heroicons/react/24/outline';
 const EnhancedAccessibility = () => {
+
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
+
         highContrast: false,
         fontSize: 16,
         reducedMotion: false,
@@ -13,48 +15,63 @@ const EnhancedAccessibility = () => {
         colorBlindness: 'none'
     });
     useEffect(() => {
+
         // Load saved settings from localStorage
         const savedSettings = localStorage.getItem('accessibility-settings');
         if (savedSettings) {
+
             try {
+
                 const parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }));
                 applySettings({ ...settings, ...parsed })}
             catch (error) {
-                console.warn('Failed to load accessibility settings:', error)}
+
+                // // // console.warn('Failed to load accessibility settings:', error)}
         }
         // Check for user preferences
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (prefersReducedMotion) {
+
             setSettings(prev => ({ ...prev, reducedMotion: true }))}
     }, []);
     const applySettings = (newSettings) => {
+
         const root = document.documentElement;
         // High contrast mode
         if (newSettings.highContrast) {
+
             root.classList.add('high-contrast')}
         else {
+
             root.classList.remove('high-contrast')}
         // Font size
         root.style.setProperty('--font-size-multiplier', (newSettings.fontSize / 16).toString());
         // Reduced motion
         if (newSettings.reducedMotion) {
+
             root.classList.add('reduced-motion')}
         else {
+
             root.classList.remove('reduced-motion')}
         // Color blindness filters
         root.classList.remove('protanopia', 'deuteranopia', 'tritanopia');
         if (newSettings.colorBlindness !== 'none') {
+
             root.classList.add(newSettings.colorBlindness)}
         // Focus indicators
         if (newSettings.focusIndicator) {
+
             root.classList.add('show-focus-indicator')}
         else {
+
             root.classList.remove('show-focus-indicator')}
         // Save to localStorage
         localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))};
     const updateSetting = (key, value) => {
+
         const newSettings = {
+
   ...settings,
   [key]: value 
 
@@ -62,15 +79,20 @@ const EnhancedAccessibility = () => {
         setSettings(newSettings);
         applySettings(newSettings)};
     const toggleHighContrast = () => {
+
         updateSetting('highContrast', !settings.highContrast)};
     const increaseFontSize = () => {
+
         const newSize = Math.min(settings.fontSize + 2, 24);
         updateSetting('fontSize', newSize)};
     const decreaseFontSize = () => {
+
         const newSize = Math.max(settings.fontSize - 2, 12);
         updateSetting('fontSize', newSize)};
     const resetSettings = () => {
+
         const defaultSettings = {
+
   highContrast: false,
             fontSize: 16,
             reducedMotion: false,
@@ -84,13 +106,16 @@ const EnhancedAccessibility = () => {
         setSettings(defaultSettings);
         applySettings(defaultSettings)};
     const speakText = (text) => {
+
         if ('speechSynthesis' in window) {
+
             const utterance = new SpeechSynthesisUtterance(text);
             utterance.rate = 0.9;
             utterance.pitch = 1;
             speechSynthesis.speak(utterance)}
     };
     const announcePageChange = (pageName) => {
+
         speakText(`Navigated to ${pageName}`)};
     return (<>
       {/* Accessibility Toggle Button */}
@@ -101,14 +126,17 @@ const EnhancedAccessibility = () => {
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div initial = {
+
   { opacity: 0,
   x: -20 
 
 }} animate = {
+
   { opacity: 1,
   x: 0 
 
 }} exit = {
+
   { opacity: 0,
   x: -20 
 
@@ -163,6 +191,7 @@ const EnhancedAccessibility = () => {
                     Reduced Motion
                   </span>
                   <button onClick = {
+
   () => updateSetting('reducedMotion',
   !settings.reducedMotion)
 
@@ -182,6 +211,7 @@ const EnhancedAccessibility = () => {
                     Enhanced Focus Indicators
                   </span>
                   <button onClick = {
+
   () => updateSetting('focusIndicator',
   !settings.focusIndicator)
 
@@ -200,6 +230,7 @@ const EnhancedAccessibility = () => {
                   Color Blindness Support
                 </label>
                 <select value={settings.colorBlindness} onChange = {
+
   (e) => updateSetting('colorBlindness',
   e.target.value)
 
@@ -218,6 +249,7 @@ const EnhancedAccessibility = () => {
                     Screen Reader Announcements
                   </span>
                   <button onClick = {
+
   () => updateSetting('screenReader',
   !settings.screenReader)
 
@@ -237,6 +269,7 @@ const EnhancedAccessibility = () => {
                     Enhanced Keyboard Navigation
                   </span>
                   <button onClick = {
+
   () => updateSetting('keyboardNavigation',
   !settings.keyboardNavigation)
 

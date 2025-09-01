@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ultimateInnovativeServices2026 } from "../data/2026-ultimate-innovative-services";
 import { enterpriseITInfrastructureServices2026 } from "../data/2026-enterprise-it-infrastructure-services";
 const ComprehensivePricing2026 = () => {
+
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [billingCycle, setBillingCycle] = useState('monthly');
     // Combine all services
@@ -17,7 +18,9 @@ const ComprehensivePricing2026 = () => {
         'Specialized Industry'
     ];
     const getCategoryServices = (category) => {
+
         switch (category) {
+
             case 'AI & Business Solutions':
                 return allServices.filter(service => ['Business Intelligence', 'Marketing Automation', 'Customer Service', 'Workflow Automation'].includes(service.category));
             case 'IT Infrastructure':
@@ -33,27 +36,34 @@ const ComprehensivePricing2026 = () => {
     };
     const filteredServices = getCategoryServices(selectedCategory);
     const getAnnualPrice = (monthlyPrice) => {
+
         const price = parseInt(monthlyPrice.replace(/[^0-9]/g, ''));
         const annualPrice = price * 12 * 0.8; // 20% discount for annual
         return `$${annualPrice.toLocaleString()}`};
     const containerVariants = {
+
         hidden: { opacity: 0 },
         visible: {
+
             opacity: 1,
             transition: {
+
                 staggerChildren: 0.1
             }
         }
     };
     const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0 
 
 },
         visible: {
+
             y: 0,
             opacity: 1,
             transition: {
+
                 duration: 0.5,
                 ease: "easeOut"
             }
@@ -64,10 +74,12 @@ const ComprehensivePricing2026 = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -78,14 +90,17 @@ const ComprehensivePricing2026 = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.2 
 
@@ -96,14 +111,17 @@ const ComprehensivePricing2026 = () => {
 
           {/* Billing Toggle */}
           <motion.div className="flex items-center justify-center gap-4 mb-8" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.4 
 
@@ -119,14 +137,17 @@ const ComprehensivePricing2026 = () => {
 
           {/* Contact Information */}
           <motion.div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8 max-w-2xl mx-auto" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.6 
 
@@ -168,10 +189,12 @@ const ComprehensivePricing2026 = () => {
         <div className="max-w-7xl mx-auto">
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" animate="visible">
             {filteredServices.map((service, index) => (<motion.div key={service.id} variants={itemVariants} className="group" whileHover = {
+
   { scale: 1.02,
   y: -5 
 
 }} transition = {
+
   { type: "spring",
   stiffness: 300 
 
@@ -274,10 +297,12 @@ const ComprehensivePricing2026 = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -323,10 +348,12 @@ const ComprehensivePricing2026 = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 

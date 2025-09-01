@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
+
   title?: string;
   description?: string;
   keywords?: string;
@@ -12,6 +13,7 @@ interface SEOHeadProps {
 }
 
 export function SEOHead({
+
   title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions',
   description = 'Transform your business with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000+ companies worldwide.',
   keywords = 'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology',
@@ -20,7 +22,9 @@ export function SEOHead({
   type = 'website',
   structuredData
 }: SEOHeadProps) {
+
   const defaultStructuredData = {
+
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -28,10 +32,12 @@ export function SEOHead({
     "logo": "https://ziontechgroup.com/images/logo.png",
     "description": "Leading provider of AI, quantum computing, and advanced technology solutions",
     "address": {
+
       "@type": "PostalAddress",
       "addressCountry": "US"
     },
     "contactPoint": {
+
       "@type": "ContactPoint",
       "contactType": "customer service",
       "availableLanguage": "English"

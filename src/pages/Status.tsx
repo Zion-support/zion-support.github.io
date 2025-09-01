@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
+import {
+
   CheckCircle, 
   AlertTriangle, 
   XCircle, 
@@ -21,11 +22,13 @@ import {
 } from 'lucide-react';
 
 export default function Status() {
+
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
   // Mock data - in real app this would come from API
   const systemStatus = {
+
     overall: 'operational',
     lastChecked: new Date(),
     uptime: '99.99%',
@@ -34,6 +37,7 @@ export default function Status() {
 
   const services = [
     {
+
       name: 'AI Services Platform',
       status: 'operational',
       uptime: '99.99%',
@@ -41,6 +45,7 @@ export default function Status() {
       lastUpdated: '2 minutes ago'
     },
     {
+
       name: 'IT Infrastructure',
       status: 'operational',
       uptime: '99.95%',
@@ -48,6 +53,7 @@ export default function Status() {
       lastUpdated: '2 minutes ago'
     },
     {
+
       name: 'Micro SaaS Solutions',
       status: 'operational',
       uptime: '99.98%',
@@ -55,6 +61,7 @@ export default function Status() {
       lastUpdated: '2 minutes ago'
     },
     {
+
       name: 'Cloud & DevOps',
       status: 'operational',
       uptime: '99.97%',
@@ -62,6 +69,7 @@ export default function Status() {
       lastUpdated: '2 minutes ago'
     },
     {
+
       name: 'Cybersecurity Services',
       status: 'operational',
       uptime: '99.99%',
@@ -69,6 +77,7 @@ export default function Status() {
       lastUpdated: '2 minutes ago'
     },
     {
+
       name: 'Blockchain Solutions',
       status: 'operational',
       uptime: '99.96%',
@@ -79,6 +88,7 @@ export default function Status() {
 
   const recentIncidents = [
     {
+
       id: 'INC-2024-001',
       title: 'Scheduled Maintenance - Database Optimization',
       status: 'resolved',
@@ -88,14 +98,17 @@ export default function Status() {
       description: 'Scheduled database maintenance to optimize performance and apply security updates.',
       updates: [
         {
+
           time: new Date('2024-01-15T02:00:00Z'),
           message: 'Maintenance started as scheduled'
         },
         {
+
           time: new Date('2024-01-15T03:30:00Z'),
           message: 'Database optimization completed successfully'
         },
         {
+
           time: new Date('2024-01-15T04:00:00Z'),
           message: 'All services restored and operating normally'
         }
@@ -105,6 +118,7 @@ export default function Status() {
 
   const performanceMetrics = [
     {
+
       metric: 'Average Response Time',
       value: '45ms',
       trend: 'down',
@@ -112,6 +126,7 @@ export default function Status() {
       period: 'vs last week'
     },
     {
+
       metric: 'Error Rate',
       value: '0.01%',
       trend: 'down',
@@ -119,6 +134,7 @@ export default function Status() {
       period: 'vs last week'
     },
     {
+
       metric: 'Throughput',
       value: '1.2M req/min',
       trend: 'up',
@@ -126,6 +142,7 @@ export default function Status() {
       period: 'vs last week'
     },
     {
+
       metric: 'Availability',
       value: '99.99%',
       trend: 'stable',
@@ -135,7 +152,9 @@ export default function Status() {
   ];
 
   const getStatusColor = (status: any) => {
+
     switch (status) {
+
       case 'operational':
         return 'text-green-400 bg-green-500/20';
       case 'degraded':
@@ -150,7 +169,9 @@ export default function Status() {
   };
 
   const getStatusIcon = (status: any) => {
+
     switch (status) {
+
       case 'operational':
         return <CheckCircle className="w-6 h-6 text-green-500" />;
       case 'degraded':
@@ -165,7 +186,9 @@ export default function Status() {
   };
 
   const getSeverityColor = (severity: any) => {
+
     switch (severity) {
+
       case 'low':
         return 'bg-blue-500/20 text-blue-400';
       case 'medium':
@@ -180,7 +203,9 @@ export default function Status() {
   };
 
   const getStatusBgColor = (status: string) => {
+
     switch (status) {
+
       case 'operational':
         return 'bg-green-500/20 border-green-500/50';
       case 'degraded':
@@ -270,6 +295,7 @@ export default function Status() {
                 <div className="flex items-center justify-between mb-4">
                   <TrendingUp className="w-5 h-5 text-cyan-400" />
                   <span className={`px-2 py-1 rounded text-xs font-medium ${
+
                     metric.trend === 'up' ? 'bg-green-500/20 text-green-400' :
                     metric.trend === 'down' ? 'bg-red-500/20 text-red-400' :
                     'bg-gray-500/20 text-gray-400'
@@ -370,6 +396,7 @@ export default function Status() {
                           {incident.severity.toUpperCase()}
                         </span>
                         <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+
                           incident.status === 'resolved' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'
                         }`}>
                           {incident.status.toUpperCase()}

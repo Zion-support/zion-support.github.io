@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function ContentCreation () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   PenTool,
@@ -126,6 +128,7 @@ import { motion } from 'framer - motion';
 
 const contentTechnologies = [
   {
+
     name: "Content Creation Tools",
     description: "Professional tools for creating digital content",
     icon: PenTool,
@@ -133,6 +136,7 @@ const contentTechnologies = [
     reliability: "High"
   },
   {
+
     name: "Media Processing",
     description: "Advanced audio and video processing capabilities",
     icon: Video,
@@ -140,6 +144,7 @@ const contentTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "AI Content Generation",
     description: "AI - powered content creation and optimization",
     icon: Brain,
@@ -147,6 +152,7 @@ const contentTechnologies = [
     reliability: "High"
   },
   {
+
     name: "Content Analytics",
     description: "Data - driven insights for content optimization",
     icon: BarChart3,
@@ -157,6 +163,7 @@ const contentTechnologies = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "Digital Marketing Agency",
     industry: "Marketing",
@@ -166,6 +173,7 @@ const successStories = [
     logo: "DMA"
   },
   {
+
     id: 2,
     comp: "Educational Platform",
     industry: "Education",
@@ -175,6 +183,7 @@ const successStories = [
     logo: "EP"
   },
   {
+
     id: 3,
     comp: "E - commerce Brand",
     industry: "Retail",
@@ -187,6 +196,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Content Strategy",
     description: "Define content goals, target audience, and distribution channels",
@@ -194,6 +204,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
   },
   {
+
     step: 2,
     title: "Platform Development",
     description: "Build content creation and management tools",
@@ -201,6 +212,7 @@ const processSteps = [
     duration: "12 - 32 weeks"
   },
   {
+
     step: 3,
     title: "Content Production",
     description: "Create and optimize content using the new platform",
@@ -208,6 +220,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
   },
   {
+
     step: 4,
     title: "Distribution & Analytics",
     description: "Publish content and track performance metrics",
@@ -218,24 +231,28 @@ const processSteps = [
 
 const contentBenefits = [
   {
+
     title: "Increased Productivity",
     description: "Streamlined workflows and automated processes boost content creation efficiency",
     icon: Zap,
     examples["Faster content creation", "Automated workflows", "Collaboration tools", "Template libraries"];
   },;
   {
+
     title: "Better Quality",
     description: "Professional tools and AI assistance improve content quality and consistency",
     icon: Award,
     examples["Professional templates", "AI assistance", "Quality checks", "Brand consistency"];
   },;
   {
+
     title: "Multi - channel Reach",
     description: "Distribute content across multiple platforms and channels simultaneously",
     icon: Globe,
     examples["Social media", "Website", "Email marketing", "Mobile apps"];
   },;
   {
+
     title: "Data - driven Insights",
     description: "Analytics and performance tracking optimize content strategy",
     icon: BarChart3,
@@ -264,11 +281,13 @@ const contentBenefits = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -278,16 +297,19 @@ const contentBenefits = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -330,11 +352,13 @@ const contentBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -352,16 +376,19 @@ const contentBenefits = [
             {contentBenefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -392,11 +419,13 @@ const contentBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -414,16 +443,19 @@ const contentBenefits = [
             {contentTechnologies.map ( (technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -439,6 +471,7 @@ const contentBenefits = [
                 <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   technology.reliability === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : technology.reliability === 'High'
@@ -457,11 +490,13 @@ const contentBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -479,16 +514,19 @@ const contentBenefits = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -519,11 +557,13 @@ const contentBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -543,6 +583,7 @@ const contentBenefits = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -556,16 +597,19 @@ const contentBenefits = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -620,11 +664,13 @@ const contentBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -642,16 +688,19 @@ const contentBenefits = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -697,11 +746,13 @@ const contentBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

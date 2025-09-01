@@ -1,12 +1,14 @@
 import React from 'react';
 <<<<<<< HEAD
 export function HomepagePromotion () {
+
 import { motion } from 'framer - motion';
 
 =======
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 export function HomepagePromotion() {
+
 >>>>>>> main
     const featuredServices = [
         {
@@ -21,6 +23,7 @@ export function HomepagePromotion() {
             link: "/comprehensive-services-showcase"
         },
         {
+
 "
             id: "edge-computing-iot","
             title: "Edge Computing & IoT Platform","
@@ -32,6 +35,7 @@ export function HomepagePromotion() {
             link: "/comprehensive-services-showcase"
         },
         {
+
 "
             id: "quantum-computing","
             title: "Quantum Computing Applications","
@@ -43,6 +47,7 @@ export function HomepagePromotion() {
             link: "/comprehensive-services-showcase"
         },
         {
+
 "
             id: "zero-trust-security","
             title: "Zero-Trust Security Architecture","

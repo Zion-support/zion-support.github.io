@@ -1,6 +1,7 @@
 import React from 'react';
 export default Privacy;
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -16,61 +17,62 @@ import { SEO } from '../components / SEO';
   Users,
   Settings,
   Trash2,
-  Download,
-} from 'lucide - react';
+  Download} from 'lucide - react';
 
 const Privacy: React.FC = () => {
+
   const lastUpdated = 'December 15, 2024';
 
   const privacyPrinciples = [
     {
+
       icon: Shield,
       title: 'Data Protection',
       description:
-        'We implement industry - standard security measures to protect your personal information.',
-    },
+        'We implement industry - standard security measures to protect your personal information.'},
     {
+
       icon: Lock,
       title: 'Privacy by Design',
       description:
-        'Privacy considerations are built into every aspect of our services and systems.',
-    },
+        'Privacy considerations are built into every aspect of our services and systems.'},
     {
+
       icon: Eye,
       title: 'Transparency',
       description:
-        'We are clear about what data we collect, how we use it, and your rights.',
-    },
+        'We are clear about what data we collect, how we use it, and your rights.'},
     {
+
       icon: Users,
       title: 'User Control',
       description:
-        'You have full control over your personal data and can request changes or deletion.',
-    },
+        'You have full control over your personal data and can request changes or deletion.'},
   ];
 
   const dataCategories = [
     {
+
       title: 'Personal Information',
       description: 'Name, email address, phone number, and company information',
-      examples: ['Contact details', 'Account information', 'Business details'],
-    },
+      examples: ['Contact details', 'Account information', 'Business details']},
     {
+
       title: 'Usage Data',
       description: 'Information about how you use our services and website',
-      examples: ['Login times', 'Feature usage', 'Performance metrics'],
-    },
+      examples: ['Login times', 'Feature usage', 'Performance metrics']},
     {
+
       title: 'Technical Data',
       description: 'Device information and technical specifications',
-      examples: ['IP address', 'Browser type', 'Device information'],
-    },
+      examples: ['IP address', 'Browser type', 'Device information']},
     {
+
       title: 'Communication Data',
       description: 'Records of our interactions and communications',
-      examples: ['Support tickets', 'Email correspondence', 'Chat logs'],
-    },
+      examples: ['Support tickets', 'Email correspondence', 'Chat logs']},
     {
+
       title: 'Business Information',
       description: 'Business - related data and project information',
       examples: [
@@ -78,82 +80,81 @@ const Privacy: React.FC = () => {
         'Service usage and performance data',
         'Payment and billing information',
         'Support and communication records',
-      ],
-    },
+      ]},
   ];
 
   const dataUses = [
     {
+
       purpose: 'Service Delivery',
       description:
-        'To provide and maintain our services, process transactions, and deliver support.',
-    },
+        'To provide and maintain our services, process transactions, and deliver support.'},
     {
+
       purpose: 'Communication',
       description:
-        'To communicate with you about our services, updates, and support.',
-    },
+        'To communicate with you about our services, updates, and support.'},
     {
+
       purpose: 'Security',
       description:
-        'To ensure the security and integrity of our systems and services.',
-    },
+        'To ensure the security and integrity of our systems and services.'},
     {
+
       purpose: 'Analytics',
       description:
-        'To analyze usage patterns and improve our services and user experience.',
-    },
+        'To analyze usage patterns and improve our services and user experience.'},
   ];
 
   const userRights = [
     {
+
       right: 'Access',
-      description: 'Request a copy of your personal data that we hold.',
-    },
+      description: 'Request a copy of your personal data that we hold.'},
     {
+
       right: 'Rectification',
       description:
-        'Request correction of inaccurate or incomplete personal data.',
-    },
+        'Request correction of inaccurate or incomplete personal data.'},
     {
+
       right: 'Erasure',
       description:
-        'Request deletion of your personal data under certain circumstances.',
-    },
+        'Request deletion of your personal data under certain circumstances.'},
     {
+
       right: 'Portability',
-      description: 'Request transfer of your data to another service provider.',
-    },
+      description: 'Request transfer of your data to another service provider.'},
     {
+
       right: 'Objection',
       description:
-        'Object to processing of your personal data in certain situations.',
-    },
+        'Object to processing of your personal data in certain situations.'},
     {
+
       right: 'Restriction',
-      description: 'Request limitation of processing of your personal data.',
-    },
+      description: 'Request limitation of processing of your personal data.'},
   ];
 
   const contactInfo = [
     {
+
       icon: Mail,
       label: 'Email',
       value: 'privacy@ziontechgroup.com',
-      href: 'mailto:privacy@ziontechgroup.com',
-    },
+      href: 'mailto:privacy@ziontechgroup.com'},
     {
+
       icon: FileText,
       label: 'Data Protection Officer',
       value: 'dpo@ziontechgroup.com',
-      href: 'mailto:dpo@ziontechgroup.com',
-    },
+      href: 'mailto:dpo@ziontechgroup.com'},
     {
+
       icon: Globe,
       label: 'Address',
       value: '364 E Main St STE 1008, Middletown DE 19709',
-      href: 'https://maps.google.com/?q = 364 + E+Main + St + STE + 1008 + Middletown + DE + 19709',
-    },
+      href: 'https://maps.google.com/?q = 364 + E+Main + St + STE + 1008 + Middletown + DE + 19709'},
   ];
 
   return (<>

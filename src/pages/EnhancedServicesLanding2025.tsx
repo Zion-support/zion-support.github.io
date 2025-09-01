@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   ArrowRight, 
   CheckCircle, 
   Star, 
@@ -39,6 +40,7 @@ import {
 import { enhancedServicesCatalog2025, contactInfo, successMetrics } from '../data/enhancedServicesCatalog2025';
 
 const EnhancedServicesLanding2025: React.FC = () => {
+
   const featuredServices = enhancedServicesCatalog2025.flatMap(category => 
     category.items.filter(service => 
       service.id.includes('ai-') || service.id.includes('quantum') || service.id.includes('blockchain')
@@ -47,36 +49,42 @@ const EnhancedServicesLanding2025: React.FC = () => {
 
   const industrySolutions = [
     {
+
       icon: Heart,
       title: 'Healthcare & Life Sciences',
       description: 'AI-powered medical imaging, telemedicine platforms, and compliance solutions',
       services: ['AI Healthcare Analytics', 'Telemedicine Platform', 'Medical Imaging AI']
     },
     {
+
       icon: Factory,
       title: 'Manufacturing & Industry 4.0',
       description: 'Smart factories, predictive maintenance, and quality control automation',
       services: ['Predictive Maintenance', 'Quality Control AI', 'Smart Factory Platform']
     },
     {
+
       icon: ShoppingCart,
       title: 'E-commerce & Retail',
       description: 'AI-driven pricing, inventory optimization, and customer experience enhancement',
       services: ['E-commerce Personalization', 'Inventory Optimization', 'Customer Analytics']
     },
     {
+
       icon: GraduationCap,
       title: 'Education & Training',
       description: 'Personalized learning platforms and AI-powered educational content creation',
       services: ['AI Education Platform', 'Learning Analytics', 'Content Generation']
     },
     {
+
       icon: Home,
       title: 'Real Estate & Property',
       description: 'AI-powered property valuation and market analysis platforms',
       services: ['Property Valuation AI', 'Market Analysis', 'Investment Analytics']
     },
     {
+
       icon: Scale,
       title: 'Legal & Compliance',
       description: 'Contract analysis, legal research, and compliance monitoring automation',
@@ -344,21 +352,25 @@ const EnhancedServicesLanding2025: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
+
                 icon: Star,
                 title: "Proven Excellence",
                 description: "98% client satisfaction rate with measurable business impact"
               },
               {
+
                 icon: TrendingUp,
                 title: "Innovation First",
                 description: "Cutting-edge AI, quantum computing, and emerging technologies"
               },
               {
+
                 icon: Users,
                 title: "Expert Team",
                 description: "Experienced professionals with deep industry knowledge"
               },
               {
+
                 icon: Zap,
                 title: "Rapid Results",
                 description: "Quick implementation with proven deployment methodologies"

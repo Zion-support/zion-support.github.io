@@ -4,7 +4,8 @@ import { EnhancedSEO } from '@/components/EnhancedSEO';
 import PerformanceDashboard from '@/components/PerformanceDashboard';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
+import {
+
   Zap, 
   Gauge, 
   TrendingUp, 
@@ -18,38 +19,45 @@ import {
 } from 'lucide-react';
 
 const Performance: React.FC = () => {
+
   const performanceFeatures = [
     {
+
       icon: Zap,
       title: "Real-time Monitoring",
       description: "Live performance metrics with Core Web Vitals tracking",
       color: "from-yellow-500 to-orange-500"
     },
     {
+
       icon: Gauge,
       title: "Performance Scoring",
       description: "Automated performance grading from A to F with actionable insights",
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       icon: TrendingUp,
       title: "Optimization Recommendations",
       description: "AI-powered suggestions for performance improvements",
       color: "from-green-500 to-emerald-500"
     },
     {
+
       icon: Shield,
       title: "Security Monitoring",
       description: "Comprehensive security metrics and threat detection",
       color: "from-red-500 to-pink-500"
     },
     {
+
       icon: Cpu,
       title: "Resource Analysis",
       description: "Detailed CPU, memory, and network performance insights",
       color: "from-purple-500 to-indigo-500"
     },
     {
+
       icon: Database,
       title: "Data Optimization",
       description: "Database performance and query optimization monitoring",
@@ -59,36 +67,42 @@ const Performance: React.FC = () => {
 
   const optimizationStrategies = [
     {
+
       title: "Code Splitting",
       description: "Implement dynamic imports and route-based code splitting for faster initial loads",
       impact: "High",
       effort: "Medium"
     },
     {
+
       title: "Image Optimization",
       description: "Use WebP format, lazy loading, and responsive images for better performance",
       impact: "High",
       effort: "Low"
     },
     {
+
       title: "Bundle Optimization",
       description: "Tree shaking, minification, and compression for smaller bundle sizes",
       impact: "Medium",
       effort: "Low"
     },
     {
+
       title: "Caching Strategy",
       description: "Implement effective caching policies for static assets and API responses",
       impact: "High",
       effort: "Medium"
     },
     {
+
       title: "CDN Integration",
       description: "Use Content Delivery Networks for global performance optimization",
       impact: "High",
       effort: "Medium"
     },
     {
+
       title: "Database Indexing",
       description: "Optimize database queries and implement proper indexing strategies",
       impact: "Medium",

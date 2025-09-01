@@ -1,7 +1,9 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
 export const TestimonialsSection: React.FC = () => {
+
 import {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
   Star,
@@ -10,6 +12,7 @@ import { motion, AnimatePresence } from 'framer - motion';
   ChevronRight,
 =======
 import {
+
   Star, 
   Quote, 
   ChevronLeft, 
@@ -110,6 +113,7 @@ const testimonials: Testimonial[] = [
 
 ;
 export const TestimonialsSection: React.FC = props {
+
   const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
 
@@ -118,6 +122,7 @@ export const TestimonialsSection: React.FC = props {
 
   // Auto - play functionality
   React.useEffect ( () => {
+
     if (!isAutoPlaying) return}, 5000) ;
 
     return () => clearInterval (interval) }, [isAutoPlaying, currentTestimonial]) ;

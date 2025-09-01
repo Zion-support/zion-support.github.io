@@ -1,4 +1,5 @@
 export interface SpecializedITService {
+
   id: string;
   title: string;
   description: string;
@@ -23,6 +24,7 @@ export interface SpecializedITService {
   location: string;
   availability: string;
   author: {
+
     name: string;
     id: string;
     avatarUrl?: string;
@@ -40,6 +42,7 @@ export interface SpecializedITService {
 
 export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
   {
+
     id: "cloud-native-application-platform",
     title: "Cloud-Native Application Platform",
     description: "Enterprise-grade platform for building, deploying, and managing cloud-native applications with microservices architecture and container orchestration.",
@@ -79,6 +82,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -100,6 +104,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     scalability: ["Auto-scaling", "Load balancing", "Horizontal scaling", "Vertical scaling"]
   },
   {
+
     id: "zero-trust-network-architecture",
     title: "Zero Trust Network Architecture",
     description: "Comprehensive zero trust security framework that eliminates implicit trust and continuously validates every stage of digital interactions.",
@@ -139,6 +144,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -160,6 +166,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     scalability: ["Elastic scaling", "Load distribution", "Geographic distribution", "Performance optimization"]
   },
   {
+
     id: "ai-powered-data-governance-platform",
     title: "AI-Powered Data Governance Platform",
     description: "Intelligent data governance solution that automates data quality, compliance, and lifecycle management using advanced AI algorithms.",
@@ -199,6 +206,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -220,6 +228,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     scalability: ["Horizontal scaling", "Vertical scaling", "Performance optimization", "Geographic distribution"]
   },
   {
+
     id: "edge-computing-infrastructure",
     title: "Edge Computing Infrastructure Platform",
     description: "Distributed edge computing platform that brings computation and data storage closer to data sources for improved performance and reduced latency.",
@@ -259,6 +268,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -280,6 +290,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     scalability: ["Horizontal scaling", "Vertical scaling", "Geographic distribution", "Performance optimization"]
   },
   {
+
     id: "quantum-computing-as-a-service",
     title: "Quantum Computing as a Service",
     description: "Cloud-based quantum computing platform providing access to quantum processors and algorithms for complex computational problems.",
@@ -319,6 +330,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -340,6 +352,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     scalability: ["Quantum advantage", "Performance optimization", "Algorithm efficiency", "Resource allocation"]
   },
   {
+
     id: "ai-powered-incident-response-platform",
     title: "AI-Powered Incident Response Platform",
     description: "Intelligent incident response platform that automates threat detection, investigation, and response using advanced AI and machine learning.",
@@ -379,6 +392,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -400,6 +414,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     scalability: ["Elastic scaling", "Performance optimization", "Geographic distribution", "Load balancing"]
   },
   {
+
     id: "mlops-automation-platform",
     title: "MLOps Automation Platform",
     description: "Comprehensive MLOps platform that automates the entire machine learning lifecycle from development to deployment and monitoring.",
@@ -439,6 +454,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -460,6 +476,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     scalability: ["Horizontal scaling", "Vertical scaling", "Performance optimization", "Resource management"]
   },
   {
+
     id: "api-management-and-gateway",
     title: "API Management and Gateway Platform",
     description: "Enterprise-grade API management platform that provides secure, scalable, and efficient API lifecycle management and gateway services.",
@@ -499,6 +516,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -520,6 +538,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     scalability: ["Horizontal scaling", "Load balancing", "Performance optimization", "Geographic distribution"]
   },
   {
+
     id: "data-warehouse-optimization-platform",
     title: "Data Warehouse Optimization Platform",
     description: "Intelligent data warehouse optimization platform that improves performance, reduces costs, and enhances data accessibility using AI and automation.",
@@ -559,6 +578,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -580,6 +600,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     scalability: ["Horizontal scaling", "Vertical scaling", "Performance optimization", "Resource management"]
   },
   {
+
     id: "sustainable-it-infrastructure-platform",
     title: "Sustainable IT Infrastructure Platform",
     description: "Green computing platform that optimizes IT infrastructure for energy efficiency, carbon reduction, and sustainability while maintaining performance.",
@@ -619,6 +640,7 @@ export const SPECIALIZED_IT_SERVICES_2026: SpecializedITService[] = [
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",

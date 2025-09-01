@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   ArrowRight,
   Phone,
   Mail,
@@ -28,6 +29,7 @@ import {
 } from 'lucide-react';
 
 interface Feature {
+
   icon: React.ComponentType<any>;
   title: string;
   description: string;
@@ -36,36 +38,42 @@ interface Feature {
 
 const features: Feature[] = [
   {
+
     icon: Brain,
     title: 'AI-Powered Solutions',
     description: 'Cutting-edge artificial intelligence and machine learning',
     color: 'zion-cyan'
   },
   {
+
     icon: Cloud,
     title: 'Cloud Infrastructure',
     description: 'Scalable and secure cloud solutions',
     color: 'zion-blue'
   },
   {
+
     icon: Shield,
     title: 'Cybersecurity',
     description: 'Advanced threat protection and compliance',
     color: 'zion-purple'
   },
   {
+
     icon: Database,
     title: 'Data Analytics',
     description: 'Real-time insights and business intelligence',
     color: 'zion-green'
   },
   {
+
     icon: Network,
     title: 'IoT Solutions',
     description: 'Connected devices and smart systems',
     color: 'zion-orange'
   },
   {
+
     icon: Rocket,
     title: 'Digital Transformation',
     description: 'Modernize your business processes',
@@ -81,6 +89,7 @@ const stats = [
 ];
 
 export const ContactCTA: React.FC = () => {
+
   const [hoveredFeature, setHoveredFeature] = useState<string | null>(null);
 
   return (
@@ -93,10 +102,11 @@ export const ContactCTA: React.FC = () => {
       <motion.div
         className="absolute top-20 right-20 w-40 h-40 bg-zion-cyan/10 rounded-full blur-xl"
         animate={{
+
           scale: [1, 1.2, 1],
-          opacity: [0.3, 0.6, 0.3],
-        }}
+          opacity: [0.3, 0.6, 0.3]}}
         transition={{
+
           duration: 6,
           repeat: Infinity,
           ease: "easeInOut"
@@ -105,10 +115,11 @@ export const ContactCTA: React.FC = () => {
       <motion.div
         className="absolute bottom-20 left-20 w-32 h-32 bg-zion-purple/10 rounded-full blur-xl"
         animate={{
+
           scale: [1.2, 1, 1.2],
-          opacity: [0.4, 0.7, 0.4],
-        }}
+          opacity: [0.4, 0.7, 0.4]}}
         transition={{
+
           duration: 8,
           repeat: Infinity,
           ease: "easeInOut",

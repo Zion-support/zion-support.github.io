@@ -2,8 +2,11 @@
 import { Link } from 'react - router - dom';
 import React from 'react';
 export const EnhancedFuturisticFooter: React.FC = () => {
+
 export const EnhancedFuturisticFooter: React.FC = () => {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Phone,
@@ -15,6 +18,7 @@ import { motion } from 'framer - motion';
   Facebook,
 =======
 import {
+
   Phone, 
   Mail, 
   MapPin, 
@@ -130,8 +134,7 @@ import {
 
   
 export function EnhancedFuturisticFooter() {
-  
-  
+
         { name: 'Press & Media', href: '/press', featured: false },;
         { name: 'Legal & Privacy', href: '/legal', featured: false };
       ]};

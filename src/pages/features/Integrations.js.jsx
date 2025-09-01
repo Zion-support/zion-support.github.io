@@ -7,7 +7,9 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
+
     const schema = {
+
   "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "API & Integrations",
@@ -18,6 +20,7 @@ export default function IntegrationsFeature() {
 };
     const { markSlackConnected } = useAdvancedOnboardingStatus();
     useEffect(() => {
+
         markSlackConnected()}, [markSlackConnected]);
     return (<>
       <SEO title="API & Integrations" description="Extend Zion by embedding widgets or using our REST API for custom workflows." keywords="Zion API, Slack integration, embed widget" canonical="https://app.ziontechgroup.com/features/integrations"/>

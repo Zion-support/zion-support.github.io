@@ -1,4 +1,5 @@
 import { Shield, AlertTriangle, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu export default function AISupplyChainRiskManagement(...args: any[]): any {
+
   const features = [
     'AI-powered supply chain risk assessment and monitoring',
     'Real-time global supply chain disruption alerts',
@@ -23,12 +24,14 @@ import { Shield, AlertTriangle, TrendingUp, BarChart3, CheckCircle, ArrowRight, 
 
   const pricing = [
     {
+
       name: 'Starter',
       price: '$299/mo',
       features: ['Up to 100 suppliers', 'Basic risk scoring', 'Standard alerts', 'Email support', 'Monthly reports'],
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$799/mo',
       features: ['Up to 500 suppliers', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
@@ -171,6 +174,7 @@ import { Shield, AlertTriangle, TrendingUp, BarChart3, CheckCircle, ArrowRight, 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
+
                 plan.popular ? 'border-red-500' : 'border-gray-200'
               } p-8`}>
                 {plan.popular && (
@@ -197,6 +201,7 @@ import { Shield, AlertTriangle, TrendingUp, BarChart3, CheckCircle, ArrowRight, 
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+
                   plan.popular
                     ? 'bg-red-600 text-white hover:bg-red-700'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'

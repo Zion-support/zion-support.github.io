@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const INNOVATIVE_IOT_EDGE_SERVICES_2030: ProductListing[] = [
   // AI-Powered IoT Device Management Platform
   {
+
     id: "ai-iot-device-management",
     title: "AI IoT Device Management Platform",
     description: "Intelligent IoT device management platform that provides real-time monitoring, predictive maintenance, and automated device optimization. Manages millions of devices with 99.9% uptime and reduces maintenance costs by 50%.",
@@ -21,6 +22,7 @@ export const INNOVATIVE_IOT_EDGE_SERVICES_2030: ProductListing[] = [
     availability: "5-7 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-iot-device-management",
@@ -35,6 +37,7 @@ export const INNOVATIVE_IOT_EDGE_SERVICES_2030: ProductListing[] = [
 
   // Edge AI Computing Platform
   {
+
     id: "edge-ai-computing-platform",
     title: "Edge AI Computing Platform",
     description: "Advanced edge AI computing platform that brings artificial intelligence to the edge, enabling real-time AI processing and decision-making. Reduces latency by 80% and bandwidth usage by 70%.",
@@ -53,6 +56,7 @@ export const INNOVATIVE_IOT_EDGE_SERVICES_2030: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/edge-ai-computing",
@@ -67,6 +71,7 @@ export const INNOVATIVE_IOT_EDGE_SERVICES_2030: ProductListing[] = [
 
   // Smart City IoT Platform
   {
+
     id: "smart-city-iot-platform",
     title: "Smart City IoT Platform",
     description: "Comprehensive smart city IoT platform that integrates various city systems for intelligent urban management. Improves city efficiency by 40% and reduces operational costs by 30%.",
@@ -85,6 +90,7 @@ export const INNOVATIVE_IOT_EDGE_SERVICES_2030: ProductListing[] = [
     availability: "8-12 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/smart-city-iot",
@@ -99,6 +105,7 @@ export const INNOVATIVE_IOT_EDGE_SERVICES_2030: ProductListing[] = [
 
   // Industrial IoT Analytics Platform
   {
+
     id: "industrial-iot-analytics",
     title: "Industrial IoT Analytics Platform",
     description: "Advanced industrial IoT analytics platform that provides real-time monitoring, predictive maintenance, and operational optimization for manufacturing and industrial processes. Increases productivity by 35% and reduces downtime by 60%.",
@@ -117,6 +124,7 @@ export const INNOVATIVE_IOT_EDGE_SERVICES_2030: ProductListing[] = [
     availability: "7-9 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/industrial-iot-analytics",
@@ -131,6 +139,7 @@ export const INNOVATIVE_IOT_EDGE_SERVICES_2030: ProductListing[] = [
 
   // 5G Edge Computing Platform
   {
+
     id: "5g-edge-computing-platform",
     title: "5G Edge Computing Platform",
     description: "Next-generation 5G edge computing platform that leverages 5G networks for ultra-low latency applications and real-time edge processing. Reduces latency to under 10ms and enables new use cases in autonomous vehicles and AR/VR.",
@@ -149,6 +158,7 @@ export const INNOVATIVE_IOT_EDGE_SERVICES_2030: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/5g-edge-computing",

@@ -1,5 +1,6 @@
 export const comprehensiveServices = [
   {
+
     id: 1,
     name: 'IT Infrastructure Management',
     category: 'Infrastructure',
@@ -36,6 +37,7 @@ export const comprehensiveServices = [
     sla: '99.9% uptime'
   },
   {
+
     id: 2,
     name: 'Cybersecurity Services',
     category: 'Security',
@@ -72,6 +74,7 @@ export const comprehensiveServices = [
     sla: '99.95% threat detection'
   },
   {
+
     id: 3,
     name: 'Cloud Solutions',
     category: 'Cloud',
@@ -108,6 +111,7 @@ export const comprehensiveServices = [
     sla: '99.9% availability'
   },
   {
+
     id: 4,
     name: 'Data Management',
     category: 'Data',
@@ -144,6 +148,7 @@ export const comprehensiveServices = [
     sla: '99.99% data integrity'
   },
   {
+
     id: 5,
     name: 'Network Services',
     category: 'Networking',
@@ -180,6 +185,7 @@ export const comprehensiveServices = [
     sla: '99.9% network uptime'
   },
   {
+
     id: 6,
     name: 'Help Desk Support',
     category: 'Support',
@@ -219,36 +225,42 @@ export const comprehensiveServices = [
 
 export const serviceCategories = [
   {
+
     name: 'Infrastructure',
     description: 'Core IT infrastructure services',
     icon: '🏗️',
     services: comprehensiveServices.filter(s => s.category === 'Infrastructure')
   },
   {
+
     name: 'Security',
     description: 'Cybersecurity and compliance services',
     icon: '🛡️',
     services: comprehensiveServices.filter(s => s.category === 'Security')
   },
   {
+
     name: 'Cloud',
     description: 'Cloud computing and migration services',
     icon: '☁️',
     services: comprehensiveServices.filter(s => s.category === 'Cloud')
   },
   {
+
     name: 'Data',
     description: 'Data management and recovery services',
     icon: '💾',
     services: comprehensiveServices.filter(s => s.category === 'Data')
   },
   {
+
     name: 'Networking',
     description: 'Network infrastructure services',
     icon: '🌐',
     services: comprehensiveServices.filter(s => s.category === 'Networking')
   },
   {
+
     name: 'Support',
     description: 'Help desk and user support services',
     icon: '🎧',
@@ -258,6 +270,7 @@ export const serviceCategories = [
 
 export const pricingTiers = [
   {
+
     name: 'Starter',
     description: 'Perfect for small businesses',
     price: 800,
@@ -275,6 +288,7 @@ export const pricingTiers = [
     ]
   },
   {
+
     name: 'Professional',
     description: 'Ideal for growing businesses',
     price: 2000,
@@ -293,6 +307,7 @@ export const pricingTiers = [
     ]
   },
   {
+
     name: 'Enterprise',
     description: 'For large organizations',
     price: 5000,
@@ -313,18 +328,22 @@ export const pricingTiers = [
 ];
 
 export const getServiceById = (id) => {
+
   return comprehensiveServices.find(service => service.id === id);
 };
 
 export const getServicesByCategory = (category) => {
+
   return comprehensiveServices.filter(service => service.category === category);
 };
 
 export const getPopularServices = () => {
+
   return comprehensiveServices.filter(service => service.popular);
 };
 
 export const calculateServiceCost = (serviceId, months = 1, customizations = []) => {
+
   const service = getServiceById(serviceId);
   if (!service) return 0;
   
@@ -332,9 +351,12 @@ export const calculateServiceCost = (serviceId, months = 1, customizations = [])
   
   // Add customization costs
   customizations.forEach(customization => {
+
     if (customization.type === 'addon') {
+
       baseCost += customization.price * months;
     } else if (customization.type === 'oneTime') {
+
       baseCost += customization.price;
 })
   });
@@ -343,14 +365,17 @@ export const calculateServiceCost = (serviceId, months = 1, customizations = [])
 };
 
 export const getServiceRecommendations = (businessSize, industry, budget) => {
+
   let recommendations = comprehensiveServices;
   
   // Filter by business size
   if (businessSize === 'small') {
+
     recommendations = recommendations.filter(service => 
       ['Support', 'Data'].includes(service.category)
     );
   } else if (businessSize === 'medium') {
+
     recommendations = recommendations.filter(service => 
       ['Support', 'Data', 'Networking', 'Security'].includes(service.category)
     );
@@ -358,8 +383,10 @@ export const getServiceRecommendations = (businessSize, industry, budget) => {
   
   // Filter by budget
   if (budget === 'low') {
+
     recommendations = recommendations.filter(service => service.basePrice <= 1500);
   } else if (budget === 'medium') {
+
     recommendations = recommendations.filter(service => service.basePrice <= 3000);
   }
   

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } from 'lucide-react';
 export const EnhancedAbout = () => {
+
 import { motion } from 'framer - motion';
 
     const compValues = [

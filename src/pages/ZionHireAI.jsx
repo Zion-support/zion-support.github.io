@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, ArrowRight import { Footer } from '@/components / 
 export default ZionHireAI;
 
 const ZionHireAI = () => {
+
   const successMetrics = [
     { metric: '95%', label: 'Faster Hiring' },
     { metric: '87%', label: 'Better Matches' },

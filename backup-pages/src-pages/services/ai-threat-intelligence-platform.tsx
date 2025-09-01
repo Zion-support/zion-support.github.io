@@ -42,7 +42,7 @@ import {
   Globe as GlobeIcon,
   Zap as ZapIcon,
   Users as UsersIcon,
-  Lock as LockIcon
+  Lock as LockIcon,
 } from 'lucide-react';
 
 export function AIThreatIntelligencePlatform() {
@@ -50,39 +50,68 @@ export function AIThreatIntelligencePlatform() {
     {
       icon: Brain,
       title: 'AI-Powered Threat Detection',
-      description: 'Advanced machine learning algorithms that detect and analyze threats in real-time',
-      benefits: ['Zero-day threat detection', 'Behavioral analysis', 'Predictive threat modeling']
+      description:
+        'Advanced machine learning algorithms that detect and analyze threats in real-time',
+      benefits: [
+        'Zero-day threat detection',
+        'Behavioral analysis',
+        'Predictive threat modeling',
+      ],
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-grade security with SOC2 compliance and zero-trust architecture',
-      benefits: ['End-to-end encryption', 'Multi-factor authentication', 'Regular security audits']
+      description:
+        'Bank-grade security with SOC2 compliance and zero-trust architecture',
+      benefits: [
+        'End-to-end encryption',
+        'Multi-factor authentication',
+        'Regular security audits',
+      ],
     },
     {
       icon: Activity,
       title: 'Real-Time Monitoring',
-      description: '24/7 continuous monitoring of your entire digital infrastructure',
-      benefits: ['Instant threat alerts', 'Live security dashboards', 'Automated response']
+      description:
+        '24/7 continuous monitoring of your entire digital infrastructure',
+      benefits: [
+        'Instant threat alerts',
+        'Live security dashboards',
+        'Automated response',
+      ],
     },
     {
       icon: BarChart3,
       title: 'Advanced Analytics',
       description: 'Comprehensive threat intelligence and security analytics',
-      benefits: ['Threat trend analysis', 'Risk assessment', 'Compliance reporting']
+      benefits: [
+        'Threat trend analysis',
+        'Risk assessment',
+        'Compliance reporting',
+      ],
     },
     {
       icon: Zap,
       title: 'Automated Response',
-      description: 'Intelligent automated incident response and threat mitigation',
-      benefits: ['Instant threat blocking', 'Automated remediation', 'Incident orchestration']
+      description:
+        'Intelligent automated incident response and threat mitigation',
+      benefits: [
+        'Instant threat blocking',
+        'Automated remediation',
+        'Incident orchestration',
+      ],
     },
     {
       icon: Cloud,
       title: 'Cloud-Native',
-      description: 'Built for the cloud with automatic scaling and high availability',
-      benefits: ['99.99% uptime guarantee', 'Global deployment', 'Auto-scaling infrastructure']
-    }
+      description:
+        'Built for the cloud with automatic scaling and high availability',
+      benefits: [
+        '99.99% uptime guarantee',
+        'Global deployment',
+        'Auto-scaling infrastructure',
+      ],
+    },
   ];
 
   const pricingPlans = [
@@ -99,10 +128,10 @@ export function AIThreatIntelligencePlatform() {
         'Email support',
         'Basic analytics',
         'SOC 2 compliance',
-        'API access'
+        'API access',
       ],
       cta: 'Start Free Trial',
-      popular: false
+      popular: false,
     },
     {
       name: 'Enterprise',
@@ -119,10 +148,10 @@ export function AIThreatIntelligencePlatform() {
         'Custom integrations',
         'Dedicated security team',
         'White-label options',
-        'SLA guarantees'
+        'SLA guarantees',
       ],
       cta: 'Contact Sales',
-      popular: true
+      popular: true,
     },
     {
       name: 'Government',
@@ -137,11 +166,11 @@ export function AIThreatIntelligencePlatform() {
         'Custom security protocols',
         '24/7 dedicated support',
         'Security clearance support',
-        'Compliance consulting'
+        'Compliance consulting',
       ],
       cta: 'Contact Government Sales',
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const useCases = [
@@ -149,33 +178,49 @@ export function AIThreatIntelligencePlatform() {
       title: 'Financial Institutions',
       description: 'Protect critical financial systems from cyber threats',
       icon: DollarSign,
-      benefits: ['Fraud detection', 'Compliance monitoring', 'Real-time threat response']
+      benefits: [
+        'Fraud detection',
+        'Compliance monitoring',
+        'Real-time threat response',
+      ],
     },
     {
       title: 'Healthcare Organizations',
       description: 'Secure patient data and healthcare systems',
       icon: Heart,
-      benefits: ['HIPAA compliance', 'Patient data protection', 'Medical device security']
+      benefits: [
+        'HIPAA compliance',
+        'Patient data protection',
+        'Medical device security',
+      ],
     },
     {
       title: 'Government Agencies',
       description: 'Defend against nation-state cyber threats',
       icon: Shield,
-      benefits: ['Classified data protection', 'Threat intelligence sharing', 'Compliance management']
+      benefits: [
+        'Classified data protection',
+        'Threat intelligence sharing',
+        'Compliance management',
+      ],
     },
     {
       title: 'Manufacturing',
       description: 'Protect industrial control systems and IoT devices',
       icon: Settings,
-      benefits: ['OT security', 'Supply chain protection', 'Operational continuity']
-    }
+      benefits: [
+        'OT security',
+        'Supply chain protection',
+        'Operational continuity',
+      ],
+    },
   ];
 
   const stats = [
     { number: '95%', label: 'Reduction in Security Incidents' },
     { number: '<1s', label: 'Average Response Time' },
     { number: '99.99%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Security Monitoring' }
+    { number: '24/7', label: 'Security Monitoring' },
   ];
 
   return (
@@ -197,8 +242,10 @@ export function AIThreatIntelligencePlatform() {
               AI Threat Intelligence Platform
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionary cybersecurity platform that uses AI to detect, analyze, and respond to cyber threats in real-time. 
-              Protect your organization with predictive threat intelligence and automated incident response.
+              Revolutionary cybersecurity platform that uses AI to detect,
+              analyze, and respond to cyber threats in real-time. Protect your
+              organization with predictive threat intelligence and automated
+              incident response.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -231,7 +278,9 @@ export function AIThreatIntelligencePlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-3xl md:text-4xl font-bold text-red-400 mb-2">{stat.number}</div>
+                <div className="text-3xl md:text-4xl font-bold text-red-400 mb-2">
+                  {stat.number}
+                </div>
                 <div className="text-gray-400">{stat.label}</div>
               </motion.div>
             ))}
@@ -248,9 +297,12 @@ export function AIThreatIntelligencePlatform() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Advanced Security Features</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Advanced Security Features
+            </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive threat intelligence and automated response capabilities
+              Our AI-powered platform provides comprehensive threat intelligence
+              and automated response capabilities
             </p>
           </motion.div>
 
@@ -270,7 +322,10 @@ export function AIThreatIntelligencePlatform() {
                 <p className="text-gray-400 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                    <li
+                      key={benefitIndex}
+                      className="flex items-center text-sm text-gray-300"
+                    >
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
@@ -291,7 +346,9 @@ export function AIThreatIntelligencePlatform() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Industry Solutions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Industry Solutions
+            </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Tailored security solutions for different industries and use cases
             </p>
@@ -313,7 +370,10 @@ export function AIThreatIntelligencePlatform() {
                 <p className="text-gray-400 mb-4">{useCase.description}</p>
                 <ul className="space-y-2">
                   {useCase.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                    <li
+                      key={benefitIndex}
+                      className="flex items-center text-sm text-gray-300"
+                    >
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
@@ -334,7 +394,9 @@ export function AIThreatIntelligencePlatform() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Pricing Plans</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Pricing Plans
+            </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Choose the perfect plan for your organization's security needs
             </p>
@@ -368,7 +430,10 @@ export function AIThreatIntelligencePlatform() {
                 </div>
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-gray-300"
+                    >
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
@@ -402,7 +467,8 @@ export function AIThreatIntelligencePlatform() {
               Ready to Secure Your Organization?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of organizations that trust our AI-powered threat intelligence platform
+              Join thousands of organizations that trust our AI-powered threat
+              intelligence platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -440,7 +506,11 @@ export function AIThreatIntelligencePlatform() {
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 text-red-400 mb-4" />
               <h3 className="text-lg font-semibold mb-2">Address</h3>
-              <p className="text-gray-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p className="text-gray-400">
+                364 E Main St STE 1008
+                <br />
+                Middletown DE 19709
+              </p>
             </div>
           </div>
         </div>

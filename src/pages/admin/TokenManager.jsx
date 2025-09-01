@@ -9,6 +9,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
 import { apiClient } from '@/utils/apiClient';
 export default function TokenManager() {
+
     const { user } = useAuth();
     const { toast } = useToast();
     const [transactions, setTransactions] = useState([]);
@@ -16,18 +17,23 @@ export default function TokenManager() {
     const [amount, setAmount] = useState(0);
     const isAdmin = user?.userType === 'admin';
     useEffect(() => {
+
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   };
 
@@ -43,12 +49,15 @@ export default function TokenManager() {
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   };
 
@@ -61,9 +70,11 @@ export default function TokenManager() {
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   };
 
@@ -73,12 +84,14 @@ export default function TokenManager() {
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   };
 }, []);, []);
         if (isAdmin)
             fetchTransactions()}, [isAdmin]);
     const fetchTransactions = async () => {
+
         const { data, error } = await supabase
             .from('token_transactions')
             .select('*')
@@ -87,15 +100,18 @@ export default function TokenManager() {
         if (!error)
             setTransactions(data || [])};
     const handleIssue = async (type) => {
+
         if (!userId || amount <= 0)
             return;
         const res = await apiClient(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
+
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ userId, amount }),
-        });
+            body: JSON.stringify({ userId, amount })});
         if (res.ok) {
+
             toast({
+
                 title: 'Success',
                 description: 'Transaction processed'
             });
@@ -106,8 +122,10 @@ export default function TokenManager() {
             fetchTransactions()}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         else {
+
             const err = await res.json();
             toast({
+
                 title: 'Error',
                 description: err.error || 'Failed',
                 variant: 'destructive'

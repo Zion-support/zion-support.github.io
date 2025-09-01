@@ -1,4 +1,5 @@
 export interface NextGenInnovativeService {
+
   id: string;
   title: string;
   description: string;
@@ -87,12 +88,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     roi: "500-1000%","
     innovationLevel: "Revolutionary",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Qiskit", "Cirq", "PennyLane", "Python", "CUDA"],;"
       integrations["AWS Braket", "Azure Quantum", "Google Quantum", "IBM Quantum", "D-Wave"],;
@@ -106,6 +109,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
 
   // Autonomous AI Agents
   {
+
 "
     id: "autonomous-ai-agent-framework","
     title: "Autonomous AI Agent Framework","
@@ -155,12 +159,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     roi: "300-600%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],;"
       integrations["Salesforce", "HubSpot", "Zapier", "Slack", "Microsoft Teams", "Slack"],;
@@ -174,6 +180,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
 
   // Edge AI Computing Platform
   {
+
 "
     id: "edge-ai-computing-platform","
     title: "Edge AI Computing Platform","
@@ -223,12 +230,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     roi: "400-800%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["TensorFlow Lite", "ONNX Runtime", "Docker", "Kubernetes", "MQTT", "WebRTC"],;"
       integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT", "Cisco IoT"],;
@@ -242,6 +251,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
 
   // Blockchain AI Integration Platform
   {
+
 "
     id: "blockchain-ai-integration-platform","
     title: "Blockchain AI Integration Platform","
@@ -291,12 +301,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     roi: "600-1200%","
     innovationLevel: "Revolutionary",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Ethereum", "Solana", "Polygon", "TensorFlow", "PyTorch", "Web3.js"],;"
       integrations["MetaMask", "WalletConnect", "Uniswap", "OpenSea", "Chainlink"],;
@@ -310,6 +322,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
 
   // Cybersecurity AI Platform
   {
+
 "
     id: "cybersecurity-ai-platform","
     title: "Cybersecurity AI Platform","
@@ -359,12 +372,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     roi: "500-1000%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "Elasticsearch", "Kafka", "Docker", "Kubernetes"],;"
       integrations["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],;
@@ -378,6 +393,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
 
   // Healthcare AI Platform
   {
+
 "
     id: "healthcare-ai-platform","
     title: "Healthcare AI Platform","
@@ -427,12 +443,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     roi: "800-1500%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["TensorFlow", "PyTorch", "DICOM", "HL7 FHIR", "Python", "React"],;"
       integrations["PACS systems", "EHR platforms", "Medical devices", "Telemedicine platforms", "Lab systems"],;
@@ -446,6 +464,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
 
   // Financial AI Trading Platform
   {
+
 "
     id: "financial-ai-trading-platform","
     title: "Financial AI Trading Platform","
@@ -495,12 +514,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     roi: "1000-2000%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "PyTorch", "Redis", "PostgreSQL", "Kafka"],;"
       integrations["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],;
@@ -514,6 +535,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
 
   // Manufacturing AI Platform
   {
+
 "
     id: "manufacturing-ai-platform","
     title: "Manufacturing AI Platform","
@@ -563,12 +585,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     roi: "600-1200%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "PyTorch", "OPC UA", "MQTT", "PLC integration"],;"
       integrations["SAP", "Oracle", "Siemens", "Rockwell", "ABB", "Schneider Electric"],;
@@ -582,6 +606,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
 
   // Retail AI Platform
   {
+
 "
     id: "retail-ai-platform","
     title: "Retail AI Platform","
@@ -631,12 +656,14 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     roi: "400-800%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],;"
       integrations["Shopify", "WooCommerce", "Magento", "Salesforce", "HubSpot", "Google Analytics"],;

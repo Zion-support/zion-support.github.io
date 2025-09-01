@@ -5,7 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 const AdvancedServiceRecommendation = () => {
+
     const [clientProfile, setClientProfile] = useState({
+
         industry: '',
         compSize: '',
         budget: '',
@@ -43,6 +45,7 @@ const AdvancedServiceRecommendation = () => {
     ];
     const mockServices = [
         {
+
             id: 'ai-crm-platform',
             title: 'AI-Powered CRM Platform',
             description: 'Advanced customer relationship management platform with AI-driven insights and automation.',
@@ -60,6 +63,7 @@ const AdvancedServiceRecommendation = () => {
             email: 'kleber@ziontechgroup.com'
         },
         {
+
             id: 'quantum-computing-service',
             title: 'Quantum Computing as a Service',
             description: 'Enterprise-grade quantum computing platform for complex computational problems.',
@@ -77,6 +81,7 @@ const AdvancedServiceRecommendation = () => {
             email: 'kleber@ziontechgroup.com'
         },
         {
+
             id: 'blockchain-supply-chain',
             title: 'Blockchain Supply Chain Solution',
             description: 'Transparent and secure supply chain management using blockchain technology.',
@@ -95,9 +100,11 @@ const AdvancedServiceRecommendation = () => {
         }
     ];
     const calculateMatchScore = (service, profile) => {
+
         let score = 0;
         // Industry match
         if (service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {
+
             score += 25}
         // Budget compatibility
         const servicePrice = parseInt(service.price.replace(/[^0-9]/g, ''));
@@ -137,10 +144,13 @@ const AdvancedServiceRecommendation = () => {
         score += (goalMatches / profile.primaryGoals.length) * 20;
         return Math.min(100, score)};
     const generateRecommendations = () => {
+
         setIsAnalyzing(true);
         // Simulate analysis time
         setTimeout(() => {
+
             const recs = mockServices.map(service => {
+
                 const matchScore = calculateMatchScore(service, clientProfile);
                 let priority;
                 if (matchScore >= 80)
@@ -167,6 +177,7 @@ const AdvancedServiceRecommendation = () => {
                 const timeToValue = complexity === 'Simple' ? '2-4 months' :
                     complexity === 'Moderate' ? '4-8 months' : '8-12 months';
                 return {
+
                     service,
                     matchScore,
                     reasoning,
@@ -179,30 +190,37 @@ const AdvancedServiceRecommendation = () => {
             setIsAnalyzing(false);
             setShowResults(true)}, 2000)};
     const getPriorityColor = (priority) => {
+
         switch (priority) {
+
             case 'High': return 'bg-red-100 text-red-800';
             case 'Medium': return 'bg-yellow-100 text-yellow-800';
             case 'Low': return 'bg-green-100 text-green-800';
             default: return 'bg-gray-100 text-gray-800'}
     };
     const getComplexityColor = (complexity) => {
+
         switch (complexity) {
+
             case 'Complex': return 'bg-red-100 text-red-800';
             case 'Moderate': return 'bg-yellow-100 text-yellow-800';
             case 'Simple': return 'bg-green-100 text-green-800';
             default: return 'bg-gray-100 text-gray-800'}
     };
     const isFormComplete = () => {
+
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&
             clientProfile.timeline && clientProfile.technologyMaturity &&
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0};
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -218,10 +236,12 @@ const AdvancedServiceRecommendation = () => {
 
       {/* Client Profile Form */}
       <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -235,6 +255,7 @@ const AdvancedServiceRecommendation = () => {
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>
             <select value={clientProfile.industry} onChange = {
+
   (e) => setClientProfile(prev => ({ ...prev,
   industry: e.target.value 
 
@@ -247,6 +268,7 @@ const AdvancedServiceRecommendation = () => {
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Comp Size</label>
             <select value={clientProfile.compSize} onChange = {
+
   (e) => setClientProfile(prev => ({ ...prev,
   compSize: e.target.value 
 
@@ -259,6 +281,7 @@ const AdvancedServiceRecommendation = () => {
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>
             <select value={clientProfile.budget} onChange = {
+
   (e) => setClientProfile(prev => ({ ...prev,
   budget: e.target.value 
 
@@ -271,6 +294,7 @@ const AdvancedServiceRecommendation = () => {
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>
             <select value={clientProfile.timeline} onChange = {
+
   (e) => setClientProfile(prev => ({ ...prev,
   timeline: e.target.value 
 
@@ -283,6 +307,7 @@ const AdvancedServiceRecommendation = () => {
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>
             <select value={clientProfile.technologyMaturity} onChange = {
+
   (e) => setClientProfile(prev => ({ ...prev,
   technologyMaturity: e.target.value 
 
@@ -298,13 +323,17 @@ const AdvancedServiceRecommendation = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
             {primaryGoals.map(goal => (<label key={goal} className="flex items-center gap-2 cursor-pointer">
                 <input type="checkbox" checked={clientProfile.primaryGoals.includes(goal)} onChange = {
+
   (e) => {
+
                 if (e.target.checked) {
+
                     setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,
   goal] 
 
 }))}
                 else {
+
                     setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}
             }} className="rounded text-zion-cyan"/>
                 <span className="text-sm text-zion-slate-light">{goal}</span>
@@ -317,13 +346,17 @@ const AdvancedServiceRecommendation = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
             {challenges.map(challenge => (<label key={challenge} className="flex items-center gap-2 cursor-pointer">
                 <input type="checkbox" checked={clientProfile.challenges.includes(challenge)} onChange = {
+
   (e) => {
+
                 if (e.target.checked) {
+
                     setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,
   challenge] 
 
 }))}
                 else {
+
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}
             }} className="rounded text-zion-cyan"/>
                 <span className="text-sm text-zion-slate-light">{challenge}</span>
@@ -346,10 +379,12 @@ const AdvancedServiceRecommendation = () => {
 
       {/* Recommendations Results */}
       {showResults && (<motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -360,10 +395,12 @@ const AdvancedServiceRecommendation = () => {
           
           <div className="space-y-6">
             {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {
+
   { opacity: 0,
   x: -20 
 
 }} animate = {
+
   { opacity: 1,
   x: 0 
 
@@ -442,6 +479,7 @@ const AdvancedServiceRecommendation = () => {
                         
                         <div className="mt-4">
                           <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
+
   () => window.open(rec.service.link,
   '_blank')
 
@@ -459,10 +497,12 @@ const AdvancedServiceRecommendation = () => {
           
           {/* CTA Section */}
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -475,6 +515,7 @@ const AdvancedServiceRecommendation = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
+
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation',
   '_blank')
 
@@ -483,6 +524,7 @@ const AdvancedServiceRecommendation = () => {
                   Get Expert Consultation
                 </Button>
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
+
   () => window.open('tel:+13024640950',
   '_blank')
 

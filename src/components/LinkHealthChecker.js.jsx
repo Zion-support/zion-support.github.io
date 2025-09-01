@@ -49,6 +49,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
         status: 'external',
         responseTime: Date.now() - startTime};
     } catch (error) {
+
       return {
 
         url,
@@ -58,6 +59,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
     }
   };
   const checkAllLinks = async () => {
+
     setIsChecking(true);
     setLinkStatuses(links.map(link => ({ url: link.url, status: 'checking' })));
     const statuses = await Promise.all()
@@ -67,6 +69,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
     setIsChecking(false);
   };
   useEffect(() => {
+
     // Auto-check links when component mounts
     checkAllLinks();
   }, [links]);

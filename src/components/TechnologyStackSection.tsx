@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion } from 'framer - motion';
 
@@ -8,6 +9,7 @@ import { motion } from 'framer - motion';
  * @returns {*} Function return value
  */
 function TechnologyStackSection () {
+
 =======
 >>>>>>> main
 
@@ -39,6 +41,7 @@ const technologyCategories = [
     color: "from-blue-500 to-cyan-500"
   },
   {
+
 "
     category: "Backend Technologies",
     technologies: ["
@@ -51,6 +54,7 @@ const technologyCategories = [
     color: "from-green-500 to-emerald-500"
   },
   {
+
 "
     category: "AI & Machine Learning",
     technologies: ["
@@ -63,6 +67,7 @@ const technologyCategories = [
     color: "from-purple-500 to-pink-500"
   },
   {
+
 "
     category: "Cloud & DevOps",
     technologies: ["
@@ -85,6 +90,7 @@ const technologyCategories = [
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function TechnologyStackSection() {
+
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">

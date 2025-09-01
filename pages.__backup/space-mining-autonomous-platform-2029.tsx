@@ -2,11 +2,33 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Rocket, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, 
-  Zap, Sparkles, Shield, Cpu, Database, Cloud, Lock, 
-  Users, Briefcase, BookOpen, MessageCircle, TrendingUp,
-  Target, Layers, Globe, Brain, Atom, Building, Satellite
+import {
+  Rocket,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Sparkles,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  TrendingUp,
+  Target,
+  Layers,
+  Globe,
+  Brain,
+  Atom,
+  Building,
+  Satellite,
 } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
@@ -15,7 +37,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 const features = [
@@ -26,7 +48,7 @@ const features = [
   'Resource processing automation',
   'Space transportation systems',
   'Remote monitoring and control',
-  'Resource value assessment'
+  'Resource value assessment',
 ];
 
 const benefits = [
@@ -35,7 +57,7 @@ const benefits = [
   'Autonomous space operations',
   'Scalable mining operations',
   'Cost-effective resource extraction',
-  'Space industry leadership'
+  'Space industry leadership',
 ];
 
 const useCases = [
@@ -44,7 +66,7 @@ const useCases = [
   'Resource companies',
   'Technology companies',
   'Research institutions',
-  'Investment firms'
+  'Investment firms',
 ];
 
 const technology = [
@@ -53,7 +75,7 @@ const technology = [
   'AI Systems',
   'Resource Processing',
   'Satellite Communication',
-  'Advanced Propulsion'
+  'Advanced Propulsion',
 ];
 
 const pricingPlans = [
@@ -67,9 +89,9 @@ const pricingPlans = [
       'Resource identification',
       'Remote monitoring',
       'Basic support',
-      'Training modules'
+      'Training modules',
     ],
-    popular: false
+    popular: false,
   },
   {
     name: 'Space Enterprise',
@@ -82,9 +104,9 @@ const pricingPlans = [
       'Custom mining operations',
       'Priority support',
       'Custom training',
-      'Integration services'
+      'Integration services',
     ],
-    popular: true
+    popular: true,
   },
   {
     name: 'Space Government',
@@ -97,10 +119,10 @@ const pricingPlans = [
       'On-site deployment',
       '24/7 dedicated support',
       'Compliance certification',
-      'Full training program'
+      'Full training program',
     ],
-    popular: false
-  }
+    popular: false,
+  },
 ];
 
 export default function SpaceMiningAutonomousPlatform2029() {
@@ -108,28 +130,58 @@ export default function SpaceMiningAutonomousPlatform2029() {
     <>
       <Head>
         <title>Space Mining Autonomous Platform 2029 | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary autonomous space mining platform that enables automated resource extraction from asteroids, moons, and other celestial bodies." />
-        <meta name="keywords" content="space mining, autonomous space, asteroid mining, space resources, 2029 technology" />
+        <meta
+          name="description"
+          content="Revolutionary autonomous space mining platform that enables automated resource extraction from asteroids, moons, and other celestial bodies."
+        />
+        <meta
+          name="keywords"
+          content="space mining, autonomous space, asteroid mining, space resources, 2029 technology"
+        />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-        
+
         {/* Open Graph */}
-        <meta property="og:title" content="Space Mining Autonomous Platform 2029" />
-        <meta property="og:description" content="Revolutionary autonomous space mining platform that enables automated resource extraction from asteroids, moons, and other celestial bodies." />
+        <meta
+          property="og:title"
+          content="Space Mining Autonomous Platform 2029"
+        />
+        <meta
+          property="og:description"
+          content="Revolutionary autonomous space mining platform that enables automated resource extraction from asteroids, moons, and other celestial bodies."
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/space-mining-autonomous-platform-2029" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        
+        <meta
+          property="og:url"
+          content="https://ziontechgroup.com/space-mining-autonomous-platform-2029"
+        />
+        <meta
+          property="og:image"
+          content="https://ziontechgroup.com/og-image.jpg"
+        />
+
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Space Mining Autonomous Platform 2029" />
-        <meta name="twitter:description" content="Revolutionary autonomous space mining platform that enables automated resource extraction from asteroids, moons, and other celestial bodies." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
-        
+        <meta
+          name="twitter:title"
+          content="Space Mining Autonomous Platform 2029"
+        />
+        <meta
+          name="twitter:description"
+          content="Revolutionary autonomous space mining platform that enables automated resource extraction from asteroids, moons, and other celestial bodies."
+        />
+        <meta
+          name="twitter:image"
+          content="https://ziontechgroup.com/twitter-image.jpg"
+        />
+
         {/* Additional Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#8b5cf6" />
-        <link rel="canonical" href="https://ziontechgroup.com/space-mining-autonomous-platform-2029" />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/space-mining-autonomous-platform-2029"
+        />
       </Head>
 
       <UltraFuturisticNavigation2029 />
@@ -158,27 +210,32 @@ export default function SpaceMiningAutonomousPlatform2029() {
                 Space Mining
               </span>
               <br />
-              <span className="text-white">
-                Autonomous Platform
-              </span>
+              <span className="text-white">Autonomous Platform</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-              Revolutionary autonomous space mining platform that enables automated 
-              resource extraction from asteroids, moons, and other celestial bodies.
+              Revolutionary autonomous space mining platform that enables
+              automated resource extraction from asteroids, moons, and other
+              celestial bodies.
             </p>
-            
+
             {/* Key Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">$18.5B</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">
+                  $18.5B
+                </div>
                 <div className="text-gray-400">Market Size by 2029</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">1000%</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">
+                  1000%
+                </div>
                 <div className="text-gray-400">ROI within 36 months</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">
+                  24/7
+                </div>
                 <div className="text-gray-400">Space Operations</div>
               </div>
             </div>
@@ -218,8 +275,9 @@ export default function SpaceMiningAutonomousPlatform2029() {
               Revolutionary Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our space mining platform combines cutting-edge robotics, AI systems, 
-              and space technology to enable autonomous resource extraction in space.
+              Our space mining platform combines cutting-edge robotics, AI
+              systems, and space technology to enable autonomous resource
+              extraction in space.
             </p>
           </motion.div>
 
@@ -236,7 +294,9 @@ export default function SpaceMiningAutonomousPlatform2029() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {feature}
+                </h3>
               </motion.div>
             ))}
           </div>
@@ -257,7 +317,8 @@ export default function SpaceMiningAutonomousPlatform2029() {
               Transformative Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented breakthroughs in space resource extraction and autonomous operations.
+              Experience unprecedented breakthroughs in space resource
+              extraction and autonomous operations.
             </p>
           </motion.div>
 
@@ -275,7 +336,9 @@ export default function SpaceMiningAutonomousPlatform2029() {
                   <CheckCircle className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    {benefit}
+                  </h3>
                 </div>
               </motion.div>
             ))}
@@ -314,7 +377,9 @@ export default function SpaceMiningAutonomousPlatform2029() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase}</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {useCase}
+                </h3>
               </motion.div>
             ))}
           </div>
@@ -352,7 +417,9 @@ export default function SpaceMiningAutonomousPlatform2029() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
                   <Satellite className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{tech}</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {tech}
+                </h3>
               </motion.div>
             ))}
           </div>
@@ -394,19 +461,23 @@ export default function SpaceMiningAutonomousPlatform2029() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 h-full">
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {plan.name}
+                    </h3>
                     <p className="text-gray-400 mb-6">{plan.description}</p>
                     <div className="mb-6">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-4xl font-bold text-white">
+                        {plan.price}
+                      </span>
                       <span className="text-gray-400">{plan.period}</span>
                     </div>
                   </div>
 
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature) => (
+                    {plan.features.map(feature => (
                       <li key={feature} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
@@ -440,23 +511,30 @@ export default function SpaceMiningAutonomousPlatform2029() {
               Ready for Space Mining?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact us today to start your journey into space resource extraction.
+              Contact us today to start your journey into space resource
+              extraction.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex flex-col items-center space-y-2">
                 <Phone className="w-6 h-6 text-cyan-400" />
-                <span className="text-white font-semibold">{contactInfo.mobile}</span>
+                <span className="text-white font-semibold">
+                  {contactInfo.mobile}
+                </span>
                 <span className="text-gray-400 text-sm">Call Us</span>
               </div>
               <div className="flex flex-col items-center space-y-2">
                 <Mail className="w-6 h-6 text-cyan-400" />
-                <span className="text-white font-semibold">{contactInfo.email}</span>
+                <span className="text-white font-semibold">
+                  {contactInfo.email}
+                </span>
                 <span className="text-gray-400 text-sm">Email Us</span>
               </div>
               <div className="flex flex-col items-center space-y-2">
                 <MapPin className="w-6 h-6 text-cyan-400" />
-                <span className="text-white font-semibold">{contactInfo.address}</span>
+                <span className="text-white font-semibold">
+                  {contactInfo.address}
+                </span>
                 <span className="text-gray-400 text-sm">Visit Us</span>
               </div>
             </div>

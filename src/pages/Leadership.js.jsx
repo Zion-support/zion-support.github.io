@@ -2,8 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import { Users, Award, Target, Zap, Linkedin, Mail } from 'lucide-react';
 const Leadership = () => {
+
     const leadershipTeam = [
         {
+
             name: "Dr. Sarah Chen",
             role: "Chief Executive Officer",
             image: "/leadership/sarah-chen.jpg",
@@ -22,6 +24,7 @@ const Leadership = () => {
             location: "San Francisco, CA"
         },
         {
+
             name: "Michael Rodriguez",
             role: "Chief Technology Officer",
             image: "/leadership/michael-rodriguez.jpg",
@@ -40,6 +43,7 @@ const Leadership = () => {
             location: "Austin, TX"
         },
         {
+
             name: "Dr. Emily Watson",
             role: "Chief Research Officer",
             image: "/leadership/emily-watson.jpg",
@@ -58,6 +62,7 @@ const Leadership = () => {
             location: "Boston, MA"
         },
         {
+
             name: "David Kim",
             role: "Chief Security Officer",
             image: "/leadership/david-kim.jpg",
@@ -76,6 +81,7 @@ const Leadership = () => {
             location: "Washington, DC"
         },
         {
+
             name: "Lisa Thompson",
             role: "VP of Engineering",
             image: "/leadership/lisa-thompson.jpg",
@@ -94,6 +100,7 @@ const Leadership = () => {
             location: "Seattle, WA"
         },
         {
+
             name: "James Wilson",
             role: "VP of Business Development",
             image: "/leadership/james-wilson.jpg",
@@ -114,27 +121,32 @@ const Leadership = () => {
     ];
     const compValues = [
         {
+
             title: "Innovation First",
             description: "We push the boundaries of what's possible, constantly exploring new technologies and approaches.",
             icon: Zap
         },
         {
+
             title: "Excellence in Everything",
             description: "We maintain the highest standards in our work, from code quality to client relationships.",
             icon: Award
         },
         {
+
             title: "Collaborative Culture",
             description: "We believe in the power of teamwork and diverse perspectives to solve complex challenges.",
             icon: Users
         },
         {
+
             title: "Client Success",
             description: "Our success is measured by the success of our clients and the impact we create together.",
             icon: Target
         }
     ];
     const vision = {
+
   title: "Our Vision",
         description: "To be the leading force in technological innovation, transforming businesses and society through cutting-edge AI, quantum computing, and sustainable technology solutions.",
         goals[

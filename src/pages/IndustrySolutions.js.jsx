@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope } from 'lucide-react';
 const IndustrySolutions = () => {
+
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedIndustry, setSelectedIndustry] = useState('all');
     const [selectedSolutionType, setSelectedSolutionType] = useState('all');
     // Industry-specific solutions data
     const industrySolutions = [
         {
+
             id: 1,
             name: "Healthcare Technology Solutions",
             industry: "Healthcare",
@@ -21,12 +23,14 @@ const IndustrySolutions = () => {
             compliance["HIPAA", "HITECH", "FDA", "SOC 2"],
             tags: ["Healthcare", "Digital Health", "Telemedicine", "EHR", "HIPAA"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
             }
         },
         {
+
             id: 2,
             name: "Financial Technology Platform",
             industry: "Finance",
@@ -41,12 +45,14 @@ const IndustrySolutions = () => {
             compliance["PCI DSS", "SOX", "GLBA", "SOC 2"],
             tags: ["Finance", "FinTech", "Digital Banking", "Payments", "Compliance"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
             }
         },
         {
+
             id: 3,
             name: "Smart Manufacturing Solutions",
             industry: "Manufacturing",
@@ -61,12 +67,14 @@ const IndustrySolutions = () => {
             compliance["ISO 9001", "ISO 14001", "FDA", "GMP"],
             tags: ["Manufacturing", "Industry 4.0", "IoT", "Predictive Analytics", "Supply Chain"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
             }
         },
         {
+
             id: 4,
             name: "E-commerce & Retail Solutions",
             industry: "Retail",
@@ -81,12 +89,14 @@ const IndustrySolutions = () => {
             compliance["PCI DSS", "GDPR", "CCPA", "SOC 2"],
             tags: ["Retail", "E-commerce", "Digital Commerce", "Customer Experience", "Inventory"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
             }
         },
         {
+
             id: 5,
             name: "Educational Technology Platform",
             industry: "Education",
@@ -101,12 +111,14 @@ const IndustrySolutions = () => {
             compliance["FERPA", "COPPA", "GDPR", "SOC 2"],
             tags: ["Education", "EdTech", "Online Learning", "Student Management", "Analytics"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
             }
         },
         {
+
             id: 6,
             name: "Logistics & Supply Chain Platform",
             industry: "Logistics",
@@ -121,12 +133,14 @@ const IndustrySolutions = () => {
             compliance["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
             tags: ["Logistics", "Supply Chain", "Transportation", "Tracking", "Optimization"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
             }
         },
         {
+
             id: 7,
             name: "Real Estate Technology Solutions",
             industry: "Real Estate",
@@ -141,12 +155,14 @@ const IndustrySolutions = () => {
             compliance["GDPR", "CCPA", "SOC 2", "Real estate regulations"],
             tags: ["Real Estate", "PropTech", "Property Management", "Virtual Tours", "Analytics"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
             }
         },
         {
+
             id: 8,
             name: "Energy & Utilities Platform",
             industry: "Energy",
@@ -161,12 +177,14 @@ const IndustrySolutions = () => {
             compliance["NERC", "FERC", "ISO standards", "SOC 2"],
             tags: ["Energy", "Utilities", "Smart Grid", "Renewable Energy", "Sustainability"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
             }
         },
         {
+
             id: 9,
             name: "Cybersecurity & Compliance Solutions",
             industry: "Cybersecurity",
@@ -181,12 +199,14 @@ const IndustrySolutions = () => {
             compliance["SOC 2", "ISO 27001", "NIST", "GDPR"],
             tags: ["Cybersecurity", "Compliance", "Risk Management", "Threat Detection", "Security"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
             }
         },
         {
+
             id: 10,
             name: "Legal Technology Platform",
             industry: "Legal",
@@ -201,12 +221,14 @@ const IndustrySolutions = () => {
             compliance["Attorney-client privilege", "Data security", "SOC 2", "GDPR"],
             tags: ["Legal", "LegalTech", "Case Management", "Document Automation", "Compliance"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
             }
         },
         {
+
             id: 11,
             name: "Media & Entertainment Platform",
             industry: "Media",
@@ -221,12 +243,14 @@ const IndustrySolutions = () => {
             compliance["Copyright", "Licensing", "GDPR", "SOC 2"],
             tags: ["Media", "Entertainment", "Content Management", "Streaming", "Analytics"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
             }
         },
         {
+
             id: 12,
             name: "Transportation & Mobility Solutions",
             industry: "Transportation",
@@ -241,6 +265,7 @@ const IndustrySolutions = () => {
             compliance["DOT", "Safety regulations", "GDPR", "SOC 2"],
             tags: ["Transportation", "Mobility", "Fleet Management", "Route Optimization", "Safety"],
             contactInfo: {
+
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
                 website: "https://ziontechgroup.com"
@@ -250,6 +275,7 @@ const IndustrySolutions = () => {
     const industries = ['all', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Logistics', 'Real Estate', 'Energy', 'Cybersecurity', 'Legal', 'Media', 'Transportation'];
     const solutionTypes = ['all', 'Digital Health', 'FinTech', 'Industry 4.0', 'Digital Commerce', 'EdTech', 'Supply Chain', 'PropTech', 'Energy Tech', 'Security', 'LegalTech', 'MediaTech', 'Mobility'];
     const filteredSolutions = industrySolutions.filter(solution => {
+
         const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             solution.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             solution.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -257,7 +283,9 @@ const IndustrySolutions = () => {
         const matchesSolutionType = selectedSolutionType === 'all' || solution.solutionType === selectedSolutionType;
         return matchesSearch && matchesIndustry && matchesSolutionType});
     const formatPrice = (price, model) => {
+
         switch (model) {
+
             case 'monthly':
                 return `$${price.toLocaleString()}/month`;
             case 'hourly':
@@ -268,6 +296,7 @@ const IndustrySolutions = () => {
                 return `$${price.toLocaleString()}`}
     };
     const getIndustryColor = (score) => {
+
         if (score >= 95)
             return 'text-green-500';
         if (score >= 90)
@@ -276,7 +305,9 @@ const IndustrySolutions = () => {
             return 'text-yellow-500';
         return 'text-orange-500'};
     const getIndustryIcon = (industry) => {
+
         switch (industry) {
+
             case 'Healthcare': return <Stethoscope className="w-6 h-6"/>;
             case 'Finance': return <CreditCard className="w-6 h-6"/>;
             case 'Manufacturing': return <Factory className="w-6 h-6"/>;

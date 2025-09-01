@@ -2,38 +2,45 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
 export default function HealthcareSolutions() {
+
     const solutions = [
         {
+
             icon: Heart,
             title: "Patient Care AI",
             description: "AI-powered patient monitoring and personalized care recommendations",
             features: ["Real-time Monitoring", "Predictive Analytics", "Personalized Treatment Plans", "Remote Patient Care"]
         },
         {
+
             icon: Stethoscope,
             title: "Diagnostic Assistance",
             description: "Advanced AI diagnostics and medical imaging analysis",
             features: ["Medical Image Analysis", "Symptom Assessment", "Disease Prediction", "Treatment Recommendations"]
         },
         {
+
             icon: Shield,
             title: "Healthcare Security",
             description: "HIPAA-compliant security and data protection solutions",
             features: ["Data Encryption", "Access Control", "Audit Trails", "Compliance Monitoring"]
         },
         {
+
             icon: Database,
             title: "Health Data Management",
             description: "Secure and efficient healthcare data infrastructure",
             features: ["Electronic Health Records", "Data Interoperability", "Analytics Platform", "Cloud Storage"]
         },
         {
+
             icon: Brain,
             title: "Clinical Decision Support",
             description: "AI-powered clinical decision support systems",
             features: ["Evidence-based Guidelines", "Risk Assessment", "Drug Interaction Checking", "Clinical Pathways"]
         },
         {
+
             icon: Activity,
             title: "Operational Efficiency",
             description: "Streamlined healthcare operations and resource management",
@@ -50,6 +57,7 @@ export default function HealthcareSolutions() {
     ];
     const caseStudies = [
         {
+
             organization: "Regional Medical Center",
             specialty: "Cardiology",
             challenge: "High patient readmission rates and inefficient care coordination",
@@ -57,6 +65,7 @@ export default function HealthcareSolutions() {
             results: "25% reduction in readmissions, 40% improvement in care coordination"
         },
         {
+
             organization: "Urban Hospital Network",
             specialty: "Emergency Medicine",
             challenge: "Long wait times and resource allocation inefficiencies",
@@ -108,6 +117,7 @@ export default function HealthcareSolutions() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => {
+
             const Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">

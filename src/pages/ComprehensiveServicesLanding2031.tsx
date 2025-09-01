@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Cloud, 
   Shield, 
@@ -61,6 +62,7 @@ import { EXPANDED_INNOVATIVE_SERVICES_2031 } from '../data/expandedInnovativeSer
 import { QUANTUM_SPACE_TECH_SERVICES_2031 } from '../data/quantumSpaceTechServices2031';
 
 export default function ComprehensiveServicesLanding2031() {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -91,6 +93,7 @@ export default function ComprehensiveServicesLanding2031() {
   ];
 
   const filteredServices = allServices.filter(service => {
+
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -100,7 +103,9 @@ export default function ComprehensiveServicesLanding2031() {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'rating':
         return b.rating - a.rating;
       case 'price':
@@ -115,21 +120,27 @@ export default function ComprehensiveServicesLanding2031() {
   });
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5,
         ease: "easeOut"
       }
@@ -137,7 +148,9 @@ export default function ComprehensiveServicesLanding2031() {
   };
 
   const getCategoryIcon = (category: string) => {
+
     switch (category) {
+
       case 'FinTech': return <DollarSign className="w-6 h-6" />;
       case 'AI & Healthcare': return <Heart className="w-6 h-6" />;
       case 'AI & Legal Tech': return <Scale className="w-6 h-6" />;
@@ -278,6 +291,7 @@ export default function ComprehensiveServicesLanding2031() {
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+
                     activeCategory === category.id
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
                       : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'
@@ -468,21 +482,25 @@ export default function ComprehensiveServicesLanding2031() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
+
                   icon: <Award className="w-12 h-12 text-cyan-400" />,
                   title: "Proven Excellence",
                   description: "4.9/5 rating across all services with thousands of satisfied clients worldwide"
                 },
                 {
+
                   icon: <TrendingUp className="w-12 h-12 text-green-400" />,
                   title: "Guaranteed ROI",
                   description: "Average 400-2000% return on investment within months of implementation"
                 },
                 {
+
                   icon: <Zap className="w-12 h-12 text-yellow-400" />,
                   title: "Rapid Deployment",
                   description: "Most solutions deployed in 2-8 weeks with minimal business disruption"
                 },
                 {
+
                   icon: <ShieldCheck className="w-12 h-12 text-purple-400" />,
                   title: "Enterprise Security",
                   description: "Bank-level security with 99.99% uptime and comprehensive compliance"

@@ -20,6 +20,7 @@ import { Users,
               } from 'lucide-react.ts';
 
 const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
+
   const features = [
     'AI-powered candidate sourcing and matching',
     'Intelligent resume parsing and skill extraction',
@@ -61,13 +62,15 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
 
   const pricing = [
     {
+
       plan: "Starter",
       price: "$399",
       period: "/month",
       features["Up to 50 active jobs", "Basic AI matching", "Resume parsing", "Standard support"],
       popular: false
     },
-    { 
+    {
+
       name: 'Talent Professional', 
       price: '$799/mo', 
       details: ['Up to 200 job postings', 'Advanced AI features', 'Custom dashboards', 'Priority support'] ;
@@ -122,17 +125,20 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30 
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0 
 
 }}
                 viewport={{ once: true }}
                 transition = {
+
   { duration: 0.8,
   delay: index * 0.1 
 
@@ -153,11 +159,13 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -179,17 +187,20 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
               <motion.div
                 key={benefit}
                 initial = {
+
   { opacity: 0,
   y: 30 
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }}
                 viewport={{ once: true }}
                 transition = {
+
   { duration: 0.8,
   delay: index * 0.1 
 
@@ -226,17 +237,20 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
               <motion.div
                 key={useCase}
                 initial = {
+
   { opacity: 0,
   scale: 0.8 
 
 }}
                 whileInView = {
+
   { opacity: 1,
   scale: 1 
 
 }}
                 viewport={{ once: true }}
                 transition = {
+
   { duration: 0.8,
   delay: index * 0.1 
 
@@ -258,11 +272,13 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -284,17 +300,20 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
               <motion.div
                 key={integration}
                 initial = {
+
   { opacity: 0,
   scale: 0.8 
 
 }}
                 whileInView = {
+
   { opacity: 1,
   scale: 1 
 
 }}
                 viewport={{ once: true }}
                 transition = {
+
   { duration: 0.8,
   delay: index * 0.1 
 
@@ -313,11 +332,13 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -339,22 +360,26 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
               <motion.div
                 key={plan.plan}
                 initial = {
+
   { opacity: 0,
   y: 30 
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }}
                 viewport={{ once: true }}
                 transition = {
+
   { duration: 0.8,
   delay: index * 0.1 
 
 }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${
+
                   plan.popular 
                     ? 'border-blue-500 shadow-lg shadow-blue-500/20' 
                     : 'border-slate-700'
@@ -386,6 +411,7 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
                 </ul>
                 
                 <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
@@ -403,11 +429,13 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30 
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

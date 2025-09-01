@@ -4,8 +4,10 @@ import { motion  } from 'framer-motion';
 import { Heart, Shield, Brain, Zap, Users, TrendingUp, CheckCircle, ArrowRight  } from 'lucide-react';
 
 export default function HealthcareSolutions(...args: []):  {
+
   const solutions = [
     {
+
       icon: Heart,
       title: 'Healthcare Analytics',
       description: 'AI-powered analytics for patient care optimization and clinical decision support',
@@ -13,6 +15,7 @@ export default function HealthcareSolutions(...args: []):  {
       href: '/services/ai-healthcare-analytics'
     },
     {
+
       icon: Shield,
       title: 'Healthcare Security',
       description: 'HIPAA-compliant security solutions for healthcare data protection',
@@ -20,6 +23,7 @@ export default function HealthcareSolutions(...args: []):  {
       href: '/services/ai-compliance-copilot'
     },
     {
+
       icon: Brain,
       title: 'AI Diagnostics',
       description: 'Machine learning solutions for medical imaging and diagnostic support',
@@ -27,6 +31,7 @@ export default function HealthcareSolutions(...args: []):  {
       href: '/services/healthcare-tech'
     },
     {
+
       icon: Zap,
       title: 'Healthcare Automation',
       description: 'Intelligent automation for healthcare workflows and administrative tasks',
@@ -34,6 +39,7 @@ export default function HealthcareSolutions(...args: []):  {
       href: '/services/ai-workflow-automation'
     },
     {
+
       icon: Users,
       title: 'Patient Experience',
       description: 'Digital solutions to enhance patient engagement and satisfaction',
@@ -41,6 +47,7 @@ export default function HealthcareSolutions(...args: []):  {
       href: '/services/ai-customer-experience-platform'
     },
     {
+
       icon: TrendingUp,
       title: 'Population Health',
       description: 'Analytics and insights for population health management and preventive care',

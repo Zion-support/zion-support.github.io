@@ -17,6 +17,7 @@ const mockAIResponses = ['
   "Based on your requirements, I'd recommend starting with our cybersecurity assessment package.",We have extensive experience in that area. Let me connect you with one of our specialists.',I can help you understand our pricing structure and find the best solution for your budget.',
 ];
 export function AIChatAssistant() {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState([
@@ -38,9 +39,11 @@ export function AIChatAssistant() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
   useEffect(() => {
+
     scrollToBottom();
   }, [messages]);
   const handleSendMessage = async () => {
+
     if (!inputValue.trim()) return;
     const userMessage = {
 
@@ -54,6 +57,7 @@ export function AIChatAssistant() {
     // Simulate AI response
     setTimeout()
       () => {
+
         const randomResponse =
           mockAIResponses[Math.floor(Math.random() * mockAIResponses.length)];
         const aiMessage = {
@@ -69,11 +73,13 @@ export function AIChatAssistant() {
     );
   };
   const handleVoiceInput = () => {
+
     if (!isListening) {
 
       setIsListening(true);
       // Simulate voice recognition
       setTimeout(() => {
+
 '"
         const voiceText = "I'm interested in your AI development services";
         setInputValue(voiceText);
@@ -93,6 +99,7 @@ export function AIChatAssistant() {
     }
   };
   const toggleChat = () => {
+
     if (isOpen) {
 
       setIsMinimized(!isMinimized);

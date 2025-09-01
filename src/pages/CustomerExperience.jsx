@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function CustomerExperience () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Users,
@@ -80,6 +82,7 @@ import { motion } from 'framer - motion';
 
 const customerExperienceTechnologies = [
   {
+
     name: "User Research Tools",
     description: "Comprehensive tools for understanding user needs and behaviors",
     icon: Users,
@@ -87,6 +90,7 @@ const customerExperienceTechnologies = [
     reliability: "High"
   },
   {
+
     name: "Design Systems",
     description: "Consistent design frameworks for cohesive user experiences",
     icon: Palette,
@@ -94,6 +98,7 @@ const customerExperienceTechnologies = [
     reliability: "High"
   },
   {
+
     name: "Analytics Platforms",
     description: "Data - driven insights for customer behavior analysis",
     icon: BarChart3,
@@ -101,6 +106,7 @@ const customerExperienceTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Personalization AI",
     description: "AI - powered systems for tailored customer experiences",
     icon: Brain,
@@ -111,6 +117,7 @@ const customerExperienceTechnologies = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "E - commerce Retailer",
     industry: "Retail",
@@ -120,6 +127,7 @@ const successStories = [
     logo: "ER"
   },
   {
+
     id: 2,
     comp: "Financial Services",
     industry: "Finance",
@@ -129,6 +137,7 @@ const successStories = [
     logo: "FS"
   },
   {
+
     id: 3,
     comp: "Healthcare Provider",
     industry: "Healthcare",
@@ -141,6 +150,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Customer Research",
     description: "Understand customer needs, behaviors, and pain points",
@@ -148,6 +158,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
   },
   {
+
     step: 2,
     title: "Journey Mapping",
     description: "Map customer journeys and identify optimization opportunities",
@@ -155,6 +166,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
   },
   {
+
     step: 3,
     title: "Design & Implementation",
     description: "Design and implement improved customer experiences",
@@ -162,6 +174,7 @@ const processSteps = [
     duration: "8 - 20 weeks"
   },
   {
+
     step: 4,
     title: "Testing & Optimization",
     description: "Test experiences and continuously optimize based on feedback",
@@ -172,24 +185,28 @@ const processSteps = [
 
 const customerExperienceBenefits = [
   {
+
     title: "Improved Customer Satisfaction",
     description: "Better experiences lead to higher customer satisfaction and loyalty",
     icon: Heart,
     examples["Higher satisfaction scores", "Increased loyalty", "Positive reviews", "Word - of - mouth referrals"];
   },;
   {
+
     title: "Increased Conversion Rates",
     description: "Optimized experiences drive better business outcomes",
     icon: TrendingUp,
     examples["Higher conversion rates", "Reduced abandonment", "Increased sales", "Better ROI"];
   },;
   {
+
     title: "Reduced Support Costs",
     description: "Better experiences reduce the need for customer support",
     icon: Headphones,
     examples["Fewer support tickets", "Lower support costs", "Self - service adoption", "Improved efficiency"];
   },;
   {
+
     title: "Competitive Advantage",
     description: "Superior customer experiences differentiate your brand",
     icon: Award,
@@ -218,11 +235,13 @@ const customerExperienceBenefits = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -232,16 +251,19 @@ const customerExperienceBenefits = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -283,11 +305,13 @@ const customerExperienceBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -305,16 +329,19 @@ const customerExperienceBenefits = [
             {customerExperienceBenefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -345,11 +372,13 @@ const customerExperienceBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -367,16 +396,19 @@ const customerExperienceBenefits = [
             {customerExperienceTechnologies.map ( (technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -392,6 +424,7 @@ const customerExperienceBenefits = [
                 <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   technology.reliability === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : technology.reliability === 'High'
@@ -410,11 +443,13 @@ const customerExperienceBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -432,16 +467,19 @@ const customerExperienceBenefits = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -472,11 +510,13 @@ const customerExperienceBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -496,6 +536,7 @@ const customerExperienceBenefits = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -509,16 +550,19 @@ const customerExperienceBenefits = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -573,11 +617,13 @@ const customerExperienceBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -595,16 +641,19 @@ const customerExperienceBenefits = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -650,11 +699,13 @@ const customerExperienceBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

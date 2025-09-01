@@ -1,19 +1,17 @@
+
 import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from 'react-error-boundary';
-import { LoadingSpinner } from './components/ui/loading-spinner';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Enhanced lazy loading with preloading hints
-const createLazyComponent = (
-  importFn: () => Promise<{ default: React.ComponentType<any> }>,
-  fallback?: React.ReactNode
-) => {
+const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
+
   const LazyComponent = lazy(importFn);
   return (props: any) => (
-    <Suspense fallback={fallback || <LoadingSpinner />}>
+    <Suspense fallback={fallback || <div>Loading...</div>}>
       <LazyComponent {...props} />
     </Suspense>
   );
@@ -38,9 +36,9 @@ const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
 // Service Pages - Updated to use backup-pages location
-const AIThreatIntelligence = lazy(() => import('../backup-pages/src-pages/services/ai-threat-intelligence-platform').then(module => ({ default: module.AIThreatIntelligencePlatform })));
-const BlockchainSupplyChain = lazy(() => import('../backup-pages/src-pages/services/blockchain-supply-chain-platform').then(module => ({ default: module.BlockchainSupplyChainPlatform })));
-const AdvancedServicesShowcase = lazy(() => import('../backup-pages/src-pages/AdvancedServicesShowcase2028').then(module => ({ default: module.AdvancedServicesShowcase2028 })));
+const AIThreatIntelligence = lazy(() => import('./backup-pages/src-pages/services/ai-threat-intelligence-platform').then(module => ({ default: module.AIThreatIntelligencePlatform })));
+const BlockchainSupplyChain = lazy(() => import('./backup-pages/src-pages/services/blockchain-supply-chain-platform').then(module => ({ default: module.BlockchainSupplyChainPlatform })));
+const AdvancedServicesShowcase = lazy(() => import('./backup-pages/src-pages/AdvancedServicesShowcase2028').then(module => ({ default: module.AdvancedServicesShowcase2028 })));
 
 // Loading component
 const PageLoader = () => (
@@ -53,6 +51,7 @@ const PageLoader = () => (
 );
 
 function App() {
+
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -89,11 +88,16 @@ function App() {
                 <Route path="/docs" element={<BlogPage />} />
                 <Route path="/api" element={<BlogPage />} />
                 <Route path="/developer" element={<BlogPage />} />
+                <Route path="/help" element={<Helpdesk />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/community" element={<BlogPage />} />
+                <Route path="/support" element={<Support />} />
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
-                <Route path="/support" element={<Support />} />
-                <Route path="/training" element={<Training />} />
-                <Route path="/helpdesk" element={<Helpdesk />} />
+                <Route path="/privacy-policy" element={<BlogPage />} />
+                <Route path="/terms-of-service" element={<BlogPage />} />
+                <Route path="/cookie-policy" element={<BlogPage />} />
+                <Route path="/request-quote" element={<ContactPage />} />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </Suspense>

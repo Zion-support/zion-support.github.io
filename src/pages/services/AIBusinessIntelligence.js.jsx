@@ -3,26 +3,31 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, Globe, Shield, Clock } from 'lucide-react';
 const AIBusinessIntelligence = () => {
+
     const features = [
         {
+
             icon: Brain,
             title: "AI-Powered Analytics",
             description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data",
             benefits["Predictive modeling", "Anomaly detection", "Pattern recognition", "Automated insights"]
         },
         {
+
             icon: BarChart3,
             title: "Real-time Dashboards",
             description: "Interactive, customizable dashboards that provide instant visibility into key business metrics",
             benefits["Live data updates", "Customizable views", "Role-based access", "Mobile responsive"]
         },
         {
+
             icon: TrendingUp,
             title: "Predictive Analytics",
             description: "Forecast future trends and outcomes using historical data and advanced statistical models",
             benefits["Sales forecasting", "Demand planning", "Risk assessment", "Trend prediction"]
         },
         {
+
             icon: Target,
             title: "Performance Tracking",
             description: "Monitor and measure business performance against goals and benchmarks in real-time",
@@ -31,6 +36,7 @@ const AIBusinessIntelligence = () => {
     ];
     const solutions = [
         {
+
             category: "Sales & Marketing",
             icon: Users,
             solutions[
@@ -42,6 +48,7 @@ const AIBusinessIntelligence = () => {
             ]
         },
         {
+
             category: "Operations & Supply Chain",
             icon: Activity,
             solutions[
@@ -53,6 +60,7 @@ const AIBusinessIntelligence = () => {
             ]
         },
         {
+
             category: "Financial Analytics",
             icon: TrendingUp,
             solutions[
@@ -64,6 +72,7 @@ const AIBusinessIntelligence = () => {
             ]
         },
         {
+
             category: "Human Resources",
             icon: Users,
             solutions[
@@ -77,54 +86,66 @@ const AIBusinessIntelligence = () => {
     ];
     const technologies = [
         {
+
             name: "Machine Learning",
             description: "Advanced ML algorithms for pattern recognition and prediction",
             icon: Brain
         },
         {
+
             name: "Big Data Processing",
             description: "Scalable data processing for large datasets",
             icon: Database
         },
         {
+
             name: "Real-time Analytics",
             description: "Instant data processing and insights delivery",
             icon: Zap
         },
         {
+
             name: "Cloud Infrastructure",
             description: "Scalable cloud-based BI platform",
             icon: Globe
         },
         {
+
             name: "Data Security",
             description: "Enterprise-grade security and compliance",
             icon: Shield
         },
         {
+
             name: "24/7 Monitoring",
             description: "Continuous monitoring and alerting",
             icon: Clock
         }
     ];
     const containerVariants = {
+
         hidden: { opacity: 0 },
         visible: {
+
             opacity: 1,
             transition: {
+
                 staggerChildren: 0.1
             }
         }
     };
     const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0 
 
 },
         visible: {
+
             y: 0,
             opacity: 1,
             transition: {
+
                 duration: 0.5
             }
         }
@@ -136,10 +157,12 @@ const AIBusinessIntelligence = () => {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -207,10 +230,12 @@ const AIBusinessIntelligence = () => {
       <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -224,14 +249,17 @@ const AIBusinessIntelligence = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((category, index) => (<motion.div key={category.category} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} viewport={{ once: true }} transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -257,10 +285,12 @@ const AIBusinessIntelligence = () => {
       {/* Technology Stack */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -274,14 +304,17 @@ const AIBusinessIntelligence = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technologies.map((tech, index) => (<motion.div key={tech.name} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} viewport={{ once: true }} transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -299,10 +332,12 @@ const AIBusinessIntelligence = () => {
       <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 

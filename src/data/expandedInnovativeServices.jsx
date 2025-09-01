@@ -2,6 +2,7 @@
 export const EXPANDED_INNOVATIVE_SERVICES = [
     // AI-Powered Content Creation & Marketing
     {
+
         id: "ai-content-creation-suite",
         title: "AI Content Creation & Marketing Suite",
         description: "Comprehensive AI-powered platform for creating, optimizing, and distributing content across multiple channels with intelligent automation.",
@@ -48,6 +49,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$399 - $1,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -62,6 +64,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered Video Analytics Platform
     {
+
         id: "ai-video-analytics-platform",
         title: "AI Video Analytics & Intelligence Platform",
         description: "Advanced video analytics platform that uses computer vision and AI to extract insights, detect objects, and analyze behavior patterns in video content.",
@@ -108,6 +111,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -120,6 +124,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered Financial Planning Platform
     {
+
         id: "ai-financial-planning-platform",
         title: "AI Financial Planning & Wealth Management Platform",
         description: "Intelligent financial planning platform that provides personalized investment advice, portfolio optimization, and financial goal tracking using AI algorithms.",
@@ -166,6 +171,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$299 - $1,200/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -178,6 +184,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered Healthcare Diagnostics Platform
     {
+
         id: "ai-healthcare-diagnostics-platform",
         title: "AI Healthcare Diagnostics & Medical Imaging Platform",
         description: "Advanced medical imaging analysis platform that uses AI to detect diseases, analyze medical scans, and provide diagnostic assistance to healthcare professionals.",
@@ -224,6 +231,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$899 - $3,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -236,6 +244,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered Supply Chain Optimization
     {
+
         id: "ai-supply-chain-optimization",
         title: "AI Supply Chain Optimization & Predictive Analytics Platform",
         description: "Intelligent supply chain platform that uses AI to predict demand, optimize inventory, reduce costs, and improve operational efficiency across the entire supply chain.",
@@ -282,6 +291,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$799 - $3,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -294,6 +304,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered Legal Research & Document Analysis
     {
+
         id: "ai-legal-research-platform",
         title: "AI Legal Research & Document Analysis Platform",
         description: "Advanced legal research platform that uses AI to analyze legal documents, predict case outcomes, and provide comprehensive legal research assistance.",
@@ -340,6 +351,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$499 - $2,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -352,6 +364,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered Real Estate Analytics Platform
     {
+
         id: "ai-real-estate-analytics",
         title: "AI Real Estate Analytics & Investment Platform",
         description: "Comprehensive real estate platform that uses AI to analyze market trends, predict property values, and provide investment recommendations for real estate professionals.",
@@ -398,6 +411,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$399 - $1,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -410,6 +424,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered HR & Talent Management Platform
     {
+
         id: "ai-hr-talent-management",
         title: "AI HR & Talent Management Platform",
         description: "Intelligent HR platform that uses AI to streamline recruitment, improve employee engagement, optimize workforce planning, and enhance HR decision-making.",
@@ -456,6 +471,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$299 - $1,200/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -468,6 +484,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered Energy Management Platform
     {
+
         id: "ai-energy-management-platform",
         title: "AI Energy Management & Sustainability Platform",
         description: "Intelligent energy management platform that uses AI to optimize energy consumption, predict demand, and improve sustainability across commercial and industrial facilities.",
@@ -514,6 +531,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -526,6 +544,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered Manufacturing Quality Control
     {
+
         id: "ai-manufacturing-quality-control",
         title: "AI Manufacturing Quality Control & Predictive Maintenance Platform",
         description: "Advanced manufacturing platform that uses AI to monitor quality, predict equipment failures, and optimize production processes in real-time.",
@@ -572,6 +591,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$799 - $3,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -584,6 +604,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered Education & Learning Platform
     {
+
         id: "ai-education-learning-platform",
         title: "AI Education & Personalized Learning Platform",
         description: "Intelligent education platform that uses AI to personalize learning experiences, track student progress, and provide adaptive content recommendations.",
@@ -630,6 +651,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$199 - $800/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -642,6 +664,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered Agriculture & Precision Farming
     {
+
         id: "ai-agriculture-precision-farming",
         title: "AI Agriculture & Precision Farming Platform",
         description: "Intelligent agriculture platform that uses AI, IoT sensors, and satellite imagery to optimize crop yields, reduce resource usage, and improve farming efficiency.",
@@ -688,6 +711,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$499 - $2,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -700,6 +724,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered Transportation & Logistics Optimization
     {
+
         id: "ai-transportation-logistics",
         title: "AI Transportation & Logistics Optimization Platform",
         description: "Intelligent transportation platform that uses AI to optimize routes, predict demand, reduce costs, and improve efficiency across transportation and logistics operations.",
@@ -746,6 +771,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$699 - $2,800/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -758,6 +784,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered Insurance & Risk Assessment
     {
+
         id: "ai-insurance-risk-assessment",
         title: "AI Insurance & Risk Assessment Platform",
         description: "Intelligent insurance platform that uses AI to assess risks, automate underwriting, detect fraud, and provide personalized insurance recommendations.",
@@ -804,6 +831,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -816,6 +844,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
     },
     // AI-Powered Gaming & Entertainment Platform
     {
+
         id: "ai-gaming-entertainment",
         title: "AI Gaming & Entertainment Platform",
         description: "Intelligent gaming platform that uses AI to create personalized gaming experiences, optimize gameplay, and provide intelligent matchmaking and recommendations.",
@@ -862,6 +891,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$199 - $800/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"

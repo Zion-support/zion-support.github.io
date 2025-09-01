@@ -1,4 +1,5 @@
 export type ServiceItem = {
+
   id: string;
   title: string;
   description: string;
@@ -26,6 +27,7 @@ export type ServiceItem = {
   external?: boolean};
 ;
 export type ServiceCategory = {
+
   name: string;
   slug: string;
   items: ServiceItem[]};

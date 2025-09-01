@@ -3,26 +3,31 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 const ITInfrastructure = () => {
+
   const features = [
     {
+
       title: "Network Management",
       description: "Comprehensive network infrastructure design, implementation, and maintenance",
       features: ["Network Design", "Performance Optimization", "Security Implementation", "24/7 Monitoring"],
       icon: "🌐"
     },
     {
+
       title: "System Administration",
       description: "Expert management of servers, operating systems, and enterprise applications",
       features: ["Server Management", "OS Administration", "Application Support", "Performance Tuning"],
       icon: "🖥️"
     },
     {
+
       title: "Data Center Operations",
       description: "Professional data center management and optimization services",
       features: ["Facility Management", "Power & Cooling", "Hardware Maintenance", "Capacity Planning"],
       icon: "🏢"
     },
     {
+
       title: "Performance Optimization",
       description: "System and network performance analysis and improvement",
       features: ["Performance Monitoring", "Bottleneck Analysis", "Optimization Strategies", "Capacity Planning"],

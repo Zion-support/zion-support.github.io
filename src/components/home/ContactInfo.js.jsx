@@ -22,6 +22,7 @@ import {
   Zap,
   ExternalLink} from 'lucide-react';
 export function ContactInfo() {
+
   const compStats = [
     {
 

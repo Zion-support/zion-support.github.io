@@ -14,6 +14,7 @@ const FAQ = React.lazy(() => import('./pages/_lite/FAQ'));
 const Blog = React.lazy(() => import('./pages/_lite/Blog'));
 
 function AppLite() {
+
   return (
     <Router>
       <div className="min-h-screen bg-black text-white">

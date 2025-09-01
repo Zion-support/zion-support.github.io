@@ -34,33 +34,40 @@ import { MessageCircle,
              } from 'lucide-react.ts';
 
 export default function HelpdeskPlatform(...args: any[]): any {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Support",
       description: "Intelligent chatbots and virtual assistants for instant customer support."
     },
     {
+
       icon: MessageCircle,
       title: "Multi-Channel Support",
       description: "Unified support across email, chat, phone, and social media channels."
     },
     {
+
       icon: Target,
       title: "Smart Ticket Routing",
       description: "AI-driven ticket classification and automatic assignment to best agents."
     },
     {
+
       icon: Zap,
       title: "Automated Workflows",
       description: "Intelligent automation for common support scenarios and escalations."
     },
     {
+
       icon: BarChart3,
       title: "Performance Analytics",
       description: "Comprehensive insights into support metrics and customer satisfaction."
     },
     {
+
       icon: Shield,
       title: "Knowledge Management",
       description: "Centralized knowledge base with AI-powered search and suggestions."
@@ -78,26 +85,31 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
   const supportChannels = [
     {
+
       channel: "Email Support",
       description: "Professional email ticketing with automated categorization and routing",
       icon: Mail
     },
     {
+
       channel: "Live Chat",
       description: "Real-time chat support with AI assistance and agent handoff",
       icon: MessageCircle
     },
     {
+
       channel: "Phone Support",
       description: "Voice support with intelligent call routing and quality monitoring",
       icon: Phone
     },
     {
+
       channel: "Social Media",
       description: "Monitor and respond to customer inquiries across social platforms",
       icon: Globe
     },
     {
+
       channel: "Self-Service Portal",
       description: "Knowledge base and FAQ management for customer self-help",
       icon: Search;
@@ -111,26 +123,31 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
   const useCases = [
     {
+
       industry: "E-commerce",
       description: "Customer service and order support for online retail businesses",
       icon: ShoppingCart
     },
     {
+
       industry: "SaaS",
       description: "Technical support and customer success for software companies",
       icon: Cpu
     },
     {
+
       industry: "Healthcare",
       description: "Patient support and medical information assistance",
       icon: Heart
     },
     {
+
       industry: "Financial Services",
       description: "Customer support and account management for financial institutions",
       icon: DollarSign
     },
     {
+
       industry: "Education",
       description: "Student support, course assistance, and technical help"
     }
@@ -150,6 +167,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -160,6 +178,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -204,6 +223,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -214,6 +234,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -241,6 +262,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -251,6 +273,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -261,6 +284,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -303,6 +327,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -313,6 +338,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -340,6 +366,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
               <motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -350,6 +377,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -360,6 +388,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -402,6 +431,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -412,6 +442,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -439,6 +470,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
               <motion.div
                 key={channel.channel}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -449,6 +481,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -459,6 +492,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -501,6 +535,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -511,6 +546,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -538,6 +574,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
               <motion.div
                 key={useCase.industry}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -548,6 +585,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -558,6 +596,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -600,6 +639,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -610,6 +650,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

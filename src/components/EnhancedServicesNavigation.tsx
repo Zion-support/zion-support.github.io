@@ -6,6 +6,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
 
   
         {
+
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 "
@@ -15,6 +16,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "From $49/month"
         },
         {
+
 "
           title: "Customer Experience Analytics","
           url: "/services/ai-customer-experience-analytics","
@@ -22,6 +24,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "From $299/month"
         },
         {
+
 "
           title: "DevOps Automation","
           url: "/services/ai-devops-automation-platform","
@@ -29,6 +32,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "From $199/month"
         },
         {
+
 "
           title: "IoT Edge Computing","
           url: "/services/ai-iot-edge-computing-platform","
@@ -38,6 +42,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
       ]
     },;
     {
+
 "
       name: "Cloud & Infrastructure","
       description: "Enterprise solutions","
@@ -45,6 +50,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
       color: "from-green-600 to-blue-600",
       services[;
         {
+
 "
           title: "Cloud DevOps","
           url: "/services/cloud-devops","
@@ -52,6 +58,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "Custom pricing"
         },
         {
+
 "
           title: "IT Infrastructure","
           url: "/services/it-infrastructure","
@@ -59,6 +66,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "Custom pricing"
         },
         {
+
 "
           title: "Digital Twin","
           url: "/services/digital-twin","
@@ -68,6 +76,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
       ]
     },;
     {
+
 "
       name: "Data & Analytics","
       description: "Business intelligence","
@@ -75,6 +84,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
       color: "from-purple-600 to-pink-600",
       services[;
         {
+
 "
           title: "Data Analytics","
           url: "/services/data-analytics","
@@ -82,6 +92,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "Custom pricing"
         },
         {
+
 "
           title: "AI Business Intelligence","
           url: "/services/ai-business-intelligence","
@@ -89,6 +100,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "Custom pricing"
         },
         {
+
 "
           title: "IoT Edge","
           url: "/services/iot-edge","
@@ -98,6 +110,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
       ]
     },;
     {
+
 "
       name: "Security & Compliance","
       description: "Enterprise security","
@@ -105,6 +118,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
       color: "from-red-600 to-orange-600",
       services[;
         {
+
 "
           title: "Zero Trust Architecture","
           url: "/services/zero-trust-network-architecture","
@@ -112,6 +126,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "Custom pricing"
         },
         {
+
 "
           title: "Cybersecurity Suite","
           url: "/services/ai-cybersecurity-suite","
@@ -119,6 +134,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
           pricing: "Custom pricing"
         },
         {
+
 "
           title: "Compliance Assistant","
           url: "/services/ai-compliance-assistant","

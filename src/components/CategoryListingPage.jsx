@@ -30,6 +30,7 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
     { label: 'Highly Rated', value: 'high-rating' },
     { label: 'Best AI Match', value: 'best-match' },
 ] }) {
+
 "
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedSort, setSelectedSort] = useState(() => localStorage.getItem('category_selected_sort') || sortOptions[0].value);
@@ -42,6 +43,7 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
 
         localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]);
     useEffect(() => {
+
         setIsLoading(true);
         const timeout = setTimeout(() => setIsLoading(false), 300);
         return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter]);
@@ -150,6 +152,7 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
               <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>"
               <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>"
               <Button variant="outline" onClick={() => {
+
 "
                 setSearchQuery("");"
                 setSelectedFilter(filterOptions[0].value)}} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">

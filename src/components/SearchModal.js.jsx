@@ -61,11 +61,13 @@ export function SearchModal({ isOpen, onClose }) {
         }
     ];
     useEffect ( () => {
+
         if (isOpen && searchInputRef.current) {
 
             searchInputRef.current.focus()}
     }, [isOpen]);
     useEffect(() => {
+
         if (query.trim()) {
 
             performSearch()}
@@ -74,6 +76,7 @@ export function SearchModal({ isOpen, onClose }) {
             setResults([])}
     }, [query, activeFilter]);
     const performSearch = async () => {
+
         setIsLoading (true) ;
         // Simulate API call delay
         await new Promise (resolve => setTimeout (resolve, 300) ) ;

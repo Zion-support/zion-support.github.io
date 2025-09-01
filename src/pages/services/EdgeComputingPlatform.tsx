@@ -3,7 +3,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
-import { 
+import {
+
   Cpu, 
   Network, 
   Zap, 
@@ -33,26 +34,31 @@ import {
 } from 'lucide-react';
 
 export default function EdgeComputingPlatform() {
+
   const features = [
     {
+
       icon: Cpu,
       title: 'Distributed Edge Nodes',
       description: 'Deploy computing resources closer to data sources for ultra-low latency processing',
       benefits: ['Sub-10ms latency', 'Local data processing', 'Reduced bandwidth costs', 'Offline capability']
     },
     {
+
       icon: Network,
       title: 'Intelligent Load Balancing',
       description: 'AI-powered traffic distribution and resource optimization across edge locations',
       benefits: ['Smart routing', 'Auto-scaling', 'Geographic optimization', 'Failover protection']
     },
     {
+
       icon: Zap,
       title: 'Real-time Analytics',
       description: 'Process streaming data at the edge with instant insights and decision-making',
       benefits: ['Stream processing', 'Real-time dashboards', 'Instant alerts', 'Predictive analytics']
     },
     {
+
       icon: Shield,
       title: 'Edge Security & Compliance',
       description: 'Enterprise-grade security with zero-trust architecture and compliance frameworks',
@@ -62,21 +68,25 @@ export default function EdgeComputingPlatform() {
 
   const useCases = [
     {
+
       title: 'IoT & Smart Cities',
       description: 'Process sensor data locally for smart traffic, lighting, and environmental monitoring',
       metrics: ['50% latency reduction', 'Real-time insights', 'Cost optimization', 'Scalable deployment']
     },
     {
+
       title: 'Autonomous Vehicles',
       description: 'Edge computing for vehicle-to-vehicle communication and real-time decision making',
       metrics: ['Sub-5ms response', 'Safety critical', 'Offline operation', 'Fleet management']
     },
     {
+
       title: 'Industrial IoT',
       description: 'Manufacturing automation with edge-based predictive maintenance and quality control',
       metrics: ['Predictive maintenance', 'Quality assurance', 'Operational efficiency', 'Cost reduction']
     },
     {
+
       title: 'Retail & E-commerce',
       description: 'Personalized customer experiences with edge-based recommendation engines',
       metrics: ['Personalization', 'Inventory optimization', 'Customer analytics', 'Performance improvement']
@@ -85,6 +95,7 @@ export default function EdgeComputingPlatform() {
 
   const pricing = [
     {
+
       name: 'Starter',
       price: '$4,500',
       period: '/month',
@@ -100,6 +111,7 @@ export default function EdgeComputingPlatform() {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$12,000',
       period: '/month',
@@ -116,6 +128,7 @@ export default function EdgeComputingPlatform() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: '$25,000',
       period: '/month',
@@ -364,6 +377,7 @@ export default function EdgeComputingPlatform() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border-2 ${
+
                   plan.popular 
                     ? 'border-cyan-500 shadow-2xl shadow-cyan-500/20' 
                     : 'border-slate-700'
@@ -398,6 +412,7 @@ export default function EdgeComputingPlatform() {
                 <Link 
                   to={plan.cta === 'Contact Sales' ? '/contact' : '/contact'}
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                       : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'

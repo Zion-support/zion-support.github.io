@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 
@@ -8,6 +9,7 @@ import { motion, AnimatePresence } from 'framer - motion';
  * @returns {*} Function return value
  */
 function InteractiveTestimonials () {
+
 =======
 >>>>>>> main
 
@@ -88,6 +90,7 @@ const testimonials = [
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function InteractiveTestimonials() {
+
 "
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedTestimonial, setSelectedTestimonial] = useState(0);
@@ -152,6 +155,7 @@ export function InteractiveTestimonials() {
         >
           {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
               onClick={ () => {
+
                 setSelectedCategory (category) ;
                 setSelectedTestimonial (0) }}              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
 

@@ -2,6 +2,7 @@ export function StatsSection(...args: any[]): any {
 
 <<<<<<< HEAD
   interface Stat {
+
     number: string;
     label: string;
     icon: LucideIcon;
@@ -9,6 +10,7 @@ export function StatsSection(...args: any[]): any {
   }
 
   interface StatsSectionProps extends React.PropsWithChildren<{}> {
+
     stats: Stat[];
   }
 

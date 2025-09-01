@@ -1,15 +1,27 @@
 export const calculatePasswordScore = password => {
+
 export const getLengthScore = password => {
+
 export const getPasswordFeedback = password => {
+
 export const getPasswordStrength = password => {
+
 export const hasLowercase = password => {
+
 export const hasNumbers = password => {
+
 export const hasSpecialChars = password => {
+
 export const hasUppercase = password => {
+
 export const PASSWORD_COLORS = {
+
 export const PASSWORD_LABELS = {
+
 export const PASSWORD_STRENGTH = {
+
 export const validatePassword = password => {
+
 export default {
 
 // Password strength utility functions
@@ -87,6 +99,7 @@ export const hasSpecialChars = password => {
 
   return /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
 export const hasSpecialChars = (password) => {
+
   return /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password);
 };
 

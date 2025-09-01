@@ -4,6 +4,7 @@ import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan } from 'l
 import { Link } from 'react-router-dom';
 const aiServices = [
     {
+
         id: 'ai-chat',
         name: 'ZionGPT Pro',
         description: 'Advanced conversational AI with enterprise-grade security and customization',
@@ -17,6 +18,7 @@ const aiServices = [
         status: 'active'
     },
     {
+
         id: 'ai-vision',
         name: 'VisionAI Suite',
         description: 'Computer vision solutions for image recognition, analysis, and processing',
@@ -30,6 +32,7 @@ const aiServices = [
         status: 'beta'
     },
     {
+
         id: 'ai-data',
         name: 'DataMind Analytics',
         description: 'Intelligent data analysis and predictive modeling platform',
@@ -43,6 +46,7 @@ const aiServices = [
         status: 'active'
     },
     {
+
         id: 'ai-global',
         name: 'GlobalAI Network',
         description: 'Distributed AI computing network for global scale operations',
@@ -56,6 +60,7 @@ const aiServices = [
         status: 'new'
     },
     {
+
         id: 'ai-code-review',
         name: 'AI Code Reviewer',
         description: 'Automated pull request reviews with security and quality checks',
@@ -69,6 +74,7 @@ const aiServices = [
         status: 'active'
     },
     {
+
         id: 'ai-rag-assistant',
         name: 'Knowledge RAG Assistant',
         description: 'Private, secure chat over your documents with access controls',
@@ -82,6 +88,7 @@ const aiServices = [
         status: 'active'
     },
     {
+
         id: 'ai-vision-edge',
         name: 'Edge Vision Inspector',
         description: 'On-device defect detection with active learning',
@@ -97,6 +104,7 @@ const aiServices = [
 ];
 const categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analytics', 'Infrastructure', 'Developer AI'];
 export function AIServicesShowcase() {
+
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedService, setSelectedService] = useState(null);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -104,7 +112,9 @@ export function AIServicesShowcase() {
         ? aiServices
         : aiServices.filter(service => service.category === selectedCategory);
     const getStatusBadge = (status) => {
+
         const statusConfig = {
+
   active: { color: 'bg-green-500',
   text: 'Active' 
 
@@ -117,25 +127,31 @@ export function AIServicesShowcase() {
         {config.text}
       </span>)};
     const containerVariants = {
+
         hidden: { opacity: 0 },
         visible: {
+
             opacity: 1,
             transition: {
+
                 staggerChildren: 0.1,
                 delayChildren: 0.2
             }
         }
     };
     const itemVariants = {
+
   hidden: { opacity: 0, y: 20,
   scale: 0.95 
 
 },
         visible: {
+
             opacity: 1,
             y: 0,
             scale: 1,
             transition: {
+
                 duration: 0.5,
                 ease: "easeOut"
             }
@@ -152,10 +168,12 @@ export function AIServicesShowcase() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header Section */}
         <motion.div className="text-center mb-16" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -182,14 +200,17 @@ export function AIServicesShowcase() {
 
         {/* Category Filter */}
         <motion.div className="flex flex-wrap justify-center gap-4 mb-12" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} viewport={{ once: true }} transition = {
+
   { duration: 0.6,
   delay: 0.2 
 
@@ -197,14 +218,17 @@ export function AIServicesShowcase() {
           {categories.map((category, index) => (<motion.button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category
                 ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white shadow-lg shadow-purple-500/25'
                 : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-white/20'}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} viewport={{ once: true }} transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -217,7 +241,9 @@ export function AIServicesShowcase() {
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (<motion.div key={service.id} variants={itemVariants} layout whileHover = {
+
   {
+
                 y: -8,
                 scale: 1.02,
   transition: { duration: 0.2 

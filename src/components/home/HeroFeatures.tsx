@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 interface HeroFeature {
+
 icon: React.ComponentType<{ className?: string}>;
   title: string;
   description: string;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Heart, 
   Activity, 
   TrendingUp, 
@@ -40,38 +41,45 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function AIHealthcarePredictiveAnalyticsPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Disease Prediction",
       description: "Advanced machine learning algorithms that analyze patient data to predict disease onset, progression, and treatment outcomes with high accuracy",
       benefits: ["Early disease detection", "Treatment optimization", "Risk stratification"]
     },
     {
+
       icon: Activity,
       title: "Real-time Patient Monitoring",
       description: "Continuous monitoring of patient vital signs, symptoms, and biomarkers with AI-driven alert systems for early intervention",
       benefits: ["24/7 monitoring", "Early warning systems", "Proactive care"]
     },
     {
+
       icon: TrendingUp,
       title: "Predictive Analytics Dashboard",
       description: "Comprehensive analytics platform that provides healthcare providers with actionable insights and predictive models",
       benefits: ["Data visualization", "Trend analysis", "Decision support"]
     },
     {
+
       icon: Users,
       title: "Population Health Management",
       description: "AI-driven analysis of population health data to identify trends, risk factors, and opportunities for preventive care",
       benefits: ["Population insights", "Risk assessment", "Preventive strategies"]
     },
     {
+
       icon: Shield,
       title: "Clinical Decision Support",
       description: "Intelligent clinical decision support system that provides evidence-based recommendations and treatment guidelines",
       benefits: ["Evidence-based care", "Treatment guidelines", "Clinical protocols"]
     },
     {
+
       icon: FileText,
       title: "Automated Medical Reporting",
       description: "AI-powered generation of comprehensive medical reports, treatment summaries, and patient care documentation",
@@ -81,6 +89,7 @@ export default function AIHealthcarePredictiveAnalyticsPlatform() {
 
   const pricingPlans = [
     {
+
       name: "Clinical",
       price: "$599",
       period: "/month",
@@ -98,6 +107,7 @@ export default function AIHealthcarePredictiveAnalyticsPlatform() {
       popular: false
     },
     {
+
       name: "Hospital",
       price: "$1,299",
       period: "/month",
@@ -116,6 +126,7 @@ export default function AIHealthcarePredictiveAnalyticsPlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$2,499",
       period: "/month",
@@ -316,6 +327,7 @@ export default function AIHealthcarePredictiveAnalyticsPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-white p-8 rounded-xl shadow-lg border-2 ${
+
                   plan.popular 
                     ? 'border-blue-500 relative' 
                     : 'border-slate-200'
@@ -350,6 +362,7 @@ export default function AIHealthcarePredictiveAnalyticsPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-blue-600 hover:bg-blue-700 text-white'
                       : 'bg-slate-100 hover:bg-slate-200 text-slate-900'

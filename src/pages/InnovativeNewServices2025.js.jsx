@@ -5,6 +5,7 @@ import { SEOHead } from "../components/SEOHead";
 import { INNOVATIVE_NEW_SERVICES_2025 } from "../data/innovativeNewServices2025";
 import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";
 const InnovativeNewServices2025 = () => {
+
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
     const allServices = [...INNOVATIVE_NEW_SERVICES_2025, ...SPECIALIZED_IT_SERVICES_2025];
@@ -16,6 +17,7 @@ const InnovativeNewServices2025 = () => {
         { value: '5000+', label: '$5,000+/month' }
     ];
     const filteredServices = allServices.filter(service => {
+
         const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
         // All services have a price property
         const servicePrice = service.price;
@@ -25,7 +27,9 @@ const InnovativeNewServices2025 = () => {
             (selectedPriceRange === '5000+' && service.price >= 5000);
         return categoryMatch && priceMatch});
     const getCategoryIcon = (category) => {
+
         switch (category) {
+
             case 'AI & Analytics':
                 return Brain;
             case 'AI & Development':
@@ -38,7 +42,9 @@ const InnovativeNewServices2025 = () => {
                 return Zap}
     };
     const getCategoryColor = (category) => {
+
         switch (category) {
+
             case 'AI & Analytics':
                 return 'from-purple-500 to-pink-600';
             case 'AI & Development':
@@ -129,6 +135,7 @@ const InnovativeNewServices2025 = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service) => {
+
             const IconComponent = getCategoryIcon(service.category);
             const categoryColor = getCategoryColor(service.category);
             return (<div key={service.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 overflow-hidden hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
@@ -212,6 +219,7 @@ const InnovativeNewServices2025 = () => {
               <h3 className="text-2xl font-bold text-gray-400 mb-4">No services found</h3>
               <p className="text-gray-500 mb-6">Try adjusting your filters to see more services</p>
               <button onClick={() => {
+
                 setSelectedCategory('all');
                 setSelectedPriceRange('all')}} className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors">
                 Clear Filters

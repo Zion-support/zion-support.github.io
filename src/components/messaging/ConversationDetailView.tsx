@@ -10,8 +10,10 @@ import { MessageBubble } from './MessageBubble';
 import { DateDivider } from './DateDivider';
 
 export function ConversationDetailView() {
+
   const { user } = useAuth();
-  const { 
+  const {
+
     activeConversation, 
     activeMessages, 
     sendMessage, 
@@ -21,20 +23,25 @@ export function ConversationDetailView() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
+
     if (activeConversation) {
+
       loadMessages(activeConversation.id);
     }
   }, [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation
   
   useEffect(() => {
+
     scrollToBottom();
   }, [activeMessages]);
 
   const scrollToBottom = () => {
+
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
   
   const handleSendMessage = async (e: React.FormEvent) => {
+
     e.preventDefault();
     if (!messageText.trim() || !activeConversation) return;
     
@@ -43,6 +50,7 @@ export function ConversationDetailView() {
   };
   
   if (!activeConversation) {
+
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />
@@ -57,13 +65,17 @@ export function ConversationDetailView() {
   const groupedMessages: { date: string; messages: any[] }[] = [];
   
   activeMessages.forEach(message => {
+
     const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
     const existingGroup = groupedMessages.find(group => group.date === messageDate);
     
     if (existingGroup) {
+
       existingGroup.messages.push(message);
     } else {
+
       groupedMessages.push({
+
         date: messageDate,
         messages: [message]
       });

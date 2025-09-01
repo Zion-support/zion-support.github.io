@@ -39,8 +39,7 @@ import {
     Briefcase,
     Phone,
     MapPin,
-    Mail,
-  } from 'lucide - react.ts';
+    Mail} from 'lucide - react.ts';
 =======
   FileText,
   Download,
@@ -82,12 +81,14 @@ import {
   Mail} from 'lucide-react.ts';
 
 interface SitemapSection {
+
   title: string;
   icon: React.ComponentType<any>;
   description: string;
   routes: SitemapRoute[];
   featured?: boolean}
 interface SitemapRoute {
+
   path: string;
   name: string;
   description: string;
@@ -96,6 +97,7 @@ interface SitemapRoute {
   featured?: boolean;
   external?: boolean}
 export const SitemapGenerator: React.FC = (): JSX.Element => {
+
 >>>>>>> main
 
   const [sitemapData, setSitemapData] = useState<any>([]);
@@ -103,6 +105,7 @@ export const SitemapGenerator: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
   useEffect(() => {
+
     generateSitemap()}, []);
 
   
@@ -114,8 +117,6 @@ export const SitemapGenerator: React.FC = (): JSX.Element => {
       ...section,
       routes: anysection.routes.filter(route => {
 
-        
-        
         return matchesSearch && matchesCategory})}))
     .filter(section => section.routes.length > 0);
 

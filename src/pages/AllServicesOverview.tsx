@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Brain,
   Shield,
   Cpu,
@@ -144,10 +145,12 @@ import {
 } from 'lucide-react';
 
 const AllServicesOverview: React.FC = () => {
+
   const [activeCategory, setActiveCategory] = useState('all');
 
   const serviceCategories = [
     {
+
       id: 'ai-services',
       name: 'AI & Machine Learning',
       description: 'Cutting-edge artificial intelligence solutions for business transformation',
@@ -155,6 +158,7 @@ const AllServicesOverview: React.FC = () => {
       color: 'from-blue-500 to-purple-600',
       services: [
         {
+
           title: 'AI Business Intelligence Platform',
           description: 'Transform data into actionable intelligence with AI-powered analytics',
           price: 'From $99/month',
@@ -163,6 +167,7 @@ const AllServicesOverview: React.FC = () => {
           popular: true
         },
         {
+
           title: 'AI Supply Chain Optimization',
           description: 'Intelligent supply chain management with predictive analytics',
           price: 'From $299/month',
@@ -171,6 +176,7 @@ const AllServicesOverview: React.FC = () => {
           popular: false
         },
         {
+
           title: 'AI Healthcare Platform',
           description: 'AI-powered healthcare solutions for patient care and diagnostics',
           price: 'From $599/month',
@@ -179,6 +185,7 @@ const AllServicesOverview: React.FC = () => {
           popular: false
         },
         {
+
           title: 'AI Interview Assessment',
           description: 'Intelligent interview and assessment platform using AI',
           price: 'From $99/month',
@@ -187,6 +194,7 @@ const AllServicesOverview: React.FC = () => {
           popular: false
         },
         {
+
           title: 'LLM Content Studio',
           description: 'AI-powered content creation and optimization platform',
           price: 'From $149/month',
@@ -197,6 +205,7 @@ const AllServicesOverview: React.FC = () => {
       ]
     },
     {
+
       id: 'cybersecurity',
       name: 'Cybersecurity & Security',
       description: 'Advanced security solutions powered by AI and cutting-edge technology',
@@ -204,6 +213,7 @@ const AllServicesOverview: React.FC = () => {
       color: 'from-red-500 to-orange-600',
       services: [
         {
+
           title: 'AI Cybersecurity Threat Detection',
           description: 'Advanced threat detection powered by artificial intelligence',
           price: 'From $149/month',
@@ -212,6 +222,7 @@ const AllServicesOverview: React.FC = () => {
           popular: true
         },
         {
+
           title: 'AI Cybersecurity Platform',
           description: 'Comprehensive cybersecurity with AI-powered threat detection',
           price: 'From $399/month',
@@ -220,6 +231,7 @@ const AllServicesOverview: React.FC = () => {
           popular: false
         },
         {
+
           title: 'Incident Response Platform',
           description: 'Comprehensive incident management and response system',
           price: 'From $399/month',
@@ -228,6 +240,7 @@ const AllServicesOverview: React.FC = () => {
           popular: false
         },
         {
+
           title: 'Zero Trust Network Architecture',
           description: 'Secure network access with identity verification and monitoring',
           price: 'From $299/month',
@@ -238,6 +251,7 @@ const AllServicesOverview: React.FC = () => {
       ]
     },
     {
+
       id: 'devops',
       name: 'DevOps & Automation',
       description: 'Streamline development operations with AI-powered automation',
@@ -245,6 +259,7 @@ const AllServicesOverview: React.FC = () => {
       color: 'from-green-500 to-blue-600',
       services: [
         {
+
           title: 'AI DevOps Automation Platform',
           description: 'Transform development workflow with AI-powered automation',
           price: 'From $199/month',
@@ -253,6 +268,7 @@ const AllServicesOverview: React.FC = () => {
           popular: true
         },
         {
+
           title: 'Cloud DevOps Platform',
           description: 'Comprehensive DevOps automation with CI/CD pipelines',
           price: 'From $299/month',
@@ -261,6 +277,7 @@ const AllServicesOverview: React.FC = () => {
           popular: false
         },
         {
+
           title: 'AI Project Management Platform',
           description: 'Intelligent project planning and resource management',
           price: 'From $199/month',
@@ -271,6 +288,7 @@ const AllServicesOverview: React.FC = () => {
       ]
     },
     {
+
       id: 'business-solutions',
       name: 'Business Solutions',
       description: 'Comprehensive business tools and platforms for growth',
@@ -278,6 +296,7 @@ const AllServicesOverview: React.FC = () => {
       color: 'from-purple-500 to-pink-600',
       services: [
         {
+
           title: 'FinOps Advisor Platform',
           description: 'Cloud financial management and cost optimization',
           price: 'From $199/month',
@@ -286,6 +305,7 @@ const AllServicesOverview: React.FC = () => {
           popular: false
         },
         {
+
           title: 'Micro CRM Solution',
           description: 'Lightweight CRM system for small businesses',
           price: 'From $49/month',
@@ -294,6 +314,7 @@ const AllServicesOverview: React.FC = () => {
           popular: false
         },
         {
+
           title: 'Sustainability Platform',
           description: 'Comprehensive sustainability management and reporting',
           price: 'From $199/month',
@@ -304,6 +325,7 @@ const AllServicesOverview: React.FC = () => {
       ]
     },
     {
+
       id: 'infrastructure',
       name: 'Infrastructure & Cloud',
       description: 'Scalable infrastructure and cloud solutions for modern businesses',
@@ -311,6 +333,7 @@ const AllServicesOverview: React.FC = () => {
       color: 'from-indigo-500 to-cyan-600',
       services: [
         {
+
           title: 'Green IT Solutions',
           description: 'Sustainable technology solutions for environmental impact',
           price: 'From $299/month',
@@ -319,6 +342,7 @@ const AllServicesOverview: React.FC = () => {
           popular: false
         },
         {
+
           title: 'IoT Edge Computing',
           description: 'Edge computing solutions for IoT devices',
           price: 'From $199/month',
@@ -327,6 +351,7 @@ const AllServicesOverview: React.FC = () => {
           popular: false
         },
         {
+
           title: 'IT Infrastructure Management',
           description: 'Complete IT infrastructure monitoring and management',
           price: 'From $299/month',
@@ -337,6 +362,7 @@ const AllServicesOverview: React.FC = () => {
       ]
     },
     {
+
       id: 'quantum-computing',
       name: 'Quantum Computing',
       description: 'Next-generation computing solutions for complex problem solving',
@@ -344,6 +370,7 @@ const AllServicesOverview: React.FC = () => {
       color: 'from-violet-500 to-fuchsia-600',
       services: [
         {
+
           title: 'AI Quantum Hybrid Platform',
           description: 'Next-generation platform combining AI and quantum computing',
           price: 'From $1,299/month',
@@ -352,6 +379,7 @@ const AllServicesOverview: React.FC = () => {
           popular: false
         },
         {
+
           title: 'Quantum Computing Solutions',
           description: 'Advanced quantum computing services for research and optimization',
           price: 'From $999/month',
@@ -362,6 +390,7 @@ const AllServicesOverview: React.FC = () => {
       ]
     },
     {
+
       id: 'emerging-tech',
       name: 'Emerging Technologies',
       description: 'Cutting-edge technology solutions for the future',
@@ -369,6 +398,7 @@ const AllServicesOverview: React.FC = () => {
       color: 'from-yellow-500 to-orange-600',
       services: [
         {
+
           title: 'Space Technology Solutions',
           description: 'Innovative space technology applications and satellite management',
           price: 'From $799/month',
@@ -377,6 +407,7 @@ const AllServicesOverview: React.FC = () => {
           popular: false
         },
         {
+
           title: 'Blockchain Enterprise Solutions',
           description: 'Scalable blockchain solutions for enterprise applications',
           price: 'From $599/month',
@@ -446,6 +477,7 @@ const AllServicesOverview: React.FC = () => {
             <button
               onClick={() => setActiveCategory('all')}
               className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${
+
                 activeCategory === 'all'
                   ? 'bg-purple-500 border-purple-500 text-white'
                   : 'bg-gray-800 border-gray-700 text-gray-300 hover:border-purple-500 hover:text-purple-400'
@@ -459,6 +491,7 @@ const AllServicesOverview: React.FC = () => {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${
+
                   activeCategory === category.id
                     ? 'bg-purple-500 border-purple-500 text-white'
                     : 'bg-gray-800 border-gray-700 text-gray-300 hover:border-purple-500 hover:text-purple-400'
@@ -497,6 +530,7 @@ const AllServicesOverview: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:transform hover:scale-105 ${
+
                   service.popular 
                     ? 'border-purple-500/50 ring-2 ring-purple-500/20' 
                     : 'border-gray-700 hover:border-purple-500/50'

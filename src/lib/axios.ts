@@ -1,10 +1,12 @@
 export interface AxiosErrorData {
+
   message?: string;
   // Add other common error properties if known
   [key: string]: unknown;
 }
 
 export interface AxiosError extends Error {
+
   response?: { status: number; data?: AxiosErrorData | unknown }; // data changed from any
 }
 
@@ -14,16 +16,20 @@ type FulfilledFn<V = unknown, R = unknown> = (value: V) => R | Promise<R>;
 type RejectedFn<E = unknown> = (error: E) => unknown | Promise<unknown>; // Return of rejected can be anything or throw
 
 class InterceptorManager<V_FULFILL = unknown, R_FULFILL = unknown, E_REJECT = unknown> {
+
   handlers: { fulfilled?: FulfilledFn<V_FULFILL, R_FULFILL>; rejected?: RejectedFn<E_REJECT> }[] = [];
 
   use(fulfilled?: FulfilledFn<V_FULFILL, R_FULFILL>, rejected?: RejectedFn<E_REJECT>) {
+
     this.handlers.push({ fulfilled, rejected });
   }
 }
 
 // T for response data type, D for request data type (for POST)
 export interface AxiosInstance {
-  interceptors: { 
+
+  interceptors: {
+
     response: InterceptorManager<{ data: unknown; status: number }, { data: unknown; status: number }, AxiosError> 
   };
   get<T = unknown>(url: string, config?: { params?: Record<string, string | number | boolean | undefined> } & Omit<RequestInit, 'body' | 'method'>): Promise<T>;
@@ -32,14 +38,18 @@ export interface AxiosInstance {
 }
 
 export function create(config: { baseURL?: string; withCredentials?: boolean } = {}): AxiosInstance {
+
   const baseURL = config.baseURL || '';
   const withCreds = !!config.withCredentials;
 
   const instance: AxiosInstance = {
-    interceptors: { 
+
+    interceptors: {
+
       response: new InterceptorManager<{ data: unknown; status: number }, { data: unknown; status: number }, AxiosError>() 
     },
     async get<T = unknown>(url: string, init: { params?: Record<string, string | number | boolean | undefined> } & Omit<RequestInit, 'body' | 'method'> = {}) {
+
       const params = init.params
         ? '?' + new URLSearchParams(init.params as Record<string, string>).toString() // URLSearchParams expects string values
         : '';
@@ -49,10 +59,11 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
       return request(baseURL + url + params, 'GET', opts);
     },
     async post<T = unknown, D = unknown>(url: string, data?: D, init: Omit<RequestInit, 'body' | 'method'> = {}) {
+
       const headers: HeadersInit = {
+
         'Content-Type': 'application/json',
-        ...(init as { headers?: HeadersInit }).headers,
-      };
+        ...(init as { headers?: HeadersInit }).headers};
       // Add _originalData for retry purposes
       const opts = { ...init, body: JSON.stringify(data), headers, _originalData: data } as RequestInit & { _originalData?: any };
       return request(baseURL + url, 'POST', opts);
@@ -60,9 +71,9 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     // Add put and delete for completeness, including _originalData for put
     async put(url, data = {}, init = {}) { // Assuming similar structure to post
       const headers = {
+
         'Content-Type': 'application/json',
-        ...(init as any).headers,
-      };
+        ...(init as any).headers};
       const opts = { ...init, body: JSON.stringify(data), headers, _originalData: data } as RequestInit & { _originalData?: any };
       return request(baseURL + url, 'PUT', opts);
     },
@@ -73,8 +84,10 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
   };
 
   async function request(url: string, method: string, init: RequestInit & { _originalData?: any }) {
+
     // Read authToken from cookies
     const cookies = document.cookie.split('; ').reduce((acc, cookie) => {
+
       const [name, value] = cookie.split('=');
       acc[name] = value;
       return acc;
@@ -83,37 +96,46 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
 
     const finalHeaders = { ...init.headers }; // Start with headers from init
     if (authToken) {
+
       finalHeaders['Authorization'] = `Bearer ${authToken}`;
     }
 
     document.dispatchEvent(new CustomEvent('globalLoading', { detail: { isLoading: true } }));
 
     try {
+
       const response = await fetch(url, { ...init, method, headers: finalHeaders, credentials: withCreds ? 'include' : init.credentials });
       let responseData: any = null;
       try {
+
         responseData = await response.clone().json();
       } catch {}
 
       const result = { data: responseData, status: response.status, headers: response.headers };
 
       if (response.ok) {
+
         document.dispatchEvent(new CustomEvent('globalLoading', { detail: { isLoading: false } }));
         let res: any = result;
         for (const handler of instance.interceptors.response.handlers) {
+
           if (handler.fulfilled) {
+
             res = await handler.fulfilled(res);
           }
         }
         return res;
       } else {
+
         // Error case, will be caught by the global error interceptor after this.
         // The interceptor will set isLoading to false.
-        const error: any = Object.assign(
+        const error: unknown = Object.assign(
           new Error(responseData?.message || responseData?.error || 'Request failed'),
           {
+
             response: result,
             config: {
+
               url: url,
               method: method,
               data: init._originalData,
@@ -124,20 +146,24 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
         throw error; // This throw will be caught by the instance.interceptors.response.use
       }
     } catch (networkOrThrownError: any) {
+
       // This catches fetch network errors (e.g., no connection)
       // OR errors deliberately thrown from the 'else' block above.
 
       // If it's NOT an error we've already augmented (i.e., it's a raw network error from fetch)
       if (!networkOrThrownError.response && !networkOrThrownError.config) {
+
         // Only dispatch loading false here for raw network errors.
         // For errors thrown from 'else' (HTTP errors), the interceptor handles it.
         document.dispatchEvent(new CustomEvent('globalLoading', { detail: { isLoading: false } }));
 
-        const constructedError: any = Object.assign(
+        const constructedError: unknown = Object.assign(
           new Error(networkOrThrownError.message || 'Network request failed'),
           {
+
             response: null,
             config: {
+
               url: url,
               method: method,
               data: init._originalData,
@@ -156,7 +182,8 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
 
   // Global Error Interceptor
   instance.interceptors.response.use(undefined, async (error: any) => {
-    console.log("Global error interceptor caught (axios.ts):", error);
+
+    // // // console.log("Global error interceptor caught (axios.ts):", error);
 
     // 1. Set Loading False via event
     document.dispatchEvent(new CustomEvent('globalLoading', { detail: { isLoading: false } }));
@@ -164,8 +191,10 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     // 2. Extract Message
     let displayMessage = "An unexpected error occurred. Please try again.";
     if (error.response?.data?.error) {
+
       displayMessage = error.response.data.error;
     } else if (error.response?.data?.message) {
+
       displayMessage = error.response.data.message;
     } else if (error.message) { // For network errors or errors without response.data
       displayMessage = error.message;
@@ -175,20 +204,26 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     if (!error.response) { // True network error (fetch failed to connect or error constructed in catch)
       displayMessage = "Network error. Please check your connection and try again.";
     } else if (error.response?.status === 0 ) {
+
       displayMessage = "Network error. Please check your connection and try again.";
     } else if (error.response?.status === 503 && error.response?.data?.error?.includes('Network error. Please try again later.')) {
+
       displayMessage = error.response.data.error;
     } else if (error.response?.status === 500) {
+
         displayMessage = "A server error occurred. Please try again later.";
     } else if (error.response?.status === 401) {
+
         displayMessage = "Authentication failed. Please log in again.";
     } else if (error.response?.status === 403) {
+
         displayMessage = "You do not have permission to perform this action.";
     }
     // Add more specific status code messages if needed
 
     // 3. Show Error Modal via event
     document.dispatchEvent(new CustomEvent('globalError', {
+
       detail: { message: displayMessage, retryConfig: error.config }
     }));
 

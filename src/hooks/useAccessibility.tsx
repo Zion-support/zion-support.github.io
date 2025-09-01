@@ -1,6 +1,7 @@
 :src/hooks/useAccessibility.tsx
 
 interface UseAccessibilityOptions {
+
   enableKeyboardNavigation?: boolean;
   enableFocusManagement?: boolean;
   enableScreenReaderSupport?: boolean;
@@ -10,6 +11,7 @@ interface UseAccessibilityOptions {
 }
 
 interface AccessibilityFeatures {
+
   isHighContrast: boolean;
   isReducedMotion: boolean;
   isLargeText: boolean;
@@ -162,6 +164,7 @@ export
 
       nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
       nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else {
+
       nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
 
     manageFocus(focusableElements[nextIndex])}, [getFocusableElements, manageFocus]);
@@ -173,6 +176,7 @@ export
 
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
+
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
 
     
@@ -188,6 +192,7 @@ export
 
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
+
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
 
     
@@ -241,6 +246,7 @@ activeElements.forEach(element:  > {;
 
     // Remove after announcement
     setTimeout(: unknown {
+
       document.body.removeChild(announcement)}, 1000)}, [enableScreenReaderSupport]);
 
   // High contrast mode
@@ -302,6 +308,7 @@ activeElements.forEach(element:  > {;
 
   // Initialize accessibility features
   useEffect(() => {
+
 :src/hooks/useAccessibility.tsx
     // Load saved preferences'
     

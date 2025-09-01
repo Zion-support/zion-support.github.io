@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 interface SkeletonProps {
+
   className?: string;
   variant?: 'text' | 'circular' | 'rectangular' | 'rounded';
   width?: string | number;
@@ -11,16 +12,19 @@ interface SkeletonProps {
 }
 
 export const LoadingSkeleton: React.FC<SkeletonProps> = ({
+
   className = '',
   variant = 'rectangular',
   width,
   height,
   lines = 1,
-  animated = true
+  animated = true;
 }) => {
+
   const baseClasses = 'bg-gray-300 dark:bg-gray-600';
   
   const variants = {
+
     text: 'h-4 rounded',
     circular: 'rounded-full',
     rectangular: '',
@@ -28,7 +32,9 @@ export const LoadingSkeleton: React.FC<SkeletonProps> = ({
   };
 
   const skeletonVariants = {
+
     shimmer: {
+
       background: [
         'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
         'linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 25%, #f0f0f0 50%)',
@@ -36,6 +42,7 @@ export const LoadingSkeleton: React.FC<SkeletonProps> = ({
       ],
       backgroundSize: ['200% 100%', '200% 100%', '200% 100%'],
       transition: {
+
         duration: 1.5,
         repeat: Infinity,
         ease: 'linear'
@@ -44,6 +51,7 @@ export const LoadingSkeleton: React.FC<SkeletonProps> = ({
   };
 
   if (variant === 'text' && lines > 1) {
+
     return (
       <div className="space-y-2">
         {Array.from({ length: lines }).map((_, index) => (
@@ -51,6 +59,7 @@ export const LoadingSkeleton: React.FC<SkeletonProps> = ({
             key={index}
             className={`${baseClasses} ${variants.text} ${className}`}
             style={{
+
               width: index === lines - 1 ? '75%' : '100%',
               height: height || '1rem'
             }}
@@ -66,6 +75,7 @@ export const LoadingSkeleton: React.FC<SkeletonProps> = ({
     <motion.div
       className={`${baseClasses} ${variants[variant]} ${className}`}
       style={{
+
         width: width || '100%',
         height: height || '1rem'
       }}
@@ -141,16 +151,19 @@ export const TestimonialSkeleton: React.FC = () => (
 );
 
 interface TableSkeletonProps {
+
   rows?: number;
   columns?: number;
   className?: string;
 }
 
-export function TableSkeleton({ 
+export function TableSkeleton({
+
   rows = 5, 
   columns = 4, 
   className = '' 
 }: TableSkeletonProps) {
+
   return (
     <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
       {/* Header */}
@@ -182,16 +195,19 @@ export function TableSkeleton({
 }
 
 interface ListSkeletonProps {
+
   items?: number;
   className?: string;
   showAvatar?: boolean;
 }
 
-export function ListSkeleton({ 
+export function ListSkeleton({
+
   items = 5, 
   className = '',
-  showAvatar = false 
+  showAvatar = false;
 }: ListSkeletonProps) {
+
   return (
     <div className={`space-y-4 ${className}`}>
       {Array.from({ length: items }).map((_, index) => (
@@ -210,16 +226,19 @@ export function ListSkeleton({
 }
 
 interface GridSkeletonProps {
+
   items?: number;
   columns?: number;
   className?: string;
 }
 
-export function GridSkeleton({ 
+export function GridSkeleton({
+
   items = 6, 
   columns = 3, 
   className = ''
 }: GridSkeletonProps) {
+
   return (
     <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
       {Array.from({ length: items }).map((_, index) => (

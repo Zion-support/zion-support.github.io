@@ -6,6 +6,7 @@ import { ProductListing } from "@/types/listings";
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
   // Advanced Cloud Infrastructure & Multi-Cloud Management
   {
+
     id: 'multi-cloud-orchestration-platform',
     name: 'Multi-Cloud Orchestration Platform',
     description: 'Enterprise-grade multi-cloud management platform that provides unified control, cost optimization, and security across AWS, Azure, GCP, and private clouds. Includes automated resource provisioning, monitoring, and compliance management.',
@@ -40,6 +41,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
     useCases: ['Multi-cloud management', 'Cost optimization', 'Security unification', 'Compliance management'],
     technologies: ['Cloud Computing', 'DevOps', 'Infrastructure as Code', 'Multi-Cloud Management'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/multi-cloud-orchestration'
@@ -48,6 +50,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
 
   // Edge Computing & IoT Infrastructure
   {
+
     id: 'edge-computing-infrastructure-platform',
     name: 'Edge Computing Infrastructure Platform',
     description: 'Comprehensive edge computing platform that enables real-time data processing, AI inference, and IoT device management at the network edge. Includes edge node management, data synchronization, and security protocols.',
@@ -82,6 +85,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
     useCases: ['Real-time processing', 'IoT management', 'Edge AI deployment', 'Data synchronization'],
     technologies: ['Edge Computing', 'IoT', 'AI/ML', 'Real-time Processing'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/edge-computing'
@@ -90,6 +94,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
 
   // Quantum Computing Infrastructure & Services
   {
+
     id: 'quantum-computing-infrastructure',
     name: 'Quantum Computing Infrastructure Platform',
     description: 'Advanced quantum computing infrastructure platform that provides access to quantum processors, quantum algorithms, and hybrid classical-quantum computing capabilities. Includes quantum software development tools and optimization algorithms.',
@@ -124,6 +129,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
     useCases: ['Optimization problems', 'Drug discovery', 'Financial modeling', 'Cryptography'],
     technologies: ['Quantum Computing', 'Quantum Algorithms', 'Hybrid Computing', 'Quantum Software'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/quantum-computing'
@@ -132,6 +138,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
 
   // Blockchain & Web3 Infrastructure
   {
+
     id: 'enterprise-blockchain-platform',
     name: 'Enterprise Blockchain Platform',
     description: 'Enterprise-grade blockchain platform that enables secure, scalable, and compliant blockchain applications. Includes smart contract development, tokenization, and integration with existing enterprise systems.',
@@ -166,6 +173,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
     useCases: ['Supply chain tracking', 'Digital identity', 'Asset tokenization', 'Smart contracts'],
     technologies: ['Blockchain', 'Smart Contracts', 'Web3', 'Distributed Ledger'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/enterprise-blockchain'
@@ -174,6 +182,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
 
   // Advanced Cybersecurity & Zero Trust Architecture
   {
+
     id: 'zero-trust-security-platform',
     name: 'Zero Trust Security Platform',
     description: 'Comprehensive zero trust security platform that implements continuous verification, micro-segmentation, and adaptive access control. Includes threat detection, identity management, and compliance monitoring.',
@@ -208,6 +217,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
     useCases: ['Network security', 'Access control', 'Threat detection', 'Compliance management'],
     technologies: ['Zero Trust', 'Cybersecurity', 'Identity Management', 'Threat Detection'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/zero-trust-security'
@@ -216,6 +226,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
 
   // Data Center & Colocation Services
   {
+
     id: 'enterprise-data-center-solutions',
     name: 'Enterprise Data Center Solutions',
     description: 'Enterprise-grade data center and colocation services with high availability, security, and performance. Includes disaster recovery, backup solutions, and 24/7 monitoring and support.',
@@ -250,6 +261,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
     useCases: ['Data center hosting', 'Disaster recovery', 'Backup solutions', 'High availability'],
     technologies: ['Data Center', 'High Availability', 'Disaster Recovery', 'Infrastructure'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/enterprise-data-center'
@@ -258,6 +270,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
 
   // Network Infrastructure & SD-WAN
   {
+
     id: 'sd-wan-network-solutions',
     name: 'SD-WAN Network Solutions',
     description: 'Software-defined wide area network solutions that optimize network performance, reduce costs, and improve security. Includes centralized management, traffic optimization, and automated failover.',
@@ -292,6 +305,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
     useCases: ['Network optimization', 'Multi-site connectivity', 'Performance improvement', 'Cost reduction'],
     technologies: ['SD-WAN', 'Network Management', 'Traffic Optimization', 'Network Security'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/sd-wan-solutions'
@@ -300,6 +314,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
 
   // DevOps & CI/CD Automation
   {
+
     id: 'enterprise-devops-platform',
     name: 'Enterprise DevOps Platform',
     description: 'Comprehensive DevOps platform that automates software development, testing, and deployment processes. Includes CI/CD pipelines, infrastructure as code, and monitoring tools.',
@@ -334,6 +349,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
     useCases: ['Software development', 'Continuous integration', 'Automated deployment', 'Infrastructure management'],
     technologies: ['DevOps', 'CI/CD', 'Infrastructure as Code', 'Automation'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/enterprise-devops'
@@ -342,6 +358,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
 
   // Managed IT Services & Support
   {
+
     id: 'managed-it-services-platform',
     name: 'Managed IT Services Platform',
     description: 'Comprehensive managed IT services platform that provides 24/7 monitoring, support, and management of IT infrastructure. Includes proactive maintenance, security management, and strategic IT consulting.',
@@ -376,6 +393,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
     useCases: ['IT infrastructure management', '24/7 support', 'Strategic planning', 'Compliance management'],
     technologies: ['IT Management', 'Monitoring', 'Security', 'Automation'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/managed-it-services'
@@ -384,6 +402,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
 
   // Digital Transformation & Consulting
   {
+
     id: 'digital-transformation-consulting',
     name: 'Digital Transformation Consulting',
     description: 'Strategic digital transformation consulting services that help organizations modernize their technology infrastructure, processes, and culture. Includes assessment, planning, implementation, and change management.',
@@ -418,6 +437,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: ProductListing[] = [
     useCases: ['Technology modernization', 'Process optimization', 'Cultural change', 'Strategic planning'],
     technologies: ['Digital Transformation', 'Strategic Consulting', 'Change Management', 'Technology Architecture'],
     contactInfo: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/services/digital-transformation'

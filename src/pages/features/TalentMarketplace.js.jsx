@@ -6,7 +6,9 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function TalentMarketplace() {
+
     const schema = {
+
   "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Talent Marketplace",

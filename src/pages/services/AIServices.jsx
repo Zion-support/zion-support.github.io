@@ -2,8 +2,10 @@ import React from 'react';
 import SEO from "@/components/SEO";
 import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
 const AIServices = () => {
+
     const aiServices = [
         {
+
             id: "ai-strategy",
             title: "AI Strategy & Consulting",
             description: "Comprehensive AI strategy development and implementation for digital transformation.",
@@ -23,6 +25,7 @@ const AIServices = () => {
             link: "https://ziontechgroup.com/ai-strategy",
             details: "Strategic AI consulting to align artificial intelligence with your business objectives and drive measurable results.",
             pricing: {
+
                 starter: "$150/hour",
                 professional: "$250/hour",
                 enterprise: "$350/hour"
@@ -32,6 +35,7 @@ const AIServices = () => {
             reviewCount: 156
         },
         {
+
             id: "machine-learning",
             title: "Machine Learning Solutions",
             description: "Custom ML models and algorithms for business automation and predictive analytics.",
@@ -51,6 +55,7 @@ const AIServices = () => {
             link: "https://ziontechgroup.com/machine-learning",
             details: "End-to-end machine learning solutions from data preparation to model deployment and maintenance.",
             pricing: {
+
                 starter: "$5,000 - $15,000",
                 professional: "$15,000 - $50,000",
                 enterprise: "$50,000 - $200,000"
@@ -60,6 +65,7 @@ const AIServices = () => {
             reviewCount: 234
         },
         {
+
             id: "natural-language-processing",
             title: "NLP & Text Analytics",
             description: "Advanced natural language processing for document analysis, chatbots, and content generation.",
@@ -79,6 +85,7 @@ const AIServices = () => {
             link: "https://ziontechgroup.com/nlp-solutions",
             details: "Sophisticated NLP solutions for understanding, analyzing, and generating human language content.",
             pricing: {
+
                 starter: "$8,000 - $25,000",
                 professional: "$25,000 - $75,000",
                 enterprise: "$75,000 - $250,000"
@@ -88,6 +95,7 @@ const AIServices = () => {
             reviewCount: 189
         },
         {
+
             id: "computer-vision",
             title: "Computer Vision & Image AI",
             description: "Visual AI solutions for image recognition, object detection, and video analysis.",
@@ -107,6 +115,7 @@ const AIServices = () => {
             link: "https://ziontechgroup.com/computer-vision",
             details: "State-of-the-art computer vision solutions for industrial automation, security, and quality control applications.",
             pricing: {
+
                 starter: "$12,000 - $35,000",
                 professional: "$35,000 - $100,000",
                 enterprise: "$100,000 - $300,000"
@@ -116,6 +125,7 @@ const AIServices = () => {
             reviewCount: 145
         },
         {
+
             id: "predictive-analytics",
             title: "Predictive Analytics & Forecasting",
             description: "AI-powered predictive models for business forecasting and trend analysis.",
@@ -135,6 +145,7 @@ const AIServices = () => {
             link: "https://ziontechgroup.com/predictive-analytics",
             details: "Advanced predictive analytics helping businesses make data-driven decisions and anticipate future trends.",
             pricing: {
+
                 starter: "$6,000 - $20,000",
                 professional: "$20,000 - $60,000",
                 enterprise: "$60,000 - $180,000"
@@ -144,6 +155,7 @@ const AIServices = () => {
             reviewCount: 198
         },
         {
+
             id: "ai-automation",
             title: "AI Process Automation",
             description: "Intelligent automation solutions for business process optimization and workflow management.",
@@ -163,6 +175,7 @@ const AIServices = () => {
             link: "https://ziontechgroup.com/ai-automation",
             details: "Intelligent process automation reducing manual work and improving operational efficiency across your organization.",
             pricing: {
+
                 starter: "$4,000 - $15,000",
                 professional: "$15,000 - $45,000",
                 enterprise: "$45,000 - $150,000"
@@ -172,6 +185,7 @@ const AIServices = () => {
             reviewCount: 267
         },
         {
+
             id: "ai-ethics",
             title: "AI Ethics & Governance",
             description: "Responsible AI development and governance frameworks for ethical AI deployment.",
@@ -191,6 +205,7 @@ const AIServices = () => {
             link: "https://ziontechgroup.com/ai-ethics",
             details: "Comprehensive AI ethics and governance solutions ensuring responsible and transparent AI deployment.",
             pricing: {
+
                 starter: "$200/hour",
                 professional: "$300/hour",
                 enterprise: "$400/hour"
@@ -200,6 +215,7 @@ const AIServices = () => {
             reviewCount: 89
         },
         {
+
             id: "ai-infrastructure",
             title: "AI Infrastructure & MLOps",
             description: "Scalable AI infrastructure and machine learning operations for enterprise AI deployment.",
@@ -219,6 +235,7 @@ const AIServices = () => {
             link: "https://ziontechgroup.com/ai-infrastructure",
             details: "Enterprise-grade AI infrastructure and MLOps solutions for scalable and reliable AI model deployment.",
             pricing: {
+
                 starter: "$15,000 - $50,000",
                 professional: "$50,000 - $150,000",
                 enterprise: "$150,000 - $500,000"
@@ -228,6 +245,7 @@ const AIServices = () => {
             reviewCount: 134
         },
         {
+
             id: "ai-integration",
             title: "AI Integration Services",
             description: "Seamless integration of AI solutions with existing business systems and workflows.",
@@ -247,6 +265,7 @@ const AIServices = () => {
             link: "https://ziontechgroup.com/ai-integration",
             details: "Professional AI integration services ensuring seamless connectivity with your existing business systems.",
             pricing: {
+
                 starter: "$3,000 - $12,000",
                 professional: "$12,000 - $40,000",
                 enterprise: "$40,000 - $120,000"
@@ -256,6 +275,7 @@ const AIServices = () => {
             reviewCount: 178
         },
         {
+
             id: "ai-training",
             title: "AI Training & Workshops",
             description: "Comprehensive training programs for AI adoption and team skill development.",
@@ -275,6 +295,7 @@ const AIServices = () => {
             link: "https://ziontechgroup.com/ai-training",
             details: "Comprehensive AI training programs empowering your team with the knowledge and skills to leverage AI effectively.",
             pricing: {
+
                 starter: "$500/person",
                 professional: "$1,000/person",
                 enterprise: "$2,500/person"

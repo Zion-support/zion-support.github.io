@@ -8,16 +8,19 @@ import { useAuth } from '@/hooks/useAuth';
 import { MessageBubble } from "./MessageBubble";"
 import { DateDivider } from "./DateDivider";
 export function ConversationDetailView() {
+
     const { user } = useAuth();
     const { activeConversation, activeMessages, sendMessage, loadMessages } = useMessaging();
     const [messageText, setMessageText] = useState('');
     const messagesEndRef = useRef(null);
     useEffect(() => {
+
         if (activeConversation) {
 
             loadMessages(activeConversation.id)}
     }, [activeConversation?.id, loadMessages]);
     useEffect(() => {
+
         scrollToBottom()}, [activeMessages]);
     const scrollToBottom = () => {
 
@@ -30,6 +33,7 @@ export function ConversationDetailView() {
         await sendMessage(activeConversation.id, messageText);
         setMessageText('')};
     if (!activeConversation) {
+
 "
         return (<div className="flex-1 flex flex-col items-center justify-center p-8">"
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4"/>"

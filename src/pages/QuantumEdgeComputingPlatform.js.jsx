@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Zap, Server, ArrowRight, Star, Users } from 'lucide-react';
 const QuantumEdgeComputingPlatform = () => {
+
     const features = [
         "Quantum-accelerated edge processing",
         "Real-time data analysis and insights",
@@ -14,21 +15,25 @@ const QuantumEdgeComputingPlatform = () => {
     ];
     const benefits = [
         {
+
             icon: Zap,
             title: "Quantum Performance",
             description: "Leverage quantum computing principles for unprecedented processing speed and efficiency"
         },
         {
+
             icon: Users,
             title: "Global Edge Network",
             description: "Distributed quantum nodes across strategic global locations for optimal performance"
         },
         {
+
             icon: Users,
             title: "Quantum Security",
             description: "Advanced quantum encryption and security protocols for maximum data protection"
         },
         {
+
             icon: Users,
             title: "Scalable Architecture",
             description: "Flexible scaling from small deployments to enterprise-wide quantum networks"
@@ -36,6 +41,7 @@ const QuantumEdgeComputingPlatform = () => {
     ];
     const pricingPlans = [
         {
+
             name: "Starter",
             price: "$1,299",
             period: "/month",
@@ -49,6 +55,7 @@ const QuantumEdgeComputingPlatform = () => {
             ]
         },
         {
+
             name: "Professional",
             price: "$2,999",
             period: "/month",
@@ -64,6 +71,7 @@ const QuantumEdgeComputingPlatform = () => {
             popular: true
         },
         {
+
             name: "Enterprise",
             price: "$5,999",
             period: "/month",
@@ -81,21 +89,25 @@ const QuantumEdgeComputingPlatform = () => {
     ];
     const useCases = [
         {
+
             title: "Financial Services",
             description: "Real-time risk assessment and algorithmic trading with quantum speed",
             icon: Users
         },
         {
+
             title: "Healthcare",
             description: "Instant medical imaging analysis and drug discovery acceleration",
             icon: Users
         },
         {
+
             title: "Manufacturing",
             description: "Predictive maintenance and quality control with quantum precision",
             icon: Server
         },
         {
+
             title: "Research & Development",
             description: "Complex simulations and data analysis at quantum speeds",
             icon: Server

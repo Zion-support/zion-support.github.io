@@ -11,6 +11,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
     const firstInputRef = useRef(null);
     const modalRef = useRef(null);
     useEffect(() => {
+
         if (!isOpen)
             return;
         function handleKeyDown(e) {
@@ -40,6 +41,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
         setError('');
         setIsLoading(true); // Set loading true
         try {
+
             await sendMessage({ productId }, { sellerId }, { subject }, { message });
             toast.success('Message sent!');
             onClose(); // Close modal'
@@ -48,7 +50,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
         }
         catch (err) {
 
-            // console.error('Failed to send message:', err);
+            // // // // console.error('Failed to send message:', err);
             toast.error('Failed to send message. Please try again.');
             // Optionally, set a specific error message state if needed'
             // setError('Failed to send message. Please try again.')}

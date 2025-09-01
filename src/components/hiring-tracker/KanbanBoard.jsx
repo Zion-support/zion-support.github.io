@@ -49,6 +49,7 @@ export function KanbanBoard({ jobId }) {
   const isMobile = useIsMobile();
   // Initialize columns with applications based on their status
   useEffect(() => {
+
     if (applications) {
 
       // Group applications by status
@@ -90,12 +91,14 @@ export function KanbanBoard({ jobId }) {
       [destination.droppableId]: destColumn});
     // Update status in the database
     try {
+
       await updateApplicationStatus(draggableId, newStatus);
       toast({
 
         title: 'Status updated',
         description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});
     } catch (error) {
+
       // Revert the UI changes if the database update fails
       toast({
 

@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const INNOVATIVE_HEALTHCARE_BIOTECH_SERVICES_2030: ProductListing[] = [
   // AI-Powered Drug Discovery Platform
   {
+
     id: "ai-drug-discovery-platform",
     title: "AI Drug Discovery Platform",
     description: "Advanced AI-powered drug discovery platform that accelerates pharmaceutical research by 10x and reduces drug development costs by 60%. Uses machine learning to predict drug efficacy and identify new therapeutic targets.",
@@ -21,6 +22,7 @@ export const INNOVATIVE_HEALTHCARE_BIOTECH_SERVICES_2030: ProductListing[] = [
     availability: "12-16 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-drug-discovery",
@@ -35,6 +37,7 @@ export const INNOVATIVE_HEALTHCARE_BIOTECH_SERVICES_2030: ProductListing[] = [
 
   // Precision Medicine Analytics Platform
   {
+
     id: "precision-medicine-analytics",
     title: "Precision Medicine Analytics Platform",
     description: "Comprehensive precision medicine platform that analyzes genomic data, patient history, and environmental factors to provide personalized treatment recommendations. Improves treatment success rates by 45% and reduces adverse reactions by 70%.",
@@ -53,6 +56,7 @@ export const INNOVATIVE_HEALTHCARE_BIOTECH_SERVICES_2030: ProductListing[] = [
     availability: "10-12 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/precision-medicine",
@@ -67,6 +71,7 @@ export const INNOVATIVE_HEALTHCARE_BIOTECH_SERVICES_2030: ProductListing[] = [
 
   // AI-Powered Medical Imaging Platform
   {
+
     id: "ai-medical-imaging-platform",
     title: "AI Medical Imaging Platform",
     description: "Intelligent medical imaging platform that uses AI to analyze X-rays, MRIs, CT scans, and other medical images with 95% accuracy. Reduces diagnostic time by 80% and improves detection rates by 30%.",
@@ -85,6 +90,7 @@ export const INNOVATIVE_HEALTHCARE_BIOTECH_SERVICES_2030: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-medical-imaging",
@@ -99,6 +105,7 @@ export const INNOVATIVE_HEALTHCARE_BIOTECH_SERVICES_2030: ProductListing[] = [
 
   // Digital Health Monitoring Platform
   {
+
     id: "digital-health-monitoring",
     title: "Digital Health Monitoring Platform",
     description: "Comprehensive digital health monitoring platform that tracks vital signs, activity levels, and health metrics in real-time. Provides early warning systems and improves patient outcomes by 40%.",
@@ -117,6 +124,7 @@ export const INNOVATIVE_HEALTHCARE_BIOTECH_SERVICES_2030: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/digital-health-monitoring",
@@ -131,6 +139,7 @@ export const INNOVATIVE_HEALTHCARE_BIOTECH_SERVICES_2030: ProductListing[] = [
 
   // Biotech Process Optimization Platform
   {
+
     id: "biotech-process-optimization",
     title: "Biotech Process Optimization Platform",
     description: "Advanced biotech process optimization platform that uses AI to optimize laboratory processes, improve yield, and reduce production costs. Increases biotech production efficiency by 50% and reduces waste by 40%.",
@@ -149,6 +158,7 @@ export const INNOVATIVE_HEALTHCARE_BIOTECH_SERVICES_2030: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/biotech-process-optimization",

@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Code, 
   Shield, 
   Zap, 
@@ -29,33 +30,40 @@ import {
 } from 'lucide-react';
 
 const AIAutonomousCodeReviewer: React.FC = () => {
+
   const features = [
     {
+
       icon: Code,
       title: "Intelligent Code Analysis",
       description: "AI-powered code review that understands context, patterns, and best practices across multiple programming languages."
     },
     {
+
       icon: Shield,
       title: "Security Vulnerability Detection",
       description: "Automated detection of security flaws, SQL injection risks, and common security vulnerabilities in real-time."
     },
     {
+
       icon: Bug,
       title: "Bug Prediction & Prevention",
       description: "Machine learning algorithms that predict potential bugs before they reach production environments."
     },
     {
+
       icon: GitBranch,
       title: "Git Integration",
       description: "Seamless integration with Git workflows, providing automated reviews on pull requests and commits."
     },
     {
+
       icon: BarChart3,
       title: "Code Quality Metrics",
       description: "Comprehensive metrics including cyclomatic complexity, maintainability index, and technical debt analysis."
     },
     {
+
       icon: Users,
       title: "Team Collaboration",
       description: "Built-in collaboration tools for team code reviews with AI-assisted suggestions and explanations."
@@ -64,6 +72,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
 
   const pricingTiers = [
     {
+
       name: "Starter",
       price: "$149",
       period: "/month",
@@ -80,6 +89,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$399",
       period: "/month",
@@ -97,6 +107,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$999",
       period: "/month",
@@ -117,21 +128,25 @@ const AIAutonomousCodeReviewer: React.FC = () => {
 
   const benefits = [
     {
+
       icon: TrendingUp,
       title: "50% Faster Code Reviews",
       description: "AI automation reduces review time while maintaining quality standards"
     },
     {
+
       icon: Shield,
       title: "90% Fewer Security Issues",
       description: "Proactive vulnerability detection prevents security breaches"
     },
     {
+
       icon: CheckCircle,
       title: "Improved Code Quality",
       description: "Consistent code standards and best practices across teams"
     },
     {
+
       icon: Clock,
       title: "24/7 Availability",
       description: "Continuous code monitoring and instant feedback"
@@ -295,6 +310,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
+
                   tier.popular 
                     ? 'border-purple-500 shadow-2xl shadow-purple-500/20' 
                     : 'border-slate-700'
@@ -329,6 +345,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
                 <Link
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+
                     tier.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

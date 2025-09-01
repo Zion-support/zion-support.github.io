@@ -19,7 +19,8 @@ largestChunk: {;
 
 };
 =======
-export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({ 
+export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({
+
 >>>>>>> main
   averageChunkSize: number;
   gzipSavings: number}
@@ -40,6 +41,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 
   
     try {
+
 <<<<<<< HEAD
       // Get performance entries
       const navigationEntries = performance.getEntriesByType ('navigation') ;
@@ -58,7 +60,9 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       let largestChunk = { name: any'', size: 0 };
 
       resourceEntries.forEach ( (entry:) => {
+
         if (entry.name.includes ('.js') || entry.name.includes ('.css') ) {
+
           const size = entry.transferSize || entry.encodedBodySize || 0;
           totalSize += size;
 =======
@@ -108,6 +112,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       }
 
       if (chunkCount > 20) {
+
         console.warn ('⚠️ Too many chunks. Consider consolidating small chunks.') ;
       }
 
@@ -117,31 +122,32 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 
       console.groupEnd () ;
     } catch (error) {
+
       console.error ('Bundle analysis failed:', error) ;
     }
 =======
       // Log performance insights'
       console.group('🚀 Bundle Analysis');
-      // console.log(`Total Bundle Size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);`
-      // console.log(`Chunk Count: ${chunkCount}`);`
-      // console.log(`Largest Chunk: ${largestChunk.name} (${(largestChunk.size / 1024 / 1024).toFixed(2)} MB)`);`
-      // console.log(`Average Chunk Size: ${(averageChunkSize / 1024 / 1024).toFixed(2)} MB`);`
-      // console.log(`Estimated Gzip Savings: ${(gzipSavings / 1024 / 1024).toFixed(2)} MB`);
+      // // // // console.log(`Total Bundle Size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);`
+      // // // // console.log(`Chunk Count: ${chunkCount}`);`
+      // // // // console.log(`Largest Chunk: ${largestChunk.name} (${(largestChunk.size / 1024 / 1024).toFixed(2)} MB)`);`
+      // // // // console.log(`Average Chunk Size: ${(averageChunkSize / 1024 / 1024).toFixed(2)} MB`);`
+      // // // // console.log(`Estimated Gzip Savings: ${(gzipSavings / 1024 / 1024).toFixed(2)} MB`);
       
       // Performance recommendations
       if (totalSize > 5 * 1024 * 1024) { // 5MB'
-        // console.warn('⚠️ Bundle size is large. Consider code splitting and lazy loading.')}
+        // // // // console.warn('⚠️ Bundle size is large. Consider code splitting and lazy loading.')}
       
       if (chunkCount > 20) {
 
-        // console.warn('⚠️ Too many chunks. Consider consolidating small chunks.')}
+        // // // // console.warn('⚠️ Too many chunks. Consider consolidating small chunks.')}
       
       if (largestChunk.size > 2 * 1024 * 1024) { // 2MB'
-        // console.warn('⚠️ Largest chunk is too big. Consider splitting it further.')}
+        // // // // console.warn('⚠️ Largest chunk is too big. Consider splitting it further.')}
       
       console.groupEnd () } catch (error) {
 
-      // console.error('Bundle analysis failed:', error)}
+      // // // // console.error('Bundle analysis failed:', error)}
 >>>>>>> main
   }, [enabled]) ;
 
@@ -167,11 +173,13 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 
     // Apply optimizations
     optimizations.forEach(optimization => {
+
 `
-      // console.log(`🔧 Optimization: any${optimization}`)});
+      // // // // console.log(`🔧 Optimization: any${optimization}`)});
 
     return optimizations}, [enabled, metrics]) ;
   useEffect(() => {
+
     if (!enabled) return;
 
     // Analyze bundle after page load
@@ -186,6 +194,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 >>>>>>> main
 
   useEffect ( () => {
+
     if (!enabled) return;
 
     // Run optimization analysis
@@ -197,7 +206,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 >>>>>>> main
     if (optimizations && optimizations.length > 0) {
 
-      // console.log('📊 Bundle optimization recommendations:', optimizations);
+      // // // // console.log('📊 Bundle optimization recommendations:', optimizations);
 <<<<<<< HEAD
     }
   }, [enabled, optimizeBundle]);

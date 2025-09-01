@@ -1,6 +1,7 @@
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     // Healthcare & Life Sciences
     {
+
         id: "ai-healthcare-diagnostic-platform",
         title: "AI Healthcare Diagnostic Platform Pro",
         description: "Advanced AI-powered diagnostic platform that analyzes medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
@@ -49,11 +50,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         roi: "400-700%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["Deep Learning", "Computer Vision", "Python", "React", "PostgreSQL", "DICOM"],
             integrations["Epic", "Cerner", "PACS systems", "Lab systems", "Patient portals"],
             apiEndpoints: 100,
@@ -67,6 +70,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     },
     // Financial Services & Banking
     {
+
         id: "ai-fraud-detection-suite",
         title: "AI Fraud Detection Suite Elite",
         description: "Comprehensive fraud detection platform that uses AI to identify and prevent financial fraud in real-time across multiple channels and transaction types.",
@@ -115,11 +119,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         roi: "500-800%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["Machine Learning", "NLP", "Python", "React", "PostgreSQL", "Redis"],
             integrations["Core banking systems", "Payment gateways", "CRM platforms", "Analytics tools"],
             apiEndpoints: 150,
@@ -132,6 +138,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     },
     // Manufacturing & Industry 4.0
     {
+
         id: "smart-manufacturing-platform",
         title: "Smart Manufacturing Platform Pro",
         description: "Comprehensive Industry 4.0 platform that integrates IoT, AI, and automation to optimize manufacturing processes, predict maintenance, and improve quality control.",
@@ -180,11 +187,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         roi: "300-600%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["IoT platforms", "Machine Learning", "Python", "React", "PostgreSQL", "MQTT"],
             integrations["SCADA systems", "ERP platforms", "MES systems", "PLC controllers"],
             apiEndpoints: 200,
@@ -197,6 +206,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     },
     // Retail & E-commerce
     {
+
         id: "ai-retail-optimization-platform",
         title: "AI Retail Optimization Platform Elite",
         description: "Intelligent retail platform that uses AI to optimize inventory, personalize customer experiences, and predict demand for maximum profitability.",
@@ -245,11 +255,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         roi: "350-600%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
             integrations["POS systems", "E-commerce platforms", "CRM systems", "Analytics tools"],
             apiEndpoints: 100,
@@ -262,6 +274,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     },
     // Transportation & Logistics
     {
+
         id: "autonomous-logistics-platform",
         title: "Autonomous Logistics Platform Pro",
         description: "AI-powered logistics platform that optimizes routes, predicts demand, and automates supply chain operations for maximum efficiency and cost savings.",
@@ -310,11 +323,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         roi: "300-500%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
             integrations["GPS systems", "Fleet management", "WMS systems", "Analytics platforms"],
             apiEndpoints: 125,
@@ -327,6 +342,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     },
     // Energy & Utilities
     {
+
         id: "smart-energy-management-platform",
         title: "Smart Energy Management Platform Elite",
         description: "Intelligent energy management platform that optimizes power generation, distribution, and consumption using AI and IoT for maximum efficiency and sustainability.",
@@ -375,11 +391,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         roi: "400-700%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time-series DB"],
             integrations["SCADA systems", "Smart meters", "Building management", "Analytics platforms"],
             apiEndpoints: 150,
@@ -392,6 +410,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     },
     // Education & EdTech
     {
+
         id: "ai-education-platform",
         title: "AI Education Platform Pro",
         description: "Intelligent education platform that personalizes learning experiences, tracks student progress, and provides adaptive content for maximum educational outcomes.",
@@ -440,11 +459,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         roi: "250-400%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
             integrations["LMS platforms", "Student information systems", "Content management", "Analytics tools"],
             apiEndpoints: 75,
@@ -457,6 +478,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     },
     // Real Estate & Property Management
     {
+
         id: "smart-property-management-platform",
         title: "Smart Property Management Platform Elite",
         description: "Intelligent property management platform that automates operations, optimizes maintenance, and enhances tenant experiences using AI and IoT technology.",
@@ -505,11 +527,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         roi: "300-500%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["IoT sensors", "Machine Learning", "Python", "React", "Node.js", "PostgreSQL"],
             integrations["Building management systems", "IoT platforms", "Payment systems", "Analytics tools"],
             apiEndpoints: 100,
@@ -522,6 +546,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     },
     // Legal & Compliance
     {
+
         id: "ai-legal-compliance-platform",
         title: "AI Legal Compliance Platform Pro",
         description: "Intelligent legal compliance platform that automates regulatory monitoring, risk assessment, and compliance reporting using AI and machine learning.",
@@ -570,11 +595,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         roi: "400-700%",
         innovationLevel: "Cutting-edge",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
         technicalSpecs: {
+
             technology["Machine Learning", "NLP", "Python", "React", "Node.js", "PostgreSQL"],
             integrations["Legal databases", "Document management", "CRM systems", "Analytics tools"],
             apiEndpoints: 75,

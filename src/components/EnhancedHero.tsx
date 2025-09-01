@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   ArrowRight, 
   Play, 
   Pause, 
@@ -19,6 +20,7 @@ import {
 } from 'lucide-react';
 
 interface HeroSlide {
+
   id: number;
   title: string;
   subtitle: string;
@@ -28,6 +30,7 @@ interface HeroSlide {
   background: string;
   icon: React.ComponentType<any>;
   stats?: Array<{
+
     number: string;
     label: string;
     icon: React.ComponentType<any>;
@@ -35,12 +38,14 @@ interface HeroSlide {
 }
 
 export default function EnhancedHero() {
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
 
   const slides: HeroSlide[] = [
     {
+
       id: 1,
       title: "AI-Powered Innovation",
       subtitle: "Transform Your Business",
@@ -56,6 +61,7 @@ export default function EnhancedHero() {
       ]
     },
     {
+
       id: 2,
       title: "Quantum Computing",
       subtitle: "Next-Generation Solutions",
@@ -71,6 +77,7 @@ export default function EnhancedHero() {
       ]
     },
     {
+
       id: 3,
       title: "Micro SAAS Platform",
       subtitle: "Scalable Solutions",
@@ -88,9 +95,11 @@ export default function EnhancedHero() {
   ];
 
   useEffect(() => {
+
     if (!isPlaying) return;
 
     const interval = setInterval(() => {
+
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
 
@@ -98,18 +107,22 @@ export default function EnhancedHero() {
   }, [isPlaying, slides.length]);
 
   const nextSlide = () => {
+
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
   const prevSlide = () => {
+
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   const goToSlide = (index: number) => {
+
     setCurrentSlide(index);
   };
 
   const togglePlayPause = () => {
+
     setIsPlaying(!isPlaying);
   };
 
@@ -200,6 +213,7 @@ export default function EnhancedHero() {
                 className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
               >
                 {slides[currentSlide].stats.map((stat, index) => {
+
                   const Icon = stat.icon;
                   return (
                     <motion.div
@@ -267,6 +281,7 @@ export default function EnhancedHero() {
               whileTap={{ scale: 0.8 }}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-200 ${
+
                 index === currentSlide
                   ? 'bg-cyan-400 scale-125'
                   : 'bg-slate-600 hover:bg-slate-500'
@@ -283,18 +298,18 @@ export default function EnhancedHero() {
             key={i}
             className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
             animate={{
+
               y: [0, -20, 0],
-              opacity: [0.3, 0.8, 0.3],
-            }}
+              opacity: [0.3, 0.8, 0.3]}}
             transition={{
+
               duration: 3 + i * 0.5,
               repeat: Infinity,
-              delay: i * 0.5,
-            }}
+              delay: i * 0.5}}
             style={{
+
               left: `${20 + i * 15}%`,
-              top: `${30 + i * 10}%`,
-            }}
+              top: `${30 + i * 10}%`}}
           />
         ))}
       </div>

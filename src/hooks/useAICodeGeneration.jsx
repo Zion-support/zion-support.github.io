@@ -1,6 +1,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { useAnalytics } from "./useAnalytics";
 export const useAICodeGeneration = () => {
+
     const { trackEvent } = useAnalytics({
 
         enableTracking: true,
@@ -18,6 +19,7 @@ export const useAICodeGeneration = () => {
 
         setIsGenerating(true);
         try {
+
             // Simulate AI processing - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 3000));
             let generatedCode = '';
@@ -55,16 +57,18 @@ export const useAICodeGeneration = () => {
                 target: options.target,
 <<<<<<< HEAD
                 quality: options.quality
-            // // // // // // // // // console.error('Failed to generate code:', error);
+            // // // // // // // // // // // // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
+
 =======
                 quality: options.quality'
 <<<<<<< HEAD
-            // // // // // // // // console.error('Failed to generate code:', error);
+            // // // // // // // // // // // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation',generation_failed',error', undefined, {
 
 =======
-            // // // // // // // // console.error('Failed to generate code:', error);'            trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
+            // // // // // // // // // // // console.error('Failed to generate code:', error);'            trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 >>>>>>> main
@@ -77,18 +81,21 @@ export const useAICodeGeneration = () => {
 
             })}
         catch (error) {
+
 <<<<<<< HEAD
-            // // console.error('Failed to generate code:', error);
+            // // // // // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation', 'generation_failed', 'error', null, {
+
 =======
 <<<<<<< HEAD
 
-            // console.error('Failed to generate code:', error);
+            // // // // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation',generation_failed',error', null, {
 
 =======
 '
-            // console.error('Failed to generate code:', error);'            trackEvent('ai_code_generation', 'generation_failed', 'error', null, {
+            // // // // console.error('Failed to generate code:', error);'            trackEvent('ai_code_generation', 'generation_failed', 'error', null, {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 >>>>>>> main
@@ -103,6 +110,7 @@ export const useAICodeGeneration = () => {
 
         setIsAnalyzing(true);
         try {
+
             // Simulate AI analysis - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 2000));
             const analysis = {
@@ -128,16 +136,18 @@ export const useAICodeGeneration = () => {
                 security: analysis.security,
 <<<<<<< HEAD
                 performance: analysis.performance
-            // // // // // // // // // console.error('Failed to analyze code:', error);
+            // // // // // // // // // // // // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
+
 =======
                 performance: analysis.performance'
 <<<<<<< HEAD
-            // // // // // // // // console.error('Failed to analyze code:', error);
+            // // // // // // // // // // // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis',analysis_failed',error', undefined, {
 
 =======
-            // // // // // // // // console.error('Failed to analyze code:', error);'            trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
+            // // // // // // // // // // // console.error('Failed to analyze code:', error);'            trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 >>>>>>> main
@@ -150,18 +160,21 @@ export const useAICodeGeneration = () => {
 
             })}
         catch (error) {
+
 <<<<<<< HEAD
-            // // console.error('Failed to analyze code:', error);
+            // // // // // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', null, {
+
 =======
 <<<<<<< HEAD
 
-            // console.error('Failed to analyze code:', error);
+            // // // // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis',analysis_failed',error', null, {
 
 =======
 '
-            // console.error('Failed to analyze code:', error);'            trackEvent('ai_code_analysis', 'analysis_failed', 'error', null, {
+            // // // // console.error('Failed to analyze code:', error);'            trackEvent('ai_code_analysis', 'analysis_failed', 'error', null, {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 >>>>>>> main
@@ -203,15 +216,17 @@ export const useAICodeGeneration = () => {
 <<<<<<< HEAD
                     optimizedCode = optimizeForAccessibility(code);
 <<<<<<< HEAD
-            // // // // // // // // // console.error('Failed to optimize code:', error);
+            // // // // // // // // // // // // console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
+
 =======
-            // // // // // // // // console.error('Failed to optimize code:', error);
+            // // // // // // // // // // // console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation',optimization_failed',error', undefined, {
 
 =======
                     optimizedCode = optimizeForAccessibility(code);'
-            // // // // // // // // console.error('Failed to optimize code:', error);'            trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
+            // // // // // // // // // // // console.error('Failed to optimize code:', error);'            trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 >>>>>>> main
@@ -223,18 +238,21 @@ export const useAICodeGeneration = () => {
             trackEvent('ai_code_generation',code_optimized', focus, optimizedCode.length);
             return optimizedCode}
         catch (error) {
+
 <<<<<<< HEAD
-            // // console.error('Failed to optimize code:', error);
+            // // // // // console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation', 'optimization_failed', 'error', null, {
+
 =======
 <<<<<<< HEAD
 
-            // console.error('Failed to optimize code:', error);
+            // // // // console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation',optimization_failed',error', null, {
 
 =======
 '
-            // console.error('Failed to optimize code:', error);'            trackEvent('ai_code_generation', 'optimization_failed', 'error', null, {
+            // // // // console.error('Failed to optimize code:', error);'            trackEvent('ai_code_generation', 'optimization_failed', 'error', null, {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 >>>>>>> main
@@ -246,22 +264,26 @@ export const useAICodeGeneration = () => {
     const generateTests = useCallback(async (code, language) => {
 
         try {
+
             // Simulate AI test generation - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 2000));
             let testCode = '';
             if (language === 'typescript' || language === 'javascript') {
+
 <<<<<<< HEAD
-            // // // // // // // // // console.error('Failed to generate tests:', error);
+            // // // // // // // // // // // // console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
+
 =======
 <<<<<<< HEAD
 
-            // // // // // // // // console.error('Failed to generate tests:', error);
+            // // // // // // // // // // // console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation',test_generation_failed',error', undefined, {
 
 =======
 '
-            // // // // // // // // console.error('Failed to generate tests:', error);'            trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
+            // // // // // // // // // // // console.error('Failed to generate tests:', error);'            trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 >>>>>>> main
@@ -279,18 +301,21 @@ export const useAICodeGeneration = () => {
             trackEvent('ai_code_generation',tests_generated', language, testCode.length);
             return testCode}
         catch (error) {
+
 <<<<<<< HEAD
-            // // console.error('Failed to generate tests:', error);
+            // // // // // console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', null, {
+
 =======
 <<<<<<< HEAD
 
-            // console.error('Failed to generate tests:', error);
+            // // // // console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation',test_generation_failed',error', null, {
 
 =======
 '
-            // console.error('Failed to generate tests:', error);'            trackEvent('ai_code_generation', 'test_generation_failed', 'error', null, {
+            // // // // console.error('Failed to generate tests:', error);'            trackEvent('ai_code_generation', 'test_generation_failed', 'error', null, {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 >>>>>>> main
@@ -302,22 +327,26 @@ export const useAICodeGeneration = () => {
     const generateDocs = useCallback(async (code, language) => {
 
         try {
+
             // Simulate AI documentation generation - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 1500));
             let docs = '';
             if (language === 'typescript' || language === 'javascript') {
+
 <<<<<<< HEAD
-            // // // // // // // // // console.error('Failed to generate documentation:', error);
+            // // // // // // // // // // // // console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
+
 =======
 <<<<<<< HEAD
 
-            // // // // // // // // console.error('Failed to generate documentation:', error);
+            // // // // // // // // // // // console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation',doc_generation_failed',error', undefined, {
 
 =======
 '
-            // // // // // // // // console.error('Failed to generate documentation:', error);'            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
+            // // // // // // // // // // // console.error('Failed to generate documentation:', error);'            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 >>>>>>> main
@@ -335,18 +364,21 @@ export const useAICodeGeneration = () => {
             trackEvent('ai_code_generation',docs_generated', language, docs.length);
             return docs}
         catch (error) {
+
 <<<<<<< HEAD
-            // // console.error('Failed to generate documentation:', error);
+            // // // // // console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', null, {
+
 =======
 <<<<<<< HEAD
 
-            // console.error('Failed to generate documentation:', error);
+            // // // // console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation',doc_generation_failed',error', null, {
 
 =======
 '
-            // console.error('Failed to generate documentation:', error);'            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', null, {
+            // // // // console.error('Failed to generate documentation:', error);'            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', null, {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 >>>>>>> main
@@ -356,6 +388,7 @@ export const useAICodeGeneration = () => {
     }, [trackEvent]);
     // Clear generation history
     const clearHistory = useCallback(() => {
+
         setHistory([]);
         trackEvent('ai_code_generation',history_cleared',manual')}, [trackEvent]);
     // Export generated code'
@@ -372,6 +405,7 @@ export const useAICodeGeneration = () => {
             }, null, 2);
             filename = 'generated-code.json'}
         else if (format === 'md') {
+
 '`
             exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysis, null, 2) : 'No analysis available'}`;
             filename = 'generated-code.md'}
@@ -405,6 +439,7 @@ export const useAICodeGeneration = () => {
         }}, []);
     // Helper functions for code generation
     const generateReactTypeScriptCode = (prompt, options) => {
+
 '`
         return `import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
@@ -418,10 +453,12 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
   const [state, setState] = useState<any>(null);
 
   useEffect(() => {
+
     // TODO: Implement initialization logic
   }, []);
 
   const handleAction = useCallback(() => {
+
     // TODO: Implement action handler
   }, []);
 
@@ -439,6 +476,7 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
 `
 export default GeneratedComponent;`};
     const generateExpressCode = (prompt, _options) => {
+
 '`
         return `import express from 'express';
 import cors from 'cors';
@@ -460,15 +498,17 @@ app.get('/', (req, res) => {
 // TODO: Implement additional routes based on prompt
 
 app.listen(PORT, () => {
+
 <<<<<<< HEAD
-  // // // // // // // // // console.log(\`Server running on port \${PORT}\`);
+  // // // // // // // // // // // // console.log(\`Server running on port \${PORT}\`);
 });`;
 =======
 `
-  // // // // // // // // console.log(\`Server running on port \${PORT}\`);`});`;
+  // // // // // // // // // // // console.log(\`Server running on port \${PORT}\`);`});`;
 >>>>>>> main
     };
     const generatePythonCode = (prompt, _options) => {
+
 `
         return `#!/usr/bin/env python3"
 ""
@@ -501,6 +541,7 @@ if __name__ == "__main__":`
     asyncio.run(main())`;
     };
     const generateGenericCode = (prompt, options) => {
+
 `
         return `// Generated ${options.language} code based on prompt: ${prompt}
 // Framework: ${options.framework || 'none'}
@@ -511,23 +552,23 @@ if __name__ == "__main__":`
 // This is a placeholder implementation
 <<<<<<< HEAD
 
-// // // // // // // // // console.log("Generated code placeholder");
-// // // // // // // // // console.log("Prompt:", "${prompt}");
-// // // // // // // // // console.log("Language:", "${options.language}");`;
+// // // // // // // // // // // // console.log("Generated code placeholder");
+// // // // // // // // // // // // console.log("Prompt:", "${prompt}");
+// // // // // // // // // // // // console.log("Language:", "${options.language}");`;
     };
-// // console.log("Generated code placeholder");
-// // console.log("Prompt:", "${prompt}");
-// // console.log("Language:", "${options.language}");`};
+// // // // // console.log("Generated code placeholder");
+// // // // // console.log("Prompt:", "${prompt}");
+// // // // // console.log("Language:", "${options.language}");`};
     // Helper functions for code analysis
 =======
 "
-// // // // // // // // console.log("Generated code placeholder");"
-// // // // // // // // console.log("Prompt:", "${prompt}");"`
-// // // // // // // // console.log("Language:", "${options.language}");`;
+// // // // // // // // // // // console.log("Generated code placeholder");"
+// // // // // // // // // // // console.log("Prompt:", "${prompt}");"`
+// // // // // // // // // // // console.log("Language:", "${options.language}");`;
     };"
-// console.log("Generated code placeholder");"
-// console.log("Prompt:", "${prompt}");"`
-// console.log("Language:", "${options.language}");`};    // Helper functions for code analysis
+// // // // console.log("Generated code placeholder");"
+// // // // console.log("Prompt:", "${prompt}");"`
+// // // // console.log("Language:", "${options.language}");`};    // Helper functions for code analysis
 >>>>>>> main
     const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
         return Math.min(10, Math.max(1, Math.floor(cyclomaticComplexity / 5)));
@@ -563,6 +604,7 @@ if __name__ == "__main__":`
         if (code.includes('setInterval') || code.includes('setTimeout')) {
 
             suggestions.push({
+
 `
                 id: `suggestion_${Date.now()}_1`,;
                 type: 'performance',
@@ -580,6 +622,7 @@ if __name__ == "__main__":`
         if (code.includes('innerHTML') || code.includes('document.write')) {
 
             suggestions.push({
+
 `
                 id: `suggestion_${Date.now()}_2`,
                 type: 'security',
@@ -597,6 +640,7 @@ if __name__ == "__main__":`
         if (code.includes('console.log')) {
 
             suggestions.push({
+
 `
                 id: `suggestion_${Date.now()}_3`,
                 type: 'best_practice',
@@ -640,6 +684,7 @@ if __name__ == "__main__":`
             .replace(/<img/g,<img alt="Description"')};
     // Helper functions for test generation
     const generateJestTests = (_code) => {
+
 '`
         return `import { render, screen, fireEvent } from '@testing-library/react';"
 import GeneratedComponent from "./GeneratedComponent";
@@ -647,16 +692,19 @@ import GeneratedComponent from "./GeneratedComponent";
 describe('GeneratedComponent', () => {
 
   it('renders without crashing', () => {
+
     render(<GeneratedComponent />);
     expect(screen.getByText('Generated Component')).toBeInTheDocument()});
 
   it('handles user interactions', () => {
+
     render(<GeneratedComponent />);
     // TODO: Add specific test cases based on component functionality
   });`
 });`;
     };
     const generatePytestTests = (_code) => {
+
 `
         return `import pytest;
 from generated_module import GeneratedClass;
@@ -674,6 +722,7 @@ class TestGeneratedClass:;
     # TODO: Add more specific test cases based on class functionality`;
     };
     const generateGenericTests = (_code, language) => {
+
 `
         return `// Generated tests for ${language} code
 // TODO: Implement specific test cases based on code functionality
@@ -681,10 +730,12 @@ class TestGeneratedClass:;
 describe('Generated Code Tests', () => {
 
   it('should work as expected', () => {
+
     // TODO: Add test implementation`
     expect(true).toBe(true)})});`};
     // Helper functions for documentation generation
     const generateJSDoc = (_code) => {
+
 `
         return `/**
  * Generated Component
@@ -696,10 +747,12 @@ describe('Generated Code Tests', () => {
  * <GeneratedComponent />
  */;
 export const GeneratedComponent = () => {
+
   // Component implementation`
 };`;
     };
     const generatePythonDoc = (_code) => {
+
 "`
         return `""";
 Generated Module
@@ -717,6 +770,7 @@ def generated_function():;"
     pass`;
     };
     const generateGenericDocs = (_code, language) => {
+
 `
         return `/**
  * Generated ${language} Code
@@ -727,7 +781,9 @@ def generated_function():;"
  */`};
     // Cleanup timeout on unmount
     useEffect(() => {
+
         return () => {
+
             if (generationTimeoutRef.current) {
 
                 clearTimeout(generationTimeoutRef.current)}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Truck, 
   Package, 
   Brain, 
@@ -28,33 +29,40 @@ import {
 } from 'lucide-react';
 
 const AISupplyChainOptimizationPlatform = () => {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Demand Forecasting",
       description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock situations."
     },
     {
+
       icon: <Truck className="w-6 h-6" />,
       title: "Route Optimization",
       description: "Intelligent route planning that reduces delivery times by 30% and cuts transportation costs by 25%."
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Risk Management",
       description: "Real-time risk assessment and mitigation strategies for supply chain disruptions and supplier issues."
     },
     {
+
       icon: <Users className="w-6 h-6" />,
       title: "Supplier Management",
       description: "AI-driven supplier performance analysis and automated procurement recommendations."
     },
     {
+
       icon: <Database className="w-6 h-6" />,
       title: "Inventory Optimization",
       description: "Smart inventory management that maintains optimal stock levels while minimizing carrying costs."
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Performance Analytics",
       description: "Comprehensive supply chain KPIs and real-time performance monitoring dashboards."
@@ -63,6 +71,7 @@ const AISupplyChainOptimizationPlatform = () => {
 
   const pricingPlans = [
     {
+
       name: "Small Business",
       price: "$399",
       period: "/month",
@@ -78,6 +87,7 @@ const AISupplyChainOptimizationPlatform = () => {
       popular: false
     },
     {
+
       name: "Enterprise",
       price: "$1,199",
       period: "/month",
@@ -95,6 +105,7 @@ const AISupplyChainOptimizationPlatform = () => {
       popular: true
     },
     {
+
       name: "Global Enterprise",
       price: "$2,999",
       period: "/month",
@@ -115,21 +126,25 @@ const AISupplyChainOptimizationPlatform = () => {
 
   const benefits = [
     {
+
       icon: <DollarSign className="w-8 h-8" />,
       title: "Cost Reduction",
       description: "Reduce supply chain costs by 20-35% through AI optimization"
     },
     {
+
       icon: <Clock className="w-8 h-8" />,
       title: "Faster Delivery",
       description: "Improve delivery times by 30-40% with route optimization"
     },
     {
+
       icon: <Shield className="w-8 h-8" />,
       title: "Risk Mitigation",
       description: "Identify and prevent supply chain disruptions before they occur"
     },
     {
+
       icon: <Truck className="w-8 h-8" />,
       title: "Improved Efficiency",
       description: "Streamline operations and reduce manual processes by 50%"
@@ -138,21 +153,25 @@ const AISupplyChainOptimizationPlatform = () => {
 
   const industries = [
     {
+
       icon: <Package className="w-8 h-8" />,
       title: "E-commerce",
       description: "Optimize fulfillment and last-mile delivery for online retailers"
     },
     {
+
       icon: <Truck className="w-8 h-8" />,
       title: "Manufacturing",
       description: "Streamline production planning and raw material procurement"
     },
     {
+
       icon: <Globe className="w-8 h-8" />,
       title: "Retail",
       description: "Improve inventory management and store replenishment"
     },
     {
+
       icon: <Activity className="w-8 h-8" />,
       title: "Healthcare",
       description: "Ensure critical medical supplies are always available"
@@ -340,6 +359,7 @@ const AISupplyChainOptimizationPlatform = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800 p-8 rounded-lg border ${
+
                   plan.popular 
                     ? 'border-blue-500 ring-2 ring-blue-500/20' 
                     : 'border-slate-700'
@@ -374,6 +394,7 @@ const AISupplyChainOptimizationPlatform = () => {
                 <a
                   href="https://ziontechgroup.com/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+
                     plan.popular
                       ? 'bg-blue-600 text-white hover:bg-blue-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

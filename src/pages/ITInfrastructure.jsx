@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 export default ITInfrastructure;
 import {
+
 import { motion } from 'framer - motion';
 
   Brain,
@@ -129,11 +130,11 @@ import { motion } from 'framer - motion';
   ClusterRole,
   ClusterRoleBinding,
   ServiceAccount,
-  X,
-} from 'lucide - react';
+  X} from 'lucide - react';
 
 const infrastructureSolutions = [
   {
+
     id: 1,
     title: 'Network Infrastructure',
     description:
@@ -153,9 +154,9 @@ const infrastructureSolutions = [
       'Implementation',
       'Management',
       'Optimization',
-    ],
-  },
+    ]},
   {
+
     id: 2,
     title: 'Server Infrastructure',
     description:
@@ -165,9 +166,9 @@ const infrastructureSolutions = [
     price: 'From $150,000',
     timeline: '20 - 32 weeks',
     category: 'Servers',
-    technologies: ['Server Design', 'Deployment', 'Management', 'Maintenance'],
-  },
+    technologies: ['Server Design', 'Deployment', 'Management', 'Maintenance']},
   {
+
     id: 3,
     title: 'Storage Infrastructure',
     description: 'Scalable storage solutions for enterprise data management.',
@@ -181,9 +182,9 @@ const infrastructureSolutions = [
     price: 'From $120,000',
     timeline: '18 - 30 weeks',
     category: 'Storage',
-    technologies: ['Storage Design', 'Data Management', 'Backup', 'Recovery'],
-  },
+    technologies: ['Storage Design', 'Data Management', 'Backup', 'Recovery']},
   {
+
     id: 4,
     title: 'Cloud Infrastructure',
     description: 'Hybrid and multi - cloud infrastructure solutions.',
@@ -192,9 +193,9 @@ const infrastructureSolutions = [
     price: 'From $200,000',
     timeline: '24 - 36 weeks',
     category: 'Cloud',
-    technologies: ['Cloud Design', 'Migration', 'Management', 'Optimization'],
-  },
+    technologies: ['Cloud Design', 'Migration', 'Management', 'Optimization']},
   {
+
     id: 5,
     title: 'Security Infrastructure',
     description:
@@ -209,9 +210,9 @@ const infrastructureSolutions = [
       'Implementation',
       'Monitoring',
       'Compliance',
-    ],
-  },
+    ]},
   {
+
     id: 6,
     title: 'Data Center Infrastructure',
     description: 'Modern data center design and implementation solutions.',
@@ -230,20 +231,22 @@ const infrastructureSolutions = [
       'Implementation',
       'Management',
       'Optimization',
-    ],
-  },
+    ]},
 ];
 
 const ITInfrastructure = () => {
+
   const [selectedSolution, setSelectedSolution] = useState (null) ;
   const [isModalOpen, setIsModalOpen] = useState (false) ;
 
   const openModal = solution => {
+
     setSelectedSolution (solution) ;
     setIsModalOpen (true) ;
   };
 
   const closeModal = () => {
+
     setIsModalOpen (false) ;
     setSelectedSolution (null) ;
   };

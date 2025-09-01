@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 export default Training;
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -40,10 +41,10 @@ import { SEO } from '../components / SEO';
   Palette,
   Smartphone,
   Eye,
-  Star as StarIcon,
-} from 'lucide - react';
+  Star as StarIcon} from 'lucide - react';
 
 const Training: React.FC = () => {
+
   const [searchQuery, setSearchQuery] = useState ('') ;
   const [activeCategory, setActiveCategory] = useState ('all') ;
   const [activeLevel, setActiveLevel] = useState ('all') ;
@@ -58,11 +59,11 @@ const Training: React.FC = () => {
     { id: 'emerging', name: 'Emerging Technologies', icon: Zap, count: 4 },
     { id: 'strategy', name: 'Digital Strategy', icon: Target, count: 3 },
     {
+
       id: 'leadership',
       name: 'Leadership & Management',
       icon: Users,
-      count: 4,
-    },
+      count: 4},
   ];
 
   const levels = [
@@ -83,6 +84,7 @@ const Training: React.FC = () => {
 
   const trainingPrograms = [
     {
+
       id: 1,
       title: 'AI Fundamentals & Machine Learning',
       description:
@@ -102,9 +104,9 @@ const Training: React.FC = () => {
         'Live Q & A sessions with experts',
         'Certificate upon completion',
         'Lifetime access to materials',
-      ],
-    },
+      ]},
     {
+
       id: 2,
       title: 'Advanced Cloud Architecture',
       description:
@@ -124,9 +126,9 @@ const Training: React.FC = () => {
         'Architecture design workshops',
         'Industry best practices',
         'Networking opportunities',
-      ],
-    },
+      ]},
     {
+
       id: 3,
       title: 'Cybersecurity Masterclass',
       description:
@@ -151,9 +153,9 @@ const Training: React.FC = () => {
         'Industry certifications',
         'Expert - led workshops',
         'Career guidance',
-      ],
-    },
+      ]},
     {
+
       id: 4,
       title: 'Data Science & Analytics',
       description:
@@ -173,12 +175,13 @@ const Training: React.FC = () => {
         'Statistical analysis tools',
         'Data visualization skills',
         'Portfolio development',
-      ],
-    },
+      ]},
   ];
 
   const getLevelColor = (level: string) => {
+
     switch (level) {
+
       case 'beginner':
         return 'bg - green - 500 / 20 text - green - 400';
       case 'intermediate':
@@ -193,7 +196,9 @@ const Training: React.FC = () => {
   };
 
   const getFormatColor = (format: string) => {
+
     switch (format) {
+
       case 'online':
         return 'bg - blue - 500 / 20 text - blue - 400';
       case 'in - person':
@@ -208,6 +213,7 @@ const Training: React.FC = () => {
   };
 
   const filteredPrograms = trainingPrograms.filter (program => {
+
     const matchesSearch = program.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       program.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       program.tags.some (tag =>
@@ -222,25 +228,34 @@ const Training: React.FC = () => {
 
   // Update counts
   categories.forEach (cat => {
+
     if (cat.id === 'all') {
+
       cat.count = trainingPrograms.length;
     } else {
+
       cat.count = trainingPrograms.filter (program => program.category === cat.id) .length;
     }
   }) ;
 
   levels.forEach (level => {
+
     if (level.id === 'all') {
+
       level.count = trainingPrograms.length;
     } else {
+
       level.count = trainingPrograms.filter (program => program.level === level.id) .length;
     }
   }) ;
 
   formats.forEach (format => {
+
     if (format.id === 'all') {
+
       format.count = trainingPrograms.length;
     } else {
+
       format.count = trainingPrograms.filter (program => program.format === format.id) .length;
     }
   }) ;
@@ -303,6 +318,7 @@ const Training: React.FC = () => {
                     {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                         onClick={ () => setActiveCategory (category.id) }
                         className={`px - 3 py - 1 rounded - lg text - sm font - medium transition - colors ${
+
                           activeCategory === category.id
                             ? 'bg - blue - 500 text - white'
                             : 'bg - slate - 700 / 50 text - gray - 300 hover:bg - slate - 600 / 50'
@@ -321,6 +337,7 @@ const Training: React.FC = () => {
                     {levels.map (level => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={level.id}
                         onClick={ () => setActiveLevel (level.id) }
                         className={`px - 3 py - 1 rounded - lg text - sm font - medium transition - colors ${
+
                           activeLevel === level.id
                             ? 'bg - blue - 500 text - white'
                             : 'bg - slate - 700 / 50 text - gray - 300 hover:bg - slate - 600 / 50'
@@ -339,6 +356,7 @@ const Training: React.FC = () => {
                     {formats.map (format => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={format.id}
                         onClick={ () => setActiveFormat (format.id) }
                         className={`px - 3 py - 1 rounded - lg text - sm font - medium transition - colors ${
+
                           activeFormat === format.id
                             ? 'bg - blue - 500 text - white'
                             : 'bg - slate - 700 / 50 text - gray - 300 hover:bg - slate - 600 / 50'

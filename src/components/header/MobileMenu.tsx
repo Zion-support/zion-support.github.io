@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   X, 
   ChevronDown, 
   ChevronRight,
@@ -67,14 +68,17 @@ import {
 } from 'lucide-react';
 
 interface MobileMenuProps {
+
   isOpen: boolean;
   onClose: () => void;
 }
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   const toggleSection = (section: string) => {
+
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -85,18 +89,23 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const isSectionExpanded = (section: string) => expandedSections.includes(section);
 
   const menuVariants = {
+
     closed: {
+
       x: '100%',
       opacity: 0,
       transition: {
+
         duration: 0.3,
         ease: 'easeInOut'
       }
     },
     open: {
+
       x: 0,
       opacity: 1,
       transition: {
+
         duration: 0.3,
         ease: 'easeInOut'
       }
@@ -104,15 +113,20 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   };
 
   const overlayVariants = {
+
     closed: {
+
       opacity: 0,
       transition: {
+
         duration: 0.3
       }
     },
     open: {
+
       opacity: 1,
       transition: {
+
         duration: 0.3
       }
     }
@@ -120,16 +134,19 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
   const menuItems = [
     {
+
       title: 'Home',
       href: '/',
       icon: Home,
       simple: true
     },
     {
+
       title: 'Services',
       icon: Zap,
       sections: [
         {
+
           title: 'AI & Automation',
           icon: Brain,
           items: [
@@ -155,6 +172,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           ]
         },
         {
+
           title: 'Cloud & Infrastructure',
           icon: Cloud,
           items: [
@@ -167,6 +185,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           ]
         },
         {
+
           title: 'Specialized Solutions',
           icon: Target,
           items: [
@@ -182,10 +201,12 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       ]
     },
     {
+
       title: 'Solutions',
       icon: Target,
       sections: [
         {
+
           title: 'Industry Solutions',
           icon: Building2,
           items: [
@@ -197,6 +218,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           ]
         },
         {
+
           title: 'Technology Solutions',
           icon: Cpu,
           items: [
@@ -210,10 +232,12 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       ]
     },
     {
+
       title: 'Company',
       icon: Building2,
       sections: [
         {
+
           title: 'About Us',
           icon: Users,
           items: [
@@ -225,6 +249,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           ]
         },
         {
+
           title: 'Partnerships',
           icon: Handshake,
           items: [
@@ -235,10 +260,12 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       ]
     },
     {
+
       title: 'Resources',
       icon: BookOpen,
       sections: [
         {
+
           title: 'Learning & Insights',
           icon: GraduationCap,
           items: [
@@ -249,6 +276,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           ]
         },
         {
+
           title: 'Training & Support',
           icon: HelpCircle,
           items: [
@@ -261,18 +289,21 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       ]
     },
     {
+
       title: 'Support',
       icon: HelpCircle,
       simple: true,
       href: '/support'
     },
     {
+
       title: 'Contact',
       icon: Phone,
       simple: true,
       href: '/contact'
     },
     {
+
       title: 'Pricing',
       icon: DollarSign,
       simple: true,
@@ -346,6 +377,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                         </div>
                         <ChevronDown 
                           className={`w-5 h-5 text-zion-cyan transition-transform duration-200 ${
+
                             isSectionExpanded(item.title) ? 'rotate-180' : ''
                           }`} 
                         />

@@ -12,9 +12,11 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
 }
 
 export function Skeleton(...args: any[]): any {
+
   const baseClasses = 'bg-gray-300 dark:bg-gray-700';
   
   const variantClasses = {
+
     text: 'h-4 rounded',
     circular: 'rounded-full',
     rectangular: '',
@@ -23,6 +25,7 @@ export function Skeleton(...args: any[]): any {
 
 // Predefined skeleton components for common use cases
 export function SkeletonText(...args: any[]): any {
+
   return (
     <div className={cn('space-y-2', className)}>
       {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanylines }).map((_, i)               => (
@@ -38,6 +41,7 @@ export function SkeletonText(...args: any[]): any {
 };
 
 export function SkeletonCard(...args: any[]): any {
+
   return (
     <div className={cn('p-6 space-y-4', className)}>
       <div className="flex items-center space-x-4">
@@ -60,6 +64,7 @@ export function SkeletonCard(...args: any[]): any {
 );
 
 export function SkeletonTable(...args: any[]): any {
+
   return (
     <div className={cn('space-y-3', className)}>
       {/* Header */}
@@ -87,6 +92,7 @@ export function SkeletonTable(...args: any[]): any {
 );
 
 export function SkeletonGrid(...args: any[]): any {
+
   return (
     <div className={cn(
       'grid gap-6',
@@ -104,6 +110,7 @@ export function SkeletonGrid(...args: any[]): any {
 }
 
 export function SkeletonHero(...args: any[]): any {
+
   return (
     <div className={cn('space-y-8', className)}>
       {/* Title */}

@@ -2,33 +2,40 @@ import React from 'react.ts';
 import SEO from '../../components/SEO';
 import { motion              } from 'framer-motion.ts';
 import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus const AIHRPlatform: React.FC = (): JSX.Element => {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Recruitment",
       description: "Intelligent candidate matching and screening using advanced AI algorithms."
     },
     {
+
       icon: <Users className="w-6 h-6" />,
       title: "Employee Lifecycle Management",
       description: "Comprehensive HR management from onboarding to offboarding."
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Advanced Analytics Dashboard",
       description: "Data-driven insights into workforce performance and trends."
     },
     {
+
       icon: <MessageCircle className="w-6 h-6" />,
       title: "AI Chatbot Support",
       description: "24/7 automated HR support for common employee queries."
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Enterprise Security",
       description: "Bank-level security with role-based access control and compliance."
     },
     {
+
       icon: <Cloud className="w-6 h-6" />,
       title: "Cloud-Native Architecture",
       description: "Scalable, resilient infrastructure that grows with your business."
@@ -37,6 +44,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$79",
       period: "/month",
@@ -52,6 +60,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       popular: false
     },
     {
+
       name: "Professional",
       price: "$199",
       period: "/month",
@@ -69,6 +78,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "Custom",
       period: "",
@@ -89,21 +99,25 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
 
   const benefits = [
     {
+
       icon: <TrendingUp className="w-8 h-8 text-green-500" />,
       title: "Improve Hiring Quality",
       description: "AI-powered screening increases quality of hire by 40-60%"
     },
     {
+
       icon: <Clock className="w-8 h-8 text-blue-500" />,
       title: "Reduce Time-to-Hire",
       description: "Streamline recruitment process and reduce hiring time by 50%"
     },
     {
+
       icon: <Target className="w-8 h-8 text-purple-500" />,
       title: "Enhance Employee Experience",
       description: "Self-service tools and AI support improve employee satisfaction"
     },
     {
+
       icon: <Users className="w-8 h-8 text-cyan-500" />,
       title: "Better Retention",
       description: "Data-driven insights help identify and address retention risks"
@@ -112,21 +126,25 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
 
   const modules = [
     {
+
       title: "Recruitment & ATS",
       description: "AI-powered applicant tracking and candidate management",
       icon: <Search className="w-8 h-8 text-blue-500" />
     },
     {
+
       title: "Performance Management",
       description: "360-degree feedback and performance tracking systems",
       icon: <BarChart3 className="w-8 h-8 text-green-500" />
     },
     {
+
       title: "Learning & Development",
       description: "Personalized training paths and skill development tracking",
       icon: <FileText className="w-8 h-8 text-purple-500" />
     },
     {
+
       title: "Employee Engagement",
       description: "Pulse surveys, recognition programs, and culture building",
       icon: <MessageCircle className="w-8 h-8 text-yellow-500" />
@@ -140,6 +158,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -150,6 +169,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -196,6 +216,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -206,6 +227,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -231,6 +253,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -241,6 +264,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -251,6 +275,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -427,6 +452,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
                     : 'border-white/10'
@@ -459,6 +485,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                     : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'

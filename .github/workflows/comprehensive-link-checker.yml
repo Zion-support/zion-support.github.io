@@ -1,10 +1,10 @@
 name: Comprehensive Link Checker
 on:
   schedule:
-    - cron: '0 6 * * 1'  # Weekly on Monday at 6 AM
+    - cron: '0 6 * * 1' # Weekly on Monday at 6 AM
   workflow_dispatch:
   push:
-    branches: [ main, develop ]
+    branches: [main, develop]
     paths:
       - '**.md'
       - '**.html'
@@ -26,26 +26,26 @@ jobs:
     name: Check All Links
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-          
+
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Build project
         run: npm run build
-        
+
       - name: Install linkinator
         run: npm install -g linkinator
-        
+
       - name: Start local server
         run: |
           # Start a simple HTTP server to serve the built files
@@ -54,11 +54,11 @@ jobs:
           SERVER_PID=$!
           echo "SERVER_PID=$SERVER_PID" >> $GITHUB_ENV
           sleep 10  # Wait for server to start
-          
+
       - name: Check internal links
         run: |
           echo "Checking internal links from built website..."
-          
+
           # Check internal links using the local server
           linkinator http://localhost:8000 \
             --recurse \
@@ -69,18 +69,18 @@ jobs:
             --format json > internal_links.json || true
             
           echo "Internal link check completed"
-          
+
       - name: Stop local server
         if: always()
         run: |
           if [ ! -z "$SERVER_PID" ]; then
             kill $SERVER_PID || true
           fi
-          
+
       - name: Check external links
         run: |
           echo "Checking external links..."
-          
+
           # Create a comprehensive list of external links to check
           cat > external_links.txt << 'EOF'
           https://ziontechgroup.com
@@ -99,9 +99,9 @@ jobs:
           https://fonts.gstatic.com
           https://cdn.gpteng.co
           EOF
-          
+
           echo "Checking $(wc -l < external_links.txt) external links..."
-          
+
           # Run linkinator on the external links
           linkinator external_links.txt \
             --format json \
@@ -110,17 +110,17 @@ jobs:
             --retry 3 \
             --skip '.*(logout|signout|auth|login).*' \
             > external_links.json || true
-            
+
       - name: Extract external links from built files
         run: |
           echo "Extracting external links from built website files..."
-          
+
           # Find all HTML files and extract external URLs
           find dist -name "*.html" -type f | while read file; do
             echo "Processing: $file"
             grep -o 'https://[^"'\''\s>]*' "$file" | sort -u >> extracted_external_links.txt || true
           done
-          
+
           # Remove duplicates and filter
           if [ -f extracted_external_links.txt ]; then
             sort -u extracted_external_links.txt | grep -v 'localhost\|127.0.0.1' > filtered_external_links.txt
@@ -129,7 +129,7 @@ jobs:
             echo "No external links found in built files"
             echo "" > filtered_external_links.txt
           fi
-          
+
       - name: Check extracted external links
         run: |
           if [ -s filtered_external_links.txt ]; then
@@ -145,11 +145,11 @@ jobs:
           else
             echo '{"links":[]}' > extracted_external_links.json
           fi
-          
+
       - name: Generate comprehensive report
         run: |
           echo "Generating comprehensive link report..."
-          
+
           # Combine all reports
           jq -s '
             reduce .[] as $r ({"links":[], "summary":{}};
@@ -160,41 +160,41 @@ jobs:
               .summary.timeout += ($r.links | map(select(.state=="TIMEOUT")) | length // 0)
             )
           ' internal_links.json external_links.json extracted_external_links.json > combined_report.json || echo '{"links":[], "summary":{"total":0, "working":0, "broken":0, "timeout":0}}' > combined_report.json
-          
+
           # Generate markdown report
           cat > COMPREHENSIVE_LINK_REPORT.md << 'EOF'
           # Comprehensive Link Check Report
-          
+
           **Generated on:** $(date -u +"%Y-%m-%d %H:%M UTC")
           **Repository:** Zion Tech Group Website
           **Workflow:** Comprehensive Link Checker
-          
+
           ## 📊 Executive Summary
-          
+
           This report provides a comprehensive analysis of all links (internal and external) found on the Zion Tech Group website.
-          
+
           EOF
-          
+
           # Add summary statistics
           total_links=$(jq '.summary.total' combined_report.json 2>/dev/null || echo "0")
           working_links=$(jq '.summary.working' combined_report.json 2>/dev/null || echo "0")
           broken_links=$(jq '.summary.broken' combined_report.json 2>/dev/null || echo "0")
           timeout_links=$(jq '.summary.timeout' combined_report.json 2>/dev/null || echo "0")
-          
+
           cat >> COMPREHENSIVE_LINK_REPORT.md << EOF
           ## 📈 Statistics
-          
+
           | Metric | Count |
           |--------|-------|
           | Total Links Checked | $total_links |
           | ✅ Working Links | $working_links |
           | ❌ Broken Links | $broken_links |
           | ⏰ Timeout Links | $timeout_links |
-          
+
           ## 🔍 Detailed Analysis
-          
+
           EOF
-          
+
           # Add broken links section
           if [ "$broken_links" -gt 0 ]; then
             echo "### ❌ Broken Links" >> COMPREHENSIVE_LINK_REPORT.md
@@ -204,7 +204,7 @@ jobs:
             jq -r '.links[] | select(.state=="BROKEN") | "| \(.url) | \(.status // "unknown") | \(.error // "No error details") | \(.parent // "Direct") |"' combined_report.json >> COMPREHENSIVE_LINK_REPORT.md 2>/dev/null || echo "| Error parsing broken links | | | |" >> COMPREHENSIVE_LINK_REPORT.md
             echo "" >> COMPREHENSIVE_LINK_REPORT.md
           fi
-          
+
           # Add timeout links section
           if [ "$timeout_links" -gt 0 ]; then
             echo "### ⏰ Timeout Links" >> COMPREHENSIVE_LINK_REPORT.md
@@ -214,7 +214,7 @@ jobs:
             jq -r '.links[] | select(.state=="TIMEOUT") | "| \(.url) | \(.status // "timeout") | \(.parent // "Direct") |"' combined_report.json >> COMPREHENSIVE_LINK_REPORT.md 2>/dev/null || echo "| Error parsing timeout links | | |" >> COMPREHENSIVE_LINK_REPORT.md
             echo "" >> COMPREHENSIVE_LINK_REPORT.md
           fi
-          
+
           # Add success message if no issues
           if [ "$broken_links" -eq 0 ] && [ "$timeout_links" -eq 0 ]; then
             echo "### 🎉 All Links Working!" >> COMPREHENSIVE_LINK_REPORT.md
@@ -222,54 +222,54 @@ jobs:
             echo "✅ All links (internal and external) are functioning correctly!" >> COMPREHENSIVE_LINK_REPORT.md
             echo "" >> COMPREHENSIVE_LINK_REPORT.md
           fi
-          
+
           # Add recommendations
           cat >> COMPREHENSIVE_LINK_REPORT.md << 'EOF'
           ## 📋 Recommendations
-          
+
           EOF
-          
+
           if [ "$broken_links" -gt 0 ]; then
             cat >> COMPREHENSIVE_LINK_REPORT.md << 'EOF'
           - **Immediate Action Required:** Fix broken links to maintain website credibility
           - Check if URLs have changed or if services are temporarily down
           - Update or remove broken links from the website
           - Test links manually after making changes
-          
+
           EOF
           fi
-          
+
           if [ "$timeout_links" -gt 0 ]; then
             cat >> COMPREHENSIVE_LINK_REPORT.md << 'EOF'
           - **Investigation Needed:** Links experiencing timeouts may indicate slow response times
           - Consider if these services are essential or can be replaced
           - Monitor timeout links over time to identify patterns
-          
+
           EOF
           fi
-          
+
           if [ "$broken_links" -eq 0 ] && [ "$timeout_links" -eq 0 ]; then
             cat >> COMPREHENSIVE_LINK_REPORT.md << 'EOF'
           - **Maintenance:** Continue regular link checking to ensure ongoing reliability
           - Consider expanding link checking to include more comprehensive coverage
           - Monitor for new links added to the website
-          
+
           EOF
           fi
-          
+
           # Add footer
           cat >> COMPREHENSIVE_LINK_REPORT.md << 'EOF'
           ---
           *This report was automatically generated by GitHub Actions Comprehensive Link Checker*
-          
+
           **Next Check:** Next Monday at 6:00 AM UTC
           EOF
-          
+
       - name: Create issue for broken links
         if: failure() || contains(steps.generate-comprehensive-report.outputs.broken_count, '0') == false
         uses: peter-evans/create-issue-from-file@v5
         with:
-          title: "🔗 Comprehensive Link Check - Issues Detected"
+          title: '🔗 Comprehensive Link Check - Issues Detected'
           content-filepath: COMPREHENSIVE_LINK_REPORT.md
           labels: |
             link-check
@@ -280,24 +280,24 @@ jobs:
           assignees: ''
           body: |
             ## 🔗 Comprehensive Link Check Results
-            
+
             Automated comprehensive link checking has detected issues with links on the Zion Tech Group website.
-            
+
             This check covers:
             - Internal links from the built website
             - External links to social media and services
             - Extracted external links from website content
-            
+
             **Priority:** 
             - High: Broken links affecting user experience
             - Medium: Timeout links requiring investigation
-            
+
             **Next Steps:**
             1. Review the detailed report below
             2. Fix or update broken links
             3. Test links manually if needed
             4. Update website content as necessary
-            
+
       - name: Upload comprehensive report artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -311,7 +311,7 @@ jobs:
             external_links.txt
             filtered_external_links.txt
           retention-days: 30
-          
+
       - name: Comment on PR (if applicable)
         if: github.event_name == 'pull_request'
         uses: actions/github-script@v7
@@ -319,14 +319,14 @@ jobs:
           script: |
             const fs = require('fs');
             const report = fs.readFileSync('COMPREHENSIVE_LINK_REPORT.md', 'utf8');
-            
+
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: `## 🔗 Comprehensive Link Check Results\n\n${report}`
             });
-            
+
       - name: Success notification
         if: success()
         run: |

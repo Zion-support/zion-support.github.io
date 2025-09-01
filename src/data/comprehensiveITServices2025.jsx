@@ -1,6 +1,7 @@
 export const COMPREHENSIVE_IT_SERVICES_2025 = [
     // Cloud Infrastructure & Migration Services
     {
+
         id: "cloud-infrastructure-migration-services",
         title: "Cloud Infrastructure & Migration Services - Seamless Cloud Transformation",
         description: "Comprehensive cloud infrastructure and migration services that help businesses transition to the cloud, optimize cloud performance, and manage multi-cloud environments for improved scalability and cost efficiency.",
@@ -47,6 +48,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         supportLevel: "enterprise",
         marketPrice: "$2,499 - $10,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com",
@@ -67,6 +69,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
     },
     // Cybersecurity & Information Security Services
     {
+
         id: "cybersecurity-information-security-services",
         title: "Cybersecurity & Information Security Services - Comprehensive Protection",
         description: "Advanced cybersecurity and information security services that provide comprehensive protection against cyber threats, implement security frameworks, and ensure compliance with industry regulations and standards.",
@@ -113,6 +116,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         supportLevel: "enterprise",
         marketPrice: "$1,899 - $7,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -132,6 +136,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
     },
     // DevOps & CI/CD Pipeline Services
     {
+
         id: "devops-cicd-pipeline-services",
         title: "DevOps & CI/CD Pipeline Services - Streamlined Development Operations",
         description: "Comprehensive DevOps and CI/CD pipeline services that automate software development processes, improve deployment efficiency, and enable continuous delivery for faster time-to-market and higher quality software.",
@@ -178,6 +183,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         supportLevel: "premium",
         marketPrice: "$1,599 - $6,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -197,6 +203,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
     },
     // Data Management & Analytics Services
     {
+
         id: "data-management-analytics-services",
         title: "Data Management & Analytics Services - Data-Driven Business Intelligence",
         description: "Comprehensive data management and analytics services that help businesses collect, process, analyze, and visualize data to make informed decisions, optimize operations, and gain competitive advantages.",
@@ -243,6 +250,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         supportLevel: "premium",
         marketPrice: "$1,299 - $5,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -262,6 +270,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
     },
     // Network Infrastructure & Management Services
     {
+
         id: "network-infrastructure-management-services",
         title: "Network Infrastructure & Management Services - Reliable Network Solutions",
         description: "Comprehensive network infrastructure and management services that design, implement, and maintain reliable, secure, and high-performance network solutions for businesses of all sizes.",
@@ -308,6 +317,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         supportLevel: "premium",
         marketPrice: "$999 - $4,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -327,6 +337,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
     },
     // IT Consulting & Strategic Planning Services
     {
+
         id: "it-consulting-strategic-planning-services",
         title: "IT Consulting & Strategic Planning Services - Technology Strategy Excellence",
         description: "Strategic IT consulting and planning services that help businesses align technology with business objectives, optimize IT investments, and create roadmaps for digital transformation and technology innovation.",
@@ -373,6 +384,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         supportLevel: "consulting",
         marketPrice: "$299 - $500/hour",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -392,6 +404,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
     },
     // IT Support & Help Desk Services
     {
+
         id: "it-support-help-desk-services",
         title: "IT Support & Help Desk Services - Reliable Technical Support",
         description: "Comprehensive IT support and help desk services that provide reliable technical assistance, problem resolution, and ongoing support for businesses to ensure smooth technology operations and user productivity.",
@@ -438,6 +451,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         supportLevel: "premium",
         marketPrice: "$799 - $3,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -457,6 +471,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
     },
     // Software Development & Custom Solutions
     {
+
         id: "software-development-custom-solutions",
         title: "Software Development & Custom Solutions - Tailored Technology Solutions",
         description: "Comprehensive software development and custom solution services that create tailored applications, integrate existing systems, and develop innovative technology solutions to meet specific business needs and objectives.",
@@ -503,6 +518,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         supportLevel: "enterprise",
         marketPrice: "$1,999 - $8,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -522,6 +538,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
     },
     // IT Project Management & Implementation Services
     {
+
         id: "it-project-management-implementation-services",
         title: "IT Project Management & Implementation Services - Successful Project Delivery",
         description: "Professional IT project management and implementation services that ensure successful delivery of technology projects, manage resources effectively, and deliver projects on time and within budget.",
@@ -568,6 +585,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         supportLevel: "premium",
         marketPrice: "$1,499 - $6,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"

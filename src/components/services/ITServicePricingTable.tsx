@@ -6,20 +6,24 @@ import { Globe, Search, ArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function ITServicePricingTable() {
+
   const [searchQuery, setSearchQuery] = useState("");
   const [sortConfig, setSortConfig] = useState<{
+
     key: keyof CountryPricing;
     direction: "ascending" | "descending";
   }>({
+
     key: "country",
-    direction: "ascending",
-  });
+    direction: "ascending"});
 
   const sortedData = useMemo(() => {
+
     let filteredData = [...onsiteServicePricing];
     
     // Filter by search query
     if (searchQuery) {
+
       filteredData = filteredData.filter(item => 
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
       );
@@ -27,10 +31,13 @@ export function ITServicePricingTable() {
     
     // Sort data
     filteredData.sort((a, b) => {
+
       if (a[sortConfig.key] < b[sortConfig.key]) {
+
         return sortConfig.direction === "ascending" ? -1 : 1;
       }
       if (a[sortConfig.key] > b[sortConfig.key]) {
+
         return sortConfig.direction === "ascending" ? 1 : -1;
       }
       return 0;
@@ -40,13 +47,14 @@ export function ITServicePricingTable() {
   }, [searchQuery, sortConfig]); // Removed onsiteServicePricing
 
   const handleSort = (key: keyof CountryPricing) => {
+
     setSortConfig({
+
       key,
       direction: 
         sortConfig.key === key && sortConfig.direction === "ascending" 
           ? "descending" 
-          : "ascending",
-    });
+          : "ascending"});
   };
 
   return (

@@ -1,23 +1,28 @@
 import React from 'react';
 import Link from 'next/link';
 const MicroSAAS = () => {
+
     const microSaasServices = [
         {
+
             title: "AI Content Generator",
             description: "Automated content creation platform for marketing, social media, and business communications.",
             features["Content Templates", "AI Writing", "Multi-language Support", "SEO Optimization"]
         },
         {
+
             title: "Accessibility Auditor",
             description: "Comprehensive accessibility testing and compliance tools for web applications.",
             features["WCAG Compliance", "Automated Testing", "Detailed Reports", "Remediation Guidance"]
         },
         {
+
             title: "Affiliate Attribution Hub",
             description: "Advanced tracking and analytics platform for affiliate marketing campaigns.",
             features["Real-time Tracking", "Performance Analytics", "Commission Management", "Fraud Detection"]
         },
         {
+
             title: "SOC2 Compliance Automation",
             description: "Streamlined SOC2 compliance process with automated documentation and monitoring.",
             features["Automated Audits", "Documentation Management", "Risk Assessment", "Compliance Reporting"]

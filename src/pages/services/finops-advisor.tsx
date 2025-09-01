@@ -4,6 +4,7 @@ import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight,
 import { Link               } from 'react-router-dom.ts';
 
 export default function FinOpsAdvisor(...args: []):  {
+
   return (
     <>
       <Helmet>
@@ -60,31 +61,37 @@ export default function FinOpsAdvisor(...args: []):  {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
+
                   icon: Calculator,
                   title: "Cost Analysis",
                   description: "Comprehensive cloud cost analysis and spending insights across all services."
                 },
                 {
+
                   icon: TrendingUp,
                   title: "Optimization Recommendations",
                   description: "AI-powered recommendations for cost reduction and resource optimization."
                 },
                 {
+
                   icon: BarChart3,
                   title: "Budget Management",
                   description: "Set budgets, track spending, and manage cloud financial planning."
                 },
                 {
+
                   icon: Users,
                   title: "Team Accountability",
                   description: "Track costs by team, project, and application for better accountability."
                 },
                 {
+
                   icon: Shield,
                   title: "Compliance & Governance",
                   description: "Ensure cloud spending compliance with organizational policies and standards."
                 },
                 {
+
                   icon: Database,
                   title: "Multi-cloud Support",
                   description: "Manage costs across AWS, Azure, Google Cloud, and other providers."
@@ -116,36 +123,42 @@ export default function FinOpsAdvisor(...args: []):  {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
+
                   title: "Compute Resources",
                   description: "Optimize EC2 instances, auto-scaling, and resource allocation.",
                   icon: Calculator,
                   benefits: ["Right-sizing", "Auto-scaling", "Reserved instances"]
                 },
                 {
+
                   title: "Storage Optimization",
                   description: "Optimize storage costs, lifecycle policies, and data tiering.",
                   icon: Database,
                   benefits: ["Lifecycle policies", "Data tiering", "Storage classes"]
                 },
                 {
+
                   title: "Network Costs",
                   description: "Optimize data transfer, CDN usage, and network architecture.",
                   icon: Activity,
                   benefits: ["Data transfer", "CDN optimization", "Network design"]
                 },
                 {
+
                   title: "Database Costs",
                   description: "Optimize database instances, storage, and backup strategies.",
                   icon: BarChart3,
                   benefits: ["Instance optimization", "Storage optimization", "Backup strategies"]
                 },
                 {
+
                   title: "Development Tools",
                   description: "Optimize CI/CD, monitoring, and development tool costs.",
                   icon: Settings,
                   benefits: ["CI/CD optimization", "Monitoring costs", "Tool consolidation"]
                 },
                 {
+
                   title: "Support & Licensing",
                   description: "Optimize support plans, licensing, and service agreements.",
                   icon: Shield,
@@ -186,16 +199,19 @@ export default function FinOpsAdvisor(...args: []):  {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
+
                   step: "01",
                   title: "Inform",
                   description: "Establish cost visibility and reporting across all cloud services."
                 },
                 {
+
                   step: "02",
                   title: "Optimize",
                   description: "Implement cost optimization strategies and resource management."
                 },
                 {
+
                   step: "03",
                   title: "Operate",
                   description: "Establish ongoing cost management processes and governance."
@@ -276,36 +292,42 @@ export default function FinOpsAdvisor(...args: []):  {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
+
                   title: "Cost Management Tools",
                   description: "AWS Cost Explorer, Azure Cost Management, and Google Cloud Billing.",
                   icon: Calculator,
                   features: ["Cost Explorer", "Cost Management", "Cloud Billing"]
                 },
                 {
+
                   title: "Resource Optimization",
                   description: "Automated resource optimization and cost-saving recommendations.",
                   icon: TrendingUp,
                   features: ["Auto-optimization", "Recommendations", "Resource management"]
                 },
                 {
+
                   title: "Budget Controls",
                   description: "Budget alerts, spending limits, and cost governance controls.",
                   icon: Shield,
                   features: ["Budget alerts", "Spending limits", "Governance controls"]
                 },
                 {
+
                   title: "Reporting & Analytics",
                   description: "Comprehensive cost reporting and financial analytics dashboards.",
                   icon: BarChart3,
                   features: ["Cost reporting", "Financial analytics", "Custom dashboards"]
                 },
                 {
+
                   title: "Team Collaboration",
                   description: "Cost allocation, team budgets, and collaborative cost management.",
                   icon: Users,
                   features: ["Cost allocation", "Team budgets", "Collaboration tools"]
                 },
                 {
+
                   title: "API Integration",
                   description: "REST APIs for custom integrations and automated workflows.",
                   icon: Settings,
@@ -346,21 +368,25 @@ export default function FinOpsAdvisor(...args: []):  {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
+
                   step: "01",
                   title: "Assessment",
                   description: "Evaluate current cloud spending and identify optimization opportunities."
                 },
                 {
+
                   step: "02",
                   title: "Strategy",
                   description: "Develop comprehensive FinOps strategy and implementation roadmap."
                 },
                 {
+
                   step: "03",
                   title: "Implementation",
                   description: "Deploy FinOps tools and establish cost management processes."
                 },
                 {
+
                   step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve cost management."

@@ -4,6 +4,7 @@ import { Search, X, Filter, Sparkles, TrendingUp, Star, Zap, ArrowRight, Mic, Mi
 import { Button } from "./button";
 import { Badge } from "./badge";
 export function AISearch({ enabled = true, placeholder = "Search for AI services, talent, or companies...", onSearch, onResultClick, className = "" }) {
+
     const [isOpen, setIsOpen] = useState(false);
     const [query, setQuery] = useState('');
     const [isSearching, setIsSearching] = useState(false);
@@ -12,6 +13,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
     const [searchHistory, setSearchHistory] = useState([]);
     const [savedSearches, setSavedSearches] = useState([]);
     const [filters, setFilters] = useState({
+
         category[],
         priceRange[0, 10000],
         rating: 0,
@@ -27,6 +29,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
     // Mock search results - moved inside useCallback to fix dependency issue
     // Mock suggestions based on query
     const generateSuggestions = useCallback((searchQuery) => {
+
         if (!searchQuery.trim())
             return [];
         const baseSuggestions = [
@@ -44,21 +47,26 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
             .slice(0, 5)}, []);
     // Handle search input
     const handleSearchInput = useCallback((value) => {
+
         setQuery(value);
         if (value.trim()) {
+
             const newSuggestions = generateSuggestions(value);
             setSuggestions(newSuggestions);
             setIsOpen(true)}
         else {
+
             setSuggestions([]);
             setIsOpen(false)}
     }, [generateSuggestions]);
     // Perform search
     const performSearch = useCallback(async (searchQuery, searchFilters) => {
+
         setIsSearching(true);
         // Mock search results
         const mockResults = [
             {
+
                 id: '1',
                 title: 'AI-Powered Business Intelligence Platform',
                 description: 'Advanced analytics and insights powered by machine learning algorithms',
@@ -70,12 +78,14 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 price: '$2,500/month',
                 type: 'service',
                 metadata: {
+
                     lastUpdated: '2024-01-15',
                     verified: true,
                     featured: true
                 }
             },
             {
+
                 id: '2',
                 title: 'Senior AI Engineer - Remote',
                 description: 'Experienced AI engineer specializing in deep learning and NLP',
@@ -87,12 +97,14 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 price: '$150/hour',
                 type: 'talent',
                 metadata: {
+
                     lastUpdated: '2024-01-20',
                     verified: true,
                     featured: false
                 }
             },
             {
+
                 id: '3',
                 title: 'Quantum Computing Solutions Inc.',
                 description: 'Leading provider of quantum computing services and consulting',
@@ -104,6 +116,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 location: 'San Francisco, CA',
                 type: 'comp',
                 metadata: {
+
                     lastUpdated: '2024-01-18',
                     verified: true,
                     featured: true
@@ -114,6 +127,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         await new Promise(resolve => setTimeout(resolve, 800));
         // Filter results based on query and filters
         const filteredResults = mockResults.filter(result => {
+
             const matchesVerified = !searchFilters.verified || result.metadata.verified;
             return matchesQuery && matchesCategory && matchesRating && matchesVerified});
         // Sort by relevance
@@ -122,20 +136,26 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         setIsSearching(false);
         // Add to search history
         if (searchQuery.trim() && !searchHistory.includes(searchQuery.trim())) {
+
             setSearchHistory(prev => [searchQuery.trim(), ...prev.slice(0, 9)])}
         onSearch?.(searchQuery, searchFilters)}, [searchHistory, onSearch]);
     // Handle search submission
     const handleSearch = useCallback(() => {
+
         if (query.trim()) {
+
             performSearch(query, filters)}
     }, [query, filters, performSearch]);
     // Handle voice input
     const toggleVoiceInput = useCallback(() => {
+
         setIsVoiceActive(!isVoiceActive);
         // In a real implementation, this would start/stop speech recognition
         if (!isVoiceActive) {
+
             // Simulate voice input
             setTimeout(() => {
+
                 const voiceQuery = 'AI machine learning services';
                 setQuery(voiceQuery);
                 handleSearchInput(voiceQuery);
@@ -143,45 +163,60 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
     }, [isVoiceActive, handleSearchInput]);
     // Save search
     const saveSearch = useCallback((searchQuery) => {
+
         if (!savedSearches.includes(searchQuery)) {
+
             setSavedSearches(prev => [...prev, searchQuery])}
     }, [savedSearches]);
     // Share search results
     const shareResults = useCallback(() => {
+
         if (navigator.share) {
+
             navigator.share({
+
                 title: 'Search Results from Zion Tech Group',
                 text: `Check out these results for "${query}"`,
                 url: window.location.href
             })}
         else {
+
             // Fallback to copying to clipboard
             navigator.clipboard.writeText(`Search Results for "${query}": ${window.location.href}`)}
     }, [query]);
     // Handle keyboard navigation
     const handleKeyDown = useCallback((e) => {
+
         if (e.key === 'Enter') {
+
             handleSearch()}
         else if (e.key === 'Escape') {
+
             setIsOpen(false);
             setQuery('')}
     }, [handleSearch]);
     // Handle result selection
     const handleResultClick = useCallback((result) => {
+
         setSelectedResult(result);
         onResultClick?.(result);
         setIsOpen(false)}, [onResultClick]);
     // Close search when clicking outside
     useEffect(() => {
+
         const handleClickOutside = (event) => {
+
             if (searchRef.current && !searchRef.current.contains(event.target)) {
+
                 setIsOpen(false)}
         };
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
     // Focus input when opened
     useEffect(() => {
+
         if (isOpen && inputRef.current) {
+
             inputRef.current.focus()}
     }, [isOpen]);
     if (!enabled)
@@ -208,18 +243,22 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
         {/* Clear Button */}
         {query && (<motion.button initial = {
+
   { opacity: 0,
   scale: 0.8 
 
 }} animate = {
+
   { opacity: 1,
   scale: 1 
 
 }} exit = {
+
   { opacity: 0,
   scale: 0.8 
 
 }} onClick={() => {
+
                 setQuery('');
                 setResults([]);
                 setSuggestions([]);
@@ -231,18 +270,22 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
       {/* Search Results Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl shadow-2xl z-50 max-h-96 overflow-hidden" initial = {
+
   { opacity: 0, y: -10,
   scale: 0.95 
 
 }} animate = {
+
   { opacity: 1, y: 0,
   scale: 1 
 
 }} exit = {
+
   { opacity: 0, y: -10,
   scale: 0.95 
 
 }} transition = {
+
   { duration: 0.2,
   ease: "easeOut" 
 
@@ -272,14 +315,17 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
             {/* Filters Panel */}
             <AnimatePresence>
               {showFilters && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial = {
+
   { height: 0,
   opacity: 0 
 
 }} animate = {
+
   { height: 'auto',
   opacity: 1 
 
 }} exit = {
+
   { height: 0,
   opacity: 0 
 
@@ -288,7 +334,9 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                     <div>
                       <label className="text-zinc-300 text-sm font-medium">Category</label>
                       <select multiple value={filters.category} onChange = {
+
   (e) => {
+
                     const selected = Array.from(e.target.selectedOptions, option => option.value);
                     setFilters(prev => ({ ...prev,
   category: selected 
@@ -305,6 +353,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                     <div>
                       <label className="text-zinc-300 text-sm font-medium">Min Rating</label>
                       <select value={filters.rating} onChange = {
+
   (e) => setFilters(prev => ({ ...prev,
   rating: Number(e.target.value) 
 
@@ -320,6 +369,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                       <label className="text-zinc-300 text-sm font-medium">Verified Only</label>
                       <div className="mt-1">
                         <input type="checkbox" checked={filters.verified} onChange = {
+
   (e) => setFilters(prev => ({ ...prev,
   verified: e.target.checked 
 
@@ -331,6 +381,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                       <label className="text-zinc-300 text-sm font-medium">Featured</label>
                       <div className="mt-1">
                         <input type="checkbox" checked={filters.featured} onChange = {
+
   (e) => setFilters(prev => ({ ...prev,
   featured: e.target.checked 
 
@@ -351,7 +402,9 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                   </h4>
                   <div className="space-y-2">
                     {searchHistory.map((search, index) => (<button key={index} onClick = {
+
   () => {
+
                         setQuery(search);
                         performSearch(search,
   filters)
@@ -370,7 +423,9 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                   </h4>
                   <div className="space-y-2">
                     {suggestions.map((suggestion, index) => (<button key={index} onClick = {
+
   () => {
+
                         setQuery(suggestion);
                         performSearch(suggestion,
   filters)

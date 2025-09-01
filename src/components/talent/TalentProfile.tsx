@@ -1,5 +1,6 @@
 
 export interface TalentProfileProps {
+
   id: string;
   full_name: string;
   bio?: string;
@@ -7,11 +8,12 @@ export interface TalentProfileProps {
   profile_picture_url?: string}
 
 export default function TalentProfile({
+
   full_name,
   bio,
   skills = [],
-  profile_picture_url,
-}: TalentProfileProps) {
+  profile_picture_url}: TalentProfileProps) {
+
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white" data-testid="talent-details">
       <div className="container mx-auto px-4 flex flex-col items-center space-y-4">

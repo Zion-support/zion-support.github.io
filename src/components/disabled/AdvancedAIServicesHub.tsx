@@ -16,14 +16,6 @@ import { Link          } from 'react-router-dom.ts';
 
 interface AIService {
 
-
-
-
-
-
-
-
-
   id: string;
   name: string;
   description: string;
@@ -54,6 +46,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
 
   const aiServices: AIService[] = [
     {
+
       id: 'ai-project-management',
       name: 'AI-Powered Project Management',
       description: 'Intelligent project planning, resource allocation, and predictive analytics for optimal project delivery.',
@@ -65,6 +58,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
       status: 'active'
     },
     {
+
       id: 'ai-customer-support',
       name: 'AI Customer Support Automation',
       description: 'Automated customer service with intelligent chatbots, ticket routing, and sentiment analysis.',
@@ -76,6 +70,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
       status: 'active'
     },
     {
+
       id: 'ai-financial-analytics',
       name: 'AI Financial Analytics Platform',
       description: 'Advanced financial forecasting, risk assessment, and compliance monitoring powered by AI.',
@@ -87,6 +82,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
       status: 'active'
     },
     {
+
       id: 'ai-marketing-automation',
       name: 'AI Marketing Automation',
       description: 'Intelligent audience segmentation, content personalization, and multi-channel campaign orchestration.',
@@ -98,6 +94,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
       status: 'active'
     },
     {
+
       id: 'ai-data-analytics',
       name: 'AI Data Analytics Engine',
       description: 'Advanced data processing, pattern recognition, and predictive modeling for business intelligence.',
@@ -109,6 +106,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
       status: 'beta'
     },
     {
+
       id: 'ai-cybersecurity',
       name: 'AI Cybersecurity Suite',
       description: 'Intelligent threat detection, automated response, and proactive security monitoring.',
@@ -156,6 +154,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
         {/* Header */}
         <motion.div
           initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -166,6 +165,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -188,6 +188,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
         {/* Search and Filters */}
         <motion.div
           initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -198,6 +199,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -239,6 +241,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
         {/* Category Filters */}
         <motion.div
           initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -249,6 +252,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -267,6 +271,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${
+
                   selectedCategory === category.id
                     ? 'bg-purple-600 border-purple-500 text-white'
                     : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20'
@@ -282,6 +287,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
         {/* Services Grid */}
         <motion.div
           initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -292,6 +298,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -309,6 +316,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
               <motion.div
                 key={service.id}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -319,6 +327,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -329,6 +338,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
 
 }}
                 exit = {
+
   { opacity: 0,
   y: -20 
 
@@ -344,6 +354,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
                 {/* Status Badge */}
                 <div className="absolute top-4 right-4">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+
                     service.status === 'active' ? 'bg-green-500/20 text-green-400' :
                     service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-400' :
                     'bg-gray-500/20 text-gray-400'
@@ -405,6 +416,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
         {/* Call to Action */}
         <motion.div
           initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -415,6 +427,7 @@ const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0 
 

@@ -11,6 +11,7 @@ export const showApiError = (error: , fallbackMessage?: string) => {;
     variant: 'destructive',
 =======
     error?.message || fallbackMessage || 'An unexpected error occurred';  toast({
+
 '
     variant: 'destructive','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -21,7 +22,7 @@ export const showApiError = (error: , fallbackMessage?: string) => {;
 
   if (process.env.NODE_ENV === 'development') {
 
-    // console.error('API Error:', error)}
+    // // // // console.error('API Error:', error)}
 };
 
 export 
@@ -31,14 +32,15 @@ export
 =======
 <<<<<<< HEAD
   if (process.env.NODE_ENV === 'development') {
+
 <<<<<<< HEAD
-    // // // console.error('API Error:', error);
+    // // // // // // console.error('API Error:', error);
 
 =======
-    // // // // // // // console.error('API Error:', error);
+    // // // // // // // // // // console.error('API Error:', error);
 =======
   if (process.env.NODE_ENV = == 'development') {;
-    // // // // console.error('API Error:', error);
+    // // // // // // // console.error('API Error:', error);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2

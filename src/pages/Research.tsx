@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 export default Research;
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -39,10 +40,10 @@ import { SEO } from '../components / SEO';
   Palette,
   Smartphone,
   Eye,
-  Star as StarIcon,
-} from 'lucide - react';
+  Star as StarIcon} from 'lucide - react';
 
 const Research: React.FC = () => {
+
   const [searchQuery, setSearchQuery] = useState ('') ;
   const [activeCategory, setActiveCategory] = useState ('all') ;
   const [activeStatus, setActiveStatus] = useState ('all') ;
@@ -77,6 +78,7 @@ const Research: React.FC = () => {
 
   const researchProjects = [
     {
+
       id: 1,
       title: 'Quantum Machine Learning for Financial Modeling',
       description:
@@ -106,12 +108,12 @@ const Research: React.FC = () => {
       ],
       publications: [
         {
+
           title: 'Quantum Algorithms for Portfolio Optimization',
           journal: 'Nature Quantum Information',
           year: 2024,
           doi: '10.1038 / s41534 - 024 - 00800 - 5',
-          citations: 23,
-        },
+          citations: 23},
       ],
       tags: [
         'Quantum Computing',
@@ -122,9 +124,9 @@ const Research: React.FC = () => {
       ],
       featured: true,
       progress: 65,
-      impact: 'high',
-    },
+      impact: 'high'},
     {
+
       id: 2,
       title: 'Federated Learning for Privacy - Preserving Healthcare Analytics',
       description:
@@ -154,19 +156,19 @@ const Research: React.FC = () => {
       ],
       publications: [
         {
+
           title: 'Privacy - Preserving Federated Learning in Healthcare',
           journal: 'Nature Machine Intelligence',
           year: 2024,
           doi: '10.1038 / s42256 - 024 - 00789 - 8',
-          citations: 45,
-        },
+          citations: 45},
         {
+
           title: 'Secure Multi - Party Computation for Medical Data',
           journal: 'IEEE Transactions on Medical Imaging',
           year: 2024,
           doi: '10.1109 / TMI.2024.001234',
-          citations: 18,
-        },
+          citations: 18},
       ],
       tags: [
         'Federated Learning',
@@ -177,9 +179,9 @@ const Research: React.FC = () => {
       ],
       featured: true,
       progress: 100,
-      impact: 'very - high',
-    },
+      impact: 'very - high'},
     {
+
       id: 3,
       title: 'Zero - Trust Architecture for Industrial IoT',
       description:
@@ -209,12 +211,12 @@ const Research: React.FC = () => {
       ],
       publications: [
         {
+
           title: 'Zero - Trust Security for Industrial IoT',
           journal: 'IEEE Security & Privacy',
           year: 2024,
           doi: '10.1109 / MSEC.2024.001234',
-          citations: 12,
-        },
+          citations: 12},
       ],
       tags: [
         'Zero - Trust',
@@ -225,9 +227,9 @@ const Research: React.FC = () => {
       ],
       featured: false,
       progress: 40,
-      impact: 'high',
-    },
+      impact: 'high'},
     {
+
       id: 4,
       title: 'Edge AI for Autonomous Vehicles',
       description:
@@ -265,12 +267,13 @@ const Research: React.FC = () => {
       ],
       featured: false,
       progress: 15,
-      impact: 'medium',
-    },
+      impact: 'medium'},
   ];
 
   const getStatusColor = (status: string) => {
+
     switch (status) {
+
       case 'active':
         return 'bg - green - 500 / 20 text - green - 400';
       case 'completed':
@@ -285,7 +288,9 @@ const Research: React.FC = () => {
   };
 
   const getImpactColor = (impact: string) => {
+
     switch (impact) {
+
       case 'very - high':
         return 'bg - red - 500 / 20 text - red - 400';
       case 'high':
@@ -300,6 +305,7 @@ const Research: React.FC = () => {
   };
 
   const getProgressColor = (progress: number) => {
+
     if (progress >= 80) return 'bg - green - 500';
     if (progress >= 60) return 'bg - blue - 500';
     if (progress >= 40) return 'bg - yellow - 500';
@@ -307,6 +313,7 @@ const Research: React.FC = () => {
   };
 
   const filteredProjects = researchProjects.filter (project => {
+
     const matchesSearch = project.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       project.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       project.tags.some (tag =>
@@ -321,25 +328,34 @@ const Research: React.FC = () => {
 
   // Update counts
   categories.forEach (cat => {
+
     if (cat.id === 'all') {
+
       cat.count = researchProjects.length;
     } else {
+
       cat.count = researchProjects.filter (project => project.category === cat.id) .length;
     }
   }) ;
 
   statuses.forEach (status => {
+
     if (status.id === 'all') {
+
       status.count = researchProjects.length;
     } else {
+
       status.count = researchProjects.filter (project => project.status === status.id) .length;
     }
   }) ;
 
   types.forEach (type => {
+
     if (type.id === 'all') {
+
       type.count = researchProjects.length;
     } else {
+
       type.count = researchProjects.filter (project => project.type === type.id) .length;
     }
   }) ;
@@ -402,6 +418,7 @@ const Research: React.FC = () => {
                     {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                         onClick={ () => setActiveCategory (category.id) }
                         className={`px - 3 py - 1 rounded - lg text - sm font - medium transition - colors ${
+
                           activeCategory === category.id
                             ? 'bg - blue - 500 text - white'
                             : 'bg - slate - 700 / 50 text - gray - 300 hover:bg - slate - 600 / 50'
@@ -420,6 +437,7 @@ const Research: React.FC = () => {
                     {statuses.map (status => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={status.id}
                         onClick={ () => setActiveStatus (status.id) }
                         className={`px - 3 py - 1 rounded - lg text - sm font - medium transition - colors ${
+
                           activeStatus === status.id
                             ? 'bg - blue - 500 text - white'
                             : 'bg - slate - 700 / 50 text - gray - 300 hover:bg - slate - 600 / 50'
@@ -438,6 +456,7 @@ const Research: React.FC = () => {
                     {types.map (type => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={type.id}
                         onClick={ () => setActiveType (type.id) }
                         className={`px - 3 py - 1 rounded - lg text - sm font - medium transition - colors ${
+
                           activeType === type.id
                             ? 'bg - blue - 500 text - white'
                             : 'bg - slate - 700 / 50 text - gray - 300 hover:bg - slate - 600 / 50'

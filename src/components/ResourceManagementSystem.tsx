@@ -1,4 +1,5 @@
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -48,6 +49,7 @@ import { motion, AnimatePresence } from 'framer - motion';
   utilization: number}
 
 interface ResourceStats {
+
   totalResources: number;
   availableResources: number;
   allocatedResources: number;
@@ -82,6 +84,7 @@ showStats:  true,;
 
   // Sample resource data
   useEffect ( () => {
+
     const sampleResources: Resource[] = [
       {
 
@@ -185,6 +188,7 @@ showStats:  true,;
 
   // Filter resources
   useEffect(() => {
+
     let filtered = resources;
 
     if (selectedType !== 'all') {

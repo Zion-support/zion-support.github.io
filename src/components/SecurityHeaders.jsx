@@ -1,9 +1,12 @@
 import React from 'react';
 <<<<<<< HEAD
 export function SecurityHeadersCompact ({ className }) {
+
 import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders ({ className }) {
+
 =======
 import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders({ className }) {
+
 >>>>>>> main
 
     const securityFeatures = [
@@ -136,6 +139,7 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
     </section>) }
 // Compact version for smaller spaces
 export function SecurityHeadersCompact({ className }) {
+
 '`
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>"
       <div className="flex items-center gap-2 text-zion-cyan text-sm">"

@@ -13,6 +13,7 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
         "logo": "https://ziontechgroup.com/images/logo.png","
         "description": description,"
         "address": {
+
 "
             "@type": "PostalAddress","
             "streetAddress": "364 E Main St STE 1008","
@@ -23,6 +24,7 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
 
 },"
         "contactPoint": {
+
 "
             "@type": "ContactPoint","
             "telephone": "+1-302-464-0950","
@@ -35,6 +37,7 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
             "https://github.com/Zion-Holdings"
         ],"
         "offers": {
+
 "
             "@type": "AggregateOffer","
             "priceCurrency": "USD","

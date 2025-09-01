@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug } from 'lucide-react';
 const mockThreatIntelligence = [
     {
+
         id: '1',
         threatType: 'Ransomware Campaign',
         description: 'Active ransomware campaign targeting healthcare organizations in the region.',
@@ -12,6 +13,7 @@ const mockThreatIntelligence = [
         frequency: 15
     },
     {
+
         id: '2',
         threatType: 'Phishing Attack',
         description: 'Sophisticated phishing campaign using executive impersonation.',
@@ -23,6 +25,7 @@ const mockThreatIntelligence = [
     }
 ];
 export function AdvancedSecurityDashboard() {
+
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -42,23 +45,29 @@ export function AdvancedSecurityDashboard() {
         ? complianceRequirements
         : complianceRequirements.filter(req => req.framework === selectedFramework);
     const refreshData = async () => {
+
         setIsRefreshing(true);
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1500));
         setIsRefreshing(false)};
     useEffect(() => {
+
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   };
 
@@ -74,12 +83,15 @@ export function AdvancedSecurityDashboard() {
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   };
 
@@ -92,9 +104,11 @@ export function AdvancedSecurityDashboard() {
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   };
 
@@ -104,15 +118,19 @@ export function AdvancedSecurityDashboard() {
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   };
 }, []);, []);
         if (autoRefresh) {
+
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
             return () => clearInterval(interval)}
     }, [autoRefresh]);
     const getSeverityColor = (severity) => {
+
         switch (severity) {
+
             case 'critical':
                 return 'bg-red-500 text-white';
             case 'high':
@@ -125,7 +143,9 @@ export function AdvancedSecurityDashboard() {
                 return 'bg-gray-500 text-white'}
     };
     const getStatusColor = (status) => {
+
         switch (status) {
+
             case 'compliant':
                 return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
             case 'non_compliant':
@@ -136,7 +156,9 @@ export function AdvancedSecurityDashboard() {
                 return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300'}
     };
     const getRiskLevelColor = (riskLevel) => {
+
         switch (riskLevel) {
+
             case 'high':
                 return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
             case 'medium':
@@ -145,7 +167,9 @@ export function AdvancedSecurityDashboard() {
                 return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'}
     };
     const getTrendIcon = (trend) => {
+
         switch (trend) {
+
             case 'up':
                 return <TrendingUp className="w-4 h-4 text-green-500"/>;
             case 'down':
@@ -154,7 +178,9 @@ export function AdvancedSecurityDashboard() {
                 return <Activity className="w-4 h-4 text-gray-500"/>}
     };
     const getEventIcon = (type) => {
+
         switch (type) {
+
             case 'threat':
                 return <AlertTriangle className="w-5 h-5 text-red-500"/>;
             case 'vulnerability':
@@ -167,10 +193,12 @@ export function AdvancedSecurityDashboard() {
                 return <Server className="w-5 h-5 text-gray-500"/>}
     };
     if (!isOpen) {
+
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Security Dashboard">
         <Shield className="w-6 h-6"/>
       </button>)}
     if (isMinimized) {
+
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
           <Shield className="w-5 h-5 text-zion-red"/>
@@ -247,6 +275,7 @@ export function AdvancedSecurityDashboard() {
             { id: 'threats', label: 'Threat Intel', icon: Shield },
             { id: 'analytics', label: 'Analytics', icon: TrendingUp }
         ].map(tab => {
+
             const Icon = tab.icon;
             return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id
                     ? 'border-zion-red text-zion-red bg-zion-red/5'

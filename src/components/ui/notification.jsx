@@ -10,8 +10,10 @@ import { Button } from "./button";
 const NotificationContext = createContext(null);
 // Hook
 export function useNotifications() {
+
     const context = useContext(NotificationContext);
     if (!context) {
+
 <<<<<<< HEAD
         throw new Error('useNotifications must be used within a NotificationProvider');
 
@@ -22,11 +24,15 @@ export function useNotifications() {
     return context}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function NotificationProvider({ children, maxNotifications = 5, position = 'top-right' }) {
+
     const [notifications, setNotifications] = useState([]);
     const removeNotification = useCallback((id) => {
+
         setNotifications(prev => prev.filter(n => n.id !== id))}, []);
     const addNotification = useCallback((notification) => {
+
         const newNotification = {
+
   ...notification,
             id: Math.random().toString(36).substr(2, 9),
             timestamp: new Date(),
@@ -41,11 +47,14 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
 
 };
         setNotifications(prev => {
+
             const updated = [newNotification, ...prev];
             return updated.slice(0, maxNotifications)});
         // Auto-dismiss after duration
         if (newNotification.duration && newNotification.duration > 0) {
+
             setTimeout(() => {
+
 <<<<<<< HEAD
                 removeNotification(newNotification.id);
             }, newNotification.duration);
@@ -55,8 +64,10 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [maxNotifications, removeNotification]);
     const clearAll = useCallback(() => {
+
         setNotifications([])}, []);
     const value = {
+
   notifications,
         addNotification,
         removeNotification,
@@ -79,9 +90,12 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
     </NotificationContext.Provider>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 function NotificationContainer({ position }) {
+
     const { notifications, clearAll } = useNotifications();
     const getPositionClasses = (pos) => {
+
         switch (pos) {
+
             case 'top-right':
                 return 'top-4 right-4';
             case 'top-left':
@@ -131,9 +145,12 @@ function NotificationContainer({ position }) {
     </div>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 function NotificationItem({ notification }) {
+
     const { removeNotification } = useNotifications();
     const getIcon = (type) => {
+
         switch (type) {
+
             case 'success':
                 return <CheckCircle className="w-5 h-5 text-green-400"/>;
             case 'error':
@@ -151,7 +168,9 @@ function NotificationItem({ notification }) {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getTypeClasses = (type) => {
+
         switch (type) {
+
             case 'success':
                 return 'border-green-500/30 bg-green-500/10';
             case 'error':
@@ -169,7 +188,9 @@ function NotificationItem({ notification }) {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getProgressColor = (type) => {
+
         switch (type) {
+
             case 'success':
                 return 'bg-green-400';
             case 'error':
@@ -187,6 +208,7 @@ function NotificationItem({ notification }) {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<motion.div layout initial = {
+
   { opacity: 0, x: 300,
   scale: 0.8 
 
@@ -196,6 +218,7 @@ function NotificationItem({ notification }) {
 
 
 }} animate = {
+
   { opacity: 1, x: 0,
   scale: 1 
 
@@ -205,6 +228,7 @@ function NotificationItem({ notification }) {
 
 
 }} exit = {
+
   { opacity: 0, x: 300,
   scale: 0.8 
 
@@ -214,7 +238,9 @@ function NotificationItem({ notification }) {
 
 
 }} transition = {
+
   {
+
             type: "spring",
             stiffness: 500,
             damping: 30,
@@ -229,6 +255,7 @@ function NotificationItem({ notification }) {
         }} className={`relative overflow-hidden border rounded-xl p-4 backdrop-blur-sm ${getTypeClasses(notification.type)}`}>
       {/* Progress Bar */}
       {notification.duration && notification.duration > 0 && (<motion.div className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`} initial={{ width: '100%' }} animate={{ width: '0%' }} transition = {
+
   { duration: notification.duration / 1000,
   ease: "linear" 
 
@@ -277,21 +304,26 @@ function NotificationItem({ notification }) {
 
 // Convenience functions for quick notifications
 export function showSuccess(title, message, options) {
+
     // This would be called from the context
     return { type: 'success', title, message, ...options };
 
 export function showError(title, message, options) {
+
     return { type: 'error', title, message, ...options };
 
 export function showWarning(title, message, options) {
+
     return { type: 'warning', title, message, ...options };
 
 export function showInfo(title, message, options) {
+
     return { type: 'info', title, message, ...options };
 }}}}}}}}}}}}}}</motion.div>}
 =======
     </motion.div>)}
 // Convenience functions for quick notifications
 export function showInfo(title, message, options) {
+
     return { type: 'info', title, message, ...options }}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

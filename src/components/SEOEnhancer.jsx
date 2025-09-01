@@ -4,8 +4,10 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
 
 <<<<<<< HEAD
     useEffect ( () => {
+
 =======
     useEffect(() => {
+
 >>>>>>> main
         // Add structured data to the page
         const structuredData = {
@@ -142,16 +144,19 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
             if (hint.crossorigin) link.crossOrigin = hint.crossorigin;
             document.head.appendChild (link) }) ;
         return () => {
+
             // Cleanup on unmount'"
             const addedScript = document.querySelector('script[type="application/ld+json"]');
             if (addedScript)
                 addedScript.remove();
             performanceMeta.forEach(meta => {
+
 "
                 const metaTag = document.querySelector(`meta[name="${meta.name}"]`);
                 if (metaTag)
                     metaTag.remove()});
             resourceHints.forEach(hint => {
+
 "`
                 const link = document.querySelector(`link[rel="${hint.rel}"][href="${hint.href}"]`);
                 if (link)

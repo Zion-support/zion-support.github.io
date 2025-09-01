@@ -4,27 +4,28 @@ import { Button } from '@/components / ui / button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
 import SEO from '@/components / SEO';
 export default function ServicesPricingGuide () {
+
 import {
+
 import {
+
 import {
+
 import {
 
   EXPANDED_SERVICES,
-  EXPANDED_SERVICE_CATEGORIES,
-} from '@/data / expandedServices';
+  EXPANDED_SERVICE_CATEGORIES} from '@/data / expandedServices';
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
+  CardTitle} from '@/components / ui / card';
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
-} from '@/components / ui / table';
+  TableRow} from '@/components / ui / table';
   CheckCircle,
   Star,
   Clock,
@@ -36,8 +37,7 @@ import {
   TrendingUp,
   Shield,
   Zap,
-  DollarSign,
-} from 'lucide - react';
+  DollarSign} from 'lucide - react';
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const filteredServices = selectedCategory === 'all'
       ? EXPANDED_SERVICES
@@ -45,12 +45,15 @@ import {
             service.category.toLowerCase () .replace (/\s+/g, '-') ===
             selectedCategory) ;
   const getPriceTier = price => {
+
     if (price < 10000) return 'Starter';
     if (price < 25000) return 'Professional';
     return 'Enterprise';
   };
   const getPriceTierColor = tier => {
+
     switch (tier) {
+
       case 'Starter':
         return 'bg - green - 500';
       case 'Professional':
@@ -62,7 +65,9 @@ import {
     }
   };
   const getServiceIcon = category => {
+
     switch (category) {
+
       case 'AI Development':
         return < TrendingUp className="w - 5 h - 5 text - blue - 500" />;
       case 'Cloud Services':
@@ -161,6 +166,7 @@ import {
               variant={selectedCategory === 'all' ? 'default' : 'outline'}
               onClick={ () => setSelectedCategory ('all') }
               className={
+
                 selectedCategory === 'all'
                   ? 'bg - zion - purple text - white'
                   : 'border - zion - purple / 50 text - zion - purple hover:bg - zion - purple / 10'
@@ -171,10 +177,12 @@ import {
             {EXPANDED_SERVICE_CATEGORIES.map (category => (<Button
                 key={category.value}
                 variant={
+
                   selectedCategory === category.value ? 'default' : 'outline'
                 }
                 onClick={ () => setSelectedCategory (category.value) }
                 className={
+
                   selectedCategory === category.value
                     ? 'bg - zion - purple text - white'
                     : 'border - zion - purple / 50 text - zion - purple hover:bg - zion - purple / 10'

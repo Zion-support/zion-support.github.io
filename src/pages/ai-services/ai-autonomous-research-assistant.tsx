@@ -3,33 +3,40 @@ import { motion } from 'framer-motion';
 import { Brain, Search, FileText, TrendingUp, Users, Globe, Zap, Shield, CheckCircle, ArrowRight, Star, Award, Phone, Mail, MapPin } from 'lucide-react';
 
 const AIAutonomousResearchAssistant: React.FC = () => {
+
   const features = [
     {
+
       icon: Search,
       title: "Autonomous Research",
       description: "AI-powered research that discovers, analyzes, and synthesizes information across multiple sources automatically"
     },
     {
+
       icon: FileText,
       title: "Multi-Source Analysis",
       description: "Integrates data from academic papers, news articles, market reports, and real-time web sources"
     },
     {
+
       icon: TrendingUp,
       title: "Intelligent Summarization",
       description: "Advanced NLP algorithms that create comprehensive, accurate summaries with key insights"
     },
     {
+
       icon: Users,
       title: "Collaborative Research",
       description: "Team-based research workflows with shared knowledge bases and collaborative insights"
     },
     {
+
       icon: Globe,
       title: "Global Coverage",
       description: "Access to international databases, multilingual sources, and cross-cultural research"
     },
     {
+
       icon: Zap,
       title: "Real-time Updates",
       description: "Continuous monitoring and alerts for new research, trends, and developments"
@@ -47,6 +54,7 @@ const AIAutonomousResearchAssistant: React.FC = () => {
 
   const pricing = [
     {
+
       plan: "Starter",
       price: "$299",
       period: "/month",
@@ -60,6 +68,7 @@ const AIAutonomousResearchAssistant: React.FC = () => {
       popular: false
     },
     {
+
       plan: "Professional",
       price: "$799",
       period: "/month",
@@ -75,6 +84,7 @@ const AIAutonomousResearchAssistant: React.FC = () => {
       popular: true
     },
     {
+
       plan: "Enterprise",
       price: "$1,999",
       period: "/month",
@@ -228,6 +238,7 @@ const AIAutonomousResearchAssistant: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className={`relative bg-white/5 border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-blue-400/50 bg-gradient-to-b from-blue-500/10 to-transparent' 
                     : 'border-white/10'
@@ -261,6 +272,7 @@ const AIAutonomousResearchAssistant: React.FC = () => {
                 <a
                   href="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white'
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'

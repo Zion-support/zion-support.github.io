@@ -1,9 +1,4 @@
-
 export default function AIContentCreation() {
-  
-  
-  
-  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -17,18 +12,20 @@ export default function AIContentCreation() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 text-blue-400 text-sm font-medium mb-6">
-              <PenTool className="w-4 h-4"  />
+              <PenTool className="w-4 h-4" />
               AI Content Creation
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               AI-Powered
               <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                {' '}Content Creation
+                {' '}
+                Content Creation
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your content marketing with our advanced AI platform. Generate high-quality, 
-              engaging content across all formats while maintaining your brand voice and SEO optimization.
+              Transform your content marketing with our advanced AI platform.
+              Generate high-quality, engaging content across all formats while
+              maintaining your brand voice and SEO optimization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -36,7 +33,7 @@ export default function AIContentCreation() {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5"  />
+                <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/schedule-demo"
@@ -62,8 +59,9 @@ export default function AIContentCreation() {
               Advanced Content Creation Features
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our AI platform combines natural language processing, creative design, and 
-              marketing expertise to deliver content that engages and converts.
+              Our AI platform combines natural language processing, creative
+              design, and marketing expertise to deliver content that engages
+              and converts.
             </p>
           </motion.div>
 
@@ -79,7 +77,9 @@ export default function AIContentCreation() {
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-400">{feature.description}</p>
               </motion.div>
             ))}
@@ -100,8 +100,8 @@ export default function AIContentCreation() {
               Content Types We Create
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From written content to visual assets, our AI platform handles all types 
-              of content creation for your marketing needs.
+              From written content to visual assets, our AI platform handles all
+              types of content creation for your marketing needs.
             </p>
           </motion.div>
 
@@ -117,11 +117,16 @@ export default function AIContentCreation() {
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                   <type.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{type.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  {type.title}
+                </h3>
                 <ul className="space-y-2">
                   {type.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="text-gray-400 text-sm flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-blue-400"  />
+                    <li
+                      key={itemIndex}
+                      className="text-gray-400 text-sm flex items-center gap-2"
+                    >
+                      <CheckCircle className="w-4 h-4 text-blue-400" />
                       {item}
                     </li>
                   ))}
@@ -145,13 +150,14 @@ export default function AIContentCreation() {
                 Transform Your Content Marketing
               </h2>
               <p className="text-lg text-gray-400 mb-8">
-                Our AI content creation platform delivers measurable improvements in content 
-                production, quality, and performance while reducing costs and time investment.
+                Our AI content creation platform delivers measurable
+                improvements in content production, quality, and performance
+                while reducing costs and time investment.
               </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0"  />
+                    <CheckCircle className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
@@ -167,20 +173,34 @@ export default function AIContentCreation() {
               <div className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-2xl p-8 border border-blue-500/30">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400 mb-2">10x</div>
-                    <div className="text-sm text-gray-400">Content production increase</div>
+                    <div className="text-3xl font-bold text-blue-400 mb-2">
+                      10x
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      Content production increase
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-indigo-400 mb-2">60%</div>
+                    <div className="text-3xl font-bold text-indigo-400 mb-2">
+                      60%
+                    </div>
                     <div className="text-sm text-gray-400">Cost reduction</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-400 mb-2">85%</div>
-                    <div className="text-sm text-gray-400">Faster content creation</div>
+                    <div className="text-3xl font-bold text-purple-400 mb-2">
+                      85%
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      Faster content creation
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400 mb-2">99%</div>
-                    <div className="text-sm text-gray-400">Quality consistency</div>
+                    <div className="text-3xl font-bold text-blue-400 mb-2">
+                      99%
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      Quality consistency
+                    </div>
                   </div>
                 </div>
               </div>
@@ -202,8 +222,9 @@ export default function AIContentCreation() {
               Content Creation Use Cases
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our AI platform addresses the most critical challenges in content marketing, 
-              providing comprehensive solutions for various content needs.
+              Our AI platform addresses the most critical challenges in content
+              marketing, providing comprehensive solutions for various content
+              needs.
             </p>
           </motion.div>
 
@@ -216,14 +237,16 @@ export default function AIContentCreation() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300"
               >
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <h3 className="text-2xl font-semibold text-white mb-4">
+                  {useCase.title}
+                </h3>
                 <p className="text-gray-400 mb-6">{useCase.description}</p>
                 <Link
                   to="/request-quote"
                   className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4"  />
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
             ))}
@@ -244,8 +267,9 @@ export default function AIContentCreation() {
               Ready to Scale Your Content?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join leading brands that are already using our AI platform to create 
-              engaging content at scale while maintaining quality and brand consistency.
+              Join leading brands that are already using our AI platform to
+              create engaging content at scale while maintaining quality and
+              brand consistency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -253,7 +277,7 @@ export default function AIContentCreation() {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
               >
                 Get Your Quote
-                <ArrowRight className="w-5 h-5"  />
+                <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/schedule-demo"
@@ -266,4 +290,5 @@ export default function AIContentCreation() {
         </div>
       </section>
     </div>
-  )}
+  );
+}

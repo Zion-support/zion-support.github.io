@@ -4,8 +4,10 @@ import React from 'react';
 export default WhitePapers;
 
 const WhitePapers = () => {
+
   const whitePapers = [
     {
+
       title: 'AI - Powered Digital Transformation: A Comprehensive Guide',
       category: 'Digital Transformation',
       date: '2025 - 01 - 10',
@@ -14,8 +16,7 @@ const WhitePapers = () => {
         'This comprehensive white paper explores how AI is revolutionizing digital transformation initiatives across industries, providing actionable insights for enterprise leaders.',
       pdfUrl: '#',
       pages: 28,
-      downloadCount: '2,500+',
-    },
+      downloadCount: '2,500+'},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 text - white">

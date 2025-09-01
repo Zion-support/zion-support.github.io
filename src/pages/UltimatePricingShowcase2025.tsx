@@ -1,7 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
+import {
+
   Check, 
   X, 
   Star, 
@@ -33,6 +34,7 @@ import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '../data/advancedInnovativeSer
 import { SPECIALIZED_INNOVATIVE_SERVICES_2025 } from '../data/specializedInnovativeServices2025';
 
 const UltimatePricingShowcase2025: React.FC = () => {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('price');
@@ -47,10 +49,12 @@ const UltimatePricingShowcase2025: React.FC = () => {
 
   // Get unique categories
   const categories = useMemo(() => {
+
     const uniqueCategories = [...new Set(allServices.map(s => s.category))];
     return [
       { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' },
       ...uniqueCategories.map(cat => ({
+
         id: cat,
         name: cat,
         count: allServices.filter(s => s.category === cat).length,
@@ -60,7 +64,9 @@ const UltimatePricingShowcase2025: React.FC = () => {
   }, [allServices]);
 
   function getCategoryIcon(category: string): string {
+
     const iconMap: { [key: string]: string } = {
+
       'AI & Automation': '🤖',
       'Quantum Computing': '⚛️',
       'Blockchain': '🔗',
@@ -89,6 +95,7 @@ const UltimatePricingShowcase2025: React.FC = () => {
   }
 
   const filteredServices = allServices.filter(service => {
+
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -98,7 +105,9 @@ const UltimatePricingShowcase2025: React.FC = () => {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'price':
         return a.price - b.price;
       case 'rating':
@@ -113,15 +122,17 @@ const UltimatePricingShowcase2025: React.FC = () => {
   });
 
   const formatPrice = (price: number) => {
+
     return new Intl.NumberFormat('en-US', {
+
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(price);
+      maximumFractionDigits: 0}).format(price);
   };
 
   const getPriceTier = (price: number) => {
+
     if (price < 3000) return 'starter';
     if (price < 7000) return 'professional';
     if (price < 15000) return 'enterprise';
@@ -129,7 +140,9 @@ const UltimatePricingShowcase2025: React.FC = () => {
   };
 
   const getPriceTierColor = (tier: string) => {
+
     switch (tier) {
+
       case 'starter': return 'from-green-500 to-emerald-500';
       case 'professional': return 'from-blue-500 to-cyan-500';
       case 'enterprise': return 'from-purple-500 to-pink-500';
@@ -139,7 +152,9 @@ const UltimatePricingShowcase2025: React.FC = () => {
   };
 
   const getPriceTierLabel = (tier: string) => {
+
     switch (tier) {
+
       case 'starter': return 'Starter';
       case 'professional': return 'Professional';
       case 'enterprise': return 'Enterprise';
@@ -277,6 +292,7 @@ const UltimatePricingShowcase2025: React.FC = () => {
                   <button
                     onClick={() => setViewMode('cards')}
                     className={`flex-1 px-4 py-3 rounded-lg transition-colors ${
+
                       viewMode === 'cards' 
                         ? 'bg-cyan-500 text-white' 
                         : 'bg-white/10 text-gray-300 hover:bg-white/20'
@@ -287,6 +303,7 @@ const UltimatePricingShowcase2025: React.FC = () => {
                   <button
                     onClick={() => setViewMode('table')}
                     className={`flex-1 px-4 py-3 rounded-lg transition-colors ${
+
                       viewMode === 'table' 
                         ? 'bg-cyan-500 text-white' 
                         : 'bg-white/10 text-gray-300 hover:bg-white/20'
@@ -311,6 +328,7 @@ const UltimatePricingShowcase2025: React.FC = () => {
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               >
                 {sortedServices.map((service, index) => {
+
                   const priceTier = getPriceTier(service.price);
                   const tierColor = getPriceTierColor(priceTier);
                   const tierLabel = getPriceTierLabel(priceTier);
@@ -718,6 +736,7 @@ const UltimatePricingShowcase2025: React.FC = () => {
 
       <style jsx>{`
         .line-clamp-2 {
+
           display: -webkit-box;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
@@ -725,6 +744,7 @@ const UltimatePricingShowcase2025: React.FC = () => {
         }
         
         .line-clamp-3 {
+
           display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;

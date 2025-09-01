@@ -27,17 +27,21 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
         data: ''
     }) ;
     const handleConnectWallet = useCallback (async () => {
+
         try {
+
             await connectWallet();
             trackEvent('blockchain',dashboard',wallet_connected')}
         catch (error) {
 
-            // console.error('Failed to connect wallet:', error)}
+            // // // // console.error('Failed to connect wallet:', error)}
     }, [connectWallet, trackEvent]);
     const handleMintNFT = useCallback(async () => {
+
         if (nftForm.name.trim() && wallet) {
 
             try {
+
                 const metadata = {
 
   name: nftForm.name,
@@ -52,20 +56,22 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 trackEvent('blockchain',dashboard',nft_minted')}
             catch (error) {
 
-                // console.error('Failed to mint NFT:', error)}
+                // // // // console.error('Failed to mint NFT:', error)}
         }
     }, [nftForm, wallet, contracts, mintNFT, trackEvent]);
     const handleSendTransaction = useCallback(async () => {
+
         if (transactionForm.to.trim() && transactionForm.value && wallet) {
 
             try {
+
                 await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null);
                 setTransactionForm({ to: '', value: '', data: '' });
                 setShowSendTransaction(false);
                 trackEvent('blockchain',dashboard',transaction_sent')}
             catch (error) {
 
-                // console.error('Failed to send transaction:', error)}
+                // // // // console.error('Failed to send transaction:', error)}
         }
     }, [transactionForm, wallet, sendTransaction, trackEvent]) ;
     const getStatusColor = (status) => {

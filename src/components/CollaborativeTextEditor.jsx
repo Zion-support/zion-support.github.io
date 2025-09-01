@@ -7,6 +7,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 
 <<<<<<< HEAD
     const { trackEvent } = useAnalytics ({
+
 =======
     const { trackEvent } = useAnalytics({
 
@@ -108,9 +109,11 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         collaboration.updateCursor(x, y,editor')}, [enableCollaboration, collaboration]);
     // Generate AI suggestions
     const generateAISuggestions = useCallback (async () => {
+
         if (!enableAI || !editorState.content.trim () ) return;
         setIsProcessing (true) ;
         try {
+
             // Simulate AI processing - in production, this would call an AI service
             await new Promise (resolve => setTimeout (resolve, 2000) ) ;
             const suggestions = [];
@@ -118,6 +121,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             if (editorState.content.includes('its')) {
 
                 suggestions.push({
+
 `
                     id: `suggestion_${Date.now()}_1`,
                     type: 'grammar',"
@@ -132,6 +136,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             if (editorState.content.includes('very')) {
 
                 suggestions.push({
+
 `
                     id: `suggestion_${Date.now()}_2`,
                     type: 'style',"
@@ -146,6 +151,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             if (editorState.content.endsWith('The main benefits')) {
 
                 suggestions.push({
+
 `
                     id: `suggestion_${Date.now()}_3`,
                     type: 'completion',"
@@ -165,7 +171,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 ...prev,
                 suggestions[...prev.suggestions, ...suggestions];
             }));
-            // // // // // // // // console.error('Failed to generate AI suggestions:', error);
+            // // // // // // // // // // // console.error('Failed to generate AI suggestions:', error);
             trackEvent('editor',ai_suggestions_failed',generation_error', undefined, {
 
                 error: error instanceof Error ? error.message : 'Unknown error'
@@ -178,7 +184,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             trackEvent('editor',ai_suggestions_generated',suggestions_created', suggestions.length)}
         catch (error) {
 
-            // console.error('Failed to generate AI suggestions:', error);
+            // // // // console.error('Failed to generate AI suggestions:', error);
             trackEvent('editor',ai_suggestions_failed',generation_error', null, {
 
                 error: error instanceof Error ? error.message : 'Unknown error'
@@ -217,6 +223,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     }, [editorState.content, trackEvent]);
     // Save content
     const handleSave = useCallback(() => {
+
         onSave?.(editorState.content);
         setLastSaved(new Date());
         trackEvent('editor',content_saved',save_completed')}, [editorState.content, onSave, trackEvent]);
@@ -225,9 +232,11 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 
         let exportContent = editorState.content;
         if (format === 'html') {
+
 `
             exportContent = `<html><body><pre>${editorState.content}</pre></body></html>`}
         else if (format === 'md') {
+
 `
             exportContent = `# Document\n\n${editorState.content}`}
         if (onExport) {
@@ -248,6 +257,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     }, [editorState.content, onExport, trackEvent]);
     // Handle collaboration text changes
     useEffect ( () => {
+
         const handleCollaborationTextChange = (event) => {
 
             const { message } = event.detail;
@@ -276,9 +286,11 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}}, [userId, trackEvent]);
     // Auto-save functionality
     useEffect(() => {
+
         if (!enableVersioning)
             return;
         const autoSaveInterval = setInterval(() => {
+
             if (editorState.content !== initialContent) {
 
                 handleSave()}
@@ -286,8 +298,10 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         return () => clearInterval(autoSaveInterval)}, [editorState.content, initialContent, enableVersioning, handleSave]);
     // Generate suggestions when content changes significantly
     useEffect ( () => {
+
         if (!enableAI) return;
         const debounceTimer = setTimeout ( () => {
+
             if (editorState.content.length > 100) {
 
                 generateAISuggestions()}

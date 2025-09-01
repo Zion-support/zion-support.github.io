@@ -33,6 +33,7 @@ import { Activity,
 import { SEO              } from '@/components/SEO';
 
 const AIHealthcareAnalytics = () => {
+
   const features = [
     'Real-time patient data analytics and insights',
     'Predictive disease modeling and risk assessment',
@@ -55,24 +56,28 @@ const AIHealthcareAnalytics = () => {
 
   const useCases = [
     {
+
       industry: 'Hospitals & Health Systems',
       description: 'Comprehensive healthcare analytics for large medical facilities',
       icon: Building,
       applications: ['Patient monitoring', 'Resource optimization', 'Quality improvement', 'Cost management']
     },
     {
+
       industry: 'Primary Care Practices',
       description: 'Data-driven insights for family medicine and general practice',
       icon: Users,
       applications: ['Preventive care', 'Chronic disease management', 'Patient engagement', 'Population health']
     },
     {
+
       industry: 'Specialty Clinics',
       description: 'Specialized analytics for cardiology, oncology, and other specialties',
       icon: Stethoscope,
       applications: ['Treatment planning', 'Outcome tracking', 'Research support', 'Clinical trials']
     },
     {
+
       industry: 'Pharmaceutical Companies',
       description: 'Drug development and market analysis insights',
       icon: Pill,
@@ -82,6 +87,7 @@ const AIHealthcareAnalytics = () => {
 
   const pricing = [
     {
+
       plan: 'Practice',
       price: '$499',
       period: '/month',
@@ -95,6 +101,7 @@ const AIHealthcareAnalytics = () => {
       recommended: false
     },
     {
+
       plan: 'Health System',
       price: '$1,299',
       period: '/month',
@@ -109,6 +116,7 @@ const AIHealthcareAnalytics = () => {
       recommended: true
     },
     {
+
       plan: 'Enterprise',
       price: '$2,999',
       period: '/month',
@@ -143,18 +151,22 @@ const AIHealthcareAnalytics = () => {
 
   const analyticsCapabilities = [
     {
+
       category: 'Clinical Analytics',
       features: ['Patient outcomes analysis', 'Treatment effectiveness', 'Clinical pathway optimization', 'Risk stratification']
     },
     {
+
       category: 'Operational Analytics',
       features: ['Resource utilization', 'Workflow efficiency', 'Capacity planning', 'Cost analysis']
     },
     {
+
       category: 'Financial Analytics',
       features: ['Revenue cycle management', 'Claims analysis', 'Reimbursement optimization', 'Budget forecasting']
     },
     {
+
       category: 'Population Health',
       features: ['Disease prevalence tracking', 'Preventive care metrics', 'Social determinants analysis', 'Community health insights']
     }
@@ -372,6 +384,7 @@ const AIHealthcareAnalytics = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur border rounded-xl p-8 ${
+
                   plan.recommended 
                     ? 'border-green-500/50 bg-green-500/5' 
                     : 'border-slate-700/50'
@@ -405,6 +418,7 @@ const AIHealthcareAnalytics = () => {
                 <a
                   href="tel:+13024640950"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+
                     plan.recommended
                       ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-400 hover:to-blue-500'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
@@ -576,6 +590,7 @@ const AIHealthcareAnalytics = () => {
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingTiers.map((tier, index)               => (
               <div key={index} className={`bg-slate-800/50 border rounded-xl p-8 relative ${
+
                 tier.popular 
                   ? 'border-green-500/50 bg-slate-800/70' 
                   : 'border-white/10'
@@ -606,6 +621,7 @@ const AIHealthcareAnalytics = () => {
                 <a 
                   href="tel:+13024640950" 
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${
+
                     tier.popular
                       ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:scale-105'
                       : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900'

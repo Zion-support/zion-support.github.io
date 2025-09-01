@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
+import {
+
   Brain, 
   Atom, 
   Shield, 
@@ -28,6 +29,7 @@ import {
 import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
 
 export default function Services2030() {
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All');
@@ -38,6 +40,7 @@ export default function Services2030() {
   const priceRanges = ['All', 'Under $5K', '$5K-$10K', '$10K-$20K', 'Over $20K'];
 
   const getPriceRange = (price: number) => {
+
     if (price < 5000) return 'Under $5K';
     if (price < 10000) return '$5K-$10K';
     if (price < 20000) return '$10K-$20K';
@@ -45,6 +48,7 @@ export default function Services2030() {
   };
 
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
+
     const matchesSearch = service.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description?.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags?.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -57,7 +61,9 @@ export default function Services2030() {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'featured':
         return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
       case 'rating':
@@ -77,21 +83,27 @@ export default function Services2030() {
   const allServices = sortedServices;
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { opacity: 0, y: 20 },
     visible: {
+
       opacity: 1,
       y: 0,
       transition: {
+
         duration: 0.5
       }
     }
@@ -347,6 +359,7 @@ export default function Services2030() {
               <button
                 onClick={() => setViewMode('grid')}
                 className={`p-2 rounded-lg transition-colors ${
+
                   viewMode === 'grid' 
                     ? 'bg-zion-cyan text-black' 
                     : 'bg-white/10 text-white hover:bg-white/20'
@@ -362,6 +375,7 @@ export default function Services2030() {
               <button
                 onClick={() => setViewMode('list')}
                 className={`p-2 rounded-lg transition-colors ${
+
                   viewMode === 'list' 
                     ? 'bg-zion-cyan text-black' 
                     : 'bg-white/10 text-white hover:bg-white/20'
@@ -394,6 +408,7 @@ export default function Services2030() {
                   key={service.id}
                   variants={itemVariants}
                   className={`bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group ${
+
                     viewMode === 'grid' ? 'p-6' : 'p-8'
                   }`}
                 >

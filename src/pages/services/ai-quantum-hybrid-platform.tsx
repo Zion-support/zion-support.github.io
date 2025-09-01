@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Atom, 
   Brain, 
   Zap, 
@@ -50,33 +51,40 @@ import {
 } from 'lucide-react';
 
 export default function AIQuantumHybridPlatform() {
+
   const features = [
     {
+
       icon: <Atom className="w-6 h-6" />,
       title: "Quantum Computing Integration",
       description: "Seamless integration with quantum processors for exponential computational power."
     },
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "Hybrid AI Algorithms",
       description: "AI algorithms optimized for both classical and quantum computing environments."
     },
     {
+
       icon: <Zap className="w-6 h-6" />,
       title: "Quantum Machine Learning",
       description: "Advanced ML models leveraging quantum computing for superior performance."
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Quantum-Safe Security",
       description: "Post-quantum cryptography and quantum-resistant security protocols."
     },
     {
+
       icon: <Users className="w-6 h-6" />,
       title: "Scalable Architecture",
       description: "Flexible platform that scales from research to enterprise production."
     },
     {
+
       icon: <BarChart className="w-6 h-6" />,
       title: "Quantum Analytics",
       description: "Real-time analytics and insights from quantum computing operations."
@@ -94,26 +102,32 @@ export default function AIQuantumHybridPlatform() {
 
   const quantumSolutions = [
     {
+
       solution: "Quantum Optimization",
       description: "Solve complex optimization problems with quantum algorithms"
     },
     {
+
       solution: "Quantum Machine Learning",
       description: "Train ML models using quantum computing principles"
     },
     {
+
       solution: "Quantum Cryptography",
       description: "Unbreakable encryption using quantum key distribution"
     },
     {
+
       solution: "Quantum Simulation",
       description: "Simulate quantum systems for scientific research"
     },
     {
+
       solution: "Quantum Finance",
       description: "Advanced financial modeling and risk assessment"
     },
     {
+
       solution: "Quantum Chemistry",
       description: "Molecular modeling and drug discovery acceleration"
     }
@@ -121,18 +135,22 @@ export default function AIQuantumHybridPlatform() {
 
   const useCases = [
     {
+
       industry: "Financial Services",
       description: "Portfolio optimization, risk assessment, and algorithmic trading"
     },
     {
+
       industry: "Pharmaceutical",
       description: "Drug discovery, molecular modeling, and protein folding"
     },
     {
+
       industry: "Logistics & Supply Chain",
       description: "Route optimization, inventory management, and scheduling"
     },
     {
+
       industry: "Cybersecurity",
       description: "Quantum-safe encryption and threat detection"
     }

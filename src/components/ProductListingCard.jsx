@@ -37,6 +37,7 @@ export function ProductListingCard({
     return `${listing.currency}${listing.price.toLocaleString()}`;
   };
   const handleImageError = () => {
+
     if (!imageError) {
 
       // Prevent infinite loops if placeholder also fails'
@@ -52,6 +53,7 @@ export function ProductListingCard({
 
       onRequestQuote(listing.id);
     } else {
+
 `
       router(`/request-quote?listing=${listing.id}`);
     }

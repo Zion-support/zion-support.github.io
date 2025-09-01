@@ -44,6 +44,7 @@ export function ContactPublisherModal({
     mode: 'onChange',
     defaultValues: { subject: '', message: '' }});
   const handleSend = async () => {
+
     const values = form.getValues();
     setIsSubmitting(true);
     try {

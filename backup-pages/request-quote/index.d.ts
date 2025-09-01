@@ -1,1 +1,1 @@
-export default function RequestQuotePage(): import("react/jsx-runtime").JSX.Element;
+export default function RequestQuotePage(): import('react/jsx-runtime').JSX.Element;

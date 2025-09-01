@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, Clock } from 'lucide-react';
 const GetStarted = () => {
+
     const [currentStep, setCurrentStep] = useState(1);
     const services = [
         {
+
             title: "AI & Autonomous Systems",
             description: "Transform your operations with intelligent automation",
             icon: Brain,
@@ -12,6 +14,7 @@ const GetStarted = () => {
             features["AI Legal Research", "Financial Risk Management", "Healthcare Diagnostics", "Supply Chain Optimization"]
         },
         {
+
             title: "Quantum Technology",
             description: "Leverage next-generation computing power",
             icon: Zap,
@@ -19,6 +22,7 @@ const GetStarted = () => {
             features["Edge Computing", "Neuromorphic Infrastructure", "Holographic Data Centers", "Quantum Internet"]
         },
         {
+
             title: "Cybersecurity",
             description: "Protect your business with advanced security",
             icon: Shield,
@@ -26,6 +30,7 @@ const GetStarted = () => {
             features["Zero Trust Architecture", "Threat Intelligence", "Compliance Automation", "Penetration Testing"]
         },
         {
+
             title: "IT Infrastructure",
             description: "Modernize your technology foundation",
             icon: Zap,

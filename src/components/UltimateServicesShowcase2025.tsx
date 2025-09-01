@@ -22,6 +22,7 @@ function UltimateServicesShowcase2025 () {
   Globe,
 =======
 import {
+
   Brain, 
   Zap, 
   Shield, 
@@ -60,6 +61,7 @@ export default function UltimateServicesShowcase2025() {
 
 <<<<<<< HEAD
   const getCategoryIcon = (category: string) => {
+
     if (category === 'all') return < Rocket className="w - 6 h - 6" />;
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ?
       <span className="text - 2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> :

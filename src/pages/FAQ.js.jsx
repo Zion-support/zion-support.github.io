@@ -5,52 +5,65 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 export default function FAQ() {
+
     const faqData = [
         {
+
             question: "What is Zion Tech Group?",
             answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect talented professionals with innovative companies, offering a comprehensive platform for AI services, tech talent, and specialized equipment."
         },
         {
+
             question: "How does the marketplace work?",
             answer: "Our marketplace operates as a two-sided platform where businesses can find AI talent, services, and equipment, while professionals can showcase their skills and find opportunities. All basic listings and connections are completely free."
         },
         {
+
             question: "What types of services are available?",
             answer: "We offer a wide range of services including AI development, machine learning consulting, software development, IT consulting, data analysis, cloud services, cybersecurity, and specialized IT onsite services."
         },
         {
+
             question: "How do I find the right talent for my project?",
             answer: "You can browse our talent directory, use our AI-powered matching system, post job listings, or request quotes for specific projects. Our platform includes detailed profiles, skill assessments, and verified reviews to help you make informed decisions."
         },
         {
+
             question: "What equipment and hardware is available?",
             answer: "Our marketplace includes specialized AI hardware, servers, networking equipment, development tools, and other tech equipment. We also feature Green IT solutions for sustainable technology practices."
         },
         {
+
             question: "Is there a cost to use the platform?",
             answer: "Basic access to our marketplace is completely free. This includes browsing listings, creating profiles, and making initial connections. Premium features and advanced tools are available through our enterprise plans."
         },
         {
+
             question: "How do you ensure quality and reliability?",
             answer: "We implement a comprehensive verification system including profile verification, skill assessments, client reviews, and dispute resolution processes. Our community-driven approach helps maintain high standards across the platform."
         },
         {
+
             question: "What support is available for users?",
             answer: "We provide 24/7 customer support through our chat system, email support, and comprehensive help center. Enterprise clients also receive dedicated account management and priority support."
         },
         {
+
             question: "Can I use Zion for both hiring and finding work?",
             answer: "Yes! M users maintain both client and talent profiles, allowing them to hire for projects while also offering their own services. This flexibility makes Zion ideal for freelancers, agencies, and growing companies."
         },
         {
+
             question: "How do you handle payments and contracts?",
             answer: "We provide secure payment processing, milestone-based payment systems, and contract templates. Our platform supports various payment methods and includes built-in dispute resolution for project protection."
         },
         {
+
             question: "What makes Zion different from other platforms?",
             answer: "Zion is specifically designed for AI and high-tech industries, offering specialized tools, AI-powered matching, comprehensive equipment listings, and a focus on sustainable technology. Our free model makes advanced tech accessible to businesses of all sizes."
         },
         {
+
             question: "How can I get started on Zion?",
             answer: "Getting started is simple! Create a free account, complete your profile, and start exploring the marketplace. You can immediately browse listings, connect with professionals, or showcase your own services and expertise."
         }

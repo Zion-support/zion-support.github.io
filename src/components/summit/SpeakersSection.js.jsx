@@ -9,6 +9,7 @@ const speakers = [
     linkedin: '#'},
 ];
 export function SpeakersSection() {
+
   return()
     <section className="py-12 bg-zion-blue-dark text-white" id="speakers">"
       <div className="container mx-auto px-4">"

@@ -1,4 +1,5 @@
 export interface EnhancedService {
+
   id: string;
   name: string;
   tagline: string;
@@ -43,6 +44,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     currency: "$","
     tags["Autonomous Operations", "AI Decision Making", "Business Intelligence", "Strategic Planning"],;
     author: {
+
 "
       name: "Zion AI Labs","
       id: "zion-ai-labs","
@@ -534,6 +536,7 @@ export const enhancedServices2025: EnhancedService[] = [
     trialDays: 30,;"
     setupTime: "3-5 weeks",;
     contactInfo: {
+
 "
       mobile: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com",;"
@@ -541,6 +544,7 @@ export const enhancedServices2025: EnhancedService[] = [
       website: "https://ziontechgroup.com"}  },
   // Edge Computing & IoT Services
   {
+
 "
     id: "edge-computing-platform","
     title: "Edge Computing Platform",;"
@@ -550,10 +554,11 @@ export const enhancedServices2025: EnhancedService[] = [
     currency: "$",;"
     tags["Edge Computing", "IoT Integration", "Real-time Processing", "Global Network"],
     author: {
+
 "
       name: "Zion Edge Computing","
       id: "zion-edge-computing",;"
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100",},"
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100"},"
     images["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],"    createdAt: "2025-01-26T08:45:00.000Z",;
     aiScore: 94,;
     rating: 4.7,;
@@ -661,6 +666,7 @@ export const enhancedServices2025: EnhancedService[] = [
     trialDays: 30,;"
     setupTime: "1-2 weeks",;
     contactInfo: {
+
 "
       mobile: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com",;"
@@ -668,6 +674,7 @@ export const enhancedServices2025: EnhancedService[] = [
       website: "https://ziontechgroup.com"}  },
   // Legal AI Services
   {
+
 "
     id: "ai-legal-review","
     title: "AI Legal Document Review",;"
@@ -677,10 +684,11 @@ export const enhancedServices2025: EnhancedService[] = [
     currency: "$",;"
     tags["Legal Review", "Contract Analysis", "Risk Assessment", "Compliance"],
     author: {
+
 "
       name: "Zion Legal Tech","
       id: "zion-legal-tech",;"
-      avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = format&fit=crop&w=100&h=100",},"
+      avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = format&fit=crop&w=100&h=100"},"
     images["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],"    createdAt: "2025-01-19T12:15:00.000Z",;
     aiScore: 93,;
     rating: 4.7,;

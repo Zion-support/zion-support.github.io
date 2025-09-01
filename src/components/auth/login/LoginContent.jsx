@@ -19,6 +19,7 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
     setError('');
 
     try {
+
       await login(email, password);
       router('/dashboard');
     } catch (err) {

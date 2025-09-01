@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -21,6 +22,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 	Pause'
  } from 'lucide-react';
 interface ServiceShowcase {
+
 	id: string;
 	title: string;
 	description: string;
@@ -102,6 +104,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 	const [currentService, setCurrentService] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
+
 		if (!isPlaying) return;
 		
 			setCurrentService ( (prev) => (prev + 1) % futuristicServices.length) }, 5000) ;

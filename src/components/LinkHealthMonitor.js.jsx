@@ -9,6 +9,7 @@ import {
   RefreshCw,
   Zap} from 'lucide-react';
 const LinkHealthMonitor = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [linkStatuses, setLinkStatuses] = useState([]);
@@ -54,6 +55,7 @@ const LinkHealthMonitor = () => {
       linkText: 'Email'},
   ];
   useEffect(() => {
+
     setLinkStatuses(sampleLinks);
     generateReport(sampleLinks);
   }, []);
@@ -75,6 +77,7 @@ const LinkHealthMonitor = () => {
       lastUpdated: new Date()});
   };
   const startMonitoring = async () => {
+
     setIsMonitoring(true);
     // Simulate link checking
     await new Promise(resolve => setTimeout(resolve, 2000));

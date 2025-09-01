@@ -4,32 +4,38 @@ import { Link } from 'react-router-dom';
 import { Mail, FileText, Link2, BarChart3, Calendar, MessageSquare } from 'lucide-react';
 
 export default function MicroSaaS() {
+
   const products = [
     {
+
       name: 'AI Email Responder',
       price: '$39/mo',
       features: ['Auto-categorize and draft replies', 'Gmail/Outlook add-on', 'Team approval workflows'],
       link: '/contact'
     },
     {
+
       name: 'SEO Content Optimizer',
       price: '$49/mo',
       features: ['Topic clustering and briefs', 'Internal link suggestions', 'On-page optimization scores'],
       link: '/contact'
     },
     {
+
       name: 'Internal Linking (WordPress)',
       price: '$29/mo',
       features: ['Auto link graph builder', 'Context-aware suggestions', 'Bulk fix orphan pages'],
       link: '/contact'
     },
     {
+
       name: 'Review Booster (eCommerce)',
       price: '$59/mo',
       features: ['Post-purchase review flows', 'Photo/video prompts', 'Fraud/spam detection'],
       link: '/contact'
     },
     {
+
       name: 'Smart Surveys',
       price: '$25/mo',
       features: ['Mobile-first', 'Branching logic', 'AI summaries'],

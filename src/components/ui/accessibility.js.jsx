@@ -3,8 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X } from 'lucide-react';
 import { Button } from "./button";
 export function AccessibilityPanel({ enabled = true, className = "", onSettingsChange }) {
+
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
+
         highContrast: false,
         largeText: false,
         reducedMotion: false,
@@ -14,23 +16,30 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
     });
     // Apply accessibility settings to document
     useEffect(() => {
+
         if (!enabled)
             return;
         const root = document.documentElement;
         // High contrast
         if (settings.highContrast) {
+
             root.classList.add('high-contrast')}
         else {
+
             root.classList.remove('high-contrast')}
         // Large text
         if (settings.largeText) {
+
             root.style.fontSize = '18px'}
         else {
+
             root.style.fontSize = '16px'}
         // Reduced motion
         if (settings.reducedMotion) {
+
             root.style.setProperty('--reduced-motion', 'reduce')}
         else {
+
             root.style.setProperty('--reduced-motion', 'no-preference')}
         // Font size
         root.style.setProperty('--font-size', `${settings.fontSize}px`);
@@ -40,23 +49,30 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         onSettingsChange?.(settings)}, [settings, enabled, onSettingsChange]);
     // Load saved settings from localStorage
     useEffect(() => {
+
         const saved = localStorage.getItem('accessibility-settings');
         if (saved) {
+
             try {
+
                 const parsed = JSON.parse(saved);
                 setSettings(prev => ({ ...prev, ...parsed }))}
             catch {
+
                 // Silently handle parsing errors
             }
         }
     }, []);
     // Save settings to localStorage
     const saveSettings = useCallback((newSettings) => {
+
         setSettings(newSettings);
         localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}, []);
     // Toggle settings
     const toggleSetting = useCallback((key, value) => {
+
         const newSettings = {
+
   ...settings,
   [key]: value !== null ? value : !settings[key]
         
@@ -65,7 +81,9 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         saveSettings(newSettings)}, [settings, saveSettings]);
     // Reset to defaults
     const resetSettings = useCallback(() => {
+
         const defaults = {
+
   highContrast: false,
             largeText: false,
             reducedMotion: false,
@@ -78,8 +96,10 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         saveSettings(defaults)}, [saveSettings]);
     // Font size controls
     const increaseFontSize = useCallback(() => {
+
         toggleSetting('fontSize', Math.min(settings.fontSize + 2, 24))}, [settings.fontSize, toggleSetting]);
     const decreaseFontSize = useCallback(() => {
+
         toggleSetting('fontSize', Math.max(settings.fontSize - 2, 12))}, [settings.fontSize, toggleSetting]);
     // Screen reader announcement
     const announcement = document.createElement('div');
@@ -89,6 +109,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             announcement.textContent = message;
             document.body.appendChild(announcement);
             setTimeout(() => {
+
                 document.body.removeChild(announcement)}, 1000)}
     }, [settings.screenReader]);
     if (!enabled)
@@ -107,18 +128,22 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             
             {/* Panel */}
             <motion.div className="absolute top-4 right-4 w-80 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-h-[calc(100vh-2rem)] overflow-y-auto" initial = {
+
   { opacity: 0, x: 300,
   scale: 0.95 
 
 }} animate = {
+
   { opacity: 1, x: 0,
   scale: 1 
 
 }} exit = {
+
   { opacity: 0, x: 300,
   scale: 0.95 
 
 }} transition = {
+
   { duration: 0.3,
   ease: "easeOut" 
 
@@ -180,6 +205,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                     <span className="text-zinc-300">Color Blind Mode</span>
                   </div>
                   <select value={settings.colorBlindMode} onChange = {
+
   (e) => toggleSetting('colorBlindMode',
   e.target.value)
 
@@ -248,9 +274,12 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
 
       {/* Screen Reader Only Class */}
       <style dangerouslySetInnerHTML = {
+
   {
+
             __html: `
           .sr-only {
+
             position: absolute;
             width: 1px;
             height: 1px;
@@ -265,6 +294,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
 }
 
           .high-contrast {
+
             --zion-cyan: #00ffff;
             --zion-blue: #0066ff;
             --zion-purple: #9900ff;
@@ -275,29 +305,37 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             --zion-purple-light: #cc33ff}
 
           [data-color-blind="protanopia"] {
+
             filter: url('#protanopia-filter')}
 
           [data-color-blind="deuteranopia"] {
+
             filter: url('#deuteranopia-filter')}
 
           [data-color-blind="tritanopia"] {
+
             filter: url('#tritanopia-filter')}
 
           :root {
+
             --font-size: 16px;
             --reduced-motion: no-preference}
 
           * {
+
             font-size: var(--font-size)}
 
           @media (prefers-reduced-motion: reduce) {
+
             * {
+
               animation-duration: 0.01ms !important;
               animation-iteration-count: 1 !important;
               transition-duration: 0.01ms !important}
           }
 
           [style*="--reduced-motion: reduce"] * {
+
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important}
@@ -306,6 +344,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
 
       {/* SVG Filters for Color Blind Modes */}
       <svg style = {
+
   { position: 'absolute', width: 0,
   height: 0 
 

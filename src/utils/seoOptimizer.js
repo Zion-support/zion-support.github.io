@@ -1,10 +1,12 @@
 <<<<<<< HEAD
 import React from 'react';
 export class SEOOptimizer {
+
     static DEFAULT_META_DESCRIPTIONS = {
 
 <<<<<<< HEAD
   static DEFAULT_META_DESCRIPTIONS = {
+
     '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting - edge technology services. Transform your business with Zion Tech Group.',
     '/services':
       'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.',
@@ -35,10 +37,10 @@ export class SEOOptimizer {
     '/solutions / enterprise':
       'Enterprise - grade technology solutions. Comprehensive IT services designed for large - scale business operations and growth.',
     '/solutions / healthcare':
-      'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.',
-  };
+      'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'};
 
   static KEYWORD_MAPPINGS = {
+
     '/': [
       'AI marketplace',
       'tech services',
@@ -185,10 +187,10 @@ export class SEOOptimizer {
       'healthcare compliance',
       'HIPAA solutions',
       'medical technology',
-    ],
-  };
+    ]};
 
   static generateSEOData (path) {
+
     const title = this.generateTitle (path) ;
     const description = this.generateDescription (path) ;
     const keywords = this.generateKeywords (path) ;
@@ -196,6 +198,7 @@ export class SEOOptimizer {
     const structuredData = this.generateStructuredData (path) ;
 
     return {
+
       title,
       description,
       keywords,
@@ -208,8 +211,10 @@ export class SEOOptimizer {
   }
 
   static generateTitle (path) {
+
     const baseTitle = 'Zion Tech Group';
     if (path === '/') {
+
       return `${baseTitle} - Revolutionary Technology Solutions`;
     }
 
@@ -221,7 +226,9 @@ export class SEOOptimizer {
 =======
 
 export class SEOOptimizer {
+
     static DEFAULT_META_DESCRIPTIONS = {
+
   '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',
         '/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.',
         '/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.',
@@ -248,6 +255,7 @@ export class SEOOptimizer {
 
 };
     static KEYWORD_MAPPINGS = {
+
   '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
         '/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],
         '/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'],
@@ -323,6 +331,7 @@ export class SEOOptimizer {
             'Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.';
 
     static generateKeywords(path) {
+
 <<<<<<< HEAD
 
         return this.KEYWORD_MAPPINGS[path] ||'
@@ -341,6 +350,7 @@ export class SEOOptimizer {
     static generateStructuredData(path) {
 
         const baseData = {
+
 <<<<<<< HEAD
 
             "@context": "https://schema.org","
@@ -356,6 +366,7 @@ export class SEOOptimizer {
             "url": this.generateCanonicalUrl(path),
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
             "publisher": {
+
 "
                 "@type": "Organization","
                 "name": "Zion Tech Group","
@@ -397,6 +408,7 @@ export class SEOOptimizer {
                 "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc","
                 "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.","
                 "address": {
+
 "
                     "@type": "PostalAddress","
                     "streetAddress": "364 E Main St STE 1008","
@@ -406,6 +418,7 @@ export class SEOOptimizer {
                     "addressCountry": "US"
                 },"
                 "contactPoint": {
+
 "
                     "@type": "ContactPoint","
                     "telephone": "+1-302-464-0950","
@@ -426,6 +439,7 @@ export class SEOOptimizer {
                 "@type": "Service","
                 "serviceType": path.split('/').pop()?.replace(/-/g,),"
                 "provider": {
+
 "
                     "@type": "Organization","
                     "name": "Zion Tech Group"
@@ -449,6 +463,7 @@ export class SEOOptimizer {
 =======
         // Check for missing or short title
         if (!content.includes('<title>') || content.includes('<title></title>')) {
+
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
             issues.push({
 
@@ -502,6 +517,7 @@ export class SEOOptimizer {
 
         // Check for missing headings
         if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
+
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
             issues.push({
 
@@ -522,6 +538,7 @@ export class SEOOptimizer {
         // Check for minimal content
         const textContent = content.replace(/<[^>]*>/g, '').trim();
         if (textContent.length < 300) {
+
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
             issues.push({
 
@@ -538,6 +555,7 @@ export class SEOOptimizer {
         return issues;
 
     static generateMetaTags(seoData) {
+
 `
         return `
     <title>${seoData.title}</title>"

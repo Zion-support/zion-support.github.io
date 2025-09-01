@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus } from 'lucide-react';
 const mockMeetings = [
     {
+
         id: '1',
         title: 'Q4 2024 Review Meeting',
         startTime: '2024-01-15T10:00:00.000Z',
@@ -13,6 +14,7 @@ const mockMeetings = [
     }
 ];
 export function AdvancedCollaborationPlatform() {
+
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -31,19 +33,26 @@ export function AdvancedCollaborationPlatform() {
     const [searchQuery, setSearchQuery] = useState('');
     const containerRef = useRef(null);
     const toggleMute = () => {
+
         setIsMuted(!isMuted);
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isMuted: !isMuted } : p))};
     const toggleVideo = () => {
+
         setIsVideoOff(!isVideoOff);
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isVideoOff: !isVideoOff } : p))};
     const toggleScreenShare = () => {
+
         setIsScreenSharing(!isScreenSharing);
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isScreenSharing: !isScreenSharing } : p))};
     const toggleRecording = () => {
+
         setIsRecording(!isRecording)};
     const sendChatMessage = () => {
+
         if (chatMessage.trim()) {
+
             const newMessage = {
+
   id: Date.now().toString(),
                 senderId: '1',
                 senderName: 'Sarah Johnson',
@@ -58,13 +67,16 @@ export function AdvancedCollaborationPlatform() {
             setChatMessage('')}
     };
     const raiseHand = () => {
+
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, hasRaisedHand: !p.hasRaisedHand } : p))};
     const filteredDocuments = documents.filter(d => d.name.toLowerCase().includes(searchQuery.toLowerCase()));
     if (!isOpen) {
+
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-emerald to-zion-blue text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Collaboration Platform">
         <Users className="w-6 h-6"/>
       </button>)}
     if (isMinimized) {
+
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
           <Users className="w-5 h-5 text-zion-emerald"/>
@@ -179,6 +191,7 @@ export function AdvancedCollaborationPlatform() {
             { id: 'documents', label: 'Documents', icon: FileText },
             { id: 'participants', label: 'Participants', icon: Users }
         ].map(tab => {
+
             const Icon = tab.icon;
             return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-4 py-2 border-b-2 transition-colors ${activeTab === tab.id
                     ? 'border-zion-emerald text-zion-emerald bg-zion-emerald/5'

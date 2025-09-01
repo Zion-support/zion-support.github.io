@@ -3,23 +3,28 @@ import { motion } from 'framer-motion';
 import { Shield, Lock, Zap, Eye, ArrowRight, Cpu, Database, Network, Globe, Users, TrendingUp, Target, CheckCircle, Clock, DollarSign, Brain, Key, Server, Cloud, ShieldCheck, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function QuantumCryptography() {
+
   const features = [
     {
+
       icon: Shield,
       title: 'Unbreakable Encryption',
       description: 'Quantum-resistant cryptographic algorithms that provide future-proof security'
     },
     {
+
       icon: Lock,
       title: 'Post-Quantum Security',
       description: 'Advanced security protocols designed to withstand quantum computing attacks'
     },
     {
+
       icon: Zap,
       title: 'Quantum Key Distribution',
       description: 'Secure key exchange using quantum entanglement principles'
     },
     {
+
       icon: Eye,
       title: 'Real-time Threat Detection',
       description: 'Instant identification and response to emerging security threats'
@@ -28,21 +33,25 @@ export default function QuantumCryptography() {
 
   const capabilities = [
     {
+
       title: 'Quantum-Resistant Algorithms',
       description: 'Implementation of lattice-based, hash-based, and multivariate cryptographic schemes',
       icon: Cpu
     },
     {
+
       title: 'Secure Key Management',
       description: 'Advanced key generation, distribution, and rotation systems',
       icon: Key
     },
     {
+
       title: 'Hardware Security Modules',
       description: 'Tamper-resistant hardware for secure cryptographic operations',
       icon: Server
     },
     {
+
       title: 'Cloud Security Integration',
       description: 'Seamless integration with existing cloud security infrastructure',
       icon: Cloud
@@ -51,21 +60,25 @@ export default function QuantumCryptography() {
 
   const benefits = [
     {
+
       title: 'Future-Proof Security',
       description: 'Protect your data against current and future quantum computing threats',
       icon: ShieldCheck
     },
     {
+
       title: 'Regulatory Compliance',
       description: 'Meet industry standards and government requirements for data protection',
       icon: CheckCircle
     },
     {
+
       title: 'Cost-Effective Protection',
       description: 'Prevent expensive data breaches and security incidents',
       icon: DollarSign
     },
     {
+
       title: 'Competitive Advantage',
       description: 'Stay ahead of competitors with cutting-edge security technology',
       icon: TrendingUp
@@ -74,6 +87,7 @@ export default function QuantumCryptography() {
 
   const pricing = [
     {
+
       plan: 'Starter',
       price: '$8,999',
       period: 'one-time',
@@ -86,6 +100,7 @@ export default function QuantumCryptography() {
       recommended: false
     },
     {
+
       plan: 'Professional',
       price: '$12,999',
       period: 'one-time',
@@ -99,6 +114,7 @@ export default function QuantumCryptography() {
       recommended: true
     },
     {
+
       plan: 'Enterprise',
       price: '$15,999',
       period: 'one-time',
@@ -297,6 +313,7 @@ export default function QuantumCryptography() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
+
                   plan.recommended 
                     ? 'border-violet-500 shadow-violet-500/20' 
                     : 'border-zion-slate-700'
@@ -326,6 +343,7 @@ export default function QuantumCryptography() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-xl font-medium transition-all duration-300 ${
+
                   plan.recommended
                     ? 'bg-violet-500 hover:bg-violet-600 text-white'
                     : 'bg-zion-slate-700 hover:bg-zion-slate-600 text-white'

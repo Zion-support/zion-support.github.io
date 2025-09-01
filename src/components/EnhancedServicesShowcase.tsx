@@ -2,8 +2,10 @@
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export const EnhancedServicesShowcase: React.FC = () => {
+
 export default React.memo (/**
 import {
+
 import { motion } from 'framer - motion';
 
  * EnhancedServicesShowcase function
@@ -11,9 +13,11 @@ import { motion } from 'framer - motion';
  * @returns {*} Function return value
  */
 function EnhancedServicesShowcase () {
+
 =======
 <<<<<<< HEAD
 import {
+
 >>>>>>> main
 
   Brain,
@@ -111,8 +115,10 @@ import {
 
   
     visible: {
+
       opacity: 1,;
       transition: {
+
         staggerChildren: 0.1}}};
 
 
@@ -166,6 +172,7 @@ export default function EnhancedServicesShowcase() {
           initial="hidden"
           whileInView="visible"
           viewport = {
+
   { once: true,
   margin: "-100px"
 =======

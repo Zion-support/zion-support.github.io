@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default React.memo (function GreenIT () {
+
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -173,8 +175,7 @@ import { SEO } from '../components / SEO';
   BatteryFull as BatteryFull10,
   BatteryLow as BatteryLow10,
   BatteryMedium as BatteryMedium10,
-  BatteryEmpty as BatteryEmpty10,
-} from 'lucide - react';
+  BatteryEmpty as BatteryEmpty10} from 'lucide - react';
 
   const [expandedSection, setExpandedSection] = useState < string | null> (null) ;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
@@ -189,6 +190,7 @@ import { SEO } from '../components / SEO';
 
   const greenSolutions = [
     {
+
       id: 'energy - monitoring',
       name: 'Smart Energy Monitoring',
       category: 'energy',
@@ -211,9 +213,9 @@ import { SEO } from '../components / SEO';
       ],
       savings: '15 - 25% energy reduction',
       implementation: '2 - 4 weeks',
-      pricing: 'Starting from $5,000',
-    },
+      pricing: 'Starting from $5,000'},
     {
+
       id: 'virtualization',
       name: 'Server Virtualization',
       category: 'hardware',
@@ -236,9 +238,9 @@ import { SEO } from '../components / SEO';
       ],
       savings: '60 - 80% power reduction',
       implementation: '4 - 8 weeks',
-      pricing: 'Starting from $15,000',
-    },
+      pricing: 'Starting from $15,000'},
     {
+
       id: 'cloud - optimization',
       name: 'Cloud Infrastructure Optimization',
       category: 'software',
@@ -261,9 +263,9 @@ import { SEO } from '../components / SEO';
       ],
       savings: '20 - 40% cost reduction',
       implementation: '3 - 6 weeks',
-      pricing: 'Starting from $8,000',
-    },
+      pricing: 'Starting from $8,000'},
     {
+
       id: 'data - center - efficiency',
       name: 'Data Center Efficiency',
       category: 'data',
@@ -286,9 +288,9 @@ import { SEO } from '../components / SEO';
       ],
       savings: '30 - 50% energy reduction',
       implementation: '8 - 16 weeks',
-      pricing: 'Starting from $25,000',
-    },
+      pricing: 'Starting from $25,000'},
     {
+
       id: 'smart - lighting',
       name: 'Smart Lighting Systems',
       category: 'energy',
@@ -311,9 +313,9 @@ import { SEO } from '../components / SEO';
       ],
       savings: '40 - 60% energy reduction',
       implementation: '2 - 3 weeks',
-      pricing: 'Starting from $3,000',
-    },
+      pricing: 'Starting from $3,000'},
     {
+
       id: 'green - software',
       name: 'Sustainable Software Development',
       category: 'software',
@@ -336,9 +338,9 @@ import { SEO } from '../components / SEO';
       ],
       savings: '20 - 35% energy reduction',
       implementation: 'Ongoing',
-      pricing: 'Starting from $10,000',
-    },
+      pricing: 'Starting from $10,000'},
     {
+
       id: 'renewable - energy',
       name: 'Renewable Energy Integration',
       category: 'energy',
@@ -361,9 +363,9 @@ import { SEO } from '../components / SEO';
       ],
       savings: '40 - 80% energy costs',
       implementation: '12 - 24 weeks',
-      pricing: 'Starting from $50,000',
-    },
+      pricing: 'Starting from $50,000'},
     {
+
       id: 'green - hardware',
       name: 'Energy - Efficient Hardware',
       category: 'hardware',
@@ -386,9 +388,9 @@ import { SEO } from '../components / SEO';
       ],
       savings: '25 - 40% power reduction',
       implementation: '1 - 2 weeks',
-      pricing: 'Starting from $2,000',
-    },
+      pricing: 'Starting from $2,000'},
     {
+
       id: 'waste - reduction',
       name: 'Electronic Waste Reduction',
       category: 'hardware',
@@ -411,9 +413,9 @@ import { SEO } from '../components / SEO';
       ],
       savings: 'Varies by program',
       implementation: '2 - 4 weeks',
-      pricing: 'Starting from $1,000',
-    },
+      pricing: 'Starting from $1,000'},
     {
+
       id: 'carbon - tracking',
       name: 'Carbon Footprint Tracking',
       category: 'software',
@@ -436,9 +438,9 @@ import { SEO } from '../components / SEO';
       ],
       savings: 'Measurable impact',
       implementation: '4 - 6 weeks',
-      pricing: 'Starting from $6,000',
-    },
+      pricing: 'Starting from $6,000'},
     {
+
       id: 'green - networking',
       name: 'Energy - Efficient Networking',
       category: 'data',
@@ -461,9 +463,9 @@ import { SEO } from '../components / SEO';
       ],
       savings: '20 - 35% energy reduction',
       implementation: '3 - 5 weeks',
-      pricing: 'Starting from $12,000',
-    },
+      pricing: 'Starting from $12,000'},
     {
+
       id: 'sustainability - reporting',
       name: 'Sustainability Reporting Platform',
       category: 'software',
@@ -486,66 +488,66 @@ import { SEO } from '../components / SEO';
       ],
       savings: 'Time and resource savings',
       implementation: '6 - 8 weeks',
-      pricing: 'Starting from $8,000',
-    },
+      pricing: 'Starting from $8,000'},
   ];
 
   const environmentalImpact = [
     {
+
       icon: TreePine,
       metric: '2,500+',
       label: 'Trees Planted',
-      description: 'Equivalent carbon offset through our green initiatives',
-    },
+      description: 'Equivalent carbon offset through our green initiatives'},
     {
+
       icon: Zap,
       metric: '45%',
       label: 'Energy Reduction',
-      description: 'Average energy savings for our clients',
-    },
+      description: 'Average energy savings for our clients'},
     {
+
       icon: Recycle,
       metric: '15,000+',
       label: 'Devices Recycled',
-      description: 'Electronic waste diverted from landfills',
-    },
+      description: 'Electronic waste diverted from landfills'},
     {
+
       icon: Globe,
       metric: '2,800',
       label: 'Tons CO2 Saved',
-      description: 'Carbon emissions reduced through our solutions',
-    },
+      description: 'Carbon emissions reduced through our solutions'},
   ];
 
   const certifications = [
     {
+
       name: 'ISO 14001',
       description: 'Environmental Management Systems',
       icon: Award,
-      color: 'from - green - 500 to - emerald - 500',
-    },
+      color: 'from - green - 500 to - emerald - 500'},
     {
+
       name: 'Energy Star',
       description: 'Energy Efficiency Certification',
       icon: Star,
-      color: 'from - yellow - 500 to - orange - 500',
-    },
+      color: 'from - yellow - 500 to - orange - 500'},
     {
+
       name: 'LEED',
       description: 'Leadership in Energy and Environmental Design',
       icon: Leaf,
-      color: 'from - blue - 500 to - cyan - 500',
-    },
+      color: 'from - blue - 500 to - cyan - 500'},
     {
+
       name: 'Green Seal',
       description: 'Environmental Standard Certification',
       icon: CheckCircle,
-      color: 'from - purple - 500 to - pink - 500',
-    },
+      color: 'from - purple - 500 to - pink - 500'},
   ];
 
   const caseStudies = [
     {
+
       title: 'Fortune 500 Manufacturing Company',
       industry: 'Manufacturing',
       challenge:
@@ -559,9 +561,9 @@ import { SEO } from '../components / SEO';
         'Improved system performance by 40%',
       ],
       savings: '$2.3M annually',
-      timeline: '6 months',
-    },
+      timeline: '6 months'},
     {
+
       title: 'Healthcare Network',
       industry: 'Healthcare',
       challenge: 'Inefficient data centers consuming excessive energy',
@@ -574,9 +576,9 @@ import { SEO } from '../components / SEO';
         'Enhanced patient data security',
       ],
       savings: '$1.8M annually',
-      timeline: '8 months',
-    },
+      timeline: '8 months'},
     {
+
       title: 'Educational Institution',
       industry: 'Education',
       challenge: 'High electricity bills from inefficient campus technology',
@@ -589,11 +591,11 @@ import { SEO } from '../components / SEO';
         'Enhanced sustainability curriculum',
       ],
       savings: '$850K annually',
-      timeline: '4 months',
-    },
+      timeline: '4 months'},
   ];
 
   const toggleSection = (sectionId: string) => {
+
     setExpandedSection (expandedSection === sectionId ? null : sectionId) ;
   };
 
@@ -706,6 +708,7 @@ import { SEO } from '../components / SEO';
             {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                 onClick={ () => setSelectedCategory (category.id) }
                 className={`px - 6 py - 3 rounded - lg font - medium transition - all duration - 200 ${
+
                   selectedCategory === category.id
                     ? 'bg - gradient - to - r from - green - 400 to - blue - 500 text - white'
                     : 'bg - slate - 800 / 50 text - gray - 300 hover:bg - slate - 700 / 50'
@@ -727,6 +730,7 @@ import { SEO } from '../components / SEO';
                     <div role="button" className="flex items - center gap - 3 mb - 4">
                       <span
                         className={`px - 3 py - 1 rounded - full text - xs font - medium ${
+
                           solution.category === 'energy'
                             ? 'bg - green - 500 / 20 text - green - 400'
                             : solution.category === 'hardware'

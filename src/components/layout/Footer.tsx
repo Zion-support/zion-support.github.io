@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Mail, 
   Phone, 
   MapPin, 
@@ -61,10 +62,12 @@ import {
 } from 'lucide-react';
 
 export function Footer() {
+
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
+
       title: "AI & Automation Services",
       icon: Brain,
       links: [
@@ -90,6 +93,7 @@ export function Footer() {
       ]
     },
     {
+
       title: "Quantum Computing",
       icon: Atom,
       links: [
@@ -101,6 +105,7 @@ export function Footer() {
       ]
     },
     {
+
       title: "IT Infrastructure",
       icon: Server,
       links: [
@@ -113,6 +118,7 @@ export function Footer() {
       ]
     },
     {
+
       title: "Micro SAAS Solutions",
       icon: Building2,
       links: [
@@ -137,16 +143,19 @@ export function Footer() {
 
   const contactInfo = [
     {
+
       icon: Phone,
       text: "+1 302 464 0950",
       href: "tel:+13024640950"
     },
     {
+
       icon: Mail,
       text: "kleber@ziontechgroup.com",
       href: "mailto:kleber@ziontechgroup.com"
     },
     {
+
       icon: MapPin,
       text: "364 E Main St STE 1008 Middletown DE 19709",
       href: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"

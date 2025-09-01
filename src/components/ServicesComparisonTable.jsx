@@ -1,9 +1,12 @@
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react';
 import React from 'react';
 import {
+
 <<<<<<< HEAD
 import {
+
 import {
+
 import { Badge } from './ui / badge';
 import { Button } from './ui / button';
 =======

@@ -1,12 +1,12 @@
 name: Enhanced Link Checker
 on:
   schedule:
-    - cron: '0 6 * * 1'  # Weekly on Monday at 6 AM
+    - cron: '0 6 * * 1' # Weekly on Monday at 6 AM
   workflow_dispatch:
   push:
-    branches: [ main, develop ]
+    branches: [main, develop]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 permissions:
   contents: write
@@ -21,38 +21,38 @@ jobs:
     name: Check External Links
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-          
+
       - name: Install linkinator
         run: npm install -g linkinator
-        
+
       - name: Validate configuration
         run: |
           echo "🔍 Validating external links configuration..."
-          
+
           if [ ! -f "config/external-links.json" ]; then
             echo "❌ Configuration file not found: config/external-links.json"
             exit 1
           fi
-          
+
           # Validate JSON format
           if ! jq empty config/external-links.json 2>/dev/null; then
             echo "❌ Invalid JSON format in config/external-links.json"
             exit 1
           fi
-          
+
           # Extract URLs from config
           jq -r '.links[].url' config/external-links.json > external_links.txt
-          
+
           link_count=$(wc -l < external_links.txt)
           echo "✅ Configuration validated successfully"
           echo "📊 Found $link_count links to check"
@@ -60,7 +60,7 @@ jobs:
           echo "Links to be checked:"
           cat external_links.txt
           echo ""
-          
+
       - name: Check external links
         run: |
           echo "🔗 Starting external link health check..."
@@ -68,7 +68,7 @@ jobs:
           echo "🔄 Retry attempts: 3"
           echo "🚀 Concurrency: 10"
           echo ""
-          
+
           # Run linkinator with enhanced options
           linkinator external_links.txt \
             --format json \
@@ -79,9 +79,9 @@ jobs:
             --retry-status-codes 408,429,500,502,503,504 \
             --skip '.*(logout|signout|admin).*' \
             > link_report.json || true
-          
+
           echo "✅ Link check completed. Generating comprehensive report..."
-          
+
       - name: Generate comprehensive report
         run: |
           if [ -f link_report.json ]; then
@@ -307,7 +307,7 @@ jobs:
             echo "- Verify the external-links.json configuration file" >> LINK_REPORT.md
             echo "- Test linkinator locally if possible" >> LINK_REPORT.md
           fi
-          
+
       - name: Create issue for broken links
         if: |
           always() && 
@@ -316,7 +316,7 @@ jobs:
            contains(fromJson('${{ toJSON(steps.generate-comprehensive-report.outputs) }}'), 'error_links'))
         uses: peter-evans/create-issue-from-file@v5
         with:
-          title: "🔗 External Link Health Check - Issues Detected (Score: ${{ steps.generate-comprehensive-report.outputs.health_score }}%)"
+          title: '🔗 External Link Health Check - Issues Detected (Score: ${{ steps.generate-comprehensive-report.outputs.health_score }}%)'
           content-filepath: LINK_REPORT.md
           labels: |
             link-check
@@ -327,13 +327,13 @@ jobs:
           assignees: ''
           body: |
             ## 🔗 External Link Health Check
-            
+
             This issue was automatically created by the Enhanced Link Checker workflow.
-            
+
             **Workflow Run:** [${{ github.workflow }} #${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
-            
+
             Please review the attached comprehensive report and take appropriate action to fix any broken or problematic external links.
-            
+
             ### 🎯 Quick Actions:
             - [ ] Review broken links (Priority: High)
             - [ ] Check timeout links (Priority: Medium)
@@ -341,9 +341,9 @@ jobs:
             - [ ] Update or remove problematic URLs
             - [ ] Test fixes
             - [ ] Close this issue when resolved
-            
+
             ### 📊 Health Score: ${{ steps.generate-comprehensive-report.outputs.health_score }}%
-            
+
       - name: Upload comprehensive report
         uses: actions/upload-artifact@v4
         with:
@@ -354,7 +354,7 @@ jobs:
             external_links.txt
             config/external-links.json
           retention-days: 90
-          
+
       - name: Comment on PR with summary
         if: github.event_name == 'pull_request'
         uses: actions/github-script@v7
@@ -362,36 +362,36 @@ jobs:
           script: |
             const fs = require('fs');
             const report = fs.readFileSync('LINK_REPORT.md', 'utf8');
-            
+
             // Extract health score and summary
             const healthScoreMatch = report.match(/🏆 \*\*Health Score\*\* \| \*\*(\d+)%\*\* \|/);
             const healthScore = healthScoreMatch ? healthScoreMatch[1] : 'Unknown';
-            
+
             const gradeMatch = report.match(/📊 \*\*Grade\*\* \| \*\*([^|]+)\*\* \|/);
             const grade = gradeMatch ? gradeMatch[1].trim() : 'Unknown';
-            
+
             const summaryMatch = report.match(/## 📊 Executive Summary[\s\S]*?(?=##|$)/);
             const summary = summaryMatch ? summaryMatch[0] : '## 📊 Executive Summary\n\nLink check completed. See full report in artifacts.';
-            
+
             const hasIssues = report.includes('❌ Broken Links') || report.includes('⏰ Timeout Links') || report.includes('🔴 Error Links');
-            
+
             const comment = `## 🔗 External Link Health Check Results
-            
+
             ${summary}
-            
+
             **Full Report:** Available in workflow artifacts
             **Status:** ${hasIssues ? '⚠️ Issues Detected' : '✅ All Good!'}
             **Health Score:** ${healthScore}% ${grade}
-            
+
             *This comment was automatically generated by the Enhanced Link Checker workflow*`;
-            
+
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: comment
             });
-            
+
       - name: Set workflow status and outputs
         id: workflow-status
         run: |
@@ -427,14 +427,14 @@ jobs:
             echo "status=error" >> $GITHUB_OUTPUT
             exit 1
           fi
-          
+
       - name: Success notification
         if: steps.workflow-status.outputs.status == 'success'
         run: |
           echo "🎉 External link health check completed successfully!"
           echo "🏆 Health Score: ${{ steps.workflow-status.outputs.health_score }}%"
           echo "✅ All external links are healthy and working correctly."
-          
+
       - name: Warning notification
         if: steps.workflow-status.outputs.status == 'warning'
         run: |

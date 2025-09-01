@@ -1,6 +1,7 @@
 export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
     // AI-Powered Brain-Computer Interface Platform
     {
+
         id: "brain-computer-interface-ai",
         name: "BrainLink AI Platform",
         category: "Neurotechnology",
@@ -43,6 +44,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com",
@@ -58,6 +60,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
     },
     // AI-Powered Space Technology Platform
     {
+
         id: "space-technology-ai",
         name: "SpaceTech AI Platform",
         category: "Space Technology",
@@ -100,6 +103,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com",
@@ -115,6 +119,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
     },
     // AI-Powered Quantum Internet Platform
     {
+
         id: "quantum-internet-ai",
         name: "QuantumNet AI Platform",
         category: "Quantum Technology",
@@ -157,6 +162,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         estimatedDelivery: "8-10 weeks",
         supportLevel: "enterprise",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com",
@@ -172,6 +178,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
     },
     // AI-Powered Autonomous Vehicle Fleet Management
     {
+
         id: "autonomous-vehicle-fleet-ai",
         name: "AutoFleet AI Platform",
         category: "Autonomous Vehicles",
@@ -214,6 +221,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         estimatedDelivery: "5-7 weeks",
         supportLevel: "enterprise",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com",
@@ -229,6 +237,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
     },
     // AI-Powered Climate Prediction and Adaptation Platform
     {
+
         id: "climate-prediction-adaptation-ai",
         name: "ClimateAI Adaptation Platform",
         category: "Climate Technology",
@@ -271,6 +280,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com",

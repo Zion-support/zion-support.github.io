@@ -2,7 +2,9 @@ import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 import { SEO } from '@/components / SEO';
 export default React.memo (function InnovativeServicesShowcase2028 () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Brain,
@@ -62,8 +64,7 @@ import { motion } from 'framer - motion';
   Brain as BrainIcon,
   Atom as AtomIcon,
   Rocket as RocketIcon,
-  Leaf as LeafIcon,
-} from 'lucide - react';
+  Leaf as LeafIcon} from 'lucide - react';
 
   const [activeCategory, setActiveCategory] = useState ('all') ;
   const [searchQuery, setSearchQuery] = useState ('') ;
@@ -71,6 +72,7 @@ import { motion } from 'framer - motion';
   // Enhanced service categories with real market prices and features
   const serviceCategories = [
     {
+
       id: 'ai - services',
       name: 'AI & Machine Learning Services',
       icon: Brain,
@@ -79,6 +81,7 @@ import { motion } from 'framer - motion';
         'Cutting - edge artificial intelligence solutions for business transformation',
       services: [
         {
+
           name: 'AI - Powered Business Intelligence Platform',
           description:
             'Advanced analytics with machine learning insights and predictive modeling',
@@ -99,9 +102,9 @@ import { motion } from 'framer - motion';
           ],
           icon: BarChart3,
           category: 'ai - services',
-          badge: 'Popular',
-        },
+          badge: 'Popular'},
         {
+
           name: 'AI Customer Experience Platform',
           description:
             'Intelligent customer engagement with personalized recommendations and sentiment analysis',
@@ -122,9 +125,9 @@ import { motion } from 'framer - motion';
           ],
           icon: Users,
           category: 'ai - services',
-          badge: 'New',
-        },
+          badge: 'New'},
         {
+
           name: 'AI Cybersecurity Threat Detection',
           description:
             'Advanced threat detection using machine learning and behavioral analysis',
@@ -145,11 +148,10 @@ import { motion } from 'framer - motion';
           ],
           icon: Shield,
           category: 'ai - services',
-          badge: 'Featured',
-        },
-      ],
-    },
+          badge: 'Featured'},
+      ]},
     {
+
       id: 'micro - saas',
       name: 'Micro SAAS Solutions',
       icon: Zap,
@@ -158,6 +160,7 @@ import { motion } from 'framer - motion';
         'Scalable software - as - a-service solutions for specific business needs',
       services: [
         {
+
           name: 'AI - Powered Project Management Suite',
           description:
             'Intelligent project planning, resource allocation, and progress tracking',
@@ -178,9 +181,9 @@ import { motion } from 'framer - motion';
           ],
           icon: Workflow,
           category: 'micro - saas',
-          badge: 'Best Value',
-        },
+          badge: 'Best Value'},
         {
+
           name: 'Smart Inventory Management System',
           description:
             'AI - driven inventory optimization with demand forecasting and automated reordering',
@@ -201,9 +204,9 @@ import { motion } from 'framer - motion';
           ],
           icon: Truck,
           category: 'micro - saas',
-          badge: 'Popular',
-        },
+          badge: 'Popular'},
         {
+
           name: 'AI Content Creation Platform',
           description:
             'Automated content generation with SEO optimization and brand consistency',
@@ -224,11 +227,10 @@ import { motion } from 'framer - motion';
           ],
           icon: Brain, // Changed from PenTool to Brain for consistency with AI services
           category: 'micro - saas',
-          badge: 'New',
-        },
-      ],
-    },
+          badge: 'New'},
+      ]},
     {
+
       id: 'it - services',
       name: 'IT Infrastructure & Services',
       icon: Server,
@@ -237,6 +239,7 @@ import { motion } from 'framer - motion';
         'Comprehensive IT solutions for modern business infrastructure',
       services: [
         {
+
           name: 'Cloud Migration & Optimization',
           description:
             'Seamless cloud migration with cost optimization and performance tuning',
@@ -257,9 +260,9 @@ import { motion } from 'framer - motion';
           ],
           icon: Cloud,
           category: 'it - services',
-          badge: 'Featured',
-        },
+          badge: 'Featured'},
         {
+
           name: 'DevOps Automation Platform',
           description:
             'End - to - end DevOps automation with CI / CD pipelines and infrastructure as code',
@@ -280,9 +283,9 @@ import { motion } from 'framer - motion';
           ],
           icon: Code,
           category: 'it - services',
-          badge: 'Popular',
-        },
+          badge: 'Popular'},
         {
+
           name: 'Cybersecurity Compliance Suite',
           description:
             'Comprehensive security compliance for GDPR, HIPAA, SOC2, and industry standards',
@@ -303,11 +306,10 @@ import { motion } from 'framer - motion';
           ],
           icon: Lock,
           category: 'it - services',
-          badge: 'Essential',
-        },
-      ],
-    },
+          badge: 'Essential'},
+      ]},
     {
+
       id: 'quantum - tech',
       name: 'Quantum & Emerging Technologies',
       icon: Atom,
@@ -315,6 +317,7 @@ import { motion } from 'framer - motion';
       description: 'Next - generation technologies for future - ready businesses',
       services: [
         {
+
           name: 'Quantum Computing Solutions',
           description:
             'Quantum algorithms for optimization, cryptography, and complex problem solving',
@@ -335,9 +338,9 @@ import { motion } from 'framer - motion';
           ],
           icon: Atom,
           category: 'quantum - tech',
-          badge: 'Future Tech',
-        },
+          badge: 'Future Tech'},
         {
+
           name: 'Blockchain Enterprise Platform',
           description:
             'Secure blockchain solutions for supply chain, finance, and digital identity',
@@ -358,9 +361,9 @@ import { motion } from 'framer - motion';
           ],
           icon: LinkIcon,
           category: 'quantum - tech',
-          badge: 'Innovative',
-        },
+          badge: 'Innovative'},
         {
+
           name: 'IoT Edge Computing Platform',
           description:
             'Real - time data processing at the edge for industrial IoT applications',
@@ -381,11 +384,10 @@ import { motion } from 'framer - motion';
           ],
           icon: Cpu,
           category: 'quantum - tech',
-          badge: 'Industrial',
-        },
-      ],
-    },
+          badge: 'Industrial'},
+      ]},
     {
+
       id: 'green - tech',
       name: 'Green Technology Solutions',
       icon: Leaf,
@@ -394,6 +396,7 @@ import { motion } from 'framer - motion';
         'Sustainable technology solutions for environmental responsibility',
       services: [
         {
+
           name: 'Carbon Footprint Analytics Platform',
           description:
             'AI - powered carbon tracking and sustainability reporting for businesses',
@@ -414,9 +417,9 @@ import { motion } from 'framer - motion';
           ],
           icon: Leaf,
           category: 'green - tech',
-          badge: 'Eco - Friendly',
-        },
+          badge: 'Eco - Friendly'},
         {
+
           name: 'Smart Energy Management System',
           description:
             'Intelligent energy optimization using IoT sensors and AI analytics',
@@ -437,11 +440,10 @@ import { motion } from 'framer - motion';
           ],
           icon: Zap,
           category: 'green - tech',
-          badge: 'Cost - Effective',
-        },
-      ],
-    },
+          badge: 'Cost - Effective'},
+      ]},
     {
+
       id: 'space - tech',
       name: 'Space Technology Solutions',
       icon: Satellite,
@@ -450,6 +452,7 @@ import { motion } from 'framer - motion';
         'Satellite and space - based technology for global connectivity and insights',
       services: [
         {
+
           name: 'Satellite Data Analytics Platform',
           description:
             'Earth observation data analysis for agriculture, climate, and urban planning',
@@ -470,18 +473,16 @@ import { motion } from 'framer - motion';
           ],
           icon: Satellite,
           category: 'space - tech',
-          badge: 'Global',
-        },
-      ],
-    },
+          badge: 'Global'},
+      ]},
   ];
 
   const contactInfo = {
+
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
 
   const filteredServices = serviceCategories.flatMap (category =>
     category.services.filter (service => (activeCategory === 'all' || service.category === activeCategory) && (searchQuery === '' ||
@@ -489,23 +490,23 @@ import { motion } from 'framer - motion';
           service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ) ) ;
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+
+        staggerChildren: 0.1}}};
 
   const itemVariants = {
+
     hidden: { opacity: 0, y: 20 },
     visible: {
+
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
+      transition: { duration: 0.6 }}};
 
   return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 text - white">
       <SEO
@@ -574,6 +575,7 @@ import { motion } from 'framer - motion';
             <div role="button" className="flex flex - wrap gap - 2">
               <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveCategory ('all') }
                 className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 ${
+
                   activeCategory === 'all'
                     ? 'bg - cyan - 500 text - white shadow - lg shadow - cyan - 500 / 25'
                     : 'bg - slate - 700 text - slate - 300 hover:bg - slate - 600'
@@ -584,6 +586,7 @@ import { motion } from 'framer - motion';
               {serviceCategories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setActiveCategory (category.id) }
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 ${
+
                     activeCategory === category.id
                       ? 'bg - cyan - 500 text - white shadow - lg shadow - cyan - 500 / 25'
                       : 'bg - slate - 700 text - slate - 300 hover:bg - slate - 600'
@@ -616,6 +619,7 @@ import { motion } from 'framer - motion';
                     </div>
                     {service.badge && (<span
                         className={`px - 3 py - 1 text - xs font - semibold rounded - full ${
+
                           service.badge === 'Popular'
                             ? 'bg - blue - 500 / 20 text - blue - 400 border border - blue - 500 / 30'
                             : service.badge === 'New'
@@ -843,29 +847,29 @@ import { motion } from 'framer - motion';
           >
             {[
               {
+
                 icon: Award,
                 title: 'Proven Expertise',
                 description:
-                  '500 + successful projects across industries with measurable results',
-              },
+                  '500 + successful projects across industries with measurable results'},
               {
+
                 icon: Zap,
                 title: 'Innovation First',
                 description:
-                  'Cutting - edge technologies and methodologies for competitive advantage',
-              },
+                  'Cutting - edge technologies and methodologies for competitive advantage'},
               {
+
                 icon: Shield,
                 title: 'Enterprise Security',
                 description:
-                  'Bank - level security and compliance for enterprise - grade solutions',
-              },
+                  'Bank - level security and compliance for enterprise - grade solutions'},
               {
+
                 icon: Heart,
                 title: '24 / 7 Support',
                 description:
-                  'Round - the - clock technical support and maintenance services',
-              },
+                  'Round - the - clock technical support and maintenance services'},
             ].map ( (item, index) => (<motion.div
                 key={index}
                 variants={itemVariants}

@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 export default ComprehensivePricing2025;
 
 const ComprehensivePricing2025 = () => {
+
   const [selectedCategory, setSelectedCategory] = useState ('All') ;
   const [selectedIndustry, setSelectedIndustry] = useState ('All') ;
 
   const pricingData = [
     {
+
       id: 1,
       name: 'AI Business Process Automation',
       description: 'Intelligent automation for complex business processes',
@@ -26,9 +28,9 @@ const ComprehensivePricing2025 = () => {
       icon: '🤖',
       popular: true,
       roi: '300%',
-      delivery: '2 - 4 weeks',
-    },
+      delivery: '2 - 4 weeks'},
     {
+
       id: 2,
       name: 'AI Customer Experience Platform',
       description:
@@ -49,9 +51,9 @@ const ComprehensivePricing2025 = () => {
       icon: '💝',
       popular: false,
       roi: '250%',
-      delivery: '3 - 5 weeks',
-    },
+      delivery: '3 - 5 weeks'},
     {
+
       id: 3,
       name: 'AI Supply Chain Optimization',
       description:
@@ -72,9 +74,9 @@ const ComprehensivePricing2025 = () => {
       icon: '📦',
       popular: true,
       roi: '400%',
-      delivery: '4 - 6 weeks',
-    },
+      delivery: '4 - 6 weeks'},
     {
+
       id: 4,
       name: 'AI Cybersecurity Suite',
       description:
@@ -95,9 +97,9 @@ const ComprehensivePricing2025 = () => {
       icon: '🔒',
       popular: false,
       roi: '350%',
-      delivery: '2 - 3 weeks',
-    },
+      delivery: '2 - 3 weeks'},
     {
+
       id: 5,
       name: 'Cloud & DevOps Solutions',
       description: 'Scalable cloud infrastructure and automated deployment',
@@ -117,8 +119,7 @@ const ComprehensivePricing2025 = () => {
       icon: '☁️',
       popular: false,
       roi: '280%',
-      delivery: '3 - 4 weeks',
-    },
+      delivery: '3 - 4 weeks'},
   ];
 
   const categories = ['All', 'AI Services', 'Cybersecurity', 'Cloud Services'];
@@ -131,6 +132,7 @@ const ComprehensivePricing2025 = () => {
   ];
 
   const filteredData = pricingData.filter (item => {
+
     const categoryMatch = selectedCategory === 'All' || item.category === selectedCategory;
     const industryMatch = selectedIndustry === 'All' || item.industry === selectedIndustry;
     return categoryMatch && industryMatch;
@@ -190,6 +192,7 @@ const ComprehensivePricing2025 = () => {
           {filteredData.map (item => (<div
               key={item.id}
               className={`bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border ${
+
                 item.popular ? 'border - zion - cyan' : 'border - white / 20'
               } relative`}
             >

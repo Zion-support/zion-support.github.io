@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
 const $page = () => {
+
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -28,8 +29,10 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { Check, Star, Zap, Shield, Brain, Cloud, Users, MessageCircle, FileText } from "lucide-react";
 export default function Pricing() {
+
     const pricingTiers = [
         {
+
             name: "Starter",
             price: "$19",
             period: "/month",
@@ -47,6 +50,7 @@ export default function Pricing() {
             link: "/signup?plan=starter"
         },
         {
+
             name: "Professional",
             price: "$49",
             period: "/month",
@@ -68,6 +72,7 @@ export default function Pricing() {
             link: "/signup?plan=professional"
         },
         {
+
             name: "Business",
             price: "$99",
             period: "/month",
@@ -93,6 +98,7 @@ export default function Pricing() {
             link: "/signup?plan=business"
         },
         {
+
             name: "Enterprise",
             price: "Custom",
             period: "",
@@ -120,6 +126,7 @@ export default function Pricing() {
     ];
     const serviceCategories = [
         {
+
             name: "AI & Machine Learning",
             icon: <Brain className="h-8 w-8 text-zion-cyan"/>,
             services[
@@ -130,6 +137,7 @@ export default function Pricing() {
             ]
         },
         {
+
             name: "Cybersecurity",
             icon: <Shield className="h-8 w-8 text-zion-purple"/>,
             services[
@@ -139,6 +147,7 @@ export default function Pricing() {
             ]
         },
         {
+
             name: "Cloud & Infrastructure",
             icon: <Cloud className="h-8 w-8 text-zion-blue"/>,
             services[
@@ -148,6 +157,7 @@ export default function Pricing() {
             ]
         },
         {
+
             name: "Business Intelligence",
             icon: <Users className="h-8 w-8 text-zion-green"/>,
             services[
@@ -157,6 +167,7 @@ export default function Pricing() {
             ]
         },
         {
+
             name: "Communication & Collaboration",
             icon: <MessageCircle className="h-8 w-8 text-zion-orange"/>,
             services[
@@ -166,6 +177,7 @@ export default function Pricing() {
             ]
         },
         {
+
             name: "Specialized Tools",
             icon: <FileText className="h-8 w-8 text-zion-red"/>,
             services[

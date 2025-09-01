@@ -1,4 +1,5 @@
 export interface InnovativeITInfrastructureService {
+
   id: string;
   title: string;
   description: string;
@@ -85,12 +86,14 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     roi: "300-500%","
     innovationLevel: "Cutting-edge",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Kubernetes", "Docker", "Terraform", "Python", "React"],;"
       integrations["AWS", "Azure", "Google Cloud", "DigitalOcean", "Vultr"],;
@@ -102,6 +105,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
 
   // Edge Computing & IoT Platform
   {
+
 "
     id: "edge-computing-iot-platform","
     title: "Edge Computing & IoT Platform Enterprise","
@@ -151,12 +155,14 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     roi: "250-400%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Kubernetes Edge", "Docker Edge", "MQTT", "WebRTC", "Node.js"],;"
       integrations["IoT platforms", "Cloud services", "Network equipment", "Industrial systems", "Mobile networks"],;
@@ -168,6 +174,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
 
   // Quantum-Ready Network Infrastructure
   {
+
 "
     id: "quantum-ready-network-infrastructure","
     title: "Quantum-Ready Network Infrastructure","
@@ -217,12 +224,14 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     roi: "400-800%","
     innovationLevel: "Revolutionary",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Quantum protocols", "Post-quantum crypto", "Quantum networks", "Python", "C++"],;"
       integrations["Quantum computers", "Classical networks", "Security systems", "Monitoring tools", "Research platforms"],;
@@ -234,6 +243,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
 
   // AI-Powered Data Center Management
   {
+
 "
     id: "ai-powered-data-center-management","
     title: "AI-Powered Data Center Management Platform","
@@ -283,12 +293,14 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     roi: "200-350%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Python", "TensorFlow", "IoT sensors", "Machine Learning", "React"],;"
       integrations["Building management systems", "Power monitoring", "Cooling systems", "Server management", "Environmental sensors"],;
@@ -300,6 +312,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
 
   // 5G & 6G Network Infrastructure
   {
+
 "
     id: "5g-6g-network-infrastructure","
     title: "5G & 6G Network Infrastructure Solutions","
@@ -349,12 +362,14 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     roi: "300-600%","
     innovationLevel: "Cutting-edge",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["5G NR", "Network slicing", "Edge computing", "AI/ML", "Python"],;"
       integrations["Core networks", "Radio access networks", "Edge computing", "Cloud services", "IoT platforms"],;

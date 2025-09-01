@@ -1,5 +1,6 @@
 
 interface ForumCategoryInfo {
+
   id: string;
   name: string;
   description: string;

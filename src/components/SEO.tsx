@@ -10,8 +10,10 @@
 function SEO ({
 
 interface SEOProps {
+
 =======
 type SEOProps = {
+
 >>>>>>> main
   title?: string;
   description?: string;
@@ -66,8 +68,6 @@ export function SEO({
   tags = [],
   canonical}: SEOProps) {
 
-  
-  
   // Structured data for organization
   
   // Structured data for website
@@ -77,11 +77,13 @@ export function SEO({
 };
 
 export function SEO({
+
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Zion Tech Group delivers AI, cloud, cybersecurity and digital transformation services.',
   url = 'https://ziontechgroup.com',
   image = '/og-image.jpg'
 }: SEOProps) {
+
   return (
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     <Helmet>
@@ -122,6 +124,7 @@ export function SEO({
 
           /* Optimize font loading */
           @font - face {
+
             font - family: 'Orbitron';
             font - display: swap;
             src: url ('/fonts / orbitron - v16 - latin - 400.woff2') format ('woff2') ;
@@ -130,6 +133,7 @@ export function SEO({
           }
 
           @font - face {
+
             font - family: 'Orbitron';
             font - display: swap;
             src: url ('/fonts / orbitron - v16 - latin - 600.woff2') format ('woff2') ;
@@ -139,6 +143,7 @@ export function SEO({
 
           /* Reduce layout shift */
           img {
+
             max - width: 100%;
             height: auto;
           }
@@ -190,8 +195,8 @@ export function SEO({
 
             window.addEventListener('load', () => {
 
-              
               if (navigation) {
+
 <<<<<<< HEAD
                 const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
                 console.log ('Page load time:', loadTime + 'ms') ;
@@ -199,7 +204,7 @@ export function SEO({
 =======
 
                 
-                // console.log('Page load time:', loadTime + 'ms');
+                // // // // console.log('Page load time:', loadTime + 'ms');
                 
 >>>>>>> main
                 // Send to analytics if available
@@ -216,6 +221,7 @@ export function SEO({
 
           // Core Web Vitals monitoring
           if ('web - vital' in window) {
+
               getCLS (console.log) ;
               getFID (console.log) ;
               getFCP (console.log) ;

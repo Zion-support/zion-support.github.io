@@ -8,6 +8,7 @@ function withAuth(Component) {
         const router = useNavigate();
         const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
         useEffect(() => {
+
     // TODO: Add dependencies if needed
 
             if (!isLoggedIn) {

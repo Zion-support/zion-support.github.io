@@ -2,6 +2,7 @@ export function Testimonials(...args: any[]): any {
 
 <<<<<<< HEAD
   interface Testimonial {
+
     quote: string;
     author: string;
     role: string;
@@ -11,6 +12,7 @@ export function Testimonials(...args: any[]): any {
   }
 
   interface TestimonialsProps extends React.PropsWithChildren<{}> {
+
     testimonials: Testimonial[];
   }
 

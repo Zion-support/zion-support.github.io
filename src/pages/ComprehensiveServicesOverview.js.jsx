@@ -16,6 +16,7 @@ const ALL_SERVICES = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES
 ];
 const categoryColors = {
+
   'AI & Legal Tech': 'from-blue-500 to-indigo-500',
     'AI & FinTech': 'from-green-500 to-emerald-500',
     'AI & Healthcare': 'from-red-500 to-pink-500',
@@ -44,6 +45,7 @@ const categoryColors = {
 
 };
 const supportLevelColors = {
+
   'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',
     'enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500',
   'basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
@@ -51,6 +53,7 @@ const supportLevelColors = {
 
 };
 export default function ComprehensiveServicesOverview() {
+
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
@@ -58,35 +61,44 @@ export default function ComprehensiveServicesOverview() {
     const filtered = ALL_SERVICES;
         // Search filter
         if (searchQuery) {
+
             const lowerQuery = searchQuery.toLowerCase();
             filtered = filtered.filter(service => service.title.toLowerCase().includes(lowerQuery) ||
                 service.description.toLowerCase().includes(lowerQuery) ||
                 (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))))}
         // Category filter
         if (selectedCategory !== 'all') {
+
             filtered = filtered.filter(service => service.category === selectedCategory)}
         // Price range filter
         if (priceRange !== 'all') {
+
             switch (priceRange) {
+
                 case 'low':
                     filtered = filtered.filter(service => {
+
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
                         return price <= 1000});
                     break;
                 case 'medium':
                     filtered = filtered.filter(service => {
+
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
                         return price > 1000 && price <= 3000});
                     break;
                 case 'high':
                     filtered = filtered.filter(service => {
+
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
                         return price > 3000});
                     break}
         }
     });
     const getServicePrice = (service) => {
+
         if (typeof service.price === 'number') {
+
             return service.price}
     };
     return (<>
@@ -215,10 +227,12 @@ export default function ComprehensiveServicesOverview() {
                 <p className="text-zion-slate-light">Try adjusting your search criteria or filters</p>
               </div>) : (<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {
+
   { opacity: 0,
   x: -20 
 
 }} animate = {
+
   { opacity: 1,
   x: 0 
 
@@ -228,6 +242,7 @@ export default function ComprehensiveServicesOverview() {
                         <div className="flex items-start justify-between mb-4">
                           <div className={`p-3 rounded-xl ${categoryColors[service.category] || 'from-gray-500 to-gray-600'}`}>
                             {React.createElement(categoryIcons[service.category] || Settings, {
+
                     className: "h-6 w-6 text-white"
                 })}
                           </div>

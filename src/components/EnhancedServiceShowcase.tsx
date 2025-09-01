@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -24,6 +25,7 @@ import { motion, AnimatePresence } from 'framer - motion';
  } from 'lucide-react';
 
 interface Service {
+
   id: string;
   title: string;
   description: string;
@@ -169,6 +171,7 @@ const services: Service[] = [
 
     
     if (element) {
+
 =======
 ]}
       },
@@ -176,6 +179,7 @@ const services: Service[] = [
     );
 '
     const element = document.getElementById('service-showcase');    if (element) {
+
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       observer.observe(element)}

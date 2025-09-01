@@ -2,33 +2,40 @@ import React from 'react.ts';
 import SEO from '../../components/SEO';
 import { motion              } from 'framer-motion.ts';
 import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = (): JSX.Element => {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Predictive Analytics",
       description: "Advanced machine learning algorithms that predict equipment failures before they occur."
     },
     {
+
       icon: <Activity className="w-6 h-6" />,
       title: "Real-time Monitoring",
       description: "Continuous monitoring of equipment health with instant alerts and notifications."
     },
     {
+
       icon: <Wrench className="w-6 h-6" />,
       title: "Smart Maintenance Scheduling",
       description: "Intelligent scheduling that optimizes maintenance windows and reduces downtime."
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Advanced Analytics Dashboard",
       description: "Comprehensive insights into equipment performance, trends, and optimization opportunities."
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Enterprise Security",
       description: "Bank-level security with role-based access control, audit trails, and compliance features."
     },
     {
+
       icon: <Cloud className="w-6 h-6" />,
       title: "Cloud-Native Architecture",
       description: "Scalable, resilient infrastructure that grows with your business needs."
@@ -37,6 +44,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$149",
       period: "/month",
@@ -52,6 +60,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
       popular: false
     },
     {
+
       name: "Professional",
       price: "$399",
       period: "/month",
@@ -69,6 +78,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "Custom",
       period: "",
@@ -89,21 +99,25 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 
   const benefits = [
     {
+
       icon: <TrendingUp className="w-8 h-8 text-green-500" />,
       title: "Reduce Downtime",
       description: "Prevent unexpected failures and reduce unplanned downtime by up to 90%"
     },
     {
+
       icon: <Clock className="w-8 h-8 text-blue-500" />,
       title: "Optimize Maintenance",
       description: "Schedule maintenance only when needed, saving 20-40% on maintenance costs"
     },
     {
+
       icon: <Target className="w-8 h-8 text-purple-500" />,
       title: "Extend Equipment Life",
       description: "Proactive maintenance extends equipment lifespan by 2-3 years"
     },
     {
+
       icon: <Users className="w-8 h-8 text-cyan-500" />,
       title: "Improve Safety",
       description: "Prevent safety incidents with early warning systems and predictive alerts"
@@ -112,21 +126,25 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 
   const useCases = [
     {
+
       title: "Manufacturing",
       description: "Predictive maintenance for production lines, CNC machines, and industrial equipment",
       icon: <Settings className="w-8 h-8 text-blue-500" />
     },
     {
+
       title: "Energy & Utilities",
       description: "Monitor turbines, generators, and power distribution systems",
       icon: <Zap className="w-8 h-8 text-yellow-500" />
     },
     {
+
       title: "Transportation",
       description: "Fleet maintenance optimization for vehicles, aircraft, and marine vessels",
       icon: <Rocket className="w-8 h-8 text-green-500" />
     },
     {
+
       title: "Healthcare",
       description: "Medical equipment monitoring and predictive maintenance",
       icon: <Activity className="w-8 h-8 text-red-500" />
@@ -140,6 +158,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -150,6 +169,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -196,6 +216,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -206,6 +227,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -231,6 +253,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -241,6 +264,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -251,6 +275,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -427,6 +452,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
                     : 'border-white/10'
@@ -459,6 +485,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                     : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'

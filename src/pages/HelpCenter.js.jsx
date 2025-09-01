@@ -3,14 +3,18 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
 export default function HelpCenter() {
+
     const [searchQuery, setSearchQuery] = useState('');
     const [expandedCategories, setExpandedCategories] = useState(['getting-started']);
     const toggleCategory = (category) => {
+
         setExpandedCategories(prev => prev.includes(category)
             ? prev.filter(c => c !== category)
             [...prev, category])};
     const helpCategories = {
+
   'getting-started': {
+
             title: 'Getting Started',
             icon: BookOpen,
             articles[
@@ -24,6 +28,7 @@ export default function HelpCenter() {
             ]
         },
         'marketplace': {
+
             title: 'Marketplace',
             icon: BookOpen,
             articles[
@@ -34,6 +39,7 @@ export default function HelpCenter() {
             ]
         },
         'talent': {
+
             title: 'Talent & Hiring',
             icon: BookOpen,
             articles[
@@ -44,6 +50,7 @@ export default function HelpCenter() {
             ]
         },
         'technical': {
+
             title: 'Technical Support',
             icon: BookOpen,
             articles[
@@ -54,6 +61,7 @@ export default function HelpCenter() {
             ]
         },
         'billing': {
+
             title: 'Billing & Payments',
             icon: BookOpen,
             articles[
@@ -64,6 +72,7 @@ export default function HelpCenter() {
             ]
         },
         'account': {
+
             title: 'Account & Security',
             icon: BookOpen,
             articles[
@@ -145,6 +154,7 @@ export default function HelpCenter() {
               {popularArticles.map((article, index) => (<div key={index} className="bg-zion-blue-light/20 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                   <h3 className="text-lg font-semibold text-white mb-3">{article}</h3>
                   <Link to = {
+
   `/help/${article.toLowerCase().replace(/\s+/g,
   '-')
 

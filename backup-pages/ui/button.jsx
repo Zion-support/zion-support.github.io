@@ -7,30 +7,37 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan-dark hover:to-zion-blue-dark focus:ring-zion-cyan shadow-lg hover:shadow-xl transform hover:-translate-y-1',
-        secondary: 'bg-gray-800 text-white hover:bg-gray-700 focus:ring-gray-500 border border-gray-600 hover:border-gray-500',
-        outline: 'border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white focus:ring-zion-cyan',
-        ghost: 'text-gray-300 hover:text-white hover:bg-gray-800 focus:ring-gray-500',
-        destructive: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500',
-        success: 'bg-green-600 text-white hover:bg-green-700 focus:ring-green-500',
-        warning: 'bg-yellow-600 text-white hover:bg-yellow-700 focus:ring-yellow-500'
+        default:
+          'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan-dark hover:to-zion-blue-dark focus:ring-zion-cyan shadow-lg hover:shadow-xl transform hover:-translate-y-1',
+        secondary:
+          'bg-gray-800 text-white hover:bg-gray-700 focus:ring-gray-500 border border-gray-600 hover:border-gray-500',
+        outline:
+          'border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white focus:ring-zion-cyan',
+        ghost:
+          'text-gray-300 hover:text-white hover:bg-gray-800 focus:ring-gray-500',
+        destructive:
+          'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500',
+        success:
+          'bg-green-600 text-white hover:bg-green-700 focus:ring-green-500',
+        warning:
+          'bg-yellow-600 text-white hover:bg-yellow-700 focus:ring-yellow-500',
       },
       size: {
         sm: 'h-8 px-3 text-sm',
         md: 'h-10 px-4 text-sm',
         lg: 'h-12 px-6 text-base',
-        xl: 'h-14 px-8 text-lg'
+        xl: 'h-14 px-8 text-lg',
       },
       fullWidth: {
         true: 'w-full',
-        false: ''
-      }
+        false: '',
+      },
     },
     defaultVariants: {
       variant: 'default',
       size: 'md',
-      fullWidth: false
-    }
+      fullWidth: false,
+    },
   }
 );
 

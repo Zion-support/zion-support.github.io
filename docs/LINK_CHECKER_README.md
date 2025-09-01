@@ -5,6 +5,7 @@ This directory contains GitHub Actions workflows for automatically monitoring th
 ## 📋 Overview
 
 The link checker workflows automatically:
+
 - ✅ Check external links for broken URLs, timeouts, and errors
 - 📊 Generate comprehensive health reports with scoring
 - 🚨 Create GitHub issues when problems are detected
@@ -14,12 +15,14 @@ The link checker workflows automatically:
 ## 🚀 Available Workflows
 
 ### 1. Basic Link Checker (`link-checker.yml`)
+
 - **Purpose**: Simple external link validation
 - **Frequency**: Weekly (Monday 6 AM UTC)
 - **Triggers**: Manual, push to main/develop, pull requests
 - **Features**: Basic link checking with simple reporting
 
 ### 2. Enhanced Link Checker (`enhanced-link-checker.yml`) ⭐ **Recommended**
+
 - **Purpose**: Comprehensive external link health monitoring
 - **Frequency**: Weekly (Monday 6 AM UTC)
 - **Triggers**: Manual, push to main/develop, pull requests
@@ -50,6 +53,7 @@ The enhanced workflow uses a JSON configuration file to define which links to ch
 ```
 
 #### Link Categories
+
 - **primary**: Critical business links (highest priority)
 - **website**: Internal website pages
 - **social**: Social media profiles
@@ -60,13 +64,13 @@ The enhanced workflow uses a JSON configuration file to define which links to ch
 
 The enhanced workflow provides a comprehensive health scoring system:
 
-| Score Range | Grade | Status | Description |
-|-------------|-------|--------|-------------|
-| 95-100% | 🟢 A+ | Excellent | Perfect link health |
-| 90-94% | 🟢 A | Good | Minor issues, good overall health |
-| 80-89% | 🟡 B | Fair | Some issues need attention |
-| 70-79% | 🟠 C | Poor | Multiple issues, immediate action needed |
-| <70% | 🔴 F | Critical | Critical issues, urgent attention required |
+| Score Range | Grade | Status    | Description                                |
+| ----------- | ----- | --------- | ------------------------------------------ |
+| 95-100%     | 🟢 A+ | Excellent | Perfect link health                        |
+| 90-94%      | 🟢 A  | Good      | Minor issues, good overall health          |
+| 80-89%      | 🟡 B  | Fair      | Some issues need attention                 |
+| 70-79%      | 🟠 C  | Poor      | Multiple issues, immediate action needed   |
+| <70%        | 🔴 F  | Critical  | Critical issues, urgent attention required |
 
 ## 🔧 Customization
 
@@ -87,6 +91,7 @@ The enhanced workflow provides a comprehensive health scoring system:
 ### Link Categories
 
 You can add custom categories by:
+
 1. Adding new category definitions in the configuration file
 2. Updating the workflow to handle new categories
 3. Customizing the reporting for category-specific insights
@@ -131,6 +136,7 @@ You can add custom categories by:
 ### Debug Mode
 
 To enable debug mode:
+
 1. Add `--verbose` flag to linkinator command
 2. Check workflow logs for detailed output
 3. Review generated artifacts for troubleshooting
@@ -163,6 +169,7 @@ To enable debug mode:
 ### CI/CD Pipeline
 
 The workflows integrate seamlessly with your CI/CD pipeline:
+
 - Runs on every push and pull request
 - Provides status checks for branch protection
 - Generates artifacts for deployment verification
@@ -193,5 +200,5 @@ For questions or issues with the link checker workflows:
 
 ---
 
-*Last updated: January 2026*
-*Maintained by: Zion Tech Group Development Team*
+_Last updated: January 2026_
+_Maintained by: Zion Tech Group Development Team_

@@ -12,6 +12,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
 import CodeBlock from './CodeBlock';
 export function ApiDocumentation() {
+
   return()
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>"
@@ -76,6 +77,7 @@ export function ApiDocumentation() {
                   description: 'Filter by job status (new, active, closed)},
               ]}
               codeExamples={{
+
 "
                 curl: `curl -X GET "https://ziontechgroup.com/api/v1/jobs?limit=10&category=development" \\"
   -H "Authorization: Bearer YOUR_API_KEY" \\"`
@@ -92,7 +94,7 @@ export function ApiDocumentation() {
 });
 
 const data = await response.json();`
-// console.log(data);`,`
+// // // // console.log(data);`,`
                 python: `import requests
 
 headers = {
@@ -115,11 +117,14 @@ response = requests.get('
 data = response.json()`
 print(data)`}}
               responseExamples={{
+
 `
                 success: `{
+
 "
   "data"[
     {
+
 "
       "id": "job_abc123","
       "title": "Senior React Developer","
@@ -127,6 +132,7 @@ print(data)`}}
       "category": "development","
       "skills"["react", "typescript", "node.js"],"
       "budget": {
+
 "
         "min": 5000,"
         "max": 10000,"
@@ -141,6 +147,7 @@ print(data)`}}
     // More jobs...
   ],"
   "meta": {
+
 "
     "total": 42,"
     "page": 1,"
@@ -163,6 +170,7 @@ print(data)`}}
                   required: true},
               ]}
               codeExamples={{
+
 "`
                 curl: `curl -X GET "https://ziontechgroup.com/api/v1/jobs/job_abc123" \\"
   -H "Authorization: Bearer YOUR_API_KEY" \\"`
@@ -180,7 +188,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId
 });
 
 const data = await response.json();`
-// console.log(data);`,`
+// // // // console.log(data);`,`
                 python: `import requests
 
 headers = {
@@ -199,10 +207,13 @@ response = requests.get('
 data = response.json()`
 print(data)`}}
               responseExamples={{
+
 `
                 success: `{
+
 "
   "data": {
+
 "
     "id": "job_abc123","
     "title": "Senior React Developer","
@@ -210,6 +221,7 @@ print(data)`}}
     "category": "development","
     "skills"["react", "typescript", "node.js"],"
     "budget": {
+
 "
       "min": 5000,"
       "max": 10000,"
@@ -278,17 +290,20 @@ print(data)`}}
                   description: 'Job deadline (ISO date string)},
               ]}
               codeExamples={{
+
 "`
                 curl: `curl -X POST "https://ziontechgroup.com/api/v1/jobs" \\"
   -H "Authorization: Bearer YOUR_API_KEY" \\"
   -H "Content-Type: application/json" \\'
   -d '{
+
 "
     "title": "Senior React Developer","
     "description": "We need an experienced React developer...","
     "category": "development","
     "skills"["react", "typescript", "node.js"],"
     "budget": {
+
 "
       "min": 5000,"
       "max": 10000,"
@@ -322,7 +337,7 @@ print(data)`}}
 });
 
 const data = await response.json();`
-// console.log(data);`,`
+// // // // console.log(data);`,`
                 python: `import requests
 import json
 
@@ -352,10 +367,13 @@ response = requests.post('
 data = response.json()`
 print(data)`}}
               responseExamples={{
+
 `
                 success: `{
+
 "
   "data": {
+
 "
     "id": "job_def456","
     "title": "Senior React Developer","
@@ -363,6 +381,7 @@ print(data)`}}
     "category": "development","
     "skills"["react", "typescript", "node.js"],"
     "budget": {
+
 "
       "min": 5000,"
       "max": 10000,"
@@ -409,6 +428,7 @@ print(data)`}}
                   description: 'Filter by availability status'},
               ]}
               codeExamples={{
+
 "`
                 curl: `curl -X GET "https://ziontechgroup.com/api/v1/talent?skills=react,typescript" \\"
   -H "Authorization: Bearer YOUR_API_KEY" \\"`
@@ -425,7 +445,7 @@ print(data)`}}
 });
 
 const data = await response.json();`
-// console.log(data);`,`
+// // // // console.log(data);`,`
                 python: `import requests
 
 headers = {
@@ -449,11 +469,14 @@ response = requests.get('
 data = response.json()`
 print(data)`}}
               responseExamples={{
+
 `
                 success: `{
+
 "
   "data"[
     {
+
 "
       "id": "talent_abc123","
       "display_name": "Jane Smith","
@@ -468,6 +491,7 @@ print(data)`}}
     // More talent profiles...
   ],"
   "meta": {
+
 "
     "total": 28,"
     "page": 1,"
@@ -490,6 +514,7 @@ print(data)`}}
                   required: true},
               ]}
               codeExamples={{
+
 "`
                 curl: `curl -X GET "https://ziontechgroup.com/api/v1/talent/talent_abc123" \\"
   -H "Authorization: Bearer YOUR_API_KEY" \\"`
@@ -507,7 +532,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
 });
 
 const data = await response.json();`
-// console.log(data);`,`
+// // // // console.log(data);`,`
                 python: `import requests
 
 headers = {
@@ -526,10 +551,13 @@ response = requests.get('
 data = response.json()`
 print(data)`}}
               responseExamples={{
+
 `
                 success: `{
+
 "
   "data": {
+
 "
     "id": "talent_abc123","
     "display_name": "Jane Smith","
@@ -541,6 +569,7 @@ print(data)`}}
     "rating_count": 15,"
     "portfolio"[
       {
+
 "
         "id": "proj_123","
         "title": "E-commerce Platform","
@@ -553,6 +582,7 @@ print(data)`}}
     ],"
     "certifications"[
       {
+
 "
         "name": "AWS Certified Developer","
         "issuing_organization": "Amazon Web Services","
@@ -624,11 +654,13 @@ print(data)`}}
                   required: true},
               ]}
               codeExamples={{
+
 "`
                 curl: `curl -X POST "https://ziontechgroup.com/api/v1/quotes" \\"
   -H "Authorization: Bearer YOUR_API_KEY" \\"
   -H "Content-Type: application/json" \\'
   -d '{
+
 "
     "talent_id": "talent_abc123","
     "project_name": "E-commerce Website Redesign","
@@ -664,7 +696,7 @@ print(data)`}}
 });
 
 const data = await response.json();`
-// console.log(data);`,`
+// // // // console.log(data);`,`
                 python: `import requests
 import json
 
@@ -691,10 +723,13 @@ response = requests.post('
 data = response.json()`
 print(data)`}}
               responseExamples={{
+
 `
                 success: `{
+
 "
   "data": {
+
 "
     "id": "quote_def456","
     "talent_id": "talent_abc123","
@@ -741,6 +776,7 @@ print(data)`}}
                     'Filter by status (new, viewed, replied, archived)},
               ]}
               codeExamples={{
+
 "`
                 curl: `curl -X GET "https://ziontechgroup.com/api/v1/quotes" \\"
   -H "Authorization: Bearer YOUR_API_KEY" \\"`
@@ -757,7 +793,7 @@ print(data)`}}
 });
 
 const data = await response.json();`
-// console.log(data);`,`
+// // // // console.log(data);`,`
                 python: `import requests
 
 headers = {
@@ -775,11 +811,14 @@ response = requests.get('
 data = response.json()`
 print(data)`}}
               responseExamples={{
+
 `
                 success: `{
+
 "
   "data"[
     {
+
 "
       "id": "quote_def456","
       "talent_id": "talent_abc123","
@@ -796,6 +835,7 @@ print(data)`}}
     // More quotes...
   ],"
   "meta": {
+
 "
     "total": 5,"
     "page": 1,"
@@ -859,7 +899,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   
   // Process the webhook event
   const event = JSON.parse(payload);
-  // console.log('Received valid webhook:', event);
+  // // // // console.log('Received valid webhook:', event);
   
   // Respond to acknowledge receipt'`
   res.status(200).send('Webhook received')});`}"
@@ -924,11 +964,13 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 
               <CodeBlock`
                 code={`{
+
 "
   "event_type": "new_application","
   "event_id": "evt_abc123def456","
   "timestamp": "2025-05-16T15:30:00Z","
   "data": {
+
 "
     "application_id": "app_123456","
     "job_id": "job_abc123","
@@ -1068,13 +1110,16 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 
               <CodeBlock`
                 code={`{
+
 "
   "error": {
+
 "
     "code": "invalid_request","
     "message": "The request was invalid","
     "details"[
       {
+
 "
         "field": "project_name","
   "message": "Project name is required"

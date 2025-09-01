@@ -6,6 +6,7 @@ import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, 
     const [currentStep, setCurrentStep] = useState (1) ;
     const services = [
         {
+
             title: "AI & Autonomous Systems",
             description: "Transform your operations with intelligent automation",
             icon: Brain,
@@ -13,6 +14,7 @@ import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, 
             features["AI Legal Research", "Financial Risk Management", "Healthcare Diagnostics", "Supply Chain Optimization"];
         },;
         {
+
             title: "Quantum Technology",
             description: "Leverage next - generation computing power",
             icon: Zap,
@@ -20,6 +22,7 @@ import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, 
             features["Edge Computing", "Neuromorphic Infrastructure", "Holographic Data Centers", "Quantum Internet"];
         },;
         {
+
             title: "Cybersecurity",
             description: "Protect your business with advanced security",
             icon: Shield,
@@ -27,6 +30,7 @@ import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, 
             features["Zero Trust Architecture", "Threat Intelligence", "Compliance Automation", "Penetration Testing"];
         },;
         {
+
             title: "IT Infrastructure",
             description: "Modernize your technology foundation",
             icon: Zap,

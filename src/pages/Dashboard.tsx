@@ -1,6 +1,8 @@
 import React from 'react';
 export default function Dashboard () {
+
 export default React.memo (function Dashboard (...args[]) :  {
+
 import { motion } from 'framer - motion';
 
   DollarSign,
@@ -26,6 +28,7 @@ import { motion } from 'framer - motion';
 
   const recentProjects = [
     {
+
       id: 1,
       name: "AI Chatbot Development",
       status: "In Progress",
@@ -34,6 +37,7 @@ import { motion } from 'framer - motion';
       priority: "High"
     },
     {
+
       id: 2,
       name: "Cybersecurity Audit",
       status: "Completed",
@@ -42,6 +46,7 @@ import { motion } from 'framer - motion';
       priority: "Medium"
     },
     {
+
       id: 3,
       name: "Cloud Migration",
       status: "Planning",
@@ -50,6 +55,7 @@ import { motion } from 'framer - motion';
       priority: "High"
     },
     {
+
       id: 4,
       name: "Mobile App Development",
       status: "In Progress",
@@ -61,6 +67,7 @@ import { motion } from 'framer - motion';
 
   const notifications = [
     {
+
       id: 1,
       title: "New project assigned",
       message: "You have been assigned to the AI Chatbot project",
@@ -68,6 +75,7 @@ import { motion } from 'framer - motion';
       read: false
     },
     {
+
       id: 2,
       title: "Meeting reminder",
       message: "Team standup meeting in 30 minutes",
@@ -75,6 +83,7 @@ import { motion } from 'framer - motion';
       read: false
     },
     {
+
       id: 3,
       title: "System update",
       message: "Scheduled maintenance completed successfully",
@@ -85,24 +94,28 @@ import { motion } from 'framer - motion';
 
   const quickActions = [
     {
+
       title: "Create Project",
       description: "Start a new project",
       icon: <FileText className="h - 8 w - 8 text - zion - cyan" />,
       color: "bg - zion - cyan / 10 border - zion - cyan / 20"
     },
     {
+
       title: "Schedule Meeting",
       description: "Book a team meeting",
       icon: <Calendar className="h - 8 w - 8 text - zion - purple" />,
       color: "bg - zion - purple / 10 border - zion - purple / 20"
     },
     {
+
       title: "Generate Report",
       description: "Create analytics report",
       icon: <BarChart3 className="h - 8 w - 8 text - zion - cyan" />,
       color: "bg - zion - cyan / 10 border - zion - cyan / 20"
     },
     {
+
       title: "Support Ticket",
       description: "Submit support request",
       icon: <MessageSquare className="h - 8 w - 8 text - zion - purple" />,
@@ -141,6 +154,7 @@ import { motion } from 'framer - motion';
   ];
 
   const getStatusColor = (status: string) => {
+
     switch (status) {;
       case "Completed":;
         return "bg - green - 100 text - green - 800";
@@ -153,6 +167,7 @@ import { motion } from 'framer - motion';
   };
 
   const getPriorityColor = (priority: string) => {
+
     switch (priority) {;
       case "High":;
         return "bg - red - 100 text - red - 800";
@@ -180,6 +195,7 @@ import { motion } from 'framer - motion';
             <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zion - slate - light hover:text - white transition - colors">
               <Settings className="h - 6 w - 6" />
             </button > import {
+
   BarChart3,
   Users,
   TrendingUp,
@@ -286,27 +302,32 @@ import { motion } from 'framer - motion';
           </div>
         </div>
       </div > initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
 }}
               key={stat.name}
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
@@ -319,6 +340,7 @@ import { motion } from 'framer - motion';
                   {stat.icon}
                 </div>
                 <span className={`text - sm font - medium ${
+
                   stat.changeType === "positive" ? "text - green - 400" : "text - red - 400"
                 }`}>
                   {stat.change}
@@ -341,6 +363,7 @@ import { motion } from 'framer - motion';
                   <p className="text - sm font - medium text - gray - 600">{stat.name}</p>
                   <p className="text - 2xl font - bold text - gray - 900 mt - 1">{stat.value}</p>
                   <div className={`flex items - center mt - 2 text - sm ${
+
                     stat.changeType === 'positive' ? 'text - green - 600' : 'text - red - 600'
                   }`}>
                     <span>{stat.change}</span>
@@ -353,16 +376,19 @@ import { motion } from 'framer - motion';
               </div>
             </motion.div>) ) }
         </div > initial = {
+
   { opacity: 0,
   x: -20
 
 }}
               animate = {
+
   { opacity: 1,
   x: 0
 
 }}
               transition = {
+
   { duration: 0.5,
   delay: 0.4
 
@@ -379,11 +405,13 @@ import { motion } from 'framer - motion';
                 {recentServices.map ( (service, index) => (<motion.div
                     key={service.name}
                     initial = {
+
   { opacity: 0,
   x: -20
 
 }}
                     animate = {
+
   { opacity: 1,
   x: 0
 
@@ -409,16 +437,19 @@ import { motion } from 'framer - motion';
                     <div className={`p - 2 rounded - lg bg - gradient - to - r ${service.color} mr - 4`}>
                       <service.icon className="h - 5 w - 5 text - white" />
                     </div > initial = {
+
   { opacity: 0,
   x: 20
 
 }}
               animate = {
+
   { opacity: 1,
   x: 0
 
 }}
               transition = {
+
   { duration: 0.5,
   delay: 0.6
 
@@ -429,11 +460,13 @@ import { motion } from 'framer - motion';
                 {quickActions.map ( (action, index) => (<motion.button
                     key={action.name}
                     initial = {
+
   { opacity: 0,
   scale: 0.9
 
 }}
                     animate = {
+
   { opacity: 1,
   scale: 1
 
@@ -452,16 +485,19 @@ import { motion } from 'framer - motion';
             <motion.div
               className="bg - zion - blue - dark border border - zion - purple / 20 rounded - lg p - 6";
               initial = {
+
   { opacity: 0,
   x: 20
 
 }}
               animate = {
+
   { opacity: 1,
   x: 0
 
 }}
               transition = {
+
   { duration: 0.5,
   delay: 0.8
 
@@ -519,11 +555,13 @@ import { motion } from 'framer - motion';
                 {upcomingEvents.map ( (event, index) => (<motion.div
                     key={event.title}
                     initial = {
+
   { opacity: 0,
   y: 10
 
 }}
                     animate = {
+
   { opacity: 1,
   y: 0
 
@@ -549,16 +587,19 @@ import { motion } from 'framer - motion';
                     </div>
                   </motion.div>) ) }
               </div > initial = {
+
   { opacity: 0,
   x: 20
 
 }}
               animate = {
+
   { opacity: 1,
   x: 0
 
 }}
               transition = {
+
   { duration: 0.5,
   delay: 1
 

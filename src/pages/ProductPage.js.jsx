@@ -5,15 +5,19 @@ import { NEW_PRODUCTS } from '@/data/newProductsData';
 import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';
 export default function ProductPage() {
+
     const { id } = useParams();
     const product = NEW_PRODUCTS.find(p => p.id === id);
     const { dispatch } = useCart();
     const [adding, setAdding] = useState(false);
     if (!product) {
+
         return <div className="p-6 text-white">Product not found</div>}
     const handleAdd = () => {
+
         setAdding(true);
         dispatch({
+
             type: 'ADD_ITEM',
             payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 }
         });

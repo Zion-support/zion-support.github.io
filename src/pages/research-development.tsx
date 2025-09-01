@@ -41,6 +41,7 @@ import { FlaskConical,
 
 const researchAreas = [
   {
+
     id: 'ai-ml',
     name: 'Artificial Intelligence & Machine Learning',
     icon: Brain,
@@ -59,6 +60,7 @@ const researchAreas = [
     projects: 12
   },
   {
+
     id: 'quantum-computing',
     name: 'Quantum Computing & Quantum Technologies',
     icon: Atom,
@@ -77,6 +79,7 @@ const researchAreas = [
     projects: 6
   },
   {
+
     id: 'cybersecurity',
     name: 'Cybersecurity & Privacy',
     icon: Shield,
@@ -95,6 +98,7 @@ const researchAreas = [
     projects: 18
   },
   {
+
     id: 'edge-computing',
     name: 'Edge Computing & IoT',
     icon: Zap,
@@ -113,6 +117,7 @@ const researchAreas = [
     projects: 14
   },
   {
+
     id: 'data-science',
     name: 'Data Science & Analytics',
     icon: TrendingUp,
@@ -131,6 +136,7 @@ const researchAreas = [
     projects: 20
   },
   {
+
     id: 'cloud-native',
     name: 'Cloud-Native Technologies',
     icon: Cloud,
@@ -152,6 +158,7 @@ const researchAreas = [
 
 const researchProjects = [
   {
+
     id: 1,
     title: 'AI-Powered Cybersecurity Threat Detection',
     area: 'AI & ML',
@@ -170,6 +177,7 @@ const researchProjects = [
     color: 'from-purple-500 to-indigo-600'
   },
   {
+
     id: 2,
     title: 'Quantum-Resistant Cryptographic Protocols',
     area: 'Quantum Computing',
@@ -188,6 +196,7 @@ const researchProjects = [
     color: 'from-blue-500 to-cyan-600'
   },
   {
+
     id: 3,
     title: 'Edge AI for Smart Manufacturing',
     area: 'Edge Computing',
@@ -206,6 +215,7 @@ const researchProjects = [
     color: 'from-yellow-500 to-orange-600'
   },
   {
+
     id: 4,
     title: 'Privacy-Preserving Data Analytics',
     area: 'Data Science',
@@ -224,6 +234,7 @@ const researchProjects = [
     color: 'from-green-500 to-emerald-600'
   },
   {
+
     id: 5,
     title: 'Cloud-Native Security Architecture',
     area: 'Cloud-Native',
@@ -244,6 +255,7 @@ const researchProjects = [
 ];
 
 const ResearchDevelopment = () => {
+
   const [selectedArea, setSelectedArea] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -253,6 +265,7 @@ const ResearchDevelopment = () => {
 
 const patents = [
   {
+
     id: 1,
     title: 'Adaptive Threat Detection System Using Machine Learning',
     inventors['Dr. Sarah Chen', 'Dr. Michael Rodriguez'],
@@ -263,6 +276,7 @@ const patents = [
     description: 'A system for detecting cybersecurity threats using adaptive machine learning algorithms.'
   },
   {
+
     id: 2,
     title: 'Quantum-Resistant Digital Signature Algorithm',
     inventors['Dr. Michael Rodriguez'],
@@ -273,6 +287,7 @@ const patents = [
     description: 'A digital signature algorithm resistant to quantum computing attacks.'
   },
   {
+
     id: 3,
     title: 'Edge Computing Resource Optimization Method',
     inventors['Dr. Emily Wang', 'Dr. James Brown'],
@@ -283,6 +298,7 @@ const patents = [
     description: 'A method for optimizing resource allocation in edge computing environments.'
   },
   {
+
     id: 4,
     title: 'Privacy-Preserving Data Analytics Framework',
     inventors['Dr. James Brown'],
@@ -293,6 +309,7 @@ const patents = [
     description: 'A framework for analyzing data while preserving individual privacy.'
   },
   {
+
     id: 5,
     title: 'Cloud Security Architecture Pattern',
     inventors['Dr. Lisa Garcia'],;
@@ -305,6 +322,7 @@ const patents = [
 ];
 
 export default function ResearchDevelopment(...args[]: any):  {
+
   const [selectedArea, setSelectedArea] = useState('All');
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
@@ -408,6 +426,7 @@ export default function ResearchDevelopment(...args[]: any):  {
                 <motion.div
                   key = {area.id}
                   initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -418,6 +437,7 @@ export default function ResearchDevelopment(...args[]: any):  {
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -428,6 +448,7 @@ export default function ResearchDevelopment(...args[]: any):  {
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -484,6 +505,7 @@ export default function ResearchDevelopment(...args[]: any):  {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -494,6 +516,7 @@ export default function ResearchDevelopment(...args[]: any):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -519,6 +542,7 @@ export default function ResearchDevelopment(...args[]: any):  {
                 <motion.div
                   key = {project.id}
                   initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -529,6 +553,7 @@ export default function ResearchDevelopment(...args[]: any):  {
 
 }}
                   whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -539,6 +564,7 @@ export default function ResearchDevelopment(...args[]: any):  {
 
 }}
                   transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -637,6 +663,7 @@ export default function ResearchDevelopment(...args[]: any):  {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -647,6 +674,7 @@ export default function ResearchDevelopment(...args[]: any):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -742,6 +770,7 @@ export default function ResearchDevelopment(...args[]: any):  {
                     <project.icon className="w-6 h-6 text-white" />
                   </div>
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+
                     project.status === 'Active' 
                       ? 'bg-green-500/20 text-green-400' 
                       : 'bg-blue-500/20 text-blue-400'

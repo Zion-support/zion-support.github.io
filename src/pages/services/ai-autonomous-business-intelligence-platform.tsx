@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   TrendingUp, 
   BarChart3, 
@@ -21,33 +22,40 @@ import {
 } from 'lucide-react';
 
 export default function AIAutonomousBusinessIntelligencePlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "Autonomous Data Analysis",
       description: "AI-powered insights generation without human intervention"
     },
     {
+
       icon: TrendingUp,
       title: "Predictive Analytics",
       description: "Forecast trends and identify opportunities automatically"
     },
     {
+
       icon: BarChart3,
       title: "Real-time Dashboards",
       description: "Live business metrics and KPI monitoring"
     },
     {
+
       icon: Zap,
       title: "Automated Reporting",
       description: "Generate comprehensive reports on schedule"
     },
     {
+
       icon: Shield,
       title: "Data Security",
       description: "Enterprise-grade security and compliance"
     },
     {
+
       icon: Users,
       title: "Team Collaboration",
       description: "Share insights and collaborate seamlessly"
@@ -56,6 +64,7 @@ export default function AIAutonomousBusinessIntelligencePlatform() {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$299",
       period: "/month",
@@ -70,6 +79,7 @@ export default function AIAutonomousBusinessIntelligencePlatform() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$799",
       period: "/month",
@@ -85,6 +95,7 @@ export default function AIAutonomousBusinessIntelligencePlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,999",
       period: "/month",
@@ -103,21 +114,25 @@ export default function AIAutonomousBusinessIntelligencePlatform() {
 
   const benefits = [
     {
+
       title: "Increased Efficiency",
       description: "Automate routine analysis tasks and save 20+ hours per week",
       metric: "20+ hours saved/week"
     },
     {
+
       title: "Better Decision Making",
       description: "Data-driven insights lead to improved business outcomes",
       metric: "25% better decisions"
     },
     {
+
       title: "Cost Reduction",
       description: "Reduce manual analysis costs and improve ROI",
       metric: "40% cost reduction"
     },
     {
+
       title: "Faster Insights",
       description: "Get real-time insights instead of waiting for reports",
       metric: "90% faster insights"
@@ -268,6 +283,7 @@ export default function AIAutonomousBusinessIntelligencePlatform() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+
                   plan.popular 
                     ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
                     : 'border-gray-700'
@@ -300,6 +316,7 @@ export default function AIAutonomousBusinessIntelligencePlatform() {
                 </ul>
                 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600'
                     : 'bg-gray-700 text-white hover:bg-gray-600'

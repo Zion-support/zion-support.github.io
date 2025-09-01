@@ -109,38 +109,45 @@ import { Users,
  } from 'lucide-react';
 
 const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Customer Insights",
       description: "Machine learning algorithms that predict customer behavior and identify churn risks",
       color: "from-purple-500 to-pink-500"
     },
     {
+
       icon: MessageCircle,
       title: "Intelligent Communication",
       description: "Automated, personalized messaging that adapts to customer preferences and needs",
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       icon: Target,
       title: "Proactive Success Management",
       description: "Identify and resolve issues before they impact customer satisfaction",
       color: "from-green-500 to-emerald-500"
     },
     {
+
       icon: BarChart3,
       title: "Real-time Analytics Dashboard",
       description: "Comprehensive metrics and insights to track customer success and engagement",
       color: "from-orange-500 to-red-500"
     },
     {
+
       icon: Users,
       title: "Customer Journey Mapping",
       description: "Visualize and optimize every touchpoint in the customer experience",
       color: "from-indigo-500 to-purple-500"
     },
     {
+
       icon: Shield,
       title: "Automated Support Escalation",
       description: "Smart routing and escalation based on customer priority and issue complexity",
@@ -150,6 +157,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$299",
       period: "/month",
@@ -167,6 +175,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$899",
       period: "/month",
@@ -185,6 +194,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$2,999",
       period: "/month",
@@ -206,24 +216,28 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
   const benefits = [
     {
+
       icon: Heart,
       title: "25% Higher Retention",
       description: "Proactive customer success management increases customer lifetime value",
       metric: "25%"
     },
     {
+
       icon: TrendingUp,
       title: "40% Faster Resolution",
       description: "AI-powered insights help resolve customer issues before they escalate",
       metric: "40%"
     },
     {
+
       icon: Star,
       title: "4.8/5 Customer Rating",
       description: "Improved customer experience leads to higher satisfaction scores",
       metric: "4.8/5"
     },
     {
+
       icon: Zap,
       title: "3x Team Efficiency",
       description: "Automation and AI insights multiply your team's effectiveness",
@@ -233,6 +247,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
   const useCases = [
     {
+
       industry: "SaaS & Technology",
       title: "Product Adoption & Onboarding",
       description: "Guide customers through product features and ensure successful implementation",
@@ -240,6 +255,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       industry: "E-commerce",
       title: "Customer Loyalty & Retention",
       description: "Build lasting relationships and increase repeat purchase rates",
@@ -247,6 +263,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       color: "from-green-500 to-emerald-500"
     },
     {
+
       industry: "Financial Services",
       title: "Account Management & Support",
       description: "Provide personalized financial guidance and proactive account monitoring",
@@ -254,6 +271,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       color: "from-purple-500 to-pink-500"
     },
     {
+
       industry: "Healthcare",
       title: "Patient Engagement & Care",
       description: "Improve patient outcomes through proactive communication and monitoring",
@@ -264,36 +282,42 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
   const customerSuccessMetrics = [
     {
+
       metric: "Net Promoter Score (NPS)",
       description: "Measure customer loyalty and likelihood to recommend your product",
       icon: StarIcon,
       color: "from-yellow-500 to-orange-500"
     },
     {
+
       metric: "Customer Health Score",
       description: "AI-powered scoring system to identify at-risk customers",
       icon: Activity,
       color: "from-green-500 to-emerald-500"
     },
     {
+
       metric: "Time to Value (TTV)",
       description: "Track how quickly customers achieve their first success milestone",
       icon: ClockIcon,
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       metric: "Customer Lifetime Value (CLV)",
       description: "Predict and optimize long-term customer value",
       icon: TrendingUp,
       color: "from-purple-500 to-pink-500"
     },
     {
+
       metric: "Churn Rate",
       description: "Monitor and reduce customer attrition through proactive engagement",
       icon: Users,
       color: "from-red-500 to-pink-500"
     },
     {
+
       metric: "Feature Adoption Rate",
       description: "Track which features drive the most customer success",
       icon: Target,
@@ -506,6 +530,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-500/50' 
                     : 'bg-slate-800/50 border border-slate-700/50'
@@ -538,6 +563,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
                 </ul>
                 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

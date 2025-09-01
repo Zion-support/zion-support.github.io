@@ -21,6 +21,7 @@ const colorPalettes = ['
     ['#8b5cf6',#ec4899',#f97316',#eab308',#84cc16']
 ];
 export function AdvancedDataVisualization() {
+
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -40,9 +41,11 @@ export function AdvancedDataVisualization() {
     const categories = ['all', ...Array.from(new Set(data.map(item => item.category)))];
     const filteredData = data.filter(item => selectedCategory === 'all' || item.category === selectedCategory);
     const refreshData = async () => {
+
         setIsRefreshing(true);
         // Simulate data refresh
         setTimeout(() => {
+
             const newData = data.map(item => ({
 
                 ...item,
@@ -51,6 +54,7 @@ export function AdvancedDataVisualization() {
             setData(newData);
             setIsRefreshing(false)}, 1000)};
     useEffect(() => {
+
         if (autoRefresh) {
 
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
@@ -61,11 +65,12 @@ export function AdvancedDataVisualization() {
 
     }, [autoRefresh]);
     const downloadChart = (format) => {
+
         // Simulate chart download
 <<<<<<< HEAD
-        // // // console.log(`Downloading chart as ${format}`);
+        // // // // // // console.log(`Downloading chart as ${format}`);
 =======
-        // // // // // // // console.log(`Downloading chart as ${format}`);
+        // // // // // // // // // // console.log(`Downloading chart as ${format}`);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
 =======
@@ -76,12 +81,13 @@ export function AdvancedDataVisualization() {
 
         // Simulate chart download
 <<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
-        // console.log(`Downloading chart as ${format}`)};
+        // // // // console.log(`Downloading chart as ${format}`)};
 ========
-        console.log(`Downloading chart as ${format}`)};
+        // // // console.log(`Downloading chart as ${format}`)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 >>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
     const renderChart = () => {
+
         switch (selectedChartType) {
 
             case 'bar':
@@ -103,11 +109,13 @@ export function AdvancedDataVisualization() {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const renderBarChart = () => {
+
         const maxValue = Math.max(...filteredData.map(item => item.value));
         const colors = colorPalettes[selectedColorPalette];
         return (<div className="h-80 flex items-end justify-center gap-4 p-6">"
         {filteredData.map((item, index) => (<div key={item.id} className="flex flex-col items-center">"
             <div className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-500 hover:scale-110 cursor-pointer" style={{
+
 `
                     height: `${(item.value / maxValue) * 280}px`,
                     backgroundColor: colors[index % colors.length]`
@@ -119,6 +127,7 @@ export function AdvancedDataVisualization() {
           </div>))}
       </div>)};
     const renderLineChart = () => {
+
         const maxValue = Math.max(...filteredData.map(item => item.value));
         const colors = colorPalettes[selectedColorPalette];"
         return (<div className="h-80 p-6 relative">"
@@ -146,6 +155,7 @@ export function AdvancedDataVisualization() {
         </div>
       </div>)};
     const renderPieChart = () => {
+
         const total = filteredData.reduce((sum, item) => sum + item.value, 0);
         const colors = colorPalettes[selectedColorPalette];"
         return (<div className="h-80 flex items-center justify-center">"
@@ -191,11 +201,13 @@ export function AdvancedDataVisualization() {
         </div>
       </div>)};
     const renderAreaChart = () => {
+
         const maxValue = Math.max(...filteredData.map(item => item.value));
         const colors = colorPalettes[selectedColorPalette];"
         return (<div className="h-80 p-6 relative">"
         <svg className="w-full h-full">"
           <path fill={colors[0]} fillOpacity="0.3" stroke={colors[0]} strokeWidth="2" d = {
+
 `
   `M 0,
   ${280
@@ -216,6 +228,7 @@ export function AdvancedDataVisualization() {
         </div>
       </div>)};
     const renderScatterChart = () => {
+
         const maxValue = Math.max(...filteredData.map(item => item.value));
         const colors = colorPalettes[selectedColorPalette];"
         return (<div className="h-80 p-6 relative">"
@@ -227,6 +240,7 @@ export function AdvancedDataVisualization() {
         </div>
       </div>)};
     if (!isOpen) {
+
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-68 p-3 bg-zion-cyan hover:bg-zion-cyan-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Advanced Data Visualization">"
         <BarChart3 className="w-5 h-5"/>
@@ -237,6 +251,7 @@ export function AdvancedDataVisualization() {
       </button>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (isMinimized) {
+
 "
         return (<div className="fixed bottom-4 right-68 z-50">"
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">"

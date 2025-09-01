@@ -2,11 +2,31 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
-  Shield, Lock, Zap, Target, Globe, Users, Award, Check,
-  Clock, DollarSign, ArrowUpRight, Play, BookOpen, Code,
-  Network, Cpu, Server
+import {
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  Shield,
+  Lock,
+  Zap,
+  Target,
+  Globe,
+  Users,
+  Award,
+  Check,
+  Clock,
+  DollarSign,
+  ArrowUpRight,
+  Play,
+  BookOpen,
+  Code,
+  Network,
+  Cpu,
+  Server,
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
@@ -14,46 +34,52 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 const features = [
   {
     title: 'Quantum Key Distribution (QKD)',
-    description: 'Unbreakable encryption using quantum mechanics principles for secure key exchange',
+    description:
+      'Unbreakable encryption using quantum mechanics principles for secure key exchange',
     icon: Lock,
-    color: 'from-blue-500 to-cyan-500'
+    color: 'from-blue-500 to-cyan-500',
   },
   {
     title: 'Real-time Quantum Monitoring',
-    description: 'Continuous monitoring of quantum states and network security in real-time',
+    description:
+      'Continuous monitoring of quantum states and network security in real-time',
     icon: Shield,
-    color: 'from-green-500 to-emerald-500'
+    color: 'from-green-500 to-emerald-500',
   },
   {
     title: 'Multi-node Quantum Network',
-    description: 'Distributed quantum network architecture for scalable secure communications',
+    description:
+      'Distributed quantum network architecture for scalable secure communications',
     icon: Network,
-    color: 'from-purple-500 to-pink-500'
+    color: 'from-purple-500 to-pink-500',
   },
   {
     title: 'Post-Quantum Cryptography',
-    description: 'Future-proof encryption algorithms resistant to quantum computing attacks',
+    description:
+      'Future-proof encryption algorithms resistant to quantum computing attacks',
     icon: Cpu,
-    color: 'from-orange-500 to-red-500'
+    color: 'from-orange-500 to-red-500',
   },
   {
     title: 'Quantum Memory Systems',
-    description: 'Advanced quantum memory for storing and retrieving quantum information',
+    description:
+      'Advanced quantum memory for storing and retrieving quantum information',
     icon: Server,
-    color: 'from-indigo-500 to-blue-500'
+    color: 'from-indigo-500 to-blue-500',
   },
   {
     title: 'Compliance & Audit Trails',
-    description: 'Comprehensive compliance frameworks and detailed audit logging',
+    description:
+      'Comprehensive compliance frameworks and detailed audit logging',
     icon: CheckCircle,
-    color: 'from-yellow-500 to-orange-500'
-  }
+    color: 'from-yellow-500 to-orange-500',
+  },
 ];
 
 const pricingPlans = [
@@ -70,10 +96,10 @@ const pricingPlans = [
       '24/7 dedicated support',
       'Compliance frameworks',
       'Custom integrations',
-      'Security audits'
+      'Security audits',
     ],
     popular: false,
-    color: 'from-gray-500 to-gray-600'
+    color: 'from-gray-500 to-gray-600',
   },
   {
     name: 'Enterprise',
@@ -88,10 +114,10 @@ const pricingPlans = [
       'Dedicated account manager',
       'Custom security protocols',
       'White-label solutions',
-      'API access'
+      'API access',
     ],
     popular: true,
-    color: 'from-blue-500 to-purple-600'
+    color: 'from-blue-500 to-purple-600',
   },
   {
     name: 'Defense',
@@ -106,44 +132,54 @@ const pricingPlans = [
       'On-site deployment',
       '24/7 phone support',
       'Security clearances',
-      'Defense compliance'
+      'Defense compliance',
     ],
     popular: false,
-    color: 'from-purple-500 to-pink-600'
-  }
+    color: 'from-purple-500 to-pink-600',
+  },
 ];
 
 const useCases = [
   {
     title: 'Government Communications',
-    description: 'Secure communication between government agencies and departments',
+    description:
+      'Secure communication between government agencies and departments',
     icon: Shield,
-    color: 'from-blue-500 to-cyan-500'
+    color: 'from-blue-500 to-cyan-500',
   },
   {
     title: 'Financial Transactions',
     description: 'Unbreakable encryption for high-value financial operations',
     icon: DollarSign,
-    color: 'from-green-500 to-emerald-500'
+    color: 'from-green-500 to-emerald-500',
   },
   {
     title: 'Healthcare Data',
     description: 'Secure transmission of sensitive medical information',
     icon: Users,
-    color: 'from-purple-500 to-pink-500'
+    color: 'from-purple-500 to-pink-500',
   },
   {
     title: 'Military Communications',
     description: 'Classified information exchange with quantum-level security',
     icon: Target,
-    color: 'from-orange-500 to-red-500'
-  }
+    color: 'from-orange-500 to-red-500',
+  },
 ];
 
 const integrations = [
-  'Government Systems', 'Financial Platforms', 'Healthcare Networks', 'Military Infrastructure',
-  'Cloud Providers', 'VPN Solutions', 'Firewall Systems', 'Identity Management',
-  'Compliance Tools', 'Monitoring Systems', 'API Gateways', 'Custom Applications'
+  'Government Systems',
+  'Financial Platforms',
+  'Healthcare Networks',
+  'Military Infrastructure',
+  'Cloud Providers',
+  'VPN Solutions',
+  'Firewall Systems',
+  'Identity Management',
+  'Compliance Tools',
+  'Monitoring Systems',
+  'API Gateways',
+  'Custom Applications',
 ];
 
 export default function QuantumSecureCommunicationNetwork() {
@@ -151,13 +187,31 @@ export default function QuantumSecureCommunicationNetwork() {
     <Layout>
       <Head>
         <title>Quantum-Secure Communication Network | Zion Tech Group</title>
-        <meta name="description" content="Unbreakable communication infrastructure powered by quantum cryptography. Get quantum-secure communications with QKD and post-quantum cryptography." />
-        <meta name="keywords" content="quantum secure communication, quantum cryptography, QKD, post-quantum cryptography, unbreakable encryption, quantum networks" />
-        <meta property="og:title" content="Quantum-Secure Communication Network | Zion Tech Group" />
-        <meta property="og:description" content="Unbreakable communication infrastructure powered by quantum cryptography." />
-        <meta property="og:url" content="https://ziontechgroup.com/quantum-secure-communication-network" />
+        <meta
+          name="description"
+          content="Unbreakable communication infrastructure powered by quantum cryptography. Get quantum-secure communications with QKD and post-quantum cryptography."
+        />
+        <meta
+          name="keywords"
+          content="quantum secure communication, quantum cryptography, QKD, post-quantum cryptography, unbreakable encryption, quantum networks"
+        />
+        <meta
+          property="og:title"
+          content="Quantum-Secure Communication Network | Zion Tech Group"
+        />
+        <meta
+          property="og:description"
+          content="Unbreakable communication infrastructure powered by quantum cryptography."
+        />
+        <meta
+          property="og:url"
+          content="https://ziontechgroup.com/quantum-secure-communication-network"
+        />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com/quantum-secure-communication-network" />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/quantum-secure-communication-network"
+        />
       </Head>
 
       {/* Hero Section */}
@@ -174,13 +228,17 @@ export default function QuantumSecureCommunicationNetwork() {
                 <span className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
                   QUANTUM SECURITY
                 </span>
-                <span className="text-gray-400 text-sm">Launch Date: February 1, 2025</span>
+                <span className="text-gray-400 text-sm">
+                  Launch Date: February 1, 2025
+                </span>
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
                 Quantum-Secure Communication Network
               </h1>
               <p className="text-xl lg:text-2xl text-gray-300 mb-8">
-                Unbreakable communication infrastructure powered by quantum cryptography. Get quantum-secure communications with QKD and post-quantum cryptography.
+                Unbreakable communication infrastructure powered by quantum
+                cryptography. Get quantum-secure communications with QKD and
+                post-quantum cryptography.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -204,7 +262,9 @@ export default function QuantumSecureCommunicationNetwork() {
             >
               <div className="bg-gradient-to-br from-indigo-500/20 to-blue-500/20 backdrop-blur-sm border border-indigo-500/30 rounded-2xl p-8">
                 <div className="text-6xl mb-4">🔐</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Key Benefits</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Key Benefits
+                </h3>
                 <div className="space-y-3">
                   <div className="flex items-center text-green-400">
                     <CheckCircle className="w-5 h-5 mr-3" />
@@ -239,7 +299,8 @@ export default function QuantumSecureCommunicationNetwork() {
               Quantum Security Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our quantum-secure communication network provides the highest level of security using cutting-edge quantum technologies.
+              Our quantum-secure communication network provides the highest
+              level of security using cutting-edge quantum technologies.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -253,10 +314,14 @@ export default function QuantumSecureCommunicationNetwork() {
                 className="group relative"
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-indigo-500/50 transition-all duration-300">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  >
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    {feature.title}
+                  </h3>
                   <p className="text-gray-400">{feature.description}</p>
                 </div>
               </motion.div>
@@ -279,7 +344,8 @@ export default function QuantumSecureCommunicationNetwork() {
               Perfect For Critical Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our quantum-secure network is designed for applications where security cannot be compromised.
+              Our quantum-secure network is designed for applications where
+              security cannot be compromised.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -293,10 +359,14 @@ export default function QuantumSecureCommunicationNetwork() {
                 className="group"
               >
                 <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-indigo-500/50 transition-all duration-300">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  >
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    {useCase.title}
+                  </h3>
                   <p className="text-gray-400 text-lg">{useCase.description}</p>
                 </div>
               </motion.div>
@@ -319,7 +389,8 @@ export default function QuantumSecureCommunicationNetwork() {
               Secure Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the security level that matches your organization's needs and compliance requirements.
+              Choose the security level that matches your organization's needs
+              and compliance requirements.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -339,16 +410,25 @@ export default function QuantumSecureCommunicationNetwork() {
                     </span>
                   </div>
                 )}
-                <div className={`bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border ${plan.popular ? 'border-indigo-500' : 'border-gray-700'} rounded-2xl p-8 h-full`}>
+                <div
+                  className={`bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border ${plan.popular ? 'border-indigo-500' : 'border-gray-700'} rounded-2xl p-8 h-full`}
+                >
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="text-4xl font-bold text-indigo-400 mb-2">{plan.price}</div>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {plan.name}
+                    </h3>
+                    <div className="text-4xl font-bold text-indigo-400 mb-2">
+                      {plan.price}
+                    </div>
                     <div className="text-gray-400 mb-4">{plan.period}</div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
+                      <li
+                        key={featureIndex}
+                        className="flex items-center text-gray-300"
+                      >
                         <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
@@ -382,7 +462,8 @@ export default function QuantumSecureCommunicationNetwork() {
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Integrate with your existing security infrastructure and compliance systems.
+              Integrate with your existing security infrastructure and
+              compliance systems.
             </p>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -415,7 +496,8 @@ export default function QuantumSecureCommunicationNetwork() {
               Ready for Quantum-Secure Communications?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Get in touch with our team to discuss how our quantum-secure communication network can protect your critical communications.
+              Get in touch with our team to discuss how our quantum-secure
+              communication network can protect your critical communications.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="flex flex-col items-center space-y-3">

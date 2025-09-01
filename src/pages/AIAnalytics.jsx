@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function AIAnalytics () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Brain,
@@ -33,24 +35,28 @@ import { motion } from 'framer - motion';
 
 const aiCapabilities = [
   {
+
     title: "Machine Learning",
     description: "Advanced algorithms that learn from data and improve over time",
     icon: Brain,
     impact: "High"
   },
   {
+
     title: "Deep Learning",
     description: "Neural networks for complex pattern recognition and analysis",
     icon: Code,
     impact: "High"
   },
   {
+
     title: "Natural Language Processing",
     description: "Understanding and processing human language for insights",
     icon: FileText,
     impact: "Critical"
   },
   {
+
     title: "Computer Vision",
     description: "Image and video analysis for visual data insights",
     icon: Eye,
@@ -60,6 +66,7 @@ const aiCapabilities = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "E - commerce Giant",
     industry: "Retail",
@@ -69,6 +76,7 @@ const successStories = [
     logo: "EG"
   },
   {
+
     id: 2,
     comp: "Financial Services Corp",
     industry: "Finance",
@@ -78,6 +86,7 @@ const successStories = [
     logo: "FS"
   },
   {
+
     id: 3,
     comp: "Healthcare Network",
     industry: "Healthcare",
@@ -90,6 +99,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Data Assessment",
     description: "Evaluate data quality, sources, and requirements for AI implementation",
@@ -97,6 +107,7 @@ const processSteps = [
     duration: "1 - 2 weeks"
   },
   {
+
     step: 2,
     title: "AI Model Design",
     description: "Design and select appropriate AI / ML models for the use case",
@@ -104,6 +115,7 @@ const processSteps = [
     duration: "2 - 3 weeks"
   },
   {
+
     step: 3,
     title: "Development & Training",
     description: "Build AI models and train them with relevant data",
@@ -111,6 +123,7 @@ const processSteps = [
     duration: "8 - 20 weeks"
   },
   {
+
     step: 4,
     title: "Deployment & Optimization",
     description: "Deploy models and continuously optimize performance",
@@ -140,11 +153,13 @@ const processSteps = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -154,16 +169,19 @@ const processSteps = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -205,11 +223,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -227,16 +247,19 @@ const processSteps = [
             {aiCapabilities.map ( (capability, index) => (<motion.div
                 key={capability.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -251,6 +274,7 @@ const processSteps = [
                 <p className="text - zion - slate - light mb - 4 leading - relaxed">{capability.description}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   capability.impact === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : capability.impact === 'High'
@@ -269,11 +293,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -291,16 +317,19 @@ const processSteps = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -331,11 +360,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -355,6 +386,7 @@ const processSteps = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -368,16 +400,19 @@ const processSteps = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -432,11 +467,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -454,16 +491,19 @@ const processSteps = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -509,11 +549,13 @@ const processSteps = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

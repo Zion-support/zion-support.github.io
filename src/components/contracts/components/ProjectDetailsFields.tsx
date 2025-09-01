@@ -1,5 +1,6 @@
 
-import { 
+import {
+
   FormField, 
   FormItem, 
   FormLabel, 
@@ -9,9 +10,11 @@ import {
 } from "@/components/ui/form";
 
 interface ProjectDetailsFieldsProps {
+
   form: UseFormReturn<ContractFormValues>}
 
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
+
   return (
     <>
       <FormField

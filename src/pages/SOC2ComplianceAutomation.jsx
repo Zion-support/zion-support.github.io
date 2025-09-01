@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function SOC2ComplianceAutomation () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Brain,
@@ -582,6 +584,7 @@ import { motion } from 'framer - motion';
 
 const successStories = [
   {
+
     id: 1,
     comp: "Financial Services Corp",
     industry: "Finance",
@@ -591,6 +594,7 @@ const successStories = [
     logo: "FSC"
   },
   {
+
     id: 2,
     comp: "Healthcare Technology Ltd",
     industry: "Healthcare",
@@ -600,6 +604,7 @@ const successStories = [
     logo: "HTL"
   },
   {
+
     id: 3,
     comp: "Cloud Services Provider",
     industry: "Technology",
@@ -612,6 +617,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Compliance Assessment",
     description: "Evaluate current SOC2 compliance status and identify automation opportunities",
@@ -619,6 +625,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
   },
   {
+
     step: 2,
     title: "Automation Strategy",
     description: "Develop SOC2 automation strategy and implementation roadmap",
@@ -626,6 +633,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
   },
   {
+
     step: 3,
     title: "System Implementation",
     description: "Build and deploy SOC2 compliance automation systems",
@@ -633,6 +641,7 @@ const processSteps = [
     duration: "18 - 40 weeks"
   },
   {
+
     step: 4,
     title: "Testing & Validation",
     description: "Test systems and validate compliance requirements",
@@ -643,24 +652,28 @@ const processSteps = [
 
 const soc2Benefits = [
   {
+
     title: "Automated Compliance",
     description: "AI - powered automation reduces manual compliance effort",
     icon: Zap,
     examples["Automated monitoring", "Policy enforcement", "Compliance checking", "Audit preparation"];
   },;
   {
+
     title: "Improved Security",
     description: "Automated security controls enhance overall security posture",
     icon: Shield,
     examples["Security automation", "Control monitoring", "Threat detection", "Incident response"];
   },;
   {
+
     title: "Cost Reduction",
     description: "Automation reduces compliance costs and resource requirements",
     icon: TrendingUp,
     examples["Reduced manual effort", "Faster compliance", "Better efficiency", "Lower costs"];
   },;
   {
+
     title: "Audit Success",
     description: "Automated systems improve audit preparation and success rates",
     icon: CheckCircle,
@@ -689,11 +702,13 @@ const soc2Benefits = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -703,16 +718,19 @@ const soc2Benefits = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -755,11 +773,13 @@ const soc2Benefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -777,16 +797,19 @@ const soc2Benefits = [
             {soc2Benefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -817,11 +840,13 @@ const soc2Benefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -839,16 +864,19 @@ const soc2Benefits = [
             {soc2Technologies.map ( (technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -864,6 +892,7 @@ const soc2Benefits = [
                 <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   technology.reliability === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : technology.reliability === 'High'
@@ -882,11 +911,13 @@ const soc2Benefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -904,16 +935,19 @@ const soc2Benefits = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -944,11 +978,13 @@ const soc2Benefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -968,6 +1004,7 @@ const soc2Benefits = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -981,16 +1018,19 @@ const soc2Benefits = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1045,11 +1085,13 @@ const soc2Benefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1067,16 +1109,19 @@ const soc2Benefits = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1122,11 +1167,13 @@ const soc2Benefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

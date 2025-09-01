@@ -4,8 +4,10 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquare, FileText, Database, Search, Phone, Star, CheckCircle, Clock } from 'lucide-react';
 export default function MicroSAASPage() {
+
     const microSAASServices = [
         {
+
             id: "email-automation",
             title: "Email Marketing Automation",
             description: "Powerful email automation platform with advanced segmentation, A/B testing, and analytics for growing businesses.",
@@ -17,6 +19,7 @@ export default function MicroSAASPage() {
                 "API integration"
             ],
             pricing: {
+
                 starter: "$29/month",
                 professional: "$79/month",
                 enterprise: "$199/month"
@@ -29,6 +32,7 @@ export default function MicroSAASPage() {
             reviews: 234
         },
         {
+
             id: "project-management",
             title: "Project Management Suite",
             description: "Comprehensive project management tool with task tracking, team collaboration, and project analytics.",
@@ -40,6 +44,7 @@ export default function MicroSAASPage() {
                 "Mobile apps"
             ],
             pricing: {
+
                 starter: "$12/month",
                 professional: "$25/month",
                 enterprise: "$49/month"
@@ -52,6 +57,7 @@ export default function MicroSAASPage() {
             reviews: 189
         },
         {
+
             id: "crm-system",
             title: "Customer Relationship Management",
             description: "Lightweight CRM system designed for small to medium businesses with contact management and sales tracking.",
@@ -63,6 +69,7 @@ export default function MicroSAASPage() {
                 "Mobile access"
             ],
             pricing: {
+
                 starter: "$19/month",
                 professional: "$39/month",
                 enterprise: "$79/month"
@@ -75,6 +82,7 @@ export default function MicroSAASPage() {
             reviews: 156
         },
         {
+
             id: "analytics-platform",
             title: "Business Analytics Platform",
             description: "Simple yet powerful analytics platform for tracking business metrics, user behavior, and performance insights.",
@@ -86,6 +94,7 @@ export default function MicroSAASPage() {
                 "API access"
             ],
             pricing: {
+
                 starter: "$39/month",
                 professional: "$89/month",
                 enterprise: "$199/month"
@@ -98,6 +107,7 @@ export default function MicroSAASPage() {
             reviews: 98
         },
         {
+
             id: "payment-processor",
             title: "Payment Processing Solution",
             description: "Secure payment processing platform with support for multiple payment methods and subscription billing.",
@@ -109,6 +119,7 @@ export default function MicroSAASPage() {
                 "Developer API"
             ],
             pricing: {
+
                 starter: "2.9% + $0.30",
                 professional: "2.5% + $0.30",
                 enterprise: "Custom"
@@ -121,6 +132,7 @@ export default function MicroSAASPage() {
             reviews: 312
         },
         {
+
             id: "form-builder",
             title: "Advanced Form Builder",
             description: "Professional form creation tool with conditional logic, file uploads, and advanced validation rules.",
@@ -132,6 +144,7 @@ export default function MicroSAASPage() {
                 "Analytics tracking"
             ],
             pricing: {
+
                 starter: "$15/month",
                 professional: "$35/month",
                 enterprise: "$75/month"
@@ -144,6 +157,7 @@ export default function MicroSAASPage() {
             reviews: 145
         },
         {
+
             id: "chat-widget",
             title: "Live Chat Widget",
             description: "Professional live chat solution for websites with visitor tracking, chat history, and team collaboration.",
@@ -155,6 +169,7 @@ export default function MicroSAASPage() {
                 "Mobile apps"
             ],
             pricing: {
+
                 starter: "$25/month",
                 professional: "$59/month",
                 enterprise: "$129/month"
@@ -167,6 +182,7 @@ export default function MicroSAASPage() {
             reviews: 203
         },
         {
+
             id: "seo-toolkit",
             title: "SEO Optimization Toolkit",
             description: "Comprehensive SEO tool for keyword research, site audits, and performance monitoring.",
@@ -178,6 +194,7 @@ export default function MicroSAASPage() {
                 "Performance reports"
             ],
             pricing: {
+
                 starter: "$49/month",
                 professional: "$99/month",
                 enterprise: "$199/month"
@@ -190,6 +207,7 @@ export default function MicroSAASPage() {
             reviews: 167
         },
         {
+
             id: "design-tool",
             title: "Graphic Design Platform",
             description: "Online design tool with templates, stock photos, and collaboration features for marketing teams.",
@@ -201,6 +219,7 @@ export default function MicroSAASPage() {
                 "Export options"
             ],
             pricing: {
+
                 starter: "$12/month",
                 professional: "$25/month",
                 enterprise: "$49/month"
@@ -213,6 +232,7 @@ export default function MicroSAASPage() {
             reviews: 134
         },
         {
+
             id: "inventory-management",
             title: "Inventory Management System",
             description: "Simple inventory tracking solution for small businesses with barcode scanning and low stock alerts.",
@@ -224,6 +244,7 @@ export default function MicroSAASPage() {
                 "Mobile app"
             ],
             pricing: {
+
                 starter: "$29/month",
                 professional: "$59/month",
                 enterprise: "$119/month"
@@ -236,6 +257,7 @@ export default function MicroSAASPage() {
             reviews: 89
         },
         {
+
             id: "appointment-scheduler",
             title: "Appointment Scheduling System",
             description: "Online booking platform for service businesses with calendar integration and automated reminders.",
@@ -247,6 +269,7 @@ export default function MicroSAASPage() {
                 "Client portal"
             ],
             pricing: {
+
                 starter: "$19/month",
                 professional: "$39/month",
                 enterprise: "$79/month"
@@ -259,6 +282,7 @@ export default function MicroSAASPage() {
             reviews: 178
         },
         {
+
             id: "survey-platform",
             title: "Survey & Feedback Platform",
             description: "Professional survey creation tool with advanced question types, logic branching, and analytics.",
@@ -270,6 +294,7 @@ export default function MicroSAASPage() {
                 "Data export"
             ],
             pricing: {
+
                 starter: "$25/month",
                 professional: "$55/month",
                 enterprise: "$125/month"

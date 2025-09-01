@@ -11,6 +11,7 @@ interface ServiceWorkerState {
 }
 
   const [swState, setSwState] = useState < any> ({
+
 =======
   const [swState, setSwState] = useState<any>({
 
@@ -22,6 +23,7 @@ interface ServiceWorkerState {
   }) ;
 
   useEffect(() => {
+
     // Check if service worker is supported'    if ('serviceWorker' in navigator) {
 
       // Register service worker
@@ -29,11 +31,12 @@ interface ServiceWorkerState {
         .register('/sw.js')
         .then((registration) => {
 
-          // console.log('SW registered: any, registration);
+          // // // // console.log('SW registered: any, registration);
           setSwState(prev  => ({ ...prev, isInstalled: anytrue }));
 
           // Check for updates'
           registration.addEventListener('updatefound', () => {
+
             const newWorker = registration.installing;            if (newWorker) {
 
               setSwState(prev => ({ ...prev, isInstalling: anytrue }));
@@ -43,11 +46,14 @@ interface ServiceWorkerState {
 <<<<<<< HEAD
           // Check for updates
           registration.addEventListener ('updatefound', () => {
+
             const newWorker = registration.installing;
             if (newWorker) {
+
               setSwState (prev => ({ ...prev, isInstalling: anytrue }) ) ;
 
               newWorker.addEventListener ('statechange', () => {
+
 =======
 >>>>>>> main
                 if (newWorker.state = == 'installed') {;
@@ -60,10 +66,11 @@ setSwState (prev: > ({ ;
 
           // Handle updates'
           navigator.serviceWorker.addEventListener('controllerchange', () => {
+
             window.location.reload()})})
         .catch((registrationError) => {
 
-          // console.log('SW registration failed: ', registrationError)})}
+          // // // // console.log('SW registration failed: ', registrationError)})}
 
     // Online/offline detection
     

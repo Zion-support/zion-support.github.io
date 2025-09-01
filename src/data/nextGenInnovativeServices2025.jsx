@@ -1,6 +1,7 @@
 export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
     // Quantum AI Orchestration Platform
     {
+
         id: "quantum-ai-orchestration-platform",
         title: "Quantum AI Orchestration Platform",
         description: "Revolutionary platform that combines quantum computing with AI to solve complex optimization problems in real-time, enabling unprecedented computational power for enterprise applications.",
@@ -45,6 +46,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "enterprise",
         marketPrice: "$2,500 - $10,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -59,6 +61,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
     },
     // Autonomous AI Business Operations Suite
     {
+
         id: "autonomous-ai-business-operations-suite",
         title: "Autonomous AI Business Operations Suite",
         description: "Complete AI-powered business automation platform that runs entire business operations autonomously, from decision-making to execution, with human oversight capabilities.",
@@ -103,6 +106,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "premium",
         marketPrice: "$1,800 - $5,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -117,6 +121,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
     },
     // Neural Interface Development Platform
     {
+
         id: "neural-interface-development-platform",
         title: "Neural Interface Development Platform",
         description: "Cutting-edge platform for developing brain-computer interfaces and neural network applications, enabling direct communication between human brain and digital systems.",
@@ -161,6 +166,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "enterprise",
         marketPrice: "$3,500 - $15,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -175,6 +181,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
     },
     // Holographic Collaboration Workspace
     {
+
         id: "holographic-collaboration-workspace",
         title: "Holographic Collaboration Workspace",
         description: "Next-generation 3D holographic workspace that enables teams to collaborate in immersive virtual environments, revolutionizing remote work and creative collaboration.",
@@ -219,6 +226,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "premium",
         marketPrice: "$1,200 - $3,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -233,6 +241,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
     },
     // AI-Powered Cybersecurity Mesh
     {
+
         id: "ai-powered-cybersecurity-mesh",
         title: "AI-Powered Cybersecurity Mesh",
         description: "Advanced cybersecurity platform that creates a distributed security mesh using AI to protect digital assets across all environments, from edge to cloud.",
@@ -277,6 +286,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "enterprise",
         marketPrice: "$2,200 - $8,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -291,6 +301,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
     },
     // Sustainable Tech Innovation Hub
     {
+
         id: "sustainable-tech-innovation-hub",
         title: "Sustainable Tech Innovation Hub",
         description: "Comprehensive platform for developing and deploying sustainable technology solutions, including green computing, renewable energy optimization, and environmental impact tracking.",
@@ -335,6 +346,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "premium",
         marketPrice: "$1,500 - $4,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"

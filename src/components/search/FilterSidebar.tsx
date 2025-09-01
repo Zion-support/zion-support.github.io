@@ -1,12 +1,14 @@
 <<<<<<< HEAD
 
 interface FilterOption {
+
   value: string;
   label: string;
   count?: number
 }
 
 interface FilterGroup {
+
   title: string;
   key: string;
   options: FilterOption[];

@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default MicroSAASPage;
 import {
+
 import { motion } from 'framer - motion';
 
   Zap,
@@ -24,8 +25,10 @@ import { motion } from 'framer - motion';
   Globe
  } from 'lucide - react';
 const MicroSAASPage = () => {
+
   const saasServices = [
     {
+
       id: 'custom - applications',
       title: 'Custom Applications',
       description: 'Tailored software solutions designed for your specific business needs',
@@ -35,6 +38,7 @@ const MicroSAASPage = () => {
       pricing: 'Starting from $2,500 / month'
     },
     {
+
       id: 'api - development',
       title: 'API Development',
       description: 'Robust and scalable APIs to connect your applications and services',
@@ -44,6 +48,7 @@ const MicroSAASPage = () => {
       pricing: 'Starting from $1,800 / month'
     },
     {
+
       id: 'scalable - architecture',
       title: 'Scalable Architecture',
       description: 'Cloud - native architectures that grow with your business',
@@ -53,10 +58,10 @@ const MicroSAASPage = () => {
       pricing: 'Starting from $3,200 / month'
     },
     {
+
       id: 'user - management',
       title: 'User Management',
-      description: 'Comprehensive user authentication and authorization systems',
-    };
+      description: 'Comprehensive user authentication and authorization systems'};
       icon: <Users className="w - 8 h - 8" />,;
       features: ['Single Sign - On', 'Role - based Access', 'Multi - tenancy', 'User Analytics'],;
       useCases: ['B2B Applications', 'Enterprise Software', 'Multi - user Platforms', 'SaaS Products'],;
@@ -67,6 +72,7 @@ const MicroSAASPage = () => {
     'Scalability', 'Cost Efficiency', 'Rapid Deployment', 'Easy Updates', 'Accessibility', 'Integration';
   ];
   const containerVariants = {
+
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -76,6 +82,7 @@ const MicroSAASPage = () => {
     };
   };
   const itemVariants = {
+
   hidden: { opacity: 0,
   y: 20
 
@@ -93,11 +100,13 @@ const MicroSAASPage = () => {
         {/* Hero Section */}
         <motion.div
           initial = {
+
   { opacity: 0,
   y: 30
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0
 
@@ -194,16 +203,19 @@ to: {`/micro - saas/${service.id}`}
         {/* SAAS Benefits */}
         <motion.div
           initial = {
+
   { opacity: 0,
   y: 30 ;
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0 ;
 
 }}
           transition = {
+
   { duration: 0.8,
   delay: 0.3 ;
 
@@ -223,16 +235,19 @@ to: {`/micro - saas/${service.id}`}
             {saasBenefits.map ( (benefit, index) => (<motion.div
                 key={benefit}
                 initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
                 animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -246,16 +261,19 @@ to: {`/micro - saas/${service.id}`}
         {/* Why Choose Our SAAS */}
         <motion.div
           initial = {
+
   { opacity: 0,
   y: 30 ;
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0 ;
 
 }}
           transition = {
+
   { duration: 0.8,
   delay: 0.4 ;
 
@@ -300,16 +318,19 @@ to: {`/micro - saas/${service.id}`}
         {/* Call to Action */}
         <motion.div
           initial = {
+
   { opacity: 0,
   y: 30 ;
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0 ;
 
 }}
           transition = {
+
   { duration: 0.8,
   delay: 0.5 ;
 

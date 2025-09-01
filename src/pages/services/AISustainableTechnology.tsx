@@ -1,4 +1,5 @@
 import { Leaf, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Globe, TrendingUp, Zap, Target, Clock, Shield, Sun export default function AISustainableTechnology(...args: any[]): any {
+
   const features = [
     'AI-powered energy consumption optimization',
     'Real-time sustainability monitoring and reporting',
@@ -32,11 +33,13 @@ import { Leaf, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Globe, T
 
   const tiers = [
     {
+
       name: 'Sustainability Starter',
       price: '$299/mo',
       details: ['Up to 5 locations', 'Basic AI monitoring', 'Standard reporting', 'Email support']
     },
-    { 
+    {
+
       name: 'Sustainability Professional', 
       price: '$799/mo', 
       details: ['Up to 25 locations', 'Advanced AI features', 'Custom dashboards', 'Priority support'] ;

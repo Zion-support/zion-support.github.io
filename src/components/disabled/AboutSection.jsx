@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 
 export function AboutSection() {
+
 >>>>>>>> cursor/analyze-improve-and-deploy-application-2dc3:src/components/disabled/AboutSection.jsx
     const achievements = [
         { number: "10+", label: "Years of Experience", icon: <Award className="w-6 h-6"/> },"
@@ -24,24 +25,28 @@ export function AboutSection() {
     ];
     const values = [
         {
+
 "
             title: "Innovation First","
             description: "We push the boundaries of what's possible, constantly exploring emerging technologies and novel approaches.","
             icon: <TrendingUp className="w-8 h-8"/>
         },
         {
+
 "
             title: "Client Success","
             description: "Your success is our success. We measure our achievements by the impact we create for your business.","
             icon: <Target className="w-8 h-8"/>
         },
         {
+
 "
             title: "Excellence","
             description: "We maintain the highest standards in everything we do, from code quality to client communication.","
             icon: <Award className="w-8 h-8"/>
         },
         {
+
 "
             title: "Trust & Security","
             description: "Your data and systems are protected with enterprise-grade security and compliance standards.","

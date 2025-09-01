@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function Infrastructure () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Server,
@@ -587,6 +589,7 @@ import { motion } from 'framer - motion';
 
 const infrastructureTechnologies = [
   {
+
     name: "Server Technologies",
     description: "Enterprise server infrastructure and virtualization",
     icon: Server,
@@ -594,6 +597,7 @@ const infrastructureTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Network Technologies",
     description: "Enterprise networking and connectivity solutions",
     icon: Network,
@@ -601,6 +605,7 @@ const infrastructureTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Storage Technologies",
     description: "High - performance storage and data management",
     icon: HardDrive,
@@ -608,6 +613,7 @@ const infrastructureTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Security Technologies",
     description: "Comprehensive security and compliance solutions",
     icon: Shield,
@@ -618,6 +624,7 @@ const infrastructureTechnologies = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "Global Financial Institution",
     industry: "Finance",
@@ -627,6 +634,7 @@ const successStories = [
     logo: "GFI"
   },
   {
+
     id: 2,
     comp: "Healthcare Network",
     industry: "Healthcare",
@@ -636,6 +644,7 @@ const successStories = [
     logo: "HN"
   },
   {
+
     id: 3,
     comp: "Manufacturing Corporation",
     industry: "Manufacturing",
@@ -648,6 +657,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Infrastructure Assessment",
     description: "Evaluate current infrastructure and identify requirements",
@@ -655,6 +665,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
   },
   {
+
     step: 2,
     title: "Architecture Design",
     description: "Design infrastructure architecture and technology stack",
@@ -662,6 +673,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
   },
   {
+
     step: 3,
     title: "Implementation",
     description: "Build and deploy infrastructure components",
@@ -669,6 +681,7 @@ const processSteps = [
     duration: "16 - 48 weeks"
   },
   {
+
     step: 4,
     title: "Testing & Optimization",
     description: "Test infrastructure and optimize performance",
@@ -679,24 +692,28 @@ const processSteps = [
 
 const infrastructureBenefits = [
   {
+
     title: "High Availability",
     description: "99.99% uptime with redundant systems and failover capabilities",
     icon: Shield,
     examples["Redundant systems", "Failover protection", "Load balancing", "Disaster recovery"];
   },;
   {
+
     title: "Scalability",
     description: "Infrastructure that grows with your business needs",
     icon: TrendingUp,
     examples["Horizontal scaling", "Vertical scaling", "Auto - scaling", "Resource optimization"];
   },;
   {
+
     title: "Security",
     description: "Enterprise - grade security with compliance and monitoring",
     icon: Lock,
     examples["Multi - layer security", "Compliance frameworks", "Threat detection", "Access controls"];
   },;
   {
+
     title: "Performance",
     description: "Optimized infrastructure for maximum performance and efficiency",
     icon: Zap,
@@ -725,11 +742,13 @@ const infrastructureBenefits = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -739,16 +758,19 @@ const infrastructureBenefits = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -791,11 +813,13 @@ const infrastructureBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -813,16 +837,19 @@ const infrastructureBenefits = [
             {infrastructureBenefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -853,11 +880,13 @@ const infrastructureBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -875,16 +904,19 @@ const infrastructureBenefits = [
             {infrastructureTechnologies.map ( (technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -900,6 +932,7 @@ const infrastructureBenefits = [
                 <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   technology.reliability === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : technology.reliability === 'High'
@@ -918,11 +951,13 @@ const infrastructureBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -940,16 +975,19 @@ const infrastructureBenefits = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -980,11 +1018,13 @@ const infrastructureBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1004,6 +1044,7 @@ const infrastructureBenefits = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -1017,16 +1058,19 @@ const infrastructureBenefits = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1081,11 +1125,13 @@ const infrastructureBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1103,16 +1149,19 @@ const infrastructureBenefits = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1158,11 +1207,13 @@ const infrastructureBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

@@ -28,6 +28,7 @@ interface ChatMessage {
   timestamp: Date;
   isTyping?: boolean;
 metadata?: {
+
     confidence?: number;
     sources?: string[];
     suggestions?: string[];
@@ -44,14 +45,15 @@ interface ChatAssistantProps extends React.PropsWithChildren<{}> {
   enableSuggestions?: boolean}
 
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({
+
   enabled = true,
   position = 'bottom-right',
   theme = 'auto',
   maxMessages = 50,
   enableVoice = true,
   enableFileUpload = true,
-  enableSuggestions = true,
-}) => {
+  enableSuggestions = true}) => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState<any>([]);
@@ -68,28 +70,36 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
   // Auto-scroll to bottom when new messages arrive
   const scrollToBottom = useCallback(() => {
+
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, []);
 
   useEffect(()  => {
+
     scrollToBottom()}, [messages, scrollToBottom]);
 
   // Theme management
   useEffect(() => {
+
     if (theme === 'auto') {
+
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
       
       const handleChange = (e: MediaQueryListEvent)  => {
+
         setCurrentTheme(e.matches ? 'dark' : 'light')};
       
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange)} else {
+
       setCurrentTheme(theme)}
   }, [theme]);
 
   // Voice recognition setup
   useEffect(() => {
+
     if (enableVoice && 'webkitSpeechRecognition' in window) {
+
       const SpeechRecognition = (window as any).webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false;
@@ -97,13 +107,15 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       recognitionRef.current.lang = 'en-US';
 
       recognitionRef.current.onresult = (event) => {
+
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
       recognitionRef.current.onerror = (event) => {
-        console.error('Speech recognition error: ', event.error);
+
+        // // // console.error('Speech recognition error: ', event.error);
         setIsListening(false);
       };
     }
@@ -111,13 +123,17 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
   // Initialize with welcome message
   useEffect(() => {
+
     if (enabled && messages.length === 0) {
+
       const welcomeMessage: ChatMessage = {
+
         id: 'welcome',
         type: 'assistant',
         content: 'Hello! I\'m your AI assistant. How can I help you today?',
         timestamp: new Date(),
         metadata: {
+
           suggestions: [
             'Tell me about your services',
             'Help me with pricing',
@@ -132,12 +148,15 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
   // Handle voice input
   const toggleVoiceInput = useCallback(() => {
+
     if (!recognitionRef.current) return;
 
     if (isListening) {
+
       recognitionRef.current.stop();
       setIsListening(false);
     } else {
+
       recognitionRef.current.start();
       setIsListening(true);
     }
@@ -145,14 +164,15 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
   // Send message
   const sendMessage = useCallback(async (content: string) => {
+
     if (!content.trim()) return;
 
     const userMessage: ChatMessage = {
+
       id: Date.now().toString(),
       type: 'user',
       content: content.trim(),
-      timestamp: new Date(),
-    };
+      timestamp: new Date()};
 
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
@@ -160,33 +180,37 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     setIsProcessing(true);
 
     try {
+
       // Simulate AI response (replace with actual API call)
       await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
       
       const aiResponse: ChatMessage = {
+
         id: (Date.now() + 1).toString(),
         type: 'assistant',
         content: generateAIResponse(content),
         timestamp: new Date(),
         metadata: {
+
           confidence: 0.95,
-          suggestions: generateSuggestions(content),
-        }
+          suggestions: generateSuggestions(content)}
       };
 
       setMessages(prev => [...prev, aiResponse]);
     } catch (error) {
-      console.error('Error sending message:', error);
+
+      // // // console.error('Error sending message:', error);
       
       const errorMessage: ChatMessage = {
+
         id: (Date.now() + 1).toString(),
         type: 'assistant',
         content: 'Sorry, I encountered an error. Please try again.',
-        timestamp: new Date(),
-      };
+        timestamp: new Date()};
       
       setMessages(prev => [...prev, errorMessage]);
     } finally {
+
       setIsTyping(false);
       setIsProcessing(false);
     }
@@ -194,6 +218,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
   // Generate AI response (replace with actual AI integration)
   const generateAIResponse = (userInput: string): string => {
+
     const responses = [
       'I understand you\'re asking about that. Let me help you with some information.',
       'That\'s a great question! Here\'s what I can tell you about that topic.',
@@ -206,6 +231,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
   // Generate suggestions based on user input
   const generateSuggestions = (userInput: string): string[] => {
+
     const suggestions = [
       'Tell me more',
       'Can you explain that differently?',
@@ -218,42 +244,50 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
   // Handle file upload
   const handleFileUpload = useCallback((event: React.ChangeEvent<HTMLInputElement>)  => {
+
     const file = event.target.files?.[0];
     if (file) {
+
       const fileMessage: ChatMessage = {
+
         id: Date.now().toString(),
         type: 'user',
         content: `Uploaded file: ${file.name}`,
         timestamp: new Date(),
         metadata: {
-          sources: [file.name],
-        }
+
+          sources: [file.name]}
       };
       setMessages(prev  => [...prev, fileMessage])}
   }, []);
 
   // Handle suggestion click
   const handleSuggestionClick = useCallback((suggestion: string)  => {
+
     sendMessage(suggestion)}, [sendMessage]);
 
   // Handle enter key
   const handleKeyPress = useCallback((e: React.KeyboardEvent)  => {
+
     if (e.key === 'Enter' && !e.shiftKey) {
+
       e.preventDefault();
       sendMessage(inputValue)}
   }, [inputValue, sendMessage]);
 
   // Clear chat
   const clearChat = useCallback(() => {
+
     setMessages([])}, []);
 
   // Export chat
   const exportChat = useCallback(() => {
+
     const chatData = messages.map(msg => ({
+
       type: msg.type,
       content: msg.content,
-      timestamp: msg.timestamp.toISOString(),
-    }));
+      timestamp: msg.timestamp.toISOString()}));
     
     const blob = new Blob([JSON.stringify(chatData, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
@@ -266,16 +300,16 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   if (!enabled) return null;
 
   const positionClasses = {
+
     'bottom-right': 'bottom-4 right-4',
     'bottom-left': 'bottom-4 left-4',
     'top-right': 'top-4 right-4',
-    'top-left': 'top-4 left-4',
-  };
+    'top-left': 'top-4 left-4'};
 
   const themeClasses = {
+
     light: 'bg-white text-gray-900 border-gray-200',
-    dark: 'bg-gray-900 text-white border-gray-700',
-  };
+    dark: 'bg-gray-900 text-white border-gray-700'};
 
   return (
     <div className={`fixed ${positionClasses[position]} z-50`}>
@@ -330,6 +364,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   >
                     <div
                       className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
+
                         message.type === 'user'
                           ? 'bg-blue-500 text-white'
                           : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white'
@@ -446,6 +481,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                       <button
                         onClick={toggleVoiceInput}
                         className={`p-2 rounded transition-colors ${
+
                           isListening
                             ? 'bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-400'
                             : 'hover:bg-gray-100 dark:hover:bg-gray-800'

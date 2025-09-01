@@ -33,12 +33,15 @@ const HeroStats = memo(({ stats }) => (
   </div>
 ));
 const PerformanceOptimizedHero = memo(() => {
+
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
+
     const timer = setTimeout(() => setIsVisible(true), 100);
     const loadTimer = setTimeout(() => setIsLoaded(true), 500);
     return () => {
+
       clearTimeout(timer);
       clearTimeout(loadTimer);
     };
@@ -121,6 +124,7 @@ const PerformanceOptimizedHero = memo(() => {
               key={i}"
               className="absolute text-cyan-400 text-xs animate-matrix-rain opacity-20"
               style={{
+
 `
                 left: `${Math.random() * 100}%`,`
                 animationDelay: `${Math.random() * 20}s`,`

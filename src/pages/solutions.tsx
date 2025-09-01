@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Link } from 'react-router-dom';
 import {
+
   Search,
   Filter,
   Building,
@@ -46,6 +47,7 @@ import {
 } from 'lucide-react';
 
 export default function Solutions() {
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [selectedTechnology, setSelectedTechnology] = useState('all');
@@ -74,6 +76,7 @@ export default function Solutions() {
 
   const industrySolutions = [
     {
+
       id: 'healthcare-ai',
       industry: 'healthcare',
       title: 'AI-Powered Healthcare Solutions',
@@ -91,6 +94,7 @@ export default function Solutions() {
       href: '/solutions/healthcare-ai'
     },
     {
+
       id: 'finance-blockchain',
       industry: 'finance',
       title: 'Blockchain Financial Infrastructure',
@@ -108,6 +112,7 @@ export default function Solutions() {
       href: '/solutions/finance-blockchain'
     },
     {
+
       id: 'manufacturing-iot',
       industry: 'manufacturing',
       title: 'Smart Manufacturing with IoT',
@@ -125,6 +130,7 @@ export default function Solutions() {
       href: '/solutions/manufacturing-iot'
     },
     {
+
       id: 'retail-ai',
       industry: 'retail',
       title: 'AI-Driven Retail Analytics',
@@ -142,6 +148,7 @@ export default function Solutions() {
       href: '/solutions/retail-ai'
     },
     {
+
       id: 'education-vr',
       industry: 'education',
       title: 'Virtual Reality Learning Platforms',
@@ -159,6 +166,7 @@ export default function Solutions() {
       href: '/solutions/education-vr'
     },
     {
+
       id: 'government-cyber',
       industry: 'government',
       title: 'Government Cybersecurity Suite',
@@ -179,6 +187,7 @@ export default function Solutions() {
 
   const technologyFoundation = [
     {
+
       id: 'ai-platform',
       name: 'Zion AI Platform',
       description: 'Enterprise-grade AI infrastructure with pre-trained models and custom training capabilities',
@@ -192,6 +201,7 @@ export default function Solutions() {
       color: 'from-purple-500 to-pink-600'
     },
     {
+
       id: 'cloud-infrastructure',
       name: 'Zion Cloud Infrastructure',
       description: 'Scalable, secure, and cost-effective cloud computing platform',
@@ -205,6 +215,7 @@ export default function Solutions() {
       color: 'from-blue-500 to-cyan-600'
     },
     {
+
       id: 'security-framework',
       name: 'Zion Security Framework',
       description: 'Comprehensive cybersecurity solution with threat detection and response',
@@ -218,6 +229,7 @@ export default function Solutions() {
       color: 'from-red-500 to-orange-600'
     },
     {
+
       id: 'data-platform',
       name: 'Zion Data Platform',
       description: 'Unified data management and analytics platform',
@@ -234,6 +246,7 @@ export default function Solutions() {
 
   const successMetrics = [
     {
+
       metric: 'Client Satisfaction',
       value: '98%',
       description: 'Average client satisfaction score',
@@ -241,6 +254,7 @@ export default function Solutions() {
       color: 'from-yellow-400 to-orange-500'
     },
     {
+
       metric: 'Project Success Rate',
       value: '96%',
       description: 'Projects delivered on time and budget',
@@ -248,6 +262,7 @@ export default function Solutions() {
       color: 'from-green-400 to-emerald-500'
     },
     {
+
       metric: 'Cost Reduction',
       value: '40%',
       description: 'Average cost savings for clients',
@@ -255,6 +270,7 @@ export default function Solutions() {
       color: 'from-blue-400 to-cyan-500'
     },
     {
+
       metric: 'Efficiency Gain',
       value: '35%',
       description: 'Average productivity improvement',
@@ -265,6 +281,7 @@ export default function Solutions() {
 
   const solutionProcess = [
     {
+
       step: 1,
       title: 'Discovery & Assessment',
       description: 'We analyze your current state, identify challenges, and define success criteria',
@@ -272,6 +289,7 @@ export default function Solutions() {
       color: 'from-blue-500 to-blue-600'
     },
     {
+
       step: 2,
       title: 'Solution Design',
       description: 'Our experts design a customized solution architecture tailored to your needs',
@@ -279,6 +297,7 @@ export default function Solutions() {
       color: 'from-purple-500 to-purple-600'
     },
     {
+
       step: 3,
       title: 'Implementation',
       description: 'We deploy the solution with minimal disruption to your operations',
@@ -286,6 +305,7 @@ export default function Solutions() {
       color: 'from-green-500 to-green-600'
     },
     {
+
       step: 4,
       title: 'Optimization',
       description: 'Continuous monitoring and optimization to ensure peak performance',
@@ -295,6 +315,7 @@ export default function Solutions() {
   ];
 
   const filteredSolutions = industrySolutions.filter(solution => {
+
     const matchesIndustry = selectedIndustry === 'all' || solution.industry === selectedIndustry;
     const matchesTechnology = selectedTechnology === 'all' || 
       solution.technologies.some(tech => tech === selectedTechnology);

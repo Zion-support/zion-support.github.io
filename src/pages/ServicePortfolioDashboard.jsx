@@ -7,23 +7,28 @@ import { motion } from 'framer - motion';
 import AdvancedServicePortfolioDashboard from "../components / AdvancedServicePortfolioDashboard";
 
 const ServicePortfolioDashboard = () => {
+
     const features = [
         {
+
             icon: <BarChart3 className="w - 6 h - 6 text - zion - cyan"/>,
             title: 'Comprehensive Analytics',
             description: 'Real - time insights into service performance, revenue, and growth metrics'
         },
         {
+
             icon: <PieChart className="w - 6 h - 6 text - zion - purple"/>,
             title: 'Portfolio Visualization',
             description: 'Interactive charts and graphs showing service distribution and trends'
         },
         {
+
             icon: <TrendingUp className="w - 6 h - 6 text - zion - green"/>,
             title: 'Performance Tracking',
             description: 'Monitor service performance, client satisfaction, and market demand'
         },
         {
+
             icon: <Target className="w - 6 h - 6 text - zion - orange"/>,
             title: 'Strategic Insights',
             description: 'Data - driven recommendations for portfolio optimization and growth'
@@ -39,24 +44,28 @@ const ServicePortfolioDashboard = () => {
     ];
     const portfolioStats = [
         {
+
             label: 'Total Services',
             value: '52+',
             description: 'Cutting - edge technology solutions',
             icon: <Rocket className="w - 8 h - 8 text - zion - cyan"/>
         },
         {
+
             label: 'Technology Categories',
             value: '12+',
             description: 'Major technology sectors covered',
             icon: <Brain className="w - 8 h - 8 text - zion - purple"/>
         },
         {
+
             label: 'Price Range',
             value: '$5K-$2M',
             description: 'Monthly service pricing',
             icon: <DollarSign className="w - 8 h - 8 text - zion - green"/>
         },
         {
+
             label: 'Market Coverage',
             value: '95%+',
             description: 'Technology market segments',
@@ -74,10 +83,12 @@ const ServicePortfolioDashboard = () => {
 
         <div className="max - w-4xl mx - auto text - center relative z - 10">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
@@ -106,10 +117,12 @@ const ServicePortfolioDashboard = () => {
       <section className="py - 16 px - 6 bg - white">
         <div className="max - w-6xl mx - auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -125,14 +138,17 @@ const ServicePortfolioDashboard = () => {
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">
             {portfolioStats.map ( (stat, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -164,10 +180,12 @@ const ServicePortfolioDashboard = () => {
       <section className="py - 16 px - 6 bg - zion - blue - light / 5">
         <div className="max - w-6xl mx - auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -182,14 +200,17 @@ const ServicePortfolioDashboard = () => {
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">
             {features.map ( (feature, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -220,10 +241,12 @@ const ServicePortfolioDashboard = () => {
       <section className="py - 16 px - 6 bg - white">
         <div className="max - w-4xl mx - auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -238,14 +261,17 @@ const ServicePortfolioDashboard = () => {
 
           <div className="space - y-4">
             {benefits.map ( (benefit, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   x: -20
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -261,10 +287,12 @@ const ServicePortfolioDashboard = () => {
       <section id="portfolio - dashboard" className="py - 16 px - 6 bg - zion - blue - light / 5">
         <div className="max - w-7xl mx - auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -286,10 +314,12 @@ const ServicePortfolioDashboard = () => {
       <section className="py - 20 px - 6 bg - gradient - to - r from - zion - purple via - zion - blue - light to - zion - cyan">
         <div className="max - w-4xl mx - auto text - center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 

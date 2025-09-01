@@ -52,11 +52,13 @@ export interface Service {
     roi: string;
     innovationLevel: string;
     contactInfo: {
+
       phone: string;
       email: string;
       website: string;
     };
     technicalSpecs?: {
+
       technology: string[];
       integrations: string[];
       apiEndpoints: number;
@@ -70,6 +72,7 @@ export interface Service {
 =======
 =======
 contactInfo: {
+
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
     phone: string;
     email: string;
@@ -90,6 +93,7 @@ contactInfo: {
 export function map2026ServicesToExistingStructure(): Service[] {
 
   return specializedIndustrySolutions2026.map(service => ({
+
 >>>>>>> main
 
 =======
@@ -97,10 +101,13 @@ export function map2026ServicesToExistingStructure(): Service[] {
 
 // Map 2026 services to existing service structure
 export function map2026ServicesToExistingStructure(): Service[] {
+
 <<<<<<< HEAD
   return specializedIndustrySolutions2026.map(service = > ({
+
 =======
   return specializedIndustrySolutions2026.map(service = > ({
+
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
     id: service.id,

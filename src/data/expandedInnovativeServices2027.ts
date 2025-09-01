@@ -2,6 +2,7 @@
 // Additional Micro SAAS, IT Infrastructure, and AI Services
 ;
 export interface ExpandedService2027 {
+
   id: string;
   name: string;
   category: string;

@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 import { useAnalytics } from '../hooks / useAnalytics';
@@ -49,18 +50,22 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
     exportAuditLog,
     configureSecurity} = useSecurityCompliance();
   const handleStartMonitoring = useCallback(() => {
+
     startMonitoring();
     trackEvent('security',dashboard',monitoring_started');
   }, [startMonitoring, trackEvent]);
   const handleStopMonitoring = useCallback(() => {
+
     stopMonitoring();
     trackEvent('security',dashboard',monitoring_stopped');
   }, [stopMonitoring, trackEvent]);
   const handleCheckCompliance = useCallback(async () => {
+
     await checkCompliance();
     trackEvent('security',dashboard',compliance_checked');
   }, [checkCompliance, trackEvent]);
   const handleGenerateReport = useCallback(() => {
+
     const report = generateSecurityReport();
     navigator.clipboard.writeText(report);
     setCopied(true);
@@ -68,6 +73,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
     trackEvent('security',dashboard',report_generated');
   }, [generateSecurityReport, trackEvent]);
   const handleExportAuditLog = useCallback(() => {
+
     const auditLog = exportAuditLog();
     const blob = new Blob([auditLog], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
@@ -79,6 +85,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
     trackEvent('security',dashboard',audit_log_exported');
   }, [exportAuditLog, trackEvent]);
   const handleAddComplianceRule = useCallback(() => {
+
     const newRule = {
 
       name: 'Custom Compliance Rule',

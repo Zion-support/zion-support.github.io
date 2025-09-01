@@ -5,33 +5,40 @@ import { PenTool, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, 
 import SEO from '@/components/SEO';
 
 export default function AIContentGenerator() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Writing",
       description: "Advanced language models that generate high-quality, engaging content in multiple styles and tones."
     },
     {
+
       icon: PenTool,
       title: "Multi-format Content",
       description: "Create blog posts, articles, social media content, emails, and marketing copy with AI assistance."
     },
     {
+
       icon: Zap,
       title: "Instant Generation",
       description: "Generate content in seconds with customizable templates and intelligent suggestions."
     },
     {
+
       icon: BarChart3,
       title: "SEO Optimization",
       description: "AI-powered SEO recommendations and keyword optimization for better search rankings."
     },
     {
+
       icon: Smartphone,
       title: "Mobile-First Design",
       description: "Create and edit content on any device with our responsive platform and mobile apps."
     },
     {
+
       icon: Globe,
       title: "Multi-language Support",
       description: "Generate content in over 50 languages with native-level quality and cultural adaptation."
@@ -40,31 +47,37 @@ export default function AIContentGenerator() {
 
   const contentTypes = [
     {
+
       icon: Edit3,
       title: "Blog Posts & Articles",
       description: "Long-form content with research, citations, and engaging narratives"
     },
     {
+
       icon: Type,
       title: "Social Media Content",
       description: "Platform-optimized posts for Twitter, LinkedIn, Instagram, and Facebook"
     },
     {
+
       icon: FileText,
       title: "Marketing Copy",
       description: "Compelling ad copy, landing pages, and promotional materials"
     },
     {
+
       icon: Mail,
       title: "Email Campaigns",
       description: "Newsletters, drip campaigns, and personalized email content"
     },
     {
+
       icon: Image,
       title: "Visual Content",
       description: "AI-generated images, infographics, and visual assets"
     },
     {
+
       icon: Video,
       title: "Video Scripts",
       description: "Scripts for YouTube, TikTok, and marketing videos"
@@ -73,6 +86,7 @@ export default function AIContentGenerator() {
 
   const pricingPlans = [
     {
+
       name: "Content Creator",
       price: "$39",
       period: "/month",
@@ -88,6 +102,7 @@ export default function AIContentGenerator() {
       popular: false
     },
     {
+
       name: "Content Professional",
       price: "$99",
       period: "/month",
@@ -104,6 +119,7 @@ export default function AIContentGenerator() {
       popular: true
     },
     {
+
       name: "Content Enterprise",
       price: "$299",
       period: "/month",
@@ -123,21 +139,25 @@ export default function AIContentGenerator() {
 
   const benefits = [
     {
+
       title: "Save Time & Resources",
       description: "Generate high-quality content in minutes instead of hours, freeing up your team for strategic work.",
       icon: Clock
     },
     {
+
       title: "Improve Content Quality",
       description: "AI-powered suggestions and optimization improve readability, engagement, and SEO performance.",
       icon: TrendingUp
     },
     {
+
       title: "Scale Content Production",
       description: "Create unlimited content without increasing headcount or compromising quality.",
       icon: Globe
     },
     {
+
       title: "Maintain Brand Consistency",
       description: "Ensure all content follows your brand guidelines and voice with AI-powered style guides.",
       icon: Shield
@@ -146,31 +166,37 @@ export default function AIContentGenerator() {
 
   const useCases = [
     {
+
       icon: Users,
       title: "Marketing Teams",
       description: "Generate campaign content, social media posts, and promotional materials"
     },
     {
+
       icon: BookOpen,
       title: "Content Creators",
       description: "Create blog posts, articles, and long-form content efficiently"
     },
     {
+
       icon: Globe,
       title: "E-commerce",
       description: "Generate product descriptions, category pages, and marketing copy"
     },
     {
+
       icon: Settings,
       title: "Agencies",
       description: "Scale client content production with AI-powered tools"
     },
     {
+
       icon: Target,
       title: "Startups",
       description: "Create professional content without large marketing budgets"
     },
     {
+
       icon: Award,
       title: "Enterprises",
       description: "Maintain consistent brand voice across global content operations"
@@ -374,6 +400,7 @@ export default function AIContentGenerator() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+
                     plan.popular 
                       ? 'border-pink-500 ring-2 ring-pink-500/20' 
                       : 'border-slate-700'
@@ -408,6 +435,7 @@ export default function AIContentGenerator() {
                   <Link
                     to="/request-quote"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'

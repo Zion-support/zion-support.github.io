@@ -1,8 +1,10 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 export function EnhancedCard({ children, className, variant = 'default', hover = true, onClick, as: Component = 'div', href }) {
+
     const baseClasses = 'rounded-xl transition-all duration-300';
     const variantClasses = {
+
   default: 'bg-zion-blue-dark border border-zion-blue-light',
         elevated: 'bg-zion-blue-dark shadow-lg shadow-zion-purple/10',
         outlined: 'bg-transparent border-2 border-zion-cyan/30',
@@ -19,6 +21,7 @@ export function EnhancedCard({ children, className, variant = 'default', hover =
     const interactiveClasses = onClick || href ? 'cursor-pointer' : '';
     const classes = cn(baseClasses, variantClasses[variant], hoverClasses, interactiveClasses, className);
     if (href) {
+
         return (<a href={href} className={classes} onClick={onClick}>
         {children}
 <<<<<<< HEAD
@@ -30,12 +33,14 @@ export function EnhancedCard({ children, className, variant = 'default', hover =
 
 // Enhanced Card Header component
 export function EnhancedCardHeader({ children, className }) {
+
     return (<div className={cn('p-6 pb-0', className)}>
       {children}
     </div>);
 
 // Enhanced Card Content component
 export function EnhancedCardContent({ children, className }) {
+
     return (<div className={cn('p-6', className)}>
       {children}
     </div>);
@@ -49,7 +54,9 @@ export function EnhancedCardContent({ children, className }) {
 // Enhanced Card Header component
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function EnhancedCardFooter({ children, className }) {
+
     return (<div className = {
+
   cn('p-6 pt-0',
   className)
 

@@ -8,8 +8,10 @@ import { Input } from "./ui/input";
 const COMPLEXITY_LEVELS = ['Basic', 'Intermediate', 'Advanced', 'Enterprise'];
 const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
 export const AdvancedServiceComparison = () => {
+
     const [selectedServices, setSelectedServices] = useState([]);
     const [filters, setFilters] = useState({
+
         category: 'all',
         complexity: 'all',
         priceRange: 'all',
@@ -20,6 +22,7 @@ export const AdvancedServiceComparison = () => {
     // Mock data - in real app this would come from props or API
     const mockServices = [
         {
+
             id: 'ai-crm-basic',
             name: 'AI CRM Basic',
             category: 'ai',
@@ -37,6 +40,7 @@ export const AdvancedServiceComparison = () => {
             link: 'https://ziontechgroup.com/services/ai-crm-basic'
         },
         {
+
             id: 'ai-crm-enterprise',
             name: 'AI CRM Enterprise',
             category: 'ai',
@@ -54,6 +58,7 @@ export const AdvancedServiceComparison = () => {
             link: 'https://ziontechgroup.com/services/ai-crm-enterprise'
         },
         {
+
             id: 'quantum-basic',
             name: 'Quantum Computing Basic',
             category: 'quantum',
@@ -71,6 +76,7 @@ export const AdvancedServiceComparison = () => {
             link: 'https://ziontechgroup.com/services/quantum-basic'
         },
         {
+
             id: 'quantum-enterprise',
             name: 'Quantum Computing Enterprise',
             category: 'quantum',
@@ -89,15 +95,20 @@ export const AdvancedServiceComparison = () => {
         }
     ];
     const filteredServices = useMemo(() => {
+
         return mockServices.filter(service => {
+
             const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesComplexity && matchesTechnology && matchesSearch})}, [filters, searchTerm]);
     const toggleServiceSelection = (serviceId) => {
+
         setSelectedServices(prev => prev.includes(serviceId)
             ? prev.filter(id => id !== serviceId)
             [...prev, serviceId])};
     const getComplexityColor = (complexity) => {
+
         switch (complexity) {
+
             case 'Basic': return 'bg-green-100 text-green-800';
             case 'Intermediate': return 'bg-blue-100 text-blue-800';
             case 'Advanced': return 'bg-orange-100 text-orange-800';
@@ -105,7 +116,9 @@ export const AdvancedServiceComparison = () => {
             default: return 'bg-gray-100 text-gray-800'}
     };
     const getPopularityIcon = (popularity) => {
+
         switch (popularity) {
+
             case 'Trending': return <TrendingUp className="w-4 h-4 text-red-500"/>;
             case 'High': return <Star className="w-4 h-4 text-yellow-500"/>;
             case 'Medium': return <Zap className="w-4 h-4 text-blue-500"/>;
@@ -115,10 +128,12 @@ export const AdvancedServiceComparison = () => {
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -133,10 +148,12 @@ export const AdvancedServiceComparison = () => {
 
       {/* Filters and Controls */}
       <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -145,6 +162,7 @@ export const AdvancedServiceComparison = () => {
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>
             <select value={filters.category} onChange = {
+
   (e) => setFilters(prev => ({ ...prev,
   category: e.target.value 
 
@@ -160,6 +178,7 @@ export const AdvancedServiceComparison = () => {
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Complexity</label>
             <select value={filters.complexity} onChange = {
+
   (e) => setFilters(prev => ({ ...prev,
   complexity: e.target.value 
 
@@ -172,6 +191,7 @@ export const AdvancedServiceComparison = () => {
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Price Range</label>
             <select value={filters.priceRange} onChange = {
+
   (e) => setFilters(prev => ({ ...prev,
   priceRange: e.target.value 
 
@@ -184,6 +204,7 @@ export const AdvancedServiceComparison = () => {
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology</label>
             <select value={filters.technology} onChange = {
+
   (e) => setFilters(prev => ({ ...prev,
   technology: e.target.value 
 
@@ -219,19 +240,23 @@ export const AdvancedServiceComparison = () => {
 
       {/* Service Grid */}
       <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition={{ delay: 0.2 }} className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
         {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -302,6 +327,7 @@ export const AdvancedServiceComparison = () => {
 
                   <div className="pt-2">
                     <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
+
   () => window.open(service.link,
   '_blank')
 
@@ -317,10 +343,12 @@ export const AdvancedServiceComparison = () => {
 
       {/* Comparison Summary */}
       {selectedServices.length > 0 && (<motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -351,6 +379,7 @@ export const AdvancedServiceComparison = () => {
           
           <div className="mt-6 text-center">
             <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
+
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Inquiry',
   '_blank')
 
@@ -363,10 +392,12 @@ export const AdvancedServiceComparison = () => {
 
       {/* CTA Section */}
       <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -379,6 +410,7 @@ export const AdvancedServiceComparison = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
+
   () => window.open('mailto:kleber@ziontechgroup.com',
   '_blank')
 
@@ -387,6 +419,7 @@ export const AdvancedServiceComparison = () => {
               Get Started
             </Button>
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
+
   () => window.open('tel:+13024640950',
   '_blank')
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {
+
 <<<<<<< HEAD
 import { motion } from 'framer - motion';
 

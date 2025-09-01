@@ -8,6 +8,7 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap export function MainSidebar() {
+
     const location = useLocation();
 >>>>>>> main
     const sidebarSections = [
@@ -79,6 +80,7 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
             <ul className="space-y-1">
               {section.items.map((item) => (<li key={item.key}>
                   <Link to={item.href} className = {
+
 "
   cn("flex items-center space-x-3 px-3 py-2 rounded-md text-sm font-medium transition-colors",
   isActive(item.href)"

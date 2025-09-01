@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Server, 
   Shield, 
   Cloud, 
@@ -48,8 +49,10 @@ import {
 } from 'lucide-react';
 
 export default function ITServices() {
+
   const itServiceCategories = [
     {
+
       name: "IT Infrastructure",
       description: "Enterprise-grade infrastructure solutions for modern businesses",
       icon: Server,
@@ -59,6 +62,7 @@ export default function ITServices() {
       services: ["Cloud Infrastructure", "Data Center Management", "Network Security", "Server Management"]
     },
     {
+
       name: "Cybersecurity",
       description: "Advanced security solutions to protect your digital assets",
       icon: Shield,
@@ -68,6 +72,7 @@ export default function ITServices() {
       services: ["Threat Detection", "Zero Trust Security", "Compliance Management", "Incident Response"]
     },
     {
+
       name: "Cloud Solutions",
       description: "Scalable cloud infrastructure and migration services",
       icon: Cloud,
@@ -77,6 +82,7 @@ export default function ITServices() {
       services: ["Cloud Migration", "Multi-cloud Management", "DevOps Automation", "Cloud Security"]
     },
     {
+
       name: "Digital Transformation",
       description: "Strategic technology consulting and implementation",
       icon: Target,
@@ -89,6 +95,7 @@ export default function ITServices() {
 
   const featuredServices = [
     {
+
       title: "Quantum-Edge Computing Infrastructure",
       description: "Revolutionary infrastructure that combines quantum computing with edge computing for ultra-fast processing",
       price: "From $49,999/month",
@@ -98,6 +105,7 @@ export default function ITServices() {
       popular: true
     },
     {
+
       title: "AI-Powered DevOps Automation Platform",
       description: "Intelligent DevOps platform that uses AI to automate deployment, testing, and infrastructure management",
       price: "From $8,999/month",
@@ -106,6 +114,7 @@ export default function ITServices() {
       color: "from-blue-400 to-indigo-500"
     },
     {
+
       title: "Zero-Trust Network Security Architecture",
       description: "Comprehensive zero-trust security solution with continuous verification and threat protection",
       price: "From $15,999/month",
@@ -116,6 +125,7 @@ export default function ITServices() {
   ];
 
   const contactInfo = {
+
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     website: "https://ziontechgroup.com",
@@ -252,6 +262,7 @@ export default function ITServices() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 ${
+
                   service.popular ? 'ring-2 ring-blue-500' : ''
                 }`}
               >

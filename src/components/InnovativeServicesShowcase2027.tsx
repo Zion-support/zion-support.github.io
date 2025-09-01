@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data / innovativeServices2027";
 import { motion, AnimatePresence } from 'framer - motion';
@@ -40,6 +41,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect ( () => {
+
     const observer = new IntersectionObserver (; ([entry]) => {;
         if (entry.isIntersecting) {;
           setIsVisible (true) }
@@ -49,6 +51,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
     
     if (element) {
+
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 

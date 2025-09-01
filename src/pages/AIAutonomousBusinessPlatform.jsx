@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function AIAutonomousBusinessPlatform () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Brain,
@@ -580,6 +582,7 @@ import { motion } from 'framer - motion';
   Brain
 const businessPlatformSolutions = [;
   {
+
     id: 1,
     title: "AI Business Intelligence Platform",
     description: "Comprehensive business intelligence platform powered by artificial intelligence.",
@@ -596,6 +599,7 @@ const businessPlatformSolutions = [;
     technologies["Machine Learning", "Data Analytics", "Business Intelligence", "AI Models"];
   },;
   {
+
     id: 2,
     title: "Autonomous Business Process Platform",
     description: "AI - powered platform for automating and optimizing business processes.",
@@ -612,6 +616,7 @@ const businessPlatformSolutions = [;
     technologies["RPA", "AI", "Workflow Engines", "Process Mining"];
   },;
   {
+
     id: 3,
     title: "Smart Resource Management Platform",
     description: "Intelligent platform for managing and optimizing business resources.",
@@ -628,6 +633,7 @@ const businessPlatformSolutions = [;
     technologies["AI Optimization", "Resource Planning", "Analytics", "Machine Learning"];
   },;
   {
+
     id: 4,
     title: "Predictive Business Planning Platform",
     description: "AI - driven platform for strategic business planning and forecasting.",
@@ -644,6 +650,7 @@ const businessPlatformSolutions = [;
     technologies["Predictive Analytics", "Machine Learning", "Data Science", "AI Models"];
   },;
   {
+
     id: 5,
     title: "Intelligent Customer Management Platform",
     description: "AI - powered platform for customer relationship and experience management.",
@@ -660,6 +667,7 @@ const businessPlatformSolutions = [;
     technologies["AI", "CRM", "Machine Learning", "Customer Analytics"];
   },;
   {
+
     id: 6,
     title: "Autonomous Financial Management Platform",
     description: "AI - driven platform for financial planning, analysis, and decision making.",
@@ -679,6 +687,7 @@ const businessPlatformSolutions = [;
 
 const platformTechnologies = [
   {
+
     name: "AI & Machine Learning",
     description: "Advanced AI algorithms for business intelligence",
     icon: Brain,
@@ -686,6 +695,7 @@ const platformTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Data Analytics",
     description: "Comprehensive data analysis and visualization",
     icon: BarChart3,
@@ -693,6 +703,7 @@ const platformTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Process Automation",
     description: "Intelligent automation of business processes",
     icon: Cog,
@@ -700,6 +711,7 @@ const platformTechnologies = [
     reliability: "High"
   },
   {
+
     name: "Predictive Analytics",
     description: "AI - powered forecasting and planning",
     icon: Target,
@@ -710,6 +722,7 @@ const platformTechnologies = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "Global Manufacturing Corp",
     industry: "Manufacturing",
@@ -719,6 +732,7 @@ const successStories = [
     logo: "GMC"
   },
   {
+
     id: 2,
     comp: "Financial Services Group",
     industry: "Finance",
@@ -728,6 +742,7 @@ const successStories = [
     logo: "FSG"
   },
   {
+
     id: 3,
     comp: "Retail Chain Network",
     industry: "Retail",
@@ -740,24 +755,28 @@ const successStories = [
 
 const platformBenefits = [
   {
+
     title: "Intelligent Decision Making",
     description: "AI - powered platform insights enable better, data - driven business decisions",
     icon: Brain,
     examples["Data - driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"];
   },;
   {
+
     title: "Process Automation",
     description: "Automated workflows reduce manual effort and improve efficiency",
     icon: Zap,
     examples["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"];
   },;
   {
+
     title: "Cost Optimization",
     description: "AI platform identifies cost - saving opportunities and optimizes resource allocation",
     icon: TrendingUp,
     examples["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"];
   },;
   {
+
     title: "Competitive Advantage",
     description: "AI platform capabilities provide strategic advantages in the marketplace",
     icon: Rocket,
@@ -786,11 +805,13 @@ const platformBenefits = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -800,16 +821,19 @@ const platformBenefits = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -852,11 +876,13 @@ const platformBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -874,16 +900,19 @@ const platformBenefits = [
             {platformBenefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -914,11 +943,13 @@ const platformBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -936,16 +967,19 @@ const platformBenefits = [
             {platformTechnologies.map ( (technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -961,6 +995,7 @@ const platformBenefits = [
                 <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   technology.reliability === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : technology.reliability === 'High'
@@ -979,11 +1014,13 @@ const platformBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1001,16 +1038,19 @@ const platformBenefits = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1041,11 +1081,13 @@ const platformBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1065,6 +1107,7 @@ const platformBenefits = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -1078,16 +1121,19 @@ const platformBenefits = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1142,11 +1188,13 @@ const platformBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -1164,16 +1212,19 @@ const platformBenefits = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -1219,11 +1270,13 @@ const platformBenefits = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

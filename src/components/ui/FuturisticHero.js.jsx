@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe } from 'lucide-react';
 export default function FuturisticHero() {
+
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const { scrollY } = useScroll();
     const y = useTransform(scrollY, [0, 300], [0, 100]);
     const opacity = useTransform(scrollY, [0, 300], [1, 0]);
     useEffect(() => {
+
         const handleMouseMove = (e) => {
+
             setMousePosition({ x: e.clientX, y: e.clientY })};
         window.addEventListener('mousemove', handleMouseMove);
         return () => window.removeEventListener('mousemove', handleMouseMove)}, []);
@@ -32,46 +35,51 @@ export default function FuturisticHero() {
 
       {/* Floating Icons */}
       {floatingIcons.map((item, index) => (<motion.div key={index} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { delay: item.delay,
   duration: 1 
 
 }} className={`absolute ${item.color} opacity-20`} style={{
+
                 left: `${20 + index * 15}%`,
-                top: `${30 + (index % 2) * 20}%`,
-            }}>
+                top: `${30 + (index % 2) * 20}%`}}>
           {item.icon}
         </motion.div>))}
 
       {/* Mouse Trail Effect */}
       <div className="fixed w-4 h-4 bg-cyan-400 rounded-full pointer-events-none z-10 mix-blend-difference" style = {
-  {
-            left: mousePosition.x - 8,
-            top: mousePosition.y - 8,
-  
 
-}}/>
+  {
+
+            left: mousePosition.x - 8,
+            top: mousePosition.y - 8}}/>
 
       {/* Main Content */}
       <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Hero Title */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 50 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition={{ duration: 1 }} className="mb-8">
           <motion.h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6" style = {
+
   { y,
   opacity 
 
@@ -90,14 +98,17 @@ export default function FuturisticHero() {
           </motion.h1>
           
           <motion.p initial = {
+
   { opacity: 0,
   y: 30 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 1,
   delay: 0.3 
 
@@ -110,14 +121,17 @@ export default function FuturisticHero() {
 
         {/* Hero Stats */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 30 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 1,
   delay: 0.6 
 
@@ -128,14 +142,17 @@ export default function FuturisticHero() {
             { value: '21', label: 'Day Free Trials', icon: <Star className="w-8 h-8"/>, color: 'text-yellow-400' },
             { value: '24/7', label: 'AI Support', icon: <Brain className="w-8 h-8"/>, color: 'text-purple-400' },
         ].map((stat, index) => (<motion.div key={stat.label} initial = {
+
   { opacity: 0,
   scale: 0.8 
 
 }} animate = {
+
   { opacity: 1,
   scale: 1 
 
 }} transition = {
+
   { duration: 0.5,
   delay: 0.8 + index * 0.1 
 
@@ -154,14 +171,17 @@ export default function FuturisticHero() {
 
         {/* CTA Buttons */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 30 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 1,
   delay: 1 
 
@@ -184,24 +204,29 @@ export default function FuturisticHero() {
 
         {/* Scroll Indicator */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
+
   { duration: 1,
   delay: 1.5 
 
 }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <motion.div animate = {
+
   { y[0, 10,
   0] 
 
 }} transition = {
+
   { duration: 2,
   repeat: Infinity 
 
 }} className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
             <motion.div animate = {
+
   { y[0, 12,
   0] 
 
 }} transition = {
+
   { duration: 2,
   repeat: Infinity 
 
@@ -213,25 +238,22 @@ export default function FuturisticHero() {
       {/* Particle Effects */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(50)].map((_, i) => (<motion.div key={i} className="absolute w-1 h-1 bg-cyan-400 rounded-full" initial = {
+
   {
+
                 x: Math.random() * window.innerWidth,
                 y: Math.random() * window.innerHeight,
-                opacity: Math.random(),
-  
+                opacity: Math.random()}} animate = {
 
-}} animate = {
   {
+
                 y[0, -100],
-                opacity[0, 1, 0],
-  
+                opacity[0, 1, 0]}} transition = {
 
-}} transition = {
   {
+
                 duration: Math.random() * 3 + 2,
                 repeat: Infinity,
-                delay: Math.random() * 2,
-  
-
-}}/>))}
+                delay: Math.random() * 2}}/>))}
       </div>
     </section>)}

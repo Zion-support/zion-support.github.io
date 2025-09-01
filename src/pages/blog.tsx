@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
-import { 
+import {
+
   Search, 
   Filter, 
   Calendar, 
@@ -48,6 +49,7 @@ import {
 } from 'lucide-react';
 
 export default function Blog() {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -64,6 +66,7 @@ export default function Blog() {
 
   const featuredPosts = [
     {
+
       id: 1,
       title: 'The Future of AI in Healthcare: Transforming Patient Care',
       excerpt: 'Discover how artificial intelligence is revolutionizing healthcare delivery, from diagnostic accuracy to personalized treatment plans.',
@@ -77,6 +80,7 @@ export default function Blog() {
       featured: true
     },
     {
+
       id: 2,
       title: 'Zero Trust Security: The New Standard for Enterprise Protection',
       excerpt: 'Learn why Zero Trust architecture is becoming essential for modern organizations and how to implement it effectively.',
@@ -90,6 +94,7 @@ export default function Blog() {
       featured: true
     },
     {
+
       id: 3,
       title: 'Quantum Computing: Breaking Down the Hype vs. Reality',
       excerpt: 'Separate fact from fiction in the quantum computing landscape and understand what\'s possible today vs. tomorrow.',
@@ -106,6 +111,7 @@ export default function Blog() {
 
   const recentPosts = [
     {
+
       id: 4,
       title: 'Building Scalable Microservices with Kubernetes',
       excerpt: 'A comprehensive guide to designing and deploying microservices architecture using Kubernetes.',
@@ -118,6 +124,7 @@ export default function Blog() {
       tags: ['Microservices', 'Kubernetes', 'Cloud Native', 'DevOps']
     },
     {
+
       id: 5,
       title: 'IoT Security: Protecting Connected Devices in 2024',
       excerpt: 'Essential security practices for IoT deployments and how to mitigate emerging threats.',
@@ -130,6 +137,7 @@ export default function Blog() {
       tags: ['IoT', 'Security', 'Connected Devices', 'Threats']
     },
     {
+
       id: 6,
       title: 'Blockchain in Supply Chain: Real-World Applications',
       excerpt: 'How blockchain technology is transforming supply chain transparency and traceability.',
@@ -142,6 +150,7 @@ export default function Blog() {
       tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Traceability']
     },
     {
+
       id: 7,
       title: 'Data Analytics for Manufacturing: Industry 4.0 Insights',
       excerpt: 'Leveraging big data and analytics to optimize manufacturing processes and improve efficiency.',
@@ -154,6 +163,7 @@ export default function Blog() {
       tags: ['Manufacturing', 'Data Analytics', 'Industry 4.0', 'Efficiency']
     },
     {
+
       id: 8,
       title: 'The Rise of Edge Computing: Processing Data Where It Matters',
       excerpt: 'Understanding edge computing architecture and its applications in modern technology.',
@@ -166,6 +176,7 @@ export default function Blog() {
       tags: ['Edge Computing', 'IoT', 'Data Processing', 'Architecture']
     },
     {
+
       id: 9,
       title: 'AI Ethics: Building Responsible AI Systems',
       excerpt: 'Key considerations for developing AI systems that are fair, transparent, and accountable.',
@@ -182,6 +193,7 @@ export default function Blog() {
   const allPosts = [...featuredPosts, ...recentPosts];
 
   const filteredPosts = allPosts.filter(post => {
+
     const matchesCategory = activeCategory === 'all' || post.category === activeCategory;
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -190,8 +202,10 @@ export default function Blog() {
   });
 
   const formatDate = (dateString: string) => {
+
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
+    return date.toLocaleDateString('en-US', {
+
       year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
@@ -199,11 +213,13 @@ export default function Blog() {
   };
 
   const getCategoryIcon = (categoryId: string) => {
+
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.icon : BookOpen;
   };
 
   const getCategoryName = (categoryId: string) => {
+
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.name : 'General';
   };
@@ -263,6 +279,7 @@ export default function Blog() {
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-200 ${
+
                     activeCategory === category.id
                       ? 'bg-cyan-500/20 border-cyan-400/50 text-cyan-400'
                       : 'bg-slate-800/50 border-slate-600/50 text-gray-300 hover:border-cyan-400/30 hover:text-cyan-300'

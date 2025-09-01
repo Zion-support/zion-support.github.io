@@ -2,33 +2,40 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Settings, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Factory, Cog } from 'lucide-react';
 export default function ManufacturingSolutions() {
+
     const features = [
         {
+
             icon: Brain,
             title: "AI-Powered Predictive Maintenance",
             description: "Machine learning models to predict equipment failures and optimize maintenance schedules"
         },
         {
+
             icon: BarChart3,
             title: "Real-time Production Analytics",
             description: "Live monitoring and analysis of production metrics and KPIs"
         },
         {
+
             icon: Target,
             title: "Quality Control Automation",
             description: "AI-driven quality inspection and defect detection systems"
         },
         {
+
             icon: Zap,
             title: "Smart Supply Chain Management",
             description: "Intelligent inventory optimization and supply chain automation"
         },
         {
+
             icon: Shield,
             title: "Industrial Cybersecurity",
             description: "Advanced security for connected manufacturing systems and IoT devices"
         },
         {
+
             icon: Settings,
             title: "Process Optimization",
             description: "AI-powered process improvement and efficiency optimization"
@@ -44,18 +51,22 @@ export default function ManufacturingSolutions() {
     ];
     const solutions = [
         {
+
             title: "Smart Manufacturing",
             description: "IoT-enabled connected manufacturing with real-time monitoring"
         },
         {
+
             title: "Predictive Analytics",
             description: "AI-powered forecasting and predictive maintenance solutions"
         },
         {
+
             title: "Quality Management",
             description: "Automated quality control and defect prevention systems"
         },
         {
+
             title: "Supply Chain Optimization",
             description: "Intelligent inventory and supply chain management"
         }
@@ -75,10 +86,12 @@ export default function ManufacturingSolutions() {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -111,10 +124,12 @@ export default function ManufacturingSolutions() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -130,14 +145,17 @@ export default function ManufacturingSolutions() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (<motion.div key={feature.title} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: index * 0.1 
 
@@ -156,10 +174,12 @@ export default function ManufacturingSolutions() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -174,10 +194,12 @@ export default function ManufacturingSolutions() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div initial = {
+
   { opacity: 0,
   x: -20 
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -192,10 +214,12 @@ export default function ManufacturingSolutions() {
             </motion.div>
 
             <motion.div initial = {
+
   { opacity: 0,
   x: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -216,10 +240,12 @@ export default function ManufacturingSolutions() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -235,14 +261,17 @@ export default function ManufacturingSolutions() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {industries.map((industry, index) => (<motion.div key={industry} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: index * 0.1 
 
@@ -258,10 +287,12 @@ export default function ManufacturingSolutions() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 

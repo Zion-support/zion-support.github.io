@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 export default React.memo (function QuantumComputing (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Atom,
@@ -53,51 +55,51 @@ import { motion } from 'framer - motion.ts';
   Network,
   Database,
   Cloud,
-  Eye,
-} from 'lucide - react.ts';
+  Eye} from 'lucide - react.ts';
 
   const features = [
     {
+
       icon: Atom,
       title: 'Quantum Supremacy',
       description:
         'Achieve computational power beyond classical computing limits',
-      color: 'from - purple - 500 to - pink - 500',
-    },
+      color: 'from - purple - 500 to - pink - 500'},
     {
+
       icon: Cpu,
       title: 'Quantum Algorithms',
       description: 'Optimized algorithms for complex problem - solving',
-      color: 'from - blue - 500 to - cyan - 500',
-    },
+      color: 'from - blue - 500 to - cyan - 500'},
     {
+
       icon: Zap,
       title: 'Quantum Speedup',
       description: 'Exponential performance improvements for specific tasks',
-      color: 'from - yellow - 500 to - orange - 500',
-    },
+      color: 'from - yellow - 500 to - orange - 500'},
     {
+
       icon: Brain,
       title: 'AI Enhancement',
       description: 'Quantum machine learning and neural networks',
-      color: 'from - green - 500 to - emerald - 500',
-    },
+      color: 'from - green - 500 to - emerald - 500'},
     {
+
       icon: Shield,
       title: 'Quantum Security',
       description: 'Unbreakable encryption and secure communications',
-      color: 'from - red - 500 to - pink - 500',
-    },
+      color: 'from - red - 500 to - pink - 500'},
     {
+
       icon: Target,
       title: 'Precision Computing',
       description: 'Ultra - accurate simulations and calculations',
-      color: 'from - indigo - 500 to - blue - 500',
-    },
+      color: 'from - indigo - 500 to - blue - 500'},
   ];
 
   const applications = [
     {
+
       title: 'Cryptography',
       description: 'Quantum - resistant encryption and secure communications',
       icon: Lock,
@@ -105,9 +107,9 @@ import { motion } from 'framer - motion.ts';
         'Post - quantum cryptography',
         'Quantum key distribution',
         'Secure protocols',
-      ],
-    },
+      ]},
     {
+
       title: 'Drug Discovery',
       description: 'Molecular modeling and pharmaceutical research',
       icon: Activity,
@@ -115,9 +117,9 @@ import { motion } from 'framer - motion.ts';
         'Molecular simulation',
         'Drug optimization',
         'Protein folding',
-      ],
-    },
+      ]},
     {
+
       title: 'Financial Modeling',
       description: 'Portfolio optimization and risk assessment',
       icon: TrendingUp,
@@ -125,9 +127,9 @@ import { motion } from 'framer - motion.ts';
         'Risk analysis',
         'Portfolio optimization',
         'Market simulation',
-      ],
-    },
+      ]},
     {
+
       title: 'Climate Science',
       description: 'Climate modeling and environmental prediction',
       icon: Globe,
@@ -135,8 +137,7 @@ import { motion } from 'framer - motion.ts';
         'Weather forecasting',
         'Climate modeling',
         'Environmental analysis',
-      ],
-    },
+      ]},
   ];
 
   const technologies = [

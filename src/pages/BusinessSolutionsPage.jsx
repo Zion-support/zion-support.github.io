@@ -4,9 +4,11 @@ import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 export default function BusinessSolutionsPage () {
+
 import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare, Shield, DollarSign, Search, Lightbulb, Star, Leaf const BusinessSolutions = [;
 
     {
+
         title: "Business Strategy Consulting",
         description: "Strategic planning and business model optimization for growth",
         price: "$200 - $500 / hour",
@@ -17,6 +19,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         link: "/request - quote?service = business - strategy"
     },
     {
+
         title: "Process Automation & Optimization",
         description: "Streamline operations and eliminate inefficiencies",
         price: "$5,000 - $50,000",
@@ -27,6 +30,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         link: "/request - quote?service = process - automation"
     },
     {
+
         title: "Digital Transformation",
         description: "Modernize your business with cutting - edge technology",
         price: "$25,000 - $200,000",
@@ -36,6 +40,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         link: "/request - quote?service = digital - transformation"
     },
     {
+
         title: "Business Intelligence & Analytics",
         description: "Data - driven insights for better decision making",
         price: "$2,000 - $15,000 / month",
@@ -45,6 +50,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         link: "/request - quote?service = business - intelligence"
     },
     {
+
         title: "Change Management",
         description: "Navigate organizational changes successfully",
         price: "$150 - $300 / hour",
@@ -54,6 +60,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         link: "/request - quote?service = change - management"
     },
     {
+
         title: "Financial Planning & Analysis",
         description: "Strategic financial guidance and forecasting",
         price: "$1,500 - $8,000 / month",
@@ -63,6 +70,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         link: "/request - quote?service = financial - planning"
     },
     {
+
         title: "Market Research & Analysis",
         description: "Deep insights into your market and customers",
         price: "$3,000 - $25,000",
@@ -72,6 +80,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         link: "/request - quote?service = market - research"
     },
     {
+
         title: "Operational Excellence",
         description: "Optimize your operations for maximum efficiency",
         price: "$5,000 - $40,000",
@@ -81,6 +90,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         link: "/request - quote?service = operational - excellence"
     },
     {
+
         title: "Customer Experience Design",
         description: "Create exceptional customer journeys",
         price: "$8,000 - $60,000",
@@ -90,6 +100,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         link: "/request - quote?service = customer - experience"
     },
     {
+
         title: "Supply Chain Optimization",
         description: "Streamline your supply chain for cost and efficiency",
         price: "$10,000 - $75,000",
@@ -99,6 +110,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         link: "/request - quote?service = supply - chain"
     },
     {
+
         title: "Risk Management & Compliance",
         description: "Identify and mitigate business risks",
         price: "$2,000 - $20,000",
@@ -108,6 +120,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         link: "/request - quote?service = risk - management"
     },
     {
+
         title: "Performance Management Systems",
         description: "Implement effective performance tracking and improvement",
         price: "$3,000 - $25,000",
@@ -117,6 +130,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         link: "/request - quote?service = performance - management"
     },
     {
+
         title: "Innovation & R&D Strategy",
         description: "Drive innovation and research initiatives",
         price: "$5,000 - $50,000",
@@ -126,6 +140,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         link: "/request - quote?service = innovation - strategy"
     },
     {
+
         title: "Mergers & Acquisitions Support",
         description: "Navigate complex M & A transactions successfully",
         price: "$25,000 - $200,000",
@@ -135,6 +150,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         link: "/request - quote?service = mergers - acquisitions"
     },
     {
+
         title: "International Expansion",
         description: "Expand your business globally with confidence",
         price: "$15,000 - $100,000",
@@ -144,6 +160,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         link: "/request - quote?service = international - expansion"
     },
     {
+
         title: "Sustainability & ESG Consulting",
         description: "Build sustainable business practices and ESG compliance",
         price: "$3,000 - $30,000",

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Truck, 
   Package, 
   Globe, 
@@ -44,38 +45,45 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function AISupplyChainIntelligenceOptimizationPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Demand Forecasting",
       description: "Advanced machine learning algorithms that analyze historical data, market trends, and external factors to predict demand with high accuracy",
       benefits: ["Accurate demand prediction", "Seasonal pattern recognition", "Market trend analysis"]
     },
     {
+
       icon: Globe,
       title: "Global Supply Chain Visibility",
       description: "Real-time tracking and monitoring of goods across the entire supply chain from suppliers to end customers",
       benefits: ["End-to-end visibility", "Real-time tracking", "Supplier performance monitoring"]
     },
     {
+
       icon: Route,
       title: "Intelligent Route Optimization",
       description: "AI-driven route planning that optimizes transportation routes, reduces costs, and improves delivery times",
       benefits: ["Cost optimization", "Delivery time reduction", "Fuel efficiency"]
     },
     {
+
       icon: Warehouse,
       title: "Inventory Optimization",
       description: "Smart inventory management that balances stock levels, reduces carrying costs, and prevents stockouts",
       benefits: ["Optimal stock levels", "Cost reduction", "Stockout prevention"]
     },
     {
+
       icon: Shield,
       title: "Risk Management & Mitigation",
       description: "Comprehensive risk assessment and mitigation strategies for supply chain disruptions and vulnerabilities",
       benefits: ["Risk identification", "Disruption prevention", "Contingency planning"]
     },
     {
+
       icon: BarChart3,
       title: "Advanced Analytics Dashboard",
       description: "Real-time analytics platform providing insights into supply chain performance, costs, and optimization opportunities",
@@ -85,6 +93,7 @@ export default function AISupplyChainIntelligenceOptimizationPlatform() {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$499",
       period: "/month",
@@ -102,6 +111,7 @@ export default function AISupplyChainIntelligenceOptimizationPlatform() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$1,299",
       period: "/month",
@@ -120,6 +130,7 @@ export default function AISupplyChainIntelligenceOptimizationPlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$2,999",
       period: "/month",
@@ -365,6 +376,7 @@ export default function AISupplyChainIntelligenceOptimizationPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-white p-8 rounded-xl shadow-lg border-2 ${
+
                   plan.popular 
                     ? 'border-blue-500 relative' 
                     : 'border-slate-200'
@@ -399,6 +411,7 @@ export default function AISupplyChainIntelligenceOptimizationPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-blue-600 hover:bg-blue-700 text-white'
                       : 'bg-slate-100 hover:bg-slate-200 text-slate-900'

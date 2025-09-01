@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -46,12 +47,14 @@ import { motion, AnimatePresence } from 'framer - motion';
   icon?: React.ComponentType < any>}
 
 interface SmartNotificationSystemProps {
+
   // Add your props here
 
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 type SmartNotificationSystemProps = {
+
   enabled?: boolean;
 <<<<<<< HEAD
   maxNotifications?: number;
@@ -88,6 +91,7 @@ export function SmartNotificationSystem({
   
   // Initialize audio for notification sounds
   useEffect ( () => {
+
     if (settings.sound) {
 
       audioRef.current = new Audio('/notification-sound.mp3');
@@ -98,13 +102,13 @@ export function SmartNotificationSystem({
   
       setNotifications(prev => {
 
-        
         return updated.slice(0, maxNotifications)});
 
       // Play sound if enabled
       if (settings.sound && audioRef.current) {
 
         audioRef.current.play().catch(() => {
+
           // Ignore audio play errors
         })}
 
@@ -112,6 +116,7 @@ export function SmartNotificationSystem({
       if (settings.autoDismiss && notification.priority !== 'critical') {
 
         setTimeout(() => {
+
           dismissNotification(newNotification.id)}, settings.autoDismissDelay)}
 
       // Show desktop notification if enabled
@@ -600,6 +605,7 @@ export
 };
 
 const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
+
   if (!enabled) return null;
   return <div className="hidden" aria-hidden="true" />};
 

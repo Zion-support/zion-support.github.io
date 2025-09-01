@@ -34,6 +34,7 @@ interface PerformanceMetric {
 }
 
 interface PerformanceMetricsProps {
+
   // Add your props here
 
 
@@ -135,9 +136,11 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
   const [timeRange, setTimeRange] = useState<'1h' | '6h' | '24h' | '7d'>('1h');
 
   useEffect(: unknown {
+
     if (!autoRefresh) return;
 
     const interval = setInterval(: unknown {
+
       setMetrics(prevMetrics => 
         prevMetrics.map(metric => ({
 

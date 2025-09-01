@@ -14,30 +14,51 @@ export default function ServicesShowcase2026V4() {
     ...innovative2026MicroSaasServicesV4,
     ...emergingTech2026ServicesV4,
     ...enterpriseIT2026ServicesV4,
-    ...innovative2026AIServicesV4
+    ...innovative2026AIServicesV4,
   ];
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com',
   };
 
   return (
     <UltraFuturisticBackground2026>
       <div className="min-h-screen">
         <Head>
-          <title>2026 Revolutionary Services V4 - Zion Tech Group | Cutting-Edge AI & Quantum Solutions</title>
-          <meta name="description" content="Experience the future with our revolutionary 2026 services including AI consciousness interface, quantum AI hybrid computing, neuromorphic computing, and more. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="2026 services, AI consciousness, quantum AI, neuromorphic computing, synthetic biology, holographic displays, autonomous drones, zero-trust security, data governance" />
+          <title>
+            2026 Revolutionary Services V4 - Zion Tech Group | Cutting-Edge AI &
+            Quantum Solutions
+          </title>
+          <meta
+            name="description"
+            content="Experience the future with our revolutionary 2026 services including AI consciousness interface, quantum AI hybrid computing, neuromorphic computing, and more. Contact: +1 302 464 0950"
+          />
+          <meta
+            name="keywords"
+            content="2026 services, AI consciousness, quantum AI, neuromorphic computing, synthetic biology, holographic displays, autonomous drones, zero-trust security, data governance"
+          />
           <meta name="author" content="Zion Tech Group" />
           <meta name="robots" content="index, follow" />
-          <meta property="og:title" content="2026 Revolutionary Services V4 - Zion Tech Group" />
-          <meta property="og:description" content="Cutting-edge AI, quantum computing, and emerging technology services for 2026" />
-          <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-v4" />
+          <meta
+            property="og:title"
+            content="2026 Revolutionary Services V4 - Zion Tech Group"
+          />
+          <meta
+            property="og:description"
+            content="Cutting-edge AI, quantum computing, and emerging technology services for 2026"
+          />
+          <meta
+            property="og:url"
+            content="https://ziontechgroup.com/2026-services-showcase-v4"
+          />
           <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase-v4" />
+          <link
+            rel="canonical"
+            href="https://ziontechgroup.com/2026-services-showcase-v4"
+          />
         </Head>
 
         {/* Ultra Advanced Navigation */}
@@ -59,9 +80,11 @@ export default function ServicesShowcase2026V4() {
                 <span className="text-white">Version 4.0</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
-                Experience the future of technology with our cutting-edge AI, quantum computing, and emerging technology solutions that are reshaping industries and unlocking unprecedented possibilities.
+                Experience the future of technology with our cutting-edge AI,
+                quantum computing, and emerging technology solutions that are
+                reshaping industries and unlocking unprecedented possibilities.
               </p>
-              
+
               {/* Service Categories */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <motion.div
@@ -73,8 +96,12 @@ export default function ServicesShowcase2026V4() {
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-3">
                     <span className="text-2xl">🤖</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white">AI Services</h3>
-                  <p className="text-sm text-gray-400">Consciousness & Intelligence</p>
+                  <h3 className="text-lg font-semibold text-white">
+                    AI Services
+                  </h3>
+                  <p className="text-sm text-gray-400">
+                    Consciousness & Intelligence
+                  </p>
                 </motion.div>
 
                 <motion.div
@@ -86,7 +113,9 @@ export default function ServicesShowcase2026V4() {
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-3">
                     <span className="text-2xl">⚛️</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white">Quantum Tech</h3>
+                  <h3 className="text-lg font-semibold text-white">
+                    Quantum Tech
+                  </h3>
                   <p className="text-sm text-gray-400">Computing & Security</p>
                 </motion.div>
 
@@ -99,8 +128,12 @@ export default function ServicesShowcase2026V4() {
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-3">
                     <span className="text-2xl">🚀</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white">Emerging Tech</h3>
-                  <p className="text-sm text-gray-400">Neuromorphic & Holographic</p>
+                  <h3 className="text-lg font-semibold text-white">
+                    Emerging Tech
+                  </h3>
+                  <p className="text-sm text-gray-400">
+                    Neuromorphic & Holographic
+                  </p>
                 </motion.div>
 
                 <motion.div
@@ -112,7 +145,9 @@ export default function ServicesShowcase2026V4() {
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-3">
                     <span className="text-2xl">🏢</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white">Enterprise IT</h3>
+                  <h3 className="text-lg font-semibold text-white">
+                    Enterprise IT
+                  </h3>
                   <p className="text-sm text-gray-400">Operations & Security</p>
                 </motion.div>
               </div>
@@ -142,9 +177,10 @@ export default function ServicesShowcase2026V4() {
                 </span>
               </h2>
               <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
-                Join the revolution and transform your business with our cutting-edge 2026 services. Contact us today to get started.
+                Join the revolution and transform your business with our
+                cutting-edge 2026 services. Contact us today to get started.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <motion.a
                   href={`tel:${contactInfo.mobile}`}
@@ -154,7 +190,7 @@ export default function ServicesShowcase2026V4() {
                 >
                   <span>Call {contactInfo.mobile}</span>
                 </motion.a>
-                
+
                 <motion.a
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}
@@ -169,15 +205,21 @@ export default function ServicesShowcase2026V4() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                   <div>
                     <p className="text-cyan-400 font-medium mb-1">Phone</p>
-                    <p className="text-white font-medium">{contactInfo.mobile}</p>
+                    <p className="text-white font-medium">
+                      {contactInfo.mobile}
+                    </p>
                   </div>
                   <div>
                     <p className="text-purple-400 font-medium mb-1">Email</p>
-                    <p className="text-white font-medium">{contactInfo.email}</p>
+                    <p className="text-white font-medium">
+                      {contactInfo.email}
+                    </p>
                   </div>
                   <div>
                     <p className="text-pink-400 font-medium mb-1">Address</p>
-                    <p className="text-white font-medium">{contactInfo.address}</p>
+                    <p className="text-white font-medium">
+                      {contactInfo.address}
+                    </p>
                   </div>
                 </div>
               </div>

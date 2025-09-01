@@ -1,7 +1,9 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 export function Loading({ size = 'md', variant = 'spinner', className, text }) {
+
     const sizeClasses = {
+
   sm: 'w-4 h-4',
         md: 'w-6 h-6',
         lg: 'w-8 h-8',
@@ -15,7 +17,9 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
 
 };
     const renderContent = () => {
+
         switch (variant) {
+
             case 'dots':
                 return renderDots();
             case 'pulse':
@@ -31,6 +35,7 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className = {
+
   cn('flex flex-col items-center justify-center gap-3',
   className)
 
@@ -47,20 +52,24 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
 
 // Skeleton loading for content
 export function Skeleton({ className, ...props }) {
+
     return (<div className={cn('animate-pulse rounded-md bg-zion-slate-light/20', className)} {...props}/>);
 
 =======
     </div>)}
 // Skeleton loading for content
 export function Skeleton({ className, ...props }) {
+
 <<<<<<< HEAD
     return (<div className = {
+
   cn('animate-pulse rounded-md bg-zion-slate-light/20',
   className)
 
 } {...props}/>)}
 =======
     return (<div className = {
+
   cn('animate-pulse rounded-md bg-zion-slate-light/20',
   className)
 
@@ -75,6 +84,7 @@ export function Skeleton({ className, ...props }) {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Page loading component
 export function PageLoading() {
+
     return (<div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center space-y-4">
         <Loading size="xl" variant="spinner" className="text-zion-cyan"/>
@@ -86,6 +96,7 @@ export function PageLoading() {
 
 // Content skeleton loading
 export function ContentSkeleton() {
+
     return (<div className="space-y-4 animate-pulse">
       <div className="h-8 bg-zion-slate-light/20 rounded w-3/4"></div>
       <div className="space-y-2">
@@ -101,6 +112,7 @@ export function ContentSkeleton() {
 // Content skeleton loading
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function CardSkeleton() {
+
     return (<div className="bg-card border border-border rounded-lg p-6 space-y-4 animate-pulse">
       <div className="h-6 bg-zion-slate-light/20 rounded w-1/2"></div>
       <div className="space-y-2">

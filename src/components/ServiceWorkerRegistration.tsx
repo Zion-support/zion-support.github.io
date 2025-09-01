@@ -3,26 +3,35 @@ import React, { useEffect, useState } from 'react';
 interface ServiceWorkerRegistrationProps {}
 
 export const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = () => {
+
   const [isUpdateAvailable, setIsUpdateAvailable] = useState(false);
   const [registration, setRegistration] = useState<ServiceWorkerRegistration | null>(null);
 
   useEffect(() => {
+
     if ('serviceWorker' in navigator) {
+
       registerServiceWorker();
     }
   }, []);
 
   const registerServiceWorker = async () => {
+
     try {
+
       const reg = await navigator.serviceWorker.register('/sw.js');
       setRegistration(reg);
 
       // Check for updates
       reg.addEventListener('updatefound', () => {
+
         const newWorker = reg.installing;
         if (newWorker) {
+
           newWorker.addEventListener('statechange', () => {
+
             if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+
               setIsUpdateAvailable(true);
             }
           });
@@ -31,16 +40,20 @@ export const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps>
 
       // Handle service worker updates
       navigator.serviceWorker.addEventListener('controllerchange', () => {
+
         window.location.reload();
       });
 
     } catch (error) {
-      console.error('Service Worker registration failed:', error);
+
+      // // // console.error('Service Worker registration failed:', error);
     }
   };
 
   const updateServiceWorker = () => {
+
     if (registration && registration.waiting) {
+
       registration.waiting.postMessage({ type: 'SKIP_WAITING' });
     }
   };

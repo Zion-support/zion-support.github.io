@@ -3,26 +3,31 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 } from 'lucide-react';
 const AIWorkflowAutomation = () => {
+
     const features = [
         {
+
             icon: Brain,
             title: "AI-Powered Process Analysis",
             description: "Intelligent analysis of existing workflows to identify optimization opportunities and automation potential",
             benefits["Process mapping", "Bottleneck identification", "Efficiency scoring", "Automation recommendations"]
         },
         {
+
             icon: Workflow,
             title: "Intelligent Workflow Design",
             description: "AI-driven workflow design that adapts to business needs and automatically optimizes for performance",
             benefits["Dynamic workflows", "Conditional logic", "Exception handling", "Performance optimization"]
         },
         {
+
             icon: Zap,
             title: "Automated Decision Making",
             description: "AI algorithms that make intelligent decisions based on data, rules, and historical patterns",
             benefits["Rule-based decisions", "Machine learning", "Risk assessment", "Compliance checking"]
         },
         {
+
             icon: Clock,
             title: "Real-time Monitoring",
             description: "Continuous monitoring of workflow performance with instant alerts and proactive optimization",
@@ -31,6 +36,7 @@ const AIWorkflowAutomation = () => {
     ];
     const solutions = [
         {
+
             category: "Document Processing",
             icon: Database,
             solutions[
@@ -42,6 +48,7 @@ const AIWorkflowAutomation = () => {
             ]
         },
         {
+
             category: "Customer Service",
             icon: Users,
             solutions[
@@ -53,6 +60,7 @@ const AIWorkflowAutomation = () => {
             ]
         },
         {
+
             category: "Financial Operations",
             icon: TrendingUp,
             solutions[
@@ -64,6 +72,7 @@ const AIWorkflowAutomation = () => {
             ]
         },
         {
+
             category: "HR & Recruitment",
             icon: Users,
             solutions[
@@ -77,31 +86,37 @@ const AIWorkflowAutomation = () => {
     ];
     const technologies = [
         {
+
             name: "Machine Learning",
             description: "Advanced ML algorithms for process optimization and decision making",
             icon: Brain
         },
         {
+
             name: "Robotic Process Automation",
             description: "RPA tools for repetitive task automation",
             icon: Workflow
         },
         {
+
             name: "Natural Language Processing",
             description: "AI-powered text analysis and document processing",
             icon: Database
         },
         {
+
             name: "Workflow Engine",
             description: "Scalable workflow orchestration platform",
             icon: Zap
         },
         {
+
             name: "Real-time Analytics",
             description: "Instant performance monitoring and optimization",
             icon: BarChart3
         },
         {
+
             name: "API Integration",
             description: "Seamless integration with existing systems",
             icon: Globe
@@ -109,44 +124,54 @@ const AIWorkflowAutomation = () => {
     ];
     const benefits = [
         {
+
             title: "Increased Efficiency",
             description: "Automate repetitive tasks and improve process efficiency by 40-60%",
             icon: TrendingUp
         },
         {
+
             title: "Cost Reduction",
             description: "Reduce operational costs by 25-35% through automation",
             icon: Target
         },
         {
+
             title: "Error Reduction",
             description: "Minimize human errors and improve accuracy by 90%+",
             icon: CheckCircle
         },
         {
+
             title: "Scalability",
             description: "Scale operations without proportional increase in resources",
             icon: Users
         }
     ];
     const containerVariants = {
+
         hidden: { opacity: 0 },
         visible: {
+
             opacity: 1,
             transition: {
+
                 staggerChildren: 0.1
             }
         }
     };
     const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0 
 
 },
         visible: {
+
             y: 0,
             opacity: 1,
             transition: {
+
                 duration: 0.5
             }
         }
@@ -158,10 +183,12 @@ const AIWorkflowAutomation = () => {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -229,10 +256,12 @@ const AIWorkflowAutomation = () => {
       <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 border-t border-orange-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -246,14 +275,17 @@ const AIWorkflowAutomation = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((category, index) => (<motion.div key={category.category} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} viewport={{ once: true }} transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -279,10 +311,12 @@ const AIWorkflowAutomation = () => {
       {/* Benefits Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -296,14 +330,17 @@ const AIWorkflowAutomation = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (<motion.div key={benefit.title} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} viewport={{ once: true }} transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -321,10 +358,12 @@ const AIWorkflowAutomation = () => {
       <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 border-t border-orange-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -338,14 +377,17 @@ const AIWorkflowAutomation = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => (<motion.div key={tech.name} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} viewport={{ once: true }} transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -363,10 +405,12 @@ const AIWorkflowAutomation = () => {
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 

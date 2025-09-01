@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom.ts';
 import React, { useState } from 'react.ts';
 export default React.memo (function Events (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Calendar,
@@ -23,11 +25,11 @@ import { motion } from 'framer - motion.ts';
   TrendingUp,
   MessageCircle,
   BookOpen,
-  CheckCircle,
-} from 'lucide - react.ts';
+  CheckCircle} from 'lucide - react.ts';
 
 const events = [
   {
+
     id: 1,
     title: 'AI & Machine Learning Summit 2027',
     type: 'Conference',
@@ -51,9 +53,9 @@ const events = [
       'Networking with industry professionals',
       'Latest AI research and applications',
     ],
-    image: '/images / ai - summit - 2027.jpg',
-  },
+    image: '/images / ai - summit - 2027.jpg'},
   {
+
     id: 2,
     title: 'Cybersecurity Best Practices Workshop',
     type: 'Workshop',
@@ -73,9 +75,9 @@ const events = [
       'Compliance best practices',
       'Security tool demonstrations',
     ],
-    image: '/images / cybersecurity - workshop.jpg',
-  },
+    image: '/images / cybersecurity - workshop.jpg'},
   {
+
     id: 3,
     title: 'Cloud Computing & DevOps Conference',
     type: 'Conference',
@@ -95,9 +97,9 @@ const events = [
       'CI / CD pipeline optimization',
       'Cost optimization techniques',
     ],
-    image: '/images / cloud - devops - conference.jpg',
-  },
+    image: '/images / cloud - devops - conference.jpg'},
   {
+
     id: 4,
     title: 'Data Analytics & Business Intelligence',
     type: 'Webinar',
@@ -117,9 +119,9 @@ const events = [
       'Business intelligence tools',
       'ROI measurement strategies',
     ],
-    image: '/images / data - analytics - webinar.jpg',
-  },
+    image: '/images / data - analytics - webinar.jpg'},
   {
+
     id: 5,
     title: 'IoT & Edge Computing Symposium',
     type: 'Symposium',
@@ -142,9 +144,9 @@ const events = [
       'Security considerations',
       'Industry applications',
     ],
-    image: '/images / iot - symposium.jpg',
-  },
+    image: '/images / iot - symposium.jpg'},
   {
+
     id: 6,
     title: 'Digital Transformation Summit',
     type: 'Conference',
@@ -167,8 +169,7 @@ const events = [
       'Technology selection',
       'Success metrics',
     ],
-    image: '/images / digital - transformation - summit.jpg',
-  },
+    image: '/images / digital - transformation - summit.jpg'},
 ];
 
 const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
@@ -189,6 +190,7 @@ const statuses = ['All', 'upcoming', 'past'];
   const [searchTerm, setSearchTerm] = useState ('') ;
 
   const filteredEvents = events.filter (event => {
+
     const matchesType = selectedType === 'All' || event.type === selectedType;
     const matchesCategory = selectedCategory === 'All' || event.category === selectedCategory;
     const matchesStatus = selectedStatus === 'All' || event.status === selectedStatus;
@@ -204,17 +206,20 @@ const statuses = ['All', 'upcoming', 'past'];
   const pastEvents = filteredEvents.filter (event => event.status === 'past') ;
 
   const formatDate = (dateString: anystring) => {
+
     const date = new Date (dateString) ;
     return date.toLocaleDateString ('en - US', {
+
       weekday: 'long',
       year: 'numeric',
       month: 'long',
-      day: 'numeric',
-    }) ;
+      day: 'numeric'}) ;
   };
 
   const getCategoryIcon = (category: anystring) => {
+
     switch (category) {
+
       case 'AI & ML':
         return Brain;
       case 'Cybersecurity':
@@ -233,11 +238,14 @@ const statuses = ['All', 'upcoming', 'past'];
   };
 
   const getStatusBadge = (status: anystring) => {
+
     if (status === 'upcoming') {
+
       return (<span className="px - 3 py - 1 bg - green - 500 / 20 text - green - 400 text - xs rounded - full border border - green - 500 / 30">
           Upcoming
         </span>) ;
     } else {
+
       return (<span className="px - 3 py - 1 bg - gray - 500 / 20 text - gray - 400 text - xs rounded - full border border - gray - 500 / 30">
           Past
         </span>) ;
@@ -356,6 +364,7 @@ const statuses = ['All', 'upcoming', 'past'];
 
             <div className="grid grid - cols - 1 lg: anygrid - cols - 2 gap - 8">
               {upcomingEvents.map ( (event, index) => {
+
                 const CategoryIcon = getCategoryIcon (event.category) ;
                 return (<motion.div
                     key={event.id}
@@ -492,6 +501,7 @@ const statuses = ['All', 'upcoming', 'past'];
 
             <div className="grid grid - cols - 1 lg: anygrid - cols - 2 gap - 8">
               {pastEvents.map ( (event, index) => {
+
                 const CategoryIcon = getCategoryIcon (event.category) ;
                 return (<motion.div
                     key={event.id}

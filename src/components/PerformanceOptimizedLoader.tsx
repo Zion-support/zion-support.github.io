@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React, { memo } from 'react';
 export const PerformanceOptimizedLoader = memo < LoadingSpinnerProps> ( ({
+
 import { motion } from 'framer - motion';
 =======
 <<<<<<< HEAD
@@ -16,7 +17,6 @@ interface LoaderProps {
 export 
 }: LoaderProps) => {
 
-  
   ;
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -29,7 +29,9 @@ export
 <<<<<<< HEAD
 };
   const textSizes = {
+
 =======
 };  const textSizes = {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

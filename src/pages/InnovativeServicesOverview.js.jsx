@@ -6,6 +6,7 @@ import { expandedInnovativeServices2025 } from "../../data/2025-expanded-innovat
 import { emergingTechInnovationServices2025 } from "../../data/2025-emerging-tech-innovations";
 import { enterpriseITInnovationServices2025 } from "../../data/2025-enterprise-it-innovations";
 const InnovativeServicesOverview = () => {
+
     const [selectedService, setSelectedService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
     const allServices = [
@@ -30,10 +31,12 @@ const InnovativeServicesOverview = () => {
     const filteredServices = selectedCategory === 'all'
         ? allServices
         : allServices.filter(service => {
+
             const category = categories.find(c => c.id === selectedCategory);
             if (!category)
                 return true;
             const categoryMappings = {
+
   'ai-services'['AI', 'Machine Learning', 'Content', 'Marketing', 'Customer Service', 'Sales', 'CRM', 'Social Media', 'Supply Chain', 'HR', 'Recruitment', 'Finance', 'Accounting'],
                 'quantum-computing'['Quantum'],
                 'blockchain'['Blockchain', 'Web3'],
@@ -50,6 +53,7 @@ const InnovativeServicesOverview = () => {
             const targetKeywords = categoryMappings[selectedCategory] || [category.name];
             return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase()))});
     const fadeInUp = {
+
   initial: { opacity: 0,
   y: 60 
 
@@ -61,10 +65,12 @@ const InnovativeServicesOverview = () => {
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <motion.div className="max-w-7xl mx-auto text-center" initial = {
+
   { opacity: 0,
   y: 30 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -138,14 +144,17 @@ const InnovativeServicesOverview = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {
+
   { opacity: 0,
   y: 30 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -200,14 +209,17 @@ const InnovativeServicesOverview = () => {
       {/* Service Detail Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <motion.div initial = {
+
   { opacity: 0,
   scale: 0.9 
 
 }} animate = {
+
   { opacity: 1,
   scale: 1 
 
 }} exit = {
+
   { opacity: 0,
   scale: 0.9 
 

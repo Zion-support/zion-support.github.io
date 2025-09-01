@@ -2,6 +2,7 @@
 // NOTE: Keep adding more entries over time without removing existing ones
 
 export interface AdvancedService {
+
   id: string;
   name: string;
   category: string;
@@ -33,6 +34,7 @@ export interface AdvancedService {
 export const advancedRealServices2025: AdvancedService[] = [
   // AI-Powered Business Intelligence & Analytics
   {
+
     id: 'ai-business-intelligence-platform',
     name: 'AI Business Intelligence & Predictive Analytics Platform',
     category: 'AI & Analytics',
@@ -72,6 +74,7 @@ export const advancedRealServices2025: AdvancedService[] = [
 
   // AI-Powered Compliance & Risk Management
   {
+
     id: 'ai-compliance-risk-management',
     name: 'AI Compliance & Risk Management Platform',
     category: 'AI & Compliance',
@@ -111,6 +114,7 @@ export const advancedRealServices2025: AdvancedService[] = [
 
   // AI-Powered Sales & Marketing Automation
   {
+
     id: 'ai-sales-marketing-automation',
     name: 'AI Sales & Marketing Automation Suite',
     category: 'AI & Marketing',
@@ -150,6 +154,7 @@ export const advancedRealServices2025: AdvancedService[] = [
 
   // AI-Powered Customer Experience Platform
   {
+
     id: 'ai-customer-experience-platform',
     name: 'AI Customer Experience & Support Platform',
     category: 'AI & Customer Service',
@@ -189,6 +194,7 @@ export const advancedRealServices2025: AdvancedService[] = [
 
   // AI-Powered Financial Technology Solutions
   {
+
     id: 'ai-fintech-solutions',
     name: 'AI Financial Technology & Trading Platform',
     category: 'AI & Fintech',
@@ -228,6 +234,7 @@ export const advancedRealServices2025: AdvancedService[] = [
 
   // AI-Powered Healthcare Solutions
   {
+
     id: 'ai-healthcare-solutions',
     name: 'AI Healthcare & Medical Analytics Platform',
     category: 'AI & Healthcare',
@@ -267,6 +274,7 @@ export const advancedRealServices2025: AdvancedService[] = [
 
   // AI-Powered Manufacturing & IoT
   {
+
     id: 'ai-manufacturing-iot',
     name: 'AI Manufacturing & IoT Intelligence Platform',
     category: 'AI & Manufacturing',
@@ -306,6 +314,7 @@ export const advancedRealServices2025: AdvancedService[] = [
 
   // AI-Powered Cybersecurity Platform
   {
+
     id: 'ai-cybersecurity-platform',
     name: 'AI Cybersecurity & Threat Intelligence Platform',
     category: 'AI & Security',
@@ -345,6 +354,7 @@ export const advancedRealServices2025: AdvancedService[] = [
 
   // AI-Powered Supply Chain Optimization
   {
+
     id: 'ai-supply-chain-optimization',
     name: 'AI Supply Chain & Logistics Optimization Platform',
     category: 'AI & Supply Chain',
@@ -384,6 +394,7 @@ export const advancedRealServices2025: AdvancedService[] = [
 
   // AI-Powered Human Resources Platform
   {
+
     id: 'ai-hr-platform',
     name: 'AI Human Resources & Talent Management Platform',
     category: 'AI & HR',
@@ -423,6 +434,7 @@ export const advancedRealServices2025: AdvancedService[] = [
 
   // AI-Powered Legal Technology Platform
   {
+
     id: 'ai-legal-tech-platform',
     name: 'AI Legal Technology & Contract Analysis Platform',
     category: 'AI & Legal',
@@ -462,6 +474,7 @@ export const advancedRealServices2025: AdvancedService[] = [
 
   // AI-Powered Education Technology Platform
   {
+
     id: 'ai-education-tech-platform',
     name: 'AI Education Technology & Learning Platform',
     category: 'AI & Education',
@@ -501,6 +514,7 @@ export const advancedRealServices2025: AdvancedService[] = [
 
   // AI-Powered Real Estate Technology Platform
   {
+
     id: 'ai-real-estate-tech-platform',
     name: 'AI Real Estate Technology & Analytics Platform',
     category: 'AI & Real Estate',
@@ -540,6 +554,7 @@ export const advancedRealServices2025: AdvancedService[] = [
 
   // AI-Powered Energy Management Platform
   {
+
     id: 'ai-energy-management-platform',
     name: 'AI Energy Management & Sustainability Platform',
     category: 'AI & Energy',
@@ -579,6 +594,7 @@ export const advancedRealServices2025: AdvancedService[] = [
 
   // AI-Powered Transportation & Logistics Platform
   {
+
     id: 'ai-transportation-logistics',
     name: 'AI Transportation & Logistics Optimization Platform',
     category: 'AI & Transportation',
@@ -621,6 +637,7 @@ export const advancedRealServices2025: AdvancedService[] = [
 export const emergingMarketServices: AdvancedService[] = [
   // AI-Powered Agriculture Technology
   {
+
     id: 'ai-agriculture-tech',
     name: 'AI Agriculture Technology & Precision Farming Platform',
     category: 'AI & Agriculture',
@@ -660,6 +677,7 @@ export const emergingMarketServices: AdvancedService[] = [
 
   // AI-Powered Construction Technology
   {
+
     id: 'ai-construction-tech',
     name: 'AI Construction Technology & Project Management Platform',
     category: 'AI & Construction',

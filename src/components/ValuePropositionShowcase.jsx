@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
+
 <<<<<<< HEAD
 import { motion } from 'framer - motion';
 =======
@@ -30,6 +31,7 @@ const valueMetrics = [;
     color: "from-green-500 to-emerald-600"
   },
   {
+
 "
     icon: <Target className="w-8 h-8" />,"
     title: "Market Position","
@@ -38,6 +40,7 @@ const valueMetrics = [;
     color: "from-blue-500 to-cyan-600"
   },
   {
+
 "
     icon: <Zap className="w-8 h-8" />,"
     title: "Setup Time","
@@ -46,6 +49,7 @@ const valueMetrics = [;
     color: "from-yellow-500 to-orange-600"
   },
   {
+
 "
     icon: <Shield className="w-8 h-8" />,"
     title: "Security Rating","
@@ -57,6 +61,7 @@ const valueMetrics = [;
 ;
 const competitiveAdvantages = [
   {
+
 "
     title: "AI-Powered Intelligence","
     description: "Advanced machine learning algorithms that continuously improve performance and provide predictive insights","
@@ -64,6 +69,7 @@ const competitiveAdvantages = [
     color: "from-purple-500 to-pink-600"
   },
   {
+
 "
     title: "Cloud-Native Architecture","
     description: "Built for scale with automatic scaling, high availability, and global distribution","
@@ -71,6 +77,7 @@ const competitiveAdvantages = [
     color: "from-blue-500 to-cyan-600"
   },
   {
+
 "
     title: "Enterprise Integration","
     description: "Seamless integration with existing systems and workflows through comprehensive APIs","
@@ -78,6 +85,7 @@ const competitiveAdvantages = [
     color: "from-green-500 to-emerald-600"
   },
   {
+
 "
     title: "24/7 Expert Support","
     description: "Round-the-clock technical support from certified professionals and AI assistants","
@@ -88,6 +96,7 @@ const competitiveAdvantages = [
 ;
 const marketComparison = [
   {
+
 "
     category: "AI Business Intelligence","
     competitors["Tableau", "Power BI", "Looker"],;"
@@ -97,6 +106,7 @@ const marketComparison = [
     advantage: "AI-powered insights, natural language queries, predictive analytics"
   },
   {
+
 "
     category: "Customer Success Platform","
     competitors["Gainsight", "Totango", "ChurnZero"],;"
@@ -106,6 +116,7 @@ const marketComparison = [
     advantage: "AI-powered predictions, affordable pricing, easy setup"
   },
   {
+
 "
     category: "Zero-Trust Security","
     competitors["Palo Alto Networks", "CrowdStrike", "Zscaler"],;"
@@ -118,6 +129,7 @@ const marketComparison = [
 ;
 const successStories = [
   {
+
 "
     comp: "TechCorp Solutions","
     industry: "SaaS","
@@ -127,6 +139,7 @@ const successStories = [
     roi: "280% in 8 months"
   },
   {
+
 "
     comp: "Global Manufacturing Inc","
     industry: "Manufacturing","
@@ -136,6 +149,7 @@ const successStories = [
     roi: "320% in 12 months"
   },
   {
+
 "
     comp: "FinTech Innovations","
     industry: "Financial Services","
@@ -281,6 +295,7 @@ const successStories = [
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20"
                 variants={cardVariants}
                 whileHover = {
+
 "
   { y: -5, boxShadow: "0 20px 40px rgba(0, 0, 0,"
   0.3)" ;

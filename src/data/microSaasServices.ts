@@ -1,4 +1,5 @@
 export interface MicroSaasService {
+
   id: string;
   title: string;
   description: string;
@@ -74,6 +75,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -84,6 +86,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
+
 "
     id: "ai-content-generator","
     title: "AI Content Generator Suite","
@@ -121,6 +124,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -131,6 +135,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
+
 "
     id: "ai-customer-service","
     title: "AI Customer Service Platform","
@@ -165,6 +170,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -175,6 +181,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
+
 "
     id: "ai-sales-copilot","
     title: "AI Sales Copilot Pro","
@@ -213,6 +220,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -223,6 +231,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
+
 "
     id: "ai-compliance-assistant","
     title: "AI Compliance Assistant","
@@ -261,6 +270,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -271,6 +281,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
+
 "
     id: "ai-auto-email-responder","
     title: "AI Auto Email Responder","
@@ -309,6 +320,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -319,6 +331,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
+
 "
     id: "llm-content-studio","
     title: "LLM Content Studio","
@@ -357,6 +370,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -367,6 +381,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
+
 "
     id: "finops-advisor","
     title: "FinOps Advisor Pro","
@@ -405,6 +420,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -415,6 +431,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
+
 "
     id: "quantum-ai-platform","
     title: "Quantum AI Platform","
@@ -453,6 +470,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     location: "Global","
     availability: "Limited",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -463,6 +481,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
+
 "
     id: "edge-ai-processor","
     title: "Edge AI Processor","
@@ -501,6 +520,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -511,6 +531,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
+
 "
     id: "ai-cybersecurity-suite","
     title: "AI Cybersecurity Suite","
@@ -549,6 +570,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -559,6 +581,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
+
 "
     id: "data-pipeline-automation","
     title: "Data Pipeline Automation","
@@ -597,6 +620,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -607,6 +631,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
+
 "
     id: "ai-testing-automation","
     title: "AI Testing Automation","
@@ -645,6 +670,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","
@@ -655,6 +681,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
+
 "
     id: "blockchain-ai-platform","
     title: "Blockchain AI Platform","
@@ -693,6 +720,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     location: "Global","
     availability: "Immediate",
     author: {
+
 "
       name: "Zion Tech Group","
       id: "zion-tech-group","

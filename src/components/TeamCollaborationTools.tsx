@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -71,6 +72,7 @@ import { motion, AnimatePresence } from 'framer - motion';
  } from 'lucide-react';
 
 interface TeamMember {
+
   id: string;
   name: string;
   role: string;
@@ -83,6 +85,7 @@ interface TeamMember {
   availability: 'available' | 'busy' | 'unavailable'}
 
 interface Project {
+
   id: string;
   name: string;
   description: string;
@@ -99,6 +102,7 @@ interface Project {
 }
 
 interface Task {
+
   id: string;
   title: string;
   description: string;
@@ -114,6 +118,7 @@ interface Task {
 }
 
 interface Comment {
+
   id: string;
   author: string;
   content: string;
@@ -123,6 +128,7 @@ interface Comment {
 }
 
 interface Message {
+
   id: string;
   sender: string;
   content: string;
@@ -139,6 +145,7 @@ interface Message {
   isRead: boolean}
 
 interface FileItem {
+
   id: string;
   name: string;
   type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other';
@@ -183,6 +190,7 @@ showProjects:  true,;
 
   // Sample data
   useEffect ( () => {
+
     const sampleFiles: FileItem[] = [
       {
 

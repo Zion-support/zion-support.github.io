@@ -6,10 +6,15 @@ const QuantumComputingImplicationsForBusinessChat: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>QuantumComputingImplicationsForBusinessChat - Zion Tech Solutions</title>
-        <meta name="description" content="QuantumComputingImplicationsForBusinessChat blog post" />
+        <title>
+          QuantumComputingImplicationsForBusinessChat - Zion Tech Solutions
+        </title>
+        <meta
+          name="description"
+          content="QuantumComputingImplicationsForBusinessChat blog post"
+        />
       </Head>
-      
+
       <main>
         <h1>QuantumComputingImplicationsForBusinessChat</h1>
         <p>Blog content coming soon...</p>

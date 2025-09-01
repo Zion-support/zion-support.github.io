@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   FileText,
   Shield,
   Brain,
@@ -139,26 +140,31 @@ import {
 } from 'lucide-react';
 
 export function AILegalContractAnalyzer2025() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Contract Analysis',
       description: 'Advanced natural language processing that understands legal terminology and context',
       benefits: ['Instant risk identification', 'Clause analysis', 'Legal precedent matching']
     },
     {
+
       icon: Shield,
       title: 'Risk Assessment Engine',
       description: 'Comprehensive risk scoring and mitigation recommendations for legal documents',
       benefits: ['Risk scoring algorithms', 'Compliance checking', 'Automated alerts']
     },
     {
+
       icon: Zap,
       title: 'Real-time Processing',
       description: 'Process contracts in seconds with our lightning-fast AI engine',
       benefits: ['Instant analysis', 'Batch processing', 'Real-time updates']
     },
     {
+
       icon: Users,
       title: 'Collaborative Review',
       description: 'Team-based contract review with role-based permissions and workflows',
@@ -168,6 +174,7 @@ export function AILegalContractAnalyzer2025() {
 
   const pricingPlans = [
     {
+
       name: 'Starter',
       price: '$299',
       period: '/month',
@@ -184,6 +191,7 @@ export function AILegalContractAnalyzer2025() {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$799',
       period: '/month',
@@ -202,6 +210,7 @@ export function AILegalContractAnalyzer2025() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: 'Custom',
       period: '',
@@ -223,24 +232,28 @@ export function AILegalContractAnalyzer2025() {
 
   const legalFeatures = [
     {
+
       title: 'Contract Intelligence',
       description: 'AI-powered understanding of legal language and contract structures',
       icon: Brain,
       benefits: ['Legal NLP', 'Clause recognition', 'Precedent matching']
     },
     {
+
       title: 'Compliance Automation',
       description: 'Automated compliance checking across multiple jurisdictions and regulations',
       icon: Shield,
       benefits: ['Multi-jurisdiction', 'Regulatory updates', 'Compliance scoring']
     },
     {
+
       title: 'Risk Analytics',
       description: 'Advanced risk assessment with predictive modeling and trend analysis',
       icon: BarChart3,
       benefits: ['Risk scoring', 'Trend analysis', 'Predictive insights']
     },
     {
+
       title: 'Document Management',
       description: 'Secure document storage with advanced search and retrieval capabilities',
       icon: FileText,
@@ -504,6 +517,7 @@ export function AILegalContractAnalyzer2025() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
                     : 'border-gray-700'
@@ -538,6 +552,7 @@ export function AILegalContractAnalyzer2025() {
                 <Link
                   to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                       : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'

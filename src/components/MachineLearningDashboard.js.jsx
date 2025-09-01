@@ -26,6 +26,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
         input: ''
     });
     const handleCreateModel = useCallback(() => {
+
         if (newModelForm.name.trim()) {
 
             createModel({
@@ -47,11 +48,12 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 };
         try {
+
             await startTraining(modelId, hyperparameters);
             trackEvent('ml',dashboard',training_started')}
         catch (error) {
 
-            // console.error('Training failed:', error)}
+            // // // // console.error('Training failed:', error)}
     }, [startTraining, trackEvent]);
     const handleStopTraining = useCallback((jobId) => {
 
@@ -66,28 +68,31 @@ export const MachineLearningDashboard = ({ className = '' }) => {
         archiveModel(modelId);
         trackEvent('ml',dashboard',model_archived')}, [archiveModel, trackEvent]);
     const handleMakePrediction = useCallback(async () => {
+
         if (predictionForm.modelId && predictionForm.input.trim()) {
 
             try {
+
                 const input = JSON.parse(predictionForm.input);
                 const result = await makePrediction(predictionForm.modelId, input);
-                // console.log('Prediction result:', result);
+                // // // // console.log('Prediction result:', result);
                 setPredictionForm({ modelId: '', input: '' });
                 trackEvent('ml',dashboard',prediction_made')}
             catch (error) {
 
-                // console.error('Prediction failed:', error)}
+                // // // // console.error('Prediction failed:', error)}
         }
     }, [predictionForm, makePrediction, trackEvent]);
     const handleExportModel = useCallback((modelId) => {
 
         try {
+
             const modelData = exportModel(modelId);
             navigator.clipboard.writeText(modelData);
             trackEvent('ml',dashboard',model_exported')}
         catch (error) {
 
-            // console.error('Export failed:', error)}
+            // // // // console.error('Export failed:', error)}
     }, [exportModel, trackEvent]);
     const handleImportModel = useCallback((event) => {
 
@@ -98,13 +103,14 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             reader.onload = (e) => {
 
                 try {
+
                     const modelData = e.target?.result;
                     importModel(modelData);
                     setShowImportModel(false);
                     trackEvent('ml',dashboard',model_imported')}
                 catch (error) {
 
-                    // console.error('Import failed:', error)}
+                    // // // // console.error('Import failed:', error)}
             };
             reader.readAsText (file) }
     }, [importModel, trackEvent]) ;
@@ -131,6 +137,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
     const getModelTypeIcon = (type) => {
 
         switch (type) {
+
 '"
             case 'classification': return <Target className="w-4 h-4"/>;'"
             case 'regression': return <TrendingUp className="w-4 h-4"/>;'"

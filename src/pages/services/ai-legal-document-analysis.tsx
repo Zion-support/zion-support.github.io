@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   FileText, 
   Search, 
   Shield, 
@@ -24,33 +25,40 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AILegalDocumentAnalysis() {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Contract Analysis",
       description: "Advanced NLP algorithms analyze contracts, identify risks, and extract key terms with 99.2% accuracy"
     },
     {
+
       icon: <Search className="w-6 h-6" />,
       title: "Intelligent Document Search",
       description: "Semantic search across millions of legal documents with context-aware results and relevance scoring"
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Compliance Monitoring",
       description: "Real-time compliance tracking with automated alerts for regulatory changes and deadline management"
     },
     {
+
       icon: <Zap className="w-6 h-6" />,
       title: "Automated Risk Assessment",
       description: "AI-driven risk scoring and mitigation recommendations for legal documents and contracts"
     },
     {
+
       icon: <Users className="w-6 h-6" />,
       title: "Collaborative Review",
       description: "Multi-user document review with version control, comments, and approval workflows"
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Analytics Dashboard",
       description: "Comprehensive insights into document patterns, risk trends, and compliance metrics"
@@ -59,6 +67,7 @@ export default function AILegalDocumentAnalysis() {
 
   const pricing = [
     {
+
       name: "Starter",
       price: "$299",
       period: "/month",
@@ -72,6 +81,7 @@ export default function AILegalDocumentAnalysis() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$799",
       period: "/month",
@@ -87,6 +97,7 @@ export default function AILegalDocumentAnalysis() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,999",
       period: "/month",
@@ -234,6 +245,7 @@ export default function AILegalDocumentAnalysis() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+
                   plan.popular 
                     ? 'border-blue-500 ring-2 ring-blue-500/20' 
                     : 'border-slate-700'
@@ -267,6 +279,7 @@ export default function AILegalDocumentAnalysis() {
                 <a
                   href="https://ziontechgroup.com/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

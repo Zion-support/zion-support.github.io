@@ -4,10 +4,12 @@ import { Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimiz
 import { Button } from "./button";
 import { Badge } from "./badge";
 export function PerformanceMonitor({ enabled = true, showDetails: _showDetails = false, autoRefresh = true, refreshInterval = 1000, onAlert, className = "" }) {
+
     const [isExpanded, setIsExpanded] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [showSettings, setShowSettings] = useState(false);
     const [metrics, setMetrics] = useState({
+
         fps: 60,
         memory: { used: 0, total: 0, percentage: 0 },
         renderTime: 0,
@@ -18,6 +20,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     });
     const [alerts, setAlerts] = useState([]);
     const [thresholds, setThresholds] = useState({
+
         fps: 30,
         memory: 80,
         renderTime: 16,
@@ -27,15 +30,19 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     });
     // Performance monitoring functions
     const measureFPS = useCallback(() => {
+
         let frameCount = 0;
         let lastTime = performance.now();
         const currentTime = performance.now();
             if (currentTime - lastTime >= 1000) {
+
                 const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
                 setMetrics(prev => ({ ...prev, fps }));
                 // Check for performance alerts
                 if (fps < thresholds.fps) {
+
                     const alert = {
+
                         id: `fps-${Date.now()}`,
                         metric: 'FPS',
                         message: `Low FPS detected: ${fps} (threshold: ${thresholds.fps})`,
@@ -53,11 +60,14 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             const total = Math.round(memoryInfo.totalJSHeapSize / 1024 / 1024);
             const percentage = Math.round((used / total) * 100);
             setMetrics(prev => ({
+
                 ...prev,
                 memory: { used, total, percentage }
             }));
             if (percentage > thresholds.memory) {
+
                 const alert = {
+
                     id: `memory-${Date.now()}`,
                     metric: 'Memory',
                     message: `High memory usage: ${percentage}% (threshold: ${thresholds.memory}%)`,
@@ -69,14 +79,18 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         }
     }, [thresholds.memory, onAlert]);
     const measureRenderTime = useCallback(() => {
+
         const start = performance.now();
         // Simulate render work
         requestAnimationFrame(() => {
+
             const end = performance.now();
             const renderTime = Math.round(end - start);
             setMetrics(prev => ({ ...prev, renderTime }));
             if (renderTime > thresholds.renderTime) {
+
                 const alert = {
+
                     id: `render-${Date.now()}`,
                     metric: 'Render Time',
                     message: `Slow render time: ${renderTime}ms (threshold: ${thresholds.renderTime}ms)`,
@@ -87,9 +101,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 onAlert?.('renderTime', renderTime, thresholds.renderTime)}
         })}, [thresholds.renderTime, onAlert]);
     const measureNetworkLatency = useCallback(async () => {
+
         const start = performance.now();
         try {
+
             await fetch('/api/health', {
+
                 method: 'HEAD',
                 cache: 'no-cache'
             });
@@ -97,7 +114,9 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             const latency = Math.round(end - start);
             setMetrics(prev => ({ ...prev, networkLatency: latency }));
             if (latency > thresholds.networkLatency) {
+
                 const alert = {
+
                     id: `network-${Date.now()}`,
                     metric: 'Network',
                     message: `High network latency: ${latency}ms (threshold: ${thresholds.networkLatency}ms)`,
@@ -108,21 +127,26 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 onAlert?.('networkLatency', latency, thresholds.networkLatency)}
         }
         catch {
+
             // Network error, set high latency
             setMetrics(prev => ({ ...prev, networkLatency: 999 }))}
     }, [thresholds.networkLatency, onAlert]);
     const simulateMetrics = useCallback(() => {
+
         // Simulate CPU and disk usage for demo purposes
         const cpuUsage = Math.round(Math.random() * 100);
         const diskUsage = Math.round(60 + Math.random() * 30);
         setMetrics(prev => ({
+
             ...prev,
             cpuUsage,
             diskUsage,
             timestamp: Date.now()
         }));
         if (cpuUsage > thresholds.cpuUsage) {
+
             const alert = {
+
                 id: `cpu-${Date.now()}`,
                 metric: 'CPU',
                 message: `High CPU usage: ${cpuUsage}% (threshold: ${thresholds.cpuUsage}%)`,
@@ -132,7 +156,9 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             setAlerts(prev => [alert, ...prev.slice(0, 9)]);
             onAlert?.('cpuUsage', cpuUsage, thresholds.cpuUsage)}
         if (diskUsage > thresholds.diskUsage) {
+
             const alert = {
+
                 id: `disk-${Date.now()}`,
                 metric: 'Disk',
                 message: `High disk usage: ${diskUsage}% (threshold: ${thresholds.diskUsage}%)`,
@@ -144,9 +170,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     }, [thresholds.cpuUsage, thresholds.diskUsage, onAlert]);
     // Auto-refresh metrics
     useEffect(() => {
+
         if (!enabled || !autoRefresh)
             return;
         const interval = setInterval(() => {
+
             measureMemory();
             measureRenderTime();
             measureNetworkLatency();
@@ -154,18 +182,23 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         return () => clearInterval(interval)}, [enabled, autoRefresh, refreshInterval, measureMemory, measureRenderTime, measureNetworkLatency, simulateMetrics]);
     // Start FPS monitoring
     useEffect(() => {
+
         if (!enabled)
             return;
         measureFPS()}, [enabled, measureFPS]);
     // Clear old alerts
     useEffect(() => {
+
         const interval = setInterval(() => {
+
             const now = Date.now();
             setAlerts(prev => prev.filter(alert => now - alert.timestamp < 30000)); // Keep alerts for 30 seconds
         }, 5000);
         return () => clearInterval(interval)}, []);
     const getMetricIcon = (metric) => {
+
         switch (metric) {
+
             case 'FPS': return Activity;
             case 'Memory': return Activity;
             case 'Render Time': return Cpu;
@@ -175,7 +208,9 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             default: return Activity}
     };
     const getSeverityColor = (severity) => {
+
         switch (severity) {
+
             case 'error': return 'border-red-500/50 bg-red-500/10 text-red-400';
             case 'warning': return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
             case 'info': return 'border-blue-500/50 bg-blue-500/10 text-blue-400';
@@ -184,11 +219,14 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     if (!enabled)
         return null;
     if (isMinimized) {
+
         return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial = {
+
   { scale: 0.8,
   opacity: 0 
 
 }} animate = {
+
   { scale: 1,
   opacity: 1 
 
@@ -201,10 +239,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         </Button>
       </motion.div>)}
     return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial = {
+
   { scale: 0.8,
   opacity: 0 
 
 }} animate = {
+
   { scale: 1,
   opacity: 1 
 
@@ -240,14 +280,17 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         {/* Settings Panel */}
         <AnimatePresence>
           {showSettings && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial = {
+
   { height: 0,
   opacity: 0 
 
 }} animate = {
+
   { height: 'auto',
   opacity: 1 
 
 }} exit = {
+
   { height: 0,
   opacity: 0 
 
@@ -260,6 +303,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                         {key.replace(/([A-Z])/g, ' $1').trim()}
                       </label>
                       <input type="number" value={value} onChange = {
+
   (e) => setThresholds(prev => ({ ...prev,
   [key]: Number(e.target.value) 
 
@@ -280,6 +324,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 <span className="text-zinc-300 text-xs">FPS</span>
               </div>
               <div className = {
+
   `text-lg font-bold ${getMetricColor('FPS', metrics.fps,
   thresholds.fps)
 
@@ -295,6 +340,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 <span className="text-zinc-300 text-xs">Memory</span>
               </div>
               <div className = {
+
   `text-lg font-bold ${getMetricColor('Memory', metrics.memory.percentage,
   thresholds.memory)
 
@@ -310,6 +356,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 <span className="text-zinc-300 text-xs">Render</span>
               </div>
               <div className = {
+
   `text-lg font-bold ${getMetricColor('Render Time', metrics.renderTime,
   thresholds.renderTime)
 
@@ -325,6 +372,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 <span className="text-zinc-300 text-xs">Network</span>
               </div>
               <div className = {
+
   `text-lg font-bold ${getMetricColor('Network', metrics.networkLatency,
   thresholds.networkLatency)
 
@@ -336,10 +384,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
           {/* Detailed Metrics */}
           {isExpanded && (<motion.div className="mt-4 pt-4 border-t border-zion-blue-light/30" initial = {
+
   { height: 0,
   opacity: 0 
 
 }} animate = {
+
   { height: 'auto',
   opacity: 1 
 
@@ -353,6 +403,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                       <div className={`h-2 rounded-full transition-all duration-300 ${metrics.cpuUsage > thresholds.cpuUsage ? 'bg-red-400' : 'bg-zion-cyan'}`} style={{ width: `${metrics.cpuUsage}%` }}/>
                     </div>
                     <span className = {
+
   `text-xs font-medium ${getMetricColor('CPU', metrics.cpuUsage,
   thresholds.cpuUsage)
 
@@ -370,6 +421,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                       <div className={`h-2 rounded-full transition-all duration-300 ${metrics.diskUsage > thresholds.diskUsage ? 'bg-red-400' : 'bg-zion-cyan'}`} style={{ width: `${metrics.diskUsage}%` }}/>
                     </div>
                     <span className = {
+
   `text-xs font-medium ${getMetricColor('Disk', metrics.diskUsage,
   thresholds.diskUsage)
 
@@ -408,16 +460,20 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               
               <div className="space-y-2 max-h-32 overflow-y-auto">
                 {alerts.map((alert) => {
+
                 const Icon = getMetricIcon(alert.metric);
                 return (<motion.div key={alert.id} className={`p-2 rounded-lg border text-xs ${getSeverityColor(alert.severity)}`} initial = {
+
   { opacity: 0,
   x: 20 
 
 }} animate = {
+
   { opacity: 1,
   x: 0 
 
 }} exit = {
+
   { opacity: 0,
   x: -20 
 
@@ -438,6 +494,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
           <div className="mt-4 pt-4 border-t border-zion-blue-light/30">
             <div className="flex items-center gap-2">
               <Button size="sm" variant="outline" onClick={() => {
+
             measureMemory();
             measureRenderTime();
             measureNetworkLatency();

@@ -1,6 +1,7 @@
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export default React.memo (function Help () {
+
 import {
 
   Search,
@@ -35,6 +36,7 @@ import {
 
   const helpCategories = [
     {
+
       title: 'Getting Started',
       icon: Rocket,
       color: 'from - blue - 600 to - cyan - 600',
@@ -46,6 +48,7 @@ import {
       ]
     },
     {
+
       title: 'Core Services',
       icon: Settings,
       color: 'from - green - 600 to - emerald - 600',
@@ -59,30 +62,35 @@ import {
       ]
     },
     {
+
       id: 'billing - account',
       title: 'Billing & Account',
       icon: Users,
       description: 'Account management and billing information',
       articles: [
         {
+
           title: 'Billing Overview',
           description: 'Understanding your billing structure and charges',
           url: '/help / billing / overview',
           type: 'guide'
         },
         {
+
           title: 'Payment Methods',
           description: 'Adding and managing payment methods',
           url: '/help / billing / payment - methods',
           type: 'guide'
         },
         {
+
           title: 'Invoice Management',
           description: 'Accessing and managing your invoices',
           url: '/help / billing / invoices',
           type: 'guide'
         },
         {
+
           title: 'Account Settings',
           description: 'Managing your account preferences and settings',
           url: '/help / billing / account - settings',
@@ -94,6 +102,7 @@ import {
 
   const quickLinks = [
     {
+
       name: 'Live Chat',
       icon: MessageCircle,
       description: 'Chat with our support team',
@@ -101,6 +110,7 @@ import {
       href: '/help / live - chat'
     },
     {
+
       name: 'Email Support',
       icon: Mail,
       url: 'mailto:support@ziontechgroup.com',
@@ -200,6 +210,7 @@ import {
               {supportHours.map ( (schedule, index) => (<div
                   key={index}
                   className={`flex items - center justify - between p - 4 ${
+
                     index !== supportHours.length - 1 ? 'border - b border - slate - 700 / 50' : ''
                   }`}
                 >
@@ -278,6 +289,7 @@ import {
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
             {[
               {
+
                 icon: BookOpen,
                 title: 'Documentation',
                 description: 'Comprehensive technical documentation and API references',
@@ -285,6 +297,7 @@ import {
                 color: 'from - blue - 500 to - blue - 600'
               },
               {
+
                 icon: Video,
                 title: 'Video Tutorials',
                 description: 'Step - by - step video guides for common tasks',
@@ -292,6 +305,7 @@ import {
                 color: 'from - green - 500 to - green - 600'
               },
               {
+
                 icon: Download,
                 title: 'Downloads',
                 description: 'Software, tools, and resources for your projects',

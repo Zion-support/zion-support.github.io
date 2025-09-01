@@ -4,38 +4,45 @@ import { CheckCircle, MessageCircle, Clock, Users, TrendingUp, Shield, Zap, BarC
 import { SEO              } from '@/components/SEO';
 
 export default function AICustomerSupport(...args: any[]): any {
+
   const features = [
     {
+
       title: "24/7 AI Chat Support",
       description: "Intelligent chatbots that handle customer inquiries around the clock with human-like responses",
       icon: Bot,
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       title: "Multi-Language Support",
       description: "Automatically detect and respond in over 50 languages to serve global customers",
       icon: Globe,
       color: "from-purple-500 to-pink-500"
     },
     {
+
       title: "Smart Ticket Routing",
       description: "AI automatically categorizes and routes complex issues to the right human agents",
       icon: MessageCircle,
       color: "from-orange-500 to-red-500"
     },
     {
+
       title: "Sentiment Analysis",
       description: "Real-time emotion detection to prioritize urgent cases and improve customer satisfaction",
       icon: BarChart3,
       color: "from-green-500 to-emerald-500"
     },
     {
+
       title: "Knowledge Base Integration",
       description: "Seamlessly connects with your existing documentation to provide accurate answers instantly",
       icon: Shield,
       color: "from-indigo-500 to-blue-500"
     },
     {
+
       title: "Omnichannel Support",
       description: "Unified support across chat, email, social media, and phone channels",
       icon: Smartphone,
@@ -44,6 +51,7 @@ export default function AICustomerSupport(...args: any[]): any {
   ];
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$39",
       period: "/month",
@@ -59,6 +67,7 @@ export default function AICustomerSupport(...args: any[]): any {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$99",
       period: "/month",
@@ -75,6 +84,7 @@ export default function AICustomerSupport(...args: any[]): any {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$299",
       period: "/month",
@@ -93,18 +103,21 @@ export default function AICustomerSupport(...args: any[]): any {
   ];
   const benefits = [
     {
+
       title: "90% Faster Response Time",
       description: "AI responds instantly, reducing customer wait times dramatically",
       icon: Clock,
       metric: "90%"
     },
     {
+
       title: "70% Cost Reduction",
       description: "Automate routine inquiries and reduce support staff overhead",
       icon: TrendingUp,
       metric: "70%"
     },
     {
+
       title: "95% Customer Satisfaction",
       description: "AI-powered support consistently delivers high-quality assistance",
       icon: Users,
@@ -113,24 +126,28 @@ export default function AICustomerSupport(...args: any[]): any {
   ];
   const integrations = [
     {
+
       name: "Slack",
       description: "Integrate support directly into your team's communication platform",
       icon: MessageCircle,
       color: "from-purple-500 to-pink-500"
     },
     {
+
       name: "Zendesk",
       description: "Seamlessly connect with existing helpdesk systems",
       icon: Headphones,
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       name: "Salesforce",
       description: "Sync customer data and support history automatically",
       icon: Users,
       color: "from-green-500 to-emerald-500"
     },
     {
+
       name: "Shopify",
       description: "Provide instant support for e-commerce customers",
       icon: Globe,
@@ -312,6 +329,7 @@ export default function AICustomerSupport(...args: any[]): any {
               <motion.div
                 key={index}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
+
                   plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'
                 }`}
                 initial={{ opacity: 0, y: 30 }}
@@ -345,6 +363,7 @@ export default function AICustomerSupport(...args: any[]): any {
                   ))}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700'
                     : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'

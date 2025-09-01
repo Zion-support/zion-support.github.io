@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Shield, 
   Eye, 
   Zap, 
@@ -26,23 +27,28 @@ import {
 } from 'lucide-react';
 
 export default function AICybersecurityIntelligencePlatform() {
+
   const features = [
     {
+
       icon: Shield,
       title: 'AI Threat Detection',
       description: 'Real-time identification of advanced cyber threats using machine learning'
     },
     {
+
       icon: Eye,
       title: 'Behavioral Analytics',
       description: 'Monitor and analyze user and system behavior patterns for anomalies'
     },
     {
+
       icon: Zap,
       title: 'Automated Response',
       description: 'Instant threat mitigation and incident response automation'
     },
     {
+
       icon: Lock,
       title: 'Zero Trust Security',
       description: 'Implement comprehensive zero-trust architecture with AI validation'
@@ -51,31 +57,37 @@ export default function AICybersecurityIntelligencePlatform() {
 
   const capabilities = [
     {
+
       title: 'Advanced Threat Intelligence',
       description: 'AI-powered analysis of global threat feeds and real-time risk assessment',
       icon: AlertTriangle
     },
     {
+
       title: 'Predictive Security Analytics',
       description: 'Forecast potential security breaches before they occur',
       icon: BarChart3
     },
     {
+
       title: 'Intelligent Incident Response',
       description: 'Automated threat containment and recovery procedures',
       icon: Zap
     },
     {
+
       title: 'Security Posture Assessment',
       description: 'Continuous evaluation of security controls and compliance status',
       icon: Target
     },
     {
+
       title: 'Cloud Security Monitoring',
       description: 'Comprehensive protection for multi-cloud environments',
       icon: Cloud
     },
     {
+
       title: 'Compliance Automation',
       description: 'Automated compliance reporting for SOC2, GDPR, HIPAA, and more',
       icon: CheckCircle
@@ -93,6 +105,7 @@ export default function AICybersecurityIntelligencePlatform() {
 
   const pricing = [
     {
+
       plan: 'Essential',
       price: '$499',
       period: '/month',
@@ -107,6 +120,7 @@ export default function AICybersecurityIntelligencePlatform() {
       popular: false
     },
     {
+
       plan: 'Professional',
       price: '$1,299',
       period: '/month',
@@ -122,6 +136,7 @@ export default function AICybersecurityIntelligencePlatform() {
       popular: true
     },
     {
+
       plan: 'Enterprise',
       price: '$2,999',
       period: '/month',
@@ -332,6 +347,7 @@ export default function AICybersecurityIntelligencePlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-slate-800/50 p-8 rounded-xl border ${
+
                   plan.popular 
                     ? 'border-red-500 ring-2 ring-red-500/20' 
                     : 'border-slate-700'
@@ -365,6 +381,7 @@ export default function AICybersecurityIntelligencePlatform() {
                 <a 
                   href="https://ziontechgroup.com/contact" 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+
                     plan.popular
                       ? 'bg-red-600 hover:bg-red-700 text-white'
                       : 'bg-slate-700 hover:bg-slate-600 text-white'

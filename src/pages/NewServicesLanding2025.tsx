@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
+import {
+
   Brain, 
   Atom, 
   Shield, 
@@ -63,6 +64,7 @@ import {
 import { allEnhancedZionServices2025 } from '../data/enhancedZionServices2025';
 
 export default function NewServicesLanding2025() {
+
   const [activeTab, setActiveTab] = useState('overview');
 
   const stats = [
@@ -74,24 +76,28 @@ export default function NewServicesLanding2025() {
 
   const highlights = [
     {
+
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence and machine learning platforms',
       color: 'from-orange-500 to-red-500'
     },
     {
+
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Quantum-resistant cybersecurity and advanced threat protection',
       color: 'from-purple-500 to-pink-500'
     },
     {
+
       icon: Leaf,
       title: 'Sustainability Tech',
       description: 'Green technology solutions for environmental compliance',
       color: 'from-green-500 to-blue-500'
     },
     {
+
       icon: Building2,
       title: 'Smart Infrastructure',
       description: 'IoT and edge computing for modern city management',
@@ -155,6 +161,7 @@ export default function NewServicesLanding2025() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
+
               const Icon = stat.icon;
               return (
                 <motion.div
@@ -226,6 +233,7 @@ export default function NewServicesLanding2025() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {highlights.map((highlight, index) => {
+
               const Icon = highlight.icon;
               return (
                 <motion.div

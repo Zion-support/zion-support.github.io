@@ -1,6 +1,9 @@
 import { Client, errors as EsErrors } from '@elastic/elasticsearch'; // Import Elasticsearch client and error types
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { generateSearchSuggestions, SearchSuggestion } from '@/data/marketplaceData'; // Assuming SearchSuggestion type is exported
+import {
+  generateSearchSuggestions,
+  SearchSuggestion,
+} from '@/data/marketplaceData'; // Assuming SearchSuggestion type is exported
 
 // Define structure for Elasticsearch suggest option
 interface ElasticSuggestSource {
@@ -41,16 +44,17 @@ if (cloudId && apiKey) {
   try {
     client = new Client({ cloud: { id: cloudId }, auth: { apiKey } });
   } catch (initError) {
-    console.error("Failed to initialize Elasticsearch client:", initError);
+    console.error('Failed to initialize Elasticsearch client:', initError);
     client = null; // Ensure client is null if initialization fails
   }
 } else {
-  console.warn("Elasticsearch not configured. Search suggestions will use fallback only.");
+  console.warn(
+    'Elasticsearch not configured. Search suggestions will use fallback only.'
+  );
 }
 
-
 export default async function handler(
-  req: NextApiRequest, 
+  req: NextApiRequest,
   res: NextApiResponse<SearchSuggestion[] | ErrorResponse>
 ) {
   if (req.method !== 'GET') {
@@ -58,27 +62,29 @@ export default async function handler(
     return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 
-  const q = (req.query?.q as string | undefined)?.toString().toLowerCase() || '';
+  const q =
+    (req.query?.q as string | undefined)?.toString().toLowerCase() || '';
   if (!q) {
     return res.status(200).json([]);
   }
 
   if (client) {
     try {
-      const esRes = await client.search<ElasticSuggestResponse>({ // Add generic type to client.search
+      const esRes = await client.search<ElasticSuggestResponse>({
+        // Add generic type to client.search
         index: 'listings', // Ensure this index exists and is configured for suggestions
         suggest: {
           'item-suggest': {
             prefix: q,
-            completion: { field: 'suggest', size: 5 } // Ensure 'suggest' field is of type 'completion'
-          }
-        }
+            completion: { field: 'suggest', size: 5 }, // Ensure 'suggest' field is of type 'completion'
+          },
+        },
       });
 
       const options = esRes.suggest?.['item-suggest']?.[0]?.options || [];
       const suggestions: SearchSuggestion[] = options.map(opt => ({
         text: opt._source.title,
-        type: opt._source.type
+        type: opt._source.type,
         // Assuming SearchSuggestion has { text: string, type: string }
       }));
       return res.status(200).json(suggestions);

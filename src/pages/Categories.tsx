@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 export default Categories;
 import {
+
 import { motion } from 'framer - motion';
 import { SEO } from '../components / SEO';
 
@@ -25,233 +26,234 @@ import { SEO } from '../components / SEO';
   Filter,
   Users,
   Settings,
-  TrendingUp,
-} from 'lucide - react';
+  TrendingUp} from 'lucide - react';
 
 const Categories: React.FC = () => {
+
   const [searchQuery, setSearchQuery] = useState ('') ;
   const [activeCategory, setActiveCategory] = useState ('all') ;
 
   const categories = [
     {
+
       id: 'ai - ml',
       name: 'AI & Machine Learning',
       description:
         'Advanced artificial intelligence and machine learning solutions',
       icon: Brain,
       color: 'from - purple - 500 to - pink - 500',
-      count: 44,
-    },
+      count: 44},
     {
+
       id: 'cloud',
       name: 'Cloud & Infrastructure',
       description: 'Scalable cloud solutions and infrastructure management',
       icon: Cloud,
       color: 'from - blue - 500 to - cyan - 500',
-      count: 32,
-    },
+      count: 32},
     {
+
       id: 'cybersecurity',
       name: 'Cybersecurity',
       description: 'Comprehensive security and threat protection',
       icon: Shield,
       color: 'from - red - 500 to - orange - 500',
-      count: 28,
-    },
+      count: 28},
     {
+
       id: 'data',
       name: 'Data & Analytics',
       description: 'Data processing, analytics, and business intelligence',
       icon: Database,
       color: 'from - green - 500 to - emerald - 500',
-      count: 41,
-    },
+      count: 41},
     {
+
       id: 'development',
       name: 'Software Development',
       description: 'Custom software development and programming services',
       icon: Code,
       color: 'from - indigo - 500 to - purple - 500',
-      count: 41,
-    },
+      count: 41},
     {
+
       id: 'iot',
       name: 'IoT & Edge Computing',
       description: 'Internet of Things and edge computing solutions',
       icon: Network,
       color: 'from - yellow - 500 to - orange - 500',
-      count: 23,
-    },
+      count: 23},
   ];
 
   const subCategories = {
+
     'ai - ml': [
       {
+
         name: 'Natural Language Processing',
         description: 'Text analysis, language models, and conversational AI',
         icon: Brain,
         services: 12,
         talent: 8,
-        equipment: 3,
-      },
+        equipment: 3},
       {
+
         name: 'Computer Vision',
         description: 'Image recognition, object detection, and visual AI',
         icon: Eye,
         services: 9,
         talent: 6,
-        equipment: 4,
-      },
+        equipment: 4},
       {
+
         name: 'Machine Learning Platforms',
         description: 'ML model training, deployment, and management',
         icon: Cpu,
         services: 15,
         talent: 12,
-        equipment: 7,
-      },
+        equipment: 7},
       {
+
         name: 'AI Consulting',
         description: 'Strategic AI implementation and optimization',
         icon: Target,
         services: 8,
         talent: 5,
-        equipment: 1,
-      },
+        equipment: 1},
     ],
     cloud: [
       {
+
         name: 'Cloud Migration',
         description: 'Legacy system migration and cloud transformation',
         icon: Rocket,
         services: 11,
         talent: 7,
-        equipment: 2,
-      },
+        equipment: 2},
       {
+
         name: 'DevOps & CI / CD',
         description: 'Automated deployment and infrastructure management',
         icon: Zap,
         services: 14,
         talent: 9,
-        equipment: 3,
-      },
+        equipment: 3},
       {
+
         name: 'Serverless Computing',
         description: 'Event - driven and serverless architecture',
         icon: Cloud,
         services: 7,
         talent: 4,
-        equipment: 1,
-      },
+        equipment: 1},
     ],
     cybersecurity: [
       {
+
         name: 'Threat Detection',
         description: 'Advanced threat detection and response systems',
         icon: Shield,
         services: 13,
         talent: 8,
-        equipment: 5,
-      },
+        equipment: 5},
       {
+
         name: 'Compliance & Governance',
         description: 'Security compliance and policy management',
         icon: Lock,
         services: 9,
         talent: 6,
-        equipment: 2,
-      },
+        equipment: 2},
       {
+
         name: 'Penetration Testing',
         description: 'Security assessment and vulnerability testing',
         icon: Target,
         services: 6,
         talent: 4,
-        equipment: 3,
-      },
+        equipment: 3},
     ],
     data: [
       {
+
         name: 'Business Intelligence',
         description: 'Data visualization and business analytics',
         icon: BarChart3,
         services: 18,
         talent: 11,
-        equipment: 4,
-      },
+        equipment: 4},
       {
+
         name: 'Big Data Processing',
         description: 'Large - scale data processing and analytics',
         icon: Database,
         services: 12,
         talent: 8,
-        equipment: 6,
-      },
+        equipment: 6},
       {
+
         name: 'Data Engineering',
         description: 'Data pipeline and ETL process development',
         icon: Settings,
         services: 11,
         talent: 7,
-        equipment: 3,
-      },
+        equipment: 3},
     ],
     development: [
       {
+
         name: 'Web Development',
         description: 'Modern web applications and frontend development',
         icon: Globe,
         services: 16,
         talent: 12,
-        equipment: 2,
-      },
+        equipment: 2},
       {
+
         name: 'Mobile Development',
         description: 'iOS and Android mobile applications',
         icon: Smartphone,
         services: 13,
         talent: 9,
-        equipment: 3,
-      },
+        equipment: 3},
       {
+
         name: 'Backend Development',
         description: 'Server - side development and API design',
         icon: Code,
         services: 12,
         talent: 8,
-        equipment: 1,
-      },
+        equipment: 1},
     ],
     iot: [
       {
+
         name: 'IoT Device Management',
         description: 'IoT device connectivity and management',
         icon: Network,
         services: 8,
         talent: 5,
-        equipment: 7,
-      },
+        equipment: 7},
       {
+
         name: 'Edge Computing',
         description: 'Edge processing and real - time analytics',
         icon: Cpu,
         services: 9,
         talent: 6,
-        equipment: 4,
-      },
+        equipment: 4},
       {
+
         name: 'Smart Cities',
         description: 'Urban IoT solutions and smart infrastructure',
         icon: Globe,
         services: 6,
         talent: 4,
-        equipment: 5,
-      },
-    ],
-  };
+        equipment: 5},
+    ]};
 
   const filteredCategories = categories.filter (category => {
+
     const matchesSearch = category.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       category.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
     const matchesCategory = activeCategory === 'all' || category.id === activeCategory;
@@ -312,6 +314,7 @@ const Categories: React.FC = () => {
                 <div role="button" className="flex flex - wrap gap - 2">
                   <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveCategory ('all') }
                     className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - colors ${
+
                       activeCategory === 'all'
                         ? 'bg - blue - 500 text - white'
                         : 'bg - slate - 700 / 50 text - gray - 300 hover:bg - slate - 600 / 50'
@@ -322,6 +325,7 @@ const Categories: React.FC = () => {
                   {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                       onClick={ () => setActiveCategory (category.id) }
                       className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - colors ${
+
                         activeCategory === category.id
                           ? 'bg - blue - 500 text - white'
                           : 'bg - slate - 700 / 50 text - gray - 300 hover:bg - slate - 600 / 50'

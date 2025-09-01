@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
+
   Brain,
   Shield,
   Cpu,
@@ -35,8 +36,7 @@ import {
   HelpCircle,
   Search,
   Menu,
-  X,
-} from 'lucide-react';
+  X} from 'lucide-react';
 
 // Lazy load components for better performance
 const LazyTestimonials = lazy(() => import('../components/Testimonials'));
@@ -61,31 +61,33 @@ const HeroSkeleton = () => (
 );
 
 export function HomePage() {
+
   const heroFeatures = [
     {
+
       icon: Brain,
       text: 'AI-Powered Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence',
-    },
+      description: 'Transform your business with cutting-edge artificial intelligence'},
     {
+
       icon: Atom,
       text: 'Quantum Computing',
-      description: 'Harness the power of quantum mechanics for unprecedented computational capabilities',
-    },
+      description: 'Harness the power of quantum mechanics for unprecedented computational capabilities'},
     {
+
       icon: Shield,
       text: 'Advanced Security',
-      description: 'Protect your digital assets with AI-powered security solutions',
-    },
+      description: 'Protect your digital assets with AI-powered security solutions'},
     {
+
       icon: Rocket,
       text: 'Space Technology',
-      description: 'Pioneering innovations in space exploration and satellite technology',
-    },
+      description: 'Pioneering innovations in space exploration and satellite technology'},
   ];
 
   const services = [
     {
+
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence',
       icon: Brain,
@@ -95,9 +97,9 @@ export function HomePage() {
         'Natural Language Processing',
         'Computer Vision',
         'Predictive Analytics',
-      ],
-    },
+      ]},
     {
+
       title: 'Cybersecurity',
       description: 'Protect your digital assets with advanced security solutions',
       icon: Shield,
@@ -107,9 +109,9 @@ export function HomePage() {
         'Incident Response',
         'Compliance Management',
         'Security Auditing',
-      ],
-    },
+      ]},
     {
+
       title: 'Cloud Services',
       description: 'Scalable cloud infrastructure and DevOps solutions',
       icon: Cpu, // Assuming Cpu is the correct icon for Cloud Services
@@ -119,8 +121,7 @@ export function HomePage() {
         'DevOps Automation',
         'Infrastructure as Code',
         'Monitoring & Alerting',
-      ],
-    },
+      ]},
   ];
 
   return (

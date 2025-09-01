@@ -1,13 +1,17 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 export function LoadingSkeleton({ className, count = 1, height = "h-4", width = "w-full", rounded = true }) {
+
     return (<>
       {Array.from({ length: count }).map((_, index) => (<motion.div key={index} className = {
+
   cn("bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark", height, width, rounded && "rounded",
   className)
 
 } animate = {
+
   {
+
                 background[
                     "linear-gradient(90deg, hsl(var(--zion-slate-dark)) 0%, hsl(var(--zion-blue-dark)) 50%, hsl(var(--zion-slate-dark)) 100%)",
                     "linear-gradient(90deg, hsl(var(--zion-slate-dark)) 0%, hsl(var(--zion-blue-dark)) 100%, hsl(var(--zion-slate-dark)) 0%)",
@@ -17,18 +21,23 @@ export function LoadingSkeleton({ className, count = 1, height = "h-4", width = 
             
 
 }} transition = {
+
   {
+
                 duration: 1.5,
                 repeat: Infinity,
   ease: "easeInOut"
             
 
 }} style={{
+
                 backgroundSize: "200% 100%"
             }}/>))}
     </>)}
 export function CardSkeleton({ className }) {
+
     return (<div className = {
+
   cn("p-6 border border-zion-blue-light/20 rounded-xl bg-zion-blue-dark/50",
   className)
 
@@ -47,7 +56,9 @@ export function CardSkeleton({ className }) {
       </div>
     </div>)}
 export function GridSkeleton({ columns = 3, className }) {
+
     return (<div className = {
+
   cn("grid gap-6", columns === 1 && "grid-cols-1", columns === 2 && "grid-cols-1 sm:grid-cols-2", columns === 3 && "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3", columns === 4 && "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
   className)
 
@@ -55,7 +66,9 @@ export function GridSkeleton({ columns = 3, className }) {
       {Array.from({ length: columns }).map((_, index) => (<CardSkeleton key={index}/>))}
     </div>)}
 export function HeroSkeleton({ className }) {
+
     return (<div className = {
+
   cn("py-20 md:py-32 min-h-screen flex items-center",
   className)
 

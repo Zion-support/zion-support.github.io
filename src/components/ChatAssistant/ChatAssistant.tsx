@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 export interface Message {
+
   id: string;
   role: 'user' | 'assistant';
   message: string;
@@ -32,6 +33,7 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     // Simulate AI response
     setTimeout(: unknown {
+
       const aiMessage: Message = {
 
   id: (Date.now() + 1).toString(),

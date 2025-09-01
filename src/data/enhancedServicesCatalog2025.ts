@@ -1,4 +1,5 @@
 export type ServiceItem = {
+
 	id: string;
 	title: string;
 	description: string;
@@ -19,6 +20,7 @@ export type ServiceItem = {
 };
 
 export type ServiceCategory = {
+
 	name: string;
 	slug: string;
 	items: ServiceItem[];
@@ -28,12 +30,14 @@ export type ServiceCategory = {
 
 export const enhancedServicesCatalog2025: ServiceCategory[] = [
 	{
+
 		name: 'Micro SaaS Solutions',
 		slug: 'micro-saas',
 		description: 'Innovative, focused software solutions that solve specific business problems with subscription-based pricing.',
 		marketValue: '$50B+',
 		items: [
 			{
+
 				id: 'ai-lead-scoring-platform',
 				title: 'AI Lead Scoring & Qualification Platform',
 				description: 'Intelligent lead scoring using machine learning to identify high-value prospects and optimize sales pipeline conversion rates.',
@@ -58,6 +62,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '340% average ROI in 12 months'
 			},
 			{
+
 				id: 'website-ai-chatbot-suite',
 				title: 'Website AI Chatbot Suite',
 				description: 'Advanced AI-powered chatbots that provide 24/7 customer support, lead qualification, and sales assistance.',
@@ -82,6 +87,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '280% average ROI in 6 months'
 			},
 			{
+
 				id: 'rag-search-platform',
 				title: 'RAG Search & Knowledge Platform',
 				description: 'Retrieval-Augmented Generation search platform that provides accurate, contextual answers from company knowledge bases.',
@@ -106,6 +112,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '420% average ROI in 12 months'
 			},
 			{
+
 				id: 'mlops-pipeline-automation',
 				title: 'MLOps Pipeline Automation Platform',
 				description: 'End-to-end machine learning operations platform that automates model training, deployment, and monitoring.',
@@ -130,6 +137,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '380% average ROI in 18 months'
 			},
 			{
+
 				id: 'ecommerce-personalization-engine',
 				title: 'E-commerce Personalization Engine',
 				description: 'AI-powered personalization platform that increases conversion rates through dynamic product recommendations and content.',
@@ -154,6 +162,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '310% average ROI in 9 months'
 			},
 			{
+
 				id: 'returns-management-saas',
 				title: 'Returns Management SaaS Platform',
 				description: 'Streamlined returns processing platform that reduces costs, improves customer satisfaction, and optimizes inventory management.',
@@ -178,6 +187,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '260% average ROI in 8 months'
 			},
 			{
+
 				id: 'vendor-risk-management-platform',
 				title: 'Vendor Risk Management Platform',
 				description: 'Comprehensive vendor risk assessment and monitoring platform that ensures compliance and reduces third-party risks.',
@@ -202,6 +212,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '320% average ROI in 12 months'
 			},
 			{
+
 				id: 'ai-seo-optimizer',
 				title: 'AI SEO Optimizer Pro',
 				description: 'Advanced SEO optimization platform that uses AI to improve search rankings, content quality, and organic traffic.',
@@ -226,6 +237,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '290% average ROI in 10 months'
 			},
 			{
+
 				id: 'saas-churn-predictor',
 				title: 'SaaS Churn Predictor',
 				description: 'Predictive analytics platform that identifies at-risk customers and provides actionable insights to reduce churn rates.',
@@ -250,6 +262,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '350% average ROI in 12 months'
 			},
 			{
+
 				id: 'ai-incident-postmortems',
 				title: 'AI Incident Postmortem Platform',
 				description: 'Automated incident analysis and postmortem generation platform that improves incident response and prevents future issues.',
@@ -274,6 +287,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '280% average ROI in 9 months'
 			},
 			{
+
 				id: 'api-monitoring-saas',
 				title: 'API Monitoring & Performance SaaS',
 				description: 'Comprehensive API monitoring platform that tracks performance, uptime, and provides real-time alerts for optimal API health.',
@@ -298,6 +312,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '310% average ROI in 8 months'
 			},
 			{
+
 				id: 'gdpr-cookie-compliance',
 				title: 'GDPR Cookie Compliance Platform',
 				description: 'Automated cookie consent management platform that ensures GDPR compliance and provides detailed consent analytics.',
@@ -322,6 +337,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '240% average ROI in 6 months'
 			},
 			{
+
 				id: 'ai-proofreading-studio',
 				title: 'AI Proofreading Studio',
 				description: 'Advanced AI-powered proofreading and editing platform that improves writing quality, grammar, and style across multiple languages.',
@@ -346,6 +362,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '270% average ROI in 7 months'
 			},
 			{
+
 				id: 'meeting-notes-copilot',
 				title: 'AI Meeting Notes & Summaries',
 				description: 'Intelligent meeting transcription and summarization platform that captures key insights and action items automatically.',
@@ -370,6 +387,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '320% average ROI in 6 months'
 			},
 			{
+
 				id: 'smart-forms-intake',
 				title: 'Smart Forms & Intake Platform',
 				description: 'Intelligent form builder with conditional logic, AI validation, and automated workflow routing for efficient data collection.',
@@ -394,6 +412,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '290% average ROI in 9 months'
 			},
 			{
+
 				id: 'affiliate-marketing-tracker',
 				title: 'Affiliate Marketing Tracker',
 				description: 'Comprehensive affiliate marketing platform that tracks performance, manages commissions, and optimizes partner relationships.',
@@ -418,6 +437,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '310% average ROI in 10 months'
 			},
 			{
+
 				id: 'uptime-sla-monitor',
 				title: 'Uptime SLA Monitor',
 				description: 'Professional uptime monitoring platform that tracks website and service availability with SLA compliance reporting.',
@@ -442,6 +462,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '250% average ROI in 8 months'
 			},
 			{
+
 				id: 'soc2-compliance-tracker',
 				title: 'SOC 2 Compliance Tracker',
 				description: 'Automated SOC 2 compliance management platform that streamlines evidence collection and control monitoring.',
@@ -466,6 +487,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '340% average ROI in 12 months'
 			},
 			{
+
 				id: 'employee-scheduling-saas',
 				title: 'Employee Scheduling SaaS',
 				description: 'Intelligent employee scheduling platform that optimizes workforce management, reduces conflicts, and improves productivity.',
@@ -490,6 +512,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '280% average ROI in 9 months'
 			},
 			{
+
 				id: 'ai-support-helpdesk',
 				title: 'AI Support Helpdesk',
 				description: 'Intelligent customer support platform that uses AI to automate ticket routing, provide instant answers, and improve resolution times.',
@@ -516,12 +539,14 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 		]
 	},
 	{
+
 		name: 'AI Solutions & Services',
 		slug: 'ai-solutions',
 		description: 'Cutting-edge artificial intelligence solutions that transform business operations and drive innovation.',
 		marketValue: '$150B+',
 		items: [
 			{
+
 				id: 'ai-business-intelligence-platform',
 				title: 'AI Business Intelligence Platform',
 				description: 'Next-generation BI platform powered by AI that provides predictive analytics, natural language queries, and automated insights.',
@@ -546,6 +571,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '450% average ROI in 18 months'
 			},
 			{
+
 				id: 'ai-financial-trading-platform',
 				title: 'AI Financial Trading Platform',
 				description: 'Advanced algorithmic trading platform that uses AI to analyze market data, identify opportunities, and execute trades automatically.',
@@ -570,6 +596,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '520% average ROI in 24 months'
 			},
 			{
+
 				id: 'ai-supply-chain-optimization',
 				title: 'AI Supply Chain Optimization',
 				description: 'Intelligent supply chain platform that uses AI to optimize inventory, predict demand, and reduce operational costs.',
@@ -594,6 +621,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '380% average ROI in 15 months'
 			},
 			{
+
 				id: 'ai-hr-platform',
 				title: 'AI HR Platform',
 				description: 'Comprehensive HR platform that uses AI to streamline recruitment, employee management, and performance optimization.',
@@ -618,6 +646,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '340% average ROI in 12 months'
 			},
 			{
+
 				id: 'ai-marketing-automation',
 				title: 'AI Marketing Automation Suite',
 				description: 'Intelligent marketing automation platform that personalizes campaigns, optimizes customer journeys, and maximizes ROI.',
@@ -642,6 +671,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '420% average ROI in 14 months'
 			},
 			{
+
 				id: 'ai-legal-research-platform',
 				title: 'AI Legal Research Platform',
 				description: 'Advanced legal research platform that uses AI to analyze case law, statutes, and legal documents for faster research.',
@@ -666,6 +696,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '380% average ROI in 16 months'
 			},
 			{
+
 				id: 'ai-education-platform',
 				title: 'AI Education Platform',
 				description: 'Personalized learning platform that adapts to individual student needs and provides AI-powered tutoring and assessment.',
@@ -692,12 +723,14 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 		]
 	},
 	{
+
 		name: 'IT Services & Solutions',
 		slug: 'it-services',
 		description: 'Comprehensive IT services that modernize infrastructure, enhance security, and drive digital transformation.',
 		marketValue: '$200B+',
 		items: [
 			{
+
 				id: 'cloud-devops-automation',
 				title: 'Cloud DevOps Automation Platform',
 				description: 'End-to-end DevOps automation platform that streamlines cloud deployment, monitoring, and infrastructure management.',
@@ -722,6 +755,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '410% average ROI in 16 months'
 			},
 			{
+
 				id: 'zero-trust-network-architecture',
 				title: 'Zero Trust Network Architecture',
 				description: 'Comprehensive zero trust security implementation that provides secure access to applications and data without traditional network perimeters.',
@@ -746,6 +780,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '480% average ROI in 20 months'
 			},
 			{
+
 				id: 'digital-twin-platform',
 				title: 'Digital Twin Platform',
 				description: 'Advanced digital twin technology that creates virtual replicas of physical assets for monitoring, simulation, and optimization.',
@@ -770,6 +805,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '520% average ROI in 24 months'
 			},
 			{
+
 				id: 'iot-edge-computing-platform',
 				title: 'IoT Edge Computing Platform',
 				description: 'Edge computing platform that processes IoT data locally, reducing latency and improving real-time decision making.',
@@ -794,6 +830,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '380% average ROI in 18 months'
 			},
 			{
+
 				id: 'blockchain-enterprise-solutions',
 				title: 'Blockchain Enterprise Solutions',
 				description: 'Enterprise-grade blockchain platform that provides secure, transparent, and efficient business process automation.',
@@ -818,6 +855,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 				roi: '450% average ROI in 22 months'
 			},
 			{
+
 				id: 'quantum-computing-services',
 				title: 'Quantum Computing Services',
 				description: 'Quantum computing solutions that solve complex computational problems in optimization, cryptography, and scientific research.',
@@ -847,6 +885,7 @@ export const enhancedServicesCatalog2025: ServiceCategory[] = [
 
 // Contact information for Zion Tech Group
 export const contactInfo = {
+
 	phone: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -858,6 +897,7 @@ export const contactInfo = {
 // Service categories for easy navigation
 export const serviceCategories = [
 	{
+
 		name: 'Micro SaaS',
 		slug: 'micro-saas',
 		description: 'Focused software solutions for specific business needs',
@@ -865,6 +905,7 @@ export const serviceCategories = [
 		count: 25
 	},
 	{
+
 		name: 'AI Solutions',
 		slug: 'ai-solutions',
 		description: 'Cutting-edge artificial intelligence services',
@@ -872,6 +913,7 @@ export const serviceCategories = [
 		count: 8
 	},
 	{
+
 		name: 'IT Services',
 		slug: 'it-services',
 		description: 'Comprehensive IT infrastructure and consulting',
@@ -882,19 +924,23 @@ export const serviceCategories = [
 
 // Pricing tiers for different business sizes
 export const pricingTiers = {
+
 	startup: {
+
 		name: 'Startup',
 		description: 'Perfect for growing businesses',
 		price: '$99 - $299/month',
 		features: ['Basic features', 'Email support', 'Standard integrations']
 	},
 	business: {
+
 		name: 'Business',
 		description: 'Ideal for established companies',
 		price: '$299 - $799/month',
 		features: ['Advanced features', 'Priority support', 'Custom integrations']
 	},
 	enterprise: {
+
 		name: 'Enterprise',
 		description: 'For large organizations',
 		price: 'Custom pricing',
@@ -904,6 +950,7 @@ export const pricingTiers = {
 
 // Success metrics and case studies
 export const successMetrics = {
+
 	totalClients: '500+',
 	successRate: '98%',
 	averageROI: '340%',

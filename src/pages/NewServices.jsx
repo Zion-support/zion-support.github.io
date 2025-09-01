@@ -8,6 +8,7 @@ export default NewServices;
 export default NewServices;
 export default NewServices;
 export function NewServices () {
+
 import { ADVANCED_INNOVATIVE_SERVICES } from "../data / advancedInnovativeServices";
 import { COMPREHENSIVE_SERVICES } from "../data / comprehensiveServices";
 import { EMERGING_TECH_SERVICES } from "../data / emergingTechServices";
@@ -25,26 +26,33 @@ import { motion } from 'framer - motion';
     // Get unique categories
     const categories = ['all', ...Array.from (new Set (allServices.map (s => s.category) ) ) ];
     const filteredServices = allServices.filter (service => {
+
         const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
             service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || ( ('tags' in service && 'tags' in service && service.tags && service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ) || false) ;
         return matchesCategory && matchesSearch}) ;
     const containerVariants = {
+
         hidden: { opacity: 0 },
         visible: {
+
             opacity: 1,
             transition: {
+
                 staggerChildren: 0.1
 
     };
     const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0
 
 },
         visible: {
+
             y: 0,
             opacity: 1,
             transition: {
+
                 duration: 0.5
 
     };
@@ -56,6 +64,7 @@ import { motion } from 'framer - motion';
       {/* Matrix Rain Effect */}
       <div className="absolute inset - 0 overflow - hidden pointer - events - none">
         {[...Array (20) ].map ( (_, i) => (<div key={i} className="absolute text - zion - cyan text - xs animate - matrix - rain" style={{
+
                 left: `${Math.random () * 100}%`,
                 animationDelay: `${Math.random () * 20}s`,
                 animationDuration: `${20 + Math.random () * 10}s`
@@ -67,10 +76,12 @@ import { motion } from 'framer - motion';
       <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24">
         {/* Header Section */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
@@ -140,14 +151,17 @@ import { motion } from 'framer - motion';
 
         {/* Category Filter */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -163,14 +177,17 @@ import { motion } from 'framer - motion';
 
         {/* Featured Services Section */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.4
 
@@ -338,6 +355,7 @@ import { motion } from 'framer - motion';
               No services found matching your criteria
             </div>
             <button onClick={ () => {
+
                 setSearchTerm ('') ;
                 setSelectedCategory ('all') }} className="px - 6 py - 3 bg - zion - cyan text - zion - blue - dark rounded - lg font - medium hover:bg - zion - cyan / 90 transition - colors">
               Clear Filters
@@ -356,14 +374,17 @@ import { motion } from 'framer - motion';
 
         {/* CTA Section */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.6
 
@@ -395,10 +416,12 @@ import { motion } from 'framer - motion';
       {/* Service Detail Modal */}
       {selectedService && (<div className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4">
           <motion.div initial = {
+
   { opacity: 0,
   scale: 0.9
 
 }} animate = {
+
   { opacity: 1,
   scale: 1
 

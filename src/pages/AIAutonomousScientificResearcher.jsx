@@ -3,6 +3,7 @@ import React from 'react';
 export default AIAutonomousScientificResearcher;
 
 const AIAutonomousScientificResearcher = () => {
+
   return (<>
       <Helmet>
         <title > AI Autonomous Scientific Researcher | Zion Tech Group</title>

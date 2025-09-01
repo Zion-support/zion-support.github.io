@@ -6,33 +6,34 @@ import { Input } from '@/components / ui / input';
 import { useWallet } from '@/context / WalletContext';
 import ConnectWalletButton from '@/components / ConnectWalletButton';
   import {
+
 export default function TokenIntegrations () {
+
 import {
 
   Card,
   CardContent,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
+  CardTitle} from '@/components / ui / card';
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
-    SelectValue,
-  } from '@/components / ui / select';
+    SelectValue} from '@/components / ui / select';
   const CHAINS = [
     { id: 'ethereum', name: 'Ethereum', logo: '/logos / ethereum - logo.svg' },
     { id: 'polygon', name: 'Polygon', logo: '/logos / polygon - logo.svg' },
     { id: 'arbitrum', name: 'Arbitrum', logo: '/logos / arbitrum - logo.svg' },
     { id: 'optimism', name: 'Optimism', logo: '/logos / optimism - logo.svg' },
     {
+
       id: 'avalanche',
       name: 'Avalanche',
-      logo: '/logos / avalanche - logo.svg',
-    },
+      logo: '/logos / avalanche - logo.svg'},
     { id: 'bnb', name: 'BNB', logo: '/logos / bnb - logo.svg' },
   ];
   function suggestChain (region, stake) {
+
     if (stake > 1000) return 'ethereum';
     if (region === 'asia') return 'bnb';
     if (region === 'europe') return 'polygon';
@@ -47,17 +48,20 @@ import {
   const [stake, setStake] = useState (0) ;
   const [suggested, setSuggested] = useState (null) ;
   const handleBridge = () => {
+
     setStatus ('Bridging...') ;
     setTxHash (null) ;
     // TODO: integrate actual LayerZero bridge logic
     // Record onchain tx logs and enforce rate limits
     // Use burn - and - mint model if tokens are wrapped
     setTimeout ( () => {
+
       setTxHash ('0xabc123') ;
       setStatus (`ZION$ arrived on ${toChain} in 12s`) ;
     }, 1200) ;
   };
   const handleSuggest = () => {
+
     const chain = suggestChain (region.toLowerCase () , stake) ;
     setSuggested (chain) ;
   };

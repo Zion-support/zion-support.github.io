@@ -22,7 +22,7 @@ interface ErrorResponse {
 }
 
 export default async function handler(
-  req: NextApiRequest, 
+  req: NextApiRequest,
   res: NextApiResponse<MutationSuccessResponse | ErrorResponse>
 ) {
   if (req.method !== 'POST') {
@@ -30,10 +30,14 @@ export default async function handler(
     return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 
-  const { productId, subject, body, fromUser } = req.body as MessagesRequestBody;
+  const { productId, subject, body, fromUser } =
+    req.body as MessagesRequestBody;
 
   if (!productId || !subject || !body) {
-    return res.status(400).json({ error: 'Missing required fields: productId, subject, and body are required.' });
+    return res.status(400).json({
+      error:
+        'Missing required fields: productId, subject, and body are required.',
+    });
   }
 
   // Validate fromUser if provided, or set a default.
@@ -49,7 +53,6 @@ export default async function handler(
     }
   }
 
-
   try {
     await prisma.chatMessage.create({
       data: {
@@ -61,44 +64,50 @@ export default async function handler(
 
     const apiKey = process.env.SENDGRID_API_KEY;
     const toEmail = process.env.SENDGRID_TO_EMAIL; // Assuming you want to send to a specific admin/support email
-    const fromEmailDisplay = process.env.SENDGRID_FROM_EMAIL || 'noreply@example.com'; // Email address to show as "from"
-    
+    const fromEmailDisplay =
+      process.env.SENDGRID_FROM_EMAIL || 'noreply@example.com'; // Email address to show as "from"
+
     if (apiKey && toEmail) {
       sgMail.setApiKey(apiKey);
       try {
         await sgMail.send({
           to: toEmail, // The actual recipient
           from: fromEmailDisplay, // Verified SendGrid sender
-          replyTo: fromUser && /.+@.+\..+/.test(fromUser) ? fromUser : undefined, // Optional: if fromUser is an email
+          replyTo:
+            fromUser && /.+@.+\..+/.test(fromUser) ? fromUser : undefined, // Optional: if fromUser is an email
           subject: `[Product Inquiry: ${productId}] ${subject}`,
           text: `Message from: ${fromUser || 'Guest/System'}\n\n${body}`,
           // mailSettings: { sandboxMode: { enable: process.env.NODE_ENV !== 'production' } }, // Recommended for testing
         });
       } catch (sendgridError: unknown) {
-          console.error('SendGrid API Error:', sendgridError);
-          // Decide if this failure should prevent a 200 response to the client.
-          // For now, we'll assume the message is saved, and email is secondary.
+        console.error('SendGrid API Error:', sendgridError);
+        // Decide if this failure should prevent a 200 response to the client.
+        // For now, we'll assume the message is saved, and email is secondary.
       }
     } else {
-        console.warn('SendGrid API Key or To Email not configured. Skipping email notification.');
+      console.warn(
+        'SendGrid API Key or To Email not configured. Skipping email notification.'
+      );
     }
 
-    return res.status(200).json({ success: true, message: 'Message sent successfully.' });
+    return res
+      .status(200)
+      .json({ success: true, message: 'Message sent successfully.' });
   } catch (e: unknown) {
     console.error('Failed to send message:', e);
     let errorMessage = 'Failed to send message';
     let errorDetails: string | undefined;
 
     if (e instanceof Prisma.PrismaClientKnownRequestError) {
-        errorMessage = 'Database error while sending message.';
-        errorDetails = e.message;
+      errorMessage = 'Database error while sending message.';
+      errorDetails = e.message;
     } else if (e instanceof Error) {
       errorMessage = e.message;
       errorDetails = e.stack;
     } else if (typeof e === 'string') {
       errorMessage = e;
     }
-    
+
     return res.status(500).json({ error: errorMessage, details: errorDetails });
   } finally {
     await prisma.$disconnect();

@@ -28,6 +28,7 @@ import { Search,
  } from 'lucide - react.ts';
 
 const ComprehensiveServicesShowcase2025Enhanced: React.FC = () : JSX.Element => {
+
     const [searchTerm, setSearchTerm] = useState ('') ;
     const [selectedCategory, setSelectedCategory] = useState < any> ('all') ;
     const [sortBy, setSortBy] = useState < any> ('name') ;
@@ -45,9 +46,11 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () : JSX.Element => 
     ];
 
     const filteredServices = useMemo ( () => {
+
         let filtered = comprehensiveServices2025Enhanced;
 
         if (searchTerm) {
+
             filtered = filtered.filter (service =>
                 service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
                 service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
@@ -55,12 +58,15 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () : JSX.Element => 
         }
 
         if (selectedCategory !== 'all') {
+
             filtered = filtered.filter (service => service.category === selectedCategory) ;
         }
 
         // Sort services
         filtered.sort ( (a, b) => {
+
             switch (sortBy) {
+
                 case 'price':
                     const priceA = parseFloat (a.pricing.monthly.replace (/[^0 - 9.]/g, '') ) ;
                     const priceB = parseFloat (b.pricing.monthly.replace (/[^0 - 9.]/g, '') ) ;
@@ -76,7 +82,9 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () : JSX.Element => 
     }, [searchTerm, selectedCategory, sortBy]) ;
 
     const getCategoryColor = (category: anystring) => {
+
         const colors: { [key: string]: string } = {
+
             'fintech': 'from - green - 500 to - emerald - 600',
             'healthtech': 'from - red - 500 to - pink - 600',
             'edutech': 'from - purple - 500 to - violet - 600',
@@ -90,7 +98,9 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () : JSX.Element => 
     };
 
     const getCategoryIcon = (category: anystring) => {
+
         const icons: { [key: string]: React.ReactNode } = {
+
             'fintech': <DollarSign className="w - 5 h - 5" />,
             'healthtech': <Heart className="w - 5 h - 5" />,
             'edutech': <GraduationCap className="w - 5 h - 5" />,

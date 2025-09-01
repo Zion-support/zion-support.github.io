@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 export default React.memo (function DigitalTwin (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Eye,
@@ -51,52 +53,52 @@ import { motion } from 'framer - motion.ts';
   Home,
   Car,
   Plane,
-  Ship,
-} from 'lucide - react.ts';
+  Ship} from 'lucide - react.ts';
 
   const features = [
     {
+
       icon: Eye,
       title: 'Real - time Monitoring',
       description:
         'Live visualization and monitoring of physical assets and processes',
-      color: 'from - blue - 500 to - cyan - 500',
-    },
+      color: 'from - blue - 500 to - cyan - 500'},
     {
+
       icon: Cpu,
       title: 'AI - Powered Analytics',
       description:
         'Intelligent insights and predictive maintenance capabilities',
-      color: 'from - purple - 500 to - pink - 500',
-    },
+      color: 'from - purple - 500 to - pink - 500'},
     {
+
       icon: Network,
       title: 'IoT Integration',
       description: 'Seamless connectivity with sensors and IoT devices',
-      color: 'from - green - 500 to - emerald - 500',
-    },
+      color: 'from - green - 500 to - emerald - 500'},
     {
+
       icon: Database,
       title: 'Data Synchronization',
       description: 'Real - time data flow between physical and digital worlds',
-      color: 'from - orange - 500 to - red - 500',
-    },
+      color: 'from - orange - 500 to - red - 500'},
     {
+
       icon: Cloud,
       title: 'Cloud Platform',
       description: 'Scalable cloud infrastructure for digital twin operations',
-      color: 'from - indigo - 500 to - blue - 500',
-    },
+      color: 'from - indigo - 500 to - blue - 500'},
     {
+
       icon: Shield,
       title: 'Security & Compliance',
       description: 'Enterprise - grade security for sensitive operational data',
-      color: 'from - red - 500 to - pink - 500',
-    },
+      color: 'from - red - 500 to - pink - 500'},
   ];
 
   const applications = [
     {
+
       title: 'Manufacturing',
       description:
         'Optimize production processes and predict equipment failures',
@@ -105,15 +107,15 @@ import { motion } from 'framer - motion.ts';
         'Production optimization',
         'Predictive maintenance',
         'Quality control',
-      ],
-    },
+      ]},
     {
+
       title: 'Smart Cities',
       description: 'Monitor and manage urban infrastructure and services',
       icon: Building,
-      benefits: ['Traffic management', 'Energy optimization', 'Public safety'],
-    },
+      benefits: ['Traffic management', 'Energy optimization', 'Public safety']},
     {
+
       title: 'Healthcare',
       description: 'Patient monitoring and medical device management',
       icon: Activity,
@@ -121,9 +123,9 @@ import { motion } from 'framer - motion.ts';
         'Patient care',
         'Equipment monitoring',
         'Treatment optimization',
-      ],
-    },
+      ]},
     {
+
       title: 'Transportation',
       description: 'Fleet management and infrastructure monitoring',
       icon: Truck,
@@ -131,8 +133,7 @@ import { motion } from 'framer - motion.ts';
         'Fleet optimization',
         'Route planning',
         'Maintenance scheduling',
-      ],
-    },
+      ]},
   ];
 
   const technologies = [

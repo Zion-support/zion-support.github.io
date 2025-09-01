@@ -1,4 +1,5 @@
 export interface SpecializedITService {
+
   id: string;
   title: string;
   description: string;
@@ -85,12 +86,14 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     roi: "300-500%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Cisco", "Palo Alto", "Fortinet", "VMware", "Microsoft"],;"
       integrations["Active Directory", "SIEM systems", "Firewalls", "VPN solutions", "Cloud platforms"],;
@@ -102,6 +105,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
 
   // 5G Enterprise Network Solutions
   {
+
 "
     id: "five-g-enterprise-network","
     title: "5G Enterprise Network Solutions","
@@ -151,12 +155,14 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     roi: "400-600%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["5G Core", "RAN equipment", "Edge computing", "Network slicing", "IoT platforms"],;"
       integrations["Existing network infrastructure", "Cloud platforms", "IoT devices", "Enterprise applications"],;
@@ -168,6 +174,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
 
   // Cloud-Native Application Development
   {
+
 "
     id: "cloud-native-app-development","
     title: "Cloud-Native Application Development","
@@ -217,12 +224,14 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     roi: "250-400%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Kubernetes", "Docker", "React", "Node.js", "PostgreSQL"],;"
       integrations["AWS", "Azure", "GCP", "GitHub", "CI/CD tools"],;
@@ -234,6 +243,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
 
   // Data Center Modernization
   {
+
 "
     id: "data-center-modernization","
     title: "Data Center Modernization","
@@ -283,12 +293,14 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     roi: "400-600%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["VMware", "Hyper-V", "Storage solutions", "Network equipment", "Automation tools"],;"
       integrations["Existing infrastructure", "Cloud platforms", "Management tools", "Monitoring systems"],;
@@ -300,6 +312,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
 
   // IoT Edge Computing Platform
   {
+
 "
     id: "iot-edge-computing-platform","
     title: "IoT Edge Computing Platform","
@@ -349,12 +362,14 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     roi: "300-500%","
     innovationLevel: "Advanced",
     contactInfo: {
+
 "
       phone: "+1 302 464 0950","
       email: "kleber@ziontechgroup.com","
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
+
 "
       technology["Edge computing platforms", "IoT protocols", "AI/ML frameworks", "Real-time databases", "Security protocols"],;"
       integrations["IoT devices", "Cloud platforms", "Enterprise systems", "Analytics tools"],;

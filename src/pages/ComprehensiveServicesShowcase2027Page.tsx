@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { 
+import {
+
   Star, 
   Rocket, 
   Brain, 
@@ -59,6 +60,7 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function ComprehensiveServicesShowcase2027Page() {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -94,6 +96,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
 
   const featuredServices = [
     {
+
       id: 1,
       name: 'AI Autonomous Business Operations Platform 2027',
       description: 'Next-generation AI platform with autonomous decision-making, predictive analytics, and self-optimizing business processes',
@@ -109,6 +112,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
         'Intelligent Resource Allocation'
       ],
       pricing: {
+
         starter: '$3,500/month',
         professional: '$7,500/month',
         enterprise: '$15,000/month'
@@ -122,6 +126,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
       href: '/services/ai-autonomous-business-operations-platform-2027'
     },
     {
+
       id: 2,
       name: 'Quantum AI Hybrid Computing Platform',
       description: 'Revolutionary platform combining quantum computing with AI for unprecedented computational power and problem-solving capabilities',
@@ -137,6 +142,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
         'Scalable Quantum-Classical Integration'
       ],
       pricing: {
+
         starter: '$8,000/month',
         professional: '$18,000/month',
         enterprise: '$35,000/month'
@@ -150,6 +156,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
       href: '/services/quantum-ai-hybrid-platform'
     },
     {
+
       id: 3,
       name: 'AI-Powered Cybersecurity Operations Center',
       description: 'Intelligent security operations center with AI-driven threat detection, automated response, and 24/7 monitoring',
@@ -165,6 +172,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
         'Threat Intelligence Platform'
       ],
       pricing: {
+
         starter: '$4,500/month',
         professional: '$9,500/month',
         enterprise: '$18,000/month'
@@ -178,6 +186,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
       href: '/services/ai-cybersecurity-operations-center'
     },
     {
+
       id: 4,
       name: 'Sustainable Technology Platform',
       description: 'Comprehensive platform for implementing and managing sustainable technology solutions with ESG reporting',
@@ -193,6 +202,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
         'Sustainability Metrics Dashboard'
       ],
       pricing: {
+
         starter: '$2,500/month',
         professional: '$5,500/month',
         enterprise: '$12,000/month'
@@ -206,6 +216,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
       href: '/services/sustainable-technology-platform'
     },
     {
+
       id: 5,
       name: 'AI Healthcare Analytics Platform',
       description: 'Advanced healthcare analytics platform powered by AI for improved patient outcomes and clinical decision support',
@@ -221,6 +232,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
         'Population Health Management'
       ],
       pricing: {
+
         starter: '$5,500/month',
         professional: '$12,000/month',
         enterprise: '$25,000/month'
@@ -234,6 +246,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
       href: '/services/ai-healthcare-analytics-platform'
     },
     {
+
       id: 6,
       name: 'Space Technology Solutions',
       description: 'Cutting-edge space technology solutions for satellite operations, space exploration, and orbital optimization',
@@ -249,6 +262,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
         'Space Data Processing'
       ],
       pricing: {
+
         starter: '$12,000/month',
         professional: '$25,000/month',
         enterprise: '$50,000/month'
@@ -265,6 +279,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
 
   const testimonials = [
     {
+
       name: 'Dr. Sarah Chen',
       title: 'CTO',
       company: 'TechCorp Inc.',
@@ -274,6 +289,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
       industry: 'Technology'
     },
     {
+
       name: 'Michael Rodriguez',
       title: 'Security Director',
       company: 'GlobalBank',
@@ -283,6 +299,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
       industry: 'Financial Services'
     },
     {
+
       name: 'Emily Watson',
       title: 'Research Lead',
       company: 'Quantum Research Labs',
@@ -292,6 +309,7 @@ export default function ComprehensiveServicesShowcase2027Page() {
       industry: 'Technology'
     },
     {
+
       name: 'David Kim',
       title: 'VP of Operations',
       company: 'GreenEnergy Corp',
@@ -314,12 +332,13 @@ export default function ComprehensiveServicesShowcase2027Page() {
   const filteredServices = selectedCategory === 'all' && selectedIndustry === 'all'
     ? featuredServices
     : featuredServices.filter(service => {
+
         const categoryMatch = selectedCategory === 'all' || service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
         const industryMatch = selectedIndustry === 'all' || service.industry.toLowerCase().includes(selectedIndustry.replace('-', ' '));
         return categoryMatch && industryMatch;
       });
 
-  const searchedServices = searchQuery
+  const searchedServices = searchQuery;
     ? filteredServices.filter(service =>
         service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -329,7 +348,9 @@ export default function ComprehensiveServicesShowcase2027Page() {
     : filteredServices;
 
   const sortedServices = [...searchedServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'popularity':
         return b.popularity - a.popularity;
       case 'innovation':

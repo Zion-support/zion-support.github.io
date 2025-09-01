@@ -5,18 +5,21 @@ import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, 
 import { SEO } from "../components/SEO";
 const testimonials = [
     {
+
         content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",
         name: "Carlos Rodriguez",
         role: "CEO, InnovateCorp",
         rating: 5
     },
     {
+
         content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.",
         name: "Lisa Chang",
         role: "COO, TechFlow Solutions",
         rating: 5
     },
     {
+
         content: "Working with Zion transformed our comp culture. We're now more agile, data-driven, and customer-focused than ever before.",
         name: "Marcus Johnson",
         role: "CTO, DigitalFirst Inc",
@@ -30,16 +33,19 @@ const stats = [
     { label: "Customer Satisfaction", value: "95%", icon: Users }
 ];
 export default function DigitalTransformation() {
+
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Digital Transformation Services - Zion Tech Group" description="End-to-end business modernization strategies and implementation services that drive innovation and competitive advantage." keywords="digital transformation, business modernization, process automation, technology modernization, change management" canonical="https://ziontechgroup.com/digital-transformation"/>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -73,16 +79,20 @@ export default function DigitalTransformation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
+
             const IconComponent = stat.icon;
             return (<motion.div key={stat.label} initial = {
+
   { opacity: 0,
   scale: 0.8 
 
 }} whileInView = {
+
   { opacity: 1,
   scale: 1 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -100,10 +110,12 @@ export default function DigitalTransformation() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -117,16 +129,20 @@ export default function DigitalTransformation() {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {transformationServices.map((service, index) => {
+
             const IconComponent = service.icon;
             return (<motion.div key={service.title} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -159,10 +175,12 @@ export default function DigitalTransformation() {
       <section className="py-24 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -176,14 +194,17 @@ export default function DigitalTransformation() {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {transformationPhases.map((phase, index) => (<motion.div key={phase.phase} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -202,10 +223,12 @@ export default function DigitalTransformation() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -220,36 +243,44 @@ export default function DigitalTransformation() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
             {
+
                 title: "Operational Efficiency",
                 description: "Streamlined processes and automation reduce costs and improve productivity by up to 60%.",
                 icon: Zap
             },
             {
+
                 title: "Customer Experience",
                 description: "Enhanced digital touchpoints and personalized experiences increase customer satisfaction and loyalty.",
                 icon: Users
             },
             {
+
                 title: "Data-Driven Insights",
                 description: "Real-time analytics and business intelligence enable informed decision-making and strategic planning.",
                 icon: TrendingUp
             },
             {
+
                 title: "Competitive Advantage",
                 description: "Innovation and agility position your business ahead of competitors in the digital marketplace.",
                 icon: Rocket
             }
         ].map((benefit, index) => {
+
             const IconComponent = benefit.icon;
             return (<motion.div key={benefit.title} initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -271,10 +302,12 @@ export default function DigitalTransformation() {
       <section className="py-24 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -288,14 +321,17 @@ export default function DigitalTransformation() {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (<motion.div key={testimonial.name} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -318,10 +354,12 @@ export default function DigitalTransformation() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 

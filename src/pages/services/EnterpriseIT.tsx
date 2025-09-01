@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
-import { 
+import {
+
   Building, 
   Server, 
   Shield, 
@@ -16,26 +17,31 @@ import {
 } from 'lucide-react';
 
 export default function EnterpriseIT() {
+
   const enterpriseServices = [
     {
+
       title: "Infrastructure Design",
       description: "Scalable enterprise infrastructure architecture and planning",
       icon: Building,
       features: ["Network architecture", "Server infrastructure", "Storage solutions", "Security framework"]
     },
     {
+
       title: "Server Management",
       description: "Comprehensive server administration and optimization",
       icon: Server,
       features: ["Performance monitoring", "Capacity planning", "Backup management", "Disaster recovery"]
     },
     {
+
       title: "Storage Solutions",
       description: "Enterprise storage infrastructure and data management",
       icon: Cloud,
       features: ["SAN/NAS systems", "Cloud storage", "Data archiving", "Backup solutions"]
     },
     {
+
       title: "Security Infrastructure",
       description: "Multi-layered security and compliance solutions",
       icon: Shield,
@@ -54,31 +60,37 @@ export default function EnterpriseIT() {
 
   const industries = [
     {
+
       title: "Financial Services",
       description: "Secure, compliant IT infrastructure for banks, insurance, and fintech companies",
       icon: TrendingUp
     },
     {
+
       title: "Healthcare",
       description: "HIPAA-compliant systems for hospitals, clinics, and medical research",
       icon: Shield
     },
     {
+
       title: "Manufacturing",
       description: "Industrial IT solutions for smart factories and supply chain management",
       icon: Building
     },
     {
+
       title: "Retail",
       description: "E-commerce platforms and retail management systems",
       icon: Users
     },
     {
+
       title: "Education",
       description: "Learning management systems and campus IT infrastructure",
       icon: Globe
     },
     {
+
       title: "Government",
       description: "Secure, compliant systems for public sector organizations",
       icon: Lock

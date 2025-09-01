@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { Link as LinkIcon, Shield, Zap, BarChart3, Users, Clock, CheckCircle, ArrowRight, ExternalLink, Brain, Cpu, Database, Globe, Lock, TrendingUp, Target, Network, Server, Cloud, Activity, Key, Wallet } from 'lucide-react';
 
 const BlockchainAsAService = () => {
+
   const features = [
     {
+
       icon: LinkIcon,
       title: 'Multi-Chain Infrastructure',
       description: 'Deploy and manage blockchain networks across multiple protocols including Ethereum, Polygon, Solana, and custom chains.',
@@ -17,6 +19,7 @@ const BlockchainAsAService = () => {
       price: 'From $299/month'
     },
     {
+
       icon: Shield,
       title: 'Smart Contract Development',
       description: 'End-to-end smart contract development with testing, deployment, and monitoring tools.',
@@ -29,6 +32,7 @@ const BlockchainAsAService = () => {
       price: 'From $199/month'
     },
     {
+
       icon: Zap,
       title: 'DeFi & NFT Solutions',
       description: 'Ready-to-deploy DeFi protocols, NFT marketplaces, and tokenization platforms.',
@@ -41,6 +45,7 @@ const BlockchainAsAService = () => {
       price: 'From $399/month'
     },
     {
+
       icon: Lock,
       title: 'Enterprise Blockchain',
       description: 'Private and consortium blockchain solutions with enterprise-grade security and compliance.',
@@ -56,24 +61,28 @@ const BlockchainAsAService = () => {
 
   const blockchainProtocols = [
     {
+
       title: 'Ethereum & EVM',
       description: 'Full Ethereum compatibility with smart contract deployment and DeFi integration.',
       icon: Network,
       features: ['Smart contracts', 'DeFi protocols', 'NFT standards', 'Layer 2 scaling']
     },
     {
+
       title: 'Polygon & Sidechains',
       description: 'High-performance sidechains with low fees and fast transaction processing.',
       icon: Zap,
       features: ['Low transaction fees', 'Fast confirmations', 'EVM compatibility', 'Cross-chain bridges']
     },
     {
+
       title: 'Solana',
       description: 'High-throughput blockchain with sub-second finality and low costs.',
       icon: Activity,
       features: ['High TPS', 'Low fees', 'Fast finality', 'Rust development']
     },
     {
+
       title: 'Custom Blockchains',
       description: 'Build custom blockchain networks tailored to your specific use case.',
       icon: Server,
@@ -83,24 +92,28 @@ const BlockchainAsAService = () => {
 
   const useCases = [
     {
+
       title: 'Supply Chain Management',
       description: 'Transparent and immutable supply chain tracking with real-time visibility.',
       icon: Network,
       roi: '40% cost reduction'
     },
     {
+
       title: 'Digital Identity',
       description: 'Self-sovereign identity solutions with privacy-preserving verification.',
       icon: Key,
       roi: '60% faster verification'
     },
     {
+
       title: 'Asset Tokenization',
       description: 'Fractional ownership of real-world assets through blockchain tokens.',
       icon: Wallet,
       roi: '300% liquidity increase'
     },
     {
+
       title: 'Cross-Border Payments',
       description: 'Fast and cost-effective international payments with blockchain technology.',
       icon: Globe,
@@ -119,6 +132,7 @@ const BlockchainAsAService = () => {
 
   const pricingTiers = [
     {
+
       name: 'Starter',
       price: '$299/month',
       description: 'Perfect for developers and small projects',
@@ -131,6 +145,7 @@ const BlockchainAsAService = () => {
       ]
     },
     {
+
       name: 'Professional',
       price: '$799/month',
       description: 'Ideal for growing businesses and startups',
@@ -144,6 +159,7 @@ const BlockchainAsAService = () => {
       ]
     },
     {
+
       name: 'Enterprise',
       price: 'Custom',
       description: 'For large organizations with complex requirements',
@@ -268,6 +284,7 @@ const BlockchainAsAService = () => {
           <div className="grid gap-8 md:grid-cols-3">
             {pricingTiers.map((tier, index) => (
               <div key={index} className={`rounded-xl border p-8 backdrop-blur-md ${
+
                 tier.name === 'Professional' 
                   ? 'border-2 border-green-400 bg-gradient-to-br from-green-500/10 to-emerald-600/10 relative' 
                   : 'border-white/10 bg-white/5'
@@ -291,6 +308,7 @@ const BlockchainAsAService = () => {
                 <Link 
                   to={tier.name === 'Enterprise' ? '/contact' : '/contact'} 
                   className={`w-full rounded-lg py-3 text-center font-semibold transition-all ${
+
                     tier.name === 'Enterprise'
                       ? 'border border-green-400 text-green-300 hover:bg-green-400 hover:text-white'
                       : 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500'

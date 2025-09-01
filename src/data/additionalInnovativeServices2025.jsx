@@ -46,6 +46,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "enterprise","
         marketPrice: "$2,500 - $8,000/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -64,6 +65,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
     },
     // AI-Powered Healthcare Solutions
     {
+
 "
         id: "ai-healthcare-diagnostic-platform","
         title: "AI Healthcare Diagnostic Platform","
@@ -109,6 +111,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "enterprise","
         marketPrice: "$4,500 - $15,000/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -127,6 +130,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
     },;
     // AI-Powered Legal Services
     {
+
 "
         id: "ai-legal-research-assistant","
         title: "AI Legal Research Assistant","
@@ -172,6 +176,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "premium","
         marketPrice: "$1,800 - $5,000/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -190,6 +195,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
     },;
     // AI-Powered Education Platform
     {
+
 "
         id: "ai-personalized-learning-platform","
         title: "AI Personalized Learning Platform","
@@ -235,6 +241,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "premium","
         marketPrice: "$1,200 - $4,000/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -253,6 +260,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
     },;
     // AI-Powered Supply Chain Management
     {
+
 "
         id: "ai-supply-chain-optimization","
         title: "AI Supply Chain Optimization Platform","
@@ -298,6 +306,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "enterprise","
         marketPrice: "$3,200 - $10,000/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -316,6 +325,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
     },;
     // AI-Powered Real Estate Platform
     {
+
 "
         id: "ai-real-estate-analytics-platform","
         title: "AI Real Estate Analytics Platform","
@@ -361,6 +371,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "premium","
         marketPrice: "$1,500 - $5,000/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -379,6 +390,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
     },;
     // AI-Powered Human Resources Platform
     {
+
 "
         id: "ai-hr-talent-management-platform","
         title: "AI HR Talent Management Platform","
@@ -424,6 +436,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "premium","
         marketPrice: "$2,200 - $7,000/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -442,6 +455,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
     },;
     // AI-Powered Marketing Automation
     {
+
 "
         id: "ai-marketing-automation-suite","
         title: "AI Marketing Automation Suite","
@@ -487,6 +501,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "premium","
         marketPrice: "$2,800 - $8,000/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -505,6 +520,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
     },;
     // AI-Powered Customer Experience Platform
     {
+
 "
         id: "ai-customer-experience-platform","
         title: "AI Customer Experience Platform","
@@ -550,6 +566,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "premium","
         marketPrice: "$1,900 - $6,000/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","
@@ -568,6 +585,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
     },;
     // AI-Powered Product Development Platform
     {
+
 "
         id: "ai-product-development-platform","
         title: "AI Product Development Platform","
@@ -613,6 +631,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         supportLevel: "enterprise","
         marketPrice: "$3,500 - $12,000/month",
         contactInfo: {
+
 "
             phone: "+1 302 464 0950","
             email: "kleber@ziontechgroup.com","

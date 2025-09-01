@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 interface ModernCardProps {
+
   children: React.ReactNode;
   className?: string;
   variant?: 'default' | 'elevated' | 'glass' | 'neon';
@@ -12,13 +13,14 @@ interface ModernCardProps {
 }
 
 export const ModernCard: React.FC<ModernCardProps> = ({
+
   children,
   className,
   variant = 'default',
   hoverEffect = true,
   onClick,
-  disabled = false,
-}) => {
+  disabled = false}) => {
+
   const baseClasses = cn(
     'relative overflow-hidden rounded-2xl transition-all duration-300',
     'focus-within:ring-2 focus-within:ring-zion-cyan focus-within:ring-offset-2 focus-within:ring-offset-zion-slate',
@@ -26,6 +28,7 @@ export const ModernCard: React.FC<ModernCardProps> = ({
   );
 
   const variantClasses = {
+
     default: 'bg-zion-slate/80 backdrop-blur-sm border border-zion-slate-light/20',
     elevated: 'bg-zion-slate/90 backdrop-blur-md border border-zion-cyan/30 shadow-2xl',
     glass: 'bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl',
@@ -43,7 +46,9 @@ export const ModernCard: React.FC<ModernCardProps> = ({
       role={onClick ? 'button' : undefined}
       tabIndex={onClick && !disabled ? 0 : undefined}
       onKeyDown={(e) => {
+
         if (onClick && !disabled && (e.key === 'Enter' || e.key === ' ')) {
+
           e.preventDefault();
           onClick();
         }

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { Badge } from './ui / badge';
 import { Button } from './ui / button';
@@ -54,6 +55,7 @@ interface AccessibilityFeature {
   description: string;
   impact: 'high' | 'medium' | 'low';
 const InteractiveUserExperience: React.FC = () => {
+
   const [preferences, setPreferences] = useState<UserPreference[]>([]);
   const [userActivities, setUserActivities] = useState<UserActivity[]>([]);
   const [accessibilityFeatures, setAccessibilityFeatures] = useState<
@@ -64,6 +66,7 @@ const InteractiveUserExperience: React.FC = () => {
 
   // Initialize sample data
   useEffect ( () => {
+
     const samplePreferences: UserPreference[] = [
       {
 

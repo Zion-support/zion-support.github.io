@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 const AutonomousBusinessOperationsPlatform = () => {
+
     return (<div className="min-h-screen bg-slate-900 text-white">
       {/* Header Section */}
       <div className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-green-900/20 to-emerald-900/20">

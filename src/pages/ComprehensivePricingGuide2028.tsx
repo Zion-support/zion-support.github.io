@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 export default ComprehensivePricingGuide2028;
 export default ComprehensivePricingGuide2028;
 import {
+
 import { motion } from 'framer - motion';
 
   Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
@@ -19,8 +20,10 @@ import { motion } from 'framer - motion';
  } from 'lucide - react';
 
 const pricingData2028 = {
+
   aiServices[;
     {
+
       name: 'Quantum Consciousness AI',
       price: '$25,999',
       period: '/month',
@@ -36,6 +39,7 @@ const pricingData2028 = {
 
 },;
     {
+
       name: 'Quantum Financial Trading AI',
       price: '$35,999',
       period: '/month',
@@ -49,6 +53,7 @@ const pricingData2028 = {
       targetAudience: 'Hedge funds, Investment banks, Trading firms'
     },
     {
+
       name: 'Quantum Healthcare AI',
       price: '$28,999',
       period: '/month',
@@ -64,6 +69,7 @@ const pricingData2028 = {
   ],;
   microSAAS[;
     {
+
       name: 'AI Content Creator Pro',
       price: '$299',
       period: '/month',
@@ -77,6 +83,7 @@ const pricingData2028 = {
       targetAudience: 'Content marketers, Digital agencies, Small businesses'
     },
     {
+
       name: 'AI Image Generator Plus',
       price: '$199',
       period: '/month',
@@ -90,6 +97,7 @@ const pricingData2028 = {
       targetAudience: 'Designers, Marketing agencies, E - commerce businesses'
     },
     {
+
       name: 'AI Code Generator Pro',
       price: '$499',
       period: '/month',
@@ -105,6 +113,7 @@ const pricingData2028 = {
   ],;
   itServices[;
     {
+
       name: 'Quantum Cloud Infrastructure',
       price: '$45,999',
       period: '/month',
@@ -118,6 +127,7 @@ const pricingData2028 = {
       targetAudience: 'Enterprises, Cloud providers, Data centers'
     },
     {
+
       name: 'AI - Powered Cybersecurity Suite',
       price: '$32,999',
       period: '/month',
@@ -131,6 +141,7 @@ const pricingData2028 = {
       targetAudience: 'Enterprises, Government agencies, Financial institutions'
     },
     {
+
       name: 'Quantum DevOps Automation',
       price: '$35,999',
       period: '/month',
@@ -138,8 +149,7 @@ const pricingData2028 = {
       marketSize: '$9.8B',
       growthRate: '300%',
       roi: '600%',
-      setupTime: '4 - 5 weeks',
-    };
+      setupTime: '4 - 5 weeks'};
   ];
 };
 
@@ -178,6 +188,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   };
 
   const filteredServices = getAllServices () .filter (service => {
+
     const matchesCategory = selectedCategory === 'all' ||
       service.type.toLowerCase () .includes (selectedCategory.replace ('-', ' ') ) ;
 
@@ -303,6 +314,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
                   whileTap={{ scale: 0.95 }}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`flex items - center gap - 2 px - 4 py - 2 rounded - lg transition - all duration - 300 ${
+
                     selectedCategory === category.id
                       ? 'bg - gradient - to - r ' + category.color + ' text - white shadow - lg'
                       : 'bg - zion - slate / 50 text - zion - slate - light hover:bg - zion - slate / 70'
@@ -321,6 +333,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
                   whileTap={{ scale: 0.95 }}
                   onClick={ () => setPriceRange (range.id) }
                   className={`px - 4 py - 2 rounded - lg transition - all duration - 300 ${
+
                     priceRange === range.id
                       ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg'
                       : 'bg - zion - slate / 50 text - zion - slate - light hover:bg - zion - slate / 70'
@@ -340,16 +353,19 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
             {sortedServices.map ( (service, index) => (<motion.div
                 key={`${service.type}-${service.name}`}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 

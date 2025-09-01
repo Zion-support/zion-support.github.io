@@ -6,11 +6,13 @@ import { Badge } from "../ui/badge";
 import { Brain, Shield, Cloud, Database, Zap, Eye, Leaf, DollarSign, ArrowRight, Star, Clock, Globe } from 'lucide-react';
 // Mock data for enhanced services;
 const EnhancedServicesOverview = () => {
+
     // Get featured services (first 6)
     const featuredServices = ENHANCED_SERVICES.slice(0, 6);
     const getCategoryIcon = (category) => {
 
         switch (category) {
+
 '"
             case 'AI & Machine Learning': return <Brain className="w-6 h-6"/>;'"
             case 'Cybersecurity': return <Shield className="w-6 h-6"/>;'"

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Search, 
   Filter, 
   Star, 
@@ -58,6 +59,7 @@ import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 const ComprehensiveServicesAdvertising2025: React.FC = () => {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -88,6 +90,7 @@ const ComprehensiveServicesAdvertising2025: React.FC = () => {
   ];
 
   const filteredServices = allServices.filter(service => {
+
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -97,7 +100,9 @@ const ComprehensiveServicesAdvertising2025: React.FC = () => {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'price':
         return a.price - b.price;
       case 'name':
@@ -113,21 +118,27 @@ const ComprehensiveServicesAdvertising2025: React.FC = () => {
   });
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5,
         ease: "easeOut"
       }
@@ -135,7 +146,9 @@ const ComprehensiveServicesAdvertising2025: React.FC = () => {
   };
 
   const getInnovationColor = (level: string) => {
+
     switch (level) {
+
       case 'Practical': return 'text-green-500';
       case 'Advanced': return 'text-blue-500';
       case 'Cutting-edge': return 'text-purple-500';
@@ -144,7 +157,9 @@ const ComprehensiveServicesAdvertising2025: React.FC = () => {
   };
 
   const getInnovationIcon = (level: string) => {
+
     switch (level) {
+
       case 'Practical': return <CheckCircle className="w-4 h-4" />;
       case 'Advanced': return <TrendingUp className="w-4 h-4" />;
       case 'Cutting-edge': return <Rocket className="w-4 h-4" />;
@@ -235,6 +250,7 @@ const ComprehensiveServicesAdvertising2025: React.FC = () => {
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+
                     activeCategory === category.id
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
                       : 'bg-white/10 text-gray-300 hover:bg-white/20'
@@ -263,6 +279,7 @@ const ComprehensiveServicesAdvertising2025: React.FC = () => {
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-colors ${
+
                       viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'bg-white/10 text-gray-300 hover:bg-white/20'
                     }`}
                   >
@@ -271,6 +288,7 @@ const ComprehensiveServicesAdvertising2025: React.FC = () => {
                   <button
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-colors ${
+
                       viewMode === 'list' ? 'bg-zion-cyan text-white' : 'bg-white/10 text-gray-300 hover:bg-white/20'
                     }`}
                   >
@@ -301,6 +319,7 @@ const ComprehensiveServicesAdvertising2025: React.FC = () => {
                 key={service.id}
                 variants={itemVariants}
                 className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer ${
+
                   viewMode === 'list' ? 'flex items-center gap-6' : ''
                 }`}
                 onClick={() => setSelectedService(service)}

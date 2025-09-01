@@ -3,10 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
 import { useAnalytics } from "../hooks/useAnalytics";
 export const EnterpriseDashboard = () => {
+
     const { trackEvent } = useAnalytics({
 
 <<<<<<< HEAD
     const { trackEvent } = useAnalytics ({
+
 =======
 >>>>>>> main
         enableTracking: true,
@@ -156,13 +158,15 @@ export const EnterpriseDashboard = () => {
     ]) ;
     // Refresh data
     const refreshData = useCallback (async () => {
+
         setIsRefreshing (true) ;
         try {
+
             // Simulate API call
             await new Promise(resolve => setTimeout(resolve, 1000));
             // Update timestamps (simplified for demo)
             const now = new Date();
-            // // // // // // // // console.log('Data refreshed at:', now.toLocaleTimeString());
+            // // // // // // // // // // // console.log('Data refreshed at:', now.toLocaleTimeString());
             trackEvent('enterprise_dashboard',data_refreshed',manual', undefined, {
 
                 tab: activeTab,
@@ -171,7 +175,7 @@ export const EnterpriseDashboard = () => {
 
         catch (error) {
 
-            // // // // // // // // console.error('Failed to refresh data:', error);
+            // // // // // // // // // // // console.error('Failed to refresh data:', error);
             trackEvent('enterprise_dashboard',refresh_failed',error', undefined, {
 
                 error: error instanceof Error ? error.message : 'Unknown error'
@@ -181,7 +185,7 @@ export const EnterpriseDashboard = () => {
 
             setIsRefreshing(false);
 
-            // console.log('Data refreshed at:', now.toLocaleTimeString());
+            // // // // console.log('Data refreshed at:', now.toLocaleTimeString());
             trackEvent('enterprise_dashboard',data_refreshed',manual', null, {
 
                 tab: activeTab,
@@ -189,7 +193,7 @@ export const EnterpriseDashboard = () => {
             }) }
         catch (error) {
 
-            // console.error('Failed to refresh data:', error);
+            // // // // console.error('Failed to refresh data:', error);
             trackEvent('enterprise_dashboard',refresh_failed',error', null, {
 
                 error: error instanceof Error ? error.message : 'Unknown error'
@@ -200,6 +204,7 @@ export const EnterpriseDashboard = () => {
     }, [activeTab, dateRange, trackEvent]);
     // Auto-refresh effect
     useEffect(() => {
+
         const interval = setInterval(refreshData, refreshInterval);
         return () => clearInterval(interval)}, [refreshInterval, refreshData]);
     // Filtered data

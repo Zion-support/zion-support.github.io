@@ -4,23 +4,25 @@ import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
 export default function ComprehensiveServicesPage () {
+
 import {
+
 import {
+
 import {
+
 import {
 
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
+  CardTitle} from '@/components / ui / card';
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from '@/components / ui / select';
+  SelectValue} from '@/components / ui / select';
   Shield,
   Zap,
   Eye,
@@ -32,17 +34,17 @@ import {
   Clock,
   Users,
   Search,
-  Building,
-} from 'lucide - react';
+  Building} from 'lucide - react';
   COMPREHENSIVE_SERVICES,
   SERVICE_CATEGORIES,
-  PRICING_TIERS,
-} from '@/data / comprehensiveServices';
+  PRICING_TIERS} from '@/data / comprehensiveServices';
   const [searchTerm, setSearchTerm] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const [selectedPricingTier, setSelectedPricingTier] = useState ('all') ;
   const filteredServices = useMemo ( () => {
+
     return COMPREHENSIVE_SERVICES.filter (service => {
+
       const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -229,6 +231,7 @@ import {
               </div>
               <Button
                 onClick={ () => {
+
                   setSearchTerm ('') ;
                   setSelectedCategory ('all') ;
                   setSelectedSubcategory ('all') ;
@@ -254,29 +257,29 @@ import {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">
             {[
               {
+
                 icon: <Zap className="w - 8 h - 8" />,
                 title: 'Innovation First',
                 description:
-                  'Cutting - edge AI and technology solutions that keep you ahead of the competition',
-              },
+                  'Cutting - edge AI and technology solutions that keep you ahead of the competition'},
               {
+
                 icon: <Shield className="w - 8 h - 8" />,
                 title: 'Enterprise Security',
                 description:
-                  'Bank - level security and compliance for all our solutions and services',
-              },
+                  'Bank - level security and compliance for all our solutions and services'},
               {
+
                 icon: <Building className="w - 8 h - 8" />,
                 title: 'Proven Results',
                 description:
-                  'Track record of successful implementations and measurable business outcomes',
-              },
+                  'Track record of successful implementations and measurable business outcomes'},
               {
+
                 icon: <Users className="w - 8 h - 8" />,
                 title: 'Expert Support',
                 description:
-                  '24 / 7 technical support and dedicated account management for enterprise clients',
-              },
+                  '24 / 7 technical support and dedicated account management for enterprise clients'},
             ].map ( (feature, index) => (<div
                 key={index}
                 className="text - center p - 6 rounded - lg border border - zion - blue - light"

@@ -19,22 +19,26 @@ const globalStats = [
     value: '25+',
     label: 'Countries Served'},
   {
+
 "
     icon: <Building className="w-6 h-6" />,
     value: '6',
     label: 'Global Offices'},"
   { icon: <Users className="w-6 h-6" />, value: '170+', label: 'Global Team' },
   {
+
 "
     icon: <Award className="w-6 h-6" />,
     value: '500+',
     label: 'Projects Delivered'},
   {
+
 "
     icon: <Star className="w-6 h-6" />,
     value: '4.8/5',
     label: 'Global Rating'},
   {
+
 "
     icon: <TrendingUp className="w-6 h-6" />,
     value: '98%',
@@ -119,6 +123,7 @@ const industries = [
   { name: 'Education', projects: 65, countries: 12, satisfaction: '96%' },
 ];
 export function GlobalPresenceSection() {
+
   const [selectedOffice, setSelectedOffice] = useState(null);
   const [selectedPartnership, setSelectedPartnership] = useState(null);
   const [hoveredIndustry, setHoveredIndustry] = useState(null);

@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const Docs = () => {
+
     const docCategories = [
         {
+
             title: "Getting Started",
             description: "Quick start guides and basic setup instructions",
             articles[
@@ -12,6 +14,7 @@ const Docs = () => {
             ]
         },
         {
+
             title: "AI & Machine Learning",
             description: "Comprehensive guides for AI development and ML workflows",
             articles[
@@ -22,6 +25,7 @@ const Docs = () => {
             ]
         },
         {
+
             title: "API Reference",
             description: "Complete API documentation with examples",
             articles[
@@ -32,6 +36,7 @@ const Docs = () => {
             ]
         },
         {
+
             title: "Security & Compliance",
             description: "Security best practices and compliance guidelines",
             articles[
@@ -44,6 +49,7 @@ const Docs = () => {
     ];
     const popularDocs = [
         {
+
             title: "Building Your First AI Model",
             category: "AI & Machine Learning",
             readTime: "15 min",
@@ -51,6 +57,7 @@ const Docs = () => {
             lastUpdated: "2 days ago"
         },
         {
+
             title: "API Integration Best Practices",
             category: "API Reference",
             readTime: "12 min",
@@ -58,6 +65,7 @@ const Docs = () => {
             lastUpdated: "1 week ago"
         },
         {
+
             title: "Security Configuration Guide",
             category: "Security & Compliance",
             readTime: "18 min",
@@ -65,6 +73,7 @@ const Docs = () => {
             lastUpdated: "3 days ago"
         },
         {
+
             title: "Performance Optimization Tips",
             category: "AI & Machine Learning",
             readTime: "22 min",

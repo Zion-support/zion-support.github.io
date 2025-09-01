@@ -3,7 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data / ultimateInnovativeServices2026";
 import SEO from "@/components / SEO";
 export default React.memo (function UltimateInnovativeServices2026 (...args[]) :  {
+
 import {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
   Brain,
@@ -117,11 +119,13 @@ import { motion, AnimatePresence } from 'framer - motion';
         <div role="button" className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -218,6 +222,7 @@ import { motion, AnimatePresence } from 'framer - motion';
             {sortOptions.map (option  => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={option.id}
                 onClick={ () => setSortBy (option.id) }
                 className={`px - 4 py - 2 rounded - lg transition - all duration - 200 ${
+
                   sortBy === option.id
                     ? 'bg - zion - cyan text - white'
                     : 'bg - white / 10 text - zion - slate - 300 hover:bg - white / 20'
@@ -246,21 +251,25 @@ import { motion, AnimatePresence } from 'framer - motion';
               {sortedServices.map ( (service, index) => (<motion.div
                   key={service.id}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                   exit = {
+
   { opacity: 0,
   y: -20
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -272,6 +281,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                     <div role="button" className="flex items - start justify - between mb - 4">
                       <div role="button" className={`p - 3 rounded - xl bg - gradient - to - r ${getCategoryColor (service.category.toLowerCase () ) }`}>
                         {React.createElement (getCategoryIcon (service.category.toLowerCase () ) , {
+
                           className: "w - 6 h - 6 text - white"
                         }) }
                       </div>
@@ -296,6 +306,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                     {/* Innovation Level Badge */}
                     <div role="button" className="flex items - center gap - 2 mb - 4">
                       <div role="button" className={`px - 3 py - 1 rounded - full text - xs font - semibold ${
+
                         service.innovationLevel === 'Revolutionary'
                           ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                           : service.innovationLevel === 'Cutting - edge'
@@ -339,16 +350,19 @@ import { motion, AnimatePresence } from 'framer - motion';
                     <AnimatePresence>
                       {expandedService === service.id && (<motion.div
                           initial = {
+
   { opacity: 0,
   height: 0
 
 }}
                           animate = {
+
   { opacity: 1,
   height: 'auto'
 
 }}
                           exit = {
+
   { opacity: 0,
   height: 0
 
@@ -433,11 +447,13 @@ import { motion, AnimatePresence } from 'framer - motion';
         <div role="button" className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

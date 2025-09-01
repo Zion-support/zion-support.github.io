@@ -1,6 +1,8 @@
 import React from 'react';
 export default React.memo (function CloudSolutions (...args[]) :  {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Cloud,
@@ -21,24 +23,28 @@ import { motion } from 'framer - motion';
 
   const cloudServices = [
     {
+
       icon: Server,
       title: "Cloud Migration",
       description: "Seamlessly migrate your infrastructure to the cloud with zero downtime",
       features["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"];
     },;
     {
+
       icon: Database,
       title: "Database Management",
       description: "Optimize and manage your databases in the cloud for maximum performance",
       features["Performance Tuning", "Backup & Recovery", "Scaling & Optimization", "Security Hardening"];
     },;
     {
+
       icon: Shield,
       title: "Cloud Security",
       description: "Comprehensive security solutions to protect your cloud infrastructure",
       features["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"];
     },;
     {
+
       features["CI / CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto - scaling"];
     };
       icon: Zap,;
@@ -50,16 +56,19 @@ import { motion } from 'framer - motion';
 
   const benefits = [
     {
+
       icon: BarChart3,
       title: "Cost Optimization",
       description: "Reduce infrastructure costs by up to 40% with intelligent cloud management"
     },
     {
+
       icon: Globe,
       title: "Global Scalability",
       description: "Scale your applications globally with multi - region deployment strategies"
     },
     {
+
       icon: Lock,
       title: "Enhanced Security",
       description: "Enterprise - grade security with advanced threat protection and compliance";
@@ -81,6 +90,7 @@ import { motion } from 'framer - motion';
   ];
 
   const containerVariants = {
+
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -91,6 +101,7 @@ import { motion } from 'framer - motion';
   };
 
   const itemVariants = {
+
   hidden: { opacity: 0,
   y: 20
 
@@ -114,11 +125,13 @@ import { motion } from 'framer - motion';
         <div className="container mx - auto px - 4 text - center relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -139,16 +152,19 @@ import { motion } from 'framer - motion';
             <motion.div
               className="flex flex - col sm:flex - row gap - 6 justify - center mb - 16"
               initial = {
+
   { opacity: 0,
   y: 30
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.3
 
@@ -180,11 +196,13 @@ import { motion } from 'framer - motion';
           <motion.div
             className="text - center mb - 16"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -214,6 +232,7 @@ import { motion } from 'framer - motion';
                 className="bg - zion - blue - dark / 50 backdrop - blur - sm border border - zion - cyan / 20 rounded - xl p - 6 hover:border - zion - cyan / 40 transition - all duration - 300 group"
                 variants={itemVariants}
                 whileHover = {
+
   { y: -5,
   scale: 1.02
 
@@ -243,11 +262,13 @@ import { motion } from 'framer - motion';
           <motion.div
             className="text - center mb - 16"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -293,11 +314,13 @@ import { motion } from 'framer - motion';
           <motion.div
             className="text - center mb - 16"
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -343,11 +366,13 @@ import { motion } from 'framer - motion';
         <div className="container mx - auto px - 4 text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

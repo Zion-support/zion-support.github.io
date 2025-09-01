@@ -9,6 +9,7 @@
 
 >>>>>>> main
       newExpanded.delete (section) } else {
+
       newExpanded.add (section) }
     setExpandedSections (newExpanded) };
 
@@ -29,6 +30,7 @@
       ]
     },;
     {
+
 "
       title: "Services",
       icon: Zap,
@@ -40,6 +42,7 @@
       ]
     },;
     {
+
 "
       title: "Solutions",
       icon: Target,
@@ -51,6 +54,7 @@
       ]
     },;
     {
+
 "
       title: "Resources",
       icon: BookOpen,

@@ -79,7 +79,9 @@ import { motion, AnimatePresence } from 'framer - motion';
     const [currentIndex, setCurrentIndex] = useState (0) ;
     const [direction, setDirection] = useState (0) ;
     useEffect ( () => {
+
         const timer = setInterval ( () => {
+
             setDirection (1) ;
             setCurrentIndex ( (prev) => (prev + 1) % testimonials.length) ;
         }, 5000) ;
@@ -136,6 +138,7 @@ import { motion, AnimatePresence } from 'framer - motion';
             <motion.div key={currentIndex} custom={direction} variants={slideVariants} initial="enter" animate="center" exit="exit" transition = {
 
   {
+
 "
             x: { type: "spring", stiffness: 300,
   damping: 30

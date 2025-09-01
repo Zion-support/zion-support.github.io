@@ -19,6 +19,7 @@ import {
   Shield} from 'lucide-react';
 
 export function AppHeader() {
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -27,7 +28,9 @@ export function AppHeader() {
 
   // Handle scroll effect
   useEffect(() => {
+
     const handleScroll = () => {
+
       setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
@@ -36,11 +39,13 @@ export function AppHeader() {
 
   // Close mobile menu when route changes
   useEffect(() => {
+
     setMobileMenuOpen(false);
     setActiveDropdown(null);
   }, [location.pathname]);
 
   const toggleDarkMode = () => {
+
     setIsDarkMode(!isDarkMode);
     // In a real app, this would toggle the theme
   };
@@ -48,35 +53,41 @@ export function AppHeader() {
   const navigationItems = [
     { name: 'Home', path: '/', icon: null },
     {
+
       name: 'Services',
       path: '/services',
       icon: null,
       dropdown: [
         {
+
           name: 'AI & Machine Learning',
           path: '/services/ai',
           icon: Brain,
           color: 'from-purple-500 to-pink-500'
         },
         {
+
           name: 'Cloud & DevOps',
           path: '/services/cloud',
           icon: Cloud,
           color: 'from-blue-500 to-cyan-500'
         },
         {
+
           name: 'Cybersecurity',
           path: '/services/cybersecurity',
           icon: Lock,
           color: 'from-red-500 to-pink-500'
         },
         {
+
           name: 'All Services',
           path: '/services',
           icon: Database,
           color: 'from-green-500 to-emerald-500'
         },
         {
+
           name: 'AI Quantum Trading',
           path: '/services/AIQuantumFinancialTrading',
           icon: Zap,
@@ -85,30 +96,35 @@ export function AppHeader() {
       ]
     },
     { name: 'About', path: '/about', icon: null },
-    { 
+    {
+
       name: 'Resources', 
       path: '#', 
       icon: null,
       dropdown: [
         {
+
           name: 'Blog & Insights',
           path: '/blog',
           icon: Users,
           color: 'from-blue-500 to-purple-500'
         },
         {
+
           name: 'FAQ',
           path: '/faq',
           icon: Users,
           color: 'from-green-500 to-blue-500'
         },
         {
+
           name: 'Careers',
           path: '/careers',
           icon: Users,
           color: 'from-orange-500 to-red-500'
         },
         {
+
           name: 'Partners',
           path: '/partners',
           icon: Users,
@@ -120,7 +136,9 @@ export function AppHeader() {
   ];
 
   const isActiveRoute = path => {
+
     if (path === '/') {
+
       return location.pathname === '/';
     }
     return location.pathname.startsWith(path);
@@ -129,6 +147,7 @@ export function AppHeader() {
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+
         scrolled
           ? 'bg-black/95 backdrop-blur-xl border-b border-zion-cyan/30 shadow-2xl shadow-zion-cyan/10'
           : 'bg-black/80 backdrop-blur-md border-b border-zion-cyan/20'
@@ -173,6 +192,7 @@ export function AppHeader() {
                   <Link
                     to={item.path}
                     className={`text-white hover:text-zion-cyan transition-colors ${
+
                       isActiveRoute(item.path) ? 'text-zion-cyan' : ''
                     }`}
                   >

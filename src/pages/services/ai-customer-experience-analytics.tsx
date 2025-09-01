@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Users, 
   BarChart3, 
   TrendingUp, 
@@ -32,33 +33,40 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AICustomerExperienceAnalytics() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Sentiment Analysis',
       description: 'Advanced NLP algorithms that understand customer emotions and intent across all channels'
     },
     {
+
       icon: Eye,
       title: 'Real-time Customer Journey Tracking',
       description: 'Monitor customer interactions across touchpoints with predictive behavior modeling'
     },
     {
+
       icon: BarChart3,
       title: 'Predictive Analytics',
       description: 'Forecast customer churn, lifetime value, and satisfaction scores using machine learning'
     },
     {
+
       icon: MessageCircle,
       title: 'Omnichannel Analytics',
       description: 'Unified view of customer experience across web, mobile, social, and support channels'
     },
     {
+
       icon: Zap,
       title: 'Automated Insights',
       description: 'AI-generated recommendations for improving customer satisfaction and retention'
     },
     {
+
       icon: Target,
       title: 'Personalization Engine',
       description: 'Dynamic content and experience optimization based on real-time customer behavior'
@@ -76,21 +84,25 @@ export default function AICustomerExperienceAnalytics() {
 
   const useCases = [
     {
+
       industry: 'E-commerce',
       applications: ['Customer journey optimization', 'Personalized recommendations', 'Cart abandonment analysis', 'Customer segmentation'],
       icon: Globe
     },
     {
+
       industry: 'SaaS',
       applications: ['User onboarding optimization', 'Feature adoption tracking', 'Customer success metrics', 'Product usage analytics'],
       icon: Cpu
     },
     {
+
       industry: 'Financial Services',
       applications: ['Customer satisfaction monitoring', 'Service quality metrics', 'Compliance tracking', 'Risk assessment'],
       icon: Shield
     },
     {
+
       industry: 'Healthcare',
       applications: ['Patient experience tracking', 'Service quality metrics', 'Compliance monitoring', 'Outcome analysis'],
       icon: Heart
@@ -99,6 +111,7 @@ export default function AICustomerExperienceAnalytics() {
 
   const pricingPlans = [
     {
+
       name: 'Starter',
       description: 'Perfect for small businesses starting their CX journey',
       price: { monthly: 299, annual: 2990 },
@@ -117,6 +130,7 @@ export default function AICustomerExperienceAnalytics() {
       link: '/contact'
     },
     {
+
       name: 'Professional',
       description: 'Ideal for growing companies with advanced CX needs',
       price: { monthly: 799, annual: 7990 },
@@ -137,6 +151,7 @@ export default function AICustomerExperienceAnalytics() {
       link: '/contact'
     },
     {
+
       name: 'Enterprise',
       description: 'For large organizations with complex CX requirements',
       price: { monthly: 1999, annual: 19990 },
@@ -354,6 +369,7 @@ export default function AICustomerExperienceAnalytics() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-blue-500 bg-gradient-to-br from-blue-500/20 to-cyan-500/20' 
                     : 'border-white/10'
@@ -394,6 +410,7 @@ export default function AICustomerExperienceAnalytics() {
                 <Link
                   to={plan.link}
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
                       : 'border border-white/20 text-white hover:bg-white/10'

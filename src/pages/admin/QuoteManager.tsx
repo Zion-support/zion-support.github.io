@@ -17,12 +17,14 @@ import { QuoteStatusCards,
               } from '@/components/admin/quotes';
 
 export default function QuoteManager(...args[]: any):  {
+
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
 
   const [selectedQuote, setSelectedQuote] = useState<any>(null);
   const [showDetails, setShowDetails] = useState(false);
   const {
+
     quotes,
     isLoading,
     error,
@@ -40,6 +42,7 @@ export default function QuoteManager(...args[]: any):  {
   } = useAdminQuotes();
   // Count quotes by status
   const statusCounts = {
+
   <<<<<<< HEAD
     new: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)               => q.status === 'new').length,
     in_review: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)               => q.status === 'in_review').length,
@@ -51,6 +54,7 @@ export default function QuoteManager(...args[]: any):  {
 };
 
   const handleViewDetails = (quote: anyanyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)               => {
+
 =======
   new: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'new').length,
     in_review: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'in_review').length,;
@@ -72,6 +76,7 @@ export default function QuoteManager(...args[]: any):  {
     setDateRange({ from: null, to: null });
   };
   if (!isAdmin) {
+
     return <Navigate to = "/unauthorized" replace />}
   return (
     <ProtectedRoute adminOnly>
@@ -139,6 +144,7 @@ export default function QuoteManager(...args[]: any):  {
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {
+
             setShowDetails(false);
             setSelectedQuote(null)}}
         />

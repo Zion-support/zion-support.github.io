@@ -12,24 +12,30 @@ export default function ExpandedServicesPage () {
     const [filteredServices, setFilteredServices] = useState (EXPANDED_SERVICES) ;
     const [sortBy, setSortBy] = useState ('rating') ;
     useEffect ( () => {
+
         let filtered = EXPANDED_SERVICES;
         // Filter by search query
         if (searchQuery) {
+
             filtered = filtered.filter (service => service.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
                 service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
                 service.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ) }
         // Filter by category
         if (selectedCategory !== 'all') {
+
             filtered = filtered.filter (service => service.category === selectedCategory) }
         // Sort services
         filtered.sort ( (a, b) => {
+
             if (sortBy === 'rating') return b.rating - a.rating;
             if (sortBy === 'price') return a.price - b.price;
             if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
             return 0}) ;
         setFilteredServices (filtered) }, [searchQuery, selectedCategory, sortBy]) ;
     const getCategoryIcon = (category) => {
+
         switch (category) {
+
             case 'AI Services': return '🤖';
             case 'Micro SAAS': return '☁️';
             case 'IT Services': return '💻';
@@ -37,7 +43,9 @@ export default function ExpandedServicesPage () {
             default: return '⚡'}
     };
     const getPricingModelColor = (model) => {
+
         switch (model) {
+
             case 'subscription': return 'bg - blue - 100 text - blue - 800';
             case 'project - based': return 'bg - purple - 100 text - purple - 800';
             case 'one - time': return 'bg - green - 100 text - green - 800';

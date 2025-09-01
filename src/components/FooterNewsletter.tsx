@@ -2,15 +2,18 @@
 <<<<<<< HEAD
       // // // // // // // console.error ('Newsletter subscription failed:', error) ;
     } finally {
+
       setIsSubmitting (false) ;
 =======
-      // // // // // // // // console.error('Newsletter subscription failed:', error)} finally {
+      // // // // // // // // // // // console.error('Newsletter subscription failed:', error)} finally {
+
       setIsSubmitting(false);
 
       setTimeout(() => setIsSubmitted(false), 3000)} catch (error) {
+
 >>>>>>> main
 
-      // console.error('Newsletter subscription failed:', error)} finally {
+      // // // // console.error('Newsletter subscription failed:', error)} finally {
 
       setIsSubmitting(false)}
   };

@@ -45,6 +45,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,"
                 ease: "easeInOut"}} style={{
+
 `
                 left: `${20 + Math.random() * 60}%`,`
                 top: `${20 + Math.random() * 60}%`}}/>))}
@@ -166,6 +167,7 @@ export const FuturisticServicesShowcase = () => {
         return matchesCategory && matchesSearch});
     // Set all services as visible initially for better UX
     useEffect(() => {
+
         const allIndices = new Set(filteredServices.map((_, index) => index));
         setVisibleServices(allIndices)}, [filteredServices]);"
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
@@ -173,6 +175,7 @@ export const FuturisticServicesShowcase = () => {
       <div className="absolute inset-0 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>"
         {[...Array(20)].map((_, i) => (<div key={i} className="absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float" style={{
+
 `
                 left: `${Math.random() * 100}%`,`
                 top: `${Math.random() * 100}%`,`

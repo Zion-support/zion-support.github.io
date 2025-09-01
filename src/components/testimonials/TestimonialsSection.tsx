@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 
 interface Testimonial {
+
   id: string;
   name: string;
   title: string;
@@ -17,6 +18,7 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
+
     id: '1',
     name: 'Sarah Johnson',
     title: 'CTO',
@@ -27,6 +29,7 @@ const testimonials: Testimonial[] = [
     image: '/images/testimonials/sarah-johnson.jpg'
   },
   {
+
     id: '2',
     name: 'Michael Chen',
     title: 'VP of Engineering',
@@ -37,6 +40,7 @@ const testimonials: Testimonial[] = [
     image: '/images/testimonials/michael-chen.jpg'
   },
   {
+
     id: '3',
     name: 'Emily Rodriguez',
     title: 'Head of Security',
@@ -47,6 +51,7 @@ const testimonials: Testimonial[] = [
     image: '/images/testimonials/emily-rodriguez.jpg'
   },
   {
+
     id: '4',
     name: 'David Kim',
     title: 'Operations Director',
@@ -57,6 +62,7 @@ const testimonials: Testimonial[] = [
     image: '/images/testimonials/david-kim.jpg'
   },
   {
+
     id: '5',
     name: 'Lisa Thompson',
     title: 'Chief Innovation Officer',
@@ -69,14 +75,17 @@ const testimonials: Testimonial[] = [
 ];
 
 export function TestimonialsSection() {
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [direction, setDirection] = useState(0);
 
   useEffect(() => {
+
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
+
       setDirection(1);
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 5000);
@@ -85,21 +94,25 @@ export function TestimonialsSection() {
   }, [isAutoPlaying]);
 
   const goToNext = () => {
+
     setDirection(1);
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
 
   const goToPrevious = () => {
+
     setDirection(-1);
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
   const goToSlide = (index: number) => {
+
     setDirection(index > currentIndex ? 1 : -1);
     setCurrentIndex(index);
   };
 
   const toggleAutoPlay = () => {
+
     setIsAutoPlaying(!isAutoPlaying);
   };
 
@@ -229,6 +242,7 @@ export function TestimonialsSection() {
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${
+
                   index === currentIndex
                     ? 'bg-zion-cyan w-8'
                     : 'bg-white/30 hover:bg-white/50'

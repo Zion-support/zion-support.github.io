@@ -24,6 +24,7 @@ import { Brain,
              } from 'lucide-react.ts';
 
 const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
+
   const features = [
     'AI-powered customer journey mapping and analysis',
     'Real-time sentiment analysis and emotion detection',
@@ -57,6 +58,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
 
   const pricingPlans = [
     {
+
       name: 'Starter',
       price: '$99',
       period: '/month',
@@ -253,6 +255,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                 <motion.div
                   key={plan.name}
                   className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
+
                     plan.popular 
                       ? 'border-emerald-500 bg-gradient-to-br from-emerald-500/20 to-teal-500/20' 
                       : 'border-emerald-500/20 bg-gradient-to-br from-slate-800/50 to-slate-900/50'
@@ -291,6 +294,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   
                   <motion.button 
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700'
                         : 'border border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/10'

@@ -9,18 +9,21 @@ const benefits = [
         description: "Be the first to know about new features and services"
     },
     {
+
 "
         icon: <Zap className="w-6 h-6"/>,"
         title: "Exclusive Offers","
         description: "Special discounts and promotions for subscribers only"
     },
     {
+
 "
         icon: <Shield className="w-6 h-6"/>,"
         title: "Tech Insights","
         description: "Latest industry trends and technology updates"
     },
     {
+
 "
         icon: <Users className="w-6 h-6"/>,"
         title: "Community","
@@ -43,10 +46,11 @@ export function NewsletterSection() {
 
         e.preventDefault();
         // Here you would typically send the email to your newsletter service'
-        // console.log('Newsletter subscription:', email);
+        // // // // console.log('Newsletter subscription:', email);
         setIsSubscribed(true);
         setEmail('')};
     const handleUnsubscribe = () => {
+
         setIsSubscribed(false);
         setEmail('')};"
     return (<section className="py-20 bg-gradient-to-br from-zion-purple via-zion-purple-dark to-zion-slate-dark relative overflow-hidden">

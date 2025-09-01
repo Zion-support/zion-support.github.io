@@ -1,6 +1,7 @@
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
     // AI-Powered Edge Computing Platform
     {
+
         id: "edge-computing-ai-platform",
         name: "EdgeAI Computing Platform",
         category: "Edge Computing",
@@ -43,6 +44,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com",
@@ -58,6 +60,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
     },
     // AI-Powered Zero Trust Security Platform
     {
+
         id: "zero-trust-security-ai",
         name: "ZeroTrust AI Security Platform",
         category: "Cybersecurity",
@@ -100,6 +103,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         estimatedDelivery: "4-5 weeks",
         supportLevel: "enterprise",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com",
@@ -115,6 +119,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
     },
     // AI-Powered Hybrid Cloud Management Platform
     {
+
         id: "hybrid-cloud-management-ai",
         name: "HybridCloud AI Management",
         category: "Cloud Management",
@@ -157,6 +162,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com",
@@ -172,6 +178,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
     },
     // AI-Powered Data Center Automation Platform
     {
+
         id: "data-center-automation-ai",
         name: "DataCenter AI Automation",
         category: "Data Center",
@@ -214,6 +221,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com",
@@ -229,6 +237,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
     },
     // AI-Powered Network Performance Optimization Platform
     {
+
         id: "network-performance-optimization-ai",
         name: "NetworkAI Performance",
         category: "Network Management",
@@ -271,6 +280,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com",

@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 
 export function AnimatedBackground({ className = '', variant = 'grid' }) {
+
   const canvasRef = useRef(null);
 
   useEffect(() => {
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -14,27 +16,31 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
     let particles = [];
 
     const resizeCanvas = () => {
+
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
 
     const initParticles = () => {
+
       particles = [];
       const particleCount = variant === 'particles' ? 100 : 50;
       
       for (let i = 0; i < particleCount; i++) {
+
         particles.push({
+
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 0.5,
           vy: (Math.random() - 0.5) * 0.5,
           size: Math.random() * 2 + 1,
-          opacity: Math.random() * 0.5 + 0.1,
-        });
+          opacity: Math.random() * 0.5 + 0.1});
       }
     };
 
     const drawGrid = () => {
+
       const gridSize = 40;
       const offset = (Date.now() * 0.001) % gridSize;
       
@@ -43,6 +49,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
 
       // Draw vertical lines
       for (let x = offset; x < canvas.width; x += gridSize) {
+
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
@@ -51,6 +58,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
 
       // Draw horizontal lines
       for (let y = offset; y < canvas.height; y += gridSize) {
+
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
@@ -59,7 +67,9 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
     };
 
     const drawParticles = () => {
+
       particles.forEach((particle, index) => {
+
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -78,6 +88,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
 
         // Draw connections
         particles.forEach((otherParticle, otherIndex) => {
+
           if (index === otherIndex) return;
           
           const distance = Math.sqrt(
@@ -86,6 +97,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
           );
 
           if (distance < 100) {
+
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
@@ -98,6 +110,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
     };
 
     const drawWaves = () => {
+
       const time = Date.now() * 0.001;
       const amplitude = 50;
       const frequency = 0.01;
@@ -107,8 +120,10 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
       
       // Draw multiple wave layers
       for (let layer = 0; layer < 3; layer++) {
+
         ctx.beginPath();
         for (let x = 0; x < canvas.width; x++) {
+
           const y = canvas.height / 2 + 
             amplitude * Math.sin(x * frequency + time + layer) +
             layer * 20;
@@ -119,6 +134,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
     };
 
     const drawMatrix = () => {
+
       const time = Date.now() * 0.001;
       const fontSize = 14;
       const columns = Math.floor(canvas.width / fontSize);
@@ -127,6 +143,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
       ctx.font = `${fontSize}px monospace`;
       
       for (let i = 0; i < columns; i++) {
+
         const x = i * fontSize;
         const y = (Math.sin(time + i) * 0.5 + 0.5) * canvas.height;
         const char = String.fromCharCode(0x30A0 + Math.random() * 96);
@@ -135,9 +152,11 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
     };
 
     const animate = () => {
+
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       switch (variant) {
+
         case 'grid':
           drawGrid();
           break;
@@ -165,8 +184,10 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
 
     // Cleanup
     return () => {
+
       window.removeEventListener('resize', resizeCanvas);
       if (animationFrameId) {
+
         cancelAnimationFrame(animationFrameId);
       }
     };
@@ -182,7 +203,9 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
 }
 // Neon glow effect component
 export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }) {
+
     return (<div className={`relative ${className}`} style={{
+
             textShadow: `0 0 10px ${glowColor}, 0 0 20px ${glowColor}, 0 0 30px ${glowColor}`,
             filter: `drop-shadow(0 0 10px ${glowColor})`
         }}>
@@ -191,22 +214,24 @@ export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }) {
 }
 // Floating particles component
 export function FloatingParticles({ count = 20, className = '' }) {
+
     return (<div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
       {Array.from({ length: count }).map((_, i) => (<div key={i} className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse" style={{
+
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 2}s`,
-                animationDuration: `${2 + Math.random() * 2}s`,
-            }}/>))}
+                animationDuration: `${2 + Math.random() * 2}s`}}/>))}
     </div>);
 }
 // Gradient border component
 export function GradientBorder({ children, className = '', borderWidth = '2px' }) {
+
     return (<div className={`relative ${className}`} style={{
+
             background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
             padding: borderWidth,
-            borderRadius: 'inherit',
-        }}>
+            borderRadius: 'inherit'}}>
       <div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">
         {children}
       </div>

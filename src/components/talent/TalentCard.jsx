@@ -38,6 +38,7 @@ const TalentCardComponent = ({
   };
 
   const handleViewProfile = () => {
+
 `
     navigate(`/talent/${talent.id}`);
   };

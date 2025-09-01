@@ -1,9 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { 
-  Users, Target, Zap, Globe, Shield, 
-  Award, TrendingUp, Lightbulb, Rocket, Star
+import {
+  Users,
+  Target,
+  Zap,
+  Globe,
+  Shield,
+  Award,
+  TrendingUp,
+  Lightbulb,
+  Rocket,
+  Star,
 } from 'lucide-react';
 
 export default function AboutUsPage() {
@@ -13,66 +21,80 @@ export default function AboutUsPage() {
     { label: 'Team Members', value: '100+', icon: Users },
     { label: 'Client Satisfaction', value: '99%', icon: Star },
     { label: 'Innovation Patents', value: '25+', icon: Lightbulb },
-    { label: 'Global Reach', value: '50+', icon: Globe }
+    { label: 'Global Reach', value: '50+', icon: Globe },
   ];
 
   const values = [
     {
       title: 'Innovation First',
-      description: 'We push the boundaries of what\'s possible, constantly exploring new technologies and approaches.',
+      description:
+        "We push the boundaries of what's possible, constantly exploring new technologies and approaches.",
       icon: Lightbulb,
-      color: 'from-yellow-400 to-orange-500'
+      color: 'from-yellow-400 to-orange-500',
     },
     {
       title: 'Client Success',
-      description: 'Your success is our success. We work as an extension of your team, ensuring every solution drives real business value.',
+      description:
+        'Your success is our success. We work as an extension of your team, ensuring every solution drives real business value.',
       icon: Target,
-      color: 'from-green-400 to-blue-500'
+      color: 'from-green-400 to-blue-500',
     },
     {
       title: 'Excellence',
-      description: 'We maintain the highest standards in everything we do, from code quality to client communication.',
+      description:
+        'We maintain the highest standards in everything we do, from code quality to client communication.',
       icon: Award,
-      color: 'from-purple-400 to-pink-500'
+      color: 'from-purple-400 to-pink-500',
     },
     {
       title: 'Collaboration',
-      description: 'We believe in the power of teamwork and partnerships, both for our team and our clients.',
+      description:
+        'We believe in the power of teamwork and partnerships, both for our team and our clients.',
       icon: Users,
-      color: 'from-cyan-400 to-blue-500'
-    }
+      color: 'from-cyan-400 to-blue-500',
+    },
   ];
 
   const timeline = [
     {
       year: '2010',
       title: 'Foundation',
-      description: 'Zion Tech Group was founded with a vision to revolutionize technology solutions.'
+      description:
+        'Zion Tech Group was founded with a vision to revolutionize technology solutions.',
     },
     {
       year: '2015',
       title: 'AI Breakthrough',
-      description: 'Launched our first AI-powered automation platform, marking a new era in intelligent solutions.'
+      description:
+        'Launched our first AI-powered automation platform, marking a new era in intelligent solutions.',
     },
     {
       year: '2020',
       title: 'Global Expansion',
-      description: 'Expanded operations to serve clients across 50+ countries with cutting-edge technology.'
+      description:
+        'Expanded operations to serve clients across 50+ countries with cutting-edge technology.',
     },
     {
       year: '2025',
       title: 'Quantum Innovation',
-      description: 'Pioneering quantum computing solutions and autonomous business operations.'
-    }
+      description:
+        'Pioneering quantum computing solutions and autonomous business operations.',
+    },
   ];
 
   return (
     <>
       <Head>
         <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions." />
+        <meta
+          name="description"
+          content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions."
+        />
         <meta property="og:title" content="About Us - Zion Tech Group" />
-        <meta property="og:description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions." />
+        <meta
+          property="og:description"
+          content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions."
+        />
         <link rel="canonical" href="https://ziontechgroup.com/about-us" />
       </Head>
 
@@ -81,7 +103,7 @@ export default function AboutUsPage() {
         <section className="relative overflow-hidden py-20">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
           <div className="relative z-10 container mx-auto px-6 text-center">
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -89,25 +111,32 @@ export default function AboutUsPage() {
             >
               About Zion Tech Group
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-white/80 max-w-4xl mx-auto mb-8"
             >
-              We are a revolutionary technology company dedicated to transforming businesses through 
-              cutting-edge AI, quantum computing, and intelligent automation solutions.
+              We are a revolutionary technology company dedicated to
+              transforming businesses through cutting-edge AI, quantum
+              computing, and intelligent automation solutions.
             </motion.p>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-wrap justify-center gap-4"
             >
-              <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
+              <a
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
+              >
                 Get Started
               </a>
-              <a href="/case-studies" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 hover:border-cyan-400/50">
+              <a
+                href="/case-studies"
+                className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 hover:border-cyan-400/50"
+              >
                 View Case Studies
               </a>
             </motion.div>
@@ -117,7 +146,7 @@ export default function AboutUsPage() {
         {/* Stats Section */}
         <section className="py-20">
           <div className="container mx-auto px-6">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -136,7 +165,9 @@ export default function AboutUsPage() {
                   <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center">
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-3xl font-bold text-white mb-2">
+                    {stat.value}
+                  </div>
                   <div className="text-sm text-white/70">{stat.label}</div>
                 </motion.div>
               ))}
@@ -148,7 +179,7 @@ export default function AboutUsPage() {
         <section className="py-20">
           <div className="container mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
@@ -158,17 +189,20 @@ export default function AboutUsPage() {
                   Our Mission
                 </h2>
                 <p className="text-lg text-white/80 mb-6">
-                  To democratize access to cutting-edge technology solutions, enabling businesses of all sizes 
-                  to leverage the power of AI, quantum computing, and intelligent automation to achieve 
+                  To democratize access to cutting-edge technology solutions,
+                  enabling businesses of all sizes to leverage the power of AI,
+                  quantum computing, and intelligent automation to achieve
                   unprecedented growth and efficiency.
                 </p>
                 <div className="flex items-center space-x-3 text-cyan-400">
                   <Zap className="w-6 h-6" />
-                  <span className="font-semibold">Revolutionizing Business Technology</span>
+                  <span className="font-semibold">
+                    Revolutionizing Business Technology
+                  </span>
                 </div>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
@@ -178,12 +212,15 @@ export default function AboutUsPage() {
                   Our Vision
                 </h2>
                 <p className="text-lg text-white/80 mb-6">
-                  To be the global leader in autonomous business solutions, creating a future where 
-                  technology works seamlessly with human creativity to solve the world's most complex challenges.
+                  To be the global leader in autonomous business solutions,
+                  creating a future where technology works seamlessly with human
+                  creativity to solve the world's most complex challenges.
                 </p>
                 <div className="flex items-center space-x-3 text-purple-400">
                   <Globe className="w-6 h-6" />
-                  <span className="font-semibold">Shaping the Future of Technology</span>
+                  <span className="font-semibold">
+                    Shaping the Future of Technology
+                  </span>
                 </div>
               </motion.div>
             </div>
@@ -193,7 +230,7 @@ export default function AboutUsPage() {
         {/* Values Section */}
         <section className="py-20">
           <div className="container mx-auto px-6">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -204,10 +241,11 @@ export default function AboutUsPage() {
                 Our Core Values
               </h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                These principles guide everything we do and shape how we serve our clients.
+                These principles guide everything we do and shape how we serve
+                our clients.
               </p>
             </motion.div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <motion.div
@@ -218,10 +256,14 @@ export default function AboutUsPage() {
                   viewport={{ once: true }}
                   className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
                 >
-                  <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${value.color} rounded-xl flex items-center justify-center`}>
+                  <div
+                    className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${value.color} rounded-xl flex items-center justify-center`}
+                  >
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">{value.title}</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-white">
+                    {value.title}
+                  </h3>
                   <p className="text-white/70">{value.description}</p>
                 </motion.div>
               ))}
@@ -232,7 +274,7 @@ export default function AboutUsPage() {
         {/* Timeline Section */}
         <section className="py-20">
           <div className="container mx-auto px-6">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -246,7 +288,7 @@ export default function AboutUsPage() {
                 From humble beginnings to global technology leader.
               </p>
             </motion.div>
-            
+
             <div className="relative">
               <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-cyan-400 to-purple-500" />
               <div className="space-y-12">
@@ -260,9 +302,15 @@ export default function AboutUsPage() {
                     className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                   >
                     <div className="w-1/2 px-8">
-                      <div className={`text-right ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                        <div className="text-2xl font-bold text-cyan-400 mb-2">{item.year}</div>
-                        <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                      <div
+                        className={`text-right ${index % 2 === 0 ? 'text-right' : 'text-left'}`}
+                      >
+                        <div className="text-2xl font-bold text-cyan-400 mb-2">
+                          {item.year}
+                        </div>
+                        <h3 className="text-xl font-semibold text-white mb-2">
+                          {item.title}
+                        </h3>
                         <p className="text-white/70">{item.description}</p>
                       </div>
                     </div>
@@ -278,7 +326,7 @@ export default function AboutUsPage() {
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-6 text-center">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -288,13 +336,20 @@ export default function AboutUsPage() {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-                Join hundreds of companies already leveraging our cutting-edge technology solutions.
+                Join hundreds of companies already leveraging our cutting-edge
+                technology solutions.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
+                >
                   Get Started Today
                 </a>
-                <a href="/services" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 hover:border-cyan-400/50">
+                <a
+                  href="/services"
+                  className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 hover:border-cyan-400/50"
+                >
                   Explore Our Services
                 </a>
               </div>

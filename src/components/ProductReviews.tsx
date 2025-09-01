@@ -3,6 +3,7 @@ import React, { useEffect, useState, FormEvent, useCallback } from 'react'; // A
 // For the purpose of this subtask, let's define a local Review type if the import path is uncertain or to ensure self-containment
 // In a real scenario, this would be imported from the shared types.
 export interface Review {
+
   id: string;
   rating: number;
   comment?: string | null; // Ensure this matches your actual type (e.g. review_text)
@@ -23,10 +24,12 @@ export interface Review {
 // For now, let's mock a basic useAuth hook if not available to allow component structure
 // In a real scenario, this would come from your actual auth context/hooks
 const useAuth = () => {
+
   // Replace with actual auth logic
   // For now, simulate a logged-in user for development of this component's structure
   const [user, setUser] = useState<{ id: string; name: string, isLoggedIn: boolean } | null>({ isLoggedIn: true, id: 'mockUserId', name: 'Mock User' });
   // useEffect(() => {
+
   //  // logic to check actual auth status and set user
   // }, []);
   return { user, isAuthenticated: user?.isLoggedIn ?? false };
@@ -39,6 +42,7 @@ const useAuth = () => {
 // import { RatingStars } from '@/components/RatingStars'; // Or its correct path
 
 interface RatingStarsProps {
+
   value: number;
   count?: number; // Optional review count
   size?: 'sm' | 'md' | 'lg';
@@ -74,10 +78,12 @@ const StarRatingInput: React.FC<Pick<RatingStarsProps, 'value' | 'onRate'>> = ({
 
 
 interface ProductReviewsProps {
+
   productId: string;
 }
 
 const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
+
   const { user, isAuthenticated } = useAuth();
   const [reviews, setReviews] = useState<Review[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -93,29 +99,37 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
     setIsLoading(true);
     setError(null);
     try {
+
       const response = await fetch(`/api/reviews/${productId}`);
       if (!response.ok) {
+
         const errorData = await response.json();
         throw new Error(errorData.error || `Failed to fetch reviews: ${response.statusText}`);
       }
       const data: Review[] = await response.json();
       setReviews(data);
     } catch (err: any) {
+
       setError(err.message);
     } finally {
+
       setIsLoading(false);
     }
   }, [productId]); // productId is a dependency of fetchReviews
 
   useEffect(() => {
+
     if (productId) {
+
       fetchReviews();
     }
   }, [productId, fetchReviews]); // Added fetchReviews to dependency array
 
   const handleSubmitReview = async (e: FormEvent) => {
+
     e.preventDefault();
     if (newRating === 0) {
+
       setSubmitError('Please select a rating.');
       return;
     }
@@ -124,13 +138,15 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
     setSubmitSuccess(null);
 
     try {
+
       const response = await fetch('/api/reviews', {
+
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ productId, rating: newRating, comment: newComment }),
-      });
+        body: JSON.stringify({ productId, rating: newRating, comment: newComment })});
 
       if (!response.ok) {
+
         const errorData = await response.json();
         throw new Error(errorData.error || `Failed to submit review: ${response.statusText}`);
       }
@@ -140,8 +156,10 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
       setNewComment('');
       fetchReviews(); // Refresh reviews list
     } catch (err: any) {
+
       setSubmitError(err.message);
     } finally {
+
       setIsSubmitting(false);
     }
   };

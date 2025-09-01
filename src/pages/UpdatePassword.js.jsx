@@ -7,23 +7,24 @@ import { LockKeyhole } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import { toast } from "@/hooks/use-toast";
 import { cleanupAuthState } from "@/utils/authUtils";
 // Form validation schema
-const updatePasswordSchema = z
+const updatePasswordSchema = z;
     .object({
+
     password: z
         .string()
         .min(8, "Password must be at least 8 characters")
         .max(64, "Password must be less than 64 characters"),
-    confirmPassword: z.string(),
-})
+    confirmPassword: z.string()})
     .refine((data) => data.password === data.confirmPassword, {
+
     message: "Passwords do not match",
-    path["confirmPassword"],
-});
+    path["confirmPassword"]});
 export default function UpdatePassword() {
+
     const [isLoading, setIsLoading] = useState(false);
     const [accessToken, setAccessToken] = useState(null);
     const [error, setError] = useState(null);
@@ -32,70 +33,82 @@ export default function UpdatePassword() {
     const location = useLocation();
     // Initialize react-hook-form
     const form = useForm({
+
         resolver: zodResolver(updatePasswordSchema),
         defaultValues: {
+
             password: "",
-            confirmPassword: "",
-        },
-    });
+            confirmPassword: ""}});
     useEffect(() => {
+
         // Extract access token from URL hash
         const hashParams = new URLSearchParams(location.hash.substring(1));
         const token = hashParams.get("access_token");
         if (token) {
+
             setAccessToken(token)}
         else {
+
             setError("No access token found. Please request a new password reset link.")}
         // Clean up auth state to prevent issues
         cleanupAuthState()}, [location]);
     // Form submission handler
     const onSubmit = async (data) => {
+
         if (!accessToken) {
+
             setError("No access token found. Please request a new password reset link.");
             return}
         setIsLoading(true);
         try {
+
             // Set the session with the access token
             await supabase.auth.setSession({
+
                 access_token: accessToken,
-                refresh_token: '',
-            });
+                refresh_token: ''});
             // Update the password
             const { error } = await supabase.auth.updateUser({
-                password: data.password,
-            });
+
+                password: data.password});
             if (error) {
+
                 toast({
+
                     title: "Password update failed",
                     description: error.message,
-                    variant: "destructive",
-                });
+                    variant: "destructive"});
                 setError(error.message);
                 return}
             // Show success message and clean up auth state
             setSuccess(true);
             toast({
+
                 title: "Password updated successfully",
-                description: "You can now log in with your new password.",
-            });
+                description: "You can now log in with your new password."});
             // Clean auth state and redirect after a delay
             cleanupAuthState();
             setTimeout(() => {
+
                 router("/login")}, 3000)}
         catch (error) {
-            console.error("Password update error:", error);
+
+            // console.error("Password update error:", error);
             toast({
+
                 title: "Password update failed",
                 description: error.message || "An unexpected error occurred",
-                variant: "destructive",
-            });
+                variant: "destructive"});
             setError(error.message || "An unexpected error occurred")}
         finally {
+
             setIsLoading(false)}
     };
     const onInvalid = (errors) => {
+
         const firstError = Object.keys(errors)[0];
         if (firstError) {
+
             form.setFocus(firstError)}
     };
     return (<>
@@ -133,6 +146,7 @@ export default function UpdatePassword() {
                   </p>
                 </div>) : (<Form {...form}>
                   <form onSubmit = {
+
   form.handleSubmit(onSubmit,
   onInvalid)
 

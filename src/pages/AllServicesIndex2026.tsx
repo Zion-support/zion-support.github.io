@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Search, 
   Filter, 
   Star, 
@@ -28,6 +29,7 @@ import { ADVANCED_MICRO_SAAS_SERVICES_2026 } from '../data/advancedMicroSaasServ
 import { REVOLUTIONARY_SERVICES_2031 } from '../data/revolutionaryServices2031';
 
 const AllServicesIndex2026: React.FC = () => {
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -47,6 +49,7 @@ const AllServicesIndex2026: React.FC = () => {
   const innovationLevels = ['all', ...new Set(allServices.map(service => service.innovationLevel))];
 
   const getPriceRange = (price: number) => {
+
     if (price < 2000) return 'Under $2,000';
     if (price < 5000) return '$2,000 - $5,000';
     if (price < 10000) return '$5,000 - $10,000';
@@ -55,6 +58,7 @@ const AllServicesIndex2026: React.FC = () => {
   };
 
   const filteredServices = allServices.filter(service => {
+
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -69,7 +73,9 @@ const AllServicesIndex2026: React.FC = () => {
   });
 
   const getCategoryIcon = (category: string) => {
+
     switch (category) {
+
       case 'Cybersecurity': return <Shield className="w-5 h-5" />;
       case 'Fintech': return <TrendingUp className="w-5 h-5" />;
       case 'Healthcare': return <Heart className="w-5 h-5" />;
@@ -90,7 +96,9 @@ const AllServicesIndex2026: React.FC = () => {
   };
 
   const getInnovationLevelColor = (level: string) => {
+
     switch (level) {
+
       case 'Revolutionary': return 'text-purple-600 bg-purple-100';
       case 'Cutting-edge': return 'text-blue-600 bg-blue-100';
       case 'Advanced': return 'text-green-600 bg-green-100';
@@ -99,8 +107,10 @@ const AllServicesIndex2026: React.FC = () => {
   };
 
   const getCategoryStats = () => {
+
     const stats: { [key: string]: number } = {};
     allServices.forEach(service => {
+
       stats[service.category] = (stats[service.category] || 0) + 1;
     });
     return stats;
@@ -342,6 +352,7 @@ const AllServicesIndex2026: React.FC = () => {
             <p className="text-gray-500 mb-4">Try adjusting your search criteria or filters</p>
             <button
               onClick={() => {
+
                 setSearchTerm('');
                 setSelectedCategory('all');
                 setSelectedPriceRange('all');

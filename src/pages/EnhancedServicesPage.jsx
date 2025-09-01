@@ -5,28 +5,29 @@ import { Input } from '@/components / ui / input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
 import SEO from '@/components / SEO';
 export default function EnhancedServicesPage () {
+
 import {
+
 import {
+
 import {
+
 import {
 
   ENHANCED_SERVICES,
   ENHANCED_SERVICE_CATEGORIES,
   SERVICE_PRICING_TIERS,
-  CONTACT_INFO,
-} from '@/data / enhancedServices';
+  CONTACT_INFO} from '@/data / enhancedServices';
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
+  CardTitle} from '@/components / ui / card';
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from '@/components / ui / select';
+  SelectValue} from '@/components / ui / select';
   Search,
   Star,
   Globe,
@@ -45,19 +46,21 @@ import {
   DollarSign,
   Link,
   Users,
-  CheckCircle,
-} from 'lucide - react';
+  CheckCircle} from 'lucide - react';
   const [searchTerm, setSearchTerm] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const [selectedPriceRange, setSelectedPriceRange] = useState ('all') ;
   const filteredServices = ENHANCED_SERVICES.filter (service => {
+
     const matchesPrice = selectedPriceRange === 'all' || (selectedPriceRange === 'basic' && service.price <= 2000) || (selectedPriceRange === 'professional' &&
         service.price > 2000 &&
         service.price <= 8000) || (selectedPriceRange === 'enterprise' && service.price > 8000) ;
     return matchesSearch && matchesCategory && matchesPrice;
   }) ;
   const getCategoryIcon = category => {
+
     switch (category.toLowerCase () ) {
+
       case 'ai automation':
       case 'ai & machine learning':
         return < Brain className="w - 5 h - 5" />;
@@ -90,6 +93,7 @@ import {
     }
   };
   const getPriceRange = price => {
+
     if (price <= 2000) return 'basic';
     if (price <= 8000) return 'professional';
     return 'enterprise';
@@ -229,6 +233,7 @@ import {
                       {getCategoryIcon (service.category) }
                       <Badge
                         variant={
+
                           getPriceRange (service.price) === 'enterprise'
                             ? 'default'
                             : 'secondary'

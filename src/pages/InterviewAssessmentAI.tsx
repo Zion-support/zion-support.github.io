@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 export default React.memo (function InterviewAssessmentAI (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Users,
@@ -53,52 +55,52 @@ import { motion } from 'framer - motion.ts';
   Network,
   Rocket,
   Shield,
-  TrendingUp,
-} from 'lucide - react.ts';
+  TrendingUp} from 'lucide - react.ts';
 
   const features = [
     {
+
       icon: Users,
       title: 'AI Candidate Screening',
       description:
         'Intelligent candidate evaluation and ranking using machine learning',
-      color: 'from - purple - 500 to - pink - 500',
-    },
+      color: 'from - purple - 500 to - pink - 500'},
     {
+
       icon: Brain,
       title: 'Behavioral Analysis',
       description:
         'Deep analysis of candidate responses and communication patterns',
-      color: 'from - blue - 500 to - cyan - 500',
-    },
+      color: 'from - blue - 500 to - cyan - 500'},
     {
+
       icon: Target,
       title: 'Skills Assessment',
       description: 'Comprehensive technical and soft skills evaluation',
-      color: 'from - green - 500 to - emerald - 500',
-    },
+      color: 'from - green - 500 to - emerald - 500'},
     {
+
       icon: BarChart3,
       title: 'Performance Metrics',
       description: 'Detailed analytics and insights for hiring decisions',
-      color: 'from - yellow - 500 to - orange - 500',
-    },
+      color: 'from - yellow - 500 to - orange - 500'},
     {
+
       icon: Zap,
       title: 'Automated Interviews',
       description: 'AI - powered interview scheduling and conduct',
-      color: 'from - red - 500 to - pink - 500',
-    },
+      color: 'from - red - 500 to - pink - 500'},
     {
+
       icon: Shield,
       title: 'Bias Elimination',
       description: 'Fair and objective candidate evaluation',
-      color: 'from - indigo - 500 to - blue - 500',
-    },
+      color: 'from - indigo - 500 to - blue - 500'},
   ];
 
   const services = [
     {
+
       title: 'Video Interview Analysis',
       description: 'AI - powered analysis of video interview responses',
       icon: Video,
@@ -107,9 +109,9 @@ import { motion } from 'framer - motion.ts';
         'Tone analysis',
         'Response quality',
         'Engagement metrics',
-      ],
-    },
+      ]},
     {
+
       title: 'Technical Assessment',
       description: 'Comprehensive technical skills evaluation',
       icon: Cpu,
@@ -118,9 +120,9 @@ import { motion } from 'framer - motion.ts';
         'Problem solving',
         'Technical knowledge',
         'Performance tracking',
-      ],
-    },
+      ]},
     {
+
       title: 'Cultural Fit Analysis',
       description: 'Assessment of candidate alignment with company culture',
       icon: Users,
@@ -129,9 +131,9 @@ import { motion } from 'framer - motion.ts';
         'Team compatibility',
         'Communication style',
         'Work preferences',
-      ],
-    },
+      ]},
     {
+
       title: 'Predictive Hiring',
       description: 'AI - driven predictions of candidate success',
       icon: TrendingUp,
@@ -140,8 +142,7 @@ import { motion } from 'framer - motion.ts';
         'Retention prediction',
         'Performance forecasting',
         'Risk assessment',
-      ],
-    },
+      ]},
   ];
 
   const technologies = [

@@ -4,6 +4,7 @@ import Login from '@/pages/Login';
 import Signup from '@/pages/Signup';
 import { ProtectedRoute } from "../ProtectedRoute";
 const AuthRoutes = () => {
+
     return (<Routes>
       <Route path="/login" element={<Login />}/>
       <Route path="/signup" element={<Signup />}/>

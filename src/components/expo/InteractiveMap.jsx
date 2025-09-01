@@ -1,5 +1,6 @@
 import React from 'react';
 export function InteractiveMap() {
+
   const locations = [
     { name: 'New York', subdomain: 'ny.zionapp.com', top: '40%', left: '35%' },
     {

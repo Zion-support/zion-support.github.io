@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Shield, 
   Cloud, 
@@ -45,12 +46,14 @@ import {
 import { SEO } from '@/components/SEO';
 
 interface Service {
+
   id: string;
   title: string;
   description: string;
   icon: React.ComponentType<any>;
   category: string;
   price: {
+
     monthly: number;
     yearly: number;
     enterprise: string;
@@ -61,6 +64,7 @@ interface Service {
   roi: string;
   implementationTime: string;
   contact: {
+
     phone: string;
     email: string;
     address: string;
@@ -72,12 +76,14 @@ interface Service {
 
 const services: Service[] = [
   {
+
     id: 'ai-code-reviewer',
     title: 'AI Autonomous Code Reviewer',
     description: 'Advanced AI-powered code review system with real-time analysis, automated quality scoring, and security vulnerability detection.',
     icon: Brain,
     category: 'AI & Machine Learning',
     price: {
+
       monthly: 299,
       yearly: 2999,
       enterprise: 'Custom'
@@ -105,6 +111,7 @@ const services: Service[] = [
     roi: '300% ROI within 6 months',
     implementationTime: '2-3 weeks',
     contact: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008, Middletown DE 19709'
@@ -114,12 +121,14 @@ const services: Service[] = [
     tags: ['AI', 'Code Review', 'Security', 'Automation']
   },
   {
+
     id: 'ai-seo-optimizer',
     title: 'AI-Powered SEO Optimizer',
     description: 'Intelligent SEO platform with AI-driven optimization, real-time keyword research, and competitor analysis.',
     icon: TrendingUp,
     category: 'AI & Machine Learning',
     price: {
+
       monthly: 199,
       yearly: 1999,
       enterprise: 'Custom'
@@ -147,6 +156,7 @@ const services: Service[] = [
     roi: '400% ROI through increased organic traffic',
     implementationTime: '1-2 weeks',
     contact: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008, Middletown DE 19709'
@@ -156,12 +166,14 @@ const services: Service[] = [
     tags: ['AI', 'SEO', 'Marketing', 'Analytics']
   },
   {
+
     id: 'ai-interview-platform',
     title: 'AI Interview Assessment Platform',
     description: 'Intelligent interview platform with AI-powered candidate evaluation, video interviews, and skills assessment automation.',
     icon: Users,
     category: 'AI & Machine Learning',
     price: {
+
       monthly: 399,
       yearly: 3999,
       enterprise: 'Custom'
@@ -189,6 +201,7 @@ const services: Service[] = [
     roi: '250% ROI through improved hiring quality',
     implementationTime: '2-3 weeks',
     contact: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008, Middletown DE 19709'
@@ -198,12 +211,14 @@ const services: Service[] = [
     tags: ['AI', 'HR', 'Recruitment', 'Assessment']
   },
   {
+
     id: 'zero-trust-platform',
     title: 'Zero Trust Network Access Platform',
     description: 'Advanced zero-trust security platform without traditional VPN, featuring identity-based access control and continuous authentication.',
     icon: Shield,
     category: 'Cybersecurity',
     price: {
+
       monthly: 599,
       yearly: 5999,
       enterprise: 'Custom'
@@ -231,6 +246,7 @@ const services: Service[] = [
     roi: '200% ROI through improved security posture',
     implementationTime: '4-6 weeks',
     contact: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008, Middletown DE 19709'
@@ -240,12 +256,14 @@ const services: Service[] = [
     tags: ['Security', 'Zero Trust', 'Network', 'Compliance']
   },
   {
+
     id: 'ai-threat-intelligence',
     title: 'AI Cybersecurity Threat Intelligence',
     description: 'Intelligent threat detection and response platform with real-time analysis and automated response capabilities.',
     icon: Eye,
     category: 'Cybersecurity',
     price: {
+
       monthly: 799,
       yearly: 7999,
       enterprise: 'Custom'
@@ -273,6 +291,7 @@ const services: Service[] = [
     roi: '350% ROI through improved threat detection',
     implementationTime: '4-6 weeks',
     contact: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008, Middletown DE 19709'
@@ -282,12 +301,14 @@ const services: Service[] = [
     tags: ['Security', 'Threat Intelligence', 'AI', 'Incident Response']
   },
   {
+
     id: 'cloud-finops-optimizer',
     title: 'Cloud FinOps Optimizer',
     description: 'Intelligent cloud cost optimization platform with real-time monitoring, AI-powered optimization, and automated scaling.',
     icon: Cloud,
     category: 'Cloud & DevOps',
     price: {
+
       monthly: 299,
       yearly: 2999,
       enterprise: 'Custom'
@@ -315,6 +336,7 @@ const services: Service[] = [
     roi: '500% ROI through direct cost savings',
     implementationTime: '2-3 weeks',
     contact: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008, Middletown DE 19709'
@@ -324,12 +346,14 @@ const services: Service[] = [
     tags: ['Cloud', 'FinOps', 'Cost Optimization', 'DevOps']
   },
   {
+
     id: 'ai-business-intelligence',
     title: 'AI Business Intelligence Platform',
     description: 'Advanced BI platform with AI-powered insights, predictive analytics, and natural language queries.',
     icon: BarChart3,
     category: 'Data & Analytics',
     price: {
+
       monthly: 499,
       yearly: 4999,
       enterprise: 'Custom'
@@ -357,6 +381,7 @@ const services: Service[] = [
     roi: '400% ROI through improved decision making',
     implementationTime: '3-4 weeks',
     contact: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008, Middletown DE 19709'
@@ -366,12 +391,14 @@ const services: Service[] = [
     tags: ['AI', 'Business Intelligence', 'Analytics', 'Predictive']
   },
   {
+
     id: 'ai-workflow-orchestrator',
     title: 'AI Workflow Orchestrator',
     description: 'Intelligent workflow automation platform with AI-powered process design, optimization, and intelligent routing.',
     icon: Zap,
     category: 'Automation & Integration',
     price: {
+
       monthly: 399,
       yearly: 3999,
       enterprise: 'Custom'
@@ -399,6 +426,7 @@ const services: Service[] = [
     roi: '300% ROI through improved efficiency',
     implementationTime: '3-4 weeks',
     contact: {
+
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008, Middletown DE 19709'
@@ -419,13 +447,16 @@ const categories = [
 ];
 
 export default function InnovativeServices2029() {
+
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'roi'>('name');
 
   const filteredServices = useMemo(() => {
+
     let filtered = services.filter(service => {
+
       const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
       const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -435,7 +466,9 @@ export default function InnovativeServices2029() {
 
     // Sort services
     filtered.sort((a, b) => {
+
       switch (sortBy) {
+
         case 'price':
           return a.price.monthly - b.price.monthly;
         case 'roi':
@@ -451,10 +484,12 @@ export default function InnovativeServices2029() {
   }, [selectedCategory, searchQuery, sortBy]);
 
   const handleServiceClick = (service: Service) => {
+
     setSelectedService(service);
   };
 
   const closeModal = () => {
+
     setSelectedService(null);
   };
 
@@ -530,6 +565,7 @@ export default function InnovativeServices2029() {
                     key={category}
                     onClick={() => setSelectedCategory(category)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+
                       selectedCategory === category
                         ? 'bg-blue-600 text-white shadow-lg'
                         : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'

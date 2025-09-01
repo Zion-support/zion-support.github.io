@@ -1,6 +1,7 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
 export const TestimonialsSection = () => {
+
   const testimonials = [
     {
 

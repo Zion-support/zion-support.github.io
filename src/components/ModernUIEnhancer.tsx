@@ -1,6 +1,7 @@
 export const ModernUIEnhancer: React.FC < ModernUIEnhancerProps> = ({
 
 interface ModernUIEnhancerProps {
+
   // Add your props here
 
   enabled?: boolean;
@@ -47,6 +48,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
         root.style.setProperty(`--color-${key}`, value)} else {
 
         Object.entries(value).forEach(([shade, colorValue]) => {
+
 `
           root.style.setProperty(`--color-${key}-${shade}`, colorValue)})}
     }) ;
@@ -60,6 +62,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     // Modern spacing scale (4px base unit)
     
     Object.entries(spacing).forEach(([key, value]) => {
+
 `
       root.style.setProperty(`--spacing-${key}`, value)})}, [enabled]);
 
@@ -68,6 +71,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     // Modern shadow system
     
     Object.entries(shadows).forEach(([key, value]) => {
+
 `
       root.style.setProperty(`--shadow-${key}`, value)})}, [enabled]);
 
@@ -76,6 +80,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     // Modern transition system
     
     Object.entries(transitions).forEach(([key, value]) => {
+
 `
       root.style.setProperty(`--transition-${key}`, value)})}, [enabled]);
 
@@ -84,6 +89,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     // Modern border radius system
     
     Object.entries(radius).forEach(([key, value]) => {
+
 `
       root.style.setProperty(`--radius-${key}`, value)})}, [enabled]);
 
@@ -114,6 +120,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
 
 =======
     const buttons = document.querySelectorAll('button, .btn, [role="button"]');    buttons.forEach((button) => {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       if (!button.classList.contains('modern-enhanced')) {
@@ -134,6 +141,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
 
 =======
     const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]');    cards.forEach((card) => {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       if (!card.classList.contains('modern-enhanced')) {
@@ -147,6 +155,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
         `}
     }) }, [enabled]) ;
   useEffect ( () => {
+
     if (!enabled) return;
 
     enhanceTypography () ;

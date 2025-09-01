@@ -22,17 +22,18 @@ import { ViewModeProvider } from './context/ViewModeContext';
 
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
+
     defaultOptions: {
+
         queries: {
+
             retry: 1,
-            refetchOnWindowFocus: false,
-        },
-    },
-});
+            refetchOnWindowFocus: false}}});
 
 const rootElement = document.getElementById('root');
 
 function renderApp() {
+
     const app = (
         <React.StrictMode>
             <HelmetProvider>
@@ -61,14 +62,18 @@ function renderApp() {
     );
     
     if (rootElement?.hasChildNodes()) {
+
         hydrateRoot(rootElement, app);
     } else if (rootElement) {
+
         createRoot(rootElement).render(app);
     }
 }
 
 function displayFatalError(message) {
+
     if (rootElement) {
+
         rootElement.innerHTML = `
             <div style="padding:20px;text-align:center;font-family:sans-serif;">
                 <h1>Application Error</h1>
@@ -78,13 +83,16 @@ function displayFatalError(message) {
 }
 
 try {
+
     renderApp();
   } catch (error) {
-    console.error('Global error caught in main.jsx:', error);
+
+    // // // console.error('Global error caught in main.jsx:', error);
     displayFatalError(error.message);
 }
 
 window.addEventListener('error', (e) => {
-    console.error('Unhandled error:', e.error || e.message);
+
+    // // // console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);
 });

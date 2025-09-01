@@ -2,6 +2,7 @@
 <<<<<<< HEAD
   const blogPosts = [
     {
+
       id: '1',
       title: 'The Future of AI in Technology',
       excerpt: 'Exploring how artificial intelligence is reshaping the technology landscape...',
@@ -12,7 +13,6 @@
 =======
 export function BlogSection(...args[]):  {
 
-  
 >>>>>>> main
       id: '2',;
       title: 'Building Scalable Web Applications',;

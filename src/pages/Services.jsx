@@ -5,7 +5,9 @@ import { servicesCatalog } from '@/data/servicesCatalog';
 import { Phone, Mail, MapPin, ExternalLink, Sparkles, ArrowRight, BrainCircuit, ShieldCheck, Cloud, Network, NetworkIcon, BarChart3 } from 'lucide-react';
 
 export default function Services() {
+
     const contact = {
+
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -14,6 +16,7 @@ export default function Services() {
 
     const featuredCategories = [
         {
+
             name: 'AI & Machine Learning',
             icon: BrainCircuit,
             description: 'Cutting-edge AI solutions for business transformation',
@@ -21,6 +24,7 @@ export default function Services() {
             link: '/next-gen-innovative-services'
         },
         {
+
             name: 'Cybersecurity & Compliance',
             icon: ShieldCheck,
             description: 'Advanced security solutions for modern threats',
@@ -28,6 +32,7 @@ export default function Services() {
             link: '/next-gen-innovative-services'
         },
         {
+
             name: 'Cloud & DevOps',
             icon: Cloud,
             description: 'Scalable cloud infrastructure and automation',
@@ -35,6 +40,7 @@ export default function Services() {
             link: '/next-gen-innovative-services'
         },
         {
+
             name: 'Blockchain & Web3',
             icon: Network,
             description: 'Next-generation decentralized solutions',
@@ -42,6 +48,7 @@ export default function Services() {
             link: '/next-gen-innovative-services'
         },
         {
+
             name: 'IoT & Edge Computing',
             icon: NetworkIcon,
             description: 'Connected devices and edge intelligence',
@@ -49,6 +56,7 @@ export default function Services() {
             link: '/next-gen-innovative-services'
         },
         {
+
             name: 'Data & Analytics',
             icon: BarChart3,
             description: 'Data-driven insights and business intelligence',

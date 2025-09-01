@@ -2,6 +2,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
 
 <<<<<<< HEAD
 interface SkeletonProps extends React.PropsWithChildren<{}> {
+
   className?: string;
   height?: string;
   width?: string;
@@ -10,6 +11,7 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
 }
 
 const Skeleton: React.FC < SkeletonProps> = ({
+
 =======
 >>>>>>> main
   className = '',
@@ -33,8 +35,7 @@ const Skeleton: React.FC < SkeletonProps> = ({
 
         duration: 1.5,
         repeat: Infinity,
-        ease: 'easeInOut',
-      }}
+        ease: 'easeInOut'}}
     />) };
 interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {
 
@@ -48,7 +49,6 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
   className = '' 
 }) => {
 
-  
         '
       case 'card':
         return ("

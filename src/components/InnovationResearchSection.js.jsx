@@ -145,6 +145,7 @@ const innovationStats = ["
 ];
 const researchLabs = [
     {
+
 "
         name: "AI Research Lab","
         location: "San Francisco","
@@ -154,6 +155,7 @@ const researchLabs = [
         researchers: 8
     },
     {
+
 "
         name: "Quantum Computing Lab","
         location: "Boston","
@@ -163,6 +165,7 @@ const researchLabs = [
         researchers: 6
     },
     {
+
 "
         name: "Blockchain Innovation Lab","
         location: "London","
@@ -172,6 +175,7 @@ const researchLabs = [
         researchers: 7
     },
     {
+
 "
         name: "Cybersecurity Lab","
         location: "Washington DC","
@@ -366,6 +370,7 @@ const researchLabs = [
   y: 10 
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0 

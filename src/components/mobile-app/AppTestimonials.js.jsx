@@ -3,6 +3,7 @@ import { Star } from "lucide-react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 const testimonials = [
     {
+
         name: "Alex Johnson",
         role: "AI Developer",
         text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",
@@ -10,6 +11,7 @@ const testimonials = [
         avatar: "/placeholder.svg"
     },
     {
+
         name: "Sarah Williams",
         role: "Tech Recruiter",
         text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
@@ -17,6 +19,7 @@ const testimonials = [
         avatar: "/placeholder.svg"
     },
     {
+
         name: "Michael Chen",
         role: "Full Stack Developer",
         text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
@@ -25,6 +28,7 @@ const testimonials = [
     }
 ];
 export const AppTestimonials = () => {
+
     return (<section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface EnhancedImageLoaderProps {
+
   src: string;
   alt: string;
   className?: string;
@@ -14,6 +15,7 @@ interface EnhancedImageLoaderProps {
 }
 
 export const EnhancedImageLoader: React.FC<EnhancedImageLoaderProps> = ({
+
   src,
   alt,
   className = '',
@@ -22,8 +24,8 @@ export const EnhancedImageLoader: React.FC<EnhancedImageLoaderProps> = ({
   priority = false,
   fallbackSrc = '/images/placeholder.jpg',
   onLoad,
-  onError,
-}) => {
+  onError}) => {
+
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -31,41 +33,50 @@ export const EnhancedImageLoader: React.FC<EnhancedImageLoaderProps> = ({
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
+
     if (priority) {
+
       setIsInView(true);
       return;
     }
 
     observerRef.current = new IntersectionObserver(
       ([entry]) => {
+
         if (entry.isIntersecting) {
+
           setIsInView(true);
           observerRef.current?.disconnect();
         }
       },
       {
+
         rootMargin: '50px',
-        threshold: 0.1,
-      }
+        threshold: 0.1}
     );
 
     if (imgRef.current) {
+
       observerRef.current.observe(imgRef.current);
     }
 
     return () => {
+
       if (observerRef.current) {
+
         observerRef.current.disconnect();
       }
     };
   }, [priority]);
 
   const handleLoad = () => {
+
     setIsLoaded(true);
     onLoad?.();
   };
 
   const handleError = () => {
+
     setHasError(true);
     onError?.();
   };
@@ -95,6 +106,7 @@ export const EnhancedImageLoader: React.FC<EnhancedImageLoaderProps> = ({
             src={currentSrc}
             alt={alt}
             className={`w-full h-full object-cover transition-opacity duration-500 ${
+
               isLoaded ? 'opacity-100' : 'opacity-0'
             }`}
             onLoad={handleLoad}

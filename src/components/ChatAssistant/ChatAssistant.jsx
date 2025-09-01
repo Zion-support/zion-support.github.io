@@ -24,6 +24,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     const [guestMessage, setGuestMessage] = useState(null);
     // Effect for guest user messages
     useEffect(() => {
+
         if (isGuest) {
 
             // Priority: initialMessages prop > localStorage > empty array
@@ -39,6 +40,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     }, [isGuest, initialMessages, storedGuestMessages, setStoredGuestMessages, recipient.id]);
     // Effect for logged-in user messages
     useEffect(() => {
+
         if (!isGuest) {
 
             // Update state if initialMessages prop changes (e.g. new conversation loaded)
@@ -61,11 +63,13 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     };
     const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
     useEffect(() => {
+
         if (debouncedApiCallParams) {
 
             onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId)}
     }, [debouncedApiCallParams, onSendMessage]);
     useEffect(() => {
+
         scrollToBottom()}, [currentMessages]); // currentMessages will correctly refer to either guest or logged-in state
     const scrollToBottom = () => {
 
@@ -91,6 +95,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             setShowGuestModal(true)}
     };
     const handleModalSendConfirm = () => {
+
         if (!guestMessage)
             return;
         const newMessage = {
@@ -107,9 +112,11 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         setShowGuestModal(false);
         setGuestMessage(null)};
     const handleModalCancel = () => {
+
         setShowGuestModal(false);
         setGuestMessage(null)};
     useEffect(() => {
+
         if (!showGuestModal)
             return;
         const handleKey = (e) => {
@@ -126,6 +133,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             document.removeEventListener('keydown', handleKey);
             removeTrap && removeTrap()}}, [showGuestModal]);
     useEffect(() => {
+
         if (!isOpen)
             return;
         const handleKeyDown = (e) => {

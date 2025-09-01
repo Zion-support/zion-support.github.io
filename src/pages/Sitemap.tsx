@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Globe,
   Brain,
   Cloud,
@@ -52,6 +53,7 @@ import {
 import { SEO } from '@/components/SEO';
 
 interface SitemapSection {
+
   title: string;
   icon: React.ComponentType<any>;
   description: string;
@@ -59,6 +61,7 @@ interface SitemapSection {
 }
 
 interface SitemapLink {
+
   name: string;
   path: string;
   description?: string;
@@ -66,8 +69,10 @@ interface SitemapLink {
 }
 
 const Sitemap: React.FC = () => {
+
   const sitemapSections: SitemapSection[] = [
     {
+
       title: 'Main Pages',
       icon: Globe,
       description: 'Core website pages and information',
@@ -85,6 +90,7 @@ const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'AI & Machine Learning',
       icon: Brain,
       description: 'Artificial intelligence and machine learning solutions',
@@ -104,6 +110,7 @@ const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'Quantum Computing',
       icon: Atom,
       description: 'Next-generation quantum computing solutions',
@@ -117,6 +124,7 @@ const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'Cloud & DevOps',
       icon: Cloud,
       description: 'Cloud infrastructure and DevOps automation',
@@ -131,6 +139,7 @@ const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'Cybersecurity',
       icon: Shield,
       description: 'Advanced security and compliance solutions',
@@ -146,6 +155,7 @@ const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'Digital Transformation',
       icon: Rocket,
       description: 'Strategic technology consulting and transformation',
@@ -160,6 +170,7 @@ const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'Micro SaaS Solutions',
       icon: Zap,
       description: 'Affordable software solutions for small businesses',
@@ -174,6 +185,7 @@ const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'Emerging Technologies',
       icon: TrendingUp,
       description: 'Cutting-edge and future technologies',
@@ -188,6 +200,7 @@ const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'Industry Solutions',
       icon: Building,
       description: 'Industry-specific technology solutions',
@@ -202,6 +215,7 @@ const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'Resources & Support',
       icon: BookOpen,
       description: 'Documentation, support, and learning resources',
@@ -217,6 +231,7 @@ const Sitemap: React.FC = () => {
       ]
     },
     {
+
       title: 'Company & Legal',
       icon: Users,
       description: 'Company information and legal documents',
@@ -284,17 +299,20 @@ const Sitemap: React.FC = () => {
                   key={index}
                   to={link.path}
                   className={`p-4 rounded-xl transition-all duration-300 text-center group ${
+
                     link.featured
                       ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/40 hover:border-cyan-400/60'
                       : 'bg-white/5 backdrop-blur-sm border border-cyan-400/20 hover:border-cyan-400/40'
                   }`}
                 >
                   <div className={`w-8 h-8 mx-auto mb-2 ${
+
                     link.featured ? 'text-cyan-400' : 'text-gray-400 group-hover:text-cyan-400'
                   } transition-colors duration-300`}>
                     <link.icon className="w-full h-full" />
                   </div>
                   <p className={`text-sm font-medium ${
+
                     link.featured ? 'text-white' : 'text-gray-300 group-hover:text-white'
                   } transition-colors duration-300`}>
                     {link.name}
@@ -349,6 +367,7 @@ const Sitemap: React.FC = () => {
                         )}
                         <div>
                           <p className={`font-medium transition-colors duration-200 ${
+
                             link.featured 
                               ? 'text-cyan-400' 
                               : 'text-white group-hover:text-cyan-400'

@@ -2,12 +2,14 @@ import { Link } from 'react - router - dom';
 import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database } from 'lucide - react';
 import React from 'react';
 export default function DigitalTransformation () {
+
 import { motion } from 'framer - motion';
 import { SEO } from "../components / SEO";
 import SEO from '../components / SEO';
 
 const transformationServices = [
     {
+
         title: "Strategy & Planning",
         description: "Comprehensive digital transformation roadmap aligned with business objectives and market opportunities.",
         icon: Rocket,
@@ -15,6 +17,7 @@ const transformationServices = [
         color: "from - purple - 500 to - pink - 500"
     },
     {
+
         title: "Process Automation",
         description: "Intelligent automation solutions that streamline operations and eliminate manual workflows.",
         icon: Zap,
@@ -22,6 +25,7 @@ const transformationServices = [
         color: "from - blue - 500 to - cyan - 500"
     },
     {
+
         title: "Technology Modernization",
         description: "Legacy system modernization and cloud - native architecture implementation.",
         icon: Cpu,
@@ -29,6 +33,7 @@ const transformationServices = [
         color: "from - green - 500 to - emerald - 500"
     },
     {
+
         title: "Data & Analytics",
         description: "Data - driven insights and business intelligence solutions for informed decision - making.",
         icon: Database,
@@ -36,6 +41,7 @@ const transformationServices = [
         color: "from - orange - 500 to - red - 500"
     },
     {
+
         title: "Customer Experience",
         description: "Omnichannel customer experience optimization and digital touchpoint enhancement.",
         icon: Users,
@@ -43,6 +49,7 @@ const transformationServices = [
         color: "from - indigo - 500 to - purple - 500"
     },
     {
+
         title: "Security & Compliance",
         description: "Enterprise - grade security and regulatory compliance for digital transformation initiatives.",
         icon: Shield,
@@ -52,24 +59,28 @@ const transformationServices = [
 ];
 const transformationPhases = [
     {
+
         phase: "01",
         title: "Discovery & Assessment",
         description: "Evaluate current state, identify opportunities, and assess digital maturity",
         duration: "2 - 4 weeks"
     },
     {
+
         phase: "02",
         title: "Strategy Development",
         description: "Create comprehensive digital transformation roadmap and business case",
         duration: "4 - 6 weeks"
     },
     {
+
         phase: "03",
         title: "Pilot & Validation",
         description: "Implement proof - of - concept and validate approach with stakeholders",
         duration: "6 - 8 weeks"
     },
     {
+
         phase: "04",
         title: "Full Implementation",
         description: "Execute transformation plan with phased rollout and continuous optimization",
@@ -78,18 +89,21 @@ const transformationPhases = [
 ];
 const testimonials = [
     {
+
         content: "Zion's digital transformation approach was game - changing. They didn't just implement technology - they transformed our entire business model.",
         name: "Carlos Rodriguez",
         role: "CEO, InnovateCorp",
         rating: 5
     },
     {
+
         content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.",
         name: "Lisa Chang",
         role: "COO, TechFlow Solutions",
         rating: 5
     },
     {
+
         content: "Working with Zion transformed our comp culture. We're now more agile, data - driven, and customer - focused than ever before.",
         name: "Marcus Johnson",
         role: "CTO, DigitalFirst Inc",
@@ -108,10 +122,12 @@ const stats = [
       <section className="relative pt - 32 pb - 20 overflow - hidden">
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} animate = {
+
   { opacity: 1,
   y: 0
 
@@ -144,16 +160,20 @@ const stats = [
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">
             {stats.map ( (stat, index) => {
+
             const IconComponent = stat.icon;
             return (<motion.div key={stat.label} initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }} whileInView = {
+
   { opacity: 1,
   scale: 1
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -171,10 +191,12 @@ const stats = [
       <section className="py - 24">
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -188,16 +210,20 @@ const stats = [
           </motion.div>
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {transformationServices.map ( (service, index) => {
+
             const IconComponent = service.icon;
             return (<motion.div key={service.title} initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -229,10 +255,12 @@ const stats = [
       <section className="py - 24 bg - zion - blue - light / 5">
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -246,14 +274,17 @@ const stats = [
           </motion.div>
           <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 8">
             {transformationPhases.map ( (phase, index) => (<motion.div key={phase.phase} initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -272,10 +303,12 @@ const stats = [
       <section className="py - 24">
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -290,36 +323,44 @@ const stats = [
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
             {[
             {
+
                 title: "Operational Efficiency",
                 description: "Streamlined processes and automation reduce costs and improve productivity by up to 60%.",
                 icon: Zap
             },
             {
+
                 title: "Customer Experience",
                 description: "Enhanced digital touchpoints and personalized experiences increase customer satisfaction and loyalty.",
                 icon: Users
             },
             {
+
                 title: "Data - Driven Insights",
                 description: "Real - time analytics and business intelligence enable informed decision - making and strategic planning.",
                 icon: TrendingUp
             },
             {
+
                 title: "Competitive Advantage",
                 description: "Innovation and agility position your business ahead of competitors in the digital marketplace.",
                 icon: Rocket
 
         ].map ( (benefit, index) => {
+
             const IconComponent = benefit.icon;
             return (<motion.div key={benefit.title} initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -341,10 +382,12 @@ const stats = [
       <section className="py - 24 bg - zion - blue - light / 5">
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -358,14 +401,17 @@ const stats = [
           </motion.div>
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
             {testimonials.map ( (testimonial, index) => (<motion.div key={testimonial.name} initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -388,10 +434,12 @@ const stats = [
       <section className="py - 24">
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0
 

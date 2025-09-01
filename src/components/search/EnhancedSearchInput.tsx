@@ -6,6 +6,7 @@ import { SearchSuggestion } from "@/types/search";
 import debounce from 'lodash.debounce';
 
 interface EnhancedSearchInputProps {
+
   value: string;
   onChange: (value: string) => void;
   onSelectSuggestion?: (value: string) => void;
@@ -14,12 +15,14 @@ interface EnhancedSearchInputProps {
 }
 
 export function EnhancedSearchInput({
+
   value,
   onChange,
   onSelectSuggestion,
   placeholder = "Search...",
   searchSuggestions
 }: EnhancedSearchInputProps) {
+
   const [isFocused, setIsFocused] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
@@ -28,7 +31,9 @@ export function EnhancedSearchInput({
 
   const debouncedFilterSuggestions = useMemo( // Changed from useCallback to useMemo
     () => debounce((currentValue: string, suggestions: SearchSuggestion[]) => {
+
       if (!currentValue) {
+
         setFilteredSuggestions(suggestions.filter(s => s.type === 'recent'));
         return;
       }
@@ -38,6 +43,7 @@ export function EnhancedSearchInput({
       );
 
       filtered.sort((a, b) => {
+
         const aStartsWith = a.text.toLowerCase().startsWith(currentValue.toLowerCase()) ? -1 : 0;
         const bStartsWith = b.text.toLowerCase().startsWith(currentValue.toLowerCase()) ? -1 : 0;
         return aStartsWith - bStartsWith;
@@ -49,16 +55,21 @@ export function EnhancedSearchInput({
   );
 
   useEffect(() => {
+
     debouncedFilterSuggestions(value, searchSuggestions);
     setHighlightedIndex(-1); 
     return () => {
+
       debouncedFilterSuggestions.cancel();
     };
   }, [value, searchSuggestions, debouncedFilterSuggestions]);
 
   useEffect(() => {
+
     function handleClickOutside(event: MouseEvent) {
+
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+
         setIsFocused(false);
       }
     }
@@ -70,6 +81,7 @@ export function EnhancedSearchInput({
   const handleSelectSuggestion = (suggestionText: string) => { // Renamed suggestion to suggestionText
     onChange(suggestionText);
     if (onSelectSuggestion) {
+
       onSelectSuggestion(suggestionText);
     }
     setIsFocused(false);
@@ -78,8 +90,11 @@ export function EnhancedSearchInput({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+
     if (!isFocused || filteredSuggestions.length === 0) {
-      if (e.key === 'Escape') { 
+
+      if (e.key === 'Escape') {
+
         e.preventDefault();
         setIsFocused(false);
         setHighlightedIndex(-1);
@@ -89,6 +104,7 @@ export function EnhancedSearchInput({
     }
 
     switch (e.key) {
+
       case 'ArrowDown':
         e.preventDefault();
         setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length);
@@ -99,6 +115,7 @@ export function EnhancedSearchInput({
         break;
       case 'Enter':
         if (highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {
+
           e.preventDefault();
           handleSelectSuggestion(filteredSuggestions[highlightedIndex].text);
         }
@@ -132,6 +149,7 @@ export function EnhancedSearchInput({
           type="text"
           value={value}
           onChange={(e) => {
+
             onChange(e.target.value);
           }}
           onFocus={() => setIsFocused(true)}

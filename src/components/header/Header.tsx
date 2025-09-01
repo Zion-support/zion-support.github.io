@@ -7,10 +7,12 @@ import { Menu, X, Search, Bell, User, ShoppingBag } from 'lucide-react';
 import { SearchFunctionality } from '../SearchFunctionality';
 
 export function Header() {
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
 
   const toggleMobileMenu = () => {
+
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 

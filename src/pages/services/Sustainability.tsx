@@ -4,14 +4,17 @@ import { motion               } from 'framer-motion.ts';
 import { Globe, Leaf, Zap, Shield, Database, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Sun, Wind, Battery, Recycle               } from 'lucide-react.ts';
 
 export default function Sustainability(...args: []):  {
+
   const features = [
     {
+
       icon: Leaf,
       title: 'Green IT Solutions',
       description: 'Energy-efficient technology and sustainable computing practices',
       color: 'from-green-500 to-emerald-500'
     },
     {
+
       icon: Sun,
       title: 'Renewable Energy',
       description: 'Solar, wind, and other renewable energy integration',
@@ -26,18 +29,21 @@ export default function Sustainability(...args: []):  {
 
   const services = [
     {
+
       title: 'Sustainability Assessment',
       description: 'Comprehensive evaluation of current environmental impact',
       price: 'From $3,000',
       features: ['Carbon footprint analysis', 'Energy audit', 'Waste assessment', 'Recommendations']
     },
     {
+
       title: 'Green IT Implementation',
       description: 'Energy-efficient technology and sustainable computing solutions',
       price: 'From $8,000',
       features: ['Energy optimization', 'Cloud migration', 'Hardware upgrades', 'Monitoring tools']
     },
     {
+
       title: 'Renewable Energy Integration',
       description: 'Solar, wind, and other renewable energy solutions',
       price: 'From $15,000',
@@ -67,6 +73,7 @@ export default function Sustainability(...args: []):  {
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -77,6 +84,7 @@ export default function Sustainability(...args: []):  {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -129,6 +137,7 @@ export default function Sustainability(...args: []):  {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -139,6 +148,7 @@ export default function Sustainability(...args: []):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -165,6 +175,7 @@ export default function Sustainability(...args: []):  {
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -175,6 +186,7 @@ export default function Sustainability(...args: []):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -185,6 +197,7 @@ export default function Sustainability(...args: []):  {
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -213,6 +226,7 @@ export default function Sustainability(...args: []):  {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -223,6 +237,7 @@ export default function Sustainability(...args: []):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -249,6 +264,7 @@ export default function Sustainability(...args: []):  {
               <motion.div
                 key={service.title}
                 initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
@@ -259,6 +275,7 @@ export default function Sustainability(...args: []):  {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -269,6 +286,7 @@ export default function Sustainability(...args: []):  {
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -310,11 +328,13 @@ export default function Sustainability(...args: []):  {
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -336,16 +356,19 @@ export default function Sustainability(...args: []):  {
               <motion.div
                 key={solution.name}
                 initial = {
+
   { opacity: 0,
   scale: 0.8 
 
 }}
                 whileInView = {
+
   { opacity: 1,
   scale: 1 
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -368,6 +391,7 @@ export default function Sustainability(...args: []):  {
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -378,6 +402,7 @@ export default function Sustainability(...args: []):  {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

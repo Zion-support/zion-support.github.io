@@ -9,7 +9,9 @@ export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export function UltimateServicesShowcase (...args[]) :  {
+
 import {
+
 import { enterpriseITInfrastructureServices2025 } from "../../data / 2025 - enterprise - it - infrastructure - services";
 import { innovativeMicroSaasSolutions2025 } from "../../data / 2025 - innovative - micro - saas - solutions";
 import { motion } from 'framer - motion';
@@ -66,6 +68,7 @@ interface Service {
   marketSize: string;
   growthRate: string;
 contactInfo: {
+
     mobile: string;
     email: string;
     address: string;
@@ -82,6 +85,7 @@ contactInfo: {
   marketDisruption: string}
 
 const contact = {
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',;
@@ -96,6 +100,7 @@ const contact = {
 
 const categories = [
   {
+
     id: 'ai - services',
     name: 'AI & Autonomous Systems',
     description: 'Revolutionary AI solutions that transform business operations',
@@ -103,6 +108,7 @@ const categories = [
     color: 'from - purple - 600 to - pink - 700',
     services: ultimateInnovativeServices2025.filter (s  => s.category.includes ('AI') ) },
   {
+
     id: 'it - infrastructure',
     name: 'IT Infrastructure & Enterprise',
     description: 'Cutting - edge infrastructure solutions for modern businesses',
@@ -111,6 +117,7 @@ const categories = [
     services: enterpriseITInfrastructureServices2025
   },
   {
+
     id: 'micro - saas',;
     name: 'Micro SAAS Solutions',;
     description: 'Innovative software solutions for small businesses',;
@@ -121,6 +128,7 @@ const categories = [
 ];
 
 const innovationLevelColors = {
+
   'Revolutionary': 'from - red - 600 to - pink - 700',
   'Breakthrough': 'from - purple - 600 to - violet - 700',
   'Advanced': 'from - blue - 600 to - cyan - 700',;
@@ -134,6 +142,7 @@ const innovationLevelColors = {
 };
 
 const patentStatusColors = {
+
   'Patented': 'from - green - 600 to - emerald - 700',
   'Patent Pending': 'from - yellow - 600 to - orange - 700',
   'Trade Secret': 'from - blue - 600 to - indigo - 700',;
@@ -160,10 +169,13 @@ const patentStatusColors = {
     : categories.find (cat => cat.id === selectedCategory) ?.services || [];
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,;
       transition: {
+
         staggerChildren: 0.1,;
         delayChildren: 0.2;
       };
@@ -171,14 +183,17 @@ const patentStatusColors = {
   };
 
   const itemVariants = {
+
   hidden: { opacity: 0,
   y: 20 
 
 },
     visible: {
+
       opacity: 1,;
       y: 0,;
       transition: {
+
         duration: 0.6,;
         ease: "easeOut";
       };
@@ -191,11 +206,13 @@ const patentStatusColors = {
         <motion.div
           className="text - center mb - 16"
           initial = {
+
   { opacity: 0,
   y: 20 
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -235,16 +252,19 @@ const patentStatusColors = {
         <motion.div
           className="flex flex - wrap justify - center gap - 4 mb - 12"
           initial = {
+
   { opacity: 0,
   y: 20 
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0 
 
 }}
           transition = {
+
   { duration: 0.8,
   delay: 0.2 
 
@@ -252,6 +272,7 @@ const patentStatusColors = {
         >
           <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedCategory ('all') }
             className={`px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 ${
+
               selectedCategory === 'all'
                 ? 'bg - gradient - to - r from - zion - cyan to - zion - blue text - white shadow - lg shadow - zion - cyan / 25'
                 : 'bg - zion - slate - light text - zion - gray - light hover: bg - zion - slate hover: text - white'
@@ -261,6 +282,7 @@ const patentStatusColors = {
           {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
               onClick={ () => setSelectedCategory (category.id) }
               className={`px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 ${
+
                 selectedCategory === category.id
                   ? 'bg - gradient - to - r from - zion - cyan to - zion - blue text - white shadow - lg shadow - zion - cyan / 25'
                   : 'bg - zion - slate - light text - zion - gray - light hover: bg - zion - slate hover: text - white'
@@ -380,16 +402,19 @@ const patentStatusColors = {
         <motion.div
           className="text - center mt - 16"
           initial = {
+
   { opacity: 0,
   y: 20 ;
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0 ;
 
 }}
           transition = {
+
   { duration: 0.8,
   delay: 0.4 ;
 

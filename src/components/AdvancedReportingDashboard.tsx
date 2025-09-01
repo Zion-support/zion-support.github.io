@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
+
   BarChart3,
   PieChart,
   TrendingUp,
@@ -28,6 +29,7 @@ import {
   Tablet
  } from 'lucide-react';
 interface ReportData {
+
   id: string;
   title: string;
   type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
@@ -42,6 +44,7 @@ interface ReportData {
   downloads: number;
   rating: number}
 interface ReportMetrics {
+
   totalReports: number;
   activeReports: number;
   totalViews: number;
@@ -50,11 +53,13 @@ interface ReportMetrics {
   topCategories: Array<any>;
   recentActivity: Array<any>}
 interface AdvancedReportingDashboardProps extends React.PropsWithChildren<{}> {
+
   showMetrics?: boolean;
   showFilters?: boolean;
   showCharts?: boolean;
   maxReports?: number}
 export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
+
   showMetrics = true,;
   showFilters = true,;
   showCharts = true,;
@@ -74,13 +79,16 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   const [sortOrder, setSortOrder] = useState<any>('desc');
   // Sample report data
   useEffect(() => {
+
     const sampleReports: ReportData[] = [
       {
+
         id: '1',
         title: 'Q4 Financial Performance Analysis',
         type: 'financial',
         category: 'Financial Reports',
         data: {
+
           revenue: 2500000,
           expenses: 1800000,
           profit: 700000,
@@ -98,11 +106,13 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         rating: 4.8
       },
       {
+
         id: '2',
         title: 'AI Services Performance Metrics',
         type: 'performance',
         category: 'Performance Reports',
         data: {
+
           accuracy: 94.2,
           responseTime: 1.8,
           uptime: 99.9,
@@ -120,11 +130,13 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         rating: 4.9
       },
       {
+
         id: '3',
         title: 'Cybersecurity Threat Assessment',
         type: 'security',
         category: 'Security Reports',
         data: {
+
           threatsDetected: 156,
           incidentsResolved: 154,
           responseTime: 2.3,
@@ -142,11 +154,13 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         rating: 4.7
       },
       {
+
         id: '4',
         title: 'Cloud Infrastructure Utilization',
         type: 'operational',
         category: 'Operational Reports',
         data: {
+
           cpuUtilization: 78.5,
           memoryUsage: 82.3,
           storageUsage: 65.8,
@@ -164,11 +178,13 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         rating: 4.5
       },
       {
+
         id: '5',
         title: 'Customer Satisfaction Survey Results',
         type: 'customer',
         category: 'Customer Reports',
         data: {
+
           overallSatisfaction: 4.6,
           netPromoterScore: 72,
           responseRate: 89.5,
@@ -189,14 +205,19 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     setFilteredReports(sampleReports)}, []);
   // Filter and sort reports
   useEffect(()  => {
+
     let filtered = reports;
     if (selectedType !== 'all') {
+
       filtered = filtered.filter(r => r.type === selectedType)}
     if (selectedCategory !== 'all') {
+
       filtered = filtered.filter(r => r.category === selectedCategory)}
     if (selectedStatus !== 'all') {
+
       filtered = filtered.filter(r => r.status === selectedStatus)}
     if (searchQuery) {
+
       filtered = filtered.filter(r =>
         r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -211,8 +232,10 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     }
     // Sort reports
     filtered.sort((a, b) => {
-      let aValue: any, bValue: any;
+
+      let aValue: any, bValue: unknown;
       switch (sortBy) {
+
         case 'date':
           aValue = new Date(a.lastUpdated).getTime();
           bValue = new Date(b.lastUpdated).getTime();
@@ -227,6 +250,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           break;
         case 'priority':
           const priorityOrder = {
+
   low: 1, medium: 2, high: 3,;
   ;
   ;
@@ -248,12 +272,14 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       if (sortOrder = == 'asc') {;
         return aValue > bValue ? 1 : -1;
       } else {
+
         return aValue < bValue ? 1 : -1;
       }
     });
     setFilteredReports(filtered.slice(0, maxReports))}, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]);
   // Calculate report metrics
   const reportMetrics = {
+
   totalReports: reports.length,
     activeReports: reports.filter(r = > r.status === 'active').length,
     totalViews: reports.reduce((sum, r) => sum + r.views, 0),
@@ -270,6 +296,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 }, {} as Record<string, number>);
       return Object.entries(catCounts)
         .map(([name, count]) => ({
+
           name,
           count,
           percentage: (count / reports.length) * 100
@@ -285,7 +312,9 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   };
   // Get type icon and color
   const getTypeDisplay = (type: string)  => {
+
     const types = {
+
   financial: { icon: <DollarSign className="w-4 h-4" />,
   color: 'text-green-400 bg-green-400/20' 
 ;
@@ -304,6 +333,22 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Handle report actions
+          // // // // // // // // // // console.log(`Downloading ${report.title}`);
+          break;
+        case 'share':
+          // Simulate share
+          // // // // // // // // // // console.log(`Sharing ${report.title}`);
+          break;
+        case 'print':
+          // Simulate print
+          // // // // // // // // // // console.log(`Printing ${report.title}`);
+          break;
+  };
+  // Export report data
+  const exportReport = (report: ReportData, format: 'pdf' | 'excel' | 'csv') => {
+
+    // // // // // // // // // // console.log(`Exporting ${report.title} as ${format}`);
+=======
           // // // // // // // console.log(`Downloading ${report.title}`);
           break;
         case 'share':
@@ -312,22 +357,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           break;
         case 'print':
           // Simulate print
-          // // // // // // // console.log(`Printing ${report.title}`);
-          break;
-  };
-  // Export report data
-  const exportReport = (report: ReportData, format: 'pdf' | 'excel' | 'csv') => {
-    // // // // // // // console.log(`Exporting ${report.title} as ${format}`);
-=======
-          // // // // console.log(`Downloading ${report.title}`);
-          break;
-        case 'share':
-          // Simulate share
-          // // // // console.log(`Sharing ${report.title}`);
-          break;
-        case 'print':
-          // Simulate print
-          console.log(`Printing ${report.title}`);
+          // // // console.log(`Printing ${report.title}`);
           break}
     }
   };

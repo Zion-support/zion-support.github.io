@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Heart, 
   Brain, 
   Users, 
@@ -40,23 +41,28 @@ import {
 import { SEO } from '@/components/SEO';
 
 export default function AIMentalHealthSupportPlatform() {
+
   const features = [
     {
+
       icon: Heart,
       title: "24/7 AI Support",
       description: "Round-the-clock mental health support with intelligent conversation and crisis intervention"
     },
     {
+
       icon: Brain,
       title: "Personalized Therapy",
       description: "AI-driven therapy sessions tailored to individual needs and progress tracking"
     },
     {
+
       icon: Shield,
       title: "Privacy & Security",
       description: "HIPAA-compliant platform with end-to-end encryption and secure data handling"
     },
     {
+
       icon: Users,
       title: "Human-AI Hybrid",
       description: "Seamless integration between AI support and licensed mental health professionals"
@@ -65,24 +71,28 @@ export default function AIMentalHealthSupportPlatform() {
 
   const services = [
     {
+
       title: "AI Therapy Sessions",
       description: "Intelligent conversational therapy with natural language processing and emotional intelligence",
       icon: MessageCircle,
       features: ["Personalized conversations", "Mood tracking", "Progress monitoring", "Crisis detection"]
     },
     {
+
       title: "Mental Health Assessment",
       description: "Comprehensive mental health screening and risk assessment using advanced AI algorithms",
       icon: Brain,
       features: ["Clinical questionnaires", "Risk factor analysis", "Early warning systems", "Professional referrals"]
     },
     {
+
       title: "Crisis Intervention",
       description: "Immediate support and emergency response for mental health crises and suicidal ideation",
       icon: AlertTriangle,
       features: ["24/7 availability", "Emergency protocols", "Professional escalation", "Safety planning"]
     },
     {
+
       title: "Wellness Coaching",
       description: "AI-powered wellness programs and lifestyle coaching for mental health improvement",
       icon: Heart,
@@ -103,6 +113,7 @@ export default function AIMentalHealthSupportPlatform() {
 
   const pricing = [
     {
+
       name: "Basic Support",
       price: "$19",
       period: "/month",
@@ -118,6 +129,7 @@ export default function AIMentalHealthSupportPlatform() {
       popular: false
     },
     {
+
       name: "Premium Care",
       price: "$49",
       period: "/month",
@@ -135,6 +147,7 @@ export default function AIMentalHealthSupportPlatform() {
       popular: true
     },
     {
+
       name: "Professional",
       price: "$99",
       period: "/month",
@@ -356,6 +369,7 @@ export default function AIMentalHealthSupportPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-pink-800/50 border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-pink-400/50 shadow-lg shadow-pink-500/20' 
                     : 'border-pink-700/50'
@@ -390,6 +404,7 @@ export default function AIMentalHealthSupportPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-pink-500 to-rose-600 text-white hover:from-pink-400 hover:to-rose-500'
                       : 'bg-pink-700/50 text-pink-100 hover:bg-pink-700/70'

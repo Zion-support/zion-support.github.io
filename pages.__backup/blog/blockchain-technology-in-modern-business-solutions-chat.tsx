@@ -6,10 +6,16 @@ const BlockchainTechnologyInModernBusinessSolutionsChat: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>BlockchainTechnologyInModernBusinessSolutionsChat - Zion Tech Solutions</title>
-        <meta name="description" content="BlockchainTechnologyInModernBusinessSolutionsChat blog post" />
+        <title>
+          BlockchainTechnologyInModernBusinessSolutionsChat - Zion Tech
+          Solutions
+        </title>
+        <meta
+          name="description"
+          content="BlockchainTechnologyInModernBusinessSolutionsChat blog post"
+        />
       </Head>
-      
+
       <main>
         <h1>BlockchainTechnologyInModernBusinessSolutionsChat</h1>
         <p>Blog content coming soon...</p>

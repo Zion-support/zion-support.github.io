@@ -1,38 +1,45 @@
 import React from 'react';
 import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase } from 'lucide-react';
 const Consulting = () => {
+
     const consultingServices = [
         {
+
             icon: Lightbulb,
             title: "Technology Strategy",
             description: "Strategic technology planning and digital transformation roadmaps",
             features["Technology assessment", "Digital transformation", "Innovation strategy", "Technology roadmaps"]
         },
         {
+
             icon: Target,
             title: "AI & ML Consulting",
             description: "Expert guidance on AI implementation and machine learning strategies",
             features["AI readiness assessment", "ML model development", "Data strategy", "Implementation planning"]
         },
         {
+
             icon: Shield,
             title: "Cybersecurity Consulting",
             description: "Comprehensive security assessments and risk management strategies",
             features["Security audits", "Risk assessment", "Compliance consulting", "Incident response planning"]
         },
         {
+
             icon: Globe,
             title: "Cloud Strategy",
             description: "Cloud migration planning and multi-cloud optimization strategies",
             features["Cloud assessment", "Migration planning", "Cost optimization", "Security architecture"]
         },
         {
+
             icon: Database,
             title: "Data Strategy",
             description: "Data governance, analytics, and business intelligence consulting",
             features["Data governance", "Analytics strategy", "BI implementation", "Data quality management"]
         },
         {
+
             icon: Zap,
             title: "Digital Innovation",
             description: "Emerging technology consulting and innovation acceleration",
@@ -41,31 +48,37 @@ const Consulting = () => {
     ];
     const industries = [
         {
+
             title: "Financial Services",
             description: "Banking, insurance, and fintech consulting",
             icon: TrendingUp
         },
         {
+
             title: "Healthcare",
             description: "Digital health and medical technology consulting",
             icon: Shield
         },
         {
+
             title: "Manufacturing",
             description: "Industry 4.0 and smart manufacturing consulting",
             icon: Cpu
         },
         {
+
             title: "Retail & E-commerce",
             description: "Digital commerce and customer experience consulting",
             icon: Users
         },
         {
+
             title: "Energy & Utilities",
             description: "Smart grid and sustainability consulting",
             icon: Globe
         },
         {
+
             title: "Government",
             description: "Public sector digital transformation consulting",
             icon: Briefcase
@@ -81,21 +94,25 @@ const Consulting = () => {
     ];
     const process = [
         {
+
             phase: "Discovery",
             description: "Understanding your business needs and objectives",
             duration: "1-2 weeks"
         },
         {
+
             phase: "Assessment",
             description: "Comprehensive analysis of current state and opportunities",
             duration: "2-4 weeks"
         },
         {
+
             phase: "Strategy",
             description: "Developing customized solutions and implementation plans",
             duration: "3-6 weeks"
         },
         {
+
             phase: "Implementation",
             description: "Executing the strategy with ongoing support and guidance",
             duration: "8-24 weeks"

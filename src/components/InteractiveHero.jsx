@@ -22,18 +22,23 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
     const [isHovered, setIsHovered] = useState(false);
     const [activeStat, setActiveStat] = useState(0);
     useEffect(() => {
+
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   };
 
@@ -49,12 +54,15 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   };
 
@@ -67,9 +75,11 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   };
 
@@ -79,6 +89,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   };
 }, []);, []);
@@ -88,6 +99,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
         window.addEventListener('mousemove', handleMouseMove);
         // Auto-rotate stats
         const interval = setInterval(() => {
+
             setActiveStat((prev) => (prev + 1) % stats.length)}, 3000);
         return () => {
 
@@ -122,4 +134,5 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
     };
     const floatingVariants = {
+
 '"

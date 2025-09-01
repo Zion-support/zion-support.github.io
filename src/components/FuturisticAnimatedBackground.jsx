@@ -5,10 +5,12 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
     const canvasRef = useRef (null) ;
     const animationRef = useRef () ;
     useEffect ( () => {
+
 =======
     const canvasRef = useRef(null);
     const animationRef = useRef();
     useEffect(() => {
+
 >>>>>>> main
         const canvas = canvasRef.current;
         if (!canvas)
@@ -18,6 +20,7 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
             return;
         // Set canvas size
         const resizeCanvas = () => {
+
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight};
         resizeCanvas();
@@ -46,6 +49,7 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
         const gridOpacity = intensity === 'low' ? 0.1 : intensity === 'medium' ? 0.2 : 0.3;
         // Animation loop
         const animate = () => {
+
             // Clear canvas with fade effect'
             ctx.fillStyle = 'rgba(0, 0, 0, 0.1);
             ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -150,6 +154,7 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
             animationRef.current = requestAnimationFrame (animate) };
         animate () ;
         return () => {
+
             if (animationRef.current) {
 
                 cancelAnimationFrame(animationRef.current)}

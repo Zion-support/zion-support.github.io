@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   TrendingUp, 
   DollarSign, 
   Brain, 
@@ -27,33 +28,40 @@ import {
 } from 'lucide-react';
 
 const AIFinancialTradingPlatform = () => {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Market Analysis",
       description: "Advanced machine learning algorithms analyze market data in real-time to identify profitable trading opportunities with 85% accuracy."
     },
     {
+
       icon: <TrendingUp className="w-6 h-6" />,
       title: "Predictive Trading Signals",
       description: "Get real-time trading signals based on AI analysis of market patterns, news sentiment, and technical indicators."
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Risk Management",
       description: "Intelligent risk assessment and portfolio protection with automated stop-loss and position sizing recommendations."
     },
     {
+
       icon: <Users className="w-6 h-6" />,
       title: "Portfolio Optimization",
       description: "AI-driven portfolio rebalancing and asset allocation based on market conditions and your risk tolerance."
     },
     {
+
       icon: <Database className="w-6 h-6" />,
       title: "Multi-Market Access",
       description: "Trade stocks, forex, cryptocurrencies, and commodities across global markets from a single platform."
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Advanced Analytics",
       description: "Comprehensive performance tracking, backtesting capabilities, and detailed trading analytics."
@@ -62,6 +70,7 @@ const AIFinancialTradingPlatform = () => {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$99",
       period: "/month",
@@ -77,6 +86,7 @@ const AIFinancialTradingPlatform = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$299",
       period: "/month",
@@ -94,6 +104,7 @@ const AIFinancialTradingPlatform = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$999",
       period: "/month",
@@ -114,21 +125,25 @@ const AIFinancialTradingPlatform = () => {
 
   const benefits = [
     {
+
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Higher Returns",
       description: "AI-powered strategies deliver 20-40% better returns than traditional trading methods"
     },
     {
+
       icon: <Clock className="w-8 h-8" />,
       title: "24/7 Trading",
       description: "Automated trading that works around the clock, never missing market opportunities"
     },
     {
+
       icon: <Shield className="w-8 h-8" />,
       title: "Risk Reduction",
       description: "Intelligent risk management reduces portfolio volatility by up to 60%"
     },
     {
+
       icon: <Zap className="w-8 h-8" />,
       title: "Speed & Efficiency",
       description: "Execute trades in milliseconds with AI-powered decision making"
@@ -137,21 +152,25 @@ const AIFinancialTradingPlatform = () => {
 
   const tradingMarkets = [
     {
+
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Stocks",
       description: "Trade global equities with AI-powered analysis and recommendations"
     },
     {
+
       icon: <DollarSign className="w-8 h-8" />,
       title: "Forex",
       description: "Currency trading with real-time market analysis and automated strategies"
     },
     {
+
       icon: <Activity className="w-8 h-8" />,
       title: "Cryptocurrencies",
       description: "Digital asset trading with advanced blockchain analytics and AI insights"
     },
     {
+
       icon: <BarChart3 className="w-8 h-8" />,
       title: "Commodities",
       description: "Trade precious metals, oil, and agricultural products with AI guidance"
@@ -338,6 +357,7 @@ const AIFinancialTradingPlatform = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800 p-8 rounded-lg border ${
+
                   plan.popular 
                     ? 'border-green-500 ring-2 ring-green-500/20' 
                     : 'border-slate-700'
@@ -372,6 +392,7 @@ const AIFinancialTradingPlatform = () => {
                 <a
                   href="https://ziontechgroup.com/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+
                     plan.popular
                       ? 'bg-green-600 text-white hover:bg-green-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

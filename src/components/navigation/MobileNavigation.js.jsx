@@ -9,16 +9,21 @@ const mobileMenuItems = [
     { name: 'Innovation', icon: <Lightbulb className="w-5 h-5"/>, href: '/category/innovation' },
 ];
 export function MobileNavigation() {
+
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => {
+
         setIsOpen(!isOpen);
         // Prevent body scroll when menu is open
         if (!isOpen) {
+
             document.body.style.overflow = 'hidden'}
         else {
+
             document.body.style.overflow = 'unset'}
     };
     const closeMenu = () => {
+
         setIsOpen(false);
         document.body.style.overflow = 'unset'};
     return (<div className="lg:hidden">

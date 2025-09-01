@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
 const HealthcareSolutions = () => {
+
     const solutions = [
         {
+
             title: 'AI-Powered Patient Care',
             description: 'Intelligent patient monitoring and care management systems.',
             features: [
@@ -17,6 +19,7 @@ const HealthcareSolutions = () => {
             href: '/services/ai-autonomous-systems'
         },
         {
+
             title: 'Medical Imaging AI',
             description: 'Advanced AI for diagnostic imaging and analysis.',
             features: [
@@ -30,6 +33,7 @@ const HealthcareSolutions = () => {
             href: '/services/ai-autonomous-systems'
         },
         {
+
             title: 'Drug Discovery Platform',
             description: 'AI-driven pharmaceutical research and development.',
             features: [
@@ -43,6 +47,7 @@ const HealthcareSolutions = () => {
             href: '/services/quantum-technology'
         },
         {
+
             title: 'Healthcare Compliance',
             description: 'Automated compliance management for healthcare regulations.',
             features: [
@@ -58,16 +63,19 @@ const HealthcareSolutions = () => {
     ];
     const benefits = [
         {
+
             title: 'Improved Patient Outcomes',
             description: 'AI-driven insights lead to better diagnosis and treatment.',
             icon: Activity
         },
         {
+
             title: 'Operational Efficiency',
             description: 'Streamlined workflows reduce costs and improve care delivery.',
             icon: Users
         },
         {
+
             title: 'Enhanced Security',
             description: 'HIPAA-compliant solutions protect patient data.',
             icon: Shield
@@ -104,6 +112,7 @@ const HealthcareSolutions = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => {
+
             const Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
@@ -143,6 +152,7 @@ const HealthcareSolutions = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => {
+
             const Icon = benefit.icon;
             return (<div key={index} className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">

@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import React from 'react';
 import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Workflow, 
   Brain, 
   Link, 
@@ -19,7 +20,9 @@ import {
 } from 'lucide-react';
 
 const AIWorkflowAutomation: React.FC = () => {
+
   const serviceData = {
+
     title: "AI Workflow Automation Platform",
     subtitle: "Intelligent process automation that learns, adapts, and optimizes your business workflows",
     description: "Transform your business operations with our AI-powered workflow automation platform. Automate complex processes, reduce manual errors, and increase productivity by up to 300%.",
@@ -36,31 +39,37 @@ const AIWorkflowAutomation: React.FC = () => {
 
   const features = [
     {
+
       title: "Intelligent Process Discovery",
       description: "AI automatically identifies and maps your existing workflows for optimization",
       icon: "🔍"
     },
     {
+
       title: "Adaptive Learning",
       description: "Machine learning algorithms continuously improve automation efficiency",
       icon: "🧠"
     },
     {
+
       title: "Multi-Platform Integration",
       description: "Seamlessly connect with 200+ business applications and tools",
       icon: "🔗"
     },
     {
+
       title: "Real-time Analytics",
       description: "Monitor workflow performance and identify bottlenecks instantly",
       icon: "📊"
     },
     {
+
       title: "Custom Workflow Builder",
       description: "Drag-and-drop interface for creating complex automation workflows",
       icon: "🏗️"
     },
     {
+
       title: "Compliance & Audit Trails",
       description: "Full audit trails and compliance reporting for regulatory requirements",
       icon: "📋"
@@ -78,21 +87,25 @@ const AIWorkflowAutomation: React.FC = () => {
 
   const useCases = [
     {
+
       title: "Customer Service Automation",
       description: "Automate ticket routing, response generation, and follow-up scheduling",
       industry: "All Industries"
     },
     {
+
       title: "Financial Process Automation",
       description: "Automate invoice processing, expense approvals, and financial reporting",
       industry: "Finance & Accounting"
     },
     {
+
       title: "HR Workflow Automation",
       description: "Streamline recruitment, onboarding, and employee lifecycle management",
       industry: "Human Resources"
     },
     {
+
       title: "Sales Process Automation",
       description: "Automate lead scoring, follow-up sequences, and proposal generation",
       industry: "Sales & Marketing"
@@ -101,6 +114,7 @@ const AIWorkflowAutomation: React.FC = () => {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: 1299,
       currency: "$",
@@ -115,6 +129,7 @@ const AIWorkflowAutomation: React.FC = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: 2499,
       currency: "$",
@@ -130,6 +145,7 @@ const AIWorkflowAutomation: React.FC = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: 3999,
       currency: "$",
@@ -148,18 +164,21 @@ const AIWorkflowAutomation: React.FC = () => {
 
   const competitors = [
     {
+
       name: "UiPath",
       price: "$2,500 - $8,000/month",
       pros: ["Enterprise-grade", "Robust features"],
       cons: ["Higher cost", "Complex setup"]
     },
     {
+
       name: "Automation Anywhere",
       price: "$1,800 - $6,000/month",
       pros: ["Good scalability", "Cloud-native"],
       cons: ["Limited AI", "Expensive"]
     },
     {
+
       name: "Zion Tech Group AI Workflow",
       price: "$1,299 - $3,999/month",
       pros: ["Advanced AI", "Cost-effective", "Easy setup"],
@@ -169,18 +188,22 @@ const AIWorkflowAutomation: React.FC = () => {
 
   const faqs = [
     {
+
       question: "How long does it take to implement AI workflow automation?",
       answer: "Implementation typically takes 2-4 weeks depending on complexity. Our team handles the setup and provides comprehensive training."
     },
     {
+
       question: "Can I integrate with my existing business tools?",
       answer: "Yes! We support 200+ integrations including Salesforce, HubSpot, QuickBooks, Microsoft 365, and many more."
     },
     {
+
       question: "Is the platform secure and compliant?",
       answer: "Absolutely. We're SOC 2 Type II certified, GDPR compliant, and implement enterprise-grade security measures."
     },
     {
+
       question: "What kind of support do you provide?",
       answer: "We offer 24/7 technical support, dedicated account management for enterprise plans, and comprehensive training resources."
     }
@@ -382,6 +405,7 @@ const AIWorkflowAutomation: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border ${
+
                   plan.popular 
                     ? 'border-purple-500/50 ring-2 ring-purple-500/20' 
                     : 'border-slate-700'
@@ -415,6 +439,7 @@ const AIWorkflowAutomation: React.FC = () => {
                 <a
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular 
                       ? 'bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white' 
                       : 'bg-slate-700 hover:bg-slate-600 text-white'

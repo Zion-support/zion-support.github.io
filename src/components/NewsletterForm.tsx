@@ -1,15 +1,19 @@
 
 export function NewsletterForm() {
+
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   
     setIsSubmitting(true);
     try {
+
       await api.post('/newsletter', { email });
       toast.success('¡Gracias por suscribirte!');
       setEmail('')} catch {
+
       toast.error('Subscription failed. Please try again.')} finally {
+
       setIsSubmitting(false)}
   };
 

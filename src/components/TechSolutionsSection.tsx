@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion } from 'framer - motion';
 
@@ -8,6 +9,7 @@ import { motion } from 'framer - motion';
  * @returns {*} Function return value
  */
 function TechSolutionsSection () {
+
 =======
 >>>>>>> main
 
@@ -44,6 +46,7 @@ const techSolutions = [
     color: "from-purple-500 to-pink-500"
   },
   {
+
 "
     icon: "☁️","
     title: "Cloud Infrastructure","
@@ -52,6 +55,7 @@ const techSolutions = [
     color: "from-blue-500 to-cyan-500"
   },
   {
+
 "
     icon: "🔒","
     title: "Cybersecurity","
@@ -60,6 +64,7 @@ const techSolutions = [
     color: "from-red-500 to-orange-500"
   },
   {
+
 "
     icon: "📱","
     title: "Mobile Solutions","
@@ -68,6 +73,7 @@ const techSolutions = [
     color: "from-green-500 to-emerald-500"
   },
   {
+
 "
     icon: "🌐","
     title: "Web Development","
@@ -86,6 +92,7 @@ const techSolutions = [
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export function TechSolutionsSection() {
+
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">

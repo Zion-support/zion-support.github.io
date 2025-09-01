@@ -3,6 +3,7 @@ import React from 'react';
 export default QuantumNeuralNetworkPlatform;
 
 const QuantumNeuralNetworkPlatform = () => {
+
   return (<div className="min - h-screen bg - slate - 900 text - white">
       {/* Header Section */}
       <div className="pt - 20 pb - 16 bg - gradient - to - br from - slate - 900 via - blue - 900 / 20 to - cyan - 900 / 20">

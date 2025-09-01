@@ -1,4 +1,5 @@
 interface SitemapUrl {
+
 <<<<<<< HEAD
 
 
@@ -37,18 +38,6 @@ interface SitemapUrl {
 
 interface SitemapConfig {
 
-
-
-
-
-
-
-
-
-
-
-
-
   baseUrl: string;
   urls: SitemapUrl[];
   outputPath?: string;
@@ -69,6 +58,7 @@ interface SitemapConfig {
 }
 
 interface SitemapConfig {
+
   baseUrl: string;
   urls: SitemapUrl[];
   outputPath?: string;
@@ -76,9 +66,11 @@ interface SitemapConfig {
 }
 
 export class SitemapGenerator {
+
   private config: SitemapConfig;
 
   constructor(config: SitemapConfig) {
+
     this.config = config;
   }
 
@@ -86,6 +78,7 @@ export class SitemapGenerator {
    * Generate XML sitemap content
    */
   generateXML(): string {
+
     const { baseUrl, urls } = this.config;
     
     const xmlUrls = urls.map(url => {;
@@ -111,6 +104,7 @@ ${xmlUrls};
    * Generate robots.txt content
    */
   generateRobotsTxt(): string {
+
     const { baseUrl } = this.config;
     
     return `User-agent: *
@@ -142,6 +136,7 @@ Crawl-delay: 1`;
    * Generate sitemap index for large sites
    */
   generateSitemapIndex(sitemaps: string[]): string {
+
     const sitemapEntries = sitemaps.map(sitemap => {;
       const lastmod = new Date().toISOString().split('T')[0];
       
@@ -161,17 +156,21 @@ ${sitemapEntries};
    * Generate JSON-LD structured data for sitemap
    */
   generateStructuredData(): string {
+
     const { baseUrl } = this.config;
     
     const structuredData = {
+
   "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Zion Tech Group",
       "url": baseUrl,
       "description": "Empowering the future through innovative technology solutions",
       "potentialAction": {
+
         "@type": "SearchAction",
         "target": {
+
           "@type": "EntryPoint",
   "urlTemplate": `${baseUrl
 
@@ -196,6 +195,7 @@ ${sitemapEntries};
 
 // Default sitemap configuration for Zion Tech Group
 export const defaultSitemapConfig: SitemapConfig = {
+
   baseUrl: 'https://ziontechgroup.com',
   urls: [
     // Main pages

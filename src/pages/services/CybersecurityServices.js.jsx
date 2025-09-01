@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const CybersecurityServices = () => {
+
     const securityServices = [
         {
+
             title: "Threat Detection & Response",
             description: "Advanced threat detection systems with real-time monitoring and rapid response capabilities.",
             icon: Eye,
@@ -15,6 +17,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
             ]
         },
         {
+
             title: "Network Security",
             description: "Comprehensive network protection with firewalls, intrusion detection, and secure architecture.",
             icon: Network,
@@ -27,6 +30,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
             ]
         },
         {
+
             title: "Identity & Access Management",
             description: "Secure user authentication and authorization with multi-factor authentication and role-based access.",
             icon: Users,
@@ -39,6 +43,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
             ]
         },
         {
+
             title: "Data Protection & Encryption",
             description: "End-to-end data encryption and protection for sensitive information at rest and in transit.",
             icon: Lock,
@@ -51,6 +56,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
             ]
         },
         {
+
             title: "Security Auditing & Compliance",
             description: "Comprehensive security assessments and compliance with industry standards and regulations.",
             icon: Shield,
@@ -63,6 +69,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
             ]
         },
         {
+
             title: "Cloud Security",
             description: "Secure cloud environments with advanced security controls and monitoring.",
             icon: Cloud,

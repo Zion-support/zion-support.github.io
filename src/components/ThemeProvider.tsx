@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState } from 'react.ts';
 export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {
+
 export const useTheme = () => {;
 =======
 <<<<<<< HEAD
@@ -12,6 +13,7 @@ type Theme = 'light' | 'dark' | 'system';
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 interface ThemeContextType {
+
   theme: Theme;
   setTheme: (theme: Theme) => void;
   isDark: boolean}
@@ -37,13 +39,16 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(() => {
 
     if (typeof window !== 'null') {
+
 <<<<<<< HEAD
 
       
       if (saved && ['light',dark',system'].includes(saved)) {
+
 =======
 '
       const saved = localStorage.getItem('theme') as Theme;'      if (saved && ['light', 'dark', 'system'].includes(saved)) {
+
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         return saved}
@@ -53,6 +58,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [isDark, setIsDark] = useState (false) ;
 
   useEffect ( () => {
+
 <<<<<<< HEAD
     const root = window.document.documentElement;
 
@@ -62,6 +68,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
       if (theme = == 'system') {;
         effectiveTheme = window.matchMedia (' (prefers - color - scheme: dark) ') .matches ? 'dark' : 'light';
       } else {
+
         effectiveTheme = theme;
       }
 

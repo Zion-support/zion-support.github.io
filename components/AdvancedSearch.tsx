@@ -26,6 +26,7 @@ interface SearchFilter {
 }
 
 interface SearchSuggestion {
+
   text: string;
   type: 'recent' | 'popular' | 'related';
   count?: number;
@@ -121,6 +122,7 @@ export default function AdvancedSearch() {
   };
 
   const performSearch = useCallbackasync (: unknown {
+
     setIsSearching(true);
     
     // Simulate API call
@@ -158,7 +160,9 @@ export default function AdvancedSearch() {
 
   // Debounced search
   useEffect(: unknown {
+
     const timer = setTimeout(: unknown {
+
       if (query.trim()) {
 
         performSearch();
@@ -219,6 +223,7 @@ export default function AdvancedSearch() {
   };
 
   const clearFilters = (...args: unknown[]): unknown => {
+
     setFilters({
 
       type: [],

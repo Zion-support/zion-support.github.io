@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { INNOVATIVE_SERVICES_2027 } from '@/data / innovativeServices2027';
 export default AllServices2027;
 import {
+
 import { motion } from 'framer - motion';
 import SEO from "../components / SEOHead";
 
@@ -44,14 +45,18 @@ const AllServices2027: React.FC = () => {;
     selectedCategory === 'All' || service.category === selectedCategory) ;
 
   const getCategoryStats = (categoryId: string) => {
+
     if (categoryId === 'All') {
+
       return {
+
               count: innovativeServices2027.length,
       avgPrice: Math.round (innovativeServices2027.reduce ( (sum, s) => sum + parseInt (s.price.replace (/[$,]/g, '') .split ('/') [0]) , 0) / innovativeServices2027.length) ,
       avgRating: Math.round ( (innovativeServices2027.reduce ( (sum, s) => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10;
       }};
     const services = innovativeServices2027.filter (s => s.category === categoryId) ;
           return {
+
         count: services.length,
         avgPrice: Math.round (services.reduce ( (sum, s) => sum + parseInt (s.price.replace (/[$,]/g, '') .split ('/') [0]) , 0) / services.length) ,
         avgRating: Math.round ( (services.reduce ( (sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
@@ -69,6 +74,7 @@ const AllServices2027: React.FC = () => {;
 
     const services = INNOVATIVE_SERVICES_2027.filter (s => s.category === categoryId) ;
     return {
+
       count: services.length,
       avgPrice: Math.round (services.reduce ( (sum, s) => sum + s.price, 0) / services.length) ,
       avgRating: Math.round ( (services.reduce ( (sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
@@ -76,6 +82,7 @@ const AllServices2027: React.FC = () => {;
   };
 
   const containerVariants = {
+
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -86,6 +93,7 @@ const AllServices2027: React.FC = () => {;
   };
 
   const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0
 
@@ -114,11 +122,13 @@ const AllServices2027: React.FC = () => {;
         <div role="button" className="relative z - 10 max - w-7xl mx - auto px - 6 text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -195,6 +205,7 @@ const AllServices2027: React.FC = () => {;
                   key = {category.id}
                   variants={itemVariants}
                   className={`bg - zion - slate - dark border border - zion - slate - light rounded - xl p - 6 hover:border - cyan - 500 transition - all duration - 300 cursor - pointer ${
+
                     selectedCategory === category.id ? 'border - cyan - 500 bg - zion - slate' : ''
                   }`}
                   onClick={ () => setSelectedCategory (category.id) }
@@ -433,8 +444,11 @@ const AllServices2027: React.FC = () => {;
 
 // Service Card Component
 const ServiceCard: React.FC<{ service}> = ({ service }) => {
+
   const getCategoryIcon = (category: string) => {
+
     switch (category) {
+
       case 'AI Services':;
             </a>;
           </div>;
@@ -445,6 +459,7 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
 
 // Service Card Component
 const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
+
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
       case 'AI Services':;

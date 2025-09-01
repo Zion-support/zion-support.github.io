@@ -3,8 +3,10 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CpuChipIcon, CloudIcon, ShieldCheckIcon, LightBulbIcon, RocketLaunchIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 export function ServicesShowcase() {
+
     const services = [
         {
+
             icon: CpuChipIcon,
             title: "AI & Machine Learning",
             description: "Advanced AI solutions for automation, decision-making, and predictive analytics",
@@ -12,6 +14,7 @@ export function ServicesShowcase() {
             href: "/ai-solutions"
         },
         {
+
             icon: CloudIcon,
             title: "Cloud & DevOps",
             description: "Scalable cloud infrastructure and automated deployment pipelines",
@@ -19,6 +22,7 @@ export function ServicesShowcase() {
             href: "/cloud-devops"
         },
         {
+
             icon: ShieldCheckIcon,
             title: "Cybersecurity",
             description: "Comprehensive security solutions for threat detection and prevention",
@@ -26,6 +30,7 @@ export function ServicesShowcase() {
             href: "/cybersecurity"
         },
         {
+
             icon: LightBulbIcon,
             title: "Digital Transformation",
             description: "End-to-end digital strategy and implementation services",
@@ -33,6 +38,7 @@ export function ServicesShowcase() {
             href: "/digital-transformation"
         },
         {
+
             icon: RocketLaunchIcon,
             title: "Micro SaaS Solutions",
             description: "Custom SaaS platforms for specific business needs",
@@ -40,6 +46,7 @@ export function ServicesShowcase() {
             href: "/micro-saas"
         },
         {
+
             icon: ChartBarIcon,
             title: "Business Intelligence",
             description: "Data analytics and insights for informed decision-making",
@@ -48,23 +55,29 @@ export function ServicesShowcase() {
         }
     ];
     const containerVariants = {
+
         hidden: { opacity: 0 },
         visible: {
+
             opacity: 1,
             transition: {
+
                 staggerChildren: 0.1
             }
         }
     };
     const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0 
 
 },
         visible: {
+
             y: 0,
             opacity: 1,
             transition: {
+
                 duration: 0.5
             }
         }
@@ -78,10 +91,12 @@ export function ServicesShowcase() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -127,14 +142,17 @@ export function ServicesShowcase() {
 
         {/* CTA */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} viewport={{ once: true }} transition = {
+
   { duration: 0.8,
   delay: 0.5 
 

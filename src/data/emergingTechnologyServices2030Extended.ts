@@ -3,6 +3,7 @@ import { ProductListing } from "@/types/listings";
 export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
   // Metaverse Development Platform
   {
+
     id: "metaverse-development-platform",
     title: "Metaverse Development Platform",
     description: "Complete metaverse development platform for creating immersive 3D virtual worlds, VR experiences, and digital twin environments. Enables businesses to build their own metaverse presence and engage customers in new ways.",
@@ -21,6 +22,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
     availability: "10-14 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/metaverse-platform",
@@ -35,6 +37,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
 
   // Quantum Machine Learning Platform
   {
+
     id: "quantum-machine-learning-platform",
     title: "Quantum Machine Learning Platform",
     description: "Advanced quantum machine learning platform that leverages quantum computing to solve complex optimization problems and accelerate AI training. Provides 1000x speedup for specific computational tasks.",
@@ -53,6 +56,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
     availability: "16-20 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-ml-platform",
@@ -67,6 +71,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
 
   // Brain-Computer Interface Development Kit
   {
+
     id: "brain-computer-interface-devkit",
     title: "Brain-Computer Interface Development Kit",
     description: "Advanced BCI development kit for creating applications that interface directly with the human brain. Enables new forms of human-computer interaction and accessibility solutions.",
@@ -85,6 +90,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
     availability: "14-18 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/bci-devkit",
@@ -99,6 +105,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
 
   // Synthetic Biology Platform
   {
+
     id: "synthetic-biology-platform",
     title: "Synthetic Biology Platform",
     description: "Comprehensive synthetic biology platform for designing, simulating, and testing genetic circuits and biological systems. Enables rapid prototyping of biological solutions for healthcare, agriculture, and industry.",
@@ -117,6 +124,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
     availability: "16-20 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/synthetic-biology",
@@ -131,6 +139,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
 
   // Fusion Energy Simulation Platform
   {
+
     id: "fusion-energy-simulation-platform",
     title: "Fusion Energy Simulation Platform",
     description: "Advanced fusion energy simulation platform for modeling and optimizing nuclear fusion reactions. Accelerates research into clean, unlimited energy sources and reduces development costs.",
@@ -149,6 +158,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
     availability: "20-24 Weeks",
     aiScore: 98,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/fusion-energy",
@@ -163,6 +173,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
 
   // Space Mining Operations Platform
   {
+
     id: "space-mining-operations-platform",
     title: "Space Mining Operations Platform",
     description: "Comprehensive platform for planning, managing, and optimizing space mining operations. Enables efficient extraction of valuable resources from asteroids and other celestial bodies.",
@@ -181,6 +192,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
     availability: "24-28 Weeks",
     aiScore: 97,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/space-mining",
@@ -195,6 +207,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
 
   // Quantum Internet Infrastructure
   {
+
     id: "quantum-internet-infrastructure",
     title: "Quantum Internet Infrastructure Platform",
     description: "Next-generation quantum internet infrastructure that enables ultra-secure communication and quantum networking. Provides unbreakable encryption and enables quantum computing collaboration.",
@@ -213,6 +226,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
     availability: "28-32 Weeks",
     aiScore: 99,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-internet",
@@ -227,6 +241,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
 
   // AI-Powered Climate Modeling Platform
   {
+
     id: "ai-climate-modeling-platform",
     title: "AI Climate Modeling Platform",
     description: "Advanced climate modeling platform using AI to predict climate changes, model weather patterns, and assess environmental impacts. Provides accurate predictions for climate action planning.",
@@ -245,6 +260,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
     availability: "8-10 Weeks",
     aiScore: 96,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-climate-modeling",
@@ -259,6 +275,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
 
   // Holographic Display Technology Platform
   {
+
     id: "holographic-display-technology",
     title: "Holographic Display Technology Platform",
     description: "Advanced holographic display platform for creating immersive 3D visual experiences. Enables new forms of communication, entertainment, and business presentations.",
@@ -277,6 +294,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: ProductListing[] = [
     availability: "10-12 Weeks",
     aiScore: 95,
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/holographic-display",

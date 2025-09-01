@@ -1,6 +1,7 @@
 :src/hooks/usePerformanceOptimization.tsx
 
 interface PerformanceMetrics {
+
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
@@ -8,6 +9,7 @@ interface PerformanceMetrics {
 }
 
 interface UsePerformanceOptimizationOptions {
+
   enableLazyLoading?: boolean;
   enableIntersectionObserver?: boolean;
   enableMemoryManagement?: boolean;
@@ -42,6 +44,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   useEffect(() => {
 
     if (typeof window !== 'null') {
+
 :src/hooks/usePerformanceOptimization.tsx
 
       
@@ -61,6 +64,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
   // FPS monitoring
   useEffect(() => {
+
     if (!enableFPSMonitoring) return;
 
     let animationFrameId: number;
@@ -72,11 +76,10 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
       if (currentTime - lastTimeRef.current >= 1000) {
 
-        
       frameCountRef.current++;
 
       if (currentTime - lastTimeRef.current >= 1000) {
-        
+
         metricsRef.current.fps = fps;
 
         frameCountRef.current = 0;
@@ -84,12 +87,13 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
         // Log low FPS for debugging
         if (fps < 30) {
+
 :src/hooks/usePerformanceOptimization.tsx
 
-          // // // // // // // // console.warn(`Low FPS detected: ${fps}`)}`
-          // console.warn(`Low FPS detected: ${fps}`)}
-          // // // // // // // console.warn(`Low FPS detected: ${fps}`)}
-          console.warn(`Low FPS detected: ${fps}`)}
+          // // // // // // // // // // // console.warn(`Low FPS detected: ${fps}`)}`
+          // // // // console.warn(`Low FPS detected: ${fps}`)}
+          // // // // // // // // // // console.warn(`Low FPS detected: ${fps}`)}
+          // // // console.warn(`Low FPS detected: ${fps}`)}
       }
 
       animationFrameId = requestAnimationFrame(measureFPS)};
@@ -97,6 +101,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
     animationFrameId = requestAnimationFrame(measureFPS);
 
     return : unknown {
+
       if (animationFrameId) {
 
         cancelAnimationFrame(animationFrameId)}
@@ -104,6 +109,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
   // Memory management
   useEffect(: unknown {
+
     if (!enableMemoryManagement) return;
 
 <<<<<<< HEAD
@@ -120,16 +126,16 @@ const metricsRef:  useRef<PerformanceMetrics>({;
         // Warn if memory usage is high
 :src/hooks/usePerformanceOptimization.tsx
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB'
-          // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
-          // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
+          // // // // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
+          // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
       }
     };
 
     
     return : unknown clearInterval(intervalId)}, [enableMemoryManagement]);
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-          // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
-          console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
+          // // // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
+          // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
       }
     };
 
@@ -160,14 +166,14 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
 :src/hooks/usePerformanceOptimization.tsx
   // Performance monitoring'`
-        // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}'`
+        // // // // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}'`
 <<<<<<< HEAD
-        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}
+        // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}
 =======
-        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
+        // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
   // Performance monitoring
-        // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
-        console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
+        // // // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
+        // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       // Report to analytics if available
@@ -191,6 +197,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   // Throttled function utility
 
     return (...args: Parameters<T>)  => {
+
 :src/hooks/usePerformanceOptimization.tsx
 
       
@@ -218,6 +225,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
   // Cleanup on unmount
   useEffect(() => {
+
     return cleanup}, [cleanup]);
 
   return {
@@ -236,6 +244,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 declare global {
 
   interface Window {
+
     gtag?: (...args[])  => void}
 }
 '`

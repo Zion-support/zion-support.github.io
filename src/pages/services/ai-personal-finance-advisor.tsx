@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   PiggyBank, 
   TrendingUp, 
   BarChart3, 
@@ -55,38 +56,45 @@ import { SEO } from '../../components/SEO';
 import { Link } from 'react-router-dom';
 
 export default function AIPersonalFinanceAdvisor() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Financial Planning",
       description: "Intelligent financial planning with personalized recommendations based on your goals and risk tolerance",
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       icon: PieChart,
       title: "Smart Budgeting",
       description: "Automated budget creation, expense tracking, and spending pattern analysis with AI insights",
       color: "from-green-500 to-emerald-500"
     },
     {
+
       icon: LineChart,
       title: "Investment Optimization",
       description: "AI-driven investment recommendations, portfolio rebalancing, and risk management strategies",
       color: "from-purple-500 to-pink-500"
     },
     {
+
       icon: Shield,
       title: "Debt Management",
       description: "Intelligent debt payoff strategies, interest optimization, and credit score improvement plans",
       color: "from-red-500 to-orange-500"
     },
     {
+
       icon: TargetIcon,
       title: "Goal Tracking",
       description: "Personalized financial goal setting, progress monitoring, and milestone achievement tracking",
       color: "from-indigo-500 to-purple-500"
     },
     {
+
       icon: Lock,
       title: "Security & Privacy",
       description: "Bank-level security, encrypted data storage, and privacy protection for your financial information",
@@ -96,24 +104,28 @@ export default function AIPersonalFinanceAdvisor() {
 
   const benefits = [
     {
+
       icon: Clock,
       title: "Time Savings",
       description: "Reduce financial planning time by 75%",
       metric: "75%"
     },
     {
+
       icon: DollarSign,
       title: "Cost Savings",
       description: "Save up to $2,000 annually on fees",
       metric: "$2,000"
     },
     {
+
       icon: Target,
       title: "Goal Achievement",
       description: "90% success rate in reaching goals",
       metric: "90%"
     },
     {
+
       icon: TrendingUp,
       title: "Investment Returns",
       description: "Improve returns by 15-25%",
@@ -123,6 +135,7 @@ export default function AIPersonalFinanceAdvisor() {
 
   const pricing = [
     {
+
       name: "Basic",
       price: 99,
       period: "per month",
@@ -138,6 +151,7 @@ export default function AIPersonalFinanceAdvisor() {
       cta: "Get Started"
     },
     {
+
       name: "Professional",
       price: 199,
       period: "per month",
@@ -154,6 +168,7 @@ export default function AIPersonalFinanceAdvisor() {
       cta: "Most Popular"
     },
     {
+
       name: "Premium",
       price: 399,
       period: "per month",
@@ -182,24 +197,28 @@ export default function AIPersonalFinanceAdvisor() {
 
   const useCases = [
     {
+
       title: "Young Professionals",
       description: "Build wealth early with smart budgeting, debt management, and investment strategies",
       icon: Users,
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       title: "Families",
       description: "Plan for children's education, retirement, and family financial security",
       icon: Users,
       color: "from-green-500 to-emerald-500"
     },
     {
+
       title: "Pre-Retirement",
       description: "Optimize retirement planning, maximize savings, and prepare for financial independence",
       icon: TargetIcon,
       color: "from-purple-500 to-pink-500"
     },
     {
+
       title: "Small Business Owners",
       description: "Separate personal and business finances, optimize tax strategies, and plan for growth",
       icon: Building,
@@ -396,6 +415,7 @@ export default function AIPersonalFinanceAdvisor() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`p-8 rounded-xl border ${
+
                   plan.popular 
                     ? 'bg-gradient-to-br from-blue-900/50 to-cyan-900/50 border-blue-500/50 shadow-2xl shadow-blue-500/25' 
                     : 'bg-slate-800/50 border-slate-700/50'
@@ -426,6 +446,7 @@ export default function AIPersonalFinanceAdvisor() {
                 <Link
                   to={plan.name === "Premium" ? "/contact" : "/request-quote"}
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white transform hover:scale-105'
                       : 'bg-slate-700 hover:bg-slate-600 text-white'

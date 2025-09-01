@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = () => {
+
 <<<<<<< HEAD
 import { motion } from 'framer - motion';
 
@@ -66,6 +67,7 @@ import { motion } from 'framer - motion';
 
     ];
     useEffect ( () => {
+
         setContentIssues (sampleIssues) ;
         generateReport (sampleIssues) }, []) ;
     const generateReport = (issues) => {
@@ -87,6 +89,7 @@ import { motion } from 'framer - motion';
             pagesWithMetaDescriptions: 32, // Sample data
             lastUpdated: new Date () }) };
     const startAnalysis = async () => {
+
         setIsAnalyzing (true) ;
         // Simulate content analysis
         await new Promise (resolve => setTimeout (resolve, 3000) ) ;

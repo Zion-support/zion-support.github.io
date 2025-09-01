@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";"
 import { useState, useRef } from "react";"
 import { Mail import { useToast } from "@/hooks/use-toast";
 export function EnhancedNewsletterForm() {
+
 "
     const [email, setEmail] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -33,13 +34,16 @@ export function EnhancedNewsletterForm() {
         lastSubmit.current = now;
         const trimmed = email.trim();
         if (!EMAIL_REGEX.test(trimmed)) {
+
 "
             toast.error("Invalid email");
             return}
         setIsSubmitting (true) ;
         try {
+
 "
             const res = await fetch("/api/newsletter", {
+
 "
                 method: "POST","
                 headers: { "Content-Type": "application/json" },
@@ -50,13 +54,13 @@ export function EnhancedNewsletterForm() {
                 // Handle different success statuses
                 if (data.status === 'already_subscribed') {
 
-                // // // // // // // // console.error('Newsletter subscription failed:', data);"
+                // // // // // // // // // // // console.error('Newsletter subscription failed:', data);"
                 toast.error(data.error || "Subscription failed. Please try again.");
 
 
         catch (err) {
 
-            // // // // // // // // console.error('Newsletter subscription error:', err);"
+            // // // // // // // // // // // console.error('Newsletter subscription error:', err);"
             toast.error("Unable to subscribe right now. Please try again later.");
 
         finally {
@@ -65,6 +69,7 @@ export function EnhancedNewsletterForm() {
 '"
                     toast.success(data.message || "You're already subscribed!")}
                 else {
+
 "
                     toast.success(data.message || "Thanks for subscribing!")}
                 setIsSubmitted(true);"
@@ -72,12 +77,12 @@ export function EnhancedNewsletterForm() {
             else {
 
                 // Handle error responses'
-                // console.error('Newsletter subscription failed:', data);"
+                // // // // console.error('Newsletter subscription failed:', data);"
                 toast.error(data.error || "Subscription failed. Please try again.")}
         }
         catch (err) {
 
-            // console.error('Newsletter subscription error:', err);"
+            // // // // console.error('Newsletter subscription error:', err);"
             toast.error("Unable to subscribe right now. Please try again later.")}
         finally {
 

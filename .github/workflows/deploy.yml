@@ -13,7 +13,7 @@ jobs:
     name: Deploy to Production
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -44,7 +44,7 @@ jobs:
             exit 1
           fi
           echo "Build successful - dist folder created"
-          
+
           # Check for essential files
           if [ -f dist/index.html ]; then
             echo "✓ index.html found"
@@ -52,7 +52,7 @@ jobs:
             echo "✗ index.html not found"
             exit 1
           fi
-          
+
           if [ -d dist/assets ]; then
             echo "✓ assets folder found"
           else

@@ -16,6 +16,7 @@ export const FuturisticLoader = ({
     medium: 'text-lg',
     large: 'text-xl'};
   const renderLoader = () => {
+
     switch (variant) {
 
       case 'matrix':

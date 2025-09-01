@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Atom, 
   Zap, 
@@ -30,23 +31,28 @@ import {
 import { SEO } from '@/components/SEO';
 
 export default function AIQuantumHybridPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Quantum Integration",
       description: "Seamless integration between classical AI and quantum computing for unprecedented computational power"
     },
     {
+
       icon: Atom,
       title: "Quantum Advantage",
       description: "Leverage quantum supremacy for complex optimization problems and cryptography"
     },
     {
+
       icon: Zap,
       title: "Hybrid Processing",
       description: "Intelligent routing between classical and quantum systems for optimal performance"
     },
     {
+
       icon: Shield,
       title: "Quantum Security",
       description: "Post-quantum cryptography and quantum-resistant security protocols"
@@ -55,24 +61,28 @@ export default function AIQuantumHybridPlatform() {
 
   const services = [
     {
+
       title: "Quantum Machine Learning",
       description: "Advanced ML algorithms enhanced with quantum computing capabilities",
       icon: Brain,
       features: ["Quantum neural networks", "Quantum feature selection", "Quantum clustering algorithms", "Hybrid optimization"]
     },
     {
+
       title: "Quantum Cryptography",
       description: "Next-generation security using quantum key distribution and post-quantum algorithms",
       icon: Lock,
       features: ["Quantum key distribution", "Post-quantum cryptography", "Quantum random number generation", "Secure communication"]
     },
     {
+
       title: "Quantum Optimization",
       description: "Solve complex optimization problems using quantum annealing and variational algorithms",
       icon: Target,
       features: ["Quantum annealing", "Variational quantum algorithms", "Portfolio optimization", "Supply chain optimization"]
     },
     {
+
       title: "Hybrid Computing",
       description: "Intelligent workload distribution between classical and quantum systems",
       icon: Cpu,
@@ -95,6 +105,7 @@ export default function AIQuantumHybridPlatform() {
 
   const pricing = [
     {
+
       name: "Starter",
       price: "$2,999",
       period: "per month",
@@ -110,6 +121,7 @@ export default function AIQuantumHybridPlatform() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$7,999",
       period: "per month",
@@ -126,6 +138,7 @@ export default function AIQuantumHybridPlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$19,999",
       period: "per month",
@@ -353,6 +366,7 @@ export default function AIQuantumHybridPlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+
                   plan.popular 
                     ? 'border-purple-500/50 ring-2 ring-purple-500/20' 
                     : 'border-gray-700'
@@ -387,6 +401,7 @@ export default function AIQuantumHybridPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full inline-flex justify-center items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600'
                       : 'bg-gray-700 text-white hover:bg-gray-600'

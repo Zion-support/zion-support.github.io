@@ -1,4 +1,5 @@
 export interface InnovativeMicroSaasService2027 {
+
   id: string;
   title: string;
   description: string;
@@ -36,6 +37,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027
   [
     // AI-Powered Business Solutions
     {
+
 <<<<<<< HEAD
 
       id: 'quantum-neural-network-platform',

@@ -3,6 +3,7 @@ import React from 'react';
 export default AIAutonomousSynthesis;
 
 const AIAutonomousSynthesis = () => {
+
   return (<>
       <Helmet>
         <title > AI Autonomous Synthesis Platform | Zion Tech Group</title>

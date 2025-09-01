@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { SEO } from '@/components / SEO';
 export default ExpandedServicesPricingGuide2027;}}}}}}
 import {
+
 import {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
   Search,
@@ -70,6 +72,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
       pricing = pricing.filter (p => p.category === selectedCategory) }
     if (searchQuery) {
+
       pricing = pricing.filter (p =>
         p.serviceName.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
         p.category.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
@@ -77,7 +80,9 @@ import { motion, AnimatePresence } from 'framer - motion';
     setFilteredPricing (pricing) }, [selectedCategory, searchQuery]) ;
 
   const getCategoryIcon = (category: string) => {
+
     switch (category) {
+
       case 'Cybersecurity':;
       pricing = pricing.filter (p => ;
         p.serviceName.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
@@ -131,11 +136,13 @@ import { motion, AnimatePresence } from 'framer - motion';
           <div className="text - center">
             <motion.h1
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
@@ -149,16 +156,19 @@ import { motion, AnimatePresence } from 'framer - motion';
             </motion.h1>
             <motion.p
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -172,16 +182,19 @@ import { motion, AnimatePresence } from 'framer - motion';
             {/* Contact Info */}
             <motion.div
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.4
 

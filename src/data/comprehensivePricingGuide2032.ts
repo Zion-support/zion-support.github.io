@@ -1,4 +1,5 @@
 export interface PricingTier2032 {
+
   id: string;
   name: string;
   price: number;
@@ -13,6 +14,7 @@ export interface PricingTier2032 {
 }
 
 export interface ServicePricing2032 {
+
   serviceId: string;
   serviceName: string;
   category: string;
@@ -21,17 +23,20 @@ export interface ServicePricing2032 {
   pricingModel: string;
   tiers: PricingTier2032[];
   enterprisePricing: {
+
     custom: boolean;
     startingPrice: number;
     contactRequired: boolean;
     features: string[];
   };
   addOns: {
+
     name: string;
     price: number;
     description: string;
   }[];
   volumeDiscounts: {
+
     users: number;
     discount: number;
   }[];
@@ -42,6 +47,7 @@ export interface ServicePricing2032 {
   guaranteeDuration: string;
   sla: string;
   supportLevels: {
+
     level: string;
     responseTime: string;
     features: string[];
@@ -51,6 +57,7 @@ export interface ServicePricing2032 {
 export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
   // 1. AI Legal Document Analyzer
   {
+
     serviceId: "ai-legal-document-analyzer",
     serviceName: "Zion AI Legal Document Analyzer",
     category: "AI & Legal Tech",
@@ -59,6 +66,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
     pricingModel: "Tiered Subscription",
     tiers: [
       {
+
         id: "starter",
         name: "Starter",
         price: 599,
@@ -82,6 +90,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
         bestFor: "Small law firms, solo practitioners, startups"
       },
       {
+
         id: "professional",
         name: "Professional",
         price: 1299,
@@ -110,6 +119,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
         savings: "Save 20% with annual billing"
       },
       {
+
         id: "enterprise",
         name: "Enterprise",
         price: 2499,
@@ -138,6 +148,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
       }
     ],
     enterprisePricing: {
+
       custom: true,
       startingPrice: 5000,
       contactRequired: true,
@@ -153,16 +164,19 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
     },
     addOns: [
       {
+
         name: "Additional API Calls",
         price: 0.01,
         description: "Per additional API call beyond plan limit"
       },
       {
+
         name: "Custom Model Training",
         price: 2500,
         description: "One-time fee for custom AI model training"
       },
       {
+
         name: "Priority Support Upgrade",
         price: 299,
         description: "Monthly upgrade to 24/7 priority support"
@@ -182,16 +196,19 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
     sla: "99.9% uptime guarantee",
     supportLevels: [
       {
+
         level: "Email Support",
         responseTime: "24 hours",
         features: ["Email support", "Knowledge base access", "Community forum"]
       },
       {
+
         level: "Priority Support",
         responseTime: "4 hours",
         features: ["Priority email support", "Phone support", "Live chat", "Dedicated support team"]
       },
       {
+
         level: "Enterprise Support",
         responseTime: "1 hour",
         features: ["24/7 phone support", "Dedicated account manager", "Custom SLA", "On-site support available"]
@@ -201,6 +218,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
 
   // 2. Quantum-Secure Communication Platform
   {
+
     serviceId: "quantum-secure-communication",
     serviceName: "Zion Quantum-Secure Communication Platform",
     category: "Cybersecurity",
@@ -209,6 +227,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
     pricingModel: "Tiered Subscription",
     tiers: [
       {
+
         id: "starter",
         name: "Starter",
         price: 1299,
@@ -233,6 +252,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
         bestFor: "Small government agencies, research institutions, security-conscious startups"
       },
       {
+
         id: "professional",
         name: "Professional",
         price: 2999,
@@ -261,6 +281,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
         savings: "Save 25% with annual billing"
       },
       {
+
         id: "enterprise",
         name: "Enterprise",
         price: 5999,
@@ -289,6 +310,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
       }
     ],
     enterprisePricing: {
+
       custom: true,
       startingPrice: 15000,
       contactRequired: true,
@@ -304,16 +326,19 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
     },
     addOns: [
       {
+
         name: "Additional Users",
         price: 25,
         description: "Per additional user beyond plan limit"
       },
       {
+
         name: "Custom Protocol Development",
         price: 5000,
         description: "One-time fee for custom quantum protocol development"
       },
       {
+
         name: "On-Site Security Audit",
         price: 2500,
         description: "One-time fee for on-site security audit and assessment"
@@ -333,16 +358,19 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
     sla: "99.99% uptime guarantee",
     supportLevels: [
       {
+
         level: "Email Support",
         responseTime: "12 hours",
         features: ["Email support", "Knowledge base access", "Security documentation"]
       },
       {
+
         level: "Priority Support",
         responseTime: "2 hours",
         features: ["Priority email support", "Phone support", "Live chat", "Dedicated security team"]
       },
       {
+
         level: "Enterprise Support",
         responseTime: "30 minutes",
         features: ["24/7 phone support", "Dedicated account manager", "Custom SLA", "On-site support available"]
@@ -352,6 +380,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
 
   // 3. AI Healthcare Predictive Analytics
   {
+
     serviceId: "ai-healthcare-predictive-analytics",
     serviceName: "Zion AI Healthcare Predictive Analytics Platform",
     category: "AI & Healthcare",
@@ -360,6 +389,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
     pricingModel: "Tiered Subscription",
     tiers: [
       {
+
         id: "starter",
         name: "Starter",
         price: 899,
@@ -384,6 +414,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
         bestFor: "Small healthcare practices, clinics, individual practitioners"
       },
       {
+
         id: "professional",
         name: "Professional",
         price: 1999,
@@ -412,6 +443,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
         savings: "Save 20% with annual billing"
       },
       {
+
         id: "enterprise",
         name: "Enterprise",
         price: 3999,
@@ -440,6 +472,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
       }
     ],
     enterprisePricing: {
+
       custom: true,
       startingPrice: 8000,
       contactRequired: true,
@@ -455,16 +488,19 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
     },
     addOns: [
       {
+
         name: "Additional Patients",
         price: 0.10,
         description: "Per additional patient beyond plan limit"
       },
       {
+
         name: "Custom Model Development",
         price: 3000,
         description: "One-time fee for custom AI model development"
       },
       {
+
         name: "Compliance Consulting",
         price: 1500,
         description: "Monthly fee for compliance consulting and support"
@@ -484,16 +520,19 @@ export const COMPREHENSIVE_PRICING_GUIDE_2032: ServicePricing2032[] = [
     sla: "99.9% uptime guarantee",
     supportLevels: [
       {
+
         level: "Email Support",
         responseTime: "24 hours",
         features: ["Email support", "Knowledge base access", "Healthcare documentation"]
       },
       {
+
         level: "Priority Support",
         responseTime: "4 hours",
         features: ["Priority email support", "Phone support", "Live chat", "Dedicated healthcare team"]
       },
       {
+
         level: "Enterprise Support",
         responseTime: "1 hour",
         features: ["24/7 phone support", "Dedicated account manager", "Custom SLA", "On-site support available"]

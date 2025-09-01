@@ -2,7 +2,9 @@ import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 import { SEO } from '@/components / SEO';
 export default React.memo (function NewInnovativeServicesShowcase (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 import { NEW_INNOVATIVE_SERVICES_2025 } from '../data / newInnovativeServices2025';
 
@@ -20,58 +22,57 @@ import { NEW_INNOVATIVE_SERVICES_2025 } from '../data / newInnovativeServices202
   Clock,
   Users,
   Target,
-  Rocket,
-} from 'lucide - react.ts';
+  Rocket} from 'lucide - react.ts';
 
   const serviceCategories = [
     {
+
       title: 'AI & Legal Tech',
       description:
         'Revolutionary legal document automation and compliance solutions',
       icon: Shield,
-      color: 'from - blue - 500 to - purple - 600',
-    },
+      color: 'from - blue - 500 to - purple - 600'},
     {
+
       title: 'AI & Healthcare',
       description:
         'Transformative healthcare analytics and clinical decision support',
       icon: TrendingUp,
-      color: 'from - green - 500 to - blue - 600',
-    },
+      color: 'from - green - 500 to - blue - 600'},
     {
+
       title: 'AI & FinTech',
       description:
         'Advanced trading platforms with intelligent risk management',
       icon: DollarSign,
-      color: 'from - green - 500 to - emerald - 600',
-    },
+      color: 'from - green - 500 to - emerald - 600'},
   ];
 
   const keyBenefits = [
     {
+
       title: 'Cutting - Edge AI Technology',
       description:
         'Leverage the latest advances in machine learning, natural language processing, and predictive analytics',
-      icon: Sparkles,
-    },
+      icon: Sparkles},
     {
+
       title: 'Industry - Specific Solutions',
       description:
         'Tailored solutions designed for specific industry challenges and regulatory requirements',
-      icon: Target,
-    },
+      icon: Target},
     {
+
       title: 'Proven ROI & Results',
       description:
         'Measurable improvements in efficiency, accuracy, and cost savings across all services',
-      icon: TrendingUp,
-    },
+      icon: TrendingUp},
     {
+
       title: 'Enterprise - Grade Security',
       description:
         'SOC 2, ISO 27001, and industry - specific compliance certifications for maximum security',
-      icon: Shield,
-    },
+      icon: Shield},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white">

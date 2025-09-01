@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-import { 
+import {
+
   BarChart3, 
   TrendingUp, 
   Users, 
@@ -31,24 +32,12 @@ import {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface AnalyticsData {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 =======
 import React, { useEffect, useCallback, useState } from 'react';
 import { motion } from 'framer-motion';
 
 interface AnalyticsEvent {
+
   event: string;
   category: string;
   action: string;
@@ -67,6 +56,7 @@ interface AnalyticsEvent {
 }
 
 interface UserBehavior {
+
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   pageViews: number;
   sessionDuration: number;
@@ -77,12 +67,14 @@ interface UserBehavior {
   locations: Array<any>;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   performance: {
+
     loadTime: number;
     firstPaint: number;
     firstContentfulPaint: number;
     largestContentfulPaint: number;
   };
   interactions: {
+
     clicks: number;
     scrolls: number;
     formSubmissions: number;
@@ -103,9 +95,11 @@ interface AdvancedAnalyticsProps extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function AdvancedAnalytics(...args: any[]): any {
+
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isOpen, setIsOpen] = useState(false);
   const [analyticsData, setAnalyticsData] = useState<any>({
+
 =======
   topPages: string[];
   userJourney: string[];
@@ -113,6 +107,7 @@ export function AdvancedAnalytics(...args: any[]): any {
 }
 
 interface BusinessMetrics {
+
   leads: number;
   conversions: number;
   revenue: number;
@@ -122,6 +117,7 @@ interface BusinessMetrics {
 }
 
 interface AdvancedAnalyticsProps {
+
   enableTracking?: boolean;
   enableHeatmaps?: boolean;
   enableA/BTesting?: boolean;
@@ -131,6 +127,7 @@ interface AdvancedAnalyticsProps {
 }
 
 export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
+
   enableTracking = true,
   enableHeatmaps = true,
   enableA/BTesting = true,
@@ -138,9 +135,11 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
   enablePredictiveAnalytics = true,
   apiEndpoint = '/api/analytics'
 }) => {
+
   const [sessionId] = useState(() => generateSessionId());
   const [userId, setUserId] = useState<string | null>(null);
   const [userBehavior, setUserBehavior] = useState<UserBehavior>({
+
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     pageViews: 0,
     sessionDuration: 0,
@@ -151,6 +150,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     engagementScore: 0
   });
   const [businessMetrics, setBusinessMetrics] = useState<BusinessMetrics>({
+
     leads: 0,
     conversions: 0,
     revenue: 0,
@@ -166,6 +166,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
   
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const trackingRef = useRef<{
+
     pageViews: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber;
     clicks: number;
     scrolls: number;
@@ -173,6 +174,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     errors: number;
     startTime: number;
   }>({
+
     pageViews: 1,
     clicks: 0,
     scrolls: 0,
@@ -182,16 +184,19 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
   });
   // Generate unique session ID
   useEffect(()               => {
+
     const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     setUserSession(sessionId);
     localStorage.setItem('analytics_session_id', sessionId);
   }, []);
   // Track page views
   const trackPageView = useCallback((path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+
     if (!enabled) return;
     setCurrentPage(path);
     trackingRef.current.pageViews++;
     const pageViewData = {
+
       sessionId: anyanyanyanyanyanyanyanyanyanyanyanyanyanyuserSession,
       path,
       timestamp: new Date().toISOString(),
@@ -199,14 +204,17 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Generate unique session ID
   function generateSessionId(): string {
+
     return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
   }
 
   // Track page view
   const trackPageView = useCallback((page: string) => {
+
     if (!enableTracking) return;
 
     const event: AnalyticsEvent = {
+
       event: 'page_view',
       category: 'engagement',
       action: 'view',
@@ -229,6 +237,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     trackPerformance();
     // Setup click tracking
     const handleClick = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMouseEvent)               => {
+
       const target = e.target as HTMLElement;
       const position = { x: anyanyanyanyanyanyanyanyanyanyanyanyanyanye.clientX, y: e.clientY };
       
@@ -236,15 +245,19 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
       trackInteraction('click', { target, position });
       // Add to heatmap data
       if (enableHeatmap) {
+
         setHeatmapData(prev               => [...prev, { x: position.x, y: position.y, type: 'click' }]);
       }
     };
     // Setup scroll tracking
     let scrollTimeout: NodeJS.Timeout;
     const handleScroll = () => {
+
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
-        trackInteraction('scroll', { 
+
+        trackInteraction('scroll', {
+
           scrollY: window.scrollY, 
           scrollHeight: document.documentElement.scrollHeight 
         });
@@ -252,8 +265,10 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     };
     // Setup form submission tracking
     const handleFormSubmit = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyEvent)               => {
+
       const form = e.target as HTMLFormElement;
-      trackInteraction('form', { 
+      trackInteraction('form', {
+
         formId: form.id || form.className,
         formAction: form.action,
         formMethod: form.method
@@ -261,7 +276,9 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     };
     // Setup error tracking
     const handleError = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyErrorEvent)               => {
+
       trackInteraction('error', {
+
         message: e.message,
         filename: e.filename,
         lineno: e.lineno,
@@ -271,7 +288,9 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     };
     // Setup unhandled promise rejection tracking
     const handleUnhandledRejection = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyPromiseRejectionEvent)               => {
+
       trackInteraction('error', {
+
         message: e.reason?.message || 'Unhandled Promise Rejection',
         reason: e.reason
       });
@@ -284,14 +303,18 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
     // Track page visibility changes
     const handleVisibilityChange = () => {
+
       if (document.hidden) {
+
         // Page hidden - track session end
         const sessionDuration = Date.now() - sessionStart;
         setAnalyticsData(prev => ({
+
           ...prev,
           sessionDuration: sessionDuration / 1000 // Convert to seconds
         }));
       } else {
+
         // Page visible - track session resume
         setSessionStart(Date.now());
       }
@@ -299,6 +322,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     document.addEventListener('visibilitychange', handleVisibilityChange);
     // Cleanup
     return () => {
+
       document.removeEventListener('click', handleClick);
       document.removeEventListener('scroll', handleScroll);
       document.removeEventListener('submit', handleFormSubmit);
@@ -310,15 +334,21 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
   }, [enabled, trackPageView, trackPerformance, trackInteraction, sessionStart, enableHeatmap]);
   // Setup performance observer for LCP
   useEffect(() => {
+
     if (!enabled || !('PerformanceObserver' in window)) return;
     try {
+
       const lcpObserver = new PerformanceObserver((list) => {
+
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
+
           setAnalyticsData(prev => ({
+
             ...prev,
             performance: anyanyanyanyanyanyanyanyanyanyanyanyanyany{
+
               ...prev.performance,
               largestContentfulPaint: lastEntry.startTime
             }
@@ -331,14 +361,18 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
       return ()               => lcpObserver.disconnect();
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     } catch (error) {
-      console.warn('PerformanceObserver not supported:', error);
+
+      // // // console.warn('PerformanceObserver not supported:', error);
     }
   }, [enabled]);
   // Send analytics data to service
   const sendAnalyticsData = useCallback(async (eventType: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, data: )               => {
+
     if (!trackingId) return;
     try {
+
       const analyticsPayload = {
+
         trackingId,
         eventType,
         data,
@@ -347,6 +381,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
       };
       // Send to analytics endpoint
       await fetch('/api/analytics', {
+
 =======
 
     trackEvent(event);
@@ -355,9 +390,11 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Track user interaction
   const trackInteraction = useCallback((category: string, action: string, label?: string, value?: number) => {
+
     if (!enableTracking) return;
 
     const event: AnalyticsEvent = {
+
       event: 'interaction',
       category,
       action,
@@ -380,9 +417,11 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Track conversion
   const trackConversion = useCallback((goal: string, value?: number) => {
+
     if (!enableTracking) return;
 
     const event: AnalyticsEvent = {
+
       event: 'conversion',
       category: 'business',
       action: 'convert',
@@ -406,17 +445,20 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Send event to analytics API
   const trackEvent = useCallback(async (event: AnalyticsEvent) => {
+
     try {
+
       await fetch(apiEndpoint, {
+
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(event),
-      });
+
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(event)});
     } catch (error) {
-      console.warn('Failed to send analytics event:', error);
+
+      // // // console.warn('Failed to send analytics event:', error);
       // Store locally for retry
       storeEventLocally(event);
     }
@@ -424,6 +466,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Store event locally if API fails
   const storeEventLocally = useCallback((event: AnalyticsEvent) => {
+
     const storedEvents = JSON.parse(localStorage.getItem('zion_analytics_events') || '[]');
     storedEvents.push(event);
     localStorage.setItem('zion_analytics_events', JSON.stringify(storedEvents));
@@ -431,7 +474,9 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Update user behavior metrics
   const updateUserBehavior = useCallback((page: string) => {
+
     setUserBehavior(prev => ({
+
       ...prev,
       pageViews: prev.pageViews + 1,
       topPages: [...new Set([...prev.topPages, page])].slice(0, 10),
@@ -441,7 +486,9 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Update business metrics
   const updateBusinessMetrics = useCallback((goal: string, value?: number) => {
+
     setBusinessMetrics(prev => ({
+
       ...prev,
       conversions: prev.conversions + 1,
       revenue: prev.revenue + (value || 0)
@@ -450,6 +497,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Heatmap tracking
   const setupHeatmapTracking = useCallback(() => {
+
     if (!enableHeatmaps) return;
 
     let clickData: { x: number; y: number; timestamp: number }[] = [];
@@ -457,8 +505,10 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
     // Track clicks
     document.addEventListener('click', (e) => {
+
       const rect = (e.target as HTMLElement).getBoundingClientRect();
       clickData.push({
+
         x: e.clientX - rect.left,
         y: e.clientY - rect.top,
         timestamp: Date.now()
@@ -468,10 +518,13 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     // Track scroll depth
     let maxScroll = 0;
     document.addEventListener('scroll', () => {
+
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
       if (scrollDepth > maxScroll) {
+
         maxScroll = scrollDepth;
         scrollData.push({
+
           depth: maxScroll,
           timestamp: Date.now()
         });
@@ -481,8 +534,11 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
     // Send heatmap data periodically
     setInterval(() => {
+
       if (clickData.length > 0 || scrollData.length > 0) {
+
         trackEvent({
+
           event: 'heatmap_data',
           category: 'user_behavior',
           action: 'heatmap',
@@ -505,9 +561,11 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // A/B Testing
   const setupABTesting = useCallback(() => {
+
     if (!enableA/BTesting) return;
 
     const testVariants = {
+
       'header_cta': ['primary', 'secondary', 'tertiary'],
       'hero_layout': ['centered', 'left-aligned', 'split'],
       'pricing_display': ['cards', 'table', 'comparison']
@@ -525,13 +583,16 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Apply A/B test variant
   const applyABTestVariant = useCallback((variant: string) => {
+
     const header = document.querySelector('[data-ab-test="header_cta"]');
     if (header) {
+
       header.setAttribute('data-variant', variant);
     }
 
     // Track variant assignment
     trackEvent({
+
       event: 'ab_test_assigned',
       category: 'experimentation',
       action: 'assign',
@@ -551,6 +612,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Personalization
   const setupPersonalization = useCallback(() => {
+
     if (!enablePersonalization) return;
 
     // Analyze user behavior for personalization
@@ -560,7 +622,9 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Analyze user preferences
   const analyzeUserPreferences = useCallback(() => {
+
     const preferences = {
+
       interests: [] as string[],
       behavior: 'explorer' as 'explorer' | 'focused' | 'casual',
       technicalLevel: 'beginner' as 'beginner' | 'intermediate' | 'advanced'
@@ -568,18 +632,23 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
     // Analyze page views to determine interests
     if (userBehavior.topPages.includes('/ai-services')) {
+
       preferences.interests.push('AI');
     }
     if (userBehavior.topPages.includes('/cybersecurity')) {
+
       preferences.interests.push('Security');
     }
 
     // Analyze engagement for behavior type
     if (userBehavior.engagementScore > 80) {
+
       preferences.behavior = 'focused';
     } else if (userBehavior.engagementScore > 40) {
+
       preferences.behavior = 'explorer';
     } else {
+
       preferences.behavior = 'casual';
     }
 
@@ -588,11 +657,14 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Apply personalization
   const applyPersonalization = useCallback((preferences: any) => {
+
     // Personalize content based on preferences
     const contentElements = document.querySelectorAll('[data-personalize]');
     contentElements.forEach(element => {
+
       const personalizationKey = element.getAttribute('data-personalize');
       if (personalizationKey === 'interests' && preferences.interests.includes('AI')) {
+
         element.classList.add('ai-focused');
       }
     });
@@ -600,18 +672,22 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Predictive analytics
   const setupPredictiveAnalytics = useCallback(() => {
+
     if (!enablePredictiveAnalytics) return;
 
     // Predict user intent and next actions
     const predictions = predictUserIntent();
     if (predictions.likelyToConvert > 0.7) {
+
       showConversionOptimization();
     }
   }, [enablePredictiveAnalytics]);
 
   // Predict user intent
   const predictUserIntent = useCallback(() => {
+
     const predictions = {
+
       likelyToConvert: 0,
       nextPage: '',
       recommendedAction: ''
@@ -619,10 +695,12 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
     // Simple prediction based on behavior
     if (userBehavior.pageViews > 5 && userBehavior.sessionDuration > 300) {
+
       predictions.likelyToConvert = 0.8;
       predictions.nextPage = '/pricing';
       predictions.recommendedAction = 'show_pricing';
     } else if (userBehavior.pageViews > 2) {
+
       predictions.likelyToConvert = 0.5;
       predictions.nextPage = '/contact';
       predictions.recommendedAction = 'show_contact';
@@ -633,9 +711,11 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Show conversion optimization
   const showConversionOptimization = useCallback(() => {
+
     // Show personalized CTA or offer
     const ctaElement = document.querySelector('[data-cta="conversion"]');
     if (ctaElement) {
+
       ctaElement.classList.add('highlight');
       ctaElement.setAttribute('data-predicted-conversion', 'high');
     }
@@ -643,6 +723,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Initialize analytics
   useEffect(() => {
+
     if (!enableTracking) return;
 
     setIsTracking(true);
@@ -650,6 +731,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
     // Track route changes
     const handleRouteChange = () => {
+
       trackPageView(window.location.pathname);
     };
 
@@ -659,6 +741,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     // Track session duration
     const startTime = Date.now();
     const trackSessionDuration = () => {
+
       const duration = Date.now() - startTime;
       setUserBehavior(prev => ({ ...prev, sessionDuration: duration }));
     };
@@ -666,6 +749,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     window.addEventListener('beforeunload', trackSessionDuration);
 
     return () => {
+
       window.removeEventListener('popstate', handleRouteChange);
       window.removeEventListener('pushstate', handleRouteChange);
       window.removeEventListener('beforeunload', trackSessionDuration);
@@ -674,6 +758,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Setup advanced features
   useEffect(() => {
+
     setupHeatmapTracking();
     setupABTesting();
     setupPersonalization();
@@ -682,7 +767,9 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Track engagement score
   useEffect(() => {
+
     const calculateEngagementScore = () => {
+
       let score = 0;
       score += userBehavior.pageViews * 10;
       score += Math.min(userBehavior.sessionDuration / 1000, 50);
@@ -696,7 +783,9 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Expose tracking functions globally for external use
   useEffect(() => {
+
     (window as any).zionAnalytics = {
+
       trackPageView,
       trackInteraction,
       trackConversion,
@@ -707,6 +796,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 
   // Development mode analytics dashboard
   if (process.env.NODE_ENV === 'development' && isTracking) {
+
     return (
       <motion.div
         initial={{ opacity: 0, y: 20 }}

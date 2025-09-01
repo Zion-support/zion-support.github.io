@@ -1,16 +1,20 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 const AccessibilityContext = createContext(null);
 export const useAccessibility = () => {
+
     const context = useContext(AccessibilityContext);
     if (!context) {
+
         throw new Error('useAccessibility must be used within an AccessibilityProvider')}
     return context};
 export const AccessibilityProvider = ({ children }) => {
+
     const [isHighContrast, setIsHighContrast] = useState(false);
     const [isReducedMotion, setIsReducedMotion] = useState(false);
     const [isLargeText, setIsLargeText] = useState(false);
     // Check for user preferences on mount
     useEffect(() => {
+
         // Check for reduced motion preference
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         setIsReducedMotion(prefersReducedMotion);
@@ -27,22 +31,30 @@ export const AccessibilityProvider = ({ children }) => {
         motionQuery.addEventListener('change', handleMotionChange);
         contrastQuery.addEventListener('change', handleContrastChange);
         return () => {
+
             motionQuery.removeEventListener('change', handleMotionChange);
             contrastQuery.removeEventListener('change', handleContrastChange)}}, []);
     // Apply accessibility classes to body
     useEffect(() => {
+
         const body = document.body;
         if (isHighContrast) {
+
             body.classList.add('high-contrast')}
         else {
+
             body.classList.remove('high-contrast')}
         if (isReducedMotion) {
+
             body.classList.add('reduced-motion')}
         else {
+
             body.classList.remove('reduced-motion')}
         if (isLargeText) {
+
             body.classList.add('large-text')}
         else {
+
             body.classList.remove('large-text')}
     }, [isHighContrast, isReducedMotion, isLargeText]);
     // Focus trap functionality
@@ -52,14 +64,20 @@ export const AccessibilityProvider = ({ children }) => {
         const firstElement = focusableElements[0];
         const lastElement = focusableElements[focusableElements.length - 1];
         const handleKeyDown = (e) => {
+
             if (e.key === 'Tab') {
+
                 if (e.shiftKey) {
+
                     if (document.activeElement === firstElement) {
+
                         e.preventDefault();
                         lastElement.focus()}
                 }
                 else {
+
                     if (document.activeElement === lastElement) {
+
                         e.preventDefault();
                         firstElement.focus()}
                 }
@@ -68,6 +86,7 @@ export const AccessibilityProvider = ({ children }) => {
         element.addEventListener('keydown', handleKeyDown);
         firstElement.focus();
         return () => {
+
             element.removeEventListener('keydown', handleKeyDown)}};
     // Screen reader announcements
     const announcement = document.createElement('div');
@@ -78,22 +97,28 @@ export const AccessibilityProvider = ({ children }) => {
         document.body.appendChild(announcement);
         // Remove after announcement
         setTimeout(() => {
+
             document.body.removeChild(announcement)}, 1000)};
     // Keyboard shortcuts
     useEffect(() => {
+
         const handleKeyDown = (e) => {
+
             // Ctrl/Cmd + K for high contrast toggle
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+
                 e.preventDefault();
                 toggleHighContrast();
                 announceToScreenReader(`High contrast ${isHighContrast ? 'disabled' : 'enabled'}`)}
             // Ctrl/Cmd + M for reduced motion toggle
             if ((e.ctrlKey || e.metaKey) && e.key === 'm') {
+
                 e.preventDefault();
                 toggleReducedMotion();
                 announceToScreenReader(`Reduced motion ${isReducedMotion ? 'disabled' : 'enabled'}`)}
             // Ctrl/Cmd + L for large text toggle
             if ((e.ctrlKey || e.metaKey) && e.key === 'l') {
+
                 e.preventDefault();
                 toggleLargeText();
                 announceToScreenReader(`Large text ${isLargeText ? 'disabled' : 'enabled'}`)}
@@ -102,6 +127,7 @@ export const AccessibilityProvider = ({ children }) => {
         return () => document.removeEventListener('keydown', handleKeyDown)}, [isHighContrast, isReducedMotion, isLargeText]);
     const toggleLargeText = () => setIsLargeText(prev => !prev);
     const value = {
+
   isHighContrast,
         isReducedMotion,
         isLargeText,
@@ -109,16 +135,14 @@ export const AccessibilityProvider = ({ children }) => {
         toggleReducedMotion,
         toggleLargeText,
         focusTrap,
-        announceToScreenReader,
-  
-
-};
+        announceToScreenReader};
     return (<AccessibilityContext.Provider value={value}>
       {children}
     </AccessibilityContext.Provider>)};
 // Accessibility toolbar component
 export const AccessibilityToolbar = () => {
-    const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText, } = useAccessibility();
+
+    const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText} = useAccessibility();
     return (<div className="fixed bottom-4 left-4 z-50 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-4 shadow-2xl shadow-zion-cyan/20">
       <div className="space-y-3">
         <h3 className="text-white text-sm font-semibold mb-3">Accessibility</h3>
@@ -151,6 +175,7 @@ export const AccessibilityToolbar = () => {
     </div>)};
 // Skip to main content link
 export const SkipToMainContent = () => {
+
     return (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark">
       Skip to main content
     </a>)};

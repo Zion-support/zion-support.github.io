@@ -30,39 +30,40 @@ import {
   Rocket,
   Heart,
   Download,
-  Share2,
-} from 'lucide - react';
+  Share2} from 'lucide - react';
 
 const Tutorials = () => {
+
   const tutorialCategories = [
     {
+
       title: 'Beginner',
       description: 'Perfect for those new to AI and technology',
       color: 'from - green - 500 to - emerald - 500',
-      count: '12',
-    },
+      count: '12'},
     {
+
       title: 'Intermediate',
       description: 'For users with some experience',
       color: 'from - yellow - 500 to - orange - 500',
-      count: '18',
-    },
+      count: '18'},
     {
+
       title: 'Advanced',
       description: 'Complex topics for experienced users',
       color: 'from - red - 500 to - pink - 500',
-      count: '8',
-    },
+      count: '8'},
     {
+
       title: 'Expert',
       description: 'Cutting - edge research and techniques',
       color: 'from - purple - 500 to - indigo - 500',
-      count: '5',
-    },
+      count: '5'},
   ];
 
   const featuredTutorials = [
     {
+
       title: 'AI Autonomous Research Assistant Implementation',
       description:
         'Learn to implement and configure AI Autonomous Research Assistant systems for enterprise research and intelligence gathering.',
@@ -71,9 +72,9 @@ const Tutorials = () => {
       instructor: 'Dr. Sarah Chen',
       rating: 4.9,
       students: '1.2k',
-      thumbnail: '/images / tutorials / ai - autonomous - research.jpg',
-    },
+      thumbnail: '/images / tutorials / ai - autonomous - research.jpg'},
     {
+
       title: 'AI Supply Chain Optimization Setup',
       description:
         'Master the implementation of AI - powered supply chain optimization solutions for cost reduction and efficiency improvement.',
@@ -82,9 +83,9 @@ const Tutorials = () => {
       instructor: 'Michael Rodriguez',
       rating: 4.8,
       students: '856',
-      thumbnail: '/images / tutorials / ai - supply - chain.jpg',
-    },
+      thumbnail: '/images / tutorials / ai - supply - chain.jpg'},
     {
+
       title: 'Building Your First AI Chatbot',
       description:
         'Learn to create a conversational AI chatbot using our platform. This comprehensive tutorial covers everything from data preparation to deployment.',
@@ -93,9 +94,9 @@ const Tutorials = () => {
       instructor: 'Dr. Sarah Chen',
       rating: 4.8,
       students: '2.3k',
-      thumbnail: '/images / tutorials / ai - chatbot.jpg',
-    },
+      thumbnail: '/images / tutorials / ai - chatbot.jpg'},
     {
+
       title: 'Quantum Neural Network Implementation',
       description:
         'Dive deep into quantum computing and implement neural networks that leverage quantum properties for enhanced performance.',
@@ -104,9 +105,9 @@ const Tutorials = () => {
       instructor: 'Michael Rodriguez',
       rating: 4.9,
       students: '856',
-      thumbnail: '/images / tutorials / quantum - neural.jpg',
-    },
+      thumbnail: '/images / tutorials / quantum - neural.jpg'},
     {
+
       title: 'Cybersecurity Best Practices',
       description:
         'Master essential cybersecurity concepts and implement robust security measures to protect your applications and data.',
@@ -115,9 +116,9 @@ const Tutorials = () => {
       instructor: 'James Wilson',
       rating: 4.7,
       students: '1.5k',
-      thumbnail: '/images / tutorials / cybersecurity.jpg',
-    },
+      thumbnail: '/images / tutorials / cybersecurity.jpg'},
     {
+
       title: 'AI Model Optimization',
       description:
         'Learn advanced techniques to optimize your AI models for better performance, faster inference, and reduced resource consumption.',
@@ -126,8 +127,7 @@ const Tutorials = () => {
       instructor: 'Dr. Emily Watson',
       rating: 4.6,
       students: '623',
-      thumbnail: '/images / tutorials / ai - optimization.jpg',
-    },
+      thumbnail: '/images / tutorials / ai - optimization.jpg'},
   ];
 
   const [searchTerm, setSearchTerm] = useState ('') ;
@@ -135,6 +135,7 @@ const Tutorials = () => {
   const [sortBy, setSortBy] = useState ('popular') ;
 
   const filteredTutorials = featuredTutorials.filter (tutorial => {
+
     const matchesSearch = tutorial.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
       tutorial.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
     const matchesCategory = selectedCategory === 'all' ||
@@ -143,7 +144,9 @@ const Tutorials = () => {
   }) ;
 
   const sortedTutorials = [...filteredTutorials].sort ( (a, b) => {
+
     switch (sortBy) {
+
       case 'rating':
         return b.rating - a.rating;
       case 'duration':
@@ -287,6 +290,7 @@ const Tutorials = () => {
                 <div role="button" className="absolute top - 3 right - 3">
                   <span
                     className={`px - 2 py - 1 text - xs font - medium rounded - full ${
+
                       tutorial.category === 'Beginner'
                         ? 'bg - green - 100 text - green - 800'
                         : tutorial.category === 'Intermediate'
@@ -396,6 +400,7 @@ const Tutorials = () => {
             </p>
             <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
               onClick={ () => {
+
                 setSearchTerm ('') ;
                 setSelectedCategory ('all') ;
                 setSortBy ('popular') ;

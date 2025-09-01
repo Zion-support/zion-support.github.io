@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle } from 'lucide-react';
 export function SiteHealthDashboard() {
+
     const [healthData, setHealthData] = useState([]);
     const [overallScore, setOverallScore] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
+
         // Simulate health check data collection
         const performHealthCheck = async () => {
+
             setIsLoading (true) ;
             // Simulate API calls to various monitoring services
             await new Promise (resolve => setTimeout (resolve, 2000) ) ;
@@ -260,6 +263,7 @@ export function SiteHealthDashboard() {
             return 'text-yellow-500';
         return 'text-red-500'};
     if (isLoading) {
+
 "
         return (<div className="max-w-7xl mx-auto p-6">"
         <div className="text-center py-12">"

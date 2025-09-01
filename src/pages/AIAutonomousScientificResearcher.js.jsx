@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousScientificResearcher = () => {
+
     return (<>
       <Helmet>
         <title>AI Autonomous Scientific Researcher | Zion Tech Group</title>

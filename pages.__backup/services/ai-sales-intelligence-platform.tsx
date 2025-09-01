@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Target, 
-  TrendingUp, 
-  Users, 
-  BarChart3, 
-  CheckCircle, 
+import {
+  Target,
+  TrendingUp,
+  Users,
+  BarChart3,
+  CheckCircle,
   ArrowRight,
   Search,
   Globe,
@@ -15,7 +15,7 @@ import {
   Star,
   Brain,
   Shield,
-  DollarSign
+  DollarSign,
 } from 'lucide-react';
 
 export default function AISalesIntelligencePlatform() {
@@ -23,33 +23,39 @@ export default function AISalesIntelligencePlatform() {
     {
       icon: Target,
       title: 'Lead Scoring & Prioritization',
-      description: 'AI-powered lead scoring that identifies the most promising prospects for your sales team.'
+      description:
+        'AI-powered lead scoring that identifies the most promising prospects for your sales team.',
     },
     {
       icon: TrendingUp,
       title: 'Predictive Analytics',
-      description: 'Forecast sales outcomes and identify opportunities before they become apparent.'
+      description:
+        'Forecast sales outcomes and identify opportunities before they become apparent.',
     },
     {
       icon: Users,
       title: 'Customer Segmentation',
-      description: 'Intelligent customer segmentation for personalized sales strategies and messaging.'
+      description:
+        'Intelligent customer segmentation for personalized sales strategies and messaging.',
     },
     {
       icon: BarChart3,
       title: 'Sales Performance Analytics',
-      description: 'Comprehensive analytics and insights to optimize your sales process and team performance.'
+      description:
+        'Comprehensive analytics and insights to optimize your sales process and team performance.',
     },
     {
       icon: Search,
       title: 'Market Intelligence',
-      description: 'Real-time market insights and competitive intelligence to inform your sales strategy.'
+      description:
+        'Real-time market insights and competitive intelligence to inform your sales strategy.',
     },
     {
       icon: Brain,
       title: 'AI-Powered Recommendations',
-      description: 'Intelligent recommendations for next best actions and sales opportunities.'
-    }
+      description:
+        'Intelligent recommendations for next best actions and sales opportunities.',
+    },
   ];
 
   const benefits = [
@@ -58,30 +64,31 @@ export default function AISalesIntelligencePlatform() {
     'Improve lead qualification accuracy by 80%',
     'Boost sales team productivity by 40%',
     'Identify new market opportunities automatically',
-    'Optimize pricing strategies with AI insights'
+    'Optimize pricing strategies with AI insights',
   ];
 
   const salesProcesses = [
     {
       name: 'Lead Generation',
       description: 'AI-powered lead generation and qualification.',
-      icon: Target
+      icon: Target,
     },
     {
       name: 'Opportunity Management',
-      description: 'Track and manage sales opportunities with predictive insights.',
-      icon: TrendingUp
+      description:
+        'Track and manage sales opportunities with predictive insights.',
+      icon: TrendingUp,
     },
     {
       name: 'Account Management',
       description: 'Comprehensive account management and expansion strategies.',
-      icon: Users
+      icon: Users,
     },
     {
       name: 'Sales Forecasting',
       description: 'Accurate sales forecasting and pipeline management.',
-      icon: BarChart3
-    }
+      icon: BarChart3,
+    },
   ];
 
   const industries = [
@@ -92,7 +99,7 @@ export default function AISalesIntelligencePlatform() {
     'Real Estate',
     'Professional Services',
     'E-commerce & Retail',
-    'Technology & IT'
+    'Technology & IT',
   ];
 
   return (
@@ -110,8 +117,9 @@ export default function AISalesIntelligencePlatform() {
                 AI Sales Intelligence Platform
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600 lg:text-xl">
-                Transform your sales process with AI-powered intelligence that identifies opportunities, 
-                optimizes performance, and drives revenue growth.
+                Transform your sales process with AI-powered intelligence that
+                identifies opportunities, optimizes performance, and drives
+                revenue growth.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
@@ -124,7 +132,8 @@ export default function AISalesIntelligencePlatform() {
                   href="/services"
                   className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600"
                 >
-                  View All Services <ArrowRight className="ml-2 h-5 w-5 inline" />
+                  View All Services{' '}
+                  <ArrowRight className="ml-2 h-5 w-5 inline" />
                 </Link>
               </div>
             </motion.div>
@@ -140,10 +149,11 @@ export default function AISalesIntelligencePlatform() {
               Platform Features
             </h2>
             <p className="mt-6 text-lg text-gray-600">
-              Our AI sales intelligence platform provides comprehensive tools to optimize every aspect of your sales process.
+              Our AI sales intelligence platform provides comprehensive tools to
+              optimize every aspect of your sales process.
             </p>
           </div>
-          
+
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
               <motion.div
@@ -156,7 +166,9 @@ export default function AISalesIntelligencePlatform() {
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-8 w-8 text-green-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
@@ -173,7 +185,8 @@ export default function AISalesIntelligencePlatform() {
                 Why Choose AI Sales Intelligence?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Our platform delivers measurable results that directly impact your sales performance and revenue growth.
+                Our platform delivers measurable results that directly impact
+                your sales performance and revenue growth.
               </p>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -218,10 +231,11 @@ export default function AISalesIntelligencePlatform() {
               Optimize Your Sales Process
             </h2>
             <p className="mt-6 text-lg text-gray-600">
-              From lead generation to closing deals, our platform optimizes every step of your sales journey.
+              From lead generation to closing deals, our platform optimizes
+              every step of your sales journey.
             </p>
           </div>
-          
+
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {salesProcesses.map((process, index) => (
               <motion.div
@@ -234,7 +248,9 @@ export default function AISalesIntelligencePlatform() {
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 mb-6 group-hover:scale-110 transition-transform duration-300">
                   <process.icon className="h-8 w-8 text-green-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{process.name}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {process.name}
+                </h3>
                 <p className="text-gray-600 text-sm">{process.description}</p>
               </motion.div>
             ))}
@@ -250,9 +266,10 @@ export default function AISalesIntelligencePlatform() {
               Industries We Serve
             </h2>
             <p className="text-lg text-gray-600 mb-12">
-              Our AI sales intelligence platform works across industries, providing tailored solutions for your specific sales challenges.
+              Our AI sales intelligence platform works across industries,
+              providing tailored solutions for your specific sales challenges.
             </p>
-            
+
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {industries.map((industry, index) => (
                 <motion.div
@@ -264,7 +281,9 @@ export default function AISalesIntelligencePlatform() {
                 >
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span className="font-medium text-gray-900">{industry}</span>
+                    <span className="font-medium text-gray-900">
+                      {industry}
+                    </span>
                   </div>
                 </motion.div>
               ))}
@@ -281,7 +300,8 @@ export default function AISalesIntelligencePlatform() {
               Ready to Transform Your Sales?
             </h2>
             <p className="mt-6 text-lg leading-8 text-green-100">
-              Let's discuss how our AI sales intelligence platform can boost your sales performance and drive revenue growth.
+              Let's discuss how our AI sales intelligence platform can boost
+              your sales performance and drive revenue growth.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

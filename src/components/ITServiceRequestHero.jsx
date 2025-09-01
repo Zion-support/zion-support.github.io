@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 export function ITServiceRequestHero () {
+
 import { GradientHeading } from "../ui / GradientHeading";
 import { NeonGlow } from "../ui / NeonGlow";
 
@@ -10,21 +11,25 @@ import { ArrowRight, Zap, Brain, Shield, Cloud } from 'lucide-react';
 import { GradientHeading } from "../ui/GradientHeading";"
 import { NeonGlow } from "../ui/NeonGlow";
 export function ITServiceRequestHero() {
+
 >>>>>>> main
     const features = [
         {
+
 "
             icon: <Brain className="w-6 h-6"/>,"
             title: "AI-Powered Solutions","
             description: "Cutting-edge artificial intelligence that learns and adapts to your business needs."
         },
         {
+
 "
             icon: <Shield className="w-6 h-6"/>,"
             title: "Cybersecurity","
             description: "Advanced security solutions protecting your digital assets and infrastructure."
         },
         {
+
 "
             icon: <Cloud className="w-6 h-6"/>,"
             title: "Cloud Computing","

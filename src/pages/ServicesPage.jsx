@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Zap, 
   Shield, 
@@ -28,6 +29,7 @@ import {
 } from 'lucide-react';
 
 export default function ServicesPage() {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState('grid');
@@ -45,6 +47,7 @@ export default function ServicesPage() {
 
   const services = [
     {
+
       id: 'ai-content-generation',
       title: 'AI Content Generator Pro',
       description: 'Generate high-quality content, code, and creative assets with our advanced AI models.',
@@ -53,10 +56,10 @@ export default function ServicesPage() {
       currency: '$',
       tags: ['AI Content', 'Text Generation', 'Code Generation'],
       author: {
+
         name: 'Zion AI Labs',
         id: 'zion-ai-labs',
-        avatarUrl: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100',
-      },
+        avatarUrl: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100'},
       images: ['https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500'],
       createdAt: '2024-01-15T10:00:00.000Z',
       aiScore: 98,
@@ -65,6 +68,7 @@ export default function ServicesPage() {
       popular: true
     },
     {
+
       id: 'ai-media-editing',
       title: 'AI Image & Video Editor',
       description: 'Professional-grade AI-powered image and video editing tools for creators and businesses.',
@@ -73,10 +77,10 @@ export default function ServicesPage() {
       currency: '$',
       tags: ['Image Editing', 'Video Editing', 'AI Enhancement'],
       author: {
+
         name: 'Zion Media Studio',
         id: 'zion-media-studio',
-        avatarUrl: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100',
-      },
+        avatarUrl: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100'},
       images: ['https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500'],
       createdAt: '2024-01-20T14:30:00.000Z',
       aiScore: 95,
@@ -85,6 +89,7 @@ export default function ServicesPage() {
       popular: false
     },
     {
+
       id: 'ai-code-assistant',
       title: 'AI Code Assistant',
       description: 'Intelligent code completion, debugging, and optimization powered by advanced language models.',
@@ -93,10 +98,10 @@ export default function ServicesPage() {
       currency: '$',
       tags: ['Code Completion', 'Debugging', 'Code Review'],
       author: {
+
         name: 'Zion Dev Tools',
         id: 'zion-dev-tools',
-        avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100',
-      },
+        avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100'},
       images: ['https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500'],
       createdAt: '2024-01-25T09:15:00.000Z',
       aiScore: 97,
@@ -105,6 +110,7 @@ export default function ServicesPage() {
       popular: true
     },
     {
+
       id: 'ai-analytics',
       title: 'AI Data Analytics Platform',
       description: 'Transform raw data into actionable insights with our AI-powered analytics suite.',
@@ -113,10 +119,10 @@ export default function ServicesPage() {
       currency: '$',
       tags: ['Data Analytics', 'Predictive Analytics', 'Data Visualization'],
       author: {
+
         name: 'Zion Analytics',
         id: 'zion-analytics',
-        avatarUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100',
-      },
+        avatarUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100'},
       images: ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'],
       createdAt: '2024-02-01T11:00:00.000Z',
       aiScore: 96,
@@ -125,6 +131,7 @@ export default function ServicesPage() {
       popular: false
     },
     {
+
       id: 'ai-threat-detection',
       title: 'AI Threat Detection',
       description: 'Real-time cybersecurity threat detection and response using advanced AI algorithms.',
@@ -133,10 +140,10 @@ export default function ServicesPage() {
       currency: '$',
       tags: ['Threat Detection', 'AI Security', '24/7 Monitoring'],
       author: {
+
         name: 'Zion Security',
         id: 'zion-security',
-        avatarUrl: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=100&h=100',
-      },
+        avatarUrl: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=100&h=100'},
       images: ['https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500'],
       createdAt: '2024-02-05T15:00:00.000Z',
       aiScore: 99,
@@ -145,6 +152,7 @@ export default function ServicesPage() {
       popular: true
     },
     {
+
       id: 'quantum-computing',
       title: 'Quantum Computing Platform',
       description: 'Access to quantum computing resources for complex problem solving and research.',
@@ -153,10 +161,10 @@ export default function ServicesPage() {
       currency: '$',
       tags: ['Quantum Computing', 'Research', 'Complex Algorithms'],
       author: {
+
         name: 'Zion Quantum Labs',
         id: 'zion-quantum-labs',
-        avatarUrl: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=100&h=100',
-      },
+        avatarUrl: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=100&h=100'},
       images: ['https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500'],
       createdAt: '2024-02-10T12:00:00.000Z',
       aiScore: 100,
@@ -165,6 +173,7 @@ export default function ServicesPage() {
       popular: false
     },
     {
+
       id: 'cloud-devops',
       title: 'Cloud DevOps Platform',
       description: 'Comprehensive cloud infrastructure and DevOps automation platform.',
@@ -173,10 +182,10 @@ export default function ServicesPage() {
       currency: '$',
       tags: ['Cloud Infrastructure', 'DevOps', 'Automation'],
       author: {
+
         name: 'Zion Cloud Solutions',
         id: 'zion-cloud-solutions',
-        avatarUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=100&h=100',
-      },
+        avatarUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=100&h=100'},
       images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500'],
       createdAt: '2024-02-15T10:00:00.000Z',
       aiScore: 94,
@@ -185,6 +194,7 @@ export default function ServicesPage() {
       popular: false
     },
     {
+
       id: 'blockchain-platform',
       title: 'Enterprise Blockchain Platform',
       description: 'Scalable blockchain solutions for enterprise applications and DeFi.',
@@ -193,10 +203,10 @@ export default function ServicesPage() {
       currency: '$',
       tags: ['Blockchain', 'DeFi', 'Smart Contracts'],
       author: {
+
         name: 'Zion Blockchain',
         id: 'zion-blockchain',
-        avatarUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=100&h=100',
-      },
+        avatarUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=100&h=100'},
       images: ['https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500'],
       createdAt: '2024-02-20T14:00:00.000Z',
       aiScore: 93,
@@ -207,6 +217,7 @@ export default function ServicesPage() {
   ];
 
   const filteredServices = services.filter(service => {
+
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -215,12 +226,15 @@ export default function ServicesPage() {
   });
 
   const getCategoryIcon = (categoryId) => {
+
     const category = serviceCategories.find(cat => cat.id === categoryId);
     return category ? category.icon : Star;
   };
 
   const getCategoryColor = (categoryId) => {
+
     const colors = {
+
       ai: 'from-zion-cyan to-zion-blue',
       quantum: 'from-zion-purple to-zion-cyan',
       security: 'from-zion-red to-zion-orange',
@@ -297,6 +311,7 @@ export default function ServicesPage() {
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-200 ${
+
                     activeCategory === category.id
                       ? 'border-zion-cyan bg-zion-cyan/20 text-zion-cyan'
                       : 'border-zion-cyan/20 text-zion-slate-light hover:border-zion-cyan/40 hover:text-zion-cyan'
@@ -313,6 +328,7 @@ export default function ServicesPage() {
               <button
                 onClick={() => setViewMode('grid')}
                 className={`p-2 rounded-lg transition-colors ${
+
                   viewMode === 'grid' 
                     ? 'bg-zion-cyan/20 text-zion-cyan' 
                     : 'text-zion-slate-light hover:text-zion-cyan'
@@ -323,6 +339,7 @@ export default function ServicesPage() {
               <button
                 onClick={() => setViewMode('list')}
                 className={`p-2 rounded-lg transition-colors ${
+
                   viewMode === 'list' 
                     ? 'bg-zion-cyan/20 text-zion-cyan' 
                     : 'text-zion-slate-light hover:text-zion-cyan'
@@ -343,6 +360,7 @@ export default function ServicesPage() {
               <div className="text-zion-slate-light text-xl mb-4">No services found matching your criteria</div>
               <button
                 onClick={() => {
+
                   setActiveCategory('all');
                   setSearchQuery('');
                 }}
@@ -353,6 +371,7 @@ export default function ServicesPage() {
             </div>
           ) : (
             <div className={`grid gap-8 ${
+
               viewMode === 'grid' 
                 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
                 : 'grid-cols-1'
@@ -361,6 +380,7 @@ export default function ServicesPage() {
                 <motion.div
                   key={service.id}
                   className={`bg-zion-blue-dark/30 p-6 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group hover:bg-zion-blue-dark/50 backdrop-blur-sm ${
+
                     viewMode === 'list' ? 'flex gap-6' : ''
                   }`}
                   initial={{ opacity: 0, y: 20 }}

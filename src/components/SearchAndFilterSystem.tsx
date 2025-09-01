@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -23,6 +24,7 @@ import { motion, AnimatePresence } from 'framer - motion';
  } from 'lucide-react';
 
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;
@@ -34,6 +36,7 @@ interface SearchResult {
   type: 'service' | 'article' | 'team' | 'technology'}
 
 interface FilterOption {
+
   id: string;
   label: string;
   value: string;
@@ -128,6 +131,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
   // Update parent component with results
   useEffect ( () => {
+
     onResultsChange?. (filteredResults) }, [filteredResults, onResultsChange]) ;
 
   // Toggle filter
@@ -149,6 +153,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   const getTypeIcon = (type: string) => {
 
     switch (type) {
+
 '"
       case 'service': return <Zap className="w-4 h-4"  />;'"
       case 'article': return <Tag className="w-4 h-4"  />;'"

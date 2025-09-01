@@ -3,26 +3,31 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clock, BarChart3 } from 'lucide-react';
 const AIMarketingAutomation = () => {
+
     const features = [
         {
+
             icon: Brain,
             title: "AI-Powered Campaign Optimization",
             description: "Machine learning algorithms that automatically optimize marketing campaigns for maximum performance and ROI",
             benefits["Real-time optimization", "A/B testing automation", "Performance prediction", "Budget allocation"]
         },
         {
+
             icon: Users,
             title: "Intelligent Customer Segmentation",
             description: "Advanced AI algorithms that automatically segment customers based on behavior, preferences, and engagement patterns",
             benefits["Dynamic segmentation", "Behavioral analysis", "Predictive modeling", "Personalization"]
         },
         {
+
             icon: BarChart3,
             title: "Predictive Analytics",
             description: "Forecast customer behavior, campaign performance, and market trends using historical data and AI models",
             benefits["Customer lifetime value", "Churn prediction", "Demand forecasting", "Market trends"]
         },
         {
+
             icon: Zap,
             title: "Automated Workflows",
             description: "Intelligent automation of marketing processes, from lead generation to customer retention",
@@ -31,6 +36,7 @@ const AIMarketingAutomation = () => {
     ];
     const solutions = [
         {
+
             category: "Email Marketing",
             icon: Mail,
             solutions[
@@ -42,6 +48,7 @@ const AIMarketingAutomation = () => {
             ]
         },
         {
+
             category: "Social Media Marketing",
             icon: MessageSquare,
             solutions[
@@ -53,6 +60,7 @@ const AIMarketingAutomation = () => {
             ]
         },
         {
+
             category: "Search & Display Advertising",
             icon: Target,
             solutions[
@@ -64,6 +72,7 @@ const AIMarketingAutomation = () => {
             ]
         },
         {
+
             category: "Content Marketing",
             icon: TrendingUp,
             solutions[
@@ -77,31 +86,37 @@ const AIMarketingAutomation = () => {
     ];
     const technologies = [
         {
+
             name: "Machine Learning",
             description: "Advanced ML algorithms for pattern recognition and prediction",
             icon: Brain
         },
         {
+
             name: "Natural Language Processing",
             description: "AI-powered content analysis and generation",
             icon: MessageSquare
         },
         {
+
             name: "Predictive Analytics",
             description: "Data-driven forecasting and optimization",
             icon: BarChart3
         },
         {
+
             name: "Marketing Automation",
             description: "Intelligent workflow automation",
             icon: Zap
         },
         {
+
             name: "Real-time Analytics",
             description: "Instant performance monitoring and optimization",
             icon: Clock
         },
         {
+
             name: "Multi-channel Integration",
             description: "Seamless integration across all marketing channels",
             icon: Globe
@@ -109,44 +124,54 @@ const AIMarketingAutomation = () => {
     ];
     const benefits = [
         {
+
             title: "Increased ROI",
             description: "AI optimization typically delivers 20-40% improvement in marketing ROI",
             icon: TrendingUp
         },
         {
+
             title: "Time Savings",
             description: "Automate repetitive tasks and save 15-20 hours per week",
             icon: Clock
         },
         {
+
             title: "Better Targeting",
             description: "Improve conversion rates by 25-35% with AI-powered segmentation",
             icon: Target
         },
         {
+
             title: "Scalable Growth",
             description: "Scale marketing efforts without proportional increase in resources",
             icon: Users
         }
     ];
     const containerVariants = {
+
         hidden: { opacity: 0 },
         visible: {
+
             opacity: 1,
             transition: {
+
                 staggerChildren: 0.1
             }
         }
     };
     const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0 
 
 },
         visible: {
+
             y: 0,
             opacity: 1,
             transition: {
+
                 duration: 0.5
             }
         }
@@ -158,10 +183,12 @@ const AIMarketingAutomation = () => {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -229,10 +256,12 @@ const AIMarketingAutomation = () => {
       <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border-t border-green-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -246,14 +275,17 @@ const AIMarketingAutomation = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((category, index) => (<motion.div key={category.category} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} viewport={{ once: true }} transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -279,10 +311,12 @@ const AIMarketingAutomation = () => {
       {/* Benefits Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -296,14 +330,17 @@ const AIMarketingAutomation = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (<motion.div key={benefit.title} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} viewport={{ once: true }} transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -321,10 +358,12 @@ const AIMarketingAutomation = () => {
       <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border-t border-green-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -338,14 +377,17 @@ const AIMarketingAutomation = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => (<motion.div key={tech.name} initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} viewport={{ once: true }} transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -363,10 +405,12 @@ const AIMarketingAutomation = () => {
       {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 

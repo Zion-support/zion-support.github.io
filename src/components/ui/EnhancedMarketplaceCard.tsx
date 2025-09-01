@@ -6,7 +6,8 @@ interface EnhancedMarketplaceCardProps extends React.PropsWithChildren<{}> {
   description: string;
   className?: string;
 
-const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({ 
+const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
+
   title, 
   description, 
   className = "" ;

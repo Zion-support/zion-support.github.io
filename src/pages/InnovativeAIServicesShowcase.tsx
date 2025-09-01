@@ -2,7 +2,9 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 import SEO from '@/components / SEO';
 export default React.memo (function InnovativeAIServicesShowcase () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Zap, Sparkles, TrendingUp, Route, Users, PenTool,
@@ -12,6 +14,7 @@ import { motion } from 'framer - motion';
 
   const services = [
     {
+
       id: 'ai - project - manager',
       title: 'AI Project Manager',
       description: 'Transform your project management with AI - driven insights, automated planning, and intelligent resource optimization.',
@@ -28,6 +31,7 @@ import { motion } from 'framer - motion';
       route: '/services / ai - project - manager'
     },
     {
+
       id: 'ai - content - marketing - suite',
       title: 'AI Content Marketing Suite',
       description: 'Transform your content marketing with AI that writes, optimizes, and distributes content across all channels.',
@@ -44,6 +48,7 @@ import { motion } from 'framer - motion';
       route: '/services / ai - content - marketing - suite'
     },
     {
+
       id: 'ai - financial - analytics',
       title: 'AI Financial Analytics Platform',
       description: 'Transform your financial decision - making with AI - driven insights, predictive analytics, and automated portfolio optimization.',
@@ -60,6 +65,7 @@ import { motion } from 'framer - motion';
       route: '/services / ai - financial - analytics'
     },
     {
+
       id: 'ai - hr - talent - platform',
       title: 'AI HR & Talent Platform',
       description: 'Transform your HR operations with AI - driven insights, automated workflows, and intelligent talent management.',
@@ -76,6 +82,7 @@ import { motion } from 'framer - motion';
       route: '/services / ai - hr - talent - platform'
     },
     {
+
       id: 'ai - supply - chain - optimization',
       title: 'AI Supply Chain Optimization',
       description: 'Transform your supply chain with AI - driven insights, predictive analytics, and automated optimization.',
@@ -104,11 +111,13 @@ import { motion } from 'framer - motion';
         <div className="container mx - auto px - 4 text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -122,16 +131,19 @@ import { motion } from 'framer - motion';
 
           <motion.h1
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.6,
   delay: 0.1
 
@@ -145,16 +157,19 @@ import { motion } from 'framer - motion';
 
           <motion.p
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -174,16 +189,19 @@ import { motion } from 'framer - motion';
             {services.map ( (service, index) => (<motion.div
                 key={service.id}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 

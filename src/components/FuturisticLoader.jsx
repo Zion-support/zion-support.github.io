@@ -12,6 +12,7 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
 
 
     const sizeClasses = {
+
   small: 'w - 8 h - 8',
         medium: 'w - 16 h - 16',
   large: 'w - 24 h - 24'
@@ -31,6 +32,7 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
 
 };
     const renderLoader = () => {
+
         switch (variant) {
 
             case 'matrix':

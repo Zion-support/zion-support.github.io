@@ -7,6 +7,7 @@ export function ServiceDetails({ country }) {
     const getDatacenters = (country) => {
 
         const dataCenters = {
+
 "
   "United States"["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],;"
             "United Kingdom"["London", "Manchester", "Birmingham"],;"
@@ -26,6 +27,7 @@ export function ServiceDetails({ country }) {
 
         // In a real app, you'd have specific images for each region
         const regions = {
+
 "
   "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa","
             "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk","

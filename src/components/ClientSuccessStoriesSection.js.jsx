@@ -11,6 +11,7 @@ const successStories = [
         challenge: "Legacy system modernization and digital transformation for a growing fintech startup","
         solution: "Implemented cloud-native architecture with microservices, real-time data processing, and AI-powered fraud detection",
         results: {
+
 "
             performance: "300%","
             efficiency: "85%","
@@ -42,6 +43,7 @@ const successStories = [
         challenge: "Building a secure, HIPAA-compliant telemedicine platform with AI-powered diagnostics","
         solution: "Developed end-to-end telemedicine solution with advanced security, AI diagnostics, and seamless patient experience",
         results: {
+
 "
             performance: "250%","
             efficiency: "90%","
@@ -73,6 +75,7 @@ const successStories = [
         challenge: "Creating an omnichannel retail experience with AI-powered inventory management and personalized recommendations","
         solution: "Built comprehensive omnichannel platform with AI inventory optimization, personalized shopping, and seamless integration",
         results: {
+
 "
             performance: "400%","
             efficiency: "80%","
@@ -104,6 +107,7 @@ const successStories = [
         challenge: "Implementing Industry 4.0 solutions with IoT sensors, predictive maintenance, and smart factory automation","
         solution: "Deployed comprehensive IoT infrastructure with predictive analytics, automation systems, and real-time monitoring",
         results: {
+
 "
             performance: "180%","
             efficiency: "75%","
@@ -135,6 +139,7 @@ const successStories = [
         challenge: "Building a scalable online learning platform with AI-powered content recommendations and adaptive learning","
         solution: "Developed comprehensive LMS with AI content curation, adaptive learning paths, and advanced analytics",
         results: {
+
 "
             performance: "220%","
             efficiency: "85%","
@@ -166,6 +171,7 @@ const successStories = [
         challenge: "Developing smart grid management system with renewable energy integration and demand response optimization","
         solution: "Built intelligent grid management platform with renewable energy forecasting, demand optimization, and real-time monitoring",
         results: {
+
 "
             performance: "150%","
             efficiency: "70%","
@@ -455,6 +461,7 @@ const overallStats = ["
   y: 10 
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0 

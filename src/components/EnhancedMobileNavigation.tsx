@@ -2,7 +2,9 @@
 import { Link, useLocation } from 'react - router - dom';
 import React, { useState, useEffect, useRef } from 'react';
 export const EnhancedMobileNavigation: React.FC = () => {
+
 import {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
   Menu,
@@ -17,6 +19,7 @@ import { motion, AnimatePresence } from 'framer - motion';
   HelpCircle,
 =======
 import {
+
   Menu, 
   X, 
   ChevronDown, 
@@ -45,6 +48,7 @@ import {
  } from 'lucide-react';
 
 interface NavigationItem {
+
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string 
@@ -60,6 +64,7 @@ interface NavigationItem {
 } from 'lucide - react';
 
 interface NavigationItem {
+
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string }>;
@@ -158,15 +163,18 @@ const navigationItems: NavigationItem[] = [
     color: 'bg-zion-blue'};];
 
 export const EnhancedMobileNavigation: React.FC = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [activePath, setActivePath] = useState('/');
   
   
   useEffect(() => {
+
     setActivePath(location.pathname)}, [location]);
 
   useEffect(() => {
+
     const handleClickOutside = (event: MouseEvent) => {
 
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -175,17 +183,20 @@ export const EnhancedMobileNavigation: React.FC = () => {
     };
 
 export default function EnhancedMobileNavigation() {
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   
   const navigationItems: NavigationItem[] = [
     {
+
       label: 'Home',
       path: '/',
       icon: Home
     },
     {
+
       label: 'Services',
       path: '/services',
       icon: Briefcase,
@@ -199,16 +210,19 @@ export default function EnhancedMobileNavigation() {
       ]
     },
     {
+
       label: 'About',
       path: '/about',
       icon: Users
     },
     {
+
       label: 'Blog',
       path: '/blog',
       icon: FileText
     },
     {
+
       label: 'Contact',
       path: '/contact',
       icon: Phone
@@ -217,11 +231,13 @@ export default function EnhancedMobileNavigation() {
 
   // Close mobile menu when route changes
   useEffect(() => {
+
     setIsOpen(false);
     setActiveSubmenu(null)}, [location.pathname]);
 
   // Prevent body scroll when menu is open
   useEffect(() => {
+
     if (isOpen) {
 
       document.addEventListener('mousedown', handleClickOutside);
@@ -302,6 +318,7 @@ export default function EnhancedMobileNavigation() {
 
 =======
                 size={16}`                className={`transition-transform duration-200 ${
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   isExpanded ? 'rotate-180' : ''`
@@ -321,6 +338,7 @@ export default function EnhancedMobileNavigation() {
 
 =======
                 size={16}`                className={`transition-transform duration-200 ${
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   isExpanded ? 'rotate-180' : ''`

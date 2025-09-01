@@ -8,9 +8,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronUpIcon } from '@heroicons/react/24/outline';
 >>>>>>> main
 const EnhancedScrollToTop = () => {
+
     const [isVisible, setIsVisible] = useState (false) ;
     useEffect ( () => {
+
         const toggleVisibility = () => {
+
             if (window.pageYOffset > 300) {
 
                 setIsVisible(true)}
@@ -21,6 +24,7 @@ const EnhancedScrollToTop = () => {
         window.addEventListener('scroll', toggleVisibility);
         return () => window.removeEventListener('scroll', toggleVisibility)}, []);
     const scrollToTop = () => {
+
         window.scrollTo({
 
             top: 0,

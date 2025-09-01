@@ -4,6 +4,7 @@ import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Pl
 import { Link               } from 'react-router-dom.ts';
 
 export default function HealthcareTech(...args: []):  {
+
   return (
     <>
       <Helmet>
@@ -60,31 +61,37 @@ export default function HealthcareTech(...args: []):  {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
+
                   icon: Heart,
                   title: "AI Diagnostics",
                   description: "Machine learning-powered diagnostic tools for accurate and rapid medical assessments."
                 },
                 {
+
                   icon: Users,
                   title: "Patient Monitoring",
                   description: "Real-time patient monitoring with IoT devices and predictive analytics."
                 },
                 {
+
                   icon: Shield,
                   title: "Data Security",
                   description: "HIPAA-compliant security with advanced encryption and access controls."
                 },
                 {
+
                   icon: Zap,
                   title: "Telemedicine",
                   description: "Virtual healthcare delivery platforms for remote patient consultations."
                 },
                 {
+
                   icon: Settings,
                   title: "Clinical Workflows",
                   description: "Streamlined clinical processes and automated healthcare workflows."
                 },
                 {
+
                   icon: Globe,
                   title: "Interoperability",
                   description: "Seamless integration with existing healthcare systems and EHR platforms."
@@ -116,36 +123,42 @@ export default function HealthcareTech(...args: []):  {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
+
                   title: "Diagnostic Imaging",
                   description: "AI-powered analysis of medical images for faster and more accurate diagnoses.",
                   icon: Target,
                   benefits: ["Image analysis", "Pattern recognition", "Diagnostic accuracy"]
                 },
                 {
+
                   title: "Patient Management",
                   description: "Comprehensive patient care management with integrated health records.",
                   icon: Users,
                   benefits: ["Health records", "Care coordination", "Patient engagement"]
                 },
                 {
+
                   title: "Drug Discovery",
                   description: "AI-driven pharmaceutical research and drug development acceleration.",
                   icon: Stethoscope,
                   benefits: ["Molecular modeling", "Clinical trials", "Drug optimization"]
                 },
                 {
+
                   title: "Preventive Care",
                   description: "Predictive analytics for early disease detection and prevention strategies.",
                   icon: Activity,
                   benefits: ["Risk assessment", "Early detection", "Prevention strategies"]
                 },
                 {
+
                   title: "Clinical Trials",
                   description: "Streamlined clinical trial management and patient recruitment.",
                   icon: BarChart3,
                   benefits: ["Trial management", "Patient recruitment", "Data analysis"]
                 },
                 {
+
                   title: "Healthcare Analytics",
                   description: "Data-driven insights for improved healthcare outcomes and operational efficiency.",
                   icon: Database,
@@ -236,36 +249,42 @@ export default function HealthcareTech(...args: []):  {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
+
                   title: "HIPAA Compliance",
                   description: "Full HIPAA compliance with data encryption, access controls, and audit trails.",
                   icon: Shield,
                   features: ["Data encryption", "Access controls", "Audit trails"]
                 },
                 {
+
                   title: "FDA Approval",
                   description: "FDA-cleared medical devices and software for clinical use.",
                   icon: Target,
                   features: ["Medical device clearance", "Clinical validation", "Safety standards"]
                 },
                 {
+
                   title: "SOC 2 Type II",
                   description: "SOC 2 compliance for data security and operational controls.",
                   icon: Lock,
                   features: ["Security controls", "Operational controls", "Continuous monitoring"]
                 },
                 {
+
                   title: "GDPR Compliance",
                   description: "European data protection compliance for international healthcare operations.",
                   icon: Globe,
                   features: ["Data protection", "Privacy controls", "Right to be forgotten"]
                 },
                 {
+
                   title: "HITECH Act",
                   description: "Health Information Technology for Economic and Clinical Health Act compliance.",
                   icon: Activity,
                   features: ["Electronic health records", "Meaningful use", "Interoperability"]
                 },
                 {
+
                   title: "ISO 27001",
                   description: "Information security management system certification.",
                   icon: Settings,
@@ -306,21 +325,25 @@ export default function HealthcareTech(...args: []):  {
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
+
                   step: "01",
                   title: "Assessment",
                   description: "Evaluate current healthcare systems and identify technology needs."
                 },
                 {
+
                   step: "02",
                   title: "Design",
                   description: "Design healthcare technology solution architecture and workflows."
                 },
                 {
+
                   step: "03",
                   title: "Implementation",
                   description: "Deploy technology solutions with minimal disruption to operations."
                 },
                 {
+
                   step: "04",
                   title: "Optimization",
                   description: "Monitor performance and continuously optimize healthcare delivery."

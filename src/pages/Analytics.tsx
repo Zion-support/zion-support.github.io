@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 export default Analytics;}}}
 import {
+
 import { motion } from 'framer - motion';
 import SEO from '../components / SEO';
 
@@ -45,20 +46,24 @@ import SEO from '../components / SEO';
 } from 'lucide - react';
 
 const Analytics: React.FC = () => {
+
   const analyticsFeatures = [
     {
+
       title: "Real - time Monitoring",
       description: "Monitor your business metrics and performance indicators in real - time",
       icon: Activity,
       color: "from - green - 400 to - emerald - 500"
     },
     {
+
       title: "Advanced Visualizations",
       description: "Interactive charts, graphs, and dashboards for better insights",
       icon: BarChart3,
       color: "from - blue - 400 to - cyan - 500"
     },
     {
+
       title: "Predictive Analytics",
       description: "AI - powered forecasting and trend analysis for strategic planning",
       icon: TrendingUp,
@@ -74,6 +79,7 @@ const Analytics: React.FC = () => {
 
   const analyticsTypes = [
     {
+
       name: "Business Intelligence",
       description: "Comprehensive business analytics and reporting",
       icon: BarChart3,
@@ -81,6 +87,7 @@ const Analytics: React.FC = () => {
       path: "/services / ai - business - intelligence"
     },
     {
+
       name: "Website Analytics",
       description: "Track website performance and user behavior",
       icon: Globe,
@@ -88,6 +95,7 @@ const Analytics: React.FC = () => {
       path: "/services / website - analytics"
     },
     {
+
       name: "AI Data Analytics",
       description: "Advanced AI - powered data analysis and insights",
       icon: Zap,
@@ -132,11 +140,13 @@ const Analytics: React.FC = () => {
         <div className="relative z - 10 container mx - auto px - 4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -187,16 +197,19 @@ const Analytics: React.FC = () => {
             {metrics.map ( (metric, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -219,11 +232,13 @@ const Analytics: React.FC = () => {
         <div className="container mx - auto px - 4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -244,16 +259,19 @@ const Analytics: React.FC = () => {
             {analyticsFeatures.map ( (feature, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -276,11 +294,13 @@ const Analytics: React.FC = () => {
         <div className="container mx - auto px - 4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -301,16 +321,19 @@ const Analytics: React.FC = () => {
             {analyticsTypes.map ( (type, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -347,11 +370,13 @@ const Analytics: React.FC = () => {
         <div className="container mx - auto px - 4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -372,16 +397,19 @@ const Analytics: React.FC = () => {
             {integrations.map ( (integration, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
                 whileInView = {
+
   { opacity: 1,
   scale: 1
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -401,11 +429,13 @@ const Analytics: React.FC = () => {
         <div className="container mx - auto px - 4 text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

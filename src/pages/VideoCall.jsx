@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { SEO } from '@/components / SEO';
   import {
+
 export default function VideoCall () {
 
     Phone,
@@ -15,8 +16,7 @@ export default function VideoCall () {
     Monitor,
     Users,
     Settings,
-    MessageCircle,
-  } from 'lucide - react';
+    MessageCircle} from 'lucide - react';
 
   const { roomId } = useParams () ;
   const navigate = useNavigate () ;
@@ -27,70 +27,79 @@ export default function VideoCall () {
   const [isScreenSharing, setIsScreenSharing] = useState (false) ;
   const [participants, setParticipants] = useState ([
     {
+
       id: 'user - 1',
       name: 'You',
       isVideoEnabled: true,
       isMuted: false,
-      isScreenSharing: false,
-    },
+      isScreenSharing: false},
   ]) ;
 
   const handleJoinCall = () => {
+
     setIsJoining (true) ;
     // Simulate connection delay
     setTimeout ( () => {
+
       setHasJoined (true) ;
       setIsJoining (false) ;
     }, 1500) ;
   };
 
   const handleLeaveCall = () => {
+
     setHasJoined (false) ;
     // Navigate back after a short delay
     setTimeout ( () => {
+
       navigate (-1) ;
     }, 1000) ;
   };
 
   const toggleVideo = () => {
+
     setIsVideoEnabled (!isVideoEnabled) ;
   };
 
   const toggleMute = () => {
+
     setIsMuted (!isMuted) ;
   };
 
   const toggleScreenShare = () => {
+
     setIsScreenSharing (!isScreenSharing) ;
   };
 
   const simulateUserJoining = () => {
+
     // This is just for demo purposes - in a real app, this would be handled by the video call service
     const mockUsers = [
       {
+
         id: 'user - 2',
         name: 'Alex Chen',
         isVideoEnabled: true,
         isMuted: false,
-        isScreenSharing: false,
-      },
+        isScreenSharing: false},
       {
+
         id: 'user - 3',
         name: 'Taylor Kim',
         isVideoEnabled: false,
         isMuted: true,
-        isScreenSharing: false,
-      },
+        isScreenSharing: false},
       {
+
         id: 'user - 4',
         name: 'Jordan Smith',
         isVideoEnabled: true,
         isMuted: false,
-        isScreenSharing: true,
-      },
+        isScreenSharing: true},
     ];
     const randomUser = mockUsers[Math.floor (Math.random () * mockUsers.length) ];
     if (!participants.find (p => p.id === randomUser.id) ) {
+
       setParticipants (prev => [...prev, randomUser]) ;
     }
   };

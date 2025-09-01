@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 export default DigitalTransformation;}}}}
 import {
+
 import { motion } from 'framer - motion';
 
   Rocket,
@@ -39,6 +40,7 @@ import { motion } from 'framer - motion';
 
   const transformationPhases = [
     {
+
       phase: "01",
       title: "Discovery & Assessment",
       description: "Evaluate current state, identify opportunities, and assess digital maturity",
@@ -52,6 +54,7 @@ import { motion } from 'framer - motion';
       ]
     },;
     {
+
       phase: "02",
       title: "Strategy Development",
       description: "Create comprehensive digital transformation roadmap and business case",
@@ -65,6 +68,7 @@ import { motion } from 'framer - motion';
       ]
     },;
     {
+
       phase: "03",
       title: "Pilot & Validation",
       description: "Implement proof - of - concept and validate approach with stakeholders",
@@ -78,6 +82,7 @@ import { motion } from 'framer - motion';
       ]
     },;
     {
+
       phase: "04",
       title: "Full Implementation",
       description: "Execute transformation plan with phased rollout and continuous optimization",
@@ -94,18 +99,21 @@ import { motion } from 'framer - motion';
 
   const testimonials = [
     {
+
       content: "Zion's digital transformation approach was game - changing. They didn't just implement technology - they transformed our entire business model.",
       name: "Carlos Rodriguez",
       role: "CEO, InnovateCorp",
       rating: 5
     },
     {
+
       content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.",
       name: "Lisa Chang",
       role: "COO, TechFlow Solutions",
       rating: 5
     },
     {
+
     };
       content: "Working with Zion transformed our company culture. We're now more agile, data - driven, and customer - focused than ever before.",;
       name: "Marcus Johnson",;
@@ -165,16 +173,19 @@ import { motion } from 'framer - motion';
             {stats.map ( (stat, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -205,16 +216,19 @@ import { motion } from 'framer - motion';
             {transformationServices.map ( (service, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
@@ -257,21 +271,25 @@ import { motion } from 'framer - motion';
               {transformationPhases.map ( (phase, index) => (<motion.div
                   key={index}
                   initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                   animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                   transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 
 }}
                   className={`relative bg - zion - blue - dark / 50 backdrop - blur - sm border rounded - xl p - 6 hover:border - zion - cyan / 40 transition - all duration - 300 cursor - pointer ${
+
                     selectedPhase === index ? 'border - zion - cyan' : 'border - zion - cyan / 20'
                   }`}
                   onClick={ () => setSelectedPhase (index) }
@@ -295,11 +313,13 @@ import { motion } from 'framer - motion';
                     {/* Activities */}
                     {selectedPhase === index && (<motion.div
                         initial = {
+
   { opacity: 0,
   height: 0
 
 }}
                         animate = {
+
   { opacity: 1,
   height: 'auto'
 
@@ -336,16 +356,19 @@ import { motion } from 'framer - motion';
             {testimonials.map ( (testimonial, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 

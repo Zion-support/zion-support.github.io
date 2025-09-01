@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 export default FinancialSolutions;
 import {
+
 import { motion } from 'framer - motion.ts';
 
   DollarSign,
@@ -15,12 +16,13 @@ import { motion } from 'framer - motion.ts';
   Cloud,
   Star,
   Calculator,
-  PieChart,
-} from 'lucide - react.ts';
+  PieChart} from 'lucide - react.ts';
 
 const FinancialSolutions: React.FC = () : JSX.Element => {
+
   const solutions = [
     {
+
       title: 'AI Financial Analytics',
       description:
         'Advanced AI - powered analytics for comprehensive financial insights and decision - making.',
@@ -30,9 +32,9 @@ const FinancialSolutions: React.FC = () : JSX.Element => {
         'Predictive modeling',
         'Risk assessment',
         'Performance tracking',
-      ],
-    },
+      ]},
     {
+
       title: 'AI Financial Risk Management',
       description:
         'Intelligent risk assessment and management systems for financial institutions.',
@@ -42,9 +44,9 @@ const FinancialSolutions: React.FC = () : JSX.Element => {
         'Compliance monitoring',
         'Fraud detection',
         'Portfolio optimization',
-      ],
-    },
+      ]},
     {
+
       title: 'AI Financial Trading',
       description:
         'AI - driven trading algorithms and market analysis for optimal investment decisions.',
@@ -54,9 +56,9 @@ const FinancialSolutions: React.FC = () : JSX.Element => {
         'Market analysis',
         'Portfolio management',
         'Risk mitigation',
-      ],
-    },
+      ]},
     {
+
       title: 'FinOps Advisor',
       description:
         'Cloud financial operations optimization for cost management and efficiency.',
@@ -66,9 +68,9 @@ const FinancialSolutions: React.FC = () : JSX.Element => {
         'Resource management',
         'Budget planning',
         'ROI analysis',
-      ],
-    },
+      ]},
     {
+
       title: 'Cloud FinOps Optimizer',
       description:
         'Comprehensive cloud financial operations management and optimization.',
@@ -78,9 +80,9 @@ const FinancialSolutions: React.FC = () : JSX.Element => {
         'Resource optimization',
         'Budget tracking',
         'Efficiency metrics',
-      ],
-    },
+      ]},
     {
+
       title: 'AI Compliance Assistant',
       description:
         'Automated compliance monitoring and reporting for financial regulations.',
@@ -90,35 +92,34 @@ const FinancialSolutions: React.FC = () : JSX.Element => {
         'Automated reporting',
         'Audit trails',
         'Risk monitoring',
-      ],
-    },
+      ]},
   ];
 
   const benefits = [
     {
+
       title: 'Risk Mitigation',
       description:
         'Advanced AI algorithms identify and mitigate financial risks',
-      icon: Shield,
-    },
+      icon: Shield},
     {
+
       title: 'Cost Optimization',
       description:
         'Intelligent systems optimize financial operations and reduce costs',
-      icon: TrendingUp,
-    },
+      icon: TrendingUp},
     {
+
       title: 'Compliance Assurance',
       description:
         'Automated compliance monitoring ensures regulatory adherence',
-      icon: Lock,
-    },
+      icon: Lock},
     {
+
       title: 'Data - Driven Decisions',
       description:
         'AI - powered insights enable better financial decision - making',
-      icon: Brain,
-    },
+      icon: Brain},
   ];
 
   return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">

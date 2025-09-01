@@ -1,37 +1,44 @@
 import React from 'react';
 import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 const AIAutonomousResearch = () => {
+
     const researchFeatures = [
         {
+
             icon: Brain,
             title: "Autonomous Research Systems",
             description: "AI systems that independently conduct research and generate insights",
             benefits: ["24/7 research operation", "Data-driven insights", "Pattern recognition", "Hypothesis generation"]
         },
         {
+
             icon: Zap,
             title: "Automated Experimentation",
             description: "Self-running experiments with continuous optimization and learning",
             benefits: ["Parameter optimization", "Result analysis", "Iterative improvement", "Efficiency gains"]
         },
         {
+
             icon: Target,
             title: "Predictive Modeling",
             description: "Advanced AI models that predict research outcomes and trends",
             benefits: ["Outcome prediction", "Risk assessment", "Resource optimization", "Strategic planning"]
         },
         {
+
             icon: Shield,
             title: "Data Security & Privacy",
             description: "Secure handling of sensitive research data with privacy protection",
             benefits: ["Data encryption", "Access control", "Compliance management", "Audit trails"]
         },
         {
+
             icon: Users,
             title: "Collaborative Research",
             description: "AI-facilitated collaboration across research teams and institutions",
             benefits: ["Team coordination", "Knowledge sharing", "Resource pooling", "Cross-disciplinary insights"]
         },
         {
+
             icon: Globe,
             title: "Global Research Network",
             description: "Connect with research institutions worldwide through AI-powered platforms",
@@ -40,31 +47,37 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
     ];
     const applications = [
         {
+
             title: "Scientific Research",
             description: "Automated hypothesis testing and experimental design",
             icon: Lightbulb
         },
         {
+
             title: "Medical Research",
             description: "Drug discovery and clinical trial optimization",
             icon: Shield
         },
         {
+
             title: "Academic Research",
             description: "Literature review and knowledge synthesis automation",
             icon: BookOpen
         },
         {
+
             title: "Market Research",
             description: "Consumer behavior analysis and trend prediction",
             icon: BarChart3
         },
         {
+
             title: "Technology Research",
             description: "Innovation tracking and technology forecasting",
             icon: Cpu
         },
         {
+
             title: "Environmental Research",
             description: "Climate modeling and sustainability analysis",
             icon: Globe

@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export default MicroSAASServices2028;}}}
 import {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
   Brain,
@@ -155,6 +156,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 const microSAASServices2028 = [
   // AI - Powered Content Creation
   {
+
     id: 'ai - content - creator - pro',
     name: 'AI Content Creator Pro',
     tagline: 'AI - powered content creation for all platforms',
@@ -198,6 +200,7 @@ const microSAASServices2028 = [
 
   // AI Image Generator
   {
+
     id: 'ai - image - generator - plus',
     name: 'AI Image Generator Plus',
     tagline: 'Professional AI image generation for businesses',
@@ -241,6 +244,7 @@ const microSAASServices2028 = [
 
   // AI Video Creator
   {
+
     id: 'ai - video - creator - studio',
     name: 'AI Video Creator Studio',
     tagline: 'AI - powered video creation and editing platform',
@@ -284,6 +288,7 @@ const microSAASServices2028 = [
 
   // AI Code Generator
   {
+
     id: 'ai - code - generator - pro',
     name: 'AI Code Generator Pro',
     tagline: 'AI - powered code generation and development assistance',
@@ -327,6 +332,7 @@ const microSAASServices2028 = [
 
   // AI Design Assistant
   {
+
     id: 'ai - design - assistant',
     name: 'AI Design Assistant',
     tagline: 'AI - powered design creation and optimization',
@@ -370,6 +376,7 @@ const microSAASServices2028 = [
 
   // AI E - commerce Optimizer
   {
+
     id: 'ai - ecommerce - optimizer',
     name: 'AI E - commerce Optimizer',
     tagline: 'AI - powered e - commerce optimization and automation',
@@ -413,6 +420,7 @@ const microSAASServices2028 = [
 
   // AI Customer Service
   {
+
     id: 'ai - customer - service - pro',
     name: 'AI Customer Service Pro',
     tagline: 'AI - powered customer support and chatbot platform',
@@ -456,6 +464,7 @@ const microSAASServices2028 = [
 
   // AI Analytics Platform
   {
+
     id: 'ai - analytics - platform',
     name: 'AI Analytics Platform',
     tagline: 'AI - powered business intelligence and analytics',
@@ -553,6 +562,7 @@ const microSAASServices2028 = [
                   whileTap={{ scale: 0.95 }}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`flex items - center gap - 2 px - 4 py - 2 rounded - lg transition - all duration - 300 ${
+
                     selectedCategory === category.id
                       ? 'bg - gradient - to - r ' + category.color + ' text - white shadow - lg'
                       : 'bg - zion - slate / 50 text - zion - slate - light hover:bg - zion - slate / 70'
@@ -597,16 +607,19 @@ const microSAASServices2028 = [
             {filteredServices.map ( (service, index) => (<motion.div
                 key={service.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 

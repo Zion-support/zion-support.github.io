@@ -21,16 +21,21 @@ Object.defineProperty(window,matchMedia', {
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
+
   constructor() {
+
     /* empty */
   }
   disconnect() {
+
     /* empty */
   }
   observe() {
+
     /* empty */
   }
   unobserve() {
+
     /* empty */
   }
 };

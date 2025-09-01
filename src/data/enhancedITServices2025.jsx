@@ -1,6 +1,7 @@
 // Enhanced IT Services for 2025
 export const enhancedITServices2025 = [
     {
+
         id: 1,
         name: "Cloud Migration & Strategy",
         category: "Cloud Services",
@@ -28,6 +29,7 @@ export const enhancedITServices2025 = [
         targetAudience["Enterprises", "SMBs", "Startups", "Government", "Healthcare"],
         tags: ["Cloud Migration", "AWS", "Azure", "GCP", "Strategy", "Implementation"],
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com/cloud-migration",
@@ -56,6 +58,7 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true
     },
     {
+
         id: 2,
         name: "Cybersecurity Assessment & Implementation",
         category: "Cybersecurity",
@@ -83,6 +86,7 @@ export const enhancedITServices2025 = [
         targetAudience["Enterprises", "Healthcare", "Financial Services", "Government", "Manufacturing"],
         tags: ["Cybersecurity", "Security Assessment", "Compliance", "Threat Detection", "Incident Response"],
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com/cybersecurity",
@@ -111,6 +115,7 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true
     },
     {
+
         id: 3,
         name: "DevOps Implementation & Automation",
         category: "DevOps",
@@ -138,6 +143,7 @@ export const enhancedITServices2025 = [
         targetAudience["Development Teams", "Startups", "Enterprises", "Tech Companies", "Financial Services"],
         tags: ["DevOps", "CI/CD", "Automation", "Infrastructure", "Monitoring"],
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com/devops",
@@ -166,6 +172,7 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true
     },
     {
+
         id: 4,
         name: "Data Center Design & Implementation",
         category: "Infrastructure",
@@ -193,6 +200,7 @@ export const enhancedITServices2025 = [
         targetAudience["Enterprises", "Government", "Healthcare", "Financial Services", "Manufacturing"],
         tags: ["Data Center", "Infrastructure", "Network", "Storage", "Security"],
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com/data-center",
@@ -221,6 +229,7 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true
     },
     {
+
         id: 5,
         name: "Network Security & Firewall Implementation",
         category: "Network Security",
@@ -248,6 +257,7 @@ export const enhancedITServices2025 = [
         targetAudience["Enterprises", "Healthcare", "Financial Services", "Education", "Government"],
         tags: ["Network Security", "Firewall", "VPN", "Intrusion Detection", "Compliance"],
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com/network-security",
@@ -276,6 +286,7 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true
     },
     {
+
         id: 6,
         name: "Business Intelligence & Analytics Implementation",
         category: "Data & Analytics",
@@ -303,6 +314,7 @@ export const enhancedITServices2025 = [
         targetAudience["Enterprises", "Financial Services", "Healthcare", "Retail", "Manufacturing"],
         tags: ["Business Intelligence", "Analytics", "Data Warehouse", "Reporting", "ETL"],
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com/bi-analytics",
@@ -331,6 +343,7 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true
     },
     {
+
         id: 7,
         name: "Mobile App Development & Integration",
         category: "Mobile Development",
@@ -358,6 +371,7 @@ export const enhancedITServices2025 = [
         targetAudience["Startups", "SMBs", "Enterprises", "Healthcare", "Financial Services"],
         tags: ["Mobile Development", "iOS", "Android", "Cross-platform", "API Integration"],
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com/mobile-development",
@@ -386,6 +400,7 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true
     },
     {
+
         id: 8,
         name: "IT Consulting & Digital Transformation",
         category: "Consulting",
@@ -413,6 +428,7 @@ export const enhancedITServices2025 = [
         targetAudience["Enterprises", "Government", "Healthcare", "Financial Services", "Manufacturing"],
         tags: ["IT Consulting", "Digital Transformation", "Strategy", "Technology Assessment", "Change Management"],
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com/it-consulting",
@@ -441,6 +457,7 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true
     },
     {
+
         id: 9,
         name: "Managed IT Services & Support",
         category: "Managed Services",
@@ -468,6 +485,7 @@ export const enhancedITServices2025 = [
         targetAudience["SMBs", "Enterprises", "Healthcare", "Financial Services", "Manufacturing"],
         tags: ["Managed Services", "24/7 Support", "Monitoring", "Maintenance", "Help Desk"],
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com/managed-services",
@@ -496,6 +514,7 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true
     },
     {
+
         id: 10,
         name: "Web Application Development & Hosting",
         category: "Web Development",
@@ -523,6 +542,7 @@ export const enhancedITServices2025 = [
         targetAudience["Startups", "SMBs", "Enterprises", "E-commerce", "Healthcare"],
         tags: ["Web Development", "Full-stack", "Responsive Design", "API", "Hosting"],
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com/web-development",

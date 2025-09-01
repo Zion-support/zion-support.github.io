@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Input } from "./ui/input";
 const AdvancedServiceInnovationHub = () => {
+
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedImpact, setSelectedImpact] = useState('all');
     const [selectedStatus, setSelectedStatus] = useState('all');
@@ -14,6 +15,7 @@ const AdvancedServiceInnovationHub = () => {
     // Mock data - in real app this would come from API
     const innovationTrends = [
         {
+
             id: 'quantum-supremacy',
             title: 'Quantum Supremacy & Commercialization',
             description: 'The transition from quantum research to practical commercial applications across industries.',
@@ -27,6 +29,7 @@ const AdvancedServiceInnovationHub = () => {
             status: 'Emerging'
         },
         {
+
             id: 'ai-consciousness',
             title: 'AI Consciousness & General Intelligence',
             description: 'Development of self-aware AI systems with human-like reasoning and consciousness.',
@@ -40,6 +43,7 @@ const AdvancedServiceInnovationHub = () => {
             status: 'Emerging'
         },
         {
+
             id: 'space-mining',
             title: 'Space Mining & Resource Extraction',
             description: 'Commercial extraction of valuable resources from asteroids and celestial bodies.',
@@ -53,6 +57,7 @@ const AdvancedServiceInnovationHub = () => {
             status: 'Emerging'
         },
         {
+
             id: 'fusion-energy',
             title: 'Fusion Energy Commercialization',
             description: 'Breakthrough in controlled nuclear fusion for unlimited clean energy.',
@@ -66,6 +71,7 @@ const AdvancedServiceInnovationHub = () => {
             status: 'Growing'
         },
         {
+
             id: 'synthetic-biology',
             title: 'Synthetic Biology Revolution',
             description: 'Engineering of custom organisms and biological systems for industrial applications.',
@@ -79,6 +85,7 @@ const AdvancedServiceInnovationHub = () => {
             status: 'Growing'
         },
         {
+
             id: 'brain-computer-interfaces',
             title: 'Brain-Computer Interface Revolution',
             description: 'Direct neural control of computers and digital systems for enhanced human capabilities.',
@@ -93,19 +100,25 @@ const AdvancedServiceInnovationHub = () => {
         }
     ];
     const filteredTrends = useMemo(() => {
+
         return innovationTrends.filter(trend => {
+
             const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 trend.description.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm]);
     const getImpactColor = (impact) => {
+
         switch (impact) {
+
             case 'High': return 'bg-red-100 text-red-800';
             case 'Medium': return 'bg-yellow-100 text-yellow-800';
             case 'Low': return 'bg-green-100 text-green-800';
             default: return 'bg-gray-100 text-gray-800'}
     };
     const getStatusColor = (status) => {
+
         switch (status) {
+
             case 'Emerging': return 'bg-blue-100 text-blue-800';
             case 'Growing': return 'bg-green-100 text-green-800';
             case 'Mature': return 'bg-orange-100 text-orange-800';
@@ -113,7 +126,9 @@ const AdvancedServiceInnovationHub = () => {
             default: return 'bg-gray-100 text-gray-800'}
     };
     const getCategoryIcon = (category) => {
+
         switch (category) {
+
             case 'quantum': return <Atom className="w-5 h-5"/>;
             case 'ai': return <Brain className="w-5 h-5"/>;
             case 'space-tech': return <Satellite className="w-5 h-5"/>;
@@ -132,10 +147,12 @@ const AdvancedServiceInnovationHub = () => {
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -165,10 +182,12 @@ const AdvancedServiceInnovationHub = () => {
       {viewMode === 'trends' && (<>
           {/* Filters */}
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -213,19 +232,23 @@ const AdvancedServiceInnovationHub = () => {
 
           {/* Trends Grid */}
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition={{ delay: 0.2 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
             {filteredTrends.map((trend, index) => (<motion.div key={trend.id} initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
 }} animate = {
+
   { opacity: 1,
   x: 0 
 
@@ -306,19 +329,23 @@ const AdvancedServiceInnovationHub = () => {
 
       {/* Future Roadmap View */}
       {viewMode === 'roadmap' && (<motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition={{ delay: 0.1 }} className="space-y-6">
           {futureRoadmap.map((roadmap, index) => (<motion.div key={roadmap.id} initial = {
+
   { opacity: 0,
   x: -20 
 
 }} animate = {
+
   { opacity: 1,
   x: 0 
 
@@ -402,10 +429,12 @@ const AdvancedServiceInnovationHub = () => {
 
       {/* Strategic Insights View */}
       {viewMode === 'insights' && (<motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -551,10 +580,12 @@ const AdvancedServiceInnovationHub = () => {
 
       {/* CTA Section */}
       <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -567,6 +598,7 @@ const AdvancedServiceInnovationHub = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
+
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',
   '_blank')
 
@@ -575,6 +607,7 @@ const AdvancedServiceInnovationHub = () => {
               Get Innovation Strategy
             </Button>
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
+
   () => window.open('tel:+13024640950',
   '_blank')
 

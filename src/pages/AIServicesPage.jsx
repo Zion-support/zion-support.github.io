@@ -4,9 +4,11 @@ import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 export default function AIServicesPage () {
+
 import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search const AIServices = [
 
     {
+
         title: "AI Strategy Consulting",
         description: "Strategic guidance for implementing AI solutions in your business",
         price: "$2,500 - $15,000",
@@ -17,6 +19,7 @@ import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Se
         link: "/request - quote?service = ai - strategy"
     },
     {
+
         title: "Custom AI Model Development",
         description: "Tailored machine learning models for your specific use case",
         price: "$5,000 - $50,000",
@@ -27,6 +30,7 @@ import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Se
         link: "/request - quote?service = custom - ai - models"
     },
     {
+
         title: "Data Labeling & Annotation",
         description: "High - quality data preparation for machine learning projects",
         price: "$0.50 - $5.00 per item",
@@ -36,6 +40,7 @@ import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Se
         link: "/request - quote?service = data - labeling"
     },
     {
+
         title: "AI - Powered Analytics",
         description: "Advanced business intelligence with machine learning insights",
         price: "$1,500 - $8,000 / month",
@@ -46,6 +51,7 @@ import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Se
         link: "/request - quote?service = ai - analytics"
     },
     {
+
         title: "Computer Vision Solutions",
         description: "Image and video analysis for automation and quality control",
         price: "$3,000 - $25,000",
@@ -55,6 +61,7 @@ import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Se
         link: "/request - quote?service = computer - vision"
     },
     {
+
         title: "Natural Language Processing",
         description: "Text analysis, chatbots, and language understanding systems",
         price: "$2,000 - $20,000",
@@ -64,6 +71,7 @@ import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Se
         link: "/request - quote?service = nlp"
     },
     {
+
         title: "AI Ethics & Compliance",
         description: "Ensure your AI systems are fair, transparent, and compliant",
         price: "$1,500 - $10,000",
@@ -73,6 +81,7 @@ import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Se
         link: "/request - quote?service = ai - ethics"
     },
     {
+
         title: "AI Model Optimization",
         description: "Improve performance and efficiency of existing AI models",
         price: "$1,000 - $15,000",
@@ -82,6 +91,7 @@ import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Se
         link: "/request - quote?service = model - optimization"
     },
     {
+
         title: "AI Training & Workshops",
         description: "Custom training programs for your team on AI technologies",
         price: "$500 - $3,000 per person",
@@ -91,6 +101,7 @@ import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Se
         link: "/request - quote?service = ai - training"
     },
     {
+
         title: "AI Integration Services",
         description: "Seamlessly integrate AI solutions into existing systems",
         price: "$2,000 - $20,000",
@@ -100,6 +111,7 @@ import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Se
         link: "/request - quote?service = ai - integration"
     },
     {
+
         title: "AI Security & Testing",
         description: "Comprehensive security testing for AI systems",
         price: "$1,500 - $12,000",
@@ -109,6 +121,7 @@ import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Se
         link: "/request - quote?service = ai - security"
     },
     {
+
         title: "AI Content Generation",
         description: "Automated content creation for marketing and communication",
         price: "$500 - $5,000 / month",

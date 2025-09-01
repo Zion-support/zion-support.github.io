@@ -12,16 +12,18 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
   animated?: boolean}
 
 const Skeleton: React.FC<SkeletonProps> = ({
+
   className,
   variant = 'default',
   width,
   height,
   lines = 1,
-  animated = true,
-}) => {
+  animated = true}) => {
+
   const baseClasses = 'bg-slate-200 dark:bg-slate-700 rounded';
   
   const variants = {
+
     default: 'h-4 w-full',
     circular: 'rounded-full',
     rectangular: 'w-full',
@@ -37,6 +39,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
   );
 
   if (variant === 'text' && lines > 1) {
+
     return (
       <div className="space-y-2">
         {Array.from({ length: lines }).map((_, index)  => (
@@ -50,6 +53,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
             initial={animated ? { opacity: 0.5 } : {}}
             animate={animated ? { opacity[0.5, 1, 0.5] } : {}}
             transition={{
+
               duration: 1.5,
               repeat: Infinity,
               ease: 'easeInOut',
@@ -71,6 +75,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
       initial={animated ? { opacity: 0.5 } : {}}
       animate={animated ? { opacity[0.5, 1, 0.5] } : {}}
       transition={{
+
         duration: 1.5,
         repeat: Infinity,
         ease: 'easeInOut'
@@ -92,6 +97,7 @@ export const CardSkeleton: React.FC<{ className?: string }> = ({ className }) =>
 );
 
 export const TableSkeleton: React.FC<{ rows?: number; columns?: number; className?: string }> = ({
+
   rows = 5,
   columns = 4,
   className
@@ -115,6 +121,7 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
 );
 
 export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
+
   items = 5,
   className
 }) => (
@@ -131,17 +138,20 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
   </div>
 );
 
-export const GridSkeleton: React.FC<{ 
+export const GridSkeleton: React.FC<{
+
   rows?: number; 
   columns?: number; 
   className?: string;
   itemHeight?: number}> = ({
+
   rows = 3,
   columns = 3,
   className,
-  itemHeight = 120
+  itemHeight = 120;
 }) => (
   <div className={cn('grid gap-4', className)} style={{
+
     gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`
   }}>
     {Array.from({ length: rows * columns }).map((_, index)  => (

@@ -3,6 +3,7 @@ import Web3Modal from 'web3modal';
 import { ethers } from 'ethers';
 
 interface WalletState {
+
   provider: ethers.providers.Web3Provider | null;
   signer: ethers.Signer | null;
   address: string | null;
@@ -11,50 +12,59 @@ interface WalletState {
 }
 
 interface WalletContextType extends WalletState {
+
   connectWallet: () => Promise<void>;
   disconnectWallet: () => void;
   displayAddress: string | null; 
 }
 
 const initialWalletState: WalletState = {
+
   provider: null,
   signer: null,
   address: null,
   chainId: null,
-  isConnected: false,
-};
+  isConnected: false};
 
 const WalletContext = createContext<WalletContextType | undefined>(undefined);
 
 export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+
   const [wallet, setWallet] = useState<WalletState>(initialWalletState);
   const [web3ModalInstance, setWeb3ModalInstance] = useState<Web3Modal | null>(null);
 
   useEffect(() => {
+
     if (typeof window !== 'undefined') {
+
         const providerOptions = {};
         const modal = new Web3Modal({
+
             network: 'mainnet', 
             cacheProvider: true, 
-            providerOptions,
-        });
+            providerOptions});
         setWeb3ModalInstance(modal);
     }
   }, []);
 
   const disconnectWallet = useCallback(async () => {
+
     if (web3ModalInstance?.cachedProvider) {
+
         web3ModalInstance.clearCachedProvider();
     }
     setWallet(initialWalletState);
   }, [web3ModalInstance]); // Removed wallet.provider, setWallet is stable
 
   const connectWallet = useCallback(async () => {
+
     if (!web3ModalInstance) {
-        console.error('Web3Modal not initialized');
+
+        // // // console.error('Web3Modal not initialized');
         return;
     }
     try {
+
       const instance = await web3ModalInstance.connect();
       const provider = new ethers.providers.Web3Provider(instance);
       const signer = provider.getSigner();
@@ -62,20 +72,24 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       const network = await provider.getNetwork();
 
       setWallet({
+
         provider,
         signer,
         address,
         chainId: network.chainId,
-        isConnected: true,
-      });
+        isConnected: true});
 
       instance.on('accountsChanged', (accounts: string[]) => {
+
         if (accounts.length > 0) {
+
           // Re-fetch signer and network info as account change might imply network change in some wallets
           const newProvider = new ethers.providers.Web3Provider(instance);
           const newSigner = newProvider.getSigner();
           newProvider.getNetwork().then(newNetwork => {
-            setWallet(prev => ({ 
+
+            setWallet(prev => ({
+
               ...prev, 
               address: accounts[0],
               signer: newSigner, // Update signer
@@ -84,6 +98,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
             }));
           });
         } else {
+
           disconnectWallet();
         }
       });
@@ -95,22 +110,24 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         const newAddress = await newSigner.getAddress();
         const newNetwork = await newProvider.getNetwork();
         setWallet({
+
           provider: newProvider,
           signer: newSigner,
           address: newAddress,
           chainId: newNetwork.chainId,
-          isConnected: true,
-        });
-        console.log('Network changed to:', newNetwork.chainId);
+          isConnected: true});
+        // // // console.log('Network changed to:', newNetwork.chainId);
       });
 
       instance.on('disconnect', (error: any) => {
-        console.log('Disconnected', error);
+
+        // // // console.log('Disconnected', error);
         disconnectWallet();
       });
 
     } catch (error) {
-      console.error('Error connecting wallet:', error);
+
+      // // // console.error('Error connecting wallet:', error);
       // If user closes modal, it might throw an error, so we ensure state is reset
       disconnectWallet();
     }
@@ -128,8 +145,10 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
 };
 
 export const useWallet = (): WalletContextType => {
+
   const context = useContext(WalletContext);
   if (context === undefined) {
+
     throw new Error('useWallet must be used within a WalletProvider');
   }
   return context;

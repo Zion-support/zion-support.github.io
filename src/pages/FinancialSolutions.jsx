@@ -4,36 +4,42 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
 
     const solutions = [
         {
+
             icon: Brain,
             title: "AI - Powered Trading",
             description: "Intelligent algorithmic trading systems with real - time market analysis",
             features["Predictive analytics", "Risk management", "Portfolio optimization"];
         },;
         {
+
             icon: Shield,
             title: "Regulatory Compliance",
             description: "Automated compliance monitoring and reporting for financial regulations",
             features["Real - time monitoring", "Automated reporting", "Audit trails"];
         },;
         {
+
             icon: BarChart3,
             title: "Financial Analytics",
             description: "Advanced data analytics for investment decisions and market insights",
             features["Market analysis", "Performance tracking", "Risk assessment"];
         },;
         {
+
             icon: Lock,
             title: "Cybersecurity",
             description: "Bank - grade security solutions for financial institutions",
             features["Fraud detection", "Secure transactions", "Data protection"];
         },;
         {
+
             icon: Database,
             title: "Data Management",
             description: "Comprehensive financial data integration and management",
             features["Real - time data", "Multi - source integration", "Data quality"];
         },;
         {
+
             icon: Zap,
             title: "Process Automation",
             description: "Streamlined financial operations and workflow automation",
@@ -42,31 +48,37 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
     ];
     const useCases = [
         {
+
             title: "Investment Management",
             description: "AI - powered portfolio management and investment strategies",
             icon: "📈"
         },
         {
+
             title: "Risk Management",
             description: "Comprehensive risk assessment and mitigation strategies",
             icon: "⚠️"
         },
         {
+
             title: "Compliance & Audit",
             description: "Automated regulatory compliance and audit preparation",
             icon: "📋"
         },
         {
+
             title: "Customer Onboarding",
             description: "Streamlined KYC and customer verification processes",
             icon: "👤"
         },
         {
+
             title: "Fraud Detection",
             description: "Real - time fraud detection and prevention systems",
             icon: "🕵️"
         },
         {
+
             title: "Treasury Operations",
             description: "Automated treasury management and cash flow optimization",
             icon: "💰"

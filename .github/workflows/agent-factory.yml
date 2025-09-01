@@ -2,7 +2,7 @@ name: Agent Factory
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
+    - cron: '0 */6 * * *' # Every 6 hours
   workflow_dispatch:
   push:
     branches: [main]
@@ -34,7 +34,7 @@ jobs:
       max-parallel: 4
       matrix: ${{ fromJson(needs.generate-matrix.outputs.matrix).include }}
     timeout-minutes: 30
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -73,7 +73,7 @@ jobs:
           https://instagram.com/ziontechgroup
           https://twitter.com/ziontechgroup
           EOF
-          
+
           # Run linkinator on the external links
           linkinator external_links.txt --format json > link_report.json || true
 
@@ -85,7 +85,7 @@ jobs:
             echo '{"links":[]}' > report.json
             exit 0
           fi
-          
+
           # Run linkinator with error handling
           if ! npx linkinator $urls --recurse --concurrency 20 --skip '.*(logout|signout).*' --format json > report.json 2>/dev/null; then
             echo "Linkinator failed, creating empty report"
@@ -131,26 +131,26 @@ jobs:
     needs: [agent]
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       - name: Download all artifacts
         uses: actions/download-artifact@v4
         with:
           path: artifacts
-          
+
       - name: Combine results
         run: |
           echo "# Combined Link Check Report" > COMBINED_REPORT.md
           echo "" >> COMBINED_REPORT.md
           echo "Generated on: $(date)" >> COMBINED_REPORT.md
           echo "" >> COMBINED_REPORT.md
-          
+
           total_broken=0
           total_checked=0
-          
+
           for report in artifacts/shard-*-report/report.json; do
             if [ -f "$report" ]; then
               broken=$(jq '.links[] | select(.state=="BROKEN") | length' "$report" 2>/dev/null || echo "0")
@@ -159,12 +159,12 @@ jobs:
               total_checked=$((total_checked + checked))
             fi
           done
-          
+
           echo "## Overall Summary" >> COMBINED_REPORT.md
           echo "- Total links checked: $total_checked" >> COMBINED_REPORT.md
           echo "- Total broken links: $total_broken" >> COMBINED_REPORT.md
           echo "" >> COMBINED_REPORT.md
-          
+
           if [ $total_broken -gt 0 ]; then
             echo "## Broken Links by Shard" >> COMBINED_REPORT.md
             for report in artifacts/shard-*-report/report.json; do

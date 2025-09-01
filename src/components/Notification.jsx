@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 export function Notification ({ id, type, title, message, duration = 5000, onClose }) {
+
 export function NotificationContainer ({ notifications, onClose }) {
 
 =======
@@ -54,13 +55,16 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
     const styles = notificationStyles[type];
     const Icon = styles.icon;
     useEffect ( () => {
+
         if (duration > 0) {
 
             const timer = setTimeout(() => {
+
                 handleClose()}, duration);
             return () => clearTimeout(timer)}
     }, [duration]);
     const handleClose = () => {
+
         setIsVisible(false);
         setTimeout(() => onClose(id), 300)};
     if (!isVisible)
@@ -78,6 +82,7 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
       </div>
     </div>)}
 export function NotificationContainer({ notifications, onClose }) {
+
 "
     return (<div className="fixed top-20 right-4 z-50 space-y-2">
       {notifications.map((notification) => (<Notification key={notification.id} {...notification} onClose={onClose}/>))}

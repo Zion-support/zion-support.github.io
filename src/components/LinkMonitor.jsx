@@ -16,6 +16,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 >>>>>>> main
     // Scan all links on the current page
     const scanPageLinks = async () => {
+
         setIsScanning(true);
         setScanProgress(0);
         const links = Array.from(document.querySelectorAll('a[href]'));

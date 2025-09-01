@@ -1,10 +1,12 @@
 export interface EmergingTechSpecializedService {
+
   id: string;
   title: string;
   description: string;
   category: string;
   subcategory: string;
   pricing: {
+
     monthly: number;
     yearly: number;
     custom: string;
@@ -54,12 +56,14 @@ export interface EmergingTechSpecializedService {
 export const EMERGING_TECH_SPECIALIZED_SERVICES_2025: EmergingTechSpecializedService[] = [
   // 1. Neuromorphic Computing AI Platform
   {
+
     id: "neuromorphic-computing-ai",
     title: "Zion Neuromorphic Computing AI Platform",
     description: "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure, enabling ultra-efficient AI processing, real-time learning, and energy-efficient computing for edge devices and IoT applications.",
     category: "AI Services",
     subcategory: "Neuromorphic Computing",
     pricing: {
+
       monthly: 12999,
       yearly: 129990,
       custom: "Enterprise neuromorphic AI solutions",
@@ -135,12 +139,14 @@ export const EMERGING_TECH_SPECIALIZED_SERVICES_2025: EmergingTechSpecializedSer
 
   // 2. Quantum Internet Infrastructure
   {
+
     id: "quantum-internet-infrastructure",
     title: "Zion Quantum Internet Infrastructure",
     description: "Next-generation quantum internet infrastructure that enables ultra-secure communication, quantum entanglement distribution, and quantum network protocols for the future of secure communications.",
     category: "Quantum Technology",
     subcategory: "Quantum Internet",
     pricing: {
+
       monthly: 19999,
       yearly: 199990,
       custom: "Enterprise quantum internet solutions",
@@ -216,12 +222,14 @@ export const EMERGING_TECH_SPECIALIZED_SERVICES_2025: EmergingTechSpecializedSer
 
   // 3. Synthetic Biology AI Platform
   {
+
     id: "synthetic-biology-ai-platform",
     title: "Zion Synthetic Biology AI Platform",
     description: "Cutting-edge AI platform that combines synthetic biology with machine learning to design, simulate, and optimize biological systems for pharmaceutical development, bioengineering, and research applications.",
     category: "AI Services",
     subcategory: "Synthetic Biology",
     pricing: {
+
       monthly: 8999,
       yearly: 89990,
       custom: "Enterprise synthetic biology solutions",
@@ -296,12 +304,14 @@ export const EMERGING_TECH_SPECIALIZED_SERVICES_2025: EmergingTechSpecializedSer
 
   // 4. Space-Based Computing Platform
   {
+
     id: "space-based-computing-platform",
     title: "Zion Space-Based Computing Platform",
     description: "Revolutionary computing platform that leverages space-based infrastructure for global computing distribution, low-latency communications, and space-optimized data processing capabilities.",
     category: "Space Technology",
     subcategory: "Space Computing",
     pricing: {
+
       monthly: 15999,
       yearly: 159990,
       custom: "Enterprise space computing solutions",
@@ -377,12 +387,14 @@ export const EMERGING_TECH_SPECIALIZED_SERVICES_2025: EmergingTechSpecializedSer
 
   // 5. Brain-Computer Interface AI Platform
   {
+
     id: "brain-computer-interface-ai",
     title: "Zion Brain-Computer Interface AI Platform",
     description: "Advanced brain-computer interface platform that uses AI to interpret brain signals, enabling direct communication between the human brain and computers for medical, research, and assistive technology applications.",
     category: "AI Services",
     subcategory: "Brain-Computer Interface",
     pricing: {
+
       monthly: 11999,
       yearly: 119990,
       custom: "Enterprise BCI solutions",

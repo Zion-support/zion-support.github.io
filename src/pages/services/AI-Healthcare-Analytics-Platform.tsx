@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Heart, 
   Brain, 
   Zap, 
@@ -34,6 +35,7 @@ import {
 } from 'lucide-react';
 
 const AIHealthcareAnalyticsPlatform: React.FC = () => {
+
   const features = [
     "AI-Powered Patient Risk Assessment & Prediction",
     "Real-time Clinical Decision Support",
@@ -68,6 +70,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$599",
       period: "/month",
@@ -84,6 +87,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$1,499",
       period: "/month",
@@ -102,6 +106,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$3,999",
       period: "/month",
@@ -366,6 +371,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-lg rounded-xl p-8 border ${
+
                   plan.popular 
                     ? 'border-blue-500/50 bg-blue-600/10' 
                     : 'border-white/10'
@@ -401,6 +407,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+
                     plan.popular
                       ? 'bg-blue-600 hover:bg-blue-700 text-white'
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'

@@ -3,58 +3,59 @@ import React from 'react';
 export default About;
 
 const About = () => {
+
   const values = [
     {
+
       icon: Lightbulb,
       title: 'Innovation',
       description:
-        "We push the boundaries of what's possible, constantly exploring new technologies and approaches to solve complex challenges.",
-    },
+        "We push the boundaries of what's possible, constantly exploring new technologies and approaches to solve complex challenges."},
     {
+
       icon: Award,
       title: 'Excellence',
       description:
-        'We maintain the highest standards in everything we do, from code quality to customer service and project delivery.',
-    },
+        'We maintain the highest standards in everything we do, from code quality to customer service and project delivery.'},
     {
+
       icon: Users,
       title: 'Collaboration',
       description:
-        'We believe in the power of teamwork and partnerships to achieve extraordinary results that benefit everyone involved.',
-    },
+        'We believe in the power of teamwork and partnerships to achieve extraordinary results that benefit everyone involved.'},
     {
+
       icon: Shield,
       title: 'Integrity',
       description:
-        'We operate with honesty, transparency, and ethical practices in all our business relationships and operations.',
-    },
+        'We operate with honesty, transparency, and ethical practices in all our business relationships and operations.'},
   ];
 
   const milestones = [
     {
+
       year: '2025',
       title: 'Global Expansion',
       description:
-        'Expanded operations to serve clients across North America, Europe, and Asia - Pacific regions.',
-    },
+        'Expanded operations to serve clients across North America, Europe, and Asia - Pacific regions.'},
     {
+
       year: '2024',
       title: 'AI Breakthrough',
       description:
-        'Launched revolutionary AI autonomous business platform, transforming how companies operate.',
-    },
+        'Launched revolutionary AI autonomous business platform, transforming how companies operate.'},
     {
+
       year: '2023',
       title: 'Quantum Innovation',
       description:
-        'Developed cutting - edge quantum computing solutions for enterprise applications.',
-    },
+        'Developed cutting - edge quantum computing solutions for enterprise applications.'},
     {
+
       year: '2022',
       title: 'Comp Founded',
       description:
-        'Zion Tech Group was established with a vision to revolutionize technology solutions.',
-    },
+        'Zion Tech Group was established with a vision to revolutionize technology solutions.'},
   ];
 
   const stats = [

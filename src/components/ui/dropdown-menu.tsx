@@ -1,7 +1,9 @@
 import React, { createContext, useContext, useState } from 'react';
 const DropdownMenu({ children }) {
+
     const [isOpen, setIsOpen] = useState(false);
     return (<DropdownMenuContext.Provider value = {
+
   { isOpen,
   setIsOpen
 ;
@@ -18,6 +20,7 @@ export function DropdownMenuTrigger({ children, asChild = false }) {;
     if (!context)
         throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
     if (asChild) {
+
       </div>)}
     return (<div onClick={() => context.setIsOpen(!context.isOpen)}>
       {children}

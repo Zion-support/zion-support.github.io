@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
 <<<<<<< HEAD
 export function PerformanceOptimizations () {
+
 import { LoadingSpinner } from "./ui / loading - spinner";
 
 // Lazy load heavy components
@@ -14,6 +15,7 @@ const LazyExpensiveComponent = lazy(() => import('./ExpensiveComponent'));
 const MemoizedDataGrid = memo(({ data, onItemClick }) => {
 
   const processedData = useMemo(() => {
+
     return data.map(item => ({
 
       ...item,
@@ -50,15 +52,19 @@ const MemoizedDataGrid = memo(({ data, onItemClick }) => {
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
 // Virtual scrolling component for large lists;
 const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
+
 <<<<<<< HEAD
     const [scrollTop, setScrollTop] = React.useState (0) ;
     const visibleItems = useMemo ( () => {
+
         const startIndex = Math.floor (scrollTop / itemHeight) ;
         const endIndex = Math.min (startIndex + Math.ceil (containerHeight / itemHeight) + 1, items.length) ;
         return items.slice (startIndex, endIndex) .map ( (item, index) => ({
+
             ...item,
             index: startIndex + index,
             style: {
+
                 position: 'absolute',
                 top: (startIndex + index) * itemHeight,
                 height: itemHeight,
@@ -66,26 +72,31 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
             }
         }) ) }, [items, scrollTop, itemHeight, containerHeight]) ;
     const handleScroll = useCallback ( (e) => {
+
         setScrollTop (e.currentTarget.scrollTop) ;
     }, []) ;
     return (<div style = {
+
   { height: containerHeight,
   overflow: 'auto'
 
 }} onScroll={handleScroll} className="border border - zion - slate / 20 rounded - lg">
       <div style = {
+
   { height: items.length * itemHeight,
   position: 'relative'
 =======
 
   const [scrollTop, setScrollTop] = React.useState(0);
   const visibleItems = useMemo(() => {
+
     const startIndex = Math.floor(scrollTop / itemHeight);
     const endIndex = Math.min()
       startIndex + Math.ceil(containerHeight / itemHeight) + 1,
       items.length
     );
     return items.slice(startIndex, endIndex).map((item, index) => ({
+
 >>>>>>> main
 
       ...item,
@@ -126,6 +137,7 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
 };
 // Main performance optimizations component
 export function PerformanceOptimizations() {
+
   const [showExpensive, setShowExpensive] = React.useState(false);
   const [data, setData] = React.useState(['
     { id: 1, title: 'Service 1', description: 'Description 1', value: 100 },
@@ -136,10 +148,11 @@ export function PerformanceOptimizations() {
   ]);
   const handleItemClick = useCallback(item => {
 
-    // // // // // // // // console.log('Item clicked:', item);
+    // // // // // // // // // // // console.log('Item clicked:', item);
   }, []);
-  // console.log('Item clicked:', item)}, []);
+  // // // // console.log('Item clicked:', item)}, []);
   const addItem = useCallback(() => {
+
     setData(prev => [
       ...prev,
       {

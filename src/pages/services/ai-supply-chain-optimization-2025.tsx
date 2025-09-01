@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Truck,
   Brain,
   Zap,
@@ -86,26 +87,31 @@ import {
 } from 'lucide-react';
 
 export function AISupplyChainOptimization2025() {
+
   const features = [
     {
+
       icon: Brain,
       title: 'AI-Powered Demand Forecasting',
       description: 'Advanced machine learning algorithms that predict demand patterns and optimize inventory levels',
       benefits: ['Predictive analytics', 'Seasonal patterns', 'Real-time adjustments']
     },
     {
+
       icon: Truck,
       title: 'Route Optimization',
       description: 'Intelligent route planning that minimizes costs and maximizes delivery efficiency',
       benefits: ['Dynamic routing', 'Fuel optimization', 'Delivery scheduling']
     },
     {
+
       icon: Zap,
       title: 'Real-time Visibility',
       description: 'End-to-end supply chain visibility with instant alerts and tracking capabilities',
       benefits: ['Live tracking', 'Status updates', 'Exception handling']
     },
     {
+
       icon: Users,
       title: 'Supplier Management',
       description: 'Comprehensive supplier performance monitoring and risk assessment',
@@ -115,6 +121,7 @@ export function AISupplyChainOptimization2025() {
 
   const pricingPlans = [
     {
+
       name: 'Starter',
       price: '$399',
       period: '/month',
@@ -131,6 +138,7 @@ export function AISupplyChainOptimization2025() {
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$1,299',
       period: '/month',
@@ -149,6 +157,7 @@ export function AISupplyChainOptimization2025() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: 'Custom',
       period: '',
@@ -170,24 +179,28 @@ export function AISupplyChainOptimization2025() {
 
   const supplyChainFeatures = [
     {
+
       title: 'Inventory Optimization',
       description: 'AI-powered inventory management that balances stock levels with demand forecasts',
       icon: Warehouse,
       benefits: ['Demand forecasting', 'Safety stock optimization', 'Reorder automation']
     },
     {
+
       title: 'Logistics Intelligence',
       description: 'Smart logistics planning with real-time optimization and cost analysis',
       icon: Truck,
       benefits: ['Route optimization', 'Cost analysis', 'Performance metrics']
     },
     {
+
       title: 'Risk Management',
       description: 'Comprehensive risk assessment and mitigation strategies for supply chain disruptions',
       icon: AlertTriangle,
       benefits: ['Risk scoring', 'Scenario planning', 'Contingency planning']
     },
     {
+
       title: 'Sustainability Analytics',
       description: 'Environmental impact tracking and optimization for sustainable supply chain operations',
       icon: Globe,
@@ -451,6 +464,7 @@ export function AISupplyChainOptimization2025() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
                     : 'border-gray-700'
@@ -485,6 +499,7 @@ export function AISupplyChainOptimization2025() {
                 <Link
                   to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                       : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'

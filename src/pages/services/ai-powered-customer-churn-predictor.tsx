@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   TrendingDown, 
   Users, 
   BarChart3, 
@@ -28,33 +29,40 @@ import {
 } from 'lucide-react';
 
 const AIPoweredCustomerChurnPredictor: React.FC = () => {
+
   const features = [
     {
+
       icon: Brain,
       title: "Predictive AI Analytics",
       description: "Advanced machine learning algorithms that predict customer churn with 95% accuracy up to 90 days in advance."
     },
     {
+
       icon: Users,
       title: "Customer Behavior Analysis",
       description: "Deep insights into customer usage patterns, engagement levels, and satisfaction indicators."
     },
     {
+
       icon: AlertTriangle,
       title: "Early Warning System",
       description: "Real-time alerts when customers show signs of potential churn, allowing proactive intervention."
     },
     {
+
       icon: BarChart3,
       title: "Churn Risk Scoring",
       description: "Individual customer churn risk scores with actionable recommendations for retention strategies."
     },
     {
+
       icon: Target,
       title: "Personalized Retention Campaigns",
       description: "AI-generated personalized retention strategies and campaigns for high-risk customers."
     },
     {
+
       icon: Activity,
       title: "Performance Tracking",
       description: "Comprehensive tracking of retention efforts and ROI measurement for all campaigns."
@@ -63,6 +71,7 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
 
   const pricingTiers = [
     {
+
       name: "Starter",
       price: "$199",
       period: "/month",
@@ -79,6 +88,7 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$499",
       period: "/month",
@@ -97,6 +107,7 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,299",
       period: "/month",
@@ -118,21 +129,25 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
 
   const benefits = [
     {
+
       icon: TrendingDown,
       title: "Reduce Churn by 40%",
       description: "Proactive intervention strategies prevent customer loss before it happens"
     },
     {
+
       icon: Zap,
       title: "Real-time Insights",
       description: "Instant notifications and alerts when customers show churn risk"
     },
     {
+
       icon: CheckCircle,
       title: "Increased Revenue",
       description: "Retain valuable customers and improve lifetime value"
     },
     {
+
       icon: Clock,
       title: "Early Intervention",
       description: "Identify at-risk customers up to 90 days before they churn"
@@ -141,18 +156,22 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
 
   const useCases = [
     {
+
       title: "SaaS Companies",
       description: "Predict subscription cancellations and reduce monthly churn rates"
     },
     {
+
       title: "E-commerce",
       description: "Identify customers likely to stop purchasing and re-engage them"
     },
     {
+
       title: "Financial Services",
       description: "Predict account closures and prevent customer attrition"
     },
     {
+
       title: "Telecommunications",
       description: "Reduce customer turnover and improve retention rates"
     }
@@ -357,6 +376,7 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
+
                   tier.popular 
                     ? 'border-red-500 shadow-2xl shadow-red-500/20' 
                     : 'border-slate-700'
@@ -391,6 +411,7 @@ const AIPoweredCustomerChurnPredictor: React.FC = () => {
                 <Link
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+
                     tier.popular
                       ? 'bg-gradient-to-r from-red-500 to-purple-500 text-white hover:from-red-600 hover:to-purple-600'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

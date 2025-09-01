@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
 export const WebsiteAnalyzer: React.FC = () : JSX.Element => {
+
 export default WebsiteAnalyzer;
 import { CheckCircle,
 import { LinkChecker, LinkInfo, PageInfo  } from '../utils / linkChecker';
@@ -20,7 +21,9 @@ import { CheckCircle,
  } from 'lucide-react.ts';
 
 interface AnalysisResult {
+
 summary: {
+
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     totalLinks: number;
@@ -46,6 +49,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
 
 <<<<<<< HEAD
   const analyzeWebsite = async () => {
+
     setIsAnalyzing (true) ;
     setProgress (0) ;
 
@@ -62,18 +66,20 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     const allMissingPages: string[] = [];
 
     try {
+
       for (let i = 0; i < pagesToAnalyze.length; i++) {
 
-        
         setCurrentPage (page) ;
         setProgress ( (i / pagesToAnalyze.length) * 100) ;
 
         try {
+
           // Simulate page content analysis (in real implementation, this would fetch actual page content) 
           
           results.push (pageResult) } catch (error) {
+
 `
-          // console.error(`Error analyzing ${page}:`, error)}
+          // // // // console.error(`Error analyzing ${page}:`, error)}
 
         // Add delay to prevent overwhelming the server
         await new Promise (resolve => setTimeout (resolve, 100) ) }
@@ -89,7 +95,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
         missingPages
       }) } catch (error) {
 
-      // console.error('Analysis failed:', error)} finally {
+      // // // // console.error('Analysis failed:', error)} finally {
 
       setIsAnalyzing(false);
       setProgress(100);

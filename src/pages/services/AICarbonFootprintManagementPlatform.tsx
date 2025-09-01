@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Leaf, 
   TrendingDown, 
   BarChart3, 
@@ -26,23 +27,28 @@ import {
 import { SEO } from '@/components/SEO';
 
 export default function AICarbonFootprintManagementPlatform() {
+
   const features = [
     {
+
       icon: Leaf,
       title: "AI-Powered Carbon Tracking",
       description: "Intelligent monitoring of carbon emissions across all business operations with real-time analytics"
     },
     {
+
       icon: TrendingDown,
       title: "Predictive Reduction",
       description: "Machine learning algorithms predict emission trends and suggest optimization strategies"
     },
     {
+
       icon: BarChart3,
       title: "Comprehensive Reporting",
       description: "Automated ESG compliance reporting and sustainability dashboards for stakeholders"
     },
     {
+
       icon: Globe,
       title: "Global Standards Compliance",
       description: "Built-in compliance with international carbon accounting standards and frameworks"
@@ -51,24 +57,28 @@ export default function AICarbonFootprintManagementPlatform() {
 
   const services = [
     {
+
       title: "Carbon Accounting & Auditing",
       description: "Automated carbon footprint calculation and verification across all business activities",
       icon: Calculator,
       features: ["Scope 1, 2, and 3 emissions tracking", "Real-time data integration", "Third-party audit support"]
     },
     {
+
       title: "Sustainability Analytics",
       description: "Advanced analytics and insights to identify reduction opportunities and track progress",
       icon: BarChart3,
       features: ["Predictive modeling", "Scenario analysis", "Performance benchmarking"]
     },
     {
+
       title: "ESG Compliance Management",
       description: "Automated compliance tracking for various sustainability frameworks and regulations",
       icon: Shield,
       features: ["GRI, SASB, TCFD compliance", "Automated reporting", "Regulatory updates"]
     },
     {
+
       title: "Carbon Offset Management",
       description: "Integrated carbon offset marketplace and verification system",
       icon: Leaf,
@@ -89,6 +99,7 @@ export default function AICarbonFootprintManagementPlatform() {
 
   const pricing = [
     {
+
       name: "Starter",
       price: "$299",
       period: "/month",
@@ -104,6 +115,7 @@ export default function AICarbonFootprintManagementPlatform() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$799",
       period: "/month",
@@ -121,6 +133,7 @@ export default function AICarbonFootprintManagementPlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,999",
       period: "/month",
@@ -343,6 +356,7 @@ export default function AICarbonFootprintManagementPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-emerald-800/50 border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-emerald-400/50 shadow-lg shadow-emerald-500/20' 
                     : 'border-emerald-700/50'
@@ -377,6 +391,7 @@ export default function AICarbonFootprintManagementPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-emerald-500 to-green-600 text-white hover:from-emerald-400 hover:to-green-500'
                       : 'bg-emerald-700/50 text-emerald-100 hover:bg-emerald-700/70'

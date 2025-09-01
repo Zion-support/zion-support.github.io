@@ -3,6 +3,7 @@ import { Link } from 'react - router - dom';
 import React, { useState, useEffect, useCallback } from 'react';
 export default React.memo (PerformanceOptimizedHero) ;}}}</motion.div>}
 import {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
   ArrowRight,
@@ -18,18 +19,21 @@ import { motion, AnimatePresence } from 'framer - motion';
   Globe,
   Rocket
 interface HeroProps {
+
   title?: string;
   subtitle?: string;
   description?: string;
   ctaText?: string;
   ctaLink?: string;
   features?: Array<{
+
     icon: React.ComponentType < any>;
     text: string;
     color: string;
   }>;
 
 const PerformanceOptimizedHero: React.FC < HeroProps> = ({
+
   title = "Revolutionary AI & Technology Solutions",
   subtitle = "2025 - 2026 Innovation Hub",
   description = "Transform your business with cutting - edge AI, quantum computing, and next - generation technology solutions. Experience the future of digital transformation.",
@@ -46,6 +50,7 @@ const PerformanceOptimizedHero: React.FC < HeroProps> = ({
   const [isVisible, setIsVisible] = useState (false) ;
 
   useEffect ( () => {
+
     setIsVisible (true) ;
 
     const interval = setInterval ( () => {;
@@ -53,6 +58,7 @@ const PerformanceOptimizedHero: React.FC < HeroProps> = ({
     }, 3000) ;
 =======
   useEffect ( () => {
+
     setIsVisible (true) ;
     
     
@@ -61,10 +67,10 @@ const PerformanceOptimizedHero: React.FC < HeroProps> = ({
 
     return () => clearInterval(interval)}, [features.length]);
 
-    // // // // // // // // console.log('Hero CTA clicked');
+    // // // // // // // // // // // console.log('Hero CTA clicked');
   
     // Analytics tracking could be added here;
-    // console.log('Hero CTA clicked')}, []);
+    // // // // console.log('Hero CTA clicked')}, []);
 
   const containerVariants = {
 
@@ -76,6 +82,7 @@ const PerformanceOptimizedHero: React.FC < HeroProps> = ({
 
       opacity: 1,;      y: 0,;
       transition: {
+
         duration: 0.8,;
         staggerChildren: 0.2}}};
 

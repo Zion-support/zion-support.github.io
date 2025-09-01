@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom';
 import React, { useState, useEffect } from 'react';
 export default React.memo (function InnovativeServices2028 (...args[]) :  {
+
 import {
+
 import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from "../data / innovativeServices2028";
 import { motion, AnimatePresence } from 'framer - motion';
 
@@ -37,6 +39,7 @@ import { motion, AnimatePresence } from 'framer - motion';
   const [expandedService, setExpandedService] = useState < any> (null) ;
 
   const filteredServices = innovativeServices2028.filter (service => {
+
     const matchesCategory = selectedCategory === 'all' ||
       serviceCategories.find (cat => cat.id === selectedCategory) ?.services.includes (service.id) ;
     const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;

@@ -1,15 +1,18 @@
 import React from 'react';
 
 interface TrustScoreBadgeProps {
+
   score: number | null | undefined;
   tooltipText?: string;
 }
 
 const TrustScoreBadge: React.FC<TrustScoreBadgeProps> = ({ score, tooltipText }) => {
+
   const displayScore = score !== null && score !== undefined ? score : 'N/A';
   const defaultTooltip = score !== null && score !== undefined ? `Detailed analysis: ${tooltipText || 'No analysis available'}` : 'Trust score not yet calculated.';
 
   const getScoreColor = () => {
+
     if (score === null || score === undefined) return 'text-gray-500';
     if (score > 85) return 'text-green-600';
     if (score > 70) return 'text-yellow-600';
@@ -28,11 +31,13 @@ const TrustScoreBadge: React.FC<TrustScoreBadgeProps> = ({ score, tooltipText })
       {/* <span className="tooltip-text">{tooltipText}</span> */}
       <style jsx>{`
         .trust-score-badge {
+
           position: relative;
           cursor: help;
         }
         // Example for a more styled tooltip - can be expanded
         // .tooltip-text {
+
         //   visibility: hidden;
         //   width: 200px;
         //   background-color: black;
@@ -49,6 +54,7 @@ const TrustScoreBadge: React.FC<TrustScoreBadgeProps> = ({ score, tooltipText })
         //   transition: opacity 0.3s;
         // }
         // .trust-score-badge:hover .tooltip-text {
+
         //   visibility: visible;
         //   opacity: 1;
         // }

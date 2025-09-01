@@ -1,16 +1,17 @@
 
 export interface AvatarMenuProps {
+
   avatarUrl?: string;
   onLogout?: () => void}
 
 export function AvatarMenu({ avatarUrl, onLogout }: AvatarMenuProps) {
-  
-  
-    
+
     if (e.key === "ArrowDown") {
+
       e.preventDefault();
       
       items[next]?.focus()} else if (e.key === "ArrowUp") {
+
       e.preventDefault();
       
       items[prev]?.focus()}
@@ -51,8 +52,10 @@ export function AvatarMenu({ avatarUrl, onLogout }: AvatarMenuProps) {
                 <button
                   type="button"
                   ref={(el) => {
+
                     itemRefs.current[2] = el}}
                   onClick={() => {
+
                     close();
                     onLogout?.()}}
                   className="rounded px-2 py-1 text-left hover:bg-zion-blue-light focus:bg-zion-blue-light"

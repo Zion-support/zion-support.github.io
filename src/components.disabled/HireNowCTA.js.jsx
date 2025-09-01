@@ -3,7 +3,8 @@ import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { MessageCircle, Calendar, Star } from 'lucide-react';
-export const HireNowCTA = ({ hourlyRate, availability, rating, reviewCount, }) => {
+export const HireNowCTA = ({ hourlyRate, availability, rating, reviewCount}) => {
+
     return (<Card className="sticky top-4">
       <CardHeader>
         <CardTitle className="text-xl">Hire This Talent</CardTitle>

@@ -1,4 +1,5 @@
 export class SEOOptimizer {
+
 <<<<<<< HEAD
 export const seoOptimizer = new SEOOptimizer () ;
 
@@ -18,6 +19,7 @@ export const seoOptimizer = new SEOOptimizer () ;
 
 =======
     static DEFAULT_META_DESCRIPTIONS = {
+
   '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',
         '/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.',
         '/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.',
@@ -39,6 +41,7 @@ export const seoOptimizer = new SEOOptimizer () ;
 
 };
     static KEYWORD_MAPPINGS = {
+
   '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
         '/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],
         '/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'],
@@ -60,6 +63,7 @@ export const seoOptimizer = new SEOOptimizer () ;
 
 };
     static generateSEOData(path) {
+
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
         const title = this.generateTitle(path);
         const description = this.generateDescription(path);
@@ -67,6 +71,7 @@ export const seoOptimizer = new SEOOptimizer () ;
         const canonicalUrl = this.generateCanonicalUrl(path);
         const structuredData = this.generateStructuredData(path);
         return {
+
 <<<<<<< HEAD
 
 =======
@@ -79,6 +84,7 @@ export const seoOptimizer = new SEOOptimizer () ;
         };
     }
     static generateTitle(path) {
+
 <<<<<<< HEAD
 
         const baseTitle = 'Zion Tech Group';
@@ -87,6 +93,7 @@ export const seoOptimizer = new SEOOptimizer () ;
 =======
         const baseTitle = 'Zion Tech Group';
         if (path === '/') {
+
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
             return `${baseTitle} - Revolutionary Technology Solutions`;
         }
@@ -126,37 +133,44 @@ export const seoOptimizer = new SEOOptimizer () ;
             "description": this.generateDescription(path),"
             "url": this.generateCanonicalUrl(path),"
             "publisher": {
+
 "
                 "@type": "Organization","
                 "name": "Zion Tech Group","
                 "url": "https://ziontechgroup.com","
 =======
-        const formattedSegment = lastSegment
+        const formattedSegment = lastSegment;
             .split('-')
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ');
         return `${formattedSegment} - ${baseTitle}`;
     }
     static generateDescription(path) {
+
         return this.DEFAULT_META_DESCRIPTIONS[path] ||
             'Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.';
     }
     static generateKeywords(path) {
+
         return this.KEYWORD_MAPPINGS[path] ||
             ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'];
     }
     static generateCanonicalUrl(path) {
+
         const baseUrl = 'https://ziontechgroup.com';
         return `${baseUrl}${path}`;
     }
     static generateStructuredData(path) {
+
         const baseData = {
+
   "@context": "https://schema.org",
             "@type": "WebPage",
             "name": this.generateTitle(path),
             "description": this.generateDescription(path),
             "url": this.generateCanonicalUrl(path),
             "publisher": {
+
                 "@type": "Organization",
                 "name": "Zion Tech Group",
                 "url": "https://ziontechgroup.com",
@@ -179,6 +193,7 @@ export const seoOptimizer = new SEOOptimizer () ;
                 "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc","
                 "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.","
                 "address": {
+
 "
                     "@type": "PostalAddress","
                     "streetAddress": "364 E Main St STE 1008","
@@ -188,6 +203,7 @@ export const seoOptimizer = new SEOOptimizer () ;
                     "addressCountry": "US"
                 },"
                 "contactPoint": {
+
 "
                     "@type": "ContactPoint","
                     "telephone": "+1-302-464-0950","
@@ -195,7 +211,9 @@ export const seoOptimizer = new SEOOptimizer () ;
 =======
         // Add specific structured data based on page type
         if (path === '/') {
+
             return {
+
                 ...baseData,
                 "@type": "Organization",
                 "name": "Zion Tech Group",
@@ -203,6 +221,7 @@ export const seoOptimizer = new SEOOptimizer () ;
                 "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
                 "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",
                 "address": {
+
                     "@type": "PostalAddress",
                     "streetAddress": "364 E Main St STE 1008",
                     "addressLocality": "Middletown",
@@ -211,6 +230,7 @@ export const seoOptimizer = new SEOOptimizer () ;
                     "addressCountry": "US"
                 },
                 "contactPoint": {
+
                     "@type": "ContactPoint",
                     "telephone": "+1-302-464-0950",
                     "contactType": "customer service",
@@ -220,6 +240,7 @@ export const seoOptimizer = new SEOOptimizer () ;
             };
         }
         if (path.startsWith('/services/')) {
+
 <<<<<<< HEAD
 
             return {
@@ -228,14 +249,17 @@ export const seoOptimizer = new SEOOptimizer () ;
                 "@type": "Service","
                 "serviceType": path.split('/').pop()?.replace(/-/g,),"
                 "provider": {
+
 "
                     "@type": "Organization","
 =======
             return {
+
                 ...baseData,
                 "@type": "Service",
                 "serviceType": path.split('/').pop()?.replace(/-/g, ' '),
                 "provider": {
+
                     "@type": "Organization",
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
                     "name": "Zion Tech Group"
@@ -245,6 +269,7 @@ export const seoOptimizer = new SEOOptimizer () ;
         return baseData;
     }
     static analyzeContentQuality(content, page) {
+
 <<<<<<< HEAD
 
         const issues = [];
@@ -257,7 +282,9 @@ export const seoOptimizer = new SEOOptimizer () ;
         const issues = [];
         // Check for missing or short title
         if (!content.includes('<title>') || content.includes('<title></title>')) {
+
             issues.push({
+
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
                 page,
                 issue: 'missing-title',
@@ -276,7 +303,9 @@ export const seoOptimizer = new SEOOptimizer () ;
         }
         // Check for missing meta description
         if (!content.includes('name="description"')) {
+
             issues.push({
+
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
                 page,
                 issue: 'missing-description',
@@ -297,7 +326,9 @@ export const seoOptimizer = new SEOOptimizer () ;
         // Check for short meta description
         const descMatch = content.match(/name="description" content="([^"]+)"/);
         if (descMatch && descMatch[1].length < 120) {
+
             issues.push({
+
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
                 page,
                 issue: 'short-description',
@@ -314,7 +345,9 @@ export const seoOptimizer = new SEOOptimizer () ;
 =======
         // Check for missing headings
         if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
+
             issues.push({
+
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
                 page,
                 issue: 'no-headings',
@@ -335,7 +368,9 @@ export const seoOptimizer = new SEOOptimizer () ;
         // Check for minimal content
         const textContent = content.replace(/<[^>]*>/g, '').trim();
         if (textContent.length < 300) {
+
             issues.push({
+
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
                 page,
                 issue: 'minimal-content',
@@ -350,6 +385,7 @@ export const seoOptimizer = new SEOOptimizer () ;
         return issues;
     }
     static generateMetaTags(seoData) {
+
 <<<<<<< HEAD
 `
         return `

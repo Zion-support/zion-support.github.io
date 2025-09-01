@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 export default StartupSolutions;
 import {
+
 import { motion } from 'framer - motion';
 
   Rocket,
@@ -18,11 +19,11 @@ import { motion } from 'framer - motion';
   Users,
   TrendingUp,
   Zap,
-  Award,
-} from 'lucide - react';
+  Award} from 'lucide - react';
 
 const startupSolutions = [
   {
+
     id: 1,
     title: 'MVP Development',
     description:
@@ -36,9 +37,9 @@ const startupSolutions = [
     ],
     price: 'From $15,000',
     timeline: '4 - 8 weeks',
-    category: 'Development',
-  },
+    category: 'Development'},
   {
+
     id: 2,
     title: 'AI - Powered Analytics',
     description:
@@ -52,9 +53,9 @@ const startupSolutions = [
     ],
     price: 'From $8,000',
     timeline: '2 - 4 weeks',
-    category: 'AI & Analytics',
-  },
+    category: 'AI & Analytics'},
   {
+
     id: 3,
     title: 'Cloud Infrastructure',
     description:
@@ -68,9 +69,9 @@ const startupSolutions = [
     ],
     price: 'From $5,000',
     timeline: '1 - 3 weeks',
-    category: 'Infrastructure',
-  },
+    category: 'Infrastructure'},
   {
+
     id: 4,
     title: 'Cybersecurity Framework',
     description:
@@ -84,9 +85,9 @@ const startupSolutions = [
     ],
     price: 'From $12,000',
     timeline: '3 - 6 weeks',
-    category: 'Security',
-  },
+    category: 'Security'},
   {
+
     id: 5,
     title: 'Mobile App Development',
     description:
@@ -100,9 +101,9 @@ const startupSolutions = [
     ],
     price: 'From $20,000',
     timeline: '6 - 12 weeks',
-    category: 'Development',
-  },
+    category: 'Development'},
   {
+
     id: 6,
     title: 'Digital Marketing Platform',
     description:
@@ -116,12 +117,12 @@ const startupSolutions = [
     ],
     price: 'From $10,000',
     timeline: '3 - 5 weeks',
-    category: 'Marketing',
-  },
+    category: 'Marketing'},
 ];
 
 const successStories = [
   {
+
     logo: '🚀',
     comp: 'TechStart Inc.',
     industry: 'SaaS',
@@ -130,9 +131,9 @@ const successStories = [
     solution:
       'Built rapid MVP with cloud infrastructure and AI analytics integration.',
     results:
-      'Launched in 6 weeks, secured $500K funding, 1000 + beta users in first month.',
-  },
+      'Launched in 6 weeks, secured $500K funding, 1000 + beta users in first month.'},
   {
+
     logo: '💡',
     comp: 'InnovateLabs',
     industry: 'FinTech',
@@ -141,9 +142,9 @@ const successStories = [
     solution:
       'Implemented cybersecurity framework with cloud infrastructure and compliance tools.',
     results:
-      'Achieved SOC2 compliance in 4 months, 99.9% uptime, zero security incidents.',
-  },
+      'Achieved SOC2 compliance in 4 months, 99.9% uptime, zero security incidents.'},
   {
+
     logo: '📱',
     comp: 'MobileFirst',
     industry: 'E - commerce',
@@ -151,11 +152,11 @@ const successStories = [
     solution:
       'Developed cross - platform mobile app with integrated analytics and marketing tools.',
     results:
-      'App launched in 8 weeks, 50% increase in mobile conversions, 4.8 - star rating.',
-  },
+      'App launched in 8 weeks, 50% increase in mobile conversions, 4.8 - star rating.'},
 ];
 
 const StartupSolutions = () => {
+
   const [selectedCategory, setSelectedCategory] = useState ('All') ;
 
   const categories = [
@@ -217,6 +218,7 @@ const StartupSolutions = () => {
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 text - white shadow - lg shadow - purple - 500 / 25'
                     : 'bg - white / 10 text - gray - 300 border border - white / 20 hover:border - purple - 400 / 40'

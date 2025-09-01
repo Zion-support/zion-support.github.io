@@ -11,6 +11,7 @@ import {
   CheckCircle,
   ArrowRight} from 'lucide-react';
 export function AboutSection() {
+
   const achievements = [
     {
 

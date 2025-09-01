@@ -8,11 +8,13 @@ import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lu
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
 export default function ProjectRoom() {
+
     const { projectId } = useParams();
     const [activeTab, setActiveTab] = useState('chat');
     const [isInCall, setIsInCall] = useState(false);
     const [callParticipants, setCallParticipants] = useState([
         {
+
             id: 'user-1',
             name: 'You',
             isHost: true,
@@ -21,20 +23,26 @@ export default function ProjectRoom() {
         }
     ]);
     const startVideoCall = () => {
+
         setIsInCall(true);
         toast.success("Video call started", {
+
             description: "Others can join with the project room link"
         });
         // Switch to video tab if not already there
         if (activeTab !== 'video') {
+
             setActiveTab('video')}
     };
     const endVideoCall = () => {
+
         setIsInCall(false);
         toast.info("Video call ended", {
+
             description: "Call duration and participants will be logged"
         })};
     const simulateUserJoining = () => {
+
         // This is just for demo purposes - in a real app, this would be handled by the video call service
         const mockUsers = [
             { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
@@ -43,6 +51,7 @@ export default function ProjectRoom() {
         ];
         const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
         if (!callParticipants.find(p => p.id === randomUser.id)) {
+
             setCallParticipants(prev => [...prev, randomUser]);
             toast(`${randomUser.name} joined the call`)}
     };

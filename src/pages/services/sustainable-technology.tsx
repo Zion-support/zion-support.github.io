@@ -2,18 +2,22 @@ import React from 'react.ts';
 import SEO from '../../components/SEO';
 import { motion              } from 'framer-motion.ts';
 import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp, Sun, Wind, Battery, Recycle, Tree, Cloud, Database const SustainableTechnology: React.FC = (): JSX.Element => {
+
   const features = [
     {
+
       icon: Leaf,
       title: 'Green Computing',
       description: 'Energy-efficient computing solutions and practices'
     },
     {
+
       icon: Sun,
       title: 'Renewable Energy',
       description: 'Solar, wind, and sustainable power solutions'
     },
     {
+
       icon: Recycle,
       title: 'Circular Economy',
       description: 'Waste reduction and resource optimization';
@@ -27,16 +31,19 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
   const solutions = [
     {
+
       title: 'Green Data Centers',
       description: 'Energy-efficient data center infrastructure',
       icon: '🏢'
     },
     {
+
       title: 'Smart Grid Technology',
       description: 'Intelligent energy distribution systems',
       icon: '⚡'
     },
     {
+
       title: 'IoT Environmental Monitoring',
       description: 'Real-time environmental data collection',
       icon: '🌱';
@@ -69,6 +76,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -79,6 +87,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -125,6 +134,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -135,6 +145,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -160,6 +171,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
               <motion.div
                 key={feature.title}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -170,6 +182,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -180,6 +193,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -207,6 +221,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -217,6 +232,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -242,6 +258,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
               <motion.div
                 key={solution.title}
                 initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
@@ -252,6 +269,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -262,6 +280,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -291,6 +310,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -301,6 +321,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -324,6 +345,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               initial = {
+
   { opacity: 0,
   x: -20 
 
@@ -334,6 +356,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
               whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -359,6 +382,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
             <motion.div
               initial = {
+
   { opacity: 0,
   x: 20 
 
@@ -369,6 +393,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
               whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -399,6 +424,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -409,6 +435,7 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

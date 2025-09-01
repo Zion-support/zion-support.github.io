@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Eye, 
   EyeOff, 
   Volume2, 
@@ -18,6 +19,7 @@ import {
 } from 'lucide-react';
 
 interface AccessibilityFeatures {
+
   highContrast: boolean;
   reducedMotion: boolean;
   largeText: boolean;
@@ -31,12 +33,14 @@ interface AccessibilityFeatures {
 }
 
 interface FocusTrapConfig {
+
   containerRef: React.RefObject<HTMLElement>;
   onEscape?: () => void;
   returnFocus?: boolean;
 }
 
 interface AccessibilityAnnouncement {
+
   message: string;
   priority: 'polite' | 'assertive';
   id: number;
@@ -44,7 +48,9 @@ interface AccessibilityAnnouncement {
 }
 
 export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { showAccessibilityPanel?: boolean }) {
+
   const [features, setFeatures] = useState<AccessibilityFeatures>({
+
     highContrast: false,
     reducedMotion: false,
     largeText: false,
@@ -71,7 +77,9 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
 
   // Screen reader announcements with better management
   const announce = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {
-    const announcement: AccessibilityAnnouncement = { 
+
+    const announcement: AccessibilityAnnouncement = {
+
       message, 
       priority, 
       id: Date.now(),
@@ -83,8 +91,10 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
     
     // Auto-remove after 5 seconds
     setTimeout(() => {
+
       setAnnouncements(prev => prev.filter(a => a.id !== announcement.id));
       if (currentAnnouncement === message) {
+
         setCurrentAnnouncement('');
       }
     }, 5000);
@@ -92,13 +102,17 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
 
   // Enhanced high contrast mode
   const toggleHighContrast = useCallback(() => {
+
     setFeatures(prev => {
+
       const newFeatures = { ...prev, highContrast: !prev.highContrast };
       
       if (newFeatures.highContrast) {
+
         document.documentElement.classList.add('high-contrast');
         announce('High contrast mode enabled', 'assertive');
       } else {
+
         document.documentElement.classList.remove('high-contrast');
         announce('High contrast mode disabled', 'assertive');
       }
@@ -109,13 +123,17 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
 
   // Enhanced reduced motion mode
   const toggleReducedMotion = useCallback(() => {
+
     setFeatures(prev => {
+
       const newFeatures = { ...prev, reducedMotion: !prev.reducedMotion };
       
       if (newFeatures.reducedMotion) {
+
         document.documentElement.classList.add('reduced-motion');
         announce('Reduced motion enabled', 'assertive');
       } else {
+
         document.documentElement.classList.remove('reduced-motion');
         document.documentElement.classList.remove('reduced-animations');
         announce('Reduced motion disabled', 'assertive');
@@ -127,15 +145,19 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
 
   // Enhanced large text mode with customizable sizing
   const toggleLargeText = useCallback(() => {
+
     setFeatures(prev => {
+
       const newFeatures = { ...prev, largeText: !prev.largeText };
       
       if (newFeatures.largeText) {
+
         document.documentElement.classList.add('large-text');
         setFontSize(20);
         setLineHeight(1.8);
         announce('Large text mode enabled', 'assertive');
       } else {
+
         document.documentElement.classList.remove('large-text');
         setFontSize(16);
         setLineHeight(1.5);
@@ -148,13 +170,17 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
 
   // Enhanced focus highlight mode
   const toggleFocusHighlight = useCallback(() => {
+
     setFeatures(prev => {
+
       const newFeatures = { ...prev, focusHighlight: !prev.focusHighlight };
       
       if (newFeatures.focusHighlight) {
+
         document.documentElement.classList.add('focus-highlight');
         announce('Focus highlighting enabled', 'assertive');
       } else {
+
         document.documentElement.classList.remove('focus-highlight');
         announce('Focus highlighting disabled', 'assertive');
       }
@@ -165,13 +191,17 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
 
   // Enhanced screen reader mode
   const toggleScreenReaderMode = useCallback(() => {
+
     setFeatures(prev => {
+
       const newFeatures = { ...prev, screenReaderMode: !prev.screenReaderMode };
       
       if (newFeatures.screenReaderMode) {
+
         document.documentElement.classList.add('screen-reader-mode');
         announce('Screen reader mode enabled', 'assertive');
       } else {
+
         document.documentElement.classList.remove('screen-reader-mode');
         announce('Screen reader mode disabled', 'assertive');
       }
@@ -182,13 +212,17 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
 
   // High contrast text mode
   const toggleHighContrastText = useCallback(() => {
+
     setFeatures(prev => {
+
       const newFeatures = { ...prev, highContrastText: !prev.highContrastText };
       
       if (newFeatures.highContrastText) {
+
         document.documentElement.classList.add('high-contrast-text');
         announce('High contrast text enabled', 'assertive');
       } else {
+
         document.documentElement.classList.remove('high-contrast-text');
         announce('High contrast text disabled', 'assertive');
       }
@@ -199,15 +233,19 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
 
   // Increased spacing mode
   const toggleIncreasedSpacing = useCallback(() => {
+
     setFeatures(prev => {
+
       const newFeatures = { ...prev, increasedSpacing: !prev.increasedSpacing };
       
       if (newFeatures.increasedSpacing) {
+
         document.documentElement.classList.add('increased-spacing');
         setLineHeight(2.0);
         setLetterSpacing(0.1);
         announce('Increased spacing enabled', 'assertive');
       } else {
+
         document.documentElement.classList.remove('increased-spacing');
         setLineHeight(1.5);
         setLetterSpacing(0);
@@ -220,13 +258,17 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
 
   // Cursor enhancement mode
   const toggleCursorEnhancement = useCallback(() => {
+
     setFeatures(prev => {
+
       const newFeatures = { ...prev, cursorEnhancement: !prev.cursorEnhancement };
       
       if (newFeatures.cursorEnhancement) {
+
         document.documentElement.classList.add('cursor-enhancement');
         announce('Cursor enhancement enabled', 'assertive');
       } else {
+
         document.documentElement.classList.remove('cursor-enhancement');
         announce('Cursor enhancement disabled', 'assertive');
       }
@@ -237,13 +279,17 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
 
   // Keyboard navigation mode
   const toggleKeyboardNavigation = useCallback(() => {
+
     setFeatures(prev => {
+
       const newFeatures = { ...prev, keyboardNavigation: !prev.keyboardNavigation };
       
       if (newFeatures.keyboardNavigation) {
+
         document.documentElement.classList.add('keyboard-navigation');
         announce('Keyboard navigation mode enabled', 'assertive');
       } else {
+
         document.documentElement.classList.remove('keyboard-navigation');
         announce('Keyboard navigation mode disabled', 'assertive');
       }
@@ -254,13 +300,17 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
 
   // Color blindness support
   const toggleColorBlindnessSupport = useCallback(() => {
+
     setFeatures(prev => {
+
       const newFeatures = { ...prev, colorBlindnessSupport: !prev.colorBlindnessSupport };
       
       if (newFeatures.colorBlindnessSupport) {
+
         document.documentElement.classList.add('color-blindness-support');
         announce('Color blindness support enabled', 'assertive');
       } else {
+
         document.documentElement.classList.remove('color-blindness-support');
         announce('Color blindness support disabled', 'assertive');
       }
@@ -271,6 +321,7 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
 
   // Focus trap implementation
   const createFocusTrap = useCallback((config: FocusTrapConfig) => {
+
     const { containerRef, onEscape, returnFocus } = config;
     
     if (!containerRef.current) return;
@@ -282,20 +333,25 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
     focusableElementsRef.current = Array.from(focusableElements) as HTMLElement[];
     
     const handleKeyDown = (e: KeyboardEvent) => {
+
       if (e.key === 'Escape' && onEscape) {
+
         onEscape();
         return;
       }
       
       if (e.key === 'Tab') {
+
         e.preventDefault();
         
         const currentIndex = focusableElementsRef.current.indexOf(document.activeElement as HTMLElement);
         let nextIndex: number;
         
         if (e.shiftKey) {
+
           nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElementsRef.current.length - 1;
         } else {
+
           nextIndex = currentIndex < focusableElementsRef.current.length - 1 ? currentIndex + 1 : 0;
         }
         
@@ -307,37 +363,45 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
     
     // Focus first element
     if (focusableElementsRef.current.length > 0) {
+
       focusableElementsRef.current[0].focus();
     }
     
     return () => {
+
       containerRef.current?.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
 
   // Keyboard shortcuts
   useEffect(() => {
+
     const handleKeyDown = (e: KeyboardEvent) => {
+
       // Alt + A to toggle accessibility menu
       if (e.altKey && e.key === 'a') {
+
         e.preventDefault();
         setIsMenuOpen(prev => !prev);
       }
       
       // Alt + H to toggle high contrast
       if (e.altKey && e.key === 'h') {
+
         e.preventDefault();
         toggleHighContrast();
       }
       
       // Alt + M to toggle reduced motion
       if (e.altKey && e.key === 'm') {
+
         e.preventDefault();
         toggleReducedMotion();
       }
       
       // Alt + L to toggle large text
       if (e.altKey && e.key === 'l') {
+
         e.preventDefault();
         toggleLargeText();
       }
@@ -349,6 +413,7 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
 
   // Apply accessibility features to document
   useEffect(() => {
+
     const root = document.documentElement;
     
     // Apply CSS custom properties for accessibility
@@ -358,9 +423,12 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
     
     // Apply feature classes
     Object.entries(features).forEach(([feature, enabled]) => {
+
       if (enabled) {
+
         root.classList.add(feature.replace(/([A-Z])/g, '-$1').toLowerCase());
       } else {
+
         root.classList.remove(feature.replace(/([A-Z])/g, '-$1').toLowerCase());
       }
     });
@@ -368,8 +436,11 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
 
   // Focus trap for menu
   useEffect(() => {
+
     if (isMenuOpen && menuRef.current) {
+
       return createFocusTrap({
+
         containerRef: menuRef,
         onEscape: () => setIsMenuOpen(false)
       });
@@ -415,6 +486,7 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
                   key={tab}
                   onClick={() => setActiveTab(tab)}
                   className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+
                     activeTab === tab
                       ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300'
                       : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
@@ -533,13 +605,15 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
   );
 
   // Accessibility toggle component
-  const AccessibilityToggle = ({ 
+  const AccessibilityToggle = ({
+
     label, 
     description, 
     enabled, 
     onToggle, 
     icon: Icon 
   }: {
+
     label: string;
     description: string;
     enabled: boolean;
@@ -559,6 +633,7 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
       <button
         onClick={onToggle}
         className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+
           enabled ? 'bg-blue-600' : 'bg-gray-200 dark:bg-gray-700'
         }`}
         role="switch"
@@ -567,6 +642,7 @@ export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { show
       >
         <span
           className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+
             enabled ? 'translate-x-6' : 'translate-x-1'
           }`}
         />

@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
+import {
+
   TrendingUp, 
   Shield, 
   Brain, 
@@ -45,38 +46,45 @@ import {
 } from 'lucide-react';
 
 export default function AIFinancialRiskManagementPlatform() {
+
   const features = [
     {
+
       title: "Real-Time Risk Monitoring",
       description: "Continuous monitoring of financial risks with 99.8% accuracy",
       icon: Activity,
       benefits: ["24/7 risk surveillance", "Instant alert system", "Real-time dashboards", "Mobile notifications"]
     },
     {
+
       title: "AI-Powered Risk Prediction",
       description: "Advanced ML algorithms predict market risks and opportunities",
       icon: Brain,
       benefits: ["Market trend analysis", "Risk scoring models", "Portfolio optimization", "Scenario planning"]
     },
     {
+
       title: "Comprehensive Risk Assessment",
       description: "Multi-dimensional risk analysis across all asset classes",
       icon: Shield,
       benefits: ["Credit risk analysis", "Market risk assessment", "Operational risk", "Liquidity risk"]
     },
     {
+
       title: "Regulatory Compliance",
       description: "Automated compliance monitoring for financial regulations",
       icon: FileText,
       benefits: ["Basel III compliance", "SOX compliance", "GDPR compliance", "Audit reporting"]
     },
     {
+
       title: "Portfolio Stress Testing",
       description: "Advanced stress testing and scenario analysis",
       icon: Gauge,
       benefits: ["Monte Carlo simulations", "Historical scenario analysis", "Custom stress tests", "Risk-adjusted returns"]
     },
     {
+
       title: "Enterprise Security",
       description: "Bank-level security with SOC 2 Type II and ISO 27001 compliance",
       icon: Lock,
@@ -86,6 +94,7 @@ export default function AIFinancialRiskManagementPlatform() {
 
   const pricingTiers = [
     {
+
       name: "Financial Advisor",
       price: "$399",
       period: "/month",
@@ -103,6 +112,7 @@ export default function AIFinancialRiskManagementPlatform() {
       savings: null
     },
     {
+
       name: "Investment Firm",
       price: "$1,299",
       period: "/month",
@@ -123,6 +133,7 @@ export default function AIFinancialRiskManagementPlatform() {
       savings: "Save 20% annually"
     },
     {
+
       name: "Financial Enterprise",
       price: "$3,999",
       period: "/month",
@@ -147,24 +158,28 @@ export default function AIFinancialRiskManagementPlatform() {
 
   const useCases = [
     {
+
       title: "Portfolio Risk Management",
       description: "Comprehensive risk analysis and portfolio optimization",
       icon: PieChart,
       benefits: ["Reduce portfolio volatility by 25%", "Improve risk-adjusted returns", "Dynamic rebalancing", "Real-time monitoring"]
     },
     {
+
       title: "Credit Risk Assessment",
       description: "AI-powered credit scoring and risk evaluation",
       icon: Calculator,
       benefits: ["Improve credit decisions by 40%", "Reduce default rates", "Automated underwriting", "Risk-based pricing"]
     },
     {
+
       title: "Market Risk Analysis",
       description: "Advanced market risk modeling and stress testing",
       icon: TrendingUp,
       benefits: ["Predict market movements", "Stress test scenarios", "VaR calculations", "Risk limits management"]
     },
     {
+
       title: "Regulatory Compliance",
       description: "Automated compliance monitoring and reporting",
       icon: Shield,
@@ -174,6 +189,7 @@ export default function AIFinancialRiskManagementPlatform() {
 
   const testimonials = [
     {
+
       name: "Sarah Johnson",
       title: "Chief Risk Officer",
       company: "Global Investment Bank",
@@ -181,6 +197,7 @@ export default function AIFinancialRiskManagementPlatform() {
       rating: 5
     },
     {
+
       name: "Michael Chen",
       title: "Portfolio Manager",
       company: "Alpha Capital Management",
@@ -188,6 +205,7 @@ export default function AIFinancialRiskManagementPlatform() {
       rating: 5
     },
     {
+
       name: "Emily Rodriguez",
       title: "Compliance Director",
       company: "Meridian Financial Group",
@@ -198,21 +216,25 @@ export default function AIFinancialRiskManagementPlatform() {
 
   const benefits = [
     {
+
       metric: "25%",
       description: "Reduction in portfolio volatility",
       icon: TrendingDown
     },
     {
+
       metric: "40%",
       description: "Improvement in credit decisions",
       icon: TrendingUp
     },
     {
+
       metric: "99.8%",
       description: "Risk monitoring accuracy",
       icon: Target
     },
     {
+
       metric: "$5.2M",
       description: "Annual risk cost savings",
       icon: DollarSign
@@ -221,6 +243,7 @@ export default function AIFinancialRiskManagementPlatform() {
 
   const riskMetrics = [
     {
+
       name: "Value at Risk (VaR)",
       description: "95% confidence level risk measurement",
       value: "2.3%",
@@ -228,6 +251,7 @@ export default function AIFinancialRiskManagementPlatform() {
       icon: TrendingDown
     },
     {
+
       name: "Sharpe Ratio",
       description: "Risk-adjusted return metric",
       value: "1.85",
@@ -235,6 +259,7 @@ export default function AIFinancialRiskManagementPlatform() {
       icon: TrendingUp
     },
     {
+
       name: "Maximum Drawdown",
       description: "Peak-to-trough decline",
       value: "8.7%",
@@ -242,6 +267,7 @@ export default function AIFinancialRiskManagementPlatform() {
       icon: TrendingDown
     },
     {
+
       name: "Beta",
       description: "Market correlation measure",
       value: "0.92",
@@ -400,11 +426,13 @@ export default function AIFinancialRiskManagementPlatform() {
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"
               >
                 <div className={`w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 ${
+
                   metric.trend === 'up' ? 'bg-green-500/20 border border-green-500/30' :
                   metric.trend === 'down' ? 'bg-red-500/20 border border-red-500/30' :
                   'bg-blue-500/20 border border-blue-500/30'
                 }`}>
                   <metric.icon className={`w-6 h-6 ${
+
                     metric.trend === 'up' ? 'text-green-400' :
                     metric.trend === 'down' ? 'text-red-400' :
                     'text-blue-400'
@@ -447,6 +475,7 @@ export default function AIFinancialRiskManagementPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
+
                   tier.popular 
                     ? 'border-cyan-500 bg-gradient-to-br from-cyan-500/10 to-blue-500/10' 
                     : 'border-white/10'
@@ -486,6 +515,7 @@ export default function AIFinancialRiskManagementPlatform() {
                 <a
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                     tier.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600'
                       : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'

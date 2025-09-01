@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { EMERGING_TECH_SERVICES_2025 } from "../data / emergingTechServices2025";
 import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data / expandedInnovativeServices2025";
@@ -34,6 +35,7 @@ import { motion } from 'framer - motion';
   Search'
 } from 'lucide-react';
 interface Service {
+
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   id: string;

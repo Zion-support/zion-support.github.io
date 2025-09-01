@@ -13,18 +13,23 @@ const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant
     const ref = useRef(null);
     const inView = useInView(ref, { amount: threshold });
     useEffect(() => {
+
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   };
 
@@ -40,12 +45,15 @@ const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   };
 
@@ -58,9 +66,11 @@ const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   };
 
@@ -70,6 +80,7 @@ const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   };
 }, []);, []);
@@ -78,6 +89,7 @@ const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant
             setIsInView(true);
             // Simulate loading delay for better UX
             const timer = setTimeout ( () => {
+
                 setIsLoaded (true) }, 300) ;
             return () => clearTimeout (timer) }
     }, [inView, isInView]) ;
@@ -87,6 +99,7 @@ const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant
         <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/>
       </div>) }
     if (!isLoaded) {
+
 `
         return (<div className={`min-h-[200px] ${className}`}>
         <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/>

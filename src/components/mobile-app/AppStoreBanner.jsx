@@ -1,5 +1,6 @@
 import React from 'react';
 import { Download, Star, Users, Award export const AppStoreBanner = () => {
+
   const appStores = [
     {
 

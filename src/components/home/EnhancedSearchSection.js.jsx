@@ -18,6 +18,7 @@ export function EnhancedSearchSection() {
         { name: 'Mobile App Development', icon: _jsx(Briefcase, { className: "h-4 w-4" }), count: '3.1k' }
     ];
     useEffect(() => {
+
         if (searchQuery.length > 2) {
 
             // Simulate AI-powered suggestions

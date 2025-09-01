@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data / innovativeMicroSaasServices2025";
 import { motion, AnimatePresence } from 'framer - motion';
@@ -504,6 +505,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   };
 
   const itemVariants = {
+
   hidden: { y: 20,
   opacity: 0
 
@@ -511,13 +513,16 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 =======
 >>>>>>> main
     visible: {
+
       opacity: 1,;
       transition: {
+
         staggerChildren: 0.1}}};
 
   
       opacity: 1,;
       transition: {
+
         duration: 0.5,;"
         ease: "easeOut"}}};
 

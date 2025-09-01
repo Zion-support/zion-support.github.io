@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export default Match;}}}
 import {
+
 import { motion } from 'framer - motion';
 import SEO from '../components / SEO';
 
@@ -58,6 +59,7 @@ const Match: React.FC = () => {;
 
   const matchedServices = [
     {
+
       id: 1,
       name: "AI Business Intelligence",
       category: "ai",
@@ -71,6 +73,7 @@ const Match: React.FC = () => {;
       featured: true
     },
     {
+
       id: 2,
       name: "Cloud DevOps Automation",
       category: "cloud",
@@ -84,6 +87,7 @@ const Match: React.FC = () => {;
       featured: false
     },
     {
+
       id: 3,
       name: "AI Cybersecurity Platform",
       category: "security",
@@ -97,6 +101,7 @@ const Match: React.FC = () => {;
       featured: true
     },
     {
+
       id: 4,
       name: "Data Analytics Suite",
       category: "data",
@@ -110,6 +115,7 @@ const Match: React.FC = () => {;
       featured: false
     },
     {
+
       id: 5,
       name: "IoT Edge Computing",
       category: "iot",
@@ -123,6 +129,7 @@ const Match: React.FC = () => {;
       featured: false
     },
     {
+
       id: 6,
       name: "AI Workflow Automation",
       category: "ai",
@@ -156,11 +163,13 @@ const Match: React.FC = () => {;
         <div role="button" className="relative z - 10 container mx - auto px - 4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -225,6 +234,7 @@ const Match: React.FC = () => {;
               {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`flex items - center gap - 2 px - 4 py - 2 rounded - lg font - medium transition - all duration - 200 ${
+
                     selectedCategory === category.id
                       ? 'bg - cyan - 500 text - white shadow - lg shadow - cyan - 500 / 25'
                       : 'bg - slate - 700 / 50 text - slate - 300 hover:bg - slate - 600 / 50 hover:text - white border border - slate - 600 / 50'
@@ -246,11 +256,13 @@ const Match: React.FC = () => {;
         <div role="button" className="container mx - auto px - 4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -271,21 +283,25 @@ const Match: React.FC = () => {;
             {filteredServices.map ( (service, index) => (<motion.div
                 key={service.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
 }}
                 className={`bg - slate - 800 / 50 border rounded - xl p - 6 hover:border - cyan - 400 / 50 transition - all duration - 300 hover:scale - 105 ${
+
                   service.featured ? 'border - cyan - 400 / 30 bg - gradient - to - br from - cyan - 400 / 5 to - blue - 500 / 5' : 'border - slate - 700 / 50'
                 }`}
 
@@ -335,6 +351,7 @@ const Match: React.FC = () => {;
                 <div role="button" className="flex gap - 2">
                   <Link
                     to = {
+
   `/services/${service.name.toLowerCase () .replace (/\s+/g,
   '-') }`}
                     className="flex - 1 inline - flex items - center justify - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - sm font - medium rounded - lg hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 200"
@@ -379,11 +396,13 @@ const Match: React.FC = () => {;
         <div role="button" className="container mx - auto px - 4">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -403,18 +422,21 @@ const Match: React.FC = () => {;
           <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-4xl mx - auto">
             {[
               {
+
                 step: "01",
                 title: "Analyze Your Needs",
                 description: "Our AI analyzes your business profile, industry, and specific requirements.",
                 icon: Brain
               },
               {
+
                 step: "02",
                 title: "Match with Services",
                 description: "We match you with services that best fit your needs and budget.",
                 icon: Target
               },
               {
+
                 step: "03",
                 title: "Get Recommendations",
                 description: "Receive personalized recommendations with match scores and detailed analysis.",
@@ -424,16 +446,19 @@ const Match: React.FC = () => {;
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -456,11 +481,13 @@ const Match: React.FC = () => {;
         <div role="button" className="container mx - auto px - 4 text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

@@ -29,12 +29,14 @@ export interface ServicePricing {
 export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
   // AI-Powered Autonomous Research Assistant
   {
+
     serviceId: "ai-autonomous-research-assistant",
     serviceName: "AI Autonomous Research Assistant",
     category: "AI & Research",
     basePrice: 8999,
     pricingTiers[;
       {
+
         name: "Starter",
         price: 8999,
         features[;
@@ -49,6 +51,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         support: "Email support"
       },
       {
+
         name: "Professional",
         price: 15999,
         features[;
@@ -64,6 +67,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         support: "Priority support + phone"
       },
       {
+
         name: "Enterprise",
         price: 29999,
         features[;
@@ -89,12 +93,14 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
 
   // AI-Powered Metaverse Development Platform
   {
+
     serviceId: "ai-metaverse-development-platform",
     serviceName: "AI Metaverse Development Platform",
     category: "AI & Metaverse",
     basePrice: 12999,
     pricingTiers[;
       {
+
         name: "Creator",
         price: 12999,
         features[;
@@ -109,6 +115,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         support: "Community support"
       },
       {
+
         name: "Studio",
         price: 24999,
         features[;
@@ -123,6 +130,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         support: "Priority support"
       },
       {
+
         name: "Enterprise",
         price: 49999,
         features[;
@@ -147,12 +155,14 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
 
   // Zero-Trust Network Access Platform
   {
+
     serviceId: "zero-trust-network-access-platform",
     serviceName: "Zero-Trust Network Access Platform",
     category: "IT Infrastructure",
     basePrice: 12999,
     pricingTiers[;
       {
+
         name: "Basic",
         price: 12999,
         features[;
@@ -167,6 +177,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         support: "Email support"
       },
       {
+
         name: "Professional",
         price: 21999,
         features[;
@@ -181,6 +192,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         support: "Priority support"
       },
       {
+
         name: "Enterprise",
         price: 39999,
         features[;
@@ -205,12 +217,14 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
 
   // AI-Powered Medical Imaging Analysis
   {
+
     serviceId: "ai-medical-imaging-analysis",
     serviceName: "AI Medical Imaging Analysis Platform",
     category: "AI & Healthcare",
     basePrice: 24999,
     pricingTiers[;
       {
+
         name: "Clinic",
         price: 24999,
         features[;
@@ -225,6 +239,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         support: "Email support"
       },
       {
+
         name: "Hospital",
         price: 44999,
         features[;
@@ -240,6 +255,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         support: "Priority support"
       },
       {
+
         name: "Medical Center",
         price: 79999,
         features[;
@@ -264,12 +280,14 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
 
   // AI-Powered Risk Assessment Platform
   {
+
     serviceId: "ai-risk-assessment-platform",
     serviceName: "AI Risk Assessment Platform",
     category: "AI & FinTech",
     basePrice: 18999,
     pricingTiers[;
       {
+
         name: "Basic",
         price: 18999,
         features[;
@@ -284,6 +302,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         support: "Email support"
       },
       {
+
         name: "Professional",
         price: 32999,
         features[;
@@ -299,6 +318,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         support: "Priority support"
       },
       {
+
         name: "Enterprise",
         price: 59999,
         features[;

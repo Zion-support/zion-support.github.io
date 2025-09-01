@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Users, 
   Globe, 
   Code, 
@@ -19,26 +20,31 @@ import {
 } from 'lucide-react';
 
 export default function Home() {
+
   const stats = [
     {
+
       icon: Users,
       value: "500+",
       label: "Global Clients",
       description: "Serving businesses worldwide"
     },
     {
+
       icon: Globe,
       value: "25+",
       label: "Countries",
       description: "Global presence"
     },
     {
+
       icon: Code,
       value: "1000+",
       label: "Projects",
       description: "Successfully delivered"
     },
     {
+
       icon: Shield,
       value: "99.9%",
       label: "Uptime SLA",
@@ -48,6 +54,7 @@ export default function Home() {
 
   const services = [
     {
+
       title: "AI Solutions",
       description: "Cutting-edge artificial intelligence services",
       icon: Brain,
@@ -55,6 +62,7 @@ export default function Home() {
       color: "from-zion-cyan to-zion-blue"
     },
     {
+
       title: "Quantum Technology",
       description: "Next-generation quantum computing solutions",
       icon: Zap,
@@ -62,6 +70,7 @@ export default function Home() {
       color: "from-zion-purple to-zion-cyan"
     },
     {
+
       title: "Cybersecurity",
       description: "Advanced threat detection and protection",
       icon: Shield,
@@ -69,6 +78,7 @@ export default function Home() {
       color: "from-zion-blue to-zion-purple"
     },
     {
+
       title: "Cloud Infrastructure",
       description: "Scalable cloud and DevOps solutions",
       icon: Rocket,
@@ -79,18 +89,21 @@ export default function Home() {
 
   const features = [
     {
+
       title: "AI-Powered Innovation",
       description: "Leverage cutting-edge AI to transform your business operations",
       icon: Brain,
       color: "text-zion-cyan"
     },
     {
+
       title: "Global Network",
       description: "Access to world-class talent and technology partners",
       icon: Globe,
       color: "text-zion-blue"
     },
     {
+
       title: "Future-Ready Solutions",
       description: "Stay ahead with quantum technology and emerging tech",
       icon: Target,
@@ -109,18 +122,21 @@ export default function Home() {
 
   const testimonials = [
     {
+
       name: 'Sarah Johnson',
       role: 'CTO, TechCorp',
       content: 'Zion Tech Group transformed our business with their AI solutions. 40% cost reduction in just 6 months!',
       rating: 5
     },
     {
+
       name: 'Michael Chen',
       role: 'CEO, InnovateLab',
       content: 'Their cybersecurity implementation saved us from a major breach. Professional and reliable service.',
       rating: 5
     },
     {
+
       name: 'Emily Rodriguez',
       role: 'VP Engineering, DataFlow',
       content: 'The cloud migration was seamless. Our deployment time went from days to hours.',

@@ -31,6 +31,7 @@ const loginSchema = z.object({
   password: z.string().min(6,Password must be at least 6 characters')});
 
 function LoginForm() {
+
   const { login, isLoading } = useAuth();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -49,6 +50,7 @@ function LoginForm() {
     if (isSubmitting) return;
 
     try {
+
       setIsSubmitting(true);
       const result = await login(data.email, data.password);
 

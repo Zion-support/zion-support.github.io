@@ -16,6 +16,7 @@ const InnovativeServicesShowcase = () => {
     { id: 'ai', name: 'AI Services', count: innovativeAIServices2025.length },
   ];
   const getServicesByTab = () => {
+
     switch (activeTab) {
 
       case 'microsaas':
@@ -33,6 +34,7 @@ const InnovativeServicesShowcase = () => {
     setSelectedService(service);
   };
   const closeModal = () => {
+
     setSelectedService(null);
   };
   return()

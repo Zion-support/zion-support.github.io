@@ -2,6 +2,7 @@
 // Enterprise-grade IT infrastructure, consulting, and managed services
 ;
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
@@ -9,6 +10,7 @@ export interface ServiceContact {
 }
 ;
 export interface ITService {
+
   id: number;
   name: string;
   category: string;

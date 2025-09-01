@@ -2,6 +2,7 @@
 // Real, innovative, and enterprise-ready IT infrastructure solutions
 
 export interface AdvancedITInfrastructureService {
+
   id: string;
   title: string;
   description: string;
@@ -31,6 +32,7 @@ export interface AdvancedITInfrastructureService {
   location: string;
   availability: string;
   author: {
+
     name: string;
     id: string;
     avatarUrl?: string;
@@ -52,6 +54,7 @@ export interface AdvancedITInfrastructureService {
 export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025: AdvancedITInfrastructureService[] = [
   // Cloud Migration & Optimization
   {
+
     id: "cloud-migration-optimization",
     title: "Cloud Migration & Optimization Services",
     description: "Comprehensive cloud migration services that help enterprises seamlessly transition to cloud platforms while optimizing performance, costs, and security across multi-cloud environments.",
@@ -136,6 +139,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025: AdvancedITInfrastructureS
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -158,6 +162,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025: AdvancedITInfrastructureS
 
   // DevOps & CI/CD Implementation
   {
+
     id: "devops-cicd-implementation",
     title: "DevOps & CI/CD Implementation Services",
     description: "End-to-end DevOps transformation services that implement automated CI/CD pipelines, infrastructure as code, monitoring, and best practices to accelerate software delivery and improve reliability.",
@@ -241,6 +246,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025: AdvancedITInfrastructureS
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -263,6 +269,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025: AdvancedITInfrastructureS
 
   // Network Security & Infrastructure
   {
+
     id: "network-security-infrastructure",
     title: "Network Security & Infrastructure Services",
     description: "Comprehensive network security and infrastructure services that protect enterprise networks, implement zero-trust architecture, and ensure compliance with industry standards and regulations.",
@@ -346,6 +353,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025: AdvancedITInfrastructureS
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -368,6 +376,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025: AdvancedITInfrastructureS
 
   // Data Center Design & Implementation
   {
+
     id: "data-center-design-implementation",
     title: "Data Center Design & Implementation Services",
     description: "Comprehensive data center design and implementation services that create scalable, efficient, and secure infrastructure solutions for enterprise organizations and cloud service providers.",
@@ -451,6 +460,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025: AdvancedITInfrastructureS
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
@@ -473,6 +483,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025: AdvancedITInfrastructureS
 
   // IT Consulting & Digital Transformation
   {
+
     id: "it-consulting-digital-transformation",
     title: "IT Consulting & Digital Transformation Services",
     description: "Strategic IT consulting services that help organizations navigate digital transformation, optimize technology investments, and align IT strategy with business objectives for competitive advantage.",
@@ -555,6 +566,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025: AdvancedITInfrastructureS
     location: "Global",
     availability: "Immediate",
     author: {
+
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",

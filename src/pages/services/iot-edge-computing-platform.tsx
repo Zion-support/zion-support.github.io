@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Cpu, 
   Zap, 
   Brain, 
@@ -33,33 +34,40 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function IoTEdgeComputingPlatform() {
+
   const features = [
     {
+
       icon: <Cpu className="w-6 h-6" />,
       title: "Edge Computing Nodes",
       description: "Distributed edge computing infrastructure with real-time processing capabilities and low-latency response"
     },
     {
+
       icon: <Activity className="w-6 h-6" />,
       title: "IoT Device Management",
       description: "Comprehensive management of IoT sensors, devices, and gateways with automated provisioning and monitoring"
     },
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "AI at the Edge",
       description: "Local AI processing and machine learning models for real-time decision making without cloud dependency"
     },
     {
+
       icon: <Network className="w-6 h-6" />,
       title: "5G & LPWAN Support",
       description: "Multi-network connectivity supporting 5G, LoRaWAN, Sigfox, and other IoT communication protocols"
     },
     {
+
       icon: <Database className="w-6 h-6" />,
       title: "Edge Data Processing",
       description: "Local data processing, filtering, and analytics to reduce bandwidth and improve response times"
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "Edge Security",
       description: "Advanced security protocols, encryption, and access control for edge computing environments"
@@ -68,6 +76,7 @@ export default function IoTEdgeComputingPlatform() {
 
   const pricing = [
     {
+
       name: "IoT Starter",
       price: "$199",
       period: "/month",
@@ -83,6 +92,7 @@ export default function IoTEdgeComputingPlatform() {
       popular: false
     },
     {
+
       name: "IoT Professional",
       price: "$899",
       period: "/month",
@@ -99,6 +109,7 @@ export default function IoTEdgeComputingPlatform() {
       popular: true
     },
     {
+
       name: "IoT Enterprise",
       price: "$2,999",
       period: "/month",
@@ -127,21 +138,25 @@ export default function IoTEdgeComputingPlatform() {
 
   const useCases = [
     {
+
       industry: "Smart Cities",
       description: "Traffic management, environmental monitoring, smart lighting, and public safety systems",
       advantage: "Real-time city management"
     },
     {
+
       industry: "Industrial IoT",
       description: "Predictive maintenance, quality control, supply chain optimization, and safety monitoring",
       advantage: "Zero-downtime operations"
     },
     {
+
       industry: "Healthcare",
       description: "Patient monitoring, medical device management, and remote healthcare delivery",
       advantage: "24/7 patient care"
     },
     {
+
       industry: "Agriculture",
       description: "Precision farming, crop monitoring, irrigation control, and livestock tracking",
       advantage: "Optimized crop yields"
@@ -383,6 +398,7 @@ export default function IoTEdgeComputingPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 ${
+
                   plan.popular 
                     ? 'border-orange-500 ring-2 ring-orange-500/20' 
                     : 'border-slate-700 hover:border-orange-500'

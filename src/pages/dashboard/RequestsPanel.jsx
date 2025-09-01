@@ -6,16 +6,19 @@ import { QuoteDetails } from "@/components/quotes/QuoteDetails";
 import { RequestsHeader, QuoteRequestsList } from "@/components/quotes";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function RequestsPanel() {
+
     const { user } = useAuth();
     const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
     const [selectedQuote, setSelectedQuote] = useState(null);
     const [showDetails, setShowDetails] = useState(false);
     const { quotes, unreadCount, isLoading, statusFilter, setStatusFilter, archiveFilter, setArchiveFilter, markAsViewed, markAsResponded, toggleArchive } = useTalentQuotes();
     const handleViewDetails = (quote) => {
+
         setSelectedQuote(quote);
         setShowDetails(true);
         // If status is new, mark as viewed
         if (quote.status === 'new') {
+
 <<<<<<< HEAD
             markAsViewed(quote.id);
 
@@ -52,6 +55,7 @@ export default function RequestsPanel() {
 
         {/* Quote Details Modal */}
         <QuoteDetails quote={selectedQuote} isOpen={showDetails} onClose={() => {
+
             setShowDetails(false);
 <<<<<<< HEAD
             setSelectedQuote(null);

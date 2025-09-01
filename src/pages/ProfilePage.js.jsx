@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from "lucide-react";
 export default function ProfilePage() {
+
     // useParams may be untyped in this environment, so avoid passing a
     // type argument and cast the result instead to prevent TS2347 errors.
     const { profileId } = useParams();
@@ -15,37 +16,46 @@ export default function ProfilePage() {
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
     useEffect(() => {
+
         const fetchProfile = async () => {
+
             setIsLoading(true);
             setIsError(false);
             try {
+
                 const { data, error } = await supabase
                     .from("talent_profiles")
                     .select("*")
                     .eq("id", profileId)
                     .single();
                 if (error) {
+
                     throw error}
                 setProfileData(data)}
             catch (error) {
-                console.error("Error fetching profile:", error);
+
+                // console.error("Error fetching profile:", error);
                 setIsError(true);
                 toast({
+
                     title: "Error",
                     description: "Failed to load profile. Please try again later.",
-                    variant: "destructive",
-                })}
+                    variant: "destructive"})}
             finally {
+
                 setIsLoading(false)}
         };
         if (profileId) {
+
             fetchProfile()}
     }, [profileId]);
     if (isLoading) {
+
         return (<div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
       </div>)}
     if (isError || !profileData) {
+
         return (<div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
       </div>)}
@@ -145,7 +155,9 @@ export default function ProfilePage() {
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">
             <HireNowCTA talentProfile = {
+
   {
+
             id: profileData?.id || '',
             full_name: profileData?.full_name || '',
             professional_title: profileData?.professional_title || '',

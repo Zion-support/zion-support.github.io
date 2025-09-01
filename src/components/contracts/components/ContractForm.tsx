@@ -4,6 +4,7 @@
 export type ContractFormValues = z.infer<typeof formSchema>;
 
 interface ContractFormProps {
+
   talent: TalentProfile;
   clientName: string;
   initialValues?: ContractFormValues;
@@ -13,6 +14,7 @@ interface ContractFormProps {
   onDeployOptionsChange?: (options: DeploymentOptions) => void}
 
 export function ContractForm({
+
   talent,
   clientName,
   initialValues,
@@ -21,22 +23,26 @@ export function ContractForm({
   deployOptions,
   onDeployOptionsChange
 }: ContractFormProps) {
+
   // const [isGenerating, setIsGenerating] = useState(false); // Removed
   const { toast } = useToast();
 
   
   // Update form when initialValues change
   useEffect(() => {
+
     if (initialValues) {
+
       Object.keys(initialValues).forEach((key) => {
-        
+
         form.setValue(typedKey, initialValues[typedKey])})}
   }, [initialValues, form]);
   
   // Track form values for template saving
   useEffect(() => {
+
     if (onFormValuesChange) {
-      
+
       });
       
       return () => subscription.unsubscribe()}
@@ -47,26 +53,31 @@ export function ContractForm({
     
     // If payment terms isn't already set to milestone, update it
     if (form.getValues("paymentTerms") !== "milestone") {
+
       form.setValue("paymentTerms", "milestone")}
     
     toast({
+
       title: "Milestones Generated",
-      description: `${milestones.length} milestones have been suggested and added to the form. Please review and adjust payment amounts.`,
-    })};
+      description: `${milestones.length} milestones have been suggested and added to the form. Please review and adjust payment amounts.`})};
   
   // const onSubmit = async (values: ContractFormValues) => { // Removed onSubmit
   //   // setIsGenerating(true); // Removed
   //   // try {
+
   //   //   
   //   //   onContractGenerated(contract);
   //   // } catch (error) {
-  //   //   console.error("Error generating contract:", error);
+
+  //   //   // // // console.error("Error generating contract:", error);
   //   //   toast({
+
   //   //     title: "Contract Generation Failed",
   //   //     description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
   //   //     variant: "destructive",
   //   //   });
   //   // } finally {
+
   //   //   // setIsGenerating(false); // Removed
   //   // }
   // };

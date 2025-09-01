@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+
   Shield,
   Lock,
   Eye,
@@ -24,38 +25,45 @@ import {
 } from 'lucide-react';
 
 export default function AIDataPrivacyCompliancePlatform() {
+
   const features = [
     {
+
       title: 'GDPR Compliance Automation',
       description: 'Automated GDPR compliance monitoring, data mapping, and consent management',
       icon: Shield,
       color: 'from-green-600 to-emerald-600'
     },
     {
+
       title: 'CCPA & LGPD Support',
       description: 'Comprehensive compliance for California, Brazil, and other privacy regulations',
       icon: Lock,
       color: 'from-blue-600 to-cyan-600'
     },
     {
+
       title: 'Data Discovery & Classification',
       description: 'AI-powered data discovery, classification, and risk assessment',
       icon: Eye,
       color: 'from-purple-600 to-pink-600'
     },
     {
+
       title: 'Privacy Impact Assessment',
       description: 'Automated PIA generation and risk evaluation for new projects',
       icon: FileText,
       color: 'from-orange-600 to-red-600'
     },
     {
+
       title: 'Consent Management',
       description: 'Centralized consent collection, tracking, and withdrawal management',
       icon: Users,
       color: 'from-indigo-600 to-purple-600'
     },
     {
+
       title: 'Data Subject Rights',
       description: 'Automated handling of data subject requests (access, deletion, portability)',
       icon: Database,
@@ -65,6 +73,7 @@ export default function AIDataPrivacyCompliancePlatform() {
 
   const pricing = [
     {
+
       plan: 'Starter',
       price: '$299',
       period: '/month',
@@ -80,6 +89,7 @@ export default function AIDataPrivacyCompliancePlatform() {
       popular: false
     },
     {
+
       plan: 'Professional',
       price: '$599',
       period: '/month',
@@ -97,6 +107,7 @@ export default function AIDataPrivacyCompliancePlatform() {
       popular: true
     },
     {
+
       plan: 'Enterprise',
       price: '$1,299',
       period: '/month',
@@ -117,21 +128,25 @@ export default function AIDataPrivacyCompliancePlatform() {
 
   const benefits = [
     {
+
       icon: Shield,
       title: 'Regulatory Compliance',
       description: 'Stay compliant with evolving privacy regulations worldwide'
     },
     {
+
       icon: Zap,
       title: 'Automated Workflows',
       description: 'Reduce manual compliance work by up to 80%'
     },
     {
+
       icon: TrendingUp,
       title: 'Risk Mitigation',
       description: 'Identify and address privacy risks before they become issues'
     },
     {
+
       icon: DollarSign,
       title: 'Cost Savings',
       description: 'Avoid costly fines and legal fees from compliance violations'
@@ -279,6 +294,7 @@ export default function AIDataPrivacyCompliancePlatform() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${
+
                   plan.popular 
                     ? 'border-blue-500 bg-gray-800/70 scale-105' 
                     : 'border-gray-700 hover:border-blue-500/50'
@@ -314,6 +330,7 @@ export default function AIDataPrivacyCompliancePlatform() {
                 <Link
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
                       : 'border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle } from 'lucide-react';
 const services = [
     {
+
         id: 'ai-automation',
         name: 'AI & Automation',
         description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
@@ -13,6 +14,7 @@ const services = [
         popular: true
     },
     {
+
         id: 'micro-saas',
         name: 'Micro SaaS Solutions',
         description: 'Scalable, focused software solutions for specific business needs',
@@ -22,6 +24,7 @@ const services = [
         features['Custom Development', 'API Integration', 'Cloud Deployment', '24/7 Support']
     },
     {
+
         id: 'cloud-infrastructure',
         name: 'Cloud & Infrastructure',
         description: 'Robust cloud solutions for scalability and reliability',
@@ -31,6 +34,7 @@ const services = [
         features['AWS/Azure/GCP', 'Container Orchestration', 'Serverless Architecture', 'Disaster Recovery']
     },
     {
+
         id: 'cybersecurity',
         name: 'Cybersecurity',
         description: 'Advanced security solutions to protect your digital assets',
@@ -40,6 +44,7 @@ const services = [
         features['Threat Detection', 'Penetration Testing', 'Compliance Auditing', 'Incident Response']
     },
     {
+
         id: 'quantum-computing',
         name: 'Quantum Computing',
         description: 'Next-generation quantum solutions for complex problems',
@@ -49,6 +54,7 @@ const services = [
         features['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Research Support']
     },
     {
+
         id: 'blockchain-web3',
         name: 'Blockchain & Web3',
         description: 'Decentralized solutions for the future of the internet',
@@ -59,6 +65,7 @@ const services = [
     }
 ];
 export default function FuturisticServicesShowcase() {
+
     const [hoveredService, setHoveredService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
     const categories = [
@@ -84,10 +91,12 @@ export default function FuturisticServicesShowcase() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 30 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -108,14 +117,17 @@ export default function FuturisticServicesShowcase() {
 
         {/* Category Filter */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 30 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.2 
 
@@ -132,18 +144,22 @@ export default function FuturisticServicesShowcase() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {
+
   { opacity: 0, y: 30,
   scale: 0.9 
 
 }} animate = {
+
   { opacity: 1, y: 0,
   scale: 1 
 
 }} exit = {
+
   { opacity: 0, y: -30,
   scale: 0.9 
 
 }} transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -199,27 +215,33 @@ export default function FuturisticServicesShowcase() {
                 <AnimatePresence>
                   {hoveredService === service.id && (<>
                       <motion.div initial = {
+
   { opacity: 0,
   scale: 0 
 
 }} animate = {
+
   { opacity: 1,
   scale: 1 
 
 }} exit = {
+
   { opacity: 0,
   scale: 0 
 
 }} className="absolute -top-2 -right-2 w-4 h-4 bg-cyan-400 rounded-full animate-ping"/>
                       <motion.div initial = {
+
   { opacity: 0,
   scale: 0 
 
 }} animate = {
+
   { opacity: 1,
   scale: 1 
 
 }} exit = {
+
   { opacity: 0,
   scale: 0 
 
@@ -232,14 +254,17 @@ export default function FuturisticServicesShowcase() {
 
         {/* Bottom CTA */}
         <motion.div initial = {
+
   { opacity: 0,
   y: 30 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.4 
 

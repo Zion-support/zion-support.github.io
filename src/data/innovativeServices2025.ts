@@ -32,6 +32,7 @@ export interface InnovativeService {
     email: string;
     website: string};
   technicalSpecs?: {
+
     technology: string[];
     integrations: string[];
     apiEndpoints: number;

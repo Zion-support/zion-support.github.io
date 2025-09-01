@@ -14,23 +14,23 @@ jobs:
     name: Test Suite
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-          
+
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Build project
         run: npm run build
-        
+
       - name: Verify build output
         run: |
           if [ ! -d dist ]; then
@@ -38,7 +38,7 @@ jobs:
             exit 1
           fi
           echo "Build completed successfully"
-          
+
       - name: Verify asset paths
         run: |
           if [ -f dist/index.html ]; then
@@ -47,7 +47,7 @@ jobs:
             echo "✗ index.html not found"
             exit 1
           fi
-          
+
           if [ -d dist/assets ]; then
             echo "✓ assets folder found"
           else
@@ -58,7 +58,7 @@ jobs:
       - name: Run linting
         run: npm run lint
         continue-on-error: true
-        
+
       - name: Run type checking
         run: npm run type-check
         continue-on-error: true

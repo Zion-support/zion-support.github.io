@@ -1,6 +1,7 @@
 export const ADVANCED_AI_SERVICES = [
     // AI-Powered Financial Trading Platform
     {
+
         id: "ai-financial-trading-platform",
         title: "AI Financial Trading Platform",
         description: "Advanced algorithmic trading platform that uses machine learning to analyze market data, predict trends, and execute trades with high accuracy and minimal risk.",
@@ -45,6 +46,7 @@ export const ADVANCED_AI_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$2,500 - $10,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -59,6 +61,7 @@ export const ADVANCED_AI_SERVICES = [
     },
     // AI-Powered Healthcare Diagnostics
     {
+
         id: "ai-healthcare-diagnostics",
         title: "AI Healthcare Diagnostics Platform",
         description: "Comprehensive medical diagnostics platform that uses deep learning to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
@@ -103,6 +106,7 @@ export const ADVANCED_AI_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$1,500 - $5,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -117,6 +121,7 @@ export const ADVANCED_AI_SERVICES = [
     },
     // AI-Powered Supply Chain Optimization
     {
+
         id: "ai-supply-chain-optimization",
         title: "AI Supply Chain Optimization Platform",
         description: "Intelligent supply chain management platform that uses AI to predict demand, optimize inventory, reduce costs, and improve efficiency across the entire supply chain.",
@@ -161,6 +166,7 @@ export const ADVANCED_AI_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$1,200 - $4,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -175,6 +181,7 @@ export const ADVANCED_AI_SERVICES = [
     },
     // AI-Powered Cybersecurity Threat Detection
     {
+
         id: "ai-cybersecurity-threat-detection",
         title: "AI Cybersecurity Threat Detection Platform",
         description: "Advanced cybersecurity platform that uses machine learning to detect, analyze, and respond to cyber threats in real-time, providing comprehensive protection for organizations.",
@@ -219,6 +226,7 @@ export const ADVANCED_AI_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$1,800 - $6,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -233,6 +241,7 @@ export const ADVANCED_AI_SERVICES = [
     },
     // AI-Powered Content Creation Studio
     {
+
         id: "ai-content-creation-studio",
         title: "AI Content Creation Studio",
         description: "Comprehensive content creation platform that uses AI to generate high-quality articles, videos, graphics, and social media content with human-like creativity and accuracy.",
@@ -277,6 +286,7 @@ export const ADVANCED_AI_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$399 - $1,200/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -291,6 +301,7 @@ export const ADVANCED_AI_SERVICES = [
     },
     // AI-Powered Legal Document Analysis
     {
+
         id: "ai-legal-document-analysis",
         title: "AI Legal Document Analysis Platform",
         description: "Intelligent legal document review and analysis platform that uses AI to extract key information, identify risks, and provide insights from contracts, agreements, and legal documents.",
@@ -335,6 +346,7 @@ export const ADVANCED_AI_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$800 - $2,500/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -349,6 +361,7 @@ export const ADVANCED_AI_SERVICES = [
     },
     // AI-Powered Real Estate Analytics
     {
+
         id: "ai-real-estate-analytics",
         title: "AI Real Estate Analytics Platform",
         description: "Advanced real estate analytics platform that uses AI to predict property values, analyze market trends, and provide investment insights for real estate professionals and investors.",
@@ -393,6 +406,7 @@ export const ADVANCED_AI_SERVICES = [
         supportLevel: "premium",
         marketPrice: "$299 - $999/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
@@ -407,6 +421,7 @@ export const ADVANCED_AI_SERVICES = [
     },
     // AI-Powered Energy Management
     {
+
         id: "ai-energy-management",
         title: "AI Energy Management Platform",
         description: "Intelligent energy management platform that uses AI to optimize energy consumption, predict demand, and reduce costs for commercial and industrial facilities.",
@@ -451,6 +466,7 @@ export const ADVANCED_AI_SERVICES = [
         supportLevel: "enterprise",
         marketPrice: "$1,500 - $5,000/month",
         contactInfo: {
+
             phone: "+1 302 464 0950",
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"

@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 export default function About() {
+
     return (<>
       <SEO title="About Zion - The Future of AI & Tech Marketplace" description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." keywords="about Zion, AI marketplace, tech platform, mission, vision, team" canonical="https://ziontechgroup.com/about"/>
       <Header />
@@ -105,23 +106,28 @@ export default function About() {
 }
 import { Users, Target, Globe, Award, Shield, Lightbulb } from 'lucide-react';
 const About = () => {
+
     const values = [
         {
+
             icon: Innovation,
             title: "Innovation",
             description: "We push the boundaries of what's possible, constantly exploring new technologies and approaches to solve complex challenges."
         },
         {
+
             icon: Excellence,
             title: "Excellence",
             description: "We maintain the highest standards in everything we do, from code quality to customer service and project delivery."
         },
         {
+
             icon: Collaboration,
             title: "Collaboration",
             description: "We believe in the power of teamwork and partnerships to achieve extraordinary results that benefit everyone involved."
         },
         {
+
             icon: Integrity,
             title: "Integrity",
             description: "We operate with honesty, transparency, and ethical practices in all our business relationships and operations."
@@ -129,21 +135,25 @@ const About = () => {
     ];
     const milestones = [
         {
+
             year: "2025",
             title: "Global Expansion",
             description: "Expanded operations to serve clients across North America, Europe, and Asia-Pacific regions."
         },
         {
+
             year: "2024",
             title: "AI Breakthrough",
             description: "Launched revolutionary AI autonomous business platform, transforming how companies operate."
         },
         {
+
             year: "2023",
             title: "Quantum Innovation",
             description: "Developed cutting-edge quantum computing solutions for enterprise applications."
         },
         {
+
             year: "2022",
             title: "Company Founded",
             description: "Zion Tech Group was established with a vision to revolutionize technology solutions."

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Brain, 
   Cloud, 
   Shield, 
@@ -58,6 +59,7 @@ import { SEO } from '../components/SEO';
 import { REVOLUTIONARY_SERVICES_2030 } from '../data/revolutionaryServices2030';
 
 export default function RevolutionaryServicesLanding() {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -84,6 +86,7 @@ export default function RevolutionaryServicesLanding() {
   ];
 
   const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {
+
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -93,7 +96,9 @@ export default function RevolutionaryServicesLanding() {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'rating':
         return b.rating - a.rating;
       case 'price':
@@ -108,21 +113,27 @@ export default function RevolutionaryServicesLanding() {
   });
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5,
         ease: "easeOut"
       }
@@ -248,6 +259,7 @@ export default function RevolutionaryServicesLanding() {
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+
                     activeCategory === category.id
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
                       : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'

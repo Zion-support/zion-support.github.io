@@ -4,8 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button';
 const AccessibilityContext = createContext(undefined);
 export const useAccessibility = () => {
+
     const context = useContext(AccessibilityContext);
     if (!context) {
+
         throw new Error('useAccessibility must be used within an AccessibilityProvider');
 
     return context;
@@ -15,21 +17,26 @@ import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucid
 import { Button } from "../ui/button";
 const AccessibilityContext = createContext(null);
 export const useAccessibility = () => {
+
     const context = useContext(AccessibilityContext);
     if (!context) {
+
         throw new Error('useAccessibility must be used within an AccessibilityProvider')}
     return context};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Accessibility Provider Component
 export const AccessibilityProvider = ({ children }) => {
+
     const [highContrast, setHighContrast] = useState(false);
     const [reducedMotion, setReducedMotion] = useState(false);
     const [fontSize, setFontSize] = useState('medium');
     const [colorBlindMode, setColorBlindMode] = useState('none');
     // Load settings from localStorage
     useEffect(() => {
+
         const savedSettings = localStorage.getItem('zion-accessibility-settings');
         if (savedSettings) {
+
             const settings = JSON.parse(savedSettings);
             setHighContrast(settings.highContrast || false);
             setReducedMotion(settings.reducedMotion || false);
@@ -43,7 +50,9 @@ export const AccessibilityProvider = ({ children }) => {
     }, []);
     // Save settings to localStorage
     useEffect(() => {
+
         const settings = {
+
   highContrast,
             reducedMotion,
             fontSize,
@@ -66,30 +75,38 @@ export const AccessibilityProvider = ({ children }) => {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Apply accessibility settings to document
     useEffect(() => {
+
         const root = document.documentElement;
         // High contrast mode
         if (highContrast) {
+
 <<<<<<< HEAD
             root.classList.add('high-contrast');
 
         else {
+
             root.classList.remove('high-contrast');
 
         // Reduced motion
         if (reducedMotion) {
+
             root.classList.add('reduced-motion');
 
         else {
+
             root.classList.remove('reduced-motion');
 
 =======
             root.classList.add('high-contrast')}
         else {
+
             root.classList.remove('high-contrast')}
         // Reduced motion
         if (reducedMotion) {
+
             root.classList.add('reduced-motion')}
         else {
+
             root.classList.remove('reduced-motion')}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Font size
@@ -107,6 +124,7 @@ export const AccessibilityProvider = ({ children }) => {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
     const value = {
+
   highContrast,
         reducedMotion,
         fontSize,
@@ -128,24 +146,30 @@ export const AccessibilityProvider = ({ children }) => {
     </AccessibilityContext.Provider>)};
 // Accessibility Panel Component
 export const AccessibilityPanel = () => {
+
     const [isOpen, setIsOpen] = useState(false);
     const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility();
     // Keyboard shortcuts
     useEffect(() => {
+
         const handleKeyDown = (event) => {
+
             // Ctrl/Cmd + Shift + A to open accessibility panel
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
+
                 event.preventDefault();
 <<<<<<< HEAD
                 setIsOpen(!isOpen);
 
             // Ctrl/Cmd + Shift + H to toggle high contrast
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
+
                 event.preventDefault();
                 toggleHighContrast();
 
             // Ctrl/Cmd + Shift + M to toggle reduced motion
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+
                 event.preventDefault();
                 toggleReducedMotion();
 
@@ -153,10 +177,12 @@ export const AccessibilityPanel = () => {
                 setIsOpen(!isOpen)}
             // Ctrl/Cmd + Shift + H to toggle high contrast
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
+
                 event.preventDefault();
                 toggleHighContrast()}
             // Ctrl/Cmd + Shift + M to toggle reduced motion
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
+
                 event.preventDefault();
                 toggleReducedMotion()}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -173,6 +199,7 @@ export const AccessibilityPanel = () => {
       <AnimatePresence>
         {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>
             <motion.div initial = {
+
   { scale: 0.9,
   opacity: 0 
 
@@ -182,6 +209,7 @@ export const AccessibilityPanel = () => {
 
 
 }} animate = {
+
   { scale: 1,
   opacity: 1 
 
@@ -191,6 +219,7 @@ export const AccessibilityPanel = () => {
 
 
 }} exit = {
+
   { scale: 0.9,
   opacity: 0 
 
@@ -294,7 +323,9 @@ export const SkipToContent = () => (<a href="#main-content" className="sr-only f
   </a>);
 // Focus Trap Hook
 export const useFocusTrap = (isActive) => {
+
     useEffect(() => {
+
         if (!isActive)
             return;
         const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
@@ -304,16 +335,22 @@ export const useFocusTrap = (isActive) => {
         const firstFocusableElement = focusableContent[0];
         const lastFocusableElement = focusableContent[focusableContent.length - 1];
         const handleTabKey = (e) => {
+
             if (e.key === 'Tab') {
+
                 if (e.shiftKey) {
+
                     if (document.activeElement === firstFocusableElement) {
+
                         e.preventDefault();
 <<<<<<< HEAD
                         lastFocusableElement.focus();
 
 
                 else {
+
                     if (document.activeElement === lastFocusableElement) {
+
                         e.preventDefault();
                         firstFocusableElement.focus();
 
@@ -323,7 +360,9 @@ export const useFocusTrap = (isActive) => {
                         lastFocusableElement.focus()}
                 }
                 else {
+
                     if (document.activeElement === lastFocusableElement) {
+
                         e.preventDefault();
                         firstFocusableElement.focus()}
                 }

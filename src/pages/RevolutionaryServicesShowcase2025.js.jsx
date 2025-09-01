@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from "../../data/revolutionary-2025-advanced-services";
 import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from "../../data/emerging-tech-2025-specialized-services";
 const RevolutionaryServicesShowcase2025 = () => {
+
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const allServices = [
@@ -21,6 +22,7 @@ const RevolutionaryServicesShowcase2025 = () => {
         'Quantum Technology'
     ];
     const filteredServices = allServices.filter(service => {
+
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tagline.toLowerCase().includes(searchTerm.toLowerCase());

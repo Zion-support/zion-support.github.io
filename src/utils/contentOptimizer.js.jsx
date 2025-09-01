@@ -1,4 +1,5 @@
 export class ContentOptimizer {
+
 <<<<<<< HEAD
   static MIN_WORD_COUNT = 300;
   static MIN_HEADING_COUNT = 2;
@@ -256,6 +257,7 @@ export class ContentOptimizer {
   static generateContentTemplate(page, contentType) {
 
     const templates = {
+
 `
       service: `
         <h1>Service Title</h1>
@@ -365,6 +367,7 @@ export const contentOptimizer = new ContentOptimizer();
     static MIN_IMAGE_COUNT = 1;
     static MIN_LINK_COUNT = 3;
     static analyzeContent(content, page) {
+
         const wordCount = this.countWords(content);
         const headingCount = this.countHeadings(content);
         const imageCount = this.countImages(content);
@@ -372,6 +375,7 @@ export const contentOptimizer = new ContentOptimizer();
         const readabilityScore = this.calculateReadabilityScore(content);
         const seoScore = this.calculateSEOScore(content, page);
         const issues = this.identifyIssues(content, page, {
+
             wordCount,
             headingCount,
             imageCount,
@@ -379,6 +383,7 @@ export const contentOptimizer = new ContentOptimizer();
         });
         const suggestions = this.generateSuggestions(issues, page);
         return {
+
             page,
             wordCount,
             headingCount,
@@ -391,23 +396,28 @@ export const contentOptimizer = new ContentOptimizer();
         };
     }
     static countWords(content) {
+
         // Remove HTML tags and count words
         const textContent = content.replace(/<[^>]*>/g, ' ').trim();
         return textContent.split(/\s+/).filter(word => word.length > 0).length;
     }
     static countHeadings(content) {
+
         const headingMatches = content.match(/<h[1-6][^>]*>/gi);
         return headingMatches ? headingMatches.length : 0;
     }
     static countImages(content) {
+
         const imageMatches = content.match(/<img[^>]*>/gi);
         return imageMatches ? imageMatches.length : 0;
     }
     static countLinks(content) {
+
         const linkMatches = content.match(/<a[^>]*>/gi);
         return linkMatches ? linkMatches.length : 0;
     }
     static calculateReadabilityScore(content) {
+
         const textContent = content.replace(/<[^>]*>/g, ' ').trim();
         const sentences = textContent.split(/[.!?]+/).filter(s => s.trim().length > 0);
         const words = textContent.split(/\s+/).filter(w => w.length > 0);
@@ -419,14 +429,18 @@ export const contentOptimizer = new ContentOptimizer();
         return Math.max(0, Math.min(100, score));
     }
     static countSyllables(text) {
+
         // Simplified syllable counting
         const words = text.toLowerCase().split(/\s+/);
         let syllableCount = 0;
         words.forEach(word => {
+
             if (word.length <= 3) {
+
                 syllableCount += 1;
             }
             else {
+
                 // Count vowel groups
                 const vowelGroups = word.match(/[aeiouy]+/g);
                 syllableCount += vowelGroups ? vowelGroups.length : 1;
@@ -435,6 +449,7 @@ export const contentOptimizer = new ContentOptimizer();
         return syllableCount;
     }
     static calculateSEOScore(content, page) {
+
         let score = 100;
         // Check for title
         if (!content.includes('<title>'))
@@ -458,10 +473,13 @@ export const contentOptimizer = new ContentOptimizer();
         return Math.max(0, score);
     }
     static identifyIssues(content, page, metrics) {
+
         const issues = [];
         // Check for missing headings
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {
+
             issues.push({
+
                 type: 'missing-headings',
                 severity: 'high',
                 description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`,
@@ -470,7 +488,9 @@ export const contentOptimizer = new ContentOptimizer();
         }
         // Check for minimal content
         if (metrics.wordCount < this.MIN_WORD_COUNT) {
+
             issues.push({
+
                 type: 'minimal-content',
                 severity: 'medium',
                 description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`,
@@ -479,7 +499,9 @@ export const contentOptimizer = new ContentOptimizer();
         }
         // Check for no images
         if (metrics.imageCount === 0) {
+
             issues.push({
+
                 type: 'no-images',
                 severity: 'medium',
                 description: 'No images found. Images improve user engagement and SEO',
@@ -488,7 +510,9 @@ export const contentOptimizer = new ContentOptimizer();
         }
         // Check for poor structure
         if (metrics.headingCount === 0 && metrics.wordCount > 100) {
+
             issues.push({
+
                 type: 'poor-structure',
                 severity: 'high',
                 description: 'Content lacks proper heading structure for organization',
@@ -500,7 +524,9 @@ export const contentOptimizer = new ContentOptimizer();
         const contentKeywords = this.extractContentKeywords(content);
         const missingKeywords = pageKeywords.filter(kw => !contentKeywords.includes(kw));
         if (missingKeywords.length > 0) {
+
             issues.push({
+
                 type: 'missing-keywords',
                 severity: 'medium',
                 description: `Missing important keywords: ${missingKeywords.join(', ')}`,
@@ -510,11 +536,15 @@ export const contentOptimizer = new ContentOptimizer();
         return issues;
     }
     static generateSuggestions(issues, page) {
+
         const suggestions = [];
         issues.forEach(issue => {
+
             switch (issue.type) {
+
                 case 'missing-headings':
                     suggestions.push({
+
                         type: 'add-headings',
                         priority: 'high',
                         description: 'Add proper heading structure (H1, H2, H3) to organize content',
@@ -523,6 +553,7 @@ export const contentOptimizer = new ContentOptimizer();
                     break;
                 case 'minimal-content':
                     suggestions.push({
+
                         type: 'expand-content',
                         priority: 'medium',
                         description: 'Expand content to provide more value and improve SEO',
@@ -531,6 +562,7 @@ export const contentOptimizer = new ContentOptimizer();
                     break;
                 case 'no-images':
                     suggestions.push({
+
                         type: 'add-images',
                         priority: 'medium',
                         description: 'Add relevant images, diagrams, or infographics to improve engagement',
@@ -539,6 +571,7 @@ export const contentOptimizer = new ContentOptimizer();
                     break;
                 case 'poor-structure':
                     suggestions.push({
+
                         type: 'improve-structure',
                         priority: 'high',
                         description: 'Reorganize content with proper headings and logical flow',
@@ -547,6 +580,7 @@ export const contentOptimizer = new ContentOptimizer();
                     break;
                 case 'missing-keywords':
                     suggestions.push({
+
                         type: 'add-keywords',
                         priority: 'medium',
                         description: 'Naturally incorporate missing keywords into the content',
@@ -558,22 +592,26 @@ export const contentOptimizer = new ContentOptimizer();
         return suggestions;
     }
     static extractPageKeywords(page) {
+
         // Extract keywords from page path
         const segments = page.split('/').filter(Boolean);
         const keywords = [];
         segments.forEach(segment => {
+
             const words = segment.split('-').filter(w => w.length > 2);
             keywords.push(...words);
         });
         return keywords;
     }
     static extractContentKeywords(content) {
+
         // Extract potential keywords from content (simplified)
         const textContent = content.replace(/<[^>]*>/g, ' ').toLowerCase();
         const words = textContent.split(/\s+/).filter(w => w.length > 3);
         // Count word frequency and return most common
         const wordCount = {};
         words.forEach(word => {
+
             wordCount[word] = (wordCount[word] || 0) + 1;
         });
         return Object.entries(wordCount)
@@ -582,7 +620,9 @@ export const contentOptimizer = new ContentOptimizer();
             .map(([word]) => word);
     }
     static generateContentTemplate(page, contentType) {
+
         const templates = {
+
   service: `
         <h1>Service Title</h1>
         <p>Comprehensive description of the service and its benefits.</p>
@@ -680,6 +720,7 @@ export const contentOptimizer = new ContentOptimizer();
         return templates[contentType] || templates.service;
     }
     static generateMetaDescription(page, contentType) {
+
         const baseDescription = baseDescriptions[contentType];
         const pageKeywords = this.extractPageKeywords(page).join(' ');
         return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`;

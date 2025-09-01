@@ -2,6 +2,7 @@
 // Cutting-edge IT infrastructure, cloud, and development solutions
 
 export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
@@ -9,6 +10,7 @@ export interface ServiceContact {
 }
 
 export interface ITService {
+
   id: number;
   name: string;
   category: string;
@@ -33,6 +35,7 @@ export interface ITService {
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
+
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
@@ -43,6 +46,7 @@ const zionContact: ServiceContact = {
 export const innovativeITServices2026: ITService[] = [
   // Cloud Migration & Optimization
   {
+
     id: 1,
     name: "Cloud Migration Pro",
     category: "Cloud & Infrastructure",
@@ -88,6 +92,7 @@ export const innovativeITServices2026: ITService[] = [
 
   // DevOps Automation & CI/CD
   {
+
     id: 2,
     name: "DevOps Automation Suite",
     category: "DevOps & Automation",
@@ -133,6 +138,7 @@ export const innovativeITServices2026: ITService[] = [
 
   // Cybersecurity Assessment & Implementation
   {
+
     id: 3,
     name: "Cybersecurity Fortress",
     category: "Cybersecurity",
@@ -178,6 +184,7 @@ export const innovativeITServices2026: ITService[] = [
 
   // Data Analytics & Business Intelligence
   {
+
     id: 4,
     name: "Data Intelligence Hub",
     category: "Data & Analytics",
@@ -223,6 +230,7 @@ export const innovativeITServices2026: ITService[] = [
 
   // Network Infrastructure & Optimization
   {
+
     id: 5,
     name: "Network Infrastructure Pro",
     category: "Network & Infrastructure",
@@ -268,6 +276,7 @@ export const innovativeITServices2026: ITService[] = [
 
   // Mobile App Development
   {
+
     id: 6,
     name: "Mobile App Development Elite",
     category: "Mobile Development",
@@ -313,6 +322,7 @@ export const innovativeITServices2026: ITService[] = [
 
   // Web Application Development
   {
+
     id: 7,
     name: "Web Application Development Pro",
     category: "Web Development",
@@ -358,6 +368,7 @@ export const innovativeITServices2026: ITService[] = [
 
   // IT Consulting & Strategy
   {
+
     id: 8,
     name: "IT Strategy Consulting",
     category: "IT Consulting",
@@ -403,6 +414,7 @@ export const innovativeITServices2026: ITService[] = [
 
   // Cloud Security & Compliance
   {
+
     id: 9,
     name: "Cloud Security & Compliance",
     category: "Cloud Security",
@@ -448,6 +460,7 @@ export const innovativeITServices2026: ITService[] = [
 
   // Disaster Recovery & Business Continuity
   {
+
     id: 10,
     name: "Disaster Recovery & Business Continuity",
     category: "Business Continuity",
@@ -507,6 +520,7 @@ export const getBudgetITServices = () =>
 
 // Service Statistics
 export const IT_SERVICE_STATISTICS_2026 = {
+
   totalServices: innovativeITServices2026.length,
   averageHourlyRate: Math.round(
     innovativeITServices2026.reduce((sum, service) => sum + service.hourlyRate, 0) / 
@@ -519,6 +533,7 @@ export const IT_SERVICE_STATISTICS_2026 = {
   totalCategories: new Set(innovativeITServices2026.map(s => s.category)).size,
   highValueServices: innovativeITServices2026.filter(service => service.projectRate > 30000).length,
   quickDeliveryServices: innovativeITServices2026.filter(service => {
+
     const deliveryTime = service.deliveryTime;
     const weeks = parseInt(deliveryTime.match(/\d+/)?.[0] || '0');
     return weeks < 6;

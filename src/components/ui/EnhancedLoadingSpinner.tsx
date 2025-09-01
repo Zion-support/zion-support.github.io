@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, CheckCircle, AlertCircle, Clock } from 'lucide-react';
 
 interface LoadingState {
+
   status: 'loading' | 'success' | 'error' | 'idle';
   progress?: number;
   message?: string;
@@ -10,6 +11,7 @@ interface LoadingState {
 }
 
 interface EnhancedLoadingSpinnerProps {
+
   state?: LoadingState;
   size?: 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'default' | 'pulse' | 'dots' | 'bars' | 'spinner';
@@ -20,6 +22,7 @@ interface EnhancedLoadingSpinnerProps {
 }
 
 export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
+
   state = { status: 'loading' },
   size = 'md',
   variant = 'default',
@@ -28,18 +31,25 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   autoComplete = false,
   className = ''
 }) => {
+
   const [localState, setLocalState] = useState<LoadingState>(state);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+
     setLocalState(state);
   }, [state]);
 
   useEffect(() => {
+
     if (autoComplete && localState.status === 'loading') {
+
       const interval = setInterval(() => {
+
         setProgress(prev => {
+
           if (prev >= 100) {
+
             setLocalState(prev => ({ ...prev, status: 'success' }));
             return 100;
           }
@@ -52,6 +62,7 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   }, [autoComplete, localState.status]);
 
   const sizeClasses = {
+
     sm: 'w-4 h-4',
     md: 'w-6 h-6',
     lg: 'w-8 h-8',
@@ -59,17 +70,21 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   };
 
   const getSpinnerContent = () => {
+
     switch (variant) {
+
       case 'pulse':
         return (
           <div className={`${sizeClasses[size]} relative`}>
             <motion.div
               className="absolute inset-0 bg-current rounded-full"
               animate={{
+
                 scale: [1, 1.2, 1],
                 opacity: [1, 0.5, 1]
               }}
               transition={{
+
                 duration: 1.5,
                 repeat: Infinity,
                 ease: "easeInOut"
@@ -86,9 +101,11 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
                 key={i}
                 className="w-2 h-2 bg-current rounded-full"
                 animate={{
+
                   y: [0, -10, 0]
                 }}
                 transition={{
+
                   duration: 0.6,
                   repeat: Infinity,
                   delay: i * 0.2,
@@ -107,9 +124,11 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
                 key={i}
                 className="w-1 bg-current rounded-full"
                 animate={{
+
                   height: [10, 20, 10]
                 }}
                 transition={{
+
                   duration: 0.8,
                   repeat: Infinity,
                   delay: i * 0.1,
@@ -126,6 +145,7 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
             className={`${sizeClasses[size]} border-2 border-current border-t-transparent rounded-full`}
             animate={{ rotate: 360 }}
             transition={{
+
               duration: 1,
               repeat: Infinity,
               ease: "linear"
@@ -139,7 +159,9 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   };
 
   const getStatusIcon = () => {
+
     switch (localState.status) {
+
       case 'success':
         return <CheckCircle className={`${sizeClasses[size]} text-green-500`} />;
       case 'error':
@@ -152,7 +174,9 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   };
 
   const getStatusColor = () => {
+
     switch (localState.status) {
+
       case 'success':
         return 'text-green-600';
       case 'error':
@@ -261,7 +285,8 @@ export const CardSkeleton: React.FC<{ className?: string }> = ({ className = '' 
 );
 
 // Table loading component
-export const TableSkeleton: React.FC<{ rows?: number; columns?: number; className?: string }> = ({ 
+export const TableSkeleton: React.FC<{ rows?: number; columns?: number; className?: string }> = ({
+
   rows = 5, 
   columns = 4, 
   className = '' 

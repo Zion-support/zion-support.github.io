@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 export function FloatingOrbs({ count = 6, className = '' }) {
+
     const canvasRef = useRef(null);
     useEffect(() => {
+
         const canvas = canvasRef.current;
         if (!canvas)
             return;
@@ -10,12 +12,14 @@ export function FloatingOrbs({ count = 6, className = '' }) {
             return;
         // Set canvas size
         const resizeCanvas = () => {
+
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight};
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         // Orb class
         class Orb {
+
             x;
             y;
             radius;
@@ -24,6 +28,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
             opacity;
             color;
             constructor() {
+
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
                 this.radius = Math.random() * 3 + 1;
@@ -32,6 +37,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
                 this.opacity = Math.random() * 0.5 + 0.2;
                 this.color = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`}
             update() {
+
                 this.x += this.vx;
                 this.y += this.vy;
                 // Bounce off edges
@@ -43,6 +49,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
                 this.x = Math.max(0, Math.min(canvas.width, this.x));
                 this.y = Math.max(0, Math.min(canvas.height, this.y))}
             draw() {
+
                 ctx.save();
                 ctx.globalAlpha = this.opacity;
                 // Create gradient
@@ -58,17 +65,21 @@ export function FloatingOrbs({ count = 6, className = '' }) {
         // Create orbs
         const orbs = [];
         for (let i = 0; i < count; i++) {
+
             orbs.push(new Orb())}
         // Animation loop
         let animate = () => {
+
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             orbs.forEach(orb => {
+
                 orb.update();
                 orb.draw()});
             animationId = requestAnimationFrame(animate)};
         animate();
         // Cleanup
         return () => {
+
             window.removeEventListener('resize', resizeCanvas);
             cancelAnimationFrame(animationId)}}, [count]);
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{ background: 'transparent' }}/>)}

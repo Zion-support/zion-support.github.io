@@ -13,6 +13,7 @@ import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceP
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
 import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {
+
     const [searchParams] = useSearchParams();
     const [selectedCountry, setSelectedCountry] = useState(null);
     const [searchQuery, setSearchQuery] = useState("");
@@ -20,18 +21,21 @@ export default function ITOnsiteServicesPage() {
     const success = searchParams.get("success");
     // Show success toast if redirected from successful payment
     useEffect(() => {
+
         if (success === "true") {
+
             toast({
+
                 title: "Payment Successful",
-                description: "Your IT onsite service request has been received. Our team will contact you shortly.",
-            })}
+                description: "Your IT onsite service request has been received. Our team will contact you shortly."})}
     }, [success]);
     // Popular countries for the featured cards
     const popularCountries = ["United States", "United Kingdom", "Canada", "Germ", "Japan", "Singapore"];
     // Filter countries based on search query
-    const filteredCountries = onsiteServicePricing
+    const filteredCountries = onsiteServicePricing;
         .filter(country => country.country.toLowerCase().includes(searchQuery.toLowerCase()))
         .sort((a, b) => {
+
         // First, sort by popular status
         const aIsPopular = popularCountries.includes(a.country);
         const bIsPopular = popularCountries.includes(b.country);
@@ -42,9 +46,11 @@ export default function ITOnsiteServicesPage() {
         // Then sort alphabetically
         return a.country.localeCompare(b.country)});
     const handleCountrySelect = (country) => {
+
         setSelectedCountry(country);
         // Scroll to the service details section
         setTimeout(() => {
+
             document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })}, 100)};
     return (<section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

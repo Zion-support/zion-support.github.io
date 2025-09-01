@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from "lucide-react";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
+
     // useParams is typed as `` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.
     const { profileId } = useParams();
@@ -16,11 +17,15 @@ export default function ProfileDetail() {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
     useEffect(() => {
+
         const fetchProfile = async () => {
+
             setIsLoading(true);
             setError(null);
             try {
+
                 if (!profileId) {
+
                     setError("Profile ID is missing.");
                     return}
                 const { data, error } = await supabase
@@ -29,31 +34,38 @@ export default function ProfileDetail() {
                     .eq("id", profileId)
                     .single();
                 if (error) {
+
                     throw new Error(error.message)}
                 if (!data) {
+
                     setError("Profile not found.");
                     return}
                 setProfileData(data)}
             catch (err) {
+
                 setError(err.message || "Failed to fetch profile.");
                 toast({
+
                     title: "Error",
                     description: err.message || "Failed to fetch profile.",
-                    variant: "destructive",
-                })}
+                    variant: "destructive"})}
             finally {
+
                 setIsLoading(false)}
         };
         fetchProfile()}, [profileId]);
     if (isLoading) {
+
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
       </div>)}
     if (error) {
+
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Error: {error}</p>
       </div>)}
     if (!profileData) {
+
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
       </div>)}
@@ -154,7 +166,9 @@ export default function ProfileDetail() {
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA talentProfile = {
+
   {
+
             id: profileData?.id || '',
             full_name: profileData?.full_name || '',
             professional_title: profileData?.professional_title || '',

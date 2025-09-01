@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const Resources = () => {
+
     return (<>
       <Helmet>
         <title>Resources - Zion Tech Group</title>

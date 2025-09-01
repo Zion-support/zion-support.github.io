@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react.ts';
 export function ServiceVirtualScroll (...args: any[]) : any {
+
 export function VirtualScroll < T> ({
+
 import { motion, AnimatePresence  } from 'framer - motion.ts';
 
 interface VirtualScrollProps < T> {
+
   items: anyT[];
   height: number;
   itemHeight: number;
@@ -15,6 +18,7 @@ interface VirtualScrollProps < T> {
 }
 =======
 export function VirtualScroll<T>({
+
 >>>>>>> main
 
   items,
@@ -63,6 +67,7 @@ export function VirtualScroll<T>({
     scrollToItem (0) }, [scrollToItem]) ;
   // Auto - scroll to specific item on mount if needed
   useEffect ( () => {
+
     if (items.length > 0 && containerRef.current) {
 
       // You can add logic here to scroll to a specific item on mount
@@ -153,6 +158,7 @@ export function VirtualScroll<T>({
     </div>;) }
 // Specialized virtual scroll for service cards
 interface ServiceCard {
+
   id: anystring;
   name: string;
   description: string;

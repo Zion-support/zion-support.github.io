@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 export default CloudDevOpsServices;
 
 const CloudDevOpsServices = () => {
+
     const [searchTerm, setSearchTerm] = useState ('') ;
     const [selectedCategory, setSelectedCategory] = useState ('all') ;
     const [selectedPricing, setSelectedPricing] = useState ('all') ;
@@ -10,10 +11,13 @@ const CloudDevOpsServices = () => {
     const categories = ['all', 'Cloud Management', 'Container Orchestration', 'DevOps Automation', 'Serverless', 'Infrastructure', 'Security'];
     const pricingOptions = ['all', 'Enterprise', 'Professional', 'Standard'];
     const filteredServices = cloudDevOpsServices.filter (service => {
+
         const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
         return matchesSearch && matchesCategory && matchesPricing}) ;
     const getCategoryIcon = (category) => {
+
         switch (category) {
+
             case 'Cloud Management': return < Cloud className="w - 6 h - 6"/>;
             case 'Container Orchestration': return < Server className="w - 6 h - 6"/>;
             case 'DevOps Automation': return < GitFork className="w - 6 h - 6"/>;
@@ -23,7 +27,9 @@ const CloudDevOpsServices = () => {
             default: return < Code className="w - 6 h - 6"/>}
     };
     const getPricingColor = (pricing) => {
+
         switch (pricing) {
+
             case 'Enterprise': return 'text - purple - 400';
             case 'Professional': return 'text - blue - 400';
             case 'Standard': return 'text - green - 400';

@@ -7,8 +7,10 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
     const [showScrollToTop, setShowScrollToTop] = useState(false);
     const [deviceType, setDeviceType] = useState('desktop');
     useEffect(() => {
+
         // Detect device type
         const detectDevice = () => {
+
             const width = window.innerWidth;
             if (width < 768) {
 
@@ -31,6 +33,7 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         applyTheme(savedTheme || 'dark');
         // Scroll to top visibility
         const handleScroll = () => {
+
             setShowScrollToTop (window.scrollY > 300) };
         if (enableScrollEffects) {
 
@@ -60,12 +63,14 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         setTheme(newTheme);
         applyTheme(newTheme)};
     const scrollToTop = () => {
+
         window.scrollTo({
 
             top: 0,
             behavior: 'smooth'
         }) };
     const toggleParticleMode = () => {
+
         setIsParticleMode (!isParticleMode) };
     return (<>
       {/* Floating Action Buttons */}

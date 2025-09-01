@@ -1,23 +1,28 @@
 import React from 'react';
 import Link from 'next/link';
 const AdvancedCybersecuritySuite = () => {
+
     const features = [
         {
+
             title: "Threat Detection",
             description: "Advanced AI-powered threat detection and response",
             icon: "🛡️"
         },
         {
+
             title: "Vulnerability Assessment",
             description: "Comprehensive security scanning and analysis",
             icon: "🔍"
         },
         {
+
             title: "Compliance Automation",
             description: "Automated compliance monitoring and reporting",
             icon: "📋"
         },
         {
+
             title: "Incident Response",
             description: "24/7 security monitoring and rapid response",
             icon: "🚨"
@@ -25,21 +30,25 @@ const AdvancedCybersecuritySuite = () => {
     ];
     const securityModules = [
         {
+
             title: "Network Security",
             description: "Advanced firewall, intrusion detection, and network monitoring",
             features["Next-gen firewall", "IDS/IPS", "Network segmentation", "Traffic analysis"]
         },
         {
+
             title: "Endpoint Protection",
             description: "Comprehensive endpoint security and device management",
             features["Antivirus", "EDR", "Device control", "Application whitelisting"]
         },
         {
+
             title: "Cloud Security",
             description: "Multi-cloud security and compliance management",
             features["CSPM", "Cloud DLP", "Identity management", "API security"]
         },
         {
+
             title: "Data Protection",
             description: "Data encryption, backup, and recovery solutions",
             features["Encryption at rest", "Backup automation", "DR planning", "Data classification"]
@@ -55,18 +64,22 @@ const AdvancedCybersecuritySuite = () => {
     ];
     const threatIntelligence = [
         {
+
             category: "Real-time Monitoring",
             description: "24/7 security operations center with AI-powered threat detection"
         },
         {
+
             category: "Threat Hunting",
             description: "Proactive threat hunting and intelligence gathering"
         },
         {
+
             category: "Incident Response",
             description: "Rapid incident response with automated playbooks"
         },
         {
+
             category: "Forensic Analysis",
             description: "Advanced digital forensics and evidence collection"
         }

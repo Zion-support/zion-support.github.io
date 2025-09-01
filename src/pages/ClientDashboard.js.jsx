@@ -13,6 +13,7 @@ import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
+
     const [activeTab, setActiveTab] = useState("all");
     const { jobs, isLoading } = useJobs();
     const [selectedJobId, setSelectedJobId] = useState(null);
@@ -20,11 +21,14 @@ function ClientDashboardContent() {
     const isMobile = useIsMobile();
     // Set the first job as selected when jobs are loaded (if )
     useEffect(() => {
+
         if (jobs.length > 0 && !selectedJobId) {
+
             setSelectedJobId(jobs[0].id);
             setSelectedJobTitle(jobs[0].title)}
     }, [jobs, selectedJobId]);
     const handleJobSelect = (jobId, jobTitle) => {
+
         setSelectedJobId(jobId);
         setSelectedJobTitle(jobTitle)};
     return (<>
@@ -112,6 +116,7 @@ function ClientDashboardContent() {
       
     </>)}
 export default function ClientDashboard() {
+
     return (<ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>)}

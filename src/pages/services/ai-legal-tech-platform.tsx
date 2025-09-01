@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Brain, 
   Scale, 
   FileText, 
@@ -25,26 +26,31 @@ import {
 } from 'lucide-react';
 
 export default function AILegalTechPlatform() {
+
   const features = [
     {
+
       title: 'AI Document Analysis',
       description: 'Advanced NLP for contract review, legal research, and document classification',
       icon: FileText,
       benefits: ['Contract analysis', 'Legal research', 'Document classification', 'Risk assessment']
     },
     {
+
       title: 'Legal Research Automation',
       description: 'AI-powered case law research and precedent analysis',
       icon: Search,
       benefits: ['Case law research', 'Precedent analysis', 'Citation checking', 'Legal trends']
     },
     {
+
       title: 'Contract Generation',
       description: 'Intelligent contract drafting with customizable templates',
       icon: BookOpen,
       benefits: ['Template library', 'Custom clauses', 'Compliance checking', 'Version control']
     },
     {
+
       title: 'Compliance Monitoring',
       description: 'Automated regulatory compliance and risk management',
       icon: Shield,
@@ -54,6 +60,7 @@ export default function AILegalTechPlatform() {
 
   const pricingPlans = [
     {
+
       name: 'Solo Practitioner',
       price: '$199/month',
       description: 'Perfect for individual lawyers and small practices',
@@ -68,6 +75,7 @@ export default function AILegalTechPlatform() {
       popular: false
     },
     {
+
       name: 'Law Firm',
       price: '$599/month',
       description: 'Ideal for growing law firms and legal teams',
@@ -84,6 +92,7 @@ export default function AILegalTechPlatform() {
       popular: true
     },
     {
+
       name: 'Enterprise',
       price: 'Custom',
       description: 'For large legal departments and corporations',
@@ -102,24 +111,28 @@ export default function AILegalTechPlatform() {
 
   const useCases = [
     {
+
       title: 'Contract Review',
       description: 'Automate contract analysis and identify key terms and risks',
       icon: FileText,
       benefits: ['Faster review', 'Risk identification', 'Cost reduction', 'Quality improvement']
     },
     {
+
       title: 'Legal Research',
       description: 'Streamline case law research and precedent analysis',
       icon: Search,
       benefits: ['Time savings', 'Better insights', 'Comprehensive coverage', 'Citation accuracy']
     },
     {
+
       title: 'Compliance Management',
       description: 'Automate regulatory compliance and risk monitoring',
       icon: Shield,
       benefits: ['Risk mitigation', 'Compliance automation', 'Audit readiness', 'Cost savings']
     },
     {
+
       title: 'Document Management',
       description: 'Organize and manage legal documents efficiently',
       icon: BookOpen,
@@ -318,6 +331,7 @@ export default function AILegalTechPlatform() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 rounded-xl p-8 border ${
+
                   plan.popular 
                     ? 'border-purple-500/50 bg-purple-600/10' 
                     : 'border-gray-700 hover:border-purple-500/50'
@@ -349,6 +363,7 @@ export default function AILegalTechPlatform() {
                 <Link
                   to={plan.name === 'Enterprise' ? '/contact' : '/signup'}
                   className={`block w-full text-center px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'

@@ -4,6 +4,7 @@ import { COMPREHENSIVE_IT_SERVICES_2026 } from './comprehensiveITServices2026';
 import { COMPREHENSIVE_AI_SERVICES_2026 } from './comprehensiveAIServices2026';
 
 export interface ComprehensiveService2025 {
+
   id: string;
   title: string;
   description: string;
@@ -23,11 +24,13 @@ export interface ComprehensiveService2025 {
   roi: string;
   innovationLevel: string;
   contactInfo: {
+
     phone: string;
     email: string;
     website: string;
   };
   technicalSpecs?: {
+
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
@@ -137,7 +140,9 @@ export const SUPPORT_LEVELS = [
 
 // Calculate counts for each category
 export const calculateCategoryCounts = () => {
+
   const categories = SERVICE_CATEGORIES.reduce((acc, category) => {
+
     acc[category] = COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
       service.category === category
     ).length;
@@ -145,8 +150,10 @@ export const calculateCategoryCounts = () => {
   }, {} as Record<string, number>);
 
   const pricingTiers = PRICING_TIERS.map(tier => ({
+
     ...tier,
     count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => {
+
       if (tier.id === 'budget') return service.price >= 100 && service.price <= 1000;
       if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
       if (tier.id === 'enterprise') return service.price > 5000 && service.price <= 15000;
@@ -156,6 +163,7 @@ export const calculateCategoryCounts = () => {
   }));
 
   const innovationLevels = INNOVATION_LEVELS.map(level => ({
+
     ...level,
     count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
       service.innovationLevel === level.name
@@ -163,6 +171,7 @@ export const calculateCategoryCounts = () => {
   }));
 
   const supportLevels = SUPPORT_LEVELS.map(level => ({
+
     ...level,
     count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
       service.supportLevel === level.id
@@ -170,6 +179,7 @@ export const calculateCategoryCounts = () => {
   }));
 
   return {
+
     categories,
     pricingTiers,
     innovationLevels,
@@ -180,6 +190,7 @@ export const calculateCategoryCounts = () => {
 
 // Get services by category
 export const getServicesByCategory = (category: string) => {
+
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
     service.category === category
   );
@@ -187,6 +198,7 @@ export const getServicesByCategory = (category: string) => {
 
 // Get services by price range
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
     service.price >= minPrice && service.price <= maxPrice
   );
@@ -194,6 +206,7 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
 
 // Get services by innovation level
 export const getServicesByInnovationLevel = (level: string) => {
+
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
     service.innovationLevel === level
   );
@@ -201,6 +214,7 @@ export const getServicesByInnovationLevel = (level: string) => {
 
 // Get services by support level
 export const getServicesBySupportLevel = (level: string) => {
+
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
     service.supportLevel === level
   );
@@ -208,6 +222,7 @@ export const getServicesBySupportLevel = (level: string) => {
 
 // Search services
 export const searchServices = (query: string) => {
+
   const searchTerm = query.toLowerCase();
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
     service.title.toLowerCase().includes(searchTerm) ||
@@ -219,14 +234,17 @@ export const searchServices = (query: string) => {
 
 // Get featured services (top 12 by innovation level and ROI)
 export const getFeaturedServices = () => {
+
   return COMPREHENSIVE_SERVICES_CATALOG_2025
     .sort((a, b) => {
+
       // Sort by innovation level first, then by ROI
       const innovationOrder = { 'Cutting-edge': 3, 'Advanced': 2, 'Standard': 1 };
       const aInnovation = innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0;
       const bInnovation = innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0;
       
       if (aInnovation !== bInnovation) {
+
         return bInnovation - aInnovation;
       }
       
@@ -240,8 +258,10 @@ export const getFeaturedServices = () => {
 
 // Get trending services (services with highest ROI)
 export const getTrendingServices = () => {
+
   return COMPREHENSIVE_SERVICES_CATALOG_2025
     .sort((a, b) => {
+
       const aROI = parseInt(a.roi.split('-')[0]);
       const bROI = parseInt(b.roi.split('-')[0]);
       return bROI - aROI;
@@ -251,7 +271,9 @@ export const getTrendingServices = () => {
 
 // Get services by industry
 export const getServicesByIndustry = (industry: string) => {
+
   const industryMapping: Record<string, string[]> = {
+
     'Healthcare': ['AI & Healthcare', 'AI & Legal Tech'],
     'Finance': ['AI & FinTech', 'AI & Financial Services'],
     'Manufacturing': ['AI & Manufacturing', 'AI & Supply Chain', 'AI & Robotics'],

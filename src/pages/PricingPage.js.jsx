@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, PRICING_TIERS, CONTACT_INFO } from "@/data/microSaasServices";
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, CheckCircle, X, Phone, Mail, MapPin, Globe, ArrowRight, Zap, Users, TrendingUp import { Link } from "react-router-dom";
 const categoryIcons = {
+
   'AI Business Solutions': Brain,
     'IT Infrastructure': Cloud,
     'Data Analytics': BarChart3,
@@ -16,6 +17,7 @@ const categoryIcons = {
   'EdTech': GraduationCap
 };
 const pricingFeatures = {
+
   basic[
         "Core service functionality",
         "Standard support (8/5)",
@@ -58,12 +60,14 @@ const comparisonFeatures = [
     "Free Migration Support"
 ];
 export default function PricingPage() {
+
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [billingCycle, setBillingCycle] = useState('monthly');
     const filteredServices = selectedCategory === 'all'
         ? MICRO_SAAS_SERVICES
         : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
     const getDiscountedPrice = (price) => {
+
         return billingCycle === 'yearly' ? Math.round(price * 10 * 0.8) : price};
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -148,6 +152,7 @@ export default function PricingPage() {
             <TabsList className="grid w-full grid-cols-9 bg-zion-blue-dark border-zion-blue-light">
               <TabsTrigger value="all" className="text-white">All</TabsTrigger>
               {MICRO_SAAS_CATEGORIES.map((category) => {
+
             const IconComponent = categoryIcons[category.label];
             return (<TabsTrigger key={category.value} value={category.value} className="text-white">
                     {IconComponent && <IconComponent className="h-4 w-4 mr-2"/>}
@@ -256,21 +261,25 @@ export default function PricingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
             {
+
                 icon: <Zap className="h-8 w-8"/>,
                 title: "Immediate Deployment",
                 description: "All services ready for instant deployment"
             },
             {
+
                 icon: <Shield className="h-8 w-8"/>,
                 title: "Enterprise Security",
                 description: "SOC 2 compliance and 24/7 monitoring"
             },
             {
+
                 icon: <Users className="h-8 w-8"/>,
                 title: "Dedicated Support",
                 description: "24/7 technical support with account managers"
             },
             {
+
                 icon: <TrendingUp className="h-8 w-8"/>,
                 title: "Proven ROI",
                 description: "Average 300% ROI within 6 months"

@@ -7,11 +7,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import SEO from '@/components/SEO';
 export default function AdvancedServicesPage() {
+
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [sortBy, setSortBy] = useState('featured');
     // Filter services based on search and category
     const filteredServices = ADVANCED_SERVICES.filter(service => {
+
         const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -19,7 +21,9 @@ export default function AdvancedServicesPage() {
         return matchesSearch && matchesCategory});
     // Sort services
     const sortedServices = [...filteredServices].sort((a, b) => {
+
         switch (sortBy) {
+
             case 'price-low':
                 return (a.price || 0) - (b.price || 0);
             case 'price-high':
@@ -260,6 +264,7 @@ export default function AdvancedServicesPage() {
     </div>)}
 // Service Card Component
 function ServiceCard({ service }) {
+
     return (<Card className="h-full hover:shadow-lg transition-all duration-300 border-zion-blue-light hover:border-zion-cyan">
       <div className="relative">
         <img src={service.images: [0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>

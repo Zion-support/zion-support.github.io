@@ -1,21 +1,27 @@
 import { useState, useEffect } from 'react';
 
 export function useMobile() {
+
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   };
 }, []);;
@@ -31,12 +37,15 @@ export function useMobile() {
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   };
 }, []);;
@@ -49,9 +58,11 @@ export function useMobile() {
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   
   return () => {
+
     // Cleanup function
   };
 }, []);;
@@ -61,10 +72,12 @@ export function useMobile() {
   // TODO: Add dependencies if needed
 
   return () => {
+
     // Cleanup function
   };
 }, []);, []);
     const checkMobile = () => {
+
       const userAgent = navigator.userAgent;
       const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
       setIsMobile(isMobileDevice);

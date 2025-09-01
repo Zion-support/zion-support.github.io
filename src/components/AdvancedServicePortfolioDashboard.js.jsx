@@ -123,6 +123,7 @@ const AdvancedServicePortfolioDashboard = () => {
       technologyMaturity: 'Leading'},
   ];
   const filteredPortfolio = useMemo(() => {
+
     return portfolioData.filter(service => {
 
       const matchesSearch = service.title
@@ -675,6 +676,7 @@ const AdvancedServicePortfolioDashboard = () => {
                                       : 'bg-gray-500'`
                           }`}
                           style={{
+
 `
                             width: `${(category.count / portfolioData.length) * 100}%`}}
                         ></div>

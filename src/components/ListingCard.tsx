@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import TrustScoreBadge from "@/components/TrustScoreBadge"; // Assuming TrustScoreBadge is in @/components
 
 interface ListingCardProps {
+
   id?: string;
   title: string;
   description: string;
@@ -19,7 +20,8 @@ interface ListingCardProps {
   trustScoreAnalysis?: string | null;
 }
 
-export function ListingCard({ 
+export function ListingCard({
+
   id,
   title, 
   description, 
@@ -33,6 +35,7 @@ export function ListingCard({
   trustScore,
   trustScoreAnalysis
 }: ListingCardProps) {
+
   // Generate a profile ID based on the listing data
   // In a real app, this would be a proper ID from the database
   const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');

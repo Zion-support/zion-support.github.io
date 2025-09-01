@@ -1,6 +1,7 @@
 export default React.memo (function Layout (...args[]) :  {
 
 interface LayoutProps {
+
   // Add your props here
 
 

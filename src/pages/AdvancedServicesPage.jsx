@@ -4,20 +4,21 @@ import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
 import SEO from '@/components / SEO';
 export default function AdvancedServicesPage () {
+
 import {
+
 import {
+
 import {
 
   ADVANCED_SERVICES,
   SERVICE_CATEGORIES,
-  PRICING_TIERS,
-} from '@/data / advancedServices';
+  PRICING_TIERS} from '@/data / advancedServices';
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
+  CardTitle} from '@/components / ui / card';
   Search,
   Star,
   Clock,
@@ -30,19 +31,21 @@ import {
   Phone,
   Mail,
   MapPin,
-  ExternalLink,
-} from 'lucide - react';
+  ExternalLink} from 'lucide - react';
   const [searchQuery, setSearchQuery] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
   const [sortBy, setSortBy] = useState ('featured') ;
   // Filter services based on search and category
   const filteredServices = ADVANCED_SERVICES.filter (service => {
+
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
   }) ;
   // Sort services
   const sortedServices = [...filteredServices].sort ( (a, b) => {
+
     switch (sortBy) {
+
       case 'price - low':
         return (a.price || 0) - (b.price || 0) ;
       case 'price - high':
@@ -365,6 +368,7 @@ import {
 }
 // Service Card Component
 function ServiceCard ({ service }) {
+
   return (<Card className="h - full hover:shadow - lg transition - all duration - 300 border - zion - blue - light hover:border - zion - cyan">
       <div className="relative">
         <img

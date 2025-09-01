@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   CheckCircle, 
   XCircle, 
   Star, 
@@ -28,6 +29,7 @@ import { zion2027AdvancedMicroSaasServices } from '../data/zion-2027-advanced-mi
 import { zion2027EmergingTechnologyServices } from '../data/zion-2027-emerging-technology-services';
 
 export default function AdvancedPricingComparison2027() {
+
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const title = 'Advanced Pricing Comparison 2027 — Zion Tech Group';
@@ -45,7 +47,9 @@ export default function AdvancedPricingComparison2027() {
     : allServices.filter(service => service.category === selectedCategory);
 
   const getCategoryIcon = (category: string) => {
+
     const iconMap: { [key: string]: any } = {
+
       'AI & Fintech': Brain,
       'AI & Healthcare': Brain,
       'IoT & Edge Computing': Globe,
@@ -70,7 +74,9 @@ export default function AdvancedPricingComparison2027() {
   };
 
   const getCategoryColor = (category: string) => {
+
     const colorMap: { [key: string]: string } = {
+
       'AI & Fintech': 'from-green-600 to-emerald-700',
       'AI & Healthcare': 'from-blue-600 to-cyan-700',
       'IoT & Edge Computing': 'from-purple-600 to-indigo-700',
@@ -172,6 +178,7 @@ export default function AdvancedPricingComparison2027() {
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
+
                   selectedCategory === category
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -189,6 +196,7 @@ export default function AdvancedPricingComparison2027() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="space-y-12">
             {filteredServices.map((service) => {
+
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
               

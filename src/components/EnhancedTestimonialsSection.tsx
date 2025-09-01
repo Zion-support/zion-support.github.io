@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -16,6 +17,7 @@ import { motion, AnimatePresence } from 'framer - motion';
  } from 'lucide-react';
 
 interface Testimonial {
+
   id: string;
   name: string;
   position: string;
@@ -102,6 +104,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   useEffect ( () => {
+
     if (!isAutoPlaying) return;
 
     

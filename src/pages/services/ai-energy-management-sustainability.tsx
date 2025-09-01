@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Zap, 
   Brain, 
   CheckCircle,
@@ -40,38 +41,45 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function AIEnergyManagementSustainability() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Energy Optimization",
       description: "Advanced machine learning algorithms that optimize energy consumption, predict demand, and reduce waste",
       benefits: ["Energy optimization", "Demand prediction", "Waste reduction"]
     },
     {
+
       icon: Zap,
       title: "Smart Grid Integration",
       description: "Seamless integration with smart grids, renewable energy sources, and energy storage systems",
       benefits: ["Grid integration", "Renewable energy", "Storage optimization"]
     },
     {
+
       icon: Leaf,
       title: "Sustainability Analytics",
       description: "Comprehensive tracking of carbon footprint, energy efficiency, and environmental impact metrics",
       benefits: ["Carbon tracking", "Efficiency metrics", "Impact analysis"]
     },
     {
+
       icon: BarChart3,
       title: "Real-time Energy Monitoring",
       description: "Live dashboards showing energy consumption, cost analysis, and efficiency recommendations",
       benefits: ["Live monitoring", "Cost analysis", "Efficiency insights"]
     },
     {
+
       icon: Target,
       title: "Predictive Maintenance",
       description: "AI-driven insights to predict equipment failures and optimize maintenance schedules",
       benefits: ["Failure prediction", "Maintenance optimization", "Cost savings"]
     },
     {
+
       icon: Shield,
       title: "Compliance & Reporting",
       description: "Automated compliance reporting for energy regulations, sustainability standards, and ESG requirements",
@@ -81,6 +89,7 @@ export default function AIEnergyManagementSustainability() {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$299",
       period: "/month",
@@ -97,6 +106,7 @@ export default function AIEnergyManagementSustainability() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$799",
       period: "/month",
@@ -115,6 +125,7 @@ export default function AIEnergyManagementSustainability() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,999",
       period: "/month",
@@ -136,21 +147,25 @@ export default function AIEnergyManagementSustainability() {
 
   const useCases = [
     {
+
       industry: "Manufacturing",
       description: "Optimize production energy consumption, reduce costs, and improve sustainability compliance",
       metrics: ["Energy efficiency", "Cost reduction", "Carbon footprint"]
     },
     {
+
       industry: "Commercial Real Estate",
       description: "Manage building energy systems, optimize HVAC operations, and reduce utility costs",
       metrics: ["Utility cost reduction", "HVAC optimization", "Building efficiency"]
     },
     {
+
       industry: "Healthcare",
       description: "Ensure critical energy systems reliability, reduce costs, and meet sustainability goals",
       metrics: ["System reliability", "Cost savings", "Sustainability goals"]
     },
     {
+
       industry: "Data Centers",
       description: "Optimize power usage effectiveness, reduce cooling costs, and improve energy efficiency",
       metrics: ["PUE optimization", "Cooling efficiency", "Energy savings"]
@@ -159,21 +174,25 @@ export default function AIEnergyManagementSustainability() {
 
   const benefits = [
     {
+
       icon: TrendingUp,
       title: "Reduce Energy Costs",
       description: "AI optimization can reduce energy costs by 15-30% through intelligent consumption management"
     },
     {
+
       icon: Leaf,
       title: "Improve Sustainability",
       description: "Track and reduce carbon footprint while meeting ESG and sustainability reporting requirements"
     },
     {
+
       icon: Users,
       title: "Enhance Operational Efficiency",
       description: "Predictive maintenance and optimization increase operational efficiency by 20-40%"
     },
     {
+
       icon: Zap,
       title: "Future-Proof Infrastructure",
       description: "Smart grid integration and renewable energy optimization prepare facilities for the future"
@@ -341,6 +360,7 @@ export default function AIEnergyManagementSustainability() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/25' 
                     : 'border-slate-700'
@@ -373,6 +393,7 @@ export default function AIEnergyManagementSustainability() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

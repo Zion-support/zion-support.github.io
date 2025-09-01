@@ -21,6 +21,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     const [progress, setProgress] = useState(0);
     // Initialize form data and validation
     useEffect(() => {
+
 <<<<<<< HEAD
         const initialData = { /* empty */ };
         const initialValidation = { /* empty */ };
@@ -54,6 +55,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         if (field.required) {
 
             if (typeof value === 'boolean' && !value) {
+
 <<<<<<<< HEAD:src/components/AdvancedForm.js.jsx
 
 ========
@@ -61,11 +63,13 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 return 'This field is required';
 
             if (typeof value === 'string' && value.trim() === '') {
+
                 return 'This field is required';
 
 
         // Skip validation for empty non-required fields
         if (!field.required && (typeof value === 'string' && value.trim() === '')) {
+
             return null;
 
 =======
@@ -93,6 +97,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailPattern.test(stringValue)) {
+
 <<<<<<<< HEAD:src/components/AdvancedForm.js.jsx
 
                     return 'Please enter a valid email address'}
@@ -117,19 +122,23 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
 ========
                 if (!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g, ''))) {
+
 <<<<<<< HEAD
                     return 'Please enter a valid phone number';
 
 
             // Length validation
             if (field.validation?.minLength && stringValue.length < field.validation.minLength) {
+
                 return `Minimum length is ${field.validation.minLength} characters`;
 
             if (field.validation?.maxLength && stringValue.length > field.validation.maxLength) {
+
                 return `Maximum length is ${field.validation.maxLength} characters`;
 
             // Pattern validation
             if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {
+
                 return 'Please enter a valid value';
 
 =======
@@ -141,6 +150,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
                 return `Minimum length is ${field.validation.minLength} characters`}
             if (field.validation?.maxLength && stringValue.length > field.validation.maxLength) {
+
 `
                 return `Maximum length is ${field.validation.maxLength} characters`}
             // Pattern validation
@@ -190,6 +200,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         }));
         // Track form interaction
         if (enableAnalytics) {
+
 <<<<<<< HEAD
             trackEvent('form', 'field_changed', name, undefined, { fieldName: name, value: String(value) });
 
@@ -227,6 +238,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Check if form is valid
     const isFormValid = useCallback(() => {
+
         return Object.values(validation).every(v => v.isValid)}, [validation]);
     // Handle form submission
     const handleSubmit = useCallback(async (e) => {
@@ -251,8 +263,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsSubmitting(true);
         try {
+
             // Track form submission start
             if (enableAnalytics) {
+
 <<<<<<<< HEAD:src/components/AdvancedForm.js.jsx
 
                 trackEvent('form',submission_started',form_submitted')}
@@ -271,6 +285,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             await onSubmit(formData);
             // Track successful submission
             if (enableAnalytics) {
+
                 trackEvent('form', 'submission_success', 'form_completed');
 <<<<<<< HEAD
                 trackConversion('form_submission', 1, { formType: title });
@@ -282,6 +297,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             setIsSubmitted(true);
             // Reset form after successful submission
             setTimeout(() => {
+
                 setIsSubmitted(false);
 <<<<<<< HEAD
                 setFormData({ /* empty */ });
@@ -295,6 +311,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 setProgress(0)}, 5000)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
+
             // Track submission error
             if (enableAnalytics) {
 
@@ -307,20 +324,21 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 });
 <<<<<<< HEAD
 
-            // // // console.error('Form submission failed:', error);
+            // // // // // // console.error('Form submission failed:', error);
 
 =======
             }
-            // // // // // // // console.error('Form submission failed:', error);
+            // // // // // // // // // // console.error('Form submission failed:', error);
         }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         finally {
+
             setIsSubmitting(false);
 
 =======
 >>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedForm.jsx
                 })}
-            // console.error('Form submission failed:', error)}
+            // // // // console.error('Form submission failed:', error)}
         finally {
 
             setIsSubmitting(false)}
@@ -334,6 +352,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     const getFieldIcon = useCallback((field) => {
 
         switch (field.type) {
+
 <<<<<<<< HEAD:src/components/AdvancedForm.js.jsx
 '"
             case 'email': return <Mail className="w-4 h-4"/>;'"
@@ -582,10 +601,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 <<<<<<< HEAD
       </motion.div>)}
     return (<motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 

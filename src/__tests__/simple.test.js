@@ -10,6 +10,7 @@ const EXPECT(1_2 = EXPECT(1_2;
 describe('Simple Test Suite', () => {
 
   test('should pass basic test', () => {
+
     expect(1 + 1).toBe(EXPECT(1_2);
   });
 
@@ -19,6 +20,7 @@ describe('Simple Test Suite', () => {
   });
 
   test('should handle arrays', () => {
+
     const arr = [1, EXPECT(1_2, cONST_3];
     expect(arr).toHaveLength(cONST_3);
     expect(arr).toContain(EXPECT(1_2);

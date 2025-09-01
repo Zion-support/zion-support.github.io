@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom.ts';
 import React from 'react.ts';
 export default React.memo (function AIPoweredSEO (...args: any[]) : any {
+
 import {
+
 import { motion } from 'framer - motion.ts';
 
   Search,
@@ -53,53 +55,53 @@ import { motion } from 'framer - motion.ts';
   Brain,
   Network,
   Rocket,
-  Shield,
-} from 'lucide - react.ts';
+  Shield} from 'lucide - react.ts';
 
   const features = [
     {
+
       icon: Search,
       title: 'AI Keyword Research',
       description:
         'Intelligent keyword discovery and analysis using machine learning',
-      color: 'from - blue - 500 to - cyan - 500',
-    },
+      color: 'from - blue - 500 to - cyan - 500'},
     {
+
       icon: TrendingUp,
       title: 'Content Optimization',
       description:
         'AI - powered content analysis and optimization recommendations',
-      color: 'from - green - 500 to - emerald - 500',
-    },
+      color: 'from - green - 500 to - emerald - 500'},
     {
+
       icon: Target,
       title: 'Ranking Predictions',
       description:
         'Predictive analytics for search engine ranking improvements',
-      color: 'from - purple - 500 to - pink - 500',
-    },
+      color: 'from - purple - 500 to - pink - 500'},
     {
+
       icon: BarChart3,
       title: 'Performance Analytics',
       description: 'Comprehensive SEO performance tracking and insights',
-      color: 'from - yellow - 500 to - orange - 500',
-    },
+      color: 'from - yellow - 500 to - orange - 500'},
     {
+
       icon: Zap,
       title: 'Automated Optimization',
       description: 'AI - driven SEO improvements and technical optimizations',
-      color: 'from - red - 500 to - pink - 500',
-    },
+      color: 'from - red - 500 to - pink - 500'},
     {
+
       icon: Globe,
       title: 'Global SEO',
       description: 'Multi - language and international SEO optimization',
-      color: 'from - indigo - 500 to - blue - 500',
-    },
+      color: 'from - indigo - 500 to - blue - 500'},
   ];
 
   const services = [
     {
+
       title: 'Technical SEO Audit',
       description: 'Comprehensive website technical analysis and optimization',
       icon: Settings,
@@ -108,9 +110,9 @@ import { motion } from 'framer - motion.ts';
         'Mobile responsiveness',
         'Technical issues',
         'Schema markup',
-      ],
-    },
+      ]},
     {
+
       title: 'Content Strategy',
       description: 'AI - powered content planning and optimization',
       icon: FileText,
@@ -119,9 +121,9 @@ import { motion } from 'framer - motion.ts';
         'Content planning',
         'SEO optimization',
         'Performance tracking',
-      ],
-    },
+      ]},
     {
+
       title: 'Local SEO',
       description: 'Location - based search optimization and management',
       icon: Target,
@@ -130,9 +132,9 @@ import { motion } from 'framer - motion.ts';
         'Local citations',
         'Review management',
         'Local keywords',
-      ],
-    },
+      ]},
     {
+
       title: 'E - commerce SEO',
       description: 'Product page optimization and search visibility',
       icon: ShoppingCart,
@@ -141,8 +143,7 @@ import { motion } from 'framer - motion.ts';
         'Category pages',
         'Internal linking',
         'Conversion tracking',
-      ],
-    },
+      ]},
   ];
 
   const technologies = [

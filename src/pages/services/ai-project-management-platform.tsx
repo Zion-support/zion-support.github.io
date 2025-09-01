@@ -43,38 +43,45 @@ import { Brain,
               } from 'lucide-react.ts';
 
 const AIProjectManagementPlatform: React.FC = () => {
+
   const features = [
     {
+
       title: "AI-Powered Task Prioritization",
       description: "Intelligent algorithms automatically prioritize tasks based on deadlines, dependencies, and business impact.",
       icon: Target,
       benefits: ["Optimized workflow efficiency", "Reduced project delays", "Better resource allocation"]
     },
     {
+
       title: "Smart Workflow Automation",
       description: "Automate repetitive project management tasks and create intelligent workflows that adapt to your team's needs.",
       icon: Workflow,
       benefits: ["Time savings", "Consistent processes", "Reduced human error"]
     },
     {
+
       title: "Predictive Project Analytics",
       description: "AI-driven insights predict project outcomes, identify risks, and suggest optimizations before issues arise.",
       icon: BarChart3,
       benefits: ["Proactive risk management", "Data-driven decisions", "Improved project success rates"]
     },
     {
+
       title: "Intelligent Team Management",
       description: "AI-powered team matching, workload balancing, and performance analytics for optimal team productivity.",
       icon: Users,
       benefits: ["Better team collaboration", "Balanced workloads", "Enhanced performance tracking"]
     },
     {
+
       title: "Real-Time Progress Tracking",
       description: "Live monitoring of project progress with AI-powered insights and automated status updates.",
       icon: Activity,
       benefits: ["Transparent project visibility", "Timely interventions", "Stakeholder confidence"]
     },
     {
+
       title: "Smart Goal Optimization",
       description: "AI algorithms continuously optimize project goals and milestones based on real-time data and constraints.",
       icon: TrendingUp,
@@ -84,6 +91,7 @@ const AIProjectManagementPlatform: React.FC = () => {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$99",
       period: "/month",
@@ -99,6 +107,7 @@ const AIProjectManagementPlatform: React.FC = () => {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$299",
       period: "/month",
@@ -115,6 +124,7 @@ const AIProjectManagementPlatform: React.FC = () => {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$999",
       period: "/month",
@@ -134,24 +144,28 @@ const AIProjectManagementPlatform: React.FC = () => {
 
   const useCases = [
     {
+
       industry: "Software Development",
       description: "Manage complex software projects with AI-powered sprint planning and release management.",
       icon: Code,
       benefits: ["Agile optimization", "Release automation", "Quality assurance"]
     },
     {
+
       industry: "Marketing Campaigns",
       description: "Coordinate multi-channel marketing campaigns with intelligent scheduling and performance tracking.",
       icon: Megaphone,
       benefits: ["Campaign automation", "Performance optimization", "ROI tracking"]
     },
     {
+
       industry: "Product Launch",
       description: "Streamline product launches with AI-driven timeline optimization and risk management.",
       icon: Rocket,
       benefits: ["Launch coordination", "Risk mitigation", "Market timing"]
     },
     {
+
       industry: "Event Planning",
       description: "Plan and execute events with AI-powered logistics optimization and attendee management.",
       icon: Calendar,
@@ -161,6 +175,7 @@ const AIProjectManagementPlatform: React.FC = () => {
 
   const platformCapabilities = [
     {
+
       category: "AI & Machine Learning",
       capabilities: [
         "Natural language task processing",
@@ -171,6 +186,7 @@ const AIProjectManagementPlatform: React.FC = () => {
       ]
     },
     {
+
       category: "Project Management",
       capabilities: [
         "Gantt charts and timelines",
@@ -181,6 +197,7 @@ const AIProjectManagementPlatform: React.FC = () => {
       ]
     },
     {
+
       category: "Team Collaboration",
       capabilities: [
         "Real-time messaging",
@@ -191,6 +208,7 @@ const AIProjectManagementPlatform: React.FC = () => {
       ]
     },
     {
+
       category: "Integration & API",
       capabilities: [
         "Third-party integrations",
@@ -203,21 +221,27 @@ const AIProjectManagementPlatform: React.FC = () => {
   ];
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5
       }
     }
@@ -352,6 +376,7 @@ const AIProjectManagementPlatform: React.FC = () => {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -362,6 +387,7 @@ const AIProjectManagementPlatform: React.FC = () => {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -372,6 +398,7 @@ const AIProjectManagementPlatform: React.FC = () => {
 
 }}
                 transition = {
+
   { duration: 0.8,
   delay: index * 0.1 
 
@@ -442,6 +469,7 @@ const AIProjectManagementPlatform: React.FC = () => {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
@@ -452,6 +480,7 @@ const AIProjectManagementPlatform: React.FC = () => {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   x: 0 
 
@@ -462,6 +491,7 @@ const AIProjectManagementPlatform: React.FC = () => {
 
 }}
                 transition = {
+
   { duration: 0.8,
   delay: index * 0.1 
 
@@ -512,6 +542,7 @@ const AIProjectManagementPlatform: React.FC = () => {
                 key={index}
                 variants={itemVariants}
                 className={`relative bg-zion-slate-dark/50 backdrop-blur-sm border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' 
                     : 'border-zion-slate-light/20'
@@ -546,6 +577,7 @@ const AIProjectManagementPlatform: React.FC = () => {
                 <Link
                   to={plan.cta === "Contact Sales" ? "/contact" : "/signup"}
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-purple hover:to-zion-cyan'
                       : 'border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'

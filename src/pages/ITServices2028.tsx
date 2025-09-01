@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export default ITServices2028;}}
 import {
+
 import { motion } from 'framer - motion';
 
   Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
@@ -20,6 +21,7 @@ import { motion } from 'framer - motion';
 
 const itServices2028 = [
   {
+
     id: 'quantum - cloud - infrastructure',
     name: 'Quantum Cloud Infrastructure',
     tagline: 'Next - generation quantum - ready cloud infrastructure',
@@ -50,6 +52,7 @@ const itServices2028 = [
     customers: 45
   },
   {
+
     id: 'ai - powered - cybersecurity',
     name: 'AI - Powered Cybersecurity Suite',
     tagline: 'Intelligent threat detection and response',
@@ -80,6 +83,7 @@ const itServices2028 = [
     customers: 156
   },
   {
+
     id: 'quantum - database - platform',
     name: 'Quantum Database Platform',
     tagline: 'Quantum - powered database management system',
@@ -110,6 +114,7 @@ const itServices2028 = [
     customers: 67
   },
   {
+
     id: 'ai - network - optimization',
     name: 'AI Network Optimization',
     tagline: 'Intelligent network performance and security',
@@ -140,6 +145,7 @@ const itServices2028 = [
     customers: 98
   },
   {
+
     id: 'quantum - devops - automation',
     name: 'Quantum DevOps Automation',
     tagline: 'Next - generation development and operations automation',
@@ -170,6 +176,7 @@ const itServices2028 = [
     customers: 134
   },
   {
+
     id: 'ai - data - analytics - platform',
     name: 'AI Data Analytics Platform',
     tagline: 'Intelligent business intelligence and analytics',

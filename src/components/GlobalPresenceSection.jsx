@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
 export function GlobalPresenceSection () {
+
 import { motion, AnimatePresence } from 'framer - motion';
 
 =======
@@ -17,6 +18,7 @@ const globalStats = [
 ];
 const partnerships = [
     {
+
 "
         name: "Microsoft","
         type: "Technology Partner","
@@ -27,6 +29,7 @@ const partnerships = [
         status: "Active"
     },
     {
+
 "
         name: "AWS","
         type: "Cloud Partner","
@@ -37,6 +40,7 @@ const partnerships = [
         status: "Active"
     },
     {
+
 "
         name: "Google Cloud","
         type: "Cloud Partner","
@@ -47,6 +51,7 @@ const partnerships = [
         status: "Active"
     },
     {
+
 "
         name: "Salesforce","
         type: "Business Partner","
@@ -57,6 +62,7 @@ const partnerships = [
         status: "Active"
     },
     {
+
 "
         name: "Oracle","
         type: "Enterprise Partner","
@@ -67,6 +73,7 @@ const partnerships = [
         status: "Active"
     },
     {
+
 "
         name: "IBM","
         type: "Technology Partner","
@@ -287,6 +294,7 @@ const industries = ["
   y: 10
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0
@@ -412,6 +420,7 @@ const industries = ["
   y: 10
 
 }} animate = {
+
 "
   { opacity: 1, height: "auto",
   y: 0

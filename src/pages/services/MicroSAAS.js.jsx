@@ -1,37 +1,44 @@
 import React from 'react';
 import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings const MicroSAAS = () => {
+
     const microsaasServices = [
         {
+
             icon: Package,
             title: "SAAS Development",
             description: "End-to-end development of scalable software-as-a-service applications",
             features: ["Custom SAAS platforms", "Multi-tenant architecture", "Subscription management", "API development"]
         },
         {
+
             icon: Zap,
             title: "Rapid Prototyping",
             description: "Quick development of MVPs and prototypes to validate business ideas",
             features: ["MVP development", "Proof of concept", "User testing", "Iterative design"]
         },
         {
+
             icon: Users,
             title: "User Management",
             description: "Comprehensive user authentication, authorization, and management systems",
             features: ["User registration", "Role-based access", "Single sign-on", "User analytics"]
         },
         {
+
             icon: Database,
             title: "Data Management",
             description: "Scalable database design and data processing solutions",
             features: ["Database architecture", "Data migration", "Backup strategies", "Performance optimization"]
         },
         {
+
             icon: Shield,
             title: "Security & Compliance",
             description: "Enterprise-grade security and compliance for SAAS applications",
             features: ["Data encryption", "GDPR compliance", "SOC 2 certification", "Security auditing"]
         },
         {
+
             icon: Globe,
             title: "Cloud Deployment",
             description: "Scalable cloud infrastructure and deployment solutions",
@@ -48,31 +55,37 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
     ];
     const technologies = [
         {
+
             name: "Frontend",
             description: "React, Vue.js, Angular with modern UI frameworks",
             icon: Cpu
         },
         {
+
             name: "Backend",
             description: "Node.js, Python, Java with microservices architecture",
             icon: Database
         },
         {
+
             name: "Cloud",
             description: "AWS, Azure, GCP with containerization and orchestration",
             icon: Globe
         },
         {
+
             name: "Database",
             description: "PostgreSQL, MongoDB, Redis with data optimization",
             icon: Target
         },
         {
+
             name: "Security",
             description: "OAuth, JWT, encryption with compliance frameworks",
             icon: Shield
         },
         {
+
             name: "Monitoring",
             description: "Real-time analytics, logging, and performance monitoring",
             icon: TrendingUp
@@ -80,31 +93,37 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
     ];
     const industries = [
         {
+
             title: "Healthcare",
             description: "HIPAA-compliant patient management and telemedicine platforms",
             icon: Shield
         },
         {
+
             title: "Finance",
             description: "Secure financial planning and investment management tools",
             icon: TrendingUp
         },
         {
+
             title: "Education",
             description: "Learning management systems and educational technology platforms",
             icon: Users
         },
         {
+
             title: "E-commerce",
             description: "Online marketplace and retail management solutions",
             icon: Package
         },
         {
+
             title: "Real Estate",
             description: "Property management and real estate investment platforms",
             icon: Target
         },
         {
+
             title: "Manufacturing",
             description: "Supply chain management and production optimization tools",
             icon: Settings

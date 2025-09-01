@@ -53,6 +53,7 @@ function cartReducer(state, action) {
 const CartContext = createContext(null);
 ;
 export function useCart() {
+
   const ctx = useContext(CartContext);
   if (!ctx) {
 
@@ -68,12 +69,14 @@ export function CartProvider({ children }) {
   const cartKey = getCartKey(user?.id);
 
   useEffect(() => {
+
     let items = [];
     const stored = safeStorage.getItem(cartKey);
 
     if (stored) {
 
       try {
+
         items = JSON.parse(stored);
       } catch {
 
@@ -88,6 +91,7 @@ export function CartProvider({ children }) {
       if (guestStored) {
 
         try {
+
           const guestItems = JSON.parse(guestStored);
           items = mergeCartItems(items, guestItems);
         } catch {
@@ -103,6 +107,7 @@ export function CartProvider({ children }) {
 
   // Save cart to storage whenever it changes
   useEffect(() => {
+
     if (state.items.length > 0) {
 
       safeStorage.setItem(cartKey, JSON.stringify(state.items));
@@ -139,10 +144,12 @@ export function CartProvider({ children }) {
   };
 
   const getTotalItems = () => {
+
     return state.items.reduce((total, item) => total + item.quantity, 0);
   };
 
   const getTotalPrice = () => {
+
     return state.items.reduce()
       (total, item) => total + item.price * item.quantity,
       0

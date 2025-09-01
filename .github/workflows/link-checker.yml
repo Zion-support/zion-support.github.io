@@ -1,7 +1,7 @@
 name: Link Checker
 on:
   schedule:
-    - cron: '0 6 * * 1'  # Weekly on Monday at 6 AM
+    - cron: '0 6 * * 1' # Weekly on Monday at 6 AM
   workflow_dispatch:
 permissions:
   contents: write
@@ -18,16 +18,16 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-          
+
       - name: Install linkinator
         run: npm install -g linkinator
-        
+
       - name: Check external links
         run: |
           # Create a simple list of external links to check
@@ -39,10 +39,10 @@ jobs:
           https://instagram.com/ziontechgroup
           https://twitter.com/ziontechgroup
           EOF
-          
+
           # Run linkinator on the external links
           linkinator external_links.txt --format json > link_report.json || true
-          
+
       - name: Analyze results
         run: |
           if [ -f link_report.json ]; then
@@ -77,16 +77,16 @@ jobs:
             echo "## Error" >> LINK_REPORT.md
             echo "❌ Failed to generate link report" >> LINK_REPORT.md
           fi
-          
+
       - name: Create issue for broken links
         if: failure()
         uses: peter-evans/create-issue-from-file@v5
         with:
-          title: "External link check failed - broken links detected"
+          title: 'External link check failed - broken links detected'
           content-filepath: LINK_REPORT.md
           labels: link-check,automated,broken-links
           assignees: ''
-          
+
       - name: Upload report
         uses: actions/upload-artifact@v4
         with:

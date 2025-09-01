@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 export default BlockchainServicesPage;
 import {
+
 import { motion } from 'framer - motion';
 
   Link,
@@ -38,21 +39,23 @@ import { motion } from 'framer - motion';
   ];
 
   const categories = [
-    { id: 'all', name: 'All Services', count: blockchainServices.length },
-              }
+    { id: 'all', name: 'All Services', count: blockchainServices.length }}
             ].map ( (feature, index) => (<motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Cloud, 
   TrendingDown, 
   DollarSign, 
@@ -51,33 +52,40 @@ import {
 } from 'lucide-react';
 
 export default function CloudFinOpsOptimizer() {
+
   const features = [
     {
+
       icon: <Calculator className="w-6 h-6" />,
       title: "Cost Analytics & Reporting",
       description: "Real-time cost tracking and detailed financial reporting across all cloud services and resources."
     },
     {
+
       icon: <TrendingDown className="w-6 h-6" />,
       title: "Automated Cost Optimization",
       description: "AI-powered recommendations to reduce cloud spending while maintaining performance and reliability."
     },
     {
+
       icon: <PieChart className="w-6 h-6" />,
       title: "Resource Utilization Insights",
       description: "Deep visibility into resource usage patterns to identify waste and optimization opportunities."
     },
     {
+
       icon: <Target className="w-6 h-6" />,
       title: "Budget Management",
       description: "Set and enforce budgets with automated alerts and cost control mechanisms."
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Performance Monitoring",
       description: "Track cost-performance metrics to ensure optimal resource allocation and efficiency."
     },
     {
+
       icon: <Cloud className="w-6 h-6" />,
       title: "Multi-Cloud Optimization",
       description: "Optimize costs across AWS, Azure, Google Cloud, and other cloud providers."
@@ -95,18 +103,22 @@ export default function CloudFinOpsOptimizer() {
 
   const useCases = [
     {
+
       industry: "Enterprise",
       description: "Large-scale cloud cost management and optimization for enterprise organizations"
     },
     {
+
       industry: "Startups",
       description: "Cost-effective cloud scaling and resource optimization for growing companies"
     },
     {
+
       industry: "E-commerce",
       description: "Dynamic resource scaling and cost optimization for seasonal traffic patterns"
     },
     {
+
       industry: "SaaS Companies",
       description: "Multi-tenant cost allocation and optimization for SaaS platforms"
     }

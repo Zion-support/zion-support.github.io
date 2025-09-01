@@ -1,4 +1,5 @@
 export type AddedService = {
+
   id: string;
   title: string;
   description: string;
@@ -14,6 +15,7 @@ export type AddedService = {
 export const servicesAdditions2025: AddedService[] = [
   // Micro SaaS
   {
+
     id: 'status-incident-hub',
     title: 'Status & Incident Hub',
     description: 'Hosted status page, incident comms, SLAs, and on-call integrations.',
@@ -27,9 +29,9 @@ export const servicesAdditions2025: AddedService[] = [
       'PagerDuty/Opsgenie integration',
     ],
     ctaLabel: 'Start Now',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'checkout-performance-optimizer',
     title: 'Checkout Performance Optimizer',
     description: 'Improve conversion with A/B experiments, vitals alerts, and real-user metrics.',
@@ -43,9 +45,9 @@ export const servicesAdditions2025: AddedService[] = [
       'Shopify/Stripe integration',
     ],
     ctaLabel: 'Boost Conversions',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'gdpr-dsar-portal',
     title: 'GDPR/DSAR Privacy Portal',
     description: 'Self-serve privacy request intake, verification, tracking, and exports.',
@@ -59,9 +61,9 @@ export const servicesAdditions2025: AddedService[] = [
       'Audit logs',
     ],
     ctaLabel: 'Launch Portal',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'security-headers-csp-manager',
     title: 'Security Headers & CSP Manager',
     description: 'Easy security headers, CSP policy generation, and violation reporting.',
@@ -70,9 +72,9 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'month',
     features: ['Preset policies', 'CSP report collector', 'Per‑env control', 'CI checks'],
     ctaLabel: 'Harden Site',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'email-deliverability-monitor',
     title: 'Email Deliverability Monitor',
     description: 'DMARC/SPF/DKIM checks, blocklist monitoring, and inbox placement tests.',
@@ -81,9 +83,9 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'month',
     features: ['DMARC reports', 'Blocklist alerts', 'Seed inbox tests', 'SPF visualizer'],
     ctaLabel: 'Improve Delivery',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'seo-change-monitor',
     title: 'SEO Change Monitor',
     description: 'Crawl diffs, schema validation, robots/sitemap health, and alerting.',
@@ -92,9 +94,9 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'month',
     features: ['Automated crawls', 'Schema checks', 'Vitals tracking', 'Alert rules'],
     ctaLabel: 'Monitor SEO',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'saas-billing-anomaly-guard',
     title: 'SaaS Billing Anomaly Guard',
     description: 'Detect revenue and usage anomalies across plans, coupons, and metering.',
@@ -103,9 +105,9 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'month',
     features: ['Real‑time alerts', 'Cohort views', 'Plan guardrails', 'Stripe usage API'],
     ctaLabel: 'Guard Revenue',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'pdf-render-api',
     title: 'PDF Render API',
     description: 'High‑fidelity HTML→PDF at scale with templates and webhooks.',
@@ -114,9 +116,9 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'month',
     features: ['Template library', 'Headless Chrome', 'Webhook callbacks', 'S3 export'],
     ctaLabel: 'Render PDFs',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'edge-image-optimizer',
     title: 'Edge Image Optimizer',
     description: 'On‑the‑fly resize, format, cache, and CDN delivery.',
@@ -125,9 +127,9 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'month',
     features: ['AVIF/WebP', 'Signed URLs', 'Origin shield', 'EXIF stripping'],
     ctaLabel: 'Optimize Images',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'cicd-flaky-test-detector',
     title: 'CI/CD Flaky Test Detector',
     description: 'Auto‑detect flakiness, rank by impact, and suggest fixes.',
@@ -136,9 +138,9 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'month',
     features: ['Flake scoring', 'PR annotations', 'GitHub Actions app', 'JUnit ingest'],
     ctaLabel: 'Stabilize CI',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'api-changelog-sdk-publisher',
     title: 'API Changelog & SDK Publisher',
     description: 'Generate changelogs and ship typed SDKs per release.',
@@ -147,11 +149,11 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'month',
     features: ['OpenAPI ingest', 'Breaking change alerts', 'SDK generator', 'Docs site'],
     ctaLabel: 'Ship SDKs',
-    href: '/contact',
-  },
+    href: '/contact'},
 
   // IT Services
   {
+
     id: 'managed-kubernetes-sre',
     title: 'Managed Kubernetes SRE',
     description: 'Proactive reliability, upgrades, policies, and 24/7 on‑call.',
@@ -160,9 +162,9 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'month',
     features: ['Cluster hardening', 'GitOps pipelines', 'Cost controls', 'SLOs & runbooks'],
     ctaLabel: 'Talk to SRE',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'zero-trust-rollout-coaching',
     title: 'Zero Trust Rollout Coaching',
     description: 'Plan and implement Zero Trust with Okta, ZTNA, and least privilege.',
@@ -171,9 +173,9 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'project',
     features: ['SSO/SCIM', 'Device posture', 'Policy design', 'Audit readiness'],
     ctaLabel: 'Plan Rollout',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'cloud-finops-advisor',
     title: 'Cloud FinOps Advisor',
     description: 'Reduce spend with rightsizing, commit plans, and anomaly detection.',
@@ -182,9 +184,9 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'hour',
     features: ['Waste analysis', 'Unit economics', 'Budgets & alerts', 'SP/RI planning'],
     ctaLabel: 'Optimize Cloud',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'soc2-evidence-collector',
     title: 'SOC 2 Evidence Collector',
     description: 'Automate control evidence collection across cloud and SaaS.',
@@ -193,11 +195,11 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'month',
     features: ['Prebuilt controls', 'Evidence API', 'Auditor exports', 'Ticketing hooks'],
     ctaLabel: 'Collect Evidence',
-    href: '/contact',
-  },
+    href: '/contact'},
 
   // AI Solutions
   {
+
     id: 'ai-meeting-notes-agent',
     title: 'AI Meeting Notes Agent',
     description: 'Transcribe, summarize, action items, and CRM logging.',
@@ -206,9 +208,9 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'month',
     features: ['Speaker diarization', 'Auto follow‑ups', 'CRM sync', 'Secure storage'],
     ctaLabel: 'Automate Notes',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'ai-sales-playbook-generator',
     title: 'AI Sales Playbook Generator',
     description: 'Generate ICP messaging, cadences, and competitive battlecards.',
@@ -217,9 +219,9 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'month',
     features: ['ICP builder', 'Email/LI cadences', 'Asset library', 'Compliance guardrails'],
     ctaLabel: 'Generate Playbooks',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'incident-postmortem-ai-scribe',
     title: 'Incident Postmortem AI Scribe',
     description: 'Drafts blameless postmortems with timelines, facts, and follow‑ups.',
@@ -228,9 +230,9 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'month',
     features: ['Timeline builder', 'Root cause hints', 'Action tracker', 'Shareable reports'],
     ctaLabel: 'Draft Postmortems',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'enterprise-rag-chat',
     title: 'Enterprise RAG Chat',
     description: 'Private chat over docs with citations, access controls, and audit.',
@@ -239,9 +241,9 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'month',
     features: ['Connectors (GDrive/M365)', 'SSO & roles', 'Citations', 'PII redaction'],
     ctaLabel: 'Launch Secure Chat',
-    href: '/contact',
-  },
+    href: '/contact'},
   {
+
     id: 'developer-productivity-copilot',
     title: 'Developer Productivity Copilot',
     description: 'AI PR reviews, tests, flaky detection, and CI insights.',
@@ -250,7 +252,6 @@ export const servicesAdditions2025: AddedService[] = [
     billing: 'month',
     features: ['Inline suggestions', 'Repo insights', 'Test generation', 'Policy guardrails'],
     ctaLabel: 'Supercharge Devs',
-    href: '/contact',
-  },
+    href: '/contact'},
 ];
 

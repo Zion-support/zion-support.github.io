@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
+
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'white' | 'cyan';
   text?: string;
@@ -10,6 +11,7 @@ interface LoadingSpinnerProps {
 }
 
 const sizeClasses = {
+
   sm: 'w-6 h-6',
   md: 'w-8 h-8',
   lg: 'w-12 h-12',
@@ -17,6 +19,7 @@ const sizeClasses = {
 };
 
 const colorClasses = {
+
   primary: 'border-cyan-400',
   secondary: 'border-blue-400',
   white: 'border-white',
@@ -24,12 +27,14 @@ const colorClasses = {
 };
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+
   size = 'md',
   color = 'primary',
   text = 'Loading...',
   showText = true,
   className = ''
 }) => {
+
   return (
     <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-label="Loading">
       <div className="relative">
@@ -41,6 +46,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-t-transparent ${colorClasses[color]} rounded-full`}
           animate={{ rotate: 360 }}
           transition={{
+
             duration: 1,
             repeat: Infinity,
             ease: "linear"
@@ -74,6 +80,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
 // Optimized spinner for inline use
 export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
+
   size = 'sm',
   className = ''
 }) => (
@@ -82,6 +89,7 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
       className={`${size === 'sm' ? 'w-4 h-4' : 'w-6 h-6'} border-2 border-t-transparent border-cyan-400 rounded-full`}
       animate={{ rotate: 360 }}
       transition={{
+
         duration: 1,
         repeat: Infinity,
         ease: "linear"
@@ -93,9 +101,11 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
 
 // Full-screen loading overlay
 export const FullScreenLoader: React.FC<{
+
   text?: string;
   showLogo?: boolean;
   className?: string}> = ({
+
   text = 'Loading amazing experiences...',
   showLogo = true,
   className = ''
@@ -118,8 +128,10 @@ export const FullScreenLoader: React.FC<{
 
 // Skeleton loading component;
 export const SkeletonLoader: React.FC<{
+
   className?: string;
   lines?: number}> = ({
+
   className = '',
   lines = 3}) => (
   <div className={`animate-pulse ${className}`}>

@@ -82,10 +82,13 @@ const testimonials = [
     project: 'Cloud Infrastructure'},
 ];
 export function TestimonialCarousel() {
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   useEffect(() => {
+
     const timer = setInterval(() => {
+
       setDirection(1);
       setCurrentIndex(prev => (prev + 1) % testimonials.length);
     }, 5000);

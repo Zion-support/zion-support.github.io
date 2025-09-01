@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Phone, 
   Mail, 
   MapPin, 
@@ -45,10 +46,12 @@ import {
 } from 'lucide-react';
 
 export function AppFooter() {
+
   const currentYear = new Date().getFullYear();
 
   const serviceCategories = [
     {
+
       title: "AI & Automation",
       icon: Brain,
       color: "text-zion-cyan",
@@ -72,6 +75,7 @@ export function AppFooter() {
       ]
     },
     {
+
       title: "IT & Infrastructure",
       icon: Server,
       color: "text-zion-purple",
@@ -89,6 +93,7 @@ export function AppFooter() {
       ]
     },
     {
+
       title: "Micro SaaS Solutions",
       icon: Rocket,
       color: "text-zion-cyan",
@@ -167,6 +172,7 @@ export function AppFooter() {
   ];
 
   const scrollToTop = () => {
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -175,6 +181,7 @@ export function AppFooter() {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
+
           backgroundImage: `radial-gradient(circle at 25% 25%, ${'#6366f1'} 2px, transparent 2px)`,
           backgroundSize: '40px 40px'
         }}></div>

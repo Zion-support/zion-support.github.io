@@ -55,6 +55,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
   // Title is now guaranteed to be a non-empty string by the check above.
   const productTitle = product.title;
   const addToCart = () => {
+
     dispatch()
       addItem({
 

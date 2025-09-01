@@ -4,6 +4,7 @@ import { Brain, Atom, Zap, CheckCircle, ArrowRight, Star, Globe, Lock, Cpu, Targ
 import { SEO } from '@/components/SEO';
 
 const AIQuantumComputingPlatform: React.FC = () => {
+
   const features = [
     'Hybrid quantum-classical AI algorithms for optimization',
     'Quantum machine learning with quantum neural networks',
@@ -27,6 +28,7 @@ const AIQuantumComputingPlatform: React.FC = () => {
 
   const pricing = [
     {
+
       plan: 'Research',
       price: '$7,999',
       period: 'month',
@@ -34,6 +36,7 @@ const AIQuantumComputingPlatform: React.FC = () => {
       popular: false
     },
     {
+
       plan: 'Enterprise',
       price: '$19,999',
       period: 'month',
@@ -41,6 +44,7 @@ const AIQuantumComputingPlatform: React.FC = () => {
       popular: true
     },
     {
+
       plan: 'Government',
       price: '$49,999',
       period: 'month',
@@ -288,6 +292,7 @@ const AIQuantumComputingPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-white rounded-2xl shadow-xl border-2 ${
+
                   plan.popular ? 'border-purple-500 scale-105' : 'border-gray-200'
                 }`}
               >
@@ -318,6 +323,7 @@ const AIQuantumComputingPlatform: React.FC = () => {
                   <a
                     href="https://ziontechgroup.com/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                       plan.popular
                         ? 'bg-purple-600 text-white hover:bg-purple-700'
                         : 'bg-gray-100 text-gray-900 hover:bg-gray-200'

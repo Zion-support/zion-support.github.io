@@ -8,12 +8,14 @@ export const FuturisticAnimatedBackground = ({
   const canvasRef = useRef(null);
   const animationRef = useRef();
   useEffect(() => {
+
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     // Set canvas size
     const resizeCanvas = () => {
+
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
@@ -45,6 +47,7 @@ export const FuturisticAnimatedBackground = ({
       intensity === 'low' ? 0.1 : intensity === 'medium' ? 0.2 : 0.3;
     // Animation loop
     const animate = () => {
+
       // Clear canvas with fade effect'
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1);
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -174,6 +177,7 @@ export const FuturisticAnimatedBackground = ({
     };
     animate();
     return () => {
+
       if (animationRef.current) {
 
         cancelAnimationFrame(animationRef.current);

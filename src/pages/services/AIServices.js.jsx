@@ -2,23 +2,28 @@ import React from 'react';
 import SEO from "@/components/SEO";
 import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
 const AIServices = () => {
+
     const features = [
         {
+
             icon: Brain,
             title: "AI Strategy",
             description: "Comprehensive AI strategy development and implementation"
         },
         {
+
             icon: Cpu,
             title: "Machine Learning",
             description: "Custom ML models and algorithms for your business"
         },
         {
+
             icon: Database,
             title: "Data Analytics",
             description: "Advanced analytics powered by artificial intelligence"
         },
         {
+
             icon: Shield,
             title: "AI Ethics",
             description: "Responsible AI development and governance"
@@ -39,10 +44,12 @@ const AIServices = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
           <motion.h1 className="text-5xl md:text-6xl font-bold mb-6" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -53,14 +60,17 @@ const AIServices = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl md:text-2xl text-pink-100 max-w-4xl mx-auto leading-relaxed mb-8" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.2 
 
@@ -69,14 +79,17 @@ const AIServices = () => {
             enhance customer experiences, and drive innovation across all departments.
           </motion.p>
           <motion.div initial = {
+
   { opacity: 0,
   y: 20 
 
 }} animate = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.8,
   delay: 0.4 
 
@@ -100,14 +113,17 @@ const AIServices = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (<motion.div key={feature.title} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300" initial = {
+
   { opacity: 0,
   y: 20 
 
 }} whileInView = {
+
   { opacity: 1,
   y: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 
@@ -135,14 +151,17 @@ const AIServices = () => {
 
             <div className="space-y-6">
               {benefits.map((benefit, index) => (<motion.div key={index} className="flex items-center p-4 bg-white rounded-lg shadow-sm" initial = {
+
   { opacity: 0,
   x: -20 
 
 }} whileInView = {
+
   { opacity: 1,
   x: 0 
 
 }} transition = {
+
   { duration: 0.6,
   delay: index * 0.1 
 

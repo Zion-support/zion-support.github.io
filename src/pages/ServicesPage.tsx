@@ -38,10 +38,10 @@ import { motion, AnimatePresence } from 'framer-motion';
   Mail,
   MapPin,
   Building,
-  Globe as GlobeIcon,
-  } from 'lucide-react';
+  Globe as GlobeIcon} from 'lucide-react';
 
 export default React.memo(function ServicesPage() {
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -49,71 +49,71 @@ export default React.memo(function ServicesPage() {
 
   const categories = [
     {
+
       id: 'all',
       name: 'All Services',
       icon: Zap,
-      color: 'from-zion-cyan to-zion-blue',
-    },
+      color: 'from-zion-cyan to-zion-blue'},
     {
+
       id: 'ai',
       name: 'AI & Analytics',
       icon: Brain,
-      color: 'from-zion-cyan to-zion-purple',
-    },
+      color: 'from-zion-cyan to-zion-purple'},
     {
+
       id: 'enterprise',
       name: 'Enterprise Solutions',
       icon: Building,
-      color: 'from-zion-blue to-zion-purple',
-    },
+      color: 'from-zion-blue to-zion-purple'},
     {
+
       id: 'blockchain',
       name: 'Blockchain & Web3',
       icon: Lock,
-      color: 'from-zion-purple to-zion-blue',
-    },
+      color: 'from-zion-purple to-zion-blue'},
     {
+
       id: 'iot',
       name: 'IoT & Edge',
       icon: Cpu,
-      color: 'from-zion-green to-zion-cyan',
-    },
+      color: 'from-zion-green to-zion-cyan'},
     {
+
       id: 'cybersecurity',
       name: 'Cybersecurity',
       icon: Shield,
-      color: 'from-zion-purple to-zion-red',
-    },
+      color: 'from-zion-purple to-zion-red'},
     {
+
       id: 'quantum',
       name: 'Quantum Computing',
       icon: Rocket,
-      color: 'from-zion-blue to-zion-cyan',
-    },
+      color: 'from-zion-blue to-zion-cyan'},
     {
+
       id: 'healthcare',
       name: 'Healthcare',
       icon: Users,
-      color: 'from-zion-pink to-zion-purple',
-    },
+      color: 'from-zion-pink to-zion-purple'},
     {
+
       id: 'finance',
       name: 'Finance',
       icon: DollarSign,
-      color: 'from-zion-green to-zion-blue',
-    },
+      color: 'from-zion-green to-zion-blue'},
     {
+
       id: 'manufacturing',
       name: 'Manufacturing',
       icon: Server,
-      color: 'from-zion-blue to-zion-purple',
-    },
+      color: 'from-zion-blue to-zion-purple'},
     {
+
       id: 'sustainability',
       name: 'Sustainability',
       icon: Globe,
-      color: 'from - zion - orange to - zion - green',
-    },
+      color: 'from - zion - orange to - zion - green'},
   ];
 
   const priceRanges = [
@@ -143,6 +143,7 @@ export default React.memo(function ServicesPage() {
   ];
 
   const filteredServices = allServices.filter (service => {
+
     const title = service.title || service.name || '';
     const matchesSearch = title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
       service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || (service.tags &&
@@ -161,7 +162,9 @@ export default React.memo(function ServicesPage() {
 
   // Sort services
   const sortedServices = [...filteredServices].sort ( (a, b) => {
+
     switch (sortBy) {
+
       case 'price - low':
         return a.price - b.price;
       case 'price - high':
@@ -175,11 +178,13 @@ export default React.memo(function ServicesPage() {
   }) ;
 
   const getCategoryIcon = (category: string) => {
+
     const cat = categories.find (c => c.id === category.toLowerCase () .replace (' ', '-') ) ;
     return cat ? cat.icon : Zap;
   };
 
   const getCategoryColor = (category: string) => {
+
     const cat = categories.find (c => c.id === category.toLowerCase () .replace (' ', '-') ) ;
     return cat ? cat.color : 'from - zion - cyan to - zion - blue';
   };
@@ -295,6 +300,7 @@ export default React.memo(function ServicesPage() {
             {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                 onClick={ () => setSelectedCategory (category.id) }
                 className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
+
                   selectedCategory === category.id
                     ? `bg - gradient - to - r ${category.color} text - white shadow - lg`
                     : 'bg - zion - slate - light / 10 text - zion - slate - light hover:bg - zion - slate - light / 20 hover:text - white'
@@ -406,6 +412,7 @@ export default React.memo(function ServicesPage() {
                         </span>
                         <span
                           className={`px - 2 py - 1 rounded - full text - xs font - medium ${
+
                             service.innovationLevel === 'Cutting - edge'
                               ? 'bg - zion - cyan / 20 text - zion - cyan'
                               : 'bg - zion - purple / 20 text - zion - purple'
@@ -477,6 +484,7 @@ export default React.memo(function ServicesPage() {
                   Try adjusting your search criteria or browse all categories
                 </p>
                 <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+
                     setSearchQuery ('') ;
                     setSelectedCategory ('all') ;
                     setSelectedPriceRange ('all') ;

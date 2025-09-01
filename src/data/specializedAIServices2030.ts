@@ -1,6 +1,7 @@
 export const SPECIALIZED_AI_SERVICES_2030 = [
   // AI-Powered Autonomous Vehicle Systems
   {
+
     id: "ai-autonomous-vehicle-systems",
     title: "AI Autonomous Vehicle Systems",
     description: "Advanced AI-powered autonomous vehicle systems for cars, trucks, drones, and robots with real-time decision making, safety protocols, and adaptive learning capabilities.",
@@ -47,6 +48,7 @@ export const SPECIALIZED_AI_SERVICES_2030 = [
     supportLevel: "enterprise",
     marketPrice: "$45,000 - $150,000/month",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -66,6 +68,7 @@ export const SPECIALIZED_AI_SERVICES_2030 = [
 
   // AI-Powered Space Technology Platform
   {
+
     id: "ai-space-technology-platform",
     title: "AI Space Technology Platform",
     description: "Revolutionary AI platform for space exploration, satellite operations, space debris tracking, and extraterrestrial research with advanced machine learning algorithms.",
@@ -112,6 +115,7 @@ export const SPECIALIZED_AI_SERVICES_2030 = [
     supportLevel: "enterprise",
     marketPrice: "$60,000 - $200,000/month",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -131,6 +135,7 @@ export const SPECIALIZED_AI_SERVICES_2030 = [
 
   // AI-Powered Quantum Machine Learning Platform
   {
+
     id: "ai-quantum-machine-learning",
     title: "AI Quantum Machine Learning Platform",
     description: "Breakthrough quantum machine learning platform that combines quantum computing with AI to solve previously intractable problems in optimization, simulation, and pattern recognition.",
@@ -177,6 +182,7 @@ export const SPECIALIZED_AI_SERVICES_2030 = [
     supportLevel: "enterprise",
     marketPrice: "$35,000 - $120,000/month",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -196,6 +202,7 @@ export const SPECIALIZED_AI_SERVICES_2030 = [
 
   // AI-Powered Synthetic Biology Platform
   {
+
     id: "ai-synthetic-biology-platform",
     title: "AI Synthetic Biology Platform",
     description: "Revolutionary AI platform for synthetic biology that designs, simulates, and optimizes biological systems for healthcare, agriculture, and industrial applications.",
@@ -242,6 +249,7 @@ export const SPECIALIZED_AI_SERVICES_2030 = [
     supportLevel: "enterprise",
     marketPrice: "$40,000 - $150,000/month",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -261,6 +269,7 @@ export const SPECIALIZED_AI_SERVICES_2030 = [
 
   // AI-Powered Neuromorphic Computing Platform
   {
+
     id: "ai-neuromorphic-computing-platform",
     title: "AI Neuromorphic Computing Platform",
     description: "Advanced neuromorphic computing platform that mimics the human brain's neural structure for ultra-efficient AI processing, learning, and adaptation.",
@@ -307,6 +316,7 @@ export const SPECIALIZED_AI_SERVICES_2030 = [
     supportLevel: "enterprise",
     marketPrice: "$30,000 - $100,000/month",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -326,6 +336,7 @@ export const SPECIALIZED_AI_SERVICES_2030 = [
 
   // AI-Powered Digital Twin Platform
   {
+
     id: "ai-digital-twin-platform",
     title: "AI Digital Twin Platform",
     description: "Comprehensive AI-powered digital twin platform that creates virtual replicas of physical systems for real-time monitoring, prediction, and optimization.",
@@ -372,6 +383,7 @@ export const SPECIALIZED_AI_SERVICES_2030 = [
     supportLevel: "enterprise",
     marketPrice: "$25,000 - $80,000/month",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
@@ -391,6 +403,7 @@ export const SPECIALIZED_AI_SERVICES_2030 = [
 
   // AI-Powered Metaverse Development Platform
   {
+
     id: "ai-metaverse-development-platform",
     title: "AI Metaverse Development Platform",
     description: "Comprehensive AI-powered platform for building, managing, and optimizing metaverse experiences with intelligent content generation, user interaction, and virtual world management.",
@@ -437,6 +450,7 @@ export const SPECIALIZED_AI_SERVICES_2030 = [
     supportLevel: "enterprise",
     marketPrice: "$32,000 - $100,000/month",
     contactInfo: {
+
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"

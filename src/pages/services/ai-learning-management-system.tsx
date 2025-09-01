@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   GraduationCap, 
   Zap, 
   Brain, 
@@ -38,38 +39,45 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function AILearningManagementSystem() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Learning Paths",
       description: "Intelligent algorithms that create personalized learning journeys based on individual progress and goals",
       benefits: ["Personalized learning", "Adaptive content", "Progress tracking"]
     },
     {
+
       icon: GraduationCap,
       title: "Smart Content Curation",
       description: "AI automatically curates and recommends relevant learning materials based on user behavior and preferences",
       benefits: ["Content recommendations", "Behavioral analysis", "Relevance scoring"]
     },
     {
+
       icon: Zap,
       title: "Automated Assessment & Grading",
       description: "Intelligent evaluation systems that provide instant feedback and adaptive testing based on performance",
       benefits: ["Instant feedback", "Adaptive testing", "Performance analytics"]
     },
     {
+
       icon: BarChart3,
       title: "Advanced Learning Analytics",
       description: "Comprehensive insights into learning patterns, engagement metrics, and knowledge retention rates",
       benefits: ["Learning analytics", "Engagement tracking", "Retention insights"]
     },
     {
+
       icon: Target,
       title: "Competency Mapping",
       description: "AI-driven skill gap analysis and competency tracking to ensure learning objectives are met",
       benefits: ["Skill gap analysis", "Competency tracking", "Learning objectives"]
     },
     {
+
       icon: Shield,
       title: "Enterprise Security & Compliance",
       description: "Bank-level security with SCORM compliance, SSO integration, and enterprise-grade data protection",
@@ -79,6 +87,7 @@ export default function AILearningManagementSystem() {
 
   const pricingPlans = [
     {
+
       name: "Starter",
       price: "$199",
       period: "/month",
@@ -95,6 +104,7 @@ export default function AILearningManagementSystem() {
       popular: false
     },
     {
+
       name: "Professional",
       price: "$499",
       period: "/month",
@@ -113,6 +123,7 @@ export default function AILearningManagementSystem() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$1,299",
       period: "/month",
@@ -134,21 +145,25 @@ export default function AILearningManagementSystem() {
 
   const useCases = [
     {
+
       industry: "Corporate Training",
       description: "Streamline employee onboarding, skill development, and compliance training with AI-powered personalization",
       metrics: ["Training completion", "Skill improvement", "Compliance rates"]
     },
     {
+
       industry: "Higher Education",
       description: "Enhance student engagement, improve learning outcomes, and optimize curriculum delivery",
       metrics: ["Student engagement", "Learning outcomes", "Curriculum effectiveness"]
     },
     {
+
       industry: "Healthcare",
       description: "Ensure medical staff compliance, continuous education, and skill development in critical areas",
       metrics: ["Compliance rates", "Skill development", "Knowledge retention"]
     },
     {
+
       industry: "Manufacturing",
       description: "Train workers on safety protocols, quality standards, and new manufacturing processes",
       metrics: ["Safety compliance", "Quality standards", "Process adoption"]
@@ -275,6 +290,7 @@ export default function AILearningManagementSystem() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/25' 
                     : 'border-slate-700'
@@ -307,6 +323,7 @@ export default function AILearningManagementSystem() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

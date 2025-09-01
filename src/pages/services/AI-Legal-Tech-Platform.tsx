@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Scale, 
   FileText, 
   Brain, 
@@ -35,23 +36,28 @@ import {
 import { SEO } from '@/components/SEO';
 
 export default function AILegalTechPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Document Analysis",
       description: "Advanced NLP algorithms that analyze legal documents with 99.2% accuracy"
     },
     {
+
       icon: Scale,
       title: "Intelligent Contract Review",
       description: "Automated contract analysis with risk assessment and compliance checking"
     },
     {
+
       icon: Clock,
       title: "24/7 Legal Research",
       description: "Instant access to case law, statutes, and legal precedents worldwide"
     },
     {
+
       icon: Shield,
       title: "Compliance Automation",
       description: "Automated compliance monitoring and regulatory updates across jurisdictions"
@@ -60,24 +66,28 @@ export default function AILegalTechPlatform() {
 
   const services = [
     {
+
       title: "Contract Intelligence",
       description: "AI-powered contract analysis, risk assessment, and automated clause generation",
       icon: FileText,
       features: ["Smart clause detection", "Risk scoring", "Automated drafting", "Version control"]
     },
     {
+
       title: "Legal Research AI",
       description: "Intelligent legal research with case law analysis and precedent identification",
       icon: BookOpen,
       features: ["Case law search", "Precedent analysis", "Citation checking", "Research automation"]
     },
     {
+
       title: "Compliance Management",
       description: "Automated compliance monitoring and regulatory change management",
       icon: Shield,
       features: ["Regulatory tracking", "Compliance alerts", "Audit trails", "Risk assessment"]
     },
     {
+
       title: "Document Automation",
       description: "Intelligent document generation and workflow automation",
       icon: Briefcase,
@@ -98,6 +108,7 @@ export default function AILegalTechPlatform() {
 
   const pricing = [
     {
+
       plan: "Starter",
       price: "$299",
       period: "/month",
@@ -112,6 +123,7 @@ export default function AILegalTechPlatform() {
       popular: false
     },
     {
+
       plan: "Professional",
       price: "$799",
       period: "/month",
@@ -127,6 +139,7 @@ export default function AILegalTechPlatform() {
       popular: true
     },
     {
+
       plan: "Enterprise",
       price: "$2,499",
       period: "/month",
@@ -311,6 +324,7 @@ export default function AILegalTechPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
+
                   plan.popular 
                     ? 'border-blue-400/50 bg-gradient-to-b from-blue-500/10 to-slate-800/50' 
                     : 'border-slate-700/50'
@@ -344,6 +358,7 @@ export default function AILegalTechPlatform() {
                 <Link
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-400 hover:to-purple-500'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

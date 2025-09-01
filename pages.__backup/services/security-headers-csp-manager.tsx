@@ -6,8 +6,14 @@ export default function SecurityHeadersCSPManager() {
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
         <title>Security Headers & CSP Manager — Services — Zion</title>
-        <meta name="description" content="Automate security headers and Content Security Policy with reports and fixes." />
-        <link rel="canonical" href="https://ziontechgroup.com/services/security-headers-csp-manager" />
+        <meta
+          name="description"
+          content="Automate security headers and Content Security Policy with reports and fixes."
+        />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/services/security-headers-csp-manager"
+        />
       </Head>
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
@@ -16,20 +22,34 @@ export default function SecurityHeadersCSPManager() {
         <div className="absolute inset-0 beams opacity-[0.06]" />
       </div>
       <main className="relative z-10 mx-auto max-w-3xl px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold gradient-text">Security Headers & CSP Manager</h1>
-        <p className="mt-4 text-white/80">Set and validate HSTS, X‑Frame‑Options, Referrer‑Policy, Permissions‑Policy, and robust CSP with reported violations.</p>
+        <h1 className="text-4xl md:text-5xl font-extrabold gradient-text">
+          Security Headers & CSP Manager
+        </h1>
+        <p className="mt-4 text-white/80">
+          Set and validate HSTS, X‑Frame‑Options, Referrer‑Policy,
+          Permissions‑Policy, and robust CSP with reported violations.
+        </p>
         <ul className="mt-6 space-y-2 text-white/80 list-disc pl-5">
           <li>Auto‑generate CSP with nonce/hash options</li>
           <li>Report‑Only rollouts and violation dashboards</li>
           <li>Guided fixes for third‑party scripts</li>
         </ul>
-        <div className="mt-6 text-sm text-white/60">Market refs: securityheaders.com, cloudflare.com/plans</div>
+        <div className="mt-6 text-sm text-white/60">
+          Market refs: securityheaders.com, cloudflare.com/plans
+        </div>
         <div className="mt-8 flex gap-3">
-          <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Back to Services</a></Link>
-          <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
+          <Link href="/services">
+            <a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">
+              Back to Services
+            </a>
+          </Link>
+          <Link href="/contact">
+            <a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">
+              Get Started
+            </a>
+          </Link>
         </div>
       </main>
     </div>
   );
 }
-

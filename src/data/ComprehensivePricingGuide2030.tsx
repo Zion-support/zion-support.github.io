@@ -89,7 +89,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       
       return [min, max]} else {
 
-      
       return [min, max]}
   };
 
@@ -531,6 +530,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   onClick = {
 
   () => {
+
                     setPriceRange([priceRangeData[0],;
   ;
   ;
@@ -595,6 +595,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 onClick = {
 
   () => {
+
                   setPriceRange([priceRangeData[0],;
   ;
   ;

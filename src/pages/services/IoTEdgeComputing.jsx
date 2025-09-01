@@ -3,8 +3,10 @@ import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Check, Wifi, Cpu, Database, Shield, Zap, Globe, Target } from 'lucide-react';
 export default function IoTEdgeComputingServices() {
+
     const iotServices = [
         {
+
             icon: Wifi,
             title: 'IoT Device Management Platform',
             description: 'Comprehensive platform for managing, monitoring, and maintaining IoT devices at scale.',
@@ -26,6 +28,7 @@ export default function IoTEdgeComputingServices() {
             ]
         },
         {
+
             icon: Cpu,
             title: 'Edge Computing Infrastructure',
             description: 'Deploy and manage edge computing nodes for real-time data processing and analytics.',
@@ -47,6 +50,7 @@ export default function IoTEdgeComputingServices() {
             ]
         },
         {
+
             icon: Database,
             title: 'IoT Data Analytics & Insights',
             description: 'Advanced analytics platform for IoT data streams with real-time processing and visualization.',
@@ -68,6 +72,7 @@ export default function IoTEdgeComputingServices() {
             ]
         },
         {
+
             icon: Shield,
             title: 'IoT Security & Compliance',
             description: 'End-to-end security solutions for IoT ecosystems with threat detection and compliance management.',
@@ -89,6 +94,7 @@ export default function IoTEdgeComputingServices() {
             ]
         },
         {
+
             icon: Zap,
             title: 'Smart City & Industrial IoT',
             description: 'Comprehensive IoT solutions for smart cities, manufacturing, and industrial automation.',
@@ -110,6 +116,7 @@ export default function IoTEdgeComputingServices() {
             ]
         },
         {
+
             icon: Globe,
             title: 'IoT Connectivity & Network Management',
             description: 'Manage IoT connectivity across multiple networks and protocols with unified monitoring.',
@@ -161,24 +168,28 @@ export default function IoTEdgeComputingServices() {
     ];
     const useCases = [
         {
+
             title: 'Smart Manufacturing',
             description: 'Real-time monitoring of production lines, predictive maintenance, and quality control automation.',
             roi: '25-40% cost reduction',
             implementation: '8-12 weeks'
         },
         {
+
             title: 'Smart Cities',
             description: 'Traffic management, environmental monitoring, public safety, and utility optimization.',
             roi: '30-50% efficiency improvement',
             implementation: '12-20 weeks'
         },
         {
+
             title: 'Healthcare IoT',
             description: 'Patient monitoring, medical device management, and healthcare facility optimization.',
             roi: '20-35% operational improvement',
             implementation: '10-16 weeks'
         },
         {
+
             title: 'Agricultural IoT',
             description: 'Precision farming, crop monitoring, irrigation control, and livestock management.',
             roi: '15-30% yield improvement',

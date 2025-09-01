@@ -1,5 +1,6 @@
 import React from 'react.ts';
 export default React.memo (function OnsiteSupport (...args[]) :  {
+
 import { motion  } from 'framer - motion.ts';
 import { SEO  } from "../components / SEO";
 import { SEO } from "../components / SEO";
@@ -32,24 +33,28 @@ import { Wrench,
 
   const services = [
     {
+
       icon: Server,
       title: 'Server Maintenance',
       description: 'Proactive server monitoring, updates, and optimization',
       features['Hardware diagnostics', 'Performance tuning', 'Security patches', 'Backup verification'];
     },;
     {
+
       icon: Network,
       title: 'Network Infrastructure',
       description: 'Complete network setup, troubleshooting, and optimization',
       features['WiFi optimization', 'Cable management', 'Switch configuration', 'Network security'];
     },;
     {
+
       icon: Database,
       title: 'Database Management',
       description: 'Database optimization, backup, and recovery services',
       features['Performance tuning', 'Backup strategies', 'Recovery procedures', 'Security hardening'];
     },;
     {
+
       title: 'Training & Consultation',
       description: 'Staff training and strategic consultation',
       icon: Users,
@@ -65,11 +70,13 @@ import { Wrench,
 
   const benefits = [
     {
+
       icon: Clock,
       title: '24 / 7 Response',
       description: 'Emergency support available around the clock'
     },
     {
+
       title: 'Extended Coverage',
       description: 'Northeast and Mid - Atlantic regions',
       icon: Globe,
@@ -83,6 +90,7 @@ import { Wrench,
       responseTime: '4 - 8 hours'
     },
     {
+
       title: 'National Coverage',
       description: 'Available nationwide for enterprise clients',
       icon: Building,
@@ -99,6 +107,7 @@ import { Wrench,
 
   const supportTiers = [
     {
+
       title: 'Basic Support',
       description: 'Essential onsite support for small businesses',
       icon: Shield,
@@ -106,6 +115,7 @@ import { Wrench,
       description: 'Microsoft, Cisco, and CompTIA certified experts'
     },
     {
+
       title: 'Professional Support',
       description: 'Comprehensive support for growing businesses',
       icon: Star,
@@ -120,6 +130,7 @@ import { Wrench,
       pricing: 'Starting at $200 / hour'
     },
     {
+
       title: 'Enterprise Support',
       description: 'Premium support for large organizations',
       icon: Award,
@@ -137,6 +148,7 @@ import { Wrench,
 
   const responseProcess = [
     {
+
       step: '1',
       title: 'Issue Reporting',
       description: 'Report your issue through our support channels',
@@ -144,6 +156,7 @@ import { Wrench,
       color: 'from - blue - 500 to - cyan - 500'
     },
     {
+
       step: '2',
       title: 'Assessment',
       description: 'Our team assesses the issue and determines response',
@@ -151,6 +164,7 @@ import { Wrench,
       color: 'from - green - 500 to - emerald - 500'
     },
     {
+
       step: '3',
       title: 'Dispatch',
       description: 'Technician is dispatched to your location',
@@ -159,6 +173,7 @@ import { Wrench,
       description: 'Assigned technicians familiar with your infrastructure'
     },
     {
+
       icon: CheckCircle,
       color: 'from - orange - 500 to - red - 500'
     },
@@ -173,6 +188,7 @@ import { Wrench,
 
   const contactInfo = [
     {
+
       title: 'Onsite Support Team',
       description: 'For immediate onsite support requests',
       email: 'onsite@ziontechgroup.com',
@@ -199,11 +215,13 @@ import { Wrench,
         <div className="container mx - auto text - center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -244,16 +262,19 @@ import { Wrench,
       <div className="container mx - auto px - 4 py - 16">
         <motion.div
           initial = {
+
   { opacity: 0,
   y: 20
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0
 
 }}
           transition = {
+
   { duration: 0.6,
   delay: 0.2
 
@@ -276,16 +297,19 @@ import { Wrench,
         <div className="container mx - auto px - 4">
           <motion.h2
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.6,
   delay: 0.3
 
@@ -305,16 +329,19 @@ import { Wrench,
             {services.map ( (service, index) => (<motion.div
                 key={service.title}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: 0.4 + index * 0.1
 
@@ -341,16 +368,19 @@ import { Wrench,
       <div className="container mx - auto px - 4 py - 16">
         <motion.h2
           initial = {
+
   { opacity: 0,
   y: 20
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0
 
 }}
           transition = {
+
   { duration: 0.6,
   delay: 0.5
 
@@ -364,16 +394,19 @@ import { Wrench,
           {coverageAreas.map ( (area, index) => (<motion.div
               key={area.title}
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 0.6 + index * 0.1
 
@@ -411,16 +444,19 @@ import { Wrench,
         <div className="container mx - auto px - 4">
           <motion.h2
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.6,
   delay: 0.7
 
@@ -440,16 +476,19 @@ import { Wrench,
             {benefits.map ( (benefit, index) => (<motion.div
                 key={tier.title}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 animate = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: 0.8 + index * 0.1
 
@@ -470,16 +509,19 @@ import { Wrench,
       <div className="container mx - auto px - 4 py - 16">;
         <motion.h2
           initial = {
+
   { opacity: 0,
   y: 20
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0
 
 }}
           transition = {
+
   { duration: 0.6,
   delay: 0.9
 
@@ -493,16 +535,19 @@ import { Wrench,
           {responseProcess.map ( (step, index) => (<motion.div
               key={step.step}
               initial = {
+
   { opacity: 0,
   y: 20
 
 }}
               animate = {
+
   { opacity: 1,
   y: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 1.0 + index * 0.1
 
@@ -523,16 +568,19 @@ import { Wrench,
         <div className="container mx - auto px - 4">
           <motion.h2
             initial = {
+
   { opacity: 0,
   y: 20
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
 }}
             transition = {
+
   { duration: 0.6,
   delay: 1.1
 
@@ -552,16 +600,19 @@ import { Wrench,
             {responseTimes.map ( (item, index) => (<motion.div
                 key={item.priority}
                 initial = {
+
   { opacity: 0,
   y: 20
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -569,6 +620,7 @@ import { Wrench,
                 className="bg - slate - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - slate - 700 / 50 text - center"
               >
                 <div className={`w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4 ${
+
                   item.priority === 'Critical' ? 'bg - red - 500' :
                   item.priority === 'High' ? 'bg - orange - 500' :
                   item.priority === 'Medium' ? 'bg - yellow - 500' : 'bg - green - 500'
@@ -587,16 +639,19 @@ import { Wrench,
       <div className="container mx - auto px - 4 py - 16">;
         <motion.h2
           initial = {
+
   { opacity: 0,
   y: 20
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0
 
 }}
           transition = {
+
   { duration: 0.6,
   delay: 1.2
 
@@ -610,16 +665,19 @@ import { Wrench,
           {contactInfo.map ( (contact, index) => (<motion.div
               key={contact.title}
               initial = {
+
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20
 
 }}
               animate = {
+
   { opacity: 1,
   x: 0
 
 }}
               transition = {
+
   { duration: 0.6,
   delay: 1.3 + index * 0.1
 
@@ -665,16 +723,19 @@ import { Wrench,
       <div className="container mx - auto px - 4 py - 16">;
         <motion.div
           initial = {
+
   { opacity: 0,
   y: 20
 
 }}
           animate = {
+
   { opacity: 1,
   y: 0
 
 }}
           transition = {
+
   { duration: 0.6,
   delay: 1.4
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Search, 
   BookOpen, 
   Brain, 
@@ -37,23 +38,28 @@ import {
 import { SEO } from '@/components/SEO';
 
 export default function AIAutonomousResearchAssistant() {
+
   const features = [
     {
+
       icon: Brain,
       title: "Autonomous Research",
       description: "AI that independently conducts research, analyzes data, and generates insights without human intervention"
     },
     {
+
       icon: Search,
       title: "Intelligent Discovery",
       description: "Advanced algorithms that discover hidden patterns and connections across vast datasets"
     },
     {
+
       icon: Zap,
       title: "Real-time Analysis",
       description: "Instant processing and analysis of research data with continuous learning capabilities"
     },
     {
+
       icon: Shield,
       title: "Academic Integrity",
       description: "Built-in plagiarism detection and citation management for research compliance"
@@ -62,24 +68,28 @@ export default function AIAutonomousResearchAssistant() {
 
   const services = [
     {
+
       title: "Literature Review Automation",
       description: "Automated comprehensive literature reviews with intelligent source analysis and synthesis",
       icon: BookOpen,
       features: ["Automated source discovery", "Intelligent summarization", "Citation management", "Bias detection"]
     },
     {
+
       title: "Data Analysis & Visualization",
       description: "Advanced statistical analysis with automated chart generation and insight extraction",
       icon: BarChart3,
       features: ["Statistical modeling", "Interactive visualizations", "Trend analysis", "Predictive modeling"]
     },
     {
+
       title: "Research Methodology Design",
       description: "AI-powered research design optimization for maximum validity and reliability",
       icon: Beaker,
       features: ["Methodology optimization", "Sample size calculation", "Statistical power analysis", "Bias minimization"]
     },
     {
+
       title: "Peer Review Assistance",
       description: "Automated quality assessment and peer review support for research papers",
       icon: GraduationCap,
@@ -102,6 +112,7 @@ export default function AIAutonomousResearchAssistant() {
 
   const pricing = [
     {
+
       name: "Student",
       price: "$99",
       period: "per month",
@@ -117,6 +128,7 @@ export default function AIAutonomousResearchAssistant() {
       popular: false
     },
     {
+
       name: "Academic",
       price: "$299",
       period: "per month",
@@ -133,6 +145,7 @@ export default function AIAutonomousResearchAssistant() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$999",
       period: "per month",
@@ -152,24 +165,28 @@ export default function AIAutonomousResearchAssistant() {
 
   const useCases = [
     {
+
       title: "Academic Research",
       description: "Accelerate academic research with AI-powered literature reviews and data analysis",
       icon: GraduationCap,
       benefits: ["10x faster research", "Improved accuracy", "Comprehensive coverage"]
     },
     {
+
       title: "Market Research",
       description: "Conduct market research with autonomous data collection and trend analysis",
       icon: TrendingUp,
       benefits: ["Real-time insights", "Competitive analysis", "Market forecasting"]
     },
     {
+
       title: "Scientific Discovery",
       description: "Accelerate scientific breakthroughs with AI-powered hypothesis generation",
       icon: Microscope,
       benefits: ["Pattern discovery", "Hypothesis testing", "Cross-disciplinary insights"]
     },
     {
+
       title: "Business Intelligence",
       description: "Transform business data into actionable insights with autonomous analysis",
       icon: BarChart3,
@@ -435,6 +452,7 @@ export default function AIAutonomousResearchAssistant() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+
                   plan.popular 
                     ? 'border-blue-500/50 ring-2 ring-blue-500/20' 
                     : 'border-gray-700'
@@ -469,6 +487,7 @@ export default function AIAutonomousResearchAssistant() {
                 <Link
                   to="/contact"
                   className={`w-full inline-flex justify-center items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600'
                       : 'bg-gray-700 text-white hover:bg-gray-600'

@@ -6,21 +6,24 @@ import { useToast } from "@/hooks/use-toast";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
+
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 
 export function UserMenu() {
+
   const { user, logout } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
   const [open, setOpen] = React.useState(false);
 
   const handleIconClick = () => {
+
     if (!user) {
+
       navigate("/login");
       return;
     }
@@ -28,18 +31,22 @@ export function UserMenu() {
   };
 
   const handleSignOut = async () => {
+
     try {
+
       await logout();
     } catch (error) {
+
       toast({
+
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     }
   };
 
   if (!user) {
+
     return (
       <div className="hidden md:flex items-center space-x-4">
         <Link to="/login" className="text-zion-slate-light hover:text-white">Login</Link>

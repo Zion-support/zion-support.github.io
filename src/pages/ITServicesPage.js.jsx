@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { Cloud, Shield, Server, Zap, Database, Globe, Code, Monitor, Smartphone, Settings, Users, BarChart3, MessageSquare, FileText, CheckCircle, Search, HardDrive } from 'lucide-react';
 const ITServices = [
     {
+
         title: "Cloud Infrastructure Management",
         description: "Comprehensive cloud services including AWS, Azure, and Google Cloud",
         price: "$1,500 - $8,000/month",
@@ -16,6 +17,7 @@ const ITServices = [
         link: "/request-quote?service=cloud-infrastructure"
     },
     {
+
         title: "Cybersecurity Services",
         description: "Complete security solutions to protect your digital assets",
         price: "$2,000 - $15,000",
@@ -26,6 +28,7 @@ const ITServices = [
         link: "/request-quote?service=cybersecurity"
     },
     {
+
         title: "DevOps & CI/CD",
         description: "Streamline development and deployment processes",
         price: "$3,000 - $12,000/month",
@@ -35,6 +38,7 @@ const ITServices = [
         link: "/request-quote?service=devops"
     },
     {
+
         title: "Database Management",
         description: "Expert database administration and optimization",
         price: "$1,000 - $6,000/month",
@@ -44,6 +48,7 @@ const ITServices = [
         link: "/request-quote?service=database-management"
     },
     {
+
         title: "Network Infrastructure",
         description: "Design, implement, and maintain robust network solutions",
         price: "$2,500 - $20,000",
@@ -53,6 +58,7 @@ const ITServices = [
         link: "/request-quote?service=network-infrastructure"
     },
     {
+
         title: "IT Consulting & Strategy",
         description: "Strategic IT planning and digital transformation guidance",
         price: "$150 - $300/hour",
@@ -62,6 +68,7 @@ const ITServices = [
         link: "/request-quote?service=it-consulting"
     },
     {
+
         title: "Managed IT Services",
         description: "Complete IT management for small to enterprise businesses",
         price: "$500 - $5,000/month",
@@ -72,6 +79,7 @@ const ITServices = [
         link: "/request-quote?service=managed-it"
     },
     {
+
         title: "Data Center Services",
         description: "On-premise and colocation data center solutions",
         price: "$1,000 - $10,000/month",
@@ -81,6 +89,7 @@ const ITServices = [
         link: "/request-quote?service=data-center"
     },
     {
+
         title: "Mobile App Development",
         description: "Custom mobile applications for iOS and Android",
         price: "$15,000 - $100,000",
@@ -90,6 +99,7 @@ const ITServices = [
         link: "/request-quote?service=mobile-development"
     },
     {
+
         title: "Web Development",
         description: "Modern web applications and e-commerce solutions",
         price: "$10,000 - $75,000",
@@ -99,6 +109,7 @@ const ITServices = [
         link: "/request-quote?service=web-development"
     },
     {
+
         title: "IT Training & Workshops",
         description: "Custom training programs for your IT team",
         price: "$500 - $2,500 per person",
@@ -108,6 +119,7 @@ const ITServices = [
         link: "/request-quote?service=it-training"
     },
     {
+
         title: "Disaster Recovery",
         description: "Comprehensive backup and recovery solutions",
         price: "$1,500 - $8,000/month",
@@ -117,6 +129,7 @@ const ITServices = [
         link: "/request-quote?service=disaster-recovery"
     },
     {
+
         title: "IT Audit & Compliance",
         description: "Ensure your IT systems meet industry standards",
         price: "$3,000 - $20,000",
@@ -126,6 +139,7 @@ const ITServices = [
         link: "/request-quote?service=it-audit"
     },
     {
+
         title: "Hardware Procurement",
         description: "Strategic hardware sourcing and deployment",
         price: "15-25% of hardware cost",
@@ -135,6 +149,7 @@ const ITServices = [
         link: "/request-quote?service=hardware-procurement"
     },
     {
+
         title: "IT Project Management",
         description: "Professional project management for IT initiatives",
         price: "$100 - $200/hour",
@@ -144,6 +159,7 @@ const ITServices = [
         link: "/request-quote?service=it-project-management"
     },
     {
+
         title: "24/7 IT Support",
         description: "Round-the-clock technical support and monitoring",
         price: "$2,000 - $8,000/month",
@@ -173,6 +189,7 @@ const categories = [
     { name: "Support", value: "support", icon: <Monitor className="h-4 w-4"/> }
 ];
 export default function ITServicesPage() {
+
     const [selectedCategory, setSelectedCategory] = React.useState("all");
     const filteredServices = selectedCategory === "all"
         ? ITServices

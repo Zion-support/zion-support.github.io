@@ -1,7 +1,9 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 export const PageLoader = ({ text = "Loading...", className }) => {
+
     return (<div className = {
+
   cn("flex flex-col items-center justify-center min-h-screen",
   className)
 

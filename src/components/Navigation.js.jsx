@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown } from 'lucide-react';
 const Navigation = () => {
+
     const [isOpen, setIsOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const location = useLocation();

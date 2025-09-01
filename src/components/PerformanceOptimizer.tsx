@@ -17,6 +17,7 @@ import {
   Settings} from 'lucide-react';
 
 interface PerformanceMetrics {
+
   loadTime: number;
   domContentLoaded: number;
   firstContentfulPaint: number;
@@ -27,6 +28,7 @@ interface PerformanceMetrics {
   speedIndex: number}
 
 interface ResourceMetrics {
+
   totalResources: number;
   totalSize: number;
   images: number;
@@ -35,6 +37,7 @@ interface ResourceMetrics {
   fonts: number}
 
 interface OptimizationSuggestion {
+
   id: string;
   title: string;
   description: string;
@@ -43,7 +46,9 @@ interface OptimizationSuggestion {
   implemented: boolean;
 
 const PerformanceOptimizer: React.FC = () => {
+
   const [metrics, setMetrics] = useState < PerformanceMetrics> ({
+
     fcp: 0,
     lcp: 0,
     fid: 0,
@@ -113,10 +118,12 @@ const PerformanceOptimizer: React.FC = () => {
 
     // Continuous monitoring
     intervalRef.current = setInterval(() => {
+
       updateResourceMetrics()}, 5000)}, [])}, []);
 
   
     const newResourceMetrics: ResourceMetrics = {
+
       totalResources: resources.length,
       totalSize: resources.reduce((acc, resource) => acc + (resource as any).transferSize || 0, 0),
       images: resources.filter(r => r.initiatorType === 'img').length,
@@ -138,9 +145,9 @@ const PerformanceOptimizer: React.FC = () => {
     setHistory (prev => [...prev.slice (-9) , newMetrics]) }, []) ;
 
   useEffect ( () => {
+
     if (isMonitoring) {
 
-      
       return () => clearInterval(interval)}
 
   
@@ -155,7 +162,6 @@ const PerformanceOptimizer: React.FC = () => {
   
   ) => {
 
-    
     return isGood ? 'text-green-500' : 'text-red-500'}};
 
   return ("
@@ -327,6 +333,7 @@ const PerformanceOptimizer: React.FC = () => {
     </div>) ;
 =======
 const PerformanceOptimizer: React.FC<{ enabled?: boolean }> = ({ enabled = true }) => {
+
   if (!enabled) return null;
   return (
     <div className="hidden" aria-hidden="true" />

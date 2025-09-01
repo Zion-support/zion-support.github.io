@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Building2, Brain, Zap, Globe, Users, BarChart3, 
   Lock, Cpu, Network, Eye, AlertTriangle, CheckCircle,
   ArrowRight, Star, Award, Phone, Mail, MapPin, Leaf,
@@ -8,33 +9,40 @@ import {
 } from 'lucide-react';
 
 const AISmartCityInfrastructureManagement: React.FC = () => {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Traffic Management",
       description: "Real-time traffic flow optimization using machine learning algorithms"
     },
     {
+
       icon: Lightbulb,
       title: "Smart Energy Grid",
       description: "Intelligent power distribution and renewable energy integration"
     },
     {
+
       icon: Droplets,
       title: "Water Management System",
       description: "AI-driven water quality monitoring and distribution optimization"
     },
     {
+
       icon: Wifi,
       title: "5G/6G Infrastructure",
       description: "Next-generation connectivity for IoT devices and smart sensors"
     },
     {
+
       icon: Building2,
       title: "Building Automation",
       description: "Smart building management with energy efficiency optimization"
     },
     {
+
       icon: Leaf,
       title: "Environmental Monitoring",
       description: "Real-time air quality, noise, and pollution tracking"
@@ -43,6 +51,7 @@ const AISmartCityInfrastructureManagement: React.FC = () => {
 
   const pricingTiers = [
     {
+
       name: "City Starter",
       price: "$25,000",
       period: "/month",
@@ -60,6 +69,7 @@ const AISmartCityInfrastructureManagement: React.FC = () => {
       popular: false
     },
     {
+
       name: "Metropolitan",
       price: "$75,000",
       period: "/month",
@@ -78,6 +88,7 @@ const AISmartCityInfrastructureManagement: React.FC = () => {
       popular: true
     },
     {
+
       name: "Mega City",
       price: "$200,000",
       period: "/month",
@@ -99,21 +110,25 @@ const AISmartCityInfrastructureManagement: React.FC = () => {
 
   const benefits = [
     {
+
       title: "Traffic Optimization",
       description: "Reduce congestion by up to 40% with AI-powered traffic management",
       icon: TrafficCone
     },
     {
+
       title: "Energy Efficiency",
       description: "Save up to 35% on energy costs through smart grid optimization",
       icon: Lightbulb
     },
     {
+
       title: "Environmental Impact",
       description: "Monitor and reduce pollution levels in real-time",
       icon: Leaf
     },
     {
+
       title: "Public Safety",
       description: "Enhanced emergency response with intelligent monitoring systems",
       icon: Shield
@@ -122,36 +137,42 @@ const AISmartCityInfrastructureManagement: React.FC = () => {
 
   const useCases = [
     {
+
       title: "Traffic Management",
       description: "AI-powered traffic light optimization, real-time route suggestions, and congestion prediction",
       icon: TrafficCone,
       color: "from-orange-500 to-red-500"
     },
     {
+
       title: "Energy Management",
       description: "Smart grid optimization, renewable energy integration, and demand response management",
       icon: Lightbulb,
       color: "from-yellow-500 to-orange-500"
     },
     {
+
       title: "Water Systems",
       description: "Intelligent water distribution, leak detection, and quality monitoring",
       icon: Droplets,
       color: "from-blue-500 to-cyan-500"
     },
     {
+
       title: "Public Safety",
       description: "Emergency response optimization, surveillance analytics, and incident prediction",
       icon: Shield,
       color: "from-red-500 to-pink-500"
     },
     {
+
       title: "Environmental Monitoring",
       description: "Air quality tracking, noise pollution monitoring, and climate data analysis",
       icon: Leaf,
       color: "from-green-500 to-emerald-500"
     },
     {
+
       title: "Building Management",
       description: "Smart building automation, energy efficiency, and occupant comfort optimization",
       icon: Building2,
@@ -337,6 +358,7 @@ const AISmartCityInfrastructureManagement: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+
                   tier.popular 
                     ? 'border-green-500 ring-2 ring-green-500/20' 
                     : 'border-gray-700'
@@ -369,6 +391,7 @@ const AISmartCityInfrastructureManagement: React.FC = () => {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                   tier.popular
                     ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
                     : 'bg-gray-700 text-white hover:bg-gray-600'

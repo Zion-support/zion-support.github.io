@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom';
 import React from 'react';
 import { SEO } from '@/components / SEO';
 export default React.memo (function ITServices () {
+
 import {
 
   Server,
@@ -9,83 +10,82 @@ import {
   Cloud,
   Network,
   Wrench,
-  Headphones,
-} from 'lucide - react';
+  Headphones} from 'lucide - react';
 
   const offerings = [
     {
+
       icon: Cloud,
       title: 'Cloud & DevOps',
       desc: 'CI / CD, IaC, Kubernetes, cost optimization and SRE with 24 / 7 runbooks.',
-      price: '$6,000 - $80,000+',
-    },
+      price: '$6,000 - $80,000+'},
     {
+
       icon: Server,
       title: 'Migrations & Modernization',
       desc: 'On - prem to cloud, containerization, monolith - to - microservices, and zero - downtime cutovers.',
-      price: '$10,000 - $120,000+',
-    },
+      price: '$10,000 - $120,000+'},
     {
+
       icon: Shield,
       title: 'Security & Compliance',
       desc: 'SOC2 / ISO readiness, zero - trust, vulnerability management, and incident response plans.',
-      price: '$3,000 - $40,000+',
-    },
+      price: '$3,000 - $40,000+'},
     {
+
       icon: Cpu,
       title: 'Networking & Edge',
       desc: 'SD - WAN, VPN, edge compute, IoT, and observability for distributed sites.',
-      price: '$5,000 - $50,000+',
-    },
+      price: '$5,000 - $50,000+'},
     {
+
       icon: Cable,
       title: 'IT Onsite & Managed Services',
       desc: 'Hands - on deployment, device lifecycle, patching, help desk, and inventory.',
-      price: '$1,500 - $15,000 / mo',
-    },
+      price: '$1,500 - $15,000 / mo'},
     {
+
       icon: LifeBuoy,
       title: 'Business Continuity',
       desc: 'Backups, DR plans, tabletop exercises, and RTO / RPO aligned architecture.',
-      price: '$2,500 - $30,000+',
-    },
+      price: '$2,500 - $30,000+'},
     // New items
     {
+
       icon: Wrench,
       title: 'Platform Engineering',
       desc: 'Golden paths, internal developer platforms, Backstage portals, and paved - road governance.',
-      price: '$8,000 - $90,000+',
-    },
+      price: '$8,000 - $90,000+'},
     {
+
       icon: Database,
       title: 'Data Platforms & MLOps',
       desc: 'Lakehouse setups, ELT pipelines, feature stores, and ML deployment with observability.',
-      price: '$7,000 - $95,000+',
-    },
+      price: '$7,000 - $95,000+'},
     {
+
       icon: Building,
       title: 'Enterprise SaaS Rollouts',
       desc: 'Okta SSO, RBAC, tenant provisioning, and SOC2 - aligned configuration baselines at scale.',
-      price: '$5,000 - $70,000+',
-    },
+      price: '$5,000 - $70,000+'},
     {
+
       icon: Cloud,
       title: 'Cloud Landing Zones',
       desc: 'Secure multi - account landing zones with guardrails, budgets, CI / CD and golden patterns.',
-      price: '$8,000 - $65,000+',
-    },
+      price: '$8,000 - $65,000+'},
     {
+
       icon: Server,
       title: 'Database Reliability Engineering',
       desc: 'HA / DR, performance tuning, migrations and observability for Postgres, MySQL and SQL Server.',
-      price: '$4,000 - $45,000+',
-    },
+      price: '$4,000 - $45,000+'},
     {
+
       icon: Shield,
       title: 'Zero Trust Enablement',
       desc: 'Network segmentation, identity - aware proxies, device posture and continuous verification.',
-      price: '$6,000 - $60,000+',
-    },
+      price: '$6,000 - $60,000+'},
   ];
 
   return (<div className="min - h-screen bg - futuristic">

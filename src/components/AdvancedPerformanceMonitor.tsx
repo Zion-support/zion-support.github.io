@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Activity, 
   Zap, 
   Clock, 
@@ -18,6 +19,7 @@ import {
 } from 'lucide-react';
 
 interface PerformanceMetrics {
+
   fps: number;
   memoryUsage: number;
   loadTime: number;
@@ -29,6 +31,7 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceThresholds {
+
   fps: { warning: number; critical: number };
   memory: { warning: number; critical: number };
   loadTime: { warning: number; critical: number };
@@ -36,6 +39,7 @@ interface PerformanceThresholds {
 }
 
 const DEFAULT_THRESHOLDS: PerformanceThresholds = {
+
   fps: { warning: 45, critical: 30 },
   memory: { warning: 70, critical: 90 },
   loadTime: { warning: 3000, critical: 5000 },
@@ -43,9 +47,11 @@ const DEFAULT_THRESHOLDS: PerformanceThresholds = {
 };
 
 export const AdvancedPerformanceMonitor: React.FC = () => {
+
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+
     fps: 60,
     memoryUsage: 0,
     loadTime: 0,
@@ -66,10 +72,12 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
 
   // FPS calculation
   const measureFPS = useCallback(() => {
+
     frameCountRef.current++;
     const currentTime = performance.now();
     
     if (currentTime - lastTimeRef.current >= 1000) {
+
       const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current));
       setMetrics(prev => ({ ...prev, fps, lastUpdated: new Date() }));
       frameCountRef.current = 0;
@@ -81,7 +89,9 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
 
   // Memory usage monitoring
   const measureMemory = useCallback(() => {
+
     if ('memory' in performance) {
+
       const memory = (performance as any).memory;
       const memoryUsage = Math.round((memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100);
       setMetrics(prev => ({ ...prev, memoryUsage }));
@@ -90,9 +100,12 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
 
   // Network latency monitoring
   const measureNetworkLatency = useCallback(async () => {
+
     try {
+
       const startTime = performance.now();
-      const response = await fetch('/api/health', { 
+      const response = await fetch('/api/health', {
+
         method: 'HEAD',
         cache: 'no-cache'
       });
@@ -100,6 +113,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
       const latency = endTime - startTime;
       setMetrics(prev => ({ ...prev, networkLatency: latency }));
     } catch (error) {
+
       // Fallback to a simple ping test
       const startTime = performance.now();
       await new Promise(resolve => setTimeout(resolve, 1));
@@ -110,12 +124,16 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
 
   // Battery level monitoring
   const measureBattery = useCallback(async () => {
+
     if ('getBattery' in navigator) {
+
       try {
+
         const battery = await (navigator as any).getBattery();
         const batteryLevel = Math.round(battery.level * 100);
         setMetrics(prev => ({ ...prev, batteryLevel }));
       } catch (error) {
+
         // Battery API not available
       }
     }
@@ -123,25 +141,31 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
 
   // Generate optimization suggestions
   const generateOptimizationSuggestions = useCallback((currentMetrics: PerformanceMetrics) => {
+
     const suggestions: string[] = [];
     
     if (currentMetrics.fps < thresholds.fps.warning) {
+
       suggestions.push('Consider reducing animations or complex DOM operations');
     }
     
     if (currentMetrics.memoryUsage > thresholds.memory.warning) {
+
       suggestions.push('Memory usage is high - check for memory leaks');
     }
     
     if (currentMetrics.loadTime > thresholds.loadTime.warning) {
+
       suggestions.push('Page load time is slow - optimize assets and code splitting');
     }
     
     if (currentMetrics.networkLatency > thresholds.network.warning) {
+
       suggestions.push('Network latency is high - check connection quality');
     }
     
     if (!currentMetrics.isOnline) {
+
       suggestions.push('You are currently offline - some features may not work');
     }
     
@@ -150,6 +174,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
 
   // Start monitoring
   useEffect(() => {
+
     if (!isMonitoring) return;
 
     // Start FPS monitoring
@@ -173,18 +198,23 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     
     // Page load time
     if (performance.timing) {
+
       const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
       setMetrics(prev => ({ ...prev, loadTime }));
     }
 
     return () => {
+
       if (rafIdRef.current) {
+
         cancelAnimationFrame(rafIdRef.current);
       }
       if (memoryIntervalRef.current) {
+
         clearInterval(memoryIntervalRef.current);
       }
       if (networkIntervalRef.current) {
+
         clearInterval(networkIntervalRef.current);
       }
       window.removeEventListener('online', handleOnline);
@@ -194,17 +224,21 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
 
   // Update optimization suggestions when metrics change
   useEffect(() => {
+
     const suggestions = generateOptimizationSuggestions(metrics);
     setOptimizationSuggestions(suggestions);
   }, [metrics, generateOptimizationSuggestions]);
 
   // Get status color based on thresholds
   const getStatusColor = (value: number, threshold: { warning: number; critical: number }, isLowerBetter = false) => {
+
     if (isLowerBetter) {
+
       if (value <= threshold.critical) return 'text-red-400';
       if (value <= threshold.warning) return 'text-yellow-400';
       return 'text-green-400';
     } else {
+
       if (value >= threshold.critical) return 'text-red-400';
       if (value >= threshold.warning) return 'text-yellow-400';
       return 'text-green-400';
@@ -213,11 +247,14 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
 
   // Get status icon
   const getStatusIcon = (value: number, threshold: { warning: number; critical: number }, isLowerBetter = false) => {
+
     if (isLowerBetter) {
+
       if (value <= threshold.critical) return <AlertTriangle className="w-4 h-4" />;
       if (value <= threshold.warning) return <AlertTriangle className="w-4 h-4" />;
       return <CheckCircle className="w-4 h-4" />;
     } else {
+
       if (value >= threshold.critical) return <AlertTriangle className="w-4 h-4" />;
       if (value >= threshold.warning) return <AlertTriangle className="w-4 h-4" />;
       return <CheckCircle className="w-4 h-4" />;
@@ -229,6 +266,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   const toggleMonitoring = () => setIsMonitoring(!isMonitoring);
 
   if (!isVisible) {
+
     return (
       <button
         onClick={toggleVisibility}
@@ -396,6 +434,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
                   type="number"
                   value={thresholds.fps.warning}
                   onChange={(e) => setThresholds(prev => ({
+
                     ...prev,
                     fps: { ...prev.fps, warning: parseInt(e.target.value) || 45 }
                   }))}
@@ -408,6 +447,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
                   type="number"
                   value={thresholds.memory.warning}
                   onChange={(e) => setThresholds(prev => ({
+
                     ...prev,
                     memory: { ...prev.memory, warning: parseInt(e.target.value) || 70 }
                   }))}

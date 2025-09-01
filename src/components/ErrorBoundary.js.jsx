@@ -56,6 +56,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
     const [hasError, setHasError] = useState(false);
     const [error, setError] = useState(null);
     useEffect(() => {
+
         const handleError = (event) => {
 
             setHasError(true);
@@ -66,7 +67,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
             // Log error to console in development'
             if (process.env.NODE_ENV === 'development') {
 
-                // console.error('ErrorBoundary caught an error:', event.error)}
+                // // // // console.error('ErrorBoundary caught an error:', event.error)}
         };
         const handleUnhandledRejection = (event) => {
 
@@ -78,7 +79,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
             // Log error to console in development'
             if (process.env.NODE_ENV === 'development') {
 
-                // console.error('ErrorBoundary caught an unhandled rejection:', event.reason)}
+                // // // // console.error('ErrorBoundary caught an unhandled rejection:', event.reason)}
         };
         window.addEventListener('error', handleError);
         window.addEventListener('unhandledrejection', handleUnhandledRejection);
@@ -87,6 +88,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
             window.removeEventListener('error', handleError);
             window.removeEventListener('unhandledrejection', handleUnhandledRejection)}}, [onError]);
     const resetError = () => {
+
         setHasError(false);
         setError(null)};
     if (hasError) {
@@ -98,12 +100,14 @@ export function ErrorBoundary({ children, fallback, onError }) {
     return <>{children}</>}
 // Hook for functional components to handle errors
 export function useErrorHandler() {
+
     const [error, setError] = useState(null);
     const handleError = React.useCallback((error) => {
 
         setError(error);
-        // console.error('Error caught by useErrorHandler:', error)}, []);
+        // // // // console.error('Error caught by useErrorHandler:', error)}, []);
     const clearError = React.useCallback(() => {
+
         setError(null)}, []);
     return { error, handleError, clearError }}
 // Higher-order component for wrapping components with error handling

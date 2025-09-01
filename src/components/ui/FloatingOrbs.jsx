@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 export function FloatingOrbs({ count = 6, className = '' }) {
+
     const canvasRef = useRef(null);
     useEffect(() => {
+
         const canvas = canvasRef.current;
         if (!canvas)
             return;
@@ -10,12 +12,14 @@ export function FloatingOrbs({ count = 6, className = '' }) {
             return;
         // Set canvas size
         const resizeCanvas = () => {
+
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight};
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         // Orb class
         class Orb {
+
             x;
             y;
             radius;
@@ -24,6 +28,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
             opacity;
             color;
             constructor() {
+
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
                 this.radius = Math.random() * 3 + 1;
@@ -37,6 +42,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
                 this.color = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             update() {
+
                 this.x += this.vx;
                 this.y += this.vy;
                 // Bounce off edges
@@ -53,6 +59,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
                 this.y = Math.max(0, Math.min(canvas.height, this.y))}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             draw() {
+
                 ctx.save();
                 ctx.globalAlpha = this.opacity;
                 // Create gradient
@@ -70,6 +77,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
         // Create orbs
         const orbs = [];
         for (const i = 0; i < count; i++) {
+
             orbs.push(new Orb());
 
 =======
@@ -78,18 +86,22 @@ export function FloatingOrbs({ count = 6, className = '' }) {
         // Create orbs
         const orbs = [];
         for (let i = 0; i < count; i++) {
+
             orbs.push(new Orb())}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Animation loop
         let animate = () => {
+
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             orbs.forEach(orb => {
+
                 orb.update();
                 orb.draw()});
             animationId = requestAnimationFrame(animate)};
         animate();
         // Cleanup
         return () => {
+
             window.removeEventListener('resize', resizeCanvas);
 <<<<<<< HEAD
             cancelAnimationFrame(animationId);

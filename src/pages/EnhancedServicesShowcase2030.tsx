@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
+
   Search, 
   Filter, 
   Star, 
@@ -266,6 +267,7 @@ import { COMPREHENSIVE_PRICING_GUIDE_2030 } from '../data/comprehensivePricingGu
 import { SEO } from '../components/SEO';
 
 const EnhancedServicesShowcase2030: React.FC = () => {
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -298,6 +300,7 @@ const EnhancedServicesShowcase2030: React.FC = () => {
   ];
 
   const filteredServices = allServices.filter(service => {
+
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -307,7 +310,9 @@ const EnhancedServicesShowcase2030: React.FC = () => {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'rating':
         return (b.rating || 0) - (a.rating || 0);
       case 'price':
@@ -322,21 +327,27 @@ const EnhancedServicesShowcase2030: React.FC = () => {
   });
 
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
+
     hidden: { y: 20, opacity: 0 },
     visible: {
+
       y: 0,
       opacity: 1,
       transition: {
+
         duration: 0.5,
         ease: "easeOut"
       }
@@ -344,17 +355,21 @@ const EnhancedServicesShowcase2030: React.FC = () => {
   };
 
   const openServiceModal = (service: any) => {
+
     setSelectedService(service);
     setShowModal(true);
   };
 
   const closeServiceModal = () => {
+
     setShowModal(false);
     setSelectedService(null);
   };
 
   const getCategoryIcon = (category: string) => {
+
     const iconMap: { [key: string]: any } = {
+
       'AI & Autonomous Systems': Brain,
       'Cybersecurity': Shield,
       'AI & Content': PenTool,
@@ -377,7 +392,9 @@ const EnhancedServicesShowcase2030: React.FC = () => {
   };
 
   const getCategoryColor = (category: string) => {
+
     const colorMap: { [key: string]: string } = {
+
       'AI & Autonomous Systems': 'from-purple-500 to-pink-500',
       'Cybersecurity': 'from-green-500 to-emerald-500',
       'AI & Content': 'from-orange-500 to-red-500',
@@ -538,6 +555,7 @@ const EnhancedServicesShowcase2030: React.FC = () => {
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`px-3 py-2 rounded-md transition-all duration-200 ${
+
                       viewMode === 'grid' 
                         ? 'bg-cyan-500 text-white' 
                         : 'text-slate-400 hover:text-white'
@@ -548,6 +566,7 @@ const EnhancedServicesShowcase2030: React.FC = () => {
                   <button
                     onClick={() => setViewMode('list')}
                     className={`px-3 py-2 rounded-md transition-all duration-200 ${
+
                       viewMode === 'list' 
                         ? 'bg-cyan-500 text-white' 
                         : 'text-slate-400 hover:text-white'
@@ -572,6 +591,7 @@ const EnhancedServicesShowcase2030: React.FC = () => {
                 key={service.id}
                 variants={itemVariants}
                 className={`bg-slate-800/50 border border-slate-700/50 rounded-xl overflow-hidden hover:border-cyan-400/50 transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10 ${
+
                   viewMode === 'list' ? 'flex' : ''
                 }`}
               >

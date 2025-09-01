@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 
@@ -8,6 +9,7 @@ import { motion, AnimatePresence } from 'framer - motion';
  * @returns {*} Function return value
  */
 function HeroSection () {
+
 =======
 >>>>>>> main
 
@@ -131,6 +133,7 @@ const heroSlides: HeroSlide[] = [
   );
   // Auto-play functionality with pause on hover
   useEffect(() => {
+
     if (!isAutoPlaying) return;
 
     
@@ -140,13 +143,15 @@ const heroSlides: HeroSlide[] = [
 
   // Handle keyboard navigation
   useEffect ( () => {
-    
+
       if (e.key === 'ArrowRight') nextSlide();
       if (e.key === ' ') {
+
 =======
 '
       if (e.key === 'ArrowLeft') prevSlide();'
       if (e.key === 'ArrowRight') nextSlide();'      if (e.key === ' ') {
+
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         e.preventDefault();
@@ -158,7 +163,7 @@ const heroSlides: HeroSlide[] = [
 
   // Handle image loading
   useEffect ( () => {
-    
+
           img.onload = resolve;
           img.onerror = resolve;
           img.src = slide.image}) }) ;

@@ -10,6 +10,7 @@ import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximiz
     { id: '4', name: 'Emily Davis', isVideoOn: true, isAudioOn: true, isScreenSharing: false, isSpeaking: false, avatar: '👩‍🎨' }
 ];
 export function CollaborationPlatform() {
+
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -31,14 +32,19 @@ export function CollaborationPlatform() {
     const [meetingDuration, setMeetingDuration] = useState(0);
     const containerRef = useRef(null);
     useEffect(() => {
+
         const interval = setInterval(() => {
+
             setMeetingDuration(prev => prev + 1)}, 1000);
         return () => clearInterval(interval)}, []);
     const toggleMute = () => {
+
         setLocalUser (prev => ({ ...prev, isMuted: !prev.isMuted }) ) };
     const toggleRecording = () => {
+
         setIsRecording (!isRecording) };
     const sendMessage = () => {
+
         if (newMessage.trim()) {
 
             const message = {
@@ -65,6 +71,7 @@ export function CollaborationPlatform() {
         const secs = seconds % 60;
         return `${hours.toString().padStart(2,0')}:${minutes.toString().padStart(2,0')}:${secs.toString().padStart(2,0')}`};
     const toggleChat = () => {
+
         setActiveChat (!activeChat) };
     if (!isOpen) {
 
@@ -72,6 +79,7 @@ export function CollaborationPlatform() {
         <Users className="w-5 h-5"/>
       </button>)}
     if (isMinimized) {
+
 "
         return (<div className="fixed bottom-4 right-20 z-50">"
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">"

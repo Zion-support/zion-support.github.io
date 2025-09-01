@@ -7,9 +7,12 @@ const WebApplicationDevelopmentChat: NextPage = () => {
     <div>
       <Head>
         <title>WebApplicationDevelopmentChat - Zion Tech Solutions</title>
-        <meta name="description" content="WebApplicationDevelopmentChat service" />
+        <meta
+          name="description"
+          content="WebApplicationDevelopmentChat service"
+        />
       </Head>
-      
+
       <main>
         <h1>WebApplicationDevelopmentChat</h1>
         <p>Service details coming soon...</p>

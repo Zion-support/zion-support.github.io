@@ -9,7 +9,7 @@ const BusinessIntelligenceChat: NextPage = () => {
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
         <meta name="description" content="BusinessIntelligenceChat blog post" />
       </Head>
-      
+
       <main>
         <h1>BusinessIntelligenceChat</h1>
         <p>Blog content coming soon...</p>

@@ -27,9 +27,11 @@ import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 import { ServicesShowcase } from "@/components/ServicesShowcase";
 export default function Home() {
+
   const [isLoading, setIsLoading] = useState(true);
 const serviceCategories = [
   {
+
     name: "AI Solutions",
     description: "Cutting-edge artificial intelligence services for business transformation",
     icon: "🤖",
@@ -38,6 +40,7 @@ const serviceCategories = [
     color: "from-cyan-500 to-blue-600"
   },
   {
+
     name: "Edge & IoT",
     description: "Ultra-low latency edge computing and IoT platform solutions",
     icon: "⚡",
@@ -46,6 +49,7 @@ const serviceCategories = [
     color: "from-blue-500 to-purple-600"
   },
   {
+
     name: "Cloud & DevOps",
     description: "Scalable cloud infrastructure and automated deployment solutions",
     icon: "☁️",
@@ -54,6 +58,7 @@ const serviceCategories = [
     color: "from-green-500 to-emerald-600"
   },
   {
+
     name: "Cybersecurity",
     description: "Advanced security protocols and threat protection systems",
     icon: "🔒",
@@ -62,6 +67,7 @@ const serviceCategories = [
     color: "from-red-500 to-orange-600"
   },
   {
+
     name: "Data Governance",
     description: "AI-powered data protection and compliance management",
     icon: "🛡️",
@@ -70,6 +76,7 @@ const serviceCategories = [
     color: "from-purple-500 to-pink-600"
   },
   {
+
     name: "Customer Success",
     description: "AI-driven customer engagement and retention platforms",
     icon: "💝",
@@ -80,47 +87,57 @@ const serviceCategories = [
 ];
 // Enhanced hero section component
 const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const heroSlides = useMemo(() => [
     {
+
       title: "AI-Powered Solutions",
       description: "Transform your business with cutting-edge artificial intelligence",
       icon: Brain,
       features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
     },
     {
+
       title: "Quantum Computing",
       description: "Next-generation computing power for complex problem solving",
       icon: Atom,
       features: ["Quantum Algorithms", "Quantum Machine Learning", "Quantum Cryptography", "Quantum Simulation"]
     },
     {
+
       title: "Edge Computing",
       description: "Ultra-low latency processing at the network edge",
       icon: Zap,
       features: ["Cloud-Native", "API-First", "Scalable Architecture", "Real-time Analytics"]
     },
     {
+
       title: "Digital Transformation",
       description: "Modernize your infrastructure for the future",
       icon: Rocket,
       features: ["Cloud Migration", "DevOps", "Security", "Compliance"]
   ], []);
   const nextSlide = useCallback(() => {
+
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   }, [heroSlides.length]);
   const prevSlide = useCallback(() => {
+
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
   }, [heroSlides.length]);
   useEffect(() => {
+
     // Simulate loading time for better UX
     const timer = setTimeout(() => {
+
       setIsLoading(false);
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
   const stats = [
     {
+
       value: "500+",
       label: "Projects Delivered",
       description: "Successfully completed across industries",
@@ -128,6 +145,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       color: "from-green-400 to-emerald-500"
     },
     {
+
       value: "50+",
       label: "AI Solutions",
       description: "Cutting-edge artificial intelligence services",
@@ -135,6 +153,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       color: "from-cyan-400 to-blue-500"
     },
     {
+
       value: "24/7",
       label: "Support Available",
       description: "Round-the-clock technical assistance",
@@ -142,6 +161,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       color: "from-blue-400 to-indigo-500"
     },
     {
+
       value: "99.9%",
       label: "Uptime Guarantee",
       description: "Reliable infrastructure and services",
@@ -151,6 +171,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   ];
   const aiServices = [
     {
+
       title: "AI Business Intelligence",
       description: "Transform your data into actionable insights with advanced analytics and machine learning",
       icon: Brain,
@@ -159,6 +180,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       color: "from-cyan-400 to-blue-500"
     },
     {
+
       title: "AI Compliance Assistant",
       description: "Automate regulatory compliance with AI-powered monitoring and reporting",
       icon: Shield,
@@ -167,6 +189,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       color: "from-red-400 to-pink-500"
     },
     {
+
       title: "AI Sales Copilot",
       description: "Boost sales performance with intelligent lead scoring and customer insights",
       icon: Users,
@@ -177,6 +200,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   ];
   const serviceCategories = [
     {
+
       name: "AI & Machine Learning",
       description: "Cutting-edge artificial intelligence solutions for business transformation",
       icon: Brain,
@@ -186,6 +210,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       services: ["AI Business Intelligence", "Machine Learning", "Natural Language Processing", "Computer Vision"]
     },
     {
+
       name: "Cloud & DevOps",
       description: "Enterprise-grade cloud infrastructure and automated deployment solutions",
       icon: Cloud,
@@ -195,6 +220,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       services: ["Cloud Migration", "DevOps Automation", "Container Orchestration", "Serverless Architecture"]
     },
     {
+
       name: "Cybersecurity",
       description: "Advanced security solutions to protect your digital assets and infrastructure",
       icon: Shield,
@@ -204,6 +230,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       services: ["Threat Detection", "Zero Trust Security", "Compliance Management", "Incident Response"]
     },
     {
+
       name: "Digital Transformation",
       description: "Strategic technology consulting and implementation guidance",
       icon: Zap,
@@ -213,6 +240,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       services: ["Process Automation", "Digital Strategy", "Change Management", "Technology Roadmap"]
     },
     {
+
       name: "IoT & Edge Computing",
       description: "Smart device networks and edge computing solutions",
       icon: Cpu,
@@ -222,6 +250,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       services: ["IoT Platforms", "Edge Analytics", "Device Management", "Smart Cities"]
     },
     {
+
       name: "Quantum Computing",
       description: "Next-generation quantum solutions for complex problem solving",
       icon: Atom,
@@ -233,6 +262,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   ];
   const emergingTech = [
     {
+
       title: "Metaverse Commerce",
       description: "Create virtual storefronts and immersive shopping experiences",
       icon: Globe2,
@@ -241,6 +271,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       category: "Emerging Tech"
     },
     {
+
       title: "Quantum AI Trading",
       description: "Revolutionary trading platform using quantum computing principles",
       icon: TrendingUp,
@@ -249,6 +280,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       category: "FinTech"
     },
     {
+
       title: "Space Technology",
       description: "Satellite operations and space mission optimization",
       icon: Building,
@@ -257,6 +289,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       category: "Space Tech"
     },
     {
+
       title: "Autonomous Vehicles",
       description: "Fleet management for autonomous vehicle operations",
       icon: Car,
@@ -267,6 +300,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   ];
   const microSaasServices = [
     {
+
       title: "AI Customer Success",
       description: "Predictive churn prevention and automated onboarding",
       icon: Users,
@@ -275,6 +309,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       category: "Customer Success"
     },
     {
+
       title: "AI Legal Assistant",
       description: "Intelligent legal research and contract analysis",
       icon: Scale,
@@ -283,6 +318,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       category: "Legal Tech"
     },
     {
+
       title: "Blockchain Supply Chain",
       description: "End-to-end visibility and traceability platform",
       icon: Network,
@@ -291,6 +327,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       category: "Blockchain"
     },
     {
+
       title: "AI Healthcare Diagnostics",
       description: "Advanced medical imaging analysis and disease detection",
       icon: Heart,
@@ -300,20 +337,26 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
     }
   ];
   const containerVariants = {
+
     hidden: { opacity: 0 },
     visible: {
+
       opacity: 1,
       transition: {
+
         staggerChildren: 0.2
       }
     }
   };
   const itemVariants = {
+
     hidden: { opacity: 0, y: 20 },
     visible: {
+
       opacity: 1,
       y: 0,
       transition: {
+
         duration: 0.6,
         ease: "easeOut"
       }
@@ -390,6 +433,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-colors ${
+
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
                 }`}
               />
@@ -434,6 +478,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
+
                 index === currentSlide 
                   ? 'bg-cyan-400 scale-125' 
                   : 'bg-gray-600 hover:bg-gray-500'
@@ -448,6 +493,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 });
 // Stats section component
 const StatsSection = React.memo(() => {
+
   const stats = [
     { label: "Global Clients", value: "500+", icon: Users, color: "from-blue-500 to-cyan-500" },
     { label: "Projects Delivered", value: "1000+", icon: TrendingUp, color: "from-green-500 to-emerald-500" },
@@ -495,6 +541,7 @@ const StatsSection = React.memo(() => {
 });
 // Services preview section
 const ServicesPreview = React.memo(() => {
+
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       <SEO 
@@ -760,6 +807,7 @@ const ServicesPreview = React.memo(() => {
         </div>
       {/* Interactive Service Showcase - Lazy Loaded */}
       <Suspense fallback={
+
         <div className="py-20 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -838,6 +886,7 @@ export default Home;
 });
 // CTA section
 const CTASection = React.memo(() => {
+
   return (
     <section className="py-20">
       <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -875,11 +924,13 @@ const CTASection = React.memo(() => {
 });
 // Main Home component
 const Home: React.FC = () => {
+
   const handleGetStarted = () => {
+
     // Handle get started action
-    // // // // // // // console.log('Get Started clicked');
+    // // // // // // // // console.log('Get Started clicked');
 =======
-    console.log('Get started clicked');
+    // console.log('Get started clicked');
   };
   return (
     <>

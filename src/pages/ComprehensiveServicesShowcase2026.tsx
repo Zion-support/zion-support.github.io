@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Search, 
   Filter, 
   Star, 
@@ -26,6 +27,7 @@ import {
 import { COMPREHENSIVE_SERVICES_CATALOG_2025 } from '../data/comprehensiveServicesCatalog2025';
 
 const ComprehensiveServicesShowcase2026: React.FC = () => {
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -44,10 +46,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
+
     let filtered = [...COMPREHENSIVE_SERVICES_CATALOG_2025];
 
     // Search filter
     if (searchTerm) {
+
       const lowerQuery = searchTerm.toLowerCase();
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(lowerQuery) ||
@@ -58,13 +62,17 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 
     // Category filter
     if (selectedCategory !== 'all') {
+
       filtered = filtered.filter(service => service.category === selectedCategory);
     }
 
     // Price range filter
     if (selectedPriceRange !== 'all') {
+
       filtered = filtered.filter(service => {
+
         switch (selectedPriceRange) {
+
           case 'budget': return service.price >= 100 && service.price <= 1000;
           case 'mid-range': return service.price > 1000 && service.price <= 5000;
           case 'enterprise': return service.price > 5000 && service.price <= 15000;
@@ -76,6 +84,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 
     // Sort
     switch (sortBy) {
+
       case 'price-low':
         filtered.sort((a, b) => a.price - b.price);
         break;
@@ -94,7 +103,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 
   // Get category icon and color
   const getCategoryIcon = (category: string) => {
+
     switch (category) {
+
       case 'AI & Analytics': return <Brain className="w-5 h-5" />;
       case 'AI & Business Intelligence': return <TrendingUp className="w-5 h-5" />;
       case 'AI & Customer Experience': return <Users className="w-5 h-5" />;
@@ -141,6 +152,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   };
 
   const getCategoryColor = (category: string) => {
+
     const colors = [
       'bg-blue-500', 'bg-purple-500', 'bg-green-500', 'bg-red-500', 'bg-yellow-500',
       'bg-pink-500', 'bg-indigo-500', 'bg-teal-500', 'bg-orange-500', 'bg-cyan-500'
@@ -150,6 +162,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   };
 
   const formatPrice = (price: number) => {
+
     return `$${price.toLocaleString()}`;
   };
 
@@ -266,6 +279,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-colors ${
+
                       viewMode === 'grid' 
                         ? 'bg-blue-600 text-white' 
                         : 'bg-zinc-700/50 text-gray-400 hover:bg-zinc-600/50'
@@ -276,6 +290,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                   <button
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-colors ${
+
                       viewMode === 'list' 
                         ? 'bg-blue-600 text-white' 
                         : 'bg-zinc-700/50 text-gray-400 hover:bg-zinc-600/50'
@@ -307,6 +322,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     className={`bg-zinc-800/50 backdrop-blur-sm rounded-2xl border border-zinc-700/50 overflow-hidden hover:border-zinc-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 ${
+
                       viewMode === 'list' ? 'flex' : ''
                     }`}
                   >

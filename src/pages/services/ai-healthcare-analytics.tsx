@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Activity, 
   Heart, 
   Brain, 
@@ -27,33 +28,40 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AIHealthcareAnalytics() {
+
   const features = [
     {
+
       icon: <Brain className="w-6 h-6" />,
       title: "Predictive Patient Analytics",
       description: "AI algorithms predict patient outcomes, readmission risks, and treatment effectiveness with 96% accuracy"
     },
     {
+
       icon: <Activity className="w-6 h-6" />,
       title: "Real-time Health Monitoring",
       description: "Continuous monitoring of patient vitals with early warning systems and automated alerts for critical changes"
     },
     {
+
       icon: <Database className="w-6 h-6" />,
       title: "Clinical Data Integration",
       description: "Seamless integration with EHR systems, medical devices, and wearable technology for comprehensive data analysis"
     },
     {
+
       icon: <Microscope className="w-6 h-6" />,
       title: "Medical Image Analysis",
       description: "Advanced AI-powered analysis of X-rays, MRIs, and CT scans for faster and more accurate diagnoses"
     },
     {
+
       icon: <Shield className="w-6 h-6" />,
       title: "HIPAA-Compliant Security",
       description: "Enterprise-grade security with end-to-end encryption and full HIPAA compliance for patient data protection"
     },
     {
+
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Population Health Insights",
       description: "Comprehensive analytics for population health management, disease trends, and preventive care strategies"
@@ -62,6 +70,7 @@ export default function AIHealthcareAnalytics() {
 
   const pricing = [
     {
+
       name: "Clinic",
       price: "$399",
       period: "/month",
@@ -75,6 +84,7 @@ export default function AIHealthcareAnalytics() {
       popular: false
     },
     {
+
       name: "Hospital",
       price: "$1,199",
       period: "/month",
@@ -90,6 +100,7 @@ export default function AIHealthcareAnalytics() {
       popular: true
     },
     {
+
       name: "Health System",
       price: "$2,999",
       period: "/month",
@@ -117,21 +128,25 @@ export default function AIHealthcareAnalytics() {
 
   const useCases = [
     {
+
       specialty: "Cardiology",
       description: "Predict heart failure risks, monitor cardiac function, and optimize treatment plans",
       improvement: "40% risk reduction"
     },
     {
+
       specialty: "Oncology",
       description: "Personalized treatment recommendations, drug response prediction, and survival analysis",
       improvement: "35% treatment efficacy"
     },
     {
+
       specialty: "Emergency Medicine",
       description: "Triage optimization, resource allocation, and patient flow management",
       improvement: "50% efficiency gain"
     },
     {
+
       specialty: "Primary Care",
       description: "Preventive care planning, chronic disease management, and population health insights",
       improvement: "45% preventive care"
@@ -293,6 +308,7 @@ export default function AIHealthcareAnalytics() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${
+
                   plan.popular 
                     ? 'border-red-500 ring-2 ring-red-500/20' 
                     : 'border-slate-700'
@@ -326,6 +342,7 @@ export default function AIHealthcareAnalytics() {
                 <a
                   href="https://ziontechgroup.com/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
                     plan.popular
                       ? 'bg-gradient-to-r from-red-600 to-pink-600 text-white hover:from-red-700 hover:to-pink-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'

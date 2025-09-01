@@ -10,9 +10,11 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
     const menuRef = useRef(null);
     // Close menu when route changes
     useEffect ( () => {
+
         onToggle () }, [location.pathname]) ;
     // Close menu when clicking outside
     useEffect ( () => {
+
         const handleClickOutside = (event) => {
 
             if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -84,7 +86,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
 
         e.preventDefault();
         // Implement search functionality'
-        // console.log('Search query:', searchQuery)};
+        // // // // console.log('Search query:', searchQuery)};
     const menuVariants = {
 
   closed: {

@@ -1,7 +1,9 @@
 import { Link } from 'react - router - dom.ts';
 import React, { useState } from 'react.ts';
 export function RevolutionaryServicesPage (...args: any[]) : any {
+
 import {
+
 import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data / comprehensivePricingGuide2025';
 import { motion } from 'framer - motion.ts';
 import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data / revolutionaryMicroSaasServices2025';
@@ -134,8 +136,7 @@ import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data / revolutionaryM
   WrenchIcon5,
   ToolIcon5,
   HammerIcon5,
-  ScrewdriverIcon5,
-} from 'lucide - react.ts';
+  ScrewdriverIcon5} from 'lucide - react.ts';
 
   const [searchTerm, setSearchTerm] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState ('all') ;
@@ -144,77 +145,77 @@ import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data / revolutionaryM
 
   const categories = [
     {
+
       id: 'all',
       name: 'All Categories',
       icon: Globe,
-      color: 'from - blue - 500 to - cyan - 600',
-    },
+      color: 'from - blue - 500 to - cyan - 600'},
     {
+
       id: 'AI & Analytics',
       name: 'AI & Analytics',
       icon: Brain,
-      color: 'from - purple - 500 to - pink - 600',
-    },
+      color: 'from - purple - 500 to - pink - 600'},
     {
+
       id: 'Quantum Computing',
       name: 'Quantum Computing',
       icon: Atom,
-      color: 'from - cyan - 500 to - blue - 600',
-    },
+      color: 'from - cyan - 500 to - blue - 600'},
     {
+
       id: 'Cybersecurity',
       name: 'Cybersecurity',
       icon: Shield,
-      color: 'from - red - 500 to - orange - 600',
-    },
+      color: 'from - red - 500 to - orange - 600'},
     {
+
       id: 'IoT & Edge Computing',
       name: 'IoT & Edge Computing',
       icon: Cpu,
-      color: 'from - green - 500 to - teal - 600',
-    },
+      color: 'from - green - 500 to - teal - 600'},
     {
+
       id: 'Blockchain & Web3',
       name: 'Blockchain & Web3',
       icon: Code,
-      color: 'from - yellow - 500 to - orange - 600',
-    },
+      color: 'from - yellow - 500 to - orange - 600'},
     {
+
       id: 'Marketing & Sales',
       name: 'Marketing & Sales',
       icon: TrendingUp,
-      color: 'from - indigo - 500 to - purple - 600',
-    },
+      color: 'from - indigo - 500 to - purple - 600'},
     {
+
       id: 'Cloud & DevOps',
       name: 'Cloud & DevOps',
       icon: Cloud,
-      color: 'from - blue - 500 to - indigo - 600',
-    },
+      color: 'from - blue - 500 to - indigo - 600'},
     {
+
       id: 'Customer Service',
       name: 'Customer Service',
       icon: Users,
-      color: 'from - green - 500 to - emerald - 600',
-    },
+      color: 'from - green - 500 to - emerald - 600'},
     {
+
       id: 'Compliance & Governance',
       name: 'Compliance & Governance',
       icon: Lock,
-      color: 'from - gray - 500 to - slate - 600',
-    },
+      color: 'from - gray - 500 to - slate - 600'},
     {
+
       id: 'Business Operations',
       name: 'Business Operations',
       icon: Briefcase,
-      color: 'from - amber - 500 to - yellow - 600',
-    },
+      color: 'from - amber - 500 to - yellow - 600'},
     {
+
       id: 'Financial Services',
       name: 'Financial Services',
       icon: DollarSign,
-      color: 'from - emerald - 500 to - green - 600',
-    },
+      color: 'from - emerald - 500 to - green - 600'},
   ];
 
   const priceRanges = [
@@ -233,6 +234,7 @@ import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data / revolutionaryM
   ];
 
   const filteredServices = REVOLUTIONARY_MICRO_SAAS_SERVICES_2025.filter (service => {
+
       const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
         service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
@@ -243,10 +245,13 @@ import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data / revolutionaryM
 
       let matchesPrice = true;
       if (priceRange === 'low') {
+
         matchesPrice = service.price < 1500;
       } else if (priceRange === 'medium') {
+
         matchesPrice = service.price >= 1500 && service.price <= 3000;
       } else if (priceRange === 'high') {
+
         matchesPrice = service.price > 3000;
       }
 
@@ -254,7 +259,9 @@ import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data / revolutionaryM
     }) ;
 
   const sortedServices = [...filteredServices].sort ( (a, b) => {
+
     switch (sortBy) {
+
       case 'name':
         return a.title.localeCompare (b.title) ;
       case 'price - low':
@@ -274,24 +281,29 @@ import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data / revolutionaryM
   }) ;
 
   const getCategoryIcon = (category: anystring) => {
+
     const categoryData = categories.find (cat => cat.id === category) ;
     return categoryData ? categoryData.icon : Globe;
   };
 
   const getCategoryColor = (category: anystring) => {
+
     const categoryData = categories.find (cat => cat.id === category) ;
     return categoryData ? categoryData.color : 'from - gray - 500 to - slate - 600';
   };
 
   const getPriceRange = (price: anynumber) => {
+
     if (price < 1500) return 'low';
     if (price <= 3000) return 'medium';
     return 'high';
   };
 
   const getPriceColor = (price: anynumber) => {
+
     const range = getPriceRange (price) ;
     switch (range) {
+
       case 'low':
         return 'text - green - 400';
       case 'medium':
@@ -304,8 +316,10 @@ import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data / revolutionaryM
   };
 
   const getPriceRangeColor = (price: anynumber) => {
+
     const range = getPriceRange (price) ;
     switch (range) {
+
       case 'low':
         return 'bg - green - 500 / 20 text - green - 400';
       case 'medium':
@@ -318,7 +332,9 @@ import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data / revolutionaryM
   };
 
   const getInnovationColor = (level: anystring) => {
+
     switch (level) {
+
       case 'Revolutionary':
         return 'text - purple - 400';
       case 'Advanced':
@@ -331,7 +347,9 @@ import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data / revolutionaryM
   };
 
   const getInnovationBgColor = (level: anystring) => {
+
     switch (level) {
+
       case 'Revolutionary':
         return 'bg - purple - 500 / 20';
       case 'Advanced':
@@ -457,8 +475,8 @@ import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '../data / revolutionaryM
                 <div className="flex items - center justify - between mb - 4">
                   <div className="w - 16 h - 16 bg - white / 20 rounded - xl flex items - center justify - center">
                     {React.createElement (getCategoryIcon (service.category) , {
-                      className: 'w - 8 h - 8 text - white',
-                    }) }
+
+                      className: 'w - 8 h - 8 text - white'}) }
                   </div>
                   <div className="text - right">
                     <div

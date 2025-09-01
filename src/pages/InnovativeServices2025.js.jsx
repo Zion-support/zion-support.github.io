@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const InnovativeServices2025 = () => {
+
     const innovativeServices = [
         {
+
             category: "AI-Powered Micro SAAS Solutions",
             description: "Intelligent software-as-a-service solutions that automate and optimize business processes",
             services[
                 {
+
                     name: "AI-Powered HR Assistant",
                     description: "Revolutionary HR automation platform that transforms recruitment, onboarding, and employee management through artificial intelligence.",
                     features[
@@ -30,6 +33,7 @@ const InnovativeServices2025 = () => {
                     competitiveAdvantage: "Advanced AI algorithms, comprehensive automation, and bias-free hiring processes"
                 },
                 {
+
                     name: "Smart Inventory Management",
                     description: "AI-driven inventory optimization platform that eliminates stockouts and reduces carrying costs through predictive analytics.",
                     features[
@@ -53,6 +57,7 @@ const InnovativeServices2025 = () => {
                     competitiveAdvantage: "AI-powered forecasting, real-time optimization, and seamless ERP integration"
                 },
                 {
+
                     name: "AI Legal Document Analyzer",
                     description: "Advanced legal AI platform that automates document review, contract analysis, and compliance monitoring.",
                     features[
@@ -78,10 +83,12 @@ const InnovativeServices2025 = () => {
             ]
         },
         {
+
             category: "Advanced AI & Machine Learning",
             description: "Enterprise-grade artificial intelligence solutions that drive innovation and competitive advantage",
             services[
                 {
+
                     name: "AI-Powered Fraud Detection",
                     description: "Next-generation fraud prevention platform using machine learning to detect and prevent fraudulent activities in real-time.",
                     features[
@@ -105,6 +112,7 @@ const InnovativeServices2025 = () => {
                     competitiveAdvantage: "Advanced ML algorithms, real-time processing, and industry-leading accuracy rates"
                 },
                 {
+
                     name: "AI Supply Chain Optimization",
                     description: "Intelligent supply chain platform that optimizes operations, reduces costs, and improves efficiency through AI-powered analytics.",
                     features[
@@ -128,6 +136,7 @@ const InnovativeServices2025 = () => {
                     competitiveAdvantage: "AI-powered optimization, real-time visibility, and comprehensive risk management"
                 },
                 {
+
                     name: "AI-Powered Healthcare",
                     description: "Revolutionary healthcare AI platform that improves diagnosis accuracy, patient care, and operational efficiency.",
                     features[
@@ -153,10 +162,12 @@ const InnovativeServices2025 = () => {
             ]
         },
         {
+
             category: "Emerging Technology Solutions",
             description: "Cutting-edge technology services that position businesses for the future",
             services[
                 {
+
                     name: "Quantum Computing Consulting",
                     description: "Expert guidance on quantum computing strategy, implementation, and business transformation for forward-thinking organizations.",
                     features[
@@ -180,6 +191,7 @@ const InnovativeServices2025 = () => {
                     competitiveAdvantage: "Deep quantum expertise, practical implementation experience, and strategic business focus"
                 },
                 {
+
                     name: "Metaverse Development",
                     description: "Complete metaverse platform development including VR/AR experiences, 3D environments, and interactive digital spaces.",
                     features[
@@ -203,6 +215,7 @@ const InnovativeServices2025 = () => {
                     competitiveAdvantage: "Custom development, rapid prototyping, and comprehensive platform solutions"
                 },
                 {
+
                     name: "Web3 Development",
                     description: "Complete Web3 development services including decentralized applications, DeFi platforms, and blockchain integration.",
                     features[
@@ -228,10 +241,12 @@ const InnovativeServices2025 = () => {
             ]
         },
         {
+
             category: "Advanced Cybersecurity Solutions",
             description: "Next-generation security solutions that protect against evolving cyber threats",
             services[
                 {
+
                     name: "Zero Trust Architecture",
                     description: "Modern security architecture implementation that eliminates implicit trust and continuously validates every access request.",
                     features[
@@ -255,6 +270,7 @@ const InnovativeServices2025 = () => {
                     competitiveAdvantage: "Comprehensive implementation, rapid deployment, and ongoing optimization support"
                 },
                 {
+
                     name: "AI-Powered Cybersecurity",
                     description: "Next-generation cybersecurity platform that uses artificial intelligence to detect and respond to threats in real-time.",
                     features[

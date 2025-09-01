@@ -1,7 +1,8 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Code, 
   Code2, 
   Search, 
@@ -50,6 +51,7 @@ import {
 } from 'lucide-react';
 
 export const ApiDocs: React.FC = () => {
+
   const [searchQuery, setSearchQuery] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('all');
   const [expandedSections, setExpandedSections] = React.useState<string[]>(['authentication', 'ai-services']);
@@ -67,6 +69,7 @@ export const ApiDocs: React.FC = () => {
 
   const apiSections = [
     {
+
       id: 'authentication',
       title: 'Authentication & Security',
       icon: Shield,
@@ -74,6 +77,7 @@ export const ApiDocs: React.FC = () => {
       description: 'Secure your API calls with authentication and authorization',
       apis: [
         {
+
           name: 'OAuth 2.0',
           description: 'Industry-standard OAuth 2.0 authentication flow',
           endpoint: '/oauth2/authorize',
@@ -86,6 +90,7 @@ export const ApiDocs: React.FC = () => {
           examples: true
         },
         {
+
           name: 'API Key Management',
           description: 'Generate and manage API keys for your applications',
           endpoint: '/api/v1/keys',
@@ -98,6 +103,7 @@ export const ApiDocs: React.FC = () => {
           examples: true
         },
         {
+
           name: 'JWT Tokens',
           description: 'JSON Web Token authentication for stateless APIs',
           endpoint: '/auth/jwt',
@@ -112,6 +118,7 @@ export const ApiDocs: React.FC = () => {
       ]
     },
     {
+
       id: 'ai-services',
       title: 'AI & Machine Learning Services',
       icon: Brain,
@@ -119,6 +126,7 @@ export const ApiDocs: React.FC = () => {
       description: 'Access our cutting-edge AI capabilities through RESTful APIs',
       apis: [
         {
+
           name: 'Natural Language Processing',
           description: 'Text analysis, sentiment analysis, and language understanding',
           endpoint: '/api/v1/nlp/analyze',
@@ -131,6 +139,7 @@ export const ApiDocs: React.FC = () => {
           examples: true
         },
         {
+
           name: 'Computer Vision',
           description: 'Image recognition, object detection, and visual analysis',
           endpoint: '/api/v1/vision/analyze',
@@ -143,6 +152,7 @@ export const ApiDocs: React.FC = () => {
           examples: true
         },
         {
+
           name: 'Speech Recognition',
           description: 'Convert speech to text with high accuracy',
           endpoint: '/api/v1/speech/transcribe',
@@ -155,6 +165,7 @@ export const ApiDocs: React.FC = () => {
           examples: true
         },
         {
+
           name: 'Chatbot API',
           description: 'Build conversational AI chatbots',
           endpoint: '/api/v1/chat/completions',
@@ -167,6 +178,7 @@ export const ApiDocs: React.FC = () => {
           examples: true
         },
         {
+
           name: 'Predictive Analytics',
           description: 'Machine learning models for business predictions',
           endpoint: '/api/v1/ml/predict',
@@ -179,6 +191,7 @@ export const ApiDocs: React.FC = () => {
           examples: false
         },
         {
+
           name: 'Recommendation Engine',
           description: 'AI-powered product and content recommendations',
           endpoint: '/api/v1/recommendations',
@@ -191,6 +204,7 @@ export const ApiDocs: React.FC = () => {
           examples: false
         },
         {
+
           name: 'Anomaly Detection',
           description: 'Detect unusual patterns in data streams',
           endpoint: '/api/v1/anomaly/detect',
@@ -203,6 +217,7 @@ export const ApiDocs: React.FC = () => {
           examples: false
         },
         {
+
           name: 'AutoML',
           description: 'Automated machine learning model training',
           endpoint: '/api/v1/automl/train',
@@ -217,6 +232,7 @@ export const ApiDocs: React.FC = () => {
       ]
     },
     {
+
       id: 'data-analytics',
       title: 'Data Analytics & Business Intelligence',
       icon: BarChart3,
@@ -224,6 +240,7 @@ export const ApiDocs: React.FC = () => {
       description: 'Transform raw data into actionable business insights',
       apis: [
         {
+
           name: 'Data Processing',
           description: 'ETL operations and data transformation',
           endpoint: '/api/v1/data/process',
@@ -236,6 +253,7 @@ export const ApiDocs: React.FC = () => {
           examples: true
         },
         {
+
           name: 'Real-time Analytics',
           description: 'Live data streaming and analysis',
           endpoint: '/api/v1/analytics/stream',
@@ -248,6 +266,7 @@ export const ApiDocs: React.FC = () => {
           examples: true
         },
         {
+
           name: 'Report Generation',
           description: 'Automated report creation and scheduling',
           endpoint: '/api/v1/reports/generate',
@@ -260,6 +279,7 @@ export const ApiDocs: React.FC = () => {
           examples: true
         },
         {
+
           name: 'Data Visualization',
           description: 'Create charts, graphs, and dashboards',
           endpoint: '/api/v1/visualization/create',
@@ -272,6 +292,7 @@ export const ApiDocs: React.FC = () => {
           examples: true
         },
         {
+
           name: 'Data Mining',
           description: 'Discover patterns and relationships in data',
           endpoint: '/api/v1/mining/discover',
@@ -286,6 +307,7 @@ export const ApiDocs: React.FC = () => {
       ]
     },
     {
+
       id: 'cloud-services',
       title: 'Cloud & Infrastructure Services',
       icon: Cloud,
@@ -293,6 +315,7 @@ export const ApiDocs: React.FC = () => {
       description: 'Manage cloud resources and infrastructure programmatically',
       apis: [
         {
+
           name: 'Container Orchestration',
           description: 'Deploy and manage containerized applications',
           endpoint: '/api/v1/containers/deploy',
@@ -305,6 +328,7 @@ export const ApiDocs: React.FC = () => {
           examples: true
         },
         {
+
           name: 'Serverless Functions',
           description: 'Deploy and manage serverless functions',
           endpoint: '/api/v1/functions/deploy',
@@ -317,6 +341,7 @@ export const ApiDocs: React.FC = () => {
           examples: true
         },
         {
+
           name: 'Database Management',
           description: 'Create and manage databases and tables',
           endpoint: '/api/v1/databases',
@@ -329,6 +354,7 @@ export const ApiDocs: React.FC = () => {
           examples: true
         },
         {
+
           name: 'Load Balancing',
           description: 'Configure and manage load balancers',
           endpoint: '/api/v1/loadbalancers',
@@ -345,6 +371,7 @@ export const ApiDocs: React.FC = () => {
   ];
 
   const toggleSection = (sectionId: string) => {
+
     setExpandedSections(prev => 
       prev.includes(sectionId) 
         ? prev.filter(id => id !== sectionId)
@@ -367,7 +394,9 @@ export const ApiDocs: React.FC = () => {
   );
 
   const getStatusColor = (status: string) => {
+
     switch (status) {
+
       case 'stable': return 'bg-green-500/20 text-green-400 border-green-400/30';
       case 'beta': return 'bg-yellow-500/20 text-yellow-400 border-yellow-400/30';
       case 'alpha': return 'bg-red-500/20 text-red-400 border-red-400/30';
@@ -376,7 +405,9 @@ export const ApiDocs: React.FC = () => {
   };
 
   const getMethodColor = (method: string) => {
+
     switch (method) {
+
       case 'GET': return 'bg-green-500/20 text-green-400 border-green-400/30';
       case 'POST': return 'bg-blue-500/20 text-blue-400 border-blue-400/30';
       case 'PUT': return 'bg-yellow-500/20 text-yellow-400 border-yellow-400/30';
@@ -387,8 +418,11 @@ export const ApiDocs: React.FC = () => {
 
   // Update category counts
   React.useEffect(() => {
+
     categories.forEach(cat => {
+
       if (cat.id !== 'all') {
+
         const section = apiSections.find(s => s.id === cat.id);
         cat.count = section ? section.apis.length : 0;
       }
@@ -476,6 +510,7 @@ export const ApiDocs: React.FC = () => {
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${
+
                     selectedCategory === category.id
                       ? 'bg-indigo-400/20 border-indigo-400/40 text-indigo-400'
                       : 'bg-slate-700/50 border-slate-600/50 text-gray-300 hover:bg-slate-600/50 hover:border-indigo-400/30'

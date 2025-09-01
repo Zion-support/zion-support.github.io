@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 export default Blog;
 import {
+
 import { motion } from 'framer - motion';
 
   Search,
@@ -11,10 +12,10 @@ import { motion } from 'framer - motion';
   BookOpen,
   ArrowRight,
   Mail,
-  Send,
-} from 'lucide - react';
+  Send} from 'lucide - react';
 
 interface BlogPost {
+
   id: string;
   title: string;
   excerpt: string;
@@ -30,12 +31,14 @@ interface BlogPost {
 }
 
 interface Category {
+
   id: string;
   name: string;
   count: number;
 }
 
 const Blog: React.FC = () => {
+
   const [searchTerm, setSearchTerm] = useState ('') ;
   const [selectedCategory, setSelectedCategory] = useState < string> ('all') ;
 
@@ -50,6 +53,7 @@ const Blog: React.FC = () => {
 
   const blogPosts: BlogPost[] = [
     {
+
       id: '1',
       title: 'The Future of AI in Enterprise: 2024 Trends and Predictions',
       excerpt:
@@ -61,9 +65,9 @@ const Blog: React.FC = () => {
       tags: ['AI', 'Enterprise', 'Technology', 'Innovation'],
       readTime: '5 min read',
       views: 1247,
-      featured: true,
-    },
+      featured: true},
     {
+
       id: '2',
       title: 'Quantum Computing: Breaking Down the Hype vs Reality',
       excerpt:
@@ -75,9 +79,9 @@ const Blog: React.FC = () => {
       tags: ['Quantum Computing', 'Technology', 'Research'],
       readTime: '8 min read',
       views: 892,
-      featured: true,
-    },
+      featured: true},
     {
+
       id: '3',
       title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
       excerpt:
@@ -89,9 +93,9 @@ const Blog: React.FC = () => {
       tags: ['Cybersecurity', 'AI', 'Security'],
       readTime: '6 min read',
       views: 756,
-      featured: false,
-    },
+      featured: false},
     {
+
       id: '4',
       title: 'Building Successful Micro SaaS Products: Lessons Learned',
       excerpt:
@@ -103,12 +107,13 @@ const Blog: React.FC = () => {
       tags: ['SaaS', 'Business', 'Startup'],
       readTime: '7 min read',
       views: 634,
-      featured: false,
-    },
+      featured: false},
   ];
 
   const filteredPosts = useMemo ( () => {
+
     return blogPosts.filter (post => {
+
       const matchesSearch = post.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
         post.excerpt.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
         post.tags.some (tag =>
@@ -121,11 +126,12 @@ const Blog: React.FC = () => {
   }, [searchTerm, selectedCategory]) ;
 
   const formatDate = (dateString: string) => {
+
     return new Date (dateString) .toLocaleDateString ('en - US', {
+
       year: 'numeric',
       month: 'long',
-      day: 'numeric',
-    }) ;
+      day: 'numeric'}) ;
   };
 
   return (<div role="button" className="min - h-screen bg - gradient - to - br from - blue - 900 via - purple - 900 to - indigo - 900">
@@ -268,6 +274,7 @@ const Blog: React.FC = () => {
                     {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                         onClick={ () => setSelectedCategory (category.id) }
                         className={`w - full text - left px - 3 py - 2 rounded - lg text - sm transition - colors flex items - center justify - between ${
+
                           selectedCategory === category.id
                             ? 'bg - zion - cyan text - zion - blue'
                             : 'text - gray - 300 hover:bg - zion - purple / 20'

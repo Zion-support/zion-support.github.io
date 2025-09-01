@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cloud, Server, Database, Shield, GitBranch, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
 const CloudDevOpsServices = () => {
+
     const cloudServices = [
         {
+
             title: "Cloud Migration & Strategy",
             description: "Seamless migration to cloud platforms with strategic planning and execution.",
             icon: Cloud,
@@ -16,6 +18,7 @@ const CloudDevOpsServices = () => {
             ]
         },
         {
+
             title: "DevOps Implementation",
             description: "Streamline development and operations with modern DevOps practices and tools.",
             icon: GitBranch,
@@ -28,6 +31,7 @@ const CloudDevOpsServices = () => {
             ]
         },
         {
+
             title: "Container Orchestration",
             description: "Manage and scale containerized applications with Kubernetes and Docker.",
             icon: Server,
@@ -40,6 +44,7 @@ const CloudDevOpsServices = () => {
             ]
         },
         {
+
             title: "Database Management",
             description: "Optimize and manage databases in cloud environments for performance and reliability.",
             icon: Database,
@@ -52,6 +57,7 @@ const CloudDevOpsServices = () => {
             ]
         },
         {
+
             title: "Security & Compliance",
             description: "Ensure cloud security and compliance with industry standards and best practices.",
             icon: Shield,
@@ -64,6 +70,7 @@ const CloudDevOpsServices = () => {
             ]
         },
         {
+
             title: "Monitoring & Observability",
             description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",
             icon: Monitor,
@@ -94,16 +101,19 @@ const CloudDevOpsServices = () => {
     ];
     const cloudPlatforms = [
         {
+
             name: "Amazon Web Services",
             description: "Leading cloud platform with comprehensive services",
             features["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"]
         },
         {
+
             name: "Microsoft Azure",
             description: "Enterprise-grade cloud solutions for Windows environments",
             features["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"]
         },
         {
+
             name: "Google Cloud Platform",
             description: "Innovative cloud services with AI and ML capabilities",
             features["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]

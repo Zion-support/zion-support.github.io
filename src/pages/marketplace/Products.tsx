@@ -57,6 +57,7 @@ import { Search,
 import { SEO              } from '../../components/SEO';
 
 export default function MarketplaceProducts(...args: any[]): any {
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -90,6 +91,7 @@ export default function MarketplaceProducts(...args: any[]): any {
   ];
   const products = [
     {
+
       id: 1,
       name: "AI Content Generator Pro",
       description: "Advanced AI-powered content creation tool that generates high-quality articles, blog posts, and marketing copy.",
@@ -131,6 +133,7 @@ export default function MarketplaceProducts(...args: any[]): any {
       lastUpdated: "2025-01-15"
     },
     {
+
       id: 2,
       name: "Quantum Security Suite",
       description: "Next-generation cybersecurity solution powered by quantum-resistant algorithms and AI threat detection.",
@@ -171,6 +174,7 @@ export default function MarketplaceProducts(...args: any[]): any {
       lastUpdated: "2025-01-10"
     },
     {
+
       id: 3,
       name: "Cloud Infrastructure Manager",
       description: "Comprehensive cloud infrastructure management platform with automated scaling and cost optimization.",
@@ -211,6 +215,7 @@ export default function MarketplaceProducts(...args: any[]): any {
       lastUpdated: "2025-01-08"
     },
     {
+
       id: 4,
       name: "Data Analytics Dashboard Pro",
       description: "Advanced business intelligence platform with real-time analytics, custom dashboards, and predictive insights.",
@@ -251,6 +256,7 @@ export default function MarketplaceProducts(...args: any[]): any {
       lastUpdated: "2025-01-05"
     },
     {
+
       id: 5,
       name: "IoT Edge Computing Platform",
       description: "Complete IoT solution with edge computing capabilities, real-time processing, and cloud integration.",
@@ -291,6 +297,7 @@ export default function MarketplaceProducts(...args: any[]): any {
       lastUpdated: "2025-01-12"
     },
     {
+
       id: 6,
       name: "AI Development Toolkit",
       description: "Comprehensive toolkit for AI and machine learning development with pre-trained models and frameworks.",
@@ -332,6 +339,7 @@ export default function MarketplaceProducts(...args: any[]): any {
     }
   ];
   const filteredProducts = products.filter(product => {
+
     const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          product.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -345,7 +353,9 @@ export default function MarketplaceProducts(...args: any[]): any {
     return matchesSearch && matchesCategory && matchesPrice;
   });
   const sortedProducts = [...filteredProducts].sort((a, b) => {
+
     switch (sortBy) {
+
       case 'newest':
         return new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime();
       case 'price-low':
@@ -362,17 +372,21 @@ export default function MarketplaceProducts(...args: any[]): any {
   });
 
   const formatPrice = (price: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, currency: string)              => {
+
     return new Intl.NumberFormat('en-US', {
+
       style: 'currency',
       currency: currency
     }).format(price);
   };
 
   const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
+
     return Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyany5 }, (_, i)              => (
       <Star
         key={i}
         className={`w-4 h-4 ${
+
           i < Math.floor(rating) 
             ? 'text-yellow-400 fill-current' 
             : i < rating 
@@ -432,6 +446,7 @@ export default function MarketplaceProducts(...args: any[]): any {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-200 ${
+
                     viewMode === 'grid'
                       ? 'bg-zion-cyan text-white'
                       : 'text-zion-slate-light hover:text-white'
@@ -442,6 +457,7 @@ export default function MarketplaceProducts(...args: any[]): any {
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-all duration-200 ${
+
                     viewMode === 'list'
                       ? 'bg-zion-cyan text-white'
                       : 'text-zion-slate-light hover:text-white'
@@ -517,6 +533,7 @@ export default function MarketplaceProducts(...args: any[]): any {
                 <div className="flex items-end">
                   <button
                     onClick={() => {
+
                       setSelectedCategory('all');
                       setSelectedPriceRange('all');
                       setSearchQuery('');
@@ -558,6 +575,7 @@ export default function MarketplaceProducts(...args: any[]): any {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue/10 backdrop-blur-sm rounded-xl overflow-hidden border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:scale-105 group ${
+
                     viewMode === 'list' ? 'flex' : ''
                   }`}
                 >
@@ -567,6 +585,7 @@ export default function MarketplaceProducts(...args: any[]): any {
                       src={product.image} 
                       alt={product.name}
                       className={`w-full object-cover group-hover:scale-105 transition-transform duration-300 ${
+
                         viewMode === 'list' ? 'h-full' : 'h-48'
                       }`}
                     />

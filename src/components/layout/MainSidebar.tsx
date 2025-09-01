@@ -2,11 +2,13 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
+
   Menu,
   X,
   ChevronDown,
 =======
 import {
+
   Menu, 
   X, 
   ChevronDown, 
@@ -63,12 +65,14 @@ interface SidebarItem {
   description?: string;
 
 export function MainSidebar() {
+
   const [isOpen, setIsOpen] = useState(false);
 <<<<<<< HEAD
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
   const location = useLocation();
 
   const toggleSection = (section: string) => {
+
     setExpandedSections(prev =>
       prev.includes(section)
         ? prev.filter(s => s !== section)
@@ -331,6 +335,7 @@ export function MainSidebar() {
             <button
               onClick={(: unknown toggleSection(item.name.toLowerCase())}
               className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
+
 <<<<<<< HEAD
                 level === 0
                   ? 'text-slate-300 hover:text-white hover:bg-slate-700/50'

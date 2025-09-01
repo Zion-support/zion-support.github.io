@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { allEnhancedServices } from "../data/enhanced-2025-comprehensive-services";
 const ComprehensiveServicesLanding2025 = () => {
+
     const [selectedIndustry, setSelectedIndustry] = useState('all');
     const industries = [
         { id: 'all', name: 'All Industries', icon: '🏢', description: 'Comprehensive solutions across all sectors' },
@@ -14,9 +15,11 @@ const ComprehensiveServicesLanding2025 = () => {
         { id: 'marketing', name: 'Marketing & Advertising', icon: '📢', description: 'Autonomous campaigns and AI content generation' }
     ];
     const getServicesByIndustry = (industry) => {
+
         if (industry === 'all')
             return allEnhancedServices;
         const industryMap = {
+
   'finance'['FinTech & AI', 'Cybersecurity & Quantum Computing'],
             'healthcare'['Healthcare & AI'],
             'manufacturing'['IoT & Edge Computing', 'Blockchain & Supply Chain'],

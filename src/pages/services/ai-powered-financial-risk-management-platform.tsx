@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
+import {
+
   Shield, 
   TrendingUp, 
   Target, 
@@ -51,38 +52,45 @@ import {
 import { Link } from 'react-router-dom';
 
 export default function AIPoweredFinancialRiskManagementPlatform() {
+
   const features = [
     {
+
       icon: Brain,
       title: "AI-Powered Risk Assessment",
       description: "Advanced machine learning algorithms that analyze market data, financial statements, and economic indicators to predict risk with 95%+ accuracy",
       benefits: ["Real-time risk scoring", "Predictive analytics", "Multi-factor analysis"]
     },
     {
+
       icon: Shield,
       title: "Comprehensive Risk Monitoring",
       description: "24/7 monitoring of portfolio risk, market volatility, and regulatory compliance with instant alerts and notifications",
       benefits: ["Continuous monitoring", "Instant alerts", "Regulatory compliance"]
     },
     {
+
       icon: Target,
       title: "Portfolio Risk Optimization",
       description: "AI-driven portfolio rebalancing recommendations that minimize risk while maximizing returns based on your risk tolerance",
       benefits: ["Risk-adjusted returns", "Portfolio optimization", "Dynamic rebalancing"]
     },
     {
+
       icon: Zap,
       title: "Automated Risk Mitigation",
       description: "Smart triggers and automated actions to reduce exposure when risk thresholds are exceeded",
       benefits: ["Auto-hedging", "Stop-loss management", "Risk reduction"]
     },
     {
+
       icon: AlertTriangle,
       title: "Early Warning System",
       description: "Proactive identification of potential risks before they materialize, giving you time to take preventive action",
       benefits: ["Risk prevention", "Early detection", "Proactive management"]
     },
     {
+
       icon: BarChart3,
       title: "Advanced Analytics & Reporting",
       description: "Comprehensive insights into risk metrics, performance attribution, and regulatory reporting requirements",
@@ -92,6 +100,7 @@ export default function AIPoweredFinancialRiskManagementPlatform() {
 
   const pricingPlans = [
     {
+
       name: "Professional",
       price: "$599",
       period: "/month",
@@ -108,6 +117,7 @@ export default function AIPoweredFinancialRiskManagementPlatform() {
       popular: false
     },
     {
+
       name: "Institutional",
       price: "$1,299",
       period: "/month",
@@ -126,6 +136,7 @@ export default function AIPoweredFinancialRiskManagementPlatform() {
       popular: true
     },
     {
+
       name: "Enterprise",
       price: "$2,999",
       period: "/month",
@@ -147,21 +158,25 @@ export default function AIPoweredFinancialRiskManagementPlatform() {
 
   const useCases = [
     {
+
       industry: "Investment Management",
       description: "Optimize portfolio risk, monitor market exposure, and implement dynamic risk management strategies",
       metrics: ["Risk-adjusted returns", "Portfolio volatility", "Drawdown reduction"]
     },
     {
+
       industry: "Hedge Funds",
       description: "Advanced risk modeling, position sizing, and automated risk controls for complex trading strategies",
       metrics: ["VaR optimization", "Position limits", "Risk-adjusted performance"]
     },
     {
+
       industry: "Private Equity",
       description: "Due diligence risk assessment, portfolio company monitoring, and exit strategy optimization",
       metrics: ["Investment risk scoring", "Portfolio monitoring", "Exit timing optimization"]
     },
     {
+
       industry: "Corporate Treasury",
       description: "Manage currency risk, interest rate exposure, and liquidity risk for corporate financial operations",
       metrics: ["FX risk management", "Interest rate hedging", "Liquidity optimization"]
@@ -170,21 +185,25 @@ export default function AIPoweredFinancialRiskManagementPlatform() {
 
   const benefits = [
     {
+
       icon: TrendingUp,
       title: "Improve Risk-Adjusted Returns by 20-40%",
       description: "AI-optimized risk management significantly improves portfolio performance while reducing volatility"
     },
     {
+
       icon: Shield,
       title: "Reduce Portfolio Drawdowns",
       description: "Proactive risk management helps minimize losses during market downturns and volatility spikes"
     },
     {
+
       icon: DollarSign,
       title: "Lower Capital Requirements",
       description: "Better risk management allows for more efficient capital allocation and reduced regulatory capital needs"
     },
     {
+
       icon: Target,
       title: "Enhanced Compliance & Reporting",
       description: "Automated regulatory reporting and compliance monitoring reduce operational risk and audit costs"
@@ -193,31 +212,37 @@ export default function AIPoweredFinancialRiskManagementPlatform() {
 
   const riskMetrics = [
     {
+
       icon: Calculator,
       title: "Value at Risk (VaR)",
       description: "Advanced VaR calculations with multiple confidence levels and time horizons"
     },
     {
+
       icon: TrendingUp,
       title: "Expected Shortfall",
       description: "Tail risk analysis and extreme loss probability assessment"
     },
     {
+
       icon: Target,
       title: "Sharpe Ratio Optimization",
       description: "Risk-adjusted return optimization and performance attribution analysis"
     },
     {
+
       icon: AlertCircle,
       title: "Stress Testing",
       description: "Scenario analysis and stress testing for various market conditions"
     },
     {
+
       icon: Lock,
       title: "Regulatory Compliance",
       description: "Basel III, Solvency II, and other regulatory framework compliance"
     },
     {
+
       icon: Users,
       title: "Risk Governance",
       description: "Risk appetite framework and governance structure implementation"
@@ -426,6 +451,7 @@ export default function AIPoweredFinancialRiskManagementPlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-2xl p-8 ${
+
                   plan.popular 
                     ? 'border-green-500 shadow-lg shadow-green-500/25' 
                     : 'border-slate-700'
@@ -458,6 +484,7 @@ export default function AIPoweredFinancialRiskManagementPlatform() {
                 </ul>
 
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+
                   plan.popular
                     ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'

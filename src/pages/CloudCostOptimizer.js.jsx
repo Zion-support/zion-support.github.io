@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Check, Cloud, BarChart3, Globe, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function CloudCostOptimizer() {
+
     const features = [
         "AI-driven cost optimization algorithms",
         "Multi-cloud support (AWS, Azure, GCP)",
@@ -22,6 +23,7 @@ export default function CloudCostOptimizer() {
     ];
     const pricingPlans = [
         {
+
             name: "Starter",
             price: "$49",
             period: "/month",
@@ -37,6 +39,7 @@ export default function CloudCostOptimizer() {
             popular: false
         },
         {
+
             name: "Professional",
             price: "$149",
             period: "/month",
@@ -54,6 +57,7 @@ export default function CloudCostOptimizer() {
             popular: true
         },
         {
+
             name: "Enterprise",
             price: "$399",
             period: "/month",
@@ -75,21 +79,25 @@ export default function CloudCostOptimizer() {
     ];
     const optimizationServices = [
         {
+
             title: "Cost Analysis & Monitoring",
             description: "Real-time visibility into your cloud spending with detailed breakdowns and trend analysis.",
             icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>
         },
         {
+
             title: "AI-Powered Optimization",
             description: "Machine learning algorithms that continuously optimize your cloud resources for maximum cost efficiency.",
             icon: <BarChart3 className="h-8 w-8 text-zion-purple"/>
         },
         {
+
             title: "Multi-Cloud Management",
             description: "Unified cost optimization across AWS, Azure, and Google Cloud Platform.",
             icon: <Globe className="h-8 w-8 text-zion-cyan"/>
         },
         {
+
             title: "Automated Actions",
             description: "Automatically implement cost-saving measures with your approval and oversight.",
             icon: <Settings className="h-8 w-8 text-zion-purple"/>
@@ -107,21 +115,25 @@ export default function CloudCostOptimizer() {
     ];
     const costSavings = [
         {
+
             metric: "Average Cost Reduction",
             value: "40%",
             description: "Typical savings achieved by our customers"
         },
         {
+
             metric: "ROI Timeline",
             value: "2-3 months",
             description: "Time to see positive return on investment"
         },
         {
+
             metric: "Resource Utilization",
             value: "85%",
             description: "Average improvement in resource efficiency"
         },
         {
+
             metric: "Cost Visibility",
             value: "100%",
             description: "Complete transparency into cloud spending"

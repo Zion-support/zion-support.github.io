@@ -4,20 +4,21 @@ import { useQuoteWizard, ServiceItem } from '../useQuoteWizard';
 
 // Mock Sentry's captureException
 jest.mock('@/utils/sentry', () => ({
-  captureException: jest.fn(),
-}));
+
+  captureException: jest.fn()}));
 
 const mockFetcher = jest.fn();
 
 // Helper to wrap hook with SWRConfig and a clear cache
 const renderUseQuoteWizard = (category: string) => {
+
   return renderHook(() => useQuoteWizard(category), {
+
     wrapper: ({ children }) => (
       <SWRConfig value={{ provider: () => new Map(), fetcher: mockFetcher }}>
         {children}
       </SWRConfig>
-    ),
-  });
+    )});
 };
 
 const mockServiceItems: ServiceItem[] = [
@@ -26,12 +27,15 @@ const mockServiceItems: ServiceItem[] = [
 ];
 
 describe('useQuoteWizard', () => {
+
   beforeEach(() => {
+
     jest.clearAllMocks();
     mockFetcher.mockReset(); // Reset fetcher mock specifically
   });
 
   test('should fetch data successfully and return it', async () => {
+
     mockFetcher.mockResolvedValue(mockServiceItems);
 
     const { result } = renderUseQuoteWizard('services');
@@ -47,6 +51,7 @@ describe('useQuoteWizard', () => {
   });
 
   test('should return empty array for successful fetch with no data', async () => {
+
     mockFetcher.mockResolvedValue([]);
     const { result } = renderUseQuoteWizard('talent');
 
@@ -60,6 +65,7 @@ describe('useQuoteWizard', () => {
   });
 
   test('should handle fetch error and set error state', async () => {
+
     const mockError = new Error('Failed to fetch');
     mockFetcher.mockRejectedValue(mockError); // First call fails
 
@@ -77,6 +83,7 @@ describe('useQuoteWizard', () => {
     // Wait for loading to finish and error to be set
     // SWR will retry, so error might not be set immediately
     await waitFor(() => {
+
       expect(result.current.isLoading).toBe(false);
     }, { timeout: 5000 }); // Increased timeout for retries
 
@@ -90,27 +97,31 @@ describe('useQuoteWizard', () => {
   });
 
   describe('Retry Logic with Fake Timers', () => {
+
     beforeEach(() => {
+
       jest.useFakeTimers();
     });
 
     afterEach(() => {
+
       jest.runOnlyPendingTimers();
       jest.useRealTimers();
     });
 
     test('should retry fetching up to 3 times on error then stop', async () => {
+
       const mockError = new Error('Network Error');
       // Mock fetch to consistently fail
       mockFetcher.mockRejectedValue(mockError);
 
       const { result } = renderHook(() => useQuoteWizard('services'), {
+
         wrapper: ({ children }) => (
           <SWRConfig value={{ provider: () => new Map(), fetcher: mockFetcher, dedupingInterval: 0 }}>
             {children}
           </SWRConfig>
-        ),
-      });
+        )});
 
       // Initial state
       expect(result.current.isLoading).toBe(true);
@@ -118,24 +129,28 @@ describe('useQuoteWizard', () => {
 
       // Wait for first error and retry attempt scheduling
       await act(async () => {
+
         jest.advanceTimersByTime(1000); // 1st retry delay (1s)
       });
        await waitFor(() => expect(mockFetcher).toHaveBeenCalledTimes(2));
 
 
       await act(async () => {
+
         jest.advanceTimersByTime(2000); // 2nd retry delay (2s)
       });
       await waitFor(() => expect(mockFetcher).toHaveBeenCalledTimes(3));
 
 
       await act(async () => {
+
         jest.advanceTimersByTime(4000); // 3rd retry delay (4s)
       });
       await waitFor(() => expect(mockFetcher).toHaveBeenCalledTimes(4));
 
       // After 3 retries (total 4 calls), it should stop
       await act(async () => {
+
         jest.advanceTimersByTime(8000); // Any further time
       });
       expect(mockFetcher).toHaveBeenCalledTimes(4);
@@ -148,18 +163,19 @@ describe('useQuoteWizard', () => {
     });
 
     test('should not retry if error happens after retryCount >= 3', async () => {
+
         const mockError = new Error('Persistent Network Error');
         // Let SWR handle retry counts. We just keep failing the fetcher.
         mockFetcher.mockRejectedValue(mockError);
 
         const { result } = renderHook(() => useQuoteWizard('services'), {
+
           wrapper: ({ children }) => (
             // Disable SWR's dedupingInterval for tests to ensure fetcher is called as expected
             <SWRConfig value={{ provider: () => new Map(), fetcher: mockFetcher, dedupingInterval: 0 }}>
               {children}
             </SWRConfig>
-          ),
-        });
+          )});
 
         // Initial call
         expect(result.current.isLoading).toBe(true);

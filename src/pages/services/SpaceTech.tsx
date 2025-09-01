@@ -2,8 +2,10 @@ import React from 'react.ts';
 import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database               } from 'lucide-react.ts';
 
 const SpaceTech = () => {
+
   const spaceServices = [
     {
+
       title: "Satellite Technology",
       description: "Advanced satellite design, development, and deployment solutions.",
       price: "From $50,000/project",
@@ -11,6 +13,7 @@ const SpaceTech = () => {
       icon: Satellite
     },
     {
+
       title: "Space Data Analytics",
       description: "Comprehensive analysis of space-based data and observations.",
       price: "From $25,000/month",
@@ -18,6 +21,7 @@ const SpaceTech = () => {
       icon: BarChart3
     },
     {
+
       title: "Space Infrastructure",
       description: "Ground-based space infrastructure and support systems.",
       price: "From $35,000/month",
@@ -28,18 +32,21 @@ const SpaceTech = () => {
 
   const spaceTechnologies = [
     {
+
       name: "Satellite Communications",
       description: "Global communication networks and data transmission",
       icon: Globe,
       features: ["Global coverage", "High-speed data", "Reliable connectivity", "Low latency"]
     },
     {
+
       name: "Remote Sensing",
       description: "Earth observation and environmental monitoring",
       icon: Activity,
       features: ["Environmental monitoring", "Climate data", "Resource mapping", "Disaster response"]
     },
     {
+
       features: ["Threat detection", "Secure communications", "System protection", "Compliance"];
     };
   ];
@@ -85,16 +92,19 @@ const SpaceTech = () => {
 
   const services = [
     {
+
       icon: Rocket,
       title: 'Launch Services',
       description: 'Satellite launch coordination and mission planning'
     },
     {
+
       icon: Planet,
       title: 'Earth Observation',
       description: 'Satellite imagery and environmental monitoring'
     },
     {
+
       icon: Star,
       title: 'Space Research',
       description: 'Scientific research and space exploration support';
@@ -108,14 +118,17 @@ const SpaceTech = () => {
 
   const useCases = [
     {
+
       industry: 'Telecommunications',
       description: 'Global satellite communications and internet services'
     },
     {
+
       industry: 'Environmental Monitoring',
       description: 'Climate change tracking and natural disaster monitoring'
     },
     {
+
       industry: 'Agriculture',;
       description: 'Crop monitoring and precision agriculture support';
     },;
@@ -133,6 +146,7 @@ const SpaceTech = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -143,6 +157,7 @@ const SpaceTech = () => {
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0 
 
@@ -184,6 +199,7 @@ const SpaceTech = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -194,6 +210,7 @@ const SpaceTech = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -220,6 +237,7 @@ const SpaceTech = () => {
               <motion.div
                 key={index}
                 initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -230,6 +248,7 @@ const SpaceTech = () => {
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -240,6 +259,7 @@ const SpaceTech = () => {
 
 }}
                 transition = {
+
   { duration: 0.5,
   delay: index * 0.1 
 
@@ -276,6 +296,7 @@ const SpaceTech = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -286,6 +307,7 @@ const SpaceTech = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 
@@ -394,6 +416,7 @@ const SpaceTech = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 20 
 
@@ -404,6 +427,7 @@ const SpaceTech = () => {
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0 
 

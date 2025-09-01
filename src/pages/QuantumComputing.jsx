@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default function QuantumComputing () {
+
 import {
+
 import { motion } from 'framer - motion';
 
   Atom,
@@ -38,6 +40,7 @@ import { motion } from 'framer - motion';
 
 const quantumTechnologies = [
   {
+
     name: "Superconducting Qubits",
     description: "Josephson junction - based qubits for scalable quantum computing",
     icon: Atom,
@@ -45,6 +48,7 @@ const quantumTechnologies = [
     reliability: "High"
   },
   {
+
     name: "Trapped Ions",
     description: "Ion - based qubits with long coherence times and high fidelity",
     icon: Atom,
@@ -52,6 +56,7 @@ const quantumTechnologies = [
     reliability: "Critical"
   },
   {
+
     name: "Topological Qubits",
     description: "Fault - tolerant qubits based on topological properties",
     icon: Network,
@@ -59,6 +64,7 @@ const quantumTechnologies = [
     reliability: "Experimental"
   },
   {
+
     name: "Photonic Qubits",
     description: "Light - based qubits for quantum communication and networking",
     icon: Lightbulb,
@@ -69,6 +75,7 @@ const quantumTechnologies = [
 
 const successStories = [
   {
+
     id: 1,
     comp: "Pharmaceutical Research Lab",
     industry: "Healthcare",
@@ -78,6 +85,7 @@ const successStories = [
     logo: "PRL"
   },
   {
+
     id: 2,
     comp: "Financial Services Corp",
     industry: "Finance",
@@ -87,6 +95,7 @@ const successStories = [
     logo: "FSC"
   },
   {
+
     id: 3,
     comp: "Logistics Optimization",
     industry: "Transportation",
@@ -99,6 +108,7 @@ const successStories = [
 
 const processSteps = [
   {
+
     step: 1,
     title: "Quantum Assessment",
     description: "Evaluate quantum computing requirements and feasibility",
@@ -106,6 +116,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
   },
   {
+
     step: 2,
     title: "Algorithm Design",
     description: "Design quantum algorithms and quantum circuits",
@@ -113,6 +124,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
   },
   {
+
     step: 3,
     title: "Implementation",
     description: "Implement quantum solutions and integrate with classical systems",
@@ -120,6 +132,7 @@ const processSteps = [
     duration: "16 - 56 weeks"
   },
   {
+
     step: 4,
     title: "Testing & Validation",
     description: "Test quantum solutions and validate performance",
@@ -130,24 +143,28 @@ const processSteps = [
 
 const quantumAdvantages = [
   {
+
     title: "Exponential Speedup",
     description: "Certain problems can be solved exponentially faster than classical computers",
     icon: Zap,
     examples["Factoring large numbers", "Database search", "Quantum simulation"]
   },
   {
+
     title: "Quantum Entanglement",
     description: "Quantum correlations enable new computational paradigms",
     icon: Network,
     examples["Quantum teleportation", "Superdense coding", "Quantum key distribution"]
   },
   {
+
     title: "Quantum Parallelism",
     description: "Quantum superposition allows parallel computation of multiple states",
     icon: Brain,
     examples["Quantum Fourier transform", "Grover's algorithm", "Quantum walks"]
   },
   {
+
     title: "Quantum Tunneling",
     description: "Quantum effects enable optimization through energy landscape exploration",
     icon: Rocket,
@@ -176,11 +193,13 @@ const quantumAdvantages = [
         <div className="container - responsive relative z - 10">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             animate = {
+
   { opacity: 1,
   y: 0
 
@@ -190,16 +209,19 @@ const quantumAdvantages = [
 
             <motion.div
               initial = {
+
   { opacity: 0,
   scale: 0.8
 
 }}
               animate = {
+
   { opacity: 1,
   scale: 1
 
 }}
               transition = {
+
   { duration: 0.8,
   delay: 0.2
 
@@ -241,11 +263,13 @@ const quantumAdvantages = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -263,16 +287,19 @@ const quantumAdvantages = [
             {quantumAdvantages.map ( (advantage, index) => (<motion.div
                 key={advantage.title}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -303,11 +330,13 @@ const quantumAdvantages = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -325,16 +354,19 @@ const quantumAdvantages = [
             {quantumTechnologies.map ( (technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -350,6 +382,7 @@ const quantumAdvantages = [
                 <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
 
                 <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
+
                   technology.reliability === 'Critical'
                     ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
                     : technology.reliability === 'High'
@@ -368,11 +401,13 @@ const quantumAdvantages = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -390,16 +425,19 @@ const quantumAdvantages = [
             {processSteps.map ( (step, index) => (<motion.div
                 key={step.step}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -430,11 +468,13 @@ const quantumAdvantages = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -454,6 +494,7 @@ const quantumAdvantages = [
                 key={category}
                 onClick={ () => setSelectedCategory (category) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedCategory === category
                     ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
                     : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
@@ -467,16 +508,19 @@ const quantumAdvantages = [
             {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -531,11 +575,13 @@ const quantumAdvantages = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 
@@ -553,16 +599,19 @@ const quantumAdvantages = [
             {successStories.map ( (story, index) => (<motion.div
                 key={story.id}
                 initial = {
+
   { opacity: 0,
   y: 30
 
 }}
                 whileInView = {
+
   { opacity: 1,
   y: 0
 
 }}
                 transition = {
+
   { duration: 0.6,
   delay: index * 0.1
 
@@ -608,11 +657,13 @@ const quantumAdvantages = [
         <div className="container - responsive">
           <motion.div
             initial = {
+
   { opacity: 0,
   y: 30
 
 }}
             whileInView = {
+
   { opacity: 1,
   y: 0
 

@@ -1,4 +1,5 @@
 import {
+
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer - motion';
 =======
@@ -52,6 +53,7 @@ interface AnalyticsData {
       cls: number}}}
 
 interface EnhancedAnalyticsProps {
+
   // Add your props here
 
 
@@ -78,6 +80,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   
   // Initialize analytics
   useEffect ( () => {
+
     if (!enabled) return;
 
     // Initialize Google Analytics (if tracking ID provided)
@@ -96,9 +99,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       }
       gtag('js', new Date());
       gtag('config', trackingId, {
+
 =======
       }'
       gtag('js', new Date());'      gtag('config', trackingId, {
+
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         page_title: document.title,
@@ -126,15 +131,18 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone});
 
     return : unknown {
+
       if (script) {
 
         document.head.removeChild(script)}
     }}, [enabled, trackingId]) ;
   // Track page changes
   useEffect ( () => {
+
     if (!enabled) return;
 
     const handleRouteChange = (...args: unknown[]): unknown => {
+
       const newPage = window.location.pathname;      if (newPage !== currentPage) {
 
         // Track page view'
@@ -165,6 +173,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       window.removeEventListener('popstate', handleRouteChange)}}, [enabled, currentPage, timeOnPage]) ;
   // Track user interactions
   useEffect ( () => {
+
     if (!enabled) return;
 
     
@@ -172,6 +181,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
 =======
       setUserInteractions(prev => prev + 1);'      trackEvent('user_interaction', {
+
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         interaction_type: 'click',
@@ -226,6 +236,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     }}, [enabled, currentPage, scrollDepth]) ;
   // Track performance metrics
   useEffect ( () => {
+
     if (!enabled) return;
 
     
@@ -236,8 +247,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 <<<<<<< HEAD
 
         trackEvent('performance_metrics', {
+
 =======
 '        trackEvent('performance_metrics', {
+
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
           load_time: loadTime,
@@ -255,14 +268,17 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   }, [enabled, currentPage]) ;
   // Track session end
   useEffect ( () => {
+
     if (!enabled) return;
 
     
 <<<<<<< HEAD
 
       trackEvent('session_end', {
+
 =======
 '      trackEvent('session_end', {
+
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         session_duration: sessionDuration,
@@ -307,11 +323,12 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             timeOnPage: Math.max(prev.userEngagement.timeOnPage, timeOnPage),
             interactions: userInteractions}}});
 
-      // console.log('Analytics Event:', eventData)},
+      // // // // console.log('Analytics Event:', eventData)},
     [enabled, currentPage, scrollDepth, timeOnPage, userInteractions]
   );
   // Initialize mock data for dashboard
   useEffect ( () => {
+
     if (showDashboard) {
 
       setAnalyticsData({

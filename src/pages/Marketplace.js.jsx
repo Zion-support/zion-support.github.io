@@ -10,6 +10,7 @@ import { generateRandomListing } from "@/utils/generateRandomListing";
 import { useNavigate } from "react-router-dom";
 
 export default function Marketplace() {
+
     const navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedProductTypes, setSelectedProductTypes] = useState([]);
@@ -21,39 +22,51 @@ export default function Marketplace() {
     const [view, setView] = useState(() => localStorage.getItem('marketplaceView') || 'grid');
     // Automatically append a new listing every 2 minutes
     useEffect(() => {
+
         const interval = setInterval(() => {
+
             setListings(prev => [...prev, generateRandomListing()])}, 120000); // 2 minutes
         return () => clearInterval(interval)}, []);
     // Filter options are now imported from marketplaceData
     useEffect(() => {
+
         setIsLoading(true);
         const timeout = setTimeout(() => setIsLoading(false), 300);
         return () => clearTimeout(timeout)}, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
     useEffect(() => {
+
         localStorage.setItem('marketplaceView', view)}, [view]);
     // Filter listings based on selected filters
     const filteredListings = listings.filter(listing => {
+
         // Search filter
         if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
             !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
             !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
+
             return false}
         // Product type filter
         if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
+
             return false}
         // Location filter
         if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {
+
             return false}
         // Availability filter
         if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {
+
             return false}
         // Rating filter
         if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {
+
             return false}
         return true});
     const handleFilterChange = (filterType, value) => {
-        console.log(`Filter changed: ${filterType} = ${value}`);
+
+        // console.log(`Filter changed: ${filterType} = ${value}`);
         switch (filterType) {
+
             case 'productTypes':
                 setSelectedProductTypes(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
                 break;
@@ -65,6 +78,7 @@ export default function Marketplace() {
                 break}
     };
     const clearAllFilters = () => {
+
         setSearchQuery("");
         setSelectedProductTypes([]);
         setSelectedLocations([]);
@@ -72,15 +86,20 @@ export default function Marketplace() {
         setSelectedRating(null)};
     // Handle requesting a quote
     const handleRequestQuote = (listingId) => {
+
         const listing = listings.find(item => item.id === listingId);
         if (listing) {
+
                     // Quote request functionality would go here
-        console.log(`Quote requested for ${listing.title}`);
+        // console.log(`Quote requested for ${listing.title}`);
             // Navigate to the quote request page with the listing information
             router("/request-quote", {
+
                 state: {
+
                     serviceType: listing.category,
                     specificItem: {
+
                         id: listing.id,
                         title: listing.title,
                         category: listing.category,
@@ -120,7 +139,9 @@ export default function Marketplace() {
           {/* Sidebar Filters */}
           <div className="lg:col-span-1">
             <FilterSidebar filters = {
+
   {
+
             selectedProductTypes,
             selectedLocations,
             selectedAvailability,

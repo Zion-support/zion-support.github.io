@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
+
   Search, 
   X, 
   Filter, 
@@ -52,6 +53,7 @@ import {
 } from 'lucide-react';
 
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;
@@ -66,6 +68,7 @@ interface SearchResult {
 }
 
 interface SearchFilter {
+
   type: string[];
   category: string[];
   tags: string[];
@@ -74,11 +77,13 @@ interface SearchFilter {
 }
 
 export function AdvancedSearch() {
+
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [filters, setFilters] = useState<SearchFilter>({
+
     type: [],
     category: [],
     tags: [],
@@ -96,6 +101,7 @@ export function AdvancedSearch() {
   // Mock data for demonstration
   const mockResults: SearchResult[] = [
     {
+
       id: '1',
       title: 'AI Supply Chain Optimization',
       description: 'Revolutionary AI-powered supply chain management solution that reduces costs by 40% and improves efficiency.',
@@ -109,6 +115,7 @@ export function AdvancedSearch() {
       rating: 4.8
     },
     {
+
       id: '2',
       title: 'Quantum Computing Integration',
       description: 'Next-generation quantum computing solutions for complex problem-solving and data analysis.',
@@ -122,6 +129,7 @@ export function AdvancedSearch() {
       rating: 4.9
     },
     {
+
       id: '3',
       title: 'Cybersecurity AI Platform',
       description: 'Intelligent cybersecurity platform with real-time threat detection and automated response.',
@@ -135,6 +143,7 @@ export function AdvancedSearch() {
       rating: 4.7
     },
     {
+
       id: '4',
       title: 'Digital Transformation Guide',
       description: 'Comprehensive guide to digital transformation strategies and implementation.',
@@ -164,19 +173,24 @@ export function AdvancedSearch() {
 
   // Handle search input changes
   const handleSearchChange = useCallback((value: string) => {
+
     setQuery(value);
     
     // Clear previous timeout
     if (searchTimeoutRef.current) {
+
       clearTimeout(searchTimeoutRef.current);
     }
 
     // Set new timeout for search
     if (value.trim().length > 2) {
+
       searchTimeoutRef.current = setTimeout(() => {
+
         performSearch(value);
       }, 300);
     } else {
+
       setResults([]);
       setSuggestions([]);
     }
@@ -184,14 +198,17 @@ export function AdvancedSearch() {
 
   // Perform search
   const performSearch = useCallback(async (searchQuery: string) => {
+
     setIsSearching(true);
     
     try {
+
       // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 500));
       
       // Filter results based on query and filters
       let filteredResults = mockResults.filter(result => {
+
         const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -206,7 +223,9 @@ export function AdvancedSearch() {
 
       // Sort results
       filteredResults.sort((a, b) => {
+
         switch (filters.sortBy) {
+
           case 'relevance':
             return b.relevance - a.relevance;
           case 'date':
@@ -223,29 +242,35 @@ export function AdvancedSearch() {
       setResults(filteredResults);
       
       // Generate suggestions
-      const newSuggestions = categories
+      const newSuggestions = categories;
         .filter(cat => cat.toLowerCase().includes(searchQuery.toLowerCase()))
         .slice(0, 5);
       setSuggestions(newSuggestions);
       
       // Add to recent searches
       if (searchQuery.trim()) {
+
         setRecentSearches(prev => {
+
           const filtered = prev.filter(s => s !== searchQuery);
           return [searchQuery, ...filtered].slice(0, 5);
         });
       }
       
     } catch (error) {
-      console.error('Search failed:', error);
+
+      // // // console.error('Search failed:', error);
     } finally {
+
       setIsSearching(false);
     }
   }, [filters]);
 
   // Handle filter changes
   const handleFilterChange = useCallback((filterType: keyof SearchFilter, value: any) => {
+
     setFilters(prev => ({
+
       ...prev,
       [filterType]: value
     }));
@@ -253,7 +278,9 @@ export function AdvancedSearch() {
 
   // Clear all filters
   const clearFilters = useCallback(() => {
+
     setFilters({
+
       type: [],
       category: [],
       tags: [],
@@ -264,22 +291,27 @@ export function AdvancedSearch() {
 
   // Handle search submission
   const handleSearchSubmit = useCallback((e: React.FormEvent) => {
+
     e.preventDefault();
     if (query.trim()) {
+
       performSearch(query);
     }
   }, [query, performSearch]);
 
   // Open search modal
   const openSearch = useCallback(() => {
+
     setIsOpen(true);
     setTimeout(() => {
+
       searchInputRef.current?.focus();
     }, 100);
   }, []);
 
   // Close search modal
   const closeSearch = useCallback(() => {
+
     setIsOpen(false);
     setQuery('');
     setResults([]);
@@ -288,12 +320,16 @@ export function AdvancedSearch() {
 
   // Keyboard shortcuts
   useEffect(() => {
+
     const handleKeyDown = (e: KeyboardEvent) => {
+
       if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
+
         e.preventDefault();
         openSearch();
       }
       if (e.key === 'Escape' && isOpen) {
+
         closeSearch();
       }
     };
@@ -304,6 +340,7 @@ export function AdvancedSearch() {
 
   // Load popular searches
   useEffect(() => {
+
     setPopularSearches([
       'AI Solutions', 'Cybersecurity', 'Digital Transformation',
       'Cloud Computing', 'Machine Learning', 'Quantum Computing'
@@ -410,12 +447,14 @@ export function AdvancedSearch() {
                                 <button
                                   key={type.value}
                                   onClick={() => {
+
                                     const newTypes = filters.type.includes(type.value)
                                       ? filters.type.filter(t => t !== type.value)
                                       : [...filters.type, type.value];
                                     handleFilterChange('type', newTypes);
                                   }}
                                   className={`flex items-center space-x-2 px-3 py-2 rounded-lg border transition-all duration-300 ${
+
                                     filters.type.includes(type.value)
                                       ? 'bg-zion-cyan text-zion-blue-dark border-zion-cyan'
                                       : 'bg-zion-blue/10 border-zion-purple/30 text-zion-slate-light hover:bg-zion-blue/20'
@@ -436,12 +475,14 @@ export function AdvancedSearch() {
                                 <button
                                   key={category}
                                   onClick={() => {
+
                                     const newCategories = filters.category.includes(category)
                                       ? filters.category.filter(c => c !== category)
                                       : [...filters.category, category];
                                     handleFilterChange('category', newCategories);
                                   }}
                                   className={`px-3 py-2 rounded-lg border transition-all duration-300 ${
+
                                     filters.category.includes(category)
                                       ? 'bg-zion-cyan text-zion-blue-dark border-zion-cyan'
                                       : 'bg-zion-blue/10 border-zion-purple/30 text-zion-slate-light hover:bg-zion-blue/20'

@@ -15,7 +15,9 @@ import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+
   const {
+
     user, setUser,
     isLoading, setIsLoading,
     onboardingStep, setOnboardingStep,
@@ -29,6 +31,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep);
 
   const {
+
     login: loginImpl,
     signup: signupImpl,
     logout,
@@ -42,19 +45,22 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   // Wrapper for login to match the AuthContextType interface
   const login = async (email: string, password: string) => {
+
     const { res, data } = await loginUser(email, password); // Calls /api/auth/login
 
     // data will have { error: "message", code: "ERROR_CODE" } from the API if status !== 200
     // data will have { user, accessToken, refreshToken } from the API if status === 200
 
     if (res.status === 200) {
+
       // Successful API call
       setTokens({ accessToken: data.accessToken, refreshToken: data.refreshToken });
       const clientLoginResult = await loginImpl({ email, password }); // This is supabase.auth.signInWithPassword client-side
 
       if (clientLoginResult?.error) {
+
         // loginImpl (useEmailAuth.login) already shows a toast.
-        console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
+        // // // console.error("Client-side login after server confirmation failed:", clientLoginResult.error);
         return { error: (clientLoginResult.error as any)?.message || "Client-side login failed." };
       }
 
@@ -83,22 +89,26 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     // Add any other specific error code handling here if needed
 
     toast({
+
       title: "Login Failed",
       description: toastMessage,
-      variant: "destructive",
-    });
+      variant: "destructive"});
     return { error: toastMessage };
   };
 
   // Refactored signup method
   const signup = async (name: string, email: string, password: string) => {
+
     setIsLoading(true);
     try {
+
       const { res, data } = await registerUser(name, email, password);
 
       if (!res.ok) {
+
         // Handle API errors (e.g., 400, 409, 500) from /api/auth/register
         toast({
+
           title: "Signup Failed",
           description: data?.message || 'An unexpected error occurred.',
           variant: "destructive"
@@ -108,7 +118,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       }
 
       if (data?.emailVerificationRequired) {
+
         toast({
+
           title: "Signup Successful",
           description: "Please check your email to verify your account."
         });
@@ -118,6 +130,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         setIsLoading(false);
         return { error: null, emailVerificationRequired: true };
       } else if (data?.session && data?.user) {
+
         // Auto-confirmed: API has set the cookie, now set client-side state
         // The API (/api/auth/register) should have set the HttpOnly cookie.
         // Here, we update the client-side state (React context, Supabase client session)
@@ -125,13 +138,15 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         // Set Supabase client session - this will trigger onAuthStateChange
         // which should then fetch the profile and update the user state.
         const { error: sessionError } = await supabase.auth.setSession({
+
           access_token: data.session.access_token,
-          refresh_token: data.session.refresh_token,
-        });
+          refresh_token: data.session.refresh_token});
 
         if (sessionError) {
-          console.error("Error setting Supabase session:", sessionError);
+
+          // // // console.error("Error setting Supabase session:", sessionError);
           toast({
+
             title: "Signup Error",
             description: "Failed to initialize session. Please try logging in.",
             variant: "destructive"
@@ -156,8 +171,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         setIsLoading(false);
         return { error: null, emailVerificationRequired: false };
       } else {
+
         // Fallback for unexpected successful response structure
         toast({
+
           title: "Signup Error",
           description: "Unexpected response from server.",
           variant: "destructive"
@@ -166,37 +183,44 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         return { error: "Unexpected response from server.", emailVerificationRequired: false };
       }
     } catch (err: any) {
-      console.error("Signup exception:", err);
+
+      // // // console.error("Signup exception:", err);
       toast({
+
         title: "Signup Failed",
         description: err.message || "An unexpected error occurred during signup.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
       setIsLoading(false);
       return { error: err.message || "Signup failed", emailVerificationRequired: false };
     }
   };
 
   useEffect(() => {
+
     // Clean up any potential stale auth state before setting up listeners
     cleanupAuthState();
     
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
+
         if (session?.user) {
+
           try {
+
             const { data: profile, error } = await getFromProfiles()
               .select('*')
               .eq('id', session.user.id)
               .single();
 
             if (profile) {
+
               const mappedUser = mapProfileToUser(session.user, profile);
               setUser(mappedUser);
               setAvatarUrl(mappedUser.avatarUrl || null);
               
               // Show welcome toast when user logs in
               if (event === 'SIGNED_IN') {
+
                 handleSignedIn(mappedUser);
                 const params = new URLSearchParams(location.search);
                 const nextFromUrl = params.get('redirectTo') || params.get('next'); // Renamed to avoid conflict
@@ -204,9 +228,11 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                 const nextPathFromStorage = safeStorage.getItem('nextPath');
 
                 if (nextPathFromStorage) {
+
                   safeStorage.removeItem('nextPath');
                   navigate(decodeURIComponent(nextPathFromStorage), { replace: true });
                 } else if (location.state?.pendingAction === 'buyNow' && location.state?.pendingActionArgs) {
+
                   const { id, title, price } = location.state.pendingActionArgs;
                   dispatch(addItem({ id, title, price }));
                   // Clear pending action from state first
@@ -214,24 +240,29 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                   // Navigate to checkout
                   navigate('/checkout', { replace: true });
                 } else if (nextFromUrl) {
+
                   navigate(decodeURIComponent(nextFromUrl), { replace: true });
                 }
               }
             } else if (error) {
-              console.error("Error fetching user profile:", error);
+
+              // // // console.error("Error fetching user profile:", error);
               setUser(null);
             }
           } catch (error) {
-            console.error("Error fetching user profile:", error);
+
+            // // // console.error("Error fetching user profile:", error);
             setUser(null);
             setAvatarUrl(null);
           }
         } else {
+
           setUser(false);
           setAvatarUrl(null);
           
           // Show logout toast when user logs out
           if (event === 'SIGNED_OUT') {
+
             handleSignedOut();
           }
         }
@@ -240,6 +271,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     );
 
     return () => {
+
       subscription.unsubscribe();
     };
   }, [
@@ -258,6 +290,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   ]);
 
   const authContextValue = {
+
     user,
     isLoading,
     isAuthenticated: !!user,

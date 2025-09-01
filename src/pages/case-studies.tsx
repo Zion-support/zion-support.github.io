@@ -2,6 +2,7 @@ import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export default CaseStudies;
 import {
+
 import { motion } from 'framer - motion';
 
   CheckCircle,
@@ -17,11 +18,11 @@ import { motion } from 'framer - motion';
   Shield,
   Cloud,
   Brain,
-  Globe,
-} from 'lucide - react';
+  Globe} from 'lucide - react';
 
 const caseStudies = [
   {
+
     id: 1,
     title: 'AI - Powered Customer Service Transformation',
     comp: 'TechCorp Solutions',
@@ -35,17 +36,17 @@ const caseStudies = [
       '24 / 7 automated support',
     ],
     metrics: {
+
       costReduction: '40%',
       responseTime: '85% faster',
       satisfaction: '95%',
-      availability: '24 / 7',
-    },
+      availability: '24 / 7'},
     technologies: ['AI / ML', 'NLP', 'Cloud Computing', 'API Integration'],
     duration: '6 months',
     roi: '300%',
-    image: '/images / case - study - 1.jpg',
-  },
+    image: '/images / case - study - 1.jpg'},
   {
+
     id: 2,
     title: 'Cloud Migration & DevOps Automation',
     comp: 'InnovateLab Inc',
@@ -59,17 +60,17 @@ const caseStudies = [
       'Scalable infrastructure',
     ],
     metrics: {
+
       uptime: '99.9%',
       deploymentTime: '60% faster',
       securityScore: 'A+',
-      scalability: '10x',
-    },
+      scalability: '10x'},
     technologies: ['AWS', 'Docker', 'Kubernetes', 'Jenkins', 'Terraform'],
     duration: '8 months',
     roi: '250%',
-    image: '/images / case - study - 2.jpg',
-  },
+    image: '/images / case - study - 2.jpg'},
   {
+
     id: 3,
     title: 'Data Analytics & Business Intelligence Platform',
     comp: 'DataFlow Analytics',
@@ -83,17 +84,17 @@ const caseStudies = [
       'Predictive analytics capabilities',
     ],
     metrics: {
+
       dataProcessing: 'Real - time',
       decisionMaking: '30% better',
       reporting: 'Automated',
-      predictions: '90% accuracy',
-    },
+      predictions: '90% accuracy'},
     technologies: ['Big Data', 'Apache Spark', 'Tableau', 'Python', 'SQL'],
     duration: '10 months',
     roi: '400%',
-    image: '/images / case - study - 2.jpg',
-  },
+    image: '/images / case - study - 2.jpg'},
   {
+
     id: 4,
     title: 'Cybersecurity & Compliance Implementation',
     comp: 'SecureBank Ltd',
@@ -108,11 +109,11 @@ const caseStudies = [
       'Employee security training',
     ],
     metrics: {
+
       breaches: '0',
       compliance: 'SOC2 Type II',
       threatDetection: '99.9%',
-      training: '100% staff',
-    },
+      training: '100% staff'},
     technologies: [
       'Cybersecurity',
       'SOC2',
@@ -122,11 +123,11 @@ const caseStudies = [
     ],
     duration: '12 months',
     roi: '200%',
-    image: '/images / case - study - 4.jpg',
-  },
+    image: '/images / case - study - 4.jpg'},
 ];
 
 const CaseStudies = () => {
+
   const [selectedIndustry, setSelectedIndustry] = useState ('All') ;
   const [selectedCaseStudy, setSelectedCaseStudy] = useState (null) ;
 
@@ -166,6 +167,7 @@ const CaseStudies = () => {
             {industries.map (industry => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={industry}
                 onClick={ () => setSelectedIndustry (industry) }
                 className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
+
                   selectedIndustry === industry
                     ? 'bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white shadow - lg shadow - blue - 500 / 25'
                     : 'bg - white / 10 text - gray - 300 border border - white / 20 hover:border - blue - 400 / 40'

@@ -1,10 +1,13 @@
+describe('Press', () => {
+  it('renders without crashing', () => {
+    render(<Press />);
+    expect(
+      screen.getByRole('main') || screen.getByText(/.*/)
+    ).toBeInTheDocument();
+  });
 
-describe ('Press', () => {
-  it ('renders without crashing', () => {
-    render (<Press  />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-
-  it ('displays expected content', () => {
-    render (<Press  />) ;
+  it('displays expected content', () => {
+    render(<Press />);
     // Add specific test assertions based on component content
-  }) }) ;
+  });
+});

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, Zap, Shield, Rocket } from 'lucide-react';
 const sizeClasses = {
+
   sm: 'w-8 h-8',
     md: 'w-12 h-12',
     lg: 'w-16 h-16',
@@ -10,6 +11,7 @@ const sizeClasses = {
 
 };
 const iconSizes = {
+
   sm: 'w-4 h-4',
     md: 'w-6 h-6',
     lg: 'w-8 h-8',
@@ -18,43 +20,55 @@ const iconSizes = {
 
 };
 export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Loading...', showIcons = true, className = '' }) {
+
     const containerVariants = {
+
         hidden: { opacity: 0 },
         visible: {
+
             opacity: 1,
             transition: {
+
                 staggerChildren: 0.1,
                 delayChildren: 0.2
             }
         }
     };
     const iconVariants = {
+
   hidden: { scale: 0,
   opacity: 0 
 
 },
         visible: {
+
             scale: 1,
             opacity: 1,
             transition: {
+
                 duration: 0.5,
                 ease: "easeOut"
             }
         },
         hover: {
+
             scale: 1.1,
             rotate: 360,
             transition: {
+
                 duration: 0.3,
                 ease: "easeInOut"
             }
         }
     };
     const pulseVariants = {
+
   pulse: {
+
             scale[1, 1.1, 1],
             opacity[1, 0.7, 1],
             transition: {
+
                 duration: 2,
                 repeat: Infinity,
   ease: "easeInOut"
@@ -64,9 +78,12 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
         }
     };
     const bounceVariants = {
+
   bounce: {
+
             y[0, -20, 0],
             transition: {
+
                 duration: 1.5,
                 repeat: Infinity,
   ease: "easeInOut"
@@ -76,9 +93,12 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
         }
     };
     const waveVariants = {
+
   wave: {
+
             y[0, -15, 0],
             transition: {
+
                 duration: 1,
                 repeat: Infinity,
   ease: "easeInOut"
@@ -89,6 +109,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
     };
     const icons = [Sparkles, Zap, Shield, Rocket];
     if (variant === 'pulse') {
+
         return (<motion.div className={`flex flex-col items-center justify-center ${className}`} variants={containerVariants} initial="hidden" animate="visible">
         <motion.div className={`${sizeClasses[size]} bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center shadow-lg`} variants={pulseVariants} animate="pulse">
           <Sparkles className={`${iconSizes[size]} text-white`}/>
@@ -98,6 +119,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
           </motion.p>)}
       </motion.div>)}
     if (variant === 'bounce') {
+
         return (<motion.div className={`flex flex-col items-center justify-center ${className}`} variants={containerVariants} initial="hidden" animate="visible">
         <motion.div className={`${sizeClasses[size]} bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center shadow-lg`} variants={bounceVariants} animate="bounce">
           <Rocket className={`${iconSizes[size]} text-white`}/>
@@ -107,6 +129,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
           </motion.p>)}
       </motion.div>)}
     if (variant === 'wave') {
+
         return (<motion.div className={`flex flex-col items-center justify-center ${className}`} variants={containerVariants} initial="hidden" animate="visible">
         <div className="flex space-x-2">
           {[0, 1, 2, 3].map((i) => (<motion.div key={i} className={`${size === 'xl' ? 'w-3 h-8' : 'w-2 h-6'} bg-gradient-to-b from-zion-cyan to-zion-purple rounded-full`} variants={waveVariants} animate="wave" style={{ animationDelay: `${i * 0.1}s` }}/>))}
@@ -119,6 +142,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
     return (<motion.div className={`flex flex-col items-center justify-center ${className}`} variants={containerVariants} initial="hidden" animate="visible">
       <div className="relative">
         <motion.div className={`${sizeClasses[size]} bg-gradient-to-br from-zion-blue-dark to-zion-purple rounded-full flex items-center justify-center shadow-2xl border border-zion-cyan/20`} animate={{ rotate: 360 }} transition = {
+
   { duration: 3, repeat: Infinity,
   ease: "linear" 
 
@@ -129,7 +153,9 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
         
         {showIcons && (<div className="absolute inset-0">
             {icons.map((Icon, index) => (<motion.div key={index} className="absolute" style = {
+
   {
+
                     top: '50%',
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
@@ -138,14 +164,18 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
                 
 
 }} animate = {
+
   {
+
                     rotate[0, 360],
                     scale[0.8, 1.2,
   0.8]
                 
 
 }} transition = {
+
   {
+
                     duration: 4,
                     repeat: Infinity,
                     ease: "easeInOut",
@@ -162,10 +192,12 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
       
       {text && (<motion.div variants={iconVariants} className="mt-6 text-center">
           <motion.p className="text-zion-slate-light font-medium text-lg" animate = {
+
   { opacity[0.5, 1,
   0.5] 
 
 }} transition = {
+
   { duration: 2,
   repeat: Infinity 
 
@@ -174,11 +206,14 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
           </motion.p>
           <motion.div className="mt-2 flex justify-center space-x-1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
             {[0, 1, 2].map((i) => (<motion.div key={i} className="w-2 h-2 bg-zion-cyan rounded-full" animate = {
+
   { scale[1, 1.5,
   1] 
 
 }} transition = {
+
   {
+
                     duration: 1.5,
                     repeat: Infinity,
   delay: i * 0.2

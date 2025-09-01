@@ -1,5 +1,6 @@
 import React from 'react';
 export function StatisticsSection () {
+
 import { Users, Globe, TrendingUp, Award const stats = [;
 
     {
@@ -10,6 +11,7 @@ import { Users, Globe, TrendingUp, Award const stats = [;
         description: "Trusted by professionals worldwide"
     },
     {
+
 "
         icon: <Globe className="w-8 h-8"/>,"
         value: "150+","
@@ -17,6 +19,7 @@ import { Users, Globe, TrendingUp, Award const stats = [;
         description: "Global reach and availability"
     },
     {
+
 "
         icon: <TrendingUp className="w-8 h-8"/>,"
         value: "95%","
@@ -24,6 +27,7 @@ import { Users, Globe, TrendingUp, Award const stats = [;
         description: "High customer satisfaction"
     },
     {
+
 "
         icon: <Award className="w-8 h-8"/>,"
         value: "24/7","
@@ -32,6 +36,7 @@ import { Users, Globe, TrendingUp, Award const stats = [;
 
 ];
 export function StatisticsSection() {
+
 "
     return (<section className="py-20 bg-gradient-to-r from-zion-slate-dark via-zion-slate to-zion-blue-dark">"
       <div className="container mx-auto px-4">"

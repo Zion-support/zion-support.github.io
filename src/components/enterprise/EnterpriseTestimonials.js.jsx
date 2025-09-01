@@ -34,6 +34,7 @@ const testimonials = [
     image: '/placeholder.svg'},
 ];
 export function EnterpriseTestimonials() {
+
   return ("
     <section id="testimonials" className="py-20 px-4 md:px-6">"
       <div className="container mx-auto max-w-6xl">"
