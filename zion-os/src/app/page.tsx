@@ -1,63 +1,51 @@
-import { services } from "@/data/services";
+import Link from 'next/link';
+import { ArrowRight, Brain, Rocket, Shield, Globe, Zap, Users, Target } from 'lucide-react';
 
 export default function HomePage() {
-  const featuredServices = services.slice(0, 6);
-
   return (
-    <div className="space-y-12">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="space-y-6">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-          Zion OS
-        </h1>
-        <p className="text-xl opacity-80 max-w-3xl">
-          Launch sovereign AI-powered digital economies with one click. Discover our comprehensive ecosystem of innovative services and solutions.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <a className="p-4 rounded border border-white/10 hover:border-white/20 transition-colors" href="/multiverse/launch">
-            <div className="font-semibold">Launch Wizard</div>
-            <div className="text-sm opacity-80">Spin up a new instance with marketplace, governance, identity, and more.</div>
-          </a>
-          <a className="p-4 rounded border border-white/10 hover:border-white/20 transition-colors" href="/admin/instances">
-            <div className="font-semibold">Admin Instances</div>
-            <div className="text-sm opacity-80">Manage deployed instances, API keys, and governance.</div>
-          </a>
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Zion Tech Group
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
+            Pioneering the future of AI-powered business transformation and autonomous systems
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/services" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              Explore Services
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link 
+              href="/contact" 
+              className="border-2 border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+            >
+              Get Started
+            </Link>
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* Featured Services */}
-      <div className="space-y-6">
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-semibold">Featured Services</h2>
-          <a href="/services" className="text-blue-400 hover:text-blue-300 transition-colors">
-            View All Services →
-          </a>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {featuredServices.map((service) => (
-            <div key={service.id} className="p-4 rounded border border-white/10 hover:border-white/20 transition-colors">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                    service.status === 'active' ? 'bg-green-500/20 text-green-400' :
-                    service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-400' :
-                    'bg-blue-500/20 text-blue-400'
-                  }`}>
-                    {service.status}
-                  </span>
-                  <span className="text-xs opacity-60">{service.category}</span>
-                </div>
-                <h3 className="font-semibold">{service.name}</h3>
-                <p className="text-sm opacity-70 line-clamp-2">{service.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-blue-400">{service.pricing.starter}</span>
-                  <a 
-                    href={`/services#${service.id}`} 
-                    className="text-xs text-blue-400 hover:text-blue-300 transition-colors"
-                  >
-                    Learn More →
-                  </a>
-                </div>
+      {/* Services Overview */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">AI-Powered Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your business with cutting-edge AI technologies designed for the future
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <Brain className="w-8 h-8 text-blue-600" />
               </div>
             </div>
           ))}
@@ -161,149 +149,120 @@ export default function HomePage() {
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="hero-heading">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="animate-fade-in">
-            <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="gradient-text">Zion OS</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Launch sovereign AI-powered digital economies with one click. 
-              Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <CTAButton href="/multiverse/launch" variant="primary" size="large">
-                Launch Your Economy
-              </CTAButton>
-              <CTAButton href="/docs" variant="secondary" size="large">
-                View Documentation
-              </CTAButton>
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                <Globe className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Quantum Computing</h3>
+              <p className="text-gray-600 mb-4">
+                Next-generation computing solutions for complex problem-solving
+              </p>
+              <Link href="/services/quantum-computing" className="text-orange-600 hover:text-orange-700 font-medium">
+                Learn More →
+              </Link>
             </div>
-          </div>
-          
-          {/* Background Elements */}
-          <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-full blur-3xl animate-pulse-slow"></div>
           </div>
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="features-heading">
-        <div className="max-w-7xl mx-auto">
+      {/* Featured Services */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 id="features-heading" className="text-3xl md:text-4xl font-bold mb-4">
-              Everything You Need to Build
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Get your digital economy up and running in just three simple steps
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our most innovative AI solutions that are reshaping industries
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-blue-400">1</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Configure</h3>
-              <p className="text-gray-400">
-                Choose your features, set up governance rules, and configure your token economics through our intuitive wizard.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-purple-400">2</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Deploy</h3>
-              <p className="text-gray-400">
-                One-click deployment automatically sets up your infrastructure, smart contracts, and user interface.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-green-400">3</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Scale</h3>
-              <p className="text-gray-400">
-                Your economy grows with built-in scaling, AI-powered insights, and continuous optimization.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Trusted by Leading Organizations
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              See how Zion OS is powering the future of digital economies
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <FeatureCard
-                key={feature.id}
-                {...feature}
-                isActive={activeFeature === index}
-                onClick={() => setActiveFeature(index)}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Zap className="w-6 h-6 text-blue-600" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Autonomous Business Manager</h3>
+                  <p className="text-gray-600">
+                    Complete business automation with AI agents managing operations, decision-making, and growth strategies.
+                  </p>
+                </div>
+              </div>
 
-      {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="card bg-transparent border-blue-500/30">
-              <div className="text-4xl font-bold text-blue-400 mb-2">100+</div>
-              <div className="text-gray-300">Deployed Economies</div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Users className="w-6 h-6 text-purple-600" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Content Creation Suite</h3>
+                  <p className="text-gray-600">
+                    Revolutionary content generation platform that creates engaging, personalized content at scale.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Target className="w-6 h-6 text-green-600" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Research Assistant</h3>
+                  <p className="text-gray-600">
+                    Autonomous research capabilities that accelerate discovery and innovation across all fields.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="card bg-transparent border-purple-500/30">
-              <div className="text-4xl font-bold text-purple-400 mb-2">50K+</div>
-              <div className="text-gray-300">Active Users</div>
-            </div>
-            <div className="card bg-transparent border-green-500/30">
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime</div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="text-gray-700">Industry-leading AI expertise</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="text-gray-700">Proven track record of success</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="text-gray-700">24/7 support and maintenance</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="text-gray-700">Custom solutions for your needs</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                  <span className="text-gray-700">Future-proof technology stack</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="cta-heading">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
-            <h2 id="cta-heading" className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Launch Your Digital Economy?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join the future of sovereign, AI-powered digital economies. 
-              Deploy in minutes, scale infinitely.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <CTAButton href="/multiverse/launch" variant="primary" size="large">
-                Start Deployment
-              </CTAButton>
-              <CTAButton href="/admin/instances" variant="secondary" size="large">
-                View Examples
-              </CTAButton>
-            </div>
-            <p className="text-blue-100 text-sm">
-              📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https://ziontechgroup.com
-            </p>
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl mb-8 text-blue-100">
+            Join the AI revolution and unlock unprecedented growth opportunities
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+            >
+              Schedule a Consultation
+            </Link>
+            <Link 
+              href="/services" 
+              className="border-2 border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+            >
+              View All Services
+            </Link>
           </div>
         </div>
       </section>

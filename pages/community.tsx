@@ -1,23 +1,45 @@
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Card from '../components/ui/Card';
 
 export default function CommunityPage() {
+	const socials = [
+		{ name: 'Twitter/X', href: 'https://twitter.com/ziontechgroup' },
+		{ name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup' },
+		{ name: 'GitHub', href: 'https://github.com/Zion-Holdings' },
+		{ name: 'YouTube', href: 'https://youtube.com/@ziontechgroup' }
+	];
 	return (
-		<UltraFuturisticBackground>
+		<UltraFuturisticBackground variant="quantum" intensity="medium">
 			<Head>
 				<title>Community | Zion Tech Group</title>
-				<meta name="description" content="Join our community: follow updates, engage with peers, and get support." />
+				<meta name="description" content="Join the Zion Tech Group community: forums coming soon, follow our updates, contribute, and learn." />
 				<link rel="canonical" href="https://ziontechgroup.com/community" />
 			</Head>
-			<div className="container mx-auto px-4 py-24 space-y-6 text-white">
+			<div className="container mx-auto px-4 py-16 space-y-6">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Community</h1>
-				<p className="text-gray-300">Follow us and get help. Call +1 302 464 0950 • kleber@ziontechgroup.com.</p>
-				<ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-					<li className="p-6 rounded-2xl bg-black/50 border border-gray-700/60 hover:border-cyan-500/50"><a href="https://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Twitter/X</a></li>
-					<li className="p-6 rounded-2xl bg-black/50 border border-gray-700/60 hover:border-cyan-500/50"><a href="https://www.linkedin.com/company/zion-tech-group" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-					<li className="p-6 rounded-2xl bg-black/50 border border-gray-700/60 hover:border-cyan-500/50"><a href="/support">Support</a></li>
-				</ul>
+				<p className="text-gray-300 max-w-3xl">We’re building a vibrant community around AI, micro SAAS, and enterprise IT. Follow us and participate.</p>
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+					<Card className="p-6 bg-black/40 border border-gray-700/50">
+						<h3 className="text-white text-lg font-semibold mb-2">Get Help</h3>
+						<p className="text-gray-300 mb-3">Documentation, FAQ, and support channels.</p>
+						<a href="/support" className="text-cyan-400 hover:text-cyan-300">Support Center →</a>
+					</Card>
+					<Card className="p-6 bg-black/40 border border-gray-700/50">
+						<h3 className="text-white text-lg font-semibold mb-2">Developer Docs</h3>
+						<p className="text-gray-300 mb-3">API reference and integration guides.</p>
+						<a href="/docs" className="text-cyan-400 hover:text-cyan-300">Read Docs →</a>
+					</Card>
+					<Card className="p-6 bg-black/40 border border-gray-700/50">
+						<h3 className="text-white text-lg font-semibold mb-2">Connect</h3>
+						<ul className="text-gray-300 space-y-2">
+							{socials.map(s => (
+								<li key={s.name}><a href={s.href} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300">{s.name}</a></li>
+							))}
+						</ul>
+					</Card>
+				</div>
 			</div>
 		</UltraFuturisticBackground>
 	);

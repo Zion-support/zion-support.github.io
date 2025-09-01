@@ -1,176 +1,99 @@
 [build]
-  command = "npm run export"
-  publish = "out"
-  functions = "netlify/functions"
+  command = "npm ci && npm run build"
+  publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "20.18.1"
-  NPM_VERSION = "10.0.0"
+  NODE_VERSION = "20"
 
 # Scheduled functions for automation
 [[scheduled.functions]]
   name = "ultrafast-orchestrator"
   schedule = "*/1 * * * *" # every minute
 
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+
+# Autonomous scheduled functions
 [[scheduled.functions]]
-  name = "ultrafast-front-orchestrator"
-  schedule = "*/5 * * * *" # every 5 minutes
+  function = "auto_repo_sync"
+  cron = "*/15 * * * *"
 
 [[scheduled.functions]]
-  name = "unused-media-scanner"
-  schedule = "0 */6 * * *" # every 6 hours
+  function = "link_health"
+  cron = "*/30 * * * *"
 
-# Redirects for SPA routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[[scheduled.functions]]
+  function = "promo_rotator"
+  cron = "*/30 * * * *"
 
-# Headers for security and performance
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    X-DNS-Prefetch-Control = "on"
-    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+[[scheduled.functions]]
+  function = "site_index"
+  cron = "@hourly"
 
-[[redirects]]
-  from = "/og-image.jpg"
-  to = "/og-image.svg"
-  status = 301
+[[scheduled.functions]]
+  function = "seo_audit"
+  cron = "0 2 * * *"
 
-[[redirects]]
-  from = "/twitter-image.jpg"
-  to = "/og-image.svg"
-  status = 301
+[[scheduled.functions]]
+  function = "daily_status_report"
+  cron = "0 3 * * *"
 
-[[redirects]]
-  from = "/api"
-  to = "/api-documentation"
-  status = 301
+[[scheduled.functions]]
+  function = "issue_link_health"
+  cron = "15 3 * * *"
 
-[[redirects]]
-  from = "/webinars"
-  to = "/news"
-  status = 301
+[[scheduled.functions]]
+  function = "pagespeed_audit"
+  cron = "0 * * * *"
 
-[[redirects]]
-  from = "/events"
-  to = "/news"
-  status = 301
+[[scheduled.functions]]
+  function = "security_headers_audit"
+  cron = "0 * * * *"
 
-[[redirects]]
-  from = "/team"
-  to = "/about"
-  status = 301
+[[scheduled.functions]]
+  function = "stale_content_issues"
+  cron = "0 4 * * *"
 
-[[redirects]]
-  from = "/ai-content-marketing-automation"
-  to = "/intelligent-content-automation-platform"
-  status = 301
+[[scheduled.functions]]
+  function = "sitemap_from_index"
+  cron = "0 */6 * * *"
 
-[[redirects]]
-  from = "/ai-autonomous-ecosystem"
-  to = "/ai-autonomous-ecosystem-manager"
-  status = 301
+[[scheduled.functions]]
+  function = "og_meta_audit"
+  cron = "*/45 * * * *"
 
-[[redirects]]
-  from = "/ai-ethics-governance"
-  to = "/ai-ethics-governance-framework"
-  status = 301
+[[scheduled.functions]]
+  function = "rss_generator"
+  cron = "0 */12 * * *"
 
-[[redirects]]
-  from = "/autonomous-it-operations"
-  to = "/autonomous-it-operations-center"
-  status = 301
+[[scheduled.functions]]
+  function = "broken_image_checker"
+  cron = "*/45 * * * *"
 
-[[redirects]]
-  from = "/quantum-network-security"
-  to = "/quantum-internet-security-platform"
-  status = 301
+[[scheduled.functions]]
+  function = "commit_changelog"
+  cron = "0 */6 * * *"
 
-[[redirects]]
-  from = "/quantum-compliance-automation"
-  to = "/quantum-cybersecurity-platform"
-  status = 301
+[[scheduled.functions]]
+  function = "deep_link_health_from_index"
+  cron = "*/30 * * * *"
 
-[[redirects]]
-  from = "/quantum-threat-detection"
-  to = "/quantum-cybersecurity-platform"
-  status = 301
+[[scheduled.functions]]
+  function = "sitemap_submitter"
+  cron = "0 */6 * * *"
 
-[[redirects]]
-  from = "/quantum-encryption-gateway"
-  to = "/quantum-secure-cloud-infrastructure"
-  status = 301
+[[scheduled.functions]]
+  function = "osv_dependency_audit"
+  cron = "0 5 * * *"
 
-[[redirects]]
-  from = "/quantum-identity-verification"
-  to = "/quantum-cybersecurity-platform"
-  status = 301
+[[scheduled.functions]]
+  function = "external_link_audit"
+  cron = "0 */6 * * *"
 
-[[redirects]]
-  from = "/quantum-internet-security"
-  to = "/quantum-internet-security-platform"
-  status = 301
+[[scheduled.functions]]
+  function = "automation_summary"
+  cron = "*/30 * * * *"
 
-[[redirects]]
-  from = "/autonomous-vehicle-ai"
-  to = "/autonomous-vehicle-ai-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-materials-discovery"
-  to = "/quantum-materials-discovery-platform"
-  status = 301
-
-# Section placeholders to existing hubs
-[[redirects]]
-  from = "/team"
-  to = "/about"
-  status = 301
-
-[[redirects]]
-  from = "/events"
-  to = "/news"
-  status = 301
-
-[[redirects]]
-  from = "/webinars"
-  to = "/resources"
-  status = 301
-
-[[redirects]]
-  from = "/press"
-  to = "/news"
-  status = 301
-
-[[redirects]]
-  from = "/legal"
-  to = "/terms"
-  status = 301
-
-[[redirects]]
-  from = "/api"
-  to = "/api-documentation"
-  status = 301
-
-# Fix missing images referenced by meta tags
-[[redirects]]
-  from = "/og-image.jpg"
-  to = "/og-image.svg"
-  status = 200
-
-[[redirects]]
-  from = "/twitter-image.jpg"
-  to = "/og-image.svg"
-  status = 200
-
-# Ensure trailing slash consistency
-[[redirects]]
-  from = "/:splat"
-  to = "/:splat/"
-  status = 301
-  force = true
+[[scheduled.functions]]
+  function = "readme_badges_updater"
+  cron = "0 */6 * * *" 
