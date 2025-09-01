@@ -3,19 +3,12 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { safeStorage } from '@/utils/safeStorage';
 import { LoginContent } from '@/components/auth/login';
-import { ErrorBoundary } from 'react-error-boundary';
-import { useCart } from '@/context/CartContext';
-
-import { toast } from '@/hooks/use-toast';
-import { useDispatch } from 'react-redux';
-import { setLoggedIn } from '@/store/authSlice';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
 
 export default function Login() {
   const { isAuthenticated, user, isLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const { dispatch } = useCart();
-  const reduxDispatch = useDispatch();
 
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
@@ -34,11 +27,10 @@ export default function Login() {
 
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
-      reduxDispatch(setLoggedIn(true));
       const next = location.state?.from?.pathname || '/dashboard';
       navigate(next, { replace: true });
     }
-  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
+  }, [isAuthenticated, isLoading, navigate, location.state]);
 
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
