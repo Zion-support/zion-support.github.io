@@ -735,7 +735,7 @@ export default function FrontLanding() {
 
   </div>
 </section>
- {/* AUTO:FRONT_INDEX_DIRECTORY_END */}
+{/* AUTO:FRONT_INDEX_DIRECTORY_END */}
 
         {/* Platform Modules */}
         <motion.section
@@ -1071,8 +1071,8 @@ export default function FrontLanding() {
             <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>
             <Link href="/contact"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Contact — discuss your use‑case</span></a></Link>
           </div>
-                </section>
-         {/* AUTO-GENERATED: FRONT_ADS_END */}
+        </section>
+        {/* AUTO-GENERATED: FRONT_ADS_END */}
 
         {/* Feature Highlights (new) */}
         <motion.section

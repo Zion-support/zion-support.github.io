@@ -304,11 +304,17 @@ export default function HomePage() {
               { title: 'README Advertiser', desc: 'Refresh README and docs indexes every 6h.', href: '/.netlify/functions/readme-advertiser' },
               { title: 'Features/Capabilities/Benefits Advertiser (2m)', desc: 'Continuously advertises new features with deep links on the front pages.', href: '/.netlify/functions/features-capabilities-benefits-advertiser' },
               { title: 'Hyper Front Index Accelerator (1m)', desc: 'Ultra-fast front index futurizer and directory builder.', href: '/.netlify/functions/hyper-front-index-accelerator' },
-              { title: 'Repo Knowledge Graph (30m)', desc: 'Builds and updates the repo knowledge graph for smarter linking.', href: '/.netlify/functions/knowledge-graph' },
-              { title: 'Broken Image Defender (3h)', desc: 'Scans for broken images and optimizes media automatically.', href: '/.netlify/functions/broken-image-defender' },
-              { title: 'Newsroom Publisher (45m)', desc: 'Curates and publishes newsroom updates automatically.', href: '/.netlify/functions/newsroom-publisher' },
-              { title: 'OG Image Maker (12h)', desc: 'Regenerates Open Graph images for rich previews.', href: '/.netlify/functions/og-image-maker' },
-              { title: 'Ultra‑fast Git Sync (1m)', desc: 'Keeps the repository in sync every minute.', href: '/.netlify/functions/ultrafast-git-sync' },
+              // New tools
+              { title: 'Automation Guardian (10m)', desc: 'Protective sweeps keep automations healthy and safe.', href: '/.netlify/functions/automation-guardian' },
+              { title: 'Repo Radar Metrics (30m)', desc: 'Generates repository radar metrics and artifacts.', href: '/.netlify/functions/repo-radar-metrics' },
+              { title: 'Docs Pages Indexer (4h)', desc: 'Indexes docs and regenerates search indices.', href: '/.netlify/functions/docs-pages-indexer' },
+              { title: 'LLM Content Curator (3h)', desc: 'Curates content and proposes front‑page promos.', href: '/.netlify/functions/llm-content-curator' },
+              { title: 'Security Audit (12h)', desc: 'Runs security audits and syncs results.', href: '/.netlify/functions/security-audit-runner' },
+              { title: 'Dead Code Scanner (12h)', desc: 'Finds unused code and proposes cleanups.', href: '/.netlify/functions/dead-code-scanner' },
+              { title: 'Netlify Auto‑Healer (30m)', desc: 'Applies remedial fixes when issues are detected.', href: '/.netlify/functions/netlify-auto-healer-runner' },
+              { title: 'Auto Media Release (6h)', desc: 'Prepares social/media packages for new features.', href: '/.netlify/functions/auto-media-release' },
+              { title: 'Newsroom Scheduler (1h)', desc: 'Generates newsroom content from repo activity.', href: '/.netlify/functions/newsroom-scheduler' },
+              { title: 'OG Image Scheduler (6h)', desc: 'Regenerates OG images for fresh social previews.', href: '/.netlify/functions/og-image-scheduler' },
             ].map((tool) => (
               <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -320,43 +326,6 @@ export default function HomePage() {
           </div>
         </section>
  
-        {/* New Cloud Automations */}
-        <section className="mx-auto max-w-7xl px-6 pb-14">
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Cloud Automations — Live</h2>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <a href="/.netlify/functions/ultrafast-repo-healer" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">Ultrafast Repo Healer</h3>
-              <p className="mt-1 text-sm text-white/75">Scans, heals, and syncs every 2 minutes.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
-            </a>
-            <a href="/.netlify/functions/knowledge-graph-orchestrator" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">Knowledge Graph</h3>
-              <p className="mt-1 text-sm text-white/75">Builds repo graph hourly and commits artifacts.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
-            </a>
-            <a href="/.netlify/functions/newsroom-orchestrator" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">Newsroom Orchestrator</h3>
-              <p className="mt-1 text-sm text-white/75">Publishes autonomous updates every 30 minutes.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
-            </a>
-            <a href="/.netlify/functions/image-optimizer-scheduler" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">Image Optimizer</h3>
-              <p className="mt-1 text-sm text-white/75">Optimizes images and OG assets every 6 hours.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
-            </a>
-            <a href="/.netlify/functions/repo-radar-scheduler" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <h3 className="text-lg font-semibold">Repo Radar</h3>
-              <p className="mt-1 text-sm text-white/75">Generates metrics and changelogs every 4 hours.</p>
-              <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
-            </a>
-          </div>
-        </section>
-
         {/* AUTO-GENERATED: HOME_UPDATER_START */}
 
 <section className="mx-auto max-w-7xl px-6 pb-16">
@@ -395,8 +364,8 @@ export default function HomePage() {
 
   </div>
 </section>
-/* AUTO-GENERATED: HOME_UPDATER_END */}
- </main>
+{/* AUTO-GENERATED: HOME_UPDATER_END */}
+  </main>
     </div>
   )
 }

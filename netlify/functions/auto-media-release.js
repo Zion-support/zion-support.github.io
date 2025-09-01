@@ -1,11 +1,13 @@
 const path = require('path');
 const { spawnSync } = require('child_process');
 
-function runNode(relativePath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relativePath);
+function runNode(relPath, args = []) {
+  const abs = path.resolve(__dirname, '..', '..', relPath);
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
+
+exports.config = { schedule: '0 */6 * * *' };
 
 exports.handler = async () => {
   const logs = [];
@@ -18,7 +20,7 @@ exports.handler = async () => {
     return status;
   };
 
-  step('auto-media-release', () => runNode('automation/auto-media-release.cjs'));
+  step('media:release', () => runNode('automation/auto-media-release.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
