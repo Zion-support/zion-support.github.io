@@ -87,6 +87,6 @@
     "node_modules",
     "zion.app/recovered-content/**",
     "apps/**",
-    "browserstack.config.ts"
+    "apps.backup/**"
   ]
 }
