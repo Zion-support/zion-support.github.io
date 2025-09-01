@@ -51,8 +51,8 @@
   },
   {
     "route": "/404",
-    "title": "404 - Page Not Found | Zion Tech Group",
-    "h1": "404"
+    "title": "",
+    "h1": "404 - Page Not Found"
   },
   {
     "route": "/500",
@@ -76,7 +76,7 @@
   },
   {
     "route": "/about",
-    "title": "About Us | Zion Tech Group",
+    "title": "About Us - Zion Tech Group | AI-Powered Technology Solutions",
     "h1": "About Zion Tech Group"
   },
   {
@@ -246,7 +246,7 @@
   },
   {
     "route": "/case-studies",
-    "title": "",
+    "title": "Case Studies - Zion Tech Group | Client Success Stories & AI Implementations",
     "h1": "Case Studies"
   },
   {
@@ -291,8 +291,13 @@
   },
   {
     "route": "/contact",
-    "title": "Contact Us | Zion Tech Group",
-    "h1": "Get in Touch"
+    "title": "Contact Us - Zion Tech Group | Get Started with Revolutionary Micro SaaS Services",
+    "h1": "Let's Transform Your Business"
+  },
+  {
+    "route": "/cookies",
+    "title": "Cookie Policy - Zion Tech Group | Cookie Usage & Management",
+    "h1": "Cookie Policy"
   },
   {
     "route": "/cutting-edge-pricing-2025",
@@ -363,11 +368,6 @@
     "route": "/enhanced-services-showcase",
     "title": "Enhanced Services Showcase - Zion Tech Group | 600+ Revolutionary Solutions",
     "h1": "Enhanced Services Showcase"
-  },
-  {
-    "route": "/explore",
-    "title": "Explore Technology Categories | Zion Tech Group",
-    "h1": "Explore Technology Categories"
   },
   {
     "route": "/expo",
@@ -555,6 +555,11 @@
     "h1": ""
   },
   {
+    "route": "/privacy",
+    "title": "Privacy Policy - Zion Tech Group | Data Protection & Privacy",
+    "h1": "Privacy Policy"
+  },
+  {
     "route": "/products",
     "title": "Products - Placeholder",
     "h1": "Products"
@@ -630,11 +635,6 @@
     "h1": "Salary Insights"
   },
   {
-    "route": "/search",
-    "title": "Search | Zion Tech Group",
-    "h1": "Search Our Services"
-  },
-  {
     "route": "/secrets-rotation-automation",
     "title": "",
     "h1": "Secrets Rotation Automation"
@@ -661,8 +661,8 @@
   },
   {
     "route": "/services",
-    "title": "AI & Technology Services | Zion Tech Group",
-    "h1": "AI & Technology Services"
+    "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
+    "h1": ""
   },
   {
     "route": "/site-health",
@@ -672,7 +672,7 @@
   {
     "route": "/sitemap",
     "title": "Sitemap | Zion Tech Group",
-    "h1": "Site Map"
+    "h1": "Sitemap"
   },
   {
     "route": "/soc2-compliance-automation",
@@ -798,6 +798,11 @@
     "route": "/services/[slug]",
     "title": "{service.name} | Zion Tech Group",
     "h1": "{service.name}"
+  },
+  {
+    "route": "/services/ai-autonomous-business-manager",
+    "title": "AI Autonomous Business Manager - Zion Tech Group | Autonomous Business Operations",
+    "h1": "AI Autonomous Business Manager"
   },
   {
     "route": "/services/ai-model-development-chat",

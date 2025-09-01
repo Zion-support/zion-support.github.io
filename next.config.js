@@ -1,21 +1,12 @@
-const path = require('path');
 const os = require('os');
+const path = require('path');
 
 const nextConfig = {
-  // assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
   poweredByHeader: false,
   trailingSlash: false,
   reactStrictMode: true,
   bundlePagesRouterDependencies: true,
-  
-  // Disable TypeScript checking during build
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-
-  // Optimized for fast builds (hanging issue SOLVED)
-  // outputFileTracing: false, // Intentionally disabled via env vars in build scripts and netlify.toml to prevent hanging.
-  productionBrowserSourceMaps: false, // Disable for faster builds
   
   // Environment configuration
   env: {
@@ -25,6 +16,7 @@ const nextConfig = {
   },
 
   serverExternalPackages: ['@prisma/client'],
+  
   modularizeImports: {
     'lucide-react': {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
@@ -34,16 +26,7 @@ const nextConfig = {
       transform: '@radix-ui/react-icons/dist/{{member}}',
     },
   },
-  outputFileTracingExcludes: {
-    '*': [
-      'node_modules/@swc/core-linux-x64-gnu',
-      'node_modules/@swc/core-linux-x64-musl',
-      'node_modules/@esbuild/linux-x64',
-      'node_modules/@chainsafe/**/*',
-      'node_modules/three/**/*',
-      'node_modules/@google/model-viewer/**/*',
-    ],
-  },
+
   experimental: {
     optimizePackageImports: [
       'lucide-react', 
@@ -52,19 +35,12 @@ const nextConfig = {
       'react-window',
       'fuse.js'
     ],
-    // ESM configuration for problematic packages
-    esmExternals: 'loose', // Allow loose ESM handling
-    
-    // Enable CSS optimization for production
-    optimizeCss: process.env.NODE_ENV === 'production', 
-    // Memory and performance optimizations for 176+ pages
-    largePageDataBytes: 128 * 1000, // Reduced to 128KB for better performance
-    workerThreads: false, // Disable worker threads to reduce memory usage
-    cpus: Math.min(2, require('os').cpus().length), // Adaptive CPU limit
-    // Bundle analysis optimizations moved to root level
-    // Disable profiling for faster builds
+    esmExternals: 'loose',
+    optimizeCss: process.env.NODE_ENV === 'production',
+    largePageDataBytes: 128 * 1000,
+    workerThreads: false,
+    cpus: Math.min(2, os.cpus().length),
     swcTraceProfiling: false,
-    
   },
 
   images: {
@@ -73,8 +49,98 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  typescript: {
-    ignoreBuildErrors: true,
+
+  transpilePackages: [
+    'react-markdown',
+    'date-fns',
+    'react-day-picker',
+    'bail',
+    'is-plain-obj',
+    'mdast-util-from-markdown',
+    'mdast-util-to-hast',
+    'mdast-util-to-string',
+    'unified',
+    'remark-parse',
+    'remark-rehype',
+    'formik',
+    'lodash',
+    'lodash-es',
+    'helia',
+    '@helia/json',
+    'multiformats',
+    'libp2p',
+    '@libp2p/identify',
+    'ajv',
+    'ajv-keywords',
+    '@ungap/structured-clone',
+    'axios-retry',
+  ],
+
+  webpack: (config, { dev, isServer }) => {
+    // Handle problematic packages
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false,
+      crypto: false,
+      async_hooks: false,
+      diagnostics_channel: false,
+      worker_threads: false,
+      module: false,
+      child_process: false,
+      http: false,
+      https: false,
+      os: false,
+      path: false,
+      stream: false,
+      util: false,
+      zlib: false,
+      url: false,
+      'dd-trace': false,
+      'node:http': false,
+      'node:https': false,
+      'node:fs': false,
+      'node:path': false,
+      'node:stream': false,
+      'node:util': false,
+      'node:crypto': false,
+      'node:os': false,
+      'node:url': false,
+      'node:worker_threads': false,
+      'node:async_hooks': false,
+      'node:child_process': false,
+      'node:diagnostics_channel': false,
+    };
+
+    // Optimize bundle size for production
+    if (!dev) {
+      config.optimization = {
+        ...config.optimization,
+        moduleIds: 'deterministic',
+        chunkIds: 'deterministic',
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            vendor: {
+              test: /[\\/]node_modules[\\/]/,
+              name: 'vendors',
+              chunks: 'all',
+              priority: 10,
+            },
+            common: {
+              name: 'common',
+              minChunks: 2,
+              chunks: 'all',
+              priority: 5,
+              reuseExistingChunk: true,
+            },
+          },
+        },
+      };
+    }
+
+    return config;
   },
 }
 
