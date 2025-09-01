@@ -1,5 +1,10 @@
-/** @type {import('next').NextConfig} */
+const path = require('path');
+const os = require('os');
+
 const nextConfig = {
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
+  poweredByHeader: false,
+  trailingSlash: false,
   reactStrictMode: true,
   swcMinify: true,
   images: {
@@ -13,4 +18,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
