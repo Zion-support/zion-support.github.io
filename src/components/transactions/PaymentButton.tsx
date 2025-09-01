@@ -68,7 +68,7 @@ export function PaymentButton({
             successUrl: redirectUrl || window.location.href,
             cancelUrl: window.location.href,
           },
-        }
+        },
       );
 
       if (error) {
