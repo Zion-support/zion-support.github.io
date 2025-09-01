@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  Bot,
-  MessageCircle,
-  Sparkles,
-  Zap,
-  Brain,
-  Lightbulb,
-  Target,
-  ArrowRight,
-  Send,
-  Plus,
-  Edit,
-  Eye,
-  Filter,
-  Search,
-  Settings,
-  Download,
-  Upload,
-  RefreshCw,
+import { motion } from 'framer-motion';
+import { 
+  Bot, 
+  MessageCircle, 
+  Sparkles, 
+  Zap, 
+  Brain, 
+  Lightbulb, 
+  Target, 
+  ArrowRight, 
+  Send, 
+  Plus, 
+  Edit, 
+  Eye, 
+  Filter, 
+  Search, 
+  Settings, 
+  Download, 
+  Upload, 
+  RefreshCw, 
   MoreHorizontal,
   ChevronRight,
   ChevronDown,
@@ -357,6 +356,8 @@ const actionStatusColors = {
   completed: 'from-green-500 to-emerald-500',
   failed: 'from-red-500 to-pink-500'};
 
+const MDiv: any = motion.div as any;
+
 const AdvancedAIAssistant: React.FC = () => {
 
   const [selectedView, setSelectedView] = useState<'
@@ -445,11 +446,10 @@ const AdvancedAIAssistant: React.FC = () => {
     <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">"
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
+        <MDiv
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-<<<<<<< HEAD
           viewport={{ once: true }}
         >
           <div className="text-center mb-16">
@@ -466,28 +466,24 @@ const AdvancedAIAssistant: React.FC = () => {
             language processing, and smart recommendations to enhance
             productivity and decision-making.
           </p>
+<<<<<<< HEAD
+        </MDiv>
+=======
           </div>
         </motion.div>
+>>>>>>> de53bf8378219a66d51babb546e4224272a450d7
 
         {/* Quick Stats */}
-        <motion.div
+        <MDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
           viewport={{ once: true }}
         >
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-sm">
             <div className="flex items-center justify-between mb-4">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
-=======
-          viewport={{ once: true }}"
-          className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
-        >"
-          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-sm">"
-            <div className="flex items-center justify-between mb-4">"
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">"
 >>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6
                 <Bot className="w-6 h-6 text-white" />
               </div>"
@@ -543,15 +539,13 @@ const AdvancedAIAssistant: React.FC = () => {
             <h3 className="text-2xl font-bold text-white mb-2">91%</h3>"
             <p className="text-gray-400 text-sm">Accuracy Rate</p>
           </div>
-          </div>
-        </motion.div>
+        </MDiv>
 
         {/* View Tabs */}
-        <motion.div
+        <MDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-<<<<<<< HEAD
           viewport={{ once: true }}
         >
           <div className="flex items-center gap-1 mb-8 bg-gray-800/50 rounded-lg p-1 max-w-lg mx-auto">
@@ -573,64 +567,24 @@ const AdvancedAIAssistant: React.FC = () => {
               {view.charAt(0).toUpperCase() + view.slice(1)}
             </button>
           ))}
-          </div>
-=======
-          viewport={{ once: true }}"
-          className="flex items-center gap-1 mb-8 bg-gray-800/50 rounded-lg p-1 max-w-lg mx-auto"
-        >
-          {(['overview',conversations',insights',features'] as const).map()
-            view => (
-              <button
-                key={view}
-                onClick={() => setSelectedView(view)}
-                className={`flex-1 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
-
-                  selectedView === view'
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25''
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'`
-                }`}
-              >'"
-                {view === 'overview' && <Bot className="w-4 h-4 inline mr-2" />}
-                {view === 'conversations' && ("
-                  <MessageCircle className="w-4 h-4 inline mr-2" />
-                )}
-                {view === 'insights' && ("
-                  <Lightbulb className="w-4 h-4 inline mr-2" />
-                )}
-                {view === 'features' && ("
-                  <Sparkles className="w-4 h-4 inline mr-2" />
-                )}
-                {view.charAt(0).toUpperCase() + view.slice(1)}
-              </button>
-            )
-          )}
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6
-        </motion.div>
+        </MDiv>
 
         {/* Controls */}
-        <motion.div
+        <MDiv
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-<<<<<<< HEAD
           viewport={{ once: true }}
         >
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6 mb-12">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <div className="relative">
-=======
-          viewport={{ once: true }}"
-          className="flex flex-col lg:flex-row items-center justify-between gap-6 mb-12"
-        >"
-          <div className="flex flex-col sm:flex-row items-center gap-4">"
-            <div className="relative">"
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input"
+              <input
                 type="text"
                 placeholder="Search conversations, insights, or features..."
                 value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}"
+                onChange={e => setSearchQuery(e.target.value)}
                 className="pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-300"
               />
             </div>
@@ -638,57 +592,39 @@ const AdvancedAIAssistant: React.FC = () => {
             {selectedView === 'conversations' && (
               <select
                 value={selectedFilter}
-                onChange={e => setSelectedFilter(e.target.value)}"
+                onChange={e => setSelectedFilter(e.target.value)}
                 className="px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all duration-300"
-              >"
-                <option value="all">All Types</option>"
-                <option value="chat">Chat</option>"
-                <option value="task">Task</option>"
-                <option value="analysis">Analysis</option>"
+              >
+                <option value="all">All Types</option>
+                <option value="chat">Chat</option>
+                <option value="task">Task</option>
+                <option value="analysis">Analysis</option>
                 <option value="recommendation">Recommendation</option>
               </select>
             )}
           </div>
 "
           <div className="flex items-center gap-4">
-<<<<<<< HEAD
-            <button
+            <MDiv as="button"
               className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 text-gray-300 hover:text-white rounded-lg border border-gray-700/50 hover:bg-gray-700/50 transition-all duration-300"
             >
               <Settings className="w-4 h-4" />
               AI Settings
-            </button>
+            </MDiv>
             
             <button
               className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
             >
-=======
-            <motion.button"
-              className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 text-gray-300 hover:text-white rounded-lg border border-gray-700/50 hover:bg-gray-700/50 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >"
-              <Settings className="w-4 h-4" />
-              AI Settings
-            </motion.button>
-
-            <motion.button"
-              className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >"
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6
               <Plus className="w-4 h-4" />
               New Session
             </button>
           </div>
-          </div>
-        </motion.div>
+        </MDiv>
 
         {/* Content */}
         <AnimatePresence>
           {selectedView === 'overview' && (
-            <motion.div"
+            <motion.div
               key="overview"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -696,106 +632,71 @@ const AdvancedAIAssistant: React.FC = () => {
               transition={{ duration: 0.3 }}
             >
               <motion.div
-                variants={containerVariants}"
+                variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}"
+                viewport={{ once: true }}
                 className="grid grid-cols-1 lg:grid-cols-2 gap-8"
               >
-                {/* AI Features Overview */}"
-                <div className="space-y-6">"
-                  <h3 className="text-2xl font-bold text-white mb-6">
-                    AI Capabilities
-                  </h3>
-                  {aiFeatures.slice(0, 3).map(feature => (
-                    <motion.div
+                {/* AI Features Overview */}
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold text-white mb-6">AI Capabilities</h3>
+                  {aiFeatures.slice(0, 3).map((feature) => (
+                    <MDiv
                       key={feature.id}
-                      variants={itemVariants}"
+                      variants={itemVariants}
                       className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-sm"
-                    >"
-                      <div className="flex items-start gap-4">"
+                    >
+                      <div className="flex items-start gap-4">
                         <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white">
                           {feature.icon}
-                        </div>"
-                        <div className="flex-1">"
-                          <div className="flex items-center gap-2 mb-2">"
-                            <h4 className="text-white font-semibold">
-                              {feature.name}
-                            </h4>
-                            <div'`
-                              className={`px-2 py-1 bg-gradient-to-r ${feature.status === 'active' ? 'from-green-500 to-emerald-500' : 'from-yellow-500 to-orange-500'} rounded-full text-white text-xs font-medium`}
-                            >
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-2">
+                            <h4 className="text-white font-semibold">{feature.name}</h4>
+                            <div className={`px-2 py-1 bg-gradient-to-r ${feature.status === 'active' ? 'from-green-500 to-emerald-500' : 'from-yellow-500 to-orange-500'} rounded-full text-white text-xs font-medium`}>
                               {feature.status}
                             </div>
-                          </div>"
-                          <p className="text-gray-400 text-sm mb-3">
-                            {feature.description}
-                          </p>"
-                          <div className="flex items-center gap-4 text-sm">"
-                            <span className="text-gray-400">
-                              Usage:{' '}"
-                              <span className="text-white">
-                                {feature.usage}%
-                              </span>
-                            </span>"
-                            <span className="text-gray-400">
-                              Accuracy:{' '}"
-                              <span className="text-white">
-                                {feature.accuracy}%
-                              </span>
-                            </span>
+                          </div>
+                          <p className="text-gray-400 text-sm mb-3">{feature.description}</p>
+                          <div className="flex items-center gap-4 text-sm">
+                            <span className="text-gray-400">Usage: <span className="text-white">{feature.usage}%</span></span>
+                            <span className="text-gray-400">Accuracy: <span className="text-white">{feature.accuracy}%</span></span>
                           </div>
                         </div>
                       </div>
-                    </motion.div>
+                    </MDiv>
                   ))}
                 </div>
 
-                {/* Recent AI Insights */}"
-                <div className="space-y-6">"
-                  <h3 className="text-2xl font-bold text-white mb-6">
-                    Recent AI Insights
-                  </h3>
-                  {aiInsights.slice(0, 3).map(insight => (
-                    <motion.div
+                {/* Recent AI Insights */}
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-bold text-white mb-6">Recent AI Insights</h3>
+                  {aiInsights.slice(0, 3).map((insight) => (
+                    <MDiv
                       key={insight.id}
-                      variants={itemVariants}"
+                      variants={itemVariants}
                       className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-sm"
-                    >"
+                    >
                       <div className="flex items-start gap-4">
-                        <div`
-                          className={`w-12 h-12 bg-gradient-to-r ${insightTypeColors[insight.type]} rounded-xl flex items-center justify-center`}
-                        >
+                        <div className={`w-12 h-12 bg-gradient-to-r ${insightTypeColors[insight.type]} rounded-xl flex items-center justify-center`}>
                           {getInsightIcon(insight.type)}
-                        </div>"
-                        <div className="flex-1">"
-                          <div className="flex items-center gap-2 mb-2">"
-                            <h4 className="text-white font-semibold">
-                              {insight.title}
-                            </h4>
-                            <div`
-                              className={`px-2 py-1 bg-gradient-to-r ${insightTypeColors[insight.type]} rounded-full text-white text-xs font-medium`}
-                            >
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-2">
+                            <h4 className="text-white font-semibold">{insight.title}</h4>
+                            <div className={`px-2 py-1 bg-gradient-to-r ${insightTypeColors[insight.type]} rounded-full text-white text-xs font-medium`}>
                               {insight.impact} impact
                             </div>
-                          </div>"
-                          <p className="text-gray-300 text-sm mb-3">
-                            {insight.description}
-                          </p>"
-                          <div className="flex items-center justify-between text-sm">"
-                            <span className="text-gray-400">
-                              Confidence:{' '}"
-                              <span className="text-white">
-                                {(insight.confidence * 100).toFixed(0)}%
-                              </span>
-                            </span>"
-                            <span className="text-gray-400 text-xs">
-                              {insight.createdAt}
-                            </span>
+                          </div>
+                          <p className="text-gray-300 text-sm mb-3">{insight.description}</p>
+                          <div className="flex items-center justify-between text-sm">
+                            <span className="text-gray-400">Confidence: <span className="text-white">{(insight.confidence * 100).toFixed(0)}%</span></span>
+                            <span className="text-gray-400 text-xs">{insight.createdAt}</span>
                           </div>
                         </div>
                       </div>
-                    </motion.div>
+                    </MDiv>
                   ))}
                 </div>
               </motion.div>
@@ -803,7 +704,7 @@ const AdvancedAIAssistant: React.FC = () => {
           )}
 
           {selectedView === 'insights' && (
-            <motion.div"
+            <motion.div
               key="insights"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -811,55 +712,47 @@ const AdvancedAIAssistant: React.FC = () => {
               transition={{ duration: 0.3 }}
             >
               <motion.div
-                variants={containerVariants}"
+                variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}"
+                viewport={{ once: true }}
                 className="space-y-6"
               >
                 {filteredInsights.map(insight => (
-                  <motion.div
+                  <MDiv
                     key={insight.id}
-                    variants={itemVariants}"
+                    variants={itemVariants}
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-sm"
-                  >"
+                  >
                     <div className="flex items-start gap-4">
-                      <div`
-                        className={`w-12 h-12 bg-gradient-to-r ${insightTypeColors[insight.type]} rounded-xl flex items-center justify-center`}
-                      >
+                      <div className={`w-12 h-12 bg-gradient-to-r ${insightTypeColors[insight.type]} rounded-xl flex items-center justify-center`}>
                         {getInsightIcon(insight.type)}
                       </div>
-"
-                      <div className="flex-1">"
-                        <div className="flex items-center gap-3 mb-2">"
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
                           <h3 className="text-xl font-bold text-white">
                             {insight.title}
                           </h3>
-                          <div`
-                            className={`px-2 py-1 bg-gradient-to-r ${insightTypeColors[insight.type]} rounded-full text-white text-xs font-medium`}
-                          >
+                          <div className={`px-2 py-1 bg-gradient-to-r ${insightTypeColors[insight.type]} rounded-full text-white text-xs font-medium`}>
                             {insight.impact} impact
-                          </div>"
+                          </div>
                           <div className="text-sm text-gray-400">
                             Confidence: {(insight.confidence * 100).toFixed(0)}%
                           </div>
                         </div>
-"
                         <p className="text-gray-300 mb-4">
                           {insight.description}
                         </p>
-"
-                        <div className="bg-gray-800/30 rounded-lg p-4 mb-4">"
+                        <div className="bg-gray-800/30 rounded-lg p-4 mb-4">
                           <div className="text-sm text-gray-400 mb-2">
                             Key Data
-                          </div>"
+                          </div>
                           <div className="grid grid-cols-2 gap-4">
-                            {Object.entries(insight.data).map()
-                              ([key, value]) => (
-                                <div key={key}>"
+                            {Object.entries(insight.data).map(([key, value]) => (
+                                <div key={key}>
                                   <div className="text-gray-400 text-xs capitalize">
                                     {key.replace(/([A-Z])/g, $1')}
-                                  </div>"
+                                  </div>
                                   <div className="text-white font-medium">
                                     {String(value)}
                                   </div>
@@ -868,13 +761,57 @@ const AdvancedAIAssistant: React.FC = () => {
                             )}
                           </div>
                         </div>
-"
                         <div className="text-sm text-gray-400">
                           Generated on {insight.createdAt}
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </MDiv>
+                ))}
+              </motion.div>
+            </motion.div>
+          )}
+
+          {selectedView === 'features' && (
+            <motion.div
+              key="features"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              >
+                {aiFeatures.map(feature => (
+                  <MDiv
+                    key={feature.id}
+                    variants={itemVariants}
+                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-sm"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center text-white">
+                        {feature.icon}
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <h4 className="text-white font-semibold">{feature.name}</h4>
+                          <div className={`px-2 py-1 bg-gradient-to-r ${feature.status === 'active' ? 'from-green-500 to-emerald-500' : 'from-yellow-500 to-orange-500'} rounded-full text-white text-xs font-medium`}>
+                            {feature.status}
+                          </div>
+                        </div>
+                        <p className="text-gray-400 text-sm mb-3">{feature.description}</p>
+                        <div className="flex items-center gap-4 text-sm">
+                          <span className="text-gray-400">Usage: <span className="text-white">{feature.usage}%</span></span>
+                          <span className="text-gray-400">Accuracy: <span className="text-white">{feature.accuracy}%</span></span>
+                        </div>
+                      </div>
+                    </div>
+                  </MDiv>
                 ))}
               </motion.div>
             </motion.div>
@@ -882,37 +819,34 @@ const AdvancedAIAssistant: React.FC = () => {
         </AnimatePresence>
 
         {/* Bottom CTA */}
-        <motion.div
+        <MDiv
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}"
+          viewport={{ once: true }}
           className="text-center mt-16"
-        >"
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl border border-blue-500/30 p-8 max-w-2xl mx-auto">"
+        >
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl border border-blue-500/30 p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Experience AI-Powered Intelligence?
-            </h3>"
+            </h3>
             <p className="text-gray-300 mb-6">
               Let Zion Tech Group help you leverage advanced AI capabilities for
               intelligent automation, predictive analytics, and smart
               decision-making.
             </p>
-            <motion.a"
+            <MDiv as="a"
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500/50"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
-              Get Started"
+              Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
-            </motion.a>
+            </MDiv>
           </div>
-        </motion.div>
+        </MDiv>
       </div>
     </section>
   );
 };
 
 export default AdvancedAIAssistant;
-'"`

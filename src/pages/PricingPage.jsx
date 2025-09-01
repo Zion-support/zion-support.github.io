@@ -18,15 +18,19 @@ const categoryIcons = {
     'EdTech': GraduationCap
 };
 const pricingFeatures = {
+<<<<<<< HEAD
+    basic: [
+=======
 
     basic[
+>>>>>>> 82b8c9da73d581e93549ea90cb9ba854068d51e8
         "Core service functionality",
         "Standard support (8/5)",
         "Basic integrations",
         "Community documentation",
         "Email support"
     ],
-    professional[
+    professional: [
         "All Basic features",
         "Advanced analytics",
         "Priority support (12/7)",
@@ -35,7 +39,7 @@ const pricingFeatures = {
         "Dedicated account manager",
         "Training sessions"
     ],
-    enterprise[
+    enterprise: [
         "All Professional features",
         "Custom development",
         "24/7 dedicated support",
@@ -170,7 +174,7 @@ export default function PricingPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredServices.map((service) => (<Card key={service.id} className="bg-white hover:shadow-lg transition-all duration-300 hover:scale-105">
                     <div className="relative">
-                      <img src={service.images: [0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
+                      <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
                       <Badge className="absolute top-4 right-4 bg-zion-purple">
                         {service.category}
                       </Badge>
@@ -294,7 +298,7 @@ export default function PricingPage() {
                 icon: <TrendingUp className="h-8 w-8"/>,
                 title: "Proven ROI",
                 description: "Average 300% ROI within 6 months"
-})
+            }
         ].map((benefit, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white">
                 <CardHeader className="text-center">
                   <div className="mx-auto w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mb-4">
