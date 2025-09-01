@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 
 interface InteractiveSearchProps {
   // Add your props here
@@ -26,7 +25,6 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
       onSearch(query.trim());
 
   };
-
   return()
     <form onSubmit = {handleSubmit} className={`w-full ${className}`}>"
       <div className="relative">
@@ -50,7 +48,6 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
         </button>;
       </div>;
     </form>;
-  );
-};
+  )};
 
 export default InteractiveSearch;}}'"`

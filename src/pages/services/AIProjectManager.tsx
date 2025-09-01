@@ -131,9 +131,8 @@ export default function AIProjectManager(...args: unknown[]): unknown {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
         title="AI Project Manager - Intelligent Project Management Solution | Zion Tech Group""
-        description="Transform your project management with AI-powered task prioritization, resource optimization, and predictive analytics. Start free trial today.""
-        keywords="AI project management, project management software, AI task prioritization, resource optimization, project analytics"
-      />
+        description="Transform your project management with AI-powered task prioritization, resource optimization, and predictive analytics. Start free trial today.""        keywords="AI project management, project management software, AI task prioritization, resource optimization, project analytics"
+       />
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -297,8 +296,7 @@ export default function AIProjectManager(...args: unknown[]): unknown {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-white">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>

@@ -4,26 +4,7 @@ import { RoleCard  } from "./RoleCard";'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';'
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';'
 import { CheckCircle, Info, TrendingUp, Users, Bullseye, Calendar, CreditCard, Briefcase  } from 'lucide-react'; // Target changed to Bullseye"
-import { BudgetStatusDisplay  } from "./BudgetStatusDisplay"; // New import
-
-interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
-
-  recommendation: TeamRecommendation;
-  projectBrief: ProjectBrief; // For budget comparison
-  onInviteTalent: talentId: string, roleTitle: string void;
-  // onEditRole: roleId: string void; // For future add/remove
-  // onRemoveRole: roleId: string void; // For future add/remove
-
-}
-;
-export const TeamRecommendationDisplay = (...args: unknown[]): unknown => {;
-  if (!recommendation) return null;
-
-  return ("
-    <div className = "space-y-8 mt-6">"
-      <Alert className="border-green-500 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300">"
-        <CheckCircle className="h-5 w-5 text-green-500" />"
-        <AlertTitle className="font-semibold">Team Recommendation Generated!</AlertTitle>
+import { BudgetStatusDisplay  } from "./BudgetStatusDisplay"; // New import        <AlertTitle className="font-semibold">Team Recommendation Generated!</AlertTitle>
         <AlertDescription>'
           Here's the AI-powered team structure based on your project brief. Review the roles and suggested talent.
         </AlertDescription>
@@ -32,8 +13,7 @@ export const TeamRecommendationDisplay = (...args: unknown[]): unknown => {;
       <Card className="shadow-xl">
         <CardHeader>"
           <CardTitle className="text-2xl flex items-center">"
-            <Users className="h-7 w-7 mr-2.5 text-primary" />
-            Team Summary: {recommendation.recommendationSummary}
+            <Users className="h-7 w-7 mr-2.5 text-primary" />            Team Summary: {recommendation.recommendationSummary}
           </CardTitle>
           <CardDescription>
             Below is a breakdown of the recommended roles and estimated costs.
@@ -46,15 +26,13 @@ export const TeamRecommendationDisplay = (...args: unknown[]): unknown => {;
             <InfoCard title="Your Budget" icon={<CreditCard className="h-5 w-5" />} value={projectBrief.budget} />
             <InfoCard"
               title="Est. Total Project Cost""
-              icon={<TrendingUp className="h-5 w-5" />}
-              value={`$${recommendation.totalProjectEstimate.min.toLocaleString()} - $${recommendation.totalProjectEstimate.max.toLocaleString()}`}
+              icon={<TrendingUp className="h-5 w-5" />}              value={`$${recommendation.totalProjectEstimate.min.toLocaleString()} - $${recommendation.totalProjectEstimate.max.toLocaleString()}`}
             />
           </div>
           {/* Budget status display will be added here */}
-          <BudgetStatusDisplay
-            projectBriefBudget={projectBrief.budget}
+          <BudgetStatusDisplay projectBriefBudget={projectBrief.budget}
             estimatedCost={recommendation.totalProjectEstimate}
-          />
+           />
         </CardContent>
       </Card>
 
@@ -69,8 +47,7 @@ export const TeamRecommendationDisplay = (...args: unknown[]): unknown => {;
       </div>
       {recommendation.roles.length === 0 && ("
         <Alert variant="default">"
-          <Info className="h-4 w-4" />
-          <AlertTitle>No Roles Recommended</AlertTitle>
+          <Info className="h-4 w-4" />          <AlertTitle>No Roles Recommended</AlertTitle>
           <AlertDescription>
             The AI could not determine specific roles based on the provided brief. You might want to refine your project goals or scope.
           </AlertDescription>

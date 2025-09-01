@@ -55,8 +55,8 @@ export default function Sustainability(...args: []):  {
 '
       title: 'Carbon Footprint Analysis','
       description: 'Comprehensive environmental impact assessment',
-      icon: Globe;
-    };
+      icon: Globe;    };
+  ]};
   ];
 
   return ("
@@ -82,8 +82,7 @@ export default function Sustainability(...args: []):  {
             className="text-center max-w-4xl mx-auto"
           >"
             <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-2 mb-6">"
-              <Heart className="w-5 h-5 text-emerald-400" />"
-              <span className="text-emerald-400 font-medium">Green IT & Sustainability</span>
+              <Heart className="w-5 h-5 text-emerald-400" />"              <span className="text-emerald-400 font-medium">Green IT & Sustainability</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -100,8 +99,7 @@ export default function Sustainability(...args: []):  {
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Go Green with Tech"
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </button>"
-              <button className="btn-outline px-8 py-4 text-lg">
+              </button>"              <button className="btn-outline px-8 py-4 text-lg">
                 Learn More
               </button>
             </div>

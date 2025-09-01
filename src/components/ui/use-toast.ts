@@ -1,4 +1,3 @@
-import { toast  } from 'react-hot-toast.ts'
 
 interface ToastOptions {
 duration?: number;
@@ -14,6 +13,5 @@ export function useToast(...args[]):  {
 
     return toast(message, options)
 
-  return { showToast };
-};
+  return { showToast };};
 '"

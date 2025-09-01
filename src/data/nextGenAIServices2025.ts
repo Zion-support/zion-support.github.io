@@ -70,8 +70,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     status: 'beta','
     researchLevel: 'research','
     ethicalCompliance['AI Safety', 'Transparency', 'Accountability', 'Bias Prevention'];
-  },;
-  {
+  },;  {
 '
     id: 'advanced-nlp-platform','
     title: 'Advanced Natural Language Processing','
@@ -115,8 +114,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     status: 'active','
     researchLevel: 'production','
     ethicalCompliance['Bias Detection', 'Content Filtering', 'Privacy Protection', 'Transparency'];
-  },;
-  {
+  },;  {
 '
     id: 'computer-vision-ai','
     title: 'Advanced Computer Vision AI','
@@ -160,8 +158,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     status: 'active','
     researchLevel: 'production','
     ethicalCompliance['Privacy Protection', 'Bias Prevention', 'Transparency', 'Accountability'];
-  },;
-  {
+  },;  {
 '
     id: 'ai-ethics-platform','
     title: 'AI Ethics & Governance Platform','
@@ -205,8 +202,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     status: 'active','
     researchLevel: 'production','
     ethicalCompliance['Ethical Guidelines', 'Bias Prevention', 'Transparency', 'Accountability'];
-  },;
-  {
+  },;  {
 '
     id: 'quantum-ai-hybrid','
     title: 'Quantum-Classical AI Hybrid','
@@ -250,8 +246,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     status: 'beta','
     researchLevel: 'research','
     ethicalCompliance['AI Safety', 'Quantum Ethics', 'Research Ethics', 'Transparency'];
-  },;
-  {
+  },;  {
 '
     id: 'federated-learning-platform','
     title: 'Federated Learning Platform','
@@ -295,8 +290,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     status: 'active','
     researchLevel: 'production','
     ethicalCompliance['Privacy Protection', 'Data Security', 'Transparency', 'Accountability'];
-  },;
-  {
+  },;  {
 '
     id: 'ai-research-platform','
     title: 'AI Research & Development Platform','
@@ -340,8 +334,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     status: 'active','
     researchLevel: 'research','
     ethicalCompliance['Research Ethics', 'Transparency', 'Reproducibility', 'Open Science'];
-  },;
-  {
+  },;  {
 '
     id: 'ai-optimization-engine','
     title: 'AI Optimization Engine','

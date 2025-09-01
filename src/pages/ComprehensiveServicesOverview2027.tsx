@@ -1,189 +1,7 @@
 
 import React, { useState, useEffect } from 'react';'
 import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
-import {
-
-  Brain,
-  Shield,
-  TrendingUp,
-  Zap,
-  Globe,
-  Users,
-  BarChart3,
-  Lock,
-  Eye,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  DollarSign,
-  Target,
-  Lightbulb,
-  Award,
-  ShieldCheck,
-  Server,
-  Smartphone,
-  Monitor,
-  Wifi,
-  Flask,
-  TestTube,
-  Syringe,
-  Stethoscope,
-  HeartPulse,
-  BrainCircuit,
-  Ear,
-  Hand,
-  Foot,
-  Bone,
-  Tooth,
-  Pill,
-  Bandage,
-  Thermometer,
-  Scale,
-  Calculator,
-  ChartBar,
-  PieChart,
-  LineChart,
-  Activity,
-  TrendingDown,
-  Minus,
-  Plus,
-  Equal,
-  Divide,
-  Percent,
-  Euro,
-  Pound,
-  Yen,
-  Bitcoin,
-  Ethereum,
-  CreditCard,
-  Wallet,
-  Banknote,
-  Coins,
-  PiggyBank,
-  Safe,
-  Vault,
-  LockKeyhole,
-  Key,
-  Fingerprint,
-  QrCode,
-  Barcode,
-  Scan,
-  Camera,
-  VideoOff,
-  Mic,
-  MicOff,
-  Volume2,
-  VolumeX,
-  Play,
-  Pause,
-  Stop,
-  SkipBack,
-  SkipForward,
-  Rewind,
-  FastForward,
-  Shuffle,
-  Repeat,
-  Repeat1,
-  Shuffle2,
-  SkipBack2,
-  SkipForward2,
-  PlayCircle,
-  PauseCircle,
-  Mail,
-  Phone,
-  MapPin,
-  ExternalLink,
-  Search,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ShoppingCart,
-  MessageCircle,
-  HelpCircle,
-  FileText,
-  Video,
-  Truck,;
-  Briefcase;'
-} from 'lucide-react';'
-import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';'
-import SEO from '@/components/SEO';'
-import { Button } from '@/components/ui/button';'
-import { Badge } from '@/components/ui/badge';
-
-// Sample data for demonstration;
-const MICRO_SAAS_SERVICES = [
-  {
-'
-    id: 'micro-crm','
-    title: 'Micro CRM','
-    description: 'Lightweight customer relationship management for small businesses','
-    category: 'Business Tools','
-    subcategory: 'CRM','
-    pricingModel: 'monthly',
-    price: 29,
-    rating: 4.8,
-    reviewCount: 156,
-    aiScore: 95,
-    featured: true,'
-    createdAt: '2024-01-15','
-    href: '/services/micro-crm','
-    tags: ['CRM', 'Business', 'Automation'],'
-    images: ['/images/micro-crm.jpg']
-  },
-  {
-'
-    id: 'helpdesk-platform','
-    title: 'Helpdesk Platform','
-    description: 'Streamlined customer support and ticket management system','
-    category: 'Customer Support','
-    subcategory: 'Helpdesk','
-    pricingModel: 'monthly',
-    price: 39,
-    rating: 4.7,
-    reviewCount: 89,
-    aiScore: 92,
-    featured: false,'
-    createdAt: '2024-02-01','
-    href: '/services/helpdesk-platform','
-    tags: ['Support', 'Helpdesk', 'Customer Service'],'
-    images: ['/images/helpdesk.jpg']
-  },
-  {
-'
-    id: 'website-analytics','
-    title: 'Website Analytics','
-    description: 'Comprehensive website performance and user behavior analytics','
-    category: 'Analytics','
-    subcategory: 'Web Analytics','
-    pricingModel: 'monthly',
-    price: 19,
-    rating: 4.9,
-    reviewCount: 234,
-    aiScore: 98,;
-    featured: true,;'
-    createdAt: '2024-01-10',;'
-    href: '/services/website-analytics',;'
-    tags: ['Analytics', 'Web', 'Performance'],;'
-    images: ['/images/analytics.jpg'];
-  };
-];
-
-const categories = [;'
-  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },;'"
-  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },;'"
-  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },;'"
-  { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
-];
-
-const pricingModels = [;'
-  { id: 'all', name: 'All Pricing' },;'
-  { id: 'monthly', name: 'Monthly' },;'
-  { id: 'yearly', name: 'Yearly' },;'
-  { id: 'one-time', name: 'One-time' },;'
-  { id: 'usage-based', name: 'Usage-based' };
+import { Link } from 'react-router-dom';  { id: 'usage-based', name: 'Usage-based' };
 ];
 export default function ComprehensiveServicesOverview2027(...args[]):  {
 '
@@ -203,14 +21,13 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
 
       filtered = filtered.filter(service => service.pricingModel === selectedPricing)};
     if (searchQuery.trim()) {;
-      const query = searchQuery.toLowerCase();
+      
       filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(query) ||;
         service.description.toLowerCase().includes(query) ||;
         service.tags.some(tag => tag.toLowerCase().includes(query)) ||;
         service.subcategory?.toLowerCase().includes(query);
-      );
-    }
+      )}
     filtered.sort((a, b) => {
 
       switch (sortBy) {
@@ -363,8 +180,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
         >
           <Link to={service.href}>;
             Learn More;"
-            <ArrowRight className="ml-2 w-4 h-4" />;
-          </Link>;
+            <ArrowRight className="ml-2 w-4 h-4" />;          </Link>;
         </Button>;
       </div>;
     </motion.div>;) ;
@@ -378,8 +194,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
       />
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />"
-        <div className="relative max-w-7xl mx-auto text-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />"        <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -428,8 +243,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
                 <input"
-                  type="text""
-                  placeholder="Search services..."
+                  type="text""                  placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="pl-10 pr-4 py-2 bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
@@ -442,16 +256,14 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                   onClick={() => setViewMode('grid')}'
                   className={viewMode === 'grid' ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
                 >"
-                  <Grid className="w-4 h-4" />
-                </Button>
+                  <Grid className="w-4 h-4" />                </Button>
                 <Button'
                   variant={viewMode === 'list' ? 'default' : 'outline'}"
                   size="sm"'
                   onClick={() => setViewMode('list')}'
                   className={viewMode === 'list' ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
                 >"
-                  <List className="w-4 h-4" />
-                </Button>
+                  <List className="w-4 h-4" />                </Button>
               </div>
               <select
                 value={sortBy}
@@ -476,8 +288,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               <div className="flex-1 max-w-md">"
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-                  <Input"
-                    placeholder="Search services..."
+                  <Input"                    placeholder="Search services..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}"
                     className="pl-10 bg-zion-slate-dark/50 border-zion-blue-light/20 text-white placeholder-zion-slate-light"
@@ -492,16 +303,14 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                     onClick={() => setViewMode('grid')}"
                     className="bg-zion-cyan hover:bg-zion-cyan-light"
 "
-                    <Grid className="w-4 h-4" />
-                  </Button>
+                    <Grid className="w-4 h-4" />                  </Button>
                   <Button'
                     variant={viewMode === 'list' ? 'default' : 'outline'}"
                     size="sm"'
                     onClick={() => setViewMode('list')}"
                     className="bg-zion-cyan hover:bg-zion-cyan-light"
 "
-                    <List className="w-4 h-4" />
-                  </Button>
+                    <List className="w-4 h-4" />                  </Button>
                 </div>
                 <select
                   value={sortBy}
@@ -551,7 +360,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               : 'grid-cols-1'`
           }`}>
             {filteredServices.map((service) => (;
-              <ServiceCard key={service.id} service={service} />
+              <ServiceCard key={service.id} service={service}  />
             ))}
           </div>"
           <div className="flex flex-wrap gap-4">
@@ -575,8 +384,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
             : 'grid-cols-1'`
         }`}>
           {filteredServices.map ( (service) => (;
-            <ServiceCard key={service.id} service={service} />) ) };
-        </div>;
+            <ServiceCard key={service.id} service={service} />) ) };        </div>;
         {filteredServices.length === 0 && (;"
           <div className="text-center py-16">;"
             <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>;
@@ -585,8 +393,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                 setSelectedCategory('all');'
                 setSelectedPricing('all');'
                 setSearchQuery('');
-              }}"
-              className = "bg-zion-cyan hover:bg-zion-cyan-light"
+              }}"              className = "bg-zion-cyan hover:bg-zion-cyan-light"
             >
               Clear Filters
             </Button>
@@ -606,8 +413,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan-light hover:to-zion-blue-light">"
               <Link to="/contact">
                 Schedule Consultation"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
             </Button>"
             <Button asChild variant="outline" size="lg" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">"
               <a href="tel:+13024640950">

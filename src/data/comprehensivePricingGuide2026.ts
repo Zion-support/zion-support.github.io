@@ -10,7 +10,6 @@ export interface PricingTier {
   bestFor: string;
   popular?: boolean;
 };
-
 export type PricingCategory = {
   name: string;
   description: string;
@@ -37,21 +36,18 @@ export type PricingBenefit = {
     website: string;
     address: string;
   
-};
-  technicalSpecs: {
+};  technicalSpecs: {
 
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   aiCapabilities: string[];
   complianceFeatures: string[];
   scalabilityFeatures: string[];
 }
-;
-export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
+;export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
   {
 
     id: "ai-business-intelligence-platform-2026","
@@ -435,8 +431,7 @@ export const ALL_PRICING_GUIDES_2026 = [
   neuroSyncAIPricing,
   blockchainForgePricing
 ];
-;
-export const PRICING_SUMMARY_2026 = {
+;export const PRICING_SUMMARY_2026 = {
 "
   overview: "Our 2026 innovative services pricing is designed to provide exceptional value while maintaining the highest quality and innovation standards.",
   keyBenefits: ["
@@ -464,8 +459,7 @@ export const PRICING_SUMMARY_2026 = {
     aiCapabilities: ["Threat Detection", "Behavioral Analytics", "Anomaly Detection", "Predictive Security", "Automated Response"],"
     complianceFeatures: ["SOC 2", "ISO 27001", "NIST", "GDPR", "CCPA", "HIPAA"],;"
     scalabilityFeatures: ["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"];
-  },
-  {
+  },  {
 "
     id: "autonomous-supply-chain-platform-2026","
     title: "Autonomous Supply Chain Platform 2026",;"
@@ -592,8 +586,7 @@ export const PRICING_SUMMARY_2026 = {
       email: "kleber@ziontechgroup.com",;"
       website: "https://ziontechgroup.com",;"
       address: "364 E Main St STE 1008, Middletown DE 19709";
-    },
-    technicalSpecs: {
+    },    technicalSpecs: {
 "
       technology: ["AI/ML", "IoT", "Blockchain", "Cloud computing", "Mobile apps", "APIs"],"
       integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify", "WMS systems"],;
@@ -604,8 +597,7 @@ export const PRICING_SUMMARY_2026 = {
     aiCapabilities: ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Computer Vision", "Optimization"],"
     complianceFeatures: ["ISO 28000", "C-TPAT", "GDPR", "Sustainability reporting", "Trade compliance"],;"
     scalabilityFeatures: ["Cloud-native", "Microservices", "Auto-scaling", "Multi-tenant", "Global deployment"];
-  },
-  {
+  },  {
 "
     id: "quantum-financial-trading-platform-2026","
     title: "Quantum Financial Trading Platform 2026",;"
@@ -732,8 +724,7 @@ export const PRICING_SUMMARY_2026 = {
       email: "kleber@ziontechgroup.com",;"
       website: "https://ziontechgroup.com",;"
       address: "364 E Main St STE 1008, Middletown DE 19709";
-    },
-    technicalSpecs: {
+    },    technicalSpecs: {
 "
       technology: ["Quantum computing", "AI/ML", "High-performance computing", "Real-time systems", "Blockchain"],"
       integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],;
@@ -744,8 +735,7 @@ export const PRICING_SUMMARY_2026 = {
     aiCapabilities: ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Sentiment Analysis", "Risk Modeling"],"
     complianceFeatures: ["FINRA", "SEC", "PCI DSS", "GDPR", "SOX compliance"],;"
     scalabilityFeatures: ["Quantum cloud", "Auto-scaling", "Multi-region", "High availability", "Disaster recovery"];
-  },
-  {
+  },  {
 "
     id: "autonomous-healthcare-diagnostics-2026","
     title: "Autonomous Healthcare Diagnostics Platform 2026",;"
@@ -872,8 +862,7 @@ export const PRICING_SUMMARY_2026 = {
       email: "kleber@ziontechgroup.com",;"
       website: "https://ziontechgroup.com",;"
       address: "364 E Main St STE 1008, Middletown DE 19709";
-    },
-    technicalSpecs: {
+    },    technicalSpecs: {
 "
       technology: ["AI/ML", "Computer Vision", "Cloud computing", "Mobile apps", "APIs", "Security"],"
       integrations: ["PACS systems", "EHR systems", "DICOM", "HL7", "Telemedicine platforms"],;
@@ -884,6 +873,5 @@ export const PRICING_SUMMARY_2026 = {
     aiCapabilities: ["Computer Vision", "Machine Learning", "Natural Language Processing", "Predictive Analytics", "Pattern Recognition"],"
     complianceFeatures: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],;"
     scalabilityFeatures: ["Cloud-native", "Multi-tenant", "Auto-scaling", "Global deployment", "High availability"];
-  }
-};
+  }};
 "

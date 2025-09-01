@@ -1,172 +1,6 @@
 import React, { useState, useMemo } from 'react.ts';'
 import { Link  } from 'react-router-dom.ts';'
 import { motion  } from 'framer-motion.ts';
-import { Search, 
-
-
-  ArrowRight, 
-  DollarSign, 
-  ExternalLink, 
-  Workflow, 
-  MessageSquare, 
-  Globe, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  Zap, 
-  Rocket, 
-  Heart, 
-  Lock, 
-  Users, 
-  BarChart3,
-  Target,
-  TrendingUp,
-  Award,
-  Star,
-  CheckCircle,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Filter,
-  SortAsc,
-  Eye,
-  Code,
-  Database,
-  Network,
-  Smartphone,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  FileText,
-  MessageCircle,
-  BarChart,
-  Users2,
-  Settings,
-  Palette,
-  Atom,
-  Sparkles,
-  Bot,
-  Workflow as WorkflowIcon,
-  Globe2,
-  Wifi,
-  ShieldCheck,
-  Server,
-  Chip'
- } from 'lucide-react.ts';'
-import { SEO  } from '@/components/SEO';
-
-// Mock data for 2027 services;
-const SERVICES_2027 = [
-  {
-
-    id: 1,
-    title: "AI Autonomous Business Platform","
-    description: "Fully autonomous AI systems that manage and optimize business operations","
-    category: "AI & Automation","
-    innovationLevel: "Revolutionary",
-    price: 5000,"
-    roi: "400-600%","
-    features: ["Autonomous Decision Making", "Process Optimization", "Predictive Analytics", "Self-Learning Systems"],
-    icon: Bot,"
-    color: "from-purple-500 to-pink-500"
-  },
-  {
-
-    id: 2,"
-    title: "Quantum AI Hybrid Platform","
-    description: "Combines quantum computing with AI for unprecedented computational power","
-    category: "Quantum AI","
-    innovationLevel: "Revolutionary",
-    price: 8000,"
-    roi: "500-800%","
-    features: ["Quantum Algorithms", "AI Integration", "Hybrid Processing", "Advanced Simulations"],
-    icon: Atom,"
-    color: "from-indigo-500 to-purple-500"
-  },
-  {
-
-    id: 3,"
-    title: "Next-Gen Cybersecurity Suite","
-    description: "AI-powered security with quantum-resistant encryption and zero-trust architecture","
-    category: "Cybersecurity","
-    innovationLevel: "Cutting-Edge",
-    price: 4000,"
-    roi: "300-500%","
-    features: ["Quantum Encryption", "AI Threat Detection", "Zero Trust", "Automated Response"],
-    icon: Shield,"
-    color: "from-red-500 to-orange-500"
-  },
-  {
-
-    id: 4,"
-    title: "Edge AI Computing Platform","
-    description: "Distributed AI processing at the network edge for real-time intelligence","
-    category: "Edge Computing","
-    innovationLevel: "Advanced",
-    price: 3000,"
-    roi: "250-400%","
-    features: ["Edge Processing", "Real-time AI", "Low Latency", "Distributed Intelligence"],
-    icon: Cpu,"
-    color: "from-green-500 to-emerald-500"
-  },
-  {
-
-    id: 5,"
-    title: "Digital Twin Ecosystem","
-    description: "Comprehensive digital replicas with AI-powered optimization and simulation","
-    category: "Digital Twin","
-    innovationLevel: "Cutting-Edge",
-    price: 4500,"
-    roi: "350-550%","
-    features: ["3D Modeling", "AI Optimization", "Real-time Simulation", "Predictive Maintenance"],
-    icon: Eye,"
-    color: "from-cyan-500 to-blue-500"
-  },
-  {
-
-    id: 6,"
-    title: "Sustainable Tech Solutions","
-    description: "Green technology solutions for environmental sustainability and efficiency","
-    category: "Sustainability","
-    innovationLevel: "Advanced",
-    price: 2200,"
-    roi: "200-350%","
-    features: ["Green Computing", "Energy Efficiency", "Carbon Reduction", "Sustainable Infrastructure"],
-    icon: Leaf,"
-    color: "from-green-500 to-teal-500"
-  },
-  {
-
-    id: 7,"
-    title: "Metaverse Development Platform","
-    description: "Complete metaverse solutions with AI-powered content creation and management","
-    category: "Metaverse","
-    innovationLevel: "Cutting-Edge",
-    price: 6000,"
-    roi: "400-650%","
-    features: ["3D Worlds", "AI Content", "Virtual Reality", "Social Integration"],
-    icon: Gamepad2,"
-    color: "from-purple-500 to-indigo-500"
-  },
-  {
-
-    id: 8,"
-    title: "Advanced IoT Solutions","
-    description: "Intelligent IoT networks with AI and edge computing capabilities","
-    category: "IoT","
-    innovationLevel: "Advanced",
-    price: 2800,"
-    roi: "250-400%","
-    features: ["Smart Networks", "AI Processing", "Real-time Data", "Predictive Analytics"],
-    icon: Network,"
-    color: "from-blue-500 to-cyan-500"
-  }
-];
-
 const Services2027: React.FC = (): JSX.Element => {
 '
   const [query, setQuery] = useState('');'
@@ -191,20 +25,17 @@ const Services2027: React.FC = (): JSX.Element => {
     // Filter by search query
     if (query.trim()) {
 
-      const q = query.trim().toLowerCase();
-      filtered = filtered.filter(s =>
+      const q = query.trim().toLowerCase();      filtered = filtered.filter(s =>
         s.title.toLowerCase().includes(q) ||
         s.description.toLowerCase().includes(q) ||
         s.category.toLowerCase().includes(q)
-      );
-    }
+      )}
     
     // Filter by category'
     if (selectedCategory !== 'all') {
 
       filtered = filtered.filter(s => s.category === selectedCategory);
-    }
-    
+    }    
     // Sort services
     switch (sortBy) {
 '
@@ -222,10 +53,8 @@ const Services2027: React.FC = (): JSX.Element => {
           const aROI = parseInt(a.roi.split('-')[0]);'
           const bROI = parseInt(b.roi.split('-')[0]);
           return bROI - aROI;
-        }) ;
-      default:
-        return filtered;
-    }
+        }) ;      default:
+        return filtered}
   }, [query, selectedCategory, sortBy]);
 '
   const featuredServices = SERVICES_2027.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 3);
@@ -235,9 +64,8 @@ const Services2027: React.FC = (): JSX.Element => {
       <SEO "
         title="2027 Services - Zion Tech Group" "
         description="Discover our revolutionary 2027 services including AI Autonomous Platforms, Quantum AI, Next-Gen Cybersecurity, and Metaverse Development. Leading the future of technology." "
-        keywords="2027 services, AI autonomous, quantum AI, cybersecurity, metaverse, edge computing, digital twin""
-        canonicalUrl="https://ziontechgroup.com/services2027"
-      />
+        keywords="2027 services, AI autonomous, quantum AI, cybersecurity, metaverse, edge computing, digital twin""        canonicalUrl="https://ziontechgroup.com/services2027"
+       />
       
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -249,8 +77,7 @@ const Services2027: React.FC = (): JSX.Element => {
             transition={{ duration: 0.6 }}
           >"
             <div className="flex items-center justify-center space-x-2 mb-4">"
-              <Sparkles className="w-8 h-8 text-purple-400" />"
-              <span className="text-purple-400 font-semibold text-lg">2027</span>
+              <Sparkles className="w-8 h-8 text-purple-400" />"              <span className="text-purple-400 font-semibold text-lg">2027</span>
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Future-Ready Services
@@ -287,8 +114,7 @@ const Services2027: React.FC = (): JSX.Element => {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input"
-                    type="text""
-                    placeholder="Search 2027 services..."
+                    type="text""                    placeholder="Search 2027 services..."
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/5 border border-purple-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400/50 focus:border-purple-400/50"
@@ -363,8 +189,7 @@ const Services2027: React.FC = (): JSX.Element => {
                 <div className="space-y-3 mb-6">
                   {service.features.slice(0, 3).map((feature, idx) => ("
                     <div key={idx} className="flex items-center space-x-2">"
-                      <CheckCircle className="w-4 h-4 text-purple-400" />"
-                      <span className="text-sm text-gray-300">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-purple-400" />"                      <span className="text-sm text-gray-300">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -385,8 +210,7 @@ const Services2027: React.FC = (): JSX.Element => {
                   className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-lg transition-all duration-300 group-hover:scale-105"
                 >
                   <span>Learn More</span>"
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />                </Link>
               </motion.div>) ) }
           </div>
         </div>
@@ -439,8 +263,7 @@ const Services2027: React.FC = (): JSX.Element => {
                   className="flex items-center justify-center space-x-2 px-3 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 text-purple-400 font-medium rounded-lg transition-all duration-300 text-sm"
                 >
                   <span>View Details</span>"
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
+                  <ArrowRight className="w-3 h-3" />                </Link>
               </motion.div>) ) }
           </div>
         </div>
@@ -482,5 +305,4 @@ const Services2027: React.FC = (): JSX.Element => {
       </section>
     </div>) ;
 };
-
 export default Services2027;'"`

@@ -1,81 +1,15 @@
 import React, { useState, useEffect } from 'react';'
 import { Link, useLocation } from 'react-router-dom';'
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  Menu,
-  X,
-  Search,
-  User,
-  Bell,
-  ChevronDown,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Rocket,
-  Globe,
-  Cpu,
-  Lock,
-  Heart,
-  Users,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Gauge,
-  Workflow,
-  Atom,
-  Star,
-  Target,
-  TrendingUp,
-  Award,
-  Code,
-  Truck,
-  Building,
-  BarChart3,
-  PenTool,
-  Eye,
-  Server,
-  Smartphone,
-  Database,
-  Network,
-  Clock,
-  ArrowRight,
-  PanelLeft,
-  Sparkles,
-  Phone,
-  Mail,
-  MapPin,
-  Satellite,
-  FileText,
-  Sparkles as SparklesIcon,
-  Leaf,
-  Link as LinkIcon,
-  Layers,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon,
-  Shield as ShieldIcon,
-  Zap as ZapIcon,
-  Brain as BrainIcon,
-  Atom as AtomIcon,
-  Rocket as RocketIcon,
-  Leaf as LeafIcon,'
-  Link as LinkIcon2} from 'lucide-react';'
-import { innovativeServices2025 } from '../data/innovativeServices2025';
-
 export function EnhancedHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);'
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
-  const location = useLocation();
-
+  
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+    
     };
 '
     window.addEventListener('scroll', handleScroll);'
@@ -84,8 +18,7 @@ export function EnhancedHeader() {
 
   const handleSearch = async (e: React.FormEvent) => {
 
-    e.preventDefault();
-    if (searchQuery.trim()) {
+    e.preventDefault();    if (searchQuery.trim()) {
 
       setIsSearching(true);
       try {
@@ -94,8 +27,7 @@ export function EnhancedHeader() {
       } finally {
 
         setIsSearching(false);
-      }
-    }
+      }    }
   };
 
   // Enhanced navigation with better organization
@@ -423,8 +355,7 @@ export function EnhancedHeader() {
       href: '/digital-transformation'},
   ];
 
-  return()
-    <>
+  return()    <>
       {/* Matrix Rain Background */}
       <div role="button" className="matrix - rain"></div>
       {/* Enhanced Header */}
@@ -450,8 +381,7 @@ export function EnhancedHeader() {
               >"
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">"
                   <Zap className="w-7 h-7 text-white" />
-                </div>"
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
+                </div>"                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
               </motion.div>"
               <div className="flex flex-col">"
                 <span className="text-3xl font-bold font-orbitron bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -487,8 +417,7 @@ export function EnhancedHeader() {
                   onMouseLeave={() => setServicesDropdownOpen(false)}
                 >
                   <span>Services</span>"
-                  <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180 duration-300" />
-                </button>
+                  <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180 duration-300" />                </button>
 
                 <AnimatePresence>
                   {servicesDropdownOpen && (
@@ -592,8 +521,7 @@ export function EnhancedHeader() {
                                   className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group"
                                 >
                                   View All {category.name}"
-                                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                </Link>
+                                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />                                </Link>
                               )}
                             </div>
                           </div>) ) }
@@ -608,8 +536,7 @@ export function EnhancedHeader() {
                           >
                             View All Innovative Services 2025"
                             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                          </Link>"
-                          <div className="flex items-center space-x-4 text-sm text-gray-400">
+                          </Link>"                          <div className="flex items-center space-x-4 text-sm text-gray-400">
                             <span>50+ Services Available</span>
                             <span>•</span>
                             <span > Proven ROI</span>
@@ -645,8 +572,7 @@ export function EnhancedHeader() {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                   <input"
-                    type="text""
-                    placeholder="Search services..."
+                    type="text""                    placeholder="Search services..."
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}"
                     className="w-64 pl-10 pr-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
@@ -675,8 +601,7 @@ export function EnhancedHeader() {
                   <span className="hidden lg:block">Account</span>"
                   <ChevronDown className="w-4 h-4" />
                 </button>"
-                <div className="absolute top-full right-0 mt-2 w-48 bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">"
-                  <div className="py-2">
+                <div className="absolute top-full right-0 mt-2 w-48 bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">"                  <div className="py-2">
                     <a"
                       href="/login""
                       className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors"
@@ -709,8 +634,7 @@ export function EnhancedHeader() {
                 <X className="w-6 h-6" />
               ) : ("
                 <Menu className="w-6 h-6" />
-              )}
-            </button>
+              )}            </button>
           </div>
         </div>
 
@@ -776,15 +700,13 @@ export function EnhancedHeader() {
                         href="tel:+13024640950""
                         className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors"
                       >"
-                        <Phone className="w-5 h-5" />
-                        <span>+1 302 464 0950</span>
+                        <Phone className="w-5 h-5" />                        <span>+1 302 464 0950</span>
                       </a>
                       <a"
                         href="mailto:kleber@ziontechgroup.com""
                         className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors"
                       >"
-                        <Mail className="w-5 h-5" />
-                        <span>kleber@ziontechgroup.com</span>
+                        <Mail className="w-5 h-5" />                        <span>kleber@ziontechgroup.com</span>
                       </a>
                     </div>
                   </div>
@@ -795,6 +717,5 @@ export function EnhancedHeader() {
       </motion.header>
     </>) ;
 }
-
 export default EnhancedHeader;
 '"`

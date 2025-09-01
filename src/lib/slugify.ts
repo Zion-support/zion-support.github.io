@@ -22,7 +22,6 @@ export function deslugify(slug: string): string {
 '
   return slug.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
 }
-
 /**
  * Generate a unique slug by appending a number if the slug already exists
  * @param text - The text to convert to a slug
@@ -41,8 +40,7 @@ export function generateUniqueSlug()
   while (existingSlugs.includes(uniqueSlug)) {
 
     uniqueSlug = `${slug}-${counter}`;
-    counter++;
-  }
+    counter++}
 
   return uniqueSlug;
 }

@@ -90,7 +90,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     compliance["AML/KYC", "Regulatory Compliance", "Security Audits", "Privacy Standards"],;"
     support["24/7 Support", "Developer Resources", "Security Audits", "Training"];
   },;
-
   // Advanced IoT Platform
   {
 "
@@ -145,7 +144,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     compliance["ISO 27001", "GDPR", "Industry Standards", "Security Protocols"],;"
     support["24/7 Support", "Implementation", "Training", "Custom Development"];
   },;
-
   // Robotics & Automation Platform
   {
 "
@@ -200,7 +198,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     compliance["Safety Standards", "Industry Regulations", "Quality Standards", "ISO Certifications"],;"
     support["24/7 Support", "Installation", "Training", "Maintenance"];
   },;
-
   // Augmented Reality Platform
   {
 "
@@ -255,7 +252,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     compliance["Accessibility Standards", "Privacy Regulations", "Content Guidelines", "Platform Requirements"],;"
     support["24/7 Support", "Content Creation", "Training", "Custom Development"];
   },;
-
   // Digital Twin Platform
   {
 "
@@ -310,7 +306,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     compliance["Industry Standards", "Data Security", "Privacy Regulations", "Quality Standards"],;"
     support["24/7 Support", "Implementation", "Training", "Custom Development"];
   },;
-
   // Biometric Security Platform
   {
 "
@@ -365,7 +360,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     compliance["GDPR", "CCPA", "HIPAA", "SOC 2", "ISO 27001"],;"
     support["24/7 Support", "Implementation", "Training", "Custom Development"];
   },;
-
   // Neuromorphic Computing Platform
   {
 "
@@ -419,6 +413,5 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     integrations: ["Intel Loihi", "IBM TrueNorth", "Custom Chips", "IoT Platforms", "Robotics Systems"],;"
     compliance: ["Research Standards", "Data Privacy", "Ethical AI", "Academic Guidelines"],;"
     support: ["24/7 Support", "Research Collaboration", "Training", "Custom Development"];
-  };
-];
+  };];
 '"

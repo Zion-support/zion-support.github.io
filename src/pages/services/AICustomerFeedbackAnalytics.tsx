@@ -1,167 +1,6 @@
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
-import { SEO  } from '../../components/SEO';
-import { MessageSquare, 
-  TrendingUp, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Globe, 
-  Lock, 
-  Eye,
-  Star,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Play,
-  ArrowRight,
-  CheckCircle,
-  AlertTriangle,
-  FileText,
-  Clock,
-  Award,
-  Brain,
-  Target,
-  PieChart,
-  Activity,
-  ShoppingCart,
-  Shield,
-  Settings'
- } from 'lucide-react.ts';
-
-export default function AICustomerFeedbackAnalytics(...args: any[]): any {
-
-  const features = [
-    {
-
-      icon: Brain,
-      title: "AI Sentiment Analysis","
-      description: "Advanced NLP algorithms analyze customer emotions, intent, and satisfaction levels across all feedback channels."
-    },
-    {
-
-      icon: BarChart3,"
-      title: "Real-time Analytics Dashboard","
-      description: "Live insights into customer satisfaction trends, sentiment scores, and feedback patterns with customizable metrics."
-    },
-    {
-
-      icon: MessageSquare,"
-      title: "Multi-Channel Integration","
-      description: "Seamlessly collect and analyze feedback from surveys, reviews, social media, support tickets, and more."
-    },
-    {
-
-      icon: Target,"
-      title: "Predictive Customer Insights","
-      description: "AI-powered predictions for customer churn, satisfaction trends, and actionable recommendations."
-    },
-    {
-
-      icon: PieChart,"
-      title: "Advanced Segmentation","
-      description: "Segment customers by demographics, behavior, satisfaction levels, and create targeted improvement strategies.";
-    },;
-    {;
-      icon: Activity,;"
-      title: "Automated Reporting",;"
-      description: "Generate comprehensive reports and alerts for stakeholders with actionable insights and recommendations.";
-    };
-  ];
-
-  const benefits = [
-    {
-
-      icon: Zap,"
-      title: "Improved Customer Retention","
-      description: "Identify at-risk customers early and implement proactive retention strategies."
-    },
-    {
-
-      icon: Globe,"
-      title: "Enhanced Customer Experience","
-      description: "Understand customer pain points and optimize touchpoints across the entire customer journey."
-    },
-    {
-
-      icon: Lock,"
-      title: "Data Security & Privacy","
-      description: "Enterprise-grade security with GDPR/CCPA compliance and data encryption at rest and in transit."
-    },
-    {
-
-      icon: Eye,"
-      title: "Actionable Insights","
-      description: "Transform raw feedback into actionable business intelligence with AI-powered recommendations."
-    },
-    {
-
-      icon: TrendingUp,"
-      title: "Increased Revenue","
-      description: "Improve customer satisfaction scores leading to higher retention rates and increased lifetime value.";
-    },;
-    {;
-      icon: Clock,;"
-      title: "Time Savings",;"
-      description: "Automate feedback analysis and reporting, saving hours of manual work each week.";
-    };
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Starter","
-      price: "$299","
-      period: "/month","
-      description: "Perfect for small businesses starting their feedback analytics journey",
-      features: ["
-        "Up to 10,000 feedback entries/month","
-        "Basic sentiment analysis","
-        "Email support","
-        "Standard integrations","
-        "Basic reporting","
-        "5 team members"
-      ],"
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-"
-      name: "Professional","
-      price: "$799","
-      period: "/month","
-      description: "Ideal for growing companies with advanced analytics needs",
-      features: ["
-        "Up to 100,000 feedback entries/month","
-        "Advanced AI sentiment analysis","
-        "Priority support","
-        "Custom integrations","
-        "Advanced reporting & dashboards","
-        "Predictive analytics","
-        "Unlimited team members","
-        "API access"
-      ],"
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-"
-      name: "Enterprise","
-      price: "$2,499","
-      period: "/month","
-      description: "For large organizations requiring enterprise-grade solutions",
-      features: ["
-        "Unlimited feedback entries","
-        "Custom AI models","
-        "Dedicated account manager","
-        "White-label solutions","
-        "Advanced security features","
-        "Custom reporting",;"
-        "On-premise deployment options",;"
-        "SLA guarantees";
+import { SEO  } from '../../components/SEO';        "SLA guarantees";
       ],;"
       cta: "Contact Sales",;
       popular: false;
@@ -200,10 +39,8 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
       icon: Award;
     },;
     {;"
-      industry: "Manufacturing",;"
-      description: "Track customer satisfaction with products, service quality, and identify improvement areas",;
-      icon: Settings;
-    };
+      industry: "Manufacturing",;"      description: "Track customer satisfaction with products, service quality, and identify improvement areas",;
+      icon: Settings};
   ];
 
   const integrations = [
@@ -235,15 +72,13 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
     {;"
       name: "Analytics Tools",;"
       platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"];
-    };
-  ];
+    };  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="AI Customer Feedback Analytics - Zion Tech Group""
-        description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction."
-      />
+        title="AI Customer Feedback Analytics - Zion Tech Group""        description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction."
+       />
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -276,8 +111,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Analytics
+              <Brain className="w-4 h-4 mr-2" />              AI-Powered Analytics
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Customer Feedback"
@@ -295,8 +129,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
                 Start Free Trial
               </button>"
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">"
-                <Download className="w-5 h-5 mr-2 inline" />
-                Download Brochure
+                <Download className="w-5 h-5 mr-2 inline" />                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -612,8 +445,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />"
-                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -870,8 +702,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Star className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Star className="w-5 h-5 mr-2" />                Start Free Trial
               </button>"
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">"
                 <Share2 className="w-5 h-5 mr-2 inline" />

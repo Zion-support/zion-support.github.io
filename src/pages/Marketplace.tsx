@@ -26,7 +26,6 @@ import {
   CardDescription,
   CardHeader,'
   CardTitle} from '@/components/ui/card';
-
 const Marketplace: React.FC = () => {
 '
   const [searchTerm, setSearchTerm] = useState('');'
@@ -349,8 +348,7 @@ const Marketplace: React.FC = () => {
     switch (sortBy) {
 '
       case 'rating':
-        return b.rating - a.rating;'
-      case 'price':
+        return b.rating - a.rating;'      case 'price':
         return ('
           parseFloat(a.price.replace(/[^0-9.]/g, '')) -'
           parseFloat(b.price.replace(/[^0-9.]/g, ''))
@@ -453,8 +451,7 @@ const Marketplace: React.FC = () => {
         return 'bg-gradient-to-r from-teal-500 to-green-500';
       default:'
         return 'bg-gradient-to-r from-gray-500 to-slate-500';
-    }
-  };
+    }  };
 
   return()
     <>
@@ -463,8 +460,7 @@ const Marketplace: React.FC = () => {
         description="Discover cutting-edge AI, quantum computing, cybersecurity, and cloud solutions from leading technology vendors in our curated marketplace.""
         keywords="technology marketplace, AI solutions, quantum computing, cybersecurity, cloud platforms, enterprise software, Zion Tech Group"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+"      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
         {/* Hero Section */}"
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">"
           <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-blue/20"></div>"
@@ -478,8 +474,7 @@ const Marketplace: React.FC = () => {
                 <Globe className="w-5 h-5 text-zion-purple mr-2" />"
                 <span className="text-zion-purple font-medium">
                   Technology Marketplace
-                </span>
-              </div>
+                </span>              </div>
 "
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Technology Solutions Marketplace
@@ -496,8 +491,7 @@ const Marketplace: React.FC = () => {
                 <div className="relative">"
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan-light" />
                   <input"
-                    type="text""
-                    placeholder="Search solutions, vendors, or technologies..."
+                    type="text""                    placeholder="Search solutions, vendors, or technologies..."
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}"
                     className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-zion-cyan-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
@@ -570,8 +564,7 @@ const Marketplace: React.FC = () => {
                 <Globe className="w-16 h-16 text-zion-cyan-light mx-auto mb-4" />"
                 <h3 className="text-xl font-semibold text-white mb-2">
                   No solutions found
-                </h3>"
-                <p className="text-zion-cyan-light">
+                </h3>"                <p className="text-zion-cyan-light">
                   Try adjusting your search terms or category filter.
                 </p>
               </motion.div>
@@ -624,8 +617,7 @@ const Marketplace: React.FC = () => {
                             </span>"
                             <span className="text-zion-cyan-light text-sm">
                               ({solution.reviews})
-                            </span>
-                          </div>
+                            </span>                          </div>
                         </div>
                       </CardHeader>
 
@@ -677,8 +669,7 @@ const Marketplace: React.FC = () => {
                         <div className="flex items-center justify-between mb-4">"
                           <div className="flex items-center space-x-4 text-sm text-zion-cyan-light">"
                             <div className="flex items-center space-x-1">"
-                              <Users className="w-4 h-4" />
-                              <span>{solution.users} users</span>
+                              <Users className="w-4 h-4" />                              <span>{solution.users} users</span>
                             </div>
                           </div>
                         </div>
@@ -686,15 +677,13 @@ const Marketplace: React.FC = () => {
                         <div className="flex space-x-2">"
                           <Button className="flex-1 bg-gradient-to-r from-zion-purple to-zion-blue hover:from-zion-purple/80 hover:to-zion-blue/80 text-white">
                             Learn More"
-                            <ArrowRight className="w-4 h-4 ml-2" />
-                          </Button>
+                            <ArrowRight className="w-4 h-4 ml-2" />                          </Button>
                           <Button"
                             variant="outline""
                             size="sm""
                             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark"
                           >"
-                            <Heart className="w-4 h-4" />
-                          </Button>
+                            <Heart className="w-4 h-4" />                          </Button>
                         </div>
                       </CardContent>
                     </Card>
@@ -722,16 +711,14 @@ const Marketplace: React.FC = () => {
 "
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <Button className="bg-gradient-to-r from-zion-purple to-zion-blue hover:from-zion-purple/80 hover:to-zion-blue/80 text-white">"
-                  <Search className="w-5 h-5 mr-2" />
-                  Get Custom Recommendation
+                  <Search className="w-5 h-5 mr-2" />                  Get Custom Recommendation
                 </Button>
 
                 <Button"
                   variant="outline""
                   className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark"
                 >"
-                  <Users className="w-5 h-5 mr-2" />
-                  Talk to Our Experts
+                  <Users className="w-5 h-5 mr-2" />                  Talk to Our Experts
                 </Button>
               </div>
             </motion.div>
@@ -740,6 +727,5 @@ const Marketplace: React.FC = () => {
       </div>
     </>) ;
 };
-
 export default Marketplace;
 '"`

@@ -1,62 +1,6 @@
 import React, { useState } from 'react';'
 import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
-import {
-
-  FlaskConical,
-  Brain,
-  Shield,
-  Cloud,
-  TrendingUp,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  Award,
-  Clock,
-  DollarSign,
-  Search,
-  Filter,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Target,
-  BookOpen,
-  GraduationCap,
-  Lightbulb,
-  Microscope,
-  TestTube,
-  Atom,
-  Satellite,
-  Telescope'
- } from 'lucide-react';
-
-const researchAreas = [
-  {
-'
-    id: 'ai-ml','
-    name: 'Artificial Intelligence & Machine Learning',
-    icon: Brain,'
-    description: 'Advancing the frontiers of AI through innovative research in neural networks, natural language processing, and computer vision.','
-    color: 'from-purple-500 to-indigo-600',
-    focus[;'
-      'Deep Learning Architectures','
-      'Natural Language Processing','
-      'Computer Vision & Image Recognition','
-      'Reinforcement Learning','
-      'AI Ethics & Responsible AI','
-      'Edge AI & Federated Learning'
+import { Link } from 'react-router-dom';      'Edge AI & Federated Learning'
     ],;
     publications: 15,
     patents: 8,
@@ -155,8 +99,7 @@ const researchAreas = [
     ],;
     publications: 20,;
     patents: 10,;
-    projects: 16;
-  };
+    projects: 16};
 ];
 ;
 const researchProjects = [
@@ -168,8 +111,7 @@ const researchProjects = [
     status: 'Active','
     description: 'Developing machine learning algorithms to detect and respond to cybersecurity threats in real-time.','
     team['Dr. Sarah Chen', 'AI Researcher', 'Security Expert'],;'
-    duration: '18 months','
-    funding: '$500,000',
+    duration: '18 months','    funding: '$500,000',
     outcomes[;'
       'Real-time threat detection system','
       '95% accuracy in threat classification','
@@ -281,8 +223,7 @@ const publications = [
 
     id: 1,'
     title: 'Advanced Neural Network Architectures for Cybersecurity','
-    authors['Dr. Sarah Chen', 'Dr. Michael Rodriguez'],;'
-    journal: 'IEEE Transactions on Cybersecurity',
+    authors['Dr. Sarah Chen', 'Dr. Michael Rodriguez'],;'    journal: 'IEEE Transactions on Cybersecurity',
     year: 2027,
     citations: 45,'
     area: 'AI & ML','
@@ -343,8 +284,7 @@ const patents = [
     filingDate: '2026-08-15','
     status: 'Granted','
     patentNumber: 'US 11,234,567','
-    area: 'AI & ML','
-    description: 'A system for detecting cybersecurity threats using adaptive machine learning algorithms.'
+    area: 'AI & ML','    description: 'A system for detecting cybersecurity threats using adaptive machine learning algorithms.'
   },
   {
 
@@ -389,8 +329,7 @@ const patents = [
     patentNumber: 'US 2026/0098765',;'
     area: 'Cloud-Native',;'
     description: 'A security architecture pattern for cloud-native applications.';
-  };
-];
+  };];
 
 export default function ResearchDevelopment(...args[]):  {
 '
@@ -408,8 +347,7 @@ export default function ResearchDevelopment(...args[]):  {
     return matchesArea && matchesStatus && matchesSearch;
   }) ;
 
-    }
-  };
+    }  };
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -433,8 +371,7 @@ export default function ResearchDevelopment(...args[]):  {
             className="text-center"
 "
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">"
-              <FlaskConical className="w-5 h-5" />"
-              <span className="font-medium">Research & Development</span>
+              <FlaskConical className="w-5 h-5" />"              <span className="font-medium">Research & Development</span>
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Advancing Technology Frontiers
@@ -457,8 +394,7 @@ export default function ResearchDevelopment(...args[]):  {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
                   <input"
-                    type="text""
-                    placeholder="Search research..."
+                    type="text""                    placeholder="Search research..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -519,8 +455,7 @@ export default function ResearchDevelopment(...args[]):  {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {researchAreas.map((area, index) => {;
               const IconComponent = area.icon;
-              return()
-                <motion.div
+              return()                <motion.div
                   key = {area.id}
                   initial = {
 
@@ -546,16 +481,14 @@ export default function ResearchDevelopment(...args[]):  {
                   <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center mb-4`}>"
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>"
-                  <h3 className="text-xl font-bold text-white mb-3">{area.name}</h3>"
-                  <p className="text-zion-slate-light mb-4">{area.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{area.name}</h3>"                  <p className="text-zion-slate-light mb-4">{area.description}</p>
 "
                   <div className="mb-4">"
                     <h4 className="font-semibold text-white mb-2">Research Focus</h4>"
                     <div className="space-y-1">
                       {area.focus.slice(0, 4).map((focus, idx) => ("
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                          <CheckCircle className="w-3 h-3 text-green-400" />
-                          <span>{focus}</span>
+                          <CheckCircle className="w-3 h-3 text-green-400" />                          <span>{focus}</span>
                         </div>) ) }
                     </div>
                   </div>
@@ -575,8 +508,7 @@ export default function ResearchDevelopment(...args[]):  {
                     </div>;
                   </div>;
                 </motion.div>;) ;
-            }) }
-          </div>
+            }) }          </div>
         </div>
       </section>
 
@@ -608,8 +540,7 @@ export default function ResearchDevelopment(...args[]):  {
             {filteredProjects.map((project, index) => {;
               const IconComponent = getAreaIcon(project.area);
               const areaColor = getAreaColor(project.area);
-              return()
-                <motion.div
+              return()                <motion.div
                   key = {project.id}
                   initial = {
 
@@ -636,8 +567,7 @@ export default function ResearchDevelopment(...args[]):  {
                   <div className="flex items-start justify-between mb-4">"
                     <div className="flex items-center gap-3">`
                       <div className={`w-16 h-16 bg-gradient-to-br ${areaColor} rounded-2xl flex items-center justify-center`}>"
-                        <IconComponent className="w-8 h-8 text-white" />
-                      </div>
+                        <IconComponent className="w-8 h-8 text-white" />                      </div>
                       <div>"
                         <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>"
                         <div className="flex items-center gap-2">
@@ -661,8 +591,7 @@ export default function ResearchDevelopment(...args[]):  {
                     </div>"
                     <div className="text-sm text-zion-slate-light">"
                       <span className="flex items-center gap-1">"
-                        <DollarSign className="w-4 h-4" />
-                        Funding: {project.funding}
+                        <DollarSign className="w-4 h-4" />                        Funding: {project.funding}
                       </span>
                     </div>
                   </div>
@@ -684,8 +613,7 @@ export default function ResearchDevelopment(...args[]):  {
                     <div className="space-y-1">
                       {project.outcomes.map((outcome, idx) => ("
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                          <Star className="w-3 h-3 text-yellow-400" />
-                          <span>{outcome}</span>
+                          <Star className="w-3 h-3 text-yellow-400" />                          <span>{outcome}</span>
                         </div>) ) }
                     </div>
                   </div>
@@ -705,8 +633,7 @@ export default function ResearchDevelopment(...args[]):  {
                     </div>;
                   </div>;
                 </motion.div>;) ;
-            }) }
-          </div>
+            }) }          </div>
         </div>
       </section>
 
@@ -776,8 +703,7 @@ export default function ResearchDevelopment(...args[]):  {
                         {pub.year}
                       </span>"
                       <span className="flex items-center gap-1">"
-                        <Star className="w-4 h-4" />
-                        {pub.citations} citations
+                        <Star className="w-4 h-4" />                        {pub.citations} citations
                       </span>
                     </div>"
                     <p className="text-zion-slate-light mb-3">{pub.abstract}</p>"
@@ -793,8 +719,7 @@ export default function ResearchDevelopment(...args[]):  {
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
 
                       Read Paper"
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+                      <ArrowRight className="ml-2 h-4 w-4" />                    </Link>
                   </div>
                 </div>;
               </motion.div>) ) }
@@ -893,8 +818,7 @@ export default function ResearchDevelopment(...args[]):  {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>"
                   <div className="text-right">"
-                    <div className="text-sm text-zion-slate-light">Contact us for licensing</div>"
-                    <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
+                    <div className="text-sm text-zion-slate-light">Contact us for licensing</div>"                    <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
                   </div>
                 </div>;
               </motion.div>) ) }
@@ -935,8 +859,7 @@ export default function ResearchDevelopment(...args[]):  {
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
 
                 Start Collaboration"
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+                <ArrowRight className="ml-2 h-5 w-5" />              </Link>
               <Link"
                 to="/case-studies""
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"

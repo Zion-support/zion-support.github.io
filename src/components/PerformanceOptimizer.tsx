@@ -5,8 +5,7 @@ import {
   Zap,
   TrendingUp,
   AlertTriangle,
-  CheckCircle,
-  Clock,
+  CheckCircle,  Clock,
   BarChart3,'
   Settings} from 'lucide-react';
 
@@ -37,7 +36,6 @@ interface OptimizationSuggestion {
   impact: 'high' | 'medium' | 'low';'
   category: 'images' | 'javascript' | 'css' | 'fonts' | 'caching' | 'server';
   implemented: boolean;
-
 const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState < PerformanceMetrics> ({
     fcp: 0,
@@ -112,7 +110,6 @@ const PerformanceOptimizer: React.FC = () => {
       cls: Math.random() * 0.1, // 0-0.1
       ttfb: Math.random() * 500 + 100, // 100-600ms
       score: 0};
-
     // Calculate performance score
     calculatePerformanceScore(initialMetrics, resourceMetrics);
 
@@ -151,7 +148,6 @@ const PerformanceOptimizer: React.FC = () => {
     setMetrics (newMetrics) ;
     setHistory (prev => [...prev.slice (-9) , newMetrics]) ;
   }, []) ;
-
   useEffect ( () => {
     if (isMonitoring) {
 
@@ -200,8 +196,7 @@ const PerformanceOptimizer: React.FC = () => {
           <Activity className="w-6 h-6 text-zion-cyan" />"
           <h2 className="text-xl font-bold text-white">
             Performance Optimizer
-          </h2>
-        </div>
+          </h2>        </div>
         <button
           onClick={() => setIsMonitoring(!isMonitoring)}
           className={`px-4 py-2 rounded-lg font-medium transition-colors ${
@@ -242,8 +237,7 @@ const PerformanceOptimizer: React.FC = () => {
             </h3>
           </div>"
           <div className="space-y-2 text-sm">"
-            <div className="flex justify-between">"
-              <span className="text-gray-300">FCP:</span>
+            <div className="flex justify-between">"              <span className="text-gray-300">FCP:</span>
               <span className={getMetricStatus(metrics.fcp, 1800)}>
                 {Math.round(metrics.fcp)}ms
               </span>
@@ -277,8 +271,7 @@ const PerformanceOptimizer: React.FC = () => {
           <h3 className="text-lg font-semibold text-white">
             Optimization Suggestions
           </h3>
-        </div>"
-        <div className="space-y-3">
+        </div>"        <div className="space-y-3">
           {suggestions.map(suggestion => (
             <div
               key={suggestion.id}`
@@ -361,6 +354,5 @@ const PerformanceOptimizer: React.FC = () => {
         </div>) }
     </div>) ;
 };
-
 export default PerformanceOptimizer;
 '"`

@@ -13,7 +13,6 @@ export interface PricingTier {
   recommendedFor: string[];
   savings?: number;
   popular?: boolean;
-
 }
 ;
 export interface EnterprisePricing {
@@ -32,8 +31,7 @@ export interface EnterprisePricing {
     website: string;
   
 };
-;
-export interface ServicePricing {
+;export interface ServicePricing {
 
   serviceId: string;
   serviceName: string;
@@ -56,7 +54,6 @@ const zionContact = {
   email: "kleber@ziontechgroup.com","
   website: "https://ziontechgroup.com"
 };
-
 // Revolutionary Micro SAAS Services Pricing;
 export const revolutionaryMicroSaasPricing: ServicePricing[] = [
   {

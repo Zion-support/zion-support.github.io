@@ -197,8 +197,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
       step: "06",;"
       title: "Ongoing Compliance",;"
       description: "Maintain compliance with continuous monitoring and improvement";
-    };
-  ];
+    };  ];
 
   return()
     <>
@@ -207,8 +206,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
         description="Professional SOC2 compliance tracking platform with automated controls monitoring, documentation management, and audit preparation tools.""
         canonical="/services/soc2-compliance-tracker"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+"      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 overflow-hidden">"
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>"
@@ -593,8 +591,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center space-x-3">"
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />"
-                        <span className="text-gray-300">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />"                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>

@@ -5,7 +5,6 @@ export const ModernUIEnhancer: React.FC < ModernUIEnhancerProps> = ({
 interface ModernUIEnhancerProps {
   // Add your props here
 
-
   enabled?: boolean;
 
 export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
@@ -22,8 +21,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     // Add modern font loading'
     const fontLink = document.createElement('link');'
     fontLink.rel = 'preload';'
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';'
-    fontLink.as = 'style';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';'    fontLink.as = 'style';
     document.head.appendChild (fontLink) ;
 
     // Apply modern typography
@@ -64,7 +62,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
         900: '#0f172a'
       }
     };
-
     // Apply CSS custom properties
     Object.entries(colors).forEach(([key, value]) => {
 '
@@ -216,8 +213,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     if (!enabled) return;
 
     // Add modern button styles'"
-    const buttons = document.querySelectorAll('button, .btn, [role="button"]');
-    buttons.forEach((button) => {
+    const buttons = document.querySelectorAll('button, .btn, [role="button"]');    buttons.forEach((button) => {
 '
       if (!button.classList.contains('modern-enhanced')) {
 '
@@ -232,8 +228,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     }) ;
 
     // Add modern card styles'"
-    const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]');
-    cards.forEach((card) => {
+    const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]');    cards.forEach((card) => {
 '
       if (!card.classList.contains('modern-enhanced')) {
 '
@@ -247,7 +242,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       }
     }) ;
   }, [enabled]) ;
-
   useEffect ( () => {
     if (!enabled) return;
 
@@ -259,8 +253,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     enhanceBorderRadius () ;
     enhanceDarkMode () ;
     enhanceComponents () ;
-  }, [
-    enabled,
+  }, [    enabled,
     enhanceTypography,
     enhanceColorScheme,
     enhanceSpacing,

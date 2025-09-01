@@ -5,8 +5,7 @@ import {
   Search as SearchIcon,
   Filter,
   Server,
-  Users,
-  Building,
+  Users,  Building,
   Star,
   MapPin,
   Clock,
@@ -17,7 +16,6 @@ import {
   Bookmark,'
   Share2} from 'lucide-react';'
 import { SEO } from '../components/SEO';
-
 const Search: React.FC = () => {
 '
   const [searchQuery, setSearchQuery] = useState('');'
@@ -113,8 +111,7 @@ const Search: React.FC = () => {
   }, [searchQuery, activeCategory, sortBy]) ;
 
   const performSearch = async () => {
-    setLoading (true) ;
-    // Simulate API call delay
+    setLoading (true) ;    // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 500));
 
     // Filter results based on search query and category
@@ -132,7 +129,6 @@ const Search: React.FC = () => {
 
       return matchesQuery && matchesCategory;
     }) ;
-
     // Sort results
     filteredResults.sort((a, b) => {
 
@@ -197,8 +193,7 @@ const Search: React.FC = () => {
         return 'Equipment';
       default:'
         return 'Unknown';
-    }
-  };
+    }  };
 
   return()
     <>
@@ -207,8 +202,7 @@ const Search: React.FC = () => {
         description="Search for services, talent, equipment, and companies across Zion Tech Group's comprehensive technology marketplace.""
         keywords="search, services, talent, equipment, companies, technology marketplace, Zion Tech Group"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+"      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Search Header */}"
         <section className="pt-32 pb-16 px-4">"
           <div className="max-w-7xl mx-auto">
@@ -231,8 +225,7 @@ const Search: React.FC = () => {
             <form onSubmit={handleSearch} className="max-w-4xl mx-auto">"
               <div className="relative">"
                 <SearchIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
-                <input"
-                  type="text"
+                <input"                  type="text"
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   placeholder="Search for services, talent, equipment, companies...""
@@ -257,8 +250,7 @@ const Search: React.FC = () => {
               <div className="lg:col-span-1">"
                 <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">"
                   <h3 className="text-white font-semibold text-lg mb-4 flex items-center gap-2">"
-                    <Filter className="w-5 h-5" />
-                    Filters
+                    <Filter className="w-5 h-5" />                    Filters
                   </h3>
 
                   {/* Categories */}"
@@ -365,8 +357,7 @@ const Search: React.FC = () => {
                             {result.price}
                           </div>"
                           <div className="flex items-center gap-1">"
-                            <Calendar className="w-4 h-4" />
-                            {new Date(result.date).toLocaleDateString()}
+                            <Calendar className="w-4 h-4" />                            {new Date(result.date).toLocaleDateString()}
                           </div>
                         </div>
 "
@@ -387,8 +378,7 @@ const Search: React.FC = () => {
                             <button className="p-2 text-gray-400 hover:text-white transition-colors">"
                               <Bookmark className="w-4 h-4" />
                             </button>"
-                            <button className="p-2 text-gray-400 hover:text-white transition-colors">"
-                              <Share2 className="w-4 h-4" />
+                            <button className="p-2 text-gray-400 hover:text-white transition-colors">"                              <Share2 className="w-4 h-4" />
                             </button>"
                             <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg text-sm font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
                               View Details
@@ -417,8 +407,7 @@ const Search: React.FC = () => {
                     <p className="text-gray-400">
                       Enter a search term to find services, talent, equipment,
                       and companies.
-                    </p>
-                  </div>
+                    </p>                  </div>
                 )}
               </div>
             </div>
@@ -427,6 +416,5 @@ const Search: React.FC = () => {
       </div>
     </>) ;
 };
-
 export default Search;
 '"`

@@ -51,10 +51,8 @@ export default function AIBusinessIntelligence(...args[]):  {
       icon: Database;
     },;
     {;'
-      title: 'Automated Reporting',;'
-      description: 'Generate reports automatically with AI insights',;
-      icon: Target;
-    };
+      title: 'Automated Reporting',;'      description: 'Generate reports automatically with AI insights',;
+      icon: Target};
   ];
 
   return()
@@ -90,8 +88,7 @@ export default function AIBusinessIntelligence(...args[]):  {
             className="text-center max-w-4xl mx-auto"
 "
             <div className="inline-flex items-center space-x-2 bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-2 mb-6">"
-              <Brain className="w-5 h-5 text-violet-400" />"
-              <span className="text-violet-400 font-medium">AI Business Intelligence</span>
+              <Brain className="w-5 h-5 text-violet-400" />"              <span className="text-violet-400 font-medium">AI Business Intelligence</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -108,8 +105,7 @@ export default function AIBusinessIntelligence(...args[]):  {
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Free Trial"
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </button>"
-              <button className="btn-outline px-8 py-4 text-lg">
+              </button>"              <button className="btn-outline px-8 py-4 text-lg">
                 Watch Demo
               </button>
             </div>
@@ -388,8 +384,7 @@ export default function AIBusinessIntelligence(...args[]):  {
                   Basic AI insights
                 </li>"
                 <li className="flex items-center text-zion-slate-light">"
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />
-                  Standard reports
+                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />                  Standard reports
                 </li>
               </ul>"
               <button className="w-full btn-outline py-3">Get Started</button>
@@ -452,8 +447,7 @@ export default function AIBusinessIntelligence(...args[]):  {
                   Custom dashboards
                 </li>"
                 <li className="flex items-center text-violet-100">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Priority support
+                  <CheckCircle className="w-5 h-5 text-white mr-3" />                  Priority support
                 </li>
               </ul>"
               <button className="w-full bg-white text-violet-600 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
@@ -466,25 +460,11 @@ export default function AIBusinessIntelligence(...args[]):  {
               initial = {
 
   { opacity: 0,
-  y: 20 ;
-
-
-
-
-
-
-}}
+  y: 20 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
-}}
+  y: 0 }}
               transition = {
 
   { duration: 0.6,
@@ -515,8 +495,7 @@ export default function AIBusinessIntelligence(...args[]):  {
                   White-label solution
                 </li>"
                 <li className="flex items-center text-zion-slate-light">"
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />
-                  Dedicated support
+                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />                  Dedicated support
                 </li>
               </ul>"
               <button className="w-full btn-outline py-3">Contact Sales</button>
@@ -576,8 +555,7 @@ export default function AIBusinessIntelligence(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 
 // Missing icon component
 const CheckCircle = ({ className }: { className?: string }) => (;"

@@ -2,59 +2,7 @@ import React, { useState } from 'react';'
 import { motion } from 'framer-motion';'
 import { Link } from 'react-router-dom';
 import SEO from "../components/SEOHead";'
-import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';
-import {
-
-  Brain,
-  Shield,
-  Zap,
-  Code,
-  Signal,
-  Users,
-  Truck,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  CheckCircle,
-  TrendingUp,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Cloud,
-  Rocket'
- } from 'lucide-react';
-
-const AllServices2027: React.FC = () => {;'
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-
-  const categories = [;'
-    { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' },;'
-    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-purple-500 to-pink-600' },;'
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;'
-    { id: 'Emerging Technology', name: 'Emerging Technology', icon: Zap, color: 'from-yellow-500 to-orange-600' },;'
-    { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from-green-500 to-teal-600' },;'
-    { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from-blue-500 to-indigo-600' };
-  ];
-
-  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service =>'
-    selectedCategory === 'All' || service.category === selectedCategory
-  );
-
-  const getCategoryStats = (categoryId: string)  => {
-'
-    if (categoryId === 'All') {
-
-      return {
-
-              count: innovativeServices2027.length,'
-      avgPrice: Math.round(innovativeServices2027.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / innovativeServices2027.length),
-      avgRating: Math.round((innovativeServices2027.reduce((sum, s)  => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10;
-      }};
-    const services = innovativeServices2027.filter (s => s.category === categoryId) ;
-          return {
+import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';          return {
 
         count: services.length,'
         avgPrice: Math.round(services.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / services.length),
@@ -72,8 +20,7 @@ const AllServices2027: React.FC = () => {;'
         avgRating: Math.round ( (INNOVATIVE_SERVICES_2027.reduce ( (sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10;
       };
 
-    const services = INNOVATIVE_SERVICES_2027.filter (s => s.category === categoryId) ;
-    return {
+    const services = INNOVATIVE_SERVICES_2027.filter (s => s.category === categoryId) ;    return {
 
       count: services.length,
       avgPrice: Math.round (services.reduce ( (sum, s) => sum + s.price, 0) / services.length) ,
@@ -106,15 +53,13 @@ const AllServices2027: React.FC = () => {;'
       };
     };
   };
-
   return()
     <>
       <SEOHead"
         title="All Services 2027 - Zion Tech Group""
         description="Explore our complete portfolio of cutting-edge technology services. From AI and cybersecurity to quantum computing and 5G solutions, we have everything your business needs to succeed.""
-        canonical="/all-services-2027""
-        url="https://ziontechgroup.com/all-services-2027"
-      />
+        canonical="/all-services-2027""        url="https://ziontechgroup.com/all-services-2027"
+       />
 
       {/* Hero Section */}"
       <section className="relative py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light overflow-hidden">'"
@@ -173,8 +118,7 @@ const AllServices2027: React.FC = () => {;'
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center space-x-4">"
-              <MapPin className="w-5 h-5" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <MapPin className="w-5 h-5" />              <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
         </div>
@@ -202,8 +146,7 @@ const AllServices2027: React.FC = () => {;'
               const stats = getCategoryStats(category.id);
               const IconComponent = category.icon;
 
-              return()
-                <motion.div
+              return()                <motion.div
                   key = {category.id}
                   variants={itemVariants}
                   className={`bg-zion-slate-dark border border-zion-slate-light rounded-xl p-6 hover:border-cyan-500 transition-all duration-300 cursor-pointer ${
@@ -216,8 +159,7 @@ const AllServices2027: React.FC = () => {;'
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>"
                   <h3 className="text-xl font-bold text-white mb-2">{category.name}</h3>"
-                  <div className="space-y-2 text-sm text-gray-300">"
-                    <div className="flex justify-between">
+                  <div className="space-y-2 text-sm text-gray-300">"                    <div className="flex justify-between">
                       <span>Services:</span>"
                       <span className="text-cyan-400 font-semibold">{stats.count}</span>
                     </div>"
@@ -231,8 +173,7 @@ const AllServices2027: React.FC = () => {;'
                     </div>;
                   </div>;
                 </motion.div>;) ;
-            }) }
-          </div>
+            }) }          </div>
         </div>
       </section>
 
@@ -254,8 +195,7 @@ const AllServices2027: React.FC = () => {;'
             animate="visible""
             className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {filteredServices.map ( (service) => (<ServiceCard key={service.id} service={service} />) ) }
-          </motion.div>
+            {filteredServices.map ( (service) => (<ServiceCard key={service.id} service={service} />) ) }          </motion.div>
 
           {filteredServices.length === 0 && ("
             <div className="text-center py-20">"
@@ -288,8 +228,7 @@ const AllServices2027: React.FC = () => {;'
               <div className="flex items-center space-x-4 mb-6">"
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">"
                   <Brain className="w-6 h-6 text-white" />
-                </div>"
-                <h3 className="text-2xl font-bold text-white">AI Services</h3>
+                </div>"                <h3 className="text-2xl font-bold text-white">AI Services</h3>
               </div>"
               <p className="text-gray-300 mb-6">
                 Transform your business with cutting-edge artificial intelligence solutions.
@@ -306,8 +245,7 @@ const AllServices2027: React.FC = () => {;'
                   <span className="text-gray-300">Natural Language Processing</span>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <CheckCircle className="w-5 h-5 text-green-400" />"
-                  <span className="text-gray-300">Computer Vision</span>
+                  <CheckCircle className="w-5 h-5 text-green-400" />"                  <span className="text-gray-300">Computer Vision</span>
                 </div>
               </div>
             </motion.div>
@@ -320,8 +258,7 @@ const AllServices2027: React.FC = () => {;'
               <div className="flex items-center space-x-4 mb-6">"
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center">"
                   <Shield className="w-6 h-6 text-white" />
-                </div>"
-                <h3 className="text-2xl font-bold text-white">Cybersecurity</h3>
+                </div>"                <h3 className="text-2xl font-bold text-white">Cybersecurity</h3>
               </div>"
               <p className="text-gray-300 mb-6">
                 Protect your digital assets with enterprise-grade security solutions.
@@ -338,8 +275,7 @@ const AllServices2027: React.FC = () => {;'
                   <span className="text-gray-300">Incident Response</span>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <CheckCircle className="w-5 h-5 text-green-400" />"
-                  <span className="text-gray-300">Compliance automation</span>
+                  <CheckCircle className="w-5 h-5 text-green-400" />"                  <span className="text-gray-300">Compliance automation</span>
                 </div>
               </div>
             </motion.div>
@@ -352,8 +288,7 @@ const AllServices2027: React.FC = () => {;'
               <div className="flex items-center space-x-4 mb-6">"
                 <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center">"
                   <Zap className="w-6 h-6 text-white" />
-                </div>"
-                <h3 className="text-2xl font-bold text-white">Emerging Technology</h3>
+                </div>"                <h3 className="text-2xl font-bold text-white">Emerging Technology</h3>
               </div>"
               <p className="text-gray-300 mb-6">
                 Stay ahead of the curve with next-generation technologies. From quantum computing
@@ -370,8 +305,7 @@ const AllServices2027: React.FC = () => {;'
                   <span className="text-gray-300">Blockchain development</span>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <CheckCircle className="w-5 h-5 text-green-400" />"
-                  <span className="text-gray-300">IoT and edge computing</span>
+                  <CheckCircle className="w-5 h-5 text-green-400" />"                  <span className="text-gray-300">IoT and edge computing</span>
                 </div>
               </div>
             </motion.div>
@@ -384,8 +318,7 @@ const AllServices2027: React.FC = () => {;'
               <div className="flex items-center space-x-4 mb-6">"
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center">"
                   <Code className="w-6 h-6 text-white" />
-                </div>"
-                <h3 className="text-2xl font-bold text-white">IT Services</h3>
+                </div>"                <h3 className="text-2xl font-bold text-white">IT Services</h3>
               </div>"
               <p className="text-gray-300 mb-6">
                 Streamline your IT operations with our comprehensive technology services.
@@ -402,8 +335,7 @@ const AllServices2027: React.FC = () => {;'
                   <span className="text-gray-300">Cloud infrastructure</span>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <CheckCircle className="w-5 h-5 text-green-400" />"
-                  <span className="text-gray-300">Performance optimization</span>
+                  <CheckCircle className="w-5 h-5 text-green-400" />"                  <span className="text-gray-300">Performance optimization</span>
                 </div>
               </div>
             </motion.div>
@@ -454,8 +386,7 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
 
     switch (category) {
 '
-      case 'AI Services':;
-            </a>;
+      case 'AI Services':;            </a>;
           </div>;
         </div>;
       </section>;
@@ -481,7 +412,6 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
       default:;"
         return <Users className = "w-5 h-5" />};
   };
-
   return()
     <motion.div
       variants = {itemVariants}"
@@ -521,8 +451,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
                 key={index}"
                 className="inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300"
 "
-                <CheckCircle className="w-3 h-3" />
-                <span>{feature}</span>
+                <CheckCircle className="w-3 h-3" />                <span>{feature}</span>
               </span>;) ) }
           </div>
         </div>
@@ -545,8 +474,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
 
             <span>Learn More</span>"
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+            <ArrowRight className="w-4 h-4" />          </Link>
           <Link"
             to="/contact""
             className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-300"
@@ -556,6 +484,5 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
         </div>;
       </div>;
     </motion.div>;) ;
-};
-export default AllServices2027;
+};export default AllServices2027;
 '"`

@@ -5,14 +5,13 @@ export function registerServiceWorker(): void {
 '
     const isDev = process.env.NODE_ENV === 'development';'
     const swUrl = isDev ? '/sw.js' : '/sw.js';
-
     navigator.serviceWorker
       .register(swUrl)
       .then(registration => {
 
         // Handle updates'
         registration.addEventListener('updatefound', () => {
-          const newWorker = registration.installing;
+          
           if (newWorker) {
 '
             newWorker.addEventListener('statechange', () => {
@@ -33,7 +32,6 @@ export function registerServiceWorker(): void {
         // console.error('SW registration failed: ', registrationError);
       });
   }
-
 export function unregisterServiceWorker(): void {
 '
   if ('serviceWorker' in navigator) {
@@ -47,6 +45,5 @@ export function unregisterServiceWorker(): void {
 
         // console.error(error.message);
       });
-  }
-}
+  }}
 '

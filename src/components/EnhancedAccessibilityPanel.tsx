@@ -10,8 +10,7 @@ import {
   Type,
   Contrast,
   ZoomIn,
-  ZoomOut,
-  RotateCcw,
+  ZoomOut,  RotateCcw,
   CheckCircle,
   AlertTriangle,
   XCircle,
@@ -45,7 +44,6 @@ interface AccessibilitySettings {
   wordSpacing: number;
 
 }
-
 interface AccessibilityIssue {
   id: string;'
   type: 'error' | 'warning' | 'info';
@@ -53,7 +51,6 @@ interface AccessibilityIssue {
   element?: string;
   recommendation: string;'
   severity: 'low' | 'medium' | 'high';
-
 export function EnhancedAccessibilityPanel() {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -101,7 +98,6 @@ export function EnhancedAccessibilityPanel() {
 
       // Apply reduced motion
       if (updatedSettings.reducedMotion) {
-
         document.documentElement.style.setProperty('
           '--reduced-motion','
           'reduce'
@@ -156,8 +152,7 @@ export function EnhancedAccessibilityPanel() {
   // Load settings from localStorage
   useEffect(() => {
 '
-    const saved = localStorage.getItem('accessibility-settings');
-    if (saved) {
+    const saved = localStorage.getItem('accessibility-settings');    if (saved) {
 
       try {
         const savedSettings = JSON.parse (saved) ;
@@ -166,8 +161,7 @@ export function EnhancedAccessibilityPanel() {
       } catch (error) {
 '
         // console.warn('Failed to load accessibility settings:', error);
-      }
-    }
+      }    }
   }, [applySettings]) ;
 
   // Keyboard navigation support
@@ -180,7 +174,6 @@ export function EnhancedAccessibilityPanel() {
         setKeyboardMode(true);'
         document.body.classList.add('keyboard-navigation');
       }
-
       // Escape key to close panel'
       if (event.key === 'Escape' && isVisible) {
 
@@ -196,12 +189,11 @@ export function EnhancedAccessibilityPanel() {
         const currentIndex = Array.from(focusableElements).findIndex()
           el => el === document.activeElement
         );
-
         switch (event.key) {
 '
           case 'ArrowDown':
             event.preventDefault();
-            const nextIndex = (currentIndex + 1) % focusableElements.length;
+            
             (focusableElements[nextIndex] as HTMLElement)?.focus();
             break;'
           case 'ArrowUp':
@@ -209,10 +201,8 @@ export function EnhancedAccessibilityPanel() {
             const prevIndex =
               currentIndex > 0
                 ? currentIndex - 1
-                : focusableElements.length - 1;
-            (focusableElements[prevIndex] as HTMLElement)?.focus();
-            break;
-        }
+                : focusableElements.length - 1;            (focusableElements[prevIndex] as HTMLElement)?.focus();
+            break}
       }
     };
 
@@ -238,8 +228,7 @@ export function EnhancedAccessibilityPanel() {
 
     try {
       // Check for missing alt text'
-      const images = document.querySelectorAll('img');
-      images.forEach((img, index) => {
+      const images = document.querySelectorAll('img');      images.forEach((img, index) => {
 '
         if (!img.alt && !img.getAttribute('aria-label')) {
 
@@ -260,8 +249,7 @@ export function EnhancedAccessibilityPanel() {
       let previousLevel = 0;
       headings.forEach((heading, index) => {
 
-        const level = parseInt(heading.tagName.charAt(1));
-        if (level > previousLevel + 1) {
+        const level = parseInt(heading.tagName.charAt(1));        if (level > previousLevel + 1) {
 
           newIssues.push({
 `
@@ -303,7 +291,6 @@ export function EnhancedAccessibilityPanel() {
         const ariaExpanded = element.getAttribute('aria-expanded');'
         const ariaControls = element.getAttribute('aria-controls');'
         const ariaOwns = element.getAttribute('aria-owns');
-
         if (ariaExpanded && !ariaControls && !ariaOwns) {
 
           newIssues.push({
@@ -328,8 +315,7 @@ export function EnhancedAccessibilityPanel() {
         const style = window.getComputedStyle(element);
         const color = style.color;
         const backgroundColor = style.backgroundColor;
-'
-        // This is a simplified check - in production you'd want a proper contrast ratio calculation
+'        // This is a simplified check - in production you'd want a proper contrast ratio calculation
         if (color === backgroundColor) {
 
           newIssues.push({
@@ -347,8 +333,7 @@ export function EnhancedAccessibilityPanel() {
       // Check for keyboard navigation
       const interactiveElements = document.querySelectorAll('
         'button, a, input, select, textarea'
-      );
-      interactiveElements.forEach((element, index) => {
+      );      interactiveElements.forEach((element, index) => {
 '
         if (element.tagName === 'BUTTON' && !element.getAttribute('type')) {
 
@@ -400,8 +385,7 @@ export function EnhancedAccessibilityPanel() {
         return 'border-blue-500 bg-blue-50 dark:bg-blue-900/20';
       default:'
         return 'border-gray-500 bg-gray-50 dark:bg-gray-900/20';
-    }
-  };
+    }  };
 
   return()
     <>
@@ -414,8 +398,7 @@ export function EnhancedAccessibilityPanel() {
         title="Accessibility Panel""
         aria-label="Open accessibility panel"
       >"
-        <Accessibility className="w-6 h-6" />
-      </motion.button>
+        <Accessibility className="w-6 h-6" />      </motion.button>
 
       {/* Accessibility Panel */}
       <AnimatePresence>
@@ -431,8 +414,7 @@ export function EnhancedAccessibilityPanel() {
               {/* Header */}"
               <div className="flex items-center justify-between mb-6">"
                 <div className="flex items-center space-x-2">"
-                  <Accessibility className="w-6 h-6 text-zion-blue" />"
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <Accessibility className="w-6 h-6 text-zion-blue" />"                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                     Accessibility
                   </h2>
                 </div>"
@@ -446,15 +428,13 @@ export function EnhancedAccessibilityPanel() {
                       <ChevronUp className="w-4 h-4" />
                     ) : ("
                       <ChevronDown className="w-4 h-4" />
-                    )}
-                  </button>
+                    )}                  </button>
                   <button
                     onClick={() => setIsVisible(false)}"
                     className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200""
                     aria-label="Close accessibility panel"
                   >"
-                    <X className="w-5 h-5" />
-                  </button>
+                    <X className="w-5 h-5" />                  </button>
                 </div>
               </div>
 
@@ -476,8 +456,7 @@ export function EnhancedAccessibilityPanel() {
                     }`}
                     aria-pressed={settings.highContrast}
                   >"
-                    <Contrast className="w-4 h-4" />"
-                    <span className="text-sm">High Contrast</span>
+                    <Contrast className="w-4 h-4" />"                    <span className="text-sm">High Contrast</span>
                   </button>
 
                   <button
@@ -492,8 +471,7 @@ export function EnhancedAccessibilityPanel() {
                     }`}
                     aria-pressed={settings.largeText}
                   >"
-                    <Type className="w-4 h-4" />"
-                    <span className="text-sm">Large Text</span>
+                    <Type className="w-4 h-4" />"                    <span className="text-sm">Large Text</span>
                   </button>
 
                   <button
@@ -508,8 +486,7 @@ export function EnhancedAccessibilityPanel() {
                     }`}
                     aria-pressed={settings.reducedMotion}
                   >"
-                    <Pause className="w-4 h-4" />"
-                    <span className="text-sm">Reduced Motion</span>
+                    <Pause className="w-4 h-4" />"                    <span className="text-sm">Reduced Motion</span>
                   </button>
 
                   <button
@@ -526,8 +503,7 @@ export function EnhancedAccessibilityPanel() {
                     }`}
                     aria-pressed={settings.focusIndicator}
                   >"
-                    <Keyboard className="w-4 h-4" />"
-                    <span className="text-sm">Focus Indicator</span>
+                    <Keyboard className="w-4 h-4" />"                    <span className="text-sm">Focus Indicator</span>
                   </button>
                 </div>
               </div>
@@ -632,8 +608,7 @@ export function EnhancedAccessibilityPanel() {
                       </>
                     ) : (
                       <>"
-                        <Eye className="w-4 h-4" />
-                        <span>Run Audit</span>
+                        <Eye className="w-4 h-4" />                        <span>Run Audit</span>
                       </>
                     )}
                   </button>
@@ -697,8 +672,7 @@ export function EnhancedAccessibilityPanel() {
                 }}"
                 className="w-full flex items-center justify-center space-x-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors"
               >"
-                <RotateCcw className="w-4 h-4" />
-                <span>Reset to Defaults</span>
+                <RotateCcw className="w-4 h-4" />                <span>Reset to Defaults</span>
               </button>
             </div>
           </motion.div>) }

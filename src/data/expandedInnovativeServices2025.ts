@@ -95,8 +95,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       apiEndpoints: 150,"
       uptime: "99.99%","
       security["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"];
-    }
-  },
+    }  },
 
   // AI Sales Co-pilot for SMBs
   {
@@ -155,8 +154,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       apiEndpoints: 42,"
       uptime: "99.9%","
       security["SOC 2", "GDPR", "SAML SSO"];
-    }
-  },
+    }  },
 
   // FinOps cost optimization for cloud
   {
@@ -204,8 +202,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       apiEndpoints: 65,"
       uptime: "99.9%","
       security["SOC 2", "ISO 27001", "SSO"];
-    }
-  },
+    }  },
 
   // Managed MLOps platform
   {
@@ -253,8 +250,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       apiEndpoints: 93,"
       uptime: "99.95%","
       security["SOC 2", "HIPAA", "GDPR"];
-    }
-  },
+    }  },
 
   // eCommerce personalization micro‑SaaS
   {
@@ -384,8 +380,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       apiEndpoints: 18,"
       uptime: "99.9%","
       security["SSO", "Row‑level security"];
-    }
-  }
+    }  }
 
   // Blockchain-Based Supply Chain Transparency
   {
@@ -1161,8 +1156,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       apiEndpoints: 85,"
       uptime: "99.9%","
       security["SOC 2", "ISO 27001"];
-    }
-  },
+    }  },
   // SOC 2 & ISO 27001 Compliance Copilot
   {
 "
@@ -1214,8 +1208,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       apiEndpoints: 110,"
       uptime: "99.9%","
       security["SOC 2", "ISO 27001", "SAML", "SCIM"];
-    }
-  },
+    }  },
   // Data Pipeline Observability Platform
   {
 "
@@ -1262,8 +1255,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       apiEndpoints: 95,"
       uptime: "99.9%","
       security["SOC 2", "Row-level security"];
-    }
-  },
+    }  },
   // AI Customer Support Agent Platform
   {
 "
@@ -1310,8 +1302,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       apiEndpoints: 70,"
       uptime: "99.9%","
       security["SOC 2", "PII redaction"];
-    }
-  },
+    }  },
   // Privacy Request Automation (DSAR)
   {
 "
@@ -1398,8 +1389,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       apiEndpoints: 140,"
       uptime: "99.95%","
       security["SOC 2", "RBAC", "IAM"];
-    }
-  }
+    }  }
 ];
 ;
 export { EXPANDED_INNOVATIVE_SERVICES_2025 };

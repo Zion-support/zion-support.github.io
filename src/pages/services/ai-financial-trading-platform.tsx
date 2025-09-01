@@ -1,190 +1,20 @@
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
-import { SEO  } from '@/components/SEO';
-import { TrendingUp, 
-  Brain, 
-  DollarSign, 
-  BarChart3, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Clock,
-  Target,
-  Activity,
-  Globe,
-  Smartphone,
-  Cloud,
-  Database,
-  Cpu,
-  Users,
-  Lock,
-  Eye,
-  PieChart'
- } from 'lucide-react';
-;
-export { function };
-export default function AIFinancialTradingPlatform(...args: []):  {
-
-  const features = [
-    {
-
-      icon: Brain,'
-      title: 'AI-Powered Market Analysis','
-      description: 'Advanced machine learning algorithms analyze market patterns and predict price movements with high accuracy'
-    },
-    {
-
-      icon: TrendingUp,'
-      title: 'Automated Trading Strategies','
-      description: 'Intelligent bots execute trades based on AI insights and predefined risk parameters'
-    },
-    {
-
-      icon: BarChart3,'
-      title: 'Real-Time Portfolio Optimization','
-      description: 'AI continuously rebalances portfolios to maximize returns while minimizing risk'
-    },
-    {
-
-      icon: Shield,'
-      title: 'Risk Management','
-      description: 'Advanced risk assessment and automated stop-loss mechanisms protect your investments'
-    },
-    {
-
-      icon: Zap,'
-      title: 'High-Frequency Trading','
-      description: 'Ultra-fast execution for arbitrage opportunities and market inefficiencies';
-    },;
-    {;
-      icon: Eye,;'
-      title: 'Market Sentiment Analysis',;'
-      description: 'AI analyzes news, social media, and market data to gauge investor sentiment';
-    };
-  ];
-
-  const pricingPlans = [
-    {
-'
-      name: 'Starter','
-      price: '$199','
-      period: '/month','
-      description: 'Perfect for individual investors',
-      features: ['
-        'Basic AI trading signals','
-        'Portfolio tracking','
-        'Risk management tools','
-        'Mobile app access','
-        'Email support','
-        'Basic market analysis','
-        'Up to $50K portfolio'
-      ],
-      popular: false
-    },
-    {
-'
-      name: 'Professional','
-      price: '$599','
-      period: '/month','
-      description: 'Ideal for active traders',
-      features: ['
-        'Advanced AI algorithms','
-        'Automated trading','
-        'Real-time optimization','
-        'Advanced analytics','
-        'Priority support','
-        'API access','
-        'Up to $500K portfolio','
-        'Custom strategies'
-      ],
-      popular: true
-    },
-    {
-'
-      name: 'Institutional','
-      price: '$1,999','
-      period: '/month','
-      description: 'For hedge funds and institutions',
-      features: ['
-        'Full AI suite','
-        'Custom AI models','
-        'White-label solutions','
-        'Dedicated support','
-        'Advanced compliance',;'
-        'Unlimited portfolio size',;'
-        'On-premise options',;'
-        'SLA guarantees';
-      ],;
-      popular: false;
-    };
-  ];
-
-  const benefits = [
-    {
-
-      icon: TrendingUp,'
-      title: '25% Higher Returns','
-      description: 'AI algorithms consistently outperform traditional trading strategies'
-    },
-    {
-
-      icon: Clock,'
-      title: '24/7 Trading','
-      description: 'Automated systems trade around the clock across global markets'
-    },
-    {
-
-      icon: Target,'
-      title: 'Risk-Adjusted Returns','
-      description: 'AI optimizes for the best risk-reward ratio in  market condition';
-    },;
-    {;
-      icon: BarChart3,;'
-      title: 'Emotion-Free Trading',;'
-      description: 'Eliminate human bias and emotional decision-making from your trades';
-    };
-  ];
-
-  const tradingMarkets = [
-    {
-'
-      title: 'Stocks & ETFs','
-      description: 'AI-powered analysis of individual stocks, sectors, and market indices',
-      icon: TrendingUp
-    },
-    {
-'
-      title: 'Cryptocurrency','
-      description: 'Advanced algorithms for Bitcoin, Ethereum, and altcoin trading',
-      icon: DollarSign
-    },
-    {
-'
-      title: 'Forex Trading','
-      description: 'Real-time currency pair analysis and automated forex strategies',
-      icon: Globe;
-    },;
-    {;'
-      title: 'Commodities',;'
-      description: 'AI-driven insights for gold, oil, and other commodity markets',;
-      icon: BarChart3;
-    };
+import { SEO  } from '@/components/SEO';      description: 'AI-driven insights for gold, oil, and other commodity markets',;
+      icon: BarChart3};
   ];
 
   const performanceMetrics = [;'
     { metric: '95%', label: 'Win Rate' },;'
     { metric: '2.5x', label: 'Sharpe Ratio' },;'
-    { metric: '15%', label: 'Max Drawdown' },;'
-    { metric: '24/7', label: 'Uptime' };
+    { metric: '15%', label: 'Max Drawdown' },;'    { metric: '24/7', label: 'Uptime' };
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Financial Trading Platform - Zion Tech Group""
-        description="Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month."
-      />
+        title="AI Financial Trading Platform - Zion Tech Group""        description="Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month."
+       />
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -215,8 +45,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
             transition={{ duration: 0.8 }}
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-blue-600 text-white text-sm font-medium mb-6">"
-              <TrendingUp className="w-4 h-4 mr-2" />
-              AI-Powered Trading
+              <TrendingUp className="w-4 h-4 mr-2" />              AI-Powered Trading
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -662,8 +491,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>

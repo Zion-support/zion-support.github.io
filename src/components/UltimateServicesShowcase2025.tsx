@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { SEO } from "@/components/SEO";'
 import { Link } from 'react-router-dom';
 import {
-
   Brain, 
   Zap, 
   Shield, 
@@ -26,13 +25,15 @@ import {
   Search'
 } from 'lucide-react';'
 import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
-
 export default function UltimateServicesShowcase2025() {
 '
   const [selectedCategory, setSelectedCategory] = useState('all');'
   const [searchTerm, setSearchTerm] = useState('');
 
-  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+  
+  
+    
+    return matchesCategory && matchesSearch});
 
   const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter(service => {
 '
@@ -51,7 +52,6 @@ export default function UltimateServicesShowcase2025() {
       <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : "
       <Rocket className="w-6 h-6" />;
   };
-
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
       {/* Animated Background */}"
@@ -120,8 +120,7 @@ export default function UltimateServicesShowcase2025() {
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full px-6 py-4 glass border border-zion-cyan/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 text-lg"
               />"
-              <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-zion-cyan" />
-            </div>
+              <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-zion-cyan" />            </div>
 
             {/* Sort and View Controls */}"
             <div className="flex flex-wrap items-center justify-center gap-4">"
@@ -189,8 +188,7 @@ export default function UltimateServicesShowcase2025() {
                   <div className="flex items-center gap-1 text-yellow-400">
                     {[...Array(5)].map((_, i) => ('`
                       <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : 'fill-gray-600'}`} />
-                    ))}"
-                    <span className="text-sm text-gray-400 ml-1">({service.reviews})</span>
+                    ))}"                    <span className="text-sm text-gray-400 ml-1">({service.reviews})</span>
                   </div>
                 </div>
 "
@@ -210,14 +208,12 @@ export default function UltimateServicesShowcase2025() {
 "
                 <div className="mb-6">"
                   <h4 className="text-sm font-semibold text-zion-cyan mb-2 flex items-center gap-2">"
-                    <Zap className="w-4 h-4" />
-                    Key Features:
+                    <Zap className="w-4 h-4" />                    Key Features:
                   </h4>"
                   <ul className="space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => ("
                       <li key={idx} className="text-sm text-gray-300 flex items-center">"
-                        <CheckCircle className="w-3 h-3 text-zion-green mr-2 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-3 h-3 text-zion-green mr-2 flex-shrink-0" />                        {feature}
                       </li>
                     ))}
                     {service.features.length > 3 && ("
@@ -234,8 +230,7 @@ export default function UltimateServicesShowcase2025() {
                     {service.estimatedDelivery}
                   </div>"
                   <button className="text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300 flex items-center gap-1 group-hover:gap-2">"
-                    Learn More <ArrowRight className="w-4 h-4" />
-                  </button>
+                    Learn More <ArrowRight className="w-4 h-4" />                  </button>
                 </div>
               </motion.div>) ) }
           </motion.div>
@@ -325,8 +320,7 @@ export default function UltimateServicesShowcase2025() {
                   <ul className="space-y-2">
                     {selectedService.features.map((feature, idx) => ("
                       <li key={idx} className="text-gray-300 flex items-center">"
-                        <CheckCircle className="w-4 h-4 text-zion-green mr-2 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-zion-green mr-2 flex-shrink-0" />                        {feature}
                       </li>) ) }
                   </ul>
                 </div>
@@ -336,8 +330,7 @@ export default function UltimateServicesShowcase2025() {
                   <ul className="space-y-2">
                     {selectedService.benefits.map((benefit, idx) => ("
                       <li key={idx} className="text-gray-300 flex items-center">"
-                        <TrendingUp className="w-4 h-4 text-zion-green mr-2 flex-shrink-0" />
-                        {benefit}
+                        <TrendingUp className="w-4 h-4 text-zion-green mr-2 flex-shrink-0" />                        {benefit}
                       </li>) ) }
                   </ul>
                 </div>
@@ -378,5 +371,4 @@ export default function UltimateServicesShowcase2025() {
       </AnimatePresence>
     </div>) ;
 };
-
 export default UltimateServicesShowcase2025;'"`

@@ -2,17 +2,6 @@
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { Loader2, Zap, Brain, Cloud, Atom  } from 'lucide-react.ts';
-
-interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
-'
-  size?: 'sm' | 'md' | 'lg';'
-  variant?: 'default' | 'futuristic' | 'ai' | 'quantum';
-  text?: string;
-  showProgress?: boolean;
-  progress?: number;
-
-}
-
 interface EnhancedLoadingSpinnerProps {
   // Add your props here
 
@@ -25,7 +14,6 @@ interface EnhancedLoadingSpinnerProps {
   onComplete?: : unknown void;
   autoComplete?: boolean;
   autoCompleteDelay?: number;
-
 export function EnhancedLoadingSpinner({
 
   enabled = true,
@@ -66,7 +54,6 @@ export function EnhancedLoadingSpinner({
     { icon: Zap, message: 'Optimizing performance...', color: 'text-zion-yellow' },'
     { icon: Rocket, message: 'Launching application...', color: 'text-zion-green' }
   ];
-
   // Progress simulation
   useEffect ( () => {
     if (!enabled || !showProgress) return;
@@ -76,8 +63,7 @@ export function EnhancedLoadingSpinner({
 
         if (prev.progress! >= 100) {
 
-          clearInterval(interval);
-          if (autoComplete) {
+          clearInterval(interval);          if (autoComplete) {
 
             setTimeout(() => {
               setLoadingState({
@@ -98,7 +84,8 @@ export function EnhancedLoadingSpinner({
 
         const newProgress = Math.min (prev.progress! + Math.random () * 15, 100) ;
         const newEstimatedTime = Math.max (0, prev.estimatedTime! - 0.1) ;
-
+        
+        
         return {
 
           ...prev,
@@ -110,7 +97,6 @@ export function EnhancedLoadingSpinner({
 
     return () => clearInterval (interval) ;
   }, [enabled, showProgress, autoComplete, autoCompleteDelay, onComplete]) ;
-
   // Step progression for themed variant
   useEffect(() => {
 '
@@ -130,7 +116,6 @@ export function EnhancedLoadingSpinner({
 
     return () => clearInterval (stepInterval) ;
   }, [variant]) ;
-
   // Auto - complete effect
   useEffect ( () => {
     if (autoComplete && enabled) {
@@ -212,8 +197,7 @@ export function EnhancedLoadingSpinner({
             ))}
           </div>
         );
-'
-      case 'minimal':
+'      case 'minimal':
         return()
           <motion.div"
             className="w-full h-full border-2 border-zion-cyan border-t-transparent rounded-full"
@@ -269,7 +253,6 @@ export function EnhancedLoadingSpinner({
           {loadingSteps[currentStep].message}
         </motion.div>) ;
     }
-
     return()
       <motion.div
         key={loadingState.message}
@@ -285,8 +268,7 @@ export function EnhancedLoadingSpinner({
     if (!showProgress || loadingState.progress === undefined) return null;
 
     return ("
-      <div className="w-full mt-4">"
-        <div className="flex justify-between text-xs text-zion-slate-500 mb-1">
+      <div className="w-full mt-4">"        <div className="flex justify-between text-xs text-zion-slate-500 mb-1">
           <span>Progress</span>
           <span>{Math.round(loadingState.progress)}%</span>
         </div>"
@@ -304,17 +286,14 @@ export function EnhancedLoadingSpinner({
   const renderEstimatedTime = (...args: unknown[]): unknown => {
     if (!showEstimatedTime || loadingState.estimatedTime === undefined) return null;
 
-    return()
-      <motion.div
+    return()      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}"
         className="flex items-center justify-center space-x-2 mt-3 text-xs text-zion-slate-500"
       >"
-        <Clock className="w-3 h-3" />
-        <span>Estimated time: {loadingState.estimatedTime.toFixed(1)}s</span>
+        <Clock className="w-3 h-3" />        <span>Estimated time: {loadingState.estimatedTime.toFixed(1)}s</span>
       </motion.div>
-    );
-  };
+    )};
 
   const renderStatusIcon = () => {
 '
@@ -339,21 +318,19 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
   const sizeClasses = {
 '
   sm: 'w-8 h-8','
-    md: 'w-12 h-12',;
-  ;
+    md: 'w-12 h-12',;  ;
   ;
   ;
   ;'
   lg: 'w-16 h-16';
-  ;
+  };
 
 };
 
   const textSizes = {
 '
   sm: 'text-sm','
-    md: 'text-base',;
-  ;
+    md: 'text-base',;  ;
   ;
   ;
   ;'
@@ -386,7 +363,6 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
       default:;'
         return 'bg-gray-100 border-gray-200';
     }
-
   };
 
   return ("
@@ -453,6 +429,5 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
 }
 
 // Export as ZionLoadingSpinner for backward compatibility
-
 export default EnhancedLoadingSpinner;
 '"`

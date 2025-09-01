@@ -104,10 +104,8 @@ const MicroSAAS = () => {
       icon: Users;
     },;
     {;"
-      title: "E-commerce",;"
-      description: "Online marketplace and retail management solutions",;
-      icon: Package;
-    };
+      title: "E-commerce",;"      description: "Online marketplace and retail management solutions",;
+      icon: Package};
   ];
 
   return ("
@@ -117,8 +115,7 @@ const MicroSAAS = () => {
         <div className="max-w-7xl mx-auto text-center">"
           <div className="mb-8">"
             <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 text-indigo-400 rounded-full text-sm font-medium mb-6">"
-              <Package className="w-4 h-4 mr-2"/>
-              MicroSAAS
+              <Package className="w-4 h-4 mr-2"/>              MicroSAAS
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Build Your"
@@ -262,8 +259,7 @@ const MicroSAAS = () => {
               <div className="text-center">"
                 <Rocket className="w-24 h-24 text-indigo-400 mx-auto mb-4"/>"
                 <h3 className="text-2xl font-bold text-white mb-2">SAAS Success</h3>"
-                <p className="text-gray-300 mb-6">'
-                  We've helped numerous entrepreneurs build successful SAAS businesses
+                <p className="text-gray-300 mb-6">'                  We've helped numerous entrepreneurs build successful SAAS businesses
                   that generate millions in recurring revenue.
                 </p>"
                 <div className="text-sm text-gray-400">
@@ -298,7 +294,6 @@ const MicroSAAS = () => {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default MicroSAAS;}}}}'"

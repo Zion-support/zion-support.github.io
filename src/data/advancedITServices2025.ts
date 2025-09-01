@@ -106,8 +106,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       security["SOC 2", "ISO 27001", "Encryption", "Access controls"];
     },;"
     competitors["ServiceNow", "BMC Software", "BMC Helix", "Ivanti"],;"
-    marketSize: "$152.4 billion by 2025","
-    growthRate: "180% annual growth",
+    marketSize: "$152.4 billion by 2025","    growthRate: "180% annual growth",
     rating: 4.8,
     reviews: 234,
     customers: 456
@@ -179,8 +178,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       security["Quantum encryption", "SOC 2", "FedRAMP", "Zero-trust"];
     },;"
     competitors["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],;"
-    marketSize: "$832.1 billion by 2025","
-    growthRate: "300% annual growth",
+    marketSize: "$832.1 billion by 2025","    growthRate: "300% annual growth",
     rating: 4.9,
     reviews: 156,
     customers: 234
@@ -252,8 +250,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       security["Edge security", "Device authentication", "Data encryption"];
     },;"
     competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],;"
-    marketSize: "$43.4 billion by 2025","
-    growthRate: "200% annual growth",
+    marketSize: "$43.4 billion by 2025","    growthRate: "200% annual growth",
     rating: 4.7,
     reviews: 189,
     customers: 345
@@ -325,8 +322,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       security["SOC 2", "ISO 27001", "FedRAMP", "Zero-trust architecture"];
     },;"
     competitors["Palo Alto Networks", "Cisco", "Fortinet", "Check Point"],;"
-    marketSize: "$67.8 billion by 2025","
-    growthRate: "250% annual growth",
+    marketSize: "$67.8 billion by 2025","    growthRate: "250% annual growth",
     rating: 4.8,
     reviews: 267,
     customers: 489
@@ -398,8 +394,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       security["Code scanning", "Vulnerability assessment", "Access controls"];
     },;"
     competitors["GitLab", "Jenkins", "CircleCI", "GitHub Actions"],;"
-    marketSize: "$25.2 billion by 2025","
-    growthRate: "180% annual growth",
+    marketSize: "$25.2 billion by 2025","    growthRate: "180% annual growth",
     rating: 4.7,
     reviews: 198,
     customers: 367
@@ -471,8 +466,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       security["Blockchain security", "Encryption", "Multi-factor authentication"];
     },;"
     competitors["Microsoft Identity", "Okta", "Auth0", "OneLogin"],;"
-    marketSize: "$28.6 billion by 2025","
-    growthRate: "220% annual growth",
+    marketSize: "$28.6 billion by 2025","    growthRate: "220% annual growth",
     rating: 4.6,
     reviews: 145,
     customers: 278
@@ -544,8 +538,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       security["Quantum encryption", "SOC 2", "Data protection", "Access controls"];
     },;"
     competitors["Tableau", "Power BI", "Qlik", "Looker"],;"
-    marketSize: "$29.9 billion by 2025","
-    growthRate: "250% annual growth",
+    marketSize: "$29.9 billion by 2025","    growthRate: "250% annual growth",
     rating: 4.9,
     reviews: 178,
     customers: 289

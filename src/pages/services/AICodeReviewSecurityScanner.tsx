@@ -94,12 +94,10 @@ const AICodeReviewSecurityScanner = () => {
         'White-label solutions','
         '24/7 dedicated support','
         'Advanced integrations',;'
-        'Custom workflows',;'
-        'On-premise deployment';
+        'Custom workflows',;'        'On-premise deployment';
       ],;'
       cta: 'Contact Sales',;
-      popular: false;
-    };
+      popular: false};
   ];
 
   const useCases = [
@@ -159,8 +157,7 @@ const AICodeReviewSecurityScanner = () => {
       description: 'Identify and update vulnerable third-party libraries and dependencies.',;
       icon: Package,;'
       examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance'];
-    };
-  ];
+    };  ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -194,8 +191,7 @@ const AICodeReviewSecurityScanner = () => {
             className="text-center"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium mb-6">"
-              <Code className="w-4 h-4 mr-2" />
-              AI-Powered Code Security
+              <Code className="w-4 h-4 mr-2" />              AI-Powered Code Security
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Code Review"
@@ -215,16 +211,14 @@ const AICodeReviewSecurityScanner = () => {
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </motion.button>
+                <ArrowRight className="ml-2 w-5 h-5" />              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center"
               >
                 Schedule Demo"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </motion.button>
+                <ArrowRight className="ml-2 w-5 h-5" />              </motion.button>
             </div>
           </motion.div>
         </div>
@@ -321,8 +315,7 @@ const AICodeReviewSecurityScanner = () => {
                   <ul className="space-y-1">
                     {vulnType.examples.map((example, idx) => ("
                       <li key={idx} className="flex items-center text-sm text-gray-400">"
-                        <Minus className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {example}
+                        <Minus className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />                        {example}
                       </li>
                     ))}
                   </ul>
@@ -418,8 +411,7 @@ const AICodeReviewSecurityScanner = () => {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => ("
                     <li key={idx} className="flex items-center text-sm text-gray-400">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -531,8 +523,7 @@ const AICodeReviewSecurityScanner = () => {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -644,8 +635,7 @@ const AICodeReviewSecurityScanner = () => {
                 <ul className="space-y-2">
                   {useCase.benefits.map((benefit, idx) => ("
                     <li key={idx} className="flex items-center text-sm text-gray-400">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -697,22 +687,19 @@ const AICodeReviewSecurityScanner = () => {
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </motion.button>
+                <ArrowRight className="ml-2 w-5 h-5" />              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center"
               >
                 Contact Sales"
-                <ArrowRight className="ml-2 w-5 h-5" />;
-              </motion.button>;
+                <ArrowRight className="ml-2 w-5 h-5" />;              </motion.button>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default AICodeReviewSecurityScanner;'"`

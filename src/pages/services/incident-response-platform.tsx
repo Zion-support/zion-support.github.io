@@ -12,8 +12,7 @@ import {
   Zap,
   Brain,
   Cloud,
-  BarChart3,
-  Lock,
+  BarChart3,  Lock,
   Activity,
   Eye,
   Cpu,
@@ -179,8 +178,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-red-900/20 to-orange-900/20"></div>'"
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-red-900/20 to-orange-900/20"></div>'"        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
 "
         <div className="container-responsive relative z-10">
           <motion.div
@@ -191,8 +189,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
           >"
             <div className="flex justify-center mb-6">"
               <div className="w-20 h-20 bg-gradient-to-br from-red-400 via-orange-500 to-yellow-400 rounded-2xl flex items-center justify-center">"
-                <Shield className="w-10 h-10 text-white" />
-              </div>
+                <Shield className="w-10 h-10 text-white" />              </div>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent mb-6">
@@ -266,8 +263,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
                       key={idx}"
                       className="flex items-center text-sm text-slate-400"
                     >"
-                      <Star className="w-4 h-4 text-red-400 mr-2" />
-                      {benefit}
+                      <Star className="w-4 h-4 text-red-400 mr-2" />                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -306,8 +302,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
                 className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
               >"
                 <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">"
-                  <Target className="w-6 h-6 text-red-400 mr-3" />
-                  {capability.category}
+                  <Target className="w-6 h-6 text-red-400 mr-3" />                  {capability.category}
                 </h3>"
                 <ul className="space-y-3">
                   {capability.services.map((service, idx) => ("
@@ -469,8 +464,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center">"
-                <MapPin className="w-5 h-5 text-red-400 mr-2" />
-                <span>Middletown, DE 19709</span>
+                <MapPin className="w-5 h-5 text-red-400 mr-2" />                <span>Middletown, DE 19709</span>
               </div>
             </div>
           </div>

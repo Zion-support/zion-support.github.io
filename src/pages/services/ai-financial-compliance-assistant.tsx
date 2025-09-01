@@ -7,8 +7,7 @@ import {
   CheckCircle,
   AlertTriangle,
   TrendingUp,
-  BarChart3,
-  ArrowRight,
+  BarChart3,  ArrowRight,
   Brain,
   FileText,
   DollarSign,
@@ -217,9 +216,8 @@ const AIFinancialComplianceAssistant = () => {
       <SEO"
         title="AI Financial Compliance Assistant - Zion Tech Group""
         description="Ensure financial compliance with AI-powered monitoring, automated reporting, and real-time risk detection. Stay compliant with regulations while reducing costs.""
-        keywords="AI financial compliance, AML compliance, KYC automation, fraud detection, regulatory reporting, financial risk management""
-        canonical="https://ziontechgroup.com/services/ai-financial-compliance-assistant"
-      />
+        keywords="AI financial compliance, AML compliance, KYC automation, fraud detection, regulatory reporting, financial risk management""        canonical="https://ziontechgroup.com/services/ai-financial-compliance-assistant"
+       />
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -232,8 +230,7 @@ const AIFinancialComplianceAssistant = () => {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4 mr-2" />
-              AI-Powered Financial Compliance
+              <Shield className="w-4 h-4 mr-2" />              AI-Powered Financial Compliance
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -255,8 +252,7 @@ const AIFinancialComplianceAssistant = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 View Pricing"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+                <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com""
                 className="inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200"
@@ -494,8 +490,7 @@ const AIFinancialComplianceAssistant = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />"
-                      <span className="text-slate-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />"                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -547,8 +542,7 @@ const AIFinancialComplianceAssistant = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
                 <Phone className="w-8 h-8 text-white" />
               </div>"
-              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>"
-              <p className="text-slate-300">+1 302 464 0950</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>"              <p className="text-slate-300">+1 302 464 0950</p>
             </motion.div>
 
             <motion.div"
@@ -563,8 +557,7 @@ const AIFinancialComplianceAssistant = () => {
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Email Us
-              </h3>"
-              <p className="text-slate-300">kleber@ziontechgroup.com</p>
+              </h3>"              <p className="text-slate-300">kleber@ziontechgroup.com</p>
             </motion.div>
 
             <motion.div"
@@ -584,8 +577,7 @@ const AIFinancialComplianceAssistant = () => {
                 364 E Main St STE 1008
                 <br />
                 Middletown DE 19709
-              </p>
-            </motion.div>
+              </p>            </motion.div>
           </div>
 
           <motion.div"
@@ -600,14 +592,12 @@ const AIFinancialComplianceAssistant = () => {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Request Demo"
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
+              <ArrowRight className="ml-2 w-5 h-5" />            </a>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIFinancialComplianceAssistant;
 '"`

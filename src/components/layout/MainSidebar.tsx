@@ -1,7 +1,6 @@
 import React, { useState } from 'react';'
 import { Link, useLocation } from 'react-router-dom';
 import {
-
   Menu, 
   X, 
   ChevronDown, 
@@ -69,7 +68,6 @@ export function MainSidebar() {
         : [...prev, section]
     );
   };
-
   const navigation: SidebarItem[] = [
     {
 '
@@ -319,8 +317,7 @@ export function MainSidebar() {
     const isExpanded = expandedSections.includes(item.name.toLowerCase());
     const isFeatured = item.featured;
 
-    return()
-      <div key={item.name} className="mb-1">
+    return()      <div key={item.name} className="mb-1">
         {hasChildren ? (
           <div>
             <button
@@ -342,8 +339,7 @@ export function MainSidebar() {
               {isExpanded ? ("
                 <ChevronDown className="w-4 h-4" />
               ) : ("
-                <ChevronRight className="w-4 h-4" />
-              )}
+                <ChevronRight className="w-4 h-4" />              )}
             </button>
             
             {isExpanded && ("
@@ -368,13 +364,11 @@ export function MainSidebar() {
             <item.icon className="w-4 h-4" />
             <span>{item.name}</span>
             {isFeatured && ("
-              <Star className="w-3 h-3 text-yellow-400" />
-            )}
+              <Star className="w-3 h-3 text-yellow-400" />            )}
           </Link>
         )}
       </div>
-    );
-  };
+    )};
 
   return()
     <>
@@ -383,8 +377,7 @@ export function MainSidebar() {
         onClick={() => setIsOpen(!isOpen)}"
         className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
       >"
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </button>
+        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}      </button>
 
       {/* Sidebar */}`
       <div className={`
@@ -400,8 +393,7 @@ export function MainSidebar() {
               onClick={() => setIsOpen(false)}"
               className="lg:hidden p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800"
             >"
-              <X className="w-5 h-5" />
-            </button>
+              <X className="w-5 h-5" />            </button>
           </div>
 
           {/* Navigation */}"
@@ -421,8 +413,7 @@ export function MainSidebar() {
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center space-x-2">"
-                <MapPin className="w-3 h-3" />
-                <span>Middletown DE 19709</span>
+                <MapPin className="w-3 h-3" />                <span>Middletown DE 19709</span>
               </div>
             </div>
           </div>

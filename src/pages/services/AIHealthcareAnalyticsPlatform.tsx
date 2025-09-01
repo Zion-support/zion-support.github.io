@@ -1,7 +1,6 @@
 import React from 'react';'
 import { motion } from 'framer-motion';
 import {
-
   Heart, 
   Activity, 
   Users, 
@@ -304,8 +303,7 @@ export default function AIHealthcareAnalyticsPlatform() {
     'APMs'
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+  return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -316,8 +314,7 @@ export default function AIHealthcareAnalyticsPlatform() {
             className="text-center"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-red-600 text-white text-sm font-medium mb-6">"
-              <Sparkles className="w-4 h-4 mr-2" />
-              AI-Powered Healthcare Analytics Platform
+              <Sparkles className="w-4 h-4 mr-2" />              AI-Powered Healthcare Analytics Platform
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Healthcare with"
@@ -335,16 +332,14 @@ export default function AIHealthcareAnalyticsPlatform() {
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
               >"
-                <Play className="w-5 h-5 mr-2" />
-                Watch Demo
+                <Play className="w-5 h-5 mr-2" />                Watch Demo
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
-                <Settings className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Settings className="w-5 h-5 mr-2" />                Start Free Trial
               </motion.button>
             </div>
           </motion.div>
@@ -432,8 +427,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="flex items-start space-x-3"
               >"
-                <CheckCircle className="w-6 h-6 text-pink-400 mt-1 flex-shrink-0" />"
-                <span className="text-zion-slate-light text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-pink-400 mt-1 flex-shrink-0" />"                <span className="text-zion-slate-light text-lg">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -548,8 +542,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center space-x-3">"
-                      <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />"
-                      <span className="text-zion-slate-light">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />"                      <span className="text-zion-slate-light">{feature}</span>
                     </li>
                   ))}
                 </ul>"
@@ -613,16 +606,14 @@ export default function AIHealthcareAnalyticsPlatform() {
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <ArrowRight className="w-5 h-5 mr-2" />                Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
-                <MessageSquare className="w-5 h-5 mr-2" />
-                Schedule Demo
+                <MessageSquare className="w-5 h-5 mr-2" />                Schedule Demo
               </motion.button>
             </div>
           </div>
@@ -652,8 +643,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 <span className="text-zion-slate-light">kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center justify-center space-x-3">"
-                <MapPin className="w-6 h-6 text-pink-400" />"
-                <span className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</span>
+                <MapPin className="w-6 h-6 text-pink-400" />"                <span className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -661,22 +651,19 @@ export default function AIHealthcareAnalyticsPlatform() {
                 href="https://ziontechgroup.com/contact""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Contact Us
+                <ArrowRight className="w-5 h-5 mr-2" />                Contact Us
               </a>
               <a"
                 href="https://ziontechgroup.com""
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
-                <Globe className="w-5 h-5 mr-2" />
-                Visit Website
+                <Globe className="w-5 h-5 mr-2" />                Visit Website
               </a>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIHealthcareAnalyticsPlatform;}}}}}'"`

@@ -48,7 +48,6 @@ import {
   Eye,'
   Star as StarIcon} from 'lucide-react';'
 import { SEO } from '../components/SEO';
-
 const Training: React.FC = () => {
 '
   const [searchQuery, setSearchQuery] = useState('');'
@@ -252,7 +251,6 @@ const Training: React.FC = () => {
 
     return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
   }) ;
-
   // Update counts
   categories.forEach(cat => {
 '
@@ -266,7 +264,6 @@ const Training: React.FC = () => {
       ).length;
     }
   ];
-
   levels.forEach(level => {
 '
     if (level.id === 'all') {
@@ -279,14 +276,12 @@ const Training: React.FC = () => {
       ).length;
     }
   }) ;
-
   formats.forEach(format => {
 '
     if (format.id === 'all') {
 
       format.count = trainingPrograms.length;
     } else {
-
       format.count = trainingPrograms.filter()
         program => program.format === format.id
       ).length;
@@ -302,8 +297,7 @@ const Training: React.FC = () => {
         description="Comprehensive training programs and educational resources in AI, cloud computing, cybersecurity, data analytics, and emerging technologies.""
         keywords="training, education, courses, AI training, cloud computing, cybersecurity, data analytics, Zion Tech Group"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+"      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Header */}"
         <section className="pt-32 pb-16 px-4">"
           <div className="max-w-7xl mx-auto text-center">
@@ -314,8 +308,7 @@ const Training: React.FC = () => {
             >"
               <div className="flex items-center justify-center space-x-3 mb-6">"
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">"
-                  <GraduationCap className="w-8 h-8 text-white" />
-                </div>
+                  <GraduationCap className="w-8 h-8 text-white" />                </div>
               </div>"
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Training & Education
@@ -337,8 +330,7 @@ const Training: React.FC = () => {
               <div className="relative mb-6">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
-                  type="text""
-                  placeholder="Search training programs..."
+                  type="text""                  placeholder="Search training programs..."
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -441,8 +433,7 @@ const Training: React.FC = () => {
                   <div className="flex items-start justify-between mb-4">"
                     <div className="flex items-center gap-3">"
                       <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">"
-                        <BookOpen className="w-6 h-6 text-white" />
-                      </div>
+                        <BookOpen className="w-6 h-6 text-white" />                      </div>
                       <div>"
                         <h3 className="text-white font-semibold text-lg">
                           {program.title}
@@ -503,8 +494,7 @@ const Training: React.FC = () => {
                       <span>{program.students.toLocaleString()} students</span>
                     </div>"
                     <div className="flex items-center gap-1">"
-                      <Clock className="w-4 h-4" />
-                      <span>{program.duration}</span>
+                      <Clock className="w-4 h-4" />                      <span>{program.duration}</span>
                     </div>
                   </div>
                 </Link>
@@ -587,8 +577,7 @@ const Training: React.FC = () => {
                       Enroll Now
                     </button>"
                     <button className="px-4 py-2 bg-slate-700/50 text-gray-300 rounded-lg hover:bg-slate-600/50 transition-colors">"
-                      <Download className="w-4 h-4" />
-                    </button>
+                      <Download className="w-4 h-4" />                    </button>
                   </div>
                 </Link>
               </motion.div>
@@ -646,6 +635,5 @@ const Training: React.FC = () => {
     </div>
   );
 };
-
 export default Training;
 '"`

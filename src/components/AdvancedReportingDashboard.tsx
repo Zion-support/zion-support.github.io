@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-
   BarChart3, 
   TrendingUp, 
   Download, 
@@ -58,8 +57,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 showMetrics:  true,;
   showFilters = true,;
   showCharts = true,;
-  maxReports = 15;
-}) => {;
+  maxReports = 15}) => {;
   const [reports, setReports] = useState<ReportData[]>([]);
   const [filteredReports, setFilteredReports] = useState<ReportData[]>([]);'
   const [selectedType, setSelectedType] = useState<string>('all');'
@@ -94,8 +92,7 @@ showMetrics:  true,;
         status: 'active','
         priority: 'high','
         tags['Finance', 'Q4', 'Performance', 'Analysis'],;'
-        description: 'Comprehensive analysis of Q4 financial performance including revenue, expenses, and profit margins','
-        author: 'Sarah Johnson',
+        description: 'Comprehensive analysis of Q4 financial performance including revenue, expenses, and profit margins','        author: 'Sarah Johnson',
         views: 245,
         downloads: 89,
         rating: 4.8
@@ -118,8 +115,7 @@ showMetrics:  true,;
         status: 'active','
         priority: 'critical','
         tags['AI', 'Performance', 'Metrics', 'Machine Learning'],;'
-        description: 'Detailed performance metrics for AI services including accuracy, response time, and uptime','
-        author: 'Michael Chen',
+        description: 'Detailed performance metrics for AI services including accuracy, response time, and uptime','        author: 'Michael Chen',
         views: 189,
         downloads: 67,
         rating: 4.9
@@ -142,8 +138,7 @@ showMetrics:  true,;
         status: 'active','
         priority: 'high','
         tags['Security', 'Threats', 'Assessment', 'Risk Management'],;'
-        description: 'Comprehensive assessment of cybersecurity threats and incident response metrics','
-        author: 'David Kim',
+        description: 'Comprehensive assessment of cybersecurity threats and incident response metrics','        author: 'David Kim',
         views: 312,
         downloads: 134,
         rating: 4.7
@@ -166,8 +161,7 @@ showMetrics:  true,;
         status: 'active','
         priority: 'medium','
         tags['Cloud', 'Infrastructure', 'Utilization', 'Monitoring'],;'
-        description: 'Real-time monitoring of cloud infrastructure utilization and performance metrics','
-        author: 'Lisa Thompson',
+        description: 'Real-time monitoring of cloud infrastructure utilization and performance metrics','        author: 'Lisa Thompson',
         views: 167,
         downloads: 56,
         rating: 4.5
@@ -190,8 +184,7 @@ showMetrics:  true,;
         status: 'active','
         priority: 'medium','
         tags['Customer', 'Satisfaction', 'Survey', 'NPS'],;'
-        description: 'Analysis of customer satisfaction survey results and net promoter score metrics','
-        author: 'Alex Wong',
+        description: 'Analysis of customer satisfaction survey results and net promoter score metrics','        author: 'Alex Wong',
         views: 203,
         downloads: 78,
         rating: 4.6
@@ -228,8 +221,7 @@ showMetrics:  true,;
         r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      );
-    }
+      )}
 
     // Sort reports
     filtered.sort((a, b) => {
@@ -253,16 +245,14 @@ showMetrics:  true,;
         case 'priority':
           const priorityOrder = {
 
-  low: 1, medium: 2, high: 3,;
-  ;
+  low: 1, medium: 2, high: 3,;  ;
   ;
   ;
   ;
   ;
   critical: 4 ;
 
-};
-          aValue = priorityOrder[a.priority as keyof typeof priorityOrder];
+};          aValue = priorityOrder[a.priority as keyof typeof priorityOrder];
           bValue = priorityOrder[b.priority as keyof typeof priorityOrder];
           break;'
         case 'title':;
@@ -280,7 +270,6 @@ showMetrics:  true,;
         return aValue < bValue ? 1 : -1;
       }
     }) ;
-
     setFilteredReports (filtered.slice (0, maxReports) ) }, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]) ;
 
   // Calculate report metrics

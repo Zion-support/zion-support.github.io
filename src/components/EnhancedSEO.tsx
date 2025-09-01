@@ -1,33 +1,5 @@
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';
-
-interface SEOProps {
-  title: string;
-  description: string;
-  canonical?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'service';
-  tags?: string[];
-  services?: Array<{
-    name: string;
-    description: string;
-    url: string;
-    category: string;
-  }>;
-  image?: string;
-  url?: string;'
-  type?: 'website' | 'article' | 'product' | 'service';
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
-  tags?: string[];
-  canonical?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
-  structuredData?: any;
-}
-
 export const EnhancedSEO: React.FC<SEOProps> = ({
 '
   title = 'Zion Tech Group - Leading AI Solutions & Technology Services','
@@ -180,8 +152,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     ]"
     "sameAs": [;"
       "https://twitter.com/ziontechgroup","
-      "https://linkedin.com/company/ziontechgroup","
-      "https://facebook.com/ziontechgroup"
+      "https://linkedin.com/company/ziontechgroup","      "https://facebook.com/ziontechgroup"
     ],"
     "foundingDate": "2020","
     "numberOfEmployees": "100+","
@@ -249,8 +220,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       link.href = domain;
       document.head.appendChild(link);
     });
-  }, [ogImage]);'
-  if (type === 'article') {
+  }, [ogImage]);'  if (type === 'article') {
 
     Object.assign(structuredData, {
 "
@@ -280,7 +250,6 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       }
     }) ;
   }
-
   return()
     <Helmet>
       {/* Basic Meta Tags */}"
@@ -353,8 +322,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         <meta key={index} property="article:tag" content={tag} />
       ))}
     </Helmet>
-  );
-};}}}}
+  )}}}}}
       
       {/* Favicon */}"
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />"

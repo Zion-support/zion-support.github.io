@@ -3,8 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';'
 import { ShoppingCart, Zap, Settings, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Rocket  } from 'lucide-react';'
 import { Link  } from 'react-router-dom.ts';
 ;
-export { function };
-export default function MicroSAASSolutions(...args: []):  {
+export { function };export default function MicroSAASSolutions(...args: []):  {
 
   return()
     <>
@@ -21,8 +20,7 @@ export default function MicroSAASSolutions(...args: []):  {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center">"
               <div className="inline-flex items-center px-4 py-2 bg-violet-500/10 border border-violet-500/20 rounded-full text-violet-400 text-sm font-medium mb-8">"
-                <ShoppingCart className="w-4 h-4 mr-2" />
-                Micro SaaS Solutions
+                <ShoppingCart className="w-4 h-4 mr-2" />                Micro SaaS Solutions
               </div>
 "
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -44,8 +42,7 @@ export default function MicroSAASSolutions(...args: []):  {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>"
                 <button className="inline-flex items-center px-8 py-4 border border-violet-500/30 text-violet-400 font-semibold rounded-lg hover:bg-violet-500/10 transition-all duration-200">"
-                  <Play className="mr-2 w-5 h-5" />
-                  Watch Demo
+                  <Play className="mr-2 w-5 h-5" />                  Watch Demo
                 </button>
               </div>
             </div>
@@ -182,8 +179,7 @@ export default function MicroSAASSolutions(...args: []):  {
                   <ul className="space-y-1">
                     {category.benefits.map((benefit, benefitIndex) => ("
                       <li key={benefitIndex} className="text-sm text-violet-400 flex items-center">"
-                        <CheckCircle className="w-3 h-3 mr-2" />
-                        {benefit}
+                        <CheckCircle className="w-3 h-3 mr-2" />                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -268,8 +264,7 @@ export default function MicroSAASSolutions(...args: []):  {
                     "CI/CD pipelines for automated testing and deployment"
                   ].map((technology, index) => ("
                     <div key={index} className="flex items-start space-x-3">"
-                      <CheckCircle className="w-6 h-6 text-violet-400 mt-0.5 flex-shrink-0" />"
-                      <span className="text-slate-300">{technology}</span>
+                      <CheckCircle className="w-6 h-6 text-violet-400 mt-0.5 flex-shrink-0" />"                      <span className="text-slate-300">{technology}</span>
                     </div>
                   ))}
                 </div>
@@ -322,8 +317,7 @@ export default function MicroSAASSolutions(...args: []):  {
                     "Partnerships and integrations"
                   ].map((strategy, index) => ("
                     <div key={index} className="flex items-start space-x-3">"
-                      <CheckCircle className="w-5 h-5 text-violet-400 mt-0.5 flex-shrink-0" />"
-                      <span className="text-slate-300">{strategy}</span>
+                      <CheckCircle className="w-5 h-5 text-violet-400 mt-0.5 flex-shrink-0" />"                      <span className="text-slate-300">{strategy}</span>
                     </div>
                   ))}
                 </div>
@@ -341,8 +335,7 @@ export default function MicroSAASSolutions(...args: []):  {
                     "Subscription model optimization"
                   ].map((strategy, index) => ("
                     <div key={index} className="flex items-start space-x-3">"
-                      <CheckCircle className="w-5 h-5 text-violet-400 mt-0.5 flex-shrink-0" />"
-                      <span className="text-slate-300">{strategy}</span>
+                      <CheckCircle className="w-5 h-5 text-violet-400 mt-0.5 flex-shrink-0" />"                      <span className="text-slate-300">{strategy}</span>
                     </div>
                   ))}
                 </div>
@@ -417,8 +410,7 @@ export default function MicroSAASSolutions(...args: []):  {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200"
 
                 Start Your Project"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-violet-500/30 text-violet-400 font-semibold rounded-lg hover:bg-violet-500/10 transition-all duration-200"

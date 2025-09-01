@@ -66,8 +66,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
         keywords="AI services, micro SAAS, code security, customer analytics, DevOps automation, IoT edge computing, Zion Tech Group""
         canonical="https://ziontechgroup.com/ai-services-showcase"
       />
-      "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
           <div className="max-w-7xl mx-auto text-center">

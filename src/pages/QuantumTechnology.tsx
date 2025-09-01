@@ -1,45 +1,5 @@
 import React, { useState } from 'react';'
-import { motion } from 'framer-motion';
-import {
-
-  Atom,
-  Cpu,
-  Zap,
-  Brain,
-  CheckCircle,
-  ArrowRight,
-  Target,
-  Network,
-  Database,
-  Shield,
-  Globe,
-  Rocket,
-  Lightbulb,
-  Code,
-  BarChart3,
-  Clock,
-  TrendingUp,
-  Users,
-  Monitor,
-  Server,
-  Cloud,
-  Lock,
-  Eye'
- } from 'lucide-react';
-
-export default function QuantumTechnology(...args[]):  {
-'
-  const [selectedApplication, setSelectedApplication] = useState('all');'
-  const [activeTab, setActiveTab] = useState('overview');
-
-  const quantumServices = [
-    {
-
-      icon: Atom,
-      title: "Quantum Computing","
-      description: "Leverage quantum algorithms for complex computational problems","
-      features["Quantum Algorithms", "Optimization Problems", "Cryptography", "Machine Learning"],;"
-      color: "from-zion-cyan to-zion-blue"
+import { motion } from 'framer-motion';      color: "from-zion-cyan to-zion-blue"
     },
     {
 
@@ -98,8 +58,7 @@ export default function QuantumTechnology(...args[]):  {
       title: "Portfolio Optimization","
       description: "Quantum algorithms for optimal investment portfolio management","
       category: "finance","
-      benefits["Risk Reduction", "Return Maximization", "Real-time Optimization", "Multi-Asset Management"],;
-      icon: BarChart3
+      benefits["Risk Reduction", "Return Maximization", "Real-time Optimization", "Multi-Asset Management"],;      icon: BarChart3
     },
     {
 "
@@ -139,8 +98,7 @@ export default function QuantumTechnology(...args[]):  {
       description: "Quantum-enhanced machine learning and neural networks",;"
       category: "research",;"
       benefits: ["Faster Training", "Better Accuracy", "Complex Patterns", "Efficient Learning"],;
-      icon: Brain;
-    };
+      icon: Brain};
   ];
 
   const quantumTechnologies = [
@@ -148,8 +106,7 @@ export default function QuantumTechnology(...args[]):  {
 "
       name: "Superconducting Qubits","
       description: "Quantum bits using superconducting circuits for computation","
-      advantages["Scalability", "Fast Operations", "Error Correction", "Commercial Viability"],;
-      icon: Cpu
+      advantages["Scalability", "Fast Operations", "Error Correction", "Commercial Viability"],;      icon: Cpu
     },
     {
 "
@@ -185,8 +142,7 @@ export default function QuantumTechnology(...args[]):  {
       name: "Neutral Atoms",;"
       description: "Quantum bits using neutral atoms for computation",;"
       advantages: ["Scalability", "Parallel Operations", "High Fidelity", "Flexible Architecture"],;
-      icon: Atom;
-    };
+      icon: Atom};
   ];
 
   const quantumAdvantages = [;"
@@ -225,8 +181,7 @@ export default function QuantumTechnology(...args[]):  {
     ? quantumApplications
     : quantumApplications.filter (app => app.category === selectedApplication) ;
 
-  return ("
-    <div className = "min-h-screen bg-futuristic">
+  return ("    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}"
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-purple-dark to-zion-purple overflow-hidden">"
         <div className="absolute inset-0 opacity-10">"
@@ -252,8 +207,7 @@ export default function QuantumTechnology(...args[]):  {
 "
             <div className="flex justify-center mb-8">"
               <div className="w-24 h-24 bg-gradient-to-r from-zion-purple to-zion-pink rounded-2xl flex items-center justify-center">"
-                <Atom className="w-12 h-12 text-white" />
-              </div>
+                <Atom className="w-12 h-12 text-white" />              </div>
             </div>
 "
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">'
@@ -341,8 +295,7 @@ export default function QuantumTechnology(...args[]):  {
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center text-zion-slate-light">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />                      {feature}
                     </li>) ) }
                 </ul>
               </motion.div>) ) }
@@ -390,23 +343,19 @@ export default function QuantumTechnology(...args[]):  {
   { opacity: 0,
   y: 20 ;
 
-}}
-            whileInView = {
+}}            whileInView = {
 
   { opacity: 1,
   y: 0 
 
 ;
-;
-
 }};
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
           >;
             {applications.map ( (app) => {;
               const Icon = app.icon;
-              return()
-                <button
+              return()                <button
                   key = {app.id}
                   onClick={() => setSelectedApplication(app.id)}`
                   className={`flex items-center gap-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
@@ -419,8 +368,7 @@ export default function QuantumTechnology(...args[]):  {
                   <Icon className="w-5 h-5" />;
                   {app.name};
                 </button>;) ;
-            }) }
-          </motion.div>
+            }) }          </motion.div>
 
           {/* Applications Grid */}
           <motion.div"
@@ -671,8 +619,7 @@ export default function QuantumTechnology(...args[]):  {
 
                 {index < 3 && (;"
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">"
-                    <ArrowRight className="w-8 h-8 text-zion-purple" />
-                  </div>
+                    <ArrowRight className="w-8 h-8 text-zion-purple" />                  </div>
                 )}
               </motion.div>;
             ))}

@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface Stat {
 
@@ -27,7 +26,6 @@ const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = 
         </div>;
       ))};
     </div>;
-  );
-};
+  )};
 
 export default InteractiveStats;}}'"`

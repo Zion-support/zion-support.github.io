@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';'
 import { Link, useLocation } from 'react-router-dom';
 import {
-
   Menu, 
   X, 
   ChevronDown, 
@@ -41,8 +40,7 @@ interface NavigationItem {
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string 
-}>;
-  children?: NavigationItem[];
+}>;  children?: NavigationItem[];
   description?: string}
 ;
 const navigationItems: NavigationItem[] = [
@@ -108,8 +106,7 @@ const navigationItems: NavigationItem[] = [
         icon: Users,'
         description: 'Strategic IT consulting'
 
-    ];
-  },;
+    ]},;
   {
 '
     label: 'Solutions','
@@ -146,16 +143,14 @@ const quickActions = [
     path: '/docs',;
     icon: FileText,;'
     color: 'bg-zion-blue';
-  };
-];
+  };];
 
 export const EnhancedMobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());'
   const [activePath, setActivePath] = useState('/');
-  const location = useLocation();
-  const menuRef = useRef<HTMLDivElement>(null);
-
+  
+  
   useEffect(() => {
     setActivePath(location.pathname)}, [location]);
 
@@ -164,8 +159,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
 
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
 
-        setIsOpen(false);
-      }
+        setIsOpen(false);      }
     };
 
 export default function EnhancedMobileNavigation() {
@@ -231,8 +225,7 @@ export default function EnhancedMobileNavigation() {
 
     setExpandedItems(prev => {
 
-      const newSet = new Set(prev);
-      if (newSet.has(label)) {
+      const newSet = new Set(prev);      if (newSet.has(label)) {
 
         newSet.delete(label)} else {
 
@@ -261,8 +254,7 @@ export default function EnhancedMobileNavigation() {
     const hasChildren = item.children && item.children.length > 0;
     const isItemActive = isActive (item.path) ;
 
-    return()
-      <div key = {item.label} className="w-full">
+    return()      <div key = {item.label} className="w-full">
         <motion.div
           initial={false}
           animate = {
@@ -275,8 +267,7 @@ export default function EnhancedMobileNavigation() {
 
 
 
-}}'
-          className={`relative ${depth > 0 ? 'ml-4' : ''}`}
+}}'          className={`relative ${depth > 0 ? 'ml-4' : ''}`}
 
           <Link
             to={item.path}
@@ -302,13 +293,11 @@ export default function EnhancedMobileNavigation() {
             </div>
             {hasChildren && (
               <ChevronDown
-                size={16}`
-                className={`transition-transform duration-200 ${
+                size={16}`                className={`transition-transform duration-200 ${
 '
                   isExpanded ? 'rotate-180' : ''`
                 }`}
-              />) }
-          </Link>
+              />) }          </Link>
 
           {hasChildren && (;
             <button
@@ -317,14 +306,12 @@ export default function EnhancedMobileNavigation() {
               aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
 
               <ChevronDown
-                size={16}`
-                className={`transition-transform duration-200 ${
+                size={16}`                className={`transition-transform duration-200 ${
 '
                   isExpanded ? 'rotate-180' : ''`
                 }`}
               />
-            </button>;) }
-        </motion.div>
+            </button>;) }        </motion.div>
 
         {hasChildren && (;
           <AnimatePresence>
@@ -367,7 +354,6 @@ export default function EnhancedMobileNavigation() {
           </AnimatePresence>;) };
       </div>;) ;
   };
-
   return()
     <>
       {/* Mobile Menu Toggle */}
@@ -376,7 +362,7 @@ export default function EnhancedMobileNavigation() {
         className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg""
         aria-label="Open mobile navigation menu"
 
-        <Menu size={24} />
+        <Menu size={24}  />
       </button>
 
       {/* Mobile Menu Overlay */}
@@ -410,8 +396,7 @@ export default function EnhancedMobileNavigation() {
               <div className="flex items-center justify-between p-6 border-b border-zion-slate-light/20">"
                 <div className="flex items-center gap-3">"
                   <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">"
-                    <Zap size={20} className="text-white" />
-                  </div>
+                    <Zap size={20} className="text-white" />                  </div>
                   <div>"
                     <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>"
                     <p className="text-sm text-zion-slate-light">Technology Solutions</p>
@@ -423,7 +408,7 @@ export default function EnhancedMobileNavigation() {
                   className="p-2 text-zion-slate-light hover:text-white transition-colors rounded-lg hover:bg-zion-slate-light/10""
                   aria-label="Close mobile navigation menu"
 
-                  <X size={24} />
+                  <X size={24}  />
                 </button>
               </div>;
 
@@ -467,21 +452,20 @@ export default function EnhancedMobileNavigation() {
                   </h3>"
                   <div className="space-y-3 text-sm">"
                     <div className="flex items-center gap-3 text-zion-slate-light">
-                      <Mail size={16} />
+                      <Mail size={16}  />
                       <span>info@ziontechgroup.com</span>
                     </div>"
                     <div className="flex items-center gap-3 text-zion-slate-light">
-                      <Phone size={16} />
+                      <Phone size={16}  />
                       <span>+1 (555) 123-4567</span>
                     </div>"
                     <div className="flex items-center gap-3 text-zion-slate-light">
-                      <MapPin size={16} />
+                      <MapPin size={16}  />
                       <span>123 Tech Street, Innovation City</span>
                     </div>"
                     <div className="flex items-center gap-3 text-zion-slate-light">
                       <Clock size={16} />
-                      <span > Mon - Fri 9AM - 6PM EST</span>
-                    </div>
+                      <span > Mon - Fri 9AM - 6PM EST</span>                    </div>
                   </div>
                 </div>
               </div>

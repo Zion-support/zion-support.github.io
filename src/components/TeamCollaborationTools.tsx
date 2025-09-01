@@ -1,167 +1,5 @@
 import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  Users,
-  MessageCircle,
-  FileText,
-  Calendar,
-  CheckCircle,
-  Clock,
-  AlertCircle,
-  Plus,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Edit,
-  Trash2,
-  Eye,
-  Star,
-  Award,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe,
-  Database,
-  Server,
-  Lock,
-  Unlock,
-  Wifi,
-  Smartphone,
-  Monitor,
-  Tablet,
-  Video,
-  Phone,
-  Mail,
-  Send,
-  Paperclip,
-  Image,
-  File,
-  Folder,
-  Tag,
-  UserPlus,
-  Settings,
-  Bell,
-  Heart,
-  ThumbsUp,
-  ThumbsDown,
-  Reply,
-  Forward,
-  Archive,
-  Pin,
-  Bookmark,
-  Link,
-  Copy,
-  MoreHorizontal,
-  ChevronDown,
-  ChevronUp,
-  ArrowRight,
-  ArrowLeft,
-  RefreshCw,
-  TrendingUp,
-  Activity,
-  Target,
-  BarChart3,
-  PieChart'
- } from 'lucide-react';
-
-interface TeamMember {
-  id: string;
-  name: string;
-  role: string;
-  department: string;
-  avatar: string;'
-  status: 'online' | 'away' | 'busy' | 'offline';
-  lastSeen: string;
-  skills: string[];
-  projects: string[];'
-  availability: 'available' | 'busy' | 'unavailable'}
-
-interface Project {
-  id: string;
-  name: string;
-  description: string;'
-  status: 'planning' | 'active' | 'review' | 'completed' | 'on-hold';'
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  progress: number;
-  startDate: string;
-  endDate: string;
-  teamMembers: string[];
-  tasks: Task[];
-  budget: number;
-  client: string;
-  tags: string[]
-}
-
-interface Task {
-  id: string;
-  title: string;
-  description: string;'
-  status: 'todo' | 'in-progress' | 'review' | 'completed';'
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  assignee: string;
-  dueDate: string;
-  estimatedHours: number;
-  actualHours: number;
-  dependencies: string[];
-  tags: string[];
-  comments: Comment[]
-}
-
-interface Comment {
-  id: string;
-  author: string;
-  content: string;
-  timestamp: string;
-  likes: number;
-  replies: Comment[]
-}
-
-interface Message {
-  id: string;
-  sender: string;
-  content: string;
-  timestamp: string;'
-  type: 'text' | 'file' | 'image' | 'link';
-  attachments?: string[];
-  reactions: { type: string; count: number 
-
-}[];
-  isRead: boolean}
-
-interface FileItem {
-  id: string;
-  name: string;'
-  type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other';
-  size: number;
-  uploadedBy: string;
-  uploadDate: string;
-  lastModified: string;
-  tags: string[];
-  sharedWith: string[];'
-  permissions: 'view' | 'edit' | 'admin';
-  version: string
-}
-
-interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
-
-  showTeamMembers?: boolean;
-  showProjects?: boolean;
-  showCommunication?: boolean;
-  showFileSharing?: boolean;
-  maxItems?: number}
-
-export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
-
-  showTeamMembers = true,
-showProjects:  true,;
-  showCommunication = true,;
-  showFileSharing = true,;
-  maxItems = 20;
-}) => {;'
-  const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team');
+import { motion, AnimatePresence } from 'framer-motion';  const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team');
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -228,7 +66,6 @@ showProjects:  true,;
   // Get status color and icon'
       default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className = "w-2 h-2 bg-zinc-400 rounded-full"></div> }};
   };
-
   // Get project status color'
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
@@ -240,7 +77,6 @@ showProjects:  true,;
   // Get file type icon"
       default: return <File className = "w-5 h-5" />};
   };
-
   // Format file size
           existingReaction.count += 1} else {
 
@@ -263,8 +99,7 @@ showProjects:  true,;
             { id: 'team', label: 'Team Members', icon: <Users className="w-4 h-4" /> },'"
             { id: 'projects', label: 'Projects', icon: <Target className="w-4 h-4" /> },'"
             { id: 'communication', label: 'Communication', icon: <MessageCircle className="w-4 h-4" /> },'"
-            { id: 'files', label: 'File Sharing', icon: <FileText className="w-4 h-4" /> }
-          ].map((tab) => (
+            { id: 'files', label: 'File Sharing', icon: <FileText className="w-4 h-4" /> }          ].map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as )}
@@ -491,8 +326,7 @@ showProjects:  true,;
                       <Video className="w-4 h-4" />
                     </button>"
                     <button className="p-2 text-zinc-400 hover:text-zinc-300 hover:bg-zinc-800/50 rounded-lg transition-colors">"
-                      <MoreHorizontal className="w-4 h-4" />
-                    </button>
+                      <MoreHorizontal className="w-4 h-4" />                    </button>
                   </div>
                 </div>
               </motion.div>) ) }
@@ -661,8 +495,7 @@ showProjects:  true,;
                     <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">"
                       <Edit className="w-4 h-4" />
                     </button>"
-                    <button className="p-2 text-zinc-400 hover:text-red-400 hover:bg-red-400/20 rounded-lg transition-colors">"
-                      <Trash2 className="w-4 h-4" />
+                    <button className="p-2 text-zinc-400 hover:text-red-400 hover:bg-red-400/20 rounded-lg transition-colors">"                      <Trash2 className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
@@ -732,8 +565,7 @@ showProjects:  true,;
               onClick={() => setShowProjectForm(true)}"
               className="px-8 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto"
 "
-              <Plus className="w-5 h-5" />
-              Add New Project
+              <Plus className="w-5 h-5" />              Add New Project
             </button>
           </div>
         </motion.div>) }
@@ -891,8 +723,7 @@ showProjects:  true,;
 '"
                           {reaction.type === 'thumbsUp' && <ThumbsUp className="w-3 h-3 inline mr-1" />}'"
                           {reaction.type === 'check' && <CheckCircle className="w-3 h-3 inline mr-1" />}'"
-                          {reaction.type === 'star' && <Star className="w-3 h-3 inline mr-1" />}
-                          {reaction.count}
+                          {reaction.type === 'star' && <Star className="w-3 h-3 inline mr-1" />}                          {reaction.count}
                         </button>) ) }
                     </div>
                   </div>
@@ -905,8 +736,7 @@ showProjects:  true,;
                       <Share2 className="w-4 h-4" />
                     </button>"
                     <button className="p-2 text-zinc-400 hover:text-zinc-300 hover:bg-zinc-800/50 rounded-lg transition-colors">"
-                      <MoreHorizontal className="w-4 h-4" />
-                    </button>
+                      <MoreHorizontal className="w-4 h-4" />                    </button>
                   </div>
                 </div>;
               </motion.div>) ) }
@@ -928,8 +758,7 @@ showProjects:  true,;
               </button>
 "
               <button className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2">"
-                <Send className="w-4 h-4" />
-                Send
+                <Send className="w-4 h-4" />                Send
               </button>
             </div>
           </div>
@@ -1104,8 +933,7 @@ showProjects:  true,;
                       <Share2 className="w-4 h-4" />
                     </button>"
                     <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">"
-                      <MoreHorizontal className="w-4 h-4" />
-                    </button>
+                      <MoreHorizontal className="w-4 h-4" />                    </button>
                   </div>
                 </div>;
               </motion.div>) ) }
@@ -1116,8 +944,7 @@ showProjects:  true,;
             <div className="border-2 border-dashed border-zinc-600 rounded-lg p-8">"
               <FileText className="w-16 h-16 text-zinc-600 mx-auto mb-4" />"
               <h3 className="text-lg font-medium text-zinc-300 mb-2">Upload Files</h3>"
-              <p className="text-zinc-400 mb-4">Drag and drop files here or click to browse</p>"
-              <button className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
+              <p className="text-zinc-400 mb-4">Drag and drop files here or click to browse</p>"              <button className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
                 Choose Files
               </button>
             </div>;

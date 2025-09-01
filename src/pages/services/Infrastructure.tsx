@@ -22,10 +22,8 @@ const InfrastructureServices = () => {
     {;"
       title: "Data Center Solutions",;"
       description: "Reliable hosting, colocation, and data center management.",;"
-      price: "From $8,000/month",;"
-      features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],;
-      icon: Database;
-    };
+      price: "From $8,000/month",;"      features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],;
+      icon: Database};
   ];
 
   const technologies = [
@@ -56,8 +54,7 @@ const InfrastructureServices = () => {
     "Enhanced security and compliance",;"
     "Scalable infrastructure that grows with your business",;"
     "Reduced operational costs and complexity",;"
-    "Expert support and maintenance",;"
-    "Future-proof technology solutions";
+    "Expert support and maintenance",;"    "Future-proof technology solutions";
   ];
 
   return ("
@@ -67,8 +64,7 @@ const InfrastructureServices = () => {
         <div className="max-w-7xl mx-auto text-center">"
           <div className="mb-8">"
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">"
-              <Server className="w-4 h-4 mr-2"/>
-              IT Infrastructure
+              <Server className="w-4 h-4 mr-2"/>              IT Infrastructure
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               IT Infrastructure"
@@ -184,8 +180,7 @@ const InfrastructureServices = () => {
             <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">"
               <div className="text-center">"
                 <Zap className="w-24 h-24 text-purple-400 mx-auto mb-4"/>"
-                <h3 className="text-2xl font-bold text-white mb-2">Infrastructure Excellence</h3>"
-                <p className="text-gray-300 mb-6">
+                <h3 className="text-2xl font-bold text-white mb-2">Infrastructure Excellence</h3>"                <p className="text-gray-300 mb-6">
                   Our team has decades of combined experience building and
                   maintaining enterprise-grade infrastructure solutions.
                 </p>"
@@ -221,7 +216,6 @@ const InfrastructureServices = () => {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default InfrastructureServices;}}}'"

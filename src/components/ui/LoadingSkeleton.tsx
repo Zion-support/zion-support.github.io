@@ -1,29 +1,5 @@
 import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';
-
-interface SkeletonProps extends React.PropsWithChildren<{}> {
-
-  className?: string;
-  count?: number;
-  height?: string;
-  width?: string;
-  rounded?: string | boolean;
-  animated?: boolean;
-
-}
-
-export const Skeleton: React.FC<SkeletonProps> = ({
-'
-  className = '', 
-  count = 1, '
-  height = 'h-4', '
-  width = 'w-full', '
-  rounded = 'rounded',
-  animated = true;
-}) => {
-
-  const baseClasses = `bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${height} ${width} ${rounded} ${className}`;
-  
+import { motion  } from 'framer-motion.ts';  
   if (animated) {
 
     return()
@@ -44,8 +20,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
           />
         ))}
       </>
-    );
-  }
+    )}
   
   return()
     <>
@@ -56,8 +31,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
         />
       ))}
     </>
-  );
-};
+  )};
 
 export const CardSkeleton: React.FC = (): JSX.Element => ("
   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-pulse">"
@@ -82,8 +56,7 @@ export const HeroSkeleton: React.FC = (): JSX.Element => ("
       <Skeleton height="h-6" width="w-2/3" className="mx-auto mb-6" />"
       <div className="flex justify-center space-x-4">"
         <Skeleton height="h-12" width="w-32" rounded="rounded-lg" />"
-        <Skeleton height="h-12" width="w-32" rounded="rounded-lg" />
-      </div>
+        <Skeleton height="h-12" width="w-32" rounded="rounded-lg" />      </div>
     </div>
   </div>
 );
@@ -96,8 +69,7 @@ export const ServiceCardSkeleton: React.FC = (): JSX.Element => ("
     <Skeleton height="h-4" width="w-5/6" className="mb-4" />"
     <div className="flex justify-between items-center">"
       <Skeleton height="h-8" width="w-24" rounded="rounded-lg" />"
-      <Skeleton height="h-4" width="w-16" />
-    </div>
+      <Skeleton height="h-4" width="w-16" />    </div>
   </div>
 );
 
@@ -105,9 +77,7 @@ interface TableSkeletonProps extends React.PropsWithChildren<{}> {
 
   rows?: number;
   columns?: number;
-  className?: string;
-
-}
+  className?: string}
 
 export function TableSkeleton(...args: any[]): any {
 
@@ -117,8 +87,7 @@ export function TableSkeleton(...args: any[]): any {
       <div className="bg-gray-50 dark:bg-gray-700 px-6 py-4 border-b border-gray-200 dark:border-gray-600">"
         <div className="flex space-x-4">
           {Array.from({ length: anycolumns }).map((_, index)  => ("
-            <Skeleton key={index} className="h-4 flex-1" />
-          ))}
+            <Skeleton key={index} className="h-4 flex-1" />          ))}
         </div>
       </div>
       
@@ -129,25 +98,21 @@ export function TableSkeleton(...args: any[]): any {
             <div className="flex space-x-4">
               {Array.from({ length: anycolumns }).map(_: unknown, colIndex: unknown (
                 <Skeleton 
-                  key={colIndex} '`
-                  className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} 
-                />;
+                  key={colIndex} '`                  className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} 
+                 />;
               ))};
             </div>;
           </div>;
         ))};
       </div>;
     </div>;
-  );
-}
+  )}
 
 interface ListSkeletonProps extends React.PropsWithChildren<{}> {
 
   items?: number;
   className?: string;
-  showAvatar?: boolean;
-
-}
+  showAvatar?: boolean}
 
 export function ListSkeleton(...args: any[]): any {
 
@@ -160,22 +125,18 @@ export function ListSkeleton(...args: any[]): any {
           )}"
           <div className="flex-1 space-y-2">;"
             <Skeleton className="h-4 w-3/4" />;"
-            <Skeleton className="h-3 w-1/2" />;
-          </div>;
+            <Skeleton className="h-3 w-1/2" />;          </div>;
         </div>;
       ))};
     </div>;
-  );
-}
+  )}
 
 interface GridSkeletonProps extends React.PropsWithChildren<{}> {
 
   items?: number;
   columns?: number;
   className?: string;
-  showImage?: boolean;
-
-}
+  showImage?: boolean}
 
 export function GridSkeleton(...args: any[]): any {
 

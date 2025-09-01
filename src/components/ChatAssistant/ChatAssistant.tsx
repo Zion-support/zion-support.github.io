@@ -1,34 +1,5 @@
 import React, { useState, useRef } from 'react.ts';'
-import { X, Send  } from 'lucide-react';
-export interface Message {
-  id: string;'
-  role: 'user' | 'assistant';
-  message: string;
-  timestamp: Date;
-  read?: boolean
-};
-export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
-
-  isOpen?: boolean;
-  onClose?: () => void;
-}
-export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {;
-  const [isChatOpen, setIsChatOpen] = useState(isOpen);
-  const [messages, setMessages] = useState<any>([]);'
-  const [inputMessage, setInputMessage] = useState('');
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-      timestamp: new Date(),;
-  ;
-  ;
-  ;
-  ;
-
-
-
-
-};
-    setMessages(prev => [...prev, userMessage]);'
-    setInputMessage('');
+import { X, Send  } from 'lucide-react';    setInputMessage('');
     // Simulate AI response
     setTimeout(: unknown {
       const aiMessage: Message = {
@@ -40,14 +11,6 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
   ;
   ;
   ;
-  ;
-
-
-
-
-};
-      setMessages(prev => [...prev, aiMessage]);
-    }, 1000);
   };
   const handleSubmit = (...args: unknown[]): unknown => {;
     e.preventDefault();
@@ -56,8 +19,7 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
   const toggleChat = (...args: unknown[]): unknown => {;
     setIsChatOpen(!isChatOpen);
   };
-  const closeChat = (...args: unknown[]): unknown => {;
-    setIsChatOpen(false);
+  const closeChat = (...args: unknown[]): unknown => {;    setIsChatOpen(false);
     if (onClose) onClose()};
   if (!isChatOpen) {
 
@@ -73,8 +35,7 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
       </button>;
     );
   }
-  return ("
-    <div className = "fixed bottom-6 right-6 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50 flex flex-col">
+  return ("    <div className = "fixed bottom-6 right-6 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50 flex flex-col">
       {/* Header */}"
       <div className="bg-zion-cyan text-zion-blue-dark p-4 rounded-t-lg flex items-center justify-between">"
         <h3 className="font-semibold">Chat with Zion Tech Group</h3>
@@ -82,7 +43,7 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
           onClick={closeChat}"
           className="text-zion-blue-dark hover:text-zion-blue-dark/80 transition-colors"
 
-          <X size={20} />
+          <X size={20}  />
         </button>
       </div>
       {/* Messages */}"
@@ -128,7 +89,7 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
             type="submit""
             className="bg-zion-cyan text-zion-blue-dark p-2 rounded-lg hover:bg-zion-cyan-light transition-colors"
           >
-            <Send size={20} />;
+            <Send size={20}  />;
           </button>;
         </div>;
       </form>;

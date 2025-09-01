@@ -101,8 +101,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
     <div className="min-h-screen bg-white">"
       <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 py-20 text-center">"
         <div className="max-w-5xl mx-auto px-6">"
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"
-            <BarChart3 className="w-4 h-4 mr-2" /> AI-Powered Marketing
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"            <BarChart3 className="w-4 h-4 mr-2" /> AI-Powered Marketing
           </div>"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             AI Marketing Automation Suite
@@ -123,8 +122,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
             <ul className="space-y-3">
               {features.map(f => ("
                 <li key={f} className="flex items-start">"
-                  <Check className="w-5 h-5 text-purple-600 mr-3 mt-0.5" />"
-                  <span className="text-zion-slate-dark">{f}</span>
+                  <Check className="w-5 h-5 text-purple-600 mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{f}</span>
                 </li>
               ))}
             </ul>"
@@ -167,8 +165,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
                 rel="noreferrer""
                 className="px-5 py-3 border border-purple-600 text-purple-600 rounded-lg inline-flex items-center"
               >"
-                Learn More <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
+                Learn More <ExternalLink className="w-4 h-4 ml-2" />              </a>
             </div>
           </div>
         </div>
@@ -181,8 +178,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
             <ul className="space-y-3">
               {benefits.map(b => ("
                 <li key={b} className="flex items-start">"
-                  <TrendingUp className="w-5 h-5 text-purple-600 mr-3 mt-0.5" />"
-                  <span className="text-zion-slate-dark">{b}</span>
+                  <TrendingUp className="w-5 h-5 text-purple-600 mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{b}</span>
                 </li>
               ))}
             </ul>
@@ -194,8 +190,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
             <ul className="space-y-3">
               {useCases.map(u => ("
                 <li key={u} className="flex items-start">"
-                  <Target className="w-5 h-5 text-purple-600 mr-3 mt-0.5" />"
-                  <span className="text-zion-slate-dark">{u}</span>
+                  <Target className="w-5 h-5 text-purple-600 mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{u}</span>
                 </li>
               ))}
             </ul>
@@ -212,8 +207,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
                 key={c}"
                 className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm"
               >"
-                <MessageSquare className="w-6 h-6 text-purple-600 mb-3" />"
-                <div className="text-zion-slate-dark font-semibold">{c}</div>
+                <MessageSquare className="w-6 h-6 text-purple-600 mb-3" />"                <div className="text-zion-slate-dark font-semibold">{c}</div>
               </div>
             ))}
           </div>
@@ -229,8 +223,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
                 key={c}"
                 className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm"
               >"
-                <Brain className="w-6 h-6 text-purple-600 mb-3" />"
-                <div className="text-zion-slate-dark font-semibold">{c}</div>
+                <Brain className="w-6 h-6 text-purple-600 mb-3" />"                <div className="text-zion-slate-dark font-semibold">{c}</div>
               </div>
             ))}
           </div>
@@ -314,8 +307,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
               rel="noreferrer""
               className="text-purple-600 hover:underline"
             >
-              https://ziontechgroup.com
-            </a>
+              https://ziontechgroup.com            </a>
           </div>
         </div>
       </section>

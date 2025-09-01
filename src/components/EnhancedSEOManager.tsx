@@ -1,28 +1,5 @@
 import React, { useEffect } from 'react';'
-import { Helmet } from 'react-helmet-async';
-
-interface SEOData {
-
-  title: string;
-  description: string;
-  keywords: string[];
-  ogImage?: string;
-  ogType?: string;
-  canonicalUrl?: string;
-  structuredData?: object;
-
-interface EnhancedSEOManagerProps {
-  // Add your props here
-
-  seoData: SEOData;
-  children: React.ReactNode;
-
-const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
-
-  useEffect(() => {
-    // Update meta tags dynamically
-    const updateMetaTags = (...args: unknown[]): unknown => {;
-      // Update title;
+import { Helmet } from 'react-helmet-async';      // Update title;
       document.title = seoData.title;
 
       // Update meta description'
@@ -46,8 +23,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       metaKeywords.setAttribute('content', seoData.keywords.join(', '));
       
       // Update Open Graph tags
-      const updateOGTag = (property: string, content: string) => {;"
-        let ogTag = document.querySelector(`meta[property="${property}"]`);
+      const updateOGTag = (property: string, content: string) => {;"        let ogTag = document.querySelector(`meta[property="${property}"]`);
         if (!ogTag) {
 '
           ogTag = document.createElement('meta');'
@@ -64,8 +40,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       updateOGTag('og:url', seoData.canonicalUrl || window.location.href);
       
       // Update Twitter Card tags
-      const updateTwitterTag = (name: string, content: string) => {;"`
-        let twitterTag = document.querySelector(`meta[name="${name}"]`);
+      const updateTwitterTag = (name: string, content: string) => {;"`        let twitterTag = document.querySelector(`meta[name="${name}"]`);
         if (!twitterTag) {
 '
           twitterTag = document.createElement('meta');'
@@ -77,8 +52,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       '
       updateTwitterTag('twitter:card', 'summary_large_image');'
       updateTwitterTag('twitter:title', seoData.title);'
-      updateTwitterTag('twitter:description', seoData.description);'
-      if (seoData.ogImage) updateTwitterTag('twitter:image', seoData.ogImage);
+      updateTwitterTag('twitter:description', seoData.description);'      if (seoData.ogImage) updateTwitterTag('twitter:image', seoData.ogImage);
       
       // Add canonical URL
       if (seoData.canonicalUrl) {
@@ -91,8 +65,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
           document.head.appendChild(canonical);
         }'
         canonical.setAttribute('href', seoData.canonicalUrl);
-      }
-      
+      }      
       // Add structured data
       if (seoData.structuredData) {
 '"
@@ -104,8 +77,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
           document.head.appendChild(script);
         }
         script.textContent = JSON.stringify (seoData.structuredData) ;
-      }
-    };
+      }    };
     
     updateMetaTags () ;
     
@@ -115,8 +87,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       const dynamicTags = document.querySelectorAll('meta[property^="og:"], meta[name^="twitter:"], link[rel="canonical"]');
       dynamicTags.forEach(tag => tag.remove());
     };
-  }, [seoData]) ;
-  
+  }, [seoData]) ;  
   return()
     <>
       <Helmet>
@@ -134,8 +105,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 
 } />;"
         <meta name="robots" content="index, follow" />;"
-        <meta name="author" content="Zion Tech Group" />;"
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
+        <meta name="author" content="Zion Tech Group" />;"        <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
         ;
         {/* Security headers */};"
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />;"
@@ -163,7 +133,6 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
     </>
   );
 };
-
 export default EnhancedSEOManager;
 export default function;
     return;

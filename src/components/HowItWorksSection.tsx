@@ -90,8 +90,7 @@ const stats = [;"
   { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" },;"
   { icon: <Target className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },;"
   { icon: <TrendingUp className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },;"
-  { icon: <Award className="w-6 h-6" />, value: "1000+", label: "Projects Completed" };
-];
+  { icon: <Award className="w-6 h-6" />, value: "1000+", label: "Projects Completed" };];
 
   const [hoveredStep, setHoveredStep] = useState < number | null> (null) ;
   const [activeStep, setActiveStep] = useState < number> (0) ;
@@ -99,14 +98,10 @@ const stats = [;"
   const containerVariants = {
 
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,;
+    visible: {      opacity: 1,;
       transition: {
         staggerChildren: 0.2,;
-        delayChildren: 0.1;
-      };
-    };
-  };
+        delayChildren: 0.1}}};
 
   const statsVariants = {
 
@@ -124,7 +119,6 @@ const stats = [;"
       };
     };
   };
-
   return ("
     <section className = "py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background pattern */}"
@@ -281,8 +275,7 @@ const stats = [;"
                       <span>{step.duration}</span>
                     </div>"
                     <div className="flex items-center justify-center gap-2 text-zion-purple/80 text-xs">"
-                      <Target className="w-3 h-3"/>
-                      <span>{step.success}</span>
+                      <Target className="w-3 h-3"/>                      <span>{step.success}</span>
                     </div>
                   </div>
                   
@@ -395,14 +388,12 @@ const stats = [;"
   { opacity: 0,
   y: 20 ;
 
-}}
-          whileInView = {
+}}          whileInView = {
 
   { opacity: 1,
   y: 0 ;
 
-}}
-          viewport={{ once: true }}
+}}          viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
@@ -411,14 +402,12 @@ const stats = [;"
 }}
         >"
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">"
-            <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">"
-              <p className="text-white text-lg mb-4">
+            <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">"              <p className="text-white text-lg mb-4">
                 Ready to start your project journey?
               </p>"
               <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-purple/25">
                 Get Started Today"
-                <Rocket className="w-5 h-5"/>
-              </button>
+                <Rocket className="w-5 h-5"/>              </button>
             </div>;
           </div>;
         </motion.div>;

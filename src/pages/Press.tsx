@@ -7,8 +7,7 @@ import {
   User,
   ArrowRight,
   Download,
-  Mail,
-  Phone,
+  Mail,  Phone,
   Globe,
   Award,
   TrendingUp,
@@ -222,8 +221,7 @@ export default function Press() {
       y: 0,
       transition: { duration: 0.6 }}};
 
-  return ("
-    <div className="min-h-screen bg-futuristic">
+  return ("    <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}"
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">"
         <div className="absolute inset-0 opacity-10">"
@@ -239,8 +237,7 @@ export default function Press() {
           >"
             <div className="flex justify-center mb-8">"
               <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">"
-                <Newspaper className="w-12 h-12 text-white" />
-              </div>
+                <Newspaper className="w-12 h-12 text-white" />              </div>
             </div>
 "
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">'
@@ -334,8 +331,7 @@ export default function Press() {
                       </p>"
                       <p className="text-zion-slate-light leading-relaxed">
                         {item.excerpt}
-                      </p>
-                    </div>
+                      </p>                    </div>
 
                     {item.tags && ("
                       <div className="flex flex-wrap gap-2 mb-6">
@@ -356,8 +352,7 @@ export default function Press() {
                     </button>
                   </div>
                 </motion.article>
-              ))}
-          </motion.div>
+              ))}          </motion.div>
         </div>
       </section>
 
@@ -426,8 +421,7 @@ export default function Press() {
                     </button>
                   </div>
                 </motion.article>
-              ))}
-          </motion.div>
+              ))}          </motion.div>
         </div>
       </section>
 
@@ -469,8 +463,7 @@ export default function Press() {
               <p className="text-zion-slate-light text-sm mb-6">
                 Download our comprehensive media kit with company information,
                 logos, and press materials.
-              </p>"
-              <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">
+              </p>"              <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">
                 Download
               </button>
             </motion.div>
@@ -489,8 +482,7 @@ export default function Press() {
               <p className="text-zion-slate-light text-sm mb-6">
                 Key facts, statistics, and company information for media
                 reference.
-              </p>"
-              <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">
+              </p>"              <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">
                 Download
               </button>
             </motion.div>
@@ -508,8 +500,7 @@ export default function Press() {
               </h3>"
               <p className="text-zion-slate-light text-sm mb-6">
                 High-resolution logos and brand assets for media use.
-              </p>"
-              <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">
+              </p>"              <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">
                 Download
               </button>
             </motion.div>
@@ -527,8 +518,7 @@ export default function Press() {
               </h3>"
               <p className="text-zion-slate-light text-sm mb-6">
                 Biographies and photos of our executive leadership team.
-              </p>"
-              <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">
+              </p>"              <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">
                 Download
               </button>
             </motion.div>
@@ -583,8 +573,7 @@ export default function Press() {
                 </h3>"
                 <p className="text-zion-slate-light text-sm">
                   ziontechgroup.com
-                </p>
-              </div>
+                </p>              </div>
             </div>
 
             <motion.button"

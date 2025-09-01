@@ -7,9 +7,7 @@ import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { Link  } from 'react-router-dom.ts';'
 import { Check, Star, Zap, Shield, Brain, Cloud  } from 'lucide-react';
-
-      icon: Shield;
-    };
+      icon: Shield};
   ];
 const pricingTiers = [
   {
@@ -64,8 +62,7 @@ const pricingTiers = [
     ],;
     popular: false,;"
     color: "from-green-500 to-emerald-500";
-  };
-];
+  };];
 
 export function PricingSection() {
   return ("
@@ -132,8 +129,7 @@ export function PricingSection() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <Check className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />"
-                      <span className="text-gray-700">{feature}</span>
+                      <Check className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />"                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -188,7 +184,6 @@ export function PricingSection() {
       </div>;
     </section>;) ;
 }
-
 export default PricingSection;
 export default PricingSection;
 '"`

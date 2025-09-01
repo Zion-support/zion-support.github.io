@@ -1,13 +1,6 @@
 import React from 'react';'
 import { motion } from 'framer-motion';'
 import { cn } from '../../utils/cn';
-
-interface LoadingSpinnerProps {
-'
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'white';
-  text?: string;
-
 export default function LoadingSpinner({
 '
   size = 'md','
@@ -15,8 +8,7 @@ export default function LoadingSpinner({
   className = '',
   showText = false,'
   text = 'Loading...'
-  className?: string;
-}
+  className?: string}
 
 export function LoadingSpinner({
 '
@@ -48,8 +40,7 @@ export function LoadingSpinner({
     xl: 'text-xl'
   };
 
-  return()
-    <div className={`flex flex-col items-center justify-center ${className}`}>
+  return()    <div className={`flex flex-col items-center justify-center ${className}`}>
       <motion.div`
         className={`${sizeClasses[size]} border-2 border-gray-300 border-t-2 border-t-current rounded-full ${color}`}
         animate={{ rotate: 360 }}
@@ -104,8 +95,7 @@ export function LoadingDots({
   };
 
   return()`
-    <div className={`flex flex-col items-center justify-center ${className}`}>"
-      <div className="flex space-x-2">
+    <div className={`flex flex-col items-center justify-center ${className}`}>"      <div className="flex space-x-2">
         {[0: unknown, 1: unknown, 2].map((index: unknown (
           <motion.div
             key={index}`
@@ -139,8 +129,7 @@ export function LoadingDots({
       "
       <span className="sr-only">Loading...</span>
     </div>
-  );
-}
+  )}
 
 // Skeleton loading component
 export function LoadingSkeleton({
@@ -153,8 +142,7 @@ export function LoadingSkeleton({
   className?: string;
 }) {
 
-  return()`
-    <div className={`space-y-3 ${className}`}>
+  return()`    <div className={`space-y-3 ${className}`}>
       {Array.from({ length: lines }).map(_: unknown, index: unknown (
         <motion.div
           key={index}"
@@ -184,8 +172,7 @@ export function ButtonLoader({
 
   return ('
     <div className={cn('inline-flex items-center', className)}>"
-      <LoadingSpinner size={size} color="white" />"
-      <span className="ml-2">Loading...</span>
+      <LoadingSpinner size={size} color="white" />"      <span className="ml-2">Loading...</span>
     </div>
   );
 
@@ -203,11 +190,9 @@ export function PageLoaderOverlay({
   return()`
     <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 ${className}`}>"
       <div className="bg-white rounded-lg p-6 shadow-xl">"
-        <LoadingSpinner size="lg" text={text} />
-      </div>
+        <LoadingSpinner size="lg" text={text} />      </div>
     </div>
-  );
-}
+  )}
 
 // Full page loading component
 export function FullPageLoader({
@@ -221,8 +206,7 @@ export function FullPageLoader({
 }) {
 
   return()`
-    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center ${className}`}>"
-      <div className="text-center text-white">
+    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center ${className}`}>"      <div className="text-center text-white">
         <motion.div"
           className="w-32 h-32 border-4 border-gray-700 border-t-cyan-400 rounded-full mx-auto mb-6"
           animate={{ rotate: 360 }}
@@ -274,8 +258,7 @@ export function ContentPlaceholder({
   };
 
   return()`
-    <div className={`${variants[variant]} ${className}`}>'
-      {variant === 'card' ? (
+    <div className={`${variants[variant]} ${className}`}>'      {variant === 'card' ? (
         // Card placeholders
         Array.from({ length: 6 }).map(_: unknown, index: unknown (
           <motion.div
@@ -339,8 +322,7 @@ export function AppLoadingSpinner() {
   const icons = ['🤖', '☁️', '🔒', '💡'];
 
   return ("
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-      <div className="relative">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"      <div className="relative">
         {/* Main spinning ring */}"
         <div className="w-32 h-32 border-4 border-slate-700 rounded-full relative">"
           <div className="absolute inset-0 border-4 border-transparent border-t-cyan-400 rounded-full animate-spin"></div>'"

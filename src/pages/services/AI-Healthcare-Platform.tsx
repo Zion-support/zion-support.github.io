@@ -14,8 +14,7 @@ import {
   Network,
   Lock,
   Globe,
-  Rocket,
-  Star,
+  Rocket,  Star,
   CheckCircle,
   ArrowRight,
   Phone,
@@ -318,8 +317,7 @@ const AIHealthcarePlatform: React.FC = () => {
       ]},
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
@@ -330,8 +328,7 @@ const AIHealthcarePlatform: React.FC = () => {
             className="mb-8"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 text-green-300 text-sm font-medium mb-6">"
-              <Heart className="w-4 h-4 mr-2" />
-              Healthcare Innovation
+              <Heart className="w-4 h-4 mr-2" />              Healthcare Innovation
             </div>"
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI-Powered Healthcare Platform
@@ -353,15 +350,13 @@ const AIHealthcarePlatform: React.FC = () => {
               to="/contact""
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >"
-              <Heart className="w-5 h-5 mr-2" />
-              Transform Healthcare
+              <Heart className="w-5 h-5 mr-2" />              Transform Healthcare
             </Link>
             <Link"
               to="#demo""
               className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-green-500 text-green-300 font-semibold text-lg hover:bg-green-500 hover:text-white transition-all duration-300"
             >"
-              <Eye className="w-5 h-5 mr-2" />
-              Watch Demo
+              <Eye className="w-5 h-5 mr-2" />              Watch Demo
             </Link>
           </motion.div>
         </div>
@@ -469,8 +464,7 @@ const AIHealthcarePlatform: React.FC = () => {
                 className="bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20"
               >"
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">"
-                  <Heart className="w-6 h-6 mr-3 text-green-400" />
-                  {module.name}
+                  <Heart className="w-6 h-6 mr-3 text-green-400" />                  {module.name}
                 </h3>"
                 <div className="space-y-3">
                   {module.features.map((feature, featureIndex) => (
@@ -478,8 +472,7 @@ const AIHealthcarePlatform: React.FC = () => {
                       key={featureIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />                      {feature}
                     </div>
                   ))}
                 </div>
@@ -519,8 +512,7 @@ const AIHealthcarePlatform: React.FC = () => {
                 className="bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20"
               >"
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">"
-                  <Target className="w-6 h-6 mr-3 text-green-400" />
-                  {useCase.industry}
+                  <Target className="w-6 h-6 mr-3 text-green-400" />                  {useCase.industry}
                 </h3>"
                 <div className="space-y-3">
                   {useCase.applications.map((app, appIndex) => (
@@ -528,8 +520,7 @@ const AIHealthcarePlatform: React.FC = () => {
                       key={appIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />
-                      {app}
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />                      {app}
                     </div>
                   ))}
                 </div>
@@ -608,8 +599,7 @@ const AIHealthcarePlatform: React.FC = () => {
                       key={featureIndex}"
                       className="flex items-start text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5" />"
-                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5" />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -700,8 +690,7 @@ const AIHealthcarePlatform: React.FC = () => {
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center text-gray-300">"
-                <MapPin className="w-5 h-5 mr-2 text-green-400" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <MapPin className="w-5 h-5 mr-2 text-green-400" />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
 "
@@ -710,23 +699,20 @@ const AIHealthcarePlatform: React.FC = () => {
                 to="/contact""
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >"
-                <Heart className="w-5 h-5 mr-2" />
-                Schedule Healthcare Demo
+                <Heart className="w-5 h-5 mr-2" />                Schedule Healthcare Demo
               </Link>
               <Link"
                 to="https://ziontechgroup.com""
                 className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-green-500 text-green-300 font-semibold text-lg hover:bg-green-500 hover:text-white transition-all duration-300"
               >"
-                <Globe className="w-5 h-5 mr-2" />
-                Visit Our Website
+                <Globe className="w-5 h-5 mr-2" />                Visit Our Website
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIHealthcarePlatform;
 '"`

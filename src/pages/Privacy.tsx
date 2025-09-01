@@ -7,8 +7,7 @@ import {
   Lock,
   Eye,
   Database,
-  Globe,
-  CheckCircle,
+  Globe,  CheckCircle,
   AlertTriangle,
   FileText,
   Mail,
@@ -161,8 +160,7 @@ const Privacy: React.FC = () => {
         title="Privacy Policy - Zion Tech Group""
         description="Learn how Zion Tech Group protects your privacy and handles your personal data in accordance with GDPR and other privacy regulations.""
         keywords="privacy policy, data protection, GDPR, data rights, personal information, Zion Tech Group, privacy"
-      />"
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      />"      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Header */}"
         <section className="pt-32 pb-16 px-4">"
           <div className="max-w-7xl mx-auto text-center">
@@ -173,8 +171,7 @@ const Privacy: React.FC = () => {
             >"
               <div className="flex items-center justify-center space-x-3 mb-6">"
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">"
-                  <Shield className="w-8 h-8 text-white" />
-                </div>
+                  <Shield className="w-8 h-8 text-white" />                </div>
               </div>"
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Privacy Policy
@@ -263,8 +260,7 @@ const Privacy: React.FC = () => {
                   <div className="space-y-1">
                     {category.examples.map((example, idx) => ("
                       <div key={idx} className="flex items-center gap-2">"
-                        <CheckCircle className="w-3 h-3 text-green-400" />"
-                        <span className="text-gray-400 text-xs">{example}</span>
+                        <CheckCircle className="w-3 h-3 text-green-400" />"                        <span className="text-gray-400 text-xs">{example}</span>
                       </div>
                     ))}
                   </div>
@@ -382,6 +378,5 @@ const Privacy: React.FC = () => {
       </div>
     </>) ;
 };
-
 export default Privacy;
 '"

@@ -90,8 +90,7 @@ export default function Blockchain(...args[]):  {
         "Private blockchain networks","
         "24/7 support","
         "Real-time monitoring",;"
-        "White-label solutions",;"
-        "Dedicated blockchain engineer";
+        "White-label solutions",;"        "Dedicated blockchain engineer";
       ],;"
       cta: "Contact Sales",;
       popular: false;
@@ -144,8 +143,7 @@ export default function Blockchain(...args[]):  {
       title: "Healthcare",;"
       description: "Secure patient records and pharmaceutical supply chain management",;"
       examples: ["Patient data", "Drug tracking", "Clinical trials"];
-    };
-  ];
+    };  ];
 
   return ("
     <div className="min-h-screen bg-futuristic">
@@ -160,8 +158,7 @@ export default function Blockchain(...args[]):  {
             className="text-center max-w-4xl mx-auto"
           >"
             <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">"
-              <Lock className="w-5 h-5 text-green-400" />"
-              <span className="text-green-400 font-medium">Blockchain Solutions</span>
+              <Lock className="w-5 h-5 text-green-400" />"              <span className="text-green-400 font-medium">Blockchain Solutions</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -178,8 +175,7 @@ export default function Blockchain(...args[]):  {
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Blockchain Project"
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </button>"
-              <button className="btn-outline px-8 py-4 text-lg">
+              </button>"              <button className="btn-outline px-8 py-4 text-lg">
                 Learn More
               </button>
             </div>
@@ -282,8 +278,7 @@ export default function Blockchain(...args[]):  {
               transition={{ duration: 0.8 }}
 "
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">"
-                <Link className="w-4 h-4 mr-2" />
-                Blockchain Innovation
+                <Link className="w-4 h-4 mr-2" />                Blockchain Innovation
               </div>"
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
                 <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent">Blockchain</span> Solutions for the Future
@@ -298,8 +293,7 @@ export default function Blockchain(...args[]):  {
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
 
                   Get Started"
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </RouterLink>
+                  <ArrowRight className="w-5 h-5 ml-2" />                </RouterLink>
                 <RouterLink"
                   to="/request-quote""
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"
@@ -397,8 +391,7 @@ export default function Blockchain(...args[]):  {
                   <ul className="space-y-2">
                     {useCase.examples.map((example, exampleIndex) => ("
                       <li key={exampleIndex} className="flex items-center text-zinc-300 text-sm">"
-                        <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />
-                        {example}
+                        <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />                        {example}
                       </li>
                     ))}
                   </ul>
@@ -600,8 +593,7 @@ export default function Blockchain(...args[]):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center text-zinc-300">"
-                        <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -755,8 +747,7 @@ export default function Blockchain(...args[]):  {
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
 
                   Start Your Journey"
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </RouterLink>
+                  <ArrowRight className="w-5 h-5 ml-2" />                </RouterLink>
                 <RouterLink"
                   to="/request-quote""
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"

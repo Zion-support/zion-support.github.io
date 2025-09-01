@@ -6,8 +6,7 @@ import {
   Mail,
   MapPin,
   Clock,
-  Send,
-  CheckCircle,
+  Send,  CheckCircle,
   AlertCircle,
   User,
   MessageSquare,
@@ -63,8 +62,7 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
 
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault();    setIsSubmitting(true);
 
     // Simulate form submission
     try {
@@ -173,8 +171,7 @@ export default function Contact() {
   ];
 
   return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">"
-      <div className="container mx-auto px-4 py-24">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">"      <div className="container mx-auto px-4 py-24">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -212,8 +209,7 @@ export default function Contact() {
             <div className="space-y-6">"
               <div className="flex items-start space-x-4">"
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">"
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
+                  <Phone className="w-6 h-6 text-white" />                </div>
                 <div>"
                   <h3 className="text-white font-semibold text-lg">Phone</h3>"
                   <p className="text-gray-300">+1 302 464 0950</p>"
@@ -223,8 +219,7 @@ export default function Contact() {
 "
               <div className="flex items-start space-x-4">"
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">"
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
+                  <Mail className="w-6 h-6 text-white" />                </div>
                 <div>"
                   <h3 className="text-white font-semibold text-lg">Email</h3>"
                   <p className="text-gray-300">kleber@ziontechgroup.com</p>"
@@ -236,8 +231,7 @@ export default function Contact() {
 "
               <div className="flex items-start space-x-4">"
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">"
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
+                  <MapPin className="w-6 h-6 text-white" />                </div>
                 <div>"
                   <h3 className="text-white font-semibold text-lg">Address</h3>"
                   <p className="text-gray-300">364 E Main St STE 1008</p>"
@@ -248,8 +242,7 @@ export default function Contact() {
 "
               <div className="flex items-start space-x-4">"
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">"
-                  <Clock className="w-6 h-6 text-white" />
-                </div>
+                  <Clock className="w-6 h-6 text-white" />                </div>
                 <div>"
                   <h3 className="text-white font-semibold text-lg">
                     Business Hours
@@ -276,8 +269,7 @@ export default function Contact() {
                   <span>Call Now</span>
                 </button>"
                 <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center space-x-2">"
-                  <Mail className="w-5 h-5" />
-                  <span>Send Email</span>
+                  <Mail className="w-5 h-5" />                  <span>Send Email</span>
                 </button>
               </div>
             </div>
@@ -301,8 +293,7 @@ export default function Contact() {
                     htmlFor="name""
                     className="block text-white font-medium mb-2"
                   >"
-                    <User className="w-4 h-4 inline mr-2" />
-                    Full Name *
+                    <User className="w-4 h-4 inline mr-2" />                    Full Name *
                   </label>
                   <input"
                     type="text""
@@ -321,8 +312,7 @@ export default function Contact() {
                     htmlFor="email""
                     className="block text-white font-medium mb-2"
                   >"
-                    <Mail className="w-4 h-4 inline mr-2" />
-                    Email Address *
+                    <Mail className="w-4 h-4 inline mr-2" />                    Email Address *
                   </label>
                   <input"
                     type="email""
@@ -343,8 +333,7 @@ export default function Contact() {
                     htmlFor="company""
                     className="block text-white font-medium mb-2"
                   >"
-                    <Building className="w-4 h-4 inline mr-2" />
-                    Company
+                    <Building className="w-4 h-4 inline mr-2" />                    Company
                   </label>
                   <input"
                     type="text""
@@ -362,8 +351,7 @@ export default function Contact() {
                     htmlFor="phone""
                     className="block text-white font-medium mb-2"
                   >"
-                    <Phone className="w-4 h-4 inline mr-2" />
-                    Phone Number
+                    <Phone className="w-4 h-4 inline mr-2" />                    Phone Number
                   </label>
                   <input"
                     type="tel""
@@ -407,8 +395,7 @@ export default function Contact() {
                   htmlFor="message""
                   className="block text-white font-medium mb-2"
                 >"
-                  <MessageSquare className="w-4 h-4 inline mr-2" />
-                  Message *
+                  <MessageSquare className="w-4 h-4 inline mr-2" />                  Message *
                 </label>
                 <textarea"
                   id="message""
@@ -432,8 +419,7 @@ export default function Contact() {
                   <CheckCircle className="w-6 h-6 text-green-400" />"
                   <span className="text-green-400">'
                     Message sent successfully! We'll get back to you soon.
-                  </span>
-                </motion.div>
+                  </span>                </motion.div>
               )}
 '
               {submitStatus === 'error' && (
@@ -445,8 +431,7 @@ export default function Contact() {
                   <AlertCircle className="w-6 h-6 text-red-400" />"
                   <span className="text-red-400">
                     Failed to send message. Please try again.
-                  </span>
-                </motion.div>
+                  </span>                </motion.div>
               )}
 
               <button"
@@ -466,8 +451,7 @@ export default function Contact() {
                   </>
                 ) : (
                   <>"
-                    <Send className="w-6 h-6" />
-                    <span>Send Message</span>
+                    <Send className="w-6 h-6" />                    <span>Send Message</span>
                   </>
                 )}
               </button>
@@ -519,8 +503,7 @@ export default function Contact() {
               </h3>"
               <p className="text-gray-300">
                 Experienced professionals dedicated to your success and growth.
-              </p>
-            </div>
+              </p>            </div>
           </div>
         </motion.div>
       </div>

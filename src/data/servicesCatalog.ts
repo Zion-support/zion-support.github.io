@@ -31,8 +31,7 @@ export type ServiceCategory = {
   slug: string;
   items: ServiceItem[];
 };
-;
-export const servicesCatalog: ServiceCategory[] = [
+;export const servicesCatalog: ServiceCategory[] = [
   {
 '
     name: 'Micro SaaS','

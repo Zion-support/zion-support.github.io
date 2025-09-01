@@ -1,14 +1,5 @@
 import React from 'react';'
 import { motion } from 'framer-motion';
-
-interface EnhancedLoadingSpinnerProps {
-'
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  text?: string;
-  showProgress?: boolean;
-  progress?: number;'
-  variant?: 'default' | 'futuristic' | 'minimal';
-
 export function EnhancedLoadingSpinner({
 '
   size = 'md','
@@ -30,8 +21,7 @@ export function EnhancedLoadingSpinner({
     md: 'text-sm','
     lg: 'text-lg','
     xl: 'text-xl'};
-'
-  if (variant === 'minimal') {
+'  if (variant === 'minimal') {
 
     return()
       <div className="flex items-center justify-center">
@@ -46,8 +36,7 @@ export function EnhancedLoadingSpinner({
       </div>
     );
   }
-'
-  if (variant === 'default') {
+'  if (variant === 'default') {
 
     return ("
       <div className="flex flex-col items-center justify-center space-y-4">
@@ -70,8 +59,7 @@ export function EnhancedLoadingSpinner({
           </div>
         )}
       </div>
-    );
-  }
+    )}
 
   // Futuristic variant (default)
   return ("
@@ -166,8 +154,7 @@ export function EnhancedLoadingSpinner({
         ))}
       </div>
     </div>
-  );
-}
+  )}
 
 // Export default for backward compatibility;
 export { EnhancedLoadingSpinner };

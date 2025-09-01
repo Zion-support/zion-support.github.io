@@ -1,77 +1,7 @@
 import React from 'react.ts';
 import { SEO  } from "../../components/SEO";'
-import { motion  } from 'framer-motion.ts';
-import { Shield, 
-  Brain, 
-  Eye, 
-  Lock, 
-  AlertTriangle, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  Globe, 
-  ExternalLink,
-  Zap,
-  Users,
-  BarChart3,
-  Target,
-  Cpu,
-  Network,
-  Database,
-  FileText,
-  Monitor,
-  Activity'
- } from 'lucide-react';
-;
-export { function };
-export default function AICybersecuritySuite(...args[]):  {
-
-  const features = [
-    {
-
-      icon: Brain,'
-      title: 'AI Threat Detection','
-      description: 'Advanced machine learning algorithms that identify and respond to threats in real-time','
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-"
-      title: "Zero-Trust Architecture","
-      description: "Implement comprehensive zero-trust security with AI-driven access control",
-      icon: Shield,
-      benefits: ["
-        "Continuous authentication","
-        "Micro-segmentation","
-        "Least privilege access","
-        "Real-time risk assessment"
-      ]
-    },
-    {
-"
-      title: "Automated Incident Response","
-      description: "AI-driven security orchestration with automated threat containment and remediation",
-      icon: Zap,
-      benefits: ["
-        "Instant threat containment","
-        "Automated remediation","
-        "Incident timeline analysis","
-        "Forensic investigation"
-      ]
-    },
-    {
-"
-      title: "Compliance Automation","
-      description: "Automated compliance monitoring and reporting for all major regulatory frameworks",
-      icon: CheckCircle,
-      benefits: [;"
-        "GDPR compliance",;"
-        "SOC 2 automation",;"
-        "HIPAA compliance",;"
-        "Real-time audit trails";
-      ];
-    };
+import { motion  } from 'framer-motion.ts';        "Real-time audit trails";
+      ]};
   ];
 
   const pricingPlans = [
@@ -124,12 +54,10 @@ export default function AICybersecuritySuite(...args[]):  {
         "24/7 dedicated support","
         "Custom security models","
         "White-label solutions",;"
-        "On-premise deployment",;"
-        "SLA guarantees";
+        "On-premise deployment",;"        "SLA guarantees";
       ],;"
       cta: "Contact Sales",;
-      popular: false;
-    };
+      popular: false};
   ];
 
   const useCases = [
@@ -169,10 +97,8 @@ export default function AICybersecuritySuite(...args[]):  {
       applications: [;"
         "Classified data protection",;"
         "National security",;"
-        "Compliance automation",;"
-        "Threat intelligence";
-      ];
-    };
+        "Compliance automation",;"        "Threat intelligence";
+      ]};
   ];
 
   const securityMetrics = [
@@ -305,16 +231,14 @@ export default function AICybersecuritySuite(...args[]):  {
     { name: 'Natural Language Processing', description: 'AI-powered analysis of security logs and reports' },'
     { name: 'Behavioral Analytics', description: 'User and system behavior monitoring for anomaly detection' },'
     { name: 'Threat Intelligence', description: 'Real-time threat feeds and global security intelligence' },'
-    { name: 'Automated Response', description: 'Intelligent automation for threat containment and response' },;'
-    { name: 'Cloud-Native Security', description: 'Built for modern cloud and hybrid environments' };
+    { name: 'Automated Response', description: 'Intelligent automation for threat containment and response' },;'    { name: 'Cloud-Native Security', description: 'Built for modern cloud and hybrid environments' };
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Cybersecurity Suite - Zion Tech Group""
-        description="Advanced AI-powered cybersecurity solutions that protect your business from evolving threats. Real-time threat detection, automated response, and comprehensive security monitoring."
-      />
+        title="AI Cybersecurity Suite - Zion Tech Group""        description="Advanced AI-powered cybersecurity solutions that protect your business from evolving threats. Real-time threat detection, automated response, and comprehensive security monitoring."
+       />
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -348,8 +272,7 @@ export default function AICybersecuritySuite(...args[]):  {
           >"
             <div className="flex justify-center mb-6">"
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">"
-                <Shield className="w-10 h-10 text-white" />
-              </div>
+                <Shield className="w-10 h-10 text-white" />              </div>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Cybersecurity Suite
@@ -363,14 +286,12 @@ export default function AICybersecuritySuite(...args[]):  {
                 className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Get Protected"
-                <ArrowRight className="w-5 h-5" />
-              </a>
+                <ArrowRight className="w-5 h-5" />              </a>
               <a "
                 href="tel:+13024640950" "
                 className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >"
-                <Phone className="w-5 h-5" />
-                Security Consultation
+                <Phone className="w-5 h-5" />                Security Consultation
               </a>
             </div>
           </motion.div>
@@ -645,8 +566,7 @@ export default function AICybersecuritySuite(...args[]):  {
                 <ul className="space-y-3">
                   {service.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center gap-3 text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -737,8 +657,7 @@ export default function AICybersecuritySuite(...args[]):  {
                 <ul className="space-y-3">
                   {module.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center gap-3 text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -909,8 +828,7 @@ export default function AICybersecuritySuite(...args[]):  {
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Start Security Assessment"
-                <ArrowRight className="w-5 h-5" />
-              </a>
+                <ArrowRight className="w-5 h-5" />              </a>
               <a "
                 href="tel:+13024640950" "
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2"

@@ -1,60 +1,6 @@
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';
-import { SEO  } from "../components/SEO";
-import { Wrench, 
-
-
-  Clock, 
-  Shield, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Rocket, 
-  Phone, 
-  Mail, 
-  Calendar, 
-  Star, 
-  Award, 
-  Building, 
-  Wrench, 
-  Settings, 
-  Database, 
-  Server, 
-  Network, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  Info, 
-  ArrowRight,
-  Globe'
-} from 'lucide-react';"
-import { SEO } from "../components/SEO";
-
-export default function OnsiteSupport(...args[]):  {
-
-  const services = [
-    {
-
-      icon: Server,'
-      title: 'Server Maintenance','
-      description: 'Proactive server monitoring, updates, and optimization','
-      features['Hardware diagnostics', 'Performance tuning', 'Security patches', 'Backup verification'];
-    },;
-    {
-
-      icon: Network,'
-      title: 'Network Infrastructure','
-      description: 'Complete network setup, troubleshooting, and optimization','
-      features['WiFi optimization', 'Cable management', 'Switch configuration', 'Network security'];
-    },;
-    {
-
-      icon: Database,'
-      title: 'Database Management','
-      description: 'Database optimization, backup, and recovery services','
-      features['Performance tuning', 'Backup strategies', 'Recovery procedures', 'Security hardening'];
-    },;
-    {
+import { SEO  } from "../components/SEO";    {
 '
       title: 'Training & Consultation','
       description: 'Staff training and strategic consultation',
@@ -65,8 +11,7 @@ export default function OnsiteSupport(...args[]):  {
         'Best practices guidance',;'
         'Technology consulting',;'
         'Process optimization';
-      ];
-    };
+      ]};
   ];
 
   const benefits = [
@@ -202,15 +147,13 @@ export default function OnsiteSupport(...args[]):  {
       email: 'emergency@ziontechgroup.com',;'
       phone: '+1 302 464 0950',;'
       address: 'Available 24/7 for critical issues';
-    };
-  ];
+    };  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="Onsite IT Support Services - Zion Tech Group""
-        description="Professional onsite IT support services with certified technicians. 24/7 emergency response, preventive maintenance, and comprehensive infrastructure support."
-      />
+        title="Onsite IT Support Services - Zion Tech Group""        description="Professional onsite IT support services with certified technicians. 24/7 emergency response, preventive maintenance, and comprehensive infrastructure support."
+       />
       
       {/* Hero Section */}"
       <section className="relative py-20 px-4">"
@@ -232,8 +175,7 @@ export default function OnsiteSupport(...args[]):  {
           >"
             <div className="flex justify-center mb-6">"
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">"
-                <Wrench className="w-10 h-10 text-white" />
-              </div>
+                <Wrench className="w-10 h-10 text-white" />              </div>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Onsite IT Support
@@ -374,8 +316,7 @@ export default function OnsiteSupport(...args[]):  {
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center text-sm text-slate-400">"
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />                      {feature}
                     </li>) ) }
                 </ul>
               </motion.div>) ) }
@@ -456,8 +397,7 @@ export default function OnsiteSupport(...args[]):  {
                   <h4 className="text-slate-300 font-medium">Coverage:</h4>
                   {area.areas.map((location, idx) => ("
                     <div key={idx} className="flex items-center space-x-3">"
-                      <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />"
-                      <span className="text-slate-300 text-sm">{location}</span>
+                      <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />"                      <span className="text-slate-300 text-sm">{location}</span>
                     </div>
                   ))}
                 </div>
@@ -690,8 +630,7 @@ export default function OnsiteSupport(...args[]):  {
                   <AlertTriangle className="w-8 h-8 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">{item.priority}</h3>"
-                <div className="text-2xl font-bold text-cyan-400 mb-2">{item.time}</div>"
-                <p className="text-slate-300 text-sm">{item.description}</p>
+                <div className="text-2xl font-bold text-cyan-400 mb-2">{item.time}</div>"                <p className="text-slate-300 text-sm">{item.description}</p>
               </motion.div>
             ))}
           </div>

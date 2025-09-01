@@ -7,8 +7,7 @@ import {
   Users,
   Eye,
   MousePointer,
-  Clock,
-  Globe,
+  Clock,  Globe,
   Smartphone,
   Monitor,
   Tablet,
@@ -30,20 +29,17 @@ interface AnalyticsData {
 
     desktop: number;
     mobile: number;
-    tablet: number;
-  };
+    tablet: number};
   topPages: Array<{
 
     path: string;
     views: number;
     title: string;
-  }[];
-  userEngagement: {
+  }[];  userEngagement: {
 
     scrollDepth: number;
     timeOnPage: number;
-    interactions: number;
-  };
+    interactions: number};
   performance: {
 
     loadTime: number;
@@ -52,10 +48,7 @@ interface AnalyticsData {
       fcp: number;
       lcp: number;
       fid: number;
-      cls: number;
-    };
-  };
-}
+      cls: number}}}
 
 interface EnhancedAnalyticsProps {
   // Add your props here
@@ -64,7 +57,6 @@ interface EnhancedAnalyticsProps {
   enabled?: boolean;
   showDashboard?: boolean;
   trackingId?: string;
-
 export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
   enabled = true,
@@ -83,7 +75,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
   const sessionRef = useRef<NodeJS.Timeout>();
   const scrollRef = useRef<NodeJS.Timeout>();
-
   // Initialize analytics
   useEffect ( () => {
     if (!enabled) return;
@@ -92,8 +83,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     if (trackingId && trackingId !== 'G-XXXXXXXXXX') {
 
       // Google Analytics 4 initialization'
-      const script = document.createElement('script');
-      script.async = true;
+      const script = document.createElement('script');      script.async = true;
       script.src = `https://www.googletagmanager.com / gtag / js?id=${trackingId}`;
       document.head.appendChild (script) ;
 
@@ -102,8 +92,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
         window.dataLayer.push(args);
       }'
-      gtag('js', new Date());'
-      gtag('config', trackingId, {
+      gtag('js', new Date());'      gtag('config', trackingId, {
 
         page_title: document.title,
         page_location: window.location.href,
@@ -119,7 +108,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         page_location: window.location.href,
         page_referrer: document.referrer});
     }
-
     // Initialize session tracking
     setSessionStart(Date.now());
 
@@ -138,14 +126,12 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       }
     };
   }, [enabled, trackingId]) ;
-
   // Track page changes
   useEffect ( () => {
     if (!enabled) return;
 
     const handleRouteChange = (...args: unknown[]): unknown => {
-      const newPage = window.location.pathname;
-      if (newPage !== currentPage) {
+      const newPage = window.location.pathname;      if (newPage !== currentPage) {
 
         // Track page view'
         trackEvent('page_view', {
@@ -159,8 +145,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         setTimeOnPage (0) ;
         setScrollDepth (0) ;
         setUserInteractions (0) ;
-      }
-    };
+      }    };
 
     // Listen for route changes (for SPA)'
     window.addEventListener('popstate', handleRouteChange);
@@ -177,14 +162,12 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       window.removeEventListener('popstate', handleRouteChange);
     };
   }, [enabled, currentPage, timeOnPage]) ;
-
   // Track user interactions
   useEffect ( () => {
     if (!enabled) return;
 
     const trackInteraction = () => {
-      setUserInteractions(prev => prev + 1);'
-      trackEvent('user_interaction', {
+      setUserInteractions(prev => prev + 1);'      trackEvent('user_interaction', {
 '
         interaction_type: 'click',
         page_path: currentPage,
@@ -196,7 +179,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       const docHeight =
         document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = Math.round((scrollTop / docHeight) * 100);
-
       if (scrollPercent > scrollDepth) {
 
         setScrollDepth(scrollPercent);
@@ -233,7 +215,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     const trackTimeOnPage = () => {
       setTimeOnPage (prev => prev + 1) ;
     };
-
     // Set up event listeners'
     document.addEventListener('click', trackInteraction);'
     window.addEventListener('scroll', trackScroll);
@@ -251,7 +232,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       }
     };
   }, [enabled, currentPage, scrollDepth]) ;
-
   // Track performance metrics
   useEffect ( () => {
     if (!enabled) return;
@@ -272,15 +252,13 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         const lcp ='
           paint.find(entry => entry.name === 'largest-contentful-paint')
             ?.startTime || 0;
-'
-        trackEvent('performance_metrics', {
+'        trackEvent('performance_metrics', {
 
           load_time: loadTime,
           fcp: fcp,
           lcp: lcp,
           page_path: currentPage});
-      }
-    };
+      }    };
 
     // Track performance after page load'
     if (document.readyState === 'complete') {
@@ -292,15 +270,13 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       return () => window.removeEventListener('load', trackPerformance);
     }
   }, [enabled, currentPage]) ;
-
   // Track session end
   useEffect ( () => {
     if (!enabled) return;
 
     const handleBeforeUnload = () => {
       const sessionDuration = Date.now() - sessionStart;
-'
-      trackEvent('session_end', {
+'      trackEvent('session_end', {
 
         session_duration: sessionDuration,
         pages_viewed: 1, // Simplified
@@ -366,7 +342,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     },
     [enabled, currentPage, scrollDepth, timeOnPage, userInteractions]
   );
-
   // Initialize mock data for dashboard
   useEffect ( () => {
     if (showDashboard) {
@@ -404,7 +379,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             cls: 0.05}}});
     }
   }, [showDashboard, scrollDepth, timeOnPage, userInteractions]) ;
-
   if (!enabled) return null;
 
   return()
@@ -443,8 +417,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                 className="p-1 hover:bg-white/20 rounded transition-colors""
                 aria-label="Close analytics dashboard"
               >"
-                <Eye className="w-4 h-4" />
-              </button>
+                <Eye className="w-4 h-4" />              </button>
             </div>
 
             {/* Content */}"
@@ -464,8 +437,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                     {analyticsData.uniqueVisitors}
                   </div>"
                   <div className="text-xs text-slate-600 dark:text-slate-400">
-                    Unique Visitors
-                  </div>
+                    Unique Visitors                  </div>
                 </div>
               </div>
 
@@ -622,6 +594,5 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       </AnimatePresence>
     </>) ;
 };
-
 export default EnhancedAnalytics;
 '"`

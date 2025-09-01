@@ -5,8 +5,7 @@ const APIMonitoringSaaS: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">"
     <SEO title="API Monitoring & Status - Zion Tech Group" description="SLA-grade API monitoring, alerting, SLOs, and status pages for your services." />"
     <section className="container mx-auto px-4 py-12">"
-      <h1 className="text-4xl font-bold mb-4">API Monitoring & Status</h1>"
-      <p className="text-slate-300 max-w-3xl">End-to-end API uptime, latency, and error monitoring with synthetic checks, distributed tracing hooks, and public status pages. Define SLOs and get proactive alerts before customers are impacted.</p>
+      <h1 className="text-4xl font-bold mb-4">API Monitoring & Status</h1>"      <p className="text-slate-300 max-w-3xl">End-to-end API uptime, latency, and error monitoring with synthetic checks, distributed tracing hooks, and public status pages. Define SLOs and get proactive alerts before customers are impacted.</p>
     </section>"
     <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">"
       <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">"

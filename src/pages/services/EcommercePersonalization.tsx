@@ -35,8 +35,7 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {
             <div className="mb-2 font-semibold">Outcomes</div>"
             <ul className="space-y-2 text-sm text-slate-300">"
               <li className="flex items-center gap-2"><Sparkles className="h-4 w-4 text-cyan-300"/> +5–15% AOV</li>"
-              <li className="flex items-center gap-2"><Sparkles className="h-4 w-4 text-cyan-300"/> +3–8% conversion rate</li>"
-              <li className="flex items-center gap-2"><BarChart3 className="h-4 w-4 text-cyan-300"/> Experiment results dashboard</li>
+              <li className="flex items-center gap-2"><Sparkles className="h-4 w-4 text-cyan-300"/> +3–8% conversion rate</li>"              <li className="flex items-center gap-2"><BarChart3 className="h-4 w-4 text-cyan-300"/> Experiment results dashboard</li>
             </ul>"
             <div className="mt-4 text-sm font-semibold text-cyan-300">Pricing: $249–$1,499/month</div>;
           </div>;

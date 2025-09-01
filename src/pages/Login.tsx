@@ -2,7 +2,6 @@ import React, { useState } from 'react';'
 import { motion } from 'framer-motion';'
 import { Link } from 'react-router-dom';
 import {
-
   Mail,
   Lock,
   Eye,
@@ -66,8 +65,7 @@ export default function Login() {
 
   const handleSubmit = async (e: React.FormEvent) => {
 
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault();    setIsSubmitting(true);
 
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -91,9 +89,7 @@ export default function Login() {
         acceptMarketing: false});
     }, 5000);
   };
-
-  const toggleForm = () => {
-    setIsLogin(!isLogin);
+  
     setFormData({
 '
       email: '','
@@ -121,8 +117,7 @@ export default function Login() {
         formData.lastName &&
         formData.acceptTerms
       );
-    }
-  };
+    }  };
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center p-4">"
@@ -158,8 +153,7 @@ export default function Login() {
               animate={{ opacity: 1, scale: 1 }}"
               className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center space-x-3"
             >"
-              <CheckCircle className="w-6 h-6 text-green-400" />"
-              <span className="text-green-400">
+              <CheckCircle className="w-6 h-6 text-green-400" />"              <span className="text-green-400">
                 {isLogin'
                   ? 'Successfully logged in!''
                   : 'Account created successfully!'}
@@ -175,8 +169,7 @@ export default function Login() {
                     htmlFor="firstName""
                     className="block text-white font-medium mb-2"
                   >"
-                    <User className="w-4 h-4 inline mr-2" />
-                    First Name *
+                    <User className="w-4 h-4 inline mr-2" />                    First Name *
                   </label>
                   <input"
                     type="text""
@@ -194,8 +187,7 @@ export default function Login() {
                     htmlFor="lastName""
                     className="block text-white font-medium mb-2"
                   >"
-                    <User className="w-4 h-4 inline mr-2" />
-                    Last Name *
+                    <User className="w-4 h-4 inline mr-2" />                    Last Name *
                   </label>
                   <input"
                     type="text""
@@ -215,8 +207,7 @@ export default function Login() {
                 htmlFor="email""
                 className="block text-white font-medium mb-2"
               >"
-                <Mail className="w-4 h-4 inline mr-2" />
-                Email Address *
+                <Mail className="w-4 h-4 inline mr-2" />                Email Address *
               </label>
               <input"
                 type="email""
@@ -236,8 +227,7 @@ export default function Login() {
                   htmlFor="company""
                   className="block text-white font-medium mb-2"
                 >"
-                  <Building className="w-4 h-4 inline mr-2" />
-                  Company
+                  <Building className="w-4 h-4 inline mr-2" />                  Company
                 </label>
                 <input"
                   type="text""
@@ -255,8 +245,7 @@ export default function Login() {
                 htmlFor="password""
                 className="block text-white font-medium mb-2"
               >"
-                <Lock className="w-4 h-4 inline mr-2" />
-                Password *
+                <Lock className="w-4 h-4 inline mr-2" />                Password *
               </label>"
               <div className="relative">
                 <input'
@@ -278,8 +267,7 @@ export default function Login() {
                     <EyeOff className="w-5 h-5" />
                   ) : ("
                     <Eye className="w-5 h-5" />
-                  )}
-                </button>
+                  )}                </button>
               </div>
             </div>
 
@@ -289,8 +277,7 @@ export default function Login() {
                   htmlFor="confirmPassword""
                   className="block text-white font-medium mb-2"
                 >"
-                  <Lock className="w-4 h-4 inline mr-2" />
-                  Confirm Password *
+                  <Lock className="w-4 h-4 inline mr-2" />                  Confirm Password *
                 </label>"
                 <div className="relative">
                   <input'
@@ -312,8 +299,7 @@ export default function Login() {
                       <EyeOff className="w-5 h-5" />
                     ) : ("
                       <Eye className="w-5 h-5" />
-                    )}
-                  </button>
+                    )}                  </button>
                 </div>
               </div>) }
 
@@ -379,8 +365,7 @@ export default function Login() {
               ) : (
                 <>'
                   <span>{isLogin ? 'Sign In' : 'Create Account'}</span>"
-                  <ArrowRight className="w-5 h-5" />
-                </>
+                  <ArrowRight className="w-5 h-5" />                </>
               )}
             </button>
           </form>
@@ -418,8 +403,7 @@ export default function Login() {
                 <span className="ml-2">Google</span>
               </button>"
               <button className="w-full inline-flex justify-center py-3 px-4 border border-white/20 rounded-lg shadow-sm bg-white/10 text-white hover:bg-white/20 transition-colors">"
-                <Github className="w-5 h-5" />"
-                <span className="ml-2">GitHub</span>
+                <Github className="w-5 h-5" />"                <span className="ml-2">GitHub</span>
               </button>
             </div>
           </div>

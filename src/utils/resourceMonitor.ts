@@ -4,7 +4,6 @@ interface ResourceError {
   error: string;
   timestamp: number;
 }
-
 class ResourceMonitor {
   private errors: ResourceError[] = [];
   private isMonitoring = false;
@@ -70,7 +69,6 @@ class ResourceMonitor {
       }
     });
   }
-
   private setupResourceObservers() {
     // Monitor DOM changes for new resources
     if (window.MutationObserver) {
@@ -89,10 +87,8 @@ class ResourceMonitor {
           });
         });
       });
-
       observer.observe(document.head, { childList: true, subtree: true });
-      observer.observe(document.body, { childList: true, subtree: true });
-    }
+      observer.observe(document.body, { childList: true, subtree: true })}
   }
 
   private monitorElement(element: HTMLElement) {
@@ -145,7 +141,6 @@ class ResourceMonitor {
       this.checkResourceHealth(resource);
     });
   }
-
   private async checkResourceHealth(url: string) {
 
     try {
@@ -162,15 +157,15 @@ class ResourceMonitor {
         return;
       }
 '
-      const contentType = response.headers.get('content-type');
-      if (!contentType) {
+      const contentType = response.headers.get('content-type');      if (!contentType) {
 '
         this.handleResourceError(url, 'other', 'No content-type header');
-        return;
-      }
+        return}
 
       // Check for MIME type issues'
       if (url.endsWith('.js') && !contentType.includes('javascript')) {
+        this.handleResourceError(url, 'script', `Incorrect MIME type: ${contentType} (expected javascript)`)} else if (url.endsWith('.css') && !contentType.includes('css')) {
+        this.handleResourceError(url, 'stylesheet', `Incorrect MIME type: ${contentType} (expected css)`)}
 
         this.handleResourceError()
           url,'
@@ -188,8 +183,7 @@ class ResourceMonitor {
     } catch (error) {
 '`
       this.handleResourceError(url, 'other', `Fetch error: ${error}`);
-    }
-  }
+    }  }
 
   private handleResourceError()
     url: string,'
@@ -231,8 +225,7 @@ class ResourceMonitor {
         this.retryResource(url, type);
       },
       Math.pow(2, attempts) * 1000
-    ); // Exponential backoff
-  }
+    ); // Exponential backoff  }
 '
   private retryResource(url: string, type: ResourceError['type']) {
 `
@@ -280,7 +273,6 @@ class ResourceMonitor {
     };
     document.head.appendChild(link);
   }
-
   private reportError(error: ResourceError) {
 
     // In production, send to monitoring service'
@@ -288,8 +280,7 @@ class ResourceMonitor {
 
       // Example: Sentry, LogRocket, etc.'
       // console.log('📊 Reporting error to monitoring service:', error);
-    }
-  }
+    }  }
 '
   private getResourceType(element: HTMLElement): ResourceError['type'] {
 '
@@ -312,11 +303,9 @@ class ResourceMonitor {
 
     return [...this.errors];
   }
-
   clearErrors() {
     this.errors = [];
-    this.retryAttempts.clear();
-  }
+    this.retryAttempts.clear()}
 
   getErrorSummary() {
     const summary = {
@@ -330,13 +319,10 @@ class ResourceMonitor {
 
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;
     });
-
-    return summary;
-  }
+    return summary}
 }
 
 // Create singleton instance
-const resourceMonitor = new ResourceMonitor();
 
 export default resourceMonitor;
 '`

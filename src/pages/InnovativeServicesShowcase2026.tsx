@@ -1,38 +1,5 @@
 import React, { useState, useMemo } from 'react';'
-import { motion } from 'framer-motion';
-import {
-
-  Brain,
-  Shield,
-  Zap,
-  Cloud,
-  Lock,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  BarChart3,
-  TrendingUp,
-  Users,
-  Building2,
-  Leaf,
-  Car,
-  Heart,
-  Scale,
-  Eye,
-  Search,
-  Filter,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink'
-} from 'lucide-react';'
-import { INNOVATIVE_SERVICES } from '../data/servicesData';
-export default function InnovativeServicesShowcase2026() {
+import { motion } from 'framer-motion';export default function InnovativeServicesShowcase2026() {
 '
   const [selectedCategory, setSelectedCategory] = useState('all');'
   const [searchQuery, setSearchQuery] = useState('');'
@@ -42,7 +9,6 @@ export default function InnovativeServicesShowcase2026() {
   const categories = ['All', 'AI & Automation', 'Quantum Computing', 'Blockchain', 'Cybersecurity', 'IoT', 'AI & Content', 'DevOps', 'Finance', 'Sustainability'];
 
   const filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2026;
-
     // Filter by search query
     if (searchQuery) {
 
@@ -69,7 +35,7 @@ export default function InnovativeServicesShowcase2026() {
         case 'roi':'
           return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]);
         default:
-          return 0;
+          return 0});
 
     }) ;
 
@@ -117,8 +83,7 @@ export default function InnovativeServicesShowcase2026() {
     const colors = {
 '
   'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600','
-      'Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',;
-  ;
+      'Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',;  ;
   ;
   ;
   ;'
@@ -126,13 +91,11 @@ export default function InnovativeServicesShowcase2026() {
     ;
 
 };
-
     return()
       <span className = {`${colors[level as keyof typeof colors] || colors.Advanced} text-white text-xs px-2 py-1 rounded-full font-semibold`}>;
         {level};
       </span>;) ;
   };
-
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Animated Background */}"
@@ -184,8 +147,7 @@ export default function InnovativeServicesShowcase2026() {
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center gap-2 text-cyan-400">"
-              <MapPin className="w-5 h-5" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <MapPin className="w-5 h-5" />              <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </motion.div>
         </div>
@@ -204,8 +166,7 @@ export default function InnovativeServicesShowcase2026() {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
-                  type="text""
-                  placeholder="Search services..."
+                  type="text""                  placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -213,8 +174,7 @@ export default function InnovativeServicesShowcase2026() {
               </div>
               {/* Category Filter */}"
               <div className="flex items-center gap-2">"
-                <Filter className="w-4 h-4 text-slate-400" />
-                <select
+                <Filter className="w-4 h-4 text-slate-400" />                <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}"
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -380,8 +340,7 @@ export default function InnovativeServicesShowcase2026() {
                     </div>"
                     <button className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 flex items-center gap-2 group">
                       Get Started"
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </button>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />                    </button>
                   </div>
                 </div>
               </motion.div>) ) }
@@ -409,15 +368,13 @@ export default function InnovativeServicesShowcase2026() {
                 href="tel:+13024640950""
                 className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105"
               >"
-                <Phone className="w-5 h-5" />
-                Call Now
+                <Phone className="w-5 h-5" />                Call Now
               </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com""
                 className="flex items-center gap-2 px-8 py-4 bg-slate-700/50 hover:bg-slate-600/50 text-white rounded-xl font-semibold border border-slate-600/50 transition-all duration-300 hover:scale-105"
               >"
-                <Mail className="w-5 h-5" />
-                Email Us
+                <Mail className="w-5 h-5" />                Email Us
               </a>
             </div>) }
         </div>
@@ -454,8 +411,7 @@ export default function InnovativeServicesShowcase2026() {
                   <Phone className="w-8 h-8 text-cyan-400" />
                 </div>"
                 <h3 className="text-lg font-semibold mb-2">Call Us</h3>"
-                <p className="text-slate-400">"
-                  <a href="tel:+13024640950" className="text-cyan-300 hover:text-cyan-200">
+                <p className="text-slate-400">"                  <a href="tel:+13024640950" className="text-cyan-300 hover:text-cyan-200">
                     +1 302 464 0950
                   </a>
                 </p>
@@ -466,8 +422,7 @@ export default function InnovativeServicesShowcase2026() {
                   <Mail className="w-8 h-8 text-cyan-400" />
                 </div>"
                 <h3 className="text-lg font-semibold mb-2">Email Us</h3>"
-                <p className="text-slate-400">"
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-300 hover:text-cyan-200">
+                <p className="text-slate-400">"                  <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-300 hover:text-cyan-200">
                     kleber@ziontechgroup.com
                   </a>
                 </p>
@@ -477,8 +432,7 @@ export default function InnovativeServicesShowcase2026() {
                 <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">"
                   <MapPin className="w-8 h-8 text-cyan-400" />
                 </div>"
-                <h3 className="text-lg font-semibold mb-2">Visit Us</h3>"
-                <p className="text-slate-400">
+                <h3 className="text-lg font-semibold mb-2">Visit Us</h3>"                <p className="text-slate-400">
                   364 E Main St STE 1008<br />
                   Middletown DE 19709
                 </p>
@@ -515,8 +469,7 @@ export default function InnovativeServicesShowcase2026() {
                   <div className="flex items-start gap-3">"
                     <Globe className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
                     <div>"
-                      <div className="font-semibold">Global Support</div>"
-                      <div className="text-sm text-slate-400">24/7 support and implementation across multiple time zones</div>
+                      <div className="font-semibold">Global Support</div>"                      <div className="text-sm text-slate-400">24/7 support and implementation across multiple time zones</div>
                     </div>
                   </div>
                 </div>
@@ -527,6 +480,5 @@ export default function InnovativeServicesShowcase2026() {
       </section>;
     </div>;) ;
 };
-
 export default InnovativeServicesShowcase2026;
 '"`

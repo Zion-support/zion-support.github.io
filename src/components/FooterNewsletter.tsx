@@ -3,7 +3,6 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
 '
       // // // // // // // // console.error('Newsletter subscription failed:', error);
     } finally {
-
       setIsSubmitting(false);
 
       setTimeout(() => setIsSubmitted(false), 3000)} catch (error) {
@@ -18,8 +17,7 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
       <div className="text-center">"
         <div className="flex justify-center mb-4">"
           <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full flex items-center justify-center">"
-            <Mail className="w-6 h-6 text-white" />
-          </div>
+            <Mail className="w-6 h-6 text-white" />          </div>
         </div>
 "
         <h3 className="text-xl font-bold text-white mb-2">
@@ -31,8 +29,7 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
 
         {isSubmitted ? ("
           <div className="flex items-center justify-center gap-2 text-green-400">"
-            <CheckCircle className="w-5 h-5" />
-            <span>Successfully subscribed!</span>
+            <CheckCircle className="w-5 h-5" />            <span>Successfully subscribed!</span>
           </div>
         ) : ("
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -56,8 +53,7 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
                 </>
               ) : (
                 <>"
-                  <Send className="w-4 h-4" />
-                  Subscribe
+                  <Send className="w-4 h-4" />                  Subscribe
                 </>) }
             </button>
           </form>;

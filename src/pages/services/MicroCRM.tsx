@@ -61,8 +61,7 @@ const MicroCRM: React.FC = props {
         description="Lightweight customer tracking, reminders, invoices, and reviews for local SMBs."
       />"
       <section className="container-responsive section-padding">"
-        <h1 className="heading-responsive text-gradient">Micro CRM</h1>"
-        <p className="mt-4 max-w-3xl text-zion-slate-light text-responsive">
+        <h1 className="heading-responsive text-gradient">Micro CRM</h1>"        <p className="mt-4 max-w-3xl text-zion-slate-light text-responsive">
           Essential CRM without bloat. Track customers, appointments, jobs, and
           invoices with SMS reminders, online payments, and review requests to
           grow word‑of‑mouth.
@@ -127,8 +126,7 @@ const MicroCRM: React.FC = props {
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {service.title}
-                </h3>"
-                <p className="text-gray-300 text-sm">{service.description}</p>
+                </h3>"                <p className="text-gray-300 text-sm">{service.description}</p>
               </motion.div>
             ))}
           </div>
@@ -167,8 +165,7 @@ const MicroCRM: React.FC = props {
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {useCase.industry}
-                </h3>"
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
+                </h3>"                <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -194,8 +191,7 @@ const MicroCRM: React.FC = props {
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
                 Get Started Today"
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </button>"
-              <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
+              </button>"              <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
                 Contact Sales
               </button>
             </div>
@@ -203,8 +199,7 @@ const MicroCRM: React.FC = props {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default MicroCRM;
 '"

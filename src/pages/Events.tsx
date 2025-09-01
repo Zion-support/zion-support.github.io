@@ -2,178 +2,6 @@
 import React, { useState } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { Link  } from 'react-router-dom.ts';
-import { Calendar,
-import { motion  } from 'framer - motion.ts';
-
-
-  Clock,
-  MapPin,
-  Users,
-  Video,
-  ExternalLink,
-  Filter,
-  Search,
-  ArrowRight,
-  Star,
-  Award,
-
-  Globe,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-
-  TrendingUp,
-  MessageCircle,
-  BookOpen,
-  CheckCircle'
- } from 'lucide-react.ts';
-
-const events = [
-  {
-
-    id: 1,
-    title: "AI & Machine Learning Summit 2027","
-    type: "Conference","
-    date: "2027-03-15","
-    time: "9:00 AM - 6:00 PM EST","
-    location: "Virtual + New York City","
-    status: "upcoming","
-    category: "AI & ML","
-    description: "Join industry leaders for a comprehensive exploration of AI and machine learning innovations, featuring keynote speakers, workshops, and networking opportunities.","
-    speakers: ["Dr. Sarah Chen", "Prof. Michael Rodriguez", "AI Expert Lisa Wang"],
-    attendees: 500,"
-    price: "$299",
-    highlights: ["
-      "Keynote presentations from AI pioneers","
-      "Hands-on workshops with real datasets","
-      "Networking with industry professionals","
-      "Latest AI research and applications"
-    ],"
-    image: "/images/ai-summit-2027.jpg"
-  },
-  {
-
-    id: 2,"
-    title: "Cybersecurity Best Practices Workshop","
-    type: "Workshop","
-    date: "2027-02-28","
-    time: "2:00 PM - 5:00 PM EST","
-    location: "Virtual","
-    status: "upcoming","
-    category: "Cybersecurity","
-    description: "Learn essential cybersecurity practices for modern businesses, including threat detection, incident response, and compliance requirements.","
-    speakers: ["Security Expert John Smith", "Compliance Officer Maria Garcia"],
-    attendees: 150,"
-    price: "Free",
-    highlights: ["
-      "Threat detection strategies","
-      "Incident response protocols","
-      "Compliance best practices","
-      "Security tool demonstrations"
-    ],"
-    image: "/images/cybersecurity-workshop.jpg"
-  },
-  {
-
-    id: 3,"
-    title: "Cloud Computing & DevOps Conference","
-    type: "Conference","
-    date: "2027-01-20","
-    time: "8:00 AM - 7:00 PM EST","
-    location: "San Francisco, CA","
-    status: "upcoming","
-    category: "Cloud & DevOps","
-    description: "Explore the latest trends in cloud computing, containerization, and DevOps practices with hands-on demonstrations and expert insights.","
-    speakers: ["Cloud Architect David Lee", "DevOps Engineer Sarah Johnson"],
-    attendees: 300,"
-    price: "$199",
-    highlights: ["
-      "Cloud migration strategies","
-      "Container orchestration","
-      "CI/CD pipeline optimization","
-      "Cost optimization techniques"
-    ],"
-    image: "/images/cloud-devops-conference.jpg"
-  },
-  {
-
-    id: 4,"
-    title: "Data Analytics & Business Intelligence","
-    type: "Webinar","
-    date: "2027-01-10","
-    time: "1:00 PM - 3:00 PM EST","
-    location: "Virtual","
-    status: "upcoming","
-    category: "Data Analytics","
-    description: "Discover how data analytics can transform your business decisions with real-world case studies and practical implementation strategies.","
-    speakers: ["Data Scientist Emily Chen", "BI Consultant Robert Wilson"],
-    attendees: 200,"
-    price: "Free",
-    highlights: ["
-      "Data visualization techniques","
-      "Predictive analytics models","
-      "Business intelligence tools","
-      "ROI measurement strategies"
-    ],"
-    image: "/images/data-analytics-webinar.jpg"
-  },
-  {
-
-    id: 5,"
-    title: "IoT & Edge Computing Symposium","
-    type: "Symposium","
-    date: "2026-12-15","
-    time: "10:00 AM - 4:00 PM EST","
-    location: "Virtual","
-    status: "past","
-    category: "IoT & Edge","
-    description: "Explore the future of IoT and edge computing with industry experts, featuring case studies and emerging technology trends.","
-    speakers: ["IoT Specialist Dr. James Brown", "Edge Computing Expert Lisa Chen"],
-    attendees: 180,"
-    price: "$149",
-    highlights: ["
-      "IoT architecture design","
-      "Edge computing optimization","
-      "Security considerations","
-      "Industry applications"
-    ],"
-    image: "/images/iot-symposium.jpg"
-  },
-  {
-
-    id: 6,"
-    title: "Digital Transformation Summit","
-    type: "Conference","
-    date: "2026-11-30","
-    time: "9:00 AM - 6:00 PM EST","
-    location: "Chicago, IL","
-    status: "past","
-    category: "Digital Transformation","
-    description: "Learn from successful digital transformation stories and discover strategies to modernize your business operations and customer experience.","
-    speakers: ["Digital Strategist Mark Davis", "Transformation Expert Anna Rodriguez"],
-    attendees: 400,"
-    price: "$249",
-    highlights: ["
-      "Transformation roadmaps","
-      "Change management strategies","
-      "Technology selection","
-      "Success metrics"
-    ],"
-    image: "/images/digital-transformation-summit.jpg"
-  }
-];
-'
-const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];'
-const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];'
-const statuses = ['All', 'upcoming', 'past'];
-;
-export { function };
-export default function Events(...args: unknown[]): unknown {
-  const [selectedType, setSelectedType] = useState<typeof 'All'>('All');
-  const [selectedCategory, setSelectedCategory] = useState<typeof 'All'>('All');
-  const [selectedStatus, setSelectedStatus] = useState<typeof 'All'>('All');
-
 export default function Events(...args: any[]): any {
 '
   const [selectedType, setSelectedType] = useState('All');'
@@ -443,7 +271,6 @@ export default function Events(...args: any[]): any {
 "
       return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;
     }
-
   };
 
   return ("
@@ -472,8 +299,7 @@ export default function Events(...args: any[]): any {
               <div className="relative">"
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
                 <input"
-                  type="text""
-                  placeholder="Search events, topics, or speakers..."
+                  type="text""                  placeholder="Search events, topics, or speakers..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}"
                   className="w-full pl-12 pr-4 py-4 bg-zion-blue-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20"
@@ -515,8 +341,7 @@ export default function Events(...args: any[]): any {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
                   <input"
-                    type="text""
-                    placeholder="Search events..."
+                    type="text""                    placeholder="Search events..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -589,8 +414,7 @@ export default function Events(...args: any[]): any {
               {upcomingEvents.map((event, index)  => {
 
                 const CategoryIcon = getCategoryIcon(event.category);
-                return()
-                  <motion.div
+                return()                  <motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -602,8 +426,7 @@ export default function Events(...args: any[]): any {
                     <div className="flex items-start justify-between mb-4">"
                       <div className="flex items-center gap-3">"
                         <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">"
-                          <CategoryIcon className="w-6 h-6 text-white" />
-                        </div>
+                          <CategoryIcon className="w-6 h-6 text-white" />                        </div>
                         <div>"
                           <h3 className="text-xl font-bold text-white mb-1">{event.title}</h3>"
                           <div className="flex items-center gap-2">
@@ -652,8 +475,7 @@ export default function Events(...args: any[]): any {
                         <span>{event.location}</span>
                       </div>"
                       <div className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                        <Users className="w-4 h-4" />
-                        <span>{event.attendees} attendees</span>
+                        <Users className="w-4 h-4" />                        <span>{event.attendees} attendees</span>
                       </div>
                     </div>
                     "
@@ -664,8 +486,7 @@ export default function Events(...args: any[]): any {
                       "
                       <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:-translate-y-1 flex items-center gap-2">
                         Register Now"
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
+                        <ArrowRight className="w-4 h-4" />                      </button>
                     </div>
                   </div>
                 </motion.div>;) ) }
@@ -683,8 +504,7 @@ export default function Events(...args: any[]): any {
                 {/* Categories */}"
                 <div className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6">"
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">"
-                    <Filter className="w-5 h-5 text-zion-cyan" />
-                    Categories
+                    <Filter className="w-5 h-5 text-zion-cyan" />                    Categories
                   </h3>"
                   <div className="space-y-2">
                     {categories.map((category) => (
@@ -715,8 +535,7 @@ export default function Events(...args: any[]): any {
               {pastEvents.map((event, index)  => {
 
                 const CategoryIcon = getCategoryIcon(event.category);
-                return()
-                  <motion.div
+                return()                  <motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -735,7 +554,6 @@ export default function Events(...args: any[]): any {
                   <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:-translate-y-1">
                     Load More Events
                   </button>
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 const Events: React.FC = () => {

@@ -2,7 +2,6 @@ import React, { useEffect, useState, useCallback } from 'react';
 '
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-
   Smartphone, 
   Tablet, 
   Monitor, 
@@ -39,7 +38,6 @@ interface MobileExperienceEnhancerProps {
   enabled?: boolean;
   showControls?: boolean;
 }
-
 export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({
 
   enabled = true,
@@ -97,7 +95,6 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         }
       }, 100) ;
     };
-
     checkDevice();'
     window.addEventListener('resize', handleResize);'
     window.addEventListener('orientationchange', handleOrientationChange);
@@ -109,15 +106,13 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
     };
   }, []) ;
-
   // Touch gesture handling
   useEffect(() => {
     if (!enabled || !enableSwipeNavigation) return;
 
     const handleTouchStart = (e: TouchEvent) => {
 
-      const touch = e.touches[0];
-      setTouchStart({
+      const touch = e.touches[0];      setTouchStart({
 
         x: touch.clientX,
         y: touch.clientY,
@@ -148,7 +143,6 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       const deltaY = touchEndData.y - touchStart.y;
       const deltaTime = touchEndData.time - touchStart.time;
       const distance = Math.sqrt (deltaX * deltaX + deltaY * deltaY) ;
-
       // Minimum distance and time for gesture recognition
       if (distance > 50 && deltaTime < 500) {
 
@@ -171,15 +165,13 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             if (window.history.length > 1) {
 
               window.history.forward();
-            }'
-          } else if (gesture.direction === 'right') {
+            }'          } else if (gesture.direction === 'right') {
 
             // Swipe right - go back
             if (window.history.length > 1) {
 
               window.history.back();
-            }
-          }
+            }          }
         } else {
 
           // Vertical swipe'
@@ -194,8 +186,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
             // Swipe down - scroll to bottom'
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-          }
-        }
+          }        }
 
         // Add to gesture history
         setGestureHistory(prev => [gesture, ...prev.slice(0, 9)]);
@@ -232,8 +223,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
           searchInput.focus();
         }
-        break;'
-      case 'menu':
+        break;'      case 'menu':
         setShowMobileMenu(!showMobileMenu);
         break;'
       case 'back':
@@ -248,8 +238,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           window.history.forward();
         }
         break;
-    }
-  }, [showMobileMenu]);
+    }  }, [showMobileMenu]);
 
   // Mobile - specific optimizations
   useEffect ( () => {
@@ -266,28 +255,24 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     }
 
     // Add touch-action CSS for better touch handling'
-    const style = document.createElement('style');
-    style.textContent = `
+    const style = document.createElement('style');    style.textContent = `
       .mobile-device * {
 
         touch-action: manipulation;
-        -webkit-tap-highlight-color: transparent;
-      }
+        -webkit-tap-highlight-color: transparent}
       
       .mobile-device button,"
       .mobile-device [role="button"] {
 
         min-height: 44px;
-        min-width: 44px;
-      }
+        min-width: 44px}
       
       .mobile-device input,
       .mobile-device select,
       .mobile-device textarea {
 
         font-size: 16px;
-      }`
-    `;
+      }`    `;
     document.head.appendChild (style) ;
 
     return () => {
@@ -299,7 +284,6 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       }
     };
   }, [enabled, isMobile]) ;
-
   if (!enabled) return null;
 
   return()
@@ -318,15 +302,13 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
                 className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors""
                 aria-label="Go back"
               >"
-                <ArrowLeft className="w-5 h-5" />
-              </button>
+                <ArrowLeft className="w-5 h-5" />              </button>
               <button'
                 onClick={() => handleMobileNavigation('home')}"
                 className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors""
                 aria-label="Go home"
               >"
-                <Home className="w-5 h-5" />
-              </button>
+                <Home className="w-5 h-5" />              </button>
             </div>
 "
             <div className="flex items-center space-x-3">
@@ -335,15 +317,13 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
                 className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors""
                 aria-label="Search"
               >"
-                <Search className="w-5 h-5" />
-              </button>
+                <Search className="w-5 h-5" />              </button>
               <button'
                 onClick={() => handleMobileNavigation('menu')}"
                 className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors""
                 aria-label="Menu"
               >"
-                <Menu className="w-5 h-5" />
-              </button>
+                <Menu className="w-5 h-5" />              </button>
             </div>
           </div>
         </motion.div>) }
@@ -392,8 +372,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
               "
               <a href="/contact" className="block p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">"
                 <div className="flex items-center space-x-3">"
-                  <User className="w-5 h-5 text-slate-600 dark:text-slate-400" />"
-                  <span className="text-slate-900 dark:text-white">Contact</span>
+                  <User className="w-5 h-5 text-slate-600 dark:text-slate-400" />"                  <span className="text-slate-900 dark:text-white">Contact</span>
                 </div>
               </a>
             </div>
@@ -409,8 +388,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           aria-label="Show gesture guide""
           title="Gesture Guide"
         >"
-          <Touch className="w-6 h-6" />
-        </motion.button>
+          <Touch className="w-6 h-6" />        </motion.button>
       )}
 
       {/* Gesture Guide */}
@@ -437,8 +415,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
               <div className="space-y-4">"
                 <div className="flex items-center space-x-3">"
                   <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">"
-                    <ArrowLeft className="w-5 h-5 text-blue-600" />
-                  </div>
+                    <ArrowLeft className="w-5 h-5 text-blue-600" />                  </div>
                   <div>"
                     <div className="text-sm font-medium text-slate-900 dark:text-white">Swipe Right</div>"
                     <div className="text-xs text-slate-600 dark:text-slate-400">Go back</div>
@@ -447,8 +424,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
                 "
                 <div className="flex items-center space-x-3">"
                   <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">"
-                    <ArrowRight className="w-5 h-5 text-blue-600" />
-                  </div>
+                    <ArrowRight className="w-5 h-5 text-blue-600" />                  </div>
                   <div>"
                     <div className="text-sm font-medium text-slate-900 dark:text-white">Swipe Left</div>"
                     <div className="text-xs text-slate-600 dark:text-slate-400">Go forward</div>
@@ -457,8 +433,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
                 "
                 <div className="flex items-center space-x-3">"
                   <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">"
-                    <ArrowUp className="w-5 h-5 text-blue-600" />
-                  </div>
+                    <ArrowUp className="w-5 h-5 text-blue-600" />                  </div>
                   <div>"
                     <div className="text-sm font-medium text-slate-900 dark:text-white">Swipe Up</div>"
                     <div className="text-xs text-slate-600 dark:text-slate-400">Scroll to top</div>
@@ -467,8 +442,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
                 "
                 <div className="flex items-center space-x-3">"
                   <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">"
-                    <ArrowDown className="w-5 h-5 text-blue-600" />
-                  </div>
+                    <ArrowDown className="w-5 h-5 text-blue-600" />                  </div>
                   <div>"
                     <div className="text-sm font-medium text-slate-900 dark:text-white">Swipe Down</div>"
                     <div className="text-xs text-slate-600 dark:text-slate-400">Scroll to bottom</div>
@@ -495,8 +469,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           className="fixed top-20 left-4 z-40 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg shadow-lg"
         >"
           <div className="flex items-center space-x-2">"
-            {isMobile ? <Smartphone className="w-4 h-4" /> : <Tablet className="w-4 h-4" />}'
-            <span>{isMobile ? 'Mobile' : 'Tablet'}</span>
+            {isMobile ? <Smartphone className="w-4 h-4" /> : <Tablet className="w-4 h-4" />}'            <span>{isMobile ? 'Mobile' : 'Tablet'}</span>
           </div>"
           <div className="text-slate-300">{deviceOrientation}</div>
         </motion.div>
@@ -513,8 +486,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           <div className="space-y-1">
             {gestureHistory.slice(0, 5).map((gesture, index) => ("
               <div key={index} className="flex items-center space-x-2">"
-                <Touch className="w-3 h-3" />
-                <span>
+                <Touch className="w-3 h-3" />                <span>
                   {gesture.type} {gesture.direction} ({gesture.distance}px)
                 </span>
               </div>
@@ -523,8 +495,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         </motion.div>
       )}
     </>
-  );
-};
+  )};
 
 export default MobileExperienceEnhancer;
 

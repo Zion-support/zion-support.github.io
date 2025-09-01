@@ -7,8 +7,7 @@ import {
   Star,
   ShoppingCart,
   Heart,
-  Eye,
-  Share2,
+  Eye,  Share2,
   ArrowRight,
   Zap,
   Brain,
@@ -56,7 +55,6 @@ import {
   Zap as ZapIcon,'
   MessageCircle} from 'lucide-react';'
 import { SEO } from '../../components/SEO';
-
 export default function MarketplaceProducts() {
 '
   const [searchQuery, setSearchQuery] = useState('');'
@@ -398,8 +396,7 @@ export default function MarketplaceProducts() {
       case 'newest':
         return()
           new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime()
-        );'
-      case 'price-low':
+        );'      case 'price-low':
         return a.price - b.price;'
       case 'price-high':
         return b.price - a.price;'
@@ -436,7 +433,6 @@ export default function MarketplaceProducts() {
       />
     ));
   };
-
   return()
     <div className="min-h-screen bg-futuristic">
       <SEO"
@@ -445,8 +441,7 @@ export default function MarketplaceProducts() {
       />
 
       {/* Hero Section */}"
-      <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-slate-dark">"
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-slate-dark">"        <div className="container mx-auto px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -475,8 +470,7 @@ export default function MarketplaceProducts() {
             <div className="relative w-full lg:w-96">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
               <input"
-                type="text""
-                placeholder="Search products..."
+                type="text""                placeholder="Search products..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
@@ -496,8 +490,7 @@ export default function MarketplaceProducts() {
                       : 'text-zion-slate-light hover:text-white'`
                   }`}
                 >"
-                  <Grid className="w-5 h-5" />
-                </button>
+                  <Grid className="w-5 h-5" />                </button>
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`p-2 rounded-md transition-all duration-200 ${
@@ -507,8 +500,7 @@ export default function MarketplaceProducts() {
                       : 'text-zion-slate-light hover:text-white'`
                   }`}
                 >"
-                  <List className="w-5 h-5" />
-                </button>
+                  <List className="w-5 h-5" />                </button>
               </div>
 
               {/* Sort */}
@@ -535,8 +527,7 @@ export default function MarketplaceProducts() {
                   <ChevronUp className="w-4 h-4" />
                 ) : ("
                   <ChevronDown className="w-4 h-4" />
-                )}
-              </button>
+                )}              </button>
             </div>
           </div>
 
@@ -594,8 +585,7 @@ export default function MarketplaceProducts() {
                       setSelectedCategory('all');'
                       setSelectedPriceRange('all');'
                       setSearchQuery('');
-                    }}"
-                    className="w-full px-4 py-2 bg-zion-slate-light/20 text-zion-slate-light border border-zion-slate-light/30 rounded-lg hover:bg-zion-slate-light/30 hover:text-white transition-all duration-200"
+                    }}"                    className="w-full px-4 py-2 bg-zion-slate-light/20 text-zion-slate-light border border-zion-slate-light/30 rounded-lg hover:bg-zion-slate-light/30 hover:text-white transition-all duration-200"
                   >
                     Clear All Filters
                   </button>
@@ -631,8 +621,7 @@ export default function MarketplaceProducts() {
               </h3>"
               <p className="text-zion-slate-light">
                 Try adjusting your search or filter criteria.
-              </p>
-            </div>
+              </p>            </div>
           ) : (
             <div
               className={
@@ -668,16 +657,14 @@ export default function MarketplaceProducts() {
                     {product.featured && ("
                       <div className="absolute top-4 left-4">"
                         <span className="inline-flex items-center px-3 py-1 bg-yellow-500 text-white text-xs font-medium rounded-full">"
-                          <Star className="w-3 h-3 mr-1" />
-                          Featured
+                          <Star className="w-3 h-3 mr-1" />                          Featured
                         </span>
                       </div>
                     )}
                     {product.new && ("
                       <div className="absolute top-4 right-4">"
                         <span className="inline-flex items-center px-3 py-1 bg-green-500 text-white text-xs font-medium rounded-full">"
-                          <Sparkles className="w-3 h-3 mr-1" />
-                          New
+                          <Sparkles className="w-3 h-3 mr-1" />                          New
                         </span>
                       </div>
                     )}
@@ -706,8 +693,7 @@ export default function MarketplaceProducts() {
                           {product.vendor}
                         </span>
                         {product.vendorVerified && ("
-                          <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                        )}
+                          <CheckCircle className="w-4 h-4 text-zion-cyan" />                        )}
                       </div>
                     </div>
 
@@ -772,8 +758,7 @@ export default function MarketplaceProducts() {
                         <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200">"
                           <Heart className="w-5 h-5" />
                         </button>"
-                        <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200">"
-                          <Share2 className="w-5 h-5" />
+                        <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200">"                          <Share2 className="w-5 h-5" />
                         </button>
                       </div>
                     </div>
@@ -797,8 +782,7 @@ export default function MarketplaceProducts() {
                         Add to Cart
                       </button>"
                       <button className="inline-flex items-center justify-center px-4 py-3 border border-zion-cyan text-zion-cyan font-medium rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">"
-                        <Eye className="w-5 h-5" />
-                      </button>
+                        <Eye className="w-5 h-5" />                      </button>
                     </div>
                   </div>
                 </motion.article>
@@ -830,15 +814,13 @@ export default function MarketplaceProducts() {
                 href="/contact""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 hover:scale-105"
               >"
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Contact Us
+                <MessageCircle className="w-5 h-5 mr-2" />                Contact Us
               </a>
               <a"
                 href="/services""
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >"
-                <Settings className="w-5 h-5 mr-2" />
-                Custom Solutions
+                <Settings className="w-5 h-5 mr-2" />                Custom Solutions
               </a>
             </div>
           </motion.div>

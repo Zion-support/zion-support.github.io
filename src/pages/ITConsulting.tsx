@@ -1,132 +1,5 @@
 import React from 'react';'
-import { motion } from 'framer-motion';
-import {
-
-  Lightbulb,
-  Target,
-  TrendingUp,
-  Users,
-  BarChart3,
-  Zap,
-  Shield,
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Globe,
-  Lock,
-  Activity,
-  BarChart3,
-  Settings,
-  Bell,
-  Download,
-  Upload,
-  RefreshCw,
-  Monitor,
-  Smartphone,
-  Server,
-  Chip,
-  Wifi,
-  Satellite,
-  Radar,
-  Camera,
-  Video,
-  FileText,
-  Calendar,
-  Tag,
-  TrendingUp,
-  PieChart,
-  LineChart,
-  Scatter,
-  Layers,
-  Cube,
-  Box,
-  Package,
-  Truck,
-  Building,
-  Factory,
-  Warehouse,
-  Home,
-  Car,
-  Plane,
-  Ship,
-  Database,
-  Cloud,
-  Eye,
-  Brain,
-  Network,
-  Rocket'
-} from 'lucide-react';
-
-  const features = [
-    {
-
-      icon: Users,
-      title: "Expert Team","
-      description: "Experienced IT professionals with deep industry knowledge","
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-
-      icon: Cpu,"
-      title: "Technology Strategy","
-      description: "Comprehensive technology roadmaps and planning","
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-
-      icon: Target,"
-      title: "Performance Optimization","
-      description: "System optimization and performance tuning","
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-
-      icon: Cloud,"
-      title: "Cloud Migration","
-      description: "Seamless cloud adoption and migration strategies","
-      color: "from-indigo-500 to-blue-500"
-    }
-  ];
-
-  const services = [
-    {
-"
-      title: "Technology Assessment","
-      description: "Comprehensive evaluation of current IT infrastructure and systems",
-      icon: Eye,"
-      benefits: ["Infrastructure review", "Technology audit", "Gap analysis"]
-    },
-    {
-"
-      title: "Strategic Planning","
-      description: "Long-term technology roadmaps aligned with business goals",
-      icon: Target,"
-      benefits: ["Technology strategy", "Implementation roadmap", "ROI analysis"]
-    },
-    {
-"
-      title: "Digital Transformation","
-      description: "End-to-end digital transformation consulting and implementation",
-      icon: Rocket,"
-      benefits: ["Process optimization", "Technology adoption", "Change management"]
-    },
-    {
-"
-      title: "Security & Compliance","
-      description: "Cybersecurity assessment and regulatory compliance consulting",
-      icon: Shield,"
-      benefits: ["Security audit", "Compliance review", "Risk assessment"]
-    }
-  ];
-
-  const industries = ["
-    "Healthcare", "Finance", "Manufacturing", "Retail", "Education", "
-    "Government", "Technology", "Energy", "Transportation", "Media"
-  ];
-
-  return ("
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+import { motion } from 'framer-motion';    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">"
         <div className="absolute inset-0 opacity-10">"
@@ -186,16 +59,14 @@ import {
                 whileTap={{ scale: 0.95 }}
 
                 Get Consultation"
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />              </motion.button>
               <motion.button"
                 className="px-10 py-5 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <span>Explore Services</span>"
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+                <ArrowRight className="w-5 h-5" />              </Link>
             </div>
           </motion.div>
         </div>
@@ -290,8 +161,7 @@ import {
                 <ul className="space-y-3">
                   {service.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center gap-3 text-zion-slate-light text-sm">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />                      {feature}
                     </li>) ) }
                 </ul>
               </motion.div>) ) }

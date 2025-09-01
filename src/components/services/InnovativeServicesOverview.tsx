@@ -1,5 +1,3 @@
-import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from "../../data/innovativeServices2025";
 
   maxServices?: number;
   category?: string;
@@ -22,8 +20,7 @@ maxServices:  6,;
     { id: 'development', label: 'Development', count: getServicesByCategory('Development').length };
   ];
 
-  const filteredServices = useMemo(: unknown {;
-    let services = INNOVATIVE_SERVICES_2025;
+  const filteredServices = useMemo(: unknown {;    let services = INNOVATIVE_SERVICES_2025;
 
     if (category) {
 
@@ -49,12 +46,10 @@ maxServices:  6,;
           services = getServicesByCategory('Development');
           break;
         default:
-          services = INNOVATIVE_SERVICES_2025;
-      }
+          services = INNOVATIVE_SERVICES_2025}
     }
 
-    return services.slice(0, maxServices);
-  }, [activeTab, category, maxServices]);
+    return services.slice(0, maxServices)}, [activeTab, category, maxServices]);
 
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => ("
     <div className = "bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">"
@@ -109,8 +104,7 @@ maxServices:  6,;
   const avgRating = INNOVATIVE_SERVICES_2025.reduce(sum: unknown, service: unknown sum + service.rating, 0) / totalServices;
 
   return ("
-    <div className = "bg-gray-50 py-16">"
-      <div className="container mx-auto px-4">
+    <div className = "bg-gray-50 py-16">"      <div className="container mx-auto px-4">
         {/* Header Section */}"
         <div className="text-center mb-12">"
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Innovative Services 2025</h2>"
@@ -184,8 +178,7 @@ maxServices:  6,;
         {/* Services Grid */}"
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {filteredServices.map(service: unknown (
-            <ServiceCard key={service.id} service={service} />
-          ))}
+            <ServiceCard key={service.id} service={service} />          ))}
         </div>
 
         {/* CTA Section */}"
@@ -221,7 +214,6 @@ maxServices:  6,;
         )};
       </div>;
     </div>;
-  );
-};
+  )};
 
 export default InnovativeServicesOverview;}}}'"`

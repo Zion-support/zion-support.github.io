@@ -1,4 +1,3 @@
-import { API_BASE_URL } from '../config/constants';
 
 interface ApiResponse<T = any> {
 
@@ -6,8 +5,7 @@ interface ApiResponse<T = any> {
   data?: T;
   error?: string;
   message?: string;
-  count?: number;
-}
+  count?: number}
 
 // Generic API error
 class ApiError extends Error {
@@ -19,17 +17,14 @@ class ApiError extends Error {
 
     super(message);'
     this.name = 'ApiError';
-  }
-}
+  }}
 
 // Generic fetch wrapper with error handling
-async function apiRequest<T>(
-  endpoint: string,
+async function apiRequest<T>(endpoint: string,
   options: RequestInit = {}
 ): Promise<ApiResponse<T>> {
 
   const url = `${API_BASE_URL}${endpoint}`;
-
   const config: RequestInit = {
 '
     method: options.method || 'GET',
@@ -49,10 +44,8 @@ async function apiRequest<T>(
         `HTTP error! status: ${response.status}`
       );
     }
-
-    const data = await response.json();
-    return data;
-  } catch (error) {
+    
+    return data} catch (error) {
     if (error instanceof ApiError) {
 
       throw error;
@@ -61,8 +54,7 @@ async function apiRequest<T>(
       500,'`
       `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`
     );
-  }
-}
+  }}
 
 export const api = {
 

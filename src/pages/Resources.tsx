@@ -1,170 +1,6 @@
 import React from 'react';'
 import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';
-import {
-
-  BookOpen,
-  FileText,
-  Video,
-  HelpCircle,
-  Search,
-  Filter,
-  ArrowRight,
-  Star,
-  Sparkles,
-  Brain,
-  Cloud,
-  Shield,
-  Database,
-  Globe,
-  Cpu,
-  Zap,
-  Rocket,
-  Heart,
-  Scale,
-  PenTool,
-  TrendingUp,
-  Lock,
-  Server,
-  Smartphone,
-  Atom,
-  Leaf,
-  Building,
-  Car,
-  Factory,
-  City,
-  CheckCircle,
-  Play,
-  Pause,
-  Stop'
- } from 'lucide-react';
-
-const Resources: React.FC = (): JSX.Element => {;'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const categories = ['
-    { id: 'all', name: 'All Resources', count: 45, icon: BookOpen },'
-    { id: 'case-studies', name: 'Case Studies', count: 12, icon: BarChart3 },'
-    { id: 'white-papers', name: 'White Papers', count: 8, icon: FileText },'
-    { id: 'webinars', name: 'Webinars', count: 15, icon: Video },;'
-    { id: 'support', name: 'Support', count: 10, icon: HelpCircle };
-  ];
-
-  const featuredResources = [
-    {
-
-      id: 1,'
-      title: 'AI Autonomous Research: The Future of Knowledge Discovery','
-      description: 'Comprehensive guide on implementing AI Autonomous Research Assistant for accelerated research and discovery.','
-      category: 'white-papers','
-      type: 'White Paper','
-      author: 'Dr. Emily Watson','
-      date: '2025-01-20','
-      readTime: '18 min read',
-      downloads: 3120,
-      rating: 4.9,'
-      image: '/resources/ai-autonomous-research.jpg','
-      tags: ['AI Research', 'Autonomous AI', 'Knowledge Discovery', 'Research Automation'],
-      featured: true,'
-      fileSize: '3.1 MB','
-      fileType: 'PDF','
-      downloadUrl: 'https://ziontechgroup.com/resources/ai-autonomous-research.pdf'
-    },
-    {
-
-      id: 2,'
-      title: 'AI Supply Chain Optimization: Implementation Guide','
-      description: 'Step-by-step guide to implementing AI-powered supply chain optimization for maximum efficiency and cost savings.','
-      category: 'white-papers','
-      type: 'Implementation Guide','
-      author: 'Supply Chain Team','
-      date: '2025-01-18','
-      readTime: '22 min read',
-      downloads: 2890,
-      rating: 4.8,'
-      image: '/resources/ai-supply-chain-optimization.jpg','
-      tags: ['AI Supply Chain', 'Optimization', 'Implementation', 'Cost Savings'],
-      featured: true,'
-      fileSize: '2.8 MB','
-      fileType: 'PDF','
-      downloadUrl: 'https://ziontechgroup.com/resources/ai-supply-chain-optimization.pdf'
-    },
-    {
-
-      id: 3,'
-      title: 'AI Content Marketing Suite: Complete User Guide','
-      description: 'Comprehensive user guide for the AI Content Marketing Suite, covering all features and best practices.','
-      category: 'support','
-      type: 'User Guide','
-      author: 'Marketing Team','
-      date: '2025-01-16','
-      readTime: '25 min read',
-      downloads: 2650,
-      rating: 4.9,'
-      image: '/resources/ai-content-marketing-guide.jpg','
-      tags: ['AI Content', 'Content Marketing', 'User Guide', 'Best Practices'],
-      featured: true,'
-      fileSize: '3.5 MB','
-      fileType: 'PDF','
-      downloadUrl: 'https://ziontechgroup.com/resources/ai-content-marketing-guide.pdf'
-    },
-    {
-
-      id: 4,'
-      title: 'AI-Powered Business Transformation: A Complete Guide','
-      description: 'Comprehensive guide on implementing AI solutions to transform business operations and drive growth.','
-      category: 'white-papers','
-      type: 'White Paper','
-      author: 'Dr. Sarah Chen','
-      date: '2025-01-15','
-      readTime: '15 min read',
-      downloads: 2540,
-      rating: 4.9,'
-      image: '/resources/ai-business-transformation.jpg','
-      tags: ['AI', 'Business Transformation', 'Guide', 'Strategy'],
-      featured: false,'
-      fileSize: '2.4 MB','
-      fileType: 'PDF','
-      downloadUrl: 'https://ziontechgroup.com/resources/ai-business-transformation.pdf'
-    },
-    {
-
-      id: 5,'
-      title: 'Quantum Computing Success Story: Financial Services','
-      description: 'How we helped a major financial institution achieve 1000x performance improvement using quantum computing.','
-      category: 'case-studies','
-      type: 'Case Study','
-      author: 'Research Team','
-      date: '2025-01-10','
-      readTime: '8 min read',
-      downloads: 1890,
-      rating: 4.8,'
-      image: '/resources/quantum-financial-case.jpg','
-      tags: ['Quantum Computing', 'Financial Services', 'Performance', 'Success Story'],
-      featured: false,'
-      fileSize: '1.8 MB','
-      fileType: 'PDF','
-      downloadUrl: 'https://ziontechgroup.com/resources/quantum-financial-case.pdf'
-    },
-    {
-
-      id: 3,'
-      title: 'Cybersecurity in the AI Era: Threats & Solutions','
-      description: 'Expert analysis of emerging cybersecurity challenges and AI-powered security solutions.','
-      category: 'webinars','
-      type: 'Webinar Recording','
-      author: 'Marcus Rodriguez','
-      date: '2025-01-08','
-      duration: '60 minutes',
-      views: 3200,
-      rating: 4.7,'
-      image: '/resources/cybersecurity-ai-webinar.jpg','
-      tags['Cybersecurity', 'AI', 'Webinar', 'Security'],;
-      featured: false,'
-      fileSize: '450 MB','
-      fileType: 'MP4','
-      downloadUrl: 'https://ziontechgroup.com/resources/cybersecurity-ai-webinar.mp4'
+import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup.com/resources/cybersecurity-ai-webinar.mp4'
     },
     {
 
@@ -239,8 +75,7 @@ const Resources: React.FC = (): JSX.Element => {;'
         { title: 'Custom Quote Calculator', type: 'Tool', readTime: '5 min', featured: true },;'
         { title: 'Enterprise Pricing', type: 'Pricing', readTime: '8 min', featured: false },;'
         { title: 'ROI Analysis Guide', type: 'Analysis', readTime: '12 min', featured: false };
-      ];
-    };
+      ]};
   ];
 
   const featuredResources = [
@@ -285,8 +120,7 @@ const Resources: React.FC = (): JSX.Element => {;'
   const contactInfo = {
 '
   phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com',;
-  ;
+    email: 'kleber@ziontechgroup.com',;  ;
   ;
   ;
   ;'
@@ -294,7 +128,6 @@ const Resources: React.FC = (): JSX.Element => {;'
   ;
 
 };
-
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
@@ -391,8 +224,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                     }`}>
                       {resource.badge}
                     </span>"
-                    <ExternalLink className="w-4 h-4 text-cyan-500 group-hover:text-cyan-400 transition-colors" />
-                  </div>
+                    <ExternalLink className="w-4 h-4 text-cyan-500 group-hover:text-cyan-400 transition-colors" />                  </div>
                 </Link>;
               </motion.div>) ) }
           </div>
@@ -424,8 +256,7 @@ const Resources: React.FC = (): JSX.Element => {;'
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">;
               {featuredResources.map((resource, index)  => {;
                 const ResourceIcon = getResourceIcon(resource.type);
-                return()
-                  <motion.article
+                return()                  <motion.article
                     key = {resource.id}
                     initial = {
 
@@ -451,8 +282,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                       {/* Resource Image Placeholder */}"
                       <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative">"
                         <ResourceIcon className="w-16 h-16 text-zion-cyan" />"
-                        <div className="absolute top-4 right-4">"
-                          <span className="px-3 py-1 bg-zion-cyan text-white text-xs rounded-full font-semibold">
+                        <div className="absolute top-4 right-4">"                          <span className="px-3 py-1 bg-zion-cyan text-white text-xs rounded-full font-semibold">
                             Featured
                           </span>
                         </div>
@@ -469,8 +299,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                             {resource.readTime || resource.duration}
                           </span>"
                           <span className="flex items-center">"
-                            <Download className="w-4 h-4 mr-2" />
-                            {resource.downloads?.toLocaleString() || resource.views?.toLocaleString()}
+                            <Download className="w-4 h-4 mr-2" />                            {resource.downloads?.toLocaleString() || resource.views?.toLocaleString()}
                           </span>
                         </div>
 "
@@ -581,8 +410,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                             {item.readTime || item.duration}
                           </span>
                           {item.featured && ("
-                            <Star className="w-3 h-3 text-yellow-400 ml-1 inline" />
-                          )}
+                            <Star className="w-3 h-3 text-yellow-400 ml-1 inline" />                          )}
                         </div>
                       </div>
 "
@@ -602,8 +430,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                           >
                             {tag}
                           </span>"
-                          <ExternalLink className="w-3 h-3 text-cyan-500/50 group-hover:text-cyan-400 transition-colors" />
-                        </div>;
+                          <ExternalLink className="w-3 h-3 text-cyan-500/50 group-hover:text-cyan-400 transition-colors" />                        </div>;
                       </div>;
                     </div>
                   </div>
@@ -691,8 +518,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                   <span className="text-xs text-gray-500">
                     {category.items.length} resources
                   </span>"
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />
-                </div>
+                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />                </div>
               </motion.div>) ) }
           </div>
         </div>
@@ -769,8 +595,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm"
                 >
                   Access Resource"
-                  <ExternalLink className="w-4 h-4" />
-                </Link>
+                  <ExternalLink className="w-4 h-4" />                </Link>
               </motion.div>
             ))}
           </div>
@@ -812,8 +637,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
                     <Phone className="w-6 h-6 text-white" />
                   </div>"
-                  <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"`
-                  <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"`                  <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
                     {contactInfo.phone}
                   </a>
                 </div>
@@ -822,8 +646,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
                     <Mail className="w-6 h-6 text-white" />
                   </div>"
-                  <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"`
-                  <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"`                  <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
                     {contactInfo.email}
                   </a>
                 </div>
@@ -832,8 +655,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                   <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
                     <MapPin className="w-6 h-6 text-white" />
                   </div>"
-                  <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"
-                  <p className="text-slate-300 text-sm">
+                  <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"                  <p className="text-slate-300 text-sm">
                     {contactInfo.address}
                   </p>
                 </div>
@@ -856,8 +678,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                   to="/demo""
                   className="px-8 py-4 border border-purple-400/50 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-xl transition-all duration-300"
                 >"
-                  <Play className="w-5 h-5 inline mr-2" />
-                  Schedule Demo
+                  <Play className="w-5 h-5 inline mr-2" />                  Schedule Demo
                 </Link>
               </div>
             </div>;

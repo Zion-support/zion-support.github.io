@@ -1,177 +1,6 @@
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
-import { SEO  } from '../../components/SEO';
-import { Package, 
-  TrendingUp, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Globe, 
-  Lock, 
-  Eye,
-  Star,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Play,
-  ArrowRight,
-  CheckCircle,
-  AlertTriangle,
-  FileText,
-  Clock,
-  Award,
-  Brain,
-  Target,
-  PieChart,
-  Activity,
-  Truck,
-  Warehouse,
-  ShoppingCart,
-  Shield,
-  Settings,
-  DollarSign,
-  AlertCircle,
-  Calendar,
-  MapPin,
-  Store'
- } from 'lucide-react.ts';
-
-export default function AIInventoryManagement(...args: any[]): any {
-
-  const features = [
-    {
-
-      icon: Brain,
-      title: "AI Demand Forecasting","
-      description: "Predict future demand with 95% accuracy using machine learning algorithms and historical data analysis."
-    },
-    {
-
-      icon: Package,"
-      title: "Real-time Inventory Tracking","
-      description: "Monitor stock levels, locations, and movements across multiple warehouses and distribution centers."
-    },
-    {
-
-      icon: AlertCircle,"
-      title: "Automated Reorder Alerts","
-      description: "Smart notifications for low stock, overstock, and optimal reorder timing to prevent stockouts."
-    },
-    {
-
-      icon: Target,"
-      title: "Optimization Algorithms","
-      description: "AI-powered recommendations for optimal stock levels, reorder points, and warehouse layout."
-    },
-    {
-
-      icon: PieChart,"
-      title: "Advanced Analytics Dashboard","
-      description: "Comprehensive insights into inventory performance, turnover rates, and cost optimization opportunities.";
-    },;
-    {;
-      icon: Activity,;"
-      title: "Supply Chain Integration",;"
-      description: "Seamless integration with suppliers, logistics partners, and e-commerce platforms for end-to-end visibility.";
-    };
-  ];
-
-  const benefits = [
-    {
-
-      icon: Zap,"
-      title: "Reduced Stockouts","
-      description: "Prevent lost sales and customer dissatisfaction with intelligent demand forecasting and automated reordering."
-    },
-    {
-
-      icon: DollarSign,"
-      title: "Cost Optimization","
-      description: "Minimize carrying costs, reduce excess inventory, and optimize storage space utilization."
-    },
-    {
-
-      icon: Globe,"
-      title: "Multi-location Management","
-      description: "Centralized control over inventory across multiple warehouses, stores, and distribution centers."
-    },
-    {
-
-      icon: Lock,"
-      title: "Data Security","
-      description: "Enterprise-grade security with role-based access control and encrypted data transmission."
-    },
-    {
-
-      icon: TrendingUp,"
-      title: "Improved Cash Flow","
-      description: "Better inventory turnover rates and reduced capital tied up in excess stock.";
-    },;
-    {;
-      icon: Clock,;"
-      title: "Time Savings",;"
-      description: "Automate routine inventory tasks and focus on strategic business decisions.";
-    };
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Starter","
-      price: "$199","
-      period: "/month","
-      description: "Perfect for small businesses with basic inventory management needs",
-      features: ["
-        "Up to 1,000 SKUs","
-        "Basic demand forecasting","
-        "Email support","
-        "Standard integrations","
-        "Basic reporting","
-        "2 warehouse locations","
-        "Mobile app access"
-      ],"
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-"
-      name: "Professional","
-      price: "$599","
-      period: "/month","
-      description: "Ideal for growing businesses with advanced inventory requirements",
-      features: ["
-        "Up to 10,000 SKUs","
-        "Advanced AI forecasting","
-        "Priority support","
-        "Custom integrations","
-        "Advanced analytics","
-        "Multi-location support","
-        "API access","
-        "Barcode scanning","
-        "Supplier management"
-      ],"
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-"
-      name: "Enterprise","
-      price: "$1,999","
-      period: "/month","
-      description: "For large organizations requiring enterprise-grade inventory solutions",
-      features: ["
-        "Unlimited SKUs","
-        "Custom AI models","
-        "Dedicated account manager","
-        "White-label solutions","
-        "Advanced security features","
-        "Custom reporting","
-        "On-premise deployment",;"
-        "SLA guarantees",;"
-        "24/7 support";
+import { SEO  } from '../../components/SEO';        "24/7 support";
       ],;"
       cta: "Contact Sales",;
       popular: false;
@@ -210,10 +39,8 @@ export default function AIInventoryManagement(...args: any[]): any {
       icon: Package;
     },;
     {;"
-      industry: "Automotive",;"
-      description: "Track spare parts, manage service inventory, and optimize supply chain for dealerships",;
-      icon: Truck;
-    };
+      industry: "Automotive",;"      description: "Track spare parts, manage service inventory, and optimize supply chain for dealerships",;
+      icon: Truck};
   ];
 
   const integrations = [
@@ -271,15 +98,13 @@ export default function AIInventoryManagement(...args: any[]): any {
       metric: "3x",;"
       label: "Faster Processing",;"
       description: "Improved inventory processing speed";
-    };
-  ];
+    };  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="AI Inventory Management - Zion Tech Group""
-        description="Optimize your inventory with AI-powered demand forecasting, real-time tracking, and automated reordering. Reduce costs and prevent stockouts."
-      />
+        title="AI Inventory Management - Zion Tech Group""        description="Optimize your inventory with AI-powered demand forecasting, real-time tracking, and automated reordering. Reduce costs and prevent stockouts."
+       />
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -312,8 +137,7 @@ export default function AIInventoryManagement(...args: any[]): any {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6">"
-              <Package className="w-4 h-4 mr-2" />
-              AI-Powered Inventory
+              <Package className="w-4 h-4 mr-2" />              AI-Powered Inventory
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Inventory"
@@ -331,8 +155,7 @@ export default function AIInventoryManagement(...args: any[]): any {
                 Start Free Trial
               </button>"
               <button className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg">"
-                <Download className="w-5 h-5 mr-2 inline" />
-                Download Brochure
+                <Download className="w-5 h-5 mr-2 inline" />                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -706,8 +529,7 @@ export default function AIInventoryManagement(...args: any[]): any {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -964,8 +786,7 @@ export default function AIInventoryManagement(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Star className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Star className="w-5 h-5 mr-2" />                Start Free Trial
               </button>"
               <button className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg">"
                 <Share2 className="w-5 h-5 mr-2 inline" />

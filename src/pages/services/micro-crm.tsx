@@ -105,8 +105,7 @@ export default function MicroCRM(...args: any[]): any {
               <Users className="w-5 h-5 text-cyan-400 mr-2" />"
               <span className="text-cyan-300 text-sm font-medium">
                 Customer Relationship Management
-              </span>
-            </div>
+              </span>            </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Micro CRM
@@ -179,8 +178,7 @@ export default function MicroCRM(...args: any[]): any {
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => ("
               <div key={index} className="flex items-start space-x-3">"
-                <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />"
-                <span className="text-slate-300 text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />"                <span className="text-slate-300 text-lg">{benefit}</span>
               </div>
             ))}
           </div>

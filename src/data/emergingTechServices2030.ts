@@ -26,23 +26,20 @@ export interface EmergingTechService2030 {
     email: string;
     website: string;
   
-};
-  technicalSpecs: {
+};  technicalSpecs: {
 
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors: string[];
   marketSize: string;
   aiCapabilities: string[];
   complianceFeatures: string[];
   scalabilityFeatures: string[];
 }
-;
-export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
+;export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   {
 
     id: 'quantum-consciousness-simulation-2030','

@@ -21,24 +21,7 @@ import {
   Target,
   BarChart3,
   Headphones,'
-  ShoppingBag} from 'lucide-react.ts';
-
-const AICustomerExperience: React.FC = (): JSX.Element => {
-
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO"
-        title="AI Customer Experience Platform - Zion Tech Group""
-        description="Revolutionary AI-powered customer experience platform that personalizes interactions, predicts customer needs, and delivers exceptional service with 95% customer satisfaction rates."
-      />
-
-      {/* Hero Section */}"
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto text-center">"
-          <div className="mb-8">"
-            <Badge variant="secondary" className="mb-4">"
-              <Brain className="w-4 h-4 mr-2" />
-              AI-Powered CX Platform
+  ShoppingBag} from 'lucide-react.ts';              AI-Powered CX Platform
             </Badge>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-400 bg-clip-text text-transparent">
               AI Customer Experience Platform
@@ -126,8 +109,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
               <p className="text-gray-300">
                 AI chatbots and automated systems provide round-the-clock
                 customer support
-              </p>
-            </Card>
+              </p>            </Card>
           </div>
         </div>
       </section>
@@ -243,8 +225,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
                   <p className="text-gray-300">
                     Advanced speech recognition and video analysis for deeper
                     customer insights
-                  </p>
-                </div>
+                  </p>                </div>
               </div>
             </div>
           </div>
@@ -321,8 +302,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
               <p className="text-gray-300">
                 Patient experience optimization, appointment scheduling, and
                 health monitoring
-              </p>
-            </Card>
+              </p>            </Card>
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">"
@@ -373,8 +353,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
                   Standard chatbots
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Email support
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                  Email support
                 </li>
               </ul>"
               <Button className="w-full bg-pink-600 hover:bg-pink-700">
@@ -411,8 +390,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
                   Priority support
                 </li>"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  API access
+                  <CheckCircle className="w-5 h-5 text-white mr-3" />                  API access
                 </li>
               </ul>"
               <Button className="w-full bg-white text-pink-600 hover:bg-gray-100">
@@ -447,8 +425,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
                   24/7 dedicated support
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  White-label options
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                  White-label options
                 </li>
               </ul>"
               <Button className="w-full bg-purple-600 hover:bg-purple-700">
@@ -512,8 +489,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center justify-center space-x-3 text-gray-300">"
-              <Globe className="w-5 h-5 text-pink-400" />
-              <span>ziontechgroup.com</span>
+              <Globe className="w-5 h-5 text-pink-400" />              <span>ziontechgroup.com</span>
             </div>
           </div>
 "
@@ -542,8 +518,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AICustomerExperience;
 '"

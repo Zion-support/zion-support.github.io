@@ -98,8 +98,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       uptime: "99.9%","
       security["Smart contract audits", "Multi-sig wallets", "Insurance protocols", "Bug bounty programs"];
     },;"
-    competitors["Yearn Finance", "Aave", "Compound", "Curve Finance", "Uniswap"],;"
-    marketSize: "$67.8 billion by 2025"
+    competitors["Yearn Finance", "Aave", "Compound", "Curve Finance", "Uniswap"],;"    marketSize: "$67.8 billion by 2025"
   },
 
   // NFT Marketplace Platform
@@ -166,8 +165,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       uptime: "99.9%","
       security["Smart contract security", "IPFS storage", "Multi-sig wallets", "Access controls"];
     },;"
-    competitors["OpenSea", "Rarible", "Foundation", "SuperRare", "Nifty Gateway"],;"
-    marketSize: "$23.4 billion by 2025"
+    competitors["OpenSea", "Rarible", "Foundation", "SuperRare", "Nifty Gateway"],;"    marketSize: "$23.4 billion by 2025"
   },
 
   // DAO Governance Platform
@@ -234,8 +232,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       uptime: "99.9%","
       security["Multi-sig security", "Smart contract audits", "Access controls", "Audit trails"];
     },;"
-    competitors["Aragon", "Colony", "Moloch", "Gnosis", "Snapshot"],;"
-    marketSize: "$12.8 billion by 2025"
+    competitors["Aragon", "Colony", "Moloch", "Gnosis", "Snapshot"],;"    marketSize: "$12.8 billion by 2025"
   },
 
   // Web3 Identity Platform
@@ -302,8 +299,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
       uptime: "99.9%","
       security["Cryptographic security", "Privacy protection", "Access controls", "Audit trails"];
     },;"
-    competitors["Spruce", "3Box", "BrightID", "Gitcoin Passport", "Worldcoin"],;"
-    marketSize: "$18.9 billion by 2025"
+    competitors["Spruce", "3Box", "BrightID", "Gitcoin Passport", "Worldcoin"],;"    marketSize: "$18.9 billion by 2025"
   },
 
   // DeFi Yield Aggregator

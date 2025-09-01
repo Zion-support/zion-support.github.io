@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-
   Brain, 
   Search, 
   TrendingUp, 
@@ -23,182 +22,6 @@ import {
   Award,
   Rocket,
 import {
-
-  Brain, 
-  Search, 
-  BookOpen, 
-  FileText, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu,
-  Database,
-  Lock,
-  BarChart3,
-  Rocket,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  DollarSign,
-  Clock,
-  Award,
-  Target,
-  Workflow,
-  Lightbulb,
-  Zap,
-  Shield,
-  Eye,
-  Code,
-  GitFork,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin'
-} from 'lucide-react';'
-import { SEO } from '../../components/SEO';
-;
-export { function };
-export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {
-  const features = [
-    {
-
-      icon: Brain,
-      title: "Autonomous Research Discovery","
-      description: "AI that independently discovers, analyzes, and synthesizes research from multiple sources"
-    },
-    {
-
-      icon: Search,"
-      title: "Intelligent Literature Review","
-      description: "Automated systematic literature reviews with comprehensive coverage and analysis"
-    },
-    {
-
-      icon: FileText,"
-      title: "Research Paper Generation","
-      description: "AI-powered research paper writing with proper citations and academic standards"
-    },
-    {
-
-      icon: TrendingUp,"
-      title: "Trend Analysis & Prediction","
-      description: "Identify emerging research trends and predict future research directions"
-    },
-    {
-
-      icon: Database,"
-      title: "Multi-Source Data Integration","
-      description: "Seamlessly integrate data from academic databases, journals, and research repositories"
-    },
-    {
-
-      icon: Workflow,"
-      title: "Research Workflow Automation","
-      description: "Automate repetitive research tasks and streamline the research process"
-    }
-  ];
-
-  const pricingTiers = [
-    {
-"
-      name: "Research Starter","
-      price: "$299","
-      period: "monthly","
-      description: "Perfect for individual researchers and small research teams",
-      features: ["
-        "Up to 100 research queries per month","
-        "Basic literature review generation","
-        "Standard citation management","
-        "Email support","
-        "Basic research analytics","
-        "Access to major academic databases"
-      ],"
-      bestFor: "Individual researchers, graduate students, small research teams"
-    },
-    {
-"
-      name: "Research Professional","
-      price: "$799","
-      period: "monthly","
-      description: "Advanced features for growing research organizations",
-      features: ["
-        "Up to 1,000 research queries per month","
-        "Advanced literature review generation","
-        "Custom research workflows","
-        "Priority support","
-        "Advanced analytics and reporting","
-        "API access","
-        "Custom research templates","
-        "Collaborative research tools"
-      ],"
-      bestFor: "Research institutions, universities, corporate R&D teams"
-    },
-    {
-"
-      name: "Research Enterprise","
-      price: "$1,999","
-      period: "monthly","
-      description: "Full-scale research automation platform for large organizations",
-      features: ["
-        "Unlimited research queries","
-        "Custom research algorithm development","
-        "Advanced AI model training","
-        "24/7 dedicated support","
-        "Custom integrations","
-        "White-label solutions","
-        "On-premise deployment options","
-        "Research consulting services"
-      ],"
-      bestFor: "Large research institutions, government agencies, pharmaceutical companies"
-    }
-  ];
-
-  const useCases = [
-    {
-"
-      title: "Academic Research","
-      description: "Automated literature reviews, research gap analysis, and academic paper generation",
-      icon: BookOpen
-    },
-    {
-"
-      title: "Market Research","
-      description: "Competitive analysis, market trend identification, and industry insights",
-      icon: TrendingUp
-    },
-    {
-"
-      title: "Scientific Discovery","
-      description: "Cross-disciplinary research connections and hypothesis generation",
-      icon: Lightbulb
-    },
-    {
-"
-      title: "Patent Research","
-      description: "Patent landscape analysis and prior art research automation",
-      icon: Shield
-    },
-    {
-"
-      title: "Clinical Research","
-      description: "Medical literature analysis and clinical trial research automation",
-      icon: Eye
-    },
-    {
-"
-      title: "Policy Research",
-  Sparkles,
-  Eye,
-  Workflow,
-  Database,
-  Network,
-  Smartphone,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow as WorkflowIcon,;
   Eye as EyeIcon,;
   Sparkles as SparklesIcon,;
   Zap as ZapIcon,;
@@ -217,8 +40,7 @@ export default function AIAutonomousResearchAssistant() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)}, []);
 
   const features = ["
     "Fully autonomous research execution","
@@ -327,9 +149,8 @@ export default function AIAutonomousResearchAssistant() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO "
         title="AI Autonomous Research Assistant - Zion Tech Group""
-        description="Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.""
-        keywords="AI research assistant, research automation, literature review, academic research, research AI, autonomous research"
-      />
+        description="Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.""        keywords="AI research assistant, research automation, literature review, academic research, research AI, autonomous research"
+       />
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -340,8 +161,7 @@ export default function AIAutonomousResearchAssistant() {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-400 text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2" />
-              Revolutionary AI Research Platform
+              <Brain className="w-4 h-4 mr-2" />              Revolutionary AI Research Platform
             </div>"
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
               AI Autonomous Research Assistant
@@ -352,8 +172,7 @@ export default function AIAutonomousResearchAssistant() {
             </p>
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2" />
-              Revolutionary Research AI Technology
+              <Brain className="w-4 h-4 mr-2" />              Revolutionary Research AI Technology
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous Research Assistant
@@ -375,8 +194,7 @@ export default function AIAutonomousResearchAssistant() {
               className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
             >
               Start Researching"
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
+              <ArrowRight className="ml-2 w-5 h-5" />            </a>
             <a"
               href="#demo""
               className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20 font-semibold rounded-lg transition-colors"
@@ -452,8 +270,7 @@ export default function AIAutonomousResearchAssistant() {
               Get Started Today
             </button>"
             <button className="px-8 py-4 border-2 border-cyan-400/50 hover:border-cyan-400 rounded-2xl font-semibold text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center">"
-              <Eye className="w-5 h-5 mr-2" />
-              Watch Demo
+              <Eye className="w-5 h-5 mr-2" />              Watch Demo
             </button>
           </motion.div>
         </div>
@@ -526,8 +343,7 @@ export default function AIAutonomousResearchAssistant() {
               >
                 {index === 1 && ("
                   <div className="inline-flex items-center px-3 py-1 bg-blue-500 text-white text-sm font-medium rounded-full mb-4">"
-                    <Star className="w-4 h-4 mr-1" />
-                    Most Popular
+                    <Star className="w-4 h-4 mr-1" />                    Most Popular
                   </div>
                 )}
                 "
@@ -541,8 +357,7 @@ export default function AIAutonomousResearchAssistant() {
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -639,8 +454,7 @@ export default function AIAutonomousResearchAssistant() {
               >"
                 <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0">"
                   <CheckCircle className="w-5 h-5 text-blue-400" />
-                </div>"
-                <p className="text-lg text-gray-300">{benefit}</p>
+                </div>"                <p className="text-lg text-gray-300">{benefit}</p>
               </motion.div>"
           <div className="flex flex-wrap justify-center gap-2 mb-8">'
             {['overview', 'features', 'pricing', 'technical', 'contact'].map((tab) => (
@@ -701,8 +515,7 @@ export default function AIAutonomousResearchAssistant() {
                     <div className="flex items-start">"
                       <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
                       <div>"
-                        <h3 className="font-semibold text-white mb-1">Unbiased Analysis</h3>"
-                        <p className="text-gray-400">Eliminates human bias for objective research outcomes</p>
+                        <h3 className="font-semibold text-white mb-1">Unbiased Analysis</h3>"                        <p className="text-gray-400">Eliminates human bias for objective research outcomes</p>
                       </div>
                     </div>
                   </div>
@@ -711,8 +524,7 @@ export default function AIAutonomousResearchAssistant() {
                   <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-3xl p-8 backdrop-blur-sm">"
                     <div className="text-center">"
                       <Brain className="w-24 h-24 text-cyan-400 mx-auto mb-6" />"
-                      <h3 className="text-2xl font-bold text-white mb-4">AI Research Revolution</h3>"
-                      <p className="text-gray-300 mb-6">
+                      <h3 className="text-2xl font-bold text-white mb-4">AI Research Revolution</h3>"                      <p className="text-gray-300 mb-6">
                         Experience the future of research with our autonomous AI platform
                       </p>"
                       <div className="grid grid-cols-2 gap-4 text-sm">"
@@ -761,8 +573,7 @@ export default function AIAutonomousResearchAssistant() {
                       <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">"
                         <Sparkles className="w-6 h-6 text-white" />
                       </div>"
-                      <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>"
-                      <p className="text-gray-400 text-sm">
+                      <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>"                      <p className="text-gray-400 text-sm">
                         Advanced AI-powered capability that revolutionizes research methodology
                       </p>
                     </motion.div>
@@ -799,8 +610,7 @@ export default function AIAutonomousResearchAssistant() {
                       <ul className="space-y-3 mb-8 text-left">
                         {pricing.features.slice(0, 3).map((feature, index) => ("
                           <li key={index} className="flex items-center text-gray-300">"
-                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                            {feature}
+                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                            {feature}
                           </li>
                         ))}
                       </ul>"
@@ -824,8 +634,7 @@ export default function AIAutonomousResearchAssistant() {
                       <ul className="space-y-3 mb-8 text-left">
                         {pricing.features.map((feature, index) => ("
                           <li key={index} className="flex items-center text-gray-300">"
-                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                            {feature}
+                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                            {feature}
                           </li>
                         ))}
                       </ul>"
@@ -855,8 +664,7 @@ export default function AIAutonomousResearchAssistant() {
                           Dedicated support
                         </li>"
                         <li className="flex items-center text-gray-300">"
-                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          SLA guarantees
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                          SLA guarantees
                         </li>
                       </ul>"
                       <button className="w-full py-3 border-2 border-purple-400 hover:bg-purple-400/10 rounded-xl font-semibold text-purple-400 transition-all duration-300">
@@ -890,8 +698,7 @@ export default function AIAutonomousResearchAssistant() {
                   <div className="space-y-6">"
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">"
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">"
-                        <Cpu className="w-6 h-6 text-cyan-400 mr-3" />
-                        Technology Stack
+                        <Cpu className="w-6 h-6 text-cyan-400 mr-3" />                        Technology Stack
                       </h3>"
                       <div className="grid grid-cols-2 gap-3">
                         {technicalSpecs.technology.map((tech, index) => ("
@@ -904,14 +711,12 @@ export default function AIAutonomousResearchAssistant() {
 "
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">"
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">"
-                        <Network className="w-6 h-6 text-cyan-400 mr-3" />
-                        Integrations
+                        <Network className="w-6 h-6 text-cyan-400 mr-3" />                        Integrations
                       </h3>"
                       <div className="space-y-2">
                         {technicalSpecs.integrations.map((integration, index) => ("
                           <div key={index} className="flex items-center text-gray-300">"
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            {integration}
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                            {integration}
                           </div>
                         ))}
                       </div>
@@ -921,8 +726,7 @@ export default function AIAutonomousResearchAssistant() {
                   <div className="space-y-6">"
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">"
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">"
-                        <Shield className="w-6 h-6 text-cyan-400 mr-3" />
-                        Security & Performance
+                        <Shield className="w-6 h-6 text-cyan-400 mr-3" />                        Security & Performance
                       </h3>"
                       <div className="space-y-4">"
                         <div className="flex justify-between items-center">"
@@ -942,14 +746,12 @@ export default function AIAutonomousResearchAssistant() {
 "
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm">"
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">"
-                        <Lock className="w-6 h-6 text-cyan-400 mr-3" />
-                        Security Standards
+                        <Lock className="w-6 h-6 text-cyan-400 mr-3" />                        Security Standards
                       </h3>"
                       <div className="space-y-2">
                         {technicalSpecs.security.map((standard, index) => ("
                           <div key={index} className="flex items-center text-gray-300">"
-                            <ShieldCheck className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            {standard}
+                            <ShieldCheck className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                            {standard}
                           </div>
                         ))}
                       </div>
@@ -995,8 +797,7 @@ export default function AIAutonomousResearchAssistant() {
                         <span>https://ziontechgroup.com</span>
                       </div>"
                       <div className="flex items-start text-gray-300">"
-                        <MapPin className="w-5 h-5 text-cyan-400 mr-3 mt-1" />
-                        <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+                        <MapPin className="w-5 h-5 text-cyan-400 mr-3 mt-1" />                        <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
                       </div>
                     </div>
                   </div>
@@ -1038,15 +839,13 @@ export default function AIAutonomousResearchAssistant() {
           <div className="grid md:grid-cols-3 gap-8">"
             <div className="flex flex-col items-center">"
               <Phone className="h-8 w-8 text-blue-400 mb-4" />"
-              <h3 className="text-lg font-semibold mb-2">Phone</h3>"
-              <p className="text-gray-300">+1 302 464 0950</p>
+              <h3 className="text-lg font-semibold mb-2">Phone</h3>"              <p className="text-gray-300">+1 302 464 0950</p>
               <a"
                 href="/contact""
                 className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
               >
                 Start Researching with AI"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+                <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a"
                 href="tel:+13024640950""
                 className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20 font-semibold rounded-lg transition-colors"
@@ -1062,14 +861,12 @@ export default function AIAutonomousResearchAssistant() {
             </div>"
             <div className="flex flex-col items-center">"
               <MapPin className="h-8 w-8 text-blue-400 mb-4" />"
-              <h3 className="text-lg font-semibold mb-2">Address</h3>"
-              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <h3 className="text-lg font-semibold mb-2">Address</h3>"              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
         </div>
       </section>
     </div>
-  );
-}
+  )}
 }
 '"`

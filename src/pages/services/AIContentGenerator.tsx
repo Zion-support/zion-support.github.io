@@ -2,7 +2,6 @@ import React from 'react';'
 import { motion } from 'framer-motion';'
 import SEO from '@/components/SEO';
 import {
-
   PenTool, 
   FileText, 
   Image, 
@@ -53,8 +52,8 @@ export default function AIContentGenerator(...args[]):  {
 
       icon: Globe,"
       title: "Multi-language Support","
-      description: "Generate content in over 50 languages with native-level quality and cultural adaptation.";
-    };
+      description: "Generate content in over 50 languages with native-level quality and cultural adaptation.";    };
+  ]};
   ];
 
   const contentTypes = [
@@ -108,8 +107,7 @@ export default function AIContentGenerator(...args[]):  {
         "Basic AI writing tools","
         "5 content templates","
         "Standard SEO suggestions","
-        "Mobile app access","
-        "Email support"
+        "Mobile app access","        "Email support"
       ],;
       popular: false
     },
@@ -202,12 +200,10 @@ export default function AIContentGenerator(...args[]):  {
         'White-label solution','
         'Dedicated account manager','
         'SLA guarantees',;'
-        'Advanced security features',;'
-        'Custom integrations';
+        'Advanced security features',;'        'Custom integrations';
       ],;'
       cta: 'Contact Sales',;
-      popular: false;
-    };
+      popular: false};
   ];
 
   return()
@@ -217,8 +213,7 @@ export default function AIContentGenerator(...args[]):  {
         description="Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns.""
         canonical="/services/ai-content-generator"
       />
-"
-      <div className="min-h-screen bg-futuristic">
+"      <div className="min-h-screen bg-futuristic">
         {/* Hero Section */}"
         <section className="relative py-20 overflow-hidden">"
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-600/10 to-red-600/10"></div>"
@@ -527,8 +522,7 @@ export default function AIContentGenerator(...args[]):  {
 }}"
                   className="flex items-start space-x-3"
 "
-                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />"
-                  <span className="text-gray-300">{benefit}</span>
+                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />"                  <span className="text-gray-300">{benefit}</span>
                 </motion.div>;
               ))}
             </div>
@@ -637,8 +631,7 @@ export default function AIContentGenerator(...args[]):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center space-x-3">"
-                        <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />"
-                        <span className="text-gray-300">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />"                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>

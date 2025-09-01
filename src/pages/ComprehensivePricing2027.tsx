@@ -1,15 +1,6 @@
 import React, { useState } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';'
 import { Link } from 'react-router-dom';
-import {
-
-  Check, Star, Brain, Cpu, Database, Network, Shield, Zap,
-  Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
-  ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign'
- } from 'lucide-react';'
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';'
-import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
-
 export default function ComprehensivePricing2027(...args[]):  {
 '
   const [searchQuery, setSearchQuery] = useState('');'
@@ -32,8 +23,7 @@ export default function ComprehensivePricing2027(...args[]):  {
     )
     .sort((a, b) => {
 '
-      if (sortBy === 'price') return a.price - b.price;'
-      if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
+      if (sortBy === 'price') return a.price - b.price;'      if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
       return b.rating - a.rating}) ;
 
   const containerVariants = {
@@ -90,26 +80,22 @@ export default function ComprehensivePricing2027(...args[]):  {
       };
     };
   };
-
             initial = {
 
   { opacity: 0,
   scale: 0.8 ;
 
-}}
-            animate = {
+}}            animate = {
 
   { opacity: 1,
   scale: 1 ;
 
-}}
-            transition = {
+}}            transition = {
 
   { duration: 0.8,
   delay: 0.2 ;
 
-}}
-          >
+}}          >
             Comprehensive Pricing 2027;
           </motion.h1>
           <motion.p"
@@ -185,14 +171,12 @@ export default function ComprehensivePricing2027(...args[]):  {
   { opacity: 0,
   y: 20 ;
 
-}}
-        animate = {
+}}        animate = {
 
   { opacity: 1,
   y: 0 ;
 
-}}
-        transition = {
+}}        transition = {
 
   { duration: 0.8,
   delay: 0.8 ;
@@ -207,8 +191,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                 <div className="relative">"
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
                   <input"
-                    type="text""
-                    placeholder="Search services, features, or technologies..."
+                    type="text""                    placeholder="Search services, features, or technologies..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}"
                     className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg pl-12 pr-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
@@ -227,8 +210,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>"
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 pointer-events-none" />
-              </div>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 pointer-events-none" />              </div>
 
               {/* Sort By */}"
               <div className="relative">
@@ -241,8 +223,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                   <option value="aiScore">Sort by AI Score</option>"
                   <option value="rating">Sort by Rating</option>
                 </select>"
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 pointer-events-none" />
-              </div>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 pointer-events-none" />              </div>
 
               {/* View Mode Toggle */}"
               <div className="flex bg-zion-blue-light/20 rounded-lg p-1 border border-zion-purple/20">
@@ -250,14 +231,12 @@ export default function ComprehensivePricing2027(...args[]):  {
                   onClick={() => setViewMode('grid')}'`
                   className={`p-2 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
 "
-                  <Grid className="w-5 h-5" />
-                </button>
+                  <Grid className="w-5 h-5" />                </button>
                 <button'
                   onClick={() => setViewMode('list')}'`
                   className={`p-2 rounded-md transition-colors ${viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
 "
-                  <List className="w-5 h-5" />
-                </button>
+                  <List className="w-5 h-5" />                </button>
               </div>
             </div>
           </div>
@@ -353,8 +332,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                               <span className="text-sm text-gray-300">{service.aiScore}%</span>
                             </div>"
                             <div className="flex items-center gap-1">"
-                              <Star className="w-4 h-4 text-yellow-500" />"
-                              <span className="text-sm text-gray-300">{service.rating}</span>
+                              <Star className="w-4 h-4 text-yellow-500" />"                              <span className="text-sm text-gray-300">{service.rating}</span>
                             </div>
                           </div>"
                           <div className="text-right">"
@@ -371,8 +349,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                             </>
                           ) : (
                             <>"
-                              <ChevronDown className="w-4 h-4" />
-                              View Details
+                              <ChevronDown className="w-4 h-4" />                              View Details
                             </>) }
                         </button>
 
@@ -410,8 +387,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                                 <ul className="space-y-1">
                                   {service.features.slice(0, 4).map((feature, featureIndex) => ("
                                     <li key={featureIndex} className="flex items-center gap-2 text-xs text-gray-300">"
-                                      <Check className="w-3 h-3 text-green-500 flex-shrink-0" />
-                                      {feature}
+                                      <Check className="w-3 h-3 text-green-500 flex-shrink-0" />                                      {feature}
                                     </li>) ) }
                                 </ul>
                               </div>
@@ -422,8 +398,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                                 <ul className="space-y-1">
                                   {service.benefits.slice(0, 3).map((benefit, benefitIndex) => ("
                                     <li key={benefitIndex} className="flex items-center gap-2 text-xs text-gray-300">"
-                                      <Zap className="w-3 h-3 text-yellow-500 flex-shrink-0" />
-                                      {benefit}
+                                      <Zap className="w-3 h-3 text-yellow-500 flex-shrink-0" />                                      {benefit}
                                     </li>) ) }
                                 </ul>
                               </div>
@@ -476,8 +451,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                               Rating: {service.rating}
                             </div>"
                             <div className="flex items-center gap-1">"
-                              <Target className="w-4 h-4 text-green-500" />
-                              {getPriceTier(service.price)}
+                              <Target className="w-4 h-4 text-green-500" />                              {getPriceTier(service.price)}
                             </div>
                           </div>
 "
@@ -529,14 +503,12 @@ export default function ComprehensivePricing2027(...args[]):  {
   { opacity: 0,
   y: 30 ;
 
-}}
-        animate = {
+}}        animate = {
 
   { opacity: 1,
   y: 0 ;
 
-}}
-        transition = {
+}}        transition = {
 
   { duration: 0.8,
   delay: 1.2 ;
@@ -544,8 +516,7 @@ export default function ComprehensivePricing2027(...args[]):  {
 }}
       >"
         <div className="max-w-4xl mx-auto text-center">"
-          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 backdrop-blur-md rounded-2xl p-12 border border-zion-cyan/30">"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 backdrop-blur-md rounded-2xl p-12 border border-zion-cyan/30">"            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>"
             <p className="text-xl text-gray-300 mb-8">

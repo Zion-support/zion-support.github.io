@@ -1,48 +1,10 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  Bell,
-  X,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  XCircle,
-  Settings,
-  Volume2,
-  VolumeX,
-  Clock,
-  Star,
-  Archive,
-  Trash2,
-  Filter,
-  Search,
-  MoreVertical,
-  Eye,
-  EyeOff,
-  Zap,
-  Shield,'
-  Globe} from 'lucide-react';
-
-  id: string;
-  title: string;
-  message: string;'
-  type: 'success' | 'error' | 'warning' | 'info' | 'system';'
-  priority: 'low' | 'medium' | 'high' | 'critical';'
-  category: 'user' | 'system' | 'security' | 'performance' | 'update';
-  timestamp: Date;
-  read: boolean;
-  archived: boolean;
-  actions?: NotificationAction[];
-  metadata?: Record < string, any>;
-  expiresAt?: Date;
-
   label: string;
   action: () => void;'
   variant?: 'primary' | 'secondary' | 'danger';
   icon?: React.ComponentType < any>;
 }
-
 interface SmartNotificationSystemProps {
   // Add your props here
 
@@ -53,7 +15,6 @@ interface SmartNotificationSystemProps {
   autoDismissDelay?: number;
   soundEnabled?: boolean;
   onNotificationAction?: notification: Notification, action: string void;
-
 export function SmartNotificationSystem({
 
   enabled = true,
@@ -80,7 +41,6 @@ export function SmartNotificationSystem({
 
   const audioRef = useRef < HTMLAudioElement | null> (null) ;
   const notificationCount = notifications.filter (n => !n.read) .length;
-
   // Initialize audio for notification sounds
   useEffect ( () => {
     if (settings.sound) {
@@ -262,8 +222,7 @@ export function SmartNotificationSystem({
       if (permission === 'granted') {
 
         setSettings(prev => ({ ...prev, desktop: true }));
-      }
-    }
+      }    }
   }, []) ;
 
   // Handle notification action
@@ -294,7 +253,6 @@ export function SmartNotificationSystem({
         {} as Record<string, Notification[]>
       )
     : { All: filteredNotifications };
-
   if (!enabled) return null;
 
   return()
@@ -307,8 +265,7 @@ export function SmartNotificationSystem({
         whileTap={{ scale: 0.95 }}"
         aria-label="Open notifications"
       >"
-        <Bell className="w-6 h-6" />
-        {notificationCount > 0 && (
+        <Bell className="w-6 h-6" />        {notificationCount > 0 && (
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}"
@@ -336,8 +293,7 @@ export function SmartNotificationSystem({
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">"
                 <div className="flex items-center space-x-3">"
                   <Bell className="w-6 h-6 text-blue-600" />
-                  <div>"
-                    <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <div>"                    <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                       Notifications
                     </h2>"
                     <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -350,14 +306,12 @@ export function SmartNotificationSystem({
                     onClick={() => setShowSettings(!showSettings)}"
                     className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
                   >"
-                    <Settings className="w-5 h-5" />
-                  </button>
+                    <Settings className="w-5 h-5" />                  </button>
                   <button
                     onClick={() => setIsOpen(false)}"
                     className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
                   >"
-                    <X className="w-5 h-5" />
-                  </button>
+                    <X className="w-5 h-5" />                  </button>
                 </div>
               </div>
 
@@ -482,8 +436,7 @@ export function SmartNotificationSystem({
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                   <input"
-                    type="text""
-                    placeholder="Search notifications..."
+                    type="text""                    placeholder="Search notifications..."
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}"
                     className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -544,8 +497,7 @@ export function SmartNotificationSystem({
 
                                         !notification.read'
                                           ? 'text-gray-900 dark:text-white''
-                                          : 'text-gray-700 dark:text-gray-300'`
-                                      }`}
+                                          : 'text-gray-700 dark:text-gray-300'`                                      }`}
                                     >
                                       {notification.title}
                                     </h4>"
@@ -643,8 +595,7 @@ export function SmartNotificationSystem({
                 {filteredNotifications.length === 0 && ("
                   <div className="p-8 text-center text-gray-500 dark:text-gray-400">"
                     <Bell className="w-12 h-12 mx-auto mb-3 opacity-50" />
-                    <p>No notifications to display</p>'"
-                    <p className="text-sm">You're all caught up!</p>
+                    <p>No notifications to display</p>'"                    <p className="text-sm">You're all caught up!</p>
                   </div>
                 )}
               </div>

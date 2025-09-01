@@ -5,14 +5,12 @@ export interface LinkInfo {
   anchor?: string;
   error?: string;
 }
-
 export interface PageInfo {
   path: string;
   title: string;
   links: LinkInfo[];
   exists: boolean;
 }
-
 export class LinkChecker {
   private baseUrl: string;
   private visitedUrls: Set<string> = new Set();
@@ -23,7 +21,6 @@ export class LinkChecker {
 
     this.baseUrl = baseUrl;
   }
-
   // Check if a link is internal or external
   isInternalLink(url: string): boolean {
 
@@ -33,8 +30,7 @@ export class LinkChecker {
     } catch {
 
       return false;
-    }
-  }
+    }  }
 
   // Normalize URL to handle relative paths
   normalizeUrl(url: string, basePage: string): string {
@@ -57,8 +53,7 @@ export class LinkChecker {
     } catch {
 
       return url;
-    }
-  }
+    }  }
 
   // Extract all links from a page
   extractLinks(pageContent: string, pagePath: string): LinkInfo[] {
@@ -66,8 +61,7 @@ export class LinkChecker {
     const links: LinkInfo[] = [];
 
     // Extract href attributes from anchor tags'
-    const hrefRegex = /href=["']([^"']+)["']/g;
-    let match;
+    const hrefRegex = /href=["']([^"']+)["']/g;    let match;
 
     while ((match = hrefRegex.exec(pageContent)) !== null) {
 
@@ -79,8 +73,7 @@ export class LinkChecker {
         !url.startsWith('tel:')
       ) {
 
-        const normalizedUrl = this.normalizeUrl(url, pagePath);
-        links.push({
+        const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
 
           url: normalizedUrl,'
           status: 'working',
@@ -96,17 +89,14 @@ export class LinkChecker {
       const url = match[2];'
       if (url && !url.startsWith('data:') && !url.startsWith('blob:')) {
 
-        const normalizedUrl = this.normalizeUrl(url, pagePath);
-        links.push({
+        const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
 
           url: normalizedUrl,'
           status: 'working',
           page: pagePath});
-      }
-    }
+      }    }
 
-    return links;
-  }
+    return links}
 
   // Check if a page exists
   async checkPageExists(url: string): Promise<any> {
@@ -124,8 +114,7 @@ export class LinkChecker {
   // Check all links on a page
   async checkPageLinks(pagePath: string, pageContent: string): Promise<any> {
 
-    const links = this.extractLinks(pageContent, pagePath);
-    const checkedLinks: LinkInfo[] = [];
+    const links = this.extractLinks(pageContent, pagePath);    const checkedLinks: LinkInfo[] = [];
 
     for (const link of links) {
 
@@ -133,7 +122,6 @@ export class LinkChecker {
 
         continue;
       }
-
       this.visitedUrls.add(link.url);
 
       if (this.isInternalLink(link.url)) {
@@ -143,17 +131,13 @@ export class LinkChecker {
 '
           link.status = 'working';
         } else {
-'
-          link.status = 'missing';
-          this.missingPages.push(link.url);
-        }
+'          link.status = 'missing';
+          this.missingPages.push(link.url)}
       } else {
 '
         link.status = 'external';
       }
-
-      checkedLinks.push(link);
-    }
+      checkedLinks.push(link)}
 
     return {
 
@@ -169,7 +153,6 @@ export class LinkChecker {
     const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);'
     return titleMatch ? titleMatch[1].trim() : 'Untitled';
   }
-
   // Get analysis summary
   getSummary() {
     return {
@@ -192,8 +175,7 @@ export class LinkChecker {
   getMissingPages(): string[] {
 
     return this.missingPages;
-  }
-}
+  }}
 
 export default LinkChecker;
 '"`

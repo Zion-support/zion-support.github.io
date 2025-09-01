@@ -1,109 +1,6 @@
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
-import { SEO  } from '@/components/SEO';
-import { Shield, 
-  Database, 
-  Lock, 
-  Eye, 
-  Search, 
-  FileText, 
-  Users, 
-  CheckCircle,
-  AlertTriangle,
-  BarChart3,
-  Zap,
-  Globe,
-  Cpu,
-  Key,
-  Fingerprint,
-  ShieldCheck,
-  FileCheck,
-  UserCheck,
-  Clock,
-  TrendingUp,
-  DollarSign,
-  Building,
-  Server,
-  Cloud,
-  Network,
-  Monitor,
-  Settings,
-  RefreshCw,
-  Download,
-  Upload,
-  Trash2,
-  Archive,
-  Copy,
-  Move,
-  Link,
-  Unlink,
-  EyeOff,
-  EyeOn,
-  LockOpen,
-  LockClosed'
- } from 'lucide-react';
-;
-const AIDataGovernance: React.FC = (): JSX.Element => {
-
-  const features = [
-    {
-
-      icon: Shield,
-      title: "AI-Powered Data Classification","
-      description: "Automatically identify and categorize sensitive data using machine learning algorithms","
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-
-      icon: Lock,"
-      title: "Advanced Access Control","
-      description: "Role-based permissions with AI-driven anomaly detection and threat prevention","
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-
-      icon: Eye,"
-      title: "Real-time Data Monitoring","
-      description: "Continuous surveillance of data access patterns and compliance violations","
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-
-      icon: Search,"
-      title: "Intelligent Data Discovery","
-      description: "AI algorithms that automatically find and map data across your entire infrastructure","
-      color: "from-orange-500 to-red-500"
-    },
-    {
-
-      icon: FileText,"
-      title: "Automated Compliance Reporting","
-      description: "Generate regulatory reports automatically with AI-powered accuracy and completeness","
-      color: "from-indigo-500 to-purple-500"
-    },;
-    {;
-      icon: Users,;"
-      title: "Data Lineage Tracking",;"
-      description: "Complete audit trail showing data origins, transformations, and usage patterns",;"
-      color: "from-yellow-500 to-orange-500";
-    };
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Foundation","
-      price: "$499","
-      period: "/month","
-      description: "Essential data governance for small to medium organizations",
-      features[;"
-        "Up to 10TB data management","
-        "Basic AI classification","
-        "Standard access controls","
-        "Compliance templates","
-        "Email support","
-        "Basic reporting","
-        "5 user licenses"
+import { SEO  } from '@/components/SEO';        "5 user licenses"
       ],;"
       cta: "Start Free Trial",
       popular: false
@@ -145,8 +42,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
         "On-premise option";
       ],;"
       cta: "Contact Sales",;
-      popular: false;
-    };
+      popular: false};
   ];
 
   const benefits = [
@@ -254,15 +150,13 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       description: "Protect trade secrets and proprietary data with advanced classification",;
       icon: Cpu,;"
       color: "from-orange-500 to-red-500";
-    };
-  ];
+    };  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Data Governance - Zion Tech Group""
-        description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
-      />
+        title="AI Data Governance - Zion Tech Group""        description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
+       />
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -295,8 +189,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               transition={{ duration: 0.8 }}
 "
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">"
-                <Shield className="w-4 h-4 mr-2" />
-                AI-Powered Data Protection
+                <Shield className="w-4 h-4 mr-2" />                AI-Powered Data Protection
               </div>
 "
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
@@ -658,8 +551,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -724,7 +616,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default AIDataGovernance;}}}}}}'"`

@@ -1,89 +1,6 @@
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
-import { SEO  } from '@/components/SEO';
-import { Brain, 
-  BookOpen, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  BarChart3, 
-  Calendar,
-  Zap,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Globe,
-  Smartphone,
-  Monitor,
-  MessageSquare,
-  Share2,
-  Analytics,
-  Palette,
-  Clock,
-  DollarSign,
-  Shield,
-  Headphones,
-  Rocket,
-  Scale,
-  FileText,
-  Search,
-  Gavel,
-  Library,
-  Briefcase,
-  Award'
- } from 'lucide-react';
-;
-export { function };
-export default function AILegalResearchPlatform(...args[]):  {
-
-  const features = [
-    "AI-powered case law research and analysis","
-    "Intelligent document review and contract analysis","
-    "Automated legal citation checking and validation","
-    "Real-time legal precedent tracking","
-    "Advanced search with natural language queries","
-    "Legal document generation and templates",;"
-    "Compliance monitoring and risk assessment",;"
-    "Multi-jurisdiction legal research",;"
-    "Legal trend analysis and predictions",;"
-    "Automated case outcome prediction",;"
-    "Legal knowledge base management",;"
-    "Collaborative research and sharing tools";
-  ];
-
-  const benefits = [;"
-    "Reduce research time by 70%",;"
-    "Improve case outcome accuracy by 45%",;"
-    "Increase billable hours by 30%",;"
-    "Reduce legal research costs by 50%",;"
-    "Enhance client service quality";
-  ];
-
-  const useCases = ["
-    "Law firms and attorneys","
-    "Corporate legal departments",;"
-    "Legal research institutions",;"
-    "Government agencies",;"
-    "Compliance officers",;"
-    "Risk management teams",;"
-    "Legal technology companies",;"
-    "Academic legal research";
-  ];
-
-  const pricing = [
-    {
-"
-      name: "Professional","
-      price: "$299","
-      period: "/month","
-      description: "Perfect for individual attorneys and small law firms",
-      features[;"
-        "AI legal research (up to 100 queries/month)","
-        "Basic document analysis","
-        "Case law database access","
-        "Citation checking","
-        "Email support","
-        "Up to 5 users"
+import { SEO  } from '@/components/SEO';        "Up to 5 users"
       ],;"
       cta: "Start Free Trial",
       popular: false
@@ -122,16 +39,14 @@ export default function AILegalResearchPlatform(...args[]):  {
         "Unlimited users";
       ],;"
       cta: "Contact Sales",;
-      popular: false;
-    };
+      popular: false};
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Legal Research Platform - Zion Tech Group""
-        description="Revolutionize your legal research with AI-powered case analysis, document review, and legal insights. Save time and improve case outcomes."
-      />
+        title="AI Legal Research Platform - Zion Tech Group""        description="Revolutionize your legal research with AI-powered case analysis, document review, and legal insights. Save time and improve case outcomes."
+       />
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -162,8 +77,7 @@ export default function AILegalResearchPlatform(...args[]):  {
             transition={{ duration: 0.8 }}
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-600 to-orange-600 text-white text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Legal Research
+              <Brain className="w-4 h-4 mr-2" />              AI-Powered Legal Research
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Legal"
@@ -273,8 +187,7 @@ export default function AILegalResearchPlatform(...args[]):  {
 "
                 <div className="w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mb-4">"
                   <CheckCircle className="w-6 h-6 text-white" />
-                </div>"
-                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
+                </div>"                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </motion.div>;
             ))}
           </div>
@@ -359,8 +272,7 @@ export default function AILegalResearchPlatform(...args[]):  {
 "
                 <div className="w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">"
                   <TrendingUp className="w-10 h-10 text-white" />
-                </div>"
-                <p className="text-lg text-white font-medium">{benefit}</p>
+                </div>"                <p className="text-lg text-white font-medium">{benefit}</p>
               </motion.div>;
             ))}
           </div>
@@ -445,8 +357,7 @@ export default function AILegalResearchPlatform(...args[]):  {
 "
                 <div className="w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
                   <Scale className="w-8 h-8 text-white" />
-                </div>"
-                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
+                </div>"                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
               </motion.div>;
             ))}
           </div>
@@ -554,8 +465,7 @@ export default function AILegalResearchPlatform(...args[]):  {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>

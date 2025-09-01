@@ -8,8 +8,7 @@ import {
   Stethoscope,
   CheckCircle,
   Star,
-  Users,
-  Globe,
+  Users,  Globe,
   Lock,
   Cpu,
   Database,
@@ -176,16 +175,14 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10"></div>"
-        <div className="relative max-w-7xl mx-auto text-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10"></div>"        <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >"
             <div className="flex items-center justify-center mb-6">"
-              <Stethoscope className="w-12 h-12 text-green-400 mr-3" />"
-              <h1 className="text-4xl md:text-6xl font-bold text-white">
+              <Stethoscope className="w-12 h-12 text-green-400 mr-3" />"              <h1 className="text-4xl md:text-6xl font-bold text-white">
                 AI Healthcare Diagnostics
               </h1>
             </div>"
@@ -302,8 +299,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                 <ul className="space-y-3">
                   {capability.services.map((service, serviceIndex) => ("
                     <li key={serviceIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-gray-300">{service}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{service}</span>
                     </li>
                   ))}
                 </ul>
@@ -340,8 +336,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                 transition={{ duration: 0.8, delay: index * 0.1 }}"
                 className="flex items-start space-x-3"
               >"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />"
-                <span className="text-gray-300 text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />"                <span className="text-gray-300 text-lg">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -378,8 +373,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                 <Shield className="w-12 h-12 text-green-400 mx-auto mb-4" />"
                 <span className="text-white font-semibold text-lg">
                   {feature}
-                </span>
-              </motion.div>
+                </span>              </motion.div>
             ))}
           </div>
         </div>
@@ -440,8 +434,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>

@@ -8,8 +8,7 @@ import {
   TrendingUp,
   Users,
   Globe,
-  Shield,
-  Cloud,
+  Shield,  Cloud,
   CheckCircle,
   Star,
   Zap,
@@ -160,9 +159,8 @@ const AIBusinessIntelligenceAnalytics = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white">
       <SEO"
         title="AI Business Intelligence Analytics | Zion Tech Group""
-        description="Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence.""
-        keywords="AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group"
-      />
+        description="Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence.""        keywords="AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group"
+       />
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -177,8 +175,7 @@ const AIBusinessIntelligenceAnalytics = () => {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl mb-8 border border-green-400/30">"
               <Brain className="w-10 h-10 text-green-400" />
             </div>"
-            <h1 className="text-5xl md:text-7xl font-bold mb-8">"
-              <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8">"              <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                 AI Business Intelligence
               </span>
               <br />"
@@ -197,15 +194,13 @@ const AIBusinessIntelligenceAnalytics = () => {
                 href="tel:+13024640950""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
               >"
-                <Phone className="w-5 h-5 mr-2" />
-                Get Started Today
+                <Phone className="w-5 h-5 mr-2" />                Get Started Today
               </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com""
                 className="inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300"
               >"
-                <Mail className="w-5 h-5 mr-2" />
-                Contact Us
+                <Mail className="w-5 h-5 mr-2" />                Contact Us
               </a>
             </div>
           </motion.div>
@@ -283,8 +278,7 @@ const AIBusinessIntelligenceAnalytics = () => {
               >"
                 <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">"
                   <CheckCircle className="w-5 h-5 text-white" />
-                </div>"
-                <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>"                <p className="text-gray-300 text-lg">{benefit}</p>
               </motion.div>
             ))}
           </div>
@@ -345,8 +339,7 @@ const AIBusinessIntelligenceAnalytics = () => {
                       key={itemIndex}"
                       className="flex items-start text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
-                      {item}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />                      {item}
                     </li>
                   ))}
                 </ul>
@@ -386,8 +379,7 @@ const AIBusinessIntelligenceAnalytics = () => {
               >"
                 <div className="w-12 h-12 bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 border border-emerald-400/30">"
                   <Target className="w-6 h-6 text-emerald-400" />
-                </div>"
-                <h3 className="text-white font-semibold">{useCase}</h3>
+                </div>"                <h3 className="text-white font-semibold">{useCase}</h3>
               </motion.div>
             ))}
           </div>
@@ -449,8 +441,7 @@ const AIBusinessIntelligenceAnalytics = () => {
                       key={featureIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -459,8 +450,7 @@ const AIBusinessIntelligenceAnalytics = () => {
                   className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started"
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </a>
+                  <ArrowRight className="w-5 h-5 ml-2" />                </a>
               </motion.div>
             ))}
           </div>
@@ -497,8 +487,7 @@ const AIBusinessIntelligenceAnalytics = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30">"
                 <Phone className="w-8 h-8 text-green-400" />
               </div>"
-              <h3 className="text-xl font-bold text-white mb-2">Phone</h3>"
-              <p className="text-gray-300 mb-4">+1 302 464 0950</p>
+              <h3 className="text-xl font-bold text-white mb-2">Phone</h3>"              <p className="text-gray-300 mb-4">+1 302 464 0950</p>
               <a"
                 href="tel:+13024640950""
                 className="text-green-400 hover:text-green-300 transition-colors duration-300"
@@ -517,8 +506,7 @@ const AIBusinessIntelligenceAnalytics = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30">"
                 <Mail className="w-8 h-8 text-green-400" />
               </div>"
-              <h3 className="text-xl font-bold text-white mb-2">Email</h3>"
-              <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
+              <h3 className="text-xl font-bold text-white mb-2">Email</h3>"              <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
               <a"
                 href="mailto:kleber@ziontechgroup.com""
                 className="text-green-400 hover:text-green-300 transition-colors duration-300"
@@ -544,8 +532,7 @@ const AIBusinessIntelligenceAnalytics = () => {
               <a"
                 href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709""
                 target="_blank""
-                rel="noopener noreferrer""
-                className="text-green-400 hover:text-green-300 transition-colors duration-300"
+                rel="noopener noreferrer""                className="text-green-400 hover:text-green-300 transition-colors duration-300"
               >
                 View on Map
               </a>
@@ -554,8 +541,7 @@ const AIBusinessIntelligenceAnalytics = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIBusinessIntelligenceAnalytics;
 '"`

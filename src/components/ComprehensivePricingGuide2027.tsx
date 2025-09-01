@@ -1,32 +1,5 @@
 import React, { useState, useEffect } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  DollarSign,
-  TrendingUp,
-  Clock,
-  Users,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  ExternalLink,
-  Search,
-  Filter,
-  Download,
-  Phone,
-  Mail,
-  MapPin,
-  Calculator,
-  BarChart3,
-  Target,
-  Zap,
-  Shield,
-  Brain,
-  Rocket'
-} from 'lucide-react';
-import { servicesCatalog } from "../data/servicesCatalog";"
-import { innovativeServices2027 } from "../data/innovativeServices2027";
-
 export const ComprehensivePricingGuide2027: React.FC = () => {;'
   const [searchQuery, setSearchQuery] = useState('');'
   const [selectedCategory, setSelectedCategory] = useState<any>('All');'
@@ -40,8 +13,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
       { threshold: 0.1 }
     );
 '
-    const element = document.getElementById('comprehensive-pricing-guide');
-    if (element) {
+    const element = document.getElementById('comprehensive-pricing-guide');    if (element) {
 
       observer.observe(element)}
 
@@ -65,12 +37,11 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
       features: service.features || [],;'
       ctaLabel: service.ctaLabel || 'Get Started',;'
       href: service.href || '/contact';
-    }) ) ;
-  ];
+    }) ) ;  ];
 
   // Filter services based on search and category
-  const filteredServices = allServices.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+  
+    
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
 '
@@ -85,8 +56,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;'
-      case 'name':;
+    switch (sortBy) {;'      case 'name':;
         return a.title.localeCompare(b.title);'
       case 'price':;'
         return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));'
@@ -102,8 +72,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
   const contactInfo = {
 '
   phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com',;
-  ;
+    email: 'kleber@ziontechgroup.com',;  ;
   ;
   ;
   ;'
@@ -111,15 +80,12 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
   ;
 
 ;
-;
-
 };
 
   const getPriceRange = (price: string) => {;'
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));'
     if (numPrice < 100) return 'Low';'
-    if (numPrice < 1000) return 'Medium';'
-    return 'High'};
+    if (numPrice < 1000) return 'Medium';'    return 'High'};
 '
       default: return 'text-white'}
   };
@@ -148,8 +114,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
       'LegalTech Solutions': Scale,;'
       'Real Estate Tech': Home,;'
       'Supply Chain Solutions': Truck;
-    };
-    return iconMap[category] || Target};
+    };    return iconMap[category] || Target};
 
   return ("
     <section id = "comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
@@ -178,8 +143,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
           className="text-center mb-16"
 "
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">"
-            <Calculator className="w-5 h-5 text-zion-cyan mr-2" />"
-            <span className="text-zion-cyan font-semibold">2027 Pricing Guide</span>
+            <Calculator className="w-5 h-5 text-zion-cyan mr-2" />"            <span className="text-zion-cyan font-semibold">2027 Pricing Guide</span>
           </div>
 "
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">"
@@ -229,8 +193,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                 <input"
-                  type="text""
-                  placeholder="Search services..."
+                  type="text""                  placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
@@ -293,14 +256,12 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
   { opacity: 0,
   y: 30 ;
 
-}}
-          animate = {
+}}          animate = {
 
   isVisible ? { opacity: 1,;
   y: 0 ;
 
-} : { opacity: 0, y: 30 }}
-          transition = {
+} : { opacity: 0, y: 30 }}          transition = {
 
   { duration: 0.8,
   delay: 0.4 ;
@@ -310,8 +271,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
 
 
 
-}}"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+}}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {sortedServices.map ( (service, index) => (;
             <motion.div
@@ -414,8 +374,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
 
                   {service.ctaLabel}"
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />"
-                  {service.external && <ExternalLink className="w-4 h-4" />}
-                </a>
+                  {service.external && <ExternalLink className="w-4 h-4" />}                </a>
               </div>
             </motion.div>) ) }
         </motion.div>
@@ -427,14 +386,12 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
   { opacity: 0,
   y: 30 ;
 
-}}
-          animate = {
+}}          animate = {
 
   isVisible ? { opacity: 1,;
   y: 0 ;
 
-} : { opacity: 0, y: 30 }}
-          transition = {
+} : { opacity: 0, y: 30 }}          transition = {
 
   { duration: 0.8,
   delay: 0.6 ;
@@ -444,8 +401,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
 
 
 
-}}"
-          className="text-center"
+}}"          className="text-center"
 "
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;"
             <h3 className="text-3xl font-bold text-white mb-6">
@@ -466,8 +422,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
                 <span className="font-semibold">{contactInfo.email}</span>
               </div>"
               <div className="flex items-center justify-center gap-3 text-zion-cyan">"
-                <MapPin className="w-5 h-5" />"
-                <span className="font-semibold text-center">{contactInfo.address}</span>
+                <MapPin className="w-5 h-5" />"                <span className="font-semibold text-center">{contactInfo.address}</span>
               </div>
             </div>
 "
@@ -477,8 +432,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 
                 Get Custom Quote"
-                <ArrowRight className="w-4 h-4" />
-              </a>
+                <ArrowRight className="w-4 h-4" />              </a>
               <a"
                 href="https://ziontechgroup.com""
                 target="_blank""
@@ -486,8 +440,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2"
 
                 Visit Website"
-                <ExternalLink className="w-4 h-4" />
-              </a>
+                <ExternalLink className="w-4 h-4" />              </a>
             </div>;
           </div>;
         </motion.div>;

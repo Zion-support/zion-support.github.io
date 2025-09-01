@@ -77,19 +77,11 @@ const CONTACT = {
 '
   mobile: '+1 302 464 0950','
     email: 'kleber@ziontechgroup.com','
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-  ;
+    address: '364 E Main St STE 1008 Middletown DE 19709',;  ;
   ;
   ;
   ;'
   website: 'https://ziontechgroup.com';
-;
-
-
-
-
-
-
 };
 ;
 export const enhancedServices2025: EnhancedService[] = [
@@ -489,8 +481,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Team performance analytics','
       'Automated PR comments','
       'Compliance checking (SOC2, HIPAA)','
-      'Performance impact analysis','
-      'Multi-language support'
+      'Performance impact analysis','      'Multi-language support'
     ],
     benefits = ['
       'Reduce code review time by 40-60%','
@@ -537,8 +528,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Integration with security tools','
       'Compliance reporting','
       'Team collaboration features','
-      'Knowledge base management','
-      'Performance metrics dashboard'
+      'Knowledge base management','      'Performance metrics dashboard'
     ],"
     useCases["Enterprise security", "Compliance", "Threat prevention", "Incident response"],"
     integrations["Active Directory", "SIEM systems", "Cloud platforms", "Network devices"],"
@@ -552,8 +542,7 @@ export const enhancedServices2025: EnhancedService[] = [
       email: "kleber@ziontechgroup.com",;"
       address: "364 E Main St STE 1008 Middletown DE 19709",;"
       website: "https://ziontechgroup.com";
-    }
-  },
+    }  },
   // Edge Computing & IoT Services
   {
 "
@@ -570,8 +559,7 @@ export const enhancedServices2025: EnhancedService[] = [
       id: "zion-edge-computing",;"
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100",;
     },"
-    images["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],"
-    createdAt: "2025-01-26T08:45:00.000Z",;
+    images["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],"    createdAt: "2025-01-26T08:45:00.000Z",;
     aiScore: 94,;
     rating: 4.7,;
     reviewCount: 73,;
@@ -620,8 +608,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Vendor management','
       'Compliance checking','
       'Mobile app access','
-      'API integration','
-      'Custom reporting'
+      'API integration','      'Custom reporting'
     ],
     benefits = ['
       'Reduce processing time by 90%','
@@ -668,8 +655,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Automated outreach campaigns','
       'Integration with CRM systems','
       'Performance analytics','
-      'Custom dashboards','
-      'API access'
+      'Custom dashboards','      'API access'
     ],"
     useCases["Personal finance", "Investment management", "Retirement planning", "Risk management"],"
     integrations["Banking systems", "Investment platforms", "Tax software", "Financial data providers"],"
@@ -683,8 +669,7 @@ export const enhancedServices2025: EnhancedService[] = [
       email: "kleber@ziontechgroup.com",;"
       address: "364 E Main St STE 1008 Middletown DE 19709",;"
       website: "https://ziontechgroup.com";
-    }
-  },
+    }  },
   // Legal AI Services
   {
 "
@@ -701,8 +686,7 @@ export const enhancedServices2025: EnhancedService[] = [
       id: "zion-legal-tech",;"
       avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = format&fit=crop&w=100&h=100",;
     },"
-    images["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],"
-    createdAt: "2025-01-19T12:15:00.000Z",;
+    images["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],"    createdAt: "2025-01-19T12:15:00.000Z",;
     aiScore: 93,;
     rating: 4.7,;
     reviewCount: 87,;
@@ -751,8 +735,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Mobile app access','
       'API access','
       'Custom alerts','
-      'Data export capabilities','
-      'Team collaboration'
+      'Data export capabilities','      'Team collaboration'
     ],
     benefits = ['
       'Improve decision making by 40%','
@@ -799,8 +782,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Security consulting','
       'Penetration testing','
       'Security awareness training','
-      'Incident post-mortem','
-      'Continuous improvement'
+      'Incident post-mortem','      'Continuous improvement'
     ],
     benefits = ['
       'Proactive threat detection','
@@ -847,8 +829,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Data encryption','
       'Compliance support','
       '24/7 support','
-      'Recovery documentation','
-      'Business continuity planning'
+      'Recovery documentation','      'Business continuity planning'
     ],
     benefits = ['
       '99.99% recovery success rate','
@@ -894,8 +875,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Compliance reporting','
       'Vendor management','
       'Contract tracking','
-      'Mobile app access','
-      'API integration'
+      'Mobile app access','      'API integration'
     ],
     benefits = ['
       'Optimize IT costs by 30%','
@@ -942,8 +922,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Voice recognition','
       'Sentiment analysis','
       'Escalation handling','
-      'Knowledge base integration','
-      'Performance monitoring'
+      'Knowledge base integration','      'Performance monitoring'
     ],
     benefits = ['
       '24/7 customer support','
@@ -989,8 +968,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Real-time predictions','
       'Performance monitoring','
       'Automated insights','
-      'Scenario planning','
-      'Risk assessment'
+      'Scenario planning','      'Risk assessment'
     ],
     benefits = ['
       'Improve decision making by 50%','
@@ -1036,8 +1014,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Quality control automation','
       'Process monitoring','
       'Analytics dashboard','
-      'API access','
-      'Mobile integration'
+      'API access','      'Mobile integration'
     ],
     benefits = ['
       'Automate quality control by 80%','
@@ -1084,8 +1061,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Training and education','
       'Research collaboration','
       'Performance benchmarking','
-      'Custom development','
-      'Ongoing support'
+      'Custom development','      'Ongoing support'
     ],
     benefits = ['
       'Solve previously intractable problems','
@@ -1131,8 +1107,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Security auditing','
       'Token economics','
       'Governance systems','
-      'Cross-chain solutions','
-      'Mobile integration'
+      'Cross-chain solutions','      'Mobile integration'
     ],
     benefits = ['
       'Decentralized solutions','

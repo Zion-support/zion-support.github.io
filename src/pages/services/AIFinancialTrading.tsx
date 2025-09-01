@@ -1,7 +1,6 @@
 import React from 'react';'
 import { motion } from 'framer-motion';
 import {
-
   Brain, 
   TrendingUp, 
   DollarSign, 
@@ -165,9 +164,8 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Financial Trading Platform - Zion Tech Group""
-        description="Revolutionary AI-powered financial trading platform with advanced algorithms, predictive analytics, and automated risk management."
-      />
+        title="AI Financial Trading Platform - Zion Tech Group""        description="Revolutionary AI-powered financial trading platform with advanced algorithms, predictive analytics, and automated risk management."
+       />
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -179,8 +177,7 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
             transition={{ duration: 0.8 }}
           >"
             <div className="flex items-center justify-center mb-6">"
-              <TrendingUp className="w-12 h-12 text-green-400 mr-3" />"
-              <h1 className="text-4xl md:text-6xl font-bold text-white">
+              <TrendingUp className="w-12 h-12 text-green-400 mr-3" />"              <h1 className="text-4xl md:text-6xl font-bold text-white">
                 AI Financial Trading Platform
               </h1>
             </div>"
@@ -325,8 +322,7 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
                 transition={{ duration: 0.8, delay: index * 0.1 }}"
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 text-center hover:border-green-400/50 transition-all duration-300"
               >"
-                <DollarIcon className="w-12 h-12 text-green-400 mx-auto mb-4" />"
-                <span className="text-white font-semibold text-lg">{asset}</span>
+                <DollarIcon className="w-12 h-12 text-green-400 mx-auto mb-4" />"                <span className="text-white font-semibold text-lg">{asset}</span>
               </motion.div>
             ))}
           </div>
@@ -359,8 +355,7 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
                 transition={{ duration: 0.8, delay: index * 0.1 }}"
                 className="flex items-start space-x-3"
               >"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />"
-                <span className="text-gray-300 text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />"                <span className="text-gray-300 text-lg">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -417,8 +412,7 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>

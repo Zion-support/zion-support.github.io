@@ -1,75 +1,6 @@
 import React from 'react';'
 import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
-import {
-
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Globe,
-  Rocket,
-  Cpu,
-  Database,
-  Lock,
-  Network,
-  Code,
-  Server'
-} from 'lucide-react';
-'
-      features['Emerging Tech', 'Prototype Development', 'Technology Consulting', 'Innovation Strategy'],'
-      color: 'from-indigo-500 to-purple-500';
-    };
-  ];
-const techSolutions = [
-  {
-
-    icon: "🤖","
-    title: "AI & Machine Learning","
-    description: "Intelligent automation, predictive analytics, and cognitive computing solutions","
-    benefits: ["Increase efficiency by 300%", "Reduce costs by 40%", "24/7 operation"],"
-    color: "from-purple-500 to-pink-500"
-  },
-  {
-"
-    icon: "☁️","
-    title: "Cloud Infrastructure","
-    description: "Scalable, secure, and high-performance cloud solutions for modern businesses","
-    benefits: ["99.9% uptime guarantee", "Global scalability", "Advanced security"],"
-    color: "from-blue-500 to-cyan-500"
-  },
-  {
-"
-    icon: "🔒","
-    title: "Cybersecurity","
-    description: "Comprehensive security solutions protecting your digital assets and data","
-    benefits: ["Real-time threat detection", "Compliance ready", "Zero-trust architecture"],"
-    color: "from-red-500 to-orange-500"
-  },
-  {
-"
-    icon: "📱","
-    title: "Mobile Solutions","
-    description: "Cross-platform mobile applications and responsive web solutions","
-    benefits: ["Native performance", "Cross-platform", "Offline capability"],"
-    color: "from-green-500 to-emerald-500"
-  },
-  {
-"
-    icon: "🌐","
-    title: "Web Development","
-    description: "Modern, responsive web applications and e-commerce solutions","
-    benefits: ["SEO optimized", "Fast loading", "Mobile-first design"],"
-    color: "from-indigo-500 to-purple-500"
-  },
-  {;"
-    icon: "📊",;"
-    title: "Data Analytics",;"
-    description: "Business intelligence and data-driven insights for strategic decision making",;"
-    benefits: ["Real-time dashboards", "Predictive analytics", "Custom reporting"],;"
-    color: "from-yellow-500 to-orange-500";
-  };
-];
+import { Link } from 'react-router-dom';];
 
 export function TechSolutionsSection() {
   return ("
@@ -169,8 +100,7 @@ export function TechSolutionsSection() {
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200 group-hover:translate-x-1"
 
                   Learn More"
-                  <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                </Link>
+                  <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />                </Link>
               </motion.div>) }) }
         </div>
 
@@ -217,8 +147,7 @@ export function TechSolutionsSection() {
                 className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
 
                 View All Services"
-                <Code className="ml-2 h-5 w-5" />
-              </Link>
+                <Code className="ml-2 h-5 w-5" />              </Link>
             </div>
           </div>
         </motion.div>;
@@ -232,7 +161,6 @@ export default TechSolutionsSection;"
       </div>;
     </section>;) ;
 }
-
 export default TechSolutionsSection;
 export default TechSolutionsSection;
 '"`

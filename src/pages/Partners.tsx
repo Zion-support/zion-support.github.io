@@ -483,8 +483,7 @@ const Partners = () => {
         </div>
       </section>
     </div>
-  );
-};
+  );};
 
 export default Partners;
 '"

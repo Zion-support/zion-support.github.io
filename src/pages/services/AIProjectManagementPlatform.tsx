@@ -78,8 +78,7 @@ export default function AIProjectManagementPlatform() {
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"
             <Calendar className="w-4 h-4 mr-2" /> AI-Powered Project Management
           </div>"
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Project Management Platform</h1>"
-          <p className="text-indigo-100 text-xl">Streamline your projects with intelligent planning, automated optimization, and predictive insights.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Project Management Platform</h1>"          <p className="text-indigo-100 text-xl">Streamline your projects with intelligent planning, automated optimization, and predictive insights.</p>
         </div>
       </section>
 "
@@ -90,8 +89,7 @@ export default function AIProjectManagementPlatform() {
             <ul className="space-y-3">
               {features.map((f) => ("
                 <li key={f} className="flex items-start">"
-                  <Check className="w-5 h-5 text-indigo-600 mr-3 mt-0.5" />"
-                  <span className="text-zion-slate-dark">{f}</span>
+                  <Check className="w-5 h-5 text-indigo-600 mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{f}</span>
                 </li>
               ))}
             </ul>"
@@ -117,8 +115,7 @@ export default function AIProjectManagementPlatform() {
                 View Full Pricing <ExternalLink className="w-4 h-4 ml-2" />
               </a>"
               <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg inline-flex items-center">"
-                Learn More <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
+                Learn More <ExternalLink className="w-4 h-4 ml-2" />              </a>
             </div>
           </div>
         </div>
@@ -129,8 +126,7 @@ export default function AIProjectManagementPlatform() {
             <ul className="space-y-3">
               {benefits.map((b) => ("
                 <li key={b} className="flex items-start">"
-                  <TrendingUp className="w-5 h-5 text-indigo-600 mr-3 mt-0.5" />"
-                  <span className="text-zion-slate-dark">{b}</span>
+                  <TrendingUp className="w-5 h-5 text-indigo-600 mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{b}</span>
                 </li>
               ))}
             </ul>
@@ -140,8 +136,7 @@ export default function AIProjectManagementPlatform() {
             <ul className="space-y-3">
               {useCases.map((u) => ("
                 <li key={u} className="flex items-start">"
-                  <Target className="w-5 h-5 text-indigo-600 mr-3 mt-0.5" />"
-                  <span className="text-zion-slate-dark">{u}</span>
+                  <Target className="w-5 h-5 text-indigo-600 mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{u}</span>
                 </li>
               ))}
             </ul>
@@ -153,8 +148,7 @@ export default function AIProjectManagementPlatform() {
           <div className="grid md:grid-cols-3 gap-6">
             {projectTools.map((t) => ("
               <div key={t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">"
-                <FolderOpen className="w-6 h-6 text-indigo-600 mb-3" />"
-                <div className="text-zion-slate-dark font-semibold">{t}</div>
+                <FolderOpen className="w-6 h-6 text-indigo-600 mb-3" />"                <div className="text-zion-slate-dark font-semibold">{t}</div>
               </div>
             ))}
           </div>
@@ -165,8 +159,7 @@ export default function AIProjectManagementPlatform() {
           <div className="grid md:grid-cols-3 gap-6">
             {aiCapabilities.map((c) => ("
               <div key={c} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">"
-                <Brain className="w-6 h-6 text-indigo-600 mb-3" />"
-                <div className="text-zion-slate-dark font-semibold">{c}</div>
+                <Brain className="w-6 h-6 text-indigo-600 mb-3" />"                <div className="text-zion-slate-dark font-semibold">{c}</div>
               </div>
             ))}
           </div>
@@ -203,8 +196,7 @@ export default function AIProjectManagementPlatform() {
           <div className="grid md:grid-cols-3 gap-6">"
             <div className="text-center">"
               <Clock className="w-12 h-12 text-blue-600 mx-auto mb-3" />"
-              <h4 className="font-semibold text-zion-slate-dark mb-2">On-Time Delivery</h4>"
-                              <p className="text-sm text-zion-slate-light">Target: &gt; 95%</p>
+              <h4 className="font-semibold text-zion-slate-dark mb-2">On-Time Delivery</h4>"                              <p className="text-sm text-zion-slate-light">Target: &gt; 95%</p>
             </div>"
             <div className="text-center">"
               <BarChart3 className="w-12 h-12 text-blue-600 mx-auto mb-3" />"
@@ -213,8 +205,7 @@ export default function AIProjectManagementPlatform() {
             </div>"
             <div className="text-center">"
               <Users className="w-12 h-12 text-blue-600 mx-auto mb-3" />"
-              <h4 className="font-semibold text-zion-slate-dark mb-2">Team Satisfaction</h4>"
-                              <p className="text-sm text-zion-slate-light">Target: &gt; 85%</p>
+              <h4 className="font-semibold text-zion-slate-dark mb-2">Team Satisfaction</h4>"                              <p className="text-sm text-zion-slate-light">Target: &gt; 85%</p>
             </div>
           </div>
         </div>
@@ -226,8 +217,7 @@ export default function AIProjectManagementPlatform() {
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
             </a>"
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg">"
-              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
-            </a>
+              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com            </a>
           </div>"
           <div className="mt-4 text-sm text-zion-slate-light">"
             Visit us at: <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-indigo-600 hover:underline">https://ziontechgroup.com</a>

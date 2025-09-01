@@ -204,7 +204,6 @@ import { SEO } from '@/components/SEO';
       emerging: 'Emerging Tech'};'
     return categoryNames[category] || 'Uncategorized';
   };
-
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO`
@@ -213,14 +212,12 @@ import { SEO } from '@/components/SEO';
       />
 
       {/* Navigation */}"
-      <section className="py-6 bg-slate-800/50">"
-        <div className="container mx-auto px-4">
+      <section className="py-6 bg-slate-800/50">"        <div className="container mx-auto px-4">
           <Link"
             to="/blog""
             className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
           >"
-            <ArrowLeft className="w-4 h-4" />
-            <span>Back to Blog</span>
+            <ArrowLeft className="w-4 h-4" />            <span>Back to Blog</span>
           </Link>
         </div>
       </section>
@@ -292,8 +289,7 @@ import { SEO } from '@/components/SEO';
                 <button className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200">"
                   <Bookmark className="w-5 h-5" />
                 </button>"
-                <button className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200">"
-                  <Share2 className="w-5 h-5" />
+                <button className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200">"                  <Share2 className="w-5 h-5" />
                 </button>
               </div>
             </div>
@@ -314,8 +310,7 @@ import { SEO } from '@/components/SEO';
               {/* Featured Image */}"
               <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl border border-cyan-400/30 flex items-center justify-center mb-12">"
                 <div className="text-center">"
-                  <BookOpen className="w-20 h-20 text-cyan-400 mx-auto mb-4" />"
-                  <p className="text-gray-300">Featured Article Image</p>
+                  <BookOpen className="w-20 h-20 text-cyan-400 mx-auto mb-4" />"                  <p className="text-gray-300">Featured Article Image</p>
                 </div>
               </div>
 
@@ -335,8 +330,7 @@ import { SEO } from '@/components/SEO';
           <div className="max-w-4xl mx-auto">"
             <div className="flex items-center space-x-3">"
               <Tag className="w-5 h-5 text-cyan-400" />"
-              <span className="text-white font-medium">Tags:</span>"
-              <div className="flex flex-wrap gap-2">
+              <span className="text-white font-medium">Tags:</span>"              <div className="flex flex-wrap gap-2">
                 {blogPost.tags.map(tag => (
                   <span
                     key={tag}"
@@ -365,8 +359,7 @@ import { SEO } from '@/components/SEO';
               </h3>"
               <div className="flex items-start space-x-4">"
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">"
-                  <User className="w-8 h-8 text-white" />
-                </div>
+                  <User className="w-8 h-8 text-white" />                </div>
                 <div>"
                   <h4 className="text-xl font-semibold text-white mb-2">
                     {blogPost.author}
@@ -407,8 +400,7 @@ import { SEO } from '@/components/SEO';
                 className="bg-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden hover:border-cyan-400/50 transition-all duration-300 group"
               >"
                 <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">"
-                  <BookOpen className="w-16 h-16 text-cyan-400" />
-                </div>
+                  <BookOpen className="w-16 h-16 text-cyan-400" />                </div>
 "
                 <div className="p-6">"
                   <div className="flex items-center space-x-2 mb-3">"
@@ -431,8 +423,7 @@ import { SEO } from '@/components/SEO';
                       <span>{formatDate(post.date)}</span>
                     </div>"
                     <div className="flex items-center space-x-2">"
-                      <Clock className="w-4 h-4" />
-                      <span>{post.readTime}</span>
+                      <Clock className="w-4 h-4" />                      <span>{post.readTime}</span>
                     </div>
                   </div>
                 </div>

@@ -81,10 +81,8 @@ const Consulting = () => {
       icon: Globe;
     },;
     {;"
-      title: "Government",;"
-      description: "Public sector digital transformation consulting",;
-      icon: Briefcase;
-    };
+      title: "Government",;"      description: "Public sector digital transformation consulting",;
+      icon: Briefcase};
   ];
 
   const benefits = [;"
@@ -119,8 +117,7 @@ const Consulting = () => {
       phase: "Implementation",;"
       description: "Executing the strategy with ongoing support and guidance",;"
       duration: "Ongoing";
-    };
-  ];
+    };  ];
 
   return ("
     <div className = "min-h-screen bg-slate-900 text-white">
@@ -129,8 +126,7 @@ const Consulting = () => {
         <div className="max-w-7xl mx-auto text-center">"
           <div className="mb-8">"
             <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 text-orange-400 rounded-full text-sm font-medium mb-6">"
-              <Users className="w-4 h-4 mr-2"/>
-              Consulting Services
+              <Users className="w-4 h-4 mr-2"/>              Consulting Services
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Expert Technology"
@@ -235,8 +231,7 @@ const Consulting = () => {
             <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl p-8 border border-orange-500/30">"
               <div className="text-center">"
                 <Award className="w-24 h-24 text-orange-400 mx-auto mb-4"/>"
-                <h3 className="text-2xl font-bold text-white mb-2">Proven Expertise</h3>"
-                <p className="text-gray-300 mb-6">
+                <h3 className="text-2xl font-bold text-white mb-2">Proven Expertise</h3>"                <p className="text-gray-300 mb-6">
                   Our consultants bring decades of combined experience
                   and proven track records of success.
                 </p>"

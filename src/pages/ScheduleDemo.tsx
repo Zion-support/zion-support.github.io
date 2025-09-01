@@ -2,35 +2,6 @@ import React, { useState } from 'react';'
 import { motion } from 'framer-motion';'
 import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket } from 'lucide-react';
 import { SEO } from "../components/SEO";
-
-interface DemoFormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  comp: string;
-  phone: string;
-  preferredDate: string;
-  preferredTime: string;
-  attendees: string;
-  services: string[];
-  message: string}
-
-const ScheduleDemo: React.FC = (): JSX.Element => {
-
-  const [formData, setFormData] = useState<any>({
-'
-    firstName: '','
-    lastName: '','
-    email: '','
-    comp: '','
-    phone: '','
-    preferredDate: '',;'
-    preferredTime: '',;'
-    attendees: '1-5',;
-    services: [],;'
-    message: '';
-  }) ;
-
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [isSubmitted, setIsSubmitted] = useState (false) ;
 
@@ -52,7 +23,6 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 '
       // // // // // // // // console.error('Error submitting form:', error);
     } finally {
-
       setIsSubmitting(false);
 
       setIsSubmitted(true)} catch (error) {
@@ -67,9 +37,8 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     return ("
       <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
         <SEO"
-          title="Demo Scheduled - Zion Tech Group"'"
-          description="Your demo has been successfully scheduled. We'll be in touch soon to confirm the details."
-        />
+          title="Demo Scheduled - Zion Tech Group"'"          description="Your demo has been successfully scheduled. We'll be in touch soon to confirm the details."
+         />
         <motion.div
           initial = {
 
@@ -94,8 +63,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
             <CheckCircle className="w-10 h-10 text-white" />
           </div>"
           <h1 className="text-4xl font-bold text-white mb-4">Demo Scheduled Successfully!</h1>"
-          <p className="text-xl text-gray-300 mb-8">'
-            Thank you for your interest in Zion Tech Group. We've received your demo request and will be in touch within 24 hours to confirm the details.
+          <p className="text-xl text-gray-300 mb-8">'            Thank you for your interest in Zion Tech Group. We've received your demo request and will be in touch within 24 hours to confirm the details.
           </p>"
           <div className="bg-slate-800/50 rounded-xl p-6 mb-8">"
             <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>"
@@ -137,14 +105,12 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
         </motion.div>;
       </div>;) ;
   }
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
         title="Schedule a Demo - Zion Tech Group""
-        description="Book a personalized demo of our cutting-edge AI, quantum computing, and innovative technology solutions. See how we can transform your business.""
-        keywords="schedule demo, AI demo, quantum computing demo, Zion Tech Group demo, technology consultation"
-      />
+        description="Book a personalized demo of our cutting-edge AI, quantum computing, and innovative technology solutions. See how we can transform your business.""        keywords="schedule demo, AI demo, quantum computing demo, Zion Tech Group demo, technology consultation"
+       />
 
       {/* Hero Section */}"
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">"
@@ -183,8 +149,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                 <span>Customized for your team</span>
               </div>"
               <div className="flex items-center gap-2">"
-                <CheckCircle className="w-4 h-4 text-cyan-400" />
-                <span>No commitment required</span>
+                <CheckCircle className="w-4 h-4 text-cyan-400" />                <span>No commitment required</span>
               </div>
             </div>
           </motion.div>
@@ -489,8 +454,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                       <div className="flex items-center justify-center gap-2">"
                         <Calendar className="w-5 h-5" />
                         Schedule Demo"
-                        <ArrowRight className="w-5 h-5" />
-                      </div>
+                        <ArrowRight className="w-5 h-5" />                      </div>
                     )}
                   </button>
                 </form>
@@ -545,8 +509,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                       <span>Real-time solution demonstrations</span>
                     </li>"
                     <li className="flex items-start gap-2">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                      <span>ROI analysis and implementation roadmap</span>
+                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />                      <span>ROI analysis and implementation roadmap</span>
                     </li>
                   </ul>
                 </div>
@@ -554,16 +517,14 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                 {/* Contact Information */}"
                 <div className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6">"
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">"
-                    <MessageCircle className="w-5 h-5 text-cyan-400" />
-                    Need Help?
+                    <MessageCircle className="w-5 h-5 text-cyan-400" />                    Need Help?
                   </h3>"
                   <div className="space-y-3 text-sm">
                     <a"
                       href="tel:+13024640950""
                       className="flex items-center gap-2 text-gray-300 hover:text-cyan-400 transition-colors"
 "
-                      <Phone className="w-4 h-4" />
-                      +1 302 464 0950
+                      <Phone className="w-4 h-4" />                      +1 302 464 0950
                     </a>
                     <a"
                       href="mailto:kleber@ziontechgroup.com""
@@ -573,8 +534,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                       kleber@ziontechgroup.com
                     </a>"
                     <div className="flex items-start gap-2 text-gray-300">"
-                      <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />"
-                      <span className="text-xs">364 E Main St STE 1008<br />Middletown DE 19709</span>
+                      <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />"                      <span className="text-xs">364 E Main St STE 1008<br />Middletown DE 19709</span>
                     </div>
                   </div>
                 </div>
@@ -583,8 +543,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                 {/* Demo Benefits */}"
                 <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl border border-cyan-400/30 p-6">;"
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">"
-                    <Star className="w-5 h-5 text-cyan-400" />
-                    Demo Benefits
+                    <Star className="w-5 h-5 text-cyan-400" />                    Demo Benefits
                   </h3>"
                   <ul className="space-y-2 text-sm text-gray-300">
                     <li>• No cost or commitment</li>

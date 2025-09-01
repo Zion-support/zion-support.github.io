@@ -2,16 +2,7 @@ import React, { useState } from 'react';
 import { SEO } from "../components/SEO";"
 import { innovativeMicroSaasServices2030 } from "../data/innovativeMicroSaasServices2030";"
 import { comprehensiveITServices2030 } from "../data/comprehensiveITServices2030";"
-import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030";
-
-const ComprehensiveServicesShowcase2030: React.FC = () => {;'
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const getFilteredServices = (...args: unknown[]): unknown => {;
-    let services: unknown[] = [];
-    
+import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030";    
     switch (activeTab) {
 '
       case 'microsaas':
@@ -32,16 +23,14 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
         service.tags.some(tag: string tag.toLowerCase().includes(searchTerm.toLowerCase()));
       );
     }
-'
-    if (selectedCategory !== 'all') {
+'    if (selectedCategory !== 'all') {
 
       services = services.filter(service => service.category === selectedCategory)};
 ;
     return services};
 
   const getCategories = (...args: unknown[]): unknown => {;
-    let services: unknown[] = [];
-    
+    let services: unknown[] = [];    
     switch (activeTab) {
 '
       case 'microsaas':
@@ -54,7 +43,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
         services = comprehensiveAIServices2030;
         break}
 
-    const categories = [...new Set(services.map(service => service.category))];
+    
     return categories};
 
   const renderServiceCard = (service)  => {
@@ -159,8 +148,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                   className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
 
                   Learn More
-                </a>;
-              </div>;
+                </a>;              </div>;
             </div>;
           </div>;
         </div>;
@@ -171,8 +159,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
           <div className="p-6">"
             <div className="flex items-start justify-between mb-4">"
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>"
-              <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-green-600 to-blue-600 rounded-full">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>"              <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-green-600 to-blue-600 rounded-full">
                 {service.category}
               </span>
             </div>
@@ -275,8 +262,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
           <div className="p-6">"
             <div className="flex items-start justify-between mb-4">"
               <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>"
-              <div className="flex flex-col items-end">"
-                <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-2">
+              <div className="flex flex-col items-end">"                <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-2">
                   {service.category}
                 </span>"
                 <div className="text-sm text-gray-600">"
@@ -382,8 +368,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
             </div>;
           </div>;
         </div>;
-      );
-    }
+      )}
   };
 
   return()
@@ -395,8 +380,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
         ogImage="https://ziontechgroup.com/images/services-showcase-2030.jpg""
         ogUrl="https://ziontechgroup.com/comprehensive-services-showcase-2030"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
+"      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
         {/* Hero Section */}"
         <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">"
           <div className="container mx-auto px-4 py-20">"
@@ -532,8 +516,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                 onClick={() => {;'
                   setSearchTerm('');'
                   setSelectedCategory('all');
-                }}"
-                className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                }}"                className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Clear Filters
               </button>

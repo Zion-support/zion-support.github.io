@@ -12,8 +12,7 @@ const reportWebVitals = (metric: any) => {
 '
   if (process.env.NODE_ENV === 'development') {
 '
-    // console.log('Web Vitals:', metric);
-  }
+    // console.log('Web Vitals:', metric);  }
   // In production, you could send this to analytics
 };
 
@@ -22,19 +21,17 @@ const renderApp = () => {
 '
   const root = ReactDOM.createRoot(document.getElementById('root')!);
 
-  root.render()
-    <React.StrictMode>
+  root.render()    <React.StrictMode>
       <Router>
         <HelmetProvider>
           <ErrorBoundary>
-            <App />
+            <App  />
           </ErrorBoundary>
         </HelmetProvider>
       </Router>
     </React.StrictMode>
   );
 };
-
 // Initialize the application
 
 try {
@@ -46,8 +43,7 @@ try {
     // console.warn('Service worker registration failed:', error);
   });
 
-  // Report web vitals if available'
-  if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+  // Report web vitals if available'  if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
 
     try {
       const observer = new PerformanceObserver(list => {
@@ -61,15 +57,13 @@ try {
     } catch (error) {
 '
       // console.warn('Performance monitoring failed:', error);
-    }
-  }
+    }  }
 } catch (error) {
 '
   // console.error('Failed to render application:', error);
 
   // Fallback error display'
-  const rootElement = document.getElementById('root');
-  if (rootElement) {
+  const rootElement = document.getElementById('root');  if (rootElement) {
 
     rootElement.innerHTML = `
       <div style="
@@ -104,6 +98,5 @@ try {
         </div>
       </div>`
     `;
-  }
-}
+  }}
 '"`

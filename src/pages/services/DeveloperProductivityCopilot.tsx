@@ -10,7 +10,6 @@ import {
   Mail} from 'lucide-react.ts';
 
 const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
-
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO"
@@ -48,8 +47,7 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
         <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-6">"
           <div className="flex items-center gap-2 text-slate-200 font-semibold">"
             <DollarSign className="h-4 w-4" /> Pricing
-          </div>"
-          <ul className="mt-3 grid gap-3 sm:grid-cols-2 text-slate-300 text-sm">
+          </div>"          <ul className="mt-3 grid gap-3 sm:grid-cols-2 text-slate-300 text-sm">
             <li>Team: $6/dev/mo (min 10)</li>
             <li>Business: $12/dev/mo</li>
             <li>Enterprise: Custom; SSO, on-prem agent, SLAs</li>
@@ -75,14 +73,12 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
               className="inline-flex items-center gap-2 hover:text-cyan-200"
             >"
               <Mail className="h-4 w-4" /> kleber@ziontechgroup.com
-            </a>
-          </div>
+            </a>          </div>
         </div>
       </section>
     </div>
   );
 };
 ;
-export { DeveloperProductivityCopilot };
-export default DeveloperProductivityCopilot;
+export { DeveloperProductivityCopilot };export default DeveloperProductivityCopilot;
 '"

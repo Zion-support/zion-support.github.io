@@ -197,8 +197,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
       icon: BarChart3,;"
       title: "Construction",;"
       description: "Coordinate complex project schedules with multiple teams and locations";
-    };
-  ];
+    };  ];
 
   return()
     <>
@@ -207,8 +206,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
         description="Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools.""
         canonical="/services/employee-scheduling-saas"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+"      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 overflow-hidden">"
           <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 to-red-600/20"></div>"
@@ -593,8 +591,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center space-x-3">"
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />"
-                        <span className="text-gray-300">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />"                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>

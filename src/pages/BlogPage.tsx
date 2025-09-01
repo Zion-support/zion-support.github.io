@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';'
 import { motion } from 'framer-motion';
 import {
 
-  FileText,
-  Calendar,
+  FileText,  Calendar,
   User,
   ArrowRight,
   Search,
@@ -101,8 +100,7 @@ export function BlogPage(...args: any[]): any {
   ];
 
   return()
-    <div className="min-h-screen py-8">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-8">"      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}"
         <div className="text-center mb-16">
           <motion.div
@@ -128,15 +126,13 @@ export function BlogPage(...args: any[]): any {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input"
                 type="text""
-                placeholder="Search articles...""
-                className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                placeholder="Search articles...""                className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
 
             {/* Category Filter */}"
             <div className="flex items-center space-x-2">"
-              <Filter className="w-5 h-5 text-gray-400" />"
-              <select className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
+              <Filter className="w-5 h-5 text-gray-400" />"              <select className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                 {categories.map(category => (
                   <option key={category} value={category}>
                     {category}
@@ -170,8 +166,7 @@ export function BlogPage(...args: any[]): any {
                     {post.category}
                   </span>"
                   <div className="flex items-center space-x-2 text-gray-400 text-sm">"
-                    <Calendar className="w-4 h-4" />
-                    <span>{new Date(post.date).toLocaleDateString()}</span>
+                    <Calendar className="w-4 h-4" />                    <span>{new Date(post.date).toLocaleDateString()}</span>
                   </div>
                 </div>
 
@@ -192,8 +187,7 @@ export function BlogPage(...args: any[]): any {
                     <span>{post.author}</span>
                   </div>"
                   <div className="flex items-center space-x-2 text-gray-400 text-sm">"
-                    <Clock className="w-4 h-4" />
-                    <span>{post.readTime}</span>
+                    <Clock className="w-4 h-4" />                    <span>{post.readTime}</span>
                   </div>
                 </div>
 
@@ -214,8 +208,7 @@ export function BlogPage(...args: any[]): any {
                   className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium group-hover:translate-x-1 transition-transform"
                 >
                   <span>Read More</span>"
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                  <ArrowRight className="w-4 h-4" />                </Link>
               </div>
             </motion.article>) ) }
         </div>
@@ -224,8 +217,7 @@ export function BlogPage(...args: any[]): any {
         <div className="text-center mt-12">"
           <button className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-semibold">
             <span>Load More Articles</span>"
-            <ArrowRight className="w-5 h-5" />
-          </button>
+            <ArrowRight className="w-5 h-5" />          </button>
         </div>
 
         {/* Newsletter Signup */}"

@@ -2,8 +2,7 @@ import React, { useState } from 'react.ts';'
 import { motion } from 'framer-motion.ts';
 import {
 
-  Phone,
-  Mail,
+  Phone,  Mail,
   MapPin,
   Clock,
   MessageSquare,
@@ -48,8 +47,7 @@ export function ContactPage(...args: any[]): any {
 
   const handleSubmit = async (e: anyReact.FormEvent) => {
 
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault();    setIsSubmitting(true);
 
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -164,7 +162,9 @@ export function ContactPage(...args: any[]): any {
       href: 'https://instagram.com/ziontechgroup','
       label: 'Instagram'},
   ];
-
+  
+  
+  
   if (isSubmitted) {
 
     return()
@@ -186,14 +186,12 @@ export function ContactPage(...args: any[]): any {
               Thank you for reaching out to Zion Tech Group. We've received your
               message and will get back to you within 24 hours.
             </p>"
-            <div className="text-sm text-gray-500">'
-              You'll receive a confirmation email shortly.
+            <div className="text-sm text-gray-500">'              You'll receive a confirmation email shortly.
             </div>
           </motion.div>
         </div>
       </div>) ;
   }
-
   return ("
     <div className="min-h-screen py-8">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -415,8 +413,7 @@ export function ContactPage(...args: any[]): any {
                   </>
                 ) : (
                   <>"
-                    <Send className="w-5 h-5" />
-                    <span>Send Message</span>
+                    <Send className="w-5 h-5" />                    <span>Send Message</span>
                   </>
                 )}
               </button>
@@ -452,8 +449,7 @@ export function ContactPage(...args: any[]): any {
                   <span>100+ Team Members</span>
                 </div>"
                 <div className="flex items-center space-x-3 text-gray-300">"
-                  <Globe className="w-5 h-5 text-cyan-400" />
-                  <span>25+ Countries Served</span>
+                  <Globe className="w-5 h-5 text-cyan-400" />                  <span>25+ Countries Served</span>
                 </div>
               </div>
             </div>
@@ -470,8 +466,7 @@ export function ContactPage(...args: any[]): any {
                 >"
                   <Phone className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" />"
                   <span className="text-white">Call Now</span>"
-                  <ArrowRight className="w-4 h-4 text-gray-400 ml-auto group-hover:translate-x-1 transition-transform" />
-                </a>
+                  <ArrowRight className="w-4 h-4 text-gray-400 ml-auto group-hover:translate-x-1 transition-transform" />                </a>
 
                 <a"
                   href="mailto:kleber@ziontechgroup.com""
@@ -488,8 +483,7 @@ export function ContactPage(...args: any[]): any {
                 >"
                   <MessageSquare className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />"
                   <span className="text-white font-medium">Request Quote</span>"
-                  <ArrowRight className="w-4 h-4 text-white ml-auto group-hover:translate-x-1 transition-transform" />
-                </a>
+                  <ArrowRight className="w-4 h-4 text-white ml-auto group-hover:translate-x-1 transition-transform" />                </a>
               </div>
             </div>
 

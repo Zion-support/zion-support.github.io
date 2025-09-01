@@ -1,15 +1,6 @@
 import React, { useState } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
-import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-react';
-
-      description: "Get exclusive access to tech trends and analysis";
-    },;
-    {;
-      icon: Zap,;"
-      title: "Early Access",;"
-      description: "Be the first to know about beta programs and launches";
-    };
-  ];
+import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-react';  ];
 
   if (isSubscribed) {
 
@@ -36,8 +27,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
               <CheckCircle className="w-10 h-10 text-white" />
             </div>"
             <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>"
-            <p className="text-gray-300 text-lg mb-6">'
-              You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights,
+            <p className="text-gray-300 text-lg mb-6">'              You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights,
               service announcements, and exclusive content.
             </p>
             <button
@@ -50,7 +40,6 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
         </div>;
       </section>;) ;
   }
-
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">"
       <div className="max-w-7xl mx-auto px-6">"
@@ -119,8 +108,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
             </div>
 "
             <div className="flex items-center text-sm text-gray-400">"
-              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-              <span>No spam, unsubscribe at  time</span>
+              <CheckCircle className="w-5 h-5 text-green-400 mr-2" />              <span>No spam, unsubscribe at  time</span>
             </div>
           </motion.div>
 
@@ -150,8 +138,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4">"
                   <Mail className="w-8 h-8 text-white" />
                 </div>"
-                <h3 className="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter</h3>"
-                <p className="text-gray-300">Get the latest updates delivered to your inbox</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter</h3>"                <p className="text-gray-300">Get the latest updates delivered to your inbox</p>
               </div>
 "
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -183,8 +170,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
                   ) : (
                     <>
                       Subscribe Now"
-                      <ArrowRight className="ml-2 w-5 h-5" />
-                    </>
+                      <ArrowRight className="ml-2 w-5 h-5" />                    </>
                   )}
                 </button>
               </form>

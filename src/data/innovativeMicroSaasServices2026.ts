@@ -36,15 +36,13 @@ export interface MicroSaasService2026 {
     email: string;
     website: string;
   
-};
-  technicalSpecs?: {
+};  technicalSpecs?: {
 
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
   marketSize?: string;
 ;
@@ -1447,6 +1445,5 @@ export const SPECIALIZED_SERVICES_2026 = [
       email: "kleber@ziontechgroup.com",;"
       website: "https://ziontechgroup.com";
     };
-  };
-];
+  };];
 "

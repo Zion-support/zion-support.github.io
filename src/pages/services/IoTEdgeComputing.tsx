@@ -99,9 +99,8 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO"
-        title="IoT Edge Computing Services - Zion Tech Group""
-        description="Revolutionary IoT and edge computing solutions for real-time processing, low-latency applications, and connected ecosystems."
-      />
+        title="IoT Edge Computing Services - Zion Tech Group""        description="Revolutionary IoT and edge computing solutions for real-time processing, low-latency applications, and connected ecosystems."
+       />
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -119,8 +118,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
             className="text-center max-w-4xl mx-auto"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6">"
-              <Cpu className="w-4 h-4 mr-2" />
-              IoT Edge Computing
+              <Cpu className="w-4 h-4 mr-2" />              IoT Edge Computing
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -142,8 +140,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20"
               >
                 Get Started"
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+                <ArrowRight className="w-5 h-5 ml-2" />              </Link>
               <Link"
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200"
@@ -238,8 +235,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
                       key={featureIndex}"
                       className="flex items-center text-slate-300"
                     >"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -276,8 +272,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-green-400/30 transition-all duration-200"
               >"
-                <Cpu className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                <span className="text-white text-sm">{tech}</span>
+                <Cpu className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                <span className="text-white text-sm">{tech}</span>
               </motion.div>
             ))}
           </div>
@@ -306,8 +301,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20"
               >
                 Start Your IoT Journey"
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+                <ArrowRight className="w-5 h-5 ml-2" />              </Link>
               <Link"
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200"

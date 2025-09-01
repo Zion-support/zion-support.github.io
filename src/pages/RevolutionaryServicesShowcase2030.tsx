@@ -1,57 +1,5 @@
 import React, { useState } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';
-import { ArrowRight,
-import { motion  } from 'framer - motion.ts';
-import { REVOLUTIONARY_SERVICES_2030 } from "../data / revolutionaryServices2030";
-import { SEO } from "../components / SEO";
-
-
-  ChevronLeft,
-  ChevronRight,
-  Mail as MailIcon,
-  MapPin,
-  Phone,
-  Rocket,
-  Search,
-  Star,
-  Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Globe,
-  TrendingUp,
-  Award,
-  Users,
-  Clock,
-  DollarSign,
-  Target,
-  CheckCircle,
-  ArrowUpRight,
-  BookOpen,
-  Lightbulb,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Eye,
-  BarChart3,
-  Code,
-  Palette,
-  Smartphone,
-  Monitor,
-  Server,
-  Wifi,
-  Satellite,
-  Leaf,
-  Building,
-  FlaskConical,
-  SortAsc,
-  SortDesc,
-  X'
-} from 'lucide-react';
-import { SEO } from "../components/SEO";"
-import { REVOLUTIONARY_SERVICES_2030 } from "../data/revolutionaryServices2030";
-
 export default function RevolutionaryServicesShowcase2030(...args[]):  {
 '
   const [activeCategory, setActiveCategory] = useState('all');'
@@ -70,12 +18,10 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   const filteredServices = REVOLUTIONARY_SERVICES_2030.filter (service => {;
     const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
                          service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
-                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
-    
+                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;    
     return matchesCategory && matchesSearch}) ;
 
-  const sortedServices = [...filteredServices].sort ( (a, b) => {;
-    let comparison = 0;
+  const sortedServices = [...filteredServices].sort ( (a, b) => {;    let comparison = 0;
     switch (sortBy) {
 '
       case 'aiScore':
@@ -95,8 +41,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
         comparison = roiB - roiA;
         break;'
       case 'setupTime':'
-        const timeB = typeof b.setupTime === 'string' ? parseInt(b.setupTime.match(/\d+/)?.[0] || '0') : 0;
-        comparison = timeA - timeB;
+        const timeB = typeof b.setupTime === 'string' ? parseInt(b.setupTime.match(/\d+/)?.[0] || '0') : 0;        comparison = timeA - timeB;
         break;
       default:
         comparison = 0};'
@@ -184,8 +129,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
       'Sustainable Technology': 'from-green-500 to-teal-500',;'
       'IT Infrastructure': 'from-slate-500 to-gray-500',;'
       'Emerging Technology': 'from-violet-500 to-purple-500';
-    };'
-    return colorMap[category] || 'from-gray-500 to-slate-500'};
+    };'    return colorMap[category] || 'from-gray-500 to-slate-500'};
 
       return sum + roiNumber}
     return sum}, 0) / REVOLUTIONARY_SERVICES_2030.length;
@@ -199,8 +143,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
         image="https://ziontechgroup.com/images/revolutionary-services-showcase-2030.jpg""
         url="https://ziontechgroup.com/revolutionary-services-showcase-2030"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+"      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}"
         <section className="relative overflow-hidden">"
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20" />"
@@ -262,8 +205,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                 <span className="font-semibold">kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center justify-center space-x-3">"
-                <MapPin className="w-5 h-5" />"
-                <span className="font-semibold">364 E Main St STE 1008 Middletown DE 19709</span>
+                <MapPin className="w-5 h-5" />"                <span className="font-semibold">364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
           </div>
@@ -279,8 +221,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                   <div className="relative">"
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input"
-                      type="text""
-                      placeholder="Search revolutionary services..."
+                      type="text""                      placeholder="Search revolutionary services..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}"
                       className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
@@ -304,8 +245,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}"
                     className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 hover:bg-white/20 transition-colors"
 '"
-                    {sortOrder === 'asc' ? <SortAsc className="w-5 h-5" /> : <SortDesc className="w-5 h-5" />}
-                  </button>
+                    {sortOrder === 'asc' ? <SortAsc className="w-5 h-5" /> : <SortDesc className="w-5 h-5" />}                  </button>
                 </div>"
                 <div className="flex gap-4">
                   <button'
@@ -439,8 +379,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                         <span className="text-gray-400 text-sm">Rating:</span>"
                         <div className="flex items-center space-x-1">"
                           <Star className="w-4 h-4 text-yellow-400 fill-current" />"
-                          <span className="text-white">{service.rating}</span>"
-                          <span className="text-gray-400 text-sm">({service.reviewCount})</span>
+                          <span className="text-white">{service.rating}</span>"                          <span className="text-gray-400 text-sm">({service.reviewCount})</span>
                         </div>
                       </div>
                     </div>
@@ -459,8 +398,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                       <span className="text-purple-400 text-sm font-semibold">
                         {service.category}
                       </span>"
-                      <ArrowUpRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </div>
+                      <ArrowUpRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />                    </div>
                   </div>;
                 </motion.div>) ) }
             </div>
@@ -474,8 +412,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     disabled={currentPage === 1}"
                     className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
 "
-                    <ChevronLeft className="w-5 h-5" />
-                  </button>
+                    <ChevronLeft className="w-5 h-5" />                  </button>
                   
                   {Array.from({ length: totalPages }, (_, i)  => i + 1).map((page) => (
                     <button
@@ -496,8 +433,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     disabled={currentPage === totalPages}"
                     className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
 "
-                    <ChevronRight className="w-5 h-5" />
-                  </button>
+                    <ChevronRight className="w-5 h-5" />                  </button>
                 </div>
               </div>) }
           </div>
@@ -600,8 +536,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   { opacity: 0,
   x: 20 ;
 
-}}
-                whileInView = {
+}}                whileInView = {
 
   { opacity: 1,
   x: 0 ;
@@ -630,8 +565,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     <div className="flex items-center space-x-4">"
                       <MapPin className="w-6 h-6 text-purple-400" />
                       <div>"
-                        <p className="text-white font-semibold">Address</p>"
-                        <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                        <p className="text-white font-semibold">Address</p>"                        <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
                       </div>
                     </div>
                   </div>
@@ -657,8 +591,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                       <span className="text-gray-300">24/7 expert support and maintenance</span>
                     </div>"
                     <div className="flex items-center space-x-3">"
-                      <CheckCircle className="w-5 h-5 text-green-400" />"
-                      <span className="text-gray-300">Future-ready technology stack</span>
+                      <CheckCircle className="w-5 h-5 text-green-400" />"                      <span className="text-gray-300">Future-ready technology stack</span>
                     </div>
                   </div>
                 </div>
@@ -706,8 +639,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                   onClick={closeModal}"
                   className="text-white/60 hover:text-white transition-colors"
 "
-                  <X className="w-6 h-6" />
-                </button>
+                  <X className="w-6 h-6" />                </button>
               </div>
 "
               <h2 className="text-3xl font-bold text-white mb-4">{selectedService.title}</h2>"
@@ -753,8 +685,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                   <div className="space-y-3">
                     {selectedService.tags.slice(0, 5).map((tag, index) => ("
                       <div key={index} className="flex items-center space-x-2">"
-                        <CheckCircle className="w-4 h-4 text-green-400" />"
-                        <span className="text-gray-300">{tag}</span>
+                        <CheckCircle className="w-4 h-4 text-green-400" />"                        <span className="text-gray-300">{tag}</span>
                       </div>
                     ))}
                   </div>

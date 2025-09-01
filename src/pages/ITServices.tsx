@@ -97,8 +97,7 @@ import {
           <div className="text-center">"
             <h1 className="text-4xl md:text-5xl font-extrabold text-white">
               Modern Managed IT
-            </h1>"
-            <p className="mt-4 text-slate-300 max-w-3xl mx-auto">
+            </h1>"            <p className="mt-4 text-slate-300 max-w-3xl mx-auto">
               Reliable, secure, and cost-efficient IT operations with clear SLAs
               and predictable pricing.
             </p>"

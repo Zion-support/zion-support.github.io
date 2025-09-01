@@ -1,7 +1,6 @@
 import React from 'react';'
 import { motion } from 'framer-motion';
 import {
-
   Brain, 
   TrendingUp, 
   Shield, 
@@ -127,11 +126,9 @@ const AIQuantumFinancialTrading = (...args: unknown[]): unknown => {
         "Custom compliance modules","
         "Multi-tenant architecture",;"
         "Advanced analytics dashboard",;"
-        "SLA guarantees",;"
-        "On-premise deployment";
+        "SLA guarantees",;"        "On-premise deployment";
       ],;
-      popular: false;
-    };
+      popular: false};
   ];
 
     {;"
@@ -148,8 +145,7 @@ const AIQuantumFinancialTrading = (...args: unknown[]): unknown => {
     "Blockchain Security","
     "Real-time Analytics","
     "Cloud Infrastructure","
-    "API Integration",;"
-    "Predictive Modeling";
+    "API Integration",;"    "Predictive Modeling";
   ];
 
   return ("
@@ -205,8 +201,7 @@ const AIQuantumFinancialTrading = (...args: unknown[]): unknown => {
     {
 "
       title: "Increased Trading Speed",;"
-      description: "Quantum computing reduces execution time from milliseconds to microseconds","
-      metric: "1000x faster"
+      description: "Quantum computing reduces execution time from milliseconds to microseconds","      metric: "1000x faster"
     },
     {
 "
@@ -240,8 +235,7 @@ const AIQuantumFinancialTrading = (...args: unknown[]): unknown => {
             transition={{ duration: 0.8 }}
           >"
             <div className="flex items-center justify-center mb-6">"
-              <Atom className="w-12 h-12 text-purple-400 mr-3" />"
-              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <Atom className="w-12 h-12 text-purple-400 mr-3" />"              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 AI Quantum Financial Trading
               </h1>
             </div>"
@@ -255,8 +249,7 @@ const AIQuantumFinancialTrading = (...args: unknown[]): unknown => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Trading Now"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+                <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a"
                 href="#demo""
                 className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
@@ -599,8 +592,7 @@ const AIQuantumFinancialTrading = (...args: unknown[]): unknown => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -664,8 +656,7 @@ const AIQuantumFinancialTrading = (...args: unknown[]): unknown => {
                 >
                   Start Trading Today"
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>"
-                <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
+                </Link>"                <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                   Book a Consultation
                 </button>
               </div>"
@@ -689,14 +680,12 @@ const AIQuantumFinancialTrading = (...args: unknown[]): unknown => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+                <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a"
                 href="tel:+13024640950""
                 className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
               >"
-                <Phone className="mr-2 w-5 h-5" />
-                Call Now
+                <Phone className="mr-2 w-5 h-5" />                Call Now
               </a>
             </div>
           </motion.div>
@@ -724,8 +713,7 @@ const AIQuantumFinancialTrading = (...args: unknown[]): unknown => {
             </div>"
             <div className="flex flex-col items-center">"
               <MapPin className="w-8 h-8 text-purple-400 mb-4" />"
-              <p className="text-gray-300">Address</p>"
-              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p className="text-gray-300">Address</p>"              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
         </div>
@@ -734,14 +722,12 @@ const AIQuantumFinancialTrading = (...args: unknown[]): unknown => {
   )};"
             <div className = "flex flex-col items-center">"
               <MapPin className="w-8 h-8 text-purple-400 mb-4" />"
-              <p className="text-gray-300">Address</p>;"
-              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
+              <p className="text-gray-300">Address</p>;"              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
             </div>;
           </div>;
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default AIQuantumFinancialTrading;'"`

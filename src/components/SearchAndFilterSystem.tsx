@@ -1,78 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  Search,
-  Filter,
-  X,
-  ChevronDown,
-  Check,
-  Star,
-  Tag,
-  MapPin,
-  Calendar,
-  Users,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe'
- } from 'lucide-react';
-
-interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  tags: string[];
-  location?: string;
-  date?: string;
-  rating?: number;'
-  type: 'service' | 'article' | 'team' | 'technology'}
-
-interface FilterOption {
-  id: string;
-  label: string;
-  value: string;
-  count: number
-}
-
-interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
-
-  data: SearchResult[];
-  onResultsChange?: (results: SearchResult[]) => void;
-  placeholder?: string;
-  showFilters?: boolean}
-
-export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
-
-  data,
-  onResultsChange,
-  placeholder = "Search services, articles, team members...",
-  showFilters = true;
-}) => {
-'
-  const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());
-  const [showFilterPanel, setShowFilterPanel] = useState(false);'
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');'
-  const [sortBy, setSortBy] = useState<any>('relevance');
-
-  // Filter options
-  const filterOptions = useMemo(() => {
-    const categories = data.reduce((acc, item) => {
-
-      acc[item.category] = (acc[item.category] || 0) + 1;
-      return acc;
-    }, {} as Record < string, any>) ;
-
-    const types = data.reduce((acc, item) => {
-
-      acc[item.type] = (acc[item.type] || 0) + 1;
-      return acc;
-    }, {} as Record < string, any>) ;
-
     return {
 
       categories: Object.entries(categories).map(([key, count])  => ({
@@ -113,7 +40,6 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
       return matchesSearch && matchesCategory && matchesFilters;
     }) ;
-
     // Sort results
     switch (sortBy) {
 '
@@ -123,15 +49,13 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           if (!a.date || !b.date) return 0;
           return new Date(b.date).getTime() - new Date(a.date).getTime();
         });
-        break;'
-      case 'rating':
+        break;'      case 'rating':
         results = results.sort((a, b) => {
 
           if (!a.rating || !b.rating) return 0;
           return b.rating - a.rating;
         });
-        break;'
-      case 'name':
+        break;'      case 'name':
         results = results.sort ( (a, b) => a.title.localeCompare (b.title) ) ;
         break;
       default: // relevance
@@ -194,15 +118,13 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
     };'
     return colors[category as keyof typeof colors] || 'text-zinc-400';
   };
-
   return ("
     <div className="w-full max-w-6xl mx-auto">
       {/* Search Bar */}"
       <div className="relative mb-6">"
         <div className="relative">"
           <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zinc-400 w-5 h-5" />
-          <input"
-            type="text"
+          <input"            type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => setIsSearchFocused(true)}
@@ -215,8 +137,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
               onClick={() => setSearchQuery('')}"
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white transition-colors"
 "
-              <X className="w-5 h-5" />
-            </button>;
+              <X className="w-5 h-5" />            </button>;
           )}
         </div>
 
@@ -267,8 +188,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                 </option>
               ))}
             </select>"
-            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none" />
-          </div>
+            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none" />          </div>
 
           {/* Sort Options */}"
           <div className="relative">
@@ -282,8 +202,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
               <option value="rating">Rating</option>"
               <option value="name">Name</option>
             </select>"
-            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none" />
-          </div>
+            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none" />          </div>
 
           {/* Filter Toggle */}
           <button
@@ -295,8 +214,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                 : 'bg-zinc-900/50 text-zinc-300 hover:text-white border border-zinc-700/50'`
             }`}
 "
-            <Filter className="w-4 h-4" />
-            Filters
+            <Filter className="w-4 h-4" />            Filters
             {activeFilters.size > 0 && ("
               <span className="ml-1 px-2 py-0.5 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
                 {activeFilters.size}
@@ -455,8 +373,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                   <div className="flex items-center gap-2">
                     {result.rating && ("
                       <div className="flex items-center gap-1 text-yellow-400">"
-                        <Star className="w-4 h-4 fill-current" />"
-                        <span className="text-sm">{result.rating}</span>
+                        <Star className="w-4 h-4 fill-current" />"                        <span className="text-sm">{result.rating}</span>
                       </div>
                     )}`
                     <span className={`text-xs px-2 py-1 rounded-full bg-zinc-800/50 ${getCategoryColor(result.category)}`}>
@@ -482,8 +399,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                   )}"
                   <div className="flex items-center gap-1">"
                     <Tag className="w-4 h-4" />'
-                    {result.tags.slice(0, 3).join(', ')}`
-                    {result.tags.length > 3 && ` +${result.tags.length - 3} more`}
+                    {result.tags.slice(0, 3).join(', ')}`                    {result.tags.length > 3 && ` +${result.tags.length - 3} more`}
                   </div>
                 </div>
               </div>
@@ -498,8 +414,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
           className="text-center py-12"
 "
           <Search className="w-16 h-16 text-zinc-600 mx-auto mb-4" />"
-          <h3 className="text-xl font-medium text-zinc-300 mb-2">No results found</h3>"
-          <p className="text-zinc-400 mb-4">
+          <h3 className="text-xl font-medium text-zinc-300 mb-2">No results found</h3>"          <p className="text-zinc-400 mb-4">
             Try adjusting your search terms or filters
           </p>
           <button

@@ -1,47 +1,6 @@
 import React, { useState } from 'react';'
 import { motion } from 'framer-motion';'
 import { Link } from 'react-router-dom';
-import {
-
-  Sparkles,
-  Users,
-  Target,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Cpu,
-  Database,
-  Rocket,
-  MessageCircle,
-  Search,
-  Filter,
-  Settings,
-  RefreshCw,
-  Heart,
-  Bookmark,
-  Share2,
-  Download,
-  Upload,
-  FileText,
-  BarChart3,
-  Globe,
-  Award,
-  TrendingUp,
-  Clock,
-  Eye,
-  Lock,
-  Key,
-  Wifi,
-  Server,
-  Network,
-  Settings as SettingsIcon'
-} from 'lucide-react';'
-import SEO from '../components/SEO';
-
 const Match: React.FC = () => {;'
   const [selectedCategory, setSelectedCategory] = useState('all');'
   const [searchQuery, setSearchQuery] = useState('');
@@ -134,12 +93,10 @@ const Match: React.FC = () => {;'
       description: "Automate complex business processes with intelligent AI workflows and decision engines.",
       rating: 4.9,
       reviews: 112,;"
-      price: "$2,799/mo",;"
-      features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],;
+      price: "$2,799/mo",;"      features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],;
       matchScore: 87,;
       icon: Zap,;
-      featured: true;
-    };
+      featured: true};
   ];
 
   const filteredServices = matchedServices.filter (service => {;
@@ -147,14 +104,12 @@ const Match: React.FC = () => {;'
                          service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
     return matchesCategory && matchesSearch;
   }) ;
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
         title="AI Service Matcher - Zion Tech Group""
-        description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs.""
-        keywords="AI service matcher, technology matching, business solutions, Zion Tech Group"
-      />
+        description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs.""        keywords="AI service matcher, technology matching, business solutions, Zion Tech Group"
+       />
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -179,8 +134,7 @@ const Match: React.FC = () => {;'
             <div className="flex items-center justify-center mb-6">"
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">"
                 <Sparkles className="w-8 h-8 text-white" />
-              </div>"
-              <h1 className="text-4xl font-bold text-white">AI Service Matcher</h1>
+              </div>"              <h1 className="text-4xl font-bold text-white">AI Service Matcher</h1>
             </div>
 "
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -201,8 +155,7 @@ const Match: React.FC = () => {;'
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 
                 Get Matched"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
@@ -222,8 +175,7 @@ const Match: React.FC = () => {;'
             <div className="relative mb-8">"
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
               <input"
-                type="text""
-                placeholder="Search for services, features, or use cases..."
+                type="text""                placeholder="Search for services, features, or use cases..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}"
                 className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
@@ -322,8 +274,7 @@ const Match: React.FC = () => {;'
                   <div className="text-right">
                     {service.featured && ("
                       <div className="flex items-center mb-2">"
-                        <Star className="w-4 h-4 text-yellow-400 mr-1" />"
-                        <span className="text-yellow-400 text-xs font-semibold">Featured</span>
+                        <Star className="w-4 h-4 text-yellow-400 mr-1" />"                        <span className="text-yellow-400 text-xs font-semibold">Featured</span>
                       </div>
                     )}"
                     <div className="bg-cyan-500 text-white text-xs font-bold px-2 py-1 rounded-full">
@@ -341,8 +292,7 @@ const Match: React.FC = () => {;'
                   <div className="flex items-center">"
                     <div className="flex items-center text-yellow-400 mr-2">
                       {[...Array(5)].map((_, i) => ('`
-                        <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : ''}`} />
-                      ))}
+                        <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : ''}`} />                      ))}
                     </div>"
                     <span className="text-slate-400 text-sm">{service.rating} ({service.reviews})</span>
                   </div>"
@@ -353,8 +303,7 @@ const Match: React.FC = () => {;'
                 <div className="space-y-2 mb-6">
                   {service.features.slice(0, 3).map((feature, featureIndex) => ("
                     <div key={featureIndex} className="flex items-center text-sm text-slate-400">"
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />                      {feature}
                     </div>
                   ))}
                   {service.features.length > 3 && ("
@@ -409,8 +358,7 @@ const Match: React.FC = () => {;'
                 className="inline-flex items-center px-6 py-3 bg-cyan-500 text-white font-medium rounded-lg hover:bg-cyan-400 transition-all duration-200"
 
                 Browse All Services"
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>;
+                <ArrowRight className="ml-2 w-4 h-4" />              </Link>;
             </motion.div>) }
         </div>
       </section>
@@ -538,8 +486,7 @@ const Match: React.FC = () => {;'
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 
                 Start Matching"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"

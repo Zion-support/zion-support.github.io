@@ -3,8 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';'
 import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield  } from 'lucide-react';'
 import { Link  } from 'react-router-dom.ts';
 ;
-export { function };
-export default function IoTEdge(...args: []):  {
+export { function };export default function IoTEdge(...args: []):  {
 
   return()
     <>
@@ -21,8 +20,7 @@ export default function IoTEdge(...args: []):  {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center">"
               <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-sm font-medium mb-8">"
-                <Cpu className="w-4 h-4 mr-2" />
-                IoT & Edge Computing
+                <Cpu className="w-4 h-4 mr-2" />                IoT & Edge Computing
               </div>
 "
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -44,8 +42,7 @@ export default function IoTEdge(...args: []):  {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>"
                 <button className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200">"
-                  <Play className="mr-2 w-5 h-5" />
-                  Watch Demo
+                  <Play className="mr-2 w-5 h-5" />                  Watch Demo
                 </button>
               </div>
             </div>
@@ -182,8 +179,7 @@ export default function IoTEdge(...args: []):  {
                   <ul className="space-y-1">
                     {application.benefits.map((benefit, benefitIndex) => ("
                       <li key={benefitIndex} className="text-sm text-indigo-400 flex items-center">"
-                        <CheckCircle className="w-3 h-3 mr-2" />
-                        {benefit}
+                        <CheckCircle className="w-3 h-3 mr-2" />                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -217,8 +213,7 @@ export default function IoTEdge(...args: []):  {
                     "Scale efficiently with distributed edge computing architecture"
                   ].map((benefit, index) => ("
                     <div key={index} className="flex items-start space-x-3">"
-                      <CheckCircle className="w-6 h-6 text-indigo-400 mt-0.5 flex-shrink-0" />"
-                      <span className="text-slate-300">{benefit}</span>
+                      <CheckCircle className="w-6 h-6 text-indigo-400 mt-0.5 flex-shrink-0" />"                      <span className="text-slate-300">{benefit}</span>
                     </div>
                   ))}
                 </div>
@@ -357,8 +352,7 @@ export default function IoTEdge(...args: []):  {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-200"
 
                 Schedule a Consultation"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200"

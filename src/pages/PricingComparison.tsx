@@ -1,17 +1,7 @@
 import React, { useState } from 'react.ts';'
 import { SEO   } from '../components/SEO';'
 import { motion   } from 'framer-motion.ts';'
-import { Link   } from 'react-router-dom.ts';
-
-const PricingComparison: React.FC = (): JSX.Element => {;'
-  const [selectedPlan, setSelectedPlan] = useState('monthly');
-
-  const pricingData = [
-    {
-
-      category: "AI-Powered Micro SAAS Services",
-      services[;
-        {
+import { Link   } from 'react-router-dom.ts';        {
 "
           name: "AI Code Review & Security","
           description: "Advanced vulnerability detection with AI-powered analysis",
@@ -355,15 +345,13 @@ const PricingComparison: React.FC = (): JSX.Element => {;'
             }
           ]
         }
-      ];
-    };
+      ]};
   ];
 
   const calculateSavings = (monthlyPrice: anynumber, yearlyPrice: number) => {;
     const monthlyTotal = monthlyPrice * 12;
     const yearlyTotal = yearlyPrice * 12;
-    const savingsPercent = Math.round ( (savings / monthlyTotal) * 100) ;
-    return { savings, savingsPercent }};
+    const savingsPercent = Math.round ( (savings / monthlyTotal) * 100) ;    return { savings, savingsPercent }};
 
   return()
     <>
@@ -373,8 +361,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;'
         keywords="Zion Tech Group pricing, AI services pricing, cloud services pricing, data analytics pricing, cybersecurity pricing, micro SAAS pricing, business solutions pricing""
         canonical="https://ziontechgroup.com/pricing"
       />
-      "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
           <div className="max-w-7xl mx-auto text-center">
@@ -498,8 +485,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;'
                       <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">;
                         {service.plans.map((plan, planIndex)   => {;
                           const savings = calculateSavings(plan.price.monthly, plan.price.yearly);
-                          return()
-                            <motion.div
+                          return()                            <motion.div
                               key = {plan.name}
                               initial = {
 

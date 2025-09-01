@@ -2,7 +2,6 @@ import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { motion } from 'framer-motion';
 import {
-
   Home, 
   Search, 
   MapPin, 
@@ -91,8 +90,7 @@ export default function NotFound() {
   ];
 
   return()
-    <div className = "min-h-screen bg-white flex items-center justify-center">"
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div className = "min-h-screen bg-white flex items-center justify-center">"      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* 404 Icon */}"
         <div className="mb-8">"
           <div className="text-9xl font-bold text-zion-slate-light mb-4">404</div>"
@@ -131,8 +129,7 @@ export default function NotFound() {
             to="/contact""
             className="flex flex-col items-center p-6 bg-zion-slate-light/20 rounded-lg hover:bg-zion-slate-light/30 transition-colors group"
 "
-            <Mail className="w-8 h-8 text-zion-cyan mb-3 group-hover:scale-110 transition-transform" />"
-            <span className="font-medium text-zion-slate-dark">Contact Us</span>
+            <Mail className="w-8 h-8 text-zion-cyan mb-3 group-hover:scale-110 transition-transform" />"            <span className="font-medium text-zion-slate-dark">Contact Us</span>
           </Link>
         </div>;
 
@@ -225,8 +222,7 @@ export default function NotFound() {
                       <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
                         {service.name}
                       </span>"
-                      <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors" />
-                    </Link>
+                      <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors" />                    </Link>
                   ))}
                 </div>
               </motion.div>) ) }
@@ -250,22 +246,19 @@ export default function NotFound() {
                 to="/contact""
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200"
               >"
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Contact Support
+                <MessageCircle className="w-5 h-5 mr-2" />                Contact Support
               </Link>
               <Link"
                 to="/search""
                 className="inline-flex items-center px-6 py-3 border border-slate-600 text-slate-300 font-medium rounded-lg hover:border-cyan-400 hover:text-cyan-400 transition-all duration-200"
               >"
-                <Search className="w-5 h-5 mr-2" />
-                Search Site
+                <Search className="w-5 h-5 mr-2" />                Search Site
               </Link>
               <Link"
                 to="/help""
                 className="inline-flex items-center px-6 py-3 border border-slate-600 text-slate-300 font-medium rounded-lg hover:border-cyan-400 hover:text-cyan-400 transition-all duration-200"
               >"
-                <HelpCircle className="w-5 h-5 mr-2" />
-                Help Center
+                <HelpCircle className="w-5 h-5 mr-2" />                Help Center
               </Link>
             </div>
           </div>
@@ -285,8 +278,7 @@ export default function NotFound() {
             to="/""
             className="inline-flex items-center gap-2 px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
 "
-            <Home className="w-4 h-4" />
-            Back to Home
+            <Home className="w-4 h-4" />            Back to Home
           </Link>
         </div>
 

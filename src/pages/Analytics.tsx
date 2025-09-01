@@ -1,136 +1,14 @@
 import React from 'react';'
 import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
-import {
-
-  BarChart3,
-  TrendingUp,
-  PieChart,
-  Activity,
-  Database,
-  Zap,
-  Shield,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Globe,
-  Target,
-  Clock,
-  Eye,
-  Download,
-  Filter,
-  Search,
-  Settings,
-  RefreshCw,
-  Calendar,
-  DollarSign,
-  ShoppingCart,
-  Heart,
-  MessageCircle,
-  Bell,
-  Wifi,
-  Cpu,
-  Server,
-  Network,
-  Lock,
-  Key,
-  FileText,
-  BarChart,
-  LineChart,
-  AreaChart,
-  ScatterPlot'
-} from 'lucide-react';'
-import SEO from '../components/SEO';
-
-const Analytics: React.FC = () => {
-  const analyticsFeatures = [
-    {
-
-      title: "Real-time Monitoring","
-      description: "Monitor your business metrics and performance indicators in real-time",
-      icon: Activity,"
-      color: "from-green-400 to-emerald-500"
-    },
-    {
-"
-      title: "Advanced Visualizations","
-      description: "Interactive charts, graphs, and dashboards for better insights",
-      icon: BarChart3,"
-      color: "from-blue-400 to-cyan-500"
-    },
-    {
-"
-      title: "Predictive Analytics","
-      description: "AI-powered forecasting and trend analysis for strategic planning",
-      icon: TrendingUp,"
-      color: "from-purple-400 to-pink-500"
-    },;
-    {;"
-      title: "Custom Dashboards",;"
-      description: "Build personalized dashboards tailored to your business needs",;
-      icon: Target,;"
-      color: "from-orange-400 to-red-500";
-    };
-  ];
-
-  const analyticsTypes = [
-    {
-"
-      name: "Business Intelligence","
-      description: "Comprehensive business analytics and reporting",
-      icon: BarChart3,"
-      features: ["KPI tracking", "Performance metrics", "Business reports", "Executive dashboards"],"
-      path: "/services/ai-business-intelligence"
-    },
-    {
-"
-      name: "Website Analytics","
-      description: "Track website performance and user behavior",
-      icon: Globe,"
-      features: ["Traffic analysis", "User engagement", "Conversion tracking", "SEO insights"],"
-      path: "/services/website-analytics"
-    },
-    {
-"
-      name: "AI Data Analytics","
-      description: "Advanced AI-powered data analysis and insights",
-      icon: Zap,"
-      features: ["Machine learning", "Pattern recognition", "Predictive modeling", "Automated insights"],"
-      path: "/services/ai-data-analytics"
-    },
-    {;"
-      name: "Financial Analytics",;"
-      description: "Financial performance tracking and optimization",;
-      icon: DollarSign,;"
-      features: ["Revenue analysis", "Cost optimization", "Profit margins", "Financial forecasting"],;"
-      path: "/services/ai-financial-analytics";
-    };
-  ];
-
-  const metrics = [;"
-    { icon: Users, value: "10K+", label: "Active Users", description: "Monthly active users" },;"
-    { icon: TrendingUp, value: "95%", label: "Uptime", description: "System reliability" },;"
-    { icon: Globe, value: "25+", label: "Countries", description: "Global reach" },;"
-    { icon: Zap, value: "1M+", label: "Data Points", description: "Processed daily" };
-  ];
-
-  const integrations = [;"
-    { name: "Google Analytics", icon: "🔍", description: "Website traffic and user behavior" },;"
-    { name: "Salesforce", icon: "☁️", description: "CRM data and sales metrics" },;"
-    { name: "Stripe", icon: "💳", description: "Payment and revenue data" },;"
-    { name: "Slack", icon: "💬", description: "Team communication metrics" },;"
-    { name: "HubSpot", icon: "🎯", description: "Marketing and lead data" },;"
-    { name: "AWS", icon: "☁️", description: "Cloud infrastructure metrics" };
+import { Link } from 'react-router-dom';    { name: "AWS", icon: "☁️", description: "Cloud infrastructure metrics" };
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
         title="Analytics - Zion Tech Group""
-        description="Transform your data into actionable insights with our comprehensive analytics solutions. Real-time monitoring, AI-powered analysis, and custom dashboards.""
-        keywords="analytics, business intelligence, data analysis, AI analytics, Zion Tech Group"
-      />
+        description="Transform your data into actionable insights with our comprehensive analytics solutions. Real-time monitoring, AI-powered analysis, and custom dashboards.""        keywords="analytics, business intelligence, data analysis, AI analytics, Zion Tech Group"
+       />
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -177,8 +55,7 @@ const Analytics: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 
                 Get Started"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
@@ -370,8 +247,7 @@ const Analytics: React.FC = () => {
                 <div className="space-y-3 mb-6">
                   {type.features.map((feature, featureIndex) => ("
                     <div key={featureIndex} className="flex items-center text-slate-400">"
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />                      {feature}
                     </div>) ) }
                 </div>
 
@@ -380,8 +256,7 @@ const Analytics: React.FC = () => {
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
 
                   Learn More"
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>;
+                  <ArrowRight className="ml-2 w-4 h-4" />                </Link>;
               </motion.div>) ) }
           </div>
         </div>
@@ -485,8 +360,7 @@ const Analytics: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 
                 Start Your Analytics Journey"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
                 to="/request-quote""
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"

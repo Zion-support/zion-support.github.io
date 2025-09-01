@@ -1,15 +1,6 @@
 import React, { useEffect, useState } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';'
 import { RefreshCw, X, CheckCircle, AlertTriangle, Info } from 'lucide-react';
-
-interface PWAUpdaterProps {
-  // Add your props here
-
-
-  autoCheck?: boolean;
-  checkInterval?: number;
-  showUpdatePrompt?: boolean;
-
 const PWAUpdater: React.FC<PWAUpdaterProps> = ({
 
   autoCheck = true,
@@ -39,14 +30,12 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           if (autoCheck) {
 
             checkForUpdates(reg);
-          }
-          
+          }          
           // Listen for updates'
           reg.addEventListener('updatefound', () => {
 '
             // console.log('Service Worker update found');
             const newWorker = reg.installing;
-
             if (newWorker) {
 '
               newWorker.addEventListener('statechange', () => {
@@ -60,8 +49,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
                   }
                 }
               }) ;
-            }
-          });
+            }          });
           
           // Listen for controller change (update applied)'
           navigator.serviceWorker.addEventListener('controllerchange', () => {
@@ -74,17 +62,13 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
             // Hide prompt after a delay
             setTimeout(() => {
               setShowPrompt(false);
-              setUpdateComplete(false);
-            }, 3000);
-          });
-        })
+              setUpdateComplete(false)}, 3000)})})
         .catch((error) => {
 '
           // console.error('Service Worker registration failed:', error);
         });
     }
   }, [autoCheck, showUpdatePrompt]) ;
-
   useEffect ( () => {
     if (autoCheck && registration) {
 
@@ -119,7 +103,6 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
 '
         registration.waiting.postMessage({ type: 'SKIP_WAITING' });
       }
-
       // Reload the page to apply the update
       setTimeout ( () => {
         window.location.reload () ;
@@ -131,8 +114,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
 '
       // console.error('Failed to apply update:', error);
       setUpdating(false);
-      setShowPrompt(true);
-    }
+      setShowPrompt(true)}
   };
 
   const dismissUpdate = () => {
@@ -151,7 +133,6 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
 
     return null;
   }
-
   return()
     <>
       {/* Update Prompt */}
@@ -169,8 +150,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
                   <RefreshCw className="w-5 h-5 text-white" />
                 </div>"
                 <div className="flex-1">"
-                  <h3 className="text-white font-semibold text-lg mb-2">Update Available</h3>"
-                  <p className="text-gray-300 text-sm mb-4">
+                  <h3 className="text-white font-semibold text-lg mb-2">Update Available</h3>"                  <p className="text-gray-300 text-sm mb-4">
                     A new version of Zion Tech Group is available. Update now to get the latest features and improvements.
                   </p>"
                   <div className="flex gap-3">
@@ -192,8 +172,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
                   onClick={dismissUpdate}"
                   className="text-gray-400 hover:text-white transition-colors flex-shrink-0"
                 >"
-                  <X className="w-5 h-5" />
-                </button>
+                  <X className="w-5 h-5" />                </button>
               </div>
             </div>
           </motion.div>) }
@@ -215,8 +194,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
                     animate={{ rotate: 360 }}"
                     transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
                   >"
-                    <RefreshCw className="w-5 h-5 text-white" />
-                  </motion.div>
+                    <RefreshCw className="w-5 h-5 text-white" />                  </motion.div>
                 </div>"
                 <div className="flex-1">"
                   <h3 className="text-white font-semibold text-lg mb-2">Updating...</h3>"
@@ -252,8 +230,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
                   <CheckCircle className="w-5 h-5 text-white" />
                 </div>"
                 <div className="flex-1">"
-                  <h3 className="text-white font-semibold text-lg mb-2">Update Complete!</h3>"
-                  <p className="text-gray-300 text-sm">
+                  <h3 className="text-white font-semibold text-lg mb-2">Update Complete!</h3>"                  <p className="text-gray-300 text-sm">
                     Zion Tech Group has been updated to the latest version. Enjoy the new features!
                   </p>
                 </div>
@@ -279,6 +256,5 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
         </motion.div>) }
     </>) ;
 };
-
 export default PWAUpdater;
 '"

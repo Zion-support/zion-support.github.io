@@ -8,8 +8,7 @@ import {
   Lock,
   Eye,
   EyeOff,
-  Shield,
-  CheckCircle,
+  Shield,  CheckCircle,
   AlertCircle,
   ArrowRight,
   Zap,
@@ -37,9 +36,8 @@ interface SignupForm {
   confirmPassword: string;
   agreeToTerms: boolean;
   agreeToMarketing: boolean;
-
 const Signup: React.FC = () => {
-  const navigate = useNavigate();
+  
   const [formData, setFormData] = useState<SignupForm>({
 '
     firstName: '','
@@ -105,34 +103,27 @@ const Signup: React.FC = () => {
 '
       setError('Please fill in all required fields');
       return false;
-    }
-    if (!/\S+@\S+\.\S+/.test(formData.email)) {
+    }    if (!/\S+@\S+\.\S+/.test(formData.email)) {
 '
       setError('Please enter a valid email address');
-      return false;
-    }
+      return false}
     if (formData.password.length < 8) {
 '
       setError('Password must be at least 8 characters long');
-      return false;
-    }
+      return false}
     if (formData.password !== formData.confirmPassword) {
 '
       setError('Passwords do not match');
-      return false;
-    }
+      return false}
     if (!formData.agreeToTerms) {
 '
       setError('Please agree to the terms and conditions');
-      return false;
-    }
-    return true;
-  };
+      return false}
+    return true};
 
   const handleSubmit = async (e: React.FormEvent) => {
 
-    e.preventDefault();
-    if (!validateForm()) return;
+    e.preventDefault();    if (!validateForm()) return;
 
     setIsLoading(true);'
     setError('');
@@ -200,8 +191,7 @@ const Signup: React.FC = () => {
     { number: '50+', label: 'Services' },
   ];
 
-  return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex">
+  return ("    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex">
       {/* Left Side - Form */}"
       <div className="flex-1 flex items-center justify-center px-4 py-12">"
         <div className="w-full max-w-2xl">
@@ -214,8 +204,7 @@ const Signup: React.FC = () => {
           >"
             <Link to="/" className="inline-block mb-6">"
               <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl mx-auto">"
-                <Zap className="w-8 h-8 text-white" />
-              </div>
+                <Zap className="w-8 h-8 text-white" />              </div>
             </Link>"
             <h1 className="text-4xl font-bold text-white mb-4">
               Join Zion Tech Group
@@ -231,8 +220,7 @@ const Signup: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}"
               className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3 text-red-400"
             >"
-              <AlertCircle className="w-5 h-5" />
-              {error}
+              <AlertCircle className="w-5 h-5" />              {error}
             </motion.div>) }
 
           {success && (<motion.div
@@ -240,8 +228,7 @@ const Signup: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}"
               className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3 text-green-400"
             >"
-              <CheckCircle className="w-5 h-5" />
-              {success}
+              <CheckCircle className="w-5 h-5" />              {success}
             </motion.div>) }
 
           {/* Signup Form */}
@@ -259,8 +246,7 @@ const Signup: React.FC = () => {
                 </label>"
                 <div className="relative">"
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <input"
-                    type="text"
+                  <input"                    type="text"
                     value={formData.firstName}
                     onChange={e =>'
                       handleInputChange('firstName', e.target.value)
@@ -278,8 +264,7 @@ const Signup: React.FC = () => {
                 </label>"
                 <div className="relative">"
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <input"
-                    type="text"
+                  <input"                    type="text"
                     value={formData.lastName}
                     onChange={e =>'
                       handleInputChange('lastName', e.target.value)
@@ -299,8 +284,7 @@ const Signup: React.FC = () => {
                 </label>"
                 <div className="relative">"
                   <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <input"
-                    type="email"
+                  <input"                    type="email"
                     value={formData.email}'
                     onChange={e => handleInputChange('email', e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
@@ -316,8 +300,7 @@ const Signup: React.FC = () => {
                 </label>"
                 <div className="relative">"
                   <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <input"
-                    type="tel"
+                  <input"                    type="tel"
                     value={formData.phone}'
                     onChange={e => handleInputChange('phone', e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
@@ -334,8 +317,7 @@ const Signup: React.FC = () => {
                 </label>"
                 <div className="relative">"
                   <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <input"
-                    type="text"
+                  <input"                    type="text"
                     value={formData.company}'
                     onChange={e => handleInputChange('company', e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
@@ -350,8 +332,7 @@ const Signup: React.FC = () => {
                   Industry
                 </label>"
                 <div className="relative">"
-                  <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <select
+                  <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />                  <select
                     value={formData.industry}
                     onChange={e =>'
                       handleInputChange('industry', e.target.value)
@@ -374,8 +355,7 @@ const Signup: React.FC = () => {
                 Company Size
               </label>"
               <div className="relative">"
-                <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                <select
+                <Users className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />                <select
                   value={formData.companySize}
                   onChange={e =>'
                     handleInputChange('companySize', e.target.value)
@@ -399,8 +379,7 @@ const Signup: React.FC = () => {
                 </label>"
                 <div className="relative">"
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <input'
-                    type={showPassword ? 'text' : 'password'}
+                  <input'                    type={showPassword ? 'text' : 'password'}
                     value={formData.password}
                     onChange={e =>'
                       handleInputChange('password', e.target.value)
@@ -418,8 +397,7 @@ const Signup: React.FC = () => {
                       <EyeOff className="w-5 h-5" />
                     ) : ("
                       <Eye className="w-5 h-5" />
-                    )}
-                  </button>
+                    )}                  </button>
                 </div>
                 {formData.password && ("
                   <div className="mt-2">"
@@ -448,8 +426,7 @@ const Signup: React.FC = () => {
                 </label>"
                 <div className="relative">"
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <input'
-                    type={showConfirmPassword ? 'text' : 'password'}
+                  <input'                    type={showConfirmPassword ? 'text' : 'password'}
                     value={formData.confirmPassword}
                     onChange={e =>'
                       handleInputChange('confirmPassword', e.target.value)
@@ -467,8 +444,7 @@ const Signup: React.FC = () => {
                       <EyeOff className="w-5 h-5" />
                     ) : ("
                       <Eye className="w-5 h-5" />
-                    )}
-                  </button>
+                    )}                  </button>
                 </div>
               </div>
             </div>
@@ -532,8 +508,7 @@ const Signup: React.FC = () => {
               ) : (
                 <>
                   Create Account"
-                  <ArrowRight className="w-5 h-5" />
-                </>
+                  <ArrowRight className="w-5 h-5" />                </>
               )}
             </button>
 "
@@ -572,8 +547,7 @@ const Signup: React.FC = () => {
                   <Cloud className="w-8 h-8 text-white" />
                 </div>"
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center">"
-                  <Rocket className="w-8 h-8 text-white" />
-                </div>
+                  <Rocket className="w-8 h-8 text-white" />                </div>
               </div>
             </motion.div>
 
@@ -641,8 +615,7 @@ const Signup: React.FC = () => {
               className="mt-8 p-6 bg-white/10 border border-slate-600/30 rounded-xl backdrop-blur-md"
             >"
               <div className="flex items-center gap-3 mb-3">"
-                <Award className="w-6 h-6 text-yellow-400" />"
-                <h3 className="text-lg font-semibold text-white">
+                <Award className="w-6 h-6 text-yellow-400" />"                <h3 className="text-lg font-semibold text-white">
                   Trusted by Industry Leaders
                 </h3>
               </div>"
@@ -656,6 +629,5 @@ const Signup: React.FC = () => {
       </div>
     </div>) ;
 };
-
 export default Signup;
 '"`

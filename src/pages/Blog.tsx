@@ -7,8 +7,7 @@ import {
   Calendar,
   User,
   Eye,
-  BookOpen,
-  ArrowRight,
+  BookOpen,  ArrowRight,
   Mail,'
   Send} from 'lucide-react';
 
@@ -28,13 +27,11 @@ interface BlogPost {
   image?: string;
 
 }
-
 interface Category {
 
   id: string;
   name: string;
   count: number;
-
 const Blog: React.FC = () => {
 '
   const [searchTerm, setSearchTerm] = useState('');'
@@ -133,7 +130,6 @@ const Blog: React.FC = () => {
       month: 'long','
       day: 'numeric'});
   };
-
   return ("
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {/* Header */}"
@@ -167,8 +163,7 @@ const Blog: React.FC = () => {
             <div className="relative">"
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input"
-                type="text""
-                placeholder="Search articles..."
+                type="text""                placeholder="Search articles..."
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}"
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -205,8 +200,7 @@ const Blog: React.FC = () => {
                       <BookOpen className="w-16 h-16 text-blue-400 opacity-60" />
                     </div>"
                     <div className="p-6">"
-                      <div className="flex items-center gap-2 mb-3">"
-                        <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded">
+                      <div className="flex items-center gap-2 mb-3">"                        <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded">
                           {categories.find(c => c.id === post.category)?.name}
                         </span>"
                         <span className="text-slate-400 text-sm">•</span>"
@@ -236,8 +230,7 @@ const Blog: React.FC = () => {
                         </div>
 "
                         <div className="flex items-center gap-2 text-slate-400 text-sm">"
-                          <Eye className="w-4 h-4" />
-                          {post.views}
+                          <Eye className="w-4 h-4" />                          {post.views}
                         </div>
                       </div>
 "
@@ -252,8 +245,7 @@ const Blog: React.FC = () => {
                       </div>
 "
                       <button className="text-zion-cyan hover:text-zion-cyan-light transition-colors group-hover:translate-x-1">"
-                        <ArrowRight className="w-5 h-5" />
-                      </button>
+                        <ArrowRight className="w-5 h-5" />                      </button>
                     </div>
                   </motion.article>) ) }
             </div>
@@ -270,8 +262,7 @@ const Blog: React.FC = () => {
                 {/* Categories */}"
                 <div className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6">"
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">"
-                    <Filter className="w-5 h-5 text-zion-cyan" />
-                    Categories
+                    <Filter className="w-5 h-5 text-zion-cyan" />                    Categories
                   </h3>"
                   <div className="space-y-2">
                     {categories.map(category => (
@@ -312,8 +303,7 @@ const Blog: React.FC = () => {
                         <BookOpen className="w-12 h-12 text-blue-400 opacity-40" />
                       </div>"
                       <div className="p-4">"
-                        <div className="flex items-center gap-2 mb-2">"
-                          <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded">
+                        <div className="flex items-center gap-2 mb-2">"                          <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded">
                             {categories.find(c => c.id === post.category)?.name}
                           </span>"
                           <span className="text-slate-400 text-xs">•</span>"
@@ -366,8 +356,7 @@ const Blog: React.FC = () => {
                 className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />"
               <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center gap-2">"
-                <Mail className="w-4 h-4" />
-                Subscribe
+                <Mail className="w-4 h-4" />                Subscribe
               </button>
             </div>
           </motion.div>
@@ -375,6 +364,5 @@ const Blog: React.FC = () => {
       </section>
     </div>) ;
 };
-
 export default Blog;
 '"`

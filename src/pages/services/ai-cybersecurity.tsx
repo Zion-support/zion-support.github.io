@@ -59,16 +59,14 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
     'Reduced false positives with AI accuracy',;'
     '24/7 automated security monitoring',;'
     'Predictive threat intelligence',;'
-    'Cost-effective security operations',;'
-    'Compliance and regulatory support';
+    'Cost-effective security operations',;'    'Compliance and regulatory support';
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI Cybersecurity Services - Zion Tech Group""
-        description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
-      />
+        title="AI Cybersecurity Services - Zion Tech Group""        description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
+       />
 
       {/* Hero Section */}"
       <section className="pt-20 pb-16 px-4">"
@@ -100,8 +98,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full border border-red-400/30 mb-6">"
-              <Shield className="w-5 h-5 text-red-400 mr-2" />"
-              <span className="text-red-300 font-medium">AI Cybersecurity</span>
+              <Shield className="w-5 h-5 text-red-400 mr-2" />"              <span className="text-red-300 font-medium">AI Cybersecurity</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -381,8 +378,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => ("
                   <li key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"
-                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"                    <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -473,7 +469,6 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default AICybersecurity;}}}'"

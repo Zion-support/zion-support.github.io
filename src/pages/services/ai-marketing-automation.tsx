@@ -9,8 +9,7 @@ import {
   Users,
   Zap,
   BarChart3,
-  CheckCircle,
-  Star,
+  CheckCircle,  Star,
   ArrowRight,
   Mail,
   MessageCircle,
@@ -154,8 +153,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
         description="Transform your marketing with AI-powered automation. Personalize campaigns, optimize ROI, and scale your marketing operations with intelligent automation.""
         keywords="AI marketing automation, marketing automation, personalized marketing, customer segmentation, marketing ROI, AI campaigns"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+"      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}"
         <section className="relative overflow-hidden py-20 lg:py-32">"
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>"
@@ -170,8 +168,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
                 <Brain className="w-4 h-4 text-cyan-400 mr-2" />"
                 <span className="text-cyan-400 text-sm font-medium">
                   AI-Powered Marketing Automation
-                </span>
-              </div>
+                </span>              </div>
 "
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
                 AI Marketing Automation
@@ -352,8 +349,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
                     transition={{ duration: 0.8, delay: index * 0.1 }}"
                     className="flex items-center space-x-3"
                   >"
-                    <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />"
-                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />"                    <span className="text-gray-300">{benefit}</span>
                   </motion.div>
                 ))}
               </div>"
@@ -366,8 +362,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
                     transition={{ duration: 0.8, delay: index * 0.1 }}"
                     className="flex items-center space-x-3"
                   >"
-                    <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />"
-                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />"                    <span className="text-gray-300">{benefit}</span>
                   </motion.div>
                 ))}
               </div>

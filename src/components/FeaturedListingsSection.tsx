@@ -26,8 +26,7 @@ const featuredListings = [
     featured: true,"
     technologies["React", "Node.js", "MongoDB", "AI/ML", "AWS"],;"
     highlights["AI Recommendations", "Real-time Analytics", "Mobile Responsive", "SEO Optimized"];
-  },;
-  {
+  },;  {
 
     id: 2,"
     title: "Mobile Banking Application","
@@ -46,8 +45,7 @@ const featuredListings = [
     featured: true,"
     technologies["React Native", "Node.js", "PostgreSQL", "Biometrics", "Security"],;"
     highlights["Biometric Auth", "Real-time Transactions", "Security Compliance", "Cross-platform"];
-  },;
-  {
+  },;  {
 
     id: 3,"
     title: "Blockchain Supply Chain Platform","
@@ -60,8 +58,7 @@ const featuredListings = [
     highlights["Zero Downtime", "Auto-scaling", "Monitoring", "Security"];
   }
     reviews: 234;
-  },;
-  {
+  },;  {
 
     id: 4,"
     title: "IoT Edge Computing Platform",;"
@@ -70,8 +67,7 @@ const featuredListings = [
     price: "$449/month",;"
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400",;
     rating: 4.6,;
-    reviews: 178;
-  };
+    reviews: 178};
 ];
 
 export function FeaturedListingsSection() {

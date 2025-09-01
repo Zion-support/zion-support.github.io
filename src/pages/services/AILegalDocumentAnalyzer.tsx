@@ -8,8 +8,7 @@ import {
   Clock,
   DollarSign,
   Users,
-  TrendingUp,
-  Award,
+  TrendingUp,  Award,
   ArrowRight,
   Star,
   Zap,
@@ -107,8 +106,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
     { name: 'ContractPodAi', price: '$2,800+/month', rating: 4.1 },
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Animated Background */}"
@@ -126,8 +124,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
           >"
             <div className="flex items-center justify-center mb-6">"
               <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full">"
-                <FileText className="w-8 h-8 text-white" />
-              </div>
+                <FileText className="w-8 h-8 text-white" />              </div>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
               AI Legal Document Analyzer
@@ -168,8 +165,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-2 hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
               >
                 Get Started Today"
-                <ArrowRight className="w-5 h-5" />
-              </motion.button>
+                <ArrowRight className="w-5 h-5" />              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
@@ -244,8 +240,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                     <CheckCircle className="w-6 h-6 text-green-400" />"
                     <span className="text-gray-300">
                       Save $50K+ annually on legal fees
-                    </span>
-                  </div>
+                    </span>                  </div>
                 </div>
               </div>"
               <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-8 rounded-2xl border border-cyan-500/30">"
@@ -298,8 +293,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                   >"
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">"
                       <Zap className="w-6 h-6 text-white" />
-                    </div>"
-                    <h3 className="text-lg font-semibold mb-2">{feature}</h3>
+                    </div>"                    <h3 className="text-lg font-semibold mb-2">{feature}</h3>
                   </motion.div>
                 ))}
               </div>
@@ -404,8 +398,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                           key={featureIndex}"
                           className="flex items-center gap-3"
                         >"
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"
-                          <span className="text-gray-300">{feature}</span>
+                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"                          <span className="text-gray-300">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -448,8 +441,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                         {competitor.name}
                       </h3>"
                       <div className="flex items-center gap-1">"
-                        <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                        <span>{competitor.rating}</span>
+                        <Star className="w-5 h-5 text-yellow-400 fill-current" />                        <span>{competitor.rating}</span>
                       </div>
                     </div>"
                     <div className="text-cyan-400 font-semibold mb-2">
@@ -506,8 +498,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">"
                 <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-6 rounded-xl border border-cyan-500/30">"
                   <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
-                  <h3 className="text-xl font-semibold mb-2">Call Us</h3>"
-                  <p className="text-gray-300 mb-4">Speak with our experts</p>
+                  <h3 className="text-xl font-semibold mb-2">Call Us</h3>"                  <p className="text-gray-300 mb-4">Speak with our experts</p>
                   <a"
                     href="tel:+13024640950""
                     className="text-cyan-400 font-semibold hover:text-cyan-300"
@@ -518,8 +509,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
 "
                 <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 p-6 rounded-xl border border-purple-500/30">"
                   <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />"
-                  <h3 className="text-xl font-semibold mb-2">Email Us</h3>"
-                  <p className="text-gray-300 mb-4">Get detailed information</p>
+                  <h3 className="text-xl font-semibold mb-2">Email Us</h3>"                  <p className="text-gray-300 mb-4">Get detailed information</p>
                   <a"
                     href="mailto:kleber@ziontechgroup.com""
                     className="text-purple-400 font-semibold hover:text-purple-300"
@@ -541,8 +531,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                     className="text-green-400 font-semibold hover:text-green-300 flex items-center justify-center gap-2"
                   >
                     ziontechgroup.com"
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
+                    <ExternalLink className="w-4 h-4" />                  </a>
                 </div>
               </div>
 "
@@ -568,8 +557,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default AILegalDocumentAnalyzer;
 '"`

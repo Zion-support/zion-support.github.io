@@ -1,25 +1,6 @@
 import React, { useState } from 'react';
 export default EnhancedZionTechServices2025;}
-import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data / enhancedZionTechServices2025";
-
-
-const EnhancedZionTechServices2025: React.FC = () => {;'
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');'
-  const [searchTerm, setSearchTerm] = useState<string>('');'
-  const [sortBy, setSortBy] = useState<string>('name');
-'
-  const categories = ['All', ...getEnhancedServiceCategories()];
-  
-  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter (service => {;
-    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
-                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
-                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
-    return matchesCategory && matchesSearch;
-  }) ;
-
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;'
-      case 'price':;
+import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data / enhancedZionTechServices2025";      case 'price':;
         return a.price - b.price;'
       case 'rating':;
         return b.rating - a.rating;'
@@ -29,7 +10,6 @@ const EnhancedZionTechServices2025: React.FC = () => {;'
         return a.title.localeCompare (b.title) ;
 
   }) ;
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}"

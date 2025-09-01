@@ -1,8 +1,7 @@
 import React from 'react.ts';'
 import { SEO   } from '../../components/SEO';'
 import { motion   } from 'framer-motion.ts';
-;
-const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
+;const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
 
   return()
     <>
@@ -12,8 +11,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
         keywords="AI customer analytics, sentiment analysis, customer journey, predictive analytics, customer experience, CX analytics, churn reduction""
         canonical="https://ziontechgroup.com/services/ai-customer-experience-analytics"
       />
-      "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
           <div className="max-w-7xl mx-auto text-center">
@@ -554,5 +552,4 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
     </>
   );
 };
-
 export default AICustomerExperienceAnalytics;'"`

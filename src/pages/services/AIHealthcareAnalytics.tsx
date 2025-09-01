@@ -187,8 +187,7 @@ const AIHealthcareAnalytics = () => {
         <div className="max-w-5xl mx-auto px-6">"
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"
             <Heart className="w-4 h-4 mr-2" /> AI-Powered Healthcare Analytics
-          </div>"
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+          </div>"          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             AI Healthcare Analytics Platform
           </h1>"
           <p className="text-zion-slate-light text-xl">
@@ -207,8 +206,7 @@ const AIHealthcareAnalytics = () => {
             <ul className="space-y-3">
               {features.map(feature => ("
                 <li key={feature} className="flex items-start">"
-                  <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />"
-                  <span className="text-zion-slate-dark">{feature}</span>
+                  <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -220,8 +218,7 @@ const AIHealthcareAnalytics = () => {
             <ul className="space-y-3">
               {benefits.map(benefit => ("
                 <li key={benefit} className="flex items-start">"
-                  <Zap className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />"
-                  <span className="text-zion-slate-dark">{benefit}</span>
+                  <Zap className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{benefit}</span>
                 </li>
               ))}
             </ul>
@@ -241,8 +238,7 @@ const AIHealthcareAnalytics = () => {
                 <Activity className="w-6 h-6 text-zion-cyan mb-3" />"
                 <div className="text-zion-slate-dark font-semibold">
                   {useCase}
-                </div>
-              </div>
+                </div>              </div>
             ))}
           </div>
         </div>
@@ -266,8 +262,7 @@ const AIHealthcareAnalytics = () => {
                       key={sol}"
                       className="flex items-start text-sm text-zion-slate-dark"
                     >"
-                      <Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5" />
-                      {sol}
+                      <Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5" />                      {sol}
                     </li>
                   ))}
                 </ul>
@@ -348,8 +343,7 @@ const AIHealthcareAnalytics = () => {
                       key={sec}"
                       className="flex items-center text-sm text-zion-slate-dark"
                     >"
-                      <Shield className="w-4 h-4 text-zion-cyan mr-2" />
-                      {sec}
+                      <Shield className="w-4 h-4 text-zion-cyan mr-2" />                      {sec}
                     </div>
                   ))}
                 </div>
@@ -372,8 +366,7 @@ const AIHealthcareAnalytics = () => {
                       key={comp}"
                       className="flex items-center text-sm text-zion-slate-dark"
                     >"
-                      <Shield className="w-4 h-4 text-zion-cyan mr-2" />
-                      {comp}
+                      <Shield className="w-4 h-4 text-zion-cyan mr-2" />                      {comp}
                     </div>
                   ))}
                 </div>
@@ -396,8 +389,7 @@ const AIHealthcareAnalytics = () => {
             <a"
               href="mailto:kleber@ziontechgroup.com""
               className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"
-            >"
-              <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com
+            >"              <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com
             </a>
           </div>"
           <div className="mt-4">
@@ -407,8 +399,7 @@ const AIHealthcareAnalytics = () => {
               rel="noreferrer""
               className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark"
             >"
-              Learn More <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
+              Learn More <ExternalLink className="w-4 h-4 ml-2" />            </a>
           </div>
         </div>
       </section>
@@ -416,6 +407,5 @@ const AIHealthcareAnalytics = () => {
   );
 };
 ;
-export { AIHealthcareAnalytics };
-export default AIHealthcareAnalytics;
+export { AIHealthcareAnalytics };export default AIHealthcareAnalytics;
 '"

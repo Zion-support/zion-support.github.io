@@ -152,19 +152,11 @@ export const ULTIMATE_CONTACT_INFO_2025 = {
   email: "kleber@ziontechgroup.com","
   website: "https://ziontechgroup.com","
   address: "364 E Main St STE 1008 Middletown DE 19709","
-  businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;
-  ;
+  businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;  ;
   ;
   ;
   ;"
   emergencySupport: "24/7 available for critical issues";
-;
-
-
-
-
-
-
 };
 ;
 export const ULTIMATE_SERVICE_GUARANTEES_2025 = {
@@ -173,18 +165,10 @@ export const ULTIMATE_SERVICE_GUARANTEES_2025 = {
   support: "Comprehensive technical support and maintenance included","
   updates: "Regular feature updates and security patches","
   security: "Enterprise-grade security and compliance certifications","
-  scalability: "Built to scale with your business growth",;
-  ;
+  scalability: "Built to scale with your business growth",;  ;
   ;
   ;
   ;"
   integration: "Seamless integration with existing systems and workflows";
-;
-
-
-
-
-
-
 };
 "

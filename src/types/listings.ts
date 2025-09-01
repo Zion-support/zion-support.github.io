@@ -15,8 +15,7 @@ seller: {
     reviews: number;
   
 
-};
-  location: string;
+};  location: string;
   createdAt: string;
   updatedAt: string;
   status: 'active' | 'inactive' | 'sold' | 'pending';
@@ -24,8 +23,7 @@ seller: {
   likes: number;
   shares: number;
 }
-;
-export interface ProductListing extends Listing {
+;export interface ProductListing extends Listing {
 
   brand?: string;
   model?: string;'
@@ -38,8 +36,7 @@ export interface ProductListing extends Listing {
     estimatedDays: number;
   };
 }
-;
-export interface ServiceListing extends Listing {
+;export interface ServiceListing extends Listing {
 '
   serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
   duration?: string;
@@ -48,8 +45,7 @@ export interface ServiceListing extends Listing {
   certifications: string[];
   portfolio?: string[];
 }
-;
-export interface TalentListing extends Listing {
+;export interface TalentListing extends Listing {
 
   skills: string[];
   experience: number;
@@ -61,8 +57,7 @@ export interface TalentListing extends Listing {
   portfolio?: string[];
   references?: string[];
 }
-;
-export interface CartItem {
+;export interface CartItem {
   id: string;
   title: string;
   price: number;
@@ -72,8 +67,7 @@ export interface CartItem {
 
 
 }
-;
-export interface WishlistItem {
+;export interface WishlistItem {
   id: string;
   userId: string;
   listingId: string;'

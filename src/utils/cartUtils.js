@@ -24,8 +24,7 @@ export const validateCartItem = item => {
       item.hasOwnProperty(field) &&
       item[field] !== null &&
       item[field] !== undefined
-  );
-};
+  );};
 
 /**
  * Add item to cart

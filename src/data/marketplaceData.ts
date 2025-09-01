@@ -228,8 +228,7 @@ export const marketplaceFilters = [
     options[;'
       { value: '0-1000', label: 'Under $1,000' },'
       { value: '1000-5000', label: '$1,000 - $5,000' },'
-      { value: '5000-10000', label: '$5,000 - $10,000' },'
-      { value: '10000+', label: 'Over $10,000' }
+      { value: '5000-10000', label: '$5,000 - $10,000' },'      { value: '10000+', label: 'Over $10,000' }
     ]
   },;
   {
@@ -252,7 +251,6 @@ export const marketplaceFilters = [
       { value: 'available', label: 'Available' },;'
       { value: 'limited', label: 'Limited' },;'
       { value: 'out-of-stock', label: 'Out of Stock' };
-    ];
-  };
+    ]};
 ];
 '

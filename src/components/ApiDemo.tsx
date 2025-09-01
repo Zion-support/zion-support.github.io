@@ -1,58 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';'
 import { api, ApiResponse  } from '@/services/api';
-
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  createdAt?: string;
-
-const ApiDemo: React.FC = (): JSX.Element => {;
-  const [users, setUsers] = useState<any>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<any>(null);'
-const [newUser, setNewUser] = useState({ name: '', email: '';
-});'
-  const [healthStatus, setHealthStatus] = useState<any>('Checking...');
-
-  // Check API health on component mount
-  useEffect ( () => {
-    checkHealth () ;
-    fetchUsers () ;
-  }, []) ;
-
-  const checkHealth = async : unknown {;
-    try {;
-      const response = await api.health () ;
-      setHealthStatus (`✅ API Healthy - ${response.data?.environment} mode`) ;
-    } catch (err) {
-'
-      setHealthStatus('❌ API Unhealthy');
-
-  };
-
-  const fetchUsers = async () => {;
-    setLoading (true) ;
-    setError (null) ;
-
-    try {
-      const response = await api.getUsers () ;
-      if (response.success && response.data) {
-
-        setUsers(response.data);
-
-    } catch (err) {
-'
-      setError(err instanceof Error ? err.message : 'Failed to fetch users');
-    } finally {
-
-      setLoading(false);
-
-  };
-
-  const handleCreateUser = async (e: anyReact.FormEvent) => {;
-    e.preventDefault () ;
-
     if (!newUser.name.trim() || !newUser.email.trim()) {
 '
       setError('Name and email are required');
@@ -76,7 +23,6 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
       setLoading(false);
 
   };
-
   return()
     <div className = "max-w-4xl mx-auto p-6 space-y-6">"
       <div className="bg-white rounded-lg shadow-md p-6">"

@@ -2,7 +2,6 @@ import React from 'react';'
 import { motion } from 'framer-motion';'
 import { Link } from 'react-router-dom';
 import {
-
   Brain, 
   GitFork, 
   Shield, 
@@ -151,10 +150,8 @@ import {
       category: "Customer Experience",;"
       price: "From $399/month",;"
       features: ["Sentiment analysis", "Customer journey mapping", "Predictive analytics", "Personalization engine"],;"
-      link: "/services/ai-customer-experience-analytics",;"
-      color: "from-zion-cyan to-zion-purple",;
-      popular: false;
-    };
+      link: "/services/ai-customer-experience-analytics",;"      color: "from-zion-cyan to-zion-purple",;
+      popular: false};
   ];
 
   const serviceCategories = [
@@ -239,8 +236,7 @@ import {
       icon: Shield,;"
       title: "Improved Security",;"
       description: "Advanced security measures and compliance automation protect your business and data";
-    };
-  ];
+    };  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
@@ -270,8 +266,7 @@ import {
               transition={{ duration: 0.8 }}
             >"
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8">"
-                <Sparkles className="w-4 h-4 mr-2" />
-                2025 Innovative Services Showcase
+                <Sparkles className="w-4 h-4 mr-2" />                2025 Innovative Services Showcase
               </div>
               "
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
@@ -289,16 +284,14 @@ import {
                   whileTap={{ scale: 0.95 }}"
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
                 >"
-                  <Play className="w-5 h-5 mr-2" />
-                  Explore Services
+                  <Play className="w-5 h-5 mr-2" />                  Explore Services
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
                   className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
                 >"
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Contact Sales
+                  <MessageCircle className="w-5 h-5 mr-2" />                  Contact Sales
                 </motion.button>
               </div>
             </motion.div>
@@ -384,8 +377,7 @@ import {
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, idx) => ("
                       <li key={idx} className="flex items-center text-zion-slate-300">"
-                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />                        {feature}
                       </li>) ) }
                   </ul>
                   
@@ -473,8 +465,7 @@ import {
                     <ul className="space-y-2">
                       {category.services.map((service, idx) => ("
                         <li key={idx} className="flex items-center text-zion-slate-300">"
-                          <ArrowRight className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                          {service}
+                          <ArrowRight className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />                          {service}
                         </li>) ) }
                     </ul>
                   </div>
@@ -580,16 +571,14 @@ import {
                   whileTap={{ scale: 0.95 }}"
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
                 >"
-                  <Rocket className="w-5 h-5 mr-2" />
-                  Start Free Trial
+                  <Rocket className="w-5 h-5 mr-2" />                  Start Free Trial
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
                   className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
                 >"
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Schedule Consultation
+                  <MessageCircle className="w-5 h-5 mr-2" />                  Schedule Consultation
                 </motion.button>
               </div>
             </motion.div>
@@ -610,8 +599,7 @@ import {
                 <p className="text-zion-slate-300">kleber@ziontechgroup.com</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <MapPin className="w-8 h-8 text-zion-cyan mb-4" />"
-                <p className="text-zion-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>;
+                <MapPin className="w-8 h-8 text-zion-cyan mb-4" />"                <p className="text-zion-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>;
               </div>;
             </div>;
           </div>;

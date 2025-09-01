@@ -51,10 +51,8 @@ export default function CustomerExperience(...args[]):  {
       icon: Zap;
     },;
     {;'
-      title: 'Performance Analytics',;'
-      description: 'Track and improve customer experience metrics',;
-      icon: TrendingUp;
-    };
+      title: 'Performance Analytics',;'      description: 'Track and improve customer experience metrics',;
+      icon: TrendingUp};
   ];
 
   return()
@@ -90,8 +88,7 @@ export default function CustomerExperience(...args[]):  {
             className="text-center max-w-4xl mx-auto"
 "
             <div className="inline-flex items-center space-x-2 bg-pink-500/10 border border-pink-500/20 rounded-full px-4 py-2 mb-6">"
-              <Heart className="w-5 h-5 text-pink-400" />"
-              <span className="text-pink-400 font-medium">Customer Experience</span>
+              <Heart className="w-5 h-5 text-pink-400" />"              <span className="text-pink-400 font-medium">Customer Experience</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -108,8 +105,7 @@ export default function CustomerExperience(...args[]):  {
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Free Trial"
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </button>"
-              <button className="btn-outline px-8 py-4 text-lg">
+              </button>"              <button className="btn-outline px-8 py-4 text-lg">
                 Watch Demo
               </button>
             </div>

@@ -1,31 +1,5 @@
 import React, { useState } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';
-import { ArrowRight,
-import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030 } from "../data / comprehensivePricingGuide2030";
-import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030 } from "../data / comprehensiveServicesIndex2030";
-import { motion  } from 'framer - motion.ts';
-import { SEO } from "../components / SEO";
-
-
-  Brain,
-  Cloud,
-  Database,
-  Globe,
-  Heart,
-  Lock,
-  Rocket,
-  Search,
-  Shield,
-  Star,
-  TrendingUp,
-  Users,
-  Zap,
-  Phone'
-} from 'lucide-react';
-import { SEO } from "../components/SEO";"
-import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030 } from "../data/comprehensiveServicesIndex2030";"
-import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030 } from "../data/comprehensivePricingGuide2030";
-
 export default function ComprehensiveServicesLanding2030(...args[]):  {
 '
   const [activeCategory, setActiveCategory] = useState('all');'
@@ -47,8 +21,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;'
-      case 'rating':;
+    switch (sortBy) {;'      case 'rating':;
         return b.rating - a.rating;'
       case 'price':;
         return a.price - b.price;'
@@ -112,8 +85,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
   const resetFilters = () => {;'
     setActiveCategory('all');'
-    setSearchTerm('');'
-    setSortBy('rating');
+    setSearchTerm('');'    setSortBy('rating');
     setPriceRange([0, 50000]);
     setAiScoreRange([80, 100])};
 

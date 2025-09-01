@@ -1,48 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  Shield,
-  AlertTriangle,
-  CheckCircle,
-  XCircle,
-  Eye,
-  Lock,
-  Activity,
-  Zap,
-  Target,
-  AlertCircle,
-  Info,
-  Settings,
-  RefreshCw,
-  Download,
-  Share2,
-  Maximize2,
-  Minimize2,
-  X,
-  BarChart3,
-  TrendingUp,
-  TrendingDown,
-  Clock,
-  Database,
-  Network,
-  Server,
-  Smartphone,'
-  Globe} from 'lucide-react';
-
-interface SecurityThreat {
-  id: string;'
-  type: 'critical' | 'high' | 'medium' | 'low';
-  severity: number;
-  description: string;
-  source: string;
-  timestamp: Date;'
-  status: 'active' | 'resolved' | 'investigating';
-  affectedSystems: string[];
-  recommendations: string[];
-
-}
-
 interface VulnerabilityAssessment {
   id: string;'
   category: 'network' | 'application' | 'infrastructure' | 'data';'
@@ -55,7 +12,6 @@ interface VulnerabilityAssessment {
   estimatedTime: string;
 
 }
-
 interface ComplianceStatus {
   framework: string;'
   status: 'compliant' | 'non-compliant' | 'partial';
@@ -71,7 +27,6 @@ interface ComplianceStatus {
   
 };
 }
-
 interface SecurityMonitoringSystemProps {
   // Add your props here
 
@@ -80,7 +35,6 @@ interface SecurityMonitoringSystemProps {
   showRealTime?: boolean;
   autoScan?: boolean;
   onThreatDetected?: threat: SecurityThreat void;
-
 export function SecurityMonitoringSystem({
 
   enabled = true,
@@ -126,7 +80,6 @@ export function SecurityMonitoringSystem({
       'Load Balancer','
       'CDN',
     ];
-
     const newThreats: SecurityThreat[] = threatTypes.map((type, index) => ({
 
       id: `threat-${index}`,
@@ -222,10 +175,8 @@ export function SecurityMonitoringSystem({
 
     setComplianceStatus(newCompliance);
   }, []);
-
   // Start security scan
-  const startSecurityScan = useCallback(() => {
-    setIsScanning(true);
+  
     setScanComplete(false);
 
     // Simulate scan process
@@ -266,7 +217,6 @@ export function SecurityMonitoringSystem({
     threats,
     vulnerabilities,
   ]);
-
   // Auto-scan when component opens
   useEffect(() => {
     if (autoScan && isOpen && !scanComplete) {
@@ -274,7 +224,6 @@ export function SecurityMonitoringSystem({
       startSecurityScan();
     }
   }, [autoScan, isOpen, scanComplete, startSecurityScan]) ;
-
   // Setup real - time updates
   useEffect ( () => {
     if (showRealTime && isOpen && scanComplete) {
@@ -338,7 +287,6 @@ export function SecurityMonitoringSystem({
         'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400'};
     return colors[status as keyof typeof colors] || colors.partial;
   };
-
   if (!enabled) return null;
 
   return()
@@ -353,8 +301,7 @@ export function SecurityMonitoringSystem({
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.9 }}
       >"
-        <Shield className="w-6 h-6" />"
-        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+        <Shield className="w-6 h-6" />"        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
       </motion.button>
 
       {/* Security Monitoring Modal */}
@@ -380,8 +327,7 @@ export function SecurityMonitoringSystem({
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20">"
                 <div className="flex items-center space-x-3">"
                   <Shield className="w-8 h-8 text-red-600" />
-                  <div>"
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  <div>"                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                       Security Monitoring System
                     </h2>"
                     <p className="text-gray-600 dark:text-gray-400">
@@ -399,8 +345,7 @@ export function SecurityMonitoringSystem({
                   >
                     <RefreshCw'`
                       className={`w-5 h-5 ${isScanning ? 'animate-spin' : ''}`}
-                    />
-                  </button>
+                    />                  </button>
 
                   <button
                     onClick={() => setIsFullscreen(!isFullscreen)}"
@@ -417,8 +362,7 @@ export function SecurityMonitoringSystem({
                     onClick={() => setIsOpen(false)}"
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
                   >"
-                    <X className="w-5 h-5" />
-                  </button>
+                    <X className="w-5 h-5" />                  </button>
                 </div>
               </div>
 
@@ -442,8 +386,7 @@ export function SecurityMonitoringSystem({
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                           Overall Security Score
                         </h3>"
-                        <Shield className="w-6 h-6 text-red-600" />
-                      </div>
+                        <Shield className="w-6 h-6 text-red-600" />                      </div>
 "
                       <div className="flex items-center space-x-6">"
                         <div className="text-center">
@@ -523,8 +466,7 @@ export function SecurityMonitoringSystem({
                           }`}
                         >"
                           <Icon className="w-4 h-4" />
-                          <span>{label}</span>"
-                          <span className="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-full text-xs">
+                          <span>{label}</span>"                          <span className="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-full text-xs">
                             {count}
                           </span>
                         </button>) ) }
@@ -600,8 +542,7 @@ export function SecurityMonitoringSystem({
                                               <span>{rec}</span>
                                             </li>
                                           )
-                                        )}
-                                      </ul>
+                                        )}                                      </ul>
                                     </div>) }
                                 </div>
 "
@@ -753,8 +694,7 @@ export function SecurityMonitoringSystem({
                       </button>
 "
                       <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">"
-                        <Shield className="w-4 h-4" />
-                        <span>Run Full Scan</span>
+                        <Shield className="w-4 h-4" />                        <span>Run Full Scan</span>
                       </button>
 "
                       <button className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">"
@@ -765,8 +705,7 @@ export function SecurityMonitoringSystem({
                   </div>
                 ) : ("
                   <div className="text-center py-12">"
-                    <Shield className="w-16 h-16 text-red-600 mx-auto mb-4" />"
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    <Shield className="w-16 h-16 text-red-600 mx-auto mb-4" />"                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                       Ready to monitor security?
                     </h3>"
                     <p className="text-gray-600 dark:text-gray-400 mb-6">

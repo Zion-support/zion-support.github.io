@@ -1,21 +1,6 @@
 import React, { useState } from 'react.ts';'
 import { Link  } from 'react-router-dom.ts';'
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-
-
-const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
-  const [isOpen, setIsOpen] = useState (false) ;
-  const [activeCategory, setActiveCategory] = useState < any> (null) ;
-
-  const serviceCategories = [
-    {
-
-      name: "AI-Powered Micro SAAS","
-      description: "Cutting-edge AI solutions","
-      icon: "🤖","
-      color: "from-blue-600 to-purple-600",
-      services[;
-        {
+import { motion, AnimatePresence  } from 'framer-motion.ts';        {
 "
           title: "Code Review & Security","
           url: "/services/ai-code-review-security","
@@ -165,8 +150,7 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
       url: "/contact","
       description: "Get expert advice","
       icon: "📞";
-    };
-  ];
+    };  ];
 
   return ("
     <div className = "relative">

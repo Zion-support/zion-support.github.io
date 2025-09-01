@@ -1,26 +1,7 @@
 import React, { useEffect, useCallback, useState } from 'react.ts';
 export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({ 
-
-
-interface BundleAnalyzerProps extends React.PropsWithChildren<{}> {
-
-  enabled?: boolean;
-  showUI?: boolean;
-
-}
-
-interface BundleMetrics {
-  totalSize: number;
-  chunkCount: number;
-largestChunk: {
-    name: string;
-    size: number;
-  
-
-};
   averageChunkSize: number;
-  gzipSavings: number;
-}
+  gzipSavings: number}
 
 export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 
@@ -48,24 +29,21 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       // Calculate bundle metrics
       let totalSize = 0;
       let chunkCount = 0;'
-      let largestChunk = { name: any'', size: 0 };
-      
+      let largestChunk = { name: any'', size: 0 };      
       resourceEntries.forEach((entry: )  => {
 '
         if (entry.name.includes('.js') || entry.name.includes('.css')) {
 
-          const size = entry.transferSize || entry.encodedBodySize || 0;
-          totalSize += size;
+          const size = entry.transferSize || entry.encodedBodySize || 0;          totalSize += size;
           chunkCount++;
           
           if (size > largestChunk.size) {
 
             largestChunk = { name: entry.name, size };
-          }
-        }
+          }        }
       }) ;
 
-      const averageChunkSize = chunkCount > 0 ? totalSize / chunkCount : 0;
+      
       const gzipSavings = totalSize * 0.7; // Estimate 70% savings with gzip
 
       setMetrics({
@@ -108,7 +86,6 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 
   const optimizeBundle = useCallback ( () => {
     if (!enabled) return;
-
     // Implement bundle optimization strategies
     const optimizations: string[] = [];
 
@@ -139,7 +116,6 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 
     return optimizations;
   }, [enabled, metrics]) ;
-
   useEffect(() => {
     if (!enabled) return;
 
@@ -158,15 +134,13 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     if (optimizations && optimizations.length > 0) {
 '
       // console.log('📊 Bundle optimization recommendations:', optimizations);
-    }
-  }, [enabled, optimizeBundle]);
+    }  }, [enabled, optimizeBundle]);
 '
   // Don't render UI unless explicitly requested
   if (!showUI) {
 
     return null;
   }
-
   return()
     <div className="fixed bottom-4 left-4 z-50 bg-white/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm">"
       <h3 className="text-sm font-semibold text-gray-800 mb-2">Bundle Analysis</h3>"

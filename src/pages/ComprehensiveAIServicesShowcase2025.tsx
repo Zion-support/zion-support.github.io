@@ -1,42 +1,6 @@
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
-import { SEO  } from '@/components/SEO';
-import { Brain, 
-import { motion  } from 'framer - motion.ts';
-
-
-  Shield, 
-  Activity, 
-  TrendingUp, 
-  Zap, 
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  Globe,
-  Users,
-  BarChart3,
-  Lock,
-  FileText,
-  Heart,
-  DollarSign,
-  Truck,
-  Target'
- } from 'lucide-react';'
-import { Link  } from 'react-router-dom.ts';
-
-export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
-
-  const aiServices = [
-    {
-
-      icon: FileText,
-      title: "AI Legal Document Automation","
-      description: "Transform legal operations with AI-powered document automation, compliance monitoring, and intelligent legal research","
-      price: "From $199/month","
-      features["Document Generation", "Compliance Monitoring", "Legal Research", "Workflow Automation"],;"
-      link: "/services/ai-legal-document-automation","
-      category: "Legal Tech"
+import { SEO  } from '@/components/SEO';      category: "Legal Tech"
     },
     {
 
@@ -122,10 +86,8 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
       icon: Users;
     },;
     {;"
-      title: "Energy & Utilities",;"
-      description: "Predictive maintenance, energy optimization, and grid management",;
-      icon: Zap;
-    };
+      title: "Energy & Utilities",;"      description: "Predictive maintenance, energy optimization, and grid management",;
+      icon: Zap};
   ];
 
   const advancedTechnologies = ["
@@ -135,8 +97,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
     "Predictive Analytics & Forecasting",;"
     "Robotic Process Automation (RPA)",;"
     "Edge Computing & IoT Integration",;"
-    "Blockchain & Distributed Systems",;"
-    "Quantum Computing Solutions";
+    "Blockchain & Distributed Systems",;"    "Quantum Computing Solutions";
   ];
 
   return()
@@ -147,8 +108,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
         canonical="/comprehensive-ai-services-showcase-2025""
         url="https://ziontechgroup.com/comprehensive-ai-services-showcase-2025"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+"      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 px-6 overflow-hidden">'"
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>"
@@ -273,8 +233,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
                     <div className="grid grid-cols-2 gap-2">
                       {service.features.map((feature, featureIndex) => ("
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">"
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                          {feature}
                         </div>) ) }
                     </div>
                   </div>
@@ -415,8 +374,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 }}"
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center"
 "
-                  <Brain className="w-8 h-8 text-cyan-400 mx-auto mb-3" />"
-                  <p className="text-white font-medium text-sm">{tech}</p>
+                  <Brain className="w-8 h-8 text-cyan-400 mx-auto mb-3" />"                  <p className="text-white font-medium text-sm">{tech}</p>
                 </motion.div>;
               ))}
             </div>
@@ -563,8 +521,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
                 className="text-center"
 "
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
-                <h3 className="text-xl font-semibold mb-2 text-white">Phone</h3>"
-                <p className="text-gray-300">+1 302 464 0950</p>
+                <h3 className="text-xl font-semibold mb-2 text-white">Phone</h3>"                <p className="text-gray-300">+1 302 464 0950</p>
               </motion.div>
 
               <motion.div
@@ -594,8 +551,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
                 className="text-center"
 "
                 <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
-                <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>"
-                <p className="text-gray-300">kleber@ziontechgroup.com</p>
+                <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>"                <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </motion.div>
 
               <motion.div
@@ -625,8 +581,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
                 className="text-center"
 "
                 <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
-                <h3 className="text-xl font-semibold mb-2 text-white">Website</h3>"
-                <p className="text-gray-300">https://ziontechgroup.com</p>
+                <h3 className="text-xl font-semibold mb-2 text-white">Website</h3>"                <p className="text-gray-300">https://ziontechgroup.com</p>
               </motion.div>
             </div>
 

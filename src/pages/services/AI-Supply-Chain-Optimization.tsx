@@ -14,8 +14,7 @@ import {
   Database,
   Network,
   Lock,
-  Rocket,
-  Star,
+  Rocket,  Star,
   CheckCircle,
   ArrowRight,
   Phone,
@@ -348,8 +347,7 @@ const AISupplyChainOptimization: React.FC = () => {
         'Optimize routes, reduce costs, and improve delivery performance'},
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
@@ -360,8 +358,7 @@ const AISupplyChainOptimization: React.FC = () => {
             className="mb-8"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6">"
-              <Truck className="w-4 h-4 mr-2" />
-              Supply Chain Innovation
+              <Truck className="w-4 h-4 mr-2" />              Supply Chain Innovation
             </div>"
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI-Powered Supply Chain Optimization
@@ -383,15 +380,13 @@ const AISupplyChainOptimization: React.FC = () => {
               to="/contact""
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
             >"
-              <Truck className="w-5 h-5 mr-2" />
-              Optimize Your Supply Chain
+              <Truck className="w-5 h-5 mr-2" />              Optimize Your Supply Chain
             </Link>
             <Link"
               to="#demo""
               className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
             >"
-              <Eye className="w-5 h-5 mr-2" />
-              Watch Demo
+              <Eye className="w-5 h-5 mr-2" />              Watch Demo
             </Link>
           </motion.div>
         </div>
@@ -499,8 +494,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 className="bg-gradient-to-br from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20"
               >"
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">"
-                  <Truck className="w-6 h-6 mr-3 text-blue-400" />
-                  {module.name}
+                  <Truck className="w-6 h-6 mr-3 text-blue-400" />                  {module.name}
                 </h3>"
                 <div className="space-y-3">
                   {module.features.map((feature, featureIndex) => (
@@ -508,8 +502,7 @@ const AISupplyChainOptimization: React.FC = () => {
                       key={featureIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />                      {feature}
                     </div>
                   ))}
                 </div>
@@ -596,8 +589,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 className="bg-gradient-to-br from-slate-800/80 to-cyan-800/80 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20"
               >"
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">"
-                  <Target className="w-6 h-6 mr-3 text-cyan-400" />
-                  {useCase.industry}
+                  <Target className="w-6 h-6 mr-3 text-cyan-400" />                  {useCase.industry}
                 </h3>"
                 <div className="space-y-3">
                   {useCase.applications.map((app, appIndex) => (
@@ -605,8 +597,7 @@ const AISupplyChainOptimization: React.FC = () => {
                       key={appIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />
-                      {app}
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />                      {app}
                     </div>
                   ))}
                 </div>
@@ -685,8 +676,7 @@ const AISupplyChainOptimization: React.FC = () => {
                       key={featureIndex}"
                       className="flex items-start text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5" />"
-                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5" />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -779,8 +769,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center text-gray-300">"
-                <MapPin className="w-5 h-5 mr-2 text-blue-400" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <MapPin className="w-5 h-5 mr-2 text-blue-400" />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
 "
@@ -789,23 +778,20 @@ const AISupplyChainOptimization: React.FC = () => {
                 to="/contact""
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >"
-                <Truck className="w-5 h-5 mr-2" />
-                Schedule Supply Chain Demo
+                <Truck className="w-5 h-5 mr-2" />                Schedule Supply Chain Demo
               </Link>
               <Link"
                 to="https://ziontechgroup.com""
                 className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
               >"
-                <Globe className="w-5 h-5 mr-2" />
-                Visit Our Website
+                <Globe className="w-5 h-5 mr-2" />                Visit Our Website
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AISupplyChainOptimization;
 '"`

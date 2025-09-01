@@ -112,8 +112,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {
       />
 "
       <section className="relative pt-24 pb-12">"
-        <div className="container mx-auto px-4 text-center max-w-5xl">"
-          <h1 className="text-4xl sm:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+        <div className="container mx-auto px-4 text-center max-w-5xl">"          <h1 className="text-4xl sm:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
             Services That Ship Outcomes
           </h1>"
           <p className="mt-4 text-lg text-slate-300">
@@ -131,8 +130,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {
               href="/services""
               className="px-8 py-4 border border-gray-600 text-gray-200 rounded-lg inline-flex items-center"
             >"
-              Browse Services <ExternalLink className="w-5 h-5 ml-2" />
-            </a>
+              Browse Services <ExternalLink className="w-5 h-5 ml-2" />            </a>
           </div>
         </div>
       </section>
@@ -145,8 +143,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {
               className="p-6 rounded-2xl bg-black/40 border border-gray-700/60"
             >"
               <div className="flex items-start gap-3">"
-                <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />"
-                <p className="text-gray-200">{b}</p>
+                <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />"                <p className="text-gray-200">{b}</p>
               </div>
             </div>) ) }
         </div>
@@ -238,6 +235,5 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {
       </section>
     </div>) ;
 };
-
 export default ServicesAdvertising;
 '"

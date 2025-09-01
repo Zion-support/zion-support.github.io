@@ -1,20 +1,5 @@
 import React from 'react';'
-import { motion } from 'framer-motion';
-
-interface LoadingSpinnerProps {
-'
-  size?: 'sm' | 'md' | 'lg' | 'xl';'
-  color?: 'primary' | 'secondary' | 'white' | 'cyan';
-  text?: string;
-  showText?: boolean;
-  className?: string;
-;
-const sizeClasses = {
-'
-  sm: 'w-8 h-8','
-  md: 'w-12 h-12','
-  lg: 'w-16 h-16',;
-  ;
+import { motion } from 'framer-motion';  ;
   ;
   ;
   ;'
@@ -33,19 +18,11 @@ const colorClasses = {
 '
   primary: 'border-cyan-400','
   secondary: 'border-blue-400','
-  white: 'border-white',;
-  ;
+  white: 'border-white',;  ;
   ;
   ;
   ;'
   cyan: 'border-cyan-400';
-;
-
-
-
-
-
-
 };
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
@@ -109,8 +86,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {/* Screen reader text */};"
       <span className="sr-only">Loading, please wait</span>;
     </div>;
-  );
-};
+  )};
 
 // Optimized spinner for inline use'
 export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
@@ -133,9 +109,6 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
 
 ;
 ;
-;
-
-
 }};
     />;"
     <span className="sr-only">Loading</span>;
@@ -149,8 +122,7 @@ export const FullScreenLoader: React.FC<{
   showLogo?: boolean;
   className?: string;
 }> = ({
-'
-  text = 'Loading amazing experiences...',
+'  text = 'Loading amazing experiences...',
   showLogo = true,'
   className = ''
 }) => (`
@@ -166,8 +138,7 @@ export const FullScreenLoader: React.FC<{
         </div>;
       )};
       ;"
-      <LoadingSpinner size="lg" color="cyan" text={text} />;
-    </div>;
+      <LoadingSpinner size="lg" color="cyan" text={text} />;    </div>;
   </div>;
 );
 
@@ -177,8 +148,7 @@ export const SkeletonLoader: React.FC<{
   className?: string;
   lines?: number;
 }> = ({
-'
-  className = '',
+'  className = '',
   lines = 3;
 }) => (`
   <div className={`animate-pulse ${className}`}>
@@ -187,8 +157,7 @@ export const SkeletonLoader: React.FC<{
         key={index};`
         className={`h-4 bg-gray-300 rounded mb-2 ${;'
           index === lines - 1 ? 'w-3/4' : 'w-full';`
-        }`};
-      />;
+        }`};      />;
     ))};
   </div>;
 );

@@ -1,261 +1,6 @@
 import React from 'react';'
 import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
-import {
-
-  Brain,
-  Zap,
-  Shield,
-  Users,
-  BarChart3,
-  Rocket,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Globe,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  TrendingUp,
-  Target,
-  Heart,
-  Eye,
-  Activity,
-  Code,
-  Server,
-  Network,
-  Phone,
-  Mail,
-  MapPin,
-  DollarSign,
-  Clock,
-  Award,
-  Lightbulb,
-  Sparkles,
-  Atom,
-  AlertTriangle,
-  Bug,
-  Search,
-  Filter,
-  Sort,
-  Download,
-  Upload,
-  Share,
-  Copy,
-  Edit,
-  Trash,
-  Save,
-  Plus,
-  Minus,
-  X,
-  Check,
-  Info,
-  Key,
-  Fingerprint,
-  Monitor,
-  Wifi,
-  Bluetooth,
-  Satellite,
-  Telescope,
-  Microscope,
-  Flask,
-  Pill,
-  Stethoscope,
-  Calculator,
-  BookOpen,
-  GraduationCap,
-  CreditCard,
-  ShoppingCart,
-  Truck,
-  Warehouse,
-  Factory,
-  Building2,
-  Home,
-  Store,
-  Bank,
-  Insurance,
-  Law,
-  Gavel,
-  FileText,
-  Calendar,
-  Timer,
-  Stopwatch,
-  Thermometer,
-  Compass,
-  Map,'
-  Navigation} from 'lucide-react';
-
-export function AICybersecurityPlatform() {
-  const features = [
-    {
-
-      icon: Brain,'
-      title: 'AI-Powered Threat Detection',
-      description:'
-        'Advanced machine learning algorithms that detect and prevent threats in real-time',
-      benefits: ['
-        'Zero-day threat detection','
-        'Behavioral analysis','
-        'Predictive security',
-      ]},
-    {
-
-      icon: Shield,'
-      title: 'Zero-Trust Architecture',
-      description:'
-        'Comprehensive security model that verifies every user and device',
-      benefits: ['
-        'Identity verification','
-        'Device trust scoring','
-        'Continuous monitoring',
-      ]},
-    {
-
-      icon: Eye,'
-      title: '24/7 Security Monitoring','
-      description: 'Round-the-clock surveillance with instant threat response',
-      benefits: ['
-        'Real-time alerts','
-        'Automated response','
-        'Expert security team',
-      ]},
-    {
-
-      icon: Lock,'
-      title: 'End-to-End Encryption','
-      description: 'Military-grade encryption for data at rest and in transit','
-      benefits: ['AES-256 encryption', 'TLS 1.3 support', 'Key management']},
-    {
-
-      icon: Activity,'
-      title: 'Advanced Analytics','
-      description: 'Comprehensive security insights and threat intelligence',
-      benefits: ['
-        'Security dashboards','
-        'Threat intelligence','
-        'Compliance reporting',
-      ]},
-    {
-
-      icon: Cloud,'
-      title: 'Cloud-Native Security',
-      description:'
-        'Built for modern cloud environments with seamless integration',
-      benefits: ['
-        'Multi-cloud support','
-        'Container security','
-        'Serverless protection',
-      ]},
-  ];
-
-  const pricingPlans = [
-    {
-'
-      name: 'Essential','
-      price: '$149','
-      period: '/month','
-      description: 'Perfect for small businesses and startups',
-      features: ['
-        'Basic AI threat detection','
-        'Email security','
-        'Web filtering','
-        'Basic reporting','
-        'Email support','
-        'Up to 50 users',
-      ],'
-      cta: 'Start Free Trial',
-      popular: false},
-    {
-'
-      name: 'Professional','
-      price: '$399','
-      period: '/month','
-      description: 'Ideal for growing businesses',
-      features: ['
-        'Advanced AI detection','
-        'Endpoint protection','
-        'Network security','
-        'Advanced analytics','
-        'Priority support','
-        'Up to 500 users','
-        'Compliance tools','
-        'API access',
-      ],'
-      cta: 'Start Free Trial',
-      popular: true},
-    {
-'
-      name: 'Enterprise','
-      price: 'Custom','
-      period: '','
-      description: 'For large organizations with custom needs',
-      features: ['
-        'Full AI capabilities','
-        'Custom integrations','
-        'Enterprise features','
-        '24/7 dedicated support','
-        'Unlimited users','
-        'Custom deployment','
-        'On-premise options','
-        'SLA guarantees',
-      ],'
-      cta: 'Contact Sales',
-      popular: false},
-  ];
-
-  const securityFeatures = [
-    {
-'
-      title: 'Threat Intelligence',
-      description:'
-        'Real-time threat intelligence from global security networks',
-      icon: Globe,'
-      benefits: ['Global threat feeds', 'IOC sharing', 'Threat hunting']},
-    {
-'
-      title: 'Incident Response','
-      description: 'Automated incident response with playbook execution',
-      icon: Rocket,
-      benefits: ['
-        'Automated workflows','
-        'Playbook templates','
-        'Response analytics',
-      ]},
-    {
-'
-      title: 'Compliance Management','
-      description: 'Built-in compliance frameworks and reporting tools',
-      icon: Check,'
-      benefits: ['SOC2, ISO27001', 'GDPR, HIPAA', 'Automated reporting']},
-    {
-'
-      title: 'Vulnerability Management','
-      description: 'Continuous vulnerability assessment and remediation',
-      icon: Bug,'
-      benefits: ['Automated scanning', 'Risk scoring', 'Patch management']},
-  ];
-
-  const securityMetrics = ['
-    { metric: '99.99%', label: 'Threat Detection Rate' },'
-    { metric: '<30s', label: 'Response Time' },'
-    { metric: '0', label: 'False Positives' },'
-    { metric: '24/7', label: 'Protection' },
-  ];
-
-  const complianceFrameworks = ['
-    'SOC 2 Type II','
-    'ISO 27001','
-    'GDPR','
-    'HIPAA','
-    'PCI DSS','
-    'NIST','
-    'FedRAMP','
-    'SOX',
-  ];
-
-  return()
-    <div className="min-h-screen bg-gray-900 text-white">
+import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}"
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -266,8 +11,7 @@ export function AICybersecurityPlatform() {
             className="text-center"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">"
-              <Sparkles className="w-4 h-4 mr-2" />
-              AI-Powered Cybersecurity
+              <Sparkles className="w-4 h-4 mr-2" />              AI-Powered Cybersecurity
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               AI Cybersecurity Platform
@@ -283,8 +27,7 @@ export function AICybersecurityPlatform() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Protecting Today"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
                 to="/pricing""
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
@@ -356,8 +99,7 @@ export function AICybersecurityPlatform() {
                       key={idx}"
                       className="flex items-center text-sm text-gray-300"
                     >"
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -409,8 +151,7 @@ export function AICybersecurityPlatform() {
                           key={idx}"
                           className="flex items-center text-sm text-gray-300"
                         >"
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {benefit}
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />                          {benefit}
                         </li>
                       ))}
                     </ul>
@@ -451,8 +192,7 @@ export function AICybersecurityPlatform() {
               >"
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-3">"
                   <Check className="w-6 h-6 text-white" />
-                </div>"
-                <h3 className="font-semibold text-cyan-400">{framework}</h3>
+                </div>"                <h3 className="font-semibold text-cyan-400">{framework}</h3>
               </motion.div>
             ))}
           </div>
@@ -511,8 +251,7 @@ export function AICybersecurityPlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -555,8 +294,7 @@ export function AICybersecurityPlatform() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
               <Link"
                 to="/pricing""
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
@@ -595,8 +333,7 @@ export function AICybersecurityPlatform() {
                   364 E Main St STE 1008
                   <br />
                   Middletown DE 19709
-                </p>
-              </div>
+                </p>              </div>
             </div>
           </motion.div>
         </div>

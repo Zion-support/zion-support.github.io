@@ -1,54 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Star, 
-
-
-  CheckCircle, 
-  ArrowRight, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Globe,
-  Cpu,
-  Lock,
-  Heart,
-  Users,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Gauge,
-  Workflow,
-  Atom,
-  Target,
-  Award,
-  Code,
-  Truck,
-  Building,
-  BarChart3,
-  PenTool,
-  Eye,
-  Server,
-  Smartphone,
-  Database,
-  Network,
-  Clock,
-  Search,
-  Filter,
-  Grid,
-  List,
-  TrendingUp,
-  Sparkles,
-  Crown,
-  Gem'
- } from 'lucide-react.ts';'
-import { innovativeMicroSAASServices2029  } from '../../data/innovative-micro-saas-2029';'
-import { revolutionaryAIServices2029  } from '../../data/revolutionary-ai-services-2029';'
-import { revolutionaryITServices2029  } from '../../data/revolutionary-it-services-2029';
-
 export default function ComprehensivePricing2029(...args: any[]): any {
 '
   const [selectedCategory, setSelectedCategory] = useState('All');'
@@ -80,8 +31,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
     switch (sortBy) {
 '
       case 'price':'
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));'
-      case 'rating':
+        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));'      case 'rating':
         return b.rating - a.rating;'
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0) ;
@@ -113,7 +63,6 @@ export default function ComprehensivePricing2029(...args: any[]): any {
     };
     return iconMap[category] || Cpu;
   };
-
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Animated Background */}"
@@ -161,8 +110,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
             transition={{ duration: 1, delay: 0.2 }}"
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6"
           >"
-            <Crown className="w-4 h-4 mr-2 text-yellow-400" />
-            Premium 2029 Services
+            <Crown className="w-4 h-4 mr-2 text-yellow-400" />            Premium 2029 Services
           </motion.div>
           
           <motion.h1
@@ -229,8 +177,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
               <div className="flex-1 relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
-                  type="text""
-                  placeholder="Search services by name, description, or features..."
+                  type="text""                  placeholder="Search services by name, description, or features..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -277,8 +224,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                     viewMode === 'grid' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' : 'text-gray-400 hover:text-white'`
                   }`}
                 >"
-                  <Grid className="w-5 h-5" />
-                </button>
+                  <Grid className="w-5 h-5" />                </button>
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`p-2 rounded-md transition-all duration-300 ${
@@ -286,8 +232,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                     viewMode === 'list' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' : 'text-gray-400 hover:text-white'`
                   }`}
                 >"
-                  <List className="w-5 h-5" />
-                </button>
+                  <List className="w-5 h-5" />                </button>
               </div>
             </div>
           </motion.div>
@@ -341,8 +286,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                         </div>
                         {service.popular && ("
                           <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium rounded-full flex items-center">"
-                            <Crown className="w-3 h-3 mr-1" />
-                            Popular
+                            <Crown className="w-3 h-3 mr-1" />                            Popular
                           </span>) }
                       </div>
                       "
@@ -353,8 +297,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                       <div className="flex items-center justify-between mb-4">"
                         <div className="flex items-center space-x-2">"
                           <Star className="w-4 h-4 text-yellow-400 fill-current" />"
-                          <span className="text-white font-medium">{service.rating}</span>"
-                          <span className="text-gray-400">({service.reviews})</span>
+                          <span className="text-white font-medium">{service.rating}</span>"                          <span className="text-gray-400">({service.reviews})</span>
                         </div>"
                         <div className="text-right">"
                           <div className="text-2xl font-bold text-white">{service.price}</div>"
@@ -372,8 +315,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                       {/* Features */}"
                       <div className="mb-6">"
                         <h4 className="text-white font-semibold mb-3 flex items-center">"
-                          <CheckCircle className="w-4 h-4 mr-2 text-cyan-400" />
-                          Key Features
+                          <CheckCircle className="w-4 h-4 mr-2 text-cyan-400" />                          Key Features
                         </h4>"
                         <div className="grid grid-cols-1 gap-2">
                           {service.features.slice(0, 3).map((feature, idx) => ("
@@ -412,8 +354,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                         </a>"
                         <button className="px-4 py-3 border border-white/20 text-white rounded-xl hover:bg-white/10 transition-all duration-300">"
-                          <MessageCircle className="w-5 h-5" />
-                        </button>
+                          <MessageCircle className="w-5 h-5" />                        </button>
                       </div>
                     </div>
                   </div>

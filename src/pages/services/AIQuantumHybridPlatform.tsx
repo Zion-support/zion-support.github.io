@@ -8,8 +8,7 @@ import {
   Shield,
   TrendingUp,
   Users,
-  Globe,
-  Cpu,
+  Globe,  Cpu,
   Database,
   Lock,
   BarChart3,
@@ -173,8 +172,7 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
       />
 
       {/* Hero Section */}"
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -182,8 +180,7 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
             className="mb-8"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium mb-6">"
-              <Atom className="w-4 h-4 mr-2" />
-              Revolutionary Quantum-AI Technology
+              <Atom className="w-4 h-4 mr-2" />              Revolutionary Quantum-AI Technology
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Quantum Hybrid Platform
@@ -206,8 +203,7 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
               className="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
             >
               Get Started"
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
+              <ArrowRight className="ml-2 w-5 h-5" />            </a>
             <a"
               href="#demo""
               className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors"
@@ -296,8 +292,7 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
               >
                 {index === 1 && ("
                   <div className="inline-flex items-center px-3 py-1 bg-purple-500 text-white text-sm font-medium rounded-full mb-4">"
-                    <Star className="w-4 h-4 mr-1" />
-                    Most Popular
+                    <Star className="w-4 h-4 mr-1" />                    Most Popular
                   </div>
                 )}
 "
@@ -315,8 +310,7 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -416,8 +410,7 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
               >"
                 <div className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">"
                   <CheckCircle className="w-5 h-5 text-purple-400" />
-                </div>"
-                <p className="text-lg text-gray-300">{benefit}</p>
+                </div>"                <p className="text-lg text-gray-300">{benefit}</p>
               </motion.div>
             ))}
           </div>
@@ -446,14 +439,12 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
                 className="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
               >
                 Start Your Quantum Journey"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+                <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a"
                 href="tel:+13024640950""
                 className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors"
               >"
-                <Phone className="mr-2 w-5 h-5" />
-                Call +1 302 464 0950
+                <Phone className="mr-2 w-5 h-5" />                Call +1 302 464 0950
               </a>
             </div>
           </motion.div>

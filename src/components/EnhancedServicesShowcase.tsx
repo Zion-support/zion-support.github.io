@@ -1,115 +1,6 @@
 import React from 'react';'
 import { motion } from 'framer-motion';'
 import { Link } from 'react-router-dom';
-import {
-
-  Brain,
-  Shield,
-  Globe,
-  Brain,
-  Rocket,
-  Target,
-  Award,
-  Sparkles,
-  Clock,
-  CheckCircle,
-  Search'
- } from 'lucide-react';
-
-  const services: Service[] = [
-    {
-'
-      title: 'AI Workflow Automation','
-      description: 'Transform business operations with intelligent automation that learns and scales','
-      price: 'From $299/month','
-      path: '/services/ai-workflow-automation',
-              icon: GitFork,'
-      category: 'AI & Automation','
-      features: ['Process optimization', 'AI-powered workflows', 'Real-time analytics', 'Scalable automation'],'
-      benefits: ['Reduce manual work by 70-85%', 'Improve efficiency by 60%', 'Cut operational costs by 40-50%'],'
-      color: 'from-cyan-500 to-blue-600','
-      glowColor: 'cyan'
-    },
-    {
-'
-      title: 'AI Cybersecurity','
-      description: 'Protect your business with AI-powered threat detection and prevention','
-      price: 'From $499/month','
-      path: '/services/ai-cybersecurity',
-      icon: Shield,'
-      category: 'Security','
-      features: ['Threat detection', 'Behavioral analytics', 'Automated response', 'Compliance monitoring'],'
-      benefits: ['Detect threats 10x faster', 'Reduce false positives by 85%', 'Prevent 99.9% of attacks'],'
-      color: 'from-purple-500 to-indigo-600','
-      glowColor: 'purple'
-    },
-    {
-'
-      title: 'Quantum Computing','
-      description: 'Solve complex problems 1000x faster with quantum computing solutions','
-      price: 'From $2,999/month','
-      path: '/services/quantum-computing-solutions',
-      icon: Atom,'
-      category: 'Quantum Tech','
-      features: ['Quantum algorithms', 'ML acceleration', 'Financial modeling', 'Drug discovery'],'
-      benefits: ['1000x faster computation', 'Breakthrough discoveries', 'Unbreakable encryption'],'
-      color: 'from-green-500 to-emerald-600','
-      glowColor: 'green'
-    },
-    {
-'
-      title: 'IoT Edge Computing','
-      description: 'Process data at the edge and reduce latency by 90%','
-      price: 'From $399/month','
-      path: '/services/iot-edge-computing',
-      icon: Cpu,'
-      category: 'IoT & Edge','
-      features: ['Edge processing', 'Device management', 'Real-time analytics', 'AI at the edge'],'
-      benefits: ['Reduce latency by 90%', 'Cut bandwidth costs by 60-80%', 'Scale to millions of devices'],'
-      color: 'from-orange-500 to-red-600','
-      glowColor: 'orange'
-    },
-    {
-'
-      title: 'Cloud & DevOps','
-      description: 'Build, deploy, and scale with enterprise-grade cloud infrastructure','
-      price: 'From $799/month','
-      path: '/services/cloud-devops',
-      icon: Cloud,'
-      category: 'Infrastructure','
-      features: ['Cloud migration', 'CI/CD pipelines', 'Infrastructure as code', 'Monitoring & alerting'],'
-      benefits: ['Faster deployments', 'Improved reliability', 'Cost optimization', 'Scalability'],'
-      color: 'from-blue-500 to-cyan-600','
-      glowColor: 'blue'
-    },
-    {
-'
-      title: 'AI Sales Copilot','
-      description: 'Automate sales processes and boost conversion rates with AI','
-      price: 'From $1,500/month','
-      path: '/services/ai-sales-copilot',
-      icon: Brain,;'
-      category: 'Sales AI',;'
-      features: ['Lead scoring', 'CRM automation', 'Sales analytics', 'Predictive insights'],;'
-      benefits: ['Reduce admin time by 40-60%', 'Improve conversion rates', 'Shorten sales cycles'],;'
-      color: 'from-pink-500 to-rose-600',;'
-      glowColor: 'pink';
-    };
-  ];
-
-  const containerVariants = {
-
-    hidden: { opacity: 0 },;
-    visible: {
-      opacity: 1,;
-      transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
-'
-const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
-
 export default function EnhancedServicesShowcase() {
 '
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -119,8 +10,7 @@ export default function EnhancedServicesShowcase() {
     ? services
     : services.filter (service => service.category === selectedCategory) ;
 
-  return()
-    <section className = "py-24 bg-futuristic-enhanced relative overflow-hidden">
+  return()    <section className = "py-24 bg-futuristic-enhanced relative overflow-hidden">
       {/* Background Elements */}"
       <div className="absolute inset-0">"
         <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-float"></div>"
@@ -191,8 +81,7 @@ export default function EnhancedServicesShowcase() {
                   <div className="text-right">"
                     <div className="text-2xl font-bold text-zion-cyan">{service.price}</div>"
                     <div className="flex items-center text-zion-slate-light text-sm">"
-                      <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                      <span>5.0</span>
+                      <Star className="w-4 h-4 text-yellow-400 mr-1" />                      <span>5.0</span>
                     </div>
                   </div>
                 </div>
@@ -209,8 +98,7 @@ export default function EnhancedServicesShowcase() {
                   <div className="grid grid-cols-1 gap-2">
                     {service.features.map((feature, idx) => ("
                       <div key={idx} className="flex items-center text-zion-slate-light text-sm">"
-                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />                        {feature}
                       </div>) ) }
                   </div>
                 </div>
@@ -222,8 +110,7 @@ export default function EnhancedServicesShowcase() {
                   <div className="space-y-2">
                     {service.benefits.map((benefit, idx) => ("
                       <div key={idx} className="flex items-center text-zion-slate-light text-sm">"
-                        <Zap className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
-                        {benefit}
+                        <Zap className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />                        {benefit}
                       </div>) ) }
                   </div>
                 </div>
@@ -235,8 +122,7 @@ export default function EnhancedServicesShowcase() {
                   className={`w-full bg-gradient-to-r ${service.color} text-white py-3 px-6 rounded-xl font-semibold text-center block hover:shadow-lg hover:shadow-${service.glowColor}-500/25 transition-all duration-300 group-hover:scale-105`}
 
                   Explore Service"
-                  <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
+                  <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />                </Link>
 
                 {/* Hover Glow Effect */}`
                 <div className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 blur-xl`}></div>;
@@ -305,8 +191,7 @@ export default function EnhancedServicesShowcase() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: featureIndex * 0.1 }}
                       >"
-                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />                        {feature}
                       </motion.div>) ) }
                   </div>
 
@@ -336,8 +221,7 @@ export default function EnhancedServicesShowcase() {
                       className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 border border-zion-cyan/30"
                     >
                       Learn More"
-                      <ArrowRight className="ml-2 w-5 h-5" />
-                    </Link>
+                      <ArrowRight className="ml-2 w-5 h-5" />                    </Link>
                   </div>
 
                   {/* Hover effect overlay */}
@@ -360,8 +244,7 @@ export default function EnhancedServicesShowcase() {
   { opacity: 0,
   y: 20 ;
 
-}}
-          whileInView = {
+}}          whileInView = {
 
   { opacity: 1,
   y: 0 ;
@@ -370,15 +253,13 @@ export default function EnhancedServicesShowcase() {
         <motion.div 
           className="text-center mt-20"
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          whileInView={{ opacity: 1, y: 0 }}          viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
   delay: 0.3 ;
 
-}}
-        >
+}}        >
           {categories.map ( (category, index) => (;
             <motion.button
               key={category}
@@ -412,8 +293,7 @@ export default function EnhancedServicesShowcase() {
 }}
             >
               View All Services"
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
+              <ArrowRight className="ml-2 w-5 h-5" />            </Link>
             <a"
               href="tel:+13024640950""
               className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
@@ -430,8 +310,7 @@ export default function EnhancedServicesShowcase() {
 };
             >
               View All Services;"
-              <ArrowRight className="ml-2 w-5 h-5" />;
-            </Link>
+              <ArrowRight className="ml-2 w-5 h-5" />;            </Link>
             <a "
               href="tel:+13024640950""
               className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"

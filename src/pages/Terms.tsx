@@ -5,8 +5,7 @@ import {
 
   Shield,
   Users,
-  Globe,
-  CheckCircle,
+  Globe,  CheckCircle,
   AlertTriangle,
   Scale,
   Lock,
@@ -133,8 +132,7 @@ const Terms: React.FC = () => {
         title="Terms of Service - Zion Tech Group"'"
         description="Read Zion Tech Group's Terms of Service to understand the rules and guidelines for using our AI-powered technology solutions and services.""
         keywords="terms of service, Zion Tech Group, legal terms, service agreement, user responsibilities"
-      />"
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      />"      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Header */}"
         <section className="pt-32 pb-16 px-4">"
           <div className="max-w-7xl mx-auto text-center">
@@ -145,8 +143,7 @@ const Terms: React.FC = () => {
             >"
               <div className="flex items-center justify-center space-x-3 mb-6">"
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">"
-                  <FileText className="w-8 h-8 text-white" />
-                </div>
+                  <FileText className="w-8 h-8 text-white" />                </div>
               </div>"
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Terms of Service
@@ -233,8 +230,7 @@ const Terms: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {prohibitedActivities.map((activity, index) => ("
                     <div key={index} className="flex items-start gap-3">"
-                      <AlertTriangle className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300 text-sm">{activity}</span>
+                      <AlertTriangle className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300 text-sm">{activity}</span>
                     </div>
                   ))}
                 </div>
@@ -256,8 +252,7 @@ const Terms: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {terminationConditions.map((condition, index) => ("
                     <div key={index} className="flex items-start gap-3">"
-                      <AlertTriangle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300 text-sm">{condition}</span>
+                      <AlertTriangle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300 text-sm">{condition}</span>
                     </div>
                   ))}
                 </div>
@@ -303,6 +298,5 @@ const Terms: React.FC = () => {
       </div>
     </>) ;
 };
-
 export default Terms;
 '"

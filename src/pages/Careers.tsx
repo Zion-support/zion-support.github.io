@@ -1,285 +1,5 @@
 import React, { useState } from 'react';'
 import { motion } from 'framer-motion';
-
-import {
-
-  Briefcase,
-  Users,
-  Heart,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Code,
-  Rocket,
-  ArrowRight,
-  CheckCircle,
-  Globe,
-  Building,
-  GraduationCap,
-  TrendingUp,
-  Lightbulb,
-  Target,
-  Users2,
-  Coffee,
-  Gamepad2,
-  BookOpen,
-  Calendar,
-  MessageCircle,
-  Mail,
-  Phone,'
-  Search} from 'lucide-react';
-
-export default function Careers() {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedDepartment, setSelectedDepartment] = useState('all');'
-  const [selectedLocation, setSelectedLocation] = useState('all');
-  const [expandedJob, setExpandedJob] = useState<string | null>(null);
-
-  const departments = ['
-    { id: 'all', name: 'All Departments', icon: Briefcase },'
-    { id: 'engineering', name: 'Engineering', icon: Code },'
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },'
-    { id: 'sales', name: 'Sales & Business Development', icon: Target },'
-    { id: 'marketing', name: 'Marketing', icon: Lightbulb },'
-    { id: 'operations', name: 'Operations', icon: Settings },'
-    { id: 'design', name: 'Design & UX', icon: Palette },'
-    { id: 'data', name: 'Data Science', icon: BarChart3 },'
-    { id: 'security', name: 'Cybersecurity', icon: Shield },'
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom },
-  ];
-
-  const locations = ['
-    { id: 'all', name: 'All Locations', icon: Globe },'
-    { id: 'remote', name: 'Remote', icon: Wifi },'
-    { id: 'middletown', name: 'Middletown, DE', icon: MapPin },'
-    { id: 'new-york', name: 'New York, NY', icon: MapPin },'
-    { id: 'san-francisco', name: 'San Francisco, CA', icon: MapPin },'
-    { id: 'london', name: 'London, UK', icon: MapPin },'
-    { id: 'singapore', name: 'Singapore', icon: MapPin },
-  ];
-
-  const locationFilters = ['
-    { id: 'all', name: 'All Locations', count: 12 },'
-    { id: 'remote', name: 'Remote', count: 8 },'
-    { id: 'middletown', name: 'Middletown, DE', count: 3 },'
-    { id: 'san-francisco', name: 'San Francisco, CA', count: 1 },
-  ];
-
-  const openPositions = [
-    {
-'
-      id: 'senior-ai-engineer','
-      title: 'Senior AI Engineer','
-      department: 'engineering','
-      location: 'Remote / San Francisco, CA','
-      type: 'Full-time','
-      salary: '$120,000 - $180,000','
-      experience: '5+ years',
-      description:'
-        'Join our AI team to develop cutting-edge machine learning solutions and autonomous systems.',
-      requirements: ['
-        'Strong background in machine learning and deep learning','
-        'Experience with Python, TensorFlow, PyTorch','
-        'Knowledge of computer vision and NLP','
-        'Experience with cloud platforms (AWS, Azure, GCP)','
-        'PhD in Computer Science or related field preferred',
-      ],
-      benefits: ['
-        'Competitive salary and equity','
-        'Flexible work arrangements','
-        'Professional development budget','
-        'Health, dental, and vision insurance','
-        '401(k) with company match',
-      ],
-      icon: Brain,'
-      color: 'from-purple-500 to-pink-500'},
-    {
-'
-      id: 'quantum-computing-researcher','
-      title: 'Quantum Computing Researcher','
-      department: 'engineering','
-      location: 'Remote / Middletown, DE','
-      type: 'Full-time','
-      salary: '$150,000 - $200,000','
-      experience: '3+ years',
-      description:'
-        'Research and develop quantum algorithms and quantum machine learning solutions.',
-      requirements: ['
-        'PhD in Physics, Computer Science, or related field','
-        'Experience with quantum computing frameworks','
-        'Knowledge of quantum algorithms and quantum ML','
-        'Strong mathematical and analytical skills','
-        'Experience with Qiskit, Cirq, or similar platforms',
-      ],
-      benefits: ['
-        'Competitive salary and equity','
-        'Research publication support','
-        'Conference attendance funding','
-        'Collaboration with leading quantum research institutions','
-        'Comprehensive benefits package',
-        'Team events and activities'
-      ],
-      icon: Zap,'
-      color: 'from-blue-500 to-cyan-500'},
-    {
-'
-      id: 'cybersecurity-architect','
-      title: 'Cybersecurity Architect','
-      department: 'engineering','
-      location: 'Remote / Middletown, DE','
-      type: 'Full-time','
-      salary: '$130,000 - $180,000','
-      experience: '7+ years',
-      description:'
-        'Design and implement enterprise-grade security solutions for our clients.',
-      requirements: ['
-        'Expertise in security architecture and design','
-        'Experience with zero-trust security models','
-        'Knowledge of compliance frameworks (SOC 2, ISO 27001)','
-        'Experience with cloud security and DevSecOps','
-        'CISSP, CISM, or similar certifications preferred',
-      ],
-      benefits: ['
-        'Competitive salary and equity','
-        'Security certification support','
-        'Professional development opportunities','
-        'Health and wellness benefits','
-        'Flexible work arrangements',
-      ],
-      icon: Shield,'
-      color: 'from-red-500 to-orange-500'},
-    {
-'
-      id: 'cloud-infrastructure-engineer','
-      title: 'Cloud Infrastructure Engineer','
-      department: 'engineering','
-      location: 'Remote','
-      type: 'Full-time','
-      salary: '$110,000 - $160,000','
-      experience: '4+ years',
-      description:'
-        'Build and maintain scalable cloud infrastructure solutions.',
-      requirements: ['
-        'Experience with AWS, Azure, or Google Cloud','
-        'Knowledge of infrastructure as code (Terraform, CloudFormation)','
-        'Experience with containerization and Kubernetes','
-        'Understanding of DevOps practices and CI/CD','
-        'Experience with monitoring and logging tools',
-      ],
-      benefits: ['
-        'Competitive salary and equity','
-        'Cloud certification support','
-        'Professional development budget','
-        'Health and dental insurance','
-        'Remote work flexibility',
-      ],
-      icon: Cloud,'
-      color: 'from-green-500 to-emerald-500'},
-    {
-'
-      id: 'senior-software-engineer','
-      title: 'Senior Software Engineer','
-      department: 'engineering','
-      location: 'Remote / Middletown, DE','
-      type: 'Full-time','
-      salary: '$100,000 - $150,000','
-      experience: '5+ years',
-      description:'
-        'Develop high-quality software solutions using modern technologies and best practices.',
-      requirements: ['
-        'Strong programming skills in multiple languages','
-        'Experience with modern web frameworks and APIs','
-        'Knowledge of software design patterns and architecture','
-        'Experience with testing and quality assurance','
-        'Understanding of agile development methodologies',
-      ],
-      benefits: ['
-        'Competitive salary and equity','
-        'Professional development opportunities','
-        'Health and wellness benefits','
-        'Flexible work arrangements','
-        'Collaborative team environment',
-      ],
-      icon: Code,'
-      color: 'from-indigo-500 to-purple-500'},
-    {
-'
-      id: 'business-development-manager','
-      title: 'Business Development Manager','
-      department: 'sales','
-      location: 'Remote / Middletown, DE','
-      type: 'Full-time','
-      salary: '$80,000 - $120,000 + Commission','
-      experience: '3+ years',
-      description:'
-        'Drive business growth by identifying and developing strategic partnerships.',
-      requirements: ['
-        'Experience in B2B sales and business development','
-        'Knowledge of technology industry and trends','
-        'Strong communication and negotiation skills','
-        'Experience with CRM systems and sales processes','
-        'Ability to build and maintain client relationships',
-      ],
-      benefits: ['
-        'Competitive base salary plus commission','
-        'Performance-based bonuses','
-        'Professional development support','
-        'Health and dental insurance','
-        'Flexible work arrangements',
-      ],
-      icon: Users,'
-      color: 'from-blue-500 to-indigo-500'},
-  ];
-
-  const filteredJobs = jobListings.filter(job => {
-
-    const matchesSearch =
-      job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      job.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesDepartment ='
-      selectedDepartment === 'all' || job.department === selectedDepartment;
-    const matchesLocation ='
-      selectedLocation === 'all' ||'
-      (selectedLocation === 'remote' && job.location.includes('Remote')) ||'
-      (selectedLocation === 'middletown' &&'
-        job.location.includes('Middletown')) ||'
-      (selectedLocation === 'san-francisco' &&'
-        job.location.includes('San Francisco'));
-
-  const lifeAtZion = [
-    {
-      title: 'Modern Office Spaces',
-      description: 'Collaborative workspaces designed for innovation',
-      image: '🏢',
-      category: 'Work Environment'
-    },
-    {
-      title: 'Team Events',
-      description: 'Regular team building and social activities',
-      image: '🎉',
-      category: 'Culture'
-    },
-    {
-      title: 'Learning Sessions',
-      description: 'Knowledge sharing and skill development workshops',
-      image: '📚',
-      category: 'Development'
-    },
-    {
-      title: 'Innovation Labs',
-      description: 'Dedicated spaces for experimentation and prototyping',
-      image: '🔬',
-      category: 'Innovation'
-    }
-  ];
-
-  const toggleJob = (jobId: string) => {
-
-    setExpandedJob(expandedJob === jobId ? null : jobId);
-  };
-
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">"
       <div className="container mx-auto px-4 py-24">
@@ -316,8 +36,7 @@ export default function Careers() {
               onChange={e => setSearchTerm(e.target.value)}"
               className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
             />"
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-          </div>
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />          </div>
 
           {/* Filters */}"
           <div className="grid md:grid-cols-2 gap-6">
@@ -386,8 +105,7 @@ export default function Careers() {
               </h3>"
               <p className="text-gray-400">
                 Try adjusting your search terms or filters.
-              </p>
-            </div>
+              </p>            </div>
           ) : (
             filteredJobs.map((job, index) => (
               <motion.div
@@ -424,8 +142,7 @@ export default function Careers() {
                             <span>{job.type}</span>
                           </div>"
                           <div className="flex items-center space-x-1">"
-                            <DollarSign className="w-4 h-4" />
-                            <span>{job.salary}</span>
+                            <DollarSign className="w-4 h-4" />                            <span>{job.salary}</span>
                           </div>
                         </div>
                       </div>
@@ -437,8 +154,7 @@ export default function Careers() {
                       {expandedJob === job.id ? ("
                         <ChevronUp className="w-6 h-6" />
                       ) : ("
-                        <ChevronDown className="w-6 h-6" />
-                      )}
+                        <ChevronDown className="w-6 h-6" />                      )}
                     </button>
                   </div>
 
@@ -457,8 +173,7 @@ export default function Careers() {
                       {/* Requirements */}
                       <div>"
                         <h4 className="text-lg font-semibold text-white mb-3 flex items-center">"
-                          <CheckCircle className="w-5 h-5 text-cyan-400 mr-2" />
-                          Requirements
+                          <CheckCircle className="w-5 h-5 text-cyan-400 mr-2" />                          Requirements
                         </h4>"
                         <ul className="space-y-2">
                           {job.requirements.map((req, idx) => (
@@ -466,8 +181,7 @@ export default function Careers() {
                               key={idx}"
                               className="flex items-start space-x-2 text-gray-300"
                             >"
-                              <Star className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
-                              <span>{req}</span>
+                              <Star className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />                              <span>{req}</span>
                             </li>) ) }
                         </ul>
                       </div>
@@ -475,8 +189,7 @@ export default function Careers() {
                       {/* Benefits */}
                       <div>"
                         <h4 className="text-lg font-semibold text-white mb-3 flex items-center">"
-                          <Heart className="w-5 h-5 text-cyan-400 mr-2" />
-                          Benefits
+                          <Heart className="w-5 h-5 text-cyan-400 mr-2" />                          Benefits
                         </h4>"
                         <ul className="space-y-2">
                           {job.benefits.map((benefit, idx) => (
@@ -484,8 +197,7 @@ export default function Careers() {
                               key={idx}"
                               className="flex items-start space-x-2 text-gray-300"
                             >"
-                              <Star className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
-                              <span>{benefit}</span>
+                              <Star className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />                              <span>{benefit}</span>
                             </li>) ) }
                         </ul>
                       </div>
@@ -577,8 +289,7 @@ export default function Careers() {
               <p className="text-gray-300">
                 Continuous learning opportunities and clear career progression
                 paths for ambitious professionals.
-              </p>
-            </div>
+              </p>            </div>
           </div>
         </motion.div>
 
@@ -605,8 +316,7 @@ export default function Careers() {
                 <span>careers@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center justify-center space-x-3 text-gray-300">"
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span>+1 302 464 0950</span>
+                <Phone className="w-5 h-5 text-cyan-400" />                <span>+1 302 464 0950</span>
               </div>
             </div>
 "

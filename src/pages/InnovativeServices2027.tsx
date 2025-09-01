@@ -1,41 +1,5 @@
 import React, { useState, useEffect } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  Brain,
-  Shield,
-  Cloud,
-  Rocket,
-  Globe,
-  Cpu,
-  Lock,
-  Heart,
-  Users,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Gauge,
-  Star,
-  Target,
-  TrendingUp,
-  Award,
-  Zap,
-  Eye,
-  BarChart3,
-  Smartphone,
-  Building2,
-  Car,
-  Leaf,
-  Satellite,
-  Banknote,
-  Building,'
-  Phone} from 'lucide-react';
-'
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';'
-import { SEO } from '../components/SEO';
-
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
 '
   'AI & Customer Success': Brain,'
@@ -97,8 +61,7 @@ export default function InnovativeServices2027() {
     switch (sortBy) {
 '
       case 'price':
-        return a.price - b.price;'
-      case 'roi':
+        return a.price - b.price;'      case 'roi':
         return ('
           parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''))
         );'
@@ -108,13 +71,11 @@ export default function InnovativeServices2027() {
         return 0;
     }
   }) ;
-
   return()
     <div className="min-h-screen bg-futuristic">
       <SEO"
-        title="2027 Innovative Services - Zion Tech Group""
-        description="Discover our revolutionary 2027 services portfolio featuring cutting-edge AI, Quantum Computing, Blockchain, and emerging technology solutions."
-      />
+        title="2027 Innovative Services - Zion Tech Group""        description="Discover our revolutionary 2027 services portfolio featuring cutting-edge AI, Quantum Computing, Blockchain, and emerging technology solutions."
+       />
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -287,8 +248,7 @@ export default function InnovativeServices2027() {
                             key={idx}"
                             className="text-sm text-gray-400 flex items-center"
                           >"
-                            <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
-                            {feature}
+                            <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />                            {feature}
                           </li>) ) }
                       </ul>
                     </div>
@@ -304,8 +264,7 @@ export default function InnovativeServices2027() {
                             key={idx}"
                             className="text-sm text-gray-400 flex items-center"
                           >"
-                            <TrendingUp className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                            {benefit}
+                            <TrendingUp className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />                            {benefit}
                           </li>) ) }
                       </ul>
                     </div>
@@ -374,8 +333,7 @@ export default function InnovativeServices2027() {
 '
                   setSelectedCategory('all');'
                   setSearchQuery('');
-                }}"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                }}"                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 View All Services
               </button>
@@ -434,8 +392,7 @@ export default function InnovativeServices2027() {
               className="text-center"
             >"
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
-              <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>"
-              <p className="text-gray-300">+1 302 464 0950</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>"              <p className="text-gray-300">+1 302 464 0950</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -445,8 +402,7 @@ export default function InnovativeServices2027() {
               className="text-center"
             >"
               <MessageCircle className="w-12 h-12 text-purple-400 mx-auto mb-4" />"
-              <h3 className="text-xl font-semibold text-white mb-2">Email</h3>"
-              <p className="text-gray-300">kleber@ziontechgroup.com</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Email</h3>"              <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -461,8 +417,7 @@ export default function InnovativeServices2027() {
                 364 E Main St STE 1008
                 <br />
                 Middletown DE 19709
-              </p>
-            </motion.div>
+              </p>            </motion.div>
           </div>
         </div>
       </section>

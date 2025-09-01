@@ -1,75 +1,6 @@
 import React from 'react.ts';'
 import { motion   } from 'framer-motion.ts';'
-import { Link   } from 'react-router-dom.ts';
-import { Brain, 
-  Link as LinkIcon, 
-  Shield, 
-  Clock, 
-  CheckCircle, 
-  Zap,
-  Globe,
-  TrendingUp,
-  ArrowRight,
-  Target,
-  Database,
-  Activity,
-  BarChart3,
-  Network'
-  } from 'lucide-react.ts';'
-import { SEO   } from '../../components/SEO';
-;
-const AIBlockchainSupplyChain = (...args: unknown[]): unknown => {
-  const features = [
-    {
-
-      icon: Brain,
-      title: "AI-Powered Analytics","
-      description: "Advanced machine learning algorithms analyze supply chain data for predictive insights and optimization opportunities"
-    },
-    {
-
-      icon: LinkIcon,"
-      title: "Blockchain Transparency","
-      description: "Immutable blockchain records provide complete transparency and traceability across the entire supply chain"
-    },
-    {
-
-      icon: Shield,"
-      title: "Smart Contracts","
-      description: "Automated smart contracts execute business logic and ensure compliance with predefined rules"
-    },
-    {
-
-      icon: Clock,"
-      title: "Real-Time Tracking","
-      description: "Live monitoring of goods movement with instant alerts for delays, quality issues, or compliance violations"
-    },
-    {
-
-      icon: Zap,"
-      title: "Automated Compliance","
-      description: "AI-driven compliance monitoring with automatic reporting and regulatory adherence"
-    },
-    {
-
-      icon: Globe,"
-      title: "Global Integration","
-      description: "Seamless integration with existing ERP systems and global trading partners";
-    };
-  ];
-
-  const services = [
-    {
-"
-      name: "Starter Plan","
-      price: "$5,999","
-      period: "/month",
-      features[;"
-        "Basic blockchain tracking","
-        "AI analytics dashboard","
-        "Standard compliance","
-        "Up to 1000 transactions/month","
-        "Basic reporting"
+import { Link   } from 'react-router-dom.ts';        "Basic reporting"
       ],;
       popular: false
     },
@@ -139,17 +70,15 @@ const AIBlockchainSupplyChain = (...args: unknown[]): unknown => {
     "IoT Integration","
     "Cloud Computing","
     "API Integration","
-    "Real-time Analytics",;"
-    "Predictive Modeling";
+    "Real-time Analytics",;"    "Predictive Modeling";
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO "
         title="AI-Powered Blockchain Supply Chain | Zion Tech Group""
-        description="Revolutionize your supply chain with AI-driven insights and blockchain transparency. Get real-time tracking, smart contracts, and automated compliance.""
-        keywords="AI Supply Chain, Blockchain Supply Chain, Smart Contracts, Supply Chain Transparency, AI Analytics, Compliance Monitoring"
-      />
+        description="Revolutionize your supply chain with AI-driven insights and blockchain transparency. Get real-time tracking, smart contracts, and automated compliance.""        keywords="AI Supply Chain, Blockchain Supply Chain, Smart Contracts, Supply Chain Transparency, AI Analytics, Compliance Monitoring"
+       />
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -184,8 +113,7 @@ const AIBlockchainSupplyChain = (...args: unknown[]): unknown => {
               >
                 Transform Your Supply Chain"
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>"
-              <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
+              </Link>"              <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                 Schedule Demo
               </button>
             </div>
@@ -334,8 +262,7 @@ const AIBlockchainSupplyChain = (...args: unknown[]): unknown => {
                 <ul className="space-y-4 mb-8">
                   {service.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-zion-slate-light">"
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -350,8 +277,7 @@ const AIBlockchainSupplyChain = (...args: unknown[]): unknown => {
                   }`}
                 >
                   Get Started"
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
+                  <ArrowRight className="ml-2 w-4 h-4" />                </Link>
               </motion.div>
             ))}
           </div>
@@ -412,15 +338,13 @@ const AIBlockchainSupplyChain = (...args: unknown[]): unknown => {
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8"
               >"
                 <div className="flex items-center mb-6">"
-                  <Target className="w-8 h-8 text-zion-cyan mr-3" />"
-                  <h3 className="text-2xl font-bold text-white">{useCase.industry}</h3>
+                  <Target className="w-8 h-8 text-zion-cyan mr-3" />"                  <h3 className="text-2xl font-bold text-white">{useCase.industry}</h3>
                 </div>"
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{useCase.description}</p>"
                 <div className="space-y-2">
                   {useCase.benefits.map((benefit, benefitIndex) => ("
                     <div key={benefitIndex} className="flex items-center text-zion-slate-light">"
-                      <TrendingUp className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-                      {benefit}
+                      <TrendingUp className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />                      {benefit}
                     </div>
                   ))}
                 </div>
@@ -485,8 +409,7 @@ const AIBlockchainSupplyChain = (...args: unknown[]): unknown => {
               >"
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">"
                   <Activity className="w-6 h-6 text-white" />
-                </div>"
-                <p className="text-white font-medium">{tech}</p>
+                </div>"                <p className="text-white font-medium">{tech}</p>
               </motion.div>
             ))}
           </div>
@@ -527,8 +450,7 @@ const AIBlockchainSupplyChain = (...args: unknown[]): unknown => {
                 >
                   Start Your Transformation"
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>"
-                <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
+                </Link>"                <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                   Book a Consultation
                 </button>
               </div>
@@ -551,8 +473,7 @@ const AIBlockchainSupplyChain = (...args: unknown[]): unknown => {
               <span>+1 302 464 0950</span>
             </div>"
             <div className="flex items-center">"
-              <Network className="w-5 h-5 text-zion-cyan mr-2" />
-              <span>kleber@ziontechgroup.com</span>
+              <Network className="w-5 h-5 text-zion-cyan mr-2" />              <span>kleber@ziontechgroup.com</span>
             </div>
           </div>"
           <p className="text-zion-slate-light mt-4">

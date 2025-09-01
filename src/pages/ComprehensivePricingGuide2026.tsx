@@ -1,43 +1,5 @@
 import React, { useState, useMemo } from 'react';'
 import { motion } from 'framer-motion';
-import {
-
-  DollarSign,
-  TrendingUp,
-  Users,
-  Clock,
-  CheckCircle,
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  CheckCircle,
-  ArrowRight,
-  Search,
-  Filter,
-  Grid,
-  List,
-  DollarSign,
-  Clock,
-  Award,
-  Target,
-  BarChart3,
-  Globe,
-  Rocket,
-  Cpu,
-  Brain'
-} from 'lucide-react';'
-import SEO from '../components/SEO';'
-import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from '../data/comprehensivePricingGuide2026';
-
-const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;'
-  const [selectedService, setSelectedService] = useState<any>('all');'
-  const [selectedTier, setSelectedTier] = useState<any>('all');'
-} from 'lucide-react';
-import { SEO } from "../components/SEO";"
-import { ALL_PRICING_GUIDES_2026, marketSummary2026 } from "../data/comprehensivePricingGuide2026";
-
 const ComprehensivePricingGuide2026: React.FC = () => {;'
   const [selectedService, setSelectedService] = useState<string>('all');'
   const [selectedTier, setSelectedTier] = useState<string>('all');
@@ -59,8 +21,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
 "
       default: return <Zap className = "w-6 h-6" />};
   };
-'
-      default: return 'from-gray-500 to-gray-600'}
+'      default: return 'from-gray-500 to-gray-600'}
   };
 
   return()
@@ -70,8 +31,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
         description="Explore detailed pricing for Zion Tech Group's revolutionary 2026 services. Compare pricing tiers, ROI analysis, and market comparisons.""
         keywords="pricing guide, service pricing, ROI analysis, market comparison, 2026 services, Zion Tech Group"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
+"      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
         {/* Hero Section */}"
         <section className="relative overflow-hidden py-20">"
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20"></div>"
@@ -283,8 +243,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                         <div className={`inline-block p-2 rounded-lg bg-gradient-to-r ${getTierColor(tier.name)} mb-4`}>"
                           <Star className="w-6 h-6 text-white" />
                         </div>"
-                        <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>"
-                        <div className="text-4xl font-bold text-white mb-1">
+                        <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>"                        <div className="text-4xl font-bold text-white mb-1">
                           ${tier.price.toLocaleString()}
                         </div>"
                         <div className="text-zinc-400">/{tier.billingCycle}</div>
@@ -296,8 +255,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                         <div className="space-y-2">
                           {tier.features.map((feature, idx) => ("
                             <div key={idx} className="flex items-center gap-2 text-sm text-zinc-300">"
-                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                              <span>{feature}</span>
+                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />                              <span>{feature}</span>
                             </div>) ) }
                         </div>
                       </div>;
@@ -513,15 +471,13 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                   href="tel:+13024640950""
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors"
 "
-                  <Phone className="w-5 h-5" />
-                  Call +1 302 464 0950
+                  <Phone className="w-5 h-5" />                  Call +1 302 464 0950
                 </a>
                 <a"
                   href="mailto:kleber@ziontechgroup.com""
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors"
 "
-                  <Mail className="w-5 h-5" />
-                  Email kleber@ziontechgroup.com
+                  <Mail className="w-5 h-5" />                  Email kleber@ziontechgroup.com
                 </a>
               </div>"
               <div className="mt-8 text-zinc-400">
@@ -535,7 +491,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
     </>
   );
 };
-
 export default ComprehensivePricingGuide2026;
 export default ComprehensivePricingGuide2026;
 '"`

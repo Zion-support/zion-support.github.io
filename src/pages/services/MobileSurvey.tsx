@@ -21,8 +21,7 @@ export default function MobileSurvey() {
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 mb-6">"
             <Smartphone className="w-4 h-4 mr-2"/> Capture feedback anywhere, anytime
           </div>"
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">Mobile Feedback Surveys</h1>"
-          <p className="text-white/90 text-xl">Modern, fast surveys with AI insights to improve customer experience.</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Mobile Feedback Surveys</h1>"          <p className="text-white/90 text-xl">Modern, fast surveys with AI insights to improve customer experience.</p>
         </div>
       </section>"
       <section className="py-16 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
@@ -30,8 +29,7 @@ export default function MobileSurvey() {
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Features</h2>"
           <ul className="space-y-3">
             {features.map((f) => ("
-              <li key={f} className="flex items-start"><Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5"/><span className="text-zion-slate-dark">{f}</span></li>
-            ))}
+              <li key={f} className="flex items-start"><Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5"/><span className="text-zion-slate-dark">{f}</span></li>            ))}
           </ul>
         </div>"
         <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">"
@@ -46,8 +44,7 @@ export default function MobileSurvey() {
             ))}
           </div>"
           <div className="mt-6 flex gap-3">"
-            <a href="/pricing" className="px-5 py-3 bg-zion-cyan/10 text-zion-slate-dark rounded-lg hover:bg-zion-cyan/20 inline-flex items-center">View Full Pricing <ArrowRight className="w-4 h-4 ml-2"/></a>
-          </div>
+            <a href="/pricing" className="px-5 py-3 bg-zion-cyan/10 text-zion-slate-dark rounded-lg hover:bg-zion-cyan/20 inline-flex items-center">View Full Pricing <ArrowRight className="w-4 h-4 ml-2"/></a>          </div>
         </div>
       </section>"
       <section className="pb-16 max-w-6xl mx-auto px-6">"
@@ -62,8 +59,7 @@ export default function MobileSurvey() {
         <div className="mt-10 text-center">"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;"
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg"><Phone className="w-4 h-4 mr-2"/> +1 302 464 0950</a>;"
-            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"><Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com</a>;
-          </div>;
+            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"><Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com</a>;          </div>;
         </div>;
       </section>;
     </div>;

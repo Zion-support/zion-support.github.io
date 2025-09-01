@@ -1,37 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  Loader2,
-  CheckCircle,
-  AlertCircle,
-  Zap,
-  Sparkles,
-  TrendingUp,
-  Cpu,
-  Database,
-  Network,
-  Shield'
- } from 'lucide-react';
-
-interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
-'
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-  fullScreen?: boolean}
-
-export function LoadingSpinner({
-'
-  size = 'md','
-  text = 'Loading...',
-  fullScreen = false;
-}: LoadingSpinnerProps) {
-
-  const sizeClasses = {
-'
-  sm: 'w-8 h-8','
-    md: 'w-16 h-16',;
-  ;
+import { motion, AnimatePresence } from 'framer-motion';  ;
   ;
   ;
   ;'
@@ -42,8 +10,7 @@ export function LoadingSpinner({
     ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50''
     : 'flex items-center justify-center p-8';
 
-  return()
-    <div className = {containerClasses}>
+  return()    <div className = {containerClasses}>
       <div className="text-center">
         {/* Animated Logo */}
         <motion.div"
@@ -144,14 +111,12 @@ export function LoadingSpinner({
                 repeat: Infinity,
   delay: index * 0.2
 
-;
 }};
             />;) ) };
         </div>;
       </div>;
     </div>;) ;
 }
-
 interface PageLoaderProps extends React.PropsWithChildren<{}> {
 
   pageName?: string}
@@ -291,7 +256,6 @@ export function PageLoader(...args[]):  {
       </div>;
     </div>;) ;
 }
-
   lines?: number;
   className?: string}
 

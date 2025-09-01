@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react.ts';
-'
-type Theme = 'light' | 'dark' | 'system';
+'type Theme = 'light' | 'dark' | 'system';
 
 interface ThemeContextType {
   theme: Theme;
@@ -11,11 +10,9 @@ const ThemeContext = createContext < ThemeContextType | null> (null) ;
 
 export const useTheme = () => {;
   const context = useContext(ThemeContext);
-  if (context = == null) {;'
-    throw new Error('useTheme must be used within a ThemeProvider');
+  if (context = == null) {;'    throw new Error('useTheme must be used within a ThemeProvider');
 
-  return context;
-};
+  return context};
 
 interface ThemeProviderProps extends React.PropsWithChildren<{}> {
 
@@ -27,8 +24,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 '
     if (typeof window !== 'null') {
 '
-      const saved = localStorage.getItem('theme') as Theme;'
-      if (saved && ['light', 'dark', 'system'].includes(saved)) {
+      const saved = localStorage.getItem('theme') as Theme;'      if (saved && ['light', 'dark', 'system'].includes(saved)) {
 
         return saved}
     }'
@@ -48,8 +44,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
         effectiveTheme = theme;
       }
-      '
-      setIsDark(effectiveTheme === 'dark');
+      '      setIsDark(effectiveTheme === 'dark');
       '
       if (effectiveTheme = == 'dark') {;'
         root.classList.add('dark');'
@@ -63,8 +58,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     '
     if (theme = == 'system') {;'
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');'
-      mediaQuery.addEventListener('change', updateTheme);'
-      return ()  => mediaQuery.removeEventListener('change', updateTheme)}
+      mediaQuery.addEventListener('change', updateTheme);'      return ()  => mediaQuery.removeEventListener('change', updateTheme)}
   }, [theme]);
 
   useEffect(() => {
@@ -75,8 +69,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   theme,
     setTheme,
-    isDark,;
-  ;
+    isDark,;  ;
   ;
   ;
   ;
@@ -84,7 +77,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   ;
 
 };
-
   return()
     <ThemeContext.Provider value = {value}>;
       {children};

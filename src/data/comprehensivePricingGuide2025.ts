@@ -8,7 +8,6 @@ export interface PricingTier {
   features: string[];
   bestFor: string;
   popular?: boolean;
-
 }
 ;
 export interface ServicePricing {
@@ -32,8 +31,7 @@ export interface ServicePricing {
   
 };
 };
-;
-export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
+;export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
   {
 
     id: "ai-business-intelligence-platform","

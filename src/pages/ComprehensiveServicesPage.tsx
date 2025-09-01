@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom.ts';'
 import { motion } from 'framer-motion.ts';
 import {
 
-  Brain,
-  Shield,
+  Brain,  Shield,
   Cpu,
   Rocket,
   Zap,
@@ -38,7 +37,6 @@ import {
   TrendingDown} from 'lucide-react.ts';'
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';'
 import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
-
 export function ComprehensiveServicesPage(...args: any[]): any {
 '
   const [searchTerm, setSearchTerm] = useState('');'
@@ -133,8 +131,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
   ];
 
   return()
-    <div className="min-h-screen py-8">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-8">"      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}"
         <div className="text-center mb-16">
           <motion.div
@@ -185,8 +182,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input"
-                  type="text""
-                  placeholder="Search services..."
+                  type="text""                  placeholder="Search services..."
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -285,8 +281,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
                     <span className="text-gray-400 text-sm">/month</span>
                   </div>"
                   <div className="flex items-center space-x-2 text-sm text-gray-400">"
-                    <DollarSign className="w-4 h-4" />
-                    <span>Market: {service.marketPrice}</span>
+                    <DollarSign className="w-4 h-4" />                    <span>Market: {service.marketPrice}</span>
                   </div>
                 </div>
 
@@ -297,8 +292,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
                       key={featureIndex}"
                       className="flex items-center space-x-2 text-sm text-gray-300"
                     >"
-                      <CheckCircle className="w-4 h-4 text-cyan-400" />
-                      <span>{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-cyan-400" />                      <span>{feature}</span>
                     </div>
                   ))}
                   {service.features.length > 3 && ("
@@ -391,8 +385,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <span>Get Started Today</span>"
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+                <ArrowRight className="w-5 h-5" />              </Link>
               <Link"
                 to="/request-quote""
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
@@ -412,8 +405,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center justify-center space-x-3">"
-                <MapPin className="w-5 h-5" />
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                <MapPin className="w-5 h-5" />                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
           </motion.div>
@@ -421,6 +413,5 @@ export function ComprehensiveServicesPage(...args: any[]): any {
       </div>
     </div>) ;
 }
-
 export default ComprehensiveServicesPage;
 '"`

@@ -1,43 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  Brain,
-  Zap,
-  Target,
-  TrendingUp,
-  Search,
-  FileText,
-  Edit3,
-  Eye,
-  BarChart3,
-  Lightbulb,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  X,
-  Settings,
-  Download,
-  Share2,
-  RefreshCw,
-  Maximize2,
-  Minimize2,
-  Sparkles,
-  Globe,
-  Smartphone,'
-  Monitor} from 'lucide-react';
-
-interface ContentAnalysis {
-  id: string;'
-  type: 'seo' | 'performance' | 'accessibility' | 'user-experience';
-  score: number;
-  suggestions: string[];'
-  priority: 'high' | 'medium' | 'low';
-  impact: number;
-  category: string;
-
-}
-
 interface OptimizationSuggestion {
 
   id: string;
@@ -51,7 +13,6 @@ interface OptimizationSuggestion {
   estimatedTime: string;
 
 }
-
 interface AIContentOptimizerProps {
   // Add your props here
 
@@ -60,7 +21,6 @@ interface AIContentOptimizerProps {
   showRealTime?: boolean;
   autoAnalyze?: boolean;
   onOptimizationComplete?: suggestions: OptimizationSuggestion[] void;
-
 export function AIContentOptimizer({
 
   enabled = true,
@@ -90,8 +50,7 @@ export function AIContentOptimizer({
       'performance','
       'accessibility','
       'user-experience',
-    ];
-    const analysis: ContentAnalysis[] = [];
+    ];    const analysis: ContentAnalysis[] = [];
 
     categories.forEach(category => {
 
@@ -101,7 +60,6 @@ export function AIContentOptimizer({
         `Implement ${category} best practices`,`
         `Monitor ${category} metrics regularly`,
       ];
-
       analysis.push({
 
         id: category,
@@ -112,7 +70,6 @@ export function AIContentOptimizer({
         impact: Math.floor(Math.random() * 30) + 10,
         category});
     });
-
     setContentAnalysis(analysis);
 
     // Calculate overall score
@@ -175,10 +132,8 @@ export function AIContentOptimizer({
 
     setOptimizationSuggestions(suggestions);
   }, []);
-
   // Start content analysis
-  const startAnalysis = useCallback(() => {
-    setIsAnalyzing(true);
+  
     setAnalysisComplete(false);
 
     // Simulate analysis process
@@ -198,7 +153,6 @@ export function AIContentOptimizer({
     generateOptimizationSuggestions,
     onOptimizationComplete,
   ]);
-
   // Auto - analyze when component opens
   useEffect ( () => {
     if (autoAnalyze && isOpen && !analysisComplete) {
@@ -206,7 +160,6 @@ export function AIContentOptimizer({
       startAnalysis();
     }
   }, [autoAnalyze, isOpen, analysisComplete, startAnalysis]) ;
-
   // Setup real - time updates
   useEffect ( () => {
     if (showRealTime && isOpen && analysisComplete) {
@@ -253,7 +206,6 @@ export function AIContentOptimizer({
     selectedCategory === 'all'
       ? optimizationSuggestions
       : optimizationSuggestions.filter(s => s.category === selectedCategory);
-
   if (!enabled) return null;
 
   return()
@@ -268,8 +220,7 @@ export function AIContentOptimizer({
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7 }}
       >"
-        <Brain className="w-6 h-6" />"
-        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+        <Brain className="w-6 h-6" />"        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
       </motion.button>
 
       {/* AI Content Optimizer Modal */}
@@ -295,8 +246,7 @@ export function AIContentOptimizer({
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20">"
                 <div className="flex items-center space-x-3">"
                   <Brain className="w-8 h-8 text-purple-600" />
-                  <div>"
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  <div>"                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                       AI Content Optimizer
                     </h2>"
                     <p className="text-gray-600 dark:text-gray-400">
@@ -313,8 +263,7 @@ export function AIContentOptimizer({
                   >
                     <RefreshCw'`
                       className={`w-5 h-5 ${isAnalyzing ? 'animate-spin' : ''}`}
-                    />
-                  </button>
+                    />                  </button>
 
                   <button
                     onClick={() => setIsFullscreen(!isFullscreen)}"
@@ -331,8 +280,7 @@ export function AIContentOptimizer({
                     onClick={() => setIsOpen(false)}"
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
                   >"
-                    <X className="w-5 h-5" />
-                  </button>
+                    <X className="w-5 h-5" />                  </button>
                 </div>
               </div>
 
@@ -356,8 +304,7 @@ export function AIContentOptimizer({
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                           Overall Content Score
                         </h3>"
-                        <Sparkles className="w-6 h-6 text-purple-600" />
-                      </div>
+                        <Sparkles className="w-6 h-6 text-purple-600" />                      </div>
 "
                       <div className="flex items-center space-x-6">"
                         <div className="text-center">"
@@ -535,8 +482,7 @@ export function AIContentOptimizer({
                                   <Edit3 className="w-4 h-4" />
                                 </button>"
                                 <button className="p-2 text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors">"
-                                  <CheckCircle className="w-4 h-4" />
-                                </button>
+                                  <CheckCircle className="w-4 h-4" />                                </button>
                               </div>
                             </div>
                           </motion.div>) ) }
@@ -551,8 +497,7 @@ export function AIContentOptimizer({
                       </button>
 "
                       <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">"
-                        <Lightbulb className="w-4 h-4" />
-                        <span>Apply All Suggestions</span>
+                        <Lightbulb className="w-4 h-4" />                        <span>Apply All Suggestions</span>
                       </button>
 "
                       <button className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">"
@@ -563,8 +508,7 @@ export function AIContentOptimizer({
                   </div>
                 ) : ("
                   <div className="text-center py-12">"
-                    <Brain className="w-16 h-16 text-purple-600 mx-auto mb-4" />"
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    <Brain className="w-16 h-16 text-purple-600 mx-auto mb-4" />"                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                       Ready to optimize your content?
                     </h3>"
                     <p className="text-gray-600 dark:text-gray-400 mb-6">

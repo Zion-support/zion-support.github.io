@@ -1,42 +1,6 @@
 import React, { useState } from 'react';'
 import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
-import {
-
-  Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
-  Server, Cloud, Database, Network, Lock, Code, Rocket, Building,
-  Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth,
-  Satellite, Atom, Leaf, Space, Handshake, Calendar, DollarSign,
-  BarChart3, Target, Award, Clock, Heart, Truck, Sparkles, Crown,
-  Lightbulb, Globe2, FileText, Image, Video, Code, Palette,
-  ShoppingCart, MessageSquare, Eye, Ear, Hand, Foot, Bone, Tooth,
-  Pill, Bandage, Thermometer, Scale, Calculator, ChartBar, PieChart,
-  LineChart, Activity, TrendingDown, Minus, Plus, Equal, Divide,
-  Percent, Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins,
-  PiggyBank, Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode,
-  Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX'
- } from 'lucide-react';
-
-const itServices2028 = [
-  {
-'
-    id: 'quantum-cloud-infrastructure','
-    name: 'Quantum Cloud Infrastructure','
-    tagline: 'Next-generation quantum-ready cloud infrastructure','
-    price: '$45,999','
-    period: '/month','
-    description: 'Revolutionary quantum-ready cloud infrastructure that provides unprecedented performance, security, and scalability for enterprise applications.',
-    features[;'
-      'Quantum-ready computing nodes','
-      'Advanced AI optimization','
-      'Zero-latency networking','
-      'Quantum encryption','
-      'Auto-scaling infrastructure','
-      'Real-time monitoring','
-      'Disaster recovery','
-      'Global CDN','
-      'API management','
-      'DevOps automation'
+import { Link } from 'react-router-dom';      'DevOps automation'
     ],;
     popular: true,
     icon: Cloud,'
@@ -202,8 +166,7 @@ const itServices2028 = [
     growthRate: '220% annual growth',;
     rating: 4.6,;
     reviews: 156,;
-    customers: 89;
-  };
+    customers: 89};
 ];
 
             </a>;

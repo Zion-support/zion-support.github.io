@@ -94,8 +94,7 @@ const News: React.FC = () => {
         description="Stay updated with the latest news, product launches, research breakthroughs, and company updates from Zion Tech Group."
       />
       {/* Hero Section */}"
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -156,8 +155,7 @@ const News: React.FC = () => {
                     {featuredArticle.author}
                   </span>"
                   <span className="flex items-center gap-2">"
-                    <Calendar className="w-4 h-4" />
-                    {new Date(featuredArticle.date).toLocaleDateString()}
+                    <Calendar className="w-4 h-4" />                    {new Date(featuredArticle.date).toLocaleDateString()}
                   </span>
                 </div>
                 <a
@@ -170,8 +168,7 @@ const News: React.FC = () => {
               <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 text-center">"
                 <div className="w-32 h-32 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">"
                   <Tag className="w-16 h-16 text-white" />
-                </div>"
-                <p className="text-gray-300">Featured Article</p>
+                </div>"                <p className="text-gray-300">Featured Article</p>
               </div>"
               <h1 className="text-5xl md:text-6xl font-bold text-white">
                 Latest"
@@ -225,16 +222,14 @@ const News: React.FC = () => {
                     {article.author}
                   </span>"
                   <span className="flex items-center gap-2">"
-                    <Calendar className="w-4 h-4" />
-                    {new Date(article.date).toLocaleDateString()}
+                    <Calendar className="w-4 h-4" />                    {new Date(article.date).toLocaleDateString()}
                   </span>
                 </div>
                 <a
                   href={article.href}"
                   className="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300 flex items-center"
                 >"
-                  Read More <ArrowRight className="w-4 h-4 ml-1" />
-                </a>
+                  Read More <ArrowRight className="w-4 h-4 ml-1" />                </a>
               </motion.div>) ) }
           </div>
           {filteredArticles.length === 0 && (<motion.div
@@ -246,8 +241,7 @@ const News: React.FC = () => {
               <div className="w-16 h-16 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <Search className="w-8 h-8 text-slate-400" />
               </div>"
-              <h3 className="text-xl font-semibold text-white mb-2">No news articles found</h3>"
-              <p className="text-slate-400">Try adjusting your filters or search terms</p>
+              <h3 className="text-xl font-semibold text-white mb-2">No news articles found</h3>"              <p className="text-slate-400">Try adjusting your filters or search terms</p>
             </motion.div>
           )}
         </div>
@@ -285,6 +279,5 @@ const News: React.FC = () => {
       </div>
     </div>;) ;
 };
-
 export default News;
 '"

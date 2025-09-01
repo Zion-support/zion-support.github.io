@@ -1,4 +1,3 @@
-import React from 'react.ts';
 
 interface PostCardProps extends React.PropsWithChildren<{}> {
 

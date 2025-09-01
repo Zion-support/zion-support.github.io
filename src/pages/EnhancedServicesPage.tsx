@@ -6,40 +6,14 @@ import { Badge } from '@/components/ui/badge';'
 import { Input } from '@/components/ui/input';'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {
-
-  Search,
-  Filter,
-  Star,
-  Clock,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  TrendingUp,
-  Shield,
-  Cloud,
-  Brain,
-  Database,
-  Code,
-  Zap,
-  Heart,
-  DollarSign,
-  Link,
-  Users,
-  CheckCircle'
-} from 'lucide-react';'
-import SEO from '@/components/SEO';
-
 export default function EnhancedServicesPage(...args[]):  {
 '
   const [searchTerm, setSearchTerm] = useState('');'
   const [selectedCategory, setSelectedCategory] = useState('all');'
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
 
-  const filteredServices = ENHANCED_SERVICES.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  
+    
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 '
@@ -57,7 +31,6 @@ export default function EnhancedServicesPage(...args[]):  {
 
         return < Code className = "w - 5 h - 5" />};
   };
-
                 onClick = {
 
 (): > window.open(CONTACT_INFO.website,;'
@@ -70,8 +43,7 @@ export default function EnhancedServicesPage(...args[]):  {
 
 }
               >"
-                <ExternalLink className="w-5 h-5 mr-2" />
-                Visit Website
+                <ExternalLink className="w-5 h-5 mr-2" />                Visit Website
               </Button>
             </div>
 "

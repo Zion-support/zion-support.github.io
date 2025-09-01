@@ -87,16 +87,14 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
     { name: 'Financial Services', icon: Bitcoin, description: 'Cross-border payments and settlements' },;'
     { name: 'Healthcare', icon: Shield, description: 'Patient data security and interoperability' },;'
     { name: 'Real Estate', icon: FileText, description: 'Property records and title management' },;'
-    { name: 'Voting Systems', icon: CheckCircle, description: 'Secure and transparent elections' },;'
-    { name: 'Intellectual Property', icon: Lock, description: 'Digital rights management and protection' };
+    { name: 'Voting Systems', icon: CheckCircle, description: 'Secure and transparent elections' },;'    { name: 'Intellectual Property', icon: Lock, description: 'Digital rights management and protection' };
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="Blockchain Enterprise Solutions - Zion Tech Group""
-        description="Transform your business with enterprise-grade blockchain solutions. From smart contracts to DeFi applications, we help you leverage the power of distributed ledger technology."
-      />
+        title="Blockchain Enterprise Solutions - Zion Tech Group""        description="Transform your business with enterprise-grade blockchain solutions. From smart contracts to DeFi applications, we help you leverage the power of distributed ledger technology."
+       />
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -130,8 +128,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 "
             <div className="flex justify-center mb-6">"
               <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">"
-                <Lock className="w-10 h-10 text-white" />
-              </div>
+                <Lock className="w-10 h-10 text-white" />              </div>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Blockchain"

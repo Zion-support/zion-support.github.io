@@ -111,8 +111,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
           <p className="text-green-100 text-xl">
             Make smarter financial decisions with AI-powered analytics,
             predictive modeling, and real-time market insights.
-          </p>
-        </div>
+          </p>        </div>
       </section>
 "
       <section className="py-16 max-w-6xl mx-auto px-6">"
@@ -124,8 +123,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
             <ul className="space-y-3">
               {features.map(f => ("
                 <li key={f} className="flex items-start">"
-                  <Check className="w-5 h-5 text-green-600 mr-3 mt-0.5" />"
-                  <span className="text-zion-slate-dark">{f}</span>
+                  <Check className="w-5 h-5 text-green-600 mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{f}</span>
                 </li>
               ))}
             </ul>"
@@ -169,8 +167,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
                 rel="noreferrer""
                 className="px-5 py-3 border border-green-600 text-green-600 rounded-lg inline-flex items-center"
               >"
-                Learn More <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
+                Learn More <ExternalLink className="w-4 h-4 ml-2" />              </a>
             </div>
           </div>
         </div>
@@ -183,8 +180,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
             <ul className="space-y-3">
               {benefits.map(b => ("
                 <li key={b} className="flex items-start">"
-                  <TrendingUp className="w-5 h-5 text-green-600 mr-3 mt-0.5" />"
-                  <span className="text-zion-slate-dark">{b}</span>
+                  <TrendingUp className="w-5 h-5 text-green-600 mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{b}</span>
                 </li>
               ))}
             </ul>
@@ -196,8 +192,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
             <ul className="space-y-3">
               {useCases.map(u => ("
                 <li key={u} className="flex items-start">"
-                  <Target className="w-5 h-5 text-green-600 mr-3 mt-0.5" />"
-                  <span className="text-zion-slate-dark">{u}</span>
+                  <Target className="w-5 h-5 text-green-600 mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{u}</span>
                 </li>
               ))}
             </ul>
@@ -214,8 +209,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
                 key={t}"
                 className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm"
               >"
-                <PieChart className="w-6 h-6 text-green-600 mb-3" />"
-                <div className="text-zion-slate-dark font-semibold">{t}</div>
+                <PieChart className="w-6 h-6 text-green-600 mb-3" />"                <div className="text-zion-slate-dark font-semibold">{t}</div>
               </div>
             ))}
           </div>
@@ -231,8 +225,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
                 key={c}"
                 className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm"
               >"
-                <Brain className="w-6 h-6 text-green-600 mb-3" />"
-                <div className="text-zion-slate-dark font-semibold">{c}</div>
+                <Brain className="w-6 h-6 text-green-600 mb-3" />"                <div className="text-zion-slate-dark font-semibold">{c}</div>
               </div>
             ))}
           </div>
@@ -311,8 +304,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
               </h4>"
               <p className="text-sm text-zion-slate-light">
                 Automated regulatory reporting and audits
-              </p>
-            </div>
+              </p>            </div>
           </div>
         </div>
 "
@@ -342,8 +334,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
               rel="noreferrer""
               className="text-green-600 hover:underline"
             >
-              https://ziontechgroup.com
-            </a>
+              https://ziontechgroup.com            </a>
           </div>
         </div>
       </section>

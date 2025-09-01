@@ -1,78 +1,6 @@
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';
-import { Brain, 
-import { emergingTechServices2030 } from "../data / emergingTechServices2030";
-import { motion  } from 'framer - motion.ts';
-import { SEO } from "../components / SEO";
-
-
-  Rocket, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  CheckCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Award,
-  Users,
-  Target,
-  BarChart3,
-  Lightbulb,
-  Code,
-  Database,
-  Network,
-  Lock,
-  Eye,
-  Heart,
-  Zap as Lightning'
-} from 'lucide-react';
-import { SEO } from "../components/SEO";"
-import { emergingTechServices2030 } from "../data/emergingTechServices2030";
-
-export default function EmergingTech2030(...args[]):  {
-
-  const containerVariants = {
-
-    hidden: { opacity: 0 },;
-    visible: {
-      opacity: 1,;
-      transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
-
-  const itemVariants = {
-
-  hidden: { y: 20,
-  opacity: 0 
-
-},
-    visible: {
-      y: 0,;
-      opacity: 1,;
-      transition: {
-        duration: 0.5;
-      };
-    };
-  };
-
-  const serviceIcons = {
-'
-  'Quantum Computing': Brain,'
-    'Artificial Intelligence': Cpu,'
-    'Neuromorphic Computing': Brain,'
-    'Synthetic Biology': Heart,'
-    'Space Technology': Rocket,'
-    'Brain-Computer Interface': Brain,;
-  ;
+import { Link  } from 'react-router-dom.ts';  ;
   ;
   ;
   ;'
@@ -80,7 +8,6 @@ export default function EmergingTech2030(...args[]):  {
   ;
 
 };
-
   return()
     <>
       <SEO "
@@ -89,8 +16,7 @@ export default function EmergingTech2030(...args[]):  {
         canonical="/emerging-tech-2030""
         url="https://ziontechgroup.com/emerging-tech-2030"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+"      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         {/* Hero Section */}"
         <section className="relative py-20 px-4 overflow-hidden">'"
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
@@ -122,8 +48,7 @@ export default function EmergingTech2030(...args[]):  {
                   <span>Synthetic Biology</span>
                 </div>"
                 <div className="flex items-center gap-2 bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full">"
-                  <Rocket className="w-5 h-5" />
-                  <span>Space Technology</span>
+                  <Rocket className="w-5 h-5" />                  <span>Space Technology</span>
                 </div>
               </div>
             </motion.div>
@@ -172,16 +97,14 @@ export default function EmergingTech2030(...args[]):  {
               {emergingTechServices2030.map((service, index) => {;
                 const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Cpu;
 
-                return()
-                  <motion.div
+                return()                  <motion.div
                     key = {service.id}
                     variants={itemVariants}"
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
 "
                     <div className="flex items-center gap-4 mb-6">
                       <div className={`p-3 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-300`}>"
-                        <IconComponent className="w-6 h-6 text-white" />
-                      </div>
+                        <IconComponent className="w-6 h-6 text-white" />                      </div>
                       <div>"
                         <h3 className="text-xl font-bold text-white">{service.title}</h3>"
                         <p className="text-sm text-cyan-400">{service.category}</p>
@@ -235,8 +158,7 @@ export default function EmergingTech2030(...args[]):  {
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />;
                     </Link>;
                   </motion.div>;) ;
-              }) }
-            </div>
+              }) }            </div>
           </motion.div>
         </section>
 
@@ -346,8 +268,7 @@ export default function EmergingTech2030(...args[]):  {
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center justify-center gap-3 text-gray-300">"
-                <MapPin className="w-5 h-5 text-cyan-400" />
-                <span>Middletown, DE</span>
+                <MapPin className="w-5 h-5 text-cyan-400" />                <span>Middletown, DE</span>
               </div>
             </motion.div>
 "

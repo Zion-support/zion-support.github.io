@@ -10,8 +10,7 @@ import {
   Star,
   MapPin,
   Clock,
-  DollarSign,
-  Briefcase,
+  DollarSign,  Briefcase,
   Cpu,
   HardDrive,
   Network,'
@@ -62,8 +61,7 @@ const Equipment: React.FC = () => {
   );
 
   return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"      <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -89,8 +87,7 @@ const Equipment: React.FC = () => {
           <div className="flex flex-col md:flex-row gap-4 items-center">"
             <div className="relative flex-1">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input"
-                type="text"
+              <input"                type="text"
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
                 placeholder="Search equipment...""
@@ -108,8 +105,7 @@ const Equipment: React.FC = () => {
                     : 'bg-white/10 text-gray-400 hover:text-white'`
                 }`}
               >"
-                <Grid className="w-5 h-5" />
-              </button>
+                <Grid className="w-5 h-5" />              </button>
               <button'
                 onClick={() => setView('list')}`
                 className={`p-3 rounded-lg transition-colors ${
@@ -119,8 +115,7 @@ const Equipment: React.FC = () => {
                     : 'bg-white/10 text-gray-400 hover:text-white'`
                 }`}
               >"
-                <List className="w-5 h-5" />
-              </button>
+                <List className="w-5 h-5" />              </button>
             </div>
           </div>
         </motion.div>
@@ -159,8 +154,7 @@ const Equipment: React.FC = () => {
                         )}'
                         {item.category === 'Storage' && ("
                           <HardDrive className="w-6 h-6 text-purple-400" />
-                        )}
-                      </div>
+                        )}                      </div>
                       <div>"
                         <h3 className="text-lg font-semibold text-white">
                           {item.name}
@@ -169,8 +163,7 @@ const Equipment: React.FC = () => {
                       </div>
                     </div>"
                     <div className="flex items-center gap-1">"
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />"
-                      <span className="text-sm text-white">{item.rating}</span>
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />"                      <span className="text-sm text-white">{item.rating}</span>
                     </div>
                   </div>
 "
@@ -186,8 +179,7 @@ const Equipment: React.FC = () => {
                       <span>{item.status}</span>
                     </div>"
                     <div className="flex items-center gap-2 text-sm text-gray-400">"
-                      <DollarSign className="w-4 h-4" />
-                      <span>{item.price}</span>
+                      <DollarSign className="w-4 h-4" />                      <span>{item.price}</span>
                     </div>
                   </div>
 "
@@ -204,8 +196,7 @@ const Equipment: React.FC = () => {
               </div>"
               <h3 className="text-2xl font-semibold text-white mb-4">
                 No Equipment Found
-              </h3>"
-              <p className="text-gray-400 mb-6">
+              </h3>"              <p className="text-gray-400 mb-6">
                 No equipment matches your search criteria. Try adjusting your
                 search terms.
               </p>
@@ -220,6 +211,5 @@ const Equipment: React.FC = () => {
       </div>
     </div>) ;
 };
-
 export default Equipment;
 '"`

@@ -1,186 +1,6 @@
 import React from 'react';'
 import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';
-
-import {
-
-  Users,
-  Target,
-  Award,
-  Globe,
-  Zap,
-  Shield,
-  Rocket,
-  Heart,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Lightbulb,
-  Cpu,
-  Brain,
-  Cloud,
-  Lock,'
-  Database} from 'lucide-react';
-
-  const stats = [
-    {
-'
-      number: '500+','
-      label: 'Projects Completed','
-      description: 'Successfully delivered across industries'},
-    {
-'
-      number: '50+','
-      label: 'Team Members','
-      description: 'Expert professionals and specialists'},
-    {
-'
-      number: '25+','
-      label: 'Countries Served','
-      description: 'Global presence and reach'},
-    {
-'
-      number: '99%','
-      label: 'Client Satisfaction','
-      description: 'Consistent high-quality delivery'},
-  ];
-
-  const values = [
-    {
-
-      icon: Lightbulb,'
-      title: 'Innovation First',
-      description:'
-        "We push the boundaries of what's possible, constantly exploring emerging technologies and creative solutions.",'
-      color: 'from-purple-500 to-pink-500'},
-    {
-
-      icon: Award,'
-      title: 'Excellence in Execution',
-      description:'
-        'Every project is delivered with meticulous attention to detail and unwavering commitment to quality.','
-      color: 'from-blue-500 to-cyan-500'},
-    {
-
-      icon: Heart,'
-      title: 'Partnership Approach',
-      description:'
-        'We work as an extension of your team, building long-term relationships based on trust and mutual success.','
-      color: 'from-green-500 to-emerald-500'},
-    {
-
-      icon: Shield,'
-      title: 'Security & Trust',
-      description:'
-        'Your data and systems are protected with enterprise-grade security and compliance standards.','
-      color: 'from-red-500 to-orange-500'},
-  ];
-
-  const teamMembers = [
-    {
-'
-      name: 'Kleber Santos','
-      role: 'CEO & Founder','
-      bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',
-      expertise: ['
-        'AI Strategy','
-        'Digital Transformation','
-        'Business Innovation',
-      ],'
-      image: '/images/team/kleber-santos.jpg'},
-    {
-'
-      name: 'Dr. Sarah Chen','
-      role: 'CTO & AI Research Lead','
-      bio: 'PhD in Computer Science with expertise in machine learning and artificial intelligence.','
-      expertise: ['Machine Learning', 'AI Research', 'Technical Architecture'],'
-      image: '/images/team/sarah-chen.jpg'},
-    {
-'
-      name: 'Marcus Rodriguez','
-      role: 'Head of Cloud & DevOps','
-      bio: 'Cloud infrastructure expert with certifications in AWS, Azure, and Google Cloud.','
-      expertise: ['Cloud Architecture', 'DevOps', 'Infrastructure'],'
-      image: '/images/team/marcus-rodriguez.jpg'},
-    {
-'
-      name: 'Dr. Emily Watson','
-      role: 'Cybersecurity Director','
-      bio: 'Former government cybersecurity specialist with expertise in threat intelligence.','
-      expertise: ['Cybersecurity', 'Compliance', 'Risk Management'],'
-      image: '/images/team/emily-watson.jpg'},
-  ];
-
-  const milestones = [
-    {
-'
-      year: '2018','
-      title: 'Company Founded',
-      description:'
-        'Zion Tech Group established with a vision to democratize AI technology.'},
-    {
-'
-      year: '2020','
-      title: 'AI Breakthrough',
-      description:'
-        'Developed first autonomous AI research assistant for enterprise clients.'},
-    {
-'
-      year: '2022','
-      title: 'Global Expansion',
-      description:'
-        'Expanded services to 25+ countries with localized solutions.'},
-    {
-'
-      year: '2024','
-      title: 'Quantum Leap',
-      description:'
-        'Launched quantum computing services and AI-powered solutions.'},
-    {
-'
-      year: '2025','
-      title: 'Future Forward',
-      description:'
-        'Leading the next generation of AI and technology innovation.'},
-  ];
-
-  const technologies = [
-    {
-'
-      name: 'Artificial Intelligence',
-      icon: Brain,'
-      color: 'from-purple-500 to-pink-500'},
-    {
-'
-      name: 'Quantum Computing',
-      icon: Cpu,'
-      color: 'from-blue-500 to-cyan-500'},
-    {
-'
-      name: 'Cloud Infrastructure',
-      icon: Cloud,'
-      color: 'from-green-500 to-emerald-500'},
-    {
-'
-      name: 'Cybersecurity',
-      icon: Shield,'
-      color: 'from-red-500 to-orange-500'},
-    {
-'
-      name: 'Blockchain & Web3',
-      icon: Lock,'
-      color: 'from-indigo-500 to-purple-500'},
-    {
-'
-      name: 'IoT & Edge Computing',
-      icon: Zap,'
-      color: 'from-yellow-500 to-orange-500'},
-  ];
-
-  return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">"
-      <div className="container mx-auto px-4 py-24">
+import { motion } from 'framer-motion';      <div className="container mx-auto px-4 py-24">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -236,8 +56,7 @@ import {
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mb-6">"
               <Target className="w-8 h-8 text-white" />
             </div>"
-            <h2 className="text-3xl font-bold text-white mb-4">Our Mission</h2>"
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Mission</h2>"            <p className="text-gray-300 text-lg leading-relaxed">
               To democratize advanced technology and empower organizations with
               AI-powered solutions that drive innovation, efficiency, and
               competitive advantage in the digital age.
@@ -248,8 +67,7 @@ import {
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mb-6">"
               <Rocket className="w-8 h-8 text-white" />
             </div>"
-            <h2 className="text-3xl font-bold text-white mb-4">Our Vision</h2>"
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Vision</h2>"            <p className="text-gray-300 text-lg leading-relaxed">
               To be the global leader in AI-powered technology solutions,
               shaping the future of business through innovation, sustainability,
               and human-centric design.
@@ -350,8 +168,7 @@ import {
                 <p className="text-cyan-400 font-semibold mb-3">
                   {member.role}
                 </p>"
-                <p className="text-gray-300 text-sm mb-4">{member.bio}</p>"
-                <div className="space-y-1">
+                <p className="text-gray-300 text-sm mb-4">{member.bio}</p>"                <div className="space-y-1">
                   {member.expertise.map((skill, skillIndex) => (
                     <div
                       key={skillIndex}"

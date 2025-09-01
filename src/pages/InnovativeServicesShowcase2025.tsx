@@ -256,16 +256,14 @@ import { SEO } from '@/components/SEO';
         description="Discover our cutting-edge AI-powered micro SAAS services and solutions. From workflow orchestration to quantum machine learning, transform your business with intelligent technology."
       />
       "
-      <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">"
-        <div className="max-w-5xl mx-auto px-6">
+      <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">"        <div className="max-w-5xl mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}"
             className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6"
           >"
-            <Brain className="w-4 h-4 mr-2" /> Innovative AI Services 2025
-          </motion.div>
+            <Brain className="w-4 h-4 mr-2" /> Innovative AI Services 2025          </motion.div>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -329,8 +327,7 @@ import { SEO } from '@/components/SEO';
                 <ul className="space-y-1">
                   {service.features.slice(0, 3).map((feature, idx) => ("
                     <li key={idx} className="flex items-start text-sm text-zion-slate-dark">"
-                      <Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
-                      <span>{feature}</span>
+                      <Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />                      <span>{feature}</span>
                     </li>) ) }
                 </ul>
               </div>
@@ -340,8 +337,7 @@ import { SEO } from '@/components/SEO';
                 <ul className="space-y-1">
                   {service.benefits.slice(0, 2).map((benefit, idx) => ("
                     <li key={idx} className="flex items-start text-sm text-zion-slate-dark">"
-                      <Zap className="w-4 h-4 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
-                      <span>{benefit}</span>
+                      <Zap className="w-4 h-4 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />                      <span>{benefit}</span>
                     </li>) ) }
                 </ul>
               </div>
@@ -351,8 +347,7 @@ import { SEO } from '@/components/SEO';
                   href={service.path} "
                   className="w-full px-4 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors text-center font-medium inline-flex items-center justify-center"
                 >"
-                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />                </a>
               </div>
             </motion.div>
           </div>
@@ -388,8 +383,7 @@ import { SEO } from '@/components/SEO';
             <div className="flex items-center space-x-3">"
               <MapPin className="w-5 h-5" />
               <div>"
-                <p className="text-sm text-blue-100">Address</p>"
-                <p className="font-semibold text-sm">{contactInfo.address}</p>
+                <p className="text-sm text-blue-100">Address</p>"                <p className="font-semibold text-sm">{contactInfo.address}</p>
               </div>
             </div>
           </div>
@@ -404,8 +398,7 @@ import { SEO } from '@/components/SEO';
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
-                  type="text""
-                  placeholder="Search services..."
+                  type="text""                  placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -479,8 +472,7 @@ import { SEO } from '@/components/SEO';
                       <div className={`p-2 rounded-lg bg-gradient-to-r ${categoryColors[service.category] || 'from-gray-600 to-gray-700'}`}>"
                         {categoryIcons[service.category] || <Star className="w-5 h-5 text-white" />}
                       </div>"
-                      <div className="text-right">"
-                        <div className="text-2xl font-bold text-white">
+                      <div className="text-right">"                        <div className="text-2xl font-bold text-white">
                           ${service.price.toLocaleString()}
                         </div>"
                         <div className="text-sm text-gray-300">per month</div>
@@ -509,8 +501,7 @@ import { SEO } from '@/components/SEO';
                     <div className="space-y-1">
                       {service.features.slice(0, 3).map((feature, idx) => ("
                         <div key={idx} className="flex items-center space-x-2 text-xs text-gray-300">"
-                          <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />"
-                          <span className="line-clamp-1">{feature}</span>
+                          <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />"                          <span className="line-clamp-1">{feature}</span>
                         </div>
                       ))}
                       {service.features.length > 3 && ("
@@ -525,8 +516,7 @@ import { SEO } from '@/components/SEO';
                     <div className="space-y-1">
                       {service.benefits.slice(0, 2).map((benefit, idx) => ("
                         <div key={idx} className="flex items-center space-x-2 text-xs text-gray-300">"
-                          <TrendingUp className="w-3 h-3 text-blue-400 flex-shrink-0" />"
-                          <span className="line-clamp-1">{benefit}</span>
+                          <TrendingUp className="w-3 h-3 text-blue-400 flex-shrink-0" />"                          <span className="line-clamp-1">{benefit}</span>
                         </div>
                       ))}
                     </div>
@@ -566,8 +556,7 @@ import { SEO } from '@/components/SEO';
                       className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
                     >
                       <span>Get Quote</span>"
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
+                      <ArrowRight className="w-4 h-4" />                    </a>
                     <a`
                       href={`tel:${contactInfo.phone}`}"
                       className="px-4 py-2 border border-white/30 text-white rounded-lg text-sm font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
@@ -583,8 +572,7 @@ import { SEO } from '@/components/SEO';
                         <span>{service.estimatedDelivery}</span>
                       </div>"
                       <div className="flex items-center space-x-1">"
-                        <Award className="w-3 h-3" />
-                        <span>{service.innovationLevel}</span>
+                        <Award className="w-3 h-3" />                        <span>{service.innovationLevel}</span>
                       </div>
                     </div>
                   </div>
@@ -644,8 +632,7 @@ import { SEO } from '@/components/SEO';
                   <div className="grid grid-cols-1 gap-2">
                     {service.features.slice(0, 4).map((feature, idx) => ("
                       <div key={idx} className="flex items-center gap-2">"
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />"
-                        <span className="text-gray-300 text-sm">{feature}</span>
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />"                        <span className="text-gray-300 text-sm">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -653,8 +640,7 @@ import { SEO } from '@/components/SEO';
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center gap-2">"
                     <Star className="w-5 h-5 text-yellow-400 fill-current" />"
-                    <span className="text-white font-semibold">4.9</span>"
-                    <span className="text-gray-400 text-sm">(127 reviews)</span>
+                    <span className="text-white font-semibold">4.9</span>"                    <span className="text-gray-400 text-sm">(127 reviews)</span>
                   </div>
                   <motion.button
                     whileHover={{ scale: 1.05 }}

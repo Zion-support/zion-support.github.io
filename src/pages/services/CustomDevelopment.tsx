@@ -1,51 +1,13 @@
 import React from 'react';'
 import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';
-import {
-
-  Code,
-  Smartphone,
-  Globe,
-  Database,
-  Zap,
-  Shield,
-  Users,
-  Target,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Lightbulb,
-  TrendingUp,
-  Settings,
-  Workflow,
-  FileText,
-  Monitor,
-  BarChart3,
-  Rocket,
-  Building2,
-  Cpu,
-  Network'
- } from 'lucide-react';
-;
-export { function };
-export default function CustomDevelopment(...args[]):  {
-
-  const services = [
-    {
-'
-      title: 'Web Applications','
-      description: 'Custom web applications built with modern technologies and best practices for optimal performance and user experience.',
-      icon: Globe,'
-      features['Responsive Design', 'Progressive Web Apps', 'E-commerce Solutions', 'Content Management Systems'];
-    },;
+import { motion } from 'framer-motion';    },;
     {
 '
       title: 'Mobile Applications','
       description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',
       icon: Smartphone,'
       features['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization'];
-    },;
-    {
+    },;    {
 '
       title: 'API Development','
       description: 'Robust and scalable APIs that enable seamless integration between systems and services.',
@@ -70,15 +32,13 @@ export default function CustomDevelopment(...args[]):  {
       description: 'Modern frontend frameworks and libraries for responsive and interactive user interfaces.',
       icon: Monitor,'
       stack['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS'];
-    },;
-    {
+    },;    {
 '
       title: 'Backend','
       description: 'Robust backend technologies for scalable and secure applications.',
       icon: Cpu, // Changed from Server to Cpu'
       stack['Node.js', 'Python', 'Java', 'C#', 'Go'];
-    },;
-    {
+    },;    {
 '
       title: 'Mobile','
       description: 'Cross-platform and native mobile development technologies.',
@@ -116,14 +76,11 @@ export default function CustomDevelopment(...args[]):  {
       icon: Shield;
     },;
     {;'
-      title: 'Support & Maintenance',;'
-      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
-      icon: Settings;
-    };
+      title: 'Support & Maintenance',;'      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
+      icon: Settings};
   ];
 
-  const industries = [;'
-    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy';
+  const industries = [;'    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy';
   ];
 
   return()
@@ -275,8 +232,7 @@ export default function CustomDevelopment(...args[]):  {
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">"
-                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />                        {feature}
                       </li>
                     ))}
                   </ul>

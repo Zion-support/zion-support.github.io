@@ -1,46 +1,5 @@
 import React, { useState } from 'react';'
-import { motion } from 'framer-motion';
-import {
-
-  Shield,
-  Lock,
-  Eye,
-  AlertTriangle,
-  CheckCircle,
-  ArrowRight,
-  Zap,
-  Network,
-  Database,
-  Smartphone,
-  Monitor,
-  Globe,
-  Users,
-  Key,
-  Fingerprint,
-  Server,
-  Cloud,
-  ShieldCheck,
-  Bug,
-  Target,
-  TrendingUp,
-  Clock,
-  BarChart3,
-  CreditCard'
- } from 'lucide-react';
-
-export default function CybersecuritySolutions(...args[]):  {
-'
-  const [selectedThreat, setSelectedThreat] = useState('all');'
-  const [activeService, setActiveService] = useState('overview');
-
-  const securityServices = [
-    {
-
-      icon: Shield,
-      title: "Threat Detection & Response","
-      description: "Advanced security monitoring and incident response to protect against cyber threats","
-      features["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],;"
-      color: "from-zion-red to-zion-orange"
+import { motion } from 'framer-motion';      color: "from-zion-red to-zion-orange"
     },
     {
 
@@ -100,8 +59,7 @@ export default function CybersecuritySolutions(...args[]):  {
       description: "Sophisticated, long-term cyber attacks targeting specific organizations","
       type: "malware","
       impact: "High","
-      solutions["Advanced Threat Detection", "Behavioral Analysis", "Network Segmentation", "Incident Response"],;
-      icon: Target
+      solutions["Advanced Threat Detection", "Behavioral Analysis", "Network Segmentation", "Incident Response"],;      icon: Target
     },
     {
 "
@@ -146,8 +104,7 @@ export default function CybersecuritySolutions(...args[]):  {
       type: "malware",;"
       impact: "Critical",;"
       solutions: ["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],;
-      icon: Bug;
-    };
+      icon: Bug};
   ];
 
   const complianceFrameworks = [
@@ -155,8 +112,7 @@ export default function CybersecuritySolutions(...args[]):  {
 "
       name: "SOC 2 Type II","
       description: "Service Organization Control 2 compliance for data security","
-      requirements["Security", "Availability", "Processing Integrity", "Confidentiality", "Privacy"],;
-      icon: ShieldCheck
+      requirements["Security", "Availability", "Processing Integrity", "Confidentiality", "Privacy"],;      icon: ShieldCheck
     },
     {
 "
@@ -192,8 +148,7 @@ export default function CybersecuritySolutions(...args[]):  {
       name: "NIST Cybersecurity Framework",;"
       description: "U.S. government framework for cybersecurity risk management",;"
       requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"],;
-      icon: BarChart3;
-    };
+      icon: BarChart3};
   ];
 
   const securityMetrics = [;"
@@ -232,8 +187,7 @@ export default function CybersecuritySolutions(...args[]):  {
     ? securityThreats
     : securityThreats.filter (threat => threat.type === selectedThreat) ;
 
-  return ("
-    <div className = "min-h-screen bg-futuristic">
+  return ("    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}"
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-red-dark to-zion-red overflow-hidden">"
         <div className="absolute inset-0 opacity-10">"
@@ -259,8 +213,7 @@ export default function CybersecuritySolutions(...args[]):  {
 "
             <div className="flex justify-center mb-8">"
               <div className="w-24 h-24 bg-gradient-to-r from-zion-red to-zion-orange rounded-2xl flex items-center justify-center">"
-                <Shield className="w-12 h-12 text-white" />
-              </div>
+                <Shield className="w-12 h-12 text-white" />              </div>
             </div>
 "
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">'
@@ -348,8 +301,7 @@ export default function CybersecuritySolutions(...args[]):  {
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center text-zion-slate-light">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />                      {feature}
                     </li>) ) }
                 </ul>
               </motion.div>) ) }
@@ -397,23 +349,19 @@ export default function CybersecuritySolutions(...args[]):  {
   { opacity: 0,
   y: 20 ;
 
-}}
-            whileInView = {
+}}            whileInView = {
 
   { opacity: 1,
   y: 0 
 
 ;
-;
-
 }};
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
           >;
             {threatTypes.map ( (threat) => {;
               const Icon = threat.icon;
-              return()
-                <button
+              return()                <button
                   key = {threat.id}
                   onClick={() => setSelectedThreat(threat.id)}`
                   className={`flex items-center gap-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
@@ -426,8 +374,7 @@ export default function CybersecuritySolutions(...args[]):  {
                   <Icon className="w-5 h-5" />;
                   {threat.name};
                 </button>;) ;
-            }) }
-          </motion.div>
+            }) }          </motion.div>
 
           {/* Threats Grid */}
           <motion.div"
@@ -688,8 +635,7 @@ export default function CybersecuritySolutions(...args[]):  {
 
                 {index < 3 && (;"
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">"
-                    <ArrowRight className="w-8 h-8 text-zion-red" />
-                  </div>
+                    <ArrowRight className="w-8 h-8 text-zion-red" />                  </div>
                 )}
               </motion.div>;
             ))}

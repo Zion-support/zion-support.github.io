@@ -62,8 +62,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
 showFilters:  true,;
   showStats = true,;
-  maxProjects = 10;
-}) => {;
+  maxProjects = 10}) => {;
   const [projects, setProjects] = useState<Project[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);'
   const [selectedStatus, setSelectedStatus] = useState<string>('all');'
@@ -131,8 +130,7 @@ showFilters:  true,;
             assignee: 'Sarah Johnson','
             priority: 'medium'
 
-        ];
-      },;
+        ]},;
       {
 '
         id: '2','
@@ -168,8 +166,7 @@ showFilters:  true,;
             assignee: 'Lisa Thompson','
             priority: 'critical'
 
-        ];
-      },;
+        ]},;
       {
 '
         id: '3','
@@ -227,8 +224,7 @@ showFilters:  true,;
         p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      );
-    }
+      )}
 
     setFilteredProjects (filtered.slice (0, maxProjects) ) }, [projects, selectedStatus, selectedPriority, searchQuery, maxProjects]) ;
 

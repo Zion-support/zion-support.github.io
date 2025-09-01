@@ -8,23 +8,29 @@ interface SitemapUrl {
   url: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+:src/utils/sitemapGenerator.tsx
   priority?: number;
 
 
 }
+  priority?: number}
 
 interface SitemapConfig {
   baseUrl: string;
   urls: SitemapUrl[];
+:src/utils/sitemapGenerator.tsx
   outputPath?: string;
 
+  outputPath?: string}
 
   private config: SitemapConfig;
 
   constructor(config: SitemapConfig) {
+:src/utils/sitemapGenerator.tsx
 
     this.config = config;
   }
+    this.config = config}
 
   /**
    * Generate XML sitemap content
@@ -33,15 +39,20 @@ interface SitemapConfig {
 
     const { baseUrl, urls } = this.config;
     
+:src/utils/sitemapGenerator.tsx
     const xmlUrls = urls.map(url => {;'
       const lastmod = url.lastmod || new Date().toISOString().split('T')[0];'
       const changefreq = url.changefreq || 'weekly';
       const priority = url.priority || 0.5;
+    
+      
+      
       
       return `  <url>
     <loc>${baseUrl}${url.url}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
+:src/utils/sitemapGenerator.tsx
     <priority>${priority}</priority>`
   </url>`;'
     }).join('\n');
@@ -51,6 +62,13 @@ interface SitemapConfig {
 ${xmlUrls};`
 </urlset>`;
   }
+    <priority>${priority}</priority>
+  </url>`}).join('\n');
+
+    return `<?xml version = "1.0" encoding="UTF-8"?>;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
+${xmlUrls};
+</urlset>`}
 
   /**
    * Generate robots.txt content
@@ -76,14 +94,18 @@ Allow: /contact
 Allow: /blog
 Allow: /careers
 
+:src/utils/sitemapGenerator.tsx
 # Crawl delay (optional)`
 Crawl-delay: 1`;
   }
+# Crawl delay (optional)
+Crawl-delay: 1`}
 
   /**
    * Generate sitemap index for large sites
    */
   generateSitemapIndex(sitemaps: string[]): string {
+:src/utils/sitemapGenerator.tsx
 
     const sitemapEntries = sitemaps.map(sitemap => {;'
       const lastmod = new Date().toISOString().split('T')[0];
@@ -99,6 +121,17 @@ Crawl-delay: 1`;
 ${sitemapEntries};`
 </sitemapindex>`;
   }
+    
+      
+      return `  <sitemap>
+    <loc>${sitemap}</loc>
+    <lastmod>${lastmod}</lastmod>
+  </sitemap>`}).join('\n');
+
+    return `<?xml version = "1.0" encoding="UTF-8"?>;
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
+${sitemapEntries};
+</sitemapindex>`}
 
   /**
    * Generate JSON - LD structured data for sitemap
@@ -107,6 +140,7 @@ ${sitemapEntries};`
 
     const { baseUrl } = this.config;
     
+:src/utils/sitemapGenerator.tsx
     const structuredData = {
 "
   "@context": "https://schema.org","
@@ -133,12 +167,17 @@ ${sitemapEntries};`
       },;"
       "sameAs": [;"
         "https://linkedin.com/company/zion-tech-group",;"
+    
+        "query-input": "required name=search_term_string"},;
+      "sameAs": [;
+        "https://linkedin.com/company/zion-tech-group",;
         "https://twitter.com/ziontechgroup";
-      ];
-    };
+      ]};
 
+:src/utils/sitemapGenerator.tsx
     return JSON.stringify (structuredData, null, 2) ;
   }
+    return JSON.stringify(structuredData, null, 2)}
 }
 
 // Default sitemap configuration for Zion Tech Group
@@ -195,10 +234,10 @@ export const defaultSitemapConfig: SitemapConfig = {
     { url: '/faq', priority: 0.5, changefreq: 'monthly' },;'
     { url: '/pricing', priority: 0.6, changefreq: 'monthly' },;'
     { url: '/marketplace', priority: 0.7, changefreq: 'weekly' };
-  ];
-};
+  ]};
 
 // Utility function to generate sitemap
+:src/utils/sitemapGenerator.tsx
   return generator.generateXML () ;
 }
 
@@ -206,3 +245,9 @@ export const defaultSitemapConfig: SitemapConfig = {
 export function generator = new SitemapGenerator(config);
   return generator.generateRobotsTxt();
 }'"`
+export function generator = new SitemapGenerator(config);
+  return generator.generateXML()}
+
+// Utility function to generate robots.txt
+export function generator = new SitemapGenerator(config);
+  return generator.generateRobotsTxt()}

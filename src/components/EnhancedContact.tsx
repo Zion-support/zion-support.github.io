@@ -1,61 +1,5 @@
 import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  CheckCircle,
-  AlertCircle,
-  CheckCircle,
-  Clock,
-  MessageSquare,
-  Building,
-  Globe'
- } from 'lucide-react';
-
-interface ContactFormData {
-  name: string;
-  email: string;
-  phone: string;
-  comp: string;
-  service: string;
-  message: string
-}
-
-interface ContactFormErrors {
-  [key: string]: string}
-
-export function EnhancedContact(...args[]):  {
-
-  const [formData, setFormData] = useState<any>({
-'
-    name: '',;'
-    email: '',;'
-    phone: '',;'
-    comp: '',;'
-    service: 'general',;'
-    message: ''
-  }) ;
-
-  const [errors, setErrors] = useState < any> ({}) ;
-  const [isSubmitting, setIsSubmitting] = useState (false) ;
-  const [isSubmitted, setIsSubmitted] = useState (false) ;
-
-  const services = ['
-    { value: 'general', label: 'General Inquiry' },'
-    { value: 'ai-solutions', label: 'AI Solutions' },;'
-    { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },;'
-    { value: 'cybersecurity', label: 'Cybersecurity' },;'
-    { value: 'digital-transformation', label: 'Digital Transformation' },;'
-    { value: 'consulting', label: 'IT Consulting' },;'
-    { value: 'quantum-computing', label: 'Quantum Computing' },;'
-    { value: 'green-it', label: 'Green IT Solutions' };
-  ];
-
-  const validateForm = () : boolean => {;
-    const newErrors: ContactFormErrors = {};
+import { motion, AnimatePresence } from 'framer-motion';    const newErrors: ContactFormErrors = {};
 
     if (!formData.name.trim()) {
 '
@@ -80,8 +24,7 @@ export function EnhancedContact(...args[]):  {
     } finally {
 
       setIsSubmitting(false);
-    }
-      })} catch (error) {
+    }      })} catch (error) {
 '
       // console.error('Error submitting form:', error)} finally {
 
@@ -115,8 +58,7 @@ export function EnhancedContact(...args[]):  {
       title: 'Business Hours',;'
       value: 'Mon-Fri: 9AM-6PM EST',;'
       description: 'Available during these hours';
-    };
-  ];
+    };  ];
 
   if (isSubmitted) {
 
@@ -153,8 +95,7 @@ export function EnhancedContact(...args[]):  {
 }}"
             className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
           >"
-            <CheckCircle className="w-10 h-10 text-white" />
-          </motion.div>
+            <CheckCircle className="w-10 h-10 text-white" />          </motion.div>
 
           <motion.h2
             initial = {
@@ -216,7 +157,6 @@ export function EnhancedContact(...args[]):  {
         </div>;
       </motion.div>;) ;
   }
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -414,8 +354,7 @@ export function EnhancedContact(...args[]):  {
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
-                      <AlertCircle className="w-4 h-4 mr-1" />'
-                      {errors['name']}
+                      <AlertCircle className="w-4 h-4 mr-1" />'                      {errors['name']}
                     </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -476,8 +415,7 @@ export function EnhancedContact(...args[]):  {
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
-                      <AlertCircle className="w-4 h-4 mr-1" />'
-                      {errors['email']}
+                      <AlertCircle className="w-4 h-4 mr-1" />'                      {errors['email']}
                     </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -614,8 +552,7 @@ export function EnhancedContact(...args[]):  {
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
-                      <AlertCircle className="w-4 h-4 mr-1" />'
-                      {errors['message']}
+                      <AlertCircle className="w-4 h-4 mr-1" />'                      {errors['message']}
                     </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -635,8 +572,7 @@ export function EnhancedContact(...args[]):  {
                   </>
                 ) : (
                   <>"
-                    <Send className="w-5 h-5" />
-                    <span>Send Message</span>
+                    <Send className="w-5 h-5" />                    <span>Send Message</span>
                   </>
                 )}
               </motion.button>

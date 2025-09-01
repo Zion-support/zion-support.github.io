@@ -22,10 +22,8 @@ const DigitalTransformation = () => {
     {;"
       title: "Change Management",;"
       description: "Guide your team through digital adoption and transformation.",;"
-      price: "From $8,000/month",;"
-      features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],;
-      icon: Users;
-    };
+      price: "From $8,000/month",;"      features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],;
+      icon: Users};
   ];
 
   const transformationAreas = [
@@ -56,8 +54,7 @@ const DigitalTransformation = () => {
     "Enhanced customer experience and satisfaction",;"
     "Improved data insights and decision making",;"
     "Reduced operational costs and manual work",;"
-    "Faster time to market for new products",;"
-    "Better competitive positioning in the market";
+    "Faster time to market for new products",;"    "Better competitive positioning in the market";
   ];
 
   return ("
@@ -67,8 +64,7 @@ const DigitalTransformation = () => {
         <div className="max-w-7xl mx-auto text-center">"
           <div className="mb-8">"
             <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 text-indigo-400 rounded-full text-sm font-medium mb-6">"
-              <RefreshCw className="w-4 h-4 mr-2"/>
-              Digital Transformation
+              <RefreshCw className="w-4 h-4 mr-2"/>              Digital Transformation
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Digital"
@@ -184,8 +180,7 @@ const DigitalTransformation = () => {
             <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 border border-indigo-500/30">"
               <div className="text-center">"
                 <Lightbulb className="w-24 h-24 text-indigo-400 mx-auto mb-4"/>"
-                <h3 className="text-2xl font-bold text-white mb-2">Transformation Expertise</h3>"
-                <p className="text-gray-300 mb-6">
+                <h3 className="text-2xl font-bold text-white mb-2">Transformation Expertise</h3>"                <p className="text-gray-300 mb-6">
                   Our team has successfully guided hundreds of organizations
                   through their digital transformation journey.
                 </p>"
@@ -221,7 +216,6 @@ const DigitalTransformation = () => {
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default DigitalTransformation;}}}'"

@@ -51,10 +51,8 @@ export default function Infrastructure(...args[]):  {
       icon: Cloud;
     },;
     {;'
-      title: 'Disaster Recovery',;'
-      description: 'Business continuity and backup solutions',;
-      icon: Shield;
-    };
+      title: 'Disaster Recovery',;'      description: 'Business continuity and backup solutions',;
+      icon: Shield};
   ];
 
   return()
@@ -90,8 +88,7 @@ export default function Infrastructure(...args[]):  {
             className="text-center max-w-4xl mx-auto"
 "
             <div className="inline-flex items-center space-x-2 bg-orange-500/10 border border-orange-500/20 rounded-full px-4 py-2 mb-6">"
-              <Server className="w-5 h-5 text-orange-400" />"
-              <span className="text-orange-400 font-medium">IT Infrastructure</span>
+              <Server className="w-5 h-5 text-orange-400" />"              <span className="text-orange-400 font-medium">IT Infrastructure</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -108,8 +105,7 @@ export default function Infrastructure(...args[]):  {
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Get Infrastructure Assessment"
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </button>"
-              <button className="btn-outline px-8 py-4 text-lg">
+              </button>"              <button className="btn-outline px-8 py-4 text-lg">
                 Learn More
               </button>
             </div>

@@ -56,8 +56,7 @@ export default function AffiliateMarketingTracker(...args[]):  {
         "Up to 100 affiliates","
         "Basic tracking & analytics","
         "Email support","
-        "Standard reporting","
-        "Mobile app access"
+        "Standard reporting","        "Mobile app access"
       ],;
       popular: false
     },
@@ -115,10 +114,8 @@ export default function AffiliateMarketingTracker(...args[]):  {
       icon: Shield;
     },;
     {;"
-      title: "Scale Efficiently",;"
-      description: "Manage thousands of affiliates with automated systems and smart workflows.",;
-      icon: Users;
-    };
+      title: "Scale Efficiently",;"      description: "Manage thousands of affiliates with automated systems and smart workflows.",;
+      icon: Users};
   ];
 
   return()
@@ -128,8 +125,7 @@ export default function AffiliateMarketingTracker(...args[]):  {
         description="Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI.""
         canonical="/services/affiliate-marketing-tracker"
       />
-"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+"      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 overflow-hidden">"
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>"
@@ -390,8 +386,7 @@ export default function AffiliateMarketingTracker(...args[]):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center space-x-3">"
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />"
-                        <span className="text-gray-300">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />"                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -468,5 +463,4 @@ export default function AffiliateMarketingTracker(...args[]):  {
     </>
   );
 }
-
 '"`

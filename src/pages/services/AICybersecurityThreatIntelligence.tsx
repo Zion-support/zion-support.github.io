@@ -1,7 +1,6 @@
 import React from 'react';'
 import { motion } from 'framer-motion';
 import {
-
   Shield, 
   Eye, 
   AlertTriangle, 
@@ -18,7 +17,6 @@ import {
   CheckCircle,;
 import { SEO } from "../../components/SEO";
 import {
-
   Shield, 
   CheckCircle, 
   Star, 
@@ -100,8 +98,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       title: 'Network Security Monitoring','
       description: 'Real-time network traffic analysis and anomaly detection using AI algorithms'
       icon: Brain,;"
-      title: "AI-Powered Threat Detection","
-      description: "Advanced machine learning algorithms that identify and analyze cyber threats in real-time"
+      title: "AI-Powered Threat Detection","      description: "Advanced machine learning algorithms that identify and analyze cyber threats in real-time"
     },
     {
 
@@ -324,8 +321,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-      title: "Vulnerability Assessment","
-      description: "Automated scanning and assessment of system vulnerabilities",
+      title: "Vulnerability Assessment","      description: "Automated scanning and assessment of system vulnerabilities",
       icon: Eye
     },
     {
@@ -345,8 +341,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
   const threatTypes = [
     {
 "
-      title: "Ransomware Attacks",;"
-      description: "AI detection and prevention of ransomware before encryption occurs",
+      title: "Ransomware Attacks",;"      description: "AI detection and prevention of ransomware before encryption occurs",
       icon: Lock
     },
     {
@@ -385,15 +380,13 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEO "
         title="AI Cybersecurity Threat Intelligence - Zion Tech Group""
-        description="Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time.""
-        keywords="AI cybersecurity, threat intelligence, threat detection, cybersecurity AI, security automation, threat hunting"
-      />
+        description="Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time.""        keywords="AI cybersecurity, threat intelligence, threat detection, cybersecurity AI, security automation, threat hunting"
+       />
 
       {/* Hero Section */}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4 mr-2" />
-              AI-Powered Cybersecurity
+              <Shield className="w-4 h-4 mr-2" />              AI-Powered Cybersecurity
             </div>
             "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -412,8 +405,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                 Start Free Trial
               </button>"
               <button className="px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200 flex items-center justify-center">"
-                <Settings className="w-5 h-5 mr-2" />
-                Schedule Demo
+                <Settings className="w-5 h-5 mr-2" />                Schedule Demo
               </button>
             </div>"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -425,8 +417,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
             className="mb-8"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-300 text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4 mr-2" />
-              Revolutionary AI Cybersecurity Technology
+              <Shield className="w-4 h-4 mr-2" />              Revolutionary AI Cybersecurity Technology
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Cybersecurity Threat Intelligence
@@ -499,8 +490,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               className="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
             >
               Secure Your Organization"
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
+              <ArrowRight className="ml-2 w-5 h-5" />            </a>
             <a"
               href="#demo""
               className="inline-flex items-center px-8 py-4 border border-red-500 text-red-300 hover:bg-red-500/20 font-semibold rounded-lg transition-colors"
@@ -684,8 +674,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                   transition={{ duration: 0.5, delay: index * 0.1 }}"
                   className="flex items-start space-x-3"
                 >"
-                  <CheckCircle className="w-6 h-6 text-red-400 mt-1 flex-shrink-0" />"
-                  <span className="text-gray-300 text-lg">{benefit}</span>
+                  <CheckCircle className="w-6 h-6 text-red-400 mt-1 flex-shrink-0" />"                  <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
               ))}
             </div>"
@@ -698,8 +687,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                   transition={{ duration: 0.5, delay: index * 0.1 }}"
                   className="flex items-start space-x-3"
                 >"
-                  <CheckCircle className="w-6 h-6 text-red-400 mt-1 flex-shrink-0" />"
-                  <span className="text-gray-300 text-lg">{benefit}</span>
+                  <CheckCircle className="w-6 h-6 text-red-400 mt-1 flex-shrink-0" />"                  <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
               ))}
             </div>
@@ -774,16 +762,14 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center space-x-3">"
                       <CheckCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
-                viewport={{ once: true }}`
-                className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
+                viewport={{ once: true }}`                className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 '
                   index === 1 ? 'border-red-500/50 bg-red-500/10' : 'border-white/10'`
                 } hover:border-red-500/50 transition-all`}
               >
                 {index === 1 && ("
                   <div className="inline-flex items-center px-3 py-1 bg-red-500 text-white text-sm font-medium rounded-full mb-4">"
-                    <Star className="w-4 h-4 mr-1" />
-                    Most Popular
+                    <Star className="w-4 h-4 mr-1" />                    Most Popular
                   </div>
                 )}
                 "
@@ -797,8 +783,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -903,8 +888,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               >"
                 <div className="w-8 h-8 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0">"
                   <CheckCircle className="w-5 h-5 text-red-400" />
-                </div>"
-                <p className="text-lg text-gray-300">{benefit}</p>
+                </div>"                <p className="text-lg text-gray-300">{benefit}</p>
               </motion.div>
             ))}
           </div>
@@ -933,14 +917,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                 className="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
               >
                 Secure Your Organization"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+                <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a"
                 href="tel:+13024640950""
                 className="inline-flex items-center px-8 py-4 border border-red-500 text-red-300 hover:bg-red-500/20 font-semibold rounded-lg transition-colors"
               >"
-                <Phone className="mr-2 w-5 h-5" />
-                Call +1 302 464 0950
+                <Phone className="mr-2 w-5 h-5" />                Call +1 302 464 0950
               </a>"
             className="text-center mb-16"
           >"
@@ -965,8 +947,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">"
                   <Target className="w-8 h-8 text-white" />
                 </div>"
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>"
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>"                <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -1009,8 +990,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
             >"
               <TrendingUp className="w-12 h-12 text-orange-400 mx-auto mb-4" />"
-              <h3 className="text-2xl font-bold text-white mb-2">13.4%</h3>"
-              <p className="text-gray-300">Annual Growth Rate</p>
+              <h3 className="text-2xl font-bold text-white mb-2">13.4%</h3>"              <p className="text-gray-300">Annual Growth Rate</p>
             </motion.div>
             
             <motion.div
@@ -1020,8 +1000,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
             >"
               <DollarSign className="w-12 h-12 text-yellow-400 mx-auto mb-4" />"
-              <h3 className="text-2xl font-bold text-white mb-2">400%</h3>"
-              <p className="text-gray-300">Average ROI</p>
+              <h3 className="text-2xl font-bold text-white mb-2">400%</h3>"              <p className="text-gray-300">Average ROI</p>
             </motion.div>
             
             <motion.div
@@ -1031,8 +1010,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
             >"
               <Clock className="w-12 h-12 text-purple-400 mx-auto mb-4" />"
-              <h3 className="text-2xl font-bold text-white mb-2">80%</h3>"
-              <p className="text-gray-300">Faster Detection</p>
+              <h3 className="text-2xl font-bold text-white mb-2">80%</h3>"              <p className="text-gray-300">Faster Detection</p>
             </motion.div>
           </div>
         </div>
@@ -1077,8 +1055,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center">
                 Start Free Trial"
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </button>"
-              <button className="px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200">
+              </button>"              <button className="px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200">
                 Contact Sales
               </button>
             </div>

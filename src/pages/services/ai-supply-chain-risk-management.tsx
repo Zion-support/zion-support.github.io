@@ -7,8 +7,7 @@ import {
   AlertTriangle,
   TrendingUp,
   Globe,
-  CheckCircle,
-  ArrowRight,
+  CheckCircle,  ArrowRight,
   BarChart3,
   Brain,
   Network,
@@ -190,9 +189,8 @@ const AISupplyChainRiskManagement = () => {
       <SEO"
         title="AI Supply Chain Risk Management - Zion Tech Group""
         description="Protect your supply chain with AI-powered risk detection, predictive analytics, and real-time monitoring. Identify and mitigate risks before they impact your business.""
-        keywords="AI supply chain risk management, supply chain monitoring, risk detection, predictive analytics, supply chain optimization""
-        canonical="https://ziontechgroup.com/services/ai-supply-chain-risk-management"
-      />
+        keywords="AI supply chain risk management, supply chain monitoring, risk detection, predictive analytics, supply chain optimization""        canonical="https://ziontechgroup.com/services/ai-supply-chain-risk-management"
+       />
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -205,8 +203,7 @@ const AISupplyChainRiskManagement = () => {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4 mr-2" />
-              AI-Powered Risk Management
+              <Shield className="w-4 h-4 mr-2" />              AI-Powered Risk Management
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -229,8 +226,7 @@ const AISupplyChainRiskManagement = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 View Pricing"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+                <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com""
                 className="inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200"
@@ -427,8 +423,7 @@ const AISupplyChainRiskManagement = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-slate-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -480,8 +475,7 @@ const AISupplyChainRiskManagement = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
                 <Phone className="w-8 h-8 text-white" />
               </div>"
-              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>"
-              <p className="text-slate-300">+1 302 464 0950</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>"              <p className="text-slate-300">+1 302 464 0950</p>
             </motion.div>
 
             <motion.div"
@@ -496,8 +490,7 @@ const AISupplyChainRiskManagement = () => {
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Email Us
-              </h3>"
-              <p className="text-slate-300">kleber@ziontechgroup.com</p>
+              </h3>"              <p className="text-slate-300">kleber@ziontechgroup.com</p>
             </motion.div>
 
             <motion.div"
@@ -517,8 +510,7 @@ const AISupplyChainRiskManagement = () => {
                 364 E Main St STE 1008
                 <br />
                 Middletown DE 19709
-              </p>
-            </motion.div>
+              </p>            </motion.div>
           </div>
 
           <motion.div"
@@ -533,14 +525,12 @@ const AISupplyChainRiskManagement = () => {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Request Demo"
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
+              <ArrowRight className="ml-2 w-5 h-5" />            </a>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AISupplyChainRiskManagement;
 '"`

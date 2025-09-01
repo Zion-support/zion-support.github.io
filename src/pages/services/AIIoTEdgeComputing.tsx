@@ -94,8 +94,7 @@ export default function AIIoTEdgeComputing() {
             Transform your IoT infrastructure with AI-powered edge computing
             that processes data locally, reduces latency, and enables real-time
             intelligent decision making.
-          </p>
-        </div>
+          </p>        </div>
       </section>
 "
       <section className="py-16 max-w-6xl mx-auto px-6">"
@@ -107,8 +106,7 @@ export default function AIIoTEdgeComputing() {
             <ul className="space-y-3">
               {features.map(f => ("
                 <li key={f} className="flex items-start">"
-                  <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />"
-                  <span className="text-zion-slate-dark">{f}</span>
+                  <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />"                  <span className="text-zion-slate-dark">{f}</span>
                 </li>
               ))}
             </ul>
@@ -120,8 +118,7 @@ export default function AIIoTEdgeComputing() {
               <ul className="space-y-2">
                 {benefits.map(b => ("
                   <li key={b} className="flex items-start">"
-                    <Zap className="w-4 h-4 text-zion-cyan mr-2 mt-0.5" />"
-                    <span className="text-zion-slate-dark text-sm">{b}</span>
+                    <Zap className="w-4 h-4 text-zion-cyan mr-2 mt-0.5" />"                    <span className="text-zion-slate-dark text-sm">{b}</span>
                   </li>
                 ))}
               </ul>
@@ -163,8 +160,7 @@ export default function AIIoTEdgeComputing() {
                 rel="noreferrer""
                 className="px-5 py-3 border border-zion-slate-light/40 rounded-lg inline-flex items-center"
               >"
-                Learn More <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
+                Learn More <ExternalLink className="w-4 h-4 ml-2" />              </a>
             </div>
           </div>
         </div>
@@ -207,8 +203,7 @@ export default function AIIoTEdgeComputing() {
           <div className="grid md:grid-cols-2 gap-4">
             {useCases.map(uc => ("
               <div key={uc} className="flex items-center">"
-                <Target className="w-5 h-5 text-zion-cyan mr-3" />"
-                <span className="text-zion-slate-dark">{uc}</span>
+                <Target className="w-5 h-5 text-zion-cyan mr-3" />"                <span className="text-zion-slate-dark">{uc}</span>
               </div>
             ))}
           </div>
@@ -240,8 +235,7 @@ export default function AIIoTEdgeComputing() {
               rel="noreferrer""
               className="text-zion-cyan hover:underline"
             >
-              ziontechgroup.com
-            </a>
+              ziontechgroup.com            </a>
           </div>
         </div>
       </section>

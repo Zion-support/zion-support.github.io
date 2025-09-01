@@ -1,49 +1,7 @@
 import React, { useEffect, useMemo } from 'react';'
-import { Helmet } from 'react-helmet-async';
-
-interface SEOProps {
-  // Add your props here
-
-
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;'
-  type?: 'website' | 'article' | 'product' | 'service';
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  noindex?: boolean;
-  nofollow?: boolean;
-  robots?: string;
-  viewport?: string;
-  charset?: string;
-  language?: string;
-  themeColor?: string;
-  msApplicationTileColor?: string;
-  appleMobileWebAppTitle?: string;
-  appleMobileWebAppCapable?: boolean;'
-  appleMobileWebAppStatusBarStyle?: 'default' | 'black' | 'black-translucent';
-  appleTouchIcon?: string;
-  favicon?: string;
-  manifest?: string;
-  preconnect?: string[];
+import { Helmet } from 'react-helmet-async';  prefetch?: string[];
   dnsPrefetch?: string[];
-  preload?: Array<{
-
-    href: string;
-    as: string;
-    type?: string;
-    crossorigin?: boolean;
-  
-}[];
-  prefetch?: string[];
-  dnsPrefetch?: string[];
-  preconnect?: string[];
-}
+  preconnect?: string[]}
 
 export function SEO({
 '
@@ -106,8 +64,7 @@ export function SEO({
       target: 'https://ziontechgroup.com/search?q={search_term_string}','
       'query-input': 'required name=search_term_string'}};
 
-  return()
-    <Helmet>
+  return()    <Helmet>
       {/* Basic HTML tags */}
       <title>{title}</title>
       <html lang={language} />
@@ -140,8 +97,7 @@ export function SEO({
             justify - content: center;
             color: white;
             text - align: center;
-          }
-          
+          }          
           /* Optimize font loading */
           @font-face {
 '
@@ -149,8 +105,7 @@ export function SEO({
             font-display: swap;'
             src: url('/fonts/orbitron-v16-latin-400.woff2') format('woff2');
             font-weight: 400;
-            font-style: normal;
-          }
+            font-style: normal}
           
           @font-face {
 '
@@ -158,15 +113,13 @@ export function SEO({
             font-display: swap;'
             src: url('/fonts/orbitron-v16-latin-600.woff2') format('woff2');
             font-weight: 600;
-            font-style: normal;
-          }
+            font-style: normal}
           
           /* Reduce layout shift */
           img {
 
             max-width: 100%;
-            height: auto;
-          }
+            height: auto}
           
           /* Optimize animations */
           @media (prefers-reduced-motion: reduce) {
@@ -177,8 +130,7 @@ export function SEO({
               animation-iteration-count: 1 !important;
               transition-duration: 0.01ms !important;
             }
-          }`
-        `}
+          }`        `}
       </style>
 
       {/* Performance monitoring */}
@@ -193,8 +145,7 @@ export function SEO({
               if (navigation) {
 
                 const loadTime = navigation.loadEventEnd - navigation.loadEventStart;'
-                // console.log('Page load time:', loadTime + 'ms');
-                
+                // console.log('Page load time:', loadTime + 'ms');                
                 // Send to analytics if available
                 if (window.gtag) {
 '
@@ -205,8 +156,7 @@ export function SEO({
                 }
               }
             }) ;
-          }
-          
+          }          
           // Core Web Vitals monitoring'
           if ('web-vital' in window) {
 '

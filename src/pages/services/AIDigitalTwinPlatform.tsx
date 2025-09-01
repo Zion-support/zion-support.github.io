@@ -109,8 +109,7 @@ export default function AIDigitalTwinPlatform() {
           </div>"
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             AI Digital Twin Platform
-          </h1>"
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          </h1>"          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Create intelligent digital replicas of your physical assets with
             AI-driven monitoring, predictive analytics, and real-time
             optimization. Transform operations with the power of digital twins.
@@ -153,8 +152,7 @@ export default function AIDigitalTwinPlatform() {
             <ul className="space-y-4">
               {features.map((feature, index) => ("
                 <li key={index} className="flex items-start">"
-                  <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />"
-                  <span className="text-gray-700">{feature}</span>
+                  <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />"                  <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -170,8 +168,7 @@ export default function AIDigitalTwinPlatform() {
                   key={index}"
                   className="flex items-center p-3 bg-gray-50 rounded-lg"
                 >"
-                  <Network className="w-4 h-4 text-blue-500 mr-3" />"
-                  <span className="text-gray-700">{industry}</span>
+                  <Network className="w-4 h-4 text-blue-500 mr-3" />"                  <span className="text-gray-700">{industry}</span>
                 </div>
               ))}
             </div>
@@ -199,8 +196,7 @@ export default function AIDigitalTwinPlatform() {
               >"
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">"
                   <TrendingUp className="w-6 h-6 text-blue-600" />
-                </div>"
-                <p className="text-gray-700 font-medium">{benefit}</p>
+                </div>"                <p className="text-gray-700 font-medium">{benefit}</p>
               </div>
             ))}
           </div>
@@ -226,8 +222,7 @@ export default function AIDigitalTwinPlatform() {
             >"
               <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4">"
                 <Monitor className="w-5 h-5 text-blue-600" />
-              </div>"
-              <h3 className="font-semibold text-gray-900 mb-2">{useCase}</h3>
+              </div>"              <h3 className="font-semibold text-gray-900 mb-2">{useCase}</h3>
             </div>
           ))}
         </div>
@@ -275,8 +270,7 @@ export default function AIDigitalTwinPlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-700">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -398,8 +392,7 @@ export default function AIDigitalTwinPlatform() {
             <a"
               href="mailto:kleber@ziontechgroup.com""
               className="text-blue-600 hover:text-blue-700 font-semibold"
-            >
-              kleber@ziontechgroup.com
+            >              kleber@ziontechgroup.com
             </a>
           </div>
         </div>
@@ -417,8 +410,7 @@ export default function AIDigitalTwinPlatform() {
             rel="noreferrer""
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
           >"
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />          </a>
         </div>
       </section>
     </div>

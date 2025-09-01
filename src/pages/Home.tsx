@@ -286,9 +286,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       <FuturisticBackground />
       "
       <div className="relative z-10 container mx-auto px-4 text-center">"
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
+        <AnimatePresence mode="wait">          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
@@ -296,33 +294,31 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
             className="max-w-5xl mx-auto"
           >`
             <div className={`w-24 h-24 bg-gradient-to-r ${heroSlides[currentSlide].color} rounded-3xl flex items-center justify-center mx-auto mb-8`}>"
-              {React.createElement(heroSlides[currentSlide].icon, { className: "w-12 h-12 text-white" })}
-            </div>
+              {React.createElement(heroSlides[currentSlide].icon, { className: "w-12 h-12 text-white" })}            </div>
             "
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              {heroSlides[currentSlide].title}
+              Revolutionary AI & Technology Services
             </h1>
             "
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">
-              {heroSlides[currentSlide].subtitle}
+              Transform Your Business with Cutting-Edge Solutions
             </h2>
             "
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              {heroSlides[currentSlide].description}
+              Discover our comprehensive portfolio of innovative micro SAAS, IT, and AI services 
+              designed to drive business growth and competitive advantage.
             </p>
             "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to={heroSlides[currentSlide].link}"
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                to={heroSlides[currentSlide].link}"                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
               >
-                {heroSlides[currentSlide].cta}
+                Explore Services
               </Link>
               <Link"
                 to="/contact""
-                className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-              >
-                Get Started
+                className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"              >
+                View Pricing
               </Link>
             </div>
           </motion.div>
@@ -338,138 +334,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 '
                 index === currentSlide ? 'bg-cyan-400 w-8' : 'bg-white/30'`
               }`}
-            />) ) }
-        </div>
-
-        {/* Enhanced Stats with animations */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}"
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
-        >
-          {heroStats.map((stat, index) => (
-            <motion.div 
-              key={stat.label} "
-              className="text-center"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            >"
-              <div className="flex justify-center mb-3">"
-                <div className="p-3 rounded-lg bg-gradient-to-r from-blue-600/20 to-purple-600/20">"
-                  <stat.icon className="h-8 w-8 text-blue-400" />
-                </div>
-              </div>"
-              <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>"
-              <div className="text-gray-400">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Slide indicators */}"
-        <div className="flex justify-center mt-8 space-x-2">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}`
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-'
-                index === currentSlide ? 'bg-blue-400 scale-125' : 'bg-gray-600 hover:bg-gray-500'`
-              }`}`
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-          <button
-            onClick={togglePlayPause}"
-            className="ml-4 p-2 text-gray-400 hover:text-white transition-colors duration-200"'
-            aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
-          >"
-            {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
-          </button>
-        </div>
-      </div>
-    </section>) ;
-};
-
-// Features Section Component
-const FeaturesSection = () => {
-  const features = [
-    {
-
-      icon: Brain,"
-      title: "AI & Machine Learning","
-      description: "Cutting-edge artificial intelligence solutions that learn, adapt, and evolve with your business needs.","
-      color: "from-purple-500 to-pink-500","
-      link: "/services/ai-solutions"
-    },
-    {
-
-      icon: Atom,"
-      title: "Quantum Computing","
-      description: "Revolutionary quantum algorithms and computing platforms for solving complex computational problems.","
-      color: "from-blue-500 to-cyan-500","
-      link: "/services/quantum-computing"
-    },
-    {
-
-      icon: Shield,"
-      title: "Cybersecurity","
-      description: "Advanced security solutions with zero-trust architecture and real-time threat detection.","
-      color: "from-red-500 to-orange-500","
-      link: "/services/cybersecurity"
-    },
-    {
-
-      icon: Cloud,"
-      title: "Cloud Infrastructure","
-      description: "Scalable cloud solutions designed for modern enterprise needs and digital transformation.","
-      color: "from-green-500 to-emerald-500","
-      link: "/services/cloud-infrastructure"
-    },
-    {
-
-      icon: Lock,"
-      title: "Blockchain & Web3","
-      description: "Secure, decentralized solutions for the next generation of digital applications.","
-      color: "from-indigo-500 to-purple-500","
-      link: "/services/blockchain-web3"
-    },
-    {
-
-      icon: Zap,"
-      title: "Digital Transformation","
-      description: "End-to-end digital transformation services to modernize your business operations.","
-      color: "from-yellow-500 to-orange-500","
-      link: "/services/digital-transformation"
-
-    }
-  ];
-
-  return()
-"
-    <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">"
-      <div className="container mx-auto px-4">
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}"
-          className="text-center mb-16"
-        >"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-
-            Our Core Services
-          </h2>"
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to drive innovation and accelerate your business growth
-          </p>
-        </motion.div>
-"
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <motion.div
-              key={feature.title}
+            />) ) }            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -527,9 +392,46 @@ const StatsSection = () => {
                 <stat.icon className="w-10 h-10 text-white" />
               </div>"
               <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>"
-              <div className="text-gray-300">{stat.label}</div>
+              <div className="text-gray-300">{stat.label}</div>            </motion.div>
+
+            {/* Quantum Computing */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                <Atom className="w-8 h-8 text-white"  />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Quantum Computing</h3>
+              <p className="text-gray-400 mb-4">
+                Revolutionary quantum algorithms and machine learning solutions for complex problems.
+              </p>
+              <Link to="/services-showcase" className="text-cyan-400 hover:text-cyan-300 flex items-center">
+                Learn More <ArrowRight className="w-4 h-4 ml-2"  />
+              </Link>
             </motion.div>
-          ))}
+
+            {/* Cybersecurity */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-4">
+                <Shield className="w-8 h-8 text-white"  />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Cybersecurity</h3>
+              <p className="text-gray-400 mb-4">
+                Military-grade security solutions with advanced threat detection and zero-trust architecture.
+              </p>
+              <Link to="/services-showcase" className="text-cyan-400 hover:text-cyan-300 flex items-center">
+                Learn More <ArrowRight className="w-4 h-4 ml-2"  />
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>) ;
@@ -568,10 +470,9 @@ const CTASection = () => {
             <Link"
               to="/services""
               className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-
             >
-              Explore Services
-            </Link>
+              Call Now: +1 302 464 0950
+            </a>
           </div>
 
           {/* Contact Information */}"
@@ -696,5 +597,4 @@ export default function Home() {
 };
 
 export default Home;
-
 '"`

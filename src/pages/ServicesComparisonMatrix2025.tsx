@@ -1,51 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';
-import { Brain, 
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data / innovativeMicroSaasServices2025';
-import { motion  } from 'framer - motion.ts';
-
-
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  BarChart3, 
-  Globe, 
-  Cpu, 
-  Database, 
-  Workflow,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Search,
-  Filter,
-  Grid3X3,
-  List,
-  ChevronDown,
-  ChevronUp,
-  X,
-  Plus,
-  Minus,
-  Target,
-  Clock,
-  Award,
-  DollarSign,
-  BarChart,
-  Settings,
-  Lock,
-  Server,
-  Smartphone,
-  Cloud,
-  Database as DatabaseIcon,
-  Shield as ShieldIcon,
-  Zap as ZapIcon'
- } from 'lucide-react.ts';'
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data/innovativeMicroSaasServices2025';
-
 const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
   const [selectedServices, setSelectedServices] = useState<any>([]);'
   const [searchTerm, setSearchTerm] = useState('');'
@@ -76,8 +30,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));'
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
-    })
-    .sort((a, b) => {
+    })    .sort((a, b) => {
 
       switch (sortBy) {
 '
@@ -149,8 +102,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
 
   const allFeatures = Array.from(new Set()
     selectedServicesData.flatMap(service => 
-      service ? [...service.features, ...service.benefits] : [];
-    );
+      service ? [...service.features, ...service.benefits] : [];    );
   ));
 
   return()
@@ -192,8 +144,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                 <span>Feature Analysis</span>
               </div>"
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3">"
-                <Award className="w-5 h-5 text-yellow-400" />
-                <span>Informed Decisions</span>
+                <Award className="w-5 h-5 text-yellow-400" />                <span>Informed Decisions</span>
               </div>
             </div>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -202,15 +153,13 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
               >
                 Start Comparing"
-                <ArrowRight className="w-5 h-5" />
-              </a>
+                <ArrowRight className="w-5 h-5" />              </a>
               <a"
                 href="#contact""
                 className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-gray-100 hover:text-blue-900 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 Contact Sales"
-                <Phone className="w-5 h-5" />
-              </a>
+                <Phone className="w-5 h-5" />              </a>
             </div>
           </motion.div>
         </div>
@@ -237,8 +186,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
             <div className="flex items-center gap-3">"
               <MapPin className="w-6 h-6 text-blue-600" />
               <div>"
-                <p className="text-sm text-gray-600">Address</p>"
-                <p className="font-semibold text-gray-900">364 E Main St STE 1008, Middletown DE 19709</p>
+                <p className="text-sm text-gray-600">Address</p>"                <p className="font-semibold text-gray-900">364 E Main St STE 1008, Middletown DE 19709</p>
               </div>
             </div>
           </div>
@@ -253,8 +201,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input"
-                  type="text""
-                  placeholder="Search services..."
+                  type="text""                  placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}"
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -304,8 +251,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'`
                   }`}
                 >"
-                  <List className="w-5 h-5" />
-                </button>
+                  <List className="w-5 h-5" />                </button>
               </div>
             </div>
           </div>
@@ -338,8 +284,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                       onClick={() => toggleServiceSelection(service?.id || '')}"
                       className="text-blue-600 hover:text-blue-800"
                     >"
-                      <X className="w-4 h-4" />
-                    </button>
+                      <X className="w-4 h-4" />                    </button>
                   </div>) ) }
               </div>
             </div>
@@ -383,8 +328,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                     {selectedServices.includes(service.id) ? ("
                       <Minus className="w-4 h-4 text-blue-600" />
                     ) : ("
-                      <Plus className="w-4 h-4 text-gray-400" />
-                    )}
+                      <Plus className="w-4 h-4 text-gray-400" />                    )}
                   </div>
                 </div>
                 "
@@ -478,8 +422,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                       <div className="space-y-2">
                         {service?.features.slice(0, 5).map((feature, idx) => ("
                           <div key={idx} className="flex items-center gap-2 text-xs">"
-                            <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />"
-                            <span className="text-gray-700">{feature}</span>
+                            <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />"                            <span className="text-gray-700">{feature}</span>
                           </div>
                         ))}
                       </div>
@@ -496,8 +439,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                       <div className="space-y-2">
                         {service?.benefits.map((benefit, idx) => ("
                           <div key={idx} className="flex items-center gap-2 text-xs">"
-                            <Star className="w-3 h-3 text-yellow-500 flex-shrink-0" />"
-                            <span className="text-gray-700">{benefit}</span>
+                            <Star className="w-3 h-3 text-yellow-500 flex-shrink-0" />"                            <span className="text-gray-700">{benefit}</span>
                           </div>
                         ))}
                       </div>
@@ -562,15 +504,13 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                           className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-xs font-medium transition-colors duration-200"
                         >
                           Get Started"
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
+                          <ExternalLink className="w-3 h-3" />                        </a>
                         <a"
                           href="tel:+13024640950""
                           className="w-full inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-xs font-medium transition-colors duration-200"
                         >
                           Call Sales"
-                          <Phone className="w-3 h-3" />
-                        </a>
+                          <Phone className="w-3 h-3" />                        </a>
                       </div>
                     </div>) ) }
                 </div>
@@ -629,8 +569,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                         <ul className="space-y-2">
                           {service?.features.map((feature, idx) => ("
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">"
-                              <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                              <span>{feature}</span>
+                              <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />                              <span>{feature}</span>
                             </li>) ) }
                         </ul>
                       </div>
@@ -639,8 +578,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                         <ul className="space-y-2">
                           {service?.benefits.map((benefit, idx) => ("
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">"
-                              <Star className="w-4 h-4 text-yellow-500 flex-shrink-0" />
-                              <span>{benefit}</span>
+                              <Star className="w-4 h-4 text-yellow-500 flex-shrink-0" />                              <span>{benefit}</span>
                             </li>) ) }
                         </ul>
                       </div>
@@ -677,15 +615,13 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                         className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
                       >
                         Get Started"
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
+                        <ExternalLink className="w-4 h-4" />                      </a>
                       <a"
                         href="tel:+13024640950""
                         className="flex-1 inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
                       >
                         Call Sales: +1 302 464 0950"
-                        <Phone className="w-4 h-4" />
-                      </a>
+                        <Phone className="w-4 h-4" />                      </a>
                     </div>
                   </div>
                 </motion.div>) ) }
@@ -726,15 +662,13 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                 className="inline-flex items-center gap-2 bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
               >
                 Get Expert Advice"
-                <Mail className="w-5 h-5" />
-              </a>
+                <Mail className="w-5 h-5" />              </a>
               <a"
                 href="tel:+13024640950""
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
               >
                 Call Now: +1 302 464 0950"
-                <Phone className="w-5 h-5" />
-              </a>
+                <Phone className="w-5 h-5" />              </a>
             </div>
           </motion.div>
         </div>
@@ -758,8 +692,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                   className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
                 >
                   Visit Website"
-                  <ExternalLink className="w-4 h-4 inline ml-1" />
-                </a>
+                  <ExternalLink className="w-4 h-4 inline ml-1" />                </a>
               </div>
             </div>
             
@@ -811,5 +744,4 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
       </footer>
     </div>) ;
 };
-
 export default ServicesComparisonMatrix2025;'"`

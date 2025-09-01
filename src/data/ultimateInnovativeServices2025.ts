@@ -42,8 +42,7 @@ export const SERVICE_CATEGORIES = [
   'Metaverse & AR/VR',;'
   'Robotics & Automation',;'
   'Biotechnology',;'
-  'Space Technology',;'
-  'Green Technology';
+  'Space Technology',;'  'Green Technology';
 ];
 ;
 export const SERVICE_SUBCATEGORIES = {

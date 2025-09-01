@@ -1,291 +1,5 @@
 import React, { useState } from 'react';'
-import { motion } from 'framer-motion';
-import {
-
-  Brain,
-  Zap,
-  Shield,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Users,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  Clock,
-  Eye,
-  Database,
-  Code,
-  FileText,
-  Wrench,
-  Cpu,
-  Target,
-  Rocket,
-  Lightbulb,
-  Gauge,
-  Network,
-  Server,
-  Building,
-  Car,
-  Plane,
-  Factory,
-  Cog,
-  BarChart3,
-  TrendingUp,
-  MapPin,
-  Layers,
-  RefreshCw,
-  AlertTriangle,
-  Package,
-  Warehouse,
-  Route,
-  Navigation,
-  Box,
-  Ship,
-  Train,
-  Truck,
-  Cloud,
-  Settings,
-  Palette,
-  Smartphone,
-  Tablet,
-  Monitor,
-  Wifi,
-  Bluetooth,
-  Battery,
-  Signal,
-  HardDrive,
-  MemoryStick,
-  Router,
-  Switch,
-  Hub,
-  Modem,
-  Firewall,
-  LoadBalancer,
-  Gateway,
-  Proxy,
-  VPN,
-  SSL,
-  TLS,
-  SSH,
-  FTP,
-  HTTP,
-  HTTPS,
-  DNS,
-  DHCP,
-  NTP,
-  SMTP,
-  POP3,
-  IMAP,
-  LDAP,
-  Kerberos,
-  OAuth,
-  JWT,
-  SAML,
-  OpenID,
-  Radius,
-  Tacacs,
-  Syslog,
-  SNMP,
-  NetFlow,
-  sFlow,
-  IPFIX,
-  BGP,
-  OSPF,
-  EIGRP,
-  RIP,
-  VLAN,
-  VXLAN,
-  GRE,
-  IPSec,
-  MPLS,
-  SDN,
-  NFV,
-  VNF,
-  Container,
-  Pod,
-  Service,
-  Ingress,
-  Egress,
-  Cluster,
-  Node,
-  Namespace,
-  ConfigMap,
-  Secret,
-  PersistentVolume,
-  StorageClass,
-  StatefulSet,
-  DaemonSet,
-  Job,
-  CronJob,
-  HorizontalPodAutoscaler,
-  VerticalPodAutoscaler,
-  NetworkPolicy,
-  PodSecurityPolicy,
-  Role,
-  RoleBinding,
-  ClusterRole,
-  ClusterRoleBinding,
-  ServiceAccount,
-  Token,
-  Certificate,
-  CSR,
-  CRL,
-  OCSP,
-  HSM,
-  TPM,
-  SecureEnclave,
-  TrustZone,
-  SGX,
-  SEV,
-  TDX,
-  ARM,
-  x86,
-  RISC,
-  CISC,
-  GPU,
-  TPU,
-  FPGA,
-  ASIC,
-  SoC,
-  SiP,
-  PCB,
-  Motherboard,
-  Backplane,
-  Chassis,
-  Rack,
-  Cabinet,
-  Datacenter,
-  Colocation,
-  Edge,
-  Fog,
-  Public,
-  Private,
-  Community,
-  Government,
-  Financial,
-  Healthcare,
-  Education,
-  Retail,
-  Manufacturing,
-  Transportation,
-  Energy,
-  Utilities,
-  Telecommunications,
-  Media,
-  Entertainment,
-  Gaming,
-  Social,
-  Ecommerce,
-  Fintech,
-  Insurtech,
-  Healthtech,
-  Edtech,
-  Proptech,
-  Legaltech,
-  Regtech,
-  Adtech,
-  MarTech,
-  HRTech,
-  SalesTech,
-  SupportTech,
-  SecurityTech,
-  PrivacyTech,
-  ComplianceTech,
-  GovernanceTech,
-  RiskTech,
-  AuditTech,
-  MonitoringTech,
-  ObservabilityTech,
-  LoggingTech,
-  TracingTech,
-  MetricsTech,
-  AlertingTech,
-  IncidentTech,
-  ChangeTech,
-  ReleaseTech,
-  DeploymentTech,
-  CI,
-  CD,
-  DevOps,
-  GitOps,
-  SecOps,
-  DataOps,
-  MLOps,
-  AIOps,
-  NoOps,
-  SRE,
-  Platform,
-  Infrastructure,
-  Application,
-  Data,
-  Security,
-  Storage,
-  Compute,
-  Memory,
-  Cache,
-  Buffer,
-  Queue,
-  Stream,
-  Batch,
-  RealTime,
-  NearRealTime,
-  Offline,
-  Online,
-  Hybrid,
-  Multi,
-  Single,
-  Distributed,
-  Centralized,
-  Decentralized,
-  Federated,
-  Hierarchical,
-  Flat,
-  Mesh,
-  Ring,
-  Bus,
-  Tree,
-  Graph,
-  Matrix,
-  Vector,
-  Scalar,
-  Tensor,
-  Array,
-  List,
-  Stack,
-  Deque,
-  PriorityQueue,
-  Heap,
-  HashTable,
-  BloomFilter,
-  SkipList,
-  Trie,
-  BTree,
-  RedBlackTree,
-  AVLTree,
-  SplayTree,'
-  Treap} from 'lucide-react';
-
-const workflowSolutions = [
-  {
-
-    id: 1,
-    title: "AI Process Automation","
-    description: "Intelligent automation of business processes using AI and machine learning.",
-    icon: Cog,
-    features[;"
-      "Process automation","
-      "AI decision making","
-      "Workflow optimization","
-      "Performance monitoring"
-    ],;"
-    price: "From $200,000","
-    timeline: "24-36 weeks","
-    category: "Process Automation","
-    technologies["AI", "RPA", "Workflow Engines", "Machine Learning"];
-  },;
-  {
+import { motion } from 'framer-motion';  {
 
     id: 2,"
     title: "Intelligent Document Processing","
@@ -301,8 +15,7 @@ const workflowSolutions = [
     timeline: "20-32 weeks","
     category: "Document Processing","
     technologies["AI", "OCR", "Document Processing", "Workflow"];
-  },;
-  {
+  },;  {
 
     id: 3,"
     title: "Smart Workflow Orchestration","
@@ -318,8 +31,7 @@ const workflowSolutions = [
     timeline: "22-34 weeks","
     category: "Workflow Orchestration","
     technologies["AI", "Workflow Management", "Orchestration", "Analytics"];
-  },;
-  {
+  },;  {
 
     id: 4,"
     title: "AI Decision Automation","
@@ -335,8 +47,7 @@ const workflowSolutions = [
     timeline: "28-40 weeks","
     category: "Decision Automation","
     technologies["AI", "Decision Trees", "Machine Learning", "Risk Models"];
-  },;
-  {
+  },;  {
 
     id: 5,"
     title: "Predictive Workflow Analytics","
@@ -352,8 +63,7 @@ const workflowSolutions = [
     timeline: "18-30 weeks","
     category: "Analytics","
     technologies["AI", "Predictive Analytics", "Machine Learning", "Data Science"];
-  },;
-  {
+  },;  {
 
     id: 6,"
     title: "Intelligent Task Management","
@@ -482,15 +192,13 @@ const workflowBenefits = [
     description: "AI automation significantly improves workflow efficiency and productivity",
     icon: Zap,"
     examples["Faster processing", "Reduced errors", "Better accuracy", "Improved productivity"];
-  },;
-  {
+  },;  {
 "
     title: "Cost Reduction","
     description: "Automation reduces manual effort and operational costs",
     icon: TrendingUp,"
     examples["Reduced labor costs", "Lower error rates", "Better resource utilization", "Improved ROI"];
-  },;
-  {
+  },;  {
 "
     title: "Better Decision Making","
     description: "AI-powered insights enable better, data-driven decisions",
@@ -505,8 +213,7 @@ const workflowBenefits = [
     description: "AI workflows scale efficiently with business growth",;
     icon: Rocket,;"
     examples: ["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"];
-  };
-];
+  };];
 
 export default function AIWorkflowAutomation(...args[]):  {
 '
@@ -519,8 +226,7 @@ export default function AIWorkflowAutomation(...args[]):  {
     ? workflowSolutions
     : workflowSolutions.filter (solution => solution.category === selectedCategory) ;
 
-  return ("
-    <div className = "min-h-screen bg-futuristic">
+  return ("    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>"
@@ -572,8 +278,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 }}"
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 "
-              <Brain className="w-10 h-10 text-white" />
-            </motion.div>
+              <Brain className="w-10 h-10 text-white" />            </motion.div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Workflow"
@@ -595,8 +300,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                 <span>Process Automation</span>
               </div>"
               <div className="flex items-center gap-2 text-zion-blue">"
-                <Network className="w-4 h-4" />
-                <span>Workflow Management</span>
+                <Network className="w-4 h-4" />                <span>Workflow Management</span>
               </div>
             </div>
           </motion.div>
@@ -668,8 +372,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples: any</h4>
                   {benefit.examples.map((example, exampleIndex)  => ("
                     <div key={exampleIndex} className="flex items-center gap-3">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />"
-                      <span className="text-zion-slate-light text-sm">{example}</span>
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />"                      <span className="text-zion-slate-light text-sm">{example}</span>
                     </div>
                   ))}
                 </div>
@@ -910,8 +613,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => ("
                     <div key={featureIndex} className="flex items-center gap-3">"
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />"
-                      <span className="text-zion-slate-light text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />"                      <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -937,8 +639,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                   </span>"
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">"
                     <span className="text-sm font-medium">Learn More</span>"
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                    <ArrowRight className="w-4 h-4" />                  </button>
                 </div>
               </motion.div>) ) }
           </div>
@@ -1027,8 +728,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => ("
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}"
-                  <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
+                  ))}"                  <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
               </motion.div>;) ) }
           </div>

@@ -21,8 +21,7 @@ import {
   HelpCircle,
   Star,
   MapPin,
-  Globe,
-  Calendar,
+  Globe,  Calendar,
   Send,
   Ticket,
   Headphones,
@@ -132,8 +131,7 @@ const Support = () => {
 
       // Implement search functionality'
       // console.log('Searching for:', searchQuery);
-    }
-  };
+    }  };
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -148,8 +146,7 @@ const Support = () => {
           >"
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl mb-6">"
               <HelpCircle className="w-10 h-10 text-white" />
-            </div>"
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            </div>"            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Support Center
             </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -185,8 +182,7 @@ const Support = () => {
           <form onSubmit={handleSearch} className="relative">"
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input"
-              type="text""
-              placeholder="Search for help articles, documentation, or support topics..."
+              type="text""              placeholder="Search for help articles, documentation, or support topics..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}"
               className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
@@ -279,8 +275,7 @@ const Support = () => {
                         <span className="text-gray-300 group-hover:text-white transition-colors">
                           {topic.title}
                         </span>"
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />
-                      </Link>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />                      </Link>
                     ))}
                   </div>
                 </motion.div>) ) }
@@ -348,8 +343,7 @@ const Support = () => {
                   <p className="text-lg text-cyan-400 mb-2">{method.details}</p>"
                   <p className="text-gray-300 mb-3">{method.description}</p>"
                   <div className="flex items-center gap-2 text-sm text-gray-400">"
-                    <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span>{method.response}</span>
+                    <CheckCircle className="w-4 h-4 text-green-400" />                    <span>{method.response}</span>
                   </div>
                 </motion.div>) ) }
             </div>
@@ -360,8 +354,7 @@ const Support = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Contact Our Team"
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+                <ArrowRight className="ml-2 h-5 w-5" />              </Link>
             </div>
           </motion.div>) }
 
@@ -404,8 +397,7 @@ const Support = () => {
                     <p className="text-gray-300 mb-4">{resource.description}</p>"
                     <div className="flex items-center text-cyan-400 font-medium group">
                       <span>Access Resource</span>"
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                    </div>
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -487,8 +479,7 @@ const Support = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 View Detailed Status"
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+                <ArrowRight className="ml-2 h-5 w-5" />              </Link>
             </div>
           </motion.div>) }
       </div>

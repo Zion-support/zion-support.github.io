@@ -59,16 +59,14 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
     'Improve candidate quality and retention rates',;'
     'Automate routine HR tasks and workflows',;'
     'Data-driven insights for better decisions',;'
-    'Enhanced employee experience and engagement',;'
-    'Compliance automation and risk reduction';
+    'Enhanced employee experience and engagement',;'    'Compliance automation and risk reduction';
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="AI HR Platform Services - Zion Tech Group""
-        description="Transform your HR operations with AI-powered recruitment, talent management, and performance analytics. Streamline HR processes and improve employee experience."
-      />
+        title="AI HR Platform Services - Zion Tech Group""        description="Transform your HR operations with AI-powered recruitment, talent management, and performance analytics. Streamline HR processes and improve employee experience."
+       />
 
       {/* Hero Section */}"
       <section className="pt-20 pb-16 px-4">"
@@ -100,8 +98,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full border border-blue-400/30 mb-6">"
-              <Users className="w-5 h-5 text-blue-400 mr-2" />"
-              <span className="text-blue-300 font-medium">AI HR Platform</span>
+              <Users className="w-5 h-5 text-blue-400 mr-2" />"              <span className="text-blue-300 font-medium">AI HR Platform</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -372,8 +369,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => ("
                   <li key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"
-                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"                    <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -464,7 +460,6 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
         </div>;
       </section>;
     </div>;
-  );
-};
+  )};
 
 export default AIHRPlatform;}}}'"

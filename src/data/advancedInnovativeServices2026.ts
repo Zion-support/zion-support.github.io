@@ -99,8 +99,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
     },;'
     competitors['IBM Quantum', 'Google Quantum AI', 'Microsoft Quantum'],;'
     caseStudies['Financial Institution achieved 95% prediction accuracy', 'Research lab reduced drug discovery time by 80%'];
-  },;
-  {
+  },;  {
 '
     id: 'brain-computer-interface-platform-2026','
     title: 'Brain-Computer Interface Platform','
@@ -161,8 +160,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
     },;'
     competitors['Neuralink', 'Kernel', 'CTRL-labs'],;'
     caseStudies['Hospital achieved 90% success rate in rehabilitation', 'Gaming comp increased user engagement by 300%'];
-  },;
-  {
+  },;  {
 '
     id: 'space-mining-autonomous-system-2026','
     title: 'Autonomous Space Mining System','
@@ -223,8 +221,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
     },;'
     competitors['Planetary Resources', 'Deep Space Industries', 'Asteroid Mining Corporation'],;'
     caseStudies['Successfully mapped 50+ asteroids', 'Extracted 100kg of rare minerals from lunar surface'];
-  },;
-  {
+  },;  {
 '
     id: 'synthetic-biology-platform-2026','
     title: 'Synthetic Biology Platform','
@@ -285,8 +282,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
     },;'
     competitors['Ginkgo Bioworks', 'Twist Bioscience', 'Synthetic Genomics'],;'
     caseStudies['Developed novel cancer treatment', 'Created biofuel-producing bacteria', 'Designed environmental cleanup organisms'];
-  },;
-  {
+  },;  {
 '
     id: 'fusion-energy-reactor-2026','
     title: 'Compact Fusion Energy Reactor','
@@ -347,8 +343,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
     },;'
     competitors['ITER', 'Commonwealth Fusion', 'General Fusion'],;'
     caseStudies['Successfully achieved sustained fusion reaction', 'Generated 50MW of clean power', 'Reduced energy costs by 80%'];
-  },;
-  {
+  },;  {
 '
     id: 'holographic-reality-platform-2026','
     title: 'Holographic Reality Platform','
@@ -409,8 +404,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
     },;'
     competitors['Looking Glass', 'RealView Imaging', 'Leia Inc'],;'
     caseStudies['Increased student engagement by 200%', 'Reduced travel costs by 60%', 'Enhanced product presentations'];
-  },;
-  {
+  },;  {
 '
     id: 'time-crystal-computing-2026','
     title: 'Time Crystal Computing System','
@@ -471,8 +465,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
     },;'
     competitors['IBM Quantum', 'Google Quantum', 'Microsoft Quantum'],;'
     caseStudies['Achieved quantum supremacy', 'Solved complex mathematical problems', 'Advanced cryptography research'];
-  },;
-  {
+  },;  {
 '
     id: 'dark-matter-detection-2026','
     title: 'Dark Matter Detection System','
@@ -533,8 +526,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
     },;'
     competitors['CERN', 'Fermilab', 'SLAC'],;'
     caseStudies['Detected new particle signatures', 'Advanced dark matter theories', 'International collaboration success'];
-  },;
-  {
+  },;  {
 '
     id: 'consciousness-transfer-system-2026','
     title: 'Consciousness Transfer System','
@@ -595,8 +587,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
     },;'
     competitors['OpenAI', 'Anthropic', 'Research Institutions'],;'
     caseStudies['Advanced consciousness research', 'Ethical framework development', 'International collaboration'];
-  },;
-  {
+  },;  {
 '
     id: 'multiverse-communication-2026','
     title: 'Multiverse Communication System','
@@ -657,6 +648,5 @@ export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] 
     },;'
     competitors['CERN', 'Fermilab', 'Theoretical Physics Institutions'],;'
     caseStudies['Advanced theoretical research', 'International collaboration', 'Educational innovation'];
-  }
-];
+  }];
 '

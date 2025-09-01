@@ -98,8 +98,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       uptime: "99.9%","
       security["SOC 2", "ISO 27001", "NIST framework", "Zero trust principles"];
     },;"
-    competitors["Cisco", "Palo Alto Networks", "Fortinet", "VMware"],;"
-    marketSize: "$51.6 billion by 2025"
+    competitors["Cisco", "Palo Alto Networks", "Fortinet", "VMware"],;"    marketSize: "$51.6 billion by 2025"
   },
 
   // 5G Enterprise Network Solutions
@@ -166,8 +165,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       uptime: "99.9%","
       security["5G security standards", "Encryption", "Authentication", "Network isolation"];
     },;"
-    competitors["Ericsson", "Nokia", "Huawei", "Cisco", "Verizon"],;"
-    marketSize: "$31.2 billion by 2025"
+    competitors["Ericsson", "Nokia", "Huawei", "Cisco", "Verizon"],;"    marketSize: "$31.2 billion by 2025"
   },
 
   // Cloud-Native Application Development
@@ -234,8 +232,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       uptime: "99.9%","
       security["OWASP compliance", "Data encryption", "Access controls", "Security scanning"];
     },;"
-    competitors["Thoughtworks", "Slalom", "Accenture", "Deloitte Digital"],;"
-    marketSize: "$22.5 billion by 2025"
+    competitors["Thoughtworks", "Slalom", "Accenture", "Deloitte Digital"],;"    marketSize: "$22.5 billion by 2025"
   },
 
   // Data Center Modernization
@@ -302,8 +299,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       uptime: "99.9%","
       security["Physical security", "Network security", "Data protection", "Access controls"];
     },;"
-    competitors["Dell Technologies", "HPE", "Cisco", "IBM", "Accenture"],;"
-    marketSize: "$59.3 billion by 2025"
+    competitors["Dell Technologies", "HPE", "Cisco", "IBM", "Accenture"],;"    marketSize: "$59.3 billion by 2025"
   },
 
   // IoT Edge Computing Platform

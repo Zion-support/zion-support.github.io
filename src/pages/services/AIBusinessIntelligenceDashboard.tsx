@@ -8,8 +8,7 @@ import {
   Zap,
   Shield,
   Globe,
-  Users,
-  Database,
+  Users,  Database,
   PieChart,
   LineChart,
   Activity,
@@ -182,8 +181,7 @@ const AIBusinessIntelligenceDashboard = () => {
       />
 
       {/* Hero Section */}"
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">"
-        <div className="max-w-7xl mx-auto">
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">"        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -191,8 +189,7 @@ const AIBusinessIntelligenceDashboard = () => {
             className="text-center relative z-10"
           >"
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">"
-              <Brain className="w-4 h-4 mr-2 text-cyan-400" />
-              AI-Powered Business Intelligence
+              <Brain className="w-4 h-4 mr-2 text-cyan-400" />              AI-Powered Business Intelligence
             </div>
 "
             <h1 className="text-5xl md:text-7xl font-bold mb-6">"
@@ -216,14 +213,12 @@ const AIBusinessIntelligenceDashboard = () => {
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />              </a>
               <a"
                 href="#demo""
                 className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group"
               >"
-                <Play className="w-5 h-5 mr-2" />
-                Watch Demo
+                <Play className="w-5 h-5 mr-2" />                Watch Demo
               </a>
             </div>
           </motion.div>
@@ -395,8 +390,7 @@ const AIBusinessIntelligenceDashboard = () => {
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => ("
                       <li key={idx} className="flex items-center text-gray-300">"
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -452,8 +446,7 @@ const AIBusinessIntelligenceDashboard = () => {
                       <Star
                         key={i}"
                         className="w-5 h-5 fill-current text-yellow-400"
-                      />
-                    ))}
+                      />                    ))}
                   </div>"
                   <p className="text-gray-300 mb-6 italic">"
                     "{testimonial.content}"
@@ -498,14 +491,12 @@ const AIBusinessIntelligenceDashboard = () => {
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />              </a>
               <a"
                 href="tel:+13024640950""
                 className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group"
               >"
-                <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
+                <Phone className="w-5 h-5 mr-2" />                Call +1 302 464 0950
               </a>
             </div>
           </motion.div>
@@ -518,8 +509,7 @@ const AIBusinessIntelligenceDashboard = () => {
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
             <div className="flex flex-col items-center">"
-              <Phone className="w-8 h-8 text-cyan-400 mb-4" />"
-              <div className="text-white font-semibold">Phone</div>
+              <Phone className="w-8 h-8 text-cyan-400 mb-4" />"              <div className="text-white font-semibold">Phone</div>
               <a"
                 href="tel:+13024640950""
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -528,8 +518,7 @@ const AIBusinessIntelligenceDashboard = () => {
               </a>
             </div>"
             <div className="flex flex-col items-center">"
-              <Mail className="w-8 h-8 text-cyan-400 mb-4" />"
-              <div className="text-white font-semibold">Email</div>
+              <Mail className="w-8 h-8 text-cyan-400 mb-4" />"              <div className="text-white font-semibold">Email</div>
               <a"
                 href="mailto:kleber@ziontechgroup.com""
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -539,8 +528,7 @@ const AIBusinessIntelligenceDashboard = () => {
             </div>"
             <div className="flex flex-col items-center">"
               <MapPin className="w-8 h-8 text-cyan-400 mb-4" />"
-              <div className="text-white font-semibold">Address</div>"
-              <div className="text-gray-300 text-sm">
+              <div className="text-white font-semibold">Address</div>"              <div className="text-gray-300 text-sm">
                 364 E Main St STE 1008
                 <br />
                 Middletown DE 19709
@@ -550,8 +538,7 @@ const AIBusinessIntelligenceDashboard = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIBusinessIntelligenceDashboard;
 '"`

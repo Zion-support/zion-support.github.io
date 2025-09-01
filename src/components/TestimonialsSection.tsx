@@ -1,7 +1,6 @@
 import React, { useState } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-
   Star, 
   Quote, 
   ChevronLeft, 
@@ -24,7 +23,6 @@ interface Testimonial {
   industry: string;
   results: string[];
   verified: boolean;
-
 }
 ;
 const testimonials: Testimonial[] = [
@@ -144,8 +142,7 @@ export const TestimonialsSection: React.FC = props {
   return ("
     <section className = "py-20 bg-zion-blue-dark">"
       <div className="container mx-auto px-4">"
-        <div className="text-center mb-16">"
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="text-center mb-16">"          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             What Our Users Say
           </h2>"
           <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
@@ -160,13 +157,11 @@ export const TestimonialsSection: React.FC = props {
 
               {/* Quote icon */}"
               <div className="mb-4">"
-                <Quote className="w-8 h-8 text-zion-cyan opacity-60" />
-              </div>
+                <Quote className="w-8 h-8 text-zion-cyan opacity-60" />              </div>
               {/* Rating */}"
               <div className="flex items-center mb-4">;
                 {[...Array(testimonial.rating)].map((_, i) => (;"
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />                ))}
               </div>
               {/* Content */}"
               <p className="text-zion-slate-light mb-6 leading-relaxed">"
@@ -262,8 +257,7 @@ export const TestimonialsSection: React.FC = props {
                   "
                   <Quote className="w-8 h-8 text-cyan-400 mb-4" />
                   "
-                  <blockquote className="text-lg md:text-xl text-white mb-6 leading-relaxed">"
-                    "{current.content}"
+                  <blockquote className="text-lg md:text-xl text-white mb-6 leading-relaxed">"                    "{current.content}"
                   </blockquote>
                   "
                   <div className="space-y-3">"
@@ -279,8 +273,7 @@ export const TestimonialsSection: React.FC = props {
                   {/* Verification Badge */}
                   {current.verified && ("
                     <div className="flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-lg p-3">"
-                      <CheckCircle className="w-5 h-5 text-green-400" />"
-                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>
+                      <CheckCircle className="w-5 h-5 text-green-400" />"                      <span className="text-green-400 text-sm font-medium">Verified Customer</span>
                     </div>
                   )}
 
@@ -290,8 +283,7 @@ export const TestimonialsSection: React.FC = props {
                     <ul className="space-y-2">
                       {current.results.map((result, index) => ("
                         <li key={index} className="flex items-center gap-2 text-sm text-gray-300">"
-                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                          {result}
+                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />                          {result}
                         </li>) ) }
                     </ul>
                   </div>
@@ -312,8 +304,7 @@ export const TestimonialsSection: React.FC = props {
               className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110""
               aria-label="Previous testimonial"
             >"
-              <ChevronLeft className="w-5 h-5" />
-            </button>
+              <ChevronLeft className="w-5 h-5" />            </button>
 
             {/* Dots */}"
             <div className="flex gap-2">
@@ -337,8 +328,7 @@ export const TestimonialsSection: React.FC = props {
               className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110""
               aria-label="Next testimonial"
             >"
-              <ChevronRight className="w-5 h-5" />
-            </button>
+              <ChevronRight className="w-5 h-5" />            </button>
           </div>
 
           {/* Auto-play Toggle */}"

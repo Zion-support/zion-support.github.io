@@ -1,63 +1,5 @@
 import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Dna,
-  Microscope,
-  Cpu,
-  Zap,
-  Globe,
-  Lock,
-  Eye,
-  Network,
-  TrendingUp,
-  Star,
-  ArrowRight,
-  ChevronDown,
-  ChevronUp,
-  ExternalLink,
-  Phone,
-  Mail,
-  MapPin'
-} from 'lucide-react';
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data/innovativeServices2027";
-
-const categoryColors: { [key: string]: string } = {
-'
-  'AI & Consciousness': 'from-purple-500 to-pink-500','
-  'Quantum AI': 'from-blue-500 to-cyan-500','
-  'Autonomous AI': 'from-green-500 to-emerald-500','
-  'Quantum Computing': 'from-indigo-500 to-purple-500','
-  'Quantum Finance': 'from-yellow-500 to-orange-500','
-  'Space Technology': 'from-purple-500 to-blue-500','
-  'Quantum Space': 'from-cyan-500 to-blue-500','
-  'Biotechnology': 'from-green-500 to-teal-500','
-  'Quantum Medicine': 'from-teal-500 to-blue-500','
-  'Quantum Security': 'from-red-500 to-pink-500','
-  'Nanotechnology': 'from-gray-500 to-slate-500','
-  'Neural Technology': 'from-violet-500 to-purple-500'
-};
-
-export const InnovativeServicesShowcase2027: React.FC = () => {;'
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect ( () => {
-    const observer = new IntersectionObserver (; ([entry]) => {;
-        if (entry.isIntersecting) {;
-          setIsVisible (true) ;
-        }
-      },
-      { threshold: 0.1 }
-    );
-'
-    const element = document.getElementById('innovative-services-2027');
-    if (element) {
+import { motion, AnimatePresence } from 'framer-motion';    if (element) {
 
       observer.observe(element)}
 
@@ -74,8 +16,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
   const contactInfo = {
 '
   phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com',;
-  ;
+    email: 'kleber@ziontechgroup.com',;  ;
   ;
   ;
   ;'
@@ -83,7 +24,6 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
   ;
 
 };
-
   return ("
     <section id = "innovative-services-2027" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
       {/* Animated Background Elements */}"
@@ -112,8 +52,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
           className="text-center mb-16"
 "
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">"
-            <Star className="w-5 h-5 text-zion-cyan mr-2" />"
-            <span className="text-zion-cyan font-semibold">2027 Innovation Showcase</span>
+            <Star className="w-5 h-5 text-zion-cyan mr-2" />"            <span className="text-zion-cyan font-semibold">2027 Innovation Showcase</span>
           </div>
 "
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">"
@@ -171,8 +110,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
             </button>;
             {serviceCategories2027.map ( (category) => {;
               const Icon = categoryIcons[category];
-              return()
-                <button
+              return()                <button
                   key = {category}
                   onClick={() => setSelectedCategory(category)}`
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${
@@ -185,8 +123,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
                   {Icon && <Icon className="w-4 h-4" />};
                   {category};
                 </button>;) ;
-            }) }
-          </div>
+            }) }          </div>
         </motion.div>
 
         {/* Services Grid */}
@@ -196,14 +133,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
   { opacity: 0,
   y: 30 ;
 
-}}
-          animate = {
+}}          animate = {
 
   isVisible ? { opacity: 1,;
   y: 0 ;
 
-} : { opacity: 0, y: 30 }}
-          transition = {
+} : { opacity: 0, y: 30 }}          transition = {
 
   { duration: 0.8,
   delay: 0.4 ;
@@ -213,8 +148,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
 
 
 
-}}"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+}}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {filteredServices.map ( (service, index) => (;
             <motion.div
@@ -293,8 +227,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
                     className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2"
 '
                     {expandedService === service.id ? 'Less' : 'Learn More'}"
-                    {expandedService === service.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                  </button>
+                    {expandedService === service.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}                  </button>
                 </div>
 
                 {/* Expanded Service Details */}
@@ -368,8 +301,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
 
                           {service.ctaLabel}"
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />"
-                          {service.external && <ExternalLink className="w-4 h-4" />}
-                        </a>
+                          {service.external && <ExternalLink className="w-4 h-4" />}                        </a>
                       </div>;
                     </motion.div>) }
                 </AnimatePresence>
@@ -384,14 +316,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
   { opacity: 0,
   y: 30 ;
 
-}}
-          animate = {
+}}          animate = {
 
   isVisible ? { opacity: 1,;
   y: 0 ;
 
-} : { opacity: 0, y: 30 }}
-          transition = {
+} : { opacity: 0, y: 30 }}          transition = {
 
   { duration: 0.8,
   delay: 0.6 ;
@@ -401,8 +331,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
 
 
 
-}}"
-          className="text-center"
+}}"          className="text-center"
 "
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;"
             <h3 className="text-3xl font-bold text-white mb-6">
@@ -423,8 +352,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
                 <span className="font-semibold">{contactInfo.email}</span>
               </div>"
               <div className="flex items-center justify-center gap-3 text-zion-cyan">"
-                <MapPin className="w-5 h-5" />"
-                <span className="font-semibold text-center">{contactInfo.address}</span>
+                <MapPin className="w-5 h-5" />"                <span className="font-semibold text-center">{contactInfo.address}</span>
               </div>
             </div>
 "
@@ -434,8 +362,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 
                 Schedule Consultation"
-                <ArrowRight className="w-4 h-4" />
-              </a>
+                <ArrowRight className="w-4 h-4" />              </a>
               <a"
                 href="https://ziontechgroup.com""
                 target="_blank""
@@ -443,8 +370,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2"
 
                 Visit Website"
-                <ExternalLink className="w-4 h-4" />
-              </a>
+                <ExternalLink className="w-4 h-4" />              </a>
             </div>;
           </div>;
         </motion.div>;

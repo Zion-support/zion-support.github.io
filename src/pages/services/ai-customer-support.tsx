@@ -7,8 +7,7 @@ import {
   Zap,
   Users,
   TrendingUp,
-  Shield,
-  Clock,
+  Shield,  Clock,
   BarChart3,
   Headphones,'
   Bot} from 'lucide-react.ts';
@@ -27,8 +26,7 @@ export default function AICustomerSupport(...args: any[]): any {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900"></div>"
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="text-center">"
-            <div className="max-w-4xl mx-auto mb-12">"
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <div className="max-w-4xl mx-auto mb-12">"              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 AI Customer Support
               </h1>"
               <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -68,8 +66,7 @@ export default function AICustomerSupport(...args: any[]): any {
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Intelligent Chatbots
-              </h3>"
-              <p className="text-gray-300">
+              </h3>"              <p className="text-gray-300">
                 Advanced AI chatbots that understand natural language and
                 provide accurate responses
               </p>
@@ -81,8 +78,7 @@ export default function AICustomerSupport(...args: any[]): any {
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 24/7 Availability
-              </h3>"
-              <p className="text-gray-300">
+              </h3>"              <p className="text-gray-300">
                 Provide instant customer support anytime, anywhere, without
                 human limitations
               </p>
@@ -94,8 +90,7 @@ export default function AICustomerSupport(...args: any[]): any {
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Smart Issue Resolution
-              </h3>"
-              <p className="text-gray-300">
+              </h3>"              <p className="text-gray-300">
                 AI that learns from customer interactions to provide better
                 solutions over time
               </p>
@@ -107,8 +102,7 @@ export default function AICustomerSupport(...args: any[]): any {
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Personalized Support
-              </h3>"
-              <p className="text-gray-300">
+              </h3>"              <p className="text-gray-300">
                 Tailored responses based on customer history and preferences
               </p>
             </div>
@@ -119,8 +113,7 @@ export default function AICustomerSupport(...args: any[]): any {
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Performance Analytics
-              </h3>"
-              <p className="text-gray-300">
+              </h3>"              <p className="text-gray-300">
                 Comprehensive insights into support performance and customer
                 satisfaction
               </p>
@@ -132,8 +125,7 @@ export default function AICustomerSupport(...args: any[]): any {
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Secure & Compliant
-              </h3>"
-              <p className="text-gray-300">
+              </h3>"              <p className="text-gray-300">
                 Enterprise-grade security with compliance for data protection
                 regulations
               </p>

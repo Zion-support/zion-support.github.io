@@ -102,8 +102,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-indigo-500/10 to-blue-500/10"></div>"
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-indigo-500/10 to-blue-500/10"></div>"        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -111,8 +110,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
             className="text-center max-w-4xl mx-auto"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6">"
-              <Atom className="w-4 h-4 mr-2" />
-              Next-Generation Computing
+              <Atom className="w-4 h-4 mr-2" />              Next-Generation Computing
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Quantum Computing Solutions
@@ -243,8 +241,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
               <div className="grid grid-cols-1 gap-4">
                 {benefits.map((benefit, index) => ("
                   <div key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />"
-                    <span className="text-slate-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />"                    <span className="text-slate-300">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -263,8 +260,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
                   </div>"
                   <h3 className="text-2xl font-bold text-white mb-4">
                     Quantum Ready?
-                  </h3>"
-                  <p className="text-slate-300 mb-6">
+                  </h3>"                  <p className="text-slate-300 mb-6">
                     Discover how quantum computing can transform your business
                     operations.
                   </p>"

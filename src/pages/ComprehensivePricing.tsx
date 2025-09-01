@@ -79,7 +79,6 @@ const pricingTiers = [
     ],
     popular: false},
 ];
-
 export default function ComprehensivePricing() {
 '
   const [selectedCategory, setSelectedCategory] = useState<any>('all');'
@@ -105,8 +104,7 @@ export default function ComprehensivePricing() {
     let matchesPrice = true;'
     if (selectedPriceRange !== 'all') {
 '
-      const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-      switch (selectedPriceRange) {
+      const price = parseInt(service.price.replace(/[^0-9]/g, ''));      switch (selectedPriceRange) {
 '
         case 'under-1000':
           matchesPrice = price < 1000;
@@ -125,7 +123,6 @@ export default function ComprehensivePricing() {
 
     return matchesCategory && matchesPrice;
   }) ;
-
   return()
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Header */}"
@@ -163,8 +160,7 @@ export default function ComprehensivePricing() {
                 </h3>"
                 <p className="text-zion-slate-light text-sm">
                   {contactInfo.address}
-                </p>
-              </div>
+                </p>              </div>
             </div>
           </div>
         </div>
@@ -203,8 +199,7 @@ export default function ComprehensivePricing() {
                   <ul className="space-y-3 mb-6">
                     {tier.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center">"
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />"
-                        <span className="text-zion-slate-dark">{feature}</span>
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />"                        <span className="text-zion-slate-dark">{feature}</span>
                       </li>
                     ))}
                   </ul>"
@@ -212,8 +207,7 @@ export default function ComprehensivePricing() {
                     <Button'`
                       className={`w-full ${tier.popular ? 'bg-zion-cyan text-white hover:bg-zion-cyan-dark' : 'bg-zion-blue text-white hover:bg-zion-blue-dark'}`}
                     >
-                      Get Started"
-                      <ArrowRight className="h-4 w-4 ml-2" />
+                      Get Started"                      <ArrowRight className="h-4 w-4 ml-2" />
                     </Button>
                   </Link>
                 </CardContent>
@@ -300,8 +294,7 @@ export default function ComprehensivePricing() {
                       <div
                         key={index}"
                         className="flex items-center text-sm text-zion-slate-dark"
-                      >"
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                      >"                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </div>) ) }
                   </div>
@@ -333,8 +326,7 @@ export default function ComprehensivePricing() {
                       <span className="font-semibold">{service.rating}</span>"
                       <span className="text-zion-slate-light ml-1">
                         ({service.reviews})
-                      </span>
-                    </div>
+                      </span>                    </div>
                     <Badge"
                       variant="outline""
                       className="border-zion-cyan text-zion-cyan"
@@ -347,16 +339,14 @@ export default function ComprehensivePricing() {
                   <div className="space-y-2">"
                     <Link to={service.link} className="w-full">"
                       <Button className="w-full bg-zion-cyan text-white hover:bg-zion-cyan-dark">
-                        Learn More"
-                        <ArrowRight className="h-4 w-4 ml-2" />
+                        Learn More"                        <ArrowRight className="h-4 w-4 ml-2" />
                       </Button>
                     </Link>"
                     <Link to="/contact" className="w-full">
                       <Button"
                         variant="outline""
                         className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white"
-                      >"
-                        <Phone className="h-4 w-4 mr-2" />
+                      >"                        <Phone className="h-4 w-4 mr-2" />
                         Get Quote
                       </Button>
                     </Link>
@@ -376,8 +366,7 @@ export default function ComprehensivePricing() {
                   setSelectedCategory('all');'
                   setSelectedPriceRange('all');
                 }}"
-                className="mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"
-              >
+                className="mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"              >
                 Clear Filters
               </Button>
             </div>) }
@@ -433,8 +422,7 @@ export default function ComprehensivePricing() {
               </h3>"
               <p className="text-zion-slate-light">
                 Ready for immediate deployment
-              </p>
-            </div>
+              </p>            </div>
           </div>
         </div>
       </div>
@@ -453,8 +441,7 @@ export default function ComprehensivePricing() {
                 <Button"
                   size="lg""
                   className="bg-white text-zion-blue hover:bg-gray-100 px-8 py-3"
-                >"
-                  <Phone className="h-5 w-5 mr-2" />
+                >"                  <Phone className="h-5 w-5 mr-2" />
                   Get Free Consultation
                 </Button>
               </Link>"
@@ -463,8 +450,7 @@ export default function ComprehensivePricing() {
                   size="lg""
                   variant="outline""
                   className="border-white text-white hover:bg-white hover:text-zion-blue px-8 py-3"
-                >"
-                  <Mail className="h-5 w-5 mr-2" />
+                >"                  <Mail className="h-5 w-5 mr-2" />
                   Request Demo
                 </Button>
               </Link>

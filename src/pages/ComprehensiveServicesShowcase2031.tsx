@@ -8,8 +8,7 @@ import {
   Search,
   TrendingUp,
   Users,
-  Globe,
-  Cpu,
+  Globe,  Cpu,
   Database,
   Lock,
   BarChart3,
@@ -318,8 +317,7 @@ import { SEO } from '../components/SEO';
       />
 
       {/* Hero Section */}"
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -327,8 +325,7 @@ import { SEO } from '../components/SEO';
             className="mb-8"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 text-purple-300 text-sm font-medium mb-6">"
-              <Rocket className="w-4 h-4 mr-2" />
-              Revolutionary Technology Solutions 2031
+              <Rocket className="w-4 h-4 mr-2" />              Revolutionary Technology Solutions 2031
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Comprehensive Services Showcase 2031
@@ -352,8 +349,7 @@ import { SEO } from '../components/SEO';
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all"
             >
               Get Started Today"
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
+              <ArrowRight className="ml-2 w-5 h-5" />            </a>
             <a"
               href="#pricing""
               className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors"
@@ -401,8 +397,7 @@ import { SEO } from '../components/SEO';
                   </div>
                   {service.featured && ("
                     <div className="inline-flex items-center px-2 py-1 bg-yellow-500/20 text-yellow-300 text-xs font-medium rounded-full">"
-                      <Star className="w-3 h-3 mr-1" />
-                      Featured
+                      <Star className="w-3 h-3 mr-1" />                      Featured
                     </div>) }
                 </div>
 "
@@ -429,8 +424,7 @@ import { SEO } from '../components/SEO';
                 <ul className="space-y-2 mb-6">
                   {service.features.slice(0, 3).map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start text-sm">"
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -440,8 +434,7 @@ import { SEO } from '../components/SEO';
                   className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-medium rounded-lg transition-all group-hover:scale-105"
                 >
                   Learn More"
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
+                  <ArrowRight className="ml-2 w-4 h-4" />                </a>
               </motion.div>) ) }
           </div>
         </div>
@@ -491,8 +484,7 @@ import { SEO } from '../components/SEO';
                       key={serviceIndex}"
                       className="flex items-center text-sm"
                     >"
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />"
-                      <span className="text-gray-300">{service}</span>
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />"                      <span className="text-gray-300">{service}</span>
                     </li>
                   ))}
                 </ul>
@@ -538,8 +530,7 @@ import { SEO } from '../components/SEO';
               >
                 {index === 1 && ("
                   <div className="inline-flex items-center px-3 py-1 bg-purple-500 text-white text-sm font-medium rounded-full mb-4">"
-                    <Star className="w-4 h-4 mr-1" />
-                    Most Popular
+                    <Star className="w-4 h-4 mr-1" />                    Most Popular
                   </div>
                 )}
 "
@@ -557,8 +548,7 @@ import { SEO } from '../components/SEO';
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -610,8 +600,7 @@ import { SEO } from '../components/SEO';
               >"
                 <div className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">"
                   <CheckCircle className="w-5 h-5 text-purple-400" />
-                </div>"
-                <p className="text-lg text-gray-300">{benefit}</p>
+                </div>"                <p className="text-lg text-gray-300">{benefit}</p>
               </motion.div>
             ))}
           </div>
@@ -640,14 +629,12 @@ import { SEO } from '../components/SEO';
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all"
               >
                 Start Your Transformation"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+                <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a"
                 href="tel:+13024640950""
                 className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors"
               >"
-                <Phone className="mr-2 w-5 h-5" />
-                Call +1 302 464 0950
+                <Phone className="mr-2 w-5 h-5" />                Call +1 302 464 0950
               </a>
             </div>"
             <div className="mt-6 text-sm text-gray-400">

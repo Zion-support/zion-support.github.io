@@ -7,8 +7,7 @@ import {
   Eye,
   Zap,
   Users,
-  Globe,
-  Database,
+  Globe,  Database,
   Cpu,
   Network,
   Brain,
@@ -148,8 +147,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
     'FedRAMP',
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+  return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
@@ -160,8 +158,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
           >"
             <div className="flex justify-center mb-6">"
               <div className="p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full">"
-                <Shield className="h-12 w-12 text-white" />
-              </div>
+                <Shield className="h-12 w-12 text-white" />              </div>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Cybersecurity Elite
@@ -177,14 +174,12 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
               >
                 Secure Your Business"
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+                <ArrowRight className="ml-2 h-5 w-5" />              </a>
               <a"
                 href="tel:+13024640950""
                 className="inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300"
               >"
-                <Phone className="mr-2 h-5 w-5" />
-                Call Security Team
+                <Phone className="mr-2 h-5 w-5" />                Call Security Team
               </a>
             </div>
           </motion.div>
@@ -306,8 +301,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
               >"
                 <div className="p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mx-auto mb-4">"
                   <Award className="h-6 w-6 text-white" />
-                </div>"
-                <h3 className="text-lg font-semibold text-white">{standard}</h3>
+                </div>"                <h3 className="text-lg font-semibold text-white">{standard}</h3>
               </motion.div>
             ))}
           </div>
@@ -377,8 +371,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-white">{feature}</span>
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -424,8 +417,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
                 Call Security Team
               </h3>
               <a"
-                href="tel:+13024640950""
-                className="text-zion-slate-light hover:text-white transition-colors duration-300"
+                href="tel:+13024640950""                className="text-zion-slate-light hover:text-white transition-colors duration-300"
               >
                 +1 (302) 464-0950
               </a>
@@ -439,8 +431,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
                 Email Security Team
               </h3>
               <a"
-                href="mailto:kleber@ziontechgroup.com""
-                className="text-zion-slate-light hover:text-white transition-colors duration-300"
+                href="mailto:kleber@ziontechgroup.com""                className="text-zion-slate-light hover:text-white transition-colors duration-300"
               >
                 kleber@ziontechgroup.com
               </a>
@@ -452,8 +443,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Visit Security Center
-              </h3>"
-              <p className="text-zion-slate-light">
+              </h3>"              <p className="text-zion-slate-light">
                 364 E Main St STE 1008
                 <br />
                 Middletown, DE 19709
@@ -467,8 +457,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Security Assessment"
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+              <ArrowRight className="ml-2 h-5 w-5" />            </a>
           </div>
         </div>
       </section>
@@ -485,8 +474,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
               className="text-zion-slate-light hover:text-white transition-colors duration-300"
             >
               Visit Website"
-              <ExternalLink className="inline ml-1 h-4 w-4" />
-            </a>
+              <ExternalLink className="inline ml-1 h-4 w-4" />            </a>
             <a"
               href="https://ziontechgroup.com/privacy""
               className="text-zion-slate-light hover:text-white transition-colors duration-300"
@@ -503,8 +491,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
         </div>
       </footer>
     </div>
-  );
-};
+  )};
 
 export default AICybersecurityElite;
 '"`

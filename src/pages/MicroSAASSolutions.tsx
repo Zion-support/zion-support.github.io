@@ -1,55 +1,18 @@
 import React from 'react';'
-import { SEO } from '../components/SEO';
-import {
-
-  Code,
-  Zap,
-  Users,
-  TrendingUp,
-  Shield,
-  Globe,
-  Building,
-  Rocket,
-  Cpu,
-  BarChart3,
-  Database,
-  Cloud,
-  Lock,
-  Smartphone,
-  Target,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain'
- } from 'lucide-react';
-
-export default function MicroSAASSolutions(...args[]):  {
-
-  const services = [
-    {
-
-      title: "Custom SAAS Development","
-      description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",
-      icon: Code,"
-      features["Custom workflows", "API integration", "User management", "Scalable architecture"];
-    },;
+import { SEO } from '../components/SEO';    },;
     {
 "
       title: "Multi-tenant Architecture","
       description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",
       icon: Users,"
       features["Data isolation", "Resource sharing", "Customization options", "Performance optimization"];
-    },;
-    {
+    },;    {
 "
       title: "Subscription Management","
       description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",
       icon: BarChart3,"
       features["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"];
-    },;
-    {
+    },;    {
 "
       title: "API Development & Integration","
       description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",
@@ -125,10 +88,8 @@ export default function MicroSAASSolutions(...args[]):  {
       icon: Building;
     },;
     {;"
-      name: "Real Estate",;"
-      description: "Property management and client portals",;
-      icon: Building;
-    };
+      name: "Real Estate",;"      description: "Property management and client portals",;
+      icon: Building};
   ];
 
   const processSteps = [
@@ -162,8 +123,7 @@ export default function MicroSAASSolutions(...args[]):  {
       description: "Comprehensive testing and production deployment",;
       icon: Rocket,;"
       duration: "2-4 weeks";
-    };
-  ];
+    };  ];
 
   return()
     <>
@@ -172,8 +132,7 @@ export default function MicroSAASSolutions(...args[]):  {
         description="Transform your business with custom Micro SAAS solutions. From development to deployment, we deliver scalable, secure, and efficient software-as-a-service applications.""
         keywords="micro saas, custom software, saas development, software solutions, business applications"
       />
-"
-      <div className="min-h-screen bg-futuristic">
+"      <div className="min-h-screen bg-futuristic">
         {/* Hero Section */}"
         <section className="relative pt-32 pb-20 overflow-hidden">"
           <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>"
@@ -185,8 +144,7 @@ export default function MicroSAASSolutions(...args[]):  {
           <div className="container-responsive relative z-10">"
             <div className="text-center max-w-4xl mx-auto">"
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8">"
-                <Code className="w-10 h-10 text-white" />
-              </div>
+                <Code className="w-10 h-10 text-white" />              </div>
 "
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Micro SAAS"
@@ -208,8 +166,7 @@ export default function MicroSAASSolutions(...args[]):  {
                   <span>Cloud Native</span>
                 </div>"
                 <div className="flex items-center gap-2 text-zion-blue">"
-                  <Shield className="w-4 h-4" />
-                  <span>Enterprise Security</span>
+                  <Shield className="w-4 h-4" />                  <span>Enterprise Security</span>
                 </div>
               </div>
             </div>
@@ -242,8 +199,7 @@ export default function MicroSAASSolutions(...args[]):  {
                   <div className="space-y-3">
                     {service.features.map((feature, featureIndex) => ("
                       <div key={featureIndex} className="flex items-center gap-3">"
-                        <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />"
-                        <span className="text-zion-slate-light text-sm">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />"                        <span className="text-zion-slate-light text-sm">{feature}</span>
                       </div>
                     ))}
                   </div>

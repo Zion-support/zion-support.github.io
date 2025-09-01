@@ -19,8 +19,7 @@ import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";"
 import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";"
 import { SocialShareSection } from "@/components/SocialShareSection";"
 import { useTranslation } from "react-i18next";"
-import { useLanguage } from "@/context/LanguageContext";
-import {
+import { useLanguage } from "@/context/LanguageContext";import {
 
   ArrowRight,
   Users,
@@ -94,10 +93,9 @@ import {
       <SEO"
         title={t("home.seo_title")}"
         description={t("home.seo_description")}"
-        keywords={t("home.seo_keywords")}"
-        canonical="https://ziontechgroup.com/"
-      />
-              <HeroSection />
+        keywords={t("home.seo_keywords")}"        canonical="https://ziontechgroup.com/"
+       />
+              <HeroSection  />
 
       {/* Quick Access Tools Section */}"
       <section className="py-16 bg-zion-blue-dark">"
@@ -125,38 +123,35 @@ import {
                 <p className="text-zion-slate-light mb-4">{feature.description}</p>'`
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>"
                   <span>{t("general.explore")}</span>'`
-                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
-                </div>
+                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />                </div>
               </Link>) ) }
           </div>
         </div>
       </section>
 
-      <CategoriesSection />
-      <BenefitsSection />
+      <CategoriesSection  />
+      <BenefitsSection  />
 
       {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
+      <FeaturesGuideSection  />
 
-      <HowItWorksSection />
-      <FeaturedListingsSection />
-      <TestimonialCarousel />
-      <TrustedBySection />
-      <BlogSection />
+      <HowItWorksSection  />
+      <FeaturedListingsSection  />
+      <TestimonialCarousel  />
+      <TrustedBySection  />
+      <BlogSection  />
 
       {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />
+      <SocialShareSection  />
 
       <WaitlistSection />
       <FloatingCTA />
       <Footer />
-    </div>) };
-            </a>;
+    </div>) };            </a>;
           </div>;
         </div>;
       </div>;
     </div>;) ;
 };
-
 export default Home;
 '"`

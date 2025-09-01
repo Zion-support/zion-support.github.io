@@ -10,8 +10,7 @@ import {
   DollarSign,
   Shield,
   Users,
-  Target,
-  ArrowRight,
+  Target,  ArrowRight,
   CheckCircle,
   Star,
   Phone,
@@ -180,8 +179,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
       description: 'Increased employee output and satisfaction'},
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>"
@@ -193,8 +191,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
           >"
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-8">"
               <Workflow className="w-10 h-10 text-white" />
-            </div>"
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            </div>"            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered Business Process Optimization
             </h1>"
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -208,14 +205,12 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
                 className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
               >
                 Start Optimizing Today"
-                <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200" />
-              </Link>
+                <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200" />              </Link>
               <a"
                 href="tel:+13024640950""
                 className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20 hover:border-blue-400/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
               >"
-                <Phone className="w-5 h-5 mr-2 inline-block" />
-                Call Now
+                <Phone className="w-5 h-5 mr-2 inline-block" />                Call Now
               </a>
             </div>
           </motion.div>
@@ -295,8 +290,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
                 viewport={{ once: true }}"
                 className="flex items-start space-x-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300"
               >"
-                <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />"
-                <span className="text-white font-medium">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />"                <span className="text-white font-medium">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -407,8 +401,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center space-x-3">"
-                      <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />"
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -492,8 +485,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center justify-center space-x-3 text-white">"
-                <MapPin className="w-5 h-5 text-blue-400" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <MapPin className="w-5 h-5 text-blue-400" />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
 "
@@ -503,14 +495,12 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
                 className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
               >
                 Schedule a Consultation"
-                <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200" />
-              </Link>
+                <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200" />              </Link>
               <a"
                 href="tel:+13024640950""
                 className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20 hover:border-blue-400/50"
               >"
-                <Phone className="w-5 h-5 mr-2 inline-block" />
-                Call Now
+                <Phone className="w-5 h-5 mr-2 inline-block" />                Call Now
               </a>
             </div>
           </motion.div>
@@ -524,8 +514,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
             <Star className="w-5 h-5 text-blue-400" />"
             <span className="text-white font-semibold">Zion Tech Group</span>"
             <Star className="w-5 h-5 text-purple-400" />
-          </div>"
-          <p className="text-gray-400">
+          </div>"          <p className="text-gray-400">
             Transforming businesses through intelligent AI solutions and process
             optimization.
           </p>"
@@ -540,8 +529,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
         </div>
       </footer>
     </div>
-  );
-};
+  )};
 
 export default AIBusinessProcessOptimization;
 '"`

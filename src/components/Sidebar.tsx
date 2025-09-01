@@ -23,8 +23,7 @@ import {
   Star,
   Building,
   BookOpen,
-  HelpCircle,
-  ChevronRight,
+  HelpCircle,  ChevronRight,
   Menu,
   X,
   Users,
@@ -61,7 +60,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
     'main','
     'services',
   ]);
-
   const navigation: SidebarItem[] = [
     {
 '
@@ -579,7 +577,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
     }
     return location.pathname.startsWith (href) ;
   };
-
   if (!isOpen) {
 
     return()
@@ -588,21 +585,17 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
           {navigationSections.slice(0, 6).map(section => {
 
             const Icon = section.icon;
-            return()
-              <button
+            return()              <button
                 key={section.id}
                 onClick={onToggle}"
                 className="p-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
                 title={section.title}
               >"
-                <Icon className="w-5 h-5" />
-              </button>
-            );
-          })}
+                <Icon className="w-5 h-5" />              </button>
+            )})}
         </div>
       </div>) ;
   }
-
   return ("
     <div className="fixed left-0 top-16 z-40 w-80 h-full bg-slate-900/95 backdrop-blur-md border-r border-slate-700/50 overflow-y-auto">"
       <div className="p-4">"
@@ -612,8 +605,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
             onClick={onToggle}"
             className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
           >"
-            <X className="w-5 h-5" />
-          </button>
+            <X className="w-5 h-5" />          </button>
         </div>
 "
         <div className="space-y-2">
@@ -622,8 +614,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
             const Icon = section.icon;
             const isExpanded = expandedSections.includes (section.id) ;
 
-            return ("
-              <div key={section.id} className="space-y-1">
+            return ("              <div key={section.id} className="space-y-1">
                 <button
                   onClick={() => toggleSection(section.id)}"
                   className="w-full flex items-center justify-between p-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
@@ -634,8 +625,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                   </div>
                   <ChevronDown'
                     className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
-                  />
-                </button>
+                  />                </button>
 
                 {isExpanded && ("
                   <div className="ml-4 space-y-1">
@@ -644,8 +634,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                       const LinkIcon = link.icon;
                       const active = isActive (link.href) ;
 
-                      return()
-                        <Link
+                      return()                        <Link
                           key={link.href}
                           to={link.href}`
                           className={`block p-3 rounded-lg transition-colors group ${
@@ -657,8 +646,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                         >"
                           <div className="flex items-center space-x-3">"
                             <LinkIcon className="w-4 h-4" />"
-                            <div className="flex-1 min-w-0">"
-                              <div className="font-medium">{link.name}</div>
+                            <div className="flex-1 min-w-0">"                              <div className="font-medium">{link.name}</div>
                               {link.description && (
                                 <div'`
                                   className={`text-xs ${active ? 'text-cyan-100' : 'text-slate-400'}`}
@@ -673,8 +661,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                     }) }
                   </div>) }
               </div>) ;
-          }) }
-        </div>
+          }) }        </div>
 
         {/* Quick Actions */}"
         <div className="mt-8 pt-6 border-t border-slate-700">"
@@ -689,8 +676,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
               <div className="flex items-center space-x-3">"
                 <DollarSign className="w-4 h-4" />"
                 <span className="font-medium">Get Quote</span>"
-                <ExternalLink className="w-4 h-4 ml-auto" />
-              </div>
+                <ExternalLink className="w-4 h-4 ml-auto" />              </div>
             </Link>
             <Link"
               to="/schedule-demo""
@@ -699,8 +685,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
               <div className="flex items-center space-x-3">"
                 <Calendar className="w-4 h-4" />"
                 <span className="font-medium">Schedule Demo</span>"
-                <ExternalLink className="w-4 h-4 ml-auto" />
-              </div>
+                <ExternalLink className="w-4 h-4 ml-auto" />              </div>
             </Link>
           </div>
         </div>
@@ -716,8 +701,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
               <span>contact@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center space-x-2">"
-              <PhoneCall className="w-3 h-3" />
-              <span>+1 (555) 123-4567</span>
+              <PhoneCall className="w-3 h-3" />              <span>+1 (555) 123-4567</span>
             </div>
           </div>
         </div>

@@ -1,53 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';'
 import { Link, useLocation  } from 'react-router-dom.ts';
-import { Menu, 
-import { motion, AnimatePresence  } from 'framer - motion.ts';
-
-
-  X, 
-  ChevronDown, 
-  Search, 
-  User, 
-  Settings,
-  Bell,
-  Sun,
-  Moon,
-  Monitor,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  Atom,
-  ShoppingCart,
-  BarChart3,
-  Users,
-  Building,
-  Rocket,
-  Star'
- } from 'lucide-react.ts';
-
-interface NavigationItem {
-  label: anystring;
-  href: string;
-  icon?: React.ReactNode;
-  children?: NavigationItem[];
-  featured?: boolean;
-
-
-}
-
-interface EnhancedNavigationProps extends React.PropsWithChildren<{}> {
-
-  className?: string;'
-  onThemeChange?: (theme: 'light' | 'dark' | 'system')  => void;
-
-}
-
 const navigationItems: NavigationItem[] = ['
   { label: 'Home', href: '/' },
   {
@@ -170,8 +123,7 @@ const navigationItems: NavigationItem[] = ['
       { label: 'Careers', href: '/careers' },'
       { label: 'Partners', href: '/partners' },'
       { label: 'News', href: '/news' },'
-      { label: 'Case Studies', href: '/case-studies' },'
-      { label: 'Blog', href: '/blog' }
+      { label: 'Case Studies', href: '/case-studies' },'      { label: 'Blog', href: '/blog' }
     ]
   },
   {
@@ -198,8 +150,7 @@ const navigationItems: NavigationItem[] = ['
 export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 '
 className:  '',;
-  onThemeChange ;
-}) => {;
+  onThemeChange }) => {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<any>(null);'
   const [theme, setTheme] = useState<any>('system');
@@ -255,8 +206,7 @@ className:  '',;
     address: "364 E Main St STE 1008 Middletown DE 19709"
   };
 
-  return()
-    <nav className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+  return()    <nav className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 
       isScrolled '
         ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg' '
@@ -269,8 +219,7 @@ className:  '',;
             <Link to="/" className="flex items-center space-x-2">"
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">"
                 <Zap className="w-5 h-5 text-white" />
-              </div>"
-              <span className="text-xl font-bold text-gray-900 dark:text-white">
+              </div>"              <span className="text-xl font-bold text-gray-900 dark:text-white">
                 Zion Tech Group
               </span>
             </Link>
@@ -286,8 +235,7 @@ className:  '',;
                     className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   >
                     <span>{item.label}</span>"
-                    <ChevronDown className="w-4 h-4" />
-                  </button>
+                    <ChevronDown className="w-4 h-4" />                  </button>
                 ) : (
                   <Link
                     to={item.href}"
@@ -356,8 +304,7 @@ className:  '',;
                     : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'`
                 }`}
               >"
-                <Sun className="w-4 h-4" />
-              </button>
+                <Sun className="w-4 h-4" />              </button>
               <button'
                 onClick={() => handleThemeChange('dark')}`
                 className={`p-2 rounded-md transition-colors ${
@@ -367,8 +314,7 @@ className:  '',;
                     : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'`
                 }`}
               >"
-                <Moon className="w-4 h-4" />
-              </button>
+                <Moon className="w-4 h-4" />              </button>
               <button'
                 onClick={() => handleThemeChange('system')}`
                 className={`p-2 rounded-md transition-colors ${
@@ -378,8 +324,7 @@ className:  '',;
                     : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'`
                 }`}
               >"
-                <Monitor className="w-4 h-4" />
-              </button>
+                <Monitor className="w-4 h-4" />              </button>
             </div>
 
             {/* Contact Button */}
@@ -387,8 +332,7 @@ className:  '',;
               to="/contact""
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
             >"
-              <Phone className="w-4 h-4 mr-2" />
-              Get Quote
+              <Phone className="w-4 h-4 mr-2" />              Get Quote
             </Link>
           </div>
 
@@ -398,8 +342,7 @@ className:  '',;
               onClick={() => setIsOpen(!isOpen)}"
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
             >"
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}            </button>
           </div>
         </div>
       </div>
@@ -432,8 +375,7 @@ className:  '',;
                                 <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${
 '
                                   activeDropdown === item.label ? 'rotate-180' : ''`
-                                }`} />
-                              </button>
+                                }`} />                              </button>
                               
                               {activeDropdown === item.label && (<motion.div
                                   initial={{ opacity: 0, y: -10 }}
@@ -474,15 +416,13 @@ className:  '',;
                   <span>info@ziontechgroup.com</span>
                 </div>"
                 <div className="flex items-center space-x-4 text-slate-400">"
-                  <MapPin className="w-4 h-4" />
-                  <span>123 Tech Street, Digital City</span>
+                  <MapPin className="w-4 h-4" />                  <span>123 Tech Street, Digital City</span>
                 </div>
                 <Link"
                   to="/contact""
                   className="mt-4 inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
                 >"
-                  <Phone className="w-4 h-4 mr-2" />
-                  Get Quote
+                  <Phone className="w-4 h-4 mr-2" />                  Get Quote
                 </Link>
               </div>
             </div>

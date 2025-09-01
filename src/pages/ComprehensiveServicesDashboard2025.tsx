@@ -34,7 +34,6 @@ import {
   getServicesByCategory,
   getServicesBySource,'
   ServiceIndex} from '../data/comprehensive-services-index-2025';
-
 const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
 '
   const [searchTerm, setSearchTerm] = useState('');'
@@ -96,7 +95,6 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
       'IT Services': 'from-slate-500 to-gray-600'};'
     return colors[category] || 'from-gray-500 to-gray-600';
   };
-
   const getCategoryIcon = (category: anystring) => {
 
     const icons: { [key: string]: React.ReactNode } = {
@@ -582,6 +580,5 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
 export default ComprehensiveServicesDashboard2025;
 '"`

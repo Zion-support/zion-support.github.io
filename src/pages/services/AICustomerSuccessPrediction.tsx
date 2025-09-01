@@ -1,167 +1,5 @@
 import React, { useState } from 'react';'
-import { motion } from 'framer-motion';
-import {
-
-  Brain,
-  TrendingUp,
-  Users,
-  Zap,
-  Shield,
-  Globe,
-  Database,
-  Cloud,
-  Lock,
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  PieChart,
-  LineChart,
-  Activity,
-  Target,
-  Lightbulb,
-  Eye,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Phone,
-  Mail,
-  MapPin,
-  BarChart3,
-  MessageCircle,
-  Calendar,
-  AlertTriangle,
-  Star'
-} from 'lucide-react';
-import { SEO } from "../../components/SEO";
-;
-const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
-
-  const features = [
-    {
-
-      icon: Brain,'
-      title: 'AI-Powered Prediction Engine','
-      description: 'Advanced machine learning algorithms that predict customer churn, upsell opportunities, and success probability with 95%+ accuracy.'
-    },
-    {
-
-      icon: TrendingUp,'
-      title: 'Real-time Risk Scoring','
-      description: 'Continuous monitoring and scoring of customer health, engagement, and satisfaction levels in real-time.'
-    },
-    {
-
-      icon: Users,'
-      title: 'Behavioral Analytics','
-      description: 'Deep analysis of customer behavior patterns, usage trends, and interaction history to predict future actions.';
-    },;
-    {;
-      icon: Zap,;'
-      title: 'Automated Alerts',;'
-      description: 'Intelligent notification system that alerts your team to at-risk customers and opportunities before they become critical.';
-    };
-  ];
-
-  const capabilities = [
-    {
-'
-      title: 'Predictive Analytics','
-      description: 'Machine learning models that forecast customer behavior and business outcomes',
-      icon: Brain,'
-      benefits: ['Churn prediction', 'Upsell opportunities', 'Customer lifetime value', 'Engagement scoring']
-    },
-    {
-'
-      title: 'Customer Health Monitoring','
-      description: 'Comprehensive dashboard showing real-time customer health metrics',
-      icon: Activity,'
-      benefits: ['Health scoring', 'Risk assessment', 'Trend analysis', 'Performance tracking']
-    },
-    {
-'
-      title: 'Automated Interventions','
-      description: 'AI-driven recommendations for customer success actions',
-      icon: Zap,'
-      benefits: ['Actionable insights', 'Timing optimization', 'Resource allocation', 'Success probability']
-    },;
-    {;'
-      title: 'Integration Hub',;'
-      description: 'Seamless integration with your existing CRM, support, and analytics tools',;
-      icon: Database,;'
-      benefits: ['API-first design', 'Real-time sync', 'Custom connectors', 'Data validation'];
-    };
-  ];
-
-  const useCases = [
-    {
-'
-      industry: 'SaaS & Technology','
-      description: 'Predict subscription renewals, identify expansion opportunities, and reduce churn through proactive engagement',
-      icon: Users,'
-      metrics: ['Churn Rate Reduction', 'Expansion Revenue', 'Customer Satisfaction', 'Lifetime Value']
-    },
-    {
-'
-      industry: 'E-commerce & Retail','
-      description: 'Forecast customer purchasing behavior, optimize retention campaigns, and increase repeat purchases',
-      icon: ShoppingCart,'
-      metrics: ['Repeat Purchase Rate', 'Customer Retention', 'Average Order Value', 'Loyalty Score']
-    },
-    {
-'
-      industry: 'Financial Services','
-      description: 'Predict loan defaults, identify high-value customers, and optimize product recommendations',
-      icon: DollarSign,'
-      metrics: ['Default Risk Score', 'Customer Value', 'Product Adoption', 'Risk Mitigation']
-    },;
-    {;'
-      industry: 'Healthcare',;'
-      description: 'Predict patient outcomes, optimize care plans, and improve treatment adherence',;
-      icon: Heart,;'
-      metrics: ['Patient Outcomes', 'Treatment Adherence', 'Care Plan Success', 'Resource Optimization'];
-    };
-  ];
-
-  const benefits = [
-    {
-
-      icon: TrendingUp,'
-      title: 'Increase Customer Retention','
-      description: 'Reduce churn by up to 40% through proactive intervention and personalized engagement strategies.'
-    },
-    {
-
-      icon: DollarSign,'
-      title: 'Boost Revenue Growth','
-      description: 'Identify and capitalize on upsell opportunities, increasing average customer value by 25-35%.'
-    },
-    {
-
-      icon: Users,'
-      title: 'Improve Customer Satisfaction','
-      description: 'Proactive customer success management leads to 30% higher satisfaction scores and NPS ratings.';
-    },;
-    {;
-      icon: Zap,;'
-      title: 'Optimize Resource Allocation',;'
-      description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.';
-    };
-  ];
-
-  const pricingPlans = [
-    {
-'
-      name: 'Starter','
-      price: '$299','
-      period: '/month','
-      description: 'Perfect for growing SaaS companies',
-      features[;'
-        'Up to 1,000 customers','
-        'Basic prediction models','
-        'Email alerts','
-        'Standard integrations','
-        'Email support'
+import { motion } from 'framer-motion';        'Email support'
       ],;'
       cta: 'Start Free Trial',
       popular: false
@@ -224,17 +62,15 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
   ];
 
   const integrations = ['
-    'Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;'
-    'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks';
+    'Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;'    'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks';
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO "
         title="AI Customer Success Prediction Platform | Zion Tech Group""
-        description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.""
-        keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
-      />
+        description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.""        keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
+       />
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -513,8 +349,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 <div className="space-y-2">
                   {capability.benefits.map((benefit, benefitIndex) => ("
                     <div key={benefitIndex} className="flex items-center text-sm text-gray-400">"
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />                      {benefit}
                     </div>
                   ))}
                 </ul>
@@ -622,8 +457,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 <div className="space-y-2">
                   {useCase.metrics.map((metric, metricIndex) => ("
                     <div key={metricIndex} className="flex items-center text-sm text-gray-400">"
-                      <Target className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                      {metric}
+                      <Target className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />                      {metric}
                     </div>
                   ))}
                 </div>
@@ -823,8 +657,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -994,8 +827,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             <div className="flex flex-wrap justify-center gap-4">"
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105">
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+                <ArrowRight className="ml-2 w-5 h-5" />              </a>
               <a "
                 href="tel:+13024640950" "
                 className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
@@ -1016,8 +848,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
               </div>"
               <div className="flex items-center">"
                 <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                <span>Cancel anytime</span>
-              </div>
+                <span>Cancel anytime</span>              </div>
             </div>
           </motion.div>
         </div>
@@ -1031,8 +862,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
               <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
                 <Phone className="w-6 h-6 text-white" />
               </div>"
-              <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"
-              <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300 transition-colors">
+              <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"              <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300 transition-colors">
                 +1 302 464 0950
               </a>"
               <p className="text-sm text-slate-400 mt-2">Available 24/7 for urgent support</p>
@@ -1041,8 +871,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
                 <Mail className="w-6 h-6 text-white" />
               </div>"
-              <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 transition-colors">
+              <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 transition-colors">
                 kleber@ziontechgroup.com
               </a>"
               <p className="text-sm text-slate-400 mt-2">Response within 2 hours</p>
@@ -1051,8 +880,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
               <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
                 <MapPin className="w-6 h-6 text-white" />
               </div>"
-              <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"
-              <p className="text-slate-300">
+              <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"              <p className="text-slate-300">
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
               </p>"

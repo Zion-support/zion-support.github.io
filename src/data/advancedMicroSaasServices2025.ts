@@ -24,20 +24,17 @@ export interface AdvancedMicroSaasService {
     email: string;
     website: string;
   
-};
-  technicalSpecs?: {
+};  technicalSpecs?: {
 
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
   marketSize?: string;
 }
-;
-export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
+;export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
   // AI-Powered Financial Services
   {
 

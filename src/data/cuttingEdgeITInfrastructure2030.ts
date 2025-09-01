@@ -1,4 +1,3 @@
-import { ProductListing  } from '@/types/listings';
 
 // Cutting Edge IT Infrastructure Services 2030 - Zion Tech Group
 // Advanced infrastructure solutions for modern enterprises
@@ -37,7 +36,6 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "6-8 weeks","
     integrations["Active Directory", "SAML/SSO", "Multi-Factor Authentication", "SIEM Systems", "Identity Providers"];
   },;
-
   // Edge Computing Orchestration Platform
   {
 "
@@ -71,7 +69,6 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "8-10 weeks","
     integrations["Kubernetes", "Docker", "Cloud Platforms", "IoT Devices", "Monitoring Tools"];
   },;
-
   // Quantum-Safe Cryptography Infrastructure
   {
 "
@@ -105,7 +102,6 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "12-16 weeks","
     integrations["PKI Systems", "Certificate Authorities", "Hardware Security Modules", "Key Management", "Security Protocols"];
   },;
-
   // Autonomous Data Center Management
   {
 "
@@ -139,7 +135,6 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "10-14 weeks","
     integrations["Building Management Systems", "Power Management", "Cooling Systems", "Monitoring Tools", "IoT Sensors"];
   },;
-
   // Software-Defined Network Fabric
   {
 "
@@ -173,7 +168,6 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "8-12 weeks","
     integrations["Network Controllers", "Virtual Switches", "Load Balancers", "Firewalls", "Monitoring Systems"];
   },;
-
   // Hyperconverged Infrastructure Platform
   {
 "
@@ -207,7 +201,6 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     setupTime: "10-12 weeks","
     integrations["Virtualization Platforms", "Storage Systems", "Network Equipment", "Management Tools", "Backup Solutions"];
   },;
-
   // Intelligent Cloud Cost Optimization
   {
 "
@@ -240,6 +233,5 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     roi: "600% within 10 months","
     setupTime: "4-6 weeks","
     integrations["AWS", "Azure", "Google Cloud", "Kubernetes", "Monitoring Tools"];
-  }
-];
+  }];
 '"

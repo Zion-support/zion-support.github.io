@@ -5,8 +5,7 @@ export const showApiError = (error: unknown, fallbackMessage?: string) => {
 export const showApiError = (error: any, fallbackMessage?: string) => {
 
   const message ='
-    error?.message || fallbackMessage || 'An unexpected error occurred';
-  toast({
+    error?.message || fallbackMessage || 'An unexpected error occurred';  toast({
 '
     variant: 'destructive','
     title: 'Error',

@@ -1,92 +1,6 @@
 import React, { useState } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
-import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
-
-const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
-    {
-'
-      id: 'quantum-computing', '
-      name: 'Quantum Computing & AI', '
-      icon: '⚛️', '
-      color: 'from-blue-600 to-cyan-600','
-      description: 'Revolutionary quantum computing solutions that solve previously impossible problems','
-      marketSize: '$65.4 billion by 2027','
-      growthRate: '500% annually'
-    },
-    {
-'
-      id: 'blockchain-web3', '
-      name: 'Blockchain & Web3', '
-      icon: '🔗', '
-      color: 'from-green-600 to-emerald-600','
-      description: 'Next-generation decentralized solutions with AI optimization','
-      marketSize: '$67.4 billion by 2027','
-      growthRate: '400% annually'
-    },
-    {
-'
-      id: 'space-tech', '
-      name: 'Space Technology', '
-      icon: '🛰️', '
-      color: 'from-indigo-600 to-purple-600','
-      description: 'AI-powered satellite and space mission management','
-      marketSize: '$469.8 billion by 2027','
-      growthRate: '300% annually'
-    },
-    {
-'
-      id: 'biotech-ai', '
-      name: 'Biotech & AI', '
-      icon: '🧬', '
-      color: 'from-red-600 to-pink-600','
-      description: 'Revolutionary biomedical research and drug discovery','
-      marketSize: '$67.8 billion by 2027','
-      growthRate: '600% annually'
-    },
-    {
-'
-      id: 'emerging-tech', '
-      name: 'Emerging Technology', '
-      icon: '🚀', '
-      color: 'from-orange-600 to-red-600','
-      description: 'Cutting-edge technologies that define the future','
-      marketSize: '$3.7 billion by 2027','
-      growthRate: '800% annually'
-    },
-    {
-'
-      id: 'micro-saas', '
-      name: 'Micro SAAS Solutions', '
-      icon: '💻', '
-      color: 'from-blue-600 to-indigo-600','
-      description: 'Intelligent business automation and optimization','
-      marketSize: '$15.8 billion by 2027','
-      growthRate: '200% annually'
-    },
-    {
-'
-      id: 'it-services', '
-      name: 'Enterprise IT Services', ;'
-      icon: '🖥️', ;'
-      color: 'from-gray-600 to-slate-600',;'
-      description: 'Advanced infrastructure and DevOps solutions',;'
-      marketSize: '$25.2 billion by 2027',;'
-      growthRate: '150% annually';
-    };
-  ];
-
-  const getServicesByCategory = (categoryId: anystring)  => {;'
-    if (categoryId === 'all') return ultimateZionServices2025;
-    return ultimateZionServices2025.filter (service => service.category === categoryId) ;
-  };
-
-  const selectedServices = getServicesByCategory (selectedCategory) ;
-
-  return()
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Hero Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
@@ -280,7 +194,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
         <section className="py-12 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">;
             {(() => {;
-              const category = categories.find(c => c.id === selectedCategory);
+              
               if (!category) return null;
               
               return()
@@ -320,8 +234,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
                     </div>;
                   </div>;
                 </motion.div>;) ;
-            }) () }
-          </div>
+            }) () }          </div>
         </section>) }
 
       {/* Services Grid */}"
@@ -550,5 +463,4 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
       </section>;
     </div>;) ;
 };
-
 export default UltimateZionServicesMarketing;'"`

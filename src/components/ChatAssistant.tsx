@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 '
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-
   MessageCircle, 
   X, 
   Send, 
@@ -53,15 +52,12 @@ interface Message {
     name: string;
     size?: string;
   
-}[];
-  metadata?: {
+}[];  metadata?: {
 
     confidence?: number;
     sources?: string[];
     suggestions?: string[];
-    actionRequired?: boolean;
-  };
-}
+    actionRequired?: boolean}}
 
 interface ChatAssistantProps extends React.PropsWithChildren<{}> {
 
@@ -72,8 +68,7 @@ interface ChatAssistantProps extends React.PropsWithChildren<{}> {
   maxMessages?: number;
   enableVoice?: boolean;
   enableFileUpload?: boolean;
-  enableSuggestions?: boolean;
-}
+  enableSuggestions?: boolean}
 
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
@@ -110,7 +105,6 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   useEffect ( () => {
     scrollToBottom () ;
   }, [messages, scrollToBottom]) ;
-
   // Theme management
   useEffect(() => {
 '
@@ -131,7 +125,6 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       setCurrentTheme(theme);
     }
   }, [theme]) ;
-
   // Initialize with welcome message
   useEffect ( () => {
     if (messages.length === 0) {
@@ -158,7 +151,6 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   const handleSendMessage = async (content: string) => {
 
     if (!content.trim()) return;
-
     const userMessage: Message = {
 
       id: Date.now().toString(),'
@@ -235,7 +227,6 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       ? 'bg-gray-900 text-white border-gray-700' '
       : 'bg-white text-gray-900 border-gray-200 shadow-lg';
   };
-
   if (!enabled) return null;
 
   return()`
@@ -252,8 +243,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
           className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-200 ${getThemeClasses()}`}
 
         >"
-          <MessageCircle className="w-6 h-6" />
-        </motion.button>
+          <MessageCircle className="w-6 h-6" />        </motion.button>
       )}
 
       {/* Chat Window */}
@@ -269,8 +259,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
             {/* Header */}"
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">"
               <div className="flex items-center space-x-2">"
-                <Bot className="w-5 h-5 text-blue-500" />"
-                <span className="font-semibold">AI Assistant</span>
+                <Bot className="w-5 h-5 text-blue-500" />"                <span className="font-semibold">AI Assistant</span>
               </div>"
               <div className="flex items-center space-x-2">
                 <button
@@ -286,8 +275,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
 
                 >"
-                  <X className="w-4 h-4" />
-                </button>
+                  <X className="w-4 h-4" />                </button>
               </div>
             </div>
 
@@ -361,8 +349,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                       className="px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
 
                     >"
-                      <Send className="w-4 h-4" />
-                    </button>
+                      <Send className="w-4 h-4" />                    </button>
                   </div>
                 </div>
               </>) }
@@ -370,5 +357,4 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       </AnimatePresence>
     </div>) ;
 };
-
 '"`

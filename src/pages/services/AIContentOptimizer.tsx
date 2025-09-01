@@ -168,9 +168,8 @@ export default function AIContentOptimizer(...args: any[]): any {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
         title="AI Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group""
-        description="Transform your content performance with AI-powered SEO optimization, analytics, and multi-platform content creation. Start free trial today.""
-        keywords="AI content optimization, content SEO, content analytics, content performance, AI content creation"
-      />
+        description="Transform your content performance with AI-powered SEO optimization, analytics, and multi-platform content creation. Start free trial today.""        keywords="AI content optimization, content SEO, content analytics, content performance, AI content creation"
+       />
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -398,8 +397,7 @@ export default function AIContentOptimizer(...args: any[]): any {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-white">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>

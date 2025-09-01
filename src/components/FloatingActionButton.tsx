@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import {
-
   Plus, 
   MessageCircle, 
   Phone, 
@@ -27,7 +26,6 @@ interface FloatingAction {
   color: string;'
   priority: 'high' | 'medium' | 'low';
 }
-
 interface FloatingActionButtonProps {
   actions?: FloatingAction[];'
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';'
@@ -35,7 +33,6 @@ interface FloatingActionButtonProps {
   showScrollToTop?: boolean;
   showContactActions?: boolean;
   showUtilityActions?: boolean;
-
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
   actions = [],'
@@ -80,7 +77,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     window.addEventListener('scroll', handleScroll);'
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   // Default actions
   const defaultActions: FloatingAction[] = [
     // Contact actions
@@ -98,8 +94,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             contactSection.scrollIntoView({ behavior: 'smooth' });
           }
         },'
-        color: 'bg-blue-500 hover:bg-blue-600','
-        priority: 'high' as const
+        color: 'bg-blue-500 hover:bg-blue-600','        priority: 'high' as const
       },
       {
 '
@@ -110,8 +105,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 '
           window.location.href = 'tel:+1234567890';
         },'
-        color: 'bg-green-500 hover:bg-green-600','
-        priority: 'high' as const
+        color: 'bg-green-500 hover:bg-green-600','        priority: 'high' as const
       },
       {
 '
@@ -122,8 +116,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 '
           window.location.href = 'mailto:info@ziontechgroup.com';
         },'
-        color: 'bg-purple-500 hover:bg-purple-600','
-        priority: 'medium' as const
+        color: 'bg-purple-500 hover:bg-purple-600','        priority: 'medium' as const
       },
       {
 '
@@ -134,8 +127,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 '
           window.open('https://maps.google.com/?q=Zion+Tech+Group', '_blank');
         },'
-        color: 'bg-red-500 hover:bg-red-600','
-        priority: 'medium' as const
+        color: 'bg-red-500 hover:bg-red-600','        priority: 'medium' as const
       }
     ] : []),
     
@@ -155,17 +147,15 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
               url: window.location.href
             });
           } else {
-
             // Fallback for browsers without share API
-            const url = window.location.href;
+            
             navigator.clipboard.writeText(url).then(() => {
               // Show success message'
               showNotification('Page URL copied to clipboard!');
             });
           }
         },'
-        color: 'bg-yellow-500 hover:bg-yellow-600','
-        priority: 'low' as const
+        color: 'bg-yellow-500 hover:bg-yellow-600','        priority: 'low' as const
       },
       {
 '
@@ -181,17 +171,15 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
               url: window.location.href
             });
           } else {
-
             // Fallback for browsers without share API
-            const url = window.location.href;
+            
             navigator.clipboard.writeText(url).then(() => {
 '
               showNotification('Page URL copied to clipboard!');
             });
           }
         },'
-        color: 'bg-indigo-500 hover:bg-indigo-600','
-        priority: 'low' as const
+        color: 'bg-indigo-500 hover:bg-indigo-600','        priority: 'low' as const
       },
       {
 '
@@ -207,8 +195,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           link.click();
           document.body.removeChild(link);
         },'
-        color: 'bg-teal-500 hover:bg-teal-600','
-        priority: 'low' as const
+        color: 'bg-teal-500 hover:bg-teal-600','        priority: 'low' as const
       },
       {
 '
@@ -218,8 +205,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         action: () => {
           window.print();
         },'
-        color: 'bg-gray-500 hover:bg-gray-600','
-        priority: 'low' as const
+        color: 'bg-gray-500 hover:bg-gray-600','        priority: 'low' as const
       }
     ] : []),
     
@@ -249,8 +235,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   const showNotification = useCallback((message: string) => {
 
     // Create notification element'
-    const notification = document.createElement('div');
-    notification.className = `
+    const notification = document.createElement('div');    notification.className = `
       fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg
       transform translate-x-full transition-transform duration-300 ease-in-out`
     `;
@@ -262,17 +247,13 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     setTimeout(() => {
 '
       notification.classList.remove('translate-x-full');
-    }, 100);
-    
+    }, 100);    
     // Remove after 3 seconds
     setTimeout(() => {
 '
       notification.classList.add('translate-x-full');
       setTimeout(() => {
-        document.body.removeChild(notification);
-      }, 300);
-    }, 3000);
-  }, []);
+        document.body.removeChild(notification)}, 300)}, 3000)}, []);
 
   // Get position classes
   const getPositionClasses = (...args: unknown[]): unknown => {
@@ -294,8 +275,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 '
     return currentTheme === 'dark' '
       ? 'bg-zion-slate-dark text-zion-slate-light border-zion-slate/20' '
-      : 'bg-zion-slate-light text-zion-slate-dark border-zion-slate/20';
-  };
+      : 'bg-zion-slate-light text-zion-slate-dark border-zion-slate/20';  };
 
   return()
     <>
@@ -338,8 +318,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             aria-label={isExpanded ? 'Close actions' : 'Open actions'}
             aria-expanded={isExpanded}
           >"
-            <Plus size={24} className="transition-transform duration-300" />
-          </button>
+            <Plus size={24} className="transition-transform duration-300" />          </button>
         </div>
       </div>
 
@@ -357,7 +336,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         >
           <ArrowUp size={24} />
         </button>) }
-
       {/* CSS Animations */}`
       <style jsx>{`
         @keyframes slideInUp {
@@ -366,13 +344,11 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
             opacity: 0;
             transform: translateY (20px) scale (0.75) ;
-          }
-          to {
+          }          to {
 
             opacity: 1;
             transform: translateY (0) scale (1) ;
-          }
-        }
+          }        }
 
         @keyframes bounce {
 
@@ -401,6 +377,5 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       `}</style>
     </>) ;
 };
-
 export default FloatingActionButton;
 '"`

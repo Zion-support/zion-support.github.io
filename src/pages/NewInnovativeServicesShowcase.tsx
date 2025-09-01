@@ -7,8 +7,7 @@ import {
   ArrowRight,
   CheckCircle,
   TrendingUp,
-  Shield,
-  Zap,
+  Shield,  Zap,
   Phone,
   Mail,
   MapPin,
@@ -77,9 +76,8 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO"
-        title="New Innovative Services 2025 - Zion Tech Group""
-        description="Discover our latest AI-powered innovative services: Legal document automation, healthcare analytics, and financial trading platforms. Transform your business with cutting-edge technology."
-      />
+        title="New Innovative Services 2025 - Zion Tech Group""        description="Discover our latest AI-powered innovative services: Legal document automation, healthcare analytics, and financial trading platforms. Transform your business with cutting-edge technology."
+       />
 
       {/* Hero Section */}"
       <section className="relative py-20 sm:py-32 overflow-hidden">"
@@ -92,8 +90,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
           >"
             <div className="flex justify-center mb-6">"
               <div className="p-3 bg-purple-500/20 rounded-2xl">"
-                <Sparkles className="h-8 w-8 text-purple-400" />
-              </div>
+                <Sparkles className="h-8 w-8 text-purple-400" />              </div>
             </div>"
             <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-6">
               New Innovative"
@@ -112,15 +109,13 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                 href="tel:+13024640950""
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-300 font-semibold"
               >"
-                <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
+                <Phone className="w-5 h-5 mr-2" />                Call +1 302 464 0950
               </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com""
                 className="inline-flex items-center px-6 py-3 border border-purple-400/30 text-purple-400 rounded-lg hover:bg-purple-400/10 transition-all duration-300"
               >"
-                <Mail className="w-5 h-5 mr-2" />
-                Get Quote
+                <Mail className="w-5 h-5 mr-2" />                Get Quote
               </a>
             </div>
           </motion.div>
@@ -167,8 +162,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                     Industry Expertise
                   </div>"
                   <div className="flex items-center">"
-                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                    Proven Results
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />                    Proven Results
                   </div>
                 </div>
               </motion.div>) ) }
@@ -235,8 +229,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                   <div>"
                     <div className="flex items-center mb-4">"
                       <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">"
-                        <Rocket className="h-6 w-6 text-white" />
-                      </div>
+                        <Rocket className="h-6 w-6 text-white" />                      </div>
                       <div>"
                         <h3 className="text-2xl font-bold">{service.title}</h3>"
                         <p className="text-slate-400 text-sm">
@@ -274,14 +267,12 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                         className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-300 font-semibold"
                       >
                         Learn More"
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
+                        <ArrowRight className="w-4 h-4 ml-2" />                      </Link>
                       <a"
                         href="tel:+13024640950""
                         className="inline-flex items-center px-6 py-3 border border-purple-400/30 text-purple-400 rounded-lg hover:bg-purple-400/10 transition-all duration-300"
                       >"
-                        <Phone className="w-4 h-4 mr-2" />
-                        Call Now
+                        <Phone className="w-4 h-4 mr-2" />                        Call Now
                       </a>
                     </div>
                   </div>
@@ -300,8 +291,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                               {feature}
                             </span>
                           </div>
-                        ))}
-                    </div>
+                        ))}                    </div>
 "
                     <h4 className="font-semibold text-lg mb-4 text-purple-400">
                       Target Audience
@@ -369,8 +359,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                 href="tel:+13024640950""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-300 font-semibold text-lg"
               >"
-                <Phone className="w-6 h-6 mr-2" />
-                Call +1 302 464 0950
+                <Phone className="w-6 h-6 mr-2" />                Call +1 302 464 0950
               </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com""
@@ -414,8 +403,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                     className="hover:text-purple-300"
                   >
                     ziontechgroup.com
-                  </a>
-                </div>
+                  </a>                </div>
               </div>
             </div>
           </motion.div>

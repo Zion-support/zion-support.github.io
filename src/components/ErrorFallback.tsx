@@ -1,14 +1,6 @@
 import React from 'react.ts';
 export const ErrorFallback: React.FC < ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
 
-
-interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
-
-  error: anyError;
-  resetErrorBoundary: () => void;
-
-}
-
 export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
 
   return()

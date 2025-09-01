@@ -14,8 +14,7 @@ import {
   Phone,
   Mail,
   MapPin,
-  Award,
-  Sparkles,
+  Award,  Sparkles,
   Heart,
   Truck,
   FileText,
@@ -130,8 +129,7 @@ const InnovativeServicesOverview2025 = () => {
       path: '/services/ai-workflow-orchestrator'},
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+  return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -142,8 +140,7 @@ const InnovativeServicesOverview2025 = () => {
             className="text-center"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6">"
-              <Sparkles className="w-4 h-4 mr-2" />
-              Innovative Services 2025
+              <Sparkles className="w-4 h-4 mr-2" />              Innovative Services 2025
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cutting-Edge AI Solutions for"
@@ -163,16 +160,14 @@ const InnovativeServicesOverview2025 = () => {
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Explore Services
+                <ArrowRight className="w-5 h-5 mr-2" />                Explore Services
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
-                <Phone className="w-5 h-5 mr-2" />
-                Contact Sales
+                <Phone className="w-5 h-5 mr-2" />                Contact Sales
               </motion.button>
             </div>
           </motion.div>
@@ -234,8 +229,7 @@ const InnovativeServicesOverview2025 = () => {
                         key={featureIndex}"
                         className="flex items-center space-x-2"
                       >"
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />"
-                        <span className="text-zion-slate-light">{feature}</span>
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />"                        <span className="text-zion-slate-light">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -251,8 +245,7 @@ const InnovativeServicesOverview2025 = () => {
                         key={benefitIndex}"
                         className="flex items-center space-x-2"
                       >"
-                        <TrendingUp className="w-4 h-4 text-blue-400 flex-shrink-0" />"
-                        <span className="text-zion-slate-light">{benefit}</span>
+                        <TrendingUp className="w-4 h-4 text-blue-400 flex-shrink-0" />"                        <span className="text-zion-slate-light">{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -262,8 +255,7 @@ const InnovativeServicesOverview2025 = () => {
                   href={service.path}"
                   className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
                 >"
-                  <ArrowRight className="w-5 h-5 mr-2" />
-                  Learn More
+                  <ArrowRight className="w-5 h-5 mr-2" />                  Learn More
                 </a>
               </motion.div>) ) }
           </div>
@@ -332,8 +324,7 @@ const InnovativeServicesOverview2025 = () => {
             </p>"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
               <div className="flex items-center justify-center space-x-3">"
-                <Phone className="w-6 h-6 text-blue-400" />"
-                <span className="text-zion-slate-light">+1 302 464 0950</span>
+                <Phone className="w-6 h-6 text-blue-400" />"                <span className="text-zion-slate-light">+1 302 464 0950</span>
               </div>"
               <div className="flex items-center justify-center space-x-3">"
                 <Mail className="w-6 h-6 text-blue-400" />"
@@ -349,21 +340,18 @@ const InnovativeServicesOverview2025 = () => {
                   Middletown DE 19709
                 </span>
               </div>
-            </div>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>"            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
                 href="https://ziontechgroup.com/contact""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Contact Us
+                <ArrowRight className="w-5 h-5 mr-2" />                Contact Us
               </a>
               <a"
                 href="https://ziontechgroup.com""
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
-                <Globe className="w-5 h-5 mr-2" />
-                Visit Website
+                <Globe className="w-5 h-5 mr-2" />                Visit Website
               </a>
             </div>
           </motion.div>
@@ -371,6 +359,5 @@ const InnovativeServicesOverview2025 = () => {
       </section>
     </div>) ;
 };
-
 export default InnovativeServicesOverview2025;
 '"`

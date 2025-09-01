@@ -15,8 +15,7 @@ import {
   Users,
   Zap,
   Shield,
-  Settings,
-  ArrowRight,
+  Settings,  ArrowRight,
   CheckCircle,
   AlertCircle,
   Info,
@@ -329,8 +328,7 @@ export default function Helpdesk(...args: any[]): any {
         return 'text-blue-400 bg-blue-400/20 border-blue-400/30';
       default:'
         return 'text-gray-400 bg-gray-400/20 border-gray-400/30';
-    }
-  };
+    }  };
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -345,8 +343,7 @@ export default function Helpdesk(...args: any[]): any {
           >"
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl mb-6">"
               <Headphones className="w-10 h-10 text-white" />
-            </div>"
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            </div>"            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Help Desk
             </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -368,8 +365,7 @@ export default function Helpdesk(...args: any[]): any {
           <form onSubmit={handleSearch} className="relative">"
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input"
-              type="text""
-              placeholder="Search for help articles, common issues, or solutions..."
+              type="text""              placeholder="Search for help articles, common issues, or solutions..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}"
               className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
@@ -422,8 +418,7 @@ export default function Helpdesk(...args: any[]): any {
                     {channel.availability}
                   </div>"
                   <div className="flex items-center text-gray-400">"
-                    <Zap className="w-4 h-4 mr-2" />
-                    {channel.responseTime}
+                    <Zap className="w-4 h-4 mr-2" />                    {channel.responseTime}
                   </div>
                 </div>
 "
@@ -599,8 +594,7 @@ export default function Helpdesk(...args: any[]): any {
                       <ChevronUp className="w-5 h-5" />
                     ) : ("
                       <ChevronDown className="w-5 h-5" />
-                    )}
-                  </button>
+                    )}                  </button>
                 </div>
 "
                 <p className="text-gray-300 mb-4">{issue.description}</p>
@@ -663,8 +657,7 @@ export default function Helpdesk(...args: any[]): any {
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center justify-center gap-3 text-gray-300">"
-              <Clock className="w-5 h-5 text-cyan-400" />
-              <span>24/7 Support</span>
+              <Clock className="w-5 h-5 text-cyan-400" />              <span>24/7 Support</span>
             </div>
           </div>
 "
@@ -674,8 +667,7 @@ export default function Helpdesk(...args: any[]): any {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Contact Support"
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+              <ArrowRight className="ml-2 h-5 w-5" />            </Link>
             <Link"
               to="/support/tickets""
               className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"

@@ -106,8 +106,7 @@ export default function AIPoweredSEO(...args: any[]): any {
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>"
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>"        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -115,8 +114,7 @@ export default function AIPoweredSEO(...args: any[]): any {
             className="text-center max-w-4xl mx-auto"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6">"
-              <Search className="w-5 h-5 text-cyan-400 mr-2" />"
-              <span className="text-cyan-300 font-medium">AI-Powered SEO</span>
+              <Search className="w-5 h-5 text-cyan-400 mr-2" />"              <span className="text-cyan-300 font-medium">AI-Powered SEO</span>
             </div>
 "
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">"
@@ -139,16 +137,14 @@ export default function AIPoweredSEO(...args: any[]): any {
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
               >"
-                <Rocket className="w-5 h-5 mr-2" />
-                Get Started Today
+                <Rocket className="w-5 h-5 mr-2" />                Get Started Today
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
               >"
-                <Monitor className="w-5 h-5 mr-2" />
-                View Demo
+                <Monitor className="w-5 h-5 mr-2" />                View Demo
               </motion.button>
             </div>
           </motion.div>
@@ -223,8 +219,7 @@ export default function AIPoweredSEO(...args: any[]): any {
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4"
               >"
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />"
-                <span className="text-white font-medium">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />"                <span className="text-white font-medium">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -296,16 +291,14 @@ export default function AIPoweredSEO(...args: any[]): any {
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Start Your Free Consultation
+                <ArrowRight className="w-5 h-5 mr-2" />                Start Your Free Consultation
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
               >"
-                <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
+                <Phone className="w-5 h-5 mr-2" />                Call +1 302 464 0950
               </motion.button>
             </div>
           </motion.div>

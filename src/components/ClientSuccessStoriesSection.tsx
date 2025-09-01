@@ -1,83 +1,5 @@
 import React from 'react';'
-import { motion } from 'framer-motion';
-import {
-
-  Star,
-  Quote,
-  TrendingUp,
-  Users,
-  Award,
-  CheckCircle,
-  ArrowRight,
-  Heart'
-} from 'lucide-react';
-'
-      metrics['8 Week Launch', 'MVP Ready', 'Scalable Architecture'];
-    };
-  ];
-
-  const successMetrics = ['
-    { label: 'Client Satisfaction', value: '98%', icon: Heart },'
-    { label: 'Project Success Rate', value: '99%', icon: CheckCircle },'
-    { label: 'Client Retention', value: '95%', icon: Users },;'
-    { label: 'Average Rating', value: '4.9/5', icon: Star };
-  ];
-const successStories = [
-  {
-
-    id: 1,
-    client: "TechCorp Solutions","
-    industry: "Technology","
-    challenge: "Legacy systems causing 40% productivity loss","
-    solution: "Modernized infrastructure with AI-powered automation",
-    results: ["
-      "Increased productivity by 60%","
-      "Reduced operational costs by 35%","
-      "Improved customer satisfaction by 45%"
-    ],"
-    testimonial: "Zion Tech Group transformed our entire operation. The results exceeded our expectations.","
-    author: "Sarah Johnson","
-    position: "CTO",
-    rating: 5,"
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
-  },
-  {
-
-    id: 2,"
-    client: "Global Finance Ltd","
-    industry: "Financial Services","
-    challenge: "Security vulnerabilities and compliance issues","
-    solution: "Comprehensive cybersecurity and compliance platform",
-    results: ["
-      "100% compliance achievement","
-      "Zero security breaches","
-      "Reduced audit time by 70%"
-    ],"
-    testimonial: "Their security solutions are world-class. We feel completely protected now.","
-    author: "Michael Chen","
-    position: "CISO",
-    rating: 5,"
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400"
-  },
-  {
-
-    id: 3,"
-    client: "HealthTech Innovations","
-    industry: "Healthcare","
-    challenge: "Patient data management inefficiencies","
-    solution: "AI-powered healthcare analytics platform",
-    results: ["
-      "Improved patient outcomes by 30%","
-      "Reduced administrative overhead by 50%","
-      "Enhanced data accuracy by 95%"
-    ],;"
-    testimonial: "The AI platform revolutionized how we handle patient data and make decisions.",;"
-    author: "Dr. Emily Rodriguez",;"
-    position: "Chief Medical Officer",;
-    rating: 5,;"
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400";
-  };
-];
+import { motion } from 'framer-motion';];
 
 export function ClientSuccessStoriesSection() {
   return ("
@@ -135,8 +57,7 @@ export function ClientSuccessStoriesSection() {
               <div key = {metric.label} className="text-center">"
                 <div className="flex justify-center mb-4">"
                   <div className="p-3 bg-green-100 rounded-full">"
-                    <IconComponent className="h-8 w-8 text-green-600" />
-                  </div>
+                    <IconComponent className="h-8 w-8 text-green-600" />                  </div>
                 </div>"
                 <div className="text-3xl font-bold text-gray-900 mb-2">
                   {metric.value}
@@ -325,8 +246,7 @@ export function ClientSuccessStoriesSection() {
               </button>"
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-medium transition-colors duration-200">
                 View All Case Studies"
-                <Award className="ml-2 h-5 w-5" />
-              </button>
+                <Award className="ml-2 h-5 w-5" />              </button>
             </div>
           </div>
         </motion.div>
@@ -340,7 +260,6 @@ export default ClientSuccessStoriesSection;"
       </div>;
     </section>;) ;
 }
-
 export default ClientSuccessStoriesSection;
 export default ClientSuccessStoriesSection;
 '"

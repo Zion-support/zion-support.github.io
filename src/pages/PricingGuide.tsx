@@ -1,60 +1,5 @@
 import React, { useState } from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';
-import { Calculator, 
-import { SEO } from "../components / SEO";
-
-
-  Check, 
-  X, 
-  Star, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Rocket, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Globe, 
-  Atom,
-  Satellite'
-} from 'lucide-react';
-import { SEO } from "../components/SEO";
-
-export default function PricingGuide(...args[]):  {
-'
-  const [selectedCurrency, setSelectedCurrency] = useState('USD');'
-  const [selectedPeriod, setSelectedPeriod] = useState('monthly');
-
-  const currencyRates = {
-'
-  USD: { symbol: '$',
-  rate: 1 ;
-;
-;
-;
-
-
-
-},;'
-    EUR: { symbol: '€', rate: 0.85 },;'
-    GBP: { symbol: '£', rate: 0.73 };
-  };
-
-export const PricingGuide: React.FC = () => {
-  const pricingTiers = [
-    {
-"
-      name: "Starter",
-      icon: Zap,"
-      description: "Perfect for small businesses getting started with AI",
-      price: { monthly: 299, yearly: 2990 },
-      features[;"
-        "AI Business Intelligence Basic","
-        "Cloud Infrastructure (10GB)","
-        "Basic Support (Email)","
-        "Monthly Reports","
-        "2 User Licenses"
+import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
       ],;
       notIncluded[;"
         "Advanced Analytics","
@@ -110,8 +55,7 @@ export const PricingGuide: React.FC = () => {
       ],;
       notIncluded: [],;"
       cta: "Contact Sales",;
-      popular: false;
-    };
+      popular: false};
   ];
 
   const servicePricing = [
@@ -122,8 +66,7 @@ export const PricingGuide: React.FC = () => {
       services[;"
         { name: "AI Business Intelligence", price: "From $299/month", description: "Advanced analytics and insights" },"
         { name: "AI Sales Copilot", price: "From $199/month", description: "Intelligent sales automation" },"
-        { name: "AI Compliance Assistant", price: "From $399/month", description: "Automated compliance management" },"
-        { name: "LLM Content Studio", price: "From $149/month", description: "AI-powered content creation" }
+        { name: "AI Compliance Assistant", price: "From $399/month", description: "Automated compliance management" },"        { name: "LLM Content Studio", price: "From $149/month", description: "AI-powered content creation" }
       ]
     },;
     {
@@ -158,15 +101,13 @@ export const PricingGuide: React.FC = () => {
         { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },;"
         { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },;"
         { name: "Onsite Support", price: "From $199/hour", description: "Local technical assistance" };
-      ];
-    };
+      ]};
   ];
 "
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="Pricing Guide - Zion Tech Group""
-        description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."
-      />
+        title="Pricing Guide - Zion Tech Group""        description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."
+       />
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -174,8 +115,7 @@ export const PricingGuide: React.FC = () => {
           <div className="text-center">"
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6">"
               <Calculator className="h-10 w-10 text-white" />
-            </div>"
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            </div>"            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Pricing Guide
             </h1>"
             <p className="text-xl text-slate-300 mb-8 max-w-4xl mx-auto">
@@ -300,8 +240,7 @@ export const PricingGuide: React.FC = () => {
                   <h4 className="text-lg font-semibold text-white mb-4">What's Included: any</h4>
                   {plan.features.map((feature, featureIndex)  => ("
                     <div key={featureIndex} className="flex items-center text-slate-300">"
-                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      <span className="text-sm">{feature}</span>
+                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-sm">{feature}</span>
                     </div>
                   ))}
 
@@ -310,8 +249,7 @@ export const PricingGuide: React.FC = () => {
                       <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: any</h4>
                       {plan.notIncluded.map((feature, featureIndex)  => ("
                         <div key={featureIndex} className="flex items-center text-slate-500">"
-                          <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />"
-                          <span className="text-sm">{feature}</span>
+                          <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />"                          <span className="text-sm">{feature}</span>
                         </div>
                       ))}
                     </>
@@ -435,8 +373,7 @@ export const PricingGuide: React.FC = () => {
                 to="/services-overview""
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
 "
-                <BarChart3 className="w-5 h-5 mr-2" />
-                View All Services
+                <BarChart3 className="w-5 h-5 mr-2" />                View All Services
               </Link>
             </div>;
           </div>;

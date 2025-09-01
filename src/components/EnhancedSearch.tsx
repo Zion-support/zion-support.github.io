@@ -7,19 +7,6 @@ import { motion, AnimatePresence } from 'framer-motion';'
 import { Search, X, Sparkles, Brain, Zap, TrendingUp, Clock, ArrowRight, Globe, Building, Code, Shield } from 'lucide-react';'
 import { useNavigate } from 'react-router-dom';'
 import { useDebounce } from '@/hooks/useDebounce';
-
-interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  url: string;'
-  type: 'service' | 'page' | 'blog' | 'case-study' | 'article' | 'ai-suggestion';
-  category: string;
-  tags: string[];
-  relevance: number}
-  icon?: React.ComponentType < any>;
-}
-
 interface SearchFilter {
   type: string[];
   category: string[];
@@ -32,7 +19,6 @@ interface SearchSuggestion {
   type: 'recent' | 'trending' | 'ai';
 
 }
-
 interface EnhancedSearchProps {
   // Add your props here
 
@@ -41,7 +27,6 @@ interface EnhancedSearchProps {
   placeholder?: string;
   onSearch?: (query: string) => void;'
   variant?: 'default' | 'futuristic' | 'minimal';
-
 }
 ;
 const searchData: SearchResult[] = [
@@ -120,8 +105,7 @@ const categories = ['
   { id: 'ai-solutions', name: 'AI Solutions', icon: Code, color: 'from-cyan-500 to-blue-600' },;'
   { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },;'
   { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;'
-  { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },;'
-  { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' };
+  { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },;'  { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' };
 ];
 
 export function EnhancedSearch({
@@ -131,8 +115,7 @@ export function EnhancedSearch({
   onSearch,;'
   variant = 'default';
 }: EnhancedSearchProps) {;
-  const [isOpen, setIsOpen] = useState(false);'
-  const [query, setQuery] = useState('');
+  const [isOpen, setIsOpen] = useState(false);'  const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -203,8 +186,7 @@ export function EnhancedSearch({
         if (results[selectedIndex]) {
 
           handleResultClick(results[selectedIndex]);
-        }
-      }
+        }      }
     };
 
     if (isOpen) {
@@ -213,7 +195,6 @@ export function EnhancedSearch({
     }'
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, results, selectedIndex]);
-
   // Search functionality
   useEffect(() => {
     if (debouncedQuery.trim().length < 2) {
@@ -230,8 +211,7 @@ export function EnhancedSearch({
         
         const matchesFilters = filters.type.length === 0 || filters.type.includes (item.type) &&;
                               filters.category.length === 0 || filters.category.includes (item.category) &&;
-                              filters.tags.length === 0 || filters.tags.some (tag => item.tags.includes (tag) ) ;
-        
+                              filters.tags.length === 0 || filters.tags.some (tag => item.tags.includes (tag) ) ;        
         return matchesQuery && matchesFilters}) .sort ( (a, b) => b.relevance - a.relevance) .slice (0, 10) ;
 
     setResults (searchResults) }, [debouncedQuery, filters]) ;
@@ -248,8 +228,7 @@ export function EnhancedSearch({
       } catch (error) {
 '
         // console.error('Failed to parse recent searches:', error);
-      }
-    }
+      }    }
   }, []) ;
 
   // Handle click outside
@@ -258,8 +237,7 @@ export function EnhancedSearch({
       if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {;
         setIsOpen (false) ;
         setSelectedIndex (-1) ;
-      }
-    };
+      }    };
 '
     document.addEventListener('mousedown', handleClickOutside);'
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
@@ -277,8 +255,7 @@ export function EnhancedSearch({
     if (searchQuery.trim()) {;
       // Add to recent searches;
       const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
-      setRecentSearches(updated);'
-      localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
+      setRecentSearches(updated);'      localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
 
       // Navigate to search results or close search
       setIsOpen(false);'
@@ -288,8 +265,7 @@ export function EnhancedSearch({
   const handleResultClick = (result: SearchResult) => {;
     handleSearch (result.title) ;
     router (result.url) ;
-    const handleKeyDown = (event: KeyboardEvent) => {;
-      if (!isOpen) return;
+    const handleKeyDown = (event: KeyboardEvent) => {;      if (!isOpen) return;
 
       switch (event.key) {
 '
@@ -326,7 +302,6 @@ export function EnhancedSearch({
 
   const handleSearch = useCallback (async () => {;
     if (!query.trim () ) return;
-
     setIsLoading (true) ;
     
     // Simulate API call delay
@@ -386,11 +361,9 @@ setFilters (prev: > ({;
 
   const clearSearch = () => {
 '
-    setQuery('');
-    setResults([]);
+    setQuery('');    setResults([]);
     setIsOpen(false);
-    setSelectedIndex(-1);
-  };
+    setSelectedIndex(-1)};
 
   const getVariantStyles = (...args: unknown[]): unknown => {
     switch (variant) {
@@ -408,8 +381,7 @@ setFilters (prev: > ({;
     <div ref = {searchRef} className={`relative ${className}`}>`
       <div className={`relative rounded-xl ${getVariantStyles()}`}>"
         <div className="flex items-center px-4 py-3">"
-          <Search className="w-5 h-5 text-gray-400 mr-3" />
-          <input
+          <Search className="w-5 h-5 text-gray-400 mr-3" />          <input
             ref={inputRef}"
             type="text"
             value={query}
@@ -439,15 +411,13 @@ setFilters (prev: > ({;
         return 'bg-gray-100 border border-gray-200 hover:border-gray-300 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
       default:'
         return 'bg-white border border-gray-300 hover:border-gray-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
-    }
-  };
+    }  };
 
   return()`
     <div ref = {searchRef} className={`relative ${className}`}>
       {/* Search Input */}`
       <div className={`relative flex items-center rounded-xl transition-all duration-300 ${getVariantClasses()}`}>"
-        <Search className="absolute left-4 h-5 w-5 text-gray-400" />
-        <input
+        <Search className="absolute left-4 h-5 w-5 text-gray-400" />        <input
           ref={inputRef}"
           type="text"
           value={query}
@@ -461,8 +431,7 @@ setFilters (prev: > ({;
             onClick={() => setQuery('')}"
             className="absolute right-4 p-1 text-gray-400 hover:text-gray-600 transition-colors"
           >"
-            <X className="h-4 w-4" />
-          </button>
+            <X className="h-4 w-4" />          </button>
         )}
       </div>
 
@@ -499,8 +468,7 @@ setFilters (prev: > ({;
                 onClick={() => setShowFilters(!showFilters)}"
                 className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >"
-                <Filter className="h-4 w-4" />
-                Filters
+                <Filter className="h-4 w-4" />                Filters
               </button>
               {(filters.type.length > 0 || filters.category.length > 0 || filters.tags.length > 0) && (
                 <button
@@ -611,8 +579,7 @@ setFilters (prev: > ({;
                   {recentSearches.length > 0 && (
                     <div>"
                       <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">"
-                        <Clock className="h-4 w-4" />
-                        Recent Searches;
+                        <Clock className="h-4 w-4" />                        Recent Searches;
                       </h4>;"
                       <div className="space-y-2">;
                         {recentSearches.map((search, index) => (;
@@ -621,8 +588,7 @@ setFilters (prev: > ({;
                             onClick={() => {;
                               setQuery(search);
                               handleSearch();
-                            }}"
-                            className = "w-full text-left p-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
+                            }}"                            className = "w-full text-left p-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
                           >
                             {search}
                           </button>) ) }
@@ -632,8 +598,7 @@ setFilters (prev: > ({;
                   {/* Popular Searches */}
                   <div>"
                     <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">"
-                      <TrendingUp className="h-4 w-4" />
-                      Popular Searches;
+                      <TrendingUp className="h-4 w-4" />                      Popular Searches;
                     </h4>;"
                     <div className="flex flex-wrap gap-2">;
                       {popularSearches.map((search, index) => (;
@@ -642,8 +607,7 @@ setFilters (prev: > ({;
                           onClick={() => {;
                             setQuery(search);
                             handleSearch();
-                          }}"
-                          className = "px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors"
+                          }}"                          className = "px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors"
                         >
                           {search}
                         </button>) ) }
@@ -692,8 +656,7 @@ setFilters (prev: > ({;
                 </div>
               ) : ("
                 <div className="p-8 text-center">"
-                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />"
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">
+                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />"                  <h3 className="text-lg font-medium text-gray-900 mb-2">
                     No results found
                   </h3>"
                   <p className="text-gray-600">

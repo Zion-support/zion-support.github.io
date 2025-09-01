@@ -111,8 +111,7 @@ export default function AIQuantumComputingPlatform() {
           </div>"
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             AI Quantum Computing Platform
-          </h1>"
-          <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+          </h1>"          <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
             Harness the power of quantum computing with AI-driven optimization,
             hybrid quantum-classical solutions, and breakthrough computational
             capabilities. Solve the impossible with quantum intelligence.
@@ -155,8 +154,7 @@ export default function AIQuantumComputingPlatform() {
             <ul className="space-y-4">
               {features.map((feature, index) => ("
                 <li key={index} className="flex items-start">"
-                  <CheckCircle className="w-5 h-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0" />"
-                  <span className="text-gray-700">{feature}</span>
+                  <CheckCircle className="w-5 h-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0" />"                  <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -172,8 +170,7 @@ export default function AIQuantumComputingPlatform() {
                   key={index}"
                   className="flex items-center p-3 bg-gray-50 rounded-lg"
                 >"
-                  <Lightning className="w-4 h-4 text-purple-500 mr-3" />"
-                  <span className="text-gray-700">{industry}</span>
+                  <Lightning className="w-4 h-4 text-purple-500 mr-3" />"                  <span className="text-gray-700">{industry}</span>
                 </div>
               ))}
             </div>
@@ -202,8 +199,7 @@ export default function AIQuantumComputingPlatform() {
               >"
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">"
                   <TrendingUp className="w-6 h-6 text-purple-600" />
-                </div>"
-                <p className="text-gray-700 font-medium">{benefit}</p>
+                </div>"                <p className="text-gray-700 font-medium">{benefit}</p>
               </div>
             ))}
           </div>
@@ -229,8 +225,7 @@ export default function AIQuantumComputingPlatform() {
             >"
               <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-4">"
                 <Cpu className="w-5 h-5 text-purple-600" />
-              </div>"
-              <h3 className="font-semibold text-gray-900 mb-2">{useCase}</h3>
+              </div>"              <h3 className="font-semibold text-gray-900 mb-2">{useCase}</h3>
             </div>
           ))}
         </div>
@@ -278,8 +273,7 @@ export default function AIQuantumComputingPlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-700">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -401,8 +395,7 @@ export default function AIQuantumComputingPlatform() {
             <a"
               href="mailto:kleber@ziontechgroup.com""
               className="text-purple-600 hover:text-purple-700 font-semibold"
-            >
-              kleber@ziontechgroup.com
+            >              kleber@ziontechgroup.com
             </a>
           </div>
         </div>
@@ -420,8 +413,7 @@ export default function AIQuantumComputingPlatform() {
             rel="noreferrer""
             className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
           >"
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />          </a>
         </div>
       </section>
     </div>

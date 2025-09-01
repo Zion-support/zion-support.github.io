@@ -7,8 +7,7 @@ import {
   AlertTriangle,
   FileText,
   Zap,
-  Brain,
-  BarChart3,
+  Brain,  BarChart3,
   ArrowRight,
   Star,
   Award,
@@ -143,8 +142,7 @@ export default function AIComplianceAssistant() {
         'Companies with complex regulatory requirements across multiple jurisdictions'},
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
+  return()    <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       {/* Hero Section */}"
       <section className="relative overflow-hidden pt-32 pb-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -155,8 +153,7 @@ export default function AIComplianceAssistant() {
             className="text-center"
           >"
             <div className="inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4" />
-              <span>AI-Powered Compliance</span>
+              <Shield className="w-4 h-4" />              <span>AI-Powered Compliance</span>
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -176,8 +173,7 @@ export default function AIComplianceAssistant() {
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
               >
                 Start Free Trial"
-                <ArrowRight className="inline ml-2 w-5 h-5" />
-              </motion.button>
+                <ArrowRight className="inline ml-2 w-5 h-5" />              </motion.button>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -268,8 +264,7 @@ export default function AIComplianceAssistant() {
                   <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />"
                   <span className="text-zion-slate-light text-lg">
                     {benefit}
-                  </span>
-                </motion.div>
+                  </span>                </motion.div>
               ))}
             </div>
 "
@@ -285,8 +280,7 @@ export default function AIComplianceAssistant() {
                   <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />"
                   <span className="text-zion-slate-light text-lg">
                     {benefit}
-                  </span>
-                </motion.div>
+                  </span>                </motion.div>
               ))}
             </div>
           </div>
@@ -321,8 +315,7 @@ export default function AIComplianceAssistant() {
               >"
                 <div className="flex items-start space-x-4">"
                   <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">"
-                    <Scale className="w-6 h-6 text-white" />
-                  </div>
+                    <Scale className="w-6 h-6 text-white" />                  </div>
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-2">
                       {area.title}
@@ -370,8 +363,7 @@ export default function AIComplianceAssistant() {
                 </h3>"
                 <p className="text-zion-slate-light text-sm">
                   {useCase.description}
-                </p>
-              </motion.div>
+                </p>              </motion.div>
             ))}
           </div>
         </div>
@@ -400,8 +392,7 @@ export default function AIComplianceAssistant() {
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
               >
                 Start Compliant Today"
-                <Rocket className="inline ml-2 w-5 h-5" />
-              </motion.button>
+                <Rocket className="inline ml-2 w-5 h-5" />              </motion.button>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -409,8 +400,7 @@ export default function AIComplianceAssistant() {
                 className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-zion-purple transition-all duration-300"
               >
                 Contact Sales"
-                <MessageCircle className="inline ml-2 w-5 h-5" />
-              </motion.button>
+                <MessageCircle className="inline ml-2 w-5 h-5" />              </motion.button>
             </div>
           </motion.div>
         </div>

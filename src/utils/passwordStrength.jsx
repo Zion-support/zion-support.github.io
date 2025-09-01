@@ -83,9 +83,12 @@ export const hasNumbers = password => {
  * @param {string} password - Password to check
  * @returns {boolean} True if contains special characters
  */
+:src/utils/passwordStrength.jsx
 export const hasSpecialChars = password => {
 '
   return /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
+export const hasSpecialChars = (password) => {
+  return /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password);
 };
 
 /**

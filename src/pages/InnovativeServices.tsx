@@ -1,43 +1,5 @@
 import React from 'react';'
-import { motion } from 'framer-motion';
-import {
-
-  Brain,
-  Atom,
-  Lock,
-  Wifi,
-  Shield,
-  Eye,
-  Globe2,
-  Leaf,
-  Zap,
-  Rocket,
-  Cpu,
-  Database,
-  Network,
-  Code,
-  Users,
-  BarChart3,
-  TrendingUp,
-  Lightbulb,
-  Target,
-  Award'
- } from 'lucide-react';
-
-const InnovativeServices: React.FC = (): JSX.Element => {
-
-  const innovations = [
-    {
-'
-      id: 'ai-automation','
-      title: 'AI Business Automation','
-      description: 'Revolutionary AI-powered business process automation that transforms your operations',
-      icon: Brain,
-      features[;'
-        'Intelligent workflow automation','
-        'Predictive analytics integration','
-        'Real-time decision making','
-        'Scalable AI infrastructure'
+import { motion } from 'framer-motion';        'Scalable AI infrastructure'
       ],;'
       benefits['300% efficiency increase', '24/7 autonomous operation', 'Cost reduction up to 60%'],;'
       color: 'from-zion-cyan to-zion-purple'
@@ -152,8 +114,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
   const stats = [;'
     { label: 'Innovation Projects', value: '500+', icon: Rocket },;'
     { label: 'AI Models Deployed', value: '1000+', icon: Brain },;'
-    { label: 'Quantum Breakthroughs', value: '50+', icon: Atom },;'
-    { label: 'Client Success Rate', value: '99.8%', icon: Award };
+    { label: 'Quantum Breakthroughs', value: '50+', icon: Atom },;'    { label: 'Client Success Rate', value: '99.8%', icon: Award };
   ];
 
   return()
@@ -334,8 +295,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
                     <ul className="space-y-2">
                       {innovation.benefits.map((benefit, idx) => ("
                         <li key={idx} className="flex items-center text-zion-slate-light">"
-                          <TrendingUp className="w-4 h-4 text-zion-green mr-3" />
-                          {benefit}
+                          <TrendingUp className="w-4 h-4 text-zion-green mr-3" />                          {benefit}
                         </li>) ) }
                     </ul>
                   </div>

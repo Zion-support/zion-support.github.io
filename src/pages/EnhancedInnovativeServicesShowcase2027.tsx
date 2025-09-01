@@ -1,37 +1,5 @@
 import React, { useState, useEffect } from 'react';'
-import { motion } from 'framer-motion';
-import {
-
-  Brain,
-  Globe,
-  Zap,
-  Shield,
-  Cloud,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Code,
-  Lock,
-  Rocket,
-  Leaf,
-  Waves,
-  Factory,
-  Building2,
-  Cpu,
-  Network,
-  Eye,
-  Heart,
-  Lightbulb,
-  TrendingUp,
-  Users,
-  Target,
-  Award,
-  Phone,
-  Mail,
-  MapPin,'
-  ExternalLink} from 'lucide-react';
-import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  } from "../data/enhancedInnovativeServices2027";
-const categoryColors: { [key: string]: string } = {
+import { motion } from 'framer-motion';const categoryColors: { [key: string]: string } = {
 '
   'Web3 Solutions': 'from-purple-500 to-pink-500','
   'Metaverse Solutions': 'from-blue-500 to-cyan-500','
@@ -51,8 +19,8 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
   const [searchTerm, setSearchTerm] = useState('');'
   const [viewMode, setViewMode] = useState<any>('grid');'
   const [sortBy, setSortBy] = useState<any>('name');
-  const filteredServices = enhancedInnovativeServices2027.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  
+    
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch});
@@ -88,7 +56,6 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
   Beaker;'
 } from 'lucide-react';"
 import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from "../data/enhancedInnovativeServices2027";
-
 const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027);'
   const [searchTerm, setSearchTerm] = useState('');'
@@ -115,8 +82,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
       case 'price':;
         return a.price - b.price;'
       case 'innovation':;'
-        const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 };
-        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
+        const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 };        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);'
       case 'roi':;'
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
@@ -163,8 +129,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   const prevSlide = (...args: unknown[]): unknown => {;
     if (selectedService) {;
       setCurrentSlide ( (prev) => (prev - 1 + 4) % 4) ;
-    }
-  };
+    }  };
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -202,8 +167,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"'
                 onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
               >"
-                <Eye className="w-5 h-5" />
-                <span>Explore Services</span>
+                <Eye className="w-5 h-5" />                <span>Explore Services</span>
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -211,8 +175,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"'
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >"
-                <Phone className="w-5 h-5" />
-                <span>Contact Us</span>
+                <Phone className="w-5 h-5" />                <span>Contact Us</span>
               </motion.button>
             </div>
           </motion.div>
@@ -227,8 +190,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
             <div className="relative">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-gray-light w-5 h-5" />
               <input"
-                type="text""
-                placeholder="Search services..."
+                type="text""                placeholder="Search services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white placeholder-zion-gray-light focus:outline-none focus:border-zion-cyan"
@@ -281,8 +243,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                     viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'`
                   }`}
 "
-                  <List className="w-5 h-5" />
-                </button>
+                  <List className="w-5 h-5" />                </button>
               </div>
               <select
                 value={sortBy}
@@ -331,8 +292,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                     <div className="space-y-1">
                       {service.features.slice(0, 4).map((feature, index) => ("
                         <div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">"
-                          <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                          <span>{feature}</span>
+                          <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />                          <span>{feature}</span>
                         </div>
                       ))}
                       {service.features.length > 4 && ("
@@ -344,8 +304,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                   {/* Innovation Level */}"
                   <div className="flex items-center gap-2 mb-4">"
                     <Star className="w-4 h-4 text-yellow-400" />"
-                    <span className="text-sm text-zion-slate-light">"
-                      Innovation Level: <span className="text-zion-cyan font-medium">{service.innovationLevel}</span>
+                    <span className="text-sm text-zion-slate-light">"                      Innovation Level: <span className="text-zion-cyan font-medium">{service.innovationLevel}</span>
                     </span>
                   </div>
                   {/* Market Info */}"
@@ -368,8 +327,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                       className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white py-3 px-6 rounded-xl font-semibold text-center block hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
 
                       {service.ctaLabel}"
-                      {service.external && <ExternalLink className="w-4 h-4" />}
-                    </a>
+                      {service.external && <ExternalLink className="w-4 h-4" />}                    </a>
                   </div>
 
       {/* Services Grid */}"
@@ -452,8 +410,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                   <Clock className="w-4 h-4" />
                   <span>{service.estimatedDelivery}</span>
                 </div>"
-                <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform" />
-              </div>
+                <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform" />              </div>
             </motion.div>) ) }
         </div>
       </div>;
@@ -501,8 +458,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                   onClick={() => setSelectedService(null)}"
                   className="text-zion-gray-light hover:text-white transition-colors"
                 >"
-                  <X className="w-6 h-6" />
-                </button>
+                  <X className="w-6 h-6" />                </button>
               </div>
 
               {/* Navigation Tabs */}"
@@ -553,22 +509,19 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
                       <div className="bg-white/5 rounded-xl p-6">"
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">"
-                          <CheckCircle className="w-5 h-5 text-green-400" />
-                          <span>Key Benefits</span>
+                          <CheckCircle className="w-5 h-5 text-green-400" />                          <span>Key Benefits</span>
                         </h4>"
                         <ul className="space-y-2">
                           {selectedService.benefits.map((benefit, index) => ("
                             <li key={index} className="text-zion-gray-light flex items-start space-x-2">"
-                              <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                              <span>{benefit}</span>
+                              <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />                              <span>{benefit}</span>
                             </li>) ) }
                         </ul>
                       </div>
 "
                       <div className="bg-white/5 rounded-xl p-6">"
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">"
-                          <Target className="w-5 h-5 text-zion-cyan" />
-                          <span>Target Audience</span>
+                          <Target className="w-5 h-5 text-zion-cyan" />                          <span>Target Audience</span>
                         </h4>"
                         <div className="flex flex-wrap gap-2">
                           {selectedService.targetAudience.map((audience, index) => (
@@ -607,28 +560,24 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
                       <div className="bg-white/5 rounded-xl p-6">"
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">"
-                          <Zap className="w-5 h-5 text-yellow-400" />
-                          <span>Key Features</span>
+                          <Zap className="w-5 h-5 text-yellow-400" />                          <span>Key Features</span>
                         </h4>"
                         <ul className="space-y-2">
                           {selectedService.features.map((feature, index) => ("
                             <li key={index} className="text-zion-gray-light flex items-start space-x-2">"
-                              <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                              <span>{feature}</span>
+                              <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />                              <span>{feature}</span>
                             </li>) ) }
                         </ul>
                       </div>
 "
                       <div className="bg-white/5 rounded-xl p-6">"
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">"
-                          <Lightbulb className="w-5 h-5 text-zion-purple" />
-                          <span>Use Cases</span>
+                          <Lightbulb className="w-5 h-5 text-zion-purple" />                          <span>Use Cases</span>
                         </h4>"
                         <ul className="space-y-2">
                           {selectedService.useCases.map((useCase, index) => ("
                             <li key={index} className="text-zion-gray-light flex items-start space-x-2">"
-                              <ArrowRight className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                              <span>{useCase}</span>
+                              <ArrowRight className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                              <span>{useCase}</span>
                             </li>) ) }
                         </ul>
                       </div>
@@ -659,8 +608,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
                       <div className="bg-white/5 rounded-xl p-6">"
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">"
-                          <Cpu className="w-5 h-5 text-blue-400" />
-                          <span>Technology Stack</span>
+                          <Cpu className="w-5 h-5 text-blue-400" />                          <span>Technology Stack</span>
                         </h4>"
                         <div className="flex flex-wrap gap-2">
                           {selectedService.technicalSpecs.technology.map((tech, index) => (
@@ -675,8 +623,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 "
                       <div className="bg-white/5 rounded-xl p-6">"
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">"
-                          <Network className="w-5 h-5 text-green-400" />
-                          <span>Integrations</span>
+                          <Network className="w-5 h-5 text-green-400" />                          <span>Integrations</span>
                         </h4>"
                         <div className="flex flex-wrap gap-2">
                           {selectedService.technicalSpecs.integrations.map((integration, index) => (
@@ -799,8 +746,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                               <span className="text-zion-gray-light">{selectedService.contactInfo.address}</span>
                             </div>"
                             <div className="flex items-center space-x-3">"
-                              <ExternalLink className="w-5 h-5 text-zion-cyan" />
-                              <a
+                              <ExternalLink className="w-5 h-5 text-zion-cyan" />                              <a
                                 href={selectedService.contactInfo.website}"
                                 target="_blank""
                                 rel="noopener noreferrer""
@@ -820,8 +766,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                           className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"`
                           onClick={() => window.open(`tel:${selectedService.contactInfo.phone}`)}
                         >"
-                          <Phone className="w-5 h-5" />
-                          <span>Call Now</span>
+                          <Phone className="w-5 h-5" />                          <span>Call Now</span>
                         </motion.button>
                         <motion.button
                           whileHover={{ scale: 1.05 }}
@@ -829,8 +774,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                           className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"`
                           onClick={() => window.open(`mailto:${selectedService.contactInfo.email}`)}
                         >"
-                          <Mail className="w-5 h-5" />
-                          <span>Email Us</span>
+                          <Mail className="w-5 h-5" />                          <span>Email Us</span>
                         </motion.button>
                       </div>
                     </div>
@@ -843,8 +787,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                   onClick={prevSlide}"
                   className="flex items-center space-x-2 text-zion-gray-light hover:text-white transition-colors"
                 >"
-                  <ChevronLeft className="w-5 h-5" />
-                  <span>Previous</span>
+                  <ChevronLeft className="w-5 h-5" />                  <span>Previous</span>
                 </button>
 "
                 <div className="flex space-x-2">
@@ -864,8 +807,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                   className="flex items-center space-x-2 text-zion-gray-light hover:text-white transition-colors"
                 >
                   <span>Next</span>"
-                  <ChevronRight className="w-5 h-5" />
-                </button>
+                  <ChevronRight className="w-5 h-5" />                </button>
               </div>
             </div>
           </motion.div>
@@ -894,8 +836,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
             "
             <div className="bg-white/10 rounded-xl p-6">"
               <MapPin className="w-8 h-8 text-zion-cyan mx-auto mb-4" />"
-              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>"
-              <p className="text-zion-gray-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>"              <p className="text-zion-gray-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
 
@@ -915,13 +856,11 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
 }
           >"
-            <ExternalLink className="w-5 h-5" />
-            <span>Visit Zion Tech Group</span>;
+            <ExternalLink className="w-5 h-5" />            <span>Visit Zion Tech Group</span>;
           </motion.button>;
         </div>;
       </div>;
     </div>;) ;
 };
-
 export default EnhancedInnovativeServicesShowcase2027;
 '"`

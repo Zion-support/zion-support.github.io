@@ -47,8 +47,7 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {
             >"
               <div className="flex items-center gap-2 text-cyan-300 font-semibold">"
                 <CheckCircle className="w-4 h-4" /> {f.title}
-              </div>"
-              <div className="mt-1 text-sm text-slate-300">{f.desc}</div>
+              </div>"              <div className="mt-1 text-sm text-slate-300">{f.desc}</div>
             </div>
           ))}
         </div>"
@@ -62,8 +61,7 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {
             href="https://www.optimizely.com/pricing/""
             target="_blank""
             rel="noreferrer"
-          >"
-            Optimizely pricing <ExternalLink className="w-3 h-3" />
+          >"            Optimizely pricing <ExternalLink className="w-3 h-3" />
           </a>
         </div>"
         <div className="mt-10 flex flex-wrap gap-3">

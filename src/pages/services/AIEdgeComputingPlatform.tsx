@@ -110,8 +110,7 @@ export default function AIEdgeComputingPlatform() {
           </div>"
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             AI Edge Computing Platform
-          </h1>"
-          <p className="text-xl text-teal-100 mb-8 max-w-3xl mx-auto">
+          </h1>"          <p className="text-xl text-teal-100 mb-8 max-w-3xl mx-auto">
             Bring AI processing to the edge with intelligent device management,
             real-time data processing, and distributed computing capabilities.
             Transform your IoT infrastructure with edge intelligence.
@@ -154,8 +153,7 @@ export default function AIEdgeComputingPlatform() {
             <ul className="space-y-4">
               {features.map((feature, index) => ("
                 <li key={index} className="flex items-start">"
-                  <CheckCircle className="w-5 h-5 text-teal-500 mr-3 mt-0.5 flex-shrink-0" />"
-                  <span className="text-gray-700">{feature}</span>
+                  <CheckCircle className="w-5 h-5 text-teal-500 mr-3 mt-0.5 flex-shrink-0" />"                  <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -171,8 +169,7 @@ export default function AIEdgeComputingPlatform() {
                   key={index}"
                   className="flex items-center p-3 bg-gray-50 rounded-lg"
                 >"
-                  <Network className="w-4 h-4 text-teal-500 mr-3" />"
-                  <span className="text-gray-700">{industry}</span>
+                  <Network className="w-4 h-4 text-teal-500 mr-3" />"                  <span className="text-gray-700">{industry}</span>
                 </div>
               ))}
             </div>
@@ -200,8 +197,7 @@ export default function AIEdgeComputingPlatform() {
               >"
                 <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">"
                   <TrendingUp className="w-6 h-6 text-teal-600" />
-                </div>"
-                <p className="text-gray-700 font-medium">{benefit}</p>
+                </div>"                <p className="text-gray-700 font-medium">{benefit}</p>
               </div>
             ))}
           </div>
@@ -227,8 +223,7 @@ export default function AIEdgeComputingPlatform() {
             >"
               <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4">"
                 <Monitor className="w-5 h-5 text-teal-600" />
-              </div>"
-              <h3 className="font-semibold text-gray-900 mb-2">{useCase}</h3>
+              </div>"              <h3 className="font-semibold text-gray-900 mb-2">{useCase}</h3>
             </div>
           ))}
         </div>
@@ -276,8 +271,7 @@ export default function AIEdgeComputingPlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-teal-500 mr-3 mt-0.5 flex-shrink-0" />"
-                      <span className="text-gray-700">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-teal-500 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -399,8 +393,7 @@ export default function AIEdgeComputingPlatform() {
             <a"
               href="mailto:kleber@ziontechgroup.com""
               className="text-teal-600 hover:text-teal-700 font-semibold"
-            >
-              kleber@ziontechgroup.com
+            >              kleber@ziontechgroup.com
             </a>
           </div>
         </div>
@@ -418,8 +411,7 @@ export default function AIEdgeComputingPlatform() {
             rel="noreferrer""
             className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold"
           >"
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />          </a>
         </div>
       </section>
     </div>

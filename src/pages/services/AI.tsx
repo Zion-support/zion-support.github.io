@@ -1,44 +1,5 @@
 import React from 'react';'
-import { Link } from 'react-router-dom';
-import {
-
-  Brain,
-  Cpu,
-  Zap,
-  Target,
-  Users,
-  Shield,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Code,
-  Database,
-  Cloud,
-  Lock,
-  BarChart3,
-  Eye,
-  MessageSquare,
-  Heart,
-  DollarSign,
-  Factory,
-  ShoppingCart'
- } from 'lucide-react';
-;
-export { function };
-export default function AIServices(...args[]):  {
-
-  const aiServices = [
-    {
-
-      name: "AI Strategy & Consulting","
-      description: "Strategic guidance on implementing AI solutions across your organization",
-      icon: Target,
-      features[;"
-        "AI readiness assessment","
-        "Technology roadmap planning","
-        "ROI analysis and business case development","
-        "Change management strategies"
+import { Link } from 'react-router-dom';        "Change management strategies"
       ],;"
       price: "From $2,500","
       duration: "2-4 weeks"
@@ -100,8 +61,7 @@ export default function AIServices(...args[]):  {
     {
 "
       industry: "Healthcare","
-      applications["Medical image analysis", "Drug discovery", "Patient risk prediction"],;
-      icon: Heart
+      applications["Medical image analysis", "Drug discovery", "Patient risk prediction"],;      icon: Heart
     },
     {
 "
@@ -118,8 +78,7 @@ export default function AIServices(...args[]):  {
     {;"
       industry: "Retail",;"
       applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],;
-      icon: ShoppingCart;
-    };
+      icon: ShoppingCart};
   ];
 
   return ("
@@ -147,8 +106,7 @@ export default function AIServices(...args[]):  {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>"
               <button className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">"
-                <Play className="mr-2 h-5 w-5" />
-                Watch Demo
+                <Play className="mr-2 h-5 w-5" />                Watch Demo
               </button>
             </div>
           </div>
@@ -193,8 +151,7 @@ export default function AIServices(...args[]):  {
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-slate-300">"
-                      <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -298,8 +255,7 @@ export default function AIServices(...args[]):  {
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
 
                 Schedule Consultation"
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+                <ArrowRight className="ml-2 h-5 w-5" />              </Link>
               <Link"
                 to="/services""
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"

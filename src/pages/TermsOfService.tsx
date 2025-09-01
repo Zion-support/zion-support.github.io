@@ -1,189 +1,5 @@
 import React from 'react';'
-import { motion } from 'framer-motion';
-import {
-
-  FileText,
-  Shield,
-  Users,
-  Globe,
-  Mail,
-  Phone,
-  MapPin,
-  Calendar,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  Lock,
-  Eye,
-  Database'
- } from 'lucide-react';
-
-const TermsOfService = () => {;'
-  const lastUpdated = '2025-01-15';
-  
-  const sections = [
-    {
-'
-      id: 'acceptance','
-      title: 'Acceptance of Terms',
-      icon: CheckCircle,
-      content: `By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.`
-    },
-    {
-'
-      id: 'services','
-      title: 'Description of Services',
-      icon: BookOpen,`
-      content: `Zion Tech Group provides AI-powered business intelligence, cloud infrastructure, cybersecurity, and digital transformation services. Our services include software solutions, consulting, implementation, and ongoing support.`
-    },
-    {
-'
-      id: 'user-accounts','
-      title: 'User Accounts and Registration',
-      icon: Users,`
-      content: `To access certain services, you may be required to create an account. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.`
-    },
-    {
-'
-      id: 'acceptable-use','
-      title: 'Acceptable Use Policy',
-      icon: Shield,`
-      content: `You agree to use our services only for lawful purposes and in accordance with these Terms. You may not use our services to transmit harmful code, violate intellectual property rights, or engage in any illegal activities.`
-    },
-    {
-'
-      id: 'intellectual-property','
-      title: 'Intellectual Property Rights',
-      icon: Lock,`
-      content: `All content, features, and functionality on our website and services are owned by Zion Tech Group and are protected by copyright, trademark, and other intellectual property laws.`
-    },
-    {
-'
-      id: 'privacy','
-      title: 'Privacy and Data Protection',
-      icon: Shield,`
-      content: `Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services, to understand our practices regarding the collection and use of your information.`
-    },
-    {
-'
-      id: 'payment-terms','
-      title: 'Payment Terms and Billing',
-      icon: CheckCircle,`
-      content: `Payment terms vary by service. Some services require upfront payment, while others may be billed on a subscription basis. All fees are non-refundable unless otherwise specified in your service agreement.`
-    },
-    {
-'
-      id: 'service-levels','
-      title: 'Service Levels and Availability',
-      icon: Globe,`
-      content: `We strive to maintain high service availability but do not guarantee uninterrupted access. Service levels are defined in individual service agreements and may include uptime guarantees and support response times.`
-    },
-    {
-'
-      id: 'limitation-liability','
-      title: 'Limitation of Liability',
-      icon: AlertTriangle,`
-      content: `To the maximum extent permitted by law, Zion Tech Group shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.`
-    },
-    {
-'
-      id: 'indemnification','
-      title: 'Indemnification',
-      icon: Shield,`
-      content: `You agree to indemnify and hold harmless Zion Tech Group from any claims, damages, or expenses arising from your use of our services or violation of these Terms.`
-    },
-    {
-'
-      id: 'termination','
-      title: 'Termination and Suspension',
-      icon: AlertTriangle,`
-      content: `We may terminate or suspend your access to our services at any time for violation of these Terms or for any other reason. You may terminate your account at any time by contacting us.`
-    },
-    {
-'
-      id: 'governing-law','
-      title: 'Governing Law and Disputes',
-      icon: Gavel,`
-      content: `These Terms are governed by the laws of the jurisdiction where Zion Tech Group is incorporated. Any disputes shall be resolved through binding arbitration in accordance with our dispute resolution procedures.`
-    },
-    {
-'
-      id: 'changes','
-      title: 'Changes to Terms',
-      icon: AlertTriangle,`
-      content: `We reserve the right to modify these Terms at any time. We will notify users of significant changes via email or through our website. Continued use of our services constitutes acceptance of the modified Terms.`
-    },;
-    {;'
-      id: 'contact',;'
-      title: 'Contact Information',;
-      icon: Mail,;`
-      content: `If you have any questions about these Terms of Service, please contact us using the information provided below.`;
-    };
-  ];
-
-  const keyProvisions = [
-    {
-'
-      title: 'Service Usage','
-      description: 'Services are provided "as is" without warranties of any kind',
-      icon: CheckCircle
-    },
-    {
-'
-      title: 'Data Security','
-      description: 'We implement industry-standard security measures to protect your data',
-      icon: Shield
-    },
-    {
-'
-      title: 'Payment Terms','
-      description: 'Fees are billed according to your service agreement and are non-refundable',
-      icon: CheckCircle
-    },
-    {
-'
-      title: 'Intellectual Property','
-      description: 'All content and services remain the property of Zion Tech Group',
-      icon: Lock
-    },
-    {
-'
-      title: 'Liability Limits','
-      description: 'Our liability is limited to the amount paid for services in the 12 months prior to the claim',
-      icon: AlertTriangle;
-    },;
-    {;'
-      title: 'Termination Rights',;'
-      description: 'Either party may terminate services with appropriate notice as specified in service agreements',;
-      icon: AlertTriangle;
-    };
-  ];
-
-  const disputeResolution = [
-    {
-'
-      step: '1','
-      title: 'Direct Communication','
-      description: 'Attempt to resolve disputes through direct communication with our support team'
-    },
-    {
-'
-      step: '2','
-      title: 'Escalation','
-      description: 'If direct communication fails, escalate to management for resolution'
-    },
-    {
-'
-      step: '3','
-      title: 'Mediation','
-      description: 'For complex disputes, engage in mediation with a neutral third party';
-    },;
-    {;'
-      step: '4',;'
-      title: 'Arbitration',;'
-      description: 'As a last resort, resolve disputes through binding arbitration';
-    };
-  ];
+import { motion } from 'framer-motion';  ];
 
   return()
     <>
@@ -214,8 +30,7 @@ const TermsOfService = () => {;'
               className="text-center"
             >"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Info className="w-8 h-8 text-zion-cyan" />
-                Agreement to Terms
+                <Info className="w-8 h-8 text-zion-cyan" />                Agreement to Terms
               </h2>"
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>"
@@ -237,8 +52,7 @@ const TermsOfService = () => {;'
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Shield className="w-8 h-8 text-zion-cyan" />
-                Description of Services
+                <Shield className="w-8 h-8 text-zion-cyan" />                Description of Services
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -263,8 +77,7 @@ const TermsOfService = () => {;'
                     Software development and consulting
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Technology strategy and advisory services
+                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Technology strategy and advisory services
                   </li>
                 </ul>
                 <p > We reserve the right to modify, suspend, or discontinue any part of our services at any time without notice.
@@ -281,8 +94,7 @@ const TermsOfService = () => {;'
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Users className="w-8 h-8 text-zion-cyan" />
-                User Accounts and Responsibilities
+                <Users className="w-8 h-8 text-zion-cyan" />                User Accounts and Responsibilities
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -303,8 +115,7 @@ const TermsOfService = () => {;'
                     Notifying us immediately of any unauthorized use
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Ensuring your account information is up to date
+                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Ensuring your account information is up to date
                   </li>
                 </ul>
                 <p>'
@@ -322,8 +133,7 @@ const TermsOfService = () => {;'
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Shield className="w-8 h-8 text-zion-cyan" />
-                Acceptable Use Policy
+                <Shield className="w-8 h-8 text-zion-cyan" />                Acceptable Use Policy
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -352,8 +162,7 @@ const TermsOfService = () => {;'
                     Interfere with the proper functioning of our services
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Use our services for commercial purposes without authorization
+                    <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Use our services for commercial purposes without authorization
                   </li>
                 </ul>
                 <p > Violation of this policy may result in termination of your access to our services.
@@ -370,8 +179,7 @@ const TermsOfService = () => {;'
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Lock className="w-8 h-8 text-zion-cyan" />
-                Intellectual Property Rights
+                <Lock className="w-8 h-8 text-zion-cyan" />                Intellectual Property Rights
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -392,8 +200,7 @@ const TermsOfService = () => {;'
                     Patents and trade secrets
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Copyrighted materials and designs
+                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Copyrighted materials and designs
                   </li>
                 </ul>
                 <p > You may not copy, reproduce, distribute, or create derivative works from our content without our express written permission.
@@ -412,8 +219,7 @@ const TermsOfService = () => {;'
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Eye className="w-8 h-8 text-zion-cyan" />
-                Privacy and Data Protection
+                <Eye className="w-8 h-8 text-zion-cyan" />                Privacy and Data Protection
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -436,8 +242,7 @@ const TermsOfService = () => {;'
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Shield className="w-8 h-8 text-zion-cyan" />
-                Limitation of Liability
+                <Shield className="w-8 h-8 text-zion-cyan" />                Limitation of Liability
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -458,8 +263,7 @@ const TermsOfService = () => {;'
                     Security breaches or data loss
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Third-party actions or content
+                    <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Third-party actions or content
                   </li>
                 </ul>
                 <p > Our total liability to you for any claims arising from these Terms or your use of our services shall not exceed the amount you paid us in the 12 months preceding the claim.
@@ -476,8 +280,7 @@ const TermsOfService = () => {;'
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Info className="w-8 h-8 text-zion-cyan" />
-                Disclaimers
+                <Info className="w-8 h-8 text-zion-cyan" />                Disclaimers
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -501,8 +304,7 @@ const TermsOfService = () => {;'
                     Our services are free of viruses or other harmful components
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    The results obtained from using our services will be accurate or reliable
+                    <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    The results obtained from using our services will be accurate or reliable
                   </li>
                 </ul>
                 <p > We disclaim all warranties, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non - infringement.
@@ -519,8 +321,7 @@ const TermsOfService = () => {;'
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Shield className="w-8 h-8 text-zion-cyan" />
-                Indemnification
+                <Shield className="w-8 h-8 text-zion-cyan" />                Indemnification
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -541,8 +342,7 @@ const TermsOfService = () => {;'
                     Your violation of any third-party rights
                   </li>"
                   <li className="flex items-start gap-2">"
-                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Any content you submit or transmit through our services
+                    <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />                    Any content you submit or transmit through our services
                   </li>
                 </ul>
               </div>
@@ -557,8 +357,7 @@ const TermsOfService = () => {;'
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Calendar className="w-8 h-8 text-zion-cyan" />
-                Termination
+                <Calendar className="w-8 h-8 text-zion-cyan" />                Termination
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -581,8 +380,7 @@ const TermsOfService = () => {;'
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Globe className="w-8 h-8 text-zion-cyan" />
-                Governing Law and Dispute Resolution
+                <Globe className="w-8 h-8 text-zion-cyan" />                Governing Law and Dispute Resolution
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -605,8 +403,7 @@ const TermsOfService = () => {;'
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-                <Calendar className="w-8 h-8 text-zion-cyan" />
-                Changes to These Terms
+                <Calendar className="w-8 h-8 text-zion-cyan" />                Changes to These Terms
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -628,8 +425,7 @@ const TermsOfService = () => {;'
               viewport={{ once: true }}
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-                <Mail className="w-8 h-8 text-zion-cyan" />
-                Contact Information
+                <Mail className="w-8 h-8 text-zion-cyan" />                Contact Information
               </h2>
 "
               <p className="text-zion-slate-light mb-6">
@@ -658,8 +454,7 @@ const TermsOfService = () => {;'
                   </div>
                 </div>"
                 <button className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">"
-                  <Download className="w-4 h-4" />
-                  Download PDF
+                  <Download className="w-4 h-4" />                  Download PDF
                 </button>
               </div>
 "
@@ -731,8 +526,7 @@ const TermsOfService = () => {;'
                       <section.icon className="w-4 h-4 text-purple-600" />
                     </div>"
                     <span className="font-medium text-slate-900">{section.title}</span>"
-                    <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
-                  </motion.a>
+                    <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />                  </motion.a>
                 ))}
               </div>
             </motion.div>
@@ -951,8 +745,7 @@ const TermsOfService = () => {;'
                   <span>legal@ziontechgroup.com</span>
                 </div>"
                 <div className="flex items-center justify-center gap-3 text-white">"
-                  <Phone className="w-5 h-5" />
-                  <span>+1 (555) 123-4567</span>
+                  <Phone className="w-5 h-5" />                  <span>+1 (555) 123-4567</span>
                 </div>
               </div>
               "

@@ -13,8 +13,7 @@ import {
   Network,
   Lock,
   Globe,
-  Rocket,
-  Star,
+  Rocket,  Star,
   CheckCircle,
   ArrowRight,
   Phone,
@@ -204,8 +203,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
       icon: Target},
   ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
@@ -216,8 +214,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
             className="mb-8"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium mb-6">"
-              <Atom className="w-4 h-4 mr-2" />
-              Revolutionary Technology
+              <Atom className="w-4 h-4 mr-2" />              Revolutionary Technology
             </div>"
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI-Quantum Hybrid Platform
@@ -240,15 +237,13 @@ const AIQuantumHybridPlatform: React.FC = () => {
               to="/contact""
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >"
-              <Rocket className="w-5 h-5 mr-2" />
-              Start Your Quantum Journey
+              <Rocket className="w-5 h-5 mr-2" />              Start Your Quantum Journey
             </Link>
             <Link"
               to="#demo""
               className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-purple-500 text-purple-300 font-semibold text-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
             >"
-              <Eye className="w-5 h-5 mr-2" />
-              Watch Demo
+              <Eye className="w-5 h-5 mr-2" />              Watch Demo
             </Link>
           </motion.div>
         </div>
@@ -333,8 +328,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 className="bg-gradient-to-br from-slate-800/80 to-purple-800/80 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20"
               >"
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">"
-                  <Target className="w-6 h-6 mr-3 text-purple-400" />
-                  {useCase.industry}
+                  <Target className="w-6 h-6 mr-3 text-purple-400" />                  {useCase.industry}
                 </h3>"
                 <div className="space-y-3">
                   {useCase.applications.map((app, appIndex) => (
@@ -342,8 +336,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
                       key={appIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />
-                      {app}
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />                      {app}
                     </div>
                   ))}
                 </div>
@@ -422,8 +415,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
                       key={featureIndex}"
                       className="flex items-start text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5" />"
-                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5" />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -516,8 +508,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center text-gray-300">"
-                <MapPin className="w-5 h-5 mr-2 text-purple-400" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <MapPin className="w-5 h-5 mr-2 text-purple-400" />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
 "
@@ -526,23 +517,20 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 to="/contact""
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >"
-                <Rocket className="w-5 h-5 mr-2" />
-                Schedule a Demo
+                <Rocket className="w-5 h-5 mr-2" />                Schedule a Demo
               </Link>
               <Link"
                 to="https://ziontechgroup.com""
                 className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-purple-500 text-purple-300 font-semibold text-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
               >"
-                <Globe className="w-5 h-5 mr-2" />
-                Visit Our Website
+                <Globe className="w-5 h-5 mr-2" />                Visit Our Website
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIQuantumHybridPlatform;
 '"`
