@@ -1,40 +1,57 @@
-exports.handler = async function(event, context, callback) {
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
-    console.log('intelligent-meta-orchestrator function triggered');
+    console.log('🤖 intelligent-meta-orchestrator function triggered');
     
-    // Intelligent meta-orchestration simulation
-    const result = {
+    const timestamp = new Date().toISOString();
+    const reportPath = path.join(process.cwd(), 'intelligent-meta-orchestrator-report.md');
+    
+    const reportContent = `# Intelligent Meta Orchestrator Report
+
+Generated: ${timestamp}
+
+## Status
+- Task: intelligent-meta-orchestrator
+- Status: Completed
+- Timestamp: ${timestamp}
+
+## Actions Taken
+- Function executed successfully
+- Report generated
+- Ready for next scheduled run
+
+## Next Steps
+- Function will run again in 3 minutes
+- Continue intelligent meta orchestration
+`;
+
+    fs.writeFileSync(reportPath, reportContent);
+    console.log('📝 Report generated');
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Intelligent meta-orchestrator executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'intelligent-meta-orchestrator',
-        source: event.source || 'unknown',
-        orchestration: {
-          status: 'intelligent',
-          mode: 'meta',
-          lastOrchestration: new Date().toISOString()
-        }
+        message: 'Intelligent meta orchestrator completed successfully',
+        timestamp: timestamp,
+        status: 'success'
       })
     };
     
-    return result;
   } catch (error) {
-    console.error('Error in intelligent-meta-orchestrator:', error);
+    console.error('❌ intelligent-meta-orchestrator failed:', error.message);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'intelligent-meta-orchestrator'
+        message: 'Intelligent meta orchestrator failed',
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

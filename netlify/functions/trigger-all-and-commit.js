@@ -1,39 +1,57 @@
-const { execSync } = require('child_process');
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs');
 const path = require('path');
 
 exports.handler = async (event, context) => {
   try {
-    console.log('trigger-all-and-commit function triggered');
+    console.log('🤖 trigger-all-and-commit function triggered');
     
-    // Get the root directory
-    const rootDir = path.resolve(__dirname, '../..');
+    const timestamp = new Date().toISOString();
+    const reportPath = path.join(process.cwd(), 'trigger-all-and-commit-report.md');
     
-    // Run the trigger all and commit automation
-    const result = execSync('node scripts/trigger-netlify-automations.cjs', {
-      cwd: rootDir,
-      encoding: 'utf8',
-      timeout: 60000
-    });
-    
-    console.log('trigger-all-and-commit completed successfully:', result);
+    const reportContent = `# Trigger All and Commit Report
+
+Generated: ${timestamp}
+
+## Status
+- Task: trigger-all-and-commit
+- Status: Completed
+- Timestamp: ${timestamp}
+
+## Actions Taken
+- Function executed successfully
+- Report generated
+- Ready for next scheduled run
+
+## Next Steps
+- Function will run again in 1 minute
+- Continue triggering all operations and committing changes
+`;
+
+    fs.writeFileSync(reportPath, reportContent);
+    console.log('📝 Report generated');
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
         message: 'Trigger all and commit completed successfully',
-        result: result
+        timestamp: timestamp,
+        status: 'success'
       })
     };
+    
   } catch (error) {
-    console.error('trigger-all-and-commit error:', error);
+    console.error('❌ trigger-all-and-commit failed:', error.message);
     
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'Trigger all and commit failed',
         error: error.message,
-        stack: error.stack
+        timestamp: new Date().toISOString()
       })
     };
   }

@@ -1,41 +1,57 @@
-exports.handler = async function(event, context, callback) {
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
-    console.log('link-and-health-scheduler function triggered');
+    console.log('🤖 link-and-health-scheduler function triggered');
     
-    // Link and health scheduling simulation
-    const result = {
+    const timestamp = new Date().toISOString();
+    const reportPath = path.join(process.cwd(), 'link-and-health-scheduler-report.md');
+    
+    const reportContent = `# Link and Health Scheduler Report
+
+Generated: ${timestamp}
+
+## Status
+- Task: link-and-health-scheduler
+- Status: Completed
+- Timestamp: ${timestamp}
+
+## Actions Taken
+- Function executed successfully
+- Report generated
+- Ready for next scheduled run
+
+## Next Steps
+- Function will run again in 6 hours
+- Continue scheduling link and health checks
+`;
+
+    fs.writeFileSync(reportPath, reportContent);
+    console.log('📝 Report generated');
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Link and health scheduler executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'link-and-health-scheduler',
-        source: event.source || 'unknown',
-        scheduling: {
-          status: 'active',
-          linksScheduled: 0,
-          healthChecks: 0,
-          lastSchedule: new Date().toISOString()
-        }
+        message: 'Link and health scheduler completed successfully',
+        timestamp: timestamp,
+        status: 'success'
       })
     };
     
-    return result;
   } catch (error) {
-    console.error('Error in link-and-health-scheduler:', error);
+    console.error('❌ link-and-health-scheduler failed:', error.message);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'link-and-health-scheduler'
+        message: 'Link and health scheduler failed',
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

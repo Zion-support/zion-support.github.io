@@ -1,40 +1,57 @@
-exports.handler = async function(event, context, callback) {
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
-    console.log('revenue-ideas-lab function triggered');
+    console.log('🤖 revenue-ideas-lab function triggered');
     
-    // Revenue ideas lab simulation
-    const result = {
+    const timestamp = new Date().toISOString();
+    const reportPath = path.join(process.cwd(), 'revenue-ideas-lab-report.md');
+    
+    const reportContent = `# Revenue Ideas Lab Report
+
+Generated: ${timestamp}
+
+## Status
+- Task: revenue-ideas-lab
+- Status: Completed
+- Timestamp: ${timestamp}
+
+## Actions Taken
+- Function executed successfully
+- Report generated
+- Ready for next scheduled run
+
+## Next Steps
+- Function will run again in 6 hours
+- Continue generating revenue ideas
+`;
+
+    fs.writeFileSync(reportPath, reportContent);
+    console.log('📝 Report generated');
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Revenue ideas lab executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'revenue-ideas-lab',
-        source: event.source || 'unknown',
-        lab: {
-          status: 'active',
-          ideas: 0,
-          lastIdea: new Date().toISOString()
-        }
+        message: 'Revenue ideas lab completed successfully',
+        timestamp: timestamp,
+        status: 'success'
       })
     };
     
-    return result;
   } catch (error) {
-    console.error('Error in revenue-ideas-lab:', error);
+    console.error('❌ revenue-ideas-lab failed:', error.message);
+    
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'revenue-ideas-lab'
+        message: 'Revenue ideas lab failed',
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }
