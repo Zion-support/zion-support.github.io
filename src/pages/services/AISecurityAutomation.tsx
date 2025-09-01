@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAutomation() {
   const features = [
-    'AI-powered security automation optimization',
-    'Intelligent workflow automation and orchestration',;
+    'AI-powered security automation optimization',Intelligent workflow automation and orchestration',;
     'Automated security response and remediation',;
     'Predictive analytics for automation opportunities',;
     'Smart security process optimization',;

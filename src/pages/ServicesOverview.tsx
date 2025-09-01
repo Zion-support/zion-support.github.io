@@ -78,33 +78,16 @@ const categoryIcons: Record<string, React.ReactNode> = {
 
 const categoryColors: Record<string, string> = {
 
-  'AI & Analytics': 'from-purple-600 to-pink-600',
-  'AI & Sales': 'from-blue-600 to-cyan-600',
-  'AI & Support': 'from-green-600 to-emerald-600',
-  'AI & Finance': 'from-yellow-600 to-orange-600',
-  'AI & Operations': 'from-indigo-600 to-purple-600',
-  'AI & HR': 'from-pink-600 to-rose-600',
-  'AI & Management': 'from-cyan-600 to-blue-600',
-  'AI & Marketing': 'from-orange-600 to-red-600',
-  'AI & Education': 'from-emerald-600 to-green-600',
-  'AI & Legal': 'from-violet-600 to-purple-600',
-  'AI & Healthcare': 'from-red-600 to-pink-600',
-  Cybersecurity: 'from-red-600 to-orange-600',
-  'Cloud & DevOps': 'from-blue-600 to-indigo-600',
-  'IoT & Edge': 'from-green-600 to-teal-600',
-  Blockchain: 'from-yellow-600 to-orange-600',
-  'Quantum Computing': 'from-purple-600 to-indigo-600',
-  Sustainability: 'from-green-600 to-emerald-600',
-  'Space Tech': 'from-indigo-600 to-purple-600',
+  'AI & Analytics': 'from-purple-600 to-pink-600',AI & Sales': 'from-blue-600 to-cyan-600',AI & Support': 'from-green-600 to-emerald-600',AI & Finance': 'from-yellow-600 to-orange-600',AI & Operations': 'from-indigo-600 to-purple-600',AI & HR': 'from-pink-600 to-rose-600',AI & Management': 'from-cyan-600 to-blue-600',AI & Marketing': 'from-orange-600 to-red-600',AI & Education': 'from-emerald-600 to-green-600',AI & Legal': 'from-violet-600 to-purple-600',AI & Healthcare': 'from-red-600 to-pink-600',
+  Cybersecurity: 'from-red-600 to-orange-600',Cloud & DevOps': 'from-blue-600 to-indigo-600',IoT & Edge': 'from-green-600 to-teal-600',
+  Blockchain: 'from-yellow-600 to-orange-600',Quantum Computing': 'from-purple-600 to-indigo-600',
+  Sustainability: 'from-green-600 to-emerald-600',Space Tech': 'from-indigo-600 to-purple-600',
   FinTech: 'from-emerald-600 to-teal-600',
-  Healthcare: 'from-red-600 to-pink-600',
-  'E-commerce': 'from-blue-600 to-cyan-600',
-  'Content & Media': 'from-purple-600 to-pink-600',
+  Healthcare: 'from-red-600 to-pink-600',E-commerce': 'from-blue-600 to-cyan-600',Content & Media': 'from-purple-600 to-pink-600',
   Productivity: 'from-orange-600 to-red-600',
   Analytics: 'from-cyan-600 to-blue-600',
   Automation: 'from-green-600 to-emerald-600',
-  Innovation: 'from-yellow-600 to-orange-600',
-  'Emerging Tech': 'from-purple-600 to-indigo-600'};
+  Innovation: 'from-yellow-600 to-orange-600',Emerging Tech': 'from-purple-600 to-indigo-600'};
 
 const serviceCategories = [
   {
@@ -390,7 +373,7 @@ export default function ServicesOverview() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {contactInfo.website.replace('https://',')}
+                  {contactInfo.website.replace('https://',)}
                 </a>
               </div>
             </div>"

@@ -24,10 +24,7 @@ const AIBusinessIntelligence = () => {
       description:'
         'Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data',
       benefits: ['
-        'Predictive modeling',
-        'Anomaly detection',
-        'Pattern recognition',
-        'Automated insights',
+        'Predictive modeling',Anomaly detection',Pattern recognition',Automated insights',
       ]},
     {
 
@@ -36,10 +33,7 @@ const AIBusinessIntelligence = () => {
       description:'
         'Interactive, customizable dashboards that provide instant visibility into key business metrics',
       benefits: ['
-        'Live data updates',
-        'Customizable views',
-        'Role-based access',
-        'Mobile responsive',
+        'Live data updates',Customizable views',Role-based access',Mobile responsive',
       ]},
     {
 
@@ -48,10 +42,7 @@ const AIBusinessIntelligence = () => {
       description:'
         'Forecast future trends and outcomes using historical data and advanced statistical models',
       benefits: ['
-        'Sales forecasting',
-        'Demand planning',
-        'Risk assessment',
-        'Trend prediction',
+        'Sales forecasting',Demand planning',Risk assessment',Trend prediction',
       ]},
     {
 
@@ -60,10 +51,7 @@ const AIBusinessIntelligence = () => {
       description:'
         'Monitor and measure business performance against goals and benchmarks in real-time',
       benefits: ['
-        'KPI monitoring',
-        'Goal tracking',
-        'Benchmarking',
-        'Performance alerts',
+        'KPI monitoring',Goal tracking',Benchmarking',Performance alerts',
       ]},
   ];
   const solutions = [
@@ -72,44 +60,28 @@ const AIBusinessIntelligence = () => {
       category: 'Sales & Marketing',
       icon: Users,
       solutions: ['
-        'Customer behavior analysis',
-        'Lead scoring and qualification',
-        'Campaign performance optimization',
-        'Market trend analysis',
-        'Customer lifetime value prediction',
+        'Customer behavior analysis',Lead scoring and qualification',Campaign performance optimization',Market trend analysis',Customer lifetime value prediction',
       ]},
     {
 
       category: 'Operations & Supply Chain',
       icon: Activity,
       solutions: ['
-        'Inventory optimization',
-        'Supply chain risk assessment',
-        'Operational efficiency analysis',
-        'Quality control monitoring',
-        'Resource allocation optimization',
+        'Inventory optimization',Supply chain risk assessment',Operational efficiency analysis',Quality control monitoring',Resource allocation optimization',
       ]},
     {
 
       category: 'Financial Analytics',
       icon: TrendingUp,
       solutions: ['
-        'Revenue forecasting',
-        'Cost analysis and optimization',
-        'Profitability analysis',
-        'Cash flow prediction',
-        'Investment decision support',
+        'Revenue forecasting',Cost analysis and optimization',Profitability analysis',Cash flow prediction',Investment decision support',
       ]},
     {
 
       category: 'Human Resources',
       icon: Users,
       solutions: ['
-        'Employee performance analytics',
-        'Talent acquisition insights',
-        'Workforce planning',
-        'Employee retention prediction',
-        'Training effectiveness analysis',
+        'Employee performance analytics',Talent acquisition insights',Workforce planning',Employee retention prediction',Training effectiveness analysis',
       ]},
   ];
   const technologies = [

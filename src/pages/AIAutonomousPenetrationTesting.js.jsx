@@ -189,14 +189,7 @@ const AIAutonomousPenetrationTesting = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Network Penetration Testing',
-                'Web Application Penetration Testing',
-                'Mobile Application Penetration Testing',
-                'API Penetration Testing',
-                'Cloud Penetration Testing',
-                'Social Engineering Testing',
-                'Physical Security Testing',
-                'Wireless Security Testing',
+                'Network Penetration Testing',Web Application Penetration Testing',Mobile Application Penetration Testing',API Penetration Testing',Cloud Penetration Testing',Social Engineering Testing',Physical Security Testing',Wireless Security Testing',
               ].map(type => (
                 <div
                   key={type}"

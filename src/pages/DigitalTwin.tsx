@@ -103,9 +103,7 @@ export default function DigitalTwin(...args: any[]): any {
         'Optimize production processes and predict equipment failures',
       icon: Factory,
       benefits: ['
-        'Production optimization',
-        'Predictive maintenance',
-        'Quality control',
+        'Production optimization',Predictive maintenance',Quality control',
       ]},
     {
 
@@ -119,9 +117,7 @@ export default function DigitalTwin(...args: any[]): any {
       description: 'Patient monitoring and medical device management',
       icon: Activity,
       benefits: ['
-        'Patient care',
-        'Equipment monitoring',
-        'Treatment optimization',
+        'Patient care',Equipment monitoring',Treatment optimization',
       ]},
     {
 
@@ -129,23 +125,12 @@ export default function DigitalTwin(...args: any[]): any {
       description: 'Fleet management and infrastructure monitoring',
       icon: Truck,
       benefits: ['
-        'Fleet optimization',
-        'Route planning',
-        'Maintenance scheduling',
+        'Fleet optimization',Route planning',Maintenance scheduling',
       ]},
   ];
 
   const technologies = ['
-    'IoT Sensors',
-    '3D Modeling',
-    'Machine Learning',
-    'Cloud Computing',
-    'Edge Computing',
-    '5G Networks',
-    'Blockchain',
-    'AR/VR',
-    'Computer Vision',
-    'Robotics',
+    'IoT Sensors',3D Modeling',Machine Learning',Cloud Computing',Edge Computing',5G Networks',Blockchain',AR/VR',Computer Vision',Robotics',
   ];
 
   return()

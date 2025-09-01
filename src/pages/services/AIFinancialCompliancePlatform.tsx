@@ -363,12 +363,7 @@ const AIFinancialCompliancePlatform = () => {
   ];
 
   const benefits = ['
-    'Reduce compliance costs by 40-60%',
-    'Improve compliance accuracy by 95%',
-    'Automate 80% of routine compliance tasks',
-    'Reduce audit preparation time by 70%',
-    'Minimize regulatory fines and penalties',
-    'Ensure 24/7 regulatory compliance monitoring',
+    'Reduce compliance costs by 40-60%',Improve compliance accuracy by 95%',Automate 80% of routine compliance tasks',Reduce audit preparation time by 70%',Minimize regulatory fines and penalties',Ensure 24/7 regulatory compliance monitoring',
   ];
 
   const useCases = [
@@ -400,54 +395,26 @@ const AIFinancialCompliancePlatform = () => {
       plan: 'Starter',
       price: '$2,200/month',
       features: ['
-        'Up to 100 users',
-        'Basic AI risk assessment',
-        'Core compliance monitoring',
-        'Document analysis',
-        'Basic reporting',
-        'Email support',
+        'Up to 100 users',Basic AI risk assessment',Core compliance monitoring',Document analysis',Basic reporting',Email support',
       ]},
     {
 
       plan: 'Professional',
       price: '$4,500/month',
       features: ['
-        'Up to 500 users',
-        'Advanced AI analytics',
-        'Multi-regulation support',
-        'Custom compliance workflows',
-        'Advanced reporting',
-        'Priority support',
-        'API access',
+        'Up to 500 users',Advanced AI analytics',Multi-regulation support',Custom compliance workflows',Advanced reporting',Priority support',API access',
       ]},
     {
 
       plan: 'Enterprise',
       price: '$9,000/month',
       features: ['
-        'Unlimited users',
-        'Full AI capabilities',
-        'Custom integrations',
-        'White-label options',
-        'Dedicated compliance manager',
-        '24/7 phone support',
-        'Custom training',
+        'Unlimited users',Full AI capabilities',Custom integrations',White-label options',Dedicated compliance manager',24/7 phone support',Custom training',
       ]},
   ];
 
   const integrations = ['
-    'SAP Financials',
-    'Oracle Financials',
-    'QuickBooks Enterprise',
-    'Xero',
-    'Sage Intacct',
-    'NetSuite',
-    'Microsoft Dynamics',
-    'Salesforce',
-    'Workday',
-    'ADP',
-    'Paychex',
-    'Webhook APIs',
+    'SAP Financials',Oracle Financials',QuickBooks Enterprise',Xero',Sage Intacct',NetSuite',Microsoft Dynamics',Salesforce',Workday',ADP',Paychex',Webhook APIs',
   ];
 
   const keyMetrics = [
@@ -470,18 +437,7 @@ const AIFinancialCompliancePlatform = () => {
   ];
 
   const regulations = ['
-    'Basel III',
-    'Dodd-Frank Act',
-    'Sarbanes-Oxley (SOX),
-    'GDPR',
-    'CCPA',
-    'PCI DSS',
-    'SOC 2',
-    'ISO 27001',
-    'FINRA Rules',
-    'SEC Regulations',
-    'AML/KYC',
-    'Anti-Money Laundering',
+    'Basel III',Dodd-Frank Act',Sarbanes-Oxley (SOX),GDPR',CCPA',PCI DSS',SOC 2',ISO 27001',FINRA Rules',SEC Regulations',AML/KYC',Anti-Money Laundering',
   ];
 
   return()

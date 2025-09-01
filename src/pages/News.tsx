@@ -78,13 +78,7 @@ const News: React.FC = () => {
     }
   ];
   const categories = ['
-    'All News',
-    'Product Launch',
-    'Research',
-    'Awards',
-    'Partnerships',
-    'Technology',
-    'Business'
+    'All News',Product Launch',Research',Awards',Partnerships',Technology',Business'
   ];
   const featuredArticle = newsArticles[0];
   return()

@@ -25,11 +25,7 @@ const AIServices = () => {
       description: 'Responsible AI development and governance'},
   ];
   const benefits = ['
-    'Increased operational efficiency by 60%',
-    'Enhanced customer insights and personalization',
-    'Automated decision-making processes',
-    'Competitive advantage through AI innovation',
-    'Scalable AI solutions that grow with your business',
+    'Increased operational efficiency by 60%',Enhanced customer insights and personalization',Automated decision-making processes',Competitive advantage through AI innovation',Scalable AI solutions that grow with your business',
   ];
   return()
     <div className="min-h-screen bg-background">

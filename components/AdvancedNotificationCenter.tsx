@@ -70,24 +70,13 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
   const generateMockNotifications = useCallback(() => {
 
     const types: Notification['type'][] = ['
-      'success',
-      'warning',
-      'error',
-      'info',
+      'success',warning',error',info',
     ];
     const priorities: Notification['priority'][] = ['
-      'low',
-      'medium',
-      'high',
-      'critical',
+      'low',medium',high',critical',
     ];
     const categories = ['
-      'System',
-      'Security',
-      'Performance',
-      'User',
-      'Integration',
-      'Backup',
+      'System',Security',Performance',User',Integration',Backup',
     ];
 
     const mockNotifications: Notification[] = [];

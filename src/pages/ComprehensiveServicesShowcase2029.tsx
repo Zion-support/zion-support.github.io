@@ -50,8 +50,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
 
       name: 'All Services',
       icon: <Rocket className="w-6 h-6" />,
-      color: 'from-cyan-500 to-blue-500'},
-    'ai-ml': {
+      color: 'from-cyan-500 to-blue-500'},ai-ml': {
 
       name: 'AI & Machine Learning',"
       icon: <Brain className="w-6 h-6" />,
@@ -80,8 +79,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
 
       name: 'Cloud & Infrastructure',"
       icon: <Cloud className="w-6 h-6" />,
-      color: 'from-sky-500 to-blue-500'},
-    'micro-saas': {
+      color: 'from-sky-500 to-blue-500'},micro-saas': {
 
       name: 'Micro SAAS',"
       icon: <Code className="w-6 h-6" />,
@@ -98,10 +96,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
       category: 'quantum',
       price: '$49,999 - $199,999',
       features: ['
-        'Quantum-AI Integration',
-        'Hybrid Processing',
-        'Advanced ML',
-        'Real-time Optimization',
+        'Quantum-AI Integration',Hybrid Processing',Advanced ML',Real-time Optimization',
       ],"
       icon: <Atom className="w-8 h-8" />,
       color: 'from-purple-500 to-pink-500',
@@ -116,10 +111,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
       category: 'devops',
       price: '$29,999 - $119,999',
       features: ['
-        'AI Code Review',
-        'Smart CI/CD',
-        'Predictive Monitoring',
-        'Auto-scaling',
+        'AI Code Review',Smart CI/CD',Predictive Monitoring',Auto-scaling',
       ],"
       icon: <Workflow className="w-8 h-8" />,
       color: 'from-blue-500 to-cyan-500',
@@ -134,10 +126,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
       category: 'analytics',
       price: '$19,999 - $79,999',
       features: ['
-        'Predictive Analytics',
-        'Real-time Insights',
-        'AI-powered Reports',
-        'Custom Dashboards',
+        'Predictive Analytics',Real-time Insights',AI-powered Reports',Custom Dashboards',
       ],"
       icon: <BarChart3 className="w-8 h-8" />,
       color: 'from-green-500 to-emerald-500',
@@ -152,10 +141,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
       category: 'ai-ml',
       price: '$24,999 - $99,999',
       features: ['
-        'Process Automation',
-        'AI Decision Making',
-        'Workflow Optimization',
-        'Real-time Monitoring',
+        'Process Automation',AI Decision Making',Workflow Optimization',Real-time Monitoring',
       ],"
       icon: <Brain className="w-8 h-8" />,
       color: 'from-purple-500 to-indigo-500',
@@ -170,10 +156,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
       category: 'ai-ml',
       price: '$34,999 - $129,999',
       features: ['
-        'Data Quality',
-        'Compliance Management',
-        'AI Monitoring',
-        'Security Controls',
+        'Data Quality',Compliance Management',AI Monitoring',Security Controls',
       ],"
       icon: <Shield className="w-8 h-8" />,
       color: 'from-indigo-500 to-purple-500',
@@ -188,10 +171,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
       category: 'analytics',
       price: '$22,999 - $89,999',
       features: ['
-        'Customer Insights',
-        'Behavior Analysis',
-        'Predictive Modeling',
-        'Experience Optimization',
+        'Customer Insights',Behavior Analysis',Predictive Modeling',Experience Optimization',
       ],"
       icon: <Users className="w-8 h-8" />,
       color: 'from-pink-500 to-rose-500',
@@ -206,10 +186,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
       category: 'ai-ml',
       price: '$39,999 - $149,999',
       features: ['
-        'Risk Assessment',
-        'Predictive Modeling',
-        'Real-time Monitoring',
-        'Compliance Reporting',
+        'Risk Assessment',Predictive Modeling',Real-time Monitoring',Compliance Reporting',
       ],"
       icon: <TrendingUp className="w-8 h-8" />,
       color: 'from-emerald-500 to-teal-500',
@@ -224,10 +201,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
       category: 'cybersecurity',
       price: '$27,999 - $109,999',
       features: ['
-        'Code Analysis',
-        'Security Scanning',
-        'Vulnerability Detection',
-        'Automated Reviews',
+        'Code Analysis',Security Scanning',Vulnerability Detection',Automated Reviews',
       ],"
       icon: <Code className="w-8 h-8" />,
       color: 'from-red-500 to-pink-500',
@@ -242,10 +216,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
       category: 'cybersecurity',
       price: '$32,999 - $119,999',
       features: ['
-        'Zero Trust',
-        'Identity Management',
-        'Secure Access',
-        'Network Security',
+        'Zero Trust',Identity Management',Secure Access',Network Security',
       ],"
       icon: <Lock className="w-8 h-8" />,
       color: 'from-orange-500 to-red-500',
@@ -260,10 +231,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
       category: 'cloud',
       price: '$18,999 - $79,999',
       features: ['
-        'Cloud Migration',
-        'CI/CD Pipelines',
-        'Infrastructure as Code',
-        'Monitoring',
+        'Cloud Migration',CI/CD Pipelines',Infrastructure as Code',Monitoring',
       ],"
       icon: <Cloud className="w-8 h-8" />,
       color: 'from-sky-500 to-blue-500',
@@ -278,10 +246,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
       category: 'cloud',
       price: '$25,999 - $99,999',
       features: ['
-        'Infrastructure Design',
-        'Network Solutions',
-        'Security Implementation',
-        '24/7 Support',
+        'Infrastructure Design',Network Solutions',Security Implementation',24/7 Support',
       ],"
       icon: <Server className="w-8 h-8" />,
       color: 'from-slate-500 to-gray-500',
@@ -296,10 +261,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
       category: 'micro-saas',
       price: '$9,999 - $39,999',
       features: ['
-        'Customer Management',
-        'Sales Tracking',
-        'Automation',
-        'Analytics',
+        'Customer Management',Sales Tracking',Automation',Analytics',
       ],"
       icon: <Users className="w-8 h-8" />,
       color: 'from-blue-500 to-indigo-500',

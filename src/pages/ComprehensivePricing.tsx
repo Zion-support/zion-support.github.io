@@ -40,11 +40,7 @@ const pricingTiers = [
     period: '/month',
     description: 'Perfect for small businesses and startups',
     features: ['
-      'Basic AI automation',
-      'Standard support',
-      'Core integrations',
-      'Basic analytics',
-      'Email support',
+      'Basic AI automation',Standard support',Core integrations',Basic analytics',Email support',
     ],
     popular: false},
   {
@@ -54,12 +50,7 @@ const pricingTiers = [
     period: '/month',
     description: 'Ideal for growing businesses',
     features: ['
-      'Advanced AI features',
-      'Priority support',
-      'Custom integrations',
-      'Advanced analytics',
-      'Phone & email support',
-      'Training sessions',
+      'Advanced AI features',Priority support',Custom integrations',Advanced analytics',Phone & email support',Training sessions',
     ],
     popular: true},
   {
@@ -69,13 +60,7 @@ const pricingTiers = [
     period: '/month',
     description: 'For large organizations',
     features: ['
-      'Full AI suite',
-      '24/7 dedicated support',
-      'Custom development',
-      'Enterprise analytics',
-      'Dedicated account manager',
-      'Custom training programs',
-      'SLA guarantees',
+      'Full AI suite',24/7 dedicated support',Custom development',Enterprise analytics',Dedicated account manager',Custom training programs',SLA guarantees',
     ],
     popular: false},
 ];
@@ -105,7 +90,7 @@ export default function ComprehensivePricing() {
     let matchesPrice = true;
     if (selectedPriceRange !== 'all') {
 
-      const price = parseInt(service.price.replace(/[^0-9]/g,'));
+      const price = parseInt(service.price.replace(/[^0-9]/g,));
       switch (selectedPriceRange) {
 
         case 'under-1000':

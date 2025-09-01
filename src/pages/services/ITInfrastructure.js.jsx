@@ -10,10 +10,7 @@ const ITInfrastructure = () => {
       description:'
         'Comprehensive network infrastructure design, implementation, and maintenance',
       features: ['
-        'Network Design',
-        'Performance Optimization',
-        'Security Implementation',
-        '24/7 Monitoring',
+        'Network Design',Performance Optimization',Security Implementation',24/7 Monitoring',
       ],
       icon: '🌐'},
     {
@@ -22,10 +19,7 @@ const ITInfrastructure = () => {
       description:'
         'Expert management of servers, operating systems, and enterprise applications',
       features: ['
-        'Server Management',
-        'OS Administration',
-        'Application Support',
-        'Performance Tuning',
+        'Server Management',OS Administration',Application Support',Performance Tuning',
       ],
       icon: '🖥️'},
     {
@@ -34,10 +28,7 @@ const ITInfrastructure = () => {
       description:'
         'Professional data center management and optimization services',
       features: ['
-        'Facility Management',
-        'Power & Cooling',
-        'Hardware Maintenance',
-        'Capacity Planning',
+        'Facility Management',Power & Cooling',Hardware Maintenance',Capacity Planning',
       ],
       icon: '🏢'},
     {
@@ -45,10 +36,7 @@ const ITInfrastructure = () => {
       title: 'Performance Optimization',
       description: 'System and network performance analysis and improvement',
       features: ['
-        'Performance Monitoring',
-        'Bottleneck Analysis',
-        'Optimization Strategies',
-        'Capacity Planning',
+        'Performance Monitoring',Bottleneck Analysis',Optimization Strategies',Capacity Planning',
       ],
       icon: '⚡'},
   ];
@@ -58,37 +46,25 @@ const ITInfrastructure = () => {
 
       area: 'Hardware Infrastructure',
       solutions: ['
-        'Servers',
-        'Storage systems',
-        'Network equipment',
-        'Workstations',
+        'Servers',Storage systems',Network equipment',Workstations',
       ]},
     {
 
       area: 'Software Infrastructure',
       solutions: ['
-        'Operating systems',
-        'Virtualization platforms',
-        'Database systems',
-        'Management tools',
+        'Operating systems',Virtualization platforms',Database systems',Management tools',
       ]},
     {
 
       area: 'Network Infrastructure',
       solutions: ['
-        'LAN/WAN setup',
-        'Wireless networks',
-        'VPN solutions',
-        'Network security',
+        'LAN/WAN setup',Wireless networks',VPN solutions',Network security',
       ]},
     {
 
       area: 'Storage Infrastructure',
       solutions: ['
-        'Storage arrays',
-        'Backup systems',
-        'Cloud storage',
-        'Data protection',
+        'Storage arrays',Backup systems',Cloud storage',Data protection',
       ]},
   ];
 

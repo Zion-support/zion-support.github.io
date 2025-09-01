@@ -60,7 +60,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
         case 'innovation':
           return b.innovationLevel.localeCompare(a.innovationLevel);
         case 'roi':'
-          return parseFloat(b.roi.replace('%',')) - parseFloat(a.roi.replace('%','));
+          return parseFloat(b.roi.replace('%',)) - parseFloat(a.roi.replace('%',));
         case 'price':
           return a.price - b.price;
         case 'delivery':

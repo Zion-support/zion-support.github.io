@@ -98,12 +98,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Perfect for small businesses and content creators',
       features: ['
-        'Up to 10,000 words per month',
-        'Basic SEO optimization',
-        'Readability scoring',
-        'Plagiarism detection',
-        'Email support',
-        'Basic analytics dashboard'
+        'Up to 10,000 words per month',Basic SEO optimization',Readability scoring',Plagiarism detection',Email support',Basic analytics dashboard'
       ],
       popular: false,
       cta: 'Start Free Trial'
@@ -115,14 +110,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Ideal for growing businesses and marketing teams',
       features: ['
-        'Up to 50,000 words per month',
-        'Advanced SEO optimization',
-        'Multi-language support',
-        'A/B testing automation',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
-        'Team collaboration tools'
+        'Up to 50,000 words per month',Advanced SEO optimization',Multi-language support',A/B testing automation',Priority support',Advanced analytics',API access',Team collaboration tools'
       ],
       popular: true,
       cta: 'Get Started'
@@ -134,12 +122,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Comprehensive solution for large organizations',
       features: ['
-        'Unlimited words per month',
-        'Full feature suite',
-        'Custom AI models',
-        'White-label options',
-        'Dedicated support',
-        'Custom integrations',;
+        'Unlimited words per month',Full feature suite',Custom AI models',White-label options',Dedicated support',Custom integrations',;
         'Advanced reporting',;
         'SLA guarantees';
       ],;

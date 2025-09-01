@@ -36,7 +36,7 @@ export class ContentOptimizer {
   static countWords(content) {
 
     // Remove HTML tags and count words
-    const textContent = content.replace(/<[^>]*>/g, ').trim();
+    const textContent = content.replace(/<[^>]*>/g,).trim();
     return textContent.split(/\s+/).filter(word => word.length > 0).length;
   }
 
@@ -60,7 +60,7 @@ export class ContentOptimizer {
 
   static calculateReadabilityScore(content) {
 
-    const textContent = content.replace(/<[^>]*>/g, ').trim();
+    const textContent = content.replace(/<[^>]*>/g,).trim();
     const sentences = textContent;
       .split(/[.!?]+/)
       .filter(s => s.trim().length > 0);

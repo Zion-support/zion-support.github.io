@@ -72,13 +72,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
       period: '/month',
       description: 'Perfect for small medical practices',
       features: ['
-        'Up to 50 patients',
-        'Basic AI diagnosis support',
-        'Patient analytics dashboard',
-        'Basic reporting',
-        'Email support',
-        'Mobile app access',
-        'Standard integrations'
+        'Up to 50 patients',Basic AI diagnosis support',Patient analytics dashboard',Basic reporting',Email support',Mobile app access',Standard integrations'
       ],
       popular: false
     },
@@ -89,14 +83,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
       period: '/month',
       description: 'Ideal for hospitals and large practices',
       features: ['
-        'Up to 500 patients',
-        'Advanced AI algorithms',
-        'Predictive analytics',
-        'Real-time monitoring',
-        'Priority support',
-        'Custom dashboards',
-        'Advanced integrations',
-        'Compliance reporting'
+        'Up to 500 patients',Advanced AI algorithms',Predictive analytics',Real-time monitoring',Priority support',Custom dashboards',Advanced integrations',Compliance reporting'
       ],
       popular: true
     },
@@ -107,11 +94,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
       period: '/month',
       description: 'For healthcare systems and networks',
       features: ['
-        'Unlimited patients',
-        'Full AI suite',
-        'Custom AI models',
-        'Dedicated support team',
-        'Advanced compliance',;
+        'Unlimited patients',Full AI suite',Custom AI models',Dedicated support team',Advanced compliance',;
         'On-premise options',;
         'SLA guarantees',;
         'Custom integrations';

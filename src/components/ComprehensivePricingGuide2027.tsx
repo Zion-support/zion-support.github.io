@@ -77,9 +77,9 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
 
     const matchesPrice = priceRange === 'All' ||'
-      (priceRange === 'Low' && parseFloat(service.price.replace(/[^0-9.]/g,')) < 100) ||'
-      (priceRange === 'Medium' && parseFloat(service.price.replace(/[^0-9.]/g,')) >= 100 && parseFloat(service.price.replace(/[^0-9.]/g,')) < 1000) ||'
-      (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g,')) >= 1000);
+      (priceRange === 'Low' && parseFloat(service.price.replace(/[^0-9.]/g,)) < 100) ||'
+      (priceRange === 'Medium' && parseFloat(service.price.replace(/[^0-9.]/g,)) >= 100 && parseFloat(service.price.replace(/[^0-9.]/g,)) < 1000) ||'
+      (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g,)) >= 1000);
 
     return matchesSearch && matchesCategory && matchesPrice}) ;
 
@@ -89,7 +89,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
       case 'name':;
         return a.title.localeCompare(b.title);
       case 'price':;
-        return parseFloat(a.price.replace(/[^0-9.]/g,')) - parseFloat(b.price.replace(/[^0-9.]/g,'));
+        return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));
       case 'category':;
         return a.category.localeCompare (b.category) ;
       default:;
@@ -116,7 +116,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 };
 
   const getPriceRange = (price: string) => {;
-    const numPrice = parseFloat(price.replace(/[^0-9.]/g,'));
+    const numPrice = parseFloat(price.replace(/[^0-9.]/g,));
     if (numPrice < 100) return 'Low';
     if (numPrice < 1000) return 'Medium';
     return 'High'};
@@ -128,20 +128,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
     const iconMap: { [key: string]: React.ComponentType<any> } = {
 
-      'AI Solutions': Brain,
-      'Micro SaaS': Zap,
-      'IT Services': Shield,
-      'Cybersecurity': Shield,
-      'Data & Analytics': BarChart3,
-      'Cloud & DevOps': Cloud,
-      'Quantum Computing': Atom,
-      'Blockchain Solutions': Lock,
-      'IoT & Edge Computing': Network,
-      'FinTech Solutions': DollarSign,
-      'HealthTech Solutions': Heart,
-      'EdTech Solutions': BookOpen,
-      'GreenTech Solutions': Leaf,
-      'SpaceTech Solutions': Rocket,;
+      'AI Solutions': Brain,Micro SaaS': Zap,IT Services': Shield,Cybersecurity': Shield,Data & Analytics': BarChart3,Cloud & DevOps': Cloud,Quantum Computing': Atom,Blockchain Solutions': Lock,IoT & Edge Computing': Network,FinTech Solutions': DollarSign,HealthTech Solutions': Heart,EdTech Solutions': BookOpen,GreenTech Solutions': Leaf,SpaceTech Solutions': Rocket,;
       'Robotics & Automation': Cpu,;
       'AR/VR Solutions': Eye,;
       'Biotech Solutions': Dna,;

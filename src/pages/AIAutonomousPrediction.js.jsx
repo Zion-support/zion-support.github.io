@@ -178,14 +178,7 @@ const AIAutonomousPrediction = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Trend Prediction',
-                'Outcome Prediction',
-                'Risk Prediction',
-                'Demand Prediction',
-                'Performance Prediction',
-                'Failure Prediction',
-                'Market Prediction',
-                'Behavior Prediction',
+                'Trend Prediction',Outcome Prediction',Risk Prediction',Demand Prediction',Performance Prediction',Failure Prediction',Market Prediction',Behavior Prediction',
               ].map(type => (
                 <div
                   key={type}"

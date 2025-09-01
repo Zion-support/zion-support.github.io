@@ -26,9 +26,7 @@ const testimonials = [
       'Zion Tech Group transformed our AI capabilities. Their machine learning solutions increased our operational efficiency by 40% and provided insights that were previously impossible to obtain. The team is incredibly professional and delivered beyond our expectations.',
     project: 'AI-Powered Business Intelligence Platform',
     results: ['
-      '40% increase in operational efficiency',
-      'Real-time data insights',
-      'Improved decision-making processes',
+      '40% increase in operational efficiency',Real-time data insights',Improved decision-making processes',
     ],
     image: '/api/placeholder/100/100',
     featured: true},
@@ -44,9 +42,7 @@ const testimonials = [
       'The cloud migration was seamless and exceeded our expectations. Their DevOps automation reduced our deployment time from hours to minutes, and the infrastructure is now more scalable and cost-effective than ever.',
     project: 'Cloud Migration & DevOps Automation',
     results: ['
-      '90% reduction in deployment time',
-      '30% cost savings on infrastructure',
-      'Improved system reliability',
+      '90% reduction in deployment time',30% cost savings on infrastructure',Improved system reliability',
     ],
     image: '/api/placeholder/100/100',
     featured: true},
@@ -62,9 +58,7 @@ const testimonials = [
       "Their cybersecurity solutions provide peace of mind. We've had zero security incidents since implementation, and their compliance automation has streamlined our audit processes significantly.",
     project: 'Cybersecurity & Compliance Platform',
     results: ['
-      'Zero security incidents',
-      'Streamlined compliance processes',
-      'Enhanced threat detection',
+      'Zero security incidents',Streamlined compliance processes',Enhanced threat detection',
     ],
     image: '/api/placeholder/100/100',
     featured: true},
@@ -80,9 +74,7 @@ const testimonials = [
       'The IoT solution they implemented has revolutionized our production monitoring. We can now track every aspect of our manufacturing process in real-time, leading to better quality control and reduced waste.',
     project: 'IoT Manufacturing Platform',
     results: ['
-      'Real-time production monitoring',
-      'Improved quality control',
-      'Reduced waste by 25%',
+      'Real-time production monitoring',Improved quality control',Reduced waste by 25%',
     ],
     image: '/api/placeholder/100/100',
     featured: false},
@@ -98,9 +90,7 @@ const testimonials = [
       'Zion Tech Group helped us navigate our digital transformation journey with expertise and patience. Their solutions have improved our customer experience and increased our online sales by 35%.',
     project: 'Digital Transformation & E-commerce',
     results: ['
-      '35% increase in online sales',
-      'Improved customer experience',
-      'Streamlined operations',
+      '35% increase in online sales',Improved customer experience',Streamlined operations',
     ],
     image: '/api/placeholder/100/100',
     featured: false},
@@ -116,9 +106,7 @@ const testimonials = [
       'Their healthcare technology solutions are cutting-edge and compliant with all regulations. The AI-powered diagnostic tools have improved our diagnostic accuracy and patient outcomes significantly.',
     project: 'AI Healthcare Diagnostics Platform',
     results: ['
-      'Improved diagnostic accuracy',
-      'Enhanced patient outcomes',
-      'Full regulatory compliance',
+      'Improved diagnostic accuracy',Enhanced patient outcomes',Full regulatory compliance',
     ],
     image: '/api/placeholder/100/100',
     featured: false},
@@ -134,9 +122,7 @@ const testimonials = [
       'As a startup, we needed a partner who could scale with us. Zion Tech Group delivered a robust platform that has grown with our business, and their ongoing support has been invaluable.',
     project: 'Scalable SaaS Platform',
     results: ['
-      'Scalable platform architecture',
-      'Rapid development and deployment',
-      'Ongoing technical support',
+      'Scalable platform architecture',Rapid development and deployment',Ongoing technical support',
     ],
     image: '/api/placeholder/100/100',
     featured: false},
@@ -152,24 +138,14 @@ const testimonials = [
       "Their quantum computing solutions are revolutionary. We've been able to solve complex problems that were previously intractable, opening up new possibilities for our research.",
     project: 'Quantum Computing Platform',
     results: ['
-      'Solved previously intractable problems',
-      'Advanced research capabilities',
-      'Cutting-edge technology implementation',
+      'Solved previously intractable problems',Advanced research capabilities',Cutting-edge technology implementation',
     ],
     image: '/api/placeholder/100/100',
     featured: false},
 ];
 
 const industries = ['
-  'All Industries',
-  'Technology',
-  'Software Development',
-  'Financial Services',
-  'Manufacturing',
-  'Retail',
-  'Healthcare',
-  'Startup',
-  'Research & Development',
+  'All Industries',Technology',Software Development',Financial Services',Manufacturing',Retail',Healthcare',Startup',Research & Development',
 ];
 
 const ratings = ['All Ratings',5 Stars',4+ Stars',3+ Stars'];

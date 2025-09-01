@@ -104,12 +104,7 @@ export default function SmartContractRiskScanner(...args: []):  {
       period: '/month',
       description: 'Perfect for small projects and individual developers',
       features: ['
-        'Up to 50 smart contracts/month',
-        'Basic vulnerability scanning',
-        'Standard security reports',
-        'Email support',
-        'Basic API access',
-        'Monthly security updates'
+        'Up to 50 smart contracts/month',Basic vulnerability scanning',Standard security reports',Email support',Basic API access',Monthly security updates'
       ],
       cta: 'Get Started',
       popular: false
@@ -121,14 +116,7 @@ export default function SmartContractRiskScanner(...args: []):  {
       period: '/month',
       description: 'Ideal for growing DeFi projects and development teams',
       features: ['
-        'Up to 500 smart contracts/month',
-        'Advanced vulnerability detection',
-        'AI-powered risk assessment',
-        'Priority support',
-        'Full API access',
-        'Real-time monitoring',
-        'Custom security rules',
-        'SLA guarantee'
+        'Up to 500 smart contracts/month',Advanced vulnerability detection',AI-powered risk assessment',Priority support',Full API access',Real-time monitoring',Custom security rules',SLA guarantee'
       ],
       cta: 'Start Free Trial',
       popular: true
@@ -140,12 +128,7 @@ export default function SmartContractRiskScanner(...args: []):  {
       period: '',
       description: 'Tailored solutions for large organizations and enterprises',
       features: ['
-        'Unlimited smart contracts',
-        'Custom security frameworks',
-        'White-label solutions',
-        'Dedicated infrastructure',
-        '24/7 dedicated support',
-        'Custom integrations',;
+        'Unlimited smart contracts',Custom security frameworks',White-label solutions',Dedicated infrastructure',24/7 dedicated support',Custom integrations',;
         'On-premise deployment',;
         'Compliance certifications';
       ],;
@@ -175,8 +158,7 @@ export default function SmartContractRiskScanner(...args: []):  {
 };
 
   const supportedNetworks = ['
-    'Ethereum',
-    'Binance Smart Chain',;
+    'Ethereum',Binance Smart Chain',;
     'Polygon',;
     'Solana',;
     'Avalanche',;

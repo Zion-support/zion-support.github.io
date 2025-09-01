@@ -187,14 +187,7 @@ const AIAutonomousAPISecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'REST API Security',
-                'GraphQL Security',
-                'SOAP API Security',
-                'Authentication Security',
-                'Authorization Security',
-                'Rate Limiting Security',
-                'Input Validation Security',
-                'Output Encoding Security',
+                'REST API Security',GraphQL Security',SOAP API Security',Authentication Security',Authorization Security',Rate Limiting Security',Input Validation Security',Output Encoding Security',
               ].map(type => (
                 <div
                   key={type}"

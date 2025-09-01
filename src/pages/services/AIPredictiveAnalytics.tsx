@@ -1,8 +1,7 @@
 import React from 'react';
 import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics() {
   const features = [
-    'Advanced machine learning algorithms for pattern recognition',
-    'Real-time data processing and predictive modeling',;
+    'Advanced machine learning algorithms for pattern recognition',Real-time data processing and predictive modeling',;
     'Custom AI models trained on your industry data',;
     'Automated feature engineering and model selection',;
     'Predictive insights with confidence intervals',;

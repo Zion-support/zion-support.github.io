@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMaintenance() {
   const features = [
-    'AI-powered security maintenance optimization',
-    'Intelligent maintenance strategy management and execution',;
+    'AI-powered security maintenance optimization',Intelligent maintenance strategy management and execution',;
     'Automated security updates and patch management',;
     'Predictive analytics for maintenance needs',;
     'Smart maintenance framework management',;

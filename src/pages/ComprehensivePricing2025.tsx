@@ -19,12 +19,7 @@ const ComprehensivePricing2025 = () => {
       period: 'per month',
       annualDiscount: 20,
       features: ['
-        'Process automation',
-        'AI decision making',
-        'Integration APIs',
-        'Analytics dashboard',
-        'Custom workflows',
-        '24/7 support',
+        'Process automation',AI decision making',Integration APIs',Analytics dashboard',Custom workflows',24/7 support',
       ],
       icon: '🤖',
       popular: true,
@@ -42,12 +37,7 @@ const ComprehensivePricing2025 = () => {
       period: 'per month',
       annualDiscount: 15,
       features: ['
-        'Customer segmentation',
-        'Predictive analytics',
-        'Omnichannel support',
-        'Real-time insights',
-        'A/B testing',
-        'Performance monitoring',
+        'Customer segmentation',Predictive analytics',Omnichannel support',Real-time insights',A/B testing',Performance monitoring',
       ],
       icon: '💝',
       popular: false,
@@ -64,12 +54,7 @@ const ComprehensivePricing2025 = () => {
       period: 'per month',
       annualDiscount: 25,
       features: ['
-        'Demand forecasting',
-        'Inventory optimization',
-        'Route planning',
-        'Risk management',
-        'Supplier analytics',
-        'Real-time tracking',
+        'Demand forecasting',Inventory optimization',Route planning',Risk management',Supplier analytics',Real-time tracking',
       ],
       icon: '📦',
       popular: true,
@@ -87,12 +72,7 @@ const ComprehensivePricing2025 = () => {
       period: 'per month',
       annualDiscount: 20,
       features: ['
-        'Threat detection',
-        'Behavioral analysis',
-        'Incident response',
-        'Compliance reporting',
-        'Security monitoring',
-        'Vulnerability assessment',
+        'Threat detection',Behavioral analysis',Incident response',Compliance reporting',Security monitoring',Vulnerability assessment',
       ],
       icon: '🔒',
       popular: false,
@@ -109,12 +89,7 @@ const ComprehensivePricing2025 = () => {
       period: 'per month',
       annualDiscount: 15,
       features: ['
-        'Cloud migration',
-        'CI/CD pipelines',
-        'Monitoring',
-        'Auto-scaling',
-        'Security compliance',
-        'Backup & recovery',
+        'Cloud migration',CI/CD pipelines',Monitoring',Auto-scaling',Security compliance',Backup & recovery',
       ],
       icon: '☁️',
       popular: false,
@@ -124,11 +99,7 @@ const ComprehensivePricing2025 = () => {
 
   const categories = ['All',AI Services',Cybersecurity',Cloud Services'];
   const industries = ['
-    'All',
-    'Technology',
-    'Retail',
-    'Manufacturing',
-    'Finance',
+    'All',Technology',Retail',Manufacturing',Finance',
   ];
 
   const filteredData = pricingData.filter(item => {

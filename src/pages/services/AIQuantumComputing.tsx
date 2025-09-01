@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIQuantumComputing() {
   const features = [
-    'AI-powered quantum optimization',
-    'Intelligent quantum algorithm management',;
+    'AI-powered quantum optimization',Intelligent quantum algorithm management',;
     'Automated quantum monitoring and alerting',;
     'Predictive analytics for quantum scaling',;
     'Smart quantum security and compliance',;

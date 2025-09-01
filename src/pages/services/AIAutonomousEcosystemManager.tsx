@@ -69,12 +69,7 @@ const AIAutonomousEcosystemManager: React.FC = (): JSX.Element => {
   ];
 
   const benefits = ['
-    'Improve ecosystem efficiency by 50%',
-    'Optimize partnerships by 60%',
-    'Enhance collaboration by 70%',
-    'Automate ecosystem management',
-    '24/7 autonomous operation',
-    'Real-time ecosystem insights',
+    'Improve ecosystem efficiency by 50%',Optimize partnerships by 60%',Enhance collaboration by 70%',Automate ecosystem management',24/7 autonomous operation',Real-time ecosystem insights',
   ];
 
   return()

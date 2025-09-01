@@ -236,12 +236,7 @@ const AICustomerSuccessPlatform = () => {
   ];
 
   const benefits = ['
-    'Reduce customer churn by up to 40%',
-    'Increase customer lifetime value by 35%',
-    'Automate 70% of routine customer success tasks',
-    'Improve customer satisfaction scores by 25%',
-    'Enable proactive issue resolution before escalation',
-    'Scale customer success operations efficiently',
+    'Reduce customer churn by up to 40%',Increase customer lifetime value by 35%',Automate 70% of routine customer success tasks',Improve customer satisfaction scores by 25%',Enable proactive issue resolution before escalation',Scale customer success operations efficiently',
   ];
 
   const benefits = [
@@ -273,52 +268,26 @@ const AICustomerSuccessPlatform = () => {
       plan: 'Starter',
       price: '$1,200/month',
       features: ['
-        'Up to 1,000 customers',
-        'Basic AI insights',
-        'Email automation',
-        'Customer health scoring',
-        'Basic reporting',
-        'Email support',
+        'Up to 1,000 customers',Basic AI insights',Email automation',Customer health scoring',Basic reporting',Email support',
       ]},
     {
 
       plan: 'Professional',
       price: '$2,500/month',
       features: ['
-        'Up to 10,000 customers',
-        'Advanced AI analytics',
-        'Multi-channel communication',
-        'Custom success playbooks',
-        'Advanced reporting',
-        'Priority support',
-        'API access',
+        'Up to 10,000 customers',Advanced AI analytics',Multi-channel communication',Custom success playbooks',Advanced reporting',Priority support',API access',
       ]},
     {
 
       plan: 'Enterprise',
       price: '$5,000/month',
       features: ['
-        'Unlimited customers',
-        'Full AI capabilities',
-        'Custom integrations',
-        'White-label options',
-        'Dedicated success manager',
-        '24/7 phone support',
-        'Custom training',
+        'Unlimited customers',Full AI capabilities',Custom integrations',White-label options',Dedicated success manager',24/7 phone support',Custom training',
       ]},
   ];
 
   const integrations = ['
-    'Salesforce CRM',
-    'HubSpot',
-    'Zendesk',
-    'Intercom',
-    'Slack',
-    'Microsoft Teams',
-    'Google Workspace',
-    'Slack',
-    'Zapier',
-    'Webhook APIs',
+    'Salesforce CRM',HubSpot',Zendesk',Intercom',Slack',Microsoft Teams',Google Workspace',Slack',Zapier',Webhook APIs',
   ];
 
   return()

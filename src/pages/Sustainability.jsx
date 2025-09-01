@@ -57,10 +57,7 @@ const Sustainability = () => {
         'Solar, wind, and hydroelectric power solutions for sustainable energy generation.',
       icon: Sun,
       features: ['
-        'Solar panel installation',
-        'Wind turbine systems',
-        'Energy storage solutions',
-        'Grid integration',
+        'Solar panel installation',Wind turbine systems',Energy storage solutions',Grid integration',
       ],
       price: 'From $200,000',
       timeline: '32-48 weeks',
@@ -74,19 +71,13 @@ const Sustainability = () => {
         'Sustainable building design and construction for energy efficiency and environmental impact reduction.',
       icon: Building,
       features: ['
-        'LEED certification',
-        'Energy-efficient design',
-        'Green materials',
-        'Smart building systems',
+        'LEED certification',Energy-efficient design',Green materials',Smart building systems',
       ],
       price: 'From $150,000',
       timeline: '24-40 weeks',
       category: 'Buildings',
       technologies: ['
-        'LEED Standards',
-        'BIM Modeling',
-        'IoT Sensors',
-        'Energy Management',
+        'LEED Standards',BIM Modeling',IoT Sensors',Energy Management',
       ]},
     {
 
@@ -96,10 +87,7 @@ const Sustainability = () => {
         'Advanced waste reduction, recycling, and circular economy solutions.',
       icon: Recycle,
       features: ['
-        'Waste sorting automation',
-        'Recycling optimization',
-        'Circular economy design',
-        'Waste-to-energy',
+        'Waste sorting automation',Recycling optimization',Circular economy design',Waste-to-energy',
       ],
       price: 'From $100,000',
       timeline: '20-32 weeks',
@@ -113,19 +101,13 @@ const Sustainability = () => {
         'Electric vehicles, public transit optimization, and green logistics solutions.',
       icon: Car,
       features: ['
-        'EV infrastructure',
-        'Public transit optimization',
-        'Green logistics',
-        'Carbon footprint tracking',
+        'EV infrastructure',Public transit optimization',Green logistics',Carbon footprint tracking',
       ],
       price: 'From $120,000',
       timeline: '24-36 weeks',
       category: 'Transportation',
       technologies: ['
-        'EV Charging',
-        'Smart Routing',
-        'Fleet Management',
-        'Carbon Analytics',
+        'EV Charging',Smart Routing',Fleet Management',Carbon Analytics',
       ]},
     {
 
@@ -135,19 +117,13 @@ const Sustainability = () => {
         'Smart water management and conservation systems for sustainable resource use.',
       icon: Droplets,
       features: ['
-        'Smart irrigation',
-        'Water quality monitoring',
-        'Leak detection',
-        'Conservation analytics',
+        'Smart irrigation',Water quality monitoring',Leak detection',Conservation analytics',
       ],
       price: 'From $80,000',
       timeline: '16-24 weeks',
       category: 'Water Management',
       technologies: ['
-        'IoT Sensors',
-        'AI Analytics',
-        'Smart Valves',
-        'Water Quality',
+        'IoT Sensors',AI Analytics',Smart Valves',Water Quality',
       ]},
     {
 
@@ -157,19 +133,13 @@ const Sustainability = () => {
         'Comprehensive carbon footprint tracking and reduction strategies.',
       icon: Globe,
       features: ['
-        'Carbon footprint analysis',
-        'Emissions tracking',
-        'Offset strategies',
-        'Sustainability reporting',
+        'Carbon footprint analysis',Emissions tracking',Offset strategies',Sustainability reporting',
       ],
       price: 'From $60,000',
       timeline: '12-20 weeks',
       category: 'Environmental',
       technologies: ['
-        'Carbon Analytics',
-        'IoT Monitoring',
-        'AI Reporting',
-        'Blockchain',
+        'Carbon Analytics',IoT Monitoring',AI Reporting',Blockchain',
       ]},
   ];
 

@@ -14,18 +14,12 @@ export const securityConfig = {
     'object-src': ["'none'"],"
     'base-uri': ["'self'"],"
     'form-action': ["'self'"],"
-    'frame-ancestors': ["'none'"],
-    'upgrade-insecure-requests': true},
+    'frame-ancestors': ["'none'"],upgrade-insecure-requests': true},
 
   // Security Headers
   headers: {
 
-    'X-Content-Type-Options': 'nosniff',
-    'X-Frame-Options': 'DENY',
-    'X-XSS-Protection': '1; mode=block',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'geolocation=(), microphone=(), camera=(),
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'},
+    'X-Content-Type-Options': 'nosniff',X-Frame-Options': 'DENY',X-XSS-Protection': '1; mode=block',Referrer-Policy': 'strict-origin-when-cross-origin',Permissions-Policy': 'geolocation=(), microphone=(), camera=(),Strict-Transport-Security': 'max-age=31536000; includeSubDomains'},
 
   // Rate Limiting
 
@@ -71,26 +65,26 @@ export const sanitizeInput = {
   html: (input: string): string => {
 
     return input'
-      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,')
-      .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi,')
-      .replace(/<object\b[^<]*(?:(?!<\/object>)<[^<]*)*<\/object>/gi,')
-      .replace(/<embed\b[^<]*(?:(?!<\/embed>)<[^<]*)*<\/embed>/gi,');
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,)
+      .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi,)
+      .replace(/<object\b[^<]*(?:(?!<\/object>)<[^<]*)*<\/object>/gi,)
+      .replace(/<embed\b[^<]*(?:(?!<\/embed>)<[^<]*)*<\/embed>/gi,);
   },
 
   // Remove SQL injection patterns
   sql: (input: string): string => {
 '"
-    return input.replace(/['";\\]/g,');
+    return input.replace(/['";\\]/g,);
   },
 
   // Remove XSS patterns
   xss: (input: string): string => {
 
     return input'
-      .replace(/javascript:/gi,')
-      .replace(/on\w+\s*=/gi,')
-      .replace(/<script/gi,')
-      .replace(/<\/script>/gi,');
+      .replace(/javascript:/gi,)
+      .replace(/on\w+\s*=/gi,)
+      .replace(/<script/gi,)
+      .replace(/<\/script>/gi,);
   },
 
   // General sanitization

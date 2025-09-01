@@ -1,8 +1,7 @@
 import React from 'react';
 import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Store, BarChart3 export default function AIRetail() {
   const features = [
-    'AI-powered customer behavior analysis and personalization',
-    'Intelligent inventory management and demand forecasting',;
+    'AI-powered customer behavior analysis and personalization',Intelligent inventory management and demand forecasting',;
     'Automated pricing optimization and dynamic pricing',;
     'Real-time customer sentiment and feedback analysis',;
     'Predictive analytics for sales and customer lifetime value',;

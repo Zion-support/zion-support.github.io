@@ -28,10 +28,7 @@ const startupSolutions = [
       'Rapidly build and launch your minimum viable product to test market fit and gather user feedback.',
     icon: Rocket,
     features: ['
-      'Quick prototype development',
-      'User experience optimization',
-      'Market validation testing',
-      'Iterative improvement cycles',
+      'Quick prototype development',User experience optimization',Market validation testing',Iterative improvement cycles',
     ],
     price: 'From $15,000',
     timeline: '4-8 weeks',
@@ -44,10 +41,7 @@ const startupSolutions = [
       'Leverage artificial intelligence to gain deep insights into your business performance and user behavior.',
     icon: Brain,
     features: ['
-      'Predictive analytics',
-      'User behavior tracking',
-      'Performance optimization',
-      'Real-time insights',
+      'Predictive analytics',User behavior tracking',Performance optimization',Real-time insights',
     ],
     price: 'From $8,000',
     timeline: '2-4 weeks',
@@ -60,10 +54,7 @@ const startupSolutions = [
       'Scalable cloud solutions that grow with your startup from day one to enterprise scale.',
     icon: Cloud,
     features: ['
-      'Auto-scaling infrastructure',
-      'Cost optimization',
-      'Security compliance',
-      '24/7 monitoring',
+      'Auto-scaling infrastructure',Cost optimization',Security compliance',24/7 monitoring',
     ],
     price: 'From $5,000',
     timeline: '1-3 weeks',
@@ -76,10 +67,7 @@ const startupSolutions = [
       "Protect your startup's data and systems with enterprise-grade security solutions.",
     icon: Shield,
     features: ['
-      'Threat detection',
-      'Data encryption',
-      'Compliance management',
-      'Security audits',
+      'Threat detection',Data encryption',Compliance management',Security audits',
     ],
     price: 'From $12,000',
     timeline: '3-6 weeks',
@@ -92,10 +80,7 @@ const startupSolutions = [
       'Native and cross-platform mobile applications that engage users and drive growth.',
     icon: Smartphone,
     features: ['
-      'iOS & Android development',
-      'Cross-platform solutions',
-      'Performance optimization',
-      'App store optimization',
+      'iOS & Android development',Cross-platform solutions',Performance optimization',App store optimization',
     ],
     price: 'From $20,000',
     timeline: '6-12 weeks',
@@ -108,10 +93,7 @@ const startupSolutions = [
       'Comprehensive marketing tools to acquire, engage, and retain customers effectively.',
     icon: Target,
     features: ['
-      'Multi-channel campaigns',
-      'Automation workflows',
-      'Analytics & reporting',
-      'A/B testing tools',
+      'Multi-channel campaigns',Automation workflows',Analytics & reporting',A/B testing tools',
     ],
     price: 'From $10,000',
     timeline: '3-5 weeks',
@@ -158,12 +140,7 @@ const StartupSolutions = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const categories = ['
-    'All',
-    'Development',
-    'AI & Analytics',
-    'Infrastructure',
-    'Security',
-    'Marketing',
+    'All',Development',AI & Analytics',Infrastructure',Security',Marketing',
   ];
 
   const filteredSolutions ='

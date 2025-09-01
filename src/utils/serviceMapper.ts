@@ -49,7 +49,7 @@ export function map2026ServicesToExistingStructure(): Service[] {
     description: service.description,
     category: service.category,
     subcategory: service.category, // Use category as subcategory for now'
-    price: parseInt(service.price.replace(/[$,]/g,')), // Convert "$18,999" to 18999'
+    price: parseInt(service.price.replace(/[$,]/g,)), // Convert "$18,999" to 18999'
     currency: '$',
     pricingModel: 'monthly',
     features: service.features,

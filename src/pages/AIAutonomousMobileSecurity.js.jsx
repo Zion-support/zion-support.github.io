@@ -187,14 +187,7 @@ const AIAutonomousMobileSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Device Security',
-                'App Security',
-                'Network Security',
-                'Data Security',
-                'Access Control',
-                'Authentication Security',
-                'Communication Security',
-                'Update Security',
+                'Device Security',App Security',Network Security',Data Security',Access Control',Authentication Security',Communication Security',Update Security',
               ].map(type => (
                 <div
                   key={type}"

@@ -62,19 +62,13 @@ const SupplyChain = () => {
         'Real-time tracking and monitoring of goods across the entire supply chain network.',
       icon: Eye,
       features: ['
-        'End-to-end tracking',
-        'Real-time monitoring',
-        'Status updates',
-        'Exception alerts',
+        'End-to-end tracking',Real-time monitoring',Status updates',Exception alerts',
       ],
       price: 'From $100,000',
       timeline: '20-32 weeks',
       category: 'Visibility',
       technologies: ['
-        'IoT Sensors',
-        'GPS Tracking',
-        'Real-time Analytics',
-        'Cloud Platforms',
+        'IoT Sensors',GPS Tracking',Real-time Analytics',Cloud Platforms',
       ]},
     {
 
@@ -84,19 +78,13 @@ const SupplyChain = () => {
         'Intelligent inventory optimization and demand forecasting systems.',
       icon: Warehouse,
       features: ['
-        'Demand forecasting',
-        'Stock optimization',
-        'Automated reordering',
-        'Inventory analytics',
+        'Demand forecasting',Stock optimization',Automated reordering',Inventory analytics',
       ],
       price: 'From $80,000',
       timeline: '16-24 weeks',
       category: 'Inventory',
       technologies: ['
-        'AI/ML',
-        'Predictive Analytics',
-        'ERP Integration',
-        'Real-time Data',
+        'AI/ML',Predictive Analytics',ERP Integration',Real-time Data',
       ]},
     {
 
@@ -106,19 +94,13 @@ const SupplyChain = () => {
         'AI-powered route planning and optimization for transportation and delivery.',
       icon: Route,
       features: ['
-        'Dynamic routing',
-        'Traffic optimization',
-        'Fuel efficiency',
-        'Delivery scheduling',
+        'Dynamic routing',Traffic optimization',Fuel efficiency',Delivery scheduling',
       ],
       price: 'From $60,000',
       timeline: '12-20 weeks',
       category: 'Routing',
       technologies: ['
-        'AI Algorithms',
-        'GPS Integration',
-        'Traffic Data',
-        'Optimization Engines',
+        'AI Algorithms',GPS Integration',Traffic Data',Optimization Engines',
       ]},
     {
 
@@ -128,19 +110,13 @@ const SupplyChain = () => {
         'Automated warehouse operations and inventory control systems.',
       icon: Building,
       features: ['
-        'Automated picking',
-        'Space optimization',
-        'Order fulfillment',
-        'Quality control',
+        'Automated picking',Space optimization',Order fulfillment',Quality control',
       ],
       price: 'From $120,000',
       timeline: '24-36 weeks',
       category: 'Warehouse',
       technologies: ['
-        'WMS',
-        'Automation',
-        'IoT Sensors',
-        'Robotics Integration',
+        'WMS',Automation',IoT Sensors',Robotics Integration',
       ]},
     {
 
@@ -150,19 +126,13 @@ const SupplyChain = () => {
         'Comprehensive supplier relationship and performance management platforms.',
       icon: Users,
       features: ['
-        'Supplier onboarding',
-        'Performance tracking',
-        'Risk assessment',
-        'Compliance monitoring',
+        'Supplier onboarding',Performance tracking',Risk assessment',Compliance monitoring',
       ],
       price: 'From $70,000',
       timeline: '16-24 weeks',
       category: 'Supplier Management',
       technologies: ['
-        'SRM Platforms',
-        'Analytics',
-        'Risk Management',
-        'Compliance Tools',
+        'SRM Platforms',Analytics',Risk Management',Compliance Tools',
       ]},
     {
 
@@ -172,19 +142,13 @@ const SupplyChain = () => {
         'Advanced analytics and reporting for supply chain performance optimization.',
       icon: BarChart3,
       features: ['
-        'Performance metrics',
-        'Cost analysis',
-        'Trend identification',
-        'Predictive insights',
+        'Performance metrics',Cost analysis',Trend identification',Predictive insights',
       ],
       price: 'From $90,000',
       timeline: '16-24 weeks',
       category: 'Analytics',
       technologies: ['
-        'Business Intelligence',
-        'Data Visualization',
-        'Predictive Models',
-        'Real-time Dashboards',
+        'Business Intelligence',Data Visualization',Predictive Models',Real-time Dashboards',
       ]},
   ];
 

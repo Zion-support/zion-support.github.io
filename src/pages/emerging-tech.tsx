@@ -27,10 +27,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
       icon: Atom,
       path: '/services/quantum-computing',
       features: ['
-        'Quantum algorithms',
-        'Optimization problems',
-        'Cryptography',
-        'Machine learning',
+        'Quantum algorithms',Optimization problems',Cryptography',Machine learning',
       ]},
     {
 
@@ -40,10 +37,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
       icon: Network,
       path: '/services/iot-edge-computing',
       features: ['
-        'Real-time processing',
-        'Low latency',
-        'Edge AI',
-        'Smart sensors',
+        'Real-time processing',Low latency',Edge AI',Smart sensors',
       ]},
     {
 
@@ -53,10 +47,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
       icon: Brain,
       path: '/services/ai-quantum-hybrid-platform',
       features: ['
-        'Hybrid algorithms',
-        'Quantum ML',
-        'AI optimization',
-        'Quantum AI',
+        'Hybrid algorithms',Quantum ML',AI optimization',Quantum AI',
       ]},
     {
 
@@ -66,10 +57,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
       icon: Satellite,
       path: '/space-tech',
       features: ['
-        'Satellite systems',
-        'Aerospace solutions',
-        'Space data',
-        'Orbital mechanics',
+        'Satellite systems',Aerospace solutions',Space data',Orbital mechanics',
       ]},
     {
 
@@ -79,10 +67,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
       icon: Atom,
       path: '/services/quantum-machine-learning',
       features: ['
-        'Quantum neural networks',
-        'Pattern recognition',
-        'Optimization',
-        'Quantum algorithms',
+        'Quantum neural networks',Pattern recognition',Optimization',Quantum algorithms',
       ]},
     {
 
@@ -92,10 +77,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
       icon: TrendingUp,
       path: '/services/ai-predictive-maintenance',
       features: ['
-        'Equipment monitoring',
-        'Predictive analytics',
-        'Maintenance scheduling',
-        'Cost optimization',
+        'Equipment monitoring',Predictive analytics',Maintenance scheduling',Cost optimization',
       ]},
     {
 
@@ -105,10 +87,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
       icon: Leaf,
       path: '/services/sustainable-technology',
       features: ['
-        'Energy efficiency',
-        'Green computing',
-        'Carbon reduction',
-        'Sustainable AI',
+        'Energy efficiency',Green computing',Carbon reduction',Sustainable AI',
       ]},
   ];
 

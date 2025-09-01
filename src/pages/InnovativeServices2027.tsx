@@ -38,29 +38,13 @@ import { SEO } from '../components/SEO';
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
 
-  'AI & Customer Success': Brain,
-  'Blockchain & DeFi': Lock,
-  'Quantum Computing': Zap,
-  'AI & Healthcare': Heart,
-  'Metaverse & AR/VR': Eye,
-  'Autonomous Systems': Car,
-  'Green Tech': Leaf,
-  'Space Tech': Satellite,
-  FinTech: Banknote,
-  'IoT & Smart Cities': Building};
+  'AI & Customer Success': Brain,Blockchain & DeFi': Lock,Quantum Computing': Zap,AI & Healthcare': Heart,Metaverse & AR/VR': Eye,Autonomous Systems': Car,Green Tech': Leaf,Space Tech': Satellite,
+  FinTech: Banknote,IoT & Smart Cities': Building};
 
 const categoryColors: { [key: string]: string } = {
 
-  'AI & Customer Success': 'from-cyan-500 to-blue-600',
-  'Blockchain & DeFi': 'from-purple-500 to-indigo-600',
-  'Quantum Computing': 'from-violet-500 to-purple-600',
-  'AI & Healthcare': 'from-emerald-500 to-green-600',
-  'Metaverse & AR/VR': 'from-pink-500 to-rose-600',
-  'Autonomous Systems': 'from-orange-500 to-red-600',
-  'Green Tech': 'from-green-500 to-emerald-600',
-  'Space Tech': 'from-slate-500 to-gray-600',
-  FinTech: 'from-yellow-500 to-amber-600',
-  'IoT & Smart Cities': 'from-blue-500 to-cyan-600'};
+  'AI & Customer Success': 'from-cyan-500 to-blue-600',Blockchain & DeFi': 'from-purple-500 to-indigo-600',Quantum Computing': 'from-violet-500 to-purple-600',AI & Healthcare': 'from-emerald-500 to-green-600',Metaverse & AR/VR': 'from-pink-500 to-rose-600',Autonomous Systems': 'from-orange-500 to-red-600',Green Tech': 'from-green-500 to-emerald-600',Space Tech': 'from-slate-500 to-gray-600',
+  FinTech: 'from-yellow-500 to-amber-600',IoT & Smart Cities': 'from-blue-500 to-cyan-600'};
 
 export default function InnovativeServices2027() {
 
@@ -100,7 +84,7 @@ export default function InnovativeServices2027() {
         return a.price - b.price;
       case 'roi':
         return ('
-          parseInt(b.roi.replace('%',')) - parseInt(a.roi.replace('%','))
+          parseInt(b.roi.replace('%',)) - parseInt(a.roi.replace('%',))
         );
       case 'innovation':'
         return a.innovationLevel === 'revolutionary' ? 1 : -1;

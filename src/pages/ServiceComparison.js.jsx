@@ -45,11 +45,7 @@ const ServiceComparison = () => {
         "Get detailed insights into each service's capabilities and target audience"},
   ];
   const benefits = ['
-    'Make informed decisions with comprehensive service comparisons',
-    'Find the perfect service tier for your business needs and budget',
-    'Understand complexity levels and implementation requirements',
-    'Compare pricing, features, and benefits across different solutions',
-    'Get personalized recommendations based on your requirements',
+    'Make informed decisions with comprehensive service comparisons',Find the perfect service tier for your business needs and budget',Understand complexity levels and implementation requirements',Compare pricing, features, and benefits across different solutions',Get personalized recommendations based on your requirements',
   ];
   return ("
     <div className="min-h-screen bg-zion-blue-dark">
@@ -91,8 +87,7 @@ const ServiceComparison = () => {
                 className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"
                 onClick={() =>
                   window.open('
-                    'mailto:kleber@ziontechgroup.com?subject=Service Comparison Help',
-                    '_blank'
+                    'mailto:kleber@ziontechgroup.com?subject=Service Comparison Help',_blank'
                   )
                 }
               >
@@ -233,8 +228,7 @@ const ServiceComparison = () => {
                 className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4"
                 onClick={() =>
                   window.open('
-                    'mailto:kleber@ziontechgroup.com?subject=Service Selection Help',
-                    '_blank'
+                    'mailto:kleber@ziontechgroup.com?subject=Service Selection Help',_blank'
                   )
                 }
               >"

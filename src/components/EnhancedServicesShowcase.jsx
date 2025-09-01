@@ -168,7 +168,7 @@ const EnhancedServicesShowcase = () => {
                     {service.icon}
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>'"
-                  <p className="text-sm text-blue-400 font-medium">{service.category.replace('-', ').toUpperCase()}</p>
+                  <p className="text-sm text-blue-400 font-medium">{service.category.replace('-',).toUpperCase()}</p>
                 </div>
 
                 {/* Tagline */}"

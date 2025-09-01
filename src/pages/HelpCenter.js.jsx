@@ -84,12 +84,7 @@ export default function HelpCenter() {
         }
     };
     const popularArticles = ['
-        'How to create your first account',
-        'Understanding the marketplace',
-        'Creating a talent profile',
-        'Finding and hiring talent',
-        'Payment and escrow system',
-        'Account security best practices'
+        'How to create your first account',Understanding the marketplace',Creating a talent profile',Finding and hiring talent',Payment and escrow system',Account security best practices'
     ];
     return (<>
       <Helmet>
@@ -155,8 +150,7 @@ export default function HelpCenter() {
                   <h3 className="text-lg font-semibold text-white mb-3">{article}</h3>
                   <Link to = {
 
-  `/help/${article.toLowerCase().replace(/\s+/g,
-  '-')
+  `/help/${article.toLowerCase().replace(/\s+/g,-')
 "`
 }`} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">
                     Read Article"

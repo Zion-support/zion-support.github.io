@@ -123,16 +123,7 @@ export default function SpaceTech(...args: any[]): any {
   ];
 
   const technologies = ['
-    'Propulsion Systems',
-    'Satellite Design',
-    'Ground Stations',
-    'Launch Vehicles',
-    'Earth Observation',
-    'Space Communications',
-    'Navigation Systems',
-    'Space Robotics',
-    'Space Mining',
-    'Space Habitats',
+    'Propulsion Systems',Satellite Design',Ground Stations',Launch Vehicles',Earth Observation',Space Communications',Navigation Systems',Space Robotics',Space Mining',Space Habitats',
   ];
 
   return()

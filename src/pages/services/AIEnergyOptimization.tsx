@@ -1,8 +1,7 @@
 import React from 'react';
 import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChart3, Target, Shield, Globe export default function AIEnergyOptimization() {
   const features = [
-    'AI-powered energy consumption forecasting and optimization',
-    'Real-time monitoring of energy usage across facilities',;
+    'AI-powered energy consumption forecasting and optimization',Real-time monitoring of energy usage across facilities',;
     'Predictive maintenance for energy infrastructure',;
     'Smart grid integration and demand response optimization',;
     'Renewable energy integration and storage optimization',;

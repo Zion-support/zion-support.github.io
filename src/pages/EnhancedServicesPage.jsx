@@ -544,8 +544,7 @@ export default function EnhancedServicesPage() {
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
                 onClick={() =>
                   window.open()`
-                    `mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`,
-                    '_self'
+                    `mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`,_self'
                   )
                 }
               >

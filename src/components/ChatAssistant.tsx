@@ -145,9 +145,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         metadata: {
 
           suggestions: ['
-            'Tell me about your services',
-            'How can I get started?',
-            'What are your pricing options?'
+            'Tell me about your services',How can I get started?',What are your pricing options?'
           ]
         }
       };
@@ -183,9 +181,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
           confidence: 0.95,
           suggestions: ['
-            'Would you like more details?',
-            'Can I help with something else?',
-            'Let me know if you have questions!'
+            'Would you like more details?',Can I help with something else?',Let me know if you have questions!'
           ]
         }
       };

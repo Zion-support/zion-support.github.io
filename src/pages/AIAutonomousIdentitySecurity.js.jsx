@@ -189,14 +189,7 @@ const AIAutonomousIdentitySecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Authentication Security',
-                'Authorization Security',
-                'Access Control Security',
-                'Identity Verification Security',
-                'Single Sign-On Security',
-                'Multi-Factor Security',
-                'Identity Management Security',
-                'Identity Governance Security',
+                'Authentication Security',Authorization Security',Access Control Security',Identity Verification Security',Single Sign-On Security',Multi-Factor Security',Identity Management Security',Identity Governance Security',
               ].map(type => (
                 <div
                   key={type}"

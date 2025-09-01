@@ -185,14 +185,7 @@ const AIAutonomousTranslation = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Text Translation',
-                'Document Translation',
-                'Website Translation',
-                'App Translation',
-                'Video Translation',
-                'Audio Translation',
-                'Real-time Translation',
-                'Batch Translation',
+                'Text Translation',Document Translation',Website Translation',App Translation',Video Translation',Audio Translation',Real-time Translation',Batch Translation',
               ].map(type => (
                 <div
                   key={type}"

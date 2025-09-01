@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMongoDB() {
   const features = [
-    'AI-powered MongoDB optimization',
-    'Intelligent MongoDB management',;
+    'AI-powered MongoDB optimization',Intelligent MongoDB management',;
     'Automated MongoDB monitoring and alerting',;
     'Predictive analytics for MongoDB scaling',;
     'Smart MongoDB security and compliance',;

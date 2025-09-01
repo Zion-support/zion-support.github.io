@@ -27,10 +27,7 @@ const IndustrySolutions: React.FC = (): JSX.Element => {
       icon: Heart,
       path: '/solutions/healthcare',
       solutions: ['
-        'AI Healthcare Analytics',
-        'Predictive Diagnostics',
-        'Patient Care Optimization',
-        'Compliance Management',
+        'AI Healthcare Analytics',Predictive Diagnostics',Patient Care Optimization',Compliance Management',
       ]},
     {
 
@@ -40,10 +37,7 @@ const IndustrySolutions: React.FC = (): JSX.Element => {
       icon: Factory,
       path: '/manufacturing-solutions',
       solutions: ['
-        'Smart Factory Automation',
-        'Predictive Maintenance',
-        'Quality Control',
-        'Supply Chain Optimization',
+        'Smart Factory Automation',Predictive Maintenance',Quality Control',Supply Chain Optimization',
       ]},
     {
 
@@ -53,10 +47,7 @@ const IndustrySolutions: React.FC = (): JSX.Element => {
       icon: DollarSign,
       path: '/financial-solutions',
       solutions: ['
-        'AI Financial Analytics',
-        'Risk Management',
-        'Trading Algorithms',
-        'Compliance Automation',
+        'AI Financial Analytics',Risk Management',Trading Algorithms',Compliance Automation',
       ]},
     {
 
@@ -66,10 +57,7 @@ const IndustrySolutions: React.FC = (): JSX.Element => {
       icon: Car,
       path: '/automotive-solutions',
       solutions: ['
-        'Connected Vehicles',
-        'Predictive Maintenance',
-        'Fleet Management',
-        'Safety Systems',
+        'Connected Vehicles',Predictive Maintenance',Fleet Management',Safety Systems',
       ]},
     {
 
@@ -79,10 +67,7 @@ const IndustrySolutions: React.FC = (): JSX.Element => {
       icon: Zap,
       path: '/energy-solutions',
       solutions: ['
-        'Smart Grid Management',
-        'Energy Optimization',
-        'Predictive Maintenance',
-        'Sustainability Analytics',
+        'Smart Grid Management',Energy Optimization',Predictive Maintenance',Sustainability Analytics',
       ]},
     {
 
@@ -92,10 +77,7 @@ const IndustrySolutions: React.FC = (): JSX.Element => {
       icon: Globe,
       path: '/retail-solutions',
       solutions: ['
-        'Customer Analytics',
-        'Inventory Management',
-        'Personalization',
-        'Supply Chain Optimization',
+        'Customer Analytics',Inventory Management',Personalization',Supply Chain Optimization',
       ]},
   ];
 

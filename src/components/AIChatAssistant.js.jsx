@@ -14,9 +14,7 @@ import {
 const mockAIResponses = ['
   "I'd be happy to help you with that! Let me provide you with some information about our AI development services.","
   "That's a great question! Our cloud infrastructure solutions are designed to scale with your business needs.","
-  "Based on your requirements, I'd recommend starting with our cybersecurity assessment package.",
-  'We have extensive experience in that area. Let me connect you with one of our specialists.',
-  'I can help you understand our pricing structure and find the best solution for your budget.',
+  "Based on your requirements, I'd recommend starting with our cybersecurity assessment package.",We have extensive experience in that area. Let me connect you with one of our specialists.',I can help you understand our pricing structure and find the best solution for your budget.',
 ];
 export function AIChatAssistant() {
   const [isOpen, setIsOpen] = useState(false);

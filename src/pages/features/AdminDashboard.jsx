@@ -9,8 +9,7 @@ export { function };
 export default function AdminDashboard() {
   const schema = {
 
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
+    '@context': 'https://schema.org',@type': 'WebPage',
     name: 'Admin Dashboard',
     description:'
       'Monitor marketplace activity, manage listings and view analytics in one place.',

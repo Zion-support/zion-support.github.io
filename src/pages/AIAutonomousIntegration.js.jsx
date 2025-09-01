@@ -181,14 +181,7 @@ const AIAutonomousIntegration = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'API Integration',
-                'Database Integration',
-                'Cloud Integration',
-                'System Integration',
-                'Data Integration',
-                'Workflow Integration',
-                'Platform Integration',
-                'Service Integration',
+                'API Integration',Database Integration',Cloud Integration',System Integration',Data Integration',Workflow Integration',Platform Integration',Service Integration',
               ].map(type => (
                 <div
                   key={type}"

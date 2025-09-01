@@ -9,8 +9,7 @@ export { function };
 export default function InstantMessaging() {
   const schema = {
 
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
+    '@context': 'https://schema.org',@type': 'WebPage',
     name: 'Instant Messaging',
     description:'
       'Chat in real time with clients and freelancers using Socket.IO based messaging.',

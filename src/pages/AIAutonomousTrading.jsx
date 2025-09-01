@@ -196,14 +196,7 @@ const AIAutonomousTrading = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Stocks',
-                'Forex',
-                'Cryptocurrency',
-                'Commodities',
-                'Options',
-                'Futures',
-                'ETFs',
-                'Bonds',
+                'Stocks',Forex',Cryptocurrency',Commodities',Options',Futures',ETFs',Bonds',
               ].map(asset => (
                 <div
                   key={asset}"

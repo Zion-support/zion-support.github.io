@@ -154,9 +154,7 @@ const services: Service[] = [
 ];
 
 const categories = ['
-  'All Services',
-  'AI & Machine Learning',
-  'Emerging Tech',;
+  'All Services',AI & Machine Learning',Emerging Tech',;
   'Cybersecurity',;
   'Cloud & DevOps',;
   'Blockchain & Web3',;

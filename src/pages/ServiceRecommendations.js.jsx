@@ -47,12 +47,7 @@ const ServiceRecommendations = () => {
         'All recommendations are validated by our technology experts and industry specialists'},
   ];
   const benefits = ['
-    'Save time researching and comparing different service options',
-    'Get personalized recommendations based on your specific business needs',
-    'Understand implementation complexity and expected timelines',
-    'Focus on high-priority solutions with proven ROI potential',
-    'Access to our comprehensive portfolio of cutting-edge services',
-    'Expert guidance throughout the selection and implementation process',
+    'Save time researching and comparing different service options',Get personalized recommendations based on your specific business needs',Understand implementation complexity and expected timelines',Focus on high-priority solutions with proven ROI potential',Access to our comprehensive portfolio of cutting-edge services',Expert guidance throughout the selection and implementation process',
   ];
   const processSteps = [
     {
@@ -124,8 +119,7 @@ const ServiceRecommendations = () => {
                 className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"
                 onClick={() =>
                   window.open('
-                    'mailto:kleber@ziontechgroup.com?subject=Service Recommendation Help',
-                    '_blank'
+                    'mailto:kleber@ziontechgroup.com?subject=Service Recommendation Help',_blank'
                   )
                 }
               >
@@ -320,8 +314,7 @@ const ServiceRecommendations = () => {
                 className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4"
                 onClick={() =>
                   window.open('
-                    'mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation',
-                    '_blank'
+                    'mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation',_blank'
                   )
                 }
               >"

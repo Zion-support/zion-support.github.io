@@ -1,8 +1,7 @@
 import React from 'react';
 import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment() {
   const features = [
-    'AI-powered candidate sourcing and matching',
-    'Intelligent resume parsing and skill extraction',;
+    'AI-powered candidate sourcing and matching',Intelligent resume parsing and skill extraction',;
     'Automated interview scheduling and coordination',;
     'Predictive analytics for candidate success',;
     'Bias-free screening and diversity optimization',;

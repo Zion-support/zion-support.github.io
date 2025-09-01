@@ -179,14 +179,7 @@ const AIAutonomousPlanning = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Strategic Planning',
-                'Tactical Planning',
-                'Operational Planning',
-                'Project Planning',
-                'Resource Planning',
-                'Risk Planning',
-                'Contingency Planning',
-                'Execution Planning',
+                'Strategic Planning',Tactical Planning',Operational Planning',Project Planning',Resource Planning',Risk Planning',Contingency Planning',Execution Planning',
               ].map(type => (
                 <div
                   key={type}"

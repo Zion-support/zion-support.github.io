@@ -185,12 +185,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
     const colors = {
 
-      'ai': 'text-purple-400',
-      'cloud': 'text-blue-400',
-      'security': 'text-red-400',
-      'development': 'text-green-400',
-      'consulting': 'text-yellow-400',
-      'digital-transformation': 'text-cyan-400'
+      'ai': 'text-purple-400',cloud': 'text-blue-400',security': 'text-red-400',development': 'text-green-400',consulting': 'text-yellow-400',digital-transformation': 'text-cyan-400'
     };
     return colors[category as keyof typeof colors] || 'text-zinc-400';
   };

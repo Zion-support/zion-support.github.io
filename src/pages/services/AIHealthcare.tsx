@@ -1,8 +1,7 @@
 import React from 'react';
 import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 export default function AIHealthcare() {
   const features = [
-    'AI-powered medical image analysis and diagnosis',
-    'Intelligent patient data analysis and risk assessment',;
+    'AI-powered medical image analysis and diagnosis',Intelligent patient data analysis and risk assessment',;
     'Automated medical record processing and coding',;
     'Predictive analytics for patient outcomes',;
     'Drug interaction and adverse event monitoring',;

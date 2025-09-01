@@ -20,12 +20,7 @@ interface AccessibilityEnhancerProps {
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   children,
-  role,
-  'aria-label': ariaLabel,
-  'aria-describedby': ariaDescribedby,
-  'aria-expanded': ariaExpanded,
-  'aria-controls': ariaControls,
-  'aria-haspopup': ariaHaspopup,
+  role,aria-label': ariaLabel,aria-describedby': ariaDescribedby,aria-expanded': ariaExpanded,aria-controls': ariaControls,aria-haspopup': ariaHaspopup,
   tabIndex,
   onKeyDown,
   className = '',
@@ -83,12 +78,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   const accessibilityProps = {
 
-    role,
-    'aria-label': ariaLabel,
-    'aria-describedby': ariaDescribedby,
-    'aria-expanded': ariaExpanded,
-    'aria-controls': ariaControls,
-    'aria-haspopup': ariaHaspopup,
+    role,aria-label': ariaLabel,aria-describedby': ariaDescribedby,aria-expanded': ariaExpanded,aria-controls': ariaControls,aria-haspopup': ariaHaspopup,
     tabIndex: focusable ? tabIndex : -1,
     onKeyDown: handleKeyDown,
     className: `${className} ${focusable ? 'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2' : ''}`,

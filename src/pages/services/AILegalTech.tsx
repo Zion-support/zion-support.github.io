@@ -1,8 +1,7 @@
 import React from 'react';
 import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Zap, Shield, Gavel, BarChart3 export default function AILegalTech() {
   const features = [
-    'AI-powered contract analysis and risk assessment',
-    'Intelligent legal document generation and review',;
+    'AI-powered contract analysis and risk assessment',Intelligent legal document generation and review',;
     'Automated compliance monitoring and reporting',;
     'Predictive analytics for case outcomes',;
     'Legal research automation and citation checking',;

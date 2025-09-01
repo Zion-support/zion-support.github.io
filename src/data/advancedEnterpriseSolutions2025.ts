@@ -36,24 +36,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     color: 'from-blue-500 to-cyan-600',
     category: 'cloud',
     features[;
-      'Cloud readiness assessment',
-      'Migration strategy planning',
-      'Multi-cloud architecture design',
-      'Data migration automation',
-      'Performance optimization',
-      'Cost optimization strategies'
+      'Cloud readiness assessment',Migration strategy planning',Multi-cloud architecture design',Data migration automation',Performance optimization',Cost optimization strategies'
     ],;
     benefits[;
-      '40% reduction in infrastructure costs',
-      '99.9% uptime guarantee',
-      'Scalable architecture',
-      'Improved security posture'
+      '40% reduction in infrastructure costs',99.9% uptime guarantee',Scalable architecture',Improved security posture'
     ],;
     useCases[;
-      'Large enterprises',
-      'Financial institutions',
-      'Healthcare organizations',
-      'Government agencies'
+      'Large enterprises',Financial institutions',Healthcare organizations',Government agencies'
     ],;
     pricing: {
 
@@ -81,24 +70,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     color: 'from-red-500 to-orange-600',
     category: 'security',
     features[;
-      'Zero-trust architecture',
-      'Advanced threat detection',
-      'Incident response automation',
-      'Compliance management',
-      'Security awareness training',
-      'Vulnerability assessment'
+      'Zero-trust architecture',Advanced threat detection',Incident response automation',Compliance management',Security awareness training',Vulnerability assessment'
     ],;
     benefits[;
-      '99.99% threat detection rate',
-      'Reduced security incidents',
-      'Compliance automation',
-      'Improved security posture'
+      '99.99% threat detection rate',Reduced security incidents',Compliance automation',Improved security posture'
     ],;
     useCases[;
-      'Fortune 500 companies',
-      'Financial services',
-      'Healthcare systems',
-      'Government entities'
+      'Fortune 500 companies',Financial services',Healthcare systems',Government entities'
     ],;
     pricing: {
 
@@ -126,24 +104,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     color: 'from-purple-500 to-pink-600',
     category: 'transformation',
     features[;
-      'Digital maturity assessment',
-      'Transformation roadmap',
-      'Process optimization',
-      'Technology adoption',
-      'Change management',
-      'ROI measurement'
+      'Digital maturity assessment',Transformation roadmap',Process optimization',Technology adoption',Change management',ROI measurement'
     ],;
     benefits[;
-      '30% operational efficiency improvement',
-      'Enhanced customer experience',
-      'Competitive advantage',
-      'Future-ready organization'
+      '30% operational efficiency improvement',Enhanced customer experience',Competitive advantage',Future-ready organization'
     ],;
     useCases[;
-      'Traditional enterprises',
-      'Manufacturing companies',
-      'Retail chains',
-      'Service organizations'
+      'Traditional enterprises',Manufacturing companies',Retail chains',Service organizations'
     ],;
     pricing: {
 
@@ -171,24 +138,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     color: 'from-green-500 to-emerald-600',
     category: 'analytics',
     features[;
-      'Real-time data processing',
-      'Predictive analytics',
-      'Machine learning models',
-      'Data visualization',
-      'Automated reporting',
-      'Data governance'
+      'Real-time data processing',Predictive analytics',Machine learning models',Data visualization',Automated reporting',Data governance'
     ],;
     benefits[;
-      'Data-driven decision making',
-      'Improved operational efficiency',
-      'Predictive insights',
-      'Automated business processes'
+      'Data-driven decision making',Improved operational efficiency',Predictive insights',Automated business processes'
     ],;
     useCases[;
-      'Financial services',
-      'Healthcare systems',
-      'Manufacturing',
-      'Retail chains'
+      'Financial services',Healthcare systems',Manufacturing',Retail chains'
     ],;
     pricing: {
 
@@ -216,24 +172,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     color: 'from-yellow-500 to-orange-600',
     category: 'automation',
     features[;
-      'RPA implementation',
-      'Workflow automation',
-      'Process optimization',
-      'Integration services',
-      'Monitoring & analytics',
-      'Continuous improvement'
+      'RPA implementation',Workflow automation',Process optimization',Integration services',Monitoring & analytics',Continuous improvement'
     ],;
     benefits[;
-      '70% process efficiency improvement',
-      'Reduced manual errors',
-      'Cost savings',
-      'Scalable operations'
+      '70% process efficiency improvement',Reduced manual errors',Cost savings',Scalable operations'
     ],;
     useCases[;
-      'Finance & accounting',
-      'Human resources',
-      'Customer service',
-      'Supply chain management'
+      'Finance & accounting',Human resources',Customer service',Supply chain management'
     ],;
     pricing: {
 
@@ -261,24 +206,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     color: 'from-indigo-500 to-purple-600',
     category: 'integration',
     features[;
-      'API development',
-      'Data integration',
-      'System connectivity',
-      'Real-time synchronization',
-      'Error handling',
-      'Performance monitoring'
+      'API development',Data integration',System connectivity',Real-time synchronization',Error handling',Performance monitoring'
     ],;
     benefits[;
-      'Unified data view',
-      'Automated workflows',
-      'Improved efficiency',
-      'Reduced manual work'
+      'Unified data view',Automated workflows',Improved efficiency',Reduced manual work'
     ],;
     useCases[;
-      'ERP integration',
-      'CRM systems',
-      'Legacy system modernization',
-      'Cloud-to-on-premise'
+      'ERP integration',CRM systems',Legacy system modernization',Cloud-to-on-premise'
     ],;
     pricing: {
 
@@ -306,24 +240,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     color: 'from-gray-500 to-slate-600',
     category: 'infrastructure',
     features[;
-      'Infrastructure assessment',
-      'Modernization planning',
-      'Performance optimization',
-      'Security enhancement',
-      'Scalability improvements',
-      'Cost optimization'
+      'Infrastructure assessment',Modernization planning',Performance optimization',Security enhancement',Scalability improvements',Cost optimization'
     ],;
     benefits[;
-      'Improved performance',
-      'Reduced operational costs',
-      'Enhanced security',
-      'Scalable architecture'
+      'Improved performance',Reduced operational costs',Enhanced security',Scalable architecture'
     ],;
     useCases[;
-      'Data centers',
-      'Network infrastructure',
-      'Storage systems',
-      'Computing resources'
+      'Data centers',Network infrastructure',Storage systems',Computing resources'
     ],;
     pricing: {
 
@@ -351,24 +274,13 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     color: 'from-teal-500 to-cyan-600',
     category: 'consulting',
     features[;
-      'Technology strategy',
-      'Architecture planning',
-      'Vendor selection',
-      'Risk assessment',
-      'ROI analysis',
-      'Implementation guidance'
+      'Technology strategy',Architecture planning',Vendor selection',Risk assessment',ROI analysis',Implementation guidance'
     ],;
     benefits[;
-      'Optimized technology investments',
-      'Reduced risks',
-      'Improved efficiency',
-      'Strategic alignment'
+      'Optimized technology investments',Reduced risks',Improved efficiency',Strategic alignment'
     ],;
     useCases[;
-      'Technology strategy',
-      'Digital transformation',
-      'System selection',
-      'Risk management'
+      'Technology strategy',Digital transformation',System selection',Risk management'
     ],;
     pricing: {
 

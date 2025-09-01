@@ -1,8 +1,7 @@
 import React from 'react';
 import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Settings, BarChart3 export default function AIManufacturing() {
   const features = [
-    'AI-powered predictive maintenance and equipment monitoring',
-    'Intelligent quality control and defect detection',;
+    'AI-powered predictive maintenance and equipment monitoring',Intelligent quality control and defect detection',;
     'Automated production planning and optimization',;
     'Real-time supply chain and inventory management',;
     'Predictive analytics for production efficiency',;

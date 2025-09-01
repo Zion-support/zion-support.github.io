@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIServerless() {
   const features = [
-    'AI-powered serverless optimization',
-    'Intelligent serverless management',;
+    'AI-powered serverless optimization',Intelligent serverless management',;
     'Automated serverless monitoring and alerting',;
     'Predictive analytics for serverless scaling',;
     'Smart serverless security and compliance',;

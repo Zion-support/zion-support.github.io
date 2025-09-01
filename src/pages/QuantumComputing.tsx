@@ -103,9 +103,7 @@ export default function QuantumComputing(...args: any[]): any {
       description: 'Quantum-resistant encryption and secure communications',
       icon: Lock,
       benefits: ['
-        'Post-quantum cryptography',
-        'Quantum key distribution',
-        'Secure protocols',
+        'Post-quantum cryptography',Quantum key distribution',Secure protocols',
       ]},
     {
 
@@ -113,9 +111,7 @@ export default function QuantumComputing(...args: any[]): any {
       description: 'Molecular modeling and pharmaceutical research',
       icon: Activity,
       benefits: ['
-        'Molecular simulation',
-        'Drug optimization',
-        'Protein folding',
+        'Molecular simulation',Drug optimization',Protein folding',
       ]},
     {
 
@@ -123,9 +119,7 @@ export default function QuantumComputing(...args: any[]): any {
       description: 'Portfolio optimization and risk assessment',
       icon: TrendingUp,
       benefits: ['
-        'Risk analysis',
-        'Portfolio optimization',
-        'Market simulation',
+        'Risk analysis',Portfolio optimization',Market simulation',
       ]},
     {
 
@@ -133,23 +127,12 @@ export default function QuantumComputing(...args: any[]): any {
       description: 'Climate modeling and environmental prediction',
       icon: Globe,
       benefits: ['
-        'Weather forecasting',
-        'Climate modeling',
-        'Environmental analysis',
+        'Weather forecasting',Climate modeling',Environmental analysis',
       ]},
   ];
 
   const technologies = ['
-    'Superconducting Qubits',
-    'Trapped Ions',
-    'Topological Qubits',
-    'Quantum Error Correction',
-    'Quantum Gates',
-    'Quantum Circuits',
-    'Quantum Memory',
-    'Quantum Networks',
-    'Quantum Sensors',
-    'Quantum Metrology',
+    'Superconducting Qubits',Trapped Ions',Topological Qubits',Quantum Error Correction',Quantum Gates',Quantum Circuits',Quantum Memory',Quantum Networks',Quantum Sensors',Quantum Metrology',
   ];
 
   return()

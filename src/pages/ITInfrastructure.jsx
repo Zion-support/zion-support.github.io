@@ -139,19 +139,13 @@ const infrastructureSolutions = [
       'Comprehensive network design, implementation, and management solutions.',
     icon: Network,
     features: ['
-      'Network design',
-      'Implementation',
-      'Management',
-      'Optimization',
+      'Network design',Implementation',Management',Optimization',
     ],
     price: 'From $100,000',
     timeline: '16-28 weeks',
     category: 'Networking',
     technologies: ['
-      'Network Design',
-      'Implementation',
-      'Management',
-      'Optimization',
+      'Network Design',Implementation',Management',Optimization',
     ]},
   {
 
@@ -172,10 +166,7 @@ const infrastructureSolutions = [
     description: 'Scalable storage solutions for enterprise data management.',
     icon: Database,
     features: ['
-      'Storage design',
-      'Data management',
-      'Backup solutions',
-      'Recovery systems',
+      'Storage design',Data management',Backup solutions',Recovery systems',
     ],
     price: 'From $120,000',
     timeline: '18-30 weeks',
@@ -204,10 +195,7 @@ const infrastructureSolutions = [
     timeline: '22-34 weeks',
     category: 'Security',
     technologies: ['
-      'Security Design',
-      'Implementation',
-      'Monitoring',
-      'Compliance',
+      'Security Design',Implementation',Monitoring',Compliance',
     ]},
   {
 
@@ -216,19 +204,13 @@ const infrastructureSolutions = [
     description: 'Modern data center design and implementation solutions.',
     icon: Building,
     features: ['
-      'Data center design',
-      'Implementation',
-      'Management',
-      'Optimization',
+      'Data center design',Implementation',Management',Optimization',
     ],
     price: 'From $250,000',
     timeline: '28-40 weeks',
     category: 'Data Center',
     technologies: ['
-      'Data Center Design',
-      'Implementation',
-      'Management',
-      'Optimization',
+      'Data Center Design',Implementation',Management',Optimization',
     ]},
 ];
 ;

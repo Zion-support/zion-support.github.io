@@ -124,9 +124,7 @@ const Profile: React.FC = () => {;
   }) ;
 
   const industries = ['
-    'Technology',
-    'Healthcare',
-    'Finance',;
+    'Technology',Healthcare',Finance',;
     'Manufacturing',;
     'Retail',;
     'Education',;
@@ -713,8 +711,7 @@ setNotifications (prev: > ({;
   `h-1 flex-1 rounded-full transition-all duration-300 ${
 
                         level <= passwordStrength.score'
-                          ? passwordStrength.color.replace('text-',
-  'bg-')
+                          ? passwordStrength.color.replace('text-',bg-')
                           : 'bg-slate-600/30'
                       
 

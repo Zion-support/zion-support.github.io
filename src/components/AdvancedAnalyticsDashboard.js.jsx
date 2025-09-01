@@ -435,8 +435,7 @@ const AdvancedAnalyticsDashboard = () => {
               className="bg-white text-zion-purple hover:bg-zion-slate-light"
               onClick={() =>
                 window.open('
-                  'mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access',
-                  '_blank'
+                  'mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access',_blank'
                 )
               }
             >"

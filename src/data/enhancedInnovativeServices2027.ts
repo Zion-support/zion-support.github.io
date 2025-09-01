@@ -36,11 +36,7 @@ contactInfo: {
 ];
 
 export const enhancedInnovativeServices2027Categories = ['
-  'Web3 Solutions',
-  'Metaverse Solutions',
-  'Sustainable Tech',
-  'NeuroTech Solutions',
-  'Fusion Energy Solutions',;
+  'Web3 Solutions',Metaverse Solutions',Sustainable Tech',NeuroTech Solutions',Fusion Energy Solutions',;
   'OceanTech Solutions',;
   'AgriTech Solutions',;
   'Smart City Solutions',;

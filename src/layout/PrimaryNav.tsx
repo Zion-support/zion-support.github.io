@@ -100,8 +100,7 @@ const ModeToggle = (...args: unknown[]): unknown => {;
                     className="relative p-1"
                     aria-label = {
 
-  t('nav.cart',
-  'Cart')
+  t('nav.cart',Cart')
 
 }
                   >"

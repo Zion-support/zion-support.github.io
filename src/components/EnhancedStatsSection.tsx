@@ -103,7 +103,7 @@ export default function EnhancedStatsSection(...args[]):  {
   }, [controls, inView]);
 
   const animateCount = (target: string, duration: number = 2000) => {;
-    const numericValue = parseInt(target.replace(/[^0-9]/g,'));
+    const numericValue = parseInt(target.replace(/[^0-9]/g,));
     const start = 0;
     const increment = numericValue / (duration / 16) ; // 60fps
 

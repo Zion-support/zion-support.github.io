@@ -84,9 +84,7 @@ import {
       role: 'CEO & Founder',
       bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',
       expertise: ['
-        'AI Strategy',
-        'Digital Transformation',
-        'Business Innovation',
+        'AI Strategy',Digital Transformation',Business Innovation',
       ],
       image: '/images/team/kleber-santos.jpg'},
     {

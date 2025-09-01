@@ -66,12 +66,7 @@ export default function AIPoweredSEO(...args: any[]): any {
   ];
 
   const benefits = ['
-    'Increase organic traffic by 200-400%',
-    'Improve search rankings in 30-60 days',
-    'Reduce bounce rate by 25-40%',
-    'Boost conversion rates by 15-30%',
-    'Save 20+ hours per week on SEO tasks',
-    'Stay ahead of algorithm updates',
+    'Increase organic traffic by 200-400%',Improve search rankings in 30-60 days',Reduce bounce rate by 25-40%',Boost conversion rates by 15-30%',Save 20+ hours per week on SEO tasks',Stay ahead of algorithm updates',
   ];
 
   const services = [

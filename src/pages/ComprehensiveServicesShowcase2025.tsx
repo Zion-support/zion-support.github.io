@@ -110,12 +110,7 @@ const services: Service[] = [
     category: 'AI & Research',
     icon: Brain,
     features: ['
-      'Autonomous research execution',
-      'Multi-source data analysis',
-      'Intelligent insight generation',
-      'Real-time collaboration tools',
-      'Custom research workflows',
-      'Advanced analytics dashboard'
+      'Autonomous research execution',Multi-source data analysis',Intelligent insight generation',Real-time collaboration tools',Custom research workflows',Advanced analytics dashboard'
     ],
     pricing: {
 
@@ -124,18 +119,10 @@ const services: Service[] = [
       enterprise: 'Custom'
     },
     benefits: ['
-      'Reduce research time by 80%',
-      'Improve accuracy with AI validation',
-      'Scale research operations',
-      'Generate actionable insights',
-      'Maintain research quality standards'
+      'Reduce research time by 80%',Improve accuracy with AI validation',Scale research operations',Generate actionable insights',Maintain research quality standards'
     ],
     useCases: ['
-      'Market research and analysis',
-      'Academic research projects',
-      'Competitive intelligence',
-      'Product development research',
-      'Scientific research collaboration'
+      'Market research and analysis',Academic research projects',Competitive intelligence',Product development research',Scientific research collaboration'
     ],
     link: '/services/ai-autonomous-research-assistant',
     status: 'available'
@@ -148,12 +135,7 @@ const services: Service[] = [
     category: 'AI & Security',
     icon: Shield,
     features: ['
-      'AI-powered threat detection',
-      'Automated incident response',
-      'Predictive security analytics',
-      'Zero-day vulnerability detection',
-      'Behavioral analysis',
-      'Security orchestration'
+      'AI-powered threat detection',Automated incident response',Predictive security analytics',Zero-day vulnerability detection',Behavioral analysis',Security orchestration'
     ],
     pricing: {
 
@@ -162,18 +144,10 @@ const services: Service[] = [
       enterprise: 'Custom'
     },
     benefits: ['
-      'Detect threats 10x faster',
-      'Reduce false positives by 90%',
-      'Automate security responses',
-      'Predict and prevent attacks',
-      'Compliance automation'
+      'Detect threats 10x faster',Reduce false positives by 90%',Automate security responses',Predict and prevent attacks',Compliance automation'
     ],
     useCases: ['
-      'Enterprise security operations',
-      'Financial institutions',
-      'Healthcare organizations',
-      'Government agencies',
-      'Critical infrastructure'
+      'Enterprise security operations',Financial institutions',Healthcare organizations',Government agencies',Critical infrastructure'
     ],
     link: '/services/ai-cybersecurity-platform',
     status: 'available'
@@ -186,12 +160,7 @@ const services: Service[] = [
     category: 'AI & Healthcare',
     icon: Heart,
     features: ['
-      'AI diagnostic assistance',
-      'Patient monitoring systems',
-      'Predictive health analytics',
-      'Medical image analysis',
-      'Drug interaction checking',
-      'Healthcare workflow automation'
+      'AI diagnostic assistance',Patient monitoring systems',Predictive health analytics',Medical image analysis',Drug interaction checking',Healthcare workflow automation'
     ],
     pricing: {
 
@@ -200,18 +169,10 @@ const services: Service[] = [
       enterprise: 'Custom'
     },
     benefits: ['
-      'Improve diagnostic accuracy',
-      'Reduce healthcare costs',
-      'Enhance patient outcomes',
-      'Streamline workflows',
-      'Enable preventive care'
+      'Improve diagnostic accuracy',Reduce healthcare costs',Enhance patient outcomes',Streamline workflows',Enable preventive care'
     ],
     useCases: ['
-      'Hospitals and clinics',
-      'Medical imaging centers',
-      'Pharmaceutical companies',
-      'Health insurance providers',
-      'Research institutions'
+      'Hospitals and clinics',Medical imaging centers',Pharmaceutical companies',Health insurance providers',Research institutions'
     ],
     link: '/services/ai-healthcare-platform',
     status: 'available'
@@ -224,12 +185,7 @@ const services: Service[] = [
     category: 'AI & Operations',
     icon: Workflow,
     features: ['
-      'Demand forecasting',
-      'Inventory optimization',
-      'Route optimization',
-      'Risk assessment',
-      'Supplier management',
-      'Real-time monitoring'
+      'Demand forecasting',Inventory optimization',Route optimization',Risk assessment',Supplier management',Real-time monitoring'
     ],
     pricing: {
 
@@ -238,18 +194,10 @@ const services: Service[] = [
       enterprise: 'Custom'
     },
     benefits: ['
-      'Reduce costs by 15-25%',
-      'Improve delivery times',
-      'Minimize inventory waste',
-      'Enhance supplier relationships',
-      'Increase operational efficiency'
+      'Reduce costs by 15-25%',Improve delivery times',Minimize inventory waste',Enhance supplier relationships',Increase operational efficiency'
     ],
     useCases: ['
-      'Manufacturing companies',
-      'Retail chains',
-      'Logistics providers',
-      'E-commerce platforms',
-      'Distribution networks'
+      'Manufacturing companies',Retail chains',Logistics providers',E-commerce platforms',Distribution networks'
     ],
     link: '/services/ai-supply-chain-optimization',
     status: 'available'
@@ -262,12 +210,7 @@ const services: Service[] = [
     category: 'AI & Quantum',
     icon: Atom,
     features: ['
-      'Quantum-AI hybrid algorithms',
-      'Complex optimization solving',
-      'Advanced simulations',
-      'Quantum machine learning',
-      'Hybrid computing workflows',
-      'Performance benchmarking'
+      'Quantum-AI hybrid algorithms',Complex optimization solving',Advanced simulations',Quantum machine learning',Hybrid computing workflows',Performance benchmarking'
     ],
     pricing: {
 
@@ -276,18 +219,10 @@ const services: Service[] = [
       enterprise: 'Custom'
     },
     benefits: ['
-      'Solve previously intractable problems',
-      'Exponential performance improvements',
-      'Advanced research capabilities',
-      'Competitive advantage',
-      'Future-proof technology'
+      'Solve previously intractable problems',Exponential performance improvements',Advanced research capabilities',Competitive advantage',Future-proof technology'
     ],
     useCases: ['
-      'Research institutions',
-      'Financial services',
-      'Pharmaceutical research',
-      'Climate modeling',
-      'Cryptography and security'
+      'Research institutions',Financial services',Pharmaceutical research',Climate modeling',Cryptography and security'
     ],
     link: '/services/ai-quantum-hybrid-platform',
     status: 'beta'
@@ -301,12 +236,7 @@ const services: Service[] = [
     category: 'IT & Cloud',
     icon: Cloud,
     features: ['
-      'Automated CI/CD pipelines',
-      'Infrastructure as Code',
-      'Multi-cloud management',
-      'Monitoring and alerting',
-      'Security automation',
-      'Cost optimization'
+      'Automated CI/CD pipelines',Infrastructure as Code',Multi-cloud management',Monitoring and alerting',Security automation',Cost optimization'
     ],
     pricing: {
 
@@ -315,18 +245,10 @@ const services: Service[] = [
       enterprise: 'Custom'
     },
     benefits: ['
-      'Deploy 10x faster',
-      'Reduce operational costs',
-      'Improve reliability',
-      'Enhance security',
-      'Scale efficiently'
+      'Deploy 10x faster',Reduce operational costs',Improve reliability',Enhance security',Scale efficiently'
     ],
     useCases: ['
-      'Software development teams',
-      'DevOps engineers',
-      'Cloud architects',
-      'System administrators',
-      'Startup companies'
+      'Software development teams',DevOps engineers',Cloud architects',System administrators',Startup companies'
     ],
     link: '/services/cloud-devops-automation',
     status: 'available'
@@ -339,12 +261,7 @@ const services: Service[] = [
     category: 'IT & Infrastructure',
     icon: Server,
     features: ['
-      'Infrastructure monitoring',
-      'Automated provisioning',
-      'Performance optimization',
-      'Security management',
-      'Backup and recovery',
-      'Capacity planning'
+      'Infrastructure monitoring',Automated provisioning',Performance optimization',Security management',Backup and recovery',Capacity planning'
     ],
     pricing: {
 
@@ -353,18 +270,10 @@ const services: Service[] = [
       enterprise: 'Custom'
     },
     benefits: ['
-      'Reduce downtime by 99.9%',
-      'Lower operational costs',
-      'Improve performance',
-      'Enhance security posture',
-      'Streamline management'
+      'Reduce downtime by 99.9%',Lower operational costs',Improve performance',Enhance security posture',Streamline management'
     ],
     useCases: ['
-      'Enterprise IT departments',
-      'Data centers',
-      'Managed service providers',
-      'Educational institutions',
-      'Healthcare organizations'
+      'Enterprise IT departments',Data centers',Managed service providers',Educational institutions',Healthcare organizations'
     ],
     link: '/services/it-infrastructure',
     status: 'available'
@@ -378,12 +287,7 @@ const services: Service[] = [
     category: 'Micro SAAS',
     icon: Users,
     features: ['
-      'Contact management',
-      'Lead tracking',
-      'Sales pipeline',
-      'Email integration',
-      'Reporting and analytics',
-      'Mobile app access'
+      'Contact management',Lead tracking',Sales pipeline',Email integration',Reporting and analytics',Mobile app access'
     ],
     pricing: {
 
@@ -392,18 +296,10 @@ const services: Service[] = [
       enterprise: '$199/month'
     },
     benefits: ['
-      'Affordable pricing',
-      'Easy to implement',
-      'Scalable solution',
-      'Improve customer relationships',
-      'Increase sales efficiency'
+      'Affordable pricing',Easy to implement',Scalable solution',Improve customer relationships',Increase sales efficiency'
     ],
     useCases: ['
-      'Small businesses',
-      'Sales teams',
-      'Real estate agents',
-      'Consultants',
-      'Startups'
+      'Small businesses',Sales teams',Real estate agents',Consultants',Startups'
     ],
     link: '/services/micro-crm',
     status: 'available'
@@ -416,12 +312,7 @@ const services: Service[] = [
     category: 'AI & Analytics',
     icon: BarChart3,
     features: ['
-      'AI-powered analytics',
-      'Predictive modeling',
-      'Interactive dashboards',
-      'Data visualization',
-      'Automated reporting',
-      'Real-time insights'
+      'AI-powered analytics',Predictive modeling',Interactive dashboards',Data visualization',Automated reporting',Real-time insights'
     ],
     pricing: {
 
@@ -430,18 +321,10 @@ const services: Service[] = [
       enterprise: 'Custom'
     },
     benefits: ['
-      'Make data-driven decisions',
-      'Identify trends and patterns',
-      'Predict future outcomes',
-      'Improve operational efficiency',
-      'Gain competitive advantage'
+      'Make data-driven decisions',Identify trends and patterns',Predict future outcomes',Improve operational efficiency',Gain competitive advantage'
     ],
     useCases: ['
-      'Business analysts',
-      'Executives and managers',
-      'Marketing teams',
-      'Operations teams',
-      'Financial analysts'
+      'Business analysts',Executives and managers',Marketing teams',Operations teams',Financial analysts'
     ],
     link: '/services/ai-business-intelligence',
     status: 'available'
@@ -466,7 +349,7 @@ export default function ComprehensiveServicesShowcase2025() {
   const filteredServices = services.filter(service => {
 
     const matchesCategory = selectedCategory === 'all' || '
-      service.category.toLowerCase().includes(selectedCategory.replace('-', '));
+      service.category.toLowerCase().includes(selectedCategory.replace('-',));
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;

@@ -183,14 +183,7 @@ const AIAutonomousArchitecture = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'System Architecture',
-                'Software Architecture',
-                'Network Architecture',
-                'Data Architecture',
-                'Cloud Architecture',
-                'Enterprise Architecture',
-                'Solution Architecture',
-                'Infrastructure Architecture',
+                'System Architecture',Software Architecture',Network Architecture',Data Architecture',Cloud Architecture',Enterprise Architecture',Solution Architecture',Infrastructure Architecture',
               ].map(type => (
                 <div
                   key={type}"

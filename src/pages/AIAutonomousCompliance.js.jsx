@@ -183,14 +183,7 @@ const AIAutonomousCompliance = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Regulatory Compliance',
-                'Data Compliance',
-                'Security Compliance',
-                'Financial Compliance',
-                'Industry Compliance',
-                'Quality Compliance',
-                'Environmental Compliance',
-                'Ethics Compliance',
+                'Regulatory Compliance',Data Compliance',Security Compliance',Financial Compliance',Industry Compliance',Quality Compliance',Environmental Compliance',Ethics Compliance',
               ].map(type => (
                 <div
                   key={type}"

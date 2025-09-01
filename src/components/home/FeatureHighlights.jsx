@@ -20,9 +20,7 @@ const highlights = [
     description:'
       'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',
     features: ['
-      'Predictive Analytics',
-      'Smart Recommendations',
-      'Automated Workflows',
+      'Predictive Analytics',Smart Recommendations',Automated Workflows',
     ],
     color: 'from-zion-purple to-zion-purple-dark',
     bgColor: 'bg-zion-purple/10',
@@ -34,9 +32,7 @@ const highlights = [
     description:'
       'Connect with professionals and businesses from over 150 countries worldwide.',
     features: ['
-      'Multi-language Support',
-      'Local Expertise',
-      '24/7 Availability',
+      'Multi-language Support',Local Expertise',24/7 Availability',
     ],
     color: 'from-zion-cyan to-zion-cyan-dark',
     bgColor: 'bg-zion-cyan/10',
@@ -81,12 +77,7 @@ const achievements = [
 ];
 
 const technologies = ['
-  'Machine Learning',
-  'Blockchain',
-  'Cloud Computing',
-  'IoT',
-  'Cybersecurity',
-  'Data Analytics',
+  'Machine Learning',Blockchain',Cloud Computing',IoT',Cybersecurity',Data Analytics',
 ];
 ;
 export function FeatureHighlights() {

@@ -9,8 +9,7 @@ export { function };
 export default function SearchFeature() {
   const schema = {
 
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
+    '@context': 'https://schema.org',@type': 'WebPage',
     name: 'Advanced Search',
     description:'
       'Quickly locate products, services and talent using intelligent search filters.',

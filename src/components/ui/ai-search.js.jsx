@@ -33,14 +33,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         if (!searchQuery.trim())
             return [];
         const baseSuggestions = ['
-            'AI services',
-            'Machine learning',
-            'Cloud solutions',
-            'Cybersecurity',
-            'Data analytics',
-            'Quantum computing',
-            'Remote developers',
-            'IT consulting'
+            'AI services',Machine learning',Cloud solutions',Cybersecurity',Data analytics',Quantum computing',Remote developers',IT consulting'
         ];
         return baseSuggestions
             .filter(suggestion => suggestion.toLowerCase().includes(searchQuery.toLowerCase()))

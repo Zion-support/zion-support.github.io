@@ -65,12 +65,7 @@ const AIAutonomousSales: React.FC = (): JSX.Element => {
   ];
 
   const benefits = ['
-    'Increase sales revenue by 120%',
-    'Improve lead conversion by 80%',
-    'Reduce sales cycle by 60%',
-    'Automate sales processes',
-    '24/7 autonomous operation',
-    'Real-time sales insights',
+    'Increase sales revenue by 120%',Improve lead conversion by 80%',Reduce sales cycle by 60%',Automate sales processes',24/7 autonomous operation',Real-time sales insights',
   ];
 
   return()

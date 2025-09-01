@@ -18,10 +18,7 @@ import SEO from '@/components/SEO';
       icon: Zap,
       color: 'from-blue-600 to-indigo-700',
       features: ['
-        'AI-powered project planning and scheduling',
-        'Automated resource allocation and team management',
-        'Real-time progress tracking with predictive analytics',
-        'Intelligent risk assessment and mitigation'
+        'AI-powered project planning and scheduling',Automated resource allocation and team management',Real-time progress tracking with predictive analytics',Intelligent risk assessment and mitigation'
       ],
       benefits: ['70% faster project planning',40% higher success rate',3x ROI within 6 months'],
       pricing: { starter: '$99/mo', professional: '$299/mo', enterprise: '$799/mo' },
@@ -35,10 +32,7 @@ import SEO from '@/components/SEO';
       icon: PenTool,
       color: 'from-purple-600 to-indigo-700',
       features: ['
-        'AI-powered content generation for blogs, social media, and emails',
-        'Multi-language content creation and localization',
-        'SEO optimization with keyword research and content planning',
-        'Content performance analytics and A/B testing'
+        'AI-powered content generation for blogs, social media, and emails',Multi-language content creation and localization',SEO optimization with keyword research and content planning',Content performance analytics and A/B testing'
       ],
       benefits: ['10x more content output',60% better SEO rankings',70% cost reduction'],
       pricing: { starter: '$79/mo', professional: '$199/mo', enterprise: '$499/mo' },
@@ -52,10 +46,7 @@ import SEO from '@/components/SEO';
       icon: TrendingUp,
       color: 'from-green-600 to-emerald-700',
       features: ['
-        'AI-powered financial forecasting and trend analysis',
-        'Real-time market data integration and analysis',
-        'Automated financial reporting and compliance',
-        'Risk assessment and portfolio optimization'
+        'AI-powered financial forecasting and trend analysis',Real-time market data integration and analysis',Automated financial reporting and compliance',Risk assessment and portfolio optimization'
       ],
       benefits: ['25-40% better investment returns',80% faster analysis time',85% market prediction accuracy'],
       pricing: { starter: '$199/mo', professional: '$499/mo', enterprise: '$1,299/mo' },
@@ -69,10 +60,7 @@ import SEO from '@/components/SEO';
       icon: Users,
       color: 'from-orange-600 to-red-700',
       features: ['
-        'AI-powered candidate screening and matching',
-        'Automated resume parsing and skill assessment',
-        'Intelligent interview scheduling and feedback',
-        'Employee performance analytics and insights'
+        'AI-powered candidate screening and matching',Automated resume parsing and skill assessment',Intelligent interview scheduling and feedback',Employee performance analytics and insights'
       ],
       benefits: ['60% faster time-to-hire',40% better candidate quality',30% reduced hiring costs'],
       pricing: { starter: '$149/mo', professional: '$399/mo', enterprise: '$999/mo' },
@@ -86,9 +74,7 @@ import SEO from '@/components/SEO';
       icon: Route,
       color: 'from-teal-600 to-cyan-700',
       features: ['
-        'AI-powered demand forecasting and inventory optimization',
-        'Real-time supply chain visibility and tracking',
-        'Automated route optimization and logistics planning',;
+        'AI-powered demand forecasting and inventory optimization',Real-time supply chain visibility and tracking',Automated route optimization and logistics planning',;
         'Supplier performance analytics and risk assessment';
       ],;
       benefits: ['20-30% reduced inventory costs',25% improved delivery times',40% fewer disruptions'],;

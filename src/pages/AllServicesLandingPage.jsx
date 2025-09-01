@@ -136,7 +136,7 @@ export default function AllServicesLandingPage() {
                         <div className="flex items-start justify-between mb-2">"
                           <div className="text-2xl">{getCategoryIcon(service.category)}</div>
                           <Badge className={getPricingModelColor(service.pricingModel)}>
-                            {service.pricingModel.replace('-', ')}
+                            {service.pricingModel.replace('-',)}
                           </Badge>
                         </div>"
                         <div className="flex items-center space-x-2 mb-2">

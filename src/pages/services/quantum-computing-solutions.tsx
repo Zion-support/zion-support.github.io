@@ -58,12 +58,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
   ];
 
   const benefits = ['
-    'Solve previously intractable problems',
-    'Exponential speedup for specific algorithms',
-    'Enhanced machine learning capabilities',
-    'Improved optimization and simulation',
-    'Future-proof security solutions',
-    'Competitive advantage in research',
+    'Solve previously intractable problems',Exponential speedup for specific algorithms',Enhanced machine learning capabilities',Improved optimization and simulation',Future-proof security solutions',Competitive advantage in research',
   ];
 
   const solutions = [

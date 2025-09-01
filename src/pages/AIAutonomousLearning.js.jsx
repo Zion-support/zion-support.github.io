@@ -177,14 +177,7 @@ const AIAutonomousLearning = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Supervised Learning',
-                'Unsupervised Learning',
-                'Reinforcement Learning',
-                'Transfer Learning',
-                'Online Learning',
-                'Batch Learning',
-                'Incremental Learning',
-                'Meta Learning',
+                'Supervised Learning',Unsupervised Learning',Reinforcement Learning',Transfer Learning',Online Learning',Batch Learning',Incremental Learning',Meta Learning',
               ].map(type => (
                 <div
                   key={type}"

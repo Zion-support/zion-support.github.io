@@ -10,18 +10,10 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
       description: 'Essential IT support for small businesses',
       price: billingCycle === 'monthly' ? 299 : 2990,
       features[;
-        '24/7 Help Desk Support',
-        'Remote Troubleshooting',
-        'Basic Network Monitoring',
-        'Email Support',
-        'Monthly Reports',
-        'Up to 25 Users'
+        '24/7 Help Desk Support',Remote Troubleshooting',Basic Network Monitoring',Email Support',Monthly Reports',Up to 25 Users'
       ],;
       notIncluded[;
-        'On-site Visits',
-        'Hardware Installation',
-        'Advanced Security',
-        'Priority Support'
+        'On-site Visits',Hardware Installation',Advanced Security',Priority Support'
       ],;
       popular: false,
       icon: Users
@@ -32,19 +24,10 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
       description: 'Comprehensive IT support with on-site capabilities',
       price: billingCycle === 'monthly' ? 599 : 5990,
       features[;
-        'Everything in Basic',
-        'On-site Support (2 visits/month),
-        'Hardware Installation',
-        'Network Security Monitoring',
-        'Phone & Email Support',
-        'Weekly Reports',
-        'Up to 100 Users',
-        'Emergency Response (4hr)
+        'Everything in Basic',On-site Support (2 visits/month),Hardware Installation',Network Security Monitoring',Phone & Email Support',Weekly Reports',Up to 100 Users',Emergency Response (4hr)
       ],;
       notIncluded[;
-        'Unlimited On-site Visits',
-        'Dedicated Technician',
-        'Advanced Analytics'
+        'Unlimited On-site Visits',Dedicated Technician',Advanced Analytics'
       ],;
       popular: true,
       icon: Shield
@@ -55,20 +38,10 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
       description: 'Full-service IT support for large organizations',
       price: billingCycle === 'monthly' ? 1299 : 12990,
       features[;
-        'Everything in Professional',
-        'Unlimited On-site Support',
-        'Dedicated IT Technician',
-        'Advanced Security Suite',
-        'Real-time Monitoring',
-        'Daily Reports',
-        'Unlimited Users',
-        'Emergency Response (2hr),
-        'Strategic IT Planning',
-        'Compliance Support'
+        'Everything in Professional',Unlimited On-site Support',Dedicated IT Technician',Advanced Security Suite',Real-time Monitoring',Daily Reports',Unlimited Users',Emergency Response (2hr),Strategic IT Planning',Compliance Support'
       ],;
       notIncluded[;
-        'Custom Development',
-        'Hardware Procurement'
+        'Custom Development',Hardware Procurement'
       ],;
       popular: false,
       icon: Star

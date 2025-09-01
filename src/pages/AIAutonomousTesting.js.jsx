@@ -178,14 +178,7 @@ const AIAutonomousTesting = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Unit Testing',
-                'Integration Testing',
-                'System Testing',
-                'Performance Testing',
-                'Security Testing',
-                'User Acceptance Testing',
-                'Regression Testing',
-                'Automated Testing',
+                'Unit Testing',Integration Testing',System Testing',Performance Testing',Security Testing',User Acceptance Testing',Regression Testing',Automated Testing',
               ].map(type => (
                 <div
                   key={type}"

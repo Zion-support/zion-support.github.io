@@ -239,8 +239,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
 
   {
 
-                    y: ['-100vh',
-  '100vh']
+                    y: ['-100vh',100vh']
 
 }} transition = {
 

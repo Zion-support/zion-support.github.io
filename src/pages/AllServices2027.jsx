@@ -96,16 +96,7 @@ const SERVICE_CATEGORIES = ['
     icon: Target,
     count: ALL_SERVICES.filter(s =>
       ['
-        'Healthcare',
-        'Financial Services',
-        'Manufacturing',
-        'Energy',
-        'Transportation',
-        'Education',
-        'Real Estate',
-        'Agriculture',
-        'Legal Services',
-        'Media & Entertainment',
+        'Healthcare',Financial Services',Manufacturing',Energy',Transportation',Education',Real Estate',Agriculture',Legal Services',Media & Entertainment',
       ].includes(s.category)
     ).length},
   {
@@ -115,11 +106,7 @@ const SERVICE_CATEGORIES = ['
     icon: Lightbulb,
     count: ALL_SERVICES.filter(s =>
       ['
-        'Edge Computing',
-        'Digital Twin',
-        'Autonomous Systems',
-        'Neuromorphic Computing',
-        'Federated Learning',
+        'Edge Computing',Digital Twin',Autonomous Systems',Neuromorphic Computing',Federated Learning',
       ].includes(s.category)
     ).length},
 ];

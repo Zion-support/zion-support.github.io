@@ -108,55 +108,37 @@ const AICybersecurityPlatform: React.FC = () => {
 
       name: 'Threat Intelligence',
       features: ['
-        'Real-time threat feeds',
-        'Global threat database',
-        'Custom threat hunting',
-        'Vulnerability assessment',
+        'Real-time threat feeds',Global threat database',Custom threat hunting',Vulnerability assessment',
       ]},
     {
 
       name: 'Endpoint Protection',
       features: ['
-        'Advanced antivirus',
-        'Behavioral analysis',
-        'Device control',
-        'Data loss prevention',
+        'Advanced antivirus',Behavioral analysis',Device control',Data loss prevention',
       ]},
     {
 
       name: 'Network Security',
       features: ['
-        'Firewall management',
-        'Intrusion detection',
-        'Traffic analysis',
-        'VPN services',
+        'Firewall management',Intrusion detection',Traffic analysis',VPN services',
       ]},
     {
 
       name: 'Cloud Security',
       features: ['
-        'Cloud access security',
-        'API protection',
-        'Container security',
-        'Multi-cloud support',
+        'Cloud access security',API protection',Container security',Multi-cloud support',
       ]},
     {
 
       name: 'Identity Management',
       features: ['
-        'Multi-factor authentication',
-        'Single sign-on',
-        'Privileged access',
-        'Identity governance',
+        'Multi-factor authentication',Single sign-on',Privileged access',Identity governance',
       ]},
     {
 
       name: 'Compliance & Audit',
       features: ['
-        'SOC 2 compliance',
-        'GDPR compliance',
-        'HIPAA compliance',
-        'Audit reporting',
+        'SOC 2 compliance',GDPR compliance',HIPAA compliance',Audit reporting',
       ]},
   ];
 
@@ -168,13 +150,7 @@ const AICybersecurityPlatform: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses and startups',
       features: ['
-        'AI Threat Detection',
-        'Basic Network Security',
-        'Endpoint Protection (up to 100 devices),
-        'Email Security',
-        'Basic Compliance Reporting',
-        'Email Support',
-        'Security Dashboard',
+        'AI Threat Detection',Basic Network Security',Endpoint Protection (up to 100 devices),Email Security',Basic Compliance Reporting',Email Support',Security Dashboard',
       ],
       marketPrice: '$3,200',
       savings: '22%',
@@ -186,15 +162,7 @@ const AICybersecurityPlatform: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing businesses and mid-size companies',
       features: ['
-        'Advanced AI Threat Detection',
-        'Comprehensive Network Security',
-        'Endpoint Protection (up to 500 devices),
-        'Cloud Security',
-        'Identity Management',
-        'Advanced Compliance',
-        'Priority Support',
-        'Custom Security Policies',
-        'Security Analytics',
+        'Advanced AI Threat Detection',Comprehensive Network Security',Endpoint Protection (up to 500 devices),Cloud Security',Identity Management',Advanced Compliance',Priority Support',Custom Security Policies',Security Analytics',
       ],
       marketPrice: '$7,000',
       savings: '21%',
@@ -206,16 +174,7 @@ const AICybersecurityPlatform: React.FC = () => {
       period: '/month',
       description: 'For large enterprises requiring maximum security',
       features: ['
-        'Enterprise AI Security',
-        'Unlimited Device Protection',
-        'Advanced Threat Hunting',
-        'Custom Security Solutions',
-        '24/7 Dedicated Support',
-        'White-label Solutions',
-        'Custom Integration',
-        'Security Training',
-        'Incident Response Team',
-        'Compliance Consulting',
+        'Enterprise AI Security',Unlimited Device Protection',Advanced Threat Hunting',Custom Security Solutions',24/7 Dedicated Support',White-label Solutions',Custom Integration',Security Training',Incident Response Team',Compliance Consulting',
       ],
       marketPrice: '$15,500',
       savings: '23%',

@@ -116,8 +116,7 @@ export default function InnovativeServicesShowcase2026() {
 
     const colors = {
 
-  'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600',
-      'Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',;
+  'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600',Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',;
   ;
   ;
   ;

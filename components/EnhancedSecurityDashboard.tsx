@@ -178,7 +178,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
           severity: severityLevels[Math.floor(Math.random() * severityLevels.length)] || 'medium',
           source: `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`,
           target: targetSystems[Math.floor(Math.random() * targetSystems.length)] || 'Web Server',
-          timestamp: new Date().toISOString().replace('T', ').substring(0, 19),
+          timestamp: new Date().toISOString().replace('T',).substring(0, 19),
           status: 'active',
           description: 'New security threat detected',
           impact: 'Under investigation'
@@ -404,7 +404,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
                       <div className="flex-1">"
                         <div className="flex items-center gap-3 mb-2">"
                           <h4 className="text-lg font-semibold text-white capitalize">
-                            {threat.type.replace('-', ')} Attack
+                            {threat.type.replace('-',)} Attack
                           </h4>`
                           <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getSeverityColor(threat.severity)}`}>
                             {threat.severity}

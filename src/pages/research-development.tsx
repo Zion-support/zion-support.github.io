@@ -51,12 +51,7 @@ const researchAreas = [
     description: 'Advancing the frontiers of AI through innovative research in neural networks, natural language processing, and computer vision.',
     color: 'from-purple-500 to-indigo-600',
     focus[;
-      'Deep Learning Architectures',
-      'Natural Language Processing',
-      'Computer Vision & Image Recognition',
-      'Reinforcement Learning',
-      'AI Ethics & Responsible AI',
-      'Edge AI & Federated Learning'
+      'Deep Learning Architectures',Natural Language Processing',Computer Vision & Image Recognition',Reinforcement Learning',AI Ethics & Responsible AI',Edge AI & Federated Learning'
     ],;
     publications: 15,
     patents: 8,
@@ -70,12 +65,7 @@ const researchAreas = [
     description: 'Exploring quantum computing applications and developing quantum-resistant cryptographic solutions.',
     color: 'from-blue-500 to-cyan-600',
     focus[;
-      'Quantum Algorithms',
-      'Quantum Cryptography',
-      'Quantum Machine Learning',
-      'Quantum Error Correction',
-      'Post-Quantum Cryptography',
-      'Quantum Sensing'
+      'Quantum Algorithms',Quantum Cryptography',Quantum Machine Learning',Quantum Error Correction',Post-Quantum Cryptography',Quantum Sensing'
     ],;
     publications: 8,
     patents: 5,
@@ -89,12 +79,7 @@ const researchAreas = [
     description: 'Developing next-generation security solutions to protect against evolving cyber threats.',
     color: 'from-red-500 to-pink-600',
     focus[;
-      'Threat Intelligence',
-      'Zero-Trust Security',
-      'Privacy-Preserving Technologies',
-      'Blockchain Security',
-      'IoT Security',
-      'AI-Powered Security'
+      'Threat Intelligence',Zero-Trust Security',Privacy-Preserving Technologies',Blockchain Security',IoT Security',AI-Powered Security'
     ],;
     publications: 22,
     patents: 12,
@@ -108,12 +93,7 @@ const researchAreas = [
     description: 'Researching distributed computing paradigms and intelligent edge systems for real-time processing.',
     color: 'from-yellow-500 to-orange-600',
     focus[;
-      'Edge AI & Machine Learning',
-      '5G & 6G Networks',
-      'IoT Security & Privacy',
-      'Edge Computing Optimization',
-      'Real-time Data Processing',
-      'Smart City Technologies'
+      'Edge AI & Machine Learning',5G & 6G Networks',IoT Security & Privacy',Edge Computing Optimization',Real-time Data Processing',Smart City Technologies'
     ],;
     publications: 18,
     patents: 9,
@@ -127,12 +107,7 @@ const researchAreas = [
     description: 'Advancing data analytics methodologies and developing tools for extracting meaningful insights from complex datasets.',
     color: 'from-green-500 to-emerald-600',
     focus[;
-      'Big Data Processing',
-      'Predictive Analytics',
-      'Data Visualization',
-      'Statistical Modeling',
-      'Real-time Analytics',
-      'Data Privacy & Ethics'
+      'Big Data Processing',Predictive Analytics',Data Visualization',Statistical Modeling',Real-time Analytics',Data Privacy & Ethics'
     ],;
     publications: 25,
     patents: 15,
@@ -146,11 +121,7 @@ const researchAreas = [
     description: 'Researching cloud computing architectures and developing scalable, resilient cloud solutions.',
     color: 'from-indigo-500 to-purple-600',
     focus[;
-      'Microservices Architecture',
-      'Container Orchestration',
-      'Serverless Computing',
-      'Multi-cloud Strategies',
-      'Cloud Security',;
+      'Microservices Architecture',Container Orchestration',Serverless Computing',Multi-cloud Strategies',Cloud Security',;
       'DevOps Automation';
     ],;
     publications: 20,;
@@ -171,10 +142,7 @@ const researchProjects = [
     duration: '18 months',
     funding: '$500,000',
     outcomes[;
-      'Real-time threat detection system',
-      '95% accuracy in threat classification',
-      '3 pending patents',
-      '5 research publications'
+      'Real-time threat detection system',95% accuracy in threat classification',3 pending patents',5 research publications'
     ],;
     icon: Brain,
     color: 'from-purple-500 to-indigo-600'
@@ -190,10 +158,7 @@ const researchProjects = [
     duration: '24 months',
     funding: '$750,000',
     outcomes[;
-      'Post-quantum cryptographic framework',
-      '2 patent applications',
-      '3 research publications',
-      'Industry collaboration established'
+      'Post-quantum cryptographic framework',2 patent applications',3 research publications',Industry collaboration established'
     ],;
     icon: Atom,
     color: 'from-blue-500 to-cyan-600'
@@ -209,10 +174,7 @@ const researchProjects = [
     duration: '12 months',
     funding: '$300,000',
     outcomes[;
-      'Edge AI platform prototype',
-      '30% efficiency improvement',
-      '2 research publications',
-      'Industry partnership formed'
+      'Edge AI platform prototype',30% efficiency improvement',2 research publications',Industry partnership formed'
     ],;
     icon: Zap,
     color: 'from-yellow-500 to-orange-600'
@@ -228,10 +190,7 @@ const researchProjects = [
     duration: '15 months',
     funding: '$400,000',
     outcomes[;
-      'Privacy-preserving analytics framework',
-      '4 research publications',
-      '1 patent granted',
-      'Open-source toolkit released'
+      'Privacy-preserving analytics framework',4 research publications',1 patent granted',Open-source toolkit released'
     ],;
     icon: TrendingUp,
     color: 'from-green-500 to-emerald-600'
@@ -247,10 +206,7 @@ const researchProjects = [
     duration: '20 months',
     funding: '$600,000',
     outcomes[;
-      'Security architecture framework',
-      '3 research publications',
-      '2 patent applications',
-      'Enterprise pilot program'
+      'Security architecture framework',3 research publications',2 patent applications',Enterprise pilot program'
     ],;
     icon: Cloud,
     color: 'from-indigo-500 to-purple-600'
@@ -266,8 +222,7 @@ const researchProjects = [
     duration: '16 months',
     funding: '$350,000',
     outcomes[;
-      'AI ethics framework',
-      'Responsible AI guidelines',;
+      'AI ethics framework',Responsible AI guidelines',;
       '4 research publications',;
       'Industry standards contribution';
     ],;

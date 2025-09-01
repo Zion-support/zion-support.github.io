@@ -78,10 +78,7 @@ export default function CaseStudies() {
       solution:'
         'Implemented an AI-powered analytics platform that processes real-time patient data, identifies patterns, and provides predictive insights.',
       results: ['
-        '40% improvement in early disease detection',
-        '25% reduction in treatment costs',
-        '60% faster diagnosis times',
-        '95% accuracy in pattern recognition',
+        '40% improvement in early disease detection',25% reduction in treatment costs',60% faster diagnosis times',95% accuracy in pattern recognition',
       ],
       duration: '6 months',
       teamSize: '8 developers',
@@ -100,19 +97,12 @@ export default function CaseStudies() {
       solution:'
         'Developed a quantum computing solution that processes risk models in hours instead of weeks, enabling real-time risk assessment.',
       results: ['
-        '1000x faster risk calculations',
-        'Real-time risk monitoring',
-        '30% improvement in risk accuracy',
-        '$50M annual cost savings',
+        '1000x faster risk calculations',Real-time risk monitoring',30% improvement in risk accuracy',$50M annual cost savings',
       ],
       duration: '12 months',
       teamSize: '12 researchers',
       technologies: ['
-        'Quantum Computing',
-        'Qiskit',
-        'Python',
-        'IBM Quantum',
-        'Risk Models',
+        'Quantum Computing',Qiskit',Python',IBM Quantum',Risk Models',
       ],
       featured: true,
       image: '/api/placeholder/600/400'},
@@ -128,19 +118,12 @@ export default function CaseStudies() {
       solution:'
         'Implemented a comprehensive zero-trust security architecture with AI-powered threat detection and automated response systems.',
       results: ['
-        '99.9% threat detection rate',
-        'Zero security breaches',
-        '50% reduction in false positives',
-        '24/7 automated monitoring',
+        '99.9% threat detection rate',Zero security breaches',50% reduction in false positives',24/7 automated monitoring',
       ],
       duration: '8 months',
       teamSize: '10 security engineers',
       technologies: ['
-        'Zero Trust',
-        'AI Security',
-        'Kubernetes',
-        'Terraform',
-        'SIEM',
+        'Zero Trust',AI Security',Kubernetes',Terraform',SIEM',
       ],
       featured: false,
       image: '/api/placeholder/600/400'},
@@ -156,10 +139,7 @@ export default function CaseStudies() {
       solution:'
         'Migrated to cloud infrastructure and implemented CI/CD pipelines with automated testing and deployment processes.',
       results: ['
-        '90% faster deployment times',
-        '99.9% uptime achieved',
-        '40% reduction in infrastructure costs',
-        'Automated scaling capabilities',
+        '90% faster deployment times',99.9% uptime achieved',40% reduction in infrastructure costs',Automated scaling capabilities',
       ],
       duration: '10 months',
       teamSize: '15 DevOps engineers',
@@ -178,19 +158,12 @@ export default function CaseStudies() {
       solution:'
         'Deployed edge computing infrastructure that processes sensor data locally, reducing latency and improving response times.',
       results: ['
-        'Real-time traffic optimization',
-        '30% reduction in response times',
-        'Scalable IoT infrastructure',
-        'Improved public safety',
+        'Real-time traffic optimization',30% reduction in response times',Scalable IoT infrastructure',Improved public safety',
       ],
       duration: '14 months',
       teamSize: '20 engineers',
       technologies: ['
-        'IoT',
-        'Edge Computing',
-        'Kubernetes',
-        'MQTT',
-        'Time Series DB',
+        'IoT',Edge Computing',Kubernetes',MQTT',Time Series DB',
       ],
       featured: false,
       image: '/api/placeholder/600/400'},

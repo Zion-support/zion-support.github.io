@@ -36,25 +36,13 @@ export const innovativeServices2026: InnovativeService[] = [
     price: '$299',
     billing: 'month',
     features[;
-      'Real-time churn risk scoring',
-      'Behavioral pattern analysis',
-      'Predictive analytics dashboard',
-      'Automated retention campaigns',
-      'CRM integration (Salesforce, HubSpot),
-      'Custom retention strategies',
-      'ROI tracking and reporting'
+      'Real-time churn risk scoring',Behavioral pattern analysis',Predictive analytics dashboard',Automated retention campaigns',CRM integration (Salesforce, HubSpot),Custom retention strategies',ROI tracking and reporting'
     ],;
     benefits[;
-      'Reduce churn by up to 40%',
-      'Increase customer lifetime value',
-      'Optimize retention spend',
-      'Proactive customer success'
+      'Reduce churn by up to 40%',Increase customer lifetime value',Optimize retention spend',Proactive customer success'
     ],;
     useCases[;
-      'SaaS subscription businesses',
-      'E-commerce platforms',
-      'Subscription box services',
-      'Digital content providers'
+      'SaaS subscription businesses',E-commerce platforms',Subscription box services',Digital content providers'
     ],;
     targetMarket['SaaS Companies',E-commerce',Subscription Services',Digital Media'],;
     ctaLabel: 'Start Free Trial',
@@ -81,25 +69,13 @@ export const innovativeServices2026: InnovativeService[] = [
     price: '$199',
     billing: 'month',
     features[;
-      'Demand forecasting with 90% accuracy',
-      'Real-time inventory tracking',
-      'Automated reorder points',
-      'Multi-location management',
-      'Supplier performance analytics',
-      'Seasonal trend analysis',
-      'Cost optimization recommendations'
+      'Demand forecasting with 90% accuracy',Real-time inventory tracking',Automated reorder points',Multi-location management',Supplier performance analytics',Seasonal trend analysis',Cost optimization recommendations'
     ],;
     benefits[;
-      'Reduce inventory costs by 25%',
-      'Eliminate stockouts',
-      'Improve cash flow',
-      'Optimize warehouse space'
+      'Reduce inventory costs by 25%',Eliminate stockouts',Improve cash flow',Optimize warehouse space'
     ],;
     useCases[;
-      'Retail chains',
-      'E-commerce warehouses',
-      'Manufacturing companies',
-      'Distribution centers'
+      'Retail chains',E-commerce warehouses',Manufacturing companies',Distribution centers'
     ],;
     targetMarket['Retail',E-commerce',Manufacturing',Logistics'],;
     ctaLabel: 'Optimize Inventory',
@@ -127,25 +103,13 @@ export const innovativeServices2026: InnovativeService[] = [
     price: '$149',
     billing: 'month',
     features[;
-      'Real-time energy consumption tracking',
-      'Smart device identification',
-      'Anomaly detection alerts',
-      'Energy efficiency recommendations',
-      'Carbon footprint calculation',
-      'Cost analysis and forecasting',
-      'Mobile app monitoring'
+      'Real-time energy consumption tracking',Smart device identification',Anomaly detection alerts',Energy efficiency recommendations',Carbon footprint calculation',Cost analysis and forecasting',Mobile app monitoring'
     ],;
     benefits[;
-      'Reduce energy bills by 35%',
-      'Improve sustainability score',
-      'Comply with green regulations',
-      'Enhance corporate social responsibility'
+      'Reduce energy bills by 35%',Improve sustainability score',Comply with green regulations',Enhance corporate social responsibility'
     ],;
     useCases[;
-      'Office buildings',
-      'Manufacturing facilities',
-      'Retail stores',
-      'Data centers'
+      'Office buildings',Manufacturing facilities',Retail stores',Data centers'
     ],;
     targetMarket['Commercial Real Estate',Manufacturing',Retail',Data Centers'],;
     ctaLabel: 'Monitor Energy',
@@ -172,25 +136,13 @@ export const innovativeServices2026: InnovativeService[] = [
     price: '$399',
     billing: 'month',
     features[;
-      'Multi-framework compliance monitoring',
-      'Automated evidence collection',
-      'Real-time compliance scoring',
-      'Automated audit reports',
-      'Policy template library',
-      'Employee training tracking',
-      'Incident response automation'
+      'Multi-framework compliance monitoring',Automated evidence collection',Real-time compliance scoring',Automated audit reports',Policy template library',Employee training tracking',Incident response automation'
     ],;
     benefits[;
-      'Reduce compliance costs by 50%',
-      'Eliminate audit surprises',
-      'Maintain continuous compliance',
-      'Protect against fines and penalties'
+      'Reduce compliance costs by 50%',Eliminate audit surprises',Maintain continuous compliance',Protect against fines and penalties'
     ],;
     useCases[;
-      'Healthcare organizations',
-      'Financial services',
-      'Technology companies',
-      'Government contractors'
+      'Healthcare organizations',Financial services',Technology companies',Government contractors'
     ],;
     targetMarket['Healthcare',Finance',Technology',Government'],;
     ctaLabel: 'Ensure Compliance',
@@ -217,25 +169,13 @@ export const innovativeServices2026: InnovativeService[] = [
     price: '$1,299',
     billing: 'month',
     features[;
-      'Natural language processing',
-      'Multi-language support (50+ languages),
-      'Context-aware conversations',
-      'Seamless human handoff',
-      'Sentiment analysis',
-      'Knowledge base learning',
-      '24/7 availability'
+      'Natural language processing',Multi-language support (50+ languages),Context-aware conversations',Seamless human handoff',Sentiment analysis',Knowledge base learning',24/7 availability'
     ],;
     benefits[;
-      'Reduce support costs by 60%',
-      'Improve customer satisfaction by 40%',
-      'Handle 10x more inquiries',
-      'Provide instant responses'
+      'Reduce support costs by 60%',Improve customer satisfaction by 40%',Handle 10x more inquiries',Provide instant responses'
     ],;
     useCases[;
-      'E-commerce customer support',
-      'SaaS product support',
-      'Banking customer service',
-      'Healthcare patient support'
+      'E-commerce customer support',SaaS product support',Banking customer service',Healthcare patient support'
     ],;
     targetMarket['E-commerce',SaaS',Banking',Healthcare',Telecommunications'],;
     ctaLabel: 'Deploy AI Agent',
@@ -262,25 +202,13 @@ export const innovativeServices2026: InnovativeService[] = [
     price: '$2,499',
     billing: 'month',
     features[;
-      'Real-time equipment monitoring',
-      'Machine learning failure prediction',
-      'Maintenance scheduling optimization',
-      'Spare parts inventory management',
-      'Performance analytics dashboard',
-      'Mobile technician app',
-      'Integration with CMMS systems'
+      'Real-time equipment monitoring',Machine learning failure prediction',Maintenance scheduling optimization',Spare parts inventory management',Performance analytics dashboard',Mobile technician app',Integration with CMMS systems'
     ],;
     benefits[;
-      'Reduce unplanned downtime by 70%',
-      'Extend equipment life by 30%',
-      'Optimize maintenance costs',
-      'Improve safety and compliance'
+      'Reduce unplanned downtime by 70%',Extend equipment life by 30%',Optimize maintenance costs',Improve safety and compliance'
     ],;
     useCases[;
-      'Manufacturing plants',
-      'Power plants',
-      'Oil and gas facilities',
-      'Transportation fleets'
+      'Manufacturing plants',Power plants',Oil and gas facilities',Transportation fleets'
     ],;
     targetMarket['Manufacturing',Energy',Oil & Gas',Transportation',Utilities'],;
     ctaLabel: 'Predict Maintenance',
@@ -307,25 +235,13 @@ export const innovativeServices2026: InnovativeService[] = [
     price: '$3,999',
     billing: 'month',
     features[;
-      'Real-time transaction monitoring',
-      'Behavioral pattern analysis',
-      'Multi-channel fraud detection',
-      'Automated risk scoring',
-      'False positive reduction',
-      'Compliance reporting',
-      'Machine learning model updates'
+      'Real-time transaction monitoring',Behavioral pattern analysis',Multi-channel fraud detection',Automated risk scoring',False positive reduction',Compliance reporting',Machine learning model updates'
     ],;
     benefits[;
-      'Reduce fraud losses by 80%',
-      'Improve detection accuracy',
-      'Reduce false positives by 60%',
-      'Comply with regulatory requirements'
+      'Reduce fraud losses by 80%',Improve detection accuracy',Reduce false positives by 60%',Comply with regulatory requirements'
     ],;
     useCases[;
-      'Credit card transactions',
-      'Online banking',
-      'E-commerce payments',
-      'Insurance claims'
+      'Credit card transactions',Online banking',E-commerce payments',Insurance claims'
     ],;
     targetMarket['Banking',E-commerce',Insurance',Payment Processors'],;
     ctaLabel: 'Detect Fraud',
@@ -354,25 +270,13 @@ export const innovativeServices2026: InnovativeService[] = [
     price: '$15,000',
     billing: 'project',
     features[;
-      'Cloud readiness assessment',
-      'Migration strategy planning',
-      'Zero-downtime migration',
-      'Performance optimization',
-      'Cost optimization analysis',
-      'Security and compliance setup',
-      'Post-migration support'
+      'Cloud readiness assessment',Migration strategy planning',Zero-downtime migration',Performance optimization',Cost optimization analysis',Security and compliance setup',Post-migration support'
     ],;
     benefits[;
-      'Reduce migration time by 50%',
-      'Ensure zero business disruption',
-      'Optimize cloud costs',
-      'Improve scalability and performance'
+      'Reduce migration time by 50%',Ensure zero business disruption',Optimize cloud costs',Improve scalability and performance'
     ],;
     useCases[;
-      'Legacy system modernization',
-      'Data center consolidation',
-      'Application modernization',
-      'Disaster recovery setup'
+      'Legacy system modernization',Data center consolidation',Application modernization',Disaster recovery setup'
     ],;
     targetMarket['Enterprise',Mid-market',Government',Healthcare'],;
     ctaLabel: 'Start Migration',
@@ -399,25 +303,13 @@ export const innovativeServices2026: InnovativeService[] = [
     price: '$8,500',
     billing: 'project',
     features[;
-      'Vulnerability assessment',
-      'Penetration testing',
-      'Security architecture review',
-      'Compliance gap analysis',
-      'Risk assessment report',
-      'Remediation roadmap',
-      'Security training recommendations'
+      'Vulnerability assessment',Penetration testing',Security architecture review',Compliance gap analysis',Risk assessment report',Remediation roadmap',Security training recommendations'
     ],;
     benefits[;
-      'Identify security gaps',
-      'Reduce cyber risk',
-      'Comply with regulations',
-      'Improve security posture'
+      'Identify security gaps',Reduce cyber risk',Comply with regulations',Improve security posture'
     ],;
     useCases[;
-      'Security audits',
-      'Compliance assessments',
-      'Merger and acquisition due diligence',
-      'Annual security reviews'
+      'Security audits',Compliance assessments',Merger and acquisition due diligence',Annual security reviews'
     ],;
     targetMarket['Enterprise',Mid-market',Healthcare',Finance'],;
     ctaLabel: 'Assess Security',
@@ -444,25 +336,13 @@ export const innovativeServices2026: InnovativeService[] = [
     price: '$25,000',
     billing: 'project',
     features[;
-      'Digital maturity assessment',
-      'Transformation roadmap development',
-      'Change management strategy',
-      'Technology architecture design',
-      'Process optimization',
-      'Talent development planning',
-      'ROI measurement framework'
+      'Digital maturity assessment',Transformation roadmap development',Change management strategy',Technology architecture design',Process optimization',Talent development planning',ROI measurement framework'
     ],;
     benefits[;
-      'Accelerate digital transformation',
-      'Improve operational efficiency',
-      'Enhance customer experience',
-      'Increase competitive advantage'
+      'Accelerate digital transformation',Improve operational efficiency',Enhance customer experience',Increase competitive advantage'
     ],;
     useCases[;
-      'Digital strategy development',
-      'Process digitization',
-      'Customer experience transformation',
-      'Operational excellence initiatives'
+      'Digital strategy development',Process digitization',Customer experience transformation',Operational excellence initiatives'
     ],;
     targetMarket['Enterprise',Mid-market',Government',Healthcare'],;
     ctaLabel: 'Transform Digitally',
@@ -491,25 +371,13 @@ export const innovativeServices2026: InnovativeService[] = [
     price: '$5,999',
     billing: 'month',
     features[;
-      'Quantum algorithm development',
-      'Quantum hardware access',
-      'Hybrid classical-quantum computing',
-      'Quantum error correction',
-      'Performance optimization',
-      'Research collaboration tools',
-      'Educational resources'
+      'Quantum algorithm development',Quantum hardware access',Hybrid classical-quantum computing',Quantum error correction',Performance optimization',Research collaboration tools',Educational resources'
     ],;
     benefits[;
-      'Solve previously intractable problems',
-      'Accelerate research and development',
-      'Gain quantum advantage',
-      'Future-proof your technology stack'
+      'Solve previously intractable problems',Accelerate research and development',Gain quantum advantage',Future-proof your technology stack'
     ],;
     useCases[;
-      'Drug discovery',
-      'Financial modeling',
-      'Logistics optimization',
-      'Cryptography research'
+      'Drug discovery',Financial modeling',Logistics optimization',Cryptography research'
     ],;
     targetMarket['Research Institutions',Pharmaceutical',Finance',Technology'],;
     ctaLabel: 'Access Quantum',
@@ -536,25 +404,13 @@ export const innovativeServices2026: InnovativeService[] = [
     price: '$2,999',
     billing: 'month',
     features[;
-      'Real-time supply chain tracking',
-      'Smart contract automation',
-      'Compliance documentation',
-      'Quality assurance tracking',
-      'Sustainability metrics',
-      'Multi-stakeholder access',
-      'Mobile app for field workers'
+      'Real-time supply chain tracking',Smart contract automation',Compliance documentation',Quality assurance tracking',Sustainability metrics',Multi-stakeholder access',Mobile app for field workers'
     ],;
     benefits[;
-      'Improve supply chain transparency',
-      'Reduce fraud and counterfeiting',
-      'Ensure compliance',
-      'Build consumer trust'
+      'Improve supply chain transparency',Reduce fraud and counterfeiting',Ensure compliance',Build consumer trust'
     ],;
     useCases[;
-      'Food safety tracking',
-      'Pharmaceutical supply chain',
-      'Luxury goods authentication',
-      'Sustainable sourcing verification'
+      'Food safety tracking',Pharmaceutical supply chain',Luxury goods authentication',Sustainable sourcing verification'
     ],;
     targetMarket['Food & Beverage',Pharmaceutical',Luxury Goods',Manufacturing'],;
     ctaLabel: 'Track Supply Chain',
@@ -581,25 +437,13 @@ export const innovativeServices2026: InnovativeService[] = [
     price: '$4,999',
     billing: 'month',
     features[;
-      '3D virtual storefronts',
-      'Digital asset marketplace',
-      'AR/VR shopping experiences',
-      'Virtual try-on capabilities',
-      'Cryptocurrency payments',
-      'Social commerce features',
-      'Analytics and insights'
+      '3D virtual storefronts',Digital asset marketplace',AR/VR shopping experiences',Virtual try-on capabilities',Cryptocurrency payments',Social commerce features',Analytics and insights'
     ],;
     benefits[;
-      'Create immersive shopping experiences',
-      'Reach global audiences',
-      'Reduce physical infrastructure costs',
-      'Innovate customer engagement'
+      'Create immersive shopping experiences',Reach global audiences',Reduce physical infrastructure costs',Innovate customer engagement'
     ],;
     useCases[;
-      'Fashion retail',
-      'Real estate virtual tours',
-      'Automotive showrooms',
-      'Entertainment venues'
+      'Fashion retail',Real estate virtual tours',Automotive showrooms',Entertainment venues'
     ],;
     targetMarket['Retail',Real Estate',Automotive',Entertainment'],;
     ctaLabel: 'Enter Metaverse',

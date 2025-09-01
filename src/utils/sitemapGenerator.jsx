@@ -18,7 +18,7 @@ import { motion } from 'framer-motion';
         ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}'`
         ${url.priority ? `<priority>${url.priority}</priority>` : ''}`
       </url>`;
-            return urlElement.replace(/\s+/g, ').trim();
+            return urlElement.replace(/\s+/g,).trim();
         }).join('');`
         return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`;
 

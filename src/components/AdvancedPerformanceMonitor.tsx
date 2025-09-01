@@ -301,7 +301,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
             {overallScore.score}
           </div>"
           <div className="text-sm text-zion-slate-light">
-            Overall Score ({overallScore.rating.replace('-', ')})
+            Overall Score ({overallScore.rating.replace('-',)})
           </div>
         </div>
       </div>

@@ -13,18 +13,10 @@ export default function DevOpsCloudServices() {
             price: 'From $8,500/project',
             marketPrice: '$7,000 - $25,000/project',
             features: ['
-                'Cloud readiness assessment',
-                'Multi-cloud strategy planning',
-                'Migration roadmap development',
-                'Cost optimization analysis',
-                'Security and compliance review',
-                'Performance benchmarking'
+                'Cloud readiness assessment',Multi-cloud strategy planning',Migration roadmap development',Cost optimization analysis',Security and compliance review',Performance benchmarking'
             ],
             benefits: ['
-                'Reduced infrastructure costs by 30-50%',
-                'Improved scalability and flexibility',
-                'Enhanced disaster recovery',
-                'Better resource utilization'
+                'Reduced infrastructure costs by 30-50%',Improved scalability and flexibility',Enhanced disaster recovery',Better resource utilization'
             ]
         },
         {
@@ -35,18 +27,10 @@ export default function DevOpsCloudServices() {
             price: 'From $6,500/project',
             marketPrice: '$5,500 - $18,000/project',
             features: ['
-                'Automated build and test pipelines',
-                'Deployment automation',
-                'Environment management',
-                'Rollback and recovery',
-                'Pipeline monitoring and alerts',
-                'Security scanning integration'
+                'Automated build and test pipelines',Deployment automation',Environment management',Rollback and recovery',Pipeline monitoring and alerts',Security scanning integration'
             ],
             benefits: ['
-                'Faster time to market',
-                'Reduced deployment errors',
-                'Improved code quality',
-                'Enhanced team productivity'
+                'Faster time to market',Reduced deployment errors',Improved code quality',Enhanced team productivity'
             ]
         },
         {
@@ -57,18 +41,10 @@ export default function DevOpsCloudServices() {
             price: 'From $5,500/project',
             marketPrice: '$4,500 - $15,000/project',
             features: ['
-                'Terraform and CloudFormation',
-                'Ansible and Puppet automation',
-                'Infrastructure versioning',
-                'Environment consistency',
-                'Automated scaling policies',
-                'Cost monitoring and alerts'
+                'Terraform and CloudFormation',Ansible and Puppet automation',Infrastructure versioning',Environment consistency',Automated scaling policies',Cost monitoring and alerts'
             ],
             benefits: ['
-                'Consistent infrastructure deployment',
-                'Reduced manual configuration errors',
-                'Faster environment provisioning',
-                'Better cost control and visibility'
+                'Consistent infrastructure deployment',Reduced manual configuration errors',Faster environment provisioning',Better cost control and visibility'
             ]
         },
         {
@@ -79,18 +55,10 @@ export default function DevOpsCloudServices() {
             price: 'From $7,500/project',
             marketPrice: '$6,500 - $20,000/project',
             features: ['
-                'Kubernetes cluster design',
-                'Container security and scanning',
-                'Auto-scaling and load balancing',
-                'Service mesh implementation',
-                'Monitoring and logging',
-                'Backup and disaster recovery'
+                'Kubernetes cluster design',Container security and scanning',Auto-scaling and load balancing',Service mesh implementation',Monitoring and logging',Backup and disaster recovery'
             ],
             benefits: ['
-                'Improved application scalability',
-                'Better resource utilization',
-                'Enhanced deployment flexibility',
-                'Reduced operational overhead'
+                'Improved application scalability',Better resource utilization',Enhanced deployment flexibility',Reduced operational overhead'
             ]
         },
         {
@@ -101,18 +69,10 @@ export default function DevOpsCloudServices() {
             price: 'From $4,500/month',
             marketPrice: '$3,500 - $12,000/month',
             features: ['
-                'DevOps maturity assessment',
-                'Process optimization',
-                'Team structure recommendations',
-                'Tool selection and implementation',
-                'Best practices training',
-                'Change management support'
+                'DevOps maturity assessment',Process optimization',Team structure recommendations',Tool selection and implementation',Best practices training',Change management support'
             ],
             benefits: ['
-                'Improved development velocity',
-                'Better team collaboration',
-                'Reduced operational costs',
-                'Enhanced software quality'
+                'Improved development velocity',Better team collaboration',Reduced operational costs',Enhanced software quality'
             ]
         },
         {
@@ -123,18 +83,10 @@ export default function DevOpsCloudServices() {
             price: 'From $4,800/month',
             marketPrice: '$4,000 - $12,000/month',
             features: ['
-                'Application performance monitoring',
-                'Infrastructure monitoring',
-                'Centralized logging and analysis',
-                'Real-time alerting',
-                'Custom dashboards',
-                'Capacity planning insights'
+                'Application performance monitoring',Infrastructure monitoring',Centralized logging and analysis',Real-time alerting',Custom dashboards',Capacity planning insights'
             ],
             benefits: ['
-                'Proactive issue detection',
-                'Improved system reliability',
-                'Better user experience',
-                'Data-driven optimization'
+                'Proactive issue detection',Improved system reliability',Better user experience',Data-driven optimization'
             ]
 
     ];
@@ -169,32 +121,13 @@ export default function DevOpsCloudServices() {
 
     ];
     const industries = ['
-        'Financial Services & Banking',
-        'Healthcare & Life Sciences',
-        'E-commerce & Retail',
-        'Media & Entertainment',
-        'Manufacturing & Logistics',
-        'Education & Research',
-        'Government & Public Sector',
-        'Startups & Scale-ups'
+        'Financial Services & Banking',Healthcare & Life Sciences',E-commerce & Retail',Media & Entertainment',Manufacturing & Logistics',Education & Research',Government & Public Sector',Startups & Scale-ups'
     ];
     const technologies = ['
-        'AWS, Azure, GCP',
-        'Kubernetes & Docker',
-        'Terraform & Ansible',
-        'Jenkins & GitLab CI',
-        'Prometheus & Grafana',
-        'ELK Stack & Splunk',
-        'Istio & Linkerd',
-        'Helm & ArgoCD'
+        'AWS, Azure, GCP',Kubernetes & Docker',Terraform & Ansible',Jenkins & GitLab CI',Prometheus & Grafana',ELK Stack & Splunk',Istio & Linkerd',Helm & ArgoCD'
     ];
     const benefits = ['
-        'Faster software delivery and deployment',
-        'Improved system reliability and uptime',
-        'Reduced infrastructure costs',
-        'Enhanced security and compliance',
-        'Better scalability and performance',
-        'Improved team collaboration and productivity'
+        'Faster software delivery and deployment',Improved system reliability and uptime',Reduced infrastructure costs',Enhanced security and compliance',Better scalability and performance',Improved team collaboration and productivity'
     ];
     const useCases = [
         {

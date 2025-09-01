@@ -57,7 +57,7 @@ export default function TenantOnboarding() {
       // Generate subdomain if not provided
       const subdomain =
         formData.subdomain ||'
-        formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,');
+        formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,);
       // Create landing page copy
       const landingPageCopy = {
 
@@ -312,7 +312,7 @@ export default function TenantOnboarding() {
                             formData.brand_name
                               ? formData.brand_name
                                   .toLowerCase()
-                                  .replace(/[^a-z0-9]/g,')
+                                  .replace(/[^a-z0-9]/g,)
                               : 'comp'
                           }"
                           className="rounded-r-none"

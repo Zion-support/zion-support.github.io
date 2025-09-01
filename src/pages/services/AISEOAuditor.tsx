@@ -29,12 +29,7 @@ const AISEOAuditor: React.FC = (): JSX.Element => {
 "
         <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
           {['
-            'Automated site crawl and issues triage',
-            'Core Web Vitals & Lighthouse monitoring',
-            'Schema.org and OpenGraph validation',
-            'Internal linking and orphan page detection',
-            'AI-generated meta tags and headings',
-            'CI-ready fix PRs with human-in-the-loop',
+            'Automated site crawl and issues triage',Core Web Vitals & Lighthouse monitoring',Schema.org and OpenGraph validation',Internal linking and orphan page detection',AI-generated meta tags and headings',CI-ready fix PRs with human-in-the-loop',
           ].map(b => (
             <div
               key={b}"

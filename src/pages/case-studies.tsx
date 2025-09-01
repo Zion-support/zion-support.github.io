@@ -28,10 +28,7 @@ const caseStudies = [
     challenge: 'High customer service costs and long response times',
     solution: 'Implemented AI chatbot with natural language processing',
     results: ['
-      '40% reduction in customer service costs',
-      '85% faster response times',
-      '95% customer satisfaction rate',
-      '24/7 automated support',
+      '40% reduction in customer service costs',85% faster response times',95% customer satisfaction rate',24/7 automated support',
     ],
     metrics: {
 
@@ -52,10 +49,7 @@ const caseStudies = [
     challenge: 'Legacy infrastructure causing downtime and security risks',
     solution: 'Complete cloud migration with CI/CD pipeline implementation',
     results: ['
-      '99.9% uptime achieved',
-      '60% reduction in deployment time',
-      'Enhanced security compliance',
-      'Scalable infrastructure',
+      '99.9% uptime achieved',60% reduction in deployment time',Enhanced security compliance',Scalable infrastructure',
     ],
     metrics: {
 
@@ -76,10 +70,7 @@ const caseStudies = [
     challenge: 'Scattered data sources and lack of real-time insights',
     solution: 'Centralized data warehouse with real-time analytics dashboard',
     results: ['
-      'Real-time data insights',
-      '30% improvement in decision making',
-      'Automated reporting system',
-      'Predictive analytics capabilities',
+      'Real-time data insights',30% improvement in decision making',Automated reporting system',Predictive analytics capabilities',
     ],
     metrics: {
 
@@ -101,10 +92,7 @@ const caseStudies = [
       'Increasing cyber threats and regulatory compliance requirements',
     solution: 'Comprehensive security framework with SOC2 compliance',
     results: ['
-      'Zero security breaches',
-      'SOC2 Type II compliance achieved',
-      'Advanced threat detection',
-      'Employee security training',
+      'Zero security breaches',SOC2 Type II compliance achieved',Advanced threat detection',Employee security training',
     ],
     metrics: {
 
@@ -113,11 +101,7 @@ const caseStudies = [
       threatDetection: '99.9%',
       training: '100% staff'},
     technologies: ['
-      'Cybersecurity',
-      'SOC2',
-      'Threat Detection',
-      'Compliance',
-      'Training',
+      'Cybersecurity',SOC2',Threat Detection',Compliance',Training',
     ],
     duration: '12 months',
     roi: '200%',

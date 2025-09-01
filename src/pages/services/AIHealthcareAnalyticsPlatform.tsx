@@ -176,12 +176,7 @@ export default function AIHealthcareAnalyticsPlatform() {
   ];
 
   const benefits = ['
-    'Improve patient outcomes by 35%',
-    'Reduce readmission rates by 40%',
-    'Lower healthcare costs by 25-30%',
-    'Enhance clinical decision-making by 50%',
-    'Streamline administrative processes by 60%',
-    'Ensure 99.9% HIPAA compliance'
+    'Improve patient outcomes by 35%',Reduce readmission rates by 40%',Lower healthcare costs by 25-30%',Enhance clinical decision-making by 50%',Streamline administrative processes by 60%',Ensure 99.9% HIPAA compliance'
   ];
 
   const useCases = [
@@ -213,12 +208,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       plan: 'Starter',
       price: '$2,800/month',
       features: ['
-        'Up to 50 providers',
-        'Basic AI analytics',
-        'Patient monitoring',
-        'Clinical decision support',
-        'Basic reporting',
-        'Email support'
+        'Up to 50 providers',Basic AI analytics',Patient monitoring',Clinical decision support',Basic reporting',Email support'
       ]
     },
     {
@@ -226,13 +216,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       plan: 'Professional',
       price: '$5,500/month',
       features: ['
-        'Up to 200 providers',
-        'Advanced AI analytics',
-        'Population health insights',
-        'Custom workflows',
-        'Advanced reporting',
-        'Priority support',
-        'API access'
+        'Up to 200 providers',Advanced AI analytics',Population health insights',Custom workflows',Advanced reporting',Priority support',API access'
       ]
     },
     {
@@ -240,30 +224,13 @@ export default function AIHealthcareAnalyticsPlatform() {
       plan: 'Enterprise',
       price: '$12,000/month',
       features: ['
-        'Unlimited providers',
-        'Full AI capabilities',
-        'Custom integrations',
-        'White-label options',
-        'Dedicated health manager',
-        '24/7 phone support',
-        'Custom training'
+        'Unlimited providers',Full AI capabilities',Custom integrations',White-label options',Dedicated health manager',24/7 phone support',Custom training'
       ]
     }
   ];
 
   const integrations = ['
-    'Epic EHR',
-    'Cerner',
-    'Allscripts',
-    'Meditech',
-    'Athenahealth',
-    'Practice Fusion',
-    'eClinicalWorks',
-    'NextGen',
-    'Greenway Health',
-    'DrChrono',
-    'Kareo',
-    'Webhook APIs'
+    'Epic EHR',Cerner',Allscripts',Meditech',Athenahealth',Practice Fusion',eClinicalWorks',NextGen',Greenway Health',DrChrono',Kareo',Webhook APIs'
   ];
 
   const keyMetrics = [
@@ -290,18 +257,7 @@ export default function AIHealthcareAnalyticsPlatform() {
   ];
 
   const complianceStandards = ['
-    'HIPAA',
-    'HITECH',
-    'SOC 2 Type II',
-    'ISO 27001',
-    'HITRUST',
-    'GDPR',
-    'CCPA',
-    'FDA 21 CFR Part 11',
-    'ONC Health IT',
-    'Meaningful Use',
-    'MIPS',
-    'APMs'
+    'HIPAA',HITECH',SOC 2 Type II',ISO 27001',HITRUST',GDPR',CCPA',FDA 21 CFR Part 11',ONC Health IT',Meaningful Use',MIPS',APMs'
   ];
 
   return()

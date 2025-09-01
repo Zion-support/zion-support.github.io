@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTesting() {
   const features = [
-    'AI-powered security testing optimization',
-    'Intelligent testing strategy management and execution',;
+    'AI-powered security testing optimization',Intelligent testing strategy management and execution',;
     'Automated security vulnerability detection and assessment',;
     'Predictive analytics for testing needs',;
     'Smart testing framework management',;

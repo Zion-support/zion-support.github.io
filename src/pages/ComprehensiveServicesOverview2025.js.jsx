@@ -5,19 +5,7 @@ const ComprehensiveServicesOverview2025 = () => {
   const [selectedService, setSelectedService] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = ['
-    'all',
-    'AI & Business Intelligence',
-    'Cybersecurity & Quantum Computing',
-    'DevOps & Infrastructure',
-    'Blockchain & Supply Chain',
-    'Healthcare & AI',
-    'Quantum Computing & AI',
-    'FinTech & AI',
-    'IoT & Edge Computing',
-    'Legal Tech & AI',
-    'Marketing & AI',
-    'Energy & Sustainability',
-    'Logistics & Transportation',
+    'all',AI & Business Intelligence',Cybersecurity & Quantum Computing',DevOps & Infrastructure',Blockchain & Supply Chain',Healthcare & AI',Quantum Computing & AI',FinTech & AI',IoT & Edge Computing',Legal Tech & AI',Marketing & AI',Energy & Sustainability',Logistics & Transportation',
   ];
   const filteredServices = allEnhancedServices.filter()
     service =>
@@ -27,36 +15,14 @@ const ComprehensiveServicesOverview2025 = () => {
 
     const icons = {
 
-      'AI & Business Intelligence': '🧠',
-      'Cybersecurity & Quantum Computing': '🔒',
-      'DevOps & Infrastructure': '⚙️',
-      'Blockchain & Supply Chain': '⛓️',
-      'Healthcare & AI': '🏥',
-      'Quantum Computing & AI': '🔮',
-      'FinTech & AI': '💰',
-      'IoT & Edge Computing': '🌐',
-      'Legal Tech & AI': '⚖️',
-      'Marketing & AI': '📢',
-      'Energy & Sustainability': '⚡',
-      'Logistics & Transportation': '🚚'};
+      'AI & Business Intelligence': '🧠',Cybersecurity & Quantum Computing': '🔒',DevOps & Infrastructure': '⚙️',Blockchain & Supply Chain': '⛓️',Healthcare & AI': '🏥',Quantum Computing & AI': '🔮',FinTech & AI': '💰',IoT & Edge Computing': '🌐',Legal Tech & AI': '⚖️',Marketing & AI': '📢',Energy & Sustainability': '⚡',Logistics & Transportation': '🚚'};
     return icons[category] || '🚀';
   };
   const getCategoryColor = category => {
 
     const colors = {
 
-      'AI & Business Intelligence': 'from-blue-500 to-cyan-500',
-      'Cybersecurity & Quantum Computing': 'from-red-500 to-pink-500',
-      'DevOps & Infrastructure': 'from-green-500 to-emerald-500',
-      'Blockchain & Supply Chain': 'from-purple-500 to-indigo-500',
-      'Healthcare & AI': 'from-teal-500 to-cyan-500',
-      'Quantum Computing & AI': 'from-violet-500 to-purple-500',
-      'FinTech & AI': 'from-yellow-500 to-orange-500',
-      'IoT & Edge Computing': 'from-indigo-500 to-blue-500',
-      'Legal Tech & AI': 'from-gray-500 to-slate-500',
-      'Marketing & AI': 'from-pink-500 to-rose-500',
-      'Energy & Sustainability': 'from-green-500 to-teal-500',
-      'Logistics & Transportation': 'from-orange-500 to-red-500'};
+      'AI & Business Intelligence': 'from-blue-500 to-cyan-500',Cybersecurity & Quantum Computing': 'from-red-500 to-pink-500',DevOps & Infrastructure': 'from-green-500 to-emerald-500',Blockchain & Supply Chain': 'from-purple-500 to-indigo-500',Healthcare & AI': 'from-teal-500 to-cyan-500',Quantum Computing & AI': 'from-violet-500 to-purple-500',FinTech & AI': 'from-yellow-500 to-orange-500',IoT & Edge Computing': 'from-indigo-500 to-blue-500',Legal Tech & AI': 'from-gray-500 to-slate-500',Marketing & AI': 'from-pink-500 to-rose-500',Energy & Sustainability': 'from-green-500 to-teal-500',Logistics & Transportation': 'from-orange-500 to-red-500'};
     return colors[category] || 'from-gray-500 to-slate-500';
   };
   return()

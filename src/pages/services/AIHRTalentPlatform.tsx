@@ -1,8 +1,7 @@
 import React from 'react';
 import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform() {
   const features = [
-    'AI-powered candidate screening and matching',
-    'Automated resume parsing and skill assessment',;
+    'AI-powered candidate screening and matching',Automated resume parsing and skill assessment',;
     'Intelligent interview scheduling and feedback',;
     'Employee performance analytics and insights',;
     'Predictive turnover analysis and retention strategies',;
@@ -53,8 +52,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
   ];
 
   const platformModules = ['
-    'Talent Acquisition',
-    'Performance Management',;
+    'Talent Acquisition',Performance Management',;
     'Learning & Development',;
     'Workforce Analytics',;
     'Employee Engagement',;

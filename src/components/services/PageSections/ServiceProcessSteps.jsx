@@ -9,11 +9,7 @@ import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileTe
       icon: Search,
       color: 'blue',
       details[;
-        'Infrastructure audit and documentation review',
-        'Business requirements gathering',
-        'Current pain points identification',
-        'Compliance and security assessment',
-        'Budget and timeline discussion'
+        'Infrastructure audit and documentation review',Business requirements gathering',Current pain points identification',Compliance and security assessment',Budget and timeline discussion'
       ],;
       duration: '1-2 days',
       team: 'Project Manager + Senior Engineer'
@@ -26,11 +22,7 @@ import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileTe
       icon: ClipboardList,
       color: 'green',
       details[;
-        'Solution architecture design',
-        'Technology stack selection',
-        'Implementation timeline planning',
-        'Resource allocation',
-        'Risk assessment and mitigation'
+        'Solution architecture design',Technology stack selection',Implementation timeline planning',Resource allocation',Risk assessment and mitigation'
       ],;
       duration: '3-5 days',
       team: 'Solution Architect + Technical Lead'
@@ -43,11 +35,7 @@ import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileTe
       icon: Settings,
       color: 'purple',
       details[;
-        'Infrastructure setup and configuration',
-        'Security implementation',
-        'Integration and testing',
-        'Documentation creation',
-        'Quality assurance checks'
+        'Infrastructure setup and configuration',Security implementation',Integration and testing',Documentation creation',Quality assurance checks'
       ],;
       duration: '1-4 weeks',
       team: 'Implementation Engineers + Security Specialist'
@@ -60,11 +48,7 @@ import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileTe
       icon: CheckCircle,
       color: 'orange',
       details[;
-        'Functional testing and validation',
-        'Performance and load testing',
-        'Security penetration testing',
-        'User acceptance testing',
-        'Compliance verification'
+        'Functional testing and validation',Performance and load testing',Security penetration testing',User acceptance testing',Compliance verification'
       ],;
       duration: '2-5 days',
       team: 'QA Engineers + Security Team'
@@ -77,11 +61,7 @@ import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileTe
       icon: Users,
       color: 'red',
       details[;
-        'Production deployment',
-        'Data migration and verification',
-        'User training and onboarding',
-        'Go-live support',
-        'Performance monitoring'
+        'Production deployment',Data migration and verification',User training and onboarding',Go-live support',Performance monitoring'
       ],;
       duration: '1-2 days',
       team: 'Deployment Team + Support Engineers'
@@ -94,11 +74,7 @@ import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileTe
       icon: Headphones,
       color: 'indigo',
       details[;
-        '24/7 technical support',
-        'Regular maintenance and updates',
-        'Performance optimization',
-        'Security monitoring',
-        'Continuous improvement'
+        '24/7 technical support',Regular maintenance and updates',Performance optimization',Security monitoring',Continuous improvement'
       ],;
       duration: 'Ongoing',
       team: 'Support Team + Maintenance Engineers'

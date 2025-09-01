@@ -181,14 +181,7 @@ const AIAutonomousEngineering = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Software Engineering',
-                'Hardware Engineering',
-                'Systems Engineering',
-                'Mechanical Engineering',
-                'Electrical Engineering',
-                'Chemical Engineering',
-                'Civil Engineering',
-                'Biomedical Engineering',
+                'Software Engineering',Hardware Engineering',Systems Engineering',Mechanical Engineering',Electrical Engineering',Chemical Engineering',Civil Engineering',Biomedical Engineering',
               ].map(type => (
                 <div
                   key={type}"

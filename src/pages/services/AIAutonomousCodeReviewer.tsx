@@ -85,12 +85,7 @@ const AIAutonomousCodeReviewer = (...args: unknown[]): unknown => {
   ];
 
   const benefits = ['
-    'Reduce code review time by 70%',
-    'Catch 90% of bugs before production',
-    'Improve code quality by 40%',
-    'Accelerate development cycles',
-    'Reduce technical debt',
-    'Ensure consistent coding standards'
+    'Reduce code review time by 70%',Catch 90% of bugs before production',Improve code quality by 40%',Accelerate development cycles',Reduce technical debt',Ensure consistent coding standards'
   ];
 
   const services = [
@@ -151,12 +146,7 @@ const AIAutonomousCodeReviewer = (...args: unknown[]): unknown => {
       period: '/month',
       description: 'Perfect for small development teams',
       features: ['
-        'Up to 5 developers',
-        'Basic code analysis',
-        'Security vulnerability scanning',
-        'GitHub integration',
-        'Email support',
-        'Basic reporting'
+        'Up to 5 developers',Basic code analysis',Security vulnerability scanning',GitHub integration',Email support',Basic reporting'
       ],
       cta: 'Start Free Trial',
       popular: false
@@ -168,14 +158,7 @@ const AIAutonomousCodeReviewer = (...args: unknown[]): unknown => {
       period: '/month',
       description: 'Ideal for growing development teams',
       features: ['
-        'Up to 25 developers',
-        'Advanced AI analysis',
-        'Multi-language support',
-        'CI/CD integration',
-        'Priority support',
-        'Advanced analytics',
-        'Custom rules engine',
-        'Team collaboration tools'
+        'Up to 25 developers',Advanced AI analysis',Multi-language support',CI/CD integration',Priority support',Advanced analytics',Custom rules engine',Team collaboration tools'
       ],
       cta: 'Start Free Trial',
       popular: true
@@ -187,14 +170,7 @@ const AIAutonomousCodeReviewer = (...args: unknown[]): unknown => {
       period: '/month',
       description: 'For large organizations and enterprises',
       features: ['
-        'Unlimited developers',
-        'Custom AI models',
-        'On-premise deployment',
-        'Dedicated support',
-        'Custom integrations',
-        'Advanced security features',
-        'Compliance reporting',
-        'SLA guarantees'
+        'Unlimited developers',Custom AI models',On-premise deployment',Dedicated support',Custom integrations',Advanced security features',Compliance reporting',SLA guarantees'
       ],
       cta: 'Contact Sales',
       popular: false

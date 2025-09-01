@@ -16,34 +16,15 @@ import {
 export default function AICybersecurityThreatHunter(...args: any[]): any {
 
   const features = ['
-    'AI-powered threat detection and hunting',
-    'Real-time security monitoring 24/7',
-    'Advanced behavioral analytics',
-    'Automated incident response',
-    'Threat intelligence integration',
-    'Zero-day vulnerability detection',
-    'Cloud security posture management',
-    'Compliance reporting (SOC 2, ISO 27001),
-    'Penetration testing automation',
-    'Security awareness training platform',
+    'AI-powered threat detection and hunting',Real-time security monitoring 24/7',Advanced behavioral analytics',Automated incident response',Threat intelligence integration',Zero-day vulnerability detection',Cloud security posture management',Compliance reporting (SOC 2, ISO 27001),Penetration testing automation',Security awareness training platform',
   ];
 
   const benefits = ['
-    'Detect threats 10x faster than traditional methods',
-    'Reduce false positives by 80%',
-    'Automated response reduces incident time by 60%',
-    '24/7 security monitoring without human fatigue',
-    'Predictive threat intelligence',
-    'Comprehensive compliance coverage',
+    'Detect threats 10x faster than traditional methods',Reduce false positives by 80%',Automated response reduces incident time by 60%',24/7 security monitoring without human fatigue',Predictive threat intelligence',Comprehensive compliance coverage',
   ];
 
   const useCases = ['
-    'Enterprise cybersecurity operations',
-    'Financial services security',
-    'Healthcare data protection',
-    'Government security compliance',
-    'E-commerce fraud prevention',
-    'Critical infrastructure protection',
+    'Enterprise cybersecurity operations',Financial services security',Healthcare data protection',Government security compliance',E-commerce fraud prevention',Critical infrastructure protection',
   ];
 
   const tiers = [
@@ -52,40 +33,26 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
       name: 'Essential',
       price: '$2,499/mo',
       details: ['
-        'Up to 100 endpoints',
-        'Basic threat detection',
-        'Email support',
-        'Standard compliance',
+        'Up to 100 endpoints',Basic threat detection',Email support',Standard compliance',
       ]},
     {
 
       name: 'Professional',
       price: '$5,999/mo',
       details: ['
-        'Up to 1000 endpoints',
-        'Advanced threat hunting',
-        '24/7 support',
-        'Full compliance suite',
+        'Up to 1000 endpoints',Advanced threat hunting',24/7 support',Full compliance suite',
       ]},
     {
 
       name: 'Enterprise',
       price: '$15,999/mo',
       details: ['
-        'Unlimited endpoints',
-        'Custom AI models',
-        'Dedicated team',
-        'White-label solution',
+        'Unlimited endpoints',Custom AI models',Dedicated team',White-label solution',
       ]},
   ];
 
   const securityFeatures = ['
-    'Machine learning threat detection',
-    'Behavioral analysis engine',
-    'Threat intelligence feeds',
-    'Automated incident response',
-    'Security orchestration',
-    'Compliance automation',
+    'Machine learning threat detection',Behavioral analysis engine',Threat intelligence feeds',Automated incident response',Security orchestration',Compliance automation',
   ];
 
   return()

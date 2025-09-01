@@ -73,11 +73,7 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
       period: 'monthly',
       description: 'Perfect for research institutions and quantum startups',
       features: ['
-        'Up to 100 quantum circuit executions per month',
-        'Basic quantum algorithm library',
-        'Standard error correction',
-        'Email support',
-        'Basic analytics dashboard',
+        'Up to 100 quantum circuit executions per month',Basic quantum algorithm library',Standard error correction',Email support',Basic analytics dashboard',
       ],
       bestFor:'
         'Research institutions, quantum startups, educational organizations'},
@@ -88,13 +84,7 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
       period: 'monthly',
       description: 'Advanced features for growing quantum computing companies',
       features: ['
-        'Up to 1,000 quantum circuit executions per month',
-        'Advanced quantum algorithm library',
-        'Custom error correction algorithms',
-        'Priority support',
-        'Advanced analytics and reporting',
-        'API access',
-        'Custom quantum circuit design',
+        'Up to 1,000 quantum circuit executions per month',Advanced quantum algorithm library',Custom error correction algorithms',Priority support',Advanced analytics and reporting',API access',Custom quantum circuit design',
       ],
       bestFor: 'Quantum computing companies, research labs, enterprise R&D'},
     {
@@ -105,14 +95,7 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
       description:'
         'Full-scale quantum computing platform for large enterprises',
       features: ['
-        'Unlimited quantum circuit executions',
-        'Custom quantum algorithm development',
-        'Advanced quantum error correction',
-        '24/7 dedicated support',
-        'Custom integrations',
-        'White-label solutions',
-        'On-premise deployment options',
-        'Quantum consulting services',
+        'Unlimited quantum circuit executions',Custom quantum algorithm development',Advanced quantum error correction',24/7 dedicated support',Custom integrations',White-label solutions',On-premise deployment options',Quantum consulting services',
       ],
       bestFor:'
         'Large enterprises, government agencies, quantum computing leaders'},
@@ -156,12 +139,7 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
   ];
 
   const benefits = ['
-    '10-100x faster computation for specific problems',
-    'Future-proof quantum-safe security solutions',
-    'Competitive advantage in research and development',
-    'Access to cutting-edge quantum technologies',
-    'Scalable quantum computing infrastructure',
-    'Expert quantum computing consultation',
+    '10-100x faster computation for specific problems',Future-proof quantum-safe security solutions',Competitive advantage in research and development',Access to cutting-edge quantum technologies',Scalable quantum computing infrastructure',Expert quantum computing consultation',
   ];
 
   return()

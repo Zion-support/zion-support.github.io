@@ -47,9 +47,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
       description:'
         'AI-powered monitoring that identifies threats before they become attacks',
       benefits: ['
-        '24/7 surveillance',
-        'Zero-day threat detection',
-        'Behavioral analysis',
+        '24/7 surveillance',Zero-day threat detection',Behavioral analysis',
       ]},
     {
 
@@ -58,9 +56,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
       description:'
         'AI that automatically blocks and mitigates threats without human intervention',
       benefits: ['
-        'Instant threat neutralization',
-        'Adaptive defense strategies',
-        'Self-learning protection',
+        'Instant threat neutralization',Adaptive defense strategies',Self-learning protection',
       ]},
     {
 
@@ -69,9 +65,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
       description:'
         'Machine learning models that predict and prevent future attacks',
       benefits: ['
-        'Attack pattern recognition',
-        'Risk assessment',
-        'Proactive defense',
+        'Attack pattern recognition',Risk assessment',Proactive defense',
       ]},
     {
 
@@ -80,9 +74,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
       description:'
         'Real-time threat data from worldwide sources and dark web monitoring',
       benefits: ['
-        'Global threat visibility',
-        'Dark web intelligence',
-        'Cross-platform correlation',
+        'Global threat visibility',Dark web intelligence',Cross-platform correlation',
       ]},
   ];
 
@@ -94,9 +86,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
       icon: Lock,
       price: '$15,000/month',
       features: ['
-        'Behavioral analysis',
-        'File encryption detection',
-        'Backup protection',
+        'Behavioral analysis',File encryption detection',Backup protection',
       ]},
     {
 
@@ -105,9 +95,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
       icon: Mail,
       price: '$12,000/month',
       features: ['
-        'URL analysis',
-        'Content filtering',
-        'Social engineering detection',
+        'URL analysis',Content filtering',Social engineering detection',
       ]},
     {
 
@@ -123,9 +111,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
       icon: Users,
       price: '$20,000/month',
       features: ['
-        'User behavior analysis',
-        'Access monitoring',
-        'Anomaly detection',
+        'User behavior analysis',Access monitoring',Anomaly detection',
       ]},
   ];
 
@@ -137,10 +123,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
       period: '/month',
       description: 'Essential threat intelligence for small organizations',
       features: ['
-        'Basic threat detection',
-        'Email security',
-        'Standard support',
-        'Basic reporting',
+        'Basic threat detection',Email security',Standard support',Basic reporting',
       ]},
     {
 
@@ -149,11 +132,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
       period: '/month',
       description: 'Advanced threat intelligence for growing organizations',
       features: ['
-        'Advanced threat detection',
-        'Autonomous response',
-        'Priority support',
-        'Real-time monitoring',
-        'Predictive analytics',
+        'Advanced threat detection',Autonomous response',Priority support',Real-time monitoring',Predictive analytics',
       ],
       popular: true},
     {
@@ -163,11 +142,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
       period: '/month',
       description: 'Complete threat intelligence for large enterprises',
       features: ['
-        'Everything in Pro',
-        'Custom AI models',
-        'Dedicated security analyst',
-        '24/7 support',
-        'White-label solutions',
+        'Everything in Pro',Custom AI models',Dedicated security analyst',24/7 support',White-label solutions',
       ]},
   ];
 

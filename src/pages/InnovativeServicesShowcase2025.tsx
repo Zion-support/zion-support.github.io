@@ -18,15 +18,10 @@ import { SEO } from '@/components/SEO';
       icon: Brain,
       price: 'From $299/month',
       features: ['
-        'AI-powered workflow automation and orchestration',
-        'Intelligent process optimization and decision making',
-        'Real-time workflow monitoring and analytics',
-        'Multi-platform integration and API management'
+        'AI-powered workflow automation and orchestration',Intelligent process optimization and decision making',Real-time workflow monitoring and analytics',Multi-platform integration and API management'
       ],
       benefits: ['
-        'Reduce manual workflow processing by 85%',
-        'Improve process efficiency by 60%',
-        'Cut operational costs by 40%'
+        'Reduce manual workflow processing by 85%',Improve process efficiency by 60%',Cut operational costs by 40%'
       ],
       path: '/services/ai-workflow-orchestrator',
       category: 'AI & Automation'
@@ -39,15 +34,10 @@ import { SEO } from '@/components/SEO';
       icon: Database,
       price: 'From $499/month',
       features: ['
-        'AI-powered data discovery and classification',
-        'Automated data quality assessment and monitoring',
-        'Intelligent data lineage tracking and visualization',
-        'Advanced data privacy and compliance automation'
+        'AI-powered data discovery and classification',Automated data quality assessment and monitoring',Intelligent data lineage tracking and visualization',Advanced data privacy and compliance automation'
       ],
       benefits: ['
-        'Ensure 100% regulatory compliance (GDPR, CCPA, HIPAA),
-        'Reduce data governance costs by 50%',
-        'Improve data quality by 80%'
+        'Ensure 100% regulatory compliance (GDPR, CCPA, HIPAA),Reduce data governance costs by 50%',Improve data quality by 80%'
       ],
       path: '/services/ai-data-governance-platform',
       category: 'AI & Data'
@@ -60,15 +50,10 @@ import { SEO } from '@/components/SEO';
       icon: Users,
       price: 'From $399/month',
       features: ['
-        'AI-powered customer journey mapping and analysis',
-        'Real-time sentiment analysis and emotion detection',
-        'Predictive customer behavior modeling',
-        'Automated customer feedback collection and analysis'
+        'AI-powered customer journey mapping and analysis',Real-time sentiment analysis and emotion detection',Predictive customer behavior modeling',Automated customer feedback collection and analysis'
       ],
       benefits: ['
-        'Increase customer satisfaction scores by 45%',
-        'Reduce customer churn by 60%',
-        'Improve customer lifetime value by 35%'
+        'Increase customer satisfaction scores by 45%',Reduce customer churn by 60%',Improve customer lifetime value by 35%'
       ],
       path: '/services/ai-customer-experience-analytics',
       category: 'AI & Analytics'
@@ -81,15 +66,10 @@ import { SEO } from '@/components/SEO';
       icon: Truck,
       price: 'From $599/month',
       features: ['
-        'AI-powered demand forecasting and inventory optimization',
-        'Real-time supply chain monitoring and risk assessment',
-        'Intelligent route optimization and logistics planning',
-        'Automated supplier performance analysis and scoring'
+        'AI-powered demand forecasting and inventory optimization',Real-time supply chain monitoring and risk assessment',Intelligent route optimization and logistics planning',Automated supplier performance analysis and scoring'
       ],
       benefits: ['
-        'Reduce supply chain costs by 25-40%',
-        'Improve inventory accuracy by 90%',
-        'Reduce lead times by 30-50%'
+        'Reduce supply chain costs by 25-40%',Improve inventory accuracy by 90%',Reduce lead times by 30-50%'
       ],
       path: '/services/ai-supply-chain-optimization',
       category: 'AI & Logistics'
@@ -102,15 +82,10 @@ import { SEO } from '@/components/SEO';
       icon: Shield,
       price: 'From $799/month',
       features: ['
-        'AI-powered credit risk assessment and scoring',
-        'Real-time market risk monitoring and alerts',
-        'Intelligent fraud detection and prevention',
-        'Advanced portfolio risk analysis and optimization'
+        'AI-powered credit risk assessment and scoring',Real-time market risk monitoring and alerts',Intelligent fraud detection and prevention',Advanced portfolio risk analysis and optimization'
       ],
       benefits: ['
-        'Reduce credit losses by 40-60%',
-        'Improve risk-adjusted returns by 25%',
-        'Detect fraud with 99.5% accuracy'
+        'Reduce credit losses by 40-60%',Improve risk-adjusted returns by 25%',Detect fraud with 99.5% accuracy'
       ],
       path: '/services/ai-financial-risk-management',
       category: 'AI & Finance'
@@ -123,15 +98,10 @@ import { SEO } from '@/components/SEO';
       icon: Briefcase,
       price: 'From $299/month',
       features: ['
-        'AI-powered candidate sourcing and matching',
-        'Intelligent resume parsing and skill extraction',
-        'Automated candidate screening and assessment',
-        'Predictive candidate success modeling'
+        'AI-powered candidate sourcing and matching',Intelligent resume parsing and skill extraction',Automated candidate screening and assessment',Predictive candidate success modeling'
       ],
       benefits: ['
-        'Reduce time-to-hire by 60%',
-        'Improve candidate quality by 45%',
-        'Reduce recruitment costs by 40%'
+        'Reduce time-to-hire by 60%',Improve candidate quality by 45%',Reduce recruitment costs by 40%'
       ],
       path: '/services/ai-hr-talent-acquisition',
       category: 'AI & HR'
@@ -144,15 +114,10 @@ import { SEO } from '@/components/SEO';
       icon: Cpu,
       price: 'From $499/month',
       features: ['
-        'AI-powered edge computing and processing',
-        'Real-time IoT device management and monitoring',
-        'Intelligent edge analytics and decision making',
-        'Advanced device connectivity and protocol support'
+        'AI-powered edge computing and processing',Real-time IoT device management and monitoring',Intelligent edge analytics and decision making',Advanced device connectivity and protocol support'
       ],
       benefits: ['
-        'Reduce latency by 80-90%',
-        'Lower bandwidth costs by 60%',
-        'Improve device reliability by 75%'
+        'Reduce latency by 80-90%',Lower bandwidth costs by 60%',Improve device reliability by 75%'
       ],
       path: '/services/ai-iot-edge-computing',
       category: 'AI & IoT'
@@ -165,15 +130,10 @@ import { SEO } from '@/components/SEO';
       icon: Wrench,
       price: 'From $399/month',
       features: ['
-        'AI-powered equipment health monitoring and analysis',
-        'Real-time predictive maintenance scheduling',
-        'Intelligent failure prediction and prevention',
-        'Advanced sensor data analysis and processing'
+        'AI-powered equipment health monitoring and analysis',Real-time predictive maintenance scheduling',Intelligent failure prediction and prevention',Advanced sensor data analysis and processing'
       ],
       benefits: ['
-        'Reduce unplanned downtime by 70-90%',
-        'Lower maintenance costs by 25-40%',
-        'Extend equipment lifespan by 20-30%'
+        'Reduce unplanned downtime by 70-90%',Lower maintenance costs by 25-40%',Extend equipment lifespan by 20-30%'
       ],
       path: '/services/ai-predictive-maintenance',
       category: 'AI & Maintenance'
@@ -186,15 +146,10 @@ import { SEO } from '@/components/SEO';
       icon: Leaf,
       price: 'From $299/month',
       features: ['
-        'AI-powered energy consumption optimization',
-        'Real-time sustainability monitoring and reporting',
-        'Intelligent carbon footprint tracking and reduction',
-        'Advanced waste management and recycling optimization'
+        'AI-powered energy consumption optimization',Real-time sustainability monitoring and reporting',Intelligent carbon footprint tracking and reduction',Advanced waste management and recycling optimization'
       ],
       benefits: ['
-        'Reduce energy consumption by 25-40%',
-        'Lower carbon footprint by 30-50%',
-        'Improve resource efficiency by 35%'
+        'Reduce energy consumption by 25-40%',Lower carbon footprint by 30-50%',Improve resource efficiency by 35%'
       ],
       path: '/services/ai-sustainable-technology',
       category: 'AI & Sustainability'
@@ -207,15 +162,10 @@ import { SEO } from '@/components/SEO';
       icon: Atom,
       price: 'From $1,999/month',
       features: ['
-        'Quantum-enhanced machine learning algorithms',
-        'Hybrid quantum-classical computing solutions',
-        'Advanced quantum neural network optimization',
-        'Real-time quantum algorithm execution'
+        'Quantum-enhanced machine learning algorithms',Hybrid quantum-classical computing solutions',Advanced quantum neural network optimization',Real-time quantum algorithm execution'
       ],
       benefits: ['
-        'Solve complex problems 100x faster than classical computing',
-        'Improve machine learning accuracy by 40-60%',
-        'Enable previously impossible computational tasks'
+        'Solve complex problems 100x faster than classical computing',Improve machine learning accuracy by 40-60%',Enable previously impossible computational tasks'
       ],
       path: '/services/ai-quantum-machine-learning',
       category: 'AI & Quantum Computing'
@@ -381,7 +331,7 @@ import { SEO } from '@/components/SEO';
               <div>"
                 <p className="text-sm text-blue-100">Website</p>"
                 <a href={contactInfo.website} className="font-semibold hover:underline" target="_blank" rel="noopener noreferrer">
-                  {contactInfo.website.replace('https://',')}
+                  {contactInfo.website.replace('https://',)}
                 </a>
               </div>
             </div>"

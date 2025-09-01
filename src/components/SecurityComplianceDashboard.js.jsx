@@ -231,7 +231,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                           <AlertTriangle className="w-4 h-4"/>
                         </div>
                         <div>'"
-                          <p className="font-medium text-gray-900 dark:text-white">{event.type.replace('_', ')}</p>"
+                          <p className="font-medium text-gray-900 dark:text-white">{event.type.replace('_',)}</p>"
                           <p className="text-sm text-gray-500 dark:text-gray-400">{event.details}</p>
                         </div>
                       </div>"
@@ -290,7 +290,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                         </div>
                         <div>"
                           <p className="font-medium text-gray-900 dark:text-white">
-                            {event.type.replace('_', ').toUpperCase()}
+                            {event.type.replace('_',).toUpperCase()}
                           </p>"
                           <p className="text-sm text-gray-500 dark:text-gray-400">
                             {event.timestamp.toLocaleString()}
@@ -352,7 +352,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                     <div className="flex items-center justify-between mb-3">"
                       <h4 className="font-medium text-gray-900 dark:text-white">{rule.name}</h4>`
                       <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(rule.status)}`}>
-                        {rule.status.replace('_', ')}
+                        {rule.status.replace('_',)}
                       </span>
                     </div>"
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{rule.description}</p>"

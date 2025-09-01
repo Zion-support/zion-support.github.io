@@ -254,7 +254,7 @@ export const extractKeywords = (query) => {
  */
 export const formatSearchQuery = (query) => {
 
-    return query.trim().replace(/\s+/g, ');
+    return query.trim().replace(/\s+/g,);
 };
 /**
  * Check if filters are active (not default values)

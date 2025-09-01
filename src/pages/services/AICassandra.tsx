@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICassandra() {
   const features = [
-    'AI-powered Cassandra performance optimization',
-    'Intelligent data distribution and partitioning',;
+    'AI-powered Cassandra performance optimization',Intelligent data distribution and partitioning',;
     'Automated Cassandra monitoring and alerting',;
     'Predictive analytics for Cassandra scaling',;
     'Smart Cassandra security and compliance',;

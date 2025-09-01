@@ -13,12 +13,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
   const [isSubmitted, setIsSubmitted] = useState (false) ;
 
   const services = ['
-    'IT Support & Maintenance',
-    'Network Setup & Security',
-    'Hardware Installation',
-    'Data Recovery',
-    'Cloud Migration',
-    'Custom Solution'
+    'IT Support & Maintenance',Network Setup & Security',Hardware Installation',Data Recovery',Cloud Migration',Custom Solution'
   ];
 
   const handleChange = (e) => {

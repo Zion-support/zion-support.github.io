@@ -184,14 +184,7 @@ const AIAutonomousLegalCounsel = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Business Law',
-                'Contract Law',
-                'Employment Law',
-                'Real Estate',
-                'Family Law',
-                'Criminal Law',
-                'Intellectual Property',
-                'Tax Law',
+                'Business Law',Contract Law',Employment Law',Real Estate',Family Law',Criminal Law',Intellectual Property',Tax Law',
               ].map(area => (
                 <div
                   key={area}"

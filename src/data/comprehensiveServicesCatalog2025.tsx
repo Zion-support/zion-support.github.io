@@ -154,7 +154,7 @@ export const calculateServiceStats = (...args: unknown[]): unknown => {
 export const getServicesByCategory = (category: string) => {
 
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
-    service.category.toLowerCase().includes(category.toLowerCase().replace('-', '))
+    service.category.toLowerCase().includes(category.toLowerCase().replace('-',))
   );
 };
 
@@ -199,8 +199,8 @@ export const searchServices = (query: string) => {
 export const getFeaturedServices = (...args: unknown[]): unknown => {;
   return COMPREHENSIVE_SERVICES_CATALOG_2025;
     .sort((a, b) => {;
-      const aScore = parseInt(a.roi.replace(/\D/g,')) + (a.innovationLevel === 'Cutting-edge' ? 100 : 0);
-      const bScore = parseInt(b.roi.replace(/\D/g,')) + (b.innovationLevel === 'Cutting-edge' ? 100 : 0);
+      const aScore = parseInt(a.roi.replace(/\D/g,)) + (a.innovationLevel === 'Cutting-edge' ? 100 : 0);
+      const bScore = parseInt(b.roi.replace(/\D/g,)) + (b.innovationLevel === 'Cutting-edge' ? 100 : 0);
       return bScore - aScore})
     .slice(0, limit)};
 
@@ -217,18 +217,7 @@ export const getServicesByIndustry = (industry: string)  => {
 
   const industryMap: { [key: string]: string[] } = {
 
-    'healthcare': ['AI & Healthcare',Medical Diagnostics',Healthcare AI'],
-    'finance': ['AI & FinTech',Quantum Finance',Financial Planning'],
-    'legal': ['AI & Legal Tech',Legal Research'],
-    'education': ['AI & Education',Personalized Learning'],
-    'real-estate': ['AI & Real Estate',Property Management'],
-    'marketing': ['AI & Marketing',Marketing Automation'],
-    'manufacturing': ['AI & Manufacturing',Manufacturing Optimization'],
-    'retail': ['AI & Retail',Retail Analytics'],
-    'energy': ['AI & Energy',Energy Management'],
-    'transportation': ['AI & Transportation',Transportation & Logistics'],
-    'logistics': ['AI & Supply Chain',Logistics Optimization',Transportation & Logistics'],
-    'cybersecurity': ['Cybersecurity',AI Security',Quantum Security'],;
+    'healthcare': ['AI & Healthcare',Medical Diagnostics',Healthcare AI'],finance': ['AI & FinTech',Quantum Finance',Financial Planning'],legal': ['AI & Legal Tech',Legal Research'],education': ['AI & Education',Personalized Learning'],real-estate': ['AI & Real Estate',Property Management'],marketing': ['AI & Marketing',Marketing Automation'],manufacturing': ['AI & Manufacturing',Manufacturing Optimization'],retail': ['AI & Retail',Retail Analytics'],energy': ['AI & Energy',Energy Management'],transportation': ['AI & Transportation',Transportation & Logistics'],logistics': ['AI & Supply Chain',Logistics Optimization',Transportation & Logistics'],cybersecurity': ['Cybersecurity',AI Security',Quantum Security'],;
     'blockchain': ['Blockchain',DeFi & NFTs',Supply Chain & Sustainability'],;
     'quantum': ['Quantum Computing',Quantum AI',Quantum Security',Quantum Finance',Quantum Chemistry'],;
     'iot': ['IoT & Edge Computing',Edge AI'],;
@@ -279,8 +268,8 @@ export const getServiceRecommendations = (preferences: {
 
   return recommendations.sort((a, b) => {
 
-    const aScore = parseInt(a.roi.replace(/\D/g,'));
-    const bScore = parseInt(b.roi.replace(/\D/g,'));
+    const aScore = parseInt(a.roi.replace(/\D/g,));
+    const bScore = parseInt(b.roi.replace(/\D/g,));
     return bScore - aScore})};
 
 export default COMPREHENSIVE_SERVICES_CATALOG_2025;}}}}}'"

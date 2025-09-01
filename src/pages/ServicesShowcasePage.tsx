@@ -171,8 +171,7 @@ export function ServicesShowcasePage() {
       case 'innovation':
         const innovationOrder = {
 
-          Revolutionary: 3,
-          'Cutting-edge': 2,
+          Revolutionary: 3,Cutting-edge': 2,
           Advanced: 1};
         return()
           (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] ||

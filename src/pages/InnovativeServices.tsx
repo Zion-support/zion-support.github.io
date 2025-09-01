@@ -34,10 +34,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       description: 'Revolutionary AI-powered business process automation that transforms your operations',
       icon: Brain,
       features[;
-        'Intelligent workflow automation',
-        'Predictive analytics integration',
-        'Real-time decision making',
-        'Scalable AI infrastructure'
+        'Intelligent workflow automation',Predictive analytics integration',Real-time decision making',Scalable AI infrastructure'
       ],;
       benefits['300% efficiency increase',24/7 autonomous operation',Cost reduction up to 60%'],;
       color: 'from-zion-cyan to-zion-purple'
@@ -49,10 +46,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       description: 'Next-generation quantum computing solutions for complex problem-solving',
       icon: Atom,
       features[;
-        'Quantum algorithm optimization',
-        'Cryptographic security',
-        'Molecular simulation',
-        'Financial modeling'
+        'Quantum algorithm optimization',Cryptographic security',Molecular simulation',Financial modeling'
       ],;
       benefits['1000x faster computation',Unbreakable encryption',Revolutionary breakthroughs'],;
       color: 'from-zion-purple to-zion-blue'
@@ -64,10 +58,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       description: 'Secure, scalable blockchain solutions for enterprise applications',
       icon: Lock,
       features[;
-        'Smart contract development',
-        'DeFi platform creation',
-        'Supply chain transparency',
-        'Digital asset management'
+        'Smart contract development',DeFi platform creation',Supply chain transparency',Digital asset management'
       ],;
       benefits['Immutable security',Transparent operations',Reduced costs'],;
       color: 'from-zion-blue to-zion-green'
@@ -79,10 +70,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       description: 'Intelligent IoT solutions with edge computing for real-time processing',
       icon: Wifi,
       features[;
-        'Edge AI processing',
-        'Real-time analytics',
-        'Predictive maintenance',
-        'Smart city solutions'
+        'Edge AI processing',Real-time analytics',Predictive maintenance',Smart city solutions'
       ],;
       benefits['Reduced latency',Lower bandwidth costs',Enhanced security'],;
       color: 'from-zion-green to-zion-emerald'
@@ -94,10 +82,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       description: 'Advanced cybersecurity platform with zero-trust architecture',
       icon: Shield,
       features[;
-        'Multi-factor authentication',
-        'Behavioral analytics',
-        'Threat intelligence',
-        'Incident response automation'
+        'Multi-factor authentication',Behavioral analytics',Threat intelligence',Incident response automation'
       ],;
       benefits['99.99% threat prevention',Real-time monitoring',Compliance ready'],;
       color: 'from-zion-emerald to-zion-cyan'
@@ -109,10 +94,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       description: 'Create virtual replicas of physical systems for simulation and optimization',
       icon: Eye,
       features[;
-        '3D modeling and simulation',
-        'Real-time monitoring',
-        'Predictive maintenance',
-        'Performance optimization'
+        '3D modeling and simulation',Real-time monitoring',Predictive maintenance',Performance optimization'
       ],;
       benefits['Reduced downtime',Optimized performance',Cost savings'],;
       color: 'from-zion-cyan to-zion-purple'
@@ -124,10 +106,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       description: 'Immersive virtual reality and metaverse development platform',
       icon: Globe2,
       features[;
-        'VR application development',
-        'Metaverse platform creation',
-        '3D content creation',
-        'Virtual event hosting'
+        'VR application development',Metaverse platform creation',3D content creation',Virtual event hosting'
       ],;
       benefits['Enhanced user engagement',New revenue streams',Innovative experiences'],;
       color: 'from-zion-purple to-zion-blue'
@@ -139,9 +118,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       description: 'Sustainable technology solutions for environmental impact reduction',
       icon: Leaf,
       features[;
-        'Renewable energy optimization',
-        'Carbon footprint tracking',
-        'Sustainable infrastructure'};
+        'Renewable energy optimization',Carbon footprint tracking',Sustainable infrastructure'};
         'Green data centers';
       ],;
       benefits: ['Environmental impact',Cost savings',Regulatory compliance'],;

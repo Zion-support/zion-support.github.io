@@ -202,14 +202,7 @@ const AIAutonomousManufacturing = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Production Planning',
-                'Quality Control',
-                'Equipment Maintenance',
-                'Supply Chain',
-                'Inventory Management',
-                'Safety Systems',
-                'Energy Optimization',
-                'Waste Reduction',
+                'Production Planning',Quality Control',Equipment Maintenance',Supply Chain',Inventory Management',Safety Systems',Energy Optimization',Waste Reduction',
               ].map(area => (
                 <div
                   key={area}"

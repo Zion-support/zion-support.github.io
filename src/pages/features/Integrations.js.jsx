@@ -9,8 +9,7 @@ import { useAdvancedOnboardingStatus } from '@/hooks/useAdvancedOnboardingStatus
 export default function IntegrationsFeature() {
   const schema = {
 
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
+    '@context': 'https://schema.org',@type': 'WebPage',
     name: 'API & Integrations',
     description:'
       'Connect Zion with Slack, your website and other tools via our API and widgets.',

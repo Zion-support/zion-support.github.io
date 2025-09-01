@@ -10,10 +10,7 @@ export default function MicroSAASSolutions() {
       description:'
         'Automate content creation, optimization, and distribution with AI-powered insights',
       features: ['
-        'Content Generation',
-        'SEO Optimization',
-        'Social Media Automation',
-        'Performance Analytics',
+        'Content Generation',SEO Optimization',Social Media Automation',Performance Analytics',
       ],
       icon: Zap,
       category: 'Marketing'},
@@ -23,10 +20,7 @@ export default function MicroSAASSolutions() {
       description:'
         'Optimize supply chain operations with predictive analytics and real-time monitoring',
       features: ['
-        'Demand Forecasting',
-        'Inventory Management',
-        'Route Optimization',
-        'Risk Assessment',
+        'Demand Forecasting',Inventory Management',Route Optimization',Risk Assessment',
       ],
       icon: TrendingUp,
       category: 'Operations'},
@@ -36,10 +30,7 @@ export default function MicroSAASSolutions() {
       description:'
         'Streamline HR processes with intelligent automation and data-driven insights',
       features: ['
-        'Recruitment Automation',
-        'Performance Management',
-        'Employee Engagement',
-        'Compliance Tracking',
+        'Recruitment Automation',Performance Management',Employee Engagement',Compliance Tracking',
       ],
       icon: Users,
       category: 'Human Resources'},
@@ -49,10 +40,7 @@ export default function MicroSAASSolutions() {
       description:'
         'Accelerate legal research with AI-powered document analysis and case law insights',
       features: ['
-        'Document Analysis',
-        'Case Law Research',
-        'Legal Precedents',
-        'Compliance Checking',
+        'Document Analysis',Case Law Research',Legal Precedents',Compliance Checking',
       ],
       icon: Shield,
       category: 'Legal'},
@@ -62,10 +50,7 @@ export default function MicroSAASSolutions() {
       description:'
         'Personalize learning experiences with adaptive AI and intelligent tutoring',
       features: ['
-        'Adaptive Learning',
-        'Progress Tracking',
-        'Content Personalization',
-        'Assessment Automation',
+        'Adaptive Learning',Progress Tracking',Content Personalization',Assessment Automation',
       ],
       icon: Globe,
       category: 'Education'},
@@ -75,10 +60,7 @@ export default function MicroSAASSolutions() {
       description:'
         'Enhance project delivery with intelligent planning, monitoring, and optimization',
       features: ['
-        'Smart Planning',
-        'Resource Optimization',
-        'Risk Management',
-        'Performance Analytics',
+        'Smart Planning',Resource Optimization',Risk Management',Performance Analytics',
       ],
       icon: Rocket,
       category: 'Project Management'},

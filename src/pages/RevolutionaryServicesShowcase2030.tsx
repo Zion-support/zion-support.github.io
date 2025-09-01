@@ -155,29 +155,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
 
     const colorMap: { [key: string]: string } = {
 
-      'AI & Autonomous Systems': 'from-cyan-500 to-blue-500',
-      'AI & Business Intelligence': 'from-purple-500 to-pink-500',
-      'AI & Marketing': 'from-green-500 to-emerald-500',
-      'AI & Healthcare': 'from-pink-500 to-red-500',
-      'AI & Legal Tech': 'from-blue-500 to-indigo-500',
-      'AI & Real Estate': 'from-yellow-500 to-orange-500',
-      'AI & Operations': 'from-gray-500 to-slate-500',
-      'AI & Green Tech': 'from-green-500 to-emerald-500',
-      'AI & FinTech': 'from-emerald-500 to-green-500',
-      'AI & Environmental Tech': 'from-teal-500 to-green-500',
-      'AI & Content': 'from-orange-500 to-red-500',
-      'AI & Customer Support': 'from-blue-500 to-purple-500',
-      'AI & HR': 'from-indigo-500 to-blue-500',
-      'AI & Research': 'from-purple-500 to-violet-500',
-      'AI & Metaverse': 'from-purple-500 to-indigo-500',
-      'AI & Space Tech': 'from-indigo-500 to-purple-500',
-      'AI & Development': 'from-cyan-500 to-blue-500',
-      'AI & Education': 'from-blue-500 to-indigo-500',
-      'AI & Entertainment': 'from-purple-500 to-pink-500',
-      'Cybersecurity': 'from-red-500 to-orange-500',
-      'Cloud & DevOps': 'from-blue-500 to-cyan-500',
-      'Quantum Computing': 'from-indigo-500 to-purple-500',
-      'IoT & Edge Computing': 'from-teal-500 to-cyan-500',;
+      'AI & Autonomous Systems': 'from-cyan-500 to-blue-500',AI & Business Intelligence': 'from-purple-500 to-pink-500',AI & Marketing': 'from-green-500 to-emerald-500',AI & Healthcare': 'from-pink-500 to-red-500',AI & Legal Tech': 'from-blue-500 to-indigo-500',AI & Real Estate': 'from-yellow-500 to-orange-500',AI & Operations': 'from-gray-500 to-slate-500',AI & Green Tech': 'from-green-500 to-emerald-500',AI & FinTech': 'from-emerald-500 to-green-500',AI & Environmental Tech': 'from-teal-500 to-green-500',AI & Content': 'from-orange-500 to-red-500',AI & Customer Support': 'from-blue-500 to-purple-500',AI & HR': 'from-indigo-500 to-blue-500',AI & Research': 'from-purple-500 to-violet-500',AI & Metaverse': 'from-purple-500 to-indigo-500',AI & Space Tech': 'from-indigo-500 to-purple-500',AI & Development': 'from-cyan-500 to-blue-500',AI & Education': 'from-blue-500 to-indigo-500',AI & Entertainment': 'from-purple-500 to-pink-500',Cybersecurity': 'from-red-500 to-orange-500',Cloud & DevOps': 'from-blue-500 to-cyan-500',Quantum Computing': 'from-indigo-500 to-purple-500',IoT & Edge Computing': 'from-teal-500 to-cyan-500',;
       'Blockchain & Web3': 'from-yellow-500 to-orange-500',;
       'Digital Twin': 'from-blue-500 to-indigo-500',;
       'Space Technology': 'from-purple-500 to-pink-500',;

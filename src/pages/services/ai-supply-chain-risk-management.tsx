@@ -85,11 +85,7 @@ const AISupplyChainRiskManagement = () => {
       period: '/month',
       description: 'Perfect for small businesses with basic supply chain needs',
       features: ['
-        'Up to 50 suppliers',
-        'Basic risk monitoring',
-        'Email alerts',
-        'Standard reporting',
-        'Email support',
+        'Up to 50 suppliers',Basic risk monitoring',Email alerts',Standard reporting',Email support',
       ],
       popular: false},
     {
@@ -99,14 +95,7 @@ const AISupplyChainRiskManagement = () => {
       period: '/month',
       description: 'Ideal for growing companies with complex supply chains',
       features: ['
-        'Up to 500 suppliers',
-        'Advanced AI risk detection',
-        'Real-time alerts',
-        'Custom risk scoring',
-        'Priority support',
-        'API access',
-        'Advanced analytics',
-        'Multi-user access',
+        'Up to 500 suppliers',Advanced AI risk detection',Real-time alerts',Custom risk scoring',Priority support',API access',Advanced analytics',Multi-user access',
       ],
       popular: true},
     {
@@ -116,15 +105,7 @@ const AISupplyChainRiskManagement = () => {
       period: '/month',
       description: 'For large corporations with global supply networks',
       features: ['
-        'Unlimited suppliers',
-        'Custom AI models',
-        'White-label solution',
-        'Dedicated support',
-        'Advanced analytics',
-        'Custom integrations',
-        'On-premise deployment',
-        'SLA guarantees',
-        'Custom training',
+        'Unlimited suppliers',Custom AI models',White-label solution',Dedicated support',Advanced analytics',Custom integrations',On-premise deployment',SLA guarantees',Custom training',
       ],
       popular: false},
   ];

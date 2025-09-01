@@ -66,14 +66,9 @@ export default function PricingGuide() {
 
     const comparisons = {
 
-      'AI Development': { avg: price * 1.3, savings: 23 },
-      'Cloud Services': { avg: price * 1.25, savings: 20 },
+      'AI Development': { avg: price * 1.3, savings: 23 },Cloud Services': { avg: price * 1.25, savings: 20 },
       DevOps: { avg: price * 1.35, savings: 26 },
-      Cybersecurity: { avg: price * 1.4, savings: 29 },
-      'Data & Analytics': { avg: price * 1.3, savings: 23 },
-      'Digital Transformation': { avg: price * 1.45, savings: 31 },
-      'Emerging Tech': { avg: price * 1.5, savings: 33 },
-      'Managed Services': { avg: price * 1.2, savings: 17 }};
+      Cybersecurity: { avg: price * 1.4, savings: 29 },Data & Analytics': { avg: price * 1.3, savings: 23 },Digital Transformation': { avg: price * 1.45, savings: 31 },Emerging Tech': { avg: price * 1.5, savings: 33 },Managed Services': { avg: price * 1.2, savings: 17 }};
     return comparisons[category] || { avg: price * 1.3, savings: 23 };
   };
   return ("

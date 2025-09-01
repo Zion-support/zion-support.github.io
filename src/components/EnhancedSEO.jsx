@@ -20,8 +20,7 @@ export default function EnhancedSEO({
   // Default structured data for organization
   const defaultStructuredData = {
 
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@context': 'https://schema.org',@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/images/logo.png',
@@ -41,9 +40,7 @@ export default function EnhancedSEO({
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com'},
     sameAs: ['
-      'https://linkedin.com/company/ziontechgroup',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/Zion-Holdings',
+      'https://linkedin.com/company/ziontechgroup',https://twitter.com/ziontechgroup',https://github.com/Zion-Holdings',
     ],
     offers: {
 

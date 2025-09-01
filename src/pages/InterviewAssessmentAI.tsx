@@ -104,10 +104,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
       description: 'AI-powered analysis of video interview responses',
       icon: Video,
       benefits: ['
-        'Facial expression analysis',
-        'Tone analysis',
-        'Response quality',
-        'Engagement metrics',
+        'Facial expression analysis',Tone analysis',Response quality',Engagement metrics',
       ]},
     {
 
@@ -115,10 +112,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
       description: 'Comprehensive technical skills evaluation',
       icon: Cpu,
       benefits: ['
-        'Coding challenges',
-        'Problem solving',
-        'Technical knowledge',
-        'Performance tracking',
+        'Coding challenges',Problem solving',Technical knowledge',Performance tracking',
       ]},
     {
 
@@ -126,10 +120,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
       description: 'Assessment of candidate alignment with company culture',
       icon: Users,
       benefits: ['
-        'Values assessment',
-        'Team compatibility',
-        'Communication style',
-        'Work preferences',
+        'Values assessment',Team compatibility',Communication style',Work preferences',
       ]},
     {
 
@@ -137,24 +128,12 @@ export default function InterviewAssessmentAI(...args: any[]): any {
       description: 'AI-driven predictions of candidate success',
       icon: TrendingUp,
       benefits: ['
-        'Success probability',
-        'Retention prediction',
-        'Performance forecasting',
-        'Risk assessment',
+        'Success probability',Retention prediction',Performance forecasting',Risk assessment',
       ]},
   ];
 
   const technologies = ['
-    'Natural Language Processing',
-    'Computer Vision',
-    'Machine Learning',
-    'Sentiment Analysis',
-    'Facial Recognition',
-    'Voice Analysis',
-    'Predictive Analytics',
-    'Behavioral Science',
-    'AI Algorithms',
-    'Data Analytics',
+    'Natural Language Processing',Computer Vision',Machine Learning',Sentiment Analysis',Facial Recognition',Voice Analysis',Predictive Analytics',Behavioral Science',AI Algorithms',Data Analytics',
   ];
 
   return()

@@ -16,16 +16,7 @@ const RevolutionaryServicesShowcase2025 = () => {
       source: 'emerging'})),
   ];
   const categories = ['
-    'all',
-    'Micro SAAS',
-    'IT Services',
-    'AI Solutions',
-    'Blockchain & Web3',
-    'IoT & Edge Computing',
-    'Sustainable Technology',
-    'Space Technology',
-    'Biotechnology',
-    'Quantum Technology',
+    'all',Micro SAAS',IT Services',AI Solutions',Blockchain & Web3',IoT & Edge Computing',Sustainable Technology',Space Technology',Biotechnology',Quantum Technology',
   ];
   const filteredServices = allServices.filter(service => {
 

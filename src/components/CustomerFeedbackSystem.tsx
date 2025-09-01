@@ -256,9 +256,7 @@ showStats:  true,;
 
     const colors = {
 
-  'service': 'text-blue-400 bg-blue-400/20',
-      'product': 'text-green-400 bg-green-400/20',
-      'support': 'text-purple-400 bg-purple-400/20',;
+  'service': 'text-blue-400 bg-blue-400/20',product': 'text-green-400 bg-green-400/20',support': 'text-purple-400 bg-purple-400/20',;
   ;
   ;
   'overall': 'text-zion-cyan bg-zion-cyan/20';
@@ -674,8 +672,7 @@ showStats:  true,;
                 <button
                   onClick = {
 
-  () => handleVote(item.id,
-  'helpful')
+  () => handleVote(item.id,helpful')
 
 
 
@@ -691,8 +688,7 @@ showStats:  true,;
                 <button
                   onClick = {
 
-  () => handleVote(item.id,
-  'unhelpful')
+  () => handleVote(item.id,unhelpful')
 
 
 

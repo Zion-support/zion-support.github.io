@@ -34,10 +34,7 @@ contactInfo: {
   caseStudies?: string[]}
 ;
 export const SERVICE_CATEGORIES = [
-  'AI & Automation',
-  'Quantum Computing',
-  'Blockchain & Web3',
-  'Cybersecurity',;
+  'AI & Automation',Quantum Computing',Blockchain & Web3',Cybersecurity',;
   'IoT & Edge Computing',;
   'Metaverse & AR/VR',;
   'Robotics & Automation',;

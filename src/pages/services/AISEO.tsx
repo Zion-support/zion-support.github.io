@@ -66,12 +66,7 @@ const AISEO: React.FC = (): JSX.Element => {
   ];
 
   const benefits = ['
-    'Improve search rankings by 40%',
-    'Increase organic traffic by 60%',
-    'Reduce SEO audit time by 80%',
-    'Boost conversion rates by 25%',
-    'Identify new keyword opportunities',
-    'Automate technical SEO fixes',
+    'Improve search rankings by 40%',Increase organic traffic by 60%',Reduce SEO audit time by 80%',Boost conversion rates by 25%',Identify new keyword opportunities',Automate technical SEO fixes',
   ];
 
   return()

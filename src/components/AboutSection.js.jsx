@@ -60,18 +60,7 @@ export function AboutSection() {
       icon: <Shield className="w-8 h-8" />},
   ];
   const technologies = ['
-    'Artificial Intelligence & ML',
-    'Cloud Computing',
-    'Cybersecurity',
-    'Data Analytics',
-    'Blockchain Technology',
-    'IoT Solutions',
-    'Mobile Development',
-    'Web Applications',
-    'DevOps & Automation',
-    'Quantum Computing',
-    'Edge Computing',
-    '5G Networks',
+    'Artificial Intelligence & ML',Cloud Computing',Cybersecurity',Data Analytics',Blockchain Technology',IoT Solutions',Mobile Development',Web Applications',DevOps & Automation',Quantum Computing',Edge Computing',5G Networks',
   ];
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-800 via-zion-blue-dark to-slate-900">"

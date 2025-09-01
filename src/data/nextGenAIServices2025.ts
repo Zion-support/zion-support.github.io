@@ -36,24 +36,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     color: 'from-purple-500 to-pink-600',
     category: 'autonomous-systems',
     features[;
-      'Self-learning algorithms',
-      'Autonomous decision making',
-      'Continuous optimization',
-      'Adaptive behavior',
-      'Goal-oriented learning',
-      'Ethical constraint enforcement'
+      'Self-learning algorithms',Autonomous decision making',Continuous optimization',Adaptive behavior',Goal-oriented learning',Ethical constraint enforcement'
     ],;
     benefits[;
-      'Reduced human intervention',
-      'Continuous improvement',
-      'Adaptive problem solving',
-      'Scalable AI operations'
+      'Reduced human intervention',Continuous improvement',Adaptive problem solving',Scalable AI operations'
     ],;
     useCases[;
-      'Autonomous vehicles',
-      'Smart cities',
-      'Industrial automation',
-      'Robotic systems'
+      'Autonomous vehicles',Smart cities',Industrial automation',Robotic systems'
     ],;
     pricing: {
 
@@ -81,24 +70,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     color: 'from-blue-500 to-indigo-600',
     category: 'nlp',
     features[;
-      'Multilingual understanding',
-      'Context-aware generation',
-      'Domain-specific models',
-      'Sentiment analysis',
-      'Entity recognition',
-      'Language translation'
+      'Multilingual understanding',Context-aware generation',Domain-specific models',Sentiment analysis',Entity recognition',Language translation'
     ],;
     benefits[;
-      'Global communication',
-      'Improved customer service',
-      'Content localization',
-      'Multilingual support'
+      'Global communication',Improved customer service',Content localization',Multilingual support'
     ],;
     useCases[;
-      'Global businesses',
-      'Customer service',
-      'Content creation',
-      'Language learning'
+      'Global businesses',Customer service',Content creation',Language learning'
     ],;
     pricing: {
 
@@ -126,24 +104,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     color: 'from-green-500 to-emerald-600',
     category: 'computer-vision',
     features[;
-      '3D object recognition',
-      'Spatial understanding',
-      'Real-time processing',
-      'Multi-modal vision',
-      'Depth perception',
-      'Motion tracking'
+      '3D object recognition',Spatial understanding',Real-time processing',Multi-modal vision',Depth perception',Motion tracking'
     ],;
     benefits[;
-      'Enhanced visual understanding',
-      'Improved accuracy',
-      'Real-time processing',
-      '3D spatial awareness'
+      'Enhanced visual understanding',Improved accuracy',Real-time processing',3D spatial awareness'
     ],;
     useCases[;
-      'Autonomous vehicles',
-      'Robotics',
-      'Augmented reality',
-      'Security systems'
+      'Autonomous vehicles',Robotics',Augmented reality',Security systems'
     ],;
     pricing: {
 
@@ -171,24 +138,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     color: 'from-teal-500 to-cyan-600',
     category: 'ai-ethics',
     features[;
-      'Bias detection & mitigation',
-      'Fairness metrics',
-      'Transparency tools',
-      'Governance frameworks',
-      'Ethical guidelines',
-      'Compliance monitoring'
+      'Bias detection & mitigation',Fairness metrics',Transparency tools',Governance frameworks',Ethical guidelines',Compliance monitoring'
     ],;
     benefits[;
-      'Responsible AI development',
-      'Regulatory compliance',
-      'Reduced bias',
-      'Trustworthy AI systems'
+      'Responsible AI development',Regulatory compliance',Reduced bias',Trustworthy AI systems'
     ],;
     useCases[;
-      'AI development teams',
-      'Regulatory bodies',
-      'Ethics committees',
-      'Compliance officers'
+      'AI development teams',Regulatory bodies',Ethics committees',Compliance officers'
     ],;
     pricing: {
 
@@ -216,24 +172,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     color: 'from-violet-500 to-fuchsia-600',
     category: 'ai-research',
     features[;
-      'Quantum neural networks',
-      'Hybrid algorithms',
-      'Quantum advantage',
-      'Classical AI integration',
-      'Optimization problems',
-      'Research tools'
+      'Quantum neural networks',Hybrid algorithms',Quantum advantage',Classical AI integration',Optimization problems',Research tools'
     ],;
     benefits[;
-      'Exponential speedups',
-      'New problem-solving capabilities',
-      'Research breakthroughs',
-      'Competitive advantage'
+      'Exponential speedups',New problem-solving capabilities',Research breakthroughs',Competitive advantage'
     ],;
     useCases[;
-      'Pharmaceutical research',
-      'Financial modeling',
-      'Climate science',
-      'Materials science'
+      'Pharmaceutical research',Financial modeling',Climate science',Materials science'
     ],;
     pricing: {
 
@@ -261,24 +206,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     color: 'from-orange-500 to-red-600',
     category: 'machine-learning',
     features[;
-      'Distributed training',
-      'Privacy preservation',
-      'Secure aggregation',
-      'Model synchronization',
-      'Performance monitoring',
-      'Collaborative learning'
+      'Distributed training',Privacy preservation',Secure aggregation',Model synchronization',Performance monitoring',Collaborative learning'
     ],;
     benefits[;
-      'Privacy preservation',
-      'Collaborative learning',
-      'Reduced data transfer',
-      'Regulatory compliance'
+      'Privacy preservation',Collaborative learning',Reduced data transfer',Regulatory compliance'
     ],;
     useCases[;
-      'Healthcare collaboration',
-      'Financial services',
-      'Cross-organization AI',
-      'Privacy-sensitive domains'
+      'Healthcare collaboration',Financial services',Cross-organization AI',Privacy-sensitive domains'
     ],;
     pricing: {
 
@@ -306,24 +240,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     color: 'from-indigo-500 to-purple-600',
     category: 'ai-research',
     features[;
-      'Experimental frameworks',
-      'Research tools',
-      'Collaboration features',
-      'Version control',
-      'Experiment tracking',
-      'Result analysis'
+      'Experimental frameworks',Research tools',Collaboration features',Version control',Experiment tracking',Result analysis'
     ],;
     benefits[;
-      'Faster research cycles',
-      'Better collaboration',
-      'Reproducible results',
-      'Research acceleration'
+      'Faster research cycles',Better collaboration',Reproducible results',Research acceleration'
     ],;
     useCases[;
-      'AI research labs',
-      'Academic institutions',
-      'Corporate R&D',
-      'Startup research'
+      'AI research labs',Academic institutions',Corporate R&D',Startup research'
     ],;
     pricing: {
 
@@ -351,24 +274,13 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     color: 'from-yellow-500 to-orange-600',
     category: 'machine-learning',
     features[;
-      'Genetic algorithms',
-      'Neural optimization',
-      'Multi-objective optimization',
-      'Constraint handling',
-      'Real-time optimization',
-      'Scalable algorithms'
+      'Genetic algorithms',Neural optimization',Multi-objective optimization',Constraint handling',Real-time optimization',Scalable algorithms'
     ],;
     benefits[;
-      'Optimal solutions',
-      'Faster decision making',
-      'Cost optimization',
-      'Resource efficiency'
+      'Optimal solutions',Faster decision making',Cost optimization',Resource efficiency'
     ],;
     useCases[;
-      'Supply chain optimization',
-      'Resource allocation',
-      'Scheduling problems',
-      'Portfolio optimization'
+      'Supply chain optimization',Resource allocation',Scheduling problems',Portfolio optimization'
     ],;
     pricing: {
 

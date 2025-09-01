@@ -196,14 +196,7 @@ const AIAutonomousRobotics = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Manufacturing',
-                'Healthcare',
-                'Agriculture',
-                'Logistics',
-                'Construction',
-                'Service Robots',
-                'Research',
-                'Entertainment',
+                'Manufacturing',Healthcare',Agriculture',Logistics',Construction',Service Robots',Research',Entertainment',
               ].map(application => (
                 <div
                   key={application}"

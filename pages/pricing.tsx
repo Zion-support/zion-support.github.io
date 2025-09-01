@@ -11,12 +11,7 @@ export default function PricingPage(...args[]):  {
       price: '$99',
       period: '/month',
       features = ['
-        'AI-Powered Analytics Dashboard',
-        'Basic Cloud Infrastructure',
-        'Email Support',
-        'Standard Security Features',
-        'Monthly Reports',
-        'Up to 5 Users'
+        'AI-Powered Analytics Dashboard',Basic Cloud Infrastructure',Email Support',Standard Security Features',Monthly Reports',Up to 5 Users'
       ],
       cta: 'Get Started',
       ctaLink: '/contact',
@@ -29,14 +24,7 @@ export default function PricingPage(...args[]):  {
       price: '$299',
       period: '/month',
       features = ['
-        'Everything in Starter',
-        'Advanced AI Decision Engine',
-        'Priority Support',
-        'Enhanced Security & Compliance',
-        'Custom Integrations',
-        'Up to 25 Users',
-        'Advanced Analytics',
-        'API Access'
+        'Everything in Starter',Advanced AI Decision Engine',Priority Support',Enhanced Security & Compliance',Custom Integrations',Up to 25 Users',Advanced Analytics',API Access'
       ],
       cta: 'Start Free Trial',
       ctaLink: '/contact',
@@ -49,15 +37,7 @@ export default function PricingPage(...args[]):  {
       price: 'Custom',
       period: '',
       features = ['
-        'Everything in Professional',
-        'Custom AI Solutions',
-        '24/7 Dedicated Support',
-        'Enterprise Security',
-        'Custom Development',
-        'Unlimited Users',
-        'Advanced Compliance',
-        'Dedicated Account Manager',
-        'SLA Guarantees',;
+        'Everything in Professional',Custom AI Solutions',24/7 Dedicated Support',Enterprise Security',Custom Development',Unlimited Users',Advanced Compliance',Dedicated Account Manager',SLA Guarantees',;
         'On-Premise Options';
       ],;
       cta: 'Contact Sales',;

@@ -5,8 +5,7 @@ import { Target, Mail, BarChart3, Users, CheckCircle, Zap, Sparkles, ArrowRight,
 export default function AIMarketingAutomationPersonalization(...args: any[]): any {
 
   const features = ['
-    'AI-powered customer segmentation with behavioral analysis',
-    'Dynamic content personalization across all marketing channels',;
+    'AI-powered customer segmentation with behavioral analysis',Dynamic content personalization across all marketing channels',;
     'Predictive lead scoring and conversion optimization',;
     'Multi-channel campaign orchestration (email, SMS, social, web),;
     'Real-time A/B testing with AI-driven optimization',;
@@ -25,10 +24,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
   ];
 
   const marketingChannels = ['
-    'Email Marketing Automation',
-    'SMS & Push Notifications',
-    'Social Media Advertising',
-    'Display & Retargeting Ads',;
+    'Email Marketing Automation',SMS & Push Notifications',Social Media Advertising',Display & Retargeting Ads',;
     'Content Marketing',;
     'Search Engine Marketing',;
     'Influencer Marketing',;
@@ -38,10 +34,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
   ];
 
   const aiCapabilities = ['
-    'Customer Behavior Analysis',
-    'Predictive Analytics',
-    'Dynamic Content Generation',
-    'Smart Segmentation',;
+    'Customer Behavior Analysis',Predictive Analytics',Dynamic Content Generation',Smart Segmentation',;
     'Lead Scoring & Qualification',;
     'Campaign Optimization',;
     'Personalization Engine',;
@@ -51,10 +44,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
   ];
 
   const integrations = ['
-    'Salesforce Marketing Cloud',
-    'HubSpot Marketing Hub',
-    'Mailchimp',
-    'Klaviyo',;
+    'Salesforce Marketing Cloud',HubSpot Marketing Hub',Mailchimp',Klaviyo',;
     'Shopify',;
     'WooCommerce',;
     'Facebook Ads',;

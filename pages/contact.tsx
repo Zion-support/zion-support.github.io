@@ -84,31 +84,15 @@ import { motion } from 'framer-motion';
   ];
 
   const services = ['
-    'Micro SaaS Development',
-    'AI & Machine Learning',
-    'Cloud Infrastructure',
-    'Cybersecurity Solutions',
-    'Custom Software Development',
-    'API Integration',
-    'DevOps & CI/CD',
-    'Data Analytics',
-    'Other'
+    'Micro SaaS Development',AI & Machine Learning',Cloud Infrastructure',Cybersecurity Solutions',Custom Software Development',API Integration',DevOps & CI/CD',Data Analytics',Other'
   ];
 
   const budgets = ['
-    'Under $10,000',
-    '$10,000 - $25,000',
-    '$25,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000+'
+    'Under $10,000',$10,000 - $25,000',$25,000 - $50,000',$50,000 - $100,000',$100,000+'
   ];
 
   const timelines = ['
-    'ASAP',
-    '1-2 months',
-    '3-6 months',
-    '6+ months',
-    'Not sure yet'
+    'ASAP',1-2 months',3-6 months',6+ months',Not sure yet'
   ];
 
   return()

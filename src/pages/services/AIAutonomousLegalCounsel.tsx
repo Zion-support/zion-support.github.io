@@ -64,12 +64,7 @@ const AIAutonomousLegalCounsel: React.FC = (): JSX.Element => {
   ];
 
   const benefits = ['
-    'Improve legal efficiency by 70%',
-    'Reduce legal costs by 60%',
-    'Enhance legal accuracy by 85%',
-    'Automate legal processes',
-    '24/7 autonomous operation',
-    'Real-time legal insights',
+    'Improve legal efficiency by 70%',Reduce legal costs by 60%',Enhance legal accuracy by 85%',Automate legal processes',24/7 autonomous operation',Real-time legal insights',
   ];
 
   return()

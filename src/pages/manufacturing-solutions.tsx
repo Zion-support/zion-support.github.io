@@ -26,10 +26,7 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
         'Intelligent automation systems that optimize production processes and increase efficiency.',
       icon: Bot,
       features: ['
-        'Process optimization',
-        'Real-time monitoring',
-        'Predictive maintenance',
-        'Quality control',
+        'Process optimization',Real-time monitoring',Predictive maintenance',Quality control',
       ]},
     {
 
@@ -38,10 +35,7 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
         'Seamless integration of IoT devices for comprehensive manufacturing intelligence.',
       icon: Network,
       features: ['
-        'Sensor networks',
-        'Data collection',
-        'Remote monitoring',
-        'Predictive analytics',
+        'Sensor networks',Data collection',Remote monitoring',Predictive analytics',
       ]},
     {
 
@@ -50,10 +44,7 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
         'Advanced AI systems for automated quality inspection and defect detection.',
       icon: Eye,
       features: ['
-        'Visual inspection',
-        'Defect detection',
-        'Quality assurance',
-        'Compliance monitoring',
+        'Visual inspection',Defect detection',Quality assurance',Compliance monitoring',
       ]},
     {
 
@@ -62,10 +53,7 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
         'AI-driven maintenance systems that prevent equipment failures and reduce downtime.',
       icon: TrendingUp,
       features: ['
-        'Equipment monitoring',
-        'Failure prediction',
-        'Maintenance scheduling',
-        'Cost optimization',
+        'Equipment monitoring',Failure prediction',Maintenance scheduling',Cost optimization',
       ]},
     {
 
@@ -74,10 +62,7 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
         'Intelligent supply chain management with AI-powered forecasting and optimization.',
       icon: Cog,
       features: ['
-        'Demand forecasting',
-        'Inventory optimization',
-        'Route planning',
-        'Supplier management',
+        'Demand forecasting',Inventory optimization',Route planning',Supplier management',
       ]},
     {
 
@@ -86,10 +71,7 @@ const ManufacturingSolutions: React.FC = (): JSX.Element => {
         'Virtual replicas of physical manufacturing systems for simulation and optimization.',
       icon: Cloud,
       features: ['
-        'System simulation',
-        'Performance optimization',
-        'Scenario testing',
-        'Real-time monitoring',
+        'System simulation',Performance optimization',Scenario testing',Real-time monitoring',
       ]},
   ];
 

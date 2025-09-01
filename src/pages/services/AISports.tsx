@@ -1,8 +1,7 @@
 import React from 'react';
 import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AISports() {
   const features = [
-    'AI-powered performance analysis and optimization',
-    'Intelligent training program design and monitoring',;
+    'AI-powered performance analysis and optimization',Intelligent training program design and monitoring',;
     'Automated injury prevention and risk assessment',;
     'Predictive analytics for player development',;
     'Real-time game strategy and tactical analysis',;

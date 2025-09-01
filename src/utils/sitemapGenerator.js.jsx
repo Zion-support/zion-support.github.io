@@ -28,7 +28,7 @@ export default to;
         ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}'`
         ${url.priority ? `<priority>${url.priority}</priority>` : ''}`
       </url>`;
-            return urlElement.replace(/\s+/g, ').trim();
+            return urlElement.replace(/\s+/g,).trim();
         }).join('');`
         return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`;
     }
@@ -122,7 +122,7 @@ Crawl-delay: 1`;
             .filter(url => url.priority && url.priority >= 0.8)`
             .map(url => `"
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-high">
-                        ${url.url === '/' ? 'Home' : url.url.split('/').pop()?.replace(/-/g, ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
+                        ${url.url === '/' ? 'Home' : url.url.split('/').pop()?.replace(/-/g,).replace(/\b\w/g, l => l.toUpperCase()) || url.url}
                     </a>'`
                   `).join('')}
             </div>
@@ -135,7 +135,7 @@ Crawl-delay: 1`;
             .filter(url => url.url.startsWith('/services/'))`
             .map(url => `"
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-medium">
-                        ${url.url.split('/').pop()?.replace(/-/g, ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
+                        ${url.url.split('/').pop()?.replace(/-/g,).replace(/\b\w/g, l => l.toUpperCase()) || url.url}
                     </a>'`
                   `).join('')}
             </div>
@@ -148,7 +148,7 @@ Crawl-delay: 1`;
             .filter(url => url.url.startsWith('/solutions/'))`
             .map(url => `"
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-medium">
-                        ${url.url.split('/').pop()?.replace(/-/g, ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
+                        ${url.url.split('/').pop()?.replace(/-/g,).replace(/\b\w/g, l => l.toUpperCase()) || url.url}
                     </a>'`
                   `).join('')}
             </div>
@@ -161,7 +161,7 @@ Crawl-delay: 1`;
             .filter(url => !url.url.startsWith('/services/') && !url.url.startsWith('/solutions/') && url.url !== '/' && url.priority && url.priority < 0.8)`
             .map(url => `"
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-low">
-                        ${url.url.split('/').pop()?.replace(/-/g, ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
+                        ${url.url.split('/').pop()?.replace(/-/g,).replace(/\b\w/g, l => l.toUpperCase()) || url.url}
                     </a>'`
                   `).join('')}
             </div>

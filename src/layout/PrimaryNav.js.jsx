@@ -108,8 +108,7 @@ export function PrimaryNav() {
                 <HoverCardTrigger asChild>"
                   <Link href="/cart" className="relative p-1" aria-label = {
 
-  t('nav.cart',
-  'Cart')
+  t('nav.cart',Cart')
 
 }>"
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"/>"

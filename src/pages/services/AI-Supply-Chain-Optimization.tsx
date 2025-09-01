@@ -118,55 +118,37 @@ const AISupplyChainOptimization: React.FC = () => {
 
       name: 'Demand Planning',
       features: ['
-        'AI forecasting models',
-        'Seasonal analysis',
-        'Trend prediction',
-        'Demand variability',
+        'AI forecasting models',Seasonal analysis',Trend prediction',Demand variability',
       ]},
     {
 
       name: 'Inventory Optimization',
       features: ['
-        'Stock level management',
-        'Reorder automation',
-        'Safety stock calculation',
-        'ABC analysis',
+        'Stock level management',Reorder automation',Safety stock calculation',ABC analysis',
       ]},
     {
 
       name: 'Logistics Management',
       features: ['
-        'Route optimization',
-        'Carrier selection',
-        'Freight optimization',
-        'Last-mile delivery',
+        'Route optimization',Carrier selection',Freight optimization',Last-mile delivery',
       ]},
     {
 
       name: 'Supplier Management',
       features: ['
-        'Supplier performance',
-        'Risk assessment',
-        'Contract management',
-        'Quality control',
+        'Supplier performance',Risk assessment',Contract management',Quality control',
       ]},
     {
 
       name: 'Warehouse Operations',
       features: ['
-        'Space utilization',
-        'Picking optimization',
-        'Storage strategies',
-        'Automation integration',
+        'Space utilization',Picking optimization',Storage strategies',Automation integration',
       ]},
     {
 
       name: 'Risk Management',
       features: ['
-        'Supply disruption',
-        'Geopolitical risks',
-        'Weather impact',
-        'Contingency planning',
+        'Supply disruption',Geopolitical risks',Weather impact',Contingency planning',
       ]},
   ];
 
@@ -178,13 +160,7 @@ const AISupplyChainOptimization: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses and startups',
       features: ['
-        'AI Demand Forecasting (up to 100 SKUs),
-        'Basic Inventory Management',
-        'Route Optimization (up to 50 routes),
-        'Standard Analytics Dashboard',
-        'Email Support',
-        'Basic Reporting',
-        'Mobile App Access',
+        'AI Demand Forecasting (up to 100 SKUs),Basic Inventory Management',Route Optimization (up to 50 routes),Standard Analytics Dashboard',Email Support',Basic Reporting',Mobile App Access',
       ],
       marketPrice: '$3,600',
       savings: '22%',
@@ -196,15 +172,7 @@ const AISupplyChainOptimization: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing businesses and mid-size companies',
       features: ['
-        'Advanced AI Forecasting',
-        'Comprehensive Inventory Management',
-        'Advanced Route Optimization',
-        'Supplier Management',
-        'Risk Assessment',
-        'Priority Support',
-        'Custom Integration',
-        'Advanced Analytics',
-        'Training & Certification',
+        'Advanced AI Forecasting',Comprehensive Inventory Management',Advanced Route Optimization',Supplier Management',Risk Assessment',Priority Support',Custom Integration',Advanced Analytics',Training & Certification',
       ],
       marketPrice: '$8,200',
       savings: '21%',
@@ -216,16 +184,7 @@ const AISupplyChainOptimization: React.FC = () => {
       period: '/month',
       description: 'For large enterprises and global supply chains',
       features: ['
-        'Enterprise AI Platform',
-        'Unlimited SKU Management',
-        'Global Supply Chain Visibility',
-        'Custom AI Models',
-        'Advanced Risk Management',
-        '24/7 Dedicated Support',
-        'White-label Solutions',
-        'Custom Development',
-        'Consulting Services',
-        'Staff Training',
+        'Enterprise AI Platform',Unlimited SKU Management',Global Supply Chain Visibility',Custom AI Models',Advanced Risk Management',24/7 Dedicated Support',White-label Solutions',Custom Development',Consulting Services',Staff Training',
       ],
       marketPrice: '$19,500',
       savings: '23%',
@@ -287,37 +246,25 @@ const AISupplyChainOptimization: React.FC = () => {
 
       industry: 'Manufacturing',
       applications: ['
-        'Raw Material Planning',
-        'Production Scheduling',
-        'Quality Control',
-        'Supplier Management',
+        'Raw Material Planning',Production Scheduling',Quality Control',Supplier Management',
       ]},
     {
 
       industry: 'Retail & E-commerce',
       applications: ['
-        'Inventory Management',
-        'Demand Forecasting',
-        'Last-mile Delivery',
-        'Returns Processing',
+        'Inventory Management',Demand Forecasting',Last-mile Delivery',Returns Processing',
       ]},
     {
 
       industry: 'Logistics & Transportation',
       applications: ['
-        'Route Optimization',
-        'Fleet Management',
-        'Freight Optimization',
-        'Warehouse Operations',
+        'Route Optimization',Fleet Management',Freight Optimization',Warehouse Operations',
       ]},
     {
 
       industry: 'Healthcare & Pharmaceuticals',
       applications: ['
-        'Medical Supply Chain',
-        'Cold Chain Management',
-        'Regulatory Compliance',
-        'Emergency Response',
+        'Medical Supply Chain',Cold Chain Management',Regulatory Compliance',Emergency Response',
       ]},
   ];
 

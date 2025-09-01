@@ -333,8 +333,7 @@ export function NotificationExample() {
         <button
           onClick={() =>
             showWarning('
-              'Warning!',
-              'Please review your input before proceeding.'
+              'Warning!',Please review your input before proceeding.'
             )
           }"
           className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition-colors"

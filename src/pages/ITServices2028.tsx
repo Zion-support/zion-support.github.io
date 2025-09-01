@@ -27,16 +27,7 @@ const itServices2028 = [
     period: '/month',
     description: 'Revolutionary quantum-ready cloud infrastructure that provides unprecedented performance, security, and scalability for enterprise applications.',
     features[;
-      'Quantum-ready computing nodes',
-      'Advanced AI optimization',
-      'Zero-latency networking',
-      'Quantum encryption',
-      'Auto-scaling infrastructure',
-      'Real-time monitoring',
-      'Disaster recovery',
-      'Global CDN',
-      'API management',
-      'DevOps automation'
+      'Quantum-ready computing nodes',Advanced AI optimization',Zero-latency networking',Quantum encryption',Auto-scaling infrastructure',Real-time monitoring',Disaster recovery',Global CDN',API management',DevOps automation'
     ],;
     popular: true,
     icon: Cloud,
@@ -58,16 +49,7 @@ const itServices2028 = [
     period: '/month',
     description: 'Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated response, and predictive security analytics.',
     features[;
-      'AI threat detection',
-      'Behavioral analysis',
-      'Zero-trust architecture',
-      'Automated incident response',
-      'Threat intelligence',
-      'Compliance automation',
-      'Security analytics',
-      'Penetration testing',
-      'Vulnerability assessment',
-      'Security training'
+      'AI threat detection',Behavioral analysis',Zero-trust architecture',Automated incident response',Threat intelligence',Compliance automation',Security analytics',Penetration testing',Vulnerability assessment',Security training'
     ],;
     popular: true,
     icon: Shield,
@@ -89,16 +71,7 @@ const itServices2028 = [
     period: '/month',
     description: 'Revolutionary quantum database platform that provides unprecedented speed, security, and scalability for enterprise data management.',
     features[;
-      'Quantum query optimization',
-      'Real-time data processing',
-      'Advanced encryption',
-      'Auto-scaling storage',
-      'Multi-model support',
-      'Data analytics',
-      'Backup automation',
-      'Disaster recovery',
-      'Performance monitoring',
-      'API integration'
+      'Quantum query optimization',Real-time data processing',Advanced encryption',Auto-scaling storage',Multi-model support',Data analytics',Backup automation',Disaster recovery',Performance monitoring',API integration'
     ],;
     popular: false,
     icon: Database,
@@ -120,16 +93,7 @@ const itServices2028 = [
     period: '/month',
     description: 'AI-powered network optimization platform that automatically manages, secures, and optimizes enterprise network infrastructure.',
     features[;
-      'AI network monitoring',
-      'Automatic optimization',
-      'Traffic analysis',
-      'Security automation',
-      'Performance tuning',
-      'Bandwidth management',
-      'Quality of service',
-      'Network analytics',
-      'Alert management',
-      'Reporting tools'
+      'AI network monitoring',Automatic optimization',Traffic analysis',Security automation',Performance tuning',Bandwidth management',Quality of service',Network analytics',Alert management',Reporting tools'
     ],;
     popular: true,
     icon: Network,
@@ -151,16 +115,7 @@ const itServices2028 = [
     period: '/month',
     description: 'Advanced quantum-powered DevOps platform that automates software development, testing, deployment, and operations processes.',
     features[;
-      'AI-powered CI/CD',
-      'Automated testing',
-      'Deployment automation',
-      'Performance monitoring',
-      'Error tracking',
-      'Team collaboration',
-      'Version control',
-      'Infrastructure as code',
-      'Security scanning',
-      'Compliance automation'
+      'AI-powered CI/CD',Automated testing',Deployment automation',Performance monitoring',Error tracking',Team collaboration',Version control',Infrastructure as code',Security scanning',Compliance automation'
     ],;
     popular: true,
     icon: Rocket,
@@ -182,16 +137,7 @@ const itServices2028 = [
     period: '/month',
     description: 'Comprehensive AI-powered data analytics platform that provides real-time insights, predictive analytics, and automated reporting.',
     features[;
-      'Real-time data processing',
-      'AI-powered insights',
-      'Predictive analytics',
-      'Data visualization',
-      'Automated reporting',
-      'Custom dashboards',
-      'Data integration',
-      'Collaboration tools',
-      'Mobile access',
-      'API integration'
+      'Real-time data processing',AI-powered insights',Predictive analytics',Data visualization',Automated reporting',Custom dashboards',Data integration',Collaboration tools',Mobile access',API integration'
     ],;
     popular: false,
     icon: BarChart3,

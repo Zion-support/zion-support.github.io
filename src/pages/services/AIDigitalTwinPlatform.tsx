@@ -19,25 +19,11 @@ import {
 
 export default function AIDigitalTwinPlatform() {
   const features = ['
-    'AI-powered digital twin creation and management',
-    'Real-time IoT sensor data integration',
-    'Predictive maintenance and failure prediction',
-    '3D visualization and augmented reality support',
-    'Multi-physics simulation and modeling',
-    'Automated anomaly detection and alerts',
-    'Historical data analysis and trend prediction',
-    'Cross-platform integration and API access',
-    'Custom dashboard and reporting tools',
-    'Scalable cloud-based infrastructure',
+    'AI-powered digital twin creation and management',Real-time IoT sensor data integration',Predictive maintenance and failure prediction',3D visualization and augmented reality support',Multi-physics simulation and modeling',Automated anomaly detection and alerts',Historical data analysis and trend prediction',Cross-platform integration and API access',Custom dashboard and reporting tools',Scalable cloud-based infrastructure',
   ];
 
   const benefits = ['
-    'Reduce operational costs by 25-40%',
-    'Improve equipment uptime by 30-50%',
-    'Cut maintenance costs by 20-35%',
-    'Real-time performance monitoring',
-    'Predictive maintenance optimization',
-    'Enhanced decision-making with data insights',
+    'Reduce operational costs by 25-40%',Improve equipment uptime by 30-50%',Cut maintenance costs by 20-35%',Real-time performance monitoring',Predictive maintenance optimization',Enhanced decision-making with data insights',
   ];
 
   const pricing = [
@@ -46,11 +32,7 @@ export default function AIDigitalTwinPlatform() {
       name: 'Starter',
       price: '$599/mo',
       features: ['
-        'Up to 10 digital twins',
-        'Basic monitoring',
-        'Standard dashboards',
-        'Email support',
-        'Monthly reports',
+        'Up to 10 digital twins',Basic monitoring',Standard dashboards',Email support',Monthly reports',
       ],
       popular: false},
     {
@@ -58,12 +40,7 @@ export default function AIDigitalTwinPlatform() {
       name: 'Professional',
       price: '$1,299/mo',
       features: ['
-        'Up to 50 digital twins',
-        'Advanced AI analytics',
-        'Real-time monitoring',
-        'Priority support',
-        'Custom dashboards',
-        'API access',
+        'Up to 50 digital twins',Advanced AI analytics',Real-time monitoring',Priority support',Custom dashboards',API access',
       ],
       popular: true},
     {
@@ -71,32 +48,17 @@ export default function AIDigitalTwinPlatform() {
       name: 'Enterprise',
       price: '$3,999/mo',
       features: ['
-        'Unlimited digital twins',
-        'Full AI suite',
-        'Custom models',
-        'Dedicated support',
-        'White-label solutions',
-        'Advanced integrations',
+        'Unlimited digital twins',Full AI suite',Custom models',Dedicated support',White-label solutions',Advanced integrations',
       ],
       popular: false},
   ];
 
   const useCases = ['
-    'Manufacturing process optimization',
-    'Smart city infrastructure monitoring',
-    'Healthcare facility management',
-    'Energy grid optimization',
-    'Transportation system monitoring',
-    'Building automation and management',
+    'Manufacturing process optimization',Smart city infrastructure monitoring',Healthcare facility management',Energy grid optimization',Transportation system monitoring',Building automation and management',
   ];
 
   const industries = ['
-    'Manufacturing & Industry 4.0',
-    'Smart Cities & Infrastructure',
-    'Healthcare & Medical Devices',
-    'Energy & Utilities',
-    'Transportation & Logistics',
-    'Construction & Real Estate',
+    'Manufacturing & Industry 4.0',Smart Cities & Infrastructure',Healthcare & Medical Devices',Energy & Utilities',Transportation & Logistics',Construction & Real Estate',
   ];
 
   return()

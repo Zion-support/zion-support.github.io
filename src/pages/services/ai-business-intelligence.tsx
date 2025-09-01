@@ -90,12 +90,7 @@ export default function AIBusinessIntelligence() {
   ];
 
   const benefits = ['
-    'Increase decision-making speed by 300% with real-time insights',
-    'Improve business performance by 40% through predictive analytics',
-    'Reduce reporting time by 80% with automated dashboards',
-    'Identify new opportunities with AI-powered trend analysis',
-    'Optimize operations with data-driven recommendations',
-    'Achieve better ROI through intelligent business insights',
+    'Increase decision-making speed by 300% with real-time insights',Improve business performance by 40% through predictive analytics',Reduce reporting time by 80% with automated dashboards',Identify new opportunities with AI-powered trend analysis',Optimize operations with data-driven recommendations',Achieve better ROI through intelligent business insights',
   ];
 
   const analyticsTypes = [
@@ -111,9 +106,7 @@ export default function AIBusinessIntelligence() {
       title: 'Diagnostic Analytics',
       description: 'Why did it happen? Root cause analysis and investigation',
       features: ['
-        'Drill-down analysis',
-        'Correlation studies',
-        'Anomaly detection',
+        'Drill-down analysis',Correlation studies',Anomaly detection',
       ]},
     {
 
@@ -128,9 +121,7 @@ export default function AIBusinessIntelligence() {
       description:'
         'What should we do? Actionable recommendations and optimization',
       features: ['
-        'Automated recommendations',
-        'Optimization algorithms',
-        'Decision support',
+        'Automated recommendations',Optimization algorithms',Decision support',
       ]},
   ];
 
@@ -140,40 +131,28 @@ export default function AIBusinessIntelligence() {
       industry: 'Finance',
       icon: Coins,
       applications: ['
-        'Risk assessment and fraud detection',
-        'Portfolio optimization and investment strategies',
-        'Credit scoring and loan approval',
-        'Market trend analysis and trading insights',
+        'Risk assessment and fraud detection',Portfolio optimization and investment strategies',Credit scoring and loan approval',Market trend analysis and trading insights',
       ]},
     {
 
       industry: 'Healthcare',
       icon: Shield,
       applications: ['
-        'Patient outcome prediction and treatment optimization',
-        'Resource allocation and capacity planning',
-        'Disease outbreak forecasting',
-        'Clinical trial optimization',
+        'Patient outcome prediction and treatment optimization',Resource allocation and capacity planning',Disease outbreak forecasting',Clinical trial optimization',
       ]},
     {
 
       industry: 'Retail',
       icon: ShoppingBag,
       applications: ['
-        'Demand forecasting and inventory optimization',
-        'Customer behavior analysis and personalization',
-        'Price optimization and dynamic pricing',
-        'Supply chain optimization',
+        'Demand forecasting and inventory optimization',Customer behavior analysis and personalization',Price optimization and dynamic pricing',Supply chain optimization',
       ]},
     {
 
       industry: 'Manufacturing',
       icon: Cpu,
       applications: ['
-        'Predictive maintenance and equipment monitoring',
-        'Quality control and defect prediction',
-        'Production optimization and efficiency improvement',
-        'Supply chain management and logistics',
+        'Predictive maintenance and equipment monitoring',Quality control and defect prediction',Production optimization and efficiency improvement',Supply chain management and logistics',
       ]},
   ];
 

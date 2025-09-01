@@ -205,7 +205,7 @@ import { motion  } from 'framer - motion.ts';
             value={verificationCode}
             onChange = {
 
-  (e) => setVerificationCode(e.target.value.replace(/\D/g,').slice(0,
+  (e) => setVerificationCode(e.target.value.replace(/\D/g,).slice(0,
   6))
 
 
@@ -325,8 +325,7 @@ import { motion  } from 'framer - motion.ts';
   `h-1 flex-1 rounded-full transition-all duration-300 ${
 
                       level <= passwordStrength.score'
-                        ? passwordStrength.color.replace('text-',
-  'bg-')
+                        ? passwordStrength.color.replace('text-',bg-')
                         : 'bg-slate-600/30'
                     
 

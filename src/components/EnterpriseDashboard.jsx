@@ -563,7 +563,7 @@ export const EnterpriseDashboard = () => {
                           {alert.status}
                         </span>"
                         <span className="px-3 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300">
-                          {alert.type.replace('_', ')}
+                          {alert.type.replace('_',)}
                         </span>
                       </div>"
                       <span className="text-sm text-gray-500">

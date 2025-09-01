@@ -75,9 +75,9 @@ function processFile(filePath) {
       newContent = newContent.replace(/<Image\s+/g,<img ');
       newContent = newContent.replace(/<\/Image>/g,</img>);
       // Remove Next.js specific props
-      newContent = newContent.replace(/\s+priority\s*=\s*\{[^}]*\}/g,');
-      newContent = newContent.replace(/\s+fill\s*=\s*\{[^}]*\}/g,');
-      newContent = newContent.replace(/\s+sizes\s*=\s*\{[^}]*\}/g,');
+      newContent = newContent.replace(/\s+priority\s*=\s*\{[^}]*\}/g,);
+      newContent = newContent.replace(/\s+fill\s*=\s*\{[^}]*\}/g,);
+      newContent = newContent.replace(/\s+sizes\s*=\s*\{[^}]*\}/g,);
       modified = true;
 
     if (modified) {

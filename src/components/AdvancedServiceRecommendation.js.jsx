@@ -19,12 +19,10 @@ const AdvancedServiceRecommendation = () => {
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [showResults, setShowResults] = useState(false);
     const industries = ['
-        'Technology',Healthcare',Financial Services',Manufacturing',
-        'Retail',Education',Government',Energy',Transportation',Media'
+        'Technology',Healthcare',Financial Services',Manufacturing',Retail',Education',Government',Energy',Transportation',Media'
     ];
     const compSizes = ['
-        'Startup (1-50 employees),Small Business (51-200 employees),
-        'Medium Business (201-1000 employees),Enterprise (1000+ employees)
+        'Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees)
     ];
     const budgets = ['
         'Under $50K',$50K-$200K',$200K-$500K',$500K-$1M',$1M+'
@@ -33,14 +31,10 @@ const AdvancedServiceRecommendation = () => {
         'Early Adopter',Growing',Mature',Advanced',Innovation Leader'
     ];
     const primaryGoals = ['
-        'Cost Reduction',Revenue Growth',Operational Efficiency',
-        'Digital Transformation',Innovation',Competitive Advantage',
-        'Customer Experience',Risk Management',Sustainability'
+        'Cost Reduction',Revenue Growth',Operational Efficiency',Digital Transformation',Innovation',Competitive Advantage',Customer Experience',Risk Management',Sustainability'
     ];
     const challenges = ['
-        'Legacy Systems',Data Security',Scalability Issues',
-        'Talent Shortage',Regulatory Compliance',Integration Complexity',
-        'Performance Issues',Cost Management',Technology Debt'
+        'Legacy Systems',Data Security',Scalability Issues',Talent Shortage',Regulatory Compliance',Integration Complexity',Performance Issues',Cost Management',Technology Debt'
     ];
     const mockServices = [
         {
@@ -106,7 +100,7 @@ const AdvancedServiceRecommendation = () => {
 
             score += 25}
         // Budget compatibility'
-        const servicePrice = parseInt(service.price.replace(/[^0-9]/g,'));
+        const servicePrice = parseInt(service.price.replace(/[^0-9]/g,));
         if (profile.budget === 'Under $50K' && servicePrice < 50)
             score += 20;
         else if (profile.budget === '$50K-$200K' && servicePrice >= 50 && servicePrice < 200)
@@ -476,8 +470,7 @@ const AdvancedServiceRecommendation = () => {
                         <div className="mt-4">"
                           <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
 
-  () => window.open(rec.service.link,
-  '_blank')
+  () => window.open(rec.service.link,_blank')
 
 }>
                             Learn More"
@@ -512,8 +505,7 @@ const AdvancedServiceRecommendation = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
 
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation',
-  '_blank')
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation',_blank')
 
 }>"
                   <Users className="w-5 h-5 mr-2"/>
@@ -521,8 +513,7 @@ const AdvancedServiceRecommendation = () => {
                 </Button>"
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
 
-  () => window.open('tel:+13024640950',
-  '_blank')
+  () => window.open('tel:+13024640950',_blank')
 
 }>"
                   <Zap className="w-5 h-5 mr-2"/>

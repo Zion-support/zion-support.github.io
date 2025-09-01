@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityImplementation() {
   const features = [
-    'AI-powered security implementation optimization',
-    'Intelligent implementation strategy management and execution',;
+    'AI-powered security implementation optimization',Intelligent implementation strategy management and execution',;
     'Automated security solution deployment and configuration',;
     'Predictive analytics for implementation needs',;
     'Smart implementation framework management',;

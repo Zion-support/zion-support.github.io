@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIKafka() {
   const features = [
-    'AI-powered Kafka optimization',
-    'Intelligent Kafka management',;
+    'AI-powered Kafka optimization',Intelligent Kafka management',;
     'Automated Kafka monitoring and alerting',;
     'Predictive analytics for Kafka scaling',;
     'Smart Kafka security and compliance',;

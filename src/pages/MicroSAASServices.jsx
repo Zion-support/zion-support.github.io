@@ -11,14 +11,7 @@ import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart,
 import { Link } from "react-router-dom";
 const categoryIcons = {
 
-  'AI Business Solutions': Brain,
-    'IT Infrastructure': Cloud,
-    'Data Analytics': BarChart3,
-    'AI Development': Code,
-    'FinTech': DollarSign,
-    'HealthTech': Heart,
-    'E-commerce': ShoppingCart,
-  'EdTech': GraduationCap
+  'AI Business Solutions': Brain,IT Infrastructure': Cloud,Data Analytics': BarChart3,AI Development': Code,FinTech': DollarSign,HealthTech': Heart,E-commerce': ShoppingCart,EdTech': GraduationCap
 
 };
 const benefits = [

@@ -181,14 +181,7 @@ const AIAutonomousDesign = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Graphic Design',
-                'Web Design',
-                'UI/UX Design',
-                'Product Design',
-                'Logo Design',
-                'Brand Design',
-                'Print Design',
-                'Digital Design',
+                'Graphic Design',Web Design',UI/UX Design',Product Design',Logo Design',Brand Design',Print Design',Digital Design',
               ].map(type => (
                 <div
                   key={type}"

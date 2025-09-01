@@ -184,14 +184,7 @@ const AIAutonomousHealthcarePhysician = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'General Medicine',
-                'Cardiology',
-                'Dermatology',
-                'Pediatrics',
-                'Mental Health',
-                'Nutrition',
-                'Emergency Care',
-                'Preventive Medicine',
+                'General Medicine',Cardiology',Dermatology',Pediatrics',Mental Health',Nutrition',Emergency Care',Preventive Medicine',
               ].map(specialty => (
                 <div
                   key={specialty}"

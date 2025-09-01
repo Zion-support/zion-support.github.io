@@ -181,14 +181,7 @@ const AIAutonomousSynthesis = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Content Synthesis',
-                'Data Synthesis',
-                'Knowledge Synthesis',
-                'Research Synthesis',
-                'Report Synthesis',
-                'Analysis Synthesis',
-                'Insight Synthesis',
-                'Summary Synthesis',
+                'Content Synthesis',Data Synthesis',Knowledge Synthesis',Research Synthesis',Report Synthesis',Analysis Synthesis',Insight Synthesis',Summary Synthesis',
               ].map(type => (
                 <div
                   key={type}"

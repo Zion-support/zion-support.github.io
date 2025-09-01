@@ -187,14 +187,7 @@ const AIAutonomousCloudSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'AWS Security',
-                'Azure Security',
-                'Google Cloud Security',
-                'Multi-Cloud Security',
-                'Cloud Access Security',
-                'Cloud Data Security',
-                'Cloud Network Security',
-                'Cloud Application Security',
+                'AWS Security',Azure Security',Google Cloud Security',Multi-Cloud Security',Cloud Access Security',Cloud Data Security',Cloud Network Security',Cloud Application Security',
               ].map(type => (
                 <div
                   key={type}"

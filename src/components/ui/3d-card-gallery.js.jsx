@@ -112,13 +112,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 
         const iconMap = {
 
-  'AI & ML': Brain,
-            'Cybersecurity': Shield,
-            'Cloud': Globe,
-            'Development': Rocket,
-            'Analytics': Zap,
-            'Infrastructure': Settings,
-  'Research': TrendingUp
+  'AI & ML': Brain,Cybersecurity': Shield,Cloud': Globe,Development': Rocket,Analytics': Zap,Infrastructure': Settings,Research': TrendingUp
         
 
 };

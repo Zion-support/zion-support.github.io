@@ -28,12 +28,7 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
 "
         <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
           {['
-            'Static diffs + architectural risk scoring',
-            'PR review suggestions and security hints',
-            'Unit/integration test generation',
-            'Flaky test clustering and ownership',
-            'CI insights: bottlenecks and failures',
-            'Jira/GitHub/GitLab/Bitbucket integrations',
+            'Static diffs + architectural risk scoring',PR review suggestions and security hints',Unit/integration test generation',Flaky test clustering and ownership',CI insights: bottlenecks and failures',Jira/GitHub/GitLab/Bitbucket integrations',
           ].map(b => (
             <div
               key={b}"

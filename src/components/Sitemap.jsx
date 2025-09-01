@@ -163,28 +163,7 @@ const Sitemap = () => {
           <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">All AI Autonomous Services</h3>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {['
-            'AI Autonomous Audit',AI Autonomous Compliance',AI Autonomous Creativity',
-            'AI Autonomous Customer Service',AI Autonomous Database Security',
-            'AI Autonomous Decision Engine',AI Autonomous Design',AI Autonomous DevOps',
-            'AI Autonomous Edge Security',AI Autonomous Education',AI Autonomous Finance',
-            'AI Autonomous Forensics',AI Autonomous Governance',AI Autonomous Healthcare',
-            'AI Autonomous Hybrid Security',AI Autonomous Identity Security',
-            'AI Autonomous Incident Response',AI Autonomous Infrastructure Security',
-            'AI Autonomous Invention',AI Autonomous IoT Security',AI Autonomous Learning',
-            'AI Autonomous Legal Counsel',AI Autonomous Logistics',AI Autonomous Malware Analysis',
-            'AI Autonomous Management',AI Autonomous Manufacturing',AI Autonomous Marketing',
-            'AI Autonomous Microservice Security',AI Autonomous Mobile Security',
-            'AI Autonomous Monitoring',AI Autonomous Network Security',AI Autonomous Optimization',
-            'AI Autonomous Orchestration',AI Autonomous Penetration Testing',
-            'AI Autonomous Planning',AI Autonomous Prediction',AI Autonomous Quality Assurance',
-            'AI Autonomous Reasoning',AI Autonomous Recommendation',AI Autonomous Risk Management',
-            'AI Autonomous Robotics',AI Autonomous Scientific Research',AI Autonomous Serverless Security',
-            'AI Autonomous Software Engineering',AI Autonomous Speech',AI Autonomous Synthesis',
-            'AI Autonomous Systems Platform',AI Autonomous Testing',AI Autonomous Threat Detection',
-            'AI Autonomous Threat Intelligence',AI Autonomous Trading',AI Autonomous Translation',
-            'AI Autonomous Virtual Assistant',AI Autonomous Vision',AI Autonomous Vulnerability Assessment',
-            'AI Autonomous Web Security',AI Autonomous Workflow',AI Autonomous Writing',
-            'AI Autonomous Zero Trust Security'
+            'AI Autonomous Audit',AI Autonomous Compliance',AI Autonomous Creativity',AI Autonomous Customer Service',AI Autonomous Database Security',AI Autonomous Decision Engine',AI Autonomous Design',AI Autonomous DevOps',AI Autonomous Edge Security',AI Autonomous Education',AI Autonomous Finance',AI Autonomous Forensics',AI Autonomous Governance',AI Autonomous Healthcare',AI Autonomous Hybrid Security',AI Autonomous Identity Security',AI Autonomous Incident Response',AI Autonomous Infrastructure Security',AI Autonomous Invention',AI Autonomous IoT Security',AI Autonomous Learning',AI Autonomous Legal Counsel',AI Autonomous Logistics',AI Autonomous Malware Analysis',AI Autonomous Management',AI Autonomous Manufacturing',AI Autonomous Marketing',AI Autonomous Microservice Security',AI Autonomous Mobile Security',AI Autonomous Monitoring',AI Autonomous Network Security',AI Autonomous Optimization',AI Autonomous Orchestration',AI Autonomous Penetration Testing',AI Autonomous Planning',AI Autonomous Prediction',AI Autonomous Quality Assurance',AI Autonomous Reasoning',AI Autonomous Recommendation',AI Autonomous Risk Management',AI Autonomous Robotics',AI Autonomous Scientific Research',AI Autonomous Serverless Security',AI Autonomous Software Engineering',AI Autonomous Speech',AI Autonomous Synthesis',AI Autonomous Systems Platform',AI Autonomous Testing',AI Autonomous Threat Detection',AI Autonomous Threat Intelligence',AI Autonomous Trading',AI Autonomous Translation',AI Autonomous Virtual Assistant',AI Autonomous Vision',AI Autonomous Vulnerability Assessment',AI Autonomous Web Security',AI Autonomous Workflow',AI Autonomous Writing',AI Autonomous Zero Trust Security'
         ].map((service) => {
 
             const path = '/' + service.toLowerCase().replace(/\s+/g,-').replace(/ai-autonomous-/,ai-autonomous-');"

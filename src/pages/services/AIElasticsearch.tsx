@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIElasticsearch() {
   const features = [
-    'AI-powered Elasticsearch optimization',
-    'Intelligent Elasticsearch management',;
+    'AI-powered Elasticsearch optimization',Intelligent Elasticsearch management',;
     'Automated Elasticsearch monitoring and alerting',;
     'Predictive analytics for Elasticsearch scaling',;
     'Smart Elasticsearch security and compliance',;

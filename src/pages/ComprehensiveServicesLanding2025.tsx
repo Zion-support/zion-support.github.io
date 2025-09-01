@@ -108,7 +108,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 
   const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
   const avgROI = INNOVATIVE_SERVICES_2025.reduce((sum, service) => {;
-    const roi = parseInt(service.roi.replace('%','));
+    const roi = parseInt(service.roi.replace('%',));
     return sum + roi;
   }, 0) / totalServices;
 

@@ -405,10 +405,10 @@ const ContentQualityAnalyzer = () => {
                               className={`text-sm font-medium ${getStatusColor(issue.status)}`}
                             >
                               {issue.status'
-                                .replace('_', ')
+                                .replace('_',)
                                 .charAt(0)
                                 .toUpperCase() +'
-                                issue.status.replace('_', ').slice(1)}
+                                issue.status.replace('_',).slice(1)}
                             </span>
                           </td>"
                           <td className="px-6 py-4 whitespace-nowrap">"

@@ -113,12 +113,7 @@ const SpaceTech = () => {
   ];
 
   const benefits = ['
-    'Enable global connectivity and coverage',
-    'Provide critical Earth observation data',
-    'Support space exploration missions',
-    'Enable advanced navigation systems',
-    'Support disaster response and monitoring',
-    'Drive innovation in space technology',
+    'Enable global connectivity and coverage',Provide critical Earth observation data',Support space exploration missions',Enable advanced navigation systems',Support disaster response and monitoring',Drive innovation in space technology',
   ];
 
   const services = [

@@ -69,9 +69,7 @@ const Accessibility: React.FC = () => {
         'Voice recognition software support for hands-free navigation',
       icon: Volume2,
       examples: ['
-        'Dragon NaturallySpeaking',
-        'Voice Control (macOS),
-        'Windows Speech Recognition',
+        'Dragon NaturallySpeaking',Voice Control (macOS),Windows Speech Recognition',
       ]},
     {
 
@@ -79,10 +77,7 @@ const Accessibility: React.FC = () => {
       description: 'Alternative input devices for users with limited mobility',
       icon: Mouse,
       examples: ['
-        'Head switches',
-        'Eye tracking',
-        'Sip and puff devices',
-        'Foot pedals',
+        'Head switches',Eye tracking',Sip and puff devices',Foot pedals',
       ]},
     {
 
@@ -90,10 +85,7 @@ const Accessibility: React.FC = () => {
       description: 'Optimized for mobile assistive technologies',
       icon: Smartphone,
       examples: ['
-        'iOS VoiceOver',
-        'Android TalkBack',
-        'Switch Control',
-        'AssistiveTouch',
+        'iOS VoiceOver',Android TalkBack',Switch Control',AssistiveTouch',
       ]},
   ];
 
@@ -131,44 +123,28 @@ const Accessibility: React.FC = () => {
       category: 'Visual Accessibility',
       icon: Eye,
       features: ['
-        'High contrast color schemes',
-        'Adjustable font sizes',
-        'Screen reader compatibility',
-        'Keyboard navigation support',
-        'Focus indicators and landmarks',
+        'High contrast color schemes',Adjustable font sizes',Screen reader compatibility',Keyboard navigation support',Focus indicators and landmarks',
       ]},
     {
 
       category: 'Auditory Accessibility',
       icon: Ear,
       features: ['
-        'Closed captions for videos',
-        'Audio descriptions',
-        'Visual alerts and notifications',
-        'Transcripts for audio content',
-        'Volume controls and audio alternatives',
+        'Closed captions for videos',Audio descriptions',Visual alerts and notifications',Transcripts for audio content',Volume controls and audio alternatives',
       ]},
     {
 
       category: 'Motor Accessibility',
       icon: Hand,
       features: ['
-        'Keyboard-only navigation',
-        'Voice control support',
-        'Switch device compatibility',
-        'Extended time limits',
-        'Large click targets',
+        'Keyboard-only navigation',Voice control support',Switch device compatibility',Extended time limits',Large click targets',
       ]},
     {
 
       category: 'Cognitive Accessibility',
       icon: Brain,
       features: ['
-        'Clear and simple language',
-        'Consistent navigation',
-        'Error prevention and recovery',
-        'Multiple ways to complete tasks',
-        'Reduced distractions and animations',
+        'Clear and simple language',Consistent navigation',Error prevention and recovery',Multiple ways to complete tasks',Reduced distractions and animations',
       ]},
   ];
 

@@ -23,10 +23,7 @@ const ITInfrastructure = () => {
       description:'
         'Enterprise-grade server solutions with high availability and performance optimization.',
       features: ['
-        'Load balancing',
-        'Auto-scaling',
-        'High availability',
-        'Performance monitoring',
+        'Load balancing',Auto-scaling',High availability',Performance monitoring',
       ]},
     {
 "
@@ -35,10 +32,7 @@ const ITInfrastructure = () => {
       description:'
         'Multi-cloud infrastructure management and optimization services.',
       features: ['
-        'Multi-cloud strategy',
-        'Cost optimization',
-        'Security compliance',
-        'Migration support',
+        'Multi-cloud strategy',Cost optimization',Security compliance',Migration support',
       ]},
     {
 "
@@ -47,10 +41,7 @@ const ITInfrastructure = () => {
       description:'
         'Comprehensive database infrastructure and management solutions.',
       features: ['
-        'Performance tuning',
-        'Backup & recovery',
-        'Security hardening',
-        'Monitoring',
+        'Performance tuning',Backup & recovery',Security hardening',Monitoring',
       ]},
     {
 "
@@ -59,10 +50,7 @@ const ITInfrastructure = () => {
       description:'
         'Robust network design and implementation for enterprise environments.',
       features: ['
-        'Network design',
-        'Security implementation',
-        'Performance optimization',
-        '24/7 monitoring',
+        'Network design',Security implementation',Performance optimization',24/7 monitoring',
       ]},
     {
 "
@@ -71,10 +59,7 @@ const ITInfrastructure = () => {
       description:'
         'Advanced security infrastructure and threat protection systems.',
       features: ['
-        'Firewall management',
-        'Intrusion detection',
-        'Vulnerability assessment',
-        'Incident response',
+        'Firewall management',Intrusion detection',Vulnerability assessment',Incident response',
       ]},
     {
 "
@@ -83,20 +68,12 @@ const ITInfrastructure = () => {
       description:'
         'Infrastructure performance tuning and optimization services.',
       features: ['
-        'Performance analysis',
-        'Capacity planning',
-        'Optimization strategies',
-        'Continuous monitoring',
+        'Performance analysis',Capacity planning',Optimization strategies',Continuous monitoring',
       ]},
   ];
 
   const benefits = ['
-    '99.9% uptime guarantee',
-    '24/7 monitoring and support',
-    'Scalable architecture',
-    'Security-first approach',
-    'Cost optimization',
-    'Compliance ready',
+    '99.9% uptime guarantee',24/7 monitoring and support',Scalable architecture',Security-first approach',Cost optimization',Compliance ready',
   ];
 
   return ("

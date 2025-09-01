@@ -57,17 +57,7 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
   const [isMuted, setIsMuted] = useState(false);
 
   const categories = ['
-    'All',
-    'AI & Analytics',
-    'Cybersecurity',
-    'AI & Operations',
-    'Blockchain & Security',
-    'AI & Legal Tech',
-    'IoT & Edge Computing',
-    'AI & Healthcare',
-    'Quantum Computing & AI',
-    'AI & Fintech',
-    'Sustainability & Consulting',
+    'All',AI & Analytics',Cybersecurity',AI & Operations',Blockchain & Security',AI & Legal Tech',IoT & Edge Computing',AI & Healthcare',Quantum Computing & AI',AI & Fintech',Sustainability & Consulting',
   ];
 
   const filteredServices = innovativeMicroSAASServices2029.filter(service => {

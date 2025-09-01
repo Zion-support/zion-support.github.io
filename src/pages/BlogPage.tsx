@@ -91,13 +91,7 @@ export function BlogPage(...args: any[]): any {
   ];
 
   const categories = ['
-    'All Posts',
-    'AI & Technology',
-    'Quantum Computing',
-    'Cybersecurity',
-    'Digital Transformation',
-    'Edge Computing',
-    'Healthcare AI',
+    'All Posts',AI & Technology',Quantum Computing',Cybersecurity',Digital Transformation',Edge Computing',Healthcare AI',
   ];
 
   return()

@@ -23,15 +23,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {
     website: 'https://ziontechgroup.com'} as const;
 
   const benefits: string[] = ['
-    'High-ROI projects with measurable KPIs',
-    'Transparent pricing with market references',
-    'Fast onboarding with templates and playbooks',
-    'Enterprise-grade security and compliance',
-    '24/7 support with SLAs',
-    'Proven architectures and reference implementations',
-    'No long-term lock-in; cancel anytime',
-    'SOC 2-aligned processes and data handling',
-    'Flexible deployment: SaaS or self-hosted options',
+    'High-ROI projects with measurable KPIs',Transparent pricing with market references',Fast onboarding with templates and playbooks',Enterprise-grade security and compliance',24/7 support with SLAs',Proven architectures and reference implementations',No long-term lock-in; cancel anytime',SOC 2-aligned processes and data handling',Flexible deployment: SaaS or self-hosted options',
   ];
 
   const spotlight = [
@@ -40,9 +32,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {
       title: 'Developer Productivity Copilot',
       price: 'Typical: $19–$39/dev/mo',
       refs: ['
-        'https://github.com/features/copilot#pricing',
-        'https://codeium.com/pricing',
-        'https://buildpulse.io/pricing',
+        'https://github.com/features/copilot#pricing',https://codeium.com/pricing',https://buildpulse.io/pricing',
       ],
       href: '/services/developer-productivity-copilot'},
     {
@@ -50,9 +40,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {
       title: 'AI Sales Assistant',
       price: 'Typical: $30–$150/user/mo',
       refs: ['
-        'https://www.apollo.io/pricing',
-        'https://www.lemlist.com/pricing',
-        'https://www.hubspot.com/pricing/sales',
+        'https://www.apollo.io/pricing',https://www.lemlist.com/pricing',https://www.hubspot.com/pricing/sales',
       ],
       href: '/services/ai-sales-assistant'},
     {
@@ -60,9 +48,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {
       title: 'Security Posture Guardian',
       price: 'Typical: $100–$2,000/mo',
       refs: ['
-        'https://www.wiz.io/pricing',
-        'https://snyk.io/plans/',
-        'https://www.paloaltonetworks.com/prisma/cloud/pricing',
+        'https://www.wiz.io/pricing',https://snyk.io/plans/',https://www.paloaltonetworks.com/prisma/cloud/pricing',
       ],
       href: '/services/security-posture-guardian'},
     {
@@ -70,9 +56,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {
       title: 'AI Data Pipeline Optimizer',
       price: 'Typical: $200–$2,000/mo',
       refs: ['
-        'https://www.databricks.com/product/pricing',
-        'https://www.snowflake.com/pricing/',
-        'https://www.getdbt.com/pricing',
+        'https://www.databricks.com/product/pricing',https://www.snowflake.com/pricing/',https://www.getdbt.com/pricing',
       ],
       href: '/services/ai-data-pipeline-optimizer'},
     {
@@ -80,8 +64,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {
       title: 'Privacy Request Portal (DSAR),
       price: 'From $99/mo + usage',
       refs: ['
-        'https://transcend.io/pricing/',
-        'https://www.onetrust.com/pricing/',
+        'https://transcend.io/pricing/',https://www.onetrust.com/pricing/',
       ],
       href: '/services/gdpr-dsar-portal'},
     {

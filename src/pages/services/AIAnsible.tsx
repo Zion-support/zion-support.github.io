@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIAnsible() {
   const features = [
-    'AI-powered Ansible optimization',
-    'Intelligent Ansible management',;
+    'AI-powered Ansible optimization',Intelligent Ansible management',;
     'Automated Ansible monitoring and alerting',;
     'Predictive analytics for Ansible scaling',;
     'Smart Ansible security and compliance',;

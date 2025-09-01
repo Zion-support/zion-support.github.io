@@ -90,15 +90,10 @@ export default function ComprehensiveServices() {
           price: '$2,500/month',
           marketPrice: '$3,000-5,000/month',
           features: ['
-            'Real-time Analytics',
-            'Predictive Modeling',
-            'Custom Dashboards',
-            'API Integration',
+            'Real-time Analytics',Predictive Modeling',Custom Dashboards',API Integration',
           ],
           benefits: ['
-            '40% faster decisions',
-            '25% cost reduction',
-            'Real-time insights',
+            '40% faster decisions',25% cost reduction',Real-time insights',
           ],
           icon: BarChart3,
           category: 'ai-ml',
@@ -111,14 +106,10 @@ export default function ComprehensiveServices() {
           price: '$1,800/month',
           marketPrice: '$2,200-4,000/month',
           features: ['
-            'Customer Journey Mapping',
-            'Sentiment Analysis',
-            'Personalization Engine',
+            'Customer Journey Mapping',Sentiment Analysis',Personalization Engine',
           ],
           benefits: ['
-            '35% satisfaction increase',
-            '28% higher conversions',
-            '24/7 support',
+            '35% satisfaction increase',28% higher conversions',24/7 support',
           ],
           icon: Users,
           category: 'ai-ml',
@@ -131,14 +122,10 @@ export default function ComprehensiveServices() {
           price: '$3,200/month',
           marketPrice: '$4,000-7,000/month',
           features: ['
-            'Real-time Detection',
-            'Behavioral Analysis',
-            'Automated Response',
+            'Real-time Detection',Behavioral Analysis',Automated Response',
           ],
           benefits: ['
-            '99.9% detection rate',
-            '60% faster response',
-            'Reduced false positives',
+            '99.9% detection rate',60% faster response',Reduced false positives',
           ],
           icon: Shield,
           category: 'ai-ml',
@@ -160,14 +147,10 @@ export default function ComprehensiveServices() {
           price: '$150/month',
           marketPrice: '$200-400/month',
           features: ['
-            'AI Resource Optimization',
-            'Risk Prediction',
-            'Team Collaboration',
+            'AI Resource Optimization',Risk Prediction',Team Collaboration',
           ],
           benefits: ['
-            '30% faster completion',
-            '20% resource optimization',
-            'Improved productivity',
+            '30% faster completion',20% resource optimization',Improved productivity',
           ],
           icon: Workflow,
           category: 'micro-saas',
@@ -180,14 +163,10 @@ export default function ComprehensiveServices() {
           price: '$200/month',
           marketPrice: '$250-500/month',
           features: ['
-            'Demand Forecasting',
-            'Automated Reordering',
-            'Multi-location Support',
+            'Demand Forecasting',Automated Reordering',Multi-location Support',
           ],
           benefits: ['
-            '25% cost reduction',
-            '99% stock availability',
-            'Automated procurement',
+            '25% cost reduction',99% stock availability',Automated procurement',
           ],
           icon: Truck,
           category: 'micro-saas',
@@ -200,14 +179,10 @@ export default function ComprehensiveServices() {
           price: '$120/month',
           marketPrice: '$150-300/month',
           features: ['
-            'Multi-format Content',
-            'SEO Optimization',
-            'Brand Consistency',
+            'Multi-format Content',SEO Optimization',Brand Consistency',
           ],
           benefits: ['
-            '10x faster creation',
-            'Improved SEO rankings',
-            'Consistent brand voice',
+            '10x faster creation',Improved SEO rankings',Consistent brand voice',
           ],
           icon: Brain,
           category: 'micro-saas',
@@ -230,14 +205,10 @@ export default function ComprehensiveServices() {
           price: '$5,000/project',
           marketPrice: '$8,000-15,000/project',
           features: ['
-            'Multi-cloud Strategy',
-            'Cost Optimization',
-            'Performance Tuning',
+            'Multi-cloud Strategy',Cost Optimization',Performance Tuning',
           ],
           benefits: ['
-            '40% cost reduction',
-            '99.9% uptime',
-            'Scalable infrastructure',
+            '40% cost reduction',99.9% uptime',Scalable infrastructure',
           ],
           icon: Cloud,
           category: 'it-infrastructure',
@@ -250,14 +221,10 @@ export default function ComprehensiveServices() {
           price: '$2,800/month',
           marketPrice: '$3,500-6,000/month',
           features: ['
-            'CI/CD Pipelines',
-            'Infrastructure as Code',
-            'Automated Testing',
+            'CI/CD Pipelines',Infrastructure as Code',Automated Testing',
           ],
           benefits: ['
-            '80% faster deployments',
-            'Reduced errors',
-            'Improved code quality',
+            '80% faster deployments',Reduced errors',Improved code quality',
           ],
           icon: Code,
           category: 'it-infrastructure',
@@ -271,14 +238,10 @@ export default function ComprehensiveServices() {
           price: '$4,500/month',
           marketPrice: '$6,000-12,000/month',
           features: ['
-            'Compliance Automation',
-            'Risk Assessment',
-            'Audit Preparation',
+            'Compliance Automation',Risk Assessment',Audit Preparation',
           ],
           benefits: ['
-            '100% compliance assurance',
-            'Reduced audit time',
-            'Risk mitigation',
+            '100% compliance assurance',Reduced audit time',Risk mitigation',
           ],
           icon: Lock,
           category: 'it-infrastructure',
@@ -300,14 +263,10 @@ export default function ComprehensiveServices() {
           price: '$15,000/month',
           marketPrice: '$20,000-50,000/month',
           features: ['
-            'Quantum Algorithms',
-            'Optimization Problems',
-            'Cryptography',
+            'Quantum Algorithms',Optimization Problems',Cryptography',
           ],
           benefits: ['
-            'Exponential speed improvements',
-            'Unbreakable encryption',
-            'Complex problem solving',
+            'Exponential speed improvements',Unbreakable encryption',Complex problem solving',
           ],
           icon: Atom,
           category: 'quantum-tech',
@@ -321,14 +280,10 @@ export default function ComprehensiveServices() {
           price: '$3,500/month',
           marketPrice: '$5,000-15,000/month',
           features: ['
-            'Smart Contracts',
-            'Supply Chain Tracking',
-            'Digital Identity',
+            'Smart Contracts',Supply Chain Tracking',Digital Identity',
           ],
           benefits: ['
-            'Enhanced transparency',
-            'Reduced fraud',
-            'Automated processes',
+            'Enhanced transparency',Reduced fraud',Automated processes',
           ],
           icon: LinkIcon,
           category: 'quantum-tech',
@@ -341,14 +296,10 @@ export default function ComprehensiveServices() {
           price: '$2,200/month',
           marketPrice: '$3,000-8,000/month',
           features: ['
-            'Edge Analytics',
-            'Real-time Processing',
-            'Device Management',
+            'Edge Analytics',Real-time Processing',Device Management',
           ],
           benefits: ['
-            'Ultra-low latency',
-            'Reduced bandwidth costs',
-            'Real-time insights',
+            'Ultra-low latency',Reduced bandwidth costs',Real-time insights',
           ],
           icon: Cpu,
           category: 'quantum-tech',
@@ -372,14 +323,10 @@ export default function ComprehensiveServices() {
           price: '$800/month',
           marketPrice: '$1,000-2,500/month',
           features: ['
-            'Carbon Tracking',
-            'Sustainability Reporting',
-            'Goal Setting',
+            'Carbon Tracking',Sustainability Reporting',Goal Setting',
           ],
           benefits: ['
-            'Reduced carbon footprint',
-            'Cost savings',
-            'Regulatory compliance',
+            'Reduced carbon footprint',Cost savings',Regulatory compliance',
           ],
           icon: Leaf,
           category: 'green-tech',
@@ -392,14 +339,10 @@ export default function ComprehensiveServices() {
           price: '$1,500/month',
           marketPrice: '$2,000-4,000/month',
           features: ['
-            'Energy Monitoring',
-            'AI Optimization',
-            'Predictive Maintenance',
+            'Energy Monitoring',AI Optimization',Predictive Maintenance',
           ],
           benefits: ['
-            '30% energy cost reduction',
-            'Predictive maintenance',
-            'Real-time monitoring',
+            '30% energy cost reduction',Predictive maintenance',Real-time monitoring',
           ],
           icon: Zap,
           category: 'green-tech',
@@ -421,14 +364,10 @@ export default function ComprehensiveServices() {
           price: '$2,800/month',
           marketPrice: '$4,000-10,000/month',
           features: ['
-            'Satellite Imagery',
-            'AI Analysis',
-            'Real-time Monitoring',
+            'Satellite Imagery',AI Analysis',Real-time Monitoring',
           ],
           benefits: ['
-            'Global coverage',
-            'Real-time insights',
-            'Cost-effective monitoring',
+            'Global coverage',Real-time insights',Cost-effective monitoring',
           ],
           icon: Satellite,
           category: 'space-tech',
@@ -456,12 +395,12 @@ export default function ComprehensiveServices() {
       const matchesPrice ='
         priceRange === 'all' ||'
         (priceRange === 'low' &&'
-          parseFloat(service.price.replace(/[^0-9.]/g,')) < 1000) ||'
+          parseFloat(service.price.replace(/[^0-9.]/g,)) < 1000) ||'
         (priceRange === 'medium' &&'
-          parseFloat(service.price.replace(/[^0-9.]/g,')) >= 1000 &&'
-          parseFloat(service.price.replace(/[^0-9.]/g,')) < 5000) ||'
+          parseFloat(service.price.replace(/[^0-9.]/g,)) >= 1000 &&'
+          parseFloat(service.price.replace(/[^0-9.]/g,)) < 5000) ||'
         (priceRange === 'high' &&'
-          parseFloat(service.price.replace(/[^0-9.]/g,')) >= 5000);
+          parseFloat(service.price.replace(/[^0-9.]/g,)) >= 5000);
 
       return matchesCategory && matchesSearch && matchesPrice;
     }) ) ;

@@ -126,12 +126,7 @@ export default function HelpCenter() {
           href: '/help/privacy-settings'},
       ]}};
   const popularArticles = ['
-    'How to create your first account',
-    'Understanding the marketplace',
-    'Creating a talent profile',
-    'Finding and hiring talent',
-    'Payment and escrow system',
-    'Account security best practices',
+    'How to create your first account',Understanding the marketplace',Creating a talent profile',Finding and hiring talent',Payment and escrow system',Account security best practices',
   ];
   return()
     <>

@@ -130,11 +130,7 @@ export default function AIWorkflowAutomation(...args[]):  {
       period: '/month',
       description: 'Perfect for small teams getting started with automation',
       features: ['
-        'Up to 10 workflows',
-        '5 user accounts',
-        'Basic integrations',
-        'Email support',
-        'Standard templates'
+        'Up to 10 workflows',5 user accounts',Basic integrations',Email support',Standard templates'
       ],
       cta: 'Start Free Trial',
       popular: false
@@ -146,13 +142,7 @@ export default function AIWorkflowAutomation(...args[]):  {
       period: '/month',
       description: 'Ideal for growing businesses with complex automation needs',
       features: ['
-        'Up to 100 workflows',
-        '25 user accounts',
-        'Advanced integrations',
-        'Priority support',
-        'Custom templates',
-        'Advanced analytics',
-        'API access'
+        'Up to 100 workflows',25 user accounts',Advanced integrations',Priority support',Custom templates',Advanced analytics',API access'
       ],
       cta: 'Start Free Trial',
       popular: true
@@ -164,13 +154,7 @@ export default function AIWorkflowAutomation(...args[]):  {
       period: '',
       description: 'For large organizations requiring enterprise-grade automation',
       features: ['
-        'Unlimited workflows',
-        'Unlimited users',
-        'All integrations',
-        '24/7 support',
-        'Custom development',
-        'Advanced security',
-        'SLA guarantees'
+        'Unlimited workflows',Unlimited users',All integrations',24/7 support',Custom development',Advanced security',SLA guarantees'
       ],
       cta: 'Contact Sales',
       popular: false

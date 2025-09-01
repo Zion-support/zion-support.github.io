@@ -187,14 +187,7 @@ const AIAutonomousDataSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Data Encryption',
-                'Data Loss Prevention',
-                'Data Access Control',
-                'Data Backup Security',
-                'Data Privacy Protection',
-                'Data Compliance Security',
-                'Data Breach Detection',
-                'Data Recovery Security',
+                'Data Encryption',Data Loss Prevention',Data Access Control',Data Backup Security',Data Privacy Protection',Data Compliance Security',Data Breach Detection',Data Recovery Security',
               ].map(type => (
                 <div
                   key={type}"

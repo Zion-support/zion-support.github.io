@@ -165,14 +165,7 @@ const AIBusinessIntelligence = () => {
                 </h3>"
                 <div className="space-y-4">
                   {['
-                    'Advanced Statistical Analysis',
-                    'Machine Learning Models',
-                    'Natural Language Processing',
-                    'Pattern Recognition',
-                    'Anomaly Detection',
-                    'Trend Forecasting',
-                    'Correlation Analysis',
-                    'Predictive Modeling',
+                    'Advanced Statistical Analysis',Machine Learning Models',Natural Language Processing',Pattern Recognition',Anomaly Detection',Trend Forecasting',Correlation Analysis',Predictive Modeling',
                   ].map((capability, index) => ("
                     <div key={index} className="flex items-center space-x-3">"
                       <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />"
@@ -188,14 +181,7 @@ const AIBusinessIntelligence = () => {
                 </h3>"
                 <div className="space-y-4">
                   {['
-                    'Interactive Dashboards',
-                    'Custom Report Builder',
-                    'Real-time Data Streaming',
-                    'Multi-source Data Integration',
-                    'Automated Insights Generation',
-                    'Collaborative Analytics',
-                    'Mobile BI Access',
-                    'Advanced Visualization',
+                    'Interactive Dashboards',Custom Report Builder',Real-time Data Streaming',Multi-source Data Integration',Automated Insights Generation',Collaborative Analytics',Mobile BI Access',Advanced Visualization',
                   ].map((capability, index) => ("
                     <div key={index} className="flex items-center space-x-3">"
                       <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />"

@@ -8,14 +8,7 @@ import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, PRICING_TIERS, CONTACT_INFO
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, CheckCircle, X, Phone, Mail, MapPin, Globe, ArrowRight, Zap, Users, TrendingUp import { Link } from "react-router-dom";
 const categoryIcons = {
 
-  'AI Business Solutions': Brain,
-    'IT Infrastructure': Cloud,
-    'Data Analytics': BarChart3,
-    'AI Development': Code,
-    'FinTech': DollarSign,
-    'HealthTech': Heart,
-    'E-commerce': ShoppingCart,
-  'EdTech': GraduationCap
+  'AI Business Solutions': Brain,IT Infrastructure': Cloud,Data Analytics': BarChart3,AI Development': Code,FinTech': DollarSign,HealthTech': Heart,E-commerce': ShoppingCart,EdTech': GraduationCap
 
 };
 const pricingFeatures = {

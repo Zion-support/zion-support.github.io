@@ -197,14 +197,7 @@ const AIAutonomousServerlessSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Function Security',
-                'Event Security',
-                'Trigger Security',
-                'Authentication Security',
-                'Authorization Security',
-                'Data Security',
-                'Network Security',
-                'Runtime Security',
+                'Function Security',Event Security',Trigger Security',Authentication Security',Authorization Security',Data Security',Network Security',Runtime Security',
               ].map(type => (
                 <div
                   key={type}"

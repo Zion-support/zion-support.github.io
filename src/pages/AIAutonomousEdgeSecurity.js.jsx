@@ -187,14 +187,7 @@ const AIAutonomousEdgeSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Device Security',
-                'Network Security',
-                'Data Security',
-                'Application Security',
-                'Authentication Security',
-                'Authorization Security',
-                'Communication Security',
-                'Runtime Security',
+                'Device Security',Network Security',Data Security',Application Security',Authentication Security',Authorization Security',Communication Security',Runtime Security',
               ].map(type => (
                 <div
                   key={type}"

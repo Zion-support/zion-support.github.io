@@ -91,11 +91,7 @@ const AIFinancialComplianceAssistant = () => {
       period: '/month',
       description: 'Perfect for small financial institutions and startups',
       features: ['
-        'Up to 10,000 transactions/month',
-        'Basic compliance monitoring',
-        'Standard reporting',
-        'Email alerts',
-        'Email support',
+        'Up to 10,000 transactions/month',Basic compliance monitoring',Standard reporting',Email alerts',Email support',
       ],
       popular: false},
     {
@@ -105,14 +101,7 @@ const AIFinancialComplianceAssistant = () => {
       period: '/month',
       description: 'Ideal for growing financial services companies',
       features: ['
-        'Up to 100,000 transactions/month',
-        'Advanced AI compliance detection',
-        'Real-time monitoring',
-        'Custom reporting',
-        'Priority support',
-        'API access',
-        'Advanced analytics',
-        'Multi-user access',
+        'Up to 100,000 transactions/month',Advanced AI compliance detection',Real-time monitoring',Custom reporting',Priority support',API access',Advanced analytics',Multi-user access',
       ],
       popular: true},
     {
@@ -123,15 +112,7 @@ const AIFinancialComplianceAssistant = () => {
       description:'
         'For large financial institutions and multinational corporations',
       features: ['
-        'Unlimited transactions',
-        'Custom AI models',
-        'White-label solution',
-        'Dedicated support',
-        'Advanced analytics',
-        'Custom integrations',
-        'On-premise deployment',
-        'SLA guarantees',
-        'Custom training',
+        'Unlimited transactions',Custom AI models',White-label solution',Dedicated support',Advanced analytics',Custom integrations',On-premise deployment',SLA guarantees',Custom training',
       ],
       popular: false},
   ];

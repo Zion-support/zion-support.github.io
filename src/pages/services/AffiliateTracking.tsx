@@ -47,10 +47,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {
       unit: 'month',
       bestFor: 'Founders validating their first affiliate program',
       bullets: ['
-        'Up to 200 partners',
-        'Basic tracking links and coupons',
-        'Manual approvals and payouts',
-        'Email support'
+        'Up to 200 partners',Basic tracking links and coupons',Manual approvals and payouts',Email support'
       ]
     },
     {
@@ -60,11 +57,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {
       unit: 'month',
       bestFor: 'Scaling DTC and SaaS brands with multiple campaigns',
       bullets: ['
-        'Up to 2,500 partners',
-        'Attribution across links, QR and coupons',
-        'Fraud prevention + sandbox',
-        'Automated Stripe/PayPal payouts',
-        'Slack alerts and webhooks'
+        'Up to 2,500 partners',Attribution across links, QR and coupons',Fraud prevention + sandbox',Automated Stripe/PayPal payouts',Slack alerts and webhooks'
       ]
     },
     {

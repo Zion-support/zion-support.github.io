@@ -185,14 +185,7 @@ const AIAutonomousQualityAssurance = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Software Quality Assurance',
-                'Product Quality Assurance',
-                'Service Quality Assurance',
-                'Process Quality Assurance',
-                'Data Quality Assurance',
-                'Performance Quality Assurance',
-                'Security Quality Assurance',
-                'Compliance Quality Assurance',
+                'Software Quality Assurance',Product Quality Assurance',Service Quality Assurance',Process Quality Assurance',Data Quality Assurance',Performance Quality Assurance',Security Quality Assurance',Compliance Quality Assurance',
               ].map(type => (
                 <div
                   key={type}"

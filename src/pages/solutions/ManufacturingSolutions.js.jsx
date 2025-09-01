@@ -50,12 +50,7 @@ export default function ManufacturingSolutions() {
       description: 'AI-powered process improvement and efficiency optimization'},
   ];
   const benefits = ['
-    'Reduce downtime by 40-60%',
-    'Improve product quality by 25-35%',
-    'Lower production costs by 20-30%',
-    'Increase production efficiency',
-    'Better resource utilization',
-    'Enhanced safety and compliance',
+    'Reduce downtime by 40-60%',Improve product quality by 25-35%',Lower production costs by 20-30%',Increase production efficiency',Better resource utilization',Enhanced safety and compliance',
   ];
   const solutions = [
     {
@@ -78,14 +73,7 @@ export default function ManufacturingSolutions() {
       description: 'Intelligent inventory and supply chain management'},
   ];
   const industries = ['
-    'Automotive',
-    'Electronics',
-    'Pharmaceuticals',
-    'Food & Beverage',
-    'Aerospace',
-    'Textiles',
-    'Chemicals',
-    'Heavy Machinery',
+    'Automotive',Electronics',Pharmaceuticals',Food & Beverage',Aerospace',Textiles',Chemicals',Heavy Machinery',
   ];
   return()
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">

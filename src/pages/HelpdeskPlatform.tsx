@@ -93,10 +93,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
       description: 'Multi-channel customer support and ticket management',
       icon: MessageCircle,
       benefits: ['
-        'Email support',
-        'Live chat',
-        'Phone support',
-        'Social media integration',
+        'Email support',Live chat',Phone support',Social media integration',
       ]},
     {
 
@@ -104,10 +101,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
       description: 'Employee IT support and technical assistance',
       icon: Cpu,
       benefits: ['
-        'Hardware support',
-        'Software assistance',
-        'Network issues',
-        'Access management',
+        'Hardware support',Software assistance',Network issues',Access management',
       ]},
     {
 
@@ -115,10 +109,7 @@ export default function HelpdeskPlatform(...args: any[]): any {
       description: 'Self-service knowledge base and documentation',
       icon: FileText,
       benefits: ['
-        'FAQ management',
-        'Documentation',
-        'Video tutorials',
-        'Search functionality',
+        'FAQ management',Documentation',Video tutorials',Search functionality',
       ]},
     {
 
@@ -126,24 +117,12 @@ export default function HelpdeskPlatform(...args: any[]): any {
       description: 'AI-powered automation and intelligent routing',
       icon: Brain,
       benefits: ['
-        'Auto-routing',
-        'Chatbots',
-        'Predictive analytics',
-        'Smart suggestions',
+        'Auto-routing',Chatbots',Predictive analytics',Smart suggestions',
       ]},
   ];
 
   const integrations = ['
-    'CRM Systems',
-    'Email Platforms',
-    'Chat Tools',
-    'Social Media',
-    'Project Management',
-    'Analytics Tools',
-    'Cloud Services',
-    'Mobile Apps',
-    'API Access',
-    'Webhooks',
+    'CRM Systems',Email Platforms',Chat Tools',Social Media',Project Management',Analytics Tools',Cloud Services',Mobile Apps',API Access',Webhooks',
   ];
 
   return()

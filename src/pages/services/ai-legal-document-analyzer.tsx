@@ -76,11 +76,7 @@ const AILegalDocumentAnalyzer = () => {
       period: '/month',
       description: 'Perfect for small law firms and solo practitioners',
       features: ['
-        'Up to 100 documents/month',
-        'Basic AI analysis',
-        'Risk assessment',
-        'Email support',
-        'Standard compliance checks',
+        'Up to 100 documents/month',Basic AI analysis',Risk assessment',Email support',Standard compliance checks',
       ],
       popular: false},
     {
@@ -90,13 +86,7 @@ const AILegalDocumentAnalyzer = () => {
       period: '/month',
       description: 'Ideal for growing legal practices',
       features: ['
-        'Up to 1,000 documents/month',
-        'Advanced AI analysis',
-        'Custom risk scoring',
-        'Priority support',
-        'Advanced compliance monitoring',
-        'Document comparison tools',
-        'API access',
+        'Up to 1,000 documents/month',Advanced AI analysis',Custom risk scoring',Priority support',Advanced compliance monitoring',Document comparison tools',API access',
       ],
       popular: true},
     {
@@ -106,14 +96,7 @@ const AILegalDocumentAnalyzer = () => {
       period: '/month',
       description: 'For large law firms and corporate legal departments',
       features: ['
-        'Unlimited documents',
-        'Custom AI models',
-        'White-label solution',
-        'Dedicated support',
-        'Advanced analytics',
-        'Custom integrations',
-        'On-premise deployment',
-        'SLA guarantees',
+        'Unlimited documents',Custom AI models',White-label solution',Dedicated support',Advanced analytics',Custom integrations',On-premise deployment',SLA guarantees',
       ],
       popular: false},
   ];

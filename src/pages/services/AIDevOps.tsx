@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDevOps() {
   const features = [
-    'AI-powered DevOps optimization',
-    'Intelligent DevOps pipeline management',;
+    'AI-powered DevOps optimization',Intelligent DevOps pipeline management',;
     'Automated DevOps monitoring and alerting',;
     'Predictive analytics for DevOps scaling',;
     'Smart DevOps security and compliance',;

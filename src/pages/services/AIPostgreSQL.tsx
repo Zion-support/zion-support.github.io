@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPostgreSQL() {
   const features = [
-    'AI-powered PostgreSQL query optimization',
-    'Intelligent database indexing and partitioning',;
+    'AI-powered PostgreSQL query optimization',Intelligent database indexing and partitioning',;
     'Automated PostgreSQL performance monitoring',;
     'Predictive analytics for database scaling',;
     'Smart PostgreSQL security and compliance',;

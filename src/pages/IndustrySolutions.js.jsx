@@ -21,34 +21,10 @@ const IndustrySolutions = () => {
   const [selectedSolutionType, setSelectedSolutionType] = useState('all');
   // Industry-specific solutions data
   const industries = ['
-    'all',
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Logistics',
-    'Real Estate',
-    'Energy',
-    'Cybersecurity',
-    'Legal',
-    'Media',
-    'Transportation',
+    'all',Healthcare',Finance',Manufacturing',Retail',Education',Logistics',Real Estate',Energy',Cybersecurity',Legal',Media',Transportation',
   ];
   const solutionTypes = ['
-    'all',
-    'Digital Health',
-    'FinTech',
-    'Industry 4.0',
-    'Digital Commerce',
-    'EdTech',
-    'Supply Chain',
-    'PropTech',
-    'Energy Tech',
-    'Security',
-    'LegalTech',
-    'MediaTech',
-    'Mobility',
+    'all',Digital Health',FinTech',Industry 4.0',Digital Commerce',EdTech',Supply Chain',PropTech',Energy Tech',Security',LegalTech',MediaTech',Mobility',
   ];
   const filteredSolutions = industrySolutions.filter(solution => {
 
@@ -201,7 +177,7 @@ const IndustrySolutions = () => {
                   {formatPrice(solution.price, solution.pricingModel)}
                 </div>"
                 <div className="text-sm text-gray-400">
-                  {solution.pricingModel.replace('-', ')}
+                  {solution.pricingModel.replace('-',)}
                 </div>
               </div>
 "

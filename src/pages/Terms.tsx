@@ -66,21 +66,11 @@ const Terms: React.FC = () => {
   ];
 
   const prohibitedActivities = ['
-    'Attempting to gain unauthorized access to our systems',
-    'Using our services for illegal or harmful purposes',
-    'Interfering with the operation of our services',
-    'Attempting to reverse engineer our software',
-    'Sharing account credentials with unauthorized users',
-    'Violating any applicable laws or regulations',
+    'Attempting to gain unauthorized access to our systems',Using our services for illegal or harmful purposes',Interfering with the operation of our services',Attempting to reverse engineer our software',Sharing account credentials with unauthorized users',Violating any applicable laws or regulations',
   ];
 
   const terminationConditions = ['
-    'Violation of these Terms of Service',
-    'Non-payment of service fees',
-    'Engagement in prohibited activities',
-    'Breach of security or privacy policies',
-    'Failure to comply with legal requirements',
-    'Mutual agreement to terminate services',
+    'Violation of these Terms of Service',Non-payment of service fees',Engagement in prohibited activities',Breach of security or privacy policies',Failure to comply with legal requirements',Mutual agreement to terminate services',
   ];
 
   const userObligations = [

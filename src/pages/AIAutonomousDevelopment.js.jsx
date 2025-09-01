@@ -177,14 +177,7 @@ const AIAutonomousDevelopment = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Web Development',
-                'Mobile Development',
-                'Desktop Development',
-                'API Development',
-                'Database Development',
-                'Cloud Development',
-                'AI Development',
-                'Game Development',
+                'Web Development',Mobile Development',Desktop Development',API Development',Database Development',Cloud Development',AI Development',Game Development',
               ].map(type => (
                 <div
                   key={type}"

@@ -111,8 +111,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             const notification = {
 
   id: Date.now().toString(),`
-                message: `${key.replace(/([A-Z])/g,
-  ' $1').toLowerCase()
+                message: `${key.replace(/([A-Z])/g, $1').toLowerCase()
 '`
 } ${value ? 'enabled' : 'disabled'}`,
                 type: 'success',

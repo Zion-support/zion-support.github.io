@@ -42,12 +42,7 @@ const features = [
     color: 'from-orange-500 to-red-500'},
 ];
 const benefits = ['
-  'Increase efficiency and productivity',
-  'Reduce operational costs',
-  'Improve accuracy and quality',
-  'Enable 24/7 automated operations',
-  'Scale operations seamlessly',
-  'Gain competitive advantage',
+  'Increase efficiency and productivity',Reduce operational costs',Improve accuracy and quality',Enable 24/7 automated operations',Scale operations seamlessly',Gain competitive advantage',
 ];
 export { function };
 export default function AICodeGenerationEnterprise() {

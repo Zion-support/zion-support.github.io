@@ -23,8 +23,7 @@ export const Grid = {
 
   render: () => {
 
-        localStorage.setItem('marketplaceView',
-  'grid');
+        localStorage.setItem('marketplaceView',grid');
         return <Marketplace />;
     
 
@@ -39,8 +38,7 @@ export const List = {
 
   render: () => {
 
-        localStorage.setItem('marketplaceView',
-  'list');
+        localStorage.setItem('marketplaceView',list');
         return <Marketplace />;
     
 

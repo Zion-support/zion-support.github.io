@@ -19,12 +19,7 @@ export default function AIAutonomousVehiclePlatform() {
       price: '$2,499/mo',
       description: 'Perfect for autonomous vehicle development teams',
       details: ['
-        'Up to 5 vehicle simulations',
-        'Basic autonomous driving algorithms',
-        'Standard support (8/5),
-        'API access and documentation',
-        'Community forum access',
-        'Basic safety testing tools'
+        'Up to 5 vehicle simulations',Basic autonomous driving algorithms',Standard support (8/5),API access and documentation',Community forum access',Basic safety testing tools'
       ]
     },
     {
@@ -33,13 +28,7 @@ export default function AIAutonomousVehiclePlatform() {
       price: '$5,999/mo',
       description: 'Ideal for fleet operators and transportation companies',
       details: ['
-        'Up to 25 vehicle management',
-        'Advanced autonomous algorithms',
-        'Priority support (12/7),
-        'Custom route optimization',
-        'Dedicated account manager',
-        'Fleet analytics dashboard',
-        'Safety compliance monitoring'
+        'Up to 25 vehicle management',Advanced autonomous algorithms',Priority support (12/7),Custom route optimization',Dedicated account manager',Fleet analytics dashboard',Safety compliance monitoring'
       ]
     },
     {
@@ -48,9 +37,7 @@ export default function AIAutonomousVehiclePlatform() {
       price: '$15,999/mo',
       description: 'Full-scale autonomous vehicle platform',
       details: ['
-        'Unlimited vehicle management',
-        'Custom autonomous algorithms',
-        '24/7 dedicated support',;
+        'Unlimited vehicle management',Custom autonomous algorithms',24/7 dedicated support',;
         'On-premise deployment options',;
         'Custom integrations and APIs',;
         'White-label solutions available',;

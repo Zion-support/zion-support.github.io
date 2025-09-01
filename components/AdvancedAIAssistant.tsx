@@ -136,9 +136,7 @@ const aiConversations: AIConversation[] = [
         timestamp: '2025-01-27 10:02',
         confidence: 0.94,
         suggestions: ['
-          'Optimize team allocation',
-          'Compress timeline by 15%',
-          'Implement automated testing',
+          'Optimize team allocation',Compress timeline by 15%',Implement automated testing',
         ]},
       {
 
@@ -201,9 +199,7 @@ const aiConversations: AIConversation[] = [
         timestamp: '2025-01-27 09:05',
         confidence: 0.97,
         suggestions: ['
-          'Customize message templates',
-          'Set up escalation rules',
-          'Configure delivery preferences',
+          'Customize message templates',Set up escalation rules',Configure delivery preferences',
         ]},
     ],
     insights: [

@@ -139,14 +139,7 @@ import { Shield, Lock, Eye, ArrowRight, CheckCircle, Zap, AlertTriangle, Users c
 "
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {['
-            'SOC 2 Type II',
-            'ISO 27001',
-            'GDPR Compliant',
-            'HIPAA Ready',
-            'PCI DSS',
-            'NIST Framework',
-            'FISMA Compliant',
-            'FedRAMP Ready'"
+            'SOC 2 Type II',ISO 27001',GDPR Compliant',HIPAA Ready',PCI DSS',NIST Framework',FISMA Compliant',FedRAMP Ready'"
         ].map((cert, index) => (<div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center">"
                   <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3"/>"
                   <h3 className="text-white font-semibold">{cert}</h3>

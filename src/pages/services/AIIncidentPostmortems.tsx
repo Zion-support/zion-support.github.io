@@ -104,12 +104,7 @@ export default function AIIncidentPostmortems(...args[]):  {
       period: '/month',
       description: 'Perfect for small teams and startups',
       features[;
-        'Up to 10 incidents per month',
-        'Basic AI analysis',
-        'Email support',
-        'Standard reporting',
-        'Team collaboration (up to 5 users),
-        'Basic integrations'
+        'Up to 10 incidents per month',Basic AI analysis',Email support',Standard reporting',Team collaboration (up to 5 users),Basic integrations'
       ],;
       cta: 'Start Free Trial',
       popular: false
@@ -121,14 +116,7 @@ export default function AIIncidentPostmortems(...args[]):  {
       period: '/month',
       description: 'Ideal for growing organizations',
       features[;
-        'Up to 50 incidents per month',
-        'Advanced AI analysis',
-        'Priority support',
-        'Custom reporting',
-        'Team collaboration (up to 20 users),
-        'Advanced integrations',
-        'API access',
-        'Custom workflows'
+        'Up to 50 incidents per month',Advanced AI analysis',Priority support',Custom reporting',Team collaboration (up to 20 users),Advanced integrations',API access',Custom workflows'
       ],;
       cta: 'Start Free Trial',
       popular: true
@@ -140,14 +128,7 @@ export default function AIIncidentPostmortems(...args[]):  {
       period: '/month',
       description: 'For large enterprises with complex needs',
       features[;
-        'Unlimited incidents',
-        'Premium AI analysis',
-        '24/7 dedicated support',
-        'Custom dashboards',
-        'Unlimited team members',
-        'Enterprise integrations',
-        'Advanced analytics',
-        'Custom AI models',;
+        'Unlimited incidents',Premium AI analysis',24/7 dedicated support',Custom dashboards',Unlimited team members',Enterprise integrations',Advanced analytics',Custom AI models',;
         'On-premise deployment option',;
         'Dedicated account manager';
       ],;

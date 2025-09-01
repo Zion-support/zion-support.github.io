@@ -95,8 +95,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
           <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
                 abi: [],
                 functions: ['function1',function2'],
-                events: ['Event1',
-  'Event2']
+                events: ['Event1',Event2']
 
 
 "

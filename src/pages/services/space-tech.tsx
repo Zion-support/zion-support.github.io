@@ -37,10 +37,7 @@ export default function SpaceTechnology(...args: any[]): any {
       description:'
         'Advanced satellite systems for communication, navigation, and Earth observation.',
       benefits: ['
-        'Global connectivity',
-        'Real-time data collection',
-        'Navigation systems',
-        'Environmental monitoring',
+        'Global connectivity',Real-time data collection',Navigation systems',Environmental monitoring',
       ]},
     {
 
@@ -49,10 +46,7 @@ export default function SpaceTechnology(...args: any[]): any {
       description:'
         'Innovative launch vehicle technology and space transportation solutions.',
       benefits: ['
-        'Cost-effective launches',
-        'Reusable systems',
-        'Payload optimization',
-        'Mission planning',
+        'Cost-effective launches',Reusable systems',Payload optimization',Mission planning',
       ]},
     {
 
@@ -61,10 +55,7 @@ export default function SpaceTechnology(...args: any[]): any {
       description:'
         'Artificial intelligence for autonomous space missions and operations.',
       benefits: ['
-        'Autonomous navigation',
-        'Predictive maintenance',
-        'Mission optimization',
-        'Risk assessment',
+        'Autonomous navigation',Predictive maintenance',Mission optimization',Risk assessment',
       ]},
     {
 
@@ -73,10 +64,7 @@ export default function SpaceTechnology(...args: any[]): any {
       description:'
         'Advanced communication networks for space missions and ground control.',
       benefits: ['
-        'High-bandwidth links',
-        'Low-latency communication',
-        'Global coverage',
-        'Secure transmission',
+        'High-bandwidth links',Low-latency communication',Global coverage',Secure transmission',
       ]},
   ];
 
@@ -85,37 +73,25 @@ export default function SpaceTechnology(...args: any[]): any {
 
       category: 'Commercial Space',
       services: ['
-        'Satellite internet and communications',
-        'Earth observation and imaging',
-        'Space tourism infrastructure',
-        'Commercial launch services',
+        'Satellite internet and communications',Earth observation and imaging',Space tourism infrastructure',Commercial launch services',
       ]},
     {
 
       category: 'Scientific Research',
       services: ['
-        'Space exploration missions',
-        'Astronomical observations',
-        'Climate and environmental research',
-        'Planetary science missions',
+        'Space exploration missions',Astronomical observations',Climate and environmental research',Planetary science missions',
       ]},
     {
 
       category: 'Defense & Security',
       services: ['
-        'Space situational awareness',
-        'Satellite defense systems',
-        'Intelligence gathering',
-        'Strategic communications',
+        'Space situational awareness',Satellite defense systems',Intelligence gathering',Strategic communications',
       ]},
     {
 
       category: 'Infrastructure',
       services: ['
-        'Space station development',
-        'Lunar and Mars bases',
-        'Space manufacturing',
-        'Resource utilization',
+        'Space station development',Lunar and Mars bases',Space manufacturing',Resource utilization',
       ]},
   ];
 

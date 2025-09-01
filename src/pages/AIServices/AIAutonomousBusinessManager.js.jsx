@@ -45,12 +45,7 @@ const features = [
     color: 'from-orange-500 to-red-500'},
 ];
 const benefits = ['
-  'Increase operational efficiency by up to 60%',
-  'Reduce decision-making time by 80%',
-  'Improve customer satisfaction scores by 45%',
-  'Boost revenue growth through data-driven insights',
-  'Minimize operational risks with predictive analytics',
-  'Scale operations seamlessly with intelligent automation',
+  'Increase operational efficiency by up to 60%',Reduce decision-making time by 80%',Improve customer satisfaction scores by 45%',Boost revenue growth through data-driven insights',Minimize operational risks with predictive analytics',Scale operations seamlessly with intelligent automation',
 ];
 const useCases = [
   {

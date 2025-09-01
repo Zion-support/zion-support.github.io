@@ -36,24 +36,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     color: 'from-red-500 to-pink-600',
     industry: 'healthcare',
     features[;
-      'Medical image analysis',
-      'Diagnostic assistance',
-      'Patient monitoring',
-      'Drug discovery',
-      'Personalized medicine',
-      'Clinical decision support'
+      'Medical image analysis',Diagnostic assistance',Patient monitoring',Drug discovery',Personalized medicine',Clinical decision support'
     ],;
     benefits[;
-      'Improved diagnostic accuracy',
-      'Reduced medical errors',
-      'Better patient outcomes',
-      'Cost-effective healthcare'
+      'Improved diagnostic accuracy',Reduced medical errors',Better patient outcomes',Cost-effective healthcare'
     ],;
     useCases[;
-      'Hospitals',
-      'Clinics',
-      'Medical imaging centers',
-      'Pharmaceutical companies'
+      'Hospitals',Clinics',Medical imaging centers',Pharmaceutical companies'
     ],;
     pricing: {
 
@@ -81,24 +70,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     color: 'from-emerald-500 to-green-600',
     industry: 'finance',
     features[;
-      'Fraud detection',
-      'Risk assessment',
-      'Automated trading',
-      'Regulatory compliance',
-      'Portfolio optimization',
-      'Customer analytics'
+      'Fraud detection',Risk assessment',Automated trading',Regulatory compliance',Portfolio optimization',Customer analytics'
     ],;
     benefits[;
-      '99.9% fraud detection',
-      'Reduced risk exposure',
-      'Automated compliance',
-      'Improved customer experience'
+      '99.9% fraud detection',Reduced risk exposure',Automated compliance',Improved customer experience'
     ],;
     useCases[;
-      'Banks',
-      'Credit unions',
-      'Investment firms',
-      'Insurance companies'
+      'Banks',Credit unions',Investment firms',Insurance companies'
     ],;
     pricing: {
 
@@ -126,24 +104,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     color: 'from-blue-500 to-indigo-600',
     industry: 'manufacturing',
     features[;
-      'Predictive maintenance',
-      'Quality control',
-      'Supply chain optimization',
-      'Real-time monitoring',
-      'Energy optimization',
-      'Automation integration'
+      'Predictive maintenance',Quality control',Supply chain optimization',Real-time monitoring',Energy optimization',Automation integration'
     ],;
     benefits[;
-      '30% reduction in downtime',
-      'Improved product quality',
-      'Reduced operational costs',
-      'Increased efficiency'
+      '30% reduction in downtime',Improved product quality',Reduced operational costs',Increased efficiency'
     ],;
     useCases[;
-      'Automotive manufacturing',
-      'Electronics production',
-      'Food processing',
-      'Chemical manufacturing'
+      'Automotive manufacturing',Electronics production',Food processing',Chemical manufacturing'
     ],;
     pricing: {
 
@@ -171,24 +138,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     color: 'from-purple-500 to-pink-600',
     industry: 'retail',
     features[;
-      'Customer analytics',
-      'Inventory optimization',
-      'Personalized marketing',
-      'Fraud prevention',
-      'Demand forecasting',
-      'Customer service automation'
+      'Customer analytics',Inventory optimization',Personalized marketing',Fraud prevention',Demand forecasting',Customer service automation'
     ],;
     benefits[;
-      'Increased sales',
-      'Improved customer satisfaction',
-      'Reduced inventory costs',
-      'Better fraud prevention'
+      'Increased sales',Improved customer satisfaction',Reduced inventory costs',Better fraud prevention'
     ],;
     useCases[;
-      'E-commerce platforms',
-      'Brick-and-mortar stores',
-      'Retail chains',
-      'Online marketplaces'
+      'E-commerce platforms',Brick-and-mortar stores',Retail chains',Online marketplaces'
     ],;
     pricing: {
 
@@ -216,24 +172,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     color: 'from-indigo-500 to-blue-600',
     industry: 'education',
     features[;
-      'Personalized learning',
-      'Student analytics',
-      'Content management',
-      'Virtual classrooms',
-      'Assessment tools',
-      'Learning management'
+      'Personalized learning',Student analytics',Content management',Virtual classrooms',Assessment tools',Learning management'
     ],;
     benefits[;
-      'Improved learning outcomes',
-      'Personalized education',
-      'Reduced administrative workload',
-      'Better student engagement'
+      'Improved learning outcomes',Personalized education',Reduced administrative workload',Better student engagement'
     ],;
     useCases[;
-      'K-12 schools',
-      'Universities',
-      'Corporate training',
-      'Online education'
+      'K-12 schools',Universities',Corporate training',Online education'
     ],;
     pricing: {
 
@@ -261,24 +206,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     color: 'from-slate-500 to-gray-600',
     industry: 'government',
     features[;
-      'Citizen services',
-      'Data analytics',
-      'Cybersecurity',
-      'Process automation',
-      'Compliance management',
-      'Digital transformation'
+      'Citizen services',Data analytics',Cybersecurity',Process automation',Compliance management',Digital transformation'
     ],;
     benefits[;
-      'Improved citizen services',
-      'Enhanced security',
-      'Operational efficiency',
-      'Cost savings'
+      'Improved citizen services',Enhanced security',Operational efficiency',Cost savings'
     ],;
     useCases[;
-      'Federal agencies',
-      'State governments',
-      'Local municipalities',
-      'Government departments'
+      'Federal agencies',State governments',Local municipalities',Government departments'
     ],;
     pricing: {
 
@@ -306,24 +240,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     color: 'from-yellow-500 to-orange-600',
     industry: 'energy',
     features[;
-      'Smart grid management',
-      'Renewable energy integration',
-      'Demand forecasting',
-      'Energy analytics',
-      'Grid optimization',
-      'Sustainability monitoring'
+      'Smart grid management',Renewable energy integration',Demand forecasting',Energy analytics',Grid optimization',Sustainability monitoring'
     ],;
     benefits[;
-      'Reduced energy costs',
-      'Improved efficiency',
-      'Sustainability goals',
-      'Grid reliability'
+      'Reduced energy costs',Improved efficiency',Sustainability goals',Grid reliability'
     ],;
     useCases[;
-      'Utility companies',
-      'Energy providers',
-      'Industrial facilities',
-      'Smart cities'
+      'Utility companies',Energy providers',Industrial facilities',Smart cities'
     ],;
     pricing: {
 
@@ -351,24 +274,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     color: 'from-teal-500 to-cyan-600',
     industry: 'transportation',
     features[;
-      'Route optimization',
-      'Fleet management',
-      'Supply chain visibility',
-      'Predictive analytics',
-      'Real-time tracking',
-      'Performance monitoring'
+      'Route optimization',Fleet management',Supply chain visibility',Predictive analytics',Real-time tracking',Performance monitoring'
     ],;
     benefits[;
-      'Reduced transportation costs',
-      'Improved delivery times',
-      'Better fleet utilization',
-      'Enhanced customer satisfaction'
+      'Reduced transportation costs',Improved delivery times',Better fleet utilization',Enhanced customer satisfaction'
     ],;
     useCases[;
-      'Logistics companies',
-      'Transportation providers',
-      'E-commerce delivery',
-      'Supply chain management'
+      'Logistics companies',Transportation providers',E-commerce delivery',Supply chain management'
     ],;
     pricing: {
 
@@ -396,24 +308,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     color: 'from-amber-500 to-yellow-600',
     industry: 'real-estate',
     features[;
-      'Property management',
-      'Market analytics',
-      'Virtual tours',
-      'Transaction management',
-      'Customer relationship management',
-      'Financial analytics'
+      'Property management',Market analytics',Virtual tours',Transaction management',Customer relationship management',Financial analytics'
     ],;
     benefits[;
-      'Improved property management',
-      'Better market insights',
-      'Enhanced customer experience',
-      'Increased sales efficiency'
+      'Improved property management',Better market insights',Enhanced customer experience',Increased sales efficiency'
     ],;
     useCases[;
-      'Real estate agencies',
-      'Property management companies',
-      'Real estate investors',
-      'Property developers'
+      'Real estate agencies',Property management companies',Real estate investors',Property developers'
     ],;
     pricing: {
 
@@ -441,24 +342,13 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     color: 'from-pink-500 to-rose-600',
     industry: 'media',
     features[;
-      'Content creation',
-      'Audience analytics',
-      'Recommendation engines',
-      'Content management',
-      'Streaming optimization',
-      'Performance analytics'
+      'Content creation',Audience analytics',Recommendation engines',Content management',Streaming optimization',Performance analytics'
     ],;
     benefits[;
-      'Increased audience engagement',
-      'Better content performance',
-      'Improved monetization',
-      'Enhanced user experience'
+      'Increased audience engagement',Better content performance',Improved monetization',Enhanced user experience'
     ],;
     useCases[;
-      'Streaming platforms',
-      'Content creators',
-      'Media companies',
-      'Entertainment providers'
+      'Streaming platforms',Content creators',Media companies',Entertainment providers'
     ],;
     pricing: {
 

@@ -13,12 +13,7 @@ const ComprehensivePricing2026 = () => {
     ...enterpriseITInfrastructureServices2026,
   ];
   const categories = ['
-    'all',
-    'AI & Business Solutions',
-    'IT Infrastructure',
-    'Cybersecurity',
-    'Cloud & DevOps',
-    'Specialized Industry',
+    'all',AI & Business Solutions',IT Infrastructure',Cybersecurity',Cloud & DevOps',Specialized Industry',
   ];
   const getCategoryServices = category => {
 
@@ -27,19 +22,13 @@ const ComprehensivePricing2026 = () => {
       case 'AI & Business Solutions':
         return allServices.filter(service =>
           ['
-            'Business Intelligence',
-            'Marketing Automation',
-            'Customer Service',
-            'Workflow Automation',
+            'Business Intelligence',Marketing Automation',Customer Service',Workflow Automation',
           ].includes(service.category)
         );
       case 'IT Infrastructure':
         return allServices.filter(service =>
           ['
-            'Data Center Management',
-            'Storage Management',
-            'Virtualization',
-            'IT Asset Management',
+            'Data Center Management',Storage Management',Virtualization',IT Asset Management',
           ].includes(service.category)
         );
       case 'Cybersecurity':
@@ -55,13 +44,7 @@ const ComprehensivePricing2026 = () => {
       case 'Specialized Industry':
         return allServices.filter(service =>
           ['
-            'Supply Chain Management',
-            'Financial Technology',
-            'Healthcare Technology',
-            'Legal Technology',
-            'Blockchain Technology',
-            'Internet of Things',
-            'Quantum Computing',
+            'Supply Chain Management',Financial Technology',Healthcare Technology',Legal Technology',Blockchain Technology',Internet of Things',Quantum Computing',
           ].includes(service.category)
         );
       default:
@@ -71,7 +54,7 @@ const ComprehensivePricing2026 = () => {
   const filteredServices = getCategoryServices(selectedCategory);
   const getAnnualPrice = monthlyPrice => {
 
-    const price = parseInt(monthlyPrice.replace(/[^0-9]/g,'));
+    const price = parseInt(monthlyPrice.replace(/[^0-9]/g,));
     const annualPrice = price * 12 * 0.8; // 20% discount for annual
     return `$${annualPrice.toLocaleString()}`;
   };

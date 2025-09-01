@@ -64,52 +64,23 @@ export default function RequestQuote() {
   const [submitted, setSubmitted] = useState (false) ;
 
   const companySizes = ['
-    '1-10 employees',
-    '11-50 employees',
-    '51-200 employees',
-    '201-500 employees',
-    '500+ employees'
+    '1-10 employees',11-50 employees',51-200 employees',201-500 employees',500+ employees'
   ];
 
   const industries = ['
-    'Technology',
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Real Estate',
-    'Consulting',
-    'Non-profit',
-    'Other'
+    'Technology',Healthcare',Finance',Manufacturing',Retail',Education',Real Estate',Consulting',Non-profit',Other'
   ];
 
   const projectTypes = ['
-    'New Development',
-    'System Upgrade',
-    'Integration',
-    'Consulting',
-    'Support & Maintenance',
-    'Training',
-    'Other'
+    'New Development',System Upgrade',Integration',Consulting',Support & Maintenance',Training',Other'
   ];
 
   const budgets = ['
-    'Under $10,000',
-    '$10,000 - $25,000',
-    '$25,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $250,000',
-    '$250,000+'
+    'Under $10,000',$10,000 - $25,000',$25,000 - $50,000',$50,000 - $100,000',$100,000 - $250,000',$250,000+'
   ];
 
   const timelines = ['
-    'ASAP',
-    '1-2 weeks',
-    '1-2 months',
-    '3-6 months',
-    '6+ months',
-    'Flexible'
+    'ASAP',1-2 weeks',1-2 months',3-6 months',6+ months',Flexible'
   ];
 
   const urgencyLevels = ['
@@ -133,12 +104,7 @@ export default function RequestQuote() {
       icon: Bot,
       description: 'Custom AI solutions, ML models, and intelligent automation',
       features: ['
-        'Custom AI model development',
-        'Machine learning pipelines',
-        'Natural language processing',
-        'Computer vision solutions',
-        'Predictive analytics',
-        'AI-powered automation'
+        'Custom AI model development',Machine learning pipelines',Natural language processing',Computer vision solutions',Predictive analytics',AI-powered automation'
       ],
       pricing: 'Starting from $25,000',
       timeline: '4-12 weeks',
@@ -151,12 +117,7 @@ export default function RequestQuote() {
       icon: Cloud,
       description: 'Cloud infrastructure, CI/CD pipelines, and infrastructure automation',
       features: ['
-        'AWS/Azure/GCP setup',
-        'Kubernetes orchestration',
-        'CI/CD pipeline development',
-        'Infrastructure as Code',
-        'Monitoring & logging',
-        'Security & compliance'
+        'AWS/Azure/GCP setup',Kubernetes orchestration',CI/CD pipeline development',Infrastructure as Code',Monitoring & logging',Security & compliance'
       ],
       pricing: 'Starting from $15,000',
       timeline: '2-8 weeks',
@@ -169,12 +130,7 @@ export default function RequestQuote() {
       icon: Monitor,
       description: 'Modern web applications, e-commerce, and custom web solutions',
       features: ['
-        'React/Next.js applications',
-        'E-commerce platforms',
-        'Custom web portals',
-        'API development',
-        'Performance optimization',
-        'SEO & accessibility'
+        'React/Next.js applications',E-commerce platforms',Custom web portals',API development',Performance optimization',SEO & accessibility'
       ],
       pricing: 'Starting from $10,000',
       timeline: '3-10 weeks',
@@ -187,12 +143,7 @@ export default function RequestQuote() {
       icon: Smartphone,
       description: 'iOS and Android apps with cross-platform solutions',
       features: ['
-        'Native iOS development',
-        'Native Android development',
-        'React Native apps',
-        'Flutter applications',
-        'App store optimization',
-        'Push notifications'
+        'Native iOS development',Native Android development',React Native apps',Flutter applications',App store optimization',Push notifications'
       ],
       pricing: 'Starting from $20,000',
       timeline: '6-16 weeks',
@@ -205,12 +156,7 @@ export default function RequestQuote() {
       icon: BarChart3,
       description: 'Data warehousing, business intelligence, and advanced analytics',
       features: ['
-        'Data warehouse design',
-        'ETL pipeline development',
-        'Business intelligence dashboards',
-        'Advanced analytics',
-        'Data visualization',
-        'Predictive modeling'
+        'Data warehouse design',ETL pipeline development',Business intelligence dashboards',Advanced analytics',Data visualization',Predictive modeling'
       ],
       pricing: 'Starting from $18,000',
       timeline: '4-12 weeks',
@@ -223,12 +169,7 @@ export default function RequestQuote() {
       icon: Shield,
       description: 'Security audits, compliance, and threat protection',
       features: ['
-        'Security assessments',
-        'Penetration testing',
-        'Compliance frameworks',
-        'Threat detection',
-        'Incident response',
-        'Security training'
+        'Security assessments',Penetration testing',Compliance frameworks',Threat detection',Incident response',Security training'
       ],
       pricing: 'Starting from $12,000',
       timeline: '2-6 weeks',
@@ -241,12 +182,7 @@ export default function RequestQuote() {
       icon: Package,
       description: 'Custom SaaS applications and business automation tools',
       features: ['
-        'Custom SaaS platforms',
-        'Business process automation',
-        'Workflow management',
-        'User management systems',
-        'Subscription billing',
-        'Analytics & reporting'
+        'Custom SaaS platforms',Business process automation',Workflow management',User management systems',Subscription billing',Analytics & reporting'
       ],
       pricing: 'Starting from $30,000',
       timeline: '8-20 weeks',
@@ -259,12 +195,7 @@ export default function RequestQuote() {
       icon: Settings,
       description: 'API development, third-party integrations, and data synchronization',
       features: ['
-        'API development',
-        'Third-party integrations',
-        'Data synchronization',
-        'Webhook implementation',
-        'Custom connectors',
-        'Integration testing'
+        'API development',Third-party integrations',Data synchronization',Webhook implementation',Custom connectors',Integration testing'
       ],
       pricing: 'Starting from $15,000',
       timeline: '3-8 weeks',

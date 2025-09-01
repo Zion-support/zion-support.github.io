@@ -436,9 +436,9 @@ export default function InnovativeServices2025(...args: any[]): any {
     switch (sortBy) {
 
       case 'price-low':'
-        return parseFloat(a.price.replace(/[^0-9.]/g,')) - parseFloat(b.price.replace(/[^0-9.]/g,'));
+        return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));
       case 'price-high':'
-        return parseFloat(b.price.replace(/[^0-9.]/g,')) - parseFloat(a.price.replace(/[^0-9.]/g,'));
+        return parseFloat(b.price.replace(/[^0-9.]/g,)) - parseFloat(a.price.replace(/[^0-9.]/g,));
       case 'rating':
         return b.rating - a.rating;
       case 'popularity':

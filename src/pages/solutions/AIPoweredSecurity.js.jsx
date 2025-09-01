@@ -19,10 +19,7 @@ const AIPoweredSecurity = () => {
       description: 'AI-powered network monitoring and threat prevention',
       icon: Shield,
       capabilities: ['
-        'Intrusion detection',
-        'Traffic analysis',
-        'DDoS protection',
-        'Firewall management',
+        'Intrusion detection',Traffic analysis',DDoS protection',Firewall management',
       ]},
     {
 
@@ -30,10 +27,7 @@ const AIPoweredSecurity = () => {
       description: 'Comprehensive protection for all devices and endpoints',
       icon: Cpu,
       capabilities: ['
-        'Malware detection',
-        'Device control',
-        'Data protection',
-        'Threat response',
+        'Malware detection',Device control',Data protection',Threat response',
       ]},
     {
 
@@ -41,10 +35,7 @@ const AIPoweredSecurity = () => {
       description: 'Secure cloud infrastructure and application protection',
       icon: Cloud,
       capabilities: ['
-        'Cloud monitoring',
-        'API security',
-        'Data encryption',
-        'Compliance management',
+        'Cloud monitoring',API security',Data encryption',Compliance management',
       ]},
     {
 
@@ -52,10 +43,7 @@ const AIPoweredSecurity = () => {
       description: 'Protection of sensitive data and information assets',
       icon: Database,
       capabilities: ['
-        'Data classification',
-        'Encryption',
-        'Access control',
-        'Audit trails',
+        'Data classification',Encryption',Access control',Audit trails',
       ]},
     {
 
@@ -63,10 +51,7 @@ const AIPoweredSecurity = () => {
       description: 'Secure user identity and access management',
       icon: Users,
       capabilities: ['
-        'User provisioning',
-        'Role management',
-        'Single sign-on',
-        'Identity verification',
+        'User provisioning',Role management',Single sign-on',Identity verification',
       ]},
     {
 
@@ -74,19 +59,11 @@ const AIPoweredSecurity = () => {
       description: 'Automated incident detection and response',
       icon: AlertTriangle,
       capabilities: ['
-        'Threat hunting',
-        'Automated response',
-        'Forensic analysis',
-        'Recovery planning',
+        'Threat hunting',Automated response',Forensic analysis',Recovery planning',
       ]},
   ];
   const benefits = ['
-    'Proactive threat detection and prevention',
-    'Reduced false positives and alert fatigue',
-    'Faster incident response and resolution',
-    'Continuous learning and adaptation',
-    'Comprehensive security coverage',
-    'Cost-effective security operations',
+    'Proactive threat detection and prevention',Reduced false positives and alert fatigue',Faster incident response and resolution',Continuous learning and adaptation',Comprehensive security coverage',Cost-effective security operations',
   ];
   const implementation = [
     {

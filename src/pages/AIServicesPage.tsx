@@ -55,16 +55,7 @@ const AIServicesPage = () => {
       period: '/month',
       description: 'Advanced AI consciousness simulation platform for researchers, ethicists, and AI safety organizations. Test consciousness emergence, ethical boundaries, and safety protocols in controlled environments.',
       features: ['
-        'Multi-dimensional consciousness mapping',
-        'Ethical boundary testing framework',
-        'Consciousness emergence prediction',
-        'Safety protocol validation',
-        'Real-time consciousness monitoring',
-        'Ethical decision tree analysis',
-        'Consciousness transfer protocols',
-        'Safety breach prevention',
-        'Regulatory compliance tools',
-        'Research collaboration platform'
+        'Multi-dimensional consciousness mapping',Ethical boundary testing framework',Consciousness emergence prediction',Safety protocol validation',Real-time consciousness monitoring',Ethical decision tree analysis',Consciousness transfer protocols',Safety breach prevention',Regulatory compliance tools',Research collaboration platform'
       ],
       popular: true,
       icon: Brain,
@@ -97,16 +88,7 @@ const AIServicesPage = () => {
       period: '/month',
       description: 'Revolutionary quantum-powered emotional intelligence platform that processes human emotions with unprecedented accuracy and speed.',
       features: ['
-        'Quantum emotion recognition',
-        'Real-time emotional analysis',
-        'Multi-modal emotion processing',
-        'Emotional pattern prediction',
-        'Cross-cultural emotion mapping',
-        'Emotional health monitoring',
-        'Therapeutic intervention suggestions',
-        'Emotional intelligence training',
-        'Sentiment analysis at scale',
-        'Emotional data visualization'
+        'Quantum emotion recognition',Real-time emotional analysis',Multi-modal emotion processing',Emotional pattern prediction',Cross-cultural emotion mapping',Emotional health monitoring',Therapeutic intervention suggestions',Emotional intelligence training',Sentiment analysis at scale',Emotional data visualization'
       ],
       popular: false,
       icon: Heart,

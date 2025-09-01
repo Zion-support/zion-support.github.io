@@ -32,8 +32,7 @@ export { function };
 export default function AICustomerExperiencePlatform(...args[]):  {
 
   const features = ['
-    'AI-powered sentiment analysis and emotion detection',
-    'Real-time customer journey mapping and optimization',;
+    'AI-powered sentiment analysis and emotion detection',Real-time customer journey mapping and optimization',;
     'Intelligent chatbot with natural language processing',;
     'Personalized recommendation engine',;
     'Omnichannel customer interaction tracking',;

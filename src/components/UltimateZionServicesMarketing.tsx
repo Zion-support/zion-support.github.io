@@ -394,7 +394,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
                     {service.innovationLevel}
                   </div>"
                   <p className="text-sm text-purple-400 font-medium">
-                    {service.category.replace('-', ').toUpperCase()}
+                    {service.category.replace('-',).toUpperCase()}
                   </p>
                 </div>
 

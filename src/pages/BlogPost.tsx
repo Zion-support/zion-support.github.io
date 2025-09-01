@@ -126,11 +126,7 @@ import { SEO } from '@/components/SEO';
     readTime: '8 min read',
     category: 'ai',
     tags: ['
-      'AI',
-      'Business Intelligence',
-      'Machine Learning',
-      'Data Analytics',
-      'Digital Transformation',
+      'AI',Business Intelligence',Machine Learning',Data Analytics',Digital Transformation',
     ],
     image: '/api/placeholder/800/400',
     featured: true,

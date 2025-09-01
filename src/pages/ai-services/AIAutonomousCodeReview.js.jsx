@@ -46,12 +46,7 @@ const features = [
     color: 'from-purple-500 to-indigo-500'},
 ];
 const benefits = ['
-  'Reduce code review time by up to 80%',
-  'Catch security vulnerabilities before deployment',
-  'Improve code quality and maintainability',
-  'Standardize coding practices across teams',
-  'Reduce technical debt and bug fixes',
-  'Accelerate development cycles',
+  'Reduce code review time by up to 80%',Catch security vulnerabilities before deployment',Improve code quality and maintainability',Standardize coding practices across teams',Reduce technical debt and bug fixes',Accelerate development cycles',
 ];
 const useCases = [
   {

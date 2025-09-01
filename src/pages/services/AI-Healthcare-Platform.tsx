@@ -121,55 +121,37 @@ const AIHealthcarePlatform: React.FC = () => {
 
       name: 'Clinical Decision Support',
       features: ['
-        'Evidence-based recommendations',
-        'Drug interaction checking',
-        'Treatment protocols',
-        'Clinical guidelines',
+        'Evidence-based recommendations',Drug interaction checking',Treatment protocols',Clinical guidelines',
       ]},
     {
 
       name: 'Medical Imaging AI',
       features: ['
-        'Radiology analysis',
-        'Pathology detection',
-        'Image enhancement',
-        'Automated reporting',
+        'Radiology analysis',Pathology detection',Image enhancement',Automated reporting',
       ]},
     {
 
       name: 'Patient Management',
       features: ['
-        'Electronic health records',
-        'Appointment scheduling',
-        'Patient portals',
-        'Care coordination',
+        'Electronic health records',Appointment scheduling',Patient portals',Care coordination',
       ]},
     {
 
       name: 'Telemedicine Platform',
       features: ['
-        'Video consultations',
-        'Remote monitoring',
-        'Secure messaging',
-        'Mobile apps',
+        'Video consultations',Remote monitoring',Secure messaging',Mobile apps',
       ]},
     {
 
       name: 'Population Health',
       features: ['
-        'Disease surveillance',
-        'Risk stratification',
-        'Preventive care',
-        'Health trends',
+        'Disease surveillance',Risk stratification',Preventive care',Health trends',
       ]},
     {
 
       name: 'Research & Analytics',
       features: ['
-        'Clinical trials',
-        'Data mining',
-        'Outcome analysis',
-        'Research insights',
+        'Clinical trials',Data mining',Outcome analysis',Research insights',
       ]},
   ];
 
@@ -181,13 +163,7 @@ const AIHealthcarePlatform: React.FC = () => {
       period: '/month',
       description: 'Perfect for small clinics and medical practices',
       features: ['
-        'AI Diagnostic Support (up to 100 patients/month),
-        'Basic Patient Management',
-        'Telemedicine Platform',
-        'HIPAA Compliance',
-        'Email Support',
-        'Standard Analytics',
-        'Mobile App Access',
+        'AI Diagnostic Support (up to 100 patients/month),Basic Patient Management',Telemedicine Platform',HIPAA Compliance',Email Support',Standard Analytics',Mobile App Access',
       ],
       marketPrice: '$4,500',
       savings: '22%',
@@ -199,15 +175,7 @@ const AIHealthcarePlatform: React.FC = () => {
       period: '/month',
       description: 'Ideal for hospitals and larger healthcare facilities',
       features: ['
-        'Advanced AI Diagnostics',
-        'Comprehensive Patient Management',
-        'Medical Imaging AI',
-        'Population Health Analytics',
-        'Clinical Decision Support',
-        'Priority Support',
-        'Custom Integration',
-        'Advanced Security',
-        'Training & Certification',
+        'Advanced AI Diagnostics',Comprehensive Patient Management',Medical Imaging AI',Population Health Analytics',Clinical Decision Support',Priority Support',Custom Integration',Advanced Security',Training & Certification',
       ],
       marketPrice: '$11,000',
       savings: '23%',
@@ -219,16 +187,7 @@ const AIHealthcarePlatform: React.FC = () => {
       period: '/month',
       description: 'For large healthcare systems and research institutions',
       features: ['
-        'Enterprise AI Platform',
-        'Unlimited Patient Capacity',
-        'Custom AI Models',
-        'Advanced Analytics',
-        'Research Tools',
-        '24/7 Dedicated Support',
-        'White-label Solutions',
-        'Custom Development',
-        'Compliance Consulting',
-        'Staff Training',
+        'Enterprise AI Platform',Unlimited Patient Capacity',Custom AI Models',Advanced Analytics',Research Tools',24/7 Dedicated Support',White-label Solutions',Custom Development',Compliance Consulting',Staff Training',
       ],
       marketPrice: '$24,000',
       savings: '25%',
@@ -289,10 +248,7 @@ const AIHealthcarePlatform: React.FC = () => {
 
       industry: 'Primary Care',
       applications: ['
-        'Preventive Care',
-        'Chronic Disease Management',
-        'Screening Programs',
-        'Health Education',
+        'Preventive Care',Chronic Disease Management',Screening Programs',Health Education',
       ]},
     {
 
@@ -302,19 +258,13 @@ const AIHealthcarePlatform: React.FC = () => {
 
       industry: 'Emergency Care',
       applications: ['
-        'Triage',
-        'Critical Care',
-        'Trauma Assessment',
-        'Emergency Response',
+        'Triage',Critical Care',Trauma Assessment',Emergency Response',
       ]},
     {
 
       industry: 'Research & Development',
       applications: ['
-        'Clinical Trials',
-        'Drug Discovery',
-        'Medical Research',
-        'Population Studies',
+        'Clinical Trials',Drug Discovery',Medical Research',Population Studies',
       ]},
   ];
 

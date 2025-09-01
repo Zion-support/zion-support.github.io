@@ -188,14 +188,7 @@ const AdvancedCybersecuritySuite = () => {
 "
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {['
-                'SOC 2 Type II',
-                'ISO 27001',
-                'GDPR Compliant',
-                'HIPAA Ready',
-                'PCI DSS',
-                'NIST Framework',
-                'FISMA Compliant',
-                'FedRAMP Ready',
+                'SOC 2 Type II',ISO 27001',GDPR Compliant',HIPAA Ready',PCI DSS',NIST Framework',FISMA Compliant',FedRAMP Ready',
               ].map((cert, index) => (
                 <div
                   key={index}"

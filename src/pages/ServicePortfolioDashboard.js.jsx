@@ -49,12 +49,7 @@ const ServicePortfolioDashboard = () => {
         'Data-driven recommendations for portfolio optimization and growth'},
   ];
   const benefits = ['
-    'Comprehensive view of all service offerings and their performance',
-    'Real-time analytics and performance metrics for informed decision making',
-    'Portfolio optimization insights and strategic recommendations',
-    'Client engagement tracking and revenue analysis',
-    'Market demand analysis and competitive positioning',
-    'Technology maturity assessment and innovation tracking',
+    'Comprehensive view of all service offerings and their performance',Real-time analytics and performance metrics for informed decision making',Portfolio optimization insights and strategic recommendations',Client engagement tracking and revenue analysis',Market demand analysis and competitive positioning',Technology maturity assessment and innovation tracking',
   ];
   const portfolioStats = [
     {
@@ -122,8 +117,7 @@ const ServicePortfolioDashboard = () => {
                 className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"
                 onClick={() =>
                   window.open('
-                    'mailto:kleber@ziontechgroup.com?subject=Portfolio Strategy Consultation',
-                    '_blank'
+                    'mailto:kleber@ziontechgroup.com?subject=Portfolio Strategy Consultation',_blank'
                   )
                 }
               >
@@ -321,8 +315,7 @@ const ServicePortfolioDashboard = () => {
                 className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4"
                 onClick={() =>
                   window.open('
-                    'mailto:kleber@ziontechgroup.com?subject=Portfolio Optimization Consultation',
-                    '_blank'
+                    'mailto:kleber@ziontechgroup.com?subject=Portfolio Optimization Consultation',_blank'
                   )
                 }
               >"

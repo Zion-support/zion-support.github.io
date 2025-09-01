@@ -123,10 +123,7 @@ const Training: React.FC = () => {
       image: '/images/training/ai-fundamentals.jpg',
       tags: ['Python',TensorFlow',Neural Networks',Data Science'],
       features: ['
-        'Hands-on projects with real datasets',
-        'Live Q&A sessions with experts',
-        'Certificate upon completion',
-        'Lifetime access to materials',
+        'Hands-on projects with real datasets',Live Q&A sessions with experts',Certificate upon completion',Lifetime access to materials',
       ]},
     {
 
@@ -145,10 +142,7 @@ const Training: React.FC = () => {
       image: '/images/training/cloud-architecture.jpg',
       tags: ['AWS',Azure',Kubernetes',Microservices'],
       features: ['
-        'Real-world case studies',
-        'Architecture design workshops',
-        'Industry best practices',
-        'Networking opportunities',
+        'Real-world case studies',Architecture design workshops',Industry best practices',Networking opportunities',
       ]},
     {
 
@@ -166,16 +160,10 @@ const Training: React.FC = () => {
       price: '$399',
       image: '/images/training/cybersecurity.jpg',
       tags: ['
-        'Penetration Testing',
-        'Incident Response',
-        'Compliance',
-        'Risk Management',
+        'Penetration Testing',Incident Response',Compliance',Risk Management',
       ],
       features: ['
-        'Hands-on security labs',
-        'Industry certifications',
-        'Expert-led workshops',
-        'Career guidance',
+        'Hands-on security labs',Industry certifications',Expert-led workshops',Career guidance',
       ]},
     {
 
@@ -194,10 +182,7 @@ const Training: React.FC = () => {
       image: '/images/training/data-science.jpg',
       tags: ['R',Python',SQL',Tableau'],
       features: ['
-        'Real-world data projects',
-        'Statistical analysis tools',
-        'Data visualization skills',
-        'Portfolio development',
+        'Real-world data projects',Statistical analysis tools',Data visualization skills',Portfolio development',
       ]},
   ];
 
@@ -485,10 +470,10 @@ const Training: React.FC = () => {
                       className={`px-2 py-1 rounded-full text-xs font-medium ${getFormatColor(program.format)}`}
                     >
                       {program.format'
-                        .replace('-', ')
+                        .replace('-',)
                         .charAt(0)
                         .toUpperCase() +'
-                        program.format.replace('-', ').slice(1)}
+                        program.format.replace('-',).slice(1)}
                     </span>
                   </div>
 

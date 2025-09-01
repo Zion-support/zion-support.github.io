@@ -29,12 +29,7 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {
 "
         <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
           {['
-            'RAG answers with vector search and citations',
-            'Zendesk, Freshdesk, Intercom integrations',
-            'Multilingual (50+ locales) and tone control',
-            'Auto-categorize, prioritize, and tag tickets',
-            'Secure PII redaction and audit logs',
-            'Fallback to live agents with summaries',
+            'RAG answers with vector search and citations',Zendesk, Freshdesk, Intercom integrations',Multilingual (50+ locales) and tone control',Auto-categorize, prioritize, and tag tickets',Secure PII redaction and audit logs',Fallback to live agents with summaries',
           ].map(b => (
             <div
               key={b}"

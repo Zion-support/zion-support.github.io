@@ -59,8 +59,7 @@ variant:  'default',;
             className = {
 
   cn()
-              baseClasses,
-              'h-4',
+              baseClasses,h-4',
   index === lines - 1 ? 'w-3/4' : 'w-full'
             )
 

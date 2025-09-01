@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIVirtualReality() {
   const features = [
-    'AI-powered VR optimization',
-    'Intelligent VR content management',;
+    'AI-powered VR optimization',Intelligent VR content management',;
     'Automated VR monitoring and alerting',;
     'Predictive analytics for VR scaling',;
     'Smart VR security and compliance',;

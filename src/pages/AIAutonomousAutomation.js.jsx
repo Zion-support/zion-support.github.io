@@ -181,14 +181,7 @@ const AIAutonomousAutomation = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Process Automation',
-                'Workflow Automation',
-                'Task Automation',
-                'Data Automation',
-                'Testing Automation',
-                'Deployment Automation',
-                'Monitoring Automation',
-                'Maintenance Automation',
+                'Process Automation',Workflow Automation',Task Automation',Data Automation',Testing Automation',Deployment Automation',Monitoring Automation',Maintenance Automation',
               ].map(type => (
                 <div
                   key={type}"

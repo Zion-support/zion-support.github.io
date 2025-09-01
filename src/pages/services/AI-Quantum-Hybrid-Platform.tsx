@@ -89,37 +89,25 @@ const AIQuantumHybridPlatform: React.FC = () => {
 
       industry: 'Financial Services',
       applications: ['
-        'Portfolio Optimization',
-        'Risk Assessment',
-        'Algorithmic Trading',
-        'Fraud Detection',
+        'Portfolio Optimization',Risk Assessment',Algorithmic Trading',Fraud Detection',
       ]},
     {
 
       industry: 'Healthcare',
       applications: ['
-        'Drug Discovery',
-        'Protein Folding',
-        'Medical Imaging',
-        'Genomic Analysis',
+        'Drug Discovery',Protein Folding',Medical Imaging',Genomic Analysis',
       ]},
     {
 
       industry: 'Manufacturing',
       applications: ['
-        'Supply Chain Optimization',
-        'Quality Control',
-        'Predictive Maintenance',
-        'Resource Planning',
+        'Supply Chain Optimization',Quality Control',Predictive Maintenance',Resource Planning',
       ]},
     {
 
       industry: 'Logistics',
       applications: ['
-        'Route Optimization',
-        'Fleet Management',
-        'Inventory Management',
-        'Demand Forecasting',
+        'Route Optimization',Fleet Management',Inventory Management',Demand Forecasting',
       ]},
   ];
 
@@ -131,11 +119,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
       period: '/month',
       description: 'Perfect for research institutions and small enterprises',
       features: ['
-        'Quantum Computing Access (10 hours/month),
-        'AI Model Training',
-        'Basic Security Protocols',
-        'Email Support',
-        'Standard Documentation',
+        'Quantum Computing Access (10 hours/month),AI Model Training',Basic Security Protocols',Email Support',Standard Documentation',
       ],
       marketPrice: '$6,500',
       savings: '23%',
@@ -147,12 +131,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing businesses and research teams',
       features: ['
-        'Quantum Computing Access (50 hours/month),
-        'Advanced AI Models',
-        'Enhanced Security Features',
-        'Priority Support',
-        'Custom Integration',
-        'Performance Analytics',
+        'Quantum Computing Access (50 hours/month),Advanced AI Models',Enhanced Security Features',Priority Support',Custom Integration',Performance Analytics',
       ],
       marketPrice: '$15,000',
       savings: '20%',
@@ -164,13 +143,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
       period: '/month',
       description: 'For large enterprises requiring maximum performance',
       features: ['
-        'Unlimited Quantum Computing Access',
-        'Custom AI Model Development',
-        'Advanced Security & Compliance',
-        '24/7 Dedicated Support',
-        'Custom Infrastructure',
-        'White-label Solutions',
-        'Training & Certification',
+        'Unlimited Quantum Computing Access',Custom AI Model Development',Advanced Security & Compliance',24/7 Dedicated Support',Custom Infrastructure',White-label Solutions',Training & Certification',
       ],
       marketPrice: '$32,000',
       savings: '22%',

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIIdentityManagement() {
   const features = [
-    'AI-powered identity management optimization',
-    'Intelligent authentication and authorization',;
+    'AI-powered identity management optimization',Intelligent authentication and authorization',;
     'Automated identity verification and validation',;
     'Predictive analytics for identity threats',;
     'Smart compliance and governance monitoring',;

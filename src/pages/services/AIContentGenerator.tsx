@@ -160,12 +160,7 @@ export default function AIContentGenerator(...args[]):  {
       period: '/month',
       description: 'Perfect for individual creators and small businesses',
       features: ['
-        'Up to 50 AI-generated articles per month',
-        'Basic image generation (10 images/month),
-        'SEO optimization tools',
-        'Content templates',
-        'Email support',
-        'Basic analytics'
+        'Up to 50 AI-generated articles per month',Basic image generation (10 images/month),SEO optimization tools',Content templates',Email support',Basic analytics'
       ],
       cta: 'Start Free Trial',
       popular: false
@@ -177,14 +172,7 @@ export default function AIContentGenerator(...args[]):  {
       period: '/month',
       description: 'Ideal for marketing teams and growing businesses',
       features: ['
-        'Up to 200 AI-generated articles per month',
-        'Advanced image generation (50 images/month),
-        'Video script generation',
-        'Multi-language support',
-        'Priority support',
-        'Advanced analytics dashboard',
-        'API access',
-        'Team collaboration tools'
+        'Up to 200 AI-generated articles per month',Advanced image generation (50 images/month),Video script generation',Multi-language support',Priority support',Advanced analytics dashboard',API access',Team collaboration tools'
       ],
       cta: 'Start Free Trial',
       popular: true
@@ -196,12 +184,7 @@ export default function AIContentGenerator(...args[]):  {
       period: '/month',
       description: 'For large organizations with high content demands',
       features: ['
-        'Unlimited AI-generated content',
-        'Unlimited image generation',
-        'Custom AI model training',
-        'White-label solution',
-        'Dedicated account manager',
-        'SLA guarantees',;
+        'Unlimited AI-generated content',Unlimited image generation',Custom AI model training',White-label solution',Dedicated account manager',SLA guarantees',;
         'Advanced security features',;
         'Custom integrations';
       ],;

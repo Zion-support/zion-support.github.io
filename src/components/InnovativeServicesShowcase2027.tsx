@@ -28,18 +28,7 @@ import { innovativeServices2027, serviceCategories2027, getServicesByCategory } 
 
 const categoryColors: { [key: string]: string } = {
 
-  'AI & Consciousness': 'from-purple-500 to-pink-500',
-  'Quantum AI': 'from-blue-500 to-cyan-500',
-  'Autonomous AI': 'from-green-500 to-emerald-500',
-  'Quantum Computing': 'from-indigo-500 to-purple-500',
-  'Quantum Finance': 'from-yellow-500 to-orange-500',
-  'Space Technology': 'from-purple-500 to-blue-500',
-  'Quantum Space': 'from-cyan-500 to-blue-500',
-  'Biotechnology': 'from-green-500 to-teal-500',
-  'Quantum Medicine': 'from-teal-500 to-blue-500',
-  'Quantum Security': 'from-red-500 to-pink-500',
-  'Nanotechnology': 'from-gray-500 to-slate-500',
-  'Neural Technology': 'from-violet-500 to-purple-500'
+  'AI & Consciousness': 'from-purple-500 to-pink-500',Quantum AI': 'from-blue-500 to-cyan-500',Autonomous AI': 'from-green-500 to-emerald-500',Quantum Computing': 'from-indigo-500 to-purple-500',Quantum Finance': 'from-yellow-500 to-orange-500',Space Technology': 'from-purple-500 to-blue-500',Quantum Space': 'from-cyan-500 to-blue-500',Biotechnology': 'from-green-500 to-teal-500',Quantum Medicine': 'from-teal-500 to-blue-500',Quantum Security': 'from-red-500 to-pink-500',Nanotechnology': 'from-gray-500 to-slate-500',Neural Technology': 'from-violet-500 to-purple-500'
 };
 
 export const InnovativeServicesShowcase2027: React.FC = () => {;

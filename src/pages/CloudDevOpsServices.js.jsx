@@ -18,13 +18,7 @@ const CloudDevOpsServices = () => {
   const [selectedPricing, setSelectedPricing] = useState('all');
   // Cloud & DevOps Services data
   const categories = ['
-    'all',
-    'Cloud Management',
-    'Container Orchestration',
-    'DevOps Automation',
-    'Serverless',
-    'Infrastructure',
-    'Security',
+    'all',Cloud Management',Container Orchestration',DevOps Automation',Serverless',Infrastructure',Security',
   ];
   const pricingOptions = ['all',Enterprise',Professional',Standard'];
   const filteredServices = cloudDevOpsServices.filter(service => {

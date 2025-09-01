@@ -9,8 +9,7 @@ export { function };
 export default function Internationalization() {
   const schema = {
 
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
+    '@context': 'https://schema.org',@type': 'WebPage',
     name: 'Internationalization',
     description:'
       'Use Zion in multiple languages and attract clients worldwide with localized listings.',

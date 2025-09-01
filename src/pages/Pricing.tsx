@@ -34,11 +34,7 @@ import {
       price: 'From $5,000',
       duration: '4-8 weeks',
       features: ['
-        'Custom AI model development',
-        'Data preparation & training',
-        'Integration with existing systems',
-        'User training & documentation',
-        '3 months of support'
+        'Custom AI model development',Data preparation & training',Integration with existing systems',User training & documentation',3 months of support'
       ],
       icon: Brain
     },
@@ -49,11 +45,7 @@ import {
       price: 'From $10,000',
       duration: '6-12 weeks',
       features: ['
-        'Infrastructure assessment',
-        'Migration planning & execution',
-        'Performance optimization',
-        'Security implementation',
-        'Monitoring & alerting setup'
+        'Infrastructure assessment',Migration planning & execution',Performance optimization',Security implementation',Monitoring & alerting setup'
       ],
       icon: Cloud
     },
@@ -64,11 +56,7 @@ import {
       price: 'From $3,000',
       duration: '2-4 weeks',
       features: ['
-        'Vulnerability assessment',
-        'Penetration testing',
-        'Compliance review',
-        'Security recommendations',
-        'Remediation guidance'
+        'Vulnerability assessment',Penetration testing',Compliance review',Security recommendations',Remediation guidance'
       ],
       icon: Shield
     }
@@ -122,16 +110,7 @@ const pricingTiers: PricingTier[] = [
     price: '$299',
     period: '/month',
     features: ['
-      'AI-powered business intelligence dashboard',
-      'Basic cloud infrastructure setup',
-      'Security monitoring & alerts',
-      'Email support',
-      'Monthly performance reports',
-      'Up to 5 team members',
-      'Basic API access',
-      'Standard compliance features',
-      'AI Workflow Orchestrator (Basic),
-      'AI Data Governance (Foundation)
+      'AI-powered business intelligence dashboard',Basic cloud infrastructure setup',Security monitoring & alerts',Email support',Monthly performance reports',Up to 5 team members',Basic API access',Standard compliance features',AI Workflow Orchestrator (Basic),AI Data Governance (Foundation)
     ],
     color: 'from-blue-500 to-cyan-500',
     icon: Zap,
@@ -146,19 +125,7 @@ const pricingTiers: PricingTier[] = [
     period: '/month',
     popular: true,
     features: ['
-      'Everything in Starter, plus:',
-      'Advanced AI workflow automation',
-      'Custom cloud architecture design',
-      'Advanced cybersecurity features',
-      'Priority support (4-hour response),
-      'Up to 25 team members',
-      'Custom integrations',
-      'Advanced analytics & reporting',
-      'Compliance automation tools',
-      'Monthly strategy sessions',
-      'AI Workflow Orchestrator (Professional),
-      'AI Data Governance (Enterprise),
-      'AI Customer Experience Analytics (Professional)
+      'Everything in Starter, plus:',Advanced AI workflow automation',Custom cloud architecture design',Advanced cybersecurity features',Priority support (4-hour response),Up to 25 team members',Custom integrations',Advanced analytics & reporting',Compliance automation tools',Monthly strategy sessions',AI Workflow Orchestrator (Professional),AI Data Governance (Enterprise),AI Customer Experience Analytics (Professional)
     ],
     color: 'from-zion-cyan to-zion-purple',
     icon: Brain,
@@ -172,17 +139,7 @@ const pricingTiers: PricingTier[] = [
     price: 'Custom',
     period: '',
     features: ['
-      'Everything in Professional, plus:',
-      'Custom AI model development',
-      'Multi-cloud architecture',
-      'Advanced threat intelligence',
-      '24/7 dedicated support',
-      'Unlimited team members',
-      'Custom software development',
-      'Advanced data governance',
-      'Compliance certification support',
-      'Quarterly business reviews',
-      'Dedicated success manager'
+      'Everything in Professional, plus:',Custom AI model development',Multi-cloud architecture',Advanced threat intelligence',24/7 dedicated support',Unlimited team members',Custom software development',Advanced data governance',Compliance certification support',Quarterly business reviews',Dedicated success manager'
     ],
     color: 'from-purple-500 to-pink-500',
     icon: Building,

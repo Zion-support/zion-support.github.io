@@ -66,12 +66,7 @@ export default function AIProjectManagement(...args: any[]): any {
   ];
 
   const benefits = ['
-    'Reduce project delivery time by 30-50%',
-    'Improve resource utilization by 40-60%',
-    'Increase project success rate by 25-40%',
-    'Reduce project costs by 20-35%',
-    'Eliminate manual reporting by 80%',
-    'Improve stakeholder communication by 50%',
+    'Reduce project delivery time by 30-50%',Improve resource utilization by 40-60%',Increase project success rate by 25-40%',Reduce project costs by 20-35%',Eliminate manual reporting by 80%',Improve stakeholder communication by 50%',
   ];
 
   const solutions = [
@@ -81,9 +76,7 @@ export default function AIProjectManagement(...args: any[]): any {
       description:'
         'Intelligent project planning and scheduling with predictive analytics',
       features: ['
-        'Smart milestone planning',
-        'Resource optimization',
-        'Timeline forecasting',
+        'Smart milestone planning',Resource optimization',Timeline forecasting',
       ],
       price: 'From $3,000/month'},
     {
@@ -91,9 +84,7 @@ export default function AIProjectManagement(...args: any[]): any {
       title: 'Team Management AI',
       description: 'AI-powered team allocation and performance optimization',
       features: ['
-        'Workload balancing',
-        'Skill matching',
-        'Performance tracking',
+        'Workload balancing',Skill matching',Performance tracking',
       ],
       price: 'From $2,500/month'},
     {
@@ -111,12 +102,7 @@ export default function AIProjectManagement(...args: any[]): any {
   ];
 
   const projectTypes = ['
-    'Software Development',
-    'Construction & Engineering',
-    'Marketing Campaigns',
-    'Product Launches',
-    'Research & Development',
-    'Event Management',
+    'Software Development',Construction & Engineering',Marketing Campaigns',Product Launches',Research & Development',Event Management',
   ];
 
   return()

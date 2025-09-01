@@ -26,10 +26,7 @@ const FinancialSolutions: React.FC = (): JSX.Element => {
         'Advanced AI-powered analytics for comprehensive financial insights and decision-making.',
       icon: BarChart3,
       features: ['
-        'Real-time analytics',
-        'Predictive modeling',
-        'Risk assessment',
-        'Performance tracking',
+        'Real-time analytics',Predictive modeling',Risk assessment',Performance tracking',
       ]},
     {
 
@@ -38,10 +35,7 @@ const FinancialSolutions: React.FC = (): JSX.Element => {
         'Intelligent risk assessment and management systems for financial institutions.',
       icon: Shield,
       features: ['
-        'Risk modeling',
-        'Compliance monitoring',
-        'Fraud detection',
-        'Portfolio optimization',
+        'Risk modeling',Compliance monitoring',Fraud detection',Portfolio optimization',
       ]},
     {
 
@@ -50,10 +44,7 @@ const FinancialSolutions: React.FC = (): JSX.Element => {
         'AI-driven trading algorithms and market analysis for optimal investment decisions.',
       icon: TrendingUp,
       features: ['
-        'Algorithmic trading',
-        'Market analysis',
-        'Portfolio management',
-        'Risk mitigation',
+        'Algorithmic trading',Market analysis',Portfolio management',Risk mitigation',
       ]},
     {
 
@@ -62,10 +53,7 @@ const FinancialSolutions: React.FC = (): JSX.Element => {
         'Cloud financial operations optimization for cost management and efficiency.',
       icon: Calculator,
       features: ['
-        'Cost optimization',
-        'Resource management',
-        'Budget planning',
-        'ROI analysis',
+        'Cost optimization',Resource management',Budget planning',ROI analysis',
       ]},
     {
 
@@ -74,10 +62,7 @@ const FinancialSolutions: React.FC = (): JSX.Element => {
         'Comprehensive cloud financial operations management and optimization.',
       icon: Cloud,
       features: ['
-        'Cloud cost management',
-        'Resource optimization',
-        'Budget tracking',
-        'Efficiency metrics',
+        'Cloud cost management',Resource optimization',Budget tracking',Efficiency metrics',
       ]},
     {
 
@@ -86,10 +71,7 @@ const FinancialSolutions: React.FC = (): JSX.Element => {
         'Automated compliance monitoring and reporting for financial regulations.',
       icon: Lock,
       features: ['
-        'Regulatory compliance',
-        'Automated reporting',
-        'Audit trails',
-        'Risk monitoring',
+        'Regulatory compliance',Automated reporting',Audit trails',Risk monitoring',
       ]},
   ];
 

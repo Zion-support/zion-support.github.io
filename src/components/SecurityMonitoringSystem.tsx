@@ -113,18 +113,10 @@ export function SecurityMonitoringSystem({
 
     const threatTypes = ['critical',high',medium',low'];
     const threatSources = ['
-      'External Attack',
-      'Internal Breach',
-      'Malware',
-      'Phishing',
-      'DDoS',
+      'External Attack',Internal Breach',Malware',Phishing',DDoS',
     ];
     const systems = ['
-      'Web Server',
-      'Database',
-      'API Gateway',
-      'Load Balancer',
-      'CDN',
+      'Web Server',Database',API Gateway',Load Balancer',CDN',
     ];
 
     const newThreats: SecurityThreat[] = threatTypes.map((type, index) => ({
@@ -143,10 +135,7 @@ export function SecurityMonitoringSystem({
             : 'active',
       affectedSystems: systems.slice(0, Math.floor(Math.random() * 3) + 1),
       recommendations: ['
-        'Implement additional authentication layers',
-        'Update security policies',
-        'Conduct security training',
-        'Review access controls',
+        'Implement additional authentication layers',Update security policies',Conduct security training',Review access controls',
       ]}));
 
     setThreats(newThreats);
@@ -158,11 +147,7 @@ export function SecurityMonitoringSystem({
     const categories = ['network',application',infrastructure',data'];
     const risks = ['critical',high',medium',low'];
     const components = ['
-      'Firewall',
-      'Web App',
-      'Database',
-      'API',
-      'Load Balancer',
+      'Firewall',Web App',Database',API',Load Balancer',
     ];
 
     const newVulnerabilities: VulnerabilityAssessment[] = categories.map()
@@ -333,8 +318,7 @@ export function SecurityMonitoringSystem({
       compliant:'
         'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400',
       partial:'
-        'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
-      'non-compliant':'
+        'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',non-compliant':'
         'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400'};
     return colors[status as keyof typeof colors] || colors.partial;
   };
@@ -698,7 +682,7 @@ export function SecurityMonitoringSystem({
                                 <div`
                                   className={`px-3 py-1 rounded-full text-sm font-medium ${getComplianceColor(compliance.status)}`}
                                 >
-                                  {compliance.status.replace('-', ')}
+                                  {compliance.status.replace('-',)}
                                 </div>
                               </div>
 "

@@ -75,12 +75,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
       description:'
         'Perfect for small businesses starting their CX analytics journey',
       features: ['
-        'Up to 10,000 interactions/month',
-        'Basic sentiment analysis',
-        'Standard reporting',
-        'Email support',
-        'Basic journey mapping',
-        'Up to 3 team members',
+        'Up to 10,000 interactions/month',Basic sentiment analysis',Standard reporting',Email support',Basic journey mapping',Up to 3 team members',
       ],
       cta: 'Start Free Trial',
       popular: false},
@@ -91,14 +86,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
       period: '/month',
       description: 'Ideal for growing businesses with comprehensive CX needs',
       features: ['
-        'Up to 100,000 interactions/month',
-        'Advanced AI analytics',
-        'Custom dashboards',
-        'Priority support',
-        'Advanced journey mapping',
-        'Up to 15 team members',
-        'API access',
-        'Custom integrations',
+        'Up to 100,000 interactions/month',Advanced AI analytics',Custom dashboards',Priority support',Advanced journey mapping',Up to 15 team members',API access',Custom integrations',
       ],
       cta: 'Start Free Trial',
       popular: true},
@@ -110,14 +98,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
       description:'
         'For large organizations with enterprise-scale CX requirements',
       features: ['
-        'Unlimited interactions',
-        'Custom AI models',
-        'White-label solution',
-        'Dedicated support',
-        'Advanced predictive analytics',
-        'Unlimited team members',
-        'On-premise deployment',
-        'Custom SLA',
+        'Unlimited interactions',Custom AI models',White-label solution',Dedicated support',Advanced predictive analytics',Unlimited team members',On-premise deployment',Custom SLA',
       ],
       cta: 'Contact Sales',
       popular: false},
@@ -149,18 +130,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
   ];
 
   const analyticsCapabilities = ['
-    'Customer Satisfaction (CSAT),
-    'Net Promoter Score (NPS),
-    'Customer Effort Score (CES),
-    'Sentiment Analysis',
-    'Emotion Detection',
-    'Intent Classification',
-    'Churn Prediction',
-    'Lifetime Value Forecasting',
-    'Customer Segmentation',
-    'Journey Optimization',
-    'Touchpoint Analysis',
-    'Conversion Funnel Tracking',
+    'Customer Satisfaction (CSAT),Net Promoter Score (NPS),Customer Effort Score (CES),Sentiment Analysis',Emotion Detection',Intent Classification',Churn Prediction',Lifetime Value Forecasting',Customer Segmentation',Journey Optimization',Touchpoint Analysis',Conversion Funnel Tracking',
   ];
 
   return()

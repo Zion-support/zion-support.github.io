@@ -29,28 +29,13 @@ const LaunchToolkitPage = () => {
     const [activeBundle, setActiveBundle] = React.useState('general');
     const toolkitAssets = [
         // Media Kit'
-        'toolkit_assets/media_kit/zion_brand_guidelines.md',
-        'toolkit_assets/media_kit/zion_color_palette.md',
-        'toolkit_assets/media_kit/zion_typography.md',
-        'toolkit_assets/media_kit/logos/zion_logo_color.svg',
-        'toolkit_assets/media_kit/logos/zion_logo_white.png',
-        'toolkit_assets/media_kit/press_release_templates/press_release_seed_round_template.md',
-        'toolkit_assets/media_kit/press_release_templates/press_release_launch_template.md',
-        'toolkit_assets/media_kit/press_release_templates/press_release_token_sale_template.md',
+        'toolkit_assets/media_kit/zion_brand_guidelines.md',toolkit_assets/media_kit/zion_color_palette.md',toolkit_assets/media_kit/zion_typography.md',toolkit_assets/media_kit/logos/zion_logo_color.svg',toolkit_assets/media_kit/logos/zion_logo_white.png',toolkit_assets/media_kit/press_release_templates/press_release_seed_round_template.md',toolkit_assets/media_kit/press_release_templates/press_release_launch_template.md',toolkit_assets/media_kit/press_release_templates/press_release_token_sale_template.md',
         // Social Media Kit'
-        'toolkit_assets/social_media_kit/banners/linkedin_banner.png',
-        'toolkit_assets/social_media_kit/banners/twitter_banner.png',
-        'toolkit_assets/social_media_kit/gifs/promo_banner.gif',
-        'toolkit_assets/social_media_kit/copy_blocks/explainer_copy_1.txt',
+        'toolkit_assets/social_media_kit/banners/linkedin_banner.png',toolkit_assets/social_media_kit/banners/twitter_banner.png',toolkit_assets/social_media_kit/gifs/promo_banner.gif',toolkit_assets/social_media_kit/copy_blocks/explainer_copy_1.txt',
         // Legal Bundle'
-        'toolkit_assets/legal_bundle/terms_of_use.md',
-        'toolkit_assets/legal_bundle/privacy_policy.md',
-        'toolkit_assets/legal_bundle/token_sale_notice.md',
-        'toolkit_assets/legal_bundle/dao_disclaimer.md',
-        'toolkit_assets/legal_bundle/jurisdictional_disclosures.md',
+        'toolkit_assets/legal_bundle/terms_of_use.md',toolkit_assets/legal_bundle/privacy_policy.md',toolkit_assets/legal_bundle/token_sale_notice.md',toolkit_assets/legal_bundle/dao_disclaimer.md',toolkit_assets/legal_bundle/jurisdictional_disclosures.md',
         // Playbooks'
-        'toolkit_assets/pre_launch_playbook.md',
-        'toolkit_assets/post_launch_playbook.md',
+        'toolkit_assets/pre_launch_playbook.md',toolkit_assets/post_launch_playbook.md',
     ];
     const handleDownloadAll = async () => {
         setIsZipping(true);

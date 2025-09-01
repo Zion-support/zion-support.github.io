@@ -54,12 +54,7 @@ export default function MicroCRM(...args: any[]): any {
   ];
 
   const benefits = ['
-    'Streamline customer relationship management',
-    'Improve sales team productivity',
-    'Enhance customer communication',
-    'Track sales performance metrics',
-    'Automate repetitive tasks',
-    'Centralize customer data',
+    'Streamline customer relationship management',Improve sales team productivity',Enhance customer communication',Track sales performance metrics',Automate repetitive tasks',Centralize customer data',
   ];
 
   const useCases = [

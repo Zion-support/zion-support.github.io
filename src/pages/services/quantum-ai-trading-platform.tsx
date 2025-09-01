@@ -101,9 +101,7 @@ export function QuantumAITradingPlatform() {
       description:'
         'Leverage quantum algorithms for superior market analysis and prediction',
       benefits: ['
-        'Quantum speed advantage',
-        'Complex pattern recognition',
-        'Quantum machine learning',
+        'Quantum speed advantage',Complex pattern recognition',Quantum machine learning',
       ]},
     {
 
@@ -119,9 +117,7 @@ export function QuantumAITradingPlatform() {
       description:'
         'Military-grade encryption and zero-trust security architecture',
       benefits: ['
-        'End-to-end encryption',
-        'Multi-factor authentication',
-        'Regular security audits',
+        'End-to-end encryption',Multi-factor authentication',Regular security audits',
       ]},
     {
 
@@ -129,9 +125,7 @@ export function QuantumAITradingPlatform() {
       title: 'Real-Time Analytics',
       description: 'Live market data and instant trading signals',
       benefits: ['
-        'Live market feeds',
-        'Instant notifications',
-        'Performance tracking',
+        'Live market feeds',Instant notifications',Performance tracking',
       ]},
     {
 
@@ -139,9 +133,7 @@ export function QuantumAITradingPlatform() {
       title: 'High-Frequency Trading',
       description: 'Ultra-low latency execution for maximum profit potential',
       benefits: ['
-        'Microsecond execution',
-        'Co-location services',
-        'Direct market access',
+        'Microsecond execution',Co-location services',Direct market access',
       ]},
     {
 
@@ -159,12 +151,7 @@ export function QuantumAITradingPlatform() {
       period: '/month',
       description: 'Perfect for individual traders and small portfolios',
       features: ['
-        'Basic quantum algorithms',
-        'Real-time market data',
-        'Standard security',
-        'Email support',
-        'Basic analytics',
-        'Up to 100 trades/month',
+        'Basic quantum algorithms',Real-time market data',Standard security',Email support',Basic analytics',Up to 100 trades/month',
       ],
       cta: 'Start Free Trial',
       popular: false},
@@ -175,14 +162,7 @@ export function QuantumAITradingPlatform() {
       period: '/month',
       description: 'Ideal for active traders and growing portfolios',
       features: ['
-        'Advanced quantum algorithms',
-        'Premium market data',
-        'Enhanced security',
-        'Priority support',
-        'Advanced analytics',
-        'Unlimited trades',
-        'Custom strategies',
-        'API access',
+        'Advanced quantum algorithms',Premium market data',Enhanced security',Priority support',Advanced analytics',Unlimited trades',Custom strategies',API access',
       ],
       cta: 'Start Free Trial',
       popular: true},
@@ -193,14 +173,7 @@ export function QuantumAITradingPlatform() {
       period: '',
       description: 'For institutional traders and hedge funds',
       features: ['
-        'Full quantum capabilities',
-        'Institutional data feeds',
-        'Enterprise security',
-        '24/7 dedicated support',
-        'Custom algorithms',
-        'White-label solutions',
-        'On-premise options',
-        'SLA guarantees',
+        'Full quantum capabilities',Institutional data feeds',Enterprise security',24/7 dedicated support',Custom algorithms',White-label solutions',On-premise options',SLA guarantees',
       ],
       cta: 'Contact Sales',
       popular: false},
@@ -214,9 +187,7 @@ export function QuantumAITradingPlatform() {
         'Use quantum algorithms to find optimal portfolio allocations',
       icon: Target,
       benefits: ['
-        'Risk minimization',
-        'Return maximization',
-        'Portfolio rebalancing',
+        'Risk minimization',Return maximization',Portfolio rebalancing',
       ]},
     {
 
@@ -224,9 +195,7 @@ export function QuantumAITradingPlatform() {
       description: 'Advanced machine learning for market trend forecasting',
       icon: TrendingUp,
       benefits: ['
-        'Pattern recognition',
-        'Sentiment analysis',
-        'Risk assessment',
+        'Pattern recognition',Sentiment analysis',Risk assessment',
       ]},
     {
 
@@ -234,9 +203,7 @@ export function QuantumAITradingPlatform() {
       description: 'Ultra-fast execution for arbitrage and market making',
       icon: Zap,
       benefits: ['
-        'Microsecond latency',
-        'Direct market access',
-        'Co-location services',
+        'Microsecond latency',Direct market access',Co-location services',
       ]},
     {
 

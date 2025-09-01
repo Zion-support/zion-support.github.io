@@ -240,7 +240,7 @@ export default function AllServicesLandingPage() {
                               service.pricingModel
                             )}
                           >
-                            {service.pricingModel.replace('-', ')}
+                            {service.pricingModel.replace('-',)}
                           </Badge>
                         </div>"
                         <div className="flex items-center space-x-2 mb-2">

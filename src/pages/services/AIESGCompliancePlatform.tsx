@@ -19,25 +19,11 @@ import {
 
 export default function AIESGCompliancePlatform() {
   const features = ['
-    'AI-powered ESG data collection and analysis',
-    'Automated compliance reporting and monitoring',
-    'Real-time sustainability performance tracking',
-    'Carbon footprint calculation and optimization',
-    'Social responsibility metrics and reporting',
-    'Governance risk assessment and monitoring',
-    'Regulatory compliance automation',
-    'Stakeholder engagement tracking',
-    'ESG scoring and benchmarking',
-    'Custom sustainability dashboard creation',
+    'AI-powered ESG data collection and analysis',Automated compliance reporting and monitoring',Real-time sustainability performance tracking',Carbon footprint calculation and optimization',Social responsibility metrics and reporting',Governance risk assessment and monitoring',Regulatory compliance automation',Stakeholder engagement tracking',ESG scoring and benchmarking',Custom sustainability dashboard creation',
   ];
 
   const benefits = ['
-    'Reduce ESG reporting time by 85%',
-    'Improve compliance accuracy by 90%',
-    'Cut carbon emissions tracking costs by 70%',
-    'Real-time sustainability performance insights',
-    'Automated regulatory compliance updates',
-    'Enhanced stakeholder transparency and trust',
+    'Reduce ESG reporting time by 85%',Improve compliance accuracy by 90%',Cut carbon emissions tracking costs by 70%',Real-time sustainability performance insights',Automated regulatory compliance updates',Enhanced stakeholder transparency and trust',
   ];
 
   const pricing = [
@@ -46,11 +32,7 @@ export default function AIESGCompliancePlatform() {
       name: 'Starter',
       price: '$399/mo',
       features: ['
-        'Up to 50 ESG metrics',
-        'Basic compliance reporting',
-        'Standard dashboards',
-        'Email support',
-        'Monthly sustainability reports',
+        'Up to 50 ESG metrics',Basic compliance reporting',Standard dashboards',Email support',Monthly sustainability reports',
       ],
       popular: false},
     {
@@ -58,12 +40,7 @@ export default function AIESGCompliancePlatform() {
       name: 'Professional',
       price: '$899/mo',
       features: ['
-        'Up to 200 ESG metrics',
-        'Advanced AI analytics',
-        'Real-time monitoring',
-        'Priority support',
-        'Custom dashboards',
-        'API access',
+        'Up to 200 ESG metrics',Advanced AI analytics',Real-time monitoring',Priority support',Custom dashboards',API access',
       ],
       popular: true},
     {
@@ -71,34 +48,17 @@ export default function AIESGCompliancePlatform() {
       name: 'Enterprise',
       price: '$2,999/mo',
       features: ['
-        'Unlimited ESG metrics',
-        'Full AI suite',
-        'Custom compliance models',
-        'Dedicated support',
-        'White-label solutions',
-        'Advanced integrations',
+        'Unlimited ESG metrics',Full AI suite',Custom compliance models',Dedicated support',White-label solutions',Advanced integrations',
       ],
       popular: false},
   ];
 
   const useCases = ['
-    'Corporate sustainability reporting',
-    'ESG investment portfolio analysis',
-    'Supply chain sustainability tracking',
-    'Regulatory compliance automation',
-    'Stakeholder ESG communication',
-    'Sustainability performance benchmarking',
+    'Corporate sustainability reporting',ESG investment portfolio analysis',Supply chain sustainability tracking',Regulatory compliance automation',Stakeholder ESG communication',Sustainability performance benchmarking',
   ];
 
   const esgCategories = ['
-    'Environmental Impact Assessment',
-    'Carbon Footprint Management',
-    'Renewable Energy Tracking',
-    'Waste Management Analytics',
-    'Social Responsibility Metrics',
-    'Diversity & Inclusion Tracking',
-    'Governance Risk Assessment',
-    'Compliance Monitoring',
+    'Environmental Impact Assessment',Carbon Footprint Management',Renewable Energy Tracking',Waste Management Analytics',Social Responsibility Metrics',Diversity & Inclusion Tracking',Governance Risk Assessment',Compliance Monitoring',
   ];
 
   return()

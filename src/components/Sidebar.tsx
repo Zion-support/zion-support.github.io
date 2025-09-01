@@ -58,8 +58,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
 
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>(['
-    'main',
-    'services',
+    'main',services',
   ]);
 
   const navigation: SidebarItem[] = [

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAwareness() {
   const features = [
-    'AI-powered security awareness optimization',
-    'Intelligent awareness strategy management and execution',;
+    'AI-powered security awareness optimization',Intelligent awareness strategy management and execution',;
     'Automated security behavior assessment and training',;
     'Predictive analytics for awareness needs',;
     'Smart awareness framework management',;

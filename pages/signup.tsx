@@ -40,27 +40,11 @@ export default function Signup(...args[]):  {
   const [errors, setErrors] = useState<Record<string, any>>({})
 
   const industries = ['
-    'Technology',
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Government',
-    'Non-profit',
-    'Other'
+    'Technology',Healthcare',Finance',Manufacturing',Retail',Education',Government',Non-profit',Other'
   ]
 
   const useCases = ['
-    'AI & Machine Learning',
-    'Cloud Infrastructure',
-    'Cybersecurity',
-    'Digital Transformation',
-    'Data Analytics',
-    'IoT Solutions',
-    'Micro SaaS Development',
-    'Enterprise IT',
-    'Other'
+    'AI & Machine Learning',Cloud Infrastructure',Cybersecurity',Digital Transformation',Data Analytics',IoT Solutions',Micro SaaS Development',Enterprise IT',Other'
   ]
 
       // // // // // // // // console.log('Signup successful:', formData)

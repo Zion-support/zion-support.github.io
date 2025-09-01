@@ -12,14 +12,7 @@ const AIMatcher = () => {
             id: 'industry',
             question: 'What industry are you in?',
             options[;
-                'Technology & Software',
-                'Healthcare & Life Sciences',
-                'Financial Services',
-                'Manufacturing & Industrial',
-                'Retail & E-commerce',
-                'Education & Training',
-                'Government & Public Sector',
-                'Other'
+                'Technology & Software',Healthcare & Life Sciences',Financial Services',Manufacturing & Industrial',Retail & E-commerce',Education & Training',Government & Public Sector',Other'
             ]
         },;
         {
@@ -27,10 +20,7 @@ const AIMatcher = () => {
             id: 'comp_size',
             question: 'What is your comp size?',
             options[;
-                'Startup (1-50 employees),
-                'Small Business (51-200 employees),
-                'Medium Business (201-1000 employees),
-                'Enterprise (1000+ employees)
+                'Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees)
             ]
         },;
         {
@@ -38,13 +28,7 @@ const AIMatcher = () => {
             id: 'ai_goals',
             question: 'What are your primary AI goals?',
             options[;
-                'Automate repetitive tasks',
-                'Improve customer experience',
-                'Enhance decision making',
-                'Optimize operations',
-                'Increase revenue',
-                'Reduce costs',
-                'Innovate products/services'
+                'Automate repetitive tasks',Improve customer experience',Enhance decision making',Optimize operations',Increase revenue',Reduce costs',Innovate products/services'
             ]
         },;
         {
@@ -52,11 +36,7 @@ const AIMatcher = () => {
             id: 'budget',
             question: 'What is your budget range for AI implementation?',
             options[;
-                'Under $10,000',
-                '$10,000 - $50,000',
-                '$50,000 - $200,000',
-                '$200,000 - $1,000,000',
-                'Over $1,000,000'
+                'Under $10,000',$10,000 - $50,000',$50,000 - $200,000',$200,000 - $1,000,000',Over $1,000,000'
             ]
         },;
         {
@@ -64,10 +44,7 @@ const AIMatcher = () => {
             id: 'timeline',
             question: 'What is your implementation timeline?',
             options[;
-                'Immediate (0-3 months),
-                'Short-term (3-6 months),
-                'Medium-term (6-12 months),
-                'Long-term (1+ years)
+                'Immediate (0-3 months),Short-term (3-6 months),Medium-term (6-12 months),Long-term (1+ years)
             ]
         }
     ];

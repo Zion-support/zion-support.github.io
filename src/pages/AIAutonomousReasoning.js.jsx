@@ -179,14 +179,7 @@ const AIAutonomousReasoning = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Logical Reasoning',
-                'Deductive Reasoning',
-                'Inductive Reasoning',
-                'Abductive Reasoning',
-                'Analytical Reasoning',
-                'Critical Thinking',
-                'Problem Solving',
-                'Decision Making',
+                'Logical Reasoning',Deductive Reasoning',Inductive Reasoning',Abductive Reasoning',Analytical Reasoning',Critical Thinking',Problem Solving',Decision Making',
               ].map(type => (
                 <div
                   key={type}"

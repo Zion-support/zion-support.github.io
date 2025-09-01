@@ -316,7 +316,7 @@ export default function Press() {
                   <div className="p-8">"
                     <div className="flex items-center gap-3 mb-4">"
                       <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
-                        {item.category.replace('-', ').toUpperCase()}
+                        {item.category.replace('-',).toUpperCase()}
                       </span>"
                       <span className="text-zion-slate-light text-sm flex items-center gap-1">"
                         <Calendar className="w-3 h-3" />
@@ -399,7 +399,7 @@ export default function Press() {
                   <div className="p-6">"
                     <div className="flex items-center gap-3 mb-4">"
                       <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
-                        {item.category.replace('-', ').toUpperCase()}
+                        {item.category.replace('-',).toUpperCase()}
                       </span>"
                       <span className="text-zion-slate-light text-xs flex items-center gap-1">"
                         <Calendar className="w-3 h-3" />

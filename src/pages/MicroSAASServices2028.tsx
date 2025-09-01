@@ -162,16 +162,7 @@ const microSAASServices2028 = [
     period: '/month',
     description: 'Advanced AI content creation platform that generates high-quality articles, social media posts, marketing copy, and creative content across all platforms.',
     features[;
-      'AI article generation',
-      'Social media content creation',
-      'Marketing copy optimization',
-      'SEO content optimization',
-      'Multi-language support',
-      'Content scheduling',
-      'Brand voice customization',
-      'Plagiarism detection',
-      'Content analytics',
-      'Team collaboration tools'
+      'AI article generation',Social media content creation',Marketing copy optimization',SEO content optimization',Multi-language support',Content scheduling',Brand voice customization',Plagiarism detection',Content analytics',Team collaboration tools'
     ],;
     popular: true,
     icon: FileText,
@@ -206,16 +197,7 @@ const microSAASServices2028 = [
     period: '/month',
     description: 'Professional AI image generation platform that creates high-quality, customizable images for marketing, design, and business needs.',
     features[;
-      'High-resolution image generation',
-      'Custom style training',
-      'Brand-specific image creation',
-      'Batch image generation',
-      'Commercial usage rights',
-      'Style transfer capabilities',
-      'Image editing tools',
-      'API integration',
-      'Team collaboration',
-      'Usage analytics'
+      'High-resolution image generation',Custom style training',Brand-specific image creation',Batch image generation',Commercial usage rights',Style transfer capabilities',Image editing tools',API integration',Team collaboration',Usage analytics'
     ],;
     popular: true,
     icon: Image,
@@ -250,16 +232,7 @@ const microSAASServices2028 = [
     period: '/month',
     description: 'Professional AI video creation platform that generates, edits, and optimizes videos for marketing, social media, and business needs.',
     features[;
-      'AI video generation',
-      'Automated video editing',
-      'Text-to-video conversion',
-      'Video optimization',
-      'Multi-format export',
-      'Brand template library',
-      'Voice-over generation',
-      'Music integration',
-      'Analytics dashboard',
-      'Team collaboration'
+      'AI video generation',Automated video editing',Text-to-video conversion',Video optimization',Multi-format export',Brand template library',Voice-over generation',Music integration',Analytics dashboard',Team collaboration'
     ],;
     popular: false,
     icon: Video,
@@ -294,16 +267,7 @@ const microSAASServices2028 = [
     period: '/month',
     description: 'Advanced AI code generation platform that helps developers write, debug, and optimize code across multiple programming languages.',
     features[;
-      'Multi-language code generation',
-      'Code completion and suggestions',
-      'Bug detection and fixing',
-      'Code optimization',
-      'Documentation generation',
-      'Testing automation',
-      'Code review assistance',
-      'Team collaboration',
-      'Version control integration',
-      'Performance analytics'
+      'Multi-language code generation',Code completion and suggestions',Bug detection and fixing',Code optimization',Documentation generation',Testing automation',Code review assistance',Team collaboration',Version control integration',Performance analytics'
     ],;
     popular: true,
     icon: Code,
@@ -338,16 +302,7 @@ const microSAASServices2028 = [
     period: '/month',
     description: 'Intelligent AI design platform that creates logos, graphics, layouts, and visual assets with brand consistency and professional quality.',
     features[;
-      'Logo generation and design',
-      'Graphic design creation',
-      'Layout optimization',
-      'Brand consistency tools',
-      'Template library',
-      'Design collaboration',
-      'Export optimization',
-      'Brand guidelines',
-      'Design analytics',
-      'Team management'
+      'Logo generation and design',Graphic design creation',Layout optimization',Brand consistency tools',Template library',Design collaboration',Export optimization',Brand guidelines',Design analytics',Team management'
     ],;
     popular: false,
     icon: Palette,
@@ -382,16 +337,7 @@ const microSAASServices2028 = [
     period: '/month',
     description: 'Comprehensive AI e-commerce platform that optimizes product recommendations, pricing, inventory, and customer experience.',
     features[;
-      'AI product recommendations',
-      'Dynamic pricing optimization',
-      'Inventory management',
-      'Customer behavior analysis',
-      'Personalization engine',
-      'A/B testing automation',
-      'Conversion optimization',
-      'Analytics dashboard',
-      'Multi-platform support',
-      'API integration'
+      'AI product recommendations',Dynamic pricing optimization',Inventory management',Customer behavior analysis',Personalization engine',A/B testing automation',Conversion optimization',Analytics dashboard',Multi-platform support',API integration'
     ],;
     popular: true,
     icon: ShoppingCart,
@@ -426,16 +372,7 @@ const microSAASServices2028 = [
     period: '/month',
     description: 'Intelligent AI customer service platform that provides 24/7 support through chatbots, automated responses, and intelligent ticket routing.',
     features[;
-      'AI chatbot creation',
-      'Natural language processing',
-      'Automated ticket routing',
-      'Knowledge base management',
-      'Multi-language support',
-      'Integration capabilities',
-      'Analytics dashboard',
-      'Team collaboration',
-      'Custom workflows',
-      'API access'
+      'AI chatbot creation',Natural language processing',Automated ticket routing',Knowledge base management',Multi-language support',Integration capabilities',Analytics dashboard',Team collaboration',Custom workflows',API access'
     ],;
     popular: true,
     icon: MessageSquare,
@@ -470,16 +407,7 @@ const microSAASServices2028 = [
     period: '/month',
     description: 'Advanced AI analytics platform that provides intelligent insights, predictive analytics, and automated reporting for business decision-making.',
     features[;
-      'AI-powered insights',
-      'Predictive analytics',
-      'Automated reporting',
-      'Data visualization',
-      'Real-time monitoring',
-      'Custom dashboards',
-      'Data integration',
-      'Collaboration tools',
-      'Mobile access',
-      'API integration'
+      'AI-powered insights',Predictive analytics',Automated reporting',Data visualization',Real-time monitoring',Custom dashboards',Data integration',Collaboration tools',Mobile access',API integration'
     ],;
     popular: false,
     icon: BarChart3,

@@ -21,10 +21,7 @@ export default function HealthcareSolutions() {
       description:'
         'AI-powered patient monitoring and personalized care recommendations',
       features: ['
-        'Real-time Monitoring',
-        'Predictive Analytics',
-        'Personalized Treatment Plans',
-        'Remote Patient Care',
+        'Real-time Monitoring',Predictive Analytics',Personalized Treatment Plans',Remote Patient Care',
       ]},
     {
 
@@ -32,10 +29,7 @@ export default function HealthcareSolutions() {
       title: 'Diagnostic Assistance',
       description: 'Advanced AI diagnostics and medical imaging analysis',
       features: ['
-        'Medical Image Analysis',
-        'Symptom Assessment',
-        'Disease Prediction',
-        'Treatment Recommendations',
+        'Medical Image Analysis',Symptom Assessment',Disease Prediction',Treatment Recommendations',
       ]},
     {
 
@@ -43,10 +37,7 @@ export default function HealthcareSolutions() {
       title: 'Healthcare Security',
       description: 'HIPAA-compliant security and data protection solutions',
       features: ['
-        'Data Encryption',
-        'Access Control',
-        'Audit Trails',
-        'Compliance Monitoring',
+        'Data Encryption',Access Control',Audit Trails',Compliance Monitoring',
       ]},
     {
 
@@ -54,10 +45,7 @@ export default function HealthcareSolutions() {
       title: 'Health Data Management',
       description: 'Secure and efficient healthcare data infrastructure',
       features: ['
-        'Electronic Health Records',
-        'Data Interoperability',
-        'Analytics Platform',
-        'Cloud Storage',
+        'Electronic Health Records',Data Interoperability',Analytics Platform',Cloud Storage',
       ]},
     {
 
@@ -65,10 +53,7 @@ export default function HealthcareSolutions() {
       title: 'Clinical Decision Support',
       description: 'AI-powered clinical decision support systems',
       features: ['
-        'Evidence-based Guidelines',
-        'Risk Assessment',
-        'Drug Interaction Checking',
-        'Clinical Pathways',
+        'Evidence-based Guidelines',Risk Assessment',Drug Interaction Checking',Clinical Pathways',
       ]},
     {
 
@@ -76,19 +61,11 @@ export default function HealthcareSolutions() {
       title: 'Operational Efficiency',
       description: 'Streamlined healthcare operations and resource management',
       features: ['
-        'Resource Optimization',
-        'Workflow Automation',
-        'Performance Analytics',
-        'Cost Management',
+        'Resource Optimization',Workflow Automation',Performance Analytics',Cost Management',
       ]},
   ];
   const benefits = ['
-    'Improved patient outcomes and care quality',
-    'Reduced medical errors and diagnostic time',
-    'Enhanced operational efficiency and cost savings',
-    'Better patient engagement and satisfaction',
-    'Streamlined administrative processes',
-    'Enhanced data security and compliance',
+    'Improved patient outcomes and care quality',Reduced medical errors and diagnostic time',Enhanced operational efficiency and cost savings',Better patient engagement and satisfaction',Streamlined administrative processes',Enhanced data security and compliance',
   ];
   const caseStudies = [
     {

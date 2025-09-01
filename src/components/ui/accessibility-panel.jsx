@@ -109,8 +109,7 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
             const notification = {
 
   id: Date.now().toString(),`
-                message: `${key.replace(/([A-Z])/g,
-  ' $1').toLowerCase()'`
+                message: `${key.replace(/([A-Z])/g, $1').toLowerCase()'`
 } ${value ? 'enabled' : 'disabled'}`,
                 type: 'success',
                 timestamp: Date.now()

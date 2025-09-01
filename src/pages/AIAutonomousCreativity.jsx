@@ -181,14 +181,7 @@ const AIAutonomousCreativity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Content Creation',
-                'Design Generation',
-                'Story Writing',
-                'Music Composition',
-                'Art Creation',
-                'Concept Development',
-                'Brand Creation',
-                'Campaign Design',
+                'Content Creation',Design Generation',Story Writing',Music Composition',Art Creation',Concept Development',Brand Creation',Campaign Design',
               ].map(type => (
                 <div
                   key={type}"

@@ -25,11 +25,7 @@ const ITSolutions = () => {
       description: 'Multi-layered security for your IT infrastructure'},
   ];
   const benefits = ['
-    'Improved system reliability and performance',
-    'Reduced IT operational costs',
-    'Enhanced data security and compliance',
-    'Streamlined business processes',
-    'Expert technical support and maintenance',
+    'Improved system reliability and performance',Reduced IT operational costs',Enhanced data security and compliance',Streamlined business processes',Expert technical support and maintenance',
   ];
   return()
     <div className="min-h-screen bg-background">

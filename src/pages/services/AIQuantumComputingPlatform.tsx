@@ -20,25 +20,11 @@ import {
 
 export default function AIQuantumComputingPlatform() {
   const features = ['
-    'AI-powered quantum algorithm optimization',
-    'Hybrid quantum-classical computing solutions',
-    'Quantum machine learning frameworks',
-    'Real-time quantum circuit simulation',
-    'Quantum error correction and optimization',
-    'Multi-qubit system management',
-    'Quantum cryptography and security',
-    'Custom quantum algorithm development',
-    'Quantum cloud infrastructure access',
-    'Advanced quantum analytics and visualization',
+    'AI-powered quantum algorithm optimization',Hybrid quantum-classical computing solutions',Quantum machine learning frameworks',Real-time quantum circuit simulation',Quantum error correction and optimization',Multi-qubit system management',Quantum cryptography and security',Custom quantum algorithm development',Quantum cloud infrastructure access',Advanced quantum analytics and visualization',
   ];
 
   const benefits = ['
-    'Solve complex problems 1000x faster',
-    'Reduce computational costs by 60-80%',
-    'Enable breakthrough scientific discoveries',
-    'Real-time quantum optimization',
-    'Access to cutting-edge quantum hardware',
-    'Future-proof your computational capabilities',
+    'Solve complex problems 1000x faster',Reduce computational costs by 60-80%',Enable breakthrough scientific discoveries',Real-time quantum optimization',Access to cutting-edge quantum hardware',Future-proof your computational capabilities',
   ];
 
   const pricing = [
@@ -47,11 +33,7 @@ export default function AIQuantumComputingPlatform() {
       name: 'Starter',
       price: '$1,299/mo',
       features: ['
-        'Up to 10 qubits',
-        'Basic quantum simulation',
-        'Standard algorithms',
-        'Email support',
-        'Monthly usage reports',
+        'Up to 10 qubits',Basic quantum simulation',Standard algorithms',Email support',Monthly usage reports',
       ],
       popular: false},
     {
@@ -59,12 +41,7 @@ export default function AIQuantumComputingPlatform() {
       name: 'Professional',
       price: '$2,999/mo',
       features: ['
-        'Up to 50 qubits',
-        'Advanced quantum AI',
-        'Real-time optimization',
-        'Priority support',
-        'Custom algorithms',
-        'API access',
+        'Up to 50 qubits',Advanced quantum AI',Real-time optimization',Priority support',Custom algorithms',API access',
       ],
       popular: true},
     {
@@ -72,32 +49,17 @@ export default function AIQuantumComputingPlatform() {
       name: 'Enterprise',
       price: '$7,999/mo',
       features: ['
-        'Unlimited qubits',
-        'Full quantum suite',
-        'Custom quantum models',
-        'Dedicated support',
-        'White-label solutions',
-        'Hardware access',
+        'Unlimited qubits',Full quantum suite',Custom quantum models',Dedicated support',White-label solutions',Hardware access',
       ],
       popular: false},
   ];
 
   const useCases = ['
-    'Drug discovery and molecular modeling',
-    'Financial portfolio optimization',
-    'Cryptography and cybersecurity',
-    'Climate modeling and prediction',
-    'Machine learning acceleration',
-    'Supply chain optimization',
+    'Drug discovery and molecular modeling',Financial portfolio optimization',Cryptography and cybersecurity',Climate modeling and prediction',Machine learning acceleration',Supply chain optimization',
   ];
 
   const industries = ['
-    'Pharmaceuticals & Healthcare',
-    'Financial Services & Banking',
-    'Cybersecurity & Defense',
-    'Climate Science & Energy',
-    'Artificial Intelligence & ML',
-    'Logistics & Transportation',
+    'Pharmaceuticals & Healthcare',Financial Services & Banking',Cybersecurity & Defense',Climate Science & Energy',Artificial Intelligence & ML',Logistics & Transportation',
   ];
 
   return()

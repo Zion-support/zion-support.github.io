@@ -194,14 +194,7 @@ const AIAutonomousVirtualAssistant = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Email Management',
-                'Calendar Scheduling',
-                'Task Organization',
-                'Information Search',
-                'Document Creation',
-                'Data Analysis',
-                'Communication',
-                'Reminders',
+                'Email Management',Calendar Scheduling',Task Organization',Information Search',Document Creation',Data Analysis',Communication',Reminders',
               ].map(task => (
                 <div
                   key={task}"

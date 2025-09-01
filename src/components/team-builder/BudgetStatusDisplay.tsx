@@ -14,29 +14,29 @@ estimatedCost: { // From TeamRecommendation;
 // Helper to parse budget string (very basic, needs improvement for production);
 const parseBudget = (budgetString: string): { min: number | null; max: number | null }  => {
 
-  budgetString = budgetString.toLowerCase().replace(/[^0-9-\s$k,]/g,'); // Clean string
+  budgetString = budgetString.toLowerCase().replace(/[^0-9-\s$k,]/g,); // Clean string
 
   let max: number | null = null;
 
-  const kTo1000 = (val: string)  => parseFloat(val.replace('k',')) * 1000;
+  const kTo1000 = (val: string)  => parseFloat(val.replace('k',)) * 1000;
 
   if (budgetString.includes('-')) {
 
     const parts = budgetString.split('-');
-    min = parseFloat(parts[0].replace(/[$,\s]/g,'));
-    max = parseFloat(parts[1].replace(/[$,\s]/g,'));
+    min = parseFloat(parts[0].replace(/[$,\s]/g,));
+    max = parseFloat(parts[1].replace(/[$,\s]/g,));
     if (parts[0].includes('k')) min = kTo1000(parts[0]);
     if (parts[1].includes('k')) max = kTo1000(parts[1])} else if (budgetString.startsWith('<') || budgetString.startsWith('under')) {;
-    max = parseFloat(budgetString.replace(/[<$,\sunderk]/g,'));
+    max = parseFloat(budgetString.replace(/[<$,\sunderk]/g,));
     if (budgetString.includes('k')) max = kTo1000(budgetString);'"
     min = 0; // Assuming no minimum if it's "under X"'
   } else if (budgetString.startsWith('>) || budgetString.startsWith('over')) {
 
-    min = parseFloat(budgetString.replace(/[>$,\soverk]/g,'));
+    min = parseFloat(budgetString.replace(/[>$,\soverk]/g,));
      if (budgetString.includes('k')) min = kTo1000(budgetString);
     max = Infinity; // No explicit maximum"
   } else { // Assuming a single number or "approx X"'
-    min = parseFloat(budgetString.replace(/[$,\sapproxk]/g,'));
+    min = parseFloat(budgetString.replace(/[$,\sapproxk]/g,));
     if (budgetString.includes('k')) min = kTo1000(budgetString);
     max = min; // If single number, min and max are the same
   }

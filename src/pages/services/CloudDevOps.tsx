@@ -82,12 +82,7 @@ const CloudDevOps = () => {
   ];
 
   const benefits = ['
-    'Deploy 10x faster with automated pipelines',
-    'Reduce infrastructure costs by 40%',
-    'Achieve 99.9% uptime with monitoring',
-    'Scale applications automatically',
-    'Improve team productivity by 60%',
-    'Ensure security and compliance',
+    'Deploy 10x faster with automated pipelines',Reduce infrastructure costs by 40%',Achieve 99.9% uptime with monitoring',Scale applications automatically',Improve team productivity by 60%',Ensure security and compliance',
   ];
 
   const services = [

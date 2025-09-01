@@ -118,9 +118,7 @@ const categories = [
 ;
 const innovationLevelColors = {
 
-  'Revolutionary': 'from-red-600 to-pink-700',
-  'Breakthrough': 'from-purple-600 to-violet-700',
-  'Advanced': 'from-blue-600 to-cyan-700',;
+  'Revolutionary': 'from-red-600 to-pink-700',Breakthrough': 'from-purple-600 to-violet-700',Advanced': 'from-blue-600 to-cyan-700',;
   ;
   ;
   ;
@@ -132,9 +130,7 @@ const innovationLevelColors = {
 ;
 const patentStatusColors = {
 
-  'Patented': 'from-green-600 to-emerald-700',
-  'Patent Pending': 'from-yellow-600 to-orange-700',
-  'Trade Secret': 'from-blue-600 to-indigo-700',;
+  'Patented': 'from-green-600 to-emerald-700',Patent Pending': 'from-yellow-600 to-orange-700',Trade Secret': 'from-blue-600 to-indigo-700',;
   ;
   ;
   ;
@@ -435,8 +431,8 @@ export function UltimateServicesShowcase(...args[]):  {
               </Link>
               <a`
                 href={`tel:${contact.mobile}`'
-                  .replace(/\s/g,')
-                  .replace(/[^\d+]/g,')}"
+                  .replace(/\s/g,)
+                  .replace(/[^\d+]/g,)}"
                 className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2"
 "
                 <Phone className="w-5 h-5" />
@@ -547,8 +543,8 @@ export function UltimateServicesShowcase(...args[]):  {
                     </Link>
                     <a`
                       href={`tel:${contact.mobile}`'
-                        .replace(/\s/g,')
-                        .replace(/[^\d+]/g,')}"
+                        .replace(/\s/g,)
+                        .replace(/[^\d+]/g,)}"
                       className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
 "
                       <Phone className="w-5 h-5" />

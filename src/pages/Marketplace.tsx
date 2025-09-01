@@ -67,10 +67,7 @@ const Marketplace: React.FC = () => {
       reviews: 127,
       users: 45,
       features: ['
-        'Quantum algorithms',
-        'Real-time optimization',
-        'Hybrid computing',
-        'Enterprise scaling',
+        'Quantum algorithms',Real-time optimization',Hybrid computing',Enterprise scaling',
       ],
       image: '🔮',
       badge: 'Most Popular',
@@ -89,10 +86,7 @@ const Marketplace: React.FC = () => {
       reviews: 89,
       users: 67,
       features: ['
-        'AI threat detection',
-        'Real-time response',
-        'Zero-day protection',
-        'Compliance ready',
+        'AI threat detection',Real-time response',Zero-day protection',Compliance ready',
       ],
       image: '🛡️',
       badge: 'Best Seller',
@@ -111,10 +105,7 @@ const Marketplace: React.FC = () => {
       reviews: 156,
       users: 89,
       features: ['
-        'Edge processing',
-        'Low latency',
-        'Real-time analytics',
-        'Scalable infrastructure',
+        'Edge processing',Low latency',Real-time analytics',Scalable infrastructure',
       ],
       image: '⚡',
       badge: 'Trending',
@@ -130,12 +121,7 @@ const Marketplace: React.FC = () => {
       icon: BarChart3,
       description: 'Automated machine learning pipeline for data scientists',
       features: ['
-        'AutoML capabilities',
-        'Model versioning',
-        'A/B testing',
-        'Performance monitoring',
-        'Scalable infrastructure',
-        'Cloud deployment',
+        'AutoML capabilities',Model versioning',A/B testing',Performance monitoring',Scalable infrastructure',Cloud deployment',
       ],
       pricing: '$499/month',
       rating: 4.9,
@@ -156,12 +142,7 @@ const Marketplace: React.FC = () => {
       description:'
         'Advanced computer vision services for image and video analysis',
       features: ['
-        'Object detection',
-        'Face recognition',
-        'Image classification',
-        'Video analysis',
-        'Real-time processing',
-        'Custom model training',
+        'Object detection',Face recognition',Image classification',Video analysis',Real-time processing',Custom model training',
       ],
       pricing: '$0.01 per image',
       rating: 4.7,
@@ -181,12 +162,7 @@ const Marketplace: React.FC = () => {
       icon: Server,
       description: 'Enterprise-grade Kubernetes cluster management solution',
       features: ['
-        'Multi-cluster management',
-        'Auto-scaling',
-        'Monitoring & alerting',
-        'Security policies',
-        'Backup & recovery',
-        'Cost optimization',
+        'Multi-cluster management',Auto-scaling',Monitoring & alerting',Security policies',Backup & recovery',Cost optimization',
       ],
       pricing: '$199/month',
       rating: 4.8,
@@ -207,12 +183,7 @@ const Marketplace: React.FC = () => {
       icon: Shield,
       description: 'AI-powered threat detection and response system',
       features: ['
-        'Real-time monitoring',
-        'Behavioral analysis',
-        'Threat intelligence',
-        'Automated response',
-        'Compliance reporting',
-        '24/7 SOC support',
+        'Real-time monitoring',Behavioral analysis',Threat intelligence',Automated response',Compliance reporting',24/7 SOC support',
       ],
       pricing: '$399/month',
       rating: 4.9,
@@ -233,12 +204,7 @@ const Marketplace: React.FC = () => {
       description:'
         'Comprehensive compliance auditing and certification services',
       features: ['
-        'SOC 2 Type II',
-        'ISO 27001',
-        'GDPR compliance',
-        'HIPAA assessment',
-        'PCI DSS validation',
-        'Ongoing monitoring',
+        'SOC 2 Type II',ISO 27001',GDPR compliance',HIPAA assessment',PCI DSS validation',Ongoing monitoring',
       ],
       pricing: 'Starting from $25,000',
       rating: 4.8,
@@ -259,12 +225,7 @@ const Marketplace: React.FC = () => {
       icon: Database,
       description: 'Scalable data warehouse with advanced analytics',
       features: ['
-        'Multi-cloud support',
-        'Real-time processing',
-        'Advanced analytics',
-        'Data governance',
-        'Security & encryption',
-        'Auto-scaling',
+        'Multi-cloud support',Real-time processing',Advanced analytics',Data governance',Security & encryption',Auto-scaling',
       ],
       pricing: '$599/month',
       rating: 4.7,
@@ -272,10 +233,7 @@ const Marketplace: React.FC = () => {
       downloads: 345,
       status: 'trending',
       tags: ['
-        'Data Warehouse',
-        'Big Data',
-        'Analytics',
-        'Business Intelligence',
+        'Data Warehouse',Big Data',Analytics',Business Intelligence',
       ],
       image: '/api/placeholder/400/300',
       demo: 'https://demo.ziontechgroup.com/data-warehouse',
@@ -289,12 +247,7 @@ const Marketplace: React.FC = () => {
       icon: BarChart3,
       description: 'Interactive BI dashboard for data visualization',
       features: ['
-        'Drag & drop interface',
-        'Real-time data',
-        'Custom widgets',
-        'Mobile responsive',
-        'Export capabilities',
-        'Collaboration tools',
+        'Drag & drop interface',Real-time data',Custom widgets',Mobile responsive',Export capabilities',Collaboration tools',
       ],
       pricing: '$149/month',
       rating: 4.6,
@@ -315,12 +268,7 @@ const Marketplace: React.FC = () => {
       icon: Code,
       description: 'AI-powered code generation and assistance tool',
       features: ['
-        'Multi-language support',
-        'Code completion',
-        'Bug detection',
-        'Documentation generation',
-        'Code review',
-        'Integration with IDEs',
+        'Multi-language support',Code completion',Bug detection',Documentation generation',Code review',Integration with IDEs',
       ],
       pricing: '$99/month',
       rating: 4.8,
@@ -352,8 +300,8 @@ const Marketplace: React.FC = () => {
         return b.rating - a.rating;
       case 'price':
         return ('
-          parseFloat(a.price.replace(/[^0-9.]/g,')) -'
-          parseFloat(b.price.replace(/[^0-9.]/g,'))
+          parseFloat(a.price.replace(/[^0-9.]/g,)) -'
+          parseFloat(b.price.replace(/[^0-9.]/g,))
         );
       case 'reviews':
         return b.reviews - a.reviews;

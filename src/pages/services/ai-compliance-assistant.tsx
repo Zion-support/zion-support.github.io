@@ -89,12 +89,7 @@ export default function AIComplianceAssistant() {
   ];
 
   const benefits = ['
-    'Reduce compliance violations by up to 90% through proactive monitoring',
-    'Automate 80% of routine compliance tasks and documentation',
-    'Achieve 100% audit readiness with real-time compliance tracking',
-    'Reduce compliance costs by 60% through intelligent automation',
-    'Improve regulatory reporting accuracy and timeliness',
-    'Ensure consistent compliance across all business units and locations',
+    'Reduce compliance violations by up to 90% through proactive monitoring',Automate 80% of routine compliance tasks and documentation',Achieve 100% audit readiness with real-time compliance tracking',Reduce compliance costs by 60% through intelligent automation',Improve regulatory reporting accuracy and timeliness',Ensure consistent compliance across all business units and locations',
   ];
 
   const complianceAreas = [

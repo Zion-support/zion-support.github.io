@@ -171,14 +171,7 @@ const AIAutonomousFinance = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Algorithmic Trading',
-                'Credit Scoring',
-                'Insurance Analytics',
-                'Wealth Management',
-                'Market Research',
-                'Tax Optimization',
-                'Financial Planning',
-                'Risk Assessment',
+                'Algorithmic Trading',Credit Scoring',Insurance Analytics',Wealth Management',Market Research',Tax Optimization',Financial Planning',Risk Assessment',
               ].map(service => (
                 <div
                   key={service}"

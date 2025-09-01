@@ -1,10 +1,7 @@
 import { MarketplaceItem   } from '@/data/marketplaceData';
 
 const sampleTitles = ['
-  'AI-Powered Analytics Platform',
-  'Cybersecurity Assessment Tool',
-  'Cloud Migration Service',
-  'IoT Edge Computing Solution',;
+  'AI-Powered Analytics Platform',Cybersecurity Assessment Tool',Cloud Migration Service',IoT Edge Computing Solution',;
   'Quantum Computing Hardware',;
   'Data Science Consulting',;
   'Blockchain Development Service',;
@@ -14,10 +11,7 @@ const sampleTitles = ['
 ];
 
 const sampleDescriptions = ['
-  'Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.',
-  'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.',
-  'Professional cloud migration service including planning, execution, and optimization.',
-  'IoT platform with edge computing capabilities for real-time data processing.',;
+  'Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.',Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.',Professional cloud migration service including planning, execution, and optimization.',IoT platform with edge computing capabilities for real-time data processing.',;
   'State-of-the-art quantum computing components for research and development.',;
   'Expert data science consulting services for machine learning and analytics projects.',;
   'Blockchain development and implementation services for decentralized applications.',;
@@ -61,8 +55,7 @@ const locations = [;
 ];
 
 const sellerNames = ['
-  'TechCorp Solutions',
-  'SecureNet Professionals',;
+  'TechCorp Solutions',SecureNet Professionals',;
   'QuantumTech Labs',;
   'CloudMasters Inc',;
   'IoT Solutions Pro',;

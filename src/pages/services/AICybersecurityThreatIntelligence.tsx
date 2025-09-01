@@ -272,12 +272,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       period: '/month',
       description: 'Perfect for small businesses',
       features: ['
-        'Up to 100 endpoints',
-        'Basic threat detection',
-        'Email alerts',
-        'Basic reporting',
-        'Email support',
-        'Mobile app access'
+        'Up to 100 endpoints',Basic threat detection',Email alerts',Basic reporting',Email support',Mobile app access'
       ],
       cta: 'Start Free Trial',
       popular: false
@@ -289,14 +284,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       period: '/month',
       description: 'Ideal for growing companies',
       features: ['
-        'Up to 1,000 endpoints',
-        'Advanced AI detection',
-        'Real-time monitoring',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
-        'Custom integrations',
-        'Threat hunting tools'
+        'Up to 1,000 endpoints',Advanced AI detection',Real-time monitoring',Priority support',Advanced analytics',API access',Custom integrations',Threat hunting tools'
       ],
       cta: 'Start Free Trial',
       popular: true
@@ -308,14 +296,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       period: '/month',
       description: 'For large organizations',
       features: ['
-        'Unlimited endpoints',
-        'Custom AI models',
-        'On-premise deployment',
-        'Dedicated support',
-        'Custom integrations',
-        'Advanced security',
-        'Compliance reporting',
-        'SLA guarantees'
+        'Unlimited endpoints',Custom AI models',On-premise deployment',Dedicated support',Custom integrations',Advanced security',Compliance reporting',SLA guarantees'
       ],
       cta: 'Contact Sales',
       popular: false

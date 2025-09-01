@@ -110,7 +110,7 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
                 <div className="text-2xl font-bold text-white mb-2">
                   {formatPrice(solution.price, solution.pricingModel)}
                 </div>'"
-                <div className="text-sm text-gray-400">{solution.pricingModel.replace('-', ')}</div>
+                <div className="text-sm text-gray-400">{solution.pricingModel.replace('-',)}</div>
               </div>
 "
               <div className="mb-4">"

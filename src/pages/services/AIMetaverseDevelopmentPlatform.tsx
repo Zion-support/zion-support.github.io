@@ -19,12 +19,7 @@ export default function AIMetaverseDevelopmentPlatform() {
       price: '$1,799/mo',
       description: 'Perfect for indie developers and small studios',
       details: ['
-        'Up to 3 virtual worlds',
-        'Basic AI avatar system',
-        'Standard support (8/5),
-        'API access and documentation',
-        'Community forum access',
-        'Basic 3D asset library'
+        'Up to 3 virtual worlds',Basic AI avatar system',Standard support (8/5),API access and documentation',Community forum access',Basic 3D asset library'
       ]
     },
     {
@@ -33,13 +28,7 @@ export default function AIMetaverseDevelopmentPlatform() {
       price: '$4,499/mo',
       description: 'Ideal for growing metaverse companies',
       details: ['
-        'Up to 15 virtual worlds',
-        'Advanced AI avatar system',
-        'Priority support (12/7),
-        'Custom 3D world generation',
-        'Dedicated account manager',
-        'Metaverse analytics dashboard',
-        'Multi-user collaboration tools'
+        'Up to 15 virtual worlds',Advanced AI avatar system',Priority support (12/7),Custom 3D world generation',Dedicated account manager',Metaverse analytics dashboard',Multi-user collaboration tools'
       ]
     },
     {
@@ -48,9 +37,7 @@ export default function AIMetaverseDevelopmentPlatform() {
       price: '$11,999/mo',
       description: 'Full-scale metaverse development platform',
       details: ['
-        'Unlimited virtual worlds',
-        'Custom AI algorithms',
-        '24/7 dedicated support',;
+        'Unlimited virtual worlds',Custom AI algorithms',24/7 dedicated support',;
         'On-premise deployment options',;
         'Custom integrations and APIs',;
         'White-label solutions available',;

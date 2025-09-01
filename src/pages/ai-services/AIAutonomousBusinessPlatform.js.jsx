@@ -47,12 +47,7 @@ const features = [
     color: 'from-orange-500 to-red-500'},
 ];
 const benefits = ['
-  'Scale from startup to enterprise seamlessly',
-  '99.9% uptime with global CDN distribution',
-  'Real-time collaboration across teams and locations',
-  'Advanced analytics and business intelligence',
-  'Customizable workflows and automation',
-  'Multi-tenant architecture for cost efficiency',
+  'Scale from startup to enterprise seamlessly',99.9% uptime with global CDN distribution',Real-time collaboration across teams and locations',Advanced analytics and business intelligence',Customizable workflows and automation',Multi-tenant architecture for cost efficiency',
 ];
 const useCases = [
   {

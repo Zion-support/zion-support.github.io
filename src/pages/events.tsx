@@ -38,17 +38,12 @@ const events = [
     description:'
       'Join industry leaders for a comprehensive exploration of AI and machine learning innovations, featuring keynote speakers, workshops, and networking opportunities.',
     speakers: ['
-      'Dr. Sarah Chen',
-      'Prof. Michael Rodriguez',
-      'AI Expert Lisa Wang',
+      'Dr. Sarah Chen',Prof. Michael Rodriguez',AI Expert Lisa Wang',
     ],
     attendees: 500,
     price: '$299',
     highlights: ['
-      'Keynote presentations from AI pioneers',
-      'Hands-on workshops with real datasets',
-      'Networking with industry professionals',
-      'Latest AI research and applications',
+      'Keynote presentations from AI pioneers',Hands-on workshops with real datasets',Networking with industry professionals',Latest AI research and applications',
     ],
     image: '/images/ai-summit-2027.jpg'},
   {
@@ -67,10 +62,7 @@ const events = [
     attendees: 150,
     price: 'Free',
     highlights: ['
-      'Threat detection strategies',
-      'Incident response protocols',
-      'Compliance best practices',
-      'Security tool demonstrations',
+      'Threat detection strategies',Incident response protocols',Compliance best practices',Security tool demonstrations',
     ],
     image: '/images/cybersecurity-workshop.jpg'},
   {
@@ -89,10 +81,7 @@ const events = [
     attendees: 300,
     price: '$199',
     highlights: ['
-      'Cloud migration strategies',
-      'Container orchestration',
-      'CI/CD pipeline optimization',
-      'Cost optimization techniques',
+      'Cloud migration strategies',Container orchestration',CI/CD pipeline optimization',Cost optimization techniques',
     ],
     image: '/images/cloud-devops-conference.jpg'},
   {
@@ -111,10 +100,7 @@ const events = [
     attendees: 200,
     price: 'Free',
     highlights: ['
-      'Data visualization techniques',
-      'Predictive analytics models',
-      'Business intelligence tools',
-      'ROI measurement strategies',
+      'Data visualization techniques',Predictive analytics models',Business intelligence tools',ROI measurement strategies',
     ],
     image: '/images/data-analytics-webinar.jpg'},
   {
@@ -130,16 +116,12 @@ const events = [
     description:'
       'Explore the future of IoT and edge computing with industry experts, featuring case studies and emerging technology trends.',
     speakers: ['
-      'IoT Specialist Dr. James Brown',
-      'Edge Computing Expert Lisa Chen',
+      'IoT Specialist Dr. James Brown',Edge Computing Expert Lisa Chen',
     ],
     attendees: 180,
     price: '$149',
     highlights: ['
-      'IoT architecture design',
-      'Edge computing optimization',
-      'Security considerations',
-      'Industry applications',
+      'IoT architecture design',Edge computing optimization',Security considerations',Industry applications',
     ],
     image: '/images/iot-symposium.jpg'},
   {
@@ -155,29 +137,19 @@ const events = [
     description:'
       'Learn from successful digital transformation stories and discover strategies to modernize your business operations and customer experience.',
     speakers: ['
-      'Digital Strategist Mark Davis',
-      'Transformation Expert Anna Rodriguez',
+      'Digital Strategist Mark Davis',Transformation Expert Anna Rodriguez',
     ],
     attendees: 400,
     price: '$249',
     highlights: ['
-      'Transformation roadmaps',
-      'Change management strategies',
-      'Technology selection',
-      'Success metrics',
+      'Transformation roadmaps',Change management strategies',Technology selection',Success metrics',
     ],
     image: '/images/digital-transformation-summit.jpg'},
 ];
 
 const eventTypes = ['All',Conference',Workshop',Webinar',Symposium'];
 const categories = ['
-  'All',
-  'AI & ML',
-  'Cybersecurity',
-  'Cloud & DevOps',
-  'Data Analytics',
-  'IoT & Edge',
-  'Digital Transformation',
+  'All',AI & ML',Cybersecurity',Cloud & DevOps',Data Analytics',IoT & Edge',Digital Transformation',
 ];
 const statuses = ['All',upcoming',past'];
 

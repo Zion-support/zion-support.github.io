@@ -16,25 +16,11 @@ import {
 
 const AIHealthcareAnalytics = () => {
   const features = ['
-    'AI-powered patient outcome prediction',
-    'Real-time health monitoring and alerts',
-    'Predictive analytics for disease prevention',
-    'Automated medical image analysis',
-    'Clinical decision support systems',
-    'Population health management',
-    'Drug interaction and safety monitoring',
-    'Healthcare fraud detection',
-    'Patient engagement optimization',
-    'Regulatory compliance automation',
+    'AI-powered patient outcome prediction',Real-time health monitoring and alerts',Predictive analytics for disease prevention',Automated medical image analysis',Clinical decision support systems',Population health management',Drug interaction and safety monitoring',Healthcare fraud detection',Patient engagement optimization',Regulatory compliance automation',
   ];
 
   const benefits = ['
-    'Improve patient outcomes by 35%',
-    'Reduce healthcare costs by 25%',
-    'Increase diagnostic accuracy by 40%',
-    'Reduce readmission rates by 30%',
-    'Optimize resource allocation by 45%',
-    'Enhance patient satisfaction by 50%',
+    'Improve patient outcomes by 35%',Reduce healthcare costs by 25%',Increase diagnostic accuracy by 40%',Reduce readmission rates by 30%',Optimize resource allocation by 45%',Enhance patient satisfaction by 50%',
   ];
 
   const testimonials = [
@@ -65,23 +51,11 @@ const AIHealthcareAnalytics = () => {
   ];
 
   const complianceFeatures = ['
-    'HIPAA Compliance',
-    'HITECH Act Support',
-    'SOC 2 Type II',
-    'ISO 27001',
-    'GDPR Compliance',
-    'FDA Guidelines',
-    'Clinical Validation',
-    'Data Encryption',
+    'HIPAA Compliance',HITECH Act Support',SOC 2 Type II',ISO 27001',GDPR Compliance',FDA Guidelines',Clinical Validation',Data Encryption',
   ];
 
   const useCases = ['
-    'Hospital management and operations',
-    'Clinical research and trials',
-    'Telemedicine and remote care',
-    'Pharmaceutical development',
-    'Insurance and claims processing',
-    'Public health monitoring',
+    'Hospital management and operations',Clinical research and trials',Telemedicine and remote care',Pharmaceutical development',Insurance and claims processing',Public health monitoring',
   ];
 
   const tiers = [
@@ -90,63 +64,34 @@ const AIHealthcareAnalytics = () => {
       name: 'Clinical',
       price: '$599/mo',
       details: ['
-        'Up to 100 patients',
-        'Basic health analytics',
-        'Standard reporting',
-        'Email support',
-        'HIPAA compliance',
+        'Up to 100 patients',Basic health analytics',Standard reporting',Email support',HIPAA compliance',
       ]},
     {
 
       name: 'Professional',
       price: '$1,499/mo',
       details: ['
-        'Up to 1,000 patients',
-        'Advanced AI analytics',
-        'Custom dashboards',
-        'Priority support',
-        'API integrations',
-        'Advanced compliance',
+        'Up to 1,000 patients',Advanced AI analytics',Custom dashboards',Priority support',API integrations',Advanced compliance',
       ]},
     {
 
       name: 'Enterprise',
       price: '$3,999/mo',
       details: ['
-        'Unlimited patients',
-        'Full AI healthcare suite',
-        'Custom algorithms',
-        'Dedicated support',
-        'White-label solutions',
-        'Multi-facility support',
+        'Unlimited patients',Full AI healthcare suite',Custom algorithms',Dedicated support',White-label solutions',Multi-facility support',
       ]},
   ];
 
   const technicalSpecs = {
 
     technology: ['
-      'Deep Learning',
-      'Natural Language Processing',
-      'Python',
-      'React',
-      'Node.js',
-      'PostgreSQL',
-      'TensorFlow',
+      'Deep Learning',Natural Language Processing',Python',React',Node.js',PostgreSQL',TensorFlow',
     ],
     integrations: ['
-      'Epic',
-      'Cerner',
-      'Allscripts',
-      'Meditech',
-      'Practice Fusion',
-      'Athenahealth',
+      'Epic',Cerner',Allscripts',Meditech',Practice Fusion',Athenahealth',
     ],
     security: ['
-      'HIPAA',
-      'SOC 2 Type II',
-      'HITECH',
-      'End-to-end encryption',
-      'Multi-factor authentication',
+      'HIPAA',SOC 2 Type II',HITECH',End-to-end encryption',Multi-factor authentication',
     ],
     uptime: '99.99%',
     compliance: ['HIPAA',HITECH',SOC 2',ISO 27001',GDPR',CCPA']};
@@ -156,28 +101,19 @@ const AIHealthcareAnalytics = () => {
 
       specialty: 'Cardiology',
       solutions: ['
-        'Heart disease prediction',
-        'ECG analysis',
-        'Risk assessment',
-        'Treatment optimization',
+        'Heart disease prediction',ECG analysis',Risk assessment',Treatment optimization',
       ]},
     {
 
       specialty: 'Oncology',
       solutions: ['
-        'Cancer detection',
-        'Treatment planning',
-        'Outcome prediction',
-        'Clinical trial matching',
+        'Cancer detection',Treatment planning',Outcome prediction',Clinical trial matching',
       ]},
     {
 
       specialty: 'Neurology',
       solutions: ['
-        'Brain imaging analysis',
-        'Cognitive assessment',
-        'Disease progression tracking',
-        'Treatment response monitoring',
+        'Brain imaging analysis',Cognitive assessment',Disease progression tracking',Treatment response monitoring',
       ]},
   ];
 

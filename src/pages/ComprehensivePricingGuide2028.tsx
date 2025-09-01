@@ -187,9 +187,9 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   const filteredServices = getAllServices().filter(service => {
 
     const matchesCategory = selectedCategory === 'all' ||'
-      service.type.toLowerCase().includes(selectedCategory.replace('-', '));
+      service.type.toLowerCase().includes(selectedCategory.replace('-',));
 
-    const price = parseInt(service.price.replace(/[^0-9]/g,'));
+    const price = parseInt(service.price.replace(/[^0-9]/g,));
     let matchesPrice = true;
     if (priceRange === 'low') matchesPrice = price < 500;
     else if (priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000;
@@ -199,7 +199,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   }) ;
 
   const calculateROI = (roi: string) => {;
-    return parseInt(roi.replace('%','));
+    return parseInt(roi.replace('%',));
   };
 
   const sortedServices = filteredServices.sort ( (a, b) => calculateROI (b.roi) - calculateROI (a.roi) ) ;

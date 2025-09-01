@@ -11,9 +11,7 @@ const mockBusinessProcesses = [
         priority: 'high',
         automationLevel: 'fully-automated',
         aiInsights[;
-            'Pattern detected: 15% of invoices require manual review',
-            'Optimization opportunity: Reduce approval time by 40%',
-            'Cost savings potential: $12,000/month through automation'
+            'Pattern detected: 15% of invoices require manual review',Optimization opportunity: Reduce approval time by 40%',Cost savings potential: $12,000/month through automation'
         ],;
         efficiency: 92,
         costSavings: 12000,
@@ -60,9 +58,7 @@ const mockBusinessProcesses = [
         priority: 'medium',
         automationLevel: 'semi-automated',
         aiInsights[;
-            'Bottleneck identified: IT setup takes 3 days on average',
-            'Recommendation: Implement parallel processing for faster onboarding',
-            'Success rate: 98% completion within SLA'
+            'Bottleneck identified: IT setup takes 3 days on average',Recommendation: Implement parallel processing for faster onboarding',Success rate: 98% completion within SLA'
         ],;
         efficiency: 87,
         costSavings: 8000,
@@ -109,9 +105,7 @@ const mockBusinessProcesses = [
         priority: 'critical',
         automationLevel: 'fully-automated',
         aiInsights[;
-            'AI accuracy: 94% correct ticket classification',
-            'Response time improved by 60%',
-            'Customer satisfaction increased by 25%'
+            'AI accuracy: 94% correct ticket classification',Response time improved by 60%',Customer satisfaction increased by 25%'
         ],;
         efficiency: 96,
         costSavings: 15000,
@@ -466,7 +460,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                     {process.priority}
                   </span>`
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getAutomationLevelColor(process.automationLevel)}`}>
-                    {process.automationLevel.replace('-', ')}
+                    {process.automationLevel.replace('-',)}
                   </span>
                 </div>
 "

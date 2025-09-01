@@ -60,8 +60,8 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
     .sort((a, b) => {
 
       if (sortBy === 'featured') return b.featured ? 1 : -1;
-      if (sortBy === 'price-low') return parseFloat(a.pricing.monthly.replace(/[^0-9]/g,')) - parseFloat(b.pricing.monthly.replace(/[^0-9]/g,'));
-      if (sortBy === 'price-high') return parseFloat(b.pricing.monthly.replace(/[^0-9]/g,')) - parseFloat(a.pricing.monthly.replace(/[^0-9]/g,'));
+      if (sortBy === 'price-low') return parseFloat(a.pricing.monthly.replace(/[^0-9]/g,)) - parseFloat(b.pricing.monthly.replace(/[^0-9]/g,));
+      if (sortBy === 'price-high') return parseFloat(b.pricing.monthly.replace(/[^0-9]/g,)) - parseFloat(a.pricing.monthly.replace(/[^0-9]/g,));
       return 0;
     }) ;
 
@@ -75,15 +75,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
 
     const colors: { [key: string]: string } = {
 
-      'ai-services': 'from-purple-500 to-pink-600',
-      'quantum-computing': 'from-indigo-500 to-purple-600',
-      'blockchain-web3': 'from-green-500 to-teal-600',
-      'biotech-ai': 'from-red-500 to-pink-600',
-      'fintech': 'from-orange-500 to-red-600',
-      'edutech': 'from-blue-500 to-indigo-600',
-      'martech': 'from-green-500 to-emerald-600',
-      'space-tech': 'from-purple-500 to-indigo-600',
-      'emerging-tech': 'from-teal-500 to-cyan-600'
+      'ai-services': 'from-purple-500 to-pink-600',quantum-computing': 'from-indigo-500 to-purple-600',blockchain-web3': 'from-green-500 to-teal-600',biotech-ai': 'from-red-500 to-pink-600',fintech': 'from-orange-500 to-red-600',edutech': 'from-blue-500 to-indigo-600',martech': 'from-green-500 to-emerald-600',space-tech': 'from-purple-500 to-indigo-600',emerging-tech': 'from-teal-500 to-cyan-600'
     };
     return colors[category] || 'from-gray-500 to-gray-600';
   };

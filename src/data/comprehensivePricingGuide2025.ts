@@ -683,23 +683,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'month',
         description: 'Perfect for small to medium businesses starting their AI journey',
         features: ['
-          'Basic autonomous decision making',
-          'Core business process automation',
-          'Standard reporting and analytics',
-          'Email and chat support',
-          'Basic integrations (5 systems),
-          'Monthly performance reviews'
+          'Basic autonomous decision making',Core business process automation',Standard reporting and analytics',Email and chat support',Basic integrations (5 systems),Monthly performance reviews'
         ],
         benefits: ['
-          'Reduce operational costs by 25-35%',
-          'Improve decision accuracy by 60%',
-          'Basic business monitoring',
-          'Standard compliance features'
+          'Reduce operational costs by 25-35%',Improve decision accuracy by 60%',Basic business monitoring',Standard compliance features'
         ],
         bestFor: ['
-          'Small businesses (10-50 employees),
-          'Companies new to AI automation',
-          'Basic process optimization needs'
+          'Small businesses (10-50 employees),Companies new to AI automation',Basic process optimization needs'
         ]
       },
       {
@@ -709,26 +699,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'month',
         description: 'Advanced features for growing businesses with complex operations',
         features: ['
-          'Advanced autonomous decision making',
-          'Predictive business modeling',
-          'Real-time resource optimization',
-          'Advanced risk assessment',
-          'Multi-department integration',
-          'Priority support',
-          'Advanced integrations (15 systems),
-          'Weekly performance reviews'
+          'Advanced autonomous decision making',Predictive business modeling',Real-time resource optimization',Advanced risk assessment',Multi-department integration',Priority support',Advanced integrations (15 systems),Weekly performance reviews'
         ],
         benefits: ['
-          'Reduce operational costs by 40-60%',
-          'Improve decision accuracy by 85%',
-          '24/7 business monitoring',
-          'Advanced compliance features',
-          'Multi-location support'
+          'Reduce operational costs by 40-60%',Improve decision accuracy by 85%',24/7 business monitoring',Advanced compliance features',Multi-location support'
         ],
         bestFor: ['
-          'Medium businesses (50-200 employees),
-          'Multi-location operations',
-          'Complex business processes'
+          'Medium businesses (50-200 employees),Multi-location operations',Complex business processes'
         ],
         popular: true
       },
@@ -739,27 +716,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'month',
         description: 'Full-scale enterprise solution with custom AI models and dedicated support',
         features: ['
-          'Custom AI model development',
-          'Full autonomous business management',
-          'Advanced predictive analytics',
-          'Custom integrations (unlimited),
-          'Dedicated account manager',
-          '24/7 phone support',
-          'Custom compliance features',
-          'Advanced security features',
-          'API access and customization'
+          'Custom AI model development',Full autonomous business management',Advanced predictive analytics',Custom integrations (unlimited),Dedicated account manager',24/7 phone support',Custom compliance features',Advanced security features',API access and customization'
         ],
         benefits: ['
-          'Reduce operational costs by 60-80%',
-          'Improve decision accuracy by 95%',
-          'Full business transformation',
-          'Custom AI solutions',
-          'Enterprise-grade security'
+          'Reduce operational costs by 60-80%',Improve decision accuracy by 95%',Full business transformation',Custom AI solutions',Enterprise-grade security'
         ],
         bestFor: ['
-          'Large enterprises (200+ employees),
-          'Multi-national operations',
-          'Custom AI requirements'
+          'Large enterprises (200+ employees),Multi-national operations',Custom AI requirements'
         ]
       }
     ],
@@ -771,28 +734,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
       valueProposition: 'Most comprehensive AI business management solution at competitive pricing'
     },
     features: ['
-      'Autonomous decision making with explainable AI',
-      'Predictive business modeling and forecasting',
-      'Real-time resource optimization',
-      'Risk assessment and mitigation',
-      'Continuous learning and adaptation',
-      'Multi-department integration',
-      'Performance analytics dashboard',
-      'Automated reporting and insights'
+      'Autonomous decision making with explainable AI',Predictive business modeling and forecasting',Real-time resource optimization',Risk assessment and mitigation',Continuous learning and adaptation',Multi-department integration',Performance analytics dashboard',Automated reporting and insights'
     ],
     benefits: ['
-      'Reduce operational costs by 40-60%',
-      'Improve decision accuracy by 85%',
-      '24/7 business monitoring and optimization',
-      'Scalable across multiple business units',
-      'Compliance and audit trail automation'
+      'Reduce operational costs by 40-60%',Improve decision accuracy by 85%',24/7 business monitoring and optimization',Scalable across multiple business units',Compliance and audit trail automation'
     ],
     useCases: ['
-      'Enterprise operations management',
-      'Multi-location business coordination',
-      'Supply chain optimization',
-      'Financial planning and analysis',
-      'Strategic planning and execution'
+      'Enterprise operations management',Multi-location business coordination',Supply chain optimization',Financial planning and analysis',Strategic planning and execution'
     ],
     contactInfo: {
 
@@ -816,22 +764,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'month',
         description: 'Essential content optimization for small content creators',
         features: ['
-          'Basic SEO optimization',
-          'Content readability scoring',
-          'Basic performance analytics',
-          'Email support',
-          '5 content pieces per month',
-          'Basic keyword research'
+          'Basic SEO optimization',Content readability scoring',Basic performance analytics',Email support',5 content pieces per month',Basic keyword research'
         ],
         benefits: ['
-          'Improve content engagement by 40%',
-          'Basic SEO optimization',
-          'Content quality improvement'
+          'Improve content engagement by 40%',Basic SEO optimization',Content quality improvement'
         ],
         bestFor: ['
-          'Individual content creators',
-          'Small blogs',
-          'Basic content marketing needs'
+          'Individual content creators',Small blogs',Basic content marketing needs'
         ]
       },
       {
@@ -841,29 +780,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'month',
         description: 'Advanced features for growing businesses and marketing teams',
         features: ['
-          'AI-powered SEO optimization',
-          'Advanced content readability scoring',
-          'Multi-language optimization',
-          'Performance analytics and A/B testing',
-          'Content personalization engine',
-          'Social media optimization',
-          'Competitor analysis',
-          'Priority support',
-          'Unlimited content pieces',
-          'Advanced keyword research'
+          'AI-powered SEO optimization',Advanced content readability scoring',Multi-language optimization',Performance analytics and A/B testing',Content personalization engine',Social media optimization',Competitor analysis',Priority support',Unlimited content pieces',Advanced keyword research'
         ],
         benefits: ['
-          'Increase organic traffic by 150-300%',
-          'Improve content engagement by 80%',
-          'Reduce content creation time by 60%',
-          'Multi-platform optimization',
-          'Data-driven content strategy'
+          'Increase organic traffic by 150-300%',Improve content engagement by 80%',Reduce content creation time by 60%',Multi-platform optimization',Data-driven content strategy'
         ],
         bestFor: ['
-          'Digital marketing agencies',
-          'E-commerce businesses',
-          'Content marketing teams',
-          'Growing businesses'
+          'Digital marketing agencies',E-commerce businesses',Content marketing teams',Growing businesses'
         ],
         popular: true
       },
@@ -874,28 +797,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'month',
         description: 'Full-scale enterprise solution with custom AI models and team collaboration',
         features: ['
-          'Custom AI content models',
-          'Team collaboration tools',
-          'Advanced analytics and reporting',
-          'Custom integrations',
-          'Dedicated account manager',
-          '24/7 support',
-          'API access',
-          'Custom compliance features',
-          'Multi-brand management'
+          'Custom AI content models',Team collaboration tools',Advanced analytics and reporting',Custom integrations',Dedicated account manager',24/7 support',API access',Custom compliance features',Multi-brand management'
         ],
         benefits: ['
-          'Maximum content performance',
-          'Team efficiency optimization',
-          'Custom AI solutions',
-          'Enterprise-grade support',
-          'Full content lifecycle management'
+          'Maximum content performance',Team efficiency optimization',Custom AI solutions',Enterprise-grade support',Full content lifecycle management'
         ],
         bestFor: ['
-          'Large enterprises',
-          'Multi-brand companies',
-          'Agency teams',
-          'Custom AI requirements'
+          'Large enterprises',Multi-brand companies',Agency teams',Custom AI requirements'
         ]
       }
     ],
@@ -907,28 +815,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
       valueProposition: 'Most comprehensive AI content optimization solution with advanced features'
     },
     features: ['
-      'AI-powered SEO optimization with real-time analysis',
-      'Content readability scoring and improvement suggestions',
-      'Multi-language content optimization',
-      'Performance analytics and A/B testing',
-      'Content personalization engine',
-      'Social media optimization',
-      'Competitor analysis and benchmarking',
-      'Automated content scheduling'
+      'AI-powered SEO optimization with real-time analysis',Content readability scoring and improvement suggestions',Multi-language content optimization',Performance analytics and A/B testing',Content personalization engine',Social media optimization',Competitor analysis and benchmarking',Automated content scheduling'
     ],
     benefits: ['
-      'Increase organic traffic by 150-300%',
-      'Improve content engagement by 80%',
-      'Reduce content creation time by 60%',
-      'Optimize for multiple platforms simultaneously',
-      'Data-driven content strategy'
+      'Increase organic traffic by 150-300%',Improve content engagement by 80%',Reduce content creation time by 60%',Optimize for multiple platforms simultaneously',Data-driven content strategy'
     ],
     useCases: ['
-      'Digital marketing agencies',
-      'E-commerce businesses',
-      'Content creators and publishers',
-      'B2B marketing teams',
-      'Educational institutions'
+      'Digital marketing agencies',E-commerce businesses',Content creators and publishers',B2B marketing teams',Educational institutions'
     ],
     contactInfo: {
 
@@ -952,23 +845,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'project',
         description: 'Comprehensive security assessment and zero trust planning',
         features: ['
-          'Security posture assessment',
-          'Zero trust architecture design',
-          'Implementation roadmap',
-          'Security policy review',
-          'Compliance gap analysis',
-          'Risk assessment report'
+          'Security posture assessment',Zero trust architecture design',Implementation roadmap',Security policy review',Compliance gap analysis',Risk assessment report'
         ],
         benefits: ['
-          'Understand current security posture',
-          'Clear implementation roadmap',
-          'Compliance gap identification',
-          'Risk mitigation strategy'
+          'Understand current security posture',Clear implementation roadmap',Compliance gap identification',Risk mitigation strategy'
         ],
         bestFor: ['
-          'Companies planning zero trust implementation',
-          'Security assessment needs',
-          'Compliance requirements'
+          'Companies planning zero trust implementation',Security assessment needs',Compliance requirements'
         ]
       },
       {
@@ -978,25 +861,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'project',
         description: 'Full zero trust implementation with ongoing support',
         features: ['
-          'Complete zero trust implementation',
-          'Identity verification systems',
-          'Micro-segmentation setup',
-          'Continuous monitoring',
-          'Threat detection systems',
-          'Compliance reporting',
-          'Staff training',
-          '6 months support'
+          'Complete zero trust implementation',Identity verification systems',Micro-segmentation setup',Continuous monitoring',Threat detection systems',Compliance reporting',Staff training',6 months support'
         ],
         benefits: ['
-          'Reduce security breaches by 90%',
-          'Full zero trust implementation',
-          'Compliance achievement',
-          'Ongoing support and training'
+          'Reduce security breaches by 90%',Full zero trust implementation',Compliance achievement',Ongoing support and training'
         ],
         bestFor: ['
-          'Medium to large organizations',
-          'Full zero trust implementation',
-          'Compliance requirements'
+          'Medium to large organizations',Full zero trust implementation',Compliance requirements'
         ],
         popular: true
       },
@@ -1007,25 +878,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'project',
         description: 'Enterprise-grade solution with custom features and extended support',
         features: ['
-          'Custom zero trust implementation',
-          'Advanced threat detection',
-          'Custom integrations',
-          'Extended support (12 months),
-          'Custom compliance features',
-          'Advanced analytics',
-          'Custom security policies',
-          'Dedicated security team'
+          'Custom zero trust implementation',Advanced threat detection',Custom integrations',Extended support (12 months),Custom compliance features',Advanced analytics',Custom security policies',Dedicated security team'
         ],
         benefits: ['
-          'Custom security solution',
-          'Maximum security protection',
-          'Extended support period',
-          'Custom compliance features'
+          'Custom security solution',Maximum security protection',Extended support period',Custom compliance features'
         ],
         bestFor: ['
-          'Large enterprises',
-          'Custom security requirements',
-          'Extended support needs'
+          'Large enterprises',Custom security requirements',Extended support needs'
         ]
       }
     ],
@@ -1037,28 +896,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
       valueProposition: 'Comprehensive zero trust implementation at competitive enterprise pricing'
     },
     features: ['
-      'Identity verification and multi-factor authentication',
-      'Micro-segmentation and network isolation',
-      'Continuous monitoring and threat detection',
-      'Adaptive access control policies',
-      'Compliance reporting and audit trails',
-      'Real-time security analytics',
-      'Automated incident response',
-      'Integration with existing security tools'
+      'Identity verification and multi-factor authentication',Micro-segmentation and network isolation',Continuous monitoring and threat detection',Adaptive access control policies',Compliance reporting and audit trails',Real-time security analytics',Automated incident response',Integration with existing security tools'
     ],
     benefits: ['
-      'Reduce security breaches by 90%',
-      'Improve compliance posture significantly',
-      'Enhanced visibility into network traffic',
-      'Automated security policy enforcement',
-      'Scalable security architecture'
+      'Reduce security breaches by 90%',Improve compliance posture significantly',Enhanced visibility into network traffic',Automated security policy enforcement',Scalable security architecture'
     ],
     useCases: ['
-      'Financial institutions',
-      'Healthcare organizations',
-      'Government agencies',
-      'Enterprise corporations',
-      'Educational institutions'
+      'Financial institutions',Healthcare organizations',Government agencies',Enterprise corporations',Educational institutions'
     ],
     contactInfo: {
 
@@ -1082,22 +926,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'month',
         description: 'Basic cloud cost optimization for small cloud users',
         features: ['
-          'Basic cost monitoring',
-          'Simple optimization recommendations',
-          'Monthly cost reports',
-          'Email support',
-          'Single cloud provider support',
-          'Basic cost alerts'
+          'Basic cost monitoring',Simple optimization recommendations',Monthly cost reports',Email support',Single cloud provider support',Basic cost alerts'
         ],
         benefits: ['
-          'Reduce cloud costs by 15-25%',
-          'Basic cost visibility',
-          'Simple optimization'
+          'Reduce cloud costs by 15-25%',Basic cost visibility',Simple optimization'
         ],
         bestFor: ['
-          'Small cloud users',
-          'Single cloud provider',
-          'Basic cost optimization needs'
+          'Small cloud users',Single cloud provider',Basic cost optimization needs'
         ]
       },
       {
@@ -1107,25 +942,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'month',
         description: 'Advanced features for growing businesses with multi-cloud environments',
         features: ['
-          'Advanced cost optimization',
-          'Multi-cloud cost allocation',
-          'Real-time cost monitoring',
-          'Resource utilization optimization',
-          'Budget management',
-          'Cost anomaly detection',
-          'Priority support',
-          'Advanced reporting'
+          'Advanced cost optimization',Multi-cloud cost allocation',Real-time cost monitoring',Resource utilization optimization',Budget management',Cost anomaly detection',Priority support',Advanced reporting'
         ],
         benefits: ['
-          'Reduce cloud costs by 30-50%',
-          'Multi-cloud cost management',
-          'Advanced optimization',
-          'Better budget control'
+          'Reduce cloud costs by 30-50%',Multi-cloud cost management',Advanced optimization',Better budget control'
         ],
         bestFor: ['
-          'Medium businesses',
-          'Multi-cloud environments',
-          'Advanced cost optimization needs'
+          'Medium businesses',Multi-cloud environments',Advanced cost optimization needs'
         ],
         popular: true
       },
@@ -1136,25 +959,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'month',
         description: 'Full-scale enterprise solution with custom features and dedicated support',
         features: ['
-          'Custom optimization algorithms',
-          'Advanced analytics and reporting',
-          'Custom integrations',
-          'Dedicated account manager',
-          '24/7 support',
-          'API access',
-          'Custom compliance features',
-          'Advanced security features'
+          'Custom optimization algorithms',Advanced analytics and reporting',Custom integrations',Dedicated account manager',24/7 support',API access',Custom compliance features',Advanced security features'
         ],
         benefits: ['
-          'Maximum cost optimization',
-          'Custom solutions',
-          'Enterprise-grade support',
-          'Full cost lifecycle management'
+          'Maximum cost optimization',Custom solutions',Enterprise-grade support',Full cost lifecycle management'
         ],
         bestFor: ['
-          'Large enterprises',
-          'Custom optimization requirements',
-          'Enterprise-grade support needs'
+          'Large enterprises',Custom optimization requirements',Enterprise-grade support needs'
         ]
       }
     ],
@@ -1166,28 +977,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
       valueProposition: 'Most comprehensive cloud cost optimization solution with advanced multi-cloud support'
     },
     features: ['
-      'Automated cost optimization recommendations',
-      'Multi-cloud cost allocation and tracking',
-      'Real-time cost monitoring and alerts',
-      'Resource utilization optimization',
-      'Budget management and forecasting',
-      'Cost anomaly detection',
-      'Automated scaling policies',
-      'ROI analysis and reporting'
+      'Automated cost optimization recommendations',Multi-cloud cost allocation and tracking',Real-time cost monitoring and alerts',Resource utilization optimization',Budget management and forecasting',Cost anomaly detection',Automated scaling policies',ROI analysis and reporting'
     ],
     benefits: ['
-      'Reduce cloud costs by 30-50%',
-      'Improve resource utilization by 40%',
-      'Automated cost optimization',
-      'Better budget planning and control',
-      'Multi-cloud cost visibility'
+      'Reduce cloud costs by 30-50%',Improve resource utilization by 40%',Automated cost optimization',Better budget planning and control',Multi-cloud cost visibility'
     ],
     useCases: ['
-      'Enterprise cloud users',
-      'Multi-cloud organizations',
-      'DevOps teams',
-      'Financial operations teams',
-      'Cloud architects'
+      'Enterprise cloud users',Multi-cloud organizations',DevOps teams',Financial operations teams',Cloud architects'
     ],
     contactInfo: {
 

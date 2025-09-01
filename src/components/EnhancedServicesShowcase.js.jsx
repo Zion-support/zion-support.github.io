@@ -152,7 +152,7 @@ const EnhancedServicesShowcase = () => {
                     {service.name}
                   </h3>"
                   <p className="text-sm text-blue-400 font-medium">
-                    {service.category.replace('-', ').toUpperCase()}
+                    {service.category.replace('-',).toUpperCase()}
                   </p>
                 </div>
 

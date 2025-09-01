@@ -61,11 +61,7 @@ import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChar
 ];
 const statusColors = {
 
-  'planning': 'bg-zion-blue text-white',
-    'in-progress': 'bg-zion-cyan text-white',
-    'review': 'bg-zion-gold text-white',
-    'completed': 'bg-zion-emerald text-white',
-  'on-hold': 'bg-zion-slate text-white'
+  'planning': 'bg-zion-blue text-white',in-progress': 'bg-zion-cyan text-white',review': 'bg-zion-gold text-white',completed': 'bg-zion-emerald text-white',on-hold': 'bg-zion-slate text-white'
 
 
 
@@ -76,10 +72,7 @@ const statusColors = {
 };
 const priorityColors = {
 
-  'low': 'bg-zion-emerald text-white',
-    'medium': 'bg-zion-gold text-white',
-    'high': 'bg-zion-orange text-white',
-  'critical': 'bg-red-500 text-white'
+  'low': 'bg-zion-emerald text-white',medium': 'bg-zion-gold text-white',high': 'bg-zion-orange text-white',critical': 'bg-red-500 text-white'
 
 
 
@@ -204,7 +197,7 @@ export function ProjectManagementDashboard() {
                   </div>"
                   <div className="flex items-center gap-2">`
                     <span className={`px-2 py-1 text-xs rounded-full ${statusColors[project.status]}`}>
-                      {project.status.replace('-', ')}
+                      {project.status.replace('-',)}
                     </span>`
                     <span className={`px-2 py-1 text-xs rounded-full ${priorityColors[project.priority]}`}>
                       {project.priority}
@@ -287,7 +280,7 @@ export function ProjectManagementDashboard() {
                       </td>"
                       <td className="px-6 py-4">`
                         <span className={`px-2 py-1 text-xs rounded-full ${statusColors[project.status]}`}>
-                          {project.status.replace('-', ')}
+                          {project.status.replace('-',)}
                         </span>
                       </td>"
                       <td className="px-6 py-4">"
@@ -381,7 +374,7 @@ export function ProjectManagementDashboard() {
                     <div className="flex items-center justify-between">"
                       <span className="text-zion-slate-light">Status:</span>`
                       <span className={`px-2 py-1 text-xs rounded-full ${statusColors[selectedProject.status]}`}>
-                        {selectedProject.status.replace('-', ')}
+                        {selectedProject.status.replace('-',)}
                       </span>
                     </div>"
                     <div className="flex items-center justify-between">"
@@ -406,7 +399,7 @@ export function ProjectManagementDashboard() {
                           <span className={`px-2 py-1 text-xs rounded-full ${task.status === 'completed' ? 'bg-zion-emerald text-white' :'
                     task.status === 'in-progress' ? 'bg-zion-cyan text-white' :'`
                         task.status === 'review' ? 'bg-zion-gold text-white' : 'bg-zion-slate text-white'}`}>
-                            {task.status.replace('-', ')}
+                            {task.status.replace('-',)}
                           </span>
                         </div>"
                         <div className="flex items-center justify-between text-sm text-zion-slate-light">

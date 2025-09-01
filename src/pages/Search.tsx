@@ -144,13 +144,13 @@ const Search: React.FC = () => {
           return b.rating - a.rating;
         case 'price-low':
           return ('
-            parseFloat(a.price.replace(/[^0-9.]/g,')) -'
-            parseFloat(b.price.replace(/[^0-9.]/g,'))
+            parseFloat(a.price.replace(/[^0-9.]/g,)) -'
+            parseFloat(b.price.replace(/[^0-9.]/g,))
           );
         case 'price-high':
           return ('
-            parseFloat(b.price.replace(/[^0-9.]/g,')) -'
-            parseFloat(a.price.replace(/[^0-9.]/g,'))
+            parseFloat(b.price.replace(/[^0-9.]/g,)) -'
+            parseFloat(a.price.replace(/[^0-9.]/g,))
           );
         default:
           return 0;

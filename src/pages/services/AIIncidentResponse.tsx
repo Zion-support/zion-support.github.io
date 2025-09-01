@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIIncidentResponse() {
   const features = [
-    'AI-powered incident response optimization',
-    'Intelligent threat detection and analysis',;
+    'AI-powered incident response optimization',Intelligent threat detection and analysis',;
     'Automated incident triage and prioritization',;
     'Predictive analytics for incident prevention',;
     'Smart response automation and orchestration',;

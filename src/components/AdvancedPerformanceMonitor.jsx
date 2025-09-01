@@ -104,9 +104,7 @@ const mockPerformanceAlerts = [
     timestamp: '2024-01-15T10:00:00.000Z',
     affected: ['Web Server 1',Application Server 2'],
     recommendations: ['
-      'Scale horizontally',
-      'Optimize database queries',
-      'Review background processes',
+      'Scale horizontally',Optimize database queries',Review background processes',
     ],
     status: 'active'},
   {
@@ -120,9 +118,7 @@ const mockPerformanceAlerts = [
     timestamp: '2024-01-15T09:45:00.000Z',
     affected: ['Database Cluster',Application Servers'],
     recommendations: ['
-      'Increase connection pool size',
-      'Implement connection pooling',
-      'Monitor query performance',
+      'Increase connection pool size',Implement connection pooling',Monitor query performance',
     ],
     status: 'active'},
 ];

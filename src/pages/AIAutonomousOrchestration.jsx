@@ -187,14 +187,7 @@ const AIAutonomousOrchestration = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'System Orchestration',
-                'Workflow Orchestration',
-                'Service Orchestration',
-                'Process Orchestration',
-                'Resource Orchestration',
-                'Network Orchestration',
-                'Cloud Orchestration',
-                'Data Orchestration',
+                'System Orchestration',Workflow Orchestration',Service Orchestration',Process Orchestration',Resource Orchestration',Network Orchestration',Cloud Orchestration',Data Orchestration',
               ].map(type => (
                 <div
                   key={type}"

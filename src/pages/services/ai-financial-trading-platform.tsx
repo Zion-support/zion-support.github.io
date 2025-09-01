@@ -72,13 +72,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
       period: '/month',
       description: 'Perfect for individual investors',
       features: ['
-        'Basic AI trading signals',
-        'Portfolio tracking',
-        'Risk management tools',
-        'Mobile app access',
-        'Email support',
-        'Basic market analysis',
-        'Up to $50K portfolio'
+        'Basic AI trading signals',Portfolio tracking',Risk management tools',Mobile app access',Email support',Basic market analysis',Up to $50K portfolio'
       ],
       popular: false
     },
@@ -89,14 +83,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
       period: '/month',
       description: 'Ideal for active traders',
       features: ['
-        'Advanced AI algorithms',
-        'Automated trading',
-        'Real-time optimization',
-        'Advanced analytics',
-        'Priority support',
-        'API access',
-        'Up to $500K portfolio',
-        'Custom strategies'
+        'Advanced AI algorithms',Automated trading',Real-time optimization',Advanced analytics',Priority support',API access',Up to $500K portfolio',Custom strategies'
       ],
       popular: true
     },
@@ -107,11 +94,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
       period: '/month',
       description: 'For hedge funds and institutions',
       features: ['
-        'Full AI suite',
-        'Custom AI models',
-        'White-label solutions',
-        'Dedicated support',
-        'Advanced compliance',;
+        'Full AI suite',Custom AI models',White-label solutions',Dedicated support',Advanced compliance',;
         'Unlimited portfolio size',;
         'On-premise options',;
         'SLA guarantees';

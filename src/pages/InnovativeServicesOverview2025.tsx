@@ -37,15 +37,11 @@ const InnovativeServicesOverview2025 = () => {
         'Transform customer success with AI-powered insights and automation',
       price: 'From $1,200/month',
       features: ['
-        'AI-powered insights',
-        'Predictive analytics',
-        'Automated workflows',
+        'AI-powered insights',Predictive analytics',Automated workflows',
       ],
       path: '/services/ai-customer-success-platform',
       benefits: ['
-        'Reduce churn by 40%',
-        'Increase CLV by 35%',
-        'Automate 70% of tasks',
+        'Reduce churn by 40%',Increase CLV by 35%',Automate 70% of tasks',
       ]},
     {
 
@@ -58,9 +54,7 @@ const InnovativeServicesOverview2025 = () => {
       features: ['Demand forecasting',Route optimization',Risk management'],
       path: '/services/ai-supply-chain-optimization',
       benefits: ['
-        'Reduce costs by 35%',
-        'Improve delivery by 40%',
-        'Minimize disruptions',
+        'Reduce costs by 35%',Improve delivery by 40%',Minimize disruptions',
       ]},
     {
 
@@ -72,15 +66,11 @@ const InnovativeServicesOverview2025 = () => {
         'Automate financial compliance with AI-powered risk assessment',
       price: 'From $2,200/month',
       features: ['
-        'AI risk assessment',
-        'Automated monitoring',
-        'Real-time alerts',
+        'AI risk assessment',Automated monitoring',Real-time alerts',
       ],
       path: '/services/ai-financial-compliance-platform',
       benefits: ['
-        'Reduce costs by 60%',
-        'Improve accuracy by 95%',
-        '24/7 monitoring',
+        'Reduce costs by 60%',Improve accuracy by 95%',24/7 monitoring',
       ]},
     {
 
@@ -91,15 +81,11 @@ const InnovativeServicesOverview2025 = () => {
       description: 'Transform healthcare with AI-powered patient analytics',
       price: 'From $2,800/month',
       features: ['
-        'Patient analytics',
-        'Clinical decision support',
-        'HIPAA compliance',
+        'Patient analytics',Clinical decision support',HIPAA compliance',
       ],
       path: '/services/ai-healthcare-analytics-platform',
       benefits: ['
-        'Improve outcomes by 35%',
-        'Reduce readmissions by 40%',
-        'Lower costs by 30%',
+        'Improve outcomes by 35%',Reduce readmissions by 40%',Lower costs by 30%',
       ]},
   ];
 

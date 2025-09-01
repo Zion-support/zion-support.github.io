@@ -419,8 +419,7 @@ showHeader:  true,;
                           <button
                             onClick = {
 
-  () => rateResponse(message.id,
-  'positive')
+  () => rateResponse(message.id,positive')
 
 
 
@@ -436,8 +435,7 @@ showHeader:  true,;
                           <button
                             onClick = {
 
-  () => rateResponse(message.id,
-  'negative')
+  () => rateResponse(message.id,negative')
 
 
 

@@ -117,7 +117,7 @@ export default function ExpandedServicesPage() {
                   <div className="flex items-start justify-between mb-2">"
                     <div className="text-3xl">{getCategoryIcon(service.category)}</div>
                     <Badge className={getPricingModelColor(service.pricingModel)}>
-                      {service.pricingModel.replace('-', ')}
+                      {service.pricingModel.replace('-',)}
                     </Badge>
                   </div>"
                   <CardTitle className="text-xl text-zion-blue-dark">{service.title}</CardTitle>"

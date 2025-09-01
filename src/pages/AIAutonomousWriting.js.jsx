@@ -198,14 +198,7 @@ const AIAutonomousWriting = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Blog Posts',
-                'Articles',
-                'Reports',
-                'Marketing Copy',
-                'Social Media',
-                'Product Descriptions',
-                'Technical Documentation',
-                'Creative Stories',
+                'Blog Posts',Articles',Reports',Marketing Copy',Social Media',Product Descriptions',Technical Documentation',Creative Stories',
               ].map(type => (
                 <div
                   key={type}"

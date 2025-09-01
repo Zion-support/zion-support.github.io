@@ -76,21 +76,13 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             billingCycle: 'monthly',
             description: 'Perfect for small development teams and startups',
             features: ['
-              'Multi-language code analysis',
-              'Basic security vulnerability detection',
-              'Code quality scoring',
-              'GitHub integration',
-              'Email support',
+              'Multi-language code analysis',Basic security vulnerability detection',Code quality scoring',GitHub integration',Email support',
             ],
             bestFor: ['
-              'Small development teams',
-              'Startups',
-              'Individual developers',
+              'Small development teams',Startups',Individual developers',
             ],
             includedServices: ['
-              'Core code review',
-              'Basic reporting',
-              'Standard integrations',
+              'Core code review',Basic reporting',Standard integrations',
             ],
             addOns: [
               {
@@ -117,23 +109,13 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             billingCycle: 'monthly',
             description: 'Advanced features for growing development teams',
             features: ['
-              'All Starter features',
-              'Advanced security scanning',
-              'Custom rule engine',
-              'Team collaboration tools',
-              'Advanced analytics',
-              'Priority support',
+              'All Starter features',Advanced security scanning',Custom rule engine',Team collaboration tools',Advanced analytics',Priority support',
             ],
             bestFor: ['
-              'Growing development teams',
-              'Mid-size companies',
-              'DevOps teams',
+              'Growing development teams',Mid-size companies',DevOps teams',
             ],
             includedServices: ['
-              'Advanced security',
-              'Team collaboration',
-              'Custom rules',
-              'Priority support',
+              'Advanced security',Team collaboration',Custom rules',Priority support',
             ],
             addOns: [
               {
@@ -159,23 +141,13 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             billingCycle: 'monthly',
             description: 'Full-featured solution for large enterprises',
             features: ['
-              'All Professional features',
-              'Enterprise integrations',
-              'Custom training',
-              'Dedicated account manager',
-              'SLA guarantees',
-              '24/7 support',
+              'All Professional features',Enterprise integrations',Custom training',Dedicated account manager',SLA guarantees',24/7 support',
             ],
             bestFor: ['
-              'Large enterprises',
-              'Fortune 500 companies',
-              'Government agencies',
+              'Large enterprises',Fortune 500 companies',Government agencies',
             ],
             includedServices: ['
-              'Enterprise features',
-              'Dedicated support',
-              'SLA guarantees',
-              'Custom training',
+              'Enterprise features',Dedicated support',SLA guarantees',Custom training',
             ],
             addOns: [
               {
@@ -198,37 +170,16 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
         marketSize: '$2.8 billion by 2031',
         roi: '400-800%',
         features: ['
-          'Multi-language code analysis and review',
-          'Automated security vulnerability detection',
-          'Code quality scoring and recommendations',
-          'Integration with GitHub, GitLab, Bitbucket',
-          'Custom rule configuration and enforcement',
-          'Performance optimization suggestions',
-          'Documentation generation and updates',
-          'Team collaboration and review workflows',
-          'Historical code quality tracking',
-          'Automated merge request validation',
+          'Multi-language code analysis and review',Automated security vulnerability detection',Code quality scoring and recommendations',Integration with GitHub, GitLab, Bitbucket',Custom rule configuration and enforcement',Performance optimization suggestions',Documentation generation and updates',Team collaboration and review workflows',Historical code quality tracking',Automated merge request validation',
         ],
         benefits: ['
-          'Reduce code review time by 80%',
-          'Improve code quality by 60%',
-          'Prevent security vulnerabilities early',
-          'Standardize coding practices across teams',
-          'Accelerate development cycles',
+          'Reduce code review time by 80%',Improve code quality by 60%',Prevent security vulnerabilities early',Standardize coding practices across teams',Accelerate development cycles',
         ],
         useCases: ['
-          'Software development teams',
-          'DevOps and CI/CD pipelines',
-          'Code quality assurance',
-          'Security compliance',
-          'Technical debt management',
+          'Software development teams',DevOps and CI/CD pipelines',Code quality assurance',Security compliance',Technical debt management',
         ],
         targetAudience: ['
-          'Software engineers',
-          'DevOps engineers',
-          'Team leads',
-          'Quality assurance teams',
-          'Security engineers',
+          'Software engineers',DevOps engineers',Team leads',Quality assurance teams',Security engineers',
         ],
         contactInfo: {
 
@@ -252,22 +203,13 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             description:'
               'Advanced trading platform for professional traders and small funds',
             features: ['
-              'Quantum-enhanced portfolio optimization',
-              'AI-powered market prediction models',
-              'Real-time risk assessment',
-              'Multi-asset class trading',
-              'Basic backtesting',
-              'Email support',
+              'Quantum-enhanced portfolio optimization',AI-powered market prediction models',Real-time risk assessment',Multi-asset class trading',Basic backtesting',Email support',
             ],
             bestFor: ['
-              'Professional traders',
-              'Small hedge funds',
-              'Investment advisors',
+              'Professional traders',Small hedge funds',Investment advisors',
             ],
             includedServices: ['
-              'Core trading platform',
-              'Basic analytics',
-              'Standard support',
+              'Core trading platform',Basic analytics',Standard support',
             ],
             addOns: [
               {
@@ -293,22 +235,13 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             billingCycle: 'monthly',
             description: 'Full-featured platform for institutional clients',
             features: ['
-              'All Professional features',
-              'Advanced backtesting and simulation',
-              'Custom algorithm development',
-              'Regulatory compliance monitoring',
-              'Performance analytics',
-              'Priority support',
+              'All Professional features',Advanced backtesting and simulation',Custom algorithm development',Regulatory compliance monitoring',Performance analytics',Priority support',
             ],
             bestFor: ['
-              'Institutional traders',
-              'Large hedge funds',
-              'Investment banks',
+              'Institutional traders',Large hedge funds',Investment banks',
             ],
             includedServices: ['
-              'Advanced features',
-              'Custom development',
-              'Priority support',
+              'Advanced features',Custom development',Priority support',
             ],
             addOns: [
               {
@@ -328,45 +261,21 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
         ],
         marketPrice: '$2,999 - $15,000/month',
         competitors: ['
-          'Bloomberg Terminal',
-          'Thomson Reuters',
-          'FactSet',
-          'Refinitiv',
+          'Bloomberg Terminal',Thomson Reuters',FactSet',Refinitiv',
         ],
         marketSize: '$45.2 billion by 2031',
         roi: '200-500%',
         features: ['
-          'Quantum-enhanced portfolio optimization',
-          'AI-powered market prediction models',
-          'Real-time risk assessment and management',
-          'Multi-asset class trading strategies',
-          'Advanced backtesting and simulation',
-          'Regulatory compliance monitoring',
-          'Custom algorithm development',
-          'Performance analytics and reporting',
-          'Mobile trading applications',
-          'API access for institutional clients',
+          'Quantum-enhanced portfolio optimization',AI-powered market prediction models',Real-time risk assessment and management',Multi-asset class trading strategies',Advanced backtesting and simulation',Regulatory compliance monitoring',Custom algorithm development',Performance analytics and reporting',Mobile trading applications',API access for institutional clients',
         ],
         benefits: ['
-          'Improve trading performance by 25-40%',
-          'Reduce portfolio risk by 30%',
-          'Optimize capital allocation',
-          'Automate complex trading strategies',
-          'Real-time market insights',
+          'Improve trading performance by 25-40%',Reduce portfolio risk by 30%',Optimize capital allocation',Automate complex trading strategies',Real-time market insights',
         ],
         useCases: ['
-          'Institutional trading',
-          'Portfolio management',
-          'Risk management',
-          'Algorithmic trading',
-          'Quantitative research',
+          'Institutional trading',Portfolio management',Risk management',Algorithmic trading',Quantitative research',
         ],
         targetAudience: ['
-          'Hedge funds',
-          'Asset managers',
-          'Investment banks',
-          'Trading firms',
-          'Financial advisors',
+          'Hedge funds',Asset managers',Investment banks',Trading firms',Financial advisors',
         ],
         contactInfo: {
 
@@ -399,18 +308,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             description:'
               'Basic cloud migration for small to medium applications',
             features: ['
-              'Legacy application assessment',
-              'Basic cloud migration',
-              'Containerization setup',
-              'CI/CD pipeline implementation',
-              'Basic monitoring',
-              'Documentation',
+              'Legacy application assessment',Basic cloud migration',Containerization setup',CI/CD pipeline implementation',Basic monitoring',Documentation',
             ],
             bestFor: ['Small applications',Startups',Basic cloud needs'],
             includedServices: ['
-              'Migration planning',
-              'Basic implementation',
-              'Documentation',
+              'Migration planning',Basic implementation',Documentation',
             ],
             addOns: [
               {
@@ -437,24 +339,13 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             description:'
               'Comprehensive transformation for large enterprise applications',
             features: ['
-              'All Starter features',
-              'Microservices architecture design',
-              'Advanced security implementation',
-              'Performance optimization',
-              'Disaster recovery planning',
-              'Team training',
-              'Ongoing support',
+              'All Starter features',Microservices architecture design',Advanced security implementation',Performance optimization',Disaster recovery planning',Team training',Ongoing support',
             ],
             bestFor: ['
-              'Large enterprises',
-              'Complex applications',
-              'High availability needs',
+              'Large enterprises',Complex applications',High availability needs',
             ],
             includedServices: ['
-              'Full transformation',
-              'Architecture design',
-              'Team training',
-              'Ongoing support',
+              'Full transformation',Architecture design',Team training',Ongoing support',
             ],
             addOns: [
               {
@@ -477,37 +368,16 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
         marketSize: '$89.4 billion by 2031',
         roi: '200-500%',
         features: ['
-          'Legacy application modernization',
-          'Microservices architecture design',
-          'Container orchestration implementation',
-          'CI/CD pipeline optimization',
-          'Cloud cost optimization',
-          'Performance monitoring setup',
-          'Security and compliance implementation',
-          'Disaster recovery planning',
-          'Team training and enablement',
-          'Ongoing support and maintenance',
+          'Legacy application modernization',Microservices architecture design',Container orchestration implementation',CI/CD pipeline optimization',Cloud cost optimization',Performance monitoring setup',Security and compliance implementation',Disaster recovery planning',Team training and enablement',Ongoing support and maintenance',
         ],
         benefits: ['
-          'Reduce infrastructure costs by 40-60%',
-          'Improve application performance by 3-5x',
-          'Accelerate deployment cycles by 80%',
-          'Enhance scalability and reliability',
-          'Future-proof technology stack',
+          'Reduce infrastructure costs by 40-60%',Improve application performance by 3-5x',Accelerate deployment cycles by 80%',Enhance scalability and reliability',Future-proof technology stack',
         ],
         useCases: ['
-          'Legacy system modernization',
-          'Digital transformation initiatives',
-          'Cloud migration projects',
-          'Performance optimization',
-          'Cost reduction programs',
+          'Legacy system modernization',Digital transformation initiatives',Cloud migration projects',Performance optimization',Cost reduction programs',
         ],
         targetAudience: ['
-          'CTOs and IT directors',
-          'DevOps teams',
-          'System architects',
-          'Operations managers',
-          'Business transformation leaders',
+          'CTOs and IT directors',DevOps teams',System architects',Operations managers',Business transformation leaders',
         ],
         contactInfo: {
 
@@ -531,22 +401,13 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             description:'
               'Essential zero trust security for small to medium organizations',
             features: ['
-              'Identity and access management',
-              'Multi-factor authentication',
-              'Basic network segmentation',
-              'Security policy implementation',
-              'Basic monitoring',
-              'Documentation',
+              'Identity and access management',Multi-factor authentication',Basic network segmentation',Security policy implementation',Basic monitoring',Documentation',
             ],
             bestFor: ['
-              'Small organizations',
-              'Basic security needs',
-              'Compliance requirements',
+              'Small organizations',Basic security needs',Compliance requirements',
             ],
             includedServices: ['
-              'Basic implementation',
-              'Policy setup',
-              'Documentation',
+              'Basic implementation',Policy setup',Documentation',
             ],
             addOns: [
               {
@@ -573,25 +434,13 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             description:'
               'Comprehensive zero trust security for large enterprises',
             features: ['
-              'All Basic features',
-              'Advanced network segmentation',
-              'Continuous monitoring',
-              'Threat detection and response',
-              'Automated incident response',
-              'Advanced compliance',
-              'Team training',
-              'Ongoing support',
+              'All Basic features',Advanced network segmentation',Continuous monitoring',Threat detection and response',Automated incident response',Advanced compliance',Team training',Ongoing support',
             ],
             bestFor: ['
-              'Large enterprises',
-              'High security needs',
-              'Complex compliance',
+              'Large enterprises',High security needs',Complex compliance',
             ],
             includedServices: ['
-              'Full implementation',
-              'Advanced features',
-              'Team training',
-              'Ongoing support',
+              'Full implementation',Advanced features',Team training',Ongoing support',
             ],
             addOns: [
               {
@@ -614,37 +463,16 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
         marketSize: '$45.2 billion by 2031',
         roi: '250-500%',
         features: ['
-          'Identity and access management',
-          'Multi-factor authentication',
-          'Network segmentation',
-          'Continuous monitoring',
-          'Threat detection and response',
-          'Compliance reporting',
-          'Security policy enforcement',
-          'Incident response automation',
-          'Security awareness training',
-          'Ongoing security assessments',
+          'Identity and access management',Multi-factor authentication',Network segmentation',Continuous monitoring',Threat detection and response',Compliance reporting',Security policy enforcement',Incident response automation',Security awareness training',Ongoing security assessments',
         ],
         benefits: ['
-          'Reduce security breaches by 90%',
-          'Improve compliance posture',
-          'Simplify security management',
-          'Enhance user experience',
-          'Reduce security costs',
+          'Reduce security breaches by 90%',Improve compliance posture',Simplify security management',Enhance user experience',Reduce security costs',
         ],
         useCases: ['
-          'Enterprise security transformation',
-          'Compliance initiatives',
-          'Remote work security',
-          'Cloud security',
-          'Data protection',
+          'Enterprise security transformation',Compliance initiatives',Remote work security',Cloud security',Data protection',
         ],
         targetAudience: ['
-          'CISOs',
-          'Security directors',
-          'IT administrators',
-          'Compliance officers',
-          'Risk managers',
+          'CISOs',Security directors',IT administrators',Compliance officers',Risk managers',
         ],
         contactInfo: {
 
@@ -677,22 +505,13 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             description:'
               'Comprehensive AI opportunity assessment and roadmap development',
             features: ['
-              'AI opportunity assessment',
-              'Technology roadmap development',
-              'ROI analysis',
-              'Implementation planning',
-              'Final report and presentation',
+              'AI opportunity assessment',Technology roadmap development',ROI analysis',Implementation planning',Final report and presentation',
             ],
             bestFor: ['
-              'Organizations starting AI journey',
-              'Strategy development',
-              'ROI analysis',
+              'Organizations starting AI journey',Strategy development',ROI analysis',
             ],
             includedServices: ['
-              'Assessment',
-              'Roadmap',
-              'ROI analysis',
-              'Final report',
+              'Assessment',Roadmap',ROI analysis',Final report',
             ],
             addOns: [
               {
@@ -718,22 +537,13 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             billingCycle: 'project',
             description: 'End-to-end AI transformation implementation',
             features: ['
-              'All Assessment features',
-              'Change management implementation',
-              'Talent acquisition support',
-              'Technology implementation',
-              'Performance measurement',
-              'Ongoing guidance',
+              'All Assessment features',Change management implementation',Talent acquisition support',Technology implementation',Performance measurement',Ongoing guidance',
             ],
             bestFor: ['
-              'Full AI transformation',
-              'Complex implementations',
-              'Long-term partnerships',
+              'Full AI transformation',Complex implementations',Long-term partnerships',
             ],
             includedServices: ['
-              'Full transformation',
-              'Implementation support',
-              'Ongoing guidance',
+              'Full transformation',Implementation support',Ongoing guidance',
             ],
             addOns: [
               {
@@ -756,37 +566,16 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
         marketSize: '$156.7 billion by 2031',
         roi: '300-600%',
         features: ['
-          'AI opportunity assessment',
-          'Technology roadmap development',
-          'ROI analysis and business case',
-          'Change management strategy',
-          'Talent acquisition planning',
-          'Ethics and governance framework',
-          'Risk assessment and mitigation',
-          'Implementation planning',
-          'Performance measurement framework',
-          'Ongoing strategic guidance',
+          'AI opportunity assessment',Technology roadmap development',ROI analysis and business case',Change management strategy',Talent acquisition planning',Ethics and governance framework',Risk assessment and mitigation',Implementation planning',Performance measurement framework',Ongoing strategic guidance',
         ],
         benefits: ['
-          'Identify high-impact AI opportunities',
-          'Develop clear implementation roadmap',
-          'Ensure alignment with business goals',
-          'Mitigate implementation risks',
-          'Maximize ROI on AI investments',
+          'Identify high-impact AI opportunities',Develop clear implementation roadmap',Ensure alignment with business goals',Mitigate implementation risks',Maximize ROI on AI investments',
         ],
         useCases: ['
-          'Digital transformation initiatives',
-          'AI strategy development',
-          'Technology modernization',
-          'Competitive advantage creation',
-          'Operational efficiency improvement',
+          'Digital transformation initiatives',AI strategy development',Technology modernization',Competitive advantage creation',Operational efficiency improvement',
         ],
         targetAudience: ['
-          'C-level executives',
-          'Business transformation leaders',
-          'IT directors',
-          'Strategy officers',
-          'Innovation directors',
+          'C-level executives',Business transformation leaders',IT directors',Strategy officers',Innovation directors',
         ],
         contactInfo: {
 

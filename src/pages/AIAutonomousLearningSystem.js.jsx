@@ -188,14 +188,7 @@ const AIAutonomousLearningSystem = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Academic Subjects',
-                'Professional Skills',
-                'Creative Arts',
-                'Technical Training',
-                'Language Learning',
-                'Personal Development',
-                'Certification Prep',
-                'Hobby Skills',
+                'Academic Subjects',Professional Skills',Creative Arts',Technical Training',Language Learning',Personal Development',Certification Prep',Hobby Skills',
               ].map(domain => (
                 <div
                   key={domain}"

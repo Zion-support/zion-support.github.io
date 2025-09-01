@@ -42,10 +42,7 @@ const featuredListings = [
     featured: true,
     technologies: ['React',Node.js',MongoDB',AI/ML',AWS'],
     highlights: ['
-      'AI Recommendations',
-      'Real-time Analytics',
-      'Mobile Responsive',
-      'SEO Optimized',
+      'AI Recommendations',Real-time Analytics',Mobile Responsive',SEO Optimized',
     ],
     link: '/services/ai-ecommerce'},
   {
@@ -68,17 +65,10 @@ const featuredListings = [
     location: 'Hybrid',
     featured: true,
     technologies: ['
-      'React Native',
-      'Node.js',
-      'PostgreSQL',
-      'Biometrics',
-      'Security',
+      'React Native',Node.js',PostgreSQL',Biometrics',Security',
     ],
     highlights: ['
-      'Biometric Auth',
-      'Real-time Transactions',
-      'Security Compliance',
-      'Cross-platform',
+      'Biometric Auth',Real-time Transactions',Security Compliance',Cross-platform',
     ],
     link: '/services/mobile-banking'},
   {
@@ -124,10 +114,7 @@ const featuredListings = [
     featured: true,
     technologies: ['Python',TensorFlow',OpenCV',Docker',AWS'],
     highlights: ['
-      'AI Diagnostics',
-      'Medical Imaging',
-      'HIPAA Compliant',
-      'Real-time Analysis',
+      'AI Diagnostics',Medical Imaging',HIPAA Compliant',Real-time Analysis',
     ],
     link: '/services/healthcare-ai'},
   {
@@ -150,17 +137,10 @@ const featuredListings = [
     location: 'Hybrid',
     featured: false,
     technologies: ['
-      'IoT Sensors',
-      'Apache Kafka',
-      'Elasticsearch',
-      'React',
-      'Node.js',
+      'IoT Sensors',Apache Kafka',Elasticsearch',React',Node.js',
     ],
     highlights: ['
-      'Real-time Monitoring',
-      'Predictive Analytics',
-      'Scalable Architecture',
-      'Dashboard',
+      'Real-time Monitoring',Predictive Analytics',Scalable Architecture',Dashboard',
     ],
     link: '/services/iot-smart-city'},
 ];

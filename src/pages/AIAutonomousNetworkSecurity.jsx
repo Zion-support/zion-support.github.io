@@ -187,14 +187,7 @@ const AIAutonomousNetworkSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Firewall Security',
-                'Intrusion Detection',
-                'Network Monitoring',
-                'Traffic Analysis',
-                'Access Control',
-                'VPN Security',
-                'Wireless Security',
-                'Endpoint Security',
+                'Firewall Security',Intrusion Detection',Network Monitoring',Traffic Analysis',Access Control',VPN Security',Wireless Security',Endpoint Security',
               ].map(type => (
                 <div
                   key={type}"

@@ -29,12 +29,7 @@ import {
       category: 'Visual Accessibility',
       icon: Eye,
       features: ['
-        'High contrast mode support',
-        'Adjustable font sizes',
-        'Color-blind friendly design',
-        'Clear typography and spacing',
-        'Alternative text for images',
-        'Focus indicators for navigation'
+        'High contrast mode support',Adjustable font sizes',Color-blind friendly design',Clear typography and spacing',Alternative text for images',Focus indicators for navigation'
       ]
     },
     {
@@ -42,11 +37,7 @@ import {
       category: 'Auditory Accessibility',
       icon: Ear,
       features: ['
-        'Closed captions for videos',
-        'Audio descriptions',
-        'Volume controls',
-        'Visual alerts and notifications',
-        'Transcripts for audio content'
+        'Closed captions for videos',Audio descriptions',Volume controls',Visual alerts and notifications',Transcripts for audio content'
       ]
     },
     {
@@ -54,11 +45,7 @@ import {
       category: 'Motor Accessibility',
       icon: Hand,
       features: ['
-        'Keyboard navigation support',
-        'Voice control compatibility',
-        'Large click targets',
-        'Customizable timing',
-        'Alternative input methods'
+        'Keyboard navigation support',Voice control compatibility',Large click targets',Customizable timing',Alternative input methods'
       ]
     },
     {
@@ -66,11 +53,7 @@ import {
       category: 'Cognitive Accessibility',
       icon: Brain,
       features: ['
-        'Clear and simple language',
-        'Consistent navigation structure',
-        'Logical content organization',
-        'Reduced distractions',
-        'Step-by-step instructions'
+        'Clear and simple language',Consistent navigation structure',Logical content organization',Reduced distractions',Step-by-step instructions'
       ]
     }
   ];

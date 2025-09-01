@@ -67,9 +67,7 @@ export function LoadingSpinner({
   {
 
                 background: ['
-                  'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9),
-                  'linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6),
-                  'linear-gradient(45deg, #0ea5e9, #8b5cf6,
+                  'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9),linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6),linear-gradient(45deg, #0ea5e9, #8b5cf6,
   #0ea5e9);
                 ]
 
@@ -308,8 +306,7 @@ export function SkeletonLoader(...args[]):  {
   {
 
             opacity: [0.5, 1, 0.5],
-            backgroundPosition: ['200% 0',
-  '-200% 0']
+            backgroundPosition: ['200% 0',-200% 0']
 
 }}
           transition = {

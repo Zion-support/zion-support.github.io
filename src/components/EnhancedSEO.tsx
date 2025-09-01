@@ -45,32 +45,19 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   section,
   tags = [],
   const defaultKeywords = [;
-    'AI solutions',
-    'cloud computing',
-    'cybersecurity',
-    'digital transformation',
-    'machine learning',
-    'quantum computing',
-    'IoT',
-    'blockchain',
-    'micro-SaaS',
-    'enterprise software',
-    'Zion Tech Group'
+    'AI solutions',cloud computing',cybersecurity',digital transformation',machine learning',quantum computing',IoT',blockchain',micro-SaaS',enterprise software',Zion Tech Group'
   ];
 
   const generateStructuredData = useCallback ( () => {
     const baseData = {
 
-      '@context': 'https://schema.org',
-      '@type': type === 'article' ? 'Article' : 'Organization',
+      '@context': 'https://schema.org',@type': type === 'article' ? 'Article' : 'Organization',
       name: 'Zion Tech Group',
       description: description,
       url: currentUrl,
       logo: '/images/zion-tech-group-logo.png',
       sameAs: ['
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/zion-tech-group',
-        'https://facebook.com/ziontechgroup'
+        'https://twitter.com/ziontechgroup',https://linkedin.com/company/zion-tech-group',https://facebook.com/ziontechgroup'
       ],
       contactPoint: {
 
@@ -231,9 +218,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
 
     // DNS prefetch for external domains
     const dnsPrefetchDomains = ['
-      'https://fonts.googleapis.com',
-      'https://fonts.gstatic.com',
-      'https://www.google-analytics.com'
+      'https://fonts.googleapis.com',https://fonts.gstatic.com',https://www.google-analytics.com'
     ];
 
     dnsPrefetchDomains.forEach(domain => {

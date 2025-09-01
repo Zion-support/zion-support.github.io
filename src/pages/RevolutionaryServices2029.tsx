@@ -56,17 +56,7 @@ export default function RevolutionaryServices2029(...args: any[]): any {
   const [volume, setVolume] = useState(0.5);
 
   const categories = ['
-    'All',
-    'AI & Automation',
-    'Quantum Computing & AI',
-    'AI & Security',
-    'AI & Marketing',
-    'AI & Sales',
-    'AI & Support',
-    'AI & Analytics',
-    'IT & Infrastructure',
-    'Quantum Computing & Finance',
-    'AI & Healthcare',
+    'All',AI & Automation',Quantum Computing & AI',AI & Security',AI & Marketing',AI & Sales',AI & Support',AI & Analytics',IT & Infrastructure',Quantum Computing & Finance',AI & Healthcare',
   ];
 
   const filteredServices =
@@ -89,13 +79,13 @@ export default function RevolutionaryServices2029(...args: any[]): any {
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'price-low':
         return ('
-          parseFloat(a.price.replace(/[^0-9.]/g,')) -'
-          parseFloat(b.price.replace(/[^0-9.]/g,'))
+          parseFloat(a.price.replace(/[^0-9.]/g,)) -'
+          parseFloat(b.price.replace(/[^0-9.]/g,))
         );
       case 'price-high':
         return ('
-          parseFloat(b.price.replace(/[^0-9.]/g,')) -'
-          parseFloat(a.price.replace(/[^0-9.]/g,'))
+          parseFloat(b.price.replace(/[^0-9.]/g,)) -'
+          parseFloat(a.price.replace(/[^0-9.]/g,))
         );
       case 'rating':
         return b.rating - a.rating;

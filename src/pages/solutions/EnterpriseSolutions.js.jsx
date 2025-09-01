@@ -21,10 +21,7 @@ export default function EnterpriseSolutions() {
       description:'
         'Scalable, secure, and future-ready enterprise infrastructure design',
       features: ['
-        'Microservices Architecture',
-        'Cloud-Native Design',
-        'API-First Approach',
-        'Scalability Planning',
+        'Microservices Architecture',Cloud-Native Design',API-First Approach',Scalability Planning',
       ]},
     {
 
@@ -33,10 +30,7 @@ export default function EnterpriseSolutions() {
       description:'
         'End-to-end digital transformation strategies for enterprise growth',
       features: ['
-        'Process Automation',
-        'Legacy System Modernization',
-        'Change Management',
-        'ROI Optimization',
+        'Process Automation',Legacy System Modernization',Change Management',ROI Optimization',
       ]},
     {
 
@@ -45,10 +39,7 @@ export default function EnterpriseSolutions() {
       description:'
         'Comprehensive security solutions for enterprise environments',
       features: ['
-        'Zero-Trust Architecture',
-        'Compliance Management',
-        'Threat Detection',
-        'Incident Response',
+        'Zero-Trust Architecture',Compliance Management',Threat Detection',Incident Response',
       ]},
     {
 
@@ -57,10 +48,7 @@ export default function EnterpriseSolutions() {
       description:'
         'Advanced analytics and insights for data-driven decision making',
       features: ['
-        'Real-time Dashboards',
-        'Predictive Analytics',
-        'Data Warehousing',
-        'KPI Tracking',
+        'Real-time Dashboards',Predictive Analytics',Data Warehousing',KPI Tracking',
       ]},
     {
 
@@ -69,10 +57,7 @@ export default function EnterpriseSolutions() {
       description:'
         'Multi-cloud and hybrid cloud solutions for enterprise needs',
       features: ['
-        'Cloud Migration',
-        'Cost Optimization',
-        'Performance Monitoring',
-        'Disaster Recovery',
+        'Cloud Migration',Cost Optimization',Performance Monitoring',Disaster Recovery',
       ]},
     {
 
@@ -80,19 +65,11 @@ export default function EnterpriseSolutions() {
       title: 'AI Integration',
       description: 'Seamless AI integration into existing enterprise workflows',
       features: ['
-        'Custom AI Models',
-        'Workflow Automation',
-        'Intelligent Analytics',
-        'Process Optimization',
+        'Custom AI Models',Workflow Automation',Intelligent Analytics',Process Optimization',
       ]},
   ];
   const benefits = ['
-    'Increased operational efficiency by 40-60%',
-    'Reduced IT costs through automation and optimization',
-    'Enhanced security and compliance posture',
-    'Improved customer experience and satisfaction',
-    'Faster time-to-market for new products/services',
-    'Better data insights and decision-making capabilities',
+    'Increased operational efficiency by 40-60%',Reduced IT costs through automation and optimization',Enhanced security and compliance posture',Improved customer experience and satisfaction',Faster time-to-market for new products/services',Better data insights and decision-making capabilities',
   ];
   const caseStudies = [
     {

@@ -20,33 +20,15 @@ const News = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const categories = ['
-    'All',
-    'Comp News',
-    'Product Updates',
-    'Industry Insights',
-    'Awards & Recognition',
-    'Partnerships',
-    'Research & Development',
-    'Market Trends',
+    'All',Comp News',Product Updates',Industry Insights',Awards & Recognition',Partnerships',Research & Development',Market Trends',
   ];
 
   const sources = ['
-    'All Sources',
-    'Comp Press Releases',
-    'Industry Reports',
-    'Technology News',
-    'Research Papers',
-    'Partner Updates',
-    'Customer Success Stories',
+    'All Sources',Comp Press Releases',Industry Reports',Technology News',Research Papers',Partner Updates',Customer Success Stories',
   ];
 
   const timeframes = ['
-    'All Time',
-    'Last 24 Hours',
-    'Last Week',
-    'Last Month',
-    'Last 3 Months',
-    'Last Year',
+    'All Time',Last 24 Hours',Last Week',Last Month',Last 3 Months',Last Year',
   ];
 
   const newsItems = [

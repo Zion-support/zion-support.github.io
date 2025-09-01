@@ -30,9 +30,7 @@ export default function Partners() {
         'Collaborate with leading tech companies to deliver cutting-edge solutions',
       icon: '🔧',
       benefits: ['
-        'Access to latest technologies',
-        'Joint product development',
-        'Shared marketing opportunities',
+        'Access to latest technologies',Joint product development',Shared marketing opportunities',
       ]},
     {
 
@@ -41,9 +39,7 @@ export default function Partners() {
         'Expand your reach through our global network of resellers and distributors',
       icon: '🌐',
       benefits: ['
-        'Increased market presence',
-        'Revenue sharing programs',
-        'Training and certification',
+        'Increased market presence',Revenue sharing programs',Training and certification',
       ]},
     {
 
@@ -52,9 +48,7 @@ export default function Partners() {
         'Form long-term alliances for mutual growth and market expansion',
       icon: '🤝',
       benefits: ['
-        'Joint ventures',
-        'Market expansion support',
-        'Shared R&D initiatives',
+        'Joint ventures',Market expansion support',Shared R&D initiatives',
       ]},
     {
 
@@ -63,9 +57,7 @@ export default function Partners() {
         'Partner with universities and research institutions for innovation',
       icon: '🎓',
       benefits: ['
-        'Research collaboration',
-        'Talent pipeline',
-        'Innovation programs',
+        'Research collaboration',Talent pipeline',Innovation programs',
       ]},
   ];
   const existingPartners = [

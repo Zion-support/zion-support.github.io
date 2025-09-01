@@ -47,10 +47,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
       description:'
         'Build and deploy production-ready micro SAAS applications in weeks, not months, with our pre-built components and templates.',
       benefits: ['
-        'Pre-built templates',
-        'Component library',
-        'Auto-scaling',
-        'Instant deployment',
+        'Pre-built templates',Component library',Auto-scaling',Instant deployment',
       ]},
     {
 
@@ -59,10 +56,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
       description:'
         'Integrate advanced AI capabilities like chatbots, analytics, and automation into your micro SAAS with simple APIs.',
       benefits: ['
-        'AI chatbots',
-        'Predictive analytics',
-        'Process automation',
-        'Smart insights',
+        'AI chatbots',Predictive analytics',Process automation',Smart insights',
       ]},
     {
 
@@ -71,10 +65,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
       description:'
         'Built on modern cloud infrastructure with automatic scaling, high availability, and global distribution.',
       benefits: ['
-        'Auto-scaling',
-        '99.9% uptime',
-        'Global CDN',
-        'Multi-region deployment',
+        'Auto-scaling',99.9% uptime',Global CDN',Multi-region deployment',
       ]},
     {
 
@@ -83,10 +74,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
       description:'
         'Bank-grade security with SOC 2 compliance, encryption, and advanced threat protection built-in.',
       benefits: ['
-        'SOC 2 certified',
-        'End-to-end encryption',
-        'Threat protection',
-        'Compliance ready',
+        'SOC 2 certified',End-to-end encryption',Threat protection',Compliance ready',
       ]},
   ];
 
@@ -98,10 +86,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
       description:'
         'Full-stack development environment with modern frameworks and tools',
       features: ['
-        'React/Next.js frontend',
-        'Node.js/Python backend',
-        'Database management',
-        'API development',
+        'React/Next.js frontend',Node.js/Python backend',Database management',API development',
       ]},
     {
 
@@ -109,10 +94,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
       title: 'Data Management',
       description: 'Scalable database solutions with real-time synchronization',
       features: ['
-        'PostgreSQL/MySQL',
-        'Real-time sync',
-        'Data backup',
-        'Analytics dashboard',
+        'PostgreSQL/MySQL',Real-time sync',Data backup',Analytics dashboard',
       ]},
     {
 
@@ -120,10 +102,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
       title: 'User Management',
       description: 'Complete user authentication and authorization system',
       features: ['
-        'OAuth integration',
-        'Role-based access',
-        'User profiles',
-        'Team management',
+        'OAuth integration',Role-based access',User profiles',Team management',
       ]},
     {
 
@@ -131,10 +110,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
       title: 'Analytics & Insights',
       description: 'Built-in analytics and reporting for business intelligence',
       features: ['
-        'User analytics',
-        'Business metrics',
-        'Custom reports',
-        'Data export',
+        'User analytics',Business metrics',Custom reports',Data export',
       ]},
   ];
 
@@ -146,13 +122,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
       period: '/month',
       description: 'Perfect for solo entrepreneurs and small teams',
       features: ['
-        'Up to 1,000 users',
-        'Basic templates',
-        'Standard support',
-        'Cloud hosting',
-        'Basic analytics',
-        'Email support',
-        'SSL certificate',
+        'Up to 1,000 users',Basic templates',Standard support',Cloud hosting',Basic analytics',Email support',SSL certificate',
       ],
       cta: 'Get Started',
       popular: false},
@@ -163,14 +133,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
       period: '/month',
       description: 'Ideal for growing businesses with advanced needs',
       features: ['
-        'Up to 10,000 users',
-        'Premium templates',
-        'Priority support',
-        'Advanced analytics',
-        'Custom branding',
-        'API access',
-        'White-label options',
-        'Phone support',
+        'Up to 10,000 users',Premium templates',Priority support',Advanced analytics',Custom branding',API access',White-label options',Phone support',
       ],
       cta: 'Start Free Trial',
       popular: true},
@@ -181,14 +144,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
       period: '/month',
       description: 'For large organizations requiring custom solutions',
       features: ['
-        'Unlimited users',
-        'Custom development',
-        '24/7 dedicated support',
-        'Advanced AI features',
-        'Custom integrations',
-        'On-premise option',
-        'Dedicated success manager',
-        'SLA guarantees',
+        'Unlimited users',Custom development',24/7 dedicated support',Advanced AI features',Custom integrations',On-premise option',Dedicated success manager',SLA guarantees',
       ],
       cta: 'Contact Sales',
       popular: false},
@@ -201,10 +157,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
       description:'
         'Build online stores with inventory management, payment processing, and customer analytics',
       metrics: ['
-        '50% faster development',
-        'Built-in payment processing',
-        'Inventory automation',
-        'Customer insights',
+        '50% faster development',Built-in payment processing',Inventory automation',Customer insights',
       ]},
     {
 
@@ -212,10 +165,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
       description:'
         'Create subscription-based software with user management and billing',
       metrics: ['
-        'Subscription management',
-        'User analytics',
-        'Payment processing',
-        'Customer support',
+        'Subscription management',User analytics',Payment processing',Customer support',
       ]},
     {
 
@@ -223,20 +173,14 @@ export default function MicroSAASPlatform(...args: any[]): any {
       description:'
         'Develop internal tools for project management, CRM, and operations',
       metrics: ['
-        'Process automation',
-        'Team collaboration',
-        'Data visualization',
-        'Integration ready',
+        'Process automation',Team collaboration',Data visualization',Integration ready',
       ]},
     {
 
       title: 'Marketplace Platforms',
       description: 'Build multi-vendor marketplaces with advanced features',
       metrics: ['
-        'Vendor management',
-        'Commission tracking',
-        'Payment distribution',
-        'Analytics dashboard',
+        'Vendor management',Commission tracking',Payment distribution',Analytics dashboard',
       ]},
   ];
 

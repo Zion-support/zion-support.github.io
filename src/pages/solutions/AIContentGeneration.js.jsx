@@ -20,10 +20,7 @@ const AIContentGeneration = () => {
       description: 'Engaging marketing materials and campaigns',
       icon: Target,
       capabilities: ['
-        'Social media posts',
-        'Email campaigns',
-        'Ad copy',
-        'Brand messaging',
+        'Social media posts',Email campaigns',Ad copy',Brand messaging',
       ]},
     {
 
@@ -31,10 +28,7 @@ const AIContentGeneration = () => {
       description: 'Learning materials and educational resources',
       icon: Users,
       capabilities: ['
-        'Course materials',
-        'Tutorials',
-        'Documentation',
-        'Learning guides',
+        'Course materials',Tutorials',Documentation',Learning guides',
       ]},
     {
 
@@ -42,10 +36,7 @@ const AIContentGeneration = () => {
       description: 'Fiction, poetry, and creative content',
       icon: PenTool,
       capabilities: ['
-        'Story generation',
-        'Poetry creation',
-        'Character development',
-        'Plot generation',
+        'Story generation',Poetry creation',Character development',Plot generation',
       ]},
     {
 
@@ -53,10 +44,7 @@ const AIContentGeneration = () => {
       description: 'Technical documentation and specifications',
       icon: Cpu,
       capabilities: ['
-        'API documentation',
-        'User manuals',
-        'Technical guides',
-        'Specifications',
+        'API documentation',User manuals',Technical guides',Specifications',
       ]},
     {
 
@@ -70,19 +58,11 @@ const AIContentGeneration = () => {
       description: 'Combined text, image, and video content',
       icon: Globe,
       capabilities: ['
-        'Interactive content',
-        'Rich media',
-        'Cross-platform content',
-        'Engagement materials',
+        'Interactive content',Rich media',Cross-platform content',Engagement materials',
       ]},
   ];
   const benefits = ['
-    'Significantly faster content creation',
-    'Consistent quality and brand voice',
-    'Scalable content production',
-    'Cost-effective content generation',
-    'Multilingual content capabilities',
-    '24/7 content creation availability',
+    'Significantly faster content creation',Consistent quality and brand voice',Scalable content production',Cost-effective content generation',Multilingual content capabilities',24/7 content creation availability',
   ];
   const implementation = [
     {

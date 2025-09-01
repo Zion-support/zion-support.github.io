@@ -61,12 +61,7 @@ const ITServicesPage = () => {
         'Comprehensive cloud services including AWS, Azure, and Google Cloud with 24/7 monitoring and optimization.',
       price: '$1,500 - $8,000/month',
       features: ['
-        '24/7 monitoring',
-        'Cost optimization',
-        'Security compliance',
-        'Auto-scaling',
-        'Disaster recovery',
-        'Performance tuning',
+        '24/7 monitoring',Cost optimization',Security compliance',Auto-scaling',Disaster recovery',Performance tuning',
       ],
       icon: <Cloud className="h-8 w-8 text-blue-500" />,
       category: 'Cloud',
@@ -81,12 +76,7 @@ const ITServicesPage = () => {
         'Complete security solutions including threat detection, penetration testing, and incident response.',
       price: '$2,000 - $15,000',
       features: ['
-        'Security audits',
-        'Penetration testing',
-        'Incident response',
-        'Compliance',
-        'Threat intelligence',
-        'Security training',
+        'Security audits',Penetration testing',Incident response',Compliance',Threat intelligence',Security training',
       ],"
       icon: <Shield className="h-8 w-8 text-red-500" />,
       category: 'Security',
@@ -101,12 +91,7 @@ const ITServicesPage = () => {
         'Streamline development and deployment processes with automated pipelines and infrastructure as code.',
       price: '$3,000 - $12,000/month',
       features: ['
-        'Pipeline automation',
-        'Infrastructure as code',
-        'Monitoring',
-        'Performance optimization',
-        'Container orchestration',
-        'GitOps',
+        'Pipeline automation',Infrastructure as code',Monitoring',Performance optimization',Container orchestration',GitOps',
       ],"
       icon: <Zap className="h-8 w-8 text-yellow-500" />,
       category: 'DevOps',
@@ -120,12 +105,7 @@ const ITServicesPage = () => {
         'Expert database administration, optimization, and migration services for all major database platforms.',
       price: '$1,000 - $6,000/month',
       features: ['
-        'Performance tuning',
-        'Backup & recovery',
-        'Security hardening',
-        'Migration support',
-        'High availability',
-        'Monitoring',
+        'Performance tuning',Backup & recovery',Security hardening',Migration support',High availability',Monitoring',
       ],"
       icon: <Database className="h-8 w-8 text-green-500" />,
       category: 'Database',
@@ -139,12 +119,7 @@ const ITServicesPage = () => {
         'Design, implement, and maintain robust network solutions with enterprise-grade security.',
       price: '$2,500 - $20,000',
       features: ['
-        'Network design',
-        'Security implementation',
-        'Monitoring',
-        '24/7 support',
-        'SD-WAN',
-        'Network automation',
+        'Network design',Security implementation',Monitoring',24/7 support',SD-WAN',Network automation',
       ],"
       icon: <Globe className="h-8 w-8 text-purple-500" />,
       category: 'Networking',
@@ -158,12 +133,7 @@ const ITServicesPage = () => {
         'Strategic IT planning and digital transformation guidance for modern businesses.',
       price: '$150 - $300/hour',
       features: ['
-        'Technology assessment',
-        'Roadmap planning',
-        'Vendor selection',
-        'ROI analysis',
-        'Digital transformation',
-        'IT governance',
+        'Technology assessment',Roadmap planning',Vendor selection',ROI analysis',Digital transformation',IT governance',
       ],"
       icon: <CheckCircle className="h-8 w-8 text-cyan-500" />,
       category: 'Consulting',
@@ -177,12 +147,7 @@ const ITServicesPage = () => {
         'Complete IT management for small to enterprise businesses with proactive monitoring and support.',
       price: '$500 - $5,000/month',
       features: ['
-        'Help desk support',
-        'System administration',
-        'Security management',
-        'Backup services',
-        'Proactive monitoring',
-        'Vendor management',
+        'Help desk support',System administration',Security management',Backup services',Proactive monitoring',Vendor management',
       ],"
       icon: <Settings className="h-8 w-8 text-indigo-500" />,
       category: 'Managed Services',
@@ -197,12 +162,7 @@ const ITServicesPage = () => {
         'On-premise and colocation data center solutions with enterprise-grade infrastructure.',
       price: '$1,000 - $10,000/month',
       features: ['
-        'Hardware provisioning',
-        'Environmental monitoring',
-        'Power management',
-        'Security',
-        'Backup power',
-        'Climate control',
+        'Hardware provisioning',Environmental monitoring',Power management',Security',Backup power',Climate control',
       ],"
       icon: <Server className="h-8 w-8 text-gray-500" />,
       category: 'Data Center',
@@ -216,12 +176,7 @@ const ITServicesPage = () => {
         'Custom mobile applications for iOS and Android with modern development practices.',
       price: '$15,000 - $100,000',
       features: ['
-        'UI/UX design',
-        'Native development',
-        'Testing',
-        'App store deployment',
-        'Maintenance',
-        'Performance optimization',
+        'UI/UX design',Native development',Testing',App store deployment',Maintenance',Performance optimization',
       ],"
       icon: <Smartphone className="h-8 w-8 text-orange-500" />,
       category: 'Development',
@@ -235,12 +190,7 @@ const ITServicesPage = () => {
         'Modern web applications and e-commerce solutions with responsive design and SEO optimization.',
       price: '$10,000 - $75,000',
       features: ['
-        'Responsive design',
-        'SEO optimization',
-        'Performance tuning',
-        'Maintenance',
-        'Security',
-        'Analytics integration',
+        'Responsive design',SEO optimization',Performance tuning',Maintenance',Security',Analytics integration',
       ],"
       icon: <Globe className="h-8 w-8 text-teal-500" />,
       category: 'Development',
@@ -254,12 +204,7 @@ const ITServicesPage = () => {
         'Custom AI solutions and machine learning models for business automation and insights.',
       price: '$5,000 - $50,000',
       features: ['
-        'Custom AI models',
-        'Data preprocessing',
-        'Model training',
-        'API integration',
-        'Performance monitoring',
-        'Continuous learning',
+        'Custom AI models',Data preprocessing',Model training',API integration',Performance monitoring',Continuous learning',
       ],"
       icon: <Brain className="h-8 w-8 text-pink-500" />,
       category: 'AI/ML',
@@ -274,12 +219,7 @@ const ITServicesPage = () => {
         'Blockchain solutions including smart contracts, DApps, and enterprise blockchain integration.',
       price: '$20,000 - $150,000',
       features: ['
-        'Smart contracts',
-        'DApp development',
-        'Blockchain integration',
-        'Security auditing',
-        'DeFi solutions',
-        'NFT platforms',
+        'Smart contracts',DApp development',Blockchain integration',Security auditing',DeFi solutions',NFT platforms',
       ],"
       icon: <Lock className="h-8 w-8 text-emerald-500" />,
       category: 'Blockchain',
@@ -294,12 +234,7 @@ const ITServicesPage = () => {
         'Internet of Things platforms and solutions for connected devices and smart systems.',
       price: '$8,000 - $60,000',
       features: ['
-        'IoT platform development',
-        'Device integration',
-        'Data analytics',
-        'Real-time monitoring',
-        'Automation',
-        'Security',
+        'IoT platform development',Device integration',Data analytics',Real-time monitoring',Automation',Security',
       ],"
       icon: <Wifi className="h-8 w-8 text-blue-500" />,
       category: 'IoT',
@@ -313,12 +248,7 @@ const ITServicesPage = () => {
         'Business intelligence solutions with advanced analytics, reporting, and data visualization.',
       price: '$3,000 - $25,000',
       features: ['
-        'Data warehousing',
-        'ETL processes',
-        'Advanced analytics',
-        'Interactive dashboards',
-        'Predictive modeling',
-        'Real-time reporting',
+        'Data warehousing',ETL processes',Advanced analytics',Interactive dashboards',Predictive modeling',Real-time reporting',
       ],"
       icon: <BarChart3 className="h-8 w-8 text-purple-500" />,
       category: 'Analytics',
@@ -332,12 +262,7 @@ const ITServicesPage = () => {
         'Comprehensive disaster recovery and business continuity solutions for critical business operations.',
       price: '$2,000 - $15,000',
       features: ['
-        'Backup strategies',
-        'Recovery planning',
-        'Testing',
-        'Documentation',
-        'Training',
-        '24/7 support',
+        'Backup strategies',Recovery planning',Testing',Documentation',Training',24/7 support',
       ],"
       icon: <HardDrive className="h-8 w-8 text-red-500" />,
       category: 'Recovery',
@@ -347,21 +272,7 @@ const ITServicesPage = () => {
   ];
 
   const categories = ['
-    'All Services',
-    'Cloud',
-    'Security',
-    'DevOps',
-    'Database',
-    'Networking',
-    'Consulting',
-    'Managed Services',
-    'Data Center',
-    'Development',
-    'AI/ML',
-    'Blockchain',
-    'IoT',
-    'Analytics',
-    'Recovery',
+    'All Services',Cloud',Security',DevOps',Database',Networking',Consulting',Managed Services',Data Center',Development',AI/ML',Blockchain',IoT',Analytics',Recovery',
   ];
 
   return()

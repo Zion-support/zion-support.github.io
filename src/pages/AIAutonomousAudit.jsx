@@ -181,14 +181,7 @@ const AIAutonomousAudit = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Financial Audit',
-                'Compliance Audit',
-                'Security Audit',
-                'Performance Audit',
-                'Quality Audit',
-                'Process Audit',
-                'System Audit',
-                'Risk Audit',
+                'Financial Audit',Compliance Audit',Security Audit',Performance Audit',Quality Audit',Process Audit',System Audit',Risk Audit',
               ].map(type => (
                 <div
                   key={type}"

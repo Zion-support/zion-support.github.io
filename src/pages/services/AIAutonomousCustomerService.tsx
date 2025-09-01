@@ -68,12 +68,7 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
   ];
 
   const benefits = ['
-    'Improve customer satisfaction by 80%',
-    'Reduce response time by 90%',
-    'Increase issue resolution by 70%',
-    'Automate customer support',
-    '24/7 autonomous operation',
-    'Real-time customer insights',
+    'Improve customer satisfaction by 80%',Reduce response time by 90%',Increase issue resolution by 70%',Automate customer support',24/7 autonomous operation',Real-time customer insights',
   ];
 
   return()

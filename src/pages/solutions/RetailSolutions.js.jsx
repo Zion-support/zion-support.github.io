@@ -50,12 +50,7 @@ export default function RetailSolutions() {
         'Seamless integration across online and offline retail channels'},
   ];
   const benefits = ['
-    'Increase sales by 25-40%',
-    'Improve customer retention by 30%',
-    'Reduce inventory costs by 20-35%',
-    'Enhance customer experience',
-    'Better marketing ROI',
-    'Streamlined operations',
+    'Increase sales by 25-40%',Improve customer retention by 30%',Reduce inventory costs by 20-35%',Enhance customer experience',Better marketing ROI',Streamlined operations',
   ];
   const solutions = [
     {
@@ -76,14 +71,7 @@ export default function RetailSolutions() {
       description: 'AI-driven marketing campaigns and personalization'},
   ];
   const retailTypes = ['
-    'Fashion & Apparel',
-    'Electronics',
-    'Home & Garden',
-    'Beauty & Health',
-    'Sports & Outdoor',
-    'Books & Media',
-    'Food & Beverage',
-    'Automotive',
+    'Fashion & Apparel',Electronics',Home & Garden',Beauty & Health',Sports & Outdoor',Books & Media',Food & Beverage',Automotive',
   ];
   return()
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">

@@ -40,10 +40,7 @@ import {
       lastAudit: 'December 2024',
       nextAudit: 'December 2025',
       benefits: ['
-        'Systematic approach to information security',
-        'Risk assessment and management',
-        'Continuous improvement process',
-        'International recognition',
+        'Systematic approach to information security',Risk assessment and management',Continuous improvement process',International recognition',
       ]},
     {
 
@@ -58,10 +55,7 @@ import {
       lastAudit: 'November 2024',
       nextAudit: 'November 2025',
       benefits: ['
-        'Independent third-party validation',
-        'Trust services criteria compliance',
-        'Customer confidence and trust',
-        'Operational effectiveness',
+        'Independent third-party validation',Trust services criteria compliance',Customer confidence and trust',Operational effectiveness',
       ]},
     {
 
@@ -75,10 +69,7 @@ import {
       lastAudit: 'October 2024',
       nextAudit: 'October 2025',
       benefits: ['
-        'Enhanced data protection',
-        'Individual privacy rights',
-        'Transparent data processing',
-        'Cross-border data transfer compliance',
+        'Enhanced data protection',Individual privacy rights',Transparent data processing',Cross-border data transfer compliance',
       ]},
     {
 
@@ -92,10 +83,7 @@ import {
       lastAudit: 'September 2024',
       nextAudit: 'September 2025',
       benefits: ['
-        'Healthcare data security',
-        'Patient privacy protection',
-        'Administrative safeguards',
-        'Technical safeguards',
+        'Healthcare data security',Patient privacy protection',Administrative safeguards',Technical safeguards',
       ]},
   ];
 
@@ -135,44 +123,28 @@ import {
 
       category: 'Access Control',
       measures: ['
-        'Multi-factor authentication (MFA),
-        'Role-based access control (RBAC),
-        'Single sign-on (SSO) integration',
-        'Privileged access management (PAM),
-        'Session management and timeout',
+        'Multi-factor authentication (MFA),Role-based access control (RBAC),Single sign-on (SSO) integration',Privileged access management (PAM),Session management and timeout',
       ],
       icon: Key},
     {
 
       category: 'Data Protection',
       measures: ['
-        'End-to-end encryption (AES-256),
-        'Data loss prevention (DLP),
-        'Backup and disaster recovery',
-        'Data classification and labeling',
-        'Secure data disposal',
+        'End-to-end encryption (AES-256),Data loss prevention (DLP),Backup and disaster recovery',Data classification and labeling',Secure data disposal',
       ],
       icon: Database},
     {
 
       category: 'Network Security',
       measures: ['
-        'Firewall and intrusion detection',
-        'Virtual private networks (VPN),
-        'DDoS protection and mitigation',
-        'Network segmentation',
-        'Regular security assessments',
+        'Firewall and intrusion detection',Virtual private networks (VPN),DDoS protection and mitigation',Network segmentation',Regular security assessments',
       ],
       icon: Network},
     {
 
       category: 'Application Security',
       measures: ['
-        'Secure software development lifecycle',
-        'Regular vulnerability assessments',
-        'Penetration testing',
-        'Code security reviews',
-        'API security and monitoring',
+        'Secure software development lifecycle',Regular vulnerability assessments',Penetration testing',Code security reviews',API security and monitoring',
       ],
       icon: Shield},
   ];

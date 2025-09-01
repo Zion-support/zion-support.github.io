@@ -268,8 +268,7 @@ export default function ForumPostPage() {
 
 } keywords = {
 '`
-  `community, forum, discussion, ${post.tags.join(',
-  ');
+  `community, forum, discussion, ${post.tags.join(',);
 
 
 

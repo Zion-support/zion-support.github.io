@@ -127,13 +127,7 @@ export default function AISupplyChainOptimization() {
       description:'
         'Perfect for small businesses with basic supply chain optimization needs',
       features: ['
-        'Up to 5 locations',
-        'Basic demand forecasting',
-        'Email support',
-        'Standard integrations',
-        'Basic reporting',
-        'Route optimization',
-        'Mobile app access',
+        'Up to 5 locations',Basic demand forecasting',Email support',Standard integrations',Basic reporting',Route optimization',Mobile app access',
       ],
       cta: 'Start Free Trial',
       popular: false},
@@ -145,15 +139,7 @@ export default function AISupplyChainOptimization() {
       description:'
         'Ideal for growing companies with complex supply chain requirements',
       features: ['
-        'Up to 25 locations',
-        'Advanced AI forecasting',
-        'Priority support',
-        'Custom integrations',
-        'Advanced analytics',
-        'Multi-modal optimization',
-        'API access',
-        'Supplier analytics',
-        'Risk management',
+        'Up to 25 locations',Advanced AI forecasting',Priority support',Custom integrations',Advanced analytics',Multi-modal optimization',API access',Supplier analytics',Risk management',
       ],
       cta: 'Start Free Trial',
       popular: true},
@@ -165,15 +151,7 @@ export default function AISupplyChainOptimization() {
       description:'
         'For large organizations requiring enterprise-grade supply chain solutions',
       features: ['
-        'Unlimited locations',
-        'Custom AI models',
-        'Dedicated account manager',
-        'White-label solutions',
-        'Advanced security features',
-        'Custom reporting',
-        'On-premise deployment',
-        'SLA guarantees',
-        '24/7 support',
+        'Unlimited locations',Custom AI models',Dedicated account manager',White-label solutions',Advanced security features',Custom reporting',On-premise deployment',SLA guarantees',24/7 support',
       ],
       cta: 'Contact Sales',
       popular: false},
@@ -243,10 +221,7 @@ export default function AISupplyChainOptimization() {
 
       name: 'IoT & Sensors',
       platforms: ['
-        'RFID',
-        'GPS Tracking',
-        'Temperature Sensors',
-        'IoT Platforms',
+        'RFID',GPS Tracking',Temperature Sensors',IoT Platforms',
       ]},
   ];
 
@@ -278,37 +253,25 @@ export default function AISupplyChainOptimization() {
 
       category: 'Demand Planning',
       areas: ['
-        'Forecasting',
-        'Seasonal Analysis',
-        'Trend Prediction',
-        'Demand Shaping',
+        'Forecasting',Seasonal Analysis',Trend Prediction',Demand Shaping',
       ]},
     {
 
       category: 'Inventory Management',
       areas: ['
-        'Stock Optimization',
-        'Reorder Points',
-        'Safety Stock',
-        'ABC Analysis',
+        'Stock Optimization',Reorder Points',Safety Stock',ABC Analysis',
       ]},
     {
 
       category: 'Transportation',
       areas: ['
-        'Route Optimization',
-        'Load Planning',
-        'Carrier Selection',
-        'Freight Optimization',
+        'Route Optimization',Load Planning',Carrier Selection',Freight Optimization',
       ]},
     {
 
       category: 'Supplier Management',
       areas: ['
-        'Performance Tracking',
-        'Risk Assessment',
-        'Cost Analysis',
-        'Quality Monitoring',
+        'Performance Tracking',Risk Assessment',Cost Analysis',Quality Monitoring',
       ]},
   ];
 

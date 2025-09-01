@@ -155,8 +155,7 @@ export default function TranslationManager() {
     }
     try {
       const { translations: translatedText, error } = await translateContent()
-        sourceText,
-        'general',
+        sourceText,general',
         sourceLanguage
       );
       if (error) {

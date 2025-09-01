@@ -273,7 +273,7 @@ export function AdvancedSecurityDashboard() {
                         <p className="text-xs text-zion-slate-light">{req.framework}</p>
                       </div>`
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>
-                        {req.status.replace('_', ')}
+                        {req.status.replace('_',)}
                       </span>
                     </div>) ) }
                 </div>
@@ -300,7 +300,7 @@ export function AdvancedSecurityDashboard() {
                     <p className="text-zion-slate-light mb-3">{event.description}</p>"
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                       <span>Source: {event.source}</span>
-                      <span>Status: {event.status.replace('_', ')}</span>
+                      <span>Status: {event.status.replace('_',)}</span>
                       {event.assignedTo && <span>Assigned: {event.assignedTo}</span>}
                       <span>Time: {new Date(event.timestamp).toLocaleString()}</span>
                     </div>
@@ -319,7 +319,7 @@ export function AdvancedSecurityDashboard() {
                     <div className="flex items-center gap-3 mb-2">"
                       <h3 className="font-semibold text-zion-slate">{req.requirement}</h3>`
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>
-                        {req.status.replace('_', ')}
+                        {req.status.replace('_',)}
                       </span>`
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRiskLevelColor(req.riskLevel)}`}>
                         {req.riskLevel} Risk

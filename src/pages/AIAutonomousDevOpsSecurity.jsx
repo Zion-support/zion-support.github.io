@@ -191,14 +191,7 @@ const AIAutonomousDevOpsSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'CI/CD Security',
-                'Pipeline Security',
-                'Build Security',
-                'Deploy Security',
-                'Test Security',
-                'Release Security',
-                'Infrastructure Security',
-                'Tool Security',
+                'CI/CD Security',Pipeline Security',Build Security',Deploy Security',Test Security',Release Security',Infrastructure Security',Tool Security',
               ].map(type => (
                 <div
                   key={type}"

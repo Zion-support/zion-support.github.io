@@ -20,10 +20,7 @@ export default function MicroSAASSolutions() {
         'Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.',
       icon: Code,
       features: ['
-        'Custom workflows',
-        'API integration',
-        'User management',
-        'Scalable architecture',
+        'Custom workflows',API integration',User management',Scalable architecture',
       ]},
     {
 
@@ -32,10 +29,7 @@ export default function MicroSAASSolutions() {
         'Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.',
       icon: Users,
       features: ['
-        'Data isolation',
-        'Resource sharing',
-        'Customization options',
-        'Performance optimization',
+        'Data isolation',Resource sharing',Customization options',Performance optimization',
       ]},
     {
 
@@ -44,10 +38,7 @@ export default function MicroSAASSolutions() {
         'Comprehensive billing and subscription systems with flexible pricing models and automated renewals.',
       icon: BarChart3,
       features: ['
-        'Flexible pricing',
-        'Automated billing',
-        'Usage tracking',
-        'Payment processing',
+        'Flexible pricing',Automated billing',Usage tracking',Payment processing',
       ]},
     {
 
@@ -56,10 +47,7 @@ export default function MicroSAASSolutions() {
         'Robust APIs that enable seamless integration with existing systems and third-party applications.',
       icon: Cpu,
       features: ['
-        'RESTful APIs',
-        'GraphQL support',
-        'Webhook integration',
-        'API documentation',
+        'RESTful APIs',GraphQL support',Webhook integration',API documentation',
       ]},
     {
 
@@ -68,10 +56,7 @@ export default function MicroSAASSolutions() {
         'Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.',
       icon: TrendingUp,
       features: ['
-        'Real-time metrics',
-        'Custom reports',
-        'Data visualization',
-        'Export capabilities',
+        'Real-time metrics',Custom reports',Data visualization',Export capabilities',
       ]},
   ];
   const benefits = [

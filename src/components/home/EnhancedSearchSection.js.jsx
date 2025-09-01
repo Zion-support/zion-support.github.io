@@ -9,8 +9,7 @@ export function EnhancedSearchSection() {
     const [isFocused, setIsFocused] = useState(false);
     const [suggestions, setSuggestions] = useState([]);
     const popularSearches = ['
-        'AI Engineers',Machine Learning',React Developers',Python Experts',
-        'Data Scientists',DevOps Engineers',UI/UX Designers',Blockchain Developers'
+        'AI Engineers',Machine Learning',React Developers',Python Experts',Data Scientists',DevOps Engineers',UI/UX Designers',Blockchain Developers'
     ];
     const trendingServices = ['"
         { name: 'AI Model Training', icon: _jsx(Sparkles, { className: "h-4 w-4" }), count: '2.3k' },"

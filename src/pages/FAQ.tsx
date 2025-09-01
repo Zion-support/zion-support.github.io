@@ -121,12 +121,7 @@ const faqData: FAQItem[] = [
 ];
 
 const categories = ['
-  'All',
-  'AI Services',
-  'Security',
-  'Cloud',
-  'Support',
-  'General',
+  'All',AI Services',Security',Cloud',Support',General',
 ];
 
 export default function FAQ() {

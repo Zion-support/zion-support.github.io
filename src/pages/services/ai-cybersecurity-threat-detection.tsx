@@ -72,13 +72,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       period: '/month',
       description: 'Perfect for small businesses',
       features: ['
-        'Up to 100 endpoints',
-        'Basic AI threat detection',
-        '24/7 monitoring',
-        'Email alerts',
-        'Basic reporting',
-        'Phone support',
-        'Standard integrations'
+        'Up to 100 endpoints',Basic AI threat detection',24/7 monitoring',Email alerts',Basic reporting',Phone support',Standard integrations'
       ],
       popular: false
     },
@@ -89,14 +83,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       period: '/month',
       description: 'Ideal for growing organizations',
       features: ['
-        'Up to 500 endpoints',
-        'Advanced AI algorithms',
-        'Behavioral analysis',
-        'Automated response',
-        'Custom dashboards',
-        'Priority support',
-        'Advanced integrations',
-        'Compliance reporting'
+        'Up to 500 endpoints',Advanced AI algorithms',Behavioral analysis',Automated response',Custom dashboards',Priority support',Advanced integrations',Compliance reporting'
       ],
       popular: true
     },
@@ -107,11 +94,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       period: '/month',
       description: 'For large enterprises',
       features: ['
-        'Unlimited endpoints',
-        'Full AI suite',
-        'Custom AI models',
-        'Dedicated security team',
-        'Advanced compliance',;
+        'Unlimited endpoints',Full AI suite',Custom AI models',Dedicated security team',Advanced compliance',;
         'On-premise options',;
         'SLA guarantees',;
         'Custom integrations';

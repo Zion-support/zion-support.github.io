@@ -326,8 +326,7 @@ export const AdvancedServiceComparison = () => {
                   <div className="pt-2">"
                     <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
 
-  () => window.open(service.link,
-  '_blank')
+  () => window.open(service.link,_blank')
 
 }>
                       Learn More
@@ -378,8 +377,7 @@ export const AdvancedServiceComparison = () => {
           <div className="mt-6 text-center">"
             <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
 
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Inquiry',
-  '_blank')
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Inquiry',_blank')
 
 }>"
               <Mail className="w-4 h-4 mr-2"/>
@@ -409,8 +407,7 @@ export const AdvancedServiceComparison = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
 
-  () => window.open('mailto:kleber@ziontechgroup.com',
-  '_blank')
+  () => window.open('mailto:kleber@ziontechgroup.com',_blank')
 
 }>"
               <Mail className="w-4 h-4 mr-2"/>
@@ -418,8 +415,7 @@ export const AdvancedServiceComparison = () => {
             </Button>"
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
 
-  () => window.open('tel:+13024640950',
-  '_blank')
+  () => window.open('tel:+13024640950',_blank')
 
 }>"
               <Phone className="w-4 h-4 mr-2"/>

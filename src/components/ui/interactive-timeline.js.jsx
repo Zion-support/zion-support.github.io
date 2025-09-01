@@ -90,13 +90,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
         const iconMap = {
 
-  'AI & ML': Zap,
-            'Cybersecurity': Shield,
-            'Cloud': Globe,
-            'Development': Rocket,
-            'Research': TrendingUp,
-            'Team': Users,
-  'Launch': Award
+  'AI & ML': Zap,Cybersecurity': Shield,Cloud': Globe,Development': Rocket,Research': TrendingUp,Team': Users,Launch': Award
         
 
 };
@@ -502,7 +496,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
       {viewMode === 'kanban' && (<div className="grid grid-cols-4 gap-4">'"
           {['upcoming',in-progress',completed',milestone'].map((status) => (<div key={status} className="space-y-3">"
               <h4 className="text-zinc-300 font-medium text-center capitalize">
-                {status.replace('-', ')} ({filteredEvents.filter(e => e.status === status).length})
+                {status.replace('-',)} ({filteredEvents.filter(e => e.status === status).length})
               </h4>"
               <div className="space-y-2">
                 {filteredEvents

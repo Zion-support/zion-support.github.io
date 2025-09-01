@@ -121,13 +121,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
       period: '/month',
       description: 'Perfect for small clinics and practices',
       features[;
-        'Up to 1,000 patients',
-        'Basic predictive analytics',
-        'Standard risk scoring',
-        'Email support',
-        'Basic reporting',
-        'Up to 10 user licenses',
-        'Core integrations'
+        'Up to 1,000 patients',Basic predictive analytics',Standard risk scoring',Email support',Basic reporting',Up to 10 user licenses',Core integrations'
       ],;
       cta: 'Start Free Trial',
       popular: false
@@ -139,16 +133,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
       period: '/month',
       description: 'Ideal for growing healthcare organizations',
       features[;
-        'Up to 10,000 patients',
-        'Advanced AI analytics',
-        'Real-time monitoring',
-        'Priority support',
-        'Custom reporting',
-        'Up to 50 user licenses',
-        'Advanced integrations',
-        'API access',
-        'Custom workflows',
-        'Advanced AI models'
+        'Up to 10,000 patients',Advanced AI analytics',Real-time monitoring',Priority support',Custom reporting',Up to 50 user licenses',Advanced integrations',API access',Custom workflows',Advanced AI models'
       ],;
       cta: 'Start Free Trial',
       popular: true
@@ -160,16 +145,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
       period: '/month',
       description: 'For large healthcare systems with complex needs',
       features[;
-        'Unlimited patients',
-        'Premium AI analytics',
-        '24/7 dedicated support',
-        'Custom dashboards',
-        'Unlimited user licenses',
-        'Enterprise integrations',
-        'Advanced AI models',
-        'On-premise deployment option',
-        'Dedicated healthcare consultant',
-        'Custom training programs',;
+        'Unlimited patients',Premium AI analytics',24/7 dedicated support',Custom dashboards',Unlimited user licenses',Enterprise integrations',Advanced AI models',On-premise deployment option',Dedicated healthcare consultant',Custom training programs',;
         'White-label solutions',;
         'Multi-tenant architecture';
       ],;

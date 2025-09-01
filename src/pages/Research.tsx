@@ -88,10 +88,7 @@ const Research: React.FC = () => {
       endDate: '2025-12-31',
       leadResearcher: 'Dr. Elena Vasquez',
       team: ['
-        'Dr. Elena Vasquez',
-        'Dr. Michael Chen',
-        'Sarah Johnson',
-        'Alex Rodriguez',
+        'Dr. Elena Vasquez',Dr. Michael Chen',Sarah Johnson',Alex Rodriguez',
       ],
       funding: 2500000,
       institution: 'MIT',
@@ -100,9 +97,7 @@ const Research: React.FC = () => {
       methodology:'
         'Hybrid quantum-classical approach using variational quantum algorithms',
       expectedOutcomes: ['
-        'Quantum advantage demonstration',
-        'Financial model improvements',
-        'Patent applications',
+        'Quantum advantage demonstration',Financial model improvements',Patent applications',
       ],
       publications: [
         {
@@ -114,11 +109,7 @@ const Research: React.FC = () => {
           citations: 23},
       ],
       tags: ['
-        'Quantum Computing',
-        'Machine Learning',
-        'Finance',
-        'Optimization',
-        'Risk Assessment',
+        'Quantum Computing',Machine Learning',Finance',Optimization',Risk Assessment',
       ],
       featured: true,
       progress: 65,
@@ -136,10 +127,7 @@ const Research: React.FC = () => {
       endDate: '2024-11-30',
       leadResearcher: 'Dr. Sarah Chen',
       team: ['
-        'Dr. Sarah Chen',
-        'Dr. James Wilson',
-        'Lisa Anderson',
-        'David Kim',
+        'Dr. Sarah Chen',Dr. James Wilson',Lisa Anderson',David Kim',
       ],
       funding: 1800000,
       institution: 'Stanford University',
@@ -148,9 +136,7 @@ const Research: React.FC = () => {
       methodology:'
         'Differential privacy, secure multi-party computation, federated averaging',
       expectedOutcomes: ['
-        'Privacy-preserving framework',
-        'Healthcare AI models',
-        'Open-source toolkit',
+        'Privacy-preserving framework',Healthcare AI models',Open-source toolkit',
       ],
       publications: [
         {
@@ -169,11 +155,7 @@ const Research: React.FC = () => {
           citations: 18},
       ],
       tags: ['
-        'Federated Learning',
-        'Healthcare',
-        'Privacy',
-        'AI Ethics',
-        'Medical Imaging',
+        'Federated Learning',Healthcare',Privacy',AI Ethics',Medical Imaging',
       ],
       featured: true,
       progress: 100,
@@ -191,10 +173,7 @@ const Research: React.FC = () => {
       endDate: '2025-08-31',
       leadResearcher: 'Michael Rodriguez',
       team: ['
-        'Michael Rodriguez',
-        'Dr. Jennifer Park',
-        'Robert Kim',
-        'Emily Watson',
+        'Michael Rodriguez',Dr. Jennifer Park',Robert Kim',Emily Watson',
       ],
       funding: 1200000,
       institution: 'Carnegie Mellon University',
@@ -203,9 +182,7 @@ const Research: React.FC = () => {
       methodology:'
         'Threat modeling, security architecture design, prototype development, penetration testing',
       expectedOutcomes: ['
-        'Zero-trust framework',
-        'Security prototypes',
-        'Best practices guide',
+        'Zero-trust framework',Security prototypes',Best practices guide',
       ],
       publications: [
         {
@@ -217,11 +194,7 @@ const Research: React.FC = () => {
           citations: 12},
       ],
       tags: ['
-        'Zero-Trust',
-        'Industrial IoT',
-        'Cybersecurity',
-        'Critical Infrastructure',
-        'Security Architecture',
+        'Zero-Trust',Industrial IoT',Cybersecurity',Critical Infrastructure',Security Architecture',
       ],
       featured: false,
       progress: 40,
@@ -239,10 +212,7 @@ const Research: React.FC = () => {
       endDate: '2026-12-31',
       leadResearcher: 'Dr. David Thompson',
       team: ['
-        'Dr. David Thompson',
-        'Dr. Lisa Chen',
-        'Marcus Rodriguez',
-        'Jennifer Kim',
+        'Dr. David Thompson',Dr. Lisa Chen',Marcus Rodriguez',Jennifer Kim',
       ],
       funding: 3000000,
       institution: 'UC Berkeley',
@@ -251,17 +221,11 @@ const Research: React.FC = () => {
       methodology:'
         'Model compression, knowledge distillation, edge computing optimization, real-time inference',
       expectedOutcomes: ['
-        'Edge AI framework',
-        'Autonomous vehicle models',
-        'Performance benchmarks',
+        'Edge AI framework',Autonomous vehicle models',Performance benchmarks',
       ],
       publications: [],
       tags: ['
-        'Edge Computing',
-        'Autonomous Vehicles',
-        'AI Optimization',
-        'Real-time Systems',
-        'Computer Vision',
+        'Edge Computing',Autonomous Vehicles',AI Optimization',Real-time Systems',Computer Vision',
       ],
       featured: false,
       progress: 15,
@@ -547,7 +511,7 @@ const Research: React.FC = () => {
                       <span`
                         className={`px-2 py-1 rounded-full text-xs font-medium ${getImpactColor(project.impact)}`}
                       >
-                        {project.impact.replace('-', ').toUpperCase()}
+                        {project.impact.replace('-',).toUpperCase()}
                       </span>
                     </div>"
                     <div className="flex items-center gap-2">"

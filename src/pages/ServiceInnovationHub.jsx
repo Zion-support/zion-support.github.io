@@ -126,8 +126,7 @@ const ServiceInnovationHub = () => {
               </Button>"
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
 
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',
-  '_blank')
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',_blank')
 
 
 
@@ -368,8 +367,7 @@ const ServiceInnovationHub = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick = {
 
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Leadership Consultation',
-  '_blank')
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Leadership Consultation',_blank')
 
 
 
@@ -382,8 +380,7 @@ const ServiceInnovationHub = () => {
               </Button>"
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
 
-  () => window.open('tel:+13024640950',
-  '_blank')
+  () => window.open('tel:+13024640950',_blank')
 
 
 

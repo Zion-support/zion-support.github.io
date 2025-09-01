@@ -8,22 +8,10 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
       price: 'Starting at $299/month',
       popular: false,
       includes[;
-        '24/7 Help Desk Support',
-        'Remote Troubleshooting',
-        'Basic Network Monitoring',
-        'Monthly Health Reports',
-        'Email Support',
-        'Up to 25 Users',
-        'Basic Security Monitoring',
-        'Backup Verification'
+        '24/7 Help Desk Support',Remote Troubleshooting',Basic Network Monitoring',Monthly Health Reports',Email Support',Up to 25 Users',Basic Security Monitoring',Backup Verification'
       ],;
       notIncluded[;
-        'On-site Visits',
-        'Hardware Installation',
-        'Advanced Security Features',
-        'Priority Support',
-        'Custom Reporting',
-        'Strategic IT Planning'
+        'On-site Visits',Hardware Installation',Advanced Security Features',Priority Support',Custom Reporting',Strategic IT Planning'
       ],;
       features[;
         { name: 'Response Time', value: '4-8 hours', icon: Clock },
@@ -39,25 +27,10 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
       price: 'Starting at $599/month',
       popular: true,
       includes[;
-        'Everything in Basic Package',
-        'On-site Support (2 visits/month),
-        'Hardware Installation & Setup',
-        'Advanced Network Security',
-        'Weekly Performance Reports',
-        'Phone & Email Support',
-        'Up to 100 Users',
-        'Emergency Response (4hr),
-        'Network Optimization',
-        'Security Audits (Quarterly),
-        'User Training Sessions',
-        'Strategic IT Consulting'
+        'Everything in Basic Package',On-site Support (2 visits/month),Hardware Installation & Setup',Advanced Network Security',Weekly Performance Reports',Phone & Email Support',Up to 100 Users',Emergency Response (4hr),Network Optimization',Security Audits (Quarterly),User Training Sessions',Strategic IT Consulting'
       ],;
       notIncluded[;
-        'Unlimited On-site Visits',
-        'Dedicated IT Manager',
-        'Custom Software Development',
-        'Hardware Procurement',
-        'Advanced Analytics'
+        'Unlimited On-site Visits',Dedicated IT Manager',Custom Software Development',Hardware Procurement',Advanced Analytics'
       ],;
       features[;
         { name: 'Response Time', value: '2-4 hours', icon: Clock },
@@ -73,27 +46,10 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
       price: 'Starting at $1,299/month',
       popular: false,
       includes[;
-        'Everything in Professional Package',
-        'Unlimited On-site Support',
-        'Dedicated IT Manager',
-        'Advanced Security Suite',
-        'Real-time Monitoring & Alerting',
-        'Daily Performance Reports',
-        'Unlimited Users',
-        'Emergency Response (2hr),
-        'Strategic IT Planning',
-        'Compliance Management',
-        'Custom Solutions Development',
-        'Advanced Analytics & Insights',
-        'Executive Reporting',
-        'Vendor Management',
-        'Technology Roadmap Planning'
+        'Everything in Professional Package',Unlimited On-site Support',Dedicated IT Manager',Advanced Security Suite',Real-time Monitoring & Alerting',Daily Performance Reports',Unlimited Users',Emergency Response (2hr),Strategic IT Planning',Compliance Management',Custom Solutions Development',Advanced Analytics & Insights',Executive Reporting',Vendor Management',Technology Roadmap Planning'
       ],;
       notIncluded[;
-        'Custom Hardware Development',
-        'Third-party Software Licensing',
-        'Legal Compliance Services',
-        'Insurance Requirements'
+        'Custom Hardware Development',Third-party Software Licensing',Legal Compliance Services',Insurance Requirements'
       ],;
       features[;
         { name: 'Response Time', value: '1-2 hours', icon: Clock },

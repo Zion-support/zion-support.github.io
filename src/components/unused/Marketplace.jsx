@@ -44,11 +44,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
             reviewCount: 127,
             image: '/images/marketplace/ai-business-manager.jpg',
             features[;
-                'Autonomous decision making',
-                'Business process automation',
-                'Real-time analytics',
-                'Multi-tenant support',
-                'API integration'
+                'Autonomous decision making',Business process automation',Real-time analytics',Multi-tenant support',API integration'
             ],;
             tags['AI',Business Automation',Enterprise',Cloud'],;
             featured: true,
@@ -69,11 +65,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
             reviewCount: 89,
             image: '/images/marketplace/quantum-framework.jpg',
             features[;
-                'Quantum algorithm optimization',
-                'Neural network training',
-                'GPU acceleration',
-                'Python SDK',
-                'Documentation & examples'
+                'Quantum algorithm optimization',Neural network training',GPU acceleration',Python SDK',Documentation & examples'
             ],;
             tags['Quantum Computing',AI',Research',Python'],;
             featured: true,
@@ -94,11 +86,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
             reviewCount: 156,
             image: '/images/marketplace/soc2-suite.jpg',
             features[;
-                'Automated compliance checks',
-                'Security assessment tools',
-                'Audit trail management',
-                'Risk assessment',
-                'Reporting dashboard'
+                'Automated compliance checks',Security assessment tools',Audit trail management',Risk assessment',Reporting dashboard'
             ],;
             tags['Cybersecurity',Compliance',SOC2',Enterprise'],;
             featured: false,
@@ -119,11 +107,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
             reviewCount: 73,
             image: '/images/marketplace/5g-kit.jpg',
             features[;
-                '5G network infrastructure',
-                'Enterprise security',
-                'Load balancing',
-                'Monitoring tools',
-                '24/7 support'
+                '5G network infrastructure',Enterprise security',Load balancing',Monitoring tools',24/7 support'
             ],;
             tags['5G',Networking',Enterprise',Infrastructure'],;
             featured: false,
@@ -144,11 +128,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
             reviewCount: 234,
             image: '/images/marketplace/workflow-templates.jpg',
             features[;
-                '50+ workflow templates',
-                'Customizable designs',
-                'Integration guides',
-                'Best practices',
-                'Community support'
+                '50+ workflow templates',Customizable designs',Integration guides',Best practices',Community support'
             ],;
             tags['AI',Workflows',Templates',Business'],;
             featured: false,
@@ -169,11 +149,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
             reviewCount: 98,
             image: '/images/marketplace/blockchain-defi.jpg',
             features[;
-                'Smart contract templates',
-                'DeFi protocol examples',
-                'Security best practices',
-                'Testing framework',
-                'Deployment guides'
+                'Smart contract templates',DeFi protocol examples',Security best practices',Testing framework',Deployment guides'
             ],;
             tags['Blockchain',DeFi',Smart Contracts',Development'],;
             featured: false,
@@ -194,11 +170,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
             reviewCount: 67,
             image: '/images/marketplace/iot-platform.jpg',
             features[;
-                'IoT device management',
-                'Real-time analytics',
-                'ML-powered insights',
-                'Scalable architecture',
-                'Multi-cloud support'
+                'IoT device management',Real-time analytics',ML-powered insights',Scalable architecture',Multi-cloud support'
             ],;
             tags['IoT',Analytics',Machine Learning',Enterprise'],;
             featured: false,
@@ -219,11 +191,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
             reviewCount: 189,
             image: '/images/marketplace/threat-intelligence.jpg',
             features[;
-                'Real-time threat feeds',
-                'Security alerts',
-                'Vulnerability scanning',
-                'Incident response',
-                'Expert support'
+                'Real-time threat feeds',Security alerts',Vulnerability scanning',Incident response',Expert support'
             ],;
             tags['Cybersecurity',Threat Intelligence',Monitoring',Security'],;
             featured: false,

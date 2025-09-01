@@ -66,12 +66,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
   ];
 
   const benefits = ['
-    'Reduce hiring time by 60-80%',
-    'Improve candidate quality by 40-60%',
-    'Eliminate unconscious bias completely',
-    'Save 15+ hours per hire on interviews',
-    'Increase diversity in hiring by 30-50%',
-    'Reduce turnover by 25-40%',
+    'Reduce hiring time by 60-80%',Improve candidate quality by 40-60%',Eliminate unconscious bias completely',Save 15+ hours per hire on interviews',Increase diversity in hiring by 30-50%',Reduce turnover by 25-40%',
   ];
 
   const assessmentTypes = [
@@ -106,12 +101,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
   ];
 
   const industries = ['
-    'Technology & Software',
-    'Healthcare & Life Sciences',
-    'Finance & Banking',
-    'Manufacturing & Engineering',
-    'Retail & E-commerce',
-    'Consulting & Professional Services',
+    'Technology & Software',Healthcare & Life Sciences',Finance & Banking',Manufacturing & Engineering',Retail & E-commerce',Consulting & Professional Services',
   ];
 
   return()

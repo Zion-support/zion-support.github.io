@@ -86,22 +86,12 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
   ];
 
   const benefits = ['
-    'Reduce operational costs by up to 40%',
-    'Improve process efficiency by 60%',
-    'Eliminate manual errors and delays',
-    '24/7 automated operations',
-    'Scalable infrastructure for growth',;
+    'Reduce operational costs by up to 40%',Improve process efficiency by 60%',Eliminate manual errors and delays',24/7 automated operations',Scalable infrastructure for growth',;
     'Real-time monitoring and analytics';
   ];
 
   const industries = ['
-    'Manufacturing',
-    'Healthcare',
-    'Finance',
-    'Retail',
-    'Logistics',
-    'Technology',
-    'Energy',;
+    'Manufacturing',Healthcare',Finance',Retail',Logistics',Technology',Energy',;
     'Education';
   ];
 

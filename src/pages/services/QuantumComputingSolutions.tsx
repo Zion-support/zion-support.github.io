@@ -148,11 +148,7 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
       period: '/month',
       description: 'Perfect for research and development teams',
       features: ['
-        'Up to 100 qubits',
-        'Basic quantum algorithms',
-        'Standard support',
-        'Documentation access',
-        'Community forum'
+        'Up to 100 qubits',Basic quantum algorithms',Standard support',Documentation access',Community forum'
       ],
       cta: 'Start Free Trial',
       popular: false
@@ -164,13 +160,7 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
       period: '/month',
       description: 'Ideal for production quantum applications',
       features: ['
-        'Up to 1000 qubits',
-        'Advanced algorithms',
-        'Priority support',
-        'Custom development',
-        'API access',
-        'Performance monitoring',
-        'SLA guarantees'
+        'Up to 1000 qubits',Advanced algorithms',Priority support',Custom development',API access',Performance monitoring',SLA guarantees'
       ],
       cta: 'Start Free Trial',
       popular: true
@@ -182,13 +172,7 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
       period: '',
       description: 'For large-scale quantum computing needs',
       features: ['
-        'Unlimited qubits',
-        'Custom algorithms',
-        'Dedicated team',
-        'On-premise options',
-        'White-label solutions',
-        'Training programs',
-        '24/7 support'
+        'Unlimited qubits',Custom algorithms',Dedicated team',On-premise options',White-label solutions',Training programs',24/7 support'
       ],
       cta: 'Contact Sales',
       popular: false

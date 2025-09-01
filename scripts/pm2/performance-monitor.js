@@ -101,7 +101,7 @@ class PerformanceMonitor {
           if (stat.isDirectory()) {
             analyzeDirectory(fullPath);
           } else {
-            const relativePath = fullPath.replace(this.projectRoot + '/dist/',');
+            const relativePath = fullPath.replace(this.projectRoot + '/dist/',);
             const fileInfo = {
               path: relativePath,
               size: stat.size,

@@ -10,11 +10,7 @@ import {
 export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
 
   const defaultSuggestions = ['
-    '/services',
-    '/ai-solutions',
-    '/about',
-    '/contact',
-    '/case-studies',
+    '/services',/ai-solutions',/about',/contact',/case-studies',
   ];
   const suggestions =
     suggestedRoutes.length > 0 ? suggestedRoutes : defaultSuggestions;
@@ -144,14 +140,10 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
                   {route === '/contact' && 'Contact Us'}
                   {route === '/case-studies' && 'Case Studies'}
                   {!['
-                    '/services',
-                    '/ai-solutions',
-                    '/about',
-                    '/contact',
-                    '/case-studies',
+                    '/services',/ai-solutions',/about',/contact',/case-studies',
                   ].includes(route) &&
                     route.charAt(1).toUpperCase() +'
-                      route.slice(2).replace(/-/g, ')}
+                      route.slice(2).replace(/-/g,)}
                 </Link>
               </motion.div>
             ))}

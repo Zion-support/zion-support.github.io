@@ -181,14 +181,7 @@ const AIAutonomousManagement = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'System Management',
-                'Resource Management',
-                'Performance Management',
-                'Process Management',
-                'Data Management',
-                'Network Management',
-                'Security Management',
-                'Quality Management',
+                'System Management',Resource Management',Performance Management',Process Management',Data Management',Network Management',Security Management',Quality Management',
               ].map(type => (
                 <div
                   key={type}"

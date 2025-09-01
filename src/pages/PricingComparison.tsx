@@ -572,8 +572,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                                 <Link
                                   to = {
 `
-  `/services/${service.name.toLowerCase().replace(/\s+/g,
-  '-')
+  `/services/${service.name.toLowerCase().replace(/\s+/g,-')
 `
 }`}"
                                   className="block w-full py-2 px-6 rounded-lg text-center text-gray-300 hover:text-white transition-colors duration-300"

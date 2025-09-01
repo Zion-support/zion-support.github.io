@@ -66,12 +66,7 @@ export default function EmergingTech2030(...args[]):  {
 
   const serviceIcons = {
 
-  'Quantum Computing': Brain,
-    'Artificial Intelligence': Cpu,
-    'Neuromorphic Computing': Brain,
-    'Synthetic Biology': Heart,
-    'Space Technology': Rocket,
-    'Brain-Computer Interface': Brain,;
+  'Quantum Computing': Brain,Artificial Intelligence': Cpu,Neuromorphic Computing': Brain,Synthetic Biology': Heart,Space Technology': Rocket,Brain-Computer Interface': Brain,;
   ;
   ;
   ;
@@ -220,8 +215,7 @@ export default function EmergingTech2030(...args[]):  {
                     <Link
                       to = {
 `
-  `/services/${service.id.replace(/-/g,
-  '-')
+  `/services/${service.id.replace(/-/g,-')
 
 
 

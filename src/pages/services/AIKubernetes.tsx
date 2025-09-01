@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIKubernetes() {
   const features = [
-    'AI-powered Kubernetes optimization',
-    'Intelligent Kubernetes management',;
+    'AI-powered Kubernetes optimization',Intelligent Kubernetes management',;
     'Automated Kubernetes monitoring and alerting',;
     'Predictive analytics for Kubernetes scaling',;
     'Smart Kubernetes security and compliance',;

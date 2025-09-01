@@ -68,8 +68,8 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
             switch (sortBy) {
 
                 case 'price':'
-                    const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g,'));
-                    const priceB = parseFloat(b.pricing.monthly.replace(/[^0-9.]/g,'));
+                    const priceA = parseFloat(a.pricing.monthly.replace(/[^0-9.]/g,));
+                    const priceB = parseFloat(b.pricing.monthly.replace(/[^0-9.]/g,));
                     return priceA - priceB;
                 case 'popularity':
                     return b.trialDays - a.trialDays; // More trial days = more popular
@@ -85,14 +85,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
 
         const colors: { [key: string]: string } = {
 
-            'fintech': 'from-green-500 to-emerald-600',
-            'healthtech': 'from-red-500 to-pink-600',
-            'edutech': 'from-purple-500 to-violet-600',
-            'martech': 'from-pink-500 to-rose-600',
-            'micro-saas': 'from-blue-500 to-indigo-600',
-            'ai-services': 'from-cyan-500 to-blue-600',
-            'it-services': 'from-slate-500 to-gray-600',
-            'emerging-tech': 'from-orange-500 to-yellow-600'
+            'fintech': 'from-green-500 to-emerald-600',healthtech': 'from-red-500 to-pink-600',edutech': 'from-purple-500 to-violet-600',martech': 'from-pink-500 to-rose-600',micro-saas': 'from-blue-500 to-indigo-600',ai-services': 'from-cyan-500 to-blue-600',it-services': 'from-slate-500 to-gray-600',emerging-tech': 'from-orange-500 to-yellow-600'
         };
         return colors[category] || 'from-gray-500 to-gray-600';
     };

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityIntelligence() {
   const features = [
-    'AI-powered security intelligence optimization',
-    'Intelligent threat intelligence gathering and analysis',;
+    'AI-powered security intelligence optimization',Intelligent threat intelligence gathering and analysis',;
     'Automated security risk assessment and prediction',;
     'Predictive analytics for security threats',;
     'Smart intelligence framework management',;

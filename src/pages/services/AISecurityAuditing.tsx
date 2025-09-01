@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAuditing() {
   const features = [
-    'AI-powered security auditing optimization',
-    'Intelligent auditing strategy management and execution',;
+    'AI-powered security auditing optimization',Intelligent auditing strategy management and execution',;
     'Automated security compliance verification and reporting',;
     'Predictive analytics for auditing needs',;
     'Smart auditing framework management',;

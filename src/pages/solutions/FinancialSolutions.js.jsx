@@ -49,12 +49,7 @@ export default function FinancialSolutions() {
       description: 'AI-driven investment strategies and portfolio management'},
   ];
   const benefits = ['
-    'Reduce fraud losses by 60-80%',
-    'Improve risk assessment accuracy by 40%',
-    'Lower operational costs by 30-50%',
-    'Enhance customer experience',
-    'Faster transaction processing',
-    'Better regulatory compliance',
+    'Reduce fraud losses by 60-80%',Improve risk assessment accuracy by 40%',Lower operational costs by 30-50%',Enhance customer experience',Faster transaction processing',Better regulatory compliance',
   ];
   const solutions = [
     {
@@ -75,14 +70,7 @@ export default function FinancialSolutions() {
       description: 'Automated regulatory compliance and reporting'},
   ];
   const industries = ['
-    'Retail Banking',
-    'Investment Banking',
-    'Insurance',
-    'Fintech',
-    'Credit Unions',
-    'Wealth Management',
-    'Payment Processors',
-    'Regulatory Bodies',
+    'Retail Banking',Investment Banking',Insurance',Fintech',Credit Unions',Wealth Management',Payment Processors',Regulatory Bodies',
   ];
   return()
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">

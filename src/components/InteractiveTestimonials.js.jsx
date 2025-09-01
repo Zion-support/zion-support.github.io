@@ -84,12 +84,7 @@ const testimonials = [
     verified: true},
 ];
 const categories = ['
-  'All',
-  'AI Infrastructure',
-  'Talent Matching',
-  'Research & Development',
-  'Startup Solutions',
-  'Global Operations',
+  'All',AI Infrastructure',Talent Matching',Research & Development',Startup Solutions',Global Operations',
 ];
 export function InteractiveTestimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);

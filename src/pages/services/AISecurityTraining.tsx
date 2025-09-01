@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTraining() {
   const features = [
-    'AI-powered security training optimization',
-    'Intelligent training strategy management and execution',;
+    'AI-powered security training optimization',Intelligent training strategy management and execution',;
     'Automated security skill assessment and certification',;
     'Predictive analytics for training needs',;
     'Smart training framework management',;

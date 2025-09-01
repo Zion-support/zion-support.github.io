@@ -74,10 +74,7 @@ const Privacy: React.FC = () => {
       title: 'Business Information',
       description: 'Business-related data and project information',
       examples: ['
-        'Project requirements and specifications',
-        'Service usage and performance data',
-        'Payment and billing information',
-        'Support and communication records',
+        'Project requirements and specifications',Service usage and performance data',Payment and billing information',Support and communication records',
       ]},
   ];
 

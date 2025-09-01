@@ -110,14 +110,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
   ];
 
   const benefits = ['
-    'Increase conversion rates by up to 50%',
-    'Reduce marketing costs by 30%',
-    'Improve customer engagement and retention',
-    'Personalize customer experiences at scale',
-    'Automate repetitive marketing tasks',
-    'Optimize campaigns in real-time',
-    'Gain deeper customer insights',
-    'Scale marketing operations efficiently',
+    'Increase conversion rates by up to 50%',Reduce marketing costs by 30%',Improve customer engagement and retention',Personalize customer experiences at scale',Automate repetitive marketing tasks',Optimize campaigns in real-time',Gain deeper customer insights',Scale marketing operations efficiently',
   ];
 
   const useCases = [

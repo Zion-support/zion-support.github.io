@@ -193,14 +193,7 @@ const AIAutonomousMicroserviceSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Service Security',
-                'API Security',
-                'Communication Security',
-                'Authentication Security',
-                'Authorization Security',
-                'Data Security',
-                'Network Security',
-                'Orchestration Security',
+                'Service Security',API Security',Communication Security',Authentication Security',Authorization Security',Data Security',Network Security',Orchestration Security',
               ].map(type => (
                 <div
                   key={type}"

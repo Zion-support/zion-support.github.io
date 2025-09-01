@@ -56,12 +56,7 @@ export default function GreenIT(...args: any[]): any {
   ];
 
   const benefits = ['
-    'Reduce carbon footprint by up to 70%',
-    'Lower energy costs by 40-60%',
-    'Meet sustainability compliance requirements',
-    'Enhance brand reputation and ESG scores',
-    'Future-proof your IT infrastructure',
-    'Contribute to global climate goals',
+    'Reduce carbon footprint by up to 70%',Lower energy costs by 40-60%',Meet sustainability compliance requirements',Enhance brand reputation and ESG scores',Future-proof your IT infrastructure',Contribute to global climate goals',
   ];
 
   const solutions = [

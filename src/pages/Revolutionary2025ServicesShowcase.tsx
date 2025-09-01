@@ -116,7 +116,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
     if (selectedPriceRange !== 'all') {;
       const [min, max] = selectedPriceRange.split('-').map(Number);
       filtered = filtered.filter(service => {;
-        const price = parseInt(service.price.replace(/[^0-9]/g,'));
+        const price = parseInt(service.price.replace(/[^0-9]/g,));
         if (max) {
 
           return price >= min && price <= max}
@@ -136,7 +136,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
       switch (sortBy) {
 
         case 'price':'
-          return parseInt(a.price.replace(/[^0-9]/g,')) - parseInt(b.price.replace(/[^0-9]/g,'));
+          return parseInt(a.price.replace(/[^0-9]/g,)) - parseInt(b.price.replace(/[^0-9]/g,));
         case 'rating':
           return b.rating - a.rating;
         case 'customers':

@@ -56,13 +56,7 @@ export const EnhancedContact = () => {
       href: '#'},
   ];
   const services = ['
-    'AI Solutions',
-    'Cloud & DevOps',
-    'Cybersecurity',
-    'Digital Transformation',
-    'IT Infrastructure',
-    'Consulting',
-    'Other',
+    'AI Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation',IT Infrastructure',Consulting',Other',
   ];
   const containerVariants = {
 

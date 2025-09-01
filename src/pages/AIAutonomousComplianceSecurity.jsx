@@ -193,14 +193,7 @@ const AIAutonomousComplianceSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'GDPR Security',
-                'HIPAA Security',
-                'SOX Security',
-                'PCI DSS Security',
-                'ISO Security',
-                'SOC Security',
-                'FedRAMP Security',
-                'CCPA Security',
+                'GDPR Security',HIPAA Security',SOX Security',PCI DSS Security',ISO Security',SOC Security',FedRAMP Security',CCPA Security',
               ].map(type => (
                 <div
                   key={type}"

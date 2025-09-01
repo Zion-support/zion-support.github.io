@@ -25,8 +25,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   useEffect(() => {
     if (isInView) {
 
-      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g,'));
-          const suffix = stat.number.replace(/[0-9]/g,');
+      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g,));
+          const suffix = stat.number.replace(/[0-9]/g,);
 
           let current = 0;
           const increment = targetNumber / 50;

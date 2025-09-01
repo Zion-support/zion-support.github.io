@@ -239,9 +239,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
         language: 'typescript',
         confidence: 0.94,
         alternatives[;
-            'Alternative 1: With error boundaries',
-            'Alternative 2: With event listeners',
-            'Alternative 3: With custom serializer'
+            'Alternative 1: With error boundaries',Alternative 2: With event listeners',Alternative 3: With custom serializer'
         ],;
         timestamp: '2024-01-15T11:45:00Z'
     }
@@ -293,9 +291,7 @@ export function AdvancedAICodeGenerator() {
                 language: 'javascript',
                 confidence: 0.87,
                 alternatives[;
-                    'Alternative 1: Functional approach',
-                    'Alternative 2: Class-based approach',
-                    'Alternative 3: Async/await pattern'
+                    'Alternative 1: Functional approach',Alternative 2: Class-based approach',Alternative 3: Async/await pattern'
                 ],;
                 timestamp: new Date () .toISOString () };
             setAiGenerations (prev => [newGeneration, ...prev]) ;

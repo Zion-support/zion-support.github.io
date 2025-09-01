@@ -67,12 +67,7 @@ const AIAutonomousFinance: React.FC = (): JSX.Element => {
   ];
 
   const benefits = ['
-    'Improve financial efficiency by 60%',
-    'Reduce financial risks by 70%',
-    'Optimize investments by 80%',
-    'Automate financial processes',
-    '24/7 autonomous operation',
-    'Real-time financial insights',
+    'Improve financial efficiency by 60%',Reduce financial risks by 70%',Optimize investments by 80%',Automate financial processes',24/7 autonomous operation',Real-time financial insights',
   ];
 
   return()

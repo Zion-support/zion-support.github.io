@@ -89,7 +89,7 @@ export function ServiceProviderRegistrationForm() {
     if (serviceInput && !serviceTags.includes(serviceInput)) {
 
       setServiceTags([...serviceTags, serviceInput]);
-      form.setValue('services',');
+      form.setValue('services',);
     }
   };
   // Handle removing service tags

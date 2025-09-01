@@ -330,7 +330,7 @@ export const AnalyticsDashboard = ({
                   className="flex items-center justify-between"
                 >"
                   <span className="text-green-700 dark:text-green-300 text-sm capitalize">
-                    {item.category.replace('_', ')}
+                    {item.category.replace('_',)}
                   </span>"
                   <div className="flex items-center gap-2">"
                     <div className="w-16 bg-green-200 dark:bg-green-700 rounded-full h-2">

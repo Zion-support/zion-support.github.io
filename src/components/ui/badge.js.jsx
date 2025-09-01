@@ -33,12 +33,9 @@ const Badge = React.forwardRef((_a, ref) => {
           {
 
             'border-transparent bg-primary text-primary-foreground hover:bg-primary/80':'
-              variant === 'default',
-            'border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80':'
-              variant === 'secondary',
-            'border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80':'
-              variant === 'destructive',
-            'text-foreground': variant === 'outline'},
+              variant === 'default',border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80':'
+              variant === 'secondary',border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80':'
+              variant === 'destructive',text-foreground': variant === 'outline'},
           className
         )},
       props

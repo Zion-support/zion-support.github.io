@@ -66,10 +66,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
 
       category: 'Radiology',
       services: ['
-        'X-ray Analysis',
-        'MRI Interpretation',
-        'CT Scan Review',
-        'Ultrasound Assessment',
+        'X-ray Analysis',MRI Interpretation',CT Scan Review',Ultrasound Assessment',
       ],
       accuracy: '98.5%',
       icon: Eye},
@@ -77,10 +74,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
 
       category: 'Cardiology',
       services: ['
-        'ECG Analysis',
-        'Heart Disease Detection',
-        'Arrhythmia Detection',
-        'Risk Assessment',
+        'ECG Analysis',Heart Disease Detection',Arrhythmia Detection',Risk Assessment',
       ],
       accuracy: '97.8%',
       icon: Heart},
@@ -88,10 +82,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
 
       category: 'Oncology',
       services: ['
-        'Tumor Detection',
-        'Cancer Screening',
-        'Treatment Response',
-        'Prognosis Analysis',
+        'Tumor Detection',Cancer Screening',Treatment Response',Prognosis Analysis',
       ],
       accuracy: '96.9%',
       icon: Microscope},
@@ -99,22 +90,15 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
 
       category: 'Neurology',
       services: ['
-        'Brain Scan Analysis',
-        'Stroke Detection',
-        "Alzheimer's Screening",
-        'Seizure Detection',
+        'Brain Scan Analysis',Stroke Detection',
+        "Alzheimer's Screening",Seizure Detection',
       ],
       accuracy: '97.2%',
       icon: BrainCircuit},
   ];
 
   const benefits = ['
-    'Reduce diagnostic errors by up to 85%',
-    'Improve early detection rates by 60%',
-    'Cut diagnosis time by 70%',
-    'Enhance treatment accuracy by 75%',
-    'Reduce healthcare costs by 40%',
-    'Enable remote diagnostics and telemedicine',
+    'Reduce diagnostic errors by up to 85%',Improve early detection rates by 60%',Cut diagnosis time by 70%',Enhance treatment accuracy by 75%',Reduce healthcare costs by 40%',Enable remote diagnostics and telemedicine',
   ];
 
   const pricing = [
@@ -124,11 +108,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
       price: '$3,500',
       period: '/month',
       features: ['
-        'Up to 1,000 scans/month',
-        'Basic AI diagnosis',
-        'Standard reporting',
-        'Email support',
-        'Basic integrations',
+        'Up to 1,000 scans/month',Basic AI diagnosis',Standard reporting',Email support',Basic integrations',
       ]},
     {
 
@@ -136,12 +116,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
       price: '$7,500',
       period: '/month',
       features: ['
-        'Up to 10,000 scans/month',
-        'Advanced AI algorithms',
-        'Custom reporting',
-        'Priority support',
-        'API access',
-        'Custom integrations',
+        'Up to 10,000 scans/month',Advanced AI algorithms',Custom reporting',Priority support',API access',Custom integrations',
       ]},
     {
 
@@ -149,22 +124,12 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
       price: '$18,000',
       period: '/month',
       features: ['
-        'Unlimited scans',
-        'Custom AI models',
-        'White-label solution',
-        '24/7 dedicated support',
-        'On-premise deployment',
-        'Custom development',
+        'Unlimited scans',Custom AI models',White-label solution',24/7 dedicated support',On-premise deployment',Custom development',
       ]},
   ];
 
   const complianceFeatures = ['
-    'HIPAA Compliant',
-    'FDA Approved Algorithms',
-    'SOC 2 Type II Certified',
-    'GDPR Compliant',
-    'ISO 27001 Certified',
-    'End-to-end Encryption',
+    'HIPAA Compliant',FDA Approved Algorithms',SOC 2 Type II Certified',GDPR Compliant',ISO 27001 Certified',End-to-end Encryption',
   ];
 
   return ("

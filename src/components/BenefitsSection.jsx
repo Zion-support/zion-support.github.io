@@ -22,10 +22,7 @@ const benefits = [
     color: 'from-yellow-500 to-orange-500',
     bgColor: 'from-yellow-500/20 to-orange-500/20',
     features: ['
-      'Agile development methodology',
-      'Parallel development teams',
-      'Automated testing pipeline',
-      'Continuous deployment',
+      'Agile development methodology',Parallel development teams',Automated testing pipeline',Continuous deployment',
     ]},
   {
 "
@@ -37,10 +34,7 @@ const benefits = [
     color: 'from-blue-500 to-cyan-500',
     bgColor: 'from-blue-500/20 to-cyan-500/20',
     features: ['
-      'SOC 2 Type II compliant',
-      'End-to-end encryption',
-      'Regular security audits',
-      'GDPR compliance',
+      'SOC 2 Type II compliant',End-to-end encryption',Regular security audits',GDPR compliance',
     ]},
   {
 "
@@ -51,10 +45,7 @@ const benefits = [
     color: 'from-green-500 to-emerald-500',
     bgColor: 'from-green-500/20 to-emerald-500/20',
     features: ['
-      'Performance optimization',
-      'Cost reduction strategies',
-      'Revenue growth solutions',
-      'Efficiency improvements',
+      'Performance optimization',Cost reduction strategies',Revenue growth solutions',Efficiency improvements',
     ]},
   {
 "
@@ -65,10 +56,7 @@ const benefits = [
     color: 'from-purple-500 to-pink-500',
     bgColor: 'from-purple-500/20 to-pink-500/20',
     features: ['
-      'Comprehensive testing',
-      'Code quality standards',
-      'Performance benchmarks',
-      'User experience focus',
+      'Comprehensive testing',Code quality standards',Performance benchmarks',User experience focus',
     ]},
 ];
 ;

@@ -53,7 +53,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
     services = [...services].sort((a, b) => {;
       switch (sortBy) {;
         case 'price':;
-          return parseInt(a.price.replace(/[^0-9]/g,')) - parseInt(b.price.replace(/[^0-9]/g,'));
+          return parseInt(a.price.replace(/[^0-9]/g,)) - parseInt(b.price.replace(/[^0-9]/g,));
         case 'category':;
           return a.category.localeCompare (b.category) ;
         default:;

@@ -105,10 +105,7 @@ export default function AIPoweredSEO(...args: any[]): any {
       description: 'Comprehensive website technical analysis and optimization',
       icon: Settings,
       benefits: ['
-        'Site speed optimization',
-        'Mobile responsiveness',
-        'Technical issues',
-        'Schema markup',
+        'Site speed optimization',Mobile responsiveness',Technical issues',Schema markup',
       ]},
     {
 
@@ -116,10 +113,7 @@ export default function AIPoweredSEO(...args: any[]): any {
       description: 'AI-powered content planning and optimization',
       icon: FileText,
       benefits: ['
-        'Keyword research',
-        'Content planning',
-        'SEO optimization',
-        'Performance tracking',
+        'Keyword research',Content planning',SEO optimization',Performance tracking',
       ]},
     {
 
@@ -127,10 +121,7 @@ export default function AIPoweredSEO(...args: any[]): any {
       description: 'Location-based search optimization and management',
       icon: Target,
       benefits: ['
-        'Google My Business',
-        'Local citations',
-        'Review management',
-        'Local keywords',
+        'Google My Business',Local citations',Review management',Local keywords',
       ]},
     {
 
@@ -138,24 +129,12 @@ export default function AIPoweredSEO(...args: any[]): any {
       description: 'Product page optimization and search visibility',
       icon: ShoppingCart,
       benefits: ['
-        'Product optimization',
-        'Category pages',
-        'Internal linking',
-        'Conversion tracking',
+        'Product optimization',Category pages',Internal linking',Conversion tracking',
       ]},
   ];
 
   const technologies = ['
-    'Machine Learning',
-    'Natural Language Processing',
-    'Predictive Analytics',
-    'Big Data Analysis',
-    'AI Algorithms',
-    'Search Engine APIs',
-    'Web Crawling',
-    'Data Mining',
-    'Sentiment Analysis',
-    'Competitive Intelligence',
+    'Machine Learning',Natural Language Processing',Predictive Analytics',Big Data Analysis',AI Algorithms',Search Engine APIs',Web Crawling',Data Mining',Sentiment Analysis',Competitive Intelligence',
   ];
 
   return()

@@ -33,7 +33,7 @@ export class ContentOptimizer {
   static countWords(content) {
 
     // Remove HTML tags and count words
-    const textContent = content.replace(/<[^>]*>/g, ').trim();
+    const textContent = content.replace(/<[^>]*>/g,).trim();
     return textContent.split(/\s+/).filter(word => word.length > 0).length;
   }
   static countHeadings(content) {
@@ -53,7 +53,7 @@ export class ContentOptimizer {
   }
   static calculateReadabilityScore(content) {
 
-    const textContent = content.replace(/<[^>]*>/g, ').trim();
+    const textContent = content.replace(/<[^>]*>/g,).trim();
     const sentences = textContent;
       .split(/[.!?]+/)
       .filter(s => s.trim().length > 0);
@@ -239,7 +239,7 @@ export class ContentOptimizer {
   static extractContentKeywords(content) {
 
     // Extract potential keywords from content (simplified)
-    const textContent = content.replace(/<[^>]*>/g, ').toLowerCase();
+    const textContent = content.replace(/<[^>]*>/g,).toLowerCase();
     const words = textContent.split(/\s+/).filter(w => w.length > 3);
     // Count word frequency and return most common
     const wordCount = {};

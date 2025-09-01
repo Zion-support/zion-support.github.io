@@ -181,14 +181,7 @@ const AIAutonomousIncidentResponse = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Security Incident Response',
-                'IT Incident Response',
-                'Network Incident Response',
-                'System Incident Response',
-                'Data Incident Response',
-                'Service Incident Response',
-                'Performance Incident Response',
-                'Availability Incident Response',
+                'Security Incident Response',IT Incident Response',Network Incident Response',System Incident Response',Data Incident Response',Service Incident Response',Performance Incident Response',Availability Incident Response',
               ].map(type => (
                 <div
                   key={type}"

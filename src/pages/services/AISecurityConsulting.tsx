@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityConsulting() {
   const features = [
-    'AI-powered security consulting optimization',
-    'Intelligent consulting strategy management and execution',;
+    'AI-powered security consulting optimization',Intelligent consulting strategy management and execution',;
     'Automated security analysis and recommendations',;
     'Predictive analytics for consulting needs',;
     'Smart consulting framework management',;

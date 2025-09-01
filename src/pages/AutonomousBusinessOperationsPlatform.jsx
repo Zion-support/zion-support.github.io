@@ -60,22 +60,10 @@ const AutonomousBusinessOperationsPlatform = () => {
                                             }
                                         ];
                                         const benefits = ['
-                                            'Reduce operational costs by up to 40%',
-                                            'Improve process efficiency by 60%',
-                                            'Eliminate manual errors and delays',
-                                            '24/7 automated operations',
-                                            'Scalable infrastructure for growth',
-                                            'Real-time monitoring and analytics'
+                                            'Reduce operational costs by up to 40%',Improve process efficiency by 60%',Eliminate manual errors and delays',24/7 automated operations',Scalable infrastructure for growth',Real-time monitoring and analytics'
                                         ];
                                         const industries = ['
-                                            'Manufacturing',
-                                            'Healthcare',
-                                            'Finance',
-                                            'Retail',
-                                            'Logistics',
-                                            'Technology',
-                                            'Energy',
-                                            'Education'
+                                            'Manufacturing',Healthcare',Finance',Retail',Logistics',Technology',Energy',Education'
                                         ];"
                                         return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"

@@ -194,14 +194,7 @@ const AIAutonomousAnalytics = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Business Intelligence',
-                'Predictive Analytics',
-                'Descriptive Analytics',
-                'Prescriptive Analytics',
-                'Real-time Analytics',
-                'Big Data Analytics',
-                'Customer Analytics',
-                'Performance Analytics',
+                'Business Intelligence',Predictive Analytics',Descriptive Analytics',Prescriptive Analytics',Real-time Analytics',Big Data Analytics',Customer Analytics',Performance Analytics',
               ].map(type => (
                 <div
                   key={type}"

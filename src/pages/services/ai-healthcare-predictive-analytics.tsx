@@ -103,11 +103,7 @@ const AIHealthcarePredictiveAnalytics = () => {
       period: '/month',
       description: 'Perfect for small clinics and medical practices',
       features: ['
-        'Up to 1,000 patients',
-        'Basic predictive analytics',
-        'Standard reporting',
-        'Email alerts',
-        'Email support',
+        'Up to 1,000 patients',Basic predictive analytics',Standard reporting',Email alerts',Email support',
       ],
       popular: false},
     {
@@ -117,14 +113,7 @@ const AIHealthcarePredictiveAnalytics = () => {
       period: '/month',
       description: 'Ideal for growing hospitals and healthcare networks',
       features: ['
-        'Up to 10,000 patients',
-        'Advanced AI predictions',
-        'Real-time monitoring',
-        'Custom analytics',
-        'Priority support',
-        'API access',
-        'Advanced reporting',
-        'Multi-user access',
+        'Up to 10,000 patients',Advanced AI predictions',Real-time monitoring',Custom analytics',Priority support',API access',Advanced reporting',Multi-user access',
       ],
       popular: true},
     {
@@ -134,15 +123,7 @@ const AIHealthcarePredictiveAnalytics = () => {
       period: '/month',
       description: 'For large healthcare systems and research institutions',
       features: ['
-        'Unlimited patients',
-        'Custom AI models',
-        'White-label solution',
-        'Dedicated support',
-        'Advanced analytics',
-        'Custom integrations',
-        'On-premise deployment',
-        'SLA guarantees',
-        'Custom training',
+        'Unlimited patients',Custom AI models',White-label solution',Dedicated support',Advanced analytics',Custom integrations',On-premise deployment',SLA guarantees',Custom training',
       ],
       popular: false},
   ];

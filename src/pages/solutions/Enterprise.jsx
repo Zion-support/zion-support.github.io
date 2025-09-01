@@ -18,11 +18,7 @@ const EnterpriseSolutions = () => {
       description:'
         'Transform your data into actionable insights with our advanced AI analytics platform.',
       features: ['
-        'Real-time data processing',
-        'Predictive analytics',
-        'Custom dashboards',
-        'Automated reporting',
-        'Multi-source integration',
+        'Real-time data processing',Predictive analytics',Custom dashboards',Automated reporting',Multi-source integration',
       ],
       icon: BarChart3,
       href: '/services/ai-autonomous-systems'},
@@ -32,11 +28,7 @@ const EnterpriseSolutions = () => {
       description:'
         'Comprehensive security solutions designed for large organizations.',
       features: ['
-        'Threat detection & response',
-        'Compliance management',
-        'Identity & access control',
-        'Security monitoring',
-        'Incident response',
+        'Threat detection & response',Compliance management',Identity & access control',Security monitoring',Incident response',
       ],
       icon: Shield,
       href: '/services/cybersecurity'},
@@ -46,11 +38,7 @@ const EnterpriseSolutions = () => {
       description:'
         'Scalable cloud solutions optimized for enterprise workloads.',
       features: ['
-        'Multi-cloud strategy',
-        'Cost optimization',
-        'Performance monitoring',
-        'Disaster recovery',
-        'Security compliance',
+        'Multi-cloud strategy',Cost optimization',Performance monitoring',Disaster recovery',Security compliance',
       ],
       icon: Globe,
       href: '/services/it-infrastructure'},
@@ -60,11 +48,7 @@ const EnterpriseSolutions = () => {
       description:'
         'Streamline operations with intelligent automation across all departments.',
       features: ['
-        'Workflow automation',
-        'Document processing',
-        'Customer service bots',
-        'Supply chain optimization',
-        'Quality control',
+        'Workflow automation',Document processing',Customer service bots',Supply chain optimization',Quality control',
       ],
       icon: Zap,
       href: '/services/ai-autonomous-systems'},
@@ -77,10 +61,7 @@ const EnterpriseSolutions = () => {
         'AI-powered healthcare solutions for hospitals and medical facilities.',
       icon: Users,
       solutions: ['
-        'Patient care automation',
-        'Medical imaging AI',
-        'Drug discovery',
-        'Compliance management',
+        'Patient care automation',Medical imaging AI',Drug discovery',Compliance management',
       ]},
     {
 
@@ -89,10 +70,7 @@ const EnterpriseSolutions = () => {
         'Secure, compliant solutions for banks and financial institutions.',
       icon: Lock,
       solutions: ['
-        'Fraud detection',
-        'Risk assessment',
-        'Compliance automation',
-        'Customer analytics',
+        'Fraud detection',Risk assessment',Compliance automation',Customer analytics',
       ]},
     {
 
@@ -101,10 +79,7 @@ const EnterpriseSolutions = () => {
         'Smart manufacturing solutions for Industry 4.0 transformation.',
       icon: Building2,
       solutions: ['
-        'Predictive maintenance',
-        'Quality control',
-        'Supply chain optimization',
-        'Energy management',
+        'Predictive maintenance',Quality control',Supply chain optimization',Energy management',
       ]},
     {
 
@@ -112,10 +87,7 @@ const EnterpriseSolutions = () => {
       description: 'Omnichannel retail solutions for modern commerce.',
       icon: Globe,
       solutions: ['
-        'Customer personalization',
-        'Inventory management',
-        'Demand forecasting',
-        'E-commerce optimization',
+        'Customer personalization',Inventory management',Demand forecasting',E-commerce optimization',
       ]},
   ];
   return()

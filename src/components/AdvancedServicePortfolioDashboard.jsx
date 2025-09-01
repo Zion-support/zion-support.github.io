@@ -651,8 +651,7 @@ const AdvancedServicePortfolioDashboard = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
 
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation',
-  '_blank')
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation',_blank')
 
 
 
@@ -665,8 +664,7 @@ const AdvancedServicePortfolioDashboard = () => {
             </Button>"
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
 
-  () => window.open('tel:+13024640950',
-  '_blank')
+  () => window.open('tel:+13024640950',_blank')
 
 
 

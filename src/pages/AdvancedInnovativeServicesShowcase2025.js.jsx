@@ -7,21 +7,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
     const categories = ['
-        'all',
-        'Legal Tech & Compliance',
-        'Quantum Computing & Security',
-        'Healthcare & Biotech',
-        'Energy & Sustainability',
-        'Cybersecurity',
-        'Fintech & Trading',
-        'Quantum Computing & AI',
-        'Supply Chain & Logistics',
-        'Edge Computing & IoT',
-        'Marketing & Automation',
-        'Quantum Technology',
-        'AI & Machine Learning',
-        'AI & Analytics',
-        'AI & Customer Experience'
+        'all',Legal Tech & Compliance',Quantum Computing & Security',Healthcare & Biotech',Energy & Sustainability',Cybersecurity',Fintech & Trading',Quantum Computing & AI',Supply Chain & Logistics',Edge Computing & IoT',Marketing & Automation',Quantum Technology',AI & Machine Learning',AI & Analytics',AI & Customer Experience'
     ];
     const allServices = ['
         ...advancedInnovativeServices2025V3.map(service => ({ ...service, type: 'Micro SAAS' })),
@@ -38,7 +24,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
         switch (sortBy) {
 
             case 'price':'
-                return parseFloat(a.price?.replace(/[^0-9.]/g,') || '0') - parseFloat(b.price?.replace(/[^0-9.]/g,') || '0');
+                return parseFloat(a.price?.replace(/[^0-9.]/g,) || '0') - parseFloat(b.price?.replace(/[^0-9.]/g,) || '0');
             case 'category':
                 return a.category.localeCompare(b.category);
             case 'name':
@@ -49,20 +35,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
 
         const icons = {
 
-  'Legal Tech & Compliance': '⚖️',
-            'Quantum Computing & Security': '🔐',
-            'Healthcare & Biotech': '🏥',
-            'Energy & Sustainability': '🌱',
-            'Cybersecurity': '🛡️',
-            'Fintech & Trading': '📈',
-            'Quantum Computing & AI': '🔮',
-            'Supply Chain & Logistics': '🚚',
-            'Edge Computing & IoT': '🌐',
-            'Marketing & Automation': '📢',
-            'Quantum Technology': '🔮',
-            'AI & Machine Learning': '🧠',
-            'AI & Analytics': '📊',
-  'AI & Customer Experience': '💬'
+  'Legal Tech & Compliance': '⚖️',Quantum Computing & Security': '🔐',Healthcare & Biotech': '🏥',Energy & Sustainability': '🌱',Cybersecurity': '🛡️',Fintech & Trading': '📈',Quantum Computing & AI': '🔮',Supply Chain & Logistics': '🚚',Edge Computing & IoT': '🌐',Marketing & Automation': '📢',Quantum Technology': '🔮',AI & Machine Learning': '🧠',AI & Analytics': '📊',AI & Customer Experience': '💬'
         
 
 };

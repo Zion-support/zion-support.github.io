@@ -66,12 +66,7 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
   ];
 
   const benefits = ['
-    'Improve recruitment efficiency by 80%',
-    'Reduce hiring time by 70%',
-    'Enhance employee retention by 60%',
-    'Automate HR processes',
-    '24/7 autonomous operation',
-    'Real-time HR insights',
+    'Improve recruitment efficiency by 80%',Reduce hiring time by 70%',Enhance employee retention by 60%',Automate HR processes',24/7 autonomous operation',Real-time HR insights',
   ];
 
   return()

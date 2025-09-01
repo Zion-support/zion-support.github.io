@@ -9,8 +9,7 @@ export { function };
 export default function TalentMarketplace() {
   const schema = {
 
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
+    '@context': 'https://schema.org',@type': 'WebPage',
     name: 'Talent Marketplace',
     description:'
       'Hire vetted AI and tech professionals from around the world on Zion.',

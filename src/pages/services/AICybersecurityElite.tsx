@@ -74,12 +74,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Perfect for small businesses and startups',
       features: ['
-        'Basic AI threat detection',
-        'Firewall & intrusion prevention',
-        'Email security & spam filtering',
-        'Vulnerability scanning',
-        '24/7 monitoring',
-        'Basic incident response',
+        'Basic AI threat detection',Firewall & intrusion prevention',Email security & spam filtering',Vulnerability scanning',24/7 monitoring',Basic incident response',
       ]},
     {
 
@@ -88,13 +83,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Ideal for growing businesses and teams',
       features: ['
-        'Advanced AI threat detection',
-        'Behavioral analytics',
-        'Advanced endpoint protection',
-        'Threat intelligence feeds',
-        'Automated incident response',
-        'Compliance reporting',
-        'API access',
+        'Advanced AI threat detection',Behavioral analytics',Advanced endpoint protection',Threat intelligence feeds',Automated incident response',Compliance reporting',API access',
       ],
       popular: true},
     {
@@ -104,13 +93,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'For large organizations with complex needs',
       features: ['
-        'Full AI cybersecurity suite',
-        'Custom threat modeling',
-        'Advanced forensics',
-        'Dedicated security team',
-        'Custom integrations',
-        'White-label options',
-        'On-premise deployment',
+        'Full AI cybersecurity suite',Custom threat modeling',Advanced forensics',Dedicated security team',Custom integrations',White-label options',On-premise deployment',
       ]},
   ];
 
@@ -138,14 +121,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {
   ];
 
   const complianceStandards = ['
-    'SOC 2 Type II',
-    'ISO 27001',
-    'GDPR',
-    'HIPAA',
-    'PCI DSS',
-    'NIST Cybersecurity Framework',
-    'CIS Controls',
-    'FedRAMP',
+    'SOC 2 Type II',ISO 27001',GDPR',HIPAA',PCI DSS',NIST Cybersecurity Framework',CIS Controls',FedRAMP',
   ];
 
   return()

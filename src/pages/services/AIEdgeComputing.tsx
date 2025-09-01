@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIEdgeComputing() {
   const features = [
-    'AI-powered edge optimization',
-    'Intelligent edge device management',;
+    'AI-powered edge optimization',Intelligent edge device management',;
     'Automated edge monitoring and alerting',;
     'Predictive analytics for edge scaling',;
     'Smart edge security and compliance',;

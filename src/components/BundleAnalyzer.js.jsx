@@ -85,11 +85,7 @@ export const BundleAnalyzer = () => {
                     }
                 ],;
                 recommendations[;
-                    'Consolidate empty vendor chunks (stripe-vendor, pdf-vendor),
-                    'Consider code splitting for ServicesOverview page',
-                    'Optimize animation-vendor bundle size',
-                    'Implement tree shaking for unused dependencies',
-                    'Add bundle size monitoring to CI/CD pipeline'
+                    'Consolidate empty vendor chunks (stripe-vendor, pdf-vendor),Consider code splitting for ServicesOverview page',Optimize animation-vendor bundle size',Implement tree shaking for unused dependencies',Add bundle size monitoring to CI/CD pipeline'
                 ],;
                 score: 78,
                 lastUpdated: new Date () };

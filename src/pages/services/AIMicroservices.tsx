@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMicroservices() {
   const features = [
-    'AI-powered microservices optimization',
-    'Intelligent microservices management',;
+    'AI-powered microservices optimization',Intelligent microservices management',;
     'Automated microservices monitoring and alerting',;
     'Predictive analytics for microservices scaling',;
     'Smart microservices security and compliance',;

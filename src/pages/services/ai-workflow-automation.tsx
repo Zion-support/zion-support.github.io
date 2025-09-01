@@ -56,12 +56,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
   ];
 
   const benefits = ['
-    'Reduce manual tasks by up to 80%',
-    'Improve process efficiency by 60%',
-    'Cut operational costs by 40%',
-    'Enhance customer satisfaction',
-    'Ensure regulatory compliance',
-    'Scale operations seamlessly',
+    'Reduce manual tasks by up to 80%',Improve process efficiency by 60%',Cut operational costs by 40%',Enhance customer satisfaction',Ensure regulatory compliance',Scale operations seamlessly',
   ];
 
   return()

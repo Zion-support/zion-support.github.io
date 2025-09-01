@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITerraform() {
   const features = [
-    'AI-powered Terraform optimization',
-    'Intelligent Terraform management',;
+    'AI-powered Terraform optimization',Intelligent Terraform management',;
     'Automated Terraform monitoring and alerting',;
     'Predictive analytics for Terraform scaling',;
     'Smart Terraform security and compliance',;

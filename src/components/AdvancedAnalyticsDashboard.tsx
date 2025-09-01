@@ -86,9 +86,7 @@ export function AdvancedAnalyticsDashboard({
     '1h' | '24h' | '7d' | '30d''
   >('24h');
   const [selectedMetrics, setSelectedMetrics] = useState<string[]>(['
-    'performance',
-    'users',
-    'revenue',
+    'performance',users',revenue',
   ]);
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -100,33 +98,20 @@ export function AdvancedAnalyticsDashboard({
   // Generate sample analytics data
   const generateAnalyticsData = useCallback(() => {
     const categories = ['
-      'performance',
-      'users',
-      'revenue',
-      'engagement',
-      'technical',
+      'performance',users',revenue',engagement',technical',
     ];
     const metrics = {
 
       performance: ['
-        'Page Load Time',
-        'Core Web Vitals',
-        'Bundle Size',
-        'Memory Usage',
+        'Page Load Time',Core Web Vitals',Bundle Size',Memory Usage',
       ],
       users: ['Active Users',New Users',Returning Users',User Sessions'],
       revenue: ['
-        'Monthly Revenue',
-        'Conversion Rate',
-        'Average Order Value',
-        'Customer Lifetime Value',
+        'Monthly Revenue',Conversion Rate',Average Order Value',Customer Lifetime Value',
       ],
       engagement: ['Time on Site',Bounce Rate',Page Views',User Actions'],
       technical: ['
-        'Error Rate',
-        'API Response Time',
-        'Database Performance',
-        'CDN Performance',
+        'Error Rate',API Response Time',Database Performance',CDN Performance',
       ]};
 
     const newData: AnalyticsData[] = [];
@@ -373,11 +358,7 @@ export function AdvancedAnalyticsDashboard({
                     </span>"
                     <div className="flex flex-wrap gap-2">
                       {['
-                        'performance',
-                        'users',
-                        'revenue',
-                        'engagement',
-                        'technical',
+                        'performance',users',revenue',engagement',technical',
                       ].map(metric => (
                         <button
                           key={metric}

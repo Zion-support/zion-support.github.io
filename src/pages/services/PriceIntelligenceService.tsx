@@ -29,12 +29,7 @@ const PriceIntelligenceService: React.FC = (): JSX.Element => {
 "
         <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
           {['
-            'Competitor crawl + marketplace APIs',
-            'SKU matching and outlier detection',
-            'Price elasticity and cannibalization models',
-            'MAP compliance alerts and workflows',
-            'Channel-specific rules and overrides',
-            'BI dashboards and anomaly alerts',
+            'Competitor crawl + marketplace APIs',SKU matching and outlier detection',Price elasticity and cannibalization models',MAP compliance alerts and workflows',Channel-specific rules and overrides',BI dashboards and anomaly alerts',
           ].map(b => (
             <div
               key={b}"

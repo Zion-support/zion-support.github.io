@@ -12,25 +12,7 @@ const AdvancedServicesShowcase2025 = () => {
     // Combine all services
     const allServices = [...advancedRealServices2025, ...specializedITServices2025];
     const categories = ['
-        'all',
-        'AI & Machine Learning',
-        'Cybersecurity',
-        'Healthcare Technology',
-        'Blockchain & Supply Chain',
-        'Financial Technology',
-        'Edge Computing & IoT',
-        'Marketing Technology',
-        'Quantum Computing',
-        'Human Resources Technology',
-        'Energy & Sustainability',
-        'Legal Technology',
-        'Neuromorphic Computing',
-        'Privacy AI',
-        'AI Governance',
-        'DevOps & Automation',
-        'Data Quality & Analytics',
-        'API Management',
-        'Network Security'
+        'all',AI & Machine Learning',Cybersecurity',Healthcare Technology',Blockchain & Supply Chain',Financial Technology',Edge Computing & IoT',Marketing Technology',Quantum Computing',Human Resources Technology',Energy & Sustainability',Legal Technology',Neuromorphic Computing',Privacy AI',AI Governance',DevOps & Automation',Data Quality & Analytics',API Management',Network Security'
     ];
     const filteredServices = allServices;
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
@@ -42,7 +24,7 @@ const AdvancedServicesShowcase2025 = () => {
         switch (sortBy) {
 
             case 'price':'
-                return parseFloat(a.price.replace('$',').replace(',,')) - parseFloat(b.price.replace('$',').replace(',,'));
+                return parseFloat(a.price.replace('$',).replace(',,)) - parseFloat(b.price.replace('$',).replace(',,));
             case 'rating':
                 return b.rating - a.rating;
             case 'category':
@@ -55,20 +37,4 @@ const AdvancedServicesShowcase2025 = () => {
 
         const icons = {
 
-  'AI & Machine Learning': '🤖',
-            'Cybersecurity': '🔐',
-            'Healthcare Technology': '🏥',
-            'Blockchain & Supply Chain': '⛓️',
-            'Financial Technology': '💰',
-            'Edge Computing & IoT': '🌐',
-            'Marketing Technology': '📢',
-            'Quantum Computing': '🔮',
-            'Human Resources Technology': '👥',
-            'Energy & Sustainability': '🌱',
-            'Legal Technology': '⚖️',
-            'Neuromorphic Computing': '🧠',
-            'Privacy AI': '🔒',
-            'AI Governance': '⚖️',
-            'DevOps & Automation': '⚡',
-            'Data Quality & Analytics': '📊',
-            'API Management': '🔌',"
+  'AI & Machine Learning': '🤖',Cybersecurity': '🔐',Healthcare Technology': '🏥',Blockchain & Supply Chain': '⛓️',Financial Technology': '💰',Edge Computing & IoT': '🌐',Marketing Technology': '📢',Quantum Computing': '🔮',Human Resources Technology': '👥',Energy & Sustainability': '🌱',Legal Technology': '⚖️',Neuromorphic Computing': '🧠',Privacy AI': '🔒',AI Governance': '⚖️',DevOps & Automation': '⚡',Data Quality & Analytics': '📊',API Management': '🔌',"

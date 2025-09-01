@@ -184,14 +184,7 @@ const AIAutonomousOptimization = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Performance Optimization',
-                'Process Optimization',
-                'Resource Optimization',
-                'Algorithm Optimization',
-                'System Optimization',
-                'Network Optimization',
-                'Database Optimization',
-                'Code Optimization',
+                'Performance Optimization',Process Optimization',Resource Optimization',Algorithm Optimization',System Optimization',Network Optimization',Database Optimization',Code Optimization',
               ].map(type => (
                 <div
                   key={type}"

@@ -1,8 +1,7 @@
 import React from 'react';
 import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, BookOpen, BarChart3 export default function AIEducation() {
   const features = [
-    'AI-powered personalized learning paths and recommendations',
-    'Intelligent assessment and adaptive testing',;
+    'AI-powered personalized learning paths and recommendations',Intelligent assessment and adaptive testing',;
     'Automated content generation and curriculum optimization',;
     'Predictive analytics for student performance',;
     'Smart tutoring and homework assistance',;

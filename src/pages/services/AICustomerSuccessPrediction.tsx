@@ -157,11 +157,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Perfect for growing SaaS companies',
       features[;
-        'Up to 1,000 customers',
-        'Basic prediction models',
-        'Email alerts',
-        'Standard integrations',
-        'Email support'
+        'Up to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support'
       ],;
       cta: 'Start Free Trial',
       popular: false
@@ -173,12 +169,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Ideal for established businesses',
       features[;
-        'Up to 10,000 customers',
-        'Advanced AI models',
-        'Real-time dashboards',
-        'Custom integrations',
-        'Priority support',
-        'Advanced analytics'
+        'Up to 10,000 customers',Advanced AI models',Real-time dashboards',Custom integrations',Priority support',Advanced analytics'
       ],;
       cta: 'Start Free Trial',
       popular: true
@@ -190,10 +181,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'For large-scale operations',
       features[;
-        'Unlimited customers',
-        'Custom AI models',
-        'White-label solution',
-        'Dedicated support',;
+        'Unlimited customers',Custom AI models',White-label solution',Dedicated support',;
         'Custom development',;
         'Advanced security';
       ],;

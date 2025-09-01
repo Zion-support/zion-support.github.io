@@ -40,19 +40,10 @@ export function SolutionsPage(...args: any[]): any {
       icon: Building,
       color: 'from-blue-500 to-indigo-600',
       features: ['
-        'Scalable Infrastructure',
-        'Enterprise Security',
-        'Compliance Management',
-        '24/7 Support',
-        'Custom Development',
-        'Integration Services',
+        'Scalable Infrastructure',Enterprise Security',Compliance Management',24/7 Support',Custom Development',Integration Services',
       ],
       industries: ['
-        'Finance',
-        'Healthcare',
-        'Manufacturing',
-        'Retail',
-        'Technology',
+        'Finance',Healthcare',Manufacturing',Retail',Technology',
       ]},
     {
 
@@ -62,19 +53,10 @@ export function SolutionsPage(...args: any[]): any {
       icon: Brain,
       color: 'from-purple-500 to-pink-600',
       features: ['
-        'Predictive Analytics',
-        'Real-time Dashboards',
-        'Machine Learning Models',
-        'Data Visualization',
-        'Automated Reporting',
-        'Natural Language Querying',
+        'Predictive Analytics',Real-time Dashboards',Machine Learning Models',Data Visualization',Automated Reporting',Natural Language Querying',
       ],
       industries: ['
-        'Finance',
-        'Healthcare',
-        'E-commerce',
-        'Marketing',
-        'Operations',
+        'Finance',Healthcare',E-commerce',Marketing',Operations',
       ]},
     {
 
@@ -84,19 +66,10 @@ export function SolutionsPage(...args: any[]): any {
       icon: Atom,
       color: 'from-cyan-500 to-blue-600',
       features: ['
-        'Quantum Algorithms',
-        'AI Optimization',
-        'Hybrid Computing',
-        'Quantum Security',
-        'Performance Analytics',
-        'Scalable Architecture',
+        'Quantum Algorithms',AI Optimization',Hybrid Computing',Quantum Security',Performance Analytics',Scalable Architecture',
       ],
       industries: ['
-        'Research',
-        'Finance',
-        'Pharmaceuticals',
-        'Logistics',
-        'Energy',
+        'Research',Finance',Pharmaceuticals',Logistics',Energy',
       ]},
     {
 
@@ -106,19 +79,10 @@ export function SolutionsPage(...args: any[]): any {
       icon: Eye,
       color: 'from-green-500 to-teal-600',
       features: ['
-        'Real-time Monitoring',
-        'Predictive Maintenance',
-        'Simulation & Testing',
-        'Performance Optimization',
-        'Remote Management',
-        'Data Integration',
+        'Real-time Monitoring',Predictive Maintenance',Simulation & Testing',Performance Optimization',Remote Management',Data Integration',
       ],
       industries: ['
-        'Manufacturing',
-        'Healthcare',
-        'Smart Cities',
-        'Transportation',
-        'Energy',
+        'Manufacturing',Healthcare',Smart Cities',Transportation',Energy',
       ]},
     {
 
@@ -128,19 +92,10 @@ export function SolutionsPage(...args: any[]): any {
       icon: Shield,
       color: 'from-red-500 to-orange-600',
       features: ['
-        'Identity Verification',
-        'Continuous Monitoring',
-        'Threat Detection',
-        'Access Control',
-        'Compliance Tools',
-        'Incident Response',
+        'Identity Verification',Continuous Monitoring',Threat Detection',Access Control',Compliance Tools',Incident Response',
       ],
       industries: ['
-        'Finance',
-        'Healthcare',
-        'Government',
-        'Technology',
-        'Education',
+        'Finance',Healthcare',Government',Technology',Education',
       ]},
     {
 
@@ -149,19 +104,10 @@ export function SolutionsPage(...args: any[]): any {
       icon: Cloud,
       color: 'from-indigo-500 to-purple-600',
       features: ['
-        'Cloud Migration',
-        'DevOps Automation',
-        'Microservices',
-        'Container Orchestration',
-        'Cost Optimization',
-        'Security & Compliance',
+        'Cloud Migration',DevOps Automation',Microservices',Container Orchestration',Cost Optimization',Security & Compliance',
       ],
       industries: ['
-        'Technology',
-        'Finance',
-        'Healthcare',
-        'Retail',
-        'Manufacturing',
+        'Technology',Finance',Healthcare',Retail',Manufacturing',
       ]},
   ];
 
@@ -173,10 +119,7 @@ export function SolutionsPage(...args: any[]): any {
       description:'
         'AI-powered diagnostics, patient care, and operational efficiency',
       solutions: ['
-        'AI Healthcare Platform',
-        'Digital Twin',
-        'Cybersecurity',
-        'Data Analytics',
+        'AI Healthcare Platform',Digital Twin',Cybersecurity',Data Analytics',
       ]},
     {
 
@@ -184,10 +127,7 @@ export function SolutionsPage(...args: any[]): any {
       icon: TrendingUp,
       description: 'Risk management, fraud detection, and algorithmic trading',
       solutions: ['
-        'AI Business Intelligence',
-        'Quantum AI Platform',
-        'Zero Trust Security',
-        'Cloud Solutions',
+        'AI Business Intelligence',Quantum AI Platform',Zero Trust Security',Cloud Solutions',
       ]},
     {
 
@@ -196,10 +136,7 @@ export function SolutionsPage(...args: any[]): any {
       description:'
         'Smart factories, predictive maintenance, and quality control',
       solutions: ['
-        'Digital Twin',
-        'IoT Solutions',
-        'AI Analytics',
-        'Robotics Integration',
+        'Digital Twin',IoT Solutions',AI Analytics',Robotics Integration',
       ]},
     {
 
@@ -208,10 +145,7 @@ export function SolutionsPage(...args: any[]): any {
       description:'
         'Customer experience, inventory management, and personalization',
       solutions: ['
-        'AI Marketing',
-        'Data Analytics',
-        'E-commerce Platform',
-        'Customer Insights',
+        'AI Marketing',Data Analytics',E-commerce Platform',Customer Insights',
       ]},
     {
 
@@ -220,10 +154,7 @@ export function SolutionsPage(...args: any[]): any {
       description:'
         'Software development, infrastructure, and digital transformation',
       solutions: ['
-        'Cloud & DevOps',
-        'API Development',
-        'Cybersecurity',
-        'AI Solutions',
+        'Cloud & DevOps',API Development',Cybersecurity',AI Solutions',
       ]},
     {
 
@@ -231,10 +162,7 @@ export function SolutionsPage(...args: any[]): any {
       icon: Building,
       description: 'Digital services, security, and citizen engagement',
       solutions: ['
-        'Cybersecurity',
-        'Data Analytics',
-        'Cloud Infrastructure',
-        'AI Services',
+        'Cybersecurity',Data Analytics',Cloud Infrastructure',AI Services',
       ]},
   ];
 

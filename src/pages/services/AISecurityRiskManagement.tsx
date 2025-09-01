@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityRiskManagement() {
   const features = [
-    'AI-powered security risk management optimization',
-    'Intelligent risk assessment and analysis',;
+    'AI-powered security risk management optimization',Intelligent risk assessment and analysis',;
     'Automated risk identification and prioritization',;
     'Predictive analytics for risk prediction',;
     'Smart risk framework management',;

@@ -193,14 +193,7 @@ const AIAutonomousMonitoringSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'System Monitoring Security',
-                'Network Monitoring Security',
-                'Application Monitoring Security',
-                'Performance Monitoring Security',
-                'Log Monitoring Security',
-                'Alert Monitoring Security',
-                'Dashboard Monitoring Security',
-                'Report Monitoring Security',
+                'System Monitoring Security',Network Monitoring Security',Application Monitoring Security',Performance Monitoring Security',Log Monitoring Security',Alert Monitoring Security',Dashboard Monitoring Security',Report Monitoring Security',
               ].map(type => (
                 <div
                   key={type}"

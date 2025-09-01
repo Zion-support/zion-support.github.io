@@ -124,8 +124,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         <meta name = "description" content={seoData.description} />"
         <meta name="keywords" content = {
 
-  seoData.keywords.join(',
-  ');
+  seoData.keywords.join(',);
 
 
 

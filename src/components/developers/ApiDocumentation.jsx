@@ -53,8 +53,7 @@ export function ApiDocumentation() {
   method: 'GET',
   headers: {
 
-    'Authorization': 'Bearer YOUR_API_KEY',
-  'Content-Type': 'application/json'
+    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 }
 });
 const data = await response.json();`
@@ -62,15 +61,13 @@ const data = await response.json();`
             python: `import requests
 headers = {
 
-  'Authorization': 'Bearer YOUR_API_KEY',
-  'Content-Type': 'application/json'
+  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 }
 response = requests.get('
     'https://ziontechgroup.com/api/v1/jobs',
     params = {
 
-  'limit': 10,
-  'category': 'development'
+  'limit': 10,category': 'development'
 },
     headers = headers;
 )
@@ -129,16 +126,14 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId`
   method: 'GET',
   headers: {
 
-    'Authorization': 'Bearer YOUR_API_KEY',
-    'Content-Type': 'application/json'
+    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 });
 const data = await response.json();`
 // // // // // // // // console.log(data);`,`
             python: `import requests
 headers = {
 
-  'Authorization': 'Bearer YOUR_API_KEY',
-  'Content-Type': 'application/json'
+  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 }
 job_id = 'job_abc123'
 response = requests.get('
@@ -212,8 +207,7 @@ print(data)`
   method: 'POST',
   headers: {
 
-    'Authorization': 'Bearer YOUR_API_KEY',
-    'Content-Type': 'application/json'
+    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
   },
   body: JSON.stringify({
 
@@ -236,22 +230,14 @@ const data = await response.json();`
 import json
 headers = {
 
-  'Authorization': 'Bearer YOUR_API_KEY',
-  'Content-Type': 'application/json'
+  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 }
 payload = {
 
-  'title': 'Senior React Developer',
-    'description': 'We need an experienced React developer...',
-    'category': 'development',
-    'skills'['react',typescript',node.js'],
-    'budget': {
+  'title': 'Senior React Developer',description': 'We need an experienced React developer...',category': 'development',skills'['react',typescript',node.js'],budget': {
 
-        'min': 5000,
-        'max': 10000,
-  'currency': 'USD'
-},
-    'deadline': '2025-06-30T23:59:59Z'
+        'min': 5000,max': 10000,currency': 'USD'
+},deadline': '2025-06-30T23:59:59Z'
 response = requests.post('
     'https://ziontechgroup.com/api/v1/jobs',
     headers=headers,
@@ -307,8 +293,7 @@ print(data)`
   method: 'GET',
   headers: {
 
-    'Authorization': 'Bearer YOUR_API_KEY',
-  'Content-Type': 'application/json'
+    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 }
 });
 const data = await response.json();`
@@ -316,8 +301,7 @@ const data = await response.json();`
             python: `import requests
 headers = {
 
-  'Authorization': 'Bearer YOUR_API_KEY',
-  'Content-Type': 'application/json'
+  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 }
 response = requests.get('
     'https://ziontechgroup.com/api/v1/talent',
@@ -376,16 +360,14 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
   method: 'GET',
   headers: {
 
-    'Authorization': 'Bearer YOUR_API_KEY',
-    'Content-Type': 'application/json'
+    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 });
 const data = await response.json();`
 // // // // // // // // console.log(data);`,`
             python: `import requests
 headers = {
 
-  'Authorization': 'Bearer YOUR_API_KEY',
-  'Content-Type': 'application/json'
+  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 }
 talent_id = 'talent_abc123'
 response = requests.get('
@@ -469,8 +451,7 @@ print(data)`
   method: 'POST',
   headers: {
 
-    'Authorization': 'Bearer YOUR_API_KEY',
-    'Content-Type': 'application/json'
+    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
   },
   body: JSON.stringify({
 
@@ -491,20 +472,11 @@ const data = await response.json();`
 import json
 headers = {
 
-  'Authorization': 'Bearer YOUR_API_KEY',
-  'Content-Type': 'application/json'
+  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 }
 payload = {
 
-  'talent_id': 'talent_abc123',
-    'project_name': 'E-commerce Website Redesign',
-    'project_summary': 'Redesign our outdated e-commerce website with modern UI',
-    'project_description': 'Our current website is 5 years old and needs a complete overhaul...',
-    'timeline': '2-3 months',
-    'budget_min': 8000,
-    'budget_max': 12000,
-    'requester_name': 'John Doe',
-  'requester_email': 'john@example.com'
+  'talent_id': 'talent_abc123',project_name': 'E-commerce Website Redesign',project_summary': 'Redesign our outdated e-commerce website with modern UI',project_description': 'Our current website is 5 years old and needs a complete overhaul...',timeline': '2-3 months',budget_min': 8000,budget_max': 12000,requester_name': 'John Doe',requester_email': 'john@example.com'
 }
 response = requests.post('
     'https://ziontechgroup.com/api/v1/quotes',
@@ -558,8 +530,7 @@ print(data)`
   method: 'GET',
   headers: {
 
-    'Authorization': 'Bearer YOUR_API_KEY',
-  'Content-Type': 'application/json'
+    'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 }
 });
 const data = await response.json();`
@@ -567,8 +538,7 @@ const data = await response.json();`
             python: `import requests
 headers = {
 
-  'Authorization': 'Bearer YOUR_API_KEY',
-  'Content-Type': 'application/json'
+  'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 }
 response = requests.get('
     'https://ziontechgroup.com/api/v1/quotes',

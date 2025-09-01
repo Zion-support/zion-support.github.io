@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPrometheus() {
   const features = [
-    'AI-powered Prometheus optimization',
-    'Intelligent Prometheus management',;
+    'AI-powered Prometheus optimization',Intelligent Prometheus management',;
     'Automated Prometheus monitoring and alerting',;
     'Predictive analytics for Prometheus scaling',;
     'Smart Prometheus security and compliance',;

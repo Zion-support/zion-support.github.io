@@ -20,10 +20,7 @@ export default function GovernmentSolutions() {
       title: 'Digital Government',
       description: 'Modern digital government platforms and citizen services',
       features: ['
-        'Citizen Portals',
-        'Digital Services',
-        'E-Government',
-        'Service Automation',
+        'Citizen Portals',Digital Services',E-Government',Service Automation',
       ]},
     {
 
@@ -32,10 +29,7 @@ export default function GovernmentSolutions() {
       description:'
         'Comprehensive cybersecurity and compliance solutions for government',
       features: ['
-        'FedRAMP Compliance',
-        'Zero-Trust Security',
-        'Data Protection',
-        'Incident Response',
+        'FedRAMP Compliance',Zero-Trust Security',Data Protection',Incident Response',
       ]},
     {
 
@@ -43,10 +37,7 @@ export default function GovernmentSolutions() {
       title: 'Citizen Experience',
       description: 'AI-powered citizen engagement and service delivery',
       features: ['
-        'Smart Chatbots',
-        'Personalized Services',
-        'Multi-channel Support',
-        'Accessibility',
+        'Smart Chatbots',Personalized Services',Multi-channel Support',Accessibility',
       ]},
     {
 
@@ -55,10 +46,7 @@ export default function GovernmentSolutions() {
       description:'
         'Advanced analytics and insights for government decision-making',
       features: ['
-        'Performance Metrics',
-        'Data Visualization',
-        'Predictive Analytics',
-        'Reporting',
+        'Performance Metrics',Data Visualization',Predictive Analytics',Reporting',
       ]},
     {
 
@@ -66,10 +54,7 @@ export default function GovernmentSolutions() {
       title: 'Compliance & Audit',
       description: 'Automated compliance monitoring and regulatory reporting',
       features: ['
-        'Regulatory Compliance',
-        'Audit Trails',
-        'Risk Management',
-        'Policy Enforcement',
+        'Regulatory Compliance',Audit Trails',Risk Management',Policy Enforcement',
       ]},
     {
 
@@ -78,19 +63,11 @@ export default function GovernmentSolutions() {
       description:'
         'Intelligent automation for government operations and workflows',
       features: ['
-        'Workflow Automation',
-        'Document Processing',
-        'Approval Systems',
-        'Resource Management',
+        'Workflow Automation',Document Processing',Approval Systems',Resource Management',
       ]},
   ];
   const benefits = ['
-    'Improved citizen satisfaction and engagement',
-    'Enhanced operational efficiency and cost savings',
-    'Better compliance and risk management',
-    'Increased transparency and accountability',
-    'Faster service delivery and response times',
-    'Enhanced data security and privacy protection',
+    'Improved citizen satisfaction and engagement',Enhanced operational efficiency and cost savings',Better compliance and risk management',Increased transparency and accountability',Faster service delivery and response times',Enhanced data security and privacy protection',
   ];
   const caseStudies = [
     {

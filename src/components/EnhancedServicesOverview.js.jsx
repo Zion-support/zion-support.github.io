@@ -64,17 +64,7 @@ const ServiceCategory = ({ category, services }) => {
 
     const colorMap = {
 
-      'AI & Machine Learning': 'from-purple-500 to-indigo-600',
-      'Cybersecurity & Compliance': 'from-red-500 to-pink-600',
-      'Data & Analytics': 'from-blue-500 to-cyan-600',
-      'Business Process': 'from-green-500 to-emerald-600',
-      'Marketing & Sales': 'from-orange-500 to-red-600',
-      'Financial Services': 'from-yellow-500 to-orange-600',
-      'Healthcare & Life Sciences': 'from-pink-500 to-rose-600',
-      'Education & Training': 'from-indigo-500 to-purple-600',
-      'Supply Chain & Logistics': 'from-teal-500 to-green-600',
-      'Real Estate & Property': 'from-amber-500 to-yellow-600',
-      'Legal & Compliance': 'from-slate-500 to-gray-600'};
+      'AI & Machine Learning': 'from-purple-500 to-indigo-600',Cybersecurity & Compliance': 'from-red-500 to-pink-600',Data & Analytics': 'from-blue-500 to-cyan-600',Business Process': 'from-green-500 to-emerald-600',Marketing & Sales': 'from-orange-500 to-red-600',Financial Services': 'from-yellow-500 to-orange-600',Healthcare & Life Sciences': 'from-pink-500 to-rose-600',Education & Training': 'from-indigo-500 to-purple-600',Supply Chain & Logistics': 'from-teal-500 to-green-600',Real Estate & Property': 'from-amber-500 to-yellow-600',Legal & Compliance': 'from-slate-500 to-gray-600'};
     return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark';
   };
   return ("

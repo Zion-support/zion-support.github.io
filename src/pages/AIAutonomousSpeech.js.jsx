@@ -179,14 +179,7 @@ const AIAutonomousSpeech = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Speech Recognition',
-                'Voice Generation',
-                'Conversation AI',
-                'Language Translation',
-                'Voice Cloning',
-                'Audio Processing',
-                'Speech Analytics',
-                'Voice Commands',
+                'Speech Recognition',Voice Generation',Conversation AI',Language Translation',Voice Cloning',Audio Processing',Speech Analytics',Voice Commands',
               ].map(type => (
                 <div
                   key={type}"

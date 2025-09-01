@@ -36,25 +36,11 @@ import {
 
 const AIBusinessIntelligenceAnalytics = () => {
   const features = ['
-    'AI-Powered Predictive Analytics',
-    'Real-time Data Visualization',
-    'Intelligent Business Insights',
-    'Automated Report Generation',
-    'Advanced Data Mining',
-    'Natural Language Query Interface',
-    'Multi-Source Data Integration',
-    'Custom Dashboard Creation',
+    'AI-Powered Predictive Analytics',Real-time Data Visualization',Intelligent Business Insights',Automated Report Generation',Advanced Data Mining',Natural Language Query Interface',Multi-Source Data Integration',Custom Dashboard Creation',
   ];
 
   const benefits = ['
-    'Increase revenue by 25% through data-driven insights',
-    'Reduce decision-making time by 70% with instant analytics',
-    'Improve operational efficiency by 40%',
-    'Identify new business opportunities with predictive modeling',
-    'Reduce costs by 30% through optimization insights',
-    'Enhance customer satisfaction by 35%',
-    'Achieve 95% forecast accuracy',
-    'Enable real-time business monitoring',
+    'Increase revenue by 25% through data-driven insights',Reduce decision-making time by 70% with instant analytics',Improve operational efficiency by 40%',Identify new business opportunities with predictive modeling',Reduce costs by 30% through optimization insights',Enhance customer satisfaction by 35%',Achieve 95% forecast accuracy',Enable real-time business monitoring',
   ];
 
   const capabilities = [
@@ -62,53 +48,30 @@ const AIBusinessIntelligenceAnalytics = () => {
 
       category: 'Data Analytics',
       items: ['
-        'Real-time data processing and analysis',
-        'Advanced statistical modeling',
-        'Machine learning algorithms',
-        'Predictive analytics and forecasting',
-        'Anomaly detection and alerting',
+        'Real-time data processing and analysis',Advanced statistical modeling',Machine learning algorithms',Predictive analytics and forecasting',Anomaly detection and alerting',
       ]},
     {
 
       category: 'Business Intelligence',
       items: ['
-        'Interactive dashboards and reports',
-        'KPI tracking and monitoring',
-        'Performance benchmarking',
-        'Trend analysis and insights',
-        'Competitive intelligence',
+        'Interactive dashboards and reports',KPI tracking and monitoring',Performance benchmarking',Trend analysis and insights',Competitive intelligence',
       ]},
     {
 
       category: 'Data Integration',
       items: ['
-        'Multi-source data connectors',
-        'ETL/ELT data pipelines',
-        'Real-time data streaming',
-        'Data quality management',
-        'Master data management',
+        'Multi-source data connectors',ETL/ELT data pipelines',Real-time data streaming',Data quality management',Master data management',
       ]},
     {
 
       category: 'AI & Machine Learning',
       items: ['
-        'Natural language processing',
-        'Automated insights generation',
-        'Intelligent recommendations',
-        'Pattern recognition',
-        'Cognitive analytics',
+        'Natural language processing',Automated insights generation',Intelligent recommendations',Pattern recognition',Cognitive analytics',
       ]},
   ];
 
   const useCases = ['
-    'Financial Performance Analysis',
-    'Customer Behavior Insights',
-    'Supply Chain Optimization',
-    'Sales Forecasting & Planning',
-    'Marketing Campaign Analytics',
-    'Operational Performance Monitoring',
-    'Risk Assessment & Management',
-    'Product Performance Analysis',
+    'Financial Performance Analysis',Customer Behavior Insights',Supply Chain Optimization',Sales Forecasting & Planning',Marketing Campaign Analytics',Operational Performance Monitoring',Risk Assessment & Management',Product Performance Analysis',
   ];
 
   const pricing = [
@@ -118,12 +81,7 @@ const AIBusinessIntelligenceAnalytics = () => {
       price: '$19,999',
       period: 'one-time setup',
       features: ['
-        'Basic AI analytics platform',
-        'Up to 5 data sources',
-        'Standard dashboards',
-        'Basic reporting',
-        'Email support',
-        'Cloud deployment',
+        'Basic AI analytics platform',Up to 5 data sources',Standard dashboards',Basic reporting',Email support',Cloud deployment',
       ]},
     {
 
@@ -131,13 +89,7 @@ const AIBusinessIntelligenceAnalytics = () => {
       price: '$39,999',
       period: 'one-time setup',
       features: ['
-        'Advanced AI analytics',
-        'Up to 20 data sources',
-        'Custom dashboards',
-        'Advanced reporting',
-        'Priority support',
-        'On-premise deployment option',
-        'Advanced security features',
+        'Advanced AI analytics',Up to 20 data sources',Custom dashboards',Advanced reporting',Priority support',On-premise deployment option',Advanced security features',
       ]},
     {
 
@@ -145,14 +97,7 @@ const AIBusinessIntelligenceAnalytics = () => {
       price: '$79,999',
       period: 'one-time setup',
       features: ['
-        'Full AI BI platform',
-        'Unlimited data sources',
-        'Custom analytics workflows',
-        '24/7 dedicated support',
-        'Hybrid deployment options',
-        'Advanced analytics & ML',
-        'Custom integrations',
-        'White-label solutions',
+        'Full AI BI platform',Unlimited data sources',Custom analytics workflows',24/7 dedicated support',Hybrid deployment options',Advanced analytics & ML',Custom integrations',White-label solutions',
       ]},
   ];
 

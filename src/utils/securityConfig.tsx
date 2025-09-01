@@ -59,18 +59,18 @@ export default securityConfig;
   // Remove potentially dangerous HTML tags
   html: (input: string) : string => {
     return input
-      .replace (/<script\b[^<]* (?: (?!<\/script>) <[^<]*) *<\/script>/gi,') .replace (/<iframe\b[^<]* (?: (?!<\/iframe>) <[^<]*) *<\/iframe>/gi,') .replace (/<object\b[^<]* (?: (?!<\/object>) <[^<]*) *<\/object>/gi,') .replace (/<embed\b[^<]* (?: (?!<\/embed>) <[^<]*) *<\/embed>/gi,') ;
+      .replace (/<script\b[^<]* (?: (?!<\/script>) <[^<]*) *<\/script>/gi,) .replace (/<iframe\b[^<]* (?: (?!<\/iframe>) <[^<]*) *<\/iframe>/gi,) .replace (/<object\b[^<]* (?: (?!<\/object>) <[^<]*) *<\/object>/gi,) .replace (/<embed\b[^<]* (?: (?!<\/embed>) <[^<]*) *<\/embed>/gi,) ;
   },
 
   // Remove SQL injection patterns
   sql: (input: string) : string => {
-    return input.replace (/['";\\]/g,') ;
+    return input.replace (/['";\\]/g,) ;
   },
 
   // Remove XSS patterns
   xss: (input: string) : string => {
     return input
-      .replace (/javascript:/gi,') .replace (/on\w+\s*=/gi,') .replace (/<script / gi,') .replace (/<\/script>/gi,') ;
+      .replace (/javascript:/gi,) .replace (/on\w+\s*=/gi,) .replace (/<script / gi,) .replace (/<\/script>/gi,) ;
   },
 
   // General sanitization

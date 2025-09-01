@@ -181,14 +181,7 @@ const AIAutonomousInvention = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Technology Invention',
-                'Product Invention',
-                'Process Invention',
-                'Method Invention',
-                'System Invention',
-                'Device Invention',
-                'Algorithm Invention',
-                'Application Invention',
+                'Technology Invention',Product Invention',Process Invention',Method Invention',System Invention',Device Invention',Algorithm Invention',Application Invention',
               ].map(type => (
                 <div
                   key={type}"

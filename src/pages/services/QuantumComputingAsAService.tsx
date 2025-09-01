@@ -57,12 +57,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Perfect for research institutions and startups',
       features: ['
-        'Up to 50 quantum computing hours',
-        'Basic quantum algorithms',
-        'Standard support',
-        'API access',
-        'Documentation',
-        'Community forum access'
+        'Up to 50 quantum computing hours',Basic quantum algorithms',Standard support',API access',Documentation',Community forum access'
       ],
       cta: 'Start Free Trial',
       popular: false
@@ -74,13 +69,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Ideal for growing businesses and research teams',
       features: ['
-        'Up to 200 quantum computing hours',
-        'Advanced quantum algorithms',
-        'Custom algorithm development',
-        'Priority support',
-        'Dedicated quantum engineer',
-        'White-label solutions',
-        'SLA guarantees'
+        'Up to 200 quantum computing hours',Advanced quantum algorithms',Custom algorithm development',Priority support',Dedicated quantum engineer',White-label solutions',SLA guarantees'
       ],
       cta: 'Get Started',
       popular: true
@@ -92,11 +81,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'For large enterprises and government agencies',
       features: ['
-        'Unlimited quantum computing hours',
-        'Custom quantum hardware access',
-        'Dedicated quantum team',
-        '24/7 phone support',
-        'Custom integrations',;
+        'Unlimited quantum computing hours',Custom quantum hardware access',Dedicated quantum team',24/7 phone support',Custom integrations',;
         'On-premise deployment options',;
         'Research partnerships';
       ],;

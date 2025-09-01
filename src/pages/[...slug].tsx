@@ -11,7 +11,7 @@ export default function GenericPage() {
     slugParts.length === 0'
       ? 'Page'
       : slugParts'
-          .map(s => s.replace(/-/g, '))
+          .map(s => s.replace(/-/g,))
           .map(s => s.charAt(0).toUpperCase() + s.slice(1))
           .join(' / ');
   const canonical = `https://ziontechgroup.com${path.endsWith('/') ? path : path + '/'}`;

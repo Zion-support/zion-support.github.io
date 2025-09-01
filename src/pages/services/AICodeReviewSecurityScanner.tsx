@@ -55,11 +55,7 @@ const AICodeReviewSecurityScanner = () => {
       period: '/month',
       description: 'Perfect for individual developers',
       features: ['
-        'Up to 10 repositories',
-        'Basic security scanning',
-        'Standard vulnerability database',
-        'Email support',
-        'Basic reporting'
+        'Up to 10 repositories',Basic security scanning',Standard vulnerability database',Email support',Basic reporting'
       ],
       cta: 'Get Started',
       popular: false
@@ -71,13 +67,7 @@ const AICodeReviewSecurityScanner = () => {
       period: '/month',
       description: 'Ideal for development teams',
       features: ['
-        'Up to 50 repositories',
-        'Advanced AI scanning',
-        'Full vulnerability database',
-        'Priority support',
-        'Custom rule sets',
-        'API access',
-        'CI/CD integration'
+        'Up to 50 repositories',Advanced AI scanning',Full vulnerability database',Priority support',Custom rule sets',API access',CI/CD integration'
       ],
       cta: 'Start Free Trial',
       popular: true
@@ -89,11 +79,7 @@ const AICodeReviewSecurityScanner = () => {
       period: '/month',
       description: 'For large organizations',
       features: ['
-        'Unlimited repositories',
-        'Custom AI models',
-        'White-label solutions',
-        '24/7 dedicated support',
-        'Advanced integrations',;
+        'Unlimited repositories',Custom AI models',White-label solutions',24/7 dedicated support',Advanced integrations',;
         'Custom workflows',;
         'On-premise deployment';
       ],;

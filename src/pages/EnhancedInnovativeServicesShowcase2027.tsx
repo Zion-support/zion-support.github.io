@@ -33,17 +33,7 @@ import {
 import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  } from "../data/enhancedInnovativeServices2027";
 const categoryColors: { [key: string]: string } = {
 
-  'Web3 Solutions': 'from-purple-500 to-pink-500',
-  'Metaverse Solutions': 'from-blue-500 to-cyan-500',
-  'Sustainable Tech': 'from-green-500 to-emerald-500',
-  'NeuroTech Solutions': 'from-indigo-500 to-purple-500',
-  'Fusion Energy Solutions': 'from-orange-500 to-red-500',
-  'OceanTech Solutions': 'from-blue-500 to-teal-500',
-  'AgriTech Solutions': 'from-green-500 to-lime-500',
-  'Smart City Solutions': 'from-gray-500 to-blue-500',
-  'Digital Twin Solutions': 'from-purple-500 to-indigo-500',
-  'Edge AI Solutions': 'from-red-500 to-pink-500',
-  'Federated Learning Solutions': 'from-yellow-500 to-orange-500'
+  'Web3 Solutions': 'from-purple-500 to-pink-500',Metaverse Solutions': 'from-blue-500 to-cyan-500',Sustainable Tech': 'from-green-500 to-emerald-500',NeuroTech Solutions': 'from-indigo-500 to-purple-500',Fusion Energy Solutions': 'from-orange-500 to-red-500',OceanTech Solutions': 'from-blue-500 to-teal-500',AgriTech Solutions': 'from-green-500 to-lime-500',Smart City Solutions': 'from-gray-500 to-blue-500',Digital Twin Solutions': 'from-purple-500 to-indigo-500',Edge AI Solutions': 'from-red-500 to-pink-500',Federated Learning Solutions': 'from-yellow-500 to-orange-500'
 };
 export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
 
@@ -119,7 +109,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
       case 'roi':;
-        return parseInt(b.roi.replace('%',')) - parseInt(a.roi.replace('%','));
+        return parseInt(b.roi.replace('%',)) - parseInt(a.roi.replace('%',));
       default:;
         return 0}
   }) ;
@@ -905,8 +895,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
             className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center space-x-2 mx-auto"
             onClick = {
 
-  () => window.open('https://ziontechgroup.com',
-  '_blank')
+  () => window.open('https://ziontechgroup.com',_blank')
 
 
 

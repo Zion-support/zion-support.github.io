@@ -82,18 +82,11 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
       fintech: 'from-green-500 to-emerald-600',
       healthtech: 'from-red-500 to-pink-600',
       edutech: 'from-purple-500 to-violet-600',
-      martech: 'from-pink-500 to-rose-600',
-      'micro-saas': 'from-blue-500 to-indigo-600',
-      'ai-services': 'from-cyan-500 to-blue-600',
-      'it-services': 'from-slate-500 to-gray-600',
-      'emerging-tech': 'from-orange-500 to-yellow-600',
+      martech: 'from-pink-500 to-rose-600',micro-saas': 'from-blue-500 to-indigo-600',ai-services': 'from-cyan-500 to-blue-600',it-services': 'from-slate-500 to-gray-600',emerging-tech': 'from-orange-500 to-yellow-600',
       Fintech: 'from-green-500 to-emerald-600',
       Healthtech: 'from-red-500 to-pink-600',
       Edutech: 'from-purple-500 to-violet-600',
-      Martech: 'from-pink-500 to-rose-600',
-      'Micro SaaS': 'from-blue-500 to-indigo-600',
-      'AI Services': 'from-cyan-500 to-blue-600',
-      'IT Services': 'from-slate-500 to-gray-600'};
+      Martech: 'from-pink-500 to-rose-600',Micro SaaS': 'from-blue-500 to-indigo-600',AI Services': 'from-cyan-500 to-blue-600',IT Services': 'from-slate-500 to-gray-600'};
     return colors[category] || 'from-gray-500 to-gray-600';
   };
 
@@ -124,8 +117,7 @@ const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
     const badges = {
 
       existing: { color: 'bg-blue-100 text-blue-800', text: 'Existing' },
-      new: { color: 'bg-green-100 text-green-800', text: 'New' },
-      'pricing-guide': {
+      new: { color: 'bg-green-100 text-green-800', text: 'New' },pricing-guide': {
 
         color: 'bg-purple-100 text-purple-800',
         text: 'Pricing Guide'}};

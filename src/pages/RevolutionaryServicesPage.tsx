@@ -746,7 +746,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                 href={CONTACT_INFORMATION.website}"
                 className="text-green-400 hover:text-green-300 transition-colors"
               >
-                {CONTACT_INFORMATION.website.replace('https://',')}
+                {CONTACT_INFORMATION.website.replace('https://',)}
               </a>
             </div>
 "

@@ -5,43 +5,11 @@ interface MimeTypeMapping {
 class MimeTypeFallback {
   private mimeTypes: MimeTypeMapping = {
 
-    '.js': 'application/javascript',
-    '.mjs': 'application/javascript',
-    '.css': 'text/css',
-    '.html': 'text/html',
-    '.htm': 'text/html',
-    '.xml': 'application/xml',
-    '.json': 'application/json',
-    '.svg': 'image/svg+xml',
-    '.ico': 'image/x-icon',
-    '.png': 'image/png',
-    '.jpg': 'image/jpeg',
-    '.jpeg': 'image/jpeg',
-    '.gif': 'image/gif',
-    '.webp': 'image/webp',
-    '.bmp': 'image/bmp',
-    '.tiff': 'image/tiff',
-    '.woff': 'font/woff',
-    '.woff2': 'font/woff2',
-    '.ttf': 'font/ttf',
-    '.otf': 'font/otf',
-    '.eot': 'application/vnd.ms-fontobject',
-    '.pdf': 'application/pdf',
-    '.zip': 'application/zip',
-    '.tar': 'application/x-tar',
-    '.gz': 'application/gzip',
-    '.mp4': 'video/mp4',
-    '.webm': 'video/webm',
-    '.ogg': 'video/ogg',
-    '.mp3': 'audio/mpeg',
-    '.wav': 'audio/wav',
-    '.flac': 'audio/flac'};
+    '.js': 'application/javascript',.mjs': 'application/javascript',.css': 'text/css',.html': 'text/html',.htm': 'text/html',.xml': 'application/xml',.json': 'application/json',.svg': 'image/svg+xml',.ico': 'image/x-icon',.png': 'image/png',.jpg': 'image/jpeg',.jpeg': 'image/jpeg',.gif': 'image/gif',.webp': 'image/webp',.bmp': 'image/bmp',.tiff': 'image/tiff',.woff': 'font/woff',.woff2': 'font/woff2',.ttf': 'font/ttf',.otf': 'font/otf',.eot': 'application/vnd.ms-fontobject',.pdf': 'application/pdf',.zip': 'application/zip',.tar': 'application/x-tar',.gz': 'application/gzip',.mp4': 'video/mp4',.webm': 'video/webm',.ogg': 'video/ogg',.mp3': 'audio/mpeg',.wav': 'audio/wav',.flac': 'audio/flac'};
 
   private fallbackUrls: Map<string, string> = new Map();
   private cdnFallbacks = ['
-    'https://cdn.jsdelivr.net',
-    'https://unpkg.com',
-    'https://cdnjs.cloudflare.com',
+    'https://cdn.jsdelivr.net',https://unpkg.com',https://cdnjs.cloudflare.com',
   ];
 
   constructor() {
@@ -51,28 +19,22 @@ class MimeTypeFallback {
   private setupFallbackUrls() {
     // Map problematic URLs to CDN fallbacks
     this.fallbackUrls.set('
-      '/js/index-C64WnLOI.js',
-      'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/index-C64WnLOI.js'
+      '/js/index-C64WnLOI.js',https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/index-C64WnLOI.js'
     );
     this.fallbackUrls.set('
-      '/css/index-RK9lga5l.css',
-      'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/css/index-RK9lga5l.css'
+      '/css/index-RK9lga5l.css',https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/css/index-RK9lga5l.css'
     );
     this.fallbackUrls.set('
-      '/js/react-vendor-ClxMxoJB.js',
-      'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/react-vendor-ClxMxoJB.js'
+      '/js/react-vendor-ClxMxoJB.js',https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/react-vendor-ClxMxoJB.js'
     );
     this.fallbackUrls.set('
-      '/js/router-vendor-9KcRWrrL.js',
-      'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/router-vendor-9KcRWrrL.js'
+      '/js/router-vendor-9KcRWrrL.js',https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/router-vendor-9KcRWrrL.js'
     );
     this.fallbackUrls.set('
-      '/js/ui-vendor-B31yGDq-.js',
-      'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/ui-vendor-B31yGDq-.js'
+      '/js/ui-vendor-B31yGDq-.js',https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/ui-vendor-B31yGDq-.js'
     );
     this.fallbackUrls.set('
-      '/js/utils-vendor-CrFdsnXa.js',
-      'https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/utils-vendor-CrFdsnXa.js'
+      '/js/utils-vendor-CrFdsnXa.js',https://cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/utils-vendor-CrFdsnXa.js'
     );
   }
 
@@ -182,12 +144,7 @@ class MimeTypeFallback {
   async preloadCriticalResources(): Promise<any> {
 
     const criticalResources = ['
-      '/css/index-RK9lga5l.css',
-      '/js/index-C64WnLOI.js',
-      '/js/react-vendor-ClxMxoJB.js',
-      '/js/router-vendor-9KcRWrrL.js',
-      '/js/ui-vendor-B31yGDq-.js',
-      '/js/utils-vendor-CrFdsnXa.js',
+      '/css/index-RK9lga5l.css',/js/index-C64WnLOI.js',/js/react-vendor-ClxMxoJB.js',/js/router-vendor-9KcRWrrL.js',/js/ui-vendor-B31yGDq-.js',/js/utils-vendor-CrFdsnXa.js',
     ];
 
     // console.log('🔍 Preloading critical resources...');

@@ -103,8 +103,7 @@ export function EnhancedAccessibilityPanel() {
       if (updatedSettings.reducedMotion) {
 
         document.documentElement.style.setProperty('
-          '--reduced-motion',
-          'reduce'
+          '--reduced-motion',reduce'
         );
       } else {
 

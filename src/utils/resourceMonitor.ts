@@ -63,8 +63,7 @@ class ResourceMonitor {
       ) {
 
         this.handleResourceError('
-          'unknown',
-          'other',
+          'unknown',other',
           `MIME type error: ${event.reason}`
         );
       }
@@ -122,9 +121,7 @@ class ResourceMonitor {
 
     link.addEventListener('error', () => {
       this.handleResourceError()
-        link.href,
-        'stylesheet',
-        'Stylesheet loading failed'
+        link.href,stylesheet',Stylesheet loading failed'
       );
     });
   }
@@ -132,12 +129,7 @@ class ResourceMonitor {
   private monitorCriticalResources() {
     // Monitor critical CSS and JS files
     const criticalResources = ['
-      '/css/index-RK9lga5l.css',
-      '/js/index-C64WnLOI.js',
-      '/js/react-vendor-ClxMxoJB.js',
-      '/js/router-vendor-9KcRWrrL.js',
-      '/js/ui-vendor-B31yGDq-.js',
-      '/js/utils-vendor-CrFdsnXa.js',
+      '/css/index-RK9lga5l.css',/js/index-C64WnLOI.js',/js/react-vendor-ClxMxoJB.js',/js/router-vendor-9KcRWrrL.js',/js/ui-vendor-B31yGDq-.js',/js/utils-vendor-CrFdsnXa.js',
     ];
 
     criticalResources.forEach(resource => {
@@ -155,8 +147,7 @@ class ResourceMonitor {
       if (!response.ok) {
 
         this.handleResourceError()
-          url,
-          'other',`
+          url,other',`
           `HTTP ${response.status}: ${response.statusText}`
         );
         return;
@@ -173,15 +164,13 @@ class ResourceMonitor {
       if (url.endsWith('.js') && !contentType.includes('javascript')) {
 
         this.handleResourceError()
-          url,
-          'script',`
+          url,script',`
           `Incorrect MIME type: ${contentType} (expected javascript)`
         );
       } else if (url.endsWith('.css') && !contentType.includes('css')) {
 
         this.handleResourceError()
-          url,
-          'stylesheet',`
+          url,stylesheet',`
           `Incorrect MIME type: ${contentType} (expected css)`
         );
       }

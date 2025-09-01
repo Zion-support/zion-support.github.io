@@ -71,12 +71,7 @@ const IncidentResponsePlatform = () => {
       period: '/month',
       description: 'Perfect for growing security teams',
       features: ['
-        'Up to 50 users',
-        'Basic threat detection',
-        'Standard response workflows',
-        'Email & Slack notifications',
-        'Basic reporting',
-        'Email support',
+        'Up to 50 users',Basic threat detection',Standard response workflows',Email & Slack notifications',Basic reporting',Email support',
       ],
       popular: false},
     {
@@ -86,13 +81,7 @@ const IncidentResponsePlatform = () => {
       period: '/month',
       description: 'Ideal for large organizations',
       features: ['
-        'Unlimited users',
-        'Advanced AI detection',
-        'Custom response workflows',
-        'Multi-channel notifications',
-        'Advanced analytics',
-        'Priority support',
-        'Compliance reporting',
+        'Unlimited users',Advanced AI detection',Custom response workflows',Multi-channel notifications',Advanced analytics',Priority support',Compliance reporting',
       ],
       popular: true},
     {
@@ -102,32 +91,15 @@ const IncidentResponsePlatform = () => {
       period: '',
       description: 'For complex enterprise needs',
       features: ['
-        'Custom integrations',
-        'Dedicated support team',
-        'Custom training',
-        'SLA guarantees',
-        'On-premise options',
-        'Custom development',
+        'Custom integrations',Dedicated support team',Custom training',SLA guarantees',On-premise options',Custom development',
       ],
       popular: false},
   ];
   const integrations = ['
-    'SIEM Systems',
-    'EDR Solutions',
-    'Firewall',
-    'IDS/IPS',
-    'Slack',
-    'Teams',
-    'Jira',
-    'ServiceNow',
+    'SIEM Systems',EDR Solutions',Firewall',IDS/IPS',Slack',Teams',Jira',ServiceNow',
   ];
   const useCases = ['
-    'Security incident management',
-    'IT operations',
-    'Compliance management',
-    'Team collaboration',
-    'Audit preparation',
-    'Risk mitigation',
+    'Security incident management',IT operations',Compliance management',Team collaboration',Audit preparation',Risk mitigation',
   ];
   return()
     <>

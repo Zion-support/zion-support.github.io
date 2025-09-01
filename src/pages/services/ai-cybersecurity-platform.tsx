@@ -95,9 +95,7 @@ export function AICybersecurityPlatform() {
       description:'
         'Advanced machine learning algorithms that detect and prevent threats in real-time',
       benefits: ['
-        'Zero-day threat detection',
-        'Behavioral analysis',
-        'Predictive security',
+        'Zero-day threat detection',Behavioral analysis',Predictive security',
       ]},
     {
 
@@ -106,9 +104,7 @@ export function AICybersecurityPlatform() {
       description:'
         'Comprehensive security model that verifies every user and device',
       benefits: ['
-        'Identity verification',
-        'Device trust scoring',
-        'Continuous monitoring',
+        'Identity verification',Device trust scoring',Continuous monitoring',
       ]},
     {
 
@@ -116,9 +112,7 @@ export function AICybersecurityPlatform() {
       title: '24/7 Security Monitoring',
       description: 'Round-the-clock surveillance with instant threat response',
       benefits: ['
-        'Real-time alerts',
-        'Automated response',
-        'Expert security team',
+        'Real-time alerts',Automated response',Expert security team',
       ]},
     {
 
@@ -132,9 +126,7 @@ export function AICybersecurityPlatform() {
       title: 'Advanced Analytics',
       description: 'Comprehensive security insights and threat intelligence',
       benefits: ['
-        'Security dashboards',
-        'Threat intelligence',
-        'Compliance reporting',
+        'Security dashboards',Threat intelligence',Compliance reporting',
       ]},
     {
 
@@ -143,9 +135,7 @@ export function AICybersecurityPlatform() {
       description:'
         'Built for modern cloud environments with seamless integration',
       benefits: ['
-        'Multi-cloud support',
-        'Container security',
-        'Serverless protection',
+        'Multi-cloud support',Container security',Serverless protection',
       ]},
   ];
 
@@ -157,12 +147,7 @@ export function AICybersecurityPlatform() {
       period: '/month',
       description: 'Perfect for small businesses and startups',
       features: ['
-        'Basic AI threat detection',
-        'Email security',
-        'Web filtering',
-        'Basic reporting',
-        'Email support',
-        'Up to 50 users',
+        'Basic AI threat detection',Email security',Web filtering',Basic reporting',Email support',Up to 50 users',
       ],
       cta: 'Start Free Trial',
       popular: false},
@@ -173,14 +158,7 @@ export function AICybersecurityPlatform() {
       period: '/month',
       description: 'Ideal for growing businesses',
       features: ['
-        'Advanced AI detection',
-        'Endpoint protection',
-        'Network security',
-        'Advanced analytics',
-        'Priority support',
-        'Up to 500 users',
-        'Compliance tools',
-        'API access',
+        'Advanced AI detection',Endpoint protection',Network security',Advanced analytics',Priority support',Up to 500 users',Compliance tools',API access',
       ],
       cta: 'Start Free Trial',
       popular: true},
@@ -191,14 +169,7 @@ export function AICybersecurityPlatform() {
       period: '',
       description: 'For large organizations with custom needs',
       features: ['
-        'Full AI capabilities',
-        'Custom integrations',
-        'Enterprise features',
-        '24/7 dedicated support',
-        'Unlimited users',
-        'Custom deployment',
-        'On-premise options',
-        'SLA guarantees',
+        'Full AI capabilities',Custom integrations',Enterprise features',24/7 dedicated support',Unlimited users',Custom deployment',On-premise options',SLA guarantees',
       ],
       cta: 'Contact Sales',
       popular: false},
@@ -218,9 +189,7 @@ export function AICybersecurityPlatform() {
       description: 'Automated incident response with playbook execution',
       icon: Rocket,
       benefits: ['
-        'Automated workflows',
-        'Playbook templates',
-        'Response analytics',
+        'Automated workflows',Playbook templates',Response analytics',
       ]},
     {
 
@@ -244,14 +213,7 @@ export function AICybersecurityPlatform() {
   ];
 
   const complianceFrameworks = ['
-    'SOC 2 Type II',
-    'ISO 27001',
-    'GDPR',
-    'HIPAA',
-    'PCI DSS',
-    'NIST',
-    'FedRAMP',
-    'SOX',
+    'SOC 2 Type II',ISO 27001',GDPR',HIPAA',PCI DSS',NIST',FedRAMP',SOX',
   ];
 
   return()

@@ -60,9 +60,7 @@ export default function AIContentCreation(...args: any[]): any {
         'AI-powered writing assistance for blogs, articles, and marketing copy',
       icon: PenTool,
       features: ['
-        'Blog post generation',
-        'SEO-optimized content',
-        'Brand voice consistency',
+        'Blog post generation',SEO-optimized content',Brand voice consistency',
       ]},
     {
 
@@ -86,14 +84,7 @@ export default function AIContentCreation(...args: any[]): any {
   ];
 
   const technologies = ['
-    'Natural Language Processing (NLP),
-    'Generative Adversarial Networks (GANs),
-    'Computer Vision',
-    'Speech Synthesis',
-    'Content Optimization',
-    'Brand Voice Training',
-    'Multi-Modal AI',
-    'Content Analytics',
+    'Natural Language Processing (NLP),Generative Adversarial Networks (GANs),Computer Vision',Speech Synthesis',Content Optimization',Brand Voice Training',Multi-Modal AI',Content Analytics',
   ];
 
   return()

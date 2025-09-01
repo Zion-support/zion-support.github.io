@@ -234,8 +234,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     </label>
                     <select onChange = {
 
-  (e) => handleFilterChange(column.key, e.target.value,
-  'contains')
+  (e) => handleFilterChange(column.key, e.target.value,contains')
 "
 } className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"
                       <option value="">No filter</option>"

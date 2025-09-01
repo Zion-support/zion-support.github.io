@@ -3,14 +3,7 @@ import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calend
 ;
 export const EnterpriseCallToAction = () => {
   const enterpriseBenefits = ['
-    'Customized solutions tailored to your business needs',
-    'Dedicated account manager and support team',
-    'Priority response times and escalation procedures',
-    'Comprehensive reporting and analytics',
-    'Strategic IT consulting and roadmap planning',
-    'Compliance and regulatory support',
-    'Vendor management and procurement assistance',
-    'Training and change management programs'
+    'Customized solutions tailored to your business needs',Dedicated account manager and support team',Priority response times and escalation procedures',Comprehensive reporting and analytics',Strategic IT consulting and roadmap planning',Compliance and regulatory support',Vendor management and procurement assistance',Training and change management programs'
   ];
 
   const contactMethods = [

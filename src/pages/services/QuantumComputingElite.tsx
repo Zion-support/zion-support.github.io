@@ -74,12 +74,7 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Perfect for research institutions and startups',
       features: ['
-        'Up to 100 qubit access',
-        'Basic quantum algorithms',
-        'Standard quantum simulators',
-        'Email support',
-        '5 user licenses',
-        'Basic quantum education',
+        'Up to 100 qubit access',Basic quantum algorithms',Standard quantum simulators',Email support',5 user licenses',Basic quantum education',
       ]},
     {
 
@@ -88,13 +83,7 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Ideal for growing businesses and research teams',
       features: ['
-        'Up to 500 qubit access',
-        'Advanced quantum algorithms',
-        'Custom quantum circuits',
-        'Priority support',
-        '25 user licenses',
-        'API access',
-        'Quantum consulting',
+        'Up to 500 qubit access',Advanced quantum algorithms',Custom quantum circuits',Priority support',25 user licenses',API access',Quantum consulting',
       ],
       popular: true},
     {
@@ -104,13 +93,7 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'For large organizations with complex quantum needs',
       features: ['
-        'Unlimited qubit access',
-        'Full quantum suite',
-        'Custom quantum development',
-        '24/7 dedicated support',
-        'Unlimited users',
-        'White-label options',
-        'On-premise quantum computers',
+        'Unlimited qubit access',Full quantum suite',Custom quantum development',24/7 dedicated support',Unlimited users',White-label options',On-premise quantum computers',
       ]},
   ];
 
@@ -148,14 +131,7 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
   ];
 
   const quantumTechnologies = ['
-    'Superconducting Qubits',
-    'Trapped Ion Qubits',
-    'Topological Qubits',
-    'Photonic Qubits',
-    'Silicon Spin Qubits',
-    'Quantum Annealing',
-    'Quantum Error Correction',
-    'Quantum Memory Systems',
+    'Superconducting Qubits',Trapped Ion Qubits',Topological Qubits',Photonic Qubits',Silicon Spin Qubits',Quantum Annealing',Quantum Error Correction',Quantum Memory Systems',
   ];
 
   return()

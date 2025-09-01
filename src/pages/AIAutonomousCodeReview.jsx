@@ -186,18 +186,7 @@ const AIAutonomousCodeReview = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'JavaScript',
-                'TypeScript',
-                'Python',
-                'Java',
-                'C#',
-                'Go',
-                'Rust',
-                'PHP',
-                'Ruby',
-                'Swift',
-                'Kotlin',
-                'Scala',
+                'JavaScript',TypeScript',Python',Java',C#',Go',Rust',PHP',Ruby',Swift',Kotlin',Scala',
               ].map(lang => (
                 <div
                   key={lang}"

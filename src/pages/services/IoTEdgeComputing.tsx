@@ -62,9 +62,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
         'Centralized management and monitoring of IoT devices and sensors',
       icon: Smartphone,
       features: ['
-        'Device provisioning',
-        'Remote monitoring',
-        'Firmware updates',
+        'Device provisioning',Remote monitoring',Firmware updates',
       ]},
     {
 
@@ -72,9 +70,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
       description: 'Process and analyze data streams in real-time at the edge',
       icon: BarChart3,
       features: ['
-        'Stream processing',
-        'Real-time dashboards',
-        'Predictive analytics',
+        'Stream processing',Real-time dashboards',Predictive analytics',
       ]},
     {
 
@@ -86,14 +82,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
   ];
 
   const technologies = ['
-    'Edge Computing Platforms',
-    'IoT Protocols (MQTT, CoAP, HTTP),
-    '5G Network Integration',
-    'Edge AI & Machine Learning',
-    'Container Orchestration',
-    'Edge Database Systems',
-    'Real-time Streaming',
-    'Edge Security Frameworks',
+    'Edge Computing Platforms',IoT Protocols (MQTT, CoAP, HTTP),5G Network Integration',Edge AI & Machine Learning',Container Orchestration',Edge Database Systems',Real-time Streaming',Edge Security Frameworks',
   ];
 
   return()

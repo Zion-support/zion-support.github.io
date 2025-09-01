@@ -68,8 +68,7 @@ export default function AnalyticsDashboard() {
           country: {
 
             'United States': 60,
-            Canada: 15,
-            'United Kingdom': 10,
+            Canada: 15,United Kingdom': 10,
             Germany: 8,
             Other: 7}}});
       setIsLoading(false);

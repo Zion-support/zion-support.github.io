@@ -27,12 +27,7 @@ import {
 
 export default function AIComplianceAssistant() {
   const frameworks = ['
-    'SOC 2',
-    'ISO 27001',
-    'HIPAA',
-    'GDPR',
-    'PCI DSS',
-    'NIST CSF',
+    'SOC 2',ISO 27001',HIPAA',GDPR',PCI DSS',NIST CSF',
   ];
 
   const features = [

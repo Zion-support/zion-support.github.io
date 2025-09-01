@@ -98,9 +98,7 @@ export default function DataAnalytics(...args: any[]): any {
         'Understand customer behavior and preferences for improved engagement',
       icon: Users,
       benefits: ['
-        'Customer segmentation',
-        'Behavioral analysis',
-        'Churn prediction',
+        'Customer segmentation',Behavioral analysis',Churn prediction',
       ]},
     {
 
@@ -116,23 +114,12 @@ export default function DataAnalytics(...args: any[]): any {
         'Optimize business processes and improve operational efficiency',
       icon: Activity,
       benefits: ['
-        'Process optimization',
-        'Resource allocation',
-        'Performance monitoring',
+        'Process optimization',Resource allocation',Performance monitoring',
       ]},
   ];
 
   const technologies = ['
-    'Python & R',
-    'Apache Spark',
-    'TensorFlow',
-    'Power BI',
-    'Tableau',
-    'AWS Redshift',
-    'Google BigQuery',
-    'Snowflake',
-    'Apache Kafka',
-    'Elasticsearch',
+    'Python & R',Apache Spark',TensorFlow',Power BI',Tableau',AWS Redshift',Google BigQuery',Snowflake',Apache Kafka',Elasticsearch',
   ];
 
   return()

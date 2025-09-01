@@ -80,7 +80,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
     switch (sortBy) {
 
       case 'price':'
-        return parseFloat(a.price.replace('$',').replace(',,')) - parseFloat(b.price.replace('$',').replace(',,'));
+        return parseFloat(a.price.replace('$',).replace(',,)) - parseFloat(b.price.replace('$',).replace(',,));
       case 'rating':
         return b.rating - a.rating;
       case 'popularity':
@@ -94,22 +94,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
 
     const iconMap: { [key: string]: any } = {
 
-      'AI & Analytics': Brain,
-      'Cybersecurity': Shield,
-      'AI & Operations': Workflow,
-      'Blockchain & Security': Lock,
-      'AI & Legal Tech': BookOpen,
-      'IoT & Edge Computing': Network,
-      'AI & Healthcare': Heart,
-      'Quantum Computing & AI': Atom,
-      'AI & Fintech': DollarSign,
-      'Sustainability & Consulting': Globe,
-      'Edge Computing': Network,
-      'DevOps & Automation': Rocket,
-      'Storage & Security': Database,
-      'Network Optimization': BarChart3,
-      'Disaster Recovery': Shield,
-      'Quantum Security': Lock
+      'AI & Analytics': Brain,Cybersecurity': Shield,AI & Operations': Workflow,Blockchain & Security': Lock,AI & Legal Tech': BookOpen,IoT & Edge Computing': Network,AI & Healthcare': Heart,Quantum Computing & AI': Atom,AI & Fintech': DollarSign,Sustainability & Consulting': Globe,Edge Computing': Network,DevOps & Automation': Rocket,Storage & Security': Database,Network Optimization': BarChart3,Disaster Recovery': Shield,Quantum Security': Lock
     };
     return iconMap[category] || Cpu;
   };

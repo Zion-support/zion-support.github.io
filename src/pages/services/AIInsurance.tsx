@@ -1,8 +1,7 @@
 import React from 'react';
 import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance() {
   const features = [
-    'AI-powered risk assessment and underwriting automation',
-    'Intelligent claims processing and fraud detection',;
+    'AI-powered risk assessment and underwriting automation',Intelligent claims processing and fraud detection',;
     'Automated policy management and customer service',;
     'Predictive analytics for risk modeling and pricing',;
     'Real-time customer behavior analysis and risk scoring',;

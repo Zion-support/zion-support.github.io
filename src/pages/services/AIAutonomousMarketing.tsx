@@ -66,12 +66,7 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
   ];
 
   const benefits = ['
-    'Increase marketing ROI by 150%',
-    'Reduce campaign setup time by 80%',
-    'Improve conversion rates by 60%',
-    'Automate marketing workflows',
-    '24/7 autonomous operation',
-    'Real-time performance optimization',
+    'Increase marketing ROI by 150%',Reduce campaign setup time by 80%',Improve conversion rates by 60%',Automate marketing workflows',24/7 autonomous operation',Real-time performance optimization',
   ];
 
   return()

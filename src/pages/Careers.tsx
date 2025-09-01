@@ -80,18 +80,10 @@ export default function Careers() {
       description:'
         'Join our AI team to develop cutting-edge machine learning solutions and autonomous systems.',
       requirements: ['
-        'Strong background in machine learning and deep learning',
-        'Experience with Python, TensorFlow, PyTorch',
-        'Knowledge of computer vision and NLP',
-        'Experience with cloud platforms (AWS, Azure, GCP),
-        'PhD in Computer Science or related field preferred',
+        'Strong background in machine learning and deep learning',Experience with Python, TensorFlow, PyTorch',Knowledge of computer vision and NLP',Experience with cloud platforms (AWS, Azure, GCP),PhD in Computer Science or related field preferred',
       ],
       benefits: ['
-        'Competitive salary and equity',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Health, dental, and vision insurance',
-        '401(k) with company match',
+        'Competitive salary and equity',Flexible work arrangements',Professional development budget',Health, dental, and vision insurance',401(k) with company match',
       ],
       icon: Brain,
       color: 'from-purple-500 to-pink-500'},
@@ -107,18 +99,10 @@ export default function Careers() {
       description:'
         'Research and develop quantum algorithms and quantum machine learning solutions.',
       requirements: ['
-        'PhD in Physics, Computer Science, or related field',
-        'Experience with quantum computing frameworks',
-        'Knowledge of quantum algorithms and quantum ML',
-        'Strong mathematical and analytical skills',
-        'Experience with Qiskit, Cirq, or similar platforms',
+        'PhD in Physics, Computer Science, or related field',Experience with quantum computing frameworks',Knowledge of quantum algorithms and quantum ML',Strong mathematical and analytical skills',Experience with Qiskit, Cirq, or similar platforms',
       ],
       benefits: ['
-        'Competitive salary and equity',
-        'Research publication support',
-        'Conference attendance funding',
-        'Collaboration with leading quantum research institutions',
-        'Comprehensive benefits package',Team events and activities'
+        'Competitive salary and equity',Research publication support',Conference attendance funding',Collaboration with leading quantum research institutions',Comprehensive benefits package',Team events and activities'
       ],
       icon: Zap,
       color: 'from-blue-500 to-cyan-500'},
@@ -134,18 +118,10 @@ export default function Careers() {
       description:'
         'Design and implement enterprise-grade security solutions for our clients.',
       requirements: ['
-        'Expertise in security architecture and design',
-        'Experience with zero-trust security models',
-        'Knowledge of compliance frameworks (SOC 2, ISO 27001),
-        'Experience with cloud security and DevSecOps',
-        'CISSP, CISM, or similar certifications preferred',
+        'Expertise in security architecture and design',Experience with zero-trust security models',Knowledge of compliance frameworks (SOC 2, ISO 27001),Experience with cloud security and DevSecOps',CISSP, CISM, or similar certifications preferred',
       ],
       benefits: ['
-        'Competitive salary and equity',
-        'Security certification support',
-        'Professional development opportunities',
-        'Health and wellness benefits',
-        'Flexible work arrangements',
+        'Competitive salary and equity',Security certification support',Professional development opportunities',Health and wellness benefits',Flexible work arrangements',
       ],
       icon: Shield,
       color: 'from-red-500 to-orange-500'},
@@ -161,18 +137,10 @@ export default function Careers() {
       description:'
         'Build and maintain scalable cloud infrastructure solutions.',
       requirements: ['
-        'Experience with AWS, Azure, or Google Cloud',
-        'Knowledge of infrastructure as code (Terraform, CloudFormation),
-        'Experience with containerization and Kubernetes',
-        'Understanding of DevOps practices and CI/CD',
-        'Experience with monitoring and logging tools',
+        'Experience with AWS, Azure, or Google Cloud',Knowledge of infrastructure as code (Terraform, CloudFormation),Experience with containerization and Kubernetes',Understanding of DevOps practices and CI/CD',Experience with monitoring and logging tools',
       ],
       benefits: ['
-        'Competitive salary and equity',
-        'Cloud certification support',
-        'Professional development budget',
-        'Health and dental insurance',
-        'Remote work flexibility',
+        'Competitive salary and equity',Cloud certification support',Professional development budget',Health and dental insurance',Remote work flexibility',
       ],
       icon: Cloud,
       color: 'from-green-500 to-emerald-500'},
@@ -188,18 +156,10 @@ export default function Careers() {
       description:'
         'Develop high-quality software solutions using modern technologies and best practices.',
       requirements: ['
-        'Strong programming skills in multiple languages',
-        'Experience with modern web frameworks and APIs',
-        'Knowledge of software design patterns and architecture',
-        'Experience with testing and quality assurance',
-        'Understanding of agile development methodologies',
+        'Strong programming skills in multiple languages',Experience with modern web frameworks and APIs',Knowledge of software design patterns and architecture',Experience with testing and quality assurance',Understanding of agile development methodologies',
       ],
       benefits: ['
-        'Competitive salary and equity',
-        'Professional development opportunities',
-        'Health and wellness benefits',
-        'Flexible work arrangements',
-        'Collaborative team environment',
+        'Competitive salary and equity',Professional development opportunities',Health and wellness benefits',Flexible work arrangements',Collaborative team environment',
       ],
       icon: Code,
       color: 'from-indigo-500 to-purple-500'},
@@ -215,18 +175,10 @@ export default function Careers() {
       description:'
         'Drive business growth by identifying and developing strategic partnerships.',
       requirements: ['
-        'Experience in B2B sales and business development',
-        'Knowledge of technology industry and trends',
-        'Strong communication and negotiation skills',
-        'Experience with CRM systems and sales processes',
-        'Ability to build and maintain client relationships',
+        'Experience in B2B sales and business development',Knowledge of technology industry and trends',Strong communication and negotiation skills',Experience with CRM systems and sales processes',Ability to build and maintain client relationships',
       ],
       benefits: ['
-        'Competitive base salary plus commission',
-        'Performance-based bonuses',
-        'Professional development support',
-        'Health and dental insurance',
-        'Flexible work arrangements',
+        'Competitive base salary plus commission',Performance-based bonuses',Professional development support',Health and dental insurance',Flexible work arrangements',
       ],
       icon: Users,
       color: 'from-blue-500 to-indigo-500'},

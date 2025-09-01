@@ -65,27 +65,7 @@ import EnhancedSEOManager from "../components/EnhancedSEOManager";
       color: 'from-purple-500 to-pink-500',
       title: 'AI-Powered Solutions',
       items: ['
-        'AI Workflow Orchestrator - Intelligent workflow automation',
-        'AI Data Governance Platform - Comprehensive data compliance',
-        'AI Customer Experience Analytics - Advanced customer insights',
-        'AI Business Intelligence Analytics - ML-powered insights',
-        'AI Compliance Assistant - Automated regulatory compliance',
-        'AI Sales Copilot - Intelligent sales optimization',
-        'AI-Powered SEO - Machine learning optimization',
-        'Interview Assessment AI - Candidate evaluation',
-        'AI Content Marketing Suite - Automated content creation',
-        'AI Customer Support Automation - Intelligent support',
-        'AI Project Management - AI-driven optimization',
-        'AI Financial Analytics - Intelligent financial insights',
-        'AI Financial Risk Management - Risk assessment',
-        'AI Code Review Security Scanner - Security analysis',
-        'AI DevOps Automation Platform - DevOps automation',
-        'AI Customer Experience Support - Enhanced experience',
-        'AI Marketing Automation Personalization - Personalization',
-        'AI Quantum Hybrid Platform - Quantum-AI integration',
-        'AI Quantum Financial Trading - Quantum trading',
-        'AI Autonomous Supply Chain - Supply chain automation',
-        'AI Cybersecurity Threat Intelligence - Threat detection'
+        'AI Workflow Orchestrator - Intelligent workflow automation',AI Data Governance Platform - Comprehensive data compliance',AI Customer Experience Analytics - Advanced customer insights',AI Business Intelligence Analytics - ML-powered insights',AI Compliance Assistant - Automated regulatory compliance',AI Sales Copilot - Intelligent sales optimization',AI-Powered SEO - Machine learning optimization',Interview Assessment AI - Candidate evaluation',AI Content Marketing Suite - Automated content creation',AI Customer Support Automation - Intelligent support',AI Project Management - AI-driven optimization',AI Financial Analytics - Intelligent financial insights',AI Financial Risk Management - Risk assessment',AI Code Review Security Scanner - Security analysis',AI DevOps Automation Platform - DevOps automation',AI Customer Experience Support - Enhanced experience',AI Marketing Automation Personalization - Personalization',AI Quantum Hybrid Platform - Quantum-AI integration',AI Quantum Financial Trading - Quantum trading',AI Autonomous Supply Chain - Supply chain automation',AI Cybersecurity Threat Intelligence - Threat detection'
       ]
     },
     {
@@ -95,10 +75,7 @@ import EnhancedSEOManager from "../components/EnhancedSEOManager";
       color: 'from-blue-500 to-cyan-500',
       title: 'Infrastructure Excellence',
       items: ['
-        'Cloud DevOps - Infrastructure automation & scaling',
-        'IT Infrastructure - Enterprise infrastructure solutions',
-        'FinOps Advisor - Cloud cost optimization',
-        'Cloud FinOps Optimizer - Financial operations automation'
+        'Cloud DevOps - Infrastructure automation & scaling',IT Infrastructure - Enterprise infrastructure solutions',FinOps Advisor - Cloud cost optimization',Cloud FinOps Optimizer - Financial operations automation'
       ]
     },
     {
@@ -108,10 +85,7 @@ import EnhancedSEOManager from "../components/EnhancedSEOManager";
       color: 'from-red-500 to-orange-500',
       title: 'Security First',
       items: ['
-        'AI Cybersecurity Platform - Advanced AI-powered security',
-        'Security Headers & CSP - Web security hardening',
-        'DSR Privacy Portal - GDPR/CCPA compliance',
-        'Zero Trust Network Access - Modern security architecture'
+        'AI Cybersecurity Platform - Advanced AI-powered security',Security Headers & CSP - Web security hardening',DSR Privacy Portal - GDPR/CCPA compliance',Zero Trust Network Access - Modern security architecture'
       ]
     },
     {
@@ -121,9 +95,7 @@ import EnhancedSEOManager from "../components/EnhancedSEOManager";
       color: 'from-yellow-500 to-orange-500',
       title: 'Future-Ready Solutions',
       items: ['
-        'Digital Twin - Virtual system replicas',
-        'Digital Transformation - Strategic technology consulting',
-        'IT Consulting - Technology strategy & planning'
+        'Digital Twin - Virtual system replicas',Digital Transformation - Strategic technology consulting',IT Consulting - Technology strategy & planning'
       ]
     },
     {
@@ -236,8 +208,7 @@ import EnhancedSEOManager from "../components/EnhancedSEOManager";
         description="Discover the revolutionary platform enhancements that make Zion Tech Group the most advanced business technology solution available today."
         keywords = {
 
-  ['platform improvements',AI services',technology enhancements',digital transformation',
-  'Zion Tech Group']
+  ['platform improvements',AI services',technology enhancements',digital transformation',Zion Tech Group']
 
 }
       />

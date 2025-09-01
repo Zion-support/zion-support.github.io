@@ -94,9 +94,7 @@ import { SEO } from '../components/SEO';
       color: 'from-purple-500 to-cyan-500',
       price: '$2,999/month',
       features: ['
-        'Quantum-Classical Hybrid Processing',
-        'AI-Quantum Algorithm Optimization',
-        'Real-time Quantum Error Correction',
+        'Quantum-Classical Hybrid Processing',AI-Quantum Algorithm Optimization',Real-time Quantum Error Correction',
       ],
       href: '/services/ai-quantum-hybrid-platform',
       category: 'AI & Quantum Computing',
@@ -111,9 +109,7 @@ import { SEO } from '../components/SEO';
       color: 'from-blue-500 to-cyan-500',
       price: '$299/month',
       features: ['
-        'Autonomous Research Discovery',
-        'Intelligent Literature Review',
-        'Research Paper Generation',
+        'Autonomous Research Discovery',Intelligent Literature Review',Research Paper Generation',
       ],
       href: '/services/ai-autonomous-research-assistant',
       category: 'AI & Research',
@@ -128,9 +124,7 @@ import { SEO } from '../components/SEO';
       color: 'from-red-500 to-orange-500',
       price: '$599/month',
       features: ['
-        'AI-Powered Threat Detection',
-        '24/7 Threat Monitoring',
-        'Predictive Threat Intelligence',
+        'AI-Powered Threat Detection',24/7 Threat Monitoring',Predictive Threat Intelligence',
       ],
       href: '/services/ai-cybersecurity-threat-intelligence',
       category: 'AI & Cybersecurity',
@@ -145,9 +139,7 @@ import { SEO } from '../components/SEO';
       color: 'from-green-500 to-emerald-500',
       price: '$799/month',
       features: ['
-        'Predictive Analytics',
-        'Real-time Dashboards',
-        'Automated Reporting',
+        'Predictive Analytics',Real-time Dashboards',Automated Reporting',
       ],
       href: '/services/ai-business-intelligence',
       category: 'AI & Analytics',
@@ -162,9 +154,7 @@ import { SEO } from '../components/SEO';
       color: 'from-yellow-500 to-orange-500',
       price: '$999/month',
       features: ['
-        'Financial Forecasting',
-        'Risk Assessment',
-        'Portfolio Optimization',
+        'Financial Forecasting',Risk Assessment',Portfolio Optimization',
       ],
       href: '/services/ai-financial-analytics',
       category: 'AI & Finance',
@@ -179,9 +169,7 @@ import { SEO } from '../components/SEO';
       color: 'from-pink-500 to-purple-500',
       price: '$699/month',
       features: ['
-        'Personalized Campaigns',
-        'ROI Optimization',
-        'Customer Segmentation',
+        'Personalized Campaigns',ROI Optimization',Customer Segmentation',
       ],
       href: '/services/ai-marketing-automation',
       category: 'AI & Marketing',
@@ -195,12 +183,7 @@ import { SEO } from '../components/SEO';
       icon: Brain,
       color: 'from-purple-500 to-cyan-500',
       services: ['
-        'AI Business Intelligence',
-        'AI Financial Analytics',
-        'AI Marketing Automation',
-        'AI Customer Support',
-        'AI Content Creation',
-        'AI HR Platform',
+        'AI Business Intelligence',AI Financial Analytics',AI Marketing Automation',AI Customer Support',AI Content Creation',AI HR Platform',
       ]},
     {
 
@@ -208,10 +191,7 @@ import { SEO } from '../components/SEO';
       icon: Atom,
       color: 'from-indigo-500 to-purple-500',
       services: ['
-        'AI Quantum Hybrid Platform',
-        'Quantum Computing Solutions',
-        'Quantum Machine Learning',
-        'Quantum Cryptography',
+        'AI Quantum Hybrid Platform',Quantum Computing Solutions',Quantum Machine Learning',Quantum Cryptography',
       ]},
     {
 
@@ -219,10 +199,7 @@ import { SEO } from '../components/SEO';
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       services: ['
-        'AI Cybersecurity Threat Intelligence',
-        'Zero Trust Network Access',
-        'Security Headers & CSP',
-        'DSR Privacy Portal',
+        'AI Cybersecurity Threat Intelligence',Zero Trust Network Access',Security Headers & CSP',DSR Privacy Portal',
       ]},
     {
 
@@ -230,10 +207,7 @@ import { SEO } from '../components/SEO';
       icon: Search,
       color: 'from-blue-500 to-cyan-500',
       services: ['
-        'AI Autonomous Research Assistant',
-        'Data Analytics Platform',
-        'Business Intelligence',
-        'Predictive Analytics',
+        'AI Autonomous Research Assistant',Data Analytics Platform',Business Intelligence',Predictive Analytics',
       ]},
     {
 
@@ -241,10 +215,7 @@ import { SEO } from '../components/SEO';
       icon: Cloud,
       color: 'from-cyan-500 to-blue-500',
       services: ['
-        'Cloud DevOps',
-        'IT Infrastructure',
-        'Digital Twin Platform',
-        'IoT Edge Computing',
+        'Cloud DevOps',IT Infrastructure',Digital Twin Platform',IoT Edge Computing',
       ]},
     {
 
@@ -252,20 +223,12 @@ import { SEO } from '../components/SEO';
       icon: ShoppingCart,
       color: 'from-orange-500 to-red-500',
       services: ['
-        'Micro CRM',
-        'Helpdesk Platform',
-        'Website Analytics',
-        'Affiliate Tracking',
+        'Micro CRM',Helpdesk Platform',Website Analytics',Affiliate Tracking',
       ]},
   ];
 
   const benefits = ['
-    'Cutting-edge AI technology with proven results',
-    'Transparent pricing with no hidden fees',
-    '24/7 support and dedicated account management',
-    'Custom integrations and white-label solutions',
-    'Comprehensive compliance and security standards',
-    'Scalable solutions that grow with your business',
+    'Cutting-edge AI technology with proven results',Transparent pricing with no hidden fees',24/7 support and dedicated account management',Custom integrations and white-label solutions',Comprehensive compliance and security standards',Scalable solutions that grow with your business',
   ];
 
   const pricingTiers = [
@@ -276,10 +239,7 @@ import { SEO } from '../components/SEO';
       period: 'monthly',
       description: 'Perfect for small businesses and startups',
       features: ['
-        'Basic AI features',
-        'Standard support',
-        'Core integrations',
-        'Basic analytics',
+        'Basic AI features',Standard support',Core integrations',Basic analytics',
       ]},
     {
 
@@ -288,11 +248,7 @@ import { SEO } from '../components/SEO';
       period: 'monthly',
       description: 'Advanced features for growing organizations',
       features: ['
-        'Advanced AI capabilities',
-        'Priority support',
-        'Custom integrations',
-        'Advanced analytics',
-        'API access',
+        'Advanced AI capabilities',Priority support',Custom integrations',Advanced analytics',API access',
       ]},
     {
 
@@ -301,11 +257,7 @@ import { SEO } from '../components/SEO';
       period: 'monthly',
       description: 'Full-scale solutions for large enterprises',
       features: ['
-        'Custom AI development',
-        '24/7 dedicated support',
-        'White-label solutions',
-        'On-premise deployment',
-        'Custom consulting',
+        'Custom AI development',24/7 dedicated support',White-label solutions',On-premise deployment',Custom consulting',
       ]},
   ];
 

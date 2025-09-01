@@ -38,7 +38,7 @@ export default function Services(...args[]):  {
 				case 'popularity':
 					return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
 				case 'price':'
-					return parseInt(a.price.replace('$',')) - parseInt(b.price.replace('$','))
+					return parseInt(a.price.replace('$',)) - parseInt(b.price.replace('$',))
 				case 'rating':
 					return (b.rating || 0) - (a.rating || 0)
 				case 'newest':'

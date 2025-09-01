@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMonitoring() {
   const features = [
-    'AI-powered security monitoring optimization',
-    'Intelligent monitoring strategy management and execution',;
+    'AI-powered security monitoring optimization',Intelligent monitoring strategy management and execution',;
     'Automated security threat detection and assessment',;
     'Predictive analytics for monitoring needs',;
     'Smart monitoring framework management',;

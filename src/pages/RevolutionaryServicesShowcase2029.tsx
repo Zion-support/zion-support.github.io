@@ -43,27 +43,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
   ];
 
   const categories = ['
-    'all',
-    'AI & Analytics',
-    'AI & Automation',
-    'AI & Cybersecurity',
-    'AI & Marketing',
-    'AI & Healthcare',
-    'AI & Development',
-    'AI & Supply Chain',
-    'AI & FinTech',
-    'AI & Legal Tech',
-    'AI & Customer Success',
-    'Space Technology & AI',
-    'Quantum Technology & Security',
-    'Neurotechnology & AI',
-    'AI & Autonomous Systems',
-    'AI & Biotechnology',
-    'Quantum Computing & AI',
-    'AI & Autonomous Vehicles',
-    'AI & Digital Twins',
-    'AI & Blockchain',
-    'AI & Metaverse',
+    'all',AI & Analytics',AI & Automation',AI & Cybersecurity',AI & Marketing',AI & Healthcare',AI & Development',AI & Supply Chain',AI & FinTech',AI & Legal Tech',AI & Customer Success',Space Technology & AI',Quantum Technology & Security',Neurotechnology & AI',AI & Autonomous Systems',AI & Biotechnology',Quantum Computing & AI',AI & Autonomous Vehicles',AI & Digital Twins',AI & Blockchain',AI & Metaverse',
   ];
 
   const filteredServices = allServices.filter(service => {
@@ -83,13 +63,13 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
 
       case 'price-low':
         return ('
-          parseFloat(a.price.replace('$',').replace(',,')) -'
-          parseFloat(b.price.replace('$',').replace(',,'))
+          parseFloat(a.price.replace('$',).replace(',,)) -'
+          parseFloat(b.price.replace('$',).replace(',,))
         );
       case 'price-high':
         return ('
-          parseFloat(b.price.replace('$',').replace(',,')) -'
-          parseFloat(a.price.replace('$',').replace(',,'))
+          parseFloat(b.price.replace('$',).replace(',,)) -'
+          parseFloat(a.price.replace('$',).replace(',,))
         );
       case 'rating':
         return b.rating - a.rating;

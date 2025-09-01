@@ -32,12 +32,7 @@ const ServicePortfolioDashboard = () => {
 
     ];
     const benefits = ['
-        'Comprehensive view of all service offerings and their performance',
-        'Real-time analytics and performance metrics for informed decision making',
-        'Portfolio optimization insights and strategic recommendations',
-        'Client engagement tracking and revenue analysis',
-        'Market demand analysis and competitive positioning',
-        'Technology maturity assessment and innovation tracking'
+        'Comprehensive view of all service offerings and their performance',Real-time analytics and performance metrics for informed decision making',Portfolio optimization insights and strategic recommendations',Client engagement tracking and revenue analysis',Market demand analysis and competitive positioning',Technology maturity assessment and innovation tracking'
     ];
     const portfolioStats = [
         {
@@ -109,8 +104,7 @@ const ServicePortfolioDashboard = () => {
               </Button>"
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
 
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Strategy Consultation',
-  '_blank')
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Strategy Consultation',_blank')
 
 
 
@@ -386,8 +380,7 @@ const ServicePortfolioDashboard = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick = {
 
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Optimization Consultation',
-  '_blank')
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Optimization Consultation',_blank')
 
 
 
@@ -400,8 +393,7 @@ const ServicePortfolioDashboard = () => {
               </Button>"
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
 
-  () => window.open('tel:+13024640950',
-  '_blank')
+  () => window.open('tel:+13024640950',_blank')
 
 
 

@@ -83,10 +83,7 @@ export default function OnsiteSupport(...args[]):  {
       icon: Globe,
       color: 'from-green-500 to-emerald-500',
       areas: ['
-        'New York Metro Area',
-        'Washington DC Metro',
-        'Philadelphia Metro',
-        'Baltimore Metro'
+        'New York Metro Area',Washington DC Metro',Philadelphia Metro',Baltimore Metro'
       ],
       responseTime: '4-8 hours'
     },
@@ -122,11 +119,7 @@ export default function OnsiteSupport(...args[]):  {
       icon: Star,
       color: 'from-green-500 to-emerald-500',
       features: ['
-        '2-hour response time',
-        'Extended hours support',
-        'Advanced troubleshooting',
-        'Priority scheduling',
-        'Monthly maintenance visits'
+        '2-hour response time',Extended hours support',Advanced troubleshooting',Priority scheduling',Monthly maintenance visits'
       ],
       pricing: 'Starting at $200/hour'
     },
@@ -137,8 +130,7 @@ export default function OnsiteSupport(...args[]):  {
       icon: Award,
       color: 'from-purple-500 to-pink-500',
       features: ['
-        '1-hour response time',
-        '24/7 availability',;
+        '1-hour response time',24/7 availability',;
         'Dedicated support team',;
         'Custom maintenance plans',;
         'Strategic consultation';

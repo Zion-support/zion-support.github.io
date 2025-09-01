@@ -22,10 +22,7 @@ const AISolutions = () => {
       description:'
         'Self-learning AI systems that operate independently and continuously improve performance',
       features: ['
-        'Machine Learning',
-        'Neural Networks',
-        'Predictive Analytics',
-        'Automated Decision Making',
+        'Machine Learning',Neural Networks',Predictive Analytics',Automated Decision Making',
       ],
       path: '/ai-autonomous-systems'},
     {
@@ -35,10 +32,7 @@ const AISolutions = () => {
       description:'
         'Intelligent research tools that accelerate discovery and analysis across all domains',
       features: ['
-        'Data Mining',
-        'Pattern Recognition',
-        'Literature Review',
-        'Hypothesis Generation',
+        'Data Mining',Pattern Recognition',Literature Review',Hypothesis Generation',
       ],
       path: '/ai-autonomous-research-assistant'},
     {
@@ -48,10 +42,7 @@ const AISolutions = () => {
       description:'
         'Advanced threat detection and prevention using artificial intelligence',
       features: ['
-        'Threat Intelligence',
-        'Behavioral Analysis',
-        'Real-time Monitoring',
-        'Automated Response',
+        'Threat Intelligence',Behavioral Analysis',Real-time Monitoring',Automated Response',
       ],
       path: '/ai-powered-enterprise-security'},
     {
@@ -61,10 +52,7 @@ const AISolutions = () => {
       description:'
         'Comprehensive business analytics and insights powered by AI',
       features: ['
-        'Data Visualization',
-        'Predictive Modeling',
-        'Performance Metrics',
-        'Strategic Planning',
+        'Data Visualization',Predictive Modeling',Performance Metrics',Strategic Planning',
       ],
       path: '/ai-business-intelligence'},
     {
@@ -74,10 +62,7 @@ const AISolutions = () => {
       description:'
         'Automated content creation for marketing, documentation, and communication',
       features: ['
-        'Text Generation',
-        'Image Creation',
-        'Video Production',
-        'Multilingual Support',
+        'Text Generation',Image Creation',Video Production',Multilingual Support',
       ],
       path: '/ai-content-generator'},
     {
@@ -87,10 +72,7 @@ const AISolutions = () => {
       description:'
         'Intelligent automation for sales processes and marketing campaigns',
       features: ['
-        'Lead Scoring',
-        'Customer Segmentation',
-        'Campaign Optimization',
-        'ROI Analysis',
+        'Lead Scoring',Customer Segmentation',Campaign Optimization',ROI Analysis',
       ],
       path: '/ai-agentic-sales-outreach'},
   ];

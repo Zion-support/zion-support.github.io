@@ -50,43 +50,21 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
   }, []);
 
   const features = ['
-    'Quantum-powered market analysis',
-    'AI-driven trading algorithms',
-    'Real-time market prediction',
-    'Risk assessment automation',
-    'Portfolio optimization',
-    'High-frequency trading capabilities',
-    'Multi-exchange integration',
-    'Advanced security protocols',
-    'Performance analytics',
-    'Custom trading strategies',
+    'Quantum-powered market analysis',AI-driven trading algorithms',Real-time market prediction',Risk assessment automation',Portfolio optimization',High-frequency trading capabilities',Multi-exchange integration',Advanced security protocols',Performance analytics',Custom trading strategies',
   ];
 
   const benefits = ['
-    '1000x faster market analysis',
-    '95% prediction accuracy',
-    'Real-time risk management',
-    'Automated portfolio rebalancing',
-    'Quantum advantage in trading',
+    '1000x faster market analysis',95% prediction accuracy',Real-time risk management',Automated portfolio rebalancing',Quantum advantage in trading',
   ];
 
   const useCases = ['
-    'Algorithmic trading',
-    'Portfolio management',
-    'Risk assessment',
-    'Market analysis',
-    'High-frequency trading',
+    'Algorithmic trading',Portfolio management',Risk assessment',Market analysis',High-frequency trading',
   ];
 
   const technicalSpecs = {
 
     technology: ['
-      'IBM Qiskit',
-      'Google Cirq',
-      'Python',
-      'TensorFlow',
-      'React',
-      'Node.js',
+      'IBM Qiskit',Google Cirq',Python',TensorFlow',React',Node.js',
     ],
     integrations: ['Bloomberg',Reuters',NYSE',NASDAQ',LSE'],
     apiEndpoints: 500,
@@ -99,11 +77,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
     yearly: '$99,999',
     enterprise: 'Custom',
     features: ['
-      'Full quantum trading capabilities',
-      'Unlimited trading volume',
-      'Priority support',
-      'Custom integrations',
-      'Advanced analytics',
+      'Full quantum trading capabilities',Unlimited trading volume',Priority support',Custom integrations',Advanced analytics',
     ]};
 
   return()

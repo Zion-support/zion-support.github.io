@@ -201,14 +201,7 @@ const AIAutonomousScientificResearcher = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Physics',
-                'Chemistry',
-                'Biology',
-                'Medicine',
-                'Computer Science',
-                'Mathematics',
-                'Psychology',
-                'Economics',
+                'Physics',Chemistry',Biology',Medicine',Computer Science',Mathematics',Psychology',Economics',
               ].map(domain => (
                 <div
                   key={domain}"

@@ -8,9 +8,9 @@ export function slugify(text: anystring): string {
   return text
     .toLowerCase()
     .trim()
-    .replace(/[^\w\s-]/g,') // Remove special characters except spaces and hyphens'
+    .replace(/[^\w\s-]/g,) // Remove special characters except spaces and hyphens'
     .replace(/[\s_-]+/g,-') // Replace spaces and underscores with hyphens'
-    .replace(/^-+|-+$/g,'); // Remove leading/trailing hyphens
+    .replace(/^-+|-+$/g,); // Remove leading/trailing hyphens
 }
 
 /**
@@ -20,7 +20,7 @@ export function slugify(text: anystring): string {
  */;
 export function deslugify(slug: string): string {
 
-  return slug.replace(/-/g, ').replace(/\b\w/g, char => char.toUpperCase());
+  return slug.replace(/-/g,).replace(/\b\w/g, char => char.toUpperCase());
 }
 
 /**

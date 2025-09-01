@@ -13,12 +13,7 @@ import {
   Search} from 'lucide-react';
 const AIBusinessIntelligence = () => {
   const benefits = ['
-    'Data-driven decision making across all business areas',
-    'Real-time insights and instant access to critical information',
-    'Automated reporting and reduced manual analysis time',
-    'Predictive capabilities for proactive business planning',
-    'Improved operational efficiency and cost optimization',
-    'Enhanced customer understanding and engagement',
+    'Data-driven decision making across all business areas',Real-time insights and instant access to critical information',Automated reporting and reduced manual analysis time',Predictive capabilities for proactive business planning',Improved operational efficiency and cost optimization',Enhanced customer understanding and engagement',
   ];
   const implementation = [
     {

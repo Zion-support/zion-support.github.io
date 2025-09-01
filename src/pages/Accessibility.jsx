@@ -24,12 +24,7 @@ import {
       description:'
         'Support for screen readers, high contrast modes, and text scaling',
       features: ['
-        'Screen reader compatibility (NVDA, JAWS, VoiceOver),
-        'High contrast color schemes',
-        'Adjustable text sizes (up to 200%),
-        'Alternative text for images',
-        'Keyboard navigation support',
-        'Focus indicators and landmarks',
+        'Screen reader compatibility (NVDA, JAWS, VoiceOver),High contrast color schemes',Adjustable text sizes (up to 200%),Alternative text for images',Keyboard navigation support',Focus indicators and landmarks',
       ]},
     {
 "
@@ -38,11 +33,7 @@ import {
       description:'
         'Captions, transcripts, and audio alternatives for multimedia content',
       features: ['
-        'Closed captions for videos',
-        'Audio descriptions for visual content',
-        'Transcripts for audio content',
-        'Volume controls and audio indicators',
-        'Visual alerts and notifications',
+        'Closed captions for videos',Audio descriptions for visual content',Transcripts for audio content',Volume controls and audio indicators',Visual alerts and notifications',
       ]},
     {
 "
@@ -51,12 +42,7 @@ import {
       description:'
         'Keyboard navigation, voice control, and assistive technology support',
       features: ['
-        'Full keyboard navigation',
-        'Voice control compatibility',
-        'Switch device support',
-        'Customizable click targets',
-        'Gesture alternatives',
-        'Timing adjustments',
+        'Full keyboard navigation',Voice control compatibility',Switch device support',Customizable click targets',Gesture alternatives',Timing adjustments',
       ]},
     {
 "
@@ -65,12 +51,7 @@ import {
       description:'
         'Clear navigation, consistent design, and simplified interfaces',
       features: ['
-        'Clear and simple language',
-        'Consistent navigation patterns',
-        'Logical content structure',
-        'Error prevention and recovery',
-        'Help and support resources',
-        'Minimal distractions',
+        'Clear and simple language',Consistent navigation patterns',Logical content structure',Error prevention and recovery',Help and support resources',Minimal distractions',
       ]},
   ];
 

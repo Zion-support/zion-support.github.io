@@ -34,10 +34,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
       description:'
         'Advanced monitoring systems that detect and alert on security incidents as they occur.',
       benefits: ['
-        '24/7 monitoring',
-        'Instant alerts',
-        'Threat intelligence',
-        'Behavioral analysis',
+        '24/7 monitoring',Instant alerts',Threat intelligence',Behavioral analysis',
       ]},
     {
 
@@ -46,10 +43,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
       description:'
         'Automated incident response workflows that minimize response time and impact.',
       benefits: ['
-        'Automated containment',
-        'Quick isolation',
-        'Response playbooks',
-        'Time tracking',
+        'Automated containment',Quick isolation',Response playbooks',Time tracking',
       ]},
     {
 
@@ -58,10 +52,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
       description:'
         'Certified cybersecurity professionals with extensive incident response experience.',
       benefits: ['
-        'Certified analysts',
-        'Industry expertise',
-        'Continuous training',
-        'Team coordination',
+        'Certified analysts',Industry expertise',Continuous training',Team coordination',
       ]},
     {
 
@@ -70,10 +61,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
       description:'
         'Comprehensive digital forensics to understand attack vectors and prevent future incidents.',
       benefits: ['
-        'Evidence preservation',
-        'Root cause analysis',
-        'Attack reconstruction',
-        'Legal compliance',
+        'Evidence preservation',Root cause analysis',Attack reconstruction',Legal compliance',
       ]},
   ];
 
@@ -82,41 +70,25 @@ export default function IncidentResponsePlatform(...args: any[]): any {
 
       category: 'Detection & Monitoring',
       services: ['
-        'SIEM integration and correlation',
-        'Network traffic analysis',
-        'Endpoint detection and response',
-        'User behavior analytics',
-        'Threat intelligence feeds',
+        'SIEM integration and correlation',Network traffic analysis',Endpoint detection and response',User behavior analytics',Threat intelligence feeds',
       ]},
     {
 
       category: 'Response & Containment',
       services: ['
-        'Automated incident triage',
-        'Threat containment workflows',
-        'System isolation protocols',
-        'Communication coordination',
-        'Escalation procedures',
+        'Automated incident triage',Threat containment workflows',System isolation protocols',Communication coordination',Escalation procedures',
       ]},
     {
 
       category: 'Investigation & Analysis',
       services: ['
-        'Digital forensics collection',
-        'Malware analysis',
-        'Attack timeline reconstruction',
-        'Impact assessment',
-        'Evidence documentation',
+        'Digital forensics collection',Malware analysis',Attack timeline reconstruction',Impact assessment',Evidence documentation',
       ]},
     {
 
       category: 'Recovery & Lessons',
       services: ['
-        'System restoration',
-        'Security hardening',
-        'Post-incident review',
-        'Process improvement',
-        'Training recommendations',
+        'System restoration',Security hardening',Post-incident review',Process improvement',Training recommendations',
       ]},
   ];
 

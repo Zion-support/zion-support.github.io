@@ -185,7 +185,7 @@ export default function ExpandedServicesPage() {
                     <Badge
                       className={getPricingModelColor(service.pricingModel)}
                     >
-                      {service.pricingModel.replace('-', ')}
+                      {service.pricingModel.replace('-',)}
                     </Badge>
                   </div>"
                   <CardTitle className="text-xl text-zion-blue-dark">

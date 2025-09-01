@@ -185,14 +185,7 @@ const AIAutonomousIOTSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Device Security',
-                'Network Security',
-                'Data Security',
-                'Access Control',
-                'Authentication Security',
-                'Communication Security',
-                'Firmware Security',
-                'Update Security',
+                'Device Security',Network Security',Data Security',Access Control',Authentication Security',Communication Security',Firmware Security',Update Security',
               ].map(type => (
                 <div
                   key={type}"

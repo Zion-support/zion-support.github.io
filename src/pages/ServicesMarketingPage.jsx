@@ -9,23 +9,16 @@ const ServicesMarketingPage = () => {
   ];
   const serviceCategories = {
 
-    'Micro SAAS': allServices.filter(s => s.category === 'Micro SAAS'),
-    'IT Services': allServices.filter(s => s.category === 'IT Services'),
-    'AI Solutions': allServices.filter(s => s.category === 'AI Solutions'),
-    'Blockchain & Web3': allServices.filter('
+    'Micro SAAS': allServices.filter(s => s.category === 'Micro SAAS'),IT Services': allServices.filter(s => s.category === 'IT Services'),AI Solutions': allServices.filter(s => s.category === 'AI Solutions'),Blockchain & Web3': allServices.filter('
       s => s.category === 'Blockchain & Web3'
-    ),
-    'IoT & Edge Computing': allServices.filter('
+    ),IoT & Edge Computing': allServices.filter('
       s => s.category === 'IoT & Edge Computing'
-    ),
-    'Sustainable Technology': allServices.filter('
+    ),Sustainable Technology': allServices.filter('
       s => s.category === 'Sustainable Technology'
-    ),
-    'Space Technology': allServices.filter('
+    ),Space Technology': allServices.filter('
       s => s.category === 'Space Technology'
     ),
-    Biotechnology: allServices.filter(s => s.category === 'Biotechnology'),
-    'Quantum Technology': allServices.filter('
+    Biotechnology: allServices.filter(s => s.category === 'Biotechnology'),Quantum Technology': allServices.filter('
       s => s.category === 'Quantum Technology'
     )};
   return()

@@ -181,14 +181,7 @@ const AIAutonomousCustomerService = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Ticket Management',
-                'Live Chat',
-                'Voice Support',
-                'Email Automation',
-                'Social Media',
-                'Self-Service Portal',
-                'Mobile Support',
-                'Feedback Collection',
+                'Ticket Management',Live Chat',Voice Support',Email Automation',Social Media',Self-Service Portal',Mobile Support',Feedback Collection',
               ].map(feature => (
                 <div
                   key={feature}"

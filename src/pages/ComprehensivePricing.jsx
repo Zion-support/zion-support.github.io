@@ -175,8 +175,7 @@ const ComprehensivePricing = () => {
               <div className="flex gap-2">"
                 <Button size="sm" className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold transition-all duration-300" onClick = {
 
-  () => window.open(service.contactInfo.website,
-  '_blank')
+  () => window.open(service.contactInfo.website,_blank')
 
 
 
@@ -281,8 +280,7 @@ const ComprehensivePricing = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-3" onClick = {
 
-  () => window.open('https://ziontechgroup.com',
-  '_blank')
+  () => window.open('https://ziontechgroup.com',_blank')
 
 
 

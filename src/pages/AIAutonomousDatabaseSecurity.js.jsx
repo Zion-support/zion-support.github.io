@@ -189,14 +189,7 @@ const AIAutonomousDatabaseSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'SQL Database Security',
-                'NoSQL Database Security',
-                'Cloud Database Security',
-                'Authentication Security',
-                'Authorization Security',
-                'Data Encryption Security',
-                'Backup Security',
-                'Audit Security',
+                'SQL Database Security',NoSQL Database Security',Cloud Database Security',Authentication Security',Authorization Security',Data Encryption Security',Backup Security',Audit Security',
               ].map(type => (
                 <div
                   key={type}"

@@ -368,8 +368,7 @@ const Match: React.FC = () => {;
                   <Link
                     to = {
 `
-  `/services/${service.name.toLowerCase().replace(/\s+/g,
-  '-')
+  `/services/${service.name.toLowerCase().replace(/\s+/g,-')
 
 
 

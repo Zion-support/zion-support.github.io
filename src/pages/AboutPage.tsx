@@ -66,9 +66,7 @@ export function AboutPage(...args: any[]): any {
       role: 'Chief Executive Officer',"
       bio: "Former AI researcher at Stanford, leading Zion Tech Group's vision for the future of technology.",
       expertise: ['
-        'AI & Machine Learning',
-        'Strategic Leadership',
-        'Technology Innovation',
+        'AI & Machine Learning',Strategic Leadership',Technology Innovation',
       ],
       avatar: '👩‍💼'},
     {
@@ -77,9 +75,7 @@ export function AboutPage(...args: any[]): any {
       role: 'Chief Technology Officer',
       bio: 'Quantum computing expert with 15+ years in advanced technology development.',
       expertise: ['
-        'Quantum Computing',
-        'System Architecture',
-        'Research & Development',
+        'Quantum Computing',System Architecture',Research & Development',
       ],
       avatar: '👨‍💻'},
     {

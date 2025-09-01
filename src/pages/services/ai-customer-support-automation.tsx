@@ -99,12 +99,7 @@ export default function AICustomerSupportAutomation() {
   ];
 
   const benefits = ['
-    'Reduce response time by 90% with instant automated support',
-    'Handle 80% of customer inquiries without human intervention',
-    'Improve customer satisfaction scores by 40%',
-    'Reduce support costs by 60% through automation',
-    'Scale support operations without proportional cost increases',
-    'Provide 24/7 customer support across all time zones',
+    'Reduce response time by 90% with instant automated support',Handle 80% of customer inquiries without human intervention',Improve customer satisfaction scores by 40%',Reduce support costs by 60% through automation',Scale support operations without proportional cost increases',Provide 24/7 customer support across all time zones',
   ];
 
   const supportChannels = [
@@ -114,10 +109,7 @@ export default function AICustomerSupportAutomation() {
       title: 'Live Chat',
       description: 'Real-time chat support with instant responses',
       features: ['
-        'Instant responses',
-        'Context awareness',
-        'File sharing',
-        'Screen sharing',
+        'Instant responses',Context awareness',File sharing',Screen sharing',
       ]},
     {
 
@@ -125,10 +117,7 @@ export default function AICustomerSupportAutomation() {
       title: 'Voice Support',
       description: 'AI-powered voice assistants and call routing',
       features: ['
-        'Voice recognition',
-        'Call routing',
-        'Voice analytics',
-        'Call recording',
+        'Voice recognition',Call routing',Voice analytics',Call recording',
       ]},
     {
 
@@ -142,10 +131,7 @@ export default function AICustomerSupportAutomation() {
       title: 'Social Media',
       description: 'Multi-platform social media support integration',
       features: ['
-        'Multi-platform',
-        'Sentiment analysis',
-        'Auto-responses',
-        'Escalation',
+        'Multi-platform',Sentiment analysis',Auto-responses',Escalation',
       ]},
   ];
 
@@ -155,40 +141,28 @@ export default function AICustomerSupportAutomation() {
       industry: 'E-commerce',
       icon: ShoppingBag,
       applications: ['
-        'Order status inquiries and tracking',
-        'Product recommendations and support',
-        'Return and refund processing',
-        'Payment and billing assistance',
+        'Order status inquiries and tracking',Product recommendations and support',Return and refund processing',Payment and billing assistance',
       ]},
     {
 
       industry: 'SaaS',
       icon: Cpu,
       applications: ['
-        'Technical support and troubleshooting',
-        'Account management and billing',
-        'Feature requests and feedback',
-        'Onboarding and training support',
+        'Technical support and troubleshooting',Account management and billing',Feature requests and feedback',Onboarding and training support',
       ]},
     {
 
       industry: 'Healthcare',
       icon: Heart,
       applications: ['
-        'Appointment scheduling and reminders',
-        'Medical information and FAQs',
-        'Insurance and billing support',
-        'Patient portal assistance',
+        'Appointment scheduling and reminders',Medical information and FAQs',Insurance and billing support',Patient portal assistance',
       ]},
     {
 
       industry: 'Financial Services',
       icon: Coins,
       applications: ['
-        'Account balance and transaction inquiries',
-        'Fraud detection and security alerts',
-        'Loan and credit applications',
-        'Investment advice and portfolio management',
+        'Account balance and transaction inquiries',Fraud detection and security alerts',Loan and credit applications',Investment advice and portfolio management',
       ]},
   ];
 

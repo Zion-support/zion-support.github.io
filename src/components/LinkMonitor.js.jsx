@@ -61,7 +61,7 @@ export const LinkMonitor = ({
       validationResult.suggestedFix.startsWith('Redirect to:')
     ) {
 
-      const newUrl = validationResult.suggestedFix.replace('Redirect to: ',');
+      const newUrl = validationResult.suggestedFix.replace('Redirect to: ',);
       // Find and update the link
       const links = document.querySelectorAll(`a[href="${originalUrl}"]`);
       links.forEach(link => {

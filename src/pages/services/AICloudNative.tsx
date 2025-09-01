@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICloudNative() {
   const features = [
-    'AI-powered cloud native optimization',
-    'Intelligent cloud native management',;
+    'AI-powered cloud native optimization',Intelligent cloud native management',;
     'Automated cloud native monitoring and alerting',;
     'Predictive analytics for cloud native scaling',;
     'Smart cloud native security and compliance',;

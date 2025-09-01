@@ -49,12 +49,7 @@ const solutionCategories = [
     description: 'Transform your business with intelligent automation and predictive insights',
     color: 'from-purple-500 to-indigo-600',
     solutions: ['
-      'Predictive Analytics',
-      'Natural Language Processing',
-      'Computer Vision',
-      'Recommendation Systems',
-      'Chatbots & Virtual Assistants',
-      'Machine Learning Models'
+      'Predictive Analytics',Natural Language Processing',Computer Vision',Recommendation Systems',Chatbots & Virtual Assistants',Machine Learning Models'
     ]
   },
   {
@@ -65,12 +60,7 @@ const solutionCategories = [
     description: 'Protect your digital assets with enterprise-grade security solutions',
     color: 'from-red-500 to-pink-600',
     solutions: ['
-      'Threat Detection & Response',
-      'Identity & Access Management',
-      'Security Compliance',
-      'Penetration Testing',
-      'Security Training',
-      'Incident Response'
+      'Threat Detection & Response',Identity & Access Management',Security Compliance',Penetration Testing',Security Training',Incident Response'
     ]
   },
   {
@@ -81,12 +71,7 @@ const solutionCategories = [
     description: 'Scale your infrastructure with flexible and cost-effective cloud solutions',
     color: 'from-blue-500 to-cyan-600',
     solutions: ['
-      'Cloud Migration',
-      'Infrastructure as Code',
-      'Container Orchestration',
-      'Serverless Computing',
-      'Multi-cloud Strategy',
-      'Cloud Security'
+      'Cloud Migration',Infrastructure as Code',Container Orchestration',Serverless Computing',Multi-cloud Strategy',Cloud Security'
     ]
   },
   {
@@ -97,12 +82,7 @@ const solutionCategories = [
     description: 'Turn your data into actionable insights for better decision making',
     color: 'from-green-500 to-emerald-600',
     solutions: ['
-      'Business Intelligence',
-      'Data Warehousing',
-      'Real-time Analytics',
-      'Predictive Modeling',
-      'Data Visualization',
-      'Big Data Processing'
+      'Business Intelligence',Data Warehousing',Real-time Analytics',Predictive Modeling',Data Visualization',Big Data Processing'
     ]
   },
   {
@@ -113,12 +93,7 @@ const solutionCategories = [
     description: 'Connect devices and process data closer to the source for real-time insights',
     color: 'from-yellow-500 to-orange-600',
     solutions: ['
-      'IoT Device Management',
-      'Edge Computing Platforms',
-      'Sensor Networks',
-      'Real-time Monitoring',
-      'Predictive Maintenance',
-      'Smart City Solutions'
+      'IoT Device Management',Edge Computing Platforms',Sensor Networks',Real-time Monitoring',Predictive Maintenance',Smart City Solutions'
     ]
   },
   {
@@ -129,8 +104,7 @@ const solutionCategories = [
     description: 'Modernize your business processes and customer experience',
     color: 'from-indigo-500 to-purple-600',
     solutions: ['
-      'Process Automation',
-      'Customer Experience',;
+      'Process Automation',Customer Experience',;
       'Legacy Modernization',;
       'Digital Strategy',;
       'Change Management',;
@@ -145,12 +119,7 @@ const industrySolutions = [
     industry: 'Healthcare',
     icon: Heart,
     solutions: ['
-      'Electronic Health Records',
-      'Telemedicine Platforms',
-      'Medical Imaging AI',
-      'Patient Data Analytics',
-      'Healthcare Security',
-      'Regulatory Compliance'
+      'Electronic Health Records',Telemedicine Platforms',Medical Imaging AI',Patient Data Analytics',Healthcare Security',Regulatory Compliance'
     ],
     color: 'from-pink-500 to-rose-600'
   },
@@ -159,12 +128,7 @@ const industrySolutions = [
     industry: 'Finance',
     icon: DollarSign,
     solutions: ['
-      'Fintech Applications',
-      'Risk Management',
-      'Fraud Detection',
-      'Regulatory Compliance',
-      'Digital Banking',
-      'Blockchain Solutions'
+      'Fintech Applications',Risk Management',Fraud Detection',Regulatory Compliance',Digital Banking',Blockchain Solutions'
     ],
     color: 'from-green-500 to-emerald-600'
   },
@@ -173,12 +137,7 @@ const industrySolutions = [
     industry: 'Manufacturing',
     icon: Cpu,
     solutions: ['
-      'Smart Manufacturing',
-      'Predictive Maintenance',
-      'Quality Control',
-      'Supply Chain Optimization',
-      'Industrial IoT',
-      'Automation Systems'
+      'Smart Manufacturing',Predictive Maintenance',Quality Control',Supply Chain Optimization',Industrial IoT',Automation Systems'
     ],
     color: 'from-blue-500 to-cyan-600'
   },
@@ -187,12 +146,7 @@ const industrySolutions = [
     industry: 'Retail',
     icon: ShoppingCart,
     solutions: ['
-      'E-commerce Platforms',
-      'Customer Analytics',
-      'Inventory Management',
-      'Omnichannel Solutions',
-      'Personalization',
-      'Supply Chain Management'
+      'E-commerce Platforms',Customer Analytics',Inventory Management',Omnichannel Solutions',Personalization',Supply Chain Management'
     ],
     color: 'from-purple-500 to-indigo-600'
   },
@@ -201,12 +155,7 @@ const industrySolutions = [
     industry: 'Education',
     icon: BookOpen,
     solutions: ['
-      'Learning Management Systems',
-      'Virtual Classrooms',
-      'Student Analytics',
-      'Content Management',
-      'Assessment Tools',
-      'Collaboration Platforms'
+      'Learning Management Systems',Virtual Classrooms',Student Analytics',Content Management',Assessment Tools',Collaboration Platforms'
     ],
     color: 'from-yellow-500 to-orange-600'
   },
@@ -215,9 +164,7 @@ const industrySolutions = [
     industry: 'Government',
     icon: Shield,
     solutions: ['
-      'Digital Services',
-      'Data Security',
-      'Process Automation',;
+      'Digital Services',Data Security',Process Automation',;
       'Citizen Engagement',;
       'Regulatory Compliance',;
       'Infrastructure Management';
@@ -234,18 +181,10 @@ const featuredSolutions = [
     category: 'AI & ML',
     description: 'Transform your data into actionable insights with our advanced AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.',
     features: ['
-      'Real-time data processing',
-      'Predictive analytics models',
-      'Custom dashboard creation',
-      'Automated reporting',
-      'Natural language queries',
-      'Mobile-responsive design'
+      'Real-time data processing',Predictive analytics models',Custom dashboard creation',Automated reporting',Natural language queries',Mobile-responsive design'
     ],
     benefits: ['
-      '30% faster decision making',
-      'Reduced manual reporting',
-      'Improved data accuracy',
-      'Enhanced user experience'
+      '30% faster decision making',Reduced manual reporting',Improved data accuracy',Enhanced user experience'
     ],
     price: 'Starting at $2,500/month',
     implementation: '4-8 weeks',
@@ -259,18 +198,10 @@ const featuredSolutions = [
     category: 'Cybersecurity',
     description: 'Implement a comprehensive security framework that continuously verifies every user, device, and connection to protect your organization from modern threats.',
     features: ['
-      'Identity verification',
-      'Device authentication',
-      'Network segmentation',
-      'Threat detection',
-      'Compliance monitoring',
-      'Incident response'
+      'Identity verification',Device authentication',Network segmentation',Threat detection',Compliance monitoring',Incident response'
     ],
     benefits: ['
-      '99.9% threat detection rate',
-      'Reduced security incidents',
-      'Compliance achievement',
-      'Lower insurance costs'
+      '99.9% threat detection rate',Reduced security incidents',Compliance achievement',Lower insurance costs'
     ],
     price: 'Starting at $3,200/month',
     implementation: '6-12 weeks',
@@ -284,18 +215,10 @@ const featuredSolutions = [
     category: 'Cloud Computing',
     description: 'Build scalable, resilient, and cost-effective infrastructure using modern cloud-native technologies and best practices.',
     features: ['
-      'Auto-scaling infrastructure',
-      'Container orchestration',
-      'CI/CD pipelines',
-      'Monitoring & alerting',
-      'Disaster recovery',
-      'Cost optimization'
+      'Auto-scaling infrastructure',Container orchestration',CI/CD pipelines',Monitoring & alerting',Disaster recovery',Cost optimization'
     ],
     benefits: ['
-      '50% infrastructure cost reduction',
-      '99.9% uptime guarantee',
-      'Faster deployment cycles',
-      'Improved scalability';
+      '50% infrastructure cost reduction',99.9% uptime guarantee',Faster deployment cycles',Improved scalability';
     ],;
     price: 'Starting at $1,800/month',;
     implementation: '8-16 weeks',;
@@ -326,18 +249,10 @@ const featuredSolutions = [
       description: 'Scalable enterprise-grade solutions for large organizations',
       color: 'from-blue-500 to-indigo-600',
       features: ['
-        'Digital Transformation Consulting',
-        'Enterprise AI Integration',
-        'Scalable Cloud Infrastructure',
-        'Enterprise Security & Compliance',
-        'Business Process Automation',
-        'Data Governance & Analytics'
+        'Digital Transformation Consulting',Enterprise AI Integration',Scalable Cloud Infrastructure',Enterprise Security & Compliance',Business Process Automation',Data Governance & Analytics'
       ],
       useCases: ['
-        'Fortune 500 Digital Transformation',
-        'Multi-national AI Implementation',
-        'Enterprise Security Modernization',
-        'Legacy System Migration'
+        'Fortune 500 Digital Transformation',Multi-national AI Implementation',Enterprise Security Modernization',Legacy System Migration'
       ],
       href: '/solutions/enterprise'
     },
@@ -350,18 +265,10 @@ const featuredSolutions = [
       description: 'AI-powered healthcare solutions for improved patient outcomes',
       color: 'from-red-500 to-pink-600',
       features: ['
-        'AI Diagnostic Tools',
-        'Patient Data Analytics',
-        'Healthcare Process Automation',
-        'Medical Imaging AI',
-        'Drug Discovery Support',
-        'Healthcare Compliance'
+        'AI Diagnostic Tools',Patient Data Analytics',Healthcare Process Automation',Medical Imaging AI',Drug Discovery Support',Healthcare Compliance'
       ],
       useCases: ['
-        'AI-Powered Diagnosis Systems',
-        'Patient Outcome Prediction',
-        'Medical Image Analysis',
-        'Healthcare Workflow Optimization'
+        'AI-Powered Diagnosis Systems',Patient Outcome Prediction',Medical Image Analysis',Healthcare Workflow Optimization'
       ],
       href: '/solutions/healthcare'
     },
@@ -372,18 +279,10 @@ const featuredSolutions = [
       description: 'Advanced financial technology solutions for modern banking',
       color: 'from-green-500 to-emerald-600',
       features: ['
-        'AI Trading Algorithms',
-        'Risk Management Systems',
-        'Fraud Detection AI',
-        'Financial Analytics',
-        'Regulatory Compliance',
-        'Customer Experience AI'
+        'AI Trading Algorithms',Risk Management Systems',Fraud Detection AI',Financial Analytics',Regulatory Compliance',Customer Experience AI'
       ],
       useCases: ['
-        'Algorithmic Trading Platforms',
-        'Real-time Risk Assessment',
-        'AI Fraud Prevention',
-        'Personalized Banking'
+        'Algorithmic Trading Platforms',Real-time Risk Assessment',AI Fraud Prevention',Personalized Banking'
       ],
       href: '/solutions/financial'
     },
@@ -396,18 +295,10 @@ const featuredSolutions = [
       description: 'Smart manufacturing and Industry 4.0 solutions',
       color: 'from-orange-500 to-red-600',
       features: ['
-        'Predictive Maintenance',
-        'Quality Control AI',
-        'Supply Chain Optimization',
-        'IoT Integration',
-        'Production Analytics',
-        'Smart Factory Solutions'
+        'Predictive Maintenance',Quality Control AI',Supply Chain Optimization',IoT Integration',Production Analytics',Smart Factory Solutions'
       ],
       useCases: ['
-        'Predictive Maintenance Systems',
-        'Quality Control Automation',
-        'Supply Chain Optimization',
-        'Smart Factory Implementation'
+        'Predictive Maintenance Systems',Quality Control Automation',Supply Chain Optimization',Smart Factory Implementation'
       ],
       href: '/solutions/manufacturing'
     },
@@ -418,18 +309,10 @@ const featuredSolutions = [
       description: 'Secure and compliant government technology solutions',
       color: 'from-purple-500 to-indigo-600',
       features: ['
-        'Cybersecurity & Compliance',
-        'Data Governance',
-        'Citizen Services AI',
-        'Infrastructure Management',
-        'Public Safety Systems',
-        'Regulatory Compliance'
+        'Cybersecurity & Compliance',Data Governance',Citizen Services AI',Infrastructure Management',Public Safety Systems',Regulatory Compliance'
       ],
       useCases: ['
-        'Government Cybersecurity',
-        'Smart City Infrastructure',
-        'Citizen Service Automation',
-        'Public Safety AI'
+        'Government Cybersecurity',Smart City Infrastructure',Citizen Service Automation',Public Safety AI'
       ],
       href: '/solutions/government'
     },
@@ -442,18 +325,10 @@ const featuredSolutions = [
       description: 'Innovative educational technology for modern learning',
       color: 'from-cyan-500 to-blue-600',
       features: ['
-        'AI Learning Platforms',
-        'Personalized Education',
-        'Student Analytics',
-        'Virtual Learning Environments',
-        'Assessment Automation',
-        'Educational Content AI'
+        'AI Learning Platforms',Personalized Education',Student Analytics',Virtual Learning Environments',Assessment Automation',Educational Content AI'
       ],
       useCases: ['
-        'Personalized Learning Systems',
-        'Student Performance Analytics',
-        'Virtual Classroom Platforms',
-        'AI-Powered Assessment'
+        'Personalized Learning Systems',Student Performance Analytics',Virtual Classroom Platforms',AI-Powered Assessment'
       ],
       href: '/solutions/education'
     }
@@ -467,12 +342,7 @@ const featuredSolutions = [
       description: 'Cutting-edge AI solutions for business transformation',
       color: 'from-purple-500 to-pink-600',
       solutions: ['
-        'AI Business Intelligence',
-        'Machine Learning Platforms',
-        'Natural Language Processing',
-        'Computer Vision Systems',
-        'Predictive Analytics',
-        'AI Automation'
+        'AI Business Intelligence',Machine Learning Platforms',Natural Language Processing',Computer Vision Systems',Predictive Analytics',AI Automation'
       ]
     },
     {
@@ -482,12 +352,7 @@ const featuredSolutions = [
       description: 'Scalable cloud solutions and infrastructure management',
       color: 'from-blue-500 to-cyan-600',
       solutions: ['
-        'Cloud Migration',
-        'DevOps Automation',
-        'Container Orchestration',
-        'Serverless Computing',
-        'Multi-cloud Management',
-        'Edge Computing'
+        'Cloud Migration',DevOps Automation',Container Orchestration',Serverless Computing',Multi-cloud Management',Edge Computing'
       ]
     },
 
@@ -499,12 +364,7 @@ const featuredSolutions = [
       description: 'Advanced security solutions for modern threats',
       color: 'from-red-500 to-orange-600',
       solutions: ['
-        'Zero Trust Security',
-        'AI Threat Detection',
-        'Compliance Management',
-        'Identity & Access Management',
-        'Security Automation',
-        'Incident Response'
+        'Zero Trust Security',AI Threat Detection',Compliance Management',Identity & Access Management',Security Automation',Incident Response'
       ]
     },
 
@@ -516,12 +376,7 @@ const featuredSolutions = [
       description: 'Next-generation quantum computing solutions',
       color: 'from-indigo-500 to-purple-600',
       solutions: ['
-        'Quantum Algorithms',
-        'Quantum Machine Learning',
-        'Quantum Cryptography',
-        'Quantum Simulation',
-        'Hybrid Quantum-Classical',
-        'Quantum Optimization'
+        'Quantum Algorithms',Quantum Machine Learning',Quantum Cryptography',Quantum Simulation',Hybrid Quantum-Classical',Quantum Optimization'
       ]
     }
   ];

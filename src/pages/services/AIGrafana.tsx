@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIGrafana() {
   const features = [
-    'AI-powered Grafana optimization',
-    'Intelligent Grafana management',;
+    'AI-powered Grafana optimization',Intelligent Grafana management',;
     'Automated Grafana monitoring and alerting',;
     'Predictive analytics for Grafana scaling',;
     'Smart Grafana security and compliance',;

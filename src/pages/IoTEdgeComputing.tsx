@@ -107,9 +107,7 @@ export default function IoTEdgeComputing(...args: any[]): any {
       description: 'Manufacturing process optimization and monitoring',
       icon: Factory,
       benefits: ['
-        'Predictive maintenance',
-        'Quality control',
-        'Efficiency gains',
+        'Predictive maintenance',Quality control',Efficiency gains',
       ]},
     {
 
@@ -126,16 +124,7 @@ export default function IoTEdgeComputing(...args: any[]): any {
   ];
 
   const technologies = ['
-    '5G Networks',
-    'LPWAN',
-    'Edge Computing',
-    'Machine Learning',
-    'Blockchain',
-    'Cloud Platforms',
-    'IoT Protocols',
-    'Sensor Networks',
-    'Data Analytics',
-    'Security Frameworks',
+    '5G Networks',LPWAN',Edge Computing',Machine Learning',Blockchain',Cloud Platforms',IoT Protocols',Sensor Networks',Data Analytics',Security Frameworks',
   ];
 
   return()

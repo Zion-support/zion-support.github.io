@@ -43,9 +43,7 @@ export function AIMicroSaaSPlatform() {
       description:'
         'Intelligent workflow automation with machine learning capabilities',
       benefits: ['
-        'Reduce manual tasks by 80%',
-        'Smart decision making',
-        'Predictive analytics',
+        'Reduce manual tasks by 80%',Smart decision making',Predictive analytics',
       ]},
     {
 
@@ -54,9 +52,7 @@ export function AIMicroSaaSPlatform() {
       description:'
         'Bank-grade security with SOC2 compliance and zero-trust architecture',
       benefits: ['
-        'End-to-end encryption',
-        'Multi-factor authentication',
-        'Regular security audits',
+        'End-to-end encryption',Multi-factor authentication',Regular security audits',
       ]},
     {
 
@@ -65,9 +61,7 @@ export function AIMicroSaaSPlatform() {
       description:'
         'Scalable platform supporting unlimited users and organizations',
       benefits: ['
-        'Role-based access control',
-        'Custom branding options',
-        'White-label solutions',
+        'Role-based access control',Custom branding options',White-label solutions',
       ]},
     {
 
@@ -76,9 +70,7 @@ export function AIMicroSaaSPlatform() {
       description:'
         'Real-time insights and predictive analytics for business growth',
       benefits: ['
-        'Custom dashboards',
-        'AI-powered insights',
-        'Performance tracking',
+        'Custom dashboards',AI-powered insights',Performance tracking',
       ]},
     {
 
@@ -86,9 +78,7 @@ export function AIMicroSaaSPlatform() {
       title: 'Rapid Deployment',
       description: 'Deploy your SaaS solution in minutes, not months',
       benefits: ['
-        'Pre-built templates',
-        'One-click deployment',
-        'Instant scaling',
+        'Pre-built templates',One-click deployment',Instant scaling',
       ]},
     {
 
@@ -97,9 +87,7 @@ export function AIMicroSaaSPlatform() {
       description:'
         'Built for the cloud with automatic scaling and high availability',
       benefits: ['
-        '99.9% uptime guarantee',
-        'Global CDN',
-        'Auto-scaling infrastructure',
+        '99.9% uptime guarantee',Global CDN',Auto-scaling infrastructure',
       ]},
   ];
 
@@ -111,12 +99,7 @@ export function AIMicroSaaSPlatform() {
       period: '/month',
       description: 'Perfect for small businesses and startups',
       features: ['
-        'Up to 100 users',
-        'Basic AI automation',
-        'Standard security',
-        'Email support',
-        '5GB storage',
-        'Basic analytics',
+        'Up to 100 users',Basic AI automation',Standard security',Email support',5GB storage',Basic analytics',
       ],
       cta: 'Start Free Trial',
       popular: false},
@@ -127,14 +110,7 @@ export function AIMicroSaaSPlatform() {
       period: '/month',
       description: 'Ideal for growing businesses',
       features: ['
-        'Up to 1,000 users',
-        'Advanced AI features',
-        'Enhanced security',
-        'Priority support',
-        '50GB storage',
-        'Advanced analytics',
-        'Custom integrations',
-        'White-label options',
+        'Up to 1,000 users',Advanced AI features',Enhanced security',Priority support',50GB storage',Advanced analytics',Custom integrations',White-label options',
       ],
       cta: 'Start Free Trial',
       popular: true},
@@ -145,14 +121,7 @@ export function AIMicroSaaSPlatform() {
       period: '',
       description: 'For large organizations with custom needs',
       features: ['
-        'Unlimited users',
-        'Full AI capabilities',
-        'Enterprise security',
-        '24/7 dedicated support',
-        'Unlimited storage',
-        'Custom AI models',
-        'On-premise options',
-        'SLA guarantees',
+        'Unlimited users',Full AI capabilities',Enterprise security',24/7 dedicated support',Unlimited storage',Custom AI models',On-premise options',SLA guarantees',
       ],
       cta: 'Contact Sales',
       popular: false},
@@ -166,9 +135,7 @@ export function AIMicroSaaSPlatform() {
         'Build intelligent online stores with AI-powered recommendations',
       icon: ShoppingCart,
       benefits: ['
-        'Smart product suggestions',
-        'Inventory optimization',
-        'Customer behavior analysis',
+        'Smart product suggestions',Inventory optimization',Customer behavior analysis',
       ]},
     {
 
@@ -182,9 +149,7 @@ export function AIMicroSaaSPlatform() {
       description: 'Intelligent project planning and resource allocation',
       icon: Target,
       benefits: ['
-        'Risk assessment',
-        'Resource optimization',
-        'Timeline predictions',
+        'Risk assessment',Resource optimization',Timeline predictions',
       ]},
     {
 
@@ -192,9 +157,7 @@ export function AIMicroSaaSPlatform() {
       description: 'AI-driven marketing campaigns and customer engagement',
       icon: TrendingUp,
       benefits: ['
-        'Personalized content',
-        'Campaign optimization',
-        'ROI tracking',
+        'Personalized content',Campaign optimization',ROI tracking',
       ]},
   ];
 

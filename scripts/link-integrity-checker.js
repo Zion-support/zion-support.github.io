@@ -191,7 +191,7 @@ class LinkIntegrityChecker {
         while ((match = assetRegex.exec(content)) !== null) {
           const assetPath = match[2];
           if (assetPath.startsWith('./') || assetPath.startsWith('/')) {
-            const fullPath = path.join(distPath, assetPath.replace(/^\.?\//,'));
+            const fullPath = path.join(distPath, assetPath.replace(/^\.?\//,));
             if (!fs.existsSync(fullPath)) {
               this.issues.push(`Broken asset reference in build: ${assetPath}`);
             }
@@ -245,7 +245,7 @@ class LinkIntegrityChecker {
       const fullPath = path.resolve(sourceDir, importPath);
       
       // Check for .js, .ts, .tsx, .jsx extensions
-      const extensions = ['.js',.ts',.tsx',.jsx','];
+      const extensions = ['.js',.ts',.tsx',.jsx',];
       return extensions.some(ext => {
         const testPath = ext ? `${fullPath}${ext}` : fullPath;
         return fs.existsSync(testPath);
@@ -255,7 +255,7 @@ class LinkIntegrityChecker {
     // Handle absolute imports from project root
     if (importPath.startsWith('/')) {
       const fullPath = path.join(this.projectRoot, importPath.substring(1));
-      const extensions = ['.js',.ts',.tsx',.jsx','];
+      const extensions = ['.js',.ts',.tsx',.jsx',];
       return extensions.some(ext => {
         const testPath = ext ? `${fullPath}${ext}` : fullPath;
         return fs.existsSync(testPath);

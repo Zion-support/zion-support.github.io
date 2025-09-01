@@ -54,12 +54,7 @@ const QuantumNeuralNetworkPlatform = () => {
       icon: Brain},
   ];
   const benefits = ['
-    'Exponential speedup in complex computations',
-    'Enhanced accuracy in pattern recognition',
-    'Scalable architecture for growing datasets',
-    'Energy-efficient quantum-inspired algorithms',
-    'Seamless integration with existing AI systems',
-    'Real-time decision making capabilities',
+    'Exponential speedup in complex computations',Enhanced accuracy in pattern recognition',Scalable architecture for growing datasets',Energy-efficient quantum-inspired algorithms',Seamless integration with existing AI systems',Real-time decision making capabilities',
   ];
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

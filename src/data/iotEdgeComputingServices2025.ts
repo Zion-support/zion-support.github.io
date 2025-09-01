@@ -36,24 +36,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     color: 'from-blue-500 to-indigo-600',
     category: 'smart-cities',
     features[;
-      'Traffic management',
-      'Environmental monitoring',
-      'Energy optimization',
-      'Citizen services',
-      'Public safety',
-      'Infrastructure monitoring'
+      'Traffic management',Environmental monitoring',Energy optimization',Citizen services',Public safety',Infrastructure monitoring'
     ],;
     benefits[;
-      'Improved city efficiency',
-      'Reduced energy consumption',
-      'Enhanced citizen experience',
-      'Better resource management'
+      'Improved city efficiency',Reduced energy consumption',Enhanced citizen experience',Better resource management'
     ],;
     useCases[;
-      'Municipal governments',
-      'City planners',
-      'Urban developers',
-      'Smart city initiatives'
+      'Municipal governments',City planners',Urban developers',Smart city initiatives'
     ],;
     pricing: {
 
@@ -81,24 +70,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     color: 'from-gray-500 to-slate-600',
     category: 'industrial-iot',
     features[;
-      'Predictive maintenance',
-      'Quality control',
-      'Energy management',
-      'Real-time monitoring',
-      'Asset tracking',
-      'Performance analytics'
+      'Predictive maintenance',Quality control',Energy management',Real-time monitoring',Asset tracking',Performance analytics'
     ],;
     benefits[;
-      '30% reduction in downtime',
-      'Improved product quality',
-      'Energy cost savings',
-      'Enhanced operational efficiency'
+      '30% reduction in downtime',Improved product quality',Energy cost savings',Enhanced operational efficiency'
     ],;
     useCases[;
-      'Manufacturing plants',
-      'Industrial facilities',
-      'Warehouses',
-      'Processing plants'
+      'Manufacturing plants',Industrial facilities',Warehouses',Processing plants'
     ],;
     pricing: {
 
@@ -126,24 +104,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     color: 'from-green-500 to-emerald-600',
     category: 'edge-ai',
     features[;
-      'Local AI processing',
-      'Real-time analytics',
-      'Edge machine learning',
-      'Low-latency computing',
-      'Offline capabilities',
-      'Scalable deployment'
+      'Local AI processing',Real-time analytics',Edge machine learning',Low-latency computing',Offline capabilities',Scalable deployment'
     ],;
     benefits[;
-      '90% reduction in latency',
-      'Real-time insights',
-      'Offline operation',
-      'Reduced bandwidth usage'
+      '90% reduction in latency',Real-time insights',Offline operation',Reduced bandwidth usage'
     ],;
     useCases[;
-      'Autonomous vehicles',
-      'Smart cameras',
-      'Industrial robots',
-      'Edge devices'
+      'Autonomous vehicles',Smart cameras',Industrial robots',Edge devices'
     ],;
     pricing: {
 
@@ -171,24 +138,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     color: 'from-purple-500 to-pink-600',
     category: 'connected-devices',
     features[;
-      'Device provisioning',
-      'Remote monitoring',
-      'Over-the-air updates',
-      'Security management',
-      'Performance analytics',
-      'Device lifecycle management'
+      'Device provisioning',Remote monitoring',Over-the-air updates',Security management',Performance analytics',Device lifecycle management'
     ],;
     benefits[;
-      'Centralized device management',
-      'Reduced operational costs',
-      'Improved security',
-      'Better device performance'
+      'Centralized device management',Reduced operational costs',Improved security',Better device performance'
     ],;
     useCases[;
-      'IoT deployments',
-      'Device manufacturers',
-      'Service providers',
-      'Enterprise IoT'
+      'IoT deployments',Device manufacturers',Service providers',Enterprise IoT'
     ],;
     pricing: {
 
@@ -216,24 +172,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     color: 'from-teal-500 to-cyan-600',
     category: 'sensor-networks',
     features[;
-      'Sensor deployment',
-      'Data collection',
-      'Real-time monitoring',
-      'Network optimization',
-      'Power management',
-      'Data analytics'
+      'Sensor deployment',Data collection',Real-time monitoring',Network optimization',Power management',Data analytics'
     ],;
     benefits[;
-      'Comprehensive monitoring',
-      'Real-time insights',
-      'Optimized network performance',
-      'Reduced maintenance costs'
+      'Comprehensive monitoring',Real-time insights',Optimized network performance',Reduced maintenance costs'
     ],;
     useCases[;
-      'Environmental monitoring',
-      'Agricultural IoT',
-      'Infrastructure monitoring',
-      'Research applications'
+      'Environmental monitoring',Agricultural IoT',Infrastructure monitoring',Research applications'
     ],;
     pricing: {
 
@@ -261,24 +206,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     color: 'from-orange-500 to-red-600',
     category: 'edge-computing',
     features[;
-      'Edge nodes',
-      'Distributed computing',
-      'Load balancing',
-      'High availability',
-      'Edge storage',
-      'Network optimization'
+      'Edge nodes',Distributed computing',Load balancing',High availability',Edge storage',Network optimization'
     ],;
     benefits[;
-      'Improved performance',
-      'Reduced latency',
-      'Better reliability',
-      'Scalable infrastructure'
+      'Improved performance',Reduced latency',Better reliability',Scalable infrastructure'
     ],;
     useCases[;
-      'Edge applications',
-      'Distributed systems',
-      'Content delivery',
-      'Edge computing'
+      'Edge applications',Distributed systems',Content delivery',Edge computing'
     ],;
     pricing: {
 
@@ -306,24 +240,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     color: 'from-red-500 to-orange-600',
     category: 'iot-security',
     features[;
-      'Device authentication',
-      'Network security',
-      'Data encryption',
-      'Threat detection',
-      'Access control',
-      'Security monitoring'
+      'Device authentication',Network security',Data encryption',Threat detection',Access control',Security monitoring'
     ],;
     benefits[;
-      'Enhanced security',
-      'Data protection',
-      'Threat prevention',
-      'Compliance support'
+      'Enhanced security',Data protection',Threat prevention',Compliance support'
     ],;
     useCases[;
-      'IoT deployments',
-      'Smart cities',
-      'Industrial IoT',
-      'Connected devices'
+      'IoT deployments',Smart cities',Industrial IoT',Connected devices'
     ],;
     pricing: {
 
@@ -351,24 +274,13 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     color: 'from-indigo-500 to-purple-600',
     category: 'data-analytics',
     features[;
-      'Real-time processing',
-      'Predictive analytics',
-      'Data visualization',
-      'Automated insights',
-      'Data integration',
-      'Performance monitoring'
+      'Real-time processing',Predictive analytics',Data visualization',Automated insights',Data integration',Performance monitoring'
     ],;
     benefits[;
-      'Data-driven insights',
-      'Predictive capabilities',
-      'Automated decision making',
-      'Improved efficiency'
+      'Data-driven insights',Predictive capabilities',Automated decision making',Improved efficiency'
     ],;
     useCases[;
-      'IoT deployments',
-      'Smart cities',
-      'Industrial monitoring',
-      'Environmental tracking'
+      'IoT deployments',Smart cities',Industrial monitoring',Environmental tracking'
     ],;
     pricing: {
 

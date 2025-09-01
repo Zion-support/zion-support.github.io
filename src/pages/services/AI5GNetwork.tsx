@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AI5GNetwork() {
   const features = [
-    'AI-powered 5G optimization',
-    'Intelligent 5G network management',;
+    'AI-powered 5G optimization',Intelligent 5G network management',;
     'Automated 5G monitoring and alerting',;
     'Predictive analytics for 5G scaling',;
     'Smart 5G security and compliance',;

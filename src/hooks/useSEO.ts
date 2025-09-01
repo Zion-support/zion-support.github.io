@@ -159,8 +159,7 @@ existingScripts.forEach(script:  > {;'"
   // Default organization structured data
   const defaultStructuredData = useMemo(() => ({
 
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@context': 'https://schema.org',@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/images/logo.png',

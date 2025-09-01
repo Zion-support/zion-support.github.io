@@ -87,12 +87,7 @@ export default function CloudFinOpsOptimizer() {
   ];
 
   const benefits = ['
-    'Reduce cloud costs by up to 40% through intelligent optimization',
-    'Improve resource utilization efficiency by 60%',
-    'Eliminate waste with automated cost anomaly detection',
-    'Achieve better budget predictability and control',
-    'Streamline financial operations and reporting',
-    'Ensure compliance with cost governance policies',
+    'Reduce cloud costs by up to 40% through intelligent optimization',Improve resource utilization efficiency by 60%',Eliminate waste with automated cost anomaly detection',Achieve better budget predictability and control',Streamline financial operations and reporting',Ensure compliance with cost governance policies',
   ];
 
   const useCases = [

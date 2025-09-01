@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITravel() {
   const features = [
-    'AI-powered travel optimization',
-    'Intelligent travel planning and management',;
+    'AI-powered travel optimization',Intelligent travel planning and management',;
     'Automated travel monitoring and alerting',;
     'Predictive analytics for travel scaling',;
     'Smart travel security and compliance',;

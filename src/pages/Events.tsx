@@ -226,15 +226,10 @@ export default function Events(...args: any[]): any {
       isFree: false,
       featured: true,
       speakers: ['
-        'Dr. Sarah Chen - Chief Security Officer, Zion Tech Group',
-        'Michael Rodriguez - Director of AI Security, Microsoft',
-        'Lisa Park - Cybersecurity Researcher, MIT'
+        'Dr. Sarah Chen - Chief Security Officer, Zion Tech Group',Michael Rodriguez - Director of AI Security, Microsoft',Lisa Park - Cybersecurity Researcher, MIT'
       ],
       agenda: ['
-        'Keynote: The Future of AI in Cybersecurity',
-        'Panel: AI vs. AI - The Arms Race in Security',
-        'Workshop: Implementing AI Security Solutions',
-        'Networking & Demo Showcase'
+        'Keynote: The Future of AI in Cybersecurity',Panel: AI vs. AI - The Arms Race in Security',Workshop: Implementing AI Security Solutions',Networking & Demo Showcase'
       ],
       registrationUrl: '#',
       image: '/events/ai-cybersecurity-summit.jpg'
@@ -257,14 +252,10 @@ export default function Events(...args: any[]): any {
       isFree: true,
       featured: true,
       speakers: ['
-        'Dr. Emily Watson - Quantum Computing Lead, Zion Tech Group',
-        'Alex Thompson - Quantum Algorithm Specialist'
+        'Dr. Emily Watson - Quantum Computing Lead, Zion Tech Group',Alex Thompson - Quantum Algorithm Specialist'
       ],
       agenda: ['
-        'Introduction to Quantum Computing',
-        'Quantum Algorithms Deep Dive',
-        'Hands-on Quantum Programming',
-        'Real-world Applications Discussion'
+        'Introduction to Quantum Computing',Quantum Algorithms Deep Dive',Hands-on Quantum Programming',Real-world Applications Discussion'
       ],
       registrationUrl: '#',
       image: '/events/quantum-computing-workshop.jpg'
@@ -287,14 +278,10 @@ export default function Events(...args: any[]): any {
       isFree: true,
       featured: false,
       speakers: ['
-        'David Kim - Cloud Architecture Lead, Zion Tech Group',
-        'Sarah Johnson - MLOps Engineer, Google Cloud'
+        'David Kim - Cloud Architecture Lead, Zion Tech Group',Sarah Johnson - MLOps Engineer, Google Cloud'
       ],
       agenda: ['
-        'Cloud-Native AI Architecture Patterns',
-        'MLOps Best Practices',
-        'Scaling AI Workloads in the Cloud',
-        'Q&A Session'
+        'Cloud-Native AI Architecture Patterns',MLOps Best Practices',Scaling AI Workloads in the Cloud',Q&A Session'
       ],
       registrationUrl: '#',
       image: '/events/cloud-native-ai-webinar.jpg'
@@ -317,15 +304,10 @@ export default function Events(...args: any[]): any {
       isFree: true,
       featured: false,
       speakers: ['
-        'Local Blockchain Developers',
-        'Startup Founders',
-        'Industry Experts'
+        'Local Blockchain Developers',Startup Founders',Industry Experts'
       ],
       agenda: ['
-        'Networking & Refreshments',
-        'Lightning Talks',
-        'Open Discussion',
-        'Future Meetup Planning'
+        'Networking & Refreshments',Lightning Talks',Open Discussion',Future Meetup Planning'
       ],
       registrationUrl: '#',
       image: '/events/blockchain-meetup.jpg'
@@ -348,15 +330,10 @@ export default function Events(...args: any[]): any {
       isFree: false,
       featured: true,
       speakers: ['
-        'Dr. Lisa Park - Chief Data Scientist, Zion Tech Group',
-        'Dr. Robert Chen - VP of Analytics, Netflix',
-        'Maria Garcia - Data Science Director, Uber'
+        'Dr. Lisa Park - Chief Data Scientist, Zion Tech Group',Dr. Robert Chen - VP of Analytics, Netflix',Maria Garcia - Data Science Director, Uber'
       ],
       agenda: ['
-        'Keynote: The Future of Data-Driven Decision Making',
-        'Track Sessions: ML, Analytics, Visualization',
-        'Industry Case Studies',
-        'Networking & Career Fair'
+        'Keynote: The Future of Data-Driven Decision Making',Track Sessions: ML, Analytics, Visualization',Industry Case Studies',Networking & Career Fair'
       ],
       registrationUrl: '#',
       image: '/events/data-science-conference.jpg'
@@ -379,15 +356,10 @@ export default function Events(...args: any[]): any {
       isFree: true,
       featured: false,
       speakers: ['
-        'IoT Experts from Zion Tech Group',
-        'Industry Mentors',
-        'Judges Panel'
+        'IoT Experts from Zion Tech Group',Industry Mentors',Judges Panel'
       ],
       agenda: ['
-        'Opening Ceremony & Team Formation',
-        '24-Hour Hacking Session',
-        'Mentorship & Workshops',
-        'Project Presentations & Judging'
+        'Opening Ceremony & Team Formation',24-Hour Hacking Session',Mentorship & Workshops',Project Presentations & Judging'
       ],
       registrationUrl: '#',
       image: '/events/iot-hackathon.jpg'

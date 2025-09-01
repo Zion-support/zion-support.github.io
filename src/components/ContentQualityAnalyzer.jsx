@@ -308,7 +308,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                           </td>"
                           <td className="px-6 py-4 whitespace-nowrap">`
                             <span className={`text-sm font-medium ${getStatusColor(issue.status)}`}>
-                              {issue.status.replace('_', ').charAt(0).toUpperCase() + issue.status.replace('_', ').slice(1)}
+                              {issue.status.replace('_',).charAt(0).toUpperCase() + issue.status.replace('_',).slice(1)}
                             </span>
                           </td>"
                           <td className="px-6 py-4 whitespace-nowrap">"

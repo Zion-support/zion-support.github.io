@@ -71,7 +71,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             if (field.type === 'tel' && stringValue) {
 
                 const phonePattern = /^[\+]?[1-9][\d]{0,15}$/;
-                if (!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g,'))) {
+                if (!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g,))) {
 
                     return 'Please enter a valid phone number'}
             }

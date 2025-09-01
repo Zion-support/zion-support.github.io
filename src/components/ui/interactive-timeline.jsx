@@ -90,9 +90,4 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
         const iconMap = {
 
-  'AI & ML': Zap,
-            'Cybersecurity': Shield,
-            'Cloud': Globe,
-            'Development': Rocket,
-            'Research': TrendingUp,
-            'Team': Users,"
+  'AI & ML': Zap,Cybersecurity': Shield,Cloud': Globe,Development': Rocket,Research': TrendingUp,Team': Users,"

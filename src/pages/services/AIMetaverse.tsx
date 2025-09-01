@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMetaverse() {
   const features = [
-    'AI-powered metaverse optimization',
-    'Intelligent metaverse content management',;
+    'AI-powered metaverse optimization',Intelligent metaverse content management',;
     'Automated metaverse monitoring and alerting',;
     'Predictive analytics for metaverse scaling',;
     'Smart metaverse security and compliance',;

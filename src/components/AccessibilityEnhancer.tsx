@@ -76,7 +76,7 @@ interface AccessibilityEnhancerProps {
       }
 
       // Enter/Space for interactive elements'
-      if (['Enter', '].includes(event.key)) {
+      if (['Enter',].includes(event.key)) {
 
         if (target.getAttribute('role') === 'button' || target.classList.contains('interactive')) {
 

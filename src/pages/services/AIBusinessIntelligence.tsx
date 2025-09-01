@@ -81,12 +81,7 @@ const AIBusinessIntelligence: React.FC = props {
       period: '/month',
       description: 'Perfect for small businesses starting their BI journey',
       features: ['
-        'Basic predictive analytics',
-        '5 custom dashboards',
-        'Standard reporting',
-        'Email support',
-        'Data integration (3 sources),
-        'Monthly insights report'
+        'Basic predictive analytics',5 custom dashboards',Standard reporting',Email support',Data integration (3 sources),Monthly insights report'
       ],
       cta: 'Get Started',
       popular: false
@@ -98,14 +93,7 @@ const AIBusinessIntelligence: React.FC = props {
       period: '/month',
       description: 'Ideal for growing companies with complex data needs',
       features: ['
-        'Advanced predictive analytics',
-        'Unlimited dashboards',
-        'Real-time reporting',
-        'Priority support',
-        'Data integration (10 sources),
-        'Weekly insights report',
-        'Custom AI models',
-        'API access'
+        'Advanced predictive analytics',Unlimited dashboards',Real-time reporting',Priority support',Data integration (10 sources),Weekly insights report',Custom AI models',API access'
       ],
       cta: 'Start Free Trial',
       popular: true
@@ -117,16 +105,7 @@ const AIBusinessIntelligence: React.FC = props {
       period: '/month',
       description: 'For large organizations requiring enterprise-grade BI solutions',
       features: ['
-        'Enterprise predictive analytics',
-        'Unlimited everything',
-        'Custom AI development',
-        '24/7 dedicated support',
-        'Unlimited data sources',
-        'Real-time insights',
-        'White-label solutions',
-        'On-premise deployment',
-        'Custom integrations',
-        'Dedicated success manager'
+        'Enterprise predictive analytics',Unlimited everything',Custom AI development',24/7 dedicated support',Unlimited data sources',Real-time insights',White-label solutions',On-premise deployment',Custom integrations',Dedicated success manager'
       ],
       cta: 'Contact Sales',
       popular: false

@@ -455,8 +455,7 @@ const stats = ["
                             </a>
                             <a href = {
 '`
-  `mailto:${member.name.toLowerCase().replace(' ',
-  '.')
+  `mailto:${member.name.toLowerCase().replace(' ',.')
 "`
 }@ziontechgroup.com`} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">"
                               <Mail className="w-4 h-4"/>

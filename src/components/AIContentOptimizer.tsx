@@ -86,10 +86,7 @@ export function AIContentOptimizer({
   // Generate sample content analysis
   const generateContentAnalysis = useCallback(() => {
     const categories = ['
-      'seo',
-      'performance',
-      'accessibility',
-      'user-experience',
+      'seo',performance',accessibility',user-experience',
     ];
     const analysis: ContentAnalysis[] = [];
 
@@ -404,7 +401,7 @@ export function AIContentOptimizer({
                             </div>
                             <div>"
                               <h4 className="font-medium text-gray-900 dark:text-white capitalize">
-                                {item.category.replace('-', ')}
+                                {item.category.replace('-',)}
                               </h4>"
                               <p className="text-sm text-gray-500 dark:text-gray-400">
                                 {item.suggestions.length} suggestions

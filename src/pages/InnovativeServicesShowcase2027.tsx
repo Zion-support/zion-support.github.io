@@ -331,8 +331,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                         whileHover="hover"
                         onClick = {
 
-  () => window.open(service.website,
-  '_blank')
+  () => window.open(service.website,_blank')
 
 
 

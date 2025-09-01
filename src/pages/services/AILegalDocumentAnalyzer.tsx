@@ -26,32 +26,15 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
   const [activeTab, setActiveTab] = useState('overview');
 
   const features = ['
-    'Contract risk assessment',
-    'Compliance violation detection',
-    'Legal clause analysis',
-    'Automated contract review',
-    'Regulatory compliance checking',
-    'Document comparison tools',
-    'Legal precedent matching',
-    'Risk scoring algorithms',
-    'Multi-language support',
-    'Integration with legal databases',
+    'Contract risk assessment',Compliance violation detection',Legal clause analysis',Automated contract review',Regulatory compliance checking',Document comparison tools',Legal precedent matching',Risk scoring algorithms',Multi-language support',Integration with legal databases',
   ];
 
   const benefits = ['
-    'Reduce legal review time by 90%',
-    'Identify 95% of compliance risks',
-    'Save $50K+ annually on legal fees',
-    'Improve contract negotiation outcomes',
-    'Ensure regulatory compliance',
+    'Reduce legal review time by 90%',Identify 95% of compliance risks',Save $50K+ annually on legal fees',Improve contract negotiation outcomes',Ensure regulatory compliance',
   ];
 
   const useCases = ['
-    'Contract review and analysis',
-    'Regulatory compliance checking',
-    'Legal risk assessment',
-    'Due diligence processes',
-    'Legal document automation',
+    'Contract review and analysis',Regulatory compliance checking',Legal risk assessment',Due diligence processes',Legal document automation',
   ];
 
   const pricingPlans = [
@@ -62,11 +45,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Perfect for small law firms and legal departments',
       features: ['
-        'Up to 100 documents/month',
-        'Basic risk assessment',
-        'Compliance checking',
-        'Email support',
-        'Standard integrations',
+        'Up to 100 documents/month',Basic risk assessment',Compliance checking',Email support',Standard integrations',
       ],
       popular: false},
     {
@@ -76,12 +55,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Ideal for growing legal practices',
       features: ['
-        'Up to 500 documents/month',
-        'Advanced risk assessment',
-        'Multi-language support',
-        'Priority support',
-        'Advanced integrations',
-        'Custom workflows',
+        'Up to 500 documents/month',Advanced risk assessment',Multi-language support',Priority support',Advanced integrations',Custom workflows',
       ],
       popular: true},
     {
@@ -91,12 +65,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'For large legal organizations',
       features: ['
-        'Unlimited documents',
-        'Custom AI models',
-        'White-label solution',
-        'Dedicated support',
-        'Full API access',
-        'Custom security features',
+        'Unlimited documents',Custom AI models',White-label solution',Dedicated support',Full API access',Custom security features',
       ],
       popular: false},
   ];
@@ -336,10 +305,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                   <h3 className="text-2xl font-bold mb-6">Integrations</h3>"
                   <div className="grid grid-cols-2 gap-4">
                     {['
-                      'DocuSign',
-                      'Adobe Acrobat',
-                      'Microsoft Office',
-                      'Legal databases',
+                      'DocuSign',Adobe Acrobat',Microsoft Office',Legal databases',
                     ].map((integration, index) => (
                       <div
                         key={index}"

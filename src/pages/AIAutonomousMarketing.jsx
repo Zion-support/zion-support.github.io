@@ -171,14 +171,7 @@ const AIAutonomousMarketing = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Email Marketing',
-                'Social Media',
-                'Content Marketing',
-                'PPC Advertising',
-                'SEO/SEM',
-                'Influencer Marketing',
-                'Video Marketing',
-                'Mobile Marketing',
+                'Email Marketing',Social Media',Content Marketing',PPC Advertising',SEO/SEM',Influencer Marketing',Video Marketing',Mobile Marketing',
               ].map(channel => (
                 <div
                   key={channel}"

@@ -9,8 +9,7 @@ export { function };
 export default function Ecommerce() {
   const schema = {
 
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
+    '@context': 'https://schema.org',@type': 'WebPage',
     name: 'E-commerce Platform',
     description:'
       'Sell or purchase AI solutions and IT equipment through our secure marketplace.',

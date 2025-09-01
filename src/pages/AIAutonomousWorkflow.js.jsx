@@ -202,14 +202,7 @@ const AIAutonomousWorkflow = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Business Processes',
-                'Customer Service',
-                'HR Workflows',
-                'Finance Processes',
-                'Sales Operations',
-                'Marketing Campaigns',
-                'Project Management',
-                'Quality Assurance',
+                'Business Processes',Customer Service',HR Workflows',Finance Processes',Sales Operations',Marketing Campaigns',Project Management',Quality Assurance',
               ].map(type => (
                 <div
                   key={type}"

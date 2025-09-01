@@ -139,12 +139,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
   ];
 
   const technologies = ['
-    'GPT-4 & Claude Models',
-    'DALL-E 3 & Midjourney',
-    'Stable Diffusion',
-    'Natural Language Processing',
-    'Computer Vision',
-    'Speech Synthesis',;
+    'GPT-4 & Claude Models',DALL-E 3 & Midjourney',Stable Diffusion',Natural Language Processing',Computer Vision',Speech Synthesis',;
     'Machine Learning',;
     'Cloud Computing',;
     'Real-time Processing',;
@@ -161,12 +156,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
       period: '/month',
       description: 'Perfect for small businesses and individual creators',
       features[;
-        '10,000 words per month',
-        '100 AI-generated images',
-        '5 video generations',
-        'Basic templates',
-        'Email support',
-        'Standard quality output'
+        '10,000 words per month',100 AI-generated images',5 video generations',Basic templates',Email support',Standard quality output'
       ],;
       cta: 'Start Free Trial',
       popular: false
@@ -178,14 +168,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
       period: '/month',
       description: 'Ideal for growing businesses and marketing teams',
       features[;
-        '100,000 words per month',
-        '1,000 AI-generated images',
-        '50 video generations',
-        'Advanced templates',
-        'Priority support',
-        'High-quality output',
-        'Team collaboration',
-        'Brand voice training'
+        '100,000 words per month',1,000 AI-generated images',50 video generations',Advanced templates',Priority support',High-quality output',Team collaboration',Brand voice training'
       ],;
       cta: 'Start Free Trial',
       popular: true
@@ -197,13 +180,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
       period: '/month',
       description: 'For large organizations with high-volume content needs',
       features[;
-        'Unlimited words',
-        'Unlimited images',
-        'Unlimited videos',
-        'Custom templates',
-        'Dedicated support',
-        'Highest quality output',
-        'Advanced analytics',;
+        'Unlimited words',Unlimited images',Unlimited videos',Custom templates',Dedicated support',Highest quality output',Advanced analytics',;
         'Custom integrations',;
         'SLA guarantees';
       ],;

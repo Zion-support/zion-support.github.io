@@ -9,11 +9,7 @@ const HealthcareSolutions = () => {
       description:'
         'Intelligent patient monitoring and care management systems.',
       features: ['
-        'Real-time patient monitoring',
-        'Predictive health analytics',
-        'Automated care protocols',
-        'Patient engagement tools',
-        'Care coordination platform',
+        'Real-time patient monitoring',Predictive health analytics',Automated care protocols',Patient engagement tools',Care coordination platform',
       ],
       icon: Heart,
       href: '/services/ai-autonomous-systems'},
@@ -22,11 +18,7 @@ const HealthcareSolutions = () => {
       title: 'Medical Imaging AI',
       description: 'Advanced AI for diagnostic imaging and analysis.',
       features: ['
-        'Radiology image analysis',
-        'Pathology detection',
-        '3D imaging reconstruction',
-        'Automated reporting',
-        'Quality assurance tools',
+        'Radiology image analysis',Pathology detection',3D imaging reconstruction',Automated reporting',Quality assurance tools',
       ],
       icon: Microscope,
       href: '/services/ai-autonomous-systems'},
@@ -35,11 +27,7 @@ const HealthcareSolutions = () => {
       title: 'Drug Discovery Platform',
       description: 'AI-driven pharmaceutical research and development.',
       features: ['
-        'Molecular modeling',
-        'Target identification',
-        'Clinical trial optimization',
-        'Drug repurposing',
-        'Safety prediction',
+        'Molecular modeling',Target identification',Clinical trial optimization',Drug repurposing',Safety prediction',
       ],
       icon: Pill,
       href: '/services/quantum-technology'},
@@ -49,11 +37,7 @@ const HealthcareSolutions = () => {
       description:'
         'Automated compliance management for healthcare regulations.',
       features: ['
-        'HIPAA compliance',
-        'FDA regulations',
-        'Audit automation',
-        'Risk assessment',
-        'Document management',
+        'HIPAA compliance',FDA regulations',Audit automation',Risk assessment',Document management',
       ],
       icon: Shield,
       href: '/services/cybersecurity'},

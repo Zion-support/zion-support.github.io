@@ -11,10 +11,7 @@ const DigitalTransformation = () => {
       description:'
         'Streamline operations with intelligent automation solutions',
       features: ['
-        'Workflow Automation',
-        'RPA Implementation',
-        'Business Process Optimization',
-        'Efficiency Metrics',
+        'Workflow Automation',RPA Implementation',Business Process Optimization',Efficiency Metrics',
       ],
       icon: '🤖'},
     {
@@ -23,10 +20,7 @@ const DigitalTransformation = () => {
       description:'
         'Redesign and optimize business workflows for maximum efficiency',
       features: ['
-        'Process Mapping',
-        'Bottleneck Analysis',
-        'Workflow Redesign',
-        'Performance Monitoring',
+        'Process Mapping',Bottleneck Analysis',Workflow Redesign',Performance Monitoring',
       ],
       icon: '📊'},
     {
@@ -35,10 +29,7 @@ const DigitalTransformation = () => {
       description:'
         'Guide your organization through digital transformation with expert change management',
       features: ['
-        'Stakeholder Engagement',
-        'Training Programs',
-        'Communication Strategy',
-        'Success Metrics',
+        'Stakeholder Engagement',Training Programs',Communication Strategy',Success Metrics',
       ],
       icon: '🔄'},
     {
@@ -47,10 +38,7 @@ const DigitalTransformation = () => {
       description:'
         'Streamline operations and improve efficiency through digital workflows',
       features: ['
-        'Process Mapping',
-        'Automation',
-        'Performance Metrics',
-        'Continuous Improvement',
+        'Process Mapping',Automation',Performance Metrics',Continuous Improvement',
       ],
       icon: '⚡'},
     {
@@ -59,10 +47,7 @@ const DigitalTransformation = () => {
       description:'
         'Create seamless digital experiences that delight your customers',
       features: ['
-        'User Journey Mapping',
-        'Digital Touchpoints',
-        'Personalization',
-        'Feedback Systems',
+        'User Journey Mapping',Digital Touchpoints',Personalization',Feedback Systems',
       ],
       icon: '🎯'},
     {
@@ -71,10 +56,7 @@ const DigitalTransformation = () => {
       description:'
         'Leverage data insights to drive informed business decisions',
       features: ['
-        'Data Collection',
-        'Analytics Platforms',
-        'Business Intelligence',
-        'Predictive Modeling',
+        'Data Collection',Analytics Platforms',Business Intelligence',Predictive Modeling',
       ],
       icon: '📊'},
     {
@@ -83,19 +65,12 @@ const DigitalTransformation = () => {
       description:'
         'Modernize your technology stack for scalability and performance',
       features: ['
-        'Cloud Migration',
-        'API Integration',
-        'Microservices',
-        'DevOps Practices',
+        'Cloud Migration',API Integration',Microservices',DevOps Practices',
       ],
       icon: '🏗️'},
   ];
   const benefits = ['
-    'Increased operational efficiency by 50%',
-    'Enhanced customer experience and satisfaction',
-    'Reduced operational costs and waste',
-    'Improved decision-making with real-time data',
-    'Competitive advantage in the digital marketplace',
+    'Increased operational efficiency by 50%',Enhanced customer experience and satisfaction',Reduced operational costs and waste',Improved decision-making with real-time data',Competitive advantage in the digital marketplace',
   ];
   const transformationApproach = [
     {

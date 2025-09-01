@@ -181,14 +181,7 @@ const AIAutonomousVision = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Object Recognition',
-                'Image Classification',
-                'Face Detection',
-                'Text Recognition',
-                'Pattern Detection',
-                'Quality Inspection',
-                'Motion Detection',
-                'Scene Understanding',
+                'Object Recognition',Image Classification',Face Detection',Text Recognition',Pattern Detection',Quality Inspection',Motion Detection',Scene Understanding',
               ].map(type => (
                 <div
                   key={type}"

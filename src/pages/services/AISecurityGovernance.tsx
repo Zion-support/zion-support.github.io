@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityGovernance() {
   const features = [
-    'AI-powered security governance optimization',
-    'Intelligent governance policy management and enforcement',;
+    'AI-powered security governance optimization',Intelligent governance policy management and enforcement',;
     'Automated security compliance monitoring and reporting',;
     'Predictive analytics for governance needs',;
     'Smart governance framework management',;

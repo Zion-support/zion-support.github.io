@@ -72,12 +72,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
       period: '/month',
       description: 'Perfect for small teams and startups',
       features: ['
-        'Up to 10 team members',
-        'Basic AI task prioritization',
-        'Standard project templates',
-        'Email support',
-        'Basic analytics dashboard',
-        'Mobile app access'
+        'Up to 10 team members',Basic AI task prioritization',Standard project templates',Email support',Basic analytics dashboard',Mobile app access'
       ],
       popular: false
     },
@@ -88,14 +83,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
       period: '/month',
       description: 'Ideal for growing businesses',
       features: ['
-        'Up to 50 team members',
-        'Advanced AI features',
-        'Custom project templates',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
-        'Integrations (Slack, Jira, etc.),
-        'White-label options'
+        'Up to 50 team members',Advanced AI features',Custom project templates',Priority support',Advanced analytics',API access',Integrations (Slack, Jira, etc.),White-label options'
       ],
       popular: true
     },
@@ -106,11 +94,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
       period: '/month',
       description: 'For large organizations',
       features: ['
-        'Unlimited team members',
-        'Full AI suite',
-        'Custom integrations',
-        'Dedicated support manager',
-        'Advanced security features',;
+        'Unlimited team members',Full AI suite',Custom integrations',Dedicated support manager',Advanced security features',;
         'Custom AI model training',;
         'On-premise deployment options',;
         'SLA guarantees';

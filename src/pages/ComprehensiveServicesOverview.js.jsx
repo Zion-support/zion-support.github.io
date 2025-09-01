@@ -17,38 +17,13 @@ const ALL_SERVICES = [
 ];
 const categoryColors = {
 
-  'AI & Legal Tech': 'from-blue-500 to-indigo-500',
-    'AI & FinTech': 'from-green-500 to-emerald-500',
-    'AI & Healthcare': 'from-red-500 to-pink-500',
-    'Cybersecurity & Quantum': 'from-purple-500 to-violet-500',
-    'AI & Supply Chain': 'from-orange-500 to-red-500',
-    'AI & Energy': 'from-yellow-500 to-orange-500',
-    'AI & Customer Experience': 'from-pink-500 to-rose-500',
-    'Quantum & AI': 'from-cyan-500 to-blue-500',
-    'AI & Data Governance': 'from-indigo-500 to-purple-500',
-    'AI & HR Tech': 'from-teal-500 to-green-500',
-    'AI & Machine Learning': 'from-purple-500 to-pink-500',
-    'AI & Business Intelligence': 'from-indigo-500 to-purple-500',
-    'AI & Marketing Automation': 'from-pink-500 to-rose-500',
-    'AI & CRM': 'from-blue-500 to-cyan-500',
-    'AI & ERP': 'from-green-500 to-emerald-500',
-    'AI & Project Management': 'from-orange-500 to-red-500',
-    'AI & Autonomous Systems': 'from-purple-500 to-violet-500',
-    'AI & Research': 'from-cyan-500 to-blue-500',
-    'AI & Content Generation': 'from-indigo-500 to-purple-500',
-    'AI & Voice Technology': 'from-teal-500 to-green-500',
-    'AI & Video Generation': 'from-pink-500 to-rose-500',
-    'AI & Threat Intelligence': 'from-red-500 to-pink-500',
-    'AI & Cloud Management': 'from-blue-500 to-cyan-500',
-  'AI & DevOps': 'from-orange-500 to-red-500'
+  'AI & Legal Tech': 'from-blue-500 to-indigo-500',AI & FinTech': 'from-green-500 to-emerald-500',AI & Healthcare': 'from-red-500 to-pink-500',Cybersecurity & Quantum': 'from-purple-500 to-violet-500',AI & Supply Chain': 'from-orange-500 to-red-500',AI & Energy': 'from-yellow-500 to-orange-500',AI & Customer Experience': 'from-pink-500 to-rose-500',Quantum & AI': 'from-cyan-500 to-blue-500',AI & Data Governance': 'from-indigo-500 to-purple-500',AI & HR Tech': 'from-teal-500 to-green-500',AI & Machine Learning': 'from-purple-500 to-pink-500',AI & Business Intelligence': 'from-indigo-500 to-purple-500',AI & Marketing Automation': 'from-pink-500 to-rose-500',AI & CRM': 'from-blue-500 to-cyan-500',AI & ERP': 'from-green-500 to-emerald-500',AI & Project Management': 'from-orange-500 to-red-500',AI & Autonomous Systems': 'from-purple-500 to-violet-500',AI & Research': 'from-cyan-500 to-blue-500',AI & Content Generation': 'from-indigo-500 to-purple-500',AI & Voice Technology': 'from-teal-500 to-green-500',AI & Video Generation': 'from-pink-500 to-rose-500',AI & Threat Intelligence': 'from-red-500 to-pink-500',AI & Cloud Management': 'from-blue-500 to-cyan-500',AI & DevOps': 'from-orange-500 to-red-500'
 
 
 };
 const supportLevelColors = {
 
-  'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',
-    'enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500',
-  'basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
+  'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500',basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
 
 
 };

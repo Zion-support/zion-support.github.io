@@ -73,11 +73,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Perfect for small businesses and startups',
       features: ['
-        'Up to 10 data sources',
-        'Basic AI analytics',
-        'Standard reporting',
-        'Email support',
-        '5 user licenses',
+        'Up to 10 data sources',Basic AI analytics',Standard reporting',Email support',5 user licenses',
       ]},
     {
 
@@ -86,12 +82,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Ideal for growing businesses and teams',
       features: ['
-        'Up to 50 data sources',
-        'Advanced AI analytics',
-        'Custom dashboards',
-        'Priority support',
-        '25 user licenses',
-        'API access',
+        'Up to 50 data sources',Advanced AI analytics',Custom dashboards',Priority support',25 user licenses',API access',
       ],
       popular: true},
     {
@@ -101,12 +92,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'For large organizations with complex needs',
       features: ['
-        'Unlimited data sources',
-        'Full AI suite',
-        'Custom development',
-        '24/7 dedicated support',
-        'Unlimited users',
-        'White-label options',
+        'Unlimited data sources',Full AI suite',Custom development',24/7 dedicated support',Unlimited users',White-label options',
       ]},
   ];
 

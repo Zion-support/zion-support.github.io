@@ -76,12 +76,7 @@ const AIBusinessIntelligenceDashboard = () => {
       period: '/month',
       description: 'Perfect for small businesses and startups',
       features: ['
-        'Up to 5 data sources',
-        'Basic AI insights',
-        '5 user licenses',
-        'Standard reports',
-        'Email support',
-        'Basic integrations',
+        'Up to 5 data sources',Basic AI insights',5 user licenses',Standard reports',Email support',Basic integrations',
       ],
       popular: false},
     {
@@ -91,14 +86,7 @@ const AIBusinessIntelligenceDashboard = () => {
       period: '/month',
       description: 'Ideal for growing businesses and teams',
       features: ['
-        'Up to 20 data sources',
-        'Advanced AI analytics',
-        '25 user licenses',
-        'Custom dashboards',
-        'Priority support',
-        'API access',
-        'Advanced integrations',
-        'White-label options',
+        'Up to 20 data sources',Advanced AI analytics',25 user licenses',Custom dashboards',Priority support',API access',Advanced integrations',White-label options',
       ],
       popular: true},
     {
@@ -108,14 +96,7 @@ const AIBusinessIntelligenceDashboard = () => {
       period: '/month',
       description: 'For large organizations with complex needs',
       features: ['
-        'Unlimited data sources',
-        'Custom AI models',
-        'Unlimited users',
-        'Advanced security',
-        'Dedicated support',
-        'Custom development',
-        'On-premise options',
-        'SLA guarantees',
+        'Unlimited data sources',Custom AI models',Unlimited users',Advanced security',Dedicated support',Custom development',On-premise options',SLA guarantees',
       ],
       popular: false},
   ];

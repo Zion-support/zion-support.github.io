@@ -28,10 +28,7 @@ export default function GreenIT() {
       title: 'Green Data Centers',
       description: 'Energy-efficient data center design and optimization',
       features: ['
-        'Renewable energy integration',
-        'Cooling system optimization',
-        'Energy monitoring',
-        'Carbon footprint reduction',
+        'Renewable energy integration',Cooling system optimization',Energy monitoring',Carbon footprint reduction',
       ]},
     {
 
@@ -39,10 +36,7 @@ export default function GreenIT() {
       title: 'Energy Management',
       description: 'Smart energy monitoring and optimization systems',
       features: ['
-        'Real-time energy tracking',
-        'Automated optimization',
-        'Peak demand management',
-        'Energy cost reduction',
+        'Real-time energy tracking',Automated optimization',Peak demand management',Energy cost reduction',
       ]},
     {
 
@@ -50,10 +44,7 @@ export default function GreenIT() {
       title: 'Cloud Optimization',
       description: 'Eco-friendly cloud infrastructure and services',
       features: ['
-        'Green cloud providers',
-        'Resource optimization',
-        'Carbon-aware computing',
-        'Sustainable scaling',
+        'Green cloud providers',Resource optimization',Carbon-aware computing',Sustainable scaling',
       ]},
     {
 
@@ -61,10 +52,7 @@ export default function GreenIT() {
       title: 'Hardware Efficiency',
       description: 'Energy-efficient hardware selection and management',
       features: ['
-        'Low-power processors',
-        'Efficient storage',
-        'Smart power management',
-        'Hardware lifecycle optimization',
+        'Low-power processors',Efficient storage',Smart power management',Hardware lifecycle optimization',
       ]},
     {
 
@@ -72,10 +60,7 @@ export default function GreenIT() {
       title: 'Network Optimization',
       description: 'Efficient network infrastructure and protocols',
       features: ['
-        'Traffic optimization',
-        'Bandwidth management',
-        'Network virtualization',
-        'Green networking protocols',
+        'Traffic optimization',Bandwidth management',Network virtualization',Green networking protocols',
       ]},
     {
 
@@ -83,10 +68,7 @@ export default function GreenIT() {
       title: 'Software Efficiency',
       description: 'Energy-efficient software development and deployment',
       features: ['
-        'Code optimization',
-        'Resource management',
-        'Efficient algorithms',
-        'Green software practices',
+        'Code optimization',Resource management',Efficient algorithms',Green software practices',
       ]},
   ];
 

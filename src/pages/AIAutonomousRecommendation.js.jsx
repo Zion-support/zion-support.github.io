@@ -185,14 +185,7 @@ const AIAutonomousRecommendation = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Product Recommendations',
-                'Content Recommendations',
-                'Service Recommendations',
-                'Action Recommendations',
-                'Strategy Recommendations',
-                'Tool Recommendations',
-                'Resource Recommendations',
-                'Solution Recommendations',
+                'Product Recommendations',Content Recommendations',Service Recommendations',Action Recommendations',Strategy Recommendations',Tool Recommendations',Resource Recommendations',Solution Recommendations',
               ].map(type => (
                 <div
                   key={type}"

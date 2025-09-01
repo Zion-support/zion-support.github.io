@@ -68,12 +68,7 @@ const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {
   ];
 
   const benefits = ['
-    'Reduce research time by 75%',
-    'Improve case analysis by 80%',
-    'Enhance legal accuracy by 90%',
-    'Automate document review',
-    '24/7 autonomous operation',
-    'Real-time legal updates',
+    'Reduce research time by 75%',Improve case analysis by 80%',Enhance legal accuracy by 90%',Automate document review',24/7 autonomous operation',Real-time legal updates',
   ];
 
   return()

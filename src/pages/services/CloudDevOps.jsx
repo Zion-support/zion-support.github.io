@@ -21,10 +21,7 @@ const CloudDevOps = () => {
       description:'
         'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
       features: ['
-        'Assessment & Planning',
-        'Data Migration',
-        'Application Modernization',
-        'Performance Optimization',
+        'Assessment & Planning',Data Migration',Application Modernization',Performance Optimization',
       ]},
     {
 

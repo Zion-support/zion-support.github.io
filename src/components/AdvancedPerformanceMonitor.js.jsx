@@ -69,13 +69,7 @@ export function AdvancedPerformanceMonitor() {
   );
   const [isRefreshing, setIsRefreshing] = useState(false);
   const categories = ['
-    'all',
-    'Processor',
-    'Memory',
-    'Storage',
-    'Network',
-    'Database',
-    'Performance',
+    'all',Processor',Memory',Storage',Network',Database',Performance',
   ];
   const timeRanges = ['
     { value: '15m', label: '15 Minutes' },

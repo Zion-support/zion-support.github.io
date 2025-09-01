@@ -70,13 +70,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
 
         const colors: { [key: string]: string } = {
 
-            'Fintech': 'from-green-500 to-emerald-600',
-            'Healthtech': 'from-red-500 to-pink-600',
-            'Edutech': 'from-purple-500 to-violet-600',
-            'Martech': 'from-pink-500 to-rose-600',
-            'Micro SaaS': 'from-blue-500 to-indigo-600',
-            'AI Services': 'from-cyan-500 to-blue-600',
-            'IT Services': 'from-slate-500 to-gray-600'
+            'Fintech': 'from-green-500 to-emerald-600',Healthtech': 'from-red-500 to-pink-600',Edutech': 'from-purple-500 to-violet-600',Martech': 'from-pink-500 to-rose-600',Micro SaaS': 'from-blue-500 to-indigo-600',AI Services': 'from-cyan-500 to-blue-600',IT Services': 'from-slate-500 to-gray-600'
         };
         return colors[category] || 'from-gray-500 to-gray-600';
     };

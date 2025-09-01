@@ -25,15 +25,12 @@ export default function ServicesAdvertisingPage(...args[]):  {
 
 };
   const benefits = ['
-    '1000% ROI target with measurable KPIs',
-    'Transparent pricing with market references',;
+    '1000% ROI target with measurable KPIs',Transparent pricing with market references',;
     'Fast onboarding with templates and playbooks',;
     'Enterprise-grade security and compliance',;
     '24/7 support with SLAs',;
     'Proven architectures and reference implementations',;
-    'No long-term lock-in; cancel anytime',
-    'SOC 2-aligned processes and data handling',
-    'Flexible deployment: SaaS or self-hosted options'
+    'No long-term lock-in; cancel anytime',SOC 2-aligned processes and data handling',Flexible deployment: SaaS or self-hosted options'
   ];
   const newHighlights = [;
     { title: 'Privacy Request Portal (DSAR), price: 'From $99/mo + usage', refs: ['https://transcend.io/pricing/',https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },;

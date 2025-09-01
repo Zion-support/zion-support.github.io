@@ -97,10 +97,7 @@ export function HomePage(...args: any[]): any {
       icon: Brain,
       href: '/services/ai-solutions',
       features: ['
-        'Machine Learning',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics',
+        'Machine Learning',Natural Language Processing',Computer Vision',Predictive Analytics',
       ],
       color: 'from-cyan-500 to-blue-600'},
     {
@@ -111,10 +108,7 @@ export function HomePage(...args: any[]): any {
       icon: Atom,
       href: '/services/quantum-computing',
       features: ['
-        'Quantum Algorithms',
-        'Quantum AI Hybrid',
-        'Quantum Security',
-        'Quantum Optimization',
+        'Quantum Algorithms',Quantum AI Hybrid',Quantum Security',Quantum Optimization',
       ],
       color: 'from-purple-500 to-pink-600'},
     {
@@ -125,10 +119,7 @@ export function HomePage(...args: any[]): any {
       icon: Shield,
       href: '/services/cybersecurity',
       features: ['
-        'Zero Trust Security',
-        'AI Threat Detection',
-        'Security Headers',
-        'Compliance Management',
+        'Zero Trust Security',AI Threat Detection',Security Headers',Compliance Management',
       ],
       color: 'from-green-500 to-emerald-600'},
     {
@@ -139,10 +130,7 @@ export function HomePage(...args: any[]): any {
       icon: Rocket,
       href: '/services/digital-transformation',
       features: ['
-        'Cloud Migration',
-        'DevOps Automation',
-        'API Development',
-        'Data Analytics',
+        'Cloud Migration',DevOps Automation',API Development',Data Analytics',
       ],
       color: 'from-orange-500 to-red-600'},
   ];

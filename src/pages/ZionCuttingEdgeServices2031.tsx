@@ -99,8 +99,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
         case 'innovation':
           const innovationOrder = {
 
-            Revolutionary: 3,
-            'Cutting-edge': 2,
+            Revolutionary: 3,Cutting-edge': 2,
             Advanced: 1,
             Breakthrough: 3};
           return()
@@ -123,16 +122,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
 
     const iconMap: { [key: string]: React.ComponentType<any> } = {
 
-      'FinTech & Trading': Coins,
-      'Healthcare & AI': Heart,
-      'Blockchain & Security': Lock,
-      'Supply Chain & Logistics': Truck,
-      'Content Creation & AI': BookOpen,
-      'Cybersecurity & AI': Shield,
-      'IoT & Predictive Analytics': Network,
-      'Customer Experience & AI': Users,
-      'Research & AI': Code,
-      'Business Intelligence & AI': BarChart3};
+      'FinTech & Trading': Coins,Healthcare & AI': Heart,Blockchain & Security': Lock,Supply Chain & Logistics': Truck,Content Creation & AI': BookOpen,Cybersecurity & AI': Shield,IoT & Predictive Analytics': Network,Customer Experience & AI': Users,Research & AI': Code,Business Intelligence & AI': BarChart3};
     return iconMap[category] || Globe;
   };
 
@@ -140,8 +130,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
 
     const colorMap: { [key: string]: string } = {
 
-      Revolutionary: 'from-purple-500 to-pink-500',
-      'Cutting-edge': 'from-blue-500 to-indigo-500',
+      Revolutionary: 'from-purple-500 to-pink-500',Cutting-edge': 'from-blue-500 to-indigo-500',
       Advanced: 'from-green-500 to-teal-500',
       Breakthrough: 'from-red-500 to-orange-500'};
     return colorMap[level] || 'from-gray-500 to-slate-500';

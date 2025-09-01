@@ -49,24 +49,10 @@ export default function AICodeReview() {
         'Ensure code follows industry best practices and coding standards'},
   ];
   const benefits = ['
-    'Reduce code review time by 80%',
-    'Improve code quality and maintainability',
-    'Detect security vulnerabilities early',
-    'Ensure consistent coding standards',
-    'Accelerate development cycles',
-    'Reduce production bugs by 60%',
+    'Reduce code review time by 80%',Improve code quality and maintainability',Detect security vulnerabilities early',Ensure consistent coding standards',Accelerate development cycles',Reduce production bugs by 60%',
   ];
   const supportedLanguages = ['
-    'JavaScript/TypeScript',
-    'Python',
-    'Java',
-    'C#',
-    'Go',
-    'Rust',
-    'PHP',
-    'Ruby',
-    'Swift',
-    'Kotlin',
+    'JavaScript/TypeScript',Python',Java',C#',Go',Rust',PHP',Ruby',Swift',Kotlin',
   ];
   return()
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate-darker">

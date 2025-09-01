@@ -5,8 +5,7 @@ import { MessageCircle, Heart, Headphones, CheckCircle, Zap, Sparkles, ArrowRigh
 export default function AICustomerExperienceSupport(...args: any[]): any {
 
   const features = ['
-    'AI-powered chatbot with 95% accuracy and natural language processing',
-    'Intelligent ticket routing and priority classification',;
+    'AI-powered chatbot with 95% accuracy and natural language processing',Intelligent ticket routing and priority classification',;
     'Automated customer sentiment analysis and satisfaction tracking',;
     'Multi-channel support integration (email, chat, phone, social media),;
     'Predictive customer behavior analysis and proactive support',;
@@ -25,10 +24,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
   ];
 
   const supportChannels = ['
-    'Live Chat & Messaging',
-    'Email Support Automation',
-    'Phone Support Integration',
-    'Social Media Monitoring',;
+    'Live Chat & Messaging',Email Support Automation',Phone Support Integration',Social Media Monitoring',;
     'Self-Service Knowledge Base',;
     'Video Call Support',;
     'Mobile App Support',;
@@ -38,10 +34,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
   ];
 
   const aiCapabilities = ['
-    'Natural Language Processing',
-    'Sentiment Analysis',
-    'Intent Recognition',
-    'Automated Responses',;
+    'Natural Language Processing',Sentiment Analysis',Intent Recognition',Automated Responses',;
     'Smart Escalation',;
     'Predictive Analytics',;
     'Customer Segmentation',;
@@ -51,10 +44,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {
   ];
 
   const integrations = ['
-    'Salesforce Service Cloud',
-    'Zendesk Support',
-    'HubSpot Service Hub',
-    'Intercom',;
+    'Salesforce Service Cloud',Zendesk Support',HubSpot Service Hub',Intercom',;
     'Freshdesk',;
     'Shopify',;
     'WooCommerce',;

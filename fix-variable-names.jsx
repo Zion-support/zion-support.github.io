@@ -43,7 +43,7 @@ function fixFile(filePath) {
     );
 
     // Update title and meta description
-    const title = filename.replace(/-/g, ').replace(/\b\w/g, l => l.toUpperCase());
+    const title = filename.replace(/-/g,).replace(/\b\w/g, l => l.toUpperCase());
     newContent = newContent.replace(
       /<title>.*?<\/title>/g,
       `<title>${title} - Zion Tech Solutions</title>`

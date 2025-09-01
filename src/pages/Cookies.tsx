@@ -40,10 +40,7 @@ export default function Cookies() {
       name: 'Essential Cookies',
       description: 'These cookies are necessary for the website to function and cannot be switched off.',
       examples: ['
-        'Authentication cookies',
-        'Security cookies',
-        'Session management',
-        'Load balancing'
+        'Authentication cookies',Security cookies',Session management',Load balancing'
       ],
       icon: Shield,
       color: 'from-blue-500 to-cyan-500',
@@ -55,10 +52,7 @@ export default function Cookies() {
       name: 'Analytics Cookies',
       description: 'These cookies help us understand how visitors interact with our website.',
       examples: ['
-        'Page views and navigation',
-        'User behavior patterns',
-        'Performance metrics',
-        'Error tracking'
+        'Page views and navigation',User behavior patterns',Performance metrics',Error tracking'
       ],
       icon: BarChart3,
       color: 'from-purple-500 to-pink-500'
@@ -69,10 +63,7 @@ export default function Cookies() {
       name: 'Marketing Cookies',
       description: 'These cookies are used to deliver personalized advertisements.',
       examples: ['
-        'Ad targeting',
-        'Campaign performance',
-        'User preferences',
-        'Conversion tracking'
+        'Ad targeting',Campaign performance',User preferences',Conversion tracking'
       ],
       icon: Users,
       color: 'from-orange-500 to-red-500'
@@ -83,10 +74,7 @@ export default function Cookies() {
       name: 'Functional Cookies',
       description: 'These cookies enable enhanced functionality and personalization.',
       examples: ['
-        'Language preferences',
-        'Theme settings',
-        'Form data storage',
-        'Social media integration'
+        'Language preferences',Theme settings',Form data storage',Social media integration'
       ],
       icon: Settings,
       color: 'from-green-500 to-emerald-500'

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Video, BarChart3 export default function AIEntertainment() {
   const features = [
-    'AI-powered content recommendation and personalization',
-    'Intelligent content creation and generation',;
+    'AI-powered content recommendation and personalization',Intelligent content creation and generation',;
     'Automated content moderation and filtering',;
     'Predictive analytics for audience engagement',;
     'Real-time content performance optimization',;

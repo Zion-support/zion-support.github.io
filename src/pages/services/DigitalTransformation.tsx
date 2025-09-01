@@ -35,10 +35,7 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
         'Streamline operations with intelligent automation solutions that reduce manual work and improve efficiency.',
       icon: Workflow,
       features: ['
-        'RPA Implementation',
-        'Workflow Optimization',
-        'Business Process Mapping',
-        'Performance Monitoring',
+        'RPA Implementation',Workflow Optimization',Business Process Mapping',Performance Monitoring',
       ]},
     {
 
@@ -47,10 +44,7 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
         'Seamlessly migrate your infrastructure to the cloud with minimal disruption and maximum benefits.',
       icon: Cloud,
       features: ['
-        'Migration Strategy',
-        'Data Transfer',
-        'Application Modernization',
-        'Performance Optimization',
+        'Migration Strategy',Data Transfer',Application Modernization',Performance Optimization',
       ]},
     {
 
@@ -59,10 +53,7 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
         'Develop a comprehensive data strategy that turns information into actionable business intelligence.',
       icon: Database,
       features: ['
-        'Data Architecture',
-        'Analytics Implementation',
-        'Data Governance',
-        'Business Intelligence',
+        'Data Architecture',Analytics Implementation',Data Governance',Business Intelligence',
       ]},
     {
 
@@ -109,14 +100,7 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
   ];
 
   const industries = ['
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Government',
-    'Technology',
-    'Energy',
+    'Healthcare',Finance',Manufacturing',Retail',Education',Government',Technology',Energy',
   ];
   const contactInfo = {
 
@@ -124,14 +108,7 @@ export default function DigitalTransformation(...args: unknown[]): unknown {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709'};
   const industries = ['
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Government',
-    'Technology',
-    'Transportation',
+    'Healthcare',Finance',Manufacturing',Retail',Education',Government',Technology',Transportation',
   ];
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">

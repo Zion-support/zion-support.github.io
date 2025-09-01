@@ -71,8 +71,7 @@ export function SEO({
   // Structured data for organization
   const organizationSchema = {
 
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@context': 'https://schema.org',@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/images/zion-logo.png',
@@ -89,22 +88,19 @@ export function SEO({
       contactType: 'customer service',
       email: 'info@ziontechgroup.com'},
     sameAs: ['
-      'https://linkedin.com/company/ziontechgroup',
-      'https://twitter.com/ziontechgroup',
+      'https://linkedin.com/company/ziontechgroup',https://twitter.com/ziontechgroup',
     ]};
 
   // Structured data for website
   const websiteSchema = {
 
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
+    '@context': 'https://schema.org',@type': 'WebSite',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     potentialAction: {
 
       '@type': 'SearchAction',
-      target: 'https://ziontechgroup.com/search?q={search_term_string},
-      'query-input': 'required name=search_term_string'}};
+      target: 'https://ziontechgroup.com/search?q={search_term_string},query-input': 'required name=search_term_string'}};
 
   return()
     <Helmet>

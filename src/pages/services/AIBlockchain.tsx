@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIBlockchain() {
   const features = [
-    'AI-powered blockchain optimization',
-    'Intelligent smart contract management',;
+    'AI-powered blockchain optimization',Intelligent smart contract management',;
     'Automated blockchain monitoring and alerting',;
     'Predictive analytics for blockchain scaling',;
     'Smart blockchain security and compliance',;

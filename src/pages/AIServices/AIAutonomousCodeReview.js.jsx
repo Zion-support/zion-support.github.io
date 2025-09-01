@@ -34,22 +34,10 @@ const features = [
     color: 'from-orange-500 to-red-500'},
 ];
 const benefits = ['
-  'Reduce code review time by up to 80%',
-  'Catch bugs and security issues early',
-  'Improve code quality and maintainability',
-  'Ensure consistent coding standards',
-  'Accelerate development cycles',
-  'Reduce technical debt',
+  'Reduce code review time by up to 80%',Catch bugs and security issues early',Improve code quality and maintainability',Ensure consistent coding standards',Accelerate development cycles',Reduce technical debt',
 ];
 const supportedLanguages = ['
-  'JavaScript/TypeScript',
-  'Python',
-  'Java',
-  'C#',
-  'Go',
-  'Rust',
-  'PHP',
-  'Ruby',
+  'JavaScript/TypeScript',Python',Java',C#',Go',Rust',PHP',Ruby',
 ];
 export { function };
 export default function AIAutonomousCodeReview() {

@@ -183,14 +183,7 @@ const AIAutonomousRiskManagement = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Security Risk Management',
-                'Financial Risk Management',
-                'Operational Risk Management',
-                'Strategic Risk Management',
-                'Compliance Risk Management',
-                'Technology Risk Management',
-                'Environmental Risk Management',
-                'Reputational Risk Management',
+                'Security Risk Management',Financial Risk Management',Operational Risk Management',Strategic Risk Management',Compliance Risk Management',Technology Risk Management',Environmental Risk Management',Reputational Risk Management',
               ].map(type => (
                 <div
                   key={type}"

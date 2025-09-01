@@ -185,14 +185,7 @@ const AIAutonomousThreatIntelligence = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Cyber Threat Intelligence',
-                'Security Threat Intelligence',
-                'Network Threat Intelligence',
-                'Malware Threat Intelligence',
-                'APT Threat Intelligence',
-                'Vulnerability Intelligence',
-                'Social Engineering Intelligence',
-                'Insider Threat Intelligence',
+                'Cyber Threat Intelligence',Security Threat Intelligence',Network Threat Intelligence',Malware Threat Intelligence',APT Threat Intelligence',Vulnerability Intelligence',Social Engineering Intelligence',Insider Threat Intelligence',
               ].map(type => (
                 <div
                   key={type}"

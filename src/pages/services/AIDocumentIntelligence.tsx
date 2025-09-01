@@ -1,8 +1,7 @@
 import React from 'react';
 import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, Shield, Zap, BarChart3 export default function AIDocumentIntelligence() {
   const features = [
-    'Advanced OCR with 99.5% accuracy across 50+ languages',
-    'Intelligent document classification and routing',;
+    'Advanced OCR with 99.5% accuracy across 50+ languages',Intelligent document classification and routing',;
     'AI-powered data extraction from complex forms',;
     'Automated compliance checking and validation',;
     'Real-time document processing and indexing',;

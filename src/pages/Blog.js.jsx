@@ -17,13 +17,7 @@ import { BLOG_POSTS } from '@/data/blog-posts';
 import { Search } from 'lucide-react';
 // Categories for filtering
 const CATEGORIES = ['
-  'All Categories',
-  'Trends',
-  'Marketing',
-  'Sustainability',
-  'Ethics',
-  'Recruitment',
-  'Infrastructure',
+  'All Categories',Trends',Marketing',Sustainability',Ethics',Recruitment',Infrastructure',
 ];
 export default function Blog() {
 

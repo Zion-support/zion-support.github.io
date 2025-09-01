@@ -189,14 +189,7 @@ const AIAutonomousWebSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Web Application Security',
-                'Website Security',
-                'API Security',
-                'Database Security',
-                'Server Security',
-                'SSL Security',
-                'DDoS Protection',
-                'Bot Protection',
+                'Web Application Security',Website Security',API Security',Database Security',Server Security',SSL Security',DDoS Protection',Bot Protection',
               ].map(type => (
                 <div
                   key={type}"

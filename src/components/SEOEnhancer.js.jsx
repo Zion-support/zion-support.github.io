@@ -6,8 +6,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
         // Add structured data to the page
         const structuredData = {
 
-  '@context': 'https://schema.org',
-            '@type': type === 'article' ? 'Article' : 'Organization',
+  '@context': 'https://schema.org',@type': type === 'article' ? 'Article' : 'Organization',
             name: 'Zion Tech Group',
             url: 'https://ziontechgroup.com',
             logo: 'https://ziontechgroup.com/images/zion-tech-group-logo.png',
@@ -31,9 +30,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
                 availableLanguage: 'English'
             },
             sameAs[;
-                'https://linkedin.com/company/ziontechgroup',
-                'https://twitter.com/ziontechgroup',
-                'https://github.com/ziontechgroup'
+                'https://linkedin.com/company/ziontechgroup',https://twitter.com/ziontechgroup',https://github.com/ziontechgroup'
             ],;
             ...(type === 'article' && {
 
@@ -162,8 +159,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
       <meta name="description" content={description}/>"
       <meta name="keywords" content = {
 
-  keywords.join(',
-  ');
+  keywords.join(',);
 
 }/>;"
       <meta name="author" content={author}/>"

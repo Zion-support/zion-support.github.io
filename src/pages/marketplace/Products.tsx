@@ -122,16 +122,10 @@ export default function MarketplaceProducts() {
       image:'
         'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600',
       images: ['
-        'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600',
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600',
-        'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600',
+        'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600',https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600',https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600',
       ],
       features: ['
-        'AI-powered content generation',
-        'SEO optimization',
-        'Multiple content types',
-        'Plagiarism-free content',
-        '24/7 support',
+        'AI-powered content generation',SEO optimization',Multiple content types',Plagiarism-free content',24/7 support',
       ],
       tags: ['AI',Content Creation',Marketing',SEO',Automation'],
       vendor: 'Zion Tech Group',
@@ -166,15 +160,10 @@ export default function MarketplaceProducts() {
       image:'
         'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=600',
       images: ['
-        'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=600',
-        'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&h=600',
+        'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=600',https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&h=600',
       ],
       features: ['
-        'Quantum-resistant encryption',
-        'AI threat detection',
-        'Real-time monitoring',
-        'Automated response',
-        'Compliance reporting',
+        'Quantum-resistant encryption',AI threat detection',Real-time monitoring',Automated response',Compliance reporting',
       ],
       tags: ['Cybersecurity',Quantum',AI',Encryption',Monitoring'],
       vendor: 'Zion Tech Group',
@@ -209,15 +198,10 @@ export default function MarketplaceProducts() {
       image:'
         'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600',
       images: ['
-        'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600',
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600',
+        'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600',https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600',
       ],
       features: ['
-        'Multi-cloud management',
-        'Automated scaling',
-        'Cost optimization',
-        'Real-time monitoring',
-        'DevOps integration',
+        'Multi-cloud management',Automated scaling',Cost optimization',Real-time monitoring',DevOps integration',
       ],
       tags: ['Cloud',DevOps',Infrastructure',Automation',Monitoring'],
       vendor: 'Zion Tech Group',
@@ -252,15 +236,10 @@ export default function MarketplaceProducts() {
       image:'
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600',
       images: ['
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600',
-        'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600',
+        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600',https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600',
       ],
       features: ['
-        'Real-time analytics',
-        'Custom dashboards',
-        'Predictive modeling',
-        'Advanced reporting',
-        'Data visualization',
+        'Real-time analytics',Custom dashboards',Predictive modeling',Advanced reporting',Data visualization',
       ],
       tags: ['Analytics',BI',Dashboard',Predictive',Visualization'],
       vendor: 'Zion Tech Group',
@@ -295,15 +274,10 @@ export default function MarketplaceProducts() {
       image:'
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600',
       images: ['
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600',
-        'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600',
+        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600',https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=600',
       ],
       features: ['
-        'Edge computing',
-        'Real-time processing',
-        'Cloud integration',
-        'Device management',
-        'Security protocols',
+        'Edge computing',Real-time processing',Cloud integration',Device management',Security protocols',
       ],
       tags: ['IoT',Edge Computing',Real-time',Cloud',Security'],
       vendor: 'Zion Tech Group',
@@ -338,15 +312,10 @@ export default function MarketplaceProducts() {
       image:'
         'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600',
       images: ['
-        'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600',
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600',
+        'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=600',https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=600',
       ],
       features: ['
-        'Pre-trained models',
-        'Development frameworks',
-        'Documentation',
-        'Example projects',
-        'Community support',
+        'Pre-trained models',Development frameworks',Documentation',Example projects',Community support',
       ],
       tags: ['AI',Machine Learning',Development',Frameworks',Models'],
       vendor: 'Zion Tech Group',

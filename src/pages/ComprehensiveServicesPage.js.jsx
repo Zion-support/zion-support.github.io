@@ -21,9 +21,7 @@ export default function ComprehensiveServicesPage() {
 
         const colorMap = {
 
-  'Micro SAAS': 'bg-blue-100 text-blue-800',
-            'IT Services': 'bg-green-100 text-green-800',
-  'AI Services': 'bg-purple-100 text-purple-800'
+  'Micro SAAS': 'bg-blue-100 text-blue-800',IT Services': 'bg-green-100 text-green-800',AI Services': 'bg-purple-100 text-purple-800'
         
 
 };

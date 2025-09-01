@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIComplianceMonitoring() {
   const features = [
-    'AI-powered compliance monitoring optimization',
-    'Intelligent regulatory compliance tracking',;
+    'AI-powered compliance monitoring optimization',Intelligent regulatory compliance tracking',;
     'Automated compliance reporting and alerting',;
     'Predictive analytics for compliance risks',;
     'Smart governance and policy management',;

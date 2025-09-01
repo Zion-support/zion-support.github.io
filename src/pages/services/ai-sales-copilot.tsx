@@ -81,12 +81,7 @@ export default function AISalesCopilot() {
   ];
 
   const benefits = ['
-    'Increase sales conversion rates by up to 300%',
-    'Reduce sales cycle time by 40%',
-    'Improve lead qualification accuracy by 85%',
-    'Boost sales team productivity by 60%',
-    'Enhance customer engagement and retention',
-    'Real-time performance monitoring and optimization',
+    'Increase sales conversion rates by up to 300%',Reduce sales cycle time by 40%',Improve lead qualification accuracy by 85%',Boost sales team productivity by 60%',Enhance customer engagement and retention',Real-time performance monitoring and optimization',
   ];
 
   const useCases = [

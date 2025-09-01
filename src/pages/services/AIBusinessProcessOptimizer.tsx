@@ -16,34 +16,15 @@ import {
 export default function AIBusinessProcessOptimizer(...args: any[]): any {
 
   const features = ['
-    'AI-powered process mining and discovery',
-    'Real-time performance monitoring and alerts',
-    'Predictive analytics for process bottlenecks',
-    'Automated workflow optimization recommendations',
-    'Resource allocation optimization',
-    'ROI tracking and performance metrics',
-    'Integration with 50+ business tools',
-    'Custom AI model training for your industry',
-    '24/7 process monitoring and alerting',
-    'Executive dashboard with KPI tracking',
+    'AI-powered process mining and discovery',Real-time performance monitoring and alerts',Predictive analytics for process bottlenecks',Automated workflow optimization recommendations',Resource allocation optimization',ROI tracking and performance metrics',Integration with 50+ business tools',Custom AI model training for your industry',24/7 process monitoring and alerting',Executive dashboard with KPI tracking',
   ];
 
   const benefits = ['
-    'Reduce process costs by 30-50%',
-    'Improve efficiency by 40-70%',
-    'Eliminate manual bottlenecks',
-    'Real-time visibility into operations',
-    'Data-driven decision making',
-    'Scalable process optimization',
+    'Reduce process costs by 30-50%',Improve efficiency by 40-70%',Eliminate manual bottlenecks',Real-time visibility into operations',Data-driven decision making',Scalable process optimization',
   ];
 
   const useCases = ['
-    'Manufacturing process optimization',
-    'Customer service workflow automation',
-    'Supply chain process improvement',
-    'Financial operations streamlining',
-    'HR process automation',
-    'Sales process optimization',
+    'Manufacturing process optimization',Customer service workflow automation',Supply chain process improvement',Financial operations streamlining',HR process automation',Sales process optimization',
   ];
 
   const tiers = [
@@ -52,30 +33,21 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {
       name: 'Starter',
       price: '$1,999/mo',
       details: ['
-        'Up to 10 processes',
-        'Basic AI insights',
-        'Email support',
-        'Standard integrations',
+        'Up to 10 processes',Basic AI insights',Email support',Standard integrations',
       ]},
     {
 
       name: 'Professional',
       price: '$4,999/mo',
       details: ['
-        'Up to 50 processes',
-        'Advanced AI analytics',
-        'Priority support',
-        'Custom integrations',
+        'Up to 50 processes',Advanced AI analytics',Priority support',Custom integrations',
       ]},
     {
 
       name: 'Enterprise',
       price: '$12,999/mo',
       details: ['
-        'Unlimited processes',
-        'Custom AI models',
-        'Dedicated support',
-        'White-label solution',
+        'Unlimited processes',Custom AI models',Dedicated support',White-label solution',
       ]},
   ];
 
@@ -186,9 +158,7 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {
 "
         <div className="mt-12 grid md: anygrid-cols-3 gap-6">
           {['
-            'Real-time monitoring',
-            'AI-powered insights',
-            'Process automation',
+            'Real-time monitoring',AI-powered insights',Process automation',
           ].map(t => (
             <div
               key={t}"

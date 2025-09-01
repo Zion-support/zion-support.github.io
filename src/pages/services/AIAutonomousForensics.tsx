@@ -68,12 +68,7 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
   ];
 
   const benefits = ['
-    'Reduce investigation time by 70%',
-    'Improve evidence discovery by 80%',
-    'Enhance forensic accuracy by 90%',
-    'Automate routine forensics tasks',
-    '24/7 autonomous operation',
-    'Real-time incident response',
+    'Reduce investigation time by 70%',Improve evidence discovery by 80%',Enhance forensic accuracy by 90%',Automate routine forensics tasks',24/7 autonomous operation',Real-time incident response',
   ];
 
   return()

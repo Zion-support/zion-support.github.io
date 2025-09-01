@@ -87,8 +87,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   const getCategoryColor = (category: string)  => {
 
     const colors = ['
-      'from-blue-600 to-cyan-600',
-      'from-purple-600 to-pink-600',;
+      'from-blue-600 to-cyan-600',from-purple-600 to-pink-600',;
       'from-green-600 to-emerald-600',;
       'from-red-600 to-orange-600',;
       'from-indigo-600 to-purple-600',;

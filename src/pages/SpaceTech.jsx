@@ -8,10 +8,7 @@ const SpaceTech = () => {
       description:'
         'Advanced satellite systems for communication, navigation, and Earth observation.',
       applications: ['
-        'Global Communications',
-        'GPS Navigation',
-        'Climate Monitoring',
-        'Remote Sensing',
+        'Global Communications',GPS Navigation',Climate Monitoring',Remote Sensing',
       ]},
     {
 
@@ -19,10 +16,7 @@ const SpaceTech = () => {
       description:'
         'Autonomous robotic systems for space exploration and satellite maintenance.',
       applications: ['
-        'Satellite Repair',
-        'Space Debris Cleanup',
-        'Planetary Exploration',
-        'Space Station Operations',
+        'Satellite Repair',Space Debris Cleanup',Planetary Exploration',Space Station Operations',
       ]},
     {
 
@@ -30,10 +24,7 @@ const SpaceTech = () => {
       description:'
         'High-speed, secure communication networks for space missions and satellite operations.',
       applications: ['
-        'Deep Space Communication',
-        'Satellite Networks',
-        'Mission Control',
-        'Data Transmission',
+        'Deep Space Communication',Satellite Networks',Mission Control',Data Transmission',
       ]},
     {
 
@@ -41,10 +32,7 @@ const SpaceTech = () => {
       description:'
         'AI-powered analysis of space data for scientific research and commercial applications.',
       applications: ['
-        'Space Weather Prediction',
-        'Orbital Mechanics',
-        'Resource Mapping',
-        'Scientific Discovery',
+        'Space Weather Prediction',Orbital Mechanics',Resource Mapping',Scientific Discovery',
       ]},
   ];
 

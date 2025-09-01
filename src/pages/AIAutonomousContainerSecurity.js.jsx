@@ -191,14 +191,7 @@ const AIAutonomousContainerSecurity = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Docker Security',
-                'Kubernetes Security',
-                'Container Registry Security',
-                'Runtime Security',
-                'Image Security',
-                'Network Security',
-                'Storage Security',
-                'Orchestration Security',
+                'Docker Security',Kubernetes Security',Container Registry Security',Runtime Security',Image Security',Network Security',Storage Security',Orchestration Security',
               ].map(type => (
                 <div
                   key={type}"

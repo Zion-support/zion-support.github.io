@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIAugmentedReality() {
   const features = [
-    'AI-powered AR optimization',
-    'Intelligent AR content management',;
+    'AI-powered AR optimization',Intelligent AR content management',;
     'Automated AR monitoring and alerting',;
     'Predictive analytics for AR scaling',;
     'Smart AR security and compliance',;

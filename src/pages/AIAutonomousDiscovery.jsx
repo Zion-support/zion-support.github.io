@@ -181,14 +181,7 @@ const AIAutonomousDiscovery = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Pattern Discovery',
-                'Anomaly Detection',
-                'Trend Discovery',
-                'Relationship Discovery',
-                'Insight Discovery',
-                'Knowledge Discovery',
-                'Data Discovery',
-                'Information Discovery',
+                'Pattern Discovery',Anomaly Detection',Trend Discovery',Relationship Discovery',Insight Discovery',Knowledge Discovery',Data Discovery',Information Discovery',
               ].map(type => (
                 <div
                   key={type}"

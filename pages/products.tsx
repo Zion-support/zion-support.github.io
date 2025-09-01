@@ -44,20 +44,10 @@ const Products: NextPage = () => {;
       description: 'Revolutionary AI platform that generates high-quality, SEO-optimized content for blogs, social media, and marketing campaigns. Features advanced language models, content templates, and automated publishing workflows.',
       price: '$299/month',
       features = ['
-        'AI Content Generation',
-        'SEO Optimization',
-        'Multi-Platform Publishing',
-        'Content Analytics',
-        'Brand Voice Customization',
-        'Plagiarism Detection',
-        'Social Media Integration',
-        'Automated Workflows'
+        'AI Content Generation',SEO Optimization',Multi-Platform Publishing',Content Analytics',Brand Voice Customization',Plagiarism Detection',Social Media Integration',Automated Workflows'
       ],
       benefits = ['
-        '10x faster content creation',
-        'Improved SEO rankings',
-        'Consistent brand messaging',
-        'Reduced content costs'
+        '10x faster content creation',Improved SEO rankings',Consistent brand messaging',Reduced content costs'
       ],
       icon: Brain,
       color: 'from-blue-600 to-cyan-600',
@@ -73,20 +63,10 @@ const Products: NextPage = () => {;
       description: 'Advanced lead generation platform with AI-powered scoring, automated follow-ups, and comprehensive CRM capabilities. Integrates with major marketing tools and provides actionable insights.',
       price: '$199/month',
       features = ['
-        'AI Lead Scoring',
-        'Automated Follow-ups',
-        'CRM Integration',
-        'Email Campaigns',
-        'Lead Analytics',
-        'Social Media Monitoring',
-        'A/B Testing',
-        'ROI Tracking'
+        'AI Lead Scoring',Automated Follow-ups',CRM Integration',Email Campaigns',Lead Analytics',Social Media Monitoring',A/B Testing',ROI Tracking'
       ],
       benefits = ['
-        '3x higher conversion rates',
-        'Automated lead nurturing',
-        'Comprehensive reporting',
-        'Seamless integrations'
+        '3x higher conversion rates',Automated lead nurturing',Comprehensive reporting',Seamless integrations'
       ],
       icon: Target,
       color: 'from-green-600 to-teal-600',
@@ -102,20 +82,10 @@ const Products: NextPage = () => {;
       description: 'Intelligent coding assistant that generates, reviews, and optimizes code across multiple programming languages. Features include automated testing, documentation generation, and performance optimization.',
       price: '$399/month',
       features = ['
-        'AI Code Generation',
-        'Code Review & Optimization',
-        'Automated Testing',
-        'Documentation Generation',
-        'Performance Analysis',
-        'Security Scanning',
-        'Multi-Language Support',
-        'Git Integration'
+        'AI Code Generation',Code Review & Optimization',Automated Testing',Documentation Generation',Performance Analysis',Security Scanning',Multi-Language Support',Git Integration'
       ],
       benefits = ['
-        '50% faster development',
-        'Reduced bug rates',
-        'Improved code quality',
-        'Automated documentation'
+        '50% faster development',Reduced bug rates',Improved code quality',Automated documentation'
       ],
       icon: Code,
       color: 'from-purple-600 to-pink-600',
@@ -131,20 +101,10 @@ const Products: NextPage = () => {;
       description: 'AI-driven project management platform that automates task assignment, tracks progress, and optimizes team workflows. Features intelligent scheduling, resource allocation, and predictive analytics.',
       price: '$149/month',
       features = ['
-        'AI Task Assignment',
-        'Workflow Automation',
-        'Resource Optimization',
-        'Progress Tracking',
-        'Team Collaboration',
-        'Time Management',
-        'Performance Analytics',
-        'Integration Hub'
+        'AI Task Assignment',Workflow Automation',Resource Optimization',Progress Tracking',Team Collaboration',Time Management',Performance Analytics',Integration Hub'
       ],
       benefits = ['
-        '30% productivity increase',
-        'Automated task management',
-        'Better resource utilization',
-        'Improved team collaboration'
+        '30% productivity increase',Automated task management',Better resource utilization',Improved team collaboration'
       ],
       icon: Zap,
       color: 'from-yellow-600 to-orange-600',
@@ -160,20 +120,10 @@ const Products: NextPage = () => {;
       description: 'Comprehensive cybersecurity platform with real-time threat detection, automated incident response, and compliance management. Protects against advanced persistent threats and provides detailed security analytics.',
       price: '$499/month',
       features = ['
-        'Real-time Threat Detection',
-        'Automated Incident Response',
-        'Compliance Management',
-        'Vulnerability Assessment',
-        'Security Analytics',
-        'Threat Intelligence',
-        'Penetration Testing',
-        'Security Training'
+        'Real-time Threat Detection',Automated Incident Response',Compliance Management',Vulnerability Assessment',Security Analytics',Threat Intelligence',Penetration Testing',Security Training'
       ],
       benefits = ['
-        '99.9% threat detection rate',
-        'Automated security responses',
-        'Regulatory compliance',
-        'Reduced security risks'
+        '99.9% threat detection rate',Automated security responses',Regulatory compliance',Reduced security risks'
       ],
       icon: Shield,
       color: 'from-red-600 to-orange-600',
@@ -189,20 +139,10 @@ const Products: NextPage = () => {;
       description: 'Comprehensive blockchain platform for building, testing, and deploying smart contracts and decentralized applications. Features include development tools, testing frameworks, and deployment automation.',
       price: '$799/month',
       features = ['
-        'Smart Contract Development',
-        'DApp Creation Tools',
-        'Testing Frameworks',
-        'Deployment Automation',
-        'Blockchain Analytics',
-        'Multi-Chain Support',
-        'Security Auditing',
-        'Developer SDKs'
+        'Smart Contract Development',DApp Creation Tools',Testing Frameworks',Deployment Automation',Blockchain Analytics',Multi-Chain Support',Security Auditing',Developer SDKs'
       ],
       benefits = ['
-        'Faster blockchain development',
-        'Reduced deployment time',
-        'Enhanced security',
-        'Multi-chain compatibility';
+        'Faster blockchain development',Reduced deployment time',Enhanced security',Multi-chain compatibility';
       ],;
       icon: Network,;
       color: 'from-violet-600 to-purple-600',;

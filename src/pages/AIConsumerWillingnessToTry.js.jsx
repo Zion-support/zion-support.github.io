@@ -171,14 +171,7 @@ const AIConsumerWillingnessToTry = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Risk Tolerance',
-                'Innovation Adoption',
-                'Previous Experience',
-                'Social Influence',
-                'Product Complexity',
-                'Cost Sensitivity',
-                'Time Availability',
-                'Need Urgency',
+                'Risk Tolerance',Innovation Adoption',Previous Experience',Social Influence',Product Complexity',Cost Sensitivity',Time Availability',Need Urgency',
               ].map(factor => (
                 <div
                   key={factor}"

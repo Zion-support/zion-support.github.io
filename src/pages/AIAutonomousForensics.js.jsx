@@ -183,14 +183,7 @@ const AIAutonomousForensics = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Digital Forensics',
-                'Computer Forensics',
-                'Network Forensics',
-                'Mobile Forensics',
-                'Memory Forensics',
-                'File Forensics',
-                'Database Forensics',
-                'Cloud Forensics',
+                'Digital Forensics',Computer Forensics',Network Forensics',Mobile Forensics',Memory Forensics',File Forensics',Database Forensics',Cloud Forensics',
               ].map(type => (
                 <div
                   key={type}"

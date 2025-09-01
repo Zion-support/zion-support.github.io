@@ -53,12 +53,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
   ];
 
   const benefits = ['
-    'Reduce transaction costs by up to 60%',
-    'Improve security with AI threat detection',
-    'Automate complex blockchain operations',
-    'Real-time fraud prevention and detection',
-    'Scalable infrastructure for enterprise needs',
-    'Compliance automation for regulatory requirements',
+    'Reduce transaction costs by up to 60%',Improve security with AI threat detection',Automate complex blockchain operations',Real-time fraud prevention and detection',Scalable infrastructure for enterprise needs',Compliance automation for regulatory requirements',
   ];
 
   const pricing = [
@@ -68,10 +63,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
       price: '$2,500',
       period: '/month',
       features: ['
-        'AI Smart Contract Templates',
-        'Basic Security Monitoring',
-        'Standard Support',
-        'Up to 10,000 transactions/month',
+        'AI Smart Contract Templates',Basic Security Monitoring',Standard Support',Up to 10,000 transactions/month',
       ]},
     {
 
@@ -79,11 +71,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
       price: '$5,000',
       period: '/month',
       features: ['
-        'Custom AI Smart Contracts',
-        'Advanced Security Suite',
-        'Priority Support',
-        'Up to 100,000 transactions/month',
-        'Custom Integrations',
+        'Custom AI Smart Contracts',Advanced Security Suite',Priority Support',Up to 100,000 transactions/month',Custom Integrations',
       ]},
     {
 
@@ -91,12 +79,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
       price: '$12,000',
       period: '/month',
       features: ['
-        'Full AI Blockchain Platform',
-        'Enterprise Security',
-        '24/7 Dedicated Support',
-        'Unlimited transactions',
-        'Custom Development',
-        'On-premise Deployment',
+        'Full AI Blockchain Platform',Enterprise Security',24/7 Dedicated Support',Unlimited transactions',Custom Development',On-premise Deployment',
       ]},
   ];
 

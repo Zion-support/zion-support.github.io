@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIRedis() {
   const features = [
-    'AI-powered Redis optimization',
-    'Intelligent Redis management',;
+    'AI-powered Redis optimization',Intelligent Redis management',;
     'Automated Redis monitoring and alerting',;
     'Predictive analytics for Redis scaling',;
     'Smart Redis security and compliance',;

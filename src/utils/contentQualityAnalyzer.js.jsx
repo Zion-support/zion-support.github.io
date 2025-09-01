@@ -74,8 +74,8 @@ export class ContentQualityAnalyzer {
     if (!content) return 0;
     // Remove HTML tags and count words
     const cleanContent = content;
-      .replace(/<[^>]*>/g, ')
-      .replace(/\s+/g, ')
+      .replace(/<[^>]*>/g,)
+      .replace(/\s+/g,)
       .trim();
     return cleanContent.split(' ').filter(word => word.length > 0).length;
   }
@@ -115,7 +115,7 @@ export class ContentQualityAnalyzer {
     // Simple syllable estimation
     const words = content;
       .toLowerCase()
-      .replace(/[^a-z\s]/g,')
+      .replace(/[^a-z\s]/g,)
       .split(/\s+/);
     let syllableCount = 0;
     for (const word of words) {

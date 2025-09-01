@@ -66,12 +66,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
   ];
 
   const benefits = ['
-    'Reduce process execution time by 40-60%',
-    'Cut operational costs by 25-35%',
-    'Improve process accuracy by 95%',
-    'Increase employee productivity by 30%',
-    'Reduce manual errors by 90%',
-    'Achieve 99.9% process uptime',
+    'Reduce process execution time by 40-60%',Cut operational costs by 25-35%',Improve process accuracy by 95%',Increase employee productivity by 30%',Reduce manual errors by 90%',Achieve 99.9% process uptime',
   ];
 
   const useCases = [
@@ -110,11 +105,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
       description:'
         'Perfect for small businesses starting their process optimization journey',
       features: ['
-        'Up to 10 process workflows',
-        'Basic AI analysis and recommendations',
-        'Standard reporting and dashboards',
-        'Email support',
-        'Basic integration capabilities',
+        'Up to 10 process workflows',Basic AI analysis and recommendations',Standard reporting and dashboards',Email support',Basic integration capabilities',
       ],
       cta: 'Start Free Trial',
       popular: false},
@@ -126,13 +117,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
       description:'
         'Ideal for growing companies with complex process optimization needs',
       features: ['
-        'Up to 50 process workflows',
-        'Advanced AI optimization algorithms',
-        'Real-time monitoring and alerts',
-        'Custom dashboards and reports',
-        'Priority support',
-        'Advanced integrations',
-        'Process simulation and testing',
+        'Up to 50 process workflows',Advanced AI optimization algorithms',Real-time monitoring and alerts',Custom dashboards and reports',Priority support',Advanced integrations',Process simulation and testing',
       ],
       cta: 'Start Free Trial',
       popular: true},
@@ -144,14 +129,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
       description:'
         'Comprehensive solution for large enterprises with complex operations',
       features: ['
-        'Unlimited process workflows',
-        'Custom AI model training',
-        'Advanced analytics and insights',
-        'White-label solutions',
-        'Dedicated account manager',
-        'Custom integrations and APIs',
-        'On-premise deployment options',
-        'Advanced security and compliance',
+        'Unlimited process workflows',Custom AI model training',Advanced analytics and insights',White-label solutions',Dedicated account manager',Custom integrations and APIs',On-premise deployment options',Advanced security and compliance',
       ],
       cta: 'Contact Sales',
       popular: false},

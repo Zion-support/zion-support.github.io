@@ -4,16 +4,10 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
   const [searchQuery, setSearchQuery] = useState('');
   const [activeIndex, setActiveIndex] = useState(-1);
   const [recentSearches, setRecentSearches] = useState(['
-    'IT infrastructure setup',
-    'Network security',
-    'Cloud migration',
-    'Data backup solutions'
+    'IT infrastructure setup',Network security',Cloud migration',Data backup solutions'
   ]);
   const [trendingSearches, setTrendingSearches] = useState(['
-    'AI-powered IT management',
-    'Cybersecurity services',
-    'Remote IT support',
-    'Digital transformation'
+    'AI-powered IT management',Cybersecurity services',Remote IT support',Digital transformation'
   ]);
   const [suggestions, setSuggestions] = useState([]);
   const searchRef = useRef(null);

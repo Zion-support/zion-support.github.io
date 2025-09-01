@@ -196,14 +196,7 @@ const AIAutonomousSoftwareEngineer = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Python',
-                'JavaScript',
-                'Java',
-                'C++',
-                'C#',
-                'Go',
-                'Rust',
-                'TypeScript',
+                'Python',JavaScript',Java',C++',C#',Go',Rust',TypeScript',
               ].map(language => (
                 <div
                   key={language}"

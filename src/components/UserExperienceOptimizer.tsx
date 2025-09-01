@@ -116,12 +116,7 @@ export function UserExperienceOptimizer({
   // Generate sample user behaviors
   const generateUserBehaviors = useCallback(() => {
     const actions = ['
-      'Page View',
-      'Button Click',
-      'Form Submit',
-      'Navigation',
-      'Search',
-      'Purchase',
+      'Page View',Button Click',Form Submit',Navigation',Search',Purchase',
     ];
     const userTypes = ['new',returning',power'];
     const devices = ['desktop',mobile',tablet'];
@@ -398,10 +393,7 @@ export function UserExperienceOptimizer({
     const now = Date.now () ;
     const timeframes = {
 
-      '1h': 3600000,
-      '24h': 86400000,
-      '7d': 604800000,
-      '30d': 2592000000};
+      '1h': 3600000,24h': 86400000,7d': 604800000,30d': 2592000000};
 
     return userBehaviors.filter()
       behavior =>

@@ -11,27 +11,7 @@ const UltimateServicesShowcase2026 = () => {
     // Combine all services
     const allServices = [...ultimateInnovativeServices2026, ...specializedITInfrastructureServices2026];
     const categories = ['
-        'all',
-        'Business Intelligence',
-        'Marketing Automation',
-        'Customer Service',
-        'Supply Chain Management',
-        'Financial Technology',
-        'Healthcare Technology',
-        'Legal Technology',
-        'Workflow Automation',
-        'Blockchain Technology',
-        'Internet of Things',
-        'Quantum Computing',
-        'Cybersecurity',
-        'Cloud Infrastructure',
-        'DevOps',
-        'Data Center Management',
-        'Network Security',
-        'Storage Management',
-        'Virtualization',
-        'IT Asset Management',
-        'Performance Monitoring'
+        'all',Business Intelligence',Marketing Automation',Customer Service',Supply Chain Management',Financial Technology',Healthcare Technology',Legal Technology',Workflow Automation',Blockchain Technology',Internet of Things',Quantum Computing',Cybersecurity',Cloud Infrastructure',DevOps',Data Center Management',Network Security',Storage Management',Virtualization',IT Asset Management',Performance Monitoring'
     ];
     const filteredServices = allServices;
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
@@ -43,7 +23,7 @@ const UltimateServicesShowcase2026 = () => {
             switch (sortBy) {
 
                 case 'price':'
-                    return parseInt(a.price.replace(/[^0-9]/g,')) - parseInt(b.price.replace(/[^0-9]/g,'));
+                    return parseInt(a.price.replace(/[^0-9]/g,)) - parseInt(b.price.replace(/[^0-9]/g,));
                 case 'category':
                     return a.category.localeCompare(b.category);
                 case 'rating':
@@ -57,26 +37,7 @@ const UltimateServicesShowcase2026 = () => {
 
         const icons = {
 
-  'Business Intelligence': '📊',
-            'Marketing Automation': '🎯',
-            'Customer Service': '🤖',
-            'Supply Chain Management': '📦',
-            'Financial Technology': '💰',
-            'Healthcare Technology': '🏥',
-            'Legal Technology': '⚖️',
-            'Workflow Automation': '⚡',
-            'Blockchain Technology': '🔗',
-            'Internet of Things': '🌐',
-            'Quantum Computing': '🔮',
-            'Cybersecurity': '🛡️',
-            'Cloud Infrastructure': '☁️',
-            'DevOps': '⚡',
-            'Data Center Management': '🏢',
-            'Network Security': '🌐',
-            'Storage Management': '💾',
-            'Virtualization': '🖥️',
-            'IT Asset Management': '📱',
-            'Performance Monitoring': '📊'
+  'Business Intelligence': '📊',Marketing Automation': '🎯',Customer Service': '🤖',Supply Chain Management': '📦',Financial Technology': '💰',Healthcare Technology': '🏥',Legal Technology': '⚖️',Workflow Automation': '⚡',Blockchain Technology': '🔗',Internet of Things': '🌐',Quantum Computing': '🔮',Cybersecurity': '🛡️',Cloud Infrastructure': '☁️',DevOps': '⚡',Data Center Management': '🏢',Network Security': '🌐',Storage Management': '💾',Virtualization': '🖥️',IT Asset Management': '📱',Performance Monitoring': '📊'
         };
         return icons[category] || '🚀';
     };

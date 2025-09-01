@@ -63,38 +63,16 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
     subcategory: 'Threat Intelligence',
     description: 'AI-powered cybersecurity platform that uses quantum-resistant algorithms to detect and neutralize advanced persistent threats in real-time',
     features[;
-      'Quantum-resistant encryption algorithms',
-      'Real-time threat detection and response',
-      'Behavioral analytics and anomaly detection',
-      'Automated incident response',
-      'Threat intelligence sharing',
-      'Zero-day vulnerability detection',
-      'Advanced persistent threat hunting',
-      'Compliance automation and reporting'
+      'Quantum-resistant encryption algorithms',Real-time threat detection and response',Behavioral analytics and anomaly detection',Automated incident response',Threat intelligence sharing',Zero-day vulnerability detection',Advanced persistent threat hunting',Compliance automation and reporting'
     ],;
     benefits[;
-      '99.99% threat detection rate',
-      'Zero false positives',
-      'Automated compliance reporting',
-      'Real-time threat neutralization',
-      'Reduced security team workload',
-      'Future-proof quantum security'
+      '99.99% threat detection rate',Zero false positives',Automated compliance reporting',Real-time threat neutralization',Reduced security team workload',Future-proof quantum security'
     ],;
     useCases[;
-      'Government cybersecurity',
-      'Financial institution protection',
-      'Healthcare data security',
-      'Critical infrastructure defense',
-      'Enterprise security operations',
-      'Cloud security monitoring'
+      'Government cybersecurity',Financial institution protection',Healthcare data security',Critical infrastructure defense',Enterprise security operations',Cloud security monitoring'
     ],;
     targetAudience[;
-      'Government agencies',
-      'Financial institutions',
-      'Healthcare organizations',
-      'Defense contractors',
-      'Large enterprises',
-      'Critical infrastructure operators'
+      'Government agencies',Financial institutions',Healthcare organizations',Defense contractors',Large enterprises',Critical infrastructure operators'
     ],;
     pricing: {
 
@@ -149,38 +127,16 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
     subcategory: 'Compliance Automation',
     description: 'Intelligent compliance automation platform that continuously monitors and ensures regulatory compliance across multiple frameworks',
     features[;
-      'Multi-framework compliance monitoring',
-      'Automated compliance reporting',
-      'Real-time policy enforcement',
-      'Risk assessment automation',
-      'Audit trail management',
-      'Regulatory update tracking',
-      'Compliance scoring and metrics',
-      'Integration with existing systems'
+      'Multi-framework compliance monitoring',Automated compliance reporting',Real-time policy enforcement',Risk assessment automation',Audit trail management',Regulatory update tracking',Compliance scoring and metrics',Integration with existing systems'
     ],;
     benefits[;
-      '90% reduction in compliance costs',
-      'Automated regulatory updates',
-      'Real-time compliance monitoring',
-      'Reduced audit preparation time',
-      'Proactive risk mitigation',
-      'Centralized compliance management'
+      '90% reduction in compliance costs',Automated regulatory updates',Real-time compliance monitoring',Reduced audit preparation time',Proactive risk mitigation',Centralized compliance management'
     ],;
     useCases[;
-      'Financial services compliance',
-      'Healthcare HIPAA compliance',
-      'Government security compliance',
-      'Enterprise SOX compliance',
-      'GDPR data protection',
-      'Industry-specific regulations'
+      'Financial services compliance',Healthcare HIPAA compliance',Government security compliance',Enterprise SOX compliance',GDPR data protection',Industry-specific regulations'
     ],;
     targetAudience[;
-      'Financial institutions',
-      'Healthcare organizations',
-      'Government agencies',
-      'Large enterprises',
-      'Compliance officers',
-      'Risk management teams'
+      'Financial institutions',Healthcare organizations',Government agencies',Large enterprises',Compliance officers',Risk management teams'
     ],;
     pricing: {
 
@@ -239,38 +195,16 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
     subcategory: 'Predictive Analytics',
     description: 'Advanced predictive analytics platform that uses machine learning to forecast business trends and provide actionable insights',
     features[;
-      'Multi-dimensional data analysis',
-      'Real-time predictive modeling',
-      'Automated insight generation',
-      'Custom dashboard creation',
-      'Data visualization tools',
-      'API integration capabilities',
-      'Machine learning model training',
-      'Automated reporting'
+      'Multi-dimensional data analysis',Real-time predictive modeling',Automated insight generation',Custom dashboard creation',Data visualization tools',API integration capabilities',Machine learning model training',Automated reporting'
     ],;
     benefits[;
-      'Data-driven decision making',
-      'Proactive business planning',
-      'Increased operational efficiency',
-      'Competitive advantage through insights',
-      'Reduced manual analysis time',
-      'Improved forecasting accuracy'
+      'Data-driven decision making',Proactive business planning',Increased operational efficiency',Competitive advantage through insights',Reduced manual analysis time',Improved forecasting accuracy'
     ],;
     useCases[;
-      'Sales forecasting and planning',
-      'Inventory optimization',
-      'Customer behavior prediction',
-      'Risk assessment and management',
-      'Market trend analysis',
-      'Operational performance optimization'
+      'Sales forecasting and planning',Inventory optimization',Customer behavior prediction',Risk assessment and management',Market trend analysis',Operational performance optimization'
     ],;
     targetAudience[;
-      'Retail companies',
-      'Manufacturing firms',
-      'Financial services',
-      'Healthcare organizations',
-      'E-commerce platforms',
-      'Consulting firms'
+      'Retail companies',Manufacturing firms',Financial services',Healthcare organizations',E-commerce platforms',Consulting firms'
     ],;
     pricing: {
 
@@ -325,38 +259,16 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
     subcategory: 'Real-Time Processing',
     description: 'High-performance real-time data streaming platform for processing and analyzing data as it flows through systems',
     features[;
-      'Real-time data ingestion',
-      'Stream processing engines',
-      'Low-latency analytics',
-      'Data pipeline automation',
-      'Real-time dashboards',
-      'Event-driven architecture',
-      'Scalable streaming clusters',
-      'Data quality monitoring'
+      'Real-time data ingestion',Stream processing engines',Low-latency analytics',Data pipeline automation',Real-time dashboards',Event-driven architecture',Scalable streaming clusters',Data quality monitoring'
     ],;
     benefits[;
-      'Instant data insights',
-      'Real-time decision making',
-      'Reduced data latency',
-      'Improved operational efficiency',
-      'Enhanced customer experience',
-      'Cost-effective data processing'
+      'Instant data insights',Real-time decision making',Reduced data latency',Improved operational efficiency',Enhanced customer experience',Cost-effective data processing'
     ],;
     useCases[;
-      'IoT data processing',
-      'Financial trading systems',
-      'E-commerce analytics',
-      'Log monitoring and analysis',
-      'Social media analytics',
-      'Sensor data processing'
+      'IoT data processing',Financial trading systems',E-commerce analytics',Log monitoring and analysis',Social media analytics',Sensor data processing'
     ],;
     targetAudience[;
-      'IoT companies',
-      'Financial institutions',
-      'E-commerce platforms',
-      'Technology companies',
-      'Manufacturing firms',
-      'Telecommunications'
+      'IoT companies',Financial institutions',E-commerce platforms',Technology companies',Manufacturing firms',Telecommunications'
     ],;
     pricing: {
 
@@ -415,38 +327,16 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
     subcategory: 'Multi-Cloud Management',
     description: 'Intelligent multi-cloud orchestration platform that manages and optimizes workloads across multiple cloud providers',
     features[;
-      'Multi-cloud workload management',
-      'Automated cost optimization',
-      'Unified monitoring and logging',
-      'Cross-cloud security management',
-      'Automated scaling policies',
-      'Disaster recovery orchestration',
-      'Performance optimization',
-      'Compliance management'
+      'Multi-cloud workload management',Automated cost optimization',Unified monitoring and logging',Cross-cloud security management',Automated scaling policies',Disaster recovery orchestration',Performance optimization',Compliance management'
     ],;
     benefits[;
-      'Reduced cloud costs by 30-50%',
-      'Improved performance and reliability',
-      'Vendor lock-in avoidance',
-      'Centralized management',
-      'Automated operations',
-      'Enhanced security posture'
+      'Reduced cloud costs by 30-50%',Improved performance and reliability',Vendor lock-in avoidance',Centralized management',Automated operations',Enhanced security posture'
     ],;
     useCases[;
-      'Multi-cloud deployments',
-      'Hybrid cloud environments',
-      'Cloud cost optimization',
-      'Disaster recovery planning',
-      'Performance monitoring',
-      'Security compliance'
+      'Multi-cloud deployments',Hybrid cloud environments',Cloud cost optimization',Disaster recovery planning',Performance monitoring',Security compliance'
     ],;
     targetAudience[;
-      'Large enterprises',
-      'Technology companies',
-      'Financial institutions',
-      'Healthcare organizations',
-      'Government agencies',
-      'E-commerce platforms'
+      'Large enterprises',Technology companies',Financial institutions',Healthcare organizations',Government agencies',E-commerce platforms'
     ],;
     pricing: {
 
@@ -501,38 +391,16 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
     subcategory: 'DevOps Automation',
     description: 'Intelligent DevOps automation platform that uses AI to optimize software development, testing, and deployment processes',
     features[;
-      'AI-powered code review',
-      'Automated testing optimization',
-      'Intelligent deployment strategies',
-      'Performance monitoring and optimization',
-      'Automated incident response',
-      'Predictive maintenance',
-      'Continuous integration/continuous deployment',
-      'DevOps metrics and analytics'
+      'AI-powered code review',Automated testing optimization',Intelligent deployment strategies',Performance monitoring and optimization',Automated incident response',Predictive maintenance',Continuous integration/continuous deployment',DevOps metrics and analytics'
     ],;
     benefits[;
-      '50-70% faster deployments',
-      'Reduced deployment failures',
-      'Automated quality assurance',
-      'Improved team productivity',
-      'Cost-effective operations',
-      'Enhanced software quality'
+      '50-70% faster deployments',Reduced deployment failures',Automated quality assurance',Improved team productivity',Cost-effective operations',Enhanced software quality'
     ],;
     useCases[;
-      'Software development teams',
-      'DevOps engineering',
-      'Quality assurance',
-      'Release management',
-      'Performance optimization',
-      'Incident management'
+      'Software development teams',DevOps engineering',Quality assurance',Release management',Performance optimization',Incident management'
     ],;
     targetAudience[;
-      'Software companies',
-      'Technology startups',
-      'Enterprise IT teams',
-      'DevOps consultants',
-      'Quality assurance teams',
-      'Release managers'
+      'Software companies',Technology startups',Enterprise IT teams',DevOps consultants',Quality assurance teams',Release managers'
     ],;
     pricing: {
 
@@ -591,38 +459,16 @@ export const advancedIoTServices: ExpandedService2027[] = [
     subcategory: 'Industrial IoT',
     description: 'Comprehensive industrial IoT platform that provides real-time monitoring, predictive maintenance, and operational intelligence for manufacturing and industrial operations',
     features[;
-      'Real-time equipment monitoring',
-      'Predictive maintenance algorithms',
-      'Energy consumption optimization',
-      'Quality control automation',
-      'Supply chain visibility',
-      'Safety monitoring and alerts',
-      'Performance analytics',
-      'Integration with existing systems'
+      'Real-time equipment monitoring',Predictive maintenance algorithms',Energy consumption optimization',Quality control automation',Supply chain visibility',Safety monitoring and alerts',Performance analytics',Integration with existing systems'
     ],;
     benefits[;
-      'Reduced equipment downtime by 40-60%',
-      'Energy cost savings of 20-30%',
-      'Improved product quality',
-      'Enhanced operational efficiency',
-      'Proactive maintenance planning',
-      'Real-time operational insights'
+      'Reduced equipment downtime by 40-60%',Energy cost savings of 20-30%',Improved product quality',Enhanced operational efficiency',Proactive maintenance planning',Real-time operational insights'
     ],;
     useCases[;
-      'Manufacturing operations',
-      'Industrial automation',
-      'Energy management',
-      'Quality control',
-      'Supply chain optimization',
-      'Safety monitoring'
+      'Manufacturing operations',Industrial automation',Energy management',Quality control',Supply chain optimization',Safety monitoring'
     ],;
     targetAudience[;
-      'Manufacturing companies',
-      'Industrial facilities',
-      'Energy companies',
-      'Automotive manufacturers',
-      'Chemical plants',
-      'Mining operations'
+      'Manufacturing companies',Industrial facilities',Energy companies',Automotive manufacturers',Chemical plants',Mining operations'
     ],;
     pricing: {
 
@@ -677,38 +523,16 @@ export const advancedIoTServices: ExpandedService2027[] = [
     subcategory: 'Smart Cities',
     description: 'Comprehensive smart city platform that integrates IoT sensors, AI analytics, and automation to optimize urban operations and improve citizen services',
     features[;
-      'Traffic management optimization',
-      'Public safety monitoring',
-      'Environmental monitoring',
-      'Utility management',
-      'Public transportation optimization',
-      'Waste management automation',
-      'Energy grid optimization',
-      'Citizen engagement portal'
+      'Traffic management optimization',Public safety monitoring',Environmental monitoring',Utility management',Public transportation optimization',Waste management automation',Energy grid optimization',Citizen engagement portal'
     ],;
     benefits[;
-      'Reduced traffic congestion by 25-35%',
-      'Energy savings of 20-30%',
-      'Improved public safety',
-      'Enhanced citizen services',
-      'Operational cost reduction',
-      'Sustainable urban development'
+      'Reduced traffic congestion by 25-35%',Energy savings of 20-30%',Improved public safety',Enhanced citizen services',Operational cost reduction',Sustainable urban development'
     ],;
     useCases[;
-      'City traffic management',
-      'Public safety operations',
-      'Environmental monitoring',
-      'Utility management',
-      'Public transportation',
-      'Urban planning'
+      'City traffic management',Public safety operations',Environmental monitoring',Utility management',Public transportation',Urban planning'
     ],;
     targetAudience[;
-      'City governments',
-      'Municipalities',
-      'Urban planners',
-      'Transportation authorities',
-      'Utility companies',
-      'Public safety agencies'
+      'City governments',Municipalities',Urban planners',Transportation authorities',Utility companies',Public safety agencies'
     ],;
     pricing: {
 
@@ -767,38 +591,16 @@ export const advancedFinTechServices: ExpandedService2027[] = [
     subcategory: 'Quantum Finance',
     description: 'Revolutionary financial modeling platform that uses quantum computing to solve complex financial problems and optimize investment strategies',
     features[;
-      'Quantum portfolio optimization',
-      'Risk assessment algorithms',
-      'Real-time market analysis',
-      'Fraud detection systems',
-      'Trading strategy optimization',
-      'Regulatory compliance automation',
-      'Performance analytics',
-      'Multi-asset management'
+      'Quantum portfolio optimization',Risk assessment algorithms',Real-time market analysis',Fraud detection systems',Trading strategy optimization',Regulatory compliance automation',Performance analytics',Multi-asset management'
     ],;
     benefits[;
-      '1000x faster financial calculations',
-      'Superior risk assessment',
-      'Enhanced portfolio returns',
-      'Real-time market insights',
-      'Automated compliance',
-      'Competitive advantage'
+      '1000x faster financial calculations',Superior risk assessment',Enhanced portfolio returns',Real-time market insights',Automated compliance',Competitive advantage'
     ],;
     useCases[;
-      'Portfolio optimization',
-      'Risk management',
-      'Algorithmic trading',
-      'Fraud detection',
-      'Regulatory reporting',
-      'Investment analysis'
+      'Portfolio optimization',Risk management',Algorithmic trading',Fraud detection',Regulatory reporting',Investment analysis'
     ],;
     targetAudience[;
-      'Investment banks',
-      'Hedge funds',
-      'Asset management firms',
-      'Insurance companies',
-      'Trading firms',
-      'Financial advisors'
+      'Investment banks',Hedge funds',Asset management firms',Insurance companies',Trading firms',Financial advisors'
     ],;
     pricing: {
 
@@ -853,38 +655,16 @@ export const advancedFinTechServices: ExpandedService2027[] = [
     subcategory: 'DeFi',
     description: 'Advanced DeFi protocol that provides automated financial services including lending, borrowing, trading, and yield farming',
     features[;
-      'Automated lending and borrowing',
-      'Decentralized trading',
-      'Yield farming optimization',
-      'Liquidity management',
-      'Smart contract automation',
-      'Cross-chain interoperability',
-      'Risk management tools',
-      'Governance mechanisms'
+      'Automated lending and borrowing',Decentralized trading',Yield farming optimization',Liquidity management',Smart contract automation',Cross-chain interoperability',Risk management tools',Governance mechanisms'
     ],;
     benefits[;
-      'Eliminates intermediaries',
-      '24/7 automated operation',
-      'Transparent operations',
-      'Reduced transaction costs',
-      'Global accessibility',
-      'Programmable financial services'
+      'Eliminates intermediaries',24/7 automated operation',Transparent operations',Reduced transaction costs',Global accessibility',Programmable financial services'
     ],;
     useCases[;
-      'Decentralized lending',
-      'Automated trading',
-      'Yield farming',
-      'Liquidity provision',
-      'Cross-border payments',
-      'Asset management'
+      'Decentralized lending',Automated trading',Yield farming',Liquidity provision',Cross-border payments',Asset management'
     ],;
     targetAudience[;
-      'Cryptocurrency users',
-      'DeFi enthusiasts',
-      'Traders and investors',
-      'Financial institutions',
-      'Startups and developers',
-      'Global users'
+      'Cryptocurrency users',DeFi enthusiasts',Traders and investors',Financial institutions',Startups and developers',Global users'
     ],;
     pricing: {
 
@@ -943,38 +723,16 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
     subcategory: 'AI Diagnostics',
     description: 'Advanced AI-powered diagnostic platform that assists healthcare professionals in accurate disease diagnosis and treatment planning',
     features[;
-      'Medical image analysis',
-      'Symptom assessment algorithms',
-      'Treatment recommendation engine',
-      'Patient history analysis',
-      'Drug interaction checking',
-      'Clinical decision support',
-      'Medical literature integration',
-      'Compliance with medical standards'
+      'Medical image analysis',Symptom assessment algorithms',Treatment recommendation engine',Patient history analysis',Drug interaction checking',Clinical decision support',Medical literature integration',Compliance with medical standards'
     ],;
     benefits[;
-      'Improved diagnostic accuracy',
-      'Reduced diagnostic time',
-      'Enhanced treatment planning',
-      'Better patient outcomes',
-      'Reduced medical errors',
-      'Cost-effective healthcare'
+      'Improved diagnostic accuracy',Reduced diagnostic time',Enhanced treatment planning',Better patient outcomes',Reduced medical errors',Cost-effective healthcare'
     ],;
     useCases[;
-      'Medical imaging analysis',
-      'Symptom assessment',
-      'Treatment planning',
-      'Drug safety checking',
-      'Clinical research',
-      'Medical education'
+      'Medical imaging analysis',Symptom assessment',Treatment planning',Drug safety checking',Clinical research',Medical education'
     ],;
     targetAudience[;
-      'Hospitals and clinics',
-      'Healthcare providers',
-      'Medical imaging centers',
-      'Research institutions',
-      'Pharmaceutical companies',
-      'Medical device companies'
+      'Hospitals and clinics',Healthcare providers',Medical imaging centers',Research institutions',Pharmaceutical companies',Medical device companies'
     ],;
     pricing: {
 
@@ -1029,38 +787,16 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
     subcategory: 'Telemedicine',
     description: 'Comprehensive telemedicine platform that provides secure, high-quality virtual healthcare services with AI-powered triage and monitoring',
     features[;
-      'High-definition video consultations',
-      'AI-powered symptom triage',
-      'Remote patient monitoring',
-      'Electronic health records integration',
-      'Prescription management',
-      'Insurance verification',
-      'Multi-language support',
-      'Mobile and web applications'
+      'High-definition video consultations',AI-powered symptom triage',Remote patient monitoring',Electronic health records integration',Prescription management',Insurance verification',Multi-language support',Mobile and web applications'
     ],;
     benefits[;
-      'Improved access to healthcare',
-      'Reduced healthcare costs',
-      'Enhanced patient convenience',
-      'Better chronic disease management',
-      'Increased provider efficiency',
-      'Geographic accessibility'
+      'Improved access to healthcare',Reduced healthcare costs',Enhanced patient convenience',Better chronic disease management',Increased provider efficiency',Geographic accessibility'
     ],;
     useCases[;
-      'Virtual consultations',
-      'Remote monitoring',
-      'Chronic disease management',
-      'Mental health services',
-      'Follow-up care',
-      'Emergency triage'
+      'Virtual consultations',Remote monitoring',Chronic disease management',Mental health services',Follow-up care',Emergency triage'
     ],;
     targetAudience[;
-      'Healthcare providers',
-      'Hospitals and clinics',
-      'Insurance companies',
-      'Employers',
-      'Patients',
-      'Healthcare startups'
+      'Healthcare providers',Hospitals and clinics',Insurance companies',Employers',Patients',Healthcare startups'
     ],;
     pricing: {
 

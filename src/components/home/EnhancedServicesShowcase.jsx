@@ -7,16 +7,7 @@ import { Brain, Cloud, Shield, Database, TrendingUp, Code, Zap, Heart, DollarSig
 const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0, 6);
 const serviceIcons = {
 
-  'AI Automation': Brain,
-    'Cloud Management': Cloud,
-    'Cybersecurity': Shield,
-    'Data Engineering': Database,
-    'Business Intelligence': TrendingUp,
-    'Developer Tools': Code,
-    'Digital Transformation': Zap,
-    'Healthcare Technology': Heart,
-    'Financial Technology': DollarSign,
-    'Blockchain': LinkIcon};
+  'AI Automation': Brain,Cloud Management': Cloud,Cybersecurity': Shield,Data Engineering': Database,Business Intelligence': TrendingUp,Developer Tools': Code,Digital Transformation': Zap,Healthcare Technology': Heart,Financial Technology': DollarSign,Blockchain': LinkIcon};
 export function EnhancedServicesShowcase() {
     return (<section className="py-20 bg-zion-blue-dark">"
       <div className="container mx-auto px-4">"

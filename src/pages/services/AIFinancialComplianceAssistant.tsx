@@ -111,13 +111,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
       period: '/month',
       description: 'Perfect for small financial institutions',
       features[;
-        'Up to 1,000 transactions/month',
-        'Basic compliance monitoring',
-        'Standard regulatory updates',
-        'Email support',
-        'Basic reporting',
-        'Up to 5 user licenses',
-        'Core compliance frameworks'
+        'Up to 1,000 transactions/month',Basic compliance monitoring',Standard regulatory updates',Email support',Basic reporting',Up to 5 user licenses',Core compliance frameworks'
       ],;
       cta: 'Start Free Trial',
       popular: false
@@ -129,16 +123,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
       period: '/month',
       description: 'Ideal for growing financial organizations',
       features[;
-        'Up to 10,000 transactions/month',
-        'Advanced AI compliance monitoring',
-        'Real-time regulatory updates',
-        'Priority support',
-        'Custom reporting',
-        'Up to 25 user licenses',
-        'Advanced compliance frameworks',
-        'API integrations',
-        'Custom workflows',
-        'Advanced analytics'
+        'Up to 10,000 transactions/month',Advanced AI compliance monitoring',Real-time regulatory updates',Priority support',Custom reporting',Up to 25 user licenses',Advanced compliance frameworks',API integrations',Custom workflows',Advanced analytics'
       ],;
       cta: 'Start Free Trial',
       popular: true
@@ -150,16 +135,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
       period: '/month',
       description: 'For large financial institutions with complex needs',
       features[;
-        'Unlimited transactions',
-        'Premium AI compliance monitoring',
-        '24/7 dedicated support',
-        'Custom dashboards',
-        'Unlimited user licenses',
-        'All compliance frameworks',
-        'Enterprise integrations',
-        'Advanced AI models',
-        'On-premise deployment option',
-        'Dedicated compliance consultant',;
+        'Unlimited transactions',Premium AI compliance monitoring',24/7 dedicated support',Custom dashboards',Unlimited user licenses',All compliance frameworks',Enterprise integrations',Advanced AI models',On-premise deployment option',Dedicated compliance consultant',;
         'Custom training programs',;
         'White-label solutions';
       ],;

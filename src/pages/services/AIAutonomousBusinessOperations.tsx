@@ -69,12 +69,7 @@ const AIAutonomousBusinessOperations: React.FC = props {
   ];
 
   const benefits = ['
-    'Increase operational efficiency by 40%',
-    'Reduce operational costs by 30%',
-    'Improve process accuracy by 85%',
-    'Automate routine operations',
-    '24/7 autonomous operation',
-    'Real-time performance monitoring'
+    'Increase operational efficiency by 40%',Reduce operational costs by 30%',Improve process accuracy by 85%',Automate routine operations',24/7 autonomous operation',Real-time performance monitoring'
   ];
 
   return()

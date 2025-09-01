@@ -38,12 +38,7 @@ const ServicesPricingPage: React.FC = () => {
       description: 'Perfect for small businesses getting started with AI',
       price: { monthly: 299, annual: 2999 },
       features: ['
-        'AI Business Intelligence Dashboard',
-        'Basic Machine Learning Models',
-        'Email Support',
-        '5 User Licenses',
-        'Standard Security Features',
-        'Monthly Reports',
+        'AI Business Intelligence Dashboard',Basic Machine Learning Models',Email Support',5 User Licenses',Standard Security Features',Monthly Reports',
       ],
       popular: false,
       icon: Brain},
@@ -54,14 +49,7 @@ const ServicesPricingPage: React.FC = () => {
       description: 'Advanced features for growing businesses',
       price: { monthly: 799, annual: 7999 },
       features: ['
-        'Everything in Starter',
-        'Advanced AI Analytics',
-        'Custom Machine Learning Models',
-        'Priority Support',
-        '25 User Licenses',
-        'Advanced Security Features',
-        'Weekly Reports',
-        'API Access',
+        'Everything in Starter',Advanced AI Analytics',Custom Machine Learning Models',Priority Support',25 User Licenses',Advanced Security Features',Weekly Reports',API Access',
       ],
       popular: true,
       icon: Shield},
@@ -72,14 +60,7 @@ const ServicesPricingPage: React.FC = () => {
       description: 'Complete solution for large organizations',
       price: { monthly: 1999, annual: 19999 },
       features: ['
-        'Everything in Professional',
-        'Custom AI Solutions',
-        'Dedicated Support Team',
-        'Unlimited User Licenses',
-        'Enterprise Security',
-        'Real-time Analytics',
-        'Custom Integrations',
-        'On-site Training',
+        'Everything in Professional',Custom AI Solutions',Dedicated Support Team',Unlimited User Licenses',Enterprise Security',Real-time Analytics',Custom Integrations',On-site Training',
       ],
       popular: false,
       icon: Cloud},
@@ -93,10 +74,7 @@ const ServicesPricingPage: React.FC = () => {
       icon: Zap,
       description: 'Intelligent automation solutions',
       services: ['
-        'Process Automation',
-        'Workflow Optimization',
-        'Intelligent Document Processing',
-        'Predictive Analytics',
+        'Process Automation',Workflow Optimization',Intelligent Document Processing',Predictive Analytics',
       ]},
     {
 
@@ -105,10 +83,7 @@ const ServicesPricingPage: React.FC = () => {
       icon: Shield,
       description: 'Advanced security solutions',
       services: ['
-        'Threat Detection',
-        'Vulnerability Assessment',
-        'Security Monitoring',
-        'Incident Response',
+        'Threat Detection',Vulnerability Assessment',Security Monitoring',Incident Response',
       ]},
     {
 
@@ -117,10 +92,7 @@ const ServicesPricingPage: React.FC = () => {
       icon: Cloud,
       description: 'Cloud infrastructure solutions',
       services: ['
-        'Cloud Migration',
-        'Infrastructure Management',
-        'Cost Optimization',
-        'Performance Monitoring',
+        'Cloud Migration',Infrastructure Management',Cost Optimization',Performance Monitoring',
       ]},
     {
 
@@ -129,10 +101,7 @@ const ServicesPricingPage: React.FC = () => {
       icon: Database,
       description: 'Data-driven insights',
       services: ['
-        'Business Intelligence',
-        'Data Visualization',
-        'Predictive Modeling',
-        'Real-time Analytics',
+        'Business Intelligence',Data Visualization',Predictive Modeling',Real-time Analytics',
       ]},
   ];
 

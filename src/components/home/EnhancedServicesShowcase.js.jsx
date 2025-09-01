@@ -30,15 +30,8 @@ const featuredServices = ENHANCED_SERVICES.filter()
 ).slice(0, 6);
 const serviceIcons = {
 
-  'AI Automation': Brain,
-  'Cloud Management': Cloud,
-  Cybersecurity: Shield,
-  'Data Engineering': Database,
-  'Business Intelligence': TrendingUp,
-  'Developer Tools': Code,
-  'Digital Transformation': Zap,
-  'Healthcare Technology': Heart,
-  'Financial Technology': DollarSign,
+  'AI Automation': Brain,Cloud Management': Cloud,
+  Cybersecurity: Shield,Data Engineering': Database,Business Intelligence': TrendingUp,Developer Tools': Code,Digital Transformation': Zap,Healthcare Technology': Heart,Financial Technology': DollarSign,
   Blockchain: LinkIcon};
 export function EnhancedServicesShowcase() {
   return()

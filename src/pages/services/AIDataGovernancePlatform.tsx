@@ -78,13 +78,7 @@ const AIDataGovernancePlatform: React.FC = props {
       description:'
         'Essential data governance for small to medium organizations',
       features: ['
-        'Up to 10 data sources',
-        'Basic AI discovery',
-        'GDPR & CCPA compliance',
-        'Standard access control',
-        'Email support',
-        'Basic reporting',
-        'Up to 10 users',
+        'Up to 10 data sources',Basic AI discovery',GDPR & CCPA compliance',Standard access control',Email support',Basic reporting',Up to 10 users',
       ],
       cta: 'Start Free Trial',
       popular: false},
@@ -95,15 +89,7 @@ const AIDataGovernancePlatform: React.FC = props {
       period: '/month',
       description: 'Comprehensive governance for growing enterprises',
       features: ['
-        'Up to 100 data sources',
-        'Advanced AI discovery',
-        'Full regulatory compliance',
-        'Advanced access control',
-        'Priority support',
-        'Custom reporting',
-        'Up to 100 users',
-        'API access',
-        'Custom integrations',
+        'Up to 100 data sources',Advanced AI discovery',Full regulatory compliance',Advanced access control',Priority support',Custom reporting',Up to 100 users',API access',Custom integrations',
       ],
       cta: 'Start Free Trial',
       popular: true},
@@ -114,15 +100,7 @@ const AIDataGovernancePlatform: React.FC = props {
       period: '/month',
       description: 'Enterprise-scale governance for global organizations',
       features: ['
-        'Unlimited data sources',
-        'Custom AI models',
-        'Global compliance framework',
-        'Advanced security features',
-        'Dedicated support',
-        'White-label solution',
-        'Unlimited users',
-        'On-premise deployment',
-        'Custom SLA',
+        'Unlimited data sources',Custom AI models',Global compliance framework',Advanced security features',Dedicated support',White-label solution',Unlimited users',On-premise deployment',Custom SLA',
       ],
       cta: 'Contact Sales',
       popular: false},
@@ -154,14 +132,7 @@ const AIDataGovernancePlatform: React.FC = props {
   ];
 
   const complianceFrameworks = ['
-    'GDPR (General Data Protection Regulation),
-    'CCPA (California Consumer Privacy Act),
-    'HIPAA (Health Insurance Portability and Accountability Act),
-    'SOX (Sarbanes-Oxley Act),
-    'PCI DSS (Payment Card Industry Data Security Standard),
-    'ISO 27001 (Information Security Management),
-    'SOC 2 Type II (Service Organization Control),
-    'NIST Cybersecurity Framework',
+    'GDPR (General Data Protection Regulation),CCPA (California Consumer Privacy Act),HIPAA (Health Insurance Portability and Accountability Act),SOX (Sarbanes-Oxley Act),PCI DSS (Payment Card Industry Data Security Standard),ISO 27001 (Information Security Management),SOC 2 Type II (Service Organization Control),NIST Cybersecurity Framework',
   ];
 
   return()

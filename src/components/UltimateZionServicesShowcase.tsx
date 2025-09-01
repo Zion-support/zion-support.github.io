@@ -232,7 +232,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>"
                   <p className="text-sm text-purple-400 font-medium mb-2">
-                    {service.category.replace('-', ').toUpperCase()}
+                    {service.category.replace('-',).toUpperCase()}
                   </p>"
                   <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold">
                     {service.innovationLevel}

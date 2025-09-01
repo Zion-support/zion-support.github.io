@@ -129,14 +129,7 @@ const contactFormFields = [
     type: 'select',
     required: true,
     options: ['
-      'AI & Analytics',
-      'Cybersecurity',
-      'Cloud & DevOps',
-      'IoT & Edge Computing',
-      'Digital Transformation',
-      'Mobile Development',
-      'Micro SaaS Solutions',
-      'Other',
+      'AI & Analytics',Cybersecurity',Cloud & DevOps',IoT & Edge Computing',Digital Transformation',Mobile Development',Micro SaaS Solutions',Other',
     ]},
 ];
 

@@ -11,21 +11,7 @@ const ComprehensivePricingShowcase2025 = () => {
         ...advancedAIServices2025.map(service => ({ ...service, type: 'AI Service' }))
     ];
     const categories = ['
-        'all',
-        'Legal Tech & Compliance',
-        'Quantum Computing & Security',
-        'Healthcare & Biotech',
-        'Energy & Sustainability',
-        'Cybersecurity',
-        'Fintech & Trading',
-        'Quantum Computing & AI',
-        'Supply Chain & Logistics',
-        'Edge Computing & IoT',
-        'Marketing & Automation',
-        'Quantum Technology',
-        'AI & Machine Learning',
-        'AI & Analytics',
-        'AI & Customer Experience'
+        'all',Legal Tech & Compliance',Quantum Computing & Security',Healthcare & Biotech',Energy & Sustainability',Cybersecurity',Fintech & Trading',Quantum Computing & AI',Supply Chain & Logistics',Edge Computing & IoT',Marketing & Automation',Quantum Technology',AI & Machine Learning',AI & Analytics',AI & Customer Experience'
     ];
     const priceRanges = ['
         { value: 'all', label: 'All Prices' },
@@ -44,7 +30,7 @@ const ComprehensivePricingShowcase2025 = () => {
             return true;
         if (service.price) {
 
-            const price = parseFloat(service.price.replace(/[^0-9.]/g,'));
+            const price = parseFloat(service.price.replace(/[^0-9.]/g,));
             if (range.min && range.max) {
 
                 return price >= range.min && price <= range.max}
@@ -73,20 +59,7 @@ const ComprehensivePricingShowcase2025 = () => {
 
         const icons = {
 
-  'Legal Tech & Compliance': '⚖️',
-            'Quantum Computing & Security': '🔐',
-            'Healthcare & Biotech': '🏥',
-            'Energy & Sustainability': '🌱',
-            'Cybersecurity': '🛡️',
-            'Fintech & Trading': '📈',
-            'Quantum Computing & AI': '🔮',
-            'Supply Chain & Logistics': '🚚',
-            'Edge Computing & IoT': '🌐',
-            'Marketing & Automation': '📢',
-            'Quantum Technology': '🔮',
-            'AI & Machine Learning': '🧠',
-            'AI & Analytics': '📊',
-  'AI & Customer Experience': '💬'
+  'Legal Tech & Compliance': '⚖️',Quantum Computing & Security': '🔐',Healthcare & Biotech': '🏥',Energy & Sustainability': '🌱',Cybersecurity': '🛡️',Fintech & Trading': '📈',Quantum Computing & AI': '🔮',Supply Chain & Logistics': '🚚',Edge Computing & IoT': '🌐',Marketing & Automation': '📢',Quantum Technology': '🔮',AI & Machine Learning': '🧠',AI & Analytics': '📊',AI & Customer Experience': '💬'
         
 
 };

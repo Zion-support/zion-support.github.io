@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AINetworkSecurity() {
   const features = [
-    'AI-powered network security optimization',
-    'Intelligent threat detection and response',;
+    'AI-powered network security optimization',Intelligent threat detection and response',;
     'Automated security monitoring and alerting',;
     'Predictive analytics for security threats',;
     'Smart security compliance and governance',;

@@ -74,12 +74,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Perfect for solo entrepreneurs and small teams',
       features: ['
-        'Up to 1,000 customers',
-        'Basic SaaS templates',
-        'Standard payment processing',
-        'Email support',
-        'Basic analytics',
-        'SSL certificates',
+        'Up to 1,000 customers',Basic SaaS templates',Standard payment processing',Email support',Basic analytics',SSL certificates',
       ]},
     {
 
@@ -88,13 +83,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'Ideal for growing businesses and teams',
       features: ['
-        'Up to 10,000 customers',
-        'Advanced SaaS templates',
-        'Multi-payment gateways',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
-        'Custom branding',
+        'Up to 10,000 customers',Advanced SaaS templates',Multi-payment gateways',Priority support',Advanced analytics',API access',Custom branding',
       ],
       popular: true},
     {
@@ -104,13 +93,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {
       period: '/month',
       description: 'For large organizations with complex needs',
       features: ['
-        'Unlimited customers',
-        'Custom SaaS development',
-        'White-label platform',
-        '24/7 dedicated support',
-        'Custom integrations',
-        'On-premise deployment',
-        'SLA guarantees',
+        'Unlimited customers',Custom SaaS development',White-label platform',24/7 dedicated support',Custom integrations',On-premise deployment',SLA guarantees',
       ]},
   ];
 
@@ -138,16 +121,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {
   ];
 
   const saasTemplates = ['
-    'CRM & Sales Management',
-    'Project Management',
-    'E-commerce Platform',
-    'Learning Management System',
-    'HR & Recruitment',
-    'Accounting & Finance',
-    'Marketing Automation',
-    'Customer Support',
-    'Inventory Management',
-    'Real Estate Management',
+    'CRM & Sales Management',Project Management',E-commerce Platform',Learning Management System',HR & Recruitment',Accounting & Finance',Marketing Automation',Customer Support',Inventory Management',Real Estate Management',
   ];
 
   return()

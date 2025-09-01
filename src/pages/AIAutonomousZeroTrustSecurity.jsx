@@ -187,14 +187,7 @@ const AIAutonomousThreatDetection = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Malware Detection',
-                'Phishing Detection',
-                'Ransomware Detection',
-                'DDoS Detection',
-                'Intrusion Detection',
-                'Anomaly Detection',
-                'Behavior Detection',
-                'Pattern Detection',
+                'Malware Detection',Phishing Detection',Ransomware Detection',DDoS Detection',Intrusion Detection',Anomaly Detection',Behavior Detection',Pattern Detection',
               ].map(type => (
                 <div
                   key={type}"

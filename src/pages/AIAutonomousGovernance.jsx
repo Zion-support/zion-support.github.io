@@ -181,14 +181,7 @@ const AIAutonomousGovernance = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Policy Governance',
-                'Compliance Governance',
-                'Risk Governance',
-                'Data Governance',
-                'IT Governance',
-                'Security Governance',
-                'Quality Governance',
-                'Performance Governance',
+                'Policy Governance',Compliance Governance',Risk Governance',Data Governance',IT Governance',Security Governance',Quality Governance',Performance Governance',
               ].map(type => (
                 <div
                   key={type}"

@@ -80,13 +80,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       description: 'Perfect for small businesses and startups',
       price: 299,
       features[;
-        'Basic AI features',
-        'Email support',
-        'Up to 5 users',
-        'Standard integrations',
-        'Community forum access',
-        'Basic analytics',
-        'Mobile app access'
+        'Basic AI features',Email support',Up to 5 users',Standard integrations',Community forum access',Basic analytics',Mobile app access'
       ],;
       color: 'from-cyan-500 to-blue-600',
       popular: false,
@@ -98,15 +92,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       description: 'Ideal for growing businesses and teams',
       price: 999,
       features[;
-        'Advanced AI capabilities',
-        'Priority support',
-        'Up to 25 users',
-        'Advanced integrations',
-        'API access',
-        'Custom branding',
-        'Advanced analytics dashboard',
-        'White-label options',
-        'Training and onboarding'
+        'Advanced AI capabilities',Priority support',Up to 25 users',Advanced integrations',API access',Custom branding',Advanced analytics dashboard',White-label options',Training and onboarding'
       ],;
       color: 'from-purple-500 to-pink-600',
       popular: true,
@@ -118,16 +104,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       description: 'For large organizations with complex needs',
       price: 2999,
       features[;
-        'Full AI suite access',
-        '24/7 dedicated support',
-        'Unlimited users',
-        'Custom integrations',
-        'White-label solutions',
-        'Advanced security features',
-        'SLA guarantees',
-        'Dedicated account manager',
-        'Custom development',
-        'On-premise deployment options'
+        'Full AI suite access',24/7 dedicated support',Unlimited users',Custom integrations',White-label solutions',Advanced security features',SLA guarantees',Dedicated account manager',Custom development',On-premise deployment options'
       ],;
       color: 'from-indigo-500 to-purple-600',
       popular: false,

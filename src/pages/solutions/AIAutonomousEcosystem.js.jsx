@@ -19,10 +19,7 @@ const AIAutonomousEcosystem = () => {
       description: 'Central AI processing and decision-making engine',
       icon: Brain,
       capabilities: ['
-        'Machine learning models',
-        'Neural networks',
-        'Decision algorithms',
-        'Learning optimization',
+        'Machine learning models',Neural networks',Decision algorithms',Learning optimization',
       ]},
     {
 
@@ -30,10 +27,7 @@ const AIAutonomousEcosystem = () => {
       description: 'Comprehensive data handling and processing systems',
       icon: Database,
       capabilities: ['
-        'Data ingestion',
-        'Storage optimization',
-        'Processing pipelines',
-        'Quality management',
+        'Data ingestion',Storage optimization',Processing pipelines',Quality management',
       ]},
     {
 
@@ -41,10 +35,7 @@ const AIAutonomousEcosystem = () => {
       description: 'Connectivity and communication between systems',
       icon: Network,
       capabilities: ['
-        'API management',
-        'Message queuing',
-        'Event streaming',
-        'Service mesh',
+        'API management',Message queuing',Event streaming',Service mesh',
       ]},
     {
 
@@ -52,10 +43,7 @@ const AIAutonomousEcosystem = () => {
       description: 'Intuitive interfaces for all user types',
       icon: Users,
       capabilities: ['
-        'Dashboard views',
-        'Mobile apps',
-        'Web interfaces',
-        'Voice interfaces',
+        'Dashboard views',Mobile apps',Web interfaces',Voice interfaces',
       ]},
     {
 
@@ -63,10 +51,7 @@ const AIAutonomousEcosystem = () => {
       description: 'Comprehensive reporting and analytics capabilities',
       icon: BarChart3,
       capabilities: ['
-        'Real-time analytics',
-        'Predictive insights',
-        'Performance metrics',
-        'Business intelligence',
+        'Real-time analytics',Predictive insights',Performance metrics',Business intelligence',
       ]},
     {
 
@@ -74,19 +59,11 @@ const AIAutonomousEcosystem = () => {
       description: 'Centralized control and monitoring system',
       icon: Cpu,
       capabilities: ['
-        'System monitoring',
-        'Configuration management',
-        'User administration',
-        'Deployment control',
+        'System monitoring',Configuration management',User administration',Deployment control',
       ]},
   ];
   const benefits = ['
-    'Unified AI strategy across all business units',
-    'Reduced integration complexity and costs',
-    'Improved data consistency and quality',
-    'Faster time to market for new AI features',
-    'Better resource utilization and efficiency',
-    'Enhanced security and compliance posture',
+    'Unified AI strategy across all business units',Reduced integration complexity and costs',Improved data consistency and quality',Faster time to market for new AI features',Better resource utilization and efficiency',Enhanced security and compliance posture',
   ];
   const implementation = [
     {

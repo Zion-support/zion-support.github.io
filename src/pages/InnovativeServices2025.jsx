@@ -14,27 +14,16 @@ const InnovativeServices2025 = () => {
           description:'
             'Revolutionary HR automation platform that transforms recruitment, onboarding, and employee management through artificial intelligence.',
           features: ['
-            'AI-powered resume screening with 95% accuracy',
-            'Intelligent interview scheduling and candidate matching',
-            'Automated employee onboarding workflows',
-            'Performance tracking and predictive analytics',
-            'Bias detection and elimination algorithms',
+            'AI-powered resume screening with 95% accuracy',Intelligent interview scheduling and candidate matching',Automated employee onboarding workflows',Performance tracking and predictive analytics',Bias detection and elimination algorithms',
           ],
           benefits: ['
-            '70% faster hiring process',
-            'Reduced unconscious bias in hiring',
-            'Improved employee retention by 40%',
-            'Automated compliance tracking',
-            'Real-time performance insights',
+            '70% faster hiring process',Reduced unconscious bias in hiring',Improved employee retention by 40%',Automated compliance tracking',Real-time performance insights',
           ],
           pricing: '$199 - $799/month',
           marketPosition:'
             'Leading AI-powered HR solution for mid-market companies',
           useCases: ['
-            'Recruitment agencies',
-            'HR departments',
-            'Startups',
-            'Enterprise companies',
+            'Recruitment agencies',HR departments',Startups',Enterprise companies',
           ],
           competitors: ['BambooHR',Workday',Zenefits'],
           competitiveAdvantage:'
@@ -45,27 +34,16 @@ const InnovativeServices2025 = () => {
           description:'
             'AI-driven inventory optimization platform that eliminates stockouts and reduces carrying costs through predictive analytics.',
           features: ['
-            'Machine learning demand forecasting',
-            'Automated reorder point calculations',
-            'Supplier performance analytics',
-            'Real-time inventory tracking',
-            'Multi-location optimization',
+            'Machine learning demand forecasting',Automated reorder point calculations',Supplier performance analytics',Real-time inventory tracking',Multi-location optimization',
           ],
           benefits: ['
-            '30% reduction in inventory costs',
-            'Zero stockout incidents',
-            'Improved supplier relationships',
-            'Real-time visibility across locations',
-            'Automated compliance reporting',
+            '30% reduction in inventory costs',Zero stockout incidents',Improved supplier relationships',Real-time visibility across locations',Automated compliance reporting',
           ],
           pricing: '$149 - $599/month',
           marketPosition:'
             'Next-generation inventory management for retail and manufacturing',
           useCases: ['
-            'Retail chains',
-            'Manufacturing',
-            'E-commerce',
-            'Distribution centers',
+            'Retail chains',Manufacturing',E-commerce',Distribution centers',
           ],
           competitors: ['TradeGecko',Zoho Inventory',Fishbowl'],
           competitiveAdvantage:'
@@ -76,27 +54,16 @@ const InnovativeServices2025 = () => {
           description:'
             'Advanced legal AI platform that automates document review, contract analysis, and compliance monitoring.',
           features: ['
-            'Natural language processing for legal documents',
-            'Automated contract risk assessment',
-            'Compliance violation detection',
-            'Legal research automation',
-            'Audit trail and reporting',
+            'Natural language processing for legal documents',Automated contract risk assessment',Compliance violation detection',Legal research automation',Audit trail and reporting',
           ],
           benefits: ['
-            '90% faster document review',
-            'Comprehensive risk identification',
-            'Automated compliance checking',
-            'Reduced legal costs',
-            'Improved accuracy and consistency',
+            '90% faster document review',Comprehensive risk identification',Automated compliance checking',Reduced legal costs',Improved accuracy and consistency',
           ],
           pricing: '$299 - $1,199/month',
           marketPosition:'
             'Cutting-edge legal AI for law firms and corporate legal departments',
           useCases: ['
-            'Law firms',
-            'Corporate legal',
-            'Compliance teams',
-            'Contract management',
+            'Law firms',Corporate legal',Compliance teams',Contract management',
           ],
           competitors: ['Kira Systems',Luminance',eBrevia'],
           competitiveAdvantage:'
@@ -114,27 +81,16 @@ const InnovativeServices2025 = () => {
           description:'
             'Next-generation fraud prevention platform using machine learning to detect and prevent fraudulent activities in real-time.',
           features: ['
-            'Real-time transaction monitoring',
-            'Behavioral pattern recognition',
-            'Machine learning risk scoring',
-            'Automated fraud alerts',
-            'Comprehensive fraud analytics',
+            'Real-time transaction monitoring',Behavioral pattern recognition',Machine learning risk scoring',Automated fraud alerts',Comprehensive fraud analytics',
           ],
           benefits: ['
-            '99.9% fraud detection accuracy',
-            'Real-time prevention capabilities',
-            'Reduced false positives by 80%',
-            'Compliance with regulatory requirements',
-            'Significant cost savings from fraud prevention',
+            '99.9% fraud detection accuracy',Real-time prevention capabilities',Reduced false positives by 80%',Compliance with regulatory requirements',Significant cost savings from fraud prevention',
           ],
           pricing: '$3,000 - $25,000/month',
           marketPosition:'
             'Leading AI fraud detection for financial institutions and e-commerce',
           useCases: ['
-            'Banks',
-            'Credit card companies',
-            'E-commerce platforms',
-            'Insurance companies',
+            'Banks',Credit card companies',E-commerce platforms',Insurance companies',
           ],
           competitors: ['Sift',Signifyd',Forter'],
           competitiveAdvantage:'
@@ -145,18 +101,10 @@ const InnovativeServices2025 = () => {
           description:'
             'Intelligent supply chain platform that optimizes operations, reduces costs, and improves efficiency through AI-powered analytics.',
           features: ['
-            'Predictive demand forecasting',
-            'Route optimization algorithms',
-            'Supplier performance analytics',
-            'Real-time supply chain visibility',
-            'Risk assessment and mitigation',
+            'Predictive demand forecasting',Route optimization algorithms',Supplier performance analytics',Real-time supply chain visibility',Risk assessment and mitigation',
           ],
           benefits: ['
-            '25% reduction in supply chain costs',
-            'Improved delivery performance',
-            'Enhanced supplier relationships',
-            'Real-time risk monitoring',
-            'Data-driven decision making',
+            '25% reduction in supply chain costs',Improved delivery performance',Enhanced supplier relationships',Real-time risk monitoring',Data-driven decision making',
           ],
           pricing: '$4,000 - $30,000/month',
           marketPosition:'
@@ -171,32 +119,19 @@ const InnovativeServices2025 = () => {
           description:'
             'Revolutionary healthcare AI platform that improves diagnosis accuracy, patient care, and operational efficiency.',
           features: ['
-            'Medical imaging analysis',
-            'Diagnostic assistance algorithms',
-            'Patient monitoring systems',
-            'Drug discovery optimization',
-            'Healthcare analytics dashboard',
+            'Medical imaging analysis',Diagnostic assistance algorithms',Patient monitoring systems',Drug discovery optimization',Healthcare analytics dashboard',
           ],
           benefits: ['
-            'Improved diagnostic accuracy by 30%',
-            'Enhanced patient care quality',
-            'Reduced healthcare costs',
-            'Faster treatment decisions',
-            'Better resource utilization',
+            'Improved diagnostic accuracy by 30%',Enhanced patient care quality',Reduced healthcare costs',Faster treatment decisions',Better resource utilization',
           ],
           pricing: '$8,000 - $60,000/month',
           marketPosition:'
             'Leading healthcare AI for hospitals and medical institutions',
           useCases: ['
-            'Hospitals',
-            'Medical clinics',
-            'Research institutions',
-            'Pharmaceutical companies',
+            'Hospitals',Medical clinics',Research institutions',Pharmaceutical companies',
           ],
           competitors: ['
-            'IBM Watson Health',
-            'Google Health',
-            'Microsoft Healthcare',
+            'IBM Watson Health',Google Health',Microsoft Healthcare',
           ],
           competitiveAdvantage:'
             'Advanced medical AI, comprehensive healthcare integration, and regulatory compliance'},
@@ -213,27 +148,16 @@ const InnovativeServices2025 = () => {
           description:'
             'Expert guidance on quantum computing strategy, implementation, and business transformation for forward-thinking organizations.',
           features: ['
-            'Quantum computing strategy development',
-            'Use case identification and validation',
-            'Vendor selection and evaluation',
-            'Implementation roadmap planning',
-            'Quantum workforce development',
+            'Quantum computing strategy development',Use case identification and validation',Vendor selection and evaluation',Implementation roadmap planning',Quantum workforce development',
           ],
           benefits: ['
-            'Future-ready technology strategy',
-            'Competitive advantage in emerging tech',
-            'Innovation leadership positioning',
-            'Strategic technology planning',
-            'Expert guidance and support',
+            'Future-ready technology strategy',Competitive advantage in emerging tech',Innovation leadership positioning',Strategic technology planning',Expert guidance and support',
           ],
           pricing: '$5,000 - $25,000/month',
           marketPosition:'
             'Premier quantum computing consulting for Fortune 500 companies',
           useCases: ['
-            'Financial services',
-            'Pharmaceutical',
-            'Logistics',
-            'Research institutions',
+            'Financial services',Pharmaceutical',Logistics',Research institutions',
           ],
           competitors: ['McKinsey',BCG',Deloitte'],
           competitiveAdvantage:'
@@ -244,27 +168,16 @@ const InnovativeServices2025 = () => {
           description:'
             'Complete metaverse platform development including VR/AR experiences, 3D environments, and interactive digital spaces.',
           features: ['
-            'Virtual reality platform development',
-            'Augmented reality applications',
-            '3D modeling and design',
-            'Interactive experience creation',
-            'Multi-user platform support',
+            'Virtual reality platform development',Augmented reality applications',3D modeling and design',Interactive experience creation',Multi-user platform support',
           ],
           benefits: ['
-            'Innovation leadership in emerging tech',
-            'New revenue streams and business models',
-            'Enhanced customer engagement',
-            'Competitive differentiation',
-            'Future-ready technology infrastructure',
+            'Innovation leadership in emerging tech',New revenue streams and business models',Enhanced customer engagement',Competitive differentiation',Future-ready technology infrastructure',
           ],
           pricing: '$8,000 - $60,000/month',
           marketPosition:'
             'Leading metaverse development for brands and enterprises',
           useCases: ['
-            'Brand marketing',
-            'Virtual events',
-            'Training and education',
-            'Entertainment',
+            'Brand marketing',Virtual events',Training and education',Entertainment',
           ],
           competitors: ['Meta',Microsoft',Unity'],
           competitiveAdvantage:'
@@ -275,27 +188,16 @@ const InnovativeServices2025 = () => {
           description:'
             'Complete Web3 development services including decentralized applications, DeFi platforms, and blockchain integration.',
           features: ['
-            'Decentralized application development',
-            'Smart contract development',
-            'DeFi platform creation',
-            'NFT marketplace development',
-            'Blockchain integration services',
+            'Decentralized application development',Smart contract development',DeFi platform creation',NFT marketplace development',Blockchain integration services',
           ],
           benefits: ['
-            'Decentralized business models',
-            'Innovation in financial services',
-            'New revenue opportunities',
-            'Technology leadership',
-            'Future-proof architecture',
+            'Decentralized business models',Innovation in financial services',New revenue opportunities',Technology leadership',Future-proof architecture',
           ],
           pricing: '$6,000 - $45,000/month',
           marketPosition:'
             'Expert Web3 development for fintech and innovative businesses',
           useCases: ['
-            'Financial services',
-            'Gaming',
-            'Art and collectibles',
-            'Supply chain',
+            'Financial services',Gaming',Art and collectibles',Supply chain',
           ],
           competitors: ['Consensys',Chainlink Labs',Alchemy'],
           competitiveAdvantage:'
@@ -313,27 +215,16 @@ const InnovativeServices2025 = () => {
           description:'
             'Modern security architecture implementation that eliminates implicit trust and continuously validates every access request.',
           features: ['
-            'Identity verification and authentication',
-            'Continuous access monitoring',
-            'Network segmentation',
-            'Threat detection and response',
-            'Compliance and audit support',
+            'Identity verification and authentication',Continuous access monitoring',Network segmentation',Threat detection and response',Compliance and audit support',
           ],
           benefits: ['
-            'Enhanced security posture',
-            'Reduced attack surface',
-            'Improved compliance',
-            'Better visibility and control',
-            'Adaptive security architecture',
+            'Enhanced security posture',Reduced attack surface',Improved compliance',Better visibility and control',Adaptive security architecture',
           ],
           pricing: '$4,500 - $35,000/month',
           marketPosition:'
             'Leading zero trust implementation for enterprise organizations',
           useCases: ['
-            'Financial services',
-            'Healthcare',
-            'Government',
-            'Technology companies',
+            'Financial services',Healthcare',Government',Technology companies',
           ],
           competitors: ['Palo Alto Networks',Cisco',Microsoft'],
           competitiveAdvantage:'
@@ -344,27 +235,16 @@ const InnovativeServices2025 = () => {
           description:'
             'Next-generation cybersecurity platform that uses artificial intelligence to detect and respond to threats in real-time.',
           features: ['
-            'AI-powered threat detection',
-            'Behavioral analysis and monitoring',
-            'Automated incident response',
-            'Predictive security analytics',
-            'Continuous learning and adaptation',
+            'AI-powered threat detection',Behavioral analysis and monitoring',Automated incident response',Predictive security analytics',Continuous learning and adaptation',
           ],
           benefits: ['
-            'Proactive threat prevention',
-            'Zero-day attack protection',
-            'Automated response capabilities',
-            'Reduced false positives',
-            'Continuous security improvement',
+            'Proactive threat prevention',Zero-day attack protection',Automated response capabilities',Reduced false positives',Continuous security improvement',
           ],
           pricing: '$5,000 - $40,000/month',
           marketPosition:'
             'Advanced AI cybersecurity for high-security environments',
           useCases: ['
-            'Critical infrastructure',
-            'Financial institutions',
-            'Healthcare',
-            'Government',
+            'Critical infrastructure',Financial institutions',Healthcare',Government',
           ],
           competitors: ['Darktrace',CrowdStrike',SentinelOne'],
           competitiveAdvantage:'

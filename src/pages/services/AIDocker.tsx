@@ -1,8 +1,7 @@
 import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDocker() {
   const features = [
-    'AI-powered Docker optimization',
-    'Intelligent Docker management',;
+    'AI-powered Docker optimization',Intelligent Docker management',;
     'Automated Docker monitoring and alerting',;
     'Predictive analytics for Docker scaling',;
     'Smart Docker security and compliance',;
