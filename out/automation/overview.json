@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T23:12:28.201Z",
+  "generatedAt": "2025-08-11T23:13:02.495Z",
   "functions": [
     "a11y-alt-text-auditor-runner",
     "a11y-audit-runner",
@@ -18,7 +18,7 @@
     "changelog-publisher",
     "cloud-autonomous-orchestrator-runner",
     "cloud_orchestrator",
-    "components-catalog-runner",
+    "content-freshness-runner",
     "continuous-front-runner",
     "continuous-orchestrator",
     "css-bloat-report",
@@ -60,7 +60,7 @@
     "image-optimizer-runner",
     "innovation-generator",
     "innovation-lab",
-    "internal-link-suggester",
+    "internal-link-graph-runner",
     "link-and-health-scheduler",
     "link-crawler",
     "linting-orchestrator-runner",
@@ -68,7 +68,7 @@
     "marketing-and-features-promo",
     "marketing-scheduler",
     "media-og-and-optimize",
-    "metadata-schema-runner",
+    "meta-tags-audit-runner",
     "netlify-auto-healer-runner",
     "newsroom-auto-publisher",
     "newsroom-runner",

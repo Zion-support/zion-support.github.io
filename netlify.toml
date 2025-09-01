@@ -326,9 +326,13 @@ schedule = "*/2 * * * *" # every 2 minutes
   schedule = "7 */12 * * *"
 
 [[scheduled.functions]]
-  name = "docs-drift-detector"
-  schedule = "*/10 * * * *"
+  name = "content-freshness-runner"
+  schedule = "*/30 * * * *" # every 30 minutes
 
 [[scheduled.functions]]
-  name = "smart-interlinker"
-  schedule = "*/15 * * * *"
+  name = "meta-tags-audit-runner"
+  schedule = "13 */4 * * *" # every 4 hours, offset
+
+[[scheduled.functions]]
+  name = "internal-link-graph-runner"
+  schedule = "*/30 * * * *" # every 30 minutes
