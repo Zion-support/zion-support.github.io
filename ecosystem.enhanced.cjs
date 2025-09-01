@@ -444,6 +444,66 @@ module.exports = {
       merge_logs: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
+
+    // Intelligent Repository Manager - Advanced repository management and auto-merge
+    {
+      name: 'intelligent-repository-manager',
+      script: './scripts/automation/intelligent-repository-manager.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        REPOSITORY_MANAGEMENT_MODE: 'true',
+      },
+      cron_restart: '0 */1 * * *', // Restart every hour
+      log_file: './logs/intelligent-repository-manager.log',
+      error_file: './logs/intelligent-repository-manager-error.log',
+      out_file: './logs/intelligent-repository-manager-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    // Advanced Development Intelligence - AI-powered code analysis and optimization
+    {
+      name: 'advanced-development-intelligence',
+      script: './scripts/automation/advanced-development-intelligence.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        DEVELOPMENT_INTELLIGENCE_MODE: 'true',
+      },
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      log_file: './logs/advanced-development-intelligence.log',
+      error_file: './logs/advanced-development-intelligence-error.log',
+      out_file: './logs/advanced-development-intelligence-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    // Intelligent Deployment Orchestrator - Advanced deployment management
+    {
+      name: 'intelligent-deployment-orchestrator',
+      script: './scripts/automation/intelligent-deployment-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        DEPLOYMENT_ORCHESTRATION_MODE: 'true',
+      },
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      log_file: './logs/intelligent-deployment-orchestrator.log',
+      error_file: './logs/intelligent-deployment-orchestrator-error.log',
+      out_file: './logs/intelligent-deployment-orchestrator-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
   ],
 
   deploy: {
