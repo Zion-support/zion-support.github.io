@@ -1,13 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path'
+import { splitVendorChunkPlugin } from 'vite'
 
 // https://vitejs.dev/config/;
 export { defineConfig };
 export default defineConfig({
-  plugins: [react()],
-  root: '.',
-  base: '/',
+  plugins: [
+    react(),
+    splitVendorChunkPlugin()
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
@@ -29,13 +31,8 @@ export default defineConfig({
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
-      }
-    },
+    cssCodeSplit: true,
+    cssMinify: true,
     rollupOptions: {
       input: {
         main: './index.html'
@@ -46,24 +43,63 @@ export default defineConfig({
           'router-vendor': ['react-router-dom'],
           'ui-vendor': ['framer-motion', 'lucide-react'],
           'utils-vendor': ['date-fns', 'clsx', 'tailwind-merge'],
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod']
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
+          'charts-vendor': ['recharts'],
+          'radix-vendor': [
+            '@radix-ui/react-accordion',
+            '@radix-ui/react-alert-dialog',
+            '@radix-ui/react-aspect-ratio',
+            '@radix-ui/react-avatar',
+            '@radix-ui/react-checkbox',
+            '@radix-ui/react-context-menu',
+            '@radix-ui/react-dialog',
+            '@radix-ui/react-dropdown-menu',
+            '@radix-ui/react-label',
+            '@radix-ui/react-popover',
+            '@radix-ui/react-progress',
+            '@radix-ui/react-radio-group',
+            '@radix-ui/react-scroll-area',
+            '@radix-ui/react-select',
+            '@radix-ui/react-separator',
+            '@radix-ui/react-slider',
+            '@radix-ui/react-slot',
+            '@radix-ui/react-switch',
+            '@radix-ui/react-tabs',
+            '@radix-ui/react-toast',
+            '@radix-ui/react-tooltip'
+          ]
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: assetInfo: unknown {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp/i.test(ext)) {
             return `images/[name]-[hash][extname]`;
           }
           if (/css/i.test(ext)) {
             return `css/[name]-[hash][extname]`;
           }
+          if (/woff2?|ttf|eot/i.test(ext)) {
+            return `fonts/[name]-[hash][extname]`;
+          }
           return `assets/[name]-[hash][extname]`;
         }
       }
     },
-    chunkSizeWarningLimit: 1000
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 2
+      },
+      mangle: {
+        safari10: true
+      }
+    },
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: true
   },
 
 
@@ -75,8 +111,12 @@ export default defineConfig({
       'framer-motion',
       'lucide-react',
       'clsx',
-      'tailwind-merge'
-    ]
+      'tailwind-merge',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu'
+    ],
+    exclude: ['@vite/client', '@vite/env']
   },
   server: {
     port: 3000,
@@ -102,11 +142,31 @@ export default defineConfig({
   },
   css: {
     devSourcemap: true,
-    postcss: './postcss.config.js'
+    postcss: {
+      plugins: [
+        require('tailwindcss'),
+        require('autoprefixer'),
+        require('cssnano')({
+          preset: ['default', {
+            discardComments: { removeAll: true },
+            normalizeWhitespace: true
+          }]
+        })
+      ]
+    }
   },
 
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
     __BUILD_TIME__: JSON.stringify(new Date().toISOString())
+  },
+  experimental: {
+    renderBuiltUrl(filename, { hostType }) {
+      if (hostType === 'js') {
+        return { js: `/${filename}` }
+      } else {
+        return { relative: true }
+      }
+    }
   }
 })

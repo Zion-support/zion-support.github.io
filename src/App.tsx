@@ -9,8 +9,9 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 // Enhanced Components;
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-import { ChatAssistant } from './components/ChatAssistant';
+import MobileExperienceEnhancer from './components/MobileExperienceEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import { FloatingActionButton } from './components/FloatingActionButton';
 
 // Core pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
