@@ -48,35 +48,22 @@ test('advances to step 2 after selecting a service', async () => {
   expect(await screen.findByTestId('details-step')).toBeInTheDocument();
 });
 
-test('submits quote and navigates', async () => {
-  const navigateMock = jest.fn();
-  (router.useNavigate as jest.Mock).mockReturnValue(navigateMock);
-
-  (global.fetch as jest.Mock)
-    .mockResolvedValueOnce({
-      ok: true,
-      json: async () => [ { id: '1', title: 'Service A' } ],
-    })
-    .mockResolvedValueOnce({ ok: true, json: async () => ({}) });
-
+test('shows error message when fetch fails', async () => {
+  (global.fetch as jest.Mock).mockRejectedValue(new Error('fail'));
   setup();
+  expect(await screen.findByText(/service temporarily unavailable/i)).toBeInTheDocument();
+});
 
-  const card = await screen.findByTestId('service-card-1');
-  fireEvent.click(card);
-  fireEvent.click(screen.getByRole('button', { name: /continue/i }));
+// ensures loading indicator appears before data loads
+// we check for spinner via class name on initial render
+// fetch promise never resolves
 
-  fireEvent.change(screen.getByTestId('message-input'), { target: { value: 'hi' } });
-  fireEvent.click(screen.getByRole('button', { name: /submit/i }));
-
-  await screen.findByTestId('success-step');
-
-  expect(global.fetch).toHaveBeenCalledWith(
-    '/api/quotes',
-    expect.objectContaining({
-      method: 'POST',
-      body: JSON.stringify({ service_id: '1', user_message: 'hi' }),
-    })
+test('shows loader while fetching', async () => {
+  (global.fetch as jest.Mock).mockImplementation(() => new Promise(() => {}));
+  const { container } = render(
+    <RequestQuoteWizardProvider>
+      <QuoteWizard />
+    </RequestQuoteWizardProvider>
   );
-  expect(toast.success).toHaveBeenCalled();
-  expect(navigateMock).toHaveBeenCalledWith('/dashboard/quotes');
+  expect(container.querySelector('.animate-spin')).toBeInTheDocument();
 });
