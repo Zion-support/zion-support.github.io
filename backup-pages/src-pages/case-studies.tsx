@@ -1,31 +1,4 @@
-<<<<<<< HEAD
-import {
 
-  CheckCircle,
-  TrendingUp,
-  Users,
-  DollarSign,
-  Clock,
-  Target,
-  ArrowRight,
-  Star,
-  Award,
-  Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Globe} from 'lucide-react';
-
-
-
-  const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
-
-  
-  
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {/* Hero Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">

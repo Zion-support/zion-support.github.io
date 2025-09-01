@@ -45,30 +45,16 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     setTeamRecommendation(null);
 
     const projectBriefData: ProjectBrief = {
-<<<<<<< HEAD
 
-  userId: anycurrent-user-id',;
-      createdAt: new Date().toISOString(),
-      ...data,
-      techStack: data.techStack?.split(',).map(s   => s.trim()).filter(s => s) || [],
-=======
 '
   userId: anycurrent-user-id',;      createdAt: new Date().toISOString(),
       ...data,'
       techStack: data.techStack?.split(',').map(s   => s.trim()).filter(s => s) || [],
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       talentFilters: any{ // Ensure talentFilters is structured correctly;
         verifiedOnly: data.talentFilters?.verifiedOnly,;
-<<<<<<<< HEAD:pages.disabled/pages/team-builder/index.tsx
-        regions: data.talentFilters?.regions?.split(',').map(r   => r.trim()).filter(r => r) || [],;
-
-;
-};
-    };
-========
+<=
         regions: data.talentFilters?.regions?.split(',).map(r   => r.trim()).filter(r => r) || [],}};
->>>>>>>> main:backup-pages/src-pages/team-builder/index.tsx
-    setProjectBriefSubmitted(projectBriefData);
+>    setProjectBriefSubmitted(projectBriefData);
 
     try {
 
@@ -81,12 +67,8 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
         throw new Error(errorData.error || 'Failed to generate team recommendation')}
 
       
-<<<<<<< HEAD
-      setTeamRecommendation(recommendationResult);
-      toast.success('Team recommendation generated successfully!');
-=======
+
       setTeamRecommendation(recommendationResult);'      toast.success('Team recommendation generated successfully!');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       // setCurrentStep(prev: unknown prev + 1); // No longer using steps for display, display immediately
     } catch (error: ) {
 
@@ -281,14 +263,9 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                               id="talentRegions"
                               {...field}
                               value={field.value || ''} // Ensure value is string"
-<<<<<<< HEAD
-                              placeholder="e.g., North America, LATAM, Global"
-                              className="mt-1"
-                            />
-=======
+
                               placeholder="e.g., North America, LATAM, Global""                              className="mt-1"
                              />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                           )}
                         />"
                          {errors.talentFilters?.regions && <p className="text-sm text-red-600 mt-1">{errors.talentFilters.regions.message}</p>}

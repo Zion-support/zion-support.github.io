@@ -1,17 +1,4 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIComplianceAssistant.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import {
-  Shield,
-  CheckCircle,
-  AlertTriangle,
-  FileText,
-  Users,
-  Zap,
-  Globe,
-  Lock,
-========
+<=
 import {
   Shield, 
   CheckCircle, 
@@ -21,8 +8,7 @@ import {
   Zap, 
   Globe, 
   Lock, 
->>>>>>>> main:backup-pages/src-pages/services/AIComplianceAssistant.tsx
-  Eye,
+>  Eye,
   BarChart3,
   TrendingUp,
   Clock,
@@ -45,28 +31,16 @@ export default function AIComplianceAssistant() {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Compliance Assistant - Zion Tech Group"
-        description="Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks."
-      />
-<<<<<<<< HEAD:pages.disabled/pages/services/AIComplianceAssistant.tsx
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20"></div>
-
-========
+=
 =======
         title="AI Compliance Assistant - Zion Tech Group""        description="Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20"></div>
         "
->>>>>>>> main:backup-pages/src-pages/services/AIComplianceAssistant.tsx
-        <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+>        <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-import {
 
-  Server,
-  Shield,
-  Cloud,
-  Database,
-  Network,
-  Lock,
-  Zap,
-  Globe,
-  Cpu,
-  HardDrive,
-  Check} from 'lucide-react';
-
-
-  
-  return ("
-    <div className="min-h-screen bg-zion-slate-dark">
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {/* Hero Section */}"
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">"
         <div className="container mx-auto px-4 text-center">

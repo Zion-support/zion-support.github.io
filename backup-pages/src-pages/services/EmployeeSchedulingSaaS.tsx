@@ -78,12 +78,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
 
   return()
     <>
-<<<<<<<< HEAD:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
-      <SEO
-========
+<=
       <SEO "
->>>>>>>> main:backup-pages/src-pages/services/EmployeeSchedulingSaaS.tsx
-        title = "Employee Scheduling SaaS - Zion Tech Group"
+>        title = "Employee Scheduling SaaS - Zion Tech Group"
         description="Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools."
         canonical="/services/employee-scheduling-saas"
        />
@@ -147,12 +144,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 Everything you need to manage your workforce efficiently and effectively
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/EmployeeSchedulingSaaS.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index (
                 <motion.div
                   key={index}
@@ -198,12 +192,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 Intelligent tools that make scheduling simple and efficient
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/EmployeeSchedulingSaaS.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {schedulingCapabilities.map(capability: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -249,12 +240,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 Flexible scheduling solutions that adapt to your business needs
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/EmployeeSchedulingSaaS.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map(industry: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -300,12 +288,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 Professional scheduling tools that transform how you manage your workforce
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/EmployeeSchedulingSaaS.tsx
-            <div className="grid md: grid-cols-2 gap-8">
+>            <div className="grid md: grid-cols-2 gap-8">
               {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -353,12 +338,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 Choose the scheduling plan that fits your business size and needs
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/EmployeeSchedulingSaaS.tsx
-            <div className="grid md: grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-3 gap-8">
               {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}

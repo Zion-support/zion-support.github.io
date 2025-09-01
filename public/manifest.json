@@ -1,115 +1,77 @@
 {
-
-  "description": "Leading AI solutions, quantum computing, and digital transformation services",
-
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#06b6d4",
-  "orientation": "portrait-primary",
-  "scope": "/",
-  "lang": "en-US",
-
-  "name": "Zion Tech Group - Revolutionary Technology Solutions",
+  "name": "Zion Tech Group",
   "short_name": "Zion Tech",
-  "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",
+  "description": "Leading technology solutions and services for modern businesses",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1f2937",
-  "theme_color": "#3b82f6",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
   "orientation": "portrait-primary",
-  "scope": "/",
+  "categories": ["business", "technology", "productivity"],
   "lang": "en-US",
   "dir": "ltr",
-
-  "categories": ["business", "productivity", "technology", "utilities"],
   "icons": [
     {
-      "src": "/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png",
-      "purpose": "any maskable"
-=======
-  "categories": ["business", "productivity", "utilities"],
-  "icons": [
-    {
-      "src": "/images/icon-72x72.png",
+      "src": "/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/images/icon-96x96.png",
+      "src": "/icon-96x96.png",
       "sizes": "96x96",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/images/icon-128x128.png",
+      "src": "/icon-128x128.png",
       "sizes": "128x128",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/images/icon-144x144.png",
+      "src": "/icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/images/icon-152x152.png",
+      "src": "/icon-152x152.png",
       "sizes": "152x152",
       "type": "image/png",
       "purpose": "maskable any"
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-7189
     },
     {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/images/zion-tech-group-logo.png",
+      "src": "/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/images/icon-384x384.png",
+      "src": "/icon-384x384.png",
       "sizes": "384x384",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/images/zion-tech-group-logo.png",
+      "src": "/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-
       "purpose": "maskable any"
     }
   ],
   "shortcuts": [
     {
-
-      "name": "About Us",
-      "short_name": "About",
-      "description": "Learn about Zion Tech Group",
-      "url": "/about",
-
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our technology services",
+      "url": "/services",
       "icons": [
         {
-          "src": "/images/ai-icon.png",
+          "src": "/icon-96x96.png",
           "sizes": "96x96"
         }
       ]
-
     },
     {
       "name": "Contact",
@@ -118,109 +80,24 @@
       "url": "/contact",
       "icons": [
         {
-          "src": "/icons/contact-96x96.png",
+          "src": "/icon-96x96.png",
           "sizes": "96x96"
         }
       ]
-    },
-    {
-      "name": "Services",
-      "short_name": "Services",
-      "description": "View our services",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/icons/services-96x96.png",
-          "sizes": "96x96"
-        }
-      ]
-
     }
   ],
   "screenshots": [
     {
-
-      "src": "/screenshots/desktop-home.png",
+      "src": "/screenshot-wide.png",
       "sizes": "1280x720",
       "type": "image/png",
-      "form_factor": "wide",
-      "label": "Homepage on desktop"
+      "form_factor": "wide"
     },
     {
-      "src": "/screenshots/mobile-home.png",
-      "sizes": "390x844",
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
       "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Homepage on mobile"
-
+      "form_factor": "narrow"
     }
-  ],
-  "related_applications": [],
-  "prefer_related_applications": false,
-  "edge_side_panel": {
-    "preferred_width": 400
-  },
-  "launch_handler": {
-    "client_mode": "navigate-existing"
-  },
-
-
-=======
-
-  "protocol_handlers": [
-    {
-      "protocol": "web+zion",
-      "url": "/protocol-handler?url=%s"
-    }
-  ],
-
-  "file_handlers": [
-    {
-      "action": "/file-handler",
-      "accept": {
-        "application/pdf": [".pdf"],
-        "text/plain": [".txt"],
-=======
-  "file_handlers": [
-    {
-      "action": "/upload",
-      "accept": {
-        "text/*": [".txt", ".md", ".json"],
-        "application/pdf": [".pdf"],
-
-        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
-      }
-    }
-  ],
-
-
-  "share_target": {
-    "action": "/share",
-    "method": "POST",
-    "enctype": "multipart/form-data",
-    "params": {
-      "title": "title",
-      "text": "text",
-      "url": "url",
-      "files": [
-        {
-          "name": "files",
-          "accept": ["image/*", "text/*", "application/pdf"]
-        }
-      ]
-    }
-  },
-
-    "simple"
-
-  ],
-  "developer": {
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com"
-  }
+  ]
 }
-=======
-  "handle_links": "preferred",
-  "capture_links": "existing-client-navigate"
-}
->>>>>>> origin/auto/autonomy-17187611596

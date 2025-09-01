@@ -38,36 +38,10 @@ import {
   Clock,
   ArrowRight,
   ChevronDown,
-<<<<<<< HEAD
-  CheckCircle,
-  ExternalLink} from 'lucide-react.ts';
 
-export default function Services2028(...args: any[]): any {
-
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
-
-  // Combine all services
-  
-  // Get unique categories
-  
-  // Filter services based on search and filters
-  
-    
-    
-    return matchesSearch && matchesCategory && matchesPrice}) ;
-
-  // Sort services
-  
-      case 'price-high':
-        return b.price - a.price;
-=======
   CheckCircle,'
   ExternalLink} from 'lucide-react.ts';'
         return b.price - a.price;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'rating':
         return b.rating - a.rating;
       case 'name':
@@ -107,16 +81,10 @@ export default function Services2028(...args: any[]): any {
       </div>
 
       <SEO"
-<<<<<<< HEAD
-        title="2028 Services - Zion Tech Group | Revolutionary AI & IT Solutions"
-        description="Discover our comprehensive 2028 services including AI Business Intelligence, Quantum Computing, Blockchain & Web3, Edge Computing, and enterprise IT solutions. Transform your business with cutting-edge technology."
-        keywords="2028 services, AI business intelligence, quantum computing, blockchain, web3, edge computing, IT services, Zion Tech Group"
-      />
-=======
+
         title="2028 Services - Zion Tech Group | Revolutionary AI & IT Solutions""
         description="Discover our comprehensive 2028 services including AI Business Intelligence, Quantum Computing, Blockchain & Web3, Edge Computing, and enterprise IT solutions. Transform your business with cutting-edge technology.""        keywords="2028 services, AI business intelligence, quantum computing, blockchain, web3, edge computing, IT services, Zion Tech Group"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -176,12 +144,8 @@ export default function Services2028(...args: any[]): any {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neon-cyan"  />
                   <input"
-<<<<<<< HEAD
-                    type="text"
-                    placeholder="Search services..."
-=======
+
                     type="text""                    placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-cyber-black/70 border border-neon-cyan/30 rounded-lg text-white placeholder-neon-cyan/50 focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all duration-300"

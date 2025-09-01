@@ -1,8 +1,10 @@
 import {
+
   Shield,
   BarChart3,
   Search,
   Zap,
+
   CheckCircle2,'
   Link as LinkIcon} from 'lucide-react.ts';          <p className="text-responsive text-zion-blue-light/80 max-w-2xl mt-4">
             Ship faster with AI-driven audits, clear priorities, and one-click

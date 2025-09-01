@@ -1,45 +1,4 @@
-<<<<<<< HEAD
-import {
 
-  Rocket,
-  Brain,
-  Zap,
-  Globe,
-  Shield,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  TrendingUp,
-  Users,
-  ArrowRight,
-  Star,
-  Clock,
-  DollarSign,
-  Target,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Lightbulb,
-  Code,
-  Cloud,
-  Server,
-  Smartphone,
-  Monitor,
-  Wifi,
-  Key,
-  BarChart3,
-  Globe2,
-  ShieldCheck'
- } from 'lucide-react';
-
-const InnovativeServicesHub: React.FC = (): JSX.Element => {
-
-  
-      stats: { services: 10, avgROI: '500%', innovation: 'Revolutionary' }
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 

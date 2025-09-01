@@ -1,49 +1,73 @@
-/** @type {import('next').NextConfig} */;
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-
-  // Skip ESLint during production builds to avoid blocking on config issues
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-
-  // Skip type checking during build to allow app to compile while we fix TS
   typescript: {
     ignoreBuildErrors: true,
   },
-
-  
-  // Image optimization
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  experimental: {
+    esmExternals: false,
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
+  },
   images: {
     domains: ['ziontechgroup.com'],
-    unoptimized: true
+    unoptimized: true,
   },
-
-  // Compiler optimizations
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production'
+    removeConsole: process.env.NODE_ENV === 'production',
   },
-
-  // Performance optimizations
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react',framer-motion']
+  webpack: (config, { dev, isServer }) => {
+    // Exclude contracts directory from compilation
+    config.module.rules.push({
+      test: /\.(ts|tsx)$/,
+      include: [
+        /src/,
+        /pages/,
+        /components/,
+      ],
+      exclude: [
+        /node_modules/,
+        /contracts/,
+        /api-backup/,
+        /pages\.disabled/,
+        /backup-pages/,
+        /\.backup/,
+        /\.disabled/,
+        /automation\/backups/,
+        /automation_backup/,
+        /broken_files_backup/,
+        /contracts/,
+        /cypress/,
+      ],
+    });
+    
+    // Exclude contracts directory specifically
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'hardhat/config': false,
+    };
+    
+    // Add fallback for problematic modules
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false,
+    };
+    
+    return config;
   },
-
-  // Restrict Next.js to only pick up .page.tsx files in /pages to avoid legacy conflicts
-  pageExtensions: ['p.tsx', 'p.ts', 'api.ts'],
-
-  // Bundle analyzer (optional)
-  ...(process.env.ANALYZE === 'true' && {
-    webpack: config => {
-      config.plugins.push(
-        new (require('@next/bundle-analyzer'))({
-          enabled: true
-        })
-      );
-      return config;
-    },
-  }),
+  // Try to exclude problematic directories at the Next.js level
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  onDemandEntries: {
+    // period (in ms) where the server will keep pages in the buffer
+    maxInactiveAge: 25 * 1000,
+    // number of pages that should be kept simultaneously without being disposed
+    pagesBufferLength: 2,
+  },
 };
 
 export default nextConfig;

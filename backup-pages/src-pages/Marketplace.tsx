@@ -42,7 +42,6 @@ const Marketplace: React.FC = () => {
       case 'price':
 =======
         return b.rating - a.rating;'      case 'price':
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         return ('
           parseFloat(a.price.replace(/[^0-9.]/g,)) -'
           parseFloat(b.price.replace(/[^0-9.]/g,))
@@ -154,12 +153,8 @@ const Marketplace: React.FC = () => {
                 <div className="relative">"
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan-light"  />
                   <input"
-<<<<<<< HEAD
-                    type="text"
-                    placeholder="Search solutions, vendors, or technologies..."
-=======
+
                     type="text""                    placeholder="Search solutions, vendors, or technologies..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}"
                     className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-zion-cyan-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"

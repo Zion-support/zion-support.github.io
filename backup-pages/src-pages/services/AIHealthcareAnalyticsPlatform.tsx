@@ -1,30 +1,4 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Heart,
-  Activity,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  DollarSign,
-  Shield,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  Calculator,
-========
+<=
 import {
   Heart, 
   Activity, 
@@ -38,8 +12,7 @@ import {
   CheckCircle, 
   AlertTriangle,
   BarChart3,
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcareAnalyticsPlatform.tsx
-  PieChart,
+>  PieChart,
   LineChart,
   UserCheck,
   Heart,
@@ -246,12 +219,9 @@ export default function AIHealthcareAnalyticsPlatform() {
               Our platform combines cutting-edge AI with healthcare best practices
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcareAnalyticsPlatform.tsx
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map(feature: unknown, index: unknown (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -285,12 +255,9 @@ export default function AIHealthcareAnalyticsPlatform() {
               See real results with our AI-powered healthcare analytics platform
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcareAnalyticsPlatform.tsx
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -322,12 +289,9 @@ export default function AIHealthcareAnalyticsPlatform() {
               Tailored solutions for various healthcare organizations and specialties
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcareAnalyticsPlatform.tsx
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+>          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -359,12 +323,9 @@ export default function AIHealthcareAnalyticsPlatform() {
               Meet all major healthcare compliance and regulatory requirements
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcareAnalyticsPlatform.tsx
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+>          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {complianceStandards.map(standard: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -395,12 +356,9 @@ export default function AIHealthcareAnalyticsPlatform() {
               Choose the plan that fits your healthcare organization and scale as you grow
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcareAnalyticsPlatform.tsx
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -408,17 +366,12 @@ export default function AIHealthcareAnalyticsPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
-                  index === 1
-                    ? 'border-pink-500/50 bg-gradient-to-b from-pink-500/10 to-transparent'
-                    : 'border-zion-slate-light/20'
-========
+<=
 
                   index === 1 '
                     ? 'border-pink-500/50 bg-gradient-to-b from-pink-500/10 to-transparent' '
                     : 'border-zion-slate-light/20'`
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcareAnalyticsPlatform.tsx
-                }`}
+>                }`}
               >"
                 <div className="text-center mb-6">"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>"
@@ -460,12 +413,9 @@ export default function AIHealthcareAnalyticsPlatform() {
               Connect with your existing EHR systems and healthcare platforms
             </p>
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcareAnalyticsPlatform.tsx
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+>          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {integrations.map(integration: unknown, index: unknown (
               <motion.div
                 key={index}

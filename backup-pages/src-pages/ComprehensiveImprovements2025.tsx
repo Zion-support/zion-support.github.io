@@ -64,7 +64,6 @@ import {
         'IoT Edge Computing - Smart device networks',;'
         'Space Tech - Space technology solutions',;'        'Green IT - Sustainable technology solutions';
       ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   
@@ -85,12 +84,8 @@ import {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <EnhancedSEOManager "
-<<<<<<< HEAD
-        title="Comprehensive Improvements 2025 - Zion Tech Group"
-        description="Discover the revolutionary platform enhancements that make Zion Tech Group the most advanced business technology solution available today."
-=======
+
         title="Comprehensive Improvements 2025 - Zion Tech Group""        description="Discover the revolutionary platform enhancements that make Zion Tech Group the most advanced business technology solution available today."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         keywords = {
 
   ['platform improvements',AI services',technology enhancements',digital transformation',Zion Tech Group']

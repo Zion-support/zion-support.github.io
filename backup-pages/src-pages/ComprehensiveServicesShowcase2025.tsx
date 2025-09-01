@@ -322,33 +322,13 @@ interface Service {
 ];
 
 
-<<<<<<< HEAD
 
-export default function ComprehensiveServicesShowcase2025() {
-
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-
-  
-    
-    return matchesCategory && matchesSearch}) }};
-
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO "
-        title="Comprehensive Services Showcase 2025 | Zion Tech Group"
-        description="Explore our comprehensive portfolio of AI, IT, and Micro SAAS services. Discover innovative solutions designed to transform your business in 2025 and beyond."
-        keywords="AI services, IT services, Micro SAAS, cybersecurity, healthcare AI, quantum computing, cloud DevOps, business intelligence"
-       />
-=======
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
         title="Comprehensive Services Showcase 2025 | Zion Tech Group""
         description="Explore our comprehensive portfolio of AI, IT, and Micro SAAS services. Discover innovative solutions designed to transform your business in 2025 and beyond.""        keywords="AI services, IT services, Micro SAAS, cybersecurity, healthcare AI, quantum computing, cloud DevOps, business intelligence"
         />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -396,12 +376,8 @@ export default function ComprehensiveServicesShowcase2025() {
               <div className="relative max-w-2xl mx-auto">"
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-zion-slate-light"  />
                 <input"
-<<<<<<< HEAD
-                  type="text"
-                  placeholder="Search for services, features, or use cases..."
-=======
+
                   type="text""                  placeholder="Search for services, features, or use cases..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-12 pr-4 py-4 bg-zion-blue-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg"

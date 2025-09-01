@@ -30,18 +30,11 @@ import {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Legal Document Analyzer - Zion Tech Group"
-        description="Transform legal document analysis with AI-powered insights, risk assessment, and compliance monitoring. Streamline your legal practice with cutting-edge technology."
-        keywords="AI legal document analysis, legal tech, contract review, compliance monitoring, risk assessment, legal automation"
-        canonical="https://ziontechgroup.com/services/ai-legal-document-analyzer"
-      />
-=======
+
         title="AI Legal Document Analyzer - Zion Tech Group""
         description="Transform legal document analysis with AI-powered insights, risk assessment, and compliance monitoring. Streamline your legal practice with cutting-edge technology.""
         keywords="AI legal document analysis, legal tech, contract review, compliance monitoring, risk assessment, legal automation""        canonical="https://ziontechgroup.com/services/ai-legal-document-analyzer"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"

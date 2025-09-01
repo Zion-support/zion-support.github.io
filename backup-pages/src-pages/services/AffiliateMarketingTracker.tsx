@@ -64,12 +64,9 @@ export default function AffiliateMarketingTracker(...args[]):  {
 
   return()
     <>
-<<<<<<<< HEAD:pages.disabled/pages/services/AffiliateMarketingTracker.tsx
-      <SEO
-========
+<=
       <SEO "
->>>>>>>> main:backup-pages/src-pages/services/AffiliateMarketingTracker.tsx
-        title = "Affiliate Marketing Tracker - Zion Tech Group"
+>        title = "Affiliate Marketing Tracker - Zion Tech Group"
         description="Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI."
         canonical="/services/affiliate-marketing-tracker"
        />
@@ -133,12 +130,9 @@ export default function AffiliateMarketingTracker(...args[]):  {
                 Everything you need to track, manage, and optimize your affiliate marketing campaigns
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AffiliateMarketingTracker.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AffiliateMarketingTracker.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index (
                 <motion.div
                   key={index}
@@ -184,12 +178,9 @@ export default function AffiliateMarketingTracker(...args[]):  {
                 Transform your affiliate marketing with intelligent automation and powerful insights
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AffiliateMarketingTracker.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AffiliateMarketingTracker.tsx
-            <div className="grid md: grid-cols-2 gap-8">
+>            <div className="grid md: grid-cols-2 gap-8">
               {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -237,12 +228,9 @@ export default function AffiliateMarketingTracker(...args[]):  {
                 Choose the plan that fits your affiliate marketing needs and scale as you grow
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AffiliateMarketingTracker.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AffiliateMarketingTracker.tsx
-            <div className="grid md: grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-3 gap-8">
               {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}

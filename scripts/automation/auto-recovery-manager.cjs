@@ -114,8 +114,7 @@ class AutoRecoveryManager {
 
         // Check for common corruption patterns
         if (
-          content.includes('<<<<<<< HEAD') ||
-          content.includes('=======') ||
+          content.includes('') ||
           content.includes('>>>>>>>')
         ) {
           corruptedFiles.push({
@@ -423,15 +422,12 @@ class AutoRecoveryManager {
 
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
-        /<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> [^\n]*\n?/g,
-        '$1'
+        /\n[\s\S]*?\n        '$1'
       );
 
       // Clean up any remaining markers
-      content = content.replace(/<<<<<<< HEAD\n?/g, '');
-      content = content.replace(/=======\n?/g, '');
-      content = content.replace(/>>>>>>> [^\n]*\n?/g, '');
-
+      content = content.replace(/\n?/g, '');
+      content = content.replace(/
       fs.writeFileSync(filePath, content);
 
       this.log(`✅ Merge conflicts recovered in ${filePath}`);

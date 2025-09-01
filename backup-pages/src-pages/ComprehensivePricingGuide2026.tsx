@@ -1,43 +1,6 @@
-<<<<<<< HEAD
-import {
 
-  DollarSign,
-  TrendingUp,
-  Users,
-  Clock,
-  CheckCircle,
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  CheckCircle,
-  ArrowRight,
-  Search,
-  Filter,
-  Grid,
-  List,
-  DollarSign,
-  Clock,
-  Award,
-  Target,
-  BarChart3,
-  Globe,
-  Rocket,
-  Cpu,
-  Brain'
-} from 'lucide-react';
-
-const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
-  const [selectedService, setSelectedService] = useState<any>('all');
-  const [selectedTier, setSelectedTier] = useState<any>('all')} from 'lucide-react';
-
-const ComprehensivePricingGuide2026: React.FC = () => {;
-  const [selectedService, setSelectedService] = useState<string>('all');
-=======
 const ComprehensivePricingGuide2026: React.FC = () => {;'
   const [selectedService, setSelectedService] = useState<string>('all');'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [selectedTier, setSelectedTier] = useState<string>('all');
 
   
@@ -51,12 +14,8 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
     return filtered}, [selectedService]);
 "
       default: return <Zap className = "w-6 h-6"  />}};
-<<<<<<< HEAD
 
-      default: return 'from-gray-500 to-gray-600'}
-=======
 '      default: return 'from-gray-500 to-gray-600'}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
 
   return()

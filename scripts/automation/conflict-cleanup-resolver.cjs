@@ -173,14 +173,12 @@ class ConflictCleanupResolver {
 
     // Strategy: Keep incoming changes (after =======) and remove conflict markers
     resolvedContent = resolvedContent.replace(
-      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]*/g,
-      '$1'
+      /([\s\S]*?)      '$1'
     );
 
     // Clean up any remaining conflict markers
     resolvedContent = resolvedContent.replace(
-      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]*/g,
-      '$1'
+      /([\s\S]*?)      '$1'
     );
 
     // For specific file types, apply additional cleanup
@@ -247,8 +245,7 @@ class ConflictCleanupResolver {
   cleanupMarkdown(content) {
     // For markdown files, combine content intelligently
     return content.replace(
-      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]*/g,
-      '$1'
+      /([\s\S]*?)      '$1'
     );
   }
 

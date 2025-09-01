@@ -1,58 +1,11 @@
-<<<<<<< HEAD
-import {
 
-  Users,
-  Award,
-  Star,
-  Target,
-  TrendingUp,
-  Globe,
-  Zap,
-  Shield,
-  Brain,
-  Rocket,
-  Building,
-  Heart,
-  Crown,
-  Sparkles,
-  ArrowRight,
-  Linkedin,
-  Mail,
-  Phone,
-  MapPin'
-} from 'lucide-react';
-
-  
-      bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',;
-      expertise: ['Machine Learning',Deep Learning',AI Ethics',Research & Development'],;
-      linkedin: 'https://linkedin.com/in/emilywatson',;
-      email: 'emily@ziontechgroup.com',;
-      phone: '+1 302 464 0953'};
-  ]},;
-    {;
-      icon: Globe,;
-      title: 'Global Impact',;
-      description: 'We believe technology should make the world better for everyone, everywhere.'};
-  ]},;
-    {;
-      metric: '25+',;
-      label: 'Industry Awards',;
-      description: 'Recognition for innovation and excellence in technology'};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="Leadership - Zion Tech Group"
-        description="Meet the visionary leaders driving innovation at Zion Tech Group. Our experienced team is committed to transforming businesses through cutting-edge AI and technology solutions."
-       />
-=======
+
         title="Leadership - Zion Tech Group""        description="Meet the visionary leaders driving innovation at Zion Tech Group. Our experienced team is committed to transforming businesses through cutting-edge AI and technology solutions."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="pt-20 pb-16 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20">"
@@ -256,14 +209,9 @@ import {
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">"
                   <Mail className="w-8 h-8 text-cyan-400"  />
                 </div>"
-<<<<<<< HEAD
-                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"
-                <p className="text-slate-300 text-sm">
-                  kleber@ziontechgroup.com<br />
-=======
+
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"                <p className="text-slate-300 text-sm">
                   kleber@ziontechgroup.com<br />'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   We'll respond within 24 hours
                 </p>;
               </div>;

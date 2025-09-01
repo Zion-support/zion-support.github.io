@@ -1,57 +1,4 @@
-<<<<<<< HEAD
-import {
 
-  BookOpen,
-  FileText,
-  Video,
-  HelpCircle,
-  Search,
-  Filter,
-  ArrowRight,
-  Star,
-  Sparkles,
-  Brain,
-  Cloud,
-  Shield,
-  Database,
-  Globe,
-  Cpu,
-  Zap,
-  Rocket,
-  Heart,
-  Scale,
-  PenTool,
-  TrendingUp,
-  Lock,
-  Server,
-  Smartphone,
-  Atom,
-  Leaf,
-  Building,
-  Car,
-  Factory,
-  City,
-  CheckCircle,
-  Play,
-  Pause,
-  Stop'
- } from 'lucide-react';
-
-const Resources: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-
-  
-    { id: 'support', name: 'Support', count: 10, icon: HelpCircle };
-  ];
-
-  
-      featured: false,
-      fileSize: '450 MB',
-      fileType: 'MP4',
-      downloadUrl: 'https://ziontechgroup.com/resources/cybersecurity-ai-webinar.mp4'
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 
@@ -143,7 +90,6 @@ const Resources: React.FC = (): JSX.Element => {;
 '
   phone: '+1 302 464 0950','
     email: 'kleber@ziontechgroup.com',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;

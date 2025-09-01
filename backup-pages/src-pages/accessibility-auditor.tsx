@@ -1,40 +1,4 @@
-<<<<<<< HEAD
-import {
 
-  Eye,
-  Shield,
-  CheckCircle,
-  AlertTriangle,
-  BarChart3,
-  Users,
-  Globe,
-  ArrowRight,
-  Star,
-  Heart,
-  Users,
-  Zap,
-  Lock,
-  FileText,
-  Phone,
-  Mail,
-  MessageCircle'
-} from 'lucide-react'},;
-    {;"
-      category: "Technical Accessibility",;"
-      items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]};
-  ];
-
-  
-  
-  
-  return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto">"
-          <div className="text-center mb-16">"
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               Accessibility"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"
                 {" "}Auditor

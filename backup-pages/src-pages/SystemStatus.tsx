@@ -14,21 +14,7 @@ import {
   BarChart3,
   TrendingUp,
   RefreshCw} from 'lucide-react';
-<<<<<<< HEAD
 
-interface ServiceStatus {
-
-  id: string;
-  name: string;
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance';
-  uptime: number;
-  responseTime: number;
-  lastUpdated: string;
-  description: string;
-  icon: React.ComponentType < any>}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface Incident {
 
   id: string;
@@ -466,14 +452,9 @@ const SystemStatus: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-4">
                 Technical Support
               </h3>"
-<<<<<<< HEAD
-              <p className="text-gray-300 mb-6">
-                If you're experiencing issues not reflected in our status page,
-                please contact our technical support team.
-=======
+
               <p className="text-gray-300 mb-6">'
                 If you're experiencing issues not reflected in our status page,                please contact our technical support team.
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               </p>"
               <div className="space-y-2 text-gray-400">
                 <p>Email: support@ziontechgroup.com</p>

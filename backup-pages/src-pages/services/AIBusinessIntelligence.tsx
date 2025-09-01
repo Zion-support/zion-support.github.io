@@ -1,17 +1,4 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBusinessIntelligence.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import {
-  Brain,
-  TrendingUp,
-  BarChart3,
-  Users,
-  Target,
-  Zap,
-  Shield,
-  Globe,
-========
+<=
 import {
   Brain, 
   TrendingUp, 
@@ -21,8 +8,7 @@ import {
   Zap, 
   Shield, 
   Globe, 
->>>>>>>> main:backup-pages/src-pages/services/AIBusinessIntelligence.tsx
-  ArrowRight,
+>  ArrowRight,
   CheckCircle,
   Star,
   Award,
@@ -138,20 +124,13 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20 lg:py-32">"
         <div className="absolute inset-0 bg-black/20"></div>"
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-indigo-600/20"></div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBusinessIntelligence.tsx
-
-        {/* Background Elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-========
+<=
         
         {/* Background Elements */}"
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">"
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>"
           <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>"
->>>>>>>> main:backup-pages/src-pages/services/AIBusinessIntelligence.tsx
-          <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+>          <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>"
       industry: "Retail","
       description: "Customer behavior analysis, inventory optimization, and demand forecasting"
@@ -180,31 +159,16 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBusinessIntelligence.tsx
-      <SEO
-        title="AI Business Intelligence - Zion Tech Group"
-        description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get comprehensive business intelligence solutions."
-      />
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
-========
+<=
       <SEO "
-<<<<<<< HEAD
-        title="AI Business Intelligence - Zion Tech Group"
-        description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get comprehensive business intelligence solutions."
-       />
-=======
+
         title="AI Business Intelligence - Zion Tech Group""        description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get comprehensive business intelligence solutions."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>"
->>>>>>>> main:backup-pages/src-pages/services/AIBusinessIntelligence.tsx
-        <div className="container mx-auto px-4 relative z-10">
+>        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial = {
 
@@ -224,33 +188,22 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6">"
               <Brain className="w-5 h-5 text-cyan-400 mr-2"  />"              <span className="text-cyan-300 font-medium">AI Business Intelligence</span>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBusinessIntelligence.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AIBusinessIntelligence.tsx
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+>            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               Transform Your Business with"
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">"
                 {" "}AI-Powered Intelligence
               </span>
             </h1>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBusinessIntelligence.tsx
-
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Unlock the full potential of your data with advanced AI analytics, real-time insights,
-              and predictive intelligence that drives strategic decision-making and business growth.
-            </p>
-
-========
+<=
             "
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business data into actionable intelligence with our advanced AI-powered analytics platform. 
               Get real-time insights, predictive analytics, and automated decision-making capabilities.
             </p>
             "
->>>>>>>> main:backup-pages/src-pages/services/AIBusinessIntelligence.tsx
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
@@ -274,23 +227,17 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
           <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur-sm mb-8">"
             <Brain className="w-4 h-4 text-blue-300"  />            <span>AI-Powered Business Intelligence</span>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBusinessIntelligence.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIBusinessIntelligence.tsx
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+>          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
             Transform Your Business with"
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
               AI-Powered Intelligence
             </span>
           </h1>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBusinessIntelligence.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIBusinessIntelligence.tsx
-          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-10 leading-relaxed">
+>          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-10 leading-relaxed">
             Unlock the power of your data with our advanced AI Business Intelligence platform.
             Get predictive insights, real-time analytics, and data-driven decision making that drives growth.
           </p>
@@ -351,12 +298,9 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
               data analysis, visualization, and decision-making support.
             </p>
           </motion.div>;
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBusinessIntelligence.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIBusinessIntelligence.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index 
               <motion.div
                 key={feature.title}
@@ -461,18 +405,12 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">"
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBusinessIntelligence.tsx
-
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
-
-========
+<=
                   "
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>"
                   <p className="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
                   "
->>>>>>>> main:backup-pages/src-pages/services/AIBusinessIntelligence.tsx
-                  <ul className="space-y-3">
+>                  <ul className="space-y-3">
                     {feature.benefits.map((benefit, idx) => ("
                       <li key={idx} className="flex items-center gap-3 text-gray-700">"
                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0"  />                        <span>{benefit}</span>
@@ -611,12 +549,9 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
               enabling data-driven decision making and operational excellence.
             </p>
           </motion.div>;
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBusinessIntelligence.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIBusinessIntelligence.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index 
               <motion.div
                 key={useCase.industry}
@@ -673,12 +608,9 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
               <div key={index} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-200">"
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{useCase.title}</h3>"
                 <p className="text-gray-600 mb-6">{useCase.description}</p>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBusinessIntelligence.tsx
-
-========
+<=
                 "
->>>>>>>> main:backup-pages/src-pages/services/AIBusinessIntelligence.tsx
-                <div className="space-y-3">
+>                <div className="space-y-3">
                   {useCase.metrics.map((metric, idx) => ("
                     <div key={idx} className="flex items-center gap-3 text-gray-700">"
                       <TrendingUp className="w-5 h-5 text-green-500 flex-shrink-0"  />"                      <span className="font-semibold">{metric}</span>
@@ -723,16 +655,11 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
                 <div className="text-center mb-8">"
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                   <p className="text-gray-600 mb-4">{plan.description}</p>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBusinessIntelligence.tsx
-
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-========
+<=
                   "
                   <div className="flex items-baseline justify-center gap-1">"
                     <span className="text-4xl font-bold text-gray-900">{plan.price}</span>"
->>>>>>>> main:backup-pages/src-pages/services/AIBusinessIntelligence.tsx
-                    <span className="text-gray-600">{plan.period}</span>
+>                    <span className="text-gray-600">{plan.period}</span>
                   </div>
                 </div>
 "
@@ -836,21 +763,13 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
               Contact Our Team
             </Link>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBusinessIntelligence.tsx
-
-          <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-white/70">
-            <div className="flex items-center gap-2">
-              <Clock className="w-5 h-5 text-blue-400" />
-              <span>14-day free trial</span>
-
-========
+<=
 "
           <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-white/70">"
             <div className="flex items-center gap-2">"
               <Clock className="w-5 h-5 text-blue-400"  />              <span>14-day free trial</span>
             "
->>>>>>>> main:backup-pages/src-pages/services/AIBusinessIntelligence.tsx
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"

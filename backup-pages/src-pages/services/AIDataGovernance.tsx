@@ -1,86 +1,5 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIDataGovernance.tsx
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
-import { Shield,
-  Database,
-  Lock,
-  Eye,
-  Search,
-  FileText,
-  Users,
-========
-<<<<<<< HEAD
-import { Shield, 
-  Database, 
-  Lock, 
-  Eye, 
-  Search, 
-  FileText, 
-  Users, 
->>>>>>>> main:backup-pages/src-pages/services/AIDataGovernance.tsx
-  CheckCircle,
-  AlertTriangle,
-  BarChart3,
-  Zap,
-  Globe,
-  Cpu,
-  Key,
-  Fingerprint,
-  ShieldCheck,
-  FileCheck,
-  UserCheck,
-  Clock,
-  TrendingUp,
-  DollarSign,
-  Building,
-  Server,
-  Cloud,
-  Network,
-  Monitor,
-  Settings,
-  RefreshCw,
-  Download,
-  Upload,
-  Trash2,
-  Archive,
-  Copy,
-  Move,
-  Link,
-  Unlink,
-  EyeOff,
-  EyeOn,
-  LockOpen,
-  LockClosed'
- } from 'lucide-react';
-;
-const AIDataGovernance: React.FC = (): JSX.Element => {
+<=
 
-  
-    {;
-      icon: Users,;"
-      title: "Data Lineage Tracking",;"
-      description: "Complete audit trail showing data origins, transformations, and usage patterns",;"
-      color: "from-yellow-500 to-orange-500"};
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Foundation","
-      price: "$499","
-      period: "/month","
-      description: "Essential data governance for small to medium organizations",
-      features[;"
-        "Up to 10TB data management","
-        "Basic AI classification","
-        "Standard access controls","
-        "Compliance templates","
-        "Email support","
-        "Basic reporting","
-        "5 user licenses"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Start Free Trial",
       popular: false
@@ -175,19 +94,11 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIDataGovernance.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AIDataGovernance.tsx
-        title="AI Data Governance - Zion Tech Group"
-        description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
-       />
-=======
+
         title="AI Data Governance - Zion Tech Group""        description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -247,12 +158,9 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               Everything you need to secure, classify, and govern your data with AI intelligence
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIDataGovernance.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIDataGovernance.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div
                 key={index}
@@ -300,12 +208,9 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               See how AI Data Governance transforms data security and compliance
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIDataGovernance.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIDataGovernance.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -352,12 +257,9 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               Built-in compliance for major regulatory frameworks and industry standards
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIDataGovernance.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIDataGovernance.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {complianceFrameworks.map(framework: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -405,12 +307,9 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               Tailored data governance for your industry's unique requirements
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIDataGovernance.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIDataGovernance.tsx
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+>          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
@@ -463,12 +362,9 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               Choose the plan that fits your data governance needs
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIDataGovernance.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIDataGovernance.tsx
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+>          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
