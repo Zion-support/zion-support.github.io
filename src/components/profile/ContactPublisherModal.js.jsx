@@ -5,9 +5,34 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
 import { useForm } from 'react-hook-form';
-import { Mail, PaperPlane  } from 'lucide-react';
- from '@/hooks/use-toast';
-);
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Send, Mail } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
+
+interface ContactPublisherModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  publisherName: string;
+  publisherEmail?: string;
+}
+
+type FormValues = {
+  subject: string;
+  message: string;
+};
+
+const schema = z.object({
+  subject: z
+    .string()
+    .min(5, 'Subject must be at least 5 characters')
+    .nonempty('Subject is required'),
+  message: z
+    .string()
+    .min(20, 'Message must be at least 20 characters')
+    .nonempty('Message is required'),
+});
+
 export function ContactPublisherModal({
 
   isOpen,
@@ -18,6 +43,7 @@ export function ContactPublisherModal({
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const form = useForm({
 
+  const form = useForm<FormValues>({
     resolver: zodResolver(schema),
     mode: 'onChange',
     defaultValues: { subject: '', message: '' }});
