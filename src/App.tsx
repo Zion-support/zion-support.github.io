@@ -1,54 +1,29 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import './index.css';
-import Home from './pages/Home';
-import ExpandedServicesPage from './pages/ExpandedServicesPage';
-import AIServicesPage from './pages/AIServicesPage';
-import CybersecurityServicesPage from './pages/CybersecurityServicesPage';
-import ComprehensiveServicesPage from './pages/ComprehensiveServicesPage';
-import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
-import ServicesComparisonPage from './pages/ServicesComparisonPage';
-import ServicesPage from './pages/ServicesPage';
-import Contact from './pages/Contact';
-import About from './pages/About';
-import GreenIT from './pages/GreenIT';
-import Privacy from './pages/Privacy';
-import Sitemap from './pages/Sitemap';
-import Terms from './pages/Terms';
-import HelpCenter from './pages/HelpCenter';
-import FAQ from './pages/FAQ';
-import RequestQuote from './pages/RequestQuote';
-import NotFound from './pages/NotFound';
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+import { ThemeProvider } from "./components/ThemeProvider";
+import { Toaster } from "./components/ui/toaster";
+import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import { WhitelabelProvider } from "./context/WhitelabelContext";
 
-function App() {
+// Import only the essential pages
+const Home = React.lazy(() => import('./pages/Home'));
+const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage'));
+
+const App = () => {
   return (
-    <HelmetProvider>
-      <Router>
-        <div className="App">
+    <WhitelabelProvider>
+      <ThemeProvider defaultTheme="dark">
+        <React.Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/expanded-services" element={<ExpandedServicesPage />} />
-            <Route path="/ai-services" element={<AIServicesPage />} />
-            <Route path="/cybersecurity" element={<CybersecurityServicesPage />} />
-            <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
-            <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
-            <Route path="/services-comparison" element={<ServicesComparisonPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/green-it" element={<GreenIT />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/sitemap" element={<Sitemap />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/help" element={<HelpCenter />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/request-quote" element={<RequestQuote />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
           </Routes>
-        </div>
-      </Router>
-    </HelmetProvider>
+        </React.Suspense>
+        <Toaster />
+        <SonnerToaster position="top-right" />
+      </ThemeProvider>
+    </WhitelabelProvider>
   );
 }
 

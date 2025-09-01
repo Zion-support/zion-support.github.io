@@ -1,5 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+
+import React from "react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { 
+  ArrowRight, 
+  Search, 
+  Users, 
+  Briefcase, 
+  Settings, 
+  MessageSquare, 
+  Smartphone,
+  Zap,
+  TrendingUp
+} from "lucide-react";
 
 export function QuickAccess() {
   const quickLinks = [
