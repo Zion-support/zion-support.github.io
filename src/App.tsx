@@ -37,6 +37,17 @@ const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ d
 const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing2025').then(module => ({ default: module.default })));
 const SimplePage = lazy(() => import('./pages/SimplePage').then(module => ({ default: module.default })));
 
+// New pages
+const TalentPage = lazy(() => import('./pages/TalentPage').then(module => ({ default: module.TalentPage })));
+const EnterprisePage = lazy(() => import('./pages/EnterprisePage').then(module => ({ default: module.EnterprisePage })));
+const MarketplacePage = lazy(() => import('./pages/MarketplacePage').then(module => ({ default: module.MarketplacePage })));
+const TeamPage = lazy(() => import('./pages/TeamPage').then(module => ({ default: module.TeamPage })));
+const NewsPage = lazy(() => import('./pages/NewsPage').then(module => ({ default: module.NewsPage })));
+const EventsPage = lazy(() => import('./pages/EventsPage').then(module => ({ default: module.EventsPage })));
+const PartnersPage = lazy(() => import('./pages/PartnersPage').then(module => ({ default: module.PartnersPage })));
+const ResourcesPage = lazy(() => import('./pages/ResourcesPage').then(module => ({ default: module.ResourcesPage })));
+const AccessibilityPage = lazy(() => import('./pages/AccessibilityPage').then(module => ({ default: module.AccessibilityPage })));
+
 // Service Pages - Updated to use backup-pages location
 const AIThreatIntelligence = lazy(() => import('./backup-pages/src-pages/services/ai-threat-intelligence-platform').then(module => ({ default: module.AIThreatIntelligencePlatform })));
 const BlockchainSupplyChain = lazy(() => import('./backup-pages/src-pages/services/blockchain-supply-chain-platform').then(module => ({ default: module.BlockchainSupplyChainPlatform })));
@@ -79,7 +90,10 @@ function App() {
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/*" element={<BlogPage />} />
               <Route path="/careers" element={<AboutPage />} />
-              <Route path="/partners" element={<AboutPage />} />
+              <Route path="/team" element={<TeamPage />} />
+              <Route path="/news" element={<NewsPage />} />
+              <Route path="/events" element={<EventsPage />} />
+              <Route path="/partners" element={<PartnersPage />} />
               <Route path="/press" element={<AboutPage />} />
               <Route path="/case-studies" element={<BlogPage />} />
               <Route path="/research-development" element={<BlogPage />} />
@@ -96,6 +110,11 @@ function App() {
               <Route path="/terms-of-service" element={<BlogPage />} />
               <Route path="/cookie-policy" element={<BlogPage />} />
               <Route path="/request-quote" element={<ContactPage />} />
+              <Route path="/talent" element={<TalentPage />} />
+              <Route path="/enterprise" element={<EnterprisePage />} />
+              <Route path="/marketplace" element={<MarketplacePage />} />
+              <Route path="/resources" element={<ResourcesPage />} />
+              <Route path="/accessibility" element={<AccessibilityPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </Suspense>

@@ -179,6 +179,7 @@ export function Footer() {
   ];
 
   const resourceLinks = [
+    { name: 'All Resources', href: '/resources' },
     { name: 'Blog', href: '/blog' },
     { name: 'White Papers', href: '/white-papers' },
     { name: 'Research & Development', href: '/research-development' },
@@ -209,6 +210,13 @@ export function Footer() {
     { name: 'Data Protection', href: '/data-protection' },
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' }
+  ];
+
+  const additionalServices = [
+    { name: 'Marketplace', href: '/marketplace' },
+    { name: 'Find Talent', href: '/talent' },
+    { name: 'Enterprise Solutions', href: '/enterprise' },
+    { name: 'Accessibility', href: '/accessibility' }
   ];
 
   const socialLinks = [
@@ -373,6 +381,24 @@ export function Footer() {
             </h3>
             <ul className="space-y-2">
               {resourceLinks.slice(0, 6).map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-sm text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-lg font-semibold text-white mb-6 flex items-center mt-8">
+              <Users className="w-5 h-5 text-zion-cyan mr-2" />
+              Additional Services
+            </h3>
+            <ul className="space-y-2">
+              {additionalServices.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}

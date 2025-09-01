@@ -323,13 +323,52 @@ export function MainNavigation({ className = '' }) {
         )}
       </div>
 
-      {/* Resources */}
-      <Link
-        to="/resources"
-        className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
-      >
-        Resources
-      </Link>
+      {/* Resources Dropdown */}
+      <div className="relative group">
+        <button
+          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+        >
+          <span>Resources</span>
+          <ChevronDown className="w-3 h-3" />
+        </button>
+        
+        <div className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <div className="p-4">
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/resources" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  All Resources
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link to="/white-papers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  White Papers
+                </Link>
+              </li>
+              <li>
+                <Link to="/webinars" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Webinars
+                </Link>
+              </li>
+              <li>
+                <Link to="/training" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Training
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       {/* Blog */}
       <Link
@@ -346,6 +385,48 @@ export function MainNavigation({ className = '' }) {
       >
         Pricing
       </Link>
+
+      {/* More Dropdown */}
+      <div className="relative group">
+        <button
+          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
+        >
+          <span>More</span>
+          <ChevronDown className="w-3 h-3" />
+        </button>
+        
+        <div className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <div className="p-4">
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Marketplace
+                </Link>
+              </li>
+              <li>
+                <Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Find Talent
+                </Link>
+              </li>
+              <li>
+                <Link to="/news" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  News & Updates
+                </Link>
+              </li>
+              <li>
+                <Link to="/events" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Events
+                </Link>
+              </li>
+              <li>
+                <Link to="/accessibility" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  Accessibility
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 }
