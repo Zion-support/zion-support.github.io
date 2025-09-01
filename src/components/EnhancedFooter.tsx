@@ -100,11 +100,11 @@ export function EnhancedFooter() {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about', icon: Users },
-        { name: 'Our Team', href: '/team', icon: Award },
         { name: 'Careers', href: '/careers', icon: Target },
-        { name: 'News & Press', href: '/press', icon: BookOpen },
+        { name: 'News', href: '/news', icon: BookOpen },
         { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-        { name: 'Partners', href: '/partners', icon: Handshake }
+        { name: 'Events', href: '/events', icon: Video },
+        { name: 'Research', href: '/research-development', icon: Lightbulb }
       ]
     },
     {

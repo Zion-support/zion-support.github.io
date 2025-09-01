@@ -55,8 +55,8 @@ export function EnhancedHeader() {
     { name: 'About', href: '/about', current: location.pathname === '/about' },
     { name: 'Services', href: '/services', current: location.pathname === '/services' },
     { name: 'Solutions', href: '/solutions', current: location.pathname === '/solutions' },
-    { name: 'Partners', href: '/partners', current: location.pathname === '/partners' },
-    { name: 'Research', href: '/research', current: location.pathname === '/research' },
+    { name: 'Research', href: '/research-development', current: location.pathname === '/research-development' },
+    { name: 'Careers', href: '/careers', current: location.pathname === '/careers' },
     { name: 'Contact', href: '/contact', current: location.pathname === '/contact' }
   ];
 

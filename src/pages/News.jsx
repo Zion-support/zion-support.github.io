@@ -1,266 +1,226 @@
 import React, { useState } from 'react';
-import {};
-  Calendar,;
-  User,;
-  Tag,;
-  ArrowRight,;
-  Search,;
-  Filter,;
-  Clock,;
-  Eye,;
-  ExternalLink,';
-  TrendingUp,'';
-  Award,''';
-  Globe} from 'lucide-react';
-;
-const News = () => {};
-';
-  const [searchTerm, setSearchTerm] = useState('');';
-  const [selectedCategory, setSelectedCategory] = useState('All');
-';
-  const categories = ['';
-    'All',Comp News',Product Updates',Industry Insights',Awards & Recognition',Partnerships',Research & Development',Market Trends';
+import {
+  Calendar,
+  User,
+  Tag,
+  ArrowRight,
+  Search,
+  Filter,
+  Clock,
+  Eye
+} from 'lucide-react';
+
+export default function News() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const categories = ['all', 'AI', 'Cloud', 'Cybersecurity', 'Innovation', 'Company'];
+
+  const newsArticles = [
+    {
+      id: 1,
+      title: "Zion Tech Group Launches Revolutionary AI Platform",
+      excerpt: "Our new AI platform transforms business operations with autonomous decision-making capabilities.",
+      content: "Zion Tech Group has announced the launch of its groundbreaking AI platform that revolutionizes how businesses operate. The platform features autonomous decision-making capabilities, predictive analytics, and real-time optimization.",
+      author: "Sarah Johnson",
+      date: "2024-01-15",
+      category: "AI",
+      readTime: "5 min read",
+      views: 1250,
+      image: "/api/placeholder/600/400"
+    },
+    {
+      id: 2,
+      title: "Quantum Computing Breakthrough in Enterprise Applications",
+      excerpt: "New quantum algorithms deliver unprecedented performance improvements for complex business problems.",
+      content: "Our research team has developed breakthrough quantum algorithms that deliver unprecedented performance improvements for complex business optimization problems. These algorithms are now being implemented in enterprise applications.",
+      author: "Dr. Michael Chen",
+      date: "2024-01-10",
+      category: "Innovation",
+      readTime: "7 min read",
+      views: 980,
+      image: "/api/placeholder/600/400"
+    },
+    {
+      id: 3,
+      title: "Enhanced Cybersecurity Solutions for Modern Threats",
+      excerpt: "Advanced threat detection and response capabilities protect against evolving cyber threats.",
+      content: "We've enhanced our cybersecurity solutions with advanced threat detection and response capabilities. These improvements provide comprehensive protection against evolving cyber threats and ensure business continuity.",
+      author: "Alex Rodriguez",
+      date: "2024-01-05",
+      category: "Cybersecurity",
+      readTime: "4 min read",
+      views: 750,
+      image: "/api/placeholder/600/400"
+    },
+    {
+      id: 4,
+      title: "Cloud Infrastructure Expansion Across Global Markets",
+      excerpt: "New data centers and enhanced cloud services now available in 15 additional countries.",
+      content: "Zion Tech Group has expanded its cloud infrastructure with new data centers and enhanced services now available in 15 additional countries. This expansion provides improved performance and compliance options for global clients.",
+      author: "Emily Watson",
+      date: "2024-01-01",
+      category: "Cloud",
+      readTime: "6 min read",
+      views: 1100,
+      image: "/api/placeholder/600/400"
+    },
+    {
+      id: 5,
+      title: "Company Growth: 500+ Projects Milestone Achieved",
+      excerpt: "Zion Tech Group celebrates completing over 500 successful technology projects worldwide.",
+      content: "We're proud to announce that Zion Tech Group has successfully completed over 500 technology projects worldwide. This milestone reflects our commitment to delivering exceptional results and driving digital transformation.",
+      author: "David Kim",
+      date: "2023-12-28",
+      category: "Company",
+      readTime: "3 min read",
+      views: 850,
+      image: "/api/placeholder/600/400"
+    },
+    {
+      id: 6,
+      title: "AI-Powered Business Automation: The Future is Here",
+      excerpt: "Discover how AI automation is transforming business processes and driving efficiency.",
+      content: "AI-powered business automation is revolutionizing how companies operate. From intelligent document processing to automated customer service, these technologies are driving unprecedented efficiency and cost savings.",
+      author: "Lisa Thompson",
+      date: "2023-12-20",
+      category: "AI",
+      readTime: "8 min read",
+      views: 1400,
+      image: "/api/placeholder/600/400"
+    }
   ];
-';
-  const sources = ['';
-    'All Sources',Comp Press Releases',Industry Reports',Technology News',Research Papers',Partner Updates',Customer Success Stories';
-  ];
-';
-  const timeframes = ['';
-    'All Time',Last 24 Hours',Last Week',Last Month',Last 3 Months',Last Year';
-  ];
-;
-  const newsItems = [];
-    {};
-      id: 1,';
-      title:'';
-        'Zion Tech Group Launches Revolutionary AI-Powered Quantum Neural Network Platform',';
-      category: 'Product Updates',';
-      source: 'Comp Press Releases',';
-      date: '2025-01-15',';
-      readTime: '5 min read',';
-      excerpt:'';
-        'Our latest innovation combines quantum computing principles with advanced neural networks to deliver unprecedented AI capabilities for enterprise applications.',';
-      image: '/images/news/quantum-ai-platform.jpg',;
-      featured: true},;
-    {};
-      id: 2,';
-      title:'';
-        'Zion Tech Group Recognized as Top AI Solutions Provider in 2024 Tech Awards',';
-      category: 'Awards & Recognition',';
-      source: 'Industry Reports',';
-      date: '2024-12-20',';
-      readTime: '3 min read',';
-      excerpt:'';
-        'Industry recognition for our innovative AI solutions and commitment to driving digital transformation across enterprises.',';
-      image: '/images/news/award-recognition.jpg',;
-      featured: false},;
-    {};
-      id: 3,';
-      title:'';
-        'Strategic Partnership Announced with Leading Cloud Infrastructure Provider',';
-      category: 'Partnerships',';
-      source: 'Comp Press Releases',';
-      date: '2024-12-10',';
-      readTime: '4 min read',';
-      excerpt:'';
-        'New partnership expands our cloud capabilities and enables seamless integration for enterprise clients.',';
-      image: '/images/news/partnership-announcement.jpg',;
-      featured: false},;
-    {};
-      id: 4,';
-      title:'';
-        'Breakthrough in Autonomous Business Operations: New Research Findings',';
-      category: 'Research & Development',';
-      source: 'Research Papers',';
-      date: '2024-11-28',';
-      readTime: '8 min read',';
-      excerpt:'';
-        'Latest research reveals significant advancements in autonomous business process automation and decision-making systems.',';
-      image: '/images/news/research-breakthrough.jpg',;
-      featured: false},;
-    {};
-      id: 5,';
-      title: 'Market Trends: AI Adoption Accelerates Across Enterprise Sectors',';
-      category: 'Market Trends',';
-      source: 'Industry Reports',';
-      date: '2024-11-15',';
-      readTime: '6 min read',';
-      excerpt:'';
-        'Comprehensive analysis of AI adoption patterns and emerging trends in enterprise technology.',';
-      image: '/images/news/market-trends.jpg',;
-      featured: false};
-  ];
-;
-  const filteredNews = newsItems.filter(item => {};
-    const matchesSearch =;
-      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-      item.excerpt.toLowerCase().includes(searchTerm.toLowerCase());';
-    const matchesCategory ='';
-      selectedCategory === 'All' || item.category === selectedCategory;
+
+  const filteredArticles = newsArticles.filter(article => {
+    const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         article.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  }) ;
-;
-  return();
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">""";"
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">""";"
-        <div className="max-w-7xl mx-auto">""";"
-          <div className="text-center mb-12">""";"
-            <div className="flex justify-center mb-6">""";"
-              <div className="p-3 bg-blue-600/20 rounded-full">""";"
-                <Globe className="h-12 w-12 text-blue-400" />";"
-              </div>""";"
-            </div>""";"
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">";"
-              News & Updates""";"
-            </h1>""";"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Stay informed about the latest developments, product updates, and;
-              industry insights from Zion Tech Group.;
-            </p>;"
-          </div>";"
-""";"
-          {/* Search and Filters */}""";"
-          <div className="mb-12">""";"
-            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">""";"
-              <div className="relative flex-1 max-w-md">""";"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />""";"
-                <input""";"
-                  type="text""";"
-                  placeholder="Search news...""";"
-                  value={searchTerm}""";"
-                  onChange={e = / /> setSearchTerm(e.target.value)}""";"
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"";"
-                />";"
-              </div>""";"
-""";"
-              <div className="flex flex-wrap gap-3">;"
-                <select;";"
-                  value={selectedCategory}""";"
-                  onChange={e => setSelectedCategory(e.target.value)}""";"
-                  className="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"";
-                >;
-                  {categories.map(category => (;
-                    <option key={category} value={category}>;
-                      {category};
-                    </option>;
-                  ))};
-                </select>;
-              </div>;
-            </div>;
-          </div>;"
-";"
-          {/* Featured News */}""";"
-          {filteredNews.filter(item => item.featured).length > 0 && (""";"
-            <div className="mb-16">""";"
-              <h2 className="text-2xl font-bold mb-8 text-center">";"
-                Featured News""";"
-              </h2>""";"
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-                {filteredNews;
-                  .filter(item => item.featured);"
-                  .map(item => (";"
-                    <div""";"
-                      key={item.id}""";"
-                      className="bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700 hover:border-slate-600 transition-all hover:transform hover:scale-105""";"
-                    >"""";"
-                      <div className="aspect-video bg-slate-700 flex items-center justify-center">""";"
-                        <div className="text-slate-500 text-center">""";"
-                          <Globe className="h-16 w-16 mx-auto mb-2" />;"
-                          <p>News Image</p>";"
-                        </div>""";"
-                      </div>""";"
-                      <div className="p-6">""";"
-                        <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">""";"
-                          <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">";"
-                            {item.category}""";"
-                          </span>""";"
-                          <div className="flex items-center gap-1">""";"
-                            <Calendar className="h-4 w-4" />";"
-                            {item.date}""";"
-                          </div>""";"
-                          <div className="flex items-center gap-1">""";"
-                            <Clock className="h-4 w-4" />;"
-                            {item.readTime}";"
-                          </div>""";"
-                        </div>""";"
-                        <h3 className="text-xl font-bold mb-3 text-white">";"
-                          {item.title}""";"
-                        </h3>""";"
-                        <p className="text-gray-400 mb-4 line-clamp-3">";"
-                          {item.excerpt}""";"
-                        </p>""";"
-                        <button className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">""";"
-                          Read More""";"
-                          <ArrowRight className="h-4 w-4 ml-2" />;
-                        </button>;
-                      </div>;
-                    </div>;
-                  ))};
-              </div>;
-            </div>) };"
-";"
-          {/* All News */}""";"
-          <div>""";"
-            <h2 className="text-2xl font-bold mb-8 text-center">Latest News</h2>""";"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;"
-              {filteredNews.map(item => (";"
-                <div""";"
-                  key={item.id}""";"
-                  className="bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700 hover:border-slate-600 transition-all hover:transform hover:scale-105""";"
-                >"""";"
-                  <div className="aspect-video bg-slate-700 flex items-center justify-center">""";"
-                    <div className="text-slate-500 text-center">""";"
-                      <Globe className="h-12 w-12 mx-auto mb-2" />;"
-                      <p>News Image</p>";"
-                    </div>""";"
-                  </div>""";"
-                  <div className="p-6">""";"
-                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">""";"
-                      <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs">";"
-                        {item.category}""";"
-                      </span>""";"
-                      <div className="flex items-center gap-1">""";"
-                        <Calendar className="h-4 w-4" />;"
-                        {item.date}";"
-                      </div>""";"
-                    </div>""";"
-                    <h3 className="text-lg font-bold mb-3 text-white line-clamp-2">";"
-                      {item.title}""";"
-                    </h3>""";"
-                    <p className="text-gray-400 mb-4 line-clamp-3 text-sm">";"
-                      {item.excerpt}""";"
-                    </p>""";"
-                    <div className="flex items-center justify-between">""";"
-                      <span className="text-xs text-gray-500">";"
-                        {item.source}""";"
-                      </span>""";"
-                      <button className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm">""";"
-                        Read More""";"
-                        <ArrowRight className="h-4 w-4 ml-1" />;
-                      </button>;
-                    </div>;
-                  </div>;
-                </div>) ) };
-            </div>;"
-          </div>";"
-""";"
-          {filteredNews.length === 0 && (""";"
-            <div className="text-center py-16">""";"
-              <Globe className="w-16 h-16 text-gray-400 mx-auto mb-4" />""";"
-              <h3 className="text-xl font-semibold text-white mb-2">";"
-                No news found""";"
-              </h3>""";"
-              <p className="text-gray-400">;
-                Try adjusting your search criteria or category filter.;
-              </p>;
-            </div>;
-          )};
-        </div>;
-      </section>;
-    </div>;
+  });
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <div className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Latest News & Updates</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Stay informed about the latest developments in technology, AI, and digital transformation
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Filters */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
+          <div className="flex flex-col md:flex-row gap-4">
+            {/* Search */}
+            <div className="flex-1">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                <input
+                  type="text"
+                  placeholder="Search articles..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex items-center gap-2">
+              <Filter className="h-5 w-5 text-gray-400" />
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              >
+                {categories.map(category => (
+                  <option key={category} value={category}>
+                    {category === 'all' ? 'All Categories' : category}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
+
+        {/* Articles Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredArticles.map((article) => (
+            <article key={article.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                <div className="text-white text-center">
+                  <div className="text-4xl font-bold mb-2">{article.category}</div>
+                  <div className="text-sm opacity-90">Featured Article</div>
+                </div>
+              </div>
+              
+              <div className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Tag className="h-4 w-4 text-blue-500" />
+                  <span className="text-sm font-medium text-blue-600">{article.category}</span>
+                </div>
+                
+                <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  {article.title}
+                </h2>
+                
+                <p className="text-gray-600 mb-4 line-clamp-3">
+                  {article.excerpt}
+                </p>
+                
+                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-1">
+                      <User className="h-4 w-4" />
+                      <span>{article.author}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="h-4 w-4" />
+                      <span>{new Date(article.date).toLocaleDateString()}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Eye className="h-4 w-4" />
+                    <span>{article.views}</span>
+                  </div>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-1 text-sm text-gray-500">
+                    <Clock className="h-4 w-4" />
+                    <span>{article.readTime}</span>
+                  </div>
+                  
+                  <button className="flex items-center gap-1 text-blue-600 hover:text-blue-700 font-medium">
+                    Read More
+                    <ArrowRight className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {filteredArticles.length === 0 && (
+          <div className="text-center py-12">
+            <div className="text-gray-500 text-lg">No articles found matching your criteria.</div>
+            <button
+              onClick={() => {
+                setSearchTerm('');
+                setSelectedCategory('all');
+              }}
+              className="mt-4 text-blue-600 hover:text-blue-700 font-medium"
+            >
+              Clear filters
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
   );
-};"
-";"
-export default News;'""";"
-'"'""";"
+}
