@@ -25,13 +25,15 @@ import { useDisputes } from "@/hooks/useDisputes";
 import { toast } from "sonner";
 import { FileText } from "lucide-react";
 
+// Zod 3.x does not support passing a required_error directly to z.string(),
+// so we use `.min(1)` to ensure the field is non-empty and provide a message.
 const formSchema = z.object({
   reason_code: z
     .string()
-    .nonempty({ message: "Please select a reason for the dispute" }),
+    .min(1, { message: "Please select a reason for the dispute" }),
   description: z
     .string()
-    .nonempty({ message: "Please provide a description of the issue" })
+    .min(1, { message: "Please provide a description of the issue" })
     .min(20, {
       message: "Description must be at least 20 characters",
     }),
