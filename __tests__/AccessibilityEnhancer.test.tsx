@@ -2,8 +2,8 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
-describe'AccessibilityEnhancer': unknown, (: unknown {
-  it'renders children correctly': unknown, (: unknown {
+describe('AccessibilityEnhancer', () => {
+  it('renders children correctly', () => {
     render(
       <AccessibilityEnhancer>
         <div data-testid="test-child">Test Content</div>
@@ -14,7 +14,7 @@ describe'AccessibilityEnhancer': unknown, (: unknown {
     expect(screen.getByText('Test Content')).toBeInTheDocument();
   });
 
-  it'applies accessibility props correctly': unknown, (: unknown {
+  it('applies accessibility props correctly', () => {
     render(
       <AccessibilityEnhancer
         role="button"
@@ -26,11 +26,11 @@ describe'AccessibilityEnhancer': unknown, (: unknown {
     );
 
     const element = screen.getByRole('button');
-    expect(element).toHaveAttribute('aria-label',Test Button');
-    expect(element).toHaveAttribute('tabindex',0');
+    expect(element).toHaveAttribute('aria-label', 'Test Button');
+    expect(element).toHaveAttribute('tabindex', '0');
   });
 
-  it'handles keyboard events correctly': unknown, (: unknown {
+  it('handles keyboard events correctly', () => {
     const mockOnKeyDown = jest.fn();
 
     render(
@@ -45,7 +45,7 @@ describe'AccessibilityEnhancer': unknown, (: unknown {
     expect(mockOnKeyDown).toHaveBeenCalled();
   });
 
-  it'applies focus styles when focusable': unknown, (: unknown {
+  it('applies focus styles when focusable', () => {
     render(
       <AccessibilityEnhancer focusable={true}>
         <span>Content</span>
@@ -54,11 +54,11 @@ describe'AccessibilityEnhancer': unknown, (: unknown {
 
     const element = screen.getByText('Content').parentElement;
     expect(element).toHaveClass(
-      'focus:outline-none',focus:ring-2',focus:ring-blue-500'
+      'focus:outline-none', 'focus:ring-2', 'focus:ring-blue-500'
     );
   });
 
-  it'disables focus when not focusable': unknown, (: unknown {
+  it('disables focus when not focusable', () => {
     render(
       <AccessibilityEnhancer focusable={false}>
         <span>Content</span>
@@ -66,6 +66,6 @@ describe'AccessibilityEnhancer': unknown, (: unknown {
     );
 
     const element = screen.getByText('Content').parentElement;
-    expect(element).toHaveAttribute('tabindex',-1');
+    expect(element).toHaveAttribute('tabindex', '-1');
   });
 });

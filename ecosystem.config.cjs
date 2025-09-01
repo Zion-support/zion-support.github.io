@@ -340,9 +340,6 @@ module.exports = {
       log_file: './logs/intelligent-build-pipeline.log',
       error_file: './logs/intelligent-build-pipeline-error.log',
       out_file: './logs/intelligent-build-pipeline-out.log'
-=======
->>>>>>> main
->>>>>>> 8fc73822ab032b0e6851abfe165a77e7d84c153a
     }
   ],
 

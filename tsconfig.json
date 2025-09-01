@@ -106,6 +106,7 @@
     "dist",
     "automation",
     "components.disabled",
+    "backup-pages",
     "**/*.disabled",
     "**/*.backup",
     "**/*.tsbackup"

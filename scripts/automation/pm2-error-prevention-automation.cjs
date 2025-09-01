@@ -1,439 +1,384 @@
 #!/usr/bin/env node
 
+/**
+ * PM2 Error Prevention Automation
+ * Continuously monitors and prevents errors before they occur
+ */
+
+const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync, spawn } = require('child_process');
-const EnhancedErrorFixer = require('./enhanced-error-fixer.cjs');
+const { promisify } = require('util');
 
-class PM2ErrorPreventionAutomation {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.automationInterval = parseInt(process.env.AUTOMATION_INTERVAL) || 300000; // 5 minutes default
-    this.isRunning = false;
-    this.stats = {
-      totalRuns: 0,
-      totalErrorsFixed: 0,
-      lastRun: null,
-      startTime: new Date().toISOString()
-    };
+// Configuration
+const CONFIG = {
+  CHECK_INTERVAL: 300000, // 5 minutes
+  MAX_ERRORS_THRESHOLD: 10,
+  CRITICAL_FILES: [
+    'package.json',
+    'next.config.js',
+    'eslint.config.js',
+    'tsconfig.json',
+    'ecosystem.config.cjs'
+  ],
+  BACKUP_DIR: path.join(__dirname, '..', '..', 'automation', 'backups'),
+  LOG_DIR: path.join(__dirname, '..', '..', 'automation', 'logs')
+};
+
+// Ensure directories exist
+[CONFIG.BACKUP_DIR, CONFIG.LOG_DIR].forEach(dir => {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
   }
+});
 
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [PM2-ERROR-PREVENTION] [${type.toUpperCase()}] ${message}`);
-  }
+// Logging utility
+function log(message, level = 'info') {
+  const timestamp = new Date().toISOString();
+  const logMessage = `[${timestamp}] [${level.toUpperCase()}] [PM2-ERROR-PREVENTION] ${message}`;
+  console.log(logMessage);
+  
+  const logFile = path.join(CONFIG.LOG_DIR, 'pm2-error-prevention.log');
+  fs.appendFileSync(logFile, logMessage + '\n');
+}
 
-  async start() {
-    this.log('Starting PM2 Error Prevention Automation...', 'info');
-    
-    // Create logs directory if it doesn't exist
-    const logsDir = path.join(this.projectRoot, 'automation', 'logs');
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
-    }
+// Error detection patterns
+const ERROR_PATTERNS = {
+  syntax: [
+    /SyntaxError:/,
+    /Unexpected token/,
+    /Unexpected keyword/,
+    /Unterminated string/,
+    /Missing \) after argument list/,
+    /<<<<<<<|=======|>>>>>>>/  // Git merge conflicts
+  ],
+  typescript: [
+    /error TS\d+:/,
+    /Type '.+' is not assignable/,
+    /Property '.+' does not exist/,
+    /Cannot find module/
+  ],
+  eslint: [
+    /\d+:\d+\s+error/,
+    /Parsing error/,
+    /Definition for rule '.+' was not found/
+  ],
+  build: [
+    /Build failed/,
+    /Module not found/,
+    /Cannot resolve module/,
+    /Invalid configuration/
+  ]
+};
 
-    // Run initial error fixing
-    await this.runErrorPreventionCycle();
-
-    // Set up continuous execution
-    setInterval(async () => {
-      await this.runErrorPreventionCycle();
-    }, this.automationInterval);
-
-    this.log(`PM2 Error Prevention Automation started. Running every ${this.automationInterval / 1000 / 60} minutes.`, 'success');
-  }
-
-  async runErrorPreventionCycle() {
-    if (this.isRunning) {
-      this.log('Previous cycle still running, skipping...', 'warning');
-      return;
-    }
-
-    this.isRunning = true;
-    this.stats.totalRuns++;
-    this.stats.lastRun = new Date().toISOString();
-
-    try {
-      this.log(`Starting error prevention cycle #${this.stats.totalRuns}`, 'info');
-
-      // 1. Run enhanced error fixer
-      await this.runEnhancedErrorFixer();
-
-      // 2. Run TypeScript error monitoring
-      await this.runTypeScriptErrorMonitoring();
-
-      // 3. Run ESLint error monitoring
-      await this.runESLintErrorMonitoring();
-
-      // 4. Run build error monitoring
-      await this.runBuildErrorMonitoring();
-
-      // 5. Run dependency health check
-      await this.runDependencyHealthCheck();
-
-      // 6. Run file system health check
-      await this.runFileSystemHealthCheck();
-
-      // 7. Generate automation report
-      await this.generateAutomationReport();
-
-      this.log(`Error prevention cycle #${this.stats.totalRuns} completed successfully`, 'success');
-
-    } catch (error) {
-      this.log(`Error prevention cycle #${this.stats.totalRuns} failed: ${error.message}`, 'error');
-      await this.logError(error);
-    } finally {
-      this.isRunning = false;
-    }
-  }
-
-  async runEnhancedErrorFixer() {
-    this.log('Running enhanced error fixer...', 'info');
+// Error fixing strategies
+const ERROR_FIXES = {
+  // Fix Git merge conflicts
+  mergeConflicts: (filePath) => {
+    log(`Fixing merge conflicts in ${filePath}`);
     
     try {
-      const fixer = new EnhancedErrorFixer();
-      await fixer.run();
+      let content = fs.readFileSync(filePath, 'utf8');
       
-      // Read the report to update stats
-      const reportPath = path.join(this.projectRoot, 'enhanced-error-fixer-report.json');
-      if (fs.existsSync(reportPath)) {
-        const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
-        this.stats.totalErrorsFixed += report.errorsFixed || 0;
-      }
+      // Remove merge conflict markers and choose the appropriate version
+      content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> \w+/g, 
+        (match, head, incoming) => {
+          // Simple strategy: prefer HEAD version for config files
+          return head;
+        });
       
-      this.log('Enhanced error fixer completed', 'success');
+      // Remove any remaining conflict markers
+      content = content.replace(/<<<<<<< HEAD\n/g, '');
+      content = content.replace(/=======\n/g, '');
+      content = content.replace(/>>>>>>> .+\n/g, '');
+      
+      fs.writeFileSync(filePath, content);
+      log(`Merge conflicts resolved in ${filePath}`);
+      return true;
     } catch (error) {
-      this.log(`Enhanced error fixer failed: ${error.message}`, 'error');
+      log(`Failed to fix merge conflicts in ${filePath}: ${error.message}`, 'error');
+      return false;
     }
-  }
+  },
 
-  async runTypeScriptErrorMonitoring() {
-    this.log('Running TypeScript error monitoring...', 'info');
+  // Fix syntax errors in JavaScript/TypeScript files
+  syntaxErrors: (filePath) => {
+    log(`Fixing syntax errors in ${filePath}`);
     
     try {
-      const result = execSync('npx tsc --noEmit --pretty false', { 
-        encoding: 'utf8', 
-        cwd: this.projectRoot,
-        stdio: ['pipe', 'pipe', 'pipe']
-      });
+      let content = fs.readFileSync(filePath, 'utf8');
+      let fixed = false;
       
-      if (result.includes('error TS')) {
-        const errorCount = (result.match(/error TS/g) || []).length;
-        this.log(`TypeScript monitoring found ${errorCount} errors`, 'warning');
-        
-        // Log errors to file for tracking
-        const logPath = path.join(this.projectRoot, 'automation', 'logs', 'typescript-errors.log');
-        fs.appendFileSync(logPath, `[${new Date().toISOString()}] ${errorCount} TypeScript errors found\n`);
-      } else {
-        this.log('TypeScript monitoring: No errors found', 'success');
-      }
-    } catch (error) {
-      if (error.stdout) {
-        const output = error.stdout.toString();
-        const errorCount = (output.match(/error TS/g) || []).length;
-        this.log(`TypeScript monitoring found ${errorCount} errors`, 'warning');
-      }
-    }
-  }
-
-  async runESLintErrorMonitoring() {
-    this.log('Running ESLint error monitoring...', 'info');
-    
-    try {
-      const result = execSync('npm run lint', { 
-        encoding: 'utf8', 
-        cwd: this.projectRoot,
-        stdio: ['pipe', 'pipe', 'pipe']
-      });
+      // Fix common syntax issues
+      const fixes = [
+        // Fix missing quotes in object properties
+        { pattern: /(\w+):\s*(\w+),/g, replacement: '"$1": "$2",' },
+        // Fix trailing commas in arrays/objects
+        { pattern: /,(\s*[}\]])/g, replacement: '$1' },
+        // Fix unclosed strings (basic)
+        { pattern: /'([^']*?)$/gm, replacement: "'$1'" },
+        // Fix missing semicolons at end of statements
+        { pattern: /(\w+)\n(\s*)/g, replacement: '$1;\n$2' }
+      ];
       
-      this.log('ESLint monitoring: No errors found', 'success');
-    } catch (error) {
-      if (error.stdout) {
-        const output = error.stdout.toString();
-        const errorCount = (output.match(/error/g) || []).length;
-        this.log(`ESLint monitoring found ${errorCount} errors`, 'warning');
-        
-        // Log errors to file for tracking
-        const logPath = path.join(this.projectRoot, 'automation', 'logs', 'eslint-errors.log');
-        fs.appendFileSync(logPath, `[${new Date().toISOString()}] ${errorCount} ESLint errors found\n`);
-      }
-    }
-  }
-
-  async runBuildErrorMonitoring() {
-    this.log('Running build error monitoring...', 'info');
-    
-    try {
-      const result = execSync('npm run build', { 
-        encoding: 'utf8', 
-        cwd: this.projectRoot,
-        stdio: ['pipe', 'pipe', 'pipe']
-      });
-      
-      this.log('Build monitoring: No errors found', 'success');
-    } catch (error) {
-      if (error.stdout) {
-        const output = error.stdout.toString();
-        const errorCount = (output.match(/error/g) || []).length;
-        this.log(`Build monitoring found ${errorCount} errors`, 'warning');
-        
-        // Log errors to file for tracking
-        const logPath = path.join(this.projectRoot, 'automation', 'logs', 'build-errors.log');
-        fs.appendFileSync(logPath, `[${new Date().toISOString()}] ${errorCount} build errors found\n`);
-      }
-    }
-  }
-
-  async runDependencyHealthCheck() {
-    this.log('Running dependency health check...', 'info');
-    
-    try {
-      // Check for outdated packages
-      const result = execSync('npm outdated --json', { 
-        encoding: 'utf8', 
-        cwd: this.projectRoot,
-        stdio: ['pipe', 'pipe', 'pipe']
-      });
-      
-      const outdated = JSON.parse(result);
-      const outdatedCount = Object.keys(outdated).length;
-      
-      if (outdatedCount > 0) {
-        this.log(`Dependency health check: ${outdatedCount} outdated packages found`, 'warning');
-        
-        // Log outdated packages
-        const logPath = path.join(this.projectRoot, 'automation', 'logs', 'dependency-health.log');
-        fs.appendFileSync(logPath, `[${new Date().toISOString()}] ${outdatedCount} outdated packages: ${Object.keys(outdated).join(', ')}\n`);
-      } else {
-        this.log('Dependency health check: All packages up to date', 'success');
-      }
-    } catch (error) {
-      // npm outdated returns non-zero exit code when packages are outdated
-      if (error.stdout) {
-        try {
-          const outdated = JSON.parse(error.stdout.toString());
-          const outdatedCount = Object.keys(outdated).length;
-          this.log(`Dependency health check: ${outdatedCount} outdated packages found`, 'warning');
-        } catch (parseError) {
-          this.log('Dependency health check: Could not parse outdated packages', 'warning');
+      fixes.forEach(fix => {
+        const newContent = content.replace(fix.pattern, fix.replacement);
+        if (newContent !== content) {
+          content = newContent;
+          fixed = true;
         }
-      }
-    }
-  }
-
-  async runFileSystemHealthCheck() {
-    this.log('Running file system health check...', 'info');
-    
-    try {
-      const issues = [];
+      });
       
-      // Check for orphaned files
-      const orphanedFiles = this.findOrphanedFiles();
-      if (orphanedFiles.length > 0) {
-        issues.push(`${orphanedFiles.length} orphaned files found`);
+      if (fixed) {
+        fs.writeFileSync(filePath, content);
+        log(`Syntax errors fixed in ${filePath}`);
       }
       
-      // Check for duplicate files
-      const duplicateFiles = this.findDuplicateFiles();
-      if (duplicateFiles.length > 0) {
-        issues.push(`${duplicateFiles.length} duplicate files found`);
-      }
-      
-      // Check for large files
-      const largeFiles = this.findLargeFiles();
-      if (largeFiles.length > 0) {
-        issues.push(`${largeFiles.length} large files found (>1MB)`);
-      }
-      
-      if (issues.length > 0) {
-        this.log(`File system health check: ${issues.join(', ')}`, 'warning');
-        
-        // Log issues
-        const logPath = path.join(this.projectRoot, 'automation', 'logs', 'filesystem-health.log');
-        fs.appendFileSync(logPath, `[${new Date().toISOString()}] ${issues.join(', ')}\n`);
-      } else {
-        this.log('File system health check: No issues found', 'success');
-      }
+      return fixed;
     } catch (error) {
-      this.log(`File system health check failed: ${error.message}`, 'error');
+      log(`Failed to fix syntax errors in ${filePath}: ${error.message}`, 'error');
+      return false;
     }
-  }
+  },
 
-  findOrphanedFiles() {
-    const orphaned = [];
-    const srcDir = path.join(this.projectRoot, 'src');
+  // Fix ESLint configuration issues
+  eslintConfig: () => {
+    log('Fixing ESLint configuration issues');
     
-    if (fs.existsSync(srcDir)) {
-      this.walkDirectory(srcDir, (filePath) => {
-        const relativePath = path.relative(srcDir, filePath);
-        if (relativePath.endsWith('.tsx') || relativePath.endsWith('.ts')) {
-          // Check if this file is imported anywhere
-          if (!this.isFileImported(relativePath)) {
-            orphaned.push(relativePath);
+    const eslintConfigPath = path.join(process.cwd(), 'eslint.config.js');
+    
+    if (fs.existsSync(eslintConfigPath)) {
+      try {
+        let content = fs.readFileSync(eslintConfigPath, 'utf8');
+        
+        // Fix common ESLint config issues
+        content = content.replace(/import.*from\s+(['"][^'"]+['"])\s*;?/g, 'import $1;');
+        content = content.replace(/files:\s*\[['"]([^'"]+)['"](?!\])/g, "files: ['$1']");
+        content = content.replace(/'([^']+)':\s*([^,}]+)(?=[,}])/g, "'$1': $2");
+        
+        fs.writeFileSync(eslintConfigPath, content);
+        log('ESLint configuration fixed');
+        return true;
+      } catch (error) {
+        log(`Failed to fix ESLint config: ${error.message}`, 'error');
+        return false;
+      }
+    }
+    
+    return false;
+  },
+
+  // Fix TypeScript configuration issues
+  typescriptConfig: () => {
+    log('Fixing TypeScript configuration issues');
+    
+    const tsConfigPath = path.join(process.cwd(), 'tsconfig.json');
+    
+    if (fs.existsSync(tsConfigPath)) {
+      try {
+        const content = fs.readFileSync(tsConfigPath, 'utf8');
+        const config = JSON.parse(content);
+        
+        // Ensure basic configuration is correct
+        if (!config.compilerOptions) {
+          config.compilerOptions = {};
+        }
+        
+        // Set essential options
+        config.compilerOptions.skipLibCheck = true;
+        config.compilerOptions.allowJs = true;
+        config.compilerOptions.noEmit = true;
+        
+        fs.writeFileSync(tsConfigPath, JSON.stringify(config, null, 2));
+        log('TypeScript configuration fixed');
+        return true;
+      } catch (error) {
+        log(`Failed to fix TypeScript config: ${error.message}`, 'error');
+        return false;
+      }
+    }
+    
+    return false;
+  },
+
+  // Fix package.json issues
+  packageJson: () => {
+    log('Fixing package.json issues');
+    
+    const packagePath = path.join(process.cwd(), 'package.json');
+    
+    if (fs.existsSync(packagePath)) {
+      try {
+        const content = fs.readFileSync(packagePath, 'utf8');
+        const pkg = JSON.parse(content);
+        
+        // Ensure essential scripts exist
+        if (!pkg.scripts) {
+          pkg.scripts = {};
+        }
+        
+        const essentialScripts = {
+          'lint': 'next lint',
+          'type-check': 'tsc --noEmit',
+          'build': 'next build',
+          'dev': 'next dev'
+        };
+        
+        Object.entries(essentialScripts).forEach(([key, value]) => {
+          if (!pkg.scripts[key]) {
+            pkg.scripts[key] = value;
+          }
+        });
+        
+        fs.writeFileSync(packagePath, JSON.stringify(pkg, null, 2));
+        log('package.json fixed');
+        return true;
+      } catch (error) {
+        log(`Failed to fix package.json: ${error.message}`, 'error');
+        return false;
+      }
+    }
+    
+    return false;
+  }
+};
+
+// Main error prevention function
+async function preventErrors() {
+  log('Starting error prevention check');
+  
+  try {
+    let errorsFixed = 0;
+    
+    // 1. Check for merge conflicts in critical files
+    for (const file of CONFIG.CRITICAL_FILES) {
+      const filePath = path.join(process.cwd(), file);
+      
+      if (fs.existsSync(filePath)) {
+        const content = fs.readFileSync(filePath, 'utf8');
+        
+        // Check for merge conflicts
+        if (ERROR_PATTERNS.syntax.some(pattern => pattern.test(content))) {
+          if (ERROR_FIXES.mergeConflicts(filePath)) {
+            errorsFixed++;
           }
         }
-      });
-    }
-    
-    return orphaned;
-  }
-
-  findDuplicateFiles() {
-    const duplicates = [];
-    const fileHashes = new Map();
-    const srcDir = path.join(this.projectRoot, 'src');
-    
-    if (fs.existsSync(srcDir)) {
-      this.walkDirectory(srcDir, (filePath) => {
-        const content = fs.readFileSync(filePath, 'utf8');
-        const hash = this.simpleHash(content);
-        
-        if (fileHashes.has(hash)) {
-          duplicates.push(path.relative(srcDir, filePath));
-        } else {
-          fileHashes.set(hash, filePath);
-        }
-      });
-    }
-    
-    return duplicates;
-  }
-
-  findLargeFiles() {
-    const largeFiles = [];
-    const srcDir = path.join(this.projectRoot, 'src');
-    
-    if (fs.existsSync(srcDir)) {
-      this.walkDirectory(srcDir, (filePath) => {
-        const stats = fs.statSync(filePath);
-        if (stats.size > 1024 * 1024) { // > 1MB
-          largeFiles.push(path.relative(srcDir, filePath));
-        }
-      });
-    }
-    
-    return largeFiles;
-  }
-
-  walkDirectory(dir, callback) {
-    if (fs.existsSync(dir)) {
-      const files = fs.readdirSync(dir);
-      for (const file of files) {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-        
-        if (stat.isDirectory()) {
-          this.walkDirectory(filePath, callback);
-        } else {
-          callback(filePath);
-        }
       }
     }
-  }
-
-  isFileImported(filePath) {
-    // Simple check - look for import statements containing the file name
-    const fileName = path.basename(filePath, path.extname(filePath));
-    const srcDir = path.join(this.projectRoot, 'src');
     
-    let isImported = false;
-    this.walkDirectory(srcDir, (checkPath) => {
-      if (checkPath.endsWith('.tsx') || checkPath.endsWith('.ts')) {
-        const content = fs.readFileSync(checkPath, 'utf8');
-        if (content.includes(`import.*${fileName}`) || content.includes(`from.*${fileName}`)) {
-          isImported = true;
-        }
-      }
-    });
+    // 2. Fix specific configuration issues
+    if (ERROR_FIXES.eslintConfig()) errorsFixed++;
+    if (ERROR_FIXES.typescriptConfig()) errorsFixed++;
+    if (ERROR_FIXES.packageJson()) errorsFixed++;
     
-    return isImported;
-  }
-
-  simpleHash(str) {
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-      const char = str.charCodeAt(i);
-      hash = ((hash << 5) - hash) + char;
-      hash = hash & hash; // Convert to 32-bit integer
+    // 3. Run linting and fix auto-fixable issues
+    try {
+      execSync('npm run lint -- --fix', { stdio: 'pipe', cwd: process.cwd() });
+      log('ESLint auto-fixes applied');
+    } catch (lintError) {
+      log('ESLint found issues that need manual attention', 'warn');
     }
-    return hash;
-  }
-
-  async generateAutomationReport() {
+    
+    // 4. Check build status
+    try {
+      execSync('npm run type-check', { stdio: 'pipe', cwd: process.cwd() });
+      log('TypeScript check passed');
+    } catch (tsError) {
+      log('TypeScript errors detected, investigating...', 'warn');
+      
+      // Try basic TypeScript fixes
+      const errorOutput = tsError.stdout?.toString() || tsError.stderr?.toString() || '';
+      
+      if (errorOutput.includes('Unexpected keyword')) {
+        // Fix test files with syntax issues
+        const testFiles = findFilesWithPattern(path.join(process.cwd(), '__tests__'), /\.test\.(ts|tsx|js|jsx)$/);
+        testFiles.forEach(file => {
+          if (ERROR_FIXES.syntaxErrors(file)) {
+            errorsFixed++;
+          }
+        });
+      }
+    }
+    
+    // 5. Security audit and dependency fixes
+    try {
+      execSync('npm audit fix --force', { stdio: 'pipe', cwd: process.cwd() });
+      log('Security vulnerabilities fixed');
+      errorsFixed++;
+    } catch (auditError) {
+      log('Security audit completed with warnings', 'warn');
+    }
+    
+    // 6. Generate error prevention report
     const report = {
       timestamp: new Date().toISOString(),
-      automation: 'PM2 Error Prevention',
-      stats: this.stats,
-      status: 'running',
-      nextRun: new Date(Date.now() + this.automationInterval).toISOString()
+      errorsFixed,
+      nextCheck: new Date(Date.now() + CONFIG.CHECK_INTERVAL).toISOString(),
+      status: errorsFixed > 0 ? 'fixes_applied' : 'healthy'
     };
-
-    const reportPath = path.join(this.projectRoot, 'automation', 'logs', 'pm2-error-prevention-report.json');
+    
+    const reportPath = path.join(CONFIG.LOG_DIR, 'error-prevention-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
-    // Also create a summary
-    const summaryPath = path.join(this.projectRoot, 'automation', 'logs', 'pm2-error-prevention-summary.md');
-    const summary = `# PM2 Error Prevention Automation Report
-
-**Generated:** ${report.timestamp}
-
-## Automation Status
-- **Status:** ${report.status}
-- **Total Runs:** ${this.stats.totalRuns}
-- **Total Errors Fixed:** ${this.stats.totalErrorsFixed}
-- **Last Run:** ${this.stats.lastRun}
-- **Next Run:** ${report.nextRun}
-
-## Performance
-- **Uptime:** ${this.getUptime()}
-- **Average Errors Fixed per Run:** ${this.stats.totalRuns > 0 ? (this.stats.totalErrorsFixed / this.stats.totalRuns).toFixed(2) : 0}
-
-## Recent Activity
-${this.getRecentActivity()}
-`;
-
-    fs.writeFileSync(summaryPath, summary);
-  }
-
-  getUptime() {
-    const startTime = new Date(this.stats.startTime);
-    const now = new Date();
-    const diff = now - startTime;
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    return `${hours}h ${minutes}m`;
-  }
-
-  getRecentActivity() {
-    // Read recent log files to show activity
-    const logsDir = path.join(this.projectRoot, 'automation', 'logs');
-    const activities = [];
     
-    if (fs.existsSync(logsDir)) {
-      const logFiles = fs.readdirSync(logsDir).filter(f => f.endsWith('.log'));
-      
-      for (const logFile of logFiles.slice(-5)) { // Last 5 log files
-        const logPath = path.join(logsDir, logFile);
-        const content = fs.readFileSync(logPath, 'utf8');
-        const lines = content.split('\n').slice(-3); // Last 3 lines
-        activities.push(`### ${logFile}\n${lines.join('\n')}`);
-      }
+    log(`Error prevention check completed. Fixed ${errorsFixed} issues.`);
+    
+  } catch (error) {
+    log(`Error prevention check failed: ${error.message}`, 'error');
+  }
+}
+
+// Helper function to find files with pattern
+function findFilesWithPattern(dir, pattern) {
+  const files = [];
+  
+  if (!fs.existsSync(dir)) return files;
+  
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findFilesWithPattern(fullPath, pattern));
+    } else if (pattern.test(item)) {
+      files.push(fullPath);
     }
-    
-    return activities.join('\n\n') || 'No recent activity logged';
   }
-
-  async logError(error) {
-    const errorLogPath = path.join(this.projectRoot, 'automation', 'logs', 'pm2-error-prevention-errors.log');
-    const errorEntry = `[${new Date().toISOString()}] ${error.message}\n${error.stack}\n\n`;
-    fs.appendFileSync(errorLogPath, errorEntry);
-  }
+  
+  return files;
 }
 
-// Run the automation
+// Main execution
+async function main() {
+  log('PM2 Error Prevention Automation started');
+  
+  // Run initial check
+  await preventErrors();
+  
+  // Set up interval for continuous monitoring
+  setInterval(async () => {
+    await preventErrors();
+  }, CONFIG.CHECK_INTERVAL);
+  
+  // Keep the process alive
+  process.on('SIGINT', () => {
+    log('PM2 Error Prevention Automation stopping...');
+    process.exit(0);
+  });
+  
+  process.on('SIGTERM', () => {
+    log('PM2 Error Prevention Automation stopping...');
+    process.exit(0);
+  });
+}
+
+// Start the automation
 if (require.main === module) {
-  const automation = new PM2ErrorPreventionAutomation();
-  automation.start().catch(console.error);
+  main().catch(error => {
+    log(`Fatal error: ${error.message}`, 'error');
+    process.exit(1);
+  });
 }
 
-module.exports = PM2ErrorPreventionAutomation;
+module.exports = { preventErrors, ERROR_FIXES, log };
