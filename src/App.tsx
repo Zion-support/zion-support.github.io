@@ -5,9 +5,11 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 import './App.css';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
+import { ConsentProvider } from "./context/ConsentContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import PwaInstallButton from "./components/PwaInstallButton";
+import { CookieBanner } from "./components/CookieBanner";
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -47,8 +49,8 @@ import ContactPage from './pages/Contact';
 import ZionHireAI from './pages/ZionHireAI';
 import RequestQuotePage from './pages/RequestQuote';
 import CartPage from './pages/Cart';
-import CheckoutPage from './pages/Checkout';
-import WishlistPage from './pages/Wishlist';
+import Checkout from './pages/Checkout';
+import PrivacySettings from './pages/PrivacySettings';
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -80,7 +82,8 @@ const baseRoutes = [
   { path: '/blog/:slug', element: <BlogPost /> },
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/cart', element: <CartPage /> },
-  { path: '/checkout', element: <CheckoutPage /> },
+  { path: '/checkout', element: <Checkout /> },
+  { path: '/privacy-settings', element: <PrivacySettings /> },
 ];
 
 const App = () => {
@@ -88,11 +91,11 @@ const App = () => {
   useScrollToTop();
   return (
     <WhitelabelProvider>
-      <ThemeProvider defaultTheme="dark">
-        <CartProvider> {/* Added CartProvider Wrapper */}
+      <ConsentProvider>
+        <ThemeProvider defaultTheme="dark">
           <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-            <ErrorBoundary>
-            <Routes>
+          <ErrorBoundary>
+          <Routes>
             {baseRoutes.map(({ path, element }) => (
               <Route key={path} path={path} element={element} />
             ))}
@@ -112,8 +115,10 @@ const App = () => {
         </Suspense>
         <Toaster />
         <SonnerToaster position="top-right" />
-        <PwaInstallButton />
-      </ThemeProvider>
+          <CookieBanner />
+          <PwaInstallButton />
+        </ThemeProvider>
+      </ConsentProvider>
     </WhitelabelProvider>
   );
 }
