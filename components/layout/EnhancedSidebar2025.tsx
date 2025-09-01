@@ -161,7 +161,7 @@ const sidebarSections = [
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: <Home className="w-4 h-4" /> },
-  { name: 'All Services', href: '/comprehensive-services-showcase-2025', icon: <Star className="w-4 h-4" /> },
+  { name: 'All Services', href: '/services', icon: <Star className="w-4 h-4" /> },
   { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
   { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
   { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> },

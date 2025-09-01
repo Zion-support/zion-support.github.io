@@ -23,13 +23,8 @@ export default function Header() {
       description: '200+ Real Micro SaaS Solutions',
       icon: <Zap className="w-5 h-5" />,
       children: [
-        { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' },
-        { name: 'Blockchain & Web3', href: '/services?category=Blockchain%20%26%20Web3' },
-        { name: 'Metaverse & VR/AR', href: '/services?category=Metaverse%20%26%20VR%2FAR' },
-        { name: 'IoT & Smart Cities', href: '/services?category=IoT%20%26%20Smart%20Cities' },
-        { name: 'Quantum Computing', href: '/services?category=Quantum%20Computing' },
-        { name: 'Cloud & Infrastructure', href: '/services?category=Cloud%20%26%20Infrastructure' },
-        { name: 'View All Services', href: '/services' }
+        { name: 'All Services', href: '/services' },
+        { name: 'Status Pages & SLO', href: '/status-pages-slo' }
       ]
     },
     {
@@ -38,14 +33,10 @@ export default function Header() {
       description: 'Industry-Specific Solutions',
       icon: <Sparkles className="w-5 h-5" />,
       children: [
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Cloud Platform', href: '/cloud-platform' },
-        { name: 'AI Assistant', href: '/ai-assistant' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: 'Resources', href: '/resources' },
-        { name: 'Support', href: '/support' }
+        { name: 'Case Studies', href: '/case-studies' }
       ]
     },
+    { name: 'Market Pricing', href: '/market-pricing' },
     { name: 'Pricing', href: '/pricing' },
   ];
 
