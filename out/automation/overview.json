@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T23:01:17.194Z",
+  "generatedAt": "2025-08-11T23:02:07.027Z",
   "functions": [
     "a11y-audit-runner",
     "ai-changelog-runner",
@@ -20,7 +20,7 @@
     "changelog-publisher",
     "cloud-autonomous-orchestrator-runner",
     "cloud_orchestrator",
-    "content-keywords-runner",
+    "content-staleness-runner",
     "continuous-front-runner",
     "continuous-orchestrator",
     "css-bloat-report",
@@ -71,7 +71,7 @@
     "newsroom-auto-publisher",
     "newsroom-runner",
     "og-image-update-runner",
-    "orphan-pages-report-runner",
+    "orphan-page-detector",
     "readme-advertiser",
     "redirects-synthesizer",
     "repo-knowledge-graph-runner",

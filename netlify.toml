@@ -242,6 +242,14 @@ schedule = "*/20 * * * *" # every 20 minutes
 name = "dependency-intelligence-upgrader"
 schedule = "*/30 * * * *" # every 30 minutes
 
+[[scheduled.functions]]
+  name = "orphan-page-detector"
+  schedule = "*/30 * * * *" # every 30 minutes
+
+[[scheduled.functions]]
+  name = "content-staleness-runner"
+  schedule = "13 */12 * * *" # every 12 hours
+
 # From main (keep)
 [[scheduled.functions]]
 name = "autonomous-innovation-generator"
