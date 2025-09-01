@@ -288,6 +288,48 @@ schedule = "*/2 * * * *" # every 2 minutes
   name = "netlify-auto-healer-runner"
   schedule = "*/20 * * * *"
 
+# New intelligent cloud automations
+[[scheduled.functions]]
+  name = "innovation-lab"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "broken-image-scanner"
+  schedule = "0 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "auto-scheduler"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+[[scheduled.functions]]
+  name = "a11y-alt-text-auditor-runner"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "revenue-cta-inserter-runner"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "design-token-harmonizer-runner"
+  schedule = "0 */6 * * *"
+
+# From main (keep)
+[[scheduled.functions]]
+  name = "autonomous-innovation-generator"
+  schedule = "*/2 * * * *" # every 2 minutes
+
+[[scheduled.functions]]
+  name = "seo-audit-runner"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
+  name = "ai-trends-radar-runner"
+  schedule = "0 * * * *"
+
+[[scheduled.functions]]
+  name = "website-search-index-runner"
+  schedule = "29 */4 * * *"
+
 # From feature branch (keep)
 [[scheduled.functions]]
   name = "automation-guardian-runner"

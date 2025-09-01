@@ -1,6 +1,7 @@
 {
-  "generatedAt": "2025-08-11T23:11:06.916Z",
+  "generatedAt": "2025-08-11T23:10:19.962Z",
   "functions": [
+    "a11y-alt-text-auditor-runner",
     "a11y-audit-runner",
     "ai-changelog-runner",
     "ai-trends-radar-runner",
@@ -26,7 +27,8 @@
     "css-bloat-report",
     "dead-code-audit",
     "dead-code-report",
-    "dependency-health-runner",
+    "deps-auto-upgrade-runner",
+    "design-token-harmonizer-runner",
     "docs-index-runner",
     "docs-knowledge-sync",
     "docs-link-checker-runner",
@@ -81,7 +83,7 @@
     "repo-knowledge-graph-runner",
     "repo-radar-and-graph",
     "repo-radar-runner",
-    "roadmap-auto-generator",
+    "revenue-cta-inserter-runner",
     "schedule-content-index",
     "schedule-homepage",
     "schedule-knowledge-graph",
