@@ -167,15 +167,9 @@ const Index: NextPage = () => {
           </li>
 
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Dependency Licenses Audit</h2>
-            <p className="text-white/70">Audits dependency licenses and writes public reports.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/dependency-licenses-audit" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Tech Debt Dashboard</h2>
-            <p className="text-white/70">Scans TODO/FIXME/HACK across the repo; publishes a dashboard.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/tech-debt-dashboard" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">OG Metadata Audit</h2>
+            <p className="text-white/70">Audits pages for missing meta descriptions; auto-inserts safe defaults and syncs.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/og-metadata-auditor" target="_blank" rel="noopener">Trigger / View</a>
           </li>
         </ul>
       </main>
