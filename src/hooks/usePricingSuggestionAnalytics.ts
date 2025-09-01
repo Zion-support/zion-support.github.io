@@ -62,14 +62,17 @@ export function usePricingSuggestionAnalytics(days = 30) {
         error: null
       });
 
-    } catch(error) {
-      console.error("Error fetching pricing suggestion analytics:", error);
-      setAnalytics(prev => ({ 
-        ...prev, 
-        isLoading: false,
-        error: "Failed to load pricing analytics data."
-      }));
-    }
+      } catch (error) {
+        console.error("Error fetching pricing suggestion analytics:", error);
+        setAnalytics({
+          ...analytics,
+          isLoading: false,
+          error: "Failed to load pricing analytics data."
+        });
+      }
+    };
+
+    fetchAnalytics();
   }, [days]);
 
   useEffect(() => {

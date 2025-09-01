@@ -1,115 +1,57 @@
-// Minimal type declarations for offline development
-
-// React stubs
-declare module 'react' {
-  export type FC<P = any> = props: anyP ;
-  export type ReactNode = ;
-  export interface ChangeEvent<T = any> { target: T }
-  export interface FormEvent<T = any> {}
-  export interface KeyboardEvent<T = any> {};
-  export interface RefObject<T> { current: T };
-  export type RefCallback<T> = value: anyT void;
-  export type Ref<T> = RefObject<T> | RefCallback<T> | null;
-  export type LegacyRef<T> = Ref<T>;
-  export function useRef<T = any>(initial: T): { current: T };
-  const react: ;
-  export default react}
-<<<<<<< HEAD
-
-declare module 'react/jsx-runtime' {
-  export {}}
-=======
-'declare module 'react/jsx-runtime' {
-  export {}}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+// Temporary type declarations for offline development
 
 declare namespace JSX {
-  interface Element {
-}
-  interface IntrinsicElements {
-<<<<<<< HEAD
-
-    [elemName: string]: ;
-
-}
-=======
-    [elemName: string]: }
->>>>>>> main
+  interface Element {}
+  interface IntrinsicElements { [elemName: string]: any }
 }
 
-declare module 'react-dom' {
-  export function reactDom: ;
-  export default reactDom}
-<<<<<<< HEAD
+declare module 'react' {
+  // Basic placeholders to satisfy TypeScript when node modules are not installed
+  export type ReactNode = any;
+  export type ReactElement = any;
+  export interface FC<P = {}> {
+    (props: P & { children?: ReactNode }): ReactElement | null;
+  }
+  export interface SyntheticEvent<T = Element> { target: T; preventDefault(): void; }
+  export interface ChangeEvent<T = Element> extends SyntheticEvent<T> {}
+  export interface KeyboardEvent<T = Element> extends SyntheticEvent<T> {}
+  export interface MouseEvent<T = Element> extends SyntheticEvent<T> {}
+  export interface FormEvent<T = Element> extends SyntheticEvent<T> {}
+  export type LegacyRef<T> = any;
+  export type Ref<T> = any;
+  export type ElementRef<T> = any;
+  export type ComponentPropsWithoutRef<T> = any;
+  export function useState<S>(initialState: S | (() => S)): [S, (value: S) => void];
+  export function useEffect(effect: () => void | (() => void), deps?: any[]): void;
+  // JSX runtime fragments
+  export const Fragment: any;
+}
+
+declare module 'react/jsx-runtime' {
+  export function jsx(...args: any[]): any;
+  export const jsxs: any;
+  export const Fragment: any;
+}
 
 declare module 'react-router-dom' {
-=======
-'declare module 'react-router-dom' {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  export function useNavigate(): ;
-  export const Link: ;
-  export const Routes: ;
-  export const Navigate: ;
-  const rr: ;
-  export default rr}
-<<<<<<< HEAD
+  export function useParams<Params extends Record<string, string | undefined> = {}>(): Partial<Params>;
+}
 
 declare module 'react-hook-form' {
-=======
-'declare module 'react-hook-form' {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  export function useForm<T = any>(...args: unknown[]): ;
-  const rhf: ;
-  export default rhf}
-
-declare module '@hookform/resolvers/zod' {
-  export function zodResolver(...args: unknown[]): }
-<<<<<<< HEAD
-
-declare module '@tanstack/react-query' {
-=======
-'declare module '@tanstack/react-query' {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  export function useMutation<T = any>(...args: unknown[]): ;
-  const rq: ;
-  export default rq}
-
-declare module 'jspdf' {
-  export class jsPDF {
-    constructor(...args: unknown[]);
-    [key: string]: ;
-<<<<<<< HEAD
-  }
+  export function useForm<T extends Record<string, any>>(options?: any): any;
 }
-
-=======
-  }}
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-declare module 'path' {
-  const path: ;
-  export default path}
-
-declare module 'jspdf-autotable' {
-  const autotable: ;
-  export default autotable}
-<<<<<<< HEAD
 
 declare module 'zod' {
-=======
-'declare module 'zod' {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  export type infer<T> = ;
-  const z: ;
-  export { z };
-<<<<<<< HEAD
-  export default z;
+  export namespace z {
+    type infer<T> = any;
+  }
+  export = z;
 }
 
-=======
-  export default z}
+declare module 'class-variance-authority' {
+  export type VariantProps<T> = any;
+}
 
-;
->>>>>>> main
-export default useEffect;
-export default useRef;
+declare module 'jspdf' {
+  export default class jsPDF {}
+}

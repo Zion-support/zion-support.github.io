@@ -5,153 +5,93 @@
 @tailwind components;
 @tailwind utilities; */
 
-/* Custom CSS Variables */
-:root {
-  --zion-cyan: #0ea5e9;
-  --zion-cyan-light: #38bdf8;
-  --zion-cyan-dark: #0284c7;
-  --zion-slate: #64748b;
-  --zion-slate-light: #94a3b8;
-  --zion-slate-dark: #475569;
-  --zion-purple: #8b5cf6;
-  --zion-purple-light: #a78bfa;
-  --zion-purple-dark: #7c3aed;
-  --zion-green: #10b981;
-  --zion-green-light: #34d399;
-  --zion-green-dark: #059669;
-  --zion-red: #ef4444;
-  --zion-red-light: #f87171;
-  --zion-red-dark: #dc2626;
-  --zion-yellow: #f59e0b;
-  --zion-yellow-light: #fbbf24;
-  --zion-yellow-dark: #d97706;
-  --zion-orange: #f97316;
-  --zion-orange-light: #fb923c;
-  --zion-orange-dark: #ea580c;
-  --zion-pink: #ec4899;
-  --zion-pink-light: #f472b6;
-  --zion-pink-dark: #db2777;
-  --zion-indigo: #6366f1;
-  --zion-indigo-light: #818cf8;
-  --zion-indigo-dark: #4f46e5;
-  --zion-violet: #8b5cf6;
-  --zion-violet-light: #a78bfa;
-  --zion-violet-dark: #7c3aed;
-  --zion-emerald: #10b981;
-  --zion-emerald-light: #34d399;
-  --zion-emerald-dark: #059669;
-  --zion-teal: #14b8a6;
-  --zion-teal-light: #2dd4bf;
-  --zion-teal-dark: #0d9488;
-  --zion-rose: #f43f5e;
-  --zion-rose-light: #fb7185;
-  --zion-rose-dark: #e11d48;
-  --zion-sky: #0ea5e9;
-  --zion-sky-light: #38bdf8;
-  --zion-sky-dark: #0284c7;
-  --zion-blue: #3b82f6;
-  --zion-blue-light: #60a5fa;
-  --zion-blue-dark: #2563eb;
-  --zion-cyan-50: #ecfeff;
-  --zion-cyan-100: #cffafe;
-  --zion-cyan-200: #a5f3fc;
-  --zion-cyan-300: #67e8f9;
-  --zion-cyan-400: #22d3ee;
-  --zion-cyan-500: #06b6d4;
-  --zion-cyan-600: #0891b2;
-  --zion-cyan-700: #0e7490;
-  --zion-cyan-800: #155e75;
-  --zion-cyan-900: #164e63;
-  --zion-cyan-950: #083344;
-  --zion-slate-50: #f8fafc;
-  --zion-slate-100: #f1f5f9;
-  --zion-slate-200: #e2e8f0;
-  --zion-slate-300: #cbd5e1;
-  --zion-slate-400: #94a3b8;
-  --zion-slate-500: #64748b;
-  --zion-slate-600: #475569;
-  --zion-slate-700: #334155;
-  --zion-slate-800: #1e293b;
-  --zion-slate-900: #0f172a;
-  --zion-slate-950: #020617;
-  --zion-purple-50: #faf5ff;
-  --zion-purple-100: #f3e8ff;
-  --zion-purple-200: #e9d5ff;
-  --zion-purple-300: #d8b4fe;
-  --zion-purple-400: #c084fc;
-  --zion-purple-500: #a855f7;
-  --zion-purple-600: #9333ea;
-  --zion-purple-700: #7c3aed;
-  --zion-purple-800: #6b21a8;
-  --zion-purple-900: #581c87;
-  --zion-purple-950: #3b0764;
-  --zion-green-50: #f0fdf4;
-  --zion-green-100: #dcfce7;
-  --zion-green-200: #bbf7d0;
-  --zion-green-300: #86efac;
-  --zion-green-400: #4ade80;
-  --zion-green-500: #22c55e;
-  --zion-green-600: #16a34a;
-  --zion-green-700: #15803d;
-  --zion-green-800: #166534;
-  --zion-green-900: #14532d;
-  --zion-green-950: #052e16;
-}
+@layer base {
+  :root {
+    --font-sans: 'Orbitron', system-ui, sans-serif;
 
-/* Base styles */
-* {
-  box-sizing: border-box;
-}
+    --background: 226 51% 8%;
+    --foreground: 210 40% 98%;
 
-html {
-  scroll-behavior: smooth;
-}
+    --card: 226 51% 8%;
+    --card-foreground: 210 40% 98%;
 
-body {
-  margin: 0;
-  font-family:
-    'Rajdhani',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(
-    135deg,
-    var(--zion-slate-900) 0%,
-    var(--zion-slate-800) 50%,
-    var(--zion-slate-900) 100%
-  );
-  color: var(--zion-slate-100);
-  min-height: 100vh;
-}
+    --popover: 226 51% 8%;
+    --popover-foreground: 210 40% 98%;
 
-code {
-  font-family:
-    source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
+    --primary: 271 91% 65%;
+    --primary-foreground: 0 0% 100%;
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
+    --secondary: 186 100% 50%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container-responsive {
-    @apply px-4;
+    --muted: 223 33% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 271 81% 56%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 223 33% 17%;
+    --input: 223 33% 17%;
+    --ring: 271 91% 65%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .heading {
-    @apply text-2xl;
+  .dark {
+    --background: 226 51% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 226 51% 6%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 226 51% 6%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 271 91% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 186 100% 50%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 223 33% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 271 81% 56%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 223 33% 17%;
+    --input: 223 33% 17%;
+    --ring: 271 91% 65%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 271 91% 65%;
   }
 }
 
@@ -160,9 +100,9 @@ code {
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--zion-cyan-500);
-}
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
 
 /* Selection styles */
 ::selection {
