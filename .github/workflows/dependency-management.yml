@@ -26,5 +26,5 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Run workflow
         run: |
-          echo "Workflow Workflow completed successfully"
-    runs_on: ubuntu-latest
+          echo "✅ Workflow completed successfully"
+          

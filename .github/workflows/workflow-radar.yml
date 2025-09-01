@@ -28,8 +28,31 @@ jobs:
         run: npm ci
       - name: Run workflow radar
         run: |
-          echo "Monitoring workflow health..."
-          echo "This would monitor and report on workflow health and performance"
+          echo "📡 Running workflow radar..."
+          
+          # Scan for workflow patterns and issues
+          echo "🔍 Scanning workflow patterns..."
+          
+          # Count workflows by type
+          total_workflows=$(find .github/workflows -name "*.yml" -o -name "*.yaml" | wc -l)
+          echo "📁 Total workflows: $total_workflows"
+          
+          # Check for common patterns
+          placeholder_count=$(grep -r "echo.*Workflow.*executed.*successfully" .github/workflows/ | wc -l || echo "0")
+          echo "⚠️  Workflows with placeholder content: $placeholder_count"
+          
+          # Check for workflow categories
+          ci_workflows=$(grep -r "name:.*CI" .github/workflows/ | wc -l || echo "0")
+          test_workflows=$(grep -r "name:.*test" .github/workflows/ | wc -l || echo "0")
+          security_workflows=$(grep -r "name:.*security" .github/workflows/ | wc -l || echo "0")
+          
+          echo "📊 Workflow categories:"
+          echo "  - CI workflows: $ci_workflows"
+          echo "  - Test workflows: $test_workflows"
+          echo "  - Security workflows: $security_workflows"
+          
+          echo "✅ Workflow radar scan completed"
+          echo "📈 Summary: Workflow ecosystem analysis complete"
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()

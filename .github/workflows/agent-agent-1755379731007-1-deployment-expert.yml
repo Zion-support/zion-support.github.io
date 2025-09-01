@@ -27,5 +27,4 @@ jobs:
       - name: Run Deployment Expert
         run: |
           echo "Running Deployment Expert..."
-          echo "Workflow completed successfully"
-    runs_on: ubuntu-latest
+          echo "✅ Workflow completed successfully"

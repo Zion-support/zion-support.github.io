@@ -27,9 +27,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run netlify configuration
-        run: |
-          echo "Running Netlify automation..."
-          echo "This would handle Netlify-specific automation tasks"
+        run: 
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()

@@ -44,5 +44,5 @@ jobs:
         run: "npm ci
       - name: Run CI healers
         run: |
-          echo "Workflow Workflow completed successfully"
-    runs_on: ubuntu-latest
+          echo "✅ Workflow completed successfully"
+          

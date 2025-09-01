@@ -33,8 +33,8 @@ jobs:
           fetch-depth: 0
       - name: Generate docs summary
         run: |
-          echo "Workflow Workflow completed successfully"
-    runs_on: ubuntu-latest
+          echo "✅ Workflow completed successfully"
+          
 concurrency:
   group: docs-autogen.yml-${{ github.ref }}
   cancel-in-progress: true

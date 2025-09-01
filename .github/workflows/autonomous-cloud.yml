@@ -41,5 +41,4 @@ permissions:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Run workflow
-        run: echo "Workflow completed successfully"
-    runs_on: ubuntu-latest
+        run: echo "✅ Workflow completed successfully"

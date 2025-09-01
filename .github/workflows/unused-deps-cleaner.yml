@@ -42,9 +42,7 @@ jobs:
       - name: Install deps
         run: npm ci
       - name: Run unused dependencies cleaner
-        run: |
-          echo "Checking for unused dependencies..."
-          echo "This would run dependency analysis tools"
+        run: 
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()

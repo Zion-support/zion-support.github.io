@@ -27,9 +27,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run pr quality gate
-        run: |
-          echo "Processing PR..."
-          echo "This would handle PR quality checks and automation"
+        run: 
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()

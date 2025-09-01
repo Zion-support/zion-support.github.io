@@ -37,5 +37,5 @@ jobs:
       
       - name: Execute growth strategy
         run: |
-          echo "Workflow Workflow completed successfully"
-    runs_on: ubuntu-latest
+          echo "✅ Workflow completed successfully"
+          

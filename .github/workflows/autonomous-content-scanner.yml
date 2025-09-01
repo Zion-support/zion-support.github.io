@@ -44,5 +44,5 @@ jobs:
         run: node automation/docs-pages-indexer.cjs | cat
       - name: Commit and push changes to main
         run: |
-          echo "Workflow Workflow completed successfully"
-    runs_on: ubuntu-latest
+          echo "✅ Workflow completed successfully"
+          

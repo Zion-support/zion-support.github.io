@@ -42,9 +42,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run repository radar
-        run: |
-          echo "Generating search index..."
-          echo "This would handle search index generation and knowledge graph updates"
+        run: 
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()

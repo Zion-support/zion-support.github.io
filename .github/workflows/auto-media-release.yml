@@ -42,9 +42,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run auto media release
-        run: |
-          echo "Executing workflow..."
-          echo "This workflow has been updated with actual functionality"
+        run: 
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()

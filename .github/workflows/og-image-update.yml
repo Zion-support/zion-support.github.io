@@ -39,9 +39,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run og image update
-        run: |
-          echo "Optimizing media..."
-          echo "This would handle media optimization and generation"
+        run: 
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()

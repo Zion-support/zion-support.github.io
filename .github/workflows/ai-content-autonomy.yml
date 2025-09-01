@@ -27,9 +27,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run ai content autonomy
-        run: |
-          echo "Running AI content generation..."
-          echo "This would use AI tools for content generation and analysis"
+        run: 
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()

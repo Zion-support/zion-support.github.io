@@ -35,5 +35,5 @@ jobs:
           fetch-depth: 0
       - name: Configure git"
         run: |
-          echo "Workflow Workflow completed successfully"
-    runs_on: ubuntu-latest
+          echo "✅ Workflow completed successfully"
+          

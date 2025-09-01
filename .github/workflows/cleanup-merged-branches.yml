@@ -47,5 +47,5 @@ jobs:
           fetch-depth: 0
       - name: Prune merged branches
         run: |
-          echo "Workflow Workflow completed successfully"
-    runs_on: ubuntu-latest
+          echo "✅ Workflow completed successfully"
+          

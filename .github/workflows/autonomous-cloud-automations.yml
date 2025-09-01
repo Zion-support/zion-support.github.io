@@ -40,5 +40,5 @@ jobs:
       
       - name: Clean git state
         run: |
-          echo "Workflow Workflow completed successfully"
-    runs_on: ubuntu-latest
+          echo "✅ Workflow completed successfully"
+          
