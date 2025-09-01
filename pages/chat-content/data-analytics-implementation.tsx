@@ -1,20 +1,12 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import React from 'react';
 
-const DataAnalyticsImplementation: NextPage = () => {
+const Component = () => {
   return (
     <div>
-      <Head>
-        <title>DataAnalyticsImplementation - Zion Tech Solutions</title>
-        <meta name="description" content="DataAnalyticsImplementation page" />
-      </Head>
-      
-      <main>
-        <h1>DataAnalyticsImplementation</h1>
-        <p>This page is under construction.</p>
-      </main>
+      <h1>Page Content</h1>
+      <p>This page is under construction.</p>
     </div>
   );
 };
 
-export default DataAnalyticsImplementation;
+export default Component;

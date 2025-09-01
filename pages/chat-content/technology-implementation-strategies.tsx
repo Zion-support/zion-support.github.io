@@ -1,20 +1,12 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import React from 'react';
 
-const TechnologyImplementationStrategies: NextPage = () => {
+const Component = () => {
   return (
     <div>
-      <Head>
-        <title>TechnologyImplementationStrategies - Zion Tech Solutions</title>
-        <meta name="description" content="TechnologyImplementationStrategies page" />
-      </Head>
-      
-      <main>
-        <h1>TechnologyImplementationStrategies</h1>
-        <p>This page is under construction.</p>
-      </main>
+      <h1>Page Content</h1>
+      <p>This page is under construction.</p>
     </div>
   );
 };
 
-export default TechnologyImplementationStrategies;
+export default Component;

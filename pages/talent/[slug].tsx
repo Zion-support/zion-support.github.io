@@ -1,20 +1,12 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import React from 'react';
 
-const TalentSlugPage: NextPage = () => {
+const Component = () => {
   return (
     <div>
-      <Head>
-        <title>Talent - Zion Tech Solutions</title>
-        <meta name="description" content="Talent page" />
-      </Head>
-      
-      <main>
-        <h1>Talent</h1>
-        <p>This page is under construction.</p>
-      </main>
+      <h1>Page Content</h1>
+      <p>This page is under construction.</p>
     </div>
   );
 };
 
-export default TalentSlugPage;
+export default Component;

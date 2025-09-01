@@ -1,20 +1,12 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import React from 'react';
 
-const Callback: NextPage = () => {
+const Component = () => {
   return (
     <div>
-      <Head>
-        <title>Callback - Zion Tech Solutions</title>
-        <meta name="description" content="Callback page" />
-      </Head>
-      
-      <main>
-        <h1>Callback</h1>
-        <p>This page is under construction.</p>
-      </main>
+      <h1>Page Content</h1>
+      <p>This page is under construction.</p>
     </div>
   );
 };
 
-export default Callback;
+export default Component;

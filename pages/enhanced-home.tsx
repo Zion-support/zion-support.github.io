@@ -1,20 +1,12 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import React from 'react';
 
-const EnhancedHome: NextPage = () => {
+const Component = () => {
   return (
     <div>
-      <Head>
-        <title>EnhancedHome - Zion Tech Solutions</title>
-        <meta name="description" content="EnhancedHome page" />
-      </Head>
-      
-      <main>
-        <h1>EnhancedHome</h1>
-        <p>This page is under construction.</p>
-      </main>
+      <h1>Page Content</h1>
+      <p>This page is under construction.</p>
     </div>
   );
 };
 
-export default EnhancedHome;
+export default Component;

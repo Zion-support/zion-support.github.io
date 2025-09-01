@@ -4,12 +4,10 @@
   publish = ".next"
 
 [build.environment]
-  NODE_OPTIONS = "--max_old_space_size=4096"
-  NPM_FLAGS = "--prefer-offline"
-  NODE_VERSION = "20"
+  NODE_VERSION = "16"
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+  package = "@netlify/plugin-nextjs@4.41.3"
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
