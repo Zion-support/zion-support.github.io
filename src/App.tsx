@@ -53,7 +53,7 @@ import ZionHireAI from './pages/ZionHireAI';
 import RequestQuotePage from './pages/RequestQuote';
 import CartPage from './pages/Cart';
 import Checkout from './pages/Checkout';
-import { SupportChatbot } from './components/SupportChatbot';
+import PrivacySettings from './pages/PrivacySettings';
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -127,9 +127,10 @@ const App = () => {
         <OfflineToast />
         <Toaster />
         <SonnerToaster position="top-right" />
-        <SupportChatbot />
-        <PwaInstallButton />
-      </ThemeProvider>
+          <CookieBanner />
+          <PwaInstallButton />
+        </ThemeProvider>
+      </ConsentProvider>
     </WhitelabelProvider>
   );
 }
