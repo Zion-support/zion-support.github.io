@@ -1,3 +1,4 @@
+import React from 'react';
 const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">

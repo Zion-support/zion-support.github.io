@@ -1,15 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Workflow, 
-  Brain, 
-  Zap, 
-  Clock, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Cloud, 
-  BarChart3, 
+import {
+  Workflow,
+  Brain,
+  Zap,
+  Clock,
+  Users,
+  TrendingUp,
+  Shield,
+  Cloud,
+  BarChart3,
   CheckCircle,
   ArrowRight,
   Play,
@@ -23,7 +23,7 @@ import {
   Award,
   Phone,
   Mail,
-  MapPin
+  MapPin,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -32,33 +32,39 @@ const AIWorkflowOrchestrator: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Workflow Intelligence',
-      description: 'Machine learning algorithms that continuously optimize your business processes based on performance data and outcomes.'
+      description:
+        'Machine learning algorithms that continuously optimize your business processes based on performance data and outcomes.',
     },
     {
       icon: Workflow,
       title: 'Visual Workflow Designer',
-      description: 'Drag-and-drop interface for creating complex workflows with conditional logic, parallel processing, and error handling.'
+      description:
+        'Drag-and-drop interface for creating complex workflows with conditional logic, parallel processing, and error handling.',
     },
     {
       icon: Zap,
       title: 'Real-time Automation',
-      description: 'Instant execution of workflows with sub-second response times and 99.9% uptime guarantee.'
+      description:
+        'Instant execution of workflows with sub-second response times and 99.9% uptime guarantee.',
     },
     {
       icon: Users,
       title: 'Team Collaboration',
-      description: 'Multi-user access with role-based permissions, approval workflows, and real-time collaboration tools.'
+      description:
+        'Multi-user access with role-based permissions, approval workflows, and real-time collaboration tools.',
     },
     {
       icon: BarChart3,
       title: 'Advanced Analytics',
-      description: 'Comprehensive reporting on workflow performance, bottlenecks, and optimization opportunities.'
+      description:
+        'Comprehensive reporting on workflow performance, bottlenecks, and optimization opportunities.',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'SOC 2 Type II compliant with end-to-end encryption, audit trails, and compliance reporting.'
-    }
+      description:
+        'SOC 2 Type II compliant with end-to-end encryption, audit trails, and compliance reporting.',
+    },
   ];
 
   const pricingTiers = [
@@ -73,10 +79,10 @@ const AIWorkflowOrchestrator: React.FC = () => {
         'Standard integrations',
         'Email support',
         'Basic analytics',
-        'Up to 5 team members'
+        'Up to 5 team members',
       ],
       cta: 'Start Free Trial',
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -91,16 +97,17 @@ const AIWorkflowOrchestrator: React.FC = () => {
         'Advanced analytics',
         'Up to 25 team members',
         'Custom templates',
-        'API access'
+        'API access',
       ],
       cta: 'Start Free Trial',
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
       price: '$1,999',
       period: '/month',
-      description: 'For large organizations with enterprise-scale automation requirements',
+      description:
+        'For large organizations with enterprise-scale automation requirements',
       features: [
         'Unlimited workflows',
         'Custom AI models',
@@ -109,34 +116,36 @@ const AIWorkflowOrchestrator: React.FC = () => {
         'Custom reporting',
         'Unlimited team members',
         'On-premise deployment',
-        'Custom SLA'
+        'Custom SLA',
       ],
       cta: 'Contact Sales',
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const benefits = [
     {
       icon: TrendingUp,
       title: 'Increase Efficiency',
-      description: 'Automate repetitive tasks and reduce manual work by up to 80%'
+      description:
+        'Automate repetitive tasks and reduce manual work by up to 80%',
     },
     {
       icon: Clock,
       title: 'Save Time',
-      description: 'Reduce process execution time from hours to minutes'
+      description: 'Reduce process execution time from hours to minutes',
     },
     {
       icon: Users,
       title: 'Improve Collaboration',
-      description: 'Streamline team communication and task coordination'
+      description: 'Streamline team communication and task coordination',
     },
     {
       icon: Target,
       title: 'Reduce Errors',
-      description: 'Minimize human error with intelligent automation and validation'
-    }
+      description:
+        'Minimize human error with intelligent automation and validation',
+    },
   ];
 
   return (
@@ -160,7 +169,9 @@ const AIWorkflowOrchestrator: React.FC = () => {
               AI Workflow Orchestrator
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-300">
-              Intelligent workflow automation platform that orchestrates complex business processes with AI-powered optimization and real-time execution.
+              Intelligent workflow automation platform that orchestrates complex
+              business processes with AI-powered optimization and real-time
+              execution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -195,7 +206,8 @@ const AIWorkflowOrchestrator: React.FC = () => {
               Powerful Features for Modern Workflows
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform provides everything you need to automate, optimize, and orchestrate complex business processes.
+              Our AI-powered platform provides everything you need to automate,
+              optimize, and orchestrate complex business processes.
             </p>
           </motion.div>
 
@@ -211,7 +223,9 @@ const AIWorkflowOrchestrator: React.FC = () => {
                 <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg w-fit mb-6">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -232,7 +246,8 @@ const AIWorkflowOrchestrator: React.FC = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your workflow automation needs. All plans include our core AI optimization features.
+              Choose the plan that best fits your workflow automation needs. All
+              plans include our core AI optimization features.
             </p>
           </motion.div>
 
@@ -244,8 +259,8 @@ const AIWorkflowOrchestrator: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-                  tier.popular 
-                    ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-purple-500/10' 
+                  tier.popular
+                    ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-purple-500/10'
                     : 'border-white/10'
                 }`}
               >
@@ -256,19 +271,26 @@ const AIWorkflowOrchestrator: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {tier.name}
+                  </h3>
                   <p className="text-gray-400 mb-4">{tier.description}</p>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{tier.price}</span>
+                    <span className="text-4xl font-bold text-white">
+                      {tier.price}
+                    </span>
                     <span className="text-gray-400 ml-1">{tier.period}</span>
                   </div>
                 </div>
 
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-gray-300"
+                    >
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
@@ -304,7 +326,8 @@ const AIWorkflowOrchestrator: React.FC = () => {
               Why Choose AI Workflow Orchestrator?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your business processes with intelligent automation that learns and improves over time.
+              Transform your business processes with intelligent automation that
+              learns and improves over time.
             </p>
           </motion.div>
 
@@ -320,7 +343,9 @@ const AIWorkflowOrchestrator: React.FC = () => {
                 <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full w-fit mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {benefit.title}
+                </h3>
                 <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
@@ -341,7 +366,8 @@ const AIWorkflowOrchestrator: React.FC = () => {
               Ready to Transform Your Workflows?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses that have already automated their processes with AI-powered intelligence.
+              Join thousands of businesses that have already automated their
+              processes with AI-powered intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -380,7 +406,11 @@ const AIWorkflowOrchestrator: React.FC = () => {
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 text-blue-400 mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Address</h3>
-              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p className="text-gray-300">
+                364 E Main St STE 1008
+                <br />
+                Middletown DE 19709
+              </p>
             </div>
           </div>
         </div>

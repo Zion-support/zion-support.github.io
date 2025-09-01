@@ -1,27 +1,17 @@
-import { motion } from 'framer-motion';
-export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', text, fullScreen = false }) {
+export function PerformanceOptimizedLoader ({ size = 'md', color = 'primary', text, fullScreen = false }) {
+import { motion } from 'framer - motion';
+
+
     const sizeClasses = {
-  sm: 'w-6 h-6',
-        md: 'w-12 h-12',
-  lg: 'w-16 h-16'
-    
-
-
-
-
-
+  sm: 'w - 6 h - 6',
+        md: 'w - 12 h - 12',
+  lg: 'w - 16 h - 16'
 
 };
     const colorClasses = {
-  primary: 'text-zion-purple',
-        secondary: 'text-zion-cyan',
-  white: 'text-white'
-    
-
-
-
-
-
+  primary: 'text - zion - purple',
+        secondary: 'text - zion - cyan',
+  white: 'text - white'
 
 };
     const spinnerVariants = {
@@ -31,12 +21,6 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
                 duration: 1,
                 repeat: Infinity,
   ease: "linear"
-            
-
-
-
-
-
 
 }
         }

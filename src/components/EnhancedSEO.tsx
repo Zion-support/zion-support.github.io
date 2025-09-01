@@ -1,5 +1,7 @@
+import { Helmet } from 'react - helmet - async';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+export const EnhancedSEO: React.FC < SEOProps> = ({
+
 
 interface SEOProps {
   title?: string;
@@ -17,11 +19,10 @@ interface SEOProps {
   canonical?: string;
 }
 
-export const EnhancedSEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Leading AI Solutions & Technology Services',
-  description = 'Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation.',
+  description = 'Transform your business with cutting - edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation.',
   keywords = 'AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services',
-  image = '/images/zion-tech-group-og.jpg',
+  image = '/images / zion - tech - group - og.jpg',
   url = 'https://ziontechgroup.com',
   type = 'website',
   image,
@@ -41,27 +42,27 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     'quantum computing',
     'IoT',
     'blockchain',
-    'micro-SaaS',
+    'micro - SaaS',
     'enterprise software',
     'Zion Tech Group'
   ];
 
-  const generateStructuredData = useCallback(() => {
+  const generateStructuredData = useCallback ( () => {
     const baseData = {
       '@context': 'https://schema.org',
       '@type': type === 'article' ? 'Article' : 'Organization',
       name: 'Zion Tech Group',
       description: description,
       url: currentUrl,
-      logo: '/images/zion-tech-group-logo.png',
+      logo: '/images / zion - tech - group - logo.png',
       sameAs: [
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/zion-tech-group',
-        'https://facebook.com/ziontechgroup'
+        'https://twitter.com / ziontechgroup',
+        'https://linkedin.com / company / zion - tech - group',
+        'https://facebook.com / ziontechgroup'
       ],
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+1-555-0123',
+        telephone: '+1 - 555 - 0123',
         contactType: 'customer service',
         areaServed: 'US',
         availableLanguage: 'English'
@@ -73,12 +74,12 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/images/zion-logo.png",
-    "description": "Leading provider of AI-powered technology solutions, cloud computing, and cybersecurity services.",
+    "logo": "https://ziontechgroup.com / images / zion - logo.png",
+    "description": "Leading provider of AI - powered technology solutions, cloud computing, and cybersecurity services.",
   noindex = false,
   canonical,
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullTitle = title.includes ('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = canonical || `${url}${window.location.pathname}`;
   
   // Structured data for better SEO
@@ -87,7 +88,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     "@type": type === 'website' ? "Organization" : "Article",
     "name": "Zion Tech Group",
     "url": url,
-    "logo": `${url}/images/zion-tech-group-logo.png`,
+    "logo": `${url}/images / zion - tech - group - logo.png`,
     "description": description,
     "foundingDate": "2020",
     "address": {
@@ -100,14 +101,14 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+1 - 555 - 123 - 4567",
       "contactType": "customer service",
       "url": `${url}/contact`
     },
     "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/ziontechgroup"
+      "https://linkedin.com / company / ziontechgroup",
+      "https://twitter.com / ziontechgroup",
+      "https://github.com / ziontechgroup"
     ],
     "serviceType": [
       "AI Solutions",
@@ -117,9 +118,9 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       "Technology Consulting"
     ]
     "sameAs": [;
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup",
-      "https://facebook.com/ziontechgroup"
+      "https://twitter.com / ziontechgroup",
+      "https://linkedin.com / company / ziontechgroup",
+      "https://facebook.com / ziontechgroup"
     ],
     "foundingDate": "2020",
     "numberOfEmployees": "100+",
@@ -158,29 +159,29 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
 
     // Preload critical images
     if (ogImage) {
-      const imageLink = document.createElement('link');
+      const imageLink = document.createElement ('link') ;
       imageLink.rel = 'preload';
       imageLink.as = 'image';
       imageLink.href = ogImage;
-      document.head.appendChild(imageLink);
+      document.head.appendChild (imageLink) ;
     }
 
     // DNS prefetch for external domains
     const dnsPrefetchDomains = [
       'https://fonts.googleapis.com',
       'https://fonts.gstatic.com',
-      'https://www.google-analytics.com'
+      'https://www.google - analytics.com'
     ];
 
-    dnsPrefetchDomains.forEach(domain => {
-      const link = document.createElement('link');
-      link.rel = 'dns-prefetch';
+    dnsPrefetchDomains.forEach (domain => {
+      const link = document.createElement ('link') ;
+      link.rel = 'dns - prefetch';
       link.href = domain;
-      document.head.appendChild(link);
-    });
-  }, [ogImage]);
+      document.head.appendChild (link) ;
+    }) ;
+  }, [ogImage]) ;
   if (type === 'article') {
-    Object.assign(structuredData, {
+    Object.assign (structuredData, {
       "@type": "Article",
       "headline": title,
       "author": {
@@ -192,7 +193,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         "name": "Zion Tech Group",
         "logo": {
           "@type": "ImageObject",
-          "url": `${url}/images/zion-tech-group-logo.png`
+          "url": `${url}/images / zion - tech - group - logo.png`
         }
       },
       "datePublished": publishedTime,
@@ -201,11 +202,10 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         "@type": "WebPage",
         "@id": fullUrl
       }
-    });
+    }) ;
   }
 
-  return (
-    <Helmet>
+  return (<Helmet>
       {/* Basic Meta Tags */}
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
@@ -246,7 +246,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
-      <meta property="og:image" content={image.startsWith('http') ? image : `${url}${image}`} />
+      <meta property="og:image" content={image.startsWith ('http') ? image : `${url}${image}`} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
@@ -256,12 +256,12 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="twitter:creator" content="@ziontechgroup" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image.startsWith('http') ? image : `${url}${image}`} />
+      <meta name="twitter:image" content={image.startsWith ('http') ? image : `${url}${image}`} />
       
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#22ddd2" />
-      <meta name="msapplication-TileColor" content="#22ddd2" />
+      <meta name="viewport" content="width = device - width, initial - scale = 1.0" />
+      <meta name="theme - color" content="#22ddd2" />
+      <meta name="msapplication - TileColor" content="#22ddd2" />
 
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -272,41 +272,37 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       {author && <meta property="article:author" content={author} />}
       {section && <meta property="article:section" content={section} />}
-      {tags.map((tag, index) => (
-        <meta key={index} property="article:tag" content={tag} />
-      ))}
-    </Helmet>
-  );
+      {tags.map ( (tag, index) => (<meta key={index} property="article:tag" content={tag} />) ) }
+    </Helmet>) ;
 };}}}}
       
       {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="icon" type="image / x-icon" href="/favicon.ico" />
+      <link rel="apple - touch - icon" sizes="180x180" href="/apple - touch - icon.png" />
+      <link rel="icon" type="image / png" sizes="32x32" href="/favicon - 32x32.png" />
+      <link rel="icon" type="image / png" sizes="16x16" href="/favicon - 16x16.png" />
       
       {/* Manifest */}
       <link rel="manifest" href="/site.webmanifest" />
       
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
+      <script type="application / ld + json">
+        {JSON.stringify (structuredData) }
       </script>
       
       {/* Additional SEO Meta Tags */}
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="application - name" content="Zion Tech Group" />
+      <meta name="apple - mobile - web - app - title" content="Zion Tech Group" />
+      <meta name="apple - mobile - web - app - capable" content="yes" />
+      <meta name="apple - mobile - web - app - status - bar - style" content="default" />
       
       {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="X - Content - Type - Options" content="nosniff" />
+      <meta httpEquiv="X - Frame - Options" content="DENY" />
+      <meta httpEquiv="X - XSS - Protection" content="1; mode = block" />
       
       {/* Performance Optimizations */}
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
-    </Helmet>
-  );
+      <meta name="format - detection" content="telephone = no" />
+      <meta name="mobile - web - app - capable" content="yes" />
+    </Helmet>) ;
 };

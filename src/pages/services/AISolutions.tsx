@@ -87,7 +87,7 @@ import {
   Beeswarm,
   Jitter,
   Ridge,
-  Joy
+  Joy,
 } from 'lucide-react';
 
 export function AISolutions() {
@@ -96,74 +96,126 @@ export function AISolutions() {
       icon: Brain,
       title: 'Machine Learning',
       description: 'Advanced algorithms that learn and improve from data',
-      benefits: ['Predictive modeling', 'Pattern recognition', 'Automated decision making']
+      benefits: [
+        'Predictive modeling',
+        'Pattern recognition',
+        'Automated decision making',
+      ],
     },
     {
       icon: BarChart3,
       title: 'Data Analytics',
       description: 'Transform raw data into actionable insights',
-      benefits: ['Real-time processing', 'Visual analytics', 'Performance metrics']
+      benefits: [
+        'Real-time processing',
+        'Visual analytics',
+        'Performance metrics',
+      ],
     },
     {
       icon: Users,
       title: 'Natural Language Processing',
       description: 'Understand and generate human language',
-      benefits: ['Chatbots', 'Text analysis', 'Language translation']
+      benefits: ['Chatbots', 'Text analysis', 'Language translation'],
     },
     {
       icon: Eye,
       title: 'Computer Vision',
       description: 'Analyze and interpret visual information',
-      benefits: ['Image recognition', 'Object detection', 'Video analysis']
+      benefits: ['Image recognition', 'Object detection', 'Video analysis'],
     },
     {
       icon: TrendingUp,
       title: 'Predictive Analytics',
       description: 'Forecast future trends and behaviors',
-      benefits: ['Risk assessment', 'Demand forecasting', 'Customer behavior']
+      benefits: ['Risk assessment', 'Demand forecasting', 'Customer behavior'],
     },
     {
       icon: Zap,
       title: 'Process Automation',
       description: 'Streamline operations with intelligent automation',
-      benefits: ['Workflow optimization', 'Error reduction', 'Efficiency gains']
-    }
+      benefits: [
+        'Workflow optimization',
+        'Error reduction',
+        'Efficiency gains',
+      ],
+    },
   ];
 
   const useCases = [
     {
       industry: 'Healthcare',
       icon: Heart,
-      applications: ['Diagnostic assistance', 'Patient monitoring', 'Drug discovery'],
-      color: 'from-red-500 to-pink-600'
+      applications: [
+        'Diagnostic assistance',
+        'Patient monitoring',
+        'Drug discovery',
+      ],
+      color: 'from-red-500 to-pink-600',
     },
     {
       industry: 'Finance',
       icon: DollarSign,
-      applications: ['Fraud detection', 'Risk assessment', 'Trading algorithms'],
-      color: 'from-green-500 to-emerald-600'
+      applications: [
+        'Fraud detection',
+        'Risk assessment',
+        'Trading algorithms',
+      ],
+      color: 'from-green-500 to-emerald-600',
     },
     {
       industry: 'Manufacturing',
       icon: Building,
-      applications: ['Predictive maintenance', 'Quality control', 'Supply chain optimization'],
-      color: 'from-blue-500 to-cyan-600'
+      applications: [
+        'Predictive maintenance',
+        'Quality control',
+        'Supply chain optimization',
+      ],
+      color: 'from-blue-500 to-cyan-600',
     },
     {
       industry: 'Retail',
       icon: ShoppingCart,
-      applications: ['Customer segmentation', 'Inventory management', 'Personalized recommendations'],
-      color: 'from-purple-500 to-indigo-600'
-    }
+      applications: [
+        'Customer segmentation',
+        'Inventory management',
+        'Personalized recommendations',
+      ],
+      color: 'from-purple-500 to-indigo-600',
+    },
   ];
 
   const technologies = [
-    { name: 'TensorFlow', description: 'Open-source machine learning framework', icon: Brain },
-    { name: 'PyTorch', description: 'Deep learning platform with dynamic computation', icon: Brain },
-    { name: 'Scikit-learn', description: 'Machine learning library for Python', icon: Code },
-    { name: 'OpenAI GPT', description: 'Advanced language model for text generation', icon: FileText },
-    { name: 'Computer Vision APIs', description: 'Pre-trained models for image analysis', icon: Eye },
-    { name: 'Natural Language APIs', description: 'Text processing and understanding', icon: Users }
+    {
+      name: 'TensorFlow',
+      description: 'Open-source machine learning framework',
+      icon: Brain,
+    },
+    {
+      name: 'PyTorch',
+      description: 'Deep learning platform with dynamic computation',
+      icon: Brain,
+    },
+    {
+      name: 'Scikit-learn',
+      description: 'Machine learning library for Python',
+      icon: Code,
+    },
+    {
+      name: 'OpenAI GPT',
+      description: 'Advanced language model for text generation',
+      icon: FileText,
+    },
+    {
+      name: 'Computer Vision APIs',
+      description: 'Pre-trained models for image analysis',
+      icon: Eye,
+    },
+    {
+      name: 'Natural Language APIs',
+      description: 'Text processing and understanding',
+      icon: Users,
+    },
   ];
 
   return (
@@ -182,9 +234,9 @@ export function AISolutions() {
               <h1 className="text-5xl font-bold">AI Solutions</h1>
             </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with cutting-edge artificial intelligence solutions. 
-              From machine learning to natural language processing, we deliver intelligent 
-              systems that drive innovation and growth.
+              Transform your business with cutting-edge artificial intelligence
+              solutions. From machine learning to natural language processing,
+              we deliver intelligent systems that drive innovation and growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
@@ -219,8 +271,9 @@ export function AISolutions() {
               Comprehensive AI Capabilities
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our AI solutions cover the full spectrum of artificial intelligence technologies, 
-              enabling businesses to harness the power of machine learning and automation.
+              Our AI solutions cover the full spectrum of artificial
+              intelligence technologies, enabling businesses to harness the
+              power of machine learning and automation.
             </p>
           </motion.div>
 
@@ -238,12 +291,17 @@ export function AISolutions() {
                   <div className="p-2 bg-cyan-500/20 rounded-lg">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white">
+                    {feature.title}
+                  </h3>
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm text-gray-400">
+                    <li
+                      key={idx}
+                      className="flex items-center gap-2 text-sm text-gray-400"
+                    >
                       <CheckCircle className="w-4 h-4 text-cyan-400" />
                       {benefit}
                     </li>
@@ -269,8 +327,8 @@ export function AISolutions() {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Discover how AI solutions are transforming industries and creating new opportunities 
-              for innovation and growth.
+              Discover how AI solutions are transforming industries and creating
+              new opportunities for innovation and growth.
             </p>
           </motion.div>
 
@@ -285,14 +343,21 @@ export function AISolutions() {
                 className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg p-8 border border-gray-600"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${useCase.color}`}>
+                  <div
+                    className={`p-3 rounded-lg bg-gradient-to-r ${useCase.color}`}
+                  >
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{useCase.industry}</h3>
+                  <h3 className="text-2xl font-bold text-white">
+                    {useCase.industry}
+                  </h3>
                 </div>
                 <ul className="space-y-3">
                   {useCase.applications.map((application, idx) => (
-                    <li key={idx} className="flex items-center gap-3 text-gray-300">
+                    <li
+                      key={idx}
+                      className="flex items-center gap-3 text-gray-300"
+                    >
                       <ArrowRight className="w-4 h-4 text-cyan-400" />
                       {application}
                     </li>
@@ -318,8 +383,8 @@ export function AISolutions() {
               Cutting-Edge Technologies
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              We leverage the latest AI technologies and frameworks to deliver robust, 
-              scalable, and efficient solutions for our clients.
+              We leverage the latest AI technologies and frameworks to deliver
+              robust, scalable, and efficient solutions for our clients.
             </p>
           </motion.div>
 
@@ -335,7 +400,9 @@ export function AISolutions() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <tech.icon className="w-6 h-6 text-cyan-400" />
-                  <h3 className="text-lg font-semibold text-white">{tech.name}</h3>
+                  <h3 className="text-lg font-semibold text-white">
+                    {tech.name}
+                  </h3>
                 </div>
                 <p className="text-gray-400 text-sm">{tech.description}</p>
               </motion.div>
@@ -357,7 +424,8 @@ export function AISolutions() {
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-cyan-100 mb-8">
-              Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization.
+              Let's discuss how our AI solutions can drive innovation,
+              efficiency, and growth for your organization.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

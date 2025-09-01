@@ -1,9 +1,10 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Target, 
-  Brain, 
-  BarChart3, 
-  Users, 
+import { motion } from 'framer-motion.ts';
+import {
+  Target,
+  Brain,
+  BarChart3,
+  Users,
   CheckCircle,
   ArrowRight,
   Star,
@@ -22,41 +23,45 @@ import { Target,
   TrendingUp,
   Zap,
   Shield,
-  Megaphone
- } from 'lucide-react.ts';
+  Megaphone,
+} from 'lucide-react.ts';
 
 const AIAutonomousMarketing: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Marketing',
-      description: 'Advanced machine learning for autonomous marketing strategy and execution'
+      description:
+        'Advanced machine learning for autonomous marketing strategy and execution',
     },
     {
       icon: Target,
       title: 'Audience Targeting',
-      description: 'Intelligent audience segmentation and targeting with AI-driven insights'
+      description:
+        'Intelligent audience segmentation and targeting with AI-driven insights',
     },
     {
       icon: BarChart3,
       title: 'Campaign Optimization',
-      description: 'Real-time campaign optimization and performance analytics'
+      description: 'Real-time campaign optimization and performance analytics',
     },
     {
       icon: Users,
       title: 'Customer Engagement',
-      description: 'Automated customer engagement and personalized marketing experiences'
+      description:
+        'Automated customer engagement and personalized marketing experiences',
     },
     {
       icon: Megaphone,
       title: 'Content Generation',
-      description: 'AI-powered content creation and marketing copy generation'
+      description: 'AI-powered content creation and marketing copy generation',
     },
     {
       icon: TrendingUp,
       title: 'ROI Optimization',
-      description: 'Continuous optimization of marketing spend and return on investment'
-    }
+      description:
+        'Continuous optimization of marketing spend and return on investment',
+    },
   ];
 
   const benefits = [
@@ -65,7 +70,7 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
     'Improve conversion rates by 60%',
     'Automate marketing workflows',
     '24/7 autonomous operation',
-    'Real-time performance optimization'
+    'Real-time performance optimization',
   ];
 
   return (
@@ -82,17 +87,21 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
               <Target className="w-4 h-4 mr-2" />
               AI-Powered Autonomous Marketing
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Your Marketing with
-              <span className="bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent"> AI Intelligence</span>
+              <span className="bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent">
+                {' '}
+                AI Intelligence
+              </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your marketing operations with our AI-powered autonomous platform. 
-              Optimize campaigns, engage customers, and maximize ROI with intelligent automation.
+              Revolutionize your marketing operations with our AI-powered
+              autonomous platform. Optimize campaigns, engage customers, and
+              maximize ROI with intelligent automation.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -119,12 +128,13 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
               Advanced Marketing Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform provides comprehensive marketing capabilities for modern businesses
+              Our AI platform provides comprehensive marketing capabilities for
+              modern businesses
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -136,7 +146,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -158,10 +170,11 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
               Why Choose AI Autonomous Marketing?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in marketing performance and ROI
+              Experience measurable improvements in marketing performance and
+              ROI
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -169,7 +182,9 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Key Benefits
+              </h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -179,7 +194,7 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
                 ))}
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -187,9 +202,12 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-pink-500/10 to-purple-500/10 border border-pink-500/20 rounded-xl p-8"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Ready to Transform Marketing?</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Ready to Transform Marketing?
+              </h3>
               <p className="text-gray-300 mb-6">
-                Join thousands of businesses already using AI to enhance their marketing performance.
+                Join thousands of businesses already using AI to enhance their
+                marketing performance.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition-all duration-300">
                 Get Started Today
@@ -212,7 +230,8 @@ const AIAutonomousMarketing: React.FC = (): JSX.Element => {
               Ready to Revolutionize Marketing?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your journey to AI-powered marketing with our comprehensive platform.
+              Start your journey to AI-powered marketing with our comprehensive
+              platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition-all duration-300">

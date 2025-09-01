@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Atom, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Cpu, 
-  Database, 
-  Network, 
-  Lock, 
-  Globe, 
-  Rocket, 
+import {
+  Brain,
+  Atom,
+  Zap,
+  Shield,
+  BarChart3,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Globe,
+  Rocket,
   Star,
   CheckCircle,
   ArrowRight,
@@ -33,7 +33,7 @@ import {
   Bot,
   Workflow,
   Eye,
-  Sparkles
+  Sparkles,
 } from 'lucide-react';
 
 const AIQuantumHybridPlatform: React.FC = () => {
@@ -48,52 +48,78 @@ const AIQuantumHybridPlatform: React.FC = () => {
     {
       icon: Brain,
       title: 'Quantum Neural Networks',
-      description: 'Hybrid quantum-classical neural networks for superior pattern recognition and optimization'
+      description:
+        'Hybrid quantum-classical neural networks for superior pattern recognition and optimization',
     },
     {
       icon: Atom,
       title: 'Quantum Algorithm Optimization',
-      description: 'Advanced quantum algorithms for complex computational problems and simulations'
+      description:
+        'Advanced quantum algorithms for complex computational problems and simulations',
     },
     {
       icon: Zap,
       title: 'Real-time Quantum Processing',
-      description: 'Instant quantum computations with classical AI integration for real-world applications'
+      description:
+        'Instant quantum computations with classical AI integration for real-world applications',
     },
     {
       icon: Shield,
       title: 'Quantum-Safe Security',
-      description: 'Post-quantum cryptography and quantum-resistant security protocols'
+      description:
+        'Post-quantum cryptography and quantum-resistant security protocols',
     },
     {
       icon: BarChart3,
       title: 'Quantum Analytics',
-      description: 'Quantum-enhanced data analysis and predictive modeling capabilities'
+      description:
+        'Quantum-enhanced data analysis and predictive modeling capabilities',
     },
     {
       icon: Cpu,
       title: 'Hybrid Computing',
-      description: 'Seamless integration between quantum and classical computing resources'
-    }
+      description:
+        'Seamless integration between quantum and classical computing resources',
+    },
   ];
 
   const useCases = [
     {
       industry: 'Financial Services',
-      applications: ['Portfolio Optimization', 'Risk Assessment', 'Algorithmic Trading', 'Fraud Detection']
+      applications: [
+        'Portfolio Optimization',
+        'Risk Assessment',
+        'Algorithmic Trading',
+        'Fraud Detection',
+      ],
     },
     {
       industry: 'Healthcare',
-      applications: ['Drug Discovery', 'Protein Folding', 'Medical Imaging', 'Genomic Analysis']
+      applications: [
+        'Drug Discovery',
+        'Protein Folding',
+        'Medical Imaging',
+        'Genomic Analysis',
+      ],
     },
     {
       industry: 'Manufacturing',
-      applications: ['Supply Chain Optimization', 'Quality Control', 'Predictive Maintenance', 'Resource Planning']
+      applications: [
+        'Supply Chain Optimization',
+        'Quality Control',
+        'Predictive Maintenance',
+        'Resource Planning',
+      ],
     },
     {
       industry: 'Logistics',
-      applications: ['Route Optimization', 'Fleet Management', 'Inventory Management', 'Demand Forecasting']
-    }
+      applications: [
+        'Route Optimization',
+        'Fleet Management',
+        'Inventory Management',
+        'Demand Forecasting',
+      ],
+    },
   ];
 
   const pricingTiers = [
@@ -107,11 +133,11 @@ const AIQuantumHybridPlatform: React.FC = () => {
         'AI Model Training',
         'Basic Security Protocols',
         'Email Support',
-        'Standard Documentation'
+        'Standard Documentation',
       ],
       marketPrice: '$6,500',
       savings: '23%',
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -124,11 +150,11 @@ const AIQuantumHybridPlatform: React.FC = () => {
         'Enhanced Security Features',
         'Priority Support',
         'Custom Integration',
-        'Performance Analytics'
+        'Performance Analytics',
       ],
       marketPrice: '$15,000',
       savings: '20%',
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -142,35 +168,39 @@ const AIQuantumHybridPlatform: React.FC = () => {
         '24/7 Dedicated Support',
         'Custom Infrastructure',
         'White-label Solutions',
-        'Training & Certification'
+        'Training & Certification',
       ],
       marketPrice: '$32,000',
       savings: '22%',
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const benefits = [
     {
       title: 'Unprecedented Performance',
-      description: 'Combine quantum computing power with AI intelligence for 1000x faster computations',
-      icon: Rocket
+      description:
+        'Combine quantum computing power with AI intelligence for 1000x faster computations',
+      icon: Rocket,
     },
     {
       title: 'Future-Proof Technology',
-      description: 'Stay ahead with quantum-safe security and next-generation computing capabilities',
-      icon: Star
+      description:
+        'Stay ahead with quantum-safe security and next-generation computing capabilities',
+      icon: Star,
     },
     {
       title: 'Cost Optimization',
-      description: 'Reduce computational costs by 60% through quantum-classical hybrid optimization',
-      icon: TrendingUp
+      description:
+        'Reduce computational costs by 60% through quantum-classical hybrid optimization',
+      icon: TrendingUp,
     },
     {
       title: 'Competitive Advantage',
-      description: 'Gain market leadership with cutting-edge quantum-AI capabilities',
-      icon: Target
-    }
+      description:
+        'Gain market leadership with cutting-edge quantum-AI capabilities',
+      icon: Target,
+    },
   ];
 
   return (
@@ -192,8 +222,10 @@ const AIQuantumHybridPlatform: React.FC = () => {
               AI-Quantum Hybrid Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              The world's first integrated platform combining artificial intelligence with quantum computing, 
-              delivering unprecedented computational power and intelligence for the most complex challenges.
+              The world's first integrated platform combining artificial
+              intelligence with quantum computing, delivering unprecedented
+              computational power and intelligence for the most complex
+              challenges.
             </p>
           </motion.div>
 
@@ -241,7 +273,8 @@ const AIQuantumHybridPlatform: React.FC = () => {
               Revolutionary Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the future of computing with our cutting-edge AI-Quantum hybrid capabilities
+              Experience the future of computing with our cutting-edge
+              AI-Quantum hybrid capabilities
             </p>
           </motion.div>
 
@@ -257,8 +290,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -287,7 +324,10 @@ const AIQuantumHybridPlatform: React.FC = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : index % 2 === 0 ? -20 : 20 }}
+                animate={{
+                  opacity: isVisible ? 1 : 0,
+                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20,
+                }}
                 transition={{ duration: 0.8, delay: 0.2 * index }}
                 className="bg-gradient-to-br from-slate-800/80 to-purple-800/80 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20"
               >
@@ -297,7 +337,10 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 </h3>
                 <div className="space-y-3">
                   {useCase.applications.map((app, appIndex) => (
-                    <div key={appIndex} className="flex items-center text-gray-300">
+                    <div
+                      key={appIndex}
+                      className="flex items-center text-gray-300"
+                    >
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />
                       {app}
                     </div>
@@ -334,8 +377,8 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
                 className={`relative bg-gradient-to-br from-slate-800/80 to-purple-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${
-                  tier.popular 
-                    ? 'border-purple-500 scale-105' 
+                  tier.popular
+                    ? 'border-purple-500 scale-105'
                     : 'border-purple-500/20'
                 }`}
               >
@@ -348,9 +391,13 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 )}
 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    {tier.name}
+                  </h3>
                   <div className="mb-4">
-                    <span className="text-4xl font-bold text-white">{tier.price}</span>
+                    <span className="text-4xl font-bold text-white">
+                      {tier.price}
+                    </span>
                     <span className="text-gray-400">{tier.period}</span>
                   </div>
                   <p className="text-gray-300 text-sm">{tier.description}</p>
@@ -358,7 +405,9 @@ const AIQuantumHybridPlatform: React.FC = () => {
 
                 <div className="mb-8">
                   <div className="flex items-center justify-center mb-4">
-                    <span className="text-gray-400 line-through mr-2">{tier.marketPrice}</span>
+                    <span className="text-gray-400 line-through mr-2">
+                      {tier.marketPrice}
+                    </span>
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-sm font-semibold">
                       Save {tier.savings}
                     </span>
@@ -367,7 +416,10 @@ const AIQuantumHybridPlatform: React.FC = () => {
 
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start text-gray-300">
+                    <li
+                      key={featureIndex}
+                      className="flex items-start text-gray-300"
+                    >
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5" />
                       <span className="text-sm">{feature}</span>
                     </li>
@@ -403,7 +455,8 @@ const AIQuantumHybridPlatform: React.FC = () => {
               Why Choose Our Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Unlock unprecedented value with our revolutionary AI-Quantum hybrid technology
+              Unlock unprecedented value with our revolutionary AI-Quantum
+              hybrid technology
             </p>
           </motion.div>
 
@@ -412,15 +465,22 @@ const AIQuantumHybridPlatform: React.FC = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : index % 2 === 0 ? -20 : 20 }}
+                animate={{
+                  opacity: isVisible ? 1 : 0,
+                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20,
+                }}
                 transition={{ duration: 0.8, delay: 0.2 * index }}
                 className="bg-gradient-to-br from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{benefit.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {benefit.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -439,9 +499,10 @@ const AIQuantumHybridPlatform: React.FC = () => {
               Ready to Experience the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the quantum revolution and transform your business with AI-Quantum hybrid technology
+              Join the quantum revolution and transform your business with
+              AI-Quantum hybrid technology
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <div className="flex items-center text-gray-300">
                 <Phone className="w-5 h-5 mr-2 text-purple-400" />

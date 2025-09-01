@@ -1,13 +1,15 @@
 import React, { useEffect, useRef } from 'react';
-
 export const FuturisticAnimatedBackground: React.FC = () => {;
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+export default FuturisticAnimatedBackground;
 
-  useEffect(() => {
+
+  const canvasRef = useRef < HTMLCanvasElement> (null) ;
+
+  useEffect ( () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext ('2d') ;
     if (!ctx) return;
 
     // Set canvas size
@@ -15,32 +17,32 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas () ;
+    window.addEventListener ('resize', resizeCanvas) ;
 
     // Add enhanced grid background
-    const gridCanvas = document.createElement('canvas');
-    const gridCtx = gridCanvas.getContext('2d');
+    const gridCanvas = document.createElement ('canvas') ;
+    const gridCtx = gridCanvas.getContext ('2d') ;
     if (gridCtx) {
       gridCanvas.width = canvas.width;
       gridCanvas.height = canvas.height;
       
       // Draw enhanced grid
-      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
+      gridCtx.strokeStyle = 'rgba (6, 182, 212, 0.1) ';
       gridCtx.lineWidth = 1;
       
       for (let x = 0; x < gridCanvas.width; x += 40) {
-        gridCtx.beginPath();
-        gridCtx.moveTo(x, 0);
-        gridCtx.lineTo(x, gridCanvas.height);
-        gridCtx.stroke();
+        gridCtx.beginPath () ;
+        gridCtx.moveTo (x, 0) ;
+        gridCtx.lineTo (x, gridCanvas.height) ;
+        gridCtx.stroke () ;
       }
       
       for (let y = 0; y < gridCanvas.height; y += 40) {
-        gridCtx.beginPath();
-        gridCtx.moveTo(0, y);
-        gridCtx.lineTo(gridCanvas.width, y);
-        gridCtx.stroke();
+        gridCtx.beginPath () ;
+        gridCtx.moveTo (0, y) ;
+        gridCtx.lineTo (gridCanvas.width, y) ;
+        gridCtx.stroke () ;
       }
     }
 
@@ -62,21 +64,21 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
 
     // Create particles
     const createParticle = () => {;
-      const x = Math.random() * canvas.width;
-      const y = Math.random() * canvas.height;
-      const angle = Math.random() * Math.PI * 2;
-      const speed = Math.random() * 0.5 + 0.1;
+      const x = Math.random () * canvas.width;
+      const y = Math.random () * canvas.height;
+      const angle = Math.random () * Math.PI * 2;
+      const speed = Math.random () * 0.5 + 0.1;
 
-      particles.push({
+      particles.push ({
         x,
         y,
-        vx: Math.cos(angle) * speed,
-        vy: Math.sin(angle) * speed,
-        size: Math.random() * 3 + 1,
-        color: `hsl(${200 + Math.random() * 60}, 70%, 60%)`,
+        vx: Math.cos (angle) * speed,
+        vy: Math.sin (angle) * speed,
+        size: Math.random () * 3 + 1,
+        color: `hsl (${200 + Math.random () * 60}, 70%, 60%) `,
         life: 1,
-        maxLife: Math.random() * 100 + 50
-      });
+        maxLife: Math.random () * 100 + 50
+      }) ;
     };
 
     // Update and draw particles
@@ -84,12 +86,12 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
       time += 0.01;
 
       // Clear canvas with fade effect
-      ctx.fillStyle = 'rgba(2, 6, 23, 0.1)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba (2, 6, 23, 0.1) ';
+      ctx.fillRect (0, 0, canvas.width, canvas.height) ;
 
       // Create new particles
       if (particles.length < 100) {
-        createParticle();
+        createParticle () ;
 
       // Update and draw particles
       for (let i = particles.length - 1; i >= 0; i--) {
@@ -102,31 +104,31 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
 
         // Remove dead particles
         if (particle.life > particle.maxLife) {
-          particles.splice(i, 1);
+          particles.splice (i, 1) ;
           continue;
 
         // Draw particle with glow effect
-        const alpha = 1 - (particle.life / particle.maxLife);
-        const size = particle.size * (1 - alpha * 0.5);
+        const alpha = 1 - (particle.life / particle.maxLife) ;
+        const size = particle.size * (1 - alpha * 0.5) ;
 
         // Outer glow
         ctx.shadowColor = particle.color;
         ctx.shadowBlur = 20;
         ctx.fillStyle = particle.color;
         ctx.globalAlpha = alpha * 0.3;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, size * 3, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.beginPath () ;
+        ctx.arc (particle.x, particle.y, size * 3, 0, Math.PI * 2) ;
+        ctx.fill () ;
 
         // Inner particle
         ctx.shadowBlur = 10;
         ctx.globalAlpha = alpha;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.beginPath () ;
+        ctx.arc (particle.x, particle.y, size, 0, Math.PI * 2) ;
+        ctx.fill () ;
 
       // Draw grid pattern
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.1)';
+      ctx.strokeStyle = 'rgba (56, 189, 248, 0.1) ';
       ctx.lineWidth = 1;
       ctx.globalAlpha = 0.3;
 
@@ -135,21 +137,21 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
 
       // Vertical lines
       for (let x = offsetX; x < canvas.width; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
+        ctx.beginPath () ;
+        ctx.moveTo (x, 0) ;
+        ctx.lineTo (x, canvas.height) ;
+        ctx.stroke () ;
 
       // Horizontal lines
       for (let y = offsetY; y < canvas.height; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke();
+        ctx.beginPath () ;
+        ctx.moveTo (0, y) ;
+        ctx.lineTo (canvas.width, y) ;
+        ctx.stroke () ;
 
       // Draw floating geometric shapes
       ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = 'rgba(168, 85, 247, 0.5)';
+      ctx.strokeStyle = 'rgba (168, 85, 247, 0.5) ';
       ctx.lineWidth = 2;
 
       // Rotating triangle
@@ -157,70 +159,64 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
       const triangleSize = 30;
       const rotation = time * 0.5;
 
-      ctx.save();
-      ctx.translate(centerX, centerY);
-      ctx.rotate(rotation);
-      ctx.beginPath();
-      ctx.moveTo(0, -triangleSize);
-      ctx.lineTo(triangleSize * 0.866, triangleSize * 0.5);
-      ctx.lineTo(-triangleSize * 0.866, triangleSize * 0.5);
-      ctx.closePath();
-      ctx.stroke();
-      ctx.restore();
+      ctx.save () ;
+      ctx.translate (centerX, centerY) ;
+      ctx.rotate (rotation) ;
+      ctx.beginPath () ;
+      ctx.moveTo (0, -triangleSize) ;
+      ctx.lineTo (triangleSize * 0.866, triangleSize * 0.5) ;
+      ctx.lineTo (-triangleSize * 0.866, triangleSize * 0.5) ;
+      ctx.closePath () ;
+      ctx.stroke () ;
+      ctx.restore () ;
 
       // Floating circle
-      const circleSize = 20 + Math.sin(time * 2) * 10;
+      const circleSize = 20 + Math.sin (time * 2) * 10;
 
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)';
-      ctx.beginPath();
-      ctx.arc(circleX, circleY, circleSize, 0, Math.PI * 2);
-      ctx.stroke();
+      ctx.strokeStyle = 'rgba (56, 189, 248, 0.5) ';
+      ctx.beginPath () ;
+      ctx.arc (circleX, circleY, circleSize, 0, Math.PI * 2) ;
+      ctx.stroke () ;
 
       // Reset global alpha
       ctx.globalAlpha = 1;
 
       // Draw energy waves
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.2)';
+      ctx.strokeStyle = 'rgba (56, 189, 248, 0.2) ';
       ctx.lineWidth = 3;
 
       for (let i = 0; i < 3; i++) {
-        const waveY = canvas.height * 0.5 + Math.sin(time + i) * 50;
+        const waveY = canvas.height * 0.5 + Math.sin (time + i) * 50;
 
-        ctx.beginPath();
-        ctx.moveTo(waveOffset - 100, waveY);
-        ctx.lineTo(waveOffset, waveY + 20);
-        ctx.lineTo(waveOffset + 100, waveY);
-        ctx.stroke();
+        ctx.beginPath () ;
+        ctx.moveTo (waveOffset - 100, waveY) ;
+        ctx.lineTo (waveOffset, waveY + 20) ;
+        ctx.lineTo (waveOffset + 100, waveY) ;
+        ctx.stroke () ;
 
-      animationId = requestAnimationFrame(animate);
+      animationId = requestAnimationFrame (animate) ;
     };
 
-    animate();
+    animate () ;
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationId);
+      window.removeEventListener ('resize', resizeCanvas) ;
+      cancelAnimationFrame (animationId) ;
     };
-  }, []);
+  }, []) ;
 
-  return (
-    <canvas
+  return (<canvas
       ref = {canvasRef}
-      className="fixed inset-0 w-full h-full pointer-events-none z-0"
+      className="fixed inset - 0 w - full h - full pointer - events - none z - 0"
       style = {
-  { background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03),;
+  { background: 'radial - gradient (1200px 600px at 10% -10%, rgba (56,189,248,0.05) , transparent 60%) , radial - gradient (900px 500px at 110% 10%, rgba (168,85,247,0.03) ,;
   ;
-  transparent 60%)' ;
+  transparent 60%) ' ;
 ;
 ;
-
-
-
 
 }};
-    />;
-  );
+    />;) ;
 };
 
-export default FuturisticAnimatedBackground;
 }}}}}}

@@ -1,6 +1,6 @@
-import React from 'react';
-import { SEO } from "../../components/SEO";
-import { motion } from 'framer-motion';
+import React from 'react&apos;;
+import { SEO } from "../../components/SEO&quot;;
+import { motion } from 'framer-motion&apos;;
 import { 
   CheckCircle, 
   TrendingUp, 
@@ -22,18 +22,18 @@ import {
   PenTool,
   Eye,
   Share2
- } from 'lucide-react';
+ } from 'lucide-react&apos;;
 
 const AIContentOptimizerPro: React.FC = (): JSX.Element => {
   const contactInfo = {
-  phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  phone: '+1 302 464 0950&apos;,
+    email: 'kleber@ziontechgroup.com&apos;,
+    address: '364 E Main St STE 1008 Middletown DE 19709&apos;,;
   ;
   ;
   ;
   ;
-  website: 'https://ziontechgroup.com';
+  website: 'https://ziontechgroup.com&apos;;
   ;
 
 
@@ -46,140 +46,140 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered SEO Optimization',
+      title: 'AI-Powered SEO Optimization&apos;,
       description: 'Advanced machine learning algorithms that analyze search patterns and optimize content for maximum visibility.',
-      benefits: ['Improve search rankings', 'Increase organic traffic', 'Optimize for featured snippets']
+      benefits: ['Improve search rankings&apos;, 'Increase organic traffic&apos;, 'Optimize for featured snippets&apos;]
     },
     {
       icon: Search,
-      title: 'Content Readability Scoring',
+      title: 'Content Readability Scoring&apos;,
       description: 'Intelligent analysis of content structure, complexity, and readability to ensure maximum engagement.',
-      benefits: ['Enhance user experience', 'Improve engagement rates', 'Reduce bounce rates']
+      benefits: ['Enhance user experience&apos;, 'Improve engagement rates&apos;, 'Reduce bounce rates&apos;]
     },
     {
       icon: Globe,
-      title: 'Multi-Language Support',
+      title: 'Multi-Language Support&apos;,
       description: 'Support for 50+ languages with cultural context and localization optimization.',
-      benefits: ['Global reach', 'Cultural relevance', 'Local SEO optimization']
+      benefits: ['Global reach&apos;, 'Cultural relevance&apos;, 'Local SEO optimization&apos;]
     },
     {
       icon: BarChart3,
-      title: 'Performance Analytics',
+      title: 'Performance Analytics&apos;,
       description: 'Comprehensive analytics dashboard with real-time performance metrics and actionable insights.',
-      benefits: ['Data-driven decisions', 'Performance tracking', 'ROI measurement']
+      benefits: ['Data-driven decisions&apos;, 'Performance tracking&apos;, 'ROI measurement&apos;]
     },
     {
       icon: PenTool,
-      title: 'Automated A/B Testing',
+      title: 'Automated A/B Testing&apos;,
       description: 'AI-driven content testing that automatically optimizes headlines, CTAs, and content variations.',
-      benefits: ['Increase conversion rates', 'Optimize content performance', 'Reduce testing time']
+      benefits: ['Increase conversion rates&apos;, 'Optimize content performance&apos;, 'Reduce testing time&apos;]
     },;
     {;
       icon: Shield,;
-      title: 'Content Plagiarism Detection',;
+      title: 'Content Plagiarism Detection&apos;,;
       description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',;
-      benefits: ['Ensure content originality', 'Protect brand reputation', 'Avoid legal issues'];
+      benefits: ['Ensure content originality&apos;, 'Protect brand reputation&apos;, 'Avoid legal issues&apos;];
     };
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$199',
-      period: '/month',
-      description: 'Perfect for small businesses and content creators',
+      name: 'Starter&apos;,
+      price: '$199&apos;,
+      period: '/month&apos;,
+      description: 'Perfect for small businesses and content creators&apos;,
       features: [
-        'Up to 10,000 words per month',
-        'Basic SEO optimization',
-        'Readability scoring',
-        'Plagiarism detection',
-        'Email support',
-        'Basic analytics dashboard'
+        'Up to 10,000 words per month&apos;,
+        'Basic SEO optimization&apos;,
+        'Readability scoring&apos;,
+        'Plagiarism detection&apos;,
+        'Email support&apos;,
+        'Basic analytics dashboard&apos;
       ],
       popular: false,
-      cta: 'Start Free Trial'
+      cta: 'Start Free Trial&apos;
     },
     {
-      name: 'Professional',
-      price: '$399',
-      period: '/month',
-      description: 'Ideal for growing businesses and marketing teams',
+      name: 'Professional&apos;,
+      price: '$399&apos;,
+      period: '/month&apos;,
+      description: 'Ideal for growing businesses and marketing teams&apos;,
       features: [
-        'Up to 50,000 words per month',
-        'Advanced SEO optimization',
-        'Multi-language support',
-        'A/B testing automation',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
-        'Team collaboration tools'
+        'Up to 50,000 words per month&apos;,
+        'Advanced SEO optimization&apos;,
+        'Multi-language support&apos;,
+        'A/B testing automation&apos;,
+        'Priority support&apos;,
+        'Advanced analytics&apos;,
+        'API access&apos;,
+        'Team collaboration tools&apos;
       ],
       popular: true,
-      cta: 'Get Started'
+      cta: 'Get Started&apos;
     },
     {
-      name: 'Enterprise',
-      price: '$799',
-      period: '/month',
-      description: 'Comprehensive solution for large organizations',
+      name: 'Enterprise&apos;,
+      price: '$799&apos;,
+      period: '/month&apos;,
+      description: 'Comprehensive solution for large organizations&apos;,
       features: [
-        'Unlimited words per month',
-        'Full feature suite',
-        'Custom AI models',
-        'White-label options',
-        'Dedicated support',
-        'Custom integrations',;
-        'Advanced reporting',;
-        'SLA guarantees';
+        'Unlimited words per month&apos;,
+        'Full feature suite&apos;,
+        'Custom AI models&apos;,
+        'White-label options&apos;,
+        'Dedicated support&apos;,
+        'Custom integrations&apos;,;
+        'Advanced reporting&apos;,;
+        'SLA guarantees&apos;;
       ],;
       popular: false,;
-      cta: 'Contact Sales';
+      cta: 'Contact Sales&apos;;
     };
   ];
 
   const useCases = [
     {
-      title: 'E-commerce Content',
+      title: 'E-commerce Content&apos;,
       description: 'Optimize product descriptions, category pages, and blog content for better search visibility and conversion rates.',
-      metrics: ['40% increase in organic traffic', '25% improvement in conversion rates']
+      metrics: ['40% increase in organic traffic&apos;, '25% improvement in conversion rates&apos;]
     },
     {
-      title: 'Blog & Content Marketing',
+      title: 'Blog & Content Marketing&apos;,
       description: 'Enhance blog posts, articles, and long-form content for better engagement and SEO performance.',
-      metrics: ['60% increase in time on page', '35% improvement in social shares']
+      metrics: ['60% increase in time on page&apos;, '35% improvement in social shares&apos;]
     },
     {
-      title: 'Local Business SEO',
+      title: 'Local Business SEO&apos;,
       description: 'Optimize local business content, service pages, and location-specific content for local search.',
-      metrics: ['50% increase in local search visibility', '30% improvement in local leads'];
+      metrics: ['50% increase in local search visibility&apos;, '30% improvement in local leads&apos;];
     },;
     {;
-      title: 'Technical Content',;
+      title: 'Technical Content&apos;,;
       description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',;
-      metrics: ['45% improvement in readability scores', '40% increase in engagement'];
+      metrics: ['45% improvement in readability scores&apos;, '40% increase in engagement&apos;];
     };
   ];
 
   const testimonials = [
     {
-      name: 'Jennifer Martinez',
-      role: 'Content Marketing Director',
-      comp: 'TechFlow Solutions',
+      name: 'Jennifer Martinez&apos;,
+      role: 'Content Marketing Director&apos;,
+      comp: 'TechFlow Solutions&apos;,
       content: 'AI Content Optimizer Pro transformed our content strategy. We saw a 45% increase in organic traffic within 3 months.',
       rating: 5
     },
     {
-      name: 'David Kim',
-      role: 'SEO Manager',
-      comp: 'Digital Growth Agency',
+      name: 'David Kim&apos;,
+      role: 'SEO Manager&apos;,
+      comp: 'Digital Growth Agency&apos;,
       content: 'The AI-powered optimization suggestions are incredibly accurate. Our clients love the improved search rankings.',
       rating: 5
     },
     {
-      name: 'Sarah Williams',
+      name: 'Sarah Williams&apos;,
     };
-      role: 'Content Creator',;
-      company: 'Creative Content Studio',;
+      role: 'Content Creator&apos;,;
+      company: 'Creative Content Studio&apos;,;
       content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',;
       rating: 5;
     };
@@ -188,16 +188,16 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
   return (
     <>
       <SEO
-        title = "AI Content Optimizer Pro | Zion Tech Group"
+        title = "AI Content Optimizer Pro | Zion Tech Group&quot;
         description="Advanced AI-powered content optimization platform. Improve SEO, readability, and engagement with machine learning algorithms. Start free trial today."
-        keywords="AI content optimization, SEO optimization, content readability, content marketing, AI writing tools, content analytics"
-        canonical="https://ziontechgroup.com/services/ai-content-optimizer-pro"
+        keywords="AI content optimization, SEO optimization, content readability, content marketing, AI writing tools, content analytics&quot;
+        canonical="https://ziontechgroup.com/services/ai-content-optimizer-pro&quot;
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8&quot;>
+          <div className="max-w-7xl mx-auto text-center&quot;>
             <motion.div
               initial = {
   { opacity: 0,
@@ -221,38 +221,38 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 }}
               transition={{ duration: 0.8 }}
 
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6&quot;>
                 AI Content Optimizer Pro
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
                 Transform your content with AI-powered optimization. Improve SEO rankings, enhance readability, and boost engagement across all digital platforms.
               </p>
 
               {/* Key Metrics */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                  <div className="text-2xl font-bold text-green-400 mb-2">40-60%</div>
-                  <div className="text-gray-300 text-sm">Traffic Increase</div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8&quot;>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20&quot;>
+                  <div className="text-2xl font-bold text-green-400 mb-2&quot;>40-60%</div>
+                  <div className="text-gray-300 text-sm&quot;>Traffic Increase</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                  <div className="text-2xl font-bold text-blue-400 mb-2">35%</div>
-                  <div className="text-gray-300 text-sm">Engagement Boost</div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20&quot;>
+                  <div className="text-2xl font-bold text-blue-400 mb-2&quot;>35%</div>
+                  <div className="text-gray-300 text-sm&quot;>Engagement Boost</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                  <div className="text-2xl font-bold text-purple-400 mb-2">50%</div>
-                  <div className="text-gray-300 text-sm">Time Saved</div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20&quot;>
+                  <div className="text-2xl font-bold text-purple-400 mb-2&quot;>50%</div>
+                  <div className="text-gray-300 text-sm&quot;>Time Saved</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                  <div className="text-2xl font-bold text-yellow-400 mb-2">25%</div>
-                  <div className="text-gray-300 text-sm">Conversion Lift</div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20&quot;>
+                  <div className="text-2xl font-bold text-yellow-400 mb-2&quot;>25%</div>
+                  <div className="text-gray-300 text-sm&quot;>Conversion Lift</div>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center&quot;>
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;>
                   Start Free Trial
                 </button>
-                <button className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
+                <button className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300&quot;>
                   Schedule Demo
                 </button>
               </div>
@@ -261,8 +261,8 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 sm:px-6 lg:px-8&quot;>;
+          <div className="max-w-7xl mx-auto&quot;>
             <motion.div
               initial = {
   { opacity: 0,
@@ -286,17 +286,17 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-16&quot;
 
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4&quot;>
                 AI-Powered Features That Transform Content
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Our platform combines cutting-edge AI with industry-leading content optimization techniques to deliver exceptional results.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {features.map((feature, index)  => (
                 <motion.div
                   key={index}
@@ -331,17 +331,17 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 }}
                   viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300&quot;
 
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="text-blue-400 w-8 h-8 mr-3" />
-                    <h3 className="text-xl font-bold text-white">{feature.title}</h3>
+                  <div className="flex items-center mb-4&quot;>
+                    <feature.icon className="text-blue-400 w-8 h-8 mr-3&quot; />
+                    <h3 className="text-xl font-bold text-white&quot;>{feature.title}</h3>
                   </div>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <p className="text-gray-300 mb-4&quot;>{feature.description}</p>
+                  <ul className="space-y-2&quot;>
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="text-green-400 w-4 h-4 mr-2 flex-shrink-0" />
+                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm&quot;>
+                        <CheckCircle className="text-green-400 w-4 h-4 mr-2 flex-shrink-0&quot; />
                         {benefit}
                       </li>
                     ))}
@@ -353,8 +353,8 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">;
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20&quot;>;
+          <div className="max-w-7xl mx-auto&quot;>
             <motion.div
               initial = {
   { opacity: 0,
@@ -378,17 +378,17 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-16&quot;
 
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4&quot;>
                 Proven Results Across Industries
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 See how different businesses are achieving remarkable results with our AI Content Optimizer Pro platform.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8&quot;>
               {useCases.map((useCase, index)  => (
                 <motion.div
                   key={index}
@@ -423,14 +423,14 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 }}
                   viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;
 
-                  <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300 mb-4">{useCase.description}</p>
-                  <div className="space-y-2">
+                  <h3 className="text-xl font-bold text-white mb-3&quot;>{useCase.title}</h3>
+                  <p className="text-gray-300 mb-4&quot;>{useCase.description}</p>
+                  <div className="space-y-2&quot;>
                     {useCase.metrics.map((metric, metricIndex) => (
-                      <div key={metricIndex} className="flex items-center text-green-400 text-sm">
-                        <TrendingUp className="w-4 h-4 mr-2" />
+                      <div key={metricIndex} className="flex items-center text-green-400 text-sm&quot;>
+                        <TrendingUp className="w-4 h-4 mr-2&quot; />
                         {metric}
                       </div>
                     ))}
@@ -442,8 +442,8 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 sm:px-6 lg:px-8&quot;>;
+          <div className="max-w-7xl mx-auto&quot;>
             <motion.div
               initial = {
   { opacity: 0,
@@ -467,17 +467,17 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-16&quot;
 
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4&quot;>
                 Transparent Pricing Plans
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Choose the plan that best fits your content optimization needs. All plans include a 14-day free trial.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8&quot;>
               {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}
@@ -514,31 +514,31 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   viewport={{ once: true }}
                   className={`relative rounded-xl p-8 ${
                     plan.popular
-                      ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400'
-                      : 'bg-white/10 backdrop-blur-sm border border-white/20'
+                      ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400&apos;
+                      : 'bg-white/10 backdrop-blur-sm border border-white/20&apos;
                   }`}
 
                   {plan.popular && (;
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2&quot;>
+                      <span className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold&quot;>
                         Most Popular
                       </span>
                     </div>
                   )}
 
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-white/70 ml-1">{plan.period}</span>
+                  <div className="text-center mb-6&quot;>
+                    <h3 className="text-2xl font-bold text-white mb-2&quot;>{plan.name}</h3>
+                    <div className="flex items-baseline justify-center&quot;>
+                      <span className="text-4xl font-bold text-white&quot;>{plan.price}</span>
+                      <span className="text-white/70 ml-1&quot;>{plan.period}</span>
                     </div>
-                    <p className="text-gray-300 mt-2">{plan.description}</p>
+                    <p className="text-gray-300 mt-2&quot;>{plan.description}</p>
                   </div>
 
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3 mb-8&quot;>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-white">
-                        <span className="text-green-400 mr-3">✓</span>
+                      <li key={featureIndex} className="flex items-center text-white&quot;>
+                        <span className="text-green-400 mr-3&quot;>✓</span>
                         {feature}
                       </li>
                     ))}
@@ -546,8 +546,8 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-white text-blue-600 hover:bg-gray-100'
-                      : 'bg-blue-600 text-white hover:bg-blue-700'
+                      ? 'bg-white text-blue-600 hover:bg-gray-100&apos;
+                      : 'bg-blue-600 text-white hover:bg-blue-700&apos;
                   }`}>
                     {plan.cta}
                   </button>
@@ -587,21 +587,21 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 }}
               viewport={{ once: true }}
-              className="text-center mt-12"
+              className="text-center mt-12&quot;
 
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300 mb-4&quot;>
                 Annual plans save 20%. Enterprise customers get custom pricing and dedicated support.
               </p>
-              <p className="text-gray-300">
-                Need a custom solution? <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:underline">Contact our sales team</a>
+              <p className="text-gray-300&quot;>
+                Need a custom solution? <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:underline&quot;>Contact our sales team</a>
               </p>
             </motion.div>
           </div>
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">;
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20&quot;>;
+          <div className="max-w-7xl mx-auto&quot;>
             <motion.div
               initial = {
   { opacity: 0,
@@ -625,17 +625,17 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-16&quot;
 
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4&quot;>
                 What Our Customers Say
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't just take our word for it. Here's what content creators and marketers are saying about our platform.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+                Don&apos;t just take our word for it. Here&apos;s what content creators and marketers are saying about our platform.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8&quot;>
               {testimonials.map((testimonial, index)  => (
                 <motion.div
                   key={index}
@@ -670,18 +670,18 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 }}
                   viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;
 
-                  <div className="flex items-center mb-4">
+                  <div className="flex items-center mb-4&quot;>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="text-yellow-400 w-4 h-4 fill-current" />
+                      <Star key={i} className="text-yellow-400 w-4 h-4 fill-current&quot; />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-4 italic&quot;>"{testimonial.content}"</p>
                   <div>
-                    <p className="text-white font-semibold">{testimonial.name}</p>
-                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
-                    <p className="text-blue-400 text-sm">{testimonial.comp}</p>
+                    <p className="text-white font-semibold&quot;>{testimonial.name}</p>
+                    <p className="text-gray-400 text-sm&quot;>{testimonial.role}</p>
+                    <p className="text-blue-400 text-sm&quot;>{testimonial.comp}</p>
                   </div>
                 </motion.div>;
               ))}
@@ -690,8 +690,8 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 px-4 sm:px-6 lg:px-8&quot;>;
+          <div className="max-w-4xl mx-auto text-center&quot;>
             <motion.div
               initial = {
   { opacity: 0,
@@ -716,53 +716,53 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6&quot;>
                 Ready to Transform Your Content?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8&quot;>
                 Join thousands of content creators and marketers who are already using AI Content Optimizer Pro to achieve remarkable results.
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                  <Phone className="text-blue-400 w-8 h-8 mx-auto mb-3" />
-                  <h3 className="text-white font-semibold mb-2">Call Us</h3>
-                  <p className="text-gray-300 text-sm">{contactInfo.phone}</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8&quot;>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20&quot;>
+                  <Phone className="text-blue-400 w-8 h-8 mx-auto mb-3&quot; />
+                  <h3 className="text-white font-semibold mb-2&quot;>Call Us</h3>
+                  <p className="text-gray-300 text-sm&quot;>{contactInfo.phone}</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                  <Mail className="text-green-400 w-8 h-8 mx-auto mb-3" />
-                  <h3 className="text-white font-semibold mb-2">Email Us</h3>
-                  <p className="text-gray-300 text-sm">{contactInfo.email}</p>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20&quot;>
+                  <Mail className="text-green-400 w-8 h-8 mx-auto mb-3&quot; />
+                  <h3 className="text-white font-semibold mb-2&quot;>Email Us</h3>
+                  <p className="text-gray-300 text-sm&quot;>{contactInfo.email}</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                  <MapPin className="text-red-400 w-8 h-8 mx-auto mb-3" />
-                  <h3 className="text-white font-semibold mb-2">Visit Us</h3>
-                  <p className="text-gray-300 text-sm">{contactInfo.address}</p>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20&quot;>
+                  <MapPin className="text-red-400 w-8 h-8 mx-auto mb-3&quot; />
+                  <h3 className="text-white font-semibold mb-2&quot;>Visit Us</h3>
+                  <p className="text-gray-300 text-sm&quot;>{contactInfo.address}</p>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center&quot;>
                 <a
                   href={`tel:${contactInfo.phone}`}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2&quot;
 
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-4 h-4&quot; />
                   <span>Call Now</span>
                 </a>
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2&quot;
 
-                  <Mail className="w-4 h-4" />
+                  <Mail className="w-4 h-4&quot; />
                   <span>Send Email</span>
                 </a>
                 <a
                   href={contactInfo.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-2 border-green-400 text-green-400 font-semibold py-3 px-8 rounded-lg hover:bg-green-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
+                  target="_blank&quot;
+                  rel="noopener noreferrer&quot;
+                  className="border-2 border-green-400 text-green-400 font-semibold py-3 px-8 rounded-lg hover:bg-green-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2&quot;
 
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="w-4 h-4&quot; />
                   <span>Visit Website</span>
                 </a>;
               </div>;

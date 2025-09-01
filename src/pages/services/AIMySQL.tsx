@@ -1,3 +1,4 @@
+import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMySQL() {
   const features = [
     'AI-powered MySQL query optimization',

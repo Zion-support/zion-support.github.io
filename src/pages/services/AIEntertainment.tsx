@@ -1,3 +1,4 @@
+import React from 'react';
 import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Video, BarChart3 export default function AIEntertainment() {
   const features = [
     'AI-powered content recommendation and personalization',

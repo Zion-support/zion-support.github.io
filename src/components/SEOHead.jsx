@@ -1,6 +1,9 @@
+import { Helmet } from 'react - helmet - async';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {
+export default SEOHead;
+
+
+const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https://ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {
     const siteName = 'Zion Tech Group';
     const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
     return (<Helmet>
@@ -28,27 +31,27 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
       <meta name="twitter:site" content="@ziontechgroup"/>
 
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <meta name="theme-color" content="#1e3a8a"/>
-      <meta name="msapplication-TileColor" content="#1e3a8a"/>
+      <meta name="viewport" content="width = device - width, initial - scale = 1.0"/>
+      <meta name="theme - color" content="#1e3a8a"/>
+      <meta name="msapplication - TileColor" content="#1e3a8a"/>
 
       {/* Canonical URL */}
       <link rel="canonical" href={url}/>
 
       {/* Favicon and Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+      <link rel="icon" type="image / x-icon" href="/favicon.ico"/>
+      <link rel="apple - touch - icon" sizes="180x180" href="/apple - touch - icon.png"/>
+      <link rel="icon" type="image / png" sizes="32x32" href="/favicon - 32x32.png"/>
+      <link rel="icon" type="image / png" sizes="16x16" href="/favicon - 16x16.png"/>
 
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify({
+      <script type="application / ld + json">
+        {JSON.stringify ({
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Zion Tech Group",
             "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+            "logo": "https://ziontechgroup.com / images / zion - tech - group - logo.png",
             "description": description,
             "address": {
                 "@type": "PostalAddress",
@@ -60,21 +63,21 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
             },
             "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
+                "telephone": "+1 - 302 - 464 - 0950",
                 "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
             },
             "sameAs"[;
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://github.com/ziontechgroup"
+                "https://linkedin.com / company / ziontechgroup",
+                "https://twitter.com / ziontechgroup",
+                "https://github.com / ziontechgroup"
             ]
-        })}
+        }) }
       </script>
 
       {/* Article specific structured data */}
-      {type === 'article' && publishedTime && (<script type="application/ld+json">
-          {JSON.stringify({
+      {type === 'article' && publishedTime && (<script type="application / ld + json">
+          {JSON.stringify ({
                 "@context": "https://schema.org",
                 "@type": "Article",
                 "headline": fullTitle,
@@ -89,7 +92,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                     "name": siteName,
                     "logo": {
                         "@type": "ImageObject",
-                        "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
+                        "url": "https://ziontechgroup.com / images / zion - tech - group - logo.png"
 
                 },
                 "datePublished": publishedTime,
@@ -98,8 +101,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                     "@type": "WebPage",
                     "@id": url
 
-            })}
-        </script>)}
-    </Helmet>)};
-export default SEOHead;
+            }) }
+        </script>) }
+    </Helmet>) };
 }}

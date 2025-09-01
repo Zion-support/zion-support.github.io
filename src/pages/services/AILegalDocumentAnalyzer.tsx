@@ -1,12 +1,13 @@
 import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { FileText, 
-  Shield, 
-  CheckCircle, 
-  Clock, 
-  DollarSign, 
-  Users, 
-  TrendingUp, 
+import { motion } from 'framer-motion.ts';
+import {
+  FileText,
+  Shield,
+  CheckCircle,
+  Clock,
+  DollarSign,
+  Users,
+  TrendingUp,
   Award,
   ArrowRight,
   Star,
@@ -17,92 +18,92 @@ import { FileText,
   Phone,
   Mail,
   MapPin,
-  ExternalLink
- } from 'lucide-react.ts';
+  ExternalLink,
+} from 'lucide-react.ts';
 
 const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
   const [activeTab, setActiveTab] = useState('overview');
 
   const features = [
-    "Contract risk assessment",
-    "Compliance violation detection", 
-    "Legal clause analysis",
-    "Automated contract review",
-    "Regulatory compliance checking",
-    "Document comparison tools",
-    "Legal precedent matching",
-    "Risk scoring algorithms",
-    "Multi-language support",
-    "Integration with legal databases"
+    'Contract risk assessment',
+    'Compliance violation detection',
+    'Legal clause analysis',
+    'Automated contract review',
+    'Regulatory compliance checking',
+    'Document comparison tools',
+    'Legal precedent matching',
+    'Risk scoring algorithms',
+    'Multi-language support',
+    'Integration with legal databases',
   ];
 
   const benefits = [
-    "Reduce legal review time by 90%",
-    "Identify 95% of compliance risks",
-    "Save $50K+ annually on legal fees",
-    "Improve contract negotiation outcomes",
-    "Ensure regulatory compliance"
+    'Reduce legal review time by 90%',
+    'Identify 95% of compliance risks',
+    'Save $50K+ annually on legal fees',
+    'Improve contract negotiation outcomes',
+    'Ensure regulatory compliance',
   ];
 
   const useCases = [
-    "Contract review and analysis",
-    "Regulatory compliance checking",
-    "Legal risk assessment",
-    "Due diligence processes",
-    "Legal document automation"
+    'Contract review and analysis',
+    'Regulatory compliance checking',
+    'Legal risk assessment',
+    'Due diligence processes',
+    'Legal document automation',
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$1,499",
-      period: "/month",
-      description: "Perfect for small law firms and legal departments",
+      name: 'Starter',
+      price: '$1,499',
+      period: '/month',
+      description: 'Perfect for small law firms and legal departments',
       features: [
-        "Up to 100 documents/month",
-        "Basic risk assessment",
-        "Compliance checking",
-        "Email support",
-        "Standard integrations"
+        'Up to 100 documents/month',
+        'Basic risk assessment',
+        'Compliance checking',
+        'Email support',
+        'Standard integrations',
       ],
-      popular: false
+      popular: false,
     },
     {
-      name: "Professional",
-      price: "$2,499",
-      period: "/month",
-      description: "Ideal for growing legal practices",
+      name: 'Professional',
+      price: '$2,499',
+      period: '/month',
+      description: 'Ideal for growing legal practices',
       features: [
-        "Up to 500 documents/month",
-        "Advanced risk assessment",
-        "Multi-language support",
-        "Priority support",
-        "Advanced integrations",
-        "Custom workflows"
+        'Up to 500 documents/month',
+        'Advanced risk assessment',
+        'Multi-language support',
+        'Priority support',
+        'Advanced integrations',
+        'Custom workflows',
       ],
-      popular: true
+      popular: true,
     },
     {
-      name: "Enterprise",
-      price: "$3,999",
-      period: "/month",
-      description: "For large legal organizations",
+      name: 'Enterprise',
+      price: '$3,999',
+      period: '/month',
+      description: 'For large legal organizations',
       features: [
-        "Unlimited documents",
-        "Custom AI models",
-        "White-label solution",
-        "Dedicated support",
-        "Full API access",
-        "Custom security features"
+        'Unlimited documents',
+        'Custom AI models',
+        'White-label solution',
+        'Dedicated support',
+        'Full API access',
+        'Custom security features',
       ],
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const competitors = [
-    { name: "Kira Systems", price: "$2,500+/month", rating: 4.2 },
-    { name: "Luminance", price: "$3,000+/month", rating: 4.0 },
-    { name: "ContractPodAi", price: "$2,800+/month", rating: 4.1 }
+    { name: 'Kira Systems', price: '$2,500+/month', rating: 4.2 },
+    { name: 'Luminance', price: '$3,000+/month', rating: 4.0 },
+    { name: 'ContractPodAi', price: '$2,800+/month', rating: 4.1 },
   ];
 
   return (
@@ -131,9 +132,11 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
               AI Legal Document Analyzer
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Advanced AI platform that automatically analyzes legal documents, contracts, and agreements to identify risks, compliance issues, and optimization opportunities.
+              Advanced AI platform that automatically analyzes legal documents,
+              contracts, and agreements to identify risks, compliance issues,
+              and optimization opportunities.
             </p>
-            
+
             {/* Key Metrics */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
               <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-6 rounded-xl border border-cyan-500/30">
@@ -149,7 +152,9 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                 <div className="text-gray-300">Annual Savings</div>
               </div>
               <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 p-6 rounded-xl border border-orange-500/30">
-                <div className="text-3xl font-bold text-orange-400">300-500%</div>
+                <div className="text-3xl font-bold text-orange-400">
+                  300-500%
+                </div>
                 <div className="text-gray-300">ROI</div>
               </div>
             </div>
@@ -180,19 +185,21 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-2">
-            {['overview', 'features', 'pricing', 'competitors', 'contact'].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  activeTab === tab
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
-                    : 'text-gray-400 hover:text-white hover:bg-gray-800'
-                }`}
-              >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </button>
-            ))}
+            {['overview', 'features', 'pricing', 'competitors', 'contact'].map(
+              tab => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                    activeTab === tab
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
+                      : 'text-gray-400 hover:text-white hover:bg-gray-800'
+                  }`}
+                >
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                </button>
+              )
+            )}
           </div>
         </div>
       </section>
@@ -213,25 +220,36 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                   Revolutionize Your Legal Document Analysis
                 </h2>
                 <p className="text-lg text-gray-300 mb-6">
-                  Our AI-powered platform transforms how legal professionals analyze documents. Using advanced natural language processing and machine learning, we can identify risks, compliance issues, and optimization opportunities in seconds, not hours.
+                  Our AI-powered platform transforms how legal professionals
+                  analyze documents. Using advanced natural language processing
+                  and machine learning, we can identify risks, compliance
+                  issues, and optimization opportunities in seconds, not hours.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-gray-300">Reduce legal review time by 90%</span>
+                    <span className="text-gray-300">
+                      Reduce legal review time by 90%
+                    </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-gray-300">Identify 95% of compliance risks</span>
+                    <span className="text-gray-300">
+                      Identify 95% of compliance risks
+                    </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-gray-300">Save $50K+ annually on legal fees</span>
+                    <span className="text-gray-300">
+                      Save $50K+ annually on legal fees
+                    </span>
                   </div>
                 </div>
               </div>
               <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-8 rounded-2xl border border-cyan-500/30">
-                <h3 className="text-2xl font-bold mb-4 text-center">Market Overview</h3>
+                <h3 className="text-2xl font-bold mb-4 text-center">
+                  Market Overview
+                </h3>
                 <div className="space-y-4">
                   <div className="flex justify-between">
                     <span className="text-gray-300">Market Size:</span>
@@ -247,7 +265,9 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-300">Innovation Level:</span>
-                    <span className="font-semibold text-cyan-400">Cutting-edge</span>
+                    <span className="font-semibold text-cyan-400">
+                      Cutting-edge
+                    </span>
                   </div>
                 </div>
               </div>
@@ -264,9 +284,9 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
               <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Powerful Features for Legal Professionals
               </h2>
-              
+
               <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index)  => (
+                {features.map((feature, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -284,11 +304,15 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
 
               <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div>
-                  <h3 className="text-2xl font-bold mb-6">Technical Specifications</h3>
+                  <h3 className="text-2xl font-bold mb-6">
+                    Technical Specifications
+                  </h3>
                   <div className="space-y-4">
                     <div className="flex justify-between">
                       <span className="text-gray-300">Technology:</span>
-                      <span className="font-semibold">NLP, Machine Learning, Python, React, AWS</span>
+                      <span className="font-semibold">
+                        NLP, Machine Learning, Python, React, AWS
+                      </span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-300">API Endpoints:</span>
@@ -300,15 +324,25 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-300">Security:</span>
-                      <span className="font-semibold">SOC 2, GDPR, HIPAA, End-to-end encryption</span>
+                      <span className="font-semibold">
+                        SOC 2, GDPR, HIPAA, End-to-end encryption
+                      </span>
                     </div>
                   </div>
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold mb-6">Integrations</h3>
                   <div className="grid grid-cols-2 gap-4">
-                    {['DocuSign', 'Adobe Acrobat', 'Microsoft Office', 'Legal databases'].map((integration, index) => (
-                      <div key={index} className="bg-gray-800/50 p-3 rounded-lg text-center">
+                    {[
+                      'DocuSign',
+                      'Adobe Acrobat',
+                      'Microsoft Office',
+                      'Legal databases',
+                    ].map((integration, index) => (
+                      <div
+                        key={index}
+                        className="bg-gray-800/50 p-3 rounded-lg text-center"
+                      >
                         {integration}
                       </div>
                     ))}
@@ -328,9 +362,9 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
               <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Transparent Pricing Plans
               </h2>
-              
+
               <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-                {pricingPlans.map((plan, index)  => (
+                {pricingPlans.map((plan, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -349,25 +383,30 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                         </span>
                       </div>
                     )}
-                    
+
                     <div className="text-center mb-6">
                       <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                       <div className="text-4xl font-bold text-cyan-400 mb-2">
                         {plan.price}
-                        <span className="text-lg text-gray-400">{plan.period}</span>
+                        <span className="text-lg text-gray-400">
+                          {plan.period}
+                        </span>
                       </div>
                       <p className="text-gray-300">{plan.description}</p>
                     </div>
-                    
+
                     <ul className="space-y-3 mb-8">
                       {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-3">
+                        <li
+                          key={featureIndex}
+                          className="flex items-center gap-3"
+                        >
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-gray-300">{feature}</span>
                         </li>
                       ))}
                     </ul>
-                    
+
                     <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
                       Get Started
                     </button>
@@ -394,38 +433,54 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
               <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Competitive Analysis
               </h2>
-              
+
               <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 mb-12">
-                {competitors.map((competitor, index)  => (
-                  <div key={index} className="bg-gray-800/50 p-6 rounded-xl border border-gray-600">
+                {competitors.map((competitor, index) => (
+                  <div
+                    key={index}
+                    className="bg-gray-800/50 p-6 rounded-xl border border-gray-600"
+                  >
                     <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-xl font-semibold">{competitor.name}</h3>
+                      <h3 className="text-xl font-semibold">
+                        {competitor.name}
+                      </h3>
                       <div className="flex items-center gap-1">
                         <Star className="w-5 h-5 text-yellow-400 fill-current" />
                         <span>{competitor.rating}</span>
                       </div>
                     </div>
-                    <div className="text-cyan-400 font-semibold mb-2">{competitor.price}</div>
+                    <div className="text-cyan-400 font-semibold mb-2">
+                      {competitor.price}
+                    </div>
                     <div className="text-gray-300 text-sm">
-                      Established competitor with similar features but higher pricing
+                      Established competitor with similar features but higher
+                      pricing
                     </div>
                   </div>
                 ))}
               </div>
 
               <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 p-8 rounded-2xl border border-green-500/30 text-center">
-                <h3 className="text-2xl font-bold mb-4 text-green-400">Why Choose Zion Tech Group?</h3>
+                <h3 className="text-2xl font-bold mb-4 text-green-400">
+                  Why Choose Zion Tech Group?
+                </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div>
-                    <div className="text-3xl font-bold text-green-400 mb-2">30%</div>
+                    <div className="text-3xl font-bold text-green-400 mb-2">
+                      30%
+                    </div>
                     <div className="text-gray-300">Lower Pricing</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-green-400 mb-2">4-6</div>
+                    <div className="text-3xl font-bold text-green-400 mb-2">
+                      4-6
+                    </div>
                     <div className="text-gray-300">Weeks Delivery</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+                    <div className="text-3xl font-bold text-green-400 mb-2">
+                      24/7
+                    </div>
                     <div className="text-gray-300">Support</div>
                   </div>
                 </div>
@@ -444,31 +499,44 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
               <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Get Started Today
               </h2>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-6 rounded-xl border border-cyan-500/30">
                   <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold mb-2">Call Us</h3>
                   <p className="text-gray-300 mb-4">Speak with our experts</p>
-                  <a href="tel:+13024640950" className="text-cyan-400 font-semibold hover:text-cyan-300">
+                  <a
+                    href="tel:+13024640950"
+                    className="text-cyan-400 font-semibold hover:text-cyan-300"
+                  >
                     +1 302 464 0950
                   </a>
                 </div>
-                
+
                 <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 p-6 rounded-xl border border-purple-500/30">
                   <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold mb-2">Email Us</h3>
                   <p className="text-gray-300 mb-4">Get detailed information</p>
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 font-semibold hover:text-purple-300">
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="text-purple-400 font-semibold hover:text-purple-300"
+                  >
                     kleber@ziontechgroup.com
                   </a>
                 </div>
-                
+
                 <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 p-6 rounded-xl border border-green-500/30">
                   <Globe className="w-12 h-12 text-green-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold mb-2">Visit Website</h3>
-                  <p className="text-gray-300 mb-4">Learn more about our services</p>
-                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-green-400 font-semibold hover:text-green-300 flex items-center justify-center gap-2">
+                  <p className="text-gray-300 mb-4">
+                    Learn more about our services
+                  </p>
+                  <a
+                    href="https://ziontechgroup.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-green-400 font-semibold hover:text-green-300 flex items-center justify-center gap-2"
+                  >
                     ziontechgroup.com
                     <ExternalLink className="w-4 h-4" />
                   </a>
@@ -476,9 +544,12 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
               </div>
 
               <div className="bg-gray-800/50 p-8 rounded-2xl border border-gray-600">
-                <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Legal Operations?</h3>
+                <h3 className="text-2xl font-bold mb-4">
+                  Ready to Transform Your Legal Operations?
+                </h3>
                 <p className="text-gray-300 mb-6">
-                  Join hundreds of legal professionals who have already revolutionized their document analysis with AI.
+                  Join hundreds of legal professionals who have already
+                  revolutionized their document analysis with AI.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">

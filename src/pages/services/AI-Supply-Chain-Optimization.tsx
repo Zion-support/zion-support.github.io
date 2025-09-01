@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Truck, 
-  Package, 
-  Globe, 
-  Brain, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Cpu, 
-  Database, 
-  Network, 
-  Lock, 
-  Rocket, 
+import {
+  Truck,
+  Package,
+  Globe,
+  Brain,
+  Zap,
+  Shield,
+  BarChart3,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Rocket,
   Star,
   CheckCircle,
   ArrowRight,
@@ -62,7 +62,7 @@ import {
   AreaChart,
   CandlestickChart,
   GanttChart,
-  Kanban
+  Kanban,
 } from 'lucide-react';
 
 const AISupplyChainOptimization: React.FC = () => {
@@ -77,60 +77,96 @@ const AISupplyChainOptimization: React.FC = () => {
     {
       icon: Brain,
       title: 'AI Demand Forecasting',
-      description: 'Predict demand patterns with 95% accuracy using advanced machine learning algorithms'
+      description:
+        'Predict demand patterns with 95% accuracy using advanced machine learning algorithms',
     },
     {
       icon: Truck,
       title: 'Route Optimization',
-      description: 'Optimize delivery routes to reduce costs and improve delivery times by 30%'
+      description:
+        'Optimize delivery routes to reduce costs and improve delivery times by 30%',
     },
     {
       icon: Warehouse,
       title: 'Inventory Management',
-      description: 'Smart inventory control with automated reordering and stock level optimization'
+      description:
+        'Smart inventory control with automated reordering and stock level optimization',
     },
     {
       icon: Globe,
       title: 'Global Supply Chain',
-      description: 'End-to-end visibility across international supply chains and logistics networks'
+      description:
+        'End-to-end visibility across international supply chains and logistics networks',
     },
     {
       icon: BarChart3,
       title: 'Real-time Analytics',
-      description: 'Live monitoring and analytics for supply chain performance and optimization'
+      description:
+        'Live monitoring and analytics for supply chain performance and optimization',
     },
     {
       icon: Zap,
       title: 'Automated Operations',
-      description: 'Intelligent automation of supply chain processes and decision-making'
-    }
+      description:
+        'Intelligent automation of supply chain processes and decision-making',
+    },
   ];
 
   const supplyChainModules = [
     {
       name: 'Demand Planning',
-      features: ['AI forecasting models', 'Seasonal analysis', 'Trend prediction', 'Demand variability']
+      features: [
+        'AI forecasting models',
+        'Seasonal analysis',
+        'Trend prediction',
+        'Demand variability',
+      ],
     },
     {
       name: 'Inventory Optimization',
-      features: ['Stock level management', 'Reorder automation', 'Safety stock calculation', 'ABC analysis']
+      features: [
+        'Stock level management',
+        'Reorder automation',
+        'Safety stock calculation',
+        'ABC analysis',
+      ],
     },
     {
       name: 'Logistics Management',
-      features: ['Route optimization', 'Carrier selection', 'Freight optimization', 'Last-mile delivery']
+      features: [
+        'Route optimization',
+        'Carrier selection',
+        'Freight optimization',
+        'Last-mile delivery',
+      ],
     },
     {
       name: 'Supplier Management',
-      features: ['Supplier performance', 'Risk assessment', 'Contract management', 'Quality control']
+      features: [
+        'Supplier performance',
+        'Risk assessment',
+        'Contract management',
+        'Quality control',
+      ],
     },
     {
       name: 'Warehouse Operations',
-      features: ['Space utilization', 'Picking optimization', 'Storage strategies', 'Automation integration']
+      features: [
+        'Space utilization',
+        'Picking optimization',
+        'Storage strategies',
+        'Automation integration',
+      ],
     },
     {
       name: 'Risk Management',
-      features: ['Supply disruption', 'Geopolitical risks', 'Weather impact', 'Contingency planning']
-    }
+      features: [
+        'Supply disruption',
+        'Geopolitical risks',
+        'Weather impact',
+        'Contingency planning',
+      ],
+    },
   ];
 
   const pricingTiers = [
@@ -146,11 +182,11 @@ const AISupplyChainOptimization: React.FC = () => {
         'Standard Analytics Dashboard',
         'Email Support',
         'Basic Reporting',
-        'Mobile App Access'
+        'Mobile App Access',
       ],
       marketPrice: '$3,600',
       savings: '22%',
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -166,11 +202,11 @@ const AISupplyChainOptimization: React.FC = () => {
         'Priority Support',
         'Custom Integration',
         'Advanced Analytics',
-        'Training & Certification'
+        'Training & Certification',
       ],
       marketPrice: '$8,200',
       savings: '21%',
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -187,84 +223,128 @@ const AISupplyChainOptimization: React.FC = () => {
         'White-label Solutions',
         'Custom Development',
         'Consulting Services',
-        'Staff Training'
+        'Staff Training',
       ],
       marketPrice: '$19,500',
       savings: '23%',
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const benefits = [
     {
       title: 'Cost Reduction',
-      description: 'Reduce supply chain costs by 25-35% through AI optimization and automation',
-      icon: TrendingUp
+      description:
+        'Reduce supply chain costs by 25-35% through AI optimization and automation',
+      icon: TrendingUp,
     },
     {
       title: 'Improved Efficiency',
-      description: 'Increase supply chain efficiency by 40% with intelligent automation',
-      icon: Zap
+      description:
+        'Increase supply chain efficiency by 40% with intelligent automation',
+      icon: Zap,
     },
     {
       title: 'Better Visibility',
-      description: 'Real-time visibility across the entire supply chain for better decision-making',
-      icon: Eye
+      description:
+        'Real-time visibility across the entire supply chain for better decision-making',
+      icon: Eye,
     },
     {
       title: 'Risk Mitigation',
-      description: 'Proactive risk identification and mitigation to prevent supply chain disruptions',
-      icon: Shield
-    }
+      description:
+        'Proactive risk identification and mitigation to prevent supply chain disruptions',
+      icon: Shield,
+    },
   ];
 
   const performanceStats = [
-    { metric: 'Cost Reduction', value: '30%', description: 'Average reduction in supply chain costs' },
-    { metric: 'Delivery Time', value: '25% faster', description: 'Improved delivery performance' },
-    { metric: 'Inventory Turnover', value: '40% increase', description: 'Better inventory management' },
-    { metric: 'Forecast Accuracy', value: '95%', description: 'AI-powered demand forecasting accuracy' }
+    {
+      metric: 'Cost Reduction',
+      value: '30%',
+      description: 'Average reduction in supply chain costs',
+    },
+    {
+      metric: 'Delivery Time',
+      value: '25% faster',
+      description: 'Improved delivery performance',
+    },
+    {
+      metric: 'Inventory Turnover',
+      value: '40% increase',
+      description: 'Better inventory management',
+    },
+    {
+      metric: 'Forecast Accuracy',
+      value: '95%',
+      description: 'AI-powered demand forecasting accuracy',
+    },
   ];
 
   const useCases = [
     {
       industry: 'Manufacturing',
-      applications: ['Raw Material Planning', 'Production Scheduling', 'Quality Control', 'Supplier Management']
+      applications: [
+        'Raw Material Planning',
+        'Production Scheduling',
+        'Quality Control',
+        'Supplier Management',
+      ],
     },
     {
       industry: 'Retail & E-commerce',
-      applications: ['Inventory Management', 'Demand Forecasting', 'Last-mile Delivery', 'Returns Processing']
+      applications: [
+        'Inventory Management',
+        'Demand Forecasting',
+        'Last-mile Delivery',
+        'Returns Processing',
+      ],
     },
     {
       industry: 'Logistics & Transportation',
-      applications: ['Route Optimization', 'Fleet Management', 'Freight Optimization', 'Warehouse Operations']
+      applications: [
+        'Route Optimization',
+        'Fleet Management',
+        'Freight Optimization',
+        'Warehouse Operations',
+      ],
     },
     {
       industry: 'Healthcare & Pharmaceuticals',
-      applications: ['Medical Supply Chain', 'Cold Chain Management', 'Regulatory Compliance', 'Emergency Response']
-    }
+      applications: [
+        'Medical Supply Chain',
+        'Cold Chain Management',
+        'Regulatory Compliance',
+        'Emergency Response',
+      ],
+    },
   ];
 
   const industries = [
     {
       name: 'Manufacturing',
       icon: Factory,
-      description: 'Optimize production planning, inventory management, and supplier relationships'
+      description:
+        'Optimize production planning, inventory management, and supplier relationships',
     },
     {
       name: 'Retail',
       icon: Package,
-      description: 'Streamline inventory, improve demand forecasting, and enhance customer delivery'
+      description:
+        'Streamline inventory, improve demand forecasting, and enhance customer delivery',
     },
     {
       name: 'Healthcare',
       icon: Shield,
-      description: 'Ensure medical supply availability, compliance, and emergency response readiness'
+      description:
+        'Ensure medical supply availability, compliance, and emergency response readiness',
     },
     {
       name: 'Logistics',
       icon: Truck,
-      description: 'Optimize routes, reduce costs, and improve delivery performance'
-    }
+      description:
+        'Optimize routes, reduce costs, and improve delivery performance',
+    },
   ];
 
   return (
@@ -286,8 +366,9 @@ const AISupplyChainOptimization: React.FC = () => {
               AI-Powered Supply Chain Optimization
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Revolutionary supply chain technology that combines artificial intelligence with logistics expertise 
-              to deliver unprecedented efficiency, cost savings, and operational excellence.
+              Revolutionary supply chain technology that combines artificial
+              intelligence with logistics expertise to deliver unprecedented
+              efficiency, cost savings, and operational excellence.
             </p>
           </motion.div>
 
@@ -334,8 +415,12 @@ const AISupplyChainOptimization: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.1 * index }}
                 className="text-center bg-gradient-to-br from-blue-900/50 to-cyan-900/50 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/20"
               >
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-lg font-semibold text-blue-300 mb-2">{stat.metric}</div>
+                <div className="text-3xl font-bold text-white mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-lg font-semibold text-blue-300 mb-2">
+                  {stat.metric}
+                </div>
                 <div className="text-sm text-gray-300">{stat.description}</div>
               </motion.div>
             ))}
@@ -356,7 +441,8 @@ const AISupplyChainOptimization: React.FC = () => {
               Advanced Supply Chain Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive supply chain solutions powered by cutting-edge AI technology
+              Comprehensive supply chain solutions powered by cutting-edge AI
+              technology
             </p>
           </motion.div>
 
@@ -372,8 +458,12 @@ const AISupplyChainOptimization: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -393,7 +483,8 @@ const AISupplyChainOptimization: React.FC = () => {
               Comprehensive Supply Chain Modules
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Modular supply chain solutions that adapt to your specific business needs
+              Modular supply chain solutions that adapt to your specific
+              business needs
             </p>
           </motion.div>
 
@@ -412,7 +503,10 @@ const AISupplyChainOptimization: React.FC = () => {
                 </h3>
                 <div className="space-y-3">
                   {module.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-gray-300">
+                    <div
+                      key={featureIndex}
+                      className="flex items-center text-gray-300"
+                    >
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />
                       {feature}
                     </div>
@@ -446,7 +540,10 @@ const AISupplyChainOptimization: React.FC = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : index % 2 === 0 ? -20 : 20 }}
+                animate={{
+                  opacity: isVisible ? 1 : 0,
+                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20,
+                }}
                 transition={{ duration: 0.8, delay: 0.2 * index }}
                 className="bg-gradient-to-br from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20"
               >
@@ -454,9 +551,13 @@ const AISupplyChainOptimization: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4">
                     <industry.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{industry.name}</h3>
+                  <h3 className="text-2xl font-bold text-white">
+                    {industry.name}
+                  </h3>
                 </div>
-                <p className="text-gray-300 leading-relaxed">{industry.description}</p>
+                <p className="text-gray-300 leading-relaxed">
+                  {industry.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -476,7 +577,8 @@ const AISupplyChainOptimization: React.FC = () => {
               Supply Chain Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your supply chain operations across all business functions
+              Transform your supply chain operations across all business
+              functions
             </p>
           </motion.div>
 
@@ -485,7 +587,10 @@ const AISupplyChainOptimization: React.FC = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : index % 2 === 0 ? -20 : 20 }}
+                animate={{
+                  opacity: isVisible ? 1 : 0,
+                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20,
+                }}
                 transition={{ duration: 0.8, delay: 0.2 * index }}
                 className="bg-gradient-to-br from-slate-800/80 to-cyan-800/80 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20"
               >
@@ -495,7 +600,10 @@ const AISupplyChainOptimization: React.FC = () => {
                 </h3>
                 <div className="space-y-3">
                   {useCase.applications.map((app, appIndex) => (
-                    <div key={appIndex} className="flex items-center text-gray-300">
+                    <div
+                      key={appIndex}
+                      className="flex items-center text-gray-300"
+                    >
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />
                       {app}
                     </div>
@@ -532,8 +640,8 @@ const AISupplyChainOptimization: React.FC = () => {
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
                 className={`relative bg-gradient-to-br from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${
-                  tier.popular 
-                    ? 'border-blue-500 scale-105' 
+                  tier.popular
+                    ? 'border-blue-500 scale-105'
                     : 'border-blue-500/20'
                 }`}
               >
@@ -546,9 +654,13 @@ const AISupplyChainOptimization: React.FC = () => {
                 )}
 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    {tier.name}
+                  </h3>
                   <div className="mb-4">
-                    <span className="text-4xl font-bold text-white">{tier.price}</span>
+                    <span className="text-4xl font-bold text-white">
+                      {tier.price}
+                    </span>
                     <span className="text-gray-400">{tier.period}</span>
                   </div>
                   <p className="text-gray-300 text-sm">{tier.description}</p>
@@ -556,7 +668,9 @@ const AISupplyChainOptimization: React.FC = () => {
 
                 <div className="mb-8">
                   <div className="flex items-center justify-center mb-4">
-                    <span className="text-gray-400 line-through mr-2">{tier.marketPrice}</span>
+                    <span className="text-gray-400 line-through mr-2">
+                      {tier.marketPrice}
+                    </span>
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-sm font-semibold">
                       Save {tier.savings}
                     </span>
@@ -565,7 +679,10 @@ const AISupplyChainOptimization: React.FC = () => {
 
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start text-gray-300">
+                    <li
+                      key={featureIndex}
+                      className="flex items-start text-gray-300"
+                    >
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5" />
                       <span className="text-sm">{feature}</span>
                     </li>
@@ -601,7 +718,8 @@ const AISupplyChainOptimization: React.FC = () => {
               Why Choose Our Supply Chain Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your supply chain with AI-powered optimization technology
+              Transform your supply chain with AI-powered optimization
+              technology
             </p>
           </motion.div>
 
@@ -610,15 +728,22 @@ const AISupplyChainOptimization: React.FC = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : index % 2 === 0 ? -20 : 20 }}
+                animate={{
+                  opacity: isVisible ? 1 : 0,
+                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20,
+                }}
                 transition={{ duration: 0.8, delay: 0.2 * index }}
                 className="bg-gradient-to-br from-slate-800/80 to-cyan-800/80 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{benefit.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {benefit.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -637,9 +762,10 @@ const AISupplyChainOptimization: React.FC = () => {
               Ready to Optimize Your Supply Chain?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the supply chain revolution with AI-powered optimization technology
+              Join the supply chain revolution with AI-powered optimization
+              technology
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <div className="flex items-center text-gray-300">
                 <Phone className="w-5 h-5 mr-2 text-blue-400" />

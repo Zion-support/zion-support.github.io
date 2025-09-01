@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  MessageCircle, 
-  Bot, 
-  Users, 
-  Zap, 
-  Shield, 
-  Brain, 
+import {
+  MessageCircle,
+  Bot,
+  Users,
+  Zap,
+  Shield,
+  Brain,
   CheckCircle,
   ArrowRight,
   Star,
@@ -55,120 +55,141 @@ import {
   Heart,
   Monitor,
   Laptop,
-  ShoppingBag
+  ShoppingBag,
 } from 'lucide-react';
 
 export default function AICustomerSupportAutomation() {
   const features = [
     {
       icon: Bot,
-      title: "Intelligent Chatbots",
-      description: "AI-powered chatbots that understand context and provide accurate responses 24/7"
+      title: 'Intelligent Chatbots',
+      description:
+        'AI-powered chatbots that understand context and provide accurate responses 24/7',
     },
     {
       icon: MessageCircle,
-      title: "Multi-Channel Support",
-      description: "Seamless support across email, chat, social media, and phone channels"
+      title: 'Multi-Channel Support',
+      description:
+        'Seamless support across email, chat, social media, and phone channels',
     },
     {
       icon: Brain,
-      title: "Natural Language Processing",
-      description: "Advanced NLP that understands customer intent and provides relevant solutions"
+      title: 'Natural Language Processing',
+      description:
+        'Advanced NLP that understands customer intent and provides relevant solutions',
     },
     {
       icon: Zap,
-      title: "Instant Response",
-      description: "Lightning-fast response times with automated ticket routing and escalation"
+      title: 'Instant Response',
+      description:
+        'Lightning-fast response times with automated ticket routing and escalation',
     },
     {
       icon: Shield,
-      title: "Secure & Compliant",
-      description: "Enterprise-grade security with GDPR and HIPAA compliance built-in"
+      title: 'Secure & Compliant',
+      description:
+        'Enterprise-grade security with GDPR and HIPAA compliance built-in',
     },
     {
       icon: BarChart3,
-      title: "Performance Analytics",
-      description: "Comprehensive insights into support performance and customer satisfaction"
-    }
+      title: 'Performance Analytics',
+      description:
+        'Comprehensive insights into support performance and customer satisfaction',
+    },
   ];
 
   const benefits = [
-    "Reduce response time by 90% with instant automated support",
-    "Handle 80% of customer inquiries without human intervention",
-    "Improve customer satisfaction scores by 40%",
-    "Reduce support costs by 60% through automation",
-    "Scale support operations without proportional cost increases",
-    "Provide 24/7 customer support across all time zones"
+    'Reduce response time by 90% with instant automated support',
+    'Handle 80% of customer inquiries without human intervention',
+    'Improve customer satisfaction scores by 40%',
+    'Reduce support costs by 60% through automation',
+    'Scale support operations without proportional cost increases',
+    'Provide 24/7 customer support across all time zones',
   ];
 
   const supportChannels = [
     {
       icon: MessageCircle,
-      title: "Live Chat",
-      description: "Real-time chat support with instant responses",
-      features: ["Instant responses", "Context awareness", "File sharing", "Screen sharing"]
+      title: 'Live Chat',
+      description: 'Real-time chat support with instant responses',
+      features: [
+        'Instant responses',
+        'Context awareness',
+        'File sharing',
+        'Screen sharing',
+      ],
     },
     {
       icon: Phone,
-      title: "Voice Support",
-      description: "AI-powered voice assistants and call routing",
-      features: ["Voice recognition", "Call routing", "Voice analytics", "Call recording"]
+      title: 'Voice Support',
+      description: 'AI-powered voice assistants and call routing',
+      features: [
+        'Voice recognition',
+        'Call routing',
+        'Voice analytics',
+        'Call recording',
+      ],
     },
     {
       icon: Video,
-      title: "Video Support",
-      description: "Video chat with AI assistance and screen sharing",
-      features: ["Video calls", "Screen sharing", "Recording", "AI assistance"]
+      title: 'Video Support',
+      description: 'Video chat with AI assistance and screen sharing',
+      features: ['Video calls', 'Screen sharing', 'Recording', 'AI assistance'],
     },
     {
       icon: Globe,
-      title: "Social Media",
-      description: "Multi-platform social media support integration",
-      features: ["Multi-platform", "Sentiment analysis", "Auto-responses", "Escalation"]
-    }
+      title: 'Social Media',
+      description: 'Multi-platform social media support integration',
+      features: [
+        'Multi-platform',
+        'Sentiment analysis',
+        'Auto-responses',
+        'Escalation',
+      ],
+    },
   ];
 
   const useCases = [
     {
-      industry: "E-commerce",
+      industry: 'E-commerce',
       icon: ShoppingBag,
       applications: [
-        "Order status inquiries and tracking",
-        "Product recommendations and support",
-        "Return and refund processing",
-        "Payment and billing assistance"
-      ]
+        'Order status inquiries and tracking',
+        'Product recommendations and support',
+        'Return and refund processing',
+        'Payment and billing assistance',
+      ],
     },
     {
-      industry: "SaaS",
+      industry: 'SaaS',
       icon: Cpu,
       applications: [
-        "Technical support and troubleshooting",
-        "Account management and billing",
-        "Feature requests and feedback",
-        "Onboarding and training support"
-      ]
+        'Technical support and troubleshooting',
+        'Account management and billing',
+        'Feature requests and feedback',
+        'Onboarding and training support',
+      ],
     },
     {
-      industry: "Healthcare",
+      industry: 'Healthcare',
       icon: Heart,
       applications: [
-        "Appointment scheduling and reminders",
-        "Medical information and FAQs",
-        "Insurance and billing support",
-        "Patient portal assistance"
-      ]
+        'Appointment scheduling and reminders',
+        'Medical information and FAQs',
+        'Insurance and billing support',
+        'Patient portal assistance',
+      ],
     },
     {
-      industry: "Financial Services",
+      industry: 'Financial Services',
       icon: Coins,
       applications: [
-        "Account balance and transaction inquiries",
-        "Fraud detection and security alerts",
-        "Loan and credit applications",
-        "Investment advice and portfolio management"
-      ]
-    }
+        'Account balance and transaction inquiries',
+        'Fraud detection and security alerts',
+        'Loan and credit applications',
+        'Investment advice and portfolio management',
+      ],
+    },
   ];
 
   return (
@@ -190,8 +211,9 @@ export default function AICustomerSupportAutomation() {
               AI Customer Support Automation
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your customer support with intelligent automation, 24/7 availability, 
-              and personalized assistance that delights your customers and reduces costs.
+              Transform your customer support with intelligent automation, 24/7
+              availability, and personalized assistance that delights your
+              customers and reduces costs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
@@ -226,8 +248,8 @@ export default function AICustomerSupportAutomation() {
               Powerful Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI-powered customer support tools designed to enhance 
-              customer experience and streamline support operations.
+              Comprehensive AI-powered customer support tools designed to
+              enhance customer experience and streamline support operations.
             </p>
           </div>
 
@@ -243,7 +265,9 @@ export default function AICustomerSupportAutomation() {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-blue-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -259,7 +283,8 @@ export default function AICustomerSupportAutomation() {
               Business Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See measurable improvements in customer satisfaction and operational efficiency.
+              See measurable improvements in customer satisfaction and
+              operational efficiency.
             </p>
           </div>
 
@@ -288,7 +313,7 @@ export default function AICustomerSupportAutomation() {
               Multi-Channel Support
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Provide seamless support across all customer touchpoints with 
+              Provide seamless support across all customer touchpoints with
               unified AI-powered assistance.
             </p>
           </div>
@@ -307,7 +332,9 @@ export default function AICustomerSupportAutomation() {
                     <channel.icon className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white">{channel.title}</h3>
+                    <h3 className="text-xl font-semibold text-white">
+                      {channel.title}
+                    </h3>
                     <p className="text-gray-400">{channel.description}</p>
                   </div>
                 </div>
@@ -334,7 +361,8 @@ export default function AICustomerSupportAutomation() {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how AI customer support automation transforms operations across different industries.
+              Discover how AI customer support automation transforms operations
+              across different industries.
             </p>
           </div>
 
@@ -351,14 +379,18 @@ export default function AICustomerSupportAutomation() {
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mr-4">
                     <useCase.icon className="w-6 h-6 text-blue-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{useCase.industry}</h3>
+                  <h3 className="text-xl font-semibold text-white">
+                    {useCase.industry}
+                  </h3>
                 </div>
 
                 <ul className="space-y-3">
                   {useCase.applications.map((application, appIndex) => (
                     <li key={appIndex} className="flex items-start">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">{application}</span>
+                      <span className="text-gray-300 text-sm">
+                        {application}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -381,8 +413,9 @@ export default function AICustomerSupportAutomation() {
               Ready to Transform Your Customer Support?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Start leveraging the power of AI customer support automation today and see 
-              immediate improvements in customer satisfaction and operational efficiency.
+              Start leveraging the power of AI customer support automation today
+              and see immediate improvements in customer satisfaction and
+              operational efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button

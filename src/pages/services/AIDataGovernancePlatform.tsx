@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Database, 
-  Brain, 
-  Zap, 
-  Lock, 
-  Users, 
-  BarChart3, 
+import {
+  Shield,
+  Database,
+  Brain,
+  Zap,
+  Lock,
+  Users,
+  BarChart3,
   CheckCircle,
   ArrowRight,
   Play,
@@ -25,7 +25,7 @@ import {
   Scale,
   Building,
   Cpu,
-  Network
+  Network,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -34,33 +34,39 @@ const AIDataGovernancePlatform: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Data Discovery',
-      description: 'Automatically discover, classify, and catalog sensitive data across your entire data ecosystem using machine learning.'
+      description:
+        'Automatically discover, classify, and catalog sensitive data across your entire data ecosystem using machine learning.',
     },
     {
       icon: Shield,
       title: 'Intelligent Compliance Monitoring',
-      description: 'Real-time monitoring and automated compliance reporting for GDPR, CCPA, HIPAA, SOX, and other regulations.'
+      description:
+        'Real-time monitoring and automated compliance reporting for GDPR, CCPA, HIPAA, SOX, and other regulations.',
     },
     {
       icon: Lock,
       title: 'Advanced Access Control',
-      description: 'Role-based access control with AI-driven risk assessment and dynamic permission management.'
+      description:
+        'Role-based access control with AI-driven risk assessment and dynamic permission management.',
     },
     {
       icon: Database,
       title: 'Data Lineage & Tracking',
-      description: 'Complete data lineage tracking from source to consumption with impact analysis and change management.'
+      description:
+        'Complete data lineage tracking from source to consumption with impact analysis and change management.',
     },
     {
       icon: Users,
       title: 'Collaborative Governance',
-      description: 'Multi-stakeholder collaboration tools for data stewards, compliance officers, and business users.'
+      description:
+        'Multi-stakeholder collaboration tools for data stewards, compliance officers, and business users.',
     },
     {
       icon: BarChart3,
       title: 'Governance Analytics',
-      description: 'Comprehensive dashboards and reporting on data quality, compliance status, and governance metrics.'
-    }
+      description:
+        'Comprehensive dashboards and reporting on data quality, compliance status, and governance metrics.',
+    },
   ];
 
   const pricingTiers = [
@@ -68,7 +74,8 @@ const AIDataGovernancePlatform: React.FC = () => {
       name: 'Foundation',
       price: '$399',
       period: '/month',
-      description: 'Essential data governance for small to medium organizations',
+      description:
+        'Essential data governance for small to medium organizations',
       features: [
         'Up to 10 data sources',
         'Basic AI discovery',
@@ -76,10 +83,10 @@ const AIDataGovernancePlatform: React.FC = () => {
         'Standard access control',
         'Email support',
         'Basic reporting',
-        'Up to 10 users'
+        'Up to 10 users',
       ],
       cta: 'Start Free Trial',
-      popular: false
+      popular: false,
     },
     {
       name: 'Enterprise',
@@ -95,10 +102,10 @@ const AIDataGovernancePlatform: React.FC = () => {
         'Custom reporting',
         'Up to 100 users',
         'API access',
-        'Custom integrations'
+        'Custom integrations',
       ],
       cta: 'Start Free Trial',
-      popular: true
+      popular: true,
     },
     {
       name: 'Global',
@@ -114,34 +121,36 @@ const AIDataGovernancePlatform: React.FC = () => {
         'White-label solution',
         'Unlimited users',
         'On-premise deployment',
-        'Custom SLA'
+        'Custom SLA',
       ],
       cta: 'Contact Sales',
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const benefits = [
     {
       icon: Shield,
       title: 'Ensure Compliance',
-      description: 'Automatically maintain compliance with global data protection regulations'
+      description:
+        'Automatically maintain compliance with global data protection regulations',
     },
     {
       icon: Lock,
       title: 'Protect Sensitive Data',
-      description: 'Identify and protect PII, PHI, and other sensitive information'
+      description:
+        'Identify and protect PII, PHI, and other sensitive information',
     },
     {
       icon: Users,
       title: 'Build Trust',
-      description: 'Demonstrate data stewardship and build customer confidence'
+      description: 'Demonstrate data stewardship and build customer confidence',
     },
     {
       icon: Target,
       title: 'Reduce Risk',
-      description: 'Minimize data breaches and regulatory penalties'
-    }
+      description: 'Minimize data breaches and regulatory penalties',
+    },
   ];
 
   const complianceFrameworks = [
@@ -152,7 +161,7 @@ const AIDataGovernancePlatform: React.FC = () => {
     'PCI DSS (Payment Card Industry Data Security Standard)',
     'ISO 27001 (Information Security Management)',
     'SOC 2 Type II (Service Organization Control)',
-    'NIST Cybersecurity Framework'
+    'NIST Cybersecurity Framework',
   ];
 
   return (
@@ -176,7 +185,9 @@ const AIDataGovernancePlatform: React.FC = () => {
               AI Data Governance Platform
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-300">
-              Intelligent data governance platform that automatically discovers, classifies, and protects your sensitive data while ensuring compliance with global regulations.
+              Intelligent data governance platform that automatically discovers,
+              classifies, and protects your sensitive data while ensuring
+              compliance with global regulations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -211,7 +222,8 @@ const AIDataGovernancePlatform: React.FC = () => {
               Comprehensive Data Governance Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform provides end-to-end data governance capabilities to protect your data and ensure compliance.
+              Our AI-powered platform provides end-to-end data governance
+              capabilities to protect your data and ensure compliance.
             </p>
           </motion.div>
 
@@ -227,7 +239,9 @@ const AIDataGovernancePlatform: React.FC = () => {
                 <div className="p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg w-fit mb-6">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -248,7 +262,8 @@ const AIDataGovernancePlatform: React.FC = () => {
               Global Compliance Framework Support
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Automatically maintain compliance with major global data protection and security regulations.
+              Automatically maintain compliance with major global data
+              protection and security regulations.
             </p>
           </motion.div>
 
@@ -284,7 +299,8 @@ const AIDataGovernancePlatform: React.FC = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your data governance needs. All plans include our core AI discovery and compliance features.
+              Choose the plan that best fits your data governance needs. All
+              plans include our core AI discovery and compliance features.
             </p>
           </motion.div>
 
@@ -296,8 +312,8 @@ const AIDataGovernancePlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-                  tier.popular 
-                    ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-indigo-500/10' 
+                  tier.popular
+                    ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-indigo-500/10'
                     : 'border-white/10'
                 }`}
               >
@@ -308,19 +324,26 @@ const AIDataGovernancePlatform: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {tier.name}
+                  </h3>
                   <p className="text-gray-400 mb-4">{tier.description}</p>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{tier.price}</span>
+                    <span className="text-4xl font-bold text-white">
+                      {tier.price}
+                    </span>
                     <span className="text-gray-400 ml-1">{tier.period}</span>
                   </div>
                 </div>
 
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-gray-300"
+                    >
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
@@ -356,7 +379,8 @@ const AIDataGovernancePlatform: React.FC = () => {
               Why Choose AI Data Governance Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Protect your data, ensure compliance, and build trust with intelligent governance automation.
+              Protect your data, ensure compliance, and build trust with
+              intelligent governance automation.
             </p>
           </motion.div>
 
@@ -372,7 +396,9 @@ const AIDataGovernancePlatform: React.FC = () => {
                 <div className="p-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-fit mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {benefit.title}
+                </h3>
                 <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
@@ -393,7 +419,8 @@ const AIDataGovernancePlatform: React.FC = () => {
               Ready to Govern Your Data with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join organizations worldwide that trust our platform to protect their data and ensure compliance.
+              Join organizations worldwide that trust our platform to protect
+              their data and ensure compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -432,7 +459,11 @@ const AIDataGovernancePlatform: React.FC = () => {
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 text-blue-400 mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Address</h3>
-              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p className="text-gray-300">
+                364 E Main St STE 1008
+                <br />
+                Middletown DE 19709
+              </p>
             </div>
           </div>
         </div>

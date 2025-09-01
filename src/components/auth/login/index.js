@@ -1,1 +1,1 @@
-export { default as LoginContent } from "./LoginForm";
+export { default as LoginContent } from './LoginForm';

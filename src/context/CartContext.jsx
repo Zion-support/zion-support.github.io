@@ -11,7 +11,7 @@ function cartReducer(state, action) {
       const existing = state.items.find(i => i.id === action.payload.id);
       let items;
       if (existing) {
-        items = state.items.map(i => 
+        items = state.items.map(i =>
           i.id === action.payload.id
             ? { ...i, quantity: i.quantity + action.payload.quantity }
             : i
@@ -21,24 +21,24 @@ function cartReducer(state, action) {
       }
       return { items };
     }
-    
+
     case 'REMOVE_ITEM':
       return { items: state.items.filter(i => i.id !== action.payload) };
-    
+
     case 'UPDATE_QUANTITY': {
       const { id, quantity } = action.payload;
-      const items = state.items.map(i => 
+      const items = state.items.map(i =>
         i.id === id ? { ...i, quantity } : i
       );
       return { items };
     }
-    
+
     case 'CLEAR_CART':
       return { items: [] };
-    
+
     case 'SET_ITEMS':
       return { items: action.payload };
-    
+
     default:
       return state;
   }
@@ -62,7 +62,7 @@ export function CartProvider({ children }) {
   useEffect(() => {
     let items = [];
     const stored = safeStorage.getItem(cartKey);
-    
+
     if (stored) {
       try {
         items = JSON.parse(stored);
@@ -97,11 +97,11 @@ export function CartProvider({ children }) {
     }
   }, [state.items, cartKey]);
 
-  const addItem = (item) => {
+  const addItem = item => {
     dispatch({ type: 'ADD_ITEM', payload: item });
   };
 
-  const removeItem = (id) => {
+  const removeItem = id => {
     dispatch({ type: 'REMOVE_ITEM', payload: id });
   };
 
@@ -122,7 +122,10 @@ export function CartProvider({ children }) {
   };
 
   const getTotalPrice = () => {
-    return state.items.reduce((total, item) => total + (item.price * item.quantity), 0);
+    return state.items.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
   };
 
   const value = {
@@ -133,12 +136,8 @@ export function CartProvider({ children }) {
     clearCart,
     getTotalItems,
     getTotalPrice,
-    dispatch
+    dispatch,
   };
 
-  return (
-    <CartContext.Provider value={value}>
-      {children}
-    </CartContext.Provider>
-  );
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from "framer-motion";
 import { Loader2 export function LoadingFallback({ message = "Loading...", size = "md", className = "" }) {
     const sizeClasses = {

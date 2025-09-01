@@ -1,3 +1,4 @@
+import React from 'react';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityForensics() {
   const features = [
     'AI-powered security forensics optimization',

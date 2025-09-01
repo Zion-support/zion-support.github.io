@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  Zap, 
-  Brain, 
-  Network, 
-  Server, 
-  Database, 
-  Globe, 
-  Rocket, 
+import {
+  Shield,
+  Lock,
+  Eye,
+  AlertTriangle,
+  Zap,
+  Brain,
+  Network,
+  Server,
+  Database,
+  Globe,
+  Rocket,
   Star,
   CheckCircle,
   ArrowRight,
@@ -53,7 +53,7 @@ import {
   Kanban,
   Calendar,
   Timer,
-  Stopwatch
+  Stopwatch,
 } from 'lucide-react';
 
 const AICybersecurityPlatform: React.FC = () => {
@@ -68,60 +68,95 @@ const AICybersecurityPlatform: React.FC = () => {
     {
       icon: Brain,
       title: 'AI Threat Detection',
-      description: 'Advanced machine learning algorithms that detect and respond to threats in real-time'
+      description:
+        'Advanced machine learning algorithms that detect and respond to threats in real-time',
     },
     {
       icon: Shield,
       title: 'Zero-Day Protection',
-      description: 'Protection against unknown threats using behavioral analysis and AI prediction'
+      description:
+        'Protection against unknown threats using behavioral analysis and AI prediction',
     },
     {
       icon: Network,
       title: 'Network Security',
-      description: 'Comprehensive network monitoring and intrusion prevention systems'
+      description:
+        'Comprehensive network monitoring and intrusion prevention systems',
     },
     {
       icon: Lock,
       title: 'Data Encryption',
-      description: 'End-to-end encryption for data at rest and in transit'
+      description: 'End-to-end encryption for data at rest and in transit',
     },
     {
       icon: Eye,
       title: 'Continuous Monitoring',
-      description: '24/7 security monitoring with instant alerting and response'
+      description:
+        '24/7 security monitoring with instant alerting and response',
     },
     {
       icon: Zap,
       title: 'Automated Response',
-      description: 'AI-powered automated threat response and incident management'
-    }
+      description:
+        'AI-powered automated threat response and incident management',
+    },
   ];
 
   const securityModules = [
     {
       name: 'Threat Intelligence',
-      features: ['Real-time threat feeds', 'Global threat database', 'Custom threat hunting', 'Vulnerability assessment']
+      features: [
+        'Real-time threat feeds',
+        'Global threat database',
+        'Custom threat hunting',
+        'Vulnerability assessment',
+      ],
     },
     {
       name: 'Endpoint Protection',
-      features: ['Advanced antivirus', 'Behavioral analysis', 'Device control', 'Data loss prevention']
+      features: [
+        'Advanced antivirus',
+        'Behavioral analysis',
+        'Device control',
+        'Data loss prevention',
+      ],
     },
     {
       name: 'Network Security',
-      features: ['Firewall management', 'Intrusion detection', 'Traffic analysis', 'VPN services']
+      features: [
+        'Firewall management',
+        'Intrusion detection',
+        'Traffic analysis',
+        'VPN services',
+      ],
     },
     {
       name: 'Cloud Security',
-      features: ['Cloud access security', 'API protection', 'Container security', 'Multi-cloud support']
+      features: [
+        'Cloud access security',
+        'API protection',
+        'Container security',
+        'Multi-cloud support',
+      ],
     },
     {
       name: 'Identity Management',
-      features: ['Multi-factor authentication', 'Single sign-on', 'Privileged access', 'Identity governance']
+      features: [
+        'Multi-factor authentication',
+        'Single sign-on',
+        'Privileged access',
+        'Identity governance',
+      ],
     },
     {
       name: 'Compliance & Audit',
-      features: ['SOC 2 compliance', 'GDPR compliance', 'HIPAA compliance', 'Audit reporting']
-    }
+      features: [
+        'SOC 2 compliance',
+        'GDPR compliance',
+        'HIPAA compliance',
+        'Audit reporting',
+      ],
+    },
   ];
 
   const pricingTiers = [
@@ -137,11 +172,11 @@ const AICybersecurityPlatform: React.FC = () => {
         'Email Security',
         'Basic Compliance Reporting',
         'Email Support',
-        'Security Dashboard'
+        'Security Dashboard',
       ],
       marketPrice: '$3,200',
       savings: '22%',
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -157,11 +192,11 @@ const AICybersecurityPlatform: React.FC = () => {
         'Advanced Compliance',
         'Priority Support',
         'Custom Security Policies',
-        'Security Analytics'
+        'Security Analytics',
       ],
       marketPrice: '$7,000',
       savings: '21%',
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -178,42 +213,62 @@ const AICybersecurityPlatform: React.FC = () => {
         'Custom Integration',
         'Security Training',
         'Incident Response Team',
-        'Compliance Consulting'
+        'Compliance Consulting',
       ],
       marketPrice: '$15,500',
       savings: '23%',
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const benefits = [
     {
       title: 'Proactive Protection',
-      description: 'AI-powered threat detection prevents attacks before they happen, reducing risk by 95%',
-      icon: Shield
+      description:
+        'AI-powered threat detection prevents attacks before they happen, reducing risk by 95%',
+      icon: Shield,
     },
-        {
+    {
       title: 'Cost Efficiency',
-      description: 'Reduce security costs by 40% while improving protection through automation',
-      icon: TrendingUp
+      description:
+        'Reduce security costs by 40% while improving protection through automation',
+      icon: TrendingUp,
     },
     {
       title: 'Compliance Ready',
-      description: 'Built-in compliance frameworks ensure you meet industry standards automatically',
-      icon: CheckCircle
+      description:
+        'Built-in compliance frameworks ensure you meet industry standards automatically',
+      icon: CheckCircle,
     },
     {
       title: '24/7 Security',
-      description: 'Continuous monitoring and automated response ensure your business is always protected',
-      icon: Activity
-    }
+      description:
+        'Continuous monitoring and automated response ensure your business is always protected',
+      icon: Activity,
+    },
   ];
 
   const threatStats = [
-    { metric: 'Threats Blocked', value: '99.9%', description: 'Success rate in blocking cyber threats' },
-    { metric: 'Response Time', value: '< 1 second', description: 'Average time to detect and respond' },
-    { metric: 'False Positives', value: '< 0.1%', description: 'Minimal false alarm rate' },
-    { metric: 'Uptime', value: '99.99%', description: 'Platform availability and reliability' }
+    {
+      metric: 'Threats Blocked',
+      value: '99.9%',
+      description: 'Success rate in blocking cyber threats',
+    },
+    {
+      metric: 'Response Time',
+      value: '< 1 second',
+      description: 'Average time to detect and respond',
+    },
+    {
+      metric: 'False Positives',
+      value: '< 0.1%',
+      description: 'Minimal false alarm rate',
+    },
+    {
+      metric: 'Uptime',
+      value: '99.99%',
+      description: 'Platform availability and reliability',
+    },
   ];
 
   return (
@@ -235,8 +290,9 @@ const AICybersecurityPlatform: React.FC = () => {
               AI-Powered Cybersecurity Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Next-generation cybersecurity powered by artificial intelligence, providing proactive threat detection, 
-              automated response, and comprehensive protection for your digital assets.
+              Next-generation cybersecurity powered by artificial intelligence,
+              providing proactive threat detection, automated response, and
+              comprehensive protection for your digital assets.
             </p>
           </motion.div>
 
@@ -283,8 +339,12 @@ const AICybersecurityPlatform: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.1 * index }}
                 className="text-center bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-6 border border-red-500/20"
               >
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-lg font-semibold text-red-300 mb-2">{stat.metric}</div>
+                <div className="text-3xl font-bold text-white mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-lg font-semibold text-red-300 mb-2">
+                  {stat.metric}
+                </div>
                 <div className="text-sm text-gray-300">{stat.description}</div>
               </motion.div>
             ))}
@@ -305,7 +365,8 @@ const AICybersecurityPlatform: React.FC = () => {
               Advanced Security Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive cybersecurity protection powered by cutting-edge AI technology
+              Comprehensive cybersecurity protection powered by cutting-edge AI
+              technology
             </p>
           </motion.div>
 
@@ -321,8 +382,12 @@ const AICybersecurityPlatform: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -361,7 +426,10 @@ const AICybersecurityPlatform: React.FC = () => {
                 </h3>
                 <div className="space-y-3">
                   {module.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-gray-300">
+                    <div
+                      key={featureIndex}
+                      className="flex items-center text-gray-300"
+                    >
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0" />
                       {feature}
                     </div>
@@ -386,7 +454,8 @@ const AICybersecurityPlatform: React.FC = () => {
               Competitive Security Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Enterprise-grade security at accessible prices with significant market savings
+              Enterprise-grade security at accessible prices with significant
+              market savings
             </p>
           </motion.div>
 
@@ -398,8 +467,8 @@ const AICybersecurityPlatform: React.FC = () => {
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
                 className={`relative bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${
-                  tier.popular 
-                    ? 'border-red-500 scale-105' 
+                  tier.popular
+                    ? 'border-red-500 scale-105'
                     : 'border-red-500/20'
                 }`}
               >
@@ -412,9 +481,13 @@ const AICybersecurityPlatform: React.FC = () => {
                 )}
 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    {tier.name}
+                  </h3>
                   <div className="mb-4">
-                    <span className="text-4xl font-bold text-white">{tier.price}</span>
+                    <span className="text-4xl font-bold text-white">
+                      {tier.price}
+                    </span>
                     <span className="text-gray-400">{tier.period}</span>
                   </div>
                   <p className="text-gray-300 text-sm">{tier.description}</p>
@@ -422,7 +495,9 @@ const AICybersecurityPlatform: React.FC = () => {
 
                 <div className="mb-8">
                   <div className="flex items-center justify-center mb-4">
-                    <span className="text-gray-400 line-through mr-2">{tier.marketPrice}</span>
+                    <span className="text-gray-400 line-through mr-2">
+                      {tier.marketPrice}
+                    </span>
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-sm font-semibold">
                       Save {tier.savings}
                     </span>
@@ -431,7 +506,10 @@ const AICybersecurityPlatform: React.FC = () => {
 
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start text-gray-300">
+                    <li
+                      key={featureIndex}
+                      className="flex items-start text-gray-300"
+                    >
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-0.5" />
                       <span className="text-sm">{feature}</span>
                     </li>
@@ -476,15 +554,22 @@ const AICybersecurityPlatform: React.FC = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : index % 2 === 0 ? -20 : 20 }}
+                animate={{
+                  opacity: isVisible ? 1 : 0,
+                  x: isVisible ? 0 : index % 2 === 0 ? -20 : 20,
+                }}
                 transition={{ duration: 0.8, delay: 0.2 * index }}
                 className="bg-gradient-to-br from-slate-800/80 to-orange-800/80 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/20"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{benefit.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {benefit.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -503,9 +588,10 @@ const AICybersecurityPlatform: React.FC = () => {
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Protect your digital assets with AI-powered cybersecurity that never sleeps
+              Protect your digital assets with AI-powered cybersecurity that
+              never sleeps
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <div className="flex items-center text-gray-300">
                 <Phone className="w-5 h-5 mr-2 text-red-400" />

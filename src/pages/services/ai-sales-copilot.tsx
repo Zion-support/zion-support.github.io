@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Users, 
-  TrendingUp, 
-  Target, 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  Brain, 
+import {
+  Users,
+  TrendingUp,
+  Target,
+  BarChart3,
+  Zap,
+  Shield,
+  Brain,
   CheckCircle,
   ArrowRight,
   Star,
@@ -39,69 +39,77 @@ import {
   BarChart,
   Users2,
   Settings,
-  Palette
+  Palette,
 } from 'lucide-react';
 
 export default function AISalesCopilot() {
   const features = [
     {
       icon: Brain,
-      title: "Intelligent Lead Scoring",
-      description: "AI-powered lead qualification and prioritization for maximum conversion rates"
+      title: 'Intelligent Lead Scoring',
+      description:
+        'AI-powered lead qualification and prioritization for maximum conversion rates',
     },
     {
       icon: Target,
-      title: "Predictive Analytics",
-      description: "Forecast sales outcomes and identify high-value opportunities with machine learning"
+      title: 'Predictive Analytics',
+      description:
+        'Forecast sales outcomes and identify high-value opportunities with machine learning',
     },
     {
       icon: Users,
-      title: "Customer Behavior Analysis",
-      description: "Deep insights into customer preferences and buying patterns"
+      title: 'Customer Behavior Analysis',
+      description:
+        'Deep insights into customer preferences and buying patterns',
     },
     {
       icon: TrendingUp,
-      title: "Sales Performance Optimization",
-      description: "Real-time recommendations to improve sales team effectiveness"
+      title: 'Sales Performance Optimization',
+      description:
+        'Real-time recommendations to improve sales team effectiveness',
     },
     {
       icon: Zap,
-      title: "Automated Follow-ups",
-      description: "Smart scheduling and personalized follow-up sequences"
+      title: 'Automated Follow-ups',
+      description: 'Smart scheduling and personalized follow-up sequences',
     },
     {
       icon: BarChart3,
-      title: "Advanced Reporting",
-      description: "Comprehensive dashboards and actionable insights"
-    }
+      title: 'Advanced Reporting',
+      description: 'Comprehensive dashboards and actionable insights',
+    },
   ];
 
   const benefits = [
-    "Increase sales conversion rates by up to 300%",
-    "Reduce sales cycle time by 40%",
-    "Improve lead qualification accuracy by 85%",
-    "Boost sales team productivity by 60%",
-    "Enhance customer engagement and retention",
-    "Real-time performance monitoring and optimization"
+    'Increase sales conversion rates by up to 300%',
+    'Reduce sales cycle time by 40%',
+    'Improve lead qualification accuracy by 85%',
+    'Boost sales team productivity by 60%',
+    'Enhance customer engagement and retention',
+    'Real-time performance monitoring and optimization',
   ];
 
   const useCases = [
     {
-      title: "Enterprise Sales Teams",
-      description: "Large organizations with complex sales processes and multiple stakeholders"
+      title: 'Enterprise Sales Teams',
+      description:
+        'Large organizations with complex sales processes and multiple stakeholders',
     },
     {
-      title: "B2B SaaS Companies",
-      description: "Software companies selling to businesses with long sales cycles"
+      title: 'B2B SaaS Companies',
+      description:
+        'Software companies selling to businesses with long sales cycles',
     },
     {
-      title: "Consulting Firms",
-      description: "Professional services companies managing multiple client relationships"
+      title: 'Consulting Firms',
+      description:
+        'Professional services companies managing multiple client relationships',
     },
     {
-      title: "Manufacturing & Distribution",
-      description: "Companies with complex product catalogs and pricing structures"
-    }
+      title: 'Manufacturing & Distribution',
+      description:
+        'Companies with complex product catalogs and pricing structures',
+    },
   ];
 
   return (
@@ -119,16 +127,17 @@ export default function AISalesCopilot() {
               <Brain className="w-4 h-4" />
               <span>AI-Powered Sales Intelligence</span>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Sales Copilot
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Transform your sales process with intelligent automation, predictive analytics, 
-              and AI-driven insights that boost conversion rates and accelerate revenue growth.
+              Transform your sales process with intelligent automation,
+              predictive analytics, and AI-driven insights that boost conversion
+              rates and accelerate revenue growth.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -138,7 +147,7 @@ export default function AISalesCopilot() {
                 Start Free Trial
                 <ArrowRight className="inline ml-2 w-5 h-5" />
               </motion.button>
-              
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -149,7 +158,7 @@ export default function AISalesCopilot() {
             </div>
           </motion.div>
         </div>
-        
+
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-cyan/10 rounded-full blur-3xl"></div>
@@ -170,10 +179,11 @@ export default function AISalesCopilot() {
               Intelligent Sales Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Leverage cutting-edge AI to automate, optimize, and scale your sales operations
+              Leverage cutting-edge AI to automate, optimize, and scale your
+              sales operations
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -186,7 +196,9 @@ export default function AISalesCopilot() {
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
@@ -207,10 +219,11 @@ export default function AISalesCopilot() {
               Transform Your Sales Performance
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Experience measurable improvements in every aspect of your sales process
+              Experience measurable improvements in every aspect of your sales
+              process
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
@@ -222,11 +235,13 @@ export default function AISalesCopilot() {
                   className="flex items-start space-x-4"
                 >
                   <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light text-lg">{benefit}</span>
+                  <span className="text-zion-slate-light text-lg">
+                    {benefit}
+                  </span>
                 </motion.div>
               ))}
             </div>
-            
+
             <div className="space-y-6">
               {benefits.slice(3).map((benefit, index) => (
                 <motion.div
@@ -237,7 +252,9 @@ export default function AISalesCopilot() {
                   className="flex items-start space-x-4"
                 >
                   <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light text-lg">{benefit}</span>
+                  <span className="text-zion-slate-light text-lg">
+                    {benefit}
+                  </span>
                 </motion.div>
               ))}
             </div>
@@ -258,10 +275,11 @@ export default function AISalesCopilot() {
               Perfect For Your Business
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Whether you're a startup or enterprise, our AI Sales Copilot adapts to your needs
+              Whether you're a startup or enterprise, our AI Sales Copilot
+              adapts to your needs
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -274,8 +292,12 @@ export default function AISalesCopilot() {
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                <p className="text-zion-slate-light text-sm">{useCase.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {useCase.title}
+                </h3>
+                <p className="text-zion-slate-light text-sm">
+                  {useCase.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -294,9 +316,10 @@ export default function AISalesCopilot() {
               Ready to Revolutionize Your Sales?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join thousands of companies already using AI to transform their sales performance
+              Join thousands of companies already using AI to transform their
+              sales performance
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -306,7 +329,7 @@ export default function AISalesCopilot() {
                 Get Started Today
                 <Rocket className="inline ml-2 w-5 h-5" />
               </motion.button>
-              
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

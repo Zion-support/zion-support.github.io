@@ -1,40 +1,45 @@
 import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { Globe, Leaf, Zap, Shield, TrendingUp, Users, CheckCircle, Lightbulb, Database, Cloud  } from 'lucide-react.ts';
+import { SEO } from '../../components/SEO';
+import { motion } from 'framer-motion.ts';
 
 export default function GreenIT(...args: any[]): any {
   const features = [
     {
       icon: Leaf,
       title: 'Sustainable Infrastructure',
-      description: 'Eco-friendly IT infrastructure solutions that reduce carbon footprint while maintaining performance.'
+      description:
+        'Eco-friendly IT infrastructure solutions that reduce carbon footprint while maintaining performance.',
     },
     {
       icon: Zap,
       title: 'Energy Optimization',
-      description: 'AI-powered energy management systems that optimize power consumption across your IT infrastructure.'
+      description:
+        'AI-powered energy management systems that optimize power consumption across your IT infrastructure.',
     },
     {
       icon: Cloud,
       title: 'Green Cloud Solutions',
-      description: 'Carbon-neutral cloud computing options with renewable energy-powered data centers.'
+      description:
+        'Carbon-neutral cloud computing options with renewable energy-powered data centers.',
     },
     {
       icon: Database,
       title: 'Efficient Data Management',
-      description: 'Smart data storage and processing solutions that minimize energy consumption and waste.'
+      description:
+        'Smart data storage and processing solutions that minimize energy consumption and waste.',
     },
     {
       icon: Shield,
       title: 'Environmental Compliance',
-      description: 'Built-in compliance monitoring for environmental regulations and sustainability standards.'
+      description:
+        'Built-in compliance monitoring for environmental regulations and sustainability standards.',
     },
     {
       icon: TrendingUp,
       title: 'Performance Monitoring',
-      description: 'Real-time tracking of environmental impact and sustainability metrics for continuous improvement.'
-    }
+      description:
+        'Real-time tracking of environmental impact and sustainability metrics for continuous improvement.',
+    },
   ];
 
   const benefits = [
@@ -43,39 +48,43 @@ export default function GreenIT(...args: any[]): any {
     'Meet sustainability compliance requirements',
     'Enhance brand reputation and ESG scores',
     'Future-proof your IT infrastructure',
-    'Contribute to global climate goals'
+    'Contribute to global climate goals',
   ];
 
   const solutions = [
     {
       title: 'Green Data Centers',
-      description: 'Energy-efficient data center design with renewable energy integration and advanced cooling systems.',
-      icon: Database
+      description:
+        'Energy-efficient data center design with renewable energy integration and advanced cooling systems.',
+      icon: Database,
     },
     {
       title: 'Sustainable Cloud Migration',
-      description: 'Migrate to eco-friendly cloud platforms with carbon-neutral computing options.',
-      icon: Cloud
+      description:
+        'Migrate to eco-friendly cloud platforms with carbon-neutral computing options.',
+      icon: Cloud,
     },
     {
       title: 'Energy Management Systems',
-      description: 'AI-powered monitoring and optimization of IT infrastructure energy consumption.',
-      icon: Zap
+      description:
+        'AI-powered monitoring and optimization of IT infrastructure energy consumption.',
+      icon: Zap,
     },
     {
       title: 'Circular IT Practices',
-      description: 'Implement recycling, refurbishment, and responsible disposal of IT equipment.',
-      icon: Leaf
-    }
+      description:
+        'Implement recycling, refurbishment, and responsible disposal of IT equipment.',
+      icon: Leaf,
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Green IT Solutions - Zion Tech Group"
         description="Transform your IT infrastructure with sustainable, eco-friendly solutions. Reduce carbon footprint, lower energy costs, and meet sustainability goals."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10"></div>
@@ -94,8 +103,9 @@ export default function GreenIT(...args: any[]): any {
               Green IT Solutions
             </h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Transform your IT infrastructure with sustainable, eco-friendly solutions that reduce environmental impact 
-              while improving performance and lowering costs.
+              Transform your IT infrastructure with sustainable, eco-friendly
+              solutions that reduce environmental impact while improving
+              performance and lowering costs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
@@ -122,13 +132,14 @@ export default function GreenIT(...args: any[]): any {
               Sustainable Technology Features
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our Green IT solutions combine environmental responsibility with cutting-edge technology 
-              to deliver sustainable, high-performance IT infrastructure.
+              Our Green IT solutions combine environmental responsibility with
+              cutting-edge technology to deliver sustainable, high-performance
+              IT infrastructure.
             </p>
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -139,8 +150,12 @@ export default function GreenIT(...args: any[]): any {
                 <div className="w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-green-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-slate-300 leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-slate-300 leading-relaxed">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -160,13 +175,14 @@ export default function GreenIT(...args: any[]): any {
               Comprehensive Green IT Solutions
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              From data centers to cloud migration, we offer end-to-end sustainable IT solutions 
-              that align with your environmental and business objectives.
+              From data centers to cloud migration, we offer end-to-end
+              sustainable IT solutions that align with your environmental and
+              business objectives.
             </p>
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 gap-8">
-            {solutions.map((solution, index)  => (
+            {solutions.map((solution, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -177,8 +193,12 @@ export default function GreenIT(...args: any[]): any {
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-green-400" />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>
-                <p className="text-slate-300 leading-relaxed mb-6">{solution.description}</p>
+                <h3 className="text-2xl font-semibold text-white mb-4">
+                  {solution.title}
+                </h3>
+                <p className="text-slate-300 leading-relaxed mb-6">
+                  {solution.description}
+                </p>
                 <button className="text-green-400 hover:text-green-300 font-medium transition-colors">
                   Learn More →
                 </button>
@@ -201,8 +221,9 @@ export default function GreenIT(...args: any[]): any {
                 Environmental & Business Benefits
               </h2>
               <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                Our Green IT solutions deliver measurable benefits for both the environment and your business. 
-                Reduce costs while making a positive impact on the planet.
+                Our Green IT solutions deliver measurable benefits for both the
+                environment and your business. Reduce costs while making a
+                positive impact on the planet.
               </p>
               <div className="grid grid-cols-1 gap-4">
                 {benefits.map((benefit, index) => (
@@ -225,9 +246,12 @@ export default function GreenIT(...args: any[]): any {
                   <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Lightbulb className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Go Green Today</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    Go Green Today
+                  </h3>
                   <p className="text-slate-300 mb-6">
-                    Start your sustainability journey with our expert Green IT consultants.
+                    Start your sustainability journey with our expert Green IT
+                    consultants.
                   </p>
                   <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200">
                     Get Assessment
@@ -252,8 +276,8 @@ export default function GreenIT(...args: any[]): any {
               Ready to Go Green?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Join the sustainable technology revolution and make a positive impact on the environment 
-              while improving your IT infrastructure.
+              Join the sustainable technology revolution and make a positive
+              impact on the environment while improving your IT infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">

@@ -1,13 +1,14 @@
 import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
-import { Brain, 
-  Shield, 
-  Cloud, 
-  Server, 
-  BarChart3, 
-  Users, 
-  ShoppingCart, 
+import { Link } from 'react-router-dom.ts';
+import { motion } from 'framer-motion.ts';
+import {
+  Brain,
+  Shield,
+  Cloud,
+  Server,
+  BarChart3,
+  Users,
+  ShoppingCart,
   Building,
   Heart,
   Globe,
@@ -24,50 +25,128 @@ import { Brain,
   Activity,
   Workflow,
   Sparkles,
-  Award
- } from 'lucide-react.ts';
-import { SEO  } from '../../components/SEO';
+  Award,
+} from 'lucide-react.ts';
+import { SEO } from '../../components/SEO';
 
 export default function Solutions(...args: any[]): any {
   const solutionCategories = [
     {
       title: 'AI & Machine Learning Solutions',
       icon: Brain,
-      description: 'Cutting-edge artificial intelligence and machine learning solutions for modern businesses',
+      description:
+        'Cutting-edge artificial intelligence and machine learning solutions for modern businesses',
       color: 'from-purple-500 to-pink-500',
       solutions: [
-        { name: 'AI Business Intelligence', href: '/solutions/ai-business-intelligence', icon: BarChart3, description: 'Advanced analytics and insights powered by AI' },
-        { name: 'AI Content Generation', href: '/solutions/ai-content-generation', icon: Users, description: 'Automated content creation and management' },
-        { name: 'AI-Powered Security', href: '/solutions/ai-powered-security', icon: Shield, description: 'Intelligent threat detection and prevention' },
-        { name: 'AI Autonomous Research', href: '/solutions/ai-autonomous-research', icon: Brain, description: 'Self-directed research and analysis systems' },
-        { name: 'AI Autonomous Business', href: '/solutions/ai-autonomous-business', icon: Building, description: 'End-to-end business automation solutions' },
-        { name: 'AI Autonomous Ecosystem', href: '/solutions/ai-autonomous-ecosystem', icon: Globe, description: 'Comprehensive AI ecosystem management' }
-      ]
+        {
+          name: 'AI Business Intelligence',
+          href: '/solutions/ai-business-intelligence',
+          icon: BarChart3,
+          description: 'Advanced analytics and insights powered by AI',
+        },
+        {
+          name: 'AI Content Generation',
+          href: '/solutions/ai-content-generation',
+          icon: Users,
+          description: 'Automated content creation and management',
+        },
+        {
+          name: 'AI-Powered Security',
+          href: '/solutions/ai-powered-security',
+          icon: Shield,
+          description: 'Intelligent threat detection and prevention',
+        },
+        {
+          name: 'AI Autonomous Research',
+          href: '/solutions/ai-autonomous-research',
+          icon: Brain,
+          description: 'Self-directed research and analysis systems',
+        },
+        {
+          name: 'AI Autonomous Business',
+          href: '/solutions/ai-autonomous-business',
+          icon: Building,
+          description: 'End-to-end business automation solutions',
+        },
+        {
+          name: 'AI Autonomous Ecosystem',
+          href: '/solutions/ai-autonomous-ecosystem',
+          icon: Globe,
+          description: 'Comprehensive AI ecosystem management',
+        },
+      ],
     },
     {
       title: 'Enterprise Solutions',
       icon: Building,
-      description: 'Scalable enterprise-grade solutions for large organizations',
+      description:
+        'Scalable enterprise-grade solutions for large organizations',
       color: 'from-blue-500 to-cyan-500',
       solutions: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building, description: 'Comprehensive enterprise technology solutions' },
-        { name: 'Financial Solutions', href: '/solutions/financial-solutions', icon: TrendingUp, description: 'Advanced financial technology and analytics' },
-        { name: 'Government Solutions', href: '/solutions/government-solutions', icon: Shield, description: 'Secure government technology infrastructure' },
-        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing-solutions', icon: Cpu, description: 'Smart manufacturing and Industry 4.0' },
-        { name: 'Retail Solutions', href: '/solutions/retail-solutions', icon: ShoppingCart, description: 'Digital retail transformation and e-commerce' }
-      ]
+        {
+          name: 'Enterprise Solutions',
+          href: '/solutions/enterprise',
+          icon: Building,
+          description: 'Comprehensive enterprise technology solutions',
+        },
+        {
+          name: 'Financial Solutions',
+          href: '/solutions/financial-solutions',
+          icon: TrendingUp,
+          description: 'Advanced financial technology and analytics',
+        },
+        {
+          name: 'Government Solutions',
+          href: '/solutions/government-solutions',
+          icon: Shield,
+          description: 'Secure government technology infrastructure',
+        },
+        {
+          name: 'Manufacturing Solutions',
+          href: '/solutions/manufacturing-solutions',
+          icon: Cpu,
+          description: 'Smart manufacturing and Industry 4.0',
+        },
+        {
+          name: 'Retail Solutions',
+          href: '/solutions/retail-solutions',
+          icon: ShoppingCart,
+          description: 'Digital retail transformation and e-commerce',
+        },
+      ],
     },
     {
       title: 'Healthcare Solutions',
       icon: Heart,
-      description: 'Innovative healthcare technology solutions for better patient care',
+      description:
+        'Innovative healthcare technology solutions for better patient care',
       color: 'from-green-500 to-emerald-500',
       solutions: [
-        { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart, description: 'Comprehensive healthcare technology solutions' },
-        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Brain, description: 'AI-powered healthcare management systems' },
-        { name: 'Digital Health Solutions', href: '/services/digital-health', icon: Activity, description: 'Digital transformation for healthcare providers' },
-        { name: 'Telemedicine Solutions', href: '/services/telemedicine', icon: Users, description: 'Remote healthcare delivery platforms' }
-      ]
+        {
+          name: 'Healthcare Solutions',
+          href: '/solutions/healthcare',
+          icon: Heart,
+          description: 'Comprehensive healthcare technology solutions',
+        },
+        {
+          name: 'AI Healthcare Platform',
+          href: '/services/ai-healthcare-platform',
+          icon: Brain,
+          description: 'AI-powered healthcare management systems',
+        },
+        {
+          name: 'Digital Health Solutions',
+          href: '/services/digital-health',
+          icon: Activity,
+          description: 'Digital transformation for healthcare providers',
+        },
+        {
+          name: 'Telemedicine Solutions',
+          href: '/services/telemedicine',
+          icon: Users,
+          description: 'Remote healthcare delivery platforms',
+        },
+      ],
     },
     {
       title: 'Quantum Computing Solutions',
@@ -75,11 +154,31 @@ export default function Solutions(...args: any[]): any {
       description: 'Next-generation quantum computing and hybrid AI solutions',
       color: 'from-indigo-500 to-purple-500',
       solutions: [
-        { name: 'Quantum Edge Computing', href: '/solutions/quantum-edge-computing', icon: Network, description: 'Quantum-powered edge computing solutions' },
-        { name: 'Quantum Neural Network', href: '/solutions/quantum-neural-network', icon: Brain, description: 'Quantum neural network architectures' },
-        { name: 'Quantum AI Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom, description: 'Combined quantum and AI computing' },
-        { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', icon: Brain, description: 'ML algorithms optimized for quantum systems' }
-      ]
+        {
+          name: 'Quantum Edge Computing',
+          href: '/solutions/quantum-edge-computing',
+          icon: Network,
+          description: 'Quantum-powered edge computing solutions',
+        },
+        {
+          name: 'Quantum Neural Network',
+          href: '/solutions/quantum-neural-network',
+          icon: Brain,
+          description: 'Quantum neural network architectures',
+        },
+        {
+          name: 'Quantum AI Hybrid Platform',
+          href: '/services/ai-quantum-hybrid-platform',
+          icon: Atom,
+          description: 'Combined quantum and AI computing',
+        },
+        {
+          name: 'Quantum Machine Learning',
+          href: '/services/quantum-machine-learning',
+          icon: Brain,
+          description: 'ML algorithms optimized for quantum systems',
+        },
+      ],
     },
     {
       title: 'Cybersecurity & Privacy',
@@ -87,24 +186,65 @@ export default function Solutions(...args: any[]): any {
       description: 'Advanced security solutions for the digital age',
       color: 'from-red-500 to-orange-500',
       solutions: [
-        { name: 'Zero Trust Network Architecture', href: '/solutions/zero-trust-network-architecture', icon: Lock, description: 'Modern zero-trust security frameworks' },
-        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'AI-powered threat detection and response' },
-        { name: 'Privacy & Compliance', href: '/services/privacy-compliance', icon: Lock, description: 'GDPR, CCPA, and regulatory compliance' },
-        { name: 'Incident Response', href: '/services/incident-response', icon: Activity, description: 'Rapid security incident response systems' }
-      ]
+        {
+          name: 'Zero Trust Network Architecture',
+          href: '/solutions/zero-trust-network-architecture',
+          icon: Lock,
+          description: 'Modern zero-trust security frameworks',
+        },
+        {
+          name: 'AI Cybersecurity Platform',
+          href: '/services/ai-cybersecurity-platform',
+          icon: Shield,
+          description: 'AI-powered threat detection and response',
+        },
+        {
+          name: 'Privacy & Compliance',
+          href: '/services/privacy-compliance',
+          icon: Lock,
+          description: 'GDPR, CCPA, and regulatory compliance',
+        },
+        {
+          name: 'Incident Response',
+          href: '/services/incident-response',
+          icon: Activity,
+          description: 'Rapid security incident response systems',
+        },
+      ],
     },
     {
       title: 'Digital Transformation',
       icon: Rocket,
-      description: 'Comprehensive digital transformation solutions for modern businesses',
+      description:
+        'Comprehensive digital transformation solutions for modern businesses',
       color: 'from-yellow-500 to-orange-500',
       solutions: [
-        { name: 'Digital Twin Solutions', href: '/services/digital-twin', icon: Eye, description: 'Virtual system replicas and simulation' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network, description: 'Smart device networks and edge processing' },
-        { name: 'Sustainable Technology', href: '/services/sustainable-technology', icon: Globe, description: 'Green IT and sustainability solutions' },
-        { name: '5G Enterprise Solutions', href: '/services/5g-enterprise', icon: Network, description: 'Next-generation enterprise connectivity' }
-      ]
-    }
+        {
+          name: 'Digital Twin Solutions',
+          href: '/services/digital-twin',
+          icon: Eye,
+          description: 'Virtual system replicas and simulation',
+        },
+        {
+          name: 'IoT Edge Computing',
+          href: '/services/iot-edge-computing',
+          icon: Network,
+          description: 'Smart device networks and edge processing',
+        },
+        {
+          name: 'Sustainable Technology',
+          href: '/services/sustainable-technology',
+          icon: Globe,
+          description: 'Green IT and sustainability solutions',
+        },
+        {
+          name: '5G Enterprise Solutions',
+          href: '/services/5g-enterprise',
+          icon: Network,
+          description: 'Next-generation enterprise connectivity',
+        },
+      ],
+    },
   ];
 
   const featuredSolutions = [
@@ -112,39 +252,43 @@ export default function Solutions(...args: any[]): any {
       name: 'AI Business Intelligence',
       href: '/solutions/ai-business-intelligence',
       icon: BarChart3,
-      description: 'Transform your data into actionable insights with AI-powered analytics',
-      featured: true
+      description:
+        'Transform your data into actionable insights with AI-powered analytics',
+      featured: true,
     },
     {
       name: 'Quantum Computing Solutions',
       href: '/solutions/quantum-computing',
       icon: Atom,
-      description: 'Leverage the power of quantum computing for complex problem-solving',
-      featured: true
+      description:
+        'Leverage the power of quantum computing for complex problem-solving',
+      featured: true,
     },
     {
       name: 'Enterprise Digital Transformation',
       href: '/solutions/enterprise',
       icon: Building,
-      description: 'Comprehensive digital transformation for enterprise organizations',
-      featured: true
+      description:
+        'Comprehensive digital transformation for enterprise organizations',
+      featured: true,
     },
     {
       name: 'AI-Powered Security',
       href: '/solutions/ai-powered-security',
       icon: Shield,
-      description: 'Next-generation cybersecurity powered by artificial intelligence',
-      featured: true
-    }
+      description:
+        'Next-generation cybersecurity powered by artificial intelligence',
+      featured: true,
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Solutions - Zion Tech Group"
         description="Comprehensive technology solutions including AI, quantum computing, enterprise solutions, healthcare technology, and digital transformation services."
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
@@ -157,11 +301,15 @@ export default function Solutions(...args: any[]): any {
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Comprehensive
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Solutions</span>
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                {' '}
+                Solutions
+              </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Discover our cutting-edge technology solutions designed to transform your business. 
-              From AI and quantum computing to enterprise solutions and digital transformation.
+              Discover our cutting-edge technology solutions designed to
+              transform your business. From AI and quantum computing to
+              enterprise solutions and digital transformation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
@@ -194,12 +342,13 @@ export default function Solutions(...args: any[]): any {
               Featured Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our most popular and innovative solutions that are transforming industries worldwide
+              Our most popular and innovative solutions that are transforming
+              industries worldwide
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredSolutions.map((solution, index)  => (
+            {featuredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -223,7 +372,9 @@ export default function Solutions(...args: any[]): any {
                   {solution.featured && (
                     <div className="mt-4 flex items-center gap-2">
                       <Star className="w-4 h-4 text-yellow-400" />
-                      <span className="text-xs text-yellow-400 font-medium">Featured</span>
+                      <span className="text-xs text-yellow-400 font-medium">
+                        Featured
+                      </span>
                     </div>
                   )}
                 </Link>
@@ -246,7 +397,8 @@ export default function Solutions(...args: any[]): any {
               Solution Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our comprehensive range of technology solutions organized by category
+              Explore our comprehensive range of technology solutions organized
+              by category
             </p>
           </motion.div>
 
@@ -260,17 +412,21 @@ export default function Solutions(...args: any[]): any {
                 className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8"
               >
                 <div className="flex items-center gap-4 mb-8">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center`}>
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center`}
+                  >
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white">{category.title}</h3>
+                    <h3 className="text-2xl font-bold text-white">
+                      {category.title}
+                    </h3>
                     <p className="text-gray-300">{category.description}</p>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.solutions.map((solution, solutionIndex)  => (
+                  {category.solutions.map((solution, solutionIndex) => (
                     <Link
                       key={solution.name}
                       to={solution.href}
@@ -312,7 +468,8 @@ export default function Solutions(...args: any[]): any {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Let our expert team help you implement the right solutions for your organization's unique needs.
+                Let our expert team help you implement the right solutions for
+                your organization's unique needs.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link

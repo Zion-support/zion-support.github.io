@@ -1,10 +1,11 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Shield, 
-  Eye, 
-  AlertTriangle, 
-  Target, 
-  CheckCircle, 
+import { motion } from 'framer-motion.ts';
+import {
+  Shield,
+  Eye,
+  AlertTriangle,
+  Target,
+  CheckCircle,
   Star,
   BarChart3,
   Users,
@@ -33,35 +34,55 @@ import { Shield,
   BarChart,
   TrendingUp,
   Activity,
-  ShieldCheck
- } from 'lucide-react.ts';
+  ShieldCheck,
+} from 'lucide-react.ts';
 
 export default function AIAutonomousThreatIntelligence(...args: any[]): any {
   const features = [
     {
       icon: Eye,
       title: 'Real-time Threat Detection',
-      description: 'AI-powered monitoring that identifies threats before they become attacks',
-      benefits: ['24/7 surveillance', 'Zero-day threat detection', 'Behavioral analysis']
+      description:
+        'AI-powered monitoring that identifies threats before they become attacks',
+      benefits: [
+        '24/7 surveillance',
+        'Zero-day threat detection',
+        'Behavioral analysis',
+      ],
     },
     {
       icon: Shield,
       title: 'Autonomous Response',
-      description: 'AI that automatically blocks and mitigates threats without human intervention',
-      benefits: ['Instant threat neutralization', 'Adaptive defense strategies', 'Self-learning protection']
+      description:
+        'AI that automatically blocks and mitigates threats without human intervention',
+      benefits: [
+        'Instant threat neutralization',
+        'Adaptive defense strategies',
+        'Self-learning protection',
+      ],
     },
     {
       icon: Target,
       title: 'Predictive Intelligence',
-      description: 'Machine learning models that predict and prevent future attacks',
-      benefits: ['Attack pattern recognition', 'Risk assessment', 'Proactive defense']
+      description:
+        'Machine learning models that predict and prevent future attacks',
+      benefits: [
+        'Attack pattern recognition',
+        'Risk assessment',
+        'Proactive defense',
+      ],
     },
     {
       icon: Network,
       title: 'Global Threat Intelligence',
-      description: 'Real-time threat data from worldwide sources and dark web monitoring',
-      benefits: ['Global threat visibility', 'Dark web intelligence', 'Cross-platform correlation']
-    }
+      description:
+        'Real-time threat data from worldwide sources and dark web monitoring',
+      benefits: [
+        'Global threat visibility',
+        'Dark web intelligence',
+        'Cross-platform correlation',
+      ],
+    },
   ];
 
   const threatTypes = [
@@ -70,29 +91,41 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
       description: 'Advanced ransomware detection and prevention',
       icon: Lock,
       price: '$15,000/month',
-      features: ['Behavioral analysis', 'File encryption detection', 'Backup protection']
+      features: [
+        'Behavioral analysis',
+        'File encryption detection',
+        'Backup protection',
+      ],
     },
     {
       title: 'Phishing Defense',
       description: 'AI-powered email and web phishing detection',
       icon: Mail,
       price: '$12,000/month',
-      features: ['URL analysis', 'Content filtering', 'Social engineering detection']
+      features: [
+        'URL analysis',
+        'Content filtering',
+        'Social engineering detection',
+      ],
     },
     {
       title: 'DDoS Mitigation',
       description: 'Intelligent DDoS attack prevention and mitigation',
       icon: Network,
       price: '$18,000/month',
-      features: ['Traffic analysis', 'Rate limiting', 'Geographic blocking']
+      features: ['Traffic analysis', 'Rate limiting', 'Geographic blocking'],
     },
     {
       title: 'Insider Threat Detection',
       description: 'Monitor and detect malicious insider activities',
       icon: Users,
       price: '$20,000/month',
-      features: ['User behavior analysis', 'Access monitoring', 'Anomaly detection']
-    }
+      features: [
+        'User behavior analysis',
+        'Access monitoring',
+        'Anomaly detection',
+      ],
+    },
   ];
 
   const pricing = [
@@ -105,8 +138,8 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
         'Basic threat detection',
         'Email security',
         'Standard support',
-        'Basic reporting'
-      ]
+        'Basic reporting',
+      ],
     },
     {
       name: 'Threat Shield Pro',
@@ -118,9 +151,9 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
         'Autonomous response',
         'Priority support',
         'Real-time monitoring',
-        'Predictive analytics'
+        'Predictive analytics',
       ],
-      popular: true
+      popular: true,
     },
     {
       name: 'Threat Shield Enterprise',
@@ -132,9 +165,9 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
         'Custom AI models',
         'Dedicated security analyst',
         '24/7 support',
-        'White-label solutions'
-      ]
-    }
+        'White-label solutions',
+      ],
+    },
   ];
 
   return (
@@ -145,7 +178,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_30%,rgba(239,68,68,0.1)_50%,transparent_70%)] animate-pulse"></div>
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -157,16 +190,17 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                 <Shield className="h-8 w-8 text-white" />
               </div>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
               AI Autonomous Threat Intelligence
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              The world's most advanced AI-powered threat intelligence platform that autonomously detects, 
-              analyzes, and neutralizes cyber threats in real-time.
+              The world's most advanced AI-powered threat intelligence platform
+              that autonomously detects, analyzes, and neutralizes cyber threats
+              in real-time.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -200,12 +234,13 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
               Revolutionary Security Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the future of cybersecurity with autonomous AI threat intelligence
+              Experience the future of cybersecurity with autonomous AI threat
+              intelligence
             </p>
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -219,11 +254,11 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                   </div>
                   <h3 className="text-2xl font-bold">{feature.title}</h3>
                 </div>
-                
+
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                   {feature.description}
                 </p>
-                
+
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-gray-200">
@@ -256,7 +291,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {threatTypes.map((threat, index)  => (
+            {threatTypes.map((threat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -270,18 +305,21 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                   </div>
                   <h3 className="text-lg font-semibold">{threat.title}</h3>
                 </div>
-                
+
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                   {threat.description}
                 </p>
-                
+
                 <div className="text-red-400 font-semibold text-lg mb-4">
                   {threat.price}
                 </div>
 
                 <ul className="space-y-2">
                   {threat.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-200 text-sm">
+                    <li
+                      key={idx}
+                      className="flex items-center text-gray-200 text-sm"
+                    >
                       <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
@@ -311,15 +349,15 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
           </motion.div>
 
           <div className="grid md: anygrid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
+            {pricing.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className={`relative bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border ${
-                  plan.popular 
-                    ? 'border-red-400/60 shadow-lg shadow-red-500/25' 
+                  plan.popular
+                    ? 'border-red-400/60 shadow-lg shadow-red-500/25'
                     : 'border-red-500/20'
                 } hover:border-red-400/40 transition-all duration-300`}
               >
@@ -330,7 +368,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>
                   <div className="mb-2">
@@ -339,7 +377,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-200">
@@ -348,7 +386,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                     </li>
                   ))}
                 </ul>
-                
+
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -378,9 +416,10 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
               Ready to Secure Your Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join the cybersecurity revolution with autonomous AI threat intelligence
+              Join the cybersecurity revolution with autonomous AI threat
+              intelligence
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -418,7 +457,11 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
             <div className="flex flex-col items-center">
               <MapPin className="h-8 w-8 text-red-400 mb-4" />
               <h3 className="text-lg font-semibold mb-2">Address</h3>
-              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p className="text-gray-300">
+                364 E Main St STE 1008
+                <br />
+                Middletown DE 19709
+              </p>
             </div>
           </div>
         </div>

@@ -1,9 +1,11 @@
+import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { allEnhancedServices } from "../data/enhanced-2025-comprehensive-services";
+import { allEnhancedServices } from "../data / enhanced - 2025 - comprehensive - services";
+
+
 const ComprehensiveServicesOverview2025 = () => {
-    const [selectedService, setSelectedService] = useState(null);
-    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedService, setSelectedService] = useState (null) ;
+    const [selectedCategory, setSelectedCategory] = useState ('all') ;
     const categories = [
         'all',
         'AI & Business Intelligence',
@@ -19,7 +21,7 @@ const ComprehensiveServicesOverview2025 = () => {
         'Energy & Sustainability',
         'Logistics & Transportation'
     ];
-    const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory);
+    const filteredServices = allEnhancedServices.filter (service => selectedCategory === 'all' || service.category === selectedCategory) ;
     const getCategoryIcon = (category) => {
         const icons = {
   'AI & Business Intelligence': '🧠',

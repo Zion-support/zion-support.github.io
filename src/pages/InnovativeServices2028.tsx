@@ -1,7 +1,11 @@
+import { Link } from 'react - router - dom';
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+export default React.memo (function InnovativeServices2028 (...args[]) :  {
 import {
+import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from "../data / innovativeServices2028";
+import { motion, AnimatePresence } from 'framer - motion';
+
+
   Brain,
   Zap,
   Lock,
@@ -26,39 +30,36 @@ import {
   Search,
   ChevronDown,
   ChevronUp
-} from 'lucide-react';
-import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from "../data/innovativeServices2028";
+} from 'lucide - react';
 
-export default function InnovativeServices2028(...args[]):  {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('name');
-  const [expandedService, setExpandedService] = useState<any>(null);
+  const [selectedCategory, setSelectedCategory] = useState ('all') ;
+  const [searchTerm, setSearchTerm] = useState ('') ;
+  const [sortBy, setSortBy] = useState ('name') ;
+  const [expandedService, setExpandedService] = useState < any> (null) ;
 
-  const filteredServices = innovativeServices2028.filter(service => {
+  const filteredServices = innovativeServices2028.filter (service => {
     const matchesCategory = selectedCategory === 'all' ||
-      serviceCategories.find(cat => cat.id === selectedCategory)?.services.includes(service.id);
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-      service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch});
+      serviceCategories.find (cat => cat.id === selectedCategory) ?.services.includes (service.id) ;
+    const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+      service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+      service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
+    return matchesCategory && matchesSearch}) ;
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  const sortedServices = [...filteredServices].sort ( (a, b) => {;
     switch (sortBy) {;
       case 'price':;
         return a.price - b.price;
       case 'roi':;
-        return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
+        return parseInt (b.roi.split ('%') [0]) - parseInt (a.roi.split ('%') [0]) ;
       case 'name':;
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare (b.name) ;
       default:;
         return 0}
-  });
+  }) ;
 
             </motion.div>;
           </div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }

@@ -1,14 +1,15 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Brain, 
-  Zap, 
-  TrendingUp, 
-  BarChart3, 
-  Clock, 
-  DollarSign, 
-  Shield, 
-  Users, 
-  Target, 
+import { motion } from 'framer-motion.ts';
+import {
+  Brain,
+  Zap,
+  TrendingUp,
+  BarChart3,
+  Clock,
+  DollarSign,
+  Shield,
+  Users,
+  Target,
   ArrowRight,
   CheckCircle,
   Star,
@@ -19,150 +20,163 @@ import { Brain,
   Cpu,
   Database,
   Workflow,
-  Gauge
- } from 'lucide-react.ts';
-import { Link  } from 'react-router-dom.ts';
+  Gauge,
+} from 'lucide-react.ts';
+import { Link } from 'react-router-dom.ts';
 
 const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Process Analysis",
-      description: "Advanced machine learning algorithms analyze your business processes to identify inefficiencies, bottlenecks, and optimization opportunities in real-time."
+      title: 'AI-Powered Process Analysis',
+      description:
+        'Advanced machine learning algorithms analyze your business processes to identify inefficiencies, bottlenecks, and optimization opportunities in real-time.',
     },
     {
       icon: Workflow,
-      title: "Intelligent Workflow Automation",
-      description: "Automatically design and implement optimized workflows that adapt to changing business conditions and learn from user behavior patterns."
+      title: 'Intelligent Workflow Automation',
+      description:
+        'Automatically design and implement optimized workflows that adapt to changing business conditions and learn from user behavior patterns.',
     },
     {
       icon: BarChart3,
-      title: "Predictive Performance Analytics",
-      description: "Forecast process performance, resource requirements, and potential issues before they impact your operations using AI-driven predictive modeling."
+      title: 'Predictive Performance Analytics',
+      description:
+        'Forecast process performance, resource requirements, and potential issues before they impact your operations using AI-driven predictive modeling.',
     },
     {
       icon: Zap,
-      title: "Real-Time Optimization",
-      description: "Continuously monitor and optimize processes in real-time, automatically adjusting parameters and workflows for maximum efficiency."
+      title: 'Real-Time Optimization',
+      description:
+        'Continuously monitor and optimize processes in real-time, automatically adjusting parameters and workflows for maximum efficiency.',
     },
     {
       icon: Users,
-      title: "Human-AI Collaboration",
-      description: "Seamless integration between human workers and AI systems, with intelligent task allocation and decision support for optimal team performance."
+      title: 'Human-AI Collaboration',
+      description:
+        'Seamless integration between human workers and AI systems, with intelligent task allocation and decision support for optimal team performance.',
     },
     {
       icon: Shield,
-      title: "Compliance & Risk Management",
-      description: "Built-in compliance monitoring and risk assessment, ensuring all process optimizations meet regulatory requirements and industry standards."
-    }
+      title: 'Compliance & Risk Management',
+      description:
+        'Built-in compliance monitoring and risk assessment, ensuring all process optimizations meet regulatory requirements and industry standards.',
+    },
   ];
 
   const benefits = [
-    "Reduce process execution time by 40-60%",
-    "Cut operational costs by 25-35%",
-    "Improve process accuracy by 95%",
-    "Increase employee productivity by 30%",
-    "Reduce manual errors by 90%",
-    "Achieve 99.9% process uptime"
+    'Reduce process execution time by 40-60%',
+    'Cut operational costs by 25-35%',
+    'Improve process accuracy by 95%',
+    'Increase employee productivity by 30%',
+    'Reduce manual errors by 90%',
+    'Achieve 99.9% process uptime',
   ];
 
   const useCases = [
     {
-      title: "Manufacturing & Production",
-      description: "Optimize production lines, inventory management, and quality control processes for maximum efficiency and minimal waste.",
-      icon: Cpu
+      title: 'Manufacturing & Production',
+      description:
+        'Optimize production lines, inventory management, and quality control processes for maximum efficiency and minimal waste.',
+      icon: Cpu,
     },
     {
-      title: "Financial Services",
-      description: "Streamline loan processing, risk assessment, compliance workflows, and customer onboarding for faster service delivery.",
-      icon: DollarSign
+      title: 'Financial Services',
+      description:
+        'Streamline loan processing, risk assessment, compliance workflows, and customer onboarding for faster service delivery.',
+      icon: DollarSign,
     },
     {
-      title: "Healthcare & Life Sciences",
-      description: "Optimize patient care workflows, clinical trial processes, and administrative operations for better patient outcomes.",
-      icon: Users
+      title: 'Healthcare & Life Sciences',
+      description:
+        'Optimize patient care workflows, clinical trial processes, and administrative operations for better patient outcomes.',
+      icon: Users,
     },
     {
-      title: "Retail & E-commerce",
-      description: "Streamline order fulfillment, inventory management, customer service, and supply chain operations for seamless customer experiences.",
-      icon: Globe
-    }
+      title: 'Retail & E-commerce',
+      description:
+        'Streamline order fulfillment, inventory management, customer service, and supply chain operations for seamless customer experiences.',
+      icon: Globe,
+    },
   ];
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$799",
-      period: "/month",
-      description: "Perfect for small businesses starting their process optimization journey",
+      name: 'Starter',
+      price: '$799',
+      period: '/month',
+      description:
+        'Perfect for small businesses starting their process optimization journey',
       features: [
-        "Up to 10 process workflows",
-        "Basic AI analysis and recommendations",
-        "Standard reporting and dashboards",
-        "Email support",
-        "Basic integration capabilities"
+        'Up to 10 process workflows',
+        'Basic AI analysis and recommendations',
+        'Standard reporting and dashboards',
+        'Email support',
+        'Basic integration capabilities',
       ],
-      cta: "Start Free Trial",
-      popular: false
+      cta: 'Start Free Trial',
+      popular: false,
     },
     {
-      name: "Professional",
-      price: "$1,999",
-      period: "/month",
-      description: "Ideal for growing companies with complex process optimization needs",
+      name: 'Professional',
+      price: '$1,999',
+      period: '/month',
+      description:
+        'Ideal for growing companies with complex process optimization needs',
       features: [
-        "Up to 50 process workflows",
-        "Advanced AI optimization algorithms",
-        "Real-time monitoring and alerts",
-        "Custom dashboards and reports",
-        "Priority support",
-        "Advanced integrations",
-        "Process simulation and testing"
+        'Up to 50 process workflows',
+        'Advanced AI optimization algorithms',
+        'Real-time monitoring and alerts',
+        'Custom dashboards and reports',
+        'Priority support',
+        'Advanced integrations',
+        'Process simulation and testing',
       ],
-      cta: "Start Free Trial",
-      popular: true
+      cta: 'Start Free Trial',
+      popular: true,
     },
     {
-      name: "Enterprise",
-      price: "$4,999",
-      period: "/month",
-      description: "Comprehensive solution for large enterprises with complex operations",
+      name: 'Enterprise',
+      price: '$4,999',
+      period: '/month',
+      description:
+        'Comprehensive solution for large enterprises with complex operations',
       features: [
-        "Unlimited process workflows",
-        "Custom AI model training",
-        "Advanced analytics and insights",
-        "White-label solutions",
-        "Dedicated account manager",
-        "Custom integrations and APIs",
-        "On-premise deployment options",
-        "Advanced security and compliance"
+        'Unlimited process workflows',
+        'Custom AI model training',
+        'Advanced analytics and insights',
+        'White-label solutions',
+        'Dedicated account manager',
+        'Custom integrations and APIs',
+        'On-premise deployment options',
+        'Advanced security and compliance',
       ],
-      cta: "Contact Sales",
-      popular: false
-    }
+      cta: 'Contact Sales',
+      popular: false,
+    },
   ];
 
   const roi = [
     {
-      metric: "Process Efficiency",
-      improvement: "40-60%",
-      description: "Faster execution and reduced cycle times"
+      metric: 'Process Efficiency',
+      improvement: '40-60%',
+      description: 'Faster execution and reduced cycle times',
     },
     {
-      metric: "Cost Reduction",
-      improvement: "25-35%",
-      description: "Lower operational and labor costs"
+      metric: 'Cost Reduction',
+      improvement: '25-35%',
+      description: 'Lower operational and labor costs',
     },
     {
-      metric: "Error Reduction",
-      improvement: "90%",
-      description: "Minimal manual errors and rework"
+      metric: 'Error Reduction',
+      improvement: '90%',
+      description: 'Minimal manual errors and rework',
     },
     {
-      metric: "Productivity Gain",
-      improvement: "30%",
-      description: "Increased employee output and satisfaction"
-    }
+      metric: 'Productivity Gain',
+      improvement: '30%',
+      description: 'Increased employee output and satisfaction',
+    },
   ];
 
   return (
@@ -183,7 +197,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
               AI-Powered Business Process Optimization
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Transform your business operations with intelligent process optimization that learns, adapts, and continuously improves your workflows for maximum efficiency and cost savings.
+              Transform your business operations with intelligent process
+              optimization that learns, adapts, and continuously improves your
+              workflows for maximum efficiency and cost savings.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -219,12 +235,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
               Intelligent Process Optimization Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive tools to analyze, optimize, and continuously improve your business processes.
+              Our AI-powered platform provides comprehensive tools to analyze,
+              optimize, and continuously improve your business processes.
             </p>
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -236,8 +253,12 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -258,12 +279,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
               Transform Your Business Operations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience measurable improvements in efficiency, cost reduction, and operational excellence.
+              Experience measurable improvements in efficiency, cost reduction,
+              and operational excellence.
             </p>
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -294,12 +316,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI process optimization platform delivers results across diverse industries and business functions.
+              Our AI process optimization platform delivers results across
+              diverse industries and business functions.
             </p>
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -312,9 +335,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{useCase.title}</h3>
+                  <h3 className="text-2xl font-bold text-white">
+                    {useCase.title}
+                  </h3>
                 </div>
-                <p className="text-gray-300 leading-relaxed">{useCase.description}</p>
+                <p className="text-gray-300 leading-relaxed">
+                  {useCase.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -335,12 +362,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your business size and optimization needs.
+              Choose the plan that best fits your business size and optimization
+              needs.
             </p>
           </motion.div>
 
           <div className="grid md: anygrid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
+            {pricing.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -348,8 +376,8 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white/10 backdrop-blur-sm border rounded-2xl p-8 ${
-                  plan.popular 
-                    ? 'border-blue-400/50 bg-gradient-to-br from-blue-600/20 to-purple-600/20' 
+                  plan.popular
+                    ? 'border-blue-400/50 bg-gradient-to-br from-blue-600/20 to-purple-600/20'
                     : 'border-white/20'
                 }`}
               >
@@ -360,12 +388,16 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {plan.name}
+                  </h3>
                   <p className="text-gray-300 mb-6">{plan.description}</p>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-4xl font-bold text-white">
+                      {plan.price}
+                    </span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
@@ -402,12 +434,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
               Proven Return on Investment
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our clients consistently achieve significant improvements in operational efficiency and cost reduction.
+              Our clients consistently achieve significant improvements in
+              operational efficiency and cost reduction.
             </p>
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {roi.map((metric, index)  => (
+            {roi.map((metric, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -416,8 +449,12 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
                 viewport={{ once: true }}
                 className="text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300"
               >
-                <div className="text-3xl font-bold text-blue-400 mb-2">{metric.improvement}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{metric.metric}</h3>
+                <div className="text-3xl font-bold text-blue-400 mb-2">
+                  {metric.improvement}
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {metric.metric}
+                </h3>
                 <p className="text-gray-300 text-sm">{metric.description}</p>
               </motion.div>
             ))}
@@ -438,9 +475,11 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
               Ready to Optimize Your Business Processes?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our AI-powered process optimization can transform your operations and drive measurable results for your business.
+              Let's discuss how our AI-powered process optimization can
+              transform your operations and drive measurable results for your
+              business.
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3 text-white">
                 <Phone className="w-5 h-5 text-blue-400" />
@@ -485,10 +524,14 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
             <Star className="w-5 h-5 text-purple-400" />
           </div>
           <p className="text-gray-400">
-            Transforming businesses through intelligent AI solutions and process optimization.
+            Transforming businesses through intelligent AI solutions and process
+            optimization.
           </p>
           <div className="mt-4 text-sm text-gray-500">
-            <a href="https://ziontechgroup.com" className="hover:text-blue-400 transition-colors">
+            <a
+              href="https://ziontechgroup.com"
+              className="hover:text-blue-400 transition-colors"
+            >
               ziontechgroup.com
             </a>
           </div>

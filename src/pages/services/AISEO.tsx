@@ -1,9 +1,10 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Search, 
-  TrendingUp, 
-  Target, 
-  BarChart3, 
+import { motion } from 'framer-motion.ts';
+import {
+  Search,
+  TrendingUp,
+  Target,
+  BarChart3,
   CheckCircle,
   ArrowRight,
   Star,
@@ -21,41 +22,46 @@ import { Search,
   Share2,
   Brain,
   Zap,
-  Shield
- } from 'lucide-react.ts';
+  Shield,
+} from 'lucide-react.ts';
 
 const AISEO: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Keyword Research',
-      description: 'Advanced algorithms to discover high-value keywords and search opportunities'
+      description:
+        'Advanced algorithms to discover high-value keywords and search opportunities',
     },
     {
       icon: Target,
       title: 'Content Optimization',
-      description: 'AI-driven recommendations to improve content relevance and search rankings'
+      description:
+        'AI-driven recommendations to improve content relevance and search rankings',
     },
     {
       icon: TrendingUp,
       title: 'Performance Tracking',
-      description: 'Real-time monitoring of SEO metrics and ranking improvements'
+      description:
+        'Real-time monitoring of SEO metrics and ranking improvements',
     },
     {
       icon: Shield,
       title: 'Technical SEO Audit',
-      description: 'Automated detection and fixing of technical SEO issues'
+      description: 'Automated detection and fixing of technical SEO issues',
     },
     {
       icon: Zap,
       title: 'Competitive Analysis',
-      description: 'AI-powered insights into competitor strategies and opportunities'
+      description:
+        'AI-powered insights into competitor strategies and opportunities',
     },
     {
       icon: BarChart3,
       title: 'Ranking Predictions',
-      description: 'Predict future ranking changes based on current optimization efforts'
-    }
+      description:
+        'Predict future ranking changes based on current optimization efforts',
+    },
   ];
 
   const benefits = [
@@ -64,7 +70,7 @@ const AISEO: React.FC = (): JSX.Element => {
     'Reduce SEO audit time by 80%',
     'Boost conversion rates by 25%',
     'Identify new keyword opportunities',
-    'Automate technical SEO fixes'
+    'Automate technical SEO fixes',
   ];
 
   return (
@@ -81,17 +87,21 @@ const AISEO: React.FC = (): JSX.Element => {
               <Search className="w-4 h-4 mr-2" />
               AI-Powered SEO Optimization
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Dominate Search Rankings with
-              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"> AI-Powered SEO</span>
+              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                {' '}
+                AI-Powered SEO
+              </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leverage artificial intelligence to optimize your website for search engines, 
-              discover untapped keyword opportunities, and drive sustainable organic traffic growth.
+              Leverage artificial intelligence to optimize your website for
+              search engines, discover untapped keyword opportunities, and drive
+              sustainable organic traffic growth.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -118,12 +128,13 @@ const AISEO: React.FC = (): JSX.Element => {
               Advanced SEO Features Powered by AI
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform provides comprehensive SEO tools to boost your search rankings
+              Our AI platform provides comprehensive SEO tools to boost your
+              search rankings
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -135,7 +146,9 @@ const AISEO: React.FC = (): JSX.Element => {
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -157,10 +170,11 @@ const AISEO: React.FC = (): JSX.Element => {
               Why Choose AI-Powered SEO?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in your search rankings and organic traffic
+              Experience measurable improvements in your search rankings and
+              organic traffic
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -168,7 +182,9 @@ const AISEO: React.FC = (): JSX.Element => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Key Benefits
+              </h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -178,7 +194,7 @@ const AISEO: React.FC = (): JSX.Element => {
                 ))}
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -186,9 +202,12 @@ const AISEO: React.FC = (): JSX.Element => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-500/20 rounded-xl p-8"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Ready to Boost Rankings?</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Ready to Boost Rankings?
+              </h3>
               <p className="text-gray-300 mb-6">
-                Join thousands of websites already using AI to dominate search results.
+                Join thousands of websites already using AI to dominate search
+                results.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300">
                 Get Started Today
@@ -211,7 +230,8 @@ const AISEO: React.FC = (): JSX.Element => {
               Ready to Dominate Search Rankings?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your journey to SEO success with our AI-powered optimization platform.
+              Start your journey to SEO success with our AI-powered optimization
+              platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300">

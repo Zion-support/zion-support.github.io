@@ -1,9 +1,10 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Search, 
-  Brain, 
-  Target, 
-  BarChart3, 
+import { motion } from 'framer-motion.ts';
+import {
+  Search,
+  Brain,
+  Target,
+  BarChart3,
   CheckCircle,
   ArrowRight,
   Star,
@@ -23,41 +24,46 @@ import { Search,
   Zap,
   Shield,
   Users,
-  Fingerprint
- } from 'lucide-react.ts';
+  Fingerprint,
+} from 'lucide-react.ts';
 
 const AIAutonomousForensics: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Investigation',
-      description: 'Advanced machine learning for autonomous incident investigation and evidence analysis'
+      description:
+        'Advanced machine learning for autonomous incident investigation and evidence analysis',
     },
     {
       icon: Search,
       title: 'Evidence Collection',
-      description: 'Automated collection and preservation of digital evidence across multiple sources'
+      description:
+        'Automated collection and preservation of digital evidence across multiple sources',
     },
     {
       icon: Target,
       title: 'Pattern Recognition',
-      description: 'AI-driven pattern recognition to identify connections and anomalies in evidence'
+      description:
+        'AI-driven pattern recognition to identify connections and anomalies in evidence',
     },
     {
       icon: BarChart3,
       title: 'Forensic Analytics',
-      description: 'Comprehensive analysis and reporting of forensic findings with AI insights'
+      description:
+        'Comprehensive analysis and reporting of forensic findings with AI insights',
     },
     {
       icon: Shield,
       title: 'Chain of Custody',
-      description: 'Secure chain of custody tracking with blockchain verification'
+      description:
+        'Secure chain of custody tracking with blockchain verification',
     },
     {
       icon: Fingerprint,
       title: 'Digital Fingerprinting',
-      description: 'Advanced digital fingerprinting and evidence correlation'
-    }
+      description: 'Advanced digital fingerprinting and evidence correlation',
+    },
   ];
 
   const benefits = [
@@ -66,7 +72,7 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
     'Enhance forensic accuracy by 90%',
     'Automate routine forensics tasks',
     '24/7 autonomous operation',
-    'Real-time incident response'
+    'Real-time incident response',
   ];
 
   return (
@@ -83,17 +89,21 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
               <Search className="w-4 h-4 mr-2" />
               AI-Powered Autonomous Forensics
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Revolutionize Digital Forensics with
-              <span className="bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent"> AI Intelligence</span>
+              <span className="bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent">
+                {' '}
+                AI Intelligence
+              </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your digital forensics capabilities with our AI-powered autonomous platform. 
-              Conduct investigations faster, discover evidence more effectively, and maintain chain of custody.
+              Transform your digital forensics capabilities with our AI-powered
+              autonomous platform. Conduct investigations faster, discover
+              evidence more effectively, and maintain chain of custody.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-500 text-white rounded-lg font-semibold hover:from-indigo-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -120,12 +130,13 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
               Advanced Forensics Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform provides comprehensive digital forensics capabilities for modern investigations
+              Our AI platform provides comprehensive digital forensics
+              capabilities for modern investigations
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -137,7 +148,9 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -159,10 +172,11 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
               Why Choose AI Autonomous Forensics?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in investigation efficiency and evidence discovery
+              Experience measurable improvements in investigation efficiency and
+              evidence discovery
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -170,7 +184,9 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Key Benefits
+              </h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -180,7 +196,7 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
                 ))}
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -188,9 +204,12 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-indigo-500/10 to-blue-500/10 border border-indigo-500/20 rounded-xl p-8"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Ready to Transform Forensics?</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Ready to Transform Forensics?
+              </h3>
               <p className="text-gray-300 mb-6">
-                Join thousands of investigators already using AI to enhance their forensics capabilities.
+                Join thousands of investigators already using AI to enhance
+                their forensics capabilities.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-indigo-500 to-blue-500 text-white rounded-lg font-semibold hover:from-indigo-600 hover:to-blue-600 transition-all duration-300">
                 Get Started Today
@@ -213,7 +232,8 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
               Ready to Revolutionize Digital Forensics?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your journey to AI-powered forensics with our comprehensive platform.
+              Start your journey to AI-powered forensics with our comprehensive
+              platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-500 text-white rounded-lg font-semibold hover:from-indigo-600 hover:to-blue-600 transition-all duration-300">

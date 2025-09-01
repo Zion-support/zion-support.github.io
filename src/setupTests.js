@@ -7,22 +7,30 @@ import '@testing-library/jest-dom';
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  value: global.global.global.global.jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
+    addListener: global.global.global.global.jest.fn(), // deprecated
+    removeListener: global.global.global.global.jest.fn(), // deprecated
+    addEventListener: global.global.global.global.jest.fn(),
+    removeEventListener: global.global.global.global.jest.fn(),
+    dispatchEvent: global.global.global.global.jest.fn(),
   })),
 });
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
-  constructor() { /* empty */ }
-  disconnect() { /* empty */ }
-  observe() { /* empty */ }
-  unobserve() { /* empty */ }
+  constructor() {
+    /* empty */
+  }
+  disconnect() {
+    /* empty */
+  }
+  observe() {
+    /* empty */
+  }
+  unobserve() {
+    /* empty */
+  }
 };

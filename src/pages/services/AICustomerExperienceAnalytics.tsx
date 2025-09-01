@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Users, 
-  Brain, 
-  BarChart3, 
-  Zap, 
-  Target, 
-  TrendingUp, 
-  Shield, 
-  Cloud, 
+import {
+  Users,
+  Brain,
+  BarChart3,
+  Zap,
+  Target,
+  TrendingUp,
+  Shield,
+  Cloud,
   CheckCircle,
   ArrowRight,
   Play,
@@ -25,7 +25,7 @@ import {
   MessageCircle,
   PieChart,
   Activity,
-  Monitor
+  Monitor,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -34,33 +34,39 @@ const AICustomerExperienceAnalytics: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Sentiment Analysis',
-      description: 'Advanced natural language processing to understand customer emotions, intent, and satisfaction levels across all touchpoints.'
+      description:
+        'Advanced natural language processing to understand customer emotions, intent, and satisfaction levels across all touchpoints.',
     },
     {
       icon: BarChart3,
       title: 'Real-time Experience Monitoring',
-      description: 'Live tracking of customer interactions, pain points, and satisfaction metrics with instant alerts and notifications.'
+      description:
+        'Live tracking of customer interactions, pain points, and satisfaction metrics with instant alerts and notifications.',
     },
     {
       icon: Users,
       title: 'Customer Journey Mapping',
-      description: 'Visualize complete customer journeys with AI-identified optimization opportunities and conversion bottlenecks.'
+      description:
+        'Visualize complete customer journeys with AI-identified optimization opportunities and conversion bottlenecks.',
     },
     {
       icon: Target,
       title: 'Predictive Analytics',
-      description: 'Forecast customer behavior, churn risk, and lifetime value using machine learning algorithms.'
+      description:
+        'Forecast customer behavior, churn risk, and lifetime value using machine learning algorithms.',
     },
     {
       icon: MessageCircle,
       title: 'Omnichannel Insights',
-      description: 'Unified view of customer experiences across web, mobile, social media, and customer service channels.'
+      description:
+        'Unified view of customer experiences across web, mobile, social media, and customer service channels.',
     },
     {
       icon: TrendingUp,
       title: 'Actionable Recommendations',
-      description: 'AI-generated insights and specific recommendations to improve customer satisfaction and retention.'
-    }
+      description:
+        'AI-generated insights and specific recommendations to improve customer satisfaction and retention.',
+    },
   ];
 
   const pricingTiers = [
@@ -68,17 +74,18 @@ const AICustomerExperienceAnalytics: React.FC = () => {
       name: 'Starter',
       price: '$199',
       period: '/month',
-      description: 'Perfect for small businesses starting their CX analytics journey',
+      description:
+        'Perfect for small businesses starting their CX analytics journey',
       features: [
         'Up to 10,000 interactions/month',
         'Basic sentiment analysis',
         'Standard reporting',
         'Email support',
         'Basic journey mapping',
-        'Up to 3 team members'
+        'Up to 3 team members',
       ],
       cta: 'Start Free Trial',
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -93,16 +100,17 @@ const AICustomerExperienceAnalytics: React.FC = () => {
         'Advanced journey mapping',
         'Up to 15 team members',
         'API access',
-        'Custom integrations'
+        'Custom integrations',
       ],
       cta: 'Start Free Trial',
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
       price: '$1,499',
       period: '/month',
-      description: 'For large organizations with enterprise-scale CX requirements',
+      description:
+        'For large organizations with enterprise-scale CX requirements',
       features: [
         'Unlimited interactions',
         'Custom AI models',
@@ -111,34 +119,36 @@ const AICustomerExperienceAnalytics: React.FC = () => {
         'Advanced predictive analytics',
         'Unlimited team members',
         'On-premise deployment',
-        'Custom SLA'
+        'Custom SLA',
       ],
       cta: 'Contact Sales',
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const benefits = [
     {
       icon: TrendingUp,
       title: 'Increase Customer Satisfaction',
-      description: 'Improve NPS scores by up to 40% with data-driven insights'
+      description: 'Improve NPS scores by up to 40% with data-driven insights',
     },
     {
       icon: Users,
       title: 'Reduce Customer Churn',
-      description: 'Identify at-risk customers and prevent churn with predictive analytics'
+      description:
+        'Identify at-risk customers and prevent churn with predictive analytics',
     },
     {
       icon: Target,
       title: 'Optimize Customer Journeys',
-      description: 'Streamline touchpoints and improve conversion rates'
+      description: 'Streamline touchpoints and improve conversion rates',
     },
     {
       icon: BarChart3,
       title: 'Data-Driven Decisions',
-      description: 'Make informed decisions based on real customer behavior data'
-    }
+      description:
+        'Make informed decisions based on real customer behavior data',
+    },
   ];
 
   const analyticsCapabilities = [
@@ -153,7 +163,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
     'Customer Segmentation',
     'Journey Optimization',
     'Touchpoint Analysis',
-    'Conversion Funnel Tracking'
+    'Conversion Funnel Tracking',
   ];
 
   return (
@@ -177,7 +187,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
               AI Customer Experience Analytics
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-300">
-              Transform customer insights into actionable intelligence with AI-powered analytics that reveal the true voice of your customers.
+              Transform customer insights into actionable intelligence with
+              AI-powered analytics that reveal the true voice of your customers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -212,7 +223,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
               Advanced CX Analytics Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive insights into every aspect of your customer experience.
+              Our AI-powered platform provides comprehensive insights into every
+              aspect of your customer experience.
             </p>
           </motion.div>
 
@@ -228,7 +240,9 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                 <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg w-fit mb-6">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -249,7 +263,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
               Comprehensive Analytics Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Measure and analyze every aspect of your customer experience with industry-leading metrics and insights.
+              Measure and analyze every aspect of your customer experience with
+              industry-leading metrics and insights.
             </p>
           </motion.div>
 
@@ -285,7 +300,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your customer experience analytics needs. All plans include our core AI insights features.
+              Choose the plan that best fits your customer experience analytics
+              needs. All plans include our core AI insights features.
             </p>
           </motion.div>
 
@@ -297,8 +313,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-                  tier.popular 
-                    ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10' 
+                  tier.popular
+                    ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10'
                     : 'border-white/10'
                 }`}
               >
@@ -309,19 +325,26 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {tier.name}
+                  </h3>
                   <p className="text-gray-400 mb-4">{tier.description}</p>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{tier.price}</span>
+                    <span className="text-4xl font-bold text-white">
+                      {tier.price}
+                    </span>
                     <span className="text-gray-400 ml-1">{tier.period}</span>
                   </div>
                 </div>
 
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-gray-300"
+                    >
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
@@ -357,7 +380,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
               Why Choose AI Customer Experience Analytics?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your customer experience with data-driven insights that drive real business results.
+              Transform your customer experience with data-driven insights that
+              drive real business results.
             </p>
           </motion.div>
 
@@ -373,7 +397,9 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                 <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {benefit.title}
+                </h3>
                 <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
@@ -394,7 +420,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
               Ready to Transform Your Customer Experience?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join leading companies that use AI-powered analytics to deliver exceptional customer experiences.
+              Join leading companies that use AI-powered analytics to deliver
+              exceptional customer experiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -433,7 +460,11 @@ const AICustomerExperienceAnalytics: React.FC = () => {
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 text-purple-400 mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Address</h3>
-              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p className="text-gray-300">
+                364 E Main St STE 1008
+                <br />
+                Middletown DE 19709
+              </p>
             </div>
           </div>
         </div>

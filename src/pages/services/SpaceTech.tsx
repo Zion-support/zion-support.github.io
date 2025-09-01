@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Rocket, 
-  Satellite, 
-  CheckCircle, 
-  Users, 
-  Clock, 
+import {
+  Rocket,
+  Satellite,
+  CheckCircle,
+  Users,
+  Clock,
   ArrowRight,
   Play,
   Settings,
@@ -73,7 +73,7 @@ import {
   Navigation,
   Earth,
   Moon,
-  Sun
+  Sun,
 } from 'lucide-react';
 
 const SpaceTech = () => {
@@ -81,33 +81,35 @@ const SpaceTech = () => {
     {
       icon: Satellite,
       title: 'Satellite Technology',
-      description: 'Advanced satellite design, deployment, and management solutions'
+      description:
+        'Advanced satellite design, deployment, and management solutions',
     },
     {
       icon: Orbit,
       title: 'Orbital Mechanics',
-      description: 'Precise orbital calculations and trajectory optimization'
+      description: 'Precise orbital calculations and trajectory optimization',
     },
     {
       icon: Antenna,
       title: 'Ground Station Systems',
-      description: 'Earth-based communication and control infrastructure'
+      description: 'Earth-based communication and control infrastructure',
     },
     {
       icon: Signal,
       title: 'Space Communications',
-      description: 'Reliable data transmission between space and ground'
+      description: 'Reliable data transmission between space and ground',
     },
     {
       icon: Navigation,
       title: 'Space Navigation',
-      description: 'Advanced positioning and navigation systems for space missions'
+      description:
+        'Advanced positioning and navigation systems for space missions',
     },
     {
       icon: Telescope,
       title: 'Space Observation',
-      description: 'Earth observation and space monitoring capabilities'
-    }
+      description: 'Earth observation and space monitoring capabilities',
+    },
   ];
 
   const benefits = [
@@ -116,49 +118,49 @@ const SpaceTech = () => {
     'Support space exploration missions',
     'Enable advanced navigation systems',
     'Support disaster response and monitoring',
-    'Drive innovation in space technology'
+    'Drive innovation in space technology',
   ];
 
   const services = [
     {
       icon: Rocket,
       title: 'Launch Services',
-      description: 'Satellite launch coordination and mission planning'
+      description: 'Satellite launch coordination and mission planning',
     },
     {
       icon: Planet,
       title: 'Earth Observation',
-      description: 'Satellite imagery and environmental monitoring'
+      description: 'Satellite imagery and environmental monitoring',
     },
     {
       icon: Star,
       title: 'Space Research',
-      description: 'Scientific research and space exploration support'
+      description: 'Scientific research and space exploration support',
     },
     {
       icon: Globe2,
       title: 'Global Communications',
-      description: 'Satellite communications and internet services'
-    }
+      description: 'Satellite communications and internet services',
+    },
   ];
 
   const useCases = [
     {
       industry: 'Telecommunications',
-      description: 'Global satellite communications and internet services'
+      description: 'Global satellite communications and internet services',
     },
     {
       industry: 'Environmental Monitoring',
-      description: 'Climate change tracking and natural disaster monitoring'
+      description: 'Climate change tracking and natural disaster monitoring',
     },
     {
       industry: 'Agriculture',
-      description: 'Crop monitoring and precision agriculture support'
+      description: 'Crop monitoring and precision agriculture support',
     },
     {
       industry: 'Defense & Security',
-      description: 'Surveillance and national security applications'
-    }
+      description: 'Surveillance and national security applications',
+    },
   ];
 
   return (
@@ -177,15 +179,19 @@ const SpaceTech = () => {
               <Rocket className="w-4 h-4 mr-2" />
               Space Technology Solutions
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Space
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Technology</span>
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                {' '}
+                Technology
+              </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Pioneer the future with our cutting-edge space technology solutions 
-              that enable satellite operations, space communications, and Earth observation.
+              Pioneer the future with our cutting-edge space technology
+              solutions that enable satellite operations, space communications,
+              and Earth observation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
@@ -214,7 +220,7 @@ const SpaceTech = () => {
               Advanced Space Technology Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform provides cutting-edge space technology capabilities 
+              Our platform provides cutting-edge space technology capabilities
               for modern space missions and satellite operations.
             </p>
           </motion.div>
@@ -231,7 +237,9 @@ const SpaceTech = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -252,7 +260,7 @@ const SpaceTech = () => {
               Core Space Technology Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From satellite operations to space communications, we provide 
+              From satellite operations to space communications, we provide
               comprehensive space technology solutions.
             </p>
           </motion.div>
@@ -271,7 +279,9 @@ const SpaceTech = () => {
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      {service.title}
+                    </h3>
                     <p className="text-gray-300">{service.description}</p>
                   </div>
                 </div>
@@ -294,7 +304,8 @@ const SpaceTech = () => {
               Space Technology Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in global connectivity, monitoring, and space exploration capabilities.
+              Experience measurable improvements in global connectivity,
+              monitoring, and space exploration capabilities.
             </p>
           </motion.div>
 
@@ -344,8 +355,8 @@ const SpaceTech = () => {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our space technology solutions adapt to various industries, providing 
-              innovative solutions for global challenges.
+              Our space technology solutions adapt to various industries,
+              providing innovative solutions for global challenges.
             </p>
           </motion.div>
 
@@ -361,7 +372,9 @@ const SpaceTech = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {useCase.industry}
+                </h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
@@ -378,8 +391,8 @@ const SpaceTech = () => {
                 Why Choose Space Technology?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Space technology provides unprecedented opportunities to explore, 
-                monitor, and understand our world and beyond.
+                Space technology provides unprecedented opportunities to
+                explore, monitor, and understand our world and beyond.
               </p>
               <ul className="space-y-3">
                 {benefits.map((benefit, index) => (
@@ -392,11 +405,13 @@ const SpaceTech = () => {
             </div>
             <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">
               <div className="text-center">
-                <Zap className="w-24 h-24 text-purple-400 mx-auto mb-4"/>
-                <h3 className="text-2xl font-bold text-white mb-2">Space Innovation</h3>
+                <Zap className="w-24 h-24 text-purple-400 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  Space Innovation
+                </h3>
                 <p className="text-gray-300 mb-6">
-                  Our team has deep expertise in space technology and 
-                  is committed to advancing the frontiers of exploration.
+                  Our team has deep expertise in space technology and is
+                  committed to advancing the frontiers of exploration.
                 </p>
                 <div className="text-sm text-gray-400">
                   <p>• Space technology experts</p>
@@ -421,8 +436,8 @@ const SpaceTech = () => {
               Launch Your Space Project Today
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join organizations worldwide that use our space technology solutions to 
-              explore new frontiers and solve global challenges.
+              Join organizations worldwide that use our space technology
+              solutions to explore new frontiers and solve global challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">

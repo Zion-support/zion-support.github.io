@@ -6,44 +6,52 @@ import { SEO } from '@/components/SEO';
 const MicroCRM: React.FC = () => {
   const services = [
     {
-      title: "Contact Management",
-      description: "Organize and track customer information, interactions, and history in one centralized location.",
-      icon: Target
+      title: 'Contact Management',
+      description:
+        'Organize and track customer information, interactions, and history in one centralized location.',
+      icon: Target,
     },
     {
-      title: "Sales Pipeline",
-      description: "Visualize and manage your sales process from lead to close with customizable stages.",
-      icon: Target
+      title: 'Sales Pipeline',
+      description:
+        'Visualize and manage your sales process from lead to close with customizable stages.',
+      icon: Target,
     },
     {
-      title: "Task Management",
-      description: "Set reminders, track follow-ups, and manage customer-related tasks efficiently.",
-      icon: Target
+      title: 'Task Management',
+      description:
+        'Set reminders, track follow-ups, and manage customer-related tasks efficiently.',
+      icon: Target,
     },
     {
-      title: "Communication Tools",
-      description: "Integrated email, SMS, and phone tools for seamless customer communication.",
-      icon: Target
-    }
+      title: 'Communication Tools',
+      description:
+        'Integrated email, SMS, and phone tools for seamless customer communication.',
+      icon: Target,
+    },
   ];
 
   const useCases = [
     {
-      industry: "Local Services",
-      description: "Perfect for plumbers, electricians, and contractors who need to track jobs and customers."
+      industry: 'Local Services',
+      description:
+        'Perfect for plumbers, electricians, and contractors who need to track jobs and customers.',
     },
     {
-      industry: "Small Retail",
-      description: "Ideal for boutique shops and local stores managing customer relationships and sales."
+      industry: 'Small Retail',
+      description:
+        'Ideal for boutique shops and local stores managing customer relationships and sales.',
     },
     {
-      industry: "Professional Services",
-      description: "Great for consultants, lawyers, and accountants tracking client interactions."
+      industry: 'Professional Services',
+      description:
+        'Great for consultants, lawyers, and accountants tracking client interactions.',
     },
     {
-      industry: "Healthcare",
-      description: "Suitable for small medical practices managing patient relationships and appointments."
-    }
+      industry: 'Healthcare',
+      description:
+        'Suitable for small medical practices managing patient relationships and appointments.',
+    },
   ];
 
   return (
@@ -55,8 +63,9 @@ const MicroCRM: React.FC = () => {
       <section className="container-responsive section-padding">
         <h1 className="heading-responsive text-gradient">Micro CRM</h1>
         <p className="mt-4 max-w-3xl text-zion-slate-light text-responsive">
-          Essential CRM without bloat. Track customers, appointments, jobs, and invoices with
-          SMS reminders, online payments, and review requests to grow word‑of‑mouth.
+          Essential CRM without bloat. Track customers, appointments, jobs, and
+          invoices with SMS reminders, online payments, and review requests to
+          grow word‑of‑mouth.
         </p>
         <div className="grid-futuristic mt-10">
           <div className="card-futuristic">
@@ -76,7 +85,12 @@ const MicroCRM: React.FC = () => {
               <li>Team: $79/mo up to 10 users</li>
               <li>Business: $199/mo with custom fields and roles</li>
             </ul>
-            <a href="/request-quote" className="btn-futuristic mt-4 inline-block">Get started</a>
+            <a
+              href="/request-quote"
+              className="btn-futuristic mt-4 inline-block"
+            >
+              Get started
+            </a>
           </div>
         </div>
       </section>
@@ -94,7 +108,7 @@ const MicroCRM: React.FC = () => {
               Core CRM Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From contact management to sales tracking, we provide 
+              From contact management to sales tracking, we provide
               comprehensive CRM capabilities for your business.
             </p>
           </motion.div>
@@ -111,7 +125,9 @@ const MicroCRM: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {service.title}
+                </h3>
                 <p className="text-gray-300 text-sm">{service.description}</p>
               </motion.div>
             ))}
@@ -132,8 +148,8 @@ const MicroCRM: React.FC = () => {
               Perfect For Your Industry
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our Micro CRM is designed to work seamlessly across various 
-              local business types and industries.
+              Our Micro CRM is designed to work seamlessly across various local
+              business types and industries.
             </p>
           </motion.div>
 
@@ -149,7 +165,9 @@ const MicroCRM: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {useCase.industry}
+                </h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
@@ -169,8 +187,8 @@ const MicroCRM: React.FC = () => {
               Start Managing Your Customers Today
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join businesses worldwide that use our Micro CRM to 
-              build stronger customer relationships and grow sales.
+              Join businesses worldwide that use our Micro CRM to build stronger
+              customer relationships and grow sales.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">

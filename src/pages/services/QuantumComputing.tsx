@@ -72,7 +72,7 @@ import {
   Beeswarm,
   Jitter,
   Ridge,
-  Joy
+  Joy,
 } from 'lucide-react';
 
 export function QuantumComputing() {
@@ -80,98 +80,163 @@ export function QuantumComputing() {
     {
       icon: Atom,
       title: 'Quantum Algorithms',
-      description: 'Advanced quantum algorithms for complex computational problems',
-      benefits: ['Exponential speedup', 'Parallel processing', 'Quantum advantage']
+      description:
+        'Advanced quantum algorithms for complex computational problems',
+      benefits: [
+        'Exponential speedup',
+        'Parallel processing',
+        'Quantum advantage',
+      ],
     },
     {
       icon: Brain,
       title: 'Quantum AI Hybrid',
       description: 'Combining quantum computing with artificial intelligence',
-      benefits: ['Enhanced ML models', 'Quantum neural networks', 'Hybrid optimization']
+      benefits: [
+        'Enhanced ML models',
+        'Quantum neural networks',
+        'Hybrid optimization',
+      ],
     },
     {
       icon: Shield,
       title: 'Quantum Security',
       description: 'Quantum-resistant cryptography and secure communications',
-      benefits: ['Post-quantum crypto', 'Quantum key distribution', 'Unbreakable encryption']
+      benefits: [
+        'Post-quantum crypto',
+        'Quantum key distribution',
+        'Unbreakable encryption',
+      ],
     },
     {
       icon: Target,
       title: 'Quantum Optimization',
       description: 'Solving complex optimization problems efficiently',
-      benefits: ['Supply chain optimization', 'Financial modeling', 'Logistics planning']
+      benefits: [
+        'Supply chain optimization',
+        'Financial modeling',
+        'Logistics planning',
+      ],
     },
     {
       icon: BarChart3,
       title: 'Quantum Simulation',
       description: 'Simulating quantum systems and molecular dynamics',
-      benefits: ['Drug discovery', 'Material science', 'Chemical modeling']
+      benefits: ['Drug discovery', 'Material science', 'Chemical modeling'],
     },
     {
       icon: Network,
       title: 'Quantum Networks',
       description: 'Building quantum internet infrastructure',
-      benefits: ['Quantum entanglement', 'Secure communication', 'Distributed computing']
-    }
+      benefits: [
+        'Quantum entanglement',
+        'Secure communication',
+        'Distributed computing',
+      ],
+    },
   ];
 
   const applications = [
     {
       industry: 'Finance',
       icon: DollarSign,
-      applications: ['Portfolio optimization', 'Risk assessment', 'Trading algorithms', 'Fraud detection'],
-      color: 'from-green-500 to-emerald-600'
+      applications: [
+        'Portfolio optimization',
+        'Risk assessment',
+        'Trading algorithms',
+        'Fraud detection',
+      ],
+      color: 'from-green-500 to-emerald-600',
     },
     {
       industry: 'Healthcare',
       icon: Heart,
-      applications: ['Drug discovery', 'Protein folding', 'Medical imaging', 'Personalized medicine'],
-      color: 'from-red-500 to-pink-600'
+      applications: [
+        'Drug discovery',
+        'Protein folding',
+        'Medical imaging',
+        'Personalized medicine',
+      ],
+      color: 'from-red-500 to-pink-600',
     },
     {
       industry: 'Manufacturing',
       icon: Building,
-      applications: ['Supply chain optimization', 'Quality control', 'Predictive maintenance', 'Resource allocation'],
-      color: 'from-blue-500 to-cyan-600'
+      applications: [
+        'Supply chain optimization',
+        'Quality control',
+        'Predictive maintenance',
+        'Resource allocation',
+      ],
+      color: 'from-blue-500 to-cyan-600',
     },
     {
       industry: 'Energy',
       icon: Zap,
-      applications: ['Grid optimization', 'Renewable energy', 'Battery technology', 'Climate modeling'],
-      color: 'from-yellow-500 to-orange-600'
-    }
+      applications: [
+        'Grid optimization',
+        'Renewable energy',
+        'Battery technology',
+        'Climate modeling',
+      ],
+      color: 'from-yellow-500 to-orange-600',
+    },
   ];
 
   const technologies = [
-    { name: 'IBM Q', description: 'IBM Quantum Experience platform', icon: Atom },
-    { name: 'Google Quantum AI', description: 'Sycamore quantum processor', icon: Brain },
-    { name: 'Microsoft Azure Quantum', description: 'Cloud-based quantum computing', icon: Cloud },
-    { name: 'Amazon Braket', description: 'Quantum computing service', icon: Server },
-    { name: 'Rigetti Computing', description: 'Quantum-classical hybrid systems', icon: Cpu },
-    { name: 'IonQ', description: 'Trapped ion quantum computers', icon: Atom }
+    {
+      name: 'IBM Q',
+      description: 'IBM Quantum Experience platform',
+      icon: Atom,
+    },
+    {
+      name: 'Google Quantum AI',
+      description: 'Sycamore quantum processor',
+      icon: Brain,
+    },
+    {
+      name: 'Microsoft Azure Quantum',
+      description: 'Cloud-based quantum computing',
+      icon: Cloud,
+    },
+    {
+      name: 'Amazon Braket',
+      description: 'Quantum computing service',
+      icon: Server,
+    },
+    {
+      name: 'Rigetti Computing',
+      description: 'Quantum-classical hybrid systems',
+      icon: Cpu,
+    },
+    { name: 'IonQ', description: 'Trapped ion quantum computers', icon: Atom },
   ];
 
   const quantumAdvantages = [
     {
       title: 'Exponential Speedup',
-      description: 'Quantum computers can solve certain problems exponentially faster than classical computers',
-      icon: Zap
+      description:
+        'Quantum computers can solve certain problems exponentially faster than classical computers',
+      icon: Zap,
     },
     {
       title: 'Parallel Processing',
-      description: 'Quantum superposition allows processing multiple states simultaneously',
-      icon: Network
+      description:
+        'Quantum superposition allows processing multiple states simultaneously',
+      icon: Network,
     },
     {
       title: 'Quantum Entanglement',
-      description: 'Entangled particles enable secure communication and distributed computing',
-      icon: Lock
+      description:
+        'Entangled particles enable secure communication and distributed computing',
+      icon: Lock,
     },
     {
       title: 'Quantum Tunneling',
-      description: 'Quantum effects enable optimization algorithms to escape local minima',
-      icon: Target
-    }
+      description:
+        'Quantum effects enable optimization algorithms to escape local minima',
+      icon: Target,
+    },
   ];
 
   return (
@@ -190,9 +255,10 @@ export function QuantumComputing() {
               <h1 className="text-5xl font-bold">Quantum Computing</h1>
             </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Harness the power of quantum mechanics for unprecedented computational capabilities. 
-              Our quantum computing solutions unlock new possibilities in AI, cryptography, 
-              optimization, and scientific discovery.
+              Harness the power of quantum mechanics for unprecedented
+              computational capabilities. Our quantum computing solutions unlock
+              new possibilities in AI, cryptography, optimization, and
+              scientific discovery.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
@@ -227,8 +293,8 @@ export function QuantumComputing() {
               Quantum Computing Advantages
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Discover how quantum computing revolutionizes problem-solving and opens new frontiers 
-              in computational science and technology.
+              Discover how quantum computing revolutionizes problem-solving and
+              opens new frontiers in computational science and technology.
             </p>
           </motion.div>
 
@@ -246,7 +312,9 @@ export function QuantumComputing() {
                   <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-indigo-600">
                     <advantage.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{advantage.title}</h3>
+                  <h3 className="text-2xl font-bold text-white">
+                    {advantage.title}
+                  </h3>
                 </div>
                 <p className="text-gray-300 text-lg">{advantage.description}</p>
               </motion.div>
@@ -269,8 +337,9 @@ export function QuantumComputing() {
               Quantum Computing Capabilities
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our quantum computing solutions cover the full spectrum of quantum technologies, 
-              from algorithms to hardware integration and hybrid quantum-classical systems.
+              Our quantum computing solutions cover the full spectrum of quantum
+              technologies, from algorithms to hardware integration and hybrid
+              quantum-classical systems.
             </p>
           </motion.div>
 
@@ -288,12 +357,17 @@ export function QuantumComputing() {
                   <div className="p-2 bg-purple-500/20 rounded-lg">
                     <feature.icon className="w-6 h-6 text-purple-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white">
+                    {feature.title}
+                  </h3>
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm text-gray-400">
+                    <li
+                      key={idx}
+                      className="flex items-center gap-2 text-sm text-gray-400"
+                    >
                       <CheckCircle className="w-4 h-4 text-purple-400" />
                       {benefit}
                     </li>
@@ -319,8 +393,9 @@ export function QuantumComputing() {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Quantum computing is transforming industries by solving previously intractable problems 
-              and enabling new breakthroughs in science and technology.
+              Quantum computing is transforming industries by solving previously
+              intractable problems and enabling new breakthroughs in science and
+              technology.
             </p>
           </motion.div>
 
@@ -335,14 +410,21 @@ export function QuantumComputing() {
                 className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg p-8 border border-gray-600"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${app.color}`}>
+                  <div
+                    className={`p-3 rounded-lg bg-gradient-to-r ${app.color}`}
+                  >
                     <app.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{app.industry}</h3>
+                  <h3 className="text-2xl font-bold text-white">
+                    {app.industry}
+                  </h3>
                 </div>
                 <ul className="space-y-3">
                   {app.applications.map((application, idx) => (
-                    <li key={idx} className="flex items-center gap-3 text-gray-300">
+                    <li
+                      key={idx}
+                      className="flex items-center gap-3 text-gray-300"
+                    >
                       <ArrowRight className="w-4 h-4 text-purple-400" />
                       {application}
                     </li>
@@ -368,8 +450,8 @@ export function QuantumComputing() {
               Quantum Computing Platforms
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              We work with leading quantum computing platforms and technologies to deliver 
-              cutting-edge solutions for our clients.
+              We work with leading quantum computing platforms and technologies
+              to deliver cutting-edge solutions for our clients.
             </p>
           </motion.div>
 
@@ -385,7 +467,9 @@ export function QuantumComputing() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <tech.icon className="w-6 h-6 text-purple-400" />
-                  <h3 className="text-lg font-semibold text-white">{tech.name}</h3>
+                  <h3 className="text-lg font-semibold text-white">
+                    {tech.name}
+                  </h3>
                 </div>
                 <p className="text-gray-400 text-sm">{tech.description}</p>
               </motion.div>
@@ -407,8 +491,9 @@ export function QuantumComputing() {
               Ready to Explore the Quantum Frontier?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-              Let's discuss how quantum computing can revolutionize your business operations 
-              and unlock new possibilities for innovation and growth.
+              Let's discuss how quantum computing can revolutionize your
+              business operations and unlock new possibilities for innovation
+              and growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

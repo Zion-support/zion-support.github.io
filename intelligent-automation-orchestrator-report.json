@@ -1,0 +1,84 @@
+{
+  "timestamp": "2025-09-01T03:59:26.150Z",
+  "projectState": {
+    "hasErrors": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "buildStatus": "failed",
+    "testStatus": "failed",
+    "lastBuildTime": null,
+    "lastTestTime": null,
+    "fileCount": 2769,
+    "dependencyStatus": "unknown",
+    "securityStatus": "vulnerable",
+    "performanceStatus": "poor"
+  },
+  "automationsExecuted": 5,
+  "results": [
+    {
+      "automation": "enhanced-error-fixer",
+      "status": "failed",
+      "error": "spawnSync /bin/sh ETIMEDOUT",
+      "timestamp": "2025-09-01T03:39:25.887Z"
+    },
+    {
+      "automation": "console-error-fixer",
+      "status": "failed",
+      "error": "spawnSync /bin/sh ETIMEDOUT",
+      "timestamp": "2025-09-01T03:44:25.964Z"
+    },
+    {
+      "automation": "code-quality-automation",
+      "status": "failed",
+      "error": "spawnSync /bin/sh ETIMEDOUT",
+      "timestamp": "2025-09-01T03:49:26.009Z"
+    },
+    {
+      "automation": "security-audit",
+      "status": "failed",
+      "error": "spawnSync /bin/sh ETIMEDOUT",
+      "timestamp": "2025-09-01T03:54:26.087Z"
+    },
+    {
+      "automation": "performance-monitor",
+      "status": "failed",
+      "error": "spawnSync /bin/sh ETIMEDOUT",
+      "timestamp": "2025-09-01T03:59:26.149Z"
+    }
+  ],
+  "insights": [
+    {
+      "type": "build",
+      "severity": "high",
+      "message": "Project build is failing",
+      "recommendation": "Investigate build errors and run enhanced-error-fixer"
+    },
+    {
+      "type": "testing",
+      "severity": "medium",
+      "message": "Project tests are failing",
+      "recommendation": "Run code-quality-automation to improve test coverage and fix failing tests"
+    },
+    {
+      "type": "performance",
+      "severity": "medium",
+      "message": "Project has performance issues",
+      "recommendation": "Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks"
+    },
+    {
+      "type": "automation",
+      "severity": "medium",
+      "message": "Automation success rate is 0.0%",
+      "recommendation": "Investigate failing automations and improve error handling"
+    },
+    {
+      "type": "maintenance",
+      "severity": "low",
+      "message": "Project has 2769 files",
+      "recommendation": "Consider code splitting and modularization to improve maintainability"
+    }
+  ],
+  "summary": "Intelligent automation orchestrator completed - Executed 5 automations",
+  "status": "completed",
+  "nextRun": "2025-09-01T09:59:26.150Z"
+}

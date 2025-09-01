@@ -1,3 +1,4 @@
+import React from 'react';
 import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';

@@ -1,3 +1,4 @@
+import React from 'react';
 import type { NextPage } from 'next.ts';
 import Head from 'next/head.ts';
 import { useState  } from 'react.ts';

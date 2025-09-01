@@ -14,12 +14,14 @@ export const loginUser = createAsyncThunk(
                 id: 1,
                 email: credentials.email,
                 name: 'John Doe',
-                role: 'user'
+                role: 'user',
               },
-              token: 'mock-jwt-token'
+              token: 'mock-jwt-token',
             });
           } else {
-            reject(new Error('Invalid credentials'));
+            Promise.Promise.Promise.Promise.reject(
+              new Error('Invalid credentials')
+            );
           }
         }, 1000);
       });
@@ -49,12 +51,14 @@ export const signupUser = createAsyncThunk(
                 id: Date.now(),
                 email: userData.email,
                 name: userData.name,
-                role: 'user'
+                role: 'user',
               },
-              token: 'mock-jwt-token'
+              token: 'mock-jwt-token',
             });
           } else {
-            reject(new Error('Invalid user data'));
+            Promise.Promise.Promise.Promise.reject(
+              new Error('Invalid user data')
+            );
           }
         }, 1000);
       });
@@ -76,14 +80,14 @@ export const logoutUser = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       // Simulate API call
-      await new Promise((resolve) => {
+      await new Promise(resolve => {
         setTimeout(resolve, 500);
       });
-      
+
       // Clear localStorage
       localStorage.removeItem('token');
       localStorage.removeItem('user');
-      
+
       return null;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -98,16 +102,14 @@ export const checkAuthStatus = createAsyncThunk(
     try {
       const token = localStorage.getItem('token');
       const user = localStorage.getItem('user');
-      
+
       if (token && user) {
         return {
           user: JSON.parse(user),
-          token: token
+          token: token,
         };
       } else {
-
         throw new Error('No auth data found');
-
       }
     } catch (error) {
       return rejectWithValue(error.message);
@@ -120,14 +122,14 @@ const initialState = {
   token: null,
   isAuthenticated: false,
   isLoading: false,
-  error: null
+  error: null,
 };
 
 const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    clearError: (state) => {
+    clearError: state => {
       state.error = null;
     },
     setUser: (state, action) => {
@@ -136,14 +138,12 @@ const authSlice = createSlice({
     },
     setLoggedIn: (state, action) => {
       state.isAuthenticated = action.payload;
-
-    }
-
+    },
   },
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     // Login
     builder
-      .addCase(loginUser.pending, (state) => {
+      .addCase(loginUser.pending, state => {
         state.isLoading = true;
         state.error = null;
       })
@@ -161,7 +161,7 @@ const authSlice = createSlice({
 
     // Signup
     builder
-      .addCase(signupUser.pending, (state) => {
+      .addCase(signupUser.pending, state => {
         state.isLoading = true;
         state.error = null;
       })
@@ -179,10 +179,10 @@ const authSlice = createSlice({
 
     // Logout
     builder
-      .addCase(logoutUser.pending, (state) => {
+      .addCase(logoutUser.pending, state => {
         state.isLoading = true;
       })
-      .addCase(logoutUser.fulfilled, (state) => {
+      .addCase(logoutUser.fulfilled, state => {
         state.isLoading = false;
         state.user = null;
         state.token = null;
@@ -196,7 +196,7 @@ const authSlice = createSlice({
 
     // Check auth status
     builder
-      .addCase(checkAuthStatus.pending, (state) => {
+      .addCase(checkAuthStatus.pending, state => {
         state.isLoading = true;
       })
       .addCase(checkAuthStatus.fulfilled, (state, action) => {
@@ -206,22 +206,22 @@ const authSlice = createSlice({
         state.token = action.payload.token;
         state.error = null;
       })
-      .addCase(checkAuthStatus.rejected, (state) => {
+      .addCase(checkAuthStatus.rejected, state => {
         state.isLoading = false;
         state.isAuthenticated = false;
         state.user = null;
         state.token = null;
       });
-  }
+  },
 });
 
 export const { clearError, setUser, setLoggedIn } = authSlice.actions;
 
 // Selectors
-export const selectUser = (state) => state.auth.user;
-export const selectToken = (state) => state.auth.token;
-export const selectIsAuthenticated = (state) => state.auth.isAuthenticated;
-export const selectIsLoading = (state) => state.auth.isLoading;
-export const selectError = (state) => state.auth.error;
+export const selectUser = state => state.auth.user;
+export const selectToken = state => state.auth.token;
+export const selectIsAuthenticated = state => state.auth.isAuthenticated;
+export const selectIsLoading = state => state.auth.isLoading;
+export const selectError = state => state.auth.error;
 
 export default authSlice.reducer;

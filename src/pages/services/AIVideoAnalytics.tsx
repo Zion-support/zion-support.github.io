@@ -1,3 +1,4 @@
+import React from 'react';
 import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, Shield, Users, BarChart3 export default function AIVideoAnalytics() {
   const features = [
     'Real-time video analysis with AI-powered object detection',

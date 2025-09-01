@@ -31,7 +31,7 @@ import {
   Clock,
   Award,
   Lightbulb,
-  Sparkles
+  Sparkles,
 } from 'lucide-react';
 
 export function AIMicroSaaSPlatform() {
@@ -39,39 +39,68 @@ export function AIMicroSaaSPlatform() {
     {
       icon: Brain,
       title: 'AI-Powered Automation',
-      description: 'Intelligent workflow automation with machine learning capabilities',
-      benefits: ['Reduce manual tasks by 80%', 'Smart decision making', 'Predictive analytics']
+      description:
+        'Intelligent workflow automation with machine learning capabilities',
+      benefits: [
+        'Reduce manual tasks by 80%',
+        'Smart decision making',
+        'Predictive analytics',
+      ],
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-grade security with SOC2 compliance and zero-trust architecture',
-      benefits: ['End-to-end encryption', 'Multi-factor authentication', 'Regular security audits']
+      description:
+        'Bank-grade security with SOC2 compliance and zero-trust architecture',
+      benefits: [
+        'End-to-end encryption',
+        'Multi-factor authentication',
+        'Regular security audits',
+      ],
     },
     {
       icon: Users,
       title: 'Multi-Tenant Architecture',
-      description: 'Scalable platform supporting unlimited users and organizations',
-      benefits: ['Role-based access control', 'Custom branding options', 'White-label solutions']
+      description:
+        'Scalable platform supporting unlimited users and organizations',
+      benefits: [
+        'Role-based access control',
+        'Custom branding options',
+        'White-label solutions',
+      ],
     },
     {
       icon: BarChart3,
       title: 'Advanced Analytics',
-      description: 'Real-time insights and predictive analytics for business growth',
-      benefits: ['Custom dashboards', 'AI-powered insights', 'Performance tracking']
+      description:
+        'Real-time insights and predictive analytics for business growth',
+      benefits: [
+        'Custom dashboards',
+        'AI-powered insights',
+        'Performance tracking',
+      ],
     },
     {
       icon: Rocket,
       title: 'Rapid Deployment',
       description: 'Deploy your SaaS solution in minutes, not months',
-      benefits: ['Pre-built templates', 'One-click deployment', 'Instant scaling']
+      benefits: [
+        'Pre-built templates',
+        'One-click deployment',
+        'Instant scaling',
+      ],
     },
     {
       icon: Cloud,
       title: 'Cloud-Native',
-      description: 'Built for the cloud with automatic scaling and high availability',
-      benefits: ['99.9% uptime guarantee', 'Global CDN', 'Auto-scaling infrastructure']
-    }
+      description:
+        'Built for the cloud with automatic scaling and high availability',
+      benefits: [
+        '99.9% uptime guarantee',
+        'Global CDN',
+        'Auto-scaling infrastructure',
+      ],
+    },
   ];
 
   const pricingPlans = [
@@ -86,10 +115,10 @@ export function AIMicroSaaSPlatform() {
         'Standard security',
         'Email support',
         '5GB storage',
-        'Basic analytics'
+        'Basic analytics',
       ],
       cta: 'Start Free Trial',
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -104,10 +133,10 @@ export function AIMicroSaaSPlatform() {
         '50GB storage',
         'Advanced analytics',
         'Custom integrations',
-        'White-label options'
+        'White-label options',
       ],
       cta: 'Start Free Trial',
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -122,38 +151,51 @@ export function AIMicroSaaSPlatform() {
         'Unlimited storage',
         'Custom AI models',
         'On-premise options',
-        'SLA guarantees'
+        'SLA guarantees',
       ],
       cta: 'Contact Sales',
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const useCases = [
     {
       title: 'E-commerce Platforms',
-      description: 'Build intelligent online stores with AI-powered recommendations',
+      description:
+        'Build intelligent online stores with AI-powered recommendations',
       icon: ShoppingCart,
-      benefits: ['Smart product suggestions', 'Inventory optimization', 'Customer behavior analysis']
+      benefits: [
+        'Smart product suggestions',
+        'Inventory optimization',
+        'Customer behavior analysis',
+      ],
     },
     {
       title: 'CRM Systems',
       description: 'AI-enhanced customer relationship management',
       icon: Users,
-      benefits: ['Lead scoring', 'Sales forecasting', 'Customer insights']
+      benefits: ['Lead scoring', 'Sales forecasting', 'Customer insights'],
     },
     {
       title: 'Project Management',
       description: 'Intelligent project planning and resource allocation',
       icon: Target,
-      benefits: ['Risk assessment', 'Resource optimization', 'Timeline predictions']
+      benefits: [
+        'Risk assessment',
+        'Resource optimization',
+        'Timeline predictions',
+      ],
     },
     {
       title: 'Marketing Automation',
       description: 'AI-driven marketing campaigns and customer engagement',
       icon: TrendingUp,
-      benefits: ['Personalized content', 'Campaign optimization', 'ROI tracking']
-    }
+      benefits: [
+        'Personalized content',
+        'Campaign optimization',
+        'ROI tracking',
+      ],
+    },
   ];
 
   return (
@@ -175,8 +217,9 @@ export function AIMicroSaaSPlatform() {
               AI Micro SaaS Platform
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build, deploy, and scale intelligent SaaS applications in minutes. Our AI-powered platform 
-              provides everything you need to create the next generation of business software.
+              Build, deploy, and scale intelligent SaaS applications in minutes.
+              Our AI-powered platform provides everything you need to create the
+              next generation of business software.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -210,8 +253,9 @@ export function AIMicroSaaSPlatform() {
               Everything You Need to Build AI-Powered SaaS
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Our platform combines cutting-edge AI technology with enterprise-grade infrastructure 
-              to give you the tools you need to succeed.
+              Our platform combines cutting-edge AI technology with
+              enterprise-grade infrastructure to give you the tools you need to
+              succeed.
             </p>
           </motion.div>
 
@@ -231,7 +275,10 @@ export function AIMicroSaaSPlatform() {
                 <p className="text-gray-400 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                    <li
+                      key={idx}
+                      className="flex items-center text-sm text-gray-300"
+                    >
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
@@ -256,8 +303,8 @@ export function AIMicroSaaSPlatform() {
               Transparent Pricing for Every Business
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Choose the plan that fits your needs. All plans include our core AI capabilities 
-              and enterprise-grade security.
+              Choose the plan that fits your needs. All plans include our core
+              AI capabilities and enterprise-grade security.
             </p>
           </motion.div>
 
@@ -269,8 +316,8 @@ export function AIMicroSaaSPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
+                  plan.popular
+                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/20'
                     : 'border-gray-700'
                 }`}
               >
@@ -281,7 +328,7 @@ export function AIMicroSaaSPlatform() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -329,7 +376,7 @@ export function AIMicroSaaSPlatform() {
               Perfect for Any Industry
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Our platform is designed to handle any type of SaaS application, 
+              Our platform is designed to handle any type of SaaS application,
               from simple tools to complex enterprise solutions.
             </p>
           </motion.div>
@@ -348,11 +395,16 @@ export function AIMicroSaaSPlatform() {
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2">{useCase.title}</h3>
+                    <h3 className="text-xl font-semibold mb-2">
+                      {useCase.title}
+                    </h3>
                     <p className="text-gray-400 mb-4">{useCase.description}</p>
                     <ul className="space-y-2">
                       {useCase.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <li
+                          key={idx}
+                          className="flex items-center text-sm text-gray-300"
+                        >
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
@@ -378,7 +430,7 @@ export function AIMicroSaaSPlatform() {
               Ready to Build the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI-powered platform 
+              Join thousands of businesses already using our AI-powered platform
               to create innovative SaaS solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -423,7 +475,11 @@ export function AIMicroSaaSPlatform() {
               <div className="flex flex-col items-center">
                 <MapPin className="w-8 h-8 text-cyan-400 mb-4" />
                 <h3 className="font-semibold mb-2">Address</h3>
-                <p className="text-gray-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <p className="text-gray-400">
+                  364 E Main St STE 1008
+                  <br />
+                  Middletown DE 19709
+                </p>
               </div>
             </div>
           </motion.div>

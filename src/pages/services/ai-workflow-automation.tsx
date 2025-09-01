@@ -1,40 +1,45 @@
 import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { Workflow, Zap, Brain, Target, TrendingUp, Shield, Users, Clock, BarChart3, CheckCircle  } from 'lucide-react.ts';
+import { SEO } from '../../components/SEO';
+import { motion } from 'framer-motion.ts';
 
 export default function AIWorkflowAutomation(...args: any[]): any {
   const features = [
     {
       icon: Workflow,
       title: 'Intelligent Process Automation',
-      description: 'AI-powered workflow automation that learns and optimizes your business processes automatically.'
+      description:
+        'AI-powered workflow automation that learns and optimizes your business processes automatically.',
     },
     {
       icon: Brain,
       title: 'Machine Learning Integration',
-      description: 'Seamless integration with ML models for predictive workflow optimization and decision-making.'
+      description:
+        'Seamless integration with ML models for predictive workflow optimization and decision-making.',
     },
     {
       icon: Target,
       title: 'Goal-Oriented Automation',
-      description: 'Workflows that adapt and optimize based on your business objectives and KPIs.'
+      description:
+        'Workflows that adapt and optimize based on your business objectives and KPIs.',
     },
     {
       icon: TrendingUp,
       title: 'Performance Analytics',
-      description: 'Real-time insights into workflow efficiency and optimization opportunities.'
+      description:
+        'Real-time insights into workflow efficiency and optimization opportunities.',
     },
     {
       icon: Shield,
       title: 'Secure & Compliant',
-      description: 'Enterprise-grade security with built-in compliance monitoring and audit trails.'
+      description:
+        'Enterprise-grade security with built-in compliance monitoring and audit trails.',
     },
     {
       icon: Users,
       title: 'Team Collaboration',
-      description: 'Enhanced team productivity with intelligent task routing and workload balancing.'
-    }
+      description:
+        'Enhanced team productivity with intelligent task routing and workload balancing.',
+    },
   ];
 
   const benefits = [
@@ -43,16 +48,16 @@ export default function AIWorkflowAutomation(...args: any[]): any {
     'Cut operational costs by 40%',
     'Enhance customer satisfaction',
     'Ensure regulatory compliance',
-    'Scale operations seamlessly'
+    'Scale operations seamlessly',
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Workflow Automation - Zion Tech Group"
         description="Transform your business with intelligent AI-powered workflow automation. Reduce manual tasks, improve efficiency, and scale operations seamlessly."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
@@ -71,8 +76,9 @@ export default function AIWorkflowAutomation(...args: any[]): any {
               AI Workflow Automation
             </h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Transform your business operations with intelligent, AI-powered workflow automation. 
-              Reduce manual tasks, improve efficiency, and scale your operations seamlessly.
+              Transform your business operations with intelligent, AI-powered
+              workflow automation. Reduce manual tasks, improve efficiency, and
+              scale your operations seamlessly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20">
@@ -99,13 +105,14 @@ export default function AIWorkflowAutomation(...args: any[]): any {
               Intelligent Automation Features
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI workflow automation platform combines cutting-edge technology with intuitive design 
-              to deliver powerful automation capabilities.
+              Our AI workflow automation platform combines cutting-edge
+              technology with intuitive design to deliver powerful automation
+              capabilities.
             </p>
           </motion.div>
 
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -116,8 +123,12 @@ export default function AIWorkflowAutomation(...args: any[]): any {
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-cyan-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-slate-300 leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-slate-300 leading-relaxed">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -137,8 +148,10 @@ export default function AIWorkflowAutomation(...args: any[]): any {
                 Transform Your Business Operations
               </h2>
               <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                Our AI workflow automation delivers measurable results that directly impact your bottom line. 
-                From cost reduction to improved customer satisfaction, the benefits are clear and quantifiable.
+                Our AI workflow automation delivers measurable results that
+                directly impact your bottom line. From cost reduction to
+                improved customer satisfaction, the benefits are clear and
+                quantifiable.
               </p>
               <div className="grid grid-cols-1 gap-4">
                 {benefits.map((benefit, index) => (
@@ -161,9 +174,12 @@ export default function AIWorkflowAutomation(...args: any[]): any {
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Zap className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Ready to Automate?</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    Ready to Automate?
+                  </h3>
                   <p className="text-slate-300 mb-6">
-                    Start your AI workflow automation journey today and see the transformation in action.
+                    Start your AI workflow automation journey today and see the
+                    transformation in action.
                   </p>
                   <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200">
                     Schedule Demo
@@ -188,7 +204,8 @@ export default function AIWorkflowAutomation(...args: any[]): any {
               Ready to Automate Your Workflows?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Join hundreds of businesses that have already transformed their operations with AI workflow automation.
+              Join hundreds of businesses that have already transformed their
+              operations with AI workflow automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20">
