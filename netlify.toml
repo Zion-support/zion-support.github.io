@@ -1,4 +1,12 @@
-[[redirects]]
-  from = "/api/*"
-  to = "https://backend.example.com/:splat"
-  status = 200
+[build]
+  # Use `npm ci` for deterministic installs
+  command = "npm ci && npm run build && (n=0; until [ $n -ge 3 ]; do curl -sf --connect-timeout 10 $DEPLOY_PRIME_URL/api/health | grep '\"status\":\"ok\"' && break; n=$((n+1)); echo "Health check attempt $n failed, retrying in 15s..."; sleep 15; done; if [ $n -ge 3 ]; then echo "Health check failed after 3 attempts." && exit 1; fi)"
+  publish = ".next"
+
+[build.environment]
+  NODE_OPTIONS = "--max_old_space_size=4096"
+  NPM_FLAGS = "--prefer-offline"
+  NODE_VERSION = "20"
+  NEXT_PUBLIC_SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY" # Replace with your actual Supabase key
+  NEXT_PUBLIC_REOWN_PROJECT_ID = "VALID_PROJECT_ID_PLACEHOLDER" # IMPORTANT: Replace with your actual Reown AppKit Project ID
+  EXAMPLE_API_URL = "https://jsonplaceholder.typicode.com/todos/1"
