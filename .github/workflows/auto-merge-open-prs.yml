@@ -1,0 +1,128 @@
+name: Auto-merge open PRs into main
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "List PRs only without merging"
+        required: false
+        default: "false"
+  schedule:
+    - cron: '0 6 * * *'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  merge-open-prs:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.MERGE_PAT || github.token }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Ensure GitHub CLI is available
+        run: |
+          gh --version || (type -p curl >/dev/null && curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg && \
+            sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg && \
+            echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | \
+            sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null && \
+            sudo apt-get update && sudo apt-get install gh -y)
+
+      - name: Fetch remote
+        run: |
+          git fetch origin --prune
+
+      - name: List open PRs targeting main
+        id: list
+        run: |
+          set -e
+          prs=$(gh pr list --state open --base main --json number,headRefName,title,isDraft,mergeable --limit 100)
+          echo "$prs" | jq -r '.[] | "#\(.number) | head=\(.headRefName) | draft=\(.isDraft) | mergeable=\(.mergeable) | \(.title)"'
+          echo "prs_json<<EOF" >> $GITHUB_OUTPUT
+          echo "$prs" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Stop for dry run
+        if: ${{ inputs.dry_run == 'true' }}
+        run: echo "Dry run requested. Skipping merges."
+
+      - name: Merge PRs into main with simple auto-resolution
+        if: ${{ inputs.dry_run != 'true' }}
+        env:
+          PRS_JSON: ${{ steps.list.outputs.prs_json }}
+        run: |
+          set -e
+          echo "$PRS_JSON" | jq -c '.[]' | while read -r row; do
+            number=$(echo "$row" | jq -r '.number')
+            head=$(echo "$row" | jq -r '.headRefName')
+            draft=$(echo "$row" | jq -r '.isDraft')
+            target_mergeable=$(echo "$row" | jq -r '.mergeable // "UNKNOWN"')
+
+            if [ "$draft" = "true" ]; then
+              echo "Skipping draft PR #$number ($head)"
+              continue
+            fi
+
+            echo "Processing PR #$number ($head)"
+            git checkout main
+            git pull --ff-only origin main || git pull origin main
+
+            # Attempt merge without commit
+            set +e
+            git merge origin/"$head" --no-commit --no-ff
+            merge_status=$?
+            set -e
+
+            if [ $merge_status -ne 0 ]; then
+              echo "Conflicts detected for $head. Applying simple auto-resolution..."
+              # Resolve conflicts: keep ours for lock files, theirs for code
+              conflict_files=$(git diff --name-only --diff-filter=U || true)
+              if [ -z "$conflict_files" ]; then
+                echo "Merge failed without conflict markers; aborting this PR"
+                git merge --abort || true
+                continue
+              fi
+
+              for f in $conflict_files; do
+                case "$f" in
+                  package.json|package-lock.json|yarn.lock)
+                    git checkout --ours -- "$f" ;;
+                  *.ts|*.tsx|*.js|*.jsx)
+                    git checkout --theirs -- "$f" ;;
+                  *)
+                    git checkout --theirs -- "$f" ;;
+                esac
+                git add -- "$f"
+              done
+
+              # Ensure no remaining conflicts
+              if [ -n "$(git diff --name-only --diff-filter=U)" ]; then
+                echo "Unresolved conflicts remain for $head. Aborting this PR."
+                git merge --abort || true
+                continue
+              fi
+            fi
+
+            # Commit and push merge
+            git commit -m "Auto-merge PR #$number ($head) into main via workflow"
+            git push origin HEAD:main
+
+            # Optionally close PR via squash/merge if still open
+            set +e
+            gh pr merge "$number" --merge --delete-branch --admin || gh pr merge "$number" --merge || true
+            set -e
+          done
+
+      - name: Summary
+        run: |
+          echo "Completed auto-merge job. Review commit history on main and reopen failed PRs if needed."
