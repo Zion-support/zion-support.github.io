@@ -302,46 +302,57 @@ export default ${name.toLowerCase()};
   async run() {
     this.log('info', 'Syntax Fixer starting...');
     
-    // Run continuously instead of exiting
-    while (true) {
-      try {
-        const startTime = Date.now();
-        this.fixesApplied = 0;
-        this.filesProcessed = 0;
-        
-        const srcDir = path.join(this.projectRoot, 'src');
-        if (fs.existsSync(srcDir)) {
-          await this.scanAndFixDirectory(srcDir);
-        }
-        
-        const endTime = Date.now();
-        const duration = Math.round((endTime - startTime) / 1000);
-        
-        this.log('info', `Syntax fixing completed in ${duration}s`);
-        this.log('info', `Files processed: ${this.filesProcessed}`);
-        this.log('info', `Fixes applied: ${this.fixesApplied}`);
-        
-        // Generate report
-        const report = {
-          timestamp: new Date().toISOString(),
-          duration,
-          filesProcessed: this.filesProcessed,
-          fixesApplied: this.fixesApplied,
-          status: 'completed'
-        };
-        
-        const reportFile = path.join(this.projectRoot, 'syntax-error-fixer-report.json');
-        fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-        
-        // Wait before next run (5 minutes)
-        await new Promise(resolve => setTimeout(resolve, 5 * 60 * 1000));
-        
-      } catch (error) {
-        this.log('error', 'Error in syntax fixing cycle:', error.message);
-        // Wait before retry (1 minute)
-        await new Promise(resolve => setTimeout(resolve, 60 * 1000));
-      }
+    const startTime = Date.now();
+    this.fixesApplied = 0;
+    this.filesProcessed = 0;
+    
+    const srcDir = path.join(this.projectRoot, 'src');
+    if (fs.existsSync(srcDir)) {
+      await this.scanAndFixDirectory(srcDir);
     }
+    
+    const endTime = Date.now();
+    const duration = Math.round((endTime - startTime) / 1000);
+    
+    this.log('info', `Syntax fixing completed in ${duration}s`);
+    this.log('info', `Files processed: ${this.filesProcessed}`);
+    this.log('info', `Fixes applied: ${this.fixesApplied}`);
+    
+    // Generate report
+    const report = {
+      timestamp: new Date().toISOString(),
+      duration,
+      filesProcessed: this.filesProcessed,
+      fixesApplied: this.fixesApplied,
+      status: 'completed'
+    };
+    
+    const reportFile = path.join(this.projectRoot, 'syntax-error-fixer-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    
+    // Reset counters for next run
+    this.fixesApplied = 0;
+    this.filesProcessed = 0;
+    
+    return report;
+  }
+
+  async runContinuously() {
+    this.log('info', 'Syntax Fixer running in continuous mode...');
+    
+    // Run initial fix
+    await this.run();
+    
+    // Set up interval to run every 6 hours (21600000 ms)
+    setInterval(async () => {
+      this.log('info', 'Running scheduled syntax fix...');
+      await this.run();
+    }, 6 * 60 * 60 * 1000);
+    
+    // Keep the process alive
+    setInterval(() => {
+      this.log('info', 'Syntax Fixer heartbeat - running normally');
+    }, 60 * 60 * 1000); // Heartbeat every hour
   }
 
   shutdown() {
@@ -350,9 +361,11 @@ export default ${name.toLowerCase()};
   }
 }
 
-// Run the fixer
+// Run the fixer in continuous mode
 const fixer = new SyntaxFixer();
-fixer.run().catch(error => {
+fixer.runContinuously().then(() => {
+  fixer.log('info', 'Syntax Fixer started in continuous mode');
+}).catch(error => {
   console.error('Syntax fixer failed:', error);
   process.exit(1);
 });
