@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
     "target": "ES2022",
     "useDefineForClassFields": true,
     "lib": [
@@ -9,12 +8,6 @@
       "DOM.Iterable"
     ],
     "allowJs": true,
-=======
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-736f
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -44,7 +37,6 @@
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
     "noFallthroughCasesInSwitch": true,
-<<<<<<< HEAD
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -99,33 +91,14 @@
         "name": "next"
       }
     ]
-=======
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "strictNullChecks": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowJs": true,
-    "incremental": true,
-    "plugins": [{ "name": "next" }]
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-736f
   },
-  "include": ["src/main.tsx", "src/App.tsx", "tailwind.config.js", "postcss.config.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": [
-    "node_modules",
-    ".next",
-    "out",
-    "dist",
-    "automation",
-    "components.disabled",
-    "**/*.disabled",
-    "**/*.backup",
-    "**/*.tsbackup"
+    "node_modules"
   ]
 }

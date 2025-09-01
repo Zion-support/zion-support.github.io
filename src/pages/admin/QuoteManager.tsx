@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-QuotesFilter,
-  QuotesTable''
- } from '@/components/admin/quotes';
-export { function };
-export default function QuoteManager(...args[]):  {}
-'
-  const { user } = useAuth();''
-  const isAdmin: any = user?.userType === 'admin';  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState<typeof false>(false);
-  const {}
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState<typeof false>(false);
-  const {}
-=======
 
 import React, { useState } from 'react.ts';
 import { useAdminQuotes              } from '@/hooks/useAdminQuotes';
@@ -32,15 +17,12 @@ import { QuoteStatusCards,
               } from '@/components/admin/quotes';
 
 export default function QuoteManager(...args[]: any):  {
-
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
 
   const [selectedQuote, setSelectedQuote] = useState<any>(null);
   const [showDetails, setShowDetails] = useState(false);
   const {
-
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209
     quotes,
     isLoading,
     error,
@@ -54,19 +36,10 @@ export default function QuoteManager(...args[]: any):  {
     setDateRange,
     updateStatus,
     toggleArchive,
-<<<<<<< HEAD
-    deleteQuote;
-  } = useAdminQuotes();
-  // Count quotes by status;
-  const statusCounts: any = {}
-'
-'"'"""
-=======
     deleteQuote
   } = useAdminQuotes();
   // Count quotes by status
   const statusCounts = {
-
   <<<<<<< HEAD
     new: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)               => q.status === 'new').length,
     in_review: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)               => q.status === 'in_review').length,
@@ -78,7 +51,6 @@ export default function QuoteManager(...args[]: any):  {
 };
 
   const handleViewDetails = (quote: anyanyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)               => {
-
 =======
   new: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'new').length,
     in_review: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'in_review').length,;
@@ -100,7 +72,6 @@ export default function QuoteManager(...args[]: any):  {
     setDateRange({ from: null, to: null });
   };
   if (!isAdmin) {
-
     return <Navigate to = "/unauthorized" replace />}
   return (
     <ProtectedRoute adminOnly>
@@ -168,11 +139,9 @@ export default function QuoteManager(...args[]: any):  {
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {
-
             setShowDetails(false);
             setSelectedQuote(null)}}
         />
       </div>
     </ProtectedRoute>
   )}
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

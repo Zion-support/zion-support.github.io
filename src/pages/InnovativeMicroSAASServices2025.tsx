@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-import { Brain, Cloud, Rocket, Shield, Zap, Globe, Cpu, Database, Users, Target, TrendingUp, Heart, Building, Car, Factory, City, Leaf, Atom, Satellite, 
-=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-
+import { 
   Brain, 
   Cloud, 
   Shield, 
@@ -55,7 +51,6 @@ import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSAASServices2025';
 
 export default function InnovativeMicroSAASServices2025() {
-
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -78,7 +73,6 @@ export default function InnovativeMicroSAASServices2025() {
   ];
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service => {
-
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -88,9 +82,7 @@ export default function InnovativeMicroSAASServices2025() {
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
-
     switch (sortBy) {
-
       case 'rating':
         return b.rating - a.rating;
       case 'price':
@@ -105,12 +97,10 @@ export default function InnovativeMicroSAASServices2025() {
   });
 
   const handleServiceClick = (service: any) => {
-
     setSelectedService(service);
   };
 
   const closeModal = () => {
-
     setSelectedService(null);
   };
 
@@ -197,7 +187,6 @@ export default function InnovativeMicroSAASServices2025() {
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-colors ${
-
                       viewMode === 'grid' ? 'bg-white/30 text-white' : 'text-gray-300 hover:text-white'
                     }`}
                   >
@@ -206,7 +195,6 @@ export default function InnovativeMicroSAASServices2025() {
                   <button
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-colors ${
-
                       viewMode === 'list' ? 'bg-white/30 text-white' : 'text-gray-300 hover:text-white'
                     }`}
                   >
@@ -224,7 +212,6 @@ export default function InnovativeMicroSAASServices2025() {
                     key={category.id}
                     onClick={() => setActiveCategory(category.id)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-
                       activeCategory === category.id
                         ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
                         : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
@@ -632,4 +619,3 @@ export default function InnovativeMicroSAASServices2025() {
     </div>
   );
 }
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

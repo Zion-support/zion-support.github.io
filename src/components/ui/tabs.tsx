@@ -1,14 +1,19 @@
-<<<<<<< HEAD
-interface TabsContextType {}
-  activeTab: string;
-  setActiveTab: (tab: string)  => void}
-  activeTab: string;
-  setActiveTab: tab: string void;
-}
-;
-=======
 import React, { createContext, useContext, useState, ReactNode } from 'react.ts';
 interface TabsContextType {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   activeTab: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
 setActiveTab: anyanyanyanyanyanyanyanyanyanyanyanyanyany(tab: string)                => void;
@@ -42,12 +47,10 @@ export function Tabs(...args: any[]): any {;
   const handleTabChange = (tab: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     setActiveTab(tab);
     if (onValueChange) {
-
       onValueChange(tab)}
   };
   return (
     <TabsContext.Provider value = {
-
   { activeTab,
   setActiveTab: handleTabChange 
 ;
@@ -85,4 +88,3 @@ export function Tabs(...args: any[]): any {;
     </div>;
   );
 }
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

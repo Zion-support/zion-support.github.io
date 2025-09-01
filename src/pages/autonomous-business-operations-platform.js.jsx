@@ -1,38 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';'''
-import Link from 'next/link';
-const AutonomousBusinessOperationsPlatform = () => {}
-  return()
-    <div className="min-h-screen bg-slate-900 text-white">"""
-      {/* Header Section */}""""
-      <div className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-green-900/20 to-emerald-900/20">""""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
-          <div className="text-center">""""
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-6">
-              Autonomous Business Operations Platform"""
-            </h1>""""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with AI-powered autonomous operations that;
-              run 24/7, continuously optimizing processes and driving growth;
-              without human intervention."""
-            </p>""""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
-              <Link""""
-                to="/contact""""
-                className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 text-lg"""
-              >
-                Start Automation;
-              </Link>"""
-              <Link""""
-                to="/services/ai-automation""""
-                className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg"""
-              >
-                Learn More;
-=======
 import React from 'react';
 import Link from 'next/link';
 const AutonomousBusinessOperationsPlatform = () => {
-
     return (<div className="min-h-screen bg-slate-900 text-white">
       {/* Header Section */}
       <div className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-green-900/20 to-emerald-900/20">
@@ -51,54 +19,11 @@ const AutonomousBusinessOperationsPlatform = () => {
               </Link>
               <Link to="/services/ai-automation" className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg">
                 Learn More
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209
               </Link>
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-"""
-      {/* Key Benefits Section */}""""
-      <div className="py-20 bg-slate-800/50">""""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-            Why Choose Autonomous Operations?"""
-          </h2>""""
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""""
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-green-500/50 transition-all duration-300">""""
-              <div className="w-16 h-16 bg-green-500/20 rounded-lg flex items-center justify-center mb-6">""""
-                <span className="text-3xl">⏰</span>"""
-              </div>""""
-              <h3 className="text-xl font-semibold mb-4">24/7 Operations</h3>""""
-              <p className="text-gray-300">
-                Your business never sleeps. Autonomous systems work around the;
-                clock, continuously monitoring and optimizing operations.
-              </p>
-            </div>"""
-""""
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-green-500/50 transition-all duration-300">""""
-              <div className="w-16 h-16 bg-emerald-500/20 rounded-lg flex items-center justify-center mb-6">""""
-                <span className="text-3xl">📈</span>"""
-              </div>""""
-              <h3 className="text-xl font-semibold mb-4">
-                Continuous Optimization"""
-              </h3>""""
-              <p className="text-gray-300">
-                AI algorithms constantly learn and improve, automatically;
-                adjusting strategies for maximum efficiency and profitability.
-              </p>
-            </div>"""
-""""
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-green-500/50 transition-all duration-300">""""
-              <div className="w-16 h-16 bg-teal-500/20 rounded-lg flex items-center justify-center mb-6">""""
-                <span className="text-3xl">💰</span>"""
-              </div>""""
-              <h3 className="text-xl font-semibold mb-4">Cost Reduction</h3>""""
-              <p className="text-gray-300">
-                Eliminate manual processes and reduce operational costs by up to;
-                70% while improving accuracy and consistency.
-=======
 
       {/* Key Benefits Section */}
       <div className="py-20 bg-slate-800/50">
@@ -137,31 +62,11 @@ const AutonomousBusinessOperationsPlatform = () => {
               <p className="text-gray-300">
                 Eliminate manual processes and reduce operational costs by up to 70% 
                 while improving accuracy and consistency.
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209
               </p>
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-"""
-      {/* Platform Modules Section */}""""
-      <div className="py-20 bg-slate-900">""""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-            Platform Modules"""
-          </h2>""""
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">""""
-            <div className="space-y-8">""""
-              <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">""""
-                <h3 className="text-xl font-semibold mb-3 text-green-400">
-                  Financial Operations"""
-                </h3>""""
-                <p className="text-gray-300 mb-4">
-                  Automated invoicing, expense management, and financial;
-                  reporting with real-time analytics and predictive insights."""
-                </p>""""
-=======
 
       {/* Platform Modules Section */}
       <div className="py-20 bg-slate-900">
@@ -177,25 +82,12 @@ const AutonomousBusinessOperationsPlatform = () => {
                   Automated invoicing, expense management, and financial reporting with 
                   real-time analytics and predictive insights.
                 </p>
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209
                 <ul className="text-sm text-gray-400 space-y-1">
                   <li>• Automated invoice processing</li>
                   <li>• Expense categorization</li>
                   <li>• Financial forecasting</li>
                   <li>• Compliance monitoring</li>
                 </ul>
-<<<<<<< HEAD
-              </div>"""
-""""
-              <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">""""
-                <h3 className="text-xl font-semibold mb-3 text-emerald-400">
-                  Customer Service"""
-                </h3>""""
-                <p className="text-gray-300 mb-4">
-                  AI-powered customer support with intelligent routing,
-                  automated responses, and sentiment analysis."""
-                </p>""""
-=======
               </div>
               
               <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">
@@ -204,7 +96,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                   AI-powered customer support with intelligent routing, automated responses, 
                   and sentiment analysis.
                 </p>
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209
                 <ul className="text-sm text-gray-400 space-y-1">
                   <li>• 24/7 chatbot support</li>
                   <li>• Ticket prioritization</li>
@@ -212,19 +103,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                   <li>• Proactive issue resolution</li>
                 </ul>
               </div>
-<<<<<<< HEAD
-            </div>"""
-""""
-            <div className="space-y-8">""""
-              <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">""""
-                <h3 className="text-xl font-semibold mb-3 text-teal-400">
-                  Supply Chain Management"""
-                </h3>""""
-                <p className="text-gray-300 mb-4">
-                  Intelligent inventory management, demand forecasting, and;
-                  supplier optimization with real-time tracking."""
-                </p>""""
-=======
             </div>
             
             <div className="space-y-8">
@@ -234,25 +112,12 @@ const AutonomousBusinessOperationsPlatform = () => {
                   Intelligent inventory management, demand forecasting, and supplier 
                   optimization with real-time tracking.
                 </p>
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209
                 <ul className="text-sm text-gray-400 space-y-1">
                   <li>• Demand prediction</li>
                   <li>• Inventory optimization</li>
                   <li>• Supplier performance analysis</li>
                   <li>• Risk assessment</li>
                 </ul>
-<<<<<<< HEAD
-              </div>"""
-""""
-              <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">""""
-                <h3 className="text-xl font-semibold mb-3 text-green-400">
-                  Marketing Automation"""
-                </h3>""""
-                <p className="text-gray-300 mb-4">
-                  Personalized marketing campaigns, lead scoring, and conversion;
-                  optimization with continuous A/B testing."""
-                </p>""""
-=======
               </div>
               
               <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">
@@ -261,7 +126,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                   Personalized marketing campaigns, lead scoring, and conversion 
                   optimization with continuous A/B testing.
                 </p>
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209
                 <ul className="text-sm text-gray-400 space-y-1">
                   <li>• Campaign personalization</li>
                   <li>• Lead nurturing automation</li>
@@ -273,32 +137,6 @@ const AutonomousBusinessOperationsPlatform = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-"""
-      {/* Success Metrics Section */}""""
-      <div className="py-20 bg-slate-800/50">""""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-            Proven Results"""
-          </h2>""""
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">""""
-            <div className="text-center">""""
-              <div className="text-5xl font-bold text-green-400 mb-2">70%</div>""""
-              <div className="text-gray-300">Cost Reduction</div>"""
-            </div>""""
-            <div className="text-center">""""
-              <div className="text-5xl font-bold text-emerald-400 mb-2">
-                24/7"""
-              </div>""""
-              <div className="text-gray-300">Operations</div>"""
-            </div>""""
-            <div className="text-center">""""
-              <div className="text-5xl font-bold text-teal-400 mb-2">95%</div>""""
-              <div className="text-gray-300">Accuracy</div>"""
-            </div>""""
-            <div className="text-center">""""
-              <div className="text-5xl font-bold text-green-400 mb-2">3x</div>""""
-=======
 
       {/* Success Metrics Section */}
       <div className="py-20 bg-slate-800/50">
@@ -321,37 +159,11 @@ const AutonomousBusinessOperationsPlatform = () => {
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold text-green-400 mb-2">3x</div>
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209
               <div className="text-gray-300">Faster Processing</div>
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-"""
-      {/* CTA Section */}""""
-      <div className="py-20 bg-gradient-to-r from-green-900/20 to-emerald-900/20">""""
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""""
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-            Ready to Automate Your Business?"""
-          </h2>""""
-          <p className="text-xl text-gray-300 mb-8">
-            Join hundreds of companies already running autonomous operations and;
-            experiencing unprecedented efficiency and growth."""
-          </p>""""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
-            <Link""""
-              to="/contact""""
-              className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 text-lg"""
-            >
-              Schedule a Demo;
-            </Link>"""
-            <Link""""
-              to="/services/ai-automation""""
-              className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg"""
-            >
-              Explore Services;
-=======
 
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
@@ -369,18 +181,9 @@ const AutonomousBusinessOperationsPlatform = () => {
             </Link>
             <Link to="/services/ai-automation" className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg">
               Explore Services
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209
             </Link>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>
-  );
-};
-export default AutonomousBusinessOperationsPlatform;'"""
-'"'"""
-=======
     </div>)};
 export default AutonomousBusinessOperationsPlatform;
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

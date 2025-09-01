@@ -46,8 +46,9 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 10);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -118,7 +119,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
           </button>
 
           <LanguageSelector />
-
           {!hideLogin && <UserMenu />}
 
           {/* Mobile Menu Button */}
@@ -146,6 +146,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
                 navigate(`/search?q=${encodeURIComponent(text)}`);
                 setQuery('');
               }}
+              searchSuggestions={searchSuggestions}
               placeholder="Search services, talent, equipment..."
             />
             <div className="absolute right-3 top-1/2 transform -translate-y-1/2">

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { Shield, Brain, Lock, Users, CheckCircle, ArrowRight, Star, Award, Clock, 
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
@@ -29,28 +26,23 @@ import { Shield,
 import { SEO              } from '@/components/SEO';
 
 export default function AICybersecurity(...args: any[]): any {
-
   const features = [
     {
-
       icon: Brain,
       title: "AI-Powered Threat Detection",
       description: "Advanced machine learning algorithms that identify and respond to threats in real-time"
     },
     {
-
       icon: Shield,
       title: "Intelligent Security",
       description: "Automated security responses and proactive threat prevention"
     },
     {
-
       icon: Eye,
       title: "Continuous Monitoring",
       description: "24/7 surveillance of your digital infrastructure with AI-driven insights"
     },
     {
-
       icon: Lock,
       title: "Zero-Trust Security",
       description: "Comprehensive security framework with AI-enhanced authentication and access control"
@@ -59,28 +51,24 @@ export default function AICybersecurity(...args: any[]): any {
 
   const services = [
     {
-
       title: "Threat Intelligence",
       description: "AI-powered analysis of global threat landscapes and predictive security insights",
       icon: Target,
       features: ["Real-time threat feeds", "Predictive analytics", "Global threat monitoring"]
     },
     {
-
       title: "Incident Response",
       description: "Automated incident detection and response with AI-driven decision making",
       icon: AlertTriangle,
       features: ["Instant threat detection", "Automated response", "Incident analysis"]
     },
     {
-
       title: "Vulnerability Assessment",
       description: "Continuous scanning and AI-powered vulnerability identification and remediation",
       icon: Search,
       features: ["Automated scanning", "Risk prioritization", "Remediation guidance"]
     },
     {
-
       title: "Security Analytics",
       description: "Advanced analytics and reporting for comprehensive security insights",
       icon: TrendingUp,
@@ -308,4 +296,3 @@ export default function AICybersecurity(...args: any[]): any {
     </div>
   );
 }}
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

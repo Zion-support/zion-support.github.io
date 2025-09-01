@@ -1,89 +1,6 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';'''
-import { motion, AnimatePresence } from 'framer-motion';'''
-import { Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X } from 'lucide-react';
-import { Button } from "./button";""""
-export function AccessibilityPanel({ enabled = true, className = "", onSettingsChange }) {}
-    const [isOpen, setIsOpen] = useState(false);
-    const [settings, setSettings] = useState({}
-        highContrast: false,
-        largeText: false,
-        reducedMotion: false,'
-        screenReader: false,''
-        fontSize: 16,'''
-        colorBlindMode: 'normal'
-    });
-    // Apply accessibility settings to document;
-    useEffect(() => {}
-        if (!enabled)
-            return;
-        const root = document.documentElement;
-        // High contrast;
-        if (settings.highContrast) {}
-'
-''
-'''
-            root.classList.add('high-contrast')}
-        else {}
-'
-''
-'''
-            root.classList.remove('high-contrast')}
-        // Large text;
-        if (settings.largeText) {}
-'
-''
-'''
-            root.style.fontSize = '18px'}
-        else {}
-'
-''
-'''
-            root.style.fontSize = '16px'}
-        // Reduced motion;
-        if (settings.reducedMotion) {}
-'
-''
-'''
-            root.style.setProperty('--reduced-motion',reduce')}
-        else {}
-'
-''
-'''
-            root.style.setProperty('--reduced-motion',no-preference')}'''
-        // Font size''''
-        root.style.setProperty('--font-size', `${settings.fontSize}px`);'''
-        // Color blind mode''''
-        root.setAttribute('data-color-blind', settings.colorBlindMode);
-        // Notify parent component;
-        onSettingsChange?.(settings)}, [settings, enabled, onSettingsChange]);
-    // Load saved settings from localStorage;
-    useEffect(() => {}
-'
-''
-'''
-        const saved = localStorage.getItem('accessibility-settings');
-        if (saved) {}
-            try {}
-                const parsed = JSON.parse(saved);
-                setSettings(prev => ({ ...prev, ...parsed }))}
-            catch {}
-                // Silently handle parsing errors;
-    }, []);
-    // Save settings to localStorage;
-    const saveSettings = useCallback((newSettings) => {}
-        setSettings(newSettings);'
-        localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}, []);
-    // Toggle settings;
-    const toggleSetting = useCallback((key, value) => {}
-        const newSettings = {}
-'"`
-'"`'"`
-=======
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-
+import { 
   Eye, 
   EyeOff, 
   Volume2, 
@@ -101,10 +18,8 @@ import {
 import { Button } from "./button";
 
 const AccessibilityPanel = () => {
-
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState({
-
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -119,75 +34,59 @@ const AccessibilityPanel = () => {
 
   // Load settings from localStorage
   useEffect(() => {
-
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
-
       setSettings(JSON.parse(savedSettings));
     }
   }, []);
 
   // Save settings to localStorage
   useEffect(() => {
-
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
     applyAccessibilitySettings();
   }, [settings]);
 
   // Apply accessibility settings to the document
   const applyAccessibilitySettings = () => {
-
     const root = document.documentElement;
     
     if (settings.highContrast) {
-
       root.classList.add('high-contrast');
     } else {
-
       root.classList.remove('high-contrast');
     }
     
     if (settings.largeText) {
-
       root.classList.add('large-text');
     } else {
-
       root.classList.remove('large-text');
     }
     
     if (settings.reducedMotion) {
-
       root.classList.add('reduced-motion');
     } else {
-
       root.classList.remove('reduced-motion');
     }
     
     if (settings.focusIndicators) {
-
       root.classList.add('focus-visible');
     } else {
-
       root.classList.remove('focus-visible');
     }
   };
 
   // Add notification
   const addNotification = (message, type = 'info') => {
-
     const id = Date.now();
     setNotifications(prev => [...prev, { id, message, type }]);
     setTimeout(() => {
-
       setNotifications(prev => prev.filter(n => n.id !== id));
     }, 3000);
   };
 
   // Toggle setting
   const toggleSetting = (key) => {
-
     setSettings(prev => ({
-
       ...prev,
       [key]: !prev[key]
     }));
@@ -196,21 +95,16 @@ const AccessibilityPanel = () => {
 
   // Handle keyboard navigation
   useEffect(() => {
-
     const handleKeyDown = (e) => {
-
       if (settings.keyboardNavigation) {
-
         // Tab navigation enhancement
         if (e.key === 'Tab') {
-
           document.body.classList.add('keyboard-navigation');
         }
       }
     };
 
     const handleMouseDown = () => {
-
       document.body.classList.remove('keyboard-navigation');
     };
 
@@ -218,7 +112,6 @@ const AccessibilityPanel = () => {
     document.addEventListener('mousedown', handleMouseDown);
 
     return () => {
-
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
     };
@@ -226,12 +119,9 @@ const AccessibilityPanel = () => {
 
   // Focus management
   useEffect(() => {
-
     if (isOpen && panelRef.current) {
-
       const firstFocusable = panelRef.current.querySelector('button, input, select');
       if (firstFocusable) {
-
         firstFocusable.focus();
       }
     }
@@ -245,9 +135,7 @@ const AccessibilityPanel = () => {
   ];
 
   const renderTabContent = () => {
-
     switch (activeTab) {
-
       case 'general':
         return (
           <div className="space-y-4">
@@ -259,14 +147,12 @@ const AccessibilityPanel = () => {
               <button
                 onClick={() => toggleSetting('highContrast')}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-
                   settings.highContrast ? 'bg-blue-600' : 'bg-gray-200'
                 }`}
                 aria-label={`${settings.highContrast ? 'Disable' : 'Enable'} high contrast mode`}
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-
                     settings.highContrast ? 'translate-x-6' : 'translate-x-1'
                   }`}
                 />
@@ -281,14 +167,12 @@ const AccessibilityPanel = () => {
               <button
                 onClick={() => toggleSetting('largeText')}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-
                   settings.largeText ? 'bg-blue-600' : 'bg-gray-200'
                 }`}
                 aria-label={`${settings.largeText ? 'Disable' : 'Enable'} large text mode`}
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-
                     settings.largeText ? 'translate-x-6' : 'translate-x-1'
                   }`}
                 />
@@ -303,14 +187,12 @@ const AccessibilityPanel = () => {
               <button
                 onClick={() => toggleSetting('reducedMotion')}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-
                   settings.reducedMotion ? 'bg-blue-600' : 'bg-gray-200'
                 }`}
                 aria-label={`${settings.reducedMotion ? 'Disable' : 'Enable'} reduced motion`}
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-
                     settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
                   }`}
                 />
@@ -330,7 +212,6 @@ const AccessibilityPanel = () => {
                     key={type}
                     onClick={() => setSettings(prev => ({ ...prev, colorBlindness: type }))}
                     className={`p-2 rounded-lg border text-sm transition-colors ${
-
                       settings.colorBlindness === type
                         ? 'border-blue-600 bg-blue-50 text-blue-700'
                         : 'border-gray-200 hover:border-gray-300'
@@ -350,13 +231,11 @@ const AccessibilityPanel = () => {
               <button
                 onClick={() => toggleSetting('focusIndicators')}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-
                   settings.focusIndicators ? 'bg-blue-600' : 'bg-gray-200'
                 }`}
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-
                     settings.focusIndicators ? 'translate-x-6' : 'translate-x-1'
                   }`}
                 />
@@ -376,13 +255,11 @@ const AccessibilityPanel = () => {
               <button
                 onClick={() => toggleSetting('screenReader')}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-
                   settings.screenReader ? 'bg-blue-600' : 'bg-gray-200'
                 }`}
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-
                     settings.screenReader ? 'translate-x-6' : 'translate-x-1'
                   }`}
                 />
@@ -416,13 +293,11 @@ const AccessibilityPanel = () => {
               <button
                 onClick={() => toggleSetting('keyboardNavigation')}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-
                   settings.keyboardNavigation ? 'bg-blue-600' : 'bg-gray-200'
                 }`}
               >
                 <span
                   className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-
                     settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'
                   }`}
                 />
@@ -496,14 +371,12 @@ const AccessibilityPanel = () => {
               <div className="border-b border-gray-200">
                 <nav className="flex space-x-8 px-6">
                   {tabs.map((tab) => {
-
                     const Icon = tab.icon;
                     return (
                       <button
                         key={tab.id}
                         onClick={() => setActiveTab(tab.id)}
                         className={`flex items-center space-x-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
-
                           activeTab === tab.id
                             ? 'border-blue-500 text-blue-600'
                             : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
@@ -526,9 +399,7 @@ const AccessibilityPanel = () => {
               <div className="flex items-center justify-between p-6 border-t border-gray-200 bg-gray-50">
                 <button
                   onClick={() => {
-
                     setSettings({
-
                       highContrast: false,
                       largeText: false,
                       reducedMotion: false,
@@ -564,7 +435,6 @@ const AccessibilityPanel = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}
             className={`p-4 rounded-lg shadow-lg max-w-sm ${
-
               notification.type === 'info' ? 'bg-blue-500 text-white' :
               notification.type === 'success' ? 'bg-green-500 text-white' :
               'bg-yellow-500 text-white'
@@ -584,4 +454,3 @@ const AccessibilityPanel = () => {
 };
 
 export default AccessibilityPanel;
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<= icon: Shield}; ]; const complianceStandards = [;" "HIPAA Compliant",;" "FDA Approved",;" "ISO 13485",;" "SOC 2 Type II",;" "GDPR Compliant",;" "HITECH Certified"; 
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-
+import { 
   Activity, 
   Heart, 
   Brain, 
@@ -28,40 +24,33 @@ import {
 } from 'lucide-react';
 
 const AIHealthcareAnalyticsPlatform = () => {
-
   const features = [
     {
-
       icon: <Activity className="w-6 h-6" />,
       title: "Real-time Patient Monitoring",
       description: "AI-powered continuous monitoring with predictive alerts for critical health events and early intervention."
     },
     {
-
       icon: <Brain className="w-6 h-6" />,
       title: "Predictive Diagnostics",
       description: "Advanced machine learning algorithms that predict disease progression and treatment outcomes with 95% accuracy."
     },
     {
-
       icon: <Shield className="w-6 h-6" />,
       title: "HIPAA Compliant Security",
       description: "Enterprise-grade security with end-to-end encryption, audit trails, and compliance with healthcare regulations."
     },
     {
-
       icon: <Users className="w-6 h-6" />,
       title: "Care Team Collaboration",
       description: "Seamless communication between doctors, nurses, and specialists with real-time updates and shared insights."
     },
     {
-
       icon: <Database className="w-6 h-6" />,
       title: "Data Integration Hub",
       description: "Connect with existing EHR systems, medical devices, and third-party applications for unified data access."
     },
     {
-
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Advanced Analytics Dashboard",
       description: "Comprehensive reporting and visualization tools for population health, quality metrics, and operational insights."
@@ -70,7 +59,6 @@ const AIHealthcareAnalyticsPlatform = () => {
 
   const pricingPlans = [
     {
-
       name: "Clinic",
       price: "$499",
       period: "/month",
@@ -86,7 +74,6 @@ const AIHealthcareAnalyticsPlatform = () => {
       popular: false
     },
     {
-
       name: "Hospital",
       price: "$1,299",
       period: "/month",
@@ -104,7 +91,6 @@ const AIHealthcareAnalyticsPlatform = () => {
       popular: true
     },
     {
-
       name: "Enterprise",
       price: "$2,999",
       period: "/month",
@@ -125,25 +111,21 @@ const AIHealthcareAnalyticsPlatform = () => {
 
   const benefits = [
     {
-
       icon: <Clock className="w-8 h-8" />,
       title: "Faster Diagnosis",
       description: "Reduce diagnosis time by up to 60% with AI-powered symptom analysis"
     },
     {
-
       icon: <DollarSign className="w-8 h-8" />,
       title: "Cost Reduction",
       description: "Lower healthcare costs by 25-30% through preventive care and early intervention"
     },
     {
-
       icon: <Shield className="w-8 h-8" />,
       title: "Better Outcomes",
       description: "Improve patient outcomes by 40% with predictive analytics and personalized care"
     },
     {
-
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Operational Efficiency",
       description: "Streamline workflows and reduce administrative burden by 50%"
@@ -152,25 +134,21 @@ const AIHealthcareAnalyticsPlatform = () => {
 
   const useCases = [
     {
-
       icon: <Heart className="w-8 h-8" />,
       title: "Cardiology",
       description: "Predict heart disease risk and monitor cardiac health in real-time"
     },
     {
-
       icon: <Brain className="w-8 h-8" />,
       title: "Neurology",
       description: "Early detection of neurological disorders and treatment optimization"
     },
     {
-
       icon: <Stethoscope className="w-8 h-8" />,
       title: "Primary Care",
       description: "Comprehensive health monitoring and preventive care recommendations"
     },
     {
-
       icon: <Eye className="w-8 h-8" />,
       title: "Radiology",
       description: "AI-powered image analysis for faster and more accurate diagnoses"
@@ -358,7 +336,6 @@ const AIHealthcareAnalyticsPlatform = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800 p-8 rounded-lg border ${
-
                   plan.popular 
                     ? 'border-red-500 ring-2 ring-red-500/20' 
                     : 'border-slate-700'
@@ -393,7 +370,6 @@ const AIHealthcareAnalyticsPlatform = () => {
                 <a
                   href="https://ziontechgroup.com/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-
                     plan.popular
                       ? 'bg-red-600 text-white hover:bg-red-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
@@ -476,4 +452,3 @@ const AIHealthcareAnalyticsPlatform = () => {
 };
 
 export default AIHealthcareAnalyticsPlatform;
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

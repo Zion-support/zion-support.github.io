@@ -1,53 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';'''
-import { motion } from 'framer-motion';
-export function GradientHeading({}
-  children,'
-  className = '','
-  size = '4xl','
-  gradient = 'zion',
-  customColors}) {}
-  const sizeClasses = {}
-'
-''
-'''
-    sm: 'text-sm','''
-    md: 'text-base','''
-    lg: 'text-lg','''
-    xl: 'text-xl',2xl': 'text-2xl',3xl': 'text-3xl',4xl': 'text-4xl',5xl': 'text-5xl',6xl': 'text-6xl',7xl': 'text-7xl'};
-  const gradientClasses = {}
-'
-''
-'''
-    zion: 'bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue bg-clip-text text-transparent','''
-    cyber:''''
-      'bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent','''
-    quantum:''''
-      'bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent',''
-    custom: customColors'''
-      ? `bg-gradient-to-r ${customColors.join(''`'`'`
-          ' '`'`'`'`
-        )} bg-clip-text text-transparent`''`'`'`
-      : ''};````
-  const baseClasses = `${sizeClasses[size]} font-bold leading-tight ${gradientClasses[gradient]} ${className}`;
-  return()
-    <motion.h1;
-      className={baseClasses}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}'
-      transition={{ duration: 0.6, ease: 'easeOut' }}
-    >
-      {children}
-    </motion.h1>
-  );
-}'`
-'`'`
-=======
 import { motion } from 'framer-motion';
 export function GradientHeading({ children, className = '', size = '4xl', gradient = 'zion', customColors }) {
-
     const sizeClasses = {
-
   sm: 'text-sm',
         md: 'text-base',
         lg: 'text-lg',
@@ -67,7 +20,6 @@ export function GradientHeading({ children, className = '', size = '4xl', gradie
 
 };
     const gradientClasses = {
-
   zion: 'bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue bg-clip-text text-transparent',
         cyber: 'bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent',
         quantum: 'bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent',
@@ -82,7 +34,6 @@ export function GradientHeading({ children, className = '', size = '4xl', gradie
     };
     const baseClasses = `${sizeClasses[size]} font-bold leading-tight ${gradientClasses[gradient]} ${className}`;
     return (<motion.h1 className={baseClasses} initial = {
-
   { opacity: 0,
   y: 20 
 
@@ -92,7 +43,6 @@ export function GradientHeading({ children, className = '', size = '4xl', gradie
 
 
 }} animate = {
-
   { opacity: 1,
   y: 0 
 
@@ -102,7 +52,6 @@ export function GradientHeading({ children, className = '', size = '4xl', gradie
 
 
 }} transition = {
-
   { duration: 0.6,
   ease: "easeOut" 
 
@@ -119,4 +68,3 @@ export function GradientHeading({ children, className = '', size = '4xl', gradie
 =======
     </motion.h1>)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

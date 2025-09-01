@@ -1,31 +1,7 @@
-<<<<<<< HEAD
-type LoadingSpinnerProps = {}
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  className?: string;
-  text?: string};'
-export default function LoadingSpinner(function LoadingSpinner(function LoadingSpinner({ size = 'md', className = '', text }: LoadingSpinnerProps) {): any {): any {}
-  const sizeClasses: Record<string, string> = {}
-'
-''
-'''
-    sm: 'w-6 h-6','''
-    md: 'w-10 h-10','''
-    lg: 'w-14 h-14','''
-    xl: 'w-20 h-20'
-  };
-  return()
-    <div className={`flex flex-col items-center justify-center ${className}`}>`
-      <div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin`} aria-label="Loading" />"""
-      {text ? <p className="mt-3 text-sm text-gray-400">{text}</p> : null}
-    </div>
-  )}
-'"`
-=======
 import { motion } from 'framer-motion';
 import { Loader2, Zap, Brain, Cpu, Rocket } from 'lucide-react';
 
 interface LoadingSpinnerProps {
-
   size?: 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'default' | 'futuristic' | 'ai' | 'tech' | 'rocket';
   text?: string;
@@ -35,7 +11,6 @@ interface LoadingSpinnerProps {
 }
 
 const sizeClasses = {
-
   sm: 'w-6 h-6',
   md: 'w-8 h-8',
   lg: 'w-12 h-12',
@@ -43,7 +18,6 @@ const sizeClasses = {
 };
 
 const iconComponents = {
-
   default: Loader2,
   futuristic: Zap,
   ai: Brain,
@@ -52,7 +26,6 @@ const iconComponents = {
 };
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-
   size = 'md',
   variant = 'default',
   text,
@@ -60,17 +33,13 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   progress = 0,
   className = ''
 }) => {
-
   const IconComponent = iconComponents[variant];
   const sizeClass = sizeClasses[size];
 
   const spinnerVariants = {
-
     animate: {
-
       rotate: 360,
       transition: {
-
         duration: 1,
         repeat: Infinity,
         ease: "linear"
@@ -79,13 +48,10 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   const pulseVariants = {
-
     animate: {
-
       scale: [1, 1.1, 1],
       opacity: [0.5, 1, 0.5],
       transition: {
-
         duration: 2,
         repeat: Infinity,
         ease: "easeInOut"
@@ -94,13 +60,10 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   const rocketVariants = {
-
     animate: {
-
       y: [0, -10, 0],
       rotate: [0, 5, -5, 0],
       transition: {
-
         duration: 2,
         repeat: Infinity,
         ease: "easeInOut"
@@ -109,9 +72,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   const renderSpinner = () => {
-
     switch (variant) {
-
       case 'futuristic':
         return (
           <div className="relative">
@@ -244,13 +205,10 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
 // Full-screen loading overlay
 export const LoadingOverlay: React.FC<LoadingSpinnerProps & { overlay?: boolean }> = ({
-
   overlay = true,
   ...props
 }) => {
-
   if (!overlay) {
-
     return <LoadingSpinner {...props} />;
   }
 
@@ -265,7 +223,6 @@ export const LoadingOverlay: React.FC<LoadingSpinnerProps & { overlay?: boolean 
 
 // Inline loading spinner for buttons and small elements
 export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
-
   size = 'sm',
   className = ''
 }) => (
@@ -278,7 +235,6 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
 
 // Page loading spinner with progress
 export const PageLoader: React.FC<{ progress?: number; text?: string }> = ({
-
   progress = 0,
   text = "Loading amazing content..."
 }) => (
@@ -302,4 +258,3 @@ export const PageLoader: React.FC<{ progress?: number; text?: string }> = ({
     </div>
   </div>
 );
->>>>>>> 8511dfec91ab1a754e62d15d85875e820ae1d209

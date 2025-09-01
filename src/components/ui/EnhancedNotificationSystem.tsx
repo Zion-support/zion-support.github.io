@@ -1,67 +1,96 @@
-import React, { useState, useEffect, createContext, useContext } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell  } from 'lucide-react';
+import React, { useState, useEffect, createContext, useContext               } from 'react.ts';
+import { motion, AnimatePresence                } from 'framer-motion.ts';
+import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell                } from 'lucide-react.ts';
 
 export type NotificationType = 'success' | 'error' | 'warning' | 'info';
-
 export interface Notification {
 
-  id: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
   type: NotificationType;
   title: string;
   message: string;
   duration?: number;
-action?: {
-
+action?: {;
     label: string;
-    onClick: ()  => void}}
+    onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()                => void}}
 
 interface NotificationContextType {
 
-  notifications: Notification[];
-  addNotification: (notification: Omit<Notification, 'id'>)  => void;
-  removeNotification: (id: string)  => void;
-  clearAll: ()  => void}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  notifications: anyanyanyanyanyanyanyanyanyanyanyanyanyanyNotification[];
+  addNotification: anyanyanyanyanyanyanyanyanyanyanyanyanyany(notification: Omit<Notification, 'id'>)                => void;
+  removeNotification: anyanyanyanyanyanyanyanyanyanyanyanyanyany(id: string)                => void;
+clearAll: anyanyanyanyanyanyanyanyanyanyanyanyanyany()                => void;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 const NotificationContext = createContext<NotificationContextType | null>(null);
-
 export const useNotifications = () => {;
   const context = useContext(NotificationContext);
   if (!context) {
-
-    throw new Error('useNotifications must be used within a NotificationProvider')}
+    throw new Error('useNotifications must be used within a NotificationProvider')
+}
   return context};
-
 interface NotificationProviderProps extends React.PropsWithChildren<{}> {
-
   children: React.ReactNode}
-
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
-
   const [notifications, setNotifications] = useState<any>([]);
 
         removeNotification(id)}, notification.duration || 5000)}
   };
 
-  const removeNotification = (id: string) => {;
+  const removeNotification = (id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
-
   const clearAll = () => {;
     setNotifications([]);
   };
-
   return (
     <NotificationContext.Provider value = {
-
   { notifications, addNotification, removeNotification,
   clearAll 
-
 ;
 ;
 ;
-
-
 }}>;
       {children};
       <NotificationContainer />;
@@ -69,11 +98,9 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
   );
 };
 
-const NotificationContainer: React.FC = () => {;
+const NotificationContainer: React.FC = (): JSX.Element => {;
   const { notifications, removeNotification, clearAll } = useNotifications();
-
   if (notifications.length === 0) return null;
-
   return (
     <div className = "fixed top-4 right-4 z-[9999] space-y-2 max-w-sm">
       <AnimatePresence mode="popLayout">
@@ -84,52 +111,28 @@ const NotificationContainer: React.FC = () => {;
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: 300, scale: 0.8 }}
             transition={{
-
               duration: 0.3,
               delay: index * 0.1,
               type: "spring",
   stiffness: 200
-            
-
-
-
-
-
-
 }}
             className="relative"
-
             <NotificationItem notification={notification} onRemove={removeNotification} />
-          </motion.div>;
+          </motion.div>
         ))}
       </AnimatePresence>
-
-      {notifications.length > 1 && (;
+      {notifications.length > 1 && (
         <motion.button
           initial = {
-
   { opacity: 0,
   y: 10 
-
-
-
-
-
-
 }}
           animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           onClick={clearAll}
-          className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm hover: bg-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2"
+          className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm hover:bg-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2"
         >
           <Bell className="w-4 h-4" />;
           <span>Clear All</span>;
@@ -139,11 +142,10 @@ const NotificationContainer: React.FC = () => {;
   );
 };
 
-  notification: Notification;
-  onRemove: (id: string)  => void}
+  notification: anyanyanyanyanyanyanyanyanyanyanyanyanyanyNotification;
+  onRemove: anyanyanyanyanyanyanyanyanyanyanyanyanyany(id: string)                => void}
 
 const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
-
         return <Info className = "w-5 h-5 text-blue-400" />};
   };
 
@@ -152,7 +154,6 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 
         return 'bg-blue-500/10'}
   };
-
   return (
     <motion.div
       layout
@@ -162,7 +163,6 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
         <div className="flex-shrink-0 mt-0.5">
           {getIcon(notification.type)}
         </div>
-
         <div className="flex-1 min-w-0">
           <h4 className="text-sm font-medium text-white mb-1">
             {notification.title}
@@ -170,20 +170,17 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
           <p className="text-sm text-gray-300 leading-relaxed">
             {notification.message}
           </p>
-
           {notification.action && (
             <button
               onClick={notification.action.onClick}
-              className="mt-2 text-xs font-medium text-zion-cyan hover: text-zion-cyan/80 transition-colors duration-200"
-
+              className="mt-2 text-xs font-medium text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-200"
               {notification.action.label}
             </button>
           )}
         </div>
-
         <button
           onClick={() => onRemove(notification.id)}
-          className="flex-shrink-0 text-gray-400 hover: text-white transition-colors duration-200"
+          className="flex-shrink-0 text-gray-400 hover:text-white transition-colors duration-200"
         >;
           <X className="w-4 h-4" />;
         </button>;
@@ -191,62 +188,46 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
     </motion.div>;
   );
 };
-
 // Utility functions for easy notification creation
 export const notify = {
-
-  success: (title: string, message: string, options?: Partial<Notification>)  => {
-
+  success: anyanyanyanyanyanyanyanyanyanyanyanyanyany(title: string, message: string, options?: Partial<Notification>)                => {
     // This would be used with the context
-    // // // console.log('Success notification: ', { title, message,
+    console.log('Success notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message,
   ...options 
-
 })},
-  error: (title: string, message: string, options?: Partial<Notification>) => {
-
-    // // // console.log('Error notification: ', { title, message, ...options })},
-  warning: (title: string, message: string, options?: Partial<Notification>)  => {
-
-    // // // console.log('Warning notification: ', { title, message, ...options })},
-  info: (title: string, message: string, options?: Partial<Notification>) => {
-
-    // // // console.log('Info notification:', { title, message, ...options })};
-    // // // console.log('Success notification:', { title, message,;
+  error: (title: string, message: string, options?: Partial<Notification>)                => {
+    console.log('Error notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options })},
+  warning: (title: string, message: string, options?: Partial<Notification>)                => {
+    console.log('Warning notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options })},
+  info: (title: string, message: string, options?: Partial<Notification>)                => {
+    console.log('Info notification:', { title, message, ...options })};
+=======;
+    console.log('Success notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message,;
   ;
   ;
   ;
   ...options ;
-
-
-
-
 });
   },
-  error: (title: string, message: string, options?: Partial<Notification>) => {
-
-    // // // // // // console.log('Error notification:', { title, message, ...options });
+  error: (title: string, message: string, options?: Partial<Notification>)               => {
+    // // // console.log('Error notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options });
   },
-  warning: (title: string, message: string, options?: Partial<Notification>) => {
-
-    // // // // // // console.log('Warning notification:', { title, message, ...options });
+  warning: (title: string, message: string, options?: Partial<Notification>)               => {
+    // // // console.log('Warning notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options });
   },
-  info: (title: string, message: string, options?: Partial<Notification>) => {
-
-    // // // // // // console.log('Info notification:', { title, message, ...options });
-
+  info: (title: string, message: string, options?: Partial<Notification>)               => {
+    // // // console.log('Info notification:', { title, message, ...options });
 };}}}}}}}}}}}
-    // // // // // // // // // // console.log('Success notification:', { title, message, ...options });
+=======
+    // // // // // // // console.log('Success notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options });
   },
-  error: (title: string, message: string, options?: Partial<Notification>) => {
-
-    // // // // // // // // // // console.log('Error notification:', { title, message, ...options });
+  error: (title: string, message: string, options?: Partial<Notification>)               => {
+    // // // // // // // console.log('Error notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options });
   },
-  warning: (title: string, message: string, options?: Partial<Notification>) => {
-
-    // // // // // // // // // // console.log('Warning notification:', { title, message, ...options });
+  warning: (title: string, message: string, options?: Partial<Notification>)               => {
+    // // // // // // // console.log('Warning notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options });
   },
-  info: (title: string, message: string, options?: Partial<Notification>) => {
-
-    // // // // // // // // // // console.log('Info notification:', { title, message, ...options });
+  info: (title: string, message: string, options?: Partial<Notification>)               => {
+    // // // // // // // console.log('Info notification:', { title, message, ...options });
   }
 };
