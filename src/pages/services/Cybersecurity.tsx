@@ -366,33 +366,11 @@ export function Cybersecurity() {
                 <p className="text-gray-300 text-lg">{framework.description}</p>
               </motion.div>
             ))}
->>>>>>> cursor/website-audit-content-update-and-deployment-6c29
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-            Ready to Secure Your Organization?
-          </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Start protecting your digital assets with our comprehensive cybersecurity services
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg rounded-xl hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-2xl hover:shadow-red-500/25"
-          >
-            Get Started with Cybersecurity
-          </a>
-        </div>
-      </section>
-    </div>
-
-=======
       <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -427,7 +405,6 @@ export function Cybersecurity() {
         </div>
       </section>
     </div>
->>>>>>> cursor/website-audit-content-update-and-deployment-6c29
   );
 }
 
