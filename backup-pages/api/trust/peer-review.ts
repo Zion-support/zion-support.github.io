@@ -53,11 +53,9 @@ export default async function handler(req: Request, res: Response) {
   const finalReviewerId = authenticatedUserId || bodyReviewerId; // Prefer authenticated user
 
   if (!finalReviewerId || !revieweeId || !reviewType) {
-    return res
-      .status(400)
-      .json({
-        error: 'Missing required fields: reviewerId, revieweeId, reviewType.',
-      });
+    return res.status(400).json({
+      error: 'Missing required fields: reviewerId, revieweeId, reviewType.',
+    });
   }
 
   if (isNaN(Number(finalReviewerId)) || isNaN(Number(revieweeId))) {
@@ -167,12 +165,10 @@ export default async function handler(req: Request, res: Response) {
         .json({ error: 'Failed to save peer review.', details: error.message });
     }
 
-    return res
-      .status(201)
-      .json({
-        message: 'Peer review submitted successfully.',
-        review: newReview,
-      });
+    return res.status(201).json({
+      message: 'Peer review submitted successfully.',
+      review: newReview,
+    });
   } catch (err: any) {
     console.error('Unexpected error in /api/trust/peer-review:', err);
     return res

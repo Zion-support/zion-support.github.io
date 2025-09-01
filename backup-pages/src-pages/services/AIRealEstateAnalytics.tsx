@@ -1,18 +1,18 @@
-import { 
-  Home, 
-  TrendingUp, 
-  MapPin, 
-  BarChart3, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Users, 
-  CheckCircle, 
-  Star, 
-  DollarSign, 
-  Clock, 
-  Globe, 
-  Database, 
+import {
+  Home,
+  TrendingUp,
+  MapPin,
+  BarChart3,
+  Brain,
+  Shield,
+  Zap,
+  Users,
+  CheckCircle,
+  Star,
+  DollarSign,
+  Clock,
+  Globe,
+  Database,
   Target,
   ArrowRight,
   Building,
@@ -25,21 +25,18 @@ import {
   Award,
   Phone,
   Mail,
-  MapPin as MapPinIcon
+  MapPin as MapPinIcon,
 } from 'lucide-react';
 
 const AIRealEstateAnalytics: React.FC = () => {
-  
-  
-  
-  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <SEO title="AI Real Estate Analytics Platform | Zion Tech Group"
+      <SEO
+        title="AI Real Estate Analytics Platform | Zion Tech Group"
         description="Transform real estate investment decisions with AI-powered market analysis, predictive valuations, and portfolio optimization. Get comprehensive insights for smarter property investments."
         keywords="AI real estate analytics, property valuation, real estate investment, market analysis, portfolio optimization, predictive analytics"
-       />
-      
+      />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -54,7 +51,8 @@ const AIRealEstateAnalytics: React.FC = () => {
               AI Real Estate Analytics Platform
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-blue-100">
-              Transform your real estate investments with AI-powered market intelligence, predictive analytics, and portfolio optimization
+              Transform your real estate investments with AI-powered market
+              intelligence, predictive analytics, and portfolio optimization
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -87,7 +85,8 @@ const AIRealEstateAnalytics: React.FC = () => {
               AI-Powered Real Estate Intelligence
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our advanced AI platform provides comprehensive real estate analytics, market insights, and investment optimization tools
+              Our advanced AI platform provides comprehensive real estate
+              analytics, market insights, and investment optimization tools
             </p>
           </motion.div>
 
@@ -100,10 +99,14 @@ const AIRealEstateAnalytics: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
-                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6`}>
+                <div
+                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6`}
+                >
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
@@ -124,7 +127,8 @@ const AIRealEstateAnalytics: React.FC = () => {
               Transparent Pricing Plans
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the perfect plan for your real estate analytics needs with no hidden fees
+              Choose the perfect plan for your real estate analytics needs with
+              no hidden fees
             </p>
           </motion.div>
 
@@ -146,11 +150,15 @@ const AIRealEstateAnalytics: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    {plan.name}
+                  </h3>
                   <div className="mb-4">
-                    <span className="text-4xl font-bold text-gray-900">${plan.price}</span>
+                    <span className="text-4xl font-bold text-gray-900">
+                      ${plan.price}
+                    </span>
                     <span className="text-gray-600">/{plan.period}</span>
                   </div>
                   <p className="text-gray-600">{plan.description}</p>
@@ -159,7 +167,7 @@ const AIRealEstateAnalytics: React.FC = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -194,7 +202,8 @@ const AIRealEstateAnalytics: React.FC = () => {
               Who Benefits from Our Platform?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI real estate analytics platform serves diverse professionals and organizations
+              Our AI real estate analytics platform serves diverse professionals
+              and organizations
             </p>
           </motion.div>
 
@@ -207,10 +216,14 @@ const AIRealEstateAnalytics: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className={`w-20 h-20 rounded-full bg-gradient-to-r ${useCase.color} flex items-center justify-center mx-auto mb-6`}>
+                <div
+                  className={`w-20 h-20 rounded-full bg-gradient-to-r ${useCase.color} flex items-center justify-center mx-auto mb-6`}
+                >
                   <useCase.icon className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{useCase.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {useCase.title}
+                </h3>
                 <p className="text-gray-600">{useCase.description}</p>
               </motion.div>
             ))}
@@ -230,7 +243,8 @@ const AIRealEstateAnalytics: React.FC = () => {
               Ready to Transform Your Real Estate Investments?
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
-              Join thousands of professionals who trust our AI platform for smarter real estate decisions
+              Join thousands of professionals who trust our AI platform for
+              smarter real estate decisions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -256,18 +270,24 @@ const AIRealEstateAnalytics: React.FC = () => {
           <div className="bg-white rounded-xl p-8 shadow-lg">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <Phone className="w-8 h-8 text-blue-600 mx-auto mb-4"  />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                <Phone className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Phone
+                </h3>
                 <p className="text-gray-600">{contactInfo.phone}</p>
               </div>
               <div className="text-center">
-                <Mail className="w-8 h-8 text-blue-600 mx-auto mb-4"  />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                <Mail className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Email
+                </h3>
                 <p className="text-gray-600">{contactInfo.email}</p>
               </div>
               <div className="text-center">
-                <MapPinIcon className="w-8 h-8 text-blue-600 mx-auto mb-4"  />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+                <MapPinIcon className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Address
+                </h3>
                 <p className="text-gray-600">{contactInfo.address}</p>
               </div>
             </div>
@@ -275,6 +295,7 @@ const AIRealEstateAnalytics: React.FC = () => {
         </div>
       </section>
     </div>
-  )};
+  );
+};
 
 export default AIRealEstateAnalytics;

@@ -34,12 +34,10 @@ export default async function handler(
     req.body as MessagesRequestBody;
 
   if (!productId || !subject || !body) {
-    return res
-      .status(400)
-      .json({
-        error:
-          'Missing required fields: productId, subject, and body are required.',
-      });
+    return res.status(400).json({
+      error:
+        'Missing required fields: productId, subject, and body are required.',
+    });
   }
 
   // Validate fromUser if provided, or set a default.

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Stethoscope, 
-  Activity, 
-  Shield, 
-  Zap, 
-  TrendingUp, 
-  Check, 
-  X, 
+import {
+  Brain,
+  Stethoscope,
+  Activity,
+  Shield,
+  Zap,
+  TrendingUp,
+  Check,
+  X,
   Star,
   Heart,
   Eye,
@@ -16,7 +16,7 @@ import {
   FileText,
   Users,
   Clock,
-  DollarSign
+  DollarSign,
 } from 'lucide-react';
 
 const AIHealthcareDiagnosis: React.FC = () => {
@@ -25,157 +25,166 @@ const AIHealthcareDiagnosis: React.FC = () => {
   const benefits = [
     {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
-      title: "95% Accuracy Rate",
-      description: "AI-powered diagnosis with proven accuracy comparable to expert radiologists"
+      title: '95% Accuracy Rate',
+      description:
+        'AI-powered diagnosis with proven accuracy comparable to expert radiologists',
     },
     {
       icon: <Clock className="w-8 h-8 text-green-500" />,
-      title: "Instant Results",
-      description: "Get diagnostic results in seconds, not days or weeks"
+      title: 'Instant Results',
+      description: 'Get diagnostic results in seconds, not days or weeks',
     },
     {
       icon: <DollarSign className="w-8 h-8 text-purple-500" />,
-      title: "Cost Effective",
-      description: "Reduce diagnostic costs by up to 60% compared to traditional methods"
+      title: 'Cost Effective',
+      description:
+        'Reduce diagnostic costs by up to 60% compared to traditional methods',
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
-      title: "Continuous Learning",
-      description: "AI models improve accuracy with every diagnosis performed"
-    }
+      title: 'Continuous Learning',
+      description: 'AI models improve accuracy with every diagnosis performed',
+    },
   ];
 
   const features = [
     {
       icon: <Eye className="w-6 h-6 text-blue-500" />,
-      title: "Multi-Modal Imaging",
-      description: "Analyze X-rays, CT scans, MRIs, and ultrasound images with single AI platform"
+      title: 'Multi-Modal Imaging',
+      description:
+        'Analyze X-rays, CT scans, MRIs, and ultrasound images with single AI platform',
     },
     {
       icon: <Brain className="w-6 h-6 text-green-500" />,
-      title: "Deep Learning Models",
-      description: "State-of-the-art neural networks trained on millions of medical images"
+      title: 'Deep Learning Models',
+      description:
+        'State-of-the-art neural networks trained on millions of medical images',
     },
     {
       icon: <Activity className="w-6 h-6 text-purple-500" />,
-      title: "Real-time Analysis",
-      description: "Instant processing and analysis of medical imaging data"
+      title: 'Real-time Analysis',
+      description: 'Instant processing and analysis of medical imaging data',
     },
     {
       icon: <Shield className="w-6 h-6 text-red-500" />,
-      title: "HIPAA Compliant",
-      description: "Enterprise-grade security and privacy protection for patient data"
+      title: 'HIPAA Compliant',
+      description:
+        'Enterprise-grade security and privacy protection for patient data',
     },
     {
       icon: <FileText className="w-6 h-6 text-indigo-500" />,
-      title: "Automated Reporting",
-      description: "Generate comprehensive diagnostic reports automatically"
+      title: 'Automated Reporting',
+      description: 'Generate comprehensive diagnostic reports automatically',
     },
     {
       icon: <Users className="w-6 h-6 text-teal-500" />,
-      title: "Collaborative Platform",
-      description: "Enable radiologists and physicians to collaborate seamlessly"
-    }
+      title: 'Collaborative Platform',
+      description:
+        'Enable radiologists and physicians to collaborate seamlessly',
+    },
   ];
 
   const useCases = [
     {
       icon: <Heart className="w-8 h-8 text-red-500" />,
-      title: "Cardiology",
-      description: "Heart disease detection, ECG analysis, and cardiovascular imaging"
+      title: 'Cardiology',
+      description:
+        'Heart disease detection, ECG analysis, and cardiovascular imaging',
     },
     {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
-      title: "Neurology",
-      description: "Brain tumor detection, stroke diagnosis, and neurological disorders"
+      title: 'Neurology',
+      description:
+        'Brain tumor detection, stroke diagnosis, and neurological disorders',
     },
     {
       icon: <Eye className="w-8 h-8 text-green-500" />,
-      title: "Radiology",
-      description: "Chest X-ray analysis, bone fracture detection, and organ imaging"
+      title: 'Radiology',
+      description:
+        'Chest X-ray analysis, bone fracture detection, and organ imaging',
     },
     {
       icon: <Microscope className="w-8 h-8 text-purple-500" />,
-      title: "Pathology",
-      description: "Tissue analysis, cancer detection, and cellular pathology"
-    }
+      title: 'Pathology',
+      description: 'Tissue analysis, cancer detection, and cellular pathology',
+    },
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$299",
-      period: "/month",
-      description: "Perfect for small clinics and individual practitioners",
+      name: 'Starter',
+      price: '$299',
+      period: '/month',
+      description: 'Perfect for small clinics and individual practitioners',
       features: [
-        "Up to 100 scans/month",
-        "Basic AI diagnosis",
-        "Standard reporting",
-        "Email support",
-        "HIPAA compliance"
+        'Up to 100 scans/month',
+        'Basic AI diagnosis',
+        'Standard reporting',
+        'Email support',
+        'HIPAA compliance',
       ],
-      cta: "Start Free Trial",
-      popular: false
+      cta: 'Start Free Trial',
+      popular: false,
     },
     {
-      name: "Professional",
-      price: "$799",
-      period: "/month",
-      description: "Ideal for medium-sized hospitals and medical centers",
+      name: 'Professional',
+      price: '$799',
+      period: '/month',
+      description: 'Ideal for medium-sized hospitals and medical centers',
       features: [
-        "Up to 1,000 scans/month",
-        "Advanced AI diagnosis",
-        "Custom reporting",
-        "Priority support",
-        "API access",
-        "Multi-user accounts"
+        'Up to 1,000 scans/month',
+        'Advanced AI diagnosis',
+        'Custom reporting',
+        'Priority support',
+        'API access',
+        'Multi-user accounts',
       ],
-      cta: "Start Free Trial",
-      popular: true
+      cta: 'Start Free Trial',
+      popular: true,
     },
     {
-      name: "Enterprise",
-      price: "$1,999",
-      period: "/month",
-      description: "For large healthcare networks and research institutions",
+      name: 'Enterprise',
+      price: '$1,999',
+      period: '/month',
+      description: 'For large healthcare networks and research institutions',
       features: [
-        "Unlimited scans",
-        "Custom AI models",
-        "White-label solution",
-        "24/7 dedicated support",
-        "Custom integrations",
-        "On-premise deployment"
+        'Unlimited scans',
+        'Custom AI models',
+        'White-label solution',
+        '24/7 dedicated support',
+        'Custom integrations',
+        'On-premise deployment',
       ],
-      cta: "Contact Sales",
-      popular: false
-    }
+      cta: 'Contact Sales',
+      popular: false,
+    },
   ];
 
   const competitors = [
     {
-      name: "Zion Tech Group AI",
-      accuracy: "95%",
-      speed: "< 30 seconds",
-      cost: "$299-1,999/month",
-      features: "Multi-modal, HIPAA compliant, API access",
-      rating: "5.0"
+      name: 'Zion Tech Group AI',
+      accuracy: '95%',
+      speed: '< 30 seconds',
+      cost: '$299-1,999/month',
+      features: 'Multi-modal, HIPAA compliant, API access',
+      rating: '5.0',
     },
     {
-      name: "Competitor A",
-      accuracy: "88%",
-      speed: "2-5 minutes",
-      cost: "$500-2,500/month",
-      features: "Limited modalities, basic compliance",
-      rating: "4.2"
+      name: 'Competitor A',
+      accuracy: '88%',
+      speed: '2-5 minutes',
+      cost: '$500-2,500/month',
+      features: 'Limited modalities, basic compliance',
+      rating: '4.2',
     },
     {
-      name: "Competitor B",
-      accuracy: "92%",
-      speed: "1-3 minutes",
-      cost: "$400-3,000/month",
-      features: "Good accuracy, expensive, limited support",
-      rating: "4.5"
-    }
+      name: 'Competitor B',
+      accuracy: '92%',
+      speed: '1-3 minutes',
+      cost: '$400-3,000/month',
+      features: 'Good accuracy, expensive, limited support',
+      rating: '4.5',
+    },
   ];
 
   return (
@@ -198,9 +207,9 @@ const AIHealthcareDiagnosis: React.FC = () => {
               AI-Powered Healthcare Diagnosis
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Revolutionize medical diagnosis with AI that achieves 95% accuracy. 
-              Detect diseases faster, reduce costs, and save lives with our advanced 
-              medical imaging analysis platform.
+              Revolutionize medical diagnosis with AI that achieves 95%
+              accuracy. Detect diseases faster, reduce costs, and save lives
+              with our advanced medical imaging analysis platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
@@ -226,19 +235,21 @@ const AIHealthcareDiagnosis: React.FC = () => {
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-2">
-            {['overview', 'features', 'pricing', 'competitors', 'contact'].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-6 py-3 rounded-lg font-medium transition-colors ${
-                  activeTab === tab
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-                }`}
-              >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </button>
-            ))}
+            {['overview', 'features', 'pricing', 'competitors', 'contact'].map(
+              tab => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`px-6 py-3 rounded-lg font-medium transition-colors ${
+                    activeTab === tab
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                  }`}
+                >
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                </button>
+              )
+            )}
           </div>
         </div>
       </section>
@@ -257,8 +268,9 @@ const AIHealthcareDiagnosis: React.FC = () => {
                 Transform Healthcare with AI
               </h2>
               <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                Our AI-powered healthcare diagnosis platform combines cutting-edge machine learning 
-                with medical expertise to provide accurate, fast, and cost-effective diagnostic solutions.
+                Our AI-powered healthcare diagnosis platform combines
+                cutting-edge machine learning with medical expertise to provide
+                accurate, fast, and cost-effective diagnostic solutions.
               </p>
             </motion.div>
 
@@ -273,7 +285,9 @@ const AIHealthcareDiagnosis: React.FC = () => {
                   className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 text-center"
                 >
                   <div className="flex justify-center mb-4">{benefit.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    {benefit.title}
+                  </h3>
                   <p className="text-slate-300">{benefit.description}</p>
                 </motion.div>
               ))}
@@ -281,7 +295,9 @@ const AIHealthcareDiagnosis: React.FC = () => {
 
             {/* Use Cases */}
             <div className="text-center mb-16">
-              <h3 className="text-2xl font-bold text-white mb-8">Medical Specialties</h3>
+              <h3 className="text-2xl font-bold text-white mb-8">
+                Medical Specialties
+              </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {useCases.map((useCase, index) => (
                   <motion.div
@@ -291,9 +307,15 @@ const AIHealthcareDiagnosis: React.FC = () => {
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 text-center"
                   >
-                    <div className="flex justify-center mb-4">{useCase.icon}</div>
-                    <h4 className="text-lg font-semibold text-white mb-2">{useCase.title}</h4>
-                    <p className="text-slate-300 text-sm">{useCase.description}</p>
+                    <div className="flex justify-center mb-4">
+                      {useCase.icon}
+                    </div>
+                    <h4 className="text-lg font-semibold text-white mb-2">
+                      {useCase.title}
+                    </h4>
+                    <p className="text-slate-300 text-sm">
+                      {useCase.description}
+                    </p>
                   </motion.div>
                 ))}
               </div>
@@ -316,8 +338,9 @@ const AIHealthcareDiagnosis: React.FC = () => {
                 Powerful AI Features
               </h2>
               <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                Our platform combines advanced AI algorithms with medical expertise to deliver 
-                unprecedented diagnostic accuracy and efficiency.
+                Our platform combines advanced AI algorithms with medical
+                expertise to deliver unprecedented diagnostic accuracy and
+                efficiency.
               </p>
             </motion.div>
 
@@ -332,7 +355,9 @@ const AIHealthcareDiagnosis: React.FC = () => {
                 >
                   <div className="flex items-center mb-4">
                     {feature.icon}
-                    <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
+                    <h3 className="text-xl font-semibold text-white ml-3">
+                      {feature.title}
+                    </h3>
                   </div>
                   <p className="text-slate-300">{feature.description}</p>
                 </motion.div>
@@ -356,8 +381,8 @@ const AIHealthcareDiagnosis: React.FC = () => {
                 Transparent Pricing Plans
               </h2>
               <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                Choose the plan that fits your healthcare facility's needs. 
-                All plans include our core AI diagnosis capabilities.
+                Choose the plan that fits your healthcare facility's needs. All
+                plans include our core AI diagnosis capabilities.
               </p>
             </motion.div>
 
@@ -379,11 +404,15 @@ const AIHealthcareDiagnosis: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {plan.name}
+                    </h3>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-4xl font-bold text-white">
+                        {plan.price}
+                      </span>
                       <span className="text-slate-400 ml-1">{plan.period}</span>
                     </div>
                     <p className="text-slate-300 mt-2">{plan.description}</p>
@@ -430,8 +459,8 @@ const AIHealthcareDiagnosis: React.FC = () => {
                 Market Comparison
               </h2>
               <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                See how our AI healthcare diagnosis platform compares to leading competitors 
-                in accuracy, speed, and value.
+                See how our AI healthcare diagnosis platform compares to leading
+                competitors in accuracy, speed, and value.
               </p>
             </motion.div>
 
@@ -439,30 +468,55 @@ const AIHealthcareDiagnosis: React.FC = () => {
               <table className="w-full bg-slate-800/50 rounded-xl border border-slate-700">
                 <thead>
                   <tr className="border-b border-slate-700">
-                    <th className="text-left p-6 text-white font-semibold">Platform</th>
-                    <th className="text-left p-6 text-white font-semibold">Accuracy</th>
-                    <th className="text-left p-6 text-white font-semibold">Speed</th>
-                    <th className="text-left p-6 text-white font-semibold">Cost</th>
-                    <th className="text-left p-6 text-white font-semibold">Features</th>
-                    <th className="text-left p-6 text-white font-semibold">Rating</th>
+                    <th className="text-left p-6 text-white font-semibold">
+                      Platform
+                    </th>
+                    <th className="text-left p-6 text-white font-semibold">
+                      Accuracy
+                    </th>
+                    <th className="text-left p-6 text-white font-semibold">
+                      Speed
+                    </th>
+                    <th className="text-left p-6 text-white font-semibold">
+                      Cost
+                    </th>
+                    <th className="text-left p-6 text-white font-semibold">
+                      Features
+                    </th>
+                    <th className="text-left p-6 text-white font-semibold">
+                      Rating
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   {competitors.map((competitor, index) => (
-                    <tr key={index} className="border-b border-slate-700 last:border-b-0">
+                    <tr
+                      key={index}
+                      className="border-b border-slate-700 last:border-b-0"
+                    >
                       <td className="p-6">
                         <div className="flex items-center">
-                          {index === 0 && <Star className="w-5 h-5 text-yellow-500 mr-2" />}
-                          <span className="text-white font-medium">{competitor.name}</span>
+                          {index === 0 && (
+                            <Star className="w-5 h-5 text-yellow-500 mr-2" />
+                          )}
+                          <span className="text-white font-medium">
+                            {competitor.name}
+                          </span>
                         </div>
                       </td>
-                      <td className="p-6 text-green-400 font-medium">{competitor.accuracy}</td>
+                      <td className="p-6 text-green-400 font-medium">
+                        {competitor.accuracy}
+                      </td>
                       <td className="p-6 text-blue-400">{competitor.speed}</td>
                       <td className="p-6 text-purple-400">{competitor.cost}</td>
-                      <td className="p-6 text-slate-300">{competitor.features}</td>
+                      <td className="p-6 text-slate-300">
+                        {competitor.features}
+                      </td>
                       <td className="p-6">
                         <div className="flex items-center">
-                          <span className="text-yellow-400 font-medium">{competitor.rating}</span>
+                          <span className="text-yellow-400 font-medium">
+                            {competitor.rating}
+                          </span>
                           <Star className="w-4 h-4 text-yellow-400 ml-1" />
                         </div>
                       </td>
@@ -489,32 +543,43 @@ const AIHealthcareDiagnosis: React.FC = () => {
                 Get Started Today
               </h2>
               <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                Ready to revolutionize your healthcare diagnosis? Contact our team to learn more 
-                about our AI-powered platform and start your free trial.
+                Ready to revolutionize your healthcare diagnosis? Contact our
+                team to learn more about our AI-powered platform and start your
+                free trial.
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
-                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+                <h3 className="text-2xl font-bold text-white mb-6">
+                  Contact Information
+                </h3>
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <Stethoscope className="w-5 h-5 text-blue-400 mr-3" />
-                    <span className="text-slate-300">Mobile: +1 302 464 0950</span>
+                    <span className="text-slate-300">
+                      Mobile: +1 302 464 0950
+                    </span>
                   </div>
                   <div className="flex items-center">
                     <Brain className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-slate-300">Email: kleber@ziontechgroup.com</span>
+                    <span className="text-slate-300">
+                      Email: kleber@ziontechgroup.com
+                    </span>
                   </div>
                   <div className="flex items-center">
                     <Shield className="w-5 h-5 text-purple-400 mr-3" />
-                    <span className="text-slate-300">Address: 364 E Main St STE 1008 Middletown DE 19709</span>
+                    <span className="text-slate-300">
+                      Address: 364 E Main St STE 1008 Middletown DE 19709
+                    </span>
                   </div>
                 </div>
               </div>
 
               <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
-                <h3 className="text-2xl font-bold text-white mb-6">Quick Start</h3>
+                <h3 className="text-2xl font-bold text-white mb-6">
+                  Quick Start
+                </h3>
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <Check className="w-5 h-5 text-green-500 mr-3" />
@@ -522,7 +587,9 @@ const AIHealthcareDiagnosis: React.FC = () => {
                   </div>
                   <div className="flex items-center">
                     <Check className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-slate-300">No credit card required</span>
+                    <span className="text-slate-300">
+                      No credit card required
+                    </span>
                   </div>
                   <div className="flex items-center">
                     <Check className="w-5 h-5 text-green-500 mr-3" />

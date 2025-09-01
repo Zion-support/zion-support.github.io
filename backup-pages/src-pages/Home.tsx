@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Users, 
-  TrendingUp, 
-  Award, 
-  Globe, 
-  Brain, 
-  Cloud, 
-  Shield, 
+  Users,
+  TrendingUp,
+  Award,
+  Globe,
+  Brain,
+  Cloud,
+  Shield,
   Zap,
   ShoppingCart,
   MessageCircle,
@@ -41,7 +41,7 @@ import {
   Pause,
   ArrowRight,
   CheckCircle,
-  Star
+  Star,
 } from 'lucide-react';
 
 // Optimized futuristic animated background component
@@ -50,16 +50,19 @@ const AnimatedBackground = () => {
     id: i,
     x: Math.random() * 100,
     y: Math.random() * 100,
-    duration: 2 + Math.random() * 4
+    duration: 2 + Math.random() * 4,
   }));
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+    <div
+      className="fixed inset-0 overflow-hidden pointer-events-none"
+      aria-hidden="true"
+    >
       {/* Animated grid with neon effect */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-      
+
       {/* Optimized floating particles */}
-      {particles.map((particle) => (
+      {particles.map(particle => (
         <motion.div
           key={particle.id}
           className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
@@ -74,7 +77,7 @@ const AnimatedBackground = () => {
           transition={{
             duration: particle.duration,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: 'easeInOut',
           }}
         />
       ))}
@@ -89,62 +92,89 @@ const Home = () => {
   const services = [
     {
       icon: Brain,
-      title: "AI & Machine Learning",
-      description: "Cutting-edge artificial intelligence solutions that transform your business operations and drive intelligent automation.",
-      features: ["Natural Language Processing", "Computer Vision", "Predictive Analytics", "Automated Decision Making"]
+      title: 'AI & Machine Learning',
+      description:
+        'Cutting-edge artificial intelligence solutions that transform your business operations and drive intelligent automation.',
+      features: [
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'Automated Decision Making',
+      ],
     },
     {
       icon: Shield,
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions with zero-trust architecture and advanced threat detection systems.",
-      features: ["Zero Trust Security", "Threat Detection", "Compliance Management", "Security Auditing"]
+      title: 'Cybersecurity',
+      description:
+        'Comprehensive security solutions with zero-trust architecture and advanced threat detection systems.',
+      features: [
+        'Zero Trust Security',
+        'Threat Detection',
+        'Compliance Management',
+        'Security Auditing',
+      ],
     },
     {
       icon: Cloud,
-      title: "Cloud & DevOps",
-      description: "Scalable cloud infrastructure and automated deployment solutions for modern business needs.",
-      features: ["Cloud Migration", "Infrastructure as Code", "CI/CD Pipelines", "Container Orchestration"]
+      title: 'Cloud & DevOps',
+      description:
+        'Scalable cloud infrastructure and automated deployment solutions for modern business needs.',
+      features: [
+        'Cloud Migration',
+        'Infrastructure as Code',
+        'CI/CD Pipelines',
+        'Container Orchestration',
+      ],
     },
     {
       icon: Database,
-      title: "Data Analytics",
-      description: "Transform raw data into actionable insights with our advanced analytics and visualization platforms.",
-      features: ["Big Data Processing", "Real-time Analytics", "Data Visualization", "Business Intelligence"]
-    }
+      title: 'Data Analytics',
+      description:
+        'Transform raw data into actionable insights with our advanced analytics and visualization platforms.',
+      features: [
+        'Big Data Processing',
+        'Real-time Analytics',
+        'Data Visualization',
+        'Business Intelligence',
+      ],
+    },
   ];
 
   const testimonials = [
     {
-      name: "Sarah Chen",
-      role: "CTO at TechCorp",
-      content: "Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300%.",
-      rating: 5
+      name: 'Sarah Chen',
+      role: 'CTO at TechCorp',
+      content:
+        'Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300%.',
+      rating: 5,
     },
     {
-      name: "Michael Rodriguez",
-      role: "CEO at InnovateCo",
-      content: "The cybersecurity implementation was flawless. We've had zero breaches since working with Zion Tech.",
-      rating: 5
+      name: 'Michael Rodriguez',
+      role: 'CEO at InnovateCo',
+      content:
+        "The cybersecurity implementation was flawless. We've had zero breaches since working with Zion Tech.",
+      rating: 5,
     },
     {
-      name: "Emily Johnson",
-      role: "Director of Operations at DataFlow",
-      content: "Their cloud migration saved us 60% on infrastructure costs while improving performance dramatically.",
-      rating: 5
-    }
+      name: 'Emily Johnson',
+      role: 'Director of Operations at DataFlow',
+      content:
+        'Their cloud migration saved us 60% on infrastructure costs while improving performance dramatically.',
+      rating: 5,
+    },
   ];
 
   const stats = [
-    { number: "500+", label: "Projects Completed" },
-    { number: "99.9%", label: "Uptime Guarantee" },
-    { number: "24/7", label: "Support Available" },
-    { number: "150+", label: "Enterprise Clients" }
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '150+', label: 'Enterprise Clients' },
   ];
 
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+        setCurrentSlide(prev => (prev + 1) % testimonials.length);
       }, 5000);
       return () => clearInterval(interval);
     }
@@ -153,7 +183,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
       <AnimatedBackground />
-      
+
       {/* Hero Section */}
       <section className="relative z-10 pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-6xl text-center">
@@ -165,12 +195,14 @@ const Home = () => {
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               Welcome to
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                {' '}Zion Tech Group
+                {' '}
+                Zion Tech Group
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Pioneering the future with cutting-edge AI, cybersecurity, and cloud solutions 
-              that transform businesses and drive innovation forward.
+              Pioneering the future with cutting-edge AI, cybersecurity, and
+              cloud solutions that transform businesses and drive innovation
+              forward.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
@@ -230,10 +262,11 @@ const Home = () => {
               Our Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your digital transformation
+              Comprehensive technology solutions designed to accelerate your
+              digital transformation
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -276,7 +309,7 @@ const Home = () => {
               Trusted by leading companies worldwide
             </p>
           </motion.div>
-          
+
           <div className="relative">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
               <motion.div
@@ -289,7 +322,10 @@ const Home = () => {
               >
                 <div className="flex justify-center mb-4">
                   {[...Array(testimonials[currentSlide].rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-lg text-gray-300 mb-6 italic">
@@ -305,7 +341,7 @@ const Home = () => {
                 </div>
               </motion.div>
             </div>
-            
+
             <div className="flex justify-center mt-6 gap-2">
               {testimonials.map((_, index) => (
                 <button
@@ -317,13 +353,17 @@ const Home = () => {
                 />
               ))}
             </div>
-            
+
             <div className="flex justify-center mt-4">
               <button
                 onClick={() => setIsPlaying(!isPlaying)}
                 className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
               >
-                {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                {isPlaying ? (
+                  <Pause className="w-4 h-4" />
+                ) : (
+                  <Play className="w-4 h-4" />
+                )}
                 {isPlaying ? 'Pause' : 'Play'}
               </button>
             </div>
@@ -344,8 +384,8 @@ const Home = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of companies that have revolutionized their operations with our 
-              cutting-edge technology solutions.
+              Join hundreds of companies that have revolutionized their
+              operations with our cutting-edge technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button

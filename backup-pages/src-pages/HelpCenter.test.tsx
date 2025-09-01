@@ -1,10 +1,13 @@
+describe('HelpCenter', () => {
+  it('renders without crashing', () => {
+    render(<HelpCenter />);
+    expect(
+      screen.getByRole('main') || screen.getByText(/.*/)
+    ).toBeInTheDocument();
+  });
 
-describe ('HelpCenter', () => {
-  it ('renders without crashing', () => {
-    render (<HelpCenter  />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-
-  it ('displays expected content', () => {
-    render (<HelpCenter  />) ;
+  it('displays expected content', () => {
+    render(<HelpCenter />);
     // Add specific test assertions based on component content
-  }) }) ;
+  });
+});

@@ -87,23 +87,19 @@ const originalHandler = async function handler(
         `Error fetching order by tracking number ${trackingNumber}:`,
         orderError
       );
-      return res
-        .status(200)
-        .json({
-          success: false,
-          message: `Order not found for tracking: ${trackingNumber}. Webhook acknowledged.`,
-        });
+      return res.status(200).json({
+        success: false,
+        message: `Order not found for tracking: ${trackingNumber}. Webhook acknowledged.`,
+      });
     }
 
     if (!order) {
       console.log(
         `No order found for tracking number: ${trackingNumber}. Webhook acknowledged.`
       );
-      return res
-        .status(200)
-        .json({
-          message: `No order found for tracking: ${trackingNumber}. Webhook acknowledged.`,
-        });
+      return res.status(200).json({
+        message: `No order found for tracking: ${trackingNumber}. Webhook acknowledged.`,
+      });
     }
 
     const updatePayload: {
@@ -124,12 +120,10 @@ const originalHandler = async function handler(
           `Error updating order ${order.id} with tracking info:`,
           updateError
         );
-        return res
-          .status(200)
-          .json({
-            success: false,
-            message: 'Failed to update order tracking. Webhook acknowledged.',
-          });
+        return res.status(200).json({
+          success: false,
+          message: 'Failed to update order tracking. Webhook acknowledged.',
+        });
       }
     }
 

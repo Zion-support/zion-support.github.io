@@ -55,12 +55,10 @@ export default async function handler(
     console.error(
       'Stripe webhook secret is not configured. Ensure STRIPE_WEBHOOK_SECRET is set.'
     );
-    return res
-      .status(500)
-      .json({
-        error:
-          'Webhook Error: Server configuration error (missing webhook secret).',
-      });
+    return res.status(500).json({
+      error:
+        'Webhook Error: Server configuration error (missing webhook secret).',
+    });
   }
 
   const sig = req.headers['stripe-signature'] as string;

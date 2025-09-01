@@ -19,11 +19,9 @@ export default async function handler(req, res) {
     rating < 1 ||
     rating > 5
   ) {
-    return res
-      .status(400)
-      .json({
-        error: 'Rating is required and must be a number between 1 and 5.',
-      });
+    return res.status(400).json({
+      error: 'Rating is required and must be a number between 1 and 5.',
+    });
   }
   if (comment && typeof comment !== 'string') {
     return res.status(400).json({ error: 'Comment must be a string.' });

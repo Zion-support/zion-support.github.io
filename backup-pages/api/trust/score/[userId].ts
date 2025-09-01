@@ -25,11 +25,9 @@ export default async function handler(req: Request, res: Response) {
 
   if (!userId || typeof userId !== 'string') {
     // This check might be redundant if the route matching ensures userId is a string
-    return res
-      .status(400)
-      .json({
-        error: 'User ID is required in the URL path and must be a string.',
-      });
+    return res.status(400).json({
+      error: 'User ID is required in the URL path and must be a string.',
+    });
   }
 
   try {

@@ -116,11 +116,9 @@ export default async function handler(req: Request, res: Response) {
     });
   } catch (err: any) {
     console.error('Unexpected error in /api/admin/trust-scores:', err);
-    return res
-      .status(500)
-      .json({
-        error: 'An unexpected server error occurred.',
-        details: err.message,
-      });
+    return res.status(500).json({
+      error: 'An unexpected server error occurred.',
+      details: err.message,
+    });
   }
 }

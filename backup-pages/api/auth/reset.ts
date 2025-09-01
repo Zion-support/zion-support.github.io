@@ -157,11 +157,9 @@ export default async function handler(
     });
   } catch (error) {
     console.error('Reset Password Error:', error);
-    return res
-      .status(500)
-      .json({
-        message: 'An error occurred during the password reset process.',
-      });
+    return res.status(500).json({
+      message: 'An error occurred during the password reset process.',
+    });
   } finally {
     if (prismaUser) {
       await prisma.$disconnect();

@@ -68,13 +68,11 @@ export default async function handler(
         'Auth error in resend-verification-email:',
         authError?.message
       );
-      return res
-        .status(401)
-        .json({
-          message:
-            authError?.message ||
-            'Unauthorized: No active session or auth error.',
-        });
+      return res.status(401).json({
+        message:
+          authError?.message ||
+          'Unauthorized: No active session or auth error.',
+      });
     }
 
     if (!user.email) {
@@ -117,12 +115,9 @@ export default async function handler(
         });
     }
 
-    return res
-      .status(200)
-      .json({
-        message:
-          'Verification email successfully resent to ' + user.email + '.',
-      });
+    return res.status(200).json({
+      message: 'Verification email successfully resent to ' + user.email + '.',
+    });
   } catch (error: unknown) {
     let message = 'Internal server error';
     let errorDetails: string | undefined;

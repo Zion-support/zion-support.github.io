@@ -68,12 +68,10 @@ export default async function handler(
 
     if (authError || !user) {
       console.error('Auth error with token:', authError);
-      return res
-        .status(401)
-        .json({
-          message: 'Unauthorized: No active session or auth error.',
-          error: authError?.message,
-        });
+      return res.status(401).json({
+        message: 'Unauthorized: No active session or auth error.',
+        error: authError?.message,
+      });
     }
 
     if (!user.email) {

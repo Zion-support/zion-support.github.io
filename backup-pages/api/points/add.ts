@@ -50,12 +50,10 @@ async function handler(
 
   const { userId, amount, orderId } = req.body || {};
   if (!userId || typeof amount !== 'number') {
-    return res
-      .status(400)
-      .json({
-        error:
-          'Missing or invalid userId or amount. Both userId (string) and amount (number) are required.',
-      });
+    return res.status(400).json({
+      error:
+        'Missing or invalid userId or amount. Both userId (string) and amount (number) are required.',
+    });
   }
 
   const delta = Math.round(amount);
@@ -82,12 +80,10 @@ async function handler(
 
     if (ledgerError) {
       console.error('Error inserting into points_ledger:', ledgerError);
-      return res
-        .status(500)
-        .json({
-          error: 'Failed to record points transaction.',
-          details: ledgerError.message,
-        });
+      return res.status(500).json({
+        error: 'Failed to record points transaction.',
+        details: ledgerError.message,
+      });
     }
 
     // Update profile points balance
@@ -120,12 +116,10 @@ async function handler(
       );
       // This is more critical as it means the balance might be out of sync.
       // Depending on desired atomicity, you might consider rolling back ledger entry or flagging for reconciliation.
-      return res
-        .status(500)
-        .json({
-          error: 'Failed to update user profile points.',
-          details: profileUpdateError.message,
-        });
+      return res.status(500).json({
+        error: 'Failed to update user profile points.',
+        details: profileUpdateError.message,
+      });
     }
 
     return res
@@ -135,12 +129,10 @@ async function handler(
     console.error('Unexpected error in /api/points/add:', e);
     const message =
       e instanceof Error ? e.message : 'An unexpected server error occurred.';
-    return res
-      .status(500)
-      .json({
-        error: 'Failed to add points due to an unexpected error.',
-        details: message,
-      });
+    return res.status(500).json({
+      error: 'Failed to add points due to an unexpected error.',
+      details: message,
+    });
   }
 }
 

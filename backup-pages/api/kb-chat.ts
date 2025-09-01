@@ -52,11 +52,9 @@ export default async function handler(
     const { messages } = req.body as KBChatRequestBody;
 
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
-      return res
-        .status(400)
-        .json({
-          error: 'Request body must include a non-empty array of messages.',
-        });
+      return res.status(400).json({
+        error: 'Request body must include a non-empty array of messages.',
+      });
     }
 
     const lastMessageContent = messages[messages.length - 1]?.content || '';
@@ -72,12 +70,10 @@ export default async function handler(
         const orderRes = await fetch(`${base}/api/orders/${orderId}`);
         if (orderRes.ok) {
           const order = (await orderRes.json()) as OrderResponse; // Type assertion
-          return res
-            .status(200)
-            .json({
-              message: `Order ${order.id} status is ${order.status}.`,
-              confidence: 1,
-            });
+          return res.status(200).json({
+            message: `Order ${order.id} status is ${order.status}.`,
+            confidence: 1,
+          });
         } else {
           console.warn(
             `Internal order status check for #${orderId} failed with status: ${orderRes.status}`
@@ -115,13 +111,10 @@ export default async function handler(
     if (!openRes.ok) {
       const errorData = (await openRes.json()) as OpenAIResponse; // Type assertion for error response
       console.error('OpenAI API Error:', errorData);
-      return res
-        .status(openRes.status)
-        .json({
-          error:
-            errorData.error?.message ||
-            'Failed to get response from AI service.',
-        });
+      return res.status(openRes.status).json({
+        error:
+          errorData.error?.message || 'Failed to get response from AI service.',
+      });
     }
 
     const data = (await openRes.json()) as OpenAIResponse; // Type assertion for success response

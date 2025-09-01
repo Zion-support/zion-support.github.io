@@ -1,11 +1,13 @@
+describe('ServicesShowcasePage', () => {
+  it('renders without crashing', () => {
+    render(<ServicesShowcasePage />);
+    expect(
+      screen.getByRole('main') || screen.getByText(/.*/)
+    ).toBeInTheDocument();
+  });
 
-
-describe ('ServicesShowcasePage', () => {
-  it ('renders without crashing', () => {
-    render (<ServicesShowcasePage  />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-
-  it ('displays expected content', () => {
-    render (<ServicesShowcasePage  />) ;
+  it('displays expected content', () => {
+    render(<ServicesShowcasePage />);
     // Add specific test assertions based on component content
-  }) }) ;
+  });
+});

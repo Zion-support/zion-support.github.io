@@ -78,12 +78,10 @@ export default async function handler(
     if (!user) {
       console.log(`Forgot password attempt for non-existent email: ${email}`);
       // Important: Always return a generic message to prevent email enumeration
-      return res
-        .status(200)
-        .json({
-          message:
-            'If your email address exists in our system, you will receive a password reset link.',
-        });
+      return res.status(200).json({
+        message:
+          'If your email address exists in our system, you will receive a password reset link.',
+      });
     }
 
     const resetToken = crypto.randomBytes(32).toString('hex'); // This is the raw token for the URL
@@ -116,12 +114,10 @@ export default async function handler(
       );
     }
 
-    return res
-      .status(200)
-      .json({
-        message:
-          'If your email address exists in our system, you will receive a password reset link.',
-      });
+    return res.status(200).json({
+      message:
+        'If your email address exists in our system, you will receive a password reset link.',
+    });
   } catch (error) {
     console.error('Forgot Password Error:', error);
     return res

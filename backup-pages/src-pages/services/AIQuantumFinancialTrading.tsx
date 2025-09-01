@@ -1,12 +1,12 @@
 import React from 'react';
 import {
-  Brain, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  Atom, 
-  BarChart3, 
-  DollarSign, 
+  Brain,
+  TrendingUp,
+  Shield,
+  Zap,
+  Atom,
+  BarChart3,
+  DollarSign,
   Target,
   CheckCircle,
   Star,
@@ -18,114 +18,122 @@ import {
   Clock,
   Phone,
   Mail,
-  MapPin
+  MapPin,
 } from 'lucide-react';
 
 const AIQuantumFinancialTrading = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Analytics",
-      description: "Advanced machine learning algorithms analyze market patterns and predict optimal trading opportunities with unprecedented accuracy."
+      title: 'AI-Powered Analytics',
+      description:
+        'Advanced machine learning algorithms analyze market patterns and predict optimal trading opportunities with unprecedented accuracy.',
     },
     {
       icon: Atom,
-      title: "Quantum Computing",
-      description: "Leverage quantum computing power for complex financial calculations and portfolio optimization at speeds impossible with classical computers."
+      title: 'Quantum Computing',
+      description:
+        'Leverage quantum computing power for complex financial calculations and portfolio optimization at speeds impossible with classical computers.',
     },
     {
       icon: Shield,
-      title: "Secure Trading",
-      description: "Military-grade security protocols ensure your trading data and transactions remain protected against cyber threats."
+      title: 'Secure Trading',
+      description:
+        'Military-grade security protocols ensure your trading data and transactions remain protected against cyber threats.',
     },
     {
       icon: TrendingUp,
-      title: "Performance Optimization",
-      description: "Continuously optimize trading strategies based on real-time market data and historical performance metrics."
-    }
+      title: 'Performance Optimization',
+      description:
+        'Continuously optimize trading strategies based on real-time market data and historical performance metrics.',
+    },
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$2,999",
-      period: "/month",
-      description: "Perfect for individual traders and small investment firms",
+      name: 'Starter',
+      price: '$2,999',
+      period: '/month',
+      description: 'Perfect for individual traders and small investment firms',
       features: [
-        "AI trading algorithms",
-        "Real-time market analysis",
-        "Basic risk management",
-        "Email support",
-        "Standard API access"
+        'AI trading algorithms',
+        'Real-time market analysis',
+        'Basic risk management',
+        'Email support',
+        'Standard API access',
       ],
-      popular: false
+      popular: false,
     },
     {
-      name: "Professional",
-      price: "$9,999",
-      period: "/month",
-      description: "Ideal for medium-sized trading firms and hedge funds",
+      name: 'Professional',
+      price: '$9,999',
+      period: '/month',
+      description: 'Ideal for medium-sized trading firms and hedge funds',
       features: [
-        "Advanced AI algorithms",
-        "Quantum computing access",
-        "Advanced risk management",
-        "Priority support",
-        "Full API access",
-        "Custom integrations",
-        "Portfolio optimization"
+        'Advanced AI algorithms',
+        'Quantum computing access',
+        'Advanced risk management',
+        'Priority support',
+        'Full API access',
+        'Custom integrations',
+        'Portfolio optimization',
       ],
-      popular: true
+      popular: true,
     },
     {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Comprehensive solution for large financial institutions",
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'Comprehensive solution for large financial institutions',
       features: [
-        "Custom quantum computing integration",
-        "Dedicated support team",
-        "Custom compliance modules",
-        "Multi-tenant architecture",
-        "Advanced analytics dashboard",
-        "SLA guarantees",
-        "On-premise deployment"
+        'Custom quantum computing integration',
+        'Dedicated support team',
+        'Custom compliance modules',
+        'Multi-tenant architecture',
+        'Advanced analytics dashboard',
+        'SLA guarantees',
+        'On-premise deployment',
       ],
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const benefits = [
     {
-      title: "Increased Returns",
-      description: "AI-driven strategies consistently outperform traditional trading methods",
-      metric: "300% ROI improvement"
+      title: 'Increased Returns',
+      description:
+        'AI-driven strategies consistently outperform traditional trading methods',
+      metric: '300% ROI improvement',
     },
     {
-      title: "Risk Reduction",
-      description: "Advanced risk management algorithms minimize potential losses",
-      metric: "85% risk reduction"
+      title: 'Risk Reduction',
+      description:
+        'Advanced risk management algorithms minimize potential losses',
+      metric: '85% risk reduction',
     },
     {
-      title: "Speed Advantage",
-      description: "Quantum-powered calculations execute trades in microseconds",
-      metric: "1000x faster execution"
+      title: 'Speed Advantage',
+      description:
+        'Quantum-powered calculations execute trades in microseconds',
+      metric: '1000x faster execution',
     },
     {
-      title: "Cost Savings",
-      description: "Automated trading reduces manual intervention and operational costs",
-      metric: "60% cost reduction"
-    }
+      title: 'Cost Savings',
+      description:
+        'Automated trading reduces manual intervention and operational costs',
+      metric: '60% cost reduction',
+    },
   ];
 
   const technologies = [
-    "Machine Learning & AI",
-    "Quantum Computing",
-    "High-Frequency Trading",
-    "Blockchain Security",
-    "Real-time Analytics",
-    "Cloud Infrastructure",
-    "API Integration",
-    "Predictive Modeling"
+    'Machine Learning & AI',
+    'Quantum Computing',
+    'High-Frequency Trading',
+    'Blockchain Security',
+    'Real-time Analytics',
+    'Cloud Infrastructure',
+    'API Integration',
+    'Predictive Modeling',
   ];
 
   return (
@@ -137,12 +145,14 @@ const AIQuantumFinancialTrading = () => {
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               AI Quantum
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                {' '}Financial Trading
+                {' '}
+                Financial Trading
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Revolutionary AI-powered quantum computing platform that transforms financial trading 
-              with unprecedented speed, accuracy, and intelligence.
+              Revolutionary AI-powered quantum computing platform that
+              transforms financial trading with unprecedented speed, accuracy,
+              and intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105">
@@ -164,14 +174,15 @@ const AIQuantumFinancialTrading = () => {
               Cutting-Edge Trading Technology
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Quantum Financial Trading platform combines the latest advances in artificial intelligence 
-              and quantum computing to deliver unmatched trading performance.
+              Our AI Quantum Financial Trading platform combines the latest
+              advances in artificial intelligence and quantum computing to
+              deliver unmatched trading performance.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -190,14 +201,17 @@ const AIQuantumFinancialTrading = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Proven Results</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our clients consistently achieve superior returns with reduced risk and operational costs.
+              Our clients consistently achieve superior returns with reduced
+              risk and operational costs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.metric}</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">
+                  {benefit.metric}
+                </div>
                 <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
               </div>
@@ -215,10 +229,10 @@ const AIQuantumFinancialTrading = () => {
               Built on the most advanced technologies available today.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {technologies.map((tech, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-lg p-4 text-center border border-white/10 hover:border-cyan-400/30 transition-colors duration-300"
               >
@@ -235,16 +249,19 @@ const AIQuantumFinancialTrading = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Choose Your Plan</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options to suit traders and institutions of all sizes.
+              Flexible pricing options to suit traders and institutions of all
+              sizes.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div 
+              <div
                 key={index}
                 className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border ${
-                  plan.popular ? 'border-cyan-400 ring-2 ring-cyan-400/20' : 'border-white/20'
+                  plan.popular
+                    ? 'border-cyan-400 ring-2 ring-cyan-400/20'
+                    : 'border-white/20'
                 } relative`}
               >
                 {plan.popular && (
@@ -254,7 +271,7 @@ const AIQuantumFinancialTrading = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
@@ -263,7 +280,7 @@ const AIQuantumFinancialTrading = () => {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3">
@@ -272,12 +289,14 @@ const AIQuantumFinancialTrading = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:shadow-lg hover:shadow-cyan-500/25' 
-                    : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                }`}>
+
+                <button
+                  className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:shadow-lg hover:shadow-cyan-500/25'
+                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                  }`}
+                >
                   Get Started
                 </button>
               </div>
@@ -293,8 +312,8 @@ const AIQuantumFinancialTrading = () => {
             Ready to Transform Your Trading?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of traders and institutions who have revolutionized their 
-            financial performance with our AI Quantum Trading platform.
+            Join thousands of traders and institutions who have revolutionized
+            their financial performance with our AI Quantum Trading platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105">

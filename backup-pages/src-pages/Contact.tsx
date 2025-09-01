@@ -11,7 +11,7 @@ import {
   User,
   MessageSquare,
   Building,
-  Rocket
+  Rocket,
 } from 'lucide-react';
 
 export default function Contact() {
@@ -23,7 +23,7 @@ export default function Contact() {
     subject: '',
     message: '',
     budget: '',
-    timeline: ''
+    timeline: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -32,7 +32,7 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
@@ -41,10 +41,14 @@ export default function Contact() {
     }, 2000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
@@ -61,12 +65,13 @@ export default function Contact() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Get In
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-              {' '}Touch
+              {' '}
+              Touch
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to transform your business with cutting-edge technology? 
-            Let's discuss your project and create something amazing together.
+            Ready to transform your business with cutting-edge technology? Let's
+            discuss your project and create something amazing together.
           </p>
         </motion.div>
 
@@ -79,10 +84,13 @@ export default function Contact() {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-3xl font-bold mb-6">Let's Start a Conversation</h2>
+              <h2 className="text-3xl font-bold mb-6">
+                Let's Start a Conversation
+              </h2>
               <p className="text-gray-300 mb-8">
-                We're here to help you navigate your digital transformation journey. 
-                Our expert team is ready to discuss your unique challenges and goals.
+                We're here to help you navigate your digital transformation
+                journey. Our expert team is ready to discuss your unique
+                challenges and goals.
               </p>
             </div>
 
@@ -107,7 +115,9 @@ export default function Contact() {
                 <MapPin className="w-6 h-6 text-cyan-400" />
                 <div>
                   <h3 className="font-semibold">Office</h3>
-                  <p className="text-gray-300">123 Tech Street, San Francisco, CA 94105</p>
+                  <p className="text-gray-300">
+                    123 Tech Street, San Francisco, CA 94105
+                  </p>
                 </div>
               </div>
 
@@ -115,7 +125,9 @@ export default function Contact() {
                 <Clock className="w-6 h-6 text-cyan-400" />
                 <div>
                   <h3 className="font-semibold">Business Hours</h3>
-                  <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM PST</p>
+                  <p className="text-gray-300">
+                    Monday - Friday: 9:00 AM - 6:00 PM PST
+                  </p>
                 </div>
               </div>
             </div>
@@ -133,14 +145,17 @@ export default function Contact() {
                 <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
                 <p className="text-gray-300">
-                  Thank you for reaching out. We'll get back to you within 24 hours.
+                  Thank you for reaching out. We'll get back to you within 24
+                  hours.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Name *</label>
+                    <label className="block text-sm font-medium mb-2">
+                      Name *
+                    </label>
                     <input
                       type="text"
                       name="name"
@@ -152,7 +167,9 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Email *</label>
+                    <label className="block text-sm font-medium mb-2">
+                      Email *
+                    </label>
                     <input
                       type="email"
                       name="email"
@@ -167,7 +184,9 @@ export default function Contact() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Company</label>
+                    <label className="block text-sm font-medium mb-2">
+                      Company
+                    </label>
                     <input
                       type="text"
                       name="company"
@@ -178,7 +197,9 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Phone</label>
+                    <label className="block text-sm font-medium mb-2">
+                      Phone
+                    </label>
                     <input
                       type="tel"
                       name="phone"
@@ -191,7 +212,9 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Subject *</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Subject *
+                  </label>
                   <select
                     name="subject"
                     value={formData.subject}
@@ -199,18 +222,34 @@ export default function Contact() {
                     required
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
                   >
-                    <option value="" className="bg-slate-800">Select a topic</option>
-                    <option value="ai-services" className="bg-slate-800">AI & Machine Learning</option>
-                    <option value="cybersecurity" className="bg-slate-800">Cybersecurity</option>
-                    <option value="cloud-services" className="bg-slate-800">Cloud Services</option>
-                    <option value="consulting" className="bg-slate-800">Technology Consulting</option>
-                    <option value="partnership" className="bg-slate-800">Partnership</option>
-                    <option value="other" className="bg-slate-800">Other</option>
+                    <option value="" className="bg-slate-800">
+                      Select a topic
+                    </option>
+                    <option value="ai-services" className="bg-slate-800">
+                      AI & Machine Learning
+                    </option>
+                    <option value="cybersecurity" className="bg-slate-800">
+                      Cybersecurity
+                    </option>
+                    <option value="cloud-services" className="bg-slate-800">
+                      Cloud Services
+                    </option>
+                    <option value="consulting" className="bg-slate-800">
+                      Technology Consulting
+                    </option>
+                    <option value="partnership" className="bg-slate-800">
+                      Partnership
+                    </option>
+                    <option value="other" className="bg-slate-800">
+                      Other
+                    </option>
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Message *</label>
+                  <label className="block text-sm font-medium mb-2">
+                    Message *
+                  </label>
                   <textarea
                     name="message"
                     value={formData.message}
@@ -251,9 +290,12 @@ export default function Contact() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-16 text-center"
         >
-          <h3 className="text-2xl font-bold mb-4">Prefer to Schedule a Call?</h3>
+          <h3 className="text-2xl font-bold mb-4">
+            Prefer to Schedule a Call?
+          </h3>
           <p className="text-gray-300 mb-6">
-            Book a free 30-minute consultation to discuss your project requirements
+            Book a free 30-minute consultation to discuss your project
+            requirements
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}

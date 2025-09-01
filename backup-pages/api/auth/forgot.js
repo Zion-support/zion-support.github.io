@@ -30,12 +30,10 @@ export default async function handler(req, res) {
     const user = await prisma.user.findUnique({ where: { email } });
     if (!user) {
       console.log(`Forgot password attempt for non-existent email: ${email}`);
-      return res
-        .status(200)
-        .json({
-          message:
-            'If your email address exists in our system, you will receive a password reset link.',
-        });
+      return res.status(200).json({
+        message:
+          'If your email address exists in our system, you will receive a password reset link.',
+      });
     }
     const resetToken = crypto.randomBytes(32).toString('hex');
     const passwordResetToken = crypto
@@ -52,22 +50,18 @@ export default async function handler(req, res) {
       },
     });
     await sendResetEmail(user.email, resetToken);
-    return res
-      .status(200)
-      .json({
-        message:
-          'If your email address exists in our system, you will receive a password reset link.',
-      });
+    return res.status(200).json({
+      message:
+        'If your email address exists in our system, you will receive a password reset link.',
+    });
   } catch (error) {
     // Catch any error
     console.error('Forgot Password Processing Error:', error);
     // Log the detailed error for server-side inspection
     // For Prisma errors, error.message or error.code might be useful,
     // but avoid sending detailed Prisma error messages to the client.
-    return res
-      .status(500)
-      .json({
-        message: 'An internal server error occurred. Please try again later.',
-      });
+    return res.status(500).json({
+      message: 'An internal server error occurred. Please try again later.',
+    });
   }
 }

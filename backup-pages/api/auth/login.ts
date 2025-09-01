@@ -76,23 +76,19 @@ export default async function handler(
         .json({ error: 'Invalid credentials', code: 'INVALID_CREDENTIALS' });
     } else {
       const status = (error as AuthApiError)?.status || 500; // Try to get status if it's an AuthApiError
-      return res
-        .status(status)
-        .json({
-          error: error.message || 'An unexpected error occurred during login.',
-          code: 'LOGIN_FAILED',
-        });
+      return res.status(status).json({
+        error: error.message || 'An unexpected error occurred during login.',
+        code: 'LOGIN_FAILED',
+      });
     }
   }
 
   if (!data?.session || !data.user) {
     // data.user should also be present
-    return res
-      .status(401)
-      .json({
-        error: 'Invalid credentials - no session data',
-        code: 'NO_SESSION_DATA',
-      });
+    return res.status(401).json({
+      error: 'Invalid credentials - no session data',
+      code: 'NO_SESSION_DATA',
+    });
   }
 
   const accessToken = data.session.access_token;

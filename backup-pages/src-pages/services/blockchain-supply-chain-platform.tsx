@@ -45,7 +45,7 @@ import {
   BarChart,
   Settings,
   Monitor,
-  ShieldCheck
+  ShieldCheck,
 } from 'lucide-react';
 
 export function BlockchainSupplyChainPlatform() {
@@ -53,39 +53,61 @@ export function BlockchainSupplyChainPlatform() {
     {
       icon: LinkIcon,
       title: 'End-to-End Traceability',
-      description: 'Complete visibility of products from source to consumer with immutable blockchain records',
-      benefits: ['Real-time tracking', 'Immutable records', 'Complete audit trail']
+      description:
+        'Complete visibility of products from source to consumer with immutable blockchain records',
+      benefits: [
+        'Real-time tracking',
+        'Immutable records',
+        'Complete audit trail',
+      ],
     },
     {
       icon: Shield,
       title: 'Smart Contract Automation',
-      description: 'Automated compliance and quality assurance through blockchain smart contracts',
-      benefits: ['Automated compliance', 'Quality verification', 'Payment automation']
+      description:
+        'Automated compliance and quality assurance through blockchain smart contracts',
+      benefits: [
+        'Automated compliance',
+        'Quality verification',
+        'Payment automation',
+      ],
     },
     {
       icon: Activity,
       title: 'Real-Time Monitoring',
-      description: 'Live monitoring of supply chain activities and performance metrics',
-      benefits: ['Live dashboards', 'Performance tracking', 'Alert systems']
+      description:
+        'Live monitoring of supply chain activities and performance metrics',
+      benefits: ['Live dashboards', 'Performance tracking', 'Alert systems'],
     },
     {
       icon: BarChart3,
       title: 'Advanced Analytics',
-      description: 'Comprehensive supply chain analytics and predictive insights',
-      benefits: ['Predictive analytics', 'Performance optimization', 'Risk assessment']
+      description:
+        'Comprehensive supply chain analytics and predictive insights',
+      benefits: [
+        'Predictive analytics',
+        'Performance optimization',
+        'Risk assessment',
+      ],
     },
     {
       icon: Zap,
       title: 'Automated Compliance',
-      description: 'Automated regulatory compliance and certification management',
-      benefits: ['Regulatory compliance', 'Certification tracking', 'Audit automation']
+      description:
+        'Automated regulatory compliance and certification management',
+      benefits: [
+        'Regulatory compliance',
+        'Certification tracking',
+        'Audit automation',
+      ],
     },
     {
       icon: Cloud,
       title: 'Cloud-Native Platform',
-      description: 'Scalable cloud infrastructure with global deployment capabilities',
-      benefits: ['Global scalability', 'High availability', 'Auto-scaling']
-    }
+      description:
+        'Scalable cloud infrastructure with global deployment capabilities',
+      benefits: ['Global scalability', 'High availability', 'Auto-scaling'],
+    },
   ];
 
   const pricingPlans = [
@@ -102,10 +124,10 @@ export function BlockchainSupplyChainPlatform() {
         'Mobile app access',
         'Basic analytics',
         'API access',
-        'Standard integrations'
+        'Standard integrations',
       ],
       cta: 'Start Free Trial',
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -122,10 +144,10 @@ export function BlockchainSupplyChainPlatform() {
         'White-label options',
         'Compliance consulting',
         'Training programs',
-        'SLA guarantees'
+        'SLA guarantees',
       ],
       cta: 'Start Free Trial',
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -142,11 +164,11 @@ export function BlockchainSupplyChainPlatform() {
         'Advanced security',
         'Compliance certification',
         'Strategic consulting',
-        'Implementation services'
+        'Implementation services',
       ],
       cta: 'Contact Sales',
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const useCases = [
@@ -154,33 +176,49 @@ export function BlockchainSupplyChainPlatform() {
       title: 'Food & Beverage',
       description: 'Ensure food safety and traceability from farm to table',
       icon: Package,
-      benefits: ['Food safety compliance', 'Origin verification', 'Quality assurance']
+      benefits: [
+        'Food safety compliance',
+        'Origin verification',
+        'Quality assurance',
+      ],
     },
     {
       title: 'Pharmaceuticals',
       description: 'Prevent counterfeit drugs and ensure medication safety',
       icon: Heart,
-      benefits: ['Drug authentication', 'Cold chain monitoring', 'Regulatory compliance']
+      benefits: [
+        'Drug authentication',
+        'Cold chain monitoring',
+        'Regulatory compliance',
+      ],
     },
     {
       title: 'Luxury Goods',
       description: 'Verify authenticity and prevent counterfeiting',
       icon: Award,
-      benefits: ['Authenticity verification', 'Brand protection', 'Consumer trust']
+      benefits: [
+        'Authenticity verification',
+        'Brand protection',
+        'Consumer trust',
+      ],
     },
     {
       title: 'Manufacturing',
       description: 'Optimize supply chain efficiency and quality control',
       icon: Factory,
-      benefits: ['Quality control', 'Inventory optimization', 'Supplier management']
-    }
+      benefits: [
+        'Quality control',
+        'Inventory optimization',
+        'Supplier management',
+      ],
+    },
   ];
 
   const stats = [
     { number: '100%', label: 'Supply Chain Transparency' },
     { number: '60%', label: 'Reduction in Compliance Costs' },
     { number: '99.95%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Global Monitoring' }
+    { number: '24/7', label: 'Global Monitoring' },
   ];
 
   return (
@@ -202,8 +240,9 @@ export function BlockchainSupplyChainPlatform() {
               Blockchain Supply Chain Platform
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionary blockchain-based platform that provides end-to-end supply chain transparency, 
-              traceability, and compliance. Enable real-time tracking of products from source to consumer.
+              Revolutionary blockchain-based platform that provides end-to-end
+              supply chain transparency, traceability, and compliance. Enable
+              real-time tracking of products from source to consumer.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -236,7 +275,9 @@ export function BlockchainSupplyChainPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">
+                  {stat.number}
+                </div>
                 <div className="text-gray-400">{stat.label}</div>
               </motion.div>
             ))}
@@ -253,9 +294,12 @@ export function BlockchainSupplyChainPlatform() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Advanced Blockchain Features</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Advanced Blockchain Features
+            </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our blockchain platform provides comprehensive supply chain transparency and automation capabilities
+              Our blockchain platform provides comprehensive supply chain
+              transparency and automation capabilities
             </p>
           </motion.div>
 
@@ -275,7 +319,10 @@ export function BlockchainSupplyChainPlatform() {
                 <p className="text-gray-400 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                    <li
+                      key={benefitIndex}
+                      className="flex items-center text-sm text-gray-300"
+                    >
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
@@ -296,9 +343,12 @@ export function BlockchainSupplyChainPlatform() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Industry Solutions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Industry Solutions
+            </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Tailored blockchain solutions for different industries and supply chain needs
+              Tailored blockchain solutions for different industries and supply
+              chain needs
             </p>
           </motion.div>
 
@@ -318,7 +368,10 @@ export function BlockchainSupplyChainPlatform() {
                 <p className="text-gray-400 mb-4">{useCase.description}</p>
                 <ul className="space-y-2">
                   {useCase.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                    <li
+                      key={benefitIndex}
+                      className="flex items-center text-sm text-gray-300"
+                    >
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
@@ -339,7 +392,9 @@ export function BlockchainSupplyChainPlatform() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Pricing Plans</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Pricing Plans
+            </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Choose the perfect plan for your supply chain transparency needs
             </p>
@@ -373,7 +428,10 @@ export function BlockchainSupplyChainPlatform() {
                 </div>
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-gray-300"
+                    >
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
@@ -407,7 +465,8 @@ export function BlockchainSupplyChainPlatform() {
               Ready to Transform Your Supply Chain?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join leading organizations that trust our blockchain platform for complete supply chain transparency
+              Join leading organizations that trust our blockchain platform for
+              complete supply chain transparency
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -445,7 +504,11 @@ export function BlockchainSupplyChainPlatform() {
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 text-blue-400 mb-4" />
               <h3 className="text-lg font-semibold mb-2">Address</h3>
-              <p className="text-gray-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p className="text-gray-400">
+                364 E Main St STE 1008
+                <br />
+                Middletown DE 19709
+              </p>
             </div>
           </div>
         </div>

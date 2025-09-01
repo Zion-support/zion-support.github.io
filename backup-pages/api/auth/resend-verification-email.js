@@ -43,13 +43,11 @@ export default async function handler(req, res) {
         'Auth error in resend-verification-email:',
         authError?.message
       );
-      return res
-        .status(401)
-        .json({
-          message:
-            authError?.message ||
-            'Unauthorized: No active session or auth error.',
-        });
+      return res.status(401).json({
+        message:
+          authError?.message ||
+          'Unauthorized: No active session or auth error.',
+      });
     }
     if (!user.email) {
       console.error(
@@ -82,19 +80,13 @@ export default async function handler(req, res) {
           .status(429)
           .json({ message: 'Rate limit exceeded. Please try again later.' });
       }
-      return res
-        .status(500)
-        .json({
-          message:
-            resendError.message || 'Failed to resend verification email.',
-        });
-    }
-    return res
-      .status(200)
-      .json({
-        message:
-          'Verification email successfully resent to ' + user.email + '.',
+      return res.status(500).json({
+        message: resendError.message || 'Failed to resend verification email.',
       });
+    }
+    return res.status(200).json({
+      message: 'Verification email successfully resent to ' + user.email + '.',
+    });
   } catch (error) {
     console.error(
       'Unexpected error in resend-verification-email:',

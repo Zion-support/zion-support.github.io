@@ -106,13 +106,11 @@ export default async function handler(req, res) {
         user.id
       );
     }
-    return res
-      .status(200)
-      .json({
-        message:
-          'Password has been reset successfully.' +
-          (loginResult.success ? ' You are now logged in.' : ''),
-      });
+    return res.status(200).json({
+      message:
+        'Password has been reset successfully.' +
+        (loginResult.success ? ' You are now logged in.' : ''),
+    });
   } catch (error) {
     console.error('Reset Password Error:', error);
     return res

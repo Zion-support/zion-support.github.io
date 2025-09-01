@@ -1,23 +1,23 @@
-import { 
-  Brain, 
-  Cloud, 
-  Rocket, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Cpu, 
-  Database, 
-  Users, 
-  Target, 
-  TrendingUp, 
-  Heart, 
-  Building, 
-  Car, 
-  Factory, 
-  City, 
-  Leaf, 
-  Atom, 
-  Satellite, 
+import {
+  Brain,
+  Cloud,
+  Rocket,
+  Shield,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Users,
+  Target,
+  TrendingUp,
+  Heart,
+  Building,
+  Car,
+  Factory,
+  City,
+  Leaf,
+  Atom,
+  Satellite,
   Lock,
   CheckCircle,
   ArrowRight,
@@ -35,13 +35,10 @@ import {
   PenTool,
   Mail,
   Phone,
-  MapPin
+  MapPin,
 } from 'lucide-react';
 
 export default function InnovativeMicroSAASServices2025() {
-  
-  
-  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-black text-white">
       {/* Hero Section */}
@@ -57,8 +54,10 @@ export default function InnovativeMicroSAASServices2025() {
               Innovative Micro SAAS Services 2025
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover Zion Tech Group's revolutionary AI-powered micro SaaS solutions that are transforming industries worldwide. 
-              From predictive analytics to quantum computing, we deliver cutting-edge technology with proven ROI.
+              Discover Zion Tech Group's revolutionary AI-powered micro SaaS
+              solutions that are transforming industries worldwide. From
+              predictive analytics to quantum computing, we deliver cutting-edge
+              technology with proven ROI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -66,7 +65,7 @@ export default function InnovativeMicroSAASServices2025() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
               >
                 Get Your Custom Quote
-                <ArrowRight className="ml-2 w-5 h-5"  />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/schedule-demo"
@@ -92,7 +91,9 @@ export default function InnovativeMicroSAASServices2025() {
               AI-Powered Micro SaaS Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our innovative micro SaaS services combine cutting-edge AI technology with scalable architecture to deliver maximum business value.
+              Our innovative micro SaaS services combine cutting-edge AI
+              technology with scalable architecture to deliver maximum business
+              value.
             </p>
           </motion.div>
 
@@ -106,43 +107,60 @@ export default function InnovativeMicroSAASServices2025() {
                 className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-8"
               >
                 <div className="flex items-center mb-8">
-                  <div className={`p-4 rounded-xl bg-gradient-to-br ${category.color} mr-6`}>
+                  <div
+                    className={`p-4 rounded-xl bg-gradient-to-br ${category.color} mr-6`}
+                  >
                     <category.icon className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-3xl font-bold text-white">{category.category}</h3>
+                  <h3 className="text-3xl font-bold text-white">
+                    {category.category}
+                  </h3>
                 </div>
-                
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  {category.services.map((service) => (
+                  {category.services.map(service => (
                     <div
                       key={service.name}
                       className="bg-slate-700/30 rounded-xl p-6 border border-slate-600/50 hover:border-purple-400/30 transition-all duration-300"
                     >
                       <div className="flex items-start justify-between mb-4">
-                        <h4 className="text-xl font-semibold text-white">{service.name}</h4>
+                        <h4 className="text-xl font-semibold text-white">
+                          {service.name}
+                        </h4>
                         <div className="text-right">
-                          <div className="text-2xl font-bold text-purple-400">{service.price}</div>
+                          <div className="text-2xl font-bold text-purple-400">
+                            {service.price}
+                          </div>
                           <div className="text-sm text-gray-400">monthly</div>
                         </div>
                       </div>
-                      
-                      <p className="text-gray-300 mb-4">{service.description}</p>
-                      
+
+                      <p className="text-gray-300 mb-4">
+                        {service.description}
+                      </p>
+
                       <div className="mb-4">
-                        <h5 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h5>
+                        <h5 className="text-sm font-semibold text-gray-300 mb-2">
+                          Key Features:
+                        </h5>
                         <ul className="space-y-1">
                           {service.features.map((feature, idx) => (
-                            <li key={idx} className="flex items-center text-sm text-gray-400">
-                              <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"  />
+                            <li
+                              key={idx}
+                              className="flex items-center text-sm text-gray-400"
+                            >
+                              <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
                         </ul>
                       </div>
-                      
+
                       <div className="flex items-center justify-between">
                         <div className="text-center">
-                          <div className="text-lg font-bold text-green-400">{service.roi}</div>
+                          <div className="text-lg font-bold text-green-400">
+                            {service.roi}
+                          </div>
                           <div className="text-xs text-gray-400">ROI</div>
                         </div>
                         <Link
@@ -150,7 +168,7 @@ export default function InnovativeMicroSAASServices2025() {
                           className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white text-sm font-medium rounded-lg transition-all duration-300"
                         >
                           Learn More
-                          <ArrowRight className="ml-2 w-4 h-4"  />
+                          <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
                       </div>
                     </div>
@@ -175,7 +193,8 @@ export default function InnovativeMicroSAASServices2025() {
               Why Choose Our Micro SaaS Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver cutting-edge technology solutions with proven ROI, competitive pricing, and world-class support.
+              We deliver cutting-edge technology solutions with proven ROI,
+              competitive pricing, and world-class support.
             </p>
           </motion.div>
 
@@ -191,7 +210,9 @@ export default function InnovativeMicroSAASServices2025() {
                 <div className="p-4 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 mb-4 inline-block">
                   <benefit.icon className="w-12 h-12 text-purple-400" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {benefit.title}
+                </h3>
                 <p className="text-gray-400">{benefit.description}</p>
               </motion.div>
             ))}
@@ -212,7 +233,8 @@ export default function InnovativeMicroSAASServices2025() {
               Industry-Specific Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored micro SaaS solutions designed for your industry's unique challenges and opportunities.
+              Tailored micro SaaS solutions designed for your industry's unique
+              challenges and opportunities.
             </p>
           </motion.div>
 
@@ -228,7 +250,9 @@ export default function InnovativeMicroSAASServices2025() {
                 <div className="p-4 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 mb-4 inline-block">
                   <industry.icon className="w-12 h-12 text-purple-400" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{industry.name}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {industry.name}
+                </h3>
                 <p className="text-gray-400">{industry.description}</p>
               </motion.div>
             ))}
@@ -249,7 +273,9 @@ export default function InnovativeMicroSAASServices2025() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our innovative micro SaaS solutions can drive growth, reduce costs, and give you a competitive advantage in 2025 and beyond.
+              Let's discuss how our innovative micro SaaS solutions can drive
+              growth, reduce costs, and give you a competitive advantage in 2025
+              and beyond.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -257,7 +283,7 @@ export default function InnovativeMicroSAASServices2025() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
               >
                 Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5"  />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/contact"
@@ -270,4 +296,5 @@ export default function InnovativeMicroSAASServices2025() {
         </div>
       </section>
     </div>
-  )}
+  );
+}

@@ -9,43 +9,111 @@ const Sitemap = () => {
       title: 'Main Pages',
       links: [
         { name: 'Home', path: '/', description: 'Welcome to Zion Tech Group' },
-        { name: 'About', path: '/about', description: 'Learn about our company' },
-        { name: 'Contact', path: '/contact', description: 'Get in touch with us' },
-        { name: 'Partners', path: '/partners', description: 'Our business partners' },
+        {
+          name: 'About',
+          path: '/about',
+          description: 'Learn about our company',
+        },
+        {
+          name: 'Contact',
+          path: '/contact',
+          description: 'Get in touch with us',
+        },
+        {
+          name: 'Partners',
+          path: '/partners',
+          description: 'Our business partners',
+        },
         { name: 'Careers', path: '/careers', description: 'Job opportunities' },
-        { name: 'Blog', path: '/blog', description: 'Latest news and insights' },
-        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
+        {
+          name: 'Blog',
+          path: '/blog',
+          description: 'Latest news and insights',
+        },
+        {
+          name: 'FAQ',
+          path: '/faq',
+          description: 'Frequently asked questions',
+        },
         { name: 'Login', path: '/login', description: 'User authentication' },
-        { name: 'Pricing', path: '/pricing', description: 'Service pricing plans' }
-      ]
+        {
+          name: 'Pricing',
+          path: '/pricing',
+          description: 'Service pricing plans',
+        },
+      ],
     },
     {
       title: 'Services',
       links: [
-        { name: 'All Services', path: '/services', description: 'Complete service catalog' },
-        { name: 'AI Solutions', path: '/services/ai', description: 'Artificial intelligence services' },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', description: 'Security solutions' },
-        { name: 'Cloud Services', path: '/services/cloud', description: 'Cloud infrastructure' },
-        { name: 'Data Analytics', path: '/services/analytics', description: 'Data analysis solutions' },
-        { name: 'AI Quantum Financial Trading', path: '/services/ai-quantum-financial-trading', description: 'Advanced trading algorithms' }
-      ]
+        {
+          name: 'All Services',
+          path: '/services',
+          description: 'Complete service catalog',
+        },
+        {
+          name: 'AI Solutions',
+          path: '/services/ai',
+          description: 'Artificial intelligence services',
+        },
+        {
+          name: 'Cybersecurity',
+          path: '/services/cybersecurity',
+          description: 'Security solutions',
+        },
+        {
+          name: 'Cloud Services',
+          path: '/services/cloud',
+          description: 'Cloud infrastructure',
+        },
+        {
+          name: 'Data Analytics',
+          path: '/services/analytics',
+          description: 'Data analysis solutions',
+        },
+        {
+          name: 'AI Quantum Financial Trading',
+          path: '/services/ai-quantum-financial-trading',
+          description: 'Advanced trading algorithms',
+        },
+      ],
     },
     {
       title: 'Legal & Support',
       links: [
-        { name: 'Privacy Policy', path: '/privacy', description: 'Privacy and data protection' },
-        { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
-        { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage information' },
-        { name: 'Support Center', path: '/support', description: 'Help and documentation' },
-        { name: 'Status Page', path: '/status', description: 'System status and uptime' }
-      ]
-    }
+        {
+          name: 'Privacy Policy',
+          path: '/privacy',
+          description: 'Privacy and data protection',
+        },
+        {
+          name: 'Terms of Service',
+          path: '/terms',
+          description: 'Terms and conditions',
+        },
+        {
+          name: 'Cookie Policy',
+          path: '/cookies',
+          description: 'Cookie usage information',
+        },
+        {
+          name: 'Support Center',
+          path: '/support',
+          description: 'Help and documentation',
+        },
+        {
+          name: 'Status Page',
+          path: '/status',
+          description: 'System status and uptime',
+        },
+      ],
+    },
   ];
 
   const lastUpdated = new Date().toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
-    day: 'numeric'
+    day: 'numeric',
   });
 
   return (
@@ -63,16 +131,15 @@ const Sitemap = () => {
             <h1 className="text-4xl md:text-5xl font-bold">
               Site
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                {' '}Map
+                {' '}
+                Map
               </span>
             </h1>
           </div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
             Navigate through all pages and services available on Zion Tech Group
           </p>
-          <p className="text-sm text-gray-400">
-            Last updated: {lastUpdated}
-          </p>
+          <p className="text-sm text-gray-400">Last updated: {lastUpdated}</p>
         </motion.div>
 
         {/* Sitemap Sections */}
@@ -89,14 +156,17 @@ const Sitemap = () => {
                 <Globe className="w-6 h-6" />
                 {section.title}
               </h2>
-              
+
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
                   <motion.li
                     key={linkIndex}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: (sectionIndex * 0.1) + (linkIndex * 0.05) }}
+                    transition={{
+                      duration: 0.3,
+                      delay: sectionIndex * 0.1 + linkIndex * 0.05,
+                    }}
                   >
                     <Link
                       to={link.path}
@@ -133,7 +203,10 @@ const Sitemap = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
                 <div className="text-3xl font-bold text-cyan-400 mb-2">
-                  {sitemapSections.reduce((total, section) => total + section.links.length, 0)}
+                  {sitemapSections.reduce(
+                    (total, section) => total + section.links.length,
+                    0
+                  )}
                 </div>
                 <div className="text-gray-300">Total Pages</div>
               </div>
@@ -144,7 +217,9 @@ const Sitemap = () => {
                 <div className="text-gray-300">Main Sections</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">
+                  24/7
+                </div>
                 <div className="text-gray-300">Availability</div>
               </div>
             </div>
@@ -159,8 +234,11 @@ const Sitemap = () => {
           className="mt-12 text-center"
         >
           <p className="text-gray-400 text-sm">
-            Can't find what you're looking for? 
-            <Link to="/contact" className="text-cyan-400 hover:text-cyan-300 ml-1">
+            Can't find what you're looking for?
+            <Link
+              to="/contact"
+              className="text-cyan-400 hover:text-cyan-300 ml-1"
+            >
               Contact our support team
             </Link>
           </p>

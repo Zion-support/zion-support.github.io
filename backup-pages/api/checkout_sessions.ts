@@ -62,11 +62,9 @@ export default async function handler(
     if (!session.id) {
       // This case should ideally not happen if session creation is successful
       console.error('Stripe session created but missing ID.');
-      return res
-        .status(500)
-        .json({
-          error: 'Failed to create checkout session: No session ID returned.',
-        });
+      return res.status(500).json({
+        error: 'Failed to create checkout session: No session ID returned.',
+      });
     }
 
     return res.status(200).json({ sessionId: session.id });

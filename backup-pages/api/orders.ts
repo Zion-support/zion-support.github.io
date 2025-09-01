@@ -61,12 +61,10 @@ export default async function handler(
       items.length === 0 ||
       typeof total !== 'number'
     ) {
-      return res
-        .status(400)
-        .json({
-          error:
-            'Missing required fields: email, items array, and total are required.',
-        });
+      return res.status(400).json({
+        error:
+          'Missing required fields: email, items array, and total are required.',
+      });
     }
 
     try {
@@ -157,12 +155,10 @@ export default async function handler(
         dbError instanceof Error
           ? dbError.message
           : 'Database operation failed.';
-      return res
-        .status(500)
-        .json({
-          error: 'Failed to create order due to a database issue.',
-          details: message,
-        });
+      return res.status(500).json({
+        error: 'Failed to create order due to a database issue.',
+        details: message,
+      });
     }
   }
 

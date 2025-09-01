@@ -13,12 +13,10 @@ export default async function handler(req, res) {
       const orderRes = await fetch(`${base}/api/orders/${orderId}`);
       if (orderRes.ok) {
         const order = await orderRes.json();
-        res
-          .status(200)
-          .json({
-            message: `Order ${order.id} status is ${order.status}.`,
-            confidence: 1,
-          });
+        res.status(200).json({
+          message: `Order ${order.id} status is ${order.status}.`,
+          confidence: 1,
+        });
         return;
       }
     }

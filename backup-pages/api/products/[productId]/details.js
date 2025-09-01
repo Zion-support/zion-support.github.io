@@ -7,11 +7,9 @@ export default async function handler(req, res) {
   }
   const { productId } = req.query;
   if (!productId || typeof productId !== 'string') {
-    return res
-      .status(400)
-      .json({
-        error: 'productId is required in the URL path and must be a string.',
-      });
+    return res.status(400).json({
+      error: 'productId is required in the URL path and must be a string.',
+    });
   }
   try {
     // Fetch the product

@@ -130,12 +130,10 @@ export default async function handler(req, res) {
   try {
     const { prompt, inputData, syncedData } = req.body;
     if (!prompt || !inputData || !syncedData) {
-      return res
-        .status(400)
-        .json({
-          message:
-            'Missing required parameters: prompt, inputData, or syncedData.',
-        });
+      return res.status(400).json({
+        message:
+          'Missing required parameters: prompt, inputData, or syncedData.',
+      });
     }
     // TODO: Add more specific validation for inputData and syncedData structures
     const generatedDeck = await generateDeckWithGPT(
@@ -146,12 +144,10 @@ export default async function handler(req, res) {
     res.status(200).json(generatedDeck);
   } catch (error) {
     console.error('Error generating pitch deck:', error);
-    res
-      .status(500)
-      .json({
-        message:
-          error.message ||
-          'Internal Server Error: Could not generate pitch deck.',
-      });
+    res.status(500).json({
+      message:
+        error.message ||
+        'Internal Server Error: Could not generate pitch deck.',
+    });
   }
 }

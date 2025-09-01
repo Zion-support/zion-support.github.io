@@ -16,7 +16,7 @@ const ContactForm: React.FC = () => {
     email: '',
     company: '',
     service: '',
-    message: ''
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -30,7 +30,7 @@ const ContactForm: React.FC = () => {
     'Mobile Development',
     'Data Analytics',
     'Digital Transformation',
-    'Other'
+    'Other',
   ];
 
   const validateForm = (): boolean => {
@@ -56,19 +56,19 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
 
     setIsSubmitting(true);
-    
+
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     setIsSubmitting(false);
     setIsSubmitted(true);
-    
+
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
@@ -77,15 +77,19 @@ const ContactForm: React.FC = () => {
         email: '',
         company: '',
         service: '',
-        message: ''
+        message: '',
       });
     }, 3000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    
+
     // Clear error when user starts typing
     if (errors[name as keyof FormData]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
@@ -100,7 +104,9 @@ const ContactForm: React.FC = () => {
         className="bg-green-50 border border-green-200 rounded-xl p-8 text-center"
       >
         <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-green-800 mb-2">Message Sent!</h3>
+        <h3 className="text-2xl font-bold text-green-800 mb-2">
+          Message Sent!
+        </h3>
         <p className="text-green-600">
           Thank you for reaching out. We'll get back to you within 24 hours.
         </p>
@@ -113,13 +119,16 @@ const ContactForm: React.FC = () => {
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Ready to transform your business? Let's discuss how our technology solutions can drive your success.
+          Ready to transform your business? Let's discuss how our technology
+          solutions can drive your success.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
         <div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Contact Information</h3>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            Contact Information
+          </h3>
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <Mail className="w-5 h-5 text-blue-600" />
@@ -139,7 +148,11 @@ const ContactForm: React.FC = () => {
               <MapPin className="w-5 h-5 text-blue-600" />
               <div>
                 <p className="font-medium text-gray-900">Address</p>
-                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+                <p className="text-gray-600">
+                  364 E Main St STE 1008
+                  <br />
+                  Middletown, DE 19709
+                </p>
               </div>
             </div>
           </div>
@@ -148,7 +161,10 @@ const ContactForm: React.FC = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Full Name *
               </label>
               <input
@@ -162,11 +178,16 @@ const ContactForm: React.FC = () => {
                 }`}
                 placeholder="John Doe"
               />
-              {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+              {errors.name && (
+                <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+              )}
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Email Address *
               </label>
               <input
@@ -180,13 +201,18 @@ const ContactForm: React.FC = () => {
                 }`}
                 placeholder="john@company.com"
               />
-              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+              )}
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="company"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Company
               </label>
               <input
@@ -201,7 +227,10 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div>
-              <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="service"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Service Interest
               </label>
               <select
@@ -213,14 +242,19 @@ const ContactForm: React.FC = () => {
               >
                 <option value="">Select a service</option>
                 {services.map(service => (
-                  <option key={service} value={service}>{service}</option>
+                  <option key={service} value={service}>
+                    {service}
+                  </option>
                 ))}
               </select>
             </div>
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               Message *
             </label>
             <textarea
@@ -234,7 +268,9 @@ const ContactForm: React.FC = () => {
               }`}
               placeholder="Tell us about your project and how we can help..."
             />
-            {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+            {errors.message && (
+              <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+            )}
           </div>
 
           <motion.button

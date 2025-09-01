@@ -48,23 +48,19 @@ export default async function handler(req, res) {
         .json({ error: 'Invalid credentials', code: 'INVALID_CREDENTIALS' });
     } else {
       // Generic fallback for other errors
-      res
-        .status(error.status || 500)
-        .json({
-          error: error.message || 'An unexpected error occurred during login.',
-          code: 'LOGIN_FAILED',
-        });
+      res.status(error.status || 500).json({
+        error: error.message || 'An unexpected error occurred during login.',
+        code: 'LOGIN_FAILED',
+      });
     }
     return;
   }
   if (!data?.session) {
     // This case should ideally be caught by the 'error' above, but as a fallback:
-    res
-      .status(401)
-      .json({
-        error: 'Invalid credentials - no session data',
-        code: 'NO_SESSION_DATA',
-      });
+    res.status(401).json({
+      error: 'Invalid credentials - no session data',
+      code: 'NO_SESSION_DATA',
+    });
     return;
   }
   const accessToken = data.session.access_token;

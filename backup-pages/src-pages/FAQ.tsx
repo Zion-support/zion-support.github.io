@@ -12,7 +12,7 @@ import {
   MessageCircle,
   Phone,
   Mail,
-  Globe
+  Globe,
 } from 'lucide-react';
 
 interface FAQItem {
@@ -32,89 +32,102 @@ const FAQ = () => {
     {
       id: 'ai-services',
       question: 'What AI services does Zion Tech Group offer?',
-      answer: 'We offer a comprehensive suite of AI services including machine learning model development, natural language processing, computer vision, predictive analytics, and AI-powered automation solutions. Our team specializes in custom AI implementations tailored to your specific business needs.',
+      answer:
+        'We offer a comprehensive suite of AI services including machine learning model development, natural language processing, computer vision, predictive analytics, and AI-powered automation solutions. Our team specializes in custom AI implementations tailored to your specific business needs.',
       category: 'AI & Machine Learning',
-      icon: Brain
+      icon: Brain,
     },
     {
       id: 'security-approach',
       question: 'How do you ensure cybersecurity in your solutions?',
-      answer: 'Security is at the core of everything we do. We implement zero-trust architecture, end-to-end encryption, regular security audits, and comply with industry standards like SOC 2, ISO 27001, and GDPR. Our security team continuously monitors for threats and updates our protocols.',
+      answer:
+        'Security is at the core of everything we do. We implement zero-trust architecture, end-to-end encryption, regular security audits, and comply with industry standards like SOC 2, ISO 27001, and GDPR. Our security team continuously monitors for threats and updates our protocols.',
       category: 'Cybersecurity',
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'cloud-migration',
       question: 'Can you help with cloud migration?',
-      answer: 'Absolutely! We provide comprehensive cloud migration services including assessment, strategy development, implementation, and ongoing optimization. We work with all major cloud providers (AWS, Azure, GCP) and ensure minimal downtime during the migration process.',
+      answer:
+        'Absolutely! We provide comprehensive cloud migration services including assessment, strategy development, implementation, and ongoing optimization. We work with all major cloud providers (AWS, Azure, GCP) and ensure minimal downtime during the migration process.',
       category: 'Cloud Services',
-      icon: Cloud
+      icon: Cloud,
     },
     {
       id: 'project-timeline',
       question: 'What is the typical timeline for a project?',
-      answer: 'Project timelines vary based on complexity and scope. Simple implementations may take 2-4 weeks, while complex enterprise solutions can take 3-6 months. We provide detailed project timelines during the initial consultation and maintain transparent communication throughout.',
+      answer:
+        'Project timelines vary based on complexity and scope. Simple implementations may take 2-4 weeks, while complex enterprise solutions can take 3-6 months. We provide detailed project timelines during the initial consultation and maintain transparent communication throughout.',
       category: 'General',
-      icon: HelpCircle
+      icon: HelpCircle,
     },
     {
       id: 'pricing-model',
       question: 'How does your pricing work?',
-      answer: 'We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Pricing depends on project complexity, timeline, and required resources. We provide detailed quotes after understanding your specific requirements.',
+      answer:
+        'We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Pricing depends on project complexity, timeline, and required resources. We provide detailed quotes after understanding your specific requirements.',
       category: 'Pricing',
-      icon: Zap
+      icon: Zap,
     },
     {
       id: 'support-availability',
       question: 'What kind of support do you provide?',
-      answer: 'We offer 24/7 technical support for enterprise clients, business hours support for standard plans, and comprehensive documentation. Our support includes bug fixes, performance monitoring, security updates, and consultation for optimization.',
+      answer:
+        'We offer 24/7 technical support for enterprise clients, business hours support for standard plans, and comprehensive documentation. Our support includes bug fixes, performance monitoring, security updates, and consultation for optimization.',
       category: 'Support',
-      icon: MessageCircle
+      icon: MessageCircle,
     },
     {
       id: 'data-privacy',
       question: 'How do you handle data privacy and compliance?',
-      answer: 'We are fully GDPR compliant and follow strict data privacy protocols. All data is encrypted in transit and at rest, access is controlled through role-based permissions, and we maintain detailed audit logs. We sign comprehensive NDAs and data processing agreements.',
+      answer:
+        'We are fully GDPR compliant and follow strict data privacy protocols. All data is encrypted in transit and at rest, access is controlled through role-based permissions, and we maintain detailed audit logs. We sign comprehensive NDAs and data processing agreements.',
       category: 'Security & Privacy',
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'quantum-computing',
       question: 'Do you work with quantum computing technologies?',
-      answer: 'Yes, we have a dedicated quantum computing research division. We develop quantum algorithms for optimization problems, financial modeling, and cryptography. While quantum computers are still emerging, we help prepare businesses for the quantum advantage.',
+      answer:
+        'Yes, we have a dedicated quantum computing research division. We develop quantum algorithms for optimization problems, financial modeling, and cryptography. While quantum computers are still emerging, we help prepare businesses for the quantum advantage.',
       category: 'Advanced Technologies',
-      icon: Brain
+      icon: Brain,
     },
     {
       id: 'scalability',
       question: 'How do you ensure solutions are scalable?',
-      answer: 'All our solutions are designed with scalability in mind. We use microservices architecture, containerization, auto-scaling cloud infrastructure, and efficient database design. We conduct performance testing and provide scaling strategies for future growth.',
+      answer:
+        'All our solutions are designed with scalability in mind. We use microservices architecture, containerization, auto-scaling cloud infrastructure, and efficient database design. We conduct performance testing and provide scaling strategies for future growth.',
       category: 'Technical',
-      icon: Cloud
+      icon: Cloud,
     },
     {
       id: 'integration',
       question: 'Can you integrate with our existing systems?',
-      answer: 'Yes, we specialize in seamless integrations. Our team has experience with various enterprise systems, APIs, databases, and legacy applications. We conduct thorough compatibility assessments and develop custom integration solutions as needed.',
+      answer:
+        'Yes, we specialize in seamless integrations. Our team has experience with various enterprise systems, APIs, databases, and legacy applications. We conduct thorough compatibility assessments and develop custom integration solutions as needed.',
       category: 'Integration',
-      icon: Zap
-    }
+      icon: Zap,
+    },
   ];
 
-  const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))];
+  const categories = [
+    'All',
+    ...Array.from(new Set(faqData.map(item => item.category))),
+  ];
 
   const filteredFAQs = faqData.filter(item => {
-    const matchesSearch = item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.answer.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
+    const matchesSearch =
+      item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.answer.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory =
+      selectedCategory === 'All' || item.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
   const toggleItem = (id: string) => {
-    setOpenItems(prev => 
-      prev.includes(id) 
-        ? prev.filter(item => item !== id)
-        : [...prev, id]
+    setOpenItems(prev =>
+      prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id]
     );
   };
 
@@ -133,12 +146,14 @@ const FAQ = () => {
             <h1 className="text-4xl md:text-5xl font-bold">
               Frequently Asked
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                {' '}Questions
+                {' '}
+                Questions
               </span>
             </h1>
           </div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Find answers to common questions about our services, processes, and technologies
+            Find answers to common questions about our services, processes, and
+            technologies
           </p>
         </motion.div>
 
@@ -151,13 +166,13 @@ const FAQ = () => {
                 type="text"
                 placeholder="Search questions..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={e => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
               />
             </div>
-            
+
             <div className="flex gap-2 flex-wrap">
-              {categories.map((category) => (
+              {categories.map(category => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
@@ -190,7 +205,9 @@ const FAQ = () => {
               >
                 <div className="flex items-center gap-4">
                   <item.icon className="w-6 h-6 text-cyan-400 flex-shrink-0" />
-                  <h3 className="text-lg font-semibold text-white">{item.question}</h3>
+                  <h3 className="text-lg font-semibold text-white">
+                    {item.question}
+                  </h3>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-xs px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded-full">
@@ -203,7 +220,7 @@ const FAQ = () => {
                   )}
                 </div>
               </button>
-              
+
               <AnimatePresence>
                 {openItems.includes(item.id) && (
                   <motion.div
@@ -214,7 +231,9 @@ const FAQ = () => {
                     className="overflow-hidden"
                   >
                     <div className="px-6 pb-6 pl-16">
-                      <p className="text-gray-300 leading-relaxed">{item.answer}</p>
+                      <p className="text-gray-300 leading-relaxed">
+                        {item.answer}
+                      </p>
                     </div>
                   </motion.div>
                 )}
@@ -227,8 +246,12 @@ const FAQ = () => {
         {filteredFAQs.length === 0 && (
           <div className="text-center py-16">
             <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-300 mb-2">No questions found</h3>
-            <p className="text-gray-400">Try adjusting your search or filter criteria</p>
+            <h3 className="text-xl font-semibold text-gray-300 mb-2">
+              No questions found
+            </h3>
+            <p className="text-gray-400">
+              Try adjusting your search or filter criteria
+            </p>
           </div>
         )}
 
@@ -242,7 +265,8 @@ const FAQ = () => {
         >
           <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
           <p className="text-gray-300 mb-6">
-            Our expert team is here to help. Get in touch for personalized assistance.
+            Our expert team is here to help. Get in touch for personalized
+            assistance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button

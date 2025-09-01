@@ -1,11 +1,11 @@
-import { 
-  BookOpen, 
-  FileText, 
-  Code, 
-  Database, 
-  Cloud, 
-  Shield, 
-  Brain, 
+import {
+  BookOpen,
+  FileText,
+  Code,
+  Database,
+  Cloud,
+  Shield,
+  Brain,
   Rocket,
   Zap,
   Settings,
@@ -14,12 +14,10 @@ import {
   Search,
   Download,
   ExternalLink,
-  ChevronRight
+  ChevronRight,
 } from 'lucide-react';
 
 export default function Docs() {
-  
-  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
       {/* Hero Section */}
@@ -33,18 +31,19 @@ export default function Docs() {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">
-                <BookOpen className="w-10 h-10 text-white"  />
+                <BookOpen className="w-10 h-10 text-white" />
               </div>
             </div>
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Documentation
             </h1>
             <p className="text-xl text-slate-300 mb-8">
-              Comprehensive guides, tutorials, and technical resources for all Zion Tech Group services
+              Comprehensive guides, tutorials, and technical resources for all
+              Zion Tech Group services
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search documentation..."
@@ -72,7 +71,8 @@ export default function Docs() {
               Explore Our Documentation
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Find detailed guides, tutorials, and technical resources organized by service category
+              Find detailed guides, tutorials, and technical resources organized
+              by service category
             </p>
           </motion.div>
 
@@ -87,17 +87,23 @@ export default function Docs() {
               >
                 <div className="p-6">
                   <div className="flex items-center mb-4">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center mr-4`}>
+                    <div
+                      className={`w-12 h-12 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center mr-4`}
+                    >
                       <category.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900">{category.title}</h3>
-                      <p className="text-sm text-slate-600">{category.description}</p>
+                      <h3 className="text-xl font-bold text-slate-900">
+                        {category.title}
+                      </h3>
+                      <p className="text-sm text-slate-600">
+                        {category.description}
+                      </p>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-3">
-                    {category.links.map((link) => (
+                    {category.links.map(link => (
                       <Link
                         key={link.name}
                         to={link.href}
@@ -107,9 +113,11 @@ export default function Docs() {
                           <div className="font-medium text-slate-900 group-hover:text-cyan-600 transition-colors">
                             {link.name}
                           </div>
-                          <div className="text-sm text-slate-500">{link.description}</div>
+                          <div className="text-sm text-slate-500">
+                            {link.description}
+                          </div>
                         </div>
-                        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-cyan-600 transition-colors"  />
+                        <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-cyan-600 transition-colors" />
                       </Link>
                     ))}
                   </div>
@@ -195,4 +203,5 @@ export default function Docs() {
         </div>
       </section>
     </div>
-  )}
+  );
+}
