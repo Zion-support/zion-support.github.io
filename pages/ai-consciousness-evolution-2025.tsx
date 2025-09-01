@@ -1,25 +1,37 @@
 import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
 
-export default function AIConsciousnessEvolutionPage() {
+export default function AIConsciousnessEvolution2025() {
 	return (
-		<UltraFuturisticBackground>
-			<Head>
-				<title>AI Consciousness Evolution | Zion Tech Group</title>
-				<meta name="description" content="Exploring emotional intelligence, self-awareness, and governance frameworks for advanced AI systems." />
-				<link rel="canonical" href="https://ziontechgroup.com/ai-consciousness-evolution-2025" />
-			</Head>
-			<div className="container mx-auto px-4 py-24 text-white space-y-6">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI Consciousness Evolution</h1>
-				<p className="text-gray-300 max-w-3xl">This thought-leadership page outlines principles, risks, and safeguards for developing AI systems that exhibit signs of agency, memory, and emotional intelligence. It covers governance, observability, and alignment strategies suitable for enterprises.</p>
-				<ul className="list-disc list-inside text-gray-300 space-y-2">
-					<li>Emotional state modelling and measurement</li>
-					<li>Memory, identity, and continuity safeguards</li>
-					<li>Alignment guardrails and human-in-the-loop controls</li>
-					<li>Responsible research roadmap (2025+)</li>
-				</ul>
-			</div>
-		</UltraFuturisticBackground>
+		<div className="relative isolate">
+			<section className="px-6 lg:px-10 py-16 lg:py-24">
+				<div className="max-w-6xl mx-auto">
+					<h1 className="text-3xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI Consciousness Evolution 2025</h1>
+					<p className="mt-4 text-gray-300 max-w-3xl">Exploring emotional intelligence, self-awareness, and ethical cognition in next-generation AI systems. Practical frameworks and applied research for responsible AI capabilities.</p>
+
+					<div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+						{[
+							{ title: 'Emotional Intelligence', desc: 'Affective state modeling, sentiment grounding, empathy protocols.' },
+							{ title: 'Self-Reflection', desc: 'Goal alignment, memory scaffolds, metacognition safety checks.' },
+							{ title: 'Ethical Governance', desc: 'Value alignment, policy constraints, oversight and auditability.' },
+							{ title: 'Safety Guardrails', desc: 'Normative constraints, red-teaming, and risk measurement.' },
+							{ title: 'Human-in-the-Loop', desc: 'Instruction tuning loops and corrective feedback mechanisms.' },
+							{ title: 'Applications', desc: 'Enterprise copilots, healthcare triage, autonomy primitives.' }
+						].map((f) => (
+							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
+								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
+							</div>
+						))}
+					</div>
+
+					<div className="mt-12 flex flex-wrap items-center gap-4">
+						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Discuss a Pilot</Link>
+						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
+						<span className="text-gray-400">Call: +1 302 464 0950</span>
+					</div>
+				</div>
+			</section>
+		</div>
 	);
 }

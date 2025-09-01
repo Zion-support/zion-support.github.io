@@ -38,6 +38,9 @@ import { real2028ServiceExpansions } from '../../data/real-2028-service-expansio
 
 import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
 import { realMarketServices } from '../../data/real-market-services';
+import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
+import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
+import { ultimateRealMicroSaasServices2025 } from '../../data/2025-ultimate-real-micro-saas-services';
 
   // Moved useMemo call before any early returns
   const service = React.useMemo(() => {
@@ -111,7 +114,187 @@ function getAllServices(): Service[] {
 		.concat(real2027Q2Additions as unknown as Service[])
 		.concat(real2028ServiceExpansions as unknown as Service[])
 		.concat(real2029Q1Additions as unknown as Service[])
-		.concat(realMarketServices as unknown as Service[]);
+		.concat(realMarketServices as unknown as Service[])
+		.concat(real2029Q2Additions as unknown as Service[])
+		.concat(real2029Q3Additions as unknown as Service[])
+		.concat(ultimateRealMicroSaasServices2025 as unknown as Service[]);
 }
 
-export default ServicePage;
+function toSlug(value: string): string {
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+function extractServiceSlugFromLink(link: string): string | null {
+	try {
+		const url = new URL(link);
+		const path = url.pathname.replace(/^\/+|\/+$/g, '');
+		if (path.startsWith('services/')) {
+			return path.substring('services/'.length);
+		}
+		return null;
+	} catch {
+		return null;
+	}
+}
+
+export async function getStaticPaths() {
+	const services = getAllServices();
+	const slugs = new Set<string>();
+
+	for (const s of services) {
+		// Prefer explicit link under /services/* when available
+		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
+		if (fromLink) {
+			slugs.add(fromLink);
+			continue;
+		}
+		// Fall back to normalized id or name to provide a stable URL under /services/*
+		if (s.id) slugs.add(toSlug(s.id));
+		else if (s.name) slugs.add(toSlug(s.name));
+	}
+
+	return {
+		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
+		fallback: false
+	};
+}
+
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+	const services = getAllServices();
+	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
+
+	let service: Service | undefined = services.find((s) => {
+		if (!s.link) return false;
+		const fromLink = extractServiceSlugFromLink(s.link);
+		return fromLink === incomingSlug;
+	});
+
+	if (!service) {
+		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+	}
+
+	if (!service) {
+		return { notFound: true };
+	}
+
+	return {
+		props: { service }
+	};
+}
+
+export default function ServiceDetailPage({ service }: { service: Service }) {
+	return (
+		<UltraFuturisticBackground variant="quantum" intensity="high">
+			<Head>
+				<title>{service.name} | Zion Tech Group</title>
+				<meta name="description" content={service.tagline || service.description} />
+				<link rel="canonical" href={service.link || `https://ziontechgroup.com/services/${(service.id || service.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} />
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify(
+							{
+								"@context": "https://schema.org",
+								"@type": "Service",
+								name: service.name,
+								description: service.tagline || service.description,
+								url: service.link,
+								provider: {
+									"@type": "Organization",
+									name: "Zion Tech Group",
+									url: "https://ziontechgroup.com"
+								},
+								offers: {
+									"@type": "Offer",
+									price: (service.price || '').replace(/[^0-9.]/g, ''),
+									priceCurrency: "USD",
+									availability: "https://schema.org/InStock"
+								}
+							},
+							null,
+							2
+							)
+						}}
+				/>
+			</Head>
+
+			<div className="container mx-auto px-4 py-16">
+				<div className="text-center mb-10">
+					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+						{service.name}
+					</h1>
+					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
+				</div>
+
+				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+					<div className="lg:col-span-2 space-y-6">
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
+							<p className="text-gray-300 leading-relaxed">{service.description}</p>
+						</Card>
+
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
+							<ul className="space-y-2 text-gray-300">
+								{(service.features || []).slice(0, 12).map((f: string) => (
+									<li key={f} className="flex items-start gap-2">
+										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
+										<span>{f}</span>
+									</li>
+								))}
+							</ul>
+						</Card>
+
+						{/* Use Cases & Integrations */}
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<h3 className="text-white text-lg font-semibold mb-4">Use Cases & Integrations</h3>
+							<div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300">
+								<div>
+									<div className="text-sm text-gray-400 mb-2">Use Cases</div>
+									<ul className="list-disc list-inside space-y-1">
+										{(service.useCases || []).slice(0, 8).map((u: string) => (
+											<li key={u}>{u}</li>
+										))}
+									</ul>
+								</div>
+								<div>
+									<div className="text-sm text-gray-400 mb-2">Integrations</div>
+									<div className="flex flex-wrap gap-2">
+										{(service.integrations || []).slice(0, 10).map((i: string) => (
+											<span key={i} className="px-2 py-1 bg-gray-800/60 border border-gray-700 rounded text-xs">{i}</span>
+										))}
+									</div>
+								</div>
+							</div>
+						</Card>
+					</div>
+
+					<div className="space-y-6">
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<div className="text-sm text-gray-400 mb-1">Pricing</div>
+							<div className="text-3xl font-bold text-white">{service.price}<span className="text-base font-medium text-gray-400">{service.period}</span></div>
+							<div className="mt-2 text-gray-400 text-sm">Includes setup: {service.setupTime || 'Varies by service'}</div>
+							<div className="mt-3 flex gap-3">
+								<Button href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Button>
+								<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover:text-cyan-200">See average market prices →</a>
+							</div>
+						</Card>
+
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<div className="text-sm text-gray-400 mb-2">Contact</div>
+							<div className="space-y-2">
+								<div className="flex items-center gap-2 text-gray-300"><Phone className="w-4 h-4 text-cyan-400" /> {contactInfo.mobile}</div>
+								<div className="flex items-center gap-2 text-gray-300"><Mail className="w-4 h-4 text-purple-400" /> {contactInfo.email}</div>
+								<div className="flex items-start gap-2 text-gray-300"><MapPin className="w-4 h-4 text-pink-400" /> <span className="text-xs">{contactInfo.address}</span></div>
+								<div className="pt-2">
+									<a className="inline-flex items-center gap-2 text-cyan-300 hover:text-white" href="/market-pricing"><ExternalLink className="w-4 h-4" /> Market Pricing</a>
+								</div>
+							</div>
+						</Card>
+					</div>
+				</div>
+
+			</div>
+		</UltraFuturisticBackground>
+	);
+}
