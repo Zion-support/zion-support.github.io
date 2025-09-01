@@ -1,7 +1,8 @@
 import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 import { Link  } from 'react-router-dom.ts';
-
+;
+export { function };
 export default function CloudDevOps(...args: []):  {
   return (
     <>
@@ -94,7 +95,7 @@ export default function CloudDevOps(...args: []):  {
                   title: "Monitoring & Analytics",
                   description: "Real-time monitoring and analytics for application performance."
                 }
-              ].map((feature, index)  => (
+              ].map(feature: unknown, index: unknown (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -157,7 +158,7 @@ export default function CloudDevOps(...args: []):  {
                   icon: Shield,
                   benefits: ["Vulnerability scanning", "Compliance checks", "Security policies"]
                 }
-              ].map((area, index)  => (
+              ].map(area: unknown, index: unknown 
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
@@ -165,7 +166,7 @@ export default function CloudDevOps(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
                   <p className="text-slate-300 mb-4">{area.description}</p>
                   <ul className="space-y-1">
-                    {area.benefits.map((benefit, benefitIndex) => (
+                    {area.benefits.map((benefit, benefitIndex (
                       <li key={benefitIndex} className="text-sm text-cyan-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
                         {benefit}
@@ -228,7 +229,7 @@ export default function CloudDevOps(...args: []):  {
                   icon: Shield,
                   features: ["Vulnerability scanning", "Compliance automation", "Security policies"]
                 }
-              ].map((tech, index)  => (
+              ].map(tech: unknown, index: unknown 
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <tech.icon className="w-6 h-6 text-white" />
@@ -236,7 +237,7 @@ export default function CloudDevOps(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{tech.title}</h3>
                   <p className="text-slate-300 mb-4">{tech.description}</p>
                   <ul className="space-y-1">
-                    {tech.features.map((feature, featureIndex) => (
+                    {tech.features.map((feature, featureIndex (
                       <li key={featureIndex} className="text-sm text-cyan-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
                         {feature}
@@ -271,7 +272,7 @@ export default function CloudDevOps(...args: []):  {
                     "Enhanced team collaboration and communication",
                     "Improved code quality and reliability",
                     "Better resource utilization and cost optimization"
-                  ].map((benefit, index) => (
+                  ].map(benefit: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{benefit}</span>
@@ -288,7 +289,7 @@ export default function CloudDevOps(...args: []):  {
                     { metric: "60-90%", label: "Lead Time", description: "Reduction" },
                     { metric: "40-70%", label: "Recovery Time", description: "Improvement" },
                     { metric: "99.9%+", label: "Uptime", description: "Availability" }
-                  ].map((item, index)  => (
+                  ].map(item: unknown, index: unknown (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-cyan-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -335,7 +336,7 @@ export default function CloudDevOps(...args: []):  {
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve processes."
                 }
-              ].map((step, index)  => (
+              ].map(step: unknown, index: unknown (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>

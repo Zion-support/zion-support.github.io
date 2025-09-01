@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, Star, Quote  } from 'lucide-react';
 
 interface Testimonial {
 
+
   id: number;
   name: string;
   role: string;
@@ -11,17 +12,18 @@ interface Testimonial {
   content: string;
   rating: number;
   avatar: string;
-  industry: string}
+  industry: string
+}
 
-  const nextTestimonial = () => {;
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  const nextTestimonial = (...args: unknown[]): unknown => {;
+    setCurrentIndex(prev: unknown (prev + 1) % testimonials.length);
   };
 
-  const prevTestimonial = () => {;
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const prevTestimonial = (...args: unknown[]): unknown => {;
+    setCurrentIndex(prev: unknown (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const goToTestimonial = (index: number) => {;
+  const goToTestimonial = (...args: unknown[]): unknown => {;
     setCurrentIndex(index);
   };
 
@@ -111,7 +113,7 @@ interface Testimonial {
 
               {/* Rating */}
               <div className="flex justify-center mb-6">
-                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                {[...Array(testimonials[currentIndex].rating)].map(_: unknown, i: unknown (
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                 ))}
               </div>
@@ -162,10 +164,10 @@ interface Testimonial {
 
         {/* Dots Indicator */}
         <div className="flex justify-center mt-8 space-x-2">;
-          {testimonials.map((_, index) => (;
+          {testimonials.map(_: unknown, index: unknown ;
             <button
               key={index}
-              onClick={() => goToTestimonial(index)}
+              onClick={(: unknown goToTestimonial(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentIndex
                   ? 'bg-zion-cyan scale-125'
@@ -235,5 +237,6 @@ interface Testimonial {
     </section>;
   );
 };
-
+;
+export { Testimonials };
 export default Testimonials;}}}

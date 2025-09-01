@@ -66,7 +66,7 @@ const teamExpertise = [
     count: "500+";
   };
 ];
-
+;
 const coreExpertise = [
   "Artificial Intelligence & Machine Learning",
   "Quantum Computing & Algorithms",;

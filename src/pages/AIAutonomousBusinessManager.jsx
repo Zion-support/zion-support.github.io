@@ -584,7 +584,7 @@ import { motion } from 'framer - motion';
     technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"]
   }
 ];
-
+;
 const businessTechnologies = [
   {
     name: "AI & Machine Learning",
@@ -615,7 +615,7 @@ const businessTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -645,7 +645,7 @@ const successStories = [
     logo: "RCN"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -676,7 +676,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
 
 ];
-
+;
 const businessBenefits = [
   {
     title: "Intelligent Decision Making",

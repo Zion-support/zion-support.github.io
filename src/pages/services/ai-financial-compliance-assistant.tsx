@@ -42,8 +42,8 @@ import {
   Globe,
   Network,
 } from 'lucide-react';
-
-const AIFinancialComplianceAssistant = () => {
+;
+const AIFinancialComplianceAssistant = (...args: unknown[]): unknown => {
   const features = [
     {
       icon: Brain,
@@ -212,7 +212,7 @@ const AIFinancialComplianceAssistant = () => {
     },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="AI Financial Compliance Assistant - Zion Tech Group"
@@ -287,7 +287,7 @@ const AIFinancialComplianceAssistant = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300"
@@ -329,7 +329,7 @@ const AIFinancialComplianceAssistant = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {complianceAreas.map((area, index) => (
+            {complianceAreas.map(area: unknown, index: unknown (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50"
@@ -372,7 +372,7 @@ const AIFinancialComplianceAssistant = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center"
@@ -414,7 +414,7 @@ const AIFinancialComplianceAssistant = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center"
@@ -456,7 +456,7 @@ const AIFinancialComplianceAssistant = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 className={`relative rounded-xl p-8 ${
@@ -491,7 +491,7 @@ const AIFinancialComplianceAssistant = () => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
                       <span className="text-slate-300">{feature}</span>

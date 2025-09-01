@@ -258,7 +258,7 @@ export function ServiceProviderRegistrationForm() {
                 hourly_rate: Number(values.hourlyRate),
                 availability_status: values.availability,
                 location: values.location,
-                website: values.website || null,
+                website: values.website || null
               });
       
             if (serviceError) throw serviceError;

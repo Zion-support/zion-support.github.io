@@ -41,20 +41,24 @@ import {
 } from 'lucide - react';
 
 interface SitemapSection {
+
   title: string;
-  icon: any;
+  icon: unknown;
   color: string;
   pages: SitemapPage[];
+
 }
 
 interface SitemapPage {
+
   name: string;
   href: string;
   description: string;
   featured?: boolean;
-}
 
-const Sitemap: React.FC = () => {
+}
+;
+const Sitemap: React.FC = props {
   const sitemapSections: SitemapSection[] = [
     {
       title: 'Main Pages',

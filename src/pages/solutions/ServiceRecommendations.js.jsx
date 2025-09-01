@@ -29,4 +29,5 @@ const ServiceRecommendations = () => {
     </div>
   );
 };
+export { ServiceRecommendations };
 export default ServiceRecommendations;

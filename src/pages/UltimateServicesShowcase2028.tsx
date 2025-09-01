@@ -129,7 +129,7 @@ const UltimateServicesShowcase2028: React.FC = () : JSX.Element => {
                 x: [0, 100, 0],
                 y: [0, -100, 0],
                 opacity: [0.3, 1, 0.3],
-                scale: [0.5, 1.5, 0.5],
+                scale: [0.5, 1.5, 0.5]
               }}
               transition={{
                 duration: 6 + i * 0.2,

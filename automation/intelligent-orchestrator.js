@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-
+;
 const fs = require('fs');
 const path = require('path');
 const cron = require('node-cron');
-
+;
 class IntelligentOrchestrator {
   constructor() {
     this.automationSystems = new Map();

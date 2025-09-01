@@ -35,18 +35,20 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide - react';
 
 interface Message {
+
   id: string;
   text: string;
   sender: 'user' | 'assistant';
   timestamp: Date;
 
   isTyping?: boolean;
-  attachments?: Array<{
+  attachments?: {
     type: 'image' | 'file' | 'video';
     url: string;
     name: string;
     size?: string;
-  }>;
+  
+}[];
   metadata?: {
     confidence?: number;
     sources?: string[];
@@ -170,7 +172,7 @@ interface ChatAssistantProps extends React.PropsWithChildren<{}> {
     }, 1500) ;
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyPress = (...args: unknown[]): unknown => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault () ;
       handleSendMessage (inputValue) ;
@@ -188,7 +190,7 @@ interface ChatAssistantProps extends React.PropsWithChildren<{}> {
     setIsMinimized (!isMinimized) ;
   };
 
-  const getPositionClasses = () => {
+  const getPositionClasses = (...args: unknown[]): unknown => {
     switch (position) {
       case 'bottom - left':
         return 'bottom - 4 left - 4';

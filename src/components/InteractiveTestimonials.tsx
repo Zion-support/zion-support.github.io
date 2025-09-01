@@ -81,7 +81,7 @@ const testimonials = [
     results: ["100% compliance", "Zero incidents", "Automated security"];
   };
 ];
-
+;
 const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Research", "Manufacturing IoT", "Cybersecurity"];
 
   const [selectedCategory, setSelectedCategory] = useState ("All") ;

@@ -1,6 +1,7 @@
 import React from 'react';
 export interface NextGenInnovativeService {
 
+
   id: string;
   title: string;
   description: string;
@@ -22,7 +23,8 @@ export interface NextGenInnovativeService {
 contactInfo: {
     phone: string;
     email: string;
-    website: string};
+    website: string
+};
   technicalSpecs: {
     technology: string[];
     integrations: string[];
@@ -33,7 +35,7 @@ contactInfo: {
   marketSize?: string;
   demoUrl?: string;
   documentationUrl?: string}
-
+;
 export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
   // Quantum Computing Solutions
   {
@@ -638,5 +640,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     documentationUrl: "https://ziontechgroup.com/docs/retail-ai"
 
 ];
-
+;
+export { NEXT_GEN_INNOVATIVE_SERVICES_2025 };
 export default NEXT_GEN_INNOVATIVE_SERVICES_2025;}}

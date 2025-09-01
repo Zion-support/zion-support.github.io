@@ -360,7 +360,7 @@ const Marketplace: React.FC = () => {
     }
   }) ;
 
-  const getTypeColor = (type: string) => {
+  const getTypeColor = (...args: unknown[]): unknown => {
     switch (type) {
       case 'software':
         return 'bg - blue - 500 / 20 text - blue - 400';
@@ -373,7 +373,7 @@ const Marketplace: React.FC = () => {
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (...args: unknown[]): unknown => {
     switch (status) {
       case 'featured':
         return 'bg - yellow - 500 / 20 text - yellow - 400';
@@ -386,7 +386,7 @@ const Marketplace: React.FC = () => {
     }
   };
 
-  const renderStars = (rating: number) => {
+  const renderStars = (...args: unknown[]): unknown => {
     const stars = [];
     const fullStars = Math.floor (rating) ;
     const hasHalfStar = rating % 1 !== 0;
@@ -417,7 +417,7 @@ const Marketplace: React.FC = () => {
     return category ? category.name : 'General';
   };
 
-  const getBadgeColor = (badge: string) => {
+  const getBadgeColor = (...args: unknown[]): unknown => {
     switch (badge) {
       case 'Most Popular':
         return 'bg - gradient - to - r from - yellow - 500 to - orange - 500';

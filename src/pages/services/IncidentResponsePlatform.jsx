@@ -664,5 +664,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
       </div>
     </>);
 };
+export { IncidentResponsePlatform };
 export default IncidentResponsePlatform;
 }}}}

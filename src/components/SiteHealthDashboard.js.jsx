@@ -29,19 +29,19 @@ export function SiteHealthDashboard () {
                             name: 'First Contentful Paint',
                             value: 1.4,
                             status: 'excellent',
-                            description: 'Time until first content appears',
+                            description: 'Time until first content appears'
                         },
                         {
                             name: 'Largest Contentful Paint',
                             value: 2.8,
                             status: 'good',
-                            description: 'Time until largest content element loads',
+                            description: 'Time until largest content element loads'
                         },
                         {
                             name: 'Core Web Vitals Score',
                             value: 85,
                             status: 'good',
-                            description: 'Overall Google Core Web Vitals performance',
+                            description: 'Overall Google Core Web Vitals performance'
                         }
                     ]
                 },;
@@ -61,7 +61,7 @@ export function SiteHealthDashboard () {
                             name: 'Title Tags',
                             value: 95,
                             status: 'excellent',
-                            description: 'Percentage of pages with optimized title tags',
+                            description: 'Percentage of pages with optimized title tags'
                         },
                         {
                             name: 'Internal Linking',
@@ -74,13 +74,13 @@ export function SiteHealthDashboard () {
                             name: 'Mobile Friendliness',
                             value: 98,
                             status: 'excellent',
-                            description: 'Mobile optimization score',
+                            description: 'Mobile optimization score'
                         },
                         {
                             name: 'Schema Markup',
                             value: 85,
                             status: 'good',
-                            description: 'Structured data implementation',
+                            description: 'Structured data implementation'
                         }
                     ]
                 },;
@@ -100,19 +100,19 @@ export function SiteHealthDashboard () {
                             name: 'Keyboard Navigation',
                             value: 95,
                             status: 'excellent',
-                            description: 'Keyboard accessibility support',
+                            description: 'Keyboard accessibility support'
                         },
                         {
                             name: 'Color Contrast',
                             value: 92,
                             status: 'excellent',
-                            description: 'Text contrast ratio compliance',
+                            description: 'Text contrast ratio compliance'
                         },
                         {
                             name: 'Screen Reader Support',
                             value: 89,
                             status: 'good',
-                            description: 'Screen reader compatibility',
+                            description: 'Screen reader compatibility'
                         }
                     ]
                 },;
@@ -125,13 +125,13 @@ export function SiteHealthDashboard () {
                             name: 'HTTPS Implementation',
                             value: 100,
                             status: 'excellent',
-                            description: 'SSL certificate and HTTPS enforcement',
+                            description: 'SSL certificate and HTTPS enforcement'
                         },
                         {
                             name: 'Security Headers',
                             value: 92,
                             status: 'excellent',
-                            description: 'Security headers implementation',
+                            description: 'Security headers implementation'
                         },
                         {
                             name: 'Vulnerability Scan',
@@ -144,7 +144,7 @@ export function SiteHealthDashboard () {
                             name: 'Content Security Policy',
                             value: 95,
                             status: 'excellent',
-                            description: 'CSP header implementation',
+                            description: 'CSP header implementation'
                         }
                     ]
                 },;
@@ -171,13 +171,13 @@ export function SiteHealthDashboard () {
                             name: 'Image Optimization',
                             value: 82,
                             status: 'good',
-                            description: 'Image optimization and alt text',
+                            description: 'Image optimization and alt text'
                         },
                         {
                             name: 'Content Freshness',
                             value: 89,
                             status: 'good',
-                            description: 'Recently updated content percentage',
+                            description: 'Recently updated content percentage'
                         }
                     ]
                 },;
@@ -190,25 +190,25 @@ export function SiteHealthDashboard () {
                             name: 'Mobile Responsiveness',
                             value: 96,
                             status: 'excellent',
-                            description: 'Mobile device compatibility',
+                            description: 'Mobile device compatibility'
                         },
                         {
                             name: 'Navigation Clarity',
                             value: 88,
                             status: 'good',
-                            description: 'Navigation structure and usability',
+                            description: 'Navigation structure and usability'
                         },
                         {
                             name: 'Form Usability',
                             value: 79,
                             status: 'good',
-                            description: 'Contact and service forms usability',
+                            description: 'Contact and service forms usability'
                         },
                         {
                             name: 'Error Handling',
                             value: 77,
                             status: 'good',
-                            description: '404 pages and error handling',
+                            description: '404 pages and error handling'
                         }
                     ]
                 }

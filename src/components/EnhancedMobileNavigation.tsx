@@ -40,19 +40,23 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 interface NavigationItem {
 
+
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string 
+
 }>;
 } from 'lucide - react';
 
 interface NavigationItem {
+
   label: string;
   path: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: React.ComponentType<{ size?: number; className?: string 
+}>;
   children?: NavigationItem[];
   description?: string}
-
+;
 const navigationItems: NavigationItem[] = [
   {
     label: 'Home',
@@ -122,7 +126,7 @@ const navigationItems: NavigationItem[] = [
     description: 'Get in touch with us'
 
 ];
-
+;
 const quickActions = [
   {
     label: 'Get Quote',
@@ -180,9 +184,9 @@ const quickActions = [
     setIsOpen (false) ;
     setExpandedItems (new Set () ) };
 
-  const isActive = (path: string) => {;
+  const isActive = (...args: unknown[]): unknown => {;
     if (path === '/') {;
-  const isActive = (path: string) => {
+  const isActive = (...args: unknown[]): unknown => {
     if (path === '/') {
       return activePath === '/';
 
@@ -403,3 +407,14 @@ const quickActions = [
     </>;) ;
 };
 };
+
+
+
+
+}
+
+
+}
+
+}
+}

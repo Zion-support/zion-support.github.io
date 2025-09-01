@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 
 interface User {
 
+
   id: string;
   email: string;
   displayName?: string;
@@ -10,25 +11,28 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-  updatedAt?: string}
+  updatedAt?: string
+}
 
 interface AuthTokens {
 
-  accessToken: string | null;
-  refreshToken: string | null}
 
-export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
+  accessToken: string | null;
+  refreshToken: string | null
+}
+;
+export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unknown {
   const [user, setUser] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [onboardingStep, setOnboardingStep] = useState(0);
+  const [isLoading, setIsLoading] = useState<typeof true>(true);
+  const [onboardingStep, setOnboardingStep] = useState<typeof 0>(0);
   const [tokens, setTokens] = useState<any>({
     accessToken: null,
     refreshToken: null
   });
 
-  useEffect(()  => {
+  useEffect(: unknown {
     // Check for existing auth state on mount
-    const checkAuthState = async () => {
+    const checkAuthState = async : unknown {
       try {;
         if (typeof window !== 'null') {;
           const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');

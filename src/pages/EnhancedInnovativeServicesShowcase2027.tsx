@@ -122,7 +122,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
         return 0}
   }) ;
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     switch (category) {;
       case 'AI & Financial Technology': return < DollarSign className="w - 5 h - 5" />;
       case 'Quantum & Cloud Computing': return < Cpu className="w - 5 h - 5" />;
@@ -138,7 +138,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
     }
   };
 
-  const getInnovationLevelColor = (level: string) => {;
+  const getInnovationLevelColor = (...args: unknown[]): unknown => {;
     switch (level) {;
       case 'Breakthrough': return 'bg - gradient - to - r from - purple - 600 to - pink - 600';
       case 'Advanced': return 'bg - gradient - to - r from - blue - 600 to - cyan - 600';
@@ -152,13 +152,13 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
     setCurrentSlide (0) ;
   };
 
-  const nextSlide = () => {;
+  const nextSlide = (...args: unknown[]): unknown => {;
     if (selectedService) {;
       setCurrentSlide ( (prev) => (prev + 1) % 4) ;
     }
   };
 
-  const prevSlide = () => {;
+  const prevSlide = (...args: unknown[]): unknown => {;
     if (selectedService) {;
       setCurrentSlide ( (prev) => (prev - 1 + 4) % 4) ;
     }

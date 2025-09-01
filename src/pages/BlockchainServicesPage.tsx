@@ -39,7 +39,7 @@ import { motion } from 'framer - motion';
   ];
 
   const categories = [
-    { id: 'all', name: 'All Services', count: blockchainServices.length },
+    { id: 'all', name: 'All Services', count: blockchainServices.length }
               }
             ].map ( (feature, index) => (<motion.div
                 key={index}

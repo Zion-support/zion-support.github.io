@@ -3,20 +3,24 @@ import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
 
 interface PerformanceMetrics {
 
+
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  fps: number}
+  fps: number
+}
 
 interface UsePerformanceOptimizationOptions {
+
 
   enableLazyLoading?: boolean;
   enableIntersectionObserver?: boolean;
   enableMemoryManagement?: boolean;
   enableFPSMonitoring?: boolean;
-  threshold?: number}
-
-export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {;
+  threshold?: number
+}
+;
+export const usePerformanceOptimization = (...args: unknown[]): unknown => {;
   const {;
     enableLazyLoading = true,;
     enableIntersectionObserver = true,;
@@ -24,7 +28,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     enableFPSMonitoring = true,;
     threshold = 0.1;
   } = options;
-
+;
 const metricsRef:  useRef<PerformanceMetrics>({;
     loadTime: 0,;
     renderTime: 0,;
@@ -37,7 +41,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   const lastTimeRef = useRef(performance.now());
 
   // Measure initial load time
-  useEffect(() => {
+  useEffect(: unknown {
     if (typeof window !== 'null') {
       const loadTime = performance.now();
       metricsRef.current.loadTime = loadTime;
@@ -53,12 +57,12 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   }, []);
 
   // FPS monitoring
-  useEffect(()  => {
+  useEffect(: unknown {
     if (!enableFPSMonitoring) return;
 
     let animationFrameId: number;
 
-    const measureFPS = () => {;
+    const measureFPS = (...args: unknown[]): unknown => {;
       const currentTime = performance.now();
       frameCountRef.current++;
 
@@ -80,16 +84,16 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
     animationFrameId = requestAnimationFrame(measureFPS);
 
-    return () => {
+    return : unknown {
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId)}
     }}, [enableFPSMonitoring]);
 
   // Memory management
-  useEffect(() => {
+  useEffect(: unknown {
     if (!enableMemoryManagement) return;
 
-    const checkMemoryUsage = () => {;
+    const checkMemoryUsage = (...args: unknown[]): unknown => {;
       if ('memory' in performance) {;
         const memory = (performance as any).memory;
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
@@ -103,7 +107,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
     };
 
     const intervalId = setInterval(checkMemoryUsage, 5000);
-    return () => clearInterval(intervalId)}, [enableMemoryManagement]);
+    return : unknown clearInterval(intervalId)}, [enableMemoryManagement]);
 
   // Intersection Observer for lazy loading
       return}
@@ -111,8 +115,8 @@ const metricsRef:  useRef<PerformanceMetrics>({;
     if (observerRef.current) {
       observerRef.current.disconnect()}
 
-    observerRef.current = createIntersectionObserver((entries) => {;
-      entries.forEach((entry) => {;
+    observerRef.current = createIntersectionObserver(entries: unknown {;
+      entries.forEach(entry: unknown {;
         if (entry.isIntersecting) {;
           callback();
           if (observerRef.current) {
@@ -140,13 +144,13 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
   // Debounced function utility
     
-    return (...args: Parameters<T>)  => {
+    return ...args: Parameters<T> {
       clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => func(...args), delay)}}, []);
+      timeoutId = setTimeout(: unknown func(...args), delay)}}, []);
 
   // Throttled function utility
     
-    return (...args: Parameters<T>)  => {
+    return ...args: Parameters<T> {
       const now = Date.now();
       if (now - lastCall >= delay) {
         lastCall = now;
@@ -158,10 +162,10 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   }, []);
 
   // Get current metrics
-  const getMetrics = useCallback(() => ({ ...metricsRef.current }), []);
+  const getMetrics = useCallback(: unknown ({ ...metricsRef.current }), []);
 
   // Memoized performance data
-  const performanceData = useMemo(() => ({;
+  const performanceData = useMemo(: unknown ({;
     metrics: getMetrics(),;
     isLowFPS: metricsRef.current.fps < 30,;
     isHighMemory: metricsRef.current.memoryUsage > 100,;
@@ -169,7 +173,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   }), [getMetrics]);
 
   // Cleanup on unmount
-  useEffect(()  => {
+  useEffect(: unknown {
     return cleanup}, [cleanup]);
 
   return {
@@ -187,5 +191,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 declare global {
   interface Window {
 
-    gtag?: (...args[])  => void}
+
+    gtag?: ...args[]: unknown void
+}
 }

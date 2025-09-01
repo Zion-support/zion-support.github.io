@@ -61,7 +61,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Succession Planning';
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange-600 via-orange-700 to-red-800 py-20 text-center text-white">
@@ -96,7 +96,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Core Capabilities</h3>
             <ul className="space-y-4">
-              {features.map((feature, index) => (
+              {features.map((feature, index (
                 <li key={index} className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700">{feature}</span>
@@ -108,7 +108,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <div className="bg-gray-50 rounded-xl p-8">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>
             <ul className="space-y-4">
-              {benefits.map((benefit, index) => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <li key={index} className="flex items-start">
                   <TrendingUp className="w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700">{benefit}</span>
@@ -128,7 +128,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
-            {platformModules.map((module, index) => (
+            {platformModules.map(module: unknown, index: unknown (
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">
                 <Briefcase className="w-8 h-8 text-orange-500 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 text-sm">{module}</h3>
@@ -146,7 +146,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {useCases.map((useCase, index) => (
+          {useCases.map(useCase: unknown, index: unknown (
             <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
               <Target className="w-8 h-8 text-orange-500 mb-4" />
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
@@ -192,7 +192,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map(plan: unknown, index: unknown (
               <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${
                 plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-gray-200'
               }`}>
@@ -211,7 +211,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>

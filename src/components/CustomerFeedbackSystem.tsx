@@ -25,6 +25,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 interface FeedbackStats {
 
+
   totalFeedback: number;
   averageRating: number;
   positivePercentage: number;
@@ -226,7 +227,7 @@ showStats:  true,;
   };
 
   // Get sentiment color
-  const getSentimentColor = (sentiment: string) => {;
+  const getSentimentColor = (...args: unknown[]): unknown => {;
     switch (sentiment) {;
       case 'positive': return 'text - green - 400 bg - green - 400 / 20';
       case 'negative': return 'text - red - 400 bg - red - 400 / 20';

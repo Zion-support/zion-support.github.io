@@ -27,7 +27,8 @@ import { Users,
   Bot,
   Headphones
  } from 'lucide-react';
-
+;
+export { function };
 export default function AICustomerExperiencePlatform(...args[]):  {
   const features = [
     'AI-powered sentiment analysis and emotion detection',
@@ -87,7 +88,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
     'First Response Time';
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-pink-600 via-rose-600 to-red-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
@@ -104,7 +105,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Revolutionary CX Features</h2>
             <ul className="space-y-3">
-              {features.map((f) => (
+              {features.map((f (
                 <li key={f} className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700">{f}</span>
@@ -118,12 +119,12 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
             <div className="grid md:grid-cols-3 gap-4">
-              {tiers.map((t) => (
+              {tiers.map(t: unknown 
                 <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover:border-pink-300 transition-colors">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-pink-600 mb-2">{t.price}</div>
                   <ul className="text-sm text-gray-600 space-y-1">
-                    {t.details.map((d) => (<li key={d}>{d}</li>))}
+                    {t.details.map((d (<li key={d}>{d}</li>))}
                   </ul>
                 </div>
               ))}
@@ -140,7 +141,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
         </div>
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['25-40% CSAT improvement', 'Real-time insights', 'AI personalization'].map((t) => (
+          {['25-40% CSAT improvement', 'Real-time insights', 'AI personalization'].map(t: unknown (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-pink-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
@@ -151,7 +152,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            {useCases.map((useCase) => (
+            {useCases.map(useCase: unknown 
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">
                 <MessageCircle className="w-5 h-5 text-pink-600 mr-3" />
                 <span className="text-gray-700">{useCase}</span>
@@ -209,7 +210,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           </motion.div>
 
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -265,7 +266,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           </motion.div>
 
           <div className="grid md: grid-cols-2 gap-8">
-            {services.map((service, index)  => (
+            {services.map(service: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -289,7 +290,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 <div className="text-3xl font-bold text-purple-400 mb-6">{service.price}</div>
                 <ul className="space-y-3">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       {feature}
@@ -327,7 +328,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           </motion.div>
 
           <div className="grid md: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -350,7 +351,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300 mb-6">{useCase.description}</p>
                 <div className="space-y-3">
-                  {useCase.benefits.map((benefit, benefitIndex) => (
+                  {useCase.benefits.map((benefit, benefitIndex (
                     <div key={benefitIndex} className="flex items-center gap-3 text-green-400">
                       <TrendingUp className="w-5 h-5 flex-shrink-0" />
                       {benefit}
@@ -388,7 +389,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           </motion.div>
 
           <div className="grid md: grid-cols-2 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -423,4 +424,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       </section>;
     </div>;
   );
+}
+
 }

@@ -138,7 +138,7 @@ export default function AIESGCompliancePlatform() {
               Core Capabilities
             </h3>
             <ul className="space-y-4">
-              {features.map((feature, index) => (
+              {features.map((feature, index (
                 <li key={index} className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700">{feature}</span>
@@ -260,7 +260,7 @@ export default function AIESGCompliancePlatform() {
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>

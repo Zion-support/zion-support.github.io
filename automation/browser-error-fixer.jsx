@@ -11,11 +11,11 @@
  * 4. Creates backup files before making changes
  * 5. Reports all fixes applied
  */
-
+;
 const fs = require('fs').promises;
 const path = require('path');
 const { execSync } = require('child_process');
-
+;
 class BrowserErrorFixer {
   constructor() {
     this.projectRoot = path.resolve(__dirname, '..');

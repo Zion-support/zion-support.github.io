@@ -171,7 +171,7 @@ const events = [
     image: '/images / digital - transformation - summit.jpg',
   },
 ];
-
+;
 const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
 const categories = [
   'All',

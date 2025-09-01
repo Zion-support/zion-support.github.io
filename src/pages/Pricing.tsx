@@ -96,6 +96,7 @@ import { SEO } from '../components / SEO';
 
   const savings = billingCycle === 'annual' ? 20 : 0;
 interface PricingTier {
+
   name: string;
   description: string;
   price: string;
@@ -103,11 +104,12 @@ interface PricingTier {
   features: string[];
   popular?: boolean;
   color: string;
-  icon: any;
+  icon: unknown;
   cta: string;
   ctaLink: string;
-}
 
+}
+;
 const pricingTiers: PricingTier[] = [
   {
     name: 'Starter',
@@ -181,7 +183,7 @@ const pricingTiers: PricingTier[] = [
     ctaLink: '/contact'
   }
 ];
-
+;
 const servicePricing = [
   {
     category: 'AI & Machine Learning',

@@ -14,22 +14,24 @@ import {
 } from 'lucide - react';
 
 interface PerformanceMetrics {
+
   fcp: number; // First Contentful Paint
   lcp: number; // Largest Contentful Paint
   fid: number; // First Input Delay
   cls: number; // Cumulative Layout Shift
   ttfb: number; // Time to First Byte
   score: number; // Overall performance score
+
 }
 
 interface OptimizationSuggestion {
+
   id: string;
   title: string;
   description: string;
   impact: 'high' | 'medium' | 'low';
   category: 'images' | 'javascript' | 'css' | 'fonts' | 'caching' | 'server';
   implemented: boolean;
-}
 
 const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState < PerformanceMetrics> ({

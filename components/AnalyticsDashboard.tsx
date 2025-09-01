@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface AnalyticsData {
+
   pageViews: number;
   uniqueVisitors: number;
   bounceRate: number;
   avgSessionDuration: number;
-  topPages: Array<{ path: string; views: number }>;
+  topPages: { path: string; views: number 
+}[];
   performance: {
     fcp: number;
     lcp: number;
@@ -20,15 +22,16 @@ interface AnalyticsData {
     country: { [key: string]: number };
   };
 }
-
-export default function AnalyticsDashboard() {
+;
+export { function };
+export default function AnalyticsDashboard(...args: unknown[]): unknown {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<typeof true>(true);
   const [timeRange, setTimeRange] = useState<'24h' | '7d' | '30d' | '90d'>('7d');
 
-  useEffect(() => {
+  useEffect(: unknown {
     // Simulate fetching analytics data
-    const fetchAnalytics = async () => {
+    const fetchAnalytics = async : unknown {
       setIsLoading(true);
       await new Promise(resolve => setTimeout(resolve, 1500));
       
@@ -64,7 +67,7 @@ export default function AnalyticsDashboard() {
     fetchAnalytics();
   }, [timeRange]);
 
-  const getPerformanceScore = (metrics: AnalyticsData['performance']) => {
+  const getPerformanceScore = (...args: unknown[]): unknown => {
     const scores = {
       fcp: metrics.fcp < 1800 ? 100 : Math.max(0, 100 - ((metrics.fcp - 1800) / 100)),
       lcp: metrics.lcp < 2500 ? 100 : Math.max(0, 100 - ((metrics.lcp - 2500) / 100)),
@@ -72,10 +75,10 @@ export default function AnalyticsDashboard() {
       cls: metrics.cls < 0.1 ? 100 : Math.max(0, 100 - (metrics.cls * 1000))
     };
     
-    return Math.round(Object.values(scores).reduce((a, b) => a + b, 0) / 4);
+    return Math.round(Object.values(scores).reduce(a: unknown, b: unknown a + b, 0) / 4);
   };
 
-  const getPerformanceColor = (score: number) => {
+  const getPerformanceColor = (...args: unknown[]): unknown => {
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
     return 'text-red-500';
@@ -104,7 +107,7 @@ export default function AnalyticsDashboard() {
 
   const performanceScore = getPerformanceScore(analyticsData.performance);
 
-  return (
+  return 
     <div className="min-h-screen bg-gray-900 text-white p-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -117,7 +120,7 @@ export default function AnalyticsDashboard() {
           <div className="flex items-center space-x-4">
             <select
               value={timeRange}
-              onChange={(e) => setTimeRange(e.target.value as any)}
+              onChange={(e setTimeRange(e.target.value as any)}
               className="bg-gray-800 border border-gray-600 rounded px-3 py-2"
             >
               <option value="24h">Last 24 Hours</option>
@@ -211,7 +214,7 @@ export default function AnalyticsDashboard() {
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold mb-4">Top Pages</h3>
             <div className="space-y-3">
-              {analyticsData.topPages.map((page, index) => (
+              {analyticsData.topPages.map(page: unknown, index: unknown (
                 <div key={page.path} className="flex justify-between items-center">
                   <div className="flex items-center space-x-3">
                     <span className="text-gray-400 text-sm">#{index + 1}</span>
@@ -237,7 +240,7 @@ export default function AnalyticsDashboard() {
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold mb-4">Device Types</h3>
             <div className="space-y-3">
-              {Object.entries(analyticsData.userBehavior.deviceType).map(([device, percentage]) => (
+              {Object.entries(analyticsData.userBehavior.deviceType).map([device: unknown, percentage]: unknown (
                 <div key={device} className="flex justify-between items-center">
                   <span className="capitalize">{device}</span>
                   <div className="flex items-center space-x-2">
@@ -258,7 +261,7 @@ export default function AnalyticsDashboard() {
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold mb-4">Browsers</h3>
             <div className="space-y-3">
-              {Object.entries(analyticsData.userBehavior.browser).map(([browser, percentage]) => (
+              {Object.entries(analyticsData.userBehavior.browser).map([browser: unknown, percentage]: unknown (
                 <div key={browser} className="flex justify-between items-center">
                   <span>{browser}</span>
                   <span className="text-blue-400">{percentage}%</span>
@@ -271,7 +274,7 @@ export default function AnalyticsDashboard() {
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold mb-4">Top Countries</h3>
             <div className="space-y-3">
-              {Object.entries(analyticsData.userBehavior.country).map(([country, percentage]) => (
+              {Object.entries(analyticsData.userBehavior.country).map([country: unknown, percentage]: unknown (
                 <div key={country} className="flex justify-between items-center">
                   <span>{country}</span>
                   <span className="text-blue-400">{percentage}%</span>

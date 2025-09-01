@@ -52,7 +52,7 @@ const highlights = [
     borderColor: 'border-zion-blue/20',
   },
 ];
-
+;
 const achievements = [
   {
     icon: Award,
@@ -79,7 +79,7 @@ const achievements = [
     color: 'text-zion-purple',
   },
 ];
-
+;
 const technologies = [
   'Machine Learning',
   'Blockchain',
@@ -88,7 +88,7 @@ const technologies = [
   'Cybersecurity',
   'Data Analytics',
 ];
-
+;
 export function FeatureHighlights() {
   const containerVariants = {
     hidden: { opacity: 0 },

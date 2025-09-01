@@ -22,7 +22,7 @@ import {
 } from 'lucide-react.ts';
 
 const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState<typeof 'overview'>('overview');
 
   const features = [
     'Contract risk assessment',
@@ -275,7 +275,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
           )}
 
           {/* Features Tab */}
-          {activeTab === 'features' && (
+          {activeTab === 'features' && 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -353,7 +353,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
           )}
 
           {/* Pricing Tab */}
-          {activeTab === 'pricing' && (
+          {activeTab === 'pricing' && 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -424,7 +424,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
           )}
 
           {/* Competitors Tab */}
-          {activeTab === 'competitors' && (
+          {activeTab === 'competitors' && 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

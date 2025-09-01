@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;
@@ -9,26 +10,32 @@ interface SearchResult {
   url: string;
   tags: string[];
   relevance: number;
+
 }
 
 interface SearchFilter {
+
   type: string[];
   tags: string[];
   dateRange: {
     start: Date | null;
     end: Date | null;
-  };
+  
+};
 }
 
 interface SearchSuggestion {
+
   text: string;
   type: 'recent' | 'popular' | 'related';
   count?: number;
-}
 
-export default function AdvancedSearch() {
-  const [query, setQuery] = useState('');
-  const [isSearching, setIsSearching] = useState(false);
+}
+;
+export { function };
+export default function AdvancedSearch(...args: unknown[]): unknown {
+  const [query, setQuery] = useState<typeof ''>('');
+  const [isSearching, setIsSearching] = useState<typeof false>(false);
   const [results, setResults] = useState<SearchResult[]>([]);
   const [filters, setFilters] = useState<SearchFilter>({
     type: [],
@@ -36,11 +43,11 @@ export default function AdvancedSearch() {
     dateRange: { start: null, end: null }
   });
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [showFilters, setShowFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState<typeof false>(false);
   const [selectedResult, setSelectedResult] = useState<number>(-1);
 
   // Mock data - in production, this would come from your backend
-  const mockData = useMemo<SearchResult[]>(() => [
+  const mockData = useMemo<SearchResult[]>(: unknown [
     {
       id: '1',
       title: 'Micro SaaS Development',
@@ -89,7 +96,7 @@ export default function AdvancedSearch() {
   ], []);
 
   // Search suggestions
-  const searchSuggestions = useMemo<SearchSuggestion[]>(() => [
+  const searchSuggestions = useMemo<SearchSuggestion[]>(: unknown [
     { text: 'SaaS', type: 'popular', count: 45 },
     { text: 'AI', type: 'popular', count: 32 },
     { text: 'Cloud', type: 'popular', count: 28 },
@@ -108,7 +115,7 @@ export default function AdvancedSearch() {
     tags: ['SaaS', 'AI', 'Cloud', 'Security', 'Development', 'React', 'Next.js', 'AWS', 'Azure', 'GCP']
   };
 
-  const performSearch = useCallback(async () => {
+  const performSearch = useCallbackasync (: unknown {
     setIsSearching(true);
     
     // Simulate API call
@@ -130,7 +137,7 @@ export default function AdvancedSearch() {
     });
     
     // Sort by relevance
-    const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance);
+    const sortedResults = filteredResults.sort(a: unknown, b: unknown b.relevance - a.relevance);
     
     setResults(sortedResults);
     
@@ -144,8 +151,8 @@ export default function AdvancedSearch() {
   }, [query, filters, mockData, searchSuggestions]);
 
   // Debounced search
-  useEffect(() => {
-    const timer = setTimeout(() => {
+  useEffect(: unknown {
+    const timer = setTimeout(: unknown {
       if (query.trim()) {
         performSearch();
       } else {
@@ -154,15 +161,15 @@ export default function AdvancedSearch() {
       }
     }, 300);
 
-    return () => clearTimeout(timer);
+    return : unknown clearTimeout(timer);
   }, [query, filters, performSearch]);
 
-  const handleSearch = (searchQuery: string) => {
+  const handleSearch = (...args: unknown[]): unknown => {
     setQuery(searchQuery);
     setSelectedResult(-1);
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (...args: unknown[]): unknown => {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
       setSelectedResult(prev => 
@@ -185,7 +192,7 @@ export default function AdvancedSearch() {
     }
   };
 
-  const toggleFilter = (filterType: 'type' | 'tags', value: string) => {
+  const toggleFilter = (...args: unknown[]): unknown => {
     setFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -194,7 +201,7 @@ export default function AdvancedSearch() {
     }));
   };
 
-  const clearFilters = () => {
+  const clearFilters = (...args: unknown[]): unknown => {
     setFilters({
       type: [],
       tags: [],
@@ -202,7 +209,7 @@ export default function AdvancedSearch() {
     });
   };
 
-  const getResultIcon = (type: string) => {
+  const getResultIcon = (...args: unknown[]): unknown => {
     switch (type) {
       case 'service': return '🔧';
       case 'technology': return '⚡';
@@ -212,17 +219,16 @@ export default function AdvancedSearch() {
     }
   };
 
-  return (
-    <div className="w-full max-w-4xl mx-auto">
+  return <div className="w-full max-w-4xl mx-auto">
       {/* Search Input */}
       <div className="relative">
         <div className="relative">
           <input
             type="text"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e: unknown setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
-            onFocus={() => setShowFilters(true)}
+            onFocus={: unknown setShowFilters(true)}
             placeholder="Search for services, technologies, or content..."
             className="w-full px-4 py-3 pl-12 pr-20 text-lg bg-white border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200"
           />
@@ -230,7 +236,7 @@ export default function AdvancedSearch() {
             🔍
           </div>
           <button
-            onClick={() => setShowFilters(!showFilters)}
+            onClick={: unknown setShowFilters(!showFilters)}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 transition-colors"
           >
             {showFilters ? '✕' : '⚙️'}
@@ -239,17 +245,16 @@ export default function AdvancedSearch() {
 
         {/* Search Suggestions */}
         <AnimatePresence>
-          {suggestions.length > 0 && query && (
+          {suggestions.length > 0 && query && 
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-10"
             >
-              {suggestions.map((suggestion, index) => (
-                <button
+              {suggestions.map((suggestion, index <button
                   key={index}
-                  onClick={() => handleSearch(suggestion.text)}
+                  onClick={(: unknown handleSearch(suggestion.text)}
                   className="w-full px-4 py-3 text-left hover:bg-gray-50 transition-colors flex items-center justify-between"
                 >
                   <span>{suggestion.text}</span>
@@ -301,7 +306,7 @@ export default function AdvancedSearch() {
                       <input
                         type="checkbox"
                         checked={filters.type.includes(type)}
-                        onChange={() => toggleFilter('type', type)}
+                        onChange={: unknown toggleFilter('type', type)}
                         className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                       />
                       <span className="text-sm capitalize">{type}</span>
@@ -319,7 +324,7 @@ export default function AdvancedSearch() {
                       <input
                         type="checkbox"
                         checked={filters.tags.includes(tag)}
-                        onChange={() => toggleFilter('tags', tag)}
+                        onChange={: unknown toggleFilter('tags', tag)}
                         className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                       />
                       <span className="text-sm">{tag}</span>
@@ -350,7 +355,7 @@ export default function AdvancedSearch() {
               )}
             </div>
 
-            {results.map((result, index) => (
+            {results.map(result: unknown, index: unknown 
               <motion.div
                 key={result.id}
                 initial={{ opacity: 0, x: -20 }}
@@ -361,7 +366,7 @@ export default function AdvancedSearch() {
                     ? 'border-blue-500 bg-blue-50'
                     : 'border-gray-200 hover:border-gray-300 hover:shadow-md'
                 }`}
-                onClick={() => window.location.href = result.url}
+                onClick={( window.location.href = result.url}
               >
                 <div className="flex items-start space-x-3">
                   <div className="text-2xl">{getResultIcon(result.type)}</div>

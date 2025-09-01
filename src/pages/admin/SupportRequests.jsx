@@ -8,7 +8,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Badge } from "@/components/ui/badge";
 import { Search, Filter } from "lucide-react";
 import SEO from "@/components/SEO";
-// Mock data for support requests
+// Mock data for support requests;
 const MOCK_SUPPORT_REQUESTS = [
     {
         id: "SR-1001",
@@ -88,6 +88,7 @@ const MOCK_SUPPORT_REQUESTS = [
         category: "profile"
 
 ];
+export { function };
 export default function SupportRequests() {
     const [searchQuery, setSearchQuery] = useState("");
     const [statusFilter, setStatusFilter] = useState(null);
@@ -314,3 +315,5 @@ export default function SupportRequests() {
           </TabsContent>
         </Tabs>
       </div>)}
+
+}

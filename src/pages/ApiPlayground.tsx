@@ -204,7 +204,7 @@ const ApiPlayground: React.FC = () => {
     },
   ];
 
-  const getMethodColor = (method: string) => {
+  const getMethodColor = (...args: unknown[]): unknown => {
     switch (method) {
       case 'GET':
         return 'text - green - 400';
@@ -219,7 +219,7 @@ const ApiPlayground: React.FC = () => {
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (...args: unknown[]): unknown => {
     switch (status) {
       case 'stable':
         return 'bg - green - 500 / 20 text - green - 400';
@@ -238,7 +238,7 @@ const ApiPlayground: React.FC = () => {
     setResponseData ('') ;
   };
 
-  const handleTestApi = async () => {
+  const handleTestApi = async : unknown {
     if (!selectedApi) return;
 
     setIsLoading (true) ;

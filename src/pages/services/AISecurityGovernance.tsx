@@ -56,7 +56,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Technology & SaaS';
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-emerald-500 via-green-500 to-lime-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
@@ -73,7 +73,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Security Governance Features</h2>
             <ul className="space-y-3">
-              {features.map((f) => (
+              {features.map((f (
                 <li key={f} className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700">{f}</span>
@@ -87,12 +87,12 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
             <div className="grid md:grid-cols-3 gap-4">
-              {tiers.map((t) => (
+              {tiers.map(t: unknown 
                 <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover:border-emerald-300 transition-colors">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-emerald-600 mb-2">{t.price}</div>
                   <ul className="text-sm text-gray-600 space-y-1">
-                    {t.details.map((d) => (<li key={d}>{d}</li>))}
+                    {t.details.map((d (<li key={d}>{d}</li>))}
                   </ul>
                 </div>
               ))}
@@ -109,7 +109,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
         </div>
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['50-80% performance improvement', '40-70% compliance time reduction', '35-65% cost reduction'].map((t) => (
+          {['50-80% performance improvement', '40-70% compliance time reduction', '35-65% cost reduction'].map(t: unknown (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-emerald-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
@@ -120,7 +120,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            {useCases.map((useCase) => (
+            {useCases.map(useCase: unknown (
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">
                 <Target className="w-5 h-5 text-emerald-600 mr-3" />
                 <span className="text-gray-700">{useCase}</span>
@@ -132,7 +132,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
         <div className="mt-16 bg-emerald-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Measurable Security Governance Impact</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit) => (
+            {benefits.map(benefit: unknown (
               <div key={benefit} className="flex items-start p-4 bg-white rounded-lg border border-emerald-200">
                 <Zap className="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-700">{benefit}</span>
@@ -144,7 +144,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
         <div className="mt-16 bg-white border border-gray-200 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industries We Serve</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {industries.map((industry) => (
+            {industries.map(industry: unknown (
               <div key={industry} className="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
                 <FileText className="w-5 h-5 text-emerald-600 mr-3" />
                 <span className="text-gray-700">{industry}</span>

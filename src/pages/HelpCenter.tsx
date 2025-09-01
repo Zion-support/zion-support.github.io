@@ -40,26 +40,30 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide - react';
 
 interface HelpSection {
+
   id: string;
   title: string;
-  icon: any;
+  icon: unknown;
   description: string;
-  articles: Array<{
+  articles: {
     title: string;
     description: string;
     path?: string;
     external?: boolean;
     difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
     readTime: string;
-  }>;
+  
+}[];
 }
 
 interface FAQItem {
+
   question: string;
   answer: string;
   category: string;
-}
 
+}
+;
 const helpSections: HelpSection[] = [
   {
     title: 'Getting Started',
@@ -277,7 +281,7 @@ const helpSections: HelpSection[] = [
     ]
   }
 ];
-
+;
 const faqData: FAQItem[] = [
   {
     question: 'What services does Zion Tech Group offer?',

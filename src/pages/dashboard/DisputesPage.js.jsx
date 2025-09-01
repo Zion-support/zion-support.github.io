@@ -10,8 +10,9 @@ function DisputesPage() {
         <DisputeDashboard />
         
       </>
-    </ProtectedRoute>)}
+    </ProtectedRoute>)};
+export { DisputesPage };
 export default DisputesPage;
-
+;
 export default DisputesPage;
 export default DisputesPage;

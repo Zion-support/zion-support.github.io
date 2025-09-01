@@ -165,4 +165,5 @@ const ITSolutions = () => {
     </div>
   );
 };
+export { ITSolutions };
 export default ITSolutions;

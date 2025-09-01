@@ -3,14 +3,14 @@ import { SEO } from "../components/SEO";
 import { innovativeMicroSaasServices2030 } from "../data/innovativeMicroSaasServices2030";
 import { comprehensiveITServices2030 } from "../data/comprehensiveITServices2030";
 import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030";
-
-const ComprehensivePricingGuide2030: React.FC = () => {;
+;
+const ComprehensivePricingGuide2030: React.FC = props {;
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
 
-  const getFilteredServices = () => {;
-    let services: any[] = [];
+  const getFilteredServices = (...args: unknown[]): unknown => {;
+    let services: unknown[] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -38,8 +38,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 ;
     return services};
 
-  const getCategories = () => {;
-    let services: any[] = [];
+  const getCategories = (...args: unknown[]): unknown => {;
+    let services: unknown[] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -55,8 +55,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
     const categories = [...new Set(services.map(service => service.category))];
     return categories};
 
-  const getPriceRange = () => {;
-    let services: any[] = [];
+  const getPriceRange = (...args: unknown[]): unknown => {;
+    let services: unknown[] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -77,7 +77,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       return [min, max]}
   };
 
-  const renderPricingCard = (service)  => {
+  const renderPricingCard = (...args: unknown[]): unknown => {
     if (activeTab === 'microsaas') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
@@ -100,7 +100,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
+                {service.benefits.slice(0, 4).map(benefit: string, index: number (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                     {benefit}
@@ -184,7 +184,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
+                {service.benefits.slice(0, 4).map(benefit: string, index: number (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                     {benefit}
@@ -268,7 +268,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
+                {service.benefits.slice(0, 4).map(benefit: string, index: number (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
                     {benefit}
@@ -327,7 +327,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
   const priceRangeData = getPriceRange();
 
-  return (
+  return 
     <>
       <SEO
         title = "Comprehensive Pricing Guide 2030 - Zion Tech Group"
@@ -400,7 +400,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           <div className="mb-8">
             <div className="flex flex-wrap gap-2 justify-center">
               <button
-                onClick={() => setActiveTab('microsaas')}
+                onClick={( setActiveTab('microsaas')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === 'microsaas'
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
@@ -410,7 +410,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 Micro SAAS Services ({innovativeMicroSaasServices2030.length})
               </button>
               <button
-                onClick={() => setActiveTab('it')}
+                onClick={: unknown setActiveTab('it')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === 'it'
                     ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg'
@@ -420,7 +420,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 IT Services ({comprehensiveITServices2030.length})
               </button>
               <button
-                onClick={() => setActiveTab('ai')}
+                onClick={: unknown setActiveTab('ai')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === 'ai'
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
@@ -449,7 +449,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       max={priceRangeData[1]}
                       value={priceRange[1]}
                       onChange = {
-  (e) => setPriceRange([priceRange[0],
+  e: unknown setPriceRange([priceRange[0],
   parseInt(e.target.value)])
 
 
@@ -466,7 +466,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       max={priceRangeData[1]}
                       value={priceRange[0]}
                       onChange = {
-  (e) => setPriceRange([parseInt(e.target.value),
+  e: unknown setPriceRange([parseInt(e.target.value),
   priceRange[1]])
 
 
@@ -490,11 +490,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   </label>
                   <select
                     value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    onChange={e: unknown setSelectedCategory(e.target.value)}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
 
                     <option value="all">All Categories</option>
-                    {getCategories().map((category) => (
+                    {getCategories().map(category: unknown (
                       <option key={category} value={category}>{category}</option>
                     ))}
                   </select>
@@ -504,7 +504,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               <div className="mt-4 text-center">
                 <button
                   onClick = {
-  () => {
+  : unknown {
                     setPriceRange([priceRangeData[0],;
   ;
   ;
@@ -563,12 +563,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           </div>
 
           {/* No Results */}
-          {getFilteredServices().length === 0 && (
-            <div className="text-center py-12">
+          {getFilteredServices().length === 0 && <div className="text-center py-12">
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>
               <button
                 onClick = {
-  () => {
+  (: unknown {
                   setPriceRange([priceRangeData[0],;
   ;
   ;
@@ -662,5 +661,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
     </>;
   );
 };
-
+;
+export { ComprehensivePricingGuide2030 };
 export default ComprehensivePricingGuide2030;}}}}}}}

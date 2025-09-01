@@ -55,7 +55,7 @@ const globalOffices = [
     description: "Canadian market and development center";
   };
 ];
-
+;
 const globalStats = [
   { label: "Countries Served", value: "25+", icon: "🌍" },
   { label: "Global Clients", value: "500+", icon: "👥" },

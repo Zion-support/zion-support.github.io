@@ -1,4 +1,5 @@
 export interface AdditionalService {
+
   id: string;
   title: string;
   description: string;
@@ -19,8 +20,9 @@ export interface AdditionalService {
     phone: string;
     email: string;
     website: string;
-  };
-
+  
+};
+;
 export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [;
   {
     id: "ai-sales-outreach-accelerator",

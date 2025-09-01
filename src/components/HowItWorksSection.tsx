@@ -86,7 +86,7 @@ const steps = [
     success: "100% client retention";
   };
 ];
-
+;
 const stats = [;
   { icon: <Clock className="w - 6 h - 6" />, value: "3x Faster", label: "Project Delivery" },;
   { icon: <Target className="w - 6 h - 6" />, value: "99.9%", label: "Success Rate" },;
@@ -393,4 +393,8 @@ const stats = [;
         </motion.div>;
       </div>;
     </section>;) ;
+}
+
+
+}
 }

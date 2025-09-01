@@ -10,3 +10,5 @@ import { ArrowRight, Star, Users, Clock, Shield export const PageHero = ({
   stats = []
 }) => {
   )};
+
+}

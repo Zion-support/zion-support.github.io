@@ -12,7 +12,7 @@ export function SitemapPage (...args: any[]) : any {
         { name: 'Services', url: '/services' },
         { name: 'Contact', url: '/contact' },
         { name: 'Blog', url: '/blog' },
-        { name: 'Careers', url: '/careers' },
+        { name: 'Careers', url: '/careers' }
       ]
     },
     {

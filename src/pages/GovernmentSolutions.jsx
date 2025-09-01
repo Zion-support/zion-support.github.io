@@ -25,7 +25,7 @@ import { motion } from 'framer - motion';
   Server,
   Brain,
   Code,
-  Globe2
+  Globe2;
 const governmentSolutions = [;
   {
     id: 1,
@@ -124,7 +124,7 @@ const governmentSolutions = [;
     compliance["FISMA", "FedRAMP", "Regulatory Standards", "Audit Requirements"];
   }
 ];
-
+;
 const complianceStandards = [
   {
     name: "FISMA",
@@ -151,7 +151,7 @@ const complianceStandards = [
     requirements["Identify", "Protect", "Detect", "Respond", "Recover"];
   }
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -181,7 +181,7 @@ const successStories = [
     logo: "CMS"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,

@@ -147,7 +147,7 @@ const AICodeReviewSecurityScanner = () => {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -250,7 +250,7 @@ const AICodeReviewSecurityScanner = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {vulnerabilityTypes.map((vulnType, index)  => (
+            {vulnerabilityTypes.map((vulnType, index 
               <motion.div
                 key={index}
                 initial = {
@@ -297,7 +297,7 @@ const AICodeReviewSecurityScanner = () => {
                 <div className="space-y-2">
                   <h4 className="text-sm font-semibold text-green-400 mb-2">Prevention Methods:</h4>
                   <ul className="space-y-1">
-                    {vulnType.examples.map((example, idx) => (
+                    {vulnType.examples.map((example, idx (
                       <li key={idx} className="flex items-center text-sm text-gray-400">
                         <Minus className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {example}
@@ -348,7 +348,7 @@ const AICodeReviewSecurityScanner = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map(feature: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -389,7 +389,7 @@ const AICodeReviewSecurityScanner = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
+                  {feature.benefits.map((benefit, idx (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -439,7 +439,7 @@ const AICodeReviewSecurityScanner = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -496,7 +496,7 @@ const AICodeReviewSecurityScanner = () => {
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
+                  {plan.features.map(feature: unknown, idx: unknown (
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -558,7 +558,7 @@ const AICodeReviewSecurityScanner = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -603,7 +603,7 @@ const AICodeReviewSecurityScanner = () => {
                   </div>
                 </div>
                 <ul className="space-y-2">
-                  {useCase.benefits.map((benefit, idx) => (
+                  {useCase.benefits.map((benefit, idx (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -673,5 +673,6 @@ const AICodeReviewSecurityScanner = () => {
     </div>;
   );
 };
-
+;
+export { AICodeReviewSecurityScanner };
 export default AICodeReviewSecurityScanner;

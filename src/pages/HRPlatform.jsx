@@ -148,7 +148,7 @@ import { motion } from 'framer - motion';
     technologies["Business Intelligence", "Machine Learning", "Data Mining", "Visualization Tools"]
   }
 ];
-
+;
 const hrTechnologies = [
   {
     name: "Employee Management",
@@ -179,7 +179,7 @@ const hrTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -209,7 +209,7 @@ const successStories = [
     logo: "MC"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -240,7 +240,7 @@ const processSteps = [
     duration: "2 - 6 weeks"
 
 ];
-
+;
 const hrBenefits = [
   {
     title: "Operational Efficiency",

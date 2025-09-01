@@ -66,4 +66,11 @@ const AdvancedServicesShowcase2025 = () => {
             'AI Governance': '⚖️',
             'DevOps & Automation': '⚡',
             'Data Quality & Analytics': '📊',
-            'API Management': '🔌',
+            'API Management': '🔌'
+
+
+
+}
+
+}
+}

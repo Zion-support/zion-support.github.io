@@ -1,9 +1,10 @@
 import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 import { Link  } from 'react-router-dom.ts';
-
+;
+export { function };
 export default function AISupplyChainOptimization(...args: []):  {
-  return (
+  return 
     <>
       <Helmet>
         <title>AI Supply Chain Optimization - Zion Tech Group</title>
@@ -94,7 +95,7 @@ export default function AISupplyChainOptimization(...args: []):  {
                   title: "Inventory Optimization",
                   description: "Optimize stock levels and reduce carrying costs with AI insights."
                 }
-              ].map((feature, index)  => (
+              ].map((feature, index (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -157,7 +158,7 @@ export default function AISupplyChainOptimization(...args: []):  {
                   icon: Shield,
                   benefits: ["Risk assessment", "Mitigation planning", "Contingency strategies"]
                 }
-              ].map((area, index)  => (
+              ].map(area: unknown, index: unknown 
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
@@ -165,7 +166,7 @@ export default function AISupplyChainOptimization(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
                   <p className="text-slate-300 mb-4">{area.description}</p>
                   <ul className="space-y-1">
-                    {area.benefits.map((benefit, benefitIndex) => (
+                    {area.benefits.map((benefit, benefitIndex (
                       <li key={benefitIndex} className="text-sm text-blue-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
                         {benefit}
@@ -228,7 +229,7 @@ export default function AISupplyChainOptimization(...args: []):  {
                   icon: Calculator,
                   features: ["Linear programming", "Genetic algorithms", "Heuristic optimization"]
                 }
-              ].map((capability, index)  => (
+              ].map(capability: unknown, index: unknown 
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                     <capability.icon className="w-6 h-6 text-white" />
@@ -236,7 +237,7 @@ export default function AISupplyChainOptimization(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{capability.title}</h3>
                   <p className="text-slate-300 mb-4">{capability.description}</p>
                   <ul className="space-y-1">
-                    {capability.features.map((feature, featureIndex) => (
+                    {capability.features.map((feature, featureIndex (
                       <li key={featureIndex} className="text-sm text-blue-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
                         {feature}
@@ -271,7 +272,7 @@ export default function AISupplyChainOptimization(...args: []):  {
                     "Improved supplier performance and relationships",
                     "Enhanced risk management and resilience",
                     "Better customer satisfaction and service levels"
-                  ].map((benefit, index) => (
+                  ].map(benefit: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-blue-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{benefit}</span>
@@ -288,7 +289,7 @@ export default function AISupplyChainOptimization(...args: []):  {
                     { metric: "30-40%", label: "Delivery Performance", description: "Improvement" },
                     { metric: "20-30%", label: "Inventory Costs", description: "Reduction" },
                     { metric: "90%+", label: "Visibility", description: "Supply chain transparency" }
-                  ].map((item, index)  => (
+                  ].map(item: unknown, index: unknown (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-blue-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -335,7 +336,7 @@ export default function AISupplyChainOptimization(...args: []):  {
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve supply chain performance."
                 }
-              ].map((step, index)  => (
+              ].map(step: unknown, index: unknown (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>

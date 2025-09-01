@@ -31,6 +31,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 interface Project {
 
+
   id: string;
   name: string;
   description: string;
@@ -43,9 +44,11 @@ interface Project {
   client: string;
   budget: number;
   tags: string[];
-  milestones: Milestone[]}
+  milestones: Milestone[]
+}
 
 interface Milestone {
+
 
   id: string;
   title: string;
@@ -53,7 +56,8 @@ interface Milestone {
   dueDate: string;
   status: 'pending' | 'in - progress' | 'completed' | 'overdue';
   assignee: string;
-  priority: 'low' | 'medium' | 'high'}
+  priority: 'low' | 'medium' | 'high'
+}
 
 interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
 
@@ -220,3 +224,19 @@ showFilters: true,;
 
   // Calculate project stats
   const projectStats = {
+
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

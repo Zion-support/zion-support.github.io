@@ -1,10 +1,13 @@
 export interface ServiceContact {
 
+
   phone: string;
   email: string;
   website: string;
-  address: string}
+  address: string
+};
 export interface MicroSaasService {
+
 
   id: number;
   name: string;
@@ -25,8 +28,10 @@ export interface MicroSaasService {
   setupTime: string;
   integrations: string[];
   freeTier: boolean;
-  trialPeriod: string}
+  trialPeriod: string
+};
 export interface ITService {
+
 
   id: number;
   name: string;
@@ -44,8 +49,10 @@ export interface ITService {
   sla: string;
   certifications: string[];
   deliveryTime: string;
-  support: string}
+  support: string
+};
 export interface AIService {
+
 
   id: number;
   name: string;
@@ -65,7 +72,8 @@ export interface AIService {
   trainingData: string;
   compliance: string[];
   aiScore: number;
-  useCases: string[]}
+  useCases: string[]
+};
 export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services
   {
@@ -909,7 +917,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     },
     marketPrice: "$2,999-8,999/month",
     competitors["ISARA", "PQShield", "Cryptosense"],;
-    roi: "600% within 18 months",
+    roi: "600% within 18 months"
   };
     setupTime: "24 hours",;
     integrations: ["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],;
@@ -917,5 +925,6 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     trialPeriod: "7 days";
   };
 ];
+export { ENHANCED_INNOVATIVE_SERVICES_2025 };
 export default ENHANCED_INNOVATIVE_SERVICES_2025;
 }}}}}

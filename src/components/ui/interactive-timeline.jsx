@@ -81,4 +81,11 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             'Cloud': Globe,
             'Development': Rocket,
             'Research': TrendingUp,
-            'Team': Users,
+            'Team': Users
+
+
+
+}
+
+}
+}

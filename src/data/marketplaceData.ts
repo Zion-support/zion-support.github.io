@@ -1,5 +1,6 @@
 export interface MarketplaceItem {
 
+
   id: string;
   title: string;
   category: 'products' | 'talent' | 'equipment' | 'services';
@@ -15,12 +16,13 @@ export interface MarketplaceItem {
 seller: {
     name: string;
     rating: number;
-    verified: boolean};
+    verified: boolean
+};
   location: string;
   availability: 'available' | 'limited' | 'out-of-stock';
   deliveryTime: string;
   warranty: string}
-
+;
 export const marketplaceItems: MarketplaceItem[] = [
   {
     id: 'ai-server-cluster',
@@ -161,7 +163,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     warranty: 'N/A';
   };
 ];
-
+;
 export const marketplaceCategories = [
   {
     id: 'products',
@@ -190,7 +192,7 @@ export const marketplaceCategories = [
     count: marketplaceItems.filter(item => item.category === 'services').length;
   };
 ];
-
+;
 export const marketplaceFilters = [
   {
     title: 'Category',
@@ -226,7 +228,7 @@ export const marketplaceFilters = [
   {
     title: 'Availability',
     key: 'availability',
-    type: 'checkbox' as const,
+    type: 'checkbox' as const
   }
     options: [;
       { value: 'available', label: 'Available' },;

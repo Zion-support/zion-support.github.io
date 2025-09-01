@@ -17,9 +17,21 @@ import { User,
   Brain,
   Cloud
  } from 'lucide-react'
-
+;
+export { function };
 export default function Signup(...args[]):  {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<typeof {
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    comp: '',
+    phone: '',
+    website: '',
+    industry: '',
+    useCase: ''
+  }>({
     firstName: '',
     lastName: '',
     email: '',
@@ -32,9 +44,9 @@ export default function Signup(...args[]):  {
     useCase: ''
   })
 
-  const [showPassword, setShowPassword] = useState(false)
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [showPassword, setShowPassword] = useState<typeof false>(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState<typeof false>(false)
+  const [isSubmitting, setIsSubmitting] = useState<typeof false>(false)
   const [errors, setErrors] = useState<Record<string, any>>({})
 
   const industries = [
@@ -300,7 +312,7 @@ export default function Signup(...args[]):  {
                       />
                       <button
                         type="button"
-                        onClick={() => setShowPassword(!showPassword)}
+                        onClick={: unknown setShowPassword(!showPassword)}
                         className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
 
                         {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
@@ -334,7 +346,7 @@ export default function Signup(...args[]):  {
                       />
                       <button
                         type="button"
-                        onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                        onClick={: unknown setShowConfirmPassword(!showConfirmPassword)}
                         className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
 
                         {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}

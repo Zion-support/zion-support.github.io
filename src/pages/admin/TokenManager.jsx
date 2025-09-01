@@ -9,6 +9,7 @@ import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
 import { apiClient } from '@/utils/apiClient';
+export { function };
 export default function TokenManager() {
   const { user } = useAuth();
   const { toast } = useToast();

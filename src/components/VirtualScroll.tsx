@@ -142,11 +142,13 @@ interface VirtualScrollProps < T> {
 // Specialized virtual scroll for service cards
 interface ServiceCard {
 
+
   id: anystring;
   name: string;
   description: string;
   category: string;
   icon?: string;
+
 
 }
 

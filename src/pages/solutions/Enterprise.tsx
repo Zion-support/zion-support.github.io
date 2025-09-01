@@ -1,6 +1,7 @@
 import React from 'react';
-
-export default function EnterpriseSolutions() {
+;
+export { function };
+export default function EnterpriseSolutions(...args: unknown[]): unknown {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-8">
       <div className="max-w-2xl text-center">

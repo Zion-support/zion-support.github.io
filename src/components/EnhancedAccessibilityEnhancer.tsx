@@ -20,6 +20,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide - react';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -28,7 +29,6 @@ interface AccessibilitySettings {
   keyboardNavigation: boolean;
   focusIndicator: boolean;
   zoomLevel: number;
-}
 
   const [isVisible, setIsVisible] = useState (false) ;
 
@@ -134,7 +134,7 @@ interface AccessibilitySettings {
       }
     };
 
-    const handleFocusOut = (event: FocusEvent) => {
+    const handleFocusOut = (...args: unknown[]): unknown => {
       const target = event.target as HTMLElement;
       if (settings.focusIndicator) {
         target.style.outline = '';

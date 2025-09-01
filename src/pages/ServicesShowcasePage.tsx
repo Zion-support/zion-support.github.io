@@ -194,7 +194,7 @@ import { motion } from 'framer - motion';
     return categoryData ? categoryData.color : 'from - gray - 500 to - slate - 600';
   };
 
-  const getPriceRange = (price: number) => {
+  const getPriceRange = (...args: unknown[]): unknown => {
     if (price < 1000) return 'low';
     if (price <= 3000) return 'medium';
     return 'high';
@@ -214,7 +214,7 @@ import { motion } from 'framer - motion';
     }
   };
 
-  const getInnovationColor = (level: string) => {
+  const getInnovationColor = (...args: unknown[]): unknown => {
     switch (level) {
       case 'Revolutionary':
         return 'text - purple - 400';

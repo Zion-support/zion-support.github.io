@@ -134,7 +134,7 @@ const InnovativeServices: React.FC = () : JSX.Element => {
       features[;
         'Renewable energy optimization',
         'Carbon footprint tracking',
-        'Sustainable infrastructure',
+        'Sustainable infrastructure'
     };
         'Green data centers';
       ],;

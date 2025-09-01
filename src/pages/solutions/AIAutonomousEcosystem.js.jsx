@@ -345,4 +345,5 @@ const AIAutonomousEcosystem = () => {
     </div>
   );
 };
+export { AIAutonomousEcosystem };
 export default AIAutonomousEcosystem;

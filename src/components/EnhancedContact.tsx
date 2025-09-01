@@ -19,16 +19,17 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 interface ContactFormData {
 
+
   name: string;
   email: string;
   phone: string;
   comp: string;
   service: string;
-  message: string}
+  message: string
+}
 
 interface ContactFormErrors {
 
-  [key: string]: string}
 
   const [formData, setFormData] = useState < any> ({
     name: '',;

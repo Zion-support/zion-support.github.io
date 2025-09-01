@@ -1,6 +1,6 @@
 // Innovative Micro SAAS Services 2028 - Zion Tech Group
 // Revolutionary Micro SAAS, IT Infrastructure, and AI Services
-
+;
 export interface ServiceContact {
   phone: string;
   email: string;
@@ -82,7 +82,8 @@ export interface AIService {
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];

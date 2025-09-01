@@ -40,6 +40,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide - react';
 
 interface AnalyticsData {
+
   id: string;
   metric: string;
   value: number;
@@ -49,9 +50,11 @@ interface AnalyticsData {
   timestamp: Date;
   target?: number;
   unit?: string;
+
 }
 
 interface ChartData {
+
   labels: string[];
   datasets: {
     label: string;
@@ -59,15 +62,18 @@ interface ChartData {
     backgroundColor?: string;
     borderColor?: string;
     borderWidth?: number;
-  }[];
+  
+}[];
 }
 
 interface AdvancedAnalyticsDashboardProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showRealTime?: boolean;
   refreshInterval?: number;
-  onDataExport?: (data: AnalyticsData[]) => void;
-}
+  onDataExport?: data: AnalyticsData[] void;
 
   enabled = true,
   showRealTime = true,
@@ -202,7 +208,7 @@ interface AdvancedAnalyticsDashboardProps {
   }, [isOpen, generateAnalyticsData]) ;
 
   // Get trend icon and color
-  const getTrendDisplay = (trend: 'up' | 'down' | 'stable', change: number) => {
+  const getTrendDisplay = (...args: unknown[]): unknown => {
     const colors = {
       up: 'text - green - 500',
       down: 'text - red - 500',
@@ -225,7 +231,7 @@ interface AdvancedAnalyticsDashboardProps {
   };
 
   // Get category icon
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const icons: { [key: string]: React.ReactNode } = {
       performance: <Zap className="w - 5 h - 5" />,
       users: <Users className="w - 5 h - 5" />,

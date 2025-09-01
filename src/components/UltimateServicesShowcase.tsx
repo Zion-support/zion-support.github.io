@@ -40,6 +40,7 @@ import { ultimateInnovativeServices2025 } from "../../data / 2025 - ultimate - i
 
 interface Service {
 
+
   id: string;
   name: string;
   tagline: string;
@@ -69,7 +70,8 @@ contactInfo: {
     mobile: string;
     email: string;
     address: string;
-    website: string};
+    website: string
+};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -80,7 +82,7 @@ contactInfo: {
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
   marketDisruption: string}
-
+;
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -93,7 +95,7 @@ const contact = {
 ;
 
 };
-
+;
 const categories = [
   {
     id: 'ai - services',
@@ -119,7 +121,7 @@ const categories = [
     services: innovativeMicroSaasSolutions2025;
   };
 ];
-
+;
 const innovationLevelColors = {
   'Revolutionary': 'from - red - 600 to - pink - 700',
   'Breakthrough': 'from - purple - 600 to - violet - 700',
@@ -132,7 +134,7 @@ const innovationLevelColors = {
 ;
 
 };
-
+;
 const patentStatusColors = {
   'Patented': 'from - green - 600 to - emerald - 700',
   'Patent Pending': 'from - yellow - 600 to - orange - 700',

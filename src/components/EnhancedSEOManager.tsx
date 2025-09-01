@@ -13,6 +13,7 @@ export default function
  */
 
 interface SEOData {
+
   title: string;
   description: string;
   keywords: string[];
@@ -22,13 +23,15 @@ interface SEOData {
   structuredData?: object;
 
 interface EnhancedSEOManagerProps {
+  // Add your props here
+
   seoData: SEOData;
   children: React.ReactNode;
 
 const EnhancedSEOManager: React.FC < EnhancedSEOManagerProps> = ({ seoData, children }) => {
   useEffect ( () => {
     // Update meta tags dynamically
-    const updateMetaTags = () => {;
+    const updateMetaTags = (...args: unknown[]): unknown => {;
       // Update title;
       document.title = seoData.title;
 
@@ -109,7 +112,7 @@ const EnhancedSEOManager: React.FC < EnhancedSEOManagerProps> = ({ seoData, chil
     updateMetaTags () ;
     
     // Cleanup function
-    return () => {
+    return : unknown {
       // Remove dynamically added meta tags on unmount
       const dynamicTags = document.querySelectorAll ('meta[property^="og:"], meta[name^="twitter:"], link[rel="canonical"]') ;
       dynamicTags.forEach (tag => tag.remove () ) ;
@@ -156,3 +159,14 @@ const EnhancedSEOManager: React.FC < EnhancedSEOManagerProps> = ({ seoData, chil
 };
 
     return;
+
+
+
+
+}
+
+
+}
+
+}
+}

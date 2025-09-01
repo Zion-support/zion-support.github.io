@@ -34,18 +34,19 @@ import EnhancedPerformanceMetrics from '../components/EnhancedPerformanceMetrics
 import EnhancedSecurityDashboard from '../components/EnhancedSecurityDashboard';
 import AdvancedDataVisualization from '../components/AdvancedDataVisualization';
 import AdvancedNotificationCenter from '../components/AdvancedNotificationCenter';
+;
+export { function };
+export default function HomePage(...args: unknown[]): unknown {
+  const [_isMenuOpen, _setIsMenuOpen] = useState<typeof false>(false);
+  const [_activeSection, _setActiveSection] = useState<typeof 'hero'>('hero');
+  const [_isLoaded, _setIsLoaded] = useState<typeof false>(false);
 
-export default function HomePage() {
-  const [_isMenuOpen, _setIsMenuOpen] = useState(false);
-  const [_activeSection, _setActiveSection] = useState('hero');
-  const [_isLoaded, _setIsLoaded] = useState(false);
-
-  useEffect(() => {
+  useEffect(: unknown {
     _setIsLoaded(true);
   }, []);
 
 
-
+;
 export default function Index(...args[]):  {
 	const features = [
 		{
@@ -272,7 +273,7 @@ export default function Index(...args[]):  {
 		'24/7 expert support and consultation'
 	]
 
-	return (
+	return 
 		<>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
@@ -309,7 +310,7 @@ export default function Index(...args[]):  {
 
 						{/* Hero Features */}
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-							{heroFeatures.map((feature, index) => (
+							{heroFeatures.map((feature, index (
 								<div key={index} className="group">
 									<Link to={feature.href} className="block">
 										<div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
@@ -399,3 +400,5 @@ export default function Index(...args[]):  {
   );
 }
 
+
+}

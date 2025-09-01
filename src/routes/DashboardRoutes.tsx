@@ -10,22 +10,22 @@ import Analytics from "@/pages/Analytics";
 import ProjectMilestones from "@/pages/ProjectMilestones";
 import ProjectDetails from "@/pages/ProjectDetails";
 import ProjectRoom from "@/pages/ProjectRoom";
-// MessagingInbox import removed - page not found
+// MessagingInbox import removed - page not found;
 import Payments from "@/pages/Payments";
 import Interviews from "@/pages/Interviews";
 import Notifications from "@/pages/Notifications";
 import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
 import HiringTracker from "@/pages/HiringTracker";
 import PortfolioBuilder from "@/pages/PortfolioBuilder";
-// Referrals import removed - page not found
+// Referrals import removed - page not found;
 import DeveloperPortal from "@/pages/DeveloperPortal";
-// WalletPage import removed - page not found
+// WalletPage import removed - page not found;
 import OrdersPage from "@/pages/Orders";
 import OrderDetailPage from "@/pages/OrderDetail";
 import ContractBuilder from "@/pages/ContractBuilder";
 import Projects from "@/pages/Projects";
-
-const DashboardRoutes = () => {
+;
+const DashboardRoutes = (...args: unknown[]): unknown => {
   return (
     <Routes>
       {/* Dashboard Routes */}
@@ -224,6 +224,22 @@ const DashboardRoutes = () => {
     </Routes>;
   );
 };
-
+;
+export { DashboardRoutes };
 export default DashboardRoutes;
 }}}}
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

@@ -74,7 +74,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
     'Compliance automation',
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-red-900 via-red-800 to-red-700 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">

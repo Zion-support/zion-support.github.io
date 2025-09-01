@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head.ts';
 import Link from 'next/link.ts';
+export { function };
 export default function PricingPage(...args[]):  {
   const pricingTiers = [
     {
@@ -150,7 +151,7 @@ export default function PricingPage(...args[]):  {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index)  => (
+              {pricingTiers.map(tier: unknown, index: unknown (
                 <div 
                   key={index} 
                   className={`relative bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border transition-all hover:bg-opacity-20 ${
@@ -176,7 +177,7 @@ export default function PricingPage(...args[]):  {
                     </div>
                   </div>
                   <ul className="space-y-4 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
+                    {tier.features.map(feature: unknown, featureIndex: unknown (
                       <li key={featureIndex} className="flex items-center">
                         <svg className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -211,13 +212,12 @@ export default function PricingPage(...args[]):  {
             </div>
             
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {addOnServices.map((service, index)  => (
-                <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
+              {addOnServices.map(service: unknown, index: unknown <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
                   <h3 className="text-xl font-semibold mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   <div className="text-2xl font-bold text-blue-400 mb-4">{service.price}</div>
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.map((feature: unknown, featureIndex: unknown (
                       <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
                         <svg className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -248,7 +248,7 @@ export default function PricingPage(...args[]):  {
             </div>
 
             <div className="space-y-6">
-              {faqs.map((faq, index) => (
+              {faqs.map(faq: unknown, index: unknown (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
                   <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>

@@ -257,7 +257,7 @@ import { motion } from 'framer-motion';
 
 interface ${options.style === 'oop' ? 'ComponentProps' : 'Props'} {
   // TODO: Define props based on prompt: ${prompt}
-
+;
 export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {
   const [state, setState] = useState<any>(null);
 
@@ -280,13 +280,14 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
       <p>This component was generated based on your prompt.</p>
     </motion.div>
   )};
-
+;
+export { GeneratedComponent };
 export default GeneratedComponent;`};
     const generateExpressCode = (prompt, _options) => {
         return `import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-
+;
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -310,12 +311,12 @@ app.listen(PORT, () => {
 """
 Generated Python code based on prompt: ${prompt}
 """
-
+;
 import asyncio
 from typing import Optional, List, Dict, Any
 from dataclasses import dataclass
 
-@dataclass
+@dataclass;
 class GeneratedClass:
     """Generated class based on prompt."""
 
@@ -464,7 +465,7 @@ describe('GeneratedComponent', () => {
     const generatePytestTests = (_code) => {
         return `import pytest;
 from generated_module import GeneratedClass;
-
+;
 class TestGeneratedClass:;
     def test_initialization(self):;
         instance = GeneratedClass()
@@ -495,7 +496,7 @@ describe('Generated Code Tests', () => {
  * @component
  * @example
  * <GeneratedComponent />
- */
+ */;
 export const GeneratedComponent = () => {
   // Component implementation
 };`;
@@ -551,7 +552,7 @@ def generated_function():;
         getCodeMetrics
     };
 };
-
+;
 export default with;
 export default with;
 export default with;

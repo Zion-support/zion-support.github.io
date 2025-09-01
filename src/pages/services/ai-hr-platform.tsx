@@ -1,7 +1,7 @@
 import React from 'react';
 import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus const AIHRPlatform: React.FC = () => {
+import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus const AIHRPlatform: React.FC = props {
   const features = [
     {
       icon: Brain,
@@ -57,7 +57,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
     'Compliance automation and risk reduction';
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI HR Platform Services - Zion Tech Group"
@@ -156,7 +156,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -238,7 +238,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {modules.map((module, index) => (
+            {modules.map(module: unknown, index: unknown (
               <motion.div
                 key={module.title}
                 initial = {
@@ -348,7 +348,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
 
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <li key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
@@ -440,5 +440,6 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
     </div>;
   );
 };
-
+;
+export { AIHRPlatform };
 export default AIHRPlatform;}}}

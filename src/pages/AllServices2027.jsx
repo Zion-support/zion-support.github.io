@@ -49,7 +49,7 @@ import {
 
 // Import all service data
 
-// Combine all services
+// Combine all services;
 const ALL_SERVICES = [
   ...MICRO_SAAS_SERVICES,
   ...CUTTING_EDGE_2025_SERVICES,
@@ -57,7 +57,7 @@ const ALL_SERVICES = [
   ...INNOVATIVE_MICRO_SAAS_2025,
 ];
 
-// Service categories
+// Service categories;
 const SERVICE_CATEGORIES = [
   { id: 'all', name: 'All Services', icon: Globe, count: ALL_SERVICES.length },
   {
@@ -117,7 +117,7 @@ const SERVICE_CATEGORIES = [
   },
 ];
 
-// Contact information
+// Contact information;
 const CONTACT_INFO = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -127,7 +127,7 @@ const CONTACT_INFO = {
   responseTime: '< 2 hours',
 };
 
-// Benefits section
+// Benefits section;
 const BENEFITS = [
   {
     icon: <Zap className="h - 6 w - 6" />,

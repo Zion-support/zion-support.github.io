@@ -16,6 +16,7 @@ const meta = {
 
 
 };
+export { meta };
 export default meta;
 export const Grid = {
   render: () => {

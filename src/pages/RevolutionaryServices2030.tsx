@@ -269,10 +269,10 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
     { id: 'all', label: 'All Services', count: allRevolutionaryServices2030.microSaas.length + allRevolutionaryServices2030.itServices.length + allRevolutionaryServices2030.aiServices.length },
     { id: 'microSaas', label: 'Micro SAAS', count: allRevolutionaryServices2030.microSaas.length },
     { id: 'itServices', label: 'IT Services', count: allRevolutionaryServices2030.itServices.length },
-    { id: 'aiServices', label: 'AI Services', count: allRevolutionaryServices2030.aiServices.length },
+    { id: 'aiServices', label: 'AI Services', count: allRevolutionaryServices2030.aiServices.length }
   ];
 
-  const getFilteredServices = () => {
+  const getFilteredServices = (...args: unknown[]): unknown => {
     switch (activeTab) {
       case 'microSaas':
         return allRevolutionaryServices2030.microSaas.map (service => ({ service, type: 'microSaas' as const }) ) ;
@@ -704,4 +704,8 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
         </div>
       </section>
     </div>) ;
+}
+
+
+}
 }

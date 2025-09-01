@@ -74,5 +74,6 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { CustomerSupportChatbot };
 export default CustomerSupportChatbot;

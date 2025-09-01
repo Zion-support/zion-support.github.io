@@ -9,7 +9,7 @@ type Service = {;
   summary: string;
   price: string;
   category: 'Micro SaaS' | 'IT Services' | 'AI Solutions'};
-
+;
 const services: Service[] = [
   { name: 'Website AI Chatbot', path: '/services / website - ai - chatbot', summary: '24 / 7 on - site AI that answers, qualifies, and books meetings.', price: '$299–$899 / mo', category: 'Micro SaaS' },
   { name: 'RAG Search', path: '/services / rag - search', summary: 'Private semantic search over your docs, wiki, and tickets.', price: '$199–$999 / mo', category: 'AI Solutions' },

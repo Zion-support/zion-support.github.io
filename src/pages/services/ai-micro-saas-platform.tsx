@@ -33,8 +33,8 @@ import {
   Lightbulb,
   Sparkles,
 } from 'lucide-react';
-
-export function AIMicroSaaSPlatform() {
+;
+export function AIMicroSaaSPlatform(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,
@@ -198,7 +198,7 @@ export function AIMicroSaaSPlatform() {
     },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -260,7 +260,7 @@ export function AIMicroSaaSPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index 
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -309,7 +309,7 @@ export function AIMicroSaaSPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -339,7 +339,7 @@ export function AIMicroSaaSPlatform() {
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
+                  {plan.features.map(feature: unknown, idx: unknown (
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -382,7 +382,7 @@ export function AIMicroSaaSPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={useCase.title}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,5 +1,6 @@
 export interface SpecializedITService {
 
+
   id: string;
   title: string;
   description: string;
@@ -21,7 +22,8 @@ export interface SpecializedITService {
 contactInfo: {
     phone: string;
     email: string;
-    website: string};
+    website: string
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -30,7 +32,7 @@ contactInfo: {
     security: string[]};
   competitors?: string[];
   marketSize?: string}
-
+;
 export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
   // Zero Trust Network Architecture
   {

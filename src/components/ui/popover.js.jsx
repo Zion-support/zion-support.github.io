@@ -9,14 +9,14 @@ const Popover({ children }) {
       <div className="relative">
         {children}
       </div>
-    </PopoverContext.Provider>)}
+    </PopoverContext.Provider>)};
 export function PopoverTrigger({ children, className = '' }) {
     const context = useContext(PopoverContext);
     if (!context)
         throw new Error('PopoverTrigger must be used within Popover');
     return (<div className={className} onClick={() => context.setIsOpen(!context.isOpen)}>
       {children}
-    </div>)}
+    </div>)};
 export function PopoverContent({ children, className = '' }) {
     const context = useContext(PopoverContext);
     if (!context)

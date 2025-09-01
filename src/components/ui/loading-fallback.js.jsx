@@ -63,12 +63,12 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
 }}/>))}
       </motion.div>
     </div>)}
-// Full screen loading fallback
+// Full screen loading fallback;
 export function FullScreenLoading({ message = "Loading Zion..." }) {
     return (<div className="min-h-screen bg-zion-blue flex items-center justify-center">
       <LoadingFallback message={message} size="lg"/>
     </div>)}
-// Inline loading fallback
+// Inline loading fallback;
 export function InlineLoading({ message = "Loading..." }) {
     return (<div className="flex items-center space-x-2 text-zion-slate-light">
       <motion.div animate={{ rotate: 360 }} transition = {

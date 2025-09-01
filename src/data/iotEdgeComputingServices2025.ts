@@ -1,5 +1,6 @@
 export interface IoTEdgeService {
 
+
   id: string;
   title: string;
   description: string;
@@ -14,7 +15,8 @@ pricing: {
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string};
+    custom: string
+};
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -23,7 +25,7 @@ pricing: {
   contactLink: string;
   status: 'active' | 'beta' | 'coming-soon';
   scalability: string;
-  deployment: string}
+  deployment: string};
 export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
   {
     id: 'smart-city-platform',
@@ -379,3 +381,7 @@ export const getIoTEdgeServicesByCategory = (category: string): IoTEdgeService[]
 export const getAllIoTEdgeServices = (): IoTEdgeService[] => {;
   return IOT_EDGE_COMPUTING_SERVICES_2025;
 };
+
+
+}
+}

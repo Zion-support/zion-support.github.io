@@ -49,6 +49,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 interface ResourceStats {
 
+
   totalResources: number;
   availableResources: number;
   allocatedResources: number;
@@ -208,3 +209,5 @@ showStats: true,;
 
   // Calculate resource stats
   const resourceStats = {
+
+}

@@ -279,5 +279,6 @@ import { Brain, Zap, Target, TrendingUp, Shield, Globe, Lightbulb, Atom, Circuit
       </section>
     </div>);
 };
+export { QuantumNeuralNetwork };
 export default QuantumNeuralNetwork;
 }}}}

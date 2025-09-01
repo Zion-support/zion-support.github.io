@@ -32,7 +32,7 @@ import { motion } from 'framer - motion';
     integrations["Google Analytics", "Tableau", "Power BI", "Custom APIs"]
   }
 ];
-
+;
 const edTechTrends = [
   {
     title: "Personalized Learning",
@@ -59,7 +59,7 @@ const edTechTrends = [
     impact: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -89,7 +89,7 @@ const successStories = [
     logo: "CT"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,

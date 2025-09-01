@@ -96,7 +96,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
     return iconMap[category] || Globe;
   };
 
-  const getInnovationColor = (level: string) => {
+  const getInnovationColor = (...args: unknown[]): unknown => {
     const colorMap: { [key: string]: string } = {
       Revolutionary: 'from - purple - 500 to - pink - 500',
       'Cutting - edge': 'from - blue - 500 to - indigo - 500',
@@ -110,7 +110,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
     setExpandedService (expandedService === id ? null : id) ;
   };
 
-  const getTierColor = (tierName: string) => {
+  const getTierColor = (...args: unknown[]): unknown => {
     const colorMap: { [key: string]: string } = {
       Starter: 'from - gray - 500 to - slate - 500',
       Basic: 'from - blue - 500 to - cyan - 500',

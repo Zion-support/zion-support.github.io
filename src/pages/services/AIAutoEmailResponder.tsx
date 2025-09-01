@@ -1,6 +1,7 @@
 import React from 'react';
 import SEO from '@/components/SEO';
-
+;
+export { function };
 export default function AIAutoEmailResponder(...args[]):  {
   return (
     <div className = "min-h-screen bg-futuristic text-white">;

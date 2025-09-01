@@ -47,20 +47,22 @@ import {
 } from 'lucide-react';
 
 interface SidebarItem {
+
   name: string;
   href: string;
   icon: React.ComponentType<any>;
   children?: SidebarItem[];
   featured?: boolean;
   description?: string;
-}
 
-export function MainSidebar() {
-  const [isOpen, setIsOpen] = useState(false);
+}
+;
+export function MainSidebar(...args: unknown[]): unknown {
+  const [isOpen, setIsOpen] = useState<typeof false>(false);
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
   const location = useLocation();
 
-  const toggleSection = (section: string) => {
+  const toggleSection = (...args: unknown[]): unknown => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -82,7 +84,7 @@ export function MainSidebar() {
         { name: 'Events', href: '/events', icon: Video },
         { name: 'News', href: '/news', icon: Newspaper },
         { name: 'Contact', href: '/contact', icon: Mail },
-        { name: 'Blog', href: '/blog', icon: FileText },
+        { name: 'Blog', href: '/blog', icon: FileText }
       ]
     },;
     {
@@ -278,18 +280,17 @@ export function MainSidebar() {
     }
   ];
 
-  const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
+  const renderSidebarItem = (...args: unknown[]): unknown => {
     const isActive = location.pathname === item.href;
     const hasChildren = item.children && item.children.length > 0;
     const isExpanded = expandedSections.includes(item.name.toLowerCase());
     const isFeatured = item.featured;
 
-    return (
-      <div key={item.name} className="mb-1">
+    return <div key={item.name} className="mb-1">
         {hasChildren ? (
           <div>
             <button
-              onClick={() => toggleSection(item.name.toLowerCase())}
+              onClick={(: unknown toggleSection(item.name.toLowerCase())}
               className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
                 level === 0 
                   ? 'text-slate-300 hover:text-white hover:bg-slate-700/50' 
@@ -316,7 +317,7 @@ export function MainSidebar() {
               </div>
             )}
           </div>
-        ) : (
+        ) : 
           <Link
             to={item.href}
             className={`flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
@@ -326,7 +327,7 @@ export function MainSidebar() {
                 ? 'text-slate-300 hover:text-white hover:bg-slate-700/50'
                 : 'text-slate-400 hover:text-slate-300'
             }`}
-            onClick={() => setIsOpen(false)}
+            onClick={( setIsOpen(false)}
           >
             <item.icon className="w-4 h-4" />
             <span>{item.name}</span>
@@ -339,11 +340,10 @@ export function MainSidebar() {
     );
   };
 
-  return (
-    <>
+  return <>
       {/* Mobile menu button */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={(: unknown setIsOpen(!isOpen)}
         className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
       >
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -360,7 +360,7 @@ export function MainSidebar() {
           <div className="flex items-center justify-between p-4 border-b border-slate-700/50">
             <h2 className="text-lg font-semibold text-white">Navigation</h2>
             <button
-              onClick={() => setIsOpen(false)}
+              onClick={: unknown setIsOpen(false)}
               className="lg:hidden p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800"
             >
               <X className="w-5 h-5" />
@@ -393,10 +393,10 @@ export function MainSidebar() {
       </div>
 
       {/* Overlay */}
-      {isOpen && (
+      {isOpen && 
         <div
           className="fixed inset-0 z-40 bg-black/50 lg:hidden"
-          onClick={() => setIsOpen(false)}
+          onClick={( setIsOpen(false)}
         />
       )}
     </>

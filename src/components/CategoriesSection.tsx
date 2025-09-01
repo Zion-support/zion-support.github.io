@@ -40,7 +40,7 @@ const categories = [
     color: "from - emerald - 500 to - green - 600",
   },
 ];
-
+;
 const specialServices = [
   {
     title: "IT Onsite Services",
@@ -57,9 +57,13 @@ const specialServices = [
 ];
 
 interface CategoriesSectionProps {
-  showTitle?: boolean;
-}
+  // Add your props here
 
+
+  showTitle?: boolean;
+
+}
+;
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -70,7 +74,7 @@ const containerVariants = {
     }
   }
 };
-
+;
 const itemVariants = {
   hidden: { y: 20, opacity: 0 },
   visible: {

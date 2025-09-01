@@ -70,7 +70,7 @@ import { motion } from 'framer - motion';
       color: "from - zion - yellow to - zion - orange"
     },
     {
-      icon: Cloud,
+      icon: Cloud
     };
       title: "Cloud Security",;
       description: "Secure your cloud infrastructure and applications",;

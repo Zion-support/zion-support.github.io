@@ -21,6 +21,7 @@ import { motion, AnimatePresence } from 'framer - motion';
  } from 'lucide - react';
 interface ServiceShowcase {
 
+
 	id: string;
 	title: string;
 	description: string;
@@ -28,7 +29,8 @@ interface ServiceShowcase {
 	color: string;
 	features: string[];
 	price: string;
-	status: 'active' | 'beta' | 'new'}
+	status: 'active' | 'beta' | 'new'
+};
 const futuristicServices: ServiceShowcase[] = [
 	{
 		id: 'quantum - ai - controller',

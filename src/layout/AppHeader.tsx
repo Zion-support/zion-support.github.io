@@ -6,31 +6,35 @@ import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface AppHeaderProps {
-  onSidebarToggle?: () => void;
-  isSidebarOpen?: boolean;
-}
+  // Add your props here
 
-export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
-  const [companyDropdownOpen, setCompanyDropdownOpen] = useState(false);
-  const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [isSearching, setIsSearching] = useState(false);
+
+  onSidebarToggle?: : unknown void;
+  isSidebarOpen?: boolean;
+
+}
+;
+export function AppHeader(...args: unknown[]): unknown {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<typeof false>(false);
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState<typeof false>(false);
+  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState<typeof false>(false);
+  const [companyDropdownOpen, setCompanyDropdownOpen] = useState<typeof false>(false);
+  const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState<typeof false>(false);
+  const [scrolled, setScrolled] = useState<typeof false>(false);
+  const [isSearching, setIsSearching] = useState<typeof false>(false);
   const [activeNav, setActiveNav] = useState<any>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
+  useEffect(: unknown {
+    const handleScroll = (...args: unknown[]): unknown => {
       setScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return : unknown window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSearch = async (e: React.FormEvent) => {
+  const handleSearch = async e: React.FormEvent {
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);
@@ -51,7 +55,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     { name: 'Company', href: '/about', current: false, hasDropdown: true },
     { name: 'Resources', href: '/help', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
-    { name: 'Get Quote', href: '/request-quote', current: false },
+    { name: 'Get Quote', href: '/request-quote', current: false }
   ];
 
   // Organized Services Categories
@@ -396,7 +400,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     { name: 'Community', href: '/community', description: 'User community', icon: Users }
   ];
 
-  const handleNavClick = (nav: any) => {
+  const handleNavClick = (...args: unknown[]): unknown => {
     if (nav.hasDropdown) {
       setActiveNav(nav);
       // Close other dropdowns
@@ -436,7 +440,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     }
   };
 
-  const closeAllDropdowns = () => {
+  const closeAllDropdowns = (...args: unknown[]): unknown => {
     setServicesDropdownOpen(false);
     setSolutionsDropdownOpen(false);
     setCompanyDropdownOpen(false);
@@ -444,7 +448,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     setActiveNav(null);
   };
 
-  return (
+  return 
     <>
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled 
@@ -472,12 +476,11 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
             
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              {navigation.map((item) => (
-                <div key={item.name} className="relative">
+              {navigation.map((item <div key={item.name} className="relative">
                   {item.hasDropdown ? (
                     <div className="relative">
                       <button
-                        onClick={() => {
+                        onClick={(: unknown {
                           if (item.name === 'Services') {
                             setServicesDropdownOpen(!servicesDropdownOpen);
                             setSolutionsDropdownOpen(false);
@@ -499,11 +502,10 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                       </button>
 
                       {/* Services Dropdown */}
-                      {item.name === 'Services' && servicesDropdownOpen && (
+                      {item.name === 'Services' && servicesDropdownOpen && 
                         <div className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-slate-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-2xl shadow-2xl shadow-cyan-400/10 p-6">
                           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {servicesCategories.map((category) => (
-                              <div key={category.title} className="space-y-4">
+                            {servicesCategories.map((category <div key={category.title} className="space-y-4">
                                 <div className="flex items-center space-x-2">
                                   <div className={`w-8 h-8 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center`}>
                                     <category.icon className="w-4 h-4 text-white" />
@@ -511,7 +513,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                                   <h3 className="text-lg font-semibold text-white">{category.title}</h3>
                                 </div>
                                 <div className="space-y-2">
-                                  {category.services.map((service) => (
+                                  {category.services.map((service: unknown (
                                     <Link
                                       key={service.name}
                                       to={service.href}
@@ -556,11 +558,10 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                       )}
 
                       {/* Solutions Dropdown */}
-                      {item.name === 'Solutions' && solutionsDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-80 bg-slate-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-2xl shadow-2xl shadow-cyan-400/10 p-6">
+                      {item.name === 'Solutions' && solutionsDropdownOpen && <div className="absolute top-full left-0 mt-2 w-80 bg-slate-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-2xl shadow-2xl shadow-cyan-400/10 p-6">
                           <div className="space-y-4">
                             <h3 className="text-lg font-semibold text-white mb-4">Industry Solutions</h3>
-                            {solutions.map((solution) => (
+                            {solutions.map((solution: unknown (
                               <Link
                                 key={solution.name}
                                 to={solution.href}
@@ -594,11 +595,10 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                       )}
 
                       {/* Resources Dropdown */}
-                      {item.name === 'Resources' && resourcesDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-80 bg-slate-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-2xl shadow-2xl shadow-cyan-400/10 p-6">
+                      {item.name === 'Resources' && resourcesDropdownOpen && <div className="absolute top-full left-0 mt-2 w-80 bg-slate-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-2xl shadow-2xl shadow-cyan-400/10 p-6">
                           <div className="space-y-4">
                             <h3 className="text-lg font-semibold text-white mb-4">Resources & Support</h3>
-                            {resources.map((resource) => (
+                            {resources.map((resource: unknown (
                               <Link
                                 key={resource.name}
                                 to={resource.href}
@@ -650,7 +650,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                 <input
                   type="text"
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={e: unknown setSearchQuery(e.target.value)}
                   placeholder="Search services..."
                   className="w-64 px-4 py-2 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 transition-colors"
                 />
@@ -682,7 +682,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
         </div>
 
         {/* Mobile menu */}
-        {mobileMenuOpen && (
+        {mobileMenuOpen && 
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-xl border-t border-slate-700">
             <div className="container-responsive py-6">
               <div className="space-y-6">
@@ -691,7 +691,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                   <input
                     type="text"
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={(e setSearchQuery(e.target.value)}
                     placeholder="Search services..."
                     className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 transition-colors"
                   />
@@ -710,12 +710,12 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
 
                 {/* Mobile Navigation */}
                 <nav className="space-y-4">
-                  {navigation.map((item) => (
+                  {navigation.map(item: unknown 
                     <div key={item.name}>
                       <Link
                         to={item.href}
                         className="block text-slate-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-                        onClick={() => setMobileMenuOpen(false)}
+                        onClick={( setMobileMenuOpen(false)}
                       >
                         {item.name}
                       </Link>
@@ -727,12 +727,12 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                 <div className="space-y-4">
                   <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider">Quick Links</h3>
                   <div className="grid grid-cols-2 gap-4">
-                    {quickLinks.slice(0, 6).map((link) => (
+                    {quickLinks.slice(0, 6).map(link: unknown 
                       <Link
                         key={link.name}
                         to={link.href}
                         className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors duration-200"
-                        onClick={() => setMobileMenuOpen(false)}
+                        onClick={( setMobileMenuOpen(false)}
                       >
                         <link.icon className="w-4 h-4" />
                         <span className="text-sm">{link.name}</span>
@@ -760,7 +760,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                 <Link
                   to="/contact"
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={: unknown setMobileMenuOpen(false)}
                 >
                   Get Started
                 </Link>

@@ -1,12 +1,12 @@
-// import type { NextApiRequest, NextApiResponse } from 'next.ts'; // Removed
+// import type { NextApiRequest, NextApiResponse } from 'next.ts'; // Removed;
 import { supabase   } from '@/integrations/supabase/client';
 import { TeamInvite   } from '@/types';
 
 // TODO: This API route was written for a Next.js environment.
 // This project uses Vite. This logic needs to be refactored,
 // potentially into a Supabase Function or a backend handler compatible with Vite.
-/*
-export default async function handler(...args[]: any):  {
+/*;
+export default async function handler(...args[]: unknown):  {
   if (req.method !== 'POST') {
     // res.setHeader('Allow', ['POST']); // Placeholder
     return res.status(405).json({ error: `Method ${req.method} Not Allowed` })}
@@ -25,7 +25,7 @@ export default async function handler(...args[]: any):  {
     const newInviteData: Partial<TeamInvite> = {
       talent_id: talentId,
       role_title: roleTitle,
-      status: 'pending',
+      status: 'pending'
     };
 
     if (projectBriefId) {
@@ -51,8 +51,8 @@ export default async function handler(...args[]: any):  {
     return res.status(500).json({ error: `Failed to create team invite: ${error.message || 'Unknown error'}` })}
 }
 */
-
+;
 export {}; // Keep it as a module
-
+;
 export default handler;
 export default handler;

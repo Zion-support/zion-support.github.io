@@ -1,4 +1,5 @@
 export interface SpecializedITInfrastructureService2026 {
+
   id: string;
   title: string;
   description: string;
@@ -21,7 +22,8 @@ export interface SpecializedITInfrastructureService2026 {
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];

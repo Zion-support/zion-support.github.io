@@ -30,3 +30,32 @@ import { Search, Rocket, Users, TrendingUp, Shield, Zap, Star, Sparkles import {
   };
 
   const floatingVariants = {
+
+
+
+
+
+
+
+}
+
+
+
+
+
+}
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

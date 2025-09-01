@@ -199,7 +199,7 @@ print(data)`
 });
 const data = await response.json();
 // // // // // // // console.log(data);`,
-            python: `import requests
+            python: `import requests;
 import json
 headers = {
   'Authorization': 'Bearer YOUR_API_KEY',
@@ -415,7 +415,7 @@ print(data)`
 });
 const data = await response.json();
 // // // // // // // console.log(data);`,
-            python: `import requests
+            python: `import requests;
 import json
 headers = {
   'Authorization': 'Bearer YOUR_API_KEY',
@@ -532,9 +532,100 @@ print(data)`
               </p>
               <CodeBlock code = {
   `import crypto from 'crypto';
-// Function to verify webhook signature
+// Function to verify webhook signature;
 function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret);
   const expectedSignature = hmac.update(payload).digest('hex');
   return crypto.timingSafeEqual(
-    Buffer.from(signature),
+    Buffer.from(signature)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+}

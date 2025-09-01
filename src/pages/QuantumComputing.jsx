@@ -36,7 +36,7 @@ import { motion } from 'framer - motion';
     technologies["IBM Quantum", "Google Quantum", "Amazon Braket", "Azure Quantum"]
   }
 ];
-
+;
 const quantumTechnologies = [
   {
     name: "Superconducting Qubits",
@@ -67,7 +67,7 @@ const quantumTechnologies = [
     reliability: "Medium"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -97,7 +97,7 @@ const successStories = [
     logo: "LO"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -128,7 +128,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
 
 ];
-
+;
 const quantumAdvantages = [
   {
     title: "Exponential Speedup",

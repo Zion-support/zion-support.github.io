@@ -24,8 +24,9 @@ import {
   Satellite,
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-
-export default function IoTEdgeComputing() {
+;
+export { function };
+export default function IoTEdgeComputing(...args: unknown[]): unknown {
   const features = [
     {
       icon: Cpu,
@@ -101,7 +102,7 @@ export default function IoTEdgeComputing() {
     'Edge Security Frameworks',
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO
         title="IoT Edge Computing Services - Zion Tech Group"
@@ -180,7 +181,7 @@ export default function IoTEdgeComputing() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -220,7 +221,7 @@ export default function IoTEdgeComputing() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+            {services.map(service: unknown, index: unknown 
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -273,7 +274,7 @@ export default function IoTEdgeComputing() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}

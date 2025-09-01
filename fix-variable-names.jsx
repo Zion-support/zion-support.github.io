@@ -25,7 +25,7 @@ function toCamelCase(str) {
       return numberWords[match] || match;
     })
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase())
-    .replace(/^(.)/, (match) => match.toUpperCase())}
+    .replace(/^(.)/, (match) => match.toUpperCase())};
 function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -74,7 +74,7 @@ function fixFile(filePath) {
     // // // // // // // console.error(`Error fixing ${filePath}:`, error.message);
     return false;
 
-
+;
 function findAndFixFiles(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
@@ -87,7 +87,7 @@ function findAndFixFiles(dir) {
     return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false}
-}
+};
 function fixedCount = 0;
   
   for (const filePath = path.join(dir, file);
@@ -106,7 +106,8 @@ function fixedCount = 0;
 const fixedCount = findAndFixFiles('./pages');
 // // // // // // // console.log(`Fixed ${fixedCount} files.`);
 console.log(`Fixed ${fixedCount} files.`);
-
+;
+export { toCamelCase };
 export default toCamelCase;
 export default toCamelCase;
 export default toCamelCase;

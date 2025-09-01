@@ -99,7 +99,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
     },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="AI Blockchain Integration - Zion Tech Group"
@@ -274,7 +274,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>

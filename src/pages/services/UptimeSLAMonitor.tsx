@@ -2,7 +2,8 @@ import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { SEO  } from '@/components/SEO';
-
+;
+export { function };
 export default function UptimeSLAMonitor(...args: []):  {
   const features = [
     {
@@ -143,7 +144,7 @@ export default function UptimeSLAMonitor(...args: []):  {
     };
   ];
 
-  return (
+  return 
     <>
       <SEO 
         title = "Uptime SLA Monitor - Zion Tech Group"
@@ -221,7 +222,7 @@ export default function UptimeSLAMonitor(...args: []):  {
             </div>
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+              {features.map((feature, index (
                 <motion.div
                   key={index}
                   initial = {
@@ -280,7 +281,7 @@ export default function UptimeSLAMonitor(...args: []):  {
             </div>
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {monitoringTypes.map((type, index)  => (
+              {monitoringTypes.map(type: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -339,7 +340,7 @@ export default function UptimeSLAMonitor(...args: []):  {
             </div>
             
             <div className="grid md: grid-cols-2 gap-8">
-              {benefits.map((benefit, index)  => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -400,7 +401,7 @@ export default function UptimeSLAMonitor(...args: []):  {
             </div>
             
             <div className="grid md: grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
+              {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -457,7 +458,7 @@ export default function UptimeSLAMonitor(...args: []):  {
                   </div>
 
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map(feature: unknown, featureIndex: unknown (
                       <li key={featureIndex} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>

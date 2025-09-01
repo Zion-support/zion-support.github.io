@@ -260,7 +260,7 @@ const categoryColors: { [key: string]: string } = {
 
                 {/* Expanded Service Details */}
                 <AnimatePresence>
-                  {expandedService === service.id && (;
+                  {expandedService === service.id && ;
                     <motion.div
                       initial = {
   { opacity: 0,

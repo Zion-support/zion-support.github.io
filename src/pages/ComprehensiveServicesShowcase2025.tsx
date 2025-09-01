@@ -82,23 +82,25 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide - react';
 
 interface Service {
+
   id: string;
   name: string;
   description: string;
   category: string;
-  icon: any;
+  icon: unknown;
   features: string[];
   pricing: {
     starter: string;
     professional: string;
     enterprise: string;
-  };
+  
+};
   benefits: string[];
   useCases: string[];
   link: string;
   status: 'available' | 'coming - soon' | 'beta';
 }
-
+;
 const services: Service[] = [
   // AI Services
   {
@@ -428,7 +430,7 @@ const services: Service[] = [
     status: 'available'
   }
 ];
-
+;
 const categories = [
   { id: 'all', name: 'All Services', icon: Globe, count: services.length },
   { id: 'ai', name: 'AI Services', icon: Brain, count: services.filter (s => s.category.includes ('AI') ) .length },
@@ -843,4 +845,6 @@ const categories = [
           </motion.div>) }
       </AnimatePresence>
     </div>) ;
+}
+
 }

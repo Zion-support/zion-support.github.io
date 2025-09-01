@@ -104,3 +104,7 @@ import { Star, Quote export const AppTestimonials = () => {
       </div>
     </section>;
   )};
+
+
+}
+}

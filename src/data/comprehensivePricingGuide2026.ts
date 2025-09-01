@@ -1,7 +1,8 @@
 // Comprehensive Pricing Guide 2026 - Zion Tech Group
 // Revolutionary Micro SAAS, IT Infrastructure, and AI Services
-
+;
 export interface PricingTier {
+
 
   name: string;
   price: number;
@@ -14,9 +15,11 @@ export interface PricingTier {
   setupTime: string;
   supportLevel: string;
   innovationLevel: string;
-}
 
+}
+;
 export interface ServicePricing {
+
   id: string;
   title: string;
   description: string;
@@ -32,7 +35,8 @@ export interface ServicePricing {
     email: string;
     website: string;
     address: string;
-  };
+  
+};
   technicalSpecs: {
     technology: string[];
     integrations: string[];
@@ -44,7 +48,7 @@ export interface ServicePricing {
   complianceFeatures: string[];
   scalabilityFeatures: string[];
 }
-
+;
 export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
   {
     id: "ai-business-intelligence-platform-2026",
@@ -310,12 +314,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
       apiEndpoints: 200,
       uptime: "99.99%",
       security: ["SOC 2 Type II", "ISO 27001", "NIST", "FIPS 140-2", "Common Criteria"]
-    },
+    }
     }
   }
 };
 
-// BlockchainForge Pricing
+// BlockchainForge Pricing;
 export const blockchainForgePricing: ServicePricing = {
   serviceId: 3,
   serviceName: "BlockchainForge",
@@ -407,13 +411,13 @@ export const blockchainForgePricing: ServicePricing = {
   }
 };
 
-// Export all pricing guides
+// Export all pricing guides;
 export const ALL_PRICING_GUIDES_2026 = [
   quantumFlowProPricing,
   neuroSyncAIPricing,
   blockchainForgePricing
 ];
-
+;
 export const PRICING_SUMMARY_2026 = {
   overview: "Our 2026 innovative services pricing is designed to provide exceptional value while maintaining the highest quality and innovation standards.",
   keyBenefits: [

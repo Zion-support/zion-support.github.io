@@ -50,7 +50,7 @@ const mockUser = {
     isVerified: true,
     isModerator: false
 };
-// Mock posts by this user
+// Mock posts by this user;
 const userPosts = [
     {
         id: "1",

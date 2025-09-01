@@ -41,6 +41,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 interface SearchResult {
 
+
   id: string;
   type: 'service' | 'talent' | 'equipment' | 'comp';
   title: string;
@@ -51,9 +52,8 @@ interface SearchResult {
   tags: string[];
   relevance: number;
   lastUpdated: string;
-  icon: any;
+  icon: unknown;
   featured?: boolean;
-}
 
   const [searchParams, setSearchParams] = useSearchParams () ;
   const [searchQuery, setSearchQuery] = useState (searchParams.get ('q') || '') ;
@@ -308,7 +308,7 @@ interface SearchResult {
     setSearchParams ({}) ;
   };
 
-  const getResultIcon = (type: string) => {
+  const getResultIcon = (...args: unknown[]): unknown => {
     switch (type) {
       case 'service': return Zap;
       case 'page': return FileText;
@@ -319,7 +319,7 @@ interface SearchResult {
     }
   };
 
-  const getResultColor = (type: string) => {
+  const getResultColor = (...args: unknown[]): unknown => {
     switch (type) {
       case 'service': return 'from - blue - 500 to - indigo - 500';
       case 'blog': return 'from - green - 500 to - emerald - 500';

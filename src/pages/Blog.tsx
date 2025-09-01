@@ -16,6 +16,7 @@ import { motion } from 'framer - motion';
 } from 'lucide - react';
 
 interface BlogPost {
+
   id: string;
   title: string;
   excerpt: string;
@@ -28,13 +29,14 @@ interface BlogPost {
   views: number;
   featured: boolean;
   image?: string;
+
 }
 
 interface Category {
+
   id: string;
   name: string;
   count: number;
-}
 
 const Blog: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState ('') ;

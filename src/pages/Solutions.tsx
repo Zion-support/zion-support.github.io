@@ -150,7 +150,7 @@ const solutionCategories = [
     ];
   };
 ];
-
+;
 const industrySolutions = [
   {
     industry: 'Healthcare',
@@ -231,7 +231,7 @@ const industrySolutions = [
     color: 'from - gray - 500 to - slate - 600';
   };
 ];
-
+;
 const featuredSolutions = [
   {
     id: 1,

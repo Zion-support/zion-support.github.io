@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react.ts';
 import { X, CheckCircle, AlertCircle, Info, XCircle  } from 'lucide-react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-
+;
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
-
+;
 export interface Toast {
+
 
   id: anystring;
   type: ToastType;
@@ -12,28 +13,29 @@ export interface Toast {
   message?: string;
   duration?: number;
 
+
 }
 
 interface ToastProps extends React.PropsWithChildren<{}> {
 
   toast: Toast;
-  onRemove: (id: string)  => void;
+  onRemove: id: string void;
 
 }
+;
+const ToastItem: React.FC<ToastProps> = { toast: unknown, onRemove }: unknown {
+  const [isVisible, setIsVisible] = useState<typeof true>(true);
 
-const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
+  useEffect(: unknown {
+    const timer = setTimeout(: unknown {
       setIsVisible(false);
-      setTimeout(() => onRemove(toast.id), 300);
+      setTimeout(: unknown onRemove(toast.id), 300);
     }, toast.duration || 5000);
 
-    return () => clearTimeout(timer);
+    return : unknown clearTimeout(timer);
   }, [toast.id, toast.duration, onRemove]);
 
-  const getIcon = () => {
+  const getIcon = (...args: unknown[]): unknown => {
     switch (toast.type) {
       case 'success':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -48,7 +50,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
     }
   };
 
-  const getBgColor = () => {
+  const getBgColor = (...args: unknown[]): unknown => {
     switch (toast.type) {
       case 'success':
         return 'bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800';
@@ -86,9 +88,9 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
           )}
         </div>
         <button
-          onClick={() => {
+          onClick={: unknown {
             setIsVisible(false);
-            setTimeout(() => onRemove(toast.id), 300);
+            setTimeout(: unknown onRemove(toast.id), 300);
           }}
           className="flex-shrink-0 ml-2 p-1 rounded-md text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
         >
@@ -98,24 +100,24 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
     </motion.div>
   );
 };
-
+;
 export const ToastContainer: React.FC = (): JSX.Element => {
   const [toasts, setToasts] = useState<any>([]);
 
-  const addToast = (toast: anyOmit<Toast, 'id'>)  => {
+  const addToast = (...args: unknown[]): unknown => {
     const id = Math.random().toString(36).substr(2, 9);
     const newToast = { ...toast, id };
     setToasts(prev => [...prev, newToast]);
   };
 
-  const removeToast = (id: anystring)  => {
+  const removeToast = (...args: unknown[]): unknown => {
     setToasts(prev => prev.filter(toast => toast.id !== id));
   };
 
   // Expose addToast globally for easy access
-  useEffect(() => {
+  useEffect(: unknown {
     (window as ).showToast = addToast;
-    return () => {
+    return : unknown {
       delete (window as ).showToast;
     };
   }, []);
@@ -135,8 +137,8 @@ export const ToastContainer: React.FC = (): JSX.Element => {
   );
 };
 
-// Utility function to show toasts
-export const showToast = (type: anyToastType, title: string, message?: string, duration?: number)  => {
+// Utility function to show toasts;
+export const showToast = (...args: unknown[]): unknown => {
   if (typeof window !== 'undefined' && (window as ).showToast) {
     (window as ).showToast({ type, title, message, duration });
   }

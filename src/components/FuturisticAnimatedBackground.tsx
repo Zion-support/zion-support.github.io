@@ -13,7 +13,7 @@ export default FuturisticAnimatedBackground;
     if (!ctx) return;
 
     // Set canvas size
-    const resizeCanvas = () => {;
+    const resizeCanvas = (...args: unknown[]): unknown => {;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
@@ -51,7 +51,7 @@ export default FuturisticAnimatedBackground;
     const time = 0;
 
     // Particle system
-    const particles: Array<{
+    const particles: {
       x: number;
       y: number;
       vx: number;
@@ -60,7 +60,7 @@ export default FuturisticAnimatedBackground;
       color: string;
       life: number;
       maxLife: number;
-    }> = [];
+    }[] = [];
 
     // Create particles
     const createParticle = () => {;
@@ -82,7 +82,7 @@ export default FuturisticAnimatedBackground;
     };
 
     // Update and draw particles
-    const animate = () => {;
+    const animate = (...args: unknown[]): unknown => {;
       time += 0.01;
 
       // Clear canvas with fade effect

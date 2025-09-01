@@ -24,7 +24,8 @@ import { Brain,
 import { SEO  } from '@/components/SEO';
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
-
+;
+export { function };
 export default function AIBusinessIntelligencePlatform(...args[]):  {
   const features = [
     {
@@ -143,7 +144,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Business Intelligence Platform - Zion Tech Group"
@@ -238,7 +239,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -322,7 +323,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -403,7 +404,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index)  => (
+            {pricingTiers.map(tier: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -461,7 +462,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
+                  {tier.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-cyan-500 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -521,7 +522,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {

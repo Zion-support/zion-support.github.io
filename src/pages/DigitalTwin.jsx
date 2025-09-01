@@ -46,7 +46,7 @@ import { motion } from 'framer - motion';
     technologies["BMS Integration", "IoT Sensors", "3D Modeling", "AI Analytics"]
   }
 ];
-
+;
 const digitalTwinTechnologies = [
   {
     name: "IoT Sensors",
@@ -77,7 +77,7 @@ const digitalTwinTechnologies = [
     reliability: "Critical"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -107,7 +107,7 @@ const successStories = [
     logo: "RPG"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -138,7 +138,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
 
 ];
-
+;
 const digitalTwinBenefits = [
   {
     title: "Real - time Monitoring",

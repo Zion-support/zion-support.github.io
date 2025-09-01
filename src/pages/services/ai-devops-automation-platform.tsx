@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { SEO   } from '../../components/SEO';
 import { motion   } from 'framer-motion.ts';
-
+;
 const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
   return (
     <>
@@ -105,7 +105,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
                   description: "Built-in security scanning, compliance checks, and vulnerability assessment throughout the deployment pipeline.",
                   icon: "🔒"
                 }
-              ].map((feature, index)   => (
+              ].map(feature: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -169,7 +169,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
                 { metric: "85%", description: "Reduction in manual tasks" },
                 { metric: "70%", description: "Improvement in resource utilization" },
                 { metric: "95%", description: "Increase in deployment success rate" }
-              ].map((benefit, index)   => (
+              ].map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -246,7 +246,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
                   description: "IoT-focused DevOps automation for industrial applications with edge computing support.",
                   features: ["Edge deployment", "IoT integration", "Real-time monitoring"]
                 }
-              ].map((useCase, index)   => (
+              ].map(useCase: unknown, index: unknown 
                 <motion.div
                   key={index}
                   initial = {
@@ -270,7 +270,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
                   <ul className="space-y-2">
-                    {useCase.features.map((feature, featureIndex) => (
+                    {useCase.features.map((feature, featureIndex (
                       <li key={featureIndex} className="text-blue-300 flex items-center">
                         <span className="text-green-400 mr-2">✓</span>
                         {feature}
@@ -313,7 +313,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
               {[
                 "Kubernetes", "Docker", "Terraform", "Jenkins", "GitLab CI/CD", "GitHub Actions", "AWS", "Azure",
                 "GCP", "Ansible", "Helm", "ArgoCD", "Prometheus", "Grafana", "ELK Stack", "Istio"
-              ].map((tech, index)   => (
+              ].map(tech: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -418,7 +418,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
                   ],
                   popular: false
                 }
-              ].map((plan, index)   => (
+              ].map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -461,7 +461,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
                   </div>
                   
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map(feature: unknown, featureIndex: unknown (
                       <li key={featureIndex} className="flex items-center text-white">
                         <span className="text-green-400 mr-3">✓</span>
                         {feature}
@@ -569,5 +569,6 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
     </>;
   );
 };
-
+;
+export { AIDevOpsAutomationPlatform };
 export default AIDevOpsAutomationPlatform;

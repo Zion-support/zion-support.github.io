@@ -72,7 +72,7 @@ export const SitemapGenerator: React.FC = () : JSX.Element => {
     generateSitemap () ;
   }, []) ;
 
-  const generateSitemap = () => {
+  const generateSitemap = (...args: unknown[]): unknown => {
     const sitemap: SitemapSection[] = [
       {
         title: 'Main Pages',
@@ -746,7 +746,7 @@ ${sitemapData
     URL.revokeObjectURL (url) ;
   };
 
-  const exportCSV = () => {
+  const exportCSV = (...args: unknown[]): unknown => {
     const csvContent = [
       ['Path', 'Name', 'Description', 'Category', 'Featured'],
       ...sitemapData.flatMap (section =>

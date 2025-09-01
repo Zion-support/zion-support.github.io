@@ -97,7 +97,7 @@ import { motion, AnimatePresence } from 'framer - motion.ts';
               animate={{
                 x: [0, 100, 0],
                 y: [0, -100, 0],
-                opacity: [0.3, 0.8, 0.3],
+                opacity: [0.3, 0.8, 0.3]
               }}
               transition={{
                 duration: Math.random () * 10 + 10,

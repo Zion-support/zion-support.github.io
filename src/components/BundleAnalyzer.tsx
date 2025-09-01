@@ -11,12 +11,14 @@ interface BundleAnalyzerProps extends React.PropsWithChildren<{}> {
 
 interface BundleMetrics {
 
+
   totalSize: number;
   chunkCount: number;
 largestChunk: {;
     name: string;
     size: number;
   
+
 };
   averageChunkSize: number;
   gzipSavings: number;
@@ -44,7 +46,7 @@ largestChunk: {;
       // Calculate bundle metrics
       let totalSize = 0;
       let chunkCount = 0;
-      let largestChunk = { name: any'', size: 0 };
+      let largestChunk = { name: unknown'', size: 0 };
       
       resourceEntries.forEach ( (entry:) => {
         if (entry.name.includes ('.js') || entry.name.includes ('.css') ) {

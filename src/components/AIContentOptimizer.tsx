@@ -31,6 +31,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide - react';
 
 interface ContentAnalysis {
+
   id: string;
   type: 'seo' | 'performance' | 'accessibility' | 'user - experience';
   score: number;
@@ -38,9 +39,11 @@ interface ContentAnalysis {
   priority: 'high' | 'medium' | 'low';
   impact: number;
   category: string;
+
 }
 
 interface OptimizationSuggestion {
+
   id: string;
   title: string;
   description: string;
@@ -50,14 +53,17 @@ interface OptimizationSuggestion {
   impact: number;
   implementation: string;
   estimatedTime: string;
+
 }
 
 interface AIContentOptimizerProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showRealTime?: boolean;
   autoAnalyze?: boolean;
-  onOptimizationComplete?: (suggestions: OptimizationSuggestion[]) => void;
-}
+  onOptimizationComplete?: suggestions: OptimizationSuggestion[] void;
 
   enabled = true,
   showRealTime = true,
@@ -213,7 +219,7 @@ interface AIContentOptimizerProps {
   }, [showRealTime, isOpen, analysisComplete, generateContentAnalysis]) ;
 
   // Get priority color
-  const getPriorityColor = (priority: string) => {
+  const getPriorityColor = (...args: unknown[]): unknown => {
     const colors = {
       high: 'text - red - 600 bg - red - 100 dark:bg - red - 900 / 30 dark:text - red - 400',
       medium:
@@ -224,7 +230,7 @@ interface AIContentOptimizerProps {
   };
 
   // Get category icon
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const icons: { [key: string]: React.ReactNode } = {
       seo: <Search className="w - 5 h - 5" />,
       performance: <Zap className="w - 5 h - 5" />,

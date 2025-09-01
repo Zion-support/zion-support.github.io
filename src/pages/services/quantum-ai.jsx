@@ -185,4 +185,5 @@ const QuantumAIServices = () => {
     </div>
   );
 };
+export { QuantumAIServices };
 export default QuantumAIServices;

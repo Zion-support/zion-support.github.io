@@ -178,7 +178,7 @@ const Training: React.FC = () => {
     },
   ];
 
-  const getLevelColor = (level: string) => {
+  const getLevelColor = (...args: unknown[]): unknown => {
     switch (level) {
       case 'beginner':
         return 'bg - green - 500 / 20 text - green - 400';
@@ -193,7 +193,7 @@ const Training: React.FC = () => {
     }
   };
 
-  const getFormatColor = (format: string) => {
+  const getFormatColor = (...args: unknown[]): unknown => {
     switch (format) {
       case 'online':
         return 'bg - blue - 500 / 20 text - blue - 400';

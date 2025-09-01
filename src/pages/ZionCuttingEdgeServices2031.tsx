@@ -120,7 +120,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
     return iconMap[category] || Globe;
   };
 
-  const getInnovationColor = (level: string) => {
+  const getInnovationColor = (...args: unknown[]): unknown => {
     const colorMap: { [key: string]: string } = {
       Revolutionary: 'from - purple - 500 to - pink - 500',
       'Cutting - edge': 'from - blue - 500 to - indigo - 500',

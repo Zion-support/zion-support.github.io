@@ -1,8 +1,9 @@
-import React from 'react.ts'
-import { Link  } from 'react-router-dom.ts'
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
 import { Calendar, Clock, ArrowRight, Tag, User  } from 'lucide-react'
 
-
+;
+export { function };
 export default function News(...args[]):  {
 	const newsArticles = [
 		{
@@ -69,7 +70,7 @@ export default function News(...args[]):  {
 
 	const categories = ['All', 'Product Launch', 'Comp News', 'Industry Insights', 'Customer Success', 'Security']
 
-	return (
+	return 
 		<>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
@@ -89,7 +90,7 @@ export default function News(...args[]):  {
 			<section className="py-12 border-b border-gray-200">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="flex flex-wrap gap-4 justify-center">
-						{categories.map((category) => (
+						{categories.map((category (
 							<button
 								key={category}
 								className="px-4 py-2 rounded-full text-sm font-medium transition-colors hover:bg-blue-50 hover:text-blue-600"
@@ -159,7 +160,7 @@ export default function News(...args[]):  {
 			<section className="py-16">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="grid gap-8 lg: grid-cols-2">
-						{newsArticles.slice(1).map((article)  => (
+						{newsArticles.slice(1).map(article: unknown (
 							<article key={article.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
 								<div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
 									<Tag className="h-12 w-12 text-gray-400" />
@@ -258,3 +259,5 @@ export default function News(...args[]):  {
 		</>;
 	);
 };
+
+}

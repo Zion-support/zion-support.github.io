@@ -140,7 +140,7 @@ import {
                 <Search className="absolute left - 4 top - 1/2 - translate - y-1 / 2 w - 5 h - 5 text - slate - 400" />
                 <input
                   type="text"
-                  placeholder="Search for help articles, guides, and solutions..."
+                  placeholder="Search for help articles: unknown, guides: unknown, and solutions..."
                   value={searchQuery}
                   onChange={ (e) => setSearchQuery (e.target.value) }
                   className="w - full pl - 12 pr - 4 py - 4 bg - slate - 800 border border - slate - 600 rounded - lg focus:border - cyan - 400 focus:ring - 2 focus:ring - cyan - 400 / 20 outline - none text - white placeholder - slate - 400"

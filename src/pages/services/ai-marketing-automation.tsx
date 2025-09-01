@@ -146,7 +146,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
     },
   ];
 
-  return (
+  return 
     <>
       <SEO
         title="AI Marketing Automation - Zion Tech Group"
@@ -343,7 +343,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="space-y-6">
-                {benefits.slice(0, 4).map((benefit, index) => (
+                {benefits.slice(0, 4).map(benefit: unknown, index: unknown (
                   <motion.div
                     key={benefit}
                     initial={{ opacity: 0, x: -20 }}
@@ -357,7 +357,7 @@ export default function AIMarketingAutomation(...args: any[]): any {
                 ))}
               </div>
               <div className="space-y-6">
-                {benefits.slice(4).map((benefit, index) => (
+                {benefits.slice(4).map(benefit: unknown, index: unknown (
                   <motion.div
                     key={benefit}
                     initial={{ opacity: 0, x: 20 }}

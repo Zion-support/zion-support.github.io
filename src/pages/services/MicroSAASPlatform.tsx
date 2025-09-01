@@ -268,7 +268,7 @@ export default function MicroSAASPlatform(...args: any[]): any {
     },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-indigo-50">
       <Helmet>
         <title>Micro SAAS Platform - Zion Tech Group</title>

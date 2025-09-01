@@ -1,8 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
-export default function Placeholder() {
+;
+export { function };
+export default function Placeholder(...args: unknown[]): unknown {
   return (
     <main className="min-h-screen p-8">
       <Head>

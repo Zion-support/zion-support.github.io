@@ -1,4 +1,4 @@
-// Enhanced Micro SAAS Services for 2025
+// Enhanced Micro SAAS Services for 2025;
 export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
   // AI-Powered Development & DevOps Services
   {
@@ -641,7 +641,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
     marketSize: "$4.2 billion by 2025"
 
 ];
-// Pricing tiers for different service levels
+// Pricing tiers for different service levels;
 export const SERVICE_PRICING_TIERS = {
   basic: {
     name: "Basic",
@@ -664,7 +664,7 @@ export const SERVICE_PRICING_TIERS = {
     priceRange: "$399 - $1,999/month"
 
 };
-// Service categories for easy filtering
+// Service categories for easy filtering;
 export const SERVICE_CATEGORIES = [;
   "AI & Development",
   "AI & Marketing",
@@ -677,7 +677,7 @@ export const SERVICE_CATEGORIES = [;
   "AI & Cybersecurity",
   "AI & Real Estate"
 ];
-// Contact information for all services
+// Contact information for all services;
 export const ZION_TECH_GROUP_CONTACT = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",

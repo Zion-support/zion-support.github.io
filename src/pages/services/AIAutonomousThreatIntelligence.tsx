@@ -260,7 +260,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                 </p>
 
                 <ul className="space-y-3">
-                  {feature.benefits.map((benefit, idx) => (
+                  {feature.benefits.map((benefit, idx (
                     <li key={idx} className="flex items-center text-gray-200">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                       {benefit}
@@ -379,7 +379,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
+                  {plan.features.map(feature: unknown, idx: unknown (
                     <li key={idx} className="flex items-center text-gray-200">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}

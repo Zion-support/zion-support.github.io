@@ -178,8 +178,8 @@ export default React.memo (function BlogPost () {
     }) ;
   };
 
-  const getCategoryIcon = (category: string) => {
-    const categoryIcons: { [key: string]: any } = {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
+    const categoryIcons: { [key: string]: unknown } = {
       ai: Brain,
       quantum: Cpu,
       security: Shield,
@@ -191,7 +191,7 @@ export default React.memo (function BlogPost () {
     return categoryIcons[category] || BookOpen;
   };
 
-  const getCategoryName = (category: string) => {
+  const getCategoryName = (...args: unknown[]): unknown => {
     const categoryNames: { [key: string]: string } = {
       ai: 'Artificial Intelligence',
       quantum: 'Quantum Computing',

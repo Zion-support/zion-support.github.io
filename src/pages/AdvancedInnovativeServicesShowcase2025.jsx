@@ -55,4 +55,11 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
             'Marketing & Automation': '📢',
             'Quantum Technology': '🔮',
             'AI & Machine Learning': '🧠',
-            'AI & Analytics': '📊',
+            'AI & Analytics': '📊'
+
+
+
+}
+
+}
+}

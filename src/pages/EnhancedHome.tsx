@@ -84,7 +84,7 @@ const FuturisticBackground = React.memo ( () => {
             x: [0, 200, 0],
             y: [0, -200, 0],
             opacity: [0.4, 1, 0.4],
-            scale: [0.5, 1.2, 0.5],
+            scale: [0.5, 1.2, 0.5]
           }}
           transition={{
             duration: particle.duration,
@@ -94,7 +94,7 @@ const FuturisticBackground = React.memo ( () => {
           }}
           style={{
             left: particle.left,
-            top: particle.top,
+            top: particle.top
           }}
         />) ) }
     </div>) ;

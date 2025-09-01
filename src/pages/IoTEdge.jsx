@@ -31,7 +31,7 @@ import { motion } from 'framer - motion';
     technologies["TLS / SSL", "OAuth 2.0", "JWT", "Zero Trust"]
   }
 ];
-
+;
 const iotTechnologies = [
   {
     name: "MQTT Protocol",
@@ -62,7 +62,7 @@ const iotTechnologies = [
     reliability: "Medium"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -92,7 +92,7 @@ const successStories = [
     logo: "LN"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,

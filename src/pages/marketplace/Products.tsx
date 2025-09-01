@@ -56,14 +56,15 @@ import {
   MessageCircle,
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
-
-export default function MarketplaceProducts() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
+;
+export { function };
+export default function MarketplaceProducts(...args: unknown[]): unknown {
+  const [searchQuery, setSearchQuery] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<typeof 'all'>('all');
+  const [sortBy, setSortBy] = useState<typeof 'featured'>('featured');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [showFilters, setShowFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState<typeof false>(false);
 
   const categories = [
     { id: 'all', name: 'All Products', icon: Package, count: 156 },
@@ -389,7 +390,7 @@ export default function MarketplaceProducts() {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const sortedProducts = [...filteredProducts].sort((a, b) => {
+  const sortedProducts = [...filteredProducts].sort(a: unknown, b: unknown {
     switch (sortBy) {
       case 'newest':
         return (
@@ -408,15 +409,15 @@ export default function MarketplaceProducts() {
     }
   });
 
-  const formatPrice = (price: number, currency: string) => {
+  const formatPrice = (...args: unknown[]): unknown => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: currency,
     }).format(price);
   };
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
+  const renderStars = (...args: unknown[]): unknown => {
+    return Array.from{ length: 5 }, (_, i (
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -430,7 +431,7 @@ export default function MarketplaceProducts() {
     ));
   };
 
-  return (
+  return 
     <div className="min-h-screen bg-futuristic">
       <SEO
         title="Marketplace Products - Zion Tech Group"
@@ -481,7 +482,7 @@ export default function MarketplaceProducts() {
               {/* View Mode Toggle */}
               <div className="flex bg-zion-slate-light/10 rounded-lg p-1 border border-zion-slate-light/20">
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={: unknown setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-200 ${
                     viewMode === 'grid'
                       ? 'bg-zion-cyan text-white'
@@ -491,7 +492,7 @@ export default function MarketplaceProducts() {
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={: unknown setViewMode('list')}
                   className={`p-2 rounded-md transition-all duration-200 ${
                     viewMode === 'list'
                       ? 'bg-zion-cyan text-white'
@@ -517,7 +518,7 @@ export default function MarketplaceProducts() {
 
               {/* Filters Toggle */}
               <button
-                onClick={() => setShowFilters(!showFilters)}
+                onClick={: unknown setShowFilters(!showFilters)}
                 className="flex items-center gap-2 px-4 py-2 bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30 rounded-lg hover:bg-zion-cyan/30 transition-all duration-200"
               >
                 <Filter className="w-4 h-4" />
@@ -532,7 +533,7 @@ export default function MarketplaceProducts() {
           </div>
 
           {/* Expanded Filters */}
-          {showFilters && (
+          {showFilters && 
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
@@ -580,7 +581,7 @@ export default function MarketplaceProducts() {
                 {/* Clear Filters */}
                 <div className="flex items-end">
                   <button
-                    onClick={() => {
+                    onClick={: unknown {
                       setSelectedCategory('all');
                       setSelectedPriceRange('all');
                       setSearchQuery('');

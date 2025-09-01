@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to recursively find all files
+// Function to recursively find all files;
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -17,7 +17,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   
   return results}
 
-// Function to fix syntax errors in a file
+// Function to fix syntax errors in a file;
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');

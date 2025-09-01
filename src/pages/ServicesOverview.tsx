@@ -116,7 +116,7 @@ const categoryColors: Record < string, string> = {
   Innovation: 'from - yellow - 600 to - orange - 600',
   'Emerging Tech': 'from - purple - 600 to - indigo - 600',
 };
-
+;
 const serviceCategories = [
   {
     name: 'AI & Machine Learning',

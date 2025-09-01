@@ -33,7 +33,7 @@ const Skeleton: React.FC < SkeletonProps> = ({
   return (<motion.div
       className={classes}
       animate={{
-        opacity: [0.5, 1, 0.5],
+        opacity: [0.5, 1, 0.5]
       }}
       transition={{
         duration: 1.5,

@@ -11,26 +11,21 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
   animated?: boolean;
 
 }
-
-export const Skeleton: React.FC<SkeletonProps> = ({ 
-  className = '', 
-  count = 1, 
-  height = 'h-4', 
-  width = 'w-full', 
-  rounded = 'rounded',
-  animated = true
-}) => {
+;
+export const Skeleton: React.FC<SkeletonProps> = { 
+  className = '': unknown, count = 1: unknown, height = 'h-4': unknown, width = 'w-full': unknown, rounded = 'rounded': unknown, animated = true
+}: unknown {
   const baseClasses = `bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${height} ${width} ${rounded} ${className}`;
   
   if (animated) {
     return (
       <>
-        {Array.from({ length: anycount }).map((_, index)  => (
+        {Array.from({ length: anycount }).map(_: unknown, index: unknown (
           <motion.div
             key={index}
             className={`animate-pulse ${baseClasses}`}
             animate={{
-              opacity: [0.5, 1, 0.5],
+              opacity: [0.5, 1, 0.5]
             }}
             transition={{
               duration: any1.5,;
@@ -45,7 +40,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   
   return (
     <>
-      {Array.from({ length: count }).map((_, index)  => (
+      {Array.from({ length: count }).map(_: unknown, index: unknown (
         <div
           key={index}
           className={`animate-pulse ${baseClasses}`}
@@ -54,7 +49,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
     </>
   );
 };
-
+;
 export const CardSkeleton: React.FC = (): JSX.Element => (
   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-pulse">
     <div className="flex items-center space-x-4 mb-4">
@@ -69,7 +64,7 @@ export const CardSkeleton: React.FC = (): JSX.Element => (
     <Skeleton height="h-4" width="w-4/6" />
   </div>
 );
-
+;
 export const HeroSkeleton: React.FC = (): JSX.Element => (
   <div className="animate-pulse">
     <div className="h-96 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded-lg mb-8"></div>
@@ -83,7 +78,7 @@ export const HeroSkeleton: React.FC = (): JSX.Element => (
     </div>
   </div>
 );
-
+;
 export const ServiceCardSkeleton: React.FC = (): JSX.Element => (
   <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 animate-pulse">
     <div className="w-16 h-16 bg-gray-300 rounded-lg mb-4"></div>
@@ -104,14 +99,14 @@ interface TableSkeletonProps extends React.PropsWithChildren<{}> {
   className?: string;
 
 }
-
-export function TableSkeleton(...args: any[]): any {
+;
+export function TableSkeleton(...args: unknown[]): unknown {
   return (
     <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
       {/* Header */}
       <div className="bg-gray-50 dark:bg-gray-700 px-6 py-4 border-b border-gray-200 dark:border-gray-600">
         <div className="flex space-x-4">
-          {Array.from({ length: anycolumns }).map((_, index)  => (
+          {Array.from({ length: anycolumns }).map(_: unknown, index: unknown (
             <Skeleton key={index} className="h-4 flex-1" />
           ))}
         </div>
@@ -119,10 +114,10 @@ export function TableSkeleton(...args: any[]): any {
       
       {/* Rows */}
       <div className="divide-y divide-gray-200 dark: anydivide-gray-600">
-        {Array.from({ length: rows }).map((_, rowIndex)  => (
+        {Array.from({ length: rows }).map(_: unknown, rowIndex: unknown (
           <div key={rowIndex} className="px-6 py-4">
             <div className="flex space-x-4">
-              {Array.from({ length: anycolumns }).map((_, colIndex)  => (
+              {Array.from({ length: anycolumns }).map(_: unknown, colIndex: unknown (
                 <Skeleton 
                   key={colIndex} 
                   className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} 
@@ -143,11 +138,11 @@ interface ListSkeletonProps extends React.PropsWithChildren<{}> {
   showAvatar?: boolean;
 
 }
-
-export function ListSkeleton(...args: any[]): any {
+;
+export function ListSkeleton(...args: unknown[]): unknown {
   return (
     <div className={`space-y-4 ${className}`}>
-      {Array.from({ length: anyitems }).map((_, index)  => (
+      {Array.from({ length: anyitems }).map(_: unknown, index: unknown (
         <div key={index} className="flex items-center space-x-4 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
           {showAvatar && (
             <Skeleton className="w-12 h-12 rounded-full flex-shrink-0" />
@@ -170,11 +165,11 @@ interface GridSkeletonProps extends React.PropsWithChildren<{}> {
   showImage?: boolean;
 
 }
-
-export function GridSkeleton(...args: any[]): any {
+;
+export function GridSkeleton(...args: unknown[]): unknown {
   return (
     <div className={`grid grid-cols-1 sm: anygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
-      {Array.from({ length: items }).map((_, index)  => (
+      {Array.from({ length: items }).map(_: unknown, index: unknown (
         <CardSkeleton 
           key={index} 
         />

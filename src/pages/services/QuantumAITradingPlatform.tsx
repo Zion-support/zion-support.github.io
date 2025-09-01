@@ -40,11 +40,7 @@ import {
   PieChart,
 } from 'lucide-react.ts';
 
-export default function QuantumAITradingPlatform(...args: any[]): any {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
+  useEffect(: unknown {
     setIsVisible(true);
   }, []);
 
@@ -114,7 +110,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
 
         {/* Floating particles with neon glow */}
         <div className="absolute inset-0">
-          {[...Array(25)].map((_, i) => (
+          {[...Array(25)].map(_: unknown, i: unknown (
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-purple-400 rounded-full opacity-80 shadow-lg shadow-purple-400/50"
@@ -122,7 +118,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                 x: [0, 120, 0],
                 y: [0, -120, 0],
                 opacity: [0.4, 1, 0.4],
-                scale: [0.5, 1.5, 0.5],
+                scale: [0.5, 1.5, 0.5]
               }}
               transition={{
                 duration: 3 + i * 0.2,
@@ -132,7 +128,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
               }}
               style={{
                 left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
               }}
             />
           ))}
@@ -143,7 +139,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
           className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.2, 0.5, 0.2],
+            opacity: [0.2, 0.5, 0.2]
           }}
           transition={{
             duration: 4,
@@ -156,7 +152,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
           className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.5, 0.2, 0.5],
+            opacity: [0.5, 0.2, 0.5]
           }}
           transition={{
             duration: 5,
@@ -351,7 +347,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
               </motion.div>
             )}
 
-            {activeTab === 'features' && (
+            {activeTab === 'features' && 
               <motion.div
                 key="features"
                 initial={{ opacity: 0, y: 20 }}
@@ -513,7 +509,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
               </motion.div>
             )}
 
-            {activeTab === 'technical' && (
+            {activeTab === 'technical' && 
               <motion.div
                 key="technical"
                 initial={{ opacity: 0, y: 20 }}

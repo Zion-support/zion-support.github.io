@@ -4,10 +4,14 @@ export default React.memo (function Layout (...args[]) :  {
 
 
 interface LayoutProps {
-  children: ReactNode;
+  // Add your props here
 
+
+  children: ReactNode;
+;
 const navigation: NavItem[] = [;
-  { label: 'Home', href: '/' },
+  { label: 'Home', href: '/' 
+},
   {
     label: 'Services',
     href: '/services',
@@ -122,4 +126,6 @@ const navigation: NavItem[] = [;
         </main>;
       </div>;
     </div>;) ;
+}
+
 }

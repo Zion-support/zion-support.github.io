@@ -88,7 +88,7 @@ import { motion, AnimatePresence } from 'framer - motion';
     setFilteredPricing (pricing) ;
   }, [selectedCategory, searchQuery]) ;
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     switch (category) {;
       case 'Cybersecurity':;
         return Shield;

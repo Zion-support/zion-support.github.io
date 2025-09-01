@@ -24,6 +24,7 @@ function Accessibility () {
   Moon,
   Settings
 interface AccessibilitySettings {
+
   fontSize: number;
   highContrast: boolean;
   reducedMotion: boolean;
@@ -71,7 +72,7 @@ interface AccessibilitySettings {
     return () => document.removeEventListener ('keydown', handleKeyDown) ;
   }, []) ;
 
-  const applySettings = (newSettings: AccessibilitySettings) => {;
+  const applySettings = (...args: unknown[]): unknown => {;
     const root = document.documentElement;
 
     // Apply font size
@@ -101,7 +102,7 @@ interface AccessibilitySettings {
 
   };
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = (...args: unknown[]): unknown => {
     const newSettings = {
   ...settings,;
   ;
@@ -117,19 +118,19 @@ interface AccessibilitySettings {
     localStorage.setItem ('accessibility - settings', JSON.stringify (newSettings) ) ;
   };
 
-  const increaseFontSize = () => {;
+  const increaseFontSize = (...args: unknown[]): unknown => {;
     if (settings.fontSize < 24) {;
       updateSetting ('fontSize', settings.fontSize + 2) ;
 
   };
 
-  const decreaseFontSize = () => {;
+  const decreaseFontSize = (...args: unknown[]): unknown => {;
     if (settings.fontSize > 12) {;
       updateSetting ('fontSize', settings.fontSize - 2) ;
 
   };
 
-  const resetSettings = () => {
+  const resetSettings = (...args: unknown[]): unknown => {
     const defaultSettings: AccessibilitySettings = {
   fontSize: 16,
       highContrast: false,

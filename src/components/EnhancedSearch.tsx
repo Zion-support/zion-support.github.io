@@ -11,6 +11,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 interface SearchResult {
 
+
   id: string;
   title: string;
   description: string;
@@ -24,23 +25,31 @@ interface SearchResult {
 
 interface SearchFilter {
 
+
   type: string[];
   category: string[];
   tags: string[];
+
 }
 
 interface SearchSuggestion {
+
   text: string;
   type: 'recent' | 'trending' | 'ai';
+
 }
 
 interface EnhancedSearchProps {
+  // Add your props here
+
+
   className?: string;
   placeholder?: string;
-  onSearch?: (query: string) => void;
+  onSearch?: query: string void;
   variant?: 'default' | 'futuristic' | 'minimal';
-}
 
+}
+;
 const searchData: SearchResult[] = [
   // Services
   {
@@ -105,7 +114,7 @@ const searchData: SearchResult[] = [
     relevance: 75
 
 ];
-
+;
 const categories = [
   { id: 'ai - solutions', name: 'AI Solutions', icon: Code, color: 'from - cyan - 500 to - blue - 600' },;
   { id: 'cloud - devops', name: 'Cloud & DevOps', icon: Globe, color: 'from - blue - 500 to - purple - 600' },;
@@ -133,7 +142,7 @@ const categories = [
   const [showFilters, setShowFilters] = useState (false) ;
   const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
   
-// Mock suggestions
+// Mock suggestions;
 const mockSuggestions: SearchSuggestion[] = [
   { text: 'AI compliance assistant', type: 'recent' },
   { text: 'Quantum machine learning', type: 'trending' },
@@ -334,7 +343,7 @@ setFilters (prev: > ({;
     setFilters ({ type: [], category: [], tags: [] }) ;
   };
 
-  const getTypeIcon = (type: string) => {;
+  const getTypeIcon = (...args: unknown[]): unknown => {;
     switch (type) {;
       case 'service': return < Code className="h - 4 w - 4" />;
       case 'page': return < Globe className="h - 4 w - 4" />;
@@ -353,7 +362,7 @@ setFilters (prev: > ({;
     setSelectedIndex (-1) ;
   };
 
-  const getVariantStyles = () => {
+  const getVariantStyles = (...args: unknown[]): unknown => {
     switch (variant) {
       case 'futuristic':
         return 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 backdrop - blur - sm';
@@ -387,7 +396,7 @@ setFilters (prev: > ({;
 
   };
 
-  const getVariantClasses = () => {;
+  const getVariantClasses = (...args: unknown[]): unknown => {;
     switch (variant) {;
       case 'futuristic':;
         return 'bg - gradient - to - r from - purple - 500 / 10 to - blue - 500 / 10 border border - purple - 500 / 20 hover:border - purple - 500 / 40 focus - within:border - purple - 500 focus - within:ring - 2 focus - within:ring - purple - 500 / 20';
@@ -600,4 +609,6 @@ setFilters (prev: > ({;
           </motion.div>;) };
       </AnimatePresence>;
     </div>;) ;
+}
+
 }

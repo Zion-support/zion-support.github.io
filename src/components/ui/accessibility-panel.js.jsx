@@ -428,4 +428,5 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
         `
         }}/>
     </>)};
+export { AccessibilityPanel };
 export default AccessibilityPanel;

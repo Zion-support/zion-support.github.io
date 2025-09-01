@@ -43,7 +43,7 @@ import { motion } from 'framer - motion';
     technologies["Polkadot", "Cosmos", "LayerZero", "Wormhole"]
   }
 ];
-
+;
 const blockchainTechnologies = [
   {
     name: "Ethereum",
@@ -74,7 +74,7 @@ const blockchainTechnologies = [
     reliability: "Medium"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -104,7 +104,7 @@ const successStories = [
     logo: "MN"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -135,7 +135,7 @@ const processSteps = [
     duration: "2 - 4 weeks"
 
 ];
-
+;
 const blockchainBenefits = [
   {
     title: "Transparency",

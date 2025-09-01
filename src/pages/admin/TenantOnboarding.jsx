@@ -11,6 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Switch } from "@/components/ui/switch";
+export { function };
 export default function TenantOnboarding() {
     const { user } = useAuth();
     const [activeTab, setActiveTab] = useState("comp");
@@ -41,3 +42,14 @@ export default function TenantOnboarding() {
             const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
             // Create landing page copy
             const landingPageCopy = {
+
+
+
+
+}
+
+
+}
+
+}
+}

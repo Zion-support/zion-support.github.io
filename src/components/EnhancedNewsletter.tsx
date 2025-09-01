@@ -4,11 +4,13 @@ import { motion  } from 'framer - motion.ts';
 
 interface NewsletterFormData {
 
+
   email: string;
   firstName: string;
   interests: string[];
-  frequency: 'weekly' | 'monthly' | 'quarterly'}
-
+  frequency: 'weekly' | 'monthly' | 'quarterly'
+}
+;
 const interests = [;
   { id: 'ai - solutions', label: 'AI Solutions', icon: Zap },;
   { id: 'cloud - services', label: 'Cloud Services', icon: Shield },;
@@ -17,7 +19,7 @@ const interests = [;
   { id: 'it - consulting', label: 'IT Consulting', icon: Gift },;
   { id: 'industry - insights', label: 'Industry Insights', icon: Zap };
 ];
-
+;
 const frequencies = [;
   { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
   { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;

@@ -584,7 +584,7 @@ import { motion } from 'framer - motion';
     technologies["Computer Vision", "Robotics", "AI", "Medical Imaging"]
   }
 ];
-
+;
 const autonomousTechnologies = [
   {
     name: "Computer Vision",
@@ -615,7 +615,7 @@ const autonomousTechnologies = [
     reliability: "Critical"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -645,7 +645,7 @@ const successStories = [
     logo: "AC"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -676,7 +676,7 @@ const processSteps = [
     duration: "8 - 16 weeks"
 
 ];
-
+;
 const autonomousBenefits = [
   {
     title: "Increased Efficiency",

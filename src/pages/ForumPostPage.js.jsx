@@ -47,7 +47,7 @@ const mockPost = {
     authorAvatar: "https://i.pravatar.cc / 150?img = 3",
     authorRole: "Verified Talent"
 };
-// Mock data for replies
+// Mock data for replies;
 const mockReplies = [
     {
         id: "reply1",

@@ -254,5 +254,6 @@ const AIPoweredSecurity = () => {
       </section>
     </div>);
 };
+export { AIPoweredSecurity };
 export default AIPoweredSecurity;
 }}}}

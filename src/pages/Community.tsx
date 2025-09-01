@@ -222,6 +222,7 @@ import { SEO } from "../components / SEO";
               Connect with technology professionals, share knowledge, and stay ahead of industry trends.
 
 interface CommunityPost {
+
   id: string;
   title: string;
   content: string;
@@ -230,7 +231,8 @@ interface CommunityPost {
     avatar: string;
     role: string;
     verified: boolean;
-  };
+  
+};
   category: string;
   tags: string[];
   likes: number;
@@ -242,14 +244,14 @@ interface CommunityPost {
 }
 
 interface CommunityCategory {
+
   id: string;
   name: string;
   description: string;
-  icon: any;
+  icon: unknown;
   color: string;
   postCount: number;
   topics: string[];
-}
 
 const Community: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState ('') ;
@@ -883,4 +885,11 @@ const Community: React.FC = () => {
         </motion.div>;
       </div>;
     </div>;) ;
+}
+
+
+
+}
+
+}
 }

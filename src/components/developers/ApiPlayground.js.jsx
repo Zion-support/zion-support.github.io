@@ -31,8 +31,8 @@ export function ApiPlayground({ method, path, params = [] }) {
                 Authorization: `Bearer ${apiKey
 
 }`,
-                "Content-Type": "application/json",
-            },
+                "Content-Type": "application/json"
+            }
         };
         if (method !== "GET" && method !== "DELETE") {
             try {
@@ -63,8 +63,9 @@ export function ApiPlayground({ method, path, params = [] }) {
         {loading ? "Sending..." : "Send Request"}
       </Button>
       {response && <CodeBlock code={response} language="json"/>}
-    </div>)}
+    </div>)};
+export { ApiPlayground };
 export default ApiPlayground;
-
+;
 export default ApiPlayground;
 export default ApiPlayground;

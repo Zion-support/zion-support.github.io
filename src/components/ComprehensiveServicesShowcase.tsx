@@ -35,6 +35,7 @@ import { motion } from 'framer - motion';
 } from 'lucide - react';
 interface Service {
 
+
   id: string;
   title: string;
   description: string;
@@ -56,7 +57,8 @@ interface Service {
 contactInfo: {
     phone: string;
     email: string;
-    website: string};
+    website: string
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];

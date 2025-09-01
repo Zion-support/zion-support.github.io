@@ -4,13 +4,13 @@ import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from "../../data/inno
   maxServices?: number;
   category?: string;
   showViewAllButton?: boolean}
-
-const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
+;
+const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = {
 maxServices:  6,;
   category,;
   showViewAllButton = true;
-}) => {;
-  const [activeTab, setActiveTab] = useState('featured');
+} {;
+  const [activeTab, setActiveTab] = useState<typeof 'featured'>('featured');
 
   const tabs = [;
     { id: 'featured', label: 'Featured', count: 3 },;
@@ -21,7 +21,7 @@ maxServices:  6,;
     { id: 'development', label: 'Development', count: getServicesByCategory('Development').length };
   ];
 
-  const filteredServices = useMemo(() => {;
+  const filteredServices = useMemo(: unknown {;
     let services = INNOVATIVE_SERVICES_2025;
 
     if (category) {
@@ -53,7 +53,7 @@ maxServices:  6,;
     return services.slice(0, maxServices);
   }, [activeTab, category, maxServices]);
 
-  const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
+  const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = { service }: unknown (
     <div className = "bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
       <div className="flex items-start justify-between mb-3">
         <h3 className="text-lg font-semibold text-gray-900">{service.title}</h3>
@@ -75,7 +75,7 @@ maxServices:  6,;
       <div className="mb-3">
         <h4 className="font-medium text-gray-900 text-sm mb-2">Key Features:</h4>
         <ul className="text-xs text-gray-600 space-y-1">
-          {service.features.slice(0, 2).map((feature, index) => (
+          {service.features.slice(0, 2).map(feature: unknown, index: unknown (
             <li key={index} className="flex items-center">
               <span className="text-green-500 mr-1">✓</span>
               {feature}
@@ -102,8 +102,8 @@ maxServices:  6,;
     </div>;
   );
 
-  const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
-  const avgRating = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.rating, 0) / totalServices;
+  const totalValue = INNOVATIVE_SERVICES_2025.reduce(sum: unknown, service: unknown sum + service.price, 0);
+  const avgRating = INNOVATIVE_SERVICES_2025.reduce(sum: unknown, service: unknown sum + service.rating, 0) / totalServices;
 
   return (
     <div className = "bg-gray-50 py-16">
@@ -157,13 +157,11 @@ maxServices:  6,;
         </div>
 
         {/* Tabs */}
-        {!category && (
-          <div className="mb-8">
+        {!category && <div className="mb-8">
             <div className="flex flex-wrap justify-center gap-2">
-              {tabs.map((tab) => (
-                <button
+              {tabs.map((tab: unknown <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
+                  onClick={(: unknown setActiveTab(tab.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     activeTab === tab.id
                       ? 'bg-blue-600 text-white'
@@ -180,7 +178,7 @@ maxServices:  6,;
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {filteredServices.map((service)  => (
+          {filteredServices.map(service: unknown (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
@@ -220,5 +218,6 @@ maxServices:  6,;
     </div>;
   );
 };
-
+;
+export { InnovativeServicesOverview };
 export default InnovativeServicesOverview;}}}

@@ -7,6 +7,7 @@ import { SEO } from "../components / SEO";
 
 interface DemoFormData {
 
+
   firstName: string;
   lastName: string;
   email: string;

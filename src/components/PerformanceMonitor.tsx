@@ -10,9 +10,13 @@ interface PerformanceMetrics {
   fid: number; // First Input Delay
   cls: number; // Cumulative Layout Shift
   ttfb: number; // Time to First Byte
+
 }
 
 interface PerformanceMonitorProps {
+  // Add your props here
+
+
   showDetails?: boolean;
   threshold?: {
     fcp: number;
@@ -20,7 +24,8 @@ interface PerformanceMonitorProps {
     fid: number;
     cls: number;
     ttfb: number;
-  };
+  
+};
 }
 
   showDetails = false,

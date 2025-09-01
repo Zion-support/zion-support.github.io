@@ -40,7 +40,7 @@ const categoryColors: { [key: string]: string } = {
   'Sports Technology & Analytics': 'from - green - 600 to - blue - 700',
   'Entertainment & Media Technology': 'from - purple - 600 to - pink - 700'
 };
-
+;
 const features = [
   "AI - Powered Automation",
   "Real - time Analytics",
@@ -55,7 +55,7 @@ const features = [
   "SOC 2 Type II Compliant",;
   "30 - Day Money Back Guarantee";
 ];
-
+;
 const benefits = [
   {
     icon: <Zap className="h - 6 w - 6"/>,
@@ -78,7 +78,7 @@ const benefits = [
     description: "30 - day money - back guarantee with free migration support";
   };
 ];
-
+;
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',

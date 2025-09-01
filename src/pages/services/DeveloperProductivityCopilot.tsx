@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { SEO } from '@/components/SEO';
 
 const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO
         title="Developer Productivity Copilot - Zion Tech Group"
@@ -73,5 +73,6 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { DeveloperProductivityCopilot };
 export default DeveloperProductivityCopilot;

@@ -83,7 +83,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {
     'Customer insights',
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">

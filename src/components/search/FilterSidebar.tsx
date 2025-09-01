@@ -3,34 +3,31 @@ import { Filter, X  } from 'lucide-react';
 
 interface FilterOption {
 
+
   value: string;
   label: string;
-  count?: number}
+  count?: number
+}
 
 interface FilterGroup {
+
 
   title: string;
   key: string;
   options: FilterOption[];
-  type: 'checkbox' | 'radio' | 'range'}
+  type: 'checkbox' | 'radio' | 'range'
+}
 
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
 
   filters: FilterGroup[];
   selectedFilters: Record<string, any>;
-  onFilterChange: (key: string, value: string, checked: boolean)  => void;
-  onClearFilters: ()  => void;
+  onFilterChange: key: string, value: string, checked: boolean void;
+  onClearFilters: : unknown void;
   isOpen: boolean;
-  onClose: ()  => void}
-
-export function FilterSidebar({
-  filters,
-  selectedFilters,
-  onFilterChange,
-  onClearFilters,
-  isOpen,
-  onClose
-}: FilterSidebarProps) {
+  onClose: : unknown void}
+;
+export function FilterSidebar(...args: unknown[]): unknown {
   return (
     <>
       {/* Mobile overlay */}
@@ -72,15 +69,15 @@ export function FilterSidebar({
           </div>
 
           {/* Filter groups */}
-          {filters.map((group) => (;
+          {filters.map(group: unknown ;
             <div key={group.key} className="space-y-3">;
               <h4 className="font-medium text-white">{group.title}</h4>;
               ;
               <div className="space-y-2">;
-                {group.options.map((option) => {;
+                {group.options.map((option: unknown {;
                   const isSelected = selectedFilters[group.key]?.includes(option.value) || false;
 
-                  return (
+                  return 
                     <label key = {option.value} className="flex items-center gap-3 cursor-pointer">
                       <input
                         type={group.type === 'radio' ? 'radio' : 'checkbox'}
@@ -88,7 +85,7 @@ export function FilterSidebar({
                         value={option.value}
                         checked={isSelected}
                         onChange = {
-  (e) => onFilterChange(group.key, option.value,
+  (e onFilterChange(group.key, option.value,
   e.target.checked)
 
 

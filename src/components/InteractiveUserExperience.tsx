@@ -27,6 +27,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui / tabs';
 } from 'lucide - react';
 
 interface UserPreference {
+
   id: string;
   name: string;
   value: string | boolean | number;
@@ -34,24 +35,27 @@ interface UserPreference {
   options?: string[];
   category: 'appearance' | 'accessibility' | 'performance' | 'language';
   description: string;
+
 }
 
 interface UserActivity {
+
   id: string;
   action: string;
   timestamp: Date;
   duration?: number;
   success: boolean;
   category: 'navigation' | 'interaction' | 'search' | 'purchase';
+
 }
 
 interface AccessibilityFeature {
+
   id: string;
   name: string;
   enabled: boolean;
   description: string;
   impact: 'high' | 'medium' | 'low';
-}
 
 const InteractiveUserExperience: React.FC = () => {
   const [preferences, setPreferences] = useState < UserPreference[]> ([]) ;
@@ -177,7 +181,7 @@ const InteractiveUserExperience: React.FC = () => {
         feature.id === id ? { ...feature, enabled: !feature.enabled } : feature) ) ;
   }, []) ;
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     switch (category) {
       case 'appearance': return < Palette className="w - 4 h - 4" />;
       case 'accessibility': return < Accessibility className="w - 4 h - 4" />;
@@ -187,7 +191,7 @@ const InteractiveUserExperience: React.FC = () => {
     }
   };
 
-  const getActivityIcon = (category: string) => {
+  const getActivityIcon = (...args: unknown[]): unknown => {
     switch (category) {
       case 'navigation': return < MousePointer className="w - 4 h - 4" />;
       case 'interaction': return < User className="w - 4 h - 4" />;
@@ -197,7 +201,7 @@ const InteractiveUserExperience: React.FC = () => {
     }
   };
 
-  const getImpactColor = (impact: string) => {
+  const getImpactColor = (...args: unknown[]): unknown => {
     switch (impact) {
       case 'high': return 'bg - red - 500';
       case 'medium': return 'bg - yellow - 500';

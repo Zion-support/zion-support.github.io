@@ -55,7 +55,7 @@ const contactMethods = [
     color: 'from - orange - 500 to - red - 500',
   },
 ];
-
+;
 const socialLinks = [
   {
     name: 'LinkedIn',
@@ -88,7 +88,7 @@ const socialLinks = [
     color: 'hover:text - gray - 400',
   },
 ];
-
+;
 const contactFormFields = [
   {
     name: 'firstName',

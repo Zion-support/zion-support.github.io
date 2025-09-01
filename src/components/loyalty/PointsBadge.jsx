@@ -58,3 +58,5 @@ export function PointsBadge() {
         <DropdownMenuItem onSelect={handleLogout}>Logout</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>)}
+
+}

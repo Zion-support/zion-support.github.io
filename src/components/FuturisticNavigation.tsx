@@ -397,7 +397,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                   </motion.button>
                   {/* Enhanced Dropdown Menu */}
                   <AnimatePresence>
-                    {activeDropdown === category.name && (;
+                    {activeDropdown === category.name && ;
                       <motion.div
                         initial = {
   { opacity: 0, y: -10,
@@ -508,3 +508,5 @@ import { motion, AnimatePresence } from 'framer - motion';
       </header>;
     </>;) ;
 };
+
+}

@@ -1,5 +1,5 @@
 import { ProductListing } from "@/types/listings";
-
+;
 export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
   // AI-Powered Micro SAAS Services
   {
@@ -605,10 +605,10 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["SQL Databases", "NoSQL Databases", "Cloud Storage", "CRM Systems", "ERP Systems"]
   }
 ];
-export const getComprehensivePricingGuide2027 = () => comprehensivePricingGuide2027;
-export const getComprehensivePricingGuide2027ByCategory = (category: string) =>
+export const getComprehensivePricingGuide2027 = : unknown comprehensivePricingGuide2027;
+export const getComprehensivePricingGuide2027ByCategory = category: string
   comprehensivePricingGuide2027.filter(item => item.category === category);
-export const getComprehensivePricingGuide2027ById = (id: string) =>
+export const getComprehensivePricingGuide2027ById = id: string
   comprehensivePricingGuide2027.find(item => item.id === id);
 export const pricingCategories2027 = [;
   'Metaverse Solutions',;
@@ -618,3 +618,5 @@ export const pricingCategories2027 = [;
   'Fusion Energy Solutions';
 ];
 export const pricingSubcategories2027 = {
+
+}

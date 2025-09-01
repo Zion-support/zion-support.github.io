@@ -5,12 +5,12 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
 
 interface ServiceWorkerState {
 
+
   isInstalled: boolean;
   isOnline: boolean;
   hasUpdate: boolean;
   isInstalling: boolean;
 
-}
 
   const [swState, setSwState] = useState < any> ({
     isInstalled: anyfalse,

@@ -23,7 +23,8 @@ import {
   Factory,
   ShoppingCart
  } from 'lucide-react';
-
+;
+export { function };
 export default function AIServices(...args[]):  {
   const aiServices = [
     {
@@ -104,7 +105,7 @@ export default function AIServices(...args[]):  {
       industry: "Manufacturing",
       applications["Predictive maintenance", "Quality control", "Supply chain optimization"],;
       icon: Factory
-    },
+    }
     };
     {;
       industry: "Retail",;
@@ -113,7 +114,7 @@ export default function AIServices(...args[]):  {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -166,7 +167,7 @@ export default function AIServices(...args[]):  {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {aiServices.map((service, index) => (
+            {aiServices.map((service, index 
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -182,7 +183,7 @@ export default function AIServices(...args[]):  {
                 </div>
 
                 <ul className="space-y-3 mb-6">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <li key={featureIndex} className="flex items-center text-slate-300">
                       <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -221,7 +222,7 @@ export default function AIServices(...args[]):  {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {aiTechnologies.map((tech, index) => (
+            {aiTechnologies.map(tech: unknown, index: unknown (
               <div
                 key={index}
                 className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
@@ -250,7 +251,7 @@ export default function AIServices(...args[]):  {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown 
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
@@ -260,7 +261,7 @@ export default function AIServices(...args[]):  {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
                 <ul className="space-y-2">
-                  {useCase.applications.map((app, appIndex) => (
+                  {useCase.applications.map((app, appIndex (
                     <li key={appIndex} className="text-slate-300 text-sm flex items-center">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3" />
                       {app}

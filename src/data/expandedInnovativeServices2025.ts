@@ -1,5 +1,6 @@
 export interface ExpandedInnovativeService {
 
+
   id: string;
   title: string;
   description: string;
@@ -21,14 +22,15 @@ export interface ExpandedInnovativeService {
 contactInfo: {
     phone: string;
     email: string;
-    website: string};
+    website: string
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
     security: string[]}}
-
+;
 export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
   // AI-Powered Cybersecurity Threat Intelligence
   {
@@ -1347,5 +1349,27 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     }
   }
 ];
-
+;
+export { EXPANDED_INNOVATIVE_SERVICES_2025 };
 export default EXPANDED_INNOVATIVE_SERVICES_2025;}}
+
+
+
+
+
+}
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

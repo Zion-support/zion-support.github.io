@@ -9,7 +9,7 @@ import {
 } from 'lucide-react.ts';
 
 const AISEOAuditor: React.FC = (): JSX.Element => {
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO
         title="AI SEO Auditor - Zion Tech Group"
@@ -82,5 +82,6 @@ const AISEOAuditor: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { AISEOAuditor };
 export default AISEOAuditor;

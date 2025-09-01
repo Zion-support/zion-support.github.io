@@ -23,8 +23,8 @@ import { Workflow,
   Server,
   ShoppingCart
  } from 'lucide-react.ts';
-
-const AIWorkflowOrchestrator = () => {
+;
+const AIWorkflowOrchestrator = (...args: unknown[]): unknown => {
   const features = [
     {
       icon: Brain,
@@ -135,7 +135,7 @@ const AIWorkflowOrchestrator = () => {
     };
   ];
 
-  return (
+  return 
     <>
       <Helmet>
         <title>AI Workflow Orchestrator - Zion Tech Group | Intelligent Process Automation</title>
@@ -236,7 +236,7 @@ const AIWorkflowOrchestrator = () => {
               </h2>
               
               <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index)  => (
+                {features.map((feature, index (
                   <motion.div
                     key={feature.title}
                     initial = {
@@ -323,7 +323,7 @@ const AIWorkflowOrchestrator = () => {
               </h2>
               
               <div className="grid grid-cols-1 md: anygrid-cols-2 gap-6">
-                {benefits.map((benefit, index)  => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <motion.div
                     key={benefit}
                     initial = {
@@ -407,7 +407,7 @@ const AIWorkflowOrchestrator = () => {
               </h2>
               
               <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-                {useCases.map((useCase, index)  => (
+                {useCases.map(useCase: unknown, index: unknown (
                   <motion.div
                     key={useCase.title}
                     initial = {
@@ -494,7 +494,7 @@ const AIWorkflowOrchestrator = () => {
               </h2>
               
               <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-                {pricing.map((plan, index)  => (
+                {pricing.map(plan: unknown, index: unknown (
                   <motion.div
                     key={plan.name}
                     initial = {
@@ -551,7 +551,7 @@ const AIWorkflowOrchestrator = () => {
                     </div>
                     
                     <ul className="space-y-3 mb-6">
-                      {plan.features.map((feature, idx) => (
+                      {plan.features.map(feature: unknown, idx: unknown (
                         <li key={idx} className="flex items-center gap-2">
                           <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                           <span className="text-slate-700 text-sm">{feature}</span>
@@ -630,5 +630,6 @@ const AIWorkflowOrchestrator = () => {
     </>;
   );
 };
-
+;
+export { AIWorkflowOrchestrator };
 export default AIWorkflowOrchestrator;

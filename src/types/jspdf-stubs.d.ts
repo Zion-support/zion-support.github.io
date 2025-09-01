@@ -19,13 +19,16 @@ declare module 'jspdf' {
 
 declare module 'jspdf-autotable' {
   const autoTable: ;
-  export default autoTable;
+  export { autoTable };
+export default autoTable;
 }
+;
+export default autoTable;
+export default autoTable;
+export default autoTable;
+export default autoTable;
+export default autoTable;
+export default autoTable;
+export default autoTable;
 
-export default autoTable;
-export default autoTable;
-export default autoTable;
-export default autoTable;
-export default autoTable;
-export default autoTable;
-export default autoTable;
+}

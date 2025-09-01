@@ -138,7 +138,7 @@ const ServicesPricingPage: React.FC = () => {
     },
   ];
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
       'AI Automation': <Zap className="h - 5 w - 5" />,
       'Customer Intelligence': <Users className="h - 5 w - 5" />,

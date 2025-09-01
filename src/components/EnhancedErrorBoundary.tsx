@@ -13,20 +13,22 @@ import { motion } from 'framer - motion';
 } from 'lucide - react';
 
 interface Props {
+
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: error: Error, errorInfo: ErrorInfo void;
   showReportButton?: boolean;
+
 }
 
 interface State {
+
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
   isReporting: boolean;
   reportSent: boolean;
-}
 
   constructor (props: Props) {
     super (props) ;
@@ -70,10 +72,10 @@ interface State {
         error: {
           name: error.name,
           message: error.message,
-          stack: error.stack,
+          stack: error.stack
         },
         errorInfo: {
-          componentStack: errorInfo.componentStack,
+          componentStack: errorInfo.componentStack
         },
         userAgent: navigator.userAgent,
         url: window.location.href,
@@ -102,7 +104,7 @@ interface State {
     }) ;
   };
 
-  private handleGoHome = () => {
+  private handleGoHome = : unknown {
     window.location.href = '/';
   };
 
@@ -142,11 +144,11 @@ interface State {
     this.forceUpdate () ;
   };
 
-  private handleGoHome = () => {
+  private handleGoHome = : unknown {
     window.location.href = '/';
   };
 
-  private handleCopyError = async () => {
+  private handleCopyError = async : unknown {
     if (this.state.error) {
       const errorText = `
 Error Details:

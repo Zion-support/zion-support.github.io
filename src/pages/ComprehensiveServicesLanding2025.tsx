@@ -73,7 +73,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 
   };
 
-  const getCategoryColor = (category: string) => {;
+  const getCategoryColor = (...args: unknown[]): unknown => {;
     switch (category) {;
       case 'AI & Automation':;
         return 'from - purple - 500 to - pink - 500';

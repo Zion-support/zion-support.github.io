@@ -26,17 +26,21 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide - react';
 
 interface TouchGesture {
+
   type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';
   direction?: 'up' | 'down' | 'left' | 'right';
   distance?: number;
   duration?: number;
+
 }
 
 interface MobileExperienceEnhancerProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showGestures?: boolean;
   enableSwipeNavigation?: boolean;
-}
 
 > = ({
   enabled = true,
@@ -110,7 +114,7 @@ interface MobileExperienceEnhancerProps {
   useEffect ( () => {
     if (!enabled || !enableSwipeNavigation) return;
 
-    const handleTouchStart = (e: TouchEvent) => {
+    const handleTouchStart = (...args: unknown[]): unknown => {
       const touch = e.touches[0];
       setTouchStart ({
         x: touch.clientX,
@@ -123,7 +127,7 @@ interface MobileExperienceEnhancerProps {
       e.preventDefault () ;
     };
 
-    const handleTouchEnd = (e: TouchEvent) => {
+    const handleTouchEnd = (...args: unknown[]): unknown => {
       if (!touchStart) return;
 
       const touch = e.changedTouches[0];

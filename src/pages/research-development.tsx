@@ -154,7 +154,7 @@ const researchAreas = [
     projects: 16;
   };
 ];
-
+;
 const researchProjects = [
   {
     id: 1,
@@ -265,7 +265,7 @@ const researchProjects = [
     color: 'from - purple - 500 to - indigo - 600';
   };
 ];
-
+;
 const publications = [
   {
     id: 1,
@@ -318,7 +318,7 @@ const publications = [
     abstract: 'This paper introduces security - first design patterns for cloud - native applications...';
   };
 ];
-
+;
 const patents = [
   {
     id: 1,

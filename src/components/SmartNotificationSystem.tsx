@@ -42,22 +42,23 @@ import { motion, AnimatePresence } from 'framer - motion';
   actions?: NotificationAction[];
   metadata?: Record < string, any>;
   expiresAt?: Date;
-}
 
   label: string;
-  action: () => void;
+  action: : unknown void;
   variant?: 'primary' | 'secondary' | 'danger';
   icon?: React.ComponentType < any>;
 }
 
 interface SmartNotificationSystemProps {
+  // Add your props here
+
+
   enabled?: boolean;
   maxNotifications?: number;
   autoDismiss?: boolean;
   autoDismissDelay?: number;
   soundEnabled?: boolean;
-  onNotificationAction?: (notification: Notification, action: string) => void;
-}
+  onNotificationAction?: notification: Notification, action: string void;
 
   enabled = true,
   maxNotifications = 5,
@@ -175,7 +176,7 @@ interface SmartNotificationSystemProps {
   }) ;
 
   // Get notification icon
-  const getNotificationIcon = (type: Notification['type']) => {
+  const getNotificationIcon = (...args: unknown[]): unknown => {
     switch (type) {
       case 'success':
         return CheckCircle;
@@ -193,7 +194,7 @@ interface SmartNotificationSystemProps {
   };
 
   // Get priority color
-  const getPriorityColor = (priority: Notification['priority']) => {
+  const getPriorityColor = (...args: unknown[]): unknown => {
     switch (priority) {
       case 'critical':
         return 'text - red - 600 bg - red - 50 dark:bg - red - 900 / 20 border - red - 200 dark:border - red - 800';
@@ -209,7 +210,7 @@ interface SmartNotificationSystemProps {
   };
 
   // Get category icon
-  const getCategoryIcon = (category: Notification['category']) => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     switch (category) {
       case 'user':
         return Eye;

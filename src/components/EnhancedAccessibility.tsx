@@ -37,13 +37,18 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide - react';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
-  keyboardNavigation: boolean}
+  keyboardNavigation: boolean
+}
 
-interface EnhancedAccessibilityProps {;
+interface EnhancedAccessibilityProps {
+  // Add your props here
+
+;
   enabled?: boolean;
   showControls?: boolean;
   className?: string;
@@ -173,7 +178,7 @@ interface EnhancedAccessibilityProps {;
   useEffect ( () => {
     if (!settings.keyboardNavigation) return;
 
-    const handleKeyDown = (e: KeyboardEvent) => {;
+    const handleKeyDown = (...args: unknown[]): unknown => {;
       const target = e.target as HTMLElement;
 
       // Skip if in input / textarea
@@ -214,7 +219,7 @@ modals.forEach (modal:  > {;
   useEffect ( () => {
     if (!settings.keyboardNavigation) return;
 
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (...args: unknown[]): unknown => {
       // Skip to main content
       if (e.key === 'Tab' && e.altKey) {
         e.preventDefault () ;
@@ -243,7 +248,7 @@ modals.forEach (modal:  > {;
 
     };
 
-    const handleFocusOut = (e: FocusEvent) => {;
+    const handleFocusOut = (...args: unknown[]): unknown => {;
       const target = e.target as HTMLElement;
       target.style.outline = '';
       target.style.outlineOffset = '';
@@ -267,7 +272,7 @@ modals.forEach (modal:  > {;
 
     document.body.insertBefore (skipLink, document.body.firstChild) ;
 
-    return () => {
+    return : unknown {
       if (skipLink.parentNode) {
         skipLink.parentNode.removeChild (skipLink) ;
 
@@ -279,7 +284,7 @@ modals.forEach (modal:  > {;
     {
       icon: Contrast,
       label: 'Toggle High Contrast',
-      action: () => {
+      action: : unknown {
         const newSettings = {
   ...settings,;
   ;
@@ -298,7 +303,7 @@ modals.forEach (modal:  > {;
     {
       icon: Type,
       label: 'Toggle Large Text',
-      action: () => {
+      action: : unknown {
         const newSettings = {
   ...settings,;
   ;
@@ -339,7 +344,7 @@ modals.forEach (modal:  > {;
     {
       icon: RotateCcw,
       label: 'Reset Zoom',
-      action: () => {
+      action: : unknown {
         document.documentElement.style.fontSize = '16px';
         announce ('Zoom reset to 100%') ;
       },
@@ -349,7 +354,7 @@ modals.forEach (modal:  > {;
 
   if (!enabled) return null;
   // Screen reader announcements
-  const announceToScreenReader = (message: string) => {
+  const announceToScreenReader = (...args: unknown[]): unknown => {
     if (settings.screenReader) {
       const announcement = document.createElement ('div') ;
       announcement.setAttribute ('aria - live', 'polite') ;
@@ -364,7 +369,7 @@ modals.forEach (modal:  > {;
     }
   };
 
-  const toggleSetting = (key: keyof AccessibilitySettings, value?: any) => {
+  const toggleSetting = (...args: unknown[]): unknown => {
     const newValue = value !== undefined ? value : !settings[key];
     setSettings (prev => ({ ...prev, [key]: newValue }) ) ;
     
@@ -614,7 +619,7 @@ className: {`inline - block h - 4 w - 4 transform rounded - full bg - white tran
     </>) ;
 };
 
-// CSS for accessibility features
+// CSS for accessibility features;
 const accessibilityStyles = `
   .sr - only {
     position: absolute;

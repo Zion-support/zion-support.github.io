@@ -31,4 +31,11 @@ const AccessibilityContext = createContext (null) ;
         const settings = {
   highContrast,
             reducedMotion,
-            fontSize,
+            fontSize
+
+
+
+}
+
+}
+}

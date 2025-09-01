@@ -73,4 +73,8 @@ import { motion, AnimatePresence } from 'framer - motion';
             reducedMotion: false,
             screenReader: false,
             keyboardNavigation: false,
-            focusIndicator: true,
+            focusIndicator: true
+
+
+}
+}

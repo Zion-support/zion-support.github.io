@@ -18,6 +18,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide - react';
 
 interface AccessibilitySettings {
+
   fontSize: number;
   highContrast: boolean;
   largeText: boolean;
@@ -26,11 +27,16 @@ interface AccessibilitySettings {
   fontSize: number;
   lineHeight: number;
   letterSpacing: number;
+
 }
 
 interface AccessibilityEnhancerProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showSettings?: boolean;
+
 }
 
   // Keyboard navigation support
@@ -229,7 +235,7 @@ interactiveElements.forEach (element:  > {;
   }, []) ;
 
   // Apply accessibility settings to the document
-  const applySettings = (newSettings: AccessibilitySettings) => {
+  const applySettings = (...args: unknown[]): unknown => {
     const root = document.documentElement;
     
     // High contrast
@@ -295,7 +301,7 @@ interactiveElements.forEach (element:  > {;
   };
 
   // Reset to default settings
-  const resetSettings = () => {
+  const resetSettings = (...args: unknown[]): unknown => {
     const defaultSettings: AccessibilitySettings = {
       highContrast: false,
       largeText: false,

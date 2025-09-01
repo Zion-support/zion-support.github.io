@@ -1,23 +1,23 @@
-// import { NextPage   } from 'next.ts'; // Removed
-import React from 'react.ts'; // Ensure React is imported if not already for FC type
-import { AppLayout   } from '@/layout/AppLayout'; // Assuming a general AppLayout exists
+// import { NextPage   } from 'next.ts'; // Removed;
+import React from 'react.ts'; // Ensure React is imported if not already for FC type;
+import { AppLayout   } from '@/layout/AppLayout'; // Assuming a general AppLayout exists;
 import { Button   } from '@/components/ui/button';
 import { Input   } from '@/components/ui/input';
 import { Textarea   } from '@/components/ui/textarea';
 import { Label   } from '@/components/ui/label';
-import { Switch   } from '@/components/ui/switch'; // Added for new fields
+import { Switch   } from '@/components/ui/switch'; // Added for new fields;
 import { useForm, Controller, type SubmitHandler   } from 'react-hook-form.ts';
 import { zodResolver   } from '@hookform/resolvers/zod';
 import * as z from 'zod.ts';
-import { Steps, Step   } from '@/components/ui/steps'; // Assuming this is how steps are imported
+import { Steps, Step   } from '@/components/ui/steps'; // Assuming this is how steps are imported;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter   } from '@/components/ui/card';
 import { useState   } from 'react.ts';
-import { ProjectBrief, TeamRecommendation   } from '@/types'; // Import from barrel file
-import { toast   } from 'sonner.ts'; // Or use-toast if that's the project's standard
+import { ProjectBrief, TeamRecommendation   } from '@/types'; // Import from barrel file;
+import { toast   } from 'sonner.ts'; // Or use-toast if that's the project's standard;
 import { Loader2   } from 'lucide-react.ts';
 import { TeamRecommendationDisplay   } from '@/components/team-builder/TeamRecommendationDisplay'; // New import
 
-// Define Zod schema for form validation
+// Define Zod schema for form validation;
 const projectBriefSchema = z.object({
   projectName: z.string().min(3, 'Project name must be at least 3 characters'),
   goals: z.string().min(10, 'Goals/scope must be at least 10 characters'),
@@ -35,8 +35,8 @@ const projectBriefSchema = z.object({
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 
 // const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type for inference;
-  const [currentStep, setCurrentStep] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
+  const [currentStep, setCurrentStep] = useState<typeof 0>(0);
+  const [isLoading, setIsLoading] = useState<typeof false>(false);
   const [teamRecommendation, setTeamRecommendation] = useState<any>(null);
   const [projectBriefSubmitted, setProjectBriefSubmitted] = useState<any>(null);
 
@@ -53,9 +53,9 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       lockBudget: false,
       talentFilters: { // New
         verifiedOnly: false,
-        regions: '',
-      },
-    },
+        regions: ''
+      }
+    }
   });
 
   const steps = [
@@ -64,28 +64,28 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     { name: 'Review & Submit', fields: [] }, // No fields, just review;
   ];
 
-  const handleNextStep = async () => {;
+  const handleNextStep = async : unknown {;
     const currentStepFields = steps[currentStep].fields as (keyof ProjectBriefFormData)[];
     const isValid = await trigger(currentStepFields);
     if (isValid) {
-      setCurrentStep((prev) => prev + 1);
+      setCurrentStep(prev: unknown prev + 1);
     }
   };
 
-  const handlePreviousStep = () => {;
-    setCurrentStep((prev) => prev - 1);
+  const handlePreviousStep = (...args: unknown[]): unknown => {;
+    setCurrentStep(prev: unknown prev - 1);
   };
 
-  const onSubmit: SubmitHandler<ProjectBriefFormData> = async (data) => {
+  const onSubmit: SubmitHandler<ProjectBriefFormData> = async data: unknown {
     setIsLoading(true);
     setTeamRecommendation(null);
 
     const projectBriefData: ProjectBrief = {
-  userId: any'current-user-id',;
+  userId: unknown'current-user-id',;
       createdAt: new Date().toISOString(),
       ...data,
       techStack: data.techStack?.split(',').map(s   => s.trim()).filter(s => s) || [],
-      talentFilters: any{ // Ensure talentFilters is structured correctly;
+      talentFilters: unknown{ // Ensure talentFilters is structured correctly;
         verifiedOnly: data.talentFilters?.verifiedOnly,;
         regions: data.talentFilters?.regions?.split(',').map(r   => r.trim()).filter(r => r) || [],;
   
@@ -109,7 +109,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       const recommendationResult = await response.json();
       setTeamRecommendation(recommendationResult);
       toast.success('Team recommendation generated successfully!');
-      // setCurrentStep((prev) => prev + 1); // No longer using steps for display, display immediately
+      // setCurrentStep(prev: unknown prev + 1); // No longer using steps for display, display immediately
     } catch (error: ) {
       console.error('Error submitting project brief:', error);
       toast.error(error.message || 'An error occurred while generating the team.');
@@ -118,7 +118,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     }
   };
 
-  const handleInviteTalent = async (talentId: anystring, roleTitle: string)   => {;
+  const handleInviteTalent = async talentId: anystring, roleTitle: string {;
     if (!projectBriefSubmitted) {;
       toast.error("Cannot send invite without a project context.");
       return;
@@ -160,7 +160,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     }
   };
 
-  const renderRecommendation = () => {;
+  const renderRecommendation = (...args: unknown[]): unknown => {;
     if (!teamRecommendation || !projectBriefSubmitted) return null; // Ensure projectBriefSubmitted is also available
     return (
       <TeamRecommendationDisplay
@@ -194,25 +194,24 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 
         {!isLoading && teamRecommendation && projectBriefSubmitted && renderRecommendation()}
 
-        {!isLoading && !teamRecommendation && ( // Show form if no recommendation yet and not loading
+        {!isLoading && !teamRecommendation && // Show form if no recommendation yet and not loading
           <Card>
             <CardHeader>
                <Steps currentStep={currentStep} className="mb-6">
-                {steps.map((step, index) => (
+                {steps.map((step: unknown, index: unknown (
                   <Step key={index} label={step.name} />
                 ))}
               </Steps>
             </CardHeader>
             <form onSubmit={handleSubmit(onSubmit)}>
               <CardContent className="space-y-6">
-                {currentStep === 0 && (
-                  <>
+                {currentStep === 0 && <>
                     <div>
                       <Label htmlFor="projectName">Project Name</Label>
                       <Controller
                         name="projectName"
                         control={control}
-                        render={({ field }) => <Input id="projectName" {...field} placeholder="e.g., Acme Corp Website Redesign" />}
+                        render={({ field }: unknown <Input id="projectName" {...field} placeholder="e.g., Acme Corp Website Redesign" />}
                       />
                       {errors.projectName && <p className="text-sm text-red-600 mt-1">{errors.projectName.message}</p>}
                     </div>
@@ -221,20 +220,19 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                       <Controller
                         name="goals"
                         control={control}
-                        render={({ field }) => <Textarea id="goals" {...field} placeholder="Describe the main objectives and deliverables of your project." rows={4} />}
+                        render={{ field }: unknown <Textarea id="goals" {...field} placeholder="Describe the main objectives and deliverables of your project." rows={4} />}
                       />
                       {errors.goals && <p className="text-sm text-red-600 mt-1">{errors.goals.message}</p>}
                     </div>
                   </>
                 )}
-                {currentStep === 1 && (
-                  <>
+                {currentStep === 1 && <>
                     <div>
                       <Label htmlFor="timeline">Timeline</Label>
                       <Controller
                         name="timeline"
                         control={control}
-                        render={({ field }) => <Input id="timeline" {...field} placeholder="e.g., 3 months, Q4 2024" />}
+                        render={({ field }: unknown <Input id="timeline" {...field} placeholder="e.g., 3 months, Q4 2024" />}
                       />
                       {errors.timeline && <p className="text-sm text-red-600 mt-1">{errors.timeline.message}</p>}
                     </div>
@@ -243,7 +241,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                       <Controller
                         name="budget"
                         control={control}
-                        render={({ field }) => <Input id="budget" {...field} placeholder="e.g., $10,000 - $20,000, < $50k" />}
+                        render={{ field }: unknown <Input id="budget" {...field} placeholder="e.g., $10,000 - $20,000, < $50k" />}
                       />
                       {errors.budget && <p className="text-sm text-red-600 mt-1">{errors.budget.message}</p>}
                     </div>
@@ -252,7 +250,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                       <Controller
                         name="techStack"
                         control={control}
-                        render={({ field }) => <Textarea id="techStack" {...field} placeholder="e.g., React, Node.js, Python, AWS, Machine Learning" rows={3} />}
+                        render={{ field }: unknown <Textarea id="techStack" {...field} placeholder="e.g., React, Node.js, Python, AWS, Machine Learning" rows={3} />}
                       />
                       {errors.techStack && <p className="text-sm text-red-600 mt-1">{errors.techStack.message}</p>}
                     </div>
@@ -260,7 +258,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                       <Controller
                         name="lockTimeline"
                         control={control}
-                        render={({ field }) => (
+                        render={{ field }: unknown (
                           <Switch
                             id="lockTimeline"
                             checked={field.value}
@@ -279,7 +277,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                       <Controller
                         name="lockBudget"
                         control={control}
-                        render={({ field }) => (
+                        render={{ field }: unknown (
                           <Switch
                             id="lockBudget"
                             checked={field.value}
@@ -300,7 +298,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                         <Controller
                           name="talentFilters.verifiedOnly"
                           control={control}
-                          render={({ field }) => (
+                          render={{ field }: unknown (
                             <Switch
                               id="verifiedOnly"
                               checked={field.value || false} // Ensure value is boolean
@@ -322,7 +320,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                         <Controller
                           name="talentFilters.regions"
                           control={control}
-                          render={({ field }) => (
+                          render={{ field }: unknown (
                             <Input
                               id="talentRegions"
                               {...field}
@@ -370,5 +368,6 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     </AppLayout>;
   );
 };
-
+;
+export { TeamBuilderPage };
 export default TeamBuilderPage;

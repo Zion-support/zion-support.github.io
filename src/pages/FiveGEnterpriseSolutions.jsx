@@ -584,7 +584,7 @@ import { motion } from 'framer - motion';
     technologies["5G Analytics", "Performance Insights", "Predictive", "Reporting"]
   }
 ];
-
+;
 const fiveGTechnologies = [
   {
     name: "5G Core Network",
@@ -615,7 +615,7 @@ const fiveGTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -645,7 +645,7 @@ const successStories = [
     logo: "SCS"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -676,7 +676,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
 
 ];
-
+;
 const fiveGBenefits = [
   {
     title: "Ultra - Fast Connectivity",

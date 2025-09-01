@@ -29,6 +29,7 @@ function HeroSection () {
 } from 'lucide - react';
 
 interface HeroSlide {
+
   id: string;
   title: string;
   subtitle: string;
@@ -41,7 +42,7 @@ interface HeroSlide {
   icon: React.ComponentType < any>;
   stats: { label: string; value: string; icon: React.ComponentType < any> }[];
 }
-
+;
 const heroSlides: HeroSlide[] = [
   {
     id: 'ai - solutions',
@@ -114,9 +115,9 @@ const heroSlides: HeroSlide[] = [
     ],
   },
 ];
-
+;
 const slideVariants = {
-  enter: (direction: number) => ({
+  enter: direction: number ({
     x: direction > 0 ? 1000 : -1000,
     opacity: 0,
   }) ,
@@ -125,13 +126,13 @@ const slideVariants = {
     x: 0,
     opacity: 1,
   },
-  exit: (direction: number) => ({
+  exit: direction: number ({
     zIndex: 0,
     x: direction < 0 ? 1000 : -1000,
     opacity: 0,
   }) ,
 };
-
+;
 const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {
   return Math.abs (offset) * velocity;

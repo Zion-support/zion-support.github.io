@@ -610,7 +610,7 @@ const successStories = [
     logo: "CSP"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -641,7 +641,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
 
 ];
-
+;
 const soc2Benefits = [
   {
     title: "Automated Compliance",

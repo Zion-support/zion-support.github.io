@@ -13,18 +13,19 @@ import {
 } from 'lucide - react';
 
 interface Props {
+
   children: ReactNode;
   fallback?: ReactNode;
 }
 
 interface State {
+
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
 
   errorId: string;
   showDetails: boolean;
-}
 
 class ErrorBoundary extends Component < Props, State> {
   constructor (props: Props) {
@@ -73,11 +74,11 @@ class ErrorBoundary extends Component < Props, State> {
     }) ;
   };
 
-  handleGoHome = () => {
+  handleGoHome = : unknown {
     window.location.href = '/';
   };
 
-  handleReportError = () => {
+  handleReportError = : unknown {
     const { error, errorInfo, errorId } = this.state;
     const errorReport = {
       errorId,

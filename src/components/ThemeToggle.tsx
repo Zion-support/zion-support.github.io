@@ -8,8 +8,10 @@ import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
 type Theme = 'dark' | 'light' | 'system';
 
 interface ThemeToggleProps {
+  // Add your props here
+
+
   className?: string;
-}
 
   const [theme, setTheme] = useState < Theme> ('system') ;
   const [mounted, setMounted] = useState (false) ;

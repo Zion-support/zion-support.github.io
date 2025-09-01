@@ -41,6 +41,7 @@ function EnhancedAccessibilityPanel () {
 } from 'lucide - react';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -51,16 +52,17 @@ interface AccessibilitySettings {
   lineHeight: number;
   letterSpacing: number;
   wordSpacing: number;
+
 }
 
 interface AccessibilityIssue {
+
   id: string;
   type: 'error' | 'warning' | 'info';
   message: string;
   element?: string;
   recommendation: string;
   severity: 'low' | 'medium' | 'high';
-}
 
   const [isVisible, setIsVisible] = useState (false) ;
   const [isExpanded, setIsExpanded] = useState (false) ;
@@ -318,7 +320,7 @@ interface AccessibilityIssue {
   }, []) ;
 
   // Get issue icon
-  const getIssueIcon = (type: string) => {
+  const getIssueIcon = (...args: unknown[]): unknown => {
     switch (type) {
       case 'error': return < XCircle className="w - 4 h - 4 text - red - 500" />;
       case 'warning': return < AlertTriangle className="w - 4 h - 4 text - yellow - 500" />;
@@ -328,7 +330,7 @@ interface AccessibilityIssue {
   };
 
   // Get severity color
-  const getSeverityColor = (severity: string) => {
+  const getSeverityColor = (...args: unknown[]): unknown => {
     switch (severity) {
       case 'high': return 'border - red - 500 bg - red - 50 dark: bg - red - 900 / 20';
       case 'medium': return 'border - yellow - 500 bg - yellow - 50 dark: bg - yellow - 900 / 20';

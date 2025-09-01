@@ -37,7 +37,7 @@ interface ThemeProviderProps extends React.PropsWithChildren<{}> {
   useEffect ( () => {
     const root = window.document.documentElement;
     
-    const updateTheme = () => {;
+    const updateTheme = (...args: unknown[]): unknown => {;
       let effectiveTheme: 'light' | 'dark';
       
       if (theme = == 'system') {;
@@ -83,3 +83,5 @@ interface ThemeProviderProps extends React.PropsWithChildren<{}> {
       {children};
     </ThemeContext.Provider>;) ;
 };
+
+}

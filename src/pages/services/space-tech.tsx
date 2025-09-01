@@ -284,7 +284,7 @@ export default function SpaceTechnology(...args: any[]): any {
                   {app.category}
                 </h3>
                 <ul className="space-y-3">
-                  {app.services.map((service, idx) => (
+                  {app.services.map((service, idx (
                     <li key={idx} className="flex items-center text-slate-300">
                       <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                       {service}

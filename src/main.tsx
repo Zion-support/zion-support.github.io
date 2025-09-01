@@ -7,16 +7,16 @@ import './index.css';
 import { registerServiceWorker } from './utils/serviceWorker';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
-// Performance monitoring
-const reportWebVitals = (metric: any) => {
+// Performance monitoring;
+const reportWebVitals = (...args: unknown[]): unknown => {
   if (process.env.NODE_ENV === 'development') {
     console.log('Web Vitals:', metric);
   }
   // In production, you could send this to analytics
 };
 
-// Main render function
-const renderApp = () => {
+// Main render function;
+const renderApp = (...args: unknown[]): unknown => {
   const root = ReactDOM.createRoot(document.getElementById('root')!);
 
   root.render(

@@ -37,6 +37,7 @@ import {
 } from 'lucide - react';
 
 interface UserBehavior {
+
   id: string;
   action: string;
   timestamp: Date;
@@ -46,9 +47,11 @@ interface UserBehavior {
   device: 'desktop' | 'mobile' | 'tablet';
   location: string;
   sessionId: string;
+
 }
 
 interface UXMetric {
+
   id: string;
   name: string;
   value: number;
@@ -57,9 +60,11 @@ interface UXMetric {
   trend: 'up' | 'down' | 'stable';
   change: number;
   category: 'engagement' | 'performance' | 'conversion' | 'satisfaction';
+
 }
 
 interface OptimizationSuggestion {
+
   id: string;
   title: string;
   description: string;
@@ -69,14 +74,17 @@ interface OptimizationSuggestion {
   priority: number;
   estimatedImprovement: number;
   implementation: string;
+
 }
 
 interface UserExperienceOptimizerProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showRealTime?: boolean;
   autoAnalyze?: boolean;
-  onOptimizationComplete?: (suggestions: OptimizationSuggestion[]) => void;
-}
+  onOptimizationComplete?: suggestions: OptimizationSuggestion[] void;
 
   enabled = true,
   showRealTime = true,
@@ -323,7 +331,7 @@ interface UserExperienceOptimizerProps {
   ]) ;
 
   // Get trend display
-  const getTrendDisplay = (trend: string, change: number) => {
+  const getTrendDisplay = (...args: unknown[]): unknown => {
     const colors = {
       up: 'text - green - 600',
       down: 'text - red - 600',
@@ -344,7 +352,7 @@ interface UserExperienceOptimizerProps {
   };
 
   // Get impact color
-  const getImpactColor = (impact: string) => {
+  const getImpactColor = (...args: unknown[]): unknown => {
     const colors = {
       high: 'text - red - 600 bg - red - 100 dark:bg - red - 900 / 30 dark:text - red - 400',
       medium:
@@ -355,7 +363,7 @@ interface UserExperienceOptimizerProps {
   };
 
   // Get effort color
-  const getEffortColor = (effort: string) => {
+  const getEffortColor = (...args: unknown[]): unknown => {
     const colors = {
       high: 'text - red - 600 bg - red - 100 dark:bg - red - 900 / 30 dark:text - red - 400',
       medium:

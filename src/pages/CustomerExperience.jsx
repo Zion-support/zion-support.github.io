@@ -78,7 +78,7 @@ import { motion } from 'framer - motion';
     technologies["Analytics Platforms", "Data Visualization", "Machine Learning", "Reporting Tools"]
   }
 ];
-
+;
 const customerExperienceTechnologies = [
   {
     name: "User Research Tools",
@@ -109,7 +109,7 @@ const customerExperienceTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -139,7 +139,7 @@ const successStories = [
     logo: "HP"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -170,7 +170,7 @@ const processSteps = [
     duration: "Ongoing"
 
 ];
-
+;
 const customerExperienceBenefits = [
   {
     title: "Improved Customer Satisfaction",

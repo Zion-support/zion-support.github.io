@@ -51,4 +51,15 @@ import { LinkValidator } from "../utils / linkValidator";
             const fix = {
   originalUrl,
                 newUrl,
-                type: 'redirect',
+                type: 'redirect'
+
+
+
+
+}
+
+
+}
+
+}
+}

@@ -59,7 +59,7 @@ const categories = [
     stats: '100 + Innovations',
   },
 ];
-
+;
 const specialServices = [
   {
     title: 'Enhanced AI & IT Services',

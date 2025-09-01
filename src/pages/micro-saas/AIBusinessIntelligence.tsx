@@ -1,7 +1,8 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target  } from 'lucide-react';
-
+;
+export { function };
 export default function AIBusinessIntelligence(...args[]):  {
   const features = [
     {
@@ -49,7 +50,7 @@ export default function AIBusinessIntelligence(...args[]):  {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -144,7 +145,7 @@ export default function AIBusinessIntelligence(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -228,7 +229,7 @@ export default function AIBusinessIntelligence(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {capabilities.map((capability, index)  => (
+            {capabilities.map(capability: unknown, index: unknown (
               <motion.div
                 key={capability.title}
                 initial = {
@@ -546,8 +547,8 @@ export default function AIBusinessIntelligence(...args[]):  {
   );
 }
 
-// Missing icon component
-const CheckCircle = ({ className }: { className?: string }) => (;
+// Missing icon component;
+const CheckCircle = { className }: { className?: string } (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />;
   </svg>;

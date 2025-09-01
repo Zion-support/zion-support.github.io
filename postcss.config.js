@@ -36,7 +36,7 @@ export default {
     'cssnano': {
       preset: ['default', {
         discardComments: {
-          removeAll: true,
+          removeAll: true
         },
         normalizeWhitespace: false,
         colormin: true,

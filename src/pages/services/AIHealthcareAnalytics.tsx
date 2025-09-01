@@ -167,7 +167,7 @@ const AIHealthcareAnalytics = (): JSX.Element => {
     },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
@@ -401,5 +401,6 @@ const AIHealthcareAnalytics = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { AIHealthcareAnalytics };
 export default AIHealthcareAnalytics;

@@ -174,7 +174,7 @@ const AIBusinessIntelligenceDashboard = () => {
     },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO
         title="AI-Powered Business Intelligence Dashboard - Zion Tech Group"
@@ -392,7 +392,7 @@ const AIBusinessIntelligenceDashboard = () => {
                   </div>
 
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
+                    {plan.features.map(feature: unknown, idx: unknown (
                       <li key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                         {feature}

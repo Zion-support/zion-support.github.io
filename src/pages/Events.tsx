@@ -156,10 +156,16 @@ const events = [
     image: "/images / digital - transformation - summit.jpg"
   }
 ];
-
+;
 const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
 const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];
 const statuses = ['All', 'upcoming', 'past'];
+;
+export { function };
+export default function Events(...args: unknown[]): unknown {
+  const [selectedType, setSelectedType] = useState<typeof 'All'>('All');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'All'>('All');
+  const [selectedStatus, setSelectedStatus] = useState<typeof 'All'>('All');
 
   const [selectedType, setSelectedType] = useState ('All') ;
   const [selectedCategory, setSelectedCategory] = useState ('All') ;

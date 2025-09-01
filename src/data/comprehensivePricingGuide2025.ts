@@ -1,4 +1,5 @@
 export interface PricingTier {
+
   id: string;
   name: string;
   price: number;
@@ -7,9 +8,11 @@ export interface PricingTier {
   features: string[];
   bestFor: string;
   popular?: boolean;
-}
 
+}
+;
 export interface ServicePricing {
+
   id: string;
   title: string;
   description: string;
@@ -25,9 +28,10 @@ export interface ServicePricing {
     address: string;
     website: string;
     address: string;
-  };
+  
 };
-
+};
+;
 export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
   {
     id: "ai-business-intelligence-platform",
@@ -622,7 +626,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
     contactInfo
   }
 ];
-=======
+=======;
 export const comprehensivePricingGuide2025: ServicePricing[] = [
   {
     id: 'ai-autonomous-business-manager',
@@ -1129,6 +1133,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
     }
   }
 ];
-
+;
+export { comprehensivePricingGuide2025 };
 export default comprehensivePricingGuide2025;
 >>>>>>> af3952a87beab0a7961fe3a2e1e9482265ebc0e2

@@ -192,3 +192,5 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
       </div>
     </section>
   )};
+
+}

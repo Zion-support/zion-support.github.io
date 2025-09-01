@@ -36,14 +36,16 @@ function AdvancedAnalytics ({
 } from 'lucide - react';
 
 interface AnalyticsData {
+
   pageViews: number;
   uniqueVisitors: number;
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
-  topPages: Array<{ path: string; views: number }>;
-  userAgents: Array<{ device: string; count: number }>;
-  locations: Array<{ country: string; count: number }>;
+  topPages: { path: string; views: number 
+}[];
+  userAgents: { device: string; count: number }[];
+  locations: { country: string; count: number }[];
   performance: {
     loadTime: number;
     firstPaint: number;
@@ -59,12 +61,14 @@ interface AnalyticsData {
 }
 
 interface AdvancedAnalyticsProps {
+  // Add your props here
+
+
   enabled: boolean;
   trackingId?: string;
   enableHeatmap?: boolean;
   enableSessionRecording?: boolean;
   enableAITesting?: boolean;
-}
 
   enabled, 
   trackingId,
@@ -243,7 +247,7 @@ interface AdvancedAnalyticsProps {
     trackPerformance () ;
 
     // Setup click tracking
-    const handleClick = (e: MouseEvent) => {
+    const handleClick = (...args: unknown[]): unknown => {
       const target = e.target as HTMLElement;
       const position = { x: e.clientX, y: e.clientY };
       
@@ -268,7 +272,7 @@ interface AdvancedAnalyticsProps {
     };
 
     // Setup form submission tracking
-    const handleFormSubmit = (e: Event) => {
+    const handleFormSubmit = (...args: unknown[]): unknown => {
       const form = e.target as HTMLFormElement;
       trackInteraction ('form', { 
         formId: form.id || form.className,
@@ -304,7 +308,7 @@ interface AdvancedAnalyticsProps {
     window.addEventListener ('unhandledrejection', handleUnhandledRejection) ;
 
     // Track page visibility changes
-    const handleVisibilityChange = () => {
+    const handleVisibilityChange = (...args: unknown[]): unknown => {
       if (document.hidden) {
         // Page hidden - track session end
         const sessionDuration = Date.now () - sessionStart;

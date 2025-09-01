@@ -78,7 +78,7 @@ export default function GreenIT(...args: any[]): any {
     },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="Green IT Solutions - Zion Tech Group"
@@ -226,7 +226,7 @@ export default function GreenIT(...args: any[]): any {
                 positive impact on the planet.
               </p>
               <div className="grid grid-cols-1 gap-4">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-slate-300">{benefit}</span>

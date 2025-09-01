@@ -69,7 +69,7 @@ import { motion } from 'framer - motion';
       color: "from - zion - red to - zion - pink"
     },
     {
-      icon: Zap,
+      icon: Zap
     };
       title: "Quantum Sensors",;
       description: "Ultra - sensitive detection using quantum phenomena",;
@@ -124,7 +124,7 @@ import { motion } from 'framer - motion';
       icon: Lightbulb
     },
     {
-      title: "AI Training",
+      title: "AI Training"
     };
       description: "Quantum - enhanced machine learning and neural networks",;
       category: "research",;

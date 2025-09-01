@@ -119,7 +119,7 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data / revolut
       services: anyallServices.filter (s  => !s.category.includes ('AI') && !s.category.includes ('Space') && !s.category.includes ('Quantum') ) }
   ];
 
-  const getDiscountMultiplier = () => billingCycle === 'yearly' ? 0.83 : 1;
+  const getDiscountMultiplier = : unknown billingCycle === 'yearly' ? 0.83 : 1;
 
   return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
       <SEO 

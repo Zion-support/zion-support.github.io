@@ -11,6 +11,9 @@ export /**
 function SEO ({
 
 interface SEOProps {
+  // Add your props here
+
+
   title?: string;
   description?: string;
   keywords?: string;
@@ -38,12 +41,13 @@ interface SEOProps {
   manifest?: string;
   preconnect?: string[];
   dnsPrefetch?: string[];
-  preload?: Array<{
+  preload?: {
     href: string;
     as: string;
     type?: string;
     crossorigin?: boolean;
-  }>;
+  
+}[];
   prefetch?: string[];
   dnsPrefetch?: string[];
   preconnect?: string[];

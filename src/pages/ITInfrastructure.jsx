@@ -234,7 +234,7 @@ const infrastructureSolutions = [
     ],
   },
 ];
-
+;
 const ITInfrastructure = () => {
   const [selectedSolution, setSelectedSolution] = useState (null) ;
   const [isModalOpen, setIsModalOpen] = useState (false) ;

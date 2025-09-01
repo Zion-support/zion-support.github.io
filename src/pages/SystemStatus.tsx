@@ -21,6 +21,7 @@ import { motion } from 'framer - motion';
 } from 'lucide - react';
 
 interface ServiceStatus {
+
   id: string;
   name: string;
   status: 'operational' | 'degraded' | 'outage' | 'maintenance';
@@ -32,6 +33,7 @@ interface ServiceStatus {
 }
 
 interface Incident {
+
   id: string;
   title: string;
   description: string;
@@ -40,8 +42,9 @@ interface Incident {
   startTime: string;
   endTime?: string;
   affectedServices: string[];
-}
 
+}
+;
 const services: ServiceStatus[] = [
   {
     id: 'api',
@@ -104,7 +107,7 @@ const services: ServiceStatus[] = [
     icon: BarChart3,
   },
 ];
-
+;
 const incidents: Incident[] = [
   {
     id: 'inc - 001',
@@ -118,6 +121,10 @@ const incidents: Incident[] = [
     affectedServices: ['database'],
   },
 ];
+;
+const SystemStatus: React.FC = props {
+  const [lastUpdated, setLastUpdated] = useState<typeof new Date(>(new Date());
+  const [isRefreshing, setIsRefreshing] = useState<typeof false>(false);
 
 const SystemStatus: React.FC = () => {
   const [lastUpdated, setLastUpdated] = useState (new Date () ) ;
@@ -131,7 +138,7 @@ const SystemStatus: React.FC = () => {
     }, 1000) ;
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (...args: unknown[]): unknown => {
     switch (status) {
       case 'operational':
         return 'text - green - 400 bg - green - 500 / 20';
@@ -146,7 +153,7 @@ const SystemStatus: React.FC = () => {
     }
   };
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (...args: unknown[]): unknown => {
     switch (status) {
       case 'operational':
         return < CheckCircle className="w - 5 h - 5" />;
@@ -161,7 +168,7 @@ const SystemStatus: React.FC = () => {
     }
   };
 
-  const getSeverityColor = (severity: string) => {
+  const getSeverityColor = (...args: unknown[]): unknown => {
     switch (severity) {
       case 'critical':
         return 'text - red - 400 bg - red - 500 / 20';

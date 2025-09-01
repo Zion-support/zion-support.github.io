@@ -91,8 +91,8 @@ import {
   AlertTriangle,
   Info,
 } from 'lucide-react';
-
-export function QuantumAITradingPlatform() {
+;
+export function QuantumAITradingPlatform(...args: unknown[]): unknown {
   const features = [
     {
       icon: Atom,
@@ -253,7 +253,7 @@ export function QuantumAITradingPlatform() {
     { metric: '24/7', label: 'Monitoring' },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -299,7 +299,7 @@ export function QuantumAITradingPlatform() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {performanceMetrics.map((item, index) => (
+            {performanceMetrics.map((item, index (
               <motion.div
                 key={item.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -336,7 +336,7 @@ export function QuantumAITradingPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature: unknown, index: unknown 
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -386,7 +386,7 @@ export function QuantumAITradingPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {tradingFeatures.map((feature, index) => (
+            {tradingFeatures.map(feature: unknown, index: unknown 
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -441,7 +441,7 @@ export function QuantumAITradingPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -471,7 +471,7 @@ export function QuantumAITradingPlatform() {
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
+                  {plan.features.map(feature: unknown, idx: unknown (
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {feature}

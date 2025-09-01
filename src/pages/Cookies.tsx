@@ -138,7 +138,7 @@ import { SEO } from '../components / SEO';
     setExpandedSection (expandedSection === sectionId ? null : sectionId) ;
   };
 
-  const updateCookiePreference = (type: string, enabled: boolean) => {
+  const updateCookiePreference = (...args: unknown[]): unknown => {
     if (type === 'essential') return; // Essential cookies cannot be disabled
     
     setCookiePreferences (prev => ({
@@ -147,7 +147,7 @@ import { SEO } from '../components / SEO';
     }) ) ;
   };
 
-  const savePreferences = () => {
+  const savePreferences = (...args: unknown[]): unknown => {
     // In a real app, this would save preferences and update cookies
     console.log ('Cookie preferences saved:', cookiePreferences) ;
     // Show success message

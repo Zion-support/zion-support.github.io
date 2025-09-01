@@ -29,4 +29,5 @@ const FiveGPrivateNetworkSolutions = () => {
     </div>
   );
 };
+export { FiveGPrivateNetworkSolutions };
 export default FiveGPrivateNetworkSolutions;

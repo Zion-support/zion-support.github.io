@@ -20,13 +20,13 @@ import {
   Award,
   Clock
  } from 'lucide-react';
-
-const InnovativeServicesShowcase2031: React.FC = () => {;
-  const scrollToContact = () => {;
+;
+const InnovativeServicesShowcase2031: React.FC = props {;
+  const scrollToContact = (...args: unknown[]): unknown => {;
     document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  return (
+  return 
     <>
       <Helmet>
         <title>Innovative Services 2031 - Zion Tech Group | Cutting-Edge Micro SAAS, IT & AI Solutions</title>
@@ -66,7 +66,7 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
               <button
-                onClick={() => document.getElementById('services-overview')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={( document.getElementById('services-overview')?.scrollIntoView({ behavior: 'smooth' })}
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
 
                 Explore Services
@@ -191,7 +191,7 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
             </div>
 
             <div className="space-y-8">
-              {innovativeMicroSaasServices2031.map((service) => (
+              {innovativeMicroSaasServices2031.map(service: unknown (
                 <div key={service.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                   <div className="grid lg:grid-cols-2 gap-8">
                     <div>
@@ -234,7 +234,7 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                       <div className="mb-6">
                         <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                         <div className="grid grid-cols-1 gap-2">
-                          {service.features.slice(0, 6).map((feature, index) => (
+                          {service.features.slice(0, 6).map(feature: unknown, index: unknown (
                             <div key={index} className="flex items-center text-sm text-gray-300">
                               <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                               {feature}
@@ -246,7 +246,7 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                       <div className="mb-6">
                         <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>
                         <div className="space-y-2">
-                          {service.benefits.slice(0, 3).map((benefit, index) => (
+                          {service.benefits.slice(0, 3).map(benefit: unknown, index: unknown (
                             <div key={index} className="flex items-center text-sm text-gray-300">
                               <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                               {benefit}
@@ -256,7 +256,7 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
                       </div>
 
                       <div className="flex flex-wrap gap-2 mb-6">
-                        {service.tags.slice(0, 4).map((tag, index) => (
+                        {service.tags.slice(0, 4).map(tag: unknown, index: unknown (
                           <span key={index} className="px-2 py-1 bg-white/10 text-xs text-gray-300 rounded">
                             {tag}
                           </span>
@@ -449,5 +449,6 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
     </>;
   );
 };
-
+;
+export { InnovativeServicesShowcase2031 };
 export default InnovativeServicesShowcase2031;}

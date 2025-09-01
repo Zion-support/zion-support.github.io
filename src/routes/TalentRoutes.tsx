@@ -7,8 +7,9 @@ import TalentProfilePage from "../pages/TalentProfilePage";
 import SavedTalentsPage from "../pages/SavedTalentsPage";
 import CreateTalentProfile from "../pages/CreateTalentProfile";
 import ProfilePage from "../pages/ProfilePage";
-
-export default function TalentRoutes() {
+;
+export { function };
+export default function TalentRoutes(...args: unknown[]): unknown {
   return (
     <>;
       <Route path = "directory" element={<TalentDirectory />} />;

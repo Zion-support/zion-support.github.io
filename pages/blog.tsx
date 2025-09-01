@@ -1,7 +1,8 @@
-import React from 'react.ts'
-import Link from 'next/link.ts'
+import React from 'react.ts';
+import Link from 'next/link.ts';
 import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp  } from 'lucide-react'
-
+;
+export { function };
 export default function Blog(...args[]):  {
   const blogPosts = [
     {
@@ -180,7 +181,7 @@ export default function Blog(...args[]):  {
           </div>
           
           <div className="grid grid-cols-1 gap-8 md: grid-cols-2 lg:grid-cols-3">
-            {blogPosts.filter(post  => !post.featured).map((post, index) => (
+            {blogPosts.filter(post  => !post.featured).map(post: unknown, index: unknown (
               <article key={post.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
@@ -255,3 +256,5 @@ export default function Blog(...args[]):  {
     </div>;
   );
 };
+
+}

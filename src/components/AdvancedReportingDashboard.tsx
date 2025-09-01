@@ -26,6 +26,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 interface ReportData {
 
+
   id: string;
   title: string;
   type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
@@ -38,9 +39,11 @@ interface ReportData {
   author: string;
   views: number;
   downloads: number;
-  rating: number}
+  rating: number
+}
 
 interface ReportMetrics {
+
 
   totalReports: number;
   activeReports: number;
@@ -267,3 +270,5 @@ showMetrics:  true,;
 
   // Calculate report metrics
   const reportMetrics = {
+
+}

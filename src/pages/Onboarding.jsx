@@ -87,7 +87,7 @@ export default function Onboarding () {
     };
     const steps = [
         { label: "Select Role", description: "Choose how you'll use the platform" },
-        { label: "Create Profile", description: "Tell us about yourself" },
+        { label: "Create Profile", description: "Tell us about yourself" }
     ];
     if (!user) {
         router ('/login') ;

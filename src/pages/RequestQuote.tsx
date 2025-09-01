@@ -305,13 +305,13 @@ import { SEO } from '../components / SEO';
     setExpandedService (expandedService === serviceId ? null : serviceId) ;
   };
 
-  const nextStep = () => {
+  const nextStep = (...args: unknown[]): unknown => {
     if (formStep < 3) {
       setFormStep (formStep + 1) ;
     }
   };
 
-  const prevStep = () => {
+  const prevStep = (...args: unknown[]): unknown => {
     if (formStep > 1) {
       setFormStep (formStep - 1) ;
     }

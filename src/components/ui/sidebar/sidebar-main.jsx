@@ -1,3 +1,4 @@
+import React from 'react';
 import * as React from "react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
@@ -21,7 +22,7 @@ export const Sidebar = React.forwardRef((props, ref) => {
         return (<Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
         <SheetContent data-sidebar="sidebar" data-mobile="true" className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden" style = {
   {
-                "--sidebar-width": "18rem",
+                "--sidebar-width": "18rem"
   
 
 }} side={props.side}>

@@ -25,6 +25,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide - react';
 
 interface AnalyticsData {
+
   pageViews: number;
   uniqueVisitors: number;
   sessionDuration: number;
@@ -33,12 +34,13 @@ interface AnalyticsData {
     desktop: number;
     mobile: number;
     tablet: number;
-  };
-  topPages: Array<{
+  
+};
+  topPages: {
     path: string;
     views: number;
     title: string;
-  }>;
+  }[];
   userEngagement: {
     scrollDepth: number;
     timeOnPage: number;
@@ -56,10 +58,12 @@ interface AnalyticsData {
 }
 
 interface EnhancedAnalyticsProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showDashboard?: boolean;
   trackingId?: string;
-}
 
   enabled = true,
   showDashboard = false,
@@ -125,7 +129,7 @@ function gtag (...args: any[]) {
       timezone: Intl.DateTimeFormat () .resolvedOptions () .timeZone,
     }) ;
 
-    return () => {
+    return : unknown {
       if (script) {
         document.head.removeChild (script) ;
       }
@@ -136,7 +140,7 @@ function gtag (...args: any[]) {
   useEffect ( () => {
     if (!enabled) return;
 
-    const handleRouteChange = () => {
+    const handleRouteChange = (...args: unknown[]): unknown => {
       const newPage = window.location.pathname;
       if (newPage !== currentPage) {
         // Track page view
@@ -181,7 +185,7 @@ function gtag (...args: any[]) {
       }) ;
     };
 
-    const trackScroll = () => {
+    const trackScroll = (...args: unknown[]): unknown => {
       const scrollTop = window.pageYOffset;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = Math.round ( (scrollTop / docHeight) * 100) ;
@@ -238,7 +242,7 @@ function gtag (...args: any[]) {
   useEffect ( () => {
     if (!enabled) return;
 
-    const trackPerformance = () => {
+    const trackPerformance = (...args: unknown[]): unknown => {
       if ('performance' in window) {
         const navigation = performance.getEntriesByType ('navigation') [0] as PerformanceNavigationTiming;
         const paint = performance.getEntriesByType ('paint') ;

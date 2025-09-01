@@ -9,7 +9,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t};
 import { jsx as _jsx } from "react/jsx-runtime";
 import React from 'react';
-
+;
 const Badge = ({ children, className = '', variant = 'default' }) => {
   const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors';
   const variantClasses = {
@@ -25,9 +25,9 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
 
 
 };
-  
+  ;
 import React from 'react';
-
+;
 const Badge = ({ children, className = '', variant = 'default' }) => {
   const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors';
   const variantClasses = {
@@ -43,5 +43,7 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
     </div>
   );
 };
-
+;
 export { Badge };
+
+}

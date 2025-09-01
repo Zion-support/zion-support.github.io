@@ -12,6 +12,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 function BenefitsSection () {
 
 interface Benefit {
+
   title: string;
   description: string;
   icon: React.ReactNode;
@@ -19,7 +20,7 @@ interface Benefit {
   bgColor: string;
   stats: string;
   features: string[];
-
+;
 const benefits: Benefit[] = [;
   {
     title: "AI - Powered Matchmaking",
@@ -34,7 +35,8 @@ const benefits: Benefit[] = [;
       "Expert talent matching",
       "Personalized recommendations"
     ]
-  },
+  
+},
   {
     title: "Global Availability",
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",

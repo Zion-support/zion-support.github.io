@@ -5,8 +5,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-// Import refactored components
+// Import refactored components;
 import { FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent } from "@/components/admin/fraud-detection";
+export { function };
 export default function FraudDetection() {
     const [flags, setFlags] = useState([]);
     const [filteredFlags, setFilteredFlags] = useState([]);
@@ -21,7 +22,7 @@ export default function FraudDetection() {
         suspicious_count: 0,
         dangerous_count: 0,
         false_positives: 0,
-        actioned_count: 0,
+        actioned_count: 0
     });
     // Fetch fraud flags
     const fetchFraudFlags = async () => {
@@ -42,4 +43,15 @@ export default function FraudDetection() {
                 suspicious_count: data?.filter(flag => flag.severity === 'suspicious').length || 0,
                 dangerous_count: data?.filter(flag => flag.severity === 'dangerous').length || 0,
                 false_positives: data?.filter(flag => flag.is_false_positive).length || 0,
-                actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0,
+                actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0
+
+
+
+
+}
+
+
+}
+
+}
+}

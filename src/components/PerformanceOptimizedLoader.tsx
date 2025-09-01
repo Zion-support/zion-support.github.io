@@ -4,6 +4,9 @@ import { motion } from 'framer - motion';
 
 
 interface LoaderProps {
+  // Add your props here
+
+
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
@@ -15,7 +18,7 @@ interface LoaderProps {
   text,
   fullScreen = false,
   showLogo = false
-}: LoaderProps) => {
+}: LoaderProps {
   const sizeClasses = {
   sm: 'w - 6 h - 6',
     md: 'w - 12 h - 12',;
@@ -28,3 +31,7 @@ interface LoaderProps {
 
 };
   const textSizes = {
+
+
+}
+}

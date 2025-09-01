@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -92,11 +92,11 @@ import {
   Volume2,
   VolumeX
 } from 'lucide-react';
-
-const QuickAccess: React.FC = () => {;
+;
+const QuickAccess: React.FC = props {;
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-
+;
 const QuickAccess: React.FC = (): JSX.Element => {
   const quickLinks = [
     {
@@ -153,7 +153,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };
   ];
 
-  return (
+  return 
     <section className = "py-16 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
@@ -322,14 +322,13 @@ const QuickAccess: React.FC = (): JSX.Element => {
 
         {/* Quick Links Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {quickLinks.map((link, index)  => (
-            <motion.div
+          {quickLinks.map((link, index <motion.div
               key={link.title}
               variants={hoverVariants}
               whileHover="hover"
-              onHoverStart={() => setHoveredCategory(link.title)}
-              onHoverEnd={() => setHoveredCategory(null)}
-              onClick={() => setSelectedCategory(selectedCategory === link.title ? null : link.title)}
+              onHoverStart={(: unknown setHoveredCategory(link.title)}
+              onHoverEnd={: unknown setHoveredCategory(null)}
+              onClick={: unknown setSelectedCategory(selectedCategory === link.title ? null : link.title)}
               className={`group cursor-pointer ${link.bgColor} ${link.borderColor} border rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25`}
             >
               {/* Icon and Header */}
@@ -363,7 +362,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
               {/* Features Preview */}
               <div className="mb-4">
                 <div className="grid grid-cols-2 gap-2">
-                  {link.features.slice(0, 2).map((feature, idx) => (
+                  {link.features.slice(0, 2).map(feature: unknown, idx: unknown (
                     <motion.div
                       key={feature}
                       initial = {
@@ -409,7 +408,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
               {/* Stats */}
               <div className="mb-4">
                 <div className="flex items-center justify-between text-sm">
-                  {Object.entries(link.stats).slice(0, 2).map(([key, value], idx) => (
+                  {Object.entries(link.stats).slice(0, 2).map([key: unknown, value]: unknown, idx: unknown (
                     <motion.div
                       key={key}
                       initial = {
@@ -483,7 +482,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {categories.map((category, index) => (
+            {categories.map(category: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -591,5 +590,5 @@ const QuickAccess: React.FC = (): JSX.Element => {
     </section>;
   );
 };
-
+;
 export { QuickAccess };

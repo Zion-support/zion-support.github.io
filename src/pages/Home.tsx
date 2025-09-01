@@ -458,8 +458,8 @@ const FeaturesSection = () => {
 
 };
 
-// Stats Section Component
-const StatsSection = () => {
+// Stats Section Component;
+const StatsSection = (...args: unknown[]): unknown => {
   const stats = [
     { number: "500+", label: "Projects Completed", icon: CheckCircle },
     { number: "50+", label: "Team Members", icon: Users },

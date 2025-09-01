@@ -1,5 +1,6 @@
 import React from 'react';
 export interface HealthcareAIService2028 {
+
   id: string;
   title: string;
   description: string;
@@ -22,7 +23,8 @@ export interface HealthcareAIService2028 {
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];

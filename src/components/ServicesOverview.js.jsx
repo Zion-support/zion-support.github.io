@@ -254,7 +254,7 @@ const serviceCategories = [
         link: "/micro - saas - services"
     }
 ];
-// Why choose Zion Tech Group
+// Why choose Zion Tech Group;
 const whyChooseUs = [
     {
         title: "Expert Team",

@@ -57,6 +57,7 @@ import { Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle const 
         features['Smart Contracts', 'DeFi Platforms', 'NFT Marketplaces', 'DAO Governance'];
     }
 ];
+export { function };
 export default function FuturisticServicesShowcase() {
     const [hoveredService, setHoveredService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -353,3 +354,5 @@ export default function FuturisticServicesShowcase() {
         </motion.div>
       </div>
     </section>)}
+
+}

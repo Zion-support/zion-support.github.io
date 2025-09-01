@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 
 interface AccessibilityEnhancerProps {
+  // Add your props here
+
+
   children: React.ReactNode;
   role?: string;
   'aria-label'?: string;
@@ -9,13 +12,14 @@ interface AccessibilityEnhancerProps {
   'aria-controls'?: string;
   'aria-haspopup'?: boolean;
   tabIndex?: number;
-  onKeyDown?: (event: React.KeyboardEvent) => void;
+  onKeyDown?: event: React.KeyboardEvent void;
   className?: string;
   focusable?: boolean;
   skipToContent?: boolean;
-}
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+}
+;
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = {
   children,
   role,
   'aria-label': ariaLabel,
@@ -28,16 +32,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   className = '',
   focusable = true,
   skipToContent = false
-}) => {
+} {
   const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (skipToContent && ref.current) {
       ref.current.focus();
     }
   }, [skipToContent]);
 
-  const handleKeyDown = (event: React.KeyboardEvent) => {
+  const handleKeyDown = (...args: unknown[]): unknown => {
     // Handle common keyboard interactions
     switch (event.key) {
       case 'Enter':
@@ -89,5 +93,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     </div>
   );
 };
-
+;
+export { AccessibilityEnhancer };
 export default AccessibilityEnhancer;

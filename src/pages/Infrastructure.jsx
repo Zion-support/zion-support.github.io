@@ -585,7 +585,7 @@ import { motion } from 'framer - motion';
     technologies["Prometheus", "Grafana", "ELK Stack", "APM Tools"]
   }
 ];
-
+;
 const infrastructureTechnologies = [
   {
     name: "Server Technologies",
@@ -616,7 +616,7 @@ const infrastructureTechnologies = [
     reliability: "Critical"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -646,7 +646,7 @@ const successStories = [
     logo: "MC"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -677,7 +677,7 @@ const processSteps = [
     duration: "2 - 6 weeks"
 
 ];
-
+;
 const infrastructureBenefits = [
   {
     title: "High Availability",

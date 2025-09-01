@@ -47,8 +47,9 @@ import {
   Radio
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
-
-export default function QuantumComputingSolutions() {
+;
+export { function };
+export default function QuantumComputingSolutions(...args: unknown[]): unknown {
   const features = [
     {
       icon: Atom,
@@ -201,7 +202,7 @@ export default function QuantumComputingSolutions() {
     }
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <SEO 
         title="Quantum Computing Solutions - Zion Tech Group"
@@ -268,7 +269,7 @@ export default function QuantumComputingSolutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -305,7 +306,7 @@ export default function QuantumComputingSolutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (
+            {capabilities.map(capability: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -321,7 +322,7 @@ export default function QuantumComputingSolutions() {
                     <h3 className="text-xl font-semibold text-white mb-2">{capability.title}</h3>
                     <p className="text-gray-400 mb-4">{capability.description}</p>
                     <ul className="space-y-2">
-                      {capability.benefits.map((benefit, benefitIndex) => (
+                      {capability.benefits.map((benefit, benefitIndex (
                         <li key={benefitIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
@@ -354,7 +355,7 @@ export default function QuantumComputingSolutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -368,7 +369,7 @@ export default function QuantumComputingSolutions() {
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.industry}</h3>
                 <p className="text-gray-400 text-sm mb-4">{useCase.description}</p>
                 <div className="space-y-2">
-                  {useCase.metrics.map((metric, metricIndex) => (
+                  {useCase.metrics.map((metric, metricIndex (
                     <div key={metricIndex} className="text-xs text-gray-500 bg-gray-800/50 px-2 py-1 rounded">
                       {metric}
                     </div>
@@ -398,7 +399,7 @@ export default function QuantumComputingSolutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -428,7 +429,7 @@ export default function QuantumComputingSolutions() {
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                       {feature}
@@ -471,7 +472,7 @@ export default function QuantumComputingSolutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

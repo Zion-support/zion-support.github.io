@@ -1,14 +1,17 @@
 // Comprehensive AI Services 2030 - Zion Tech Group
 // Cutting-edge artificial intelligence and machine learning solutions
-
+;
 export interface ServiceContact {
+
 
   phone: string;
   email: string;
   website: string;
-  address: string}
-
+  address: string
+}
+;
 export interface AIService {
+
 
   id: number;
   name: string;
@@ -37,9 +40,10 @@ export interface AIService {
   setupTime: string;
   integrations: string[];
   freeTier: boolean;
-  trialPeriod: string}
+  trialPeriod: string
+}
 
-// Zion Tech Group Contact Information
+// Zion Tech Group Contact Information;
 const zionContact: ServiceContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
@@ -58,7 +62,7 @@ const zionContact: ServiceContact = {
 
 };
 
-// Comprehensive AI Services 2030
+// Comprehensive AI Services 2030;
 export const comprehensiveAIServices2030: AIService[] = [
   {
     id: 1,
@@ -648,5 +652,6 @@ export const comprehensiveAIServices2030: AIService[] = [
     trialPeriod: "30 days"
 
 ];
-
+;
+export { comprehensiveAIServices2030 };
 export default comprehensiveAIServices2030;}}}

@@ -155,7 +155,7 @@ const onsiteSupportSolutions = [
     technologies["Emergency Tools", "Spare Parts", "Mobile Support", "Remote Access"]
   }
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -185,7 +185,7 @@ const successStories = [
     logo: "FSF"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -216,7 +216,7 @@ const processSteps = [
     duration: "1 - 2 hours"
 
 ];
-
+;
 const supportBenefits = [
   {
     title: "Rapid Response",

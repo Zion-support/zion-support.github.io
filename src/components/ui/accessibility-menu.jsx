@@ -48,4 +48,11 @@ export function AccessibilityMenu() {
         const defaultSettings = {
   fontSize: 'medium',
             highContrast: false,
-            reducedMotion: false,
+            reducedMotion: false
+
+
+
+}
+
+}
+}

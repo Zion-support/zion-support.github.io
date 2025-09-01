@@ -584,7 +584,7 @@ import { motion } from 'framer - motion';
     technologies["AI", "Exit Planning", "Market Analysis", "Optimization"]
   }
 ];
-
+;
 const vcTechnologies = [
   {
     name: "AI & Machine Learning",
@@ -615,7 +615,7 @@ const vcTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -645,7 +645,7 @@ const successStories = [
     logo: "SVL"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -676,7 +676,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
 
 ];
-
+;
 const vcBenefits = [
   {
     title: "Better Investment Decisions",

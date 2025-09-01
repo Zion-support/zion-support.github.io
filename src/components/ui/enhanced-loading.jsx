@@ -41,3 +41,32 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
                 ease: "easeInOut"
     };
     const pulseVariants = {
+
+
+
+
+
+
+
+}
+
+
+
+
+
+}
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
+}

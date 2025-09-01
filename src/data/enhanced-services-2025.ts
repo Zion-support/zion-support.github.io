@@ -1,5 +1,6 @@
 export interface EnhancedService {
 
+
   id: string;
   name: string;
   tagline: string;
@@ -9,7 +10,8 @@ pricing: {
     monthly: string;
     yearly: string;
     enterprise: string;
-    setup: string};
+    setup: string
+};
   features: string[];
   benefits: string[];
   technology: string[];
@@ -28,7 +30,7 @@ pricing: {
     mobile: string;
     email: string;
     address: string;
-    website: string}}
+    website: string}};
 export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
   // AI-Powered Autonomous Services
   {
@@ -42,7 +44,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     author: {
       name: "Zion AI Labs",
       id: "zion-ai-labs",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100"
     },
     images["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2025-01-15T10:00:00.000Z",
@@ -68,7 +70,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
         address: string;
         website: string;
     };
-
+;
 const CONTACT = {
   mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -86,7 +88,7 @@ const CONTACT = {
 
 
 };
-
+;
 export const enhancedServices2025: EnhancedService[] = [
     {
         id: 'ai-powered-code-review-assistant',
@@ -1100,5 +1102,6 @@ export const enhancedServices2025: EnhancedService[] = [
     contactInfo
   }
 ];
-
+;
+export { enhancedServices2025 };
 export default enhancedServices2025;}}

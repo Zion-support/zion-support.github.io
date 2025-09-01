@@ -618,7 +618,7 @@ export const Sidebar: React.FC < SidebarProps> = ({ isOpen, onToggle }) => {
     },
   ];
 
-  const isActive = (href: string) => {
+  const isActive = (...args: unknown[]): unknown => {
     if (href === '/') {
       return location.pathname === '/';
     }

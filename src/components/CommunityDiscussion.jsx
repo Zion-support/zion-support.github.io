@@ -36,7 +36,7 @@ const initialPosts = [
                 author: "You",
                 time: "Now",
                 title: newTitle,
-                body: newBody,
+                body: newBody
             },
             ...posts,
         ]) ;

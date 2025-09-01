@@ -33,7 +33,7 @@ import { motion } from 'framer - motion';
     integrations["E - commerce", "POS Systems", "Mobile Apps", "CRM"]
   }
 ];
-
+;
 const retailTrends = [
   {
     title: "AI - Powered Personalization",
@@ -60,7 +60,7 @@ const retailTrends = [
     impact: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -90,7 +90,7 @@ const successStories = [
     logo: "HG"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,

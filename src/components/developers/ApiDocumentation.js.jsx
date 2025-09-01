@@ -89,7 +89,7 @@ export function ApiDocumentation() {
 
 }
 });
-
+;
 const data = await response.json();
 console.log(data);`,
                 python: `import requests
@@ -172,7 +172,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId
     'Content-Type': 'application/json'
   }
 });
-
+;
 const data = await response.json();
 console.log(data);`,
                 python: `import requests
@@ -306,7 +306,7 @@ print(data)`,
     deadline: '2025-06-30T23:59:59Z'
   })
 });
-
+;
 const data = await response.json();
 console.log(data);`,
                 python: `import requests
@@ -410,7 +410,7 @@ print(data)`,
 
 }
 });
-
+;
 const data = await response.json();
 console.log(data);`,
                 python: `import requests
@@ -487,7 +487,7 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
     'Content-Type': 'application/json'
   }
 });
-
+;
 const data = await response.json();
 console.log(data);`,
                 python: `import requests
@@ -637,7 +637,7 @@ print(data)`,
     requester_email: 'john@example.com'
   })
 });
-
+;
 const data = await response.json();
 console.log(data);`,
                 python: `import requests
@@ -734,7 +734,7 @@ print(data)`,
 
 }
 });
-
+;
 const data = await response.json();
 console.log(data);`,
                 python: `import requests
@@ -808,7 +808,7 @@ print(data)`,
               <CodeBlock
                 code={`import crypto from 'crypto';
 
-// Function to verify webhook signature
+// Function to verify webhook signature;
 function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret);
   const expectedSignature = hmac.update(payload).digest('hex');

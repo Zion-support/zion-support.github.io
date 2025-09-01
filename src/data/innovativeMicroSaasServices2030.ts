@@ -1,14 +1,17 @@
 // Innovative Micro SAAS Services 2030 - Zion Tech Group
 // Cutting-edge, real-world micro SAAS solutions with market data and pricing
-
+;
 export interface ServiceContact {
+
 
   phone: string;
   email: string;
   website: string;
-  address: string}
-
+  address: string
+}
+;
 export interface MicroSaasService {
+
 
   id: number;
   name: string;
@@ -35,9 +38,10 @@ export interface MicroSaasService {
   growthRate: string;
   useCases: string[];
   technologies: string[];
-  compliance: string[]}
+  compliance: string[]
+}
 
-// Zion Tech Group Contact Information
+// Zion Tech Group Contact Information;
 const zionContact: ServiceContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
@@ -56,7 +60,7 @@ const zionContact: ServiceContact = {
 
 };
 
-// Innovative Micro SAAS Services 2030
+// Innovative Micro SAAS Services 2030;
 export const innovativeMicroSaasServices2030: MicroSaasService[] = [
   {
     id: 1,
@@ -619,5 +623,6 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
     compliance["ISO 27001", "SOC 2", "Industry 4.0", "Cybersecurity standards"];
   }
 ];
-
+;
+export { innovativeMicroSaasServices2030 };
 export default innovativeMicroSaasServices2030;}}}

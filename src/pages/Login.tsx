@@ -107,7 +107,7 @@ import { motion } from 'framer - motion';
     }) ;
   };
 
-  const isFormValid = () => {
+  const isFormValid = (...args: unknown[]): unknown => {
     if (isLogin) {
       return formData.email && formData.password;
     } else {

@@ -55,7 +55,7 @@ const DigitalTransformation = () => {
     "Better competitive positioning in the market";
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -99,7 +99,7 @@ const DigitalTransformation = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {transformationServices.map((service, index) => (
+            {transformationServices.map((service, index 
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -108,7 +108,7 @@ const DigitalTransformation = () => {
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <p className="text-lg font-semibold text-indigo-400 mb-4">{service.price}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <li key={featureIndex} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {feature}
@@ -135,7 +135,7 @@ const DigitalTransformation = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {transformationAreas.map((area, index) => (
+            {transformationAreas.map(area: unknown, index: unknown 
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <area.icon className="w-8 h-8 text-white"/>
@@ -143,7 +143,7 @@ const DigitalTransformation = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{area.name}</h3>
                 <p className="text-gray-300 mb-4">{area.description}</p>
                 <ul className="space-y-2">
-                  {area.features.map((feature, idx) => (
+                  {area.features.map((feature, idx (
                     <li key={idx} className="text-sm text-gray-400">
                       {feature}
                     </li>
@@ -168,7 +168,7 @@ const DigitalTransformation = () => {
                 competitive and meet evolving customer expectations.
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></div>
                     {benefit}
@@ -218,5 +218,6 @@ const DigitalTransformation = () => {
     </div>;
   );
 };
-
+;
+export { DigitalTransformation };
 export default DigitalTransformation;}}}

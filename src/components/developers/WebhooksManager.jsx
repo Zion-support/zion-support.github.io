@@ -51,7 +51,7 @@ export function WebhooksManager() {
         { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },
         { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' },
         { value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved' },
-        { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' },
+        { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' }
     ];
     // Toggle an event selection
     const toggleEvent = (event) => {
@@ -321,3 +321,5 @@ export function WebhooksManager() {
         </AlertDialogContent>
       </AlertDialog>
     </Card>)}
+
+}

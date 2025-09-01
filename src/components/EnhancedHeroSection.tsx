@@ -22,6 +22,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
 
 interface HeroSlide {
 
+
   title: string;
   subtitle: string;
   description: string;
@@ -117,7 +118,7 @@ const EnhancedHeroSection = memo (function EnhancedHeroSection (...args: []) :  
             className="absolute w - 2 h - 2 bg - zion - cyan / 40 rounded - full"
             style={{
               left: `${20 + i * 15}%`,
-              top: `${30 + i * 10}%`,
+              top: `${30 + i * 10}%`
             }}
             animate = {
   {

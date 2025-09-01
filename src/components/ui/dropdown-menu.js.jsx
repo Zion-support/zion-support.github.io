@@ -9,7 +9,7 @@ const DropdownMenu({ children }) {
       <div className="relative">
         {children}
       </div>
-    </DropdownMenuContext.Provider>)}
+    </DropdownMenuContext.Provider>)};
 export function DropdownMenuTrigger({ children, asChild = false }) {
     const context = useContext(DropdownMenuContext);
     if (!context)
@@ -20,7 +20,7 @@ export function DropdownMenuTrigger({ children, asChild = false }) {
       </div>)}
     return (<div onClick={() => context.setIsOpen(!context.isOpen)}>
       {children}
-    </div>)}
+    </div>)};
 export function DropdownMenuContent({ children, align = 'start', className = '' }) {
     const context = useContext(DropdownMenuContext);
     if (!context)
@@ -36,7 +36,7 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
 };
     return (<div className={`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>
       {children}
-    </div>)}
+    </div>)};
 export function DropdownMenuItem({ children, onClick, asChild = false, className = '' }) {
     const context = useContext(DropdownMenuContext);
     if (!context)

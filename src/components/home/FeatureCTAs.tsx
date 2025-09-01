@@ -34,7 +34,7 @@ import {
   Shield,
   Cloud
  } from 'lucide-react';
-
+;
 export function FeatureCTAs(...args[]):  {
   const features = [
     {
@@ -158,7 +158,7 @@ export function FeatureCTAs(...args[]):  {
     };
   ];
 
-  return (
+  return 
     <section className = "py-20 bg-gradient-to-b from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -171,7 +171,7 @@ export function FeatureCTAs(...args[]):  {
         </div>
 
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {features.map((feature, index)  => (
+          {features.map((feature, index (
             <Card key={index} className="bg-slate-800/50 border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-2">

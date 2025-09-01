@@ -1,5 +1,6 @@
 export interface IndustrySolution {
 
+
   id: string;
   title: string;
   description: string;
@@ -14,7 +15,8 @@ pricing: {
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string};
+    custom: string
+};
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -23,7 +25,7 @@ pricing: {
   contactLink: string;
   status: 'active' | 'beta' | 'coming-soon';
   compliance: string[];
-  certifications: string[]}
+  certifications: string[]};
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
   {
     id: 'healthcare-ai-platform',
@@ -465,3 +467,5 @@ export const getIndustrySolutionsByIndustry = (industry: string): IndustrySoluti
 export const getAllIndustrySolutions = (): IndustrySolution[] => {;
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
 };
+
+}

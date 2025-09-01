@@ -72,7 +72,7 @@ const securityFeatures = [
     color: "from - teal - 500 to - green - 600";
   };
 ];
-
+;
 const complianceFeatures = [
   {
     category: "Data Protection",

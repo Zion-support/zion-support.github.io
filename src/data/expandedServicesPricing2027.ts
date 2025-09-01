@@ -1,7 +1,8 @@
 // Expanded Services Pricing Guide 2027 - Zion Tech Group
 // Comprehensive pricing information for all expanded innovative services
-
+;
 export interface ExpandedServicePricing {
+
 
   serviceId: string;
   serviceName: string;
@@ -16,7 +17,8 @@ starter: {
       limitations: string[];
       bestFor: string[];
       setupFee: number;
-      contractTerm: string};
+      contractTerm: string
+};
     professional: {
       price: number;
       currency: string;
@@ -67,7 +69,7 @@ starter: {
     website: string;
     address: string}}
 
-// 1. CYBERSECURITY SERVICES PRICING
+// 1. CYBERSECURITY SERVICES PRICING;
 export const cybersecurityPricing: ExpandedServicePricing[] = [
   {
     serviceId: 'quantum-threat-hunter',
@@ -380,7 +382,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
 
 ];
 
-// 2. DATA ANALYTICS SERVICES PRICING
+// 2. DATA ANALYTICS SERVICES PRICING;
 export const dataAnalyticsPricing: ExpandedServicePricing[] = [
   {
     serviceId: 'predictive-insights-engine',
@@ -532,7 +534,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
 
 ];
 
-// 3. CLOUD & DEVOPS SERVICES PRICING
+// 3. CLOUD & DEVOPS SERVICES PRICING;
 export const cloudDevOpsPricing: ExpandedServicePricing[] = [
   {
     serviceId: 'multi-cloud-orchestrator',
@@ -684,7 +686,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
 
 ];
 
-// 4. IOT & EDGE COMPUTING SERVICES PRICING
+// 4. IOT & EDGE COMPUTING SERVICES PRICING;
 export const iotEdgePricing: ExpandedServicePricing[] = [
   {
     serviceId: 'industrial-iot-intelligence',
@@ -836,7 +838,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
 
 ];
 
-// 5. FINANCIAL TECHNOLOGY SERVICES PRICING
+// 5. FINANCIAL TECHNOLOGY SERVICES PRICING;
 export const finTechPricing: ExpandedServicePricing[] = [
   {
     serviceId: 'quantum-financial-modeling',
@@ -988,7 +990,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
 
 ];
 
-// 6. HEALTHCARE TECHNOLOGY SERVICES PRICING
+// 6. HEALTHCARE TECHNOLOGY SERVICES PRICING;
 export const healthcarePricing: ExpandedServicePricing[] = [
   {
     serviceId: 'ai-diagnostic-assistant',
@@ -1140,7 +1142,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
 
 ];
 
-// Export all pricing data
+// Export all pricing data;
 export const ALL_EXPANDED_SERVICES_PRICING = [;
   ...cybersecurityPricing,;
   ...dataAnalyticsPricing,;
@@ -1150,19 +1152,19 @@ export const ALL_EXPANDED_SERVICES_PRICING = [;
   ...healthcarePricing;
 ];
 
-// Helper functions
+// Helper functions;
 export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | null => {;
   return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId);
 };
-
+;
 export const getPricingByCategory = (category: string): ExpandedServicePricing[] => {;
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category);
 };
-
+;
 export const getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[] => {;
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory);
 };
-
+;
 export const searchPricing = (query: string): ExpandedServicePricing[] => {;
   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>
@@ -1171,3 +1173,148 @@ export const searchPricing = (query: string): ExpandedServicePricing[] => {;
     pricing.subcategory.toLowerCase().includes(lowercaseQuery)
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+}

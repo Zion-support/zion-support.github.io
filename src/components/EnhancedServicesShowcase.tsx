@@ -111,7 +111,7 @@ function EnhancedServicesShowcase () {
       };
     };
   };
-
+;
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
 
   const [selectedCategory, setSelectedCategory] = useState ('All') ;
@@ -422,3 +422,5 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
       </div>
     </section>) ;
 };
+
+}

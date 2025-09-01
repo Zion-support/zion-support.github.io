@@ -8,9 +8,9 @@ import { Users, DollarSign, Clock, Briefcase  } from 'lucide-react'; // Added Br
 interface RoleCardProps extends React.PropsWithChildren<{}> {
 
   role: RecommendedRole;
-  onInviteTalent: (talentId: string, roleTitle: string)  => void}
-
-export const RoleCard = ({ role, onInviteTalent }: RoleCardProps) => {
+  onInviteTalent: talentId: string, roleTitle: string void}
+;
+export const RoleCard = (...args: unknown[]): unknown => {
   return (
     <Card className="mb-6 shadow-lg">
       <CardHeader className="pb-3">
@@ -37,7 +37,7 @@ export const RoleCard = ({ role, onInviteTalent }: RoleCardProps) => {
           <>
             <h4 className="text-sm font-medium text-muted-foreground mb-2.5">Suggested Talent ({role.matchedTalent.length}):</h4>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-3">
-              {role.matchedTalent.map((talent)  => (
+              {role.matchedTalent.map(talent: unknown (
                 <TalentCardPreview
                   key={talent.id}
                   talent={talent}

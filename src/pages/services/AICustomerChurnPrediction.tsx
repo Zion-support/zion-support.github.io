@@ -14,7 +14,7 @@ import { TrendingDown,
   Clock,
   DollarSign
  } from 'lucide-react';
-
+;
 const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -71,7 +71,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
       popular: true
     },
     {
-      plan: "Enterprise",
+      plan: "Enterprise"
     };
       price: "Custom",;
       period: "",;
@@ -80,7 +80,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO 
         title="AI Customer Churn Prediction Platform - Zion Tech Group"
@@ -182,7 +182,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
           </motion.div>
           
           <div className="grid md: grid-cols-2 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -266,7 +266,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
           </motion.div>
           
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={benefit}
                 initial = {
@@ -349,7 +349,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
           </motion.div>
           
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6">
-            {integrations.map((integration, index)  => (
+            {integrations.map(integration: unknown, index: unknown (
               <motion.div
                 key={integration}
                 initial = {
@@ -429,7 +429,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
           </motion.div>
           
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={plan.plan}
                 initial = {
@@ -486,7 +486,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
+                  {plan.features.map(feature: unknown, idx: unknown (
                     <li key={idx} className="flex items-center text-slate-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -595,5 +595,6 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
     </div>;
   );
 };
-
+;
+export { AICustomerChurnPrediction };
 export default AICustomerChurnPrediction;}}}

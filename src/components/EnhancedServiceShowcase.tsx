@@ -24,10 +24,12 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 interface Service {
 
+
   id: string;
   title: string;
   description: string;
-icon: React.ComponentType<{ className?: string}>;
+icon: React.ComponentType<{ className?: string
+}>;
   category: string;
   features: string[];
   pricing: string;
@@ -36,7 +38,7 @@ icon: React.ComponentType<{ className?: string}>;
   color: string;
   popular?: boolean;
   link: string}
-
+;
 const services: Service[] = [
   {
     id: 'ai - business - intelligence',
@@ -145,7 +147,7 @@ const services: Service[] = [
     link: '/ai - services / healthcare'
 
 ];
-
+;
 const categories = [
   'All Services',
   'AI & Machine Learning',

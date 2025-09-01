@@ -185,7 +185,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
     };
   ];
 
-  return (
+  return 
     <>
       <SEO
         title = "AI Content Optimizer Pro | Zion Tech Group&quot;
@@ -773,5 +773,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
     </>;
   );
 };
-
+;
+export { AIContentOptimizerPro };
 export default AIContentOptimizerPro;}}}}}

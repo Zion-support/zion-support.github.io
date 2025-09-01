@@ -3,12 +3,12 @@ import { REVOLUTIONARY_SERVICES_2030  } from "./revolutionaryServices2030";
 
 // Comprehensive Services Index 2030 - Zion Tech Group
 // This file combines all services for easy access and management
-
+;
 export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [
   ...REVOLUTIONARY_SERVICES_2030
 ];
 
-// Service Categories for easy filtering
+// Service Categories for easy filtering;
 export const SERVICE_CATEGORIES_2030 = [
   "AI & Business Intelligence",
   "AI & Marketing",
@@ -41,16 +41,14 @@ export const SERVICE_CATEGORIES_2030 = [
   "Emerging Technology";
 ];
 
-// Service Statistics
+// Service Statistics;
 export const SERVICE_STATISTICS_2030 = {
   totalServices: COMPREHENSIVE_SERVICES_INDEX_2030.length,
   totalCategories: SERVICE_CATEGORIES_2030.length,
-  averagePrice: Math.round(
-    COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.price, 0) / 
+  averagePrice: Math.roundCOMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum: unknown, service: unknown sum + service.price, 0) / 
     COMPREHENSIVE_SERVICES_INDEX_2030.length
   ),
-  averageRating: Math.round(
-    (COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.rating, 0) / 
+  averageRating: Math.round(COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum: unknown, service: unknown sum + service.rating, 0) / 
     COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
   ) / 10,
   featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
@@ -74,10 +72,10 @@ export const SERVICE_STATISTICS_2030 = {
 
 };
 
-// Featured Services
+// Featured Services;
 export const FEATURED_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured);
 
-// High-ROI Services (ROI > 500%)
+// High-ROI Services (ROI > 500%);
 export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
   const roi = service.roi;
   if (typeof roi = == 'string') {;
@@ -85,7 +83,7 @@ export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(s
     return roiNumber > 500}
   return false});
 
-// Quick Setup Services (< 8 weeks)
+// Quick Setup Services (< 8 weeks);
 export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
   const setupTime = service.setupTime;
   if (typeof setupTime = == 'string') {;
@@ -93,7 +91,7 @@ export const QUICK_SETUP_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filte
     return weeks < 8}
   return false});
 
-// Export individual service arrays for specific use cases
+// Export individual service arrays for specific use cases;
 export {
   REVOLUTIONARY_SERVICES_2030
 };

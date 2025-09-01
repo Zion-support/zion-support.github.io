@@ -1,4 +1,5 @@
 export interface InnovativeService2028 {
+
   id: string;
   title: string;
   description: string;
@@ -21,7 +22,8 @@ export interface InnovativeService2028 {
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -35,7 +37,7 @@ export interface InnovativeService2028 {
   complianceFeatures?: string[];
   scalabilityFeatures?: string[];
 }
-
+;
 export const INNOVATIVE_SERVICES_2028: InnovativeService2028[] = [
   // AI-Powered Enterprise Solutions
   {
@@ -629,5 +631,6 @@ export const INNOVATIVE_SERVICES_2028: InnovativeService2028[] = [
     marketSize: '$15.8 billion by 2028',
   },
 ];
-
+;
+export { INNOVATIVE_SERVICES_2028 };
 export default INNOVATIVE_SERVICES_2028;

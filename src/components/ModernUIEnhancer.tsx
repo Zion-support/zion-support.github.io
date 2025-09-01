@@ -3,8 +3,10 @@ export const ModernUIEnhancer: React.FC < ModernUIEnhancerProps> = ({
 
 
 interface ModernUIEnhancerProps {
+  // Add your props here
+
+
   enabled?: boolean;
-}
 
   enabled = true,
 }) => {

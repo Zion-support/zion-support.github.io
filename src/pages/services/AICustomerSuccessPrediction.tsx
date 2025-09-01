@@ -33,7 +33,7 @@ import {
   Star
 } from 'lucide-react';
 import { SEO } from "../../components/SEO";
-
+;
 const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -208,7 +208,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
     'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks';
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
         title="AI Customer Success Prediction Platform | Zion Tech Group"
@@ -310,7 +310,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
           </div>
           
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -393,7 +393,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
           </div>
           
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index)  => (
+            {pricingPlans.map(plan: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -436,7 +436,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 </div>
                 <p className="text-gray-300 mb-6">{capability.description}</p>
                 <div className="space-y-2">
-                  {capability.benefits.map((benefit, benefitIndex) => (
+                  {capability.benefits.map((benefit, benefitIndex (
                     <div key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -486,7 +486,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
           </div>
           
           <div className="grid md: grid-cols-3 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -529,7 +529,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 </div>
                 <p className="text-gray-300 mb-6">{useCase.description}</p>
                 <div className="space-y-2">
-                  {useCase.metrics.map((metric, metricIndex) => (
+                  {useCase.metrics.map((metric, metricIndex (
                     <div key={metricIndex} className="flex items-center text-sm text-gray-400">
                       <Target className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                       {metric}
@@ -579,7 +579,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
           </div>
           
           <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index)  => (
+            {integrations.map(integration: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -662,7 +662,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -719,7 +719,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map(feature: unknown, featureIndex: unknown (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -798,7 +798,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 title: 'Launch',
                 description: 'Go live with monitoring and ongoing optimization support'
 
-            ].map((phase, index) => (;
+            ].map(phase: unknown, index: unknown (;
               <motion.div
                 key={index}
                 initial = {
@@ -949,4 +949,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       </section>;
     </div>;
   );
+}
+
 }

@@ -22,7 +22,8 @@ export interface AdvancedMicroSaasService {
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -33,7 +34,7 @@ export interface AdvancedMicroSaasService {
   competitors?: string[];
   marketSize?: string;
 }
-
+;
 export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
   // AI-Powered Financial Services
   {
@@ -471,4 +472,5 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
     marketSize: '$18.9 billion by 2025',
   },
 ];
+export { ADVANCED_MICRO_SAAS_SERVICES_2025 };
 export default ADVANCED_MICRO_SAAS_SERVICES_2025;

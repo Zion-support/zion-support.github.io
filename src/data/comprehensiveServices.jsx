@@ -217,7 +217,7 @@ export const comprehensiveServices = [
     sla: '95% first-call resolution',
   },
 ];
-
+;
 export const serviceCategories = [
   {
     name: 'Infrastructure',
@@ -258,7 +258,7 @@ export const serviceCategories = [
     services: comprehensiveServices.filter(s => s.category === 'Support'),
   },
 ];
-
+;
 export const pricingTiers = [
   {
     name: 'Starter',
@@ -310,7 +310,7 @@ export const pricingTiers = [
     limitations: ['Unlimited users', 'Custom SLAs', '1-hour response time'],
   },
 ];
-
+;
 export const getPopularServices = () => {
   return comprehensiveServices.filter(service => service.popular);
 };
@@ -336,7 +336,7 @@ export const calculateServiceCost = (
 
   return baseCost;
 };
-
+;
 export const getServiceRecommendations = (businessSize, industry, budget) => {
   let recommendations = comprehensiveServices;
 
@@ -365,7 +365,7 @@ export const getServiceRecommendations = (businessSize, industry, budget) => {
   return recommendations;
 };
 
-// Service categories for filtering
+// Service categories for filtering;
 export const SERVICE_CATEGORIES = [
   { label: 'Infrastructure', value: 'infrastructure' },
   { label: 'Security', value: 'security' },
@@ -377,6 +377,6 @@ export const SERVICE_CATEGORIES = [
   { label: 'Consulting', value: 'consulting' },
 ];
 
-// Alias exports for backward compatibility
+// Alias exports for backward compatibility;
 export const COMPREHENSIVE_SERVICES = comprehensiveServices;
 export const PRICING_TIERS = pricingTiers;

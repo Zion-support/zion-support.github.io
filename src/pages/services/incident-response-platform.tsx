@@ -309,7 +309,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
                   {capability.category}
                 </h3>
                 <ul className="space-y-3">
-                  {capability.services.map((service, idx) => (
+                  {capability.services.map((service, idx (
                     <li key={idx} className="flex items-center text-slate-300">
                       <div className="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
                       {service}

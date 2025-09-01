@@ -370,7 +370,7 @@ const blockchainSolutions = [
     technologies: ["Integration", "APIs", "Migration", "Legacy Systems"];
   };
 ];
-
+;
 const blockchainTechnologies = [
   {
     name: "Blockchain Platforms",
@@ -401,7 +401,7 @@ const blockchainTechnologies = [
     reliability: "High";
   };
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -431,7 +431,7 @@ const successStories = [
     logo: "HIS";
   };
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -462,7 +462,7 @@ const processSteps = [
     duration: "4 - 8 weeks";
   };
 ];
-
+;
 const blockchainBenefits = [
   {
     title: "Transparency & Trust",

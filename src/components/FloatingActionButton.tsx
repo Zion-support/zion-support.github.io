@@ -20,22 +20,26 @@ import {
 } from 'lucide - react';
 
 interface FloatingAction {
+
   id: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: React.ComponentType<{ size?: number; className?: string 
+}>;
   label: string;
-  action: () => void;
+  action: : unknown void;
   color: string;
   priority: 'high' | 'medium' | 'low';
 }
 
 interface FloatingActionButtonProps {
+  // Add your props here
+
+
   actions?: FloatingAction[];
   position?: 'bottom - right' | 'bottom - left' | 'top - right' | 'top - left';
   theme?: 'light' | 'dark' | 'auto';
   showScrollToTop?: boolean;
   showContactActions?: boolean;
   showUtilityActions?: boolean;
-}
 
 const FloatingActionButton: React.FC < FloatingActionButtonProps> = ({
   actions = [],
@@ -250,7 +254,7 @@ const FloatingActionButton: React.FC < FloatingActionButtonProps> = ({
   }, []) ;
 
   // Get position classes
-  const getPositionClasses = () => {
+  const getPositionClasses = (...args: unknown[]): unknown => {
     switch (position) {
       case 'bottom - left':
         return 'bottom - 6 left - 6';

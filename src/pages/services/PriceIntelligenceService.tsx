@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { SEO } from '@/components/SEO';
 
 const PriceIntelligenceService: React.FC = (): JSX.Element => {
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO
         title="Price Intelligence - Zion Tech Group"
@@ -74,5 +74,6 @@ const PriceIntelligenceService: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { PriceIntelligenceService };
 export default PriceIntelligenceService;

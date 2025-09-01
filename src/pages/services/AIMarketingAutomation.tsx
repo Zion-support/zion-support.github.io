@@ -23,8 +23,8 @@ import {
   Eye
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
-
-const AIMarketingAutomation = () => {
+;
+const AIMarketingAutomation = (...args: unknown[]): unknown => {
   const features = [
     {
       icon: Brain,
@@ -137,7 +137,7 @@ const AIMarketingAutomation = () => {
     }
   ];
 
-  return (
+  return 
     <>
       <SEO 
         title="AI Marketing Automation - Zion Tech Group"
@@ -209,7 +209,7 @@ const AIMarketingAutomation = () => {
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -246,7 +246,7 @@ const AIMarketingAutomation = () => {
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map(feature: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -284,7 +284,7 @@ const AIMarketingAutomation = () => {
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -314,7 +314,7 @@ const AIMarketingAutomation = () => {
                   </div>
 
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map(feature: unknown, featureIndex: unknown (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-pink-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -377,5 +377,6 @@ const AIMarketingAutomation = () => {
     </>
   );
 };
-
+;
+export { AIMarketingAutomation };
 export default AIMarketingAutomation;

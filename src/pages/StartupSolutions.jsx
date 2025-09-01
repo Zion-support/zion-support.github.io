@@ -120,7 +120,7 @@ const startupSolutions = [
     category: 'Marketing',
   },
 ];
-
+;
 const successStories = [
   {
     logo: '🚀',
@@ -155,7 +155,7 @@ const successStories = [
       'App launched in 8 weeks, 50% increase in mobile conversions, 4.8 - star rating.',
   },
 ];
-
+;
 const StartupSolutions = () => {
   const [selectedCategory, setSelectedCategory] = useState ('All') ;
 

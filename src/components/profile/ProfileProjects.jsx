@@ -31,3 +31,5 @@ import { FileText export function ProfileProjects({ projects }) {
           </Card>))}
       </div>
     </div>)}
+
+}

@@ -16,6 +16,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 interface Testimonial {
 
+
   id: string;
   name: string;
   position: string;
@@ -25,8 +26,9 @@ interface Testimonial {
   rating: number;
   industry: string;
   results: string[];
-  avatar: string}
-
+  avatar: string
+}
+;
 const testimonials: Testimonial[] = [
   {
     id: '1',
@@ -327,4 +329,6 @@ const testimonials: Testimonial[] = [
         </motion.div>;
       </div>;
     </section>;) ;
+}
+
 }

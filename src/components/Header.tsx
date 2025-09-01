@@ -77,8 +77,10 @@ function Header ({ className }: HeaderProps) {
 } from 'lucide - react';
 
 interface HeaderProps {
+  // Add your props here
+
+
   className?: string;
-}
 
   const [isScrolled, setIsScrolled] = useState (false) ;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false) ;

@@ -45,8 +45,9 @@ import {
   Target,
   AlertTriangle,
 } from 'lucide-react';
-
-export default function CloudFinOpsOptimizer() {
+;
+export { function };
+export default function CloudFinOpsOptimizer(...args: unknown[]): unknown {
   const features = [
     {
       icon: Calculator,
@@ -140,7 +141,7 @@ export default function CloudFinOpsOptimizer() {
     },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-32 pb-20">
@@ -213,7 +214,7 @@ export default function CloudFinOpsOptimizer() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -253,7 +254,7 @@ export default function CloudFinOpsOptimizer() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
+              {benefits.slice(0, 3).map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -270,7 +271,7 @@ export default function CloudFinOpsOptimizer() {
             </div>
 
             <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
+              {benefits.slice(3).map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index + 3}
                   initial={{ opacity: 0, x: 20 }}
@@ -308,7 +309,7 @@ export default function CloudFinOpsOptimizer() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {optimizationStrategies.map((strategy, index) => (
+            {optimizationStrategies.map(strategy: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -354,7 +355,7 @@ export default function CloudFinOpsOptimizer() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

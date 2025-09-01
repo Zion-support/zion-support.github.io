@@ -1,9 +1,10 @@
 import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 import { Link  } from 'react-router-dom.ts';
-
+;
+export { function };
 export default function IoTEdge(...args: []):  {
-  return (
+  return 
     <>
       <Helmet>
         <title>IoT & Edge Computing - Zion Tech Group</title>
@@ -94,7 +95,7 @@ export default function IoTEdge(...args: []):  {
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with encryption and access controls."
                 }
-              ].map((feature, index)  => (
+              ].map((feature, index (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -157,7 +158,7 @@ export default function IoTEdge(...args: []):  {
                   icon: Activity,
                   benefits: ["Inventory tracking", "Supply chain", "Customer insights"]
                 }
-              ].map((application, index)  => (
+              ].map(application: unknown, index: unknown 
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <application.icon className="w-6 h-6 text-white" />
@@ -165,7 +166,7 @@ export default function IoTEdge(...args: []):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{application.title}</h3>
                   <p className="text-slate-300 mb-4">{application.description}</p>
                   <ul className="space-y-1">
-                    {application.benefits.map((benefit, benefitIndex) => (
+                    {application.benefits.map((benefit, benefitIndex (
                       <li key={benefitIndex} className="text-sm text-indigo-400 flex items-center">
                         <CheckCircle className="w-3 h-3 mr-2" />
                         {benefit}
@@ -200,7 +201,7 @@ export default function IoTEdge(...args: []):  {
                     "Enhance security by keeping sensitive data closer to the source",
                     "Enable real-time decision making without cloud dependency",
                     "Scale efficiently with distributed edge computing architecture"
-                  ].map((benefit, index) => (
+                  ].map(benefit: unknown, index: unknown (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-indigo-400 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-300">{benefit}</span>
@@ -217,7 +218,7 @@ export default function IoTEdge(...args: []):  {
                     { metric: "60%", label: "Bandwidth Savings" },
                     { metric: "99.9%", label: "Uptime Reliability" },
                     { metric: "24/7", label: "Local Processing" }
-                  ].map((item, index)  => (
+                  ].map(item: unknown, index: unknown (
                     <div key={index} className="flex justify-between items-center">
                       <span className="text-slate-300">{item.label}</span>
                       <span className="text-2xl font-bold text-indigo-400">{item.metric}</span>
@@ -259,7 +260,7 @@ export default function IoTEdge(...args: []):  {
                   title: "Security",
                   description: "TLS encryption, device authentication, and secure communication"
                 }
-              ].map((technology, index)  => (
+              ].map(technology: unknown, index: unknown (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{index + 1}</span>
@@ -306,7 +307,7 @@ export default function IoTEdge(...args: []):  {
                   title: "Optimization",
                   description: "Monitor performance and continuously optimize the system."
                 }
-              ].map((step, index)  => (
+              ].map(step: unknown, index: unknown (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>

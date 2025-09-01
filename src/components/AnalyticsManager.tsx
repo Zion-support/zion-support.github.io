@@ -25,28 +25,32 @@ function AnalyticsManager () {
 } from 'lucide - react';
 
 interface AnalyticsData {
+
   pageViews: number;
   uniqueVisitors: number;
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
-  topPages: Array<{ path: string; views: number }>;
-  userAgents: Array<{ device: string; count: number }>;
+  topPages: { path: string; views: number 
+}[];
+  userAgents: { device: string; count: number }[];
   performance: {
     fcp: number;
     lcp: number;
     fid: number;
     cls: number;
   };
-  events: Array<{ name: string; count: number; timestamp: string }>;
+  events: { name: string; count: number; timestamp: string }[];
 }
 
 interface UserSession {
+
   id: string;
   startTime: number;
   lastActivity: number;
   pageViews: string[];
-  events: Array<{ name: string; timestamp: number; data?: any }>;
+  events: { name: string; timestamp: number; data?: unknown 
+}[];
   userAgent: string;
   referrer: string;
 }

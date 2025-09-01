@@ -215,3 +215,10 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
       </div>;
     </section>
   )};
+
+
+
+}
+
+}
+}

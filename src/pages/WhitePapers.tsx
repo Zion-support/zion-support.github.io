@@ -218,7 +218,7 @@ import {
     },
   ];
 
-  const getCategoryCount = (categoryId: string) => {
+  const getCategoryCount = (...args: unknown[]): unknown => {
     if (categoryId === 'all') {
       return whitePapers.length;
     }
@@ -249,7 +249,7 @@ import {
     }) ;
   };
 
-  const formatDownloads = (downloads: number) => {
+  const formatDownloads = (...args: unknown[]): unknown => {
     if (downloads >= 1000000) {
       return (downloads / 1000000) .toFixed (1) + 'M';
     } else if (downloads >= 1000) {

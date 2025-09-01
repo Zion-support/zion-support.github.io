@@ -58,7 +58,7 @@ const researchAreas = [
     color: "from - orange - 500 to - red - 500";
   };
 ];
-
+;
 const innovationMetrics = [
   { label: "Research Papers", value: "30+", icon: "📚" },
   { label: "Patents Filed", value: "15+", icon: "📋" },

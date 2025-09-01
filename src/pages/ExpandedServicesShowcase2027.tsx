@@ -77,7 +77,7 @@ import { motion, AnimatePresence } from 'framer - motion';
         return 'from - gray - 500 to - slate - 600'}
   };
 
-  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
+  const formatPrice = (...args: unknown[]): unknown => {;
     if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
 

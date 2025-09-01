@@ -18,7 +18,7 @@ const initialState = {
   theme,
   setTheme: () => { 
 
-},
+}
     };
     return (<ThemeContext.Provider value={value}>
       {children}

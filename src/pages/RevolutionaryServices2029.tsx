@@ -118,7 +118,7 @@ import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES } from '../../data / re
             animate={{
               x: [0, 100, 0],
               y: [0, -100, 0],
-              opacity: [0.2, 0.8, 0.2],
+              opacity: [0.2, 0.8, 0.2]
             }}
             transition={{
               duration: Math.random () * 10 + 10,

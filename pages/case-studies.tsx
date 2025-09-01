@@ -1,8 +1,9 @@
-import React from 'react.ts'
-import { Link  } from 'react-router-dom.ts'
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
 import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap  } from 'lucide-react'
 
-
+;
+export { function };
 export default function CaseStudies(...args[]):  {
 	const caseStudies = [
 		{
@@ -77,7 +78,7 @@ export default function CaseStudies(...args[]):  {
 
 	const industries = ['All', 'Technology', 'Healthcare', 'Manufacturing', 'Financial Services', 'Retail', 'Education']
 
-	return (
+	return 
 		<>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
@@ -97,7 +98,7 @@ export default function CaseStudies(...args[]):  {
 			<section className="py-12 border-b border-gray-200">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="flex flex-wrap gap-4 justify-center">
-						{industries.map((industry) => (
+						{industries.map((industry (
 							<button
 								key={industry}
 								className="px-4 py-2 rounded-full border border-gray-300 text-gray-700 hover:bg-blue-50 hover:border-blue-300 transition-colors"
@@ -147,7 +148,7 @@ export default function CaseStudies(...args[]):  {
 							<div>
 								<h4 className="text-lg font-semibold text-gray-900 mb-4">Results</h4>
 								<div className="space-y-3">
-									{caseStudies[0].results.map((result, index) => (
+									{caseStudies[0].results.map(result: unknown, index: unknown (
 										<div key={index} className="flex items-center gap-2">
 											<Star className="h-4 w-4 text-yellow-500" />
 											<span className="text-gray-700">{result}</span>
@@ -170,7 +171,7 @@ export default function CaseStudies(...args[]):  {
 						</p>
 					</div>
 					<div className="grid gap-8 lg: grid-cols-2">
-						{caseStudies.slice(1).map((study)  => (
+						{caseStudies.slice(1).map(study: unknown (
 							<div key={study.id} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
 								<div className="flex items-center justify-between mb-4">
 									<div className="flex items-center gap-2">
@@ -178,7 +179,7 @@ export default function CaseStudies(...args[]):  {
 										<span className="text-sm text-gray-500">{study.industry}</span>
 									</div>
 									<div className="flex items-center gap-1">
-										{Array.from({ length: study.rating }).map((_, i)  => (
+										{Array.from({ length: study.rating }).map(_: unknown, i: unknown (
 											<Star key={i} className="h-4 w-4 text-yellow-500 fill-current" />
 										))}
 									</div>
@@ -315,3 +316,5 @@ export default function CaseStudies(...args[]):  {
 		</>;
 	);
 };
+
+}

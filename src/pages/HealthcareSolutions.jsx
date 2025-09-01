@@ -23,7 +23,7 @@ import { motion } from 'framer - motion';
   FileText,
   Clock,
   Eye,
-  AlertTriangle
+  AlertTriangle;
 const healthcareSolutions = [
   {
     id: 1,
@@ -122,7 +122,7 @@ const healthcareSolutions = [
     compliance["NIST", "ISO 27001", "HITRUST"]
   }
 ];
-
+;
 const complianceStandards = [
   {
     name: "HIPAA",
@@ -149,7 +149,7 @@ const complianceStandards = [
     requirements["Security", "Availability", "Processing Integrity", "Confidentiality"]
   }
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -179,7 +179,7 @@ const successStories = [
     logo: "DD"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,

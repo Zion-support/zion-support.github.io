@@ -1,9 +1,9 @@
 import React from 'react';
-
+;
 export function Select({ children, className = '', value, onValueChange }) {
   return <div className={`relative ${className}`}>{children}</div>;
 }
-
+;
 export function SelectTrigger({ children, className = '', ...props }) {
   return (
     <button
@@ -14,11 +14,11 @@ export function SelectTrigger({ children, className = '', ...props }) {
     </button>
   );
 }
-
+;
 export function SelectValue({ placeholder }) {
   return <span className="text-sm">{placeholder || 'Select an option'}</span>;
 }
-
+;
 export function SelectContent({ children, className = '' }) {
   return (
     <div
@@ -32,7 +32,7 @@ export function SelectContent({ children, className = '' }) {
     </div>
   );
 }
-
+;
 export function SelectItem({ children, className = '', value, ...props }) {
   return (
     <div

@@ -75,8 +75,8 @@ import {
   Moon,
   Sun,
 } from 'lucide-react';
-
-const SpaceTech = () => {
+;
+const SpaceTech = (...args: unknown[]): unknown => {
   const features = [
     {
       icon: Satellite,
@@ -163,7 +163,7 @@ const SpaceTech = () => {
     },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -226,7 +226,7 @@ const SpaceTech = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -266,7 +266,7 @@ const SpaceTech = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+            {services.map(service: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -311,7 +311,7 @@ const SpaceTech = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
+              {benefits.slice(0, 3).map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -325,7 +325,7 @@ const SpaceTech = () => {
               ))}
             </div>
             <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
+              {benefits.slice(3).map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index + 3}
                   initial={{ opacity: 0, x: 20 }}
@@ -361,7 +361,7 @@ const SpaceTech = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -395,7 +395,7 @@ const SpaceTech = () => {
                 explore, monitor, and understand our world and beyond.
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                     {benefit}
@@ -454,5 +454,6 @@ const SpaceTech = () => {
     </div>
   );
 };
-
+;
+export { SpaceTech };
 export default SpaceTech;

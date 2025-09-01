@@ -4,6 +4,9 @@ export const EnhancedSEO: React.FC < SEOProps> = ({
 
 
 interface SEOProps {
+  // Add your props here
+
+
   title?: string;
   description?: string;
   keywords?: string;
@@ -17,7 +20,6 @@ interface SEOProps {
   tags?: string[];
   noindex?: boolean;
   canonical?: string;
-}
 
   title = 'Zion Tech Group - Leading AI Solutions & Technology Services',
   description = 'Transform your business with cutting - edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation.',
@@ -77,7 +79,7 @@ interface SEOProps {
     "logo": "https://ziontechgroup.com / images / zion - logo.png",
     "description": "Leading provider of AI - powered technology solutions, cloud computing, and cybersecurity services.",
   noindex = false,
-  canonical,
+  canonical
 }) => {
   const fullTitle = title.includes ('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = canonical || `${url}${window.location.pathname}`;

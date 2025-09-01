@@ -811,3 +811,5 @@ const Resources: React.FC = () : JSX.Element => {;
       </section>;
     </div>;) ;
 }
+
+}

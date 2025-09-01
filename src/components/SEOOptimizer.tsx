@@ -26,13 +26,16 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 interface SEOAnalysis {
 
+
   score: number;
   issues: SEOIssue[];
   suggestions: SEOSuggestion[];
   metrics: SEOMetrics;
-  lastUpdated: Date}
+  lastUpdated: Date
+}
 
 interface SEOIssue {
+
 
   id: string;
   type: 'error' | 'warning' | 'info';
@@ -40,18 +43,22 @@ interface SEOIssue {
   description: string;
   impact: 'high' | 'medium' | 'low';
   fixable: boolean;
-  category: 'content' | 'technical' | 'performance' | 'accessibility'}
+  category: 'content' | 'technical' | 'performance' | 'accessibility'
+}
 
 interface SEOSuggestion {
+
 
   id: string;
   title: string;
   description: string;
   priority: 'high' | 'medium' | 'low';
   effort: 'low' | 'medium' | 'high';
-  estimatedImpact: number}
+  estimatedImpact: number
+}
 
 interface SEOMetrics {
+
 
   pageSpeed: number;
   mobileFriendliness: number;
@@ -61,7 +68,8 @@ interface SEOMetrics {
 coreWebVitals: {
     lcp: number;
     fid: number;
-    cls: number}}
+    cls: number
+}}
 
 interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
 

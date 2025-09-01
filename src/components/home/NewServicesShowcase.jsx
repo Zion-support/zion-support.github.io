@@ -175,3 +175,5 @@ import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, Messag
         </div>
       </div>
     </section>)}
+
+}

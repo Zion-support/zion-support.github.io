@@ -36,4 +36,5 @@ const InfrastructureServices = () => {
     </div>
   );
 };
+export { InfrastructureServices };
 export default InfrastructureServices;

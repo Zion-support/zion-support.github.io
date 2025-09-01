@@ -99,7 +99,7 @@ const steps = [
     success: '100% client retention',
   },
 ];
-
+;
 const stats = [
   {
     icon: <Clock className="w - 6 h - 6" />,

@@ -14,6 +14,9 @@ interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
   itemId: string;
   itemType: 'product' | 'talent' | 'equipment' | 'service';
   className?: string}
+;
+export function FavoriteButton(...args: unknown[]): unknown {;
+  const [isFavorited, setIsFavorited] = useState<typeof false>(false);
 
   const [isFavorited, setIsFavorited] = useState (false) ;
 

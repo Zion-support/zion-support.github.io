@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import './utils/globalFetchInterceptor';
 import './utils/consoleErrorToast';
-// Import i18n configuration
+// Import i18n configuration;
 import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
 import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
@@ -21,7 +21,7 @@ import { NotificationProvider } from './context/notifications/NotificationContex
 import { AnalyticsProvider } from './context/AnalyticsContext';
 import { ViewModeProvider } from './context/ViewModeContext';
 
-// Initialize a React Query client with global error handling
+// Initialize a React Query client with global error handling;
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {

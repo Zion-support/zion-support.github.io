@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../src/data/innovativeServices2025";
-const InnovativeServicesShowcase: React.FC = () => {;
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('rating');
+const InnovativeServicesShowcase: React.FC = props {;
+  const [searchTerm, setSearchTerm] = useState<typeof ''>('');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all');
+  const [priceRange, setPriceRange] = useState<typeof 'all'>('all');
+  const [sortBy, setSortBy] = useState<typeof 'rating'>('rating');
   const categories = ['all', 'AI Services', 'IT Services', 'Micro SAAS', 'Business', 'Development'];
   const priceRanges = [;
     { label: 'All Prices', value: 'all' },;
@@ -44,19 +44,19 @@ const InnovativeServicesShowcase: React.FC = () => {;
     // Sort services
     switch (sortBy) {
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating);
+        filtered.sort(a: unknown, b: unknown b.rating - a.rating);
         break;
       case 'aiScore':
-        filtered.sort((a, b) => b.aiScore - a.aiScore);
+        filtered.sort(a: unknown, b: unknown b.aiScore - a.aiScore);
         break;
       case 'price':
-        filtered.sort((a, b) => a.price - b.price);
+        filtered.sort(a: unknown, b: unknown a.price - b.price);
         break;
       case 'launchDate':
-        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
+        filtered.sort(a: unknown, b: unknown new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
         break}
     return filtered}, [searchTerm, selectedCategory, priceRange, sortBy]);
-  const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
+  const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = { service }: unknown (
     <div className = "bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
       <div className="flex items-start justify-between mb-4">
         <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
@@ -78,7 +78,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
       <div className="mb-4">
         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
         <ul className="text-sm text-gray-600 space-y-1">
-          {service.features.slice(0, 4).map((feature, index) => (
+          {service.features.slice(0, 4).map(feature: unknown, index: unknown (
             <li key={index} className="flex items-center">
               <span className="text-green-500 mr-2">✓</span>
               {feature}
@@ -89,7 +89,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
       <div className="mb-4">
         <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
         <ul className="text-sm text-gray-600 space-y-1">
-          {service.benefits.slice(0, 3).map((benefit, index) => (
+          {service.benefits.slice(0, 3).map(benefit: unknown, index: unknown (
             <li key={index} className="flex items-center">
               <span className="text-blue-500 mr-2">→</span>
               {benefit}
@@ -100,7 +100,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
       <div className="mb-4">
         <h4 className="font-semibold text-gray-900 mb-2">Technology Stack:</h4>
         <div className="flex flex-wrap gap-2">
-          {service.technology.map((tech, index) => (
+          {service.technology.map(tech: unknown, index: unknown (
             <span key={index} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
               {tech}
             </span>
@@ -124,7 +124,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
       </div>;
     </div>;
   );
-  return (
+  return 
     <div className = "min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
@@ -178,7 +178,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
                 type="text"
                 placeholder="Search by name, description, or category..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e setSearchTerm(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -187,7 +187,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
               <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={e: unknown setSelectedCategory(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
               >
                 {categories.map(category  => (
@@ -202,7 +202,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
               <label className="block text-sm font-medium text-gray-700 mb-2">Price Range</label>
               <select
                 value={priceRange}
-                onChange={(e) => setPriceRange(e.target.value)}
+                onChange={e: unknown setPriceRange(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
               >
                 {priceRanges.map(range  => (
@@ -215,7 +215,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
               <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
+                onChange={e: unknown setSortBy(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
               >
                 {sortOptions.map(option  => (
@@ -233,7 +233,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
         </div>
         {/* Services Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service)  => (
+          {filteredServices.map(service: unknown (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
@@ -265,4 +265,5 @@ const InnovativeServicesShowcase: React.FC = () => {;
     </div>;
   );
 };
+export { InnovativeServicesShowcase };
 export default InnovativeServicesShowcase;

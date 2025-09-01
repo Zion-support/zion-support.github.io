@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
+;
 import { motion } from 'framer-motion';
 import {
   Menu,
@@ -17,7 +17,7 @@ import {
   Database,
   Shield,
 } from 'lucide-react';
-
+;
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -103,7 +103,7 @@ export function AppHeader() {
       ],
     },
     { name: 'About', path: '/about', icon: null },
-    { name: 'Contact', path: '/contact', icon: null },
+    { name: 'Contact', path: '/contact', icon: null }
   ];
 
   const isActiveRoute = path => {

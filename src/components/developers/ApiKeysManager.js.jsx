@@ -9,6 +9,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from "../ui/alert-dialog";
 import CodeBlock from "./CodeBlock";
 import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings } from 'lucide-react';
+export { function };
 export default function ApiKeysManager() {
     const { apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey } = useApiKeys();
     const [showCreateDialog, setShowCreateDialog] = useState(false);

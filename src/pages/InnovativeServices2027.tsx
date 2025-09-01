@@ -50,7 +50,7 @@ const categoryIcons: { [key: string]: React.ComponentType < any> } = {
   FinTech: Banknote,
   'IoT & Smart Cities': Building,
 };
-
+;
 const categoryColors: { [key: string]: string } = {
   'AI & Customer Success': 'from - cyan - 500 to - blue - 600',
   'Blockchain & DeFi': 'from - purple - 500 to - indigo - 600',

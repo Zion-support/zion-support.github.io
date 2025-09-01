@@ -56,7 +56,7 @@ const MicroSAASPage = () => {
     {
       id: 'user - management',
       title: 'User Management',
-      description: 'Comprehensive user authentication and authorization systems',
+      description: 'Comprehensive user authentication and authorization systems'
     };
       icon: <Users className="w - 8 h - 8" />,;
       features: ['Single Sign - On', 'Role - based Access', 'Multi - tenancy', 'User Analytics'],;

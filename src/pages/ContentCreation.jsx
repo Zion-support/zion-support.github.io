@@ -124,7 +124,7 @@ import { motion } from 'framer - motion';
     technologies["CDN", "Edge Computing", "Load Balancing", "Performance Monitoring"]
   }
 ];
-
+;
 const contentTechnologies = [
   {
     name: "Content Creation Tools",
@@ -155,7 +155,7 @@ const contentTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -185,7 +185,7 @@ const successStories = [
     logo: "EB"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -216,7 +216,7 @@ const processSteps = [
     duration: "Ongoing"
 
 ];
-
+;
 const contentBenefits = [
   {
     title: "Increased Productivity",

@@ -22,8 +22,8 @@ import { Atom,
   Shield
  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
-
-const QuantumAIPlatform = () => {
+;
+const QuantumAIPlatform = (...args: unknown[]): unknown => {
   const features = [
     {
       icon: Atom,
@@ -241,7 +241,7 @@ const QuantumAIPlatform = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {quantumAdvantages.map((advantage, index) => (
+            {quantumAdvantages.map(advantage: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -326,7 +326,7 @@ const QuantumAIPlatform = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -370,7 +370,7 @@ const QuantumAIPlatform = () => {
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 <ul className="space-y-3">
-                  {feature.benefits.map((benefit, idx) => (
+                  {feature.benefits.map((benefit, idx (
                     <li key={idx} className="text-gray-300 flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
                       {benefit}
@@ -420,7 +420,7 @@ const QuantumAIPlatform = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -475,7 +475,7 @@ const QuantumAIPlatform = () => {
                   </div>
                 </div>
                 <ul className="space-y-4 mb-8">
-                  {tier.features.map((feature, idx) => (
+                  {tier.features.map(feature: unknown, idx: unknown (
                     <li key={idx} className="text-gray-300 flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
                       {feature}
@@ -535,7 +535,7 @@ const QuantumAIPlatform = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -572,7 +572,7 @@ const QuantumAIPlatform = () => {
 
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
                 <ul className="space-y-2">
-                  {useCase.applications.map((application, appIndex) => (
+                  {useCase.applications.map((application, appIndex (
                     <li key={appIndex} className="text-gray-300 text-sm flex items-center">
                       <ArrowRight className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {application}
@@ -646,5 +646,6 @@ const QuantumAIPlatform = () => {
     </div>;
   );
 };
-
+;
+export { QuantumAIPlatform };
 export default QuantumAIPlatform;

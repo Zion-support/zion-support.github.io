@@ -105,7 +105,7 @@ import { motion } from 'framer - motion';
     platforms["IAM", "VPC", "Security Groups", "WAF"]
   }
 ];
-
+;
 const cloudPlatforms = [
   {
     name: "Amazon Web Services",
@@ -134,7 +134,7 @@ const cloudPlatforms = [
     features["Auto - scaling", "Load Balancing", "Service Discovery", "Rolling Updates"];
   }
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -164,7 +164,7 @@ const successStories = [
     logo: "FS"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,

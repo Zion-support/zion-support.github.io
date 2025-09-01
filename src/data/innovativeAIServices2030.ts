@@ -1,7 +1,8 @@
 // Innovative AI Services 2030 - Zion Tech Group
 // Cutting-edge AI solutions for modern businesses
-
+;
 export interface AIService {
+
 
   id: string;
   title: string;
@@ -14,7 +15,8 @@ pricing: {
     custom: string;
     currency: string;
     pricingModel: string;
-    marketPrice: string};
+    marketPrice: string
+};
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -50,7 +52,7 @@ pricing: {
   featured: boolean;
   trending: boolean}
 
-// Zion Tech Group Contact Information
+// Zion Tech Group Contact Information;
 const zionContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
@@ -68,7 +70,7 @@ const zionContact = {
 
 
 };
-
+;
 export const innovativeAIServices2030: AIService[] = [
   {
     id: "ai-voice-cloning-platform",
@@ -532,7 +534,7 @@ export const innovativeAIServices2030: AIService[] = [
     sla: "99.9% uptime guarantee",
     responseTime: "< 2 seconds",
     availability: "Global",
-    location: "Global",
+    location: "Global"
   }
     tags: ["AI Learning", "Personalized Education", "Corporate Training", "E-learning", "Adaptive Learning"],;
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500",;
@@ -541,5 +543,6 @@ export const innovativeAIServices2030: AIService[] = [
     trending: true;
   };
 ];
-
+;
+export { innovativeAIServices2030 };
 export default innovativeAIServices2030;}}

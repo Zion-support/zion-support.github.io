@@ -83,7 +83,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
     'Trend forecasting',
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-green-900 via-green-800 to-green-700 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">

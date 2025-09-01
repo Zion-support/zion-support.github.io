@@ -87,3 +87,7 @@ import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFea
       </div>
     </section>;
   )};
+
+
+}
+}

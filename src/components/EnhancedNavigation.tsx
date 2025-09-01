@@ -33,11 +33,13 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
 
 interface NavigationItem {
 
+
   label: anystring;
   href: string;
   icon?: React.ReactNode;
   children?: NavigationItem[];
   featured?: boolean;
+
 
 }
 
@@ -47,7 +49,7 @@ interface EnhancedNavigationProps extends React.PropsWithChildren<{}> {
   onThemeChange?: (theme: 'light' | 'dark' | 'system') => void;
 
 }
-
+;
 const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '/' },
   { 

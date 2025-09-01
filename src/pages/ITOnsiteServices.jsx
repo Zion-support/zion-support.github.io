@@ -28,7 +28,7 @@ import { motion } from 'framer - motion';
   Brain,
   Code,
   Truck,
-  FileText
+  FileText;
 const onsiteServices = [
   {
     id: 1,
@@ -127,7 +127,7 @@ const onsiteServices = [
     coverage["Local", "Regional", "National"]
   }
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -157,7 +157,7 @@ const successStories = [
     logo: "FS"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,

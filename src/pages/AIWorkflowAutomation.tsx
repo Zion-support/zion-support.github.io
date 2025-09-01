@@ -370,7 +370,7 @@ const workflowSolutions = [
     technologies: ["AI", "Task Management", "Optimization", "Analytics"];
   };
 ];
-
+;
 const workflowTechnologies = [
   {
     name: "AI & Machine Learning",
@@ -401,7 +401,7 @@ const workflowTechnologies = [
     reliability: "High";
   };
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -431,7 +431,7 @@ const successStories = [
     logo: "HTL";
   };
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -462,7 +462,7 @@ const processSteps = [
     duration: "4 - 8 weeks";
   };
 ];
-
+;
 const workflowBenefits = [
   {
     title: "Increased Efficiency",

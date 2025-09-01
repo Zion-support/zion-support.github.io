@@ -18,6 +18,9 @@ import { motion, AnimatePresence } from 'framer - motion';
   Globe,
   Rocket
 interface HeroProps {
+  // Add your props here
+
+
   title?: string;
   subtitle?: string;
   description?: string;

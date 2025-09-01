@@ -73,7 +73,7 @@ interface OptimizedImageProps extends React.PropsWithChildren<{}> {
         }
       },
       {
-        rootMargin: any'50px',;
+        rootMargin: unknown'50px',;
         threshold: 0.1
       }) ;
 

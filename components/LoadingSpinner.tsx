@@ -1,18 +1,18 @@
 import React from 'react';
 
 interface LoadingSpinnerProps {
+  // Add your props here
+
+
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
   fullScreen?: boolean;
-}
 
-export default function LoadingSpinner({ 
-  size = 'md', 
-  color = 'primary', 
-  text,
-  fullScreen = false 
-}: LoadingSpinnerProps) {
+}
+;
+export { function };
+export default function LoadingSpinner(...args: unknown[]): unknown {
   const sizeClasses = {
     sm: 'w-6 h-6',
     md: 'w-12 h-12',
@@ -54,8 +54,8 @@ export default function LoadingSpinner({
   return spinner;
 }
 
-// Pulse loading variant
-export function LoadingPulse({ size = 'md', color = 'primary' }: Omit<LoadingSpinnerProps, 'text' | 'fullScreen'>) {
+// Pulse loading variant;
+export function LoadingPulse(...args: unknown[]): unknown {
   const sizeClasses = {
     sm: 'w-6 h-6',
     md: 'w-12 h-12',
@@ -68,9 +68,8 @@ export function LoadingPulse({ size = 'md', color = 'primary' }: Omit<LoadingSpi
     white: 'bg-white'
   };
 
-  return (
-    <div className="flex space-x-2">
-      {[0, 1, 2].map((i) => (
+  return <div className="flex space-x-2">
+      {[0: unknown, 1: unknown, 2].map((i: unknown (
         <div
           key={i}
           className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}
@@ -83,11 +82,11 @@ export function LoadingPulse({ size = 'md', color = 'primary' }: Omit<LoadingSpi
   );
 }
 
-// Skeleton loading variant
-export function LoadingSkeleton({ lines = 3, className = '' }: { lines?: number; className?: string }) {
+// Skeleton loading variant;
+export function LoadingSkeleton(...args: unknown[]): unknown {
   return (
     <div className={`animate-pulse ${className}`}>
-      {Array.from({ length: lines }).map((_, i) => (
+      {Array.from({ length: lines }).map(_: unknown, i: unknown (
         <div
           key={i}
           className={`h-4 bg-gray-200 rounded mb-3 ${

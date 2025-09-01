@@ -60,7 +60,7 @@ import { Search,
   Chip
  } from 'lucide - react.ts';
 
-// Mock data for 2027 services
+// Mock data for 2027 services;
 const SERVICES_2027 = [
   {
     id: 1,

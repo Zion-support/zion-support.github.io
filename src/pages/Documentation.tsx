@@ -150,7 +150,7 @@ const Documentation: React.FC = () => {
     },
   ];
 
-  const getDifficultyColor = (difficulty: string) => {
+  const getDifficultyColor = (...args: unknown[]): unknown => {
     switch (difficulty) {
       case 'beginner':
         return 'bg - green - 500';
@@ -163,7 +163,7 @@ const Documentation: React.FC = () => {
     }
   };
 
-  const getDifficultyText = (difficulty: string) => {
+  const getDifficultyText = (...args: unknown[]): unknown => {
     switch (difficulty) {
       case 'beginner':
         return 'Beginner';

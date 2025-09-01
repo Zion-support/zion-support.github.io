@@ -15,7 +15,7 @@ const serviceIcons = {
     'Digital Transformation': Zap,
     'Healthcare Technology': Heart,
     'Financial Technology': DollarSign,
-    'Blockchain': LinkIcon,
+    'Blockchain': LinkIcon
   
 
 };
@@ -194,3 +194,5 @@ export function EnhancedServicesShowcase() {
         </div>
       </div>
     </section>)}
+
+}

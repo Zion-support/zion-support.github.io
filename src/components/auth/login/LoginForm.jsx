@@ -18,7 +18,7 @@ import {
 } from '@/components/ui/form';
 import { Link } from 'react-router-dom';
 
-// Form validation schema
+// Form validation schema;
 const loginSchema = z.object({
   email: z
     .string()
@@ -26,7 +26,7 @@ const loginSchema = z.object({
     .min(1, 'Email is required'),
   password: z.string().min(6, 'Password must be at least 6 characters'),
 });
-
+;
 function LoginForm() {
   const { login, isLoading } = useAuth();
   const navigate = useNavigate();
@@ -182,5 +182,6 @@ function LoginForm() {
     </Form>
   );
 }
-
+;
+export { LoginForm };
 export default LoginForm;

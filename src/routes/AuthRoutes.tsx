@@ -9,8 +9,8 @@ import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import Onboarding from "@/pages/Onboarding";
 import TalentOnboarding from "@/pages/TalentOnboarding";
 import ServiceOnboarding from "@/pages/ServiceOnboarding";
-
-const AuthRoutes = () => {
+;
+const AuthRoutes = (...args: unknown[]): unknown => {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
@@ -46,5 +46,6 @@ const AuthRoutes = () => {
     </Routes>;
   );
 };
-
+;
+export { AuthRoutes };
 export default AuthRoutes;}}}

@@ -51,7 +51,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
     'Scale operations seamlessly',
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="AI Workflow Automation - Zion Tech Group"
@@ -154,7 +154,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
                 quantifiable.
               </p>
               <div className="grid grid-cols-1 gap-4">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     <span className="text-slate-300">{benefit}</span>

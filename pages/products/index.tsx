@@ -1,7 +1,8 @@
 import React from 'react';
 import Head from 'next/head.ts';
 import Link from 'next/link.ts';
-
+;
+export { function };
 export default function ProductsIndex(...args[]):  {
   return (
     <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -51,8 +52,8 @@ export default function ProductsIndex(...args[]):  {
               { title: 'Link Sentinel', desc: 'Prevents broken links in prod' },
               { title: 'Content Curator', desc: 'Keeps the homepage fresh' },
               { title: 'Design Refiner', desc: 'Iterates layouts with guardrails' },
-              { title: 'Security Scanner', desc: 'Finds and patches risky deps' },
-            ].map((p)  => (
+              { title: 'Security Scanner', desc: 'Finds and patches risky deps' }
+            ].map(p: unknown (
               <div key={p.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 <h3 className="text-lg font-semibold">{p.title}</h3>

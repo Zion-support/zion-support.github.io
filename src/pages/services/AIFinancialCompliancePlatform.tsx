@@ -484,7 +484,7 @@ const AIFinancialCompliancePlatform = () => {
     'Anti-Money Laundering',
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">

@@ -63,7 +63,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
       default: return < Zap className="w - 5 h - 5" />;
 
   };
-  const getInnovationLevelColor = (level: string) => {;
+  const getInnovationLevelColor = (...args: unknown[]): unknown => {;
     switch (level) {;
       case 'Revolutionary': return 'bg - gradient - to - r from - purple - 600 to - pink - 600';
       case 'Breakthrough': return 'bg - gradient - to - r from - blue - 600 to - cyan - 600';

@@ -37,6 +37,7 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
+export { function };
 export default function AIAutonomousData() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Autonomous Data - Zion Tech Group" description="AI-powered autonomous data solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous data, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomousdata/"/>
@@ -273,3 +274,5 @@ export default function AIAutonomousData() {
         </div>
       </section>
     </div>)}
+
+}

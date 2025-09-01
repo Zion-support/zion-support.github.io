@@ -26,8 +26,9 @@ import {
   BarChart3
 } from 'lucide-react';
 import SEO from '../../components/SEO';
-
-export default function GreenIT() {
+;
+export { function };
+export default function GreenIT(...args: unknown[]): unknown {
   const features = [
     {
       icon: Leaf,
@@ -128,7 +129,7 @@ export default function GreenIT() {
     };
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="Green IT Services - Zion Tech Group"
@@ -201,7 +202,7 @@ export default function GreenIT() {
           </div>
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {greenServices.map((service, index)  => (
+            {greenServices.map((service, index 
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -210,7 +211,7 @@ export default function GreenIT() {
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <p className="text-lg font-semibold text-green-400 mb-4">{service.price}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex (
                     <li key={featureIndex} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {feature}
@@ -237,7 +238,7 @@ export default function GreenIT() {
           </div>
           
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {greenTechnologies.map((tech, index)  => (
+            {greenTechnologies.map(tech: unknown, index: unknown 
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
@@ -245,7 +246,7 @@ export default function GreenIT() {
                 <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
                 <p className="text-gray-300 mb-4">{tech.description}</p>
                 <ul className="space-y-2">
-                  {tech.features.map((feature, idx) => (
+                  {tech.features.map((feature, idx (
                     <li key={idx} className="text-sm text-gray-400">
                       {feature}
                     </li>
@@ -413,7 +414,7 @@ export default function GreenIT() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -496,7 +497,7 @@ export default function GreenIT() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
+            {solutions.map(solution: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -539,7 +540,7 @@ export default function GreenIT() {
                 </div>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
                 <div className="space-y-2">
-                  {solution.benefits.map((benefit, benefitIndex) => (
+                  {solution.benefits.map((benefit, benefitIndex (
                     <div key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -589,7 +590,7 @@ export default function GreenIT() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -632,7 +633,7 @@ export default function GreenIT() {
                 </div>
                 <p className="text-gray-300 mb-6">{useCase.description}</p>
                 <div className="space-y-2">
-                  {useCase.metrics.map((metric, metricIndex) => (
+                  {useCase.metrics.map((metric, metricIndex (
                     <div key={metricIndex} className="flex items-center text-sm text-gray-400">
                       <Target className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {metric}
@@ -682,7 +683,7 @@ export default function GreenIT() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -785,7 +786,7 @@ export default function GreenIT() {
                 title: 'Optimization',
                 description: 'Monitor performance and continuously improve sustainability metrics'
 
-            ].map((phase, index) => (;
+            ].map(phase: unknown, index: unknown (;
               <motion.div
                 key={index}
                 initial = {

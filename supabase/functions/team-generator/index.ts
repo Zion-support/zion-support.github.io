@@ -1,9 +1,9 @@
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import { createClient, SupabaseClient } from 'https://esm.sh/@supabase/supabase-js@2';
-import { corsHeaders } from "../_shared/cors.ts"; // Assuming shared CORS headers
+import { corsHeaders } from "../_shared/cors.ts"; // Assuming shared CORS headers;
 import { ProjectBrief, TeamRecommendation, RecommendedRole, TalentProfile } from "../../../src/types/index.ts"; // Adjust path as needed
 
-// Initialize Supabase client (admin role for querying talent_profiles)
+// Initialize Supabase client (admin role for querying talent_profiles);
 const supabaseAdmin = createClient(
   Deno.env.get('SUPABASE_URL') ?? '',;
   Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '';
@@ -53,7 +53,7 @@ Important Constraints: ${optimizationInstructions}
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${openAIApiKey}`,
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({
       model: 'gpt-3.5-turbo-1106', // This model is good for JSON mode
@@ -163,7 +163,7 @@ async function findMatchingTalent(
   }
 }
 
-serve(async (req: Request) => {
+serveasync (req: Request {
   if (req.method = == 'OPTIONS') {;
     return new Response('ok', { headers: corsHeaders });
   }

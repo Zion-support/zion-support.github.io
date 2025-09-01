@@ -1,9 +1,9 @@
 import React from 'react.ts';
 import { SEO   } from '../../components/SEO';
 import { motion   } from 'framer-motion.ts';
-
+;
 const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
-  return (
+  return 
     <>
       <SEO
         title="AI-Powered Customer Experience Analytics Platform | Zion Tech Group"
@@ -105,7 +105,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   description: "Dynamic content personalization based on real-time customer behavior and preferences.",
                   icon: "🎯"
                 }
-              ].map((feature, index)   => (
+              ].map((feature, index (
                 <motion.div
                   key={index}
                   initial = {
@@ -169,7 +169,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                 { metric: "60%", description: "Faster customer issue resolution" },
                 { metric: "45%", description: "Increase in customer engagement" },
                 { metric: "30%", description: "Boost in customer retention rates" }
-              ].map((benefit, index)   => (
+              ].map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -246,7 +246,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   description: "Improve patient experiences with personalized care plans and proactive health monitoring.",
                   features: ["Patient journey optimization", "Care plan personalization", "Health outcome tracking"]
                 }
-              ].map((useCase, index)   => (
+              ].map(useCase: unknown, index: unknown 
                 <motion.div
                   key={index}
                   initial = {
@@ -270,7 +270,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
                   <ul className="space-y-2">
-                    {useCase.features.map((feature, featureIndex) => (
+                    {useCase.features.map((feature, featureIndex (
                       <li key={featureIndex} className="text-blue-300 flex items-center">
                         <span className="text-green-400 mr-2">✓</span>
                         {feature}
@@ -360,7 +360,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   ],
                   popular: false
                 }
-              ].map((plan, index)   => (
+              ].map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -403,7 +403,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   </div>
                   
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map(feature: unknown, featureIndex: unknown (
                       <li key={featureIndex} className="flex items-center text-white">
                         <span className="text-green-400 mr-3">✓</span>
                         {feature}
@@ -511,5 +511,6 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
     </>;
   );
 };
-
+;
+export { AICustomerExperienceAnalytics };
 export default AICustomerExperienceAnalytics;

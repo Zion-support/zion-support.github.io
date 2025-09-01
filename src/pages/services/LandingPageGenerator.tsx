@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { SEO } from '@/components/SEO';
 
 const LandingPageGenerator: React.FC = (): JSX.Element => {
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO
         title="Landing Page Generator - Zion Tech Group"
@@ -74,5 +74,6 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { LandingPageGenerator };
 export default LandingPageGenerator;

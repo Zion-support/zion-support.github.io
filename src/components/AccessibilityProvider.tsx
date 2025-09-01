@@ -7,6 +7,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
 
 interface AccessibilityContextType {
 
+
   highContrast: boolean;
   toggleHighContrast: () => void;
   reducedMotion: boolean;
@@ -83,12 +84,12 @@ interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
     document.addEventListener ('keydown', handleKeyDown) ;
     return () => document.removeEventListener ('keydown', handleKeyDown) }, []) ;
 
-  const toggleHighContrast = () => {;
+  const toggleHighContrast = (...args: unknown[]): unknown => {;
     const newValue = !highContrast;
     setHighContrast (newValue) ;
     localStorage.setItem ('zion - high - contrast', newValue.toString () ) };
 
-  const toggleReducedMotion = () => {;
+  const toggleReducedMotion = (...args: unknown[]): unknown => {;
     const newValue = !reducedMotion;
     setReducedMotion (newValue) ;
     localStorage.setItem ('zion - reduced - motion', newValue.toString () ) };
@@ -107,7 +108,7 @@ interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
     setFontSize (16) ;
     localStorage.setItem ('zion - font - size', '16') };
 
-  const toggleVoiceNavigation = () => {;
+  const toggleVoiceNavigation = (...args: unknown[]): unknown => {;
     const newValue = !voiceNavigation;
     setVoiceNavigation (newValue) ;
     localStorage.setItem ('zion - voice - navigation', newValue.toString () ) };

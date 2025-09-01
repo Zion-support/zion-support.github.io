@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 
 interface PerformanceMetric {
+
   id: string;
   name: string;
   value: number;
@@ -28,21 +29,23 @@ interface PerformanceMetric {
   status: 'excellent' | 'good' | 'warning' | 'critical';
   icon: React.ComponentType<any>;
   description: string;
+
 }
 
 interface PerformanceMetricsProps {
+  // Add your props here
+
+
   title?: string;
   subtitle?: string;
   showCharts?: boolean;
   autoRefresh?: boolean;
-}
 
-const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
-  title = "Real-Time Performance Metrics",
-  subtitle = "Monitor your system's performance with live data and intelligent insights",
-  showCharts = true,
-  autoRefresh = true
-}) => {
+}
+;
+const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = {
+  title = "Real-Time Performance Metrics": unknown, subtitle = "Monitor your system's performance with live data and intelligent insights": unknown, showCharts = true: unknown, autoRefresh = true
+}: unknown {
   const [metrics, setMetrics] = useState<PerformanceMetric[]>([
     {
       id: 'response-time',
@@ -121,10 +124,10 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
   const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
   const [timeRange, setTimeRange] = useState<'1h' | '6h' | '24h' | '7d'>('1h');
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (!autoRefresh) return;
 
-    const interval = setInterval(() => {
+    const interval = setInterval(: unknown {
       setMetrics(prevMetrics => 
         prevMetrics.map(metric => ({
           ...metric,
@@ -134,10 +137,10 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
       );
     }, 5000);
 
-    return () => clearInterval(interval);
+    return : unknown clearInterval(interval);
   }, [autoRefresh]);
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (...args: unknown[]): unknown => {
     switch (status) {
       case 'excellent': return 'text-green-500 bg-green-100';
       case 'good': return 'text-blue-500 bg-blue-100';
@@ -147,11 +150,11 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
     }
   };
 
-  const getChangeIcon = (changeType: string) => {
+  const getChangeIcon = (...args: unknown[]): unknown => {
     return changeType === 'increase' ? ArrowUpRight : ArrowDownRight;
   };
 
-  const getChangeColor = (changeType: string) => {
+  const getChangeColor = (...args: unknown[]): unknown => {
     return changeType === 'increase' ? 'text-green-600' : 'text-red-600';
   };
 
@@ -161,9 +164,9 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
+        delayChildren: 0.2
+      }
+    }
   };
 
   const itemVariants = {
@@ -173,9 +176,9 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
-      },
-    },
+        ease: "easeOut"
+      }
+    }
   };
 
   return (
@@ -205,10 +208,9 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
           className="flex justify-center mb-12"
         >
           <div className="bg-white rounded-2xl shadow-lg p-2 border border-gray-200">
-            {(['1h', '6h', '24h', '7d'] as const).map((range) => (
-              <button
+            {(['1h', '6h', '24h', '7d'] as const).map(range: unknown <button
                 key={range}
-                onClick={() => setTimeRange(range)}
+                onClick={(: unknown setTimeRange(range)}
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
                   timeRange === range
                     ? 'bg-blue-600 text-white shadow-lg'
@@ -229,17 +231,17 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {metrics.map((metric) => {
+          {metrics.map(metric: unknown {
             const IconComponent = metric.icon;
             const ChangeIcon = getChangeIcon(metric.changeType);
             
-            return (
+            return 
               <motion.div
                 key={metric.id}
                 variants={itemVariants}
                 whileHover={{ scale: 1.02, y: -5 }}
                 className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 hover:shadow-xl transition-all duration-300 cursor-pointer"
-                onClick={() => setSelectedMetric(selectedMetric === metric.id ? null : metric.id)}
+                onClick={( setSelectedMetric(selectedMetric === metric.id ? null : metric.id)}
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className={`w-12 h-12 bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl flex items-center justify-center`}>
@@ -355,7 +357,7 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
             </div>
             <div>
               <div className="text-3xl font-bold mb-2">
-                {Math.round(metrics.reduce((acc, m) => acc + m.value, 0) / metrics.length)}
+                {Math.roundmetrics.reduce((acc: unknown, m: unknown acc + m.value, 0) / metrics.length)}
               </div>
               <div className="text-blue-100">Avg Performance</div>
             </div>
@@ -365,5 +367,6 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
     </section>
   );
 };
-
+;
+export { EnhancedPerformanceMetrics };
 export default EnhancedPerformanceMetrics;

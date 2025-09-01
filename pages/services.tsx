@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2, ChevronLeft, ChevronRight } from 'lucide-react'
-
-import { additionalEnhancedServices } from '../data/additional-real-services'
+;
+import { additionalEnhancedServices } from '../data/additional-real-services';
 import { enhancedServices2025 } from '../data/enhanced-services-2025'
-
+;
+export { function };
 export default function Services(...args[]):  {
-	const [searchTerm, setSearchTerm] = useState('')
-	const [selectedCategory, setSelectedCategory] = useState('all')
-	const [sortBy, setSortBy] = useState('popularity')
-	const [currentPage, setCurrentPage] = useState(1)
-	const [itemsPerPage] = useState(12) // Show 12 services per page
+	const [searchTerm, setSearchTerm] = useState<typeof ''>('')
+	const [selectedCategory, setSelectedCategory] = useState<typeof 'all'>('all')
+	const [sortBy, setSortBy] = useState<typeof 'popularity'>('popularity')
+	const [currentPage, setCurrentPage] = useState<typeof 1>(1)
+	const [itemsPerPage] = useState<typeof 12>(12) // Show 12 services per page
 
 	const title = 'Services — Zion Tech Group'
 	const description = 'Comprehensive AI, IT, and micro SaaS solutions for modern businesses.'
@@ -29,7 +30,7 @@ export default function Services(...args[]):  {
 			 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			 (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase())))
 		)
-		.sort((a, b) => {
+		.sort(a: unknown, b: unknown {
 			switch (sortBy) {
 				case 'popularity':
 					return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
@@ -51,29 +52,29 @@ export default function Services(...args[]):  {
 	const currentServices = filteredServices.slice(startIndex, endIndex)
 
 	// Reset to first page when filters change
-	React.useEffect(() => {
+	React.useEffect(: unknown {
 		setCurrentPage(1)
 	}, [searchTerm, selectedCategory, sortBy])
 
 	// Pagination controls
-	const goToPage = (page: number) => {
+	const goToPage = (...args: unknown[]): unknown => {
 		setCurrentPage(page)
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
 
-	const goToNextPage = () => {
+	const goToNextPage = (...args: unknown[]): unknown => {
 		if (currentPage < totalPages) {
 			goToPage(currentPage + 1)
 		}
 	}
 
-	const goToPreviousPage = () => {
+	const goToPreviousPage = (...args: unknown[]): unknown => {
 		if (currentPage > 1) {
 			goToPage(currentPage - 1)
 		}
 	}
 
-	return (
+	return 
 		<>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
@@ -114,7 +115,7 @@ export default function Services(...args[]):  {
 								type="text"
 								placeholder="Search services..."
 								value={searchTerm}
-								onChange={(e) => setSearchTerm(e.target.value)}
+								onChange={(e setSearchTerm(e.target.value)}
 								className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
 							/>
 						</div>
@@ -124,7 +125,7 @@ export default function Services(...args[]):  {
 							<Filter className="h-4 w-4 text-gray-400" />
 							<select
 								value={selectedCategory}
-								onChange={(e) => setSelectedCategory(e.target.value)}
+								onChange={e: unknown setSelectedCategory(e.target.value)}
 								className="px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 w-full sm:w-auto"
 							>
 								{categories.map(category  => (
@@ -140,7 +141,7 @@ export default function Services(...args[]):  {
 							<Clock className="h-4 w-4 text-gray-400" />
 							<select
 								value={sortBy}
-								onChange={(e) => setSortBy(e.target.value)}
+								onChange={e: unknown setSortBy(e.target.value)}
 								className="px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 w-full sm:w-auto"
 							>
 								<option value="popularity">Most Popular</option>
@@ -228,7 +229,7 @@ export default function Services(...args[]):  {
 
 					{/* Services Grid */}
 					<div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-						{currentServices.map((service) => (
+						{currentServices.map(service: unknown (
 							<div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
 								{/* Popular Badge */}
 								{service.popular && (
@@ -270,7 +271,7 @@ export default function Services(...args[]):  {
 								<div className="mb-4">
 									<h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
 									<ul className="space-y-1">
-										{service.features.slice(0, 3).map((feature, index) => (
+										{service.features.slice(0, 3).map(feature: unknown, index: unknown (
 											<li key={index} className="flex items-center gap-2 text-xs text-gray-600">
 												<Zap className="h-3 w-3 text-blue-500" />
 												{feature}
@@ -339,7 +340,7 @@ export default function Services(...args[]):  {
 					)}
 
 					{/* Pagination */}
-					{totalPages > 1 && (
+					{totalPages > 1 && 
 						<div className="mt-12 flex items-center justify-center gap-2">
 							<button
 								onClick={goToPreviousPage}
@@ -348,10 +349,9 @@ export default function Services(...args[]):  {
 							>
 								<ChevronLeft className="h-5 w-5" />
 							</button>
-							{Array.from({ length: totalPages }, (_, i) => (
-								<button
+							{Array.from({ length: totalPages }, (_, i <button
 									key={i + 1}
-									onClick={() => goToPage(i + 1)}
+									onClick={(: unknown goToPage(i + 1)}
 									className={`p-2 rounded-full text-gray-600 hover:bg-gray-100 transition-all duration-200 ${currentPage === i + 1 ? 'bg-blue-600 text-white' : ''}`}
 								>
 									{i + 1}
@@ -436,3 +436,5 @@ export default function Services(...args[]):  {
 	);
 };
 ;
+
+}

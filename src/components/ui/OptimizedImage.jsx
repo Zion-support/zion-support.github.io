@@ -103,9 +103,13 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
           </div>
         </div>)}
     </div>)}
-// Avatar image component
+// Avatar image component;
 export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
     const sizeClasses = {
   sm: 'w-8 h-8',
         md: 'w-10 h-10',
-        lg: 'w-12 h-12',
+        lg: 'w-12 h-12'
+
+
+}
+}

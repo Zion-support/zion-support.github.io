@@ -47,7 +47,7 @@ export function LoadingFallback({ message = "Loading...", size = "md", className
 
 }}/>))}
       </motion.div>
-    </div>)}
+    </div>)};
 export function PageLoadingFallback() {
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center">
       <div className="text-center">

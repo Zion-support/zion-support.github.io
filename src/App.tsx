@@ -6,7 +6,7 @@ import { Sidebar } from './components/Sidebar';
 import { ErrorBoundary } from 'react-error-boundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 
-// Enhanced Components
+// Enhanced Components;
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
@@ -18,7 +18,7 @@ const createLazyComponent = (
   fallback?: React.ReactNode
 ) => {
   const LazyComponent = lazy(importFn);
-  return (props: any) => (
+  return props: unknown (
     <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>
@@ -115,8 +115,8 @@ const Cybersecurity = lazy(() =>
   }))
 );
 
-// Loading component
-const PageLoader = () => (
+// Loading component;
+const PageLoader = : unknown (
   <div className="flex items-center justify-center min-h-screen bg-gray-900">
     <div className="text-center">
       <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>

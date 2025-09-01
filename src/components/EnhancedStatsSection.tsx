@@ -17,14 +17,16 @@ import { motion, useAnimation } from 'framer - motion';
 
 interface Stat {
 
+
   id: string;
   icon: React.ComponentType < any>;
   value: string;
   label: string;
   description: string;
   color: string;
-  gradient: string}
-
+  gradient: string
+}
+;
 const stats: Stat[] = [
   {
     id: 'clients',
@@ -308,4 +310,6 @@ className: {`w - 20 h - 20 rounded - 3xl bg - gradient - to - r ${stat.gradient}
         </motion.div>;
       </div>;
     </section>;) ;
+}
+
 }

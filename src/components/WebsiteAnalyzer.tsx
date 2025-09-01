@@ -17,12 +17,14 @@ import { LinkChecker, LinkInfo, PageInfo  } from '../utils / linkChecker';
 
 interface AnalysisResult {
 
+
 summary: {;
     totalLinks: number;
     brokenLinks: number;
     missingPages: number;
     externalLinks: number;
   
+
 };
   pages: PageInfo[];
   brokenLinks: LinkInfo[];
@@ -131,7 +133,7 @@ summary: {;
     }
   };
 
-  const exportReport = () => {
+  const exportReport = (...args: unknown[]): unknown => {
     if (!analysisResult) return;
 
     const report = {

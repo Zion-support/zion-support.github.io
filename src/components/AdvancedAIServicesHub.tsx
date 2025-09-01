@@ -19,6 +19,7 @@ import { motion, AnimatePresence } from 'framer - motion';
   Rocket
 
 interface AIService {
+
   id: string;
   name: string;
   description: string;

@@ -716,7 +716,7 @@ import { SEO } from '../components / SEO';
     return true;
   }) ;
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (...args: unknown[]): unknown => {
     switch (category) {
       case 'ai - ml':
         return 'bg - purple - 500 / 20 text - purple - 400';
@@ -733,7 +733,7 @@ import { SEO } from '../components / SEO';
     }
   };
 
-  const getExperienceColor = (experience: string) => {
+  const getExperienceColor = (...args: unknown[]): unknown => {
     switch (experience) {
       case 'junior':
         return 'bg - green - 500 / 20 text - green - 400';

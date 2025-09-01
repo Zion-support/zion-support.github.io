@@ -1,7 +1,8 @@
 // Innovative Cloud & DevOps Services 2030 - Zion Tech Group
 // Next-generation infrastructure and development solutions
-
+;
 export interface CloudDevOpsService {
+
 
   id: string;
   title: string;
@@ -14,7 +15,8 @@ pricing: {
     custom: string;
     currency: string;
     pricingModel: string;
-    marketPrice: string};
+    marketPrice: string
+};
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -49,7 +51,7 @@ pricing: {
   featured: boolean;
   trending: boolean}
 
-// Zion Tech Group Contact Information
+// Zion Tech Group Contact Information;
 const zionContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
@@ -67,7 +69,7 @@ const zionContact = {
 
 
 };
-
+;
 export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
   {
     id: "multi-cloud-orchestration-platform",
@@ -526,7 +528,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     sla: "99.9% uptime guarantee",
     responseTime: "< 2 seconds",
     availability: "Global",
-    location: "Global",
+    location: "Global"
   }
     tags: ["GitOps", "Workflow Automation", "Infrastructure as Code", "Deployment", "Compliance"],;
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&h=500",;
@@ -535,5 +537,6 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     trending: true;
   };
 ];
-
+;
+export { innovativeCloudDevOpsServices2030 };
 export default innovativeCloudDevOpsServices2030;}}

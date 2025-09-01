@@ -3,26 +3,17 @@ import { motion } from 'framer-motion';
 import { cn } from '../../utils/cn';
 
 interface LoadingSpinnerProps {
+  // Add your props here
+
+
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: string;
   text?: string;
-}
 
-export default function LoadingSpinner({
-  size = 'md',
-  color = 'primary',
-  className = '',
-  showText = false,
-  text = 'Loading...'
-  className?: string;
 }
-
-export function LoadingSpinner({ 
-  size = 'md', 
-  color = 'text-cyan-400',
-  text,
-  className = '' 
-}: LoadingSpinnerProps) {
+;
+export { function };
+export default function LoadingSpinner(...args: unknown[]): unknown {
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-12 h-12',
@@ -66,13 +57,8 @@ export function LoadingSpinner({
     </div>
   );
 
-// Enhanced loading spinner with dots
-export function LoadingDots({ 
-  size = 'md',
-  color = 'text-cyan-400',
-  text,
-  className = ''
-}: LoadingSpinnerProps) {
+// Enhanced loading spinner with dots;
+export function LoadingDots(...args: unknown[]): unknown {
   const dotSizes = {
     sm: 'w-2 h-2',
     md: 'w-3 h-3',
@@ -87,10 +73,9 @@ export function LoadingDots({
     xl: 'text-xl'
   };
 
-  return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
+  return <div className={`flex flex-col items-center justify-center ${className}`}>
       <div className="flex space-x-2">
-        {[0, 1, 2].map((index) => (
+        {[0: unknown, 1: unknown, 2].map((index: unknown (
           <motion.div
             key={index}
             className={`${dotSizes[size]} ${color} rounded-full`}
@@ -124,17 +109,11 @@ export function LoadingDots({
   );
 }
 
-// Skeleton loading component
-export function LoadingSkeleton({ 
-  lines = 3,
-  className = ''
-}: { 
-  lines?: number;
-  className?: string;
-}) {
+// Skeleton loading component;
+export function LoadingSkeleton(...args: unknown[]): unknown {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: lines }).map(_: unknown, index: unknown (
         <motion.div
           key={index}
           className="h-4 bg-gray-300 rounded animate-pulse"
@@ -149,14 +128,8 @@ export function LoadingSkeleton({
     </div>
   );
 
-// Button loading state
-export function ButtonLoader({ 
-  size = 'md',
-  className = '' 
-}: { 
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  className?: string;
-}) {
+// Button loading state;
+export function ButtonLoader(...args: unknown[]): unknown {
   return (
     <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
@@ -164,14 +137,8 @@ export function ButtonLoader({
     </div>
   );
 
-// Page loading overlay
-export function PageLoaderOverlay({ 
-  text = "Loading...",
-  className = '' 
-}: { 
-  text?: string;
-  className?: string;
-}) {
+// Page loading overlay;
+export function PageLoaderOverlay(...args: unknown[]): unknown {
   return (
     <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 ${className}`}>
       <div className="bg-white rounded-lg p-6 shadow-xl">
@@ -181,14 +148,8 @@ export function PageLoaderOverlay({
   );
 }
 
-// Full page loading component
-export function FullPageLoader({ 
-  text = "Loading Zion Tech Group...",
-  className = ''
-}: {
-  text?: string;
-  className?: string;
-}) {
+// Full page loading component;
+export function FullPageLoader(...args: unknown[]): unknown {
   return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center ${className}`}>
       <div className="text-center text-white">
@@ -221,14 +182,8 @@ export function FullPageLoader({
     </div>
   );
 
-// Content loading placeholder
-export function ContentPlaceholder({
-  className = '',
-  variant = 'default'
-}: {
-  className?: string;
-  variant?: 'default' | 'card' | 'list' | 'grid';
-}) {
+// Content loading placeholder;
+export function ContentPlaceholder(...args: unknown[]): unknown {
   const variants = {
     default: 'space-y-4',
     card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
@@ -240,7 +195,7 @@ export function ContentPlaceholder({
     <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
         // Card placeholders
-        Array.from({ length: 6 }).map((_, index) => (
+        Array.from({ length: 6 }).map(_: unknown, index: unknown (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -255,7 +210,7 @@ export function ContentPlaceholder({
         ));
       ) : variant === 'list' ? (
         // List placeholders
-        Array.from({ length: 5 }).map((_, index) => (
+        Array.from({ length: 5 }).map(_: unknown, index: unknown (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
@@ -269,7 +224,7 @@ export function ContentPlaceholder({
         ))
       ) : variant === 'grid' ? (;
         // Grid placeholders
-        Array.from({ length: 8 }).map((_, index) => (
+        Array.from({ length: 8 }).map(_: unknown, index: unknown (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -283,7 +238,7 @@ export function ContentPlaceholder({
         ))
       ) : (;
         // Default placeholders
-        Array.from({ length: 4 }).map((_, index) => (
+        Array.from({ length: 4 }).map(_: unknown, index: unknown (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}
@@ -296,11 +251,11 @@ export function ContentPlaceholder({
     </div>
   );
 
-// Enhanced app loading spinner for main app loading
-export function AppLoadingSpinner() {
+// Enhanced app loading spinner for main app loading;
+export function AppLoadingSpinner(...args: unknown[]): unknown {
   const icons = ['🤖', '☁️', '🔒', '💡'];
 
-  return (
+  return 
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="relative">
         {/* Main spinning ring */}
@@ -311,7 +266,7 @@ export function AppLoadingSpinner() {
         </div>
 
         {/* Floating icons */}
-        {icons.map((icon, index) => (
+        {icons.map((icon, index (
           <motion.div
             key={index}
             className="absolute text-2xl"
@@ -357,7 +312,7 @@ export function AppLoadingSpinner() {
 
       {/* Progress dots */}
       <div className="flex gap-2 mt-6">;
-        {[0, 1, 2].map((i) => (;
+        {[0, 1, 2].map(i: unknown (;
           <motion.div
             key={i}
             className="w-2 h-2 bg-cyan-400 rounded-full"
@@ -375,4 +330,20 @@ export function AppLoadingSpinner() {
       </div>
     </div>
   );
+}
+
+
+
+
+
+}
+
+
+
+}
+
+
+}
+
+}
 }

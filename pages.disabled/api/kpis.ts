@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
+;
 export type KpisResponse = {
   activeUsers: number;
   gmvMonthly: number;
@@ -7,10 +7,9 @@ export type KpisResponse = {
   burn: number;
   runwayMonths: number;
 };
-
-export default function handler(req: NextApiRequest, res: NextApiResponse
-
-export default function KpisPage() {
+;
+export { function };
+export default function handler(...args: unknown[]): unknown {
   return (
     <KpisResponse>) {
   res.status(200).json({
@@ -18,7 +17,7 @@ export default function KpisPage() {
     gmvMonthly: 1200000,
     mrr: 86400,
     burn: 62000,
-    runwayMonths: 18,
+    runwayMonths: 18
   });
 }
   );

@@ -269,5 +269,6 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
       </section>
     </div>);
 };
+export { AIAutonomousBusiness };
 export default AIAutonomousBusiness;
 }}}}

@@ -270,7 +270,7 @@ const Research: React.FC = () => {
     },
   ];
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (...args: unknown[]): unknown => {
     switch (status) {
       case 'active':
         return 'bg - green - 500 / 20 text - green - 400';
@@ -285,7 +285,7 @@ const Research: React.FC = () => {
     }
   };
 
-  const getImpactColor = (impact: string) => {
+  const getImpactColor = (...args: unknown[]): unknown => {
     switch (impact) {
       case 'very - high':
         return 'bg - red - 500 / 20 text - red - 400';

@@ -25,7 +25,8 @@ export interface InnovativeMicroSaasService2027 {
     id: string;
     avatarUrl?: string;
     verified: boolean;
-  };
+  
+};
   images: string[];
   createdAt: string;
   technologyStack: string[];

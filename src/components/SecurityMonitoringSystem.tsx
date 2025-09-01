@@ -34,6 +34,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide - react';
 
 interface SecurityThreat {
+
   id: string;
   type: 'critical' | 'high' | 'medium' | 'low';
   severity: number;
@@ -43,9 +44,11 @@ interface SecurityThreat {
   status: 'active' | 'resolved' | 'investigating';
   affectedSystems: string[];
   recommendations: string[];
+
 }
 
 interface VulnerabilityAssessment {
+
   id: string;
   category: 'network' | 'application' | 'infrastructure' | 'data';
   risk: 'critical' | 'high' | 'medium' | 'low';
@@ -55,9 +58,11 @@ interface VulnerabilityAssessment {
   affectedComponents: string[];
   remediation: string;
   estimatedTime: string;
+
 }
 
 interface ComplianceStatus {
+
   framework: string;
   status: 'compliant' | 'non - compliant' | 'partial';
   score: number;
@@ -68,15 +73,18 @@ interface ComplianceStatus {
     compliant: number;
     nonCompliant: number;
     pending: number;
-  };
+  
+};
 }
 
 interface SecurityMonitoringSystemProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showRealTime?: boolean;
   autoScan?: boolean;
-  onThreatDetected?: (threat: SecurityThreat) => void;
-}
+  onThreatDetected?: threat: SecurityThreat void;
 
   enabled = true,
   showRealTime = true,
@@ -268,7 +276,7 @@ interface SecurityMonitoringSystemProps {
   ]) ;
 
   // Get threat color
-  const getThreatColor = (type: string) => {
+  const getThreatColor = (...args: unknown[]): unknown => {
     const colors = {
       critical: 'text - red - 600 bg - red - 100 dark:bg - red - 900 / 30 dark:text - red - 400',
       high: 'text - orange - 600 bg - orange - 100 dark:bg - orange - 900 / 30 dark:text - orange - 400',
@@ -280,7 +288,7 @@ interface SecurityMonitoringSystemProps {
   };
 
   // Get status icon
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (...args: unknown[]): unknown => {
     const icons = {
       active: <AlertTriangle className="w - 4 h - 4 text - red - 500" />,
       investigating: <Eye className="w - 4 h - 4 text - yellow - 500" />,
@@ -290,7 +298,7 @@ interface SecurityMonitoringSystemProps {
   };
 
   // Get compliance color
-  const getComplianceColor = (status: string) => {
+  const getComplianceColor = (...args: unknown[]): unknown => {
     const colors = {
       compliant:
         'text - green - 600 bg - green - 100 dark:bg - green - 900 / 30 dark:text - green - 400',

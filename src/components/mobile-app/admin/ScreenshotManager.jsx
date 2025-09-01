@@ -82,3 +82,5 @@ export const ScreenshotManager = ({ platform }) => {
         </div>
       </CardContent>
     </Card>)};
+
+}

@@ -72,7 +72,7 @@ import { motion } from 'framer - motion';
     return filtered;
   }, [searchQuery, selectedCategory, sortBy]) ;
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     switch (category) {;
       case 'AI & Automation':;
         return < Cpu className="w - 5 h - 5" />;
@@ -105,7 +105,7 @@ import { motion } from 'framer - motion';
     };
   };
 
-  const getInnovationBadge = (level: string) => {
+  const getInnovationBadge = (...args: unknown[]): unknown => {
     const colors = {
   'Revolutionary': 'bg - gradient - to - r from - purple - 600 to - pink - 600',
       'Advanced': 'bg - gradient - to - r from - blue - 600 to - cyan - 600',;

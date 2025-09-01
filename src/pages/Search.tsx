@@ -159,7 +159,7 @@ const Search: React.FC = () => {
     }
   };
 
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (...args: unknown[]): unknown => {
     switch (type) {
       case 'services':
         return < Server className="w - 5 h - 5 text - blue - 400" />;
@@ -172,7 +172,7 @@ const Search: React.FC = () => {
     }
   };
 
-  const getTypeLabel = (type: string) => {
+  const getTypeLabel = (...args: unknown[]): unknown => {
     switch (type) {
       case 'services':
         return 'Service';

@@ -162,7 +162,7 @@ const testimonials = [
     featured: false,
   },
 ];
-
+;
 const industries = [
   'All Industries',
   'Technology',

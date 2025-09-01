@@ -24,7 +24,7 @@ export type InnovativeService = {;
   enterprise?: boolean;
   startup?: boolean;
   smb?: boolean};
-
+;
 export const innovativeServices2026: InnovativeService[] = [
   // MICRO SAAS SERVICES
   {
@@ -606,7 +606,7 @@ export const innovativeServices2026: InnovativeService[] = [
     smb: true
 
 ];
-
+;
 export const serviceCategories = [
   {
     name: 'Micro SaaS',
@@ -631,5 +631,6 @@ export const serviceCategories = [
     services: innovativeServices2026.filter(s => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category));
   };
 ];
-
+;
+export { innovativeServices2026 };
 export default innovativeServices2026;}}

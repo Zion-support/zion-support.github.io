@@ -23,22 +23,26 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 interface ChartData {
 
+
   labels: string[];
 datasets: {
     label: string;
     data: number[];
     backgroundColor: string[];
     borderColor: string[];
-    borderWidth: number}[]}
+    borderWidth: number
+}[]}
 
 interface MetricCard {
+
 
   title: string;
   value: string | number;
   change: number;
   changeType: 'increase' | 'decrease' | 'neutral';
   icon: React.ReactNode;
-  color: string}
+  color: string
+}
 
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {
 
@@ -157,3 +161,5 @@ setChartData (prev:  > ({;
 
   // Generate line chart data
   const lineChartData = {
+
+}

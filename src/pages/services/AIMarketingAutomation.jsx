@@ -488,5 +488,6 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
         </motion.div>
       </div>
     </div>)};
+export { AIMarketingAutomation };
 export default AIMarketingAutomation;
 }}}}}}}}}

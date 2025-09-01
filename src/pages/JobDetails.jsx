@@ -148,4 +148,15 @@ import { toast } from 'sonner';
                 title: job.title,
                 description: job.description,
                 comp_name: job.comp_name || "Comp",
-                budget: job.budget,
+                budget: job.budget
+
+
+
+
+}
+
+
+}
+
+}
+}

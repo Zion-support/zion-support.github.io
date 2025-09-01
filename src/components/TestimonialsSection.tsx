@@ -15,6 +15,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide - react';
 
 interface Testimonial {
+
   id: number;
   name: string;
   position: string;
@@ -25,8 +26,9 @@ interface Testimonial {
   industry: string;
   results: string[];
   verified: boolean;
-}
 
+}
+;
 const testimonials: Testimonial[] = [
   {
     id: 1,
@@ -95,13 +97,17 @@ const testimonials: Testimonial[] = [
     project: "Cloud Migration & Optimization";
   };
 ];
-
+;
 const stats = [
   { icon: Users, value: "500+", label: "Happy Clients", description: "Trusted by businesses worldwide" },
   { icon: TrendingUp, value: "95%", label: "Success Rate", description: "Proven track record of delivery" },
   { icon: Award, value: "25+", label: "Industry Awards", description: "Recognition for excellence" },
   { icon: CheckCircle, value: "99.9%", label: "Uptime", description: "Reliable service delivery" }
 ];
+;
+export const TestimonialsSection: React.FC = props {
+  const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
 
   const [currentTestimonial, setCurrentTestimonial] = useState (0) ;
   const [isAutoPlaying, setIsAutoPlaying] = useState (true) ;

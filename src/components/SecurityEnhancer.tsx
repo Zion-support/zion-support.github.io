@@ -45,6 +45,7 @@ function SecurityEnhancer () {
 } from 'lucide - react';
 
 interface SecurityStatus {
+
   csp: boolean;
   hsts: boolean;
   xss: boolean;
@@ -52,9 +53,11 @@ interface SecurityStatus {
   contentType: boolean;
   referrerPolicy: boolean;
   permissionsPolicy: boolean;
+
 }
 
 interface SecurityEvent {
+
   id: string;
   type: 'info' | 'warning' | 'error' | 'success';
   message: string;
@@ -62,16 +65,17 @@ interface SecurityEvent {
   source: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
   details?: string;
+
 }
 
 interface SecurityMetrics {
+
   totalRequests: number;
   blockedRequests: number;
   suspiciousActivity: number;
   lastScan: Date;
   vulnerabilities: number;
   complianceScore: number;
-}
 
   const [isVisible, setIsVisible] = useState (false) ;
   const [isExpanded, setIsExpanded] = useState (false) ;
@@ -279,7 +283,7 @@ interface SecurityMetrics {
   };
 
   // Get event icon
-  const getEventIcon = (type: string) => {
+  const getEventIcon = (...args: unknown[]): unknown => {
     switch (type) {
       case 'info': return < Info className="w - 4 h - 4 text - blue - 500" />;
       case 'warning': return < AlertTriangle className="w - 4 h - 4 text - yellow - 500" />;
@@ -290,7 +294,7 @@ interface SecurityMetrics {
   };
 
   // Get severity color
-  const getSeverityColor = (severity: string) => {
+  const getSeverityColor = (...args: unknown[]): unknown => {
     switch (severity) {
       case 'critical': return 'border - red - 600 bg - red - 50 dark: bg - red - 900 / 20';
       case 'high': return 'border - red - 500 bg - red - 50 dark: bg - red - 900 / 20';

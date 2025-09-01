@@ -74,8 +74,8 @@ import {
   Ridge,
   Joy,
 } from 'lucide-react';
-
-export function QuantumComputing() {
+;
+export function QuantumComputing(...args: unknown[]): unknown {
   const features = [
     {
       icon: Atom,
@@ -239,7 +239,7 @@ export function QuantumComputing() {
     },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 py-20">
@@ -299,7 +299,7 @@ export function QuantumComputing() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {quantumAdvantages.map((advantage, index) => (
+            {quantumAdvantages.map((advantage, index (
               <motion.div
                 key={advantage.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -344,7 +344,7 @@ export function QuantumComputing() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature: unknown, index: unknown 
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -400,7 +400,7 @@ export function QuantumComputing() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {applications.map((app, index) => (
+            {applications.map(app: unknown, index: unknown 
               <motion.div
                 key={app.industry}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -456,7 +456,7 @@ export function QuantumComputing() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {technologies.map((tech, index) => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={tech.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -516,5 +516,6 @@ export function QuantumComputing() {
     </div>
   );
 }
-
+;
+export { QuantumComputing };
 export default QuantumComputing;

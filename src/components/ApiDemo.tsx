@@ -5,6 +5,7 @@ export default ApiDemo;}}}}}}}
 
 interface User {
 
+
   id: number;
   name: string;
   email: string;
@@ -24,7 +25,7 @@ const [newUser, setNewUser] = useState ({ name: '', email: '';
     fetchUsers () ;
   }, []) ;
 
-  const checkHealth = async () => {;
+  const checkHealth = async : unknown {;
     try {;
       const response = await api.health () ;
       setHealthStatus (`✅ API Healthy - ${response.data?.environment} mode`) ;

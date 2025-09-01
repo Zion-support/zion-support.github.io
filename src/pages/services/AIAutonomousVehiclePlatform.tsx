@@ -1,7 +1,8 @@
 import React from 'react';
 import { SEO } from "../../components/SEO";
-
-export default function AIAutonomousVehiclePlatform() {
+;
+export { function };
+export default function AIAutonomousVehiclePlatform(...args: unknown[]): unknown {
   const features = [;
     'Advanced computer vision and sensor fusion',;
     'Real-time decision making and path planning',;
@@ -81,7 +82,7 @@ export default function AIAutonomousVehiclePlatform() {
     'Agriculture and Farming';
   ];
 
-  return (
+  return 
     <>
       <SEO 
         title = "AI Autonomous Vehicle Platform | Zion Tech Group"
@@ -135,7 +136,7 @@ export default function AIAutonomousVehiclePlatform() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                     <Brain className="w-6 h-6 text-white" />
@@ -159,7 +160,7 @@ export default function AIAutonomousVehiclePlatform() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {tiers.map((tier, index) => (
+              {tiers.map(tier: unknown, index: unknown (
                 <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
                   index === 1 ? 'border-blue-400/50 scale-105' : 'border-white/10'
                 } hover:border-blue-400/50 transition-all duration-300`}>
@@ -172,7 +173,7 @@ export default function AIAutonomousVehiclePlatform() {
                   <p className="text-gray-300 mb-4">{tier.description}</p>
                   <div className="text-4xl font-bold text-white mb-6">{tier.price}</div>
                   <ul className="space-y-3 mb-8">
-                    {tier.details.map((detail, detailIndex) => (
+                    {tier.details.map(detail: unknown, detailIndex: unknown (
                       <li key={detailIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {detail}
@@ -203,7 +204,7 @@ export default function AIAutonomousVehiclePlatform() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {useCases.map((useCase, index) => (
+              {useCases.map(useCase: unknown, index: unknown (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300">
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                     <TrendingUp className="w-5 h-5 text-white" />
@@ -227,7 +228,7 @@ export default function AIAutonomousVehiclePlatform() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <Star className="w-4 h-4 text-white" />
@@ -251,7 +252,7 @@ export default function AIAutonomousVehiclePlatform() {
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {industries.map((industry, index) => (
+              {industries.map(industry: unknown, index: unknown (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Globe className="w-8 h-8 text-white" />

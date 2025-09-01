@@ -94,6 +94,7 @@ const testimonials = [
     rating: 5,
   },
 ];
+export { function };
 export default function AIAutonomousBusinessManager() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">

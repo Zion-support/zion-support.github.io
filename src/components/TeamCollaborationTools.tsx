@@ -71,6 +71,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 interface TeamMember {
 
+
   id: string;
   name: string;
   role: string;
@@ -80,9 +81,11 @@ interface TeamMember {
   lastSeen: string;
   skills: string[];
   projects: string[];
-  availability: 'available' | 'busy' | 'unavailable'}
+  availability: 'available' | 'busy' | 'unavailable'
+}
 
 interface Project {
+
 
   id: string;
   name: string;
@@ -96,9 +99,11 @@ interface Project {
   tasks: Task[];
   budget: number;
   client: string;
-  tags: string[]}
+  tags: string[]
+}
 
 interface Task {
+
 
   id: string;
   title: string;
@@ -111,18 +116,22 @@ interface Task {
   actualHours: number;
   dependencies: string[];
   tags: string[];
-  comments: Comment[]}
+  comments: Comment[]
+}
 
 interface Comment {
+
 
   id: string;
   author: string;
   content: string;
   timestamp: string;
   likes: number;
-  replies: Comment[]}
+  replies: Comment[]
+}
 
 interface Message {
+
 
   id: string;
   sender: string;
@@ -131,10 +140,12 @@ interface Message {
   type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[];
   reactions: { type: string; count: number 
+
 }[];
   isRead: boolean}
 
 interface FileItem {
+
 
   id: string;
   name: string;
@@ -146,7 +157,8 @@ interface FileItem {
   tags: string[];
   sharedWith: string[];
   permissions: 'view' | 'edit' | 'admin';
-  version: string}
+  version: string
+}
 
 interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
 

@@ -282,7 +282,7 @@ export default function Solutions(...args: any[]): any {
     },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="Solutions - Zion Tech Group"
@@ -403,7 +403,7 @@ export default function Solutions(...args: any[]): any {
           </motion.div>
 
           <div className="space-y-12">
-            {solutionCategories.map((category, categoryIndex) => (
+            {solutionCategories.map(category: unknown, categoryIndex: unknown 
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 20 }}

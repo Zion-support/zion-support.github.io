@@ -235,3 +235,5 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
       )}
     </div>
   )};
+
+}

@@ -60,7 +60,7 @@ const AllServices2027: React.FC = () => {;
   const filteredServices = INNOVATIVE_SERVICES_2027.filter (service => ;
     selectedCategory === 'All' || service.category === selectedCategory;) ;
 
-  const getCategoryStats = (categoryId: string) => {;
+  const getCategoryStats = (...args: unknown[]): unknown => {;
     if (categoryId === 'All') {;
       return {;
         count: INNOVATIVE_SERVICES_2027.length,;
@@ -444,9 +444,9 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
     </>;) ;
 };
 
-// Service Card Component
-const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
-  const getCategoryIcon = (category: string) => {;
+// Service Card Component;
+const ServiceCard: React.FC<{ service: unknown }> = { service }: unknown {
+  const getCategoryIcon = (...args: unknown[]): unknown => {;
     switch (category) {;
       case 'AI Services':;
         return < Brain className="w - 5 h - 5" />;

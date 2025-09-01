@@ -26,7 +26,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 15T10:00:00.000Z",
         aiScore: 98,
         rating: 4.9,
-        reviewCount: 156,
+        reviewCount: 156
     },
     {
         id: "ai - media - editing",
@@ -45,7 +45,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 20T14:30:00.000Z",
         aiScore: 95,
         rating: 4.8,
-        reviewCount: 89,
+        reviewCount: 89
     },
     {
         id: "ai - code - assistant",
@@ -64,7 +64,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 25T09:15:00.000Z",
         aiScore: 97,
         rating: 4.9,
-        reviewCount: 203,
+        reviewCount: 203
     },
     {
         id: "ai - analytics",
@@ -83,7 +83,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 02 - 01T11:00:00.000Z",
         aiScore: 96,
         rating: 4.8,
-        reviewCount: 67,
+        reviewCount: 67
     },
     // Cybersecurity Services
     {
@@ -103,7 +103,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 18T16:45:00.000Z",
         aiScore: 94,
         rating: 4.9,
-        reviewCount: 134,
+        reviewCount: 134
     },
     {
         id: "zero - trust - security",
@@ -122,7 +122,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 22T13:20:00.000Z",
         aiScore: 93,
         rating: 4.7,
-        reviewCount: 78,
+        reviewCount: 78
     },
     {
         id: "penetration - testing",
@@ -141,7 +141,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 28T10:30:00.000Z",
         aiScore: 91,
         rating: 4.8,
-        reviewCount: 92,
+        reviewCount: 92
     },
     // Cloud & Infrastructure Services
     {
@@ -161,7 +161,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 30T15:15:00.000Z",
         aiScore: 89,
         rating: 4.6,
-        reviewCount: 145,
+        reviewCount: 145
     },
     {
         id: "devops - automation",
@@ -180,7 +180,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 02 - 03T12:00:00.000Z",
         aiScore: 92,
         rating: 4.7,
-        reviewCount: 167,
+        reviewCount: 167
     },
     {
         id: "edge - computing",
@@ -199,7 +199,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 26T08:45:00.000Z",
         aiScore: 88,
         rating: 4.5,
-        reviewCount: 73,
+        reviewCount: 73
     },
     // Business Intelligence Services
     {
@@ -219,7 +219,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 24T14:20:00.000Z",
         aiScore: 90,
         rating: 4.6,
-        reviewCount: 189,
+        reviewCount: 189
     },
     {
         id: "business - automation",
@@ -238,7 +238,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 29T11:30:00.000Z",
         aiScore: 87,
         rating: 4.5,
-        reviewCount: 156,
+        reviewCount: 156
     },
     {
         id: "ai - market - research",
@@ -257,7 +257,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 02 - 02T09:15:00.000Z",
         aiScore: 93,
         rating: 4.8,
-        reviewCount: 98,
+        reviewCount: 98
     },
     // Communication & Collaboration Services
     {
@@ -277,7 +277,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 27T13:45:00.000Z",
         aiScore: 95,
         rating: 4.9,
-        reviewCount: 234,
+        reviewCount: 234
     },
     {
         id: "virtual - events",
@@ -296,7 +296,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 31T10:00:00.000Z",
         aiScore: 91,
         rating: 4.7,
-        reviewCount: 112,
+        reviewCount: 112
     },
     {
         id: "ai - translation",
@@ -315,7 +315,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 23T15:30:00.000Z",
         aiScore: 94,
         rating: 4.8,
-        reviewCount: 178,
+        reviewCount: 178
     },
     // Specialized Tools
     {
@@ -335,7 +335,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 19T12:15:00.000Z",
         aiScore: 89,
         rating: 4.6,
-        reviewCount: 87,
+        reviewCount: 87
     },
     {
         id: "ai - financial - advisor",
@@ -354,7 +354,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 21T16:00:00.000Z",
         aiScore: 92,
         rating: 4.7,
-        reviewCount: 143,
+        reviewCount: 143
     },
     {
         id: "ai - healthcare",
@@ -373,7 +373,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 17T14:45:00.000Z",
         aiScore: 90,
         rating: 4.8,
-        reviewCount: 267,
+        reviewCount: 267
     },
     // Legacy services (keeping existing ones) {
         id: "service - 1",
@@ -392,7 +392,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2023 - 12 - 10T14:48:00.000Z",
         aiScore: 95,
         rating: 4.9,
-        reviewCount: 124,
+        reviewCount: 124
     },
     {
         id: "service - 2",
@@ -410,7 +410,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2023 - 11 - 20T09:30:00.000Z",
         aiScore: 88,
         rating: 4.7,
-        reviewCount: 92,
+        reviewCount: 92
     },
     {
         id: "service - 3",
@@ -429,7 +429,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 01 - 05T11:15:00.000Z",
         aiScore: 92,
         rating: 4.8,
-        reviewCount: 78,
+        reviewCount: 78
     },
     {
         id: "service - 4",
@@ -447,7 +447,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2023 - 12 - 28T16:22:00.000Z",
         aiScore: 89,
         rating: 4.9,
-        reviewCount: 103,
+        reviewCount: 103
     },
     {
         id: "service - 5",
@@ -465,7 +465,7 @@ const SERVICE_LISTINGS = [
         createdAt: "2023 - 11 - 10T08:45:00.000Z",
         aiScore: 86,
         rating: 4.6,
-        reviewCount: 67,
+        reviewCount: 67
     },
     {
         id: "service - 6",
@@ -484,8 +484,8 @@ const SERVICE_LISTINGS = [
         createdAt: "2024 - 02 - 02T10:30:00.000Z",
         aiScore: 94,
         rating: 4.8,
-        reviewCount: 85,
-    },
+        reviewCount: 85
+    }
 ];
 function generateRandomService (idNum) {
     const templates = [
@@ -530,7 +530,7 @@ function generateRandomService (idNum) {
             min: 6000,
             max: 14000,
             tags["Transformation", "Strategy", "Business"],;
-        },
+        }
     ];
     const authors = [
         "Global AI Experts",
@@ -538,7 +538,7 @@ function generateRandomService (idNum) {
         "SecureFuture",
         "CloudOps Partners",
         "DataVisor",
-        "NexGen Solutions",
+        "NexGen Solutions"
     ];
     const images = [
         "https://images.unsplash.com / photo - 1506765515384 - 028b60a970df?auto = format & fit = crop & w=800 & h=500",
@@ -564,7 +564,7 @@ function generateRandomService (idNum) {
         rating: parseFloat ( (4 + Math.random () ) .toFixed (1) ) ,
         reviewCount: Math.floor (50 + Math.random () * 150) ,
     }}
-// Enhanced filter options for all service categories
+// Enhanced filter options for all service categories;
 const SERVICE_FILTERS = [
     { label: 'AI & ML', value: 'ai - ml' },
     { label: 'Cybersecurity', value: 'cybersecurity' },
@@ -577,7 +577,7 @@ const SERVICE_FILTERS = [
     { label: 'Security', value: 'security' },
     { label: 'Analytics', value: 'analytics' },
     { label: 'Consulting', value: 'consulting' },
-    { label: 'Strategy', value: 'strategy' },
+    { label: 'Strategy', value: 'strategy' }
 ];
     const [listings, setListings] = useState (SERVICE_LISTINGS) ;
     useEffect ( () => {

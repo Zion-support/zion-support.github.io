@@ -36,8 +36,9 @@ import { Brain,
   GraduationCap,
   Home
  } from 'lucide-react.ts';
-
-export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
+;
+export { function };
+export default function AIAutonomousBusinessIntelligence(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,
@@ -170,7 +171,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
     };
   ];
 
-  return (
+  return 
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Autonomous Business Intelligence | Zion Tech Group"
@@ -267,7 +268,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -351,7 +352,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -435,7 +436,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {intelligenceTypes.map((type, index)  => (
+            {intelligenceTypes.map(type: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -519,7 +520,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
           </motion.div>
           
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {

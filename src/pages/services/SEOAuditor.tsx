@@ -48,7 +48,7 @@ export default function SEOAuditor(...args: any[]): any {
     },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-futuristic">
       <SEO
         title="AI SEO Auditor - Zion Tech Group"

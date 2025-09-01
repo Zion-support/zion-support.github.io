@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '@/components/SEO';
 import { Link as RouterLink } from 'react-router-dom';
-
+;
+export { function };
 export default function Blockchain(...args[]):  {
   const features = [
     {
@@ -131,7 +132,7 @@ export default function Blockchain(...args[]):  {
     };
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -198,7 +199,7 @@ export default function Blockchain(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -325,7 +326,7 @@ export default function Blockchain(...args[]):  {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
+              {useCases.map(useCase: unknown, index: unknown 
                 <motion.div
                   key={index}
                   className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300"
@@ -367,7 +368,7 @@ export default function Blockchain(...args[]):  {
                   <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
                   <p className="text-zinc-400 mb-4">{useCase.description}</p>
                   <ul className="space-y-2">
-                    {useCase.examples.map((example, exampleIndex) => (
+                    {useCase.examples.map((example, exampleIndex (
                       <li key={exampleIndex} className="flex items-center text-zinc-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />
                         {example}
@@ -417,7 +418,7 @@ export default function Blockchain(...args[]):  {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map(feature: unknown, index: unknown (
                 <motion.div
                   key={index}
                   className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300"
@@ -501,7 +502,7 @@ export default function Blockchain(...args[]):  {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricing.map((plan, index) => (
+              {pricing.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   className={`relative p-8 rounded-2xl ${
@@ -559,7 +560,7 @@ export default function Blockchain(...args[]):  {
                   </div>
 
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map(feature: unknown, featureIndex: unknown (
                       <li key={featureIndex} className="flex items-center text-zinc-300">
                         <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -620,7 +621,7 @@ export default function Blockchain(...args[]):  {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   className="flex items-start space-x-4 p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm"

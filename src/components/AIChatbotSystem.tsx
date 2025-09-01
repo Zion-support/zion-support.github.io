@@ -34,6 +34,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 interface ChatMessage {
 
+
   id: string;
   content: string;
   sender: 'user' | 'bot';
@@ -44,7 +45,8 @@ metadata?: {
     confidence?: number;
     suggestions?: string[];
     relatedServices?: string[];
-    estimatedResponseTime?: number}}
+    estimatedResponseTime?: number
+}}
 
 interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
 

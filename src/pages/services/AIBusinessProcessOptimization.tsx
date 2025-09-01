@@ -179,7 +179,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
     },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -403,7 +403,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
+                  {plan.features.map(feature: unknown, idx: unknown (
                     <li key={idx} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>

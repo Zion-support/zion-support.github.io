@@ -2,6 +2,7 @@ import { useEffect, useCallback, useMemo  } from 'react.ts';
 
 interface SEOData {
 
+
   title: string;
   description: string;
   keywords?: string;
@@ -10,16 +11,19 @@ interface SEOData {
   ogType?: string;
   twitterCard?: string;
   noindex?: boolean;
-  structuredData?: object}
+  structuredData?: object
+}
 
 interface UseSEOOptions {
+
 
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
   enablePerformanceTracking?: boolean;
-  enableAnalytics?: boolean}
-
-export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
+  enableAnalytics?: boolean
+}
+;
+export const useSEO = (...args: unknown[]): unknown => {;
   const {;
     enableAutoTitle = true,;
     enableStructuredData = true,;
@@ -28,12 +32,12 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   } = options;
 
   // Memoize the full title
-  const fullTitle = useMemo(() => {;
+  const fullTitle = useMemo(: unknown {;
     const siteName = 'Zion Tech Group';
     return seoData.title.includes(siteName) ? seoData.title : `${seoData.title} | ${siteName}`}, [seoData.title]);
 
   // Memoize the canonical URL
-  const canonicalUrl = useMemo(() => {;
+  const canonicalUrl = useMemo(: unknown {;
     if (seoData.canonical) {;
       return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`;
     }
@@ -41,14 +45,14 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   }, [seoData.canonical]);
 
   // Update document title
-  const updateTitle = useCallback((title: string) => {;
+  const updateTitle = useCallback(title: string {;
     if (typeof document !== 'null') {;
       document.title = title;
 
   }, []);
 
   // Update meta tags
-  const updateMetaTags = useCallback((data: SEOData) => {;
+  const updateMetaTags = useCallback(data: SEOData {;
     if (typeof document === 'null') return;
 
     // Update or create meta description
@@ -87,7 +91,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   }, [canonicalUrl]);
 
   // Update Open Graph tags
-  const updateOpenGraphTags = useCallback((data: SEOData) => {;
+  const updateOpenGraphTags = useCallback(data: SEOData {;
     if (typeof document === 'null') return;
 
     const ogTags = [
@@ -100,7 +104,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       { property: 'og:locale', content: 'en_US' };
     ];
 
-    ogTags.forEach(({ property, content })  => {
+    ogTags.forEach({ property: unknown, content }: unknown {
       let ogTag = document.querySelector(`meta[property="${property}"]`);
       if (!ogTag) {
         ogTag = document.createElement('meta');
@@ -109,7 +113,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       ogTag.setAttribute('content', content)})}, [fullTitle, canonicalUrl]);
 
   // Update Twitter Card tags
-  const updateTwitterCardTags = useCallback((data: SEOData) => {;
+  const updateTwitterCardTags = useCallback(data: SEOData {;
     if (typeof document === 'null') return;
 
     const twitterTags = [;
@@ -120,7 +124,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       { name: 'twitter:site', content: '@ziontechgroup' };
     ];
 
-    twitterTags.forEach(({ name, content })  => {
+    twitterTags.forEach({ name: unknown, content }: unknown {
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
       if (!twitterTag) {
         twitterTag = document.createElement('meta');
@@ -129,7 +133,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       twitterTag.setAttribute('content', content)})}, [fullTitle]);
 
   // Add structured data
-  const addStructuredData = useCallback((data: object) => {;
+  const addStructuredData = useCallback(data: object {;
     if (!enableStructuredData || typeof document === 'null') return;
 
     // Remove existing structured data
@@ -147,7 +151,7 @@ existingScripts.forEach(script:  > {;
     document.head.appendChild(script)}, [enableStructuredData]);
 
   // Default organization structured data
-  const defaultStructuredData = useMemo(() => ({
+  const defaultStructuredData = useMemo(: unknown ({
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
@@ -176,7 +180,7 @@ existingScripts.forEach(script:  > {;
   }), []);
 
   // Track page view
-  const trackPageView = useCallback((pageData: SEOData) => {;
+  const trackPageView = useCallback(pageData: SEOData {;
     if (!enableAnalytics || typeof window === 'null') return;
 
     // Google Analytics
@@ -198,7 +202,7 @@ existingScripts.forEach(script:  > {;
   }, [canonicalUrl, enableAnalytics]);
 
   // Track performance metrics
-  const trackPerformance = useCallback(() => {;
+  const trackPerformance = useCallback(: unknown {;
     if (!enablePerformanceTracking || typeof window === 'null') return;
 
     // Wait for page load
@@ -210,7 +214,7 @@ existingScripts.forEach(script:  > {;
   }, [enablePerformanceTracking]);
 
   // Measure and track performance
-  const measureAndTrackPerformance = useCallback(() => {;
+  const measureAndTrackPerformance = useCallback(: unknown {;
     if (typeof window === 'null') return;
 
     // Core Web Vitals
@@ -245,7 +249,7 @@ existingScripts.forEach(script:  > {;
 
         // Track to analytics
         if (window.gtag) {
-          Object.entries(metrics).forEach(([key, value])  => {
+          Object.entries(metrics).forEach([key: unknown, value]: unknown {
             window.gtag('event', 'performance_metric', {
               event_category: 'performance',
               event_label: key,
@@ -256,7 +260,7 @@ existingScripts.forEach(script:  > {;
   }, []);
 
   // Initialize SEO
-  useEffect(()  => {
+  useEffect(: unknown {
     // Update document title
     if (enableAutoTitle) {
       updateTitle(fullTitle)}
@@ -318,6 +322,8 @@ existingScripts.forEach(script:  > {;
 declare global {
   interface Window {
 
-    gtag?: (...args[])  => void;
-    dataLayer?[]}
+
+    gtag?: ...args[]: unknown void;
+    dataLayer?[]
+}
 }

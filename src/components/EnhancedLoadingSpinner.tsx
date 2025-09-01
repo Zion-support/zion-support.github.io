@@ -17,15 +17,17 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 }
 
 interface EnhancedLoadingSpinnerProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showProgress?: boolean;
   showEstimatedTime?: boolean;
   size?: 'small' | 'medium' | 'large';
   variant?: 'default' | 'futuristic' | 'minimal' | 'themed';
-  onComplete?: () => void;
+  onComplete?: : unknown void;
   autoComplete?: boolean;
   autoCompleteDelay?: number;
-}
 
   enabled = true,
   showProgress = true,
@@ -142,7 +144,7 @@ interface EnhancedLoadingSpinnerProps {
 
   if (!enabled || !isVisible) return null;
 
-  const renderSpinner = () => {
+  const renderSpinner = (...args: unknown[]): unknown => {
     switch (variant) {
       case 'futuristic':
         return (<div className="relative">
@@ -227,7 +229,7 @@ interface EnhancedLoadingSpinnerProps {
     }
   };
 
-  const renderMessage = () => {
+  const renderMessage = (...args: unknown[]): unknown => {
     if (variant === 'themed') {
       return (<motion.div
           key={currentStep}
@@ -251,7 +253,7 @@ interface EnhancedLoadingSpinnerProps {
       </motion.div>) ;
   };
 
-  const renderProgress = () => {
+  const renderProgress = (...args: unknown[]): unknown => {
     if (!showProgress || loadingState.progress === undefined) return null;
 
     return (<div className="w - full mt - 4">
@@ -270,7 +272,7 @@ interface EnhancedLoadingSpinnerProps {
       </div>) ;
   };
 
-  const renderEstimatedTime = () => {
+  const renderEstimatedTime = (...args: unknown[]): unknown => {
     if (!showEstimatedTime || loadingState.estimatedTime === undefined) return null;
 
     return (<motion.div
@@ -283,7 +285,7 @@ interface EnhancedLoadingSpinnerProps {
       </motion.div>) ;
   };
 
-  const renderStatusIcon = () => {
+  const renderStatusIcon = (...args: unknown[]): unknown => {
     if (loadingState.type === 'loading') return null;
 
     const iconConfig = {
@@ -323,7 +325,7 @@ interface EnhancedLoadingSpinnerProps {
 
 };
 
-  const getIcon = () => {;
+  const getIcon = (...args: unknown[]): unknown => {;
     switch (variant) {;
       case 'ai':;
         return < Brain className="w - full h - full text - cyan - 400" />;
@@ -336,7 +338,7 @@ interface EnhancedLoadingSpinnerProps {
     }
   };
 
-  const getBackground = () => {;
+  const getBackground = (...args: unknown[]): unknown => {;
     switch (variant) {;
       case 'ai':;
         return 'bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 border - cyan - 400 / 30';

@@ -60,6 +60,7 @@ import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data / ultimateInnovativeS
 // Import our existing service data
 
 interface Service {
+
   id: string;
   name: string;
   category: string;
@@ -72,7 +73,8 @@ interface Service {
     enterprise: number;
     currency: string;
     billingCycle: string;
-  };
+  
+};
   rating: number;
   reviewCount: number;
   launchDate: string;
@@ -191,7 +193,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
     return filtered;
   }, [allServices, searchTerm, selectedCategory, sortBy]) ;
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (...args: unknown[]): unknown => {
     switch (category) {
       case 'Artificial Intelligence':
         return < Brain className="w - 6 h - 6" />;

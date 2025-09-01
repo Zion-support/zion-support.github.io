@@ -66,6 +66,7 @@ import { zion2026ComprehensiveServices } from "../data / zion2026ComprehensiveSe
 
 interface Service {
 
+
   id: string;
   name: string;
   category: string;
@@ -77,7 +78,8 @@ pricing: {
     professional: number;
     enterprise: number;
     currency: string;
-    billingCycle: string};
+    billingCycle: string
+};
   rating: number;
   reviewCount: number;
   launchDate: string;
@@ -169,7 +171,7 @@ pricing: {
         return 'bg - gray - 100 text - gray - 800'}
   };
 
-  const getInnovationBadge = (service: Service) => {;
+  const getInnovationBadge = (...args: unknown[]): unknown => {;
     if (service.innovationLevel === 'Revolutionary') {;
       return < span className="px - 2 py - 1 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white text - xs font - bold rounded - full flex items - center gap - 1"><Sparkles className="w - 3 h - 3" /> Revolutionary</span>;
     } else if (service.innovationLevel = == 'Cutting - Edge') {;

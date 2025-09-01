@@ -23,6 +23,7 @@ import { motion, AnimatePresence } from 'framer - motion';
   Clock
  } from 'lucide - react';
 
+
   id: string;
   type: NotificationType;
   title: string;
@@ -47,6 +48,7 @@ interface NotificationSystemProps extends React.PropsWithChildren<{}> {
   defaultDuration?: number}
 
 interface NotificationSettings {
+
 
   sound: boolean;
   vibration: boolean;
@@ -184,7 +186,7 @@ enableSound:  true,;
   };
 
   // Get position classes
-  const getPositionClasses = () => {;
+  const getPositionClasses = (...args: unknown[]): unknown => {;
     switch (settings.position) {;
       case 'top - left':;
         return 'top - 4 left - 4';

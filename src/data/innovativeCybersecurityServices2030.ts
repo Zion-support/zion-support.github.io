@@ -1,7 +1,8 @@
 // Innovative Cybersecurity Services 2030 - Zion Tech Group
 // Advanced security solutions for the digital age
-
+;
 export interface CybersecurityService {
+
 
   id: string;
   title: string;
@@ -14,7 +15,8 @@ pricing: {
     custom: string;
     currency: string;
     pricingModel: string;
-    marketPrice: string};
+    marketPrice: string
+};
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -49,7 +51,7 @@ pricing: {
   featured: boolean;
   trending: boolean}
 
-// Zion Tech Group Contact Information
+// Zion Tech Group Contact Information;
 const zionContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
@@ -67,7 +69,7 @@ const zionContact = {
 
 
 };
-
+;
 export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   {
     id: "quantum-resistant-encryption",
@@ -526,7 +528,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     sla: "99.9% uptime guarantee",
     responseTime: "< 3 seconds",
     availability: "Global",
-    location: "Global",
+    location: "Global"
   }
     tags: ["Blockchain Security", "Smart Contract Auditing", "DeFi Security", "Cryptocurrency", "Digital Assets"],;
     image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500",;
@@ -535,5 +537,6 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     trending: true;
   };
 ];
-
+;
+export { innovativeCybersecurityServices2030 };
 export default innovativeCybersecurityServices2030;}}

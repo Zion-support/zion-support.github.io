@@ -440,5 +440,6 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
     </div>;
   );
 };
-
+;
+export { AICybersecurity };
 export default AICybersecurity;}}}

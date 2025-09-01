@@ -23,6 +23,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 interface SearchResult {
 
+
   id: string;
   title: string;
   description: string;
@@ -31,14 +32,17 @@ interface SearchResult {
   location?: string;
   date?: string;
   rating?: number;
-  type: 'service' | 'article' | 'team' | 'technology'}
+  type: 'service' | 'article' | 'team' | 'technology'
+}
 
 interface FilterOption {
+
 
   id: string;
   label: string;
   value: string;
-  count: number}
+  count: number
+}
 
 interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
 
@@ -156,7 +160,7 @@ interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
   };
 
   // Get icon for type
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (...args: unknown[]): unknown => {
     switch (type) {
       case 'service': return < Zap className="w - 4 h - 4" />;
       case 'article': return < Tag className="w - 4 h - 4" />;
@@ -167,7 +171,7 @@ interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
   };
 
   // Get category color
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (...args: unknown[]): unknown => {
     const colors = {
       'ai': 'text - purple - 400',
       'cloud': 'text - blue - 400',
@@ -449,4 +453,11 @@ className: {`flex items - center gap - 2 px - 4 py - 2 rounded - lg text - sm fo
           </button>
         </motion.div>) }
     </div>) ;
+}
+
+
+
+}
+
+}
 }

@@ -74,7 +74,7 @@ const technologyCategories = [
     color: "from - orange - 500 to - red - 500";
   };
 ];
-
+;
 const emergingTech = [
   { name: "Quantum Computing", icon: "⚛️", status: "Research" },
   { name: "Blockchain", icon: "🔗", status: "Production" },

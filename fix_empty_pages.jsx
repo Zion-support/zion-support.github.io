@@ -1,17 +1,18 @@
 import fs from 'fs';
 import path from 'path';
-// Function to convert kebab-case to PascalCase
+// Function to convert kebab-case to PascalCase;
 function kebabToPascal(str) {
   return str
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('')}
-// Function to create a proper Next.js page template
+// Function to create a proper Next.js page template;
 function componentName = kebabToPascal(pageName);
   const isApi = filePath.includes('/api/');
 
   if (isApi) {
     return `import type { NextApiRequest, NextApiResponse } from 'next';
+export { function };
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint working' })}`}
   
@@ -32,7 +33,7 @@ const ${componentName}: NextPage = () => {
     </div>
   )};
 export default ${componentName};`}
-// Function to fix empty files
+// Function to fix empty files;
 function files = fs.readdirSync(dir);
   
   files.forEach(file => {
@@ -50,7 +51,7 @@ function files = fs.readdirSync(dir);
         fs.writeFileSync(filePath, pageTemplate)}
     }
   })}
-// Start fixing from the pages directory
+// Start fixing from the pages directory;
 const pagesDir = './pages';
 if (fs.existsSync(pagesDir)) {
   // // // // // // // console.log('Fixing empty pages...');

@@ -31,7 +31,7 @@ import { motion } from 'framer - motion';
     integrations["Python", "Scikit - learn", "TensorFlow", "Custom APIs"]
   }
 ];
-
+;
 const aiCapabilities = [
   {
     title: "Machine Learning",
@@ -58,7 +58,7 @@ const aiCapabilities = [
     impact: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -88,7 +88,7 @@ const successStories = [
     logo: "HN"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,

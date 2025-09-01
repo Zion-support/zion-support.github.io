@@ -578,7 +578,7 @@ import { motion } from 'framer - motion';
   CheckCircle,
   Shield,
   Zap,
-  Brain
+  Brain;
 const autonomousVehicleSolutions = [;
   {
     id: 1,
@@ -677,7 +677,7 @@ const autonomousVehicleSolutions = [;
     technologies["AI Platform", "Fleet Management", "Analytics", "Optimization"];
   }
 ];
-
+;
 const vehicleTechnologies = [
   {
     name: "Computer Vision",
@@ -708,7 +708,7 @@ const vehicleTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
     id: 1,
@@ -738,7 +738,7 @@ const successStories = [
     logo: "IAL"
 
 ];
-
+;
 const processSteps = [
   {
     step: 1,
@@ -769,7 +769,7 @@ const processSteps = [
     duration: "4 - 8 weeks"
 
 ];
-
+;
 const vehicleBenefits = [
   {
     title: "Enhanced Safety",

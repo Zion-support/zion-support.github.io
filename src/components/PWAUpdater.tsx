@@ -4,10 +4,12 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 
 interface PWAUpdaterProps {
+  // Add your props here
+
+
   autoCheck?: boolean;
   checkInterval?: number;
   showUpdatePrompt?: boolean;
-}
 
 const PWAUpdater: React.FC < PWAUpdaterProps> = ({
   autoCheck = true,
@@ -82,7 +84,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
     }
   }, [autoCheck, checkInterval, registration]) ;
 
-  const checkForUpdates = async (reg: ServiceWorkerRegistration) => {
+  const checkForUpdates = async reg: ServiceWorkerRegistration {
     try {
       await reg.update () ;
       console.log ('Service Worker update check completed') ;
@@ -91,7 +93,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
     }
   };
 
-  const applyUpdate = async () => {
+  const applyUpdate = async : unknown {
     if (!registration) return;
 
     setUpdating (true) ;

@@ -20,6 +20,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide - react';
 
 interface FAQItem {
+
   id: string;
   question: string;
   answer: string;
@@ -27,6 +28,8 @@ interface FAQItem {
   icon: React.ComponentType < any>;
 }
 
+}
+;
 const faqData: FAQItem[] = [
   {
     id: 'ai - services',

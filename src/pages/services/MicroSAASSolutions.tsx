@@ -83,7 +83,7 @@ export default function MicroSAASSolutions() {
     },
   ];
 
-  return (
+  return 
     <div className="min-h-screen bg-slate-900 text-white pt-20">
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
@@ -108,7 +108,7 @@ export default function MicroSAASSolutions() {
           transition={{ delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {solutions.map((solution, index) => (
+          {solutions.map((solution, index 
             <motion.div
               key={solution.name}
               initial={{ opacity: 0, y: 20 }}

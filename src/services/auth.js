@@ -3,9 +3,9 @@ export default authService;
 
 // Mock authentication service
 // In a real application, this would connect to your backend API
-
+;
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://api.zion.com';
-
+;
 class AuthService {
   constructor () {
     this.token = localStorage.getItem ('token') ;
