@@ -173,14 +173,6 @@
 
 # Resolved merge: keep both redirect-healer and redirect-manager, plus a11y-audit-runner
 [[scheduled.functions]]
-  name = "redirect-healer"
-  schedule = "*/15 * * * *"
-
-[[scheduled.functions]]
-  name = "sitemap-prioritizer"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
   name = "redirect-manager"
   schedule = "*/30 * * * *"
 
@@ -302,9 +294,13 @@ schedule = "*/2 * * * *" # every 2 minutes
   schedule = "0 3 * * *" # daily at 03:00 UTC
 
 [[scheduled.functions]]
-  name = "unused-assets-report"
-  schedule = "23 */6 * * *" # every 6 hours
+  name = "content-freshness-runner"
+  schedule = "*/10 * * * *"
 
 [[scheduled.functions]]
-  name = "i18n-extractor-runner"
-  schedule = "*/20 * * * *" # every 20 minutes
+  name = "internal-link-graph-runner"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "roadmap-auto-generator"
+  schedule = "*/20 * * * *"

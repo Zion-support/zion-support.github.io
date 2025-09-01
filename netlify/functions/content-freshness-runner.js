@@ -1,86 +1,79 @@
-const fs = require('fs');
-const path = require('path');
-const { spawnSync } = require('child_process');
+exports.handler = async function() {
+  const fs = require('fs');
+  const path = require('path');
+  const { execSync } = require('child_process');
 
-function escapeHtml(str) {
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-
-function listFiles(dir, exts = [/\.(md|mdx|tsx|ts|jsx|js)$/i]) {
-  const out = [];
-  if (!fs.existsSync(dir)) return out;
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
-  for (const entry of entries) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) out.push(...listFiles(full, exts));
-    else if (exts.some((re) => re.test(entry.name))) out.push(full);
+  function walkFiles(dir, exts, files = []) {
+    let entries = [];
+    try { entries = fs.readdirSync(dir, { withFileTypes: true }); } catch { return files; }
+    for (const e of entries) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) {
+        walkFiles(full, exts, files);
+      } else {
+        const ext = path.extname(e.name).toLowerCase();
+        if (!exts.size || exts.has(ext)) files.push(full);
+      }
+    }
+    return files;
   }
-  return out;
-}
 
-function ensureDir(dir) { if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }); }
+  function collectFreshness(rootDir) {
+    const targets = [
+      path.join(rootDir, 'pages'),
+      path.join(rootDir, 'docs'),
+      path.join(rootDir, 'components'),
+      path.join(rootDir, 'styles')
+    ];
+    const allowExts = new Set(['.md', '.mdx', '.tsx', '.ts', '.jsx', '.js', '.css']);
+    const now = Date.now();
+    const items = [];
+    for (const t of targets) {
+      const files = walkFiles(t, allowExts);
+      for (const f of files) {
+        try {
+          const st = fs.statSync(f);
+          const ageDays = Math.round((now - st.mtimeMs) / (1000 * 60 * 60 * 24));
+          items.push({ path: path.relative(rootDir, f), mtime: st.mtime.toISOString(), ageDays });
+        } catch {}
+      }
+    }
+    items.sort((a, b) => a.ageDays - b.ageDays);
+    const freshest = items.slice(0, 20);
+    const stalest = [...items].sort((a, b) => b.ageDays - a.ageDays).slice(0, 20);
+    const summary = {
+      generatedAt: new Date().toISOString(),
+      totalFiles: items.length,
+      freshest,
+      stalest,
+      stats: {
+        medianAgeDays: items.length ? items.map(i => i.ageDays).sort((a,b)=>a-b)[Math.floor(items.length/2)] : 0,
+        over90d: items.filter(i => i.ageDays >= 90).length,
+        over180d: items.filter(i => i.ageDays >= 180).length,
+      }
+    };
+    return summary;
+  }
 
-exports.handler = async () => {
-  const rootDir = path.resolve(__dirname, '..', '..');
-  const targets = ['pages', 'components', 'docs'].map((d) => path.join(rootDir, d));
-  const files = targets.flatMap((d) => listFiles(d));
+  try {
+    const rootDir = path.resolve(__dirname, '..', '..');
+    const outDir = path.join(rootDir, 'public', 'automation');
+    fs.mkdirSync(outDir, { recursive: true });
+    const reportPath = path.join(outDir, 'content-freshness.json');
 
-  const now = Date.now();
-  const entries = files.map((f) => {
-    const st = fs.statSync(f);
-    const ageDays = Math.round((now - st.mtimeMs) / (1000 * 60 * 60 * 24));
-    return { file: path.relative(rootDir, f), mtime: st.mtime.toISOString?.() || new Date(st.mtimeMs).toISOString(), ageDays };
-  }).sort((a,b) => b.ageDays - a.ageDays);
+    const data = collectFreshness(rootDir);
+    fs.writeFileSync(reportPath, JSON.stringify(data, null, 2));
 
-  const summary = {
-    generatedAt: new Date().toISOString(),
-    totalFiles: entries.length,
-    staleThresholdDays: 60,
-    staleFiles: entries.filter(e => e.ageDays >= 60).slice(0, 300),
-    newestFiles: entries.slice(-50).reverse()
-  };
+    try {
+      execSync('git config user.name "zion-bot"', { cwd: rootDir, stdio: 'inherit' });
+      execSync('git config user.email "bot@zion.app"', { cwd: rootDir, stdio: 'inherit' });
+      execSync(`git add ${JSON.stringify(path.relative(rootDir, reportPath))}`, { cwd: rootDir, stdio: 'inherit', shell: true });
+      execSync('git commit -m "chore(content): update content freshness report [ci skip]" || true', { cwd: rootDir, stdio: 'inherit', shell: true });
+      execSync('git push origin main || true', { cwd: rootDir, stdio: 'inherit', shell: true });
+    } catch {}
 
-  const reportDir = path.join(rootDir, 'public', 'reports', 'content-freshness');
-  ensureDir(reportDir);
-  fs.writeFileSync(path.join(reportDir, 'latest.json'), JSON.stringify(summary, null, 2));
-  const ts = new Date().toISOString().replace(/[:.]/g, '-');
-  fs.writeFileSync(path.join(reportDir, `content-freshness-${ts}.json`), JSON.stringify(summary, null, 2));
-
-  const renderRows = (arr) => arr.slice(0, 200).map((x) => (
-    '<tr>' +
-      '<td>' + String(x.ageDays) + '</td>' +
-      '<td><code>' + escapeHtml(x.file) + '</code></td>' +
-      '<td>' + escapeHtml(x.mtime) + '</td>' +
-    '</tr>'
-  )).join('');
-
-  const staleTable = '<table><tr><th>Age (days)</th><th>File</th><th>Updated</th></tr>' + renderRows(summary.staleFiles) + '</table>';
-  const newestTable = '<table><tr><th>Age (days)</th><th>File</th><th>Updated</th></tr>' + renderRows(summary.newestFiles) + '</table>';
-
-  const htmlIndex = [
-    '<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>',
-    '<title>Content Freshness</title>',
-    '<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background:#0b1220;color:#fff;padding:24px}a{color:#67e8f9}code,pre{background:#111827;border:1px solid #1f2937;border-radius:8px;padding:12px;display:block;white-space:pre-wrap}h1{margin:0 0 12px;font-size:24px}h2{margin:24px 0 8px;font-size:18px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #1f2937;padding:8px}</style></head><body>',
-    '<h1>Content Freshness</h1>',
-    '<p>Latest JSON: <a href="./latest.json">latest.json</a></p>',
-    '<div>Total files: ' + String(summary.totalFiles) + '</div>',
-    '<div>Stale threshold: ' + String(summary.staleThresholdDays) + ' days</div>',
-    '<div>Stale count: ' + String(summary.staleFiles.length) + '</div>',
-    '<h2>Most Stale (&gt;= 60d)</h2>',
-    staleTable,
-    '<h2>Newest Files</h2>',
-    newestTable,
-    '</body></html>'
-  ].join('');
-  fs.writeFileSync(path.join(reportDir, 'index.html'), htmlIndex);
-
-  // git sync
-  spawnSync('node', [path.join(rootDir, 'automation', 'advanced-git-sync.cjs')], { stdio: 'inherit' });
-
-  return { statusCode: 200, body: JSON.stringify({ ok: true, task: 'content-freshness-runner', files: entries.length }) };
+    return { statusCode: 200, body: JSON.stringify({ ok: true, report: '/automation/content-freshness.json' }) };
+  } catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
+  }
 };
