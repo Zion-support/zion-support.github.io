@@ -1,12 +1,88 @@
-<<<<<<< HEAD
-import { DollarSign  } from 'lucide-react';
-export default function Page() {
- else {
-`
-      router(`/request-quote?listing=${listing.id}`)}
+import { useNavigate, Link } from "react-router-dom";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ProductListing } from "@/types/listings";
+import { Star, DollarSign, Heart } from "lucide-react";
+import { useAppDispatch } from "@/store/hooks";
+import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
+import { useAuth } from "@/hooks/useAuth";
+import { useLocation } from "react-router-dom";
+import { toast } from "sonner";
+
+interface ProductListingCardProps {
+  listing: ProductListing;
+  view?: 'grid' | 'list';
+  onRequestQuote?: (id: string) => void;
+  /**
+   * Base path for linking to the detail page. Defaults to
+   * `/marketplace/listing` to preserve existing behaviour.
+   */
+  detailBasePath?: string;
+}
+
+export function ProductListingCard({
+  listing,
+  view = 'grid',
+  onRequestQuote,
+  detailBasePath = '/marketplace/listing'
+}: ProductListingCardProps) {
+  const isGrid = view === 'grid';
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { user } = useAuth();
+  const dispatch = useAppDispatch();
+  
+  // Get the first image or use a placeholder
+  const imageUrl = listing.images && listing.images.length > 0 
+    ? listing.images[0] 
+    : '/placeholder.svg';
+    
+  // Format price display
+  const formatPrice = () => {
+    if (listing.price === null) return "Custom pricing";
+    return `${listing.currency}${listing.price.toLocaleString()}`;
   };
 
-  return ()
+  // Handle image loading errors
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    e.currentTarget.src = '/placeholder.svg';
+  };
+  
+  // Handle navigating to listing detail
+  const handleViewListing = () => {
+    navigate(`${detailBasePath}/${listing.id}`);
+  };
+  
+  // Handle request quote button click
+  const handleRequestQuote = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    if (onRequestQuote) {
+      onRequestQuote(listing.id);
+    } else {
+      // Default behavior if no handler provided
+      navigate(`/request-quote?listing=${listing.id}`);
+    }
+  };
+
+  const handleSave = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!user) {
+      toast.info('Log in to save favorites');
+      navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
+      return;
+    }
+    dispatch(addToWishlist({ id: listing.id, type: 'product', data: listing }));
+    fetch(`${getApiUrl()}/wishlist`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: listing.id, type: 'product' }),
+    }).catch(() => {});
+  };
+  
+  return (
     <div
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -96,13 +172,18 @@ export default function Page() {
           </div>
 "
           <div className="flex gap-2">
-            <Button"
-              size="sm"
-              className="bg-primary hover:bg-primary/80 text-primary-foreground"
-              onClick={(e) => {
-
-                e.stopPropagation();`
-                router(`${detailBasePath}/${listing.id}`)}}              disabled = {loading}
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={handleSave}
+              aria-label="save-to-wishlist"
+              className="text-zion-slate-light hover:text-zion-cyan"
+            >
+              <Heart className="h-5 w-5" />
+            </Button>
+            <Link
+              to={`${detailBasePath}/${listing.id}`}
+              onClick={(e) => e.stopPropagation()}
             >
               {loading ? (
                 <>"
