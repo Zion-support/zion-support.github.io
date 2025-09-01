@@ -9,7 +9,7 @@ const mockBusinessProcesses = [
         status: 'active',
         priority: 'high',
         automationLevel: 'fully-automated',
-        aiInsights[;
+        aiInsights: [
             'Pattern detected: 15% of invoices require manual review',
             'Optimization opportunity: Reduce approval time by 40%',
             'Cost savings potential: $12,000/month through automation'

@@ -623,3 +623,5 @@ export function RevolutionaryServicesPage(...args: any[]): any {
     </div>
   );
 }
+
+export default RevolutionaryServicesPage;
