@@ -6,8 +6,11 @@ export default function EnhancedFooter() {
   return (
     <div className="border-t border-gray-200 dark:border-gray-800 text-sm py-6">
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <p>{t('footer.copyright', { year })}</p>
-        <div className="opacity-70">{t('footer.rights')}</div>
+        <p>© {new Date().getFullYear()} Zion Tech Solutions</p>
+        <div className="opacity-70 flex items-center gap-4">
+          <a href="/help" className="hover:underline">Help Center</a>
+          <span>All rights reserved.</span>
+        </div>
       </div>
       {/* Sticky mobile action bar */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 md:hidden">

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import ShareBar from '../../components/ShareBar';
+import UseTokensButton from '../../components/tokens/UseTokensButton';
 
 const ApiDevelopmentChat: NextPage = () => {
   const title = 'ApiDevelopmentChat - Zion Tech Solutions';
@@ -18,11 +18,11 @@ const ApiDevelopmentChat: NextPage = () => {
         <meta property="og:type" content="article" />
       </Head>
       
-      <main>
+      <main className="space-y-4">
         <h1>ApiDevelopmentChat</h1>
         <p>Service details coming soon...</p>
-        <ShareBar title="ApiDevelopmentChat" summary={desc} imageUrl={ogImage} />
-        <Link href="/services"><a>Back to Services</a></Link>
+        <UseTokensButton serviceId="api-development-chat" />
+        <Link href="/services">Back to Services</Link>
       </main>
     </div>
   );

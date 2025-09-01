@@ -1,9 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-
-const FeedbackWidget = dynamic(() => import('../../components/feedback/FeedbackWidget'), { ssr: false });
+import UseTokensButton from '../../components/tokens/UseTokensButton';
 
 const CustomerSupportChatbot: NextPage = () => {
   return (
@@ -13,10 +11,10 @@ const CustomerSupportChatbot: NextPage = () => {
         <meta name="description" content="CustomerSupportChatbot service" />
       </Head>
       
-      <main>
+      <main className="space-y-4">
         <h1>CustomerSupportChatbot</h1>
         <p>Service details coming soon...</p>
-        <FeedbackWidget />
+        <UseTokensButton serviceId="customer-support-chatbot" defaultType="premium_support" />
         <Link href="/services">Back to Services</Link>
       </main>
     </div>

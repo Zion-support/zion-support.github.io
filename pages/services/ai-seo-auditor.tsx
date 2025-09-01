@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
-import Seo from '../../components/seo/Seo';
-import { FAQPageJsonLd } from 'next-seo';
+import UseTokensButton from '../../components/tokens/UseTokensButton';
 
 const AiSeoAuditor: NextPage = () => {
   const title = 'AiSeoAuditor - Zion Tech Solutions';
@@ -9,24 +8,16 @@ const AiSeoAuditor: NextPage = () => {
   const ogImage = '/og/default.svg';
   return (
     <div>
-      <Seo title="AI SEO Auditor" description="Automated SEO audits and recommendations powered by AI." openGraph={{ title: 'AI SEO Auditor', description: 'Automated SEO audits and recommendations powered by AI.' }} />
-      <FAQPageJsonLd
-        mainEntity={[
-          {
-            questionName: 'What does the AI SEO Auditor analyze?',
-            acceptedAnswerText: 'It scans metadata, headings, performance, accessibility, and content structure to highlight SEO opportunities.'
-          },
-          {
-            questionName: 'How fast are the recommendations generated?',
-            acceptedAnswerText: 'Typically within seconds for single pages and a few minutes for larger sites.'
-          }
-        ]}
-      />
-      <main>
-        <h1>AI SEO Auditor</h1>
+      <Head>
+        <title>AiSeoAuditor - Zion Tech Solutions</title>
+        <meta name="description" content="AiSeoAuditor service" />
+      </Head>
+      
+      <main className="space-y-4">
+        <h1>AiSeoAuditor</h1>
         <p>Service details coming soon...</p>
-        <ShareBar title="AiSeoAuditor" summary={desc} imageUrl={ogImage} />
-        <Link href="/services"><a>Back to Services</a></Link>
+        <UseTokensButton serviceId="ai-seo-auditor" />
+        <Link href="/services">Back to Services</Link>
       </main>
     </div>
   );

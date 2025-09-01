@@ -25,8 +25,7 @@ export default function EnhancedNavigation() {
           <Link href="/certifications"><a>Certifications</a></Link>
           <Link href="/dao"><a>DAO</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
-          <Link href="/settings/account"><a>Account</a></Link>
-          <Web3LoginButton />
+          <Link href="/help"><a>Support</a></Link>
         </div>
         <div className="flex items-center gap-4 text-sm">
           <Link href="/services"><a>Services</a></Link>
