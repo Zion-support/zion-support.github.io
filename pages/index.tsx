@@ -2486,82 +2486,41 @@ export default function HomePage() {
             </div>
           </section>
 
-          {/* Project Status & Reports */}
+          {/* Project Statistics & Achievements */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📈 Project Status & Performance Reports</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">📊 Performance Reports</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <Link href="/performance-weekly-report.md" className="text-cyan-400 hover:text-cyan-300">Weekly Performance Report</Link></li>
-                  <li>• <Link href="/lighthouse-live-report.md" className="text-cyan-400 hover:text-cyan-300">Lighthouse Live Report</Link></li>
-                  <li>• <Link href="/lighthouse-budgets-report.md" className="text-cyan-400 hover:text-cyan-300">Lighthouse Budgets Report</Link></li>
-                  <li>• <Link href="/app-monitoring-report.md" className="text-cyan-400 hover:text-cyan-300">App Monitoring Report</Link></li>
-                  <li>• <Link href="/accessibility-audit-report.md" className="text-cyan-400 hover:text-cyan-300">Accessibility Audit Report</Link></li>
-                </ul>
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📊 Project Statistics & Achievements</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl">🚀</span>
+                </div>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-2">227+ Automations</h3>
+                <p className="text-white/70 text-sm">Intelligent autonomous systems</p>
               </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🔧 Automation Reports</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <Link href="/ai-content-autonomy-report.md" className="text-fuchsia-400 hover:text-fuchsia-300">AI Content Autonomy Report</Link></li>
-                  <li>• <Link href="/ai-content-factory-report.md" className="text-fuchsia-400 hover:text-fuchsia-300">AI Content Factory Report</Link></li>
-                  <li>• <Link href="/ai-research-scout-report.md" className="text-fuchsia-400 hover:text-fuchsia-300">AI Research Scout Report</Link></li>
-                  <li>• <Link href="/ai-trends-radar-report.md" className="text-fuchsia-400 hover:text-fuchsia-300">AI Trends Radar Report</Link></li>
-                  <li>• <Link href="/adaptive-orchestrator-report.md" className="text-fuchsia-400 hover:text-fuchsia-300">Adaptive Orchestrator Report</Link></li>
-                </ul>
+              
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl">📄</span>
+                </div>
+                <h3 className="text-xl font-semibold text-fuchsia-400 mb-2">2960+ Pages</h3>
+                <p className="text-white/70 text-sm">Dynamic content generation</p>
               </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🚀 System Reports</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <Link href="/workflow-health-report.md" className="text-green-400 hover:text-green-300">Workflow Health Report</Link></li>
-                  <li>• <Link href="/ci-lint-types-build-report.md" className="text-green-400 hover:text-green-300">CI/Lint/Types/Build Report</Link></li>
-                  <li>• <Link href="/continuous-deployment-report.md" className="text-green-400 hover:text-green-300">Continuous Deployment Report</Link></li>
-                  <li>• <Link href="/dependencies-report.md" className="text-green-400 hover:text-green-300">Dependencies Report</Link></li>
-                  <li>• <Link href="/content-generation-report.md" className="text-green-400 hover:text-green-300">Content Generation Report</Link></li>
-                </ul>
+              
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl">⚛️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-green-400 mb-2">12 Components</h3>
+                <p className="text-white/70 text-sm">Reusable UI elements</p>
               </div>
-            </div>
-          </section>
-
-          {/* Featured Articles */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📰 Featured Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Link href="/blog/ai-automation-trends-2025" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                <h3 className="text-lg font-semibold">AI Automation Trends 2025</h3>
-                <p className="mt-1 text-sm text-white/75">What’s next in autonomous systems.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
-              </Link>
-              <Link href="/blog/autonomous-content-generation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                <h3 className="text-lg font-semibold">Autonomous Content Generation</h3>
-                <p className="mt-1 text-sm text-white/75">Scaling content with AI responsibly.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
-              </Link>
-              <Link href="/blog/cloud-native-automation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                <h3 className="text-lg font-semibold">Cloud-Native Automation</h3>
-                <p className="mt-1 text-sm text-white/75">Designing resilient, self-healing infra.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
-              </Link>
-              <Link href="/blog/ai-ethics-automation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                <h3 className="text-lg font-semibold">AI Ethics in Automation</h3>
-                <p className="mt-1 text-sm text-white/75">Building trustworthy autonomous agents.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
-              </Link>
-              <Link href="/blog/performance-optimization" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                <h3 className="text-lg font-semibold">Performance Optimization</h3>
-                <p className="mt-1 text-sm text-white/75">Keeping things fast at scale.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
-              </Link>
-              <Link href="/blog/future-of-work" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                <h3 className="text-lg font-semibold">The Future of Work</h3>
-                <p className="mt-1 text-sm text-white/75">Humans and AI, better together.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
-              </Link>
-            </div>
-            <div className="text-center mt-8">
-              <Link href="/blog" className="text-white/90 hover:text-white">Explore all articles →</Link>
+              
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl">🔧</span>
+                </div>
+                <h3 className="text-xl font-semibold text-yellow-400 mb-2">50+ Scripts</h3>
+                <p className="text-white/70 text-sm">Automation utilities</p>
+              </div>
             </div>
           </section>
 
