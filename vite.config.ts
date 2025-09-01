@@ -1,7 +1,12 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { fileURLToPath } from 'node:url'
+import { SAMPLE_SERVICES } from './src/data/sampleServices'
 
+const srcDir = fileURLToPath(new URL('./src', import.meta.url))
+const axiosPath = fileURLToPath(new URL('./src/lib/axios.ts', import.meta.url))
+
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
@@ -35,7 +40,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
+      '@': srcDir,
+      'axios': axiosPath
     }
   },
   server: {

@@ -40,6 +40,7 @@ import Sitemap from './pages/Sitemap';
 import PartnersPage from './pages/Partners';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import SignUp from './pages/SignUp';
 import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
 import OpenAppRedirect from './pages/OpenAppRedirect';
 import ContactPage from './pages/Contact';
@@ -55,7 +56,7 @@ const baseRoutes = [
   { path: '/match', element: <AIMatcherPage /> },
   { path: '/login', element: <Login /> },
   { path: '/register', element: <Signup /> },
-  { path: '/signup', element: <Signup /> },
+  { path: '/signup', element: <SignUp /> },
   { path: '/talent', element: <TalentDirectory /> },
   { path: '/talents', element: <TalentsPage /> },
   { path: '/services', element: <ServicesPage /> },
