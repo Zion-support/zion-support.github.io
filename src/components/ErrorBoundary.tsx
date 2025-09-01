@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { Component, ReactNode, ErrorInfo } from "react";
 
 interface ErrorBoundaryProps {
   fallback: ReactNode;
@@ -9,18 +9,15 @@ interface ErrorBoundaryState {
   hasError: boolean;
 }
 
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false };
-  }
+export default class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  state: ErrorBoundaryState = { hasError: false };
 
   static getDerivedStateFromError() {
     return { hasError: true };
   }
 
-  componentDidCatch(error: unknown) {
-    console.error("ErrorBoundary caught an error", error);
+  componentDidCatch(error: unknown, errorInfo: ErrorInfo) {
+    console.error("ErrorBoundary caught an error", error, errorInfo);
   }
 
   render() {
@@ -30,5 +27,3 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     return this.props.children;
   }
 }
-
-export default ErrorBoundary;
