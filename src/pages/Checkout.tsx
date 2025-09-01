@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { Input } from '@/components/ui/input';
+import { useNavigate } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
 
 interface CartItem {
@@ -15,16 +16,9 @@ interface CartItem {
 
 export default function Checkout() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
   const [items, setItems] = useState<CartItem[]>([]);
 
   useEffect(() => {
-    const sku = searchParams.get('sku');
-    if (sku) {
-      setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
-      return;
-    }
-
     const stored = safeStorage.getItem('cart');
     if (stored) {
       try {
@@ -37,16 +31,7 @@ export default function Checkout() {
         // ignore parsing errors
       }
     }
-    // Provide mock data if cart empty
-    setItems([
-      {
-        id: 'prod_mock',
-        name: 'Test Item',
-        price: 25,
-        quantity: 1,
-      },
-    ]);
-  }, [searchParams]);
+  }, []);
 
   const handleCheckout = async () => {
     const product = items[0];
