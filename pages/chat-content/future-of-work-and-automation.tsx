@@ -1,8 +1,8 @@
-export default function ChatContent7() {
+export default function FutureOfWorkAndAutomation() {
   return (
-    <div className="py-10">
-      <h1 className="text-2xl font-semibold mb-2">Future of Work and Automation</h1>
-      <p className="text-gray-600 dark:text-gray-300">Coming soon.</p>
+    <div>
+      <h1 className="text-2xl font-semibold">Future of Work & Automation</h1>
+      <p className="text-sm text-gray-600">Content coming soon.</p>
     </div>
   );
 }

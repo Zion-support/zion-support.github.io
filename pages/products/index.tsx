@@ -1,8 +1,8 @@
 export default function Products() {
   return (
-    <div className="py-10">
-      <h1 className="text-2xl font-semibold mb-2">Products</h1>
-      <p className="text-gray-600 dark:text-gray-300">Coming soon.</p>
+    <div>
+      <h1 className="text-2xl font-semibold">Products</h1>
+      <p className="text-sm text-gray-600">Coming soon.</p>
     </div>
   );
 }

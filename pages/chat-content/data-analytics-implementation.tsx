@@ -1,8 +1,8 @@
-export default function ChatContent4() {
+export default function DataAnalyticsImplementation() {
   return (
-    <div className="py-10">
-      <h1 className="text-2xl font-semibold mb-2">Data Analytics Implementation</h1>
-      <p className="text-gray-600 dark:text-gray-300">Coming soon.</p>
+    <div>
+      <h1 className="text-2xl font-semibold">Data Analytics Implementation</h1>
+      <p className="text-sm text-gray-600">Content coming soon.</p>
     </div>
   );
 }

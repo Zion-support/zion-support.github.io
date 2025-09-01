@@ -1,8 +1,8 @@
-export default function ChatContent9() {
+export default function SustainableTechnologyPractices() {
   return (
-    <div className="py-10">
-      <h1 className="text-2xl font-semibold mb-2">Sustainable Technology Practices</h1>
-      <p className="text-gray-600 dark:text-gray-300">Coming soon.</p>
+    <div>
+      <h1 className="text-2xl font-semibold">Sustainable Technology Practices</h1>
+      <p className="text-sm text-gray-600">Content coming soon.</p>
     </div>
   );
 }

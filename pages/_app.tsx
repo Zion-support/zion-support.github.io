@@ -3,12 +3,10 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';
 import defaultSeo from '../components/seo/DefaultSeoConfig';
 import '../styles/enhanced-design-system.css';
 import '../styles/modern-design-system.css';
-import PageLoadTracker from '../components/metrics/PageLoadTracker';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <EnhancedLayout>
-      <PageLoadTracker />
       <Component {...pageProps} />
     </EnhancedLayout>
   );

@@ -1,39 +1,63 @@
 import Link from 'next/link';
-import FuturisticHero from '../components/ui/FuturisticHero';
-import FuturisticCards from '../components/ui/FuturisticCards';
 
 export default function Home() {
   return (
-    <div className="py-10 space-y-10">
-      <FuturisticHero />
-
-      <FuturisticCards />
-
-      <section className="rounded-lg border border-gray-200 dark:border-gray-800 p-5 bg-gradient-to-br from-gray-50 to-white dark:from-gray-950 dark:to-black">
-        <div className="flex items-center justify-between gap-4 flex-col md:flex-row">
-          <div>
-            <div className="text-xl font-semibold mb-1">Autonomous Cloud Agents</div>
-            <p className="text-gray-600 dark:text-gray-300 max-w-xl">Always-on, self-updating agents generate insights, monitor uptime, optimize SEO, scan links, tune courses, track freshness, summarize changes, and publish RSS feeds—no human or physical server required.</p>
-          </div>
-          <div className="flex items-center gap-3">
-            <Link href="/academy/insights"><a className="rounded-md bg-blue-600 text-white px-4 py-2">View Insights</a></Link>
-            <Link href="/academy/admin"><a className="rounded-md border border-gray-300 dark:border-gray-700 px-4 py-2">Live Status</a></Link>
+    <div className="space-y-12 futuristic-bg">
+      <section className="text-center pt-10 pb-14 relative">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl font-extrabold futuristic-gradient-text">Zion AI Marketplace</h1>
+          <p className="mt-3 text-sm sm:text-base text-gray-600 dark:text-gray-300">Hire elite AI talent, upskill with Zion Academy, and automate growth with autonomous cloud agents.</p>
+          <div className="mt-6 flex items-center justify-center gap-3">
+            <Link href="/learn"><a className="enhanced-button enhanced-button-primary futuristic-button">Explore Courses</a></Link>
+            <Link href="/dao"><a className="enhanced-button enhanced-button-secondary futuristic-button">DAO Metrics</a></Link>
           </div>
         </div>
-        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
-          <Link href="/admin/seo-suggestions"><a className="rounded border border-gray-200 dark:border-gray-800 p-3 hover:bg-gray-50 dark:hover:bg-gray-900">SEO Suggestions</a></Link>
-          <Link href="/admin/broken-links"><a className="rounded border border-gray-200 dark:border-gray-800 p-3 hover:bg-gray-50 dark:hover:bg-gray-900">Broken Links</a></Link>
-          <Link href="/admin/changelog"><a className="rounded border border-gray-200 dark:border-gray-800 p-3 hover:bg-gray-50 dark:hover:bg-gray-900">Recent Changes</a></Link>
-          <Link href="/admin/content-freshness"><a className="rounded border border-gray-200 dark:border-gray-800 p-3 hover:bg-gray-50 dark:hover:bg-gray-900">Content Freshness</a></Link>
-          <a href="/academy-insights.xml" className="rounded border border-gray-200 dark:border-gray-800 p-3 hover:bg-gray-50 dark:hover:bg-gray-900">Insights RSS</a>
-          <a href="/changelog.xml" className="rounded border border-gray-200 dark:border-gray-800 p-3 hover:bg-gray-50 dark:hover:bg-gray-900">Changelog RSS</a>
+
+        <div className="absolute inset-x-0 -bottom-16 flex justify-center pointer-events-none">
+          <div className="w-[800px] h-[180px] bg-gradient-to-r from-indigo-500/30 via-emerald-400/20 to-indigo-500/30 blur-3xl rounded-full" />
         </div>
-        <div className="mt-3 text-xs text-gray-500">Runs on GitHub Actions (5–30 min cadence) and commits results to this repo.</div>
       </section>
 
-      <div>
-        <Link href="/academy"><a className="text-blue-600 underline">Go to Zion Academy</a></Link>
-      </div>
+      <section className="grid md:grid-cols-3 gap-4">
+        <div className="p-5 futuristic-panel">
+          <div className="text-lg font-semibold">Zion Academy</div>
+          <div className="text-sm text-gray-300">Take courses, earn certifications, boost your match visibility.</div>
+          <div className="mt-3"><Link href="/learn"><a className="text-blue-300 hover:underline text-sm">Start learning</a></Link></div>
+        </div>
+        <div className="p-5 futuristic-panel">
+          <div className="text-lg font-semibold">Marketplace</div>
+          <div className="text-sm text-gray-300">Showcase certified skills and get matched to top opportunities.</div>
+          <div className="mt-3"><Link href="/talent"><a className="text-blue-300 hover:underline text-sm">Discover talent</a></Link></div>
+        </div>
+        <div className="p-5 futuristic-panel">
+          <div className="text-lg font-semibold">Autonomous Ops</div>
+          <div className="text-sm text-gray-300">Cloud-native agents keep metrics, SEO, and rankings updated automatically.</div>
+          <div className="mt-3"><Link href="/reports"><a className="text-blue-300 hover:underline text-sm">View reports</a></Link></div>
+        </div>
+      </section>
+
+      <section className="border rounded p-4 futuristic-panel">
+        <div className="font-medium mb-2">Autonomous Cloud Automations</div>
+        <ul className="list-disc pl-5 text-sm space-y-1 text-gray-200">
+          <li>
+            Weekly DAO Metrics Refresh — on-chain distribution, top holders, governance stats.
+            <Link href="/dao"><a className="ml-2 text-blue-300 hover:underline">View DAO Panel</a></Link>
+          </li>
+          <li>
+            Weekly Learning Insights — completions and top badges.
+            <Link href="/certifications"><a className="ml-2 text-blue-300 hover:underline">See Certifications</a></Link>
+          </li>
+          <li>
+            Daily Marketplace Rankings — top learners and certified talent.
+            <Link href="/learn"><a className="ml-2 text-blue-300 hover:underline">Explore Courses</a></Link>
+          </li>
+          <li>
+            Uptime, SEO, Links, Deps, PageSpeed — continuous visibility.
+            <Link href="/reports"><a className="ml-2 text-blue-300 hover:underline">Open Reports</a></Link>
+          </li>
+        </ul>
+        <div className="text-xs text-gray-400 mt-2">Runs automatically via scheduled functions and syncs changes back to the repo.</div>
+      </section>
     </div>
   );
 }

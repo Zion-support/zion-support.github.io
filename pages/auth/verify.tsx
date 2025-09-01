@@ -1,8 +1,8 @@
-export default function VerifyEmail() {
+export default function Verify() {
   return (
-    <div className="py-10">
-      <h1 className="text-2xl font-semibold mb-2">Verify Email</h1>
-      <p className="text-gray-600 dark:text-gray-300">Check your inbox for a verification link.</p>
+    <div>
+      <h1 className="text-2xl font-semibold">Verify Email</h1>
+      <p className="text-sm text-gray-600">Please check your email to verify your account.</p>
     </div>
   );
 }
