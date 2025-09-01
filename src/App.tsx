@@ -101,6 +101,12 @@ const AIIntelligentProjectManagementPlatform = lazy(() => import('./pages/servic
 const AIFinancialAnalyticsPlatform = lazy(() => import('./pages/services/AI-Financial-Analytics-Platform'));
 const AIHealthcareAnalyticsPlatform = lazy(() => import('./pages/services/AI-Healthcare-Analytics-Platform'));
 
+// New Services 2025
+const AICustomerInsightsPlatform = createLazyComponent(() => import('./pages/services/ai-customer-insights-platform'));
+const AIWorkflowAutomationStudio = createLazyComponent(() => import('./pages/services/ai-workflow-automation-studio'));
+const EnterpriseCloudMigration = createLazyComponent(() => import('./pages/services/enterprise-cloud-migration'));
+const AIPredictiveAnalyticsEngine = createLazyComponent(() => import('./pages/services/ai-predictive-analytics-engine'));
+
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
@@ -360,6 +366,12 @@ function App() {
                     <Route path="/services/space-tech" element={<SpaceTech />} />
                     <Route path="/services/sustainability" element={<Sustainability />} />
                     <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
+
+                    {/* New Services 2025 */}
+                    <Route path="/services/ai-customer-insights-platform" element={<AICustomerInsightsPlatform />} />
+                    <Route path="/services/ai-workflow-automation-studio" element={<AIWorkflowAutomationStudio />} />
+                    <Route path="/services/enterprise-cloud-migration" element={<EnterpriseCloudMigration />} />
+                    <Route path="/services/ai-predictive-analytics-engine" element={<AIPredictiveAnalyticsEngine />} />
 
                     {/* Marketplace and other pages */}
                     <Route path="/marketplace" element={<Marketplace />} />

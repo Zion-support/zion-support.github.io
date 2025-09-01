@@ -9,6 +9,8 @@ const nextConfig = {
   },
   experimental: {
     esmExternals: false,
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
   images: {
     domains: ['ziontechgroup.com'],
@@ -38,6 +40,7 @@ const nextConfig = {
         /automation_backup/,
         /broken_files_backup/,
         /contracts/,
+        /cypress/,
       ],
     });
     
