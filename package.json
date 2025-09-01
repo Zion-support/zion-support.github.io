@@ -30,9 +30,12 @@
     "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
     "perf:monitor": "node scripts/performance-monitor.js",
     "perf:audit": "npm run perf:monitor",
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "vite",
+    "dev:next": "next dev",
+    "build": "vite build",
+    "build:next": "next build",
+    "start": "vite preview",
+    "start:next": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "analyze": "ANALYZE=true npm run build",
@@ -67,7 +70,7 @@
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^13.4.0",
     "@types/node": "^20.8.0",
-    "@types/react": "^18.2.0",
+    "@types/react": "18.3.24",
     "@types/react-dom": "^18.2.0",
     "@typescript-eslint/eslint-plugin": "^8.41.0",
     "@typescript-eslint/parser": "^8.41.0",
@@ -83,7 +86,7 @@
     "postcss": "^8.4.31",
     "postcss-preset-env": "^10.3.1",
     "prettier": "^3.0.3",
-    "tailwindcss": "^3.3.5",
-    "typescript": "^5.9.2"
+    "tailwindcss": "^3.4.17",
+    "typescript": "5.9.2"
   }
 }

@@ -63,33 +63,14 @@ const nextConfig = {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
-<<<<<<< HEAD
 
   // Restrict page file extensions to reduce accidental inclusion of corrupted files
   pageExtensions: ['ts', 'tsx'],
 
   // Loosen build-time checks to avoid blocking builds while automations fix code
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   eslint: {
     ignoreDuringBuilds: true,
   },
-
-  // Bundle analyzer (optional)
-  ...(process.env.ANALYZE === 'true' && {
-    webpack: (config) => {
-      config.plugins.push(
-        new (require('@next/bundle-analyzer'))({
-          enabled: true,
-        })
-      );
-      return config;
-    },
-  }),
-
-=======
->>>>>>> main
 };
 
 export default nextConfig;
