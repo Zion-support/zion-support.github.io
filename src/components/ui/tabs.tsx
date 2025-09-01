@@ -1,40 +1,31 @@
-
-interface TabsContextType {
+interface TabsContextType {}
   activeTab: string;
   setActiveTab: (tab: string)  => void}
 
   activeTab: string;
-  setActiveTab: tab: string void
+  setActiveTab: tab: string void;
 }
 ;
-<<<<<<< HEAD
 
-interface TabsProps extends React.PropsWithChildren<{}> {
-
+interface TabsProps extends React.PropsWithChildren<{}> {}
   children: ReactNode;
   defaultValue?: string;
   value?: string;
   onValueChange?: value: string void;
   className?: string}
 
-export function Tabs({ children, defaultValue, value, onValueChange, className = '' }: TabsProps) {;
+export function Tabs(function Tabs({ children, defaultValue, value, onValueChange, className = '' }: TabsProps) {): any {;
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
 
-  
     setActiveTab(tab);
-    if (onValueChange) {
-
+    if (onValueChange) {}
       onValueChange(tab)}
   };
 
   return()
-    <TabsContext.Provider value = {
-
+    <TabsContext.Provider value = {}
   { activeTab,
-  setActiveTab: handleTabChange 
-
-
-
+  setActiveTab: handleTabChange;
 ;
 }}>;
       <div className={className}>;
@@ -71,6 +62,3 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
     </div>;
   )}
 '`
-=======
-
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

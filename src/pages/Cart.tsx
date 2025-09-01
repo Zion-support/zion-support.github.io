@@ -1,12 +1,11 @@
 
-export default function CartPage() {
-  
+export default function CartPage(function CartPage() {): any {}
   const { items, dispatch } = useCart();
   const { user } = useAuth();
   
   const [hydrated, setHydrated] = useState(false);
 
-  useEffect(() => {
+  useEffect(() => {}
     setHydrated(true)}, []);
 
   if (!hydrated) return null;
@@ -15,7 +14,7 @@ export default function CartPage() {
     dispatch({ type: 'SET_ITEMS', payload: updated })}};
 
   
-  if (items.length === 0) {
+  if (items.length === 0) {}
     return (
       <div className="container py-10 text-center">
         <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" />
@@ -45,12 +44,12 @@ export default function CartPage() {
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Button
-              className="mt-4 w-full"
+            <Button;
+              className="mt-4 w-full""
               onClick={() => isAuthenticated && navigate('/checkout')}
               disabled={!isAuthenticated}
             >
-              Checkout
+              Checkout;
             </Button>
           </TooltipTrigger>
           {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>}

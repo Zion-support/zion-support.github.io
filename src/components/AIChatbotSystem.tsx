@@ -1,4 +1,4 @@
-import {
+import {}
   MessageCircle,
   Send,
   Bot,
@@ -24,40 +24,40 @@ import {
   Globe,
   Clock,
   CheckCircle,
-  AlertCircle
+  AlertCircle;
 } from 'lucide-react';
 
-interface ChatMessage {
+interface ChatMessage {}
   id: string;
   content: string;
   sender: 'user' | 'bot';
   timestamp: Date;
   type: 'text' | 'image' | 'file' | 'system';
   status: 'sending' | 'sent' | 'error';
-  metadata?: {
+  metadata?: {}
     confidence?: number;
     suggestions?: string[];
     relatedServices?: string[];
     estimatedResponseTime?: number}}
 
-interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
+interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {}
   showHeader?: boolean;
   showSettings?: boolean;
   maxMessages?: number;
   autoScroll?: boolean}
 
-export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
+export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({}
   showHeader = true,
   showSettings = true,
   maxMessages = 50,
-  autoScroll = true
-}) => {
+  autoScroll = true;
+}) => {}
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [showSettingsPanel, setShowSettingsPanel] = useState(false);
-  const [settings, setSettings] = useState({
+  const [settings, setSettings] = useState({}
     voiceEnabled: false,
     autoResponse: true,
     language: 'en',
@@ -67,102 +67,96 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   const [isListening, setIsListening] = useState(false);
   const [chatHistory, setChatHistory] = useState<any>([]);
   
-  // Sample welcome message
-  useEffect(() => {
-    if (isOpen && messages.length === 0) {
-      const welcomeMessage: ChatMessage = {
+  // Sample welcome message;
+  useEffect(() => {}
+    if (isOpen && messages.length === 0) {}
+      const welcomeMessage: ChatMessage = {}
         id: 'welcome',
         content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",
         sender: 'bot',
         timestamp: new Date(),
         type: 'text',
         status: 'sent',
-        metadata: {
+        metadata: {}
           confidence: 0.95,
           suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
           relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
-          estimatedResponseTime: 2
+          estimatedResponseTime: 2;
         }
       };
       setMessages([welcomeMessage])}
   }, [isOpen, messages.length]);
 
-  // Auto-scroll to bottom
-  useEffect(() => {
-    if (autoScroll && messagesEndRef.current) {
+  // Auto-scroll to bottom;
+  useEffect(() => {}
+    if (autoScroll && messagesEndRef.current) {}
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })}
   }, [messages, autoScroll]);
 
-  // Simulate AI response
-  
-  
+  // Simulate AI response;
     if (!inputValue.trim() || isTyping) return;
 
-    const userMessage: ChatMessage = {
+    const userMessage: ChatMessage = {}
       id: Date.now().toString(),
       content: inputValue,
       sender: 'user',
       timestamp: new Date(),
       type: 'text',
-      status: 'sent',
+      status: 'sent'
     };
     setMessages(prev => [...prev, userMessage]);
     setIsTyping(true);
 
     
-    const botMessage: ChatMessage = {
+    const botMessage: ChatMessage = {}
       id: Date.now().toString(),
       content: randomResponse.content,
       sender: 'bot',
       timestamp: new Date(),
       type: 'text',
       status: 'sent',
-      metadata: {
+      metadata: {}
         confidence: 0.85 + Math.random() * 0.1,
         suggestions: randomResponse.suggestions,
         relatedServices: randomResponse.relatedServices,
-        estimatedResponseTime: 1 + Math.random() * 2
+        estimatedResponseTime: 1 + Math.random() * 2;
       }
     };
 
     setMessages(prev => [...prev, botMessage]);
     setIsTyping(false)};
 
-  // Handle file upload
-  
-    if (file) {
-      const fileMessage: ChatMessage = {
+  // Handle file upload;
+    if (file) {}
+      const fileMessage: ChatMessage = {}
         id: Date.now().toString(),
         content: `Uploaded file: ${file.name}`,
         sender: 'user',
         timestamp: new Date(),
         type: 'file',
-        status: 'sent',
+        status: 'sent'
       };
       setMessages(prev => [...prev, fileMessage])}
   };
 
-  // Handle suggestion click
-  
+  // Handle suggestion click;
   };
 
-  // Rate response
-  
+  // Rate response;
   };
 
-  // Clear chat
-  
+  // Clear chat;
     setChatHistory([])};
 
   return (
     <>
       {/* Chat Toggle Button */}
-      <motion.button
+      <motion.button;
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 right-4 z-50 p-4 bg-zion-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zinc-900"
+        className="fixed bottom-4 right-4 z-50 p-4 bg-zion-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zinc-900""
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        aria-label="Toggle AI chatbot"
+        aria-label="Toggle AI chatbot""
       >
         {isOpen ? <X className="w-6 h-6"  /> : <MessageCircle className="w-6 h-6"  />}
       </motion.button>
@@ -170,12 +164,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       {/* Chat Window */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl overflow-hidden"
+            className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl overflow-hidden""
           >
             {/* Header */}
             {showHeader && (
@@ -189,24 +183,24 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                       <h3 className="font-semibold text-white">Zion AI Assistant</h3>
                       <div className="flex items-center gap-2 text-xs text-zinc-400">
                         <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                        Online
+                        Online;
                       </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
                     {showSettingsPanel && (
-                      <button
+                      <button;
                         onClick={() => setShowSettingsPanel(!showSettingsPanel)}
-                        className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
-                        aria-label="Chat settings"
+                        className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors""
+                        aria-label="Chat settings""
                       >
                         <Settings className="w-4 h-4"  />
                       </button>
                     )}
-                    <button
+                    <button;
                       onClick={clearChat}
-                      className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
-                      aria-label="Clear chat"
+                      className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors""
+                      aria-label="Clear chat""
                     >
                       <RefreshCw className="w-4 h-4"  />
                     </button>
@@ -218,7 +212,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
             {/* Settings Panel */}
             <AnimatePresence>
               {showSettingsPanel && (
-                <motion.div
+                <motion.div;
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
@@ -227,10 +221,10 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   <div className="p-4 space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-zinc-300">Voice Input</span>
-                      <button
+                      <button;
                         onClick={() => setSettings(prev => ({ ...prev, voiceEnabled: !prev.voiceEnabled }))}
-                        className={`p-2 rounded-lg transition-colors ${
-                          settings.voiceEnabled
+                        className={`p-2 rounded-lg transition-colors ${}
+                          settings.voiceEnabled;
                             ? 'bg-zion-cyan text-white'
                             : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                         }`}
@@ -240,10 +234,10 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-zinc-300">Auto Response</span>
-                      <button
+                      <button;
                         onClick={() => setSettings(prev => ({ ...prev, autoResponse: !prev.autoResponse }))}
-                        className={`p-2 rounded-lg transition-colors ${
-                          settings.autoResponse
+                        className={`p-2 rounded-lg transition-colors ${}
+                          settings.autoResponse;
                             ? 'bg-zion-cyan text-white'
                             : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                         }`}
@@ -259,14 +253,14 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-96">
               {messages.map((message) => (
-                <motion.div
+                <motion.div;
                   key={message.id}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div className={`max-w-[80%] ${message.sender === 'user' ? 'order-2' : 'order-1'}`}>
-                    <div className={`p-3 rounded-lg ${
+                    <div className={`p-3 rounded-lg ${}
                       message.sender === 'user'
                         ? 'bg-zion-cyan text-white'
                         : 'bg-zinc-800/50 text-zinc-100'
@@ -285,10 +279,10 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                           {message.metadata.suggestions && (
                             <div className="flex flex-wrap gap-1 mb-2">
                               {message.metadata.suggestions.map((suggestion, index) => (
-                                <button
+                                <button;
                                   key={index}
                                   onClick={() => handleSuggestionClick(suggestion)}
-                                  className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-600/50 transition-colors"
+                                  className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-600/50 transition-colors""
                                 >
                                   {suggestion}
                                 </button>
@@ -299,9 +293,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                           {message.metadata.relatedServices && (
                             <div className="flex flex-wrap gap-1">
                               {message.metadata.relatedServices.map((service, index) => (
-                                <span
+                                <span;
                                   key={index}
-                                  className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full"
+                                  className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full""
                                 >
                                   {service}
                                 </span>
@@ -320,17 +314,17 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
                       {message.sender === 'bot' && (
                         <div className="flex items-center gap-1">
-                          <button
+                          <button;
                             onClick={() => rateResponse(message.id, 'positive')}
-                            className="p-1 text-zinc-400 hover:text-green-400 transition-colors"
-                            aria-label="Rate response positively"
+                            className="p-1 text-zinc-400 hover:text-green-400 transition-colors""
+                            aria-label="Rate response positively""
                           >
                             <ThumbsUp className="w-3 h-3"  />
                           </button>
-                          <button
+                          <button;
                             onClick={() => rateResponse(message.id, 'negative')}
-                            className="p-1 text-zinc-400 hover:text-red-400 transition-colors"
-                            aria-label="Rate response negatively"
+                            className="p-1 text-zinc-400 hover:text-red-400 transition-colors""
+                            aria-label="Rate response negatively""
                           >
                             <ThumbsDown className="w-3 h-3"  />
                           </button>
@@ -340,7 +334,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   </div>
 
                   {/* Avatar */}
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center ${}
                     message.sender === 'user' ? 'order-1 ml-2' : 'order-2 mr-2'
                   }`}>
                     {message.sender === 'user' ? (
@@ -358,10 +352,10 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
               {/* Typing Indicator */}
               {isTyping && (
-                <motion.div
+                <motion.div;
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="flex justify-start"
+                  className="flex justify-start""
                 >
                   <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">
                     <div className="flex space-x-1">
@@ -381,22 +375,22 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
             <div className="p-4 border-t border-zinc-700/50">
               <form onSubmit={handleSubmit} className="flex items-center gap-2">
                 <div className="flex-1 relative">
-                  <input
-                    type="text"
+                  <input;
+                    type="text""
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
-                    placeholder="Ask me thing about Zion Tech Group..."
-                    className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
+                    placeholder="Ask me thing about Zion Tech Group...""
+                    className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none""
                     disabled={isTyping}
                   />
 
                   {/* File Upload */}
                   <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
-                    <input
-                      type="file"
+                    <input;
+                      type="file""
                       onChange={handleFileUpload}
-                      className="hidden"
-                      accept="image/*,.pdf,.doc,.docx,.txt"
+                      className="hidden""
+                      accept="image/*,.pdf,.doc,.docx,.txt""
                     />
                     <Paperclip className="w-4 h-4 text-zinc-400 hover:text-zinc-300 transition-colors"  />
                   </label>
@@ -404,26 +398,26 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
                 {/* Voice Input */}
                 {settings.voiceEnabled && (
-                  <button
-                    type="button"
+                  <button;
+                    type="button""
                     onClick={() => setIsListening(!isListening)}
-                    className={`p-3 rounded-lg transition-colors ${
-                      isListening
+                    className={`p-3 rounded-lg transition-colors ${}
+                      isListening;
                         ? 'bg-red-500 text-white'
                         : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                     }`}
-                    aria-label="Voice input"
+                    aria-label="Voice input""
                   >
                     {isListening ? <MicOff className="w-4 h-4"  /> : <Mic className="w-4 h-4"  />}
                   </button>
                 )}
 
                 {/* Send Button */}
-                <button
-                  type="submit"
+                <button;
+                  type="submit""
                   disabled={!inputValue.trim() || isTyping}
-                  className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  aria-label="Send message"
+                  className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed""
+                  aria-label="Send message""
                 >
                   <Send className="w-4 h-4"  />
                 </button>

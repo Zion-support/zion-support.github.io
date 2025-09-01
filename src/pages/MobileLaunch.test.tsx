@@ -1,11 +1,11 @@
 
 
-describe ('MobileLaunch', () => {
-  it ('renders without crashing', () => {
+describe ('MobileLaunch', () => {}
+  it ('renders without crashing', () => {}
     render (<MobileLaunch  />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<MobileLaunch  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;

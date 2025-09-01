@@ -1,29 +1,25 @@
 
-export default function AIContentCreation() {
-  
-  
-  
-  
+export default function AIContentCreation(function AIContentCreation() {): any {}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20"></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center max-w-4xl mx-auto""
           >
             <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 text-blue-400 text-sm font-medium mb-6">
               <PenTool className="w-4 h-4"  />
-              AI Content Creation
+              AI Content Creation;
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              AI-Powered
+              AI-Powered;
               <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                {' '}Content Creation
+                {' '}Content Creation;
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -31,18 +27,18 @@ export default function AIContentCreation() {
               engaging content across all formats while maintaining your brand voice and SEO optimization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/request-quote"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+              <Link;
+                to="/request-quote""
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25""
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="w-5 h-5"  />
               </Link>
-              <Link
-                to="/schedule-demo"
-                className="inline-flex items-center gap-2 border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+              <Link;
+                to="/schedule-demo""
+                className="inline-flex items-center gap-2 border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 px-8 py-4 rounded-lg font-semibold transition-all duration-300""
               >
-                Schedule Demo
+                Schedule Demo;
               </Link>
             </div>
           </motion.div>
@@ -52,29 +48,29 @@ export default function AIContentCreation() {
       {/* Features Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-16""
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Advanced Content Creation Features
+              Advanced Content Creation Features;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our AI platform combines natural language processing, creative design, and 
+              Our AI platform combines natural language processing, creative design, and;
               marketing expertise to deliver content that engages and converts.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300 group"
+                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300 group""
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -90,29 +86,29 @@ export default function AIContentCreation() {
       {/* Content Types Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-16""
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Content Types We Create
+              Content Types We Create;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From written content to visual assets, our AI platform handles all types 
+              From written content to visual assets, our AI platform handles all types;
               of content creation for your marketing needs.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contentTypes.map((type, index) => (
-              <motion.div
+              <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300"
+                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300""
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
                   <type.icon className="w-6 h-6 text-white" />
@@ -136,16 +132,16 @@ export default function AIContentCreation() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Transform Your Content Marketing
+                Transform Your Content Marketing;
               </h2>
               <p className="text-lg text-gray-400 mb-8">
-                Our AI content creation platform delivers measurable improvements in content 
+                Our AI content creation platform delivers measurable improvements in content;
                 production, quality, and performance while reducing costs and time investment.
               </p>
               <ul className="space-y-4">
@@ -158,11 +154,11 @@ export default function AIContentCreation() {
               </ul>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="relative""
             >
               <div className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-2xl p-8 border border-blue-500/30">
                 <div className="grid grid-cols-2 gap-6">
@@ -192,14 +188,14 @@ export default function AIContentCreation() {
       {/* Use Cases Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-16""
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Content Creation Use Cases
+              Content Creation Use Cases;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our AI platform addresses the most critical challenges in content marketing, 
@@ -209,20 +205,20 @@ export default function AIContentCreation() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-              <motion.div
+              <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300"
+                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300""
               >
                 <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-400 mb-6">{useCase.description}</p>
-                <Link
-                  to="/request-quote"
-                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors"
+                <Link;
+                  to="/request-quote""
+                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors""
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4"  />
                 </Link>
               </motion.div>
@@ -234,32 +230,32 @@ export default function AIContentCreation() {
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 rounded-3xl p-12 text-center border border-blue-500/30"
+            className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 rounded-3xl p-12 text-center border border-blue-500/30""
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Scale Your Content?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join leading brands that are already using our AI platform to create 
+              Join leading brands that are already using our AI platform to create;
               engaging content at scale while maintaining quality and brand consistency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/request-quote"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+              <Link;
+                to="/request-quote""
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25""
               >
-                Get Your Quote
+                Get Your Quote;
                 <ArrowRight className="w-5 h-5"  />
               </Link>
-              <Link
-                to="/schedule-demo"
-                className="inline-flex items-center gap-2 border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+              <Link;
+                to="/schedule-demo""
+                className="inline-flex items-center gap-2 border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 px-8 py-4 rounded-lg font-semibold transition-all duration-300""
               >
-                Schedule Demo
+                Schedule Demo;
               </Link>
             </div>
           </motion.div>

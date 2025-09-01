@@ -14,31 +14,26 @@ import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw';
 import X from 'lucide-react/dist/esm/icons/x';
 import Info from 'lucide-react/dist/esm/icons/info';
 import { cn } from '@/lib/utils';
-export function PerformanceDashboard({ className, showDetails = false, onClose }) {
-
+export function PerformanceDashboard({ className, showDetails = false, onClose }) {}
     const { metrics, observers, performanceScore, logMetrics } = usePerformance();
     const [isExpanded, setIsExpanded] = useState(showDetails);
-    const getScoreColor = (score) => {
-
+    const getScoreColor = (score) => {}
         if (score >= 90)
             return 'text-green-500';
         if (score >= 70)
             return 'text-yellow-500';
         return 'text-red-500'};
-    const getScoreEmoji = (score) => {
-
+    const getScoreEmoji = (score) => {}
         if (score >= 90)
             return '🚀';
         if (score >= 70)
             return '⚠️';
         return '🐌'};
-    const getMetricIcon = (metricName) => {
-
-        const icons = {
-
-  FCP: <Eye className="w-4 h-4"/>,"
-            LCP: <Eye className="w-4 h-4"/>,"
-            FID: <MousePointer className="w-4 h-4"/>,"
-            CLS: <BarChart3 className="w-4 h-4"/>,"
-            TTFB: <Clock className="w-4 h-4"/>,"
-            DOMLOAD: <Activity className="w-4 h-4"/>,"
+    const getMetricIcon = (metricName) => {}
+        const icons = {}
+  FCP: <Eye className="w-4 h-4"/>,""
+            LCP: <Eye className="w-4 h-4"/>,""
+            FID: <MousePointer className="w-4 h-4"/>,""
+            CLS: <BarChart3 className="w-4 h-4"/>,""
+            TTFB: <Clock className="w-4 h-4"/>,""
+            DOMLOAD: <Activity className="w-4 h-4"/>,""

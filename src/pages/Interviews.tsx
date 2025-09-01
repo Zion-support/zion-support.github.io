@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react"; // Added useCallback
+import React, { useEffect, useState, useCallback } from "react"; // Added useCallback;
 import { useInterviews } from "@/hooks/useInterviews";
 import { Interview } from "@/types/interview";
 import { Footer } from "@/components/Footer";
@@ -9,20 +9,18 @@ import { InterviewCard } from "@/components/interviews/InterviewCard";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Video } from "lucide-react";
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
-import { Link } from "react-router-dom"; // Added Link import
-
-function InterviewsContent() {
-  const { interviews, isLoading, fetchInterviews } = useInterviews(); // fetchInterviews is stable from the hook
+import { Link } from "react-router-dom"; // Added Link import;
+function InterviewsContent(function InterviewsContent() {): any {}
+  const { interviews, isLoading, fetchInterviews } = useInterviews(); // fetchInterviews is stable from the hook;
   const [activeTab, setActiveTab] = useState("upcoming");
   
-  useEffect(() => {
+  useEffect(() => {}
     // fetchInterviews is memoized by useInterviews hook, so it's safe to include.
     fetchInterviews();
-  }, [fetchInterviews]); // Added fetchInterviews
-
-  const now = new Date();
+  }, [fetchInterviews]); // Added fetchInterviews;
+  const now: any = new Date();
   
-  const upcomingInterviews = interviews
+  const upcomingInterviews: any = interviews;
     .filter(interview => 
       interview.status === 'confirmed' && 
       !isPast(parseISO(interview.scheduled_date))
@@ -31,22 +29,22 @@ function InterviewsContent() {
       parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
     );
   
-  const pendingInterviews = interviews.filter(interview => 
+  const pendingInterviews: any = interviews.filter(interview => 
     interview.status === 'requested'
   );
   
-  const pastInterviews = interviews.filter(interview => {
-    const interviewDate = parseISO(interview.scheduled_date);
+  const pastInterviews: any = interviews.filter(interview => {}
+    const interviewDate: any = parseISO(interview.scheduled_date);
     return !isAfter(interviewDate, now) || 
       ['completed', 'declined', 'cancelled'].includes(interview.status);
   });
 
-  const groupInterviewsByDate = (interviewsToGroup: Interview[]) => { // Renamed parameter
+  const groupInterviewsByDate: any = (interviewsToGroup: Interview[]) => { // Renamed parameter;
     const grouped: Record<string, Interview[]> = {};
     
-    interviewsToGroup.forEach((interview) => {
-      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
-      if (!grouped[dateKey]) {
+    interviewsToGroup.forEach((interview) => {}
+      const dateKey: any = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
+      if (!grouped[dateKey]) {}
         grouped[dateKey] = [];
       }
       grouped[dateKey].push(interview);
@@ -55,16 +53,16 @@ function InterviewsContent() {
     return grouped;
   };
   
-  const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
-  const pendingGrouped = groupInterviewsByDate(pendingInterviews);
-  const pastGrouped = groupInterviewsByDate(pastInterviews);
+  const upcomingGrouped: any = groupInterviewsByDate(upcomingInterviews);
+  const pendingGrouped: any = groupInterviewsByDate(pendingInterviews);
+  const pastGrouped: any = groupInterviewsByDate(pastInterviews);
 
-  const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {
+  const renderInterviewGroups: any = (groupedInterviews: Record<string, Interview[]>) => {}
     return Object.entries(groupedInterviews)
       .sort(([dateA], [dateB]) => 
         parseISO(dateA).getTime() - parseISO(dateB).getTime()
       )
-      .map(([date, dateInterviews]) => ( // Renamed inner variable
+      .map(([date, dateInterviews]) => ( // Renamed inner variable;
         <div key={date} className="mb-8">
           <h3 className="text-lg font-medium text-white mb-4 flex items-center">
             <Calendar className="h-5 w-5 mr-2" />
@@ -72,10 +70,10 @@ function InterviewsContent() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {dateInterviews.map((interview) => (
-              <InterviewCard 
+              <InterviewCard;
                 key={interview.id} 
                 interview={interview}
-                onRefresh={fetchInterviews} // Pass stable fetchInterviews
+                onRefresh={fetchInterviews} // Pass stable fetchInterviews;
               />
             ))}
           </div>
@@ -85,9 +83,9 @@ function InterviewsContent() {
 
   return (
     <>
-      <SEO 
-        title="Interviews | Zion AI Marketplace" 
-        description="Manage your scheduled interviews with clients and talent" 
+      <SEO;
+        title="Interviews | Zion AI Marketplace""
+        description="Manage your scheduled interviews with clients and talent""
       />
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
@@ -101,7 +99,7 @@ function InterviewsContent() {
           <TabsList className="mb-6">
             <TabsTrigger value="upcoming" className="flex items-center">
               <Clock className="h-4 w-4 mr-2" />
-              Upcoming
+              Upcoming;
               {upcomingInterviews.length > 0 && (
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
                   {upcomingInterviews.length}
@@ -109,7 +107,7 @@ function InterviewsContent() {
               )}
             </TabsTrigger>
             <TabsTrigger value="pending">
-              Pending
+              Pending;
               {pendingInterviews.length > 0 && (
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
                   {pendingInterviews.length}
@@ -173,7 +171,7 @@ function InterviewsContent() {
   );
 }
 
-export default function Interviews() {
+export default function Interviews(function Interviews() {): any {}
   return (
     <ProtectedRoute>
       <InterviewsContent />

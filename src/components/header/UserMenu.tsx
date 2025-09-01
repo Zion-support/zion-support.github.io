@@ -1,53 +1,53 @@
 
-import React from "react";
+import React from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import {
+import {}
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 
-export function UserMenu() {
+export function UserMenu(function UserMenu() {): any {}
   const { user, logout } = useAuth();
-  const navigate = useNavigate();
+  const navigate: any = useNavigate();
   const { toast } = useToast();
   const [open, setOpen] = React.useState(false);
 
-  const handleIconClick = () => {
-    if (!user) {
+  const handleIconClick: any = () => {}
+    if (!user) {}
       navigate("/login");
       return;
     }
     setOpen((prev) => !prev);
   };
 
-  const handleSignOut = async () => {
-    try {
+  const handleSignOut: any = async () => {}
+    try {}
       await logout();
-    } catch (error) {
-      toast({
+    } catch (error) {}
+      toast({}
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
-        variant: "destructive",
+        variant: "destructive"
       });
     }
   };
 
-  if (!user) {
+  if (!user) {}
     return (
       <div className="hidden md:flex items-center space-x-4">
         <Link to="/login" className="text-zion-slate-light hover:text-white">Login</Link>
-        <Link
-          to="/signup"
-          className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-zion-purple text-white hover:bg-zion-purple-light h-10 px-4 py-2"
+        <Link;
+          to="/signup""
+          className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-zion-purple text-white hover:bg-zion-purple-light h-10 px-4 py-2""
         >
-          Register
+          Register;
         </Link>
       </div>
     );
@@ -56,11 +56,11 @@ export function UserMenu() {
   return (
     <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          className="h-8 w-8 rounded-full"
+        <Button;
+          variant="ghost""
+          className="h-8 w-8 rounded-full""
           onClick={handleIconClick}
-          aria-haspopup="menu"
+          aria-haspopup="menu""
           aria-expanded={open}
         >
           <Avatar className="h-8 w-8">

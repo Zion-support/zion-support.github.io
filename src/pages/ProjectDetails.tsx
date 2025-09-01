@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react"; // Added useCallback
+import { useState, useEffect, useCallback } from "react"; // Added useCallback;
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { format } from "date-fns";
 import { useAuth } from "@/hooks/useAuth";
@@ -8,21 +8,21 @@ import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Project, ProjectStatus } from "@/types/projects";
 import { Button } from "@/components/ui/button";
-import {
+import {}
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
-import {
+import {}
   Tabs,
   TabsContent,
   TabsList,
-  TabsTrigger,
+  TabsTrigger
 } from "@/components/ui/tabs";
-import {
+import {}
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -31,7 +31,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
+  AlertDialogTrigger
 } from "@/components/ui/alert-dialog";
 import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -39,7 +39,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
-import {
+import {}
   AlertCircle,
   Calendar,
   CheckCircle2,
@@ -49,13 +49,13 @@ import {
   MessageSquare,
   Video,
   User,
-  XCircle,
+  XCircle
 } from "lucide-react";
 
-function ProjectDetailsContent() {
+function ProjectDetailsContent(function ProjectDetailsContent() {): any {}
   const { projectId } = useParams() as { projectId?: string };
   const { user } = useAuth();
-  const navigate = useNavigate();
+  const navigate: any = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
   
   const [project, setProject] = useState<Project | null>(null);
@@ -65,10 +65,10 @@ function ProjectDetailsContent() {
   const [isSubmittingNote, setIsSubmittingNote] = useState(false);
   const [activeTab, setActiveTab] = useState("details");
 
-  const fetchProjectNotes = useCallback(async (currentProjectId: string) => { // Renamed projectId to currentProjectId
-    if (!currentProjectId) return; // Ensure projectId is available
-    try {
-      const { data, error } = await supabase
+  const fetchProjectNotes: any = useCallback(async (currentProjectId: string) => { // Renamed projectId to currentProjectId;
+    if (!currentProjectId) return; // Ensure projectId is available;
+    try {}
+      const { data, error } = await supabase;
         .from("project_notes")
         .select(`
           *,
@@ -79,29 +79,28 @@ function ProjectDetailsContent() {
       
       if (error) throw error;
       setNotes(data || []);
-    } catch (err) {
+    } catch (err) {}
       console.error("Error fetching project notes:", err);
     }
-  }, []); // No dependencies needed if supabase client is stable and it only uses projectId argument
-
-  useEffect(() => {
-    async function loadProject() {
-      if (!projectId) {
-        navigate("/dashboard"); // Navigate if projectId is falsy early
+  }, []); // No dependencies needed if supabase client is stable and it only uses projectId argument;
+  useEffect(() => {}
+    async function loadProject(function loadProject() {): any {}
+      if (!projectId) {}
+        navigate("/dashboard"); // Navigate if projectId is falsy early;
         return;
       }
       
       setIsLoading(true);
-      const projectData = await getProjectById(projectId);
+      const projectData: any = await getProjectById(projectId);
       
-      if (projectData) {
+      if (projectData) {}
         setProject(projectData);
         fetchProjectNotes(projectId);
-      } else {
-        toast({
+      } else {}
+        toast({}
           title: "Project not found",
           description: "The requested project could not be found.",
-          variant: "destructive",
+          variant: "destructive"
         });
         navigate("/dashboard");
       }
@@ -109,83 +108,82 @@ function ProjectDetailsContent() {
     }
     
     loadProject();
-  }, [projectId, getProjectById, navigate, fetchProjectNotes]); // Added dependencies
-  
-  const handleSubmitNote = async () => {
+  }, [projectId, getProjectById, navigate, fetchProjectNotes]); // Added dependencies;
+  const handleSubmitNote: any = async () => {}
     if (!newNote.trim() || !project || !user) return;
     
     setIsSubmittingNote(true);
     
-    try {
-      const { data, error } = await supabase
+    try {}
+      const { data, error } = await supabase;
         .from("project_notes")
-        .insert({
+        .insert({}
           project_id: project.id,
           user_id: user.id,
-          content: newNote,
+          content: newNote
         })
         .select();
       
       if (error) throw error;
       
-      if (project.id) { // Ensure project.id is valid before fetching notes
+      if (project.id) { // Ensure project.id is valid before fetching notes;
           fetchProjectNotes(project.id);
       }
       setNewNote("");
       
-      toast({
+      toast({}
         title: "Note added",
-        description: "Your note has been added to the project.",
+        description: "Your note has been added to the project."
       });
-    } catch (err: any) {
+    } catch (err: any) {}
       console.error("Error adding note:", err);
-      toast({
+      toast({}
         title: "Failed to add note",
         description: err.message || "An error occurred while adding your note.",
-        variant: "destructive",
+        variant: "destructive"
       });
-    } finally {
+    } finally {}
       setIsSubmittingNote(false);
     }
   };
   
-  const handleStatusChange = async (newStatus: ProjectStatus) => {
+  const handleStatusChange: any = async (newStatus: ProjectStatus) => {}
     if (!project) return;
     
-    const success = await updateProjectStatus(project.id, newStatus);
+    const success: any = await updateProjectStatus(project.id, newStatus);
     
-    if (success) {
+    if (success) {}
       setProject(prevProject => prevProject ? { ...prevProject, status: newStatus } : null);
       
-      if (newStatus === "offer_accepted") {
-        toast({
+      if (newStatus === "offer_accepted") {}
+        toast({}
           title: "Offer Accepted! 🎉",
-          description: "The project is now in progress. Congratulations!",
+          description: "The project is now in progress. Congratulations!"
         });
       }
     }
   };
   
-  const getStatusBadge = (status: ProjectStatus) => {
-    switch (status) {
-      case "offer_sent":
+  const getStatusBadge: any = (status: ProjectStatus) => {}
+    switch (status) {}
+      case "offer_sent": any;
         return <Badge variant="outline">Offer Sent</Badge>;
-      case "offer_accepted":
+      case "offer_accepted": any;
         return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;
-      case "changes_requested":
+      case "changes_requested": any;
         return <Badge variant="secondary">Changes Requested</Badge>;
-      case "in_progress":
+      case "in_progress": any;
         return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>;
-      case "completed":
+      case "completed": any;
         return <Badge variant="default">Completed</Badge>;
-      case "canceled":
+      case "canceled": any;
         return <Badge variant="destructive">Canceled</Badge>;
-      default:
+      default: any;
         return <Badge variant="outline">{status}</Badge>;
     }
   };
   
-  if (isLoading) {
+  if (isLoading) {}
     return (
       <div className="container mx-auto py-8">
         <div className="flex justify-center items-center h-64">
@@ -198,8 +196,8 @@ function ProjectDetailsContent() {
     );
   }
   
-  if (!project) {
-    // This case should ideally be handled by the useEffect redirecting if projectId is invalid
+  if (!project) {}
+    // This case should ideally be handled by the useEffect redirecting if projectId is invalid;
     // or if getProjectById returns null initially.
     return (
       <div className="container mx-auto py-8">
@@ -211,7 +209,7 @@ function ProjectDetailsContent() {
               The project details could not be loaded. It might not exist or you might not have access.
             </p>
             <Button onClick={() => navigate("/dashboard")}>
-              Return to Dashboard
+              Return to Dashboard;
             </Button>
           </CardContent>
         </Card>
@@ -219,26 +217,26 @@ function ProjectDetailsContent() {
     );
   }
   
-  const isClient = user?.id === project.client_id;
-  const isTalent = user?.id === project.talent_id;
+  const isClient: any = user?.id === project.client_id;
+  const isTalent: any = user?.id === project.talent_id;
   
   // This check should ideally happen after ensuring project is loaded and user is available.
   // If user is also loading, this might redirect prematurely.
   // However, ProtectedRoute should handle cases where user is not authenticated.
-  if (!isLoading && !isClient && !isTalent) { 
+  if (!isLoading && !isClient && !isTalent) {}
     navigate("/unauthorized");
     return null;
   }
   
-  const isOfferPending = project.status === "offer_sent";
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+  const isOfferPending: any = project.status === "offer_sent";
+  const isOfferAccepted: any = ["offer_accepted", "in_progress", "completed"].includes(project.status);
+  const isActiveProject: any = ["offer_accepted", "in_progress"].includes(project.status);
   
   return (
     <>
-      <SEO 
+      <SEO;
         title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
-        description="View and manage your project details and collaboration."
+        description="View and manage your project details and collaboration.""
       />
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
@@ -259,7 +257,7 @@ function ProjectDetailsContent() {
                   <AlertDialog>
                     <AlertDialogTrigger asChild>
                       <Button variant="default">
-                        <CheckCircle2 className="mr-2 h-4 w-4" /> Accept Offer
+                        <CheckCircle2 className="mr-2 h-4 w-4" /> Accept Offer;
                       </Button>
                     </AlertDialogTrigger>
                     <AlertDialogContent>
@@ -273,14 +271,14 @@ function ProjectDetailsContent() {
                       <AlertDialogFooter>
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
                         <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>
-                          Accept Offer
+                          Accept Offer;
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
                   
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
-                    <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
+                    <MessageSquare className="mr-2 h-4 w-4" /> Request Changes;
                   </Button>
                 </>
               )}
@@ -289,7 +287,7 @@ function ProjectDetailsContent() {
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button variant="default">
-                      <CheckCircle2 className="mr-2 h-4 w-4" /> Mark as Completed
+                      <CheckCircle2 className="mr-2 h-4 w-4" /> Mark as Completed;
                     </Button>
                   </AlertDialogTrigger>
                   <AlertDialogContent>
@@ -303,7 +301,7 @@ function ProjectDetailsContent() {
                     <AlertDialogFooter>
                       <AlertDialogCancel>Cancel</AlertDialogCancel>
                       <AlertDialogAction onClick={() => handleStatusChange("completed")}>
-                        Mark as Completed
+                        Mark as Completed;
                       </AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
@@ -313,7 +311,7 @@ function ProjectDetailsContent() {
               {isActiveProject && (
                 <Button variant="default" asChild>
                   <Link to={`/project/${project.id}/milestones`}>
-                    <Layers className="mr-2 h-4 w-4" /> Milestones
+                    <Layers className="mr-2 h-4 w-4" /> Milestones;
                   </Link>
                 </Button>
               )}
@@ -321,17 +319,17 @@ function ProjectDetailsContent() {
               {isActiveProject && (
                 <Button variant="outline" asChild>
                   <Link to={`/project/${project.id}/room`}>
-                    <Video className="mr-2 h-4 w-4" /> Project Room
+                    <Video className="mr-2 h-4 w-4" /> Project Room;
                   </Link>
                 </Button>
               )}
               
               {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
-                <Button 
-                  variant="outline" 
+                <Button;
+                  variant="outline""
                   onClick={() => navigate(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}
                 >
-                  <MessageSquare className="mr-2 h-4 w-4" /> Message
+                  <MessageSquare className="mr-2 h-4 w-4" /> Message;
                 </Button>
               )}
             </div>
@@ -356,7 +354,7 @@ function ProjectDetailsContent() {
                   <CardHeader>
                     <CardTitle>Project Scope</CardTitle>
                     <CardDescription>
-                      Project details and expectations
+                      Project details and expectations;
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -371,7 +369,7 @@ function ProjectDetailsContent() {
                       <div>
                         <h3 className="font-semibold mb-2">Payment Terms</h3>
                         <Badge variant="outline" className="capitalize">
-                          {project.payment_terms} Payment
+                          {project.payment_terms} Payment;
                         </Badge>
                       </div>
                       
@@ -391,7 +389,7 @@ function ProjectDetailsContent() {
                   <CardHeader>
                     <CardTitle>Project Timeline</CardTitle>
                     <CardDescription>
-                      Key dates and milestones
+                      Key dates and milestones;
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -423,7 +421,7 @@ function ProjectDetailsContent() {
                   <CardHeader>
                     <CardTitle>Project Documents</CardTitle>
                     <CardDescription>
-                      Agreements and relevant files
+                      Agreements and relevant files;
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -434,13 +432,13 @@ function ProjectDetailsContent() {
                           <div>
                             <h3 className="font-semibold">Project Agreement</h3>
                             <p className="text-sm text-muted-foreground">
-                              Uploaded when project was created
+                              Uploaded when project was created;
                             </p>
                           </div>
                         </div>
                         <Button variant="outline" size="sm" asChild>
                           <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">
-                            View
+                            View;
                           </a>
                         </Button>
                       </div>
@@ -462,7 +460,7 @@ function ProjectDetailsContent() {
                   <CardHeader>
                     <CardTitle>Project Notes</CardTitle>
                     <CardDescription>
-                      Shared notes and updates
+                      Shared notes and updates;
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -474,7 +472,7 @@ function ProjectDetailsContent() {
                               <div className="flex items-center gap-2 mb-2">
                                 <Avatar className="h-6 w-6">
                                   {note.created_by_profile?.avatar_url ? (
-                                    <img
+                                    <img;
                                       src={note.created_by_profile.avatar_url}
                                       alt={note.created_by_profile.display_name}
                                     />
@@ -504,13 +502,13 @@ function ProjectDetailsContent() {
                       
                       {isOfferAccepted && (
                         <div>
-                          <Textarea
-                            placeholder="Add a note or update to the project..."
+                          <Textarea;
+                            placeholder="Add a note or update to the project...""
                             value={newNote}
                             onChange={(e) => setNewNote(e.target.value)}
-                            className="min-h-[100px] mb-2"
+                            className="min-h-[100px] mb-2""
                           />
-                          <Button
+                          <Button;
                             onClick={handleSubmitNote}
                             disabled={!newNote.trim() || isSubmittingNote}
                           >
@@ -539,7 +537,7 @@ function ProjectDetailsContent() {
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
                       {project.talent_profile?.profile_picture_url ? (
-                        <img
+                        <img;
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
                         />
@@ -555,13 +553,13 @@ function ProjectDetailsContent() {
                         {project.talent_profile?.professional_title || "Professional"}
                       </p>
                       {isClient && (
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="mt-2"
+                        <Button;
+                          variant="outline""
+                          size="sm""
+                          className="mt-2""
                           onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
                         >
-                          <MessageSquare className="mr-1 h-3 w-3" /> Message
+                          <MessageSquare className="mr-1 h-3 w-3" /> Message;
                         </Button>
                       )}
                     </div>
@@ -570,7 +568,7 @@ function ProjectDetailsContent() {
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
                       {project.client_profile?.avatar_url ? (
-                        <img
+                        <img;
                           src={project.client_profile.avatar_url}
                           alt={project.client_profile.display_name}
                         />
@@ -584,13 +582,13 @@ function ProjectDetailsContent() {
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
                       {isTalent && (
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="mt-2"
+                        <Button;
+                          variant="outline""
+                          size="sm""
+                          className="mt-2""
                           onClick={() => navigate(`/messages?clientId=${project.client_id}`)}
                         >
-                          <MessageSquare className="mr-1 h-3 w-3" /> Message
+                          <MessageSquare className="mr-1 h-3 w-3" /> Message;
                         </Button>
                       )}
                     </div>
@@ -631,12 +629,12 @@ function ProjectDetailsContent() {
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
-                  <Button 
-                    variant="outline"
+                  <Button;
+                    variant="outline""
                     onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
-                    className="w-full"
+                    className="w-full""
                   >
-                    <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
+                    <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes;
                   </Button>
                 </CardFooter>
               )}
@@ -673,7 +671,7 @@ function ProjectDetailsContent() {
   );
 }
 
-export default function ProjectDetails() {
+export default function ProjectDetails(function ProjectDetails() {): any {}
   return (
     <ProtectedRoute>
       <ProjectDetailsContent />

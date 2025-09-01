@@ -1,24 +1,24 @@
 export default mimeTypeFallback;
 
 
-interface MimeTypeMapping {
+interface MimeTypeMapping {}
   [key: string]: string}
 
-class MimeTypeFallback {
-  private mimeTypes: MimeTypeMapping = {
-    '.js': 'application / javascript',.mjs': 'application / javascript',.css': 'text / css',.html': 'text / html',.htm': 'text / html',.xml': 'application / xml',.json': 'application / json',.svg': 'image / svg + xml',.ico': 'image / x-icon',.png': 'image / png',.jpg': 'image / jpeg',.jpeg': 'image / jpeg',.gif': 'image / gif',.webp': 'image / webp',.bmp': 'image / bmp',.tiff': 'image / tiff',.woff': 'font / woff',.woff2': 'font / woff2',.ttf': 'font / ttf',.otf': 'font / otf',.eot': 'application / vnd.ms - fontobject',.pdf': 'application / pdf',.zip': 'application / zip',.tar': 'application / x-tar',.gz': 'application / gzip',.mp4': 'video / mp4',.webm': 'video / webm',.ogg': 'video / ogg',.mp3': 'audio / mpeg',.wav': 'audio / wav',.flac': 'audio / flac',
+class MimeTypeFallback {}
+  private mimeTypes: MimeTypeMapping = {}
+    '.js': 'application / javascript',.mjs': 'application / javascript',.css': 'text / css',.html': 'text / html',.htm': 'text / html',.xml': 'application / xml',.json': 'application / json',.svg': 'image / svg + xml',.ico': 'image / x-icon',.png': 'image / png',.jpg': 'image / jpeg',.jpeg': 'image / jpeg',.gif': 'image / gif',.webp': 'image / webp',.bmp': 'image / bmp',.tiff': 'image / tiff',.woff': 'font / woff',.woff2': 'font / woff2',.ttf': 'font / ttf',.otf': 'font / otf',.eot': 'application / vnd.ms - fontobject',.pdf': 'application / pdf',.zip': 'application / zip',.tar': 'application / x-tar',.gz': 'application / gzip',.mp4': 'video / mp4',.webm': 'video / webm',.ogg': 'video / ogg',.mp3': 'audio / mpeg',.wav': 'audio / wav',.flac': 'audio / flac'
   };
 
   private fallbackUrls: Map < string, string> = new Map () ;
-  private cdnFallbacks = [
-    'https://cdn.jsdelivr.net',https://unpkg.com',https://cdnjs.cloudflare.com',
+  private cdnFallbacks = []
+    'https://cdn.jsdelivr.net',https://unpkg.com',https://cdnjs.cloudflare.com'
   ];
 
-  constructor () {
+  constructor () {}
     this.setupFallbackUrls () }
 
-  private setupFallbackUrls () {
-    // Map problematic URLs to CDN fallbacks
+  private setupFallbackUrls () {}
+    // Map problematic URLs to CDN fallbacks;
     this.fallbackUrls.set ('/js / index - C64WnLOI.js',https://cdn.jsdelivr.net / gh / ziontechgroup / zion - website@main / dist / js / index - C64WnLOI.js') ;
     this.fallbackUrls.set ('/css / index - RK9lga5l.css',https://cdn.jsdelivr.net / gh / ziontechgroup / zion - website@main / dist / css / index - RK9lga5l.css') ;
     this.fallbackUrls.set ('/js / react - vendor - ClxMxoJB.js',https://cdn.jsdelivr.net / gh / ziontechgroup / zion - website@main / dist / js / react - vendor - ClxMxoJB.js') ;
@@ -26,118 +26,103 @@ class MimeTypeFallback {
     this.fallbackUrls.set ('/js / ui - vendor - B31yGDq-.js',https://cdn.jsdelivr.net / gh / ziontechgroup / zion - website@main / dist / js / ui - vendor - B31yGDq-.js') ;
     this.fallbackUrls.set ('/js / utils - vendor - CrFdsnXa.js',https://cdn.jsdelivr.net / gh / ziontechgroup / zion - website@main / dist / js / utils - vendor - CrFdsnXa.js') }
 
-  getMimeType (filename: string) : string {
-    
+  getMimeType (filename: string) : string {}
     return this.mimeTypes[ext] || 'application / octet - stream'}
 
-  private getFileExtension (filename: string) : string {
-    
+  private getFileExtension (filename: string) : string {}
     if (lastDot === -1) return '';
     return filename.substring (lastDot) .toLowerCase () }
 
-  async checkAndFixMimeType (url: string: any): Promise < any> {
-    try {
-      
-      if (!response.ok) {
+  async checkAndFixMimeType (url: string: any): Promise < any> {}
+    try {}
+      if (!response.ok) {}
         console.warn (`Resource not found: ${url}`) ;
         return false}
 
       
-      if (!contentType) {
+      if (!contentType) {}
         console.warn (`No content - type header for: ${url}`) ;
         return false}
 
       
       if (contentType.includes (expectedType) ||
-        contentType.includes ('application / octet - stream') ) {
-        return true; // MIME type is correct or generic
+        contentType.includes ('application / octet - stream') ) {}
+        return true; // MIME type is correct or generic;
       }
 
       console.warn (`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`) ;
 
-      // Try to fix with fallback URL
-      return await this.tryFallbackUrl (url) } catch (error) {
+      // Try to fix with fallback URL;
+      return await this.tryFallbackUrl (url) } catch (error) {}
       console.error (`Error checking MIME type for ${url}:`, error) ;
       return await this.tryFallbackUrl (url) }
   }
 
-  private async tryFallbackUrl (originalUrl: string: any): Promise < any> {
-    
-    if (fallbackUrl) {
+  private async tryFallbackUrl (originalUrl: string: any): Promise < any> {}
+    if (fallbackUrl) {}
       console.log (`Trying fallback URL: ${fallbackUrl}`) ;
 
-      try {
-        
-        if (response.ok) {
-          
-          
-          if (contentType && contentType.includes (expectedType) ) {
+      try {}
+        if (response.ok) {}
+          if (contentType && contentType.includes (expectedType) ) {}
             console.log (`Fallback URL has correct MIME type: ${fallbackUrl}`) ;
             this.replaceResource (originalUrl, fallbackUrl) ;
             return true}
         }
-      } catch (error) {
+      } catch (error) {}
         console.error (`Fallback URL failed: ${fallbackUrl}`, error) }
     }
 
     return false}
 
-  private replaceResource (originalUrl: string, fallbackUrl: string) {
-    // Replace script tags
-    
+  private replaceResource (originalUrl: string, fallbackUrl: string) {}
+    // Replace script tags;
     scripts.forEach (script => { (script as HTMLScriptElement) .src = fallbackUrl;
       console.log (`Replaced script source: ${originalUrl} -> ${fallbackUrl}`) }) ;
 
-    // Replace stylesheet links
-    
+    // Replace stylesheet links;
     links.forEach (link => { (link as HTMLLinkElement) .href = fallbackUrl;
       console.log (`Replaced stylesheet href: ${originalUrl} -> ${fallbackUrl}`) }) }
 
-  async preloadCriticalResources () : Promise < any> {
-    
+  async preloadCriticalResources () : Promise < any> {}
     console.log ('🔍 Preloading critical resources...') ;
 
-    for (const resource of criticalResources) {
-      try {
-        
-        if (!isValid) {
+    for (const resource of criticalResources) {}
+      try {}
+        if (!isValid) {}
           console.warn (`Critical resource has MIME type issues: ${resource}`) }
-      } catch (error) {
+      } catch (error) {}
         console.error (`Error preloading resource: ${resource}`, error) }
     }
   }
 
   createResourceElement (url: string,
-    type: 'script' | 'stylesheet') : HTMLElement {
-    if (type === 'script') {
-      
+    type: 'script' | 'stylesheet') : HTMLElement {}
+    if (type === 'script') {}
       script.src = url;
       script.async = true;
       script.type = 'text / javascript';
-      return script} else {
-      
+      return script} else {}
       link.rel = 'stylesheet';
       link.href = url;
       link.type = 'text / css';
       return link}
   }
 
-  injectResource (url: anystring, type: 'script' | 'stylesheet': any): Promise < any> {
-    return new Promise ( (resolve, reject) => {
-      
-      element.onload = () => {
+  injectResource (url: anystring, type: 'script' | 'stylesheet': any): Promise < any> {}
+    return new Promise ( (resolve, reject) => {}
+      element.onload = () => {}
         console.log (`✅ Resource loaded successfully: ${url}`) ;
         resolve () };
 
-      element.onerror = () => {
+      element.onerror = () => {}
         console.error (`❌ Failed to load resource: ${url}`) ;
         reject (new Error (`Failed to load resource: ${url}`) ) };
 
-      if (type === 'script') {
-        document.head.appendChild (element) } else {
+      if (type === 'script') {}
+        document.head.appendChild (element) } else {}
         document.head.appendChild (element) }
     }) }
 }
 
-// Create singleton instance
-
+// Create singleton instance;

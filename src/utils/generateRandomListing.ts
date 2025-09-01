@@ -1,13 +1,10 @@
-
-
-  'Quantum Computing Hardware',;
+'Quantum Computing Hardware',;
   'Data Science Consulting',;
   'Blockchain Development Service',;
   'Machine Learning Platform',;
   'DevOps Automation Tool',;
   'Network Security Solution';
 ];
-
 
   'State-of-the-art quantum computing components for research and development.',;
   'Expert data science consulting services for machine learning and analytics projects.',;
@@ -17,7 +14,6 @@
   'Network security solution with advanced threat detection and prevention.';
 ];
 
-
   ['Quantum',Research',Hardware'],;
   ['Data Science',Machine Learning',Consulting'],;
   ['Blockchain',Development',DApps'],;
@@ -26,36 +22,23 @@
   ['Network',Security',Threat Detection'];
 ];
 
-<<<<<<< HEAD
-
   'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',;
   'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
   'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
   'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
   'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
   'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
-=======
-const sampleImages = [;'
-  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',;'
-  'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;'
-  'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;'
-  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;'
-  'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;'  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
 const categories: Array<any> = ['
   'products',talent',equipment',services'
 ];
 
-
   '$500',$1,200',$2,500',$5,000',$8,500',$15,000',$25,000',$50,000';
 ];
 
-
   'San Francisco, CA',New York, NY',Austin, TX',Seattle, WA',Boston, MA',Remote';
 ];
-
 
   'QuantumTech Labs',;
   'CloudMasters Inc',;
@@ -63,26 +46,10 @@ const categories: Array<any> = ['
   'DataGenius Consulting',;
   'Innovation Labs',;
   'FutureTech Systems';
-=======
-  'TechCorp Solutions','
-  'SecureNet Professionals',;'
-  'QuantumTech Labs',;'
-  'CloudMasters Inc',;'
-  'IoT Solutions Pro',;'
-  'DataGenius Consulting',;'
-  'Innovation Labs',;'  'FutureTech Systems';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
-export function generateRandomListing(): MarketplaceItem {
-
-  
-  
-  
-  
-  
-  return {
-
+export function generateRandomListing(): MarketplaceItem {}
+  return {}
     id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
     title: sampleTitles[randomIndex] || 'Default Title',
     category: category || 'products',
@@ -95,8 +62,7 @@ export function generateRandomListing(): MarketplaceItem {
     image: image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
     tags: sampleTags[randomIndex] || ['Technology',Solution'],
     featured: Math.random() > 0.7,
-    seller: {
-
+    seller: {}
       name: sellerName || 'Default Seller',
       rating: 4.0 + Math.random() * 1.0,;
       verified: Math.random() > 0.3},;
@@ -104,11 +70,9 @@ export function generateRandomListing(): MarketplaceItem {
     availability: Math.random() > 0.8 ? 'limited' : 'available',;'`
     deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,;'`
     warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`};
-export function generateRandomListings(count: number): MarketplaceItem[] {
-
+export function generateRandomListings(count: number): MarketplaceItem[] {}
   const listings: MarketplaceItem[] = [];
-  for (let i = 0; i < count; i++) {
-
+  for (let i = 0; i < count; i++) {}
     listings.push(generateRandomListing());
 
   return listings}}}'`

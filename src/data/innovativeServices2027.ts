@@ -1,4 +1,4 @@
-export interface InnovativeService2027 {
+export interface InnovativeService2027 {}
   id: string;
   name: string;
   category: string;
@@ -16,9 +16,8 @@ export interface InnovativeService2027 {
   launchDate: string;
   status: 'active' | 'beta' | 'coming-soon'
 };
-export const innovativeServices2027: InnovativeService2027[] = [
-  {
-
+export const innovativeServices2027: InnovativeService2027[] = []
+  {}
     id: 'quantum-ai-platform',
     name: 'Quantum AI Platform',
     category: 'Quantum AI',
@@ -40,8 +39,7 @@ export const innovativeServices2027: InnovativeService2027[] = [
     launchDate: '2027-01-15',
     status: 'active'
   },
-  {
-
+  {}
     id: 'autonomous-ai-system',
     name: 'Autonomous AI System',
     category: 'Autonomous AI',
@@ -63,8 +61,7 @@ export const innovativeServices2027: InnovativeService2027[] = [
     launchDate: '2027-02-01',
     status: 'active'
   },
-  {
-
+  {}
     id: 'quantum-finance-platform',
     name: 'Quantum Finance Platform',
     category: 'Quantum Finance',
@@ -87,7 +84,7 @@ export const innovativeServices2027: InnovativeService2027[] = [
     status: 'active'
 
 ];
-export 
+export;
   'Quantum Space',;
   'Biotechnology',;
   'Quantum Medicine',;
@@ -95,7 +92,7 @@ export
   'Nanotechnology',;
   'Neural Technology';
 ];
-export 
+export;
   if (category === 'All') {;
     return innovativeServices2027;
 

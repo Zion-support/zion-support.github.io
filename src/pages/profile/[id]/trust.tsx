@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom'; // Changed import
+import { useParams } from 'react-router-dom'; // Changed import;
 import Link from 'next/link';
-import TrustScoreBadge from '../../../components/TrustScoreBadge'; // Adjust path as needed
-
-// Define interfaces for the data structures based on your API and Prisma schema
-interface TrustScoreComponent {
+import TrustScoreBadge from '../../../components/TrustScoreBadge'; // Adjust path as needed;
+// Define interfaces for the data structures based on your API and Prisma schema;
+interface TrustScoreComponent {}
   id: number;
   componentType: string;
   value: number;
   weight: number;
-  details?: any; // JSON field
+  details?: any; // JSON field;
   createdAt: string;
 }
 
-interface TrustScoreData {
+interface TrustScoreData {}
   id: number;
   score: number;
   userId: number;
@@ -23,7 +22,7 @@ interface TrustScoreData {
   updatedAt: string;
 }
 
-interface TrustScoreHistoryEntry {
+interface TrustScoreHistoryEntry {}
   id: number;
   userId: number;
   trustScoreId?: number | null;
@@ -31,53 +30,52 @@ interface TrustScoreHistoryEntry {
   operatorGptAnalysis?: string | null;
   changedAt: string;
   reasonForChange?: string | null;
-  componentValues?: any; // JSON field
+  componentValues?: any; // JSON field;
 }
 
-const UserProfileTrustPage: React.FC = () => {
-  const { id: userId } = useParams<{ id: string }>(); // Changed to useParams, assuming route is /profile/:id/trust
-
+const UserProfileTrustPage: React.FC = () => {}
+  const { id: userId } = useParams<{ id: string }>(); // Changed to useParams, assuming route is /profile/:id/trust;
   const [trustScoreData, setTrustScoreData] = useState<TrustScoreData | null>(null);
   const [history, setHistory] = useState<TrustScoreHistoryEntry[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [showCalculationDetails, setShowCalculationDetails] = useState<boolean>(false);
 
-  useEffect(() => {
-    if (!userId) { // userId from useParams is already a string or undefined
+  useEffect(() => {}
+    if (!userId) { // userId from useParams is already a string or undefined;
       setLoading(false);
       setError("User ID not found in URL.");
       return;
     }
 
-    const fetchData = async () => {
+    const fetchData: any = async () => {}
       setLoading(true);
       setError(null);
-      try {
-        // Fetch Trust Score
-        const scoreRes = await fetch(`/api/trust/score/${userId}`);
-        if (!scoreRes.ok) {
-          const scoreErrorData = await scoreRes.json();
+      try {}
+        // Fetch Trust Score;
+        const scoreRes: any = await fetch(`/api/trust/score/${userId}`);
+        if (!scoreRes.ok) {}
+          const scoreErrorData: any = await scoreRes.json();
           throw new Error(scoreErrorData.error || `Failed to fetch trust score: ${scoreRes.status}`);
         }
         const scoreData: TrustScoreData = await scoreRes.json();
         setTrustScoreData(scoreData);
 
-        // Fetch Trust History
-        const historyRes = await fetch(`/api/trust/history/${userId}`);
-        if (!historyRes.ok) {
-          const historyErrorData = await historyRes.json();
+        // Fetch Trust History;
+        const historyRes: any = await fetch(`/api/trust/history/${userId}`);
+        if (!historyRes.ok) {}
+          const historyErrorData: any = await historyRes.json();
           throw new Error(historyErrorData.error || `Failed to fetch trust history: ${historyRes.status}`);
         }
         const historyData: TrustScoreHistoryEntry[] = await historyRes.json();
         setHistory(historyData);
 
-      } catch (err: any) {
+      } catch (err: any) {}
         console.error("Error fetching trust data:", err);
         setError(err.message || "An unexpected error occurred.");
-        setTrustScoreData(null); // Clear data on error
+        setTrustScoreData(null); // Clear data on error;
         setHistory([]);
-      } finally {
+      } finally {}
         setLoading(false);
       }
     };
@@ -85,14 +83,14 @@ const UserProfileTrustPage: React.FC = () => {
     fetchData();
   }, [userId]);
 
-  const getRiskStatus = (score: number | undefined | null): string => {
+  const getRiskStatus: any = (score: number | undefined | null): string => {}
     if (score === null || score === undefined) return 'Status Unknown';
     if (score > 85) return 'High Trust';
     if (score > 70) return 'Moderate Trust';
     return 'Risk Alert';
   };
 
-  const riskStatusColor = (score: number | undefined | null): string => {
+  const riskStatusColor: any = (score: number | undefined | null): string => {}
     if (score === null || score === undefined) return 'text-gray-500';
     if (score > 85) return 'text-green-700';
     if (score > 70) return 'text-yellow-700';
@@ -113,7 +111,7 @@ const UserProfileTrustPage: React.FC = () => {
       {trustScoreData && trustScoreData.score < 70 && (
         <div className="my-4 p-4 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 rounded-md">
           <p className="font-semibold">Your Trust Score is {trustScoreData.score}.</p>
-          <p>If you believe there might be an error or wish to provide context for a recent drop, you can
+          <p>If you believe there might be an error or wish to provide context for a recent drop, you can;
             <Link href="/trust-appeal" legacyBehavior>
               <a className="text-yellow-800 hover:text-yellow-900 underline font-medium ml-1">submit an appeal</a>
             </Link>.
@@ -149,11 +147,11 @@ const UserProfileTrustPage: React.FC = () => {
         </div>
 
         <div>
-          <button
+          <button;
             onClick={() => setShowCalculationDetails(!showCalculationDetails)}
-            className="mb-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="mb-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400""
           >
-            {showCalculationDetails ? 'Hide' : 'Show'} Calculation Details
+            {showCalculationDetails ? 'Hide' : 'Show'} Calculation Details;
           </button>
           {showCalculationDetails && (
             <div className="p-4 border rounded-md bg-gray-50">
@@ -219,7 +217,7 @@ const UserProfileTrustPage: React.FC = () => {
       </section>
 
       <footer className="text-center text-sm text-gray-500 mt-8">
-        Zion Trust System v1.0
+        Zion Trust System v1.0;
       </footer>
     </div>
   );

@@ -1,5 +1,5 @@
 
-export 
+export;
 };
 
 export default AIServicesShowcase;

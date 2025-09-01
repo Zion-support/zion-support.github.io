@@ -1,5 +1,4 @@
-interface ButtonProps extends React.PropsWithChildren<{}> {
-
+interface ButtonProps extends React.PropsWithChildren<{}> {}
   children: React.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link';
   size?: 'sm' | 'md' | 'lg' | 'icon';
@@ -8,8 +7,7 @@ interface ButtonProps extends React.PropsWithChildren<{}> {
   onClick?: ()  => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean}
-export function Button({
-
+export function Button(function Button({}
   children,
   variant = 'default',
   size = 'md',
@@ -17,17 +15,14 @@ export function Button({
   className = '',
   onClick,
   type = 'button',
-  disabled = false}: ButtonProps) {
-
-  
-  
+  disabled = false}: ButtonProps) {): any {}
   ;
 =======
 '
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan','
     outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan','
     ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954;
   ;
   ;
   ;
@@ -40,17 +35,16 @@ export function Button({
   sm: 'px-3 py-1.5 text-sm','
     md: 'px-4 py-2 text-sm','
     lg: 'px-6 py-3 text-base',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954;
   ;
   ;
   ;
   icon: 'w-10 h-10 p-0'};
   
-  if (asChild) {
-
+  if (asChild) {}
     return <span className = {classes}>{children}</span>}
   return()
-    <button
+    <button;
       type = {type}
       className={classes}
       onClick={onClick};
@@ -60,14 +54,14 @@ export function Button({
     </button>;
   )}
 // Export button variants for use in other components;
-export 
+export;
   ;
 =======
 '
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan','
   outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan','
   ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954;
   ;
   ;
   ;

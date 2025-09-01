@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-import {
-
+import {}
   Brain,
   Zap,
   Lock,
@@ -27,33 +25,24 @@ import {
   ChevronUp'
 } from 'lucide-react';
 
-export default function InnovativeServices2028(...args[]):  {
-
+export default function InnovativeServices2028(...args[]):  {}
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('name');
   const [expandedService, setExpandedService] = useState<any>(null);
 
-  
-    
       service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
       service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch}) ;
 
-  
     switch (sortBy) {;
-      case 'price':;
+      case 'price': any;
         return a.price - b.price;
-      case 'roi':;
+      case 'roi': any;
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
-=======
-        return a.price - b.price;'
-      case 'roi':;'
-        return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      case 'name':;
+      case 'name': any;
         return a.name.localeCompare (b.name) ;
-      default:;
+      default: any;
         return 0}
   }) ;
 
@@ -62,4 +51,4 @@ export default function InnovativeServices2028(...args[]):  {
         </div>;
       </section>;
     </div>;) }
-'"
+'""

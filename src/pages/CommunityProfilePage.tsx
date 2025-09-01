@@ -1,60 +1,59 @@
 
 import { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom"; // Added useNavigate
+import { useParams, Link, useNavigate } from "react-router-dom"; // Added useNavigate;
 import { SEO } from "@/components/SEO";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Textarea } from "@/components/ui/textarea"; // For comment input
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogClose } from "@/components/ui/dialog"; // Basic modal for review
+import { Textarea } from "@/components/ui/textarea"; // For comment input;
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogClose } from "@/components/ui/dialog"; // Basic modal for review;
 import { formatDistanceToNow } from "date-fns";
 import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community";
-import PostCard from "@/components/community/PostCard";
-import UserBadges from "@/components/community/UserBadges";
-import ReputationDisplay from "@/components/community/ReputationDisplay";
-import CommunityVerifiedBadge from "@/components/CommunityVerifiedBadge"; // Import the new badge
-
-// Mock user data
-const mockUser: CommunityUser = {
-  id: "user1", // This will be the revieweeId
+import PostCard from '@/components/community/PostCard';
+import UserBadges from '@/components/community/UserBadges';
+import ReputationDisplay from '@/components/community/ReputationDisplay';
+import CommunityVerifiedBadge from '@/components/CommunityVerifiedBadge'; // Import the new badge;
+// Mock user data;
+const mockUser: CommunityUser = {}
+  id: "user1", // This will be the revieweeId;
   name: "Alex Johnson",
   avatar: "https://i.pravatar.cc/150?img=3",
   role: "Verified Talent",
   reputation: 325,
   postCount: 14,
   replyCount: 47,
-  badges: [
-    {
+  badges: []
+    {}
       id: "badge1",
       name: "Answer Hero",
       description: "Provided 10 accepted answers",
       icon: "Award",
-      color: "#10B981"
+      color: "#10B981""
     },
-    {
+    {}
       id: "badge2",
       name: "Top Contributor",
       description: "Among the top 5% of contributors",
       icon: "Trophy",
-      color: "#3b82f6"
+      color: "#3b82f6""
     },
-    {
+    {}
       id: "badge3",
       name: "First Post",
       description: "Created your first forum post",
       icon: "Star",
-      color: "#6366F1"
+      color: "#6366F1""
     }
   ],
   isVerified: true,
-  isModerator: false
+  isModerator: false;
 };
 
-// Mock posts by this user
-const userPosts: ForumPost[] = [
-  {
+// Mock posts by this user;
+const userPosts: ForumPost[] = []
+  {}
     id: "1",
     title: "Best practices for AI model fine-tuning",
     content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
@@ -70,9 +69,9 @@ const userPosts: ForumPost[] = [
     downvotes: 2,
     replyCount: 12,
     isAnswered: true,
-    isFeatured: true
+    isFeatured: true;
   },
-  {
+  {}
     id: "11",
     title: "How to structure an AI prompt for best results",
     content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...",
@@ -86,9 +85,9 @@ const userPosts: ForumPost[] = [
     updatedAt: "2025-03-20T14:25:00Z",
     upvotes: 36,
     downvotes: 1,
-    replyCount: 8
+    replyCount: 8;
   },
-  {
+  {}
     id: "12",
     title: "Setting up effective monitoring for AI systems",
     content: "Here's my approach to monitoring AI systems in production environments...",
@@ -102,19 +101,18 @@ const userPosts: ForumPost[] = [
     updatedAt: "2025-03-12T09:30:00Z",
     upvotes: 24,
     downvotes: 0,
-    replyCount: 6
+    replyCount: 6;
   }
 ];
 
-export default function CommunityProfilePage() {
-  const { userId } = useParams<{ userId: string }>(); // revieweeId from URL
-  const navigate = useNavigate(); // For potential redirects or navigation after actions
-
+export default function CommunityProfilePage(function CommunityProfilePage() {): any {}
+  const { userId } = useParams<{ userId: string }>(); // revieweeId from URL;
+  const navigate: any = useNavigate(); // For potential redirects or navigation after actions;
   const [user, setUser] = useState<CommunityUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState<ForumPost[]>([]);
 
-  // State for Peer Review Modal
+  // State for Peer Review Modal;
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
   const [reviewType, setReviewType] = useState<'endorsement' | 'flag' | null>(null);
   const [reviewComment, setReviewComment] = useState('');
@@ -122,24 +120,23 @@ export default function CommunityProfilePage() {
   const [reviewMessage, setReviewMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   
   // Mock logged-in user ID (reviewerId)
-  // In a real app, this would come from an auth context or similar
-  const MOCK_LOGGED_IN_USER_ID = "loggedUser123";
-  // Mock endorsement count for the profile user for CommunityVerifiedBadge
-  const [mockEndorsementCount, setMockEndorsementCount] = useState(5); // Initial mock count
-
-  useEffect(() => {
+  // In a real app, this would come from an auth context or similar;
+  const MOCK_LOGGED_IN_USER_ID: any = "loggedUser123";
+  // Mock endorsement count for the profile user for CommunityVerifiedBadge;
+  const [mockEndorsementCount, setMockEndorsementCount] = useState(5); // Initial mock count;
+  useEffect(() => {}
     // In a real app, we would fetch the user data here based on `userId`
     // and potentially their endorsement count.
-    const profileUser = { ...mockUser, id: userId || mockUser.id }; // Use userId from URL if available
+    const profileUser: any = { ...mockUser, id: userId || mockUser.id }; // Use userId from URL if available;
     setUser(profileUser);
-    setPosts(userPosts.filter(p => p.authorId === profileUser.id)); // Filter posts for current profile
-    // In a real app, fetch actual endorsement count here
-    // For now, we use MOCK_USER_ENDORSEMENT_COUNT which could be updated by successful endorsement
+    setPosts(userPosts.filter(p => p.authorId === profileUser.id)); // Filter posts for current profile;
+    // In a real app, fetch actual endorsement count here;
+    // For now, we use MOCK_USER_ENDORSEMENT_COUNT which could be updated by successful endorsement;
     setIsLoading(false);
   }, [userId]);
 
-  const openReviewModal = (type: 'endorsement' | 'flag') => {
-    if (MOCK_LOGGED_IN_USER_ID === userId) {
+  const openReviewModal: any = (type: 'endorsement' | 'flag') => {}
+    if (MOCK_LOGGED_IN_USER_ID === userId) {}
       setReviewMessage({ type: 'error', text: "You cannot review your own profile." });
       setTimeout(() => setReviewMessage(null), 3000);
       return;
@@ -150,9 +147,9 @@ export default function CommunityProfilePage() {
     setReviewMessage(null);
   };
 
-  const handleSubmitReview = async () => {
+  const handleSubmitReview: any = async () => {}
     if (!reviewType || !userId) return;
-    if (MOCK_LOGGED_IN_USER_ID === userId) {
+    if (MOCK_LOGGED_IN_USER_ID === userId) {}
       setReviewMessage({ type: 'error', text: "You cannot review your own profile." });
       return;
     }
@@ -160,38 +157,38 @@ export default function CommunityProfilePage() {
     setReviewSubmitting(true);
     setReviewMessage(null);
 
-    try {
-      const response = await fetch('/api/trust/peer-review', {
+    try {}
+      const response: any = await fetch('/api/trust/peer-review', {}
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          reviewerId: MOCK_LOGGED_IN_USER_ID, // Mocked logged-in user
-          revieweeId: userId, // User being viewed
+        body: JSON.stringify({}
+          reviewerId: MOCK_LOGGED_IN_USER_ID, // Mocked logged-in user;
+          revieweeId: userId, // User being viewed;
           reviewType: reviewType,
-          comment: reviewComment,
-        }),
+          comment: reviewComment
+        })
       });
 
-      const data = await response.json();
+      const data: any = await response.json();
 
-      if (!response.ok) {
+      if (!response.ok) {}
         throw new Error(data.error || `Failed to submit ${reviewType}.`);
       }
       setReviewMessage({ type: 'success', text: `${reviewType.charAt(0).toUpperCase() + reviewType.slice(1)} submitted successfully!` });
-      if (reviewType === 'endorsement') {
-        setMockEndorsementCount(prev => prev + 1); // Optimistically update mock count
+      if (reviewType === 'endorsement') {}
+        setMockEndorsementCount(prev => prev + 1); // Optimistically update mock count;
       }
       setIsReviewModalOpen(false); // Correct usage: No type argument here. If it were `setIsReviewModalOpen<boolean>(false)`, it would cause TS2347.
-    } catch (error: any) {
+    } catch (error: any) {}
       setReviewMessage({ type: 'error', text: error.message || `An error occurred during ${reviewType}.` });
-    } finally {
+    } finally {}
       setReviewSubmitting(false);
-      // Optionally clear message after a few seconds
+      // Optionally clear message after a few seconds;
       setTimeout(() => setReviewMessage(null), 5000);
     }
   };
   
-  if (isLoading) {
+  if (isLoading) {}
     return (
       <div className="container py-8">
         <div className="flex justify-center items-center h-64">
@@ -201,7 +198,7 @@ export default function CommunityProfilePage() {
     );
   }
   
-  if (!user) {
+  if (!user) {}
     return (
       <div className="container py-8">
         <h1>User not found</h1>
@@ -214,7 +211,7 @@ export default function CommunityProfilePage() {
 
   return (
     <>
-    <SEO
+    <SEO;
       title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
       description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
       keywords={`community, forum, profile, user profile, ${user.name}`}
@@ -223,7 +220,7 @@ export default function CommunityProfilePage() {
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
-            Forum
+            Forum;
           </Link>
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">Profile</span>
@@ -266,17 +263,17 @@ export default function CommunityProfilePage() {
               
               <CardContent className="space-y-6">
                  {/* Peer Review Buttons */}
-                 {MOCK_LOGGED_IN_USER_ID !== userId && ( // Don't show buttons on own profile
+                 {MOCK_LOGGED_IN_USER_ID !== userId && ( // Don't show buttons on own profile;
                   <div className="flex flex-col space-y-2 mt-4 border-t pt-4">
                     <Button onClick={() => openReviewModal('endorsement')} variant="outline" size="sm" className="bg-green-50 hover:bg-green-100 text-green-700 border-green-300">
-                      Endorse User
+                      Endorse User;
                     </Button>
                     <Button onClick={() => openReviewModal('flag')} variant="outline" size="sm" className="bg-red-50 hover:bg-red-100 text-red-700 border-red-300">
-                      Flag User
+                      Flag User;
                     </Button>
                   </div>
                 )}
-                {reviewMessage && !isReviewModalOpen && ( // Show global messages if modal is closed
+                {reviewMessage && !isReviewModalOpen && ( // Show global messages if modal is closed;
                   <div className={`p-2 rounded text-sm mt-2 ${reviewMessage.type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
                     {reviewMessage.text}
                   </div>

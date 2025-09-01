@@ -1,5 +1,4 @@
-export interface PricingTier {
-
+export interface PricingTier {}
   id: string;
   name: string;
   price: number;
@@ -9,8 +8,7 @@ export interface PricingTier {
   bestFor: string;
   popular?: boolean}
 ;
-export interface ServicePricing {
-
+export interface ServicePricing {}
   id: string;
   title: string;
   description: string;
@@ -20,658 +18,654 @@ export interface ServicePricing {
   roi: string;
   estimatedDelivery: string;
   supportLevel: string;
-  contactInfo: {
-
+  contactInfo: {}
     mobile: string;
     email: string;
     address: string;
     website: string;
     address: string}};
-;export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
-  {
-
-    id: "ai-business-intelligence-platform","
-    title: "AI Business Intelligence Platform","
-    description: "Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports.","
+;export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = []
+  {}
+    id: "ai-business-intelligence-platform",""
+    title: "AI Business Intelligence Platform",""
+    description: "Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports.",""
     category: "AI & Analytics",
-    pricingTiers: [
-      {
-"
-        id: "starter","
+    pricingTiers: []
+      {}
+""
+        id: "starter",""
         name: "Starter",
-        price: 999,"
-        currency: "$","
+        price: 999,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "AI-powered data analysis","
-          "Basic dashboard creation","
-          "Data integration (5 sources)","
-          "Email support","
-          "Mobile app access"
-        ],"
-        bestFor: "Small businesses and startups"
+        features: [""
+          "AI-powered data analysis",""
+          "Basic dashboard creation",""
+          "Data integration (5 sources)",""
+          "Email support",""
+          "Mobile app access""
+        ],""
+        bestFor: "Small businesses and startups""
       },
-      {
-"
-        id: "professional","
+      {}
+""
+        id: "professional",""
         name: "Professional",
-        price: 1999,"
-        currency: "$","
+        price: 1999,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Starter features","
-          "Advanced analytics","
-          "Custom dashboards","
-          "API access","
-          "Priority support","
-          "Data integration (15 sources)"
-        ],"
+        features: [""
+          "All Starter features",""
+          "Advanced analytics",""
+          "Custom dashboards",""
+          "API access",""
+          "Priority support",""
+          "Data integration (15 sources)""
+        ],""
         bestFor: "Growing businesses and teams",
-        popular: true
+        popular: true;
       },
-      {
-"
-        id: "enterprise","
+      {}
+""
+        id: "enterprise",""
         name: "Enterprise",
-        price: 3999,"
-        currency: "$","
+        price: 3999,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Professional features","
-          "Custom AI models","
-          "Unlimited data sources","
-          "Dedicated support","
-          "White-label solutions","
-          "Advanced security features"
-        ],"
-        bestFor: "Large enterprises and corporations"
+        features: [""
+          "All Professional features",""
+          "Custom AI models",""
+          "Unlimited data sources",""
+          "Dedicated support",""
+          "White-label solutions",""
+          "Advanced security features""
+        ],""
+        bestFor: "Large enterprises and corporations""
       }
-    ],"
-    marketPrice: "$999 - $3,999/month","
-    roi: "400-600% within 12 months","
-    estimatedDelivery: "4-6 weeks","
+    ],""
+    marketPrice: "$999 - $3,999/month",""
+    roi: "400-600% within 12 months",""
+    estimatedDelivery: "4-6 weeks",""
     supportLevel: "24/7",
-    contactInfo
+    contactInfo;
   },
-  {
-"
-    id: "quantum-ai-optimization-platform","
-    title: "Quantum AI Optimization Platform","
-    description: "Revolutionary platform combining quantum computing with AI to solve complex optimization problems in real-time.","
+  {}
+""
+    id: "quantum-ai-optimization-platform",""
+    title: "Quantum AI Optimization Platform",""
+    description: "Revolutionary platform combining quantum computing with AI to solve complex optimization problems in real-time.",""
     category: "Quantum Computing",
-    pricingTiers: [
-      {
-"
-        id: "starter","
+    pricingTiers: []
+      {}
+""
+        id: "starter",""
         name: "Starter",
-        price: 1499,"
-        currency: "$","
+        price: 1499,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "Basic quantum algorithms","
-          "AI optimization models","
-          "Cloud quantum access","
-          "Email support","
-          "Standard API access"
-        ],"
-        bestFor: "Research institutions and startups"
+        features: [""
+          "Basic quantum algorithms",""
+          "AI optimization models",""
+          "Cloud quantum access",""
+          "Email support",""
+          "Standard API access""
+        ],""
+        bestFor: "Research institutions and startups""
       },
-      {
-"
-        id: "professional","
+      {}
+""
+        id: "professional",""
         name: "Professional",
-        price: 2999,"
-        currency: "$","
+        price: 2999,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Starter features","
-          "Advanced quantum algorithms","
-          "Custom optimization models","
-          "Priority support","
-          "Advanced analytics"
-        ],"
+        features: [""
+          "All Starter features",""
+          "Advanced quantum algorithms",""
+          "Custom optimization models",""
+          "Priority support",""
+          "Advanced analytics""
+        ],""
         bestFor: "Technology companies and research labs",
-        popular: true
+        popular: true;
       },
-      {
-"
-        id: "enterprise","
+      {}
+""
+        id: "enterprise",""
         name: "Enterprise",
-        price: 5999,"
-        currency: "$","
+        price: 5999,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Professional features","
-          "Custom quantum solutions","
-          "Dedicated quantum hardware","
-          "24/7 support","
-          "White-label solutions"
-        ],"
-        bestFor: "Large tech companies and government agencies"
+        features: [""
+          "All Professional features",""
+          "Custom quantum solutions",""
+          "Dedicated quantum hardware",""
+          "24/7 support",""
+          "White-label solutions""
+        ],""
+        bestFor: "Large tech companies and government agencies""
       }
-    ],"
-    marketPrice: "$1,499 - $5,999/month","
-    roi: "500-800% within 18 months","
-    estimatedDelivery: "6-8 weeks","
+    ],""
+    marketPrice: "$1,499 - $5,999/month",""
+    roi: "500-800% within 18 months",""
+    estimatedDelivery: "6-8 weeks",""
     supportLevel: "24/7",
-    contactInfo
+    contactInfo;
   },
-  {
-"
-    id: "ai-powered-cybersecurity-platform","
-    title: "AI-Powered Cybersecurity Platform","
-    description: "Advanced cybersecurity platform using AI to detect and prevent threats in real-time with automated response capabilities.","
+  {}
+""
+    id: "ai-powered-cybersecurity-platform",""
+    title: "AI-Powered Cybersecurity Platform",""
+    description: "Advanced cybersecurity platform using AI to detect and prevent threats in real-time with automated response capabilities.",""
     category: "Cybersecurity",
-    pricingTiers: [
-      {
-"
-        id: "starter","
+    pricingTiers: []
+      {}
+""
+        id: "starter",""
         name: "Starter",
-        price: 799,"
-        currency: "$","
+        price: 799,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "AI threat detection","
-          "Basic security monitoring","
-          "Email alerts","
-          "Standard support","
-          "Mobile app access"
-        ],"
-        bestFor: "Small businesses and startups"
+        features: [""
+          "AI threat detection",""
+          "Basic security monitoring",""
+          "Email alerts",""
+          "Standard support",""
+          "Mobile app access""
+        ],""
+        bestFor: "Small businesses and startups""
       },
-      {
-"
-        id: "professional","
+      {}
+""
+        id: "professional",""
         name: "Professional",
-        price: 1599,"
-        currency: "$","
+        price: 1599,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Starter features","
-          "Advanced threat intelligence","
-          "Automated response","
-          "Priority support","
-          "Custom security policies"
-        ],"
+        features: [""
+          "All Starter features",""
+          "Advanced threat intelligence",""
+          "Automated response",""
+          "Priority support",""
+          "Custom security policies""
+        ],""
         bestFor: "Medium businesses and enterprises",
-        popular: true
+        popular: true;
       },
-      {
-"
-        id: "enterprise","
+      {}
+""
+        id: "enterprise",""
         name: "Enterprise",
-        price: 3199,"
-        currency: "$","
+        price: 3199,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Professional features","
-          "Custom AI models","
-          "Advanced compliance","
-          "Dedicated security team","
-          "White-label solutions"
-        ],"
-        bestFor: "Large enterprises and government agencies"
+        features: [""
+          "All Professional features",""
+          "Custom AI models",""
+          "Advanced compliance",""
+          "Dedicated security team",""
+          "White-label solutions""
+        ],""
+        bestFor: "Large enterprises and government agencies""
       }
-    ],"
-    marketPrice: "$799 - $3,199/month","
-    roi: "300-500% within 12 months","
-    estimatedDelivery: "3-5 weeks","
+    ],""
+    marketPrice: "$799 - $3,199/month",""
+    roi: "300-500% within 12 months",""
+    estimatedDelivery: "3-5 weeks",""
     supportLevel: "24/7",
-    contactInfo
+    contactInfo;
   },
-  {
-"
-    id: "ai-powered-content-generation-platform","
-    title: "AI-Powered Content Generation Platform","
-    description: "Comprehensive content creation platform that generates high-quality, SEO-optimized content using advanced AI models.","
+  {}
+""
+    id: "ai-powered-content-generation-platform",""
+    title: "AI-Powered Content Generation Platform",""
+    description: "Comprehensive content creation platform that generates high-quality, SEO-optimized content using advanced AI models.",""
     category: "AI & Analytics",
-    pricingTiers: [
-      {
-"
-        id: "starter","
+    pricingTiers: []
+      {}
+""
+        id: "starter",""
         name: "Starter",
-        price: 299,"
-        currency: "$","
+        price: 299,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "AI content generation","
-          "Basic SEO optimization","
-          "5 content pieces/month","
-          "Email support","
-          "Standard templates"
-        ],"
-        bestFor: "Small businesses and content creators"
+        features: [""
+          "AI content generation",""
+          "Basic SEO optimization",""
+          "5 content pieces/month",""
+          "Email support",""
+          "Standard templates""
+        ],""
+        bestFor: "Small businesses and content creators""
       },
-      {
-"
-        id: "professional","
+      {}
+""
+        id: "professional",""
         name: "Professional",
-        price: 599,"
-        currency: "$","
+        price: 599,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Starter features","
-          "Advanced SEO tools","
-          "Unlimited content","
-          "Priority support","
-          "Custom templates"
-        ],"
+        features: [""
+          "All Starter features",""
+          "Advanced SEO tools",""
+          "Unlimited content",""
+          "Priority support",""
+          "Custom templates""
+        ],""
         bestFor: "Growing businesses and agencies",
-        popular: true
+        popular: true;
       },
-      {
-"
-        id: "enterprise","
+      {}
+""
+        id: "enterprise",""
         name: "Enterprise",
-        price: 1199,"
-        currency: "$","
+        price: 1199,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Professional features","
-          "Custom AI models","
-          "White-label solutions","
-          "Dedicated support","
-          "Advanced analytics"
-        ],"
-        bestFor: "Large agencies and enterprises"
+        features: [""
+          "All Professional features",""
+          "Custom AI models",""
+          "White-label solutions",""
+          "Dedicated support",""
+          "Advanced analytics""
+        ],""
+        bestFor: "Large agencies and enterprises""
       }
-    ],"
-    marketPrice: "$299 - $1,199/month","
-    roi: "200-400% within 6 months","
-    estimatedDelivery: "2-3 weeks","
+    ],""
+    marketPrice: "$299 - $1,199/month",""
+    roi: "200-400% within 6 months",""
+    estimatedDelivery: "2-3 weeks",""
     supportLevel: "24/7",
-    contactInfo
+    contactInfo;
   },
-  {
-"
-    id: "ai-powered-video-analytics-platform","
-    title: "AI-Powered Video Analytics Platform","
-    description: "Advanced video analysis platform that uses AI to extract insights, detect objects, and analyze behavior patterns in video content.","
+  {}
+""
+    id: "ai-powered-video-analytics-platform",""
+    title: "AI-Powered Video Analytics Platform",""
+    description: "Advanced video analysis platform that uses AI to extract insights, detect objects, and analyze behavior patterns in video content.",""
     category: "AI & Analytics",
-    pricingTiers: [
-      {
-"
-        id: "starter","
+    pricingTiers: []
+      {}
+""
+        id: "starter",""
         name: "Starter",
-        price: 499,"
-        currency: "$","
+        price: 499,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "Basic video analysis","
-          "Object detection","
-          "5 hours/month processing","
-          "Email support","
-          "Standard API access"
-        ],"
-        bestFor: "Small businesses and content creators"
+        features: [""
+          "Basic video analysis",""
+          "Object detection",""
+          "5 hours/month processing",""
+          "Email support",""
+          "Standard API access""
+        ],""
+        bestFor: "Small businesses and content creators""
       },
-      {
-"
-        id: "professional","
+      {}
+""
+        id: "professional",""
         name: "Professional",
-        price: 999,"
-        currency: "$","
+        price: 999,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Starter features","
-          "Advanced analytics","
-          "Unlimited processing","
-          "Priority support","
-          "Custom models"
-        ],"
+        features: [""
+          "All Starter features",""
+          "Advanced analytics",""
+          "Unlimited processing",""
+          "Priority support",""
+          "Custom models""
+        ],""
         bestFor: "Medium businesses and agencies",
-        popular: true
+        popular: true;
       },
-      {
-"
-        id: "enterprise","
+      {}
+""
+        id: "enterprise",""
         name: "Enterprise",
-        price: 1999,"
-        currency: "$","
+        price: 1999,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Professional features","
-          "Custom AI models","
-          "White-label solutions","
-          "Dedicated support","
-          "Advanced security"
-        ],"
-        bestFor: "Large enterprises and government agencies"
+        features: [""
+          "All Professional features",""
+          "Custom AI models",""
+          "White-label solutions",""
+          "Dedicated support",""
+          "Advanced security""
+        ],""
+        bestFor: "Large enterprises and government agencies""
       }
-    ],"
-    marketPrice: "$499 - $1,999/month","
-    roi: "250-450% within 9 months","
-    estimatedDelivery: "3-4 weeks","
+    ],""
+    marketPrice: "$499 - $1,999/month",""
+    roi: "250-450% within 9 months",""
+    estimatedDelivery: "3-4 weeks",""
     supportLevel: "24/7",
-    contactInfo
+    contactInfo;
   },
-  {
-"
-    id: "blockchain-supply-chain-platform","
-    title: "Blockchain Supply Chain Platform","
-    description: "Transparent and secure supply chain management platform using blockchain technology for end-to-end traceability and verification.","
+  {}
+""
+    id: "blockchain-supply-chain-platform",""
+    title: "Blockchain Supply Chain Platform",""
+    description: "Transparent and secure supply chain management platform using blockchain technology for end-to-end traceability and verification.",""
     category: "Blockchain & Web3",
-    pricingTiers: [
-      {
-"
-        id: "starter","
+    pricingTiers: []
+      {}
+""
+        id: "starter",""
         name: "Starter",
-        price: 699,"
-        currency: "$","
+        price: 699,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "Basic blockchain tracking","
-          "Supply chain visibility","
-          "5 suppliers","
-          "Email support","
-          "Mobile app access"
-        ],"
-        bestFor: "Small manufacturers and retailers"
+        features: [""
+          "Basic blockchain tracking",""
+          "Supply chain visibility",""
+          "5 suppliers",""
+          "Email support",""
+          "Mobile app access""
+        ],""
+        bestFor: "Small manufacturers and retailers""
       },
-      {
-"
-        id: "professional","
+      {}
+""
+        id: "professional",""
         name: "Professional",
-        price: 1399,"
-        currency: "$","
+        price: 1399,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Starter features","
-          "Advanced analytics","
-          "Unlimited suppliers","
-          "Priority support","
-          "Custom integrations"
-        ],"
+        features: [""
+          "All Starter features",""
+          "Advanced analytics",""
+          "Unlimited suppliers",""
+          "Priority support",""
+          "Custom integrations""
+        ],""
         bestFor: "Medium businesses and logistics companies",
-        popular: true
+        popular: true;
       },
-      {
-"
-        id: "enterprise","
+      {}
+""
+        id: "enterprise",""
         name: "Enterprise",
-        price: 2799,"
-        currency: "$","
+        price: 2799,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Professional features","
-          "Custom blockchain solutions","
-          "White-label platform","
-          "Dedicated support","
-          "Advanced compliance"
-        ],"
-        bestFor: "Large enterprises and government agencies"
+        features: [""
+          "All Professional features",""
+          "Custom blockchain solutions",""
+          "White-label platform",""
+          "Dedicated support",""
+          "Advanced compliance""
+        ],""
+        bestFor: "Large enterprises and government agencies""
       }
-    ],"
-    marketPrice: "$699 - $2,799/month","
-    roi: "350-600% within 15 months","
-    estimatedDelivery: "5-7 weeks","
+    ],""
+    marketPrice: "$699 - $2,799/month",""
+    roi: "350-600% within 15 months",""
+    estimatedDelivery: "5-7 weeks",""
     supportLevel: "24/7",
-    contactInfo
+    contactInfo;
   },
-  {
-"
-    id: "ai-powered-financial-trading-platform","
-    title: "AI-Powered Financial Trading Platform","
-    description: "Intelligent trading platform that uses AI algorithms to analyze market data, predict trends, and execute trades automatically.","
+  {}
+""
+    id: "ai-powered-financial-trading-platform",""
+    title: "AI-Powered Financial Trading Platform",""
+    description: "Intelligent trading platform that uses AI algorithms to analyze market data, predict trends, and execute trades automatically.",""
     category: "AI & Analytics",
-    pricingTiers: [
-      {
-"
-        id: "starter","
+    pricingTiers: []
+      {}
+""
+        id: "starter",""
         name: "Starter",
-        price: 899,"
-        currency: "$","
+        price: 899,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "AI market analysis","
-          "Basic trading signals","
-          "5 trading pairs","
-          "Email support","
-          "Mobile app access"
-        ],"
-        bestFor: "Individual traders and small funds"
+        features: [""
+          "AI market analysis",""
+          "Basic trading signals",""
+          "5 trading pairs",""
+          "Email support",""
+          "Mobile app access""
+        ],""
+        bestFor: "Individual traders and small funds""
       },
-      {
-"
-        id: "professional","
+      {}
+""
+        id: "professional",""
         name: "Professional",
-        price: 1799,"
-        currency: "$","
+        price: 1799,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Starter features","
-          "Advanced algorithms","
-          "Unlimited trading pairs","
-          "Priority support","
-          "Custom strategies"
-        ],"
+        features: [""
+          "All Starter features",""
+          "Advanced algorithms",""
+          "Unlimited trading pairs",""
+          "Priority support",""
+          "Custom strategies""
+        ],""
         bestFor: "Professional traders and hedge funds",
-        popular: true
+        popular: true;
       },
-      {
-"
-        id: "enterprise","
+      {}
+""
+        id: "enterprise",""
         name: "Enterprise",
-        price: 3599,"
-        currency: "$","
+        price: 3599,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Professional features","
-          "Custom AI models","
-          "White-label solutions","
-          "Dedicated support","
-          "Advanced risk management"
-        ],"
-        bestFor: "Large financial institutions"
+        features: [""
+          "All Professional features",""
+          "Custom AI models",""
+          "White-label solutions",""
+          "Dedicated support",""
+          "Advanced risk management""
+        ],""
+        bestFor: "Large financial institutions""
       }
-    ],"
-    marketPrice: "$899 - $3,599/month","
-    roi: "400-700% within 18 months","
-    estimatedDelivery: "4-6 weeks","
+    ],""
+    marketPrice: "$899 - $3,599/month",""
+    roi: "400-700% within 18 months",""
+    estimatedDelivery: "4-6 weeks",""
     supportLevel: "24/7",
-    contactInfo
+    contactInfo;
   },
-  {
-"
-    id: "ai-powered-healthcare-diagnostics-platform","
-    title: "AI-Powered Healthcare Diagnostics Platform","
-    description: "Advanced healthcare platform that uses AI to analyze medical images, predict diagnoses, and assist healthcare professionals.","
+  {}
+""
+    id: "ai-powered-healthcare-diagnostics-platform",""
+    title: "AI-Powered Healthcare Diagnostics Platform",""
+    description: "Advanced healthcare platform that uses AI to analyze medical images, predict diagnoses, and assist healthcare professionals.",""
     category: "AI & Analytics",
-    pricingTiers: [
-      {
-"
-        id: "starter","
+    pricingTiers: []
+      {}
+""
+        id: "starter",""
         name: "Starter",
-        price: 1299,"
-        currency: "$","
+        price: 1299,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "Basic image analysis","
-          "Diagnostic assistance","
-          "5 specialties","
-          "Email support","
-          "Standard compliance"
-        ],"
-        bestFor: "Small clinics and medical practices"
+        features: [""
+          "Basic image analysis",""
+          "Diagnostic assistance",""
+          "5 specialties",""
+          "Email support",""
+          "Standard compliance""
+        ],""
+        bestFor: "Small clinics and medical practices""
       },
-      {
-"
-        id: "professional","
+      {}
+""
+        id: "professional",""
         name: "Professional",
-        price: 2599,"
-        currency: "$","
+        price: 2599,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Starter features","
-          "Advanced diagnostics","
-          "All specialties","
-          "Priority support","
-          "Custom workflows"
-        ],"
+        features: [""
+          "All Starter features",""
+          "Advanced diagnostics",""
+          "All specialties",""
+          "Priority support",""
+          "Custom workflows""
+        ],""
         bestFor: "Medium hospitals and medical centers",
-        popular: true
+        popular: true;
       },
-      {
-"
-        id: "enterprise","
+      {}
+""
+        id: "enterprise",""
         name: "Enterprise",
-        price: 5199,"
-        currency: "$","
+        price: 5199,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Professional features","
-          "Custom AI models","
-          "White-label solutions","
-          "Dedicated support","
-          "Advanced security"
-        ],"
-        bestFor: "Large hospital networks and research institutions"
+        features: [""
+          "All Professional features",""
+          "Custom AI models",""
+          "White-label solutions",""
+          "Dedicated support",""
+          "Advanced security""
+        ],""
+        bestFor: "Large hospital networks and research institutions""
       }
-    ],"
-    marketPrice: "$1,299 - $5,199/month","
-    roi: "300-500% within 24 months","
-    estimatedDelivery: "6-8 weeks","
+    ],""
+    marketPrice: "$1,299 - $5,199/month",""
+    roi: "300-500% within 24 months",""
+    estimatedDelivery: "6-8 weeks",""
     supportLevel: "24/7",
-    contactInfo
+    contactInfo;
   },
-  {
-"
-    id: "quantum-machine-learning-platform","
-    title: "Quantum Machine Learning Platform","
-    description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems in various industries.","
+  {}
+""
+    id: "quantum-machine-learning-platform",""
+    title: "Quantum Machine Learning Platform",""
+    description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems in various industries.",""
     category: "Quantum Computing",
-    pricingTiers: [
-      {
-"
-        id: "starter","
+    pricingTiers: []
+      {}
+""
+        id: "starter",""
         name: "Starter",
-        price: 1799,"
-        currency: "$","
+        price: 1799,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "Basic quantum ML algorithms","
-          "Cloud quantum access","
-          "5 model types","
-          "Email support","
-          "Standard API access"
-        ],"
-        bestFor: "Research institutions and startups"
+        features: [""
+          "Basic quantum ML algorithms",""
+          "Cloud quantum access",""
+          "5 model types",""
+          "Email support",""
+          "Standard API access""
+        ],""
+        bestFor: "Research institutions and startups""
       },
-      {
-"
-        id: "professional","
+      {}
+""
+        id: "professional",""
         name: "Professional",
-        price: 3599,"
-        currency: "$","
+        price: 3599,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Starter features","
-          "Advanced algorithms","
-          "Unlimited models","
-          "Priority support","
-          "Custom solutions"
-        ],"
+        features: [""
+          "All Starter features",""
+          "Advanced algorithms",""
+          "Unlimited models",""
+          "Priority support",""
+          "Custom solutions""
+        ],""
         bestFor: "Technology companies and research labs",
-        popular: true
+        popular: true;
       },
-      {
-"
-        id: "enterprise","
+      {}
+""
+        id: "enterprise",""
         name: "Enterprise",
-        price: 7199,"
-        currency: "$","
+        price: 7199,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Professional features","
-          "Custom quantum solutions","
-          "White-label platform","
-          "Dedicated support","
-          "Advanced security"
-        ],"
-        bestFor: "Large tech companies and government agencies"
+        features: [""
+          "All Professional features",""
+          "Custom quantum solutions",""
+          "White-label platform",""
+          "Dedicated support",""
+          "Advanced security""
+        ],""
+        bestFor: "Large tech companies and government agencies""
       }
-    ],"
-    marketPrice: "$1,799 - $7,199/month","
-    roi: "500-800% within 24 months","
-    estimatedDelivery: "8-10 weeks","
+    ],""
+    marketPrice: "$1,799 - $7,199/month",""
+    roi: "500-800% within 24 months",""
+    estimatedDelivery: "8-10 weeks",""
     supportLevel: "24/7",
-    contactInfo
+    contactInfo;
   },
-  {
-"
-    id: "ai-powered-marketing-automation-platform","
-    title: "AI-Powered Marketing Automation Platform","
-    description: "Intelligent marketing platform that automates campaigns, personalizes content, and optimizes customer engagement using AI.","
+  {}
+""
+    id: "ai-powered-marketing-automation-platform",""
+    title: "AI-Powered Marketing Automation Platform",""
+    description: "Intelligent marketing platform that automates campaigns, personalizes content, and optimizes customer engagement using AI.",""
     category: "Marketing & Sales",
-    pricingTiers: [
-      {
-"
-        id: "starter","
+    pricingTiers: []
+      {}
+""
+        id: "starter",""
         name: "Starter",
-        price: 399,"
-        currency: "$","
+        price: 399,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "Basic automation","
-          "Email campaigns","
-          "5 customer segments","
-          "Email support","
-          "Standard analytics"
-        ],"
-        bestFor: "Small businesses and startups"
+        features: [""
+          "Basic automation",""
+          "Email campaigns",""
+          "5 customer segments",""
+          "Email support",""
+          "Standard analytics""
+        ],""
+        bestFor: "Small businesses and startups""
       },
-      {
-"
-        id: "professional","
+      {}
+""
+        id: "professional",""
         name: "Professional",
-        price: 799,"
-        currency: "$","
+        price: 799,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Starter features","
-          "Advanced automation","
-          "Unlimited segments","
-          "Priority support","
-          "Custom workflows"
-        ],"
+        features: [""
+          "All Starter features",""
+          "Advanced automation",""
+          "Unlimited segments",""
+          "Priority support",""
+          "Custom workflows""
+        ],""
         bestFor: "Growing businesses and agencies",
-        popular: true
+        popular: true;
       },
-      {
-"
-        id: "enterprise","
+      {}
+""
+        id: "enterprise",""
         name: "Enterprise",
-        price: 1599,"
-        currency: "$","
+        price: 1599,""
+        currency: "$",""
         billingCycle: "monthly",
-        features: ["
-          "All Professional features","
-          "Custom AI models","
-          "White-label solutions","
-          "Dedicated support","
-          "Advanced integrations"
-        ],"
-        bestFor: "Large enterprises and agencies"
+        features: [""
+          "All Professional features",""
+          "Custom AI models",""
+          "White-label solutions",""
+          "Dedicated support",""
+          "Advanced integrations""
+        ],""
+        bestFor: "Large enterprises and agencies""
       }
-    ],"
-    marketPrice: "$399 - $1,599/month","
-    roi: "250-450% within 9 months","
-    estimatedDelivery: "2-4 weeks","
+    ],""
+    marketPrice: "$399 - $1,599/month",""
+    roi: "250-450% within 9 months",""
+    estimatedDelivery: "2-4 weeks",""
     supportLevel: "24/7",
-    contactInfo
+    contactInfo;
   }
 ];
 
-export const comprehensivePricingGuide2025: ServicePricing[] = [
-  {
-
+export const comprehensivePricingGuide2025: ServicePricing[] = []
+  {}
     id: 'ai-autonomous-business-manager',
     title: 'AI Autonomous Business Manager',
     description: 'Complete business automation platform that manages operations, decision-making, and strategic planning autonomously using advanced AI algorithms.',
     category: 'AI Solutions',
-    pricingTiers: [
-      {
-
+    pricingTiers: []
+      {}
         name: 'Starter',
         price: '$1,999',
         billing: 'month',
@@ -686,8 +680,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
           'Small businesses (10-50 employees),Companies new to AI automation',Basic process optimization needs'
         ]
       },
-      {
-
+      {}
         name: 'Professional',
         price: '$2,999',
         billing: 'month',
@@ -701,10 +694,9 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         bestFor: ['
           'Medium businesses (50-200 employees),Multi-location operations',Complex business processes'
         ],
-        popular: true
+        popular: true;
       },
-      {
-
+      {}
         name: 'Enterprise',
         price: '$4,999',
         billing: 'month',
@@ -720,8 +712,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         ]
       }
     ],
-    marketComparison: {
-
+    marketComparison: {}
       averageMarketPrice: '$5,000 - $15,000',
       ourPrice: '$2,999',
       savings: '40-80%',
@@ -736,23 +727,20 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
     useCases: ['
       'Enterprise operations management',Multi-location business coordination',Supply chain optimization',Financial planning and analysis',Strategic planning and execution'
     ],
-    contactInfo: {
-
+    contactInfo: {}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-
+  {}
     id: 'ai-content-optimization-suite',
     title: 'AI Content Optimization Suite Pro',
     description: 'Comprehensive content optimization platform using advanced AI to improve SEO, readability, engagement, and conversion across all digital platforms.',
     category: 'Micro SaaS',
-    pricingTiers: [
-      {
-
+    pricingTiers: []
+      {}
         name: 'Basic',
         price: '$99',
         billing: 'month',
@@ -767,8 +755,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
           'Individual content creators',Small blogs',Basic content marketing needs'
         ]
       },
-      {
-
+      {}
         name: 'Professional',
         price: '$299',
         billing: 'month',
@@ -782,10 +769,9 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         bestFor: ['
           'Digital marketing agencies',E-commerce businesses',Content marketing teams',Growing businesses'
         ],
-        popular: true
+        popular: true;
       },
-      {
-
+      {}
         name: 'Enterprise',
         price: '$799',
         billing: 'month',
@@ -801,8 +787,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         ]
       }
     ],
-    marketComparison: {
-
+    marketComparison: {}
       averageMarketPrice: '$200 - $800',
       ourPrice: '$299',
       savings: '25-60%',
@@ -817,23 +802,20 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
     useCases: ['
       'Digital marketing agencies',E-commerce businesses',Content creators and publishers',B2B marketing teams',Educational institutions'
     ],
-    contactInfo: {
-
+    contactInfo: {}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-
+  {}
     id: 'zero-trust-network-architecture',
     title: 'Zero Trust Network Architecture',
     description: 'Comprehensive zero trust security implementation with continuous verification, adaptive access control, and advanced threat detection.',
     category: 'Cybersecurity',
-    pricingTiers: [
-      {
-
+    pricingTiers: []
+      {}
         name: 'Assessment',
         price: '$5,000',
         billing: 'project',
@@ -848,8 +830,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
           'Companies planning zero trust implementation',Security assessment needs',Compliance requirements'
         ]
       },
-      {
-
+      {}
         name: 'Implementation',
         price: '$15,000',
         billing: 'project',
@@ -863,10 +844,9 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         bestFor: ['
           'Medium to large organizations',Full zero trust implementation',Compliance requirements'
         ],
-        popular: true
+        popular: true;
       },
-      {
-
+      {}
         name: 'Enterprise',
         price: '$25,000',
         billing: 'project',
@@ -882,8 +862,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         ]
       }
     ],
-    marketComparison: {
-
+    marketComparison: {}
       averageMarketPrice: '$20,000 - $50,000',
       ourPrice: '$15,000',
       savings: '25-70%',
@@ -898,23 +877,20 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
     useCases: ['
       'Financial institutions',Healthcare organizations',Government agencies',Enterprise corporations',Educational institutions'
     ],
-    contactInfo: {
-
+    contactInfo: {}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-
+  {}
     id: 'cloud-finops-optimizer',
     title: 'Cloud FinOps Optimizer',
     description: 'Intelligent cloud cost optimization platform that automates financial operations, cost allocation, and resource optimization across multi-cloud environments.',
     category: 'Cloud & DevOps',
-    pricingTiers: [
-      {
-
+    pricingTiers: []
+      {}
         name: 'Starter',
         price: '$299',
         billing: 'month',
@@ -929,8 +905,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
           'Small cloud users',Single cloud provider',Basic cost optimization needs'
         ]
       },
-      {
-
+      {}
         name: 'Professional',
         price: '$799',
         billing: 'month',
@@ -944,10 +919,9 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         bestFor: ['
           'Medium businesses',Multi-cloud environments',Advanced cost optimization needs'
         ],
-        popular: true
+        popular: true;
       },
-      {
-
+      {}
         name: 'Enterprise',
         price: '$1,999',
         billing: 'month',
@@ -963,8 +937,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         ]
       }
     ],
-    marketComparison: {
-
+    marketComparison: {}
       averageMarketPrice: '$500 - $2,500',
       ourPrice: '$799',
       savings: '20-70%',
@@ -979,8 +952,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
     useCases: ['
       'Enterprise cloud users',Multi-cloud organizations',DevOps teams',Financial operations teams',Cloud architects'
     ],
-    contactInfo: {
-
+    contactInfo: {}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -992,4 +964,4 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 export { comprehensivePricingGuide2025 };
 export default comprehensivePricingGuide2025;
 
-'"
+'""

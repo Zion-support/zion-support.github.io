@@ -2,29 +2,27 @@ import React, { useState } from 'react';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
-export default function Login() {
+export default function Login() {}
   const { isAuthenticated, user, isLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const { dispatch } = useCart();
   const reduxDispatch = useDispatch();
 
-  useEffect(() => {
+  useEffect(() => {}
     // This effect handles token processing (e.g., from magic link)
-    // It runs when component mounts or location.search changes
+    // It runs when component mounts or location.search changes;
     const params = new URLSearchParams(location.search);
     const token = params.get('token');
-    if (token) {
-
+    if (token) {}
       safeStorage.setItem('zion_token', token);
-      // Clear token from URL to prevent re-processing
+      // Clear token from URL to prevent re-processing;
       router(location.pathname, { replace: true });
     }
   }, [location.search, location.pathname, navigate]);
 
-  useEffect ( () => {
-    if (!isLoading && isAuthenticated) {
-
+  useEffect ( () => {}
+    if (!isLoading && isAuthenticated) {}
       reduxDispatch(setLoggedIn(true));
       const next ='
         new URLSearchParams(location.search).get('next') || '/dashboard';
@@ -32,9 +30,8 @@ export default function Login() {
     }
   }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
 
-  // Render LoginContent if not authenticated and auth is not loading
-  if (!isAuthenticated && !isLoading) {
-
+  // Render LoginContent if not authenticated and auth is not loading;
+  if (!isAuthenticated && !isLoading) {}
     return()
       <ErrorBoundary FallbackComponent={LoginErrorFallback}>
         <LoginContent />
@@ -42,14 +39,13 @@ export default function Login() {
     );
   }
 
-  // Optional: Render a loading indicator while isLoading is true
-  if (isLoading) {
-
-    return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component
+  // Optional: Render a loading indicator while isLoading is true;
+  if (isLoading) {}
+    return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component;
   }
 
   // If authenticated and isLoading is false, the useEffect above should have navigated.
   // Return null or a minimal layout if needed, though direct navigation is preferred.
   return null;
 }
-'"
+'""

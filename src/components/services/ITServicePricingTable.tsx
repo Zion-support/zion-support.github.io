@@ -5,47 +5,46 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Globe, Search, ArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export function ITServicePricingTable() {
+export function ITServicePricingTable(function ITServicePricingTable() {): any {}
   const [searchQuery, setSearchQuery] = useState("");
-  const [sortConfig, setSortConfig] = useState<{
+  const [sortConfig, setSortConfig] = useState<{}
     key: keyof CountryPricing;
     direction: "ascending" | "descending";
-  }>({
+  }>({}
     key: "country",
-    direction: "ascending",
+    direction: "ascending"
   });
 
-  const sortedData = useMemo(() => {
+  const sortedData: any = useMemo(() => {}
     let filteredData = [...onsiteServicePricing];
     
-    // Filter by search query
-    if (searchQuery) {
+    // Filter by search query;
+    if (searchQuery) {}
       filteredData = filteredData.filter(item => 
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
     
-    // Sort data
-    filteredData.sort((a, b) => {
-      if (a[sortConfig.key] < b[sortConfig.key]) {
+    // Sort data;
+    filteredData.sort((a, b) => {}
+      if (a[sortConfig.key] < b[sortConfig.key]) {}
         return sortConfig.direction === "ascending" ? -1 : 1;
       }
-      if (a[sortConfig.key] > b[sortConfig.key]) {
+      if (a[sortConfig.key] > b[sortConfig.key]) {}
         return sortConfig.direction === "ascending" ? 1 : -1;
       }
       return 0;
     });
     
     return filteredData;
-  }, [searchQuery, sortConfig]); // Removed onsiteServicePricing
-
-  const handleSort = (key: keyof CountryPricing) => {
-    setSortConfig({
+  }, [searchQuery, sortConfig]); // Removed onsiteServicePricing;
+  const handleSort: any = (key: keyof CountryPricing) => {}
+    setSortConfig({}
       key,
-      direction: 
-        sortConfig.key === key && sortConfig.direction === "ascending" 
-          ? "descending" 
-          : "ascending",
+      direction: any;
+        sortConfig.key === key && sortConfig.direction === "ascending""
+          ? "descending""
+          : "ascending"
     });
   };
 
@@ -54,11 +53,11 @@ export function ITServicePricingTable() {
       <div className="flex items-center mb-6">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
-          <Input
-            placeholder="Search by country..."
+          <Input;
+            placeholder="Search by country...""
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white"
+            className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white""
           />
         </div>
       </div>
@@ -68,20 +67,20 @@ export function ITServicePricingTable() {
           <TableHeader className="bg-zion-blue">
             <TableRow>
               <TableHead className="text-zion-cyan font-medium">
-                <Button 
-                  variant="ghost" 
+                <Button;
+                  variant="ghost""
                   onClick={() => handleSort("country")}
-                  className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
+                  className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light""
                 >
                   <span>Country</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
               </TableHead>
               <TableHead className="text-right text-zion-cyan font-medium">
-                <Button 
-                  variant="ghost" 
+                <Button;
+                  variant="ghost""
                   onClick={() => handleSort("pricePerIncident")}
-                  className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
+                  className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light""
                 >
                   <span>Price Per Incident</span>
                   <ArrowUpDown className="h-4 w-4" />
@@ -103,7 +102,7 @@ export function ITServicePricingTable() {
             ) : (
               <TableRow>
                 <TableCell colSpan={2} className="text-center py-10 text-zion-slate-light">
-                  No countries match your search
+                  No countries match your search;
                 </TableCell>
               </TableRow>
             )}

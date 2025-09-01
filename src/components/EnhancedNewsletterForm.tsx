@@ -1,26 +1,24 @@
 
-export function EnhancedNewsletterForm() {
+export function EnhancedNewsletterForm(function EnhancedNewsletterForm() {): any {}
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
   
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {}
       setErrorMsg("Please enter a valid email address.");
       return}
 
     setErrorMsg("");
     setIsSubmitting(true);
 
-    try {
-      
-      if (res.ok) {
+    try {}
+      if (res.ok) {}
         toast.success("Thanks for subscribing!");
-        setEmail("")} else {
-        
+        setEmail("")} else {}
         toast.error(data.error || "Subscription failed")}
-    } catch (err: any) {
-      toast.error(err.message || "Subscription failed")} finally {
+    } catch (err: any) {}
+      toast.error(err.message || "Subscription failed")} finally {}
       setIsSubmitting(false)}
   };
 
@@ -37,18 +35,18 @@ export function EnhancedNewsletterForm() {
       </div>
       
       <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
-        <Input
-          type="email"
-          placeholder="Enter your email"
-          className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
+        <Input;
+          type="email""
+          placeholder="Enter your email""
+          className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple""
           value={email}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-          required
+          required;
         />
-        <Button
-          type="submit"
+        <Button;
+          type="submit""
           disabled={isSubmitting}
-          className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
+          className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple""
         >
           {isSubmitting ? "Subscribing..." : "Subscribe"}
         </Button>

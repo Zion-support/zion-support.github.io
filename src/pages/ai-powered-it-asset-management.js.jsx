@@ -1,76 +1,76 @@
 import React from 'react';
 import Link from 'next/link';
-const AIPoweredITAssetManagement = () => {
+const AIPoweredITAssetManagement = () => {}
   return()
     <div className="min-h-screen bg-slate-900 text-white">
-      {/* Header Section */}"
-      <div className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-purple-900/20 to-indigo-900/20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-          <div className="text-center">"
+      {/* Header Section */}""
+      <div className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-purple-900/20 to-indigo-900/20">""
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+          <div className="text-center">""
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent mb-6">
-              AI-Powered IT Asset Management
-            </h1>"
+              AI-Powered IT Asset Management;
+            </h1>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your IT infrastructure with intelligent asset
-              tracking, predictive maintenance, and automated lifecycle
+              Revolutionize your IT infrastructure with intelligent asset;
+              tracking, predictive maintenance, and automated lifecycle;
               management powered by AI.
-            </p>"
+            </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link"
-                to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 text-lg"
+              <Link""
+                to="/contact""
+                className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 text-lg""
               >
-                Get Started
+                Get Started;
               </Link>
-              <Link"
-                to="/services/infrastructure"
-                className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg"
+              <Link""
+                to="/services/infrastructure""
+                className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg""
               >
-                Learn More
+                Learn More;
               </Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Key Features Section */}"
-      <div className="py-20 bg-slate-800/50">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+      {/* Key Features Section */}""
+      <div className="py-20 bg-slate-800/50">""
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-            Intelligent Asset Management Features
-          </h2>"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300">"
-              <div className="w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6">"
+            Intelligent Asset Management Features;
+          </h2>""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300">""
+              <div className="w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6">""
                 <span className="text-3xl">🔍</span>
-              </div>"
-              <h3 className="text-xl font-semibold mb-4">Smart Discovery</h3>"
+              </div>""
+              <h3 className="text-xl font-semibold mb-4">Smart Discovery</h3>""
               <p className="text-gray-300">
-                AI automatically discovers and catalogs all IT assets across
+                AI automatically discovers and catalogs all IT assets across;
                 your network, including hardware, software, and cloud resources.
               </p>
             </div>
-"
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300">"
-              <div className="w-16 h-16 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-6">"
+""
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300">""
+              <div className="w-16 h-16 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-6">""
                 <span className="text-3xl">📊</span>
-              </div>"
+              </div>""
               <h3 className="text-xl font-semibold mb-4">
-                Predictive Analytics
-              </h3>"
+                Predictive Analytics;
+              </h3>""
               <p className="text-gray-300">
-                Machine learning algorithms predict asset failures, optimize
+                Machine learning algorithms predict asset failures, optimize;
                 replacement schedules, and identify cost-saving opportunities.
               </p>
             </div>
-"
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300">"
-              <div className="w-16 h-16 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6">"
+""
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-purple-500/50 transition-all duration-300">""
+              <div className="w-16 h-16 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6">""
                 <span className="text-3xl">⚡</span>
-              </div>"
+              </div>""
               <h3 className="text-xl font-semibold mb-4">
-                Automated Workflows
-              </h3>"
+                Automated Workflows;
+              </h3>""
               <p className="text-gray-300">
                 Streamlined processes for asset procurement, deployment,
                 maintenance, and retirement with minimal manual intervention.
@@ -80,23 +80,23 @@ const AIPoweredITAssetManagement = () => {
         </div>
       </div>
 
-      {/* Asset Categories Section */}"
-      <div className="py-20 bg-slate-900">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+      {/* Asset Categories Section */}""
+      <div className="py-20 bg-slate-900">""
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-            Comprehensive Asset Coverage
-          </h2>"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">"
-            <div className="space-y-8">"
-              <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">"
+            Comprehensive Asset Coverage;
+          </h2>""
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">""
+            <div className="space-y-8">""
+              <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">""
                 <h3 className="text-xl font-semibold mb-3 text-purple-400">
-                  Hardware Assets
-                </h3>"
+                  Hardware Assets;
+                </h3>""
                 <p className="text-gray-300 mb-4">
-                  Complete tracking of servers, workstations, networking
-                  equipment, and peripheral devices with detailed specifications
+                  Complete tracking of servers, workstations, networking;
+                  equipment, and peripheral devices with detailed specifications;
                   and warranty information.
-                </p>"
+                </p>""
                 <ul className="text-sm text-gray-400 space-y-1">
                   <li>• Server inventory management</li>
                   <li>• Network device tracking</li>
@@ -104,15 +104,15 @@ const AIPoweredITAssetManagement = () => {
                   <li>• Warranty and support tracking</li>
                 </ul>
               </div>
-"
-              <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">"
+""
+              <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">""
                 <h3 className="text-xl font-semibold mb-3 text-indigo-400">
-                  Software Assets
-                </h3>"
+                  Software Assets;
+                </h3>""
                 <p className="text-gray-300 mb-4">
                   Comprehensive software license management, version tracking,
                   and compliance monitoring across all platforms.
-                </p>"
+                </p>""
                 <ul className="text-sm text-gray-400 space-y-1">
                   <li>• License compliance tracking</li>
                   <li>• Software version management</li>
@@ -121,16 +121,16 @@ const AIPoweredITAssetManagement = () => {
                 </ul>
               </div>
             </div>
-"
-            <div className="space-y-8">"
-              <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">"
+""
+            <div className="space-y-8">""
+              <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">""
                 <h3 className="text-xl font-semibold mb-3 text-blue-400">
-                  Cloud Resources
-                </h3>"
+                  Cloud Resources;
+                </h3>""
                 <p className="text-gray-300 mb-4">
-                  Real-time monitoring of cloud infrastructure, services, and
+                  Real-time monitoring of cloud infrastructure, services, and;
                   costs with automated optimization recommendations.
-                </p>"
+                </p>""
                 <ul className="text-sm text-gray-400 space-y-1">
                   <li>• Multi-cloud resource tracking</li>
                   <li>• Cost optimization insights</li>
@@ -138,15 +138,15 @@ const AIPoweredITAssetManagement = () => {
                   <li>• Resource utilization analytics</li>
                 </ul>
               </div>
-"
-              <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">"
+""
+              <div className="bg-slate-700/50 p-6 rounded-xl border border-white/10">""
                 <h3 className="text-xl font-semibold mb-3 text-purple-400">
-                  Network Infrastructure
-                </h3>"
+                  Network Infrastructure;
+                </h3>""
                 <p className="text-gray-300 mb-4">
-                  Complete visibility into network topology, bandwidth
+                  Complete visibility into network topology, bandwidth;
                   utilization, and connectivity status with automated alerting.
-                </p>"
+                </p>""
                 <ul className="text-sm text-gray-400 space-y-1">
                   <li>• Network topology mapping</li>
                   <li>• Bandwidth monitoring</li>
@@ -159,59 +159,59 @@ const AIPoweredITAssetManagement = () => {
         </div>
       </div>
 
-      {/* Benefits Section */}"
-      <div className="py-20 bg-slate-800/50">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+      {/* Benefits Section */}""
+      <div className="py-20 bg-slate-800/50">""
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-            Business Benefits
-          </h2>"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
-            <div className="text-center">"
-              <div className="text-5xl font-bold text-purple-400 mb-2">40%</div>"
+            Business Benefits;
+          </h2>""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">""
+            <div className="text-center">""
+              <div className="text-5xl font-bold text-purple-400 mb-2">40%</div>""
               <div className="text-gray-300">Cost Reduction</div>
-            </div>"
-            <div className="text-center">"
+            </div>""
+            <div className="text-center">""
               <div className="text-5xl font-bold text-indigo-400 mb-2">
                 99.9%
-              </div>"
+              </div>""
               <div className="text-gray-300">Uptime</div>
-            </div>"
-            <div className="text-center">"
-              <div className="text-5xl font-bold text-blue-400 mb-2">60%</div>"
+            </div>""
+            <div className="text-center">""
+              <div className="text-5xl font-bold text-blue-400 mb-2">60%</div>""
               <div className="text-gray-300">Faster Deployment</div>
-            </div>"
-            <div className="text-center">"
+            </div>""
+            <div className="text-center">""
               <div className="text-5xl font-bold text-purple-400 mb-2">
                 100%
-              </div>"
+              </div>""
               <div className="text-gray-300">Compliance</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* CTA Section */}"
-      <div className="py-20 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">"
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">"
+      {/* CTA Section */}""
+      <div className="py-20 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">""
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
           <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-            Transform Your IT Asset Management
-          </h2>"
+            Transform Your IT Asset Management;
+          </h2>""
           <p className="text-xl text-gray-300 mb-8">
-            Join leading organizations that have revolutionized their IT
+            Join leading organizations that have revolutionized their IT;
             operations with AI-powered asset management solutions.
-          </p>"
+          </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link"
-              to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 text-lg"
+            <Link""
+              to="/contact""
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 text-lg""
             >
-              Schedule a Demo
+              Schedule a Demo;
             </Link>
-            <Link"
-              to="/services/infrastructure"
-              className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg"
+            <Link""
+              to="/services/infrastructure""
+              className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg""
             >
-              Explore Services
+              Explore Services;
             </Link>
           </div>
         </div>
@@ -220,4 +220,4 @@ const AIPoweredITAssetManagement = () => {
   );
 };
 export default AIPoweredITAssetManagement;
-'"
+'""

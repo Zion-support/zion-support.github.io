@@ -1,34 +1,32 @@
 
 
-const AuthRoutes = () => {
+const AuthRoutes: any = () => {}
   return()
-    <Routes>"
-      <Route path="/login" element={<Login  />} />"
+    <Routes>""
+      <Route path="/login" element={<Login  />} />""
       <Route path="/signup" element={<Signup  />} />
 
       {/* Protected routes that require authentication */}
-      <Route"
-        path="/profile"
-        element={
-
+      <Route""
+        path="/profile""
+        element={}
           <ProtectedRoute>
             <div>Profile Page</div>
           </ProtectedRoute>
 
       />
 
-      <Route"
-        path="/dashboard"
-        element={
-
+      <Route""
+        path="/dashboard""
+        element={}
           <ProtectedRoute>
             <div>Dashboard</div>
           </ProtectedRoute>
 
       />
 
-      <Route"
-        path="/settings"
+      <Route""
+        path="/settings""
         element={;          <ProtectedRoute>;
             <div>Settings</div>;
           </ProtectedRoute>};
@@ -36,4 +34,4 @@ const AuthRoutes = () => {
     </Routes>;
   )};
 
-export default AuthRoutes}}}'"
+export default AuthRoutes}}}'""

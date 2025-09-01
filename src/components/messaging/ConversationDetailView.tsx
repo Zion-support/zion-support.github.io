@@ -9,32 +9,31 @@ import { useAuth } from '@/hooks/useAuth';
 import { MessageBubble } from './MessageBubble';
 import { DateDivider } from './DateDivider';
 
-export function ConversationDetailView() {
+export function ConversationDetailView(function ConversationDetailView() {): any {}
   const { user } = useAuth();
-  const { 
+  const {}
     activeConversation, 
     activeMessages, 
     sendMessage, 
-    loadMessages
+    loadMessages;
   } = useMessaging();
   const [messageText, setMessageText] = useState('');
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesEndRef: any = useRef<HTMLDivElement>(null);
   
-  useEffect(() => {
-    if (activeConversation) {
+  useEffect(() => {}
+    if (activeConversation) {}
       loadMessages(activeConversation.id);
     }
-  }, [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation
-  
-  useEffect(() => {
+  }, [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation;
+  useEffect(() => {}
     scrollToBottom();
   }, [activeMessages]);
 
-  const scrollToBottom = () => {
+  const scrollToBottom: any = () => {}
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
   
-  const handleSendMessage = async (e: React.FormEvent) => {
+  const handleSendMessage: any = async (e: React.FormEvent) => {}
     e.preventDefault();
     if (!messageText.trim() || !activeConversation) return;
     
@@ -42,7 +41,7 @@ export function ConversationDetailView() {
     setMessageText('');
   };
   
-  if (!activeConversation) {
+  if (!activeConversation) {}
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />
@@ -56,21 +55,21 @@ export function ConversationDetailView() {
   
   const groupedMessages: { date: string; messages: any[] }[] = [];
   
-  activeMessages.forEach(message => {
-    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
-    const existingGroup = groupedMessages.find(group => group.date === messageDate);
+  activeMessages.forEach(message => {}
+    const messageDate: any = format(new Date(message.created_at), 'yyyy-MM-dd');
+    const existingGroup: any = groupedMessages.find(group => group.date === messageDate);
     
-    if (existingGroup) {
+    if (existingGroup) {}
       existingGroup.messages.push(message);
-    } else {
-      groupedMessages.push({
+    } else {}
+      groupedMessages.push({}
         date: messageDate,
         messages: [message]
       });
     }
   });
   
-  const hasContextData = activeConversation.context_data && 
+  const hasContextData: any = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description);
 
   return (
@@ -79,7 +78,7 @@ export function ConversationDetailView() {
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
-            <AvatarImage 
+            <AvatarImage;
               src={activeConversation.other_user.avatar_url} 
               alt={activeConversation.other_user.name} 
             />
@@ -92,8 +91,8 @@ export function ConversationDetailView() {
               {activeConversation.other_user.name}
             </div>
             <div className="text-xs text-zion-slate">
-              {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
-               activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
+              {activeConversation.other_user.user_type === 'talent' ? 'Talent' : any;
+               activeConversation.other_user.user_type === 'employer' ? 'Employer' : any;
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
@@ -106,18 +105,18 @@ export function ConversationDetailView() {
             {activeConversation.context_data.image_url && (
               <div className="w-16 h-16 flex-shrink-0">
                 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
-                  <img
+                  <img;
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
-                    className="object-cover"
+                    className="object-cover""
                   />
                 </AspectRatio>
               </div>
             )}
             <div>
               <div className="font-medium text-white mb-1">
-                {activeConversation.context_type === 'job' ? 'Regarding Job:' :
-                 activeConversation.context_type === 'talent' ? 'Regarding Talent:' :
+                {activeConversation.context_type === 'job' ? 'Regarding Job:' : any;
+                 activeConversation.context_type === 'talent' ? 'Regarding Talent:' : any;
                  'Regarding:'}
               </div>
               <div className="text-zion-cyan font-medium">
@@ -144,7 +143,7 @@ export function ConversationDetailView() {
               <DateDivider date={new Date(group.date)} />
               <div className="space-y-3">
                 {group.messages.map((message) => (
-                  <MessageBubble
+                  <MessageBubble;
                     key={message.id}
                     message={message}
                     isUserMessage={message.sender_id === user?.id}
@@ -159,17 +158,17 @@ export function ConversationDetailView() {
       
       <div className="p-3 border-t border-zion-purple/20">
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">
-          <textarea
+          <textarea;
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
-            placeholder="Type a message..."
-            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+            placeholder="Type a message...""
+            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan""
           />
-          <Button 
-            type="submit"
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+          <Button;
+            type="submit""
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white""
           >
-            Send
+            Send;
           </Button>
         </form>
       </div>

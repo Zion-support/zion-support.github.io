@@ -1,18 +1,15 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-export function EnhancedCard({
-
+export function EnhancedCard({}
   children,
   className,
   variant = 'default',
   hover = true,
   onClick,
   as: Component = 'div',
-  href}) {
-
+  href}) {}
   const baseClasses = 'rounded-xl transition-all duration-300';
-  const variantClasses = {
-
+  const variantClasses = {}
     default: 'bg-zion-blue-dark border border-zion-blue-light',
     elevated: 'bg-zion-blue-dark shadow-lg shadow-zion-purple/10',
     outlined: 'bg-transparent border-2 border-zion-cyan/30',
@@ -27,10 +24,9 @@ export function EnhancedCard({
     variantClasses[variant],
     hoverClasses,
     interactiveClasses,
-    className
+    className;
   );
-  if (href) {
-
+  if (href) {}
     return()
       <a href={href} className={classes} onClick={onClick}>
         {children}
@@ -43,8 +39,7 @@ export function EnhancedCard({
     </Component>
   );
 }
-// Enhanced Card Header component
-export function EnhancedCardFooter({ children, className }) {
-
+// Enhanced Card Header component;
+export function EnhancedCardFooter({ children, className }) {}
   return <div className={cn('p-6 pt-0', className)}>{children}</div>;
 }

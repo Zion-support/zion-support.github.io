@@ -9,49 +9,49 @@ import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {
+import {}
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage
 } from "@/components/ui/form";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Link } from "react-router-dom";
 
-// Form validation schema
-const loginSchema = z.object({
+// Form validation schema;
+const loginSchema: any = z.object({}
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
+  password: z.string().min(6, "Password must be at least 6 characters")
 });
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
-export function LoginForm() {
+export function LoginForm(function LoginForm() {): any {}
   const { isLoading, login } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const form = useForm<LoginFormValues>({
+  const form: any = useForm<LoginFormValues>({}
     resolver: zodResolver(loginSchema),
-    defaultValues: {
+    defaultValues: {}
       email: "",
-      password: "",
-    },
+      password: ""
+    }
   });
 
-  const onSubmit = async (data: LoginFormValues) => {
+  const onSubmit: any = async (data: LoginFormValues) => {}
     if (isSubmitting) return;
 
-    try {
+    try {}
       setIsSubmitting(true);
-      const result = await login(data.email, data.password);
-      if (result.error) {
-        form.setError("root", { message: result.error }); // Keep this for form-level error display
-        toast.error(result.error); // Add this line to show a toast notification
+      const result: any = await login(data.email, data.password);
+      if (result.error) {}
+        form.setError("root", { message: result.error }); // Keep this for form-level error display;
+        toast.error(result.error); // Add this line to show a toast notification;
       }
-    } finally {
+    } finally {}
       setIsSubmitting(false);
     }
   };
@@ -63,32 +63,32 @@ export function LoginForm() {
           <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
         </Alert>
       )}
-      <form
-        onSubmit={form.handleSubmit(onSubmit, (errors) => {
-          const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
-          if (firstError) {
+      <form;
+        onSubmit={form.handleSubmit(onSubmit, (errors) => {}
+          const firstError: any = Object.keys(errors)[0] as keyof LoginFormValues;
+          if (firstError) {}
             form.setFocus(firstError);
           }
         })}
-        className="space-y-6"
-        autoComplete="off" // Disable browser autofill
+        className="space-y-6""
+        autoComplete="off" // Disable browser autofill;
       >
-        <FormField
+        <FormField;
           control={form.control}
-          name="email"
+          name="email""
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
               <FormControl>
                 <div className="relative">
-                  <Input
-                    placeholder="you@example.com"
-                    aria-label="Email address"
+                  <Input;
+                    placeholder="you@example.com""
+                    aria-label="Email address""
                     aria-invalid={!!form.formState.errors.email}
-                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
+                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple""
                     {...field}
-                    autoComplete="off" // Disable browser autofill
-                    data-testid="login-email-input"
+                    autoComplete="off" // Disable browser autofill;
+                    data-testid="login-email-input""
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                 </div>
@@ -98,30 +98,30 @@ export function LoginForm() {
           )}
         />
 
-        <FormField
+        <FormField;
           control={form.control}
-          name="password"
+          name="password""
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-zion-slate-light">Password</FormLabel>
               <FormControl>
                 <div className="relative">
-                  <Input
+                  <Input;
                     type={showPassword ? "text" : "password"}
-                    placeholder="Enter password"
-                    aria-label="Password"
+                    placeholder="Enter password""
+                    aria-label="Password""
                     aria-invalid={!!form.formState.errors.password}
-                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
+                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple""
                     {...field}
-                    autoComplete="off" // Disable browser autofill
-                    data-testid="login-password-input"
+                    autoComplete="off" // Disable browser autofill;
+                    data-testid="login-password-input""
                   />
                   <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    size="sm"
-                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
+                  <Button;
+                    type="button""
+                    variant="ghost""
+                    size="sm""
+                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan""
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (
@@ -148,11 +148,11 @@ export function LoginForm() {
           </div>
         </div>
 
-        <Button
-          type="submit"
-          className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+        <Button;
+          type="submit""
+          className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white""
           disabled={isLoading || isSubmitting}
-          data-testid="login-submit-button"
+          data-testid="login-submit-button""
         >
           {isLoading || isSubmitting ? "Logging in..." : "Login"}
         </Button>

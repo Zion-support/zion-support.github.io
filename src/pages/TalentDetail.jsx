@@ -6,7 +6,7 @@ import NotFound from '@/components/NotFound';
 import Spinner from '@/components/Spinner';
 import TalentProfile from '@/components/TalentProfile';
 
-export default function TalentDetail() {
+export default function TalentDetail() {}
   const { id } = useParams();
   const { data, isLoading } = useQuery(
     ['talent', id],

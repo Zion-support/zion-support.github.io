@@ -1,5 +1,4 @@
-import {
-
+import {}
   Atom,
   Cpu,
   Zap,
@@ -22,87 +21,82 @@ import {
   Microscope,
   TestTube} from 'lucide-react.ts';
 
-const QuantumComputingElite: React.FC = (): JSX.Element => {
-
-  
-  
-  
-  
+const QuantumComputingElite: React.FC = (): JSX.Element => {}
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Hero Section */}"
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
+      {/* Hero Section */}""
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >"
-            <div className="flex justify-center mb-6">"
-              <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full">"
+          >""
+            <div className="flex justify-center mb-6">""
+              <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full">""
                 <Atom className="h-12 w-12 text-white"  />              </div>
-            </div>"
+            </div>""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Quantum Computing Elite
-            </h1>"
+              Quantum Computing Elite;
+            </h1>""
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-              Access the future of computing with our cutting-edge quantum
-              computing platform. Solve previously impossible problems with
+              Access the future of computing with our cutting-edge quantum;
+              computing platform. Solve previously impossible problems with;
               quantum advantage and AI-quantum hybrid systems.
-            </p>"
+            </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a"
-                href="https://ziontechgroup.com/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+              <a""
+                href="https://ziontechgroup.com/contact""
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105""
               >
-                Access Quantum Computing"
+                Access Quantum Computing""
                 <ArrowRight className="ml-2 h-5 w-5"  />              </a>
-              <a"
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300"
-              >"
-                <Phone className="mr-2 h-5 w-5"  />                Call Quantum Team
+              <a""
+                href="tel:+13024640950""
+                className="inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300""
+              >""
+                <Phone className="mr-2 h-5 w-5"  />                Call Quantum Team;
               </a>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Features Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
+      {/* Features Section */}""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
-            className="text-center mb-16"
-          >"
+            viewport={{ once: true }}""
+            className="text-center mb-16""
+          >""
             <h2 className="text-4xl font-bold text-white mb-4">
-              Revolutionary Quantum Capabilities
-            </h2>"
+              Revolutionary Quantum Capabilities;
+            </h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our quantum computing platform provides access to the most
+              Our quantum computing platform provides access to the most;
               advanced quantum technologies, enabling breakthroughs in science,
               technology, and business.
             </p>
           </motion.div>
-"
+""
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}"
-                className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-blue-500 transition-all duration-300"
-              >"
-                <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mb-6">"
+                viewport={{ once: true }}""
+                className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-blue-500 transition-all duration-300""
+              >""
+                <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mb-6">""
                   <feature.icon className="h-8 w-8 text-white" />
-                </div>"
+                </div>""
                 <h3 className="text-xl font-semibold text-white mb-4">
                   {feature.title}
-                </h3>"
+                </h3>""
                 <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
@@ -110,38 +104,38 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
         </div>
       </section>
 
-      {/* Quantum Applications Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">"
+      {/* Quantum Applications Section */}""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">""
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
-            className="text-center mb-16"
-          >"
+            viewport={{ once: true }}""
+            className="text-center mb-16""
+          >""
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum Computing Applications
-            </h2>"
+              Quantum Computing Applications;
+            </h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover how quantum computing is revolutionizing industries and
+              Discover how quantum computing is revolutionizing industries and;
               solving previously impossible problems across various domains.
             </p>
           </motion.div>
-"
+""
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {quantumApplications.map((app, index) => (
-              <motion.div
+              <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}"
-                className="bg-zion-slate-dark p-8 rounded-xl border border-zion-slate-light"
-              >"
+                viewport={{ once: true }}""
+                className="bg-zion-slate-dark p-8 rounded-xl border border-zion-slate-light""
+              >""
                 <h3 className="text-xl font-semibold text-white mb-4">
                   {app.title}
-                </h3>"
+                </h3>""
                 <p className="text-zion-slate-light">{app.description}</p>
               </motion.div>
             ))}
@@ -149,37 +143,37 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
         </div>
       </section>
 
-      {/* Quantum Technologies Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
+      {/* Quantum Technologies Section */}""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
-            className="text-center mb-16"
-          >"
+            viewport={{ once: true }}""
+            className="text-center mb-16""
+          >""
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Quantum Technologies
-            </h2>"
+              Advanced Quantum Technologies;
+            </h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Our platform supports multiple quantum computing approaches,
-              ensuring optimal performance for different types of computational
+              ensuring optimal performance for different types of computational;
               problems.
             </p>
           </motion.div>
-"
+""
           <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
             {quantumTechnologies.map((tech, index) => (
-              <motion.div
+              <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}"
-                className="bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center"
-              >"
-                <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mx-auto mb-4">"
+                viewport={{ once: true }}""
+                className="bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center""
+              >""
+                <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mx-auto mb-4">""
                   <Microscope className="h-6 w-6 text-white"  />
                 </div>"                <h3 className="text-lg font-semibold text-white">{tech}</h3>
               </motion.div>
@@ -188,79 +182,78 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
         </div>
       </section>
 
-      {/* Pricing Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">"
+      {/* Pricing Section */}""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">""
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
-            className="text-center mb-16"
-          >"
+            viewport={{ once: true }}""
+            className="text-center mb-16""
+          >""
             <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum Computing Plans
-            </h2>"
+              Quantum Computing Plans;
+            </h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Choose the quantum computing plan that fits your research and
-              business needs. All plans include access to our quantum
+              Choose the quantum computing plan that fits your research and;
+              business needs. All plans include access to our quantum;
               infrastructure and expert support.
             </p>
           </motion.div>
-"
+""
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-              <motion.div
+              <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${
-
+                className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${}
                   plan.popular'
                     ? 'border-blue-500 shadow-2xl shadow-blue-500/25''
                     : 'border-zion-slate-light'`
                 }`}
               >
-                {plan.popular && ("
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
+                {plan.popular && (""
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
-"
-                <div className="text-center mb-8">"
+""
+                <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {plan.name}
-                  </h3>"
-                  <div className="flex items-baseline justify-center">"
+                  </h3>""
+                  <div className="flex items-baseline justify-center">""
                     <span className="text-4xl font-bold text-white">
                       {plan.price}
-                    </span>"
+                    </span>""
                     <span className="text-zion-slate-light ml-1">
                       {plan.period}
                     </span>
-                  </div>"
+                  </div>""
                   <p className="text-zion-slate-light mt-2">
                     {plan.description}
                   </p>
                 </div>
-"
+""
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => ("
-                    <li key={featureIndex} className="flex items-center">"
+                  {plan.features.map((feature, featureIndex) => (""
+                    <li key={featureIndex} className="flex items-center">""
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <a"
-                  href="https://ziontechgroup.com/contact"
-                  className="w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+                <a""
+                  href="https://ziontechgroup.com/contact""
+                  className="w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105""
                 >
-                  Get Quantum Access
+                  Get Quantum Access;
                 </a>
               </motion.div>
             ))}
@@ -268,114 +261,106 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
         </div>
       </section>
 
-      {/* Contact Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"
+      {/* Contact Section */}""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}"
-            className="text-center mb-16"
-          >"
+            viewport={{ once: true }}""
+            className="text-center mb-16""
+          >""
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Access Quantum Computing?
-            </h2>"
+            </h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Get in touch with our quantum computing experts to discuss how
-              quantum computing can accelerate your research and business
+              Get in touch with our quantum computing experts to discuss how;
+              quantum computing can accelerate your research and business;
               objectives.
             </p>
           </motion.div>
-"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">"
-            <div className="text-center">"
-              <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-fit mx-auto mb-4">"
+""
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">""
+            <div className="text-center">""
+              <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-fit mx-auto mb-4">""
                 <Phone className="h-8 w-8 text-white"  />
-              </div>"
+              </div>""
               <h3 className="text-xl font-semibold text-white mb-2">
-                Call Quantum Team
+                Call Quantum Team;
               </h3>
-              <a"
-<<<<<<< HEAD
-                href="tel:+13024640950"
-                className="text-zion-slate-light hover:text-white transition-colors duration-300"
-=======
-                href="tel:+13024640950""                className="text-zion-slate-light hover:text-white transition-colors duration-300"
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+              <a""
+                href="tel:+13024640950""
+                className="text-zion-slate-light hover:text-white transition-colors duration-300""
               >
-                +1 (302) 464-0950
+                +1 (302) 464-0950;
               </a>
             </div>
-"
-            <div className="text-center">"
-              <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-fit mx-auto mb-4">"
+""
+            <div className="text-center">""
+              <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-fit mx-auto mb-4">""
                 <Mail className="h-8 w-8 text-white"  />
-              </div>"
+              </div>""
               <h3 className="text-xl font-semibold text-white mb-2">
-                Email Quantum Team
+                Email Quantum Team;
               </h3>
-              <a"
-<<<<<<< HEAD
-                href="mailto:kleber@ziontechgroup.com"
-                className="text-zion-slate-light hover:text-white transition-colors duration-300"
-=======
-                href="mailto:kleber@ziontechgroup.com""                className="text-zion-slate-light hover:text-white transition-colors duration-300"
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+              <a""
+                href="mailto:kleber@ziontechgroup.com""
+                className="text-zion-slate-light hover:text-white transition-colors duration-300""
               >
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
-"
-            <div className="text-center">"
-              <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-fit mx-auto mb-4">"
+""
+            <div className="text-center">""
+              <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-fit mx-auto mb-4">""
                 <MapPin className="h-8 w-8 text-white"  />
-              </div>"
+              </div>""
               <h3 className="text-xl font-semibold text-white mb-2">
-                Visit Quantum Center
+                Visit Quantum Center;
               </h3>"              <p className="text-zion-slate-light">
-                364 E Main St STE 1008
+                364 E Main St STE 1008;
                 <br />
-                Middletown, DE 19709
+                Middletown, DE 19709;
               </p>
             </div>
           </div>
-"
+""
           <div className="text-center">
-            <a"
-              href="https://ziontechgroup.com/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+            <a""
+              href="https://ziontechgroup.com/contact""
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105""
             >
-              Schedule Quantum Demo"
+              Schedule Quantum Demo""
               <ArrowRight className="ml-2 h-5 w-5"  />            </a>
           </div>
         </div>
       </section>
 
-      {/* Footer */}"
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-zion-slate-light">"
-        <div className="max-w-7xl mx-auto text-center">"
+      {/* Footer */}""
+      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-zion-slate-light">""
+        <div className="max-w-7xl mx-auto text-center">""
           <p className="text-zion-slate-light mb-4">
             © 2024 Zion Tech Group. All rights reserved.
-          </p>"
+          </p>""
           <div className="flex justify-center space-x-6">
-            <a"
-              href="https://ziontechgroup.com"
-              className="text-zion-slate-light hover:text-white transition-colors duration-300"
+            <a""
+              href="https://ziontechgroup.com""
+              className="text-zion-slate-light hover:text-white transition-colors duration-300""
             >
-              Visit Website"
+              Visit Website""
               <ExternalLink className="inline ml-1 h-4 w-4"  />            </a>
-            <a"
-              href="https://ziontechgroup.com/privacy"
-              className="text-zion-slate-light hover:text-white transition-colors duration-300"
+            <a""
+              href="https://ziontechgroup.com/privacy""
+              className="text-zion-slate-light hover:text-white transition-colors duration-300""
             >
-              Privacy Policy
+              Privacy Policy;
             </a>
-            <a"
-              href="https://ziontechgroup.com/terms"
-              className="text-zion-slate-light hover:text-white transition-colors duration-300"
+            <a""
+              href="https://ziontechgroup.com/terms""
+              className="text-zion-slate-light hover:text-white transition-colors duration-300""
             >
-              Terms of Service
+              Terms of Service;
             </a>
           </div>
         </div>

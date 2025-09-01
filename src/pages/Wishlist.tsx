@@ -1,14 +1,13 @@
 
-export default function WishlistPage() {
+export default function WishlistPage(function WishlistPage() {): any {}
   const { favorites, loading } = useFavorites();
   const { user } = useAuth();
   
-  if (!user) {
+  if (!user) {}
     navigate('/login');
     return null}
 
-  const addToCart = (item: { id: string; title?: string; price?: number }) => {
-    
+  const addToCart: any = (item: { id: string; title?: string; price?: number }) => {}
     let cart = stored ? JSON.parse(stored) : [];
     
     if (existing) existing.quantity += 1;
@@ -29,11 +28,10 @@ export default function WishlistPage() {
         <p>No items saved.</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {favorites.map(fav => {
-            if (fav.item_type === 'talent') {
-              
+          {favorites.map(fav => {}
+            if (fav.item_type === 'talent') {}
               return talent ? (
-                <TalentCard
+                <TalentCard;
                   key={fav.item_id}
                   talent={talent}
                   onViewProfile={() => {}}
@@ -46,7 +44,7 @@ export default function WishlistPage() {
               <div key={fav.item_id} className="relative">
                 <ProductListingCard listing={item}  />
                 <Button size="sm" className="absolute bottom-2 right-2" onClick={() => addToCart(item)}>
-                  Add to Cart
+                  Add to Cart;
                 </Button>
               </div>
             ) : null})}

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-
-interface BadgeProps {
+interface BadgeProps {}
   variant?:'
     | 'default''
     | 'secondary''
@@ -12,19 +10,14 @@ interface BadgeProps {
   children: React.ReactNode;
   className?: string;
 
-
-    
-    
     return()
-      <div
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+      <div;
         ref={ref}
         className={cn()
           baseClasses,
           variantClasses[variant],
           sizeClasses[size],
-          className
+          className;
         )}
         {...props}
       >

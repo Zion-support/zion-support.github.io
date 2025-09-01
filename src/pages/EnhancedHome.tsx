@@ -1,4 +1,4 @@
-import {
+import {}
   Users, 
   TrendingUp, 
   Award, 
@@ -53,33 +53,29 @@ import {
   Palette'
 } from 'lucide-react';
 
-// Optimized futuristic animated background component
-
+// Optimized futuristic animated background component;
   return()
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-      {/* Animated grid with neon effect */}"
+      {/* Animated grid with neon effect */}""
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-      
+
       {/* Optimized floating particles */}
       {particles.map((particle) => (
-        <motion.div
-          key={particle.id}"
-          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
-          animate={{
-
+        <motion.div;
+          key={particle.id}""
+          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50""
+          animate={{}
             x: [0, 200, 0],
             y: [0, -200, 0],
             opacity: [0.4, 1, 0.4],
             scale: [0.5, 1.2, 0.5]}}
-          transition={{
-
+          transition={{}
             duration: particle.duration,
             repeat: Infinity,
-            delay: particle.delay,"
-            ease: "easeInOut"
+            delay: particle.delay,""
+            ease: "easeInOut""
           }}
-          style={{
-
+          style={{}
             left: particle.left,
             top: particle.top}}
         />
@@ -89,87 +85,83 @@ import {
 
 FuturisticBackground.displayName = 'FuturisticBackground';
 
-// Enhanced hero section component
-
-  
-  
+// Enhanced hero section component;
   }, [heroSlides.length]) }, [heroSlides.length]) ;
 
-  useEffect ( () => {
-    
+  useEffect ( () => {}
     return () => clearInterval (interval) }, [nextSlide]) ;
-  return ("
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">"
+  return (""
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">""
       <div className="max-w-7xl mx-auto text-center">
         {/* Hero Content */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}"
-          className="mb-12"
-        >"
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 mb-6">"
+          transition={{ duration: 0.8 }}""
+          className="mb-12""
+        >""
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 mb-6">""
             <Sparkles className="w-5 h-5 text-cyan-400 mr-2"  />"            <span className="text-cyan-400 font-medium">2025 Innovation Hub</span>
           </div>
-          "
+          ""
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Zion Tech Group
-          </h1>"
+            Zion Tech Group;
+          </h1>""
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Leading the future of technology with cutting-edge AI solutions, quantum computing, 
             and innovative micro SAAS services that transform businesses worldwide.
           </p>
 
-          {/* CTA Buttons */}"
+          {/* CTA Buttons */}""
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link"
-              to="/services"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
-              aria-label="Explore our services"
+            <Link""
+              to="/services""
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark""
+              aria-label="Explore our services""
             >
-              <span>Explore Services</span>"
+              <span>Explore Services</span>""
               <ArrowRight className="w-5 h-5"  />            </Link>
-            <button
-              onClick={onGetStarted}"
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
-              aria-label="Get started with Zion Tech"
+            <button;
+              onClick={onGetStarted}""
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark""
+              aria-label="Get started with Zion Tech""
             >
-              <span>Get Started</span>"
+              <span>Get Started</span>""
               <ArrowRight className="w-5 h-5"  />            </button>
           </div>
         </motion.div>
 
         {/* Hero Slides */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}"
-          className="max-w-6xl mx-auto"
-        >"
-          <div className="relative">"
+          transition={{ duration: 0.8, delay: 0.2 }}""
+          className="max-w-6xl mx-auto""
+        >""
+          <div className="relative">""
             <AnimatePresence mode="wait">
-              <motion.div
+              <motion.div;
                 key={currentSlide}
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}"
-                className="text-center"
-              >"
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-6">"
+                transition={{ duration: 0.5 }}""
+                className="text-center""
+              >""
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-6">""
                   <heroSlides[currentSlide].icon className="w-10 h-10 text-cyan-400" />
-                </div>"
+                </div>""
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                   {heroSlides[currentSlide].title}
-                </h3>"
+                </h3>""
                 <p className="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">
                   {heroSlides[currentSlide].description}
-                </p>"
+                </p>""
                 <div className="flex flex-wrap justify-center gap-3">
                   {heroSlides[currentSlide].features.map((feature, index) => (
-                    <span
-                      key={index}"
-                      className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-cyan-300 border border-cyan-400/30"
+                    <span;
+                      key={index}""
+                      className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-cyan-300 border border-cyan-400/30""
                     >
                       {feature}
                     </span>) ) }
@@ -178,27 +170,26 @@ FuturisticBackground.displayName = 'FuturisticBackground';
             </AnimatePresence>
 
             {/* Navigation Arrows */}
-            <button
-              onClick={prevSlide}"
-              className="absolute left-0 top-1/2 -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400"
-              aria-label="Previous slide"
-            >"
+            <button;
+              onClick={prevSlide}""
+              className="absolute left-0 top-1/2 -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400""
+              aria-label="Previous slide""
+            >""
               <ChevronLeft className="w-6 h-6"  />            </button>
-            <button
-              onClick={nextSlide}"
-              className="absolute right-0 top-1/2 -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400"
-              aria-label="Next slide"
-            >"
+            <button;
+              onClick={nextSlide}""
+              className="absolute right-0 top-1/2 -translate-y-1/2 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400""
+              aria-label="Next slide""
+            >""
               <ChevronRight className="w-6 h-6"  />            </button>
 
-            {/* Dots Indicator */}"
+            {/* Dots Indicator */}""
             <div className="flex justify-center mt-6 space-x-2">
               {heroSlides.map((_, index) => (
-                <button
+                <button;
                   key={index}
                   onClick={() => setCurrentSlide(index)}`
-                  className={`w-3 h-3 rounded-full transition-colors ${
-
+                  className={`w-3 h-3 rounded-full transition-colors ${}
                     index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'`
                   }`}`
                   aria-label={`Go to slide ${index + 1}`}
@@ -213,41 +204,40 @@ FuturisticBackground.displayName = 'FuturisticBackground';
 
 HeroSection.displayName = 'HeroSection';
 
-// Enhanced features section
-
-  return ("
-    <section className="py-20 px-4 sm:px-6 lg:px-8">"
+// Enhanced features section;
+  return (""
+    <section className="py-20 px-4 sm:px-6 lg:px-8">""
       <div className="max-w-7xl mx-auto">
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}"
-          className="text-center mb-16"
-        >"
+          transition={{ duration: 0.6 }}""
+          className="text-center mb-16""
+        >""
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Why Choose Zion Tech Group?
-          </h2>"
+          </h2>""
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We combine cutting-edge technology with proven expertise to deliver solutions that drive real business value.
           </p>
         </motion.div>
-"
+""
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <motion.div
+            <motion.div;
               key={feature.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}"
-              className="group"
-            >"
+              transition={{ duration: 0.6, delay: index * 0.1 }}""
+              className="group""
+            >""
               <div className="relative p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:bg-white/10">`
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>"
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>""
                   <feature.icon className="w-8 h-8 text-white" />
-                </div>"
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>"
+                </div>""
+                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>""
                 <p className="text-gray-300 leading-relaxed">{feature.description}</p>
               </div>
             </motion.div>) ) }
@@ -258,25 +248,24 @@ HeroSection.displayName = 'HeroSection';
 
 FeaturesSection.displayName = 'FeaturesSection';
 
-// Enhanced stats section
-
-  return ("
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-slate-dark to-zion-slate">"
-      <div className="max-w-7xl mx-auto">"
+// Enhanced stats section;
+  return (""
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-slate-dark to-zion-slate">""
+      <div className="max-w-7xl mx-auto">""
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <motion.div
+            <motion.div;
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}"
-              className="text-center"
-            >"
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-4">"
+              transition={{ duration: 0.6, delay: index * 0.1 }}""
+              className="text-center""
+            >""
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-4">""
                 <stat.icon className="w-8 h-8 text-cyan-400" />
-              </div>"
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>"
+              </div>""
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>""
               <div className="text-gray-300">{stat.label}</div>
             </motion.div>
           ))}
@@ -287,64 +276,49 @@ FeaturesSection.displayName = 'FeaturesSection';
 
 StatsSection.displayName = 'StatsSection';
 
-// Enhanced CTA section
-
+// Enhanced CTA section;
 });
 
-=======
-  )});
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 CTASection.displayName = 'CTASection';
 
-// Main EnhancedHome component
-const EnhancedHome: React.FC = () => {
+// Main EnhancedHome component;
+const EnhancedHome: React.FC = () => {}
   const [isLoaded, setIsLoaded] = useState (false) ;
 
-  useEffect ( () => {
+  useEffect ( () => {}
     setIsLoaded (true) }, []) ;
 
-  
-    if (servicesSection) {
-
+    if (servicesSection) {}
       servicesSection.scrollIntoView({ behavior: 'smooth' })}
   }, []) ;
-  if (!isLoaded) {
-
-    return ("
-      <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center">"
+  if (!isLoaded) {}
+    return (""
+      <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center">""
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400"></div>
       </div>
     )}
 
   return()
     <>
-      <EnhancedSEO "
-<<<<<<< HEAD
-        title="Zion Tech Group - Leading AI Solutions & Technology Services"
-        description="Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation."
-        keywords="AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services"
-        type="website"
-       />
-=======
+      <EnhancedSEO ""
         title="Zion Tech Group - Leading AI Solutions & Technology Services""
         description="Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation.""
-        keywords="AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services""        type="website"
+        keywords="AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services""
+        type="website""
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      
+
       <FuturisticBackground  />
       "      <div className="relative z-10">
         <HeroSection onGetStarted={handleGetStarted}   />
-        
+
         <LazyLoadWrapper>
           <FeaturesSection  />
         </LazyLoadWrapper>
-        
+
         <LazyLoadWrapper>
           <StatsSection  />
         </LazyLoadWrapper>
-        
+
         <LazyLoadWrapper>
           <CTASection  />
         </LazyLoadWrapper>

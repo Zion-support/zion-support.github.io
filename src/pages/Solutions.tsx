@@ -1,16 +1,14 @@
-<<<<<<< HEAD
-
-const Solutions: React.FC = () => {
+const Solutions: React.FC = () => {}
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <SEO "
-        title="Solutions - Zion Tech Group"
-        description="Explore industry and capability solutions including enterprise and healthcare."
-       />"
-      <div className="container-responsive py-16">"
-        <h1 className="text-4xl font-bold mb-6">Solutions</h1>"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
-          <Link to="/solutions/enterprise" className="p-6 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-cyan-400 transition">Enterprise</Link>"
+      <SEO ""
+        title="Solutions - Zion Tech Group""
+        description="Explore industry and capability solutions including enterprise and healthcare.""
+       />""
+      <div className="container-responsive py-16">""
+        <h1 className="text-4xl font-bold mb-6">Solutions</h1>""
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">""
+          <Link to="/solutions/enterprise" className="p-6 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-cyan-400 transition">Enterprise</Link>""
           <Link to="/solutions/healthcare" className="p-6 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-cyan-400 transition">Healthcare</Link>
         </div>
       </div>
@@ -18,10 +16,7 @@ const Solutions: React.FC = () => {
 
 export default Solutions;
 
-import {
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
+import {}
   Brain,
   Cloud,
   Cpu,
@@ -36,20 +31,11 @@ import {
   Filter'
 } from 'lucide-react';
 
-
       'Legacy Modernization',;
       'Digital Strategy',;
       'Change Management',;
       'Technology Consulting';
     ]};
-=======
-      'Process Automation','
-      'Customer Experience',;'
-      'Legacy Modernization',;'
-      'Digital Strategy',;'
-      'Change Management',;'      'Technology Consulting';
-    ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 ;
 
@@ -68,10 +54,8 @@ import {
     color: 'from-blue-500 to-cyan-600'};
 ];
 
-  
-    // Retail & E-commerce Solutions
-    {
-
+    // Retail & E-commerce Solutions;
+    {}
       title: 'AI & Machine Learning',
       icon: Brain,
       description: 'Cutting-edge AI solutions for business transformation',
@@ -80,8 +64,7 @@ import {
         'AI Business Intelligence',Machine Learning Platforms',Natural Language Processing',Computer Vision Systems',Predictive Analytics',AI Automation'
       ]
     },
-    {
-
+    {}
       title: 'Cloud & Infrastructure',
       icon: Cloud,
       description: 'Scalable cloud solutions and infrastructure management',
@@ -91,9 +74,8 @@ import {
       ]
     },
 
-    // Education Solutions
-    {
-
+    // Education Solutions;
+    {}
       title: 'Cybersecurity',
       icon: Shield,
       description: 'Advanced security solutions for modern threats',
@@ -103,9 +85,8 @@ import {
       ]
     },
 
-    // Government Solutions
-    {
-
+    // Government Solutions;
+    {}
       title: 'Quantum Computing',
       icon: Atom,
       description: 'Next-generation quantum computing solutions',
@@ -116,56 +97,50 @@ import {
     }
   ];
 
-  
-  return ("
+  return (""
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
-      {/* Hero Section */}"
-      <section className="pt-24 pb-16">"
+      {/* Hero Section */}""
+      <section className="pt-24 pb-16">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
-  y: 20 
-
+  y: 20;
 }}
-            animate = {
-
+            animate = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
-            transition={{ duration: 0.6 }}"
-            className="text-center"
-          >"
-            <div className="flex items-center justify-center space-x-3 mb-6">"
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-cyan-500/50">"
+            transition={{ duration: 0.6 }}""
+            className="text-center""
+          >""
+            <div className="flex items-center justify-center space-x-3 mb-6">""
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-cyan-500/50">""
                 <Target className="w-8 h-8 text-white"  />              </div>
               <div>
       </section>
 
-        {/* Industry Filter */}"
-        <section className="py-16 px-4">"
-          <div className="max-w-6xl mx-auto">"
+        {/* Industry Filter */}""
+        <section className="py-16 px-4">""
+          <div className="max-w-6xl mx-auto">""
             <div className="flex flex-wrap gap-4 justify-center">
               {industries.map((industry) => (
-                <button
+                <button;
                   key={industry.id}
                   onClick={() => setSelectedIndustry(industry.id)}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center ${
-
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center ${}
                     selectedIndustry === industry.id'
                       ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30''
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-700/50'`
                   }`}
-                >"
+                >""
                   <industry.icon className="w-5 h-5 mr-2" />
                   {industry.name}
                 </button>) ) }
-                <select
+                <select;
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  onChange={(e) => setSelectedCategory(e.target.value)}""
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan""
                 >
                   {categories.map (category => (<option key={category} value={category}>{category}</option>) ) }
                 </select>
@@ -173,10 +148,10 @@ import {
 
               {/* Industry Filter */}
               <div>
-                <select
+                <select;
                   value={selectedIndustry}
-                  onChange={(e) => setSelectedIndustry(e.target.value)}"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  onChange={(e) => setSelectedIndustry(e.target.value)}""
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan""
                 >
                   {industries.map (industry => (<option key={industry} value={industry}>{industry}</option>) ) }
                 </select>
@@ -186,49 +161,47 @@ import {
         </div>
       </section>
 
-      {/* Solution Categories */}"
-      <section className="py-16">"
+      {/* Solution Categories */}""
+      <section className="py-16">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}"
-            className="mb-12 text-center"
-          >"
-            <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>"
+            viewport={{ once: true }}""
+            className="mb-12 text-center""
+          >""
+            <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>""
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>
           </motion.div>
-"
+""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutionCategories.map((category, index) => {
-
-              
-              return()                <motion.div
+            {solutionCategories.map((category, index) => {}
+              return()                <motion.div;
                   key={category.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}"
-                  className="group cursor-pointer"
+                  viewport={{ once: true }}""
+                  className="group cursor-pointer""
                 >`
-                  <Link to={`/solutions#${category.id}`}>"
+                  <Link to={`/solutions#${category.id}`}>""
                     <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300 h-full">`
-                      <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>"
+                      <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>""
                         <IconComponent className="w-8 h-8 text-white"  />
-                      </div>"
-                      <h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>"
-                      <p className="text-zion-slate-light mb-4">{category.description}</p>"
+                      </div>""
+                      <h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>""
+                      <p className="text-zion-slate-light mb-4">{category.description}</p>""
                       <div className="space-y-2">
-                        {category.solutions.slice(0, 4).map((solution, idx) => ("
-                          <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
+                        {category.solutions.slice(0, 4).map((solution, idx) => (""
+                          <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">""
                             <CheckCircle className="w-3 h-3 text-green-400"  />
                             <span>{solution}</span>
                           </div>
                         ))}
-                      </div>"
-                      <div className="mt-4 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">"
-                        <span className="text-sm font-medium">Learn More</span>"
+                      </div>""
+                      <div className="mt-4 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">""
+                        <span className="text-sm font-medium">Learn More</span>""
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300"  />
                       </div>
                     </div>
@@ -237,49 +210,47 @@ import {
         </div>
       </section>
 
-      {/* Industry Solutions */}"
-      <section className="py-16">"
+      {/* Industry Solutions */}""
+      <section className="py-16">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}"
-            className="mb-12 text-center"
-          >"
-            <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>'"
+            viewport={{ once: true }}""
+            className="mb-12 text-center""
+          >""
+            <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>'""
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>
           </motion.div>
-"
+""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industrySolutions.map((industry, index) => {
-
-              
-              return()                <motion.div
+            {industrySolutions.map((industry, index) => {}
+              return()                <motion.div;
                   key={industry.industry}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}"
-                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
+                  viewport={{ once: true }}""
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300""
                 >`
-                  <div className={`w-16 h-16 bg-gradient-to-br ${industry.color} rounded-2xl flex items-center justify-center mb-4`}>"
+                  <div className={`w-16 h-16 bg-gradient-to-br ${industry.color} rounded-2xl flex items-center justify-center mb-4`}>""
                     <IconComponent className="w-8 h-8 text-white"  />
-                  </div>"
-                  <h3 className="text-xl font-bold text-white mb-3">{industry.industry}</h3>"
+                  </div>""
+                  <h3 className="text-xl font-bold text-white mb-3">{industry.industry}</h3>""
                   <div className="space-y-2">
-                    {industry.solutions.slice(0, 4).map((solution, idx) => ("
-                      <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
+                    {industry.solutions.slice(0, 4).map((solution, idx) => (""
+                      <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">""
                         <CheckCircle className="w-3 h-3 text-green-400"  />                        <span>{solution}</span>
                       </div>
                     ))}
-                  </div>"
+                  </div>""
                   <div className="mt-4">
                     <Link`
-                      to={`/solutions/${industry.industry.toLowerCase()}`}"
-                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+                      to={`/solutions/${industry.industry.toLowerCase()}`}""
+                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300""
                     >
-                      View {industry.industry} Solutions"
+                      View {industry.industry} Solutions""
                       <ArrowRight className="ml-2 h-4 w-4"  />
                     </Link>
                   </div>
@@ -287,85 +258,83 @@ import {
         </div>
       </section>
 
-      {/* Featured Solutions */}"
-      <section className="py-16">"
+      {/* Featured Solutions */}""
+      <section className="py-16">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}"
-            className="mb-12 text-center"
-          >"
-            <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>"
+            viewport={{ once: true }}""
+            className="mb-12 text-center""
+          >""
+            <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>""
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>
           </motion.div>
-"
+""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredSolutions.map((solution, index) => {
-
-              
-              return()                <motion.div
+            {filteredSolutions.map((solution, index) => {}
+              return()                <motion.div;
                   key={solution.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}"
-                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
+                  viewport={{ once: true }}""
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300""
                 >
-                  {/* Header */}"
-                  <div className="flex items-start justify-between mb-4">"
+                  {/* Header */}""
+                  <div className="flex items-start justify-between mb-4">""
                     <div className="flex items-center gap-3">`
-                      <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-2xl flex items-center justify-center`}>"
+                      <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-2xl flex items-center justify-center`}>""
                         <IconComponent className="w-8 h-8 text-white"  />                      </div>
-                      <div>"
-                        <h3 className="text-xl font-bold text-white mb-1">{solution.name}</h3>"
+                      <div>""
+                        <h3 className="text-xl font-bold text-white mb-1">{solution.name}</h3>""
                         <span className="text-sm text-zion-cyan">{solution.category}</span>
                       </div>
-                    </div>"
-                    <div className="text-right">"
-                      <div className="text-2xl font-bold text-zion-cyan">{solution.price}</div>"
+                    </div>""
+                    <div className="text-right">""
+                      <div className="text-2xl font-bold text-zion-cyan">{solution.price}</div>""
                       <div className="text-sm text-zion-slate-light">Starting Price</div>
                     </div>
                   </div>
 
-                  {/* Description */}"
+                  {/* Description */}""
                   <p className="text-zion-slate-light mb-4">{solution.description}</p>
 
-                  {/* Features */}"
-                  <div className="mb-4">"
-                    <h4 className="font-semibold text-white mb-2">Key Features</h4>"
+                  {/* Features */}""
+                  <div className="mb-4">""
+                    <h4 className="font-semibold text-white mb-2">Key Features</h4>""
                     <div className="grid grid-cols-1 gap-1">
-                      {solution.features.slice(0, 4).map((feature, idx) => ("
-                        <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
+                      {solution.features.slice(0, 4).map((feature, idx) => (""
+                        <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">""
                           <CheckCircle className="w-3 h-3 text-green-400"  />                          <span>{feature}</span>
                         </div>) ) }
                     </div>
                   </div>
 
-                  {/* Benefits */}"
-                  <div className="mb-4">"
-                    <h4 className="font-semibold text-white mb-2">Business Benefits</h4>"
+                  {/* Benefits */}""
+                  <div className="mb-4">""
+                    <h4 className="font-semibold text-white mb-2">Business Benefits</h4>""
                     <div className="grid grid-cols-1 gap-1">
-                      {solution.benefits.map((benefit, idx) => ("
-                        <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
+                      {solution.benefits.map((benefit, idx) => (""
+                        <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">""
                           <Star className="w-3 h-3 text-yellow-400"  />                          <span>{benefit}</span>
                         </div>) ) }
                     </div>
                   </div>
 
-                  {/* Implementation & CTA */}"
-                  <div className="flex items-center justify-between">"
-                    <div className="text-sm text-zion-slate-light">"
-                      <span className="flex items-center gap-1">"
+                  {/* Implementation & CTA */}""
+                  <div className="flex items-center justify-between">""
+                    <div className="text-sm text-zion-slate-light">""
+                      <span className="flex items-center gap-1">""
                         <Clock className="w-4 h-4"  />                        Implementation: {solution.implementation}
                       </span>
                     </div>
                     <Link`
-                      to={`/solutions/${solution.id}`}"
-                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+                      to={`/solutions/${solution.id}`}""
+                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300""
                     >
-                      Learn More"
+                      Learn More""
                       <ArrowRight className="ml-2 h-4 w-4"  />
                     </Link>
                   </div>
@@ -373,107 +342,97 @@ import {
         </div>
       </section>
 
-      {/* CTA Section */}"
-      <section className="py-16">"
+      {/* CTA Section */}""
+      <section className="py-16">""
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}"
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
-          >"
+            viewport={{ once: true }}""
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8""
+          >""
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
-            </h2>"
+            </h2>""
             <p className="text-zion-slate-light text-lg mb-8">
-              Let's discuss how our technology solutions can address your specific challenges 
+              Let's discuss how our technology solutions can address your specific challenges;
               and drive measurable results for your organization.
-            </p>"
+            </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link"
-                to="/contact"
-                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
+              <Link""
+                to="/contact""
+                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg""
               >
-                Get Started Today"
+                Get Started Today""
                 <ArrowRight className="ml-2 h-5 w-5"  />              </Link>
-              <Link"
-                to="/case-studies"
-                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
+              <Link""
+                to="/case-studies""
+                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg""
               >
-                Get Custom Quote
+                Get Custom Quote;
               </Link>
             </div>
           </div>
         </section>
 
-      {/* Solution Categories */}"
-      <section className="py-16">"
+      {/* Solution Categories */}""
+      <section className="py-16">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
-  y: 20 
-
+  y: 20;
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}"
-            className="mb-12 text-center"
-          >;"
-            <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>;"
+            viewport={{ once: true }}""
+            className="mb-12 text-center""
+          >;""
+            <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>;""
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>;
           </motion.div>;
-;"
+;""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {solutionCategories.map((category, index) => {;
-              
-              return()                <motion.div
+
+              return()                <motion.div;
                   key = {category.id}
-                  initial = {
-
+                  initial = {}
   { opacity: 0,
-  y: 20 
-
+  y: 20;
 }}
-                  whileInView = {
-
+                  whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
-                  transition = {
-
+                  transition = {}
   { duration: 0.6,
-  delay: index * 0.1 
-
+  delay: index * 0.1;
 }}
-                  viewport={{ once: true }}"
-                  className="group cursor-pointer"
+                  viewport={{ once: true }}""
+                  className="group cursor-pointer""
                 >`
-                  <Link to={`/solutions#${category.id}`}>"
+                  <Link to={`/solutions#${category.id}`}>""
                     <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300 h-full">`
-                      <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>"
+                      <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>""
                         <IconComponent className="w-8 h-8 text-white"  />
-                      </div>"
-                      <h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>"
-                      <p className="text-zion-slate-light mb-4">{category.description}</p>"
+                      </div>""
+                      <h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>""
+                      <p className="text-zion-slate-light mb-4">{category.description}</p>""
                       <div className="space-y-2">
-                        {category.solutions.slice(0, 4).map((solution, idx) => ("
-                          <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
+                        {category.solutions.slice(0, 4).map((solution, idx) => (""
+                          <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">""
                             <CheckCircle className="w-3 h-3 text-green-400"  />
                             <span>{solution}</span>
                           </div>
                         ))}
-                      </div>"
-                      <div className="mt-4 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">;"
-                        <span className="text-sm font-medium">Learn More</span>;"
+                      </div>""
+                      <div className="mt-4 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">;""
+                        <span className="text-sm font-medium">Learn More</span>;""
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300"  />;
                       </div>;
                     </div>;
@@ -482,73 +441,63 @@ import {
         </div>
       </section>
 
-      {/* Industry Solutions */}"
-      <section className = "py-16">"
+      {/* Industry Solutions */}""
+      <section className = "py-16">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
-  y: 20 
-
+  y: 20;
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}"
-            className="mb-12 text-center"
-          >;"
-            <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>;'"
+            viewport={{ once: true }}""
+            className="mb-12 text-center""
+          >;""
+            <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>;'""
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>;
           </motion.div>;
-;"
+;""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {industrySolutions.map((industry, index) => {;
-              
-              return()                <motion.div
+
+              return()                <motion.div;
                   key = {industry.industry}
-                  initial = {
-
+                  initial = {}
   { opacity: 0,
-  y: 20 
-
+  y: 20;
 }}
-                  whileInView = {
-
+                  whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
-                  transition = {
-
+                  transition = {}
   { duration: 0.6,
-  delay: index * 0.1 
-
+  delay: index * 0.1;
 }}
-                  viewport={{ once: true }}"
-                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
+                  viewport={{ once: true }}""
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300""
                 >`
-                  <div className={`w-16 h-16 bg-gradient-to-br ${industry.color} rounded-2xl flex items-center justify-center mb-4`}>"
+                  <div className={`w-16 h-16 bg-gradient-to-br ${industry.color} rounded-2xl flex items-center justify-center mb-4`}>""
                     <IconComponent className="w-8 h-8 text-white"  />
-                  </div>"
-                  <h3 className="text-xl font-bold text-white mb-3">{industry.industry}</h3>"
+                  </div>""
+                  <h3 className="text-xl font-bold text-white mb-3">{industry.industry}</h3>""
                   <div className="space-y-2">
-                    {industry.solutions.slice(0, 4).map((solution, idx) => ("
-                      <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
+                    {industry.solutions.slice(0, 4).map((solution, idx) => (""
+                      <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">""
                         <CheckCircle className="w-3 h-3 text-green-400"  />                        <span>{solution}</span>
                       </div>
                     ))}
-                  </div>"
+                  </div>""
                   <div className="mt-4">
                     <Link`
-                      to={`/solutions/${industry.industry.toLowerCase()}`}"
+                      to={`/solutions/${industry.industry.toLowerCase()}`}""
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300";
                     >;
-                      View {industry.industry} Solutions;"
+                      View {industry.industry} Solutions;""
                       <ArrowRight className="ml-2 h-4 w-4"  />;
                     </Link>;
                   </div>;
@@ -556,152 +505,138 @@ import {
         </div>
       </section>;
 
-      {/* Featured Solutions */}"
-      <section className = "py-16">;"
+      {/* Featured Solutions */}""
+      <section className = "py-16">;""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
-  y: 20 
-
+  y: 20;
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}"
-            className="mb-12 text-center"
-          >;"
-            <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>;"
+            viewport={{ once: true }}""
+            className="mb-12 text-center""
+          >;""
+            <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>;""
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>;
           </motion.div>;
-;"
+;""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredSolutions.map((solution, index) => {;
-              
-              return()                <motion.div
+
+              return()                <motion.div;
                   key = {solution.id}
-                  initial = {
-
+                  initial = {}
   { opacity: 0,
-  y: 20 
-
+  y: 20;
 }}
-                  whileInView = {
-
+                  whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
-                  transition = {
-
+                  transition = {}
   { duration: 0.6,
-  delay: index * 0.1 
-
+  delay: index * 0.1;
 }}
-                  viewport={{ once: true }}"
-                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-                >"
-                  <div className="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6">"
+                  viewport={{ once: true }}""
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300""
+                >""
+                  <div className="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6">""
                     <solution.icon className="w-8 h-8 text-blue-400" />
                   </div>
-                  "
-                  <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>"
+                  ""
+                  <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>""
                   <p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
-                  
-                  {/* Features */}"
-                  <div className="mb-6">"
-                    <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features</h4>"
+
+                  {/* Features */}""
+                  <div className="mb-6">""
+                    <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features</h4>""
                     <div className="grid grid-cols-2 gap-2">
-                      {solution.features.slice(0, 4).map((feature, idx) => ("
-                        <div key={idx} className="flex items-center space-x-2 text-gray-300 text-sm">"
+                      {solution.features.slice(0, 4).map((feature, idx) => (""
+                        <div key={idx} className="flex items-center space-x-2 text-gray-300 text-sm">""
                           <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0"  />                          <span>{feature}</span>
                         </div>) ) }
                     </div>
                   </div>
 
-                  {/* Benefits */}"
-                  <div className="mb-6">"
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Benefits</h4>"
+                  {/* Benefits */}""
+                  <div className="mb-6">""
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Benefits</h4>""
                     <ul className="space-y-2">
-                      {solution.benefits.map((benefit, idx) => ("
-                        <li key={idx} className="flex items-start space-x-2 text-gray-300 text-sm">"
+                      {solution.benefits.map((benefit, idx) => (""
+                        <li key={idx} className="flex items-start space-x-2 text-gray-300 text-sm">""
                           <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                           <span>{benefit}</span>
                         </li>) ) }
                     </ul>
                   </div>
 
-                  {/* Actions */}"
-                  <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">"
+                  {/* Actions */}""
+                  <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">""
                     <div className="flex space-x-2">
-                      {solution.demo && ("
-                        <button className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-500 transition-colors duration-300">"
-                          <Play className="w-4 h-4 mr-1 inline"  />                          Demo
+                      {solution.demo && (""
+                        <button className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-500 transition-colors duration-300">""
+                          <Play className="w-4 h-4 mr-1 inline"  />                          Demo;
                         </button>
                       )}
-                      {solution.trial && ("
+                      {solution.trial && (""
                         <button className="px-4 py-2 border border-blue-600 text-blue-400 text-sm font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-300">
-                          Start Trial
+                          Start Trial;
                         </button>) }
                     </div>
                     <Link`
-                      to={`/solutions/${solution.id}`}"
-                      className="text-blue-400 hover:text-blue-300 text-sm font-medium"
+                      to={`/solutions/${solution.id}`}""
+                      className="text-blue-400 hover:text-blue-300 text-sm font-medium""
                     >
-                      Learn More;"
+                      Learn More;""
                       <ArrowRight className="ml-2 h-4 w-4"  />;
                     </Link>;
                   </div>;
                 </motion.div>;) }) }          </div>
         </motion.div>
 
-      {/* CTA Section */}"
-      <section className = "py-16">"
+      {/* CTA Section */}""
+      <section className = "py-16">""
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
-  y: 20 
-
+  y: 20;
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}"
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
-          >"
+            viewport={{ once: true }}""
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8""
+          >""
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
-            </h3>"
+            </h3>""
             <p className="text-gray-300 mb-6">
               Let our experts help you find the perfect solution for your industry and business needs.
-            </p>"
+            </p>""
             <div className="flex flex-wrap justify-center gap-4">
-              <Link"
-                to="/contact"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold"
+              <Link""
+                to="/contact""
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold""
               >
-                Get Started
+                Get Started;
               </Link>
-              <Link"
-                to="/request-quote"
-                className="px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-all duration-300 font-semibold"
+              <Link""
+                to="/request-quote""
+                className="px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-all duration-300 font-semibold""
               >
-                Request Quote
+                Request Quote;
               </Link>
-              <Link"
-                to="/case-studies"
-                className="px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-all duration-300 font-semibold"
+              <Link""
+                to="/case-studies""
+                className="px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-all duration-300 font-semibold""
               >
                 View Case Studies;
               </Link>;

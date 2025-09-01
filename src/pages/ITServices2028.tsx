@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-import {
-
+import {}
   Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Server, Cloud, Database, Network, Lock, Code, Rocket, Building,
   Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth,
@@ -15,10 +13,7 @@ import {
   Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX'
  } from 'lucide-react';
 
-
       'Quantum-ready computing nodes',Advanced AI optimization',Zero-latency networking',Quantum encryption',Auto-scaling infrastructure',Real-time monitoring',Disaster recovery',Global CDN',API management',DevOps automation'
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],;
     popular: true,
     icon: Cloud,
@@ -29,10 +24,9 @@ import {
     growthRate: '320% annual growth',
     rating: 4.9,
     reviews: 89,
-    customers: 45
+    customers: 45;
   },
-  {
-
+  {}
     id: 'ai-powered-cybersecurity',
     name: 'AI-Powered Cybersecurity Suite',
     tagline: 'Intelligent threat detection and response',
@@ -51,10 +45,9 @@ import {
     growthRate: '280% annual growth',
     rating: 4.8,
     reviews: 234,
-    customers: 156
+    customers: 156;
   },
-  {
-
+  {}
     id: 'quantum-database-platform',
     name: 'Quantum Database Platform',
     tagline: 'Quantum-powered database management system',
@@ -73,10 +66,9 @@ import {
     growthRate: '240% annual growth',
     rating: 4.7,
     reviews: 123,
-    customers: 67
+    customers: 67;
   },
-  {
-
+  {}
     id: 'ai-network-optimization',
     name: 'AI Network Optimization',
     tagline: 'Intelligent network performance and security',
@@ -95,10 +87,9 @@ import {
     growthRate: '260% annual growth',
     rating: 4.8,
     reviews: 189,
-    customers: 98
+    customers: 98;
   },
-  {
-
+  {}
     id: 'quantum-devops-automation',
     name: 'Quantum DevOps Automation',
     tagline: 'Next-generation development and operations automation',
@@ -117,10 +108,9 @@ import {
     growthRate: '300% annual growth',
     rating: 4.9,
     reviews: 267,
-    customers: 134
+    customers: 134;
   },
-  {
-
+  {}
     id: 'ai-data-analytics-platform',
     name: 'AI Data Analytics Platform',
     tagline: 'Intelligent business intelligence and analytics',

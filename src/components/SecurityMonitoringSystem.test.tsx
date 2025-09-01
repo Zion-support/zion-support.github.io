@@ -1,11 +1,11 @@
 
 
-describe ('SecurityMonitoringSystem', () => {
-  it ('renders without crashing', () => {
+describe ('SecurityMonitoringSystem', () => {}
+  it ('renders without crashing', () => {}
     render (<SecurityMonitoringSystem  />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<SecurityMonitoringSystem  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;

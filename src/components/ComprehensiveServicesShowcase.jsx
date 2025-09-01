@@ -1,19 +1,18 @@
 import { motion } from 'framer-motion';
-import { comprehensiveMicroSaasServices2025 } from "../../data/2025-comprehensive-micro-saas-services";"
-import { innovativeITAIServices2025 } from "../../data/2025-innovative-it-ai-services";"
-import { expandedInnovativeServices2025 } from "../../data/2025-expanded-innovative-services";"
-import { emergingTechInnovationServices2025 } from "../../data/2025-emerging-tech-innovations";"
+import { comprehensiveMicroSaasServices2025 } from "../../data/2025-comprehensive-micro-saas-services";""
+import { innovativeITAIServices2025 } from "../../data/2025-innovative-it-ai-services";""
+import { expandedInnovativeServices2025 } from "../../data/2025-expanded-innovative-services";""
+import { emergingTechInnovationServices2025 } from "../../data/2025-emerging-tech-innovations";""
 import { enterpriseITInnovationServices2025 } from "../../data/2025-enterprise-it-innovations";
-const ComprehensiveServicesShowcase = () => {
-
+const ComprehensiveServicesShowcase = () => {}
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedService, setSelectedService] = useState(null);
-    const allServices = [
+    const allServices = []
         ...comprehensiveMicroSaasServices2025,
         ...innovativeITAIServices2025,
         ...expandedInnovativeServices2025,
         ...emergingTechInnovationServices2025,
-        ...enterpriseITInnovationServices2025
+        ...enterpriseITInnovationServices2025;
     ];
     const categories = ['
         { id: 'all', name: 'All Services', count: allServices.length },
@@ -59,12 +58,11 @@ const ComprehensiveServicesShowcase = () => {
         { id: 'enterprise-digital-twin-iot', name: 'Enterprise Digital Twin & IoT', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Digital Twin') || s.category.includes('IoT'))).length }
     ];
     const filteredServices = selectedCategory === 'all'
-        ? allServices
-        : allServices.filter(service => {
-
+        ? allServices;
+        : allServices.filter(service => {}
             const category = categories.find(c => c.id === selectedCategory);
             if (!category)
                 return true;
-            // Handle special category mappings
-            const categoryMappings = {
-'"
+            // Handle special category mappings;
+            const categoryMappings = {}
+'""

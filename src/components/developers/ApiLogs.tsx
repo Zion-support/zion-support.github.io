@@ -8,44 +8,43 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 
-export function ApiLogs() {
+export function ApiLogs(function ApiLogs() {): any {}
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
   
-  useEffect(() => {
+  useEffect(() => {}
     fetchApiLogs(pageSize, currentPage * pageSize);
-  }, [pageSize, currentPage, fetchApiLogs]); // Added fetchApiLogs
-  
-  const handleRefresh = () => {
+  }, [pageSize, currentPage, fetchApiLogs]); // Added fetchApiLogs;
+  const handleRefresh: any = () => {}
     fetchApiLogs(pageSize, currentPage * pageSize);
   };
   
-  const formatTimestamp = (timestamp: string) => {
+  const formatTimestamp: any = (timestamp: string) => {}
     return format(new Date(timestamp), 'yyyy-MM-dd HH:mm:ss');
   };
   
-  const getStatusBadge = (statusCode: number) => {
-    if (statusCode >= 200 && statusCode < 300) {
+  const getStatusBadge: any = (statusCode: number) => {}
+    if (statusCode >= 200 && statusCode < 300) {}
       return <Badge className="bg-green-700">Success</Badge>;
-    } else if (statusCode >= 400 && statusCode < 500) {
+    } else if (statusCode >= 400 && statusCode < 500) {}
       return <Badge className="bg-amber-700">Client Error</Badge>;
-    } else if (statusCode >= 500) {
+    } else if (statusCode >= 500) {}
       return <Badge className="bg-red-700">Server Error</Badge>;
-    } else {
+    } else {}
       return <Badge className="bg-blue-700">Other</Badge>;
     }
   };
   
-  const totalPages = Math.ceil(totalLogs / pageSize);
-  const hasNextPage = currentPage < totalPages - 1;
-  const hasPrevPage = currentPage > 0;
+  const totalPages: any = Math.ceil(totalLogs / pageSize);
+  const hasNextPage: any = currentPage < totalPages - 1;
+  const hasPrevPage: any = currentPage > 0;
 
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
-          <List className="mr-2" size={20} /> API Request Logs
+          <List className="mr-2" size={20} /> API Request Logs;
         </CardTitle>
         <CardDescription className="text-zinc-400">
           View logs of requests made using your API keys.
@@ -56,9 +55,9 @@ export function ApiLogs() {
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center space-x-2">
             <span className="text-sm text-zinc-400">Show</span>
-            <Select
+            <Select;
               value={pageSize.toString()}
-              onValueChange={(value) => {
+              onValueChange={(value) => {}
                 setPageSize(Number(value));
                 setCurrentPage(0); 
               }}
@@ -77,7 +76,7 @@ export function ApiLogs() {
           </div>
           
           <Button variant="outline" size="sm" onClick={handleRefresh}>
-            <RefreshCw size={14} className="mr-1" /> Refresh
+            <RefreshCw size={14} className="mr-1" /> Refresh;
           </Button>
         </div>
         
@@ -120,16 +119,16 @@ export function ApiLogs() {
                   <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">
                     <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
                     <td className="px-4 py-3">
-                      <Badge 
-                        variant="outline"
-                        className={
+                      <Badge;
+                        variant="outline""
+                        className={}
                           log.method === 'GET' 
-                            ? "border-green-500 text-green-400" 
+                            ? "border-green-500 text-green-400""
                             : log.method === 'POST' 
-                            ? "border-blue-500 text-blue-400"
+                            ? "border-blue-500 text-blue-400""
                             : log.method === 'PUT'
-                            ? "border-yellow-500 text-yellow-400"
-                            : "border-red-500 text-red-400"
+                            ? "border-yellow-500 text-yellow-400""
+                            : "border-red-500 text-red-400""
                         }
                       >
                         {log.method}
@@ -156,24 +155,24 @@ export function ApiLogs() {
         {logs.length > 0 && (
           <div className="mt-4 flex justify-between items-center">
             <div className="text-sm text-zinc-500">
-              Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs
+              Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs;
             </div>
             <div className="flex space-x-2">
-              <Button
-                variant="outline"
-                size="sm"
+              <Button;
+                variant="outline""
+                size="sm""
                 disabled={!hasPrevPage}
                 onClick={() => setCurrentPage(currentPage - 1)}
               >
-                Previous
+                Previous;
               </Button>
-              <Button
-                variant="outline"
-                size="sm"
+              <Button;
+                variant="outline""
+                size="sm""
                 disabled={!hasNextPage}
                 onClick={() => setCurrentPage(currentPage + 1)}
               >
-                Next
+                Next;
               </Button>
             </div>
           </div>

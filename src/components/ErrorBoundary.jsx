@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import {
-
+import {}
   AlertTriangle,
   RefreshCw,
   Home,
@@ -11,34 +10,27 @@ import {
   Zap} from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
-function ErrorFallback({ error, resetError, retryCount = 0 }) {
-
+function ErrorFallback({ error, resetError, retryCount = 0 }) {}
   const navigate = useNavigate();
   const maxRetries = 3;
 
-  const handleRetry = () => {
-    if (retryCount < maxRetries) {
-
+  const handleRetry = () => {}
+    if (retryCount < maxRetries) {}
       resetError();
-    } else {
-
+    } else {}
       // After max retries, redirect to home'
       navigate('/');
     }
   };
 
-  const getErrorType = error => {
-
-    if (error?.name === 'NetworkError' || error?.message?.includes('network')) {
-
+  const getErrorType = error => {}
+    if (error?.name === 'NetworkError' || error?.message?.includes('network')) {}
       return 'network';
     }
-    if (error?.name === 'TypeError' || error?.message?.includes('undefined')) {
-
+    if (error?.name === 'TypeError' || error?.message?.includes('undefined')) {}
       return 'runtime';
     }
-    if (error?.name === 'ReferenceError') {
-
+    if (error?.name === 'ReferenceError') {}
       return 'reference';
     }
     return 'general';
@@ -46,27 +38,26 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
 
   const errorType = getErrorType(error);
 
-  const errorMessages = {
-
-    network: {
+  const errorMessages = {}
+    network: {}
       title: 'Connection Error',
       description: "We're having trouble connecting to our servers. Please check your internet connection and try again.",
       icon: Shield,
       color: 'text-orange-400'
     },
-    runtime: {
+    runtime: {}
       title: 'Runtime Error',
       description: 'Something unexpected happened while processing your request. Our team has been notified.',
       icon: Bug,
       color: 'text-red-400'
     },
-    reference: {
+    reference: {}
       title: 'Reference Error',
       description: 'There was an issue with the page resources. Please refresh and try again.',
       icon: AlertTriangle,
       color: 'text-yellow-400'
     },
-    general: {
+    general: {}
       title: 'Something went wrong',
       description: "We encountered an unexpected error. Don't worry, our team has been notified.",
       icon: AlertTriangle,
@@ -128,38 +119,38 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
 
         <div className="space-y-3">
           {retryCount < maxRetries ? (
-            <Button
+            <Button;
               onClick={handleRetry}
-              className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white transition-all duration-200"
+              className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white transition-all duration-200""
             >
               <RefreshCw className="w-4 h-4 mr-2" />
-              Try Again
+              Try Again;
             </Button>
           ) : (
-            <Button
+            <Button;
               onClick={() => window.location.reload()}
-              className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue-dark transition-all duration-200"
+              className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue-dark transition-all duration-200""
             >
               <Zap className="w-4 h-4 mr-2" />
-              Reload Page
+              Reload Page;
             </Button>
           )}
 
-          <Button
-            variant="outline"
+          <Button;
+            variant="outline""
             onClick={() => navigate(-1)}
-            className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark transition-all duration-200"
+            className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark transition-all duration-200""
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Go Back
+            Go Back;
           </Button>
 
-          <Link
-            to="/"
-            className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-all duration-200"
+          <Link;
+            to="/""
+            className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-all duration-200""
           >
             <Home className="w-4 h-4 inline mr-2" />
-            Go Home
+            Go Home;
           </Link>
         </div>
 
@@ -177,41 +168,35 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
   );
 }
 
-export function ErrorBoundary({ children, fallback, onError }) {
-
+export function ErrorBoundary({ children, fallback, onError }) {}
   const [hasError, setHasError] = useState(false);
   const [error, setError] = useState(null);
   const [retryCount, setRetryCount] = useState(0);
 
-  useEffect(() => {
-    const handleError = event => {
-
+  useEffect(() => {}
+    const handleError = event => {}
       setHasError(true);
       setError(event.error);
-      if (onError) {
-
+      if (onError) {}
         onError(event.error, { componentStack: event.error?.stack });
       }
 
-      // Log error to console in development
-      if (process.env.NODE_ENV === 'development') {
+      // Log error to console in development;
+      if (process.env.NODE_ENV === 'development') {}
         // console.error('ErrorBoundary caught an error:', event.error);
       }
     };
 
-    const handleUnhandledRejection = event => {
-
+    const handleUnhandledRejection = event => {}
       setHasError(true);
       setError(new Error(event.reason));
-      if (onError) {
-
-        onError(new Error(event.reason), {
-
+      if (onError) {}
+        onError(new Error(event.reason), {}
           componentStack: event.reason?.stack});
       }
 
-      // Log error to console in development
-      if (process.env.NODE_ENV === 'development') {
+      // Log error to console in development;
+      if (process.env.NODE_ENV === 'development') {}
         // console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
       }
     };
@@ -219,27 +204,24 @@ export function ErrorBoundary({ children, fallback, onError }) {
     window.addEventListener('error', handleError);
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
-    return () => {
-
+    return () => {}
       window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleUnhandledRejection);
     };
   }, [onError]);
 
-  const resetError = () => {
+  const resetError = () => {}
     setHasError(false);
     setError(null);
     setRetryCount(prev => prev + 1);
   };
 
-  if (hasError) {
-
-    if (fallback) {
-
+  if (hasError) {}
+    if (fallback) {}
       return fallback;
     }
     return (
-      <ErrorFallback
+      <ErrorFallback;
         error={error || undefined}
         resetError={resetError}
         retryCount={retryCount}
@@ -250,28 +232,25 @@ export function ErrorBoundary({ children, fallback, onError }) {
   return <>{children}</>;
 }
 
-// Hook for functional components to handle errors
-export function useErrorHandler() {
+// Hook for functional components to handle errors;
+export function useErrorHandler() {}
   const [error, setError] = useState(null);
 
-  const handleError = error => {
-
+  const handleError = error => {}
     setError(error);
     // console.error('useErrorHandler caught an error:', error);
   };
 
-  const clearError = () => {
+  const clearError = () => {}
     setError(null);
   };
 
   return { error, handleError, clearError };
 }
 
-// Higher-order component for error handling
-export function withErrorBoundary(Component, fallback = null) {
-
-  return function WrappedComponent(props) {
-
+// Higher-order component for error handling;
+export function withErrorBoundary(Component, fallback = null) {}
+  return function WrappedComponent(props) {}
     return (
       <ErrorBoundary fallback={fallback}>
         <Component {...props} />

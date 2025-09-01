@@ -1,22 +1,22 @@
 
-interface ServiceTypeStepProps {
+interface ServiceTypeStepProps {}
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void}
 
 
-export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
+export function ServiceTypeStep(function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {): any {}
   const [searchQuery, setSearchQuery] = useState("");
   
-  const {
+  const {}
     data: listings = [],
     isPending: loading,
-    error,
-  } = useQuery({
+    error
+  } = useQuery({}
     queryKey: ['services', formData.serviceType, debouncedQuery],
     queryFn: () =>
       fetchServices(formData.serviceType, debouncedQuery),
     enabled: !!formData.serviceType,
-    retry: 2,
+    retry: 2
   })}};
   
   
@@ -32,11 +32,11 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Card 
-            className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData.serviceType === "service" 
-                ? "bg-zion-purple/20 border-zion-purple" 
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
+          <Card;
+            className={`p-4 cursor-pointer border-2 transition-colors ${}
+              formData.serviceType === "service""
+                ? "bg-zion-purple/20 border-zion-purple""
+                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50""
             }`}
             onClick={() => handleTypeSelect("service")}
           >
@@ -44,11 +44,11 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p>
           </Card>
           
-          <Card 
-            className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData.serviceType === "talent" 
-                ? "bg-zion-purple/20 border-zion-purple" 
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
+          <Card;
+            className={`p-4 cursor-pointer border-2 transition-colors ${}
+              formData.serviceType === "talent""
+                ? "bg-zion-purple/20 border-zion-purple""
+                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50""
             }`}
             onClick={() => handleTypeSelect("talent")}
           >
@@ -56,11 +56,11 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p>
           </Card>
           
-          <Card 
-            className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData.serviceType === "equipment" 
-                ? "bg-zion-purple/20 border-zion-purple" 
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
+          <Card;
+            className={`p-4 cursor-pointer border-2 transition-colors ${}
+              formData.serviceType === "equipment""
+                ? "bg-zion-purple/20 border-zion-purple""
+                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50""
             }`}
             onClick={() => handleTypeSelect("equipment")}
           >
@@ -76,11 +76,11 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4"  />
-            <Input
+            <Input;
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
+              className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple""
             />
           </div>
 
@@ -99,11 +99,11 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
               </>
             ) : filteredListings.length > 0 ? (
               filteredListings.map((item) => (
-                <div
+                <div;
                   key={item.id}
                   onClick={() => handleItemSelect(item)}
-                  className={`cursor-pointer transition-all ${
-                    formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
+                  className={`cursor-pointer transition-all ${}
+                    formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : """
                   }`}
                 >
                   <ListingScoreCard title={item.title}
@@ -112,7 +112,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                     rating={Math.floor(Math.random() * 2) + 3}
                     reviewCount={Math.floor(Math.random() * 50) + 10}
                     image={item.image}
-                    description="Sample listing description"
+                    description="Sample listing description""
                    />
                 </div>
               ))

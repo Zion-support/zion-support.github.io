@@ -1,29 +1,18 @@
-<<<<<<< HEAD
-import {
-
+import {}
   Card,
-  CardContent
+  CardContent;
  } from '@/components/ui/card';
 import { QuoteStatusCards,
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   QuotesFilter,
   QuotesTable'
  } from '@/components/admin/quotes';
 export { function };
-export default function QuoteManager(...args[]):  {
-
-<<<<<<< HEAD
+export default function QuoteManager(...args[]):  {}
   const { user } = useAuth();
-  
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-=======
-  const { user } = useAuth();'
-  const isAdmin = user?.userType === 'admin';  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  const [showDetails, setShowDetails] = useState<typeof false>(false);
-  const {
 
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetails, setShowDetails] = useState<typeof false>(false);
+  const {}
     quotes,
     isLoading,
     error,
@@ -37,8 +26,8 @@ export default function QuoteManager(...args[]):  {
     setDateRange,
     updateStatus,
     toggleArchive,
-    deleteQuote
+    deleteQuote;
   } = useAdminQuotes();
-  // Count quotes by status
-  const statusCounts = {
-'"
+  // Count quotes by status;
+  const statusCounts: any = {}
+'""

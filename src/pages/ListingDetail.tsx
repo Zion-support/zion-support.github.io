@@ -1,7 +1,7 @@
 
 
-export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a
+export default function ListingDetail(function ListingDetail() {): any {}
+  // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.
   const { id } = useParams() as { id?: string };
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -10,9 +10,8 @@ export default function ListingDetail() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { user } = useAuth();
 
-  // Find the listing from our shared data source - now also checking equipment listings
-  
-  if (!listing) {
+  // Find the listing from our shared data source - now also checking equipment listings;
+  if (!listing) {}
     return (
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
@@ -28,7 +27,7 @@ export default function ListingDetail() {
       )}
 
   
-    } else {
+    } else {}
       setIsContactDialogOpen(true)}
   };
 
@@ -42,12 +41,11 @@ export default function ListingDetail() {
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 <div className="aspect-[16/9] w-full relative">
                   {listing.images && listing.images.length > 0 ? (
-                    <img 
+                    <img;
                       src={listing.images[selectedImageIndex]} 
                       alt={listing.title} 
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        
+                      className="w-full h-full object-cover""
+                      onError={(e) => {}
                         target.src = "/placeholder.svg"}}
                     />
                   ) : (
@@ -60,20 +58,19 @@ export default function ListingDetail() {
                 {listing.images && listing.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
                     {listing.images.map((image, index) => (
-                      <div 
+                      <div;
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={cn(
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
-                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent""
                         )}
                       >
-                        <img 
+                        <img;
                           src={image} 
                           alt={`${listing.title} - image ${index + 1}`} 
-                          className="w-full h-full object-cover"
-                          onError={(e) => {
-                            
+                          className="w-full h-full object-cover""
+                          onError={(e) => {}
                             target.src = "/placeholder.svg"}}
                         />
                       </div>
@@ -135,7 +132,7 @@ export default function ListingDetail() {
                   </Badge>
                   {listing.featured && (
                     <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
-                      Featured
+                      Featured;
                     </Badge>
                   )}
                 </div>
@@ -159,7 +156,7 @@ export default function ListingDetail() {
                     </div>
                   ) : (
                     <div className="text-2xl font-bold text-white">
-                      Custom Pricing
+                      Custom Pricing;
                     </div>
                   )}
                 </div>
@@ -167,36 +164,36 @@ export default function ListingDetail() {
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">
                   {listing.price !== null ? (
-                    <PaymentButton
+                    <PaymentButton;
                       amount={listing.price}
                       serviceId={listing.id}
                       providerId={listing.author.id}
-                      buttonText="Buy Now"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
-                      onPaymentInitiated={() => {
-                        toast({
+                      buttonText="Buy Now""
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6""
+                      onPaymentInitiated={() => {}
+                        toast({}
                           title: "Payment Processing",
-                          description: "Redirecting to secure checkout..."
+                          description: "Redirecting to secure checkout...""
                         })}}
                     />
                   ) : (
-                    <Button 
+                    <Button;
                       onClick={handleContact}
                       disabled={isLoading}
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6""
                     >
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>
                   )}
                   
-                  <Button 
-                    variant="outline" 
+                  <Button;
+                    variant="outline""
                     onClick={handleContact}
                     disabled={isLoading}
-                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
+                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10""
                   >
                     <MessageSquare className="h-4 w-4 mr-2"  />
-                    Contact Publisher
+                    Contact Publisher;
                   </Button>
                 </div>
                 
@@ -205,12 +202,11 @@ export default function ListingDetail() {
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
                   <div className="flex items-center gap-3">
                     {listing.author.avatarUrl ? (
-                      <img 
+                      <img;
                         src={listing.author.avatarUrl} 
                         alt={listing.author.name} 
-                        className="h-12 w-12 rounded-full"
-                        onError={(e) => {
-                          
+                        className="h-12 w-12 rounded-full""
+                        onError={(e) => {}
                           target.src = "https://ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)}}
                       />
                     ) : (
@@ -242,7 +238,7 @@ export default function ListingDetail() {
         </div>
       </div>
 
-      <ChatWidget
+      <ChatWidget;
         roomId={listing.id}
         recipientId={listing.author.id}
         isOpen={isChatOpen}
@@ -255,9 +251,9 @@ export default function ListingDetail() {
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
-          <ProfileContact email={listing.author.email} // TypeScript now knows this might be undefined
+          <ProfileContact email={listing.author.email} // TypeScript now knows this might be undefined;
             profileName={listing.author.name}
-            profileType="service"
+            profileType="service""
            />
         </DialogContent>
       </Dialog>

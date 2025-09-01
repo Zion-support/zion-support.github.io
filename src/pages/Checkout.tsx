@@ -1,41 +1,39 @@
-import {
+import {}
   Form,
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
+  FormMessage
 } from '@/components/ui/form';
 
-interface CartItem {
+interface CartItem {}
   id: string;
   name: string;
   price: number;
   quantity: number}
 
-interface CheckoutForm {
+interface CheckoutForm {}
   name: string;
   email: string;
   address: string;
   city: string;
   country: string}
 
-export default function Checkout() {
-  
+export default function Checkout(function Checkout() {): any {}
   const [searchParams] = useSearchParams();
   const [items, setItems] = useState<CartItem[]>([]);
   
   
-  useEffect(() => {
-    
-    if (sku) {
+  useEffect(() => {}
+    if (sku) {}
       setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
       return}
 
     
-    if (stored) {
-      try {
-        setItems(JSON.parse(stored) as CartItem[])} catch {
+    if (stored) {}
+      try {}
+        setItems(JSON.parse(stored) as CartItem[])} catch {}
         setItems([])}
     }
   }, [searchParams]);
@@ -47,12 +45,11 @@ export default function Checkout() {
       
       if (!res.ok) throw new Error(result.error || 'Failed');
       
-      if (stripe && result.clientSecret) {
-        
+      if (stripe && result.clientSecret) {}
         if (payment.error) throw payment.error;
         safeStorage.removeItem('cart');
         navigate(`/orders/${result.id}`)}
-    } catch (err) {
+    } catch (err) {}
       console.error('Payment failed', err)}
   };
 
@@ -107,11 +104,11 @@ export default function Checkout() {
                 <FormMessage  />
               </FormItem>
             )} />
-            <CheckoutShippingOptions toAddress={{
+            <CheckoutShippingOptions toAddress={{}
                 name: watchAddr[0],
                 address: watchAddr[1],
                 city: watchAddr[2],
-                country: watchAddr[3],
+                country: watchAddr[3]
               }}
               onSelect={setShippingRate}
              />

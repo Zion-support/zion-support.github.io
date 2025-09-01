@@ -1,8 +1,5 @@
-export function generateRandomListing () : MarketplaceItem {
-export function generateRandomListings (count: number) : MarketplaceItem[] {
-
-
-
+export function generateRandomListing () : MarketplaceItem {}
+export function generateRandomListings (count: number) : MarketplaceItem[] {}
   'Quantum Computing Hardware',;
   'Data Science Consulting',;
   'Blockchain Development Service',;
@@ -38,7 +35,7 @@ export function generateRandomListings (count: number) : MarketplaceItem[] {
   'https://images.unsplash.com / photo - 1507003211169 - 0a1dd7228f2d?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2070 & q=80';
 ];
 
-const categories: Array < any> = [
+const categories: Array < any> = []
   'products',talent',equipment',services'
 ];
 
@@ -64,7 +61,7 @@ const categories: Array < any> = [
   
   
   
-  return {
+  return {}
     id: `listing-${Date.now () }-${Math.random () .toString (36) .substr (2, 9) }`,
     title: sampleTitles[randomIndex] || 'Default Title',
     category: category || 'products',
@@ -77,7 +74,7 @@ const categories: Array < any> = [
     image: image || 'https://images.unsplash.com / photo - 1451187580459 - 43490279c0fa?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2072 & q=80',
     tags: sampleTags[randomIndex] || ['Technology',Solution'],
     featured: Math.random () > 0.7,
-    seller: {
+    seller: {}
       name: sellerName || 'Default Seller',
       rating: 4.0 + Math.random () * 1.0,;
       verified: Math.random () > 0.3},;
@@ -87,7 +84,7 @@ const categories: Array < any> = [
     warranty: category === 'talent' ? 'N / A' : `${Math.floor (Math.random () * 3) + 1} year${Math.floor (Math.random () * 3) + 1 > 1 ? 's' : ''}`};
 
   const listings: MarketplaceItem[] = [];
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < count; i++) {}
     listings.push (generateRandomListing () ) ;
 
   return listings}}}

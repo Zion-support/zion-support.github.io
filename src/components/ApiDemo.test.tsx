@@ -1,11 +1,11 @@
 
 
-describe ('ApiDemo', () => {
-  it ('renders without crashing', () => {
+describe ('ApiDemo', () => {}
+  it ('renders without crashing', () => {}
     render (<ApiDemo  />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<ApiDemo  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;

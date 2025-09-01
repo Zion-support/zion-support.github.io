@@ -1,11 +1,11 @@
 
 
-describe ('InteractiveUserExperience', () => {
-  it ('renders without crashing', () => {
+describe ('InteractiveUserExperience', () => {}
+  it ('renders without crashing', () => {}
     render (<InteractiveUserExperience  />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<InteractiveUserExperience  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;

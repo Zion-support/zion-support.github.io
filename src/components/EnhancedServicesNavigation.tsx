@@ -1,145 +1,139 @@
-<<<<<<< HEAD
-
-
 const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
   const [isOpen, setIsOpen] = useState (false) ;
   const [activeCategory, setActiveCategory] = useState<any> (null) ;
 
-  
-        {
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-"
-          title: "Code Review & Security","
-          url: "/services/ai-code-review-security","
-          description: "85% vulnerability reduction","
-          pricing: "From $49/month"
+        {}
+""
+          title: "Code Review & Security",""
+          url: "/services/ai-code-review-security",""
+          description: "85% vulnerability reduction",""
+          pricing: "From $49/month""
         },
-        {
-"
-          title: "Customer Experience Analytics","
-          url: "/services/ai-customer-experience-analytics","
-          description: "35% satisfaction increase","
-          pricing: "From $299/month"
+        {}
+""
+          title: "Customer Experience Analytics",""
+          url: "/services/ai-customer-experience-analytics",""
+          description: "35% satisfaction increase",""
+          pricing: "From $299/month""
         },
-        {
-"
-          title: "DevOps Automation","
-          url: "/services/ai-devops-automation-platform","
-          description: "80% deployment time reduction","
-          pricing: "From $199/month"
+        {}
+""
+          title: "DevOps Automation",""
+          url: "/services/ai-devops-automation-platform",""
+          description: "80% deployment time reduction",""
+          pricing: "From $199/month""
         },
-        {
-"
-          title: "IoT Edge Computing","
-          url: "/services/ai-iot-edge-computing-platform","
-          description: "90% latency reduction","
-          pricing: "From $299/month"
+        {}
+""
+          title: "IoT Edge Computing",""
+          url: "/services/ai-iot-edge-computing-platform",""
+          description: "90% latency reduction",""
+          pricing: "From $299/month""
         }
       ]
     },;
-    {
-"
-      name: "Cloud & Infrastructure","
-      description: "Enterprise solutions","
-      icon: "☁️","
+    {}
+""
+      name: "Cloud & Infrastructure",""
+      description: "Enterprise solutions",""
+      icon: "☁️",""
       color: "from-green-600 to-blue-600",
       services[;
-        {
-"
-          title: "Cloud DevOps","
-          url: "/services/cloud-devops","
-          description: "Streamlined deployment","
-          pricing: "Custom pricing"
+        {}
+""
+          title: "Cloud DevOps",""
+          url: "/services/cloud-devops",""
+          description: "Streamlined deployment",""
+          pricing: "Custom pricing""
         },
-        {
-"
-          title: "IT Infrastructure","
-          url: "/services/it-infrastructure","
-          description: "Enterprise-grade solutions","
-          pricing: "Custom pricing"
+        {}
+""
+          title: "IT Infrastructure",""
+          url: "/services/it-infrastructure",""
+          description: "Enterprise-grade solutions",""
+          pricing: "Custom pricing""
         },
-        {
-"
-          title: "Digital Twin","
-          url: "/services/digital-twin","
-          description: "Virtual representations","
-          pricing: "Custom pricing"
+        {}
+""
+          title: "Digital Twin",""
+          url: "/services/digital-twin",""
+          description: "Virtual representations",""
+          pricing: "Custom pricing""
         }
       ]
     },;
-    {
-"
-      name: "Data & Analytics","
-      description: "Business intelligence","
-      icon: "📊","
+    {}
+""
+      name: "Data & Analytics",""
+      description: "Business intelligence",""
+      icon: "📊",""
       color: "from-purple-600 to-pink-600",
       services[;
-        {
-"
-          title: "Data Analytics","
-          url: "/services/data-analytics","
-          description: "Comprehensive analysis","
-          pricing: "Custom pricing"
+        {}
+""
+          title: "Data Analytics",""
+          url: "/services/data-analytics",""
+          description: "Comprehensive analysis",""
+          pricing: "Custom pricing""
         },
-        {
-"
-          title: "AI Business Intelligence","
-          url: "/services/ai-business-intelligence","
-          description: "AI-powered insights","
-          pricing: "Custom pricing"
+        {}
+""
+          title: "AI Business Intelligence",""
+          url: "/services/ai-business-intelligence",""
+          description: "AI-powered insights",""
+          pricing: "Custom pricing""
         },
-        {
-"
-          title: "IoT Edge","
-          url: "/services/iot-edge","
-          description: "Real-time processing","
-          pricing: "Custom pricing"
+        {}
+""
+          title: "IoT Edge",""
+          url: "/services/iot-edge",""
+          description: "Real-time processing",""
+          pricing: "Custom pricing""
         }
       ]
     },;
-    {
-"
-      name: "Security & Compliance","
-      description: "Enterprise security","
-      icon: "🔒","
+    {}
+""
+      name: "Security & Compliance",""
+      description: "Enterprise security",""
+      icon: "🔒",""
       color: "from-red-600 to-orange-600",
       services[;
-        {
-"
-          title: "Zero Trust Architecture","
-          url: "/services/zero-trust-network-architecture","
-          description: "Modern security framework","
-          pricing: "Custom pricing"
+        {}
+""
+          title: "Zero Trust Architecture",""
+          url: "/services/zero-trust-network-architecture",""
+          description: "Modern security framework",""
+          pricing: "Custom pricing""
         },
-        {
-"
-          title: "Cybersecurity Suite","
-          url: "/services/ai-cybersecurity-suite","
-          description: "Comprehensive security","
-          pricing: "Custom pricing"
+        {}
+""
+          title: "Cybersecurity Suite",""
+          url: "/services/ai-cybersecurity-suite",""
+          description: "Comprehensive security",""
+          pricing: "Custom pricing""
         },
-        {
-"
-          title: "Compliance Assistant","
-          url: "/services/ai-compliance-assistant","
-          description: "AI-powered compliance","
-          pricing: "Custom pricing"
+        {}
+""
+          title: "Compliance Assistant",""
+          url: "/services/ai-compliance-assistant",""
+          description: "AI-powered compliance",""
+          pricing: "Custom pricing""
         }
       ]};
   ]};  ];
 
-  return ("
+  return (""
     <div className = "relative">
       {/* Main Services Button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}"
-        className="relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-      >"
+      <button;
+        onClick={() => setIsOpen(!isOpen)}""
+        className="relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2""
+      >""
         <span className="flex items-center gap-2">
           <span>🚀</span>
           <span > Services</span>
-          <motion.span
+          <motion.span;
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
           >
@@ -150,104 +144,86 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
 
       {/* Services Dropdown */}
       <AnimatePresence>
-        {isOpen && (<motion.div
-            initial = {
-
+        {isOpen && (<motion.div;
+            initial = {}
   { opacity: 0, y: -10,
-  scale: 0.95 
-
+  scale: 0.95;
 }}
-            animate = {
-
+            animate = {}
   { opacity: 1, y: 0,
-  scale: 1 
-
+  scale: 1;
 }}
-            exit = {
-
+            exit = {}
   { opacity: 0, y: -10,
-  scale: 0.95 
-
+  scale: 0.95;
 }}
-            transition={{ duration: 0.2 }}"
-            className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden"
-          >"
+            transition={{ duration: 0.2 }}""
+            className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden""
+          >""
             <div className="p-6">
-              {/* Header */}"
-              <div className="text-center mb-8">"
+              {/* Header */}""
+              <div className="text-center mb-8">""
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Our Complete Service Portfolio
-                </h3>"
+                  Our Complete Service Portfolio;
+                </h3>""
                 <p className="text-gray-600">
-                  From AI-powered micro SAAS to enterprise infrastructure solutions
+                  From AI-powered micro SAAS to enterprise infrastructure solutions;
                 </p>
               </div>
 
-              {/* Service Categories Grid */}"
+              {/* Service Categories Grid */}""
               <div className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">
                 {serviceCategories.map((category, categoryIndex)  => (
-                  <motion.div
+                  <motion.div;
                     key={category.name}
-                    initial = {
-
+                    initial = {}
   { opacity: 0,
-  x: categoryIndex % 2 === 0 ? -20 : 20 
-
+  x: categoryIndex % 2 === 0 ? -20 : 20;
 }}
-                    animate = {
-
+                    animate = {}
   { opacity: 1,
-  x: 0 
-
+  x: 0;
 }}
-                    transition = {
-
+                    transition = {}
   { duration: 0.3,
-  delay: categoryIndex * 0.1 
-
-}}"
-                    className="relative group"
+  delay: categoryIndex * 0.1;
+}}""
+                    className="relative group""
                     onMouseEnter={ () => setActiveCategory (category.name) }
                     onMouseLeave={ () => setActiveCategory (null) }
                   >
-                    <div className={`p-6 rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover:scale-105`}>"
-                      <div className="flex items-center gap-3 mb-4">"
+                    <div className={`p-6 rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover:scale-105`}>""
+                      <div className="flex items-center gap-3 mb-4">""
                         <span className="text-2xl">{category.icon}</span>
-                        <div>"
-                          <h4 className="text-lg font-semibold">{category.name}</h4>"
+                        <div>""
+                          <h4 className="text-lg font-semibold">{category.name}</h4>""
                           <p className="text-sm opacity-90">{category.description}</p>
                         </div>
                       </div>
-                      "
+                      ""
                       <div className="space-y-2">
                         {category.services.map((service, serviceIndex) => (
-                          <motion.div
+                          <motion.div;
                             key={service.title}
-                            initial = {
-
+                            initial = {}
   { opacity: 0,
-  x: -10 
-
+  x: -10;
 }}
-                            animate = {
-
+                            animate = {}
   { opacity: 1,
-  x: 0 
-
+  x: 0;
 }}
-                            transition = {
-
+                            transition = {}
   { duration: 0.2,
-  delay: serviceIndex * 0.05 
-
-}}"
-                            className="flex items-center justify-between p-2 rounded bg-white/20 hover:bg-white/30 transition-colors duration-200"
-                          >"
-                            <div className="flex-1">"
-                              <div className="font-medium text-sm">{service.title}</div>"
+  delay: serviceIndex * 0.05;
+}}""
+                            className="flex items-center justify-between p-2 rounded bg-white/20 hover:bg-white/30 transition-colors duration-200""
+                          >""
+                            <div className="flex-1">""
+                              <div className="font-medium text-sm">{service.title}</div>""
                               <div className="text-xs opacity-80">{service.description}</div>
-                            </div>"
-                            <div className="text-right">"
+                            </div>""
+                            <div className="text-right">""
                               <div className="text-xs font-semibold">{service.pricing}</div>
                             </div>
                           </motion.div>) ) }
@@ -256,45 +232,39 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
                   </motion.div>) ) }
               </div>
 
-              {/* Quick Links */}"
-              <div className="border-t border-gray-200 pt-6">"
+              {/* Quick Links */}""
+              <div className="border-t border-gray-200 pt-6">""
                 <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">
-                  Quick Access
-                </h4>"
+                  Quick Access;
+                </h4>""
                 <div className="grid grid-cols-2 md: grid-cols-4 gap-4">
                   {quickLinks.map((link, index)  => (
-                    <motion.div
+                    <motion.div;
                       key={link.title}
-                      initial = {
-
+                      initial = {}
   { opacity: 0,
-  y: 20 
-
+  y: 20;
 }}
-                      animate = {
-
+                      animate = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
-                      transition = {
-
+                      transition = {}
   { duration: 0.3,
-  delay: index * 0.1 
-
+  delay: index * 0.1;
 }}
                     >
-                      <Link
+                      <Link;
                         to={link.url}
-                        onClick={() => setIsOpen(false)}"
-                        className="block p-4 text-center rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-200 group"
-                      >"
+                        onClick={() => setIsOpen(false)}""
+                        className="block p-4 text-center rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-200 group""
+                      >""
                         <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-200">
                           {link.icon}
-                        </div>"
+                        </div>""
                         <div className="font-medium text-gray-900 text-sm mb-1">
                           {link.title}
-                        </div>"
+                        </div>""
                         <div className="text-xs text-gray-600">
                           {link.description}
                         </div>
@@ -303,17 +273,17 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
                 </div>
               </div>
 
-              {/* Contact Information */}"
-              <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">"
-                <div className="text-center">"
+              {/* Contact Information */}""
+              <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">""
+                <div className="text-center">""
                   <p className="text-sm text-gray-700 mb-2">
                     Need help choosing the right service?
-                  </p>"
-                  <div className="flex flex-col sm:flex-row gap-2 justify-center text-sm">"
-                    <span className="text-gray-600">"
+                  </p>""
+                  <div className="flex flex-col sm:flex-row gap-2 justify-center text-sm">""
+                    <span className="text-gray-600">""
                       📱 <span className="font-medium">+1 302 464 0950</span>
-                    </span>"
-                    <span className="text-gray-600">"
+                    </span>""
+                    <span className="text-gray-600">""
                       ✉️ <span className="font-medium">kleber@ziontechgroup.com</span>
                     </span>
                   </div>
@@ -324,11 +294,11 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
       </AnimatePresence>
 
       {/* Backdrop */}
-      {isOpen && (<motion.div
+      {isOpen && (<motion.div;
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}"
-          className="fixed inset-0 bg-black/20 z-40"
+          exit={{ opacity: 0 }}""
+          className="fixed inset-0 bg-black/20 z-40""
           onClick={() => setIsOpen(false)}
         />
       )};

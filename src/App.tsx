@@ -2,7 +2,7 @@
 
 
 
-function App() {
+function App(function App() {): any {}
   return (
     <main>
       <Suspense fallback={<div>Loading...</div>}>

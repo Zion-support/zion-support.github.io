@@ -1,17 +1,17 @@
 
-interface ProductActionsProps {
+interface ProductActionsProps {}
   onAddToCart: () => Promise<void> | void}
 
-export function ProductActions({ onAddToCart }: ProductActionsProps) {
+export function ProductActions(function ProductActions({ onAddToCart }: ProductActionsProps) {): any {}
   const [loading, setLoading] = useState(false);
   const [label, setLabel] = useState('Add to Cart');
 
   
-    try {
+    try {}
       await onAddToCart();
       toast('2U Rack Mount Server added to cart');
       setLabel('Added!');
-      setTimeout(() => setLabel('Add to Cart'), 1500)} finally {
+      setTimeout(() => setLabel('Add to Cart'), 1500)} finally {}
       setLoading(false)}
   };
 
@@ -23,7 +23,7 @@ export function ProductActions({ onAddToCart }: ProductActionsProps) {
           {label}
         </span>
       ) : (
-        label
+        label;
       )}
     </Button>
   )}

@@ -1,11 +1,11 @@
 
 
-describe ('ITConsulting', () => {
-  it ('renders without crashing', () => {
+describe ('ITConsulting', () => {}
+  it ('renders without crashing', () => {}
     render (<ITConsulting  />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<ITConsulting  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;

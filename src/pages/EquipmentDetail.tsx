@@ -1,10 +1,10 @@
 
 
-interface EquipmentSpecification {
+interface EquipmentSpecification {}
   name: string;
   value: string}
 
-interface EquipmentDetails {
+interface EquipmentDetails {}
   id: string;
   name: string;
   description: string;
@@ -27,9 +27,9 @@ interface EquipmentDetails {
   heightCm?: number;
   depthCm?: number}
 
-// Sample data - in a real app this would come from an API
-const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
-  "2u-rack-mount-server": {
+// Sample data - in a real app this would come from an API;
+const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {}
+  "2u-rack-mount-server": {}
     id: "2u-rack-mount-server",
     name: "2U Rack Mount Server",
     description: "High‑density server optimized for virtualization and private cloud deployments.",
@@ -46,26 +46,26 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     widthCm: 44.5,
     heightCm: 8.9,
     depthCm: 65,
-    specifications: [
+    specifications: []
       { name: "CPU", value: "Dual Xeon" },
       { name: "Memory", value: "64GB RAM" },
-      { name: "Power", value: "Dual PSU" },
+      { name: "Power", value: "Dual PSU" }
     ],
     features: ["Hot-swappable drives", "Remote management"],
     warranty: "1 year manufacturer warranty",
-    returnPolicy: "30-day return policy",
+    returnPolicy: "30-day return policy"
   },
-  "pro-camera-x1000": {
+  "pro-camera-x1000": {}
     id: "pro-camera-x1000",
     name: "Pro Camera X1000",
     description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",
     brand: "CineTech",
     category: "Equipment",
     subcategory: "Cameras",
-    images: [
+    images: []
       "/images/equipment-placeholder.svg",
       "/images/equipment-placeholder.svg",
-      "/images/equipment-placeholder.svg"
+      "/images/equipment-placeholder.svg""
     ],
     price: 6999,
     currency: "$",
@@ -77,7 +77,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     widthCm: 15,
     heightCm: 12,
     depthCm: 10,
-    specifications: [
+    specifications: []
       { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" },
       { name: "Resolution", value: "8K (8192 x 4320)" },
       { name: "Dynamic Range", value: "16+ stops" },
@@ -88,7 +88,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       { name: "Battery Life", value: "~3 hours continuous recording" },
       { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
     ],
-    features: [
+    features: []
       "Advanced 8K full-frame sensor",
       "16+ stops of dynamic range",
       "Internal RAW recording",
@@ -98,21 +98,21 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "Weather-sealed magnesium alloy body",
       "Multiple assist tools: false color, waveform, vectorscope",
       "Anamorphic de-squeeze options",
-      "Custom 3D LUT support"
+      "Custom 3D LUT support""
     ],
     warranty: "2 years manufacturer warranty",
-    returnPolicy: "30-day return policy for unused items in original packaging"
+    returnPolicy: "30-day return policy for unused items in original packaging""
   },
-  "audio-mixer-pro": {
+  "audio-mixer-pro": {}
     id: "audio-mixer-pro",
     name: "AudioMixer Pro Digital Mixing Console",
     description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.",
     brand: "AudioTech",
     category: "Equipment",
     subcategory: "Audio",
-    images: [
+    images: []
       "/images/equipment-placeholder.svg",
-      "/images/equipment-placeholder.svg"
+      "/images/equipment-placeholder.svg""
     ],
     price: 3499,
     currency: "$",
@@ -124,7 +124,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     widthCm: 55,
     heightCm: 20,
     depthCm: 45,
-    specifications: [
+    specifications: []
       { name: "Channels", value: "32 input channels" },
       { name: "Faders", value: "16 motorized faders" },
       { name: "Preamps", value: "24 premium mic preamps" },
@@ -134,7 +134,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       { name: "Effects", value: "8 stereo effects processors" },
       { name: "Recording", value: "64-channel USB interface" }
     ],
-    features: [
+    features: []
       "32-channel digital mixer with 24 premium mic preamps",
       "16 motorized faders with touch-sensitive control",
       "7-inch high-resolution color touchscreen",
@@ -143,14 +143,14 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "iOS and Android remote control app",
       "Configurable user layers",
       "8 DCA groups and 6 mute groups",
-      "Integrated WiFi for wireless control"
+      "Integrated WiFi for wireless control""
     ],
     warranty: "3 years manufacturer warranty",
-    returnPolicy: "21-day return policy for items in original condition"
+    returnPolicy: "21-day return policy for items in original condition""
   }
 };
 
-export default function EquipmentDetail() {
+export default function EquipmentDetail(function EquipmentDetail() {): any {}
   const { id } = useParams() as { id?: string };
   
   const { isAuthenticated, user } = useAuth();
@@ -159,10 +159,8 @@ export default function EquipmentDetail() {
   const [isAdding, setIsAdding] = useState(false);
   const { unit, setUnit } = useUnitSystem();
   
-  // In a real app, this would fetch from an API
-  
-  
-  if (!equipment) {
+  // In a real app, this would fetch from an API;
+  if (!equipment) {}
     return (
       <>
         <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -179,7 +177,7 @@ export default function EquipmentDetail() {
   
     
     let cart: { id: string; name: string; price: number; quantity: number }[] = [];
-    if (stored) {
+    if (stored) {}
       try { cart = JSON.parse(stored)} catch { /* ignore */ }
     }
     
@@ -188,11 +186,11 @@ export default function EquipmentDetail() {
     safeStorage.setItem('cart', JSON.stringify(cart));
 
     setIsAdding(true);
-    setTimeout(() => {
+    setTimeout(() => {}
       setIsAdding(false);
       setAdded(true);
-      toast({
-        title: `${equipment.name} added to cart`,
+      toast({}
+        title: `${equipment.name} added to cart`
       });
       setTimeout(() => setAdded(false), 1500)}, 800)};
 
@@ -201,15 +199,13 @@ export default function EquipmentDetail() {
       return}
 
     setIsAdding(true);
-    try {
-      
-      
+    try {}
       if (!response.ok) throw new Error(data.error || 'Failed to create checkout session');
       
-      if (stripe && data.sessionId) {
+      if (stripe && data.sessionId) {}
         await stripe.redirectToCheckout({ sessionId: data.sessionId })}
-    } catch (err) {
-      toast({ title: 'Payment error', description: 'Could not start checkout.' })} finally {
+    } catch (err) {}
+      toast({ title: 'Payment error', description: 'Could not start checkout.' })} finally {}
       setIsAdding(false)}
   };
 
@@ -223,10 +219,10 @@ export default function EquipmentDetail() {
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 {/* Main Image */}
                 <div className="aspect-video w-full relative">
-                  <img 
+                  <img;
                     src={equipment.images[selectedImageIndex]} 
                     alt={equipment.name} 
-                    className="w-full h-full object-contain bg-zion-blue-light/10 p-4"
+                    className="w-full h-full object-contain bg-zion-blue-light/10 p-4""
                   />
                 </div>
                 
@@ -234,17 +230,17 @@ export default function EquipmentDetail() {
                 {equipment.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
                     {equipment.images.map((image, index) => (
-                      <div 
+                      <div;
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
-                        className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${
-                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+                        className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${}
+                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent""
                         }`}
                       >
-                        <img 
+                        <img;
                           src={image} 
                           alt={`${equipment.name} - image ${index + 1}`} 
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover""
                         />
                       </div>
                     ))}
@@ -257,13 +253,13 @@ export default function EquipmentDetail() {
                 <Tabs defaultValue="description" className="w-full">
                   <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-3 h-auto">
                     <TabsTrigger value="description" className="py-3 data-[state=active]:bg-zion-purple/10">
-                      Description
+                      Description;
                     </TabsTrigger>
                     <TabsTrigger value="specifications" className="py-3 data-[state=active]:bg-zion-purple/10">
-                      Specifications
+                      Specifications;
                     </TabsTrigger>
                     <TabsTrigger value="features" className="py-3 data-[state=active]:bg-zion-purple/10">
-                      Features
+                      Features;
                     </TabsTrigger>
                   </TabsList>
                   
@@ -278,7 +274,7 @@ export default function EquipmentDetail() {
                   <TabsContent value="specifications" className="mt-4">
                     <div className="flex items-center justify-end mb-2 gap-2">
                       <span className="text-xs">Metric</span>
-                      <Switch
+                      <Switch;
                         checked={unit === 'imperial'}
                         onCheckedChange={(c) => setUnit(c ? 'imperial' : 'metric')}
                       />
@@ -372,21 +368,21 @@ export default function EquipmentDetail() {
                 <div className="mb-6">
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>
                   <div className="flex items-center border border-zion-blue-light rounded-md w-32">
-                    <button 
-                      className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
+                    <button;
+                      className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50""
                       onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
                       disabled={quantity <= 1 || !equipment.inStock}
                     >
                       -
                     </button>
-                    <input 
-                      type="number" 
-                      className="w-full text-center bg-transparent border-0 text-white focus:ring-0"
+                    <input;
+                      type="number""
+                      className="w-full text-center bg-transparent border-0 text-white focus:ring-0""
                       value={quantity}
-                      readOnly
+                      readOnly;
                     />
-                    <button 
-                      className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
+                    <button;
+                      className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50""
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment.inStock}
                     >
@@ -397,19 +393,19 @@ export default function EquipmentDetail() {
                 
                 {/* Purchase Buttons */}
                 <div className="space-y-3 mb-6">
-                  <Button 
+                  <Button;
                     onClick={handleBuyNow}
                     disabled={isAdding || !equipment.inStock}
-                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6""
                   >
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
                   
-                  <Button
+                  <Button;
                     onClick={handleAddToCart}
                     disabled={isAdding || !equipment.inStock}
-                    variant="outline"
-                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
+                    variant="outline""
+                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10""
                   >
                     <ShoppingCart className="h-4 w-4 mr-2"  />
                     {isAdding ? 'Adding...' : added ? 'Added \u2713' : 'Add to Cart'}

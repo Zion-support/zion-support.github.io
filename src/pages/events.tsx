@@ -1,5 +1,4 @@
-import {
-
+import {}
   Calendar,  Clock,
   MapPin,
   Users,
@@ -20,120 +19,90 @@ import {
   BookOpen,
   CheckCircle} from 'lucide-react.ts';
 
-
-
-
-
-=======
-  'All','
-  'AI & ML','
-  'Cybersecurity','
-  'Cloud & DevOps','
-  'Data Analytics','
-  'IoT & Edge','
-  'Digital Transformation',
-];'
-
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-export default function Events(...args: any[]): any {
-
+export default function Events(...args: any[]): any {}
   const [selectedType, setSelectedType] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
-  
-    
-    
-    
     return matchesType && matchesCategory && matchesStatus && matchesSearch}) ;
 
-  
-  
-  
-    return date.toLocaleDateString('en-US', {
-
+    return date.toLocaleDateString('en-US', {}
       weekday: 'long',
       year: 'numeric',
       month: 'long',
       day: 'numeric'})};
 
-  
-      case 'Cybersecurity':
+      case 'Cybersecurity': any;
         return Shield;
-      case 'Cloud & DevOps':
+      case 'Cloud & DevOps': any;
         return Cloud;
-      case 'Data Analytics':
+      case 'Data Analytics': any;
         return TrendingUp;
-      case 'IoT & Edge':
+      case 'IoT & Edge': any;
         return Zap;
-      case 'Digital Transformation':
+      case 'Digital Transformation': any;
         return Globe;
-      default:
+      default: any;
         return BookOpen}
-  }} else {
-
-      return ("
+  }} else {}
+      return (""
         <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">
-          Past
+          Past;
         </span>
       )}  };
 
-  return ("
+  return (""
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
-      {/* Hero Section */}"
-      <section className="pt-24 pb-16">"
+      {/* Hero Section */}""
+      <section className="pt-24 pb-16">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}"
-            className="text-center"
-          >"
-            <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">"
+            transition={{ duration: 0.6 }}""
+            className="text-center""
+          >""
+            <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">""
               <Calendar className="w-5 h-5"  />"              <span className="font-medium">Events & Webinars</span>
-            </div>"
+            </div>""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Join Our Events
-            </h1>"
+              Join Our Events;
+            </h1>""
             <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              Discover the latest technology trends, learn from industry
-              experts, and network with professionals at our comprehensive
+              Discover the latest technology trends, learn from industry;
+              experts, and network with professionals at our comprehensive;
               events, workshops, and webinars.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Filters Section */}"
-      <section className="py-8">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">"
+      {/* Filters Section */}""
+      <section className="py-8">""
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">""
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-              {/* Search */}"
-              <div className="md:col-span-2">"
-                <div className="relative">"
+              {/* Search */}""
+              <div className="md:col-span-2">""
+                <div className="relative">""
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4"  />
-                  <input"
-<<<<<<< HEAD
-                    type="text"
-                    placeholder="Search events..."
-=======
-                    type="text""                    placeholder="Search events..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+                  <input""
+                    type="text""
+                    placeholder="Search events...""
                     value={searchTerm}
-                    onChange={e => setSearchTerm(e.target.value)}"
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                    onChange={e => setSearchTerm(e.target.value)}""
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan""
                   />
                 </div>
               </div>
 
               {/* Event Type Filter */}
               <div>
-                <select
+                <select;
                   value={selectedType}
-                  onChange={e => setSelectedType(e.target.value)}"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  onChange={e => setSelectedType(e.target.value)}""
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan""
                 >
                   {eventTypes.map(type => (
                     <option key={type} value={type}>
@@ -145,10 +114,10 @@ export default function Events(...args: any[]): any {
 
               {/* Category Filter */}
               <div>
-                <select
+                <select;
                   value={selectedCategory}
-                  onChange={e => setSelectedCategory(e.target.value)}"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  onChange={e => setSelectedCategory(e.target.value)}""
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan""
                 >
                   {categories.map(category => (
                     <option key={category} value={category}>
@@ -160,10 +129,10 @@ export default function Events(...args: any[]): any {
 
               {/* Status Filter */}
               <div>
-                <select
+                <select;
                   value={selectedStatus}
-                  onChange={e => setSelectedStatus(e.target.value)}"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  onChange={e => setSelectedStatus(e.target.value)}""
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan""
                 >
                   {statuses.map(status => (
                     <option key={status} value={status}>
@@ -182,134 +151,132 @@ export default function Events(...args: any[]): any {
       </section>
 
       {/* Upcoming Events */}
-      {upcomingEvents.length > 0 && ("
-        <section className="py-16">"
+      {upcomingEvents.length > 0 && (""
+        <section className="py-16">""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}"
-              className="mb-12"
-            >"
+              viewport={{ once: true }}""
+              className="mb-12""
+            >""
               <h2 className="text-3xl font-bold text-white mb-4">
-                Upcoming Events
-              </h2>"
+                Upcoming Events;
+              </h2>""
               <p className="text-zion-slate-light">
-                Don't miss these exciting opportunities to learn and network
+                Don't miss these exciting opportunities to learn and network;
               </p>
             </motion.div>
-"
+""
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {upcomingEvents.map((event, index) => {
-
-                
-                return()                  <motion.div
+              {upcomingEvents.map((event, index) => {}
+                return()                  <motion.div;
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}"
-                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
+                    viewport={{ once: true }}""
+                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300""
                   >
-                    {/* Header */}"
-                    <div className="flex items-start justify-between mb-4">"
-                      <div className="flex items-center gap-3">"
-                        <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">"
+                    {/* Header */}""
+                    <div className="flex items-start justify-between mb-4">""
+                      <div className="flex items-center gap-3">""
+                        <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">""
                           <CategoryIcon className="w-6 h-6 text-white"  />                        </div>
-                        <div>"
+                        <div>""
                           <h3 className="text-xl font-bold text-white mb-1">
                             {event.title}
-                          </h3>"
+                          </h3>""
                           <div className="flex items-center gap-2">
-                            {getStatusBadge(event.status)}"
+                            {getStatusBadge(event.status)}""
                             <span className="text-sm text-zion-slate-light">
                               {event.type}
                             </span>
                           </div>
                         </div>
-                      </div>"
-                      <div className="text-right">"
+                      </div>""
+                      <div className="text-right">""
                         <div className="text-2xl font-bold text-zion-cyan">
                           {event.price}
-                        </div>"
+                        </div>""
                         <div className="text-sm text-zion-slate-light">
-                          Registration
+                          Registration;
                         </div>
                       </div>
                     </div>
 
-                    {/* Event Details */}"
-                    <div className="mb-4 space-y-3">"
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">"
+                    {/* Event Details */}""
+                    <div className="mb-4 space-y-3">""
+                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">""
                         <Calendar className="w-4 h-4"  />
                         <span>{formatDate(event.date)}</span>
-                      </div>"
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">"
+                      </div>""
+                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">""
                         <Clock className="w-4 h-4"  />
                         <span>{event.time}</span>
-                      </div>"
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">"
+                      </div>""
+                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">""
                         <MapPin className="w-4 h-4"  />
                         <span>{event.location}</span>
-                      </div>"
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">"
+                      </div>""
+                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">""
                         <Users className="w-4 h-4"  />                        <span>{event.attendees} attendees</span>
                       </div>
                     </div>
 
-                    {/* Description */}"
+                    {/* Description */}""
                     <p className="text-zion-slate-light mb-4">
                       {event.description}
                     </p>
 
-                    {/* Highlights */}"
-                    <div className="mb-4">"
+                    {/* Highlights */}""
+                    <div className="mb-4">""
                       <h4 className="font-semibold text-white mb-2">
-                        Highlights
-                      </h4>"
+                        Highlights;
+                      </h4>""
                       <div className="grid grid-cols-1 gap-1">
                         {event.highlights.slice(0, 3).map((highlight, idx) => (
-                          <div
-                            key={idx}"
-                            className="flex items-center gap-2 text-sm text-zion-slate-light"
-                          >"
+                          <div;
+                            key={idx}""
+                            className="flex items-center gap-2 text-sm text-zion-slate-light""
+                          >""
                             <CheckCircle className="w-3 h-3 text-green-400"  />                            <span>{highlight}</span>
                           </div>) ) }
                       </div>
                     </div>
 
-                    {/* Speakers */}"
-                    <div className="mb-4">"
+                    {/* Speakers */}""
+                    <div className="mb-4">""
                       <h4 className="font-semibold text-white mb-2">
-                        Featured Speakers
-                      </h4>"
+                        Featured Speakers;
+                      </h4>""
                       <div className="flex flex-wrap gap-2">
                         {event.speakers.map((speaker, idx) => (
-                          <span
-                            key={idx}"
-                            className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full"
+                          <span;
+                            key={idx}""
+                            className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full""
                           >
                             {speaker}
                           </span>) ) }
                       </div>
                     </div>
 
-                    {/* CTA */}"
+                    {/* CTA */}""
                     <div className="flex items-center justify-between">
-                      <Link
-                        href={`/events/${event.id}`}"
-                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+                      <Link;
+                        href={`/events/${event.id}`}""
+                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300""
                       >
-                        Learn More"
+                        Learn More""
                         <ArrowRight className="ml-2 h-4 w-4"  />
-                      </Link>"
-                      <div className="text-right">"
+                      </Link>""
+                      <div className="text-right">""
                         <div className="text-sm text-zion-slate-light">
-                          Contact us for details
-                        </div>"
+                          Contact us for details;
+                        </div>""
                         <div className="text-zion-cyan font-medium">
-                          +1 302 464 0950
+                          +1 302 464 0950;
                         </div>
                       </div>
                     </div>
@@ -318,47 +285,45 @@ export default function Events(...args: any[]): any {
         </section>) }
 
       {/* Past Events */}
-      {pastEvents.length > 0 && ("
-        <section className="py-16">"
+      {pastEvents.length > 0 && (""
+        <section className="py-16">""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}"
-              className="mb-12"
-            >"
+              viewport={{ once: true }}""
+              className="mb-12""
+            >""
               <h2 className="text-3xl font-bold text-white mb-4">
-                Past Events
-              </h2>"
+                Past Events;
+              </h2>""
               <p className="text-zion-slate-light">
-                Missed an event? Check out our past events and stay updated
+                Missed an event? Check out our past events and stay updated;
               </p>
             </motion.div>
-"
+""
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {pastEvents.map((event, index) => {
-
-                
-                return()                  <motion.div
+              {pastEvents.map((event, index) => {}
+                return()                  <motion.div;
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}"
-                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75"
+                    viewport={{ once: true }}""
+                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75""
                   >
-                    {/* Header */}"
-                    <div className="flex items-start justify-between mb-4">"
-                      <div className="flex items-center gap-3">"
-                        <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">"
+                    {/* Header */}""
+                    <div className="flex items-start justify-between mb-4">""
+                      <div className="flex items-center gap-3">""
+                        <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">""
                           <CategoryIcon className="w-6 h-6 text-white"  />                        </div>
-                        <div>"
+                        <div>""
                           <h3 className="text-xl font-bold text-white mb-1">
                             {event.title}
-                          </h3>"
+                          </h3>""
                           <div className="flex items-center gap-2">
-                            {getStatusBadge(event.status)}"
+                            {getStatusBadge(event.status)}""
                             <span className="text-sm text-zion-slate-light">
                               {event.type}
                             </span>
@@ -367,37 +332,37 @@ export default function Events(...args: any[]): any {
                       </div>
                     </div>
 
-                    {/* Event Details */}"
-                    <div className="mb-4 space-y-3">"
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">"
+                    {/* Event Details */}""
+                    <div className="mb-4 space-y-3">""
+                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">""
                         <Calendar className="w-4 h-4"  />
                         <span>{formatDate(event.date)}</span>
-                      </div>"
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">"
+                      </div>""
+                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">""
                         <MapPin className="w-4 h-4"  />                        <span>{event.location}</span>
                       </div>
                     </div>
 
-                    {/* Description */}"
+                    {/* Description */}""
                     <p className="text-zion-slate-light mb-4">
                       {event.description}
                     </p>
 
-                    {/* CTA */}"
+                    {/* CTA */}""
                     <div className="flex items-center justify-between">
                       <Link`
-                        href={`/events/${event.id}`}"
-                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+                        href={`/events/${event.id}`}""
+                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300""
                       >
-                        View Event Details"
+                        View Event Details""
                         <ArrowRight className="ml-2 h-4 w-4"  />
-                      </Link>"
-                      <div className="text-right">"
+                      </Link>""
+                      <div className="text-right">""
                         <div className="text-sm text-zion-slate-light">
-                          Contact us for future events
-                        </div>"
+                          Contact us for future events;
+                        </div>""
                         <div className="text-zion-cyan font-medium">
-                          +1 302 464 0950
+                          +1 302 464 0950;
                         </div>
                       </div>
                     </div>
@@ -405,35 +370,35 @@ export default function Events(...args: any[]): any {
           </div>
         </section>) }
 
-      {/* CTA Section */}"
-      <section className="py-16">"
+      {/* CTA Section */}""
+      <section className="py-16">""
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}"
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
-          >"
+            viewport={{ once: true }}""
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8""
+          >""
             <h2 className="text-3xl font-bold text-white mb-4">
               Want to Host an Event?
-            </h2>"
+            </h2>""
             <p className="text-zion-slate-light text-lg mb-8">
               Partner with Zion Tech Group to host technology events, workshops,
               or webinars. Let's create valuable learning experiences together.
-            </p>"
+            </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link"
-                href="/contact"
-                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
+              <Link""
+                href="/contact""
+                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg""
               >
-                Partner With Us"
+                Partner With Us""
                 <ArrowRight className="ml-2 h-5 w-5"  />              </Link>
-              <Link"
-                href="/services"
-                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
+              <Link""
+                href="/services""
+                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg""
               >
-                View Our Services
+                View Our Services;
               </Link>
             </div>
           </motion.div>

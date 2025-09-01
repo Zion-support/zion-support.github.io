@@ -1,19 +1,18 @@
 
-function getDefaultUnit(): UnitSystem {
-  if (typeof navigator !== 'undefined') {
-    
-    if (region === 'US' || region === 'LR' || region === 'MM') {
+function getDefaultUnit(): UnitSystem {}
+  if (typeof navigator !== 'undefined') {}
+    if (region === 'US' || region === 'LR' || region === 'MM') {}
       return 'imperial'}
   }
   return 'metric'}
 
-interface UnitContextState {
+interface UnitContextState {}
   unit: UnitSystem;
   setUnit: (u: UnitSystem) => void;
   toggleUnit: () => void}
 
 
-export function UnitProvider({ children }: { children: ReactNode }) {
+export function UnitProvider(function UnitProvider({ children }: { children: ReactNode }) {): any {}
   const [unit, setUnit] = useLocalStorage<UnitSystem>('unitSystem', getDefaultUnit());
   
   return (
@@ -22,4 +21,4 @@ export function UnitProvider({ children }: { children: ReactNode }) {
     </UnitContext.Provider>
   )}
 
-export 
+export;

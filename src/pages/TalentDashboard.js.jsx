@@ -3,8 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Link from 'next/link';
 import { SEO } from '@/components/SEO';
-import {
-
+import {}
   BriefcaseIcon,
   UserIcon,
   MessageSquare,
@@ -13,8 +12,7 @@ import {
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { SuggestedJobs } from '@/components/jobs/SuggestedJobs';
 import { useAuth } from '@/hooks/useAuth';
-import {
-
+import {}
   Card,
   CardContent,
   CardDescription,
@@ -28,7 +26,7 @@ import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
 import { MyApplications } from '@/components/jobs/MyApplications';
 import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner';
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';
-function TalentDashboardContent() {
+function TalentDashboardContent() {}
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState('job-matches');
   const onboardingStatus = useOnboardingStatus();
@@ -39,29 +37,29 @@ function TalentDashboardContent() {
     onboardingStatus.matchReceived;
   return()
     <>
-      <SEO
-        title="Talent Dashboard | Zion AI Marketplace"
-        description="Your personalized talent dashboard with job matches and professional opportunities."
+      <SEO;
+        title="Talent Dashboard | Zion AI Marketplace""
+        description="Your personalized talent dashboard with job matches and professional opportunities.""
       />
-"
-      <main className="container mx-auto px-4 py-8">"
+""
+      <main className="container mx-auto px-4 py-8">""
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-          <div>"
-            <h1 className="text-3xl font-bold">Talent Dashboard</h1>"
+          <div>""
+            <h1 className="text-3xl font-bold">Talent Dashboard</h1>""
             <p className="text-muted-foreground mt-1">
-              Find opportunities matched to your skills and experience
+              Find opportunities matched to your skills and experience;
             </p>
-          </div>"
-          <div className="flex gap-4">"
-            <Button variant="outline" asChild>"
-              <Link href="/settings/account">"
+          </div>""
+          <div className="flex gap-4">""
+            <Button variant="outline" asChild>""
+              <Link href="/settings/account">""
                 <UserIcon className="h-4 w-4 mr-2" />
-                Profile Settings
+                Profile Settings;
               </Link>
             </Button>
-            <Button asChild>"
-              <Link href="/dashboard/talent/applications">"
-                <Inbox className="h-4 w-4 mr-2" /> Application Tracker
+            <Button asChild>""
+              <Link href="/dashboard/talent/applications">""
+                <Inbox className="h-4 w-4 mr-2" /> Application Tracker;
               </Link>
             </Button>
           </div>
@@ -69,21 +67,21 @@ function TalentDashboardContent() {
 
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
-"
+""
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div>"
-            <Card className="mb-8">"
-              <CardHeader className="pb-2">"
-                <div className="flex items-center justify-between">"
-                  <div className="flex items-center gap-3">"
+          <div>""
+            <Card className="mb-8">""
+              <CardHeader className="pb-2">""
+                <div className="flex items-center justify-between">""
+                  <div className="flex items-center gap-3">""
                     <Avatar className="h-12 w-12 border">
                       {user?.avatarUrl ? (
-                        <img"
-                          loading="lazy"
+                        <img""
+                          loading="lazy""
                           src={user.avatarUrl}
                           alt={user.displayName || 'User'}
                         />
-                      ) : ("
+                      ) : (""
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
                           {user?.displayName?.charAt(0) || 'U'}
                         </div>
@@ -95,34 +93,34 @@ function TalentDashboardContent() {
                         {user?.headline || 'AI Professional'}
                       </CardDescription>
                     </div>
-                  </div>"
+                  </div>""
                   <Badge className="bg-green-100 text-green-800">Online</Badge>
                 </div>
               </CardHeader>
-              <CardContent>"
-                <div className="grid grid-cols-2 gap-4 mt-4">"
-                  <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">"
-                    <div className="flex items-center gap-1 text-lg font-bold">"
+              <CardContent>""
+                <div className="grid grid-cols-2 gap-4 mt-4">""
+                  <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">""
+                    <div className="flex items-center gap-1 text-lg font-bold">""
                       <Star className="h-4 w-4 text-yellow-500" />
-                      4.9
-                    </div>"
+                      4.9;
+                    </div>""
                     <span className="text-xs text-muted-foreground">
-                      Rating
+                      Rating;
                     </span>
-                  </div>"
-                  <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">"
-                    <div className="text-lg font-bold">18</div>"
+                  </div>""
+                  <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">""
+                    <div className="text-lg font-bold">18</div>""
                     <span className="text-xs text-muted-foreground">
-                      Projects
+                      Projects;
                     </span>
                   </div>
                 </div>
-"
-                <div className="mt-4">"
-                  <Button className="w-full" asChild>"
-                    <Link href="/messages">"
+""
+                <div className="mt-4">""
+                  <Button className="w-full" asChild>""
+                    <Link href="/messages">""
                       <MessageSquare className="h-4 w-4 mr-2" />
-                      Messages
+                      Messages;
                     </Link>
                   </Button>
                 </div>
@@ -131,80 +129,80 @@ function TalentDashboardContent() {
 
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
-            {showAdvanced && ("
+            {showAdvanced && (""
               <div className="mt-6">
                 <AdvancedOnboardingSteps />
               </div>
             )}
 
-            {/* Upcoming Interviews Card */}"
+            {/* Upcoming Interviews Card */}""
             <div className="mt-8">
               <UpcomingInterviewsCard />
             </div>
-"
+""
             <Card className="mt-8">
-              <CardHeader>"
+              <CardHeader>""
                 <CardTitle className="text-lg">Quick Stats</CardTitle>
               </CardHeader>
-              <CardContent>"
-                <div className="space-y-3">"
-                  <div className="flex justify-between">"
-                    <span className="text-muted-foreground">Profile views</span>"
+              <CardContent>""
+                <div className="space-y-3">""
+                  <div className="flex justify-between">""
+                    <span className="text-muted-foreground">Profile views</span>""
                     <span className="font-medium">152</span>
-                  </div>"
-                  <div className="flex justify-between">"
-                    <span className="text-muted-foreground">Job matches</span>"
+                  </div>""
+                  <div className="flex justify-between">""
+                    <span className="text-muted-foreground">Job matches</span>""
                     <span className="font-medium">7</span>
-                  </div>"
-                  <div className="flex justify-between">"
-                    <span className="text-muted-foreground">Applications</span>"
+                  </div>""
+                  <div className="flex justify-between">""
+                    <span className="text-muted-foreground">Applications</span>""
                     <span className="font-medium">3</span>
-                  </div>"
-                  <div className="flex justify-between">"
+                  </div>""
+                  <div className="flex justify-between">""
                     <span className="text-muted-foreground">
-                      Profile completion
-                    </span>"
+                      Profile completion;
+                    </span>""
                     <span className="font-medium">85%</span>
                   </div>
                 </div>
               </CardContent>
             </Card>
           </div>
-"
-          <div className="lg:col-span-2">"
-            <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>"
-              <TabsList className="mb-6">"
-                <TabsTrigger value="job-matches" className="flex items-center">"
+""
+          <div className="lg:col-span-2">""
+            <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>""
+              <TabsList className="mb-6">""
+                <TabsTrigger value="job-matches" className="flex items-center">""
                   <BriefcaseIcon className="h-4 w-4 mr-2" />
-                  AI Job Matches
-                </TabsTrigger>"
-                <TabsTrigger value="applications">My Applications</TabsTrigger>"
+                  AI Job Matches;
+                </TabsTrigger>""
+                <TabsTrigger value="applications">My Applications</TabsTrigger>""
                 <TabsTrigger value="saved">Saved Jobs</TabsTrigger>
               </TabsList>
-"
+""
               <TabsContent value="job-matches" className="mt-0">
                 <SuggestedJobs />
               </TabsContent>
-"
+""
               <TabsContent value="applications" className="mt-0">
-                <MyApplications />"
-                <div className="mt-4 flex justify-center">"
-                  <Button variant="outline" asChild>"
-                    <Link href="/dashboard/talent/applications">"
-                      <Inbox className="h-4 w-4 mr-2" /> View Full Application
-                      Tracker
+                <MyApplications />""
+                <div className="mt-4 flex justify-center">""
+                  <Button variant="outline" asChild>""
+                    <Link href="/dashboard/talent/applications">""
+                      <Inbox className="h-4 w-4 mr-2" /> View Full Application;
+                      Tracker;
                     </Link>
                   </Button>
                 </div>
               </TabsContent>
-"
-              <TabsContent value="saved" className="mt-0">"
-                <Card className="bg-muted/30">"
-                  <CardContent className="pt-6 text-center">"
+""
+              <TabsContent value="saved" className="mt-0">""
+                <Card className="bg-muted/30">""
+                  <CardContent className="pt-6 text-center">""
                     <p className="text-muted-foreground">
                       You haven't saved jobs yet.
-                    </p>"
-                    <Button className="mt-4" asChild>"
+                    </p>""
+                    <Button className="mt-4" asChild>""
                       <Link href="/jobs">Browse Jobs</Link>
                     </Button>
                   </CardContent>
@@ -217,11 +215,11 @@ function TalentDashboardContent() {
     </>
   );
 }
-export default function TalentDashboard() {
+export default function TalentDashboard() {}
   return()
     <ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>
   );
 }
-'"
+'""

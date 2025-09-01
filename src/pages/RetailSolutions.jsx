@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import {
-
+import {}
   ShoppingCart,
   Smartphone,
   CreditCard,
@@ -32,193 +31,166 @@ import {
   }
 ];
 ;
-const retailTrends = [
-  {
-"
-    title: "AI-Powered Personalization","
+const retailTrends = []
+  {}
+""
+    title: "AI-Powered Personalization",""
     description: "Machine learning algorithms that provide personalized shopping experiences",
-    icon: Brain,"
-    impact: "High"
+    icon: Brain,""
+    impact: "High""
   },
-  {
-"
-    title: "Omnichannel Integration","
+  {}
+""
+    title: "Omnichannel Integration",""
     description: "Seamless experience across online, mobile, and physical stores",
-    icon: Globe,"
-    impact: "High"
+    icon: Globe,""
+    impact: "High""
   },
-  {
-"
-    title: "Mobile-First Shopping","
+  {}
+""
+    title: "Mobile-First Shopping",""
     description: "Mobile devices driving majority of online retail traffic",
-    icon: Smartphone,"
-    impact: "Critical"
+    icon: Smartphone,""
+    impact: "Critical""
   },
-  {
-"
-    title: "Data-Driven Decisions","
+  {}
+""
+    title: "Data-Driven Decisions",""
     description: "Analytics and insights driving retail strategy and optimization",
-    icon: BarChart3,"
-    impact: "High"
-
+    icon: BarChart3,""
+    impact: "High""
 ];
 ;
-const successStories = [
-  {
-
-    id: 1,"
-    comp: "Fashion Forward","
-    industry: "Apparel Retail","
-    challenge: "Needed omnichannel platform to connect online and physical stores","
-    solution: "Built integrated e-commerce and POS system with unified inventory","
-    results: "40% increase in online sales, 25% reduction in inventory costs","
-    logo: "FF"
+const successStories = []
+  {}
+    id: 1,""
+    comp: "Fashion Forward",""
+    industry: "Apparel Retail",""
+    challenge: "Needed omnichannel platform to connect online and physical stores",""
+    solution: "Built integrated e-commerce and POS system with unified inventory",""
+    results: "40% increase in online sales, 25% reduction in inventory costs",""
+    logo: "FF""
   },
-  {
-
-    id: 2,"
-    comp: "Tech Gadgets Pro","
-    industry: "Electronics Retail","
-    challenge: "Required mobile app for enhanced customer engagement","
-    solution: "Developed feature-rich mobile shopping app with AR product preview","
-    results: "60% mobile traffic increase, 35% higher conversion rate","
-    logo: "TG"
+  {}
+    id: 2,""
+    comp: "Tech Gadgets Pro",""
+    industry: "Electronics Retail",""
+    challenge: "Required mobile app for enhanced customer engagement",""
+    solution: "Developed feature-rich mobile shopping app with AR product preview",""
+    results: "60% mobile traffic increase, 35% higher conversion rate",""
+    logo: "TG""
   },
-  {
-
-    id: 3,"
-    comp: "Home & Garden Plus","
-    industry: "Home Improvement","
-    challenge: "Needed inventory management system for 50+ locations","
-    solution: "Implemented cloud-based inventory system with real-time tracking","
-    results: "30% reduction in stockouts, 20% improvement in order fulfillment","
-    logo: "HG"
-
+  {}
+    id: 3,""
+    comp: "Home & Garden Plus",""
+    industry: "Home Improvement",""
+    challenge: "Needed inventory management system for 50+ locations",""
+    solution: "Implemented cloud-based inventory system with real-time tracking",""
+    results: "30% reduction in stockouts, 20% improvement in order fulfillment",""
+    logo: "HG""
 ];
 ;
-const processSteps = [
-  {
-
-    step: 1,"
-    title: "Retail Assessment","
+const processSteps = []
+  {}
+    step: 1,""
+    title: "Retail Assessment",""
     description: "Analyze current retail operations and identify improvement opportunities",
-    icon: Target,"
-    duration: "1-2 weeks"
+    icon: Target,""
+    duration: "1-2 weeks""
   },
-  {
-
-    step: 2,"
-    title: "Solution Design","
+  {}
+    step: 2,""
+    title: "Solution Design",""
     description: "Design customized retail technology solution based on requirements",
-    icon: FileText,"
-    duration: "2-3 weeks"
+    icon: FileText,""
+    duration: "2-3 weeks""
   },
-  {
-
-    step: 3,"
-    title: "Development & Testing","
+  {}
+    step: 3,""
+    title: "Development & Testing",""
     description: "Build and thoroughly test the retail solution",
-    icon: Code,"
-    duration: "8-24 weeks"
+    icon: Code,""
+    duration: "8-24 weeks""
   },
-  {
-
-    step: 4,"
-    title: "Deployment & Training","
+  {}
+    step: 4,""
+    title: "Deployment & Training",""
     description: "Deploy solution and provide comprehensive staff training",
-    icon: Users,"
-    duration: "1-2 weeks"
-
+    icon: Users,""
+    duration: "1-2 weeks""
 ];
 
-export default function RetailSolutions() {
-
+export default function RetailSolutions() {}
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
   const categories = ['All',E-commerce',Mobile Development',POS Systems',Analytics',Inventory',Platform Solutions'];
 
   const filteredSolutions = selectedCategory === 'All'
-    ? retailSolutions
+    ? retailSolutions;
     : retailSolutions.filter (solution => solution.category === selectedCategory) ;
 
-  return ("
+  return (""
     <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}"
-      <section className="relative pt-32 pb-20 overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>"
-        <div className="absolute inset-0">"
-          <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>"
+      {/* Hero Section */}""
+      <section className="relative pt-32 pb-20 overflow-hidden">""
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>""
+        <div className="absolute inset-0">""
+          <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>""
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-"
+""
         <div className="container-responsive relative z-10">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
-  y: 30 
-
+  y: 30;
 }}
-            animate = {
-
+            animate = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center max-w-4xl mx-auto"
-
-            <motion.div
-              initial = {
-
+            transition={{ duration: 0.8 }}""
+            className="text-center max-w-4xl mx-auto""
+            <motion.div;
+              initial = {}
   { opacity: 0,
-  scale: 0.8 
-
+  scale: 0.8;
 }}
-              animate = {
-
+              animate = {}
   { opacity: 1,
-  scale: 1 
-
+  scale: 1;
 }}
-              transition = {
-
+              transition = {}
   { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
-
-}}"
-              className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-"
+  delay: 0.2;
+}}""
+              className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8""
+""
               <ShoppingCart className="w-10 h-10 text-white" />
             </motion.div>
-"
+""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Retail"
+              Retail""
               <span className="text-gradient block">Solutions</span>
             </h1>
-"
+""
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
               Transform your retail business with cutting-edge technology solutions.
-              From e-commerce platforms to omnichannel experiences, we help retailers
+              From e-commerce platforms to omnichannel experiences, we help retailers;
               thrive in the digital age.
             </p>
-"
-            <div className="flex flex-wrap justify-center gap-4 text-sm">"
-              <div className="flex items-center gap-2 text-zion-cyan">"
+""
+            <div className="flex flex-wrap justify-center gap-4 text-sm">""
+              <div className="flex items-center gap-2 text-zion-cyan">""
                 <ShoppingCart className="w-4 h-4" />
                 <span>E-commerce</span>
-              </div>"
-              <div className="flex items-center gap-2 text-zion-purple">"
+              </div>""
+              <div className="flex items-center gap-2 text-zion-purple">""
                 <Smartphone className="w-4 h-4" />
                 <span>Mobile First</span>
-              </div>"
-              <div className="flex items-center gap-2 text-zion-blue">"
+              </div>""
+              <div className="flex items-center gap-2 text-zion-blue">""
                 <BarChart3 className="w-4 h-4" />
                 <span>Data Driven</span>
               </div>
@@ -227,147 +199,116 @@ export default function RetailSolutions() {
         </div>
       </section>;
 
-      {/* Retail Trends */}"
-      <section className="py-20 bg-zion-blue-dark/50">;"
+      {/* Retail Trends */}""
+      <section className="py-20 bg-zion-blue-dark/50">;""
         <div className="container-responsive">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
-  y: 30 
-
+  y: 30;
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-"
-            <h2 className="text-4xl font-bold text-white mb-4">Retail Technology Trends</h2>"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+""
+            <h2 className="text-4xl font-bold text-white mb-4">Retail Technology Trends</h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Stay ahead of the curve with the latest retail technology innovations
+              Stay ahead of the curve with the latest retail technology innovations;
             </p>
           </motion.div>
-"
+""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {retailTrends.map((trend, index) => (
-              <motion.div
+              <motion.div;
                 key={trend.title}
-                initial = {
-
+                initial = {}
   { opacity: 0,
-  y: 30 
-
+  y: 30;
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}"
-                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-"
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"
+  delay: index * 0.1;
+}}""
+                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300""
+""
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">""
                   <trend.icon className="w-8 h-8 text-white" />
                 </div>
-"
-                <h3 className="text-xl font-bold text-white mb-3">{trend.title}</h3>"
+""
+                <h3 className="text-xl font-bold text-white mb-3">{trend.title}</h3>""
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{trend.description}</p>
 
-                <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
-
+                <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${}
                   trend.impact === 'Critical''
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30''
                     : trend.impact === 'High''
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30''
                     : 'bg-green-500/20 text-green-400 border border-green-500/30'`
                 }`}>
-                  {trend.impact} Impact
+                  {trend.impact} Impact;
                 </span>
               </motion.div>;) ) }
           </div>
         </div>
       </section>
 
-      {/* Process Section */}"
-      <section className="py-20">;"
+      {/* Process Section */}""
+      <section className="py-20">;""
         <div className="container-responsive">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
-  y: 30 
-
+  y: 30;
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-"
-            <h2 className="text-4xl font-bold text-white mb-4">Our Implementation Process</h2>"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+""
+            <h2 className="text-4xl font-bold text-white mb-4">Our Implementation Process</h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              A proven methodology that ensures successful retail technology implementation
+              A proven methodology that ensures successful retail technology implementation;
             </p>
           </motion.div>
-"
+""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
-              <motion.div
+              <motion.div;
                 key={step.step}
-                initial = {
-
+                initial = {}
   { opacity: 0,
-  y: 30 
-
+  y: 30;
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}"
-                className="text-center"
-"
-                <div className="relative mb-6">"
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">"
+  delay: index * 0.1;
+}}""
+                className="text-center""
+""
+                <div className="relative mb-6">""
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">""
                     <step.icon className="w-8 h-8 text-white" />
-                  </div>"
+                  </div>""
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {step.step}
                   </div>
                 </div>
-"
-                <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>"
-                <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>"
+""
+                <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>""
+                <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>""
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
@@ -376,39 +317,34 @@ export default function RetailSolutions() {
         </div>
       </section>
 
-      {/* Solutions Section */}"
-      <section className="py-20 bg-zion-blue-dark/50">;"
+      {/* Solutions Section */}""
+      <section className="py-20 bg-zion-blue-dark/50">;""
         <div className="container-responsive">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
-  y: 30 
-
+  y: 30;
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-"
-            <h2 className="text-4xl font-bold text-white mb-4">Retail Technology Solutions</h2>"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+""
+            <h2 className="text-4xl font-bold text-white mb-4">Retail Technology Solutions</h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive solutions designed to modernize and optimize retail operations
+              Comprehensive solutions designed to modernize and optimize retail operations;
             </p>
           </motion.div>
 
-          {/* Category Filter */}"
+          {/* Category Filter */}""
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
-              <button
+              <button;
                 key={category}
                 onClick={() => setSelectedCategory(category)}`
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-
+                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${}
                   selectedCategory === category'
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'`
@@ -417,74 +353,62 @@ export default function RetailSolutions() {
                 {category}
               </button>) ) }
           </div>
-"
+""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index) => (
-              <motion.div
+              <motion.div;
                 key={solution.id}
-                initial = {
-
+                initial = {}
   { opacity: 0,
-  y: 30 
-
+  y: 30;
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}"
-                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
+  delay: index * 0.1;
+}}""
+                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer""
                 onClick={() => setSelectedSolution(solution)}
-"
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">"
+""
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">""
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-"
-                <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>"
+""
+                <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>""
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-"
+""
                 <div className="space-y-3 mb-6">
-                  {solution.features.map((feature, featureIndex) => ("
-                    <div key={featureIndex} className="flex items-center gap-3">"
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />"
+                  {solution.features.map((feature, featureIndex) => (""
+                    <div key={featureIndex} className="flex items-center gap-3">""
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />""
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
-"
+""
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.integrations.slice(0, 2).map((integration, intIndex) => (
-                    <span
-                      key={intIndex}"
-                      className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-
+                    <span;
+                      key={intIndex}""
+                      className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30""
                       {integration}
                     </span>) ) }
                 </div>
-"
-                <div className="flex items-center justify-between mb-4">"
-                  <span className="text-zion-cyan font-semibold">{solution.price}</span>"
+""
+                <div className="flex items-center justify-between mb-4">""
+                  <span className="text-zion-cyan font-semibold">{solution.price}</span>""
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-"
-                <div className="flex items-center justify-between">"
+""
+                <div className="flex items-center justify-between">""
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
-                  </span>"
-                  <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">"
-                    <span className="text-sm font-medium">Learn More</span>"
+                  </span>""
+                  <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">""
+                    <span className="text-sm font-medium">Learn More</span>""
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -493,89 +417,74 @@ export default function RetailSolutions() {
         </div>
       </section>
 
-      {/* Success Stories */}"
-      <section className="py-20">;"
+      {/* Success Stories */}""
+      <section className="py-20">;""
         <div className="container-responsive">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
-  y: 30 
-
+  y: 30;
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-"
-            <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+""
+            <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Retail businesses that have transformed their operations with our technology solutions
+              Retail businesses that have transformed their operations with our technology solutions;
             </p>
           </motion.div>
-"
+""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
-              <motion.div
+              <motion.div;
                 key={story.id}
-                initial = {
-
+                initial = {}
   { opacity: 0,
-  y: 30 
-
+  y: 30;
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.6,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}"
-                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-"
-                <div className="flex items-center gap-4 mb-6">"
+  delay: index * 0.1;
+}}""
+                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300""
+""
+                <div className="flex items-center gap-4 mb-6">""
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
                   </div>
-                  <div>"
-                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>"
+                  <div>""
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>""
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-"
+""
                 <div className="space-y-4 mb-6">
-                  <div>"
-                    <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>"
+                  <div>""
+                    <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>""
                     <p className="text-zion-slate-light text-sm">{story.challenge}</p>
                   </div>
-                  <div>"
-                    <h4 className="text-zion-cyan font-semibold mb-2">Solution</h4>"
+                  <div>""
+                    <h4 className="text-zion-cyan font-semibold mb-2">Solution</h4>""
                     <p className="text-zion-slate-light text-sm">{story.solution}</p>
                   </div>
-                  <div>"
-                    <h4 className="text-zion-cyan font-semibold mb-2">Results</h4>"
+                  <div>""
+                    <h4 className="text-zion-cyan font-semibold mb-2">Results</h4>""
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-"
+""
                 <div className="flex items-center gap-2">
-                  {[...Array(5)].map((_, i) => ("
+                  {[...Array(5)].map((_, i) => (""
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}"
+                  ))}""
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
               </motion.div>;) ) }
@@ -583,43 +492,37 @@ export default function RetailSolutions() {
         </div>
       </section>
 
-      {/* CTA Section */}"
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;"
+      {/* CTA Section */}""
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;""
         <div className="container-responsive">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
-  y: 30 
-
+  y: 30;
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
-  y: 0 
-
+  y: 0;
 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center max-w-4xl mx-auto"
-"
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Retail Business?</h2>"
+            transition={{ duration: 0.8 }}""
+            className="text-center max-w-4xl mx-auto""
+""
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Retail Business?</h2>""
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how our retail technology solutions can modernize your operations,
               enhance customer experience, and drive growth in the digital marketplace.
             </p>
-"
+""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a"
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-
-                Start Your Project
+              <a""
+                href="/contact""
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105""
+                Start Your Project;
               </a>
-              <a"
-                href="/contact"
-                className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
-                Schedule Consultation
+              <a""
+                href="/contact""
+                className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300""
+                Schedule Consultation;
               </a>
             </div>
           </motion.div>

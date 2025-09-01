@@ -1,9 +1,7 @@
 
   const { slug } = useParams () ;
 
-  // Mock blog post data - in a real app, this would come from an API
-  
-  
+  // Mock blog post data - in a real app, this would come from an API;
   };
 
   
@@ -11,91 +9,90 @@
 
   
     return categoryNames[category] || 'Uncategorized'};
-  return ("
+  return (""
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO`
         title={`${blogPost.title} - Zion Tech Group Blog`}
         description={blogPost.excerpt}
       />
 
-      {/* Navigation */}"
+      {/* Navigation */}""
       <section className="py-6 bg-slate-800/50">"        <div className="container mx-auto px-4">
-          <Link"
-            to="/blog"
-            className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
-          >"
+          <Link""
+            to="/blog""
+            className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200""
+          >""
             <ArrowLeft className="w-4 h-4"  />            <span>Back to Blog</span>
           </Link>
         </div>
       </section>
 
-      {/* Article Header */}"
-      <section className="py-12">"
+      {/* Article Header */}""
+      <section className="py-12">""
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
-            className="max-w-4xl mx-auto"
+            transition={{ duration: 0.8 }}""
+            className="max-w-4xl mx-auto""
           >
-            {/* Category and Featured Badge */}"
-            <div className="flex items-center space-x-3 mb-6">"
+            {/* Category and Featured Badge */}""
+            <div className="flex items-center space-x-3 mb-6">""
               <span className="px-4 py-2 bg-cyan-500/20 text-cyan-400 text-sm rounded-full font-medium flex items-center space-x-2">
-                {React.createElement(getCategoryIcon(blogPost.category), {
-
+                {React.createElement(getCategoryIcon(blogPost.category), {}
                   className: 'w-4 h-4'})}
                 <span>{getCategoryName(blogPost.category)}</span>
               </span>
-              {blogPost.featured && ("
+              {blogPost.featured && (""
                 <span className="px-4 py-2 bg-yellow-500/20 text-yellow-400 text-sm rounded-full font-medium">
-                  Featured Article
+                  Featured Article;
                 </span>) }
             </div>
 
-            {/* Title */}"
+            {/* Title */}""
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               {blogPost.title}
             </h1>
 
-            {/* Excerpt */}"
+            {/* Excerpt */}""
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               {blogPost.excerpt}
             </p>
 
-            {/* Article Meta */}"
-            <div className="flex flex-wrap items-center justify-between gap-4 py-6 border-t border-b border-slate-700/50">"
-              <div className="flex items-center space-x-6">"
-                <div className="flex items-center space-x-2">"
+            {/* Article Meta */}""
+            <div className="flex flex-wrap items-center justify-between gap-4 py-6 border-t border-b border-slate-700/50">""
+              <div className="flex items-center space-x-6">""
+                <div className="flex items-center space-x-2">""
                   <User className="w-5 h-5 text-cyan-400"  />
-                  <div>"
+                  <div>""
                     <span className="text-white font-medium">
                       {blogPost.author}
-                    </span>"
+                    </span>""
                     <span className="text-gray-400 text-sm block">
                       {blogPost.authorRole}
                     </span>
                   </div>
-                </div>"
-                <div className="flex items-center space-x-2">"
-                  <Calendar className="w-5 h-5 text-cyan-400"  />"
+                </div>""
+                <div className="flex items-center space-x-2">""
+                  <Calendar className="w-5 h-5 text-cyan-400"  />""
                   <span className="text-gray-300">
                     {formatDate(blogPost.date)}
                   </span>
-                </div>"
-                <div className="flex items-center space-x-2">"
-                  <Clock className="w-5 h-5 text-cyan-400"  />"
+                </div>""
+                <div className="flex items-center space-x-2">""
+                  <Clock className="w-5 h-5 text-cyan-400"  />""
                   <span className="text-gray-300">{blogPost.readTime}</span>
                 </div>
               </div>
-"
-              <div className="flex items-center space-x-4">"
-                <button className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200">"
+""
+              <div className="flex items-center space-x-4">""
+                <button className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200">""
                   <Heart className="w-5 h-5"  />
                   <span>{blogPost.likes}</span>
-                </button>"
-                <button className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200">"
+                </button>""
+                <button className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200">""
                   <Bookmark className="w-5 h-5"  />
-                </button>"
+                </button>""
                 <button className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200">"                  <Share2 className="w-5 h-5" />
                 </button>
               </div>
@@ -104,26 +101,26 @@
         </div>
       </section>
 
-      {/* Article Content */}"
-      <section className="py-12">"
-        <div className="container mx-auto px-4">"
+      {/* Article Content */}""
+      <section className="py-12">""
+        <div className="container mx-auto px-4">""
           <div className="max-w-4xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="prose prose-invert prose-lg max-w-none"
+              transition={{ duration: 0.8 }}""
+              className="prose prose-invert prose-lg max-w-none""
             >
-              {/* Featured Image */}"
-              <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl border border-cyan-400/30 flex items-center justify-center mb-12">"
-                <div className="text-center">"
+              {/* Featured Image */}""
+              <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl border border-cyan-400/30 flex items-center justify-center mb-12">""
+                <div className="text-center">""
                   <BookOpen className="w-20 h-20 text-cyan-400 mx-auto mb-4"  />"                  <p className="text-gray-300">Featured Article Image</p>
                 </div>
               </div>
 
               {/* Article Content */}
-              <div"
-                className="text-gray-300 leading-relaxed"
+              <div""
+                className="text-gray-300 leading-relaxed""
                 dangerouslySetInnerHTML={{ __html: blogPost.content }}
               />
             </motion.div>
@@ -131,17 +128,17 @@
         </div>
       </section>
 
-      {/* Tags */}"
-      <section className="py-8 bg-slate-800/50">"
-        <div className="container mx-auto px-4">"
-          <div className="max-w-4xl mx-auto">"
-            <div className="flex items-center space-x-3">"
-              <Tag className="w-5 h-5 text-cyan-400"  />"
+      {/* Tags */}""
+      <section className="py-8 bg-slate-800/50">""
+        <div className="container mx-auto px-4">""
+          <div className="max-w-4xl mx-auto">""
+            <div className="flex items-center space-x-3">""
+              <Tag className="w-5 h-5 text-cyan-400"  />""
               <span className="text-white font-medium">Tags:</span>"              <div className="flex flex-wrap gap-2">
                 {blogPost.tags.map(tag => (
-                  <span
-                    key={tag}"
-                    className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-sm rounded-full border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-200"
+                  <span;
+                    key={tag}""
+                    className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-sm rounded-full border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-200""
                   >
                     {tag}
                   </span>) ) }
@@ -151,27 +148,27 @@
         </div>
       </section>
 
-      {/* Author Bio */}"
-      <section className="py-12">"
-        <div className="container mx-auto px-4">"
+      {/* Author Bio */}""
+      <section className="py-12">""
+        <div className="container mx-auto px-4">""
           <div className="max-w-4xl mx-auto">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}"
-              className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50"
-            >"
+              transition={{ duration: 0.8 }}""
+              className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50""
+            >""
               <h3 className="text-2xl font-bold text-white mb-4">
-                About the Author
-              </h3>"
-              <div className="flex items-start space-x-4">"
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">"
+                About the Author;
+              </h3>""
+              <div className="flex items-start space-x-4">""
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">""
                   <User className="w-8 h-8 text-white"  />                </div>
-                <div>"
+                <div>""
                   <h4 className="text-xl font-semibold text-white mb-2">
                     {blogPost.author}
-                  </h4>"
-                  <p className="text-cyan-400 mb-2">{blogPost.authorRole}</p>"
+                  </h4>""
+                  <p className="text-cyan-400 mb-2">{blogPost.authorRole}</p>""
                   <p className="text-gray-300">{blogPost.authorBio}</p>
                 </div>
               </div>
@@ -180,56 +177,56 @@
         </div>
       </section>
 
-      {/* Related Posts */}"
-      <section className="py-20 bg-slate-800/50">"
+      {/* Related Posts */}""
+      <section className="py-20 bg-slate-800/50">""
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-          >"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+          >""
             <h2 className="text-4xl font-bold text-white mb-4">
-              Related Articles
-            </h2>"
+              Related Articles;
+            </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Continue exploring insights and analysis on related topics
+              Continue exploring insights and analysis on related topics;
             </p>
           </motion.div>
-"
+""
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {blogPost.relatedPosts.map((post, index) => (
-              <motion.article
+              <motion.article;
                 key={post.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}"
-                className="bg-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden hover:border-cyan-400/50 transition-all duration-300 group"
-              >"
-                <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">"
+                transition={{ duration: 0.5, delay: index * 0.1 }}""
+                className="bg-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden hover:border-cyan-400/50 transition-all duration-300 group""
+              >""
+                <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">""
                   <BookOpen className="w-16 h-16 text-cyan-400"  />                </div>
-"
-                <div className="p-6">"
-                  <div className="flex items-center space-x-2 mb-3">"
+""
+                <div className="p-6">""
+                  <div className="flex items-center space-x-2 mb-3">""
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full font-medium">
                       {getCategoryName(post.category)}
                     </span>
                   </div>
-"
+""
                   <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200">
                     {post.title}
                   </h3>
-"
+""
                   <p className="text-gray-300 mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
-"
-                  <div className="flex items-center justify-between text-sm text-gray-400">"
-                    <div className="flex items-center space-x-2">"
+""
+                  <div className="flex items-center justify-between text-sm text-gray-400">""
+                    <div className="flex items-center space-x-2">""
                       <Calendar className="w-4 h-4"  />
                       <span>{formatDate(post.date)}</span>
-                    </div>"
-                    <div className="flex items-center space-x-2">"
+                    </div>""
+                    <div className="flex items-center space-x-2">""
                       <Clock className="w-4 h-4"  />                      <span>{post.readTime}</span>
                     </div>
                   </div>
@@ -239,34 +236,34 @@
         </div>
       </section>
 
-      {/* CTA Section */}"
-      <section className="py-20">"
+      {/* CTA Section */}""
+      <section className="py-20">""
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center max-w-4xl mx-auto"
-          >"
+            transition={{ duration: 0.8 }}""
+            className="text-center max-w-4xl mx-auto""
+          >""
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
-            </h2>"
+            </h2>""
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our AI-powered solutions can drive innovation
+              Let's discuss how our AI-powered solutions can drive innovation;
               and growth for your organization.
-            </p>"
+            </p>""
             <div className="flex flex-wrap justify-center gap-4">
-              <Link"
-                to="/contact"
-                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+              <Link""
+                to="/contact""
+                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300""
               >
-                Get Started Today
+                Get Started Today;
               </Link>
-              <Link"
-                to="/services"
-                className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              <Link""
+                to="/services""
+                className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300""
               >
-                Explore Our Services
+                Explore Our Services;
               </Link>
             </div>
           </motion.div>

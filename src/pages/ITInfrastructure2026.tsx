@@ -1,19 +1,19 @@
 
-const ITInfrastructure2026: React.FC = () => {
+const ITInfrastructure2026: React.FC = () => {}
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   
-    // Filter by search query
-    if (searchQuery) {
+    // Filter by search query;
+    if (searchQuery) {}
       services = services.filter(service => 
         service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.category.toLowerCase().includes(searchQuery.toLowerCase())
       )}
 
-    // Filter by category
-    if (selectedCategory !== 'all') {
+    // Filter by category;
+    if (selectedCategory !== 'all') {}
       services = services.filter(service => service.category === selectedCategory)}
 
     return services};
@@ -24,21 +24,21 @@ const ITInfrastructure2026: React.FC = () => {
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-50">
-      <SEO title="IT Infrastructure Services 2026 - Zion Tech Group"
-        description="Discover our modern IT infrastructure solutions for 2026. From cloud optimization to edge computing, we deliver scalable, secure, and efficient infrastructure services."
-        keywords="IT infrastructure 2026, cloud computing, edge computing, data center, Zion Tech Group, infrastructure solutions"
+      <SEO title="IT Infrastructure Services 2026 - Zion Tech Group""
+        description="Discover our modern IT infrastructure solutions for 2026. From cloud optimization to edge computing, we deliver scalable, secure, and efficient infrastructure services.""
+        keywords="IT infrastructure 2026, cloud computing, edge computing, data center, Zion Tech Group, infrastructure solutions""
        />
       
       <div className="container mx-auto px-4 py-12">
         {/* Header Section */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-12""
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            IT Infrastructure Services 2026
+            IT Infrastructure Services 2026;
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Build the foundation for your digital future with our modern IT infrastructure services. From cloud optimization to edge computing, 
@@ -47,11 +47,11 @@ const ITInfrastructure2026: React.FC = () => {
         </motion.div>
 
         {/* Stats Section */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
+          className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12""
         >
           <div className="bg-white rounded-lg p-6 text-center shadow-lg">
             <div className="text-3xl font-bold text-blue-600 mb-2">10</div>
@@ -72,27 +72,27 @@ const ITInfrastructure2026: React.FC = () => {
         </motion.div>
 
         {/* Search and Filter Section */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-white rounded-xl p-6 shadow-lg mb-8"
+          className="bg-white rounded-xl p-6 shadow-lg mb-8""
         >
           <div className="flex flex-col lg:flex-row gap-4 items-center">
             <div className="flex-1">
-              <input
-                type="text"
-                placeholder="Search IT infrastructure services..."
+              <input;
+                type="text""
+                placeholder="Search IT infrastructure services...""
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
               />
             </div>
             <div className="flex gap-2">
-              <select
+              <select;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
               >
                 <option value="all">All Categories</option>
                 {getCategories().map((category) => (
@@ -104,38 +104,38 @@ const ITInfrastructure2026: React.FC = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
+          className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8""
         >
           {getFilteredServices().map((service) => renderServiceCard(service))}
         </motion.div>
 
         {/* Contact CTA */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl p-8 text-center text-white mt-12"
+          className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl p-8 text-center text-white mt-12""
         >
           <h2 className="text-3xl font-bold mb-4">Ready to Build Your Digital Foundation?</h2>
           <p className="text-xl mb-6 opacity-90">
             Contact Zion Tech Group today to discuss how our modern IT infrastructure services can power your digital transformation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+            <a;
+              href="/contact""
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300""
             >
-              Get Started
+              Get Started;
             </a>
-            <a
-              href="/comprehensive-pricing-guide-2026"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300"
+            <a;
+              href="/comprehensive-pricing-guide-2026""
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300""
             >
-              View Pricing
+              View Pricing;
             </a>
           </div>
         </motion.div>

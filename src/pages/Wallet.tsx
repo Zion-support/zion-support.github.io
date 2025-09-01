@@ -3,13 +3,13 @@ import { useQuery } from '@tanstack/react-query';
 import { getWallet } from '@/api/wallet';
 import { Skeleton } from '@/components/ui/skeleton';
 
-const Wallet = () => {
-  const { data, isLoading } = useQuery({
+const Wallet: any = () => {}
+  const { data, isLoading } = useQuery({}
     queryKey: ['wallet'],
-    queryFn: getWallet,
+    queryFn: getWallet
   });
 
-  if (isLoading) {
+  if (isLoading) {}
     return (
       <div className="p-4 space-y-4">
         <h1 className="text-2xl font-bold">Wallet</h1>
@@ -19,8 +19,8 @@ const Wallet = () => {
     );
   }
 
-  const points = data?.points ?? 0;
-  const history = data?.history ?? [];
+  const points: any = data?.points ?? 0;
+  const history: any = data?.history ?? [];
 
   return (
     <div className="p-4">

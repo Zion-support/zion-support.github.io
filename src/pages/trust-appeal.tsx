@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom'; // Changed import
+import { useSearchParams } from 'react-router-dom'; // Changed import;
 import Link from 'next/link';
 
 // Assume a way to get logged-in user's ID and current score.
 // This would typically come from an authentication context or a global state.
-const MOCK_LOGGED_IN_USER_ID = 'user123'; // Replace with actual logic
-const MOCK_USER_CURRENT_SCORE = 65; // Replace with actual logic, perhaps fetched
-
-const TrustAppealPage: React.FC = () => {
-  const [searchParams] = useSearchParams(); // Changed to useSearchParams
-  // In a real app, userId might come from auth context or be a prop
+const MOCK_LOGGED_IN_USER_ID: any = 'user123'; // Replace with actual logic;
+const MOCK_USER_CURRENT_SCORE: any = 65; // Replace with actual logic, perhaps fetched;
+const TrustAppealPage: React.FC = () => {}
+  const [searchParams] = useSearchParams(); // Changed to useSearchParams;
+  // In a real app, userId might come from auth context or be a prop;
   const [userId, setUserId] = useState<string>(MOCK_LOGGED_IN_USER_ID);
-  // Score could be fetched based on userId or passed via query params
+  // Score could be fetched based on userId or passed via query params;
   const [currentScore, setCurrentScore] = useState<number | null>(null);
   const [reasonForAppeal, setReasonForAppeal] = useState<string>('');
   const [supportingEvidence, setSupportingEvidence] = useState<string>('');
@@ -19,69 +18,68 @@ const TrustAppealPage: React.FC = () => {
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const [formErrors, setFormErrors] = useState<{ reasonForAppeal?: string }>({});
 
-  useEffect(() => {
-    // Simulate fetching current score or getting it from router query
-    const scoreFromQuery = searchParams.get('score');
-    if (scoreFromQuery && !isNaN(parseInt(scoreFromQuery))) {
+  useEffect(() => {}
+    // Simulate fetching current score or getting it from router query;
+    const scoreFromQuery: any = searchParams.get('score');
+    if (scoreFromQuery && !isNaN(parseInt(scoreFromQuery))) {}
       setCurrentScore(parseInt(scoreFromQuery));
-    } else {
-      // Fallback to mock or fetch if needed
-      // For now, if score is not in query, we use a mock or leave it null
-      // In a real app, you might fetch this based on the logged-in user
-      setCurrentScore(MOCK_USER_CURRENT_SCORE); // Example
+    } else {}
+      // Fallback to mock or fetch if needed;
+      // For now, if score is not in query, we use a mock or leave it null;
+      // In a real app, you might fetch this based on the logged-in user;
+      setCurrentScore(MOCK_USER_CURRENT_SCORE); // Example;
     }
 
     // If userId is also in query (e.g. admin initiated appeal for user)
-    const userIdFromQuery = searchParams.get('userId');
-    if (userIdFromQuery) {
+    const userIdFromQuery: any = searchParams.get('userId');
+    if (userIdFromQuery) {}
         setUserId(userIdFromQuery);
     }
 
   }, [searchParams]);
 
-  const validateForm = (): boolean => {
+  const validateForm: any = (): boolean => {}
     const errors: { reasonForAppeal?: string } = {};
-    if (!reasonForAppeal.trim()) {
+    if (!reasonForAppeal.trim()) {}
       errors.reasonForAppeal = 'Reason for appeal is required.';
-    } else if (reasonForAppeal.trim().length < 50) {
+    } else if (reasonForAppeal.trim().length < 50) {}
       errors.reasonForAppeal = 'Please provide a detailed reason (at least 50 characters).';
     }
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit: any = async (e: React.FormEvent) => {}
     e.preventDefault();
-    if (!validateForm()) {
+    if (!validateForm()) {}
       return;
     }
 
     setIsSubmitting(true);
     setSubmitMessage(null);
 
-    // Simulate API call for submission
-    console.log('Submitting appeal:', {
+    // Simulate API call for submission;
+    console.log('Submitting appeal:', {}
       userId,
       currentScore,
       reasonForAppeal,
-      supportingEvidence,
+      supportingEvidence
     });
 
-    await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate network delay
-
+    await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate network delay;
     setIsSubmitting(false);
-    setSubmitMessage({
+    setSubmitMessage({}
       type: 'success',
       text: 'Your appeal has been submitted. We will review it within 3-5 business days.'
     });
-    // Reset form or redirect user
+    // Reset form or redirect user;
     // setReasonForAppeal('');
     // setSupportingEvidence('');
-    // setTimeout(() => router.push('/profile/' + userId + '/trust'), 3000); // Optional redirect
+    // setTimeout(() => router.push('/profile/' + userId + '/trust'), 3000); // Optional redirect;
   };
 
-  // Determine if the user should be on this page
-  const canAppeal = currentScore !== null && currentScore < 70;
+  // Determine if the user should be on this page;
+  const canAppeal: any = currentScore !== null && currentScore < 70;
 
   return (
     <div className="container mx-auto p-6 max-w-2xl bg-white shadow-lg rounded-lg my-10">
@@ -93,7 +91,7 @@ const TrustAppealPage: React.FC = () => {
       </header>
 
       {submitMessage && (
-        <div className={`p-4 mb-6 rounded-md text-sm ${
+        <div className={`p-4 mb-6 rounded-md text-sm ${}
             submitMessage.type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
           }`}
         >
@@ -113,19 +111,19 @@ const TrustAppealPage: React.FC = () => {
         </div>
       )}
 
-      {(canAppeal || currentScore === null || submitMessage?.type === 'success') && ( // Show form if eligible, or if successful submit
+      {(canAppeal || currentScore === null || submitMessage?.type === 'success') && ( // Show form if eligible, or if successful submit;
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="userId" className="block text-sm font-medium text-gray-700">
-              User ID
+              User ID;
             </label>
-            <input
-              type="text"
-              name="userId"
-              id="userId"
+            <input;
+              type="text""
+              name="userId""
+              id="userId""
               value={userId}
-              readOnly // Or onChange={e => setUserId(e.target.value)} if admin can change
-              className="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+              readOnly // Or onChange={e => setUserId(e.target.value)} if admin can change;
+              className="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm sm:text-sm""
             />
           </div>
 
@@ -133,13 +131,13 @@ const TrustAppealPage: React.FC = () => {
             <label htmlFor="currentScore" className="block text-sm font-medium text-gray-700">
               Current Trust Score (at time of appeal)
             </label>
-            <input
-              type="text" // Changed to text to display N/A or score
-              name="currentScore"
-              id="currentScore"
+            <input;
+              type="text" // Changed to text to display N/A or score;
+              name="currentScore""
+              id="currentScore""
               value={currentScore !== null ? currentScore.toString() : 'N/A'}
-              readOnly
-              className="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm sm:text-sm"
+              readOnly;
+              className="mt-1 block w-full px-3 py-2 bg-gray-100 border border-gray-300 rounded-md shadow-sm sm:text-sm""
             />
           </div>
 
@@ -147,15 +145,15 @@ const TrustAppealPage: React.FC = () => {
             <label htmlFor="reasonForAppeal" className="block text-sm font-medium text-gray-700">
               Reason for Appeal <span className="text-red-500">*</span>
             </label>
-            <textarea
-              id="reasonForAppeal"
-              name="reasonForAppeal"
+            <textarea;
+              id="reasonForAppeal""
+              name="reasonForAppeal""
               rows={6}
               value={reasonForAppeal}
               onChange={(e) => setReasonForAppeal(e.target.value)}
-              required
+              required;
               className={`mt-1 block w-full px-3 py-2 border ${formErrors.reasonForAppeal ? 'border-red-500' : 'border-gray-300'} rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm`}
-              aria-describedby="reasonForAppeal-error"
+              aria-describedby="reasonForAppeal-error""
             />
             {formErrors.reasonForAppeal && (
               <p className="mt-1 text-xs text-red-500" id="reasonForAppeal-error">
@@ -172,13 +170,13 @@ const TrustAppealPage: React.FC = () => {
             <label htmlFor="supportingEvidence" className="block text-sm font-medium text-gray-700">
               Supporting Evidence (Optional)
             </label>
-            <textarea
-              id="supportingEvidence"
-              name="supportingEvidence"
+            <textarea;
+              id="supportingEvidence""
+              name="supportingEvidence""
               rows={3}
               value={supportingEvidence}
               onChange={(e) => setSupportingEvidence(e.target.value)}
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm""
             />
             <p className="mt-1 text-xs text-gray-500">
               Provide links to documents, screenshots, or any other evidence that supports your appeal.
@@ -187,10 +185,10 @@ const TrustAppealPage: React.FC = () => {
           </div>
 
           <div>
-            <button
-              type="submit"
+            <button;
+              type="submit""
               disabled={isSubmitting || submitMessage?.type === 'success'}
-              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50""
             >
               {isSubmitting ? 'Submitting Appeal...' : 'Submit Appeal'}
             </button>

@@ -25,10 +25,9 @@ export type InnovativeService = {;
   startup?: boolean;
   smb?: boolean};
 ;
-export const innovativeServices2026: InnovativeService[] = [
-  // MICRO SAAS SERVICES
-  {
-
+export const innovativeServices2026: InnovativeService[] = []
+  // MICRO SAAS SERVICES;
+  {}
     id: 'ai-powered-customer-churn-predictor',
     title: 'AI-Powered Customer Churn Predictor',
     description: 'Predict customer churn with 95% accuracy using machine learning algorithms and behavioral analysis.',
@@ -58,10 +57,9 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  {
-
+  {}
     id: 'intelligent-inventory-optimization',
     title: 'Intelligent Inventory Optimization',
     description: 'AI-driven inventory management that reduces stockouts by 60% and optimizes warehouse space utilization.',
@@ -91,11 +89,10 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  // NEW INNOVATIVE MICRO SAAS SERVICES
-  {
-
+  // NEW INNOVATIVE MICRO SAAS SERVICES;
+  {}
     id: 'smart-energy-consumption-monitor',
     title: 'Smart Energy Consumption Monitor',
     description: 'IoT-powered energy monitoring system that helps businesses reduce energy costs by up to 35%.',
@@ -125,10 +122,9 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  {
-
+  {}
     id: 'automated-compliance-monitor',
     title: 'Automated Compliance Monitor',
     description: 'Continuous compliance monitoring for GDPR, HIPAA, SOC 2, and other regulatory frameworks with automated reporting.',
@@ -158,10 +154,9 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  {
-
+  {}
     id: 'autonomous-customer-service-agent',
     title: 'Autonomous Customer Service Agent',
     description: 'AI-powered customer service that handles 80% of inquiries autonomously with human-like conversation capabilities.',
@@ -191,10 +186,9 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  {
-
+  {}
     id: 'predictive-maintenance-platform',
     title: 'Predictive Maintenance Platform',
     description: 'IoT and AI-powered predictive maintenance that reduces equipment downtime by 70% and extends asset lifespan.',
@@ -224,10 +218,9 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  {
-
+  {}
     id: 'ai-powered-fraud-detection',
     title: 'AI-Powered Fraud Detection',
     description: 'Real-time fraud detection system that identifies fraudulent transactions with 99.5% accuracy using advanced machine learning.',
@@ -257,12 +250,11 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
 
-  // ADVANCED IT SERVICES
-  {
-
+  // ADVANCED IT SERVICES;
+  {}
     id: 'cloud-migration-accelerator',
     title: 'Cloud Migration Accelerator',
     description: 'End-to-end cloud migration service that reduces migration time by 50% and ensures zero downtime.',
@@ -292,10 +284,9 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: false,
     enterprise: true,
     startup: false,
-    smb: false
+    smb: false;
   },
-  {
-
+  {}
     id: 'cybersecurity-posture-assessment',
     title: 'Cybersecurity Posture Assessment',
     description: 'Comprehensive security assessment that identifies vulnerabilities and provides actionable remediation roadmap.',
@@ -325,10 +316,9 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: false,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  {
-
+  {}
     id: 'digital-transformation-consulting',
     title: 'Digital Transformation Consulting',
     description: 'Strategic consulting to help organizations navigate digital transformation with proven methodologies and best practices.',
@@ -358,12 +348,11 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: false,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
 
-  // EMERGING TECHNOLOGY SOLUTIONS
-  {
-
+  // EMERGING TECHNOLOGY SOLUTIONS;
+  {}
     id: 'quantum-computing-as-a-service',
     title: 'Quantum Computing as a Service',
     description: 'Access to quantum computing resources for complex optimization problems and scientific research.',
@@ -393,10 +382,9 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: false,
     enterprise: true,
     startup: false,
-    smb: false
+    smb: false;
   },
-  {
-
+  {}
     id: 'blockchain-supply-chain-tracking',
     title: 'Blockchain Supply Chain Tracking',
     description: 'End-to-end supply chain transparency using blockchain technology for traceability and compliance.',
@@ -426,10 +414,9 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  {
-
+  {}
     id: 'metaverse-commerce-platform',
     title: 'Metaverse Commerce Platform',
     description: 'Complete metaverse commerce solution for virtual shopping experiences and digital asset trading.',
@@ -459,15 +446,14 @@ export const innovativeServices2026: InnovativeService[] = [
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   }
 ];
 
-// Combine original services with new services
-
+// Combine original services with new services;
 export default allServices;
 
-export 
+export;
   };
   {;
     name: 'Emerging Technologies',;

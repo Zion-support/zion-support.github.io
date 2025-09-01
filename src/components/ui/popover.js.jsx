@@ -1,27 +1,22 @@
 import React, { createContext, useContext, useState } from 'react';
-const Popover({ children }) {
-
+const Popover({ children }) {}
     const [isOpen, setIsOpen] = useState(false);
-    return (<PopoverContext.Provider value = {
-
+    return (<PopoverContext.Provider value = {}
   { isOpen,
-  setIsOpen 
-
+  setIsOpen;
 }}>
       <div className="relative">
         {children}
       </div>
     </PopoverContext.Provider>)}
-export function PopoverTrigger({ children, className = '' }) {
-
+export function PopoverTrigger({ children, className = '' }) {}
     const context = useContext(PopoverContext);
     if (!context)
         throw new Error('PopoverTrigger must be used within Popover');
     return (<div className={className} onClick={() => context.setIsOpen(!context.isOpen)}>
       {children}
     </div>)}
-export function PopoverContent({ children, className = '' }) {
-
+export function PopoverContent({ children, className = '' }) {}
     const context = useContext(PopoverContext);
     if (!context)
         throw new Error('PopoverContent must be used within Popover');

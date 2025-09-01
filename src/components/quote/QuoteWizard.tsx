@@ -1,15 +1,14 @@
 
 const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
 
-function StepIndicator({ step }: { step: WizardStep }) {
-  
+function StepIndicator(function StepIndicator({ step }: { step: WizardStep }) {): any {}
   return (
     <div data-testid="step-indicator" className="text-sm text-muted-foreground">
       Step {index + 1} of {WIZARD_STEPS.length}
     </div>
   )}
 
-export function QuoteWizard() {
+export function QuoteWizard(function QuoteWizard() {): any {}
   const { step, selectService, submitQuote } = useRequestQuoteWizard();
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
   const [message, setMessage] = useState('');
@@ -18,8 +17,7 @@ export function QuoteWizard() {
     error: unknown};
   const { data = [], isPending, error } = queryResult;
 
-  if (step === 'Services') {
-    
+  if (step === 'Services') {}
     return (
       <div className="space-y-6">
         <StepIndicator step={step}  />
@@ -41,7 +39,7 @@ export function QuoteWizard() {
         {services.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {services.map((item) => (
-              <Card
+              <Card;
                 data-testid={`service-card-${item.id}`}
                 key={item.id}
                 className={`p-4 cursor-pointer border-2 transition-colors ${selectedItem === item.id ? 'border-zion-purple' : 'hover:border-zion-purple/50'}`}
@@ -53,30 +51,30 @@ export function QuoteWizard() {
           </div>
         )}
 
-        <Button
+        <Button;
           onClick={() => selectedItem && selectService(selectedItem)}
           disabled={!selectedItem || loading || !!error}
         >
-          Continue
+          Continue;
         </Button>
       </div>
     )}
 
-  if (step === 'Details') {
+  if (step === 'Details') {}
     return (
       <div data-testid="details-step" className="space-y-4">
         <StepIndicator step={step}  />
-        <Textarea
+        <Textarea;
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          data-testid="message-input"
-          placeholder="Your message"
+          data-testid="message-input""
+          placeholder="Your message""
         />
         <Button onClick={() => submitQuote(message)}>Submit</Button>
       </div>
     )}
 
-  if (step === 'Success') {
+  if (step === 'Success') {}
     return (
       <div data-testid="success-step" className="space-y-4">
         <StepIndicator step={step}  />

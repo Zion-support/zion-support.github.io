@@ -2,8 +2,7 @@ import React from 'react';
 import { SEO } from '@/components/SEO';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-
+import {}
   Brain,
   Cloud,
   Shield,
@@ -16,79 +15,73 @@ import {
   Target,
   Check,
   ArrowRight} from 'lucide-react';
-export default function ServicesOverview() {
+export default function ServicesOverview() {}
   const stats = ['
     { label: 'Services Offered', value: '50+', icon: Target },
     { label: 'Industries Served', value: '15+', icon: Users },
     { label: 'Technologies', value: '100+', icon: Server },
-    { label: 'Client Satisfaction', value: '98%', icon: Check },
+    { label: 'Client Satisfaction', value: '98%', icon: Check }
   ];
-  const containerVariants = {
-
+  const containerVariants = {}
     hidden: { opacity: 0 },
-    visible: {
-
+    visible: {}
       opacity: 1,
-      transition: {
-
+      transition: {}
         staggerChildren: 0.1}}};
-  const itemVariants = {
-
+  const itemVariants = {}
     hidden: { y: 20, opacity: 0 },
-    visible: {
-
+    visible: {}
       y: 0,
       opacity: 1,
-      transition: {
-
+      transition: {}
         duration: 0.5,
         ease: 'easeOut'}}};
   return()
     <div className="min-h-screen bg-background">
-      <SEO"
-        title="All Services - Zion Tech Group Comprehensive Technology Solutions"
-        description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions."
-        keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services"
-        canonical="https://ziontechgroup.com/services"
+      <SEO""
+        title="All Services - Zion Tech Group Comprehensive Technology Solutions""
+        description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions.""
+        keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services""
+        canonical="https://ziontechgroup.com/services""
       />
 
-      {/* Hero Section */}"
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white py-20">"
-        <div className="absolute inset-0 bg-black/20"></div>"
-        <div className="relative container mx-auto px-4 text-center">"
+      {/* Hero Section */}""
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white py-20">""
+        <div className="absolute inset-0 bg-black/20"></div>""
+        <div className="relative container mx-auto px-4 text-center">""
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-            Our Complete Service Portfolio
-          </h1>"
+            Our Complete Service Portfolio;
+          </h1>""
           <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-            Discover our comprehensive range of technology solutions designed to
-            transform your business. From AI and data analytics to IoT and
+            Discover our comprehensive range of technology solutions designed to;
+            transform your business. From AI and data analytics to IoT and;
             blockchain, we have the expertise to drive your success.
           </p>
         </div>
       </section>
 
-      {/* Stats Section */}"
-      <section className="py-16 bg-white">"
+      {/* Stats Section */}""
+      <section className="py-16 bg-white">""
         <div className="container mx-auto px-4">
-          <motion.div"
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
-            variants={containerVariants}"
-            initial="hidden"
-            whileInView="visible"
+          <motion.div""
+            className="grid grid-cols-2 md:grid-cols-4 gap-8""
+            variants={containerVariants}""
+            initial="hidden""
+            whileInView="visible""
             viewport={{ once: true }}
           >
             {stats.map((stat, index) => (
-              <motion.div
+              <motion.div;
                 key={stat.label}
-                variants={itemVariants}"
-                className="text-center"
-              >"
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">"
+                variants={itemVariants}""
+                className="text-center""
+              >""
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">""
                   <stat.icon className="w-8 h-8 text-white" />
-                </div>"
+                </div>""
                 <div className="text-3xl font-bold text-gray-900 mb-2">
                   {stat.value}
-                </div>"
+                </div>""
                 <div className="text-gray-600">{stat.label}</div>
               </motion.div>
             ))}
@@ -96,91 +89,91 @@ export default function ServicesOverview() {
         </div>
       </section>
 
-      {/* Services Overview */}"
-      <section className="py-20 bg-gray-50">"
+      {/* Services Overview */}""
+      <section className="py-20 bg-gray-50">""
         <div className="container mx-auto px-4">
-          <motion.div"
-            className="text-center mb-16"
-            variants={itemVariants}"
-            initial="hidden"
-            whileInView="visible"
+          <motion.div""
+            className="text-center mb-16""
+            variants={itemVariants}""
+            initial="hidden""
+            whileInView="visible""
             viewport={{ once: true }}
-          >"
+          >""
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Service Categories
-            </h2>"
+              Service Categories;
+            </h2>""
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our comprehensive range of technology solutions organized
-              by category
+              Explore our comprehensive range of technology solutions organized;
+              by category;
             </p>
           </motion.div>
 
-          <motion.div"
-            className="space-y-12"
-            variants={containerVariants}"
-            initial="hidden"
-            whileInView="visible"
+          <motion.div""
+            className="space-y-12""
+            variants={containerVariants}""
+            initial="hidden""
+            whileInView="visible""
             viewport={{ once: true }}
           >
             {serviceCategories.map((category, index) => (
-              <motion.div
+              <motion.div;
                 key={category.name}
-                variants={itemVariants}"
-                className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden"
+                variants={itemVariants}""
+                className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden""
               >
-                <div
+                <div;
                   className={`bg-gradient-to-r ${category.color} p-8 text-white`}
-                >"
-                  <div className="flex items-center mb-4">"
-                    <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mr-6">"
+                >""
+                  <div className="flex items-center mb-4">""
+                    <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mr-6">""
                       <category.icon className="w-8 h-8" />
                     </div>
-                    <div>"
+                    <div>""
                       <h3 className="text-3xl font-bold mb-2">
                         {category.name}
-                      </h3>"
+                      </h3>""
                       <p className="text-xl opacity-90">
                         {category.description}
                       </p>
                     </div>
                   </div>
                 </div>
-"
-                <div className="p-8">"
+""
+                <div className="p-8">""
                   <div className="grid md:grid-cols-3 gap-6">
                     {category.services.map((service, serviceIndex) => (
-                      <div
-                        key={serviceIndex}"
-                        className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-blue-300 transition-colors"
-                      >"
+                      <div;
+                        key={serviceIndex}""
+                        className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-blue-300 transition-colors""
+                      >""
                         <h4 className="text-xl font-semibold text-gray-900 mb-3">
                           {service.name}
-                        </h4>"
+                        </h4>""
                         <p className="text-gray-600 mb-4">
                           {service.description}
-                        </p>"
-                        <div className="flex items-center justify-between">"
+                        </p>""
+                        <div className="flex items-center justify-between">""
                           <span className="text-lg font-semibold text-blue-600">
                             {service.price}
                           </span>
-                          <Link
-                            to={service.href}"
-                            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                          <Link;
+                            to={service.href}""
+                            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium""
                           >
-                            Learn More"
+                            Learn More""
                             <ArrowRight className="w-4 h-4 ml-1" />
                           </Link>
                         </div>
                       </div>
                     ))}
                   </div>
-"
+""
                   <div className="mt-8 text-center">
-                    <Link
+                    <Link;
                       to={category.services[0].href}`
                       className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${category.color} hover:opacity-90 transition-opacity`}
                     >
-                      Explore All {category.name} Services"
+                      Explore All {category.name} Services""
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Link>
                   </div>
@@ -191,114 +184,114 @@ export default function ServicesOverview() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}"
-      <section className="py-20 bg-white">"
+      {/* Why Choose Us Section */}""
+      <section className="py-20 bg-white">""
         <div className="container mx-auto px-4">
-          <motion.div"
-            className="text-center mb-16"
-            variants={itemVariants}"
-            initial="hidden"
-            whileInView="visible"
+          <motion.div""
+            className="text-center mb-16""
+            variants={itemVariants}""
+            initial="hidden""
+            whileInView="visible""
             viewport={{ once: true }}
-          >"
+          >""
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Why Choose Zion Tech Group?
-            </h2>"
+            </h2>""
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine deep technical expertise with business acumen to
-              deliver solutions that drive real value
+              We combine deep technical expertise with business acumen to;
+              deliver solutions that drive real value;
             </p>
           </motion.div>
 
-          <motion.div"
-            className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"
-            variants={containerVariants}"
-            initial="hidden"
-            whileInView="visible"
+          <motion.div""
+            className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto""
+            variants={containerVariants}""
+            initial="hidden""
+            whileInView="visible""
             viewport={{ once: true }}
-          >"
-            <motion.div variants={itemVariants} className="text-center">"
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">"
+          >""
+            <motion.div variants={itemVariants} className="text-center">""
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">""
                 <Users className="w-8 h-8 text-blue-600" />
-              </div>"
+              </div>""
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Expert Team
-              </h3>"
+                Expert Team;
+              </h3>""
               <p className="text-gray-600">
-                Certified professionals with deep expertise across multiple
-                technology domains
+                Certified professionals with deep expertise across multiple;
+                technology domains;
               </p>
             </motion.div>
-"
-            <motion.div variants={itemVariants} className="text-center">"
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">"
+""
+            <motion.div variants={itemVariants} className="text-center">""
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">""
                 <Target className="w-8 h-8 text-green-600" />
-              </div>"
+              </div>""
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Proven Results
-              </h3>"
+                Proven Results;
+              </h3>""
               <p className="text-gray-600">
-                Track record of successful implementations and measurable
-                business outcomes
+                Track record of successful implementations and measurable;
+                business outcomes;
               </p>
             </motion.div>
-"
-            <motion.div variants={itemVariants} className="text-center">"
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">"
+""
+            <motion.div variants={itemVariants} className="text-center">""
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">""
                 <Zap className="w-8 h-8 text-purple-600" />
-              </div>"
+              </div>""
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Innovation Focus
-              </h3>"
+                Innovation Focus;
+              </h3>""
               <p className="text-gray-600">
-                Stay ahead with cutting-edge technologies and emerging industry
-                trends
+                Stay ahead with cutting-edge technologies and emerging industry;
+                trends;
               </p>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* CTA Section */}"
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
+      {/* CTA Section */}""
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">""
         <div className="container mx-auto px-4 text-center">
-          <motion.h2"
-            className="text-4xl font-bold mb-6"
-            variants={itemVariants}"
-            initial="hidden"
-            whileInView="visible"
+          <motion.h2""
+            className="text-4xl font-bold mb-6""
+            variants={itemVariants}""
+            initial="hidden""
+            whileInView="visible""
             viewport={{ once: true }}
           >
             Ready to Transform Your Business?
           </motion.h2>
-          <motion.p"
-            className="text-xl mb-8 max-w-3xl mx-auto"
-            variants={itemVariants}"
-            initial="hidden"
-            whileInView="visible"
+          <motion.p""
+            className="text-xl mb-8 max-w-3xl mx-auto""
+            variants={itemVariants}""
+            initial="hidden""
+            whileInView="visible""
             viewport={{ once: true }}
           >
-            Let our technology experts help you choose the right solutions and
-            implement them successfully
+            Let our technology experts help you choose the right solutions and;
+            implement them successfully;
           </motion.p>
-          <motion.div"
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            variants={itemVariants}"
-            initial="hidden"
-            whileInView="visible"
+          <motion.div""
+            className="flex flex-col sm:flex-row gap-4 justify-center""
+            variants={itemVariants}""
+            initial="hidden""
+            whileInView="visible""
             viewport={{ once: true }}
           >
-            <Link"
-              to="/contact"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            <Link""
+              to="/contact""
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors""
             >
-              Get Started Today
+              Get Started Today;
             </Link>
-            <Link"
-              to="/contact"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+            <Link""
+              to="/contact""
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors""
             >
-              Schedule Consultation
+              Schedule Consultation;
             </Link>
           </motion.div>
         </div>

@@ -1,4 +1,4 @@
-import { 
+import {}
   Brain, 
   Users, 
   TrendingUp, 
@@ -10,16 +10,16 @@ import {
   Filter,
   Star,
   ArrowRight,
-  CheckCircle
+  CheckCircle;
 } from 'lucide-react';
 
-interface AIService {
+interface AIService {}
   id: string;
   name: string;
   description: string;
   category: string;
   features: string[];
-  pricing: {
+  pricing: {}
     starter: number;
     professional: number;
     enterprise: number};
@@ -27,13 +27,13 @@ interface AIService {
   route: string;
   status: 'active' | 'beta' | 'coming-soon'}
 
-const AdvancedAIServicesHub: React.FC = () => {
+const AdvancedAIServicesHub: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity');
 
-  const aiServices: AIService[] = [
-    {
+  const aiServices: AIService[] = []
+    {}
       id: 'ai-project-management',
       name: 'AI-Powered Project Management',
       description: 'Intelligent project planning, resource allocation, and predictive analytics for optimal project delivery.',
@@ -44,7 +44,7 @@ const AdvancedAIServicesHub: React.FC = () => {
       route: '/services/ai-project-management',
       status: 'active'
     },
-    {
+    {}
       id: 'ai-customer-support',
       name: 'AI Customer Support Automation',
       description: 'Automated customer service with intelligent chatbots, ticket routing, and sentiment analysis.',
@@ -55,7 +55,7 @@ const AdvancedAIServicesHub: React.FC = () => {
       route: '/services/ai-customer-support-automation',
       status: 'active'
     },
-    {
+    {}
       id: 'ai-financial-analytics',
       name: 'AI Financial Analytics Platform',
       description: 'Advanced financial forecasting, risk assessment, and compliance monitoring powered by AI.',
@@ -66,7 +66,7 @@ const AdvancedAIServicesHub: React.FC = () => {
       route: '/services/ai-financial-analytics',
       status: 'active'
     },
-    {
+    {}
       id: 'ai-marketing-automation',
       name: 'AI Marketing Automation',
       description: 'Intelligent audience segmentation, content personalization, and multi-channel campaign orchestration.',
@@ -77,7 +77,7 @@ const AdvancedAIServicesHub: React.FC = () => {
       route: '/services/ai-marketing-automation',
       status: 'active'
     },
-    {
+    {}
       id: 'ai-data-analytics',
       name: 'AI Data Analytics Engine',
       description: 'Advanced data processing, pattern recognition, and predictive modeling for business intelligence.',
@@ -88,7 +88,7 @@ const AdvancedAIServicesHub: React.FC = () => {
       route: '/services/ai-data-analytics',
       status: 'beta'
     },
-    {
+    {}
       id: 'ai-cybersecurity',
       name: 'AI Cybersecurity Suite',
       description: 'Intelligent threat detection, automated response, and proactive security monitoring.',
@@ -107,29 +107,29 @@ const AdvancedAIServicesHub: React.FC = () => {
     return matchesCategory && matchesSearch});
 
   
-      case 'price':
+      case 'price': any;
         return a.pricing.starter - b.pricing.starter;
-      case 'popularity':
-        return 0; // Default sorting
-      default:
+      case 'popularity': any;
+        return 0; // Default sorting;
+      default: any;
         return 0}
   });
 
   
-      case 'beta':
+      case 'beta': any;
         return 'bg-yellow-100 text-yellow-800';
-      case 'coming-soon':
+      case 'coming-soon': any;
         return 'bg-gray-100 text-gray-800';
-      default:
+      default: any;
         return 'bg-gray-100 text-gray-800'}
   };
 
   
-      case 'beta':
+      case 'beta': any;
         return 'Beta';
-      case 'coming-soon':
+      case 'coming-soon': any;
         return 'Coming Soon';
-      default:
+      default: any;
         return 'Unknown'}
   };
 
@@ -139,10 +139,10 @@ const AdvancedAIServicesHub: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-slate-900 mb-4">
-            Advanced AI Services Hub
+            Advanced AI Services Hub;
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Discover our cutting-edge AI-powered solutions designed to transform your business operations
+            Discover our cutting-edge AI-powered solutions designed to transform your business operations;
           </p>
         </div>
 
@@ -151,19 +151,19 @@ const AdvancedAIServicesHub: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
-              <input
-                type="text"
-                placeholder="Search AI services..."
+              <input;
+                type="text""
+                placeholder="Search AI services...""
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
               />
             </div>
             <div className="flex gap-2">
-              <select
+              <select;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
               >
                 {categories.map(category => (
                   <option key={category.id} value={category.id}>
@@ -171,10 +171,10 @@ const AdvancedAIServicesHub: React.FC = () => {
                   </option>
                 ))}
               </select>
-              <select
+              <select;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
               >
                 <option value="popularity">Sort by Popularity</option>
                 <option value="name">Sort by Name</option>
@@ -187,12 +187,12 @@ const AdvancedAIServicesHub: React.FC = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sortedServices.map((service) => (
-            <motion.div
+            <motion.div;
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200"
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200""
             >
               <div className="p-6">
                 {/* Service Header */}

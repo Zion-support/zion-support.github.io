@@ -4,9 +4,9 @@ import { cn } from '../../lib/utils';
 
 const buttonVariants = cva(
   'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none',
-  {
-    variants: {
-      variant: {
+  {}
+    variants: {}
+      variant: {}
         default: 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan-dark hover:to-zion-blue-dark focus:ring-zion-cyan shadow-lg hover:shadow-xl transform hover:-translate-y-1',
         secondary: 'bg-gray-800 text-white hover:bg-gray-700 focus:ring-gray-500 border border-gray-600 hover:border-gray-500',
         outline: 'border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white focus:ring-zion-cyan',
@@ -15,28 +15,28 @@ const buttonVariants = cva(
         success: 'bg-green-600 text-white hover:bg-green-700 focus:ring-green-500',
         warning: 'bg-yellow-600 text-white hover:bg-yellow-700 focus:ring-yellow-500'
       },
-      size: {
+      size: {}
         sm: 'h-8 px-3 text-sm',
         md: 'h-10 px-4 text-sm',
         lg: 'h-12 px-6 text-base',
         xl: 'h-14 px-8 text-lg'
       },
-      fullWidth: {
+      fullWidth: {}
         true: 'w-full',
         false: ''
       }
     },
-    defaultVariants: {
+    defaultVariants: {}
       variant: 'default',
       size: 'md',
-      fullWidth: false
+      fullWidth: false;
     }
   }
 );
 
 const Button = React.forwardRef(
   (
-    {
+    {}
       className,
       variant,
       size,
@@ -46,36 +46,36 @@ const Button = React.forwardRef(
       rightIcon,
       children,
       disabled,
-      ...props
+      ...props;
     },
-    ref
-  ) => {
+    ref;
+  ) => {}
     return (
-      <button
+      <button;
         className={cn(buttonVariants({ variant, size, fullWidth, className }))}
         ref={ref}
         disabled={disabled || loading}
         {...props}
       >
         {loading && (
-          <svg
-            className="animate-spin -ml-1 mr-2 h-4 w-4"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
+          <svg;
+            className="animate-spin -ml-1 mr-2 h-4 w-4""
+            xmlns="http://www.w3.org/2000/svg""
+            fill="none""
+            viewBox="0 0 24 24""
           >
-            <circle
-              className="opacity-25"
-              cx="12"
-              cy="12"
-              r="10"
-              stroke="currentColor"
-              strokeWidth="4"
+            <circle;
+              className="opacity-25""
+              cx="12""
+              cy="12""
+              r="10""
+              stroke="currentColor""
+              strokeWidth="4""
             />
-            <path
-              className="opacity-75"
-              fill="currentColor"
-              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            <path;
+              className="opacity-75""
+              fill="currentColor""
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z""
             />
           </svg>
         )}

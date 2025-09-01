@@ -11,25 +11,25 @@ declare module "@radix-ui/react-toggle-group";
 declare module "@radix-ui/react-toggle";
 declare module 'react-player';
 declare module '@google/model-viewer';
-declare module '*.module.css' {
+declare module '*.module.css' {}
   const classes: { [key: string]: string };
   export default classes}
 
 declare module '@tanstack/react-query';
-declare module 'react-day-picker' {
-  export interface DateRange {
+declare module 'react-day-picker' {}
+  export interface DateRange {}
     from?: Date;
     to?: Date}
 
-  // Minimal placeholder for the DayPicker component used in the app
-  // The actual library provides full typings but we stub them here so the
-  // TypeScript compiler can understand the imports without requiring the real
+  // Minimal placeholder for the DayPicker component used in the app;
+  // The actual library provides full typings but we stub them here so the;
+  // TypeScript compiler can understand the imports without requiring the real;
   // type definitions.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any;
   export const DayPicker: any}
 declare module 'sonner';
-declare module 'lucide-react' {
-  export interface LucideProps extends SVGProps<SVGSVGElement> {
+declare module 'lucide-react' {}
+  export interface LucideProps extends SVGProps<SVGSVGElement> {}
     size?: number | string;
     color?: string;
     strokeWidth?: number | string}
@@ -230,7 +230,7 @@ declare module 'lucide-react' {
   export default icons}
 declare module 'child_process';
 declare module 'date-fns';
-declare module 'jspdf' {
+declare module 'jspdf' {}
   export const jsPDF: any;
   export default jsPDF}
 declare module '@hookform/resolvers/zod';
@@ -256,11 +256,11 @@ declare module '@radix-ui/react-tabs';
 declare module '@radix-ui/react-toast';
 declare module '@radix-ui/react-tooltip';
 declare module '@supabase/supabase-js';
-declare module 'class-variance-authority' {
-  export function cva(...inputs: any[]): any
-  export type VariantProps<T extends (...args: any) => any> = any
+declare module 'class-variance-authority' {}
+  export function cva(...inputs: any[]): any;
+  export type VariantProps<T extends (...args: any) => any> = any;
 }
-declare module 'clsx' {
+declare module 'clsx' {}
   export type ClassValue = any;
   export default function clsx(...classes: ClassValue[]): string}
 declare module 'embla-carousel-react';
@@ -268,23 +268,20 @@ declare module 'framer-motion';
 declare module 'i18next';
 declare module 'i18next-browser-languagedetector';
 declare module 'react-helmet-async';
-declare module 'react-hook-form' {
-
-  // Minimal generic typings to satisfy local usage without full type defs
+declare module 'react-hook-form' {}
+  // Minimal generic typings to satisfy local usage without full type defs;
   export type FieldValues = Record<string, any>
   export type FieldPath<TFieldValues extends FieldValues> =
-    keyof TFieldValues & string
-
-  export type Control<TFieldValues extends FieldValues = FieldValues> = any
-
+    keyof TFieldValues & string;
+  export type Control<TFieldValues extends FieldValues = FieldValues> = any;
   export interface UseFormReturn<
     TFieldValues extends FieldValues = FieldValues,
-  > {
+  > {}
     control: Control<TFieldValues>
-    handleSubmit: any
-    register: any
-    formState: any
-    [key: string]: any
+    handleSubmit: any;
+    register: any;
+    formState: any;
+    [key: string]: any;
   }
 
   export function useForm<
@@ -293,26 +290,25 @@ declare module 'react-hook-form' {
 
   export function useFieldArray<
     TFieldValues extends FieldValues = FieldValues,
-  >(options: any): any
-
+  >(options: any): any;
   export interface ControllerProps<
     TFieldValues extends FieldValues = FieldValues,
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
-  > {
-    name: TName
+  > {}
+    name: TName;
     control?: Control<TFieldValues>
-    rules?: any
-    defaultValue?: any
-    render: (props: any) => ReactElement
+    rules?: any;
+    defaultValue?: any;
+    render: (props: any) => ReactElement;
   }
 
   export const Controller: ComponentType<ControllerProps<any, any>>
 
   export interface FormProviderProps<
     TFieldValues extends FieldValues = FieldValues,
-  > {
-    children?: ReactNode
-    [key: string]: any
+  > {}
+    children?: ReactNode;
+    [key: string]: any;
   }
 
   export const FormProvider: ComponentType<FormProviderProps<any>>
@@ -328,27 +324,27 @@ declare module 'react-redux';
 declare module 'semver';
 declare module 'ws';
 declare module 'recharts';
-declare module 'next' {
+declare module 'next' {}
   export type GetStaticPaths = any;
   export type GetStaticProps<P = any, Q = any> = any;
   export type GetServerSideProps<P = any, Q = any> = any}
-declare module 'next/link' {
+declare module 'next/link' {}
   const Link: React.ComponentType<any>
-  export default Link
+  export default Link;
 }
-declare module 'next/router' {
-  interface NextRouter {
-    pathname: string
+declare module 'next/router' {}
+  interface NextRouter {}
+    pathname: string;
     /**
-     * When using `getStaticPaths` with `fallback: true` or `'blocking'`, Next.js
-     * exposes an `isFallback` boolean on the router during the build-time
-     * rendering phase. We include it here so TypeScript is aware of the
+     * When using `getStaticPaths` with `fallback: true` or `'blocking'`, Next.js;
+     * exposes an `isFallback` boolean on the router during the build-time;
+     * rendering phase. We include it here so TypeScript is aware of the;
      * property without pulling in the real Next.js type definitions.
      */
-    isFallback?: boolean
-main
+    isFallback?: boolean;
+main;
   }
-  export function useRouter(): NextRouter
+  export function useRouter(): NextRouter;
 }
 declare module 'next-themes';
 declare module 'tailwind-merge';

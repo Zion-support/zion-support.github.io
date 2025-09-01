@@ -1,16 +1,13 @@
 
-export interface AvatarMenuProps {
+export interface AvatarMenuProps {}
   avatarUrl?: string;
   onLogout?: () => void}
 
-export function AvatarMenu({ avatarUrl, onLogout }: AvatarMenuProps) {
-  
-  
-    
-    if (e.key === "ArrowDown") {
+export function AvatarMenu(function AvatarMenu({ avatarUrl, onLogout }: AvatarMenuProps) {): any {}
+    if (e.key === "ArrowDown") {}
       e.preventDefault();
       
-      items[next]?.focus()} else if (e.key === "ArrowUp") {
+      items[next]?.focus()} else if (e.key === "ArrowUp") {}
       e.preventDefault();
       
       items[prev]?.focus()}
@@ -28,36 +25,36 @@ export function AvatarMenu({ avatarUrl, onLogout }: AvatarMenuProps) {
             <span className="sr-only">Open user menu</span>
           </Popover.Button>
           {open && (
-            <Popover.Panel
-              static
-              className="absolute right-0 z-50 mt-2 w-40 rounded-md border border-zion-blue-light bg-zion-blue-dark p-2 shadow-md focus:outline-none"
+            <Popover.Panel;
+              static;
+              className="absolute right-0 z-50 mt-2 w-40 rounded-md border border-zion-blue-light bg-zion-blue-dark p-2 shadow-md focus:outline-none""
               onKeyDown={handleKeyDown}
             >
               <div className="py-1 flex flex-col text-sm text-white">
-                <Link
-                  to="/profile"
+                <Link;
+                  to="/profile""
                   ref={(el) => (itemRefs.current[0] = el)}
-                  className="rounded px-2 py-1 hover:bg-zion-blue-light focus:bg-zion-blue-light"
+                  className="rounded px-2 py-1 hover:bg-zion-blue-light focus:bg-zion-blue-light""
                 >
-                  Profile
+                  Profile;
                 </Link>
-                <Link
-                  to="/orders"
+                <Link;
+                  to="/orders""
                   ref={(el) => (itemRefs.current[1] = el)}
-                  className="rounded px-2 py-1 hover:bg-zion-blue-light focus:bg-zion-blue-light"
+                  className="rounded px-2 py-1 hover:bg-zion-blue-light focus:bg-zion-blue-light""
                 >
-                  Orders
+                  Orders;
                 </Link>
-                <button
-                  type="button"
-                  ref={(el) => {
+                <button;
+                  type="button""
+                  ref={(el) => {}
                     itemRefs.current[2] = el}}
-                  onClick={() => {
+                  onClick={() => {}
                     close();
                     onLogout?.()}}
-                  className="rounded px-2 py-1 text-left hover:bg-zion-blue-light focus:bg-zion-blue-light"
+                  className="rounded px-2 py-1 text-left hover:bg-zion-blue-light focus:bg-zion-blue-light""
                 >
-                  Logout
+                  Logout;
                 </button>
               </div>
             </Popover.Panel>

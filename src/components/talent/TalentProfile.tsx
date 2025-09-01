@@ -1,17 +1,17 @@
 
-export interface TalentProfileProps {
+export interface TalentProfileProps {}
   id: string;
   full_name: string;
   bio?: string;
   skills?: string[];
   profile_picture_url?: string}
 
-export default function TalentProfile({
+export default function TalentProfile(function TalentProfile({}
   full_name,
   bio,
   skills = [],
-  profile_picture_url,
-}: TalentProfileProps) {
+  profile_picture_url
+}: TalentProfileProps) {): any {}
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white" data-testid="talent-details">
       <div className="container mx-auto px-4 flex flex-col items-center space-y-4">
@@ -34,7 +34,7 @@ export default function TalentProfile({
           </ul>
         )}
         <Button className="bg-zion-purple text-white" data-testid="contact-button">
-          Contact
+          Contact;
         </Button>
       </div>
     </main>

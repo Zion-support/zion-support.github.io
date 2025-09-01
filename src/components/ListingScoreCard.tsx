@@ -1,6 +1,6 @@
 
 
-interface ListingScoreCardProps {
+interface ListingScoreCardProps {}
   title: string;
   description: string;
   image?: string;
@@ -13,7 +13,7 @@ interface ListingScoreCardProps {
   reviewCount?: number;
   className?: string}
 
-export function ListingScoreCard({ 
+export function ListingScoreCard(function ListingScoreCard({}
   title, 
   description, 
   image, 
@@ -24,19 +24,19 @@ export function ListingScoreCard({
   aiScore = 0,
   rating = 0,
   reviewCount = 0,
-  className 
-}: ListingScoreCardProps) {
+  className;
+}: ListingScoreCardProps) {): any {}
   return (
     <div className={cn(
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
-      className
+      className;
     )}>
       {image && (
         <div className="h-48 w-full overflow-hidden">
-          <img 
+          <img;
             src={image} 
             alt={title} 
-            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105""
           />
         </div>
       )}
@@ -76,7 +76,7 @@ export function ListingScoreCard({
         )}
         
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-          Request Quote
+          Request Quote;
         </Button>
         
         {author && (

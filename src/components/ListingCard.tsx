@@ -2,9 +2,8 @@
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import TrustScoreBadge from "@/components/TrustScoreBadge"; // Assuming TrustScoreBadge is in @/components
-
-interface ListingCardProps {
+import TrustScoreBadge from '@/components/TrustScoreBadge'; // Assuming TrustScoreBadge is in @/components;
+interface ListingCardProps {}
   id?: string;
   title: string;
   description: string;
@@ -19,7 +18,7 @@ interface ListingCardProps {
   trustScoreAnalysis?: string | null;
 }
 
-export function ListingCard({ 
+export function ListingCard(function ListingCard({}
   id,
   title, 
   description, 
@@ -31,27 +30,27 @@ export function ListingCard({
   className,
   profileType = 'service',
   trustScore,
-  trustScoreAnalysis
-}: ListingCardProps) {
-  // Generate a profile ID based on the listing data
-  // In a real app, this would be a proper ID from the database
-  const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
+  trustScoreAnalysis;
+}: ListingCardProps) {): any {}
+  // Generate a profile ID based on the listing data;
+  // In a real app, this would be a proper ID from the database;
+  const profileId: any = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
 
   return (
-    <Link
+    <Link;
       to={`/profile/${profileId}`}
       tabIndex={0}
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
-        className
+        className;
       )}
     >
       {image && (
         <div className="h-48 w-full overflow-hidden">
-          <img 
+          <img;
             src={image} 
             alt={title} 
-            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105""
           />
         </div>
       )}

@@ -1,26 +1,25 @@
 
 
-export default function AIMatcherPage() {
-  
+export default function AIMatcherPage(function AIMatcherPage() {): any {}
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   
   
     
     if (category.includes("talent") || category === "engineering" || 
-        category === "data science" || category === "development") {
-      itemType = "talent"} else if (category.includes("equipment") || category === "hardware") {
+        category === "data science" || category === "development") {}
+      itemType = "talent"} else if (category.includes("equipment") || category === "hardware") {}
       itemType = "equipment"}
     
-    toast({
+    toast({}
       title: "Match Selected",
-      description: `You've selected ${match.item.title}`,
+      description: `You've selected ${match.item.title}`
     });
     
-    // Navigate to the quote request page with the selected item
-    navigate("/request-quote", {
-      state: { 
+    // Navigate to the quote request page with the selected item;
+    navigate("/request-quote", {}
+      state: {}
         serviceType: itemType,
-        specificItem: match.item
+        specificItem: match.item;
       }
     })};
   
@@ -38,7 +37,7 @@ export default function AIMatcherPage() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                I'm looking for:
+                I'm looking for: any;
               </label>
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">

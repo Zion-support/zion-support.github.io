@@ -1,6 +1,5 @@
 
-export default function AddedServicesDirectory(): JSX.Element {
-  
+export default function AddedServicesDirectory(): JSX.Element {}
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <header className="border-b border-white/10">
@@ -19,10 +18,10 @@ export default function AddedServicesDirectory(): JSX.Element {
       <main>
         <section className="mx-auto max-w-6xl px-6 pt-10 pb-6 text-center">
           <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur">
-            Real, production‑ready services with transparent pricing
+            Real, production‑ready services with transparent pricing;
           </div>
           <h1 className="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight">
-            New Micro SaaS, IT and AI Services
+            New Micro SaaS, IT and AI Services;
           </h1>
           <p className="mt-4 max-w-3xl mx-auto text-white/75">
             Add-ons you can adopt today. Fixed pricing ranges, fast delivery, and clear outcomes.
@@ -32,12 +31,12 @@ export default function AddedServicesDirectory(): JSX.Element {
         <section className="mx-auto max-w-6xl px-6 pb-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {ADDED_SERVICES_2025.map(service => (
-              <a
+              <a;
                 key={service.id}
                 href={service.href}
                 target={service.href.startsWith('http') ? '_blank' : undefined}
                 rel={service.href.startsWith('http') ? 'noreferrer' : undefined}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur hover:border-cyan-400/30"
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur hover:border-cyan-400/30""
               >
                 <div className="flex items-start justify-between">
                   <h3 className="text-lg font-semibold">{service.title}</h3>
@@ -89,10 +88,10 @@ export default function AddedServicesDirectory(): JSX.Element {
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="https://ziontechgroup.com/contact" className="rounded-xl bg-white text-slate-900 px-6 py-3 font-semibold hover:bg-white/90">
-                Contact Sales
+                Contact Sales;
               </a>
               <a href="https://ziontechgroup.com/services" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold hover:bg-white/10">
-                View All Services
+                View All Services;
               </a>
             </div>
           </div>

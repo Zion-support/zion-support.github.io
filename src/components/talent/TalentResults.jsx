@@ -2,8 +2,7 @@ import React from 'react';
 import { ActiveFilters } from '@/components/talent/ActiveFilters';
 import { ResultsHeader } from '@/components/talent/ResultsHeader';
 import { TalentGrid } from '@/components/talent/TalentGrid';
-export function TalentResults({
-
+export function TalentResults({}
   talents,
   totalCount,
   isLoading,
@@ -11,8 +10,7 @@ export function TalentResults({
   handleBook,
   handleMessage,
   isAuthenticated,
-  activeFiltersProps}) {
-
+  activeFiltersProps}) {}
   return()
     <div className="flex-1">
       {/* Active filters */}
@@ -22,7 +20,7 @@ export function TalentResults({
       <ResultsHeader isLoading={isLoading} resultCount={totalCount} />
 
       {/* Talents grid */}
-      <TalentGrid
+      <TalentGrid;
         talents={talents}
         isLoading={isLoading}
         onTalentClick={viewProfile}
@@ -34,4 +32,4 @@ export function TalentResults({
     </div>
   );
 }
-'"
+'""

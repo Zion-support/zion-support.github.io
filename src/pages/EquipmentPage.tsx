@@ -1,19 +1,19 @@
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
-import { useEffect, useState, useCallback } from "react"; // Added useCallback
+import { useEffect, useState, useCallback } from "react"; // Added useCallback;
 import { useQuery } from "@tanstack/react-query";
-import apiClient from "@/services/apiClient";
+import apiClient from '@/services/apiClient';
 import { generateRandomEquipment } from "@/utils/generateRandomEquipment";
 import { Button } from "@/components/ui/button";
 import { Loader2, Sparkles } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { useNavigate, useLocation } from "react-router-dom";
-import useSWRMutation from "swr/mutation";
+import useSWRMutation from 'swr/mutation';
 import { Skeleton } from "@/components/ui/skeleton";
 import { useDelayedError } from '@/hooks/useDelayedError';
 
-const EQUIPMENT_FILTERS = [
+const EQUIPMENT_FILTERS: any = []
   { label: "Servers", value: "Servers" },
   { label: "Networking", value: "Networking" },
   { label: "Power", value: "Power" },
@@ -23,82 +23,80 @@ const EQUIPMENT_FILTERS = [
   { label: "Management", value: "Management" },
   { label: "Infrastructure", value: "Infrastructure" },
   { label: "AI", value: "AI" },
-  { label: "Robotics", value: "Robotics" },
+  { label: "Robotics", value: "Robotics" }
 ];
 
-async function fetchEquipment(): Promise<ProductListing[]> {
+async function fetchEquipment(): Promise<ProductListing[]> {}
   const { data } = await apiClient.get('/equipment');
   return data;
 }
 
-export default function EquipmentPage() {
+export default function EquipmentPage(function EquipmentPage() {): any {}
   const [equipment, setEquipment] = useState<ProductListing[]>([]);
   const { user } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
+  const navigate: any = useNavigate();
+  const location: any = useLocation();
 
-  const {
+  const {}
     data: fetchedEquipment,
     error: equipmentError,
     isLoading: isLoadingEquipment,
-    refetch: refetchEquipment
-  } = useQuery<ProductListing[], Error>({
+    refetch: refetchEquipment;
+  } = useQuery<ProductListing[], Error>({}
     queryKey: ['equipment'],
-    queryFn: fetchEquipment,
+    queryFn: fetchEquipment
   });
-  const delayedError = useDelayedError(equipmentError);
+  const delayedError: any = useDelayedError(equipmentError);
 
-  useEffect(() => {
-    if (fetchedEquipment) {
+  useEffect(() => {}
+    if (fetchedEquipment) {}
       setEquipment(fetchedEquipment);
     }
   }, [fetchedEquipment]);
 
-  const {
+  const {}
     trigger: fetchRecommendations,
-    isMutating: isFetchingRecommendations,
+    isMutating: isFetchingRecommendations
   } = useSWRMutation(
     "/api/equipment/recommendations",
     (
       url: string,
       { arg }: { arg: { userId: string } }
     ) =>
-      fetch(`${url}?userId=${arg.userId}`).then((res) => {
+      fetch(`${url}?userId=${arg.userId}`).then((res) => {}
         if (!res.ok) throw new Error("Failed to fetch recommendations");
         return res.json();
       })
   );
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  useEffect(() => {}
+    const interval: any = setInterval(() => {}
       setEquipment((prev) => [...prev, generateRandomEquipment()]);
     }, 120000); 
     return () => clearInterval(interval);
   }, []);
 
-  const handleRecommendations = useCallback(async () => { // Wrapped in useCallback
-    if (!user) {
+  const handleRecommendations: any = useCallback(async () => { // Wrapped in useCallback;
+    if (!user) {}
       navigate('/login?next=/equipment&reco=1');
       return;
     }
-    try {
-      const data = await fetchRecommendations({ userId: user.id });
+    try {}
+      const data: any = await fetchRecommendations({ userId: user.id });
       setEquipment(data as ProductListing[]);
       toast({ title: 'Showing personalized recommendations' });
-    } catch (err) {
+    } catch (err) {}
       console.error(err);
       toast({ title: 'Failed to load recommendations', variant: 'destructive' });
     }
-  }, [user, navigate, fetchRecommendations, toast]); // Added dependencies
-
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    if (params.get('reco') === '1' && user) {
+  }, [user, navigate, fetchRecommendations, toast]); // Added dependencies;
+  useEffect(() => {}
+    const params: any = new URLSearchParams(location.search);
+    if (params.get('reco') === '1' && user) {}
       handleRecommendations();
     }
-  }, [user, location.search, handleRecommendations]); // Added handleRecommendations
-
-  if (isLoadingEquipment || (equipmentError && !delayedError)) {
+  }, [user, location.search, handleRecommendations]); // Added handleRecommendations;
+  if (isLoadingEquipment || (equipmentError && !delayedError)) {}
     return (
       <div data-testid="loading-state-equipment" className="container mx-auto p-4 space-y-4">
         <div className="flex justify-end mb-6">
@@ -125,12 +123,12 @@ export default function EquipmentPage() {
     );
   }
 
-  if (delayedError) {
+  if (delayedError) {}
     return (
       <div data-testid="error-state-equipment" className="py-12 text-center space-y-4">
         <p className="text-red-400">Failed to load equipment: {delayedError.message}</p>
         <Button data-testid="retry-button-equipment" onClick={() => refetchEquipment()}>
-          Retry
+          Retry;
         </Button>
       </div>
     );
@@ -146,7 +144,7 @@ export default function EquipmentPage() {
             ) : (
               <Sparkles className="h-4 w-4 mr-2" />
             )}
-            AI Recommendations
+            AI Recommendations;
           </Button>
         </div>
       </div>
@@ -169,14 +167,14 @@ export default function EquipmentPage() {
           ))}
         </div>
       ) : (
-        <DynamicListingPage
-          title="Datacenter Equipment"
-          description="Browse professional hardware for modern datacenter and network deployments."
-          categorySlug="equipment"
+        <DynamicListingPage;
+          title="Datacenter Equipment""
+          description="Browse professional hardware for modern datacenter and network deployments.""
+          categorySlug="equipment""
           listings={equipment} 
           categoryFilters={EQUIPMENT_FILTERS}
           initialPrice={{ min: 400, max: 50000 }}
-          detailBasePath="/equipment"
+          detailBasePath="/equipment""
         />
       )}
     </>

@@ -5,93 +5,80 @@ import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
 ;
 const initialState = { items: [] };
 ;
-function cartReducer(state, action) {
-
-  switch (action.type) {
-
-    case 'ADD_ITEM': {
-
+function cartReducer(state, action) {}
+  switch (action.type) {}
+    case 'ADD_ITEM': {}
       const existing = state.items.find(i => i.id === action.payload.id);
       let items;
-      if (existing) {
-
+      if (existing) {}
         items = state.items.map(i =>
-          i.id === action.payload.id
+          i.id === action.payload.id;
             ? { ...i, quantity: i.quantity + action.payload.quantity }
-            : i
+            : i;
         );
-      } else {
-
+      } else {}
         items = [...state.items, action.payload];
       }
       return { items };
     }
 
-    case 'REMOVE_ITEM':
+    case 'REMOVE_ITEM': any;
       return { items: state.items.filter(i => i.id !== action.payload) };
 
-    case 'UPDATE_QUANTITY': {
-
+    case 'UPDATE_QUANTITY': {}
       const { id, quantity } = action.payload;
       const items = state.items.map(i =>
-        i.id === id ? { ...i, quantity } : i
+        i.id === id ? { ...i, quantity } : i;
       );
       return { items };
     }
 
-    case 'CLEAR_CART':
+    case 'CLEAR_CART': any;
       return { items: [] };
 
-    case 'SET_ITEMS':
+    case 'SET_ITEMS': any;
       return { items: action.payload };
 
-    default:
+    default: any;
       return state;
   }
 }
 ;
 const CartContext = createContext(null);
 ;
-export function useCart() {
+export function useCart() {}
   const ctx = useContext(CartContext);
-  if (!ctx) {
-
+  if (!ctx) {}
     throw new Error('useCart must be used within a CartProvider');
   }
   return ctx;
 }
 ;
-export function CartProvider({ children }) {
-
+export function CartProvider({ children }) {}
   const { user } = useAuth();
   const [state, dispatch] = useReducer(cartReducer, initialState);
   const cartKey = getCartKey(user?.id);
 
-  useEffect(() => {
+  useEffect(() => {}
     let items = [];
     const stored = safeStorage.getItem(cartKey);
 
-    if (stored) {
-
-      try {
+    if (stored) {}
+      try {}
         items = JSON.parse(stored);
-      } catch {
-
+      } catch {}
         items = [];
       }
     }
 
-    // Merge guest cart when user logs in
-    if (user?.id) {
-
+    // Merge guest cart when user logs in;
+    if (user?.id) {}
       const guestStored = safeStorage.getItem(getCartKey());
-      if (guestStored) {
-
-        try {
+      if (guestStored) {}
+        try {}
           const guestItems = JSON.parse(guestStored);
           items = mergeCartItems(items, guestItems);
-        } catch {
-
+        } catch {}
           /* ignore */
         }
         safeStorage.removeItem(getCartKey());
@@ -101,56 +88,47 @@ export function CartProvider({ children }) {
     dispatch({ type: 'SET_ITEMS', payload: items });
   }, [cartKey]);
 
-  // Save cart to storage whenever it changes
-  useEffect(() => {
-    if (state.items.length > 0) {
-
+  // Save cart to storage whenever it changes;
+  useEffect(() => {}
+    if (state.items.length > 0) {}
       safeStorage.setItem(cartKey, JSON.stringify(state.items));
-    } else {
-
+    } else {}
       safeStorage.removeItem(cartKey);
     }
   }, [state.items, cartKey]);
 
-  const addItem = item => {
-
+  const addItem = item => {}
     dispatch({ type: 'ADD_ITEM', payload: item });
   };
 
-  const removeItem = id => {
-
+  const removeItem = id => {}
     dispatch({ type: 'REMOVE_ITEM', payload: id });
   };
 
-  const updateQuantity = (id, quantity) => {
-
-    if (quantity <= 0) {
-
+  const updateQuantity = (id, quantity) => {}
+    if (quantity <= 0) {}
       removeItem(id);
-    } else {
-
+    } else {}
       dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } });
     }
   };
 
-  const clearCart = () => {
-
+  const clearCart = () => {}
     dispatch({ type: 'CLEAR_CART' });
   };
 
-  const getTotalItems = () => {
+  const getTotalItems = () => {}
     return state.items.reduce((total, item) => total + item.quantity, 0);
   };
 
-  const getTotalPrice = () => {
+  const getTotalPrice = () => {}
     return state.items.reduce()
       (total, item) => total + item.price * item.quantity,
-      0
+      0;
     );
   };
 
-  const value = {
-
+  const value = {}
     items: state.items,
     addItem,
     removeItem,

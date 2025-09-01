@@ -1,8 +1,8 @@
-export type ServiceItem = {
+export type ServiceItem = {}
   id: string;
   title: string;
   description: string;
-  category:
+  category: any;
     | 'Micro SaaS''
     | 'IT Services''
     | 'AI Solutions''
@@ -22,21 +22,19 @@ export type ServiceItem = {
   billing: 'month' | 'project' | 'hour';
   features: string[];
   ctaLabel: string;
-  href: string; // internal path or external URL
+  href: string; // internal path or external URL;
   external?: boolean};
 ;
-export type ServiceCategory = {
+export type ServiceCategory = {}
   name: string;
   slug: string;
   items: ServiceItem[]};
-;export const servicesCatalog: ServiceCategory[] = [
-  {
-
+;export const servicesCatalog: ServiceCategory[] = []
+  {}
     name: 'Micro SaaS',
     slug: 'micro-saas',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'smart-contract-risk-scanner',
         title: 'Smart Contract Risk Scanner',
         description:'
@@ -45,12 +43,11 @@ export type ServiceCategory = {
         price: '$299',
         billing: 'month',
         features: ['
-          'Real-time vulnerability detection',Automated security scoring',Compliance reporting',Integration with major blockchains',24/7 monitoring dashboard',
+          'Real-time vulnerability detection',Automated security scoring',Compliance reporting',Integration with major blockchains',24/7 monitoring dashboard'
         ],
         ctaLabel: 'Start Free Trial',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'ai-content-optimizer',
         title: 'AI Content Optimizer Pro',
         description:'
@@ -59,18 +56,16 @@ export type ServiceCategory = {
         price: '$199',
         billing: 'month',
         features: ['
-          'AI-powered SEO optimization',Content readability scoring',Multi-language support',Performance analytics',Automated A/B testing',
+          'AI-powered SEO optimization',Content readability scoring',Multi-language support',Performance analytics',Automated A/B testing'
         ],
         ctaLabel: 'Get Started',
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
     ]},
-  {
-
+  {}
     name: 'AI Solutions',
     slug: 'ai-solutions',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'autonomous-business-manager',
         title: 'Autonomous Business Manager',
         description:'
@@ -79,12 +74,11 @@ export type ServiceCategory = {
         price: '$2,999',
         billing: 'month',
         features: ['
-          'Autonomous decision making',Predictive business modeling',Resource optimization',Risk assessment',Continuous learning',
+          'Autonomous decision making',Predictive business modeling',Resource optimization',Risk assessment',Continuous learning'
         ],
         ctaLabel: 'Request Demo',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'consciousness-simulation-platform',
         title: 'Consciousness Simulation Platform',
         description:'
@@ -93,12 +87,11 @@ export type ServiceCategory = {
         price: '$5,999',
         billing: 'month',
         features: ['
-          'Neural network simulation',Consciousness modeling',Research tools',Data visualization',Collaborative workspace',
+          'Neural network simulation',Consciousness modeling',Research tools',Data visualization',Collaborative workspace'
         ],
         ctaLabel: 'Research Access',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'quantum-neural-network',
         title: 'Quantum Neural Network Platform',
         description:'
@@ -107,12 +100,11 @@ export type ServiceCategory = {
         price: '$8,999',
         billing: 'month',
         features: ['
-          'Quantum neural processing',Hybrid classical-quantum',Advanced training algorithms',Quantum advantage',Research collaboration',
+          'Quantum neural processing',Hybrid classical-quantum',Advanced training algorithms',Quantum advantage',Research collaboration'
         ],
         ctaLabel: 'Quantum Access',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'ai-autonomous-vehicles',
         title: 'AI Autonomous Vehicle Platform',
         description:'
@@ -121,12 +113,11 @@ export type ServiceCategory = {
         price: '$4,999',
         billing: 'month',
         features: ['
-          'Autonomous navigation',Safety monitoring',Fleet management',Predictive maintenance',Regulatory compliance',
+          'Autonomous navigation',Safety monitoring',Fleet management',Predictive maintenance',Regulatory compliance'
         ],
         ctaLabel: 'Vehicle Integration',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'enterprise-rag-search',
         title: 'Enterprise RAG Search Platform',
         description:'
@@ -135,12 +126,11 @@ export type ServiceCategory = {
         price: '$3,499',
         billing: 'month',
         features: ['
-          'Hybrid vector + keyword search',PII redaction and access control',Grounding citations',Plugins: Confluence, Google Drive, SharePoint',On-prem or VPC deployment',
+          'Hybrid vector + keyword search',PII redaction and access control',Grounding citations',Plugins: Confluence, Google Drive, SharePoint',On-prem or VPC deployment'
         ],
         ctaLabel: 'Launch Secure Chat',
         href: 'https://ziontechgroup.com/services'},
-      {
-
+      {}
         id: 'agentic-copilot-suite',
         title: 'Agentic Copilot Suite (Sales, Support, DevOps),
         description:'
@@ -149,12 +139,11 @@ export type ServiceCategory = {
         price: '$4,999',
         billing: 'month',
         features: ['
-          'Guardrailed tool use',Human-in-the-loop approvals',Observability and audit trails',Connectors: Salesforce, Zendesk, GitHub, AWS',Okta and SSO ready',
+          'Guardrailed tool use',Human-in-the-loop approvals',Observability and audit trails',Connectors: Salesforce, Zendesk, GitHub, AWS',Okta and SSO ready'
         ],
         ctaLabel: 'Deploy Copilots',
         href: 'https://ziontechgroup.com/services'},
-      {
-
+      {}
         id: 'quantum-consciousness-simulation-2030',
         title: 'Quantum Consciousness Simulation Platform 2030',
         description:'
@@ -163,12 +152,11 @@ export type ServiceCategory = {
         price: '$25,000',
         billing: 'month',
         features: ['
-          'Quantum neural network simulation',Consciousness modeling algorithms',Real-time cognitive state analysis',Multi-dimensional consciousness mapping',Quantum memory and learning systems',Consciousness transfer protocols',Advanced research tools and APIs',Collaborative research workspace',Real-time visualization and analytics',Quantum-classical hybrid processing',
+          'Quantum neural network simulation',Consciousness modeling algorithms',Real-time cognitive state analysis',Multi-dimensional consciousness mapping',Quantum memory and learning systems',Consciousness transfer protocols',Advanced research tools and APIs',Collaborative research workspace',Real-time visualization and analytics',Quantum-classical hybrid processing'
         ],
         ctaLabel: 'Research Access',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'autonomous-healthcare-diagnostics-2026',
         title: 'Autonomous Healthcare Diagnostics Platform 2026',
         description:'
@@ -177,12 +165,11 @@ export type ServiceCategory = {
         price: '$7,999',
         billing: 'month',
         features: ['
-          'AI-powered medical imaging analysis',Real-time disease detection and classification',Predictive health analytics',Automated radiology reporting',Treatment recommendation engine',Patient risk assessment',Clinical decision support',HIPAA-compliant data handling',FDA-approved algorithms',Multi-modality imaging support',
+          'AI-powered medical imaging analysis',Real-time disease detection and classification',Predictive health analytics',Automated radiology reporting',Treatment recommendation engine',Patient risk assessment',Clinical decision support',HIPAA-compliant data handling',FDA-approved algorithms',Multi-modality imaging support'
         ],
         ctaLabel: 'Healthcare Integration',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'quantum-creative-ai-studio-2026',
         title: 'Quantum Creative AI Studio 2026',
         description:'
@@ -191,12 +178,11 @@ export type ServiceCategory = {
         price: '$3,999',
         billing: 'month',
         features: ['
-          'Quantum-powered content generation',AI-driven design creation',Multi-format content generation',Brand consistency automation',Creative asset optimization',Real-time collaboration tools',Version control and management',Performance analytics',Mobile app for creators',API integration capabilities',
+          'Quantum-powered content generation',AI-driven design creation',Multi-format content generation',Brand consistency automation',Creative asset optimization',Real-time collaboration tools',Version control and management',Performance analytics',Mobile app for creators',API integration capabilities'
         ],
         ctaLabel: 'Creative Access',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'synthetic-data-generator',
         title: 'Synthetic Data Generator',
         description:'
@@ -205,12 +191,11 @@ export type ServiceCategory = {
         price: '$119',
         billing: 'month',
         features: ['
-          'DP and PII masking',Tabular/time-series/text modes',Utility and drift reports',SDKs and REST API',Warehouse integrations',
+          'DP and PII masking',Tabular/time-series/text modes',Utility and drift reports',SDKs and REST API',Warehouse integrations'
         ],
         ctaLabel: 'Generate Data',
         href: 'https://ziontechgroup.com/services/synthetic-data-generator'},
-      {
-
+      {}
         id: 'ai-meeting-notes-agent',
         title: 'AI Meeting Notes Agent',
         description:'
@@ -219,18 +204,16 @@ export type ServiceCategory = {
         price: '$69',
         billing: 'month',
         features: ['
-          'Accurate transcripts',Action items and owners',CRM/PM sync',Security and auditability',Multi-platform support',
+          'Accurate transcripts',Action items and owners',CRM/PM sync',Security and auditability',Multi-platform support'
         ],
         ctaLabel: 'Start Recording',
-        href: 'https://ziontechgroup.com/services/ai-meeting-notes-agent'},
+        href: 'https://ziontechgroup.com/services/ai-meeting-notes-agent'}
     ]},
-  {
-
+  {}
     name: 'IT Services',
     slug: 'it-services',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'zero-trust-architecture',
         title: 'Zero Trust Network Architecture',
         description:'
@@ -239,12 +222,11 @@ export type ServiceCategory = {
         price: '$15,000',
         billing: 'project',
         features: ['
-          'Identity verification',Micro-segmentation',Continuous monitoring',Threat detection',Compliance reporting',
+          'Identity verification',Micro-segmentation',Continuous monitoring',Threat detection',Compliance reporting'
         ],
         ctaLabel: 'Security Assessment',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'five-g-enterprise-network',
         title: '5G Enterprise Network Solutions',
         description:'
@@ -253,12 +235,11 @@ export type ServiceCategory = {
         price: '$25,000',
         billing: 'project',
         features: ['
-          'Private 5G networks',Network slicing',Edge computing',IoT integration',Performance optimization',
+          'Private 5G networks',Network slicing',Edge computing',IoT integration',Performance optimization'
         ],
         ctaLabel: 'Network Design',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'quantum-edge-computing',
         title: 'Quantum Edge Computing Platform',
         description:'
@@ -267,12 +248,11 @@ export type ServiceCategory = {
         price: '$35,000',
         billing: 'project',
         features: ['
-          'Quantum edge processing',Real-time analytics',Distributed computing',Energy optimization',Scalable architecture',
+          'Quantum edge processing',Real-time analytics',Distributed computing',Energy optimization',Scalable architecture'
         ],
         ctaLabel: 'Edge Deployment',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'platform-engineering-kubernetes',
         title: 'Platform Engineering on Kubernetes',
         description:'
@@ -281,12 +261,11 @@ export type ServiceCategory = {
         price: '$40,000',
         billing: 'project',
         features: ['
-          'Backstage developer portal',GitOps with Argo CD or Flux',Policy-as-code (OPA/Gatekeeper),Multi-cluster and multi-cloud',SRE playbooks and training',
+          'Backstage developer portal',GitOps with Argo CD or Flux',Policy-as-code (OPA/Gatekeeper),Multi-cluster and multi-cloud',SRE playbooks and training'
         ],
         ctaLabel: 'Build Your IDP',
         href: 'https://ziontechgroup.com/services'},
-      {
-
+      {}
         id: 'finops-cloud-cost-optimization',
         title: 'FinOps Cloud Cost Optimization',
         description:'
@@ -295,12 +274,11 @@ export type ServiceCategory = {
         price: '$12,000',
         billing: 'project',
         features: ['
-          'Cost anomaly detection',RI/Savings Plan strategy',Workload rightsizing',Kubernetes cost allocation',Executive reporting',
+          'Cost anomaly detection',RI/Savings Plan strategy',Workload rightsizing',Kubernetes cost allocation',Executive reporting'
         ],
         ctaLabel: 'Cut Cloud Costs',
         href: 'https://ziontechgroup.com/services'},
-      {
-
+      {}
         id: 'managed-kubernetes-sre',
         title: 'Managed Kubernetes SRE',
         description:'
@@ -309,12 +287,11 @@ export type ServiceCategory = {
         price: '$2,500',
         billing: 'month',
         features: ['
-          '24/7 on-call rotation',Golden paths and GitOps',SLOs and error budgets',DR and backup testing',Cost and performance tuning',
+          '24/7 on-call rotation',Golden paths and GitOps',SLOs and error budgets',DR and backup testing',Cost and performance tuning'
         ],
         ctaLabel: 'Stabilize Clusters',
         href: 'https://ziontechgroup.com/services/managed-kubernetes-sre'},
-      {
-
+      {}
         id: 'zero-trust-rollout-coaching',
         title: 'Zero Trust Rollout Coaching',
         description:'
@@ -323,18 +300,16 @@ export type ServiceCategory = {
         price: '$4,000',
         billing: 'project',
         features: ['
-          'Current-state assessment',Policy and identity baselines',ZTN, SWG, CASB patterns',Pilot-to-prod plan',Executive reporting',
+          'Current-state assessment',Policy and identity baselines',ZTN, SWG, CASB patterns',Pilot-to-prod plan',Executive reporting'
         ],
         ctaLabel: 'Plan Zero Trust',
-        href: 'https://ziontechgroup.com/services/zero-trust-rollout-coaching'},
+        href: 'https://ziontechgroup.com/services/zero-trust-rollout-coaching'}
     ]},
-  {
-
+  {}
     name: 'Cybersecurity',
     slug: 'cybersecurity',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'ai-threat-intelligence',
         title: 'AI Threat Intelligence Suite',
         description:'
@@ -343,12 +318,11 @@ export type ServiceCategory = {
         price: '$3,999',
         billing: 'month',
         features: ['
-          'AI threat detection',Behavioral analysis',Automated response',Threat hunting',Incident management',
+          'AI threat detection',Behavioral analysis',Automated response',Threat hunting',Incident management'
         ],
         ctaLabel: 'Security Demo',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'quantum-cryptography',
         title: 'Quantum Cryptography Solutions',
         description:'
@@ -357,12 +331,11 @@ export type ServiceCategory = {
         price: '$12,000',
         billing: 'project',
         features: ['
-          'Quantum key distribution',Post-quantum crypto',Secure communication',Key management',Compliance ready',
+          'Quantum key distribution',Post-quantum crypto',Secure communication',Key management',Compliance ready'
         ],
         ctaLabel: 'Quantum Security',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'managed-detection-response',
         title: 'Managed Detection & Response (MDR),
         description:'
@@ -371,12 +344,11 @@ export type ServiceCategory = {
         price: '$3,499',
         billing: 'month',
         features: ['
-          'SIEM setup and tuning',Playbooks and automation',Phishing and EDR integration',Compliance-ready reporting',Incident response retainers',
+          'SIEM setup and tuning',Playbooks and automation',Phishing and EDR integration',Compliance-ready reporting',Incident response retainers'
         ],
         ctaLabel: 'Activate MDR',
         href: 'https://ziontechgroup.com/services'},
-      {
-
+      {}
         id: 'sase-rollout',
         title: 'Secure Access Service Edge (SASE) Rollout',
         description:'
@@ -385,12 +357,11 @@ export type ServiceCategory = {
         price: '$20,000',
         billing: 'project',
         features: ['
-          'Architecture and vendor selection',Pilot and phased migration',Policy baselines',User experience optimization',Runbooks and training',
+          'Architecture and vendor selection',Pilot and phased migration',Policy baselines',User experience optimization',Runbooks and training'
         ],
         ctaLabel: 'Deploy SASE',
         href: 'https://ziontechgroup.com/services'},
-      {
-
+      {}
         id: 'gdpr-dsar-portal',
         title: 'GDPR DSAR Portal',
         description:'
@@ -399,12 +370,11 @@ export type ServiceCategory = {
         price: '$129',
         billing: 'month',
         features: ['
-          'Identity verification',Data discovery connectors',Audit logs and exports',Self-service portal and SLA tracking',Webhook automation',
+          'Identity verification',Data discovery connectors',Audit logs and exports',Self-service portal and SLA tracking',Webhook automation'
         ],
         ctaLabel: 'Launch Portal',
         href: 'https://ziontechgroup.com/services/gdpr-dsar-portal'},
-      {
-
+      {}
         id: 'email-deliverability-monitor-saas',
         title: 'Email Deliverability Monitor',
         description:'
@@ -413,12 +383,11 @@ export type ServiceCategory = {
         price: '$39',
         billing: 'month',
         features: ['
-          'DMARC/SPF/DKIM verification',Inbox placement and blocklist tracking',Recommendations and weekly reports',Integrations: SES, SendGrid, Mailgun',Alerts to Slack/Email',
+          'DMARC/SPF/DKIM verification',Inbox placement and blocklist tracking',Recommendations and weekly reports',Integrations: SES, SendGrid, Mailgun',Alerts to Slack/Email'
         ],
         ctaLabel: 'Improve Inbox Rate',
         href: 'https://ziontechgroup.com/services/email-deliverability-monitor'},
-      {
-
+      {}
         id: 'pdf-render-api-saas',
         title: 'PDF Render API',
         description:'
@@ -427,18 +396,16 @@ export type ServiceCategory = {
         price: '$29',
         billing: 'month',
         features: ['
-          'Chromium renderer with fonts',Async rendering and webhooks',Templates and asset hosting',Storage destinations (S3/GCS/Azure),Usage analytics and quotas',
+          'Chromium renderer with fonts',Async rendering and webhooks',Templates and asset hosting',Storage destinations (S3/GCS/Azure),Usage analytics and quotas'
         ],
         ctaLabel: 'Generate PDFs',
-        href: 'https://ziontechgroup.com/services/pdf-render-api'},
+        href: 'https://ziontechgroup.com/services/pdf-render-api'}
     ]},
-  {
-
+  {}
     name: 'Data & Analytics',
     slug: 'data-analytics',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'quantum-data-analytics',
         title: 'Quantum Data Analytics Platform',
         description:'
@@ -447,12 +414,11 @@ export type ServiceCategory = {
         price: '$6,999',
         billing: 'month',
         features: ['
-          'Quantum pattern recognition',Complex data modeling',Real-time insights',Predictive analytics',Visualization tools',
+          'Quantum pattern recognition',Complex data modeling',Real-time insights',Predictive analytics',Visualization tools'
         ],
         ctaLabel: 'Analytics Demo',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'ai-business-intelligence',
         title: 'AI Business Intelligence Suite',
         description:'
@@ -461,12 +427,11 @@ export type ServiceCategory = {
         price: '$2,499',
         billing: 'month',
         features: ['
-          'Automated insights',Natural language queries',Predictive modeling',Custom dashboards',Data integration',
+          'Automated insights',Natural language queries',Predictive modeling',Custom dashboards',Data integration'
         ],
         ctaLabel: 'BI Assessment',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'data-quality-observability',
         title: 'Data Quality & Observability',
         description:'
@@ -475,12 +440,11 @@ export type ServiceCategory = {
         price: '$1,499',
         billing: 'month',
         features: ['
-          'Column-level lineage',Great Expectations policies',Alerting and incident Mgmt',Connectors: Snowflake, BigQuery, Databricks',Root-cause analysis',
+          'Column-level lineage',Great Expectations policies',Alerting and incident Mgmt',Connectors: Snowflake, BigQuery, Databricks',Root-cause analysis'
         ],
         ctaLabel: 'Improve Data Trust',
         href: 'https://ziontechgroup.com/services'},
-      {
-
+      {}
         id: 'modern-etl-migration',
         title: 'Modern ETL/ELT Migration',
         description:'
@@ -489,18 +453,16 @@ export type ServiceCategory = {
         price: '$18,000',
         billing: 'project',
         features: ['
-          'dbt modeling and tests',Incremental loads',CI for analytics',Cost-efficient storage',Knowledge transfer',
+          'dbt modeling and tests',Incremental loads',CI for analytics',Cost-efficient storage',Knowledge transfer'
         ],
         ctaLabel: 'Migrate Workloads',
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
     ]},
-  {
-
+  {}
     name: 'Cloud & DevOps',
     slug: 'cloud-devops',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'autonomous-devops-platform',
         title: 'Autonomous DevOps Platform',
         description:'
@@ -509,12 +471,11 @@ export type ServiceCategory = {
         price: '$4,999',
         billing: 'month',
         features: ['
-          'Automated deployments',Self-healing infrastructure',Performance optimization',Cost management',Continuous monitoring',
+          'Automated deployments',Self-healing infrastructure',Performance optimization',Cost management',Continuous monitoring'
         ],
         ctaLabel: 'DevOps Demo',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'quantum-cloud-infrastructure',
         title: 'Quantum Cloud Infrastructure',
         description:'
@@ -523,12 +484,11 @@ export type ServiceCategory = {
         price: '$18,000',
         billing: 'project',
         features: ['
-          'Quantum cloud services',Hybrid infrastructure',Quantum optimization',Scalable architecture',Enterprise support',
+          'Quantum cloud services',Hybrid infrastructure',Quantum optimization',Scalable architecture',Enterprise support'
         ],
         ctaLabel: 'Cloud Migration',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'serverless-application-factory',
         title: 'Serverless Application Factory',
         description:'
@@ -537,12 +497,11 @@ export type ServiceCategory = {
         price: '$16,000',
         billing: 'project',
         features: ['
-          'Patterns: EventBridge, Step Functions',IaC with CDK/Terraform',Observability baked-in',SECaaS and guardrails',Cost-efficiency targets',
+          'Patterns: EventBridge, Step Functions',IaC with CDK/Terraform',Observability baked-in',SECaaS and guardrails',Cost-efficiency targets'
         ],
         ctaLabel: 'Build Serverless',
         href: 'https://ziontechgroup.com/services'},
-      {
-
+      {}
         id: 'disaster-recovery-blueprints',
         title: 'Disaster Recovery Blueprints (RTO/RPO),
         description:'
@@ -551,12 +510,11 @@ export type ServiceCategory = {
         price: '$20,000',
         billing: 'project',
         features: ['
-          'Multi-region architectures',Automated chaos tests',Backup and restore pipelines',Compliance documentation',Executive tabletop exercises',
+          'Multi-region architectures',Automated chaos tests',Backup and restore pipelines',Compliance documentation',Executive tabletop exercises'
         ],
         ctaLabel: 'Harden Resilience',
         href: 'https://ziontechgroup.com/services'},
-      {
-
+      {}
         id: 'data-contracts-platform',
         title: 'Data Contracts Platform',
         description:'
@@ -565,18 +523,16 @@ export type ServiceCategory = {
         price: '$149',
         billing: 'month',
         features: ['
-          'Contract registry and versioning',CI gates and PR annotations',Drift detection and alerts',Lineage and impact analysis',Connectors for CI/CD and warehouses',
+          'Contract registry and versioning',CI gates and PR annotations',Drift detection and alerts',Lineage and impact analysis',Connectors for CI/CD and warehouses'
         ],
         ctaLabel: 'Enforce Contracts',
-        href: 'https://ziontechgroup.com/services/data-contracts-platform'},
+        href: 'https://ziontechgroup.com/services/data-contracts-platform'}
     ]},
-  {
-
+  {}
     name: 'Quantum Computing',
     slug: 'quantum-computing',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'quantum-cybersecurity-suite-2026',
         title: 'Quantum Cybersecurity Suite 2026',
         description:'
@@ -585,12 +541,11 @@ export type ServiceCategory = {
         price: '$8,999',
         billing: 'month',
         features: ['
-          'Quantum-resistant encryption algorithms',Quantum key distribution (QKD),AI-powered threat detection with 99.99% accuracy',Zero-trust architecture implementation',Real-time threat intelligence feeds',Automated incident response',Compliance automation (SOC 2, ISO 27001, NIST),Quantum-safe certificate management',Advanced behavioral analytics',Cloud-native security architecture',
+          'Quantum-resistant encryption algorithms',Quantum key distribution (QKD),AI-powered threat detection with 99.99% accuracy',Zero-trust architecture implementation',Real-time threat intelligence feeds',Automated incident response',Compliance automation (SOC 2, ISO 27001, NIST),Quantum-safe certificate management',Advanced behavioral analytics',Cloud-native security architecture'
         ],
         ctaLabel: 'Quantum Security',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'quantum-financial-trading-platform-2026',
         title: 'Quantum Financial Trading Platform 2026',
         description:'
@@ -599,12 +554,11 @@ export type ServiceCategory = {
         price: '$15,999',
         billing: 'month',
         features: ['
-          'Quantum-powered market analysis',Ultra-fast trading execution (<1ms latency),AI-driven risk assessment',Portfolio optimization algorithms',Real-time market sentiment analysis',Automated trading strategies',Regulatory compliance automation',Multi-asset class support',Advanced risk management',Performance analytics dashboard',
+          'Quantum-powered market analysis',Ultra-fast trading execution (<1ms latency),AI-driven risk assessment',Portfolio optimization algorithms',Real-time market sentiment analysis',Automated trading strategies',Regulatory compliance automation',Multi-asset class support',Advanced risk management',Performance analytics dashboard'
         ],
         ctaLabel: 'Quantum Trading',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'quantum-logistics-optimization-2026',
         title: 'Quantum Logistics Optimization Platform 2026',
         description:'
@@ -613,12 +567,11 @@ export type ServiceCategory = {
         price: '$6,999',
         billing: 'month',
         features: ['
-          'Quantum route optimization algorithms',Real-time traffic and weather integration',Multi-modal transportation optimization',Dynamic pricing optimization',Fleet management automation',Predictive maintenance scheduling',Sustainability optimization',Real-time tracking and visibility',Automated dispatching',Performance analytics dashboard',
+          'Quantum route optimization algorithms',Real-time traffic and weather integration',Multi-modal transportation optimization',Dynamic pricing optimization',Fleet management automation',Predictive maintenance scheduling',Sustainability optimization',Real-time tracking and visibility',Automated dispatching',Performance analytics dashboard'
         ],
         ctaLabel: 'Quantum Logistics',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'quantum-biological-computing-2030',
         title: 'Quantum Biological Computing Platform 2030',
         description:'
@@ -627,18 +580,16 @@ export type ServiceCategory = {
         price: '$18,999',
         billing: 'month',
         features: ['
-          'Quantum-biological hybrid processing',DNA computing integration',Protein folding simulation',Drug discovery acceleration',Genetic engineering optimization',Biological circuit design',Real-time biological monitoring',Quantum biological sensors',Biological data encryption',Advanced research tools',
+          'Quantum-biological hybrid processing',DNA computing integration',Protein folding simulation',Drug discovery acceleration',Genetic engineering optimization',Biological circuit design',Real-time biological monitoring',Quantum biological sensors',Biological data encryption',Advanced research tools'
         ],
         ctaLabel: 'Quantum Biology',
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
     ]},
-  {
-
+  {}
     name: 'Blockchain & Web3',
     slug: 'blockchain-web3',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'decentralized-ai-marketplace',
         title: 'Decentralized AI Marketplace',
         description:'
@@ -647,12 +598,11 @@ export type ServiceCategory = {
         price: '$1,999',
         billing: 'month',
         features: ['
-          'AI model marketplace',Decentralized governance',Smart contracts',Token economics',Community-driven',
+          'AI model marketplace',Decentralized governance',Smart contracts',Token economics',Community-driven'
         ],
         ctaLabel: 'Marketplace Access',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'quantum-blockchain-platform',
         title: 'Quantum Blockchain Platform',
         description:'
@@ -661,18 +611,16 @@ export type ServiceCategory = {
         price: '$8,999',
         billing: 'month',
         features: ['
-          'Quantum-resistant crypto',Enhanced consensus',Scalable architecture',Interoperability',Enterprise features',
+          'Quantum-resistant crypto',Enhanced consensus',Scalable architecture',Interoperability',Enterprise features'
         ],
         ctaLabel: 'Blockchain Demo',
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
     ]},
-  {
-
+  {}
     name: 'IoT & Edge',
     slug: 'iot-edge',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'quantum-iot-platform',
         title: 'Quantum IoT Platform',
         description:'
@@ -681,12 +629,11 @@ export type ServiceCategory = {
         price: '$3,999',
         billing: 'month',
         features: ['
-          'Quantum edge processing',Device optimization',Intelligent routing',Energy efficiency',Scalable deployment',
+          'Quantum edge processing',Device optimization',Intelligent routing',Energy efficiency',Scalable deployment'
         ],
         ctaLabel: 'IoT Demo',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'autonomous-edge-ai',
         title: 'Autonomous Edge AI Platform',
         description:'
@@ -695,12 +642,11 @@ export type ServiceCategory = {
         price: '$2,999',
         billing: 'month',
         features: ['
-          'Autonomous optimization',Edge AI processing',Network intelligence',Resource management',Performance monitoring',
+          'Autonomous optimization',Edge AI processing',Network intelligence',Resource management',Performance monitoring'
         ],
         ctaLabel: 'Edge AI Demo',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'predictive-maintenance-iot',
         title: 'Predictive Maintenance for IoT Fleets',
         description:'
@@ -709,12 +655,11 @@ export type ServiceCategory = {
         price: '$2,499',
         billing: 'month',
         features: ['
-          'Edge telemetry ingestion',ML failure prediction',Work order integration (EAM/CMMS),Kitting and rollout playbooks',Dashboards and alerts',
+          'Edge telemetry ingestion',ML failure prediction',Work order integration (EAM/CMMS),Kitting and rollout playbooks',Dashboards and alerts'
         ],
         ctaLabel: 'Reduce Downtime',
         href: 'https://ziontechgroup.com/services'},
-      {
-
+      {}
         id: 'digital-twin-starter',
         title: 'Digital Twin Starter Kit',
         description:'
@@ -723,18 +668,16 @@ export type ServiceCategory = {
         price: '$14,000',
         billing: 'project',
         features: ['
-          '3D/graph models',Stream processing',Integration with PLC/SCADA',KPI definition and alerts',Pilot-to-production plan',
+          '3D/graph models',Stream processing',Integration with PLC/SCADA',KPI definition and alerts',Pilot-to-production plan'
         ],
         ctaLabel: 'Build a Twin',
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
     ]},
-  {
-
+  {}
     name: 'Green Tech',
     slug: 'green-tech',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'quantum-energy-optimization',
         title: 'Quantum Energy Optimization',
         description:'
@@ -743,12 +686,11 @@ export type ServiceCategory = {
         price: '$12,000',
         billing: 'month',
         features: ['
-          'Quantum energy modeling',Renewable optimization',Grid management',Carbon tracking',Sustainability reporting',
+          'Quantum energy modeling',Renewable optimization',Grid management',Carbon tracking',Sustainability reporting'
         ],
         ctaLabel: 'Energy Assessment',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'ai-climate-prediction',
         title: 'AI Climate Prediction Platform',
         description:'
@@ -757,12 +699,11 @@ export type ServiceCategory = {
         price: '$7,999',
         billing: 'month',
         features: ['
-          'AI climate modeling',Quantum simulations',Real-time predictions',Risk assessment',Policy recommendations',
+          'AI climate modeling',Quantum simulations',Real-time predictions',Risk assessment',Policy recommendations'
         ],
         ctaLabel: 'Climate Demo',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'carbon-accounting-saas',
         title: 'Carbon Accounting & ESG Reporting',
         description:'
@@ -771,18 +712,16 @@ export type ServiceCategory = {
         price: '$999',
         billing: 'month',
         features: ['
-          'GHG Protocol-aligned factors',Automated data pipelines',Supplier questionnaires',Assurance-ready exports',Target tracking (SBTi),
+          'GHG Protocol-aligned factors',Automated data pipelines',Supplier questionnaires',Assurance-ready exports',Target tracking (SBTi)
         ],
         ctaLabel: 'Start ESG Tracking',
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
     ]},
-  {
-
+  {}
     name: 'Space Tech',
     slug: 'space-tech',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'satellite-ai-orchestrator',
         title: 'Satellite AI Orchestrator',
         description:'
@@ -791,12 +730,11 @@ export type ServiceCategory = {
         price: '$15,000',
         billing: 'month',
         features: ['
-          'Autonomous orbital optimization',AI-powered data analysis',Real-time monitoring',Collision avoidance',Global coverage',
+          'Autonomous orbital optimization',AI-powered data analysis',Real-time monitoring',Collision avoidance',Global coverage'
         ],
         ctaLabel: 'Launch Satellites',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'quantum-space-communications',
         title: 'Quantum Space Communications',
         description:'
@@ -805,12 +743,11 @@ export type ServiceCategory = {
         price: '$25,000',
         billing: 'month',
         features: ['
-          'Quantum entanglement',Unhackable encryption',Light-speed transmission',Deep space coverage',Interplanetary network',
+          'Quantum entanglement',Unhackable encryption',Light-speed transmission',Deep space coverage',Interplanetary network'
         ],
         ctaLabel: 'Connect Space',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'satellite-imagery-analytics',
         title: 'Satellite Imagery Analytics',
         description:'
@@ -819,18 +756,16 @@ export type ServiceCategory = {
         price: '$5,999',
         billing: 'month',
         features: ['
-          'Change detection',Crop yield estimation',Object and damage detection',APIs and dashboards',Tasking provider integrations',
+          'Change detection',Crop yield estimation',Object and damage detection',APIs and dashboards',Tasking provider integrations'
         ],
         ctaLabel: 'Analyze Imagery',
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
     ]},
-  {
-
+  {}
     name: 'BioTech & Health',
     slug: 'biotech-health',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'ai-drug-discovery-platform',
         title: 'AI Drug Discovery Platform',
         description:'
@@ -839,12 +774,11 @@ export type ServiceCategory = {
         price: '$35,000',
         billing: 'month',
         features: ['
-          'AI molecular modeling',Quantum simulations',Clinical trial optimization',Drug repurposing',Regulatory compliance',
+          'AI molecular modeling',Quantum simulations',Clinical trial optimization',Drug repurposing',Regulatory compliance'
         ],
         ctaLabel: 'Discover Drugs',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'quantum-genome-analyzer',
         title: 'Quantum Genome Analyzer',
         description:'
@@ -853,12 +787,11 @@ export type ServiceCategory = {
         price: '$18,000',
         billing: 'month',
         features: ['
-          'Quantum DNA sequencing',Personalized medicine',Disease prediction',Genetic counseling',Research collaboration',
+          'Quantum DNA sequencing',Personalized medicine',Disease prediction',Genetic counseling',Research collaboration'
         ],
         ctaLabel: 'Analyze Genome',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'telemedicine-ai-triage',
         title: 'Telemedicine AI Triage',
         description:'
@@ -867,18 +800,16 @@ export type ServiceCategory = {
         price: '$1,999',
         billing: 'month',
         features: ['
-          'Clinical safety guardrails',HL7/FHIR integration',Language and accessibility',Analytics and outcomes tracking',Privacy and consent management',
+          'Clinical safety guardrails',HL7/FHIR integration',Language and accessibility',Analytics and outcomes tracking',Privacy and consent management'
         ],
         ctaLabel: 'Enable Triage',
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
     ]},
-  {
-
+  {}
     name: 'FinTech & DeFi',
     slug: 'fintech-defi',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'quantum-trading-algorithm',
         title: 'Quantum Trading Algorithm',
         description:'
@@ -887,12 +818,11 @@ export type ServiceCategory = {
         price: '$45,000',
         billing: 'month',
         features: ['
-          'Quantum market analysis',Microsecond trading',Risk management',Portfolio optimization',Regulatory compliance',
+          'Quantum market analysis',Microsecond trading',Risk management',Portfolio optimization',Regulatory compliance'
         ],
         ctaLabel: 'Start Trading',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'autonomous-defi-protocol',
         title: 'Autonomous DeFi Protocol',
         description:'
@@ -901,12 +831,11 @@ export type ServiceCategory = {
         price: '$12,000',
         billing: 'month',
         features: ['
-          'Autonomous yield farming',Risk management',Strategy optimization',Cross-chain integration',Smart contract security',
+          'Autonomous yield farming',Risk management',Strategy optimization',Cross-chain integration',Smart contract security'
         ],
         ctaLabel: 'Deploy Protocol',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'kyc-aml-transaction-monitoring',
         title: 'KYC/AML Transaction Monitoring',
         description:'
@@ -915,18 +844,16 @@ export type ServiceCategory = {
         price: '$2,499',
         billing: 'month',
         features: ['
-          'Entity resolution',Sanctions and watchlists',Graph analytics',Case workflow and SAR exports',Audit and model governance',
+          'Entity resolution',Sanctions and watchlists',Graph analytics',Case workflow and SAR exports',Audit and model governance'
         ],
         ctaLabel: 'Strengthen Compliance',
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
     ]},
-  {
-
+  {}
     name: 'Metaverse & AR/VR',
     slug: 'metaverse-ar-vr',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'quantum-metaverse-engine',
         title: 'Quantum Metaverse Engine',
         description:'
@@ -935,12 +862,11 @@ export type ServiceCategory = {
         price: '$28,000',
         billing: 'month',
         features: ['
-          'Quantum rendering',Infinite scalability',Realistic physics',Cross-platform support',AI-powered NPCs',
+          'Quantum rendering',Infinite scalability',Realistic physics',Cross-platform support',AI-powered NPCs'
         ],
         ctaLabel: 'Enter Metaverse',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'autonomous-ar-navigation',
         title: 'Autonomous AR Navigation',
         description:'
@@ -949,12 +875,11 @@ export type ServiceCategory = {
         price: '$8,500',
         billing: 'month',
         features: ['
-          'Real-time AR overlays',Autonomous navigation',Smart city integration',Traffic optimization',Safety monitoring',
+          'Real-time AR overlays',Autonomous navigation',Smart city integration',Traffic optimization',Safety monitoring'
         ],
         ctaLabel: 'Navigate AR',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'vr-training-simulators',
         title: 'VR Training Simulators',
         description:'
@@ -963,18 +888,16 @@ export type ServiceCategory = {
         price: '$30,000',
         billing: 'project',
         features: ['
-          'Curriculum design',Multi-user scenarios',LMS integration and analytics',Hardware procurement guidance',Operations and support',
+          'Curriculum design',Multi-user scenarios',LMS integration and analytics',Hardware procurement guidance',Operations and support'
         ],
         ctaLabel: 'Build Simulator',
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
     ]},
-  {
-
+  {}
     name: 'Autonomous Systems',
     slug: 'autonomous-systems',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'quantum-ai-controller',
         title: 'Quantum AI Controller',
         description:'
@@ -983,12 +906,11 @@ export type ServiceCategory = {
         price: '$32,000',
         billing: 'month',
         features: ['
-          'Quantum decision making',Autonomous learning',System optimization',Predictive maintenance',Multi-system coordination',
+          'Quantum decision making',Autonomous learning',System optimization',Predictive maintenance',Multi-system coordination'
         ],
         ctaLabel: 'Control Systems',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'autonomous-robotics-platform',
         title: 'Autonomous Robotics Platform',
         description:'
@@ -997,12 +919,11 @@ export type ServiceCategory = {
         price: '$22,000',
         billing: 'month',
         features: ['
-          'Autonomous navigation',Task learning',Safety protocols',Multi-robot coordination',Performance analytics',
+          'Autonomous navigation',Task learning',Safety protocols',Multi-robot coordination',Performance analytics'
         ],
         ctaLabel: 'Deploy Robots',
         href: 'https://ziontechgroup.com/contact'},
-      {
-
+      {}
         id: 'warehouse-robotics-orchestration',
         title: 'Warehouse Robotics Orchestration',
         description:'
@@ -1011,20 +932,18 @@ export type ServiceCategory = {
         price: '$9,999',
         billing: 'month',
         features: ['
-          'Task allocation and routing',3D digital twin monitoring',Workforce and robot collaboration',Safety zones and policies',KPIs and optimization',
+          'Task allocation and routing',3D digital twin monitoring',Workforce and robot collaboration',Safety zones and policies',KPIs and optimization'
         ],
         ctaLabel: 'Orchestrate Robots',
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
     ]},
 
-  // New Service Categories Added
-  {
-
+  // New Service Categories Added;
+  {}
     name: 'Supply Chain & Logistics',
     slug: 'supply-chain-logistics',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'autonomous-supply-chain-platform-2026',
         title: 'Autonomous Supply Chain Platform 2026',
         description:'
@@ -1033,19 +952,17 @@ export type ServiceCategory = {
         price: '$5,999',
         billing: 'month',
         features: ['
-          'AI-powered demand forecasting with 98% accuracy',Autonomous inventory optimization',Real-time supply chain visibility',Predictive disruption detection',Automated supplier selection',Dynamic pricing optimization',Sustainability tracking and reporting',Multi-modal transportation optimization',Risk assessment and mitigation',Compliance automation',
+          'AI-powered demand forecasting with 98% accuracy',Autonomous inventory optimization',Real-time supply chain visibility',Predictive disruption detection',Automated supplier selection',Dynamic pricing optimization',Sustainability tracking and reporting',Multi-modal transportation optimization',Risk assessment and mitigation',Compliance automation'
         ],
         ctaLabel: 'Supply Chain',
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
     ]},
 
-  {
-
+  {}
     name: 'Energy Management',
     slug: 'energy-management',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'autonomous-energy-management-2026',
         title: 'Autonomous Energy Management Platform 2026',
         description:'
@@ -1054,19 +971,17 @@ export type ServiceCategory = {
         price: '$5,499',
         billing: 'month',
         features: ['
-          'AI-powered energy consumption optimization',Real-time demand forecasting',Automated energy trading',Smart grid integration',Renewable energy optimization',Predictive maintenance for energy assets',Carbon footprint tracking',Energy efficiency recommendations',Real-time monitoring dashboard',Mobile app for energy managers',
+          'AI-powered energy consumption optimization',Real-time demand forecasting',Automated energy trading',Smart grid integration',Renewable energy optimization',Predictive maintenance for energy assets',Carbon footprint tracking',Energy efficiency recommendations',Real-time monitoring dashboard',Mobile app for energy managers'
         ],
         ctaLabel: 'Energy Management',
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
     ]},
 
-  {
-
+  {}
     name: 'Manufacturing Intelligence',
     slug: 'manufacturing-intelligence',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'autonomous-manufacturing-intelligence-2026',
         title: 'Autonomous Manufacturing Intelligence Platform 2026',
         description:'
@@ -1075,19 +990,17 @@ export type ServiceCategory = {
         price: '$5,999',
         billing: 'month',
         features: ['
-          'AI-powered production optimization',Predictive maintenance scheduling',Automated quality control',Real-time monitoring and alerting',Supply chain integration',Energy efficiency optimization',Sustainability tracking',Performance analytics dashboard',Mobile app for operators',API integration capabilities',
+          'AI-powered production optimization',Predictive maintenance scheduling',Automated quality control',Real-time monitoring and alerting',Supply chain integration',Energy efficiency optimization',Sustainability tracking',Performance analytics dashboard',Mobile app for operators',API integration capabilities'
         ],
         ctaLabel: 'Manufacturing',
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
     ]},
 
-  {
-
+  {}
     name: 'Data Center Management',
     slug: 'data-center-management',
-    items: [
-      {
-
+    items: []
+      {}
         id: 'autonomous-data-center-manager-2026',
         title: 'Autonomous Data Center Manager 2026',
         description:'
@@ -1096,9 +1009,9 @@ export type ServiceCategory = {
         price: '$4,499',
         billing: 'month',
         features: ['
-          'AI-powered performance optimization',Predictive maintenance scheduling',Automated capacity planning',Real-time monitoring and alerting',Energy efficiency optimization',Security threat detection',Compliance automation',Multi-cloud orchestration',Disaster recovery automation',Cost optimization engine',
+          'AI-powered performance optimization',Predictive maintenance scheduling',Automated capacity planning',Real-time monitoring and alerting',Energy efficiency optimization',Security threat detection',Compliance automation',Multi-cloud orchestration',Disaster recovery automation',Cost optimization engine'
         ],
         ctaLabel: 'Data Center',
-        href: 'https://ziontechgroup.com/contact'},
-    ]},
+        href: 'https://ziontechgroup.com/contact'}
+    ]}
 ];

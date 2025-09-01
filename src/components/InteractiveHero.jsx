@@ -6,50 +6,38 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
     { value: '1000+', label: 'Projects Delivered', color: 'text-green-400' },
     { value: '99.9%', label: 'Uptime SLA', color: 'text-purple-400' },
     { value: '24/7', label: 'Support Available', color: 'text-cyan-400' }
-] }) => {
-
+] }) => {}
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovered, setIsHovered] = useState(false);
     const [activeStat, setActiveStat] = useState(0);
-    useEffect(() => {
-        const handleMouseMove = (e) => {
-
+    useEffect(() => {}
+        const handleMouseMove = (e) => {}
             setMousePosition({ x: e.clientX, y: e.clientY })};
         window.addEventListener('mousemove', handleMouseMove);
-        // Auto-rotate stats
-        const interval = setInterval(() => {
+        // Auto-rotate stats;
+        const interval = setInterval(() => {}
             setActiveStat((prev) => (prev + 1) % stats.length)}, 3000);
-        return () => {
-
+        return () => {}
             window.removeEventListener('mousemove', handleMouseMove);
             clearInterval(interval)}}, [stats.length]);
-    const containerVariants = {
-
+    const containerVariants = {}
         hidden: { opacity: 0 },
-        visible: {
-
+        visible: {}
             opacity: 1,
-            transition: {
-
+            transition: {}
                 duration: 0.8,
-                staggerChildren: 0.2
-
+                staggerChildren: 0.2;
     };
-    const itemVariants = {
-
+    const itemVariants = {}
   hidden: { opacity: 0,
-  y: 30 
-
+  y: 30;
 },
-        visible: {
-
+        visible: {}
             opacity: 1,
             y: 0,
-            transition: {
-
+            transition: {}
                 duration: 0.6,
-                ease: "easeOut"
-
+                ease: "easeOut""
     };
-    const floatingVariants = {
-'"
+    const floatingVariants = {}
+'""

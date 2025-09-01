@@ -1,28 +1,28 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
 import { Milestone, MilestoneActivity } from './types';
 
-export const useLoadMilestones = (projectId?: string) => {
-  const { user } = useAuth(); // user is not directly used in fetchMilestones, but good to be aware of
+export const useLoadMilestones: any = (projectId?: string) => {}
+  const { user } = useAuth(); // user is not directly used in fetchMilestones, but good to be aware of;
   const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [activities, setActivities] = useState<Record<string, MilestoneActivity[]>>({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchMilestones = useCallback(async () => { // Wrapped in useCallback
-    if (!projectId) {
+  const fetchMilestones: any = useCallback(async () => { // Wrapped in useCallback;
+    if (!projectId) {}
       setIsLoading(false);
-      setMilestones([]); // Clear milestones if no projectId
-      setActivities({});  // Clear activities if no projectId
+      setMilestones([]); // Clear milestones if no projectId;
+      setActivities({});  // Clear activities if no projectId;
       return;
     }
     
-    try {
+    try {}
       setIsLoading(true);
       
-      const { data: milestonesData, error: milestonesError } = await supabase
+      const { data: milestonesData, error: milestonesError } = await supabase;
         .from('project_milestones')
         .select('*')
         .eq('project_id', projectId)
@@ -30,13 +30,12 @@ export const useLoadMilestones = (projectId?: string) => {
       
       if (milestonesError) throw milestonesError;
       
-      setMilestones(milestonesData || []); // Ensure milestonesData is not null
-      
+      setMilestones(milestonesData || []); // Ensure milestonesData is not null;
       const activitiesMap: Record<string, MilestoneActivity[]> = {};
       
-      if (milestonesData) { // Check if milestonesData is not null
-        for (const milestone of milestonesData) {
-          const { data: activitiesData, error: activitiesError } = await supabase
+      if (milestonesData) { // Check if milestonesData is not null;
+        for (const milestone of milestonesData) {}
+          const { data: activitiesData, error: activitiesError } = await supabase;
             .from('milestone_activities')
             .select(`
               *,
@@ -53,26 +52,24 @@ export const useLoadMilestones = (projectId?: string) => {
       
       setActivities(activitiesMap);
       setError(null);
-    } catch (err: any) {
+    } catch (err: any) {}
       console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err.message);
       toast.error("Failed to fetch milestones");
-      setMilestones([]); // Clear milestones on error
-      setActivities({});  // Clear activities on error
-    } finally {
+      setMilestones([]); // Clear milestones on error;
+      setActivities({});  // Clear activities on error;
+    } finally {}
       setIsLoading(false);
     }
-  }, [projectId]); // projectId is a dependency of fetchMilestones
-
-  useEffect(() => {
-    fetchMilestones(); // Call fetchMilestones directly
-  }, [fetchMilestones]); // Added fetchMilestones to the dependency array
-
-  return {
+  }, [projectId]); // projectId is a dependency of fetchMilestones;
+  useEffect(() => {}
+    fetchMilestones(); // Call fetchMilestones directly;
+  }, [fetchMilestones]); // Added fetchMilestones to the dependency array;
+  return {}
     milestones,
     activities,
     isLoading,
     error,
-    refetch: fetchMilestones
+    refetch: fetchMilestones;
   };
 };

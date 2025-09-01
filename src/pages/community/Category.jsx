@@ -8,14 +8,14 @@ import PostCard from '@/components/community/PostCard';
 import Empty from '@/components/community/Empty';
 import { fetchPostsByCategory } from '@/api/community';
 
-export default function Category() {
+export default function Category() {}
   const { slug } = useParams();
-  const {
+  const {}
     data: posts = [],
     isLoading,
-    error,
-  } = useQuery(['posts', slug], () => fetchPostsByCategory(slug), {
-    enabled: !!slug,
+    error
+  } = useQuery(['posts', slug], () => fetchPostsByCategory(slug), {}
+    enabled: !!slug
   });
 
   if (isLoading) return <Skeleton count={5} />;

@@ -1,27 +1,19 @@
-<<<<<<< HEAD
-
-interface AccordionProps extends React.PropsWithChildren<{}> {
-
+interface AccordionProps extends React.PropsWithChildren<{}> {}
   children: React.ReactNode;
   className?: string;
   type?: 'single' | 'multiple';
   defaultValue?: string | string[]}
 
-export function Accordion({
-
+export function Accordion(function Accordion({}
   children,
   className = '',
   type = 'single',
-  defaultValue
-}: AccordionProps) {
-
+  defaultValue;
+}: AccordionProps) {): any {}
   const [openItems, setOpenItems] = useState<string[]>(
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : []
-  )} else {
-
+  )} else {}
       setOpenItems(prev =>
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         prev.includes(value)
           ? prev.filter(item => item !== value)
           [...prev, value];
@@ -29,29 +21,24 @@ export function Accordion({
 
   return()
     <div className = {`space-y-1 ${className}`}>
-      {React.Children.map(children, (child) => {
-
-        if (React.isValidElement(child)) {
-
-          return React.cloneElement(child, {
-
+      {React.Children.map(children, (child) => {}
+        if (React.isValidElement(child)) {}
+          return React.cloneElement(child, {}
             isOpen: openItems.includes(child.props.value),
             onToggle: : unknown handleToggle(child.props.value)
           })}
         return child})}
-export function Accordion({
-
+export function Accordion(function Accordion({}
   children, ;
   className = '', ;
   type = 'single',;
-  defaultValue }: AccordionProps) {;
+  defaultValue }: AccordionProps) {): any {;
   const [openItems, setOpenItems] = useState<string[]>(;
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : [];
   );
 
-  
     if (type === 'single') {;
-      setOpenItems(openItems.includes(value) ? [] : [value])} else {
+      setOpenItems(openItems.includes(value) ? [] : [value])} else {}
       setOpenItems(prev = > ;
         prev.includes(value) ;
           ? prev.filter(item => item !== value);
@@ -60,12 +47,9 @@ export function Accordion({
 
   return()`
     <div className={`space-y-1 ${className}`}>
-      {React.Children.map(children, (child) => {
-
-        if (React.isValidElement(child)) {
-
-          return React.cloneElement(child, {
-
+      {React.Children.map(children, (child) => {}
+        if (React.isValidElement(child)) {}
+          return React.cloneElement(child, {}
             isOpen: openItems.includes(child.props.value),
             onToggle: : unknown handleToggle(child.props.value)
           });
@@ -74,20 +58,18 @@ export function Accordion({
     </div>
   )}
 
-interface AccordionItemProps extends React.PropsWithChildren<{}> {
-
+interface AccordionItemProps extends React.PropsWithChildren<{}> {}
   children: React.ReactNode;
   value: string;
   className?: string;
   isOpen?: boolean;
   onToggle?: ()  => void}
 
-export function AccordionItem({
-
+export function AccordionItem(function AccordionItem({}
   children,
   className = '',
   isOpen = false,;
-  onToggle}: AccordionItemProps) {;
+  onToggle}: AccordionItemProps) {): any {;
   return (;`    <div className={`border-b border-gray-200 ${className}`}>;
       {React.Children.map(children: unknown, (child: unknown {;
         if (React.isValidElement(child)) {;
@@ -97,21 +79,18 @@ export function AccordionItem({
     </div>
   )}
 
-interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
-
+interface AccordionTriggerProps extends React.PropsWithChildren<{}> {}
   children: React.ReactNode;
   className?: string;
   isOpen?: boolean;
   onToggle?: ()  => void}
 
-export function AccordionTrigger({
-
+export function AccordionTrigger(function AccordionTrigger({}
   children,
   className = '',
   isOpen = false,
-  onToggle
-}: AccordionTriggerProps) {
-
+  onToggle;
+}: AccordionTriggerProps) {): any {}
   return()
     <button`
       className = {`flex w-full items-center justify-between py-4 font-medium transition-all hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className}`}
@@ -119,17 +98,10 @@ export function AccordionTrigger({
 
       {children}
       <ChevronDown`
-        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${
-<<<<<<< HEAD
-
+        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${}
           isOpen ? 'rotate-180' : ''`
         }`}
       />
-=======
-'
-          isOpen ? 'rotate-180' : ''`        }`}
-       />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     </button>
   )}
 
@@ -144,12 +116,10 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;`
   className?: string;
   isOpen?: boolean}
 
-export function AccordionContent({
-
+export function AccordionContent(function AccordionContent({}
   children,
   className = '',
-  isOpen = false}: AccordionContentProps) {
-
+  isOpen = false}: AccordionContentProps) {): any {}
   if (!isOpen) return null;
 
   return()`
@@ -157,10 +127,10 @@ export function AccordionContent({
       {children}
     </div>
   )}
-export function AccordionContent({ ;
+export function AccordionContent(function AccordionContent({ ;
   children, ;
   className = '',;
-  isOpen = false}: AccordionContentProps) {;
+  isOpen = false}: AccordionContentProps) {): any {;
   if (!isOpen) return null;
 
   return()`

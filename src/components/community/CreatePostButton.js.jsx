@@ -1,12 +1,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 export { function };
-export default function CreatePostButton({ categoryId }) {
-
+export default function CreatePostButton({ categoryId }) {}
   return()
     <Button className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate-dark">
-      Create New Post
+      Create New Post;
     </Button>
   );
 }
-'"
+'""

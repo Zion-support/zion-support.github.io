@@ -1,15 +1,15 @@
-interface ResourceError {
+interface ResourceError {}
   url: string;
   type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
   error: string;
   timestamp: number}
-class ResourceMonitor {
+class ResourceMonitor {}
   private errors: ResourceError[] = [];
   private isMonitoring = false;
   private retryAttempts = new Map<string, number>();
   private maxRetries = 3;
 
-  start() {
+  start() {}
     if (this.isMonitoring) return;
 
     this.isMonitoring = true;
@@ -19,22 +19,17 @@ class ResourceMonitor {
 
     // console.log('🔍 Resource Monitor started')}
 
-  stop() {
+  stop() {}
     this.isMonitoring = false;
     // console.log('🔍 Resource Monitor stopped')}
 
-  private setupErrorListeners() {
-    // Listen for script loading errors
+  private setupErrorListeners() {}
+    // Listen for script loading errors;
     window.addEventListener('
       'error',
-      event => {
-
-        if (event.target && event.target !== window) {
-
-          
-          
-          if (url) {
-
+      event => {}
+        if (event.target && event.target !== window) {}
+          if (url) {}
             this.handleResourceError()
               url,
               this.getResourceType(target),
@@ -42,124 +37,91 @@ class ResourceMonitor {
             )}
         }
       },
-      true
+      true;
     );
 
     // Listen for unhandled promise rejections'
-    window.addEventListener('unhandledrejection', event => {
-
+    window.addEventListener('unhandledrejection', event => {}
       if()
         event.reason &&'
         typeof event.reason === 'string' &&'
         event.reason.includes('MIME')
-      ) {
-
+      ) {}
         this.handleResourceError('
           'unknown',other',
           `MIME type error: ${event.reason}`
         )}
     })}
-  private setupResourceObservers() {
-    // Monitor DOM changes for new resources
-    if (window.MutationObserver) {
-
-      
+  private setupResourceObservers() {}
+    // Monitor DOM changes for new resources;
+    if (window.MutationObserver) {}
               this.monitorElement(element)}
           })})});
       observer.observe(document.head, { childList: true, subtree: true });
       observer.observe(document.body, { childList: true, subtree: true })}
   }
 
-  private monitorElement(element: HTMLElement) {
-
+  private monitorElement(element: HTMLElement) {}
     // Monitor scripts'
-    if (element.tagName === 'SCRIPT' && element.src) {
-
+    if (element.tagName === 'SCRIPT' && element.src) {}
       this.monitorScript(element as HTMLScriptElement)}
 
     // Monitor stylesheets'
-    if (element.tagName === 'LINK' && element.rel === 'stylesheet') {
-
+    if (element.tagName === 'LINK' && element.rel === 'stylesheet') {}
       this.monitorStylesheet(element as HTMLLinkElement)}
   }
 
-  private monitorScript(script: anyHTMLScriptElement) {
-
-    script.addEventListener('error', () => {
-
+  private monitorScript(script: anyHTMLScriptElement) {}
+    script.addEventListener('error', () => {}
       this.handleResourceError(script.src,script',Script loading failed')})}
 
-  private monitorStylesheet(link: anyHTMLLinkElement) {
-
-    link.addEventListener('error', () => {
+  private monitorStylesheet(link: anyHTMLLinkElement) {}
+    link.addEventListener('error', () => {}
       this.handleResourceError()
         link.href,stylesheet',Stylesheet loading failed'
       )})}
 
-  private monitorCriticalResources() {
-    // Monitor critical CSS and JS files
-    
-    criticalResources.forEach(resource => {
-
+  private monitorCriticalResources() {}
+    // Monitor critical CSS and JS files;
+    criticalResources.forEach(resource => {}
       this.checkResourceHealth(resource)})}
-  private async checkResourceHealth(url: string) {
-
-    try {
-
-      
-      if (!response.ok) {
-
+  private async checkResourceHealth(url: string) {}
+    try {}
+      if (!response.ok) {}
         this.handleResourceError()
           url,other',`
           `HTTP ${response.status}: ${response.statusText}`
         );
         return}
-<<<<<<< HEAD
 
-      
-      if (!contentType) {
-
+      if (!contentType) {}
         this.handleResourceError(url,other',No content-type header');
         return}
-=======
-'
-      const contentType = response.headers.get('content-type');      if (!contentType) {
-'
-        this.handleResourceError(url, 'other', 'No content-type header');
-        return}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       // Check for MIME type issues'
-      if (url.endsWith('.js') && !contentType.includes('javascript')) {
-        this.handleResourceError(url, 'script', `Incorrect MIME type: ${contentType} (expected javascript)`)} else if (url.endsWith('.css') && !contentType.includes('css')) {
+      if (url.endsWith('.js') && !contentType.includes('javascript')) {}
+        this.handleResourceError(url, 'script', `Incorrect MIME type: ${contentType} (expected javascript)`)} else if (url.endsWith('.css') && !contentType.includes('css')) {}
         this.handleResourceError(url, 'stylesheet', `Incorrect MIME type: ${contentType} (expected css)`)}
 
         this.handleResourceError()
           url,script',`
           `Incorrect MIME type: ${contentType} (expected javascript)`
-        )} else if (url.endsWith('.css') && !contentType.includes('css')) {
-
+        )} else if (url.endsWith('.css') && !contentType.includes('css')) {}
         this.handleResourceError()
           url,stylesheet',`
           `Incorrect MIME type: ${contentType} (expected css)`
         )}
-    } catch (error) {
+    } catch (error) {}
 '`
-<<<<<<< HEAD
       this.handleResourceError(url,other', `Fetch error: ${error}`)}
   }
-=======
-      this.handleResourceError(url, 'other', `Fetch error: ${error}`)}  }
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   private handleResourceError()
     url: string,
     type: ResourceError['type'],
-    error: string
-  ) {
-
-    const resourceError: ResourceError = {
-
+    error: string;
+  ) {}
+    const resourceError: ResourceError = {}
       url,
       type,
       error,
@@ -168,16 +130,14 @@ class ResourceMonitor {
     this.errors.push(resourceError);
     // console.error('🚨 Resource Error:', resourceError);
 
-    // Attempt to retry loading
+    // Attempt to retry loading;
     this.attemptRetry(url, type);
 
-    // Report to analytics/monitoring service
+    // Report to analytics/monitoring service;
     this.reportError(resourceError)}
 
-  private attemptRetry(url: string, type: ResourceError['type']) {
-
-    
-    if (attempts >= this.maxRetries) {
+  private attemptRetry(url: string, type: ResourceError['type']) {}
+    if (attempts >= this.maxRetries) {}
 `
       // console.warn(`Max retry attempts reached for ${url}`);
       return}
@@ -185,72 +145,53 @@ class ResourceMonitor {
     this.retryAttempts.set(url, attempts + 1);
 
     setTimeout()
-      () => {
+      () => {}
         this.retryResource(url, type)},
-      Math.pow(2, attempts) * 1000
-<<<<<<< HEAD
-    ); // Exponential backoff
+      Math.pow(2, attempts) * 1000;
+    ); // Exponential backoff;
   }
 
-=======
-    ); // Exponential backoff  }
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  private retryResource(url: string, type: ResourceError['type']) {
+  private retryResource(url: string, type: ResourceError['type']) {}
 `
     // console.log(`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get(url)})`);
 
-    if (type === 'script') {
-
-      this.loadScript(url)} else if (type === 'stylesheet') {
-
+    if (type === 'script') {}
+      this.loadScript(url)} else if (type === 'stylesheet') {}
       this.loadStylesheet(url)}
   }
 
-  private loadScript(src: string) {
-
-    
+  private loadScript(src: string) {}
     script.src = src;
     script.async = true;
-    script.onload = () => {
+    script.onload = () => {}
 `
       // console.log(`✅ Script loaded successfully: ${src}`);
       this.retryAttempts.delete(src)};
-    script.onerror = () => {
+    script.onerror = () => {}
 `
       // console.error(`❌ Script retry failed: ${src}`)};
     document.head.appendChild(script)}
 
-  private loadStylesheet(href: string) {
-
-    
+  private loadStylesheet(href: string) {}
     link.rel = 'stylesheet';
     link.href = href;
-    link.onload = () => {
+    link.onload = () => {}
 `
       // console.log(`✅ Stylesheet loaded successfully: ${href}`);
       this.retryAttempts.delete(href)};
-    link.onerror = () => {
+    link.onerror = () => {}
 `
       // console.error(`❌ Stylesheet retry failed: ${href}`)};
     document.head.appendChild(link)}
-  private reportError(error: ResourceError) {
-
+  private reportError(error: ResourceError) {}
     // In production, send to monitoring service'
-    if (process.env.NODE_ENV === 'production') {
-
+    if (process.env.NODE_ENV === 'production') {}
       // Example: Sentry, LogRocket, etc.'
       // console.log('📊 Reporting error to monitoring service:', error);
-<<<<<<< HEAD
     }
   }
 
-=======
-    }  }
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  private getResourceType(element: HTMLElement): ResourceError['type'] {
-
+  private getResourceType(element: HTMLElement): ResourceError['type'] {}
     if (element.tagName === 'SCRIPT') return 'script';
     if ('
       element.tagName === 'LINK' &&'
@@ -265,22 +206,18 @@ class ResourceMonitor {
       return 'font';
     return 'other'}
 
-  getErrors(): ResourceError[] {
-
+  getErrors(): ResourceError[] {}
     return [...this.errors]}
-  clearErrors() {
+  clearErrors() {}
     this.errors = [];
     this.retryAttempts.clear()}
 
-  getErrorSummary() {
-    
-    this.errors.forEach(error => {
-
+  getErrorSummary() {}
+    this.errors.forEach(error => {}
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1});
     return summary}
 }
 
-// Create singleton instance
-
+// Create singleton instance;
 export default resourceMonitor;
 '`

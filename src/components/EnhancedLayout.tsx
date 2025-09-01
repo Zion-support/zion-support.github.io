@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-
-
-  children: ReactNode;
+children: ReactNode;
   showSidebar?: boolean}
 
-export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
-
+export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({}
   children,
-  showSidebar = true}) => {
-
-  return ("
+  showSidebar = true}) => {}
+  return (""
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">
       {/* Futuristic Animated Background */}
       <FuturisticAnimatedBackground  />
@@ -17,7 +12,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
       {/* Navigation */}
       <FuturisticNavigation  />
 
-      {/* Main Content with Sidebar */}"
+      {/* Main Content with Sidebar */}""
       <div className="flex relative z-10">
         {/* Sidebar */}
         {showSidebar && <EnhancedSidebar  />}
@@ -32,5 +27,3 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
       <FuturisticFooter  />;
     </div>;) };
 '"`
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

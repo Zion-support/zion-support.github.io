@@ -1,7 +1,7 @@
 
 interface TalentProfileProps extends TalentProfileType {}
 
-export default function TalentProfile(props: TalentProfileProps) {
+export default function TalentProfile(function TalentProfile(props: TalentProfileProps) {): any {}
   const { profile_picture_url, full_name, bio, skills } = props;
 
   return (

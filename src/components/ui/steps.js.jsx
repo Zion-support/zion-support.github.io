@@ -1,17 +1,16 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
-export const Step = ({ children, className, isActive, isCompleted }) => {
-
+export const Step = ({ children, className, isActive, isCompleted }) => {}
   return()
-    <div
+    <div;
       className={cn('
         'flex items-center space-x-2',
         isActive && 'text-primary',
         isCompleted && 'text-green-600',
-        className
+        className;
       )}
     >
-      <div
+      <div;
         className={cn('
           'flex h-8 w-8 items-center justify-center rounded-full border-2 text-sm font-medium',
           isActive && 'border-primary bg-primary text-white',

@@ -1,4 +1,4 @@
-export interface MarketplaceItem {
+export interface MarketplaceItem {}
   id: string;
   title: string;
   category: 'products' | 'talent' | 'equipment' | 'services';
@@ -11,8 +11,7 @@ export interface MarketplaceItem {
   image: string;
   tags: string[];
   featured: boolean;
-seller: {
-
+seller: {}
     name: string;
     rating: number;
     verified: boolean};
@@ -21,9 +20,8 @@ seller: {
   deliveryTime: string;
   warranty: string}
 ;
-export const marketplaceItems: MarketplaceItem[] = [
-  {
-
+export const marketplaceItems: MarketplaceItem[] = []
+  {}
     id: 'ai-server-cluster',
     title: 'AI-Powered Server Cluster',
     category: 'products',
@@ -36,19 +34,17 @@ export const marketplaceItems: MarketplaceItem[] = [
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
     tags: ['AI',High Performance',Scalable',GPU'],
     featured: true,
-    seller: {
-
+    seller: {}
       name: 'TechCorp Solutions',
       rating: 4.8,
-      verified: true
+      verified: true;
     },
     location: 'San Francisco, CA',
     availability: 'available',
     deliveryTime: '2-3 weeks',
     warranty: '3 years'
   },
-  {
-
+  {}
     id: 'cybersecurity-team',
     title: 'Cybersecurity Expert Team',
     category: 'talent',
@@ -61,19 +57,17 @@ export const marketplaceItems: MarketplaceItem[] = [
     image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     tags['Security',Expert',Certified',Compliance'],;
     featured: true,
-    seller: {
-
+    seller: {}
       name: 'SecureNet Professionals',
       rating: 4.9,
-      verified: true
+      verified: true;
     },
     location: 'Remote',
     availability: 'available',
     deliveryTime: 'Immediate',
     warranty: 'N/A'
   },
-  {
-
+  {}
     id: 'quantum-hardware',
     title: 'Quantum Computing Hardware',
     category: 'equipment',
@@ -86,19 +80,17 @@ export const marketplaceItems: MarketplaceItem[] = [
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     tags['Quantum',Research',Advanced',Experimental'],;
     featured: false,
-    seller: {
-
+    seller: {}
       name: 'QuantumTech Labs',
       rating: 4.6,
-      verified: true
+      verified: true;
     },
     location: 'Boston, MA',
     availability: 'limited',
     deliveryTime: '4-6 weeks',
     warranty: '1 year'
   },
-  {
-
+  {}
     id: 'cloud-migration-service',
     title: 'Cloud Migration Service',
     category: 'services',
@@ -111,19 +103,17 @@ export const marketplaceItems: MarketplaceItem[] = [
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     tags['Cloud',Migration',Enterprise',AWS'],;
     featured: true,
-    seller: {
-
+    seller: {}
       name: 'CloudMasters Inc',
       rating: 4.9,
-      verified: true
+      verified: true;
     },
     location: 'Austin, TX',
     availability: 'available',
     deliveryTime: '6-8 weeks',
     warranty: '90 days support'
   },
-  {
-
+  {}
     id: 'iot-platform',
     title: 'IoT Edge Computing Platform',
     category: 'products',
@@ -136,19 +126,17 @@ export const marketplaceItems: MarketplaceItem[] = [
     image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     tags['IoT',Edge Computing',Real-time',Analytics'],;
     featured: false,
-    seller: {
-
+    seller: {}
       name: 'IoT Solutions Pro',
       rating: 4.5,
-      verified: true
+      verified: true;
     },
     location: 'Seattle, WA',
     availability: 'available',
     deliveryTime: '3-4 weeks',
     warranty: '2 years'
   },
-  {
-
+  {}
     id: 'data-scientist',
     title: 'Senior Data Scientist',
     category: 'talent',
@@ -161,8 +149,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     tags['Data Science',Machine Learning',Python',Statistics'],;
     featured: false,
-    seller: {
-
+    seller: {}
       name: 'DataGenius Consulting',
       rating: 4.7,
       verified: true},;
@@ -172,14 +159,14 @@ export const marketplaceItems: MarketplaceItem[] = [
     warranty: 'N/A'};
 ];
 ;
-export 
+export;
     id: 'services',;
     name: 'Services',;
     description: 'Professional services and consulting',;
     count: marketplaceItems.filter(item => item.category === 'services').length};
 ];
 ;
-export 
+export;
       { value: '0-1000', label: 'Under $1,000' },
       { value: '1000-5000', label: '$1,000 - $5,000' },
       { value: '5000-10000', label: '$5,000 - $10,000' },
@@ -189,11 +176,10 @@ export
       { value: '0-1000', label: 'Under $1,000' },'
       { value: '1000-5000', label: '$1,000 - $5,000' },'
       { value: '5000-10000', label: '$5,000 - $10,000' },'      { value: '10000+', label: 'Over $10,000' }
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954;
     ]
   },;
-  {
-
+  {}
     title: 'Rating',
     key: 'rating',
     type: 'checkbox' as const,
@@ -203,8 +189,7 @@ export
       { value: '3.5+', label: '3.5+ Stars' }
     ]
   },;
-  {
-
+  {}
     title: 'Availability',
     key: 'availability',
     type: 'checkbox' as const}

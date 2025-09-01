@@ -1,8 +1,8 @@
 
-export default function TalentRoutes() {
+export default function TalentRoutes(function TalentRoutes() {): any {}
   return()
-    <>;"
-      <Route path = "directory" element={<TalentDirectory  />} />;"
+    <>;""
+      <Route path = "directory" element={<TalentDirectory  />} />;""
       <Route path="list" element={<TalentsPage  />} />;
     </>
-  )}'"
+  )}'""
