@@ -1014,7 +1014,7 @@ export default function HomePage() {
                   <li>• GitHub Actions Redundancy</li>
                   <li>• Netlify Functions Redundancy</li>
                 </ul>
-                <Link href="/README_ULTIMATE_REDUNDANCY_V2.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/services" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Explore Redundancy Systems →
                 </Link>
               </div>
@@ -1028,7 +1028,7 @@ export default function HomePage() {
                   <li>• Autonomous Agents</li>
                   <li>• Innovation Systems</li>
                 </ul>
-                <Link href="/EXPONENTIAL_GROWTH_AUTOMATION.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/services" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Explore AI Systems →
                 </Link>
               </div>
@@ -1042,7 +1042,7 @@ export default function HomePage() {
                   <li>• Performance Optimization</li>
                   <li>• Quality Assurance</li>
                 </ul>
-                <Link href="/README_GITHUB_ACTIONS.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/resources" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Explore Build Systems →
                 </Link>
               </div>
@@ -2039,7 +2039,7 @@ export default function HomePage() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">📖 Core Pages</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README.md" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">Main README</a> - Project overview</li>
+                  <li>• <Link href="/resources" className="text-blue-400 hover:text-blue-300">Main README</Link> - Project overview</li>
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ARCHITECTURE.md" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">Architecture Guide</a> - System design</li>
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/API.md" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">API Documentation</a> - Integration guide</li>
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/DEPLOYMENT.md" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">Deployment Guide</a> - Setup instructions</li>
@@ -2470,32 +2470,9 @@ export default function HomePage() {
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <a href="https://github.com/Zion-Holdings/zion.app/search?q=performance" className="text-green-400 hover:text-green-300 text-sm font-semibold" target="_blank" rel="noopener noreferrer">
                   View Performance Guide →
                 </a>
-              </div>
-            </div>
-          </section>
-
-          {/* Comprehensive Automation Systems Overview */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🤖 Comprehensive Automation Systems Overview</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🔄 Ultimate Redundancy Systems</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Ultimate Redundancy V2</li>
-                  <li>• Comprehensive Redundancy V3</li>
-                  <li>• Enhanced Redundancy System</li>
-                  <li>• Master Redundancy Orchestrator</li>
-                  <li>• PM2 Redundancy Management</li>
-                </ul>
-                <div className="text-cyan-400 text-sm font-semibold mb-3">
-                  Status: Multi-Layer Active
-                </div>
-                <Link href="/README_ULTIMATE_REDUNDANCY_V2.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View System Details →
-                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
