@@ -34,15 +34,15 @@ const InnovativeServicesOverview = () => {
             if (!category)
                 return true;
             const categoryMappings = {
-  'ai-services'['AI', 'Machine Learning', 'Content', 'Marketing', 'Customer Service', 'Sales', 'CRM', 'Social Media', 'Supply Chain', 'HR', 'Recruitment', 'Finance', 'Accounting'],
-                'quantum-computing'['Quantum'],
-                'blockchain'['Blockchain', 'Web3'],
-                'enterprise-it'['Enterprise'],
-                'emerging-tech'['Space', 'Robotics', 'Metaverse', 'Virtual Reality', 'Autonomous'],
-                'cybersecurity'['Security', 'Cybersecurity'],
-                'healthcare'['Healthcare', 'Biology', 'Biotechnology', 'Neuroscience'],
-                'finance'['Finance', 'Trading'],
-                'sustainability'['Energy', 'Climate', 'Sustainability',
+  'ai-services'['AI', 'Machine Learning', 'Content', 'Marketing', 'Customer Service', 'Sales', 'CRM', 'Social Media', 'Supply Chain', 'HR', 'Recruitment', 'Finance', 'Accounting'],;
+                'quantum-computing'['Quantum'],;
+                'blockchain'['Blockchain', 'Web3'],;
+                'enterprise-it'['Enterprise'],;
+                'emerging-tech'['Space', 'Robotics', 'Metaverse', 'Virtual Reality', 'Autonomous'],;
+                'cybersecurity'['Security', 'Cybersecurity'],;
+                'healthcare'['Healthcare', 'Biology', 'Biotechnology', 'Neuroscience'],;
+                'finance'['Finance', 'Trading'],;
+                'sustainability'['Energy', 'Climate', 'Sustainability',;
   'Green Tech']
             
 

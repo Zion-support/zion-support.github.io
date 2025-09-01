@@ -10,9 +10,9 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const [selectedEvent, setSelectedEvent] = useState(null);
     const [showFilters, setShowFilters] = useState(false);
     const [filters, setFilters] = useState({
-        status[],
-        category[],
-        priority[],
+        status[],;
+        category[],;
+        priority[],;
         progress: 0
     });
     const [viewMode, setViewMode] = useState('timeline');
@@ -20,7 +20,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const timelineRef = useRef(null);
     const { scrollYProgress: _scrollYProgress } = useScroll({
         target: timelineRef,
-        offset["start end", "end start"]
+        offset["start end", "end start"];
     });
     // Filter events based on current filters
     const filteredEvents = events.filter(event => {

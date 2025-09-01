@@ -13,23 +13,23 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
     const serviceCategories = [
         {
             name: 'AI & Machine Learning',
-            services[
+            services[;
                 { name: 'AI-Powered CRM', href: '/comprehensive-services#ai-powered-crm' },
                 { name: 'Quantum Computing', href: '/comprehensive-services#quantum-computing-simulation' },
                 { name: 'Edge AI Computing', href: '/comprehensive-services#edge-ai-computing' },
             ]
-        },
+        },;
         {
             name: 'Emerging Technologies',
-            services[
+            services[;
                 { name: 'Blockchain Solutions', href: '/comprehensive-services#blockchain-supply-chain' },
                 { name: 'AR/VR Business', href: '/comprehensive-services#ar-vr-business-solutions' },
                 { name: 'IoT Intelligence', href: '/comprehensive-services#iot-intelligence-hub' },
             ]
-        },
+        },;
         {
             name: 'Industry Solutions',
-            services[
+            services[;
                 { name: 'Healthcare IT', href: '/comprehensive-services#healthcare-it-solutions' },
                 { name: 'FinTech Solutions', href: '/comprehensive-services#fintech-solutions-pro' },
                 { name: 'GreenTech Analytics', href: '/comprehensive-services#greentech-analytics' },

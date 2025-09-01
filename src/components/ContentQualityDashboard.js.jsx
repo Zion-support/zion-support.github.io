@@ -20,40 +20,40 @@ const ContentQualityDashboard = ({ className = '' }) => {
                     title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services',
                     content: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.',
                     metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',
-                    images['/images/hero-ai-solutions.jpg', '/images/hero-it-services.jpg'],
-                    links['/services', '/ai-solutions', '/about', '/contact']
-                },
+                    images['/images/hero-ai-solutions.jpg', '/images/hero-it-services.jpg'],;
+                    links['/services', '/ai-solutions', '/about', '/contact'];
+                },;
                 {
                     url: '/services',
                     title: 'Our Services - Comprehensive Technology Solutions',
                     content: 'We offer a wide range of technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.',
                     metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.',
-                    images['/images/services-overview.jpg'],
-                    links['/ai-solutions', '/cloud-devops', '/cybersecurity', '/about']
-                },
+                    images['/images/services-overview.jpg'],;
+                    links['/ai-solutions', '/cloud-devops', '/cybersecurity', '/about'];
+                },;
                 {
                     url: '/ai-solutions',
                     title: 'AI Solutions - Artificial Intelligence Services',
                     content: 'Cutting-edge artificial intelligence solutions for modern businesses. Machine learning, predictive analytics, and AI automation to drive innovation and efficiency.',
                     metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',
-                    images['/images/ai-solutions.jpg'],
-                    links['/services', '/about', '/contact']
-                },
+                    images['/images/ai-solutions.jpg'],;
+                    links['/services', '/about', '/contact'];
+                },;
                 {
                     url: '/about',
                     title: 'About Us - Zion Tech Group',
                     content: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.',
                     metaDescription: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.',
-                    images['/images/about-team.jpg'],
-                    links['/services', '/team', '/contact', '/mission']
-                },
+                    images['/images/about-team.jpg'],;
+                    links['/services', '/team', '/contact', '/mission'];
+                },;
                 {
                     url: '/contact',
                     title: 'Contact Us - Get in Touch',
                     content: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.',
                     metaDescription: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.',
-                    images['/images/contact-office.jpg'],
-                    links['/services', '/about', '/team']
+                    images['/images/contact-office.jpg'],;
+                    links['/services', '/about', '/team'];
                 }
             ];
             for (const page of samplePages) {

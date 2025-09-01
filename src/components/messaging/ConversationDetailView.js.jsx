@@ -45,7 +45,7 @@ export function ConversationDetailView() {
         else {
             groupedMessages.push({
                 date: messageDate,
-                messages[message]
+                messages[message];
             })}
     });
     const hasContextData = activeConversation.context_data &&

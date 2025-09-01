@@ -34,13 +34,13 @@ export default function AIAnalyticsDashboard() {
             price: "$99",
             period: "/month",
             description: "Perfect for small businesses getting started with AI analytics",
-            features[
+            features[;
                 "Up to 5 data sources",
                 "Basic AI insights",
                 "Standard dashboards",
                 "Email support",
                 "Monthly reports"
-            ],
+            ],;
             popular: false
         },
         {
@@ -48,14 +48,14 @@ export default function AIAnalyticsDashboard() {
             price: "$299",
             period: "/month",
             description: "Advanced analytics for growing businesses",
-            features[
+            features[;
                 "Up to 20 data sources",
                 "Advanced AI insights",
                 "Custom dashboards",
                 "Priority support",
                 "Real-time alerts",
                 "API access"
-            ],
+            ],;
             popular: true
         },
         {
@@ -63,14 +63,14 @@ export default function AIAnalyticsDashboard() {
             price: "$799",
             period: "/month",
             description: "Full-scale AI analytics for large organizations",
-            features[
+            features[;
                 "Unlimited data sources",
                 "Custom AI models",
                 "White-label dashboards",
                 "Dedicated support",
                 "Advanced security",
                 "Custom integrations"
-            ],
+            ],;
             popular: false
         }
     ];

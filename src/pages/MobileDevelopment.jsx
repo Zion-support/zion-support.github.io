@@ -147,25 +147,25 @@ const mobileBenefits = [
     title: "Enhanced User Experience",
     description: "Native mobile apps provide superior user experience and performance",
     icon: Users,
-    examples["Smooth animations", "Fast performance", "Native features", "Intuitive UI"]
-  },
+    examples["Smooth animations", "Fast performance", "Native features", "Intuitive UI"];
+  },;
   {
     title: "Offline Functionality",
     description: "Mobile apps can work offline and sync when connectivity is restored",
     icon: Cloud,
-    examples["Offline access", "Data synchronization", "Cached content", "Background sync"]
-  },
+    examples["Offline access", "Data synchronization", "Cached content", "Background sync"];
+  },;
   {
     title: "Device Integration",
     description: "Access to device features like camera, GPS, and sensors",
     icon: Smartphone,
-    examples["Camera access", "GPS location", "Push notifications", "Biometric auth"]
-  },
+    examples["Camera access", "GPS location", "Push notifications", "Biometric auth"];
+  },;
   {
     title: "App Store Presence",
     description: "Visibility in app stores and potential for monetization",
     icon: Award,
-    examples["App store visibility", "In-app purchases", "Subscription models", "Premium features"]
+    examples["App store visibility", "In-app purchases", "Subscription models", "Premium features"];
   }
 ];
 
@@ -276,10 +276,10 @@ export default function MobileDevelopment() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Mobile Benefits */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -363,14 +363,14 @@ export default function MobileDevelopment() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Mobile Technologies */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -455,14 +455,14 @@ export default function MobileDevelopment() {
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -544,14 +544,14 @@ export default function MobileDevelopment() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -685,7 +685,7 @@ export default function MobileDevelopment() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -784,14 +784,14 @@ export default function MobileDevelopment() {
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;
         <div className="container-responsive">
           <motion.div
             initial = {

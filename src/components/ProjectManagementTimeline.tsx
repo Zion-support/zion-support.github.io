@@ -59,7 +59,7 @@ interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
   maxProjects?: number}
 
 export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
-  showFilters = true,;
+showFilters:  true,;
   showStats = true,;
   maxProjects = 10;
 }) => {;
@@ -84,11 +84,11 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         startDate: '2024-01-01',
         endDate: '2024-06-30',
         progress: 65,
-        team['Sarah Johnson', 'Michael Chen', 'Emily Rodriguez'],
+        team['Sarah Johnson', 'Michael Chen', 'Emily Rodriguez'],;
         client: 'TechCorp Inc.',
         budget: 250000,
-        tags['AI', 'Machine Learning', 'Analytics', 'Platform'],
-        milestones[
+        tags['AI', 'Machine Learning', 'Analytics', 'Platform'],;
+        milestones[;
           {
             id: 'm1',
             title: 'Requirements Analysis',
@@ -125,8 +125,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             assignee: 'Sarah Johnson',
             priority: 'medium'
 
-        ]
-      },
+        ];
+      },;
       {
         id: '2',
         name: 'Cloud Migration & Infrastructure Modernization',
@@ -136,11 +136,11 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         startDate: '2024-02-01',
         endDate: '2024-08-31',
         progress: 35,
-        team['David Kim', 'Lisa Thompson', 'Alex Wong'],
+        team['David Kim', 'Lisa Thompson', 'Alex Wong'],;
         client: 'Global Enterprises Ltd.',
         budget: 500000,
-        tags['Cloud', 'Migration', 'Infrastructure', 'DevOps'],
-        milestones[
+        tags['Cloud', 'Migration', 'Infrastructure', 'DevOps'],;
+        milestones[;
           {
             id: 'm5',
             title: 'Infrastructure Assessment',
@@ -159,8 +159,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             assignee: 'Lisa Thompson',
             priority: 'critical'
 
-        ]
-      },
+        ];
+      },;
       {
         id: '3',
         name: 'Cybersecurity Enhancement Program',
@@ -170,11 +170,11 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         startDate: '2024-03-01',
         endDate: '2024-09-30',
         progress: 15,
-        team['James Wilson', 'Maria Garcia'],
+        team['James Wilson', 'Maria Garcia'],;
         client: 'SecureBank Corp.',
         budget: 300000,
-        tags['Cybersecurity', 'Threat Detection', 'Training', 'Compliance'],
-        milestones[
+        tags['Cybersecurity', 'Threat Detection', 'Training', 'Compliance'],;
+        milestones[;
           {
             id: 'm7',
             title: 'Security Assessment',
@@ -184,7 +184,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             assignee: 'James Wilson',
             priority: 'high'
 
-        ]
+        ];
 
     ];
 

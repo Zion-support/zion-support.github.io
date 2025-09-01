@@ -14,8 +14,8 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
     });
     const [seoAnalysis, setSeoAnalysis] = useState({
         score: 0,
-        issues[],
-        suggestions[],
+        issues[],;
+        suggestions[],;
         metaTags: {
             title: false,
             description: false,
@@ -26,7 +26,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
     });
     const [accessibilityReport, setAccessibilityReport] = useState({
         score: 0,
-        issues[],
+        issues[],;
         wcagCompliance: 'Non-Compliant',
         criticalIssues: 0,
         warnings: 0

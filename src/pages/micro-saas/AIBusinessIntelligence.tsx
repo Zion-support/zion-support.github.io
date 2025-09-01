@@ -105,10 +105,10 @@ export default function AIBusinessIntelligence(...args[]):  {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -185,14 +185,14 @@ export default function AIBusinessIntelligence(...args[]):  {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-20 bg-white/5">
+      <section className="py-20 bg-white/5">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -273,14 +273,14 @@ export default function AIBusinessIntelligence(...args[]):  {
                     <p className="text-zion-slate-light leading-relaxed">{capability.description}</p>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -437,7 +437,7 @@ export default function AIBusinessIntelligence(...args[]):  {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20 ;
 
 
 
@@ -447,7 +447,7 @@ export default function AIBusinessIntelligence(...args[]):  {
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -457,7 +457,7 @@ export default function AIBusinessIntelligence(...args[]):  {
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3 ;
 
 
 
@@ -468,7 +468,7 @@ export default function AIBusinessIntelligence(...args[]):  {
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>;
               <div className="text-4xl font-bold text-zion-cyan mb-6">Custom</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-zion-slate-light">
@@ -495,7 +495,7 @@ export default function AIBusinessIntelligence(...args[]):  {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {

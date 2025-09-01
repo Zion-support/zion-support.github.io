@@ -10,149 +10,149 @@ export default function NewServicesOverview() {
             icon: Brain,
             color: 'from-purple-500 to-pink-500',
             description: 'Cutting-edge artificial intelligence solutions for modern businesses',
-            services[
+            services[;
                 {
                     name: 'AI-Powered Financial Advisory Platform',
                     description: 'Intelligent financial planning and investment advisory system',
                     price: '$2,500/month',
-                    features['Personalized portfolios', 'Risk assessment', 'Market analysis'],
+                    features['Personalized portfolios', 'Risk assessment', 'Market analysis'],;
                     path: '/comprehensive-services-showcase'
                 },
                 {
                     name: 'AI Legal Research & Document Analysis',
                     description: 'Advanced legal research platform with NLP capabilities',
                     price: '$1,800/month',
-                    features['Case law analysis', 'Contract review', 'Compliance checking'],
+                    features['Case law analysis', 'Contract review', 'Compliance checking'],;
                     path: '/comprehensive-services-showcase'
                 },
                 {
                     name: 'AI Healthcare Diagnostic Imaging',
                     description: 'Medical imaging analysis platform with deep learning',
                     price: '$3,500/month',
-                    features['Disease detection', 'Diagnostic support', 'Patient monitoring'],
+                    features['Disease detection', 'Diagnostic support', 'Patient monitoring'],;
                     path: '/comprehensive-services-showcase'
 
-            ]
-        },
+            ];
+        },;
         {
             id: 'cybersecurity',
             title: 'Cybersecurity Solutions',
             icon: Shield,
             color: 'from-red-500 to-orange-500',
             description: 'Enterprise-grade security solutions for the digital age',
-            services[
+            services[;
                 {
                     name: 'Zero Trust Security Platform',
                     description: 'Comprehensive zero trust security and access management',
                     price: '$2,800/month',
-                    features['Continuous verification', 'Least privilege access', 'Threat detection'],
+                    features['Continuous verification', 'Least privilege access', 'Threat detection'],;
                     path: '/comprehensive-services-showcase'
                 },
                 {
                     name: 'AI-Powered Threat Detection',
                     description: 'Advanced threat detection with machine learning',
                     price: '$3,200/month',
-                    features['Real-time detection', 'Behavioral analytics', 'Automated response'],
+                    features['Real-time detection', 'Behavioral analytics', 'Automated response'],;
                     path: '/comprehensive-services-showcase'
                 },
                 {
                     name: 'Cloud Security Posture Management',
                     description: 'Multi-cloud security monitoring and optimization',
                     price: '$2,400/month',
-                    features['Multi-cloud monitoring', 'Configuration management', 'Compliance'],
+                    features['Multi-cloud monitoring', 'Configuration management', 'Compliance'],;
                     path: '/comprehensive-services-showcase'
 
-            ]
-        },
+            ];
+        },;
         {
             id: 'devops-cloud',
             title: 'DevOps & Cloud Services',
             icon: Cloud,
             color: 'from-blue-500 to-indigo-500',
             description: 'Modern DevOps practices and cloud infrastructure solutions',
-            services[
+            services[;
                 {
                     name: 'GitOps Platform & Infrastructure Automation',
                     description: 'Complete GitOps platform for infrastructure management',
                     price: '$2,200/month',
-                    features['Infrastructure as Code', 'Git-based deployments', 'Drift detection'],
+                    features['Infrastructure as Code', 'Git-based deployments', 'Drift detection'],;
                     path: '/comprehensive-services-showcase'
                 },
                 {
                     name: 'Multi-Cloud Management Platform',
                     description: 'Unified management across AWS, Azure, GCP, and more',
                     price: '$2,800/month',
-                    features['Cost optimization', 'Resource monitoring', 'Compliance management'],
+                    features['Cost optimization', 'Resource monitoring', 'Compliance management'],;
                     path: '/comprehensive-services-showcase'
                 },
                 {
                     name: 'Enterprise Kubernetes Management',
                     description: 'Comprehensive Kubernetes operations and security',
                     price: '$2,500/month',
-                    features['Multi-cluster management', 'Security policies', 'Monitoring'],
+                    features['Multi-cluster management', 'Security policies', 'Monitoring'],;
                     path: '/comprehensive-services-showcase'
 
-            ]
-        },
+            ];
+        },;
         {
             id: 'data-analytics',
             title: 'Data Analytics & BI',
             icon: BarChart3,
             color: 'from-green-500 to-teal-500',
             description: 'Powerful analytics and business intelligence solutions',
-            services[
+            services[;
                 {
                     name: 'Real-Time Data Streaming Platform',
                     description: 'High-performance real-time data processing and analytics',
                     price: '$3,200/month',
-                    features['Real-time processing', 'Stream analytics', 'Live dashboards'],
+                    features['Real-time processing', 'Stream analytics', 'Live dashboards'],;
                     path: '/comprehensive-services-showcase'
                 },
                 {
                     name: 'AI-Powered Predictive Analytics',
                     description: 'Advanced forecasting and pattern recognition',
                     price: '$2,800/month',
-                    features['Machine learning models', 'Time series forecasting', 'Anomaly detection'],
+                    features['Machine learning models', 'Time series forecasting', 'Anomaly detection'],;
                     path: '/comprehensive-services-showcase'
                 },
                 {
                     name: 'Customer Analytics Platform',
                     description: '360-degree customer view and behavioral analysis',
                     price: '$2,100/month',
-                    features['Customer segmentation', 'Behavioral analysis', 'Personalization'],
+                    features['Customer segmentation', 'Behavioral analysis', 'Personalization'],;
                     path: '/comprehensive-services-showcase'
 
-            ]
-        },
+            ];
+        },;
         {
             id: 'industry-solutions',
             title: 'Industry-Specific Solutions',
             icon: Building,
             color: 'from-gray-500 to-blue-500',
             description: 'Tailored solutions for specific industry verticals',
-            services[
+            services[;
                 {
                     name: 'Healthcare AI & Clinical Support',
                     description: 'Comprehensive healthcare AI platform for patient care',
                     price: '$4,500/month',
-                    features['Clinical decision support', 'Patient monitoring', 'Predictive analytics'],
+                    features['Clinical decision support', 'Patient monitoring', 'Predictive analytics'],;
                     path: '/comprehensive-services-showcase'
                 },
                 {
                     name: 'Financial Services AI & Risk Management',
                     description: 'AI-powered risk assessment and fraud detection',
                     price: '$3,800/month',
-                    features['Risk assessment', 'Fraud detection', 'Compliance automation'],
+                    features['Risk assessment', 'Fraud detection', 'Compliance automation'],;
                     path: '/comprehensive-services-showcase'
                 },
                 {
                     name: 'Manufacturing IoT & Smart Factory',
                     description: 'IoT platform for manufacturing optimization',
                     price: '$3,200/month',
-                    features['Predictive maintenance', 'Quality control', 'Production monitoring'],
+                    features['Predictive maintenance', 'Quality control', 'Production monitoring'],;
                     path: '/comprehensive-services-showcase'
 
-            ]
+            ];
 
     ];
     const benefits = [

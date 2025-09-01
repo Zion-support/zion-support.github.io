@@ -543,7 +543,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 >
                   List
                 </button>
-              </div>
+              </div>;
             </div>
           </div>
 
@@ -599,10 +599,10 @@ export default function ComprehensiveServicesShowcase2025() {
             </div>
           </div>
         </div>
-      </section>
+      </section>;
 
       {/* Categories */}
-      <section className="py-8">
+      <section className="py-8">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-3">
             {categories.map((category) => (
@@ -624,7 +624,7 @@ export default function ComprehensiveServicesShowcase2025() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16">
+      <section className="py-16">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
@@ -716,7 +716,7 @@ export default function ComprehensiveServicesShowcase2025() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-3xl p-12 border border-zion-cyan/20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

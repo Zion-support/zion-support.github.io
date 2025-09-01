@@ -113,7 +113,7 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
                       </a>
                     </div>
                   </div>
-                </div>
+                </div>;
               ))}
             </div>
 
@@ -166,7 +166,7 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div>;
       </div>
     </section>
   )};

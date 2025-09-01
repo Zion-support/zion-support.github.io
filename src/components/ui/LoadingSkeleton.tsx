@@ -33,7 +33,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
               opacity: [0.5, 1, 0.5],
             }}
             transition={{
-              duration: any1.5,
+              duration: any1.5,;
               repeat: Infinity,
               ease: "easeInOut"
             }}

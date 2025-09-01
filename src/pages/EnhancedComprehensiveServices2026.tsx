@@ -231,11 +231,11 @@ pricing: {
               </motion.button>
             </div>
           </motion.div>
-        </div>
+        </div>;
       </div>
 
       {/* Search and Filters */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Search */}
@@ -306,8 +306,8 @@ pricing: {
       </div>
 
       {/* Services Grid/List */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {viewMode === 'grid' ? (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
+        {viewMode === 'grid' ? (;
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
               {filteredServices.map((service, index)  => (
@@ -369,7 +369,7 @@ pricing: {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
+                  <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>;
 
                   {/* Pricing */}
                   <div className="mb-4">
@@ -492,10 +492,10 @@ pricing: {
                       </button>
                     </div>
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </AnimatePresence>
-          </div>
+          </div>;
         )}
 
         {/* No Results */}
@@ -508,7 +508,7 @@ pricing: {
             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-300 mb-2">No services found</h3>
             <p className="text-gray-400">Try adjusting your search or filter criteria</p>
-          </motion.div>
+          </motion.div>;
         )}
       </div>
 
@@ -705,7 +705,7 @@ pricing: {
       </AnimatePresence>
 
       {/* Contact Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Experience Revolutionary Technology?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">

@@ -278,10 +278,10 @@ export default function ITConsulting(...args: []):  {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -365,7 +365,7 @@ export default function ITConsulting(...args: []):  {
       </section>
 
       {/* Expertise Areas */}
-      <section className="py-20 bg-zion-slate-dark/30">
+      <section className="py-20 bg-zion-slate-dark/30">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -438,7 +438,7 @@ export default function ITConsulting(...args: []):  {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -469,14 +469,14 @@ export default function ITConsulting(...args: []):  {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Industries Section */}
-      <section className="py-20 bg-zion-slate-dark/30">
+      <section className="py-20 bg-zion-slate-dark/30">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -538,7 +538,7 @@ export default function ITConsulting(...args: []):  {
       </section>
 
       {/* Process Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-16"
@@ -573,14 +573,14 @@ export default function ITConsulting(...args: []):  {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-zion-slate-dark/30">
+      <section className="py-20 bg-zion-slate-dark/30">;
         <div className="container mx-auto px-4">
           <motion.div
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center"

@@ -12,7 +12,7 @@ interface Benefit {
   stats: string;
   features: string[];
 
-const benefits: Benefit[] = [
+const benefits: Benefit[] = [;
   {
     title: "AI-Powered Matchmaking",
     description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
@@ -95,7 +95,7 @@ export function BenefitsSection() {
     visible: { opacity: 1, x: 0 }
   };
 
-  const stats = [
+  const stats = [;
     { value: "500+", label: "Projects Delivered", icon: <Rocket className="w-6 h-6" /> },
     { value: "50+", label: "Expert Team Members", icon: <Users className="w-6 h-6" /> },
     { value: "99.9%", label: "Client Satisfaction", icon: <Star className="w-6 h-6" /> },
@@ -103,17 +103,17 @@ export function BenefitsSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">;
       {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5">;
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
           backgroundSize: '40px 40px'
         }} />
-      </div>
+      </div>;
 
       {/* Floating decorative elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0">;
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
           animate={{ rotate: 360 }}
@@ -155,7 +155,7 @@ export function BenefitsSection() {
           whileInView="visible"
           viewport={{ once: true }}
 
-          {stats.map((stat, index) => (
+          {stats.map((stat, index) => (;
             <motion.div
               key={index}
               variants={statsVariants}
@@ -166,7 +166,7 @@ export function BenefitsSection() {
               </div>
               <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
               <div className="text-zion-slate-light text-sm">{stat.label}</div>
-            </motion.div>
+            </motion.div>;
           ))}
         </motion.div>
 
@@ -267,7 +267,7 @@ export function BenefitsSection() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-16"
 
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Join hundreds of satisfied clients who have already experienced the Zion Tech Group difference

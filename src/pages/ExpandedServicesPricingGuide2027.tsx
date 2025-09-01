@@ -91,17 +91,17 @@ import {
     switch (category) {;
       case 'Cybersecurity':;
         return Shield;
-      case 'Data Analytics':
+      case 'Data Analytics':;
         return BarChart3;
-      case 'Cloud & DevOps':
+      case 'Cloud & DevOps':;
         return Cloud;
-      case 'IoT & Edge Computing':
+      case 'IoT & Edge Computing':;
         return IoT;
-      case 'Financial Technology':
+      case 'Financial Technology':;
         return FinTech;
-      case 'Healthcare Technology':
+      case 'Healthcare Technology':;
         return Healthcare;
-      default:
+      default:;
         return Rocket}
   };
 
@@ -258,12 +258,12 @@ import {
             </motion.div>
           </div>
         </div>
-      </div>
+      </div>;
 
       {/* Pricing Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
         {/* Filters and Search */}
-        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 mb-8">
+        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 mb-8">;
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
             {/* Search */}
             <div className="flex-1 max-w-md">
@@ -297,7 +297,7 @@ import {
         </div>
 
         {/* Pricing Count */}
-        <div className="mb-8">
+        <div className="mb-8">;
           <p className="text-gray-600 dark:text-gray-300">
             Showing {filteredPricing.length} of {ALL_EXPANDED_SERVICES_PRICING.length} pricing plans
           </p>
@@ -322,7 +322,7 @@ import {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Get Started?

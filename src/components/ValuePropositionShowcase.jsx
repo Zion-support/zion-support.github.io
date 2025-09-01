@@ -15,7 +15,7 @@ import {
   Clock,
   Users,
   BarChart3
-const valueMetrics = [
+const valueMetrics = [;
   {
     icon: <TrendingUp className="w-8 h-8" />,
     title: "Average ROI",
@@ -76,24 +76,24 @@ const competitiveAdvantages = [
 const marketComparison = [
   {
     category: "AI Business Intelligence",
-    competitors["Tableau", "Power BI", "Looker"],
-    competitorPricing["$70/user/month", "$9.99/user/month", "$30/user/month"],
+    competitors["Tableau", "Power BI", "Looker"],;
+    competitorPricing["$70/user/month", "$9.99/user/month", "$30/user/month"],;
     ourPricing: "$299/month",
     savings: "Up to 80%",
     advantage: "AI-powered insights, natural language queries, predictive analytics"
   },
   {
     category: "Customer Success Platform",
-    competitors["Gainsight", "Totango", "ChurnZero"],
-    competitorPricing["$500/user/month", "$500/user/month", "$500/user/month"],
+    competitors["Gainsight", "Totango", "ChurnZero"],;
+    competitorPricing["$500/user/month", "$500/user/month", "$500/user/month"],;
     ourPricing: "$349/month",
     savings: "Up to 90%",
     advantage: "AI-powered predictions, affordable pricing, easy setup"
   },
   {
     category: "Zero-Trust Security",
-    competitors["Palo Alto Networks", "CrowdStrike", "Zscaler"],
-    competitorPricing["$50,000/year", "$100,000/year", "$50,000/year"],
+    competitors["Palo Alto Networks", "CrowdStrike", "Zscaler"],;
+    competitorPricing["$50,000/year", "$100,000/year", "$50,000/year"],;
     ourPricing: "$599/month",
     savings: "Up to 85%",
     advantage: "AI-powered detection, comprehensive zero-trust implementation"
@@ -180,7 +180,7 @@ export function ValuePropositionShowcase() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <motion.div
@@ -217,13 +217,13 @@ export function ValuePropositionShowcase() {
         </motion.div>
 
         {/* Value Metrics */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+        <motion.div;
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16";
           variants={containerVariants}
-          initial="hidden"
-          animate="visible"
+          initial="hidden";
+          animate="visible";
 
-          {valueMetrics.map((metric, index) => (
+          {valueMetrics.map((metric, index) => (;
             <motion.div
               key={index}
               className="text-center"
@@ -248,7 +248,7 @@ export function ValuePropositionShowcase() {
           className="mb-16"
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -258,7 +258,7 @@ export function ValuePropositionShowcase() {
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -268,7 +268,7 @@ export function ValuePropositionShowcase() {
 }}
           transition = {
   { duration: 0.6,
-  delay: 0.3 
+  delay: 0.3 ;
 
 
 
@@ -288,7 +288,7 @@ export function ValuePropositionShowcase() {
                 variants={cardVariants}
                 whileHover = {
   { y: -5, boxShadow: "0 20px 40px rgba(0, 0, 0,
-  0.3)" 
+  0.3)" ;
 
 
 
@@ -312,7 +312,7 @@ export function ValuePropositionShowcase() {
           className="mb-16"
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -322,7 +322,7 @@ export function ValuePropositionShowcase() {
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -332,7 +332,7 @@ export function ValuePropositionShowcase() {
 }}
           transition = {
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5 ;
 
 
 
@@ -386,7 +386,7 @@ export function ValuePropositionShowcase() {
                     <p className="text-white text-sm">{comparison.advantage}</p>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </motion.div>
@@ -396,7 +396,7 @@ export function ValuePropositionShowcase() {
           className="mb-16"
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -406,7 +406,7 @@ export function ValuePropositionShowcase() {
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -416,7 +416,7 @@ export function ValuePropositionShowcase() {
 }}
           transition = {
   { duration: 0.6,
-  delay: 0.7 
+  delay: 0.7 ;
 
 
 
@@ -458,7 +458,7 @@ export function ValuePropositionShowcase() {
                     <div className="text-green-300 text-sm">Return on Investment</div>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </motion.div>
@@ -468,7 +468,7 @@ export function ValuePropositionShowcase() {
           className="text-center"
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -478,7 +478,7 @@ export function ValuePropositionShowcase() {
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -488,7 +488,7 @@ export function ValuePropositionShowcase() {
 }}
           transition = {
   { duration: 0.6,
-  delay: 0.9 
+  delay: 0.9 ;
 
 
 

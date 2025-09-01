@@ -32,7 +32,7 @@ export interface InnovativeMicroSaasService2026 {
   competitors?: string[];
   marketSize?: string;
 
-export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026[] = [
+export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026[] = [;
   // AI-Powered Cybersecurity & Threat Intelligence
   {
     id: "ai-cybersecurity-threat-hunting",

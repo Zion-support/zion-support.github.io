@@ -33,25 +33,25 @@ export const EnhancedAbout = () => {
         {
             name: 'Kleber',
             role: 'CEO & Founder',
-            expertise['AI/ML', 'Cloud Architecture', 'Digital Transformation'],
+            expertise['AI/ML', 'Cloud Architecture', 'Digital Transformation'],;
             avatar: '👨‍💼'
         },
         {
             name: 'AI Team',
             role: 'Machine Learning Engineers',
-            expertise['Deep Learning', 'NLP', 'Computer Vision'],
+            expertise['Deep Learning', 'NLP', 'Computer Vision'],;
             avatar: '🤖'
         },
         {
             name: 'DevOps Team',
             role: 'Cloud & Infrastructure',
-            expertise['AWS/Azure', 'Kubernetes', 'CI/CD'],
+            expertise['AWS/Azure', 'Kubernetes', 'CI/CD'],;
             avatar: '☁️'
         },
         {
             name: 'Security Team',
             role: 'Cybersecurity Experts',
-            expertise['Threat Detection', 'Compliance', 'Penetration Testing'],
+            expertise['Threat Detection', 'Compliance', 'Penetration Testing'],;
             avatar: '🔒'
         }
     ];

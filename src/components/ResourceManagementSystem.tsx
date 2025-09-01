@@ -63,7 +63,7 @@ interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
   maxResources?: number}
 
 export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
-  showStats = true,;
+showStats:  true,;
   showFilters = true,;
   showCharts = true,;
   maxResources = 20;
@@ -94,7 +94,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         department: 'Engineering',
         cost: 250000,
         lastUpdated: '2024-01-15',
-        tags['AI', 'Machine Learning', 'Development'],
+        tags['AI', 'Machine Learning', 'Development'],;
         description: 'Expert team specializing in AI and machine learning development',
         manager: 'Sarah Johnson',
         utilization: 80
@@ -112,7 +112,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         department: 'IT Operations',
         cost: 50000,
         lastUpdated: '2024-01-14',
-        tags['Cloud', 'AWS', 'Infrastructure'],
+        tags['Cloud', 'AWS', 'Infrastructure'],;
         description: 'High-performance cloud computing cluster for enterprise applications',
         manager: 'Michael Chen',
         utilization: 75
@@ -130,7 +130,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         department: 'Security',
         cost: 75000,
         lastUpdated: '2024-01-13',
-        tags['Security', 'Threat Detection', 'Monitoring'],
+        tags['Security', 'Threat Detection', 'Monitoring'],;
         description: 'Comprehensive cybersecurity monitoring and threat detection system',
         manager: 'David Kim',
         utilization: 85
@@ -148,7 +148,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         department: 'Facilities',
         cost: 2000000,
         lastUpdated: '2024-01-12',
-        tags['Data Center', 'Facility', 'Infrastructure'],
+        tags['Data Center', 'Facility', 'Infrastructure'],;
         description: 'Primary data center facility with redundant power and cooling',
         manager: 'Lisa Thompson',
         utilization: 0
@@ -166,7 +166,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         department: 'Engineering',
         cost: 30000,
         lastUpdated: '2024-01-11',
-        tags['DevOps', 'CI/CD', 'Automation'],
+        tags['DevOps', 'CI/CD', 'Automation'],;
         description: 'Complete DevOps toolchain for continuous integration and deployment',
         manager: 'Alex Wong',
         utilization: 90

@@ -12,9 +12,9 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         content: initialContent,
         selection: { start: 0, end: 0, text: '' },
         version: 0,
-        changes[],
-        suggestions[],
-        conflicts[]
+        changes[],;
+        suggestions[],;
+        conflicts[];
     });
     const [showSuggestions] = useState(true);
     const [showCollaborators, setShowCollaborators] = useState(false);
@@ -54,7 +54,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 content: newContent,
                 selection: { start: selectionStart, end: selectionEnd, text: selectedText },
                 version: prev.version + 1,
-                changes[...prev.changes, change]
+                changes[...prev.changes, change];
             }});
         // Sync with other collaborators
         if (enableCollaboration && collaboration.isConnected) {
@@ -107,7 +107,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     position: editorState.content.indexOf('its'),
                     length: 3,
                     reason: "Consider using 'it's' (contraction of 'it is') instead of 'its' (possessive)",
-                    alternatives["it's", "it is"]
+                    alternatives["it's", "it is"];
                 })}
             // Style suggestions
             if (editorState.content.includes('very')) {
@@ -119,7 +119,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     position: editorState.content.indexOf('very'),
                     length: 4,
                     reason: "Consider using a more specific adjective instead of 'very'",
-                    alternatives["extremely", "highly", "remarkably", "exceptionally"]
+                    alternatives["extremely", "highly", "remarkably", "exceptionally"];
                 })}
             // Completion suggestions
             if (editorState.content.endsWith('The main benefits')) {
@@ -131,7 +131,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     position: editorState.content.length,
                     length: 0,
                     reason: "Complete the sentence with common benefit statements",
-                    alternatives[
+                    alternatives[;
                         " include improved efficiency, cost savings, and enhanced user experience.",
                         " are numerous and well-documented in industry research.",
                         " can be measured through key performance indicators."
@@ -139,7 +139,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 })}
             setEditorState(prev => ({
                 ...prev,
-                suggestions[...prev.suggestions, ...suggestions]
+                suggestions[...prev.suggestions, ...suggestions];
             }));
             // // // // // // // console.error('Failed to generate AI suggestions:', error);
             trackEvent('editor', 'ai_suggestions_failed', 'generation_error', undefined, {
@@ -445,7 +445,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     left: x,
                     top: y,
                     transform: 'translate(-50%,
-  -50%)'
+  -50%)';
                 
 
 
@@ -453,7 +453,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 
 
 
-}}>
+}}>;
               <div className="w-full h-full rounded-full border-2 border-white shadow-lg" style={{ backgroundColor: user.color }}></div>
               <div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
                 {user.name}

@@ -9,27 +9,27 @@ const PricingComparison: React.FC = (): JSX.Element => {;
   const pricingData = [
     {
       category: "AI-Powered Micro SAAS Services",
-      services[
+      services[;
         {
           name: "AI Code Review & Security",
           description: "Advanced vulnerability detection with AI-powered analysis",
-          plans[
+          plans[;
             {
               name: "Starter",
               price: { monthly: 49, yearly: 39 },
-              features[
+              features[;
                 "Up to 10,000 lines/month",
                 "Basic vulnerability detection",
                 "5 programming languages",
                 "Email support",
                 "Basic reporting"
-              ],
+              ],;
               popular: false
             },
             {
               name: "Professional",
               price: { monthly: 199, yearly: 159 },
-              features[
+              features[;
                 "Up to 100,000 lines/month",
                 "Advanced vulnerability detection",
                 "25 programming languages",
@@ -37,13 +37,13 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                 "Advanced reporting",
                 "Git integration",
                 "Custom rules"
-              ],
+              ],;
               popular: true
             },
             {
               name: "Enterprise",
               price: { monthly: 799, yearly: 639 },
-              features[
+              features[;
                 "Unlimited lines/month",
                 "Enterprise-grade security",
                 "50+ programming languages",
@@ -51,31 +51,31 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                 "Custom integrations",
                 "API access",
                 "Dedicated account manager"
-              ],
+              ],;
               popular: false
             }
           ]
-        },
+        },;
         {
           name: "AI Customer Experience Analytics",
           description: "Transform customer insights into actionable intelligence",
-          plans[
+          plans[;
             {
               name: "Basic",
               price: { monthly: 299, yearly: 239 },
-              features[
+              features[;
                 "Up to 10,000 interactions/month",
                 "Basic sentiment analysis",
                 "Customer journey mapping",
                 "Email support",
                 "Standard reports"
-              ],
+              ],;
               popular: false
             },
             {
               name: "Advanced",
               price: { monthly: 799, yearly: 639 },
-              features[
+              features[;
                 "Up to 100,000 interactions/month",
                 "Advanced sentiment analysis",
                 "Predictive analytics",
@@ -83,13 +83,13 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                 "Custom dashboards",
                 "API access",
                 "Real-time alerts"
-              ],
+              ],;
               popular: true
             },
             {
               name: "Enterprise",
               price: { monthly: 1999, yearly: 1599 },
-              features[
+              features[;
                 "Unlimited interactions/month",
                 "AI-powered insights",
                 "Custom ML models",
@@ -97,31 +97,31 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                 "White-label solutions",
                 "Advanced integrations",
                 "Dedicated support team"
-              ],
+              ],;
               popular: false
             }
           ]
-        },
+        },;
         {
           name: "AI DevOps Automation Platform",
           description: "Revolutionize DevOps workflow with AI-powered automation",
-          plans[
+          plans[;
             {
               name: "Starter",
               price: { monthly: 199, yearly: 159 },
-              features[
+              features[;
                 "Up to 5 projects",
                 "Basic CI/CD pipelines",
                 "Git integration",
                 "Email support",
                 "Standard templates"
-              ],
+              ],;
               popular: false
             },
             {
               name: "Professional",
               price: { monthly: 599, yearly: 479 },
-              features[
+              features[;
                 "Up to 25 projects",
                 "Advanced CI/CD pipelines",
                 "AI pipeline optimization",
@@ -129,13 +129,13 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                 "Custom workflows",
                 "Advanced monitoring",
                 "Team collaboration"
-              ],
+              ],;
               popular: true
             },
             {
               name: "Enterprise",
               price: { monthly: 1499, yearly: 1199 },
-              features[
+              features[;
                 "Unlimited projects",
                 "Enterprise automation",
                 "Custom AI models",
@@ -143,31 +143,31 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                 "Advanced security",
                 "Multi-cloud support",
                 "Dedicated infrastructure"
-              ],
+              ],;
               popular: false
             }
           ]
-        },
+        },;
         {
           name: "AI IoT Edge Computing Platform",
           description: "Revolutionize IoT with AI-powered edge computing",
-          plans[
+          plans[;
             {
               name: "Basic",
               price: { monthly: 299, yearly: 239 },
-              features[
+              features[;
                 "Up to 100 devices",
                 "Basic edge processing",
                 "Standard protocols",
                 "Email support",
                 "Basic monitoring"
-              ],
+              ],;
               popular: false
             },
             {
               name: "Professional",
               price: { monthly: 999, yearly: 799 },
-              features[
+              features[;
                 "Up to 1,000 devices",
                 "Advanced edge AI",
                 "Real-time processing",
@@ -175,13 +175,13 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                 "Custom algorithms",
                 "Advanced analytics",
                 "Multi-protocol support"
-              ],
+              ],;
               popular: true
             },
             {
               name: "Enterprise",
               price: { monthly: 2499, yearly: 1999 },
-              features[
+              features[;
                 "Unlimited devices",
                 "Enterprise edge AI",
                 "Custom ML models",
@@ -189,138 +189,138 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                 "Advanced security",
                 "Global deployment",
                 "Dedicated infrastructure"
-              ],
+              ],;
               popular: false
             }
           ]
         }
       ]
-    },
+    },;
     {
       category: "Enterprise Services",
-      services[
+      services[;
         {
           name: "Cloud & Infrastructure",
           description: "Enterprise-grade cloud and infrastructure solutions",
-          plans[
+          plans[;
             {
               name: "Consultation",
               price: { monthly: 5000, yearly: 50000 },
-              features[
+              features[;
                 "Infrastructure assessment",
                 "Migration planning",
                 "Cost optimization",
                 "Security review",
                 "Performance tuning"
-              ],
+              ],;
               popular: false
             },
             {
               name: "Implementation",
               price: { monthly: 15000, yearly: 150000 },
-              features[
+              features[;
                 "Full infrastructure setup",
                 "Migration execution",
                 "Training & documentation",
                 "Ongoing support",
                 "Performance monitoring"
-              ],
+              ],;
               popular: true
             },
             {
               name: "Managed Services",
               price: { monthly: 25000, yearly: 250000 },
-              features[
+              features[;
                 "24/7 monitoring",
                 "Proactive maintenance",
                 "Security updates",
                 "Performance optimization",
                 "Dedicated team"
-              ],
+              ],;
               popular: false
             }
           ]
-        },
+        },;
         {
           name: "Data & Analytics",
           description: "Comprehensive data analytics and business intelligence",
-          plans[
+          plans[;
             {
               name: "Assessment",
               price: { monthly: 3000, yearly: 30000 },
-              features[
+              features[;
                 "Data audit",
                 "Requirements analysis",
                 "Technology selection",
                 "Implementation roadmap",
                 "ROI analysis"
-              ],
+              ],;
               popular: false
             },
             {
               name: "Implementation",
               price: { monthly: 10000, yearly: 100000 },
-              features[
+              features[;
                 "Data platform setup",
                 "ETL development",
                 "Dashboard creation",
                 "User training",
                 "Ongoing support"
-              ],
+              ],;
               popular: true
             },
             {
               name: "Managed Analytics",
               price: { monthly: 20000, yearly: 200000 },
-              features[
+              features[;
                 "Continuous optimization",
                 "New insights delivery",
                 "Performance monitoring",
                 "User support",
                 "Regular updates"
-              ],
+              ],;
               popular: false
             }
           ]
-        },
+        },;
         {
           name: "Security & Compliance",
           description: "Enterprise-grade security and compliance solutions",
-          plans[
+          plans[;
             {
               name: "Assessment",
               price: { monthly: 4000, yearly: 40000 },
-              features[
+              features[;
                 "Security audit",
                 "Vulnerability assessment",
                 "Compliance review",
                 "Risk analysis",
                 "Recommendations"
-              ],
+              ],;
               popular: false
             },
             {
               name: "Implementation",
               price: { monthly: 12000, yearly: 120000 },
-              features[
+              features[;
                 "Security implementation",
                 "Compliance setup",
                 "Policy development",
                 "Training programs",
                 "Ongoing support"
-              ],
+              ],;
               popular: true
             },
             {
               name: "Managed Security",
               price: { monthly: 25000, yearly: 250000 },
-              features[
+              features[;
                 "24/7 monitoring",
                 "Threat response",
                 "Regular assessments",
                 "Compliance reporting",
                 "Dedicated team"
-              ],
+              ],;
               popular: false
             }
           ]

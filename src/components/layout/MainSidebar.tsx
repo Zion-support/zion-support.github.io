@@ -71,7 +71,7 @@ export function MainSidebar() {
   const navigation: SidebarItem[] = [
     {
       title: 'Main',
-      items[
+      items[;
         { name: 'Home', href: '/', icon: Home },
         { name: 'About', href: '/about', icon: Building },
         { name: 'Services', href: '/services', icon: Briefcase },
@@ -84,7 +84,7 @@ export function MainSidebar() {
         { name: 'Contact', href: '/contact', icon: Mail },
         { name: 'Blog', href: '/blog', icon: FileText },
       ]
-    },
+    },;
     {
       name: 'Core Services',
       href: '#',

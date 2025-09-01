@@ -70,7 +70,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
       </div>
 
       {/* Contact Information Banner */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-8">
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-8">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h2>
@@ -93,7 +93,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
       </div>
 
       {/* Services Overview */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white mb-4">Our Service Categories</h2>
           <p className="text-gray-300 text-lg">Comprehensive solutions across three key technology domains</p>
@@ -133,7 +133,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
       </div>
 
       {/* Services Filter and Search */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
         <div className="bg-slate-800 rounded-xl p-6 mb-8">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
@@ -156,8 +156,8 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
                       : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
                   }`}
 
-                  {category.name} ({category.count})
-                </button>
+                  {category.name} ({category.count});
+                </button>;
               ))}
             </div>
           </div>
@@ -165,7 +165,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
       </div>
 
       {/* Services Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service)  => (
             <div key={service.id} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-colors duration-200">
@@ -245,7 +245,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
 
                   Call Now
                 </a>
-              </div>
+              </div>;
             </div>
           ))}
         </div>;
@@ -267,7 +267,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
       </div>
 
       {/* Call to Action */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -292,7 +292,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
       </div>
 
       {/* Footer Contact Information */}
-      <div className="bg-slate-800 py-12">
+      <div className="bg-slate-800 py-12">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>

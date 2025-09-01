@@ -7,35 +7,35 @@ export function MainSidebar() {
     const sidebarSections = [
         {
             title: 'Main',
-            items[
+            items[;
                 { key: 'home', href: '/', icon: <Home className="w-4 h-4"/>, label: 'Home' },
                 { key: 'marketplace', href: '/marketplace', icon: <ShoppingCart className="w-4 h-4"/>, label: 'Marketplace' },
                 { key: 'services', href: '/services', icon: <Settings className="w-4 h-4"/>, label: 'Services' },
                 { key: 'talent', href: '/talent', icon: <Users className="w-4 h-4"/>, label: 'Talent' },
                 { key: 'equipment', href: '/equipment', icon: <BarChart3 className="w-4 h-4"/>, label: 'Equipment' },
             ]
-        },
+        },;
         {
             title: 'Comp',
-            items[
+            items[;
                 { key: 'about', href: '/about', icon: <Building className="w-4 h-4"/>, label: 'About Us' },
                 { key: 'careers', href: '/careers', icon: <Briefcase className="w-4 h-4"/>, label: 'Careers' },
                 { key: 'partners', href: '/partners', icon: <Users className="w-4 h-4"/>, label: 'Partners' },
                 { key: 'contact', href: '/contact', icon: <Mail className="w-4 h-4"/>, label: 'Contact' },
             ]
-        },
+        },;
         {
             title: 'Resources',
-            items[
+            items[;
                 { key: 'blog', href: '/blog', icon: <FileText className="w-4 h-4"/>, label: 'Blog' },
                 { key: 'community', href: '/community', icon: <Globe className="w-4 h-4"/>, label: 'Community' },
                 { key: 'green-it', href: '/green-it', icon: <Leaf className="w-4 h-4"/>, label: 'Green IT' },
                 { key: 'zion-hire-ai', href: '/zion-hire-ai', icon: <Zap className="w-4 h-4"/>, label: 'AI Hiring' },
             ]
-        },
+        },;
         {
             title: 'Support',
-            items[
+            items[;
                 { key: 'help', href: '/help', icon: <HelpCircle className="w-4 h-4"/>, label: 'Help Center' },
                 { key: 'developers', href: '/developers', icon: <Code className="w-4 h-4"/>, label: 'Developer Portal' },
                 { key: 'api-docs', href: '/api-docs', icon: <Code className="w-4 h-4"/>, label: 'API Docs' },

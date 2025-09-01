@@ -133,7 +133,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
   {
             background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%,
-  #0f172a 100%)'
+  #0f172a 100%)';
         
 
 }}/>)}

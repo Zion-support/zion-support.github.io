@@ -264,7 +264,7 @@ const AIServicesPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
@@ -331,7 +331,7 @@ const AIServicesPage: React.FC = () => {
                       </ul>
                     </div>
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>

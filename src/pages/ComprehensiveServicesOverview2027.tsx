@@ -534,7 +534,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                   <Badge variant="secondary" className="ml-2 bg-zion-purple/80">
                     {category.count}
                   </Badge>
-                </Button>
+                </Button>;
               ))}
             </div>
             <div className="flex flex-wrap gap-4">
@@ -551,12 +551,12 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
             </div>
           </div>
           {/* Services Grid */}
-          <div className={`grid gap-8 ${
+<div className: {`grid gap-8 ${
             viewMode === 'grid'
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
               : 'grid-cols-1'
           }`}>
-            {filteredServices.map((service) => (
+            {filteredServices.map((service) => (;
               <ServiceCard key={service.id} service={service} />
             ))}
           </div>
@@ -575,12 +575,12 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           </div>
         </div>
         {/* Services Grid */}
-        <div className={`grid gap-8 ${
+<div className: {`grid gap-8 ${
           viewMode === 'grid' 
             ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
             : 'grid-cols-1'
         }`}>
-          {filteredServices.map((service) => (
+          {filteredServices.map((service) => (;
             <ServiceCard key={service.id} service={service} />
           ))};
         </div>;
@@ -601,7 +601,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
         )}
       </div>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20">;
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?

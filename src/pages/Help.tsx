@@ -271,13 +271,13 @@ export default function Help() {
                   </div>
                 </button>
               </div>
-            </form>
+            </form>;
           </div>
         </div>
       </div>
 
       {/* Additional Resources */}
-      <section className="py-16 bg-slate-800/30">
+      <section className="py-16 bg-slate-800/30">;
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -333,7 +333,7 @@ export default function Help() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
+      <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">;
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

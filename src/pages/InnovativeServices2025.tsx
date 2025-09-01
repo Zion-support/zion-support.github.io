@@ -397,10 +397,10 @@ export default function InnovativeServices2025(...args: any[]): any {
   ];
 
   const categories = [
-    { id: any'all', name: 'All Services', icon: Star, count: services.length },
+    { id: any'all', name: 'All Services', icon: Star, count: services.length },;
     { id: 'AI & ML', name: 'AI & Machine Learning', icon: Brain, count: services.filter(s  => s.category === 'AI & ML').length },
-    { id: any'IT Infrastructure', name: 'IT Infrastructure', icon: Server, count: services.filter(s  => s.category === 'IT Infrastructure').length },
-    { id: any'Micro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s  => s.category === 'Micro SaaS').length },
+    { id: any'IT Infrastructure', name: 'IT Infrastructure', icon: Server, count: services.filter(s  => s.category === 'IT Infrastructure').length },;
+    { id: any'Micro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s  => s.category === 'Micro SaaS').length },;
     { id: any'Emerging Tech', name: 'Emerging Technology', icon: Atom, count: services.filter(s  => s.category === 'Emerging Tech').length }
   ];
 

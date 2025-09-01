@@ -28,8 +28,8 @@ const MicroSAASPage = () => {
       title: 'Custom Applications',
       description: 'Tailored software solutions designed for your specific business needs',
       icon: <Code className="w-8 h-8" />,
-      features['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],
-      useCases['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],
+      features['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],;
+      useCases['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],;
       pricing: 'Starting from $2,500/month'
     },
     {
@@ -37,8 +37,8 @@ const MicroSAASPage = () => {
       title: 'API Development',
       description: 'Robust and scalable APIs to connect your applications and services',
       icon: <Database className="w-8 h-8" />,
-      features['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],
-      useCases['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],
+      features['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],;
+      useCases['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],;
       pricing: 'Starting from $1,800/month'
     },
     {
@@ -46,8 +46,8 @@ const MicroSAASPage = () => {
       title: 'Scalable Architecture',
       description: 'Cloud-native architectures that grow with your business',
       icon: <Globe className="w-8 h-8" />,
-      features['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],
-      useCases['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],
+      features['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],;
+      useCases['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],;
       pricing: 'Starting from $3,200/month'
     },
     {
@@ -176,7 +176,7 @@ const MicroSAASPage = () => {
                 {service.description}
               </p>
               {/* Features */}
-              <div className="mb-6">
+              <div className="mb-6">;
                 <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
@@ -186,7 +186,7 @@ const MicroSAASPage = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div>;
               {/* Use Cases */}
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3">Use Cases:</h4>
@@ -203,11 +203,11 @@ const MicroSAASPage = () => {
               </div>
               {/* CTA Button */}
               <Link
-                to={`/micro-saas/${service.id}`}
+to: {`/micro-saas/${service.id}`}
                 className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
 
                 Learn More
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />;
               </Link>
             </motion.div>
           ))}
@@ -216,7 +216,7 @@ const MicroSAASPage = () => {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -226,7 +226,7 @@ const MicroSAASPage = () => {
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -236,7 +236,7 @@ const MicroSAASPage = () => {
 }}
           transition = {
   { duration: 0.8,
-  delay: 0.3 
+  delay: 0.3 ;
 
 
 
@@ -246,7 +246,7 @@ const MicroSAASPage = () => {
 }}
           className="mb-16"
 
-          <div className="text-center mb-8">
+          <div className="text-center mb-8">;
             <h2 className="text-3xl font-bold text-white mb-4">
               Benefits of Micro SAAS
             </h2>
@@ -292,7 +292,7 @@ const MicroSAASPage = () => {
                 className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="text-zion-cyan font-medium">{benefit}</div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </motion.div>
@@ -300,7 +300,7 @@ const MicroSAASPage = () => {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -310,7 +310,7 @@ const MicroSAASPage = () => {
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -320,7 +320,7 @@ const MicroSAASPage = () => {
 }}
           transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4 ;
 
 
 
@@ -330,7 +330,7 @@ const MicroSAASPage = () => {
 }}
           className="mb-16"
 
-          <div className="text-center mb-8">
+          <div className="text-center mb-8">;
             <h2 className="text-3xl font-bold text-white mb-4">
               Why Choose Our SAAS Solutions?
             </h2>
@@ -369,7 +369,7 @@ const MicroSAASPage = () => {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -379,7 +379,7 @@ const MicroSAASPage = () => {
 }}
           animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -389,7 +389,7 @@ const MicroSAASPage = () => {
 }}
           transition = {
   { duration: 0.8,
-  delay: 0.5 
+  delay: 0.5 ;
 
 
 
@@ -399,8 +399,8 @@ const MicroSAASPage = () => {
 }}
           className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8"
 
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Build Your SAAS?
+          <h2 className="text-3xl font-bold text-white mb-4">;
+            Ready to Build Your SAAS?;
           </h2>
           <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
             Let our SAAS experts help you create a successful software product

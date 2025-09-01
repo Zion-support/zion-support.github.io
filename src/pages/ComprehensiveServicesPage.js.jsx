@@ -236,7 +236,7 @@ export default function ComprehensiveServicesPage() {
                 title: "Expert Support",
                 description: "24/7 technical support and dedicated account management for enterprise clients"
 
-        ].map((feature, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
+        ].map((feature, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">;
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
                   {feature.icon}
                 </div>

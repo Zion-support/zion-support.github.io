@@ -249,7 +249,7 @@ export function TechSolutionsSection() {
               </Link>
             </div>
           </div>
-        </motion.div>
+        </motion.div>;
       </div>;
     </section>;
   )};

@@ -6,120 +6,120 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
         {
             category: "AI & Machine Learning",
             icon: Brain,
-            services[
+            services[;
                 {
                     name: "AI Business Intelligence",
                     description: "Advanced analytics and business intelligence powered by artificial intelligence",
                     href: "/services/ai-business-intelligence",
-                    features["Predictive Analytics", "Real-time Insights", "Custom Dashboards"]
-                },
+                    features["Predictive Analytics", "Real-time Insights", "Custom Dashboards"];
+                },;
                 {
                     name: "AI Marketing Automation",
                     description: "Intelligent marketing automation with AI-driven optimization",
                     href: "/services/ai-marketing-automation",
-                    features["Campaign Optimization", "Customer Segmentation", "ROI Tracking"]
-                },
+                    features["Campaign Optimization", "Customer Segmentation", "ROI Tracking"];
+                },;
                 {
                     name: "AI Workflow Automation",
                     description: "Streamline business processes with intelligent automation",
                     href: "/services/ai-workflow-automation",
-                    features["Process Optimization", "Error Reduction", "Efficiency Gains"]
+                    features["Process Optimization", "Error Reduction", "Efficiency Gains"];
                 }
             ]
-        },
+        },;
         {
             category: "Cloud & Infrastructure",
             icon: Cloud,
-            services[
+            services[;
                 {
                     name: "Cloud & DevOps",
                     description: "Comprehensive cloud infrastructure and DevOps automation",
                     href: "/services/cloud",
-                    features["Multi-cloud Strategy", "CI/CD Pipelines", "Infrastructure as Code"]
-                },
+                    features["Multi-cloud Strategy", "CI/CD Pipelines", "Infrastructure as Code"];
+                },;
                 {
                     name: "IT Infrastructure",
                     description: "Enterprise-grade IT infrastructure solutions",
                     href: "/services/infrastructure",
-                    features["Network Design", "Security Implementation", "Scalability Planning"]
-                },
+                    features["Network Design", "Security Implementation", "Scalability Planning"];
+                },;
                 {
                     name: "Digital Transformation",
                     description: "End-to-end digital transformation consulting and implementation",
                     href: "/services/transformation",
-                    features["Strategy Development", "Technology Selection", "Change Management"]
+                    features["Strategy Development", "Technology Selection", "Change Management"];
                 }
             ]
-        },
+        },;
         {
             category: "Cybersecurity & Compliance",
             icon: Shield,
-            services[
+            services[;
                 {
                     name: "Cybersecurity Services",
                     description: "Comprehensive cybersecurity solutions for modern threats",
                     href: "/services/cybersecurity",
-                    features["Threat Detection", "Vulnerability Assessment", "Incident Response"]
-                },
+                    features["Threat Detection", "Vulnerability Assessment", "Incident Response"];
+                },;
                 {
                     name: "SOC2 Compliance Automation",
                     description: "Automated SOC2 compliance and audit preparation",
                     href: "/soc2-compliance-automation",
-                    features["Compliance Monitoring", "Audit Preparation", "Risk Management"]
-                },
+                    features["Compliance Monitoring", "Audit Preparation", "Risk Management"];
+                },;
                 {
                     name: "Zero Trust Architecture",
                     description: "Modern zero trust security implementation",
                     href: "/zero-trust-network-architecture",
-                    features["Identity Verification", "Access Control", "Continuous Monitoring"]
+                    features["Identity Verification", "Access Control", "Continuous Monitoring"];
                 }
             ]
-        },
+        },;
         {
             category: "Emerging Technologies",
             icon: Rocket,
-            services[
+            services[;
                 {
                     name: "Quantum Technology",
                     description: "Next-generation quantum computing solutions",
                     href: "/quantum-technology",
-                    features["Quantum Algorithms", "Quantum Security", "Research & Development"]
-                },
+                    features["Quantum Algorithms", "Quantum Security", "Research & Development"];
+                },;
                 {
                     name: "Space Technology",
                     description: "Innovative space technology and satellite solutions",
                     href: "/space-tech",
-                    features["Satellite Systems", "Space Analytics", "Ground Station Solutions"]
-                },
+                    features["Satellite Systems", "Space Analytics", "Ground Station Solutions"];
+                },;
                 {
                     name: "5G Enterprise Solutions",
                     description: "Enterprise-grade 5G network optimization",
                     href: "/5g-enterprise-solutions",
-                    features["Network Optimization", "Edge Computing", "IoT Integration"]
+                    features["Network Optimization", "Edge Computing", "IoT Integration"];
                 }
             ]
-        },
+        },;
         {
             category: "Specialized Solutions",
             icon: Target,
-            services[
+            services[;
                 {
                     name: "AI-Powered IT Asset Management",
                     description: "Intelligent IT asset lifecycle management",
                     href: "/ai-powered-it-asset-management",
-                    features["Asset Tracking", "Predictive Maintenance", "Cost Optimization"]
-                },
+                    features["Asset Tracking", "Predictive Maintenance", "Cost Optimization"];
+                },;
                 {
                     name: "Autonomous Business Operations",
                     description: "AI-driven business process automation platform",
                     href: "/autonomous-business-operations-platform",
-                    features["Process Automation", "Decision Support", "Performance Analytics"]
-                },
+                    features["Process Automation", "Decision Support", "Performance Analytics"];
+                },;
                 {
                     name: "Micro SAAS Services",
                     description: "Specialized software-as-a-service solutions",
                     href: "/micro-saas-services",
-                    features["Custom Development", "Scalable Architecture", "API Integration"]
+                    features["Custom Development", "Scalable Architecture", "API Integration"];
                 }
             ]
 
@@ -151,9 +151,9 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
 
 
     };
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden">;
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
@@ -195,10 +195,10 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
             </div>
           </motion.div>
         </div>
-      </div>
+      </div>;
 
       {/* Services Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">;
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-16">
           {services.map((category, categoryIndex) => (<motion.div key={category.category} variants={itemVariants}>
               <div className="text-center mb-12">
@@ -243,7 +243,7 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">
+      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {
   { opacity: 0,

@@ -7,37 +7,37 @@ export default function FinancialSolutions() {
             icon: Brain,
             title: "AI-Powered Trading",
             description: "Intelligent algorithmic trading systems with real-time market analysis",
-            features["Predictive analytics", "Risk management", "Portfolio optimization"]
-        },
+            features["Predictive analytics", "Risk management", "Portfolio optimization"];
+        },;
         {
             icon: Shield,
             title: "Regulatory Compliance",
             description: "Automated compliance monitoring and reporting for financial regulations",
-            features["Real-time monitoring", "Automated reporting", "Audit trails"]
-        },
+            features["Real-time monitoring", "Automated reporting", "Audit trails"];
+        },;
         {
             icon: BarChart3,
             title: "Financial Analytics",
             description: "Advanced data analytics for investment decisions and market insights",
-            features["Market analysis", "Performance tracking", "Risk assessment"]
-        },
+            features["Market analysis", "Performance tracking", "Risk assessment"];
+        },;
         {
             icon: Lock,
             title: "Cybersecurity",
             description: "Bank-grade security solutions for financial institutions",
-            features["Fraud detection", "Secure transactions", "Data protection"]
-        },
+            features["Fraud detection", "Secure transactions", "Data protection"];
+        },;
         {
             icon: Database,
             title: "Data Management",
             description: "Comprehensive financial data integration and management",
-            features["Real-time data", "Multi-source integration", "Data quality"]
-        },
+            features["Real-time data", "Multi-source integration", "Data quality"];
+        },;
         {
             icon: Zap,
             title: "Process Automation",
             description: "Streamlined financial operations and workflow automation",
-            features["Workflow automation", "Document processing", "Approval systems"]
+            features["Workflow automation", "Document processing", "Approval systems"];
         }
     ];
     const useCases = [

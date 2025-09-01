@@ -114,9 +114,9 @@ const createInstance = async () => {
     title: 'Security Threat Detection',
     language: 'Python',
     description: 'Implement real-time threat detection using our security API.',
-    code: `import requests
+    code: `import requests;
 
-def check_threat(ip_address):
+def check_threat(ip_address):;
     url = "https://api.ziontechgroup.com/v1/security/threat-check"
     headers = {"Authorization": "Bearer YOUR_API_KEY"}
 

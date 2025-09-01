@@ -9,30 +9,30 @@ const mockBusinessProcesses = [
         status: 'active',
         priority: 'high',
         automationLevel: 'fully-automated',
-        aiInsights[
+        aiInsights[;
             'Pattern detected: 15% of invoices require manual review',
             'Optimization opportunity: Reduce approval time by 40%',
             'Cost savings potential: $12,000/month through automation'
-        ],
+        ],;
         efficiency: 92,
         costSavings: 12000,
         timeReduction: 65,
-        stakeholders['Finance Team', 'AP Department', 'Vendors'],
+        stakeholders['Finance Team', 'AP Department', 'Vendors'],;
         lastExecuted: new Date('2024-01-15T10:30:00Z'),
         nextExecution: new Date('2024-01-16T09:00:00Z'),
-        executionHistory[
+        executionHistory[;
             {
                 id: 'exec-001',
                 timestamp: new Date('2024-01-15T10:30:00Z'),
                 status: 'success',
                 duration: 45,
-                aiDecisions['Auto-approved 85% of invoices', 'Flagged 3 suspicious entries'],
+                aiDecisions['Auto-approved 85% of invoices', 'Flagged 3 suspicious entries'],;
                 manualInterventions: 2,
                 cost: 150,
                 efficiency: 94
 
-        ],
-        rules[
+        ],;
+        rules[;
             {
                 id: 'rule-001',
                 name: 'Auto-approve under $1000',
@@ -44,9 +44,9 @@ const mockBusinessProcesses = [
                 lastTriggered: new Date('2024-01-15T10:30:00Z'),
                 triggerCount: 156
 
-        ],
-        dependencies['vendor_verification', 'budget_approval']
-    },
+        ],;
+        dependencies['vendor_verification', 'budget_approval'];
+    },;
     {
         id: 'bp-002',
         name: 'Employee Onboarding',
@@ -55,30 +55,30 @@ const mockBusinessProcesses = [
         status: 'active',
         priority: 'medium',
         automationLevel: 'semi-automated',
-        aiInsights[
+        aiInsights[;
             'Bottleneck identified: IT setup takes 3 days on average',
             'Recommendation: Implement parallel processing for faster onboarding',
             'Success rate: 98% completion within SLA'
-        ],
+        ],;
         efficiency: 87,
         costSavings: 8000,
         timeReduction: 55,
-        stakeholders['HR Team', 'IT Department', 'New Employees'],
+        stakeholders['HR Team', 'IT Department', 'New Employees'],;
         lastExecuted: new Date('2024-01-14T14:15:00Z'),
         nextExecution: new Date('2024-01-17T09:00:00Z'),
-        executionHistory[
+        executionHistory[;
             {
                 id: 'exec-002',
                 timestamp: new Date('2024-01-14T14:15:00Z'),
                 status: 'success',
                 duration: 120,
-                aiDecisions['Optimized task sequence', 'Identified resource conflicts'],
+                aiDecisions['Optimized task sequence', 'Identified resource conflicts'],;
                 manualInterventions: 1,
                 cost: 200,
                 efficiency: 89
 
-        ],
-        rules[
+        ],;
+        rules[;
             {
                 id: 'rule-002',
                 name: 'Auto-assign IT tasks',
@@ -90,9 +90,9 @@ const mockBusinessProcesses = [
                 lastTriggered: new Date('2024-01-14T14:15:00Z'),
                 triggerCount: 23
 
-        ],
-        dependencies['background_check', 'document_verification']
-    },
+        ],;
+        dependencies['background_check', 'document_verification'];
+    },;
     {
         id: 'bp-003',
         name: 'Customer Support Ticket Routing',
@@ -101,30 +101,30 @@ const mockBusinessProcesses = [
         status: 'active',
         priority: 'critical',
         automationLevel: 'fully-automated',
-        aiInsights[
+        aiInsights[;
             'AI accuracy: 94% correct ticket classification',
             'Response time improved by 60%',
             'Customer satisfaction increased by 25%'
-        ],
+        ],;
         efficiency: 96,
         costSavings: 15000,
         timeReduction: 70,
-        stakeholders['Support Team', 'Customers', 'Product Team'],
+        stakeholders['Support Team', 'Customers', 'Product Team'],;
         lastExecuted: new Date('2024-01-15T16:45:00Z'),
         nextExecution: new Date('2024-01-15T17:00:00Z'),
-        executionHistory[
+        executionHistory[;
             {
                 id: 'exec-003',
                 timestamp: new Date('2024-01-15T16:45:00Z'),
                 status: 'success',
                 duration: 15,
-                aiDecisions['Classified 47 tickets by priority', 'Assigned to optimal agents'],
+                aiDecisions['Classified 47 tickets by priority', 'Assigned to optimal agents'],;
                 manualInterventions: 0,
                 cost: 50,
                 efficiency: 98
 
-        ],
-        rules[
+        ],;
+        rules[;
             {
                 id: 'rule-003',
                 name: 'Priority-based routing',
@@ -136,8 +136,8 @@ const mockBusinessProcesses = [
                 lastTriggered: new Date('2024-01-15T16:45:00Z'),
                 triggerCount: 8
 
-        ],
-        dependencies['ticket_classification', 'agent_availability']
+        ],;
+        dependencies['ticket_classification', 'agent_availability'];
     }
 ];
 export function AdvancedAIBusinessProcessAutomation() {

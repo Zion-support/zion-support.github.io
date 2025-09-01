@@ -576,7 +576,7 @@ import {
   Shield,
   Zap,
   Server
-  Treap
+  Treap;
 } from 'lucide-react';
 
     technologies["Prometheus", "Grafana", "ELK Stack", "APM Tools"]
@@ -680,25 +680,25 @@ const infrastructureBenefits = [
     title: "High Availability",
     description: "99.99% uptime with redundant systems and failover capabilities",
     icon: Shield,
-    examples["Redundant systems", "Failover protection", "Load balancing", "Disaster recovery"]
-  },
+    examples["Redundant systems", "Failover protection", "Load balancing", "Disaster recovery"];
+  },;
   {
     title: "Scalability",
     description: "Infrastructure that grows with your business needs",
     icon: TrendingUp,
-    examples["Horizontal scaling", "Vertical scaling", "Auto-scaling", "Resource optimization"]
-  },
+    examples["Horizontal scaling", "Vertical scaling", "Auto-scaling", "Resource optimization"];
+  },;
   {
     title: "Security",
     description: "Enterprise-grade security with compliance and monitoring",
     icon: Lock,
-    examples["Multi-layer security", "Compliance frameworks", "Threat detection", "Access controls"]
-  },
+    examples["Multi-layer security", "Compliance frameworks", "Threat detection", "Access controls"];
+  },;
   {
     title: "Performance",
     description: "Optimized infrastructure for maximum performance and efficiency",
     icon: Zap,
-    examples["Performance tuning", "Resource optimization", "Monitoring", "Proactive maintenance"]
+    examples["Performance tuning", "Resource optimization", "Monitoring", "Proactive maintenance"];
   }
 ];
 
@@ -809,10 +809,10 @@ export default function Infrastructure() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Infrastructure Benefits */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -896,14 +896,14 @@ export default function Infrastructure() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Infrastructure Technologies */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -988,14 +988,14 @@ export default function Infrastructure() {
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1077,14 +1077,14 @@ export default function Infrastructure() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1218,7 +1218,7 @@ export default function Infrastructure() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1317,14 +1317,14 @@ export default function Infrastructure() {
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;
         <div className="container-responsive">
           <motion.div
             initial = {

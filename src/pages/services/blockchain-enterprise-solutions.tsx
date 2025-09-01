@@ -51,7 +51,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
         </section>
 
         {/* Features Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -109,7 +109,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -180,7 +180,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
         </section>
 
         {/* Technology Stack Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -236,7 +236,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
         </section>
 
         {/* DeFi Solutions Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -290,7 +290,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
         </section>
 
         {/* Implementation Process Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -337,7 +337,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-yellow-500/10 to-orange-600/10">
+        <section className="py-20 bg-gradient-to-r from-yellow-500/10 to-orange-600/10">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business with Blockchain?

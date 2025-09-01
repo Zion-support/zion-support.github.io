@@ -26,14 +26,14 @@ export default function CybersecuritySuite() {
             price: "$199",
             period: "/month",
             description: "Perfect for small businesses and startups",
-            features[
+            features[;
                 "Basic threat monitoring",
                 "Vulnerability scanning (monthly)",
                 "Security awareness training",
                 "Basic incident response",
                 "Email support",
                 "Security dashboard"
-            ],
+            ],;
             popular: false
         },
         {
@@ -41,7 +41,7 @@ export default function CybersecuritySuite() {
             price: "$499",
             period: "/month",
             description: "Ideal for growing businesses",
-            features[
+            features[;
                 "Advanced threat monitoring",
                 "Real-time vulnerability scanning",
                 "Penetration testing (quarterly)",
@@ -50,7 +50,7 @@ export default function CybersecuritySuite() {
                 "Advanced analytics",
                 "Compliance reporting",
                 "Security team training"
-            ],
+            ],;
             popular: true
         },
         {
@@ -58,7 +58,7 @@ export default function CybersecuritySuite() {
             price: "$1,299",
             period: "/month",
             description: "For large organizations with advanced security needs",
-            features[
+            features[;
                 "Full-spectrum threat monitoring",
                 "Continuous vulnerability assessment",
                 "Advanced penetration testing",
@@ -69,7 +69,7 @@ export default function CybersecuritySuite() {
                 "Advanced compliance frameworks",
                 "Custom security training",
                 "API access & integrations"
-            ],
+            ],;
             popular: false
         }
     ];

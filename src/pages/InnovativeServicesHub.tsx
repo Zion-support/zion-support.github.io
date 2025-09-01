@@ -43,7 +43,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       icon: Rocket,
       color: 'from-blue-600 to-purple-600',
       route: '/ultimate-services-2025',
-      features['AI-Powered Solutions', 'Quantum Computing', 'Blockchain Innovation', 'Edge Computing'],
+      features['AI-Powered Solutions', 'Quantum Computing', 'Blockchain Innovation', 'Edge Computing'],;
       stats: { services: 10, avgROI: '500%', innovation: 'Revolutionary' }
     },
     {
@@ -53,7 +53,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       route: '/advanced-services-2026',
-      features['Brain-Computer Interfaces', 'Space Mining', 'Synthetic Biology', 'Fusion Energy'],
+      features['Brain-Computer Interfaces', 'Space Mining', 'Synthetic Biology', 'Fusion Energy'],;
       stats: { services: 10, avgROI: '1000%', innovation: 'Futuristic' }
     },
     {
@@ -63,7 +63,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       icon: Server,
       color: 'from-green-600 to-teal-600',
       route: '/services',
-      features['Cloud Services', 'Cybersecurity', 'IT Infrastructure', 'Digital Transformation'],
+      features['Cloud Services', 'Cybersecurity', 'IT Infrastructure', 'Digital Transformation'],;
       stats: { services: 15, avgROI: '300%', innovation: 'Enterprise' }
     },
     {
@@ -512,7 +512,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
         className="bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-pink-900/20 border-t border-slate-700/50"
         initial = {
   { opacity: 0,
-  y: 50 
+  y: 50 ;
 
 
 
@@ -522,7 +522,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 }}
         animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -532,7 +532,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 }}
         transition = {
   { duration: 0.8,
-  delay: 1.6 
+  delay: 1.6 ;
 
 
 

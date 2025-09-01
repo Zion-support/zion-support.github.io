@@ -9,28 +9,28 @@ const GetStarted = () => {
             description: "Transform your operations with intelligent automation",
             icon: Brain,
             color: "from-violet-500 to-purple-600",
-            features["AI Legal Research", "Financial Risk Management", "Healthcare Diagnostics", "Supply Chain Optimization"]
-        },
+            features["AI Legal Research", "Financial Risk Management", "Healthcare Diagnostics", "Supply Chain Optimization"];
+        },;
         {
             title: "Quantum Technology",
             description: "Leverage next-generation computing power",
             icon: Zap,
             color: "from-blue-500 to-indigo-600",
-            features["Edge Computing", "Neuromorphic Infrastructure", "Holographic Data Centers", "Quantum Internet"]
-        },
+            features["Edge Computing", "Neuromorphic Infrastructure", "Holographic Data Centers", "Quantum Internet"];
+        },;
         {
             title: "Cybersecurity",
             description: "Protect your business with advanced security",
             icon: Shield,
             color: "from-red-500 to-pink-600",
-            features["Zero Trust Architecture", "Threat Intelligence", "Compliance Automation", "Penetration Testing"]
-        },
+            features["Zero Trust Architecture", "Threat Intelligence", "Compliance Automation", "Penetration Testing"];
+        },;
         {
             title: "IT Infrastructure",
             description: "Modernize your technology foundation",
             icon: Zap,
             color: "from-green-500 to-teal-600",
-            features["Cloud Migration", "DevOps Automation", "Edge Computing", "Data Center Optimization"]
+            features["Cloud Migration", "DevOps Automation", "Edge Computing", "Data Center Optimization"];
         }
     ];
     const benefits = [

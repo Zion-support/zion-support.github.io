@@ -219,25 +219,25 @@ const contentBenefits = [
     title: "Increased Productivity",
     description: "Streamlined workflows and automated processes boost content creation efficiency",
     icon: Zap,
-    examples["Faster content creation", "Automated workflows", "Collaboration tools", "Template libraries"]
-  },
+    examples["Faster content creation", "Automated workflows", "Collaboration tools", "Template libraries"];
+  },;
   {
     title: "Better Quality",
     description: "Professional tools and AI assistance improve content quality and consistency",
     icon: Award,
-    examples["Professional templates", "AI assistance", "Quality checks", "Brand consistency"]
-  },
+    examples["Professional templates", "AI assistance", "Quality checks", "Brand consistency"];
+  },;
   {
     title: "Multi-channel Reach",
     description: "Distribute content across multiple platforms and channels simultaneously",
     icon: Globe,
-    examples["Social media", "Website", "Email marketing", "Mobile apps"]
-  },
+    examples["Social media", "Website", "Email marketing", "Mobile apps"];
+  },;
   {
     title: "Data-driven Insights",
     description: "Analytics and performance tracking optimize content strategy",
     icon: BarChart3,
-    examples["Performance metrics", "Audience insights", "A/B testing", "ROI tracking"]
+    examples["Performance metrics", "Audience insights", "A/B testing", "ROI tracking"];
   }
 ];
 
@@ -348,10 +348,10 @@ export default function ContentCreation() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Content Creation Benefits */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -435,14 +435,14 @@ export default function ContentCreation() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Content Technologies */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -527,14 +527,14 @@ export default function ContentCreation() {
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -616,14 +616,14 @@ export default function ContentCreation() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -757,7 +757,7 @@ export default function ContentCreation() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -856,14 +856,14 @@ export default function ContentCreation() {
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;
         <div className="container-responsive">
           <motion.div
             initial = {

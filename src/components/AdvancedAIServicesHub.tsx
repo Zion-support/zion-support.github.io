@@ -124,9 +124,9 @@ const AdvancedAIServicesHub: React.FC = () => {;
     switch (sortBy) {;
       case 'name':;
         return a.name.localeCompare(b.name);
-      case 'price':
+      case 'price':;
         return a.pricing.starter - b.pricing.starter;
-      case 'popularity':
+      case 'popularity':;
         return b.status === 'active' ? 1 : -1;
       default:
         return 0;

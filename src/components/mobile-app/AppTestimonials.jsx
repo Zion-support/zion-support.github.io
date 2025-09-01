@@ -84,7 +84,7 @@ import { Star, Quote export const AppTestimonials = () => {
                   {testimonial.content}
                 </p>
               </div>
-            </div>
+            </div>;
           ))}
         </div>
 
@@ -102,5 +102,5 @@ import { Star, Quote export const AppTestimonials = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section>;
   )};

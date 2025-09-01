@@ -29,7 +29,7 @@ const NotFound = () => {
 }} transition={{ duration: 0.5 }}>
         {/* 404 Icon */}
         <motion.div className="mb-8" animate = {
-  { scale[1, 1.1,
+  { scale[1, 1.1,;
   1] 
 
 }} transition = {

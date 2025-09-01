@@ -42,7 +42,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     price: 15000,
     currency: "$",
     pricingModel: "project",
-    features[
+    features[;
       "Identity verification and authentication",
       "Micro-segmentation and network isolation",
       "Continuous monitoring and threat detection",
@@ -53,29 +53,29 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       "Compliance reporting and auditing",
       "Integration with existing security tools",
       "24/7 security operations center"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Reduce security breaches by 80%",
       "Improve compliance posture",
       "Enhanced network visibility",
       "Simplified security management",
       "Scalable security architecture"
-    ],
-    useCases[
+    ],;
+    useCases[;
       "Enterprise network security",
       "Cloud infrastructure protection",
       "Remote workforce security",
       "Compliance requirements",
       "Critical infrastructure protection"
-    ],
-    targetAudience[
+    ],;
+    targetAudience[;
       "Large enterprises",
       "Financial institutions",
       "Healthcare organizations",
       "Government agencies",
       "Technology companies"
-    ],
-    tags["Zero Trust", "Cybersecurity", "Network Security", "Compliance", "Enterprise"],
+    ],;
+    tags["Zero Trust", "Cybersecurity", "Network Security", "Compliance", "Enterprise"],;
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$15,000 - $50,000/project",
@@ -87,13 +87,13 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["Cisco", "Palo Alto", "Fortinet", "VMware", "Microsoft"],
-      integrations["Active Directory", "SIEM systems", "Firewalls", "VPN solutions", "Cloud platforms"],
+      technology["Cisco", "Palo Alto", "Fortinet", "VMware", "Microsoft"],;
+      integrations["Active Directory", "SIEM systems", "Firewalls", "VPN solutions", "Cloud platforms"],;
       apiEndpoints: 100,
       uptime: "99.9%",
-      security["SOC 2", "ISO 27001", "NIST framework", "Zero trust principles"]
-    },
-    competitors["Cisco", "Palo Alto Networks", "Fortinet", "VMware"],
+      security["SOC 2", "ISO 27001", "NIST framework", "Zero trust principles"];
+    },;
+    competitors["Cisco", "Palo Alto Networks", "Fortinet", "VMware"],;
     marketSize: "$51.6 billion by 2025"
   },
 
@@ -107,7 +107,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     price: 25000,
     currency: "$",
     pricingModel: "project",
-    features[
+    features[;
       "Private 5G network deployment",
       "Ultra-low latency connectivity",
       "Massive IoT device support",
@@ -118,29 +118,29 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       "Security and encryption",
       "Integration with existing infrastructure",
       "24/7 network support"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "10x faster data transfer",
       "Ultra-low latency for real-time applications",
       "Massive IoT device connectivity",
       "Enhanced network reliability",
       "Future-proof infrastructure"
-    ],
-    useCases[
+    ],;
+    useCases[;
       "Manufacturing automation",
       "Smart city infrastructure",
       "Healthcare IoT devices",
       "Autonomous vehicles",
       "Industrial automation"
-    ],
-    targetAudience[
+    ],;
+    targetAudience[;
       "Manufacturing companies",
       "Smart city initiatives",
       "Healthcare organizations",
       "Transportation companies",
       "Industrial facilities"
-    ],
-    tags["5G", "Network Infrastructure", "IoT", "Edge Computing", "Enterprise"],
+    ],;
+    tags["5G", "Network Infrastructure", "IoT", "Edge Computing", "Enterprise"],;
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$25,000 - $100,000/project",
@@ -152,13 +152,13 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["5G Core", "RAN equipment", "Edge computing", "Network slicing", "IoT platforms"],
-      integrations["Existing network infrastructure", "Cloud platforms", "IoT devices", "Enterprise applications"],
+      technology["5G Core", "RAN equipment", "Edge computing", "Network slicing", "IoT platforms"],;
+      integrations["Existing network infrastructure", "Cloud platforms", "IoT devices", "Enterprise applications"],;
       apiEndpoints: 200,
       uptime: "99.9%",
-      security["5G security standards", "Encryption", "Authentication", "Network isolation"]
-    },
-    competitors["Ericsson", "Nokia", "Huawei", "Cisco", "Verizon"],
+      security["5G security standards", "Encryption", "Authentication", "Network isolation"];
+    },;
+    competitors["Ericsson", "Nokia", "Huawei", "Cisco", "Verizon"],;
     marketSize: "$31.2 billion by 2025"
   },
 
@@ -172,7 +172,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     price: 8000,
     currency: "$",
     pricingModel: "project",
-    features[
+    features[;
       "Microservices architecture design",
       "Container orchestration with Kubernetes",
       "CI/CD pipeline implementation",
@@ -183,29 +183,29 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       "Security and compliance",
       "Multi-cloud deployment",
       "Performance optimization"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Faster time to market",
       "Improved scalability and reliability",
       "Reduced infrastructure costs",
       "Enhanced developer productivity",
       "Better user experience"
-    ],
-    useCases[
+    ],;
+    useCases[;
       "Web application development",
       "Mobile app backends",
       "API development",
       "E-commerce platforms",
       "SaaS applications"
-    ],
-    targetAudience[
+    ],;
+    targetAudience[;
       "Startups and scale-ups",
       "Digital transformation initiatives",
       "E-commerce businesses",
       "SaaS companies",
       "Enterprise IT departments"
-    ],
-    tags["Cloud-Native", "Microservices", "Kubernetes", "DevOps", "API Development"],
+    ],;
+    tags["Cloud-Native", "Microservices", "Kubernetes", "DevOps", "API Development"],;
     estimatedDelivery: "6-10 weeks",
     supportLevel: "premium",
     marketPrice: "$8,000 - $25,000/project",
@@ -217,13 +217,13 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["Kubernetes", "Docker", "React", "Node.js", "PostgreSQL"],
-      integrations["AWS", "Azure", "GCP", "GitHub", "CI/CD tools"],
+      technology["Kubernetes", "Docker", "React", "Node.js", "PostgreSQL"],;
+      integrations["AWS", "Azure", "GCP", "GitHub", "CI/CD tools"],;
       apiEndpoints: 150,
       uptime: "99.9%",
-      security["OWASP compliance", "Data encryption", "Access controls", "Security scanning"]
-    },
-    competitors["Thoughtworks", "Slalom", "Accenture", "Deloitte Digital"],
+      security["OWASP compliance", "Data encryption", "Access controls", "Security scanning"];
+    },;
+    competitors["Thoughtworks", "Slalom", "Accenture", "Deloitte Digital"],;
     marketSize: "$22.5 billion by 2025"
   },
 
@@ -237,7 +237,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     price: 35000,
     currency: "$",
     pricingModel: "project",
-    features[
+    features[;
       "Infrastructure assessment and planning",
       "Virtualization and consolidation",
       "Storage modernization",
@@ -248,29 +248,29 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       "Security and compliance",
       "Monitoring and management tools",
       "Disaster recovery planning"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Reduce operational costs by 30-40%",
       "Improve energy efficiency",
       "Enhanced performance and reliability",
       "Simplified management",
       "Better scalability"
-    ],
-    useCases[
+    ],;
+    useCases[;
       "Legacy infrastructure upgrades",
       "Data center consolidation",
       "Cloud migration preparation",
       "Performance optimization",
       "Compliance requirements"
-    ],
-    targetAudience[
+    ],;
+    targetAudience[;
       "Large enterprises",
       "Data center operators",
       "Financial institutions",
       "Healthcare organizations",
       "Government agencies"
-    ],
-    tags["Data Center", "Infrastructure", "Virtualization", "Cloud", "Automation"],
+    ],;
+    tags["Data Center", "Infrastructure", "Virtualization", "Cloud", "Automation"],;
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$35,000 - $150,000/project",
@@ -282,13 +282,13 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["VMware", "Hyper-V", "Storage solutions", "Network equipment", "Automation tools"],
-      integrations["Existing infrastructure", "Cloud platforms", "Management tools", "Monitoring systems"],
+      technology["VMware", "Hyper-V", "Storage solutions", "Network equipment", "Automation tools"],;
+      integrations["Existing infrastructure", "Cloud platforms", "Management tools", "Monitoring systems"],;
       apiEndpoints: 100,
       uptime: "99.9%",
-      security["Physical security", "Network security", "Data protection", "Access controls"]
-    },
-    competitors["Dell Technologies", "HPE", "Cisco", "IBM", "Accenture"],
+      security["Physical security", "Network security", "Data protection", "Access controls"];
+    },;
+    competitors["Dell Technologies", "HPE", "Cisco", "IBM", "Accenture"],;
     marketSize: "$59.3 billion by 2025"
   },
 
@@ -302,7 +302,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     price: 12000,
     currency: "$",
     pricingModel: "project",
-    features[
+    features[;
       "Edge device management",
       "Local data processing",
       "Real-time analytics",
@@ -313,29 +313,29 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       "Integration with cloud platforms",
       "Monitoring and diagnostics",
       "Custom application development"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Reduce latency by 90%",
       "Lower bandwidth costs",
       "Improved reliability",
       "Real-time decision making",
       "Enhanced privacy and security"
-    ],
-    useCases[
+    ],;
+    useCases[;
       "Industrial IoT applications",
       "Smart city infrastructure",
       "Healthcare monitoring",
       "Autonomous systems",
       "Predictive maintenance"
-    ],
-    targetAudience[
+    ],;
+    targetAudience[;
       "Manufacturing companies",
       "Smart city initiatives",
       "Healthcare organizations",
       "Transportation companies",
       "Energy companies"
-    ],
-    tags["IoT", "Edge Computing", "Real-time Analytics", "AI/ML", "Industrial"],
+    ],;
+    tags["IoT", "Edge Computing", "Real-time Analytics", "AI/ML", "Industrial"],;
     estimatedDelivery: "10-14 weeks",
     supportLevel: "premium",
     marketPrice: "$12,000 - $40,000/project",
@@ -347,13 +347,13 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology["Edge computing platforms", "IoT protocols", "AI/ML frameworks", "Real-time databases", "Security protocols"],
-      integrations["IoT devices", "Cloud platforms", "Enterprise systems", "Analytics tools"],
+      technology["Edge computing platforms", "IoT protocols", "AI/ML frameworks", "Real-time databases", "Security protocols"],;
+      integrations["IoT devices", "Cloud platforms", "Enterprise systems", "Analytics tools"],;
       apiEndpoints: 300,
       uptime: "99.9%",
-      security["Device authentication", "Data encryption", "Secure communication", "Access controls"]
-    },
-    competitors["AWS IoT Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "IBM Edge Application Manager"],
+      security["Device authentication", "Data encryption", "Secure communication", "Access controls"];
+    },;
+    competitors["AWS IoT Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "IBM Edge Application Manager"],;
     marketSize: "$15.7 billion by 2025"
 
 ];}}

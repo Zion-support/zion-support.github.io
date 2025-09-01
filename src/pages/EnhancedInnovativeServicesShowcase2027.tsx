@@ -110,13 +110,13 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
     switch (sortBy) {;
       case 'price':;
         return a.price - b.price;
-      case 'innovation':
+      case 'innovation':;
         const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 };
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
-      case 'roi':
+      case 'roi':;
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
-      default:
+      default:;
         return 0}
   });
 
@@ -294,13 +294,13 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 <option value="price">Sort by Price</option>
                 <option value="innovation">Sort by Innovation</option>
               </select>
-            </div>
+            </div>;
           </div>
         </div>
       </div>
-            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8";
           >
-            {sortedServices.map((service)  => (
+            {sortedServices.map((service)  => (;
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -375,7 +375,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                   </div>
 
       {/* Services Grid */}
-      <div id="services-grid" className="container mx-auto px-4 py-8">
+      <div id="services-grid" className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sortedServices.map((service, index) => (
             <motion.div
@@ -467,10 +467,10 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
             </motion.div>
           ))}
         </div>
-      </div>
+      </div>;
 
       {/* Service Detail Modal */}
-      {selectedService && (
+      {selectedService && (;
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <motion.div
             initial = {

@@ -49,9 +49,9 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
       switch (sortBy) {;
         case 'price':;
           return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
-        case 'category':
+        case 'category':;
           return a.category.localeCompare(b.category);
-        default:
+        default:;
           return a.title.localeCompare(b.title);
       }
     });
@@ -578,13 +578,13 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;
               >
                 Clear Filters
               </button>
-            </motion.div>
+            </motion.div>;
           )}
         </div>
-      </section>
+      </section>;
 
       {/* Contact CTA Section */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-20">
+      <section className="px-4 sm:px-6 lg:px-8 pb-20">;
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

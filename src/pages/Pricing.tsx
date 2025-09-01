@@ -20,8 +20,8 @@ import {
 } from 'lucide-react';
 
       popular: false,
-      icon: Rocket,
-      color: 'from-orange-500 to-red-500'
+      icon: Rocket,;
+      color: 'from-orange-500 to-red-500';
     }
   ];
 

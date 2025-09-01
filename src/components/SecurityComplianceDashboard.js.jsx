@@ -43,8 +43,8 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             category: 'custom',
             description: 'Custom compliance requirement',
             status: 'pending_review',
-            requirements['Requirement 1', 'Requirement 2'],
-  violations[]
+            requirements['Requirement 1', 'Requirement 2'],;
+  violations[];
         
 
 };

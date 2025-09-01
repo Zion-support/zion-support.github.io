@@ -212,6 +212,6 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
             </div>
           </div>
         </div>
-      </div>
+      </div>;
     </section>
   )};

@@ -54,13 +54,13 @@ const AICodeReviewAssistant = () => {
             price: "$199",
             period: "/month",
             description: "Perfect for small development teams",
-            features[
+            features[;
                 "Up to 10 developers",
                 "Basic security scanning",
                 "GitHub integration",
                 "Standard reporting",
                 "Email support"
-            ],
+            ],;
             popular: false
         },
         {
@@ -68,14 +68,14 @@ const AICodeReviewAssistant = () => {
             price: "$399",
             period: "/month",
             description: "Ideal for growing development teams",
-            features[
+            features[;
                 "Up to 25 developers",
                 "Advanced security scanning",
                 "Multi-repo support",
                 "Custom rule sets",
                 "Priority support",
                 "Team analytics"
-            ],
+            ],;
             popular: true
         },
         {
@@ -83,14 +83,14 @@ const AICodeReviewAssistant = () => {
             price: "Custom",
             period: "",
             description: "For large organizations with complex needs",
-            features[
+            features[;
                 "Unlimited developers",
                 "Custom integrations",
                 "Advanced compliance",
                 "Dedicated support",
                 "Custom training",
                 "SLA guarantees"
-            ],
+            ],;
             popular: false
         }
     ];

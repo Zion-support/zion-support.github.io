@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, Mic, MicOff, Send, Bot, User, Sparkles, X, Minimize2, Maximize2 const mockAIResponses = [
+import { MessageCircle, Mic, MicOff, Send, Bot, User, Sparkles, X, Minimize2, Maximize2 const mockAIResponses = [;
     "I'd be happy to help you with that! Let me provide you with some information about our AI development services.",
     "That's a great question! Our cloud infrastructure solutions are designed to scale with your business needs.",
     "Based on your requirements, I'd recommend starting with our cybersecurity assessment package.",

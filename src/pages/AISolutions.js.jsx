@@ -7,42 +7,42 @@ const AISolutions = () => {
             icon: Brain,
             title: "AI Autonomous Systems",
             description: "Self-learning AI systems that operate independently and continuously improve performance",
-            features["Machine Learning", "Neural Networks", "Predictive Analytics", "Automated Decision Making"],
+            features["Machine Learning", "Neural Networks", "Predictive Analytics", "Automated Decision Making"],;
             path: "/ai-autonomous-systems"
         },
         {
             icon: Cpu,
             title: "AI Research Assistant",
             description: "Intelligent research tools that accelerate discovery and analysis across all domains",
-            features["Data Mining", "Pattern Recognition", "Literature Review", "Hypothesis Generation"],
+            features["Data Mining", "Pattern Recognition", "Literature Review", "Hypothesis Generation"],;
             path: "/ai-autonomous-research-assistant"
         },
         {
             icon: Shield,
             title: "AI-Powered Cybersecurity",
             description: "Advanced threat detection and prevention using artificial intelligence",
-            features["Threat Intelligence", "Behavioral Analysis", "Real-time Monitoring", "Automated Response"],
+            features["Threat Intelligence", "Behavioral Analysis", "Real-time Monitoring", "Automated Response"],;
             path: "/ai-powered-enterprise-security"
         },
         {
             icon: Cloud,
             title: "AI Business Intelligence",
             description: "Comprehensive business analytics and insights powered by AI",
-            features["Data Visualization", "Predictive Modeling", "Performance Metrics", "Strategic Planning"],
+            features["Data Visualization", "Predictive Modeling", "Performance Metrics", "Strategic Planning"],;
             path: "/ai-business-intelligence"
         },
         {
             icon: Zap,
             title: "AI Content Generation",
             description: "Automated content creation for marketing, documentation, and communication",
-            features["Text Generation", "Image Creation", "Video Production", "Multilingual Support"],
+            features["Text Generation", "Image Creation", "Video Production", "Multilingual Support"],;
             path: "/ai-content-generator"
         },
         {
             icon: Target,
             title: "AI Sales & Marketing",
             description: "Intelligent automation for sales processes and marketing campaigns",
-            features["Lead Scoring", "Customer Segmentation", "Campaign Optimization", "ROI Analysis"],
+            features["Lead Scoring", "Customer Segmentation", "Campaign Optimization", "ROI Analysis"],;
             path: "/ai-agentic-sales-outreach"
         }
     ];

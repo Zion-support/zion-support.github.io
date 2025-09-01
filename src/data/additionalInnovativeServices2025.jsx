@@ -70,7 +70,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         price: 4500,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features[;
             "Medical image analysis (X-rays, MRIs, CT scans)",
             "Symptom analysis and diagnosis",
             "Treatment recommendation engine",
@@ -79,29 +79,29 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Medical literature analysis",
             "Drug interaction checking",
             "Telemedicine integration"
-        ],
-        benefits[
+        ],;
+        benefits[;
             "Improve diagnostic accuracy by 30-40%",
             "Reduce diagnosis time by 60%",
             "Lower healthcare costs",
             "Better patient outcomes",
             "24/7 diagnostic support"
-        ],
-        useCases[
+        ],;
+        useCases[;
             "Hospitals and clinics",
             "Radiology departments",
             "Primary care physicians",
             "Emergency rooms",
             "Telemedicine platforms"
-        ],
-        targetAudience[
+        ],;
+        targetAudience[;
             "Healthcare providers",
             "Hospitals and clinics",
             "Medical imaging centers",
             "Telemedicine companies",
             "Health insurance companies"
-        ],
-        tags["AI", "Healthcare", "Medical Diagnostics", "Medical Imaging", "Telemedicine"],
+        ],;
+        tags["AI", "Healthcare", "Medical Diagnostics", "Medical Imaging", "Telemedicine"],;
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$4,500 - $15,000/month",
@@ -110,17 +110,17 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
-        compliance["HIPAA", "FDA", "SOC 2", "GDPR"],
-        integrations["Epic", "Cerner", "Athenahealth", "Zoom", "Doximity"],
+        technology["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],;
+        compliance["HIPAA", "FDA", "SOC 2", "GDPR"],;
+        integrations["Epic", "Cerner", "Athenahealth", "Zoom", "Doximity"],;
         apiAccess: true,
         mobileApp: true,
         whiteLabel: true,
         customBranding: true,
         dataRetention: "7 years",
         uptime: "99.99%",
-        securityFeatures["HIPAA compliance", "End-to-end encryption", "Multi-factor authentication", "Audit logging"]
-    },
+        securityFeatures["HIPAA compliance", "End-to-end encryption", "Multi-factor authentication", "Audit logging"];
+    },;
     // AI-Powered Legal Services
     {
         id: "ai-legal-research-assistant",
@@ -131,7 +131,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         price: 1800,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features[;
             "AI-powered case law analysis",
             "Statute and regulation research",
             "Legal document analysis",
@@ -140,29 +140,29 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Legal writing assistance",
             "Contract analysis",
             "Compliance monitoring"
-        ],
-        benefits[
+        ],;
+        benefits[;
             "Reduce research time by 70%",
             "Improve case preparation",
             "Better legal outcomes",
             "Cost-effective research",
             "24/7 availability"
-        ],
-        useCases[
+        ],;
+        useCases[;
             "Law firms",
             "Corporate legal departments",
             "Government agencies",
             "Legal researchers",
             "Law students"
-        ],
-        targetAudience[
+        ],;
+        targetAudience[;
             "Attorneys and lawyers",
             "Legal researchers",
             "Law firms",
             "Corporate legal departments",
             "Government legal offices"
-        ],
-        tags["AI", "Legal Services", "Legal Research", "Case Law", "Document Analysis"],
+        ],;
+        tags["AI", "Legal Services", "Legal Research", "Case Law", "Document Analysis"],;
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$1,800 - $5,000/month",
@@ -171,17 +171,17 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Python", "NLP", "React", "Node.js", "PostgreSQL", "Elasticsearch"],
-        compliance["GDPR", "SOC 2", "Legal Ethics"],
-        integrations["Westlaw", "LexisNexis", "Clio", "MyCase", "PracticePanther"],
+        technology["Python", "NLP", "React", "Node.js", "PostgreSQL", "Elasticsearch"],;
+        compliance["GDPR", "SOC 2", "Legal Ethics"],;
+        integrations["Westlaw", "LexisNexis", "Clio", "MyCase", "PracticePanther"],;
         apiAccess: true,
         mobileApp: true,
         whiteLabel: true,
         customBranding: true,
         dataRetention: "10 years",
         uptime: "99.9%",
-        securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
-    },
+        securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"];
+    },;
     // AI-Powered Education Platform
     {
         id: "ai-personalized-learning-platform",
@@ -192,7 +192,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         price: 1200,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features[;
             "Adaptive learning algorithms",
             "Personalized curriculum creation",
             "Progress tracking and analytics",
@@ -201,29 +201,29 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Assessment and testing tools",
             "Collaborative learning features",
             "Parent and teacher dashboards"
-        ],
-        benefits[
+        ],;
+        benefits[;
             "Improve learning outcomes by 40-60%",
             "Reduce learning time by 30%",
             "Personalized education experience",
             "Better student engagement",
             "Data-driven insights"
-        ],
-        useCases[
+        ],;
+        useCases[;
             "K-12 schools",
             "Higher education institutions",
             "Corporate training",
             "Online learning platforms",
             "Tutoring services"
-        ],
-        targetAudience[
+        ],;
+        targetAudience[;
             "Educational institutions",
             "Teachers and educators",
             "Corporate trainers",
             "Online learning companies",
             "Parents and students"
-        ],
-        tags["AI", "Education", "Personalized Learning", "Adaptive Learning", "EdTech"],
+        ],;
+        tags["AI", "Education", "Personalized Learning", "Adaptive Learning", "EdTech"],;
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$1,200 - $4,000/month",
@@ -232,17 +232,17 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-        compliance["FERPA", "COPPA", "GDPR", "SOC 2"],
-        integrations["Canvas", "Blackboard", "Google Classroom", "Microsoft Teams", "Zoom"],
+        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],;
+        compliance["FERPA", "COPPA", "GDPR", "SOC 2"],;
+        integrations["Canvas", "Blackboard", "Google Classroom", "Microsoft Teams", "Zoom"],;
         apiAccess: true,
         mobileApp: true,
         whiteLabel: true,
         customBranding: true,
         dataRetention: "5 years",
         uptime: "99.9%",
-        securityFeatures["FERPA compliance", "End-to-end encryption", "Multi-factor authentication", "Audit logging"]
-    },
+        securityFeatures["FERPA compliance", "End-to-end encryption", "Multi-factor authentication", "Audit logging"];
+    },;
     // AI-Powered Supply Chain Management
     {
         id: "ai-supply-chain-optimization",
@@ -253,7 +253,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         price: 3200,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features[;
             "Demand forecasting and prediction",
             "Inventory optimization algorithms",
             "Route optimization and logistics",
@@ -262,29 +262,29 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Real-time tracking and monitoring",
             "Cost optimization tools",
             "Sustainability metrics"
-        ],
-        benefits[
+        ],;
+        benefits[;
             "Reduce inventory costs by 20-30%",
             "Improve delivery times by 25%",
             "Optimize supply chain efficiency",
             "Reduce waste and environmental impact",
             "Better supplier relationships"
-        ],
-        useCases[
+        ],;
+        useCases[;
             "Manufacturing companies",
             "Retail and e-commerce",
             "Logistics providers",
             "Food and beverage industry",
             "Pharmaceutical companies"
-        ],
-        targetAudience[
+        ],;
+        targetAudience[;
             "Supply chain managers",
             "Operations directors",
             "Logistics coordinators",
             "Procurement managers",
             "Business executives"
-        ],
-        tags["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
+        ],;
+        tags["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],;
         estimatedDelivery: "5-7 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,200 - $10,000/month",
@@ -293,17 +293,17 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-        compliance["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
-        integrations["SAP", "Oracle", "Salesforce", "FedEx", "UPS", "DHL"],
+        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],;
+        compliance["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],;
+        integrations["SAP", "Oracle", "Salesforce", "FedEx", "UPS", "DHL"],;
         apiAccess: true,
         mobileApp: true,
         whiteLabel: true,
         customBranding: true,
         dataRetention: "7 years",
         uptime: "99.99%",
-        securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
-    },
+        securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"];
+    },;
     // AI-Powered Real Estate Platform
     {
         id: "ai-real-estate-analytics-platform",
@@ -314,7 +314,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         price: 1500,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features[;
             "Property value prediction",
             "Market trend analysis",
             "Investment opportunity scoring",
@@ -323,29 +323,29 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Property comparison tools",
             "Market forecasting",
             "Investment portfolio management"
-        ],
-        benefits[
+        ],;
+        benefits[;
             "Improve investment returns by 20-35%",
             "Reduce market research time by 70%",
             "Better investment decisions",
             "Market timing optimization",
             "Risk assessment and mitigation"
-        ],
-        useCases[
+        ],;
+        useCases[;
             "Real estate investors",
             "Property managers",
             "Real estate agents",
             "Property developers",
             "Financial institutions"
-        ],
-        targetAudience[
+        ],;
+        targetAudience[;
             "Real estate investors",
             "Property managers",
             "Real estate agents",
             "Property developers",
             "Mortgage lenders"
-        ],
-        tags["AI", "Real Estate", "Analytics", "Investment", "Market Analysis"],
+        ],;
+        tags["AI", "Real Estate", "Analytics", "Investment", "Market Analysis"],;
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$1,500 - $5,000/month",
@@ -354,17 +354,17 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-        compliance["GDPR", "SOC 2", "Real Estate Regulations"],
-        integrations["Zillow", "Redfin", "Realtor.com", "MLS", "QuickBooks"],
+        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],;
+        compliance["GDPR", "SOC 2", "Real Estate Regulations"],;
+        integrations["Zillow", "Redfin", "Realtor.com", "MLS", "QuickBooks"],;
         apiAccess: true,
         mobileApp: true,
         whiteLabel: true,
         customBranding: true,
         dataRetention: "10 years",
         uptime: "99.9%",
-        securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
-    },
+        securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"];
+    },;
     // AI-Powered Human Resources Platform
     {
         id: "ai-hr-talent-management-platform",
@@ -375,7 +375,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         price: 2200,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features[;
             "AI-powered candidate screening",
             "Skills assessment and matching",
             "Performance evaluation automation",
@@ -384,29 +384,29 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Training recommendation engine",
             "Diversity and inclusion metrics",
             "Predictive turnover analysis"
-        ],
-        benefits[
+        ],;
+        benefits[;
             "Reduce hiring time by 50%",
             "Improve candidate quality by 40%",
             "Better employee retention",
             "Data-driven HR decisions",
             "Automated compliance"
-        ],
-        useCases[
+        ],;
+        useCases[;
             "HR departments",
             "Recruitment agencies",
             "Staffing companies",
             "Corporate training",
             "Employee development"
-        ],
-        targetAudience[
+        ],;
+        targetAudience[;
             "HR professionals",
             "Recruiters",
             "Hiring managers",
             "Business leaders",
             "Talent acquisition teams"
-        ],
-        tags["AI", "Human Resources", "Talent Management", "Recruitment", "Performance Management"],
+        ],;
+        tags["AI", "Human Resources", "Talent Management", "Recruitment", "Performance Management"],;
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$2,200 - $7,000/month",
@@ -415,17 +415,17 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
-        compliance["EEOC", "ADA", "GDPR", "SOC 2"],
-        integrations["Workday", "BambooHR", "Greenhouse", "LinkedIn", "Indeed"],
+        technology["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],;
+        compliance["EEOC", "ADA", "GDPR", "SOC 2"],;
+        integrations["Workday", "BambooHR", "Greenhouse", "LinkedIn", "Indeed"],;
         apiAccess: true,
         mobileApp: true,
         whiteLabel: true,
         customBranding: true,
         dataRetention: "7 years",
         uptime: "99.9%",
-        securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
-    },
+        securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"];
+    },;
     // AI-Powered Marketing Automation
     {
         id: "ai-marketing-automation-suite",
@@ -436,7 +436,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         price: 2800,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features[;
             "AI-powered campaign optimization",
             "Personalized content generation",
             "Customer segmentation automation",
@@ -445,29 +445,29 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "A/B testing automation",
             "ROI optimization",
             "Customer journey mapping"
-        ],
-        benefits[
+        ],;
+        benefits[;
             "Increase marketing ROI by 30-50%",
             "Reduce campaign management time by 60%",
             "Better customer engagement",
             "Personalized marketing experiences",
             "Automated optimization"
-        ],
-        useCases[
+        ],;
+        useCases[;
             "Marketing departments",
             "Digital marketing agencies",
             "E-commerce businesses",
             "B2B companies",
             "SaaS companies"
-        ],
-        targetAudience[
+        ],;
+        targetAudience[;
             "Marketing professionals",
             "Digital marketers",
             "Marketing managers",
             "Business owners",
             "Marketing agencies"
-        ],
-        tags["AI", "Marketing", "Automation", "Personalization", "Analytics"],
+        ],;
+        tags["AI", "Marketing", "Automation", "Personalization", "Analytics"],;
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$2,800 - $8,000/month",
@@ -476,17 +476,17 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-        compliance["GDPR", "CAN-SPAM", "SOC 2", "CCPA"],
-        integrations["HubSpot", "Salesforce", "Mailchimp", "Google Ads", "Facebook Ads"],
+        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],;
+        compliance["GDPR", "CAN-SPAM", "SOC 2", "CCPA"],;
+        integrations["HubSpot", "Salesforce", "Mailchimp", "Google Ads", "Facebook Ads"],;
         apiAccess: true,
         mobileApp: true,
         whiteLabel: true,
         customBranding: true,
         dataRetention: "5 years",
         uptime: "99.9%",
-        securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
-    },
+        securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"];
+    },;
     // AI-Powered Customer Experience Platform
     {
         id: "ai-customer-experience-platform",
@@ -497,7 +497,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         price: 1900,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features[;
             "Customer behavior analysis",
             "Predictive customer needs",
             "Personalized recommendations",
@@ -506,29 +506,29 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Proactive customer service",
             "Customer satisfaction tracking",
             "Loyalty program optimization"
-        ],
-        benefits[
+        ],;
+        benefits[;
             "Increase customer satisfaction by 25-40%",
             "Improve customer retention by 30%",
             "Better customer engagement",
             "Personalized experiences",
             "Proactive service delivery"
-        ],
-        useCases[
+        ],;
+        useCases[;
             "Customer service departments",
             "E-commerce businesses",
             "Retail companies",
             "Service industries",
             "B2B companies"
-        ],
-        targetAudience[
+        ],;
+        targetAudience[;
             "Customer service managers",
             "Customer experience professionals",
             "Business owners",
             "Marketing teams",
             "Product managers"
-        ],
-        tags["AI", "Customer Experience", "Personalization", "Analytics", "Customer Service"],
+        ],;
+        tags["AI", "Customer Experience", "Personalization", "Analytics", "Customer Service"],;
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$1,900 - $6,000/month",
@@ -537,17 +537,17 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
-        compliance["GDPR", "SOC 2", "CCPA"],
-        integrations["Zendesk", "Intercom", "HubSpot", "Salesforce", "Shopify"],
+        technology["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],;
+        compliance["GDPR", "SOC 2", "CCPA"],;
+        integrations["Zendesk", "Intercom", "HubSpot", "Salesforce", "Shopify"],;
         apiAccess: true,
         mobileApp: true,
         whiteLabel: true,
         customBranding: true,
         dataRetention: "5 years",
         uptime: "99.9%",
-        securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
-    },
+        securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"];
+    },;
     // AI-Powered Product Development Platform
     {
         id: "ai-product-development-platform",
@@ -558,7 +558,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         price: 3500,
         currency: "$",
         pricingModel: "monthly",
-        features[
+        features[;
             "AI-powered product design optimization",
             "Market demand prediction",
             "Competitive analysis automation",
@@ -567,29 +567,29 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Supply chain optimization",
             "Cost optimization tools",
             "Launch strategy optimization"
-        ],
-        benefits[
+        ],;
+        benefits[;
             "Reduce development time by 30-40%",
             "Improve product success rate by 50%",
             "Better market fit",
             "Cost-effective development",
             "Data-driven decisions"
-        ],
-        useCases[
+        ],;
+        useCases[;
             "Product development teams",
             "R&D departments",
             "Startups",
             "Manufacturing companies",
             "Technology companies"
-        ],
-        targetAudience[
+        ],;
+        targetAudience[;
             "Product managers",
             "R&D directors",
             "Engineering teams",
             "Business executives",
             "Innovation managers"
-        ],
-        tags["AI", "Product Development", "R&D", "Innovation", "Market Analysis"],
+        ],;
+        tags["AI", "Product Development", "R&D", "Innovation", "Market Analysis"],;
         estimatedDelivery: "5-7 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,500 - $12,000/month",
@@ -598,16 +598,16 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             email: "kleber@ziontechgroup.com",
             website: "https://ziontechgroup.com"
         },
-        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-        compliance["ISO 9001", "GDPR", "SOC 2"],
-        integrations["Jira", "Confluence", "Figma", "SolidWorks", "PLM systems"],
+        technology["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],;
+        compliance["ISO 9001", "GDPR", "SOC 2"],;
+        integrations["Jira", "Confluence", "Figma", "SolidWorks", "PLM systems"],;
         apiAccess: true,
         mobileApp: true,
         whiteLabel: true,
         customBranding: true,
         dataRetention: "10 years",
         uptime: "99.99%",
-        securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
+        securityFeatures["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"];
     }
 ];
 }

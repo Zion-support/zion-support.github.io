@@ -178,14 +178,14 @@ const QuickAccess: React.FC = (): JSX.Element => {
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 }}
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-white mb-4"
       title: "Micro SaaS",
-      description: "Ready-to-Deploy Solutions",
-      icon: Code,
+      description: "Ready-to-Deploy Solutions",;
+      icon: Code,;
       color: "from-zion-purple to-zion-cyan",;
       bgColor: "bg-zion-purple/10",;
       borderColor: "border-zion-purple/20",;
@@ -497,10 +497,10 @@ const QuickAccess: React.FC = (): JSX.Element => {
                 <div className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">
                   {category.name}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
-        </motion.div>
+        </motion.div>;
 
         {/* CTA Section */}
         <motion.div
@@ -509,7 +509,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12"
 
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;
             <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
@@ -535,7 +535,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -545,7 +545,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -555,7 +555,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
 }}
           transition = {
   { duration: 0.8,
-  delay: 0.4 
+  delay: 0.4 ;
 
 
 

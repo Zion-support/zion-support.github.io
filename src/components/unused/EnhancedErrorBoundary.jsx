@@ -188,7 +188,7 @@ class EnhancedErrorBoundary extends Component {
                   </div>
                 )}
               </div>
-            </details>
+            </details>;
           )}
         </motion.div>
       </div>

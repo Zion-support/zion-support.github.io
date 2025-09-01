@@ -28,8 +28,8 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
     };
     const pulseVariants = {
   animate: {
-            scale[1, 1.2, 1],
-            opacity[0.5, 1, 0.5],
+            scale[1, 1.2, 1],;
+            opacity[0.5, 1, 0.5],;
             transition: {
                 duration: 2,
                 repeat: Infinity,

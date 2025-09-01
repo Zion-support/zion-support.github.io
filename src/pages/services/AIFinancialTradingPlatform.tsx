@@ -76,14 +76,14 @@ export default function AIFinancialTradingPlatform(...args[]):  {
       price: "$199",
       period: "/month",
       description: "Perfect for individual traders and beginners",
-      features[
+      features[;
         "AI market analysis (5 strategies)",
         "Basic algorithmic trading",
         "Real-time market data",
         "Portfolio tracking",
         "Basic risk management",
         "Email support"
-      ],
+      ],;
       cta: "Start Free Trial",
       popular: false
     },
@@ -92,7 +92,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
       price: "$599",
       period: "/month",
       description: "Ideal for active traders and professionals",
-      features[
+      features[;
         "AI market analysis (unlimited strategies)",
         "Advanced algorithmic trading",
         "Multi-asset class trading",
@@ -100,7 +100,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
         "Backtesting and optimization",
         "Priority support",
         "API access"
-      ],
+      ],;
       cta: "Start Free Trial",
       popular: true
     },
@@ -109,7 +109,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
       price: "$1,999",
       period: "/month",
       description: "For institutional investors and hedge funds",
-      features[
+      features[;
         "Custom AI model development",
         "High-frequency trading",
         "White-label solutions",
@@ -186,12 +186,12 @@ export default function AIFinancialTradingPlatform(...args[]):  {
                 Watch Demo
               </motion.button>
             </div>
-          </motion.div>
+          </motion.div>;
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -265,14 +265,14 @@ export default function AIFinancialTradingPlatform(...args[]):  {
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -346,14 +346,14 @@ export default function AIFinancialTradingPlatform(...args[]):  {
                   <TrendingUp className="w-10 h-10 text-white" />
                 </div>
                 <p className="text-lg text-white font-medium">{benefit}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -427,14 +427,14 @@ export default function AIFinancialTradingPlatform(...args[]):  {
                   <Target className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{useCase}</h3>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -508,7 +508,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
                     : 'border-gray-700'
                 }`}
 
-                {plan.popular && (
+                {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
@@ -544,7 +544,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
                   }`}
 
                   {plan.cta}
-                </motion.button>
+                </motion.button>;
               </motion.div>
             ))}
           </div>
@@ -552,7 +552,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
@@ -607,7 +607,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
       </section>
 
       {/* Contact Info */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-gray-400 mb-4">
             Need help choosing the right plan? Contact our sales team

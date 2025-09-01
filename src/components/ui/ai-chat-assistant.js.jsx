@@ -16,7 +16,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             status: 'sent',
             metadata: {
                 confidence: 0.95,
-                suggestions['Tell me about your AI services', 'What cloud solutions do you offer?', 'How can I get started?']
+                suggestions['Tell me about your AI services', 'What cloud solutions do you offer?', 'How can I get started?'];
             }
         }
     ]);

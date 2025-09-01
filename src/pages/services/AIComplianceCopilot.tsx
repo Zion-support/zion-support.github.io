@@ -3,7 +3,7 @@ import SEO from '@/components/SEO';
 
 export default function AIComplianceCopilot(...args[]):  {
   return (
-    <div className = "min-h-screen bg-futuristic text-white">
+    <div className = "min-h-screen bg-futuristic text-white">;
       <SEO
         title="AI Compliance Copilot | Zion Tech Group"
         description="Continuously map controls, flag risks, and auto-generate audit evidence for SOC 2, ISO 27001, HIPAA, GDPR."

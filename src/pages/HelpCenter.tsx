@@ -396,7 +396,7 @@ export function HelpCenter() {
                     <span className="text-sm font-medium">{category.articleCount} articles</span>
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
-                </Link>
+                </Link>;
               </motion.div>
             ))}
           </div>
@@ -430,7 +430,7 @@ export function HelpCenter() {
                   <div className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg text-sm font-medium group-hover:from-zion-cyan-dark group-hover:to-zion-purple-dark transition-all duration-300">
                     {option.action}
                   </div>
-                </Link>
+                </Link>;
               </motion.div>
             ))}
           </div>
@@ -477,7 +477,7 @@ export function HelpCenter() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Help Sections */}
           <div className="lg:col-span-2">

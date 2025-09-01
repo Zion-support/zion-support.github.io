@@ -44,13 +44,13 @@ export default function CybersecurityServices() {
             price: "$299",
             period: "/month",
             description: "Essential cybersecurity for small businesses",
-            features[
+            features[;
                 "Security assessment",
                 "Basic monitoring",
                 "Monthly reports",
                 "Email support",
                 "Security training"
-            ],
+            ],;
             popular: false
         },
         {
@@ -58,14 +58,14 @@ export default function CybersecurityServices() {
             price: "$799",
             period: "/month",
             description: "Comprehensive protection for growing businesses",
-            features[
+            features[;
                 "Full security audit",
                 "24/7 monitoring",
                 "Incident response",
                 "Priority support",
                 "Advanced training",
                 "Compliance assistance"
-            ],
+            ],;
             popular: true
         },
         {
@@ -73,14 +73,14 @@ export default function CybersecurityServices() {
             price: "$1,999",
             period: "/month",
             description: "Full-scale cybersecurity for large organizations",
-            features[
+            features[;
                 "Custom security solutions",
                 "Dedicated security team",
                 "Advanced threat hunting",
                 "White-label solutions",
                 "Custom integrations",
                 "Executive reporting"
-            ],
+            ],;
             popular: false
 
     ];

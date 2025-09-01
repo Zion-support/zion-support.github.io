@@ -57,7 +57,7 @@ export default function EnhancedServicesPage(...args[]):  {
   };
 
                 onClick = {
-  () => window.open(CONTACT_INFO.website,
+(): > window.open(CONTACT_INFO.website,;
   '_blank')
 
 

@@ -8,26 +8,26 @@ const serviceCategories = [
         title: "AI Services",
         description: "Cutting-edge artificial intelligence solutions that transform business operations",
         icon: <Zap className="w-8 h-8 text-zion-cyan"/>,
-        services[
+        services[;
             {
                 name: "AI Chatbot Builder Pro",
                 price: "$299",
-                features["No-code platform", "Multi-language support", "Analytics dashboard", "Platform integration"],
-                benefits["24/7 customer support", "Reduced response time", "Scalable automation", "Cost-effective solution"]
-            },
+                features["No-code platform", "Multi-language support", "Analytics dashboard", "Platform integration"],;
+                benefits["24/7 customer support", "Reduced response time", "Scalable automation", "Cost-effective solution"];
+            },;
             {
                 name: "AI Content Generator Suite",
                 price: "$199",
-                features["SEO optimization", "Tone adjustment", "Plagiarism detection", "100+ content pieces/month"],
-                benefits["Faster content creation", "Improved SEO rankings", "Consistent brand voice", "Time savings"]
-            },
+                features["SEO optimization", "Tone adjustment", "Plagiarism detection", "100+ content pieces/month"],;
+                benefits["Faster content creation", "Improved SEO rankings", "Consistent brand voice", "Time savings"];
+            },;
             {
                 name: "AI Image Generator Pro",
                 price: "$399",
-                features["Custom style training", "4K resolution", "Commercial licensing", "Design tool integration"],
-                benefits["Unique visual content", "Brand consistency", "Cost-effective design", "Rapid prototyping"]
+                features["Custom style training", "4K resolution", "Commercial licensing", "Design tool integration"],;
+                benefits["Unique visual content", "Brand consistency", "Cost-effective design", "Rapid prototyping"];
             }
-        ],
+        ],;
         marketPrice: "$150-500",
         deliveryTime: "Immediate",
         link: "/micro-saas-services"
@@ -36,20 +36,20 @@ const serviceCategories = [
         title: "Business Solutions",
         description: "Data-driven insights and analytics to drive business growth and decision-making",
         icon: <BarChart3 className="w-8 h-8 text-zion-purple"/>,
-        services[
+        services[;
             {
                 name: "Business Intelligence Dashboard",
                 price: "$599",
-                features["Real-time analytics", "50+ data sources", "Custom dashboards", "Automated reporting"],
-                benefits["Data-driven decisions", "Performance insights", "Operational efficiency", "Competitive advantage"]
-            },
+                features["Real-time analytics", "50+ data sources", "Custom dashboards", "Automated reporting"],;
+                benefits["Data-driven decisions", "Performance insights", "Operational efficiency", "Competitive advantage"];
+            },;
             {
                 name: "Predictive Analytics Engine",
                 price: "$799",
-                features["Sales forecasting", "Customer behavior analysis", "Risk assessment", "ML models"],
-                benefits["Future planning", "Customer insights", "Risk mitigation", "Revenue optimization"]
+                features["Sales forecasting", "Customer behavior analysis", "Risk assessment", "ML models"],;
+                benefits["Future planning", "Customer insights", "Risk mitigation", "Revenue optimization"];
             }
-        ],
+        ],;
         marketPrice: "$500-1500",
         deliveryTime: "1-3 weeks",
         link: "/micro-saas-services"
@@ -58,20 +58,20 @@ const serviceCategories = [
         title: "Cybersecurity",
         description: "Comprehensive security solutions to protect your digital assets and ensure compliance",
         icon: <Shield className="w-8 h-8 text-zion-red"/>,
-        services[
+        services[;
             {
                 name: "24/7 Cybersecurity Monitoring",
                 price: "$899",
-                features["Threat detection", "SIEM integration", "Compliance reporting", "24/7 SOC support"],
-                benefits["Continuous protection", "Compliance assurance", "Incident response", "Peace of mind"]
-            },
+                features["Threat detection", "SIEM integration", "Compliance reporting", "24/7 SOC support"],;
+                benefits["Continuous protection", "Compliance assurance", "Incident response", "Peace of mind"];
+            },;
             {
                 name: "Penetration Testing Service",
                 price: "$2,499",
-                features["Web app testing", "Network security", "Mobile app testing", "Compliance documentation"],
-                benefits["Vulnerability identification", "Security validation", "Compliance readiness", "Risk assessment"]
+                features["Web app testing", "Network security", "Mobile app testing", "Compliance documentation"],;
+                benefits["Vulnerability identification", "Security validation", "Compliance readiness", "Risk assessment"];
             }
-        ],
+        ],;
         marketPrice: "$800-3000",
         deliveryTime: "Immediate - 2 weeks",
         link: "/micro-saas-services"
@@ -80,20 +80,20 @@ const serviceCategories = [
         title: "Cloud Services",
         description: "Scalable cloud solutions for modern business infrastructure and digital transformation",
         icon: <Cloud className="w-8 h-8 text-zion-blue"/>,
-        services[
+        services[;
             {
                 name: "Cloud Migration Expert",
                 price: "$3,999",
-                features["AWS/Azure/GCP", "Architecture design", "Data migration", "99.9% uptime guarantee"],
-                benefits["Reduced costs", "Improved scalability", "Enhanced security", "Better performance"]
-            },
+                features["AWS/Azure/GCP", "Architecture design", "Data migration", "99.9% uptime guarantee"],;
+                benefits["Reduced costs", "Improved scalability", "Enhanced security", "Better performance"];
+            },;
             {
                 name: "DevOps Automation Platform",
                 price: "$699",
-                features["CI/CD pipelines", "Kubernetes support", "Infrastructure as code", "Monitoring & alerting"],
-                benefits["Faster deployments", "Reduced errors", "Team productivity", "Cost optimization"]
+                features["CI/CD pipelines", "Kubernetes support", "Infrastructure as code", "Monitoring & alerting"],;
+                benefits["Faster deployments", "Reduced errors", "Team productivity", "Cost optimization"];
             }
-        ],
+        ],;
         marketPrice: "$700-5000",
         deliveryTime: "1-4 weeks",
         link: "/micro-saas-services"
@@ -102,20 +102,20 @@ const serviceCategories = [
         title: "Data Services",
         description: "Enterprise-grade data solutions for analytics, warehousing, and business intelligence",
         icon: <Database className="w-8 h-8 text-zion-green"/>,
-        services[
+        services[;
             {
                 name: "Data Warehouse Solution",
                 price: "$1,299",
-                features["ETL pipelines", "Data modeling", "BI integration", "Data governance"],
-                benefits["Centralized data", "Better insights", "Improved reporting", "Data quality"]
-            },
+                features["ETL pipelines", "Data modeling", "BI integration", "Data governance"],;
+                benefits["Centralized data", "Better insights", "Improved reporting", "Data quality"];
+            },;
             {
                 name: "Database Performance Optimization",
                 price: "$899",
-                features["Query optimization", "Indexing strategies", "Performance monitoring", "Capacity planning"],
-                benefits["Faster queries", "Better performance", "Reduced costs", "Improved user experience"]
+                features["Query optimization", "Indexing strategies", "Performance monitoring", "Capacity planning"],;
+                benefits["Faster queries", "Better performance", "Reduced costs", "Improved user experience"];
             }
-        ],
+        ],;
         marketPrice: "$900-2000",
         deliveryTime: "1-3 weeks",
         link: "/micro-saas-services"
@@ -124,26 +124,26 @@ const serviceCategories = [
         title: "Development",
         description: "Custom software development solutions for web, mobile, and enterprise applications",
         icon: <Code className="w-8 h-8 text-zion-orange"/>,
-        services[
+        services[;
             {
                 name: "Progressive Web App Development",
                 price: "$2,999",
-                features["Offline functionality", "Push notifications", "App-like experience", "SEO optimization"],
-                benefits["Better user engagement", "Improved performance", "Cross-platform compatibility", "Enhanced SEO"]
-            },
+                features["Offline functionality", "Push notifications", "App-like experience", "SEO optimization"],;
+                benefits["Better user engagement", "Improved performance", "Cross-platform compatibility", "Enhanced SEO"];
+            },;
             {
                 name: "Cross-Platform Mobile App",
                 price: "$4,999",
-                features["React Native/Flutter", "UI/UX design", "Backend integration", "App store deployment"],
-                benefits["Cost-effective development", "Faster time to market", "Native performance", "Easy maintenance"]
-            },
+                features["React Native/Flutter", "UI/UX design", "Backend integration", "App store deployment"],;
+                benefits["Cost-effective development", "Faster time to market", "Native performance", "Easy maintenance"];
+            },;
             {
                 name: "Custom API Development",
                 price: "$1,999",
-                features["REST/GraphQL APIs", "Documentation", "Testing", "Developer portal"],
-                benefits["System integration", "Scalable architecture", "Developer experience", "API monetization"]
+                features["REST/GraphQL APIs", "Documentation", "Testing", "Developer portal"],;
+                benefits["System integration", "Scalable architecture", "Developer experience", "API monetization"];
             }
-        ],
+        ],;
         marketPrice: "$2000-8000",
         deliveryTime: "3-8 weeks",
         link: "/micro-saas-services"
@@ -152,14 +152,14 @@ const serviceCategories = [
         title: "E-commerce",
         description: "Complete e-commerce solutions for online businesses and digital marketplaces",
         icon: <ShoppingCart className="w-8 h-8 text-zion-pink"/>,
-        services[
+        services[;
             {
                 name: "E-commerce Platform Development",
                 price: "$5,999",
-                features["Payment processing", "Inventory management", "Order fulfillment", "CRM integration"],
-                benefits["Increased sales", "Better customer experience", "Operational efficiency", "Scalable growth"]
+                features["Payment processing", "Inventory management", "Order fulfillment", "CRM integration"],;
+                benefits["Increased sales", "Better customer experience", "Operational efficiency", "Scalable growth"];
             }
-        ],
+        ],;
         marketPrice: "$5000-15000",
         deliveryTime: "8-10 weeks",
         link: "/micro-saas-services"
@@ -168,14 +168,14 @@ const serviceCategories = [
         title: "Marketing",
         description: "AI-powered marketing automation and analytics solutions for business growth",
         icon: <BarChart3 className="w-8 h-8 text-zion-yellow"/>,
-        services[
+        services[;
             {
                 name: "Marketing Automation Platform",
                 price: "$799",
-                features["Email marketing", "Lead scoring", "Campaign management", "AI personalization"],
-                benefits["Increased conversions", "Better lead quality", "Time savings", "ROI improvement"]
+                features["Email marketing", "Lead scoring", "Campaign management", "AI personalization"],;
+                benefits["Increased conversions", "Better lead quality", "Time savings", "ROI improvement"];
             }
-        ],
+        ],;
         marketPrice: "$500-1500",
         deliveryTime: "2-3 weeks",
         link: "/micro-saas-services"
@@ -184,14 +184,14 @@ const serviceCategories = [
         title: "Integration",
         description: "Seamless third-party integrations and API synchronization services",
         icon: <LinkIcon className="w-8 h-8 text-zion-indigo"/>,
-        services[
+        services[;
             {
                 name: "Third-Party Integration Service",
                 price: "$1,499",
-                features["Payment gateways", "CRM systems", "Marketing tools", "Custom webhooks"],
-                benefits["System connectivity", "Data consistency", "Workflow automation", "Reduced manual work"]
+                features["Payment gateways", "CRM systems", "Marketing tools", "Custom webhooks"],;
+                benefits["System connectivity", "Data consistency", "Workflow automation", "Reduced manual work"];
             }
-        ],
+        ],;
         marketPrice: "$1000-3000",
         deliveryTime: "2-3 weeks",
         link: "/micro-saas-services"
@@ -200,20 +200,20 @@ const serviceCategories = [
         title: "Blockchain",
         description: "Next-generation blockchain and Web3 development solutions",
         icon: <Network className="w-8 h-8 text-zion-teal"/>,
-        services[
+        services[;
             {
                 name: "Smart Contract Development",
                 price: "$3,999",
-                features["Ethereum/Polygon/Solana", "Security auditing", "DeFi protocols", "NFT contracts"],
-                benefits["Decentralized solutions", "Transparent transactions", "Automated execution", "Innovation leadership"]
-            },
+                features["Ethereum/Polygon/Solana", "Security auditing", "DeFi protocols", "NFT contracts"],;
+                benefits["Decentralized solutions", "Transparent transactions", "Automated execution", "Innovation leadership"];
+            },;
             {
                 name: "Web3 DApp Development",
                 price: "$5,999",
-                features["Wallet integration", "Blockchain interaction", "Cross-chain compatibility", "User-friendly interfaces"],
-                benefits["Future-proof technology", "User ownership", "Global accessibility", "Reduced intermediaries"]
+                features["Wallet integration", "Blockchain interaction", "Cross-chain compatibility", "User-friendly interfaces"],;
+                benefits["Future-proof technology", "User ownership", "Global accessibility", "Reduced intermediaries"];
             }
-        ],
+        ],;
         marketPrice: "$4000-10000",
         deliveryTime: "4-8 weeks",
         link: "/micro-saas-services"
@@ -222,14 +222,14 @@ const serviceCategories = [
         title: "IoT",
         description: "Internet of Things platform development and hardware prototyping services",
         icon: <Monitor className="w-8 h-8 text-zion-lime"/>,
-        services[
+        services[;
             {
                 name: "IoT Platform Development",
                 price: "$4,999",
-                features["Device management", "Real-time monitoring", "Edge computing", "Cloud integration"],
-                benefits["Connected devices", "Data insights", "Operational efficiency", "Innovation opportunities"]
+                features["Device management", "Real-time monitoring", "Edge computing", "Cloud integration"],;
+                benefits["Connected devices", "Data insights", "Operational efficiency", "Innovation opportunities"];
             }
-        ],
+        ],;
         marketPrice: "$4000-12000",
         deliveryTime: "8-10 weeks",
         link: "/micro-saas-services"
@@ -238,14 +238,14 @@ const serviceCategories = [
         title: "Hardware",
         description: "Rapid prototyping and hardware development services for IoT and embedded systems",
         icon: <Smartphone className="w-8 h-8 text-zion-gray"/>,
-        services[
+        services[;
             {
                 name: "Hardware Prototyping Service",
                 price: "$2,999",
-                features["3D printing", "PCB design", "Component sourcing", "Design validation"],
-                benefits["Faster development", "Cost reduction", "Design validation", "Market testing"]
+                features["3D printing", "PCB design", "Component sourcing", "Design validation"],;
+                benefits["Faster development", "Cost reduction", "Design validation", "Market testing"];
             }
-        ],
+        ],;
         marketPrice: "$2000-8000",
         deliveryTime: "4-6 weeks",
         link: "/micro-saas-services"

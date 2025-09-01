@@ -100,10 +100,10 @@ const AdvancedServicesShowcase2025 = () => {
             title: "Advanced Real Services Showcase 2025 | Zion Tech Group",
             description: "Discover our comprehensive collection of 20+ advanced real micro SAAS, IT, and AI services. Market-ready solutions with proven ROI and competitive pricing.",
             keywords: "advanced services, micro SAAS, AI services, IT solutions, real services, enterprise solutions,
-  Zion Tech Group"
+  Zion Tech Group";
         
 
-}}/>
+}}/>;
 
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

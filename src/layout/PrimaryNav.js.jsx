@@ -56,7 +56,7 @@ export function PrimaryNav() {
             {/* Search form with clamped width */}
             <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
   { width: 'clamp(12rem, 20vw,
-  16rem)' 
+  16rem)' ;
 
 }}>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion = {

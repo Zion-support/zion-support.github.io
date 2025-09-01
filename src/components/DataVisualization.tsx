@@ -45,7 +45,7 @@ interface DataVisualizationProps extends React.PropsWithChildren<{}> {
   showActions?: boolean}
 
 export const DataVisualization: React.FC<DataVisualizationProps> = ({
-  title = "Data Analytics Dashboard",;
+title:  "Data Analytics Dashboard",;
   showMetrics = true,;
   showCharts = true,;
   showActions = true;
@@ -56,12 +56,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
   // Sample data - in a real app, this would come from an API
   const [chartData, setChartData] = useState<any>({
-    labels['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+    labels['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],;
     datasets[{
       label: 'Revenue',
-      data[65, 59, 80, 81, 56, 55],
-      backgroundColor['rgba(34, 221, 210, 0.2)'],
-      borderColor['rgba(34, 221, 210, 1)'],
+      data[65, 59, 80, 81, 56, 55],;
+      backgroundColor['rgba(34, 221, 210, 0.2)'],;
+      borderColor['rgba(34, 221, 210, 1)'],;
       borderWidth: 2
     }]
   });
@@ -108,7 +108,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     // Update chart data with new random values
-    setChartData(prev = > ({;
+setChartData(prev:  > ({;
       ...prev,;
       datasets: [{;
         ...prev.datasets[0],;
@@ -139,7 +139,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
         'rgba(16, 185, 129, 0.8)',
         'rgba(245, 158, 11, 0.8)'
       ],
-      borderColor[
+      borderColor[;
         'rgba(34, 221, 210, 1)',
         'rgba(140, 21, 233, 1)',
         'rgba(239, 68, 68, 1)',

@@ -124,7 +124,7 @@ export function AboutSection() {
 
                 <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
                 <span className="text-zion-slate-light text-sm">{tech}</span>
-              </div>
+              </div>;
             ))}
           </div>
         </div>

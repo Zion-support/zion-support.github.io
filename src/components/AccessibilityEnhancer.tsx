@@ -120,7 +120,7 @@ interface AccessibilityEnhancerProps {
   useEffect(() => {
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
     
-    interactiveElements.forEach(element = > {;
+interactiveElements.forEach(element:  > {;
       const el = element as HTMLElement;
       
       // Add role if missing
@@ -573,7 +573,7 @@ interface AccessibilityEnhancerProps {
               </button>
             </div>
           </motion.div>
-        ) : (
+        ) : (;
           <motion.button
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -589,7 +589,7 @@ interface AccessibilityEnhancerProps {
       </AnimatePresence>
 
 const DEFAULT_SETTINGS: AccessibilitySettings = {
-  fontSize: 16,
+  fontSize: 16,;
   highContrast: false,
   reducedMotion: false,
   screenReader: false,
@@ -713,8 +713,8 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [settings.focusIndicator, updateSetting]);
 
   const tabs = [
-    { id: 'general', label: 'General', icon: Settings },
-    { id: 'visual', label: 'Visual', icon: Eye },
+    { id: 'general', label: 'General', icon: Settings },;
+    { id: 'visual', label: 'Visual', icon: Eye },;
     { id: 'navigation', label: 'Navigation', icon: Keyboard }
   ] as const;
 
@@ -1014,7 +1014,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       </AnimatePresence>
     </>
   );
-};}}}}}}}}}}}}}}}}}}}}
+};
       {/* Notifications */}
       <div className="fixed top-4 right-4 z-50 space-y-2">
         <AnimatePresence>

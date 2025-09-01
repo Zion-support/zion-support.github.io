@@ -196,10 +196,10 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Demo Form Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Form */}
@@ -483,7 +483,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                     disabled={isSubmitting}
                     className="w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
 
-                    {isSubmitting ? (
+                    {isSubmitting ? (;
                       <div className="flex items-center justify-center gap-2">
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                         Scheduling Demo...
@@ -501,7 +501,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
             </div>
 
             {/* Sidebar */}
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1">;
               <motion.div
                 initial = {
   { opacity: 0,
@@ -590,7 +590,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                 </div>
 
                 {/* Demo Benefits */}
-                <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl border border-cyan-400/30 p-6">
+                <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl border border-cyan-400/30 p-6">;
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
                     <Star className="w-5 h-5 text-cyan-400" />
                     Demo Benefits

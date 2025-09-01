@@ -150,7 +150,7 @@ import { Mail,
           disabled={isLoading}
           className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
 
-          {isLoading ? (
+          {isLoading ? (;
             <>
               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
               Sending Code...
@@ -244,7 +244,7 @@ import { Mail,
             disabled={isLoading}
             className="flex-1 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
 
-            {isLoading ? (
+            {isLoading ? (;
               <>
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
                 Verifying...
@@ -256,7 +256,7 @@ import { Mail,
               </>
             )}
           </button>
-        </div>
+        </div>;
 
         <div className="text-center">
           <button
@@ -382,14 +382,14 @@ import { Mail,
               {showConfirmPassword ? 'Hide' : 'Show'}
             </button>
           </div>
-        </div>
+        </div>;
 
         <button
           type="submit"
           disabled={isLoading}
           className="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg shadow-green-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
 
-          {isLoading ? (
+          {isLoading ? (;
             <>
               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
               Resetting Password...
@@ -541,7 +541,7 @@ import { Mail,
 }}
             className="mt-8 space-y-4"
 
-            {securityFeatures.map((feature, index) => (
+            {securityFeatures.map((feature, index) => (;
               <motion.div
                 key={feature.title}
                 initial = {
@@ -583,14 +583,14 @@ import { Mail,
                   <h4 className="text-sm font-medium text-white">{feature.title}</h4>
                   <p className="text-xs text-slate-400">{feature.description}</p>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </motion.div>
         </div>
       </div>
 
       {/* Right Side - Benefits */}
-      <div className="hidden lg:flex flex-1 bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 relative overflow-hidden">
+      <div className="hidden lg:flex flex-1 bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 relative overflow-hidden">;
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
 
         <div className="relative z-10 flex items-center justify-center p-12">
@@ -710,7 +710,7 @@ import { Mail,
 }}
               className="space-y-6 mb-8"
 
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (;
                 <motion.div
                   key={benefit.title}
                   initial = {
@@ -756,7 +756,7 @@ import { Mail,
                       {benefit.description}
                     </p>
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </motion.div>
 

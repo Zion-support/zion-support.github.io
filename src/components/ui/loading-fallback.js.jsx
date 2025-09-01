@@ -48,8 +48,8 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
 }}>
         {[0, 1, 2].map((i) => (<motion.div key={i} className="w-2 h-2 bg-zion-purple rounded-full" animate = {
   {
-                scale[1, 1.2, 1],
-                opacity[0.5, 1,
+                scale[1, 1.2, 1],;
+                opacity[0.5, 1,;
   0.5]
             
 

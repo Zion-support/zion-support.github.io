@@ -124,7 +124,7 @@ export const EnhancedSidebar: React.FC = () => {;
     {
       title: "Main Navigation",
       icon: Home,
-      items[
+      items[;
         { name: "Home", href: "/", icon: Home },
         { name: "Solutions", href: "/solutions", icon: Target },
         { name: "Services", href: "/services", icon: Zap },
@@ -136,11 +136,11 @@ export const EnhancedSidebar: React.FC = () => {;
         { name: "Careers", href: "/careers", icon: Briefcase },
         { name: "Partners", href: "/partners", icon: Handshake }
       ]
-    },
+    },;
     {
       title: "Service Areas",
       icon: Zap,
-      items[
+      items[;
         { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
         { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },
         { name: "Digital Twin Platform", href: "/services/digital-twin", icon: Cpu },
@@ -152,7 +152,7 @@ export const EnhancedSidebar: React.FC = () => {;
         { name: "Website Analytics", href: "/services/website-analytics", icon: Eye },
         { name: "IT Helpdesk", href: "/services/it-helpdesk", icon: Settings }
       ]
-    },
+    },;
     {
       title: "Security & Compliance",
       icon: Shield,
@@ -313,7 +313,7 @@ export const EnhancedSidebar: React.FC = () => {;
                   <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                   <span className="font-medium">{action.name}</span>
                 </Link>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </motion.div>

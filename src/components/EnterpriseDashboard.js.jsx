@@ -103,7 +103,7 @@ export const EnterpriseDashboard = () => {
             description: 'Multiple login attempts from different locations within short time frame',
             timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
             status: 'investigating',
-            affected['user-123', 'user-456'],
+            affected['user-123', 'user-456'],;
             source: 'Security Monitoring System'
         },
         {
@@ -114,7 +114,7 @@ export const EnterpriseDashboard = () => {
             description: 'User attempted to access restricted resource without proper permissions',
             timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
             status: 'resolved',
-            affected['user-789'],
+            affected['user-789'],;
             source: 'Access Control System'
         }
     ]);

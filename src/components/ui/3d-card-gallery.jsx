@@ -7,9 +7,9 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     const [selectedItem, setSelectedItem] = useState(null);
     const [viewMode, setViewMode] = useState('grid');
     const [filters, setFilters] = useState({
-        category[],
-        status[],
-        complexity[],
+        category[],;
+        status[],;
+        complexity[],;
         verified: false,
         featured: false
     });

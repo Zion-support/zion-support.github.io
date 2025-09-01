@@ -190,20 +190,20 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
                 className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
 
                 Skip to navigation
-              </a>
+              </a>;
               <button
                 onClick={() => setShowSkipLinks(false)}
                 className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
 
                 Close
               </button>
-            </div>
+            </div>;
           </motion.div>
         )}
       </AnimatePresence>
 
       {/* Accessibility Controls */}
-      <div className="fixed bottom-4 left-4 z-40">
+      <div className="fixed bottom-4 left-4 z-40">;
         <motion.div
           initial = {
   { opacity: 0,

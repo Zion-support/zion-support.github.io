@@ -44,7 +44,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 99,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features[;
       "Drag & drop chatbot builder",
       "Advanced NLP processing",
       "Multi-language support (50+ languages)",
@@ -53,18 +53,18 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Custom branding",
       "API access",
       "24/7 support"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Reduce customer service costs by 60%",
       "24/7 customer support availability",
       "Instant response times",
       "Scalable customer interactions",
       "Data-driven insights"
-    ],
-    targetAudience["E-commerce", "SaaS companies", "Customer service teams", "Marketing agencies"],
+    ],;
+    targetAudience["E-commerce", "SaaS companies", "Customer service teams", "Marketing agencies"],;
     marketPrice: "$99-299/month",
     contactEmail: "kleber@ziontechgroup.com",
-    tags["AI Chatbot", "NLP", "Customer Service", "Automation"],
+    tags["AI Chatbot", "NLP", "Customer Service", "Automation"],;
     aiScore: 95,
     rating: 4.8,
     reviewCount: 156,
@@ -77,7 +77,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
@@ -89,7 +89,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 79,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features[;
       "AI-powered content generation",
       "SEO optimization tools",
       "Brand voice customization",
@@ -98,18 +98,18 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Content calendar",
       "Team collaboration",
       "Analytics dashboard"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Save 15+ hours per week on content creation",
       "Improve SEO rankings by 45%",
       "Increase engagement rates by 55%",
       "Maintain consistent brand voice",
       "Scale content production 10x"
-    ],
-    targetAudience["Content creators", "Marketing teams", "Small businesses", "Digital agencies"],
+    ],;
+    targetAudience["Content creators", "Marketing teams", "Small businesses", "Digital agencies"],;
     marketPrice: "$79-199/month",
     contactEmail: "kleber@ziontechgroup.com",
-    tags["AI Content", "SEO", "Marketing", "Automation"],
+    tags["AI Content", "SEO", "Marketing", "Automation"],;
     aiScore: 92,
     rating: 4.7,
     reviewCount: 203,
@@ -122,7 +122,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
@@ -134,24 +134,24 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 149,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features[;
       "AI ticket routing",
       "Automated responses",
       "Sentiment analysis",
       "Customer satisfaction tracking",
       "Multi-channel support",
       "Knowledge base"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Reduce response time by 70%",
       "Improve customer satisfaction by 40%",
       "Handle 10x more support requests",
       "24/7 automated support"
-    ],
-    targetAudience["Customer service teams", "Support teams", "E-commerce businesses", "SaaS companies"],
+    ],;
+    targetAudience["Customer service teams", "Support teams", "E-commerce businesses", "SaaS companies"],;
     marketPrice: "$149-399/month",
     contactEmail: "kleber@ziontechgroup.com",
-    tags["AI Support", "Customer Service", "Automation", "24/7 Support"],
+    tags["AI Support", "Customer Service", "Automation", "24/7 Support"],;
     aiScore: 94,
     rating: 4.9,
     reviewCount: 178,
@@ -164,7 +164,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
@@ -176,7 +176,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 199,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features[;
       "AI-powered lead scoring",
       "Automated follow-up sequences",
       "Sales call transcription & analysis",
@@ -185,19 +185,19 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Performance tracking",
       "Custom sales playbooks",
       "Real-time coaching"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Increase conversion rates by 35%",
       "Reduce follow-up time by 80%",
       "Improve sales team productivity by 50%",
       "Data-driven sales insights",
       "24/7 lead nurturing"
-    ],
-    targetAudience["Sales teams", "B2B companies", "Real estate", "Insurance", "Financial services"],
+    ],;
+    targetAudience["Sales teams", "B2B companies", "Real estate", "Insurance", "Financial services"],;
     marketPrice: "$199-499/month",
     website: "https://ziontechgroup.com/ai-sales-copilot",
     contactEmail: "kleber@ziontechgroup.com",
-    tags["AI Sales", "Lead Generation", "CRM", "Automation"],
+    tags["AI Sales", "Lead Generation", "CRM", "Automation"],;
     aiScore: 96,
     rating: 4.9,
     reviewCount: 234,
@@ -210,7 +210,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
@@ -222,7 +222,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 299,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features[;
       "Regulatory compliance monitoring",
       "Automated reporting",
       "Risk assessment",
@@ -231,19 +231,19 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Real-time alerts",
       "Industry-specific templates",
       "Compliance scoring"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Reduce compliance costs by 40%",
       "Eliminate manual reporting errors",
       "Real-time compliance status",
       "Automated audit preparation",
       "Risk mitigation"
-    ],
-    targetAudience["Financial services", "Healthcare", "Manufacturing", "Legal firms", "Government"],
+    ],;
+    targetAudience["Financial services", "Healthcare", "Manufacturing", "Legal firms", "Government"],;
     marketPrice: "$299-799/month",
     website: "https://ziontechgroup.com/ai-compliance-assistant",
     contactEmail: "kleber@ziontechgroup.com",
-    tags["AI Compliance", "Risk Management", "Regulatory", "Automation"],
+    tags["AI Compliance", "Risk Management", "Regulatory", "Automation"],;
     aiScore: 93,
     rating: 4.8,
     reviewCount: 167,
@@ -256,7 +256,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
@@ -268,7 +268,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 89,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features[;
       "Intelligent email categorization",
       "Auto-response generation",
       "Follow-up automation",
@@ -277,19 +277,19 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Performance analytics",
       "Multi-language support",
       "Integration with major email clients"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Respond to emails 10x faster",
       "Reduce manual email handling by 70%",
       "Improve customer response times",
       "Consistent communication quality",
       "24/7 email management"
-    ],
-    targetAudience["Customer service teams", "Sales teams", "HR departments", "Small businesses", "Freelancers"],
+    ],;
+    targetAudience["Customer service teams", "Sales teams", "HR departments", "Small businesses", "Freelancers"],;
     marketPrice: "$89-249/month",
     website: "https://ziontechgroup.com/ai-auto-email-responder",
     contactEmail: "kleber@ziontechgroup.com",
-    tags["AI Email", "Automation", "Customer Service", "Productivity"],
+    tags["AI Email", "Automation", "Customer Service", "Productivity"],;
     aiScore: 91,
     rating: 4.7,
     reviewCount: 189,
@@ -302,7 +302,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
@@ -314,7 +314,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 399,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features[;
       "Multiple LLM models (GPT-4, Claude, Gemini)",
       "Content creation & editing",
       "Style transfer",
@@ -323,19 +323,19 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Custom model training",
       "Content analytics",
       "Team collaboration tools"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Access to latest AI models",
       "Reduce content creation time by 80%",
       "Improve content quality",
       "Scalable content production",
       "Cost-effective AI implementation"
-    ],
-    targetAudience["Content agencies", "Marketing teams", "Publishers", "Tech companies", "Research institutions"],
+    ],;
+    targetAudience["Content agencies", "Marketing teams", "Publishers", "Tech companies", "Research institutions"],;
     marketPrice: "$399-999/month",
     website: "https://ziontechgroup.com/llm-content-studio",
     contactEmail: "kleber@ziontechgroup.com",
-    tags["LLM", "AI Content", "GPT-4", "Claude", "Content Creation"],
+    tags["LLM", "AI Content", "GPT-4", "Claude", "Content Creation"],;
     aiScore: 98,
     rating: 4.9,
     reviewCount: 145,
@@ -348,7 +348,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
@@ -360,7 +360,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 249,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features[;
       "Cloud cost optimization",
       "Spending analytics",
       "Budget management",
@@ -369,19 +369,19 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Multi-cloud support",
       "Cost forecasting",
       "Resource optimization"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Reduce cloud costs by 25-40%",
       "Improve resource utilization",
       "Better budget control",
       "Automated cost optimization",
       "ROI tracking"
-    ],
-    targetAudience["DevOps teams", "IT managers", "Finance teams", "Cloud architects", "Startups"],
+    ],;
+    targetAudience["DevOps teams", "IT managers", "Finance teams", "Cloud architects", "Startups"],;
     marketPrice: "$249-599/month",
     website: "https://ziontechgroup.com/finops-advisor",
     contactEmail: "kleber@ziontechgroup.com",
-    tags["FinOps", "Cloud Cost", "AWS", "Azure", "GCP"],
+    tags["FinOps", "Cloud Cost", "AWS", "Azure", "GCP"],;
     aiScore: 89,
     rating: 4.6,
     reviewCount: 123,
@@ -394,7 +394,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
@@ -406,7 +406,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features[;
       "Quantum algorithm library",
       "Hybrid quantum-classical computing",
       "Optimization solvers",
@@ -415,19 +415,19 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Quantum circuit design",
       "Performance analytics",
       "Expert consultation"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Solve complex problems faster",
       "Quantum advantage for specific tasks",
       "Future-proof technology",
       "Competitive edge",
       "Research capabilities"
-    ],
-    targetAudience["Research institutions", "Pharmaceutical companies", "Financial services", "Tech companies", "Universities"],
+    ],;
+    targetAudience["Research institutions", "Pharmaceutical companies", "Financial services", "Tech companies", "Universities"],;
     marketPrice: "$999-2999/month",
     website: "https://ziontechgroup.com/quantum-ai-platform",
     contactEmail: "kleber@ziontechgroup.com",
-    tags["Quantum Computing", "AI", "Optimization", "Research", "Innovation"],
+    tags["Quantum Computing", "AI", "Optimization", "Research", "Innovation"],;
     aiScore: 99,
     rating: 4.9,
     reviewCount: 67,
@@ -440,7 +440,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
@@ -452,7 +452,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 199,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features[;
       "Edge AI inference",
       "Real-time processing",
       "IoT device support",
@@ -461,19 +461,19 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Model optimization",
       "Device management",
       "Security features"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Real-time AI processing",
       "Reduced latency",
       "Lower bandwidth costs",
       "Offline operation",
       "Scalable deployment"
-    ],
-    targetAudience["IoT companies", "Manufacturing", "Smart cities", "Retail", "Healthcare"],
+    ],;
+    targetAudience["IoT companies", "Manufacturing", "Smart cities", "Retail", "Healthcare"],;
     marketPrice: "$199-499/month",
     website: "https://ziontechgroup.com/edge-ai-processor",
     contactEmail: "kleber@ziontechgroup.com",
-    tags["Edge AI", "IoT", "Real-time", "Processing", "AI Inference"],
+    tags["Edge AI", "IoT", "Real-time", "Processing", "AI Inference"],;
     aiScore: 87,
     rating: 4.5,
     reviewCount: 89,
@@ -486,7 +486,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
@@ -498,7 +498,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 399,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features[;
       "AI threat detection",
       "Behavioral analysis",
       "Automated incident response",
@@ -507,19 +507,19 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Compliance reporting",
       "Threat intelligence",
       "24/7 SOC support"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Detect threats 10x faster",
       "Reduce false positives by 60%",
       "Automated response to incidents",
       "Comprehensive security coverage",
       "Cost-effective protection"
-    ],
-    targetAudience["Enterprises", "Financial services", "Healthcare", "Government", "Educational institutions"],
+    ],;
+    targetAudience["Enterprises", "Financial services", "Healthcare", "Government", "Educational institutions"],;
     marketPrice: "$399-999/month",
     website: "https://ziontechgroup.com/ai-cybersecurity-suite",
     contactEmail: "kleber@ziontechgroup.com",
-    tags["AI Security", "Cybersecurity", "Threat Detection", "Incident Response"],
+    tags["AI Security", "Cybersecurity", "Threat Detection", "Incident Response"],;
     aiScore: 95,
     rating: 4.8,
     reviewCount: 234,
@@ -532,7 +532,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
@@ -544,7 +544,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 299,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features[;
       "Visual pipeline builder",
       "ETL automation",
       "Data quality monitoring",
@@ -553,19 +553,19 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Performance optimization",
       "Error handling",
       "Scalable infrastructure"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Reduce data pipeline development time by 70%",
       "Improve data quality",
       "Automated monitoring",
       "Scalable architecture",
       "Cost optimization"
-    ],
-    targetAudience["Data teams", "Analytics teams", "Engineering teams", "Startups", "Enterprises"],
+    ],;
+    targetAudience["Data teams", "Analytics teams", "Engineering teams", "Startups", "Enterprises"],;
     marketPrice: "$299-799/month",
     website: "https://ziontechgroup.com/data-pipeline-automation",
     contactEmail: "kleber@ziontechgroup.com",
-    tags["Data Engineering", "ETL", "Automation", "Data Pipeline", "Big Data"],
+    tags["Data Engineering", "ETL", "Automation", "Data Pipeline", "Big Data"],;
     aiScore: 88,
     rating: 4.6,
     reviewCount: 156,
@@ -578,7 +578,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
@@ -590,7 +590,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 179,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features[;
       "AI test case generation",
       "Automated test execution",
       "Visual testing",
@@ -599,19 +599,19 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Test maintenance",
       "Reporting & analytics",
       "CI/CD integration"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Reduce testing time by 80%",
       "Improve test coverage",
       "Automated maintenance",
       "Faster releases",
       "Cost reduction"
-    ],
-    targetAudience["QA teams", "Development teams", "DevOps teams", "Startups", "Enterprises"],
+    ],;
+    targetAudience["QA teams", "Development teams", "DevOps teams", "Startups", "Enterprises"],;
     marketPrice: "$179-449/month",
     website: "https://ziontechgroup.com/ai-testing-automation",
     contactEmail: "kleber@ziontechgroup.com",
-    tags["AI Testing", "Automation", "QA", "Test Automation", "CI/CD"],
+    tags["AI Testing", "Automation", "QA", "Test Automation", "CI/CD"],;
     aiScore: 90,
     rating: 4.7,
     reviewCount: 134,
@@ -624,7 +624,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
@@ -636,7 +636,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 499,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features[;
       "Smart contract generation",
       "AI-powered DeFi strategies",
       "Blockchain analytics",
@@ -645,19 +645,19 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Performance optimization",
       "API access",
       "Developer tools"
-    ],
-    benefits[
+    ],;
+    benefits[;
       "Automated smart contract creation",
       "AI-driven DeFi optimization",
       "Enhanced security",
       "Cross-chain compatibility",
       "Developer productivity"
-    ],
-    targetAudience["DeFi projects", "Blockchain companies", "Financial services", "Developers", "Enterprises"],
+    ],;
+    targetAudience["DeFi projects", "Blockchain companies", "Financial services", "Developers", "Enterprises"],;
     marketPrice: "$499-1299/month",
     website: "https://ziontechgroup.com/blockchain-ai-platform",
     contactEmail: "kleber@ziontechgroup.com",
-    tags["Blockchain", "AI", "DeFi", "Smart Contracts", "Web3"],
+    tags["Blockchain", "AI", "DeFi", "Smart Contracts", "Web3"],;
     aiScore: 94,
     rating: 4.8,
     reviewCount: 89,

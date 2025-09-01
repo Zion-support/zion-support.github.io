@@ -9,19 +9,19 @@ const solutions = [
         icon: <Brain className="w-8 h-8"/>,
         color: 'from-zion-purple to-zion-purple-dark',
         bgColor: 'from-zion-purple/20 to-zion-purple-dark/20',
-        features[
+        features[;
             'Custom AI model development',
             'Natural language processing',
             'Computer vision solutions',
             'Predictive analytics',
             'Automated decision making'
-        ],
-        benefits[
+        ],;
+        benefits[;
             'Increase efficiency by 300%',
             'Reduce operational costs by 40%',
             'Improve accuracy by 95%'
-        ],
-        useCases['Healthcare', 'Finance', 'Retail', 'Manufacturing'],
+        ],;
+        useCases['Healthcare', 'Finance', 'Retail', 'Manufacturing'],;
         rating: 4.9,
         projects: 150,
         category: 'Emerging Tech'
@@ -33,19 +33,19 @@ const solutions = [
         icon: <Cloud className="w-8 h-8"/>,
         color: 'from-zion-cyan to-zion-blue',
         bgColor: 'from-zion-cyan/20 to-zion-blue/20',
-        features[
+        features[;
             'Multi-cloud architecture',
             'Auto-scaling solutions',
             'Disaster recovery',
             'Performance optimization',
             'Cost management'
-        ],
-        benefits[
+        ],;
+        benefits[;
             'Reduce infrastructure costs by 60%',
             'Improve uptime to 99.99%',
             'Scale resources automatically'
-        ],
-        useCases['E-commerce', 'SaaS', 'Enterprise', 'Startups'],
+        ],;
+        useCases['E-commerce', 'SaaS', 'Enterprise', 'Startups'],;
         rating: 4.8,
         projects: 200,
         category: 'Infrastructure'
@@ -57,19 +57,19 @@ const solutions = [
         icon: <Shield className="w-8 h-8"/>,
         color: 'from-zion-cyan-light to-zion-cyan',
         bgColor: 'from-zion-cyan-light/20 to-zion-cyan/20',
-        features[
+        features[;
             'Threat detection & response',
             'Vulnerability assessment',
             'Identity & access management',
             'Data encryption',
             'Compliance management'
-        ],
-        benefits[
+        ],;
+        benefits[;
             'Prevent 99.9% of cyber attacks',
             'Meet industry compliance standards',
             'Protect customer data integrity'
-        ],
-        useCases['Banking', 'Healthcare', 'Government', 'Education'],
+        ],;
+        useCases['Banking', 'Healthcare', 'Government', 'Education'],;
         rating: 4.9,
         projects: 120,
         category: 'Security'
@@ -81,19 +81,19 @@ const solutions = [
         icon: <Database className="w-8 h-8"/>,
         color: 'from-zion-purple-light to-zion-purple',
         bgColor: 'from-zion-purple-light/20 to-zion-purple/20',
-        features[
+        features[;
             'Real-time data processing',
             'Advanced reporting dashboards',
             'Predictive modeling',
             'Data visualization',
             'Business intelligence'
-        ],
-        benefits[
+        ],;
+        benefits[;
             'Make data-driven decisions',
             'Identify new business opportunities',
             'Optimize operational processes'
-        ],
-        useCases['Marketing', 'Operations', 'Sales', 'Research'],
+        ],;
+        useCases['Marketing', 'Operations', 'Sales', 'Research'],;
         rating: 4.7,
         projects: 180,
         category: 'Analytics'
@@ -105,19 +105,19 @@ const solutions = [
         icon: <Cpu className="w-8 h-8"/>,
         color: 'from-zion-cyan to-zion-purple',
         bgColor: 'from-zion-cyan/20 to-zion-purple/20',
-        features[
+        features[;
             'Device connectivity management',
             'Real-time monitoring',
             'Data collection & analysis',
             'Remote control systems',
             'Predictive maintenance'
-        ],
-        benefits[
+        ],;
+        benefits[;
             'Monitor assets in real-time',
             'Reduce maintenance costs by 30%',
             'Improve operational efficiency'
-        ],
-        useCases['Manufacturing', 'Smart Cities', 'Agriculture', 'Healthcare'],
+        ],;
+        useCases['Manufacturing', 'Smart Cities', 'Agriculture', 'Healthcare'],;
         rating: 4.6,
         projects: 90,
         category: 'Connected Devices'
@@ -129,19 +129,19 @@ const solutions = [
         icon: <Smartphone className="w-8 h-8"/>,
         color: 'from-zion-purple to-zion-cyan',
         bgColor: 'from-zion-purple/20 to-zion-cyan/20',
-        features[
+        features[;
             'iOS & Android development',
             'Cross-platform solutions',
             'UI/UX design',
             'Performance optimization',
             'App store deployment'
-        ],
-        benefits[
+        ],;
+        benefits[;
             'Reach customers on all devices',
             'Improve user engagement',
             'Increase brand visibility'
-        ],
-        useCases['Retail', 'Entertainment', 'Education', 'Healthcare'],
+        ],;
+        useCases['Retail', 'Entertainment', 'Education', 'Healthcare'],;
         rating: 4.8,
         projects: 250,
         category: 'Mobile'

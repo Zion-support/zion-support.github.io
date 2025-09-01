@@ -6,7 +6,7 @@ import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from "../../data/inno
   showViewAllButton?: boolean}
 
 const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
-  maxServices = 6,;
+maxServices:  6,;
   category,;
   showViewAllButton = true;
 }) => {;
@@ -30,19 +30,19 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
         case 'featured':;
           services = INNOVATIVE_SERVICES_2025.filter(service => service.rating >= 4.5).slice(0, 3);
           break;
-        case 'ai':
+        case 'ai':;
           services = getServicesByCategory('AI Services');
           break;
-        case 'it':
+        case 'it':;
           services = getServicesByCategory('IT Services');
           break;
-        case 'saas':
+        case 'saas':;
           services = getServicesByCategory('Micro SAAS');
           break;
-        case 'business':
+        case 'business':;
           services = getServicesByCategory('Business');
           break;
-        case 'development':
+        case 'development':;
           services = getServicesByCategory('Development');
           break;
         default:
@@ -172,10 +172,10 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
 
                   {tab.label}
                   <span className="ml-2 text-xs opacity-75">({tab.count})</span>
-                </button>
+                </button>;
               ))}
             </div>
-          </div>
+          </div>;
         )}
 
         {/* Services Grid */}
@@ -209,7 +209,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
               href="/innovative-services-2025"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
 
-              View All {totalServices} Services
+              View All {totalServices} Services;
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>

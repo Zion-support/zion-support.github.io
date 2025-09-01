@@ -33,7 +33,7 @@ export const FuturisticFooter: React.FC = () => {;
   const footerSections = [
     {
       title: "Services",
-      links[
+      links[;
         { name: "AI & Machine Learning", href: "/ai-services" },
         { name: "Micro SAAS Solutions", href: "/micro-saas" },
         { name: "IT Infrastructure", href: "/it-services" },
@@ -43,10 +43,10 @@ export const FuturisticFooter: React.FC = () => {;
         { name: "DevOps & Automation", href: "/it-services/devops" },
         { name: "Data Management", href: "/it-services/data" }
       ]
-    },
+    },;
     {
       title: "Solutions",
-      links[
+      links[;
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },
         { name: "Edge Computing", href: "/emerging-tech/edge" },
@@ -56,10 +56,10 @@ export const FuturisticFooter: React.FC = () => {;
         { name: "Green Technology", href: "/green-it" },
         { name: "Space Technology", href: "/emerging-tech/space" }
       ]
-    },
+    },;
     {
       title: "Comp",
-      links[
+      links[;
         { name: "About Us", href: "/about" },
         { name: "Our Team", href: "/about#team" },
         { name: "Careers", href: "/careers" },
@@ -69,10 +69,10 @@ export const FuturisticFooter: React.FC = () => {;
         { name: "Investor Relations", href: "/investors" },
         { name: "Sustainability", href: "/sustainability" }
       ]
-    },
+    },;
     {
       title: "Resources",
-      links[
+      links[;
         { name: "Documentation", href: "/docs" },
         { name: "API Reference", href: "/api" },
         { name: "Developer Portal", href: "/developer" },
@@ -210,11 +210,11 @@ export const FuturisticFooter: React.FC = () => {;
 
                           {link.name}
                         </Link>
-                      </li>
+                      </li>;
                     ))}
                   </ul>
                 </motion.div>
-              </div>
+              </div>;
             ))}
           </div>
           {/* Additional Quick Access Section */}
@@ -291,7 +291,7 @@ export const FuturisticFooter: React.FC = () => {;
                       System Status
                     </Link>
                   </li>
-                </ul>
+                </ul>;
               </div>
             </div>
           </motion.div>
@@ -299,7 +299,7 @@ export const FuturisticFooter: React.FC = () => {;
           <motion.div
             initial = {
   { opacity: 0,
-  y: 20 
+  y: 20 ;
 
 
 
@@ -309,7 +309,7 @@ export const FuturisticFooter: React.FC = () => {;
 }}
             whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -320,7 +320,7 @@ export const FuturisticFooter: React.FC = () => {;
             viewport={{ once: true }}
             transition = {
   { duration: 0.6,
-  delay: 0.5 
+  delay: 0.5 ;
 
 
 
@@ -330,17 +330,17 @@ export const FuturisticFooter: React.FC = () => {;
 }}
             className="border-t border-zion-slate/30 mt-12 pt-8"
 
-            <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
+            <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">;
               {/* Copyright */}
-              <div className="text-zion-slate-light text-sm">
-                © {currentYear} ZION TECH GROUP. All rights reserved.
-                <span className="ml-2 flex items-center">
-                  Made with <Heart className="w-4 h-4 mx-1 text-red-400" /> for innovation
-                </span>
+              <div className="text-zion-slate-light text-sm">;
+                © {currentYear} ZION TECH GROUP. All rights reserved.;
+                <span className="ml-2 flex items-center">;
+                  Made with <Heart className="w-4 h-4 mx-1 text-red-400" /> for innovation;
+                </span>;
               </div>
               {/* Social Links */}
-              <div className="flex items-center space-x-4">
-                {socialLinks.map((social) => (
+              <div className="flex items-center space-x-4">;
+                {socialLinks.map((social) => (;
                   <a
                     key={social.name}
                     href={social.href}
@@ -349,11 +349,11 @@ export const FuturisticFooter: React.FC = () => {;
                     className="w-10 h-10 bg-zion-slate-dark/50 border border-zion-slate/30 rounded-lg flex items-center justify-center text-zion-slate-light hover:text-zion-cyan hover:border-zion-cyan/50 hover:bg-zion-cyan/10 transition-all duration-300"
 
                     <social.icon className="w-5 h-5" />
-                  </a>
+                  </a>;
                 ))}
               </div>
               {/* Legal Links */}
-              <div className="flex items-center space-x-6 text-sm">
+              <div className="flex items-center space-x-6 text-sm">;
                 <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
                   Privacy Policy
                 </Link>

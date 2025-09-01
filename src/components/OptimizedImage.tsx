@@ -69,7 +69,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         }
       },
       {
-        rootMargin: any'50px',
+        rootMargin: any'50px',;
         threshold: 0.1
       }
     );

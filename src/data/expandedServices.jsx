@@ -9,14 +9,14 @@ export const EXPANDED_SERVICES = [
         subcategory: "Chatbots",
         price: 8999,
         currency: "$",
-        tags["AI Chatbot", "Customer Service", "CRM Integration", "Multi-language"],
+        tags["AI Chatbot", "Customer Service", "CRM Integration", "Multi-language"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
             avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
         },
-        images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-15T10:00:00.000Z",
         rating: 4.9,
         reviewCount: 156,
@@ -33,13 +33,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "Analytics",
         price: 12999,
         currency: "$",
-        tags["Predictive Analytics", "Machine Learning", "Business Intelligence", "Forecasting"],
+        tags["Predictive Analytics", "Machine Learning", "Business Intelligence", "Forecasting"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-20T14:30:00.000Z",
         rating: 4.8,
         reviewCount: 89,
@@ -55,13 +55,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "Document Processing",
         price: 7499,
         currency: "$",
-        tags["OCR", "Document Processing", "Automation", "Data Extraction"],
+        tags["OCR", "Document Processing", "Automation", "Data Extraction"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-25T11:15:00.000Z",
         rating: 4.7,
         reviewCount: 67,
@@ -78,13 +78,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "Migration",
         price: 15999,
         currency: "$",
-        tags["Cloud Migration", "AWS", "Azure", "Cost Optimization", "Security"],
+        tags["Cloud Migration", "AWS", "Azure", "Cost Optimization", "Security"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-01-30T09:45:00.000Z",
         rating: 4.9,
         reviewCount: 134,
@@ -101,13 +101,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "Automation",
         price: 8999,
         currency: "$",
-        tags["DevOps", "CI/CD", "Docker", "Kubernetes", "Automation"],
+        tags["DevOps", "CI/CD", "Docker", "Kubernetes", "Automation"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-02-05T16:20:00.000Z",
         rating: 4.8,
         reviewCount: 78,
@@ -123,13 +123,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "Kubernetes",
         price: 6499,
         currency: "$",
-        tags["Kubernetes", "Container Orchestration", "Auto-scaling", "Monitoring"],
+        tags["Kubernetes", "Container Orchestration", "Auto-scaling", "Monitoring"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-02-10T13:10:00.000Z",
         rating: 4.7,
         reviewCount: 45,
@@ -146,13 +146,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "Audit & Testing",
         price: 18999,
         currency: "$",
-        tags["Penetration Testing", "Vulnerability Assessment", "Compliance", "Security Audit"],
+        tags["Penetration Testing", "Vulnerability Assessment", "Compliance", "Security Audit"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-02-15T10:30:00.000Z",
         rating: 4.9,
         reviewCount: 112,
@@ -169,13 +169,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "Architecture",
         price: 24999,
         currency: "$",
-        tags["Zero Trust", "Multi-factor Authentication", "Micro-segmentation", "Access Control"],
+        tags["Zero Trust", "Multi-factor Authentication", "Micro-segmentation", "Access Control"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-02-20T15:45:00.000Z",
         rating: 4.8,
         reviewCount: 67,
@@ -191,13 +191,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "Incident Response",
         price: 12999,
         currency: "$",
-        tags["Incident Response", "Tabletop Exercises", "Ransomware", "Data Breach"],
+        tags["Incident Response", "Tabletop Exercises", "Ransomware", "Data Breach"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-02-25T12:00:00.000Z",
         rating: 4.7,
         reviewCount: 89,
@@ -214,13 +214,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "Data Warehouse",
         price: 19999,
         currency: "$",
-        tags["Data Warehouse", "ETL", "Business Intelligence", "Data Modeling"],
+        tags["Data Warehouse", "ETL", "Business Intelligence", "Data Modeling"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-03-01T09:15:00.000Z",
         rating: 4.8,
         reviewCount: 78,
@@ -237,13 +237,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "Dashboards",
         price: 8999,
         currency: "$",
-        tags["Real-time Analytics", "Dashboard", "KPI Tracking", "Visualization"],
+        tags["Real-time Analytics", "Dashboard", "KPI Tracking", "Visualization"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-03-05T14:30:00.000Z",
         rating: 4.7,
         reviewCount: 56,
@@ -259,13 +259,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "Governance",
         price: 15999,
         currency: "$",
-        tags["Data Governance", "GDPR", "CCPA", "HIPAA", "Compliance"],
+        tags["Data Governance", "GDPR", "CCPA", "HIPAA", "Compliance"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-03-10T11:45:00.000Z",
         rating: 4.8,
         reviewCount: 67,
@@ -282,13 +282,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "PWA",
         price: 12999,
         currency: "$",
-        tags["PWA", "Offline Functionality", "Push Notifications", "Cross-platform"],
+        tags["PWA", "Offline Functionality", "Push Notifications", "Cross-platform"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-03-15T16:20:00.000Z",
         rating: 4.8,
         reviewCount: 89,
@@ -304,13 +304,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "Cross-platform",
         price: 18999,
         currency: "$",
-        tags["React Native", "Flutter", "iOS", "Android", "Backend API"],
+        tags["React Native", "Flutter", "iOS", "Android", "Backend API"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-03-20T13:10:00.000Z",
         rating: 4.7,
         reviewCount: 78,
@@ -326,13 +326,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "E-commerce",
         price: 24999,
         currency: "$",
-        tags["E-commerce", "Payment Processing", "Inventory Management", "Admin Dashboard"],
+        tags["E-commerce", "Payment Processing", "Inventory Management", "Admin Dashboard"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-03-25T10:30:00.000Z",
         rating: 4.9,
         reviewCount: 134,
@@ -350,13 +350,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "Smart Contracts",
         price: 15999,
         currency: "$",
-        tags["Smart Contracts", "Ethereum", "DeFi", "NFT", "Security Audit"],
+        tags["Smart Contracts", "Ethereum", "DeFi", "NFT", "Security Audit"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-03-30T15:45:00.000Z",
         rating: 4.8,
         reviewCount: 67,
@@ -372,13 +372,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "DeFi",
         price: 29999,
         currency: "$",
-        tags["DeFi", "Yield Farming", "Liquidity Pools", "Lending", "Security"],
+        tags["DeFi", "Yield Farming", "Liquidity Pools", "Lending", "Security"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1621416894560-8a5c5baaacaa?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1621416894560-8a5c5baaacaa?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-04-05T12:00:00.000Z",
         rating: 4.9,
         reviewCount: 89,
@@ -396,13 +396,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "Platform Development",
         price: 19999,
         currency: "$",
-        tags["IoT", "Device Management", "Real-time Monitoring", "Data Collection"],
+        tags["IoT", "Device Management", "Real-time Monitoring", "Data Collection"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-04-10T09:30:00.000Z",
         rating: 4.7,
         reviewCount: 56,
@@ -418,13 +418,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "Prototyping",
         price: 12999,
         currency: "$",
-        tags["PCB Design", "Hardware Prototyping", "Firmware", "IoT", "Robotics"],
+        tags["PCB Design", "Hardware Prototyping", "Firmware", "IoT", "Robotics"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-04-15T14:15:00.000Z",
         rating: 4.8,
         reviewCount: 78,
@@ -441,13 +441,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "RPA",
         price: 17999,
         currency: "$",
-        tags["RPA", "Process Automation", "Workflow", "Optimization"],
+        tags["RPA", "Process Automation", "Workflow", "Optimization"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-04-20T11:00:00.000Z",
         rating: 4.8,
         reviewCount: 67,
@@ -463,13 +463,13 @@ export const EXPANDED_SERVICES = [
         subcategory: "ERP",
         price: 39999,
         currency: "$",
-        tags["ERP", "Finance", "HR", "Inventory", "CRM"],
+        tags["ERP", "Finance", "HR", "Inventory", "CRM"],;
         author: {
             name: "Zion Tech Group",
             id: "zion-tech-group",
             email: "kleber@ziontechgroup.com",
         },
-        images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+        images["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],;
         createdAt: "2024-04-25T16:45:00.000Z",
         rating: 4.9,
         reviewCount: 112,

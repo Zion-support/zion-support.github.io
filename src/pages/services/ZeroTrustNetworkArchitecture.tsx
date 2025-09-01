@@ -145,12 +145,12 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
                 Learn More
               </motion.button>
             </div>
-          </motion.div>
+          </motion.div>;
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -226,14 +226,14 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Services & Pricing */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -321,7 +321,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
                   className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
 
                   Get Quote
-                </motion.button>
+                </motion.button>;
               </motion.div>
             ))}
           </div>
@@ -329,7 +329,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
       </section>
 
       {/* Benefits */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -405,14 +405,14 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.name}</h3>
                 <p className="text-sm text-slate-400">{benefit.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600/20 to-pink-600/20">
+      <section className="py-20 bg-gradient-to-r from-red-600/20 to-pink-600/20">;
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {

@@ -77,14 +77,14 @@ export default function AISupportHelpdesk(...args[]):  {
       price: "$79",
       period: "/month",
       description: "Perfect for small teams starting with AI support",
-      features[
+      features[;
         "Up to 5 agents",
         "Basic AI chatbot",
         "Email & chat support",
         "Standard reporting",
         "Mobile app access",
         "Email support"
-      ],
+      ],;
       popular: false
     },
     {
@@ -92,7 +92,7 @@ export default function AISupportHelpdesk(...args[]):  {
       price: "$199",
       period: "/month",
       description: "Ideal for growing support teams with advanced needs",
-      features[
+      features[;
         "Up to 20 agents",
         "Advanced AI capabilities",
         "Multi-channel support",
@@ -100,7 +100,7 @@ export default function AISupportHelpdesk(...args[]):  {
         "Priority support",
         "API access",
         "Custom integrations"
-      ],
+      ],;
       popular: true
     },
     {
@@ -108,7 +108,7 @@ export default function AISupportHelpdesk(...args[]):  {
       price: "$499",
       period: "/month",
       description: "For large organizations with complex support requirements",
-      features[
+      features[;
         "Unlimited agents",
         "Custom AI models",
         "White-label solutions",
@@ -243,7 +243,7 @@ export default function AISupportHelpdesk(...args[]):  {
         </section>
 
         {/* Features Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -295,14 +295,14 @@ export default function AISupportHelpdesk(...args[]):  {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* AI Capabilities Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -354,14 +354,14 @@ export default function AISupportHelpdesk(...args[]):  {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{capability.title}</h3>
                   <p className="text-gray-300">{capability.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Support Channels Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -413,14 +413,14 @@ export default function AISupportHelpdesk(...args[]):  {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{channel.title}</h3>
                   <p className="text-gray-300">{channel.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -474,14 +474,14 @@ export default function AISupportHelpdesk(...args[]):  {
                     <h3 className="text-xl font-semibold mb-2 text-white">{benefit.title}</h3>
                     <p className="text-gray-300">{benefit.description}</p>
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -532,7 +532,7 @@ export default function AISupportHelpdesk(...args[]):  {
                       : 'border-slate-700'
                   }`}
 
-                  {plan.popular && (
+                  {plan.popular && (;
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
@@ -567,7 +567,7 @@ export default function AISupportHelpdesk(...args[]):  {
                     }`}
 
                     Get Started
-                  </Link>
+                  </Link>;
                 </motion.div>
               ))}
             </div>
@@ -575,7 +575,7 @@ export default function AISupportHelpdesk(...args[]):  {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-teal-600/20 to-cyan-600/20">
+        <section className="py-20 bg-gradient-to-r from-teal-600/20 to-cyan-600/20">;
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
               initial = {

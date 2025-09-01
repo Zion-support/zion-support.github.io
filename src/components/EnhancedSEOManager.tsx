@@ -112,14 +112,14 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         <meta name = "description" content={seoData.description} />
         <meta name="keywords" content = {
   seoData.keywords.join(',
-  ')
+  ');
 
 
 
 
 
 
-} />
+} />;
         <meta name="robots" content="index, follow" />;
         <meta name="author" content="Zion Tech Group" />;
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />;

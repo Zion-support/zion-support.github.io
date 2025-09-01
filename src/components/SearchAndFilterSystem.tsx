@@ -200,7 +200,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white transition-colors"
 
               <X className="w-5 h-5" />
-            </button>
+            </button>;
           )}
         </div>
 
@@ -213,7 +213,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
               exit={{ opacity: 0, y: -10 }}
               className="absolute top-full left-0 right-0 mt-2 bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl z-50 max-h-64 overflow-y-auto"
 
-              {filteredResults.slice(0, 5).map((result) => (
+              {filteredResults.slice(0, 5).map((result) => (;
                 <div
                   key={result.id}
                   className="p-3 hover:bg-zinc-800/50 transition-colors cursor-pointer border-b border-zinc-700/30 last:border-b-0"
@@ -230,7 +230,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                       {result.category}
                     </span>
                   </div>
-                </div>
+                </div>;
               ))}
             </motion.div>
           )}
@@ -275,7 +275,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           {/* Filter Toggle */}
           <button
             onClick={() => setShowFilterPanel(!showFilterPanel)}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
               showFilterPanel
                 ? 'bg-zion-cyan text-white'
                 : 'bg-zinc-900/50 text-zinc-300 hover:text-white border border-zinc-700/50'
@@ -409,20 +409,20 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                   </div>
                 </div>
               </div>
-            </div>
+            </div>;
           </motion.div>
         )}
       </AnimatePresence>
 
       {/* Results Count */}
-      <div className="mb-4 text-sm text-zinc-400">
-        Showing {filteredResults.length} of {data.length} results
+      <div className="mb-4 text-sm text-zinc-400">;
+        Showing {filteredResults.length} of {data.length} results;
         {searchQuery && ` for "${searchQuery}"`}
       </div>
 
       {/* Search Results */}
-      <div className="space-y-4">
-        {filteredResults.map((result) => (
+      <div className="space-y-4">;
+        {filteredResults.map((result) => (;
           <motion.div
             key={result.id}
             initial = {
@@ -493,7 +493,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                 </div>
               </div>
             </div>
-          </motion.div>
+          </motion.div>;
         ))}
       </div>
 

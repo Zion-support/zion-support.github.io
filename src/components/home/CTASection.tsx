@@ -143,14 +143,14 @@ const CTASection: React.FC = (): JSX.Element => {
 
             Join hundreds of companies that have already revolutionized their operations with Zion Tech Group's cutting-edge solutions.
           </motion.p>
-        </div>
+        </div>;
 
         {/* Feature Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -160,7 +160,7 @@ const CTASection: React.FC = (): JSX.Element => {
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -170,7 +170,7 @@ const CTASection: React.FC = (): JSX.Element => {
 }}
           transition = {
   { duration: 0.8,
-  delay: 0.6 
+  delay: 0.6 ;
 
 
 
@@ -180,7 +180,7 @@ const CTASection: React.FC = (): JSX.Element => {
 }}
           viewport={{ once: true }}
         >
-          {features.map((feature, index)  => (
+          {features.map((feature, index)  => (;
             <motion.div
               key={feature.title}
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20"
@@ -222,7 +222,7 @@ const CTASection: React.FC = (): JSX.Element => {
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
               <p className="text-zion-slate-light text-sm">{feature.description}</p>
-            </motion.div>
+            </motion.div>;
           ))}
         </motion.div>
 
@@ -231,7 +231,7 @@ const CTASection: React.FC = (): JSX.Element => {
           className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           initial = {
   { opacity: 0,
-  y: 30 
+  y: 30 ;
 
 
 
@@ -241,7 +241,7 @@ const CTASection: React.FC = (): JSX.Element => {
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -251,7 +251,7 @@ const CTASection: React.FC = (): JSX.Element => {
 }}
           transition = {
   { duration: 0.8,
-  delay: 0.8 
+  delay: 0.8 ;
 
 
 
@@ -285,7 +285,7 @@ const CTASection: React.FC = (): JSX.Element => {
           whileInView={{ opacity: 1 }}
           transition = {
   { duration: 1,
-  delay: 1 
+  delay: 1 ;
 
 
 

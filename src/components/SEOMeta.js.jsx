@@ -27,7 +27,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
             "contactType": "customer service",
             "email": "kleber@ziontechgroup.com"
         },
-        "sameAs"[
+        "sameAs"[;
             "https://linkedin.com/company/ziontechgroup",
             "https://twitter.com/ziontechgroup",
             "https://github.com/ziontechgroup"
@@ -38,7 +38,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Technology Services",
-            "itemListElement"[
+            "itemListElement"[;
                 {
                     "@type": "Offer",
                     "itemOffered": {

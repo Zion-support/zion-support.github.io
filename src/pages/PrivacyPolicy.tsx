@@ -613,7 +613,7 @@ const PrivacyPolicy = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20 ;
 
 
 
@@ -623,7 +623,7 @@ const PrivacyPolicy = () => {;
 }}
               animate = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 
 
@@ -633,7 +633,7 @@ const PrivacyPolicy = () => {;
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 
+  delay: 0.2 ;
 
 
 
@@ -697,7 +697,7 @@ const PrivacyPolicy = () => {;
         </section>
 
         {/* Policy Content */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial = {
@@ -750,7 +750,7 @@ const PrivacyPolicy = () => {;
         </section>
 
         {/* Data Categories Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -854,7 +854,7 @@ const PrivacyPolicy = () => {;
         </section>
 
         {/* Security Measures Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -941,7 +941,7 @@ const PrivacyPolicy = () => {;
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-600 to-emerald-700">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-600 to-emerald-700">;
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial = {
@@ -1184,23 +1184,23 @@ const PrivacyPolicy = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20 ;
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.6 
+  delay: 0.6 ;
 
 }}
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;
                 <Globe className="w-8 h-8 text-zion-cyan" />
                 International Data Transfers
               </h2>
@@ -1219,23 +1219,23 @@ const PrivacyPolicy = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20 ;
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.7 
+  delay: 0.7 ;
 
 }}
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;
                 <AlertTriangle className="w-8 h-8 text-zion-cyan" />
                 Children's Privacy
               </h2>
@@ -1254,23 +1254,23 @@ const PrivacyPolicy = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20 ;
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.8 
+  delay: 0.8 ;
 
 }}
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;
                 <Calendar className="w-8 h-8 text-zion-cyan" />
                 Changes to This Policy
               </h2>
@@ -1306,17 +1306,17 @@ const PrivacyPolicy = () => {;
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 
+  y: 20 ;
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 
+  y: 0 ;
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.9 
+  delay: 0.9 ;
 
 }}
               viewport={{ once: true }}

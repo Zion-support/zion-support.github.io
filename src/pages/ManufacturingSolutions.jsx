@@ -8,37 +8,37 @@ export default function ManufacturingSolutions() {
             icon: Brain,
             title: "AI-Powered Manufacturing",
             description: "Intelligent automation and predictive maintenance for smart factories",
-            features["Predictive maintenance", "Quality control", "Process optimization"]
-        },
+            features["Predictive maintenance", "Quality control", "Process optimization"];
+        },;
         {
             icon: Cpu,
             title: "IoT Integration",
             description: "Connected devices and sensors for real-time monitoring and control",
-            features["Real-time monitoring", "Data collection", "Remote control"]
-        },
+            features["Real-time monitoring", "Data collection", "Remote control"];
+        },;
         {
             icon: BarChart3,
             title: "Advanced Analytics",
             description: "Data-driven insights for operational efficiency and quality improvement",
-            features["Performance analytics", "Quality metrics", "Efficiency tracking"]
-        },
+            features["Performance analytics", "Quality metrics", "Efficiency tracking"];
+        },;
         {
             icon: Shield,
             title: "Cybersecurity",
             description: "Industrial-grade security for connected manufacturing systems",
-            features["Threat detection", "Access control", "Data protection"]
-        },
+            features["Threat detection", "Access control", "Data protection"];
+        },;
         {
             icon: Network,
             title: "Digital Twin",
             description: "Virtual replicas of physical systems for simulation and optimization",
-            features["3D modeling", "Simulation", "Performance prediction"]
-        },
+            features["3D modeling", "Simulation", "Performance prediction"];
+        },;
         {
             icon: Zap,
             title: "Process Automation",
             description: "Streamlined workflows and automated decision-making processes",
-            features["Workflow automation", "Decision support", "Process optimization"]
+            features["Workflow automation", "Decision support", "Process optimization"];
         }
     ];
     const useCases = [

@@ -89,7 +89,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       price: "$499",
       period: "/month",
       description: "Essential data governance for small to medium organizations",
-      features[
+      features[;
         "Up to 10TB data management",
         "Basic AI classification",
         "Standard access controls",
@@ -97,7 +97,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
         "Email support",
         "Basic reporting",
         "5 user licenses"
-      ],
+      ],;
       cta: "Start Free Trial",
       popular: false
     },
@@ -106,7 +106,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       price: "$1,299",
       period: "/month",
       description: "Advanced data governance for growing enterprises",
-      features[
+      features[;
         "Up to 100TB data management",
         "Advanced AI classification",
         "Custom access policies",
@@ -116,7 +116,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
         "Unlimited users",
         "API access",
         "Custom integrations"
-      ],
+      ],;
       cta: "Start Free Trial",
       popular: true
     },
@@ -125,7 +125,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       price: "$3,999",
       period: "/month",
       description: "Comprehensive data governance for large organizations",
-      features[
+      features[;
         "Unlimited data management",
         "Custom AI models",
         "Advanced security features",
@@ -298,10 +298,10 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section>;
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -355,14 +355,14 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -415,14 +415,14 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
                 <div className="text-4xl font-bold text-white mb-2">{benefit.metric}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Compliance Frameworks Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -476,14 +476,14 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
                   <h3 className="text-xl font-semibold text-white mb-3">{framework.name}</h3>
                   <p className="text-gray-300">{framework.description}</p>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -542,14 +542,14 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -600,7 +600,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
                     : 'bg-slate-800/50 border border-slate-700/50'
                 }`}
 
-                {plan.popular && (
+                {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
@@ -633,14 +633,14 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
                 }`}>
                   {plan.cta}
                 </button>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50">;
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {

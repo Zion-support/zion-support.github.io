@@ -24,7 +24,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     threshold = 0.1;
   } = options;
 
-  const metricsRef = useRef<PerformanceMetrics>({;
+const metricsRef:  useRef<PerformanceMetrics>({;
     loadTime: 0,;
     renderTime: 0,;
     memoryUsage: 0,;

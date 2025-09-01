@@ -30,28 +30,28 @@ export default function MicroSAASSolutions(...args[]):  {
       title: "Custom SAAS Development",
       description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",
       icon: Code,
-      features["Custom workflows", "API integration", "User management", "Scalable architecture"]
-    },
+      features["Custom workflows", "API integration", "User management", "Scalable architecture"];
+    },;
     {
       title: "Multi-tenant Architecture",
       description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",
       icon: Users,
-      features["Data isolation", "Resource sharing", "Customization options", "Performance optimization"]
-    },
+      features["Data isolation", "Resource sharing", "Customization options", "Performance optimization"];
+    },;
     {
       title: "Subscription Management",
       description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",
       icon: BarChart3,
-      features["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"]
-    },
+      features["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"];
+    },;
     {
       title: "API Development & Integration",
       description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",
       icon: Cpu,
-      features["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
-    },
+      features["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"];
+    },;
     {
-      features["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
+      features["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"];
     };
       title: "Analytics & Reporting",;
       description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",;
@@ -229,14 +229,14 @@ export default function MicroSAASSolutions(...args[]):  {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="container-responsive">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Micro SAAS Solutions?</h2>
@@ -257,14 +257,14 @@ export default function MicroSAASSolutions(...args[]):  {
 
                   <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
                   <p className="text-zion-slate-light leading-relaxed text-center">{benefit.description}</p>
-                </div>
+                </div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Industries Section */}
-        <section className="py-20 bg-zion-blue-dark/50">
+        <section className="py-20 bg-zion-blue-dark/50">;
           <div className="container-responsive">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Industries We Serve</h2>
@@ -285,14 +285,14 @@ export default function MicroSAASSolutions(...args[]):  {
 
                   <h3 className="text-xl font-bold text-white mb-3">{industry.name}</h3>
                   <p className="text-zion-slate-light leading-relaxed">{industry.description}</p>
-                </div>
+                </div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Process Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="container-responsive">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Development Process</h2>
@@ -325,7 +325,7 @@ export default function MicroSAASSolutions(...args[]):  {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+        <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;
           <div className="container-responsive">
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your Micro SAAS?</h2>

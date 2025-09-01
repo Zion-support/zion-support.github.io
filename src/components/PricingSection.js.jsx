@@ -10,18 +10,18 @@ const plans = [
         icon: <Rocket className="w-8 h-8"/>,
         color: "from-zion-cyan to-zion-blue",
         bgColor: "from-zion-cyan/20 to-zion-blue/20",
-        features[
+        features[;
             "Up to 5 team members",
             "Basic AI tools access",
             "Email support",
             "Standard templates",
             "1 project at a time"
-        ],
-        notIncluded[
+        ],;
+        notIncluded[;
             "Advanced analytics",
             "Priority support",
             "Custom integrations"
-        ],
+        ],;
         popular: false,
         cta: "Get Started"
     },
@@ -33,7 +33,7 @@ const plans = [
         icon: <Building className="w-8 h-8"/>,
         color: "from-zion-purple to-zion-purple-dark",
         bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-        features[
+        features[;
             "Up to 25 team members",
             "Full AI tools access",
             "Priority email support",
@@ -41,11 +41,11 @@ const plans = [
             "Unlimited projects",
             "Team collaboration",
             "Basic analytics"
-        ],
-        notIncluded[
+        ],;
+        notIncluded[;
             "Custom integrations",
             "Dedicated account manager"
-        ],
+        ],;
         popular: true,
         cta: "Start Free Trial"
     },
@@ -57,7 +57,7 @@ const plans = [
         icon: <Crown className="w-8 h-8"/>,
         color: "from-zion-cyan-light to-zion-purple",
         bgColor: "from-zion-cyan-light/20 to-zion-purple/20",
-        features[
+        features[;
             "Unlimited team members",
             "All AI tools + custom models",
             "24/7 phone support",
@@ -68,8 +68,8 @@ const plans = [
             "Dedicated account manager",
             "SLA guarantees",
             "On-premise options"
-        ],
-        notIncluded[],
+        ],;
+        notIncluded[],;
         popular: false,
         cta: "Contact Sales"
     }
@@ -81,23 +81,23 @@ const addons = [
         period: "month",
         description: "Custom AI model training and optimization",
         icon: <Zap className="w-6 h-6"/>,
-        features["Custom model training", "Performance optimization", "Model monitoring"]
-    },
+        features["Custom model training", "Performance optimization", "Model monitoring"];
+    },;
     {
         name: "Premium Support",
         price: 99,
         period: "month",
         description: "24/7 dedicated support with guaranteed response times",
         icon: <Shield className="w-6 h-6"/>,
-        features["24/7 phone support", "Guaranteed 2-hour response", "Dedicated support team"]
-    },
+        features["24/7 phone support", "Guaranteed 2-hour response", "Dedicated support team"];
+    },;
     {
         name: "Advanced Analytics",
         price: 149,
         period: "month",
         description: "Comprehensive analytics and reporting suite",
         icon: <Users className="w-6 h-6"/>,
-        features["Custom dashboards", "Advanced reporting", "Data export options"]
+        features["Custom dashboards", "Advanced reporting", "Data export options"];
     }
 ];
 export function PricingSection() {

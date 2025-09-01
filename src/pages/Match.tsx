@@ -211,12 +211,12 @@ const Match: React.FC = () => {;
                 Browse All Services
               </Link>
             </div>
-          </motion.div>
+          </motion.div>;
         </div>
       </section>
 
       {/* Search and Filter Section */}
-      <section className="py-16 bg-slate-800/50">
+      <section className="py-16 bg-slate-800/50">;
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Search Bar */}
@@ -245,9 +245,9 @@ const Match: React.FC = () => {;
 
                   <category.icon className="w-4 h-4" />
                   {category.name}
-                  <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
+                  <span className="text-xs bg-white/20 px-2 py-1 rounded-full">;
                     {category.count}
-                  </span>
+                  </span>;
                 </button>
               ))}
             </div>
@@ -256,7 +256,7 @@ const Match: React.FC = () => {;
       </section>
 
       {/* Matched Services Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -348,7 +348,7 @@ const Match: React.FC = () => {;
                 </div>
 
                 {/* Service Info */}
-                <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>;
                 <p className="text-slate-300 mb-4 text-sm leading-relaxed">{service.description}</p>
 
                 {/* Rating and Price */}
@@ -407,7 +407,7 @@ const Match: React.FC = () => {;
             ))}
           </div>
 
-          {filteredServices.length === 0 && (
+          {filteredServices.length === 0 && (;
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -426,14 +426,14 @@ const Match: React.FC = () => {;
 
                 Browse All Services
                 <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
+              </Link>;
             </motion.div>
           )}
         </div>
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -488,7 +488,7 @@ const Match: React.FC = () => {;
                 description: "Receive personalized recommendations with match scores and detailed analysis.",
                 icon: Sparkles
 
-            ].map((step, index) => (
+            ].map((step, index) => (;
               <motion.div
                 key={index}
                 initial = {
@@ -529,14 +529,14 @@ const Match: React.FC = () => {;
                 <div className="text-2xl font-bold text-cyan-400 mb-4">{step.step}</div>
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-slate-300">{step.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
+      <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">;
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {

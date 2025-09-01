@@ -95,7 +95,7 @@ export function ProductSubmissionForm() {
                 price: parseFloat(values.price),
                 category: values.category,
                 currency: "USD", // Default currency
-                tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) [],
+                tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) [],;
                 author: {
                     name: user.displayName || "Anonymous Creator",
                     id: user.id,
@@ -127,8 +127,8 @@ export function ProductSubmissionForm() {
                 const { error: updateError } = await supabase
                     .from('product_listings')
                     .update({
-                    images[publicUrlData.publicUrl]
-                })
+                    images[publicUrlData.publicUrl];
+                });
                     .eq('id', productRecord.id);
                 if (updateError) {
                     throw new Error(updateError.message)}

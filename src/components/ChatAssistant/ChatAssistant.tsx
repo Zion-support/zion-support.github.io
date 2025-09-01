@@ -106,14 +106,14 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
                 <p className="text-xs opacity-70 mt-1">
                   {message.timestamp.toLocaleTimeString()}
                 </p>
-              </div>
+              </div>;
             </div>
           ))
         )}
         <div ref={messagesEndRef} />
       </div>
       {/* Input */}
-      <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200">
+      <form onSubmit={handleSubmit} className="p-4 border-t border-gray-200">;
         <div className="flex space-x-2">
           <input
             type="text"

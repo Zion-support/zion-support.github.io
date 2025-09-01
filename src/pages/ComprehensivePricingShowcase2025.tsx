@@ -33,13 +33,13 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
     const [selectedService, setSelectedService] = useState<any>(null);
 
     const categories = [
-        { id: any'all', name: 'All Services', icon: Globe, count: comprehensivePricingGuide2025.length },
+        { id: any'all', name: 'All Services', icon: Globe, count: comprehensivePricingGuide2025.length },;
         { id: 'Fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Fintech').length },
-        { id: any'Healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Healthtech').length },
-        { id: any'Edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Edutech').length },
-        { id: any'Martech', name: 'Marketing Tech', icon: Target, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Martech').length },
-        { id: any'Micro SaaS', name: 'Micro SaaS', icon: Settings, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Micro SaaS').length },
-        { id: any'AI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'AI Services').length },
+        { id: any'Healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Healthtech').length },;
+        { id: any'Edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Edutech').length },;
+        { id: any'Martech', name: 'Marketing Tech', icon: Target, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Martech').length },;
+        { id: any'Micro SaaS', name: 'Micro SaaS', icon: Settings, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Micro SaaS').length },;
+        { id: any'AI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'AI Services').length },;
         { id: any'IT Services', name: 'IT Services', icon: Shield, count: comprehensivePricingGuide2025.filter(s  => s.category === 'IT Services').length }
     ];
 

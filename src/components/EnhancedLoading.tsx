@@ -62,7 +62,7 @@ export function LoadingSpinner({
                   'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9)',
                   'linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6)',
                   'linear-gradient(45deg, #0ea5e9, #8b5cf6,
-  #0ea5e9)'
+  #0ea5e9)';
                 ]
               
 
@@ -185,7 +185,7 @@ interface PageLoaderProps extends React.PropsWithChildren<{}> {
 
 export function PageLoader(...args[]):  {
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">;
       <div className="text-center">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
@@ -372,8 +372,8 @@ export function PageLoader(...args[]):  {
 
 export function SkeletonLoader(...args[]):  {
   return (
-    <div className = {`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index)  => (
+<div className:  {`space-y-3 ${className}`}>;
+      {Array.from({ length: lines }).map((_, index)  => (;
         <motion.div
           key={index}
           className="h-4 bg-zion-slate-light/20 rounded"
