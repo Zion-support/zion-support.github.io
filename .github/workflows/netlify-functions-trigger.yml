@@ -19,19 +19,25 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Setup Node.js
+      
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-
-        git rebase --abort 2>/dev/null || true
-
-        rm -rf .git/rebase-merge .git/rebase-apply 2>/dev/null || true
-
-        git reset --hard HEAD
-
-        git clean -fd'
-    - name: Run automation
-      run: echo "Automation workflow placeholder - customize as needed"
+          cache: npm
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run netlify functions trigger
+        run: node scripts/trigger-netlify-functions-local.cjs
+      
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: workflow-results
+          path: |
+            automation/logs/
+            automation/netlify-local-stamp.txt
+          retention-days: 7
