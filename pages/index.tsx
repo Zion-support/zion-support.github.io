@@ -158,32 +158,6 @@ const HomePage = memo(function HomePage() {
             </div>
           </section>
           
-          {/* Statistics Section */}
-          <section className="mx-auto max-w-7xl px-6 pb-14">
-            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Our Impact</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-xl p-6 border border-cyan-500/20 text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
-                <p className="text-white/80 text-sm">Automation Systems Deployed</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-fuchsia-500/10 to-purple-500/10 rounded-xl p-6 border border-fuchsia-500/20 text-center">
-                <div className="text-4xl font-bold text-fuchsia-400 mb-2">99.9%</div>
-                <p className="text-white/80 text-sm">System Uptime</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-xl p-6 border border-green-500/20 text-center">
-                <div className="text-4xl font-bold text-green-400 mb-2">24/7</div>
-                <p className="text-white/80 text-sm">Autonomous Operation</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 rounded-xl p-6 border border-yellow-500/20 text-center">
-                <div className="text-4xl font-bold text-yellow-400 mb-2">60%</div>
-                <p className="text-white/80 text-sm">Performance Improvement</p>
-              </div>
-            </div>
-          </section>
-          
           {/* Call to Action Section */}
           <section className="mx-auto max-w-7xl px-6 pb-14">
             <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-12 border border-cyan-500/20 text-center">
