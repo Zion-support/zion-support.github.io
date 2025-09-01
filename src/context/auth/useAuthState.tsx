@@ -33,6 +33,8 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
   });
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     // Check for existing auth state on mount
 :src/context/auth/useAuthState.tsx
     

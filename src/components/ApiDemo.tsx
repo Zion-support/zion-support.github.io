@@ -22,6 +22,12 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
 
   // Check API health on component mount
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     checkHealth () ;
     fetchUsers () }, []) ;
 

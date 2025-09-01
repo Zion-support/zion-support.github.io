@@ -16,6 +16,12 @@ export default function ResetPasswordPage () {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if(!token) {
             setError('Invalid or missing reset token.') ;
             // Consider redirecting to an error page or login page

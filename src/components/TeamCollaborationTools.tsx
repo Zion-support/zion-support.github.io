@@ -72,6 +72,12 @@ showProjects:  true,;
 
   // Sample data
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const sampleFiles: FileItem[] = [{
 
         id: '1',

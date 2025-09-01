@@ -56,6 +56,8 @@ export default function Page() {
             setIsAnalyzing(false)}
     }, []);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         analyzeBundle()}, [analyzeBundle]);
     const formatBytes = (bytes) => {
 

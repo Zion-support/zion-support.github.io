@@ -92,12 +92,24 @@ export function AIContentOptimizer({
   ]);
   // Auto - analyze when component opens
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(autoAnalyze && isOpen && !analysisComplete) {
 
       startAnalysis()}
   }, [autoAnalyze, isOpen, analysisComplete, startAnalysis]) ;
   // Setup real - time updates
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(showRealTime && isOpen && analysisComplete) {
 
       analysisIntervalRef.current = setInterval(() => {

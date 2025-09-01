@@ -288,6 +288,8 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 
   // Initialize SEO
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     // Update document title
     if(enableAutoTitle) {
 

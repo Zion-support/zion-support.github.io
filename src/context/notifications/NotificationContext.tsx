@@ -21,6 +21,8 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   const notificationOps = useNotificationOperations(user?.id);
   
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     // Ensure fetchNotifications is called only if notificationOps is available
     if(notificationOps) {
       notificationOps.fetchNotifications();

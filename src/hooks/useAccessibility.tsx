@@ -294,6 +294,8 @@ activeElements.forEach(element:  > {;
 
   // Initialize accessibility features
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
 :src/hooks/useAccessibility.tsx
     // Load saved preferences'
 

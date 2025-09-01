@@ -13,11 +13,15 @@ export default function Page() {
         }
     ];
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if(isOpen && searchInputRef.current) {
 
             searchInputRef.current.focus()}
     }, [isOpen]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if(query.trim()) {
 
             performSearch()}

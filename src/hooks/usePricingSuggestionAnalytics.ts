@@ -71,6 +71,8 @@ export function usePricingSuggestionAnalytics(days = 30) {
   }, [days]);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     fetchAnalytics();
   }, [fetchAnalytics]);
 

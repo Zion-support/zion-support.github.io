@@ -48,6 +48,12 @@ export const TestimonialsSection: React.FC = props {
 
   // Auto - play functionality
   React.useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!isAutoPlaying) return}, 5000) ;
 
     return () => clearInterval(interval) }, [isAutoPlaying, currentTestimonial]) ;

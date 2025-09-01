@@ -147,6 +147,8 @@ export default function Page() {
   };
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     // Clean up any potential stale auth state before setting up listeners
     cleanupAuthState();
     

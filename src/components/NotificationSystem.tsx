@@ -45,16 +45,34 @@ enableSound:  true,;
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(settings.sound) {
 
       audioRef.current = new Audio('/notification-sound.mp3'); // You can add a custom sound file
       audioRef.current.volume = 0.3}}, [settings.sound]) ;
   // Update unread count
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setUnreadCount(notifications.filter (n => !n.read) .length) }, [notifications]) ;
 
   // Auto - dismiss notifications
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!settings.autoDismiss) return;
 
     const timeouts: NodeJS.Timeout[] = [];
@@ -154,7 +172,13 @@ enableSound:  true,;
   
     setSettings(prev => ({ ...prev, ...newSettings }) ) }, []) ;
   // Expose addNotification method globally for external use
-  useEffect(() => { (window as) .addNotification = addNotification;
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []); (window as) .addNotification = addNotification;
     return () => {
       delete(window as) .addNotification}}, [addNotification]) ;
 

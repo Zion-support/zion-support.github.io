@@ -108,6 +108,12 @@ export function AdvancedAnalytics({
 
   // Generate unique session ID
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     
     setUserSession(sessionId);
     localStorage.setItem('analytics_session_id', sessionId)}, []);
@@ -219,6 +225,12 @@ export function AdvancedAnalytics({
   }, [enabled, userSession]) ;
   // Setup event listeners
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!enabled) return;
 
     setIsTracking(true) ;
@@ -339,6 +351,12 @@ export function AdvancedAnalytics({
       clearTimeout(scrollTimeout)}}, [enabled, trackPageView, trackPerformance, trackInteraction, sessionStart, enableHeatmap]) ;
   // Setup performance observer for LCP
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 
     if(!enabled || !('PerformanceObserver' in window)) return;
 
@@ -392,6 +410,12 @@ export function AdvancedAnalytics({
   }, [trackingId, userSession]) ;
   // Generate mock data for demonstration
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!enabled) return;
 
     // Simulate data collection

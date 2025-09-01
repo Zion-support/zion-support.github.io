@@ -36,6 +36,8 @@ export default function Page() {
   };
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(jobId) { // Ensure jobId is present before fetching
       fetchMatches();
     }

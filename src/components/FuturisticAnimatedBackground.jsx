@@ -5,10 +5,14 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
     const canvasRef = useRef(null) ;
     const animationRef = useRef () ;
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
 =======
     const canvasRef = useRef(null);
     const animationRef = useRef();
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
 >>>>>>> main
         const canvas = canvasRef.current;
         if(!canvas)

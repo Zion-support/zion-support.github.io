@@ -26,6 +26,12 @@ export function AIChatAssistant() {
 
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         scrollToBottom()}, [messages]);
     const handleSendMessage = async () => {
         if(!inputValue.trim())

@@ -31,12 +31,30 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/u
     const [selectedFilter, setSelectedFilter] = useState(() => localStorage.getItem('category_selected_filter') || filterOptions[0].value);
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 
         localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 
         localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         setIsLoading(true);
         const timeout = setTimeout(() => setIsLoading(false), 300);
         return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter]);

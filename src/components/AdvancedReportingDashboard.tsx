@@ -32,6 +32,12 @@ showMetrics:  true,;
 
   // Sample report data
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const sampleReports: ReportData[] = [{
 
         id: '1',
@@ -206,6 +212,12 @@ showMetrics:  true,;
 
   // Filter and sort reports
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     let filtered = reports;
 
     if(selectedType !== 'all') {

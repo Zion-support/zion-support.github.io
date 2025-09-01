@@ -53,6 +53,12 @@ const FloatingActionButton = React.memo(() => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const toggleVisibility = () => {
       if(window.pageYOffset > 300) {
         setIsVisible(true) ;
@@ -170,6 +176,12 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 
   // Auto - advance slides
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!isPlaying) return;
 
     const interval = setInterval(() => {
@@ -200,6 +212,12 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   ];
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length) ;
     }, 5000) ;

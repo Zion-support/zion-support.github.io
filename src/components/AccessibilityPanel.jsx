@@ -9,6 +9,8 @@ export default function Page() {
         }
     }, []) ;
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         // Apply settings to document
         applySettings(settings);
         // Save to localStorage'

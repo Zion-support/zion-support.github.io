@@ -6,6 +6,8 @@ export function ReferralMiddleware({ children }: Props) {
   const { user } = useAuth();
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     const params = new URLSearchParams(window.location.search);
     const code = params.get('ref');
     if(code) {
@@ -14,6 +16,8 @@ export function ReferralMiddleware({ children }: Props) {
   }, []);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     async function sendReferral() {
       const code = localStorage.getItem('referralCode');
       if(!code || !user?.id || !user?.email) return; // Guard against missing email as well

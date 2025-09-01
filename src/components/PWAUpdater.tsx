@@ -21,6 +21,12 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
   const [showPrompt, setShowPrompt] = useState(false);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     // Check if service worker is supported'
     if('serviceWorker' in navigator) {
 
@@ -71,6 +77,12 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
           // console.error('Service Worker registration failed:', error)})}
   }, [autoCheck, showUpdatePrompt]) ;
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(autoCheck && registration) {
 
       }, checkInterval);

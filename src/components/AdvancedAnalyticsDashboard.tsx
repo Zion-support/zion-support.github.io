@@ -95,6 +95,12 @@ export function AdvancedAnalyticsDashboard({
   }, [analyticsData, selectedTimeframe, onDataExport]) ;
   // Setup real - time updates
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(showRealTime && isOpen) {
 
       generateAnalyticsData();
@@ -108,6 +114,12 @@ export function AdvancedAnalyticsDashboard({
   }, [showRealTime, isOpen, refreshInterval, generateAnalyticsData]) ;
   // Initial data load
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(isOpen) {
 
       generateAnalyticsData()}

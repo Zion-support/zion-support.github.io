@@ -31,6 +31,12 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
   // Keyboard navigation support
 <<<<<<< HEAD
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleKeyDown = (event: KeyboardEvent) => {;
       // Skip if not in keyboard navigation mode;
       if(!settings.keyboardNavigation) return;
@@ -113,6 +119,12 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
 
   // Add accessibility attributes to interactive elements
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea') ;
 
 interactiveElements.forEach(element:  > {;
@@ -140,6 +152,12 @@ interactiveElements.forEach(element:  > {;
 
   // Add CSS for accessibility features
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const style = document.createElement('style') ;
     style.textContent = `
       /* High contrast mode */;
@@ -223,6 +241,12 @@ interactiveElements.forEach(element:  > {;
       document.head.removeChild(style) ;
 =======
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 
       if(event.key === 'Tab') {
 
@@ -296,6 +320,12 @@ interactiveElements.forEach(element:  > {;
   // Font size controls
   
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     
     return () => clearTimeout(timer)}, []);
 
@@ -492,6 +522,12 @@ interactiveElements.forEach(element:  > {;
   const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'navigation'> ('general') ;
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const savedSettings = localStorage.getItem('zion - accessibility - settings') ;
     if(savedSettings) {
       try {

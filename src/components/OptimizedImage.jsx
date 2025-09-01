@@ -15,6 +15,8 @@ export default function Page() {
   }, [priority]);
   // Load image when in view
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(isInView && !priority) {
 
       setCurrentSrc(src);

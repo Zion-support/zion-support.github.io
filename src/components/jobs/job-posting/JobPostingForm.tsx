@@ -34,6 +34,12 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
   const { isSubmitting } = formState;
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(jobId) {
       setIsFormLoading(true);
       getJobById(jobId)

@@ -4,6 +4,8 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
     const canvasRef = useRef(null);
     const animationRef = useRef();
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         const canvas = canvasRef.current;
         if(!canvas)
             return;

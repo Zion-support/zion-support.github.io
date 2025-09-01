@@ -20,6 +20,8 @@ export default function Page() {
     : EMERGING_TECH_SERVICES_2025.filter(service => service.category === selectedCategory) ;
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(autoPlay) {
       const interval = setInterval(() => {;
         setCurrentSlide((prev) => (prev + 1) % filteredServices.length) ;

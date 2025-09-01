@@ -4,6 +4,8 @@ export default function Page() {
 ,
   ];
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     setLinkStatuses(sampleLinks);
     generateReport(sampleLinks);
   }, []);

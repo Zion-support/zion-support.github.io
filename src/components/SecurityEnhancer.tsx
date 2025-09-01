@@ -79,6 +79,12 @@ export function SecurityEnhancer() {
 
   // Initialize security monitoring
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(isVisible) {
 
       initializeSecurityMonitoring();

@@ -80,6 +80,12 @@ export default function Page() {
     setHistory(prev => [...prev.slice (-9) , newMetrics]) }, []) ;
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(isMonitoring) {
 
       return () => clearInterval(interval)}

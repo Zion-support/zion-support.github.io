@@ -12,6 +12,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   
   // Calculate rating distribution
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(reviews.length > 0) {
       const distribution: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
       
@@ -27,6 +29,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   
   // Fetch reviews when component mounts or userId/fetchUserReviews changes
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     fetchUserReviews(userId);
   }, [userId, fetchUserReviews]); // Added fetchUserReviews
   

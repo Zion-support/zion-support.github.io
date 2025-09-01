@@ -114,12 +114,24 @@ export function UserExperienceOptimizer({
   ]);
   // Auto - analyze when component opens
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(autoAnalyze && isOpen && !analysisComplete) {
 
       startUXAnalysis()}
   }, [autoAnalyze, isOpen, analysisComplete, startUXAnalysis]) ;
   // Setup real - time updates
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(showRealTime && isOpen && analysisComplete) {
 
       analysisIntervalRef.current = setInterval(() => {

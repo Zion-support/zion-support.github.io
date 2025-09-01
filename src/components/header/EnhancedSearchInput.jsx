@@ -26,6 +26,12 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
   ];
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleClickOutside = (event) => {
 
       if(searchRef.current && !searchRef.current.contains(event.target)) {
@@ -38,6 +44,12 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(searchQuery.trim()) {
 
       const filtered = allSuggestions.filter(suggestion =>

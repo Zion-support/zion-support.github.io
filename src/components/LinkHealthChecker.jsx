@@ -64,6 +64,12 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
         setLinkStatuses(statuses);
         setIsChecking(false)};
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Auto-check links when component mounts
         checkAllLinks()}, [links]);
     const getStatusIcon = (status) => {

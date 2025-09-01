@@ -177,6 +177,12 @@ export function ErrorBoundary({ children, fallback, onError }) {
   const [retryCount, setRetryCount] = useState(0);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleError = event => {
 
       setHasError(true);

@@ -57,6 +57,12 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
   // Detect theme
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 
     if(theme === 'auto') {
 
@@ -70,6 +76,12 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
   // Show scroll to top button when scrolled down
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     
     };
 

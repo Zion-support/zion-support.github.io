@@ -89,6 +89,12 @@ export function SmartContractBuilder({
 
   // Prefill form with talent and client name(existing useEffect)
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(talent && clientName && !formValues) { // Only prefill if formValues is not already set(e.g., by a template)
       setFormValues(prev => ({
         ...prev,

@@ -87,6 +87,8 @@ export default function EnhancedStatsSection(...args[]):  {
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(inView) {
 
       controls.start('visible')}
@@ -108,6 +110,8 @@ setCountedValues(prev:  > ({;
     return timer};
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(inView) {
 
       stats.forEach((stat) => {

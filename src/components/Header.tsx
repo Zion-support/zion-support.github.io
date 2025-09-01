@@ -94,6 +94,12 @@ export function Header({ className }: HeaderProps) {
   const location = useLocation();
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 <<<<<<< HEAD
     
 =======

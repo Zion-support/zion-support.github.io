@@ -28,6 +28,12 @@ export function Accessibility() {
   });
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     // Load settings from localStorage
     
     if(savedSettings) {

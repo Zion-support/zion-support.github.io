@@ -153,7 +153,7 @@ export default function Page() {
                               <div className="space - y-4">
                                 <h2 className="text-2xl font - bold text-white">{previewContent.title}</h2>
                                 <p className="text-zion - slate -light">{previewContent.metaDescription}</p>
-                                <div className="prose prose - invert max - w-none" dangerouslySetInnerHTML = {
+                                <div className="prose prose - invert max - w-none" // TODO: Sanitize content before using dangerouslySetInnerHTML = {
   {
                 __html: previewContent.body
                     .replace(/^#{1,
@@ -218,7 +218,7 @@ export default function Page() {
                               <h2 className="text-xl font -bold">{previewContent.subject}</h2>
                               <p className="text-gray - 500 text-sm mt-2">{previewContent.previewText}</p>
                               <div className="border-t border-gray - 200 my -4"></div>
-                              <div className="prose max - w-none" dangerouslySetInnerHTML={{ __html: previewContent.body }}/>
+                              <div className="prose max - w-none" // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: previewContent.body }}/>
                               <div className="mt-6">
                                 <Button className="bg-zion - purple hover:bg-zion - purple - dark text-white">
                                   {previewContent.cta || "Visit Zion Marketplace"}

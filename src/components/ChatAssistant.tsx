@@ -43,6 +43,12 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   };
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     scrollToBottom();
   }, [messages]);
 

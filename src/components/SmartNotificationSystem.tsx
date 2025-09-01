@@ -61,6 +61,12 @@ export function SmartNotificationSystem({
 
   // Initialize audio for notification sounds
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(settings.sound) {
 
       audioRef.current = new Audio('/notification-sound.mp3');

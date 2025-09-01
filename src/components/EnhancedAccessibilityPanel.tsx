@@ -141,6 +141,12 @@ export function EnhancedAccessibilityPanel() {
 
   // Load settings from localStorage
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 <<<<<<< HEAD
 
     if(saved) {
@@ -159,6 +165,12 @@ export function EnhancedAccessibilityPanel() {
 
   // Keyboard navigation support
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     
         document.body.classList.add('keyboard-navigation')}
       // Escape key to close panel'

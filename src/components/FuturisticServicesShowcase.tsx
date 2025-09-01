@@ -82,6 +82,12 @@ export default function FuturisticServicesShowcase(...args[]):  {
 	const [currentService, setCurrentService] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 		if(!isPlaying) return;
 		
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length) }, 5000) ;

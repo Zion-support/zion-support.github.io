@@ -8,6 +8,8 @@ export default function Page() {
         return () => window.removeEventListener('resize', updateDeviceType)}, []);
     // Scroll effects
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if(!enableScrollEffects) return;
         const handleScroll = () => {
             const scrollTop = window.pageYOffset;
@@ -34,6 +36,8 @@ export default function Page() {
         return () => window.removeEventListener('scroll', handleScroll)}, [enableScrollEffects]);
     // Theme management
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
 
         const savedTheme = localStorage.getItem('theme') || 'auto';
         setCurrentTheme(savedTheme);
@@ -61,6 +65,8 @@ export default function Page() {
             behavior: 'smooth'})};
     // Add CSS animations to the document
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if(!enableAnimations)
             return;
         const style = document.createElement('style');`
@@ -201,6 +207,8 @@ export default function Page() {
             document.head.removeChild(style) }}, [enableAnimations]) ;
     // Add intersection observer for scroll animations
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if(!enableScrollEffects)
             return;
         const observer = new IntersectionObserver((entries) => {

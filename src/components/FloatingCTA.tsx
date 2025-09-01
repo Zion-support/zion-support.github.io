@@ -9,6 +9,12 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     // Show CTA after 5 seconds
     
       setIsVisible(true) }, 5000) ;

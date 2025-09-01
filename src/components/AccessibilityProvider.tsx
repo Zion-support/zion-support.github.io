@@ -18,6 +18,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Load accessibility preferences from localStorage
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 
     setHighContrast(savedHighContrast);
     setReducedMotion(savedReducedMotion);
@@ -26,6 +32,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Apply accessibility settings to document
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     
     // Apply high contrast
     if(highContrast) {
@@ -42,6 +54,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Keyboard navigation support
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     
         setTimeout(() => setShowSkipLinks(false), 5000)}
 

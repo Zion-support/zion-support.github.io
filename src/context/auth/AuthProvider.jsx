@@ -87,6 +87,8 @@ export default function Page() {
         }
         return result};
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         // Clean up  potential stale auth state before setting up listeners
         cleanupAuthState();
         const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {

@@ -8,6 +8,12 @@ export default function Page() {
     const [isHovered, setIsHovered] = useState(false);
     const [activeStat, setActiveStat] = useState(0);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handleMouseMove = (e) => {
 
             setMousePosition({ x: e.clientX, y: e.clientY })};

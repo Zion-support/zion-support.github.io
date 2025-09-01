@@ -37,6 +37,8 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
   // Measure initial load time
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
 
     if(typeof window !== 'null') {
 :src/hooks/usePerformanceOptimization.tsx
@@ -57,6 +59,8 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
   // FPS monitoring
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(!enableFPSMonitoring) return;
 
     let animationFrameId: number;
@@ -209,6 +213,8 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
   // Cleanup on unmount
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     return cleanup}, [cleanup]);
 
   return {

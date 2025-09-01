@@ -25,6 +25,12 @@ const pricingModels = [;
   const [viewMode, setViewMode] = useState < any> ('grid') ;
   const [expandedService, setExpandedService] = useState < any> (null) ;
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     let filtered = MICRO_SAAS_SERVICES;
     if(selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory) }

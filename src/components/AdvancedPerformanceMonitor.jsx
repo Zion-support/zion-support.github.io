@@ -123,6 +123,12 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
   const containerRef = useRef(null) ;
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!enabled) return;
 
     const interval = setInterval(() => {

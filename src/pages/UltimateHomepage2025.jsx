@@ -8,6 +8,12 @@ import ultimateInnovativeServices2025 from "../../data / 2025 - ultimate - innov
     const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         setIsVisible(true) ;
         const interval = setInterval(() => {
             setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length) }, 5000) ;

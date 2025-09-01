@@ -80,6 +80,12 @@ export function EnhancedHeader() {
   const [isSearching, setIsSearching] = useState(false);
   
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     
     };
 

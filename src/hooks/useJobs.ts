@@ -67,6 +67,8 @@ export default function Page() {
   };
   
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     fetchJobs();
   }, [fetchJobs]); // Changed dependencies to just fetchJobs
   

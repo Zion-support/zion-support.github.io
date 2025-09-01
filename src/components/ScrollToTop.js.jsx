@@ -6,6 +6,12 @@ export function ScrollToTop = () => {
 
         const [isVisible, setIsVisible] = useState(false);
         useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
             const toggleVisibility = () => {
                 if(window.pageYOffset > 300) {
 

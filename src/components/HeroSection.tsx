@@ -92,6 +92,12 @@ const heroSlides: HeroSlide[] = [=======
   );
   // Auto-play functionality with pause on hover
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!isAutoPlaying) return;
 
       setCurrentSlide(prev => (prev + 1) % memoizedSlides.length)}, 6000);
@@ -100,6 +106,12 @@ const heroSlides: HeroSlide[] = [=======
 
   // Handle keyboard navigation
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     
       if(e.key === 'ArrowRight') nextSlide();
       if(e.key === ' ') {
@@ -118,6 +130,12 @@ const heroSlides: HeroSlide[] = [=======
 
   // Handle image loading
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     
           img.onload = resolve;
           img.onerror = resolve;

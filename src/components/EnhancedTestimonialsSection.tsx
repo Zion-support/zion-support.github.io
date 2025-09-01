@@ -88,6 +88,12 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!isAutoPlaying) return;
 
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length) }, 8000) ;

@@ -14,6 +14,12 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },
     const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
     const [sortBy, setSortBy] = useState('rating');
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         let filtered = MICRO_SAAS_SERVICES;
         // Filter by category
         if(selectedCategory !== 'all') {

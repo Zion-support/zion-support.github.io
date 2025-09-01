@@ -11,6 +11,8 @@ export default function Page() {
     }, [isGuest, initialMessages, storedGuestMessages, setStoredGuestMessages, recipient.id]);
     // Effect for logged-in user messages
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if(!isGuest) {
 
             // Update state if initialMessages prop changes(e.g. new conversation loaded)
@@ -33,11 +35,15 @@ export default function Page() {
     };
     const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if(debouncedApiCallParams) {
 
             onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId)}
     }, [debouncedApiCallParams, onSendMessage]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         scrollToBottom()}, [currentMessages]); // currentMessages will correctly refer to either guest or logged-in state
     const scrollToBottom = () => {
 
@@ -80,6 +86,8 @@ export default function Page() {
         setShowGuestModal(false);
         setGuestMessage(null)};
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if(!showGuestModal)
             return;
         const handleKey = (e) => {
@@ -96,6 +104,8 @@ export default function Page() {
             document.removeEventListener('keydown', handleKey);
             removeTrap && removeTrap()}}, [showGuestModal]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if(!isOpen)
             return;
         const handleKeyDown = (e) => {

@@ -210,6 +210,8 @@ export default function Page() {
   };
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(user) {
       fetchDisputes();
     } else {

@@ -33,6 +33,12 @@ showHeader:  true,;
 
   // Sample welcome message
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(isOpen && messages.length = == 0) {
       const welcomeMessage: ChatMessage = {
   id: 'welcome',
@@ -56,6 +62,12 @@ showHeader:  true,;
 
   // Auto - scroll to bottom
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(autoScroll && messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' }) }
   }, [messages, autoScroll]) ;

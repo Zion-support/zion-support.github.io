@@ -39,6 +39,8 @@ export default function Page() {
     setIsChecking(false);
   };
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     // Auto-check links when component mounts
     checkAllLinks();
   }, [links]);

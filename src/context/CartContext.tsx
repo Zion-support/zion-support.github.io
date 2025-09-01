@@ -36,6 +36,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const { user } = useAuth();
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(!user) {
       
       if(stored) {
@@ -61,6 +63,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, [user]);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(!user) {
       safeStorage.setItem(GUEST_CART_KEY, JSON.stringify(state.items))}
   }, [state.items, user]);

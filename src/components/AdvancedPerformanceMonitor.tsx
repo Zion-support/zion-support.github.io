@@ -79,6 +79,8 @@ export default function Page() {
   );
   // Measure Core Web Vitals
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
 
     if('PerformanceObserver' in window) {
 

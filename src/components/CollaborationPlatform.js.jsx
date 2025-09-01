@@ -59,6 +59,12 @@ export function CollaborationPlatform() {
   const [meetingDuration, setMeetingDuration] = useState(0);
   const containerRef = useRef(null);
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const interval = setInterval(() => {
       setMeetingDuration(prev => prev + 1);
     }, 1000);

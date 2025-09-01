@@ -45,6 +45,8 @@ export default function Page() {
             setIsLoading(false)}
     }, [contentAnalyzer]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         // Auto-analyze pages when component mounts
         analyzeAllPages()}, [analyzeAllPages]);
     const getFilteredPages = () => {

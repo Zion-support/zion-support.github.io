@@ -38,7 +38,13 @@ export const EnhancedAccessibility: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   
   // Auto - hide accessibility panel
-  useEffect(() => {    if(isOpen) {
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);    if(isOpen) {
 
       setIsVisible(true);
       if(timeoutRef.current) clearTimeout(timeoutRef.current)} else {
@@ -48,6 +54,12 @@ export const EnhancedAccessibility: React.FC = () => {
 
   // Apply accessibility settings
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     
     // High contrast
     if(settings.highContrast) {
@@ -97,6 +109,12 @@ export const EnhancedAccessibility: React.FC = () => {
     localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     // Load saved settings'
     const saved = localStorage.getItem('accessibility-settings');    if(saved) {
 
@@ -127,6 +145,12 @@ export const EnhancedAccessibility: React.FC = () => {
     setAnnouncements(prev => [...prev, message]) }, []) ;
   // Enhanced keyboard navigation
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!settings.keyboardNavigation) return;
 
       // Skip if in input/textarea'      if(target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
@@ -169,6 +193,12 @@ modals.forEach(modal:  > {;
 
   // Keyboard navigation support
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!settings.keyboardNavigation) return;
 
         if(mainContent) {
@@ -206,6 +236,12 @@ modals.forEach(modal:  > {;
 
   // Skip to main content link
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 <<<<<<< HEAD
 
     skipLink.href = '#main-content';

@@ -120,9 +120,21 @@ export const EnhancedMobileNavigation: React.FC = () => {
   const [activePath, setActivePath] = useState('/');
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setActivePath(location.pathname)}, [location]);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleClickOutside = (event: MouseEvent) => {
 
       if(menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -173,11 +185,23 @@ export default function EnhancedMobileNavigation() {
 
   // Close mobile menu when route changes
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setIsOpen(false);
     setActiveSubmenu(null)}, [location.pathname]);
 
   // Prevent body scroll when menu is open
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(isOpen) {
 
       document.addEventListener('mousedown', handleClickOutside);

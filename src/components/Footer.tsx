@@ -81,6 +81,8 @@ export function Footer() {
 
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     const handleScroll = () => {
       const scrollToTopButton = document.getElementById('scroll-to-top');
       if (scrollToTopButton) {

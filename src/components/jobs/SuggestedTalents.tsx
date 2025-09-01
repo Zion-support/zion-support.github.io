@@ -73,6 +73,12 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   };
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(jobId) {
       fetchSuggestedTalents();
     }

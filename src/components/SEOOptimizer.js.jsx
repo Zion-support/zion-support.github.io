@@ -35,6 +35,8 @@ export default function Page() {
             setIsAnalyzing(false)}
     }, []);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         // Auto-analyze SEO when component mounts
         analyzeSEO()}, [analyzeSEO]);
     const calculateSEOScore = (page) => {

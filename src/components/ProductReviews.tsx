@@ -25,6 +25,12 @@ const useAuth = () => {
   // For now, simulate a logged-in user for development of this component's structure
   const [user, setUser] = useState<{ id: string; name: string, isLoggedIn: boolean } | null>({ isLoggedIn: true, id: 'mockUserId', name: 'Mock User' });
   // useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
   //  // logic to check actual auth status and set user
   // }, []);
   return { user, isAuthenticated: user?.isLoggedIn ?? false };
@@ -103,6 +109,12 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
   }, [productId]); // productId is a dependency of fetchReviews
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(productId) {
       fetchReviews();
     }

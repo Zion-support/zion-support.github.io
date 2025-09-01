@@ -8,6 +8,8 @@ export const FuturisticAnimatedBackground = ({
   const canvasRef = useRef(null);
   const animationRef = useRef();
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     const canvas = canvasRef.current;
     if(!canvas) return;
     const ctx = canvas.getContext('2d');

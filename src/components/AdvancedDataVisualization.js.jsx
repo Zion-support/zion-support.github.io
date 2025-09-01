@@ -50,6 +50,12 @@ export function AdvancedDataVisualization() {
             setData(newData);
             setIsRefreshing(false)}, 1000)};
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if(autoRefresh) {
 
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds

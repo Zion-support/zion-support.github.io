@@ -38,6 +38,12 @@ export function usePoints() {
   }, [user?.id]); // Dependency for fetchLedger
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     fetchLedger(); // Initial fetch
     const interval = setInterval(fetchLedger, 30000); // Subsequent fetches every 30s
     return () => clearInterval(interval); // Cleanup interval on unmount

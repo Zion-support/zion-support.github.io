@@ -43,6 +43,12 @@ export function KanbanBoard({ jobId }) {
   const isMobile = useIsMobile();
   // Initialize columns with applications based on their status
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(applications) {
 
       // Group applications by status

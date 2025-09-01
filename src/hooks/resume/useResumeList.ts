@@ -40,6 +40,8 @@ export default function Page() {
   }, [user]); // user is a dependency of fetchResumes
   
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(user) {
       fetchResumes();
     } else {

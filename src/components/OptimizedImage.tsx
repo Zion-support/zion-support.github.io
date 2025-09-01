@@ -14,6 +14,12 @@ export default function Page() {
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(priority || !lazy) {
 
       setIsIntersecting(true);
@@ -64,6 +70,12 @@ export default function Page() {
 
   // Cleanup on unmount
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     return () => {
       if(observerRef.current) {
 

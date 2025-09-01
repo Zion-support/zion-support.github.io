@@ -8,6 +8,8 @@ export default function Page() {
   }, [jobId]); // jobId is a dependency of loadJobDetails
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     loadJobDetails();
   }, [loadJobDetails]); // Added loadJobDetails to dependency array
 

@@ -9,6 +9,8 @@ export default function Page() {
     }) ;
     // Refetch when the URL param changes
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if(initialQuery !== query) {
             setQuery(initialQuery) ;
             refetch () }
@@ -16,6 +18,8 @@ export default function Page() {
     const allResults = data?.pages.flat () ?? [];
     const loader = useRef(null) ;
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         const el = loader.current;
         if(!el) return;
         const observer = new IntersectionObserver((entries) => {

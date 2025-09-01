@@ -25,6 +25,12 @@ export function ContractForm({
 
   // Update form when initialValues change
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(initialValues) {
       Object.keys(initialValues).forEach((key) => {
         
@@ -33,6 +39,12 @@ export function ContractForm({
   
   // Track form values for template saving
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(onFormValuesChange) {
       
       });

@@ -23,6 +23,12 @@ showFilters:  true,;
 
   // Sample project data
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const sampleProjects: Project[] = [{
 
         id: '1',
@@ -149,6 +155,12 @@ showFilters:  true,;
 
   // Filter projects
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     let filtered = projects;
 
     if(selectedStatus !== 'all') {

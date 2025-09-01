@@ -96,6 +96,12 @@ export function useWallet() {
   }
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     async function loadData() {
       if(user?.id) {
         setLoading(true);

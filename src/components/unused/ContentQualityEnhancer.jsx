@@ -291,6 +291,8 @@ export default function Page() {
             setSelectedElement(null)}, 3000)}, []);
     // Auto-analyze content
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if(autoAnalyze) {
 
             const timer = setTimeout(analyzeContent, 3000);

@@ -67,6 +67,8 @@ export function CartProvider({ children }) {
   const cartKey = getCartKey(user?.id);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     let items = [];
     const stored = safeStorage.getItem(cartKey);
 
@@ -102,6 +104,8 @@ export function CartProvider({ children }) {
 
   // Save cart to storage whenever it changes
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(state.items.length > 0) {
 
       safeStorage.setItem(cartKey, JSON.stringify(state.items));

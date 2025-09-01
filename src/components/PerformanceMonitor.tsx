@@ -61,6 +61,12 @@ export default function Page() {
     []
   );
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 
     if('PerformanceObserver' in window) {
 
@@ -137,11 +143,23 @@ export default function Page() {
         clsObserver.disconnect () }}  }, []);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(metrics) {
 
       setPerformanceScore(score)}
   }, [metrics, calculatePerformanceScore]) ;
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     // Show monitor after 3 seconds
     
     return () => clearTimeout(timer) }, []) ;

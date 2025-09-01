@@ -133,6 +133,12 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
         `}
     }) }, [enabled]) ;
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!enabled) return;
 
     enhanceTypography () ;

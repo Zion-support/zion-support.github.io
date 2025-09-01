@@ -14,6 +14,8 @@ export default function Page() {
 
   // Handle scroll effect
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };

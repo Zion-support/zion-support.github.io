@@ -30,6 +30,8 @@ export default function Page() {
 
   // Load saved settings
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
 
     if(savedSettings) {
 
@@ -50,6 +52,8 @@ export default function Page() {
 
   // Keyboard navigation enhancement
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(!enabled || !settings.keyboardNavigation) return;
 
       switch(event.key) {
@@ -87,6 +91,8 @@ export default function Page() {
 
   // Enhanced focus management
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     
       setCurrentFocus(target) ;
 

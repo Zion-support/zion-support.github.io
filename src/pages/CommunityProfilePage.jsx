@@ -39,6 +39,12 @@ export default function Page() {
     const [isLoading, setIsLoading] = useState(true);
     const [posts, setPosts] = useState([]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // In a real app, we would fetch the user data here
         // For now, we'll just use the mock data
         setUser(mockUser) ;

@@ -55,6 +55,12 @@ export function ErrorBoundary({ children, fallback, onError }) {
     const [hasError, setHasError] = useState(false);
     const [error, setError] = useState(null);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handleError = (event) => {
 
             setHasError(true);

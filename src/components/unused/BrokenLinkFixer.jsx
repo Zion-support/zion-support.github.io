@@ -192,6 +192,8 @@ export default function Page() {
             link.element?.classList.remove('broken-link-highlight')}, 3000)}, []);
     // Auto-check links
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if(autoCheck) {
 
             const timer = setTimeout(checkAllLinks, 2000);

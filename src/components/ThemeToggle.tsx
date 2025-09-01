@@ -17,6 +17,12 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setMounted(true);
     
     if(savedTheme) {
@@ -24,6 +30,12 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       setTheme(savedTheme)}
   }, []) ;
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!mounted) return;
 
 <<<<<<< HEAD

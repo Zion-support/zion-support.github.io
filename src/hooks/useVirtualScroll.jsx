@@ -4,6 +4,12 @@ export default function Page() {
 , [state.scrollTop, containerHeight, itemHeight, overscan, items.length]);
     // Update virtual items when parameters change
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const { startIndex, endIndex } = virtualScrollParams;
         setState(prev => ({
 
@@ -87,6 +93,12 @@ export default function Page() {
         return index >= state.startIndex && index <= state.endIndex}, [state.startIndex, state.endIndex]);
     // Infinite scroll detection
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if(!enableInfiniteScroll || !containerRef.current)
             return;
         const handleScrollEnd = () => {
@@ -107,6 +119,12 @@ export default function Page() {
             container.removeEventListener('scroll', handleScrollEnd)}}, [enableInfiniteScroll, threshold]);
     // Cleanup on unmount
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         return () => {
             if(rafRef.current) {
 
@@ -166,6 +184,12 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
     const [searchResults, setSearchResults] = useState({ indices[], highlights: new Map() });
     // Filter items based on search query
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if(!searchQuery.trim()) {
 
             setFilteredItems(items);
@@ -217,6 +241,12 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
     const [totalHeight, setTotalHeight] = useState(0);
     // Calculate item heights
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const heights = new Map();
         const total = 0;
         items.forEach((item, index) => {
@@ -259,6 +289,12 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
     });
     // Update virtual items based on scroll position
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const startIndex = Math.max(0, findIndexFromScrollTop(state.scrollTop) - (options.overscan || 5));
         const endIndex = Math.min(items.length-1, findIndexFromScrollTop(state.scrollTop + state.containerHeight) + (options.overscan || 5));
         setState(prev => ({

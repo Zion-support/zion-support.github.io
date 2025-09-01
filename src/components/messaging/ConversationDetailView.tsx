@@ -5,6 +5,8 @@ export default function Page() {
 , [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation
   
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     scrollToBottom();
   }, [activeMessages]);
 

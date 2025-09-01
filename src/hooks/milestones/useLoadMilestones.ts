@@ -48,6 +48,8 @@ export default function Page() {
   }, [projectId]); // projectId is a dependency of fetchMilestones
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     fetchMilestones(); // Call fetchMilestones directly
   }, [fetchMilestones]); // Added fetchMilestones to the dependency array
 

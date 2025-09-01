@@ -66,6 +66,12 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   ];
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!isAutoPlaying) return;
 
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length) }, 6000) ;

@@ -35,6 +35,12 @@ export function Notification({
   const styles = notificationStyles[type];
   const Icon = styles.icon;
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(duration > 0) {
 
       const timer = setTimeout(() => {

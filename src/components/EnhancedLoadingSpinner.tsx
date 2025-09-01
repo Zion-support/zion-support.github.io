@@ -53,6 +53,12 @@ export function EnhancedLoadingSpinner({
   
   // Progress simulation
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!enabled || !showProgress) return;
 
     const interval = setInterval(() => {
@@ -85,6 +91,12 @@ export function EnhancedLoadingSpinner({
     return () => clearInterval(interval) }, [enabled, showProgress, autoComplete, autoCompleteDelay, onComplete]) ;
   // Step progression for themed variant
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 
     if(variant !== 'themed') return;
 
@@ -94,6 +106,12 @@ export function EnhancedLoadingSpinner({
     return () => clearInterval(stepInterval) }, [variant]) ;
   // Auto - complete effect
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(autoComplete && enabled) {
 <<<<<<< HEAD
       const timer = setTimeout(() => {

@@ -71,6 +71,12 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   }, [heroSlides.length]) ;
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const interval = setInterval(nextSlide, 5000) ;
     return () => clearInterval(interval) ;
   }, [nextSlide]) ;
@@ -327,6 +333,12 @@ const EnhancedHome: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setIsLoaded(true) ;
   }, []) ;
 

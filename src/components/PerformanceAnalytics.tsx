@@ -47,6 +47,8 @@ export default function Page() {
       recommendations
     }}, []) ;
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(isMonitoring) {
 
         setPerformanceData(generateMockData())}, 5000); // Update every 5 seconds

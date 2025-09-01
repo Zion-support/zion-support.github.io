@@ -541,6 +541,12 @@ export default function Page() {
     const [selectedCategory, setSelectedCategory] = React.useState("All Services");
     const [filteredServices, setFilteredServices] = React.useState(microSAASServices);
     React.useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if(selectedCategory === "All Services") {
             setFilteredServices(microSAASServices) ;
         }

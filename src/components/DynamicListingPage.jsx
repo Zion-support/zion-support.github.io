@@ -16,6 +16,12 @@ export default function Page() {
     const paginatedListings = itemsPerPage
         ? filteredListings.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage) : filteredListings;
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         setCurrentPage(1) ;
     }, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]) ;
     const handleRequestQuote = (listingId) => {

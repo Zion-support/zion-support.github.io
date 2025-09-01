@@ -40,12 +40,24 @@ export function ChatBotPanel() {
     const { theme } = useTheme();
     // Auto-scroll to bottom when messages change
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if(scrollAreaRef.current) {
 
             scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight}
     }, [messages]);
     // Focus input when component mounts
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if(inputRef.current) {
 
             inputRef.current.focus()}

@@ -5,6 +5,12 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
     const [overallScore, setOverallScore] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Simulate health check data collection
         const performHealthCheck = async () => {
             setIsLoading(true) ;

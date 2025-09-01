@@ -15,6 +15,12 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = React.useState('dark');
 
   React.useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const root = window.document.documentElement;
     root.classList.remove('light',dark');
     root.classList.add(theme);

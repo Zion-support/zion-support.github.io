@@ -78,6 +78,8 @@ export default function Page() {
   }, [user?.id]);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(user) {
       setIsLoading(true);
       Promise.all([fetchReferralCode(),

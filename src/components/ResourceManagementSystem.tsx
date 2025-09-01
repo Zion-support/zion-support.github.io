@@ -26,6 +26,12 @@ showStats:  true,;
 
   // Sample resource data
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const sampleResources: Resource[] = [{
 
         id: '1',
@@ -128,6 +134,12 @@ showStats:  true,;
 
   // Filter resources
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     let filtered = resources;
 
     if(selectedType !== 'all') {

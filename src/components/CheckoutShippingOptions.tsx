@@ -24,6 +24,12 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
   const [selected, setSelected] = useState<string>('');
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!toAddress) return;
     
       try {

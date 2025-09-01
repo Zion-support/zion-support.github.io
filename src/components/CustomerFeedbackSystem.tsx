@@ -38,6 +38,12 @@ showStats:  true,;
 
   // Sample feedback data
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const sampleFeedback: Feedback[] = [{
 
         id: '1',
@@ -115,6 +121,12 @@ showStats:  true,;
 
   // Calculate stats
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(feedback.length > 0) {
 
       const responseRate = 95; // Simulated response rate
@@ -138,6 +150,12 @@ showStats:  true,;
 
   // Filter feedback
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     let filtered = feedback;
 
     if(selectedCategory !== 'all') {

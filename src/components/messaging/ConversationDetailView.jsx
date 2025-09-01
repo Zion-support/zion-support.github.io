@@ -3,6 +3,8 @@ import { format } from 'date-fns';
 export default function Page() {
 , [activeConversation?.id, loadMessages]);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         scrollToBottom()}, [activeMessages]);
     const scrollToBottom = () => {
 

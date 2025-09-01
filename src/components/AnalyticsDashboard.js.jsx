@@ -14,6 +14,8 @@ export default function Page() {
   };
   // Update summary when events change
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     updateAnalyticsSummary();
   }, [events, currentSession]);
   // Track dashboard interactions

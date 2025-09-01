@@ -34,6 +34,8 @@ export function AutocompleteSuggestions({
   const highlightedItemRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     // If highlightedIndex is used in the condition, it should typically be a dependency.// However, the lint rule specifically asked to remove it.// Let's assume for now the scroll behavior is intended to trigger mainly on visibility and suggestion changes,
     // and the highlightedItemRef.current will point to the correct item when those change.if(visible && suggestions.length > 0 && highlightedItemRef.current && highlightedIndex !== -1) {
       highlightedItemRef.current.scrollIntoView({

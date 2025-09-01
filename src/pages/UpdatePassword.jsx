@@ -2,6 +2,8 @@ import { useForm } from 'react - hook -form';
 export default function Page() {
 ) ;
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         // Extract access token from URL hash
         const hashParams = new URLSearchParams(location.hash.substring (1) ) ;
         const token = hashParams.get("access_token") ;

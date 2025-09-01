@@ -127,6 +127,12 @@ autoAnalyze:  true,;
 
   // Auto - analyze on mount
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(autoAnalyze) {
 
       analyzeSEO()}

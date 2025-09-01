@@ -9,6 +9,12 @@ export default function Page() {
     const [progress, setProgress] = useState(0);
     // Initialize form data and validation
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const initialValidation = {};
         fields.forEach(field => {
 
@@ -23,6 +29,12 @@ export default function Page() {
         setValidation(initialValidation) }, [fields]) ;
     // Update progress based on filled fields
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 
         const filledFields = Object.values(formData).filter(value => typeof value === 'boolean' ? value : value.toString().trim() !== '').length;
         const totalFields = fields.length;

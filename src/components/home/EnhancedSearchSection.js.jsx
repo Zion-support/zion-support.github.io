@@ -5,6 +5,8 @@ export default function Page() {
         { name: 'Mobile App Development', icon: _jsx(Briefcase, { className: "h-4 w-4" }), count: '3.1k' }
     ];
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if(searchQuery.length > 2) {
 
             // Simulate AI-powered suggestions

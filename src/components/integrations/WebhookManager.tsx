@@ -8,6 +8,8 @@ export default function Page() {
   ];
   
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     fetchWebhooks();
   }, [fetchWebhooks]); // Added fetchWebhooks
   

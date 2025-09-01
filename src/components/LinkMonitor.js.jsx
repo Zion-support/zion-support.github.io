@@ -81,6 +81,8 @@ export default function Page() {
   };
   // Auto-scan on component mount
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(autoFix) {
 
       scanPageLinks();

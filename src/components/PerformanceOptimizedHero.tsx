@@ -13,6 +13,12 @@ export default function Page() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setIsVisible(true) ;
 
     const interval = setInterval(() => {;
@@ -20,6 +26,12 @@ export default function Page() {
     }, 3000) ;
 =======
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setIsVisible(true) ;
 
       setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ;

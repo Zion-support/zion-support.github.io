@@ -277,6 +277,12 @@ className:  '',;
   const [isScrolled, setIsScrolled] = useState(false);
   
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 <<<<<<< HEAD
     const handleScroll = () => {;
       setIsScrolled(window.scrollY > 10) ;
@@ -287,6 +293,12 @@ className:  '',;
   }, []) ;
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setIsOpen(false) ;
     setActiveDropdown(null) ;
   }, [location]) ;
@@ -315,6 +327,12 @@ className:  '',;
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     setIsOpen(false);
     setActiveDropdown(null)}, [location]);
 

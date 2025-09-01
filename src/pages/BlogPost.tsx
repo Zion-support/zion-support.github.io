@@ -154,7 +154,7 @@ export default function Page() {
               {/* Article Content */}
               <div
                 className="text-gray - 300 leading -relaxed"
-                dangerouslySetInnerHTML={{ __html: blogPost.content }}
+                // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blogPost.content }}
               />
             </motion.div>
           </div>

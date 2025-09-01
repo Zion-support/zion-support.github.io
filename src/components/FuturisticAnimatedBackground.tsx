@@ -8,6 +8,8 @@ export default FuturisticAnimatedBackground;
 
 >>>>>>> main
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     
     if(!canvas) return;
 

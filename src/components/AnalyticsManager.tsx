@@ -59,6 +59,12 @@ export function AnalyticsManager() {
 
   // Initialize analytics tracking
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     initializeAnalytics();
     return () => cleanupAnalytics()}, []);
 
@@ -277,6 +283,12 @@ export function AnalyticsManager() {
 
   // Update analytics data when session changes
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(currentSession) {
 
       setAnalyticsData(report)}

@@ -118,6 +118,12 @@ export function InteractivePortfolio() {
             closeModal()}
     };
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if(isModalOpen) {
 
             document.body.style.overflow = 'hidden'}

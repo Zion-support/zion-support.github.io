@@ -528,6 +528,12 @@ export function useRenderTime() {
   
   const [renderTime, setRenderTime] = useState(0);
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 
     setRenderTime(time);
     renderStart.current = renderEnd});
@@ -554,6 +560,12 @@ export function useComponentPerformance(componentName: string) {
     }}, [componentName]);
   
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     startTime.current = performance.now();
     setMountTime(startTime.current);
 

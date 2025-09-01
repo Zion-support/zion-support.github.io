@@ -20,6 +20,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(isInView) {
 
           let current = 0;

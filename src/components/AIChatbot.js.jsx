@@ -11,6 +11,12 @@ export default function Page() {
     const inputRef = useRef(null);
     // Initialize chatbot
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if(isOpen && messages.length === 0) {
 
             addBotMessage(welcomeMessage, {
@@ -27,6 +33,12 @@ export default function Page() {
     }, [isOpen, messages.length, welcomeMessage]);
     // Auto-scroll to bottom
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages]);
     // Track chatbot interactions

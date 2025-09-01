@@ -40,6 +40,12 @@ export function EnhancedSearchInput({
   );
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     debouncedFilterSuggestions(value, searchSuggestions);
     setHighlightedIndex(-1); 
     return () => {
@@ -48,6 +54,12 @@ export function EnhancedSearchInput({
   }, [value, searchSuggestions, debouncedFilterSuggestions]);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     function handleClickOutside(event: MouseEvent) {
       if(containerRef.current && !containerRef.current.contains(event.target as Node)) {
         setIsFocused(false);

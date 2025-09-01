@@ -97,6 +97,12 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
             setIsAnalyzing(false)}
     }, []);
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         // Auto-analyze SEO when component mounts
         analyzeSEO()}, [analyzeSEO]);
     const calculateSEOScore = (page) => {

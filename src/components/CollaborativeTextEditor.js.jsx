@@ -218,6 +218,12 @@ export default function Page() {
         trackEvent('editor',content_exported', format, null, { format })}, [editorState.content, onExport, trackEvent]);
     // Handle collaboration text changes
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         const handleCollaborationTextChange = (event) => {
 
             const { message } = event.detail;
@@ -245,6 +251,12 @@ export default function Page() {
             window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}}, [userId, trackEvent]);
     // Auto-save functionality
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if(!enableVersioning)
             return;
         const autoSaveInterval = setInterval(() => {
@@ -255,6 +267,12 @@ export default function Page() {
         return () => clearInterval(autoSaveInterval)}, [editorState.content, initialContent, enableVersioning, handleSave]);
     // Generate suggestions when content changes significantly
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if(!enableAI) return;
         const debounceTimer = setTimeout(() => {
             if(editorState.content.length > 100) {

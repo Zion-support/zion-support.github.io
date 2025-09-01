@@ -164,12 +164,24 @@ export function SecurityMonitoringSystem({
   ]);
   // Auto-scan when component opens
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(autoScan && isOpen && !scanComplete) {
 
       startSecurityScan()}
   }, [autoScan, isOpen, scanComplete, startSecurityScan]) ;
   // Setup real - time updates
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(showRealTime && isOpen && scanComplete) {
 
       scanIntervalRef.current = setInterval(() => {

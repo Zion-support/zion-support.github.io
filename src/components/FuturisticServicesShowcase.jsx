@@ -377,6 +377,12 @@ export const FuturisticServicesShowcase = () => {
   });
   // Set all services as visible initially for better UX
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const allIndices = new Set(filteredServices.map((_, index) => index));
     setVisibleServices(allIndices);
   }, [filteredServices]);

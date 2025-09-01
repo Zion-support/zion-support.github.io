@@ -171,6 +171,12 @@ export function EnhancedSearch({
 
   // Handle keyboard navigation
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     const handleKeyDown = (event: anyKeyboardEvent) => {
       if(event.key === 'Escape') {
         setIsOpen(false) ;
@@ -188,6 +194,12 @@ export function EnhancedSearch({
 
   // Handle keyboard navigation
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     
         setSelectedIndex(-1)} else if(event.key === 'ArrowDown') {
 
@@ -212,6 +224,12 @@ export function EnhancedSearch({
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex]);
   // Search functionality
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(debouncedQuery.trim().length < 2) {
 
       setResults([]);
@@ -244,6 +262,12 @@ export function EnhancedSearch({
 
   // Handle click outside
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     
         setRecentSearches(JSON.parse (saved) ) } catch(error) {
 
@@ -252,6 +276,12 @@ export function EnhancedSearch({
 
   // Handle click outside
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     
       if(searchRef.current && !searchRef.current.contains (event.target as Node) ) {;
         setIsOpen(false) ;
@@ -270,6 +300,12 @@ export function EnhancedSearch({
 
   // Handle keyboard navigation
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         inputRef.current?.focus () }
     };
 

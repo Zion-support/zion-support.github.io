@@ -168,6 +168,8 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 
     return optimizations}, [enabled, metrics]) ;
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(!enabled) return;
 
     // Analyze bundle after page load
@@ -182,6 +184,8 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 >>>>>>> main
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(!enabled) return;
 
     // Run optimization analysis

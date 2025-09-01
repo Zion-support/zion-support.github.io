@@ -30,6 +30,8 @@ export default function Page() {
   }, [metrics]);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     // Only run in browser environment'
     if(typeof window === 'null') return;
 

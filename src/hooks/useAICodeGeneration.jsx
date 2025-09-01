@@ -688,6 +688,8 @@ def generated_function():;"
  */`};
     // Cleanup timeout on unmount
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         return () => {
             if(generationTimeoutRef.current) {
 

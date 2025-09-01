@@ -8,6 +8,8 @@ export default function Page() {
   const [web3ModalInstance, setWeb3ModalInstance] = useState<Web3Modal | null>(null);
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     if(typeof window !== 'undefined') {
         const providerOptions = {};
         const modal = new Web3Modal({
