@@ -1,8 +1,1 @@
-export default function AutoUpdate_2025_08_08t16_38_19_257z() {
-  return (
-    <div>
-      <h1 className="text-2xl font-semibold">Auto Update</h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300">Generated page placeholder.</p>
-    </div>
-  );
-}
+export default function AutoUpdate_2025_08_08T16_38_19_257Z() { return null; }
