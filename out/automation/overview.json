@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T23:08:25.536Z",
+  "generatedAt": "2025-08-11T23:09:29.966Z",
   "functions": [
     "a11y-audit-runner",
     "ai-changelog-runner",
@@ -59,7 +59,7 @@
     "image-optimizer-runner",
     "innovation-generator",
     "innovation-lab",
-    "internal-anchor-audit-runner",
+    "internal-link-suggester",
     "link-and-health-scheduler",
     "link-crawler",
     "linting-orchestrator-runner",
@@ -67,14 +67,16 @@
     "marketing-and-features-promo",
     "marketing-scheduler",
     "media-og-and-optimize",
-    "meta-tags-audit-runner",
+    "meta-audit",
     "netlify-auto-healer-runner",
     "newsroom-auto-publisher",
     "newsroom-runner",
     "og-image-update-runner",
     "orphan-asset-report-runner",
     "readme-advertiser",
-    "redirects-synthesizer",
+    "readme-badges-updater",
+    "redirect-healer",
+    "redirect-manager",
     "repo-knowledge-graph-runner",
     "repo-radar-and-graph",
     "repo-radar-runner",
@@ -98,7 +100,7 @@
     "ui-evolution-runner",
     "ultrafast-front-orchestrator",
     "ultrafast-orchestrator",
-    "unused-assets-report",
+    "user-journey-simulator",
     "website-search-index-runner"
   ]
 }
