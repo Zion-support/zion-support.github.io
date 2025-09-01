@@ -220,19 +220,22 @@ module.exports = {
         NODE_ENV: 'production',
         PM2_PROCESS: 'sitemap-runner'
       },
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      log_file: './logs/ai-code-review.log',
-      error_file: './logs/ai-code-review-error.log',
-      out_file: './logs/ai-code-review-out.log'
+      cron_restart: '0 8 * * *', // Restart daily at 8 AM
+      log_file: 'logs/sitemap-runner.log',
+      out_file: 'logs/sitemap-runner-out.log',
+      error_file: 'logs/sitemap-runner-error.log'
     },
 
+    // Automated Build & Lint fixer
     {
-      name: 'smart-dependency-intelligence',
-      script: './scripts/automation/smart-dependency-intelligence.cjs',
+      name: 'auto-fix-and-build',
+      script: 'bash',
+      args: '-lc "npm install --silent && npm run lint || true && npm run type-check || true && npm run build"',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
+<<<<<<< HEAD
       env: {
         NODE_ENV: 'production'
       },
@@ -341,8 +344,26 @@ module.exports = {
       error_file: './logs/intelligent-build-pipeline-error.log',
       out_file: './logs/intelligent-build-pipeline-out.log'
 =======
->>>>>>> main
->>>>>>> 8fc73822ab032b0e6851abfe165a77e7d84c153a
+      env: { NODE_ENV: 'production' },
+      cron_restart: '0 */6 * * *',
+      log_file: 'logs/auto-fix-and-build.log',
+      out_file: 'logs/auto-fix-and-build-out.log',
+      error_file: 'logs/auto-fix-and-build-error.log'
+    },
+
+    // Watcher to rebuild on changes
+    {
+      name: 'dev-watch-build',
+      script: 'bash',
+      args: '-lc "npm run build"',
+      instances: 1,
+      watch: ['src', 'public', 'postcss.config.js', 'vite.config.ts'],
+      ignore_watch: ['dist', 'node_modules', 'logs'],
+      max_memory_restart: '1G',
+      env: { NODE_ENV: 'development' },
+      log_file: 'logs/dev-watch-build.log',
+      out_file: 'logs/dev-watch-build-out.log',
+      error_file: 'logs/dev-watch-build-error.log'
     }
   ],
 

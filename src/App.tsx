@@ -1,16 +1,24 @@
-
 import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { ErrorBoundary } from 'react-error-boundary';
+import { LoadingSpinner } from './components/ui/loading-spinner';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
-import ErrorBoundary from './components/ErrorBoundary';
+// Enhanced Layout Components
+// import { EnhancedHeader } from './components/EnhancedHeader';
+// import { EnhancedFooter } from './components/EnhancedFooter';
+// Enhanced Components
+// Trimmed imports to minimal surface for now
 
 // Enhanced lazy loading with preloading hints
-const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
+const createLazyComponent = (
+  importFn: () => Promise<{ default: React.ComponentType<any> }>,
+  fallback?: React.ReactNode
+) => {
   const LazyComponent = lazy(importFn);
   return (props: any) => (
-    <Suspense fallback={fallback || <div>Loading...</div>}>
+    <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>
   );

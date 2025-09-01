@@ -1,59 +1,40 @@
 // Service Worker Registration Utility
-export function registerServiceWorker(): void {
+export function registerServiceWorker(): Promise<ServiceWorkerRegistration | undefined> {
   if ('serviceWorker' in navigator) {
-<<<<<<< HEAD
-
-    
-    
-=======
-    
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    navigator.serviceWorker
+    const swUrl = '/sw.js';
+    return navigator.serviceWorker
       .register(swUrl)
       .then((registration) => {
         registration.addEventListener('updatefound', () => {
-          
+          const newWorker = registration.installing;
           if (newWorker) {
-<<<<<<< HEAD
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             newWorker.addEventListener('statechange', () => {
               if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                // New content available
+                // New content is available
               }
-            })}
-        })})
-<<<<<<< HEAD
-      .catch(registrationError => {
-
-        // console.error('SW registration failed: ', registrationError)})}
-
-export function unregisterServiceWorker(): void {
-
-  if ('serviceWorker' in navigator) {
-
-    navigator.serviceWorker.ready
-      .then(registration => {
-
-        registration.unregister()})
-      .catch(error => {
-
-        // console.error(error.message)})}
-}
-=======
+            });
+          }
+        });
+        return registration;
+      })
       .catch(() => {
-        // Silent fail
-      })}
+        // console.error('SW registration failed')
+        return undefined;
+      });
+  }
+  return Promise.resolve(undefined);
 }
 
-export function unregisterServiceWorker(): void {
+export function unregisterServiceWorker(): Promise<boolean | undefined> {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.ready
+    return navigator.serviceWorker.ready
       .then((registration) => {
-        registration.unregister()})
+        return registration.unregister();
+      })
       .catch(() => {
-        // Silent fail
-      })}
+        // console.error('Unregister failed')
+        return false;
+      });
+  }
+  return Promise.resolve(undefined);
 }
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
