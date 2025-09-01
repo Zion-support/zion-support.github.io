@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  MessageCircle, 
-  Bot, 
-  Users, 
-  Zap, 
   Shield, 
+  CheckCircle, 
+  AlertTriangle, 
+  FileText, 
+  Zap, 
   Brain, 
-  CheckCircle,
+  BarChart3,
   ArrowRight,
   Star,
   Award,
@@ -23,6 +23,7 @@ import {
   Chip,
   Wifi,
   ShieldCheck,
+  Bot,
   Workflow,
   Eye,
   Sparkles,
@@ -32,6 +33,7 @@ import {
   Coins,
   Satellite,
   Activity,
+  MessageCircle,
   Search,
   BarChart,
   Users2,
@@ -43,93 +45,87 @@ import {
   Scale,
   Gavel,
   Clipboard,
-  BookOpen,
-  LineChart,
-  PieChart as PieChartIcon,
-  Activity as ActivityIcon,
-  Clock,
-  Globe,
-  Headphones
+  BookOpen
 } from 'lucide-react';
 
-export default function AICustomerSupportAutomation() {
+export default function AIComplianceAssistant() {
   const features = [
     {
-      icon: Bot,
-      title: "Intelligent Chatbots",
-      description: "AI-powered chatbots that understand context and provide accurate responses 24/7"
+      icon: Shield,
+      title: "Automated Compliance Monitoring",
+      description: "24/7 monitoring of regulatory requirements and compliance status across all systems"
     },
     {
-      icon: MessageCircle,
-      title: "Multi-Channel Support",
-      description: "Seamless support across email, chat, social media, and phone channels"
+      icon: CheckCircle,
+      title: "Real-time Risk Assessment",
+      description: "Instant identification and evaluation of compliance risks and violations"
+    },
+    {
+      icon: FileText,
+      title: "Document Management",
+      description: "Intelligent document review, classification, and compliance verification"
     },
     {
       icon: Brain,
-      title: "Natural Language Processing",
-      description: "Advanced NLP that understands customer intent and provides relevant solutions"
+      title: "AI-Powered Auditing",
+      description: "Machine learning algorithms that continuously improve compliance detection accuracy"
     },
     {
-      icon: Zap,
-      title: "Instant Response",
-      description: "Lightning-fast response times with automated ticket routing and escalation"
+      icon: AlertTriangle,
+      title: "Proactive Alerts",
+      description: "Early warning system for potential compliance issues before they become violations"
     },
     {
-      icon: Shield,
-      title: "Secure & Compliant",
-      description: "Enterprise-grade security with GDPR and HIPAA compliance built-in"
-    },
-    {
-      icon: BarChart,
-      title: "Performance Analytics",
-      description: "Comprehensive insights into support performance and customer satisfaction"
+      icon: BarChart3,
+      title: "Comprehensive Reporting",
+      description: "Detailed compliance reports and analytics for stakeholders and regulators"
     }
   ];
 
   const benefits = [
-    "Reduce response time by 90% with instant automated support",
-    "Handle 80% of customer inquiries without human intervention",
-    "Improve customer satisfaction scores by 40%",
-    "Reduce support costs by 60% through automation",
-    "Provide 24/7 support coverage across all time zones",
-    "Scale support operations without proportional cost increases"
+    "Reduce compliance violations by up to 90% through proactive monitoring",
+    "Automate 80% of routine compliance tasks and documentation",
+    "Achieve 100% audit readiness with real-time compliance tracking",
+    "Reduce compliance costs by 60% through intelligent automation",
+    "Improve regulatory reporting accuracy and timeliness",
+    "Ensure consistent compliance across all business units and locations"
+  ];
+
+  const complianceAreas = [
+    {
+      title: "GDPR & Data Privacy",
+      description: "Personal data protection, consent management, and privacy compliance"
+    },
+    {
+      title: "SOX & Financial Compliance",
+      description: "Financial reporting, internal controls, and audit requirements"
+    },
+    {
+      title: "HIPAA & Healthcare",
+      description: "Patient data protection and healthcare information security"
+    },
+    {
+      title: "ISO Standards",
+      description: "Quality management, information security, and environmental standards"
+    }
   ];
 
   const useCases = [
     {
-      title: "E-commerce & Retail",
-      description: "Online stores handling high-volume customer inquiries and order support"
-    },
-    {
-      title: "SaaS & Technology",
-      description: "Software companies providing technical support and account assistance"
-    },
-    {
       title: "Financial Services",
-      description: "Banks and fintech companies with complex customer service requirements"
+      description: "Banks, insurance companies, and fintech firms with strict regulatory requirements"
     },
     {
-      title: "Healthcare & Wellness",
-      description: "Medical providers offering patient support and appointment scheduling"
-    }
-  ];
-
-  const supportChannels = [
-    {
-      title: "Live Chat",
-      description: "Real-time chat support with intelligent routing and escalation"
+      title: "Healthcare Organizations",
+      description: "Hospitals, clinics, and health tech companies handling sensitive patient data"
     },
     {
-      title: "Email Support",
-      description: "Automated email responses with smart categorization and routing"
+      title: "E-commerce & Retail",
+      description: "Online businesses managing customer data and payment compliance"
     },
     {
-      title: "Social Media",
-      description: "Monitor and respond to customer inquiries across social platforms"
-    },
-    {
-      title: "Phone Support",
-      description: "Intelligent call routing and automated call center management"
+      title: "Manufacturing & Supply Chain",
+      description: "Companies with complex regulatory requirements across multiple jurisdictions"
     }
   ];
 
@@ -145,17 +141,17 @@ export default function AICustomerSupportAutomation() {
             className="text-center"
           >
             <div className="inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Bot className="w-4 h-4" />
-              <span>AI-Powered Customer Support</span>
+              <Shield className="w-4 h-4" />
+              <span>AI-Powered Compliance</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Customer Support Automation
+              AI Compliance Assistant
             </h1>
             
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Transform your customer support with intelligent automation, 24/7 availability, 
-              and AI-driven insights that deliver exceptional customer experiences at scale.
+              Stay ahead of regulatory requirements with intelligent compliance automation, 
+              real-time monitoring, and AI-driven risk assessment that keeps your business compliant 24/7.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -196,10 +192,10 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Intelligent Support Features
+              Intelligent Compliance Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Advanced AI capabilities that revolutionize customer support operations
+              Advanced AI capabilities that automate and streamline your compliance operations
             </p>
           </motion.div>
           
@@ -233,10 +229,10 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Transform Your Customer Support
+              Transform Your Compliance Operations
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Experience significant improvements in efficiency and customer satisfaction
+              Experience significant improvements in compliance efficiency and risk reduction
             </p>
           </motion.div>
           
@@ -274,7 +270,7 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
 
-      {/* Support Channels Section */}
+      {/* Compliance Areas Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -284,15 +280,15 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Multi-Channel Support
+              Comprehensive Compliance Coverage
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Provide consistent support across all customer touchpoints
+              Support for major regulatory frameworks and industry standards
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {supportChannels.map((channel, index) => (
+            {complianceAreas.map((area, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -302,11 +298,11 @@ export default function AICustomerSupportAutomation() {
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MessageCircle className="w-6 h-6 text-white" />
+                    <Scale className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
-                    <p className="text-zion-slate-light">{channel.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
+                    <p className="text-zion-slate-light">{area.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -328,7 +324,7 @@ export default function AICustomerSupportAutomation() {
               Perfect For Your Industry
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Tailored support automation solutions for various business types
+              Tailored compliance solutions for various industry requirements
             </p>
           </motion.div>
           
@@ -342,7 +338,7 @@ export default function AICustomerSupportAutomation() {
                 className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
+                  <Shield className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                 <p className="text-zion-slate-light text-sm">{useCase.description}</p>
@@ -361,10 +357,10 @@ export default function AICustomerSupportAutomation() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Support?
+              Ready to Simplify Compliance?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join organizations already delivering exceptional customer experiences with AI
+              Join organizations already automating their compliance operations with AI
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -373,7 +369,7 @@ export default function AICustomerSupportAutomation() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
               >
-                Start Automating Today
+                Start Compliant Today
                 <Rocket className="inline ml-2 w-5 h-5" />
               </motion.button>
               

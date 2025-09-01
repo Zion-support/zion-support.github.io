@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  MessageCircle, 
-  Bot, 
   Users, 
+  TrendingUp, 
+  Target, 
+  BarChart3, 
   Zap, 
   Shield, 
   Brain, 
@@ -23,6 +24,7 @@ import {
   Chip,
   Wifi,
   ShieldCheck,
+  Bot,
   Workflow,
   Eye,
   Sparkles,
@@ -32,104 +34,73 @@ import {
   Coins,
   Satellite,
   Activity,
+  MessageCircle,
   Search,
   BarChart,
   Users2,
   Settings,
-  Palette,
-  Calculator,
-  PieChart,
-  Target,
-  Scale,
-  Gavel,
-  Clipboard,
-  BookOpen,
-  LineChart,
-  PieChart as PieChartIcon,
-  Activity as ActivityIcon,
-  Clock,
-  Globe,
-  Headphones
+  Palette
 } from 'lucide-react';
 
-export default function AICustomerSupportAutomation() {
+export default function AISalesCopilot() {
   const features = [
     {
-      icon: Bot,
-      title: "Intelligent Chatbots",
-      description: "AI-powered chatbots that understand context and provide accurate responses 24/7"
-    },
-    {
-      icon: MessageCircle,
-      title: "Multi-Channel Support",
-      description: "Seamless support across email, chat, social media, and phone channels"
-    },
-    {
       icon: Brain,
-      title: "Natural Language Processing",
-      description: "Advanced NLP that understands customer intent and provides relevant solutions"
+      title: "Intelligent Lead Scoring",
+      description: "AI-powered lead qualification and prioritization for maximum conversion rates"
+    },
+    {
+      icon: Target,
+      title: "Predictive Analytics",
+      description: "Forecast sales outcomes and identify high-value opportunities with machine learning"
+    },
+    {
+      icon: Users,
+      title: "Customer Behavior Analysis",
+      description: "Deep insights into customer preferences and buying patterns"
+    },
+    {
+      icon: TrendingUp,
+      title: "Sales Performance Optimization",
+      description: "Real-time recommendations to improve sales team effectiveness"
     },
     {
       icon: Zap,
-      title: "Instant Response",
-      description: "Lightning-fast response times with automated ticket routing and escalation"
+      title: "Automated Follow-ups",
+      description: "Smart scheduling and personalized follow-up sequences"
     },
     {
-      icon: Shield,
-      title: "Secure & Compliant",
-      description: "Enterprise-grade security with GDPR and HIPAA compliance built-in"
-    },
-    {
-      icon: BarChart,
-      title: "Performance Analytics",
-      description: "Comprehensive insights into support performance and customer satisfaction"
+      icon: BarChart3,
+      title: "Advanced Reporting",
+      description: "Comprehensive dashboards and actionable insights"
     }
   ];
 
   const benefits = [
-    "Reduce response time by 90% with instant automated support",
-    "Handle 80% of customer inquiries without human intervention",
-    "Improve customer satisfaction scores by 40%",
-    "Reduce support costs by 60% through automation",
-    "Provide 24/7 support coverage across all time zones",
-    "Scale support operations without proportional cost increases"
+    "Increase sales conversion rates by up to 300%",
+    "Reduce sales cycle time by 40%",
+    "Improve lead qualification accuracy by 85%",
+    "Boost sales team productivity by 60%",
+    "Enhance customer engagement and retention",
+    "Real-time performance monitoring and optimization"
   ];
 
   const useCases = [
     {
-      title: "E-commerce & Retail",
-      description: "Online stores handling high-volume customer inquiries and order support"
+      title: "Enterprise Sales Teams",
+      description: "Large organizations with complex sales processes and multiple stakeholders"
     },
     {
-      title: "SaaS & Technology",
-      description: "Software companies providing technical support and account assistance"
+      title: "B2B SaaS Companies",
+      description: "Software companies selling to businesses with long sales cycles"
     },
     {
-      title: "Financial Services",
-      description: "Banks and fintech companies with complex customer service requirements"
+      title: "Consulting Firms",
+      description: "Professional services companies managing multiple client relationships"
     },
     {
-      title: "Healthcare & Wellness",
-      description: "Medical providers offering patient support and appointment scheduling"
-    }
-  ];
-
-  const supportChannels = [
-    {
-      title: "Live Chat",
-      description: "Real-time chat support with intelligent routing and escalation"
-    },
-    {
-      title: "Email Support",
-      description: "Automated email responses with smart categorization and routing"
-    },
-    {
-      title: "Social Media",
-      description: "Monitor and respond to customer inquiries across social platforms"
-    },
-    {
-      title: "Phone Support",
-      description: "Intelligent call routing and automated call center management"
+      title: "Manufacturing & Distribution",
+      description: "Companies with complex product catalogs and pricing structures"
     }
   ];
 
@@ -145,17 +116,17 @@ export default function AICustomerSupportAutomation() {
             className="text-center"
           >
             <div className="inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Bot className="w-4 h-4" />
-              <span>AI-Powered Customer Support</span>
+              <Brain className="w-4 h-4" />
+              <span>AI-Powered Sales Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Customer Support Automation
+              AI Sales Copilot
             </h1>
             
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Transform your customer support with intelligent automation, 24/7 availability, 
-              and AI-driven insights that deliver exceptional customer experiences at scale.
+              Transform your sales process with intelligent automation, predictive analytics, 
+              and AI-driven insights that boost conversion rates and accelerate revenue growth.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -196,10 +167,10 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Intelligent Support Features
+              Intelligent Sales Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Advanced AI capabilities that revolutionize customer support operations
+              Leverage cutting-edge AI to automate, optimize, and scale your sales operations
             </p>
           </motion.div>
           
@@ -233,10 +204,10 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Transform Your Customer Support
+              Transform Your Sales Performance
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Experience significant improvements in efficiency and customer satisfaction
+              Experience measurable improvements in every aspect of your sales process
             </p>
           </motion.div>
           
@@ -274,7 +245,7 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
 
-      {/* Support Channels Section */}
+      {/* Use Cases Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -284,51 +255,10 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Multi-Channel Support
+              Perfect For Your Business
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Provide consistent support across all customer touchpoints
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {supportChannels.map((channel, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MessageCircle className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
-                    <p className="text-zion-slate-light">{channel.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 bg-zion-blue-dark/30 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Perfect For Your Industry
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Tailored support automation solutions for various business types
+              Whether you're a startup or enterprise, our AI Sales Copilot adapts to your needs
             </p>
           </motion.div>
           
@@ -361,10 +291,10 @@ export default function AICustomerSupportAutomation() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Support?
+              Ready to Revolutionize Your Sales?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join organizations already delivering exceptional customer experiences with AI
+              Join thousands of companies already using AI to transform their sales performance
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -373,7 +303,7 @@ export default function AICustomerSupportAutomation() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
               >
-                Start Automating Today
+                Get Started Today
                 <Rocket className="inline ml-2 w-5 h-5" />
               </motion.button>
               

@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  MessageCircle, 
-  Bot, 
-  Users, 
+  BarChart3, 
+  TrendingUp, 
+  DollarSign, 
+  Cloud, 
   Zap, 
   Shield, 
   Brain, 
@@ -23,6 +24,7 @@ import {
   Chip,
   Wifi,
   ShieldCheck,
+  Bot,
   Workflow,
   Eye,
   Sparkles,
@@ -32,6 +34,7 @@ import {
   Coins,
   Satellite,
   Activity,
+  MessageCircle,
   Search,
   BarChart,
   Users2,
@@ -40,96 +43,87 @@ import {
   Calculator,
   PieChart,
   Target,
-  Scale,
-  Gavel,
-  Clipboard,
-  BookOpen,
-  LineChart,
-  PieChart as PieChartIcon,
-  Activity as ActivityIcon,
-  Clock,
-  Globe,
-  Headphones
+  AlertTriangle
 } from 'lucide-react';
 
-export default function AICustomerSupportAutomation() {
+export default function CloudFinOpsOptimizer() {
   const features = [
     {
-      icon: Bot,
-      title: "Intelligent Chatbots",
-      description: "AI-powered chatbots that understand context and provide accurate responses 24/7"
+      icon: Calculator,
+      title: "Cost Optimization Engine",
+      description: "AI-powered cost analysis and optimization recommendations for cloud resources"
     },
     {
-      icon: MessageCircle,
-      title: "Multi-Channel Support",
-      description: "Seamless support across email, chat, social media, and phone channels"
+      icon: BarChart3,
+      title: "Real-time Cost Monitoring",
+      description: "Live tracking of cloud spending with instant alerts and notifications"
     },
     {
-      icon: Brain,
-      title: "Natural Language Processing",
-      description: "Advanced NLP that understands customer intent and provides relevant solutions"
+      icon: Target,
+      title: "Budget Management",
+      description: "Set and enforce budgets with automated cost controls and forecasting"
     },
     {
-      icon: Zap,
-      title: "Instant Response",
-      description: "Lightning-fast response times with automated ticket routing and escalation"
+      icon: TrendingUp,
+      title: "Performance Analytics",
+      description: "Comprehensive insights into resource utilization and performance metrics"
     },
     {
       icon: Shield,
-      title: "Secure & Compliant",
-      description: "Enterprise-grade security with GDPR and HIPAA compliance built-in"
+      title: "Compliance Tracking",
+      description: "Monitor and ensure compliance with financial and regulatory requirements"
     },
     {
-      icon: BarChart,
-      title: "Performance Analytics",
-      description: "Comprehensive insights into support performance and customer satisfaction"
+      icon: Brain,
+      title: "Predictive Cost Modeling",
+      description: "Machine learning models to forecast future costs and optimize spending"
     }
   ];
 
   const benefits = [
-    "Reduce response time by 90% with instant automated support",
-    "Handle 80% of customer inquiries without human intervention",
-    "Improve customer satisfaction scores by 40%",
-    "Reduce support costs by 60% through automation",
-    "Provide 24/7 support coverage across all time zones",
-    "Scale support operations without proportional cost increases"
+    "Reduce cloud costs by up to 40% through intelligent optimization",
+    "Improve resource utilization efficiency by 60%",
+    "Eliminate waste with automated cost anomaly detection",
+    "Achieve better budget predictability and control",
+    "Streamline financial operations and reporting",
+    "Ensure compliance with cost governance policies"
   ];
 
   const useCases = [
     {
-      title: "E-commerce & Retail",
-      description: "Online stores handling high-volume customer inquiries and order support"
+      title: "Enterprise Cloud Users",
+      description: "Large organizations managing complex multi-cloud environments"
     },
     {
-      title: "SaaS & Technology",
-      description: "Software companies providing technical support and account assistance"
+      title: "Startups & Scale-ups",
+      description: "Growing companies optimizing cloud costs during rapid expansion"
     },
     {
       title: "Financial Services",
-      description: "Banks and fintech companies with complex customer service requirements"
+      description: "Banks and fintech companies with strict cost compliance requirements"
     },
     {
-      title: "Healthcare & Wellness",
-      description: "Medical providers offering patient support and appointment scheduling"
+      title: "E-commerce & SaaS",
+      description: "Digital businesses with variable cloud usage patterns"
     }
   ];
 
-  const supportChannels = [
+  const optimizationStrategies = [
     {
-      title: "Live Chat",
-      description: "Real-time chat support with intelligent routing and escalation"
+      title: "Resource Right-sizing",
+      description: "Automatically adjust resource allocation based on actual usage patterns"
     },
     {
-      title: "Email Support",
-      description: "Automated email responses with smart categorization and routing"
+      title: "Reserved Instance Optimization",
+      description: "Maximize savings through strategic reserved instance purchases"
     },
     {
-      title: "Social Media",
-      description: "Monitor and respond to customer inquiries across social platforms"
+      title: "Spot Instance Management",
+      description: "Leverage spot instances for non-critical workloads to reduce costs"
     },
     {
-      title: "Phone Support",
-      description: "Intelligent call routing and automated call center management"
+      title: "Storage Tier Optimization",
+      description: "Move data to appropriate storage tiers based on access patterns"
     }
   ];
 
@@ -145,17 +139,17 @@ export default function AICustomerSupportAutomation() {
             className="text-center"
           >
             <div className="inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Bot className="w-4 h-4" />
-              <span>AI-Powered Customer Support</span>
+              <Cloud className="w-4 h-4" />
+              <span>Cloud Financial Operations</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Customer Support Automation
+              Cloud FinOps Optimizer
             </h1>
             
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Transform your customer support with intelligent automation, 24/7 availability, 
-              and AI-driven insights that deliver exceptional customer experiences at scale.
+              Master cloud cost management with intelligent FinOps automation, real-time monitoring, 
+              and AI-driven optimization strategies that maximize your cloud investment.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -196,10 +190,10 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Intelligent Support Features
+              Comprehensive FinOps Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Advanced AI capabilities that revolutionize customer support operations
+              Everything you need to optimize cloud costs and maximize financial efficiency
             </p>
           </motion.div>
           
@@ -233,10 +227,10 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Transform Your Customer Support
+              Transform Your Cloud Economics
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Experience significant improvements in efficiency and customer satisfaction
+              Experience significant cost savings and improved financial control
             </p>
           </motion.div>
           
@@ -274,7 +268,7 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
 
-      {/* Support Channels Section */}
+      {/* Optimization Strategies Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -284,15 +278,15 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Multi-Channel Support
+              Intelligent Optimization Strategies
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Provide consistent support across all customer touchpoints
+              AI-powered strategies that automatically optimize your cloud infrastructure
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {supportChannels.map((channel, index) => (
+            {optimizationStrategies.map((strategy, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -302,11 +296,11 @@ export default function AICustomerSupportAutomation() {
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MessageCircle className="w-6 h-6 text-white" />
+                    <Target className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
-                    <p className="text-zion-slate-light">{channel.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{strategy.title}</h3>
+                    <p className="text-zion-slate-light">{strategy.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -325,10 +319,10 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Perfect For Your Industry
+              Perfect For Your Organization
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Tailored support automation solutions for various business types
+              Whether you're a startup or enterprise, our FinOps solution scales with your needs
             </p>
           </motion.div>
           
@@ -342,7 +336,7 @@ export default function AICustomerSupportAutomation() {
                 className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
+                  <Cloud className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                 <p className="text-zion-slate-light text-sm">{useCase.description}</p>
@@ -361,10 +355,10 @@ export default function AICustomerSupportAutomation() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Support?
+              Ready to Optimize Your Cloud Costs?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join organizations already delivering exceptional customer experiences with AI
+              Join organizations already saving millions with intelligent FinOps automation
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -373,7 +367,7 @@ export default function AICustomerSupportAutomation() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
               >
-                Start Automating Today
+                Start Optimizing Today
                 <Rocket className="inline ml-2 w-5 h-5" />
               </motion.button>
               
