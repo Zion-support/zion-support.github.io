@@ -6,10 +6,11 @@ export default function ServicesPage() {
   return (
     <>
       <Head>
-        <title>Services | Zion Tech Group - Autonomous Technology Solutions</title>
-        <meta name="description" content="Explore Zion Tech Group's comprehensive range of autonomous technology services including AI automation, cloud solutions, and intelligent systems." />
-        <meta property="og:title" content="Services | Zion Tech Group - Autonomous Technology Solutions" />
-        <meta property="og:description" content="Explore Zion Tech Group's comprehensive range of autonomous technology services including AI automation, cloud solutions, and intelligent systems." />
+        <title>Services | Zion Tech Group - Autonomous Innovation Solutions</title>
+        <meta name="description" content="Discover Zion Tech Group's comprehensive range of autonomous technology services including AI automation, system optimization, and intelligent infrastructure solutions." />
+        <meta property="og:title" content="Services | Zion Tech Group - Autonomous Innovation Solutions" />
+        <meta property="og:description" content="Discover Zion Tech Group's comprehensive range of autonomous technology services including AI automation, system optimization, and intelligent infrastructure solutions." />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
