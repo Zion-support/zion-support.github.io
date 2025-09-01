@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
 import { 
   Heart, 
   Brain, 
@@ -9,29 +9,101 @@ import {
   TrendingUp,
   Globe,
   BarChart3,
-  LineChart,
-  Target,
-  Clock,
-  DollarSign,
-  Star,
-  Award,
-  CheckCircle,
-  Database,
-  Lock,
-  Eye,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Settings,
-  AlertCircle,
-  Mail,
-  Zap,
-  Cpu,
-  PieChart
-} from 'lucide-react';
+  PieChart2,
+  LineChart2,
+  AreaChart,
+  ScatterChart,
+  RadarChart,
+  Thermometer,
+  Droplets,
+  Wind,
+  CloudRain,
+  CloudLightning,
+  Sun2 as SunIcon,
+  Moon2 as MoonIcon,
+  Star3,
+  Cloud2,
+  CloudOff,
+  CloudDrizzle,
+  CloudFog,
+  CloudHail,
+  CloudSnow,
+  CloudSleet,
+  CloudRain2,
+  CloudLightning2,
+  CloudOff2,
+  CloudDrizzle2,
+  CloudFog2,
+  CloudHail2,
+  CloudSnow2,
+  CloudSleet2,
+  CloudRain3,
+  CloudLightning3,
+  CloudOff3,
+  CloudDrizzle3,
+  CloudFog3,
+  CloudHail3,
+  CloudSnow3,
+  CloudSleet3,
+  CloudRain4,
+  CloudLightning4,
+  CloudOff4,
+  CloudDrizzle4,
+  CloudFog4,
+  CloudHail4,
+  CloudSnow4,
+  CloudSleet4,
+  CloudRain5,
+  CloudLightning5,
+  CloudOff5,
+  CloudDrizzle5,
+  CloudFog5,
+  CloudHail5,
+  CloudSnow5,
+  CloudSleet5,
+  CloudRain6,
+  CloudLightning6,
+  CloudOff6,
+  CloudDrizzle6,
+  CloudFog6,
+  CloudHail6,
+  CloudSnow6,
+  CloudSleet6,
+  CloudRain7,
+  CloudLightning7,
+  CloudOff7,
+  CloudDrizzle7,
+  CloudFog7,
+  CloudHail7,
+  CloudSnow7,
+  CloudSleet7,
+  CloudRain8,
+  CloudLightning8,
+  CloudOff8,
+  CloudDrizzle8,
+  CloudFog8,
+  CloudHail8,
+  CloudSnow8,
+  CloudSleet8,
+  CloudRain9,
+  CloudLightning9,
+  CloudOff9,
+  CloudDrizzle9,
+  CloudFog9,
+  CloudHail9,
+  CloudSnow9,
+  CloudSleet9,
+  CloudRain10,
+  CloudLightning10,
+  CloudOff10,
+  CloudDrizzle10,
+  CloudFog10,
+  CloudHail10,
+  CloudSnow10,
+  CloudSleet10
+             } from 'lucide-react.ts';
 
-const AIHealthcareAnalyticsPlatform: React.FC = () => {
+const AIHealthcareAnalyticsPlatform = () => {
   const features = [
     {
       icon: Heart,
@@ -192,6 +264,25 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
         </div>
       </section>
 
+      {/* Key Metrics Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {keyMetrics.map((item, index)              => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="text-4xl md:text-5xl font-bold text-pink-400 mb-2">{item.metric}</div>
+                <div className="text-zion-slate-light text-lg">{item.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
         <div className="max-w-7xl mx-auto">
@@ -209,9 +300,9 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               insights that transform patient care and operational efficiency.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -223,7 +314,40 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-zion-slate-light">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Measurable Healthcare Impact
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              See real results with our AI-powered healthcare analytics platform
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)              => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-pink-400 mt-1 flex-shrink-0" />
+                <span className="text-zion-slate-light text-lg">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -246,9 +370,9 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               Our platform addresses the most critical challenges in modern healthcare delivery.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -282,9 +406,9 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               Join hundreds of healthcare organizations that have transformed their operations.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-4">
+            {complianceStandards.map((standard, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -320,9 +444,9 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               Flexible pricing designed for healthcare organizations of all sizes.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -387,50 +511,22 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
               Built with healthcare-grade security and full regulatory compliance.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-slate-700 p-6 rounded-xl text-center"
-            >
-              <div className="p-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
-                <Shield className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">HIPAA Compliant</h3>
-              <p className="text-gray-300">Full HIPAA compliance with audit trails and data encryption</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="bg-slate-700 p-6 rounded-xl text-center"
-            >
-              <div className="p-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
-                <Lock className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Data Security</h3>
-              <p className="text-gray-300">Enterprise-grade security with role-based access control</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-slate-700 p-6 rounded-xl text-center"
-            >
-              <div className="p-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
-                <Eye className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Audit Trails</h3>
-              <p className="text-gray-300">Comprehensive logging and monitoring for compliance</p>
-            </motion.div>
+          
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)              => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300"
+              >
+                <span className="text-zion-slate-light font-medium text-sm">{integration}</span>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

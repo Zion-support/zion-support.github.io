@@ -304,8 +304,16 @@ const Services: React.FC = (): JSX.Element => {
     }
   ];
 
-  const filteredServices = activeCategory === 'all' 
-    ? coreServices: anyanyanyanyanyanyanyanyanyanyanyanyanycoreServices.filter(service              => service.category === activeCategory);
+              {/* Filter Button */}
+              <button
+                onClick={() => setShowFilters(!showFilters)}
+                className="px-4 py-3 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-lg text-white hover:bg-slate-700/50 transition-all duration-200 flex items-center gap-2"
+              >
+                <FilterIcon className="w-5 h-5" />
+                Filters
+              </button>
+            </div>
+          </div>
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
@@ -343,36 +351,12 @@ const Services: React.FC = (): JSX.Element => {
                       transition={{ duration: 0.8, delay: (categoryIndex * 0.1) + (serviceIndex * 0.1) }}
                       className="group"
                     >
-                      <Link to={service.href}>
-                        <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 h-full">
-                          <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200">
-                            {service.name}
-                          </h3>
-                          <p className="text-gray-300 mb-4 leading-relaxed">
-                            {service.description}
-                          </p>
-                          <ul className="space-y-2 mb-6">
-                            {service.features.map((feature, featureIndex) => (
-                              <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                                <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                                {feature}
-                              </li>
-                            ))}
-                          </ul>
-                          <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200">
-                            <span className="text-sm font-medium">Learn More</span>
-                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                          </div>
-                        </div>
-                        <Link 
-                          to={service.href}
-                          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:scale-105 transition-all duration-300"
-                        >
-                          Learn More
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                      </div>
-                    </motion.div>
+                      <span className="mr-2">{category.icon}</span>
+                      {category.name}
+                      <span className="ml-2 text-xs bg-slate-700/50 px-2 py-1 rounded-full">
+                        {category.count}
+                      </span>
+                    </button>
                   ))}
                 </div>
               </motion.div>
@@ -397,118 +381,74 @@ const Services: React.FC = (): JSX.Element => {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
+
+          {/* Empty State */}
+          {sortedServices.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center py-16"
+            >
+              <div className="w-24 h-24 mx-auto mb-6 bg-slate-800/50 rounded-full flex items-center justify-center">
+                <Search className="w-12 h-12 text-slate-400" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-300 mb-2">No services found</h3>
+              <p className="text-slate-400 mb-6">
+                Try adjusting your search terms or filters to find what you're looking for.
+              </p>
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setActiveCategory('all');
+                }}
+                className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors duration-200"
+              >
+                Clear Filters
+              </button>
+            </motion.div>
+          )}
         </div>
       </section>
+
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6 text-center">
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-              Emerging Technologies
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our innovative services can help you achieve your goals 
-              and stay ahead of the competition.
+            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+              Let our team of experts help you implement cutting-edge solutions that drive innovation, 
+              efficiency, and growth for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+                to="/schedule-demo"
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 inline-flex items-center"
               >
-                Request a Quote
+                Schedule a Demo
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-      {/* Why Choose Our Services */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Services?</h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              We deliver exceptional value through innovation, expertise, and unwavering commitment to your success.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Sparkles,
-                title: 'Innovation First',
-                description: 'We stay ahead of the curve with cutting-edge technologies and creative solutions.'
-              },
-              {
-                icon: Users,
-                title: 'Expert Team',
-                description: 'Our specialists bring years of experience and deep technical knowledge.'
-              },
-              {
-                icon: Target,
-                title: 'Results-Driven',
-                description: 'We focus on delivering measurable business value and ROI for our clients.'
-              },
-              {
-                icon: Shield,
-                title: 'Quality Assured',
-                description: 'Rigorous testing and quality assurance processes ensure reliable solutions.'
-              }
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-6"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-cyan-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-slate-400 leading-relaxed">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-16 bg-slate-800/30">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our services can help transform your business and drive innovation.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
-            >
-              Contact Us
-            </Link>
-            <Link
-              to="/request-quote"
-              className="px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-            >
-              Request Quote
-            </Link>
-          </div>
-        </div>
-      </div>
-    </>
+    </div>
   );
-}
+};
+
 export default Services;

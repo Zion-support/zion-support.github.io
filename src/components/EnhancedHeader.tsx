@@ -183,6 +183,15 @@ export function EnhancedHeader() {
     { name: 'Micro SAAS', href: '/micro-saas', icon: Rocket },
     { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
     { name: 'About', href: '/about', icon: Users },
+    { name: 'Team', href: '/team', icon: Award },
+    { name: 'Leadership', href: '/leadership', icon: Star },
+    { name: 'News', href: '/news', icon: FileText },
+    { name: 'Press', href: '/press', icon: BookOpen },
+    { name: 'Events', href: '/events', icon: Calendar },
+    { name: 'Webinars', href: '/webinars', icon: Video },
+    { name: 'White Papers', href: '/white-papers', icon: FileText },
+    { name: 'Documentation', href: '/documentation', icon: HelpCircle },
+    { name: 'Support', href: '/support', icon: HelpCircle },
     { name: 'Contact', href: '/contact', icon: MessageCircle }
   ];
 
@@ -252,6 +261,14 @@ export function EnhancedHeader() {
       href: '/zion-innovative-services-2025',
       icon: SparklesIcon,
       color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      name: '2025 Services Showcase',
+      description: 'Comprehensive innovative services showcase',
+      href: '/innovative-services-showcase-2025',
+      icon: SparklesIcon,
+      color: 'from-cyan-500 to-blue-500',
+      featured: true
     },
     {
       name: '2029 Cutting-Edge Services',

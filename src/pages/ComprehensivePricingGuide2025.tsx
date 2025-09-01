@@ -5,6 +5,21 @@ import { DollarSign,
   Star, 
   CheckCircle, 
 =======
+import React, { useState } from 'react';
+import { 
+  CheckCircle, 
+  Star, 
+  TrendingUp, 
+  Zap, 
+  Shield, 
+  Brain, 
+  Cpu, 
+  Database,
+  Globe,
+  Users,
+  Target,
+  DollarSign,
+=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -34,6 +49,39 @@ import {
   Phone,
   Mail,
   MapPin,
+  CheckCircle,
+  Award,
+  Target,
+  Lightbulb,
+  Sparkles,
+  Eye,
+  Heart,
+  DollarSign,
+  Calendar,
+  Settings,
+  Monitor,
+  Smartphone as MobileIcon,
+  Globe as WebIcon,
+  Shield as SecurityIcon,
+  Zap as PerformanceIcon,
+  Brain as AIIcon,
+  Cloud as CloudIcon,
+  Rocket as InnovationIcon,
+  ChevronDown,
+  ChevronUp,
+  Info,
+  AlertCircle,
+  Clock as TimeIcon,
+  Users as TeamIcon,
+  Globe as WorldIcon,
+  Shield as SecurityIcon2,
+  Zap as SpeedIcon,
+  Brain as IntelligenceIcon,
+  Cloud as CloudIcon2,
+  Rocket as LaunchIcon
+} from 'lucide-react';
+import { comprehensiveServices2025Enhanced, serviceCategories } from '../data/comprehensive-services-2025-enhanced';
+
   Linkedin,
   Twitter,
   Github
@@ -377,7 +425,7 @@ export function ComprehensivePricingGuide2025() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Pricing Statistics */}
       <section className="py-12 px-4">
@@ -1199,7 +1247,7 @@ export function ComprehensivePricingGuide2025() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

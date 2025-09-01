@@ -57,7 +57,8 @@ import {
   Leaf,
   ChevronRight,
   ChevronDown,
-  DollarSign
+  DollarSign,
+  Calendar
 } from 'lucide-react';
 
 export function EnhancedFooter() {
@@ -69,6 +70,7 @@ export function EnhancedFooter() {
       links: [
         { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
         { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },
+        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true },
         { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },
         { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true }
       ]
@@ -81,7 +83,8 @@ export function EnhancedFooter() {
         { name: 'IT Infrastructure', href: '/it-services', icon: Server },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield },
-        { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Sparkles }
+        { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Sparkles },
+        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles }
       ]
     },
     {
@@ -100,6 +103,7 @@ export function EnhancedFooter() {
       links: [
         { name: 'About Us', href: '/about', icon: Users },
         { name: 'Our Team', href: '/team', icon: Award },
+        { name: 'Leadership', href: '/leadership', icon: Star },
         { name: 'Careers', href: '/careers', icon: Target },
         { name: 'News & Press', href: '/press', icon: BookOpen },
         { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
@@ -110,11 +114,23 @@ export function EnhancedFooter() {
       title: 'Resources',
       links: [
         { name: 'Blog', href: '/blog', icon: BookOpen },
+        { name: 'News', href: '/news', icon: FileText },
         { name: 'Documentation', href: '/documentation', icon: FileText },
-        { name: 'Help Center', href: '/help', icon: HelpCircle },
+        { name: 'Help Center', href: '/support', icon: HelpCircle },
         { name: 'Webinars', href: '/webinars', icon: Video },
         { name: 'White Papers', href: '/white-papers', icon: FileText },
         { name: 'Training', href: '/training', icon: GraduationCap }
+      ]
+    },
+    {
+      title: 'Events & Media',
+      links: [
+        { name: 'Events', href: '/events', icon: Calendar },
+        { name: 'Press Releases', href: '/press', icon: BookOpen },
+        { name: 'Media Kit', href: '/press', icon: FileText },
+        { name: 'Webinars', href: '/webinars', icon: Video },
+        { name: 'White Papers', href: '/white-papers', icon: FileText },
+        { name: 'Documentation', href: '/documentation', icon: HelpCircle }
       ]
     }
   ];
