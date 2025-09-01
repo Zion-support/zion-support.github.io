@@ -27,6 +27,7 @@ export default {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'no-console': 'warn',
+    '@typescript-eslint/no-unused-imports': 'warn',
   },
   ignorePatterns: [
     'node_modules/',
@@ -35,6 +36,9 @@ export default {
     'dist/',
     'automation/',
     'components.disabled/',
+    'contracts/',
+    'hardhat/',
+    'cypress/',
     '**/*.disabled',
     '**/*.backup',
     '**/*.tsbackup',

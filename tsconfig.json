@@ -112,6 +112,9 @@
     "automation_backup",
     "broken_files_backup",
     "components",
+    "contracts",
+    "hardhat",
+    "cypress",
     "**/*.backup",
     "**/*.disabled"
   ]
