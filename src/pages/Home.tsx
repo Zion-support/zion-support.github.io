@@ -32,3 +32,35 @@ export default function Home() {
       {/* Sections remain the same */}
       <ITServiceRequestHero />
 
+      <HeroSection />
+      
+      <div className="animate-fadeIn" style={{ animationDelay: '0.1s' }}>
+        <QuickAccess />
+      </div>
+
+      <div className="animate-fadeIn" style={{ animationDelay: '0.2s' }}>
+        <FeatureCTAs />
+      </div>
+
+      <div className="animate-fadeIn" style={{ animationDelay: '0.25s' }}>
+        <InteractiveFeatures />
+      </div>
+
+      <FeatureHighlights className="animate-fadeIn" style={{ animationDelay: '0.3s' }} />
+
+      <div className="animate-fadeIn" style={{ animationDelay: '0.4s' }}>
+        <CategoriesSection />
+      </div>
+      <div className="animate-fadeIn" style={{ animationDelay: '0.5s' }}>
+        <BenefitsSection />
+      </div>
+      <div className="animate-fadeIn" style={{ animationDelay: '0.6s' }}>
+        <HowItWorksSection />
+      </div>
+      <div className="animate-fadeIn" style={{ animationDelay: '0.7s' }}>
+        <FeaturedListingsSection />
+      </div>
+      <NewsletterSection className="animate-fadeIn" style={{ animationDelay: '0.8s' }} />
+    </div>
+  );
+}
