@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Shield, Zap, CheckCircle, ArrowRight, Star, Globe, Lock, Cpu, Target, Award, BarChart3, AlertTriangle, Eye, Search, TrendingUp, Activity, Network, Database } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 const AICyberThreatIntelligence: React.FC = () => {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Atom, Zap, CheckCircle, ArrowRight, Star, Globe, Lock, Cpu, Target, Award, BarChart3, Rocket, CircuitBoard, Database, TrendingUp, Network, Shield } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 const AIQuantumComputingPlatform: React.FC = () => {

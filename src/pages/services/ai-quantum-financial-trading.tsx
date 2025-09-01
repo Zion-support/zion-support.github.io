@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, TrendingUp, Shield, Zap, CheckCircle, ArrowRight, Star, Globe, Lock, Cpu, Target, Award, BarChart3, DollarSign, Rocket, Atom } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 const AIQuantumFinancialTrading: React.FC = () => {

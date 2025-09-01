@@ -269,7 +269,6 @@ import { SEO              } from '../../components/SEO';
 import { Button              } from '../../components/ui/Button';
 import { Card              } from '../../components/ui/Card';
 import { Badge              } from '../../components/ui/Badge';
-import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail, Lock, Eye, AlertTriangle, Users, Database, Network, Cpu              } from 'lucide-react.ts';
 
 const AICybersecurityPlatform: React.FC = (): JSX.Element => {
 

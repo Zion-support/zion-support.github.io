@@ -102,7 +102,7 @@ export const hasNumbers = (password) => {
 export const hasSpecialChars = (password) => {
 
 <<<<<<< HEAD
-  return /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>/?]/.test(password);
+  return /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password);
 =======
   return /[!@#$%^&*()_+\-=[\]{ /* empty */ };':"\\|,.<>/?]/.test(password);
 >>>>>>> cursor/add-new-services-and-advertise-them-971c

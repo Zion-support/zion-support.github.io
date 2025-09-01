@@ -1,6 +1,5 @@
 import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
-import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
 
 export default function LLMContentStudio(...args: []):  {

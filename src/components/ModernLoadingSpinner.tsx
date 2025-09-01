@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2, Zap, Cpu, Brain, Cloud, Shield } from 'lucide-react';
 
 interface ModernLoadingSpinnerProps {
 

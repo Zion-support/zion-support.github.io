@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Link, Shield, Zap, CheckCircle, ArrowRight, Star, Globe, Lock, Cpu, Target, Award, BarChart3, Network, Database, Truck, Package, TrendingUp } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 const AIBlockchainSupplyChain: React.FC = () => {

@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Star, Check, ExternalLink, Clock, Users, TrendingUp, Mail } from 'lucide-react';
 import { allServices, contactInfo } from '../data/services';
 
 const ServiceShowcase: React.FC = React.memo(() => {

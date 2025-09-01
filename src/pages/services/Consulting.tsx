@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
-import { Target, Search, BarChart3, Users, Shield, Cloud, Zap, CheckCircle } from 'lucide-react';
 
 export default function Consulting() {
 

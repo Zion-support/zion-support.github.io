@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Atom, Cpu, Zap, Shield, BarChart3, Users, Clock, CheckCircle, ArrowRight, ExternalLink, Brain, Database, Globe, Lock, TrendingUp, Target, Network, Server, Cloud } from 'lucide-react';
 
 const QuantumComputingAsAService = () => {
 

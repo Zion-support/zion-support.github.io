@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ProductListing } from '../types/listings';
-import { CheckCircle, X, BarChart3, DollarSign, Clock, TrendingUp, Star, Users } from 'lucide-react';
 
 interface ServiceComparisonToolProps {
 

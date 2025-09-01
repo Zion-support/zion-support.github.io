@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search as SearchIcon, X, Filter, TrendingUp, Clock, Globe, Building, Brain, Shield, Zap } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface SearchResult {

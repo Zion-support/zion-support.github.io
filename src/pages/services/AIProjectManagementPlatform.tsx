@@ -1,4 +1,3 @@
-import { Calendar, Users, Check, ExternalLink, Phone, Mail, Brain, Target, TrendingUp, BarChart3, Clock, Zap, FolderOpen              } from 'lucide-react.ts';
 
 export default function AIProjectManagementPlatform(...args: any[]): any {
   const features = [

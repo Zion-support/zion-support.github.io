@@ -1,6 +1,5 @@
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-import { CheckCircle, BarChart3, TrendingUp, Target, Zap, Shield, Brain, Database, Globe, Smartphone, Users, PieChart              } from 'lucide-react.ts';
 import { SEO              } from '@/components/SEO';
 
 export default function AIDataAnalytics(...args: any[]): any {

@@ -1,6 +1,5 @@
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-import { PenTool, Brain, TrendingUp, Target, Users, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Clock, Globe, Database, FileText, MessageSquare, BarChart3, Search, Eye, Share2, Calendar              } from 'lucide-react.ts';
 
 const AIContentMarketingSuite: React.FC = (): JSX.Element => {
 

@@ -1,6 +1,5 @@
 import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
-import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
 
 export default function HealthcareTech(...args: []):  {

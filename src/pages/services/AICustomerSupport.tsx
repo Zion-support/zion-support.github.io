@@ -1,6 +1,5 @@
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-import { CheckCircle, MessageCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Globe, Smartphone, Headphones, Bot              } from 'lucide-react.ts';
 import { SEO              } from '@/components/SEO';
 
 export default function AICustomerSupport(...args: any[]): any {

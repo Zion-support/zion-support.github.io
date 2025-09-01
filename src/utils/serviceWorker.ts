@@ -382,7 +382,7 @@ async function getOfflineData(): Promise<any[]> {
   return [];
 }
 
-async function syncOfflineData(data: any[]): Promise<void> {
+async function syncOfflineData(data: unknown[]): Promise<void> {
   // Implementation for syncing offline data
   console.log('Syncing offline data:', data);
 }

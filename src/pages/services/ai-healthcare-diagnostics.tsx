@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Heart, Shield, Zap, CheckCircle, ArrowRight, Star, Globe, Lock, Cpu, Target, Award, BarChart3, Activity, Stethoscope, Microscope, Pill, UserCheck, TrendingUp } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 const AIHealthcareDiagnostics: React.FC = () => {

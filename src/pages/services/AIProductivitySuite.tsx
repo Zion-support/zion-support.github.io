@@ -1,6 +1,5 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
-import { Brain, Zap, Users, TrendingUp, Shield, Clock, Target, BarChart3, CheckCircle, ArrowRight, Star, DollarSign, Globe, Lock, Smartphone, Cloud } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AIProductivitySuite() {

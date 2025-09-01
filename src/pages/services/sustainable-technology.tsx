@@ -1,79 +1,79 @@
-import React from 'react.ts';
-import SEO from '../../components/SEO';
-import { motion              } from 'framer-motion.ts';
+import React from 'react.ts&apos;;
+import SEO from '../../components/SEO&apos;;
+import { motion              } from 'framer-motion.ts&apos;;
 import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp, Sun, Wind, Battery, Recycle, Tree, Cloud, Database const SustainableTechnology: React.FC = (): JSX.Element => {
 
   const features = [
     {
 
       icon: Leaf,
-      title: 'Green Computing',
-      description: 'Energy-efficient computing solutions and practices'
+      title: 'Green Computing&apos;,
+      description: 'Energy-efficient computing solutions and practices&apos;
     },
     {
 
       icon: Sun,
-      title: 'Renewable Energy',
-      description: 'Solar, wind, and sustainable power solutions'
+      title: 'Renewable Energy&apos;,
+      description: 'Solar, wind, and sustainable power solutions&apos;
     },
     {
 
       icon: Recycle,
-      title: 'Circular Economy',
-      description: 'Waste reduction and resource optimization';
+      title: 'Circular Economy&apos;,
+      description: 'Waste reduction and resource optimization&apos;;
     },;
     {;
       icon: Globe,;
-      title: 'Carbon Neutral',;
-      description: 'Carbon footprint reduction and offsetting';
+      title: 'Carbon Neutral&apos;,;
+      description: 'Carbon footprint reduction and offsetting&apos;;
     };
   ];
 
   const solutions = [
     {
 
-      title: 'Green Data Centers',
-      description: 'Energy-efficient data center infrastructure',
+      title: 'Green Data Centers&apos;,
+      description: 'Energy-efficient data center infrastructure&apos;,
       icon: '🏢'
     },
     {
 
-      title: 'Smart Grid Technology',
-      description: 'Intelligent energy distribution systems',
+      title: 'Smart Grid Technology&apos;,
+      description: 'Intelligent energy distribution systems&apos;,
       icon: '⚡'
     },
     {
 
-      title: 'IoT Environmental Monitoring',
-      description: 'Real-time environmental data collection',
+      title: 'IoT Environmental Monitoring&apos;,
+      description: 'Real-time environmental data collection&apos;,
       icon: '🌱';
     },;
     {;
-      title: 'Sustainable Software',;
-      description: 'Eco-friendly application development',;
+      title: 'Sustainable Software&apos;,;
+      description: 'Eco-friendly application development&apos;,;
       icon: '💻';
     };
   ];
 
   const benefits = [;
-    'Reduce energy consumption and costs',;
-    'Minimize environmental impact',;
-    'Meet sustainability goals and compliance',;
-    'Improve brand reputation and ESG scores',;
-    'Future-proof your technology infrastructure',;
-    'Attract environmentally conscious customers';
+    'Reduce energy consumption and costs&apos;,;
+    'Minimize environmental impact&apos;,;
+    'Meet sustainability goals and compliance&apos;,;
+    'Improve brand reputation and ESG scores&apos;,;
+    'Future-proof your technology infrastructure&apos;,;
+    'Attract environmentally conscious customers&apos;;
   ];
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
       <SEO 
-        title="Sustainable Technology Services - Zion Tech Group"
+        title="Sustainable Technology Services - Zion Tech Group&quot;
         description="Transform your business with sustainable technology solutions. Reduce environmental impact while improving efficiency and cost savings."
       />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="pt-20 pb-16 px-4&quot;>
+        <div className="max-w-7xl mx-auto&quot;>
           <motion.div
             initial = {
 
@@ -98,30 +98,30 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center&quot;
 
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 mb-6">
-              <Leaf className="w-5 h-5 text-green-400 mr-2" />
-              <span className="text-green-300 font-medium">Sustainable Technology</span>
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 mb-6&quot;>
+              <Leaf className="w-5 h-5 text-green-400 mr-2&quot; />
+              <span className="text-green-300 font-medium&quot;>Sustainable Technology</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6&quot;>
               Sustainable
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-500 to-teal-400">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-500 to-teal-400&quot;>
                 Technology
               </span>
             </h1>
 
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8&quot;>
               Transform your business with sustainable technology solutions that reduce environmental impact
               while improving efficiency, cost savings, and brand reputation.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20&quot;>
                 Go Green
               </button>
-              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
+              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200&quot;>
                 Learn More
               </button>
             </div>
@@ -130,8 +130,8 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4&quot;>
+        <div className="max-w-7xl mx-auto&quot;>
           <motion.div
             initial = {
 
@@ -156,17 +156,17 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-16&quot;
 
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4&quot;>
               Sustainable Technology Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto&quot;>
               Eco-friendly solutions for a greener future
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8&quot;>
             {features.map((feature, index)              => (
               <motion.div
                 key={feature.title}
@@ -203,13 +203,13 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 
 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105&quot;
 
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-green-400" />
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4&quot;>
+                  <feature.icon className="w-6 h-6 text-green-400&quot; />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2&quot;>{feature.title}</h3>
+                <p className="text-gray-300&quot;>{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -217,8 +217,8 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
       </section>
 
       {/* Solutions Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4 bg-slate-800/30&quot;>
+        <div className="max-w-7xl mx-auto&quot;>
           <motion.div
             initial = {
 
@@ -243,17 +243,17 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-16&quot;
 
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4&quot;>
               Sustainable Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto&quot;>
               Comprehensive green technology implementations
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8&quot;>
             {solutions.map((solution, index)              => (
               <motion.div
                 key={solution.title}
@@ -290,13 +290,13 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 
 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200&quot;
 
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{solution.icon}</div>
+                <div className="flex items-start space-x-4&quot;>
+                  <div className="text-4xl&quot;>{solution.icon}</div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
-                    <p className="text-gray-300">{solution.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2&quot;>{solution.title}</h3>
+                    <p className="text-gray-300&quot;>{solution.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -306,8 +306,8 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4&quot;>
+        <div className="max-w-7xl mx-auto&quot;>
           <motion.div
             initial = {
 
@@ -332,17 +332,17 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-16&quot;
 
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4&quot;>
               Why Choose Sustainable Technology?
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto&quot;>
               Benefits for your business and the planet
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8&quot;>
             <motion.div
               initial = {
 
@@ -367,14 +367,14 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
               transition={{ duration: 0.6 }}
-              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
+              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8&quot;
 
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
-              <ul className="space-y-4">
+              <h3 className="text-2xl font-semibold text-white mb-6&quot;>Key Benefits</h3>
+              <ul className="space-y-4&quot;>
                 {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
+                  <li key={index} className="flex items-center space-x-3&quot;>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0&quot; />
+                    <span className="text-gray-300&quot;>{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -404,14 +404,14 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-xl p-8"
+              className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-xl p-8&quot;
 
-              <h3 className="text-2xl font-semibold text-white mb-6">Go Green Today</h3>
-              <p className="text-gray-300 mb-6">
+              <h3 className="text-2xl font-semibold text-white mb-6&quot;>Go Green Today</h3>
+              <p className="text-gray-300 mb-6&quot;>
                 Ready to make your business more sustainable? Our green technology experts can help you
                 implement eco-friendly solutions that benefit both your bottom line and the environment.
               </p>
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
+              <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20&quot;>
                 Start Sustainability Journey
               </button>
             </motion.div>
@@ -420,8 +420,8 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-16 px-4&quot;>
+        <div className="max-w-4xl mx-auto text-center&quot;>
           <motion.div
             initial = {
 
@@ -447,17 +447,17 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 }}
             transition={{ duration: 0.6 }}
 
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4&quot;>
               Ready to Go Green?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8&quot;>
               Transform your business with sustainable technology solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20&quot;>
                 Start Green Transformation
               </button>
-              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
+              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200&quot;>
                 Schedule Consultation;
               </button>;
             </div>;

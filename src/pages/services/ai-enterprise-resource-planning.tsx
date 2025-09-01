@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Database, TrendingUp, Shield, Users, BarChart3, Zap, CheckCircle, ArrowRight, Star, Globe, Lock, Cpu, Target, Award } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 const AIEnterpriseResourcePlanning: React.FC = () => {

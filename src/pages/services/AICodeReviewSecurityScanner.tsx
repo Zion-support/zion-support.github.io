@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Activity, Activity as ActivityIcon, AlertCircle, AlertTriangle, ArrowRight, ArrowUpRight, AtSign, AtSign as AtSignIcon, Atom, Award, Brain, Building, Calculator, Car, CheckCircle, CheckCircle2, ChevronDown, ChevronRight, ChevronUp, Clock, Cloud, Code, Coins, Cpu, CreditCard, Database, Divide, DollarSign, Download, Equal, ExternalLink, Eye, Eye as EyeIcon, FileText, Filter, Gamepad2, GitBranch, GitBranch as GitBranchIcon, GitCommit, GitCommit as GitCommitIcon, GitCompare, GitCompare as GitCompareIcon, GitFork, GitMerge, GitMerge as GitMergeIcon, GitPullRequest, GitPullRequest as GitPullRequestIcon, Globe, Hash, Hash as HashIcon, Heart, HelpCircle, Info, Leaf, LineChart, Lock, MessageCircle, Minus, Network, Percent, PieChart, PiggyBank, Plane, Plus, RefreshCw, Rocket, Satellite, Search, Server, Settings, Share2, Shield, Ship, ShoppingCart, Smartphone, Sparkles, Star, Target, TrendingDown, Truck, Upload, Users, XCircle, Zap } from 'lucide-react';
 
 const AICodeReviewSecurityScanner = () => {
   const features = [

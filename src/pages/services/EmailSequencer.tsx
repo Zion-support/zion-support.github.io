@@ -1,4 +1,3 @@
-import { Mail, Zap, Calendar, BarChart3, Check, Link as LinkIcon              } from 'lucide-react.ts';
 
 export default function EmailSequencer(...args: any[]): any {
 
