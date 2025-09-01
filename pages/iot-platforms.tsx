@@ -1,15 +1,20 @@
+import type { NextPage } from 'next';
 import Head from 'next/head';
 
-export default function IoTPlatformsPage() {
+const IotPlatforms: NextPage = () => {
   return (
-    <>
+    <div>
       <Head>
-        <title>IoT Platforms</title>
+        <title>IotPlatforms - Zion Tech Solutions</title>
+        <meta name="description" content="IotPlatforms page" />
       </Head>
-      <div className="space-y-4">
-        <h1 className="text-3xl font-bold">IoT Platforms</h1>
-        <p className="text-gray-600 dark:text-gray-300">Showcase of IoT integrations (placeholder).</p>
-      </div>
-    </>
+      
+      <main>
+        <h1>IotPlatforms</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
   );
-}
+};
+
+export default IotPlatforms;
