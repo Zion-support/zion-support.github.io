@@ -175,7 +175,7 @@ const Support = () => {
               onChange={e => setSearchQuery (e.target.value) }
               className="w - full pl - 12 pr - 4 py - 4 bg - slate - 800 / 50 border border - slate - 700 / 50 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent text - lg"
             />
-            <button aria-label="Button" aria - label="Button" aria - label="Button" type="submit"
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
               className="absolute right - 2 top - 1/2 transform - translate - y-1 / 2 px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300"
             >
               Search

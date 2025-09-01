@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+  import SEO from '../SEO';
 export default function DisputeManagement () {
-import SEO from '../SEO';
+
 
   const [activeTab, setActiveTab] = useState ('overview') ;
   return (<>

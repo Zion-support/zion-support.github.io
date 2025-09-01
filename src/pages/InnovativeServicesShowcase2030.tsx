@@ -126,7 +126,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
               </div>
             </div>
             <div role="button" className="flex flex - wrap gap - 3">
-              {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category.id}
+              {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setActiveCategory (category.id) }
                   className={`flex items - center gap - 2 px - 4 py - 2 rounded - lg border transition - all ${
                     activeCategory === category.id

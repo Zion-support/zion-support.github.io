@@ -241,7 +241,7 @@ import {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg - slate - 800 / 50 rounded - xl border border - slate - 700 / 50 overflow - hidden"
               >
-                <button aria-label="Button" aria - label="Button" aria - label="Button" type="submit"
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
                   className="absolute right - 2 top - 1/2 - translate - y-1 / 2 px - 4 py - 2 bg - cyan - 500 hover:bg - cyan - 600 text - white rounded - md transition - colors"
                 >
                   <div className="flex items - center justify - between">

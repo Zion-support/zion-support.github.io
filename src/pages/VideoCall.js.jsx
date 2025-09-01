@@ -4,8 +4,9 @@ import React from 'react';
 import { Button } from '@/components / ui / button';
 import { SEO } from '@/components / SEO';
 import { VideoCallRoom } from '@/components / video / VideoCallRoom';
+  import { toast } from 'sonner';
 export default function VideoCall () {
-import { toast } from 'sonner';
+
 
   // useParams is typed as `` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.

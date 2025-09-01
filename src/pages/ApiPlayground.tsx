@@ -350,7 +350,7 @@ const ApiPlayground: React.FC = () => {
                 <div role="button" className="bg - slate - 800 / 50 backdrop - blur - sm rounded - xl border border - slate - 700 / 50">
                   {/* Tabs */}
                   <div role="button" className="flex border - b border - slate - 700 / 50">
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveTab ('playground') }
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveTab ('playground') }
                       className={`px - 6 py - 3 text - sm font - medium transition - colors ${
                         activeTab === 'playground'
                           ? 'text - blue - 400 border - b-2 border - blue - 400'
@@ -359,7 +359,7 @@ const ApiPlayground: React.FC = () => {
                     >
                       Playground
                     </button>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveTab ('documentation') }
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveTab ('documentation') }
                       className={`px - 6 py - 3 text - sm font - medium transition - colors ${
                         activeTab === 'documentation'
                           ? 'text - blue - 400 border - b-2 border - blue - 400'
@@ -407,7 +407,7 @@ const ApiPlayground: React.FC = () => {
                                 <h4 className="text - white font - medium">
                                   Request Body
                                 </h4>
-                                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => copyToClipboard (requestBody) }
+                                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => copyToClipboard (requestBody) }
                                   className="flex items - center gap - 1 text - blue - 400 hover:text - blue - 300 text - sm"
                                 >
                                   <Copy className="w - 4 h - 4" />
@@ -423,7 +423,7 @@ const ApiPlayground: React.FC = () => {
                             </div>
 
                             {/* Test Button */}
-                            <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={handleTestApi}
+                            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={handleTestApi}
                               disabled={isLoading}
                               className="w - full bg - gradient - to - r from - blue - 500 to - purple - 500 text - white py - 3 px - 6 rounded - lg font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300 disabled:opacity - 50 flex items - center justify - center gap - 2"
                             >
@@ -442,7 +442,7 @@ const ApiPlayground: React.FC = () => {
                                   <h4 className="text - white font - medium">
                                     Response
                                   </h4>
-                                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
+                                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
                                       copyToClipboard (responseData) }
                                     className="flex items - center gap - 1 text - blue - 400 hover:text - blue - 300 text - sm"
                                   >

@@ -154,7 +154,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                   <CheckCircle className="w - 4 h - 4 text - green - 500" />
                   <span className="text - sm text - gray - 600 dark:text - gray - 300">{feature}</span>
                 </div>) ) }
-              {service.features.length > 3 && (<button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setExpandedService (expandedService === service.id ? null : service.id) }
+              {service.features.length > 3 && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setExpandedService (expandedService === service.id ? null : service.id) }
                   className="text - sm text - blue - 600 dark:text - blue - 400 hover:underline"
 
                   {expandedService === service.id ? 'Show less' : `+${service.features.length - 3} more features`}
@@ -495,7 +495,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
               {/* View Mode Toggle */}
               <div role="button" className="flex items - center space - x-2 bg - gray - 100 dark:bg - slate - 700 rounded - lg p - 1">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`p - 2 rounded - md transition - colors duration - 200 ${
                     viewMode === 'grid'
                       ? 'bg - white dark:bg - slate - 600 text - gray - 900 dark:text - white shadow - sm'
@@ -504,7 +504,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
                   <Grid3X3 className="w - 5 h - 5" />
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`p - 2 rounded - md transition - colors duration - 200 ${
                     viewMode === 'list'
                       ? 'bg - white dark:bg - slate - 600 text - gray - 900 dark:text - white shadow - sm'

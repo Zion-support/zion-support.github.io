@@ -218,12 +218,12 @@ import { motion, AnimatePresence } from 'framer - motion';
 
               {/* View Mode Toggle */}
               <div role="button" className="flex bg - zion - blue - light / 20 rounded - lg p - 1 border border - zion - purple / 20">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`p - 2 rounded - md transition - colors ${viewMode === 'grid' ? 'bg - zion - cyan text - white' : 'text - zion - slate - light hover:text - white'}`}
 
                   <Grid className="w - 5 h - 5" />
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`p - 2 rounded - md transition - colors ${viewMode === 'list' ? 'bg - zion - cyan text - white' : 'text - zion - slate - light hover:text - white'}`}
 
                   <List className="w - 5 h - 5" />
@@ -328,7 +328,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                         </div>
 
                         {/* Expand / Collapse Button */}
-                        <button aria-label="Button" aria - label="Button" aria - label="Button" className="w - full mt - 4 p - 2 text - zion - cyan hover:text - white hover:bg - zion - cyan / 10 rounded - lg transition - colors flex items - center justify - center gap - 2">
+                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full mt - 4 p - 2 text - zion - cyan hover:text - white hover:bg - zion - cyan / 10 rounded - lg transition - colors flex items - center justify - center gap - 2">
                           {expandedService === service.id ? (<>
                               <ChevronUp className="w - 4 h - 4" />
                               Show Less
@@ -381,7 +381,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                               </div>
 
                               {/* CTA Button */}
-                              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => window.open (service.website, '_blank') }
+                              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => window.open (service.website, '_blank') }
                                 className="w - full bg - gradient - to - r from - zion - cyan to - zion - blue text - black font - semibold py - 2 px - 4 rounded - lg hover:from - zion - blue hover:to - zion - cyan transition - all duration - 300 transform hover:scale - 105"
 
                                 Get Started
@@ -440,7 +440,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                                 </span>) ) }
                             </div>
 
-                            <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => window.open (service.website, '_blank') }
+                            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => window.open (service.website, '_blank') }
                               className="bg - gradient - to - r from - zion - cyan to - zion - blue text - black font - semibold py - 2 px - 4 rounded - lg hover:from - zion - blue hover:to - zion - cyan transition - all duration - 300 flex items - center gap - 2"
 
                               Get Started

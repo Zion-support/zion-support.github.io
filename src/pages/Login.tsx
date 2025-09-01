@@ -261,7 +261,7 @@ import { motion } from 'framer - motion';
                   className="w - full px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border - transparent pr - 12"
                   placeholder="Enter your password"
                 />
-                <button aria-label="Button" aria - label="Button" aria - label="Button" type="button"
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
                   onClick={ () => setShowPassword (!showPassword) }
                   className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 hover:text - white"
                 >
@@ -289,7 +289,7 @@ import { motion } from 'framer - motion';
                     className="w - full px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:border - transparent pr - 12"
                     placeholder="Confirm your password"
                   />
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" type="button"
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
                     onClick={ () => setShowConfirmPassword (!showConfirmPassword) }
                     className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 hover:text - white"
                   >
@@ -339,7 +339,7 @@ import { motion } from 'framer - motion';
                 </label>
               </div>) }
 
-            <button aria-label="Button" aria - label="Button" aria - label="Button" type="submit"
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
               disabled={!isFormValid () || isSubmitting}
               className={`w - full py - 4 px - 6 rounded - lg font - semibold text - lg transition - all duration - 200 flex items - center justify - center space - x-2 ${
                 isFormValid () && !isSubmitting
@@ -365,7 +365,7 @@ import { motion } from 'framer - motion';
               {isLogin
                 ? "Don't have an account? "
                 : 'Already have an account? '}
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={toggleForm}
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleForm}
                 className="text - cyan - 400 hover:text - cyan - 300 font - medium underline"
               >
                 {isLogin ? 'Sign up' : 'Sign in'}
@@ -386,11 +386,11 @@ import { motion } from 'framer - motion';
               </div>
             </div>
             <div role="button" className="mt - 6 grid grid - cols - 2 gap - 3">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="w - full inline - flex justify - center py - 3 px - 4 border border - white / 20 rounded - lg shadow - sm bg - white / 10 text - white hover:bg - white / 20 transition - colors">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full inline - flex justify - center py - 3 px - 4 border border - white / 20 rounded - lg shadow - sm bg - white / 10 text - white hover:bg - white / 20 transition - colors">
                 <Google className="w - 5 h - 5" />
                 <span className="ml - 2">Google</span>
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="w - full inline - flex justify - center py - 3 px - 4 border border - white / 20 rounded - lg shadow - sm bg - white / 10 text - white hover:bg - white / 20 transition - colors">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full inline - flex justify - center py - 3 px - 4 border border - white / 20 rounded - lg shadow - sm bg - white / 10 text - white hover:bg - white / 20 transition - colors">
                 <Github className="w - 5 h - 5" />
                 <span className="ml - 2">GitHub</span>
               </button>

@@ -193,14 +193,14 @@ summary: {;
             </p>
           </div>
           <div role="button" className="flex space - x-3">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={analyzeWebsite}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={analyzeWebsite}
               disabled={isAnalyzing}
               className="flex items - center px - 4 py - 2 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 disabled:opacity - 50 disabled:cursor - not - allowed"
             >
               {isAnalyzing ? (<RefreshCw className="w - 4 h - 4 mr - 2 animate - spin" />) : (<Search className="w - 4 h - 4 mr - 2" />) }
               {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}
             </button>
-            {analysisResult && (<button aria-label="Button" aria - label="Button" aria - label="Button" onClick={exportReport}
+            {analysisResult && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={exportReport}
                 className="flex items - center px - 4 py - 2 bg - green - 600 text - white rounded - lg hover:bg - green - 700"
               >
                 <Download className="w - 4 h - 4 mr - 2" />

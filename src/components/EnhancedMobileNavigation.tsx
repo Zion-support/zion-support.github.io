@@ -232,7 +232,7 @@ const quickActions = [
           </Link>
 
           {hasChildren && (;
-            <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleExpanded (item.label) }
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleExpanded (item.label) }
               className="absolute right - 4 top - 1/2 transform - translate - y-1 / 2 p - 2 text - zion - slate - light hover:text - white transition - colors"
               aria - label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
 
@@ -280,7 +280,7 @@ const quickActions = [
 
   return (<>
       {/* Mobile Menu Toggle */}
-      <button aria-label="Button" aria - label="Button" aria - label="Button" onClick = { () => setIsOpen (true) }
+      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => setIsOpen (true) }
         className="lg:hidden p - 2 text - white hover:text - zion - cyan transition - colors focus:outline - none focus:ring - 2 focus:ring - zion - cyan / 50 rounded - lg"
         aria - label="Open mobile navigation menu"
 
@@ -319,7 +319,7 @@ const quickActions = [
                     <p className="text - sm text - zion - slate - light">Technology Solutions</p>
                   </div>
                 </div>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
                   className="p - 2 text - zion - slate - light hover:text - white transition - colors rounded - lg hover:bg - zion - slate - light / 10"
                   aria - label="Close mobile navigation menu"
 

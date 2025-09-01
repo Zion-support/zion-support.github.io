@@ -174,11 +174,11 @@ import { motion } from 'framer - motion';
             <p className="text - zion - slate - light">Welcome back ! Here's what's happening today.</p>
           </div>
           <div className="flex items - center gap - 4">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" className="relative p - 2 text - zion - slate - light hover:text - white transition - colors">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="relative p - 2 text - zion - slate - light hover:text - white transition - colors">
               <Bell className="h - 6 w - 6" />
               <span className="absolute top - 0 right - 0 w - 2 h - 2 bg - red - 500 rounded - full"></span>
             </button>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zion - slate - light hover:text - white transition - colors">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - zion - slate - light hover:text - white transition - colors">
               <Settings className="h - 6 w - 6" />
             </button > import { 
   BarChart3, 
@@ -274,10 +274,10 @@ import { motion } from 'framer - motion';
               <p className="text - gray - 600 mt - 1">Welcome back ! Here's what's happening with your services.</p>
             </div>
             <div className="flex items - center space - x-4">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - gray - 600 transition - colors">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - gray - 600 transition - colors">
                 <Bell className="h - 6 w - 6" />
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - gray - 600 transition - colors">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - gray - 600 transition - colors">
                 <Settings className="h - 6 w - 6" />
               </button>
               <div className="w - 10 h - 10 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - full flex items - center justify - center text - white font - semibold">
@@ -371,7 +371,7 @@ import { motion } from 'framer - motion';
             >
               <div className="flex items - center justify - between mb - 6">
                 <h2 className="text - xl font - semibold text - white">Recent Projects</h2>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" className="text - zion - cyan hover:text - zion - cyan - light text - sm font - medium">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - zion - cyan hover:text - zion - cyan - light text - sm font - medium">
                   View All
                 </button>
               </div>
@@ -395,7 +395,7 @@ import { motion } from 'framer - motion';
             <div className="bg - white rounded - xl shadow - sm border border - gray - 200 p - 6">
               <div className="flex items - center justify - between mb - 6">
                 <h2 className="text - xl font - semibold text - gray - 900">Recent Services</h2>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" className="text - blue - 600 hover:text - blue - 700 text - sm font - medium flex items - center">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - blue - 600 hover:text - blue - 700 text - sm font - medium flex items - center">
                   View All < ArrowRight className="h - 4 w - 4 ml - 1" />
                 </button>
               </div>

@@ -844,7 +844,7 @@ import { SEO } from '../components / SEO';
 
               {/* View Mode Toggle */}
               <div role="button" className="flex items - center gap - 2">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`p - 2 rounded - lg transition - all duration - 200 ${
                     viewMode === 'grid'
                       ? 'bg - blue - 400 / 20 text - blue - 400'
@@ -853,7 +853,7 @@ import { SEO } from '../components / SEO';
                 >
                   <Grid className="w - 5 h - 5" />
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`p - 2 rounded - lg transition - all duration - 200 ${
                     viewMode === 'list'
                       ? 'bg - blue - 400 / 20 text - blue - 400'
@@ -972,7 +972,7 @@ import { SEO } from '../components / SEO';
                         </div>
                       </div>
 
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleTalentExpansion (talent.id) }
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleTalentExpansion (talent.id) }
                         className="w - full px - 4 py - 2 bg - gradient - to - r from - blue - 400 to - purple - 500 text - white font - semibold rounded - lg hover:from - blue - 500 hover:to - purple - 600 transition - all duration - 200 hover:scale - 105"
                       >
                         {expandedTalent === talent.id
@@ -1109,7 +1109,7 @@ import { SEO } from '../components / SEO';
                         </div>
                       </div>
 
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" className="w - full px - 3 py - 2 bg - gradient - to - r from - blue - 400 to - purple - 500 text - white font - semibold rounded - lg hover:from - blue - 500 hover:to - purple - 600 transition - all duration - 200 hover:scale - 105 text - sm">
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full px - 3 py - 2 bg - gradient - to - r from - blue - 400 to - purple - 500 text - white font - semibold rounded - lg hover:from - blue - 500 hover:to - purple - 600 transition - all duration - 200 hover:scale - 105 text - sm">
                         View Profile
                       </button>
                     </div>
@@ -1215,7 +1215,7 @@ import { SEO } from '../components / SEO';
                           </div>
                         </div>
 
-                        <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 2 bg - gradient - to - r from - blue - 400 to - purple - 500 text - white font - semibold rounded - lg hover:from - blue - 500 hover:to - purple - 600 transition - all duration - 200 hover:scale - 105">
+                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 2 bg - gradient - to - r from - blue - 400 to - purple - 500 text - white font - semibold rounded - lg hover:from - blue - 500 hover:to - purple - 600 transition - all duration - 200 hover:scale - 105">
                           View Profile
                         </button>
                       </div>
@@ -1243,7 +1243,7 @@ import { SEO } from '../components / SEO';
             </p>
 
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 3 bg - gradient - to - r from - blue - 400 to - purple - 500 text - white font - semibold rounded - lg hover:from - blue - 500 hover:to - purple - 600 transition - all duration - 200 hover:scale - 105">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 3 bg - gradient - to - r from - blue - 400 to - purple - 500 text - white font - semibold rounded - lg hover:from - blue - 500 hover:to - purple - 600 transition - all duration - 200 hover:scale - 105">
                 Hire Talent
               </button>
               <a

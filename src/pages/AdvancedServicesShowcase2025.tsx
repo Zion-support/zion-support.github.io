@@ -147,7 +147,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
               />
             </div>
             <div role="button" className="flex gap - 2">
-              {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category.id}
+              {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`px - 6 py - 3 rounded - lg font - medium transition - colors duration - 200 ${
                     selectedCategory === category.id

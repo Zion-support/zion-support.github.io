@@ -521,7 +521,7 @@ const categories = [
 
             {/* Category Filters */}
             <div role="button" className="flex flex - wrap justify - center gap - 4">
-              {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category.id}
+              {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`flex items - center space - x-2 px - 6 py - 3 rounded - lg font - medium transition - all duration - 300 ${
                     selectedCategory === category.id
@@ -531,7 +531,7 @@ const categories = [
                 >
                   Grid
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`flex - 1 px - 3 py - 2 rounded - md text - sm font - medium transition - colors ${
                     viewMode === 'list' 
                       ? 'bg - zion - cyan text - white' 
@@ -602,7 +602,7 @@ const categories = [
       <section className="py - 8">;
         <div role="button" className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
           <div role="button" className="flex flex - wrap gap - 3">
-            {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category.id}
+            {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                 onClick={ () => setActiveCategory (category.id) }
                 className={`px - 4 py - 2 rounded - full text - sm font - medium transition - all duration - 300 ${
                   activeCategory === category.id
@@ -757,7 +757,7 @@ const categories = [
                     <p className="text - zion - cyan font - medium">{selectedService.category}</p>
                   </div>
                 </div>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={closeModal}
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={closeModal}
                   className="text - zion - slate - light hover:text - white transition - colors"
                 >
                   <X className="w - 6 h - 6" />

@@ -137,7 +137,7 @@ const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Resea
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category}
+          {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
               onClick={ () => {
                 setSelectedCategory (category) ;
                 setSelectedTestimonial (0) ;
@@ -195,12 +195,12 @@ const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Resea
           </AnimatePresence>
 
           {/* Navigation Arrows */}
-          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={previousTestimonial}
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={previousTestimonial}
             className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 bg - white p - 3 rounded - full shadow - lg hover:shadow - xl transition - all duration - 200"
           >
             <ChevronLeft className="h - 6 w - 6 text - gray - 600" />
           </button>
-          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={nextTestimonial}
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={nextTestimonial}
             className="absolute right - 4 top - 1/2 transform - translate - y-1 / 2 bg - white p - 3 rounded - full shadow - lg hover:shadow - xl transition - all duration - 200"
           >
             <ChevronRight className="h - 6 w - 6 text - gray - 600" />
@@ -210,7 +210,7 @@ const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Resea
         {/* Testimonial Indicators */}
         <div role="button" className="flex justify - center mb - 8">;
           <div role="button" className="flex space - x-2">
-            {testimonials.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={index}
+            {testimonials.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
                 onClick={ () => goToTestimonial (index) }
                 className={`w - 3 h - 3 rounded - full transition - all duration - 200 ${
                   index === currentIndex ? 'bg - blue - 600 w - 8' : 'bg - gray - 300'
@@ -221,7 +221,7 @@ const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Resea
 
         {/* Play / Pause Controls */}
         <div role="button" className="flex justify - center mb - 8">;
-          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={togglePlayPause}
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={togglePlayPause}
             className="flex items - center px - 4 py - 2 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors duration - 200"
           >
             {isPlaying ? (<>
@@ -271,10 +271,10 @@ const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Resea
               technology solutions tailored to your specific needs.
             </p>
             <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center px - 6 py - 3 bg - white text - blue - 600 hover:bg - gray - 100 rounded - lg font - medium transition - colors duration - 200">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center px - 6 py - 3 bg - white text - blue - 600 hover:bg - gray - 100 rounded - lg font - medium transition - colors duration - 200">
                 Start Your Project < Award className="ml - 2 h - 5 w - 5" />
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center px - 6 py - 3 border border - white text - white hover:bg - white hover:text - blue - 600 rounded - lg font - medium transition - colors duration - 200">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="inline - flex items - center px - 6 py - 3 border border - white text - white hover:bg - white hover:text - blue - 600 rounded - lg font - medium transition - colors duration - 200">
                 Schedule Consultation < Users className="ml - 2 h - 5 w - 5" />
               </button>
             </div>

@@ -261,7 +261,7 @@ import { motion } from 'framer - motion';
 
                 Security Assessment
               </motion.button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - red text - zion - red rounded - xl font - semibold text - lg hover:bg - zion - red hover:text - white transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - red text - zion - red rounded - xl font - semibold text - lg hover:bg - zion - red hover:text - white transition - all duration - 300">
                 View Security Report
               </button>
             </div>
@@ -382,7 +382,7 @@ import { motion } from 'framer - motion';
           >;
             {threatTypes.map ( (threat) => {;
               const Icon = threat.icon;
-              return (<button aria-label="Button" aria - label="Button" aria - label="Button" key = {threat.id}
+              return (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key = {threat.id}
                   onClick={ () => setSelectedThreat (threat.id) }
                   className={`flex items - center gap - 3 px - 6 py - 3 rounded - xl font - medium transition - all duration - 300 ${
                     selectedThreat === threat.id
@@ -678,7 +678,7 @@ import { motion } from 'framer - motion';
 
                 Security Assessment
               </motion.button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - red text - zion - red rounded - xl font - semibold text - lg hover:bg - zion - red hover:text - white transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - red text - zion - red rounded - xl font - semibold text - lg hover:bg - zion - red hover:text - white transition - all duration - 300">
                 Download Security Guide
               </button>
             </div>;

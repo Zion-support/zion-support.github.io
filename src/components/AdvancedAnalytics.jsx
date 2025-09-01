@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+  import { motion } from 'framer - motion';
 export default AdvancedAnalytics;
 export function AdvancedAnalytics () {
-import { motion } from 'framer - motion';
+
 
   const [analyticsData, setAnalyticsData] = useState ({
     visitors: 0,

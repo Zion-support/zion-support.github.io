@@ -419,7 +419,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
 
                 {/* CTA */}
                 <div role="button" className="text - center">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - zion - cyan to - zion - purple text - white py - 3 px - 6 rounded - lg font - semibold group - hover:shadow - lg group - hover:shadow - zion - cyan / 25 transition - all duration - 300 flex items - center justify - center gap - 2">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - zion - cyan to - zion - purple text - white py - 3 px - 6 rounded - lg font - semibold group - hover:shadow - lg group - hover:shadow - zion - cyan / 25 transition - all duration - 300 flex items - center justify - center gap - 2">
                     Get Started < ArrowRight className="w - 4 h - 4 group - hover:translate - x-1 transition - transform duration - 300" />
                   </button>
                 </div>

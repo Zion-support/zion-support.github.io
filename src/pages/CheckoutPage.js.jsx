@@ -5,8 +5,9 @@ import { getStripe } from '@/utils / getStripe';
 import { NEW_PRODUCTS } from '@/data / newProductsData';
 import CardForm from '@/components / checkout / CardForm';
 import CheckoutProgress from '@/components / checkout / CheckoutProgress';
+  import { useRouter } from 'next / router'; // Changed from useParams
 export default function CheckoutPage () {
-import { useRouter } from 'next / router'; // Changed from useParams
+
 
   const router = useRouter () ;
   const { id: rawId } = router.query;

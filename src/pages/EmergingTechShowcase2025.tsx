@@ -232,7 +232,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
                           </span>
                         </div>
                       </div>
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedService (null) }
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedService (null) }
                         className="p - 2 bg - white / 10 rounded - full hover:bg - white / 20 transition - all"
 
                         <ChevronLeft className="w - 6 h - 6 text - white" />

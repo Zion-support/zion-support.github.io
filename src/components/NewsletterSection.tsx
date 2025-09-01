@@ -37,7 +37,7 @@ import { motion  } from 'framer - motion.ts';
               You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights,
               service announcements, and exclusive content.
             </p>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsSubscribed (false) }
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsSubscribed (false) }
               className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25"
             >
               Subscribe Another Email;
@@ -151,7 +151,7 @@ import { motion  } from 'framer - motion.ts';
                   />
                 </div>
 
-                <button aria-label="Button" aria - label="Button" aria - label="Button" type="submit"
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
                   disabled={isLoading || !email}
                   className="w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 700 disabled:opacity - 50 disabled:cursor - not - allowed transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25 flex items - center justify - center"
 

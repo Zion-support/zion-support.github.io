@@ -156,19 +156,19 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
                     get the latest features and improvements.
                   </p>
                   <div role="button" className="flex gap - 3">
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={applyUpdate}
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={applyUpdate}
                       className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 4 py - 2 rounded - xl font - medium hover:from - cyan - 400 hover:to - blue - 400 transition - all duration - 300 transform hover:scale - 105"
                     >
                       Update Now
                     </button>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={dismissUpdate}
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={dismissUpdate}
                       className="px - 4 py - 2 border border - gray - 600 text - gray - 300 rounded - xl font - medium hover:bg - gray - 800 transition - colors duration - 300"
                     >
                       Later
                     </button>
                   </div>
                 </div>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={dismissUpdate}
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={dismissUpdate}
                   className="text - gray - 400 hover:text - white transition - colors flex - shrink - 0"
                 >
                   <X className="w - 5 h - 5" />

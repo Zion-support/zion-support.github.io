@@ -220,7 +220,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
 
             {/* Category Filter */}
             <div role="button" className="flex flex - wrap gap - 2">
-              {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category}
+              {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                   onClick={ () => setSelectedCategory (category) }
                   className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all ${
                     selectedCategory === category
@@ -280,7 +280,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                           </h3>
                         </div>
                       </div>
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleServiceExpansion (service.id) }
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleServiceExpansion (service.id) }
                         className="text - cyan - 400 hover:text - cyan - 300 transition - colors"
                       >
                         {expandedService === service.id ? (<ChevronUp className="w - 5 h - 5" />) : (<ChevronDown className="w - 5 h - 5" />) }

@@ -377,7 +377,7 @@ setFilters (prev: > ({;
             placeholder={placeholder}
             className="flex - 1 bg - transparent text - gray - 900 dark:text - white placeholder - gray - 500 dark:placeholder - gray - 400 focus:outline - none"
           />
-          {query && (<button aria-label="Button" aria - label="Button" aria - label="Button" onClick={clearSearch}
+          {query && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={clearSearch}
               className="ml - 2 p - 1 rounded - full hover:bg - gray - 100 dark:hover:bg - gray - 700 transition - colors"
             >
               <X className="w - 4 h - 4 text - gray - 400" />
@@ -411,7 +411,7 @@ setFilters (prev: > ({;
           placeholder={placeholder}
           className="w - full pl - 12 pr - 12 py - 3 bg - transparent border - none outline - none text - gray - 900 placeholder - gray - 500"
         />
-        {query && (<button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setQuery ('') }
+        {query && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setQuery ('') }
             className="absolute right - 4 p - 1 text - gray - 400 hover:text - gray - 600 transition - colors"
           >
             <X className="h - 4 w - 4" />
@@ -439,13 +439,13 @@ setFilters (prev: > ({;
           >
             {/* Filters Toggle */}
             <div role="button" className="flex items - center justify - between p - 4 border - b border - gray - 200">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowFilters (!showFilters) }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowFilters (!showFilters) }
                 className="flex items - center gap - 2 text - sm text - gray - 600 hover:text - gray - 900 transition - colors"
               >
                 <Filter className="h - 4 w - 4" />
                 Filters
               </button>
-              { (filters.type.length > 0 || filters.category.length > 0 || filters.tags.length > 0) && (<button aria-label="Button" aria - label="Button" aria - label="Button" onClick={clearFilters}
+              { (filters.type.length > 0 || filters.category.length > 0 || filters.tags.length > 0) && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={clearFilters}
                   className="text - sm text - red - 500 hover:text - red - 600 transition - colors"
                 >
                   Clear all
@@ -477,7 +477,7 @@ setFilters (prev: > ({;
                     <div>
                       <h4 className="text - sm font - medium text - gray - 900 mb - 2">Type</h4>
                       <div role="button" className="flex flex - wrap gap - 2">
-                        {['service', 'page', 'blog', 'case - study'].map (type => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={type}
+                        {['service', 'page', 'blog', 'case - study'].map (type => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={type}
                             onClick = { () => toggleFilter ('type',
   type) }
                             className={`px - 3 py - 1 text - xs rounded - full transition - colors ${
@@ -494,7 +494,7 @@ setFilters (prev: > ({;
                     <div>
                       <h4 className="text - sm font - medium text - gray - 900 mb - 2">Category</h4>
                       <div role="button" className="flex flex - wrap gap - 2">
-                        {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category.id}
+                        {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                             onClick = { () => toggleFilter ('category',
   category.name) }
                             className={`px - 3 py - 1 text - xs rounded - full transition - colors ${
@@ -559,7 +559,7 @@ setFilters (prev: > ({;
                   <div role="button" className="animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 500 mx - auto"></div>
                   <p className="text - gray - 600 mt - 2">Searching...</p>
                 </div>) : results.length > 0 ? (<div role="button" className="p - 4 space - y-2">
-                  {results.map ( (result, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={result.id}
+                  {results.map ( (result, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={result.id}
                       onClick={ () => handleResultClick (result) }
                       className={`w - full text - left p - 3 hover:bg - gray - 50 rounded - lg transition - colors group ${
                         index === selectedIndex ? 'bg - blue - 50' : ''

@@ -310,7 +310,7 @@ const swipePower = (offset: number, velocity: number) => {
                 <ArrowRight className="w - 5 h - 5 ml - 2" />
               </Link>
 
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsAutoPlaying (!isAutoPlaying) }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsAutoPlaying (!isAutoPlaying) }
                 className="inline - flex items - center justify - center px - 6 py - 4 border border - slate - 600 hover:border - cyan - 400 text - slate - 300 hover:text - cyan - 400 font - medium rounded - lg transition - all duration - 300"
                 aria - label={
                   isAutoPlaying ? 'Pause slideshow' : 'Play slideshow'
@@ -363,7 +363,7 @@ const swipePower = (offset: number, velocity: number) => {
       {/* Navigation Controls */}
       <div role="button" className="absolute bottom - 8 left - 1/2 transform - translate - x-1 / 2 z - 20">
         <div role="button" className="flex space - x-2">
-          {memoizedSlides.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={index}
+          {memoizedSlides.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
               onClick={ () => goToSlide (index) }
               className={`w - 3 h - 3 rounded - full transition - all duration - 300 ${
                 index === currentSlide
@@ -376,14 +376,14 @@ const swipePower = (offset: number, velocity: number) => {
       </div>
 
       {/* Arrow Navigation */}
-      <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={prevSlide}
+      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={prevSlide}
         className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 rounded - full bg - slate - 800 / 50 hover:bg - slate - 700 / 70 text - slate - 300 hover:text - white transition - all duration - 300 backdrop - blur - sm"
         aria - label="Previous slide"
       >
         <ChevronLeft className="w - 6 h - 6" />
       </button>
 
-      <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={nextSlide}
+      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={nextSlide}
         className="absolute right - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 rounded - full bg - slate - 800 / 50 hover:bg - slate - 700 / 70 text - slate - 300 hover:text - white transition - all duration - 300 backdrop - blur - sm"
         aria - label="Next slide"
       >

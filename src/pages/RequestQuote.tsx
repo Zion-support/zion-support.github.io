@@ -403,7 +403,7 @@ import { SEO } from '../components / SEO';
           </div>
           
           <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={resetForm}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={resetForm}
               className="px - 8 py - 3 bg - gradient - to - r from - green - 400 to - blue - 500 text - white font - semibold rounded - lg hover:from - green - 500 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105"
             >
               Request Another Quote
@@ -738,7 +738,7 @@ import { SEO } from '../components / SEO';
 
                     {/* Navigation Buttons */}
                     <div role="button" className="flex justify - between mt - 8">
-                      {formStep > 1 && (<button aria-label="Button" aria - label="Button" aria - label="Button" type="button"
+                      {formStep > 1 && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
                           onClick={prevStep}
                           className="px - 6 py - 3 border border - slate - 600 text - gray - 300 font - semibold rounded - lg hover:border - slate - 500 hover:text - white transition - all duration - 200"
                         >
@@ -746,12 +746,12 @@ import { SEO } from '../components / SEO';
                         </button>) }
                       
                       <div role="button" className="ml - auto">
-                        {formStep < 3 ? (<button aria-label="Button" aria - label="Button" aria - label="Button" type="button"
+                        {formStep < 3 ? (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
                             onClick={nextStep}
                             className="px - 8 py - 3 bg - gradient - to - r from - green - 400 to - blue - 500 text - white font - semibold rounded - lg hover:from - green - 500 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105"
                           >
                             Next Step
-                          </button>) : (<button aria-label="Button" aria - label="Button" aria - label="Button" type="submit"
+                          </button>) : (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
                             disabled={isSubmitting}
                             className="px - 8 py - 3 bg - gradient - to - r from - green - 400 to - blue - 500 text - white font - semibold rounded - lg hover:from - green - 500 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105 disabled:opacity - 50 disabled:cursor - not - allowed"
                           >
@@ -779,7 +779,7 @@ import { SEO } from '../components / SEO';
                     
                     <div role="button" className="space - y-3">
                       {services.map ( (service) => (<div role="button" key={service.id} className="border border - slate - 600 / 50 rounded - lg overflow - hidden">
-                          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleServiceExpansion (service.id) }
+                          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleServiceExpansion (service.id) }
                             className="w - full p - 3 text - left hover:bg - slate - 700 / 50 transition - colors duration - 200"
                           >
                             <div role="button" className="flex items - center justify - between">
@@ -904,7 +904,7 @@ import { SEO } from '../components / SEO';
                 </div>
                 <h3 className="text - lg font - bold text - white mb - 2">Live Chat</h3>
                 <p className="text - gray - 300 text - sm mb - 3">Instant support</p>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" className="text - green - 400 hover:text - green - 300 transition - colors duration - 200">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - green - 400 hover:text - green - 300 transition - colors duration - 200">
                   Start Chat
                 </button>
               </div>

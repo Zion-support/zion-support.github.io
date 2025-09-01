@@ -126,10 +126,10 @@ import { motion } from 'framer - motion';
               Get personalized recommendations and pricing.
             </p>
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - cyan - 500 hover:bg - cyan - 600 text - white rounded - lg font - medium transition - colors">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 bg - cyan - 500 hover:bg - cyan - 600 text - white rounded - lg font - medium transition - colors">
                 Get Expert Consultation
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 border border - cyan - 500 text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg font - medium transition - colors">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 border border - cyan - 500 text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg font - medium transition - colors">
                 View All Services
               </button>
             </div>

@@ -1,7 +1,7 @@
 import { supabase } from '@/integrations / supabase / client';
-    export async function createJob (...args: any[]) : any {
+    export async function updateJob (...args: any[]) : any {
   export async function getJobById (...args: any[]) : any {
-export async function updateJob (...args: any[]) : any {
+export async function createJob (...args: any[]) : any {
 
       const { data, error } = await supabase
         .from ('jobs') .insert ([jobData]) .select () .single () ;

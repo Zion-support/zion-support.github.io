@@ -1,8 +1,9 @@
 import { Link } from 'react - router - dom';
 import React from 'react';
+  import { completeSitemap } from '../config / sitemap';
+  import { SEO } from './SEO';
 export default function SitemapPage () {
-import { completeSitemap } from '../config / sitemap';
-import { SEO } from './SEO';
+
 
   const publicRoutes = completeSitemap.filter (route => !route.requiredAuth) ;
   const talentRoutes = completeSitemap.filter (route =>

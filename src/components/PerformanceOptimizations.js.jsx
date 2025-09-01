@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
+  import { LoadingSpinner } from './ui / loading - spinner';
 export function PerformanceOptimizations () {
-import { LoadingSpinner } from './ui / loading - spinner';
+
 
   // Lazy load heavy components
   const LazyExpensiveComponent = lazy ( () => import ('./ExpensiveComponent') ) ;

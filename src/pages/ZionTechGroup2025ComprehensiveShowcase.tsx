@@ -326,7 +326,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () : JSX.Element => {;
                   </div>
 
                   {/* CTA Button */}
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setExpandedService (expandedService === service.id ? null : service.id) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setExpandedService (expandedService === service.id ? null : service.id) }
                     className="w - full bg - gradient - to - r from - blue - 600 to - purple - 600 hover:from - blue - 700 hover:to - purple - 700 text - white font - semibold py - 3 px - 6 rounded - lg transition - all duration - 300 hover:transform hover:scale - 105 mb - 4"
                   >
                     {expandedService === service.id ? 'Show Less' : service.ctaLabel}
@@ -443,7 +443,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () : JSX.Element => {;
               className="text - center py - 20"
             >
               <div role="button" className="text - gray - 400 text - xl mb - 4">No services found matching your criteria</div>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick = {;
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = {;
   ;
   ;
   ;

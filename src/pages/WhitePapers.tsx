@@ -298,7 +298,7 @@ import {
             <div role="button" className="flex flex - col lg:flex - row gap - 6 mb - 8">
               {/* Categories */}
               <div role="button" className="flex flex - wrap gap - 2">
-                {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category.id}
+                {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                     onClick={ () => setActiveCategory (category.id) }
                     className={`flex items - center gap - 2 px - 4 py - 2 rounded - lg font - medium transition - colors ${
                       activeCategory === category.id
@@ -473,7 +473,7 @@ import {
                       </div>
                     </div>
 
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" className="bg - zion - cyan text - zion - slate - dark px - 6 py - 2 rounded - lg font - semibold hover:bg - zion - cyan - light transition - colors inline - flex items - center gap - 2">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - zion - cyan text - zion - slate - dark px - 6 py - 2 rounded - lg font - semibold hover:bg - zion - cyan - light transition - colors inline - flex items - center gap - 2">
                       <Download className="w - 4 h - 4" />
                       Download
                     </button>
@@ -505,7 +505,7 @@ import {
               placeholder="Enter your email"
               className="flex - 1 px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white placeholder - zion - slate - light focus:outline - none focus:ring - 2 focus:ring - zion - cyan"
             />
-            <button aria-label="Button" aria - label="Button" aria - label="Button" className="bg - zion - cyan text - zion - slate - dark px - 6 py - 3 rounded - lg font - semibold hover:bg - zion - cyan - light transition - colors">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - zion - cyan text - zion - slate - dark px - 6 py - 3 rounded - lg font - semibold hover:bg - zion - cyan - light transition - colors">
               Subscribe
             </button>
           </div>

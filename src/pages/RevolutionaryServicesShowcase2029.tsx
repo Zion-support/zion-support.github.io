@@ -392,7 +392,7 @@ import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES } from '../../data / revoluti
                   >
                     Learn More
                   </a>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:bg - white / 10 transition - all duration - 300">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 3 border border - white / 20 text - white rounded - lg hover:bg - white / 10 transition - all duration - 300">
                     <Star className="w - 4 h - 4" />
                   </button>
                 </div>

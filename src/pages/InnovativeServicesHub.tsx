@@ -406,7 +406,7 @@ const InnovativeServicesHub: React.FC = () : JSX.Element => {
                 </div>
               </div>
 
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="w - full px - 4 py - 2 bg - gradient - to - r from - blue - 600 to - purple - 600 hover:from - blue - 700 hover:to - purple - 700 text - white font - medium rounded - lg transition - all duration - 300 hover:scale - 105">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full px - 4 py - 2 bg - gradient - to - r from - blue - 600 to - purple - 600 hover:from - blue - 700 hover:to - purple - 700 text - white font - medium rounded - lg transition - all duration - 300 hover:scale - 105">
                 Learn More
               </button>
             </motion.div>) ) }

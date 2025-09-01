@@ -9,6 +9,7 @@ import { SEO } from '@/components / SEO';
   import {
 export default function HiringTracker () {
 
+
     Tabs,
     TabsContent,
     TabsList,

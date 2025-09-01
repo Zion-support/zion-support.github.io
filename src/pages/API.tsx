@@ -175,10 +175,10 @@ def check_threat (ip_address) :;
             </p>
 
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - cyan - 600 text - white font - semibold rounded - lg hover:from - blue - 400 hover:to - cyan - 500 transition - all duration - 200 hover:scale - 105 shadow - lg shadow - blue - 500 / 20">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - cyan - 600 text - white font - semibold rounded - lg hover:from - blue - 400 hover:to - cyan - 500 transition - all duration - 200 hover:scale - 105 shadow - lg shadow - blue - 500 / 20">
                 Get API Key
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - blue - 400 / 30 text - blue - 300 font - semibold rounded - lg hover:bg - blue - 400 / 10 transition - all duration - 200">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - blue - 400 / 30 text - blue - 300 font - semibold rounded - lg hover:bg - blue - 400 / 10 transition - all duration - 200">
                 View Documentation
               </button>
             </div>
@@ -358,11 +358,11 @@ def check_threat (ip_address) :;
                 <div className="text - 4xl mb - 4">{sdk.icon}</div>
                 <h3 className="text - xl font - semibold text - white mb - 2">{sdk.name}</h3>
                 <div className="flex space - x-2">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 bg - blue - 500 / 20 text - blue - 300 rounded - lg hover:bg - blue - 500 / 30 transition - colors text - sm">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 bg - blue - 500 / 20 text - blue - 300 rounded - lg hover:bg - blue - 500 / 30 transition - colors text - sm">
                     <Download className="w - 4 h - 4 inline mr - 1" />
                     Download
                   </button>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 bg - slate - 700 / 50 text - gray - 300 rounded - lg hover:bg - slate - 600 / 50 transition - colors text - sm">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 bg - slate - 700 / 50 text - gray - 300 rounded - lg hover:bg - slate - 600 / 50 transition - colors text - sm">
                     <BookOpen className="w - 4 h - 4 inline mr - 1" />
                     Docs
                   </button>
@@ -396,10 +396,10 @@ def check_threat (ip_address) :;
               Zion Tech Group services into your applications today.
             </p>
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - cyan - 600 text - white font - semibold rounded - lg hover:from - blue - 400 hover:to - cyan - 500 transition - all duration - 200 hover:scale - 105 shadow - lg shadow - blue - 500 / 20">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - cyan - 600 text - white font - semibold rounded - lg hover:from - blue - 400 hover:to - cyan - 500 transition - all duration - 200 hover:scale - 105 shadow - lg shadow - blue - 500 / 20">
                 Get API Key
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - blue - 400 / 30 text - blue - 300 font - semibold rounded - lg hover:bg - blue - 400 / 10 transition - all duration - 200">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - blue - 400 / 30 text - blue - 300 font - semibold rounded - lg hover:bg - blue - 400 / 10 transition - all duration - 200">
                 View Full Documentation
               </button>
             </div>;

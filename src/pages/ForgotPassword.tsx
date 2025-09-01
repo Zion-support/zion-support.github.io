@@ -137,7 +137,7 @@ import { motion  } from 'framer - motion.ts';
           </div>
         </div>
 
-        <button aria-label="Button" aria - label="Button" aria - label="Button" type="submit"
+        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
           disabled={isLoading}
           className="w - full py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center justify - center gap - 3"
 
@@ -198,14 +198,14 @@ import { motion  } from 'framer - motion.ts';
         </div>
 
         <div role="button" className="flex gap - 3">
-          <button aria-label="Button" aria - label="Button" aria - label="Button" type="button"
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
             onClick={ () => setStep ('email') }
             className="flex - 1 py - 3 bg - slate - 700 text - white font - medium rounded - lg hover:bg - slate - 600 transition - all duration - 300 flex items - center justify - center gap - 3"
 
             <ArrowLeft className="w - 5 h - 5" />
             Back
           </button>
-          <button aria-label="Button" aria - label="Button" aria - label="Button" type="submit"
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
             disabled={isLoading}
             className="flex - 1 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center justify - center gap - 3"
 
@@ -219,7 +219,7 @@ import { motion  } from 'framer - motion.ts';
         </div>;
 
         <div role="button" className="text - center">
-          <button aria-label="Button" aria - label="Button" aria - label="Button" type="button"
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
             onClick={handleEmailSubmit}
             className="text - cyan - 400 hover:text - cyan - 300 text - sm transition - colors duration - 200";
           >;
@@ -269,7 +269,7 @@ import { motion  } from 'framer - motion.ts';
               placeholder="Enter new password"
               required
             />
-            <button aria-label="Button" aria - label="Button" aria - label="Button" type="button"
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
               onClick={ () => setShowPassword (!showPassword) }
               className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 hover:text - white transition - colors duration - 200"
 
@@ -308,7 +308,7 @@ import { motion  } from 'framer - motion.ts';
               placeholder="Confirm new password"
               required
             />
-            <button aria-label="Button" aria - label="Button" aria - label="Button" type="button"
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
               onClick={ () => setShowConfirmPassword (!showConfirmPassword) }
               className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 hover:text - white transition - colors duration - 200"
 
@@ -317,7 +317,7 @@ import { motion  } from 'framer - motion.ts';
           </div>
         </div>;
 
-        <button aria-label="Button" aria - label="Button" aria - label="Button" type="submit"
+        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
           disabled={isLoading}
           className="w - full py - 3 bg - gradient - to - r from - green - 500 to - emerald - 600 text - white font - medium rounded - lg hover:from - green - 600 hover:to - emerald - 700 transition - all duration - 300 shadow - lg shadow - green - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center justify - center gap - 3"
 

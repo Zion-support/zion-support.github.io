@@ -137,13 +137,13 @@ const futuristicServices: ServiceShowcase[] = [
 					{/* Control Panel */}
 					<div role="button" className="flex justify - center mb - 8">
 						<div role="button" className="bg - white / 10 backdrop - blur - sm rounded - full p - 2 flex items - center gap - 2">
-							<button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsPlaying (!isPlaying) }
+							<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsPlaying (!isPlaying) }
 								className="p - 3 bg - white / 20 hover:bg - white / 30 rounded - full transition - colors"
 
 								{isPlaying ? <Pause className="w - 5 h - 5 text - white" /> : <Play className="w - 5 h - 5 text - white" />}
 							</button>
 							<div role="button" className="flex gap - 2">
-								{futuristicServices.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={index}
+								{futuristicServices.map ( (_, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
 										onClick={ () => setCurrentService (index) }
 										className={`w - 3 h - 3 rounded - full transition - all ${
 											index === currentService

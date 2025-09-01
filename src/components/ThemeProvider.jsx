@@ -1,6 +1,6 @@
 import * as React from 'react';
-  export const ThemeProvider = ({ children }) => {
-export const useTheme = () => {
+  export const useTheme = () => {
+export const ThemeProvider = ({ children }) => {
 
     'use client';
 

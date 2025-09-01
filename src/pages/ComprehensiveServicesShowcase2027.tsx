@@ -399,10 +399,10 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
 
                 {/* Action Buttons */}
                 <div role="button" className="flex gap - 2">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" className="flex - 1 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 4 py - 2 rounded - lg text - sm font - medium hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 200">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 4 py - 2 rounded - lg text - sm font - medium hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 200">
                     Get Started
                   </button>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 border border - white / 20 text - white rounded - lg text - sm font - medium hover:bg - white / 10 transition - all duration - 200">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 border border - white / 20 text - white rounded - lg text - sm font - medium hover:bg - white / 10 transition - all duration - 200">
                     <Eye className="w - 4 h - 4" />
                   </button>
                 </div>
@@ -457,7 +457,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                       </span>
                     </div>
                   </div>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedService (null) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedService (null) }
                     className="p - 2 hover:bg - white / 10 rounded - lg transition - colors"
                   >
                     <X className="w - 6 h - 6 text - gray - 400" />
@@ -603,13 +603,13 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
 
                 {/* Action Buttons */}
                 <div role="button" className="flex gap - 4 mt - 8 pt - 6 border - t border - white / 20">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" className="flex - 1 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 6 py - 3 rounded - lg font - semibold hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 200">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex - 1 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 6 py - 3 rounded - lg font - semibold hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 200">
                     Get Started Now
                   </button>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 border border - white / 20 text - white rounded - lg font - semibold hover:bg - white / 10 transition - all duration - 200">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 border border - white / 20 text - white rounded - lg font - semibold hover:bg - white / 10 transition - all duration - 200">
                     Schedule Demo
                   </button>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 border border - white / 20 text - white rounded - lg font - semibold hover:bg - white / 10 transition - all duration - 200">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 6 py - 3 border border - white / 20 text - white rounded - lg font - semibold hover:bg - white / 10 transition - all duration - 200">
                     Download Brochure
                   </button>
                 </div>

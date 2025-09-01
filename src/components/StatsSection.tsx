@@ -1,7 +1,8 @@
 import React from 'react.ts';
+  import { motion } from 'framer - motion.ts';
 export default StatsSection;
 export function StatsSection (...args: any[]) : any {
-import { motion } from 'framer - motion.ts';
+
 
   interface Stat {
     number: string;

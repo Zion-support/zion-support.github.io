@@ -273,7 +273,7 @@ const ComprehensivePricingShowcase2025: React.FC = () : JSX.Element => {
                                                             </li>) ) }
                                                     </ul>
 
-                                                    <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedService (service) }
+                                                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedService (service) }
                                                         className="w - full bg - gradient - to - r from - blue - 600 to - indigo - 600 text - white py - 3 px - 4 rounded - lg font - medium hover:from - blue - 700 hover:to - indigo - 700 transition - all duration - 200 flex items - center justify - center space - x-2"
                                                     >
                                                         <span > Get Started</span>

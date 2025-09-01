@@ -375,7 +375,7 @@ import { motion, AnimatePresence } from 'framer - motion';
             {/* Main Navigation */}
             <div role="button" className="flex items - center space - x-1">
               {navigationItems.map ( (item) => (<div role="button" key={item.name} className="relative group">
-                  {item.dropdown ? (<button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleDropdown (item.name) }
+                  {item.dropdown ? (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleDropdown (item.name) }
                       className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center space - x-2 ${
                         location.pathname === item.href
                           ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
@@ -463,10 +463,10 @@ import { motion, AnimatePresence } from 'framer - motion';
 
               {/* User Menu */}
               <div role="button" className="flex items - center space - x-3">;
-                <button aria-label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - white hover:bg - zion - slate - light / 30 rounded - lg transition - all duration - 200">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - white hover:bg - zion - slate - light / 30 rounded - lg transition - all duration - 200">
                   <Bell className="w - 5 h - 5" />
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - white hover:bg - zion - slate - light / 30 rounded - lg transition - all duration - 200">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 400 hover:text - white hover:bg - zion - slate - light / 30 rounded - lg transition - all duration - 200">
                   <User className="w - 5 h - 5" />
                 </button>
               </div>
@@ -498,7 +498,7 @@ import { motion, AnimatePresence } from 'framer - motion';
               </Link>
 
               {/* Mobile Menu Button */}
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setMobileMenuOpen (!mobileMenuOpen) }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setMobileMenuOpen (!mobileMenuOpen) }
                 className="p - 2 text - gray - 400 hover:text - white hover:bg - zion - slate - light / 30 rounded - lg transition - all duration - 200"
 
                 {mobileMenuOpen ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
@@ -545,7 +545,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                 <div role="button" className="space - y-2">
                   {navigationItems.map ( (item) => (<div role="button" key={item.name}>
                       {item.dropdown ? (<div>
-                          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleDropdown (item.name) }
+                          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleDropdown (item.name) }
                             className={`w - full text - left px - 4 py - 3 rounded - lg font - medium transition - all duration - 300 flex items - center justify - between ${
                               location.pathname === item.href
                                 ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white'

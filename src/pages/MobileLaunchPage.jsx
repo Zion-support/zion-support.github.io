@@ -1,14 +1,15 @@
 import React from 'react';
+  import { AppStoreBanner } from '../components / mobile - app / AppStoreBanner';
+  import { AppTestimonials } from '../components / mobile - app / AppTestimonials';
+  import { CommunityTrust } from '../components / mobile - app / CommunityTrust';
+  import { Footer } from '../components / Footer';
+  import { MobileEmailCapture } from '../components / mobile - app / MobileEmailCapture';
+  import { MobileFeatureShowcase } from '../components / mobile - app / MobileFeatureShowcase';
+  import { MobileLaunchHero } from '../components / mobile - app / MobileLaunchHero';
+  import { QrCodeDownload } from '../components / mobile - app / QrCodeDownload';
+  import SEO from '../components / SEO';
 export const MobileLaunchPage = () => {
-import { AppStoreBanner } from '../components / mobile - app / AppStoreBanner';
-import { AppTestimonials } from '../components / mobile - app / AppTestimonials';
-import { CommunityTrust } from '../components / mobile - app / CommunityTrust';
-import { Footer } from '../components / Footer';
-import { MobileEmailCapture } from '../components / mobile - app / MobileEmailCapture';
-import { MobileFeatureShowcase } from '../components / mobile - app / MobileFeatureShowcase';
-import { MobileLaunchHero } from '../components / mobile - app / MobileLaunchHero';
-import { QrCodeDownload } from '../components / mobile - app / QrCodeDownload';
-import SEO from '../components / SEO';
+
 
   // import { Header } from '../components / header / Header';
 

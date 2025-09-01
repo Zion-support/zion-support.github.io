@@ -227,7 +227,7 @@ setNotifications (prev: > ({;
             <div role="button" className="w - 24 h - 24 bg - gradient - to - br from - cyan - 500 to - blue - 600 rounded - full flex items - center justify - center text - white text - 2xl font - bold">
               {profile.firstName.charAt (0) }{profile.lastName.charAt (0) }
             </div>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" className="absolute - bottom - 2 -right - 2 w - 8 h - 8 bg - gradient - to - br from - cyan - 500 to - blue - 600 rounded - full flex items - center justify - center text - white hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="absolute - bottom - 2 -right - 2 w - 8 h - 8 bg - gradient - to - br from - cyan - 500 to - blue - 600 rounded - full flex items - center justify - center text - white hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300">
               <Camera className="w - 4 h - 4" />
             </button>
           </div>
@@ -238,7 +238,7 @@ setNotifications (prev: > ({;
             <p className="text - slate - 300 text - lg mb - 1">{profile.position}</p>
             <p className="text - slate - 400">{profile.comp}</p>
           </div>
-          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsEditing (!isEditing) }
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsEditing (!isEditing) }
             className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 flex items - center gap - 2"
 
             {isEditing ? <X className="w - 5 h - 5" /> : <Edit className="w - 5 h - 5" />}
@@ -456,7 +456,7 @@ setNotifications (prev: > ({;
         </div>
 
         {isEditing && (<div role="button" className="flex justify - end">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={handleProfileUpdate}
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={handleProfileUpdate}
               disabled={isLoading}
               className="px - 8 py - 3 bg - gradient - to - r from - green - 500 to - emerald - 600 text - white font - medium rounded - lg hover:from - green - 600 hover:to - emerald - 700 transition - all duration - 300 shadow - lg shadow - green - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center gap - 2"
 
@@ -549,7 +549,7 @@ setNotifications (prev: > ({;
                 className="w - full pl - 10 pr - 12 py - 3 bg - white / 10 border border - slate - 600 / 30 rounded - lg text - white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent"
                 placeholder="Enter current password"
               />
-              <button aria-label="Button" aria - label="Button" aria - label="Button" type="button"
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
                 onClick = { () => setShowPasswords (prev => ({ ...prev,
   current: !prev.current 
 
@@ -572,7 +572,7 @@ setNotifications (prev: > ({;
                 className="w - full pl - 10 pr - 12 py - 3 bg - white / 10 border border - slate - 600 / 30 rounded - lg text - white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent"
                 placeholder="Enter new password"
               />
-              <button aria-label="Button" aria - label="Button" aria - label="Button" type="button"
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
                 onClick = { () => setShowPasswords (prev => ({ ...prev,
   new: !prev.new 
 
@@ -611,7 +611,7 @@ setNotifications (prev: > ({;
                 className="w - full pl - 10 pr - 12 py - 3 bg - white / 10 border border - slate - 600 / 30 rounded - lg text - white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent"
                 placeholder="Confirm new password"
               />
-              <button aria-label="Button" aria - label="Button" aria - label="Button" type="button"
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
                 onClick = { () => setShowPasswords (prev => ({ ...prev,
   confirm: !prev.confirm 
 
@@ -623,7 +623,7 @@ setNotifications (prev: > ({;
             </div>
           </div>;
 
-          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={handlePasswordChange}
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={handlePasswordChange}
             disabled={isLoading}
             className="px - 8 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center gap - 2"
 
@@ -817,7 +817,7 @@ setNotifications (prev: > ({;
         <h3 className="text - xl font - semibold text - white mb - 6">Data Management</h3>
 
         <div role="button" className="space - y-4">
-          <button aria-label="Button" aria - label="Button" aria - label="Button" className="w - full flex items - center justify - between p - 4 bg - white / 5 rounded - lg border border - slate - 600 / 30 hover:bg - white / 10 transition - all duration - 300 text - left">
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full flex items - center justify - between p - 4 bg - white / 5 rounded - lg border border - slate - 600 / 30 hover:bg - white / 10 transition - all duration - 300 text - left">
             <div>
               <h4 className="font - medium text - white mb - 1">Export Data</h4>
               <p className="text - slate - 400 text - sm">Download all your data in JSON format</p>
@@ -825,7 +825,7 @@ setNotifications (prev: > ({;
             <Download className="w - 5 h - 5 text - cyan - 400" />
           </button>
 
-          <button aria-label="Button" aria - label="Button" aria - label="Button" className="w - full flex items - center justify - between p - 4 bg - white / 5 rounded - lg border border - slate - 600 / 30 hover:bg - white / 10 transition - all duration - 300 text - left">
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full flex items - center justify - between p - 4 bg - white / 5 rounded - lg border border - slate - 600 / 30 hover:bg - white / 10 transition - all duration - 300 text - left">
             <div>
               <h4 className="font - medium text - white mb - 1">Import Data</h4>
               <p className="text - slate - 400 text - sm">Upload data from a backup file</p>
@@ -833,7 +833,7 @@ setNotifications (prev: > ({;
             <Upload className="w - 5 h - 5 text - cyan - 400" />
           </button>
 
-          <button aria-label="Button" aria - label="Button" aria - label="Button" className="w - full flex items - center justify - between p - 4 bg - red - 500 / 20 rounded - lg border border - red - 500 / 30 hover:bg - red - 500 / 30 transition - all duration - 300 text - left">
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full flex items - center justify - between p - 4 bg - red - 500 / 20 rounded - lg border border - red - 500 / 30 hover:bg - red - 500 / 30 transition - all duration - 300 text - left">
             <div>
               <h4 className="font - medium text - red - 400 mb - 1">Delete Account</h4>
               <p className="text - red - 400 / 70 text - sm">Permanently delete your account and all data</p>;
@@ -907,7 +907,7 @@ setNotifications (prev: > ({;
             { key: 'security', label: 'Security', icon: <Shield className="w - 5 h - 5" /> },
             { key: 'notifications', label: 'Notifications', icon: <Bell className="w - 5 h - 5" /> },
             { key: 'preferences', label: 'Preferences', icon: <Settings className="w - 5 h - 5" /> }
-          ].map ( (tab) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={tab.key}
+          ].map ( (tab) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={tab.key}
               onClick={ () => setActiveTab (tab.key as) }
               className={`flex items - center gap - 2 px - 6 py - 3 rounded - lg font - medium transition - all duration - 300 ${
                 activeTab === tab.key

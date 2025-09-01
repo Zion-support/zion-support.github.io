@@ -164,7 +164,7 @@ class ErrorBoundary extends Component < Props, State> {
                 role="button"
                 className="grid grid - cols - 1 md:grid - cols - 3 gap - 3 mb - 6"
               >
-                <button aria-label="Button" aria - label="Button" aria - label="Button"
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
                   onClick={this.handleRetry}
                   className="flex items - center justify - center gap - 2 px - 4 py - 3 bg - zion - cyan hover:bg - zion - cyan - dark text - white rounded - lg font - medium transition - colors"
                 >
@@ -172,7 +172,7 @@ class ErrorBoundary extends Component < Props, State> {
                   Try Again
                 </button>
 
-                <button aria-label="Button" aria - label="Button" aria - label="Button"
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
                   onClick={this.handleGoHome}
                   className="flex items - center justify - center gap - 2 px - 4 py - 3 bg - white / 10 hover:bg - white / 20 text - white rounded - lg font - medium transition - colors"
                 >
@@ -180,7 +180,7 @@ class ErrorBoundary extends Component < Props, State> {
                   Go Home
                 </button>
 
-                <button aria-label="Button" aria - label="Button" aria - label="Button"
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
                   onClick={this.handleReportError}
                   className="flex items - center justify - center gap - 2 px - 4 py - 3 bg - white / 10 hover:bg - white / 20 text - white rounded - lg font - medium transition - colors"
                 >
@@ -194,7 +194,7 @@ class ErrorBoundary extends Component < Props, State> {
                 role="button"
                 className="border - t border - white / 10 pt - 4"
               >
-                <button aria-label="Button" aria - label="Button" aria - label="Button"
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
                   onClick={this.toggleDetails}
                   className="flex items - center gap - 2 text - sm text - gray - 400 hover:text - white transition - colors"
                 >

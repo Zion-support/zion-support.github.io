@@ -225,10 +225,10 @@ import { motion } from 'framer - motion.ts';
               solutions designed to transform your business in 2026 and beyond.
             </p>
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - blue - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - blue - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105">
                 Explore Services
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border - 2 border - white text - white rounded - lg font - semibold hover:bg - white hover:text - gray - 900 transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border - 2 border - white text - white rounded - lg font - semibold hover:bg - white hover:text - gray - 900 transition - all duration - 300">
                 Get Started
               </button>
             </div>
@@ -319,10 +319,10 @@ import { motion } from 'framer - motion.ts';
               cloud, and emerging technology solutions.
             </p>
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - blue - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - blue - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105">
                 Start Your Journey
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border - 2 border - white text - white rounded - lg font - semibold hover:bg - white hover:text - gray - 900 transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border - 2 border - white text - white rounded - lg font - semibold hover:bg - white hover:text - gray - 900 transition - all duration - 300">
                 Contact Us
               </button>
             </div>

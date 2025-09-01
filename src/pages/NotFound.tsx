@@ -267,7 +267,7 @@ import { motion } from 'framer - motion';
 
         {/* Back Button */}
         <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">;
-          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => window.history.back () }
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => window.history.back () }
             className="inline - flex items - center gap - 2 px - 6 py - 3 bg - zion - slate - light text - zion - slate - dark rounded - lg hover:bg - zion - slate - light / 80 transition - colors"
 
             <ArrowLeft className="w - 4 h - 4" />

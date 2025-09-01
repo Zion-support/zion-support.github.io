@@ -83,10 +83,10 @@ import { motion } from 'framer - motion';
           </p>
 
           <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - xl font - semibold text - lg hover:scale - 105 transition - all duration - 300 shadow - 2xl hover:shadow - zion - cyan / 25">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - xl font - semibold text - lg hover:scale - 105 transition - all duration - 300 shadow - 2xl hover:shadow - zion - cyan / 25">
               Start Your Project
             </button>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - cyan text - zion - cyan rounded - xl font - semibold text - lg hover:bg - zion - cyan hover:text - white transition - all duration - 300">
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - zion - cyan text - zion - cyan rounded - xl font - semibold text - lg hover:bg - zion - cyan hover:text - white transition - all duration - 300">
               Schedule Consultation
             </button>;
           </div>;

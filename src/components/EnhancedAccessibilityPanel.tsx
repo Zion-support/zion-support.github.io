@@ -370,13 +370,13 @@ interface AccessibilityIssue {
                   </h2>
                 </div>
                 <div className="flex items - center space - x-2">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsExpanded (!isExpanded) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsExpanded (!isExpanded) }
                     className="p - 1 text - gray - 500 hover: text - gray - 700 dark: text - gray - 400 dark: hover: text - gray - 200"
                     aria - label={isExpanded ? 'Collapse panel' : 'Expand panel'}
                   >
                     {isExpanded ? (<ChevronUp className="w - 4 h - 4" />) : (<ChevronDown className="w - 4 h - 4" />) }
                   </button>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsVisible (false) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsVisible (false) }
                     className="p - 1 text - gray - 500 hover: text - gray - 700 dark: text - gray - 400 dark: hover: text - gray - 200"
                     aria - label="Close accessibility panel"
                   >
@@ -391,7 +391,7 @@ interface AccessibilityIssue {
                   Quick Actions
                 </h3>
                 <div className="grid grid - cols - 2 gap - 3">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
                       applySettings ({ highContrast: !settings.highContrast }) }
                     className={`flex items - center justify - center space - x-2 p - 3 rounded - lg border transition - colors ${
                       settings.highContrast
@@ -404,7 +404,7 @@ interface AccessibilityIssue {
                     <span className="text - sm">High Contrast</span>
                   </button>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
                       applySettings ({ largeText: !settings.largeText }) }
                     className={`flex items - center justify - center space - x-2 p - 3 rounded - lg border transition - colors ${
                       settings.largeText
@@ -417,7 +417,7 @@ interface AccessibilityIssue {
                     <span className="text - sm">Large Text</span>
                   </button>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
                       applySettings ({ reducedMotion: !settings.reducedMotion }) }
                     className={`flex items - center justify - center space - x-2 p - 3 rounded - lg border transition - colors ${
                       settings.reducedMotion
@@ -430,7 +430,7 @@ interface AccessibilityIssue {
                     <span className="text - sm">Reduced Motion</span>
                   </button>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () =>
                       applySettings ({
                         focusIndicator: !settings.focusIndicator,
                       }) }
@@ -530,7 +530,7 @@ interface AccessibilityIssue {
                   <h3 className="text - lg font - semibold text - gray - 900 dark: text - white">
                     Accessibility Audit
                   </h3>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={runAccessibilityAudit}
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={runAccessibilityAudit}
                     disabled={isScanning}
                     className="flex items - center space - x-2 px - 3 py - 1 bg - zion - blue hover: bg - zion - blue - dark text - white text - sm rounded - lg transition - colors disabled: opacity - 50"
                   >
@@ -581,7 +581,7 @@ interface AccessibilityIssue {
               </div>
 
               {/* Reset Button */}
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
                   const defaultSettings: AccessibilitySettings = {
                     highContrast: false,
                     largeText: false,

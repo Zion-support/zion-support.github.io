@@ -242,14 +242,14 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
             {/* View Mode and Sort Controls */}
             <div role="button" className="flex gap - 2">
               <div role="button" className="flex bg - gray - 800 / 50 rounded - lg p - 1">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`p - 2 rounded - md transition - all duration - 300 ${
                     viewMode === 'grid' ? 'bg - cyan - 500 text - white' : 'text - gray - 400 hover:text - white'
                   }`}
                 >
                   <Grid className="w - 5 h - 5" />
                 </button>
-                                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                     className={`p - 2 rounded - md transition - all duration - 300 ${
                       viewMode === 'list' ? 'bg - cyan - 500 text - white' : 'text - gray - 400 hover:text - white'
                     }`}
@@ -432,7 +432,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
                       </div>
                     </div>
                   </div>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={closeModal}
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={closeModal}
                     className="text - gray - 400 hover:text - white transition - colors"
                   >
                     <X className="w - 6 h - 6" />

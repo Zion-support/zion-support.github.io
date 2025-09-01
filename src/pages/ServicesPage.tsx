@@ -272,7 +272,7 @@ import { motion, AnimatePresence } from 'framer - motion';
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category.id}
+            {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                 onClick={ () => setSelectedCategory (category.id) }
                 className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
                   selectedCategory === category.id
@@ -456,7 +456,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                 <p className="text - zion - slate - light mb - 6">
                   Try adjusting your search criteria or browse all categories
                 </p>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
                     setSearchQuery ('') ;
                     setSelectedCategory ('all') ;
                     setSelectedPriceRange ('all') ;

@@ -287,14 +287,14 @@ import { SEO } from "../components / SEO";
                     <option value="roi">Sort by ROI</option>
                     <option value="setupTime">Sort by Setup Time</option>
                   </select>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSortOrder (sortOrder === 'asc' ? 'desc' : 'asc') }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSortOrder (sortOrder === 'asc' ? 'desc' : 'asc') }
                     className="bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white px - 4 py - 3 hover:bg - white / 20 transition - colors"
 
                     {sortOrder === 'asc' ? <SortAsc className="w - 5 h - 5" /> : <SortDesc className="w - 5 h - 5" />}
                   </button>
                 </div>
                 <div role="button" className="flex gap - 4">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                     className={`px - 4 py - 3 rounded - lg transition - colors ${
                       viewMode === 'grid'
                         ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 text - white'
@@ -303,7 +303,7 @@ import { SEO } from "../components / SEO";
 
                     Grid
                   </button>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                     className={`px - 4 py - 3 rounded - lg transition - colors ${
                       viewMode === 'list'
                         ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 text - white'
@@ -318,7 +318,7 @@ import { SEO } from "../components / SEO";
               {/* Category Filters */}
               <div role="button" className="flex flex - wrap gap - 4 mb - 8">;
                 {categories.map ( (category) => (;
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" key={category}
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                     onClick={ () => setActiveCategory (category) }
                     className={`px - 6 py - 3 rounded - full transition - all duration - 300 ${
                       activeCategory === category
@@ -437,14 +437,14 @@ import { SEO } from "../components / SEO";
             {/* Pagination */}
             {totalPages > 1 && (<div role="button" className="mt - 16 flex justify - center">
                 <div role="button" className="flex space - x-2">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => handlePageChange (currentPage - 1) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handlePageChange (currentPage - 1) }
                     disabled={currentPage === 1}
                     className="px - 4 py - 2 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white disabled:opacity - 50 disabled:cursor - not - allowed hover:bg - white / 20 transition - colors"
 
                     <ChevronLeft className="w - 5 h - 5" />
                   </button>
                   
-                  {Array.from ({ length: totalPages }, (_, i) => i + 1) .map ( (page) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={page}
+                  {Array.from ({ length: totalPages }, (_, i) => i + 1) .map ( (page) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={page}
                       onClick={ () => handlePageChange (page) }
                       className={`px - 4 py - 2 rounded - lg transition - colors ${
                         currentPage === page
@@ -455,7 +455,7 @@ import { SEO } from "../components / SEO";
                       {page}
                     </button>) ) }
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => handlePageChange (currentPage + 1) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handlePageChange (currentPage + 1) }
                     disabled={currentPage === totalPages}
                     className="px - 4 py - 2 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white disabled:opacity - 50 disabled:cursor - not - allowed hover:bg - white / 20 transition - colors"
 
@@ -541,7 +541,7 @@ import { SEO } from "../components / SEO";
                     rows={4}
                     className="w - full px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white placeholder - gray - 300 focus:outline - none focus:ring - 2 focus:ring - purple - 500"
                   />
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" type="submit"
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
                     className="w - full bg - gradient - to - r from - purple - 600 to - pink - 600 text - white py - 4 rounded - lg font - semibold hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 300 transform hover:scale - 105"
 
                     Get Revolutionary Demo
@@ -647,7 +647,7 @@ import { SEO } from "../components / SEO";
                 <div role="button" className={`p - 4 rounded - xl bg - gradient - to - r ${getCategoryColor (selectedService.category) }`}>
                   {getCategoryIcon (selectedService.category) }
                 </div>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={closeModal}
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={closeModal}
                   className="text - white / 60 hover:text - white transition - colors"
 
                   <X className="w - 6 h - 6" />

@@ -290,13 +290,13 @@ interface MobileExperienceEnhancerProps {
         >
           <div className="flex items - center justify - between px - 4 py - 3">
             <div className="flex items - center space - x-3">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleMobileNavigation ('back') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleMobileNavigation ('back') }
                 className="p - 2 rounded - lg bg - slate - 100 dark:bg - slate - 700 hover:bg - slate - 200 dark:hover:bg - slate - 600 transition - colors"
                 aria - label="Go back"
               >
                 <ArrowLeft className="w - 5 h - 5" />
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleMobileNavigation ('home') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleMobileNavigation ('home') }
                 className="p - 2 rounded - lg bg - slate - 100 dark:bg - slate - 700 hover:bg - slate - 200 dark:hover:bg - slate - 600 transition - colors"
                 aria - label="Go home"
               >
@@ -305,13 +305,13 @@ interface MobileExperienceEnhancerProps {
             </div>
 
             <div className="flex items - center space - x-3">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleMobileNavigation ('search') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleMobileNavigation ('search') }
                 className="p - 2 rounded - lg bg - slate - 100 dark:bg - slate - 700 hover:bg - slate - 200 dark:hover:bg - slate - 600 transition - colors"
                 aria - label="Search"
               >
                 <Search className="w - 5 h - 5" />
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleMobileNavigation ('menu') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleMobileNavigation ('menu') }
                 className="p - 2 rounded - lg bg - slate - 100 dark:bg - slate - 700 hover:bg - slate - 200 dark:hover:bg - slate - 600 transition - colors"
                 aria - label="Menu"
               >
@@ -333,7 +333,7 @@ interface MobileExperienceEnhancerProps {
               <h3 className="text - lg font - semibold text - slate - 900 dark:text - white">
                 Menu
               </h3>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowMobileMenu (false) }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowMobileMenu (false) }
                 className="p - 2 rounded - lg bg - slate - 100 dark:bg - slate - 700 hover:bg - slate - 200 dark:hover:bg - slate - 600 transition - colors"
                 aria - label="Close menu"
               >
@@ -486,7 +486,7 @@ interface MobileExperienceEnhancerProps {
                 </div>
               </div>
 
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowGestureGuide (false) }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowGestureGuide (false) }
                 className="w - full mt - 6 px - 4 py - 2 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors"
               >
                 Got it!

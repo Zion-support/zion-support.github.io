@@ -212,7 +212,7 @@ const ServicesPricingPage: React.FC = () => {
             {/* Billing Toggle */}
             <div role="button" className="flex justify - center mb - 12">
               <div role="button" className="bg - slate - 800 / 50 rounded - lg p - 1 border border - slate - 700 / 50">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setBillingCycle ('monthly') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setBillingCycle ('monthly') }
                   className={`px - 6 py - 2 rounded - md text - sm font - medium transition - colors ${
                     billingCycle === 'monthly'
                       ? 'bg - blue - 500 text - white'
@@ -221,7 +221,7 @@ const ServicesPricingPage: React.FC = () => {
                 >
                   Monthly
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setBillingCycle ('annual') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setBillingCycle ('annual') }
                   className={`px - 6 py - 2 rounded - md text - sm font - medium transition - colors ${
                     billingCycle === 'annual'
                       ? 'bg - blue - 500 text - white'
@@ -282,7 +282,7 @@ const ServicesPricingPage: React.FC = () => {
                       </li>) ) }
                   </ul>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" className="w - full py - 3 px - 6 rounded - lg font - medium transition - all duration - 300 ${
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full py - 3 px - 6 rounded - lg font - medium transition - all duration - 300 ${
                     plan.popular
                       ? 'bg - gradient - to - r from - blue - 500 to - purple - 500 text - white hover:from - blue - 600 hover:to - purple - 600'
                       : 'bg - slate - 700 / 50 text - white hover:bg - slate - 600 / 50 border border - slate - 600 / 50'
@@ -362,11 +362,11 @@ const ServicesPricingPage: React.FC = () => {
                 customized solution.
               </p>
               <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 3 bg - gradient - to - r from - blue - 500 to - purple - 500 text - white rounded - lg font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 3 bg - gradient - to - r from - blue - 500 to - purple - 500 text - white rounded - lg font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300">
                   <Mail className="w - 5 h - 5 inline mr - 2" />
                   Contact Sales
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 3 border border - blue - 400 text - blue - 400 rounded - lg font - medium hover:bg - blue - 400 hover:text - white transition - all duration - 300">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 3 border border - blue - 400 text - blue - 400 rounded - lg font - medium hover:bg - blue - 400 hover:text - white transition - all duration - 300">
                   <Phone className="w - 5 h - 5 inline mr - 2" />
                   Schedule Demo
                 </button>

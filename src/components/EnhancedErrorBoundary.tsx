@@ -248,21 +248,21 @@ Timestamp: ${new Date () .toISOString () }
               transition={{ delay: 0.6 }}
               className="flex flex - col sm:flex - row gap - 4 justify - center items - center"
             >
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={this.handleRetry}
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={this.handleRetry}
                 className="px - 6 py - 3 bg - cyan - 500 hover:bg - cyan - 600 text - white font - semibold rounded - lg transition - colors duration - 200 flex items - center space - x-2"
               >
                 <RefreshCw className="w - 5 h - 5" />
                 <span > Try Again</span>
               </button>
 
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={this.handleGoBack}
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={this.handleGoBack}
                 className="px - 6 py - 3 bg - gray - 600 hover:bg - gray - 700 text - white font - semibold rounded - lg transition - colors duration - 200 flex items - center space - x-2"
               >
                 <ArrowLeft className="w - 5 h - 5" />
                 <span > Go Back</span>
               </button>
 
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={this.handleGoHome}
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={this.handleGoHome}
                 className="px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white font - semibold rounded - lg transition - colors duration - 200 flex items - center space - x-2"
               >
                 <Home className="w - 5 h - 5" />
@@ -281,7 +281,7 @@ Timestamp: ${new Date () .toISOString () }
                   Help us improve by reporting this error
                 </p>
 
-                {!this.state.reportSent ? (<button aria-label="Button" aria - label="Button" aria - label="Button" onClick={this.handleReportError}
+                {!this.state.reportSent ? (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={this.handleReportError}
                     disabled={this.state.isReporting}
                     className="px - 6 py - 3 bg - green - 600 hover:bg - green - 700 disabled:bg - green - 800 text - white font - semibold rounded - lg transition - colors duration - 200 flex items - center space - x-2 mx - auto disabled:opacity - 50"
                   >

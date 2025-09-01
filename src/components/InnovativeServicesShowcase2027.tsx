@@ -144,7 +144,7 @@ const categoryColors: { [key: string]: string } = {
           className="mb - 12"
 
           <div role="button" className="flex flex - wrap justify - center gap - 3">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedCategory ('All') }
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedCategory ('All') }
               className={`px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 ${
                 selectedCategory === 'All'
                   ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
@@ -155,7 +155,7 @@ const categoryColors: { [key: string]: string } = {
             </button>;
             {serviceCategories2027.map ( (category) => {;
               const Icon = categoryIcons[category];
-              return (<button aria-label="Button" aria - label="Button" aria - label="Button" key = {category}
+              return (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key = {category}
                   onClick={ () => setSelectedCategory (category) }
                   className={`px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 flex items - center gap - 2 ${
                     selectedCategory === category
@@ -250,7 +250,7 @@ const categoryColors: { [key: string]: string } = {
                 {/* Price & CTA */}
                 <div role="button" className="flex items - center justify - between mb - 4">;
                   <div role="button" className="text - 2xl font - bold text - white">{service.price}</div>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleServiceExpansion (service.id) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleServiceExpansion (service.id) }
                     className="px - 4 py - 2 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - lg font - semibold hover:shadow - lg hover:shadow - zion - cyan / 25 transition - all duration - 300 flex items - center gap - 2"
 
                     {expandedService === service.id ? 'Less' : 'Learn More'}

@@ -3,8 +3,9 @@ import { BillingDashboard } from '@/components / enterprise / billing / BillingD
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { SEO } from '@/components / SEO';
 import { useAuth } from '@/hooks / useAuth';
+  import { useRouter } from 'next / router';
 export default function EnterpriseBilling () {
-import { useRouter } from 'next / router';
+
 
   const { user } = useAuth () ;
   const router = useRouter () ;

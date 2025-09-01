@@ -13,6 +13,7 @@ export default function JobDetails () {
 import { formatDistanceToNow } from 'date - fns';
 import { toast } from 'sonner';
 
+
     Card,
     CardContent,
     CardHeader,

@@ -388,7 +388,7 @@ interactiveElements.forEach (element:  > {;
                   <Settings className="w - 6 h - 6" />
                   Accessibility
                 </h2>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsExpanded (false) }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsExpanded (false) }
                   className="p - 2 hover:bg - cyan - 400 / 20 text - cyan - 400 rounded - lg transition - colors"
                   aria - label="Close accessibility panel"
                 >
@@ -400,7 +400,7 @@ interactiveElements.forEach (element:  > {;
               <div className="mb - 6">
                 <h3 className="text - lg font - semibold text - white mb - 4">Quick Actions</h3>
                 <div className="grid grid - cols - 2 gap - 3">
-                  {quickActions.map ( (action) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={action.name}
+                  {quickActions.map ( (action) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={action.name}
                       onClick={action.action}
                       className={`p - 3 rounded - lg border transition - all duration - 200 ${
                         action.active
@@ -423,7 +423,7 @@ interactiveElements.forEach (element:  > {;
                 <div className="flex items - center space - x-2">
                   <ZoomOut className="w - 5 h - 5 text - cyan - 400" />
                   <div className="flex - 1 grid grid - cols - 4 gap - 2">
-                    {fontSizes.map ( (size) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={size}
+                    {fontSizes.map ( (size) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={size}
                         onClick={ () => updateSetting ('fontSize', size) }
                         className={`p - 2 rounded text - xs font - medium transition - colors ${
                           settings.fontSize === size
@@ -442,7 +442,7 @@ interactiveElements.forEach (element:  > {;
               <div className="mb - 6">
                 <h3 className="text - lg font - semibold text - white mb - 4">Line Height</h3>
                 <div className="space - y-2">
-                  {[1.2, 1.4, 1.6, 1.8, 2.0].map ( (height) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={height}
+                  {[1.2, 1.4, 1.6, 1.8, 2.0].map ( (height) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={height}
                       onClick={ () => updateSetting ('lineHeight', height) }
                       className={`w - full p - 2 rounded text - sm transition - colors ${
                         settings.lineHeight === height
@@ -459,7 +459,7 @@ interactiveElements.forEach (element:  > {;
               <div className="mb - 6">
                 <h3 className="text - lg font - semibold text - white mb - 4">Letter Spacing</h3>
                 <div className="space - y-2">
-                  {[-1, 0, 1, 2, 3].map ( (spacing) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={spacing}
+                  {[-1, 0, 1, 2, 3].map ( (spacing) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={spacing}
                       onClick={ () => updateSetting ('letterSpacing', spacing) }
                       className={`w - full p - 2 rounded text - sm transition - colors ${
                         settings.letterSpacing === spacing
@@ -473,7 +473,7 @@ interactiveElements.forEach (element:  > {;
               </div>
 
               {/* Reset Button */}
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={resetSettings}
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={resetSettings}
                 className="w - full py - 3 px - 4 bg - slate - 800 hover:bg - slate - 700 text - white rounded - lg transition - colors flex items - center justify - center gap - 2"
               >
                 <RotateCcw className="w - 4 h - 4" />
@@ -496,7 +496,7 @@ interactiveElements.forEach (element:  > {;
             <div className="mb - 6">
               <div className="flex items - center justify - between mb - 3">
                 <h4 className="text - sm font - semibold text - gray - 300">Accessibility Scan</h4>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={scanForIssues}
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={scanForIssues}
                   disabled={isScanning}
                   className="px - 3 py - 1 text - xs bg - blue - 600 hover:bg - blue - 700 disabled:bg - gray - 600 text - white rounded - lg transition - colors"
                 >
@@ -533,12 +533,12 @@ interactiveElements.forEach (element:  > {;
 
             {/* Actions */}
             <div className="flex gap - 3">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={resetSettings}
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={resetSettings}
                 className="flex - 1 px - 4 py - 2 bg - slate - 600 hover:bg - slate - 700 text - white text - sm rounded - lg transition - colors"
               >
                 Reset All
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsExpanded (false) }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsExpanded (false) }
                 className="flex - 1 px - 4 py - 2 bg - green - 600 hover:bg - green - 700 text - white text - sm rounded - lg transition - colors"
               >
                 Apply
@@ -723,7 +723,7 @@ interactiveElements.forEach (element:  > {;
                     Accessibility
                   </h2>
                 </div>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
                   className="p - 2 hover:bg - gray - 100 dark:hover:bg - gray - 700 rounded - lg transition - colors"
                   aria - label="Close accessibility panel"
                 >
@@ -737,7 +737,7 @@ interactiveElements.forEach (element:  > {;
                   const Icon = tab.icon;
                   const isActive = activeTab === tab.id;
                   
-                  return (<button aria-label="Button" aria - label="Button" aria - label="Button" key={tab.id}
+                  return (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={tab.id}
                       onClick={ () => setActiveTab (tab.id) }
                       className={`flex - 1 flex items - center justify - center space - x-2 px - 4 py - 3 text - sm font - medium transition - colors ${
                         isActive
@@ -767,7 +767,7 @@ interactiveElements.forEach (element:  > {;
                           Font Size: {settings.fontSize}px
                         </label>
                         <div className="flex items - center space - x-3">
-                          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={decreaseFontSize}
+                          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={decreaseFontSize}
                             className="p - 2 bg - gray - 100 dark:bg - gray - 700 rounded - lg hover:bg - gray - 200 dark:hover:bg - gray - 600 transition - colors"
                             aria - label="Decrease font size"
                           >
@@ -779,7 +779,7 @@ interactiveElements.forEach (element:  > {;
                               style={{ width: `${ ( (settings.fontSize - 12) / 12) * 100}%` }}
                             />
                           </div>
-                          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={increaseFontSize}
+                          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={increaseFontSize}
                             className="p - 2 bg - gray - 100 dark:bg - gray - 700 rounded - lg hover:bg - gray - 200 dark:hover:bg - gray - 600 transition - colors"
                             aria - label="Increase font size"
                           >
@@ -801,7 +801,7 @@ interactiveElements.forEach (element:  > {;
                             </p>
                           </div>
                         </div>
-                        <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={toggleScreenReader}
+                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleScreenReader}
                           className={`relative inline - flex h - 6 w - 11 items - center rounded - full transition - colors ${
                             settings.screenReader ? 'bg - cyan - 500' : 'bg - gray - 200 dark:bg - gray - 700'
                           }`}
@@ -837,7 +837,7 @@ interactiveElements.forEach (element:  > {;
                             </p>
                           </div>
                         </div>
-                        <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={toggleHighContrast}
+                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleHighContrast}
                           className={`relative inline - flex h - 6 w - 11 items - center rounded - full transition - colors ${
                             settings.highContrast ? 'bg - cyan - 500' : 'bg - gray - 200 dark:bg - gray - 700'
                           }`}
@@ -865,7 +865,7 @@ interactiveElements.forEach (element:  > {;
                             </p>
                           </div>
                         </div>
-                        <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={toggleReducedMotion}
+                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleReducedMotion}
                           className={`relative inline - flex h - 6 w - 11 items - center rounded - full transition - colors ${
                             settings.reducedMotion ? 'bg - cyan - 500' : 'bg - gray - 200 dark:bg - gray - 700'
                           }`}
@@ -901,7 +901,7 @@ interactiveElements.forEach (element:  > {;
                             </p>
                           </div>
                         </div>
-                        <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={toggleKeyboardNavigation}
+                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleKeyboardNavigation}
                           className={`relative inline - flex h - 6 w - 11 items - center rounded - full transition - colors ${
                             settings.keyboardNavigation ? 'bg - cyan - 500' : 'bg - gray - 200 dark:bg - gray - 700'
                           }`}
@@ -929,7 +929,7 @@ interactiveElements.forEach (element:  > {;
                             </p>
                           </div>
                         </div>
-                        <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={toggleFocusIndicator}
+                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleFocusIndicator}
                           className={`relative inline - flex h - 6 w - 11 items - center rounded - full transition - colors ${
                             settings.focusIndicator ? 'bg - cyan - 500' : 'bg - gray - 200 dark:bg - gray - 700'
                           }`}
@@ -948,7 +948,7 @@ interactiveElements.forEach (element:  > {;
 
                 {/* Reset Button */}
                 <div className="pt - 6 border - t border - gray - 200 dark:border - gray - 700">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={resetSettings}
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={resetSettings}
                     className="w - full px - 4 py - 2 text - sm font - medium text - gray - 700 dark:text - gray - 300 bg - gray - 100 dark:bg - gray - 700 rounded - lg hover:bg - gray - 200 dark:hover:bg - gray - 600 transition - colors"
                   >
                     Reset to Defaults

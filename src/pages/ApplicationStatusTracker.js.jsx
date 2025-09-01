@@ -7,6 +7,7 @@ import { useIsMobile } from '@/hooks / use - mobile';
   import {
 export default function ApplicationStatusTracker () {
 
+
     Card,
     CardHeader,
     CardTitle,

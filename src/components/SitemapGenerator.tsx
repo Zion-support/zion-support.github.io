@@ -787,14 +787,14 @@ ${sitemapData
             </p>
           </div>
           <div role="button" className="flex space - x-3">
-            <button aria-label="Button" aria - label="Button" aria - label="Button"
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
               onClick={exportSitemap}
               className="flex items - center px - 4 py - 2 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700"
             >
               <Download className="w - 4 h - 4 mr - 2" />
               Export XML
             </button>
-            <button aria-label="Button" aria - label="Button" aria - label="Button"
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
               onClick={exportCSV}
               className="flex items - center px - 4 py - 2 bg - green - 600 text - white rounded - lg hover:bg - green - 700"
             >

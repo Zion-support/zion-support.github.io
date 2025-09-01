@@ -141,7 +141,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                 </span>
               </div>
             </div>
-            <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsExpanded (!isExpanded) }
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsExpanded (!isExpanded) }
               className="p - 2 text - cyan - 400 hover:text - cyan - 300 transition - colors"
             >
               {isExpanded ? <ChevronUp className="w - 5 h - 5" /> : <ChevronDown className="w - 5 h - 5" />}
@@ -386,7 +386,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
         <div role="button" className="container mx - auto px - 4">
           {/* Tab Navigation */}
           <div role="button" className="flex flex - wrap justify - center mb - 12">
-            {tabs.map ( (tab) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={tab.id}
+            {tabs.map ( (tab) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={tab.id}
                 onClick={ () => setActiveTab (tab.id as any) }
                 className={`px - 6 py - 3 mx - 2 mb - 2 rounded - xl font - semibold transition - all duration - 300 ${
                   activeTab === tab.id
@@ -437,7 +437,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
               {/* Category Filters */}
               <div role="button" className="mt - 8">;
                 <div role="button" className="flex flex - wrap gap - 3">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveCategory ('all') }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setActiveCategory ('all') }
                     className={`px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 ${
                       activeCategory === 'all'
                         ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 text - white'
@@ -445,7 +445,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                     }`}
                   >
                     All Services ({REVOLUTIONARY_SERVICES_2030.length}) </button>
-                  {REVOLUTIONARY_SERVICE_CATEGORIES.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category}
+                  {REVOLUTIONARY_SERVICE_CATEGORIES.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                       onClick={ () => setActiveCategory (category) }
                       className={`px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 ${
                         activeCategory === category

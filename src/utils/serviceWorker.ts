@@ -1,5 +1,5 @@
-  export function registerServiceWorker () : void {
-export function unregisterServiceWorker () : void {
+  export function unregisterServiceWorker () : void {
+export function registerServiceWorker () : void {
 
     // Service Worker Registration Utility
     if ('serviceWorker' in navigator) {

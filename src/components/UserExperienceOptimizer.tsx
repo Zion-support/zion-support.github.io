@@ -428,7 +428,7 @@ interface UserExperienceOptimizerProps {
                 </div>
 
                 <div role="button" className="flex items - center space - x-2">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={startUXAnalysis}
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={startUXAnalysis}
                     disabled={isAnalyzing}
                     className="p - 2 text - gray - 600 hover:text - green - 600 dark:text - gray - 400 dark:hover:text - green - 400 transition - colors"
                   >
@@ -437,13 +437,13 @@ interface UserExperienceOptimizerProps {
                     />
                   </button>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsFullscreen (!isFullscreen) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsFullscreen (!isFullscreen) }
                     className="p - 2 text - gray - 600 hover:text - green - 600 dark:text - gray - 400 dark:hover:text - green - 400 transition - colors"
                   >
                     {isFullscreen ? (<Minimize2 className="w - 5 h - 5" />) : (<Maximize2 className="w - 5 h - 5" />) }
                   </button>
 
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
                     className="p - 2 text - gray - 600 hover:text - green - 600 dark:text - gray - 400 dark:hover:text - green - 400 transition - colors"
                   >
                     <X className="w - 5 h - 5" />
@@ -533,7 +533,7 @@ interface UserExperienceOptimizerProps {
                           icon: Lightbulb,
                           count: optimizationSuggestions.length,
                         },
-                      ].map ( ({ key, label, icon: Icon, count }) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={key}
+                      ].map ( ({ key, label, icon: Icon, count }) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={key}
                           onClick={ () => setSelectedView (key as any) }
                           className={`flex items - center space - x-2 px - 4 py - 2 rounded - md transition - colors ${
                             selectedView === key
@@ -620,7 +620,7 @@ interface UserExperienceOptimizerProps {
                           <h3 className="text - lg font - semibold text - gray - 900 dark:text - white">
                             User Behavior Analysis
                           </h3>
-                          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowAdvanced (!showAdvanced) }
+                          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowAdvanced (!showAdvanced) }
                             className="px - 3 py - 1 text - sm bg - green - 600 text - white rounded - md hover:bg - green - 700 transition - colors"
                           >
                             {showAdvanced ? 'Hide' : 'Show'} Advanced
@@ -734,10 +734,10 @@ interface UserExperienceOptimizerProps {
                                   </div>
 
                                   <div role="button" className="flex items - center space - x-2">
-                                    <button aria-label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 600 hover:text - green - 600 dark:text - gray - 400 dark:hover:text - green - 400 transition - colors">
+                                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 600 hover:text - green - 600 dark:text - gray - 400 dark:hover:text - green - 400 transition - colors">
                                       <CheckCircle className="w - 4 h - 4" />
                                     </button>
-                                    <button aria-label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 600 hover:text - blue - 600 dark:text - gray - 400 dark:hover:text - blue - 400 transition - colors">
+                                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="p - 2 text - gray - 600 hover:text - blue - 600 dark:text - gray - 400 dark:hover:text - blue - 400 transition - colors">
                                       <Info className="w - 4 h - 4" />
                                     </button>
                                   </div>
@@ -748,17 +748,17 @@ interface UserExperienceOptimizerProps {
 
                     {/* Action Buttons */}
                     <div role="button" className="flex items - center justify - center space - x-4 pt - 6">
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-2 px - 6 py - 3 bg - green - 600 text - white rounded - lg hover:bg - green - 700 transition - colors">
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-2 px - 6 py - 3 bg - green - 600 text - white rounded - lg hover:bg - green - 700 transition - colors">
                         <Download className="w - 4 h - 4" />
                         <span > Export Report</span>
                       </button>
 
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-2 px - 6 py - 3 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors">
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-2 px - 6 py - 3 bg - blue - 600 text - white rounded - lg hover:bg - blue - 700 transition - colors">
                         <Lightbulb className="w - 4 h - 4" />
                         <span > Apply All Suggestions</span>
                       </button>
 
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-2 px - 6 py - 3 bg - purple - 600 text - white rounded - lg hover:bg - purple - 700 transition - colors">
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-2 px - 6 py - 3 bg - purple - 600 text - white rounded - lg hover:bg - purple - 700 transition - colors">
                         <Share2 className="w - 4 h - 4" />
                         <span > Share Report</span>
                       </button>
@@ -771,7 +771,7 @@ interface UserExperienceOptimizerProps {
                     <p className="text - gray - 600 dark:text - gray - 400 mb - 6">
                       Click the analyze button to start UX optimization
                     </p>
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={startUXAnalysis}
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={startUXAnalysis}
                       className="px - 6 py - 3 bg - green - 600 text - white rounded - lg hover:bg - green - 700 transition - colors"
                     >
                       Start UX Analysis

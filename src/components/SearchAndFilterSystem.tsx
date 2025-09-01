@@ -193,7 +193,7 @@ interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
             placeholder={placeholder}
             className="w - full pl - 12 pr - 4 py - 4 bg - zinc - 900 / 50 border border - zinc - 700 / 50 rounded - xl text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - zion - cyan focus:border - transparent transition - all duration - 300 backdrop - blur - md"
           />
-          {searchQuery && (<button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSearchQuery ('') }
+          {searchQuery && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSearchQuery ('') }
               className="absolute right - 4 top - 1/2 transform - translate - y-1 / 2 text - zinc - 400 hover:text - white transition - colors"
 
               <X className="w - 5 h - 5" />
@@ -261,7 +261,7 @@ interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
           </div>
 
           {/* Filter Toggle */}
-          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowFilterPanel (!showFilterPanel) }
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowFilterPanel (!showFilterPanel) }
 className: {`flex items - center gap - 2 px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${
               showFilterPanel
                 ? 'bg - zion - cyan text - white'
@@ -276,7 +276,7 @@ className: {`flex items - center gap - 2 px - 4 py - 2 rounded - lg text - sm fo
           </button>
 
           {/* Clear Filters */}
-          {activeFilters.size > 0 && (<button aria-label="Button" aria - label="Button" aria - label="Button" onClick={clearAllFilters}
+          {activeFilters.size > 0 && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={clearAllFilters}
               className="px - 3 py - 2 text - sm text - zinc - 400 hover:text - white transition - colors"
 
               Clear all
@@ -333,7 +333,7 @@ className: {`flex items - center gap - 2 px - 4 py - 2 rounded - lg text - sm fo
                 <div>
                   <h4 className="text - xs font - medium text - zinc - 400 mb - 2 uppercase tracking - wide">Popular Tags</h4>
                   <div role="button" className="flex flex - wrap gap - 2">
-                    {['AI', 'Cloud', 'Security', 'DevOps', 'Digital Transformation', 'Machine Learning'].map ( (tag) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={tag}
+                    {['AI', 'Cloud', 'Security', 'DevOps', 'Digital Transformation', 'Machine Learning'].map ( (tag) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={tag}
                         onClick={ () => toggleFilter (tag.toLowerCase () ) }
                         className={`px - 3 py - 1 text - xs rounded - full transition - all duration - 300 ${
                           activeFilters.has (tag.toLowerCase () ) ? 'bg - zion - cyan text - white'
@@ -442,7 +442,7 @@ className: {`flex items - center gap - 2 px - 4 py - 2 rounded - lg text - sm fo
           <p className="text - zinc - 400 mb - 4">
             Try adjusting your search terms or filters
           </p>
-          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={clearAllFilters}
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={clearAllFilters}
             className="px - 4 py - 2 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors"
 
             Clear all filters

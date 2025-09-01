@@ -237,7 +237,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
 }} 
             transition={{ duration: any0.6 }}
           >
-            {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category.id} 
+            {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id} 
                 onClick={ () => setSelectedCategory (category.id) } 
                 className={`px - 6 py - 3 rounded - xl border transition - all duration - 300 ${
                   selectedCategory === category.id
@@ -445,7 +445,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
 
                 {/* Call to Action */}
                 <div role="button" className="text - center">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold py - 3 px - 6 rounded - lg transition - all duration - 300 transform hover:scale - 105">
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold py - 3 px - 6 rounded - lg transition - all duration - 300 transform hover:scale - 105">
                     🚀 Get Started Today
                   </button>
                   <p className="text - xs text - gray - 400 mt - 2">
@@ -494,10 +494,10 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
               Our team of experts is ready to help you implement these game - changing services.
             </p>
             <div role="button" className="flex flex - col md:flex - row gap - 4 justify - center">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold py - 4 px - 8 rounded - lg transition - all duration - 300 transform hover:scale - 105">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold py - 4 px - 8 rounded - lg transition - all duration - 300 transform hover:scale - 105">
                 🚀 Schedule a Consultation
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="bg - white / 10 hover:bg - white / 20 border border - white / 30 text - white font - semibold py - 4 px - 8 rounded - lg transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - white / 10 hover:bg - white / 20 border border - white / 30 text - white font - semibold py - 4 px - 8 rounded - lg transition - all duration - 300">
                 📋 View Full Portfolio
               </button>
             </div>

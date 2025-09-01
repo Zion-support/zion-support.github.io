@@ -496,7 +496,7 @@ import { motion, AnimatePresence  } from 'framer - motion.ts';
           <div role="button" className="flex flex - col lg:flex - row gap - 6 items - center justify - between">
             {/* Category Filters */}
             <div role="button" className="flex flex - wrap gap - 3">
-              {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category.id}
+              {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`flex items - center gap - 2 px - 4 py - 2 rounded - full transition - all duration - 300 ${
                     selectedCategory === category.id

@@ -234,7 +234,7 @@ const categories = [
 }}
           className="flex flex - wrap justify - center gap - 3 mb - 12"
 
-          {categories.map ( (category, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category}
+          {categories.map ( (category, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
               onClick={ () => setSelectedCategory (category) }
               className={`px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 ${
                 selectedCategory === category

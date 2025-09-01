@@ -531,7 +531,7 @@ const featuredSolutions = [
         <section className="py - 16 px - 4">
           <div role="button" className="max - w-6xl mx - auto">
             <div role="button" className="flex flex - wrap gap - 4 justify - center">
-              {industries.map ( (industry) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={industry.id}
+              {industries.map ( (industry) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={industry.id}
                   onClick={ () => setSelectedIndustry (industry.id) }
                   className={`px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 flex items - center ${
                     selectedIndustry === industry.id
@@ -1004,11 +1004,11 @@ const featuredSolutions = [
                   {/* Actions */}
                   <div role="button" className="flex items - center justify - between pt - 4 border - t border - slate - 700 / 50">
                     <div role="button" className="flex space - x-2">
-                      {solution.demo && (<button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 bg - blue - 600 text - white text - sm font - medium rounded - lg hover:bg - blue - 500 transition - colors duration - 300">
+                      {solution.demo && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 bg - blue - 600 text - white text - sm font - medium rounded - lg hover:bg - blue - 500 transition - colors duration - 300">
                           <Play className="w - 4 h - 4 mr - 1 inline" />
                           Demo
                         </button>) }
-                      {solution.trial && (<button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 border border - blue - 600 text - blue - 400 text - sm font - medium rounded - lg hover:bg - blue - 600 hover:text - white transition - colors duration - 300">
+                      {solution.trial && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 2 border border - blue - 600 text - blue - 400 text - sm font - medium rounded - lg hover:bg - blue - 600 hover:text - white transition - colors duration - 300">
                           Start Trial
                         </button>) }
                     </div>

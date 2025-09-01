@@ -204,7 +204,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   };
 
   if (!isVisible) {
-    return (<button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsVisible (true) }
+    return (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsVisible (true) }
         className="fixed bottom - 4 right - 4 bg - zion - cyan text - white p - 3 rounded - full shadow - lg hover:bg - zion - cyan / 90 transition - all duration - 300 z - 50"
         aria - label="Open Performance Monitor"
       >
@@ -218,7 +218,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           <Zap className="w - 5 h - 5 mr - 2 text - zion - cyan" />
           Performance Monitor
         </h3>
-        <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsVisible (false) }
+        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsVisible (false) }
           className="text - zion - slate - light hover:text - white transition - colors"
         >
           ×

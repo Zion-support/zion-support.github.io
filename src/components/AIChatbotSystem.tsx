@@ -216,13 +216,13 @@ showHeader:  true,;
                   </div>
 
                   <div role="button" className="flex items - center gap - 2">
-                    {showSettingsPanel && (<button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowSettingsPanel (!showSettingsPanel) }
+                    {showSettingsPanel && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowSettingsPanel (!showSettingsPanel) }
                         className="p - 2 text - zinc - 400 hover:text - white hover:bg - zinc - 800 / 50 rounded - lg transition - colors"
                         aria - label="Chat settings"
 
                         <Settings className="w - 4 h - 4" />
                       </button>;) }
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={clearChat}
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={clearChat}
                       className="p - 2 text - zinc - 400 hover:text - white hover:bg - zinc - 800 / 50 rounded - lg transition - colors"
                       aria - label="Clear chat"
 
@@ -256,7 +256,7 @@ showHeader:  true,;
                   <div role="button" className="p - 4 space - y-3">
                     <div role="button" className="flex items - center justify - between">
                       <span className="text - sm text - zinc - 300">Voice Input</span>
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" onClick = { () => setSettings (prev => ({ ...prev,
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => setSettings (prev => ({ ...prev,
   voiceEnabled: !prev.voiceEnabled 
 
 }) ) }
@@ -272,7 +272,7 @@ showHeader:  true,;
 
                     <div role="button" className="flex items - center justify - between">
                       <span className="text - sm text - zinc - 300">Auto Response</span>
-                      <button aria-label="Button" aria - label="Button" aria - label="Button" onClick = { () => setSettings (prev => ({ ...prev,
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => setSettings (prev => ({ ...prev,
   autoResponse: !prev.autoResponse 
 
 }) ) }
@@ -321,7 +321,7 @@ showHeader:  true,;
                             </div>) }
 
                           {message.metadata.suggestions && (<div role="button" className="flex flex - wrap gap - 1 mb - 2">
-                              {message.metadata.suggestions.map ( (suggestion, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={index}
+                              {message.metadata.suggestions.map ( (suggestion, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
                                   onClick={ () => handleSuggestionClick (suggestion) }
                                   className="px - 2 py - 1 bg - zinc - 700 / 50 text - zinc - 300 text - xs rounded - full hover:bg - zinc - 600 / 50 transition - colors"
 
@@ -347,14 +347,14 @@ showHeader:  true,;
                       </span>
 
                       {message.sender === 'bot' && (<div role="button" className="flex items - center gap - 1">
-                          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick = { () => rateResponse (message.id,
+                          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => rateResponse (message.id,
   'positive') }
                             className="p - 1 text - zinc - 400 hover:text - green - 400 transition - colors"
                             aria - label="Rate response positively"
 
                             <ThumbsUp className="w - 3 h - 3" />
                           </button>
-                          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick = { () => rateResponse (message.id,
+                          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => rateResponse (message.id,
   'negative') }
                             className="p - 1 text - zinc - 400 hover:text - red - 400 transition - colors"
                             aria - label="Rate response negatively"
@@ -423,7 +423,7 @@ showHeader:  true,;
                 </div>
 
                 {/* Voice Input */}
-                {settings.voiceEnabled && (<button aria-label="Button" aria - label="Button" aria - label="Button" type="button"
+                {settings.voiceEnabled && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
                     onClick={toggleVoiceInput}
                     className={`p - 3 rounded - lg transition - colors ${
                       isListening
@@ -436,7 +436,7 @@ showHeader:  true,;
                   </button>) }
 
                 {/* Send Button */}
-                <button aria-label="Button" aria - label="Button" aria - label="Button" type="submit"
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
                   disabled={!inputValue.trim () || isTyping}
                   className="p - 3 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors disabled:opacity - 50 disabled:cursor - not - allowed"
                   aria - label="Send message"

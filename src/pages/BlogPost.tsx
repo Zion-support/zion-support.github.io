@@ -282,14 +282,14 @@ export default React.memo (function BlogPost () {
               </div>
 
               <div className="flex items - center space - x-4">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-2 text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-2 text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200">
                   <Heart className="w - 5 h - 5" />
                   <span>{blogPost.likes}</span>
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-2 text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-2 text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200">
                   <Bookmark className="w - 5 h - 5" />
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-2 text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center space - x-2 text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200">
                   <Share2 className="w - 5 h - 5" />
                 </button>
               </div>

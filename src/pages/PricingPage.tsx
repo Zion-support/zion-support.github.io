@@ -126,7 +126,7 @@ import { motion } from 'framer - motion';
         {/* Category Filter */}
         <div role="button" className="flex justify - center mb - 8">
           <div role="button" className="bg - gray - 800 rounded - xl p - 2 border border - gray - 700">
-            {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category.id}
+            {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                 onClick={ () => setSelectedCategory (category.id) }
                 className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${
                   selectedCategory === category.id
@@ -229,7 +229,7 @@ import { motion } from 'framer - motion';
                     </div>
 
                     {/* Action Button */}
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white py - 3 px - 4 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300">
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white py - 3 px - 4 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300">
                       Get Started
                     </button>
                   </motion.div>) ) }

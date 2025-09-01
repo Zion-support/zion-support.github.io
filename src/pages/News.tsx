@@ -265,7 +265,7 @@ const News: React.FC = () => {
                 placeholder="Enter your email"
                 className="flex - 1 px - 4 py - 3 rounded - lg bg - slate - 700 border border - slate - 600 text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 500"
               />
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 6 py - 3 rounded - lg font - semibold hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 6 py - 3 rounded - lg font - semibold hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300">
                 Subscribe
               </button>
             </div>

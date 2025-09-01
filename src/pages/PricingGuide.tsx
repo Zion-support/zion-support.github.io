@@ -195,7 +195,7 @@ import { SEO } from "../components / SEO";
               <div role="button" className="flex items - center space - x-4">
                 <span className="text - slate - 300">Billing:</span>
                 <div role="button" className="flex bg - slate - 700 rounded - lg p - 1">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedPeriod ('monthly') }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedPeriod ('monthly') }
                     className={`px - 4 py - 2 rounded - md text - sm font - medium transition - all duration - 200 ${
                       selectedPeriod === 'monthly'
                         ? 'bg - cyan - 500 text - white'
@@ -204,7 +204,7 @@ import { SEO } from "../components / SEO";
 
                     Monthly
                   </button>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedPeriod ('yearly') }
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedPeriod ('yearly') }
                     className={`px - 4 py - 2 rounded - md text - sm font - medium transition - all duration - 200 ${
                       selectedPeriod === 'yearly'
                         ? 'bg - cyan - 500 text - white'

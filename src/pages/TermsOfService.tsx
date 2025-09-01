@@ -622,7 +622,7 @@ const TermsOfService = () => {;
                     <span>{website}</span>
                   </div>
                 </div>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" className="flex items - center gap - 2 px - 4 py - 2 bg - purple - 600 text - white rounded - lg hover:bg - purple - 700 transition - colors">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="flex items - center gap - 2 px - 4 py - 2 bg - purple - 600 text - white rounded - lg hover:bg - purple - 700 transition - colors">
                   <Download className="w - 4 h - 4" />
                   Download PDF
                 </button>
@@ -876,10 +876,10 @@ const TermsOfService = () => {;
               </div>
               
               <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - white text - purple - 600 font - semibold rounded - lg hover:bg - purple - 50 transition - colors">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - white text - purple - 600 font - semibold rounded - lg hover:bg - purple - 50 transition - colors">
                   Contact Legal Team
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - white text - white font - semibold rounded - lg hover:bg - white hover:text - purple - 600 transition - colors">
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border border - white text - white font - semibold rounded - lg hover:bg - white hover:text - purple - 600 transition - colors">
                   Request Clarification
                 </button>;
               </div>;

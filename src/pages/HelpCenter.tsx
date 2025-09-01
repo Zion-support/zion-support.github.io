@@ -445,7 +445,7 @@ const faqData: FAQItem[] = [
 
             {/* Category Filter */}
             <div role="button" className="flex flex - wrap justify - center gap - 3 mb - 8">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedCategory ('all') }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setSelectedCategory ('all') }
                 className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${
                   selectedCategory === 'all'
                     ? 'bg - zion - cyan text - white'
@@ -454,7 +454,7 @@ const faqData: FAQItem[] = [
 
                 All Categories
               </button>
-              {helpCategories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category.id}
+              {helpCategories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${
                     selectedCategory === category.id
@@ -489,7 +489,7 @@ const faqData: FAQItem[] = [
                     transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                     className="bg - zion - slate - dark / 50 backdrop - blur - sm border border - cyan - 400 / 20 rounded - xl overflow - hidden"
                   >
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSection (section.id) }
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleSection (section.id) }
                       className="w - full p - 6 text - left hover:bg - zion - slate - dark / 70 transition - colors"
                     >
                       <div role="button" className="flex items - center justify - between">

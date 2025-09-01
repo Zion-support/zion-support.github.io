@@ -230,7 +230,7 @@ import { Star,
 
               {/* Category Filter */}
               <div role="button" className="flex flex - wrap gap - 2">
-                {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category}
+                {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
                     onClick={ () => setSelectedCategory (category) }
                     className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${
                       selectedCategory === category
@@ -258,14 +258,14 @@ import { Star,
 
               {/* View Mode Toggle */}
               <div role="button" className="flex bg - white / 10 rounded - lg p - 1 border border - white / 20">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`p - 2 rounded - md transition - all duration - 300 ${
                     viewMode === 'grid' ? 'bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white' : 'text - gray - 400 hover:text - white'
                   }`}
                 >
                   <Grid className="w - 5 h - 5" />
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`p - 2 rounded - md transition - all duration - 300 ${
                     viewMode === 'list' ? 'bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white' : 'text - gray - 400 hover:text - white'
                   }`}
@@ -389,7 +389,7 @@ import { Star,
                         >
                           Learn More < ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform duration - 300" />
                         </a>
-                        <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 3 border border - white / 20 text - white rounded - xl hover:bg - white / 10 transition - all duration - 300">
+                        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 4 py - 3 border border - white / 20 text - white rounded - xl hover:bg - white / 10 transition - all duration - 300">
                           <MessageCircle className="w - 5 h - 5" />
                         </button>
                       </div>

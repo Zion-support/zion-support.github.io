@@ -295,7 +295,7 @@ const FloatingActionButton: React.FC < FloatingActionButtonProps> = ({
             </div>) }
 
           {/* Main Button */}
-          <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={toggleExpansion}
+          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleExpansion}
             className={`
               p - 4 rounded - full shadow - lg transition - all duration - 300
               ${getThemeClasses () } border - 2
@@ -311,7 +311,7 @@ const FloatingActionButton: React.FC < FloatingActionButtonProps> = ({
       </div>
 
       {/* Scroll to Top Button */}
-      {showScrollToTop && showScrollButton && (<button aria-label="Button" aria - label="Button" aria - label="Button" onClick={scrollToTop}
+      {showScrollToTop && showScrollButton && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={scrollToTop}
           className={`
             fixed bottom - 6 right - 6 z - 40 p - 4 rounded - full shadow - lg transition - all duration - 300
             ${getThemeClasses () } border - 2

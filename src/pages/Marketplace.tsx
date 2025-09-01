@@ -491,7 +491,7 @@ const Marketplace: React.FC = () => {
         <section className="py - 12 px - 4 sm:px - 6 lg:px - 8">
           <div role="button" className="max - w-7xl mx - auto">
             <div role="button" className="flex flex - wrap justify - center gap - 4">
-              {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={category.id}
+              {categories.map (category => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category.id}
                   onClick={ () => setSelectedCategory (category.id) }
                   className={`flex items - center space - x-2 px - 6 py - 3 rounded - xl font - medium transition - all duration - 300 ${
                     selectedCategory === category.id

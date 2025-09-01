@@ -270,10 +270,10 @@ const benefits: Benefit[] = [;
               Join hundreds of satisfied clients who have already experienced the Zion Tech Group difference
             </p>
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25">
                 Get Started Today
               </button>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 hover:text - white transition - all duration - 300">
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 hover:text - white transition - all duration - 300">
                 Schedule a Demo
               </button>
             </div>

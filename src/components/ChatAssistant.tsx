@@ -238,12 +238,12 @@ interface ChatAssistantProps extends React.PropsWithChildren<{}> {
                 <span className="font - semibold">AI Assistant</span>
               </div>
               <div role="button" className="flex items - center space - x-2">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={toggleMinimize}
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleMinimize}
                   className="p - 1 hover:bg - gray - 100 dark:hover:bg - gray - 800 rounded"
                 >
                   {isMinimized ? (<Maximize2 className="w - 4 h - 4" />) : (<Minimize2 className="w - 4 h - 4" />) }
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={toggleChat}
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleChat}
                   className="p - 1 hover:bg - gray - 100 dark:hover:bg - gray - 800 rounded"
                 >
                   <X className="w - 4 h - 4" />
@@ -265,7 +265,7 @@ interface ChatAssistantProps extends React.PropsWithChildren<{}> {
                       >
                         <p className="text - sm">{message.content}</p>
                         {message.metadata?.suggestions && (<div role="button" className="mt - 2 space - y-1">
-                            {message.metadata.suggestions.map ( (suggestion, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={index}
+                            {message.metadata.suggestions.map ( (suggestion, index) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={index}
                                   onClick={ () => handleSendMessage (suggestion) }
                                   className="block w - full text - left text - xs text - blue - 600 dark:text - blue - 400 hover:underline"
                                 >
@@ -302,7 +302,7 @@ interface ChatAssistantProps extends React.PropsWithChildren<{}> {
                       placeholder="Type your message..."
                       className="flex - 1 px - 3 py - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 bg - transparent"
                     />
-                    <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleSendMessage (inputValue) }
+                    <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => handleSendMessage (inputValue) }
                       disabled={!inputValue.trim () || isTyping}
                       className="px - 3 py - 2 bg - blue - 500 text - white rounded - lg hover:bg - blue - 600 disabled:opacity - 50 disabled:cursor - not - allowed"
                     >

@@ -42,7 +42,7 @@ interface ThemeToggleProps {
   ];
 
   return (<div role="button" className="relative">
-      <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (!isOpen) }
+      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (!isOpen) }
         className="flex items - center space - x-2 px - 3 py - 2 rounded - lg bg - gray - 100 dark:bg - gray - 800 border border - gray - 200 dark:border - gray - 700 text - gray - 700 dark:text - gray - 300 hover:bg - gray - 200 dark:hover:bg - gray - 700 transition - colors"
         aria - label="Select theme"
         aria - expanded={isOpen}
@@ -60,7 +60,7 @@ interface ThemeToggleProps {
             transition={{ duration: 0.15 }}
             className="absolute top - full right - 0 mt - 2 w - 32 bg - white dark:bg - gray - 800 border border - gray - 200 dark:border - gray - 700 rounded - lg shadow - lg z - 50"
           >
-            {themes.map ( (themeOption) => (<button aria-label="Button" aria - label="Button" aria - label="Button" key={themeOption.value}
+            {themes.map ( (themeOption) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={themeOption.value}
                 onClick={ () => {
                   setTheme (themeOption.value) ;
                   setIsOpen (false) ;

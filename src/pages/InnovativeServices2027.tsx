@@ -345,7 +345,7 @@ const categoryColors: { [key: string]: string } = {
               <div role="button" className="text - gray - 400 text - xl mb - 4">
                 No services found matching your criteria
               </div>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
                   setSelectedCategory ('all') ;
                   setSearchQuery ('') ;
                 }}

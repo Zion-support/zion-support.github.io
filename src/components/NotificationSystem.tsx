@@ -211,7 +211,7 @@ enableSound:  true,;
   return (<>
       {/* Notification Bell */}
       <div role="button" className = {`fixed ${getPositionClasses () } z - 50`}>;
-        <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (!isOpen) }
+        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (!isOpen) }
           className="relative p - 3 bg - white / 95 backdrop - blur - xl rounded - full shadow - 2xl border border - zion - cyan / 20 hover:border - zion - cyan / 40 transition - all duration - 300 transform hover:scale - 105"
           title="Notifications"
 
@@ -228,7 +228,7 @@ enableSound:  true,;
         </button>
 
         {/* Settings button */}
-        <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowSettings (!showSettings) }
+        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowSettings (!showSettings) }
           className="absolute - bottom - 12 left - 1/2 transform - translate - x-1 / 2 p - 2 bg - zion - slate / 10 hover:bg - zion - slate / 20 rounded - lg transition - colors"
           title="Notification Settings"
 
@@ -261,7 +261,7 @@ enableSound:  true,;
             <div role="button" className="space - y-4">
               <div role="button" className="flex items - center justify - between">
                 <span className="text - sm text - zion - slate">Sound</span>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => updateSettings ({ sound: !settings.sound }) }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => updateSettings ({ sound: !settings.sound }) }
                   className={`p - 2 rounded - lg transition - colors ${
                     settings.sound ? 'bg - green - 100 text - green - 600' : 'bg - zion - slate / 10 text - zion - slate'
                   }`}
@@ -272,7 +272,7 @@ enableSound:  true,;
 
               <div role="button" className="flex items - center justify - between">
                 <span className="text - sm text - zion - slate">Vibration</span>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => updateSettings ({ vibration: !settings.vibration }) }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => updateSettings ({ vibration: !settings.vibration }) }
                   className={`p - 2 rounded - lg transition - colors ${
                     settings.vibration ? 'bg - blue - 100 text - blue - 600' : 'bg - zion - slate / 10 text - zion - slate'
                   }`}
@@ -283,7 +283,7 @@ enableSound:  true,;
 
               <div role="button" className="flex items - center justify - between">
                 <span className="text - sm text - zion - slate">Auto - dismiss</span>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => updateSettings ({ autoDismiss: !settings.autoDismiss }) }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => updateSettings ({ autoDismiss: !settings.autoDismiss }) }
                   className={`p - 2 rounded - lg transition - colors ${
                     settings.autoDismiss ? 'bg - green - 100 text - green - 600' : 'bg - zion - slate / 10 text - zion - slate'
                   }`}
@@ -293,7 +293,7 @@ enableSound:  true,;
               </div>
 
               <div role="button" className="pt - 4 border - t border - zion - slate / 20">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={markAllAsRead}
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={markAllAsRead}
                   className="w - full px - 4 py - 2 bg - zion - cyan / 10 hover:bg - zion - cyan / 20 text - zion - cyan rounded - lg transition - colors text - sm"
 
                   Mark all as read
@@ -301,7 +301,7 @@ enableSound:  true,;
               </div>
 
               <div role="button" className="pt - 2">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={clearAll}
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={clearAll}
                   className="w - full px - 4 py - 2 bg - red - 50 hover:bg - red - 100 text - red - 600 rounded - lg transition - colors text - sm"
 
                   Clear all notifications
@@ -334,7 +334,7 @@ enableSound:  true,;
             {/* Header */}
             <div role="button" className="flex items - center justify - between mb - 4">
               <h3 className="text - lg font - semibold text - zion - slate - dark">Notifications</h3>
-              <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setIsOpen (false) }
                 className="p - 1 hover:bg - zion - slate / 10 rounded - lg transition - colors"
 
                 <X className="w - 4 h - 4 text - zion - slate" />
@@ -388,7 +388,7 @@ enableSound:  true,;
                             }`}>
                               {notification.title}
                             </h4>
-                            <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => dismissNotification (notification.id) }
+                            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => dismissNotification (notification.id) }
                               className="p - 1 hover:bg - zion - slate / 10 rounded transition - colors"
 
                               <X className="w - 3 h - 3 text - zion - slate / 60" />
@@ -407,7 +407,7 @@ enableSound:  true,;
                             </span>
 
                             <div role="button" className="flex items - center space - x-2">
-                              {notification.action && (<button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
+                              {notification.action && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
                                     notification.action!.onClick () ;
                                     markAsRead (notification.id) ;
                                   }}
@@ -416,7 +416,7 @@ enableSound:  true,;
                                   {notification.action.label}
                                 </button>) }
 
-                              {!notification.read && (<button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => markAsRead (notification.id) }
+                              {!notification.read && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => markAsRead (notification.id) }
                                   className="text - xs px - 2 py - 1 bg - zion - slate / 10 hover:bg - zion - slate / 20 text - zion - slate rounded transition - colors"
 
                                   Mark read

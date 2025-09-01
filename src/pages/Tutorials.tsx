@@ -355,18 +355,18 @@ const Tutorials = () => {
 
                 {/* Actions */}
                 <div role="button" className="flex items - center gap - 3">
-                  <button aria-label="Button" aria - label="Button" aria - label="Button"
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
                     className="flex - 1 bg - cyan - 600 hover:bg - cyan - 700 text - white px - 4 py - 2 rounded - lg font - medium transition - colors flex items - center justify - center gap - 2"
                   >
                     <Play className="w - 4 h - 4" />
                     Start Learning
                   </button>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button"
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
                     className="p - 2 text - slate - 400 hover:text - slate - 600 dark:hover:text - slate - 200 transition - colors"
                   >
                     <Heart className="w - 5 h - 5" />
                   </button>
-                  <button aria-label="Button" aria - label="Button" aria - label="Button"
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
                     className="p - 2 text - slate - 400 hover:text - slate - 600 dark:hover:text - slate - 200 transition - colors"
                   >
                     <Share2 className="w - 5 h - 5" />
@@ -378,7 +378,7 @@ const Tutorials = () => {
 
         {/* Load More */}
         {sortedTutorials.length > 0 && (<div role="button" className="text - center mt - 12">
-            <button aria-label="Button" aria - label="Button" aria - label="Button"
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
               className="bg - white dark:bg - slate - 800 hover:bg - slate - 50 dark:hover:bg - slate - 700 text - slate - 700 dark:text - slate - 300 px - 8 py - 3 rounded - lg border border - slate - 300 dark:border - slate - 600 font - medium transition - all duration - 300 hover:shadow - lg transform hover:-translate - y-1"
             >
               Load More Tutorials
@@ -395,7 +395,7 @@ const Tutorials = () => {
               Try adjusting your search terms or filters to find what you're
               looking for.
             </p>
-            <button aria-label="Button" aria - label="Button" aria - label="Button"
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
               onClick={ () => {
                 setSearchTerm ('') ;
                 setSelectedCategory ('all') ;

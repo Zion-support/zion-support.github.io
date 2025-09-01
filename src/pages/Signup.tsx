@@ -384,7 +384,7 @@ const Signup: React.FC = () => {
                     placeholder="Create a password"
                     required
                   />
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" type="button"
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
                     onClick={ () => setShowPassword (!showPassword) }
                     className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 hover:text - white transition - colors duration - 200"
                   >
@@ -421,7 +421,7 @@ const Signup: React.FC = () => {
                     placeholder="Confirm your password"
                     required
                   />
-                  <button aria-label="Button" aria - label="Button" aria - label="Button" type="button"
+                  <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
                     onClick={ () => setShowConfirmPassword (!showConfirmPassword) }
                     className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 hover:text - white transition - colors duration - 200"
                   >
@@ -475,7 +475,7 @@ const Signup: React.FC = () => {
               </label>
             </div>
 
-            <button aria-label="Button" aria - label="Button" aria - label="Button" type="submit"
+            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
               disabled={isLoading}
               className="w - full py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center justify - center gap - 3 text - lg"
             >

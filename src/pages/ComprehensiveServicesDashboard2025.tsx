@@ -341,7 +341,7 @@ const ComprehensiveServicesDashboard2025: React.FC = () : JSX.Element => {
             {/* View Mode Toggle */}
             <div role="button" className="flex - shrink - 0">
               <div role="button" className="flex border border - gray - 300 rounded - lg">
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('grid') }
                   className={`px - 4 py - 3 rounded - l-lg ${
                     viewMode === 'grid'
                       ? 'bg - blue - 600 text - white'
@@ -350,7 +350,7 @@ const ComprehensiveServicesDashboard2025: React.FC = () : JSX.Element => {
                 >
                   Grid
                 </button>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setViewMode ('list') }
                   className={`px - 4 py - 3 rounded - r-lg ${
                     viewMode === 'list'
                       ? 'bg - blue - 600 text - white'

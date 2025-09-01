@@ -34,7 +34,7 @@ interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
       console.log (`Added ${itemType} ${itemId} to favorites`) }
   };
 
-  return (<button aria-label="Button" aria - label="Button" aria - label="Button" onClick = {handleToggleFavorite}
+  return (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = {handleToggleFavorite}
       className={`absolute top - 2 right - 2 p - 2 rounded - full transition - all duration - 300 ${
         isFavorited
           ? 'bg - red - 500 hover:bg - red - 600 text - white'
