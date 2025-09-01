@@ -1,71 +1,44 @@
-const fs = require('fs');
-const path = require('path');
-
-const ROOT = path.resolve(__dirname, '..', '..');
-
-exports.handler = async function(event, context) {
+exports.handler = async (event, context) => {
   try {
-    // Check if this is a scheduled invocation
-    if (event.source === 'local-runner' || event.source === 'netlify-scheduled') {
-      console.log('Running marketing and features promo...');
-      
-      // Simulate marketing and promo tasks
-      const tasks = [
-        'Generating feature highlights',
-        'Creating promotional content',
-        'Updating deep links',
-        'Optimizing marketing copy'
-      ];
-      
-      const results = [];
-      for (const task of tasks) {
-        console.log(`Executing: ${task}`);
-        // Simulate task execution
-        await new Promise(resolve => setTimeout(resolve, 120));
-        results.push({ task, status: 'completed', timestamp: new Date().toISOString() });
+    console.log('marketing-and-features-promo function triggered');
+    
+    // Simulate marketing and features promotion
+    const promoData = {
+      campaigns: Math.floor(Math.random() * 10) + 5,
+      features: Math.floor(Math.random() * 20) + 10,
+      reach: Math.floor(Math.random() * 10000) + 5000,
+      engagement: Math.floor(Math.random() * 100),
+      lastPromoted: new Date().toISOString(),
+      promoted: true
+    };
+    
+    // Simulate some processing time
+    await new Promise(resolve => setTimeout(resolve, 55));
+    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'marketing-and-features-promo function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'marketing-and-features-promo',
+        promoData,
+        promoted: true
+      }),
+      headers: {
+        'Content-Type': 'application/json'
       }
-      
-      console.log('Marketing and features promo completed successfully');
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ 
-          success: true, 
-          message: 'Marketing and features promo completed',
-          tasksExecuted: results.length,
-          contentGenerated: true,
-          results
-        })
-      };
-    } else {
-      // HTTP request - return status
-      return {
-        statusCode: 200,
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          function: 'marketing-and-features-promo',
-          status: 'active',
-          description: 'Regenerate promos and deep links',
-          lastRun: new Date().toISOString(),
-          schedule: 'Every 2 hours',
-          capabilities: [
-            'Feature highlighting',
-            'Promotional content',
-            'Deep link updates',
-            'Marketing optimization'
-          ]
-        })
-      };
-    }
+    };
   } catch (error) {
     console.error('Error in marketing-and-features-promo:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ 
+      body: JSON.stringify({
         error: 'Internal server error',
-        message: error.message 
-      })
+        message: error.message
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     };
   }
 };
