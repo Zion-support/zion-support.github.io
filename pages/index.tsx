@@ -942,9 +942,9 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• GitHub Actions Redundancy</li>
                   <li>• Netlify Functions Redundancy</li>
                 </ul>
-                <Link href="/docs/security" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   View Security Guide →
-                </Link>
+                </a>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -1059,9 +1059,9 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Predictive maintenance</li>
                   <li>• Automated QA</li>
                 </ul>
-                <Link href="/performance" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   View Performance Guide →
-                </Link>
+                </a>
               </div>
             </div>
           </section>
@@ -1155,23 +1155,9 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Performance monitoring</li>
                   <li>• Cluster management</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_PM2_REDUNDANCY_COMPLETE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <a href="https://github.com/Zion-Holdings/zion.app/search?q=pm2+redundancy" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Learn More →
                 </a>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🎨 Design Automation</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• UI/UX optimization</li>
-                  <li>• Responsive design</li>
-                  <li>• Visual enhancement</li>
-                  <li>• Navigation improvement</li>
-                  <li>• Layout optimization</li>
-                </ul>
-                <Link href="/AUTOMATION_COMPLETION_REPORT.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  Learn More →
-                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -2339,9 +2325,9 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Multi-format publishing</li>
                   <li>• Performance tracking</li>
                 </ul>
-                <Link href="/ai-content-factory-report.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View AI Factory Report →
-                </Link>
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/content-generation-report.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  Learn More →
+                </a>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -2353,9 +2339,9 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Performance analytics</li>
                   <li>• Campaign optimization</li>
                 </ul>
-                <Link href="/marketing-sync-report.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Marketing Report →
-                </Link>
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/GITHUB_ACTIONS_IMPROVEMENTS.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  Learn More →
+                </a>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -2367,59 +2353,9 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Performance insights</li>
                   <li>• Continuous learning</li>
                 </ul>
-                <Link href="/auto-discovery-runner.cjs" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Discovery System →
-                </Link>
-              </div>
-            </div>
-          </section>
-
-          {/* Comprehensive Documentation & Resources */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📚 Comprehensive Documentation & Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-xl">🏗️</span>
-                </div>
-                <h3 className="text-lg font-semibold text-blue-400 mb-2">Architecture</h3>
-                <p className="text-white/70 text-sm mb-4">System design & structure</p>
-                <Link href="/ARCHITECTURE.md" className="text-blue-400 hover:text-blue-300 text-sm font-semibold">
-                  View Guide →
-                </Link>
-              </div>
-              
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-xl">🚀</span>
-                </div>
-                <h3 className="text-lg font-semibold text-green-400 mb-2">Deployment</h3>
-                <p className="text-white/70 text-sm mb-4">Deploy & scale guide</p>
-                <Link href="/DEPLOYMENT.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Guide →
-                </Link>
-              </div>
-              
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-xl">🔌</span>
-                </div>
-                <h3 className="text-lg font-semibold text-purple-400 mb-2">API Reference</h3>
-                <p className="text-white/70 text-sm mb-4">Integration guides</p>
-                <Link href="/API.md" className="text-purple-400 hover:text-purple-300 text-sm font-semibold">
-                  View Guide →
-                </Link>
-              </div>
-              
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-xl">🤝</span>
-                </div>
-                <h3 className="text-lg font-semibold text-yellow-400 mb-2">Contributing</h3>
-                <p className="text-white/70 text-sm mb-4">Join development</p>
-                <Link href="/CONTRIBUTING.md" className="text-yellow-400 hover:text-yellow-300 text-sm font-semibold">
-                  View Guide →
-                </Link>
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/performance-weekly-report.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  Learn More →
+                </a>
               </div>
             </div>
           </section>
@@ -2452,9 +2388,81 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                 <Link href="/about" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all duration-300 hover:border-cyan-400/50">
                   Learn More
                 </Link>
-                <Link href="/services" className="px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-purple-600 hover:from-fuchsia-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  View Services
-                </Link>
+              </div>
+            </div>
+          </section>
+
+          {/* Project Statistics & Achievements */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📊 Project Statistics & Achievements</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">227+</div>
+                <div className="text-white/80 text-sm">Autonomous Automations</div>
+                <div className="text-cyan-300/70 text-xs mt-2">Self-managing systems</div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center">
+                <div className="text-4xl font-bold text-fuchsia-400 mb-2">2960+</div>
+                <div className="text-white/80 text-sm">Dynamic Pages</div>
+                <div className="text-fuchsia-300/70 text-xs mt-2">Auto-generated content</div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center">
+                <div className="text-4xl font-bold text-green-400 mb-2">99.99%</div>
+                <div className="text-white/80 text-sm">Uptime Guarantee</div>
+                <div className="text-green-300/70 text-xs mt-2">Zero-downtime operations</div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20 text-center">
+                <div className="text-4xl font-bold text-yellow-400 mb-2">24/7</div>
+                <div className="text-white/80 text-sm">Autonomous Operation</div>
+                <div className="text-yellow-300/70 text-xs mt-2">Continuous improvement</div>
+              </div>
+            </div>
+          </section>
+
+          {/* Footer Navigation */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Core Platform</h3>
+                <ul className="space-y-2 text-sm text-white/70">
+                  <li><Link href="/about" className="hover:text-cyan-300 transition-colors">About Us</Link></li>
+                  <li><Link href="/services" className="hover:text-cyan-300 transition-colors">AI Services</Link></li>
+                  <li><Link href="/case-studies" className="hover:text-cyan-300 transition-colors">Case Studies</Link></li>
+                  <li><Link href="/contact" className="hover:text-cyan-300 transition-colors">Contact</Link></li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold text-fuchsia-400 mb-4">Resources</h3>
+                <ul className="space-y-2 text-sm text-white/70">
+                  <li><Link href="/blog" className="hover:text-fuchsia-300 transition-colors">Blog & Insights</Link></li>
+                  <li><Link href="/resources" className="hover:text-fuchsia-300 transition-colors">Tools & Guides</Link></li>
+                  <li><Link href="/reports" className="hover:text-fuchsia-300 transition-colors">Reports</Link></li>
+                  <li><Link href="/privacy" className="hover:text-fuchsia-300 transition-colors">Privacy Policy</Link></li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold text-green-400 mb-4">Documentation</h3>
+                <ul className="space-y-2 text-sm text-white/70">
+                  <li><a href="https://github.com/Zion-Holdings/zion.app/blob/main/README.md" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors">Project Overview</a></li>
+                  <li><a href="https://github.com/Zion-Holdings/zion.app/blob/main/ARCHITECTURE.md" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors">Architecture</a></li>
+                  <li><a href="https://github.com/Zion-Holdings/zion.app/blob/main/API.md" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors">API Docs</a></li>
+                  <li><a href="https://github.com/Zion-Holdings/zion.app/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors">Contributing</a></li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold text-yellow-400 mb-4">Automation</h3>
+                <ul className="space-y-2 text-sm text-white/70">
+                  <li><a href="https://github.com/Zion-Holdings/zion.app/blob/main/COMPREHENSIVE_REDUNDANCY_README.md" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition-colors">Redundancy Systems</a></li>
+                  <li><a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition-colors">Ultimate Redundancy</a></li>
+                  <li><a href="https://github.com/Zion-Holdings/zion.app/search?q=pm2+redundancy" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition-colors">PM2 Orchestration</a></li>
+                  <li><a href="https://github.com/Zion-Holdings/zion.app/blob/main/AUTOMATION_COMPLETION_REPORT.md" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition-colors">Automation Status</a></li>
+                </ul>
               </div>
             </div>
           </section>
