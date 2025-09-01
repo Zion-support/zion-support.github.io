@@ -1,10 +1,8 @@
 
-<<<<<<< HEAD
- * CategoriesSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+import { GradientHeading } from "./GradientHeading";
+import { Link } from "react-router-dom";
+import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const categories = [{
     title: "AI Services",
@@ -54,34 +52,24 @@ const specialServices = [{
 ;
 >>>>>>> main
 
-interface CategoriesSectionProps {
-  // Add your props here
+interface CategoriesSectionProps
+  extends React.HTMLAttributes<HTMLElement> {
+  showTitle?: boolean
+}
 
-  showTitle?: boolean}
-;
-
-;
-
-export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
-
-  return ("
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
-      {/* Background pattern */}"
-      <div className="absolute inset-0 opacity-5">"
-        <div className="absolute inset-0" style={{
-
-          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
-          backgroundSize: '50px 50px'
-        }}></div>
-      </div>
-<<<<<<< HEAD
-
-      <div className="container mx - auto px-4 relative z -10">
-        {showTitle && (<motion.div
-            className="text-center mb-16"
-=======
-      "
-      <div className="container mx-auto px-4 relative z-10">
+export function CategoriesSection({
+  showTitle = true,
+  className,
+  style,
+  ...props
+}: CategoriesSectionProps) {
+  return (
+    <section
+      className={cn("py-20 bg-zion-blue", className)}
+      style={style}
+      {...props}
+    >
+      <div className="container mx-auto px-4">
         {showTitle && (
           <motion.div"
             className="text-center mb-16"
