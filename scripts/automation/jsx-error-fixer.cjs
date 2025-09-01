@@ -263,8 +263,8 @@ async function fixJSXFragments() {
         let originalContent = content;
         
         // Fix JSX fragment syntax
-        content = content.replace(/<\/></div>/g, '</></div>');
-        content = content.replace(/<\/>header>/g, '</header>');
+        content = content.replace(/<\/><\/div>/g, '</></div>');
+        content = content.replace(/<\/><\/header>/g, '</header>');
         content = content.replace(/<\/>;/g, '</>');
         
         // Fix specific JSX fragment issues
