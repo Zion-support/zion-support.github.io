@@ -1,7 +1,8 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
-import { useAnalytics } from "../hooks/useAnalytics";'"
+import { useAnalytics } from "../hooks/useAnalytics";
+
 export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
 
     const { trackEvent } = useAnalytics({
@@ -24,10 +25,10 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 
                 intent: 'greeting',
                 confidence: 1.0,
-                suggestions[;"
-                    "Tell me about your services","
-                    "How can I get a quote?","
-                    "What technologies do you use?","
+                suggestions: [
+                    "Tell me about your services",
+                    "How can I get a quote?",
+                    "What technologies do you use?",
                     "Contact information"
                 ]
             })}
@@ -138,10 +139,10 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 
                 intent: 'response',
                 confidence: 0.9,
-                suggestions[;"
-                    "Tell me more","
-                    "Get a quote","
-                    "View services","
+                suggestions: [
+                    "Tell me more",
+                    "Get a quote",
+                    "View services",
                     "Contact sales"
                 ]
             });

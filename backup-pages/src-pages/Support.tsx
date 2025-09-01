@@ -1,5 +1,6 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import {
-
   HelpCircle,
   MessageCircle,
   Phone,
@@ -15,45 +16,47 @@ import {
   FileText,
   Video,
   BookOpen,
-  HelpCircle,
   Star,
   MapPin,
-  Globe,  Calendar,
+  Globe,
+  Calendar,
   Send,
   Ticket,
   Headphones,
   MessageSquare,
   VideoCall,
-  Mailbox} from 'lucide-react';
+  Mailbox
+} from 'lucide-react';
 
-
+export const Support = () => {
+  const [searchQuery, setSearchQuery] = useState('');
   const [contactMethod, setContactMethod] = useState('email');
 
-  
-  
-  
-  
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
     if (searchQuery.trim()) {
+      // Implement search functionality
+      console.log('Searching for:', searchQuery);
+    }
+  };
 
-      // Implement search functionality'
-      // console.log('Searching for:', searchQuery)}  };
-
-  return ("
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Header */}"
-      <div className="bg-slate-800/50 border-b border-slate-700/50">"
+      {/* Header */}
+      <div className="bg-slate-800/50 border-b border-slate-700/50">
         <div className="container-responsive py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}"
+            transition={{ duration: 0.6 }}
             className="text-center"
-          >"
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl mb-6">"
-              <HelpCircle className="w-10 h-10 text-white"  />
-            </div>"            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          >
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl mb-6">
+              <HelpCircle className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Support Center
-            </h1>"
+            </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Get the help you need with our comprehensive support resources,
               documentation, and expert assistance
@@ -62,7 +65,7 @@ import {
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search for help articles, guides, and solutions..."
@@ -74,325 +77,116 @@ import {
             </div>
           </motion.div>
         </div>
-      </section>
+      </div>
 
-      {/* Search Bar */}"
-      <div className="container-responsive py-8">
+      {/* Support Categories */}
+      <div className="container-responsive py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Documentation */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
+          >
+            <div className="text-4xl mb-4">📚</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Documentation</h3>
+            <p className="text-gray-300 mb-4">Comprehensive guides, tutorials, and API documentation</p>
+            <button className="text-cyan-400 hover:text-cyan-300 flex items-center">
+              Browse Docs <ArrowRight className="w-4 h-4 ml-2" />
+            </button>
+          </motion.div>
+
+          {/* Community */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
+          >
+            <div className="text-4xl mb-4">👥</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Community</h3>
+            <p className="text-gray-300 mb-4">Connect with other users and share knowledge</p>
+            <button className="text-cyan-400 hover:text-cyan-300 flex items-center">
+              Join Community <ArrowRight className="w-4 h-4 ml-2" />
+            </button>
+          </motion.div>
+
+          {/* Live Support */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
+          >
+            <div className="text-4xl mb-4">💬</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Live Support</h3>
+            <p className="text-gray-300 mb-4">Get real-time help from our support team</p>
+            <button className="text-cyan-400 hover:text-cyan-300 flex items-center">
+              Start Chat <ArrowRight className="w-4 h-4 ml-2" />
+            </button>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Contact Information */}
+      <div className="container-responsive py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}"
-          className="max-w-2xl mx-auto"
-        >"
-          <form onSubmit={handleSearch} className="relative">"
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
-            <input"
-<<<<<<< HEAD
-              type="text"
-              placeholder="Search for help articles, documentation, or support topics..."
-=======
-              type="text""              placeholder="Search for help articles, documentation, or support topics..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-              value={searchQuery}
-              onChange={e => setSearchQuery(e.target.value)}"
-              className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
-            />
-            <button"
-              type="submit"
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-            >
-              Search
-            </button>
-          </form>
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl font-bold text-white mb-4">Need More Help?</h2>
+          <p className="text-gray-300">Our support team is here to assist you</p>
         </motion.div>
-      </div>
 
-      {/* Support Categories */}"
-      <div className="container-responsive py-16">"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {supportCategories.map((category, index) => (
-            <motion.div
-              key={category.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              onClick={() => setActiveTab(category.id)}
-              className={`cursor-pointer p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4">
+              <Phone className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2">Phone Support</h3>
+            <p className="text-gray-300 mb-3">+1 302 464 0950</p>
+            <p className="text-sm text-gray-400">Mon-Fri: 9AM-6PM EST</p>
+          </motion.div>
 
-                activeTab === category.id'
-                  ? 'bg-slate-700/50 border-cyan-400/50''
-                  : 'bg-slate-800/30 border-slate-700/30 hover:border-cyan-400/30'`
-              }`}
-            >
-              <div`
-                className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center mb-4`}
-              >"
-                <category.icon className="w-6 h-6 text-white" />
-              </div>"
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {category.name}
-              </h3>"
-              <p className="text-sm text-gray-400">{category.description}</p>
-            </motion.div>
-          ))}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full mb-4">
+              <MessageCircle className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2">Email Support</h3>
+            <p className="text-gray-300 mb-3">kleber@ziontechgroup.com</p>
+            <p className="text-sm text-gray-400">Response within 24 hours</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full mb-4">
+              <MapPin className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2">Office</h3>
+            <p className="text-gray-300 mb-3">364 E Main St STE 1008</p>
+            <p className="text-sm text-gray-400">Middletown DE 19709</p>
+          </motion.div>
         </div>
-      </section>
-
-      {/* Tab Content */}"
-      <div className="container-responsive pb-16">
-        {/* Help Center Tab */}
-        {activeTab === 'help' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}"
-            className="space-y-12"
-          >"
-            <div className="text-center mb-12">"
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Help Center
-              </h2>"
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Find answers to common questions and learn how to use our
-                services effectively
-              </p>
-            </div>
-"
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {helpTopics.map((section, index) => (
-                <motion.div
-                  key={section.category}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}"
-                  className="bg-slate-800/30 border border-slate-700/30 rounded-xl p-6"
-                >"
-                  <div className="flex items-center gap-3 mb-4">"
-                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">"
-                      <section.icon className="w-5 h-5 text-white" />
-                    </div>"
-                    <h3 className="text-xl font-semibold text-white">
-                      {section.category}
-                    </h3>
-                  </div>"
-                  <div className="space-y-3">
-                    {section.topics.map((topic, topicIndex) => (
-                      <Link
-                        key={topicIndex}
-                        to={topic.href}"
-                        className="flex items-center justify-between p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group"
-                      >"
-                        <span className="text-gray-300 group-hover:text-white transition-colors">
-                          {topic.title}
-                        </span>"
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors"  />                      </Link>
-                    ))}
-                  </div>
-                </motion.div>) ) }
-            </div>
-
-            {/* FAQ Section */}"
-            <div className="mt-16">"
-              <h3 className="text-2xl font-bold text-white mb-8 text-center">
-                Frequently Asked Questions
-              </h3>"
-              <div className="max-w-4xl mx-auto space-y-4">
-                {faqItems.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}"
-                    className="bg-slate-800/30 border border-slate-700/30 rounded-xl p-6"
-                  >"
-                    <h4 className="text-lg font-semibold text-white mb-3">
-                      {item.question}
-                    </h4>"
-                    <p className="text-gray-300">{item.answer}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </motion.div>) }
-
-        {/* Contact Support Tab */}
-        {activeTab === 'contact' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}"
-            className="space-y-12"
-          >"
-            <div className="text-center mb-12">"
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Contact Support
-              </h2>"
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Multiple ways to get in touch with our support team for
-                personalized assistance
-              </p>
-            </div>
-"
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {contactMethods.map((method, index) => (
-                <motion.div
-                  key={method.type}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}"
-                  className="bg-slate-800/30 border border-slate-700/30 rounded-xl p-6"
-                >
-                  <div`
-                    className={`w-12 h-12 bg-gradient-to-br ${method.color} rounded-lg flex items-center justify-center mb-4`}
-                  >"
-                    <method.icon className="w-6 h-6 text-white" />
-                  </div>"
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    {method.type}
-                  </h3>"
-                  <p className="text-lg text-cyan-400 mb-2">{method.details}</p>"
-                  <p className="text-gray-300 mb-3">{method.description}</p>"
-                  <div className="flex items-center gap-2 text-sm text-gray-400">"
-                    <CheckCircle className="w-4 h-4 text-green-400"  />                    <span>{method.response}</span>
-                  </div>
-                </motion.div>) ) }
-            </div>
-"
-            <div className="text-center mt-12">
-              <Link"
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Contact Our Team"
-                <ArrowRight className="ml-2 h-5 w-5"  />              </Link>
-            </div>
-          </motion.div>) }
-
-        {/* Resources Tab */}
-        {activeTab === 'resources' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}"
-            className="space-y-12"
-          >"
-            <div className="text-center mb-12">"
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Support Resources
-              </h2>"
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Access comprehensive documentation, tutorials, and learning
-                resources
-              </p>
-            </div>
-"
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {supportResources.map((resource, index) => (
-                <motion.div
-                  key={resource.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}"
-                  className="bg-slate-800/30 border border-slate-700/30 rounded-xl p-6 hover:bg-slate-700/50 transition-all duration-300"
-                >"
-                  <Link to={resource.href} className="block">
-                    <div`
-                      className={`w-12 h-12 bg-gradient-to-br ${resource.color} rounded-lg flex items-center justify-center mb-4`}
-                    >"
-                      <resource.icon className="w-6 h-6 text-white" />
-                    </div>"
-                    <h3 className="text-xl font-semibold text-white mb-2">
-                      {resource.title}
-                    </h3>"
-                    <p className="text-gray-300 mb-4">{resource.description}</p>"
-                    <div className="flex items-center text-cyan-400 font-medium group">
-                      <span>Access Resource</span>"
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"  />                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-        {/* System Status Tab */}
-        {activeTab === 'status' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}"
-            className="space-y-12"
-          >"
-            <div className="text-center mb-12">"
-              <h2 className="text-3xl font-bold text-white mb-4">
-                System Status
-              </h2>"
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                Check the current status of all our services and systems
-              </p>
-            </div>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {['
-                { name: 'AI Services', status: 'operational', icon: Brain },
-                {
-
-                  name: 'Cloud Infrastructure',
-                  status: 'operational',
-                  icon: Cloud},
-                {
-
-                  name: 'Security Systems',
-                  status: 'operational',
-                  icon: Shield},
-                {
-
-                  name: 'Data Analytics',
-                  status: 'operational',
-                  icon: TrendingUp},
-                { name: 'API Services', status: 'operational', icon: Globe },
-                {
-
-                  name: 'Support Portal',
-                  status: 'operational',
-                  icon: HelpCircle},
-              ].map((service, index) => (
-                <motion.div
-                  key={service.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}"
-                  className="bg-slate-800/30 border border-slate-700/30 rounded-xl p-6"
-                >"
-                  <div className="flex items-center justify-between mb-4">"
-                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
-                      {React.createElement(service.icon, {
-
-                        className: 'w-5 h-5 text-white'})}
-                    </div>"
-                    <div className="flex items-center gap-2">"
-                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>"
-                      <span className="text-sm text-green-400 font-medium">
-                        Operational
-                      </span>
-                    </div>
-                  </div>"
-                  <h3 className="text-lg font-semibold text-white">
-                    {service.name}
-                  </h3>"
-                  <p className="text-sm text-gray-400 mt-2">
-                    All systems operational
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-"
-            <div className="text-center mt-12">
-              <Link"
-                to="/status"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                View Detailed Status"
-                <ArrowRight className="ml-2 h-5 w-5"  />              </Link>
-            </div>
-          </motion.div>) }
       </div>
     </div>
-  )};
-'"`
+  );
+};
+
+export default Support;
