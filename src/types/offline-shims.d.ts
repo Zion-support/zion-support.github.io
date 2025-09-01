@@ -2,18 +2,46 @@
 
 // React stubs
 declare module 'react' {
-  export type FC<P = any> = (props: P) => any;
+  const React: any;
+  export default React;
+  export as namespace React;
+
+  // Basic placeholders to satisfy TypeScript when node modules are not installed
   export type ReactNode = any;
-  export interface ChangeEvent<T = any> extends Event { target: T }
-  export interface FormEvent<T = any> extends Event {}
-  export interface KeyboardEvent<T = any> extends Event {}
-  export type Ref<T> = { current: T | null } | ((value: T | null) => void) | null;
-  export type LegacyRef<T> = Ref<T>;
-  export function useState<S = any>(initial?: S): [S, (value: S) => void];
-  export function useEffect(fn: () => any, deps?: any[]): void;
-  export function useRef<T = any>(initial: T): { current: T };
-  const react: any;
-  export default react;
+  export type ReactElement = any;
+  export interface FC<P = {}> {
+    (props: P & { children?: ReactNode }): ReactElement | null;
+  }
+  export interface SyntheticEvent<T = Element> { target: T; preventDefault(): void; }
+  export interface ChangeEvent<T = Element> extends SyntheticEvent<T> {}
+  export interface KeyboardEvent<T = Element> extends SyntheticEvent<T> {
+    key?: string;
+    shiftKey?: boolean;
+  }
+  export interface MouseEvent<T = Element> extends SyntheticEvent<T> {}
+  export interface FormEvent<T = Element> extends SyntheticEvent<T> {}
+  export type LegacyRef<T> = any;
+  export type Ref<T> = any;
+  export type ElementRef<T> = any;
+  export type ComponentPropsWithoutRef<T> = any;
+
+  // Commonly used hooks and utilities
+  export function useState<S>(initialState: S | (() => S)): [
+    S,
+    (value: S | ((prev: S) => S)) => void
+  ];
+  export function useEffect(effect: () => void | (() => void), deps?: any[]): void;
+  export function useRef<T>(initialValue: T | null): { current: T | null };
+  export function createContext<T>(defaultValue: T): any;
+  export function useContext<T>(context: any): T;
+  export function useCallback<F extends (...args: any[]) => any>(fn: F, deps: any[]): F;
+  export function useMemo<T>(factory: () => T, deps: any[]): T;
+  export function forwardRef<T, P = {}>(render: (props: P, ref: any) => any): any;
+
+  // JSX runtime fragments and helpers
+  export const Fragment: any;
+  export const StrictMode: any;
+  export function cloneElement(element: ReactElement, props?: any, ...children: ReactNode[]): ReactElement;
 }
 
 declare module 'react/jsx-runtime' {
