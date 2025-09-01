@@ -1,5 +1,7 @@
 import React from 'react';
 import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServiceSection = () => {
+
+
   const globalServices = [
     {
 
@@ -75,11 +77,9 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
                   <li key={idx} className="flex items-center text-sm text-gray-300">"
                     <CheckCircle className="h-4 w-4 text-blue-400 mr-2 flex-shrink-0" />
                     {feature}
-                  </li>
-                ))}
+                  </li>) ) }
               </ul>
-            </div>;
-          ))}
+            </div>;) ) }
         </div>
 "
         <div className="text-center mt-16">"

@@ -8,7 +8,6 @@ interface ServiceWorkerState {
   hasUpdate: boolean;
   isInstalling: boolean;
 
-}
 
 export function ServiceWorker(...args: any[]): any {
 
@@ -18,7 +17,7 @@ export function ServiceWorker(...args: any[]): any {
     isOnline: navigator.onLine,
     hasUpdate: false,
     isInstalling: false
-  });
+  }) ;
 
   useEffect(() => {
     // Check if service worker is supported'
@@ -42,15 +41,15 @@ export function ServiceWorker(...args: any[]): any {
               newWorker.addEventListener('statechange', () => {
 '
                 if (newWorker.state = == 'installed') {;
-setSwState(prev: > ({ ;
+setSwState (prev: > ({ ;
                     ...prev, ;
                     isInstalling: anyfalse,;
                     hasUpdate: true ;
-                  }));
+                  }) ) ;
                 }
-              });
+              }) ;
             }
-          });
+          }) ;
 
           // Handle updates'
           navigator.serviceWorker.addEventListener('controllerchange', () => {
@@ -74,7 +73,7 @@ setSwState(prev: > ({ ;
       window.removeEventListener('online', handleOnline);'
       window.removeEventListener('offline', handleOffline);
     };
-  }, []);
+  }, []) ;
 
   const handleUpdate = () => {;'
     if ('serviceWorker' in navigator) {;
@@ -95,32 +94,17 @@ setSwState(prev: > ({ ;
   { opacity: 0,
   y: -50 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
           exit = {
 
   { opacity: 0,
   y: -50 
-
-
-
-
-
 
 }}
           className="fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm"
@@ -147,8 +131,7 @@ setSwState(prev: > ({ ;
                 className="flex-shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors"
               >
                 Update;
-              </button>;
-            )};
+              </button>;) };
           </div>;
         </motion.div>;
       )};

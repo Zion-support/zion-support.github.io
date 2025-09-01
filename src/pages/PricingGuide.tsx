@@ -1,6 +1,9 @@
 import React, { useState } from 'react.ts';'
 import { Link  } from 'react-router-dom.ts';
 import { Calculator, 
+import { SEO } from "../components / SEO";
+
+
   Check, 
   X, 
   Star, 
@@ -228,8 +231,7 @@ export default function PricingGuide(...args[]):  {
                     {savings > 0 && (;"
                       <span className="ml-1 text-xs bg-green-500 text-white px-2 py-1 rounded-full">
                         Save {savings}%
-                      </span>
-                    )}
+                      </span>) }
                   </button>
                 </div>
               </div>
@@ -319,8 +321,7 @@ export default function PricingGuide(...args[]):  {
                     </>
                   )}
                 </div>
-              </div>;
-            ))}
+              </div>;) ) }
           </div>
         </div>
       </section>
@@ -354,8 +355,7 @@ export default function PricingGuide(...args[]):  {
                     </div>
                   ))}
                 </div>
-              </div>
-            ))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -389,7 +389,6 @@ export default function PricingGuide(...args[]):  {
           </div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

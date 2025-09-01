@@ -532,5 +532,6 @@ const AIWorkflowAutomation = () => {
         </motion.div>
       </div>
     </div>)};
+export { AIWorkflowAutomation };
 export default AIWorkflowAutomation;
 }}}}}}}}}'"

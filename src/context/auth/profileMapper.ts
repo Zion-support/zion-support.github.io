@@ -4,7 +4,8 @@ interface SupabaseUser {
 user_metadata?: {
 
     full_name?: string;
-    avatar_url?: string};
+    avatar_url?: string
+};
   created_at?: string;
   updated_at?: string}
 
@@ -15,7 +16,8 @@ interface Profile {
   role?: string;
   is_email_verified?: boolean;
   created_at?: string;
-  updated_at?: string}
+  updated_at?: string
+}
 
 interface MappedUser {
   id: string;
@@ -25,8 +27,9 @@ interface MappedUser {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-  updatedAt?: string}
-
+  updatedAt?: string
+}
+;
 export const mapProfileToUser = (supabaseUser: SupabaseUser, profile: Profile): MappedUser  => {
 
   return {

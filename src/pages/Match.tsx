@@ -142,11 +142,11 @@ const Match: React.FC = () => {;'
     };
   ];
 
-  const filteredServices = matchedServices.filter(service => {;
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
+  const filteredServices = matchedServices.filter (service => {;
+    const matchesSearch = service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
+                         service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -166,21 +166,11 @@ const Match: React.FC = () => {;'
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -258,8 +248,7 @@ const Match: React.FC = () => {;'
                   <span className="text-xs bg-white/20 px-2 py-1 rounded-full">;
                     {category.count}
                   </span>;
-                </button>
-              ))}
+                </button>) ) }
             </div>
           </div>
         </div>
@@ -274,21 +263,11 @@ const Match: React.FC = () => {;'
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -312,21 +291,11 @@ const Match: React.FC = () => {;'
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -391,8 +360,7 @@ const Match: React.FC = () => {;'
                   {service.features.length > 3 && ("
                     <div className="text-slate-500 text-sm text-center">
                       +{service.features.length - 3} more features
-                    </div>
-                  )}
+                    </div>) }
                 </div>
 
                 {/* Actions */}"
@@ -420,8 +388,7 @@ const Match: React.FC = () => {;'
                     Contact
                   </Link>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
 
           {filteredServices.length === 0 && (;
@@ -444,8 +411,7 @@ const Match: React.FC = () => {;'
                 Browse All Services"
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>;
-            </motion.div>
-          )}
+            </motion.div>) }
         </div>
       </section>
 
@@ -458,21 +424,11 @@ const Match: React.FC = () => {;'
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -510,7 +466,7 @@ const Match: React.FC = () => {;'
                 description: "Receive personalized recommendations with match scores and detailed analysis.",
                 icon: Sparkles
 
-            ].map((step, index) => (;
+            ].map ( (step, index) => (;
               <motion.div
                 key={index}
                 initial = {
@@ -518,21 +474,11 @@ const Match: React.FC = () => {;'
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -569,21 +515,11 @@ const Match: React.FC = () => {;'
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -614,8 +550,7 @@ const Match: React.FC = () => {;'
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default Match;}}}'"`

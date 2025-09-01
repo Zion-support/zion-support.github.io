@@ -57,8 +57,7 @@ const HeroSkeleton = () => (
       <div className="h-14 w-40 bg-gray-700 rounded-lg"></div>"
       <div className="h-14 w-40 bg-gray-700 rounded-lg"></div>
     </div>
-  </div>
-);
+  </div>) ;
 
 export function HomePage(...args: any[]): any {
 
@@ -384,7 +383,7 @@ export function HomePage(...args: any[]): any {
               to="/contact""
               className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
             >
-              <span>Get Early Access</span>
+              <span > Get Early Access</span>
             </Link>
           </div>
         </div>

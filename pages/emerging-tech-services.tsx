@@ -107,7 +107,7 @@ const EmergingTechServices: NextPage = () => {;'
                 onChange={(e) => setSelectedCategory(e.target.value)}"
                 className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
               >
-                {categories.map((category)  => (
+                {categories.map(category: unknown (
                   <option key={category.id} value={category.id}>
                     {category.name}
                   </option>
@@ -138,10 +138,9 @@ const EmergingTechServices: NextPage = () => {;'
 
         {/* Category Pills */}"
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (
-            <button
+          {categories.map(category: unknown <button
               key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
+              onClick={(: unknown setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
 
                 selectedCategory === category.id`
@@ -156,7 +155,7 @@ const EmergingTechServices: NextPage = () => {;'
 
         {/* Services Grid */}"
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {sortedServices.map((service, index)  => (
+          {sortedServices.map(service: unknown, index: unknown (
             <div
               key={service.id}"
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"`

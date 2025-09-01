@@ -53,10 +53,6 @@ import {
   Package,'
   User} from 'lucide-react';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onToggle: () => void;
-}
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
 
@@ -581,7 +577,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
 '
       return location.pathname === '/';
     }
-    return location.pathname.startsWith(href);
+    return location.pathname.startsWith (href) ;
   };
 
   if (!isOpen) {
@@ -604,8 +600,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
             );
           })}
         </div>
-      </div>
-    );
+      </div>) ;
   }
 
   return ("
@@ -625,7 +620,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
           {navigationSections.map(section => {
 
             const Icon = section.icon;
-            const isExpanded = expandedSections.includes(section.id);
+            const isExpanded = expandedSections.includes (section.id) ;
 
             return ("
               <div key={section.id} className="space-y-1">
@@ -647,7 +642,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                     {section.links.map(link => {
 
                       const LinkIcon = link.icon;
-                      const active = isActive(link.href);
+                      const active = isActive (link.href) ;
 
                       return()
                         <Link
@@ -674,14 +669,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                             </div>"
                             {active && <ChevronRight className="w-4 h-4" />}
                           </div>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-            );
-          })}
+                        </Link>) ;
+                    }) }
+                  </div>) }
+              </div>) ;
+          }) }
         </div>
 
         {/* Quick Actions */}"
@@ -730,7 +722,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 };
 '"`

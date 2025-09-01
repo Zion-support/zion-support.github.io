@@ -34,7 +34,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
   const services = ['all', ...ALL_PRICING_GUIDES_2026.map(s => s.serviceName)];'
   const tiers = ['all', 'Starter', 'Professional', 'Enterprise'];
 
-  const filteredPricing = useMemo(() => {
+  const filteredPricing = useMemo ( () => {
     let filtered = ALL_PRICING_GUIDES_2026;
 '
     if (selectedService !== 'all') {
@@ -124,8 +124,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                     {services.map(service  => ("
                       <option key={service} value={service} className="bg-zinc-800 text-white">'
                         {service === 'all' ? 'All Services' : service}
-                      </option>
-                    ))}
+                      </option>) ) }
                   </select>
                 </div>
 
@@ -140,8 +139,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                     {tiers.map(tier  => ("
                       <option key={tier} value={tier} className="bg-zinc-800 text-white">'
                         {tier === 'all' ? 'All Tiers' : tier}
-                      </option>
-                    ))}
+                      </option>) ) }
                   </select>
                 </div>
               </div>
@@ -160,21 +158,11 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -244,21 +232,11 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                       animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                       transition = {
@@ -294,8 +272,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                             <div key={idx} className="flex items-center gap-2 text-sm text-zinc-300">"
                               <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                               <span>{feature}</span>
-                            </div>
-                          ))}
+                            </div>) ) }
                         </div>
                       </div>;
 
@@ -308,11 +285,9 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                               <div key={idx} className="flex items-center gap-2 text-sm text-zinc-300">"
                                 <div className="w-2 h-2 bg-red-400 rounded-full flex-shrink-0"></div>
                                 <span>{limitation}</span>
-                              </div>
-                            ))}
+                              </div>) ) }
                           </div>
-                        </div>
-                      )}
+                        </div>) }
 
                       {/* Target Audience */}"
                       <div className="mb-6">;"
@@ -321,8 +296,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                           {tier.targetAudience.map((audience, idx) => ("
                             <span key={idx} className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">
                               {audience}
-                            </span>
-                          ))}
+                            </span>) ) }
                         </div>
                       </div>;
 
@@ -357,8 +331,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                           {tier.volumeDiscounts.map((discount, idx) => ("
                             <div key={idx} className="text-sm text-zinc-300 text-center p-2 bg-white/5 rounded-lg">
                               {discount}
-                            </div>
-                          ))}
+                            </div>) ) }
                         </div>
                       </div>;
 
@@ -366,8 +339,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                       <button className="w-full py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300">;
                         Get Started;
                       </button>;
-                    </motion.div>
-                  ))}
+                    </motion.div>) ) }
                 </div>
 
                 {/* Special Offers */}"
@@ -392,8 +364,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </section>
 

@@ -39,16 +39,16 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
 
                     const p2 = particles[i + 1];
                     // Create quantum correlation
-                    const distance = Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
+                    const distance = Math.sqrt (Math.pow (p1.x - p2.x, 2) + Math.pow (p1.y - p2.y, 2) ) ;
                     if (distance < 100) {
 
                         // Draw entanglement line
-                        ctx.beginPath();
-                        ctx.moveTo(p1.x, p1.y);
-                        ctx.lineTo(p2.x, p2.y);
-                        ctx.strokeStyle = `rgba(34, 221, 210, ${0.3 * (1 - distance / 100)})`;
+                        ctx.beginPath () ;
+                        ctx.moveTo (p1.x, p1.y) ;
+                        ctx.lineTo (p2.x, p2.y) ;
+                        ctx.strokeStyle = `rgba (34, 221, 210, ${0.3 * (1 - distance / 100) }) `;
                         ctx.lineWidth = 1;
-                        ctx.stroke()}
+                        ctx.stroke () }
                 }
             }
         };
@@ -59,7 +59,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 for (let j = i + 1; j < particles.length; j++) {
 
                     const p2 = particles[j];
-                    const distance = Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
+                    const distance = Math.sqrt (Math.pow (p1.x - p2.x, 2) + Math.pow (p1.y - p2.y, 2) ) ;
                     if (distance < 150) {
 
                         const strength = 1 - distance / 150;
@@ -68,13 +68,13 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                         ctx.lineTo(p2.x, p2.y);`
                         ctx.strokeStyle = `rgba(139, 92, 246, ${0.2 * strength})`;
                         ctx.lineWidth = strength * 2;
-                        ctx.stroke()}
+                        ctx.stroke () }
                 }
             }
         };
         // Animation loop
         const animate = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.clearRect (0, 0, canvas.width, canvas.height) ;
             // Update and draw particles
             particles.forEach((particle, index) => {
 
@@ -88,29 +88,25 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                     particle.x = Math.random() * canvas.width;
                     particle.y = Math.random() * canvas.height}
                 // Wrap around edges
-                if (particle.x < 0)
-                    particle.x = canvas.width;
-                if (particle.x > canvas.width)
-                    particle.x = 0;
-                if (particle.y < 0)
-                    particle.y = canvas.height;
-                if (particle.y > canvas.height)
-                    particle.y = 0;
+                if (particle.x < 0) particle.x = canvas.width;
+                if (particle.x > canvas.width) particle.x = 0;
+                if (particle.y < 0) particle.y = canvas.height;
+                if (particle.y > canvas.height) particle.y = 0;
                 // Draw particle with quantum effects
-                ctx.save();
+                ctx.save () ;
                 ctx.globalAlpha = particle.opacity;
                 ctx.fillStyle = particle.color;
                 // Quantum superposition effect
-                const sizeVariation = Math.sin(particle.quantumState) * 0.5;
+                const sizeVariation = Math.sin (particle.quantumState) * 0.5;
                 const finalSize = particle.size + sizeVariation;
-                ctx.beginPath();
-                ctx.arc(particle.x, particle.y, finalSize, 0, Math.PI * 2);
-                ctx.fill();
+                ctx.beginPath () ;
+                ctx.arc (particle.x, particle.y, finalSize, 0, Math.PI * 2) ;
+                ctx.fill () ;
                 // Quantum glow effect
                 ctx.shadowColor = particle.color;
                 ctx.shadowBlur = 10;
-                ctx.fill();
-                ctx.restore()});
+                ctx.fill () ;
+                ctx.restore () }) ;
             // Draw connections
             if (showParticles) {
 
@@ -153,7 +149,6 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 opacity[0.3, 0.6, 0.3],;
                 rotate[0, 180,;
   360]
-            
 
 }} transition = {
 
@@ -162,7 +157,6 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 duration: 8,
                 repeat: Infinity,"
   ease: "easeInOut"
-            
 
 }}/>
 "
@@ -183,7 +177,6 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 rotate[0, 360],;
                 opacity[0.4, 0.8,;
   0.4]
-            
 
 }} transition = {
 
@@ -192,7 +185,6 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 duration: 6,
                 repeat: Infinity,"
   ease: "easeInOut"
-            
 
 }}/>
 "
@@ -211,7 +203,6 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 scale[1, 1.5, 1],;
                 rotate[0, 180,;
   360]
-            
 
 }} transition = {
 
@@ -220,7 +211,6 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 duration: 10,
                 repeat: Infinity,"
   ease: "linear"
-            
 
 }}/>
 
@@ -236,7 +226,6 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
 '
                     y['-100vh',;'
   '100vh']
-                
 
 }} transition = {
 
@@ -245,13 +234,12 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                     duration: 20,
                     repeat: Infinity,"
   ease: "linear"
-                
 
 }}>
-                {String.fromCharCode(0x30A0 + Math.random() * 96)}
-              </motion.div>))}
+                {String.fromCharCode (0x30A0 + Math.random () * 96) }
+              </motion.div>) ) }
           </div>
-        </>)}
+        </>) }
 
       {/* Quantum Energy Fields */}"
       <div className="absolute inset-0">"
@@ -271,7 +259,6 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             scale[1, 1.5, 1],;
             opacity[0.1, 0.3,;
   0.1]
-        
 
 }} transition = {
 
@@ -280,7 +267,6 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             duration: 12,
             repeat: Infinity,"
   ease: "easeInOut"
-        
 
 }}/>
 "
@@ -300,7 +286,6 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             scale[1, 1.3, 1],;
             opacity[0.1, 0.25,;
   0.1]
-        
 
 }} transition = {
 
@@ -309,7 +294,6 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             duration: 15,
             repeat: Infinity,"
   ease: "easeInOut"
-        
 
 }}/>
       </div>
@@ -327,7 +311,6 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 scale[1, 1.5, 1],;
                 opacity[0.3, 0.8,;
   0.3]
-            
 
 }} transition = {
 
@@ -336,9 +319,8 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 duration: 4 + Math.random() * 4,
                 repeat: Infinity,"
   ease: "easeInOut"
-            
 
-}}/>))}
+}}/>) ) }
       </div>
     </div>)};
 '"`

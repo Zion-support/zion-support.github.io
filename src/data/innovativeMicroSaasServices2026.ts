@@ -1,4 +1,5 @@
 export interface InnovativeMicroSaasService2026 {
+
   id: string;
   title: string;
   description: string;
@@ -22,7 +23,8 @@ export interface InnovativeMicroSaasService2026 {
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
   technicalSpecs?: {
 
     technology: string[];
@@ -33,7 +35,7 @@ export interface InnovativeMicroSaasService2026 {
   };
   competitors?: string[];
   marketSize?: string;
-
+;
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026[] = [;
   // AI-Powered Cybersecurity & Threat Intelligence
   {
@@ -1356,7 +1358,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
   }
 ];
 
-// Additional specialized services for 2026
+// Additional specialized services for 2026;
 export const SPECIALIZED_SERVICES_2026 = [
   {
 "

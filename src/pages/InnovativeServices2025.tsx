@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react.ts';'
 import { Link  } from 'react-router-dom.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Brain, 
+import { motion, AnimatePresence  } from 'framer - motion.ts';
+
+
   Shield, 
   Cloud, 
   Rocket, 
@@ -423,10 +426,10 @@ export default function InnovativeServices2025(...args: any[]): any {
   const filteredServices = services.filter(service => {
 '
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+                         service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   const sortedServices = [...filteredServices].sort((a, b) => {
 
@@ -442,7 +445,7 @@ export default function InnovativeServices2025(...args: any[]): any {
       default:
         return b.reviews - a.reviews;
     }
-  });
+  }) ;
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -464,7 +467,7 @@ export default function InnovativeServices2025(...args: any[]): any {
             transition={{ duration: 0.8, delay: 0.2 }}"
             className="text-xl md:text-2xl text-zion-blue-light max-w-4xl mx-auto mb-8"
           >
-            Discover cutting-edge AI solutions, micro SAAS platforms, and revolutionary IT services that will transform your business in 2025
+            Discover cutting - edge AI solutions, micro SAAS platforms, and revolutionary IT services that will transform your business in 2025
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -530,8 +533,7 @@ export default function InnovativeServices2025(...args: any[]): any {
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                     {category.count}
                   </span>
-                </button>
-              ))}
+                </button>) ) }
             </div>
 
             {/* Search and Sort */}"
@@ -573,8 +575,7 @@ export default function InnovativeServices2025(...args: any[]): any {
               transition={{ duration: 0.5 }}"
               className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {sortedServices.map((service, index)  => (
-                <motion.div
+              {sortedServices.map ( (service, index) => (<motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -593,8 +594,7 @@ export default function InnovativeServices2025(...args: any[]): any {
                       }`}>
                         {service.badge}
                       </span>
-                    </div>
-                  )}
+                    </div>) }
 
                   {/* Icon */}`
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>"
@@ -617,8 +617,7 @@ export default function InnovativeServices2025(...args: any[]): any {
                         <li key={idx} className="text-xs text-zion-blue-light flex items-center gap-2">"
                           <div className="w-1.5 h-1.5 bg-zion-blue rounded-full"></div>
                           {feature}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
 
@@ -646,6 +645,8 @@ export default function InnovativeServices2025(...args: any[]): any {
                       <div className="text-xs text-zion-blue-light">
                         {service.rating} ({service.reviews} reviews)
                       </div>
+                      <div role="button" className="text - xs text - zion - blue - light">
+                        {service.rating} ({service.reviews} reviews) </div>
                     </div>
                   </div>
 
@@ -657,14 +658,12 @@ export default function InnovativeServices2025(...args: any[]): any {
                     Learn More"
                     <ArrowRight className="inline-block w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </motion.div>
           </AnimatePresence>
 
           {/* No Results */}
-          {sortedServices.length === 0 && (
-            <motion.div
+          {sortedServices.length === 0 && (<motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}"
               className="text-center py-16"

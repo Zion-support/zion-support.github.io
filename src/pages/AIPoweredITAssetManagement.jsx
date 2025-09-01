@@ -88,21 +88,11 @@ const AIPoweredITAssetManagement = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -119,21 +109,11 @@ const AIPoweredITAssetManagement = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -149,7 +129,7 @@ const AIPoweredITAssetManagement = () => {
 }}"
             className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
 
-            AI-Powered IT Asset Management
+            AI - Powered IT Asset Management
           </motion.h1>
           
           <motion.p 
@@ -158,21 +138,11 @@ const AIPoweredITAssetManagement = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -189,7 +159,7 @@ const AIPoweredITAssetManagement = () => {
             className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
 
             Intelligent monitoring, security, and optimization of your entire IT infrastructure
-            with AI-driven insights and predictive maintenance.
+            with AI - driven insights and predictive maintenance.
           </motion.p>
           
           <motion.div 
@@ -198,21 +168,11 @@ const AIPoweredITAssetManagement = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -253,21 +213,11 @@ const AIPoweredITAssetManagement = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -286,32 +236,17 @@ const AIPoweredITAssetManagement = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}"
@@ -339,21 +274,11 @@ const AIPoweredITAssetManagement = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -372,32 +297,17 @@ const AIPoweredITAssetManagement = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}"
@@ -425,21 +335,11 @@ const AIPoweredITAssetManagement = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -468,8 +368,7 @@ const AIPoweredITAssetManagement = () => {
           </motion.div>
         </div>
       </section>
-    </div>
-  )};
+    </div>) };
 
 export default AIPoweredITAssetManagement;
 }}}'"

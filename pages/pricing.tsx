@@ -1,5 +1,6 @@
 import Head from 'next/head.ts';'
 import Link from 'next/link.ts';
+export { function };
 export default function PricingPage(...args[]):  {
 
   const pricingTiers = [
@@ -162,7 +163,7 @@ export default function PricingPage(...args[]):  {
         <section className="py-16 px-4 sm:px-6 lg:px-8">"
           <div className="max-w-7xl mx-auto">"
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index)  => (
+              {pricingTiers.map(tier: unknown, index: unknown (
                 <div 
                   key={index} 
                   className={`relative bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border transition-all hover:bg-opacity-20 ${

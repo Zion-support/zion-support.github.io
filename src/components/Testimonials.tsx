@@ -92,12 +92,10 @@ export function Testimonials(...args: any[]): any {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </div>
-    </section>
-  );
+    </section>) ;
 }
 
 export default Testimonials;

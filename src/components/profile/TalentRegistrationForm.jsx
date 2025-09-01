@@ -14,7 +14,7 @@ import { X, Sparkles, Upload, Check, Briefcase, MapPin, UserRound import { toast
 import { supabase } from "@/integrations/supabase/client";"
 import { AspectRatio } from "@/components/ui/aspect-ratio";"
 import { useAuth } from "@/hooks/useAuth";
-// Define form schema
+// Define form schema;
 const talentProfileSchema = z.object({
 "
     name: z.string().min(2, "Name must be at least 2 characters long"),"

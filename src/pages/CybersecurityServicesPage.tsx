@@ -7,6 +7,7 @@ import { Button  } from '@/components/ui/button';'
 import { Badge  } from '@/components/ui/badge';
 import { Shield,
 
+
   Lock,
   Eye,
   AlertTriangle,
@@ -88,7 +89,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
     const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category);
     return categoryData?.icon || Shield;
   };
-  const getPricingModelLabel = (model: anystring)  => {
+  const getPricingModelLabel = (model: anystring) => {
 
     switch (model) {
 '
@@ -185,9 +186,8 @@ export default function CybersecurityServicesPage(...args: any[]): any {
                         {category.services.length} Services
                       </Badge>
                     </CardContent>
-                  </Card>
-                );
-              })}
+                  </Card>) ;
+              }) }
             </div>
           </div>
         </section>
@@ -203,8 +203,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
             <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">"
               <TabsList className="grid w-full grid-cols-3 mb-8">"
                 <TabsTrigger value="all">All Security Services</TabsTrigger>
-                {SECURITY_SERVICE_CATEGORIES.map((category) => (
-                  <TabsTrigger key={category.id} value={category.id}>
+                {SECURITY_SERVICE_CATEGORIES.map ( (category) => (<TabsTrigger key={category.id} value={category.id}>
                     {category.name}
                   </TabsTrigger>
                 ))}
@@ -214,8 +213,8 @@ export default function CybersecurityServicesPage(...args: any[]): any {
                 <div className="grid gap-6 md: anygrid-cols-2 lg:grid-cols-3">
                   {CYBERSECURITY_SERVICES.map((service)  => (
 
-                    <SecurityServiceCard key={service.id} service={service} />
-                  ))}
+                <div role="button" className="grid gap - 6 md: anygrid - cols - 2 lg:grid - cols - 3">
+                  {CYBERSECURITY_SERVICES.map ( (service) => (<SecurityServiceCard key={service.id} service={service} />) ) }
                 </div>
               </TabsContent>
               {SECURITY_SERVICE_CATEGORIES.map((category) => ("
@@ -224,11 +223,10 @@ export default function CybersecurityServicesPage(...args: any[]): any {
                   <div className="grid gap-6 md: anygrid-cols-2 lg:grid-cols-3">
                     {category.services.map((service)  => (
 
-                      <SecurityServiceCard key={service.id} service={service} />
-                    ))}
+                  <div role="button" className="grid gap - 6 md: anygrid - cols - 2 lg:grid - cols - 3">
+                    {category.services.map ( (service) => (<SecurityServiceCard key={service.id} service={service} />) ) }
                   </div>
-                </TabsContent>
-              ))}
+                </TabsContent>) ) }
             </Tabs>
           </div>
         </section>
@@ -380,8 +378,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
                       Get Started
                     </Button>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>) ) }
             </div>
           </div>
         </section>
@@ -414,8 +411,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
         <TrustedBySection />
       </main>
       <Footer />
-</>
-  );
+</>) ;
 }
 // Security Service Card Component
 
@@ -469,9 +465,9 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
     else if (priceRange === 'medium') matchesPrice = service.price >= 500 && service.price < 1000;'
     else if (priceRange === 'high') matchesPrice = service.price >= 1000;
     return matchesSearch && matchesSubcategory && matchesPrice;
-  });
+  }) ;
 
-  const getPricingModelIcon = (model: anystring)  => {
+  const getPricingModelIcon = (model: anystring) => {
 
     switch (model) {
 '"
@@ -562,8 +558,7 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
               <li key={index} className="flex items-center gap-2 text-sm text-muted-foreground">"
                 <CheckCircle className="h-3 w-3 text-green-600" />
                 {feature}
-              </li>
-            ))}
+              </li>) ) }
           </ul>
         </div>
         {/* Contact Information */}"
@@ -587,8 +582,7 @@ import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedService
           <Button variant="outline" className="flex-1">
             Learn More
           </Button>
-        </div>
-  AlertTriangle,
+        </div > AlertTriangle,
   BarChart3,
   Star,
   Clock,
@@ -745,8 +739,7 @@ const CybersecurityServicesPage = () => {
                   {service.featured && ("
                     <Badge className="absolute top-4 right-4 bg-red-600 text-white">
                       Featured
-                    </Badge>
-                  )}
+                    </Badge>) }
                 </div>
                 <CardHeader>"
                   <div className="flex items-start justify-between mb-2">"
@@ -793,8 +786,7 @@ const CybersecurityServicesPage = () => {
                     </Link>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>) ) }
           </div>
           {filteredServices.length === 0 && ("
             <div className="text-center py-16">"
@@ -808,8 +800,7 @@ const CybersecurityServicesPage = () => {
               }}>
                 Clear Filters
               </Button>
-            </div>
-          )}
+            </div>) }
         </div>
       </section>
       {/* Security Statistics */}"
@@ -877,8 +868,7 @@ const CybersecurityServicesPage = () => {
                       <li key={index} className="text-zion-slate-light text-sm flex items-center">"
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                         {feature}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>"
                 <div className="border-t border-zion-blue-light pt-4 mb-4">"
@@ -898,8 +888,7 @@ const CybersecurityServicesPage = () => {
                     Get Quote
                   </Button>
                 </Link>
-              </div>
-            ))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -964,7 +953,7 @@ const CybersecurityServicesPage = () => {
             </h2>"
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
               Stay ahead of emerging threats with our comprehensive threat intelligence
-              and 24/7 security monitoring services.
+              and 24 / 7 security monitoring services.
             </p>
           </div>
 "
@@ -1157,8 +1146,7 @@ const CybersecurityServicesPage = () => {
       </section>
       <TrustedBySection />
       <QuoteFormSection />
-</>
-  );
+</>) ;
 }
         </div>
       </div>
@@ -1265,7 +1253,7 @@ const CybersecurityServicesPage = () => {
                 <div className="bg-red-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">"
                   <Eye className="h-6 w-6 text-red-600" />
                 </div>
-                <CardTitle>Threat Detection</CardTitle>
+                <CardTitle > Threat Detection</CardTitle>
               </CardHeader>
               <CardContent>"
                 <ul className="space-y-2 text-sm text-gray-600">"
@@ -1289,7 +1277,7 @@ const CybersecurityServicesPage = () => {
                 <div className="bg-blue-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">"
                   <AlertTriangle className="h-6 w-6 text-blue-600" />
                 </div>
-                <CardTitle>Vulnerability Management</CardTitle>
+                <CardTitle > Vulnerability Management</CardTitle>
               </CardHeader>
               <CardContent>"
                 <ul className="space-y-2 text-sm text-gray-600">"
@@ -1313,7 +1301,7 @@ const CybersecurityServicesPage = () => {
                 <div className="bg-green-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">"
                   <Lock className="h-6 w-6 text-green-600" />
                 </div>
-                <CardTitle>Access Control</CardTitle>
+                <CardTitle > Access Control</CardTitle>
               </CardHeader>
               <CardContent>"
                 <ul className="space-y-2 text-sm text-gray-600">"
@@ -1337,7 +1325,7 @@ const CybersecurityServicesPage = () => {
                 <div className="bg-purple-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">"
                   <Network className="h-6 w-6 text-purple-600" />
                 </div>
-                <CardTitle>Network Security</CardTitle>
+                <CardTitle > Network Security</CardTitle>
               </CardHeader>
               <CardContent>"
                 <ul className="space-y-2 text-sm text-gray-600">"
@@ -1361,7 +1349,7 @@ const CybersecurityServicesPage = () => {
                 <div className="bg-yellow-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">"
                   <Database className="h-6 w-6 text-yellow-600" />
                 </div>
-                <CardTitle>Data Protection</CardTitle>
+                <CardTitle > Data Protection</CardTitle>
               </CardHeader>
               <CardContent>"
                 <ul className="space-y-2 text-sm text-gray-600">"
@@ -1385,7 +1373,7 @@ const CybersecurityServicesPage = () => {
                 <div className="bg-cyan-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">"
                   <Code className="h-6 w-6 text-cyan-600" />
                 </div>
-                <CardTitle>Application Security</CardTitle>
+                <CardTitle > Application Security</CardTitle>
               </CardHeader>
               <CardContent>"
                 <ul className="space-y-2 text-sm text-gray-600">"
@@ -1471,13 +1459,10 @@ const CybersecurityServicesPage = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 };
-export default CybersecurityServicesPage;
 }
       </CardContent>
-    </Card>
-  );
+    </Card>) ;
 }
 '"`

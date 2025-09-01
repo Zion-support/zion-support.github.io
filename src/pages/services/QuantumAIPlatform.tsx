@@ -22,8 +22,8 @@ import { Atom,
   Shield'
  } from 'lucide-react';'
 import { SEO  } from '@/components/SEO';
-
-const QuantumAIPlatform = () => {
+;
+const QuantumAIPlatform = (...args: unknown[]): unknown => {
   const features = [
     {
 
@@ -256,7 +256,7 @@ const QuantumAIPlatform = () => {
           </motion.div>
 "
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {quantumAdvantages.map((advantage, index) => (
+            {quantumAdvantages.map(advantage: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -346,7 +346,7 @@ const QuantumAIPlatform = () => {
           </motion.div>
 "
           <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -445,7 +445,7 @@ const QuantumAIPlatform = () => {
           </motion.div>
 "
           <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -567,7 +567,7 @@ const QuantumAIPlatform = () => {
           </motion.div>
 "
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -683,6 +683,7 @@ const QuantumAIPlatform = () => {
     </div>;
   );
 };
-
+;
+export { QuantumAIPlatform };
 export default QuantumAIPlatform;
 '"`

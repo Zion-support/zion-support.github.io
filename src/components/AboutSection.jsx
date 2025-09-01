@@ -10,7 +10,6 @@ import {
   Shield,
   CheckCircle,
   ArrowRight
-export function AboutSection() {
     const achievements = [
         { number: "10+", label: "Years of Experience", icon: <Award className="w-6 h-6"/> },"
         { number: "500+", label: "Projects Delivered", icon: <Target className="w-6 h-6"/> },"
@@ -72,7 +71,7 @@ export function AboutSection() {
             <p className="text-lg text-zion-slate-light mb-8 leading-relaxed">
               Today, we serve clients across 25+ countries, from startups to Fortune 500
               companies, helping them navigate the complexities of digital transformation
-              and emerge stronger, more efficient, and future-ready.
+              and emerge stronger, more efficient, and future - ready.
             </p>
 
             <Link"

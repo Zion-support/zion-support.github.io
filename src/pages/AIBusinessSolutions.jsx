@@ -100,11 +100,11 @@ export default function AIBusinessSolutions() {
                         {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-gray-300">"
                             <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                             {feature}
-                          </li>))}
+                          </li>) ) }
                       </ul>
-                    </div>))}
+                    </div>) ) }
                 </div>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
 
@@ -130,9 +130,9 @@ export default function AIBusinessSolutions() {
                 <ul className="space-y-2">"
                   {industry.applications.map((application, appIndex) => (<li key={appIndex} className="text-sm text-gray-300">
                       • {application}
-                    </li>))}
+                    </li>) ) }
                 </ul>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
 

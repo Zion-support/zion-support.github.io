@@ -21,7 +21,8 @@ contactInfo: {
 
     phone: string;
     email: string;
-    website: string};
+    website: string
+};
   technicalSpecs?: {
 
     technology: string[];
@@ -31,7 +32,7 @@ contactInfo: {
     security: string[]};
   competitors?: string[];
   marketSize?: string}
-
+;
 export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [
   // Next-Generation Cloud Infrastructure
   {

@@ -399,7 +399,7 @@ export default function MicroSAASPage() {
                 ? 'bg-zion-purple text-white''`
                 : 'border-zion-purple text-zion-purple hover:bg-zion-purple/10'}`}>
               {category}
-            </Button>))}
+            </Button>) ) }
         </div>
       </div>
 
@@ -419,7 +419,7 @@ export default function MicroSAASPage() {
                     <div className="flex items-center gap-1 text-sm text-zion-slate-light">"
                       <Star className="h-4 w-4 text-yellow-500 fill-current"/>
                       <span>{service.rating}</span>
-                      <span>({service.reviews})</span>
+                      <span> ({service.reviews}) </span>
                     </div>
                   </div>
                 </div>"
@@ -438,7 +438,7 @@ export default function MicroSAASPage() {
                     {service.features.slice(0, 3).map((feature, index) => (<li key={index} className="text-sm text-zion-slate-light flex items-center">"
                         <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mr-2"></div>
                         {feature}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
                 "
@@ -477,7 +477,7 @@ export default function MicroSAASPage() {
                   Request Demo
                 </Button>
               </div>
-            </Card>))}
+            </Card>) ) }
         </div>
       </div>
 

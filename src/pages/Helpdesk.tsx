@@ -431,8 +431,7 @@ export default function Helpdesk(...args: any[]): any {
                   Get Help
                 </button>
               </Link>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </div>
 
@@ -478,8 +477,7 @@ export default function Helpdesk(...args: any[]): any {
                   Explore
                 </button>
               </Link>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </div>
 
@@ -553,8 +551,7 @@ export default function Helpdesk(...args: any[]): any {
             >"
               <category.icon className="w-5 h-5" />
               <span>{category.name}</span>
-            </button>
-          ))}
+            </button>) ) }
         </div>
 "
         <div className="space-y-4">
@@ -630,14 +627,11 @@ export default function Helpdesk(...args: any[]): any {
                           className="inline-flex items-center px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300"
                         >
                           {tag}
-                        </span>
-                      ))}
+                        </span>) ) }
                     </div>
-                  </motion.div>
-                )}
+                  </motion.div>) }
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </div>
 

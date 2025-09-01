@@ -184,8 +184,7 @@ const About = () => {
                   </h3>"
                   <p className="text-gray-300">{milestone.description}</p>
                 </div>
-              </div>
-            ))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -205,7 +204,7 @@ const About = () => {
               href="tel:+13024640950""
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
             >
-              📞 Call +1 (302) 464-0950
+              📞 Call + 1 (302) 464 - 0950
             </a>
             <a"
               href="mailto:kleber@ziontechgroup.com""

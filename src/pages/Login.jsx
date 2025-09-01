@@ -10,16 +10,8 @@ import { toast } from '@/hooks/use-toast';'
 import { useDispatch } from 'react-redux';'
 import { setLoggedIn } from '@/store/authSlice';
 
-export default function Login() {
-  const { isAuthenticated, user, isLoading } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { dispatch } = useCart();
-  const reduxDispatch = useDispatch();
-
-  useEffect(() => {
-    // This effect handles token processing (e.g., from magic link)
-    // It runs when component mounts or location.search changes
+  useEffect ( () => {
+    // This effect handles token processing (e.g., from magic link) // It runs when component mounts or location.search changes
     const queryString = location.search;
     const params = new URLSearchParams(queryString);'
     const token = params.get('token');
@@ -29,18 +21,18 @@ export default function Login() {
       // Clear token from URL to prevent re-processing and clean up history'
       // The actual authentication state will update via useAuth's listeners,
       // which should trigger the other useEffect.
-      navigate(location.pathname, { replace: true });
+      navigate (location.pathname, { replace: true }) ;
     }
-  }, [location.search, location.pathname, navigate]);
+  }, [location.search, location.pathname, navigate]) ;
 
-  useEffect(() => {
+  useEffect ( () => {
     if (!isLoading && isAuthenticated) {
 
       reduxDispatch(setLoggedIn(true));'
       const next = location.state?.from?.pathname || '/dashboard';
-      navigate(next, { replace: true });
+      navigate (next, { replace: true }) ;
     }
-  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
+  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]) ;
 
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
@@ -50,8 +42,7 @@ export default function Login() {
         fallback={<div>Something went wrong. Please try again.</div>}
       >
         <LoginContent />
-      </ErrorBoundary>
-    );
+      </ErrorBoundary>) ;
   }
 
   // Optional: Render a loading indicator while isLoading is true

@@ -1,4 +1,4 @@
-// Fix the parsing error by removing invalid syntax
+// Fix the parsing error by removing invalid syntax;
 const emergingTechServices = {
 
   // ... existing services ...
@@ -22,6 +22,7 @@ const emergingTechServices = {
 
 }
 };
-
+;
+export { emergingTechServices };
 export default emergingTechServices;
 }"

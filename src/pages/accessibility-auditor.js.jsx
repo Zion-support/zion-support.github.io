@@ -102,9 +102,9 @@ const AccessibilityAuditor = () => {
                     {area.items.map((item, idx) => (<li key={idx} className="flex items-center text-gray-300">"
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {item}
-                      </li>))}
+                      </li>) ) }
                   </ul>
-                </div>))}
+                </div>) ) }
             </div>
           </div>
           

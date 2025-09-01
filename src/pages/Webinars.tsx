@@ -255,8 +255,7 @@ const Webinars: React.FC = () => {
                           ({category.count})
                         </span>
                       </div>
-                    </button>
-                  ))}
+                    </button>) ) }
                 </div>
               </div>
 
@@ -313,8 +312,7 @@ const Webinars: React.FC = () => {
                     {webinar.type === 'live' && ("
                       <div className="absolute top-3 right-3 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">
                         LIVE
-                      </div>
-                    )}
+                      </div>) }
                   </div>
 
                   {/* Content */}"
@@ -367,8 +365,7 @@ const Webinars: React.FC = () => {
                           className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded"
                         >
                           {tag}
-                        </span>
-                      ))}
+                        </span>) ) }
                     </div>
 
                     {/* Action Button */}"
@@ -387,12 +384,10 @@ const Webinars: React.FC = () => {
                         <>"
                           <Eye className="w-4 h-4" />
                           Join Live
-                        </>
-                      )}
+                        </>) }
                     </button>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
 
             {filteredWebinars.length === 0 && ("
@@ -409,8 +404,7 @@ const Webinars: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>) ;
 };
 
 export default Webinars;

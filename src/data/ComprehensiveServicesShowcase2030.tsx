@@ -9,8 +9,8 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
   const [searchTerm, setSearchTerm] = useState('');'
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const getFilteredServices = () => {;
-    let services: any[] = [];
+  const getFilteredServices = (...args: unknown[]): unknown => {;
+    let services: unknown[] = [];
     
     switch (activeTab) {
 '
@@ -29,7 +29,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
       services = services.filter(service => ;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-        service.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+        service.tags.some(tag: string tag.toLowerCase().includes(searchTerm.toLowerCase()));
       );
     }
 '
@@ -39,8 +39,8 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
 ;
     return services};
 
-  const getCategories = () => {;
-    let services: any[] = [];
+  const getCategories = (...args: unknown[]): unknown => {;
+    let services: unknown[] = [];
     
     switch (activeTab) {
 '
@@ -473,7 +473,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                 className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
 "
                 <option value="all">All Categories</option>
-                {getCategories().map((category) => (
+                {getCategories().map(category: unknown (
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>

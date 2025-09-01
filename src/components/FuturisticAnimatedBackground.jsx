@@ -44,7 +44,7 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
             ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             // Draw grid
-            ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity})`;
+            ctx.strokeStyle = `rgba (0, 255, 255, ${gridOpacity}) `;
             ctx.lineWidth = 1;
             // Vertical lines
             for (let x = 0; x < canvas.width; x += gridSize) {
@@ -78,8 +78,8 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 if (particle.life <= 0) {
 
                     particle.life = particle.maxLife;
-                    particle.x = Math.random() * canvas.width;
-                    particle.y = Math.random() * canvas.height}
+                    particle.x = Math.random () * canvas.width;
+                    particle.y = Math.random () * canvas.height}
                 // Draw particle
                 const alpha = (particle.life / particle.maxLife) * particle.opacity;'`
                 ctx.fillStyle = `${particle.color}${Math.floor(alpha * 255).toString(16).padStart(2, '0')}`;
@@ -113,7 +113,7 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 }
             }
             // Draw floating orbs
-            const time = Date.now() * 0.001;
+            const time = Date.now () * 0.001;
             for (let i = 0; i < 3; i++) {
 
                 const x = Math.sin(time * 0.5 + i) * canvas.width * 0.3 + canvas.width * 0.5;
@@ -140,9 +140,9 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
             scanGradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.3)');'
             scanGradient.addColorStop(1, 'transparent');
             ctx.fillStyle = scanGradient;
-            ctx.fillRect(0, scanY - 2, canvas.width, 4);
-            animationRef.current = requestAnimationFrame(animate)};
-        animate();
+            ctx.fillRect (0, scanY - 2, canvas.width, 4) ;
+            animationRef.current = requestAnimationFrame (animate) };
+        animate () ;
         return () => {
             if (animationRef.current) {
 

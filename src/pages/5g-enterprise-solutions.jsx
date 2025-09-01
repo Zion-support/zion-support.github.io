@@ -103,11 +103,6 @@ const FiveGEnterpriseSolutions = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -129,20 +124,10 @@ const FiveGEnterpriseSolutions = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -163,20 +148,10 @@ const FiveGEnterpriseSolutions = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -207,11 +182,6 @@ const FiveGEnterpriseSolutions = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -237,20 +207,10 @@ const FiveGEnterpriseSolutions = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -281,11 +241,6 @@ const FiveGEnterpriseSolutions = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -311,20 +266,10 @@ const FiveGEnterpriseSolutions = () => {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -343,9 +288,9 @@ const FiveGEnterpriseSolutions = () => {
                   {solution.applications.map((app, appIndex) => (<li key={appIndex} className="flex items-center text-gray-300">"
                       <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
                       {app}
-                    </li>))}
+                    </li>) ) }
                 </ul>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -357,11 +302,6 @@ const FiveGEnterpriseSolutions = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -388,20 +328,10 @@ const FiveGEnterpriseSolutions = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -431,11 +361,6 @@ const FiveGEnterpriseSolutions = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -467,20 +392,10 @@ const FiveGEnterpriseSolutions = () => {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }} transition = {
 
@@ -513,11 +428,6 @@ const FiveGEnterpriseSolutions = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -548,20 +458,10 @@ const FiveGEnterpriseSolutions = () => {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }} transition = {
 
@@ -591,11 +491,6 @@ const FiveGEnterpriseSolutions = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 

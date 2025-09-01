@@ -27,9 +27,8 @@ export const CommunityDiscussion = () => {
     const [newTitle, setNewTitle] = useState("");"
     const [newBody, setNewBody] = useState("");
     const handleAddPost = () => {
-        if (!newTitle.trim() || !newBody.trim())
-            return;
-        setPosts([
+        if (!newTitle.trim () || !newBody.trim () ) return;
+        setPosts ([
             {
 
                 id: Date.now(),"

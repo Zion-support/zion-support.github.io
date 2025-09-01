@@ -2,6 +2,9 @@ import React from 'react';'
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
+  // Add your props here
+
+
   title?: string;
   description?: string;
   keywords?: string;
@@ -15,7 +18,6 @@ interface SEOProps {
   tags?: string[];
   noindex?: boolean;
   canonical?: string;
-}
 
 export const EnhancedSEO: React.FC<SEOProps> = ({
 '
@@ -47,7 +49,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     'Zion Tech Group'
   ];
 
-  const generateStructuredData = useCallback(() => {
+  const generateStructuredData = useCallback ( () => {
     const baseData = {
 '
       '@context': 'https://schema.org','
@@ -177,7 +179,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       imageLink.rel = 'preload';'
       imageLink.as = 'image';
       imageLink.href = ogImage;
-      document.head.appendChild(imageLink);
+      document.head.appendChild (imageLink) ;
     }
 
     // DNS prefetch for external domains
@@ -223,7 +225,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         "@type": "WebPage","
         "@id": fullUrl
       }
-    });
+    }) ;
   }
 
   return()

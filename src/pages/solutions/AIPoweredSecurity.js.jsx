@@ -345,5 +345,6 @@ const AIPoweredSecurity = () => {
     </div>
   );
 };
+export { AIPoweredSecurity };
 export default AIPoweredSecurity;
 '"

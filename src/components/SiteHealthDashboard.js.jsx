@@ -7,9 +7,9 @@ export function SiteHealthDashboard() {
     useEffect(() => {
         // Simulate health check data collection
         const performHealthCheck = async () => {
-            setIsLoading(true);
+            setIsLoading (true) ;
             // Simulate API calls to various monitoring services
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            await new Promise (resolve => setTimeout (resolve, 2000) ) ;
             const healthCategories = [
                 {
 '
@@ -224,12 +224,12 @@ export function SiteHealthDashboard() {
                     ]
                 }
             ];
-            setHealthData(healthCategories);
+            setHealthData (healthCategories) ;
             // Calculate overall score
-            const totalScore = healthCategories.reduce((sum, category) => sum + category.overallScore, 0);
-            setOverallScore(Math.round(totalScore / healthCategories.length));
-            setIsLoading(false)};
-        performHealthCheck()}, []);
+            const totalScore = healthCategories.reduce ( (sum, category) => sum + category.overallScore, 0) ;
+            setOverallScore (Math.round (totalScore / healthCategories.length) ) ;
+            setIsLoading (false) };
+        performHealthCheck () }, []) ;
     const getStatusColor = (status) => {
 
         switch (status) {
@@ -328,10 +328,10 @@ export function SiteHealthDashboard() {
                     <p className="text-sm text-gray-600">{metric.description}</p>"
                     {metric.recommendation && (<p className="text-sm text-blue-600 bg-blue-50 p-2 rounded">
                         💡 {metric.recommendation}
-                      </p>)}
-                  </div>))}
+                      </p>) }
+                  </div>) ) }
               </div>
-            </div>)})}
+            </div>) }) }
       </div>
 
       {/* Action Items */}"

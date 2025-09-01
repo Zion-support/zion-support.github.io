@@ -252,8 +252,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
                   Get Started
                 </button>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </div>
 
@@ -297,8 +296,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
                         {service.popular && ("
                           <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
                             Popular
-                          </span>
-                        )}
+                          </span>) }
                       </div>
                       "
                       <h4 className="text-white font-semibold mb-2">{service.name}</h4>"
@@ -320,8 +318,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
                           <div key={idx} className="flex items-center gap-2 text-gray-300 text-sm">"
                             <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
                             {feature}
-                          </div>
-                        ))}
+                          </div>) ) }
                       </div>
 
                       <a
@@ -435,8 +432,7 @@ export default function ComprehensivePricingGuide2029(...args: any[]): any {
               question: "Do you offer free trials?","
               answer: "Yes! Most of our services offer free trials ranging from 14-30 days, depending on the service complexity and setup requirements."
             }
-          ].map((faq, index)  => (
-            <motion.div
+          ].map ( (faq, index) => (<motion.div
               key={index}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}

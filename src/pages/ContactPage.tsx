@@ -31,8 +31,8 @@ export function ContactPage(...args: any[]): any {
     service: '','
     message: ''});
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState (false) ;
+  const [isSubmitted, setIsSubmitted] = useState (false) ;
 
   const handleInputChange = (
     e: anyReact.ChangeEvent<
@@ -191,8 +191,7 @@ export function ContactPage(...args: any[]): any {
             </div>
           </motion.div>
         </div>
-      </div>
-    );
+      </div>) ;
   }
 
   return ("

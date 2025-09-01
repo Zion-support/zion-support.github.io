@@ -622,7 +622,7 @@ print(data)`
               <CodeBlock code = {
 '`
   `import crypto from 'crypto';
-// Function to verify webhook signature
+// Function to verify webhook signature;
 function verifyWebhookSignature(payload, signature, secret) {
 '
   const hmac = crypto.createHmac('sha256', secret);'

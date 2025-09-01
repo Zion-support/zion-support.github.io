@@ -21,7 +21,7 @@ import { NotificationProvider } from './context/notifications/NotificationContex
 import { AnalyticsProvider } from './context/AnalyticsContext';'
 import { ViewModeProvider } from './context/ViewModeContext';
 
-// Initialize a React Query client with global error handling
+// Initialize a React Query client with global error handling;
 const queryClient = new QueryClient({
 
   defaultOptions: {

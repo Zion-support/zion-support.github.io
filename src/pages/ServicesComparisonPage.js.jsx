@@ -154,7 +154,7 @@ export default function ServicesComparisonPage() {
                     Get Started
                   </Button>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -173,7 +173,7 @@ export default function ServicesComparisonPage() {
             <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 bg-zion-blue-light">"
               {SERVICE_COMPARISONS.map((category) => (<TabsTrigger key={category.category} value={category.category} className="data-[state=active]:bg-zion-cyan data-[state=active]:text-zion-blue">
                   {category.category}
-                </TabsTrigger>))}
+                </TabsTrigger>) ) }
             </TabsList>
 "
             {SERVICE_COMPARISONS.map((category) => (<TabsContent key={category.category} value={category.category} className="mt-8">"
@@ -234,9 +234,9 @@ export default function ServicesComparisonPage() {
                           </div>
                         </div>
                       </CardContent>
-                    </Card>))}
+                    </Card>) ) }
                 </div>
-              </TabsContent>))}
+              </TabsContent>) ) }
           </Tabs>
         </div>
       </section>

@@ -51,6 +51,7 @@ const supportedLanguages = ['
   'PHP','
   'Ruby',
 ];
+export { function };
 export default function AIAutonomousCodeReview() {
   return()
     <div className="min-h-screen bg-background relative overflow-hidden">

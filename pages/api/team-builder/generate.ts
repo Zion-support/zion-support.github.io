@@ -43,9 +43,9 @@ export default async function handler(...args[]: any):  {
     return res.status(500).json({ error: `Failed to generate team recommendation: ${error.message || 'Unknown error'}` })}
 }
 */
-
+;
 export {}; // Keep it as a module
-
+;
 export default handler;
 export default handler;
 '`

@@ -62,9 +62,9 @@ const ComprehensivePricingGuide2031: React.FC = () => {
       ),
     ];
     return cats;
-  }, []);
+  }, []) ;
 
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo ( () => {
     let filtered = COMPREHENSIVE_PRICING_GUIDE_2031;
 
     if (searchQuery) {
@@ -87,7 +87,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
     }
 
     return filtered;
-  }, [searchQuery, selectedCategory]);
+  }, [searchQuery, selectedCategory]) ;
 
   const getCategoryIcon = (category: string) => {
 
@@ -235,8 +235,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                   }`}
                 >
                   {category}
-                </button>
-              ))}
+                </button>) ) }
             </div>
 
             {/* Tier Selector */}"
@@ -327,8 +326,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                             }`}
                           >
                             {tier.name}
-                          </button>
-                        ))}
+                          </button>) ) }
                       </div>
 
                       {/* Selected Tier Pricing */}"
@@ -344,8 +342,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                             {selectedPricingTier.popular && ("
                               <span className="inline-block px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">
                                 Popular
-                              </span>
-                            )}
+                              </span>) }
                           </div>
                         </div>"
                         <div className="text-sm text-gray-300 mb-3">
@@ -466,8 +463,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                                 className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full"
                               >
                                 {competitor}
-                              </span>
-                            ))}
+                              </span>) ) }
                           </div>
                         </div>
 
@@ -484,11 +480,9 @@ const ComprehensivePricingGuide2031: React.FC = () => {
                           </a>
                         </div>
                       </div>
-                    </motion.div>
-                  )}
-                </motion.div>
-              );
-            })}
+                    </motion.div>) }
+                </motion.div>) ;
+            }) }
           </div>
 
           {filteredServices.length === 0 && ("
@@ -541,8 +535,7 @@ const ComprehensivePricingGuide2031: React.FC = () => {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 };
 
 export default ComprehensivePricingGuide2031;

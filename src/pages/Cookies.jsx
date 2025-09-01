@@ -168,7 +168,6 @@ export default function Cookies() {
           </div>
         </div>
       </main>
-    </div>
-  );
+    </div>) ;
 }
 '"

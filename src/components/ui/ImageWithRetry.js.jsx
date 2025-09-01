@@ -29,8 +29,9 @@ export function ImageWithRetry({ src, fallbackSrc = '/images/image-placeholder.s
 }>
           Retry
         </button>)}
-    </div>)}
+    </div>)};
+export { ImageWithRetry };
 export default ImageWithRetry;
-
+;
 export default ImageWithRetry;
 export default ImageWithRetry;'"

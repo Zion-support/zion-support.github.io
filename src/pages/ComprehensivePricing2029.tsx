@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Star, 
+
+
   CheckCircle, 
   ArrowRight, 
   Zap, 
@@ -66,11 +68,11 @@ export default function ComprehensivePricing2029(...args: any[]): any {
   const filteredServices = allServices.filter(service => {
 '
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+                         service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+                         service.tagline.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -82,11 +84,11 @@ export default function ComprehensivePricing2029(...args: any[]): any {
       case 'rating':
         return b.rating - a.rating;'
       case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0) ;
       default:
         return 0;
     }
-  });
+  }) ;
 
   const getCategoryIcon = (category: anystring)  => {
 
@@ -249,8 +251,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                     }`}
                   >
                     {category}
-                  </button>
-                ))}
+                  </button>) ) }
               </div>
 
               {/* Sort Options */}"
@@ -308,8 +309,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
             }`}
           >
             <AnimatePresence>
-              {sortedServices.map((service, index)  => (
-                <motion.div
+              {sortedServices.map ( (service, index) => (<motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -343,8 +343,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                           <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium rounded-full flex items-center">"
                             <Crown className="w-3 h-3 mr-1" />
                             Popular
-                          </span>
-                        )}
+                          </span>) }
                       </div>
                       "
                       <p className="text-gray-300 mb-4 leading-relaxed">
@@ -381,8 +380,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                             <div key={idx} className="flex items-center text-sm text-gray-400">"
                               <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
                               {feature}
-                            </div>
-                          ))}
+                            </div>) ) }
                         </div>
                       </div>
 
@@ -419,14 +417,12 @@ export default function ComprehensivePricing2029(...args: any[]): any {
                       </div>
                     </div>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </AnimatePresence>
           </motion.div>
 
           {/* No Results */}
-          {sortedServices.length === 0 && (
-            <motion.div
+          {sortedServices.length === 0 && (<motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}"
               className="text-center py-20"

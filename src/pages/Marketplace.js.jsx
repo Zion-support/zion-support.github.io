@@ -20,10 +20,10 @@ export default function Marketplace() {
     const [isLoading, setIsLoading] = useState(false);
     const [view, setView] = useState(() => localStorage.getItem('marketplaceView') || 'grid');
     // Automatically append a new listing every 2 minutes
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setListings(prev => [...prev, generateRandomListing()])}, 120000); // 2 minutes
-        return () => clearInterval(interval)}, []);
+    useEffect ( () => {
+        const interval = setInterval ( () => {
+            setListings (prev => [...prev, generateRandomListing () ]) }, 120000) ; // 2 minutes
+        return () => clearInterval (interval) }, []) ;
     // Filter options are now imported from marketplaceData
     useEffect(() => {
         setIsLoading(true);
@@ -57,7 +57,7 @@ export default function Marketplace() {
         if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {
 
             return false}
-        return true});
+        return true}) ;
     const handleFilterChange = (filterType, value) => {
 
         // console.log(`Filter changed: ${filterType} = ${value}`);
@@ -70,7 +70,7 @@ export default function Marketplace() {
                 setSelectedLocations(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
                 break;'
             case 'availability':
-                setSelectedAvailability(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
+                setSelectedAvailability (prev => prev.includes (value) ? prev.filter (item => item !== value) [...prev, value]) ;
                 break}
     };
     const clearAllFilters = () => {
@@ -142,7 +142,6 @@ export default function Marketplace() {
             selectedLocations,
             selectedAvailability,
   selectedRating
-        
 
 }} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>
           </div>
@@ -172,8 +171,8 @@ export default function Marketplace() {
                   <Button onClick={clearAllFilters} className="bg-zion-purple hover:bg-zion-purple-dark">
                     Clear Filters
                   </Button>
-                </div>)}
-              </div>)}
+                </div>) }
+              </div>) }
           </div>
         </div>
       </main>)}

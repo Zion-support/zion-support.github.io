@@ -44,7 +44,6 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             batchSize: 32,
             epochs: 100,'
   optimizer: 'adam'
-        
 
 };
         try {
@@ -107,8 +106,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 '
                     // console.error('Import failed:', error)}
             };
-            reader.readAsText(file)}
-    }, [importModel, trackEvent]);
+            reader.readAsText (file) }
+    }, [importModel, trackEvent]) ;
     const getStatusColor = (status) => {
 
         switch (status) {
@@ -184,7 +183,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`}>"
             <Icon className="w-4 h-4"/>
             <span>{label}</span>
-          </button>))}
+          </button>) ) }
       </div>
 
       {/* Content */}"
@@ -296,7 +295,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                           {(model.accuracy * 100).toFixed(1)}%
                         </span>
                       </div>
-                    </div>))}
+                    </div>) ) }
                 </div>
               </div>
             </motion.div>)}
@@ -386,7 +385,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                         Cancel
                       </button>
                     </div>
-                  </motion.div>)}
+                  </motion.div>) }
               </AnimatePresence>
 
               {/* Import Model */}
@@ -412,7 +411,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     <button onClick={() => setShowImportModel(false)} className="mt-3 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600">
                       Cancel
                     </button>
-                  </motion.div>)}
+                  </motion.div>) }
               </AnimatePresence>
 
               {/* Models List */}"
@@ -475,9 +474,9 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                         </>)}'"
                       {model.status === 'deployed' && (<button onClick={() => handleArchiveModel(model.id)} className="w-full px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover:bg-red-700">
                           Archive
-                        </button>)}
+                        </button>) }
                     </div>
-                  </div>))}
+                  </div>) ) }
               </div>
             </motion.div>)}
 '"
@@ -560,7 +559,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                         {job.status === 'failed' && (<div className="text-sm text-red-600 dark:text-red-400 flex items-center">"
                             <XCircle className="w-4 h-4 mr-2"/>
                             Training failed
-                          </div>)}
+                          </div>) }
                       </div>
                     </div>)})}
                 "
@@ -692,7 +691,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                             <div className="bg-purple-600 h-2 rounded-full" style={{ width: `${model.accuracy * 100}%` }}/>
                           </div>
                         </div>
-                      </div>))}
+                      </div>) ) }
                   </div>
                 </div>
                 "
@@ -703,8 +702,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                       <span className="text-sm text-gray-600 dark:text-gray-400">Success Rate</span>"
                       <span className="font-medium text-gray-900 dark:text-white">
                         {metrics.totalPredictions > 0
-                ? ((metrics.successfulPredictions / metrics.totalPredictions) * 100).toFixed(1)
-                : 0}%
+                ? ( (metrics.successfulPredictions / metrics.totalPredictions) * 100) .toFixed (1) : 0}%
                       </span>
                     </div>"
                     <div className="flex justify-between">"
@@ -722,7 +720,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                   </div>
                 </div>
               </div>
-            </motion.div>)}
+            </motion.div>) }
         </AnimatePresence>
       </div>
     </div>)};

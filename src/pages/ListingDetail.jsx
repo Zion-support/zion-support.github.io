@@ -16,15 +16,15 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 export default function ListingDetail() {
     // useParams may be untyped in this environment, so avoid passing a
     // type argument and cast the result instead to prevent TS2347 errors.
-    const router = useNavigate();
+    const router = useNavigate () ;
     const id = router.query.id;
-    const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-    const [isLoading, setIsLoading] = useState(false);
-    const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
-    const [isChatOpen, setIsChatOpen] = useState(false);
-    const { user } = useAuth();
+    const [selectedImageIndex, setSelectedImageIndex] = useState (0) ;
+    const [isLoading, setIsLoading] = useState (false) ;
+    const [isContactDialogOpen, setIsContactDialogOpen] = useState (false) ;
+    const [isChatOpen, setIsChatOpen] = useState (false) ;
+    const { user } = useAuth () ;
     // Find the listing from our shared data source - now also checking equipment listings
-    const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
+    const listing = MARKETPLACE_LISTINGS.find (item => item.id === id) ;
     if (!listing) {
 "
         return (<div className="min-h-screen bg-zion-blue py-12 px-4">"
@@ -37,7 +37,7 @@ export default function ListingDetail() {
               </Button>
             </div>
           </div>
-        </div>)}
+        </div>) }
     const handleContact = () => {
         if (user) {
 
@@ -111,7 +111,7 @@ export default function ListingDetail() {
                   <div className="flex flex-wrap gap-2">"
                     {listing.tags.map((tag, i) => (<Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
                         {tag}
-                      </Badge>))}
+                      </Badge>) ) }
                   </div>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default function ListingDetail() {
                   </Badge>"
                   {listing.featured && (<Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
                       Featured
-                    </Badge>)}
+                    </Badge>) }
                 </div>
 "
                 <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>
@@ -156,7 +156,7 @@ export default function ListingDetail() {
                       {listing.currency}{listing.price.toLocaleString()}"
                     </div>) : (<div className="text-2xl font-bold text-white">
                       Custom Pricing
-                    </div>)}
+                    </div>) }
                 </div>
 
                 {/* Action Buttons */}"

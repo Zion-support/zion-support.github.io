@@ -186,8 +186,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
                         <li key={featureIndex} className="text-blue-300 flex items-center">"
                           <span className="text-green-400 mr-2">✓</span>
                           {feature}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
                   "
@@ -198,8 +197,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
                         <li key={benefitIndex} className="text-green-300 flex items-center">"
                           <span className="text-green-400 mr-2">🚀</span>
                           {benefit}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
                   "
@@ -222,8 +220,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
                       Contact Sales
                     </Link>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>
@@ -294,8 +291,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
                   description: "Dedicated support team available around the clock for enterprise customers.","
                   icon: "🛟"
                 }
-              ].map((feature, index)   => (
-                <motion.div
+              ].map ( (feature, index) => (<motion.div
                   key={index}
                   initial = {
 

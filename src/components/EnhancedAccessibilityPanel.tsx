@@ -32,6 +32,7 @@ import {
   Volume1} from 'lucide-react';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -42,6 +43,7 @@ interface AccessibilitySettings {
   lineHeight: number;
   letterSpacing: number;
   wordSpacing: number;
+
 }
 
 interface AccessibilityIssue {
@@ -51,7 +53,6 @@ interface AccessibilityIssue {
   element?: string;
   recommendation: string;'
   severity: 'low' | 'medium' | 'high';
-}
 
 export function EnhancedAccessibilityPanel() {
   const [isVisible, setIsVisible] = useState(false);
@@ -159,18 +160,18 @@ export function EnhancedAccessibilityPanel() {
     if (saved) {
 
       try {
-        const savedSettings = JSON.parse(saved);
-        setSettings(savedSettings);
-        applySettings(savedSettings);
+        const savedSettings = JSON.parse (saved) ;
+        setSettings (savedSettings) ;
+        applySettings (savedSettings) ;
       } catch (error) {
 '
         // console.warn('Failed to load accessibility settings:', error);
       }
     }
-  }, [applySettings]);
+  }, [applySettings]) ;
 
   // Keyboard navigation support
-  useEffect(() => {
+  useEffect ( () => {
     const handleKeyDown = (event: KeyboardEvent) => {
 
       // Tab key navigation'
@@ -228,11 +229,11 @@ export function EnhancedAccessibilityPanel() {
       document.removeEventListener('keydown', handleKeyDown);'
       document.removeEventListener('mousedown', handleMouseDown);
     };
-  }, [isVisible, keyboardMode]);
+  }, [isVisible, keyboardMode]) ;
 
   // Accessibility audit
-  const runAccessibilityAudit = useCallback(async () => {
-    setIsScanning(true);
+  const runAccessibilityAudit = useCallback (async () => {
+    setIsScanning (true) ;
     const newIssues: AccessibilityIssue[] = [];
 
     try {
@@ -252,7 +253,7 @@ export function EnhancedAccessibilityPanel() {
               'Add descriptive alt text or aria-label for screen readers','
             severity: 'high'});
         }
-      });
+      }) ;
 
       // Check for proper heading structure'
       const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
@@ -272,7 +273,7 @@ export function EnhancedAccessibilityPanel() {
             severity: 'medium'});
         }
         previousLevel = level;
-      });
+      }) ;
 
       // Check for proper form labels'
       const formInputs = document.querySelectorAll('input, select, textarea');
@@ -293,7 +294,7 @@ export function EnhancedAccessibilityPanel() {
             recommendation: 'Add label element or aria-label attribute','
             severity: 'high'});
         }
-      });
+      }) ;
 
       // Check for proper ARIA attributes'
       const ariaElements = document.querySelectorAll('[aria-*]');
@@ -316,7 +317,7 @@ export function EnhancedAccessibilityPanel() {
               'Add aria-controls or aria-owns to indicate controlled content','
             severity: 'medium'});
         }
-      });
+      }) ;
 
       // Check for sufficient color contrast (simplified)
       const textElements = document.querySelectorAll('
@@ -341,7 +342,7 @@ export function EnhancedAccessibilityPanel() {
               'Ensure sufficient contrast between text and background colors','
             severity: 'medium'});
         }
-      });
+      }) ;
 
       // Check for keyboard navigation
       const interactiveElements = document.querySelectorAll('
@@ -366,9 +367,9 @@ export function EnhancedAccessibilityPanel() {
       // console.error('Accessibility audit failed:', error);
     }
 
-    setIssues(newIssues);
-    setIsScanning(false);
-  }, []);
+    setIssues (newIssues) ;
+    setIsScanning (false) ;
+  }, []) ;
 
   // Get issue icon
   const getIssueIcon = (type: string) => {
@@ -418,8 +419,7 @@ export function EnhancedAccessibilityPanel() {
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-        {isVisible && (
-          <motion.div
+        {isVisible && (<motion.div
             initial={{ opacity: 0, x: -300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -300 }}"
@@ -658,14 +658,11 @@ export function EnhancedAccessibilityPanel() {
                             {issue.element && ("
                               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
                                 Element: {issue.element}
-                              </p>
-                            )}
+                              </p>) }
                           </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
+                      </div>) ) }
+                  </div>) }
               </div>
 
               {/* Keyboard Navigation Info */}"
@@ -682,8 +679,7 @@ export function EnhancedAccessibilityPanel() {
               </div>
 
               {/* Reset Button */}
-              <button
-                onClick={() => {
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => {
                   const defaultSettings: AccessibilitySettings = {
 
                     highContrast: false,
@@ -705,10 +701,8 @@ export function EnhancedAccessibilityPanel() {
                 <span>Reset to Defaults</span>
               </button>
             </div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
-    </>
-  );
+    </>) ;
 }
 '"`

@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 
 interface DataPoint {
+
   id: string;
   label: string;
   value: number;
@@ -26,25 +27,30 @@ interface DataPoint {
   timestamp: string;
   change?: number;'
   changeType?: 'increase' | 'decrease';
+
 }
 
 interface ChartData {
+
   id: string;
   name: string;
   data: DataPoint[];'
   type: 'line' | 'bar' | 'pie' | 'area';
   color: string;
   description: string;
+
 }
 
 interface AdvancedDataVisualizationProps {
+  // Add your props here
+
+
   title?: string;
   subtitle?: string;
   showControls?: boolean;
   autoRefresh?: boolean;
   refreshInterval?: number;
   maxDataPoints?: number;
-}
 
 const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
 
@@ -103,24 +109,24 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
     });
   }, [maxDataPoints]);
 
-  useEffect(() => {
+  useEffect(: unknown {
     setChartData(generateMockData);
   }, [generateMockData]);
 
   // Auto-refresh functionality
-  useEffect(() => {
+  useEffect(: unknown {
     if (!autoRefresh) return;
     
-    const interval = setInterval(() => {
+    const interval = setInterval(: unknown {
       refreshData();
     }, refreshInterval);
     
-    return () => clearInterval(interval);
+    return : unknown clearInterval(interval);
   }, [autoRefresh, refreshInterval]);
 
-  const refreshData = () => {
+  const refreshData = (...args: unknown[]): unknown => {
     setIsRefreshing(true);
-    setTimeout(() => {
+    setTimeout(: unknown {
       setChartData(prev => prev.map(chart => ({
 
         ...chart,
@@ -136,7 +142,7 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
     }, 1000);
   };
 
-  const exportData = () => {
+  const exportData = (...args: unknown[]): unknown => {
     const csvContent = chartData.map(chart => 
       chart.data.map(point => `
         `${point.timestamp},${point.label},${point.value},${point.category}`'
@@ -253,7 +259,7 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
         );
         '
       case 'pie':
-        const total = chart.data.reduce((sum, point) => sum + point.value, 0);
+        const total = chart.data.reduce(sum: unknown, point: unknown sum + point.value, 0);
         let currentAngle = 0;
         
         return ("
@@ -369,7 +375,7 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
         )}
 "
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {chartData.map((chart, index) => (
+          {chartData.map(chart: unknown, index: unknown (
             <motion.div
               key={chart.id}
               initial={{ opacity: 0, y: 20 }}

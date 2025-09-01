@@ -1,8 +1,8 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react.ts';'
 import { motion } from 'framer-motion.ts';
 
-interface Props extends React.PropsWithChildren<{}> {
 
+interface Props extends React.PropsWithChildren<{}> {
   children: ReactNode;
   fallback?: ReactNode;
 }
@@ -43,7 +43,7 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo});
 
     // Log error to external service
-    this.logError(error, errorInfo);
+    this.logError (error, errorInfo) ;
   }
 
   logError = (error: anyError, errorInfo: ErrorInfo) => {
@@ -71,10 +71,10 @@ class ErrorBoundary extends Component<Props, State> {
   };
 
   handleReload = () => {
-    window.location.reload();
+    window.location.reload () ;
   };
 
-  render() {
+  render () {
     if (this.state.hasError) {
 
       if (this.props.fallback) {
@@ -129,7 +129,7 @@ class ErrorBoundary extends Component<Props, State> {
                   </summary>"
                   <div className="text-sm text-red-300 space-y-2">
                     <div>
-                      <strong>Error:</strong> {this.state.error.message}
+                      <strong > Error:</strong> {this.state.error.message}
                     </div>
                     {this.state.errorInfo && (
                       <div>
@@ -137,11 +137,9 @@ class ErrorBoundary extends Component<Props, State> {
                         <pre className="mt-2 text-xs overflow-auto">
                           {this.state.errorInfo.componentStack}
                         </pre>
-                      </div>
-                    )}
+                      </div>) }
                   </div>
-                </details>
-              )}
+                </details>) }
 
               {/* Action Buttons */}"
               <div className="space-y-3">
@@ -176,8 +174,7 @@ class ErrorBoundary extends Component<Props, State> {
               </div>
             </motion.div>
           </div>
-        </motion.div>
-      );
+        </motion.div>) ;
     }
 
     return this.props.children;

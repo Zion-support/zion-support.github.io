@@ -37,6 +37,7 @@ import {
   X} from 'lucide-react';
 
 interface AnalyticsData {
+
   id: string;
   metric: string;
   value: number;
@@ -46,9 +47,11 @@ interface AnalyticsData {
   timestamp: Date;
   target?: number;
   unit?: string;
+
 }
 
 interface ChartData {
+
   labels: string[];
   datasets: {
 
@@ -57,15 +60,18 @@ interface ChartData {
     backgroundColor?: string;
     borderColor?: string;
     borderWidth?: number;
-  }[];
+  
+}[];
 }
 
 interface AdvancedAnalyticsDashboardProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showRealTime?: boolean;
   refreshInterval?: number;
-  onDataExport?: (data: AnalyticsData[]) => void;
-}
+  onDataExport?: data: AnalyticsData[] void;
 
 export function AdvancedAnalyticsDashboard({
 
@@ -149,20 +155,20 @@ export function AdvancedAnalyticsDashboard({
       });
     });
 
-    setAnalyticsData(newData);
-  }, []);
+    setAnalyticsData (newData) ;
+  }, []) ;
 
   // Refresh data
-  const refreshData = useCallback(() => {
-    setIsLoading(true);
-    setTimeout(() => {
-      generateAnalyticsData();
-      setIsLoading(false);
-    }, 1000);
-  }, [generateAnalyticsData]);
+  const refreshData = useCallback ( () => {
+    setIsLoading (true) ;
+    setTimeout ( () => {
+      generateAnalyticsData () ;
+      setIsLoading (false) ;
+    }, 1000) ;
+  }, [generateAnalyticsData]) ;
 
   // Export data
-  const exportData = useCallback(() => {
+  const exportData = useCallback ( () => {
     if (onDataExport) {
 
       onDataExport(analyticsData);
@@ -184,10 +190,10 @@ export function AdvancedAnalyticsDashboard({
       a.click();
       window.URL.revokeObjectURL(url);
     }
-  }, [analyticsData, selectedTimeframe, onDataExport]);
+  }, [analyticsData, selectedTimeframe, onDataExport]) ;
 
-  // Setup real-time updates
-  useEffect(() => {
+  // Setup real - time updates
+  useEffect ( () => {
     if (showRealTime && isOpen) {
 
       generateAnalyticsData();
@@ -200,15 +206,15 @@ export function AdvancedAnalyticsDashboard({
         }
       };
     }
-  }, [showRealTime, isOpen, refreshInterval, generateAnalyticsData]);
+  }, [showRealTime, isOpen, refreshInterval, generateAnalyticsData]) ;
 
   // Initial data load
-  useEffect(() => {
+  useEffect ( () => {
     if (isOpen) {
 
       generateAnalyticsData();
     }
-  }, [isOpen, generateAnalyticsData]);
+  }, [isOpen, generateAnalyticsData]) ;
 
   // Get trend icon and color'
   const getTrendDisplay = (trend: 'up' | 'down' | 'stable', change: number) => {
@@ -232,8 +238,7 @@ export function AdvancedAnalyticsDashboard({
           {change > 0 ? '+' : ''}
           {change}%
         </span>
-      </div>
-    );
+      </div>) ;
   };
 
   // Get category icon
@@ -357,8 +362,7 @@ export function AdvancedAnalyticsDashboard({
                           }`}
                         >
                           {timeframe}
-                        </button>
-                      ))}
+                        </button>) ) }
                     </div>
                   </div>
 
@@ -392,8 +396,7 @@ export function AdvancedAnalyticsDashboard({
                           }`}
                         >
                           {metric}
-                        </button>
-                      ))}
+                        </button>) ) }
                     </div>
                   </div>
 
@@ -455,7 +458,7 @@ export function AdvancedAnalyticsDashboard({
                                 </p>
                               </div>
                             </div>
-                            {getTrendDisplay(item.trend, item.change)}
+                            {getTrendDisplay (item.trend, item.change) }
                           </div>
 
                           {item.target && ("
@@ -478,10 +481,8 @@ export function AdvancedAnalyticsDashboard({
                                     width: `${Math.min((item.value / item.target) * 100, 100)}%`}}
                                 ></div>
                               </div>
-                            </div>
-                          )}
-                        </motion.div>
-                      ))}
+                            </div>) }
+                        </motion.div>) ) }
                     </div>
 
                     {/* Detailed Metrics Table */}"
@@ -560,8 +561,7 @@ export function AdvancedAnalyticsDashboard({
                                     {item.category}
                                   </span>
                                 </td>
-                              </motion.tr>
-                            ))}
+                              </motion.tr>) ) }
                           </tbody>
                         </table>
                       </div>
@@ -643,14 +643,11 @@ export function AdvancedAnalyticsDashboard({
                             </div>
                           </div>
                         </div>
-                      </motion.div>
-                    )}
-                  </div>
-                )}
+                      </motion.div>) }
+                  </div>) }
               </div>
             </motion.div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
     </>
   );

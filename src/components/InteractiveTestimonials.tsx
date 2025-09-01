@@ -85,20 +85,18 @@ export function InteractiveTestimonials() {
 "
   const filteredTestimonials = selectedCategory === "All" ;
     ? testimonials ;
-    : testimonials.filter(t => t.category === selectedCategory);
+    : testimonials.filter (t => t.category === selectedCategory) ;
 
   const currentTestimonial = filteredTestimonials[selectedTestimonial];
 
   const nextTestimonial = () => {;
-    setSelectedTestimonial((prev) => ;
-      prev === filteredTestimonials.length - 1 ? 0 : prev + 1;
-    );
+    setSelectedTestimonial ( (prev) => ;
+      prev === filteredTestimonials.length - 1 ? 0 : prev + 1;) ;
   };
 
   const prevTestimonial = () => {;
-    setSelectedTestimonial((prev) => ;
-      prev === 0 ? filteredTestimonials.length - 1 : prev - 1;
-    );
+    setSelectedTestimonial ( (prev) => ;
+      prev === 0 ? filteredTestimonials.length - 1 : prev - 1;) ;
   };
 
   return ("
@@ -111,21 +109,11 @@ export function InteractiveTestimonials() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -148,12 +136,10 @@ export function InteractiveTestimonials() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => {
-                setSelectedCategory(category);
-                setSelectedTestimonial(0);
+          {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
+              onClick={ () => {
+                setSelectedCategory (category) ;
+                setSelectedTestimonial (0) ;
               }}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
 
@@ -208,8 +194,7 @@ export function InteractiveTestimonials() {
                     <div className="text-sm text-gray-600 capitalize">'
                       {key.replace(/([A-Z])/g, ' $1').trim()}
                     </div>
-                  </div>
-                ))}
+                  </div>) ) }
               </div>
             </motion.div>
           </AnimatePresence>
@@ -240,8 +225,7 @@ export function InteractiveTestimonials() {
 '
                   index === currentIndex ? 'bg-blue-600 w-8' : 'bg-gray-300'`
                 }`}
-              />
-            ))}
+              />) ) }
           </div>
         </div>
 
@@ -260,8 +244,7 @@ export function InteractiveTestimonials() {
               <>"
                 <Play className="h-4 w-4 mr-2" />
                 Play
-              </>
-            )}
+              </>) }
           </button>
         </div>
 
@@ -287,21 +270,11 @@ export function InteractiveTestimonials() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -328,16 +301,14 @@ export function InteractiveTestimonials() {
           </div>
         </motion.div>
       </div>;
-    </section>;
-  )};
+    </section>;) };
 
 export default InteractiveTestimonials;"
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 }
 
 export default InteractiveTestimonials;

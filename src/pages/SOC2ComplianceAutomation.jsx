@@ -611,7 +611,7 @@ const successStories = [
     logo: "CSP"
 
 ];
-
+;
 const processSteps = [
   {
 
@@ -646,7 +646,7 @@ const processSteps = [
     duration: "4-8 weeks"
 
 ];
-
+;
 const soc2Benefits = [
   {
 "
@@ -687,7 +687,7 @@ export default function SOC2ComplianceAutomation() {
 '
   const filteredSolutions = selectedCategory === 'All'
     ? soc2Solutions
-    : soc2Solutions.filter(solution => solution.category === selectedCategory);
+    : soc2Solutions.filter (solution => solution.category === selectedCategory) ;
 
   return ("
     <div className="min-h-screen bg-futuristic">
@@ -706,21 +706,11 @@ export default function SOC2ComplianceAutomation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -732,21 +722,11 @@ export default function SOC2ComplianceAutomation() {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
               transition = {
@@ -802,21 +782,11 @@ export default function SOC2ComplianceAutomation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -837,21 +807,11 @@ export default function SOC2ComplianceAutomation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -883,8 +843,7 @@ export default function SOC2ComplianceAutomation() {
                     </div>
                   ))}
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -898,21 +857,11 @@ export default function SOC2ComplianceAutomation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -933,21 +882,11 @@ export default function SOC2ComplianceAutomation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -981,8 +920,7 @@ export default function SOC2ComplianceAutomation() {
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -996,21 +934,11 @@ export default function SOC2ComplianceAutomation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -1031,21 +959,11 @@ export default function SOC2ComplianceAutomation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -1075,8 +993,7 @@ export default function SOC2ComplianceAutomation() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -1090,21 +1007,11 @@ export default function SOC2ComplianceAutomation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -1130,8 +1037,7 @@ export default function SOC2ComplianceAutomation() {
                 }`}
 
                 {category}
-              </button>
-            ))}
+              </button>) ) }
           </div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1143,21 +1049,11 @@ export default function SOC2ComplianceAutomation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -1197,8 +1093,7 @@ export default function SOC2ComplianceAutomation() {
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
 
                       {tech}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
 "
                 <div className="flex items-center justify-between mb-4">"
@@ -1215,8 +1110,7 @@ export default function SOC2ComplianceAutomation() {
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -1230,21 +1124,11 @@ export default function SOC2ComplianceAutomation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -1265,21 +1149,11 @@ export default function SOC2ComplianceAutomation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -1326,8 +1200,7 @@ export default function SOC2ComplianceAutomation() {
                   ))}"
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -1341,21 +1214,11 @@ export default function SOC2ComplianceAutomation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"

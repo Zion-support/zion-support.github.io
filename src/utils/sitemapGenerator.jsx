@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 '
   outputPath: './public/sitemap.xml',
   ...config
-        
 
 };
     }
@@ -50,10 +49,10 @@ Allow: /
 Sitemap: ${baseUrl}/sitemap.xml
 
   const generateSitemap = async () => {
-    setIsGenerating(true);
+    setIsGenerating (true) ;
     
     // Simulate sitemap generation
-    setTimeout(() => {
+    setTimeout ( () => {
       const sitemap = {
 
   pages: ['
@@ -79,17 +78,16 @@ Sitemap: ${baseUrl}/sitemap.xml
           { url: '/services/micro-saas', priority: '0.8', changefreq: 'weekly' }
         ],
         totalUrls: 10,
-        generatedAt: new Date().toISOString()
-      };
+        generatedAt: new Date () .toISOString () };
       
-      setSitemapData(sitemap);
-      setIsGenerating(false);
+      setSitemapData (sitemap) ;
+      setIsGenerating (false) ;
       
       if (onGenerate) {
 
         onGenerate(sitemap);
       }
-    }, 2000);
+    }, 2000) ;
   };
 
   return ("
@@ -102,17 +100,11 @@ Sitemap: ${baseUrl}/sitemap.xml
         {isGenerating ? 'Generating...' : 'Generate Sitemap'}
       </button>
       
-      {sitemapData && (
-        <motion.div
+      {sitemapData && (<motion.div
           initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
           animate = {
@@ -167,10 +159,8 @@ Sitemap: ${baseUrl}/sitemap.xml
               ))}
             </div>
           </div>
-        </motion.div>
-      )}
-    </div>
-  );
+        </motion.div>) }
+    </div>) ;
 };
 
 export default SitemapGenerator;

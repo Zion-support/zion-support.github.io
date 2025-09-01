@@ -198,7 +198,7 @@ const QuantumEdgeComputingPlatform = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>"
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -265,7 +265,7 @@ const QuantumEdgeComputingPlatform = () => {
                 : 'bg-gray-700/50 text-white hover:bg-gray-600/50 border border-gray-600/50'}`}>
                   Get Started
                 </Link>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>

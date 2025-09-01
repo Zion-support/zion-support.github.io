@@ -114,7 +114,7 @@ const InnovativeServicesShowcase = () => {
                       </span>))}"
                     {service.features.length > 3 && (<span className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded-full">
                         +{service.features.length - 3} more
-                      </span>)}
+                      </span>) }
                   </div>
                 </div>
 "
@@ -128,7 +128,7 @@ const InnovativeServicesShowcase = () => {
                     Learn More →
                   </div>
                 </div>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -156,7 +156,7 @@ const InnovativeServicesShowcase = () => {
                     {selectedService.features.map((feature, idx) => (<li key={idx} className="text-gray-300 flex items-center">"
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {feature}
-                      </li>))}
+                      </li>) ) }
                   </ul>
 "
                   <h3 className="text-xl font-semibold text-blue-400 mb-3">Benefits</h3>"
@@ -164,7 +164,7 @@ const InnovativeServicesShowcase = () => {
                     {selectedService.benefits.map((benefit, idx) => (<li key={idx} className="text-gray-300 flex items-center">"
                         <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
                         {benefit}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
 
@@ -221,7 +221,7 @@ const InnovativeServicesShowcase = () => {
                             <span className="text-gray-300">Market Price:</span>"
                             <span className="text-white">{selectedService.marketPrice}</span>
                           </div>
-                        </>)}
+                        </>) }
                     </div>
                   </div>
 "
@@ -258,7 +258,7 @@ const InnovativeServicesShowcase = () => {
               </div>
             </div>
           </div>
-        </div>)}
+        </div>) }
 
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"

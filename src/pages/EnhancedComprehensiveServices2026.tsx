@@ -1,6 +1,11 @@
 import React, { useState, useMemo } from 'react.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Brain,
+import { motion, AnimatePresence  } from 'framer - motion.ts';
+import { ultimateInnovativeServices2026 } from "../data / ultimateInnovativeServices2026";
+import { zion2026ComprehensiveServices } from "../data / zion2026ComprehensiveServices";
+
+
   Cloud,
   Shield,
   Server,
@@ -74,7 +79,8 @@ pricing: {
     professional: number;
     enterprise: number;
     currency: string;
-    billingCycle: string};
+    billingCycle: string
+};
   rating: number;
   reviewCount: number;
   launchDate: string;
@@ -97,8 +103,8 @@ pricing: {
         estimatedDelivery: service.estimatedDelivery,;
         website: service.website,;
         contactInfo: service.contactInfo;
-      });
-    });
+      }) ;
+    }) ;
 
     // Add services from zion2026ComprehensiveServices
     zion2026ComprehensiveServices.forEach(service = > {
@@ -127,8 +133,8 @@ pricing: {
         estimatedDelivery: service.estimatedDelivery,;
         website: service.website,;
         contactInfo: service.contactInfo;
-      });
-    });
+      }) ;
+    }) ;
 
     return services}, []);
 '
@@ -141,7 +147,7 @@ pricing: {
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                           service.category.toLowerCase().includes(searchTerm.toLowerCase());'
       const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-      return matchesSearch && matchesCategory});
+      return matchesSearch && matchesCategory}) ;
 
     // Sort services
     switch (sortBy) {
@@ -160,7 +166,7 @@ pricing: {
         break;'
       case 'innovation':
         // Sort by innovation level if available, otherwise by rating
-        filtered.sort((a, b) => (b.innovationLevel || b.rating.toString()).localeCompare(a.innovationLevel || a.rating.toString()));
+        filtered.sort ( (a, b) => (b.innovationLevel || b.rating.toString () ) .localeCompare (a.innovationLevel || a.rating.toString () ) ) ;
         break}
 
     return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
@@ -192,21 +198,11 @@ pricing: {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -266,9 +262,7 @@ pricing: {
                 onChange={(e) => setSelectedCategory(e.target.value)}"
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
               >
-                {categories.map(category  => (
-                  <option key={category} value={category}>{category}</option>
-                ))}
+                {categories.map (category  => (<option key={category} value={category}>{category}</option>) ) }
               </select>
             </div>
 
@@ -319,18 +313,12 @@ pricing: {
         {viewMode === 'grid' ? (;"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
-              {filteredServices.map((service, index)  => (
-                <motion.div
+              {filteredServices.map ( (service, index) => (<motion.div
                   key={service.id}
                   initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
                   animate = {
@@ -338,21 +326,11 @@ pricing: {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   transition = {
 
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                   whileHover={{ y: -5 }}"
@@ -369,7 +347,7 @@ pricing: {
                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}>
                             {service.status}
                           </span>
-                          {getInnovationBadge(service)}
+                          {getInnovationBadge (service) }
                         </div>
                       </div>
                     </div>"
@@ -412,8 +390,7 @@ pricing: {
                       {service.features.length > 3 && ("
                         <span className="px-2 py-1 bg-gray-500/20 text-gray-300 text-xs rounded-full">
                           +{service.features.length - 3} more
-                        </span>
-                      )}
+                        </span>) }
                     </div>
                   </div>
 
@@ -426,36 +403,24 @@ pricing: {
                       <Eye className="w-4 h-4" />
                     </button>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </AnimatePresence>
           </div>
         ) : ("
           <div className="space-y-4">
             <AnimatePresence>
-              {filteredServices.map((service, index) => (
-                <motion.div
+              {filteredServices.map ( (service, index) => (<motion.div
                   key={service.id}
                   initial = {
 
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }}
                   animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
                   transition = {
@@ -484,7 +449,7 @@ pricing: {
                             <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}>
                               {service.status}
                             </span>
-                            {getInnovationBadge(service)}
+                            {getInnovationBadge (service) }
                           </div>
                         </div>"
                         <div className="flex items-center gap-1">"
@@ -507,15 +472,12 @@ pricing: {
                       </button>
                     </div>
                   </div>
-                </motion.div>;
-              ))}
+                </motion.div>;) ) }
             </AnimatePresence>
-          </div>;
-        )}
+          </div>;) }
 
         {/* No Results */}
-        {filteredServices.length === 0 && (
-          <motion.div
+        {filteredServices.length === 0 && (<motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}"
             className="text-center py-16"
@@ -529,8 +491,7 @@ pricing: {
 
       {/* Service Detail Modal */}
       <AnimatePresence>
-        {selectedService && (
-          <motion.div
+        {selectedService && (<motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}"
@@ -543,21 +504,11 @@ pricing: {
   { scale: 0.9,
   opacity: 0 
 
-
-
-
-
-
 }}
               animate = {
 
   { scale: 1,
   opacity: 1 
-
-
-
-
-
 
 }}
               exit = {
@@ -584,7 +535,7 @@ pricing: {
                         <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedService.status)}`}>
                           {selectedService.status}
                         </span>
-                        {getInnovationBadge(selectedService)}
+                        {getInnovationBadge (selectedService) }
                       </div>
                     </div>
                   </div>
@@ -608,8 +559,7 @@ pricing: {
                         <li key={idx} className="flex items-center gap-2 text-gray-300">"
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           {feature}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
 "
                     <h3 className="text-xl font-semibold text-white mb-4">Benefits</h3>"
@@ -618,8 +568,7 @@ pricing: {
                         <li key={idx} className="flex items-center gap-2 text-gray-300">"
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                           {benefit}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
 
@@ -699,8 +648,7 @@ pricing: {
                             {selectedService.contactInfo.address}
                           </div>
                         </div>
-                      </div>
-                    )}
+                      </div>) }
                   </div>
                 </div>
 
@@ -718,8 +666,7 @@ pricing: {
                 </div>
               </div>
             </motion.div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
 
       {/* Contact Section */}"
@@ -753,8 +700,7 @@ pricing: {
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default EnhancedComprehensiveServices2026;}}}}}}'"`

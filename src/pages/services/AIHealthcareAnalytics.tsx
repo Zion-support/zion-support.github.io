@@ -415,6 +415,7 @@ const AIHealthcareAnalytics = () => {
     </div>
   );
 };
-
+;
+export { AIHealthcareAnalytics };
 export default AIHealthcareAnalytics;
 '"

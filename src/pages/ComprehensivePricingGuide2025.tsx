@@ -57,7 +57,6 @@ import {
   Home as HomeIcon2,'
   Car as CarIcon2} from 'lucide-react';
 
-export default function ComprehensivePricingGuide2025() {
   const pricingTiers = [
     {
 '
@@ -385,8 +384,7 @@ export default function ComprehensivePricingGuide2025() {
                     {tier.cta}
                   </Link>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -448,11 +446,9 @@ export default function ComprehensivePricingGuide2025() {
                           {service.price}
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -505,8 +501,7 @@ export default function ComprehensivePricingGuide2025() {
                   Get Custom Quote"
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>

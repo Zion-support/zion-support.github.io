@@ -40,8 +40,8 @@ import { Clock, Briefcase function ProjectsContent() {
                     <Link to={`/project/${project.id}`}>View Details</Link>
                   </Button>
                 </CardFooter>
-              </Card>))}
-          </div>)}
+              </Card>) ) }
+          </div>) }
       </main>
       
     </>)}

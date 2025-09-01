@@ -104,10 +104,10 @@ export default function RevolutionaryServices2029(...args: any[]): any {
       default:
         return 0;
     }
-  });
+  }) ;
 
-  const togglePlay = () => setIsPlaying(!isPlaying);
-  const toggleMute = () => setVolume(volume > 0 ? 0 : 0.5);
+  const togglePlay = () => setIsPlaying (!isPlaying) ;
+  const toggleMute = () => setVolume (volume > 0 ? 0 : 0.5) ;
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -263,8 +263,7 @@ export default function RevolutionaryServices2029(...args: any[]): any {
                         className="bg-slate-800 text-white"
                       >
                         {category}
-                      </option>
-                    ))}
+                      </option>) ) }
                   </select>
                 </div>
 
@@ -328,8 +327,7 @@ export default function RevolutionaryServices2029(...args: any[]): any {
                       {service.popular && ("
                         <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                           POPULAR
-                        </div>
-                      )}
+                        </div>) }
 
                       {/* Service Icon */}"
                       <div className="text-6xl mb-4">{service.icon}</div>
@@ -384,8 +382,7 @@ export default function RevolutionaryServices2029(...args: any[]): any {
                           {service.features.length > 3 && ("
                             <div className="text-purple-400 text-sm cursor-pointer hover:underline">
                               +{service.features.length - 3} more features
-                            </div>
-                          )}
+                            </div>) }
                         </div>
                       </div>
 
@@ -402,8 +399,7 @@ export default function RevolutionaryServices2029(...args: any[]): any {
                             >"
                               <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                               {benefit}
-                            </div>
-                          ))}
+                            </div>) ) }
                         </div>
                       </div>
 
@@ -459,8 +455,7 @@ export default function RevolutionaryServices2029(...args: any[]): any {
                         </div>
                       </div>
                     </div>
-                  </motion.div>
-                ))}
+                  </motion.div>) ) }
               </AnimatePresence>
             </div>
           </div>
@@ -545,7 +540,7 @@ export default function RevolutionaryServices2029(...args: any[]): any {
           appearance: none;
           height: 20px;
           width: 20px;
-          border-radius: 50%;
+          border - radius: 50%;
           background: #8b5cf6;
           cursor: pointer;
         }
@@ -553,7 +548,7 @@ export default function RevolutionaryServices2029(...args: any[]): any {
 
           height: 20px;
           width: 20px;
-          border-radius: 50%;
+          border - radius: 50%;
           background: #8b5cf6;
           cursor: pointer;
           border: none;

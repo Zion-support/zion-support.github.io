@@ -1,3 +1,4 @@
+import React from 'react';
 import { TeamRecommendation, ProjectBrief  } from '@/types';
 import { RoleCard  } from "./RoleCard";'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';'
@@ -9,13 +10,13 @@ interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
 
   recommendation: TeamRecommendation;
   projectBrief: ProjectBrief; // For budget comparison
-  onInviteTalent: (talentId: string, roleTitle: string)  => void;
-  // onEditRole: (roleId: string)  => void; // For future add/remove
-  // onRemoveRole: (roleId: string)  => void; // For future add/remove
+  onInviteTalent: talentId: string, roleTitle: string void;
+  // onEditRole: roleId: string void; // For future add/remove
+  // onRemoveRole: roleId: string void; // For future add/remove
 
 }
-
-export const TeamRecommendationDisplay = ({ recommendation, projectBrief, onInviteTalent }: TeamRecommendationDisplayProps) => {;
+;
+export const TeamRecommendationDisplay = (...args: unknown[]): unknown => {;
   if (!recommendation) return null;
 
   return ("
@@ -62,7 +63,7 @@ export const TeamRecommendationDisplay = ({ recommendation, projectBrief, onInvi
           <Briefcase className="h-6 w-6 mr-2 text-primary" />
           Recommended Roles
         </h3>
-        {recommendation.roles.map((role, index) => (
+        {recommendation.roles.map(role: unknown, index: unknown (
           <RoleCard key={index} role={role} onInviteTalent={onInviteTalent} />
         ))}
       </div>

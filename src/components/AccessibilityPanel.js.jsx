@@ -160,7 +160,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                     : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}`}>"
                   <span className="mr-2">{tab.icon}</span>
                   {tab.label}
-                </button>))}
+                </button>) ) }
             </div>
 
             {/* Content */}"
@@ -320,7 +320,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                       <div className="text-xs text-blue-700 dark:text-blue-300 space-y-1">
                         <div>• Alt + A: Toggle accessibility panel</div>
                         <div>• Tab: Navigate between elements</div>
-                        <div>• Enter/Space: Activate buttons</div>
+                        <div>• Enter / Space: Activate buttons</div>
                         <div>• Escape: Close modals</div>
                       </div>
                     </div>
@@ -370,7 +370,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                         <div>• Use Escape to close panels and modals</div>
                       </div>
                     </div>
-                  </motion.div>)}
+                  </motion.div>) }
               </AnimatePresence>
             </div>
 
@@ -385,7 +385,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                 </button>
               </div>
             </div>
-          </motion.div>)}
+          </motion.div>) }
       </AnimatePresence>
     </>)};
 export default AccessibilityPanel;

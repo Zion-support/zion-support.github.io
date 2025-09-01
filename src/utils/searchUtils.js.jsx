@@ -1,3 +1,22 @@
+import React from 'react';
+export const calculateRelevanceScore = (result, searchTerm) => {
+export const calculateSearchMetrics = (results, searchTime) => {
+export const debounce = (func, wait) => {
+export const extractKeywords = (query) => {
+export const filteredResults = [...results];
+export const formatSearchQuery = (query) => {
+export const generateDynamicSuggestions = (query, recentSearches = [], availableCategories = [], availableTags = []) => {
+export const getActiveFilterCount = (filters) => {
+export const getDefaultFilters = () => ({
+export const hasActiveFilters = (filters) => {
+export const highlightSearchTerms = (text, searchTerm) => {
+export const matchesSearchTerm = (text, searchTerm) => {
+export const sortedResults = [...results];
+export default {
+export default for;
+export default for;
+
+
 /**
  * Highlight search terms in text with HTML mark tags
  */
@@ -24,20 +43,16 @@ export const matchesSearchTerm = (text, searchTerm) => {
 export const calculateRelevanceScore = (result, searchTerm) => {
 
     let score = 0;
-    const title = result.title.toLowerCase();
-    const description = result.description.toLowerCase();
+    const title = result.title.toLowerCase () ;
+    const description = result.description.toLowerCase () ;
     // Exact title match gets highest score
-    if (title === term)
-        score += 100;
+    if (title === term) score += 100;
     // Title starts with search term
-    else if (title.startsWith(term))
-        score += 80;
+    else if (title.startsWith (term) ) score += 80;
     // Title contains search term
-    else if (title.includes(term))
-        score += 60;
+    else if (title.includes (term) ) score += 60;
     // Description contains search term
-    if (description.includes(term))
-        score += 30;
+    if (description.includes (term) ) score += 30;
     // Tag matches
     if (result.tags?.some(tag => tag.toLowerCase().includes(term))) {
 
@@ -64,7 +79,6 @@ export const calculateRelevanceScore = (result, searchTerm) => {
 /**
  * Sort search results based on sort option
  */
-export const sortedResults = [...results];
     switch (sortBy) {
 '
         case 'price_asc':
@@ -87,13 +101,12 @@ export const sortedResults = [...results];
 
                 const scoreB = calculateRelevanceScore(b, searchTerm);
                 return scoreB - scoreA;
-            });
+            }) ;
     }
 };
 /**
  * Filter search results based on active filters
  */
-export const filteredResults = [...results];
     // Filter by type
     if (filters.types.length > 0) {
 
@@ -111,7 +124,7 @@ export const filteredResults = [...results];
 
             const price = result.price ?? 0;
             return price >= filters.minPrice && price <= filters.maxPrice;
-        });
+        }) ;
     }
     // Filter by minimum rating
     if (filters.minRating > 0) {
@@ -126,7 +139,7 @@ export const filteredResults = [...results];
 export const generateDynamicSuggestions = (query, recentSearches = [], availableCategories = [], availableTags = []) => {
 
     const suggestions = [];
-    const lowerQuery = query.toLowerCase();
+    const lowerQuery = query.toLowerCase () ;
     // Add exact query as first suggestion
     if (query.trim()) {
 
@@ -135,7 +148,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
             text: query,'
             type: 'recent',`
             id: `query-${query}`
-        });
+        }) ;
     }
     // Add matching categories
     availableCategories
@@ -148,8 +161,8 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
             text: category,'
             type: 'category',`
             id: `category-${category}`
-        });
-    });
+        }) ;
+    }) ;
     // Add matching tags
     availableTags
         .filter(tag => tag.toLowerCase().includes(lowerQuery))
@@ -161,8 +174,8 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
             text: tag,'
             type: 'tag',`
             id: `tag-${tag}`
-        });
-    });
+        }) ;
+    }) ;
     // Add recent searches that match
     recentSearches
         .filter(search => search.toLowerCase().includes(lowerQuery) && search !== query)
@@ -174,9 +187,9 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
             text: search,'
             type: 'recent',`
             id: `recent-${search}`
-        });
-    });
-    return suggestions.slice(0, 8); // Limit to 8 suggestions
+        }) ;
+    }) ;
+    return suggestions.slice (0, 8) ; // Limit to 8 suggestions
 };
 /**
  * Calculate search metrics for analytics
@@ -192,20 +205,17 @@ export const calculateSearchMetrics = (results, searchTime) => {
 
             categoryCount.set(result.category, (categoryCount.get(result.category) || 0) + 1);
         }
-    });
-    const topCategories = Array.from(categoryCount.entries())
-        .map(([category, count]) => ({ category, count }))
-        .sort((a, b) => b.count - a.count)
-        .slice(0, 5);
+    }) ;
+    const topCategories = Array.from (categoryCount.entries () ) .map ( ([category, count]) => ({ category, count }) ) .sort ( (a, b) => b.count - a.count) .slice (0, 5) ;
     // Calculate average price
-    const pricesResults = results.filter(r => r.price && r.price > 0);
+    const pricesResults = results.filter (r => r.price && r.price > 0) ;
     const averagePrice = pricesResults.length > 0
-        ? pricesResults.reduce((sum, r) => sum + (r.price || 0), 0) / pricesResults.length
+        ? pricesResults.reduce ( (sum, r) => sum + (r.price || 0) , 0) / pricesResults.length
         : 0;
     // Calculate average rating
-    const ratedResults = results.filter(r => r.rating && r.rating > 0);
+    const ratedResults = results.filter (r => r.rating && r.rating > 0) ;
     const averageRating = ratedResults.length > 0
-        ? ratedResults.reduce((sum, r) => sum + (r.rating || 0), 0) / ratedResults.length
+        ? ratedResults.reduce ( (sum, r) => sum + (r.rating || 0) , 0) / ratedResults.length
         : 0;
     return {
 

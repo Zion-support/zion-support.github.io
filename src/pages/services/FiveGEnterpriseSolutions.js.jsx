@@ -29,5 +29,6 @@ const FiveGEnterpriseSolutions = () => {
     </div>
   );
 };
+export { FiveGEnterpriseSolutions };
 export default FiveGEnterpriseSolutions;
 '"

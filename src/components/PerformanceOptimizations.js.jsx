@@ -112,7 +112,7 @@ export function PerformanceOptimizations() {
             Add Item
           </button>
         </div>
-        <MemoizedDataGrid data={data} onItemClick={handleItemClick}/>
+        <MemoizedDataGrid data={data} onItemClick={handleItemClick} />
       </div>
 
       {/* Virtual Scrolling */}
@@ -124,8 +124,11 @@ export function PerformanceOptimizations() {
 
             id: i,`
             title: `Item ${i + 1}`,
-            value: Math.floor(Math.random() * 1000)
-        }))} itemHeight={60} containerHeight={400}/>
+            value: Math.floor (Math.random () * 1000) ,
+          }) ) }
+          itemHeight={60}
+          containerHeight={400}
+        />
       </div>
 
       {/* Lazy Loading */}
@@ -141,7 +144,7 @@ export function PerformanceOptimizations() {
             <div className="mt-4 p-4 bg-zion-slate/10 rounded-lg">
               <LazyExpensiveComponent />
             </div>
-          </Suspense>)}
+          </Suspense>) }
       </div>
 
       {/* Performance Metrics */}

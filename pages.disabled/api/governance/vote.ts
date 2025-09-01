@@ -1,8 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuid } from 'uuid';
 import { addVote, readProposals, readVotes, VoteOption } from '../../../utils/governanceStorage';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+;
+export { function };
+export default function handler(...args: unknown[]): unknown {
   if (req.method === 'GET') {
     const { proposalId, voter } = req.query as { proposalId?: string; voter?: string };
     let votes = readVotes();
@@ -20,8 +21,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (!proposal) return res.status(404).json({ error: 'Proposal not found' });
       const now = Date.now();
       if (now
-
-export default function VotePage() {
+;
+export default function VotePage(...args: unknown[]): unknown {
   return (
     < proposal.startTime || now > proposal.endTime) return res.status(400).json({ error: 'Voting is closed' });
 

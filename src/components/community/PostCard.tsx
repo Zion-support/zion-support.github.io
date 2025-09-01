@@ -16,7 +16,8 @@ author: {
 
       name: string;
       avatar: string}}}
-
+;
+export { function };
 export default function PostCard(...args[]):  {
 
   return()

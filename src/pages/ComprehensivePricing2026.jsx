@@ -166,10 +166,10 @@ const ComprehensivePricing2026 = () => {
             </h3>"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
-                <strong>Mobile:</strong> +1 302 464 0950
+                <strong > Mobile:</strong> +1 302 464 0950
               </div>
               <div>
-                <strong>Email:</strong> kleber@ziontechgroup.com
+                <strong > Email:</strong > kleber@ziontechgroup.com
               </div>
               <div>
                 <strong>Address:</strong> 364 E Main St STE 1008 Middletown DE

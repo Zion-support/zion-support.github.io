@@ -57,8 +57,7 @@ const FuturisticBackground = React.memo(() => {
       top: `${Math.random() * 100}%`,
       delay: i * 0.1,
       duration: 5 + i * 0.3
-    })), []
-  );
+    }) ) , []) ;
 
   return()
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
@@ -87,8 +86,7 @@ const FuturisticBackground = React.memo(() => {
             repeat: Infinity,"
             ease: "easeInOut"
           }}
-        />
-      ))}
+        />) ) }
 
       {/* Subtle gradient overlays */}"
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-cyan-900/10"></div>"
@@ -99,11 +97,11 @@ const FuturisticBackground = React.memo(() => {
 
 
 // Floating Action Button Component
-const FloatingActionButton = React.memo(() => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+const FloatingActionButton = React.memo ( () => {
+  const [isVisible, setIsVisible] = useState (false) ;
+  const [isExpanded, setIsExpanded] = useState (false) ;
 
-  useEffect(() => {
+  useEffect ( () => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
 
@@ -123,7 +121,7 @@ const FloatingActionButton = React.memo(() => {
 
       top: 0,'
       behavior: 'smooth'
-    });
+    }) ;
   };
 
   return()
@@ -138,8 +136,7 @@ const FloatingActionButton = React.memo(() => {
           <div className="relative">
             {/* Expanded menu */}
             <AnimatePresence>
-              {isExpanded && (
-                <motion.div
+              {isExpanded && (<motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}"
@@ -172,8 +169,7 @@ const FloatingActionButton = React.memo(() => {
                   >"
                     <HelpCircle className="h-5 w-5" />
                   </motion.button>
-                </motion.div>
-              )}
+                </motion.div>) }
             </AnimatePresence>
 
             {/* Main FAB */}
@@ -235,20 +231,20 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       color: 'from-green-600 to-emerald-600','
       features: ['Predictive analytics', 'Diagnostic support', 'Care optimization']
     }
-  ], []);
+  ], []) ;
 
-  // Auto-advance slides
-  useEffect(() => {
+  // Auto - advance slides
+  useEffect ( () => {
     if (!isPlaying) return;
     
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5000);
+    const interval = setInterval ( () => {
+      setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) ;
+    }, 5000) ;
 
-    return () => clearInterval(interval);
-  }, [isPlaying, heroSlides.length]);
+    return () => clearInterval (interval) ;
+  }, [isPlaying, heroSlides.length]) ;
 
-  const togglePlayPause = () => setIsPlaying(!isPlaying);
+  const togglePlayPause = () => setIsPlaying (!isPlaying) ;
 
   const serviceCategories = [
     {
@@ -271,12 +267,12 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
     }
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [heroSlides.length]);
+  useEffect ( () => {
+    const timer = setInterval ( () => {
+      setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) ;
+    }, 5000) ;
+    return () => clearInterval (timer) ;
+  }, [heroSlides.length]) ;
 
   const heroStats = ['
     { label: 'AI Solutions', value: '50+', icon: Brain, description: 'Cutting-edge AI services' },'
@@ -342,8 +338,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 '
                 index === currentSlide ? 'bg-cyan-400 w-8' : 'bg-white/30'`
               }`}
-            />
-          ))}
+            />) ) }
         </div>
 
         {/* Enhanced Stats with animations */}
@@ -393,10 +388,8 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
           </button>
         </div>
       </div>
-    </section>
-  );
+    </section>) ;
 };
-
 
 // Features Section Component
 const FeaturesSection = () => {
@@ -501,12 +494,10 @@ const FeaturesSection = () => {
                 </div>
               </Link>
 
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </div>
-    </section>
-  );
+    </section>) ;
 
 };
 
@@ -541,8 +532,7 @@ const StatsSection = () => {
           ))}
         </div>
       </div>
-    </section>
-  );
+    </section>) ;
 };
 
 // CTA Section Component
@@ -601,8 +591,7 @@ const CTASection = () => {
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>) ;
 
 };
 
@@ -624,8 +613,7 @@ export default function Home() {
         {/* Floating Action Button */}
         <FloatingActionButton />
       </div>
-    </>
-  );
+    </>) ;
 };
 
 export default Home;

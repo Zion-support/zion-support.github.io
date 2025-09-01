@@ -4,10 +4,10 @@ type Theme = 'light' | 'dark' | 'system';
 
 interface ThemeContextType {
   theme: Theme;
-  setTheme: (theme: Theme)  => void;
+  setTheme: (theme: Theme) => void;
   isDark: boolean}
 
-const ThemeContext = createContext<ThemeContextType | null>(null);
+const ThemeContext = createContext < ThemeContextType | null> (null) ;
 
 export const useTheme = () => {;
   const context = useContext(ThemeContext);
@@ -34,9 +34,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     }'
     return 'system'});
 
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState (false) ;
 
-  useEffect(() => {
+  useEffect ( () => {
     const root = window.document.documentElement;
     
     const updateTheme = () => {;'
@@ -83,17 +83,11 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   ;
   ;
 
-
-
-
-
-
 };
 
   return()
     <ThemeContext.Provider value = {value}>;
       {children};
-    </ThemeContext.Provider>;
-  );
+    </ThemeContext.Provider>;) ;
 };
 '

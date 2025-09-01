@@ -1,5 +1,8 @@
 import React from 'react';
+export default QuantumNeuralNetworkPlatform;
 import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPlatform = () => {
+
+
     const features = [
         {
 

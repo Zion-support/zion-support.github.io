@@ -18,8 +18,9 @@ export const metadata = {
     locale: 'en_US',
   },
 };
-
-export default function RootLayout({ children }: { children: ReactNode }) {
+;
+export { function };
+export default function RootLayout(...args: unknown[]): unknown {
   return (
     <html lang="en" className="scroll-smooth">
       <head>

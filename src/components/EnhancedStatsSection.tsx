@@ -15,13 +15,14 @@ import {
 
 interface Stat {
   id: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType < any>;
   value: string;
   label: string;
   description: string;
   color: string;
-  gradient: string}
-
+  gradient: string
+}
+;
 const stats: Stat[] = [
   {
 '
@@ -93,7 +94,7 @@ export default function EnhancedStatsSection(...args[]):  {
 
     threshold: 0.3,
     triggerOnce: true
-  });
+  }) ;
 
   useEffect(() => {
     if (inView) {
@@ -104,25 +105,25 @@ export default function EnhancedStatsSection(...args[]):  {
   const animateCount = (target: string, duration: number = 2000) => {;'
     const numericValue = parseInt(target.replace(/[^0-9]/g, ''));
     const start = 0;
-    const increment = numericValue / (duration / 16); // 60fps
+    const increment = numericValue / (duration / 16) ; // 60fps
 
     let current = start;
-    const timer = setInterval(() => {;
+    const timer = setInterval ( () => {;
       current += increment;
       if (current >= numericValue) {
 
         current = numericValue;
-        clearInterval(timer);
+        clearInterval (timer) ;
       }
-setCountedValues(prev:  > ({;
+setCountedValues (prev:  > ({;
         ...prev,;
-        [target]: Math.floor(current);
-      }));
-    }, 16);
+        [target]: Math.floor (current) ;
+      }) ) ;
+    }, 16) ;
 
     return timer};
 
-  useEffect(() => {
+  useEffect ( () => {
     if (inView) {
 
       stats.forEach((stat) => {
@@ -133,7 +134,7 @@ setCountedValues(prev:  > ({;
         return () => clearTimeout(timer);
       });
     }
-  }, [inView]);
+  }, [inView]) ;
 
   return()
     <section className = "py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -153,11 +154,6 @@ setCountedValues(prev:  > ({;
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
           animate={controls}
           variants = {
@@ -171,12 +167,6 @@ setCountedValues(prev:  > ({;
   transition: {
 
                 duration: 0.6
-              
-
-
-
-
-
 
 }
             }
@@ -201,11 +191,6 @@ setCountedValues(prev:  > ({;
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
               animate={controls}
               variants = {
@@ -220,12 +205,6 @@ setCountedValues(prev:  > ({;
 
                     duration: 0.6,
   delay: index * 0.1
-                  
-
-
-
-
-
 
 }
                 }
@@ -260,12 +239,6 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 
                     rotate: 360,
   scale: 1.1
-                  
-
-
-
-
-
 
 }}
                   transition={{ duration: 0.6 }}
@@ -282,11 +255,6 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 >"
@@ -313,8 +281,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
                   initial={false}
                 />
               </motion.div>
-            </motion.div>;
-          ))}
+            </motion.div>;) ) }
         </div>
 
         {/* Bottom Achievement Section */}
@@ -323,11 +290,6 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 
   { opacity: 0,
   y: 30 ;
-
-
-
-
-
 
 }}
           animate={controls}
@@ -343,12 +305,6 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 
                 duration: 0.6,
   delay: 0.6;
-              
-
-
-
-
-
 
 }
             }
@@ -388,7 +344,6 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 }
 '"`

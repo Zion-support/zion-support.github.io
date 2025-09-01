@@ -74,7 +74,7 @@ export function Button({
     </button>;
   );
 }
-// Export button variants for use in other components
+// Export button variants for use in other components;
 export const buttonVariants = {
 '
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan','

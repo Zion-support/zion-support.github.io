@@ -1,3 +1,4 @@
+import { Link } from "react - router - dom";
 import React from 'react';
 import SEO from "@/components/SEO";"
 import { GradientHeading } from "@/components/GradientHeading";"
@@ -175,7 +176,7 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
                       {step.description}
                     </CardDescription>
                   </CardContent>
-                </Card>))}
+                </Card>) ) }
             </div>
           </div>
 
@@ -197,7 +198,7 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
                       {step.description}
                     </CardDescription>
                   </CardContent>
-                </Card>))}
+                </Card>) ) }
             </div>
           </div>
 
@@ -217,7 +218,7 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
                       {feature.description}
                     </CardDescription>
                   </CardContent>
-                </Card>))}
+                </Card>) ) }
             </div>
           </div>
 
@@ -240,7 +241,7 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
                         </li>))}
                     </ul>
                   </CardContent>
-                </Card>))}
+                </Card>) ) }
             </div>
           </div>
 

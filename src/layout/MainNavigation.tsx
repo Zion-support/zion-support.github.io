@@ -24,8 +24,9 @@ interface NavigationLink {
   key: string;
   href: string;
   name: string;
-  matches: (path: string)  => boolean;
-  children?: NavigationLink[]}
+  matches: path: string boolean;
+  children?: NavigationLink[]
+}
 
         setIsCompOpen(false);
         setActiveDropdown(null)}
@@ -118,7 +119,7 @@ interface NavigationLink {
     };
   ];
 
-  const isActive = (link: NavigationLink)  => link.matches(location.pathname);
+  const isActive = link: NavigationLink link.matches(location.pathname);
 
               </div>;
             </motion.div>;
@@ -132,7 +133,7 @@ interface NavigationLink {
     <nav className = {`${className}`}>
       {/* Desktop Navigation */}
       <div className="hidden lg: flex items-center space-x-1">
-        {baseLinks.map((link)  => (
+        {baseLinks.map((link (
           <div key={link.key}>
             {link.children ? (
               renderDropdown()
@@ -167,7 +168,7 @@ interface NavigationLink {
 
       {/* Mobile Navigation */}
       <AnimatePresence>
-        {isMobileMenuOpen && (
+        {isMobileMenuOpen && 
           <motion.div
             initial = {
 
@@ -217,8 +218,7 @@ interface NavigationLink {
               </div>
 "
               <div className="space-y-2">
-                {baseLinks.map((link) => (
-                  <div key={link.key}>
+                {baseLinks.map(link: unknown <div key={link.key}>
                     {link.children ? (
                       <div>
                         <button
@@ -236,7 +236,7 @@ interface NavigationLink {
 
                         {activeDropdown === link.key && (;"
                           <div className="ml-4 mt-2 space-y-1">
-                            {link.children.map((child) => (
+                            {link.children.map((child: unknown (
                               <Link
                                 key={child.key}
                                 to={child.href}`
@@ -244,7 +244,7 @@ interface NavigationLink {
 '
                                   isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''`
                                 }`}
-                                onClick={() => setIsMobileMenuOpen(false)}
+                                onClick={: unknown setIsMobileMenuOpen(false)}
 
                                 {child.name}
                               </Link>
@@ -261,7 +261,7 @@ interface NavigationLink {
                             ? 'bg-zion-cyan text-white''
                             : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
                         }`}
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        onClick={: unknown setIsMobileMenuOpen(false)}
 
                         {link.name}
                       </Link>

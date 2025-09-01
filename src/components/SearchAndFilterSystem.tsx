@@ -34,12 +34,13 @@ interface FilterOption {
   id: string;
   label: string;
   value: string;
-  count: number}
+  count: number
+}
 
 interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
 
   data: SearchResult[];
-  onResultsChange?: (results: SearchResult[])  => void;
+  onResultsChange?: (results: SearchResult[]) => void;
   placeholder?: string;
   showFilters?: boolean}
 
@@ -64,32 +65,31 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
       acc[item.category] = (acc[item.category] || 0) + 1;
       return acc;
-    }, {} as Record<string, any>);
+    }, {} as Record < string, any>) ;
 
     const types = data.reduce((acc, item) => {
 
       acc[item.type] = (acc[item.type] || 0) + 1;
       return acc;
-    }, {} as Record<string, any>);
+    }, {} as Record < string, any>) ;
 
     return {
 
       categories: Object.entries(categories).map(([key, count])  => ({
 
         id: key,
-        label: key.charAt(0).toUpperCase() + key.slice(1),
+        label: key.charAt (0) .toUpperCase () + key.slice (1) ,
         value: key,
         count
       })),
       types: Object.entries(types).map(([key, count]) => ({
 
         id: key,
-        label: key.charAt(0).toUpperCase() + key.slice(1),
+        label: key.charAt (0) .toUpperCase () + key.slice (1) ,
         value: key,
         count
-      }))
-    };
-  }, [data]);
+      }) ) };
+  }, [data]) ;
 
   // Filtered and sorted results
   const filteredResults = useMemo(() => {
@@ -97,23 +97,22 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
       // Search query filter'
       const matchesSearch = searchQuery === '' ||
-        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+        item.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+        item.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+        item.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ;
 
       // Category filter'
       const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
 
       // Active filters
       const matchesFilters = activeFilters.size === 0 ||
-        Array.from(activeFilters).some(filter =>
-          item.tags.includes(filter) ||
+        Array.from (activeFilters) .some (filter =>
+          item.tags.includes (filter) ||
           item.type === filter ||
-          item.category === filter
-        );
+          item.category === filter) ;
 
       return matchesSearch && matchesCategory && matchesFilters;
-    });
+    }) ;
 
     // Sort results
     switch (sortBy) {
@@ -133,19 +132,19 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
         });
         break;'
       case 'name':
-        results = results.sort((a, b) => a.title.localeCompare(b.title));
+        results = results.sort ( (a, b) => a.title.localeCompare (b.title) ) ;
         break;
       default: // relevance
         // Keep original order for relevance
         break;
 
     return results;
-  }, [data, searchQuery, selectedCategory, activeFilters, sortBy]);
+  }, [data, searchQuery, selectedCategory, activeFilters, sortBy]) ;
 
   // Update parent component with results
-  useEffect(() => {
-    onResultsChange?.(filteredResults);
-  }, [filteredResults, onResultsChange]);
+  useEffect ( () => {
+    onResultsChange?. (filteredResults) ;
+  }, [filteredResults, onResultsChange]) ;
 
   // Toggle filter
   const toggleFilter = (filterId: string) => {
@@ -158,7 +157,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
       newFilters.add(filterId);
 
-    setActiveFilters(newFilters);
+    setActiveFilters (newFilters) ;
   };
 
   // Clear all filters
@@ -223,8 +222,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
         {/* Search Suggestions */}
         <AnimatePresence>
-          {isSearchFocused && searchQuery && (
-            <motion.div
+          {isSearchFocused && searchQuery && (<motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}"
@@ -243,14 +241,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                       <div className="text-sm font-medium text-white">{result.title}</div>"
                       <div className="text-xs text-zinc-400 truncate">{result.description}</div>
                     </div>
-                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc-800/50 ${getCategoryColor(result.category)}`}>
+                    <span className={`text - xs px - 2 py - 1 rounded - full bg - zinc - 800 / 50 ${getCategoryColor (result.category) }`}>
                       {result.category}
                     </span>
                   </div>
-                </div>;
-              ))}
-            </motion.div>
-          )}
+                </div>;) ) }
+            </motion.div>) }
         </AnimatePresence>
       </div>
 
@@ -304,8 +300,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
             {activeFilters.size > 0 && ("
               <span className="ml-1 px-2 py-0.5 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
                 {activeFilters.size}
-              </span>
-            )}
+              </span>) }
           </button>
 
           {/* Clear Filters */}
@@ -315,24 +310,16 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
               className="px-3 py-2 text-sm text-zinc-400 hover:text-white transition-colors"
 
               Clear all
-            </button>
-          )}
-        </div>
-      )}
+            </button>) }
+        </div>) }
 
       {/* Filter Panel */}
       <AnimatePresence>
-        {showFilterPanel && (
-          <motion.div
+        {showFilterPanel && (<motion.div
             initial = {
 
   { height: 0,
   opacity: 0 
-
-
-
-
-
 
 }}
             animate = {
@@ -340,21 +327,11 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
   { height: 'auto',
   opacity: 1 
 
-
-
-
-
-
 }}
             exit = {
 
   { height: 0,
   opacity: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -409,8 +386,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                         }`}
 
                         {tag}
-                      </button>
-                    ))}
+                      </button>) ) }
                   </div>
                 </div>
 
@@ -433,8 +409,7 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                 </div>
               </div>
             </div>;
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
 
       {/* Results Count */}"
@@ -452,11 +427,6 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
             animate = {
@@ -518,13 +488,11 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                 </div>
               </div>
             </div>
-          </motion.div>;
-        ))}
+          </motion.div>;) ) }
       </div>
 
       {/* No Results */}
-      {filteredResults.length === 0 && (
-        <motion.div
+      {filteredResults.length === 0 && (<motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}"
           className="text-center py-12"
@@ -540,9 +508,13 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
 
             Clear all filters
           </button>
-        </motion.div>
-      )}
-    </div>
-  );
+        </motion.div>) }
+    </div>) ;
+}
+
+
+
+}
+
 }
 '"`

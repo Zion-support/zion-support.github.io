@@ -1,3 +1,4 @@
+import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 import {
 
@@ -123,7 +124,7 @@ export default function ComprehensivePricing() {
     }
 
     return matchesCategory && matchesPrice;
-  });
+  }) ;
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -216,8 +217,7 @@ export default function ComprehensivePricing() {
                     </Button>
                   </Link>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>) ) }
           </div>
         </div>
       </div>
@@ -303,8 +303,7 @@ export default function ComprehensivePricing() {
                       >"
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
 
                   {/* Market Information */}"
@@ -363,8 +362,7 @@ export default function ComprehensivePricing() {
                     </Link>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>) ) }
           </div>
 
           {filteredServices.length === 0 && ("
@@ -382,8 +380,7 @@ export default function ComprehensivePricing() {
               >
                 Clear Filters
               </Button>
-            </div>
-          )}
+            </div>) }
         </div>
       </div>
 
@@ -480,7 +477,6 @@ export default function ComprehensivePricing() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 '"`

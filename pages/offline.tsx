@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';'
 import Head from 'next/head';'
 import { motion } from 'framer-motion';
+;
+export { function };
+export default function OfflinePage(...args: unknown[]): unknown {
+  const [isOnline, setIsOnline] = useState<typeof false>(false);
+  const [retryCount, setRetryCount] = useState<typeof 0>(0);
 
-export default function OfflinePage() {
-  const [isOnline, setIsOnline] = useState(false);
-  const [retryCount, setRetryCount] = useState(0);
-
-  useEffect(() => {
-    const checkOnlineStatus = () => {
+  useEffect(: unknown {
+    const checkOnlineStatus = (...args: unknown[]): unknown => {
       setIsOnline(navigator.onLine);
     };
 
@@ -25,7 +26,7 @@ export default function OfflinePage() {
     };
   }, []);
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (isOnline) {
 
       // Redirect to home page when back online'
@@ -33,7 +34,7 @@ export default function OfflinePage() {
     }
   }, [isOnline]);
 
-  const handleRetry = () => {
+  const handleRetry = (...args: unknown[]): unknown => {
     setRetryCount(prev => prev + 1);
     window.location.reload();
   };

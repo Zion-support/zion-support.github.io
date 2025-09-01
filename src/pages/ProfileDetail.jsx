@@ -10,14 +10,14 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
 export default function ProfileDetail() {
     // useParams is typed as `` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.
-    const { profileId } = useParams();
-    const [profileData, setProfileData] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
-    useEffect(() => {
+    const { profileId } = useParams () ;
+    const [profileData, setProfileData] = useState (null) ;
+    const [isLoading, setIsLoading] = useState (true) ;
+    const [error, setError] = useState (null) ;
+    useEffect ( () => {
         const fetchProfile = async () => {
-            setIsLoading(true);
-            setError(null);
+            setIsLoading (true) ;
+            setError (null) ;
             try {
                 if (!profileId) {
 "
@@ -35,7 +35,7 @@ export default function ProfileDetail() {
 "
                     setError("Profile not found.");
                     return}
-                setProfileData(data)}
+                setProfileData (data) }
             catch (err) {
 "
                 setError(err.message || "Failed to fetch profile.");
@@ -48,7 +48,7 @@ export default function ProfileDetail() {
 
                 setIsLoading(false)}
         };
-        fetchProfile()}, [profileId]);
+        fetchProfile () }, [profileId]) ;
     if (isLoading) {
 "
         return (<div className="min-h-screen flex items-center justify-center">
@@ -168,12 +168,6 @@ export default function ProfileDetail() {
             full_name: profileData?.full_name || '','
             professional_title: profileData?.professional_title || '',
   hourly_rate: profileData?.hourly_rate || 0
-        
-
-
-
-
-
 
 }}/>
             {/* Contact Information */}"
@@ -193,7 +187,7 @@ export default function ProfileDetail() {
                     <a href={profileData.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">
                       Website
                     </a>
-                  </div>)}
+                  </div>) }
               </div>
             </div>
 
@@ -212,7 +206,7 @@ export default function ProfileDetail() {
                 {profileData.linkedin_url && (<a href={profileData.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="LinkedIn" title="LinkedIn">"
                     <Linkedin className="h-4 w-4"/>
                     LinkedIn
-                  </a>)}
+                  </a>) }
               </div>
             </div>
           </div>

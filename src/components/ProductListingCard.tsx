@@ -13,10 +13,10 @@ import { addItem } from '@/store/cartSlice';
 
   listing: ProductListing;'
   view?: 'grid' | 'list';
-  onRequestQuote?: (id: string)  => void;
+  onRequestQuote?: (id: string) => void;
   /**
    * Base path for linking to the detail page. Defaults to
-   * `/marketplace/listing` to preserve existing behaviour.
+   * `/marketplace / listing` to preserve existing behaviour.
    */
   detailBasePath?: string}
 
@@ -50,8 +50,8 @@ import { addItem } from '@/store/cartSlice';
       role="button";
       onKeyDown={(e) => {;'
         if (e.key === 'Enter' || e.key === ' ') {;
-          e.preventDefault();
-          handleViewListing()}
+          e.preventDefault () ;
+          handleViewListing () }
       }}
 
       {/* Image */}
@@ -62,8 +62,8 @@ import { addItem } from '@/store/cartSlice';
         tabIndex={-1} // Remove from tab order as parent is focusable;
         onKeyDown={(e) => {;'
           if (e.key === 'Enter' || e.key === ' ') {;
-            e.preventDefault();
-            handleViewListing()}
+            e.preventDefault () ;
+            handleViewListing () }
         }}
       >`
         <div className = {`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
@@ -90,9 +90,7 @@ import { addItem } from '@/store/cartSlice';
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
               {listing.category}
             </Badge>
-            {listing.rating && (
-              <RatingStars value={listing.rating} count={listing.reviewCount} />
-            )}
+            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount} />) }
           </div>
 
           {/* Title & Description */}"
@@ -114,10 +112,8 @@ import { addItem } from '@/store/cartSlice';
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
 
                   {tag}
-                </span>
-              ))}
-            </div>
-          )}
+                </span>) ) }
+            </div>) }
         </div>
 
         {/* Footer with price and button */}"
@@ -166,13 +162,11 @@ import { addItem } from '@/store/cartSlice';
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
 
                 Request Quote
-              </Button>
-            )};
+              </Button>) };
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 }
 
 export default React.memo(ProductListingCard);

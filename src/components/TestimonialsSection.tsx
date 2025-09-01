@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 
 interface Testimonial {
+
   id: number;
   name: string;
   position: string;
@@ -23,8 +24,9 @@ interface Testimonial {
   industry: string;
   results: string[];
   verified: boolean;
-}
 
+}
+;
 const testimonials: Testimonial[] = [
   {
 
@@ -105,17 +107,20 @@ const stats = ["
   { icon: Award, value: "25+", label: "Industry Awards", description: "Recognition for excellence" },"
   { icon: CheckCircle, value: "99.9%", label: "Uptime", description: "Reliable service delivery" }
 ];
+;
+export const TestimonialsSection: React.FC = props {
+  const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
 
-export const TestimonialsSection: React.FC = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [currentTestimonial, setCurrentTestimonial] = useState (0) ;
+  const [isAutoPlaying, setIsAutoPlaying] = useState (true) ;
 
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    setCurrentTestimonial ( (prev) => (prev + 1) % testimonials.length) ;
   };
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentTestimonial ( (prev) => (prev - 1 + testimonials.length) % testimonials.length) ;
   };
 
   const goToTestimonial = (index: number) => {
@@ -123,16 +128,16 @@ export const TestimonialsSection: React.FC = () => {
     setCurrentTestimonial(index);
   };
 
-  // Auto-play functionality
-  React.useEffect(() => {
+  // Auto - play functionality
+  React.useEffect ( () => {
     if (!isAutoPlaying) return;
 
-    const interval = setInterval(() => {
-      nextTestimonial();
-    }, 5000);
+    const interval = setInterval ( () => {
+      nextTestimonial () ;
+    }, 5000) ;
 
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, currentTestimonial]);
+    return () => clearInterval (interval) ;
+  }, [isAutoPlaying, currentTestimonial]) ;
 
   const current = testimonials[currentTestimonial];
 
@@ -178,8 +183,7 @@ export const TestimonialsSection: React.FC = () => {
                   <div className="text-zion-cyan text-sm">{testimonial.comp}</div>
                 </div>
               </div>
-            </div>
-          ))}
+            </div>) ) }
         </div>
         {/* Trust indicators */}"
         <div className="text-center mt-16">"
@@ -288,8 +292,7 @@ export const TestimonialsSection: React.FC = () => {
                         <li key={index} className="flex items-center gap-2 text-sm text-gray-300">"
                           <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                           {result}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
 
@@ -378,7 +381,6 @@ export const TestimonialsSection: React.FC = () => {
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 };
 '"`

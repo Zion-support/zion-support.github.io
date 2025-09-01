@@ -118,7 +118,6 @@ import {
   Satellite as SatelliteIcon3'
 } from 'lucide-react';
 
-export default function NewInnovativeServices2025() {
   const featuredServices = [
     {
 
@@ -261,21 +260,11 @@ export default function NewInnovativeServices2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.8 }}
@@ -325,21 +314,11 @@ export default function NewInnovativeServices2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.8 }}
@@ -363,32 +342,17 @@ export default function NewInnovativeServices2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   transition = {
 
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                   viewport={{ once: true }}
@@ -422,8 +386,7 @@ export default function NewInnovativeServices2025() {
                       <li key={idx} className="flex items-center text-zion-slate-300">"
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                         {feature}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                   
                   <Link to={service.link}>
@@ -440,8 +403,7 @@ export default function NewInnovativeServices2025() {
                       Learn More
                     </motion.button>
                   </Link>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>
@@ -455,21 +417,11 @@ export default function NewInnovativeServices2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.8 }}
@@ -493,32 +445,17 @@ export default function NewInnovativeServices2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   transition = {
 
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                   viewport={{ once: true }}"
@@ -538,12 +475,10 @@ export default function NewInnovativeServices2025() {
                         <li key={idx} className="flex items-center text-zion-slate-300">"
                           <ArrowRight className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                           {service}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>
@@ -557,21 +492,11 @@ export default function NewInnovativeServices2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.8 }}
@@ -595,32 +520,17 @@ export default function NewInnovativeServices2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   transition = {
 
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                   viewport={{ once: true }}"
@@ -646,21 +556,11 @@ export default function NewInnovativeServices2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.8 }}
@@ -717,7 +617,6 @@ export default function NewInnovativeServices2025() {
           </div>;
         </section>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

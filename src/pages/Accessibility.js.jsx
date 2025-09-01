@@ -160,9 +160,9 @@ const Accessibility = () => {
                   {feature.features.map((item, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">"
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0"/>
                       {item}
-                    </li>))}
+                    </li>) ) }
                 </ul>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -236,7 +236,7 @@ const Accessibility = () => {
                 {ongoingImprovements.map((improvement, index) => (<li key={index} className="flex items-center text-gray-300">"
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
                     {improvement}
-                  </li>))}
+                  </li>) ) }
               </ul>
             </div>"
             <div className="bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-2xl p-8 border border-green-500/30">"

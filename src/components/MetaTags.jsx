@@ -72,7 +72,7 @@ export const MetaTags = ({ title, description, keywords = 'AI, artificial intell
             "foundingDate": "2020","
             "industry": "Technology","
             "keywords": "AI, artificial intelligence, cybersecurity, cloud computing, IT services"
-        })}
+        }) }
       </script>
     </Helmet>)};
 '"`

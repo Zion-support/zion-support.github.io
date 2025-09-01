@@ -154,12 +154,6 @@ const Leadership = () => {
             "Create sustainable technology solutions","
   "Build the most trusted technology partner network"
         ]
-    
-
-
-
-
-
 
 };"
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -261,7 +255,7 @@ const Leadership = () => {
                         <div className="flex flex-wrap gap-2 mb-4">"
                           {leader.expertise.map((skill, skillIndex) => (<span key={skillIndex} className="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
                               {skill}
-                            </span>))}
+                            </span>) ) }
                         </div>
 "
                         <h4 className="text-lg font-semibold text-slate-900 mb-3">Key Achievements</h4>"
@@ -269,13 +263,13 @@ const Leadership = () => {
                           {leader.achievements.map((achievement, achievementIndex) => (<li key={achievementIndex} className="flex items-center text-sm text-slate-600">"
                               <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
                               {achievement}
-                            </li>))}
+                            </li>) ) }
                         </ul>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -303,7 +297,7 @@ const Leadership = () => {
                 <p className="text-slate-600">
                   {value.description}
                 </p>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>

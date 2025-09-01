@@ -96,7 +96,7 @@ export default function RevolutionaryServices2030() {
       (selectedPriceRange === 'enterprise' && service.pricing.monthly > 25000);
 
     return categoryMatch && priceMatch;
-  });
+  }) ;
 
 // Service Card Component'
 const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 'itService' | 'aiService' }) => {
@@ -118,7 +118,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
     return Zap;
   };
 
-  const IconComponent = getIcon(service.category);
+  const IconComponent = getIcon (service.category) ;
 
   return()
     <motion.div
@@ -193,8 +193,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
                 <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">"
                   <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                   <span>{feature}</span>
-                </div>
-              ))}
+                </div>) ) }
             </div>
           </div>
 
@@ -217,8 +216,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
                         <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">"
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span>{feature}</span>
-                        </div>
-                      ))}
+                        </div>) ) }
                     </div>
                   </div>
 
@@ -230,8 +228,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
                         <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">"
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                           <span>{benefit}</span>
-                        </div>
-                      ))}
+                        </div>) ) }
                     </div>
                   </div>
 
@@ -242,8 +239,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
                       {service.targetAudience.map((audience: string, index: number) => ("
                         <span key={index} className="px-2 py-1 bg-slate-600 text-slate-300 text-xs rounded-full">
                           {audience}
-                        </span>
-                      ))}
+                        </span>) ) }
                     </div>
                   </div>
 
@@ -259,8 +255,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            )}
+              </motion.div>) }
           </AnimatePresence>
 
           {/* CTA Button */}"
@@ -275,8 +270,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
           </div>
         </div>
       </div>
-    </motion.div>
-  );
+    </motion.div>) ;
 };
 
 // Main Component
@@ -291,7 +285,7 @@ export default function RevolutionaryServices2030() {
     { id: 'aiServices', label: 'AI Services', count: allRevolutionaryServices2030.aiServices.length },
   ];
 
-  const getFilteredServices = () => {
+  const getFilteredServices = (...args: unknown[]): unknown => {
     switch (activeTab) {
 '
       case 'microSaas':'
@@ -352,8 +346,7 @@ export default function RevolutionaryServices2030() {
                 { label: 'Innovation Level', value: 'Revolutionary', icon: Star },'
                 { label: 'Market Size', value: '$100B+', icon: TrendingUp },'
                 { label: 'Success Rate', value: '99.9%', icon: Target }
-              ].map((stat, index) => (
-                <motion.div
+              ].map ( (stat, index) => (<motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -365,8 +358,7 @@ export default function RevolutionaryServices2030() {
                     <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>"
                     <div className="text-slate-400 text-sm">{stat.label}</div>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </motion.div>
         </div>
@@ -425,9 +417,9 @@ export default function RevolutionaryServices2030() {
           {/* Services Grid */};"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <AnimatePresence>;
-              {sortedServices.map((service, index) => {;
-                const IconComponent = getServiceIcon(service.category);
-                const colorClass = getServiceColor(service.category);
+              {sortedServices.map ( (service, index) => {;
+                const IconComponent = getServiceIcon (service.category) ;
+                const colorClass = getServiceColor (service.category) ;
 
                 return()
                   <motion.div
@@ -437,32 +429,17 @@ export default function RevolutionaryServices2030() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                     animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                     exit = {
 
   { opacity: 0,
   y: -20 
-
-
-
-
-
 
 }}
                     transition = {
@@ -511,9 +488,7 @@ export default function RevolutionaryServices2030() {
                           : 'bg-white/10 backdrop-blur-sm text-white hover: bg-white/20'`
                       }`}
                     >
-                      {category} ({REVOLUTIONARY_SERVICES_2030.filter(s  => s.category === category).length})
-                    </button>
-                  ))}
+                      {category} ({REVOLUTIONARY_SERVICES_2030.filter (s  => s.category === category) .length}) </button>) ) }
                 </div>
               </div>;
             </div>
@@ -655,15 +630,12 @@ export default function RevolutionaryServices2030() {
                         </Link>;
                       </div>;
                     </div>;
-                  </motion.div>;
-                );
-              })}
+                  </motion.div>;) ;
+              }) }
             </AnimatePresence>
-          </div>
-                Clear all filters;
+          </div > Clear all filters;
               </button>
-            </div>
-          )}
+            </div>) }
         </div>
       </div>
 
@@ -760,8 +732,7 @@ export default function RevolutionaryServices2030() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default RevolutionaryServices2030;
@@ -773,7 +744,9 @@ export default RevolutionaryServices2030;
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
+}
+
+
 }
 '"`

@@ -1,6 +1,8 @@
 import React, { useState } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';
 import { User, 
+
+
   Mail, 
   Phone, 
   Building, 
@@ -46,7 +48,8 @@ interface UserProfile {
   location: string;
   website: string;
   bio: string;
-  avatar: string}
+  avatar: string
+}
 
 interface NotificationSettings {
   emailNotifications: boolean;
@@ -54,14 +57,15 @@ interface NotificationSettings {
   marketingEmails: boolean;
   securityAlerts: boolean;
   projectUpdates: boolean;
-  weeklyReports: boolean}
+  weeklyReports: boolean
+}
 
 interface SecuritySettings {
   twoFactorEnabled: boolean;
   sessionTimeout: number;
   passwordLastChanged: string;
   lastLogin: string;
-loginHistory: Array<any>}
+loginHistory: Array < any>}
 
 const Profile: React.FC = () => {;'
   const [activeTab, setActiveTab] = useState<'profile' | 'security' | 'notifications' | 'preferences'>('profile');
@@ -93,7 +97,7 @@ const Profile: React.FC = () => {;'
     securityAlerts: true,
     projectUpdates: true,
     weeklyReports: false
-  });
+  }) ;
 
   const [security, setSecurity] = useState<any>({
 
@@ -117,7 +121,7 @@ const Profile: React.FC = () => {;'
     current: false,
     new: false,
     confirm: false
-  });
+  }) ;
 
   const industries = ['
     'Technology','
@@ -179,11 +183,11 @@ const Profile: React.FC = () => {;'
       setIsLoading(false)}
   };
 
-  const handleNotificationToggle = (key: keyof NotificationSettings) => {;
-setNotifications(prev: > ({;
+  const handleNotificationToggle = useCallback ( (key: keyof NotificationSettings) => {;
+setNotifications (prev: > ({;
       ...prev,;
       [key]: !prev[key];
-    }));
+    }) ) ;
   };
 
   const getPasswordStrength = (password: string) => {;'
@@ -193,7 +197,7 @@ setNotifications(prev: > ({;
     if (password.length < 16) return { score: 3, label: 'Good', color: 'text-blue-400' };'
     return { score: 4, label: 'Strong', color: 'text-green-400' }};
 
-  const passwordStrength = getPasswordStrength(newPassword);
+  const passwordStrength = getPasswordStrength (newPassword) ;
 
   const stats = [;'
     { label: 'Projects Completed', value: '24', icon: <BarChart3 className="w-5 h-5" /> },;'"
@@ -210,28 +214,17 @@ setNotifications(prev: > ({;
     { title: 'Speed Demon', description: 'Completed project ahead of schedule', icon: <Zap className="w-6 h-6" />, earned: false };
   ];
 
-  const renderProfileTab = () => (
-    <motion.div
+  const renderProfileTab = () => (<motion.div
       initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
       animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
       transition={{ duration: 0.6 }}"
@@ -274,21 +267,11 @@ setNotifications(prev: > ({;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -488,9 +471,7 @@ setNotifications(prev: > ({;
                 disabled={!isEditing}"
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {industries.map((industry)  => (
-                  <option key={industry} value={industry}>{industry}</option>
-                ))}
+                {industries.map ( (industry) => (<option key={industry} value={industry}>{industry}</option>) ) }
               </select>
             </div>
           </div>
@@ -553,12 +534,7 @@ setNotifications(prev: > ({;
   (e) => setProfile(prev => ({ ...prev,
   bio: e.target.value 
 
-
-
-
-
-
-}))}
+}) ) }
             disabled={!isEditing}
             rows={4}"
             className="w-full px-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed resize-none"
@@ -581,11 +557,9 @@ setNotifications(prev: > ({;
                 <>"
                   <Save className="w-5 h-5" />
                   Save Changes
-                </>
-              )}
+                </>) }
             </button>
-          </div>;
-        )}
+          </div>;) }
       </div>
 
       {/* Achievements */}"
@@ -600,32 +574,17 @@ setNotifications(prev: > ({;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.6,
   delay: 0.1 + index * 0.1 
-
-
-
-
-
 
 }}
               className={`p-4 rounded-xl border ${
@@ -652,37 +611,23 @@ setNotifications(prev: > ({;
                 <div className="mt-3 flex items-center gap-2 text-yellow-400 text-sm">"
                   <CheckCircle className="w-4 h-4" />
                   Earned
-                </div>;
-              )};
-            </motion.div>;
-          ))};
+                </div>;) };
+            </motion.div>;) ) };
         </div>;
       </div>;
-    </motion.div>;
-  );
+    </motion.div>;) ;
 
-  const renderSecurityTab = () => (
-    <motion.div
+  const renderSecurityTab = () => (<motion.div
       initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
       animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
       transition={{ duration: 0.6 }}"
@@ -711,6 +656,8 @@ setNotifications(prev: > ({;
   () => setShowPasswords(prev => ({ ...prev,
   current: !prev.current 
 
+}) ) }
+                className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 hover:text - white transition - colors duration - 200"
 
 
 
@@ -742,6 +689,8 @@ setNotifications(prev: > ({;
   () => setShowPasswords(prev => ({ ...prev,
   new: !prev.new 
 
+}) ) }
+                className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 hover:text - white transition - colors duration - 200"
 
 
 
@@ -781,8 +730,7 @@ setNotifications(prev: > ({;
                 <p className={`text-xs ${passwordStrength.color}`}>
                   {passwordStrength.label}
                 </p>
-              </div>
-            )}
+              </div>) }
           </div>
 
           <div>"
@@ -803,6 +751,8 @@ setNotifications(prev: > ({;
   () => setShowPasswords(prev => ({ ...prev,
   confirm: !prev.confirm 
 
+}) ) }
+                className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 hover:text - white transition - colors duration - 200"
 
 
 
@@ -830,8 +780,7 @@ setNotifications(prev: > ({;
               <>"
                 <Key className="w-5 h-5" />
                 Change Password
-              </>
-            )}
+              </>) }
           </button>
         </div>
       </div>
@@ -921,35 +870,22 @@ setNotifications(prev: > ({;
               }`}>'
                 {login.status === 'success' ? 'Success' : 'Failed'};
               </span>;
-            </div>;
-          ))};
+            </div>;) ) };
         </div>;
       </div>;
-    </motion.div>;
-  );
+    </motion.div>;) ;
 
-  const renderNotificationsTab = () => (
-    <motion.div
+  const renderNotificationsTab = () => (<motion.div
       initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
       animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
       transition={{ duration: 0.6 }}"
@@ -983,35 +919,22 @@ setNotifications(prev: > ({;
                 />'"
                 <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500"></div>;
               </label>;
-            </div>;
-          ))};
+            </div>;) ) };
         </div>;
       </div>;
-    </motion.div>;
-  );
+    </motion.div>;) ;
 
-  const renderPreferencesTab = () => (
-    <motion.div
+  const renderPreferencesTab = () => (<motion.div
       initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
       animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
       transition={{ duration: 0.6 }}"
@@ -1090,8 +1013,7 @@ setNotifications(prev: > ({;
           </button>;
         </div>;
       </div>;
-    </motion.div>;
-  );
+    </motion.div>;) ;
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -1103,21 +1025,11 @@ setNotifications(prev: > ({;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ duration: 0.6 }}"
@@ -1127,18 +1039,12 @@ setNotifications(prev: > ({;
           <p className="text-slate-300 text-lg">Manage your account settings and preferences</p>
         </motion.div>
 
-        {/* Error/Success Messages */}
-        {error && (
-          <motion.div
+        {/* Error / Success Messages */}
+        {error && (<motion.div
             initial = {
 
   { opacity: 0,
   y: 10 
-
-
-
-
-
 
 }}
             animate = {
@@ -1156,20 +1062,13 @@ setNotifications(prev: > ({;
 "
             <AlertCircle className="w-5 h-5" />
             {error}
-          </motion.div>
-        )}
+          </motion.div>) }
 
-        {success && (
-          <motion.div
+        {success && (<motion.div
             initial = {
 
   { opacity: 0,
   y: 10 
-
-
-
-
-
 
 }}
             animate = {
@@ -1187,8 +1086,7 @@ setNotifications(prev: > ({;
 "
             <CheckCircle className="w-5 h-5" />
             {success}
-          </motion.div>
-        )}
+          </motion.div>) }
 
         {/* Navigation Tabs */}"
         <div className="flex flex-wrap gap-2 mb-8">
@@ -1210,8 +1108,7 @@ setNotifications(prev: > ({;
 
               {tab.icon}
               {tab.label}
-            </button>
-          ))}
+            </button>) ) }
         </div>
 
         {/* Tab Content */}'
@@ -1220,8 +1117,7 @@ setNotifications(prev: > ({;
         {activeTab === 'notifications' && renderNotificationsTab()};'
         {activeTab === 'preferences' && renderPreferencesTab()};
       </div>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default Profile;}}}}}}}}}'"`

@@ -69,8 +69,7 @@ const FuturisticBackground = React.memo(() => {
       top: `${Math.random() * 100}%`,
       delay: i * 0.1,
       duration: 5 + i * 0.3
-    })), []
-  );
+    }) ) , []) ;
 
   return()
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
@@ -112,7 +111,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 
   const [currentSlide, setCurrentSlide] = useState(0);
   
-  const heroSlides = useMemo(() => [
+  const heroSlides = useMemo ( () => [
     {
 "
       title: "AI-Powered Solutions","
@@ -141,20 +140,20 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       icon: Rocket,"
       features: ["Cloud Migration", "DevOps", "Security", "Compliance"]
     }
-  ], []);
+  ], []) ;
 
-  const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-  }, [heroSlides.length]);
+  const nextSlide = useCallback ( () => {
+    setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) ;
+  }, [heroSlides.length]) ;
 
-  const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-  }, [heroSlides.length]);
+  const prevSlide = useCallback ( () => {
+    setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ;
+  }, [heroSlides.length]) ;
 
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
-    return () => clearInterval(interval);
-  }, [nextSlide]);
+  useEffect ( () => {
+    const interval = setInterval (nextSlide, 5000) ;
+    return () => clearInterval (interval) ;
+  }, [nextSlide]) ;
 
   return ("
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">"
@@ -233,8 +232,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
                       className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-cyan-300 border border-cyan-400/30"
                     >
                       {feature}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -279,8 +277,8 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 HeroSection.displayName = 'HeroSection';
 
 // Enhanced features section
-const FeaturesSection = React.memo(() => {
-  const features = useMemo(() => [
+const FeaturesSection = React.memo ( () => {
+  const features = useMemo ( () => [
     {
 
       icon: Brain,"
@@ -309,7 +307,7 @@ const FeaturesSection = React.memo(() => {
       description: "Custom software solutions designed for your specific needs","
       color: "from-yellow-500 to-orange-500"
     }
-  ], []);
+  ], []) ;
 
   return ("
     <section className="py-20 px-4 sm:px-6 lg:px-8">"
@@ -346,8 +344,7 @@ const FeaturesSection = React.memo(() => {
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>"
                 <p className="text-gray-300 leading-relaxed">{feature.description}</p>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </div>
     </section>
@@ -436,11 +433,11 @@ CTASection.displayName = 'CTASection';
 
 // Main EnhancedHome component
 const EnhancedHome: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState (false) ;
 
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
+  useEffect ( () => {
+    setIsLoaded (true) ;
+  }, []) ;
 
   const handleGetStarted = useCallback(() => {
     // Scroll to services section or navigate'
@@ -449,7 +446,7 @@ const EnhancedHome: React.FC = () => {
 '
       servicesSection.scrollIntoView({ behavior: 'smooth' });
     }
-  }, []);
+  }, []) ;
 
   if (!isLoaded) {
 
@@ -486,8 +483,7 @@ const EnhancedHome: React.FC = () => {
           <CTASection />
         </LazyLoadWrapper>
       </div>
-    </>
-  );
+    </>) ;
 };
 
 export default EnhancedHome;'"`

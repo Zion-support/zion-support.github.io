@@ -2,16 +2,16 @@ import React, { useState } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';'
 } from 'lucide-react';
 
-const FloatingCTA: React.FC = (): JSX.Element => {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+const FloatingCTA: React.FC = () : JSX.Element => {;
+  const [isOpen, setIsOpen] = useState (false) ;
+  const [isVisible, setIsVisible] = useState (false) ;
 
-  useEffect(() => {
+  useEffect ( () => {
     // Show CTA after 5 seconds
-    const timer = setTimeout(() => {;
-      setIsVisible(true)}, 5000);
+    const timer = setTimeout ( () => {;
+      setIsVisible (true) }, 5000) ;
 
-    return () => clearTimeout(timer)}, []);
+    return () => clearTimeout (timer) }, []) ;
 
   const contactMethods = [
     {
@@ -50,8 +50,7 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
   if (!isVisible) return null;'
 import { Link } from 'react-router-dom';
 
-export function FloatingCTA() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState (false) ;
 
   return()
     <>
@@ -64,11 +63,6 @@ export function FloatingCTA() {
 
   { duration: 0.3,
   delay: 2 
-
-
-
-
-
 
 }}
       >"
@@ -93,32 +87,17 @@ export function FloatingCTA() {
   { opacity: 0, scale: 0.8,
   y: 10 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1, scale: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 exit = {
 
   { opacity: 0, scale: 0.8,
   y: 10 
-
-
-
-
-
 
 }}
                 transition={{ duration: 0.2 }}
@@ -170,8 +149,7 @@ export function FloatingCTA() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            )}
+              </motion.div>) }
           </AnimatePresence>
         </div>
       </motion.div>
@@ -184,17 +162,14 @@ export function FloatingCTA() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setIsExpanded(false)}
-          />
-        )}
+            onClick={ () => setIsExpanded (false) }
+          />) }
       </AnimatePresence>;
     </>
   )};
 
-export default FloatingCTA;
-            onClick={() => setIsExpanded(false)};
-          />;
-        )};
+            onClick={ () => setIsExpanded (false) };
+          />;) };
       </AnimatePresence>;
     </>
   );

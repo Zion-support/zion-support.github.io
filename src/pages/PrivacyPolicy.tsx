@@ -192,21 +192,11 @@ const PrivacyPolicy = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.6 }}"
@@ -220,8 +210,7 @@ const PrivacyPolicy = () => {;'
                 <p>"
                   {compName} ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website {website} or use our services.
                 </p>
-                <p>
-                  By using our website and services, you consent to the data practices described in this policy. If you do not agree with our policies and practices, please do not use our website or services.
+                <p > By using our website and services, you consent to the data practices described in this policy. If you do not agree with our policies and practices, please do not use our website or services.
                 </p>
                 <p>"
                   We may update this Privacy Policy from time to time. We will notify you of  changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.
@@ -444,8 +433,7 @@ const PrivacyPolicy = () => {;'
                     Employee training on data protection
                   </li>
                 </ul>
-                <p>
-                  However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security.
+                <p > However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security.
                 </p>
               </div>
             </motion.div>
@@ -516,8 +504,7 @@ const PrivacyPolicy = () => {;'
                 <p>
                   Your personal information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards.
                 </p>
-                <p>
-                  For transfers to countries outside the European Economic Area (EEA), we rely on adequacy decisions, standard contractual clauses, or other appropriate safeguards as required by law.
+                <p > For transfers to countries outside the European Economic Area (EEA) , we rely on adequacy decisions, standard contractual clauses, or other appropriate safeguards as required by law.
                 </p>
               </div>
             </motion.div>
@@ -539,8 +526,7 @@ const PrivacyPolicy = () => {;'
                 <p>
                   Our website and services are not intended for children under the age of 16. We do not knowingly collect personal information from children under 16.
                 </p>
-                <p>
-                  If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately. We will take steps to remove such information from our records.
+                <p > If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately. We will take steps to remove such information from our records.
                 </p>
               </div>
             </motion.div>
@@ -579,8 +565,7 @@ const PrivacyPolicy = () => {;'
                     Sending email notifications for significant changes
                   </li>
                 </ul>
-                <p>
-                  Your continued use of our website after any changes indicates your acceptance of the updated policy.
+                <p > Your continued use of our website after any changes indicates your acceptance of the updated policy.
                 </p>
               </div>
             </motion.div>
@@ -638,32 +623,17 @@ const PrivacyPolicy = () => {;'
   { opacity: 0,
   y: 20 ;
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 ;
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.6,
   delay: 0.2 ;
-
-
-
-
-
 
 }}
             >"
@@ -682,21 +652,11 @@ const PrivacyPolicy = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                     animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                     transition = {
@@ -733,32 +693,17 @@ const PrivacyPolicy = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}
             >
@@ -774,8 +719,7 @@ const PrivacyPolicy = () => {;'
                   <div className="prose prose-slate max-w-none">"
                     <p className="text-lg text-slate-700 leading-relaxed">{section.content}</p>
                   </div>
-                </div>
-              ))}
+                </div>) ) }
             </motion.div>
           </div>
         </section>
@@ -789,32 +733,17 @@ const PrivacyPolicy = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
 
 }}
             >"
@@ -831,21 +760,11 @@ const PrivacyPolicy = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                     animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                     transition = {
@@ -883,8 +802,7 @@ const PrivacyPolicy = () => {;'
                         <p className="text-slate-600">{category.retention}</p>
                       </div>
                     </div>
-                  </motion.div>
-                ))}
+                  </motion.div>) ) }
               </div>
             </motion.div>
           </div>
@@ -899,32 +817,17 @@ const PrivacyPolicy = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
 
 }}
             >"
@@ -941,21 +844,11 @@ const PrivacyPolicy = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                     animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                     transition = {
@@ -992,32 +885,17 @@ const PrivacyPolicy = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.6,
   delay: 1.0 
-
-
-
-
-
 
 }}
             >"
@@ -1165,8 +1043,7 @@ const PrivacyPolicy = () => {;'
                     Employee training on data protection
                   </li>
                 </ul>
-                <p>
-                  However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security.
+                <p > However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security.
                 </p>
               </div>
             </motion.div>
@@ -1267,8 +1144,7 @@ const PrivacyPolicy = () => {;'
                 <p>
                   Your personal information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards.
                 </p>
-                <p>
-                  For transfers to countries outside the European Economic Area (EEA), we rely on adequacy decisions, standard contractual clauses, or other appropriate safeguards as required by law.
+                <p > For transfers to countries outside the European Economic Area (EEA) , we rely on adequacy decisions, standard contractual clauses, or other appropriate safeguards as required by law.
                 </p>
               </div>
             </motion.div>
@@ -1305,8 +1181,7 @@ const PrivacyPolicy = () => {;'
                 <p>
                   Our website and services are not intended for children under the age of 16. We do not knowingly collect personal information from children under 16.
                 </p>
-                <p>
-                  If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately. We will take steps to remove such information from our records.
+                <p > If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately. We will take steps to remove such information from our records.
                 </p>
               </div>
             </motion.div>
@@ -1360,8 +1235,7 @@ const PrivacyPolicy = () => {;'
                     Sending email notifications for significant changes
                   </li>
                 </ul>
-                <p>
-                  Your continued use of our website after  changes indicates your acceptance of the updated policy.
+                <p > Your continued use of our website after  changes indicates your acceptance of the updated policy.
                 </p>
               </div>
             </motion.div>

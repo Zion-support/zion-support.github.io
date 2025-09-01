@@ -2,7 +2,6 @@ import React from 'react.ts';'
 import { cn } from '../../utils/cn';
 
 interface SkeletonProps extends React.PropsWithChildren<{}> {
-
   className?: string;
   width?: string | number;
   height?: string | number;'

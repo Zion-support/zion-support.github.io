@@ -448,13 +448,11 @@ const ITServicesPage = () => {
                     </a>
                   </Button>
                 </CardHeader>
-              </Card>
-            ))}
+              </Card>) ) }
           </div>
         </div>
       </div>
-    </>
-  );
+    </>) ;
 };
 
 export default ITServicesPage;

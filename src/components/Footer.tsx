@@ -66,8 +66,7 @@ import {
   Settings,'
   Palette} from 'lucide-react';
 
-export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date () .getFullYear () ;
 
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
@@ -93,7 +92,7 @@ export function Footer() {
         newSet.add(title);
       }
       return newSet;
-    });
+    }) ;
   };
 
   // Scroll to top function

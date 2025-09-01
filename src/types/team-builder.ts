@@ -14,12 +14,16 @@ export interface ProjectBrief {
   talentFilters?: TalentFilters; // New
 }
 
+}
+;
 export interface TalentFilters {
   verifiedOnly?: boolean;"
   regions?: string[]; // e.g., ["LATAM", "North America", "Europe"]
   // Add other potential filters like min_experience, etc. later if needed
 }
 
+}
+;
 export interface RecommendedRole {
 "
   role: string; // e.g., "Product Manager", "Fullstack Engineer"
@@ -33,7 +37,7 @@ export interface RecommendedRole {
   weeklyHours: number; // Estimated
   matchedTalent: TalentProfile[]; // Talent profiles matching this role
 }
-
+;
 export interface TeamRecommendation {
   id?: string; // Optional: if we save recommendations
   projectBriefId?: string; // Link to the project brief"

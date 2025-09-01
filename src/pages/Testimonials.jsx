@@ -196,7 +196,7 @@ export default function Testimonials() {
       testimonial.comp.toLowerCase().includes(searchQuery.toLowerCase());
 
     return matchesIndustry && matchesRating && matchesSearch;
-  });
+  }) ;
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-slate-dark">
@@ -301,8 +301,7 @@ export default function Testimonials() {
         <div className="container-responsive">"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-              {filteredTestimonials.map((testimonial, index) => (
-                <motion.div
+              {filteredTestimonials.map ( (testimonial, index) => (<motion.div
                   key={testimonial.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -354,8 +353,7 @@ export default function Testimonials() {
                         >"
                           <CheckCircle className="w-3 h-3 text-green-400" />
                           {result}
-                        </div>
-                      ))}
+                        </div>) ) }
                     </div>
                   </div>
 "
@@ -366,11 +364,9 @@ export default function Testimonials() {
                     {testimonial.featured && ("
                       <span className="px-2 py-1 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full">
                         Featured
-                      </span>
-                    )}
+                      </span>) }
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </AnimatePresence>
           </div>
         </div>
@@ -403,7 +399,6 @@ export default function Testimonials() {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 }
 '"

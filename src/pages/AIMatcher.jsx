@@ -2,9 +2,12 @@ import React, { useState } from 'react';'
 import { Link } from 'react-router-dom';'
 import { motion } from 'framer-motion';
 import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight const AIMatcher = () => {
-    const [currentStep, setCurrentStep] = useState(1);
-    const [answers, setAnswers] = useState({ /* empty */ });
-    const [recommendations, setRecommendations] = useState([]);
+import { motion } from 'framer - motion';
+
+
+    const [currentStep, setCurrentStep] = useState (1) ;
+    const [answers, setAnswers] = useState ({ /* empty */ }) ;
+    const [recommendations, setRecommendations] = useState ([]) ;
     const questions = [
         {
 '
@@ -164,9 +167,9 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
         setRecommendations(filteredSolutions.slice(0, 3));
         setCurrentStep(questions.length + 1)};
     const resetQuiz = () => {
-        setCurrentStep(1);
-        setAnswers({});
-        setRecommendations([])};
+        setCurrentStep (1) ;
+        setAnswers ({}) ;
+        setRecommendations ([]) };
     const progressPercentage = (currentStep / questions.length) * 100;
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
@@ -178,11 +181,6 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -218,20 +216,10 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
   { opacity: 0,
   x: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -276,7 +264,7 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
                     ? 'border-blue-500 bg-blue-500/20 text-blue-300''`
                     : 'border-slate-600 hover:border-slate-500 text-gray-300 hover:text-white hover:bg-slate-700/50'}`}>
                     {option}
-                  </button>))}
+                  </button>) ) }
               </div>
             </div>
 
@@ -294,17 +282,11 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
                 {currentStep === questions.length ? 'Get Recommendations' : 'Next'}
               </button>
             </div>
-          </motion.div>) : (
-        /* Results Section */
+          </motion.div>) : (/* Results Section */
         <motion.div initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -333,20 +315,10 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -377,7 +349,7 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
                       {solution.bestFor.map((item, idx) => (<li key={idx} className="flex items-center text-xs text-gray-400">"
                           <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
                           {item}
-                        </li>))}
+                        </li>) ) }
                     </ul>
                   </div>
 "
@@ -385,7 +357,7 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
                     Learn More"
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"/>
                   </Link>
-                </motion.div>))}
+                </motion.div>) ) }
             </div>
 "
             <div className="text-center mt-12">"
@@ -396,7 +368,7 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
                 Get Expert Consultation
               </Link>
             </div>
-          </motion.div>)}
+          </motion.div>) }
       </div>
 
       {/* CTA Section */}"
@@ -406,11 +378,6 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 

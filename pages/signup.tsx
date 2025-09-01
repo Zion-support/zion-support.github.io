@@ -16,7 +16,8 @@ import { User,
   Brain,
   Cloud'
  } from 'lucide-react'
-
+;
+export { function };
 export default function Signup(...args[]):  {
 
   const [formData, setFormData] = useState({
@@ -33,9 +34,9 @@ export default function Signup(...args[]):  {
     useCase: ''
   })
 
-  const [showPassword, setShowPassword] = useState(false)
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [showPassword, setShowPassword] = useState<typeof false>(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState<typeof false>(false)
+  const [isSubmitting, setIsSubmitting] = useState<typeof false>(false)
   const [errors, setErrors] = useState<Record<string, any>>({})
 
   const industries = ['

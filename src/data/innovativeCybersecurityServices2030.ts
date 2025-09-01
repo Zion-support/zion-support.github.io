@@ -1,6 +1,6 @@
 // Innovative Cybersecurity Services 2030 - Zion Tech Group
 // Advanced security solutions for the digital age
-
+;
 export interface CybersecurityService {
   id: string;
   title: string;
@@ -14,7 +14,8 @@ pricing: {
     custom: string;
     currency: string;
     pricingModel: string;
-    marketPrice: string};
+    marketPrice: string
+};
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -49,7 +50,7 @@ pricing: {
   featured: boolean;
   trending: boolean}
 
-// Zion Tech Group Contact Information
+// Zion Tech Group Contact Information;
 const zionContact = {
 
   phone: "+1 302 464 0950","
@@ -68,7 +69,7 @@ const zionContact = {
 
 
 };
-
+;
 export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   {
 "

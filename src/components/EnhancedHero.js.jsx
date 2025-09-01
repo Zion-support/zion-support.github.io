@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';'
 import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX } from 'lucide-react';
 const EnhancedHero = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const [isPlaying, setIsPlaying] = useState(true);
-    const [isMuted, setIsMuted] = useState(false);
-    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+    const [currentSlide, setCurrentSlide] = useState (0) ;
+    const [isPlaying, setIsPlaying] = useState (true) ;
+    const [isMuted, setIsMuted] = useState (false) ;
+    const [isAutoPlaying, setIsAutoPlaying] = useState (true) ;
     const heroSlides = [
         {
 
@@ -41,24 +41,23 @@ const EnhancedHero = () => {
             icon: "☁️"
         }
     ];
-    useEffect(() => {
-        if (!isAutoPlaying)
-            return;
-        const interval = setInterval(() => {
+    useEffect ( () => {
+        if (!isAutoPlaying) return;
+        const interval = setInterval ( () => {
             if (isPlaying) {
 
                 setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
         }, 5000);
         return () => clearInterval(interval)}, [isPlaying, isAutoPlaying, heroSlides.length]);
     const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % heroSlides.length)};
+        setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) };
     const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)};
+        setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length) };
     const goToSlide = (index) => {
 
         setCurrentSlide(index)};
     const toggleAutoPlay = () => {
-        setIsAutoPlaying(!isAutoPlaying);
+        setIsAutoPlaying (!isAutoPlaying) ;
         if (!isAutoPlaying) {
 
             setIsPlaying(true)}

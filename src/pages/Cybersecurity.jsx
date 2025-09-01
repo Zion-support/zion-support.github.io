@@ -1,3 +1,4 @@
+import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide - react';
 import React from 'react';
 import SEO from "@/components/SEO";'
 import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide-react';
@@ -86,7 +87,7 @@ const Cybersecurity = () => {
                     Learn More
                   </button>
                 </div>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>

@@ -83,6 +83,7 @@ const PriceIntelligenceService: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { PriceIntelligenceService };
 export default PriceIntelligenceService;
 '"

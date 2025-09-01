@@ -14,7 +14,8 @@ pricing: {
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string};
+    custom: string
+};
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -23,7 +24,7 @@ pricing: {
   contactLink: string;'
   status: 'active' | 'beta' | 'coming-soon';
   sla: string;
-  support: string}
+  support: string};
 export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
   {
 '

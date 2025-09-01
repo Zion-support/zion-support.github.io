@@ -78,21 +78,11 @@ export function PricingSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -117,21 +107,11 @@ export function PricingSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               viewport={{ once: true }}
@@ -139,11 +119,6 @@ export function PricingSection() {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
             >
@@ -174,8 +149,7 @@ export function PricingSection() {
 
                   Get Started
                 </Link>;
-              </motion.div>;
-            )})}
+              </motion.div>;) }) }
         </div>
 
         <motion.div "
@@ -185,21 +159,11 @@ export function PricingSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -207,11 +171,6 @@ export function PricingSection() {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}
         >"
@@ -227,8 +186,7 @@ export function PricingSection() {
           </Link>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 }
 
 export default PricingSection;

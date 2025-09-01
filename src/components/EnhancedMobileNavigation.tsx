@@ -44,12 +44,14 @@ interface NavigationItem {
 } from 'lucide-react';
 
 interface NavigationItem {
+
   label: string;
   path: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: React.ComponentType<{ size?: number; className?: string 
+}>;
   children?: NavigationItem[];
   description?: string}
-
+;
 const navigationItems: NavigationItem[] = [
   {
 '
@@ -130,7 +132,7 @@ const navigationItems: NavigationItem[] = [
     description: 'Get in touch with us'
 
 ];
-
+;
 const quickActions = [
   {
 '
@@ -207,13 +209,13 @@ export const EnhancedMobileNavigation: React.FC = () => {
 '
       return activePath === '/';
 
-    return activePath.startsWith(path);
+    return activePath.startsWith (path) ;
   };
 
   const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {;
-    const isExpanded = expandedItems.has(item.label);
+    const isExpanded = expandedItems.has (item.label) ;
     const hasChildren = item.children && item.children.length > 0;
-    const isItemActive = isActive(item.path);
+    const isItemActive = isActive (item.path) ;
 
     return()
       <div key = {item.label} className="w-full">
@@ -261,8 +263,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
 '
                   isExpanded ? 'rotate-180' : ''`
                 }`}
-              />
-            )}
+              />) }
           </Link>
 
           {hasChildren && (;
@@ -278,23 +279,16 @@ export const EnhancedMobileNavigation: React.FC = () => {
                   isExpanded ? 'rotate-180' : ''`
                 }`}
               />
-            </button>;
-          )}
+            </button>;) }
         </motion.div>
 
         {hasChildren && (;
           <AnimatePresence>
-            {isExpanded && (
-              <motion.div
+            {isExpanded && (<motion.div
                 initial = {
 
   { height: 0,
   opacity: 0 
-
-
-
-
-
 
 }}
                 animate = {
@@ -302,21 +296,11 @@ export const EnhancedMobileNavigation: React.FC = () => {
   { height: 'auto',
   opacity: 1 
 
-
-
-
-
-
 }}
                 exit = {
 
   { height: 0,
   opacity: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -335,12 +319,9 @@ export const EnhancedMobileNavigation: React.FC = () => {
                 <div className="border-l border-zion-slate-light/20 ml-4">
                   {item.children!.map(child => renderNavigationItem(child, depth + 1))}
                 </div>
-              </motion.div>;
-            )};
-          </AnimatePresence>;
-        )};
-      </div>;
-    );
+              </motion.div>;) };
+          </AnimatePresence>;) };
+      </div>;) ;
   };
 
   return()
@@ -356,8 +337,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
 
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
-        {isOpen && (
-          <motion.div
+        {isOpen && (<motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -454,7 +434,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                     </div>"
                     <div className="flex items-center gap-3 text-zion-slate-light">
                       <Clock size={16} />
-                      <span>Mon-Fri 9AM-6PM EST</span>
+                      <span > Mon - Fri 9AM - 6PM EST</span>
                     </div>
                   </div>
                 </div>
@@ -475,8 +455,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                 </div>
               </div>
             </motion.div>;
-          </motion.div>;
-        )};
+          </motion.div>;) };
       </AnimatePresence>;
     </>
   );

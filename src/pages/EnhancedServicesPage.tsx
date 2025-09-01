@@ -53,9 +53,9 @@ export default function EnhancedServicesPage(...args[]):  {
                         (selectedPriceRange === 'premium' && service.price > 25000);
 
     return matchesSearch && matchesCategory && matchesPrice;
-  });
+  }) ;
 
-        return <Code className = "w-5 h-5" />};
+        return < Code className = "w - 5 h - 5" />};
   };
 
                 onClick = {
@@ -90,7 +90,6 @@ export default function EnhancedServicesPage(...args[]):  {
           </div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

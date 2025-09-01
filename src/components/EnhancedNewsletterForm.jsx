@@ -9,7 +9,7 @@ export function EnhancedNewsletterForm() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const { toast } = useToast();
     const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const lastSubmit = useRef(0);
+    const lastSubmit = useRef (0) ;
     const handleSubmit = async (e) => {
 
         e.preventDefault();
@@ -22,7 +22,7 @@ export function EnhancedNewsletterForm() {
 "
             toast.error("Invalid email");
             return}
-        setIsSubmitting(true);
+        setIsSubmitting (true) ;
         try {
 "
             const res = await fetch("/api/newsletter", {
@@ -96,7 +96,7 @@ export function EnhancedNewsletterForm() {
               {String.fromCharCode(65 + i)}
             </div>))}
         </div>
-        <span>Join 10,000+ tech professionals who already subscribe</span>
+        <span > Join 10,000 + tech professionals who already subscribe</span>
       </div>
     </div>)}
 '"

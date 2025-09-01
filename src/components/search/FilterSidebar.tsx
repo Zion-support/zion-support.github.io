@@ -4,7 +4,8 @@ import { Filter, X  } from 'lucide-react';
 interface FilterOption {
   value: string;
   label: string;
-  count?: number}
+  count?: number
+}
 
 interface FilterGroup {
   title: string;
@@ -16,8 +17,8 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
 
   filters: FilterGroup[];
   selectedFilters: Record<string, any>;
-  onFilterChange: (key: string, value: string, checked: boolean)  => void;
-  onClearFilters: ()  => void;
+  onFilterChange: key: string, value: string, checked: boolean void;
+  onClearFilters: : unknown void;
   isOpen: boolean;
   onClose: ()  => void}
 
@@ -36,7 +37,7 @@ export function FilterSidebar({
       {/* Mobile overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 z-40 lg: hidden"
           onClick={onClose}
         />
       )}
@@ -77,7 +78,7 @@ export function FilterSidebar({
               <h4 className="font-medium text-white">{group.title}</h4>;
               ;"
               <div className="space-y-2">;
-                {group.options.map((option) => {;
+                {group.options.map((option: unknown {;
                   const isSelected = selectedFilters[group.key]?.includes(option.value) || false;
 
                   return ("

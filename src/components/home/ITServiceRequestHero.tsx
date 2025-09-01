@@ -5,20 +5,20 @@ import { Input  } from '@/components/ui/input';'
 import { useNavigate  } from 'react-router-dom.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react';
-
+;
 export function ITServiceRequestHero(...args[]):  {
 
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: React.FormEvent)  => {;
+  const handleSubmit = async e: React.FormEvent {;
     e.preventDefault();
     if (location.trim()) {
 
       setIsSubmitting(true);
       // Simulate API call
-      setTimeout(() => {
+      setTimeout(: unknown {
         setIsSubmitting(false);
         router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)};
   };

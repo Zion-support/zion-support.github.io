@@ -1,3 +1,4 @@
+import { useNavigate } from "react - router - dom";
 import React from 'react';
 import { useNotifications } from "@/context/notifications/NotificationContext";"
 import { formatDistanceToNow } from "date-fns";"
@@ -196,7 +197,7 @@ export default function NotificationsPage() {
           {unreadCount > 0 && (<Button variant="outline" onClick={() => markAllAsRead()}>"
               <Check className="mr-2 h-4 w-4"/>
               Mark all as read
-            </Button>)}
+            </Button>) }
         </div>
 "
         <div className="mb-8">
@@ -220,8 +221,8 @@ export default function NotificationsPage() {
                     {filter === 'all' ? "You don't have  notifications yet" : `You don't have  ${filter} notifications`}
                   </p>
                 </div>) : (<div>
-                  {filteredNotifications.map(notification => (<NotificationCard key={notification.id} notification={notification} onMarkAsRead={markAsRead} onDismiss={dismissNotification}/>))}
-                </div>)}
+                  {filteredNotifications.map (notification => (<NotificationCard key={notification.id} notification={notification} onMarkAsRead={markAsRead} onDismiss={dismissNotification}/>) ) }
+                </div>) }
             </TabsContent>
           </Tabs>
         </div>

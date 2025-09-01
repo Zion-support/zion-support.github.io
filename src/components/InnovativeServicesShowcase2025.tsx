@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Brain, 
+import { motion, AnimatePresence  } from 'framer - motion.ts';
+
+
   Shield, 
   Cloud, 
   Rocket, 
@@ -63,11 +66,11 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
   const filteredServices = INNOVATIVE_SERVICES_2025.filter(service => {
 '
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
+                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
+                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   const sortedServices = [...filteredServices].sort((a, b) => {
 
@@ -103,7 +106,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
 
       return aValue < bValue ? 1 : -1;
     }
-  });
+  }) ;
 
   const getCategoryIcon = (category: anystring)  => {
 '
@@ -126,8 +129,8 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
   };
 
   const closeModal = () => {
-    setShowModal(false);
-    setSelectedService(null);
+    setShowModal (false) ;
+    setSelectedService (null) ;
   };
 
   return ("
@@ -246,8 +249,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                     {getCategoryIcon(category)}'"
                     <span className="capitalize">{category === 'all' ? 'All' : category}</span>
                   </div>
-                </motion.button>
-              ))}
+                </motion.button>) ) }
             </div>
 
             {/* View Mode and Sort Controls */}"
@@ -297,8 +299,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
         {/* Services Grid/List */}'
         <div className={viewMode === 'grid' ? 'futuristic-grid' : 'space-y-4'}>
           <AnimatePresence>
-            {sortedServices.map((service, index) => (
-              <motion.div
+            {sortedServices.map ( (service, index) => (<motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -405,10 +406,8 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                         Learn More
                       </motion.button>
                     </div>
-                  </div>
-                )}
-              </motion.div>
-            ))}
+                  </div>) }
+              </motion.div>) ) }
           </AnimatePresence>
         </div>
 
@@ -424,8 +423,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
 
       {/* Service Details Modal */}
       <AnimatePresence>
-        {showModal && selectedService && (
-          <motion.div
+        {showModal && selectedService && (<motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}"
@@ -455,7 +453,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                         <div className="flex items-center gap-1">"
                           <Star className="w-4 h-4 text-yellow-400 fill-current" />
                           <span>{selectedService.rating}</span>
-                          <span>({selectedService.reviewCount} reviews)</span>
+                          <span> ({selectedService.reviewCount} reviews) </span>
                         </div>
                       </div>
                     </div>
@@ -512,8 +510,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                             className="px-3 py-1 bg-gray-800/50 border border-gray-600 rounded-full text-sm text-gray-300"
                           >
                             {tag}
-                          </span>
-                        ))}
+                          </span>) ) }
                       </div>
                     </div>
                   </div>
@@ -573,8 +570,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                 </div>
               </div>
             </motion.div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
 
       {/* Service Guarantees Section */}"

@@ -8,6 +8,14 @@ import { useTranslation } from "react-i18next";"
 import { motion, useScroll, useTransform } from "framer-motion";"
 import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield } from "lucide-react";"
 import { useRef } from "react";
+import { useTranslation } from "react - i18next";
+import React, { useRef } from 'react';
+import { Button } from "@/components / ui / button";
+import { GradientHeading } from "@/components / GradientHeading";
+export function HeroSection () {
+import { motion, useScroll, useTransform } from 'framer - motion';
+import { motion, useScroll, useTransform } from "framer - motion";
+
 
 export function HeroSection() {
     const { t } = useTranslation();
@@ -227,7 +235,6 @@ export function HeroSection() {
                     </motion.div>
                 </motion.div>
             </motion.div>
-        </section>
-    );
+        </section>) ;
 }
 '"

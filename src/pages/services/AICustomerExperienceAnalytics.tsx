@@ -28,8 +28,8 @@ import {
   Activity,'
   Monitor} from 'lucide-react';'
 import { Link } from 'react-router-dom';
-
-const AICustomerExperienceAnalytics: React.FC = () => {
+;
+const AICustomerExperienceAnalytics: React.FC = props {
   const features = [
     {
 
@@ -229,7 +229,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
           </motion.div>
 "
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -269,7 +269,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
           </motion.div>
 "
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {analyticsCapabilities.map((capability, index) => (
+            {analyticsCapabilities.map(capability: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -306,7 +306,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
           </motion.div>
 "
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map(tier: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -388,7 +388,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
           </motion.div>
 "
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

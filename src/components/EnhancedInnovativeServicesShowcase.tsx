@@ -43,8 +43,7 @@ export const EnhancedInnovativeServicesShowcase = () => {
           </div>;
         </div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 };
 
 export default EnhancedInnovativeServicesShowcase;'"

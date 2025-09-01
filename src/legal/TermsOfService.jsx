@@ -1,3 +1,4 @@
+import React from 'react';
 export default function TermsOfService() {
   return()
     <div className="max-w-4xl mx-auto">"

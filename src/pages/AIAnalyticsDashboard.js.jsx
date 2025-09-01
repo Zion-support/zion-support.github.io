@@ -1,3 +1,5 @@
+import { BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star } from "lucide - react";
+import { Link } from "react - router - dom";
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
 import { Button } from "@/components/ui/button";"
@@ -162,7 +164,7 @@ export default function AIAnalyticsDashboard() {
                     {feature.description}
                   </CardDescription>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -207,7 +209,7 @@ export default function AIAnalyticsDashboard() {
                     </Link>
                   </Button>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -236,7 +238,7 @@ export default function AIAnalyticsDashboard() {
                     <p className="text-sm text-zion-slate-light">{testimonial.role}</p>
                   </div>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import React from 'react.ts';'
 import { SEO   } from '@/components/SEO';
-
+;
 const APIMonitoringSaaS: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">"
     <SEO title="API Monitoring & Status - Zion Tech Group" description="SLA-grade API monitoring, alerting, SLOs, and status pages for your services." />"
@@ -41,7 +41,8 @@ const APIMonitoringSaaS: React.FC = (): JSX.Element => (
     </section>;
   </div>;
 );
-
+;
+export { APIMonitoringSaaS };
 export default APIMonitoringSaaS;
 
 '"

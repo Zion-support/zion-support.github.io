@@ -1,3 +1,5 @@
+import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide - react';
+import { Link } from 'react - router - dom';
 import React, { useState, useEffect } from 'react';
 import SEO from "@/components/SEO";'
 import { Link } from 'react-router-dom';'
@@ -135,7 +137,7 @@ export default function UltimateHomepage2025() {
                       Learn More"
                       <ChevronRight className="w-4 h-4 ml-2"/>
                     </Link>
-                  </div>)}
+                  </div>) }
               </div>
             </div>
           </div>
@@ -284,7 +286,7 @@ export default function UltimateHomepage2025() {
               <h3 className="text-white font-semibold group-hover:text-blue-400 transition-colors">
                 {industry.name}
               </h3>
-            </div>))}
+            </div>) ) }
         </div>
       </div>
 

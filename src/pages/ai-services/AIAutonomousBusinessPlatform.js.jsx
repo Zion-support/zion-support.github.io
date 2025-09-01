@@ -96,6 +96,7 @@ const testimonials = [
     role: 'VP Engineering, ScaleUp Inc',
     rating: 5},
 ];
+export { function };
 export default function AIAutonomousBusinessPlatform() {
   return()
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">

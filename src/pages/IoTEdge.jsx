@@ -26,10 +26,10 @@ import {
   Cpu'
 } from 'lucide-react';
 
-    technologies["TLS/SSL", "OAuth 2.0", "JWT", "Zero Trust"]
+    technologies["TLS / SSL", "OAuth 2.0", "JWT", "Zero Trust"]
   }
 ];
-
+;
 const iotTechnologies = [
   {
 "
@@ -64,7 +64,7 @@ const iotTechnologies = [
     reliability: "Medium"
 
 ];
-
+;
 const successStories = [
   {
 
@@ -97,7 +97,7 @@ const successStories = [
     logo: "LN"
 
 ];
-
+;
 const processSteps = [
   {
 
@@ -142,7 +142,7 @@ export default function IoTEdge() {
 '
   const filteredSolutions = selectedCategory === 'All'
     ? iotEdgeSolutions
-    : iotEdgeSolutions.filter(solution => solution.category === selectedCategory);
+    : iotEdgeSolutions.filter (solution => solution.category === selectedCategory) ;
 
   return ("
     <div className="min-h-screen bg-futuristic">
@@ -161,21 +161,11 @@ export default function IoTEdge() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -187,21 +177,11 @@ export default function IoTEdge() {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
               transition = {
@@ -257,21 +237,11 @@ export default function IoTEdge() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -292,21 +262,11 @@ export default function IoTEdge() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -340,8 +300,7 @@ export default function IoTEdge() {
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -355,21 +314,11 @@ export default function IoTEdge() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -390,21 +339,11 @@ export default function IoTEdge() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -434,8 +373,7 @@ export default function IoTEdge() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -449,21 +387,11 @@ export default function IoTEdge() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -489,8 +417,7 @@ export default function IoTEdge() {
                 }`}
 
                 {category}
-              </button>
-            ))}
+              </button>) ) }
           </div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -502,21 +429,11 @@ export default function IoTEdge() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -556,8 +473,7 @@ export default function IoTEdge() {
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
 
                       {tech}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
 "
                 <div className="flex items-center justify-between mb-4">"
@@ -574,8 +490,7 @@ export default function IoTEdge() {
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -589,21 +504,11 @@ export default function IoTEdge() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -624,21 +529,11 @@ export default function IoTEdge() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -685,8 +580,7 @@ export default function IoTEdge() {
                   ))}"
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -700,21 +594,11 @@ export default function IoTEdge() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"

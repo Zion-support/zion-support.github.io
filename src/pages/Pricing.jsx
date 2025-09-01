@@ -164,8 +164,7 @@ const Pricing = () => {
                     >"
                       <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
                       {feature}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
 
                 <a
@@ -179,8 +178,7 @@ const Pricing = () => {
                 >
                   {tier.cta}
                 </a>
-              </div>
-            ))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -200,7 +198,7 @@ const Pricing = () => {
               href="tel:+13024640950""
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
             >
-              📞 Call +1 (302) 464-0950
+              📞 Call + 1 (302) 464 - 0950
             </a>
             <a"
               href="/contact""

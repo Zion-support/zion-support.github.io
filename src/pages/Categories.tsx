@@ -258,7 +258,7 @@ const Categories: React.FC = () => {
     const matchesCategory ='
       activeCategory === 'all' || category.id === activeCategory;
     return matchesSearch && matchesCategory;
-  });
+  }) ;
 
   return()
     <>
@@ -336,8 +336,7 @@ const Categories: React.FC = () => {
                       }`}
                     >
                       {category.name}
-                    </button>
-                  ))}
+                    </button>) ) }
                 </div>
               </div>
             </div>
@@ -407,8 +406,7 @@ const Categories: React.FC = () => {
                             </div>
                           ))}
                       </div>
-                    </div>
-                  )}
+                    </div>) }
 
                   {/* Stats */}"
                   <div className="grid grid-cols-3 gap-4 mb-6">"
@@ -441,8 +439,7 @@ const Categories: React.FC = () => {
                     Explore {category.name}"
                     <ArrowRight className="w-4 h-4" />
                   </button>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
 
             {filteredCategories.length === 0 && ("
@@ -459,8 +456,7 @@ const Categories: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>) ;
 };
 
 export default Categories;

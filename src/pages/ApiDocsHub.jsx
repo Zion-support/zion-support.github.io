@@ -59,7 +59,7 @@ export function ApiDocsHub() {
                 <span className="mr-2">View documentation</span>"
                 <ArrowRight className="h-4 w-4"/>
               </div>
-            </Link>))}
+            </Link>) ) }
         </div>
 "
         <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">"
@@ -73,8 +73,7 @@ export function ApiDocsHub() {
           </Link>
         </div>
       </div>
-    </ApiDocsLayout>)}
-export default ApiDocsHub;
+    </ApiDocsLayout>) }
 
 export default ApiDocsHub;
 export default ApiDocsHub;

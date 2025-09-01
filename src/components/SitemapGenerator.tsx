@@ -697,7 +697,7 @@ export const SitemapGenerator: React.FC = (): JSX.Element => {
         ]},
     ];
 
-    setSitemapData(sitemap);
+    setSitemapData (sitemap) ;
   };
 
   const filteredSitemap = sitemapData;
@@ -750,10 +750,10 @@ ${sitemapData
     const a = document.createElement('a');
     a.href = url;'
     a.download = 'sitemap.xml';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    document.body.appendChild (a) ;
+    a.click () ;
+    document.body.removeChild (a) ;
+    URL.revokeObjectURL (url) ;
   };
 
   const exportCSV = () => {
@@ -777,10 +777,10 @@ ${sitemapData
     const a = document.createElement('a');
     a.href = url;'
     a.download = 'sitemap.csv';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    document.body.appendChild (a) ;
+    a.click () ;
+    document.body.removeChild (a) ;
+    URL.revokeObjectURL (url) ;
   };
 
   return ("
@@ -835,8 +835,7 @@ ${sitemapData
                 {allCategories.map(category => (
                   <option key={category} value={category}>'
                     {category === 'all' ? 'All Categories' : category}
-                  </option>
-                ))}
+                  </option>) ) }
               </select>
             </div>
           </div>
@@ -909,11 +908,9 @@ ${sitemapData
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  </div>) ) }
               </div>
-            </div>
-          ))}
+            </div>) ) }
         </div>
 
         {/* Summary Stats */}"
@@ -963,8 +960,7 @@ ${sitemapData
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 // Missing icon components"

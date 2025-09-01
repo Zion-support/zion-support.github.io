@@ -25,7 +25,7 @@ const createLazyComponent = (
 ) => {
 
   const LazyComponent = lazy(importFn);
-  return (props: any) => (
+  return props: unknown (
     <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>

@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';'
 import { Link } from 'react-router-dom';'
 import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } from 'lucide-react';
 export const EnhancedAbout = () => {
+import { motion } from 'framer - motion';
+
+
     const compValues = [
         {
 
@@ -110,17 +113,11 @@ export const EnhancedAbout = () => {
 
                 staggerChildren: 0.1
 
-
     };
     const itemVariants = {
 
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -132,17 +129,11 @@ export const EnhancedAbout = () => {
                 duration: 0.6,
                 ease: "easeOut"
 
-
     };
     const cardVariants = {
 
   hidden: { scale: 0.9,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -164,17 +155,11 @@ export const EnhancedAbout = () => {
                 duration: 0.3,"
                 ease: "easeOut"
 
-
     };
     const timelineVariants = {
 
   hidden: { opacity: 0,
   x: -50 
-
-
-
-
-
 
 },
         visible: {
@@ -292,9 +277,9 @@ export const EnhancedAbout = () => {
                   {member.expertise.map((skill, idx) => (<div key={idx} className="flex items-center text-sm text-gray-300">"
                       <CheckCircle className="h-4 w-4 text-zion-cyan mr-2 flex-shrink-0"/>
                       {skill}
-                    </div>))}
+                    </div>) ) }
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -329,7 +314,7 @@ export const EnhancedAbout = () => {
                       <div className="text-sm text-zion-purple font-medium">{milestone.achievement}</div>
                     </div>
                   </div>
-                </motion.div>))}
+                </motion.div>) ) }
             </motion.div>
           </div>
         </div>

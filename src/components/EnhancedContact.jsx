@@ -12,9 +12,9 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
         phone: '','
         service: '','
         message: ''
-    });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
+    }) ;
+    const [isSubmitting, setIsSubmitting] = useState (false) ;
+    const [isSubmitted, setIsSubmitted] = useState (false) ;
     const contactMethods = [
         {
 
@@ -68,17 +68,11 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
 
                 staggerChildren: 0.1
 
-
     };
     const itemVariants = {
 
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -90,17 +84,11 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                 duration: 0.6,
                 ease: "easeOut"
 
-
     };
     const cardVariants = {
 
   hidden: { scale: 0.9,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -122,7 +110,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                 duration: 0.3,"
                 ease: "easeOut"
 
-
     };
     const handleInputChange = (e) => {
 
@@ -131,15 +118,15 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
 
             ...prev,
             [name]: value
-        }))};
+        }) ) };
     const handleSubmit = async (e) => {
 
         e.preventDefault();
         setIsSubmitting(true);
         // Simulate form submission
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        setIsSubmitting(false);
-        setIsSubmitted(true);
+        await new Promise (resolve => setTimeout (resolve, 2000) ) ;
+        setIsSubmitting (false) ;
+        setIsSubmitted (true) ;
         // Reset form after 3 seconds
         setTimeout(() => {
             setIsSubmitted(false);
@@ -151,18 +138,13 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                 phone: '','
                 service: '','
                 message: ''
-            })}, 3000)};
+            }) }, 3000) };
     if (isSubmitted) {
 "
         return (<motion.div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white flex items-center justify-center" initial = {
 
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
 
 }} animate = {
 
@@ -217,7 +199,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                     {method.action}
                   </div>
                 </div>
-              </motion.a>))}
+              </motion.a>) ) }
           </motion.div>
         </div>
       </section>
@@ -278,7 +260,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                 <option value="">Select a service</option>"
                 {services.map((service, index) => (<option key={index} value={service} className="bg-slate-800 text-white">
                     {service}
-                  </option>))}
+                  </option>) ) }
               </select>
             </motion.div>
 "
@@ -298,7 +280,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                   </>) : (<>"
                     <Send className="h-5 w-5 mr-2"/>
                     Send Message
-                  </>)}
+                  </>) }
               </Button>
             </motion.div>
           </motion.form>

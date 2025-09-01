@@ -1,4 +1,4 @@
-
+import React from 'react';
 export class SEOOptimizer {
     static DEFAULT_META_DESCRIPTIONS = {
 
@@ -19,7 +19,13 @@ export class SEOOptimizer {
         '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.','
         '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'
     };
+  }
 
+  static generateTitle (path) {
+    const baseTitle = 'Zion Tech Group';
+    if (path === '/') {
+      return `${baseTitle} - Revolutionary Technology Solutions`;
+    }
 
     static KEYWORD_MAPPINGS = {
 '
@@ -261,7 +267,7 @@ export class SEOOptimizer {
       ${JSON.stringify(seoData.structuredData, null, 2)}
     </script>`
     `;
-    }
+  }
 }
 
 export const seoOptimizer = new SEOOptimizer();

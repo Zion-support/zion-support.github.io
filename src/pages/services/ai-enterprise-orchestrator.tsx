@@ -2,7 +2,8 @@ import React from 'react.ts';'
 import { Helmet  } from 'react-helmet-async.ts';'
 import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail  } from 'lucide-react';'
 import { Link  } from 'react-router-dom.ts';
-
+;
+export { function };
 export default function AIEnterpriseOrchestrator(...args: []):  {
 
   return()

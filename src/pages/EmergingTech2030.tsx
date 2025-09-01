@@ -2,6 +2,11 @@ import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { Link  } from 'react-router-dom.ts';
 import { Brain, 
+import { emergingTechServices2030 } from "../data / emergingTechServices2030";
+import { motion  } from 'framer - motion.ts';
+import { SEO } from "../components / SEO";
+
+
   Rocket, 
   Zap, 
   Shield, 
@@ -49,11 +54,6 @@ export default function EmergingTech2030(...args[]):  {
   hidden: { y: 20,
   opacity: 0 
 
-
-
-
-
-
 },
     visible: {
       y: 0,;
@@ -78,11 +78,6 @@ export default function EmergingTech2030(...args[]):  {
   ;'
   'Fusion Energy': Zap;
   ;
-
-
-
-
-
 
 };
 
@@ -219,8 +214,7 @@ export default function EmergingTech2030(...args[]):  {
                           className="px-3 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full"
 
                           {tag}
-                        </span>
-                      ))}
+                        </span>) ) }
                     </div>
 
                     <Link
@@ -240,9 +234,8 @@ export default function EmergingTech2030(...args[]):  {
                       Learn More;"
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />;
                     </Link>;
-                  </motion.div>;
-                );
-              })}
+                  </motion.div>;) ;
+              }) }
             </div>
           </motion.div>
         </section>
@@ -309,8 +302,7 @@ export default function EmergingTech2030(...args[]):  {
                   description: 'Bank-grade security with SOC 2 compliance and enterprise-level data protection.','
                   color: 'from-red-500 to-pink-600'
                 }
-              ].map((feature, index)  => (
-                <motion.div
+              ].map ( (feature, index) => (<motion.div
                   key={index}
                   variants={itemVariants}"
                   className="text-center p-6"

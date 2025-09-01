@@ -48,7 +48,7 @@ export function LoadingSpinner({
   );
 }
 
-// Page loading component
+// Page loading component;
 export function PageLoader() {
   return ("
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900">"

@@ -24,8 +24,8 @@ import {
   Eye'
 } from 'lucide-react';'
 import { SEO } from '../../components/SEO';
-
-const AIMarketingAutomation = () => {
+;
+const AIMarketingAutomation = (...args: unknown[]): unknown => {
   const features = [
     {
 
@@ -223,7 +223,7 @@ const AIMarketingAutomation = () => {
             </motion.div>
 "
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -260,7 +260,7 @@ const AIMarketingAutomation = () => {
             </motion.div>
 "
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map(feature: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -298,7 +298,7 @@ const AIMarketingAutomation = () => {
             </motion.div>
 "
             <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -393,6 +393,7 @@ const AIMarketingAutomation = () => {
     </>
   );
 };
-
+;
+export { AIMarketingAutomation };
 export default AIMarketingAutomation;
 '"`

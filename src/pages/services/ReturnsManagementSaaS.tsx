@@ -1,7 +1,7 @@
 import React from 'react.ts';'
 import { SEO  } from '@/components/SEO';'
 import { Package, Truck, CheckCircle, DollarSign, Link as LinkIcon  } from 'lucide-react';
-
+;
 const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
 
   return()
@@ -84,7 +84,8 @@ const ReturnsManagementSaaS: React.FC = (): JSX.Element => {
     </div>;
   );
 };
-
+;
+export { ReturnsManagementSaaS };
 export default ReturnsManagementSaaS;
 
 }'"

@@ -227,15 +227,15 @@ import {
     window.addEventListener('scroll', handleScroll);'
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setActiveDropdown(null)}, [location.pathname]);
+  useEffect ( () => {
+    setMobileMenuOpen (false) ;
+    setActiveDropdown (null) }, [location.pathname]) ;
 
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
+      window.location.href = `/search?q=${encodeURIComponent (searchQuery.trim () ) }`};
   };
 
   const toggleDropdown = (dropdown: string) => {;
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+    setActiveDropdown (activeDropdown === dropdown ? null : dropdown) ;
   };
 
   const navigationItems = [
@@ -401,8 +401,7 @@ import {
 '
                         activeDropdown === item.name ? 'rotate-180' : ''`
                       }`} />
-                    </button>;
-                  ) : (;
+                    </button>;) : (;
                     <Link
                       to={item.href}`
                       className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
@@ -414,23 +413,15 @@ import {
 "
                       {item.icon && <item.icon className="w-4 h-4" />}
                       <span>{item.name}</span>
-                    </Link>
-                  )}
+                    </Link>) }
 
                   {/* Dropdown Menu */}
-                  {item.dropdown && (
-                    <AnimatePresence>
-                      {activeDropdown === item.name && (
-                        <motion.div
+                  {item.dropdown && (<AnimatePresence>
+                      {activeDropdown === item.name && (<motion.div
                           initial = {
 
   { opacity: 0, y: 10,
   scale: 0.95 
-
-
-
-
-
 
 }}
                           animate = {
@@ -438,21 +429,11 @@ import {
   { opacity: 1, y: 0,
   scale: 1 
 
-
-
-
-
-
 }}
                           exit = {
 
   { opacity: 0, y: 10,
   scale: 0.95 
-
-
-
-
-
 
 }}
                           transition={{ duration: 0.2 }}"
@@ -477,16 +458,12 @@ import {
                                       {dropdownItem.description}
                                     </div>
                                   </div>
-                                </Link>;
-                              ))}
+                                </Link>;) ) }
                             </div>
                           </div>;
-                        </motion.div>;
-                      )}
-                    </AnimatePresence>
-                  )}
-                </div>
-              ))}
+                        </motion.div>;) }
+                    </AnimatePresence>) }
+                </div>) ) }
             </div>
 
             {/* Right Side Actions */}"
@@ -553,17 +530,11 @@ import {
 
         {/* Mobile Menu */}
         <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
+          {mobileMenuOpen && (<motion.div
               initial = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
               animate = {
@@ -571,21 +542,11 @@ import {
   { opacity: 1,'
   height: 'auto' 
 
-
-
-
-
-
 }}
               exit = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.3 }}"
@@ -631,17 +592,11 @@ import {
 
                           {/* Mobile Dropdown */}
                           <AnimatePresence>
-                            {activeDropdown === item.name && (
-                              <motion.div
+                            {activeDropdown === item.name && (<motion.div
                                 initial = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                                 animate = {
@@ -649,40 +604,27 @@ import {
   { opacity: 1,'
   height: 'auto' 
 
-
-
-
-
-
 }}
                                 exit = {
 
   { opacity: 0,
   height: 0 
 
-
-
-
-
-
 }}
                                 transition={{ duration: 0.3 }}"
                                 className="ml-6 mt-2 space-y-1 overflow-hidden"
 
-                                {item.dropdown.map((dropdownItem) => (;
+                                {item.dropdown.map ( (dropdownItem) => (;
                                   <Link
                                     key={dropdownItem.name}
                                     to={dropdownItem.href}"
                                     className="block px-4 py-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
 
                                     {dropdownItem.name}
-                                  </Link>
-                                ))}
-                              </motion.div>
-                            )}
+                                  </Link>) ) }
+                              </motion.div>) }
                           </AnimatePresence>
-                        </div>
-                      ) : (;
+                        </div>) : (;
                         <Link
                           to={item.href}`
                           className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
@@ -696,10 +638,8 @@ import {
                             {item.icon && <item.icon className="w-4 h-4" />}
                             <span>{item.name}</span>
                           </div>
-                        </Link>;
-                      )}
-                    </div>
-                  ))}
+                        </Link>;) }
+                    </div>) ) }
                 </div>
 
                 {/* Contact Info */}"
@@ -708,15 +648,14 @@ import {
                     <div className="text-zion-cyan font-semibold mb-2">Contact Us</div>"
                     <div className="text-sm text-gray-400 space-y-1">
                       <div>+1 302 464 0950</div>
-                      <div>kleber@ziontechgroup.com</div>
-                      <div>364 E Main St STE 1008</div>
-                      <div>Middletown DE 19709</div>
+                      <div role="button" > kleber@ziontechgroup.com</div>
+                      <div role="button" > 364 E Main St STE 1008</div>
+                      <div role="button" > Middletown DE 19709</div>
                     </div>
                   </div>
                 </div>
               </div>
-            </motion.div>
-          )}
+            </motion.div>) }
         </AnimatePresence>
       </nav>;
 ;

@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */;
 export default {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -38,7 +38,7 @@ export default {
         'zion-cyan-light': '#22d3ee',
         'zion-slate-dark': '#0b1220',
         'zion-slate': '#111827',
-        'zion-slate-light': '#1f2937',
+        'zion-slate-light': '#1f2937'
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -68,12 +68,12 @@ export default {
         shimmer: 'shimmer 2.5s linear infinite',
         gradient: 'gradient 8s ease infinite',
         'neon-pulse': 'neon-pulse 1.5s ease-in-out infinite alternate',
-        'spin-slow': 'spin 3s linear infinite',
+        'spin-slow': 'spin 3s linear infinite'
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' }
         },
         glow: {
           '0%': { boxShadow: '0 0 20px rgba(147, 51, 234, 0.3)' },
@@ -105,11 +105,11 @@ export default {
       },
       maxWidth: {
         '8xl': '88rem',
-        '9xl': '96rem',
+        '9xl': '96rem'
       },
       minHeight: {
         'screen-90': '90vh',
-        'screen-95': '95vh',
+        'screen-95': '95vh'
       },
       zIndex: {
         60: '60',
@@ -124,7 +124,7 @@ export default {
       boxShadow: {
         neon: '0 0 20px rgba(34, 221, 210, 0.5)',
         'neon-purple': '0 0 20px rgba(168, 85, 247, 0.5)',
-        'inner-glow': 'inset 0 0 20px rgba(34, 221, 210, 0.2)',
+        'inner-glow': 'inset 0 0 20px rgba(34, 221, 210, 0.2)'
       },
       transitionProperty: {
         height: 'height',
@@ -144,16 +144,15 @@ export default {
       },
       blur: {
         '4xl': '72px',
-        '5xl': '96px',
-      },
-    },
+        '5xl': '96px'
+      }
+    }
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/aspect-ratio')
   ],
-  darkMode: 'class',
   future: {
     hoverOnlyWhenSupported: true,
   },

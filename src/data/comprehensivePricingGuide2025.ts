@@ -1,4 +1,5 @@
 export interface PricingTier {
+
   id: string;
   name: string;
   price: number;
@@ -7,9 +8,11 @@ export interface PricingTier {
   features: string[];
   bestFor: string;
   popular?: boolean;
-}
 
+}
+;
 export interface ServicePricing {
+
   id: string;
   title: string;
   description: string;
@@ -26,9 +29,10 @@ export interface ServicePricing {
     address: string;
     website: string;
     address: string;
-  };
+  
 };
-
+};
+;
 export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
   {
 
@@ -1194,7 +1198,8 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
     }
   }
 ];
-
+;
+export { comprehensivePricingGuide2025 };
 export default comprehensivePricingGuide2025;
 
 '"

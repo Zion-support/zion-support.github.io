@@ -21,7 +21,7 @@ const AlertDialog({ children, open, onOpenChange }) {
       <div className="relative">
         {children}
       </div>
-    </AlertDialogContext.Provider>)}
+    </AlertDialogContext.Provider>)};
 export function AlertDialogTrigger({ children }) {
 
     const context = useContext(AlertDialogContext);

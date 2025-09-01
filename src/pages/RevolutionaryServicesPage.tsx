@@ -285,7 +285,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
       default:
         return 0;
     }
-  });
+  }) ;
 
   const getCategoryIcon = (category: anystring) => {
 
@@ -441,8 +441,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name}
-                </option>
-              ))}
+                </option>) ) }
             </select>
 
             {/* Price Range Filter */}
@@ -454,8 +453,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
               {priceRanges.map(range => (
                 <option key={range.id} value={range.id}>
                   {range.name}
-                </option>
-              ))}
+                </option>) ) }
             </select>
 
             {/* Sort By */}
@@ -467,8 +465,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
               {sortOptions.map(option => (
                 <option key={option.id} value={option.id}>
                   {option.name}
-                </option>
-              ))}
+                </option>) ) }
             </select>
           </div>
         </div>
@@ -554,8 +551,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                     {service.features.length > 3 && ("
                       <div className="text-sm text-cyan-400">
                         +{service.features.length - 3} more features
-                      </div>
-                    )}
+                      </div>) }
                   </div>
                 </div>
 
@@ -572,8 +568,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                       >"
                         <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                         <span>{benefit}</span>
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
                 </div>
 
@@ -594,8 +589,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                     {service.useCases.length > 3 && ("
                       <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">
                         +{service.useCases.length - 3} more
-                      </span>
-                    )}
+                      </span>) }
                   </div>
                 </div>
 
@@ -629,8 +623,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
 
         {/* Special Pricing Packages */}"
@@ -698,8 +691,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                       >"
                         <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                         <span>{feature}</span>
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
                 </div>
 "
@@ -711,8 +703,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {
                     Get Started
                   </a>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
 

@@ -198,12 +198,12 @@ const ServiceInnovationHub = () => {
                       <div className="flex flex-wrap gap-1">"
                         {area.trends.map((trend, idx) => (<Badge key={idx} variant="outline" className="text-xs">
                             {trend}
-                          </Badge>))}
+                          </Badge>) ) }
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -272,7 +272,7 @@ const ServiceInnovationHub = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>

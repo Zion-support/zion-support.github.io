@@ -9,7 +9,7 @@ const mockNotifications = [
         type: 'success','
         priority: 'medium','
         category: 'project',
-        timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
+        timestamp: new Date (Date.now () - 1000 * 60 * 30) , // 30 minutes ago
         isRead: false,
         isArchived: false,
         actions[;'
@@ -25,7 +25,7 @@ const mockNotifications = [
         type: 'warning','
         priority: 'high','
         category: 'security',
-        timestamp: new Date(Date.now() - 1000 * 60 * 5), // 5 minutes ago
+        timestamp: new Date (Date.now () - 1000 * 60 * 5) , // 5 minutes ago
         isRead: false,
         isArchived: false,
         actions[;'
@@ -41,7 +41,7 @@ const mockNotifications = [
         type: 'error','
         priority: 'critical','
         category: 'performance',
-        timestamp: new Date(Date.now() - 1000 * 60 * 2), // 2 minutes ago
+        timestamp: new Date (Date.now () - 1000 * 60 * 2) , // 2 minutes ago
         isRead: false,
         isArchived: false,
         actions[;'
@@ -57,7 +57,7 @@ const mockNotifications = [
         type: 'info','
         priority: 'low','
         category: 'system',
-        timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago
+        timestamp: new Date (Date.now () - 1000 * 60 * 60 * 2) , // 2 hours ago
         isRead: true,
         isArchived: false,
         actions[;'
@@ -85,12 +85,12 @@ export function AdvancedNotificationSystem() {
         const typeMatch = filterType === 'all' || notification.type === filterType;'
         const priorityMatch = filterPriority === 'all' || notification.priority === filterPriority;'
         const categoryMatch = filterCategory === 'all' || notification.category === filterCategory;
-        const searchMatch = notification.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            notification.message.toLowerCase().includes(searchQuery.toLowerCase());
+        const searchMatch = notification.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+            notification.message.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
         const readMatch = showRead || !notification.isRead;
-        return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch});
+        return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch}) ;
     const markAllAsRead = () => {
-        setNotifications(prev => prev.map(n => ({ ...n, isRead: true })))};
+        setNotifications (prev => prev.map (n => ({ ...n, isRead: true }) ) ) };
     const archiveNotification = (id) => {
 
         setNotifications(prev => prev.map(n => n.id === id ? { ...n, isArchived: true } : n))};
@@ -146,8 +146,8 @@ export function AdvancedNotificationSystem() {
         <Bell className="w-5 h-5"/>"
         {unreadCount > 0 && (<span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">'
             {unreadCount > 9 ? '9+' : unreadCount}
-          </span>)}
-      </button>)}
+          </span>) }
+      </button>) }
     if (isMinimized) {
 "
         return (<div className="fixed bottom-4 right-36 z-50">"
@@ -266,8 +266,8 @@ export function AdvancedNotificationSystem() {
                             action.variant === 'secondary' ? 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30' :'`
                                 'bg-red-500 text-white hover:bg-red-600'}`}>
                               {action.label}
-                            </button>))}
-                        </div>)}
+                            </button>) ) }
+                        </div>) }
                     </div>
                   </div>
                   

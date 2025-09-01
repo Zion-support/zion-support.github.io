@@ -1,5 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
+export function InteractivePortfolio () {
 import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar const portfolioProjects = [;
+
+
     {
 '
         id: '1','
@@ -112,9 +115,9 @@ export function InteractivePortfolio() {
         setSelectedProject(project);
         setIsModalOpen(true)};
     const closeModal = () => {
-        setIsModalOpen(false);
-        setSelectedProject(null);
-        setCurrentImageIndex(0)};
+        setIsModalOpen (false) ;
+        setSelectedProject (null) ;
+        setCurrentImageIndex (0) };
     const nextImage = () => {
         if (selectedProject) {
 
@@ -132,7 +135,7 @@ export function InteractivePortfolio() {
 
             closeModal()}
     };
-    useEffect(() => {
+    useEffect ( () => {
         if (isModalOpen) {
 '
             document.body.style.overflow = 'hidden'}
@@ -160,7 +163,7 @@ export function InteractivePortfolio() {
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/30''`
                 : 'bg-white dark:bg-zion-slate text-zion-slate border border-zion-slate-light hover:border-zion-cyan hover:text-zion-cyan hover:shadow-md'}`}>
               {category}
-            </button>))}
+            </button>) ) }
         </div>
 
         {/* Portfolio Grid */}"
@@ -180,7 +183,7 @@ export function InteractivePortfolio() {
                     <span className="px-3 py-1 bg-gradient-to-r from-zion-gold to-zion-orange text-white text-xs font-medium rounded-full">
                       Featured
                     </span>
-                  </div>)}
+                  </div>) }
 
                 {/* Project Image */}"
                 <div className="relative h-48 overflow-hidden">"
@@ -228,7 +231,7 @@ export function InteractivePortfolio() {
                       </span>))}"
                     {project.technologies.length > 3 && (<span className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate text-xs rounded">
                         +{project.technologies.length - 3}
-                      </span>)}
+                      </span>) }
                   </div>
 
                   {/* Project Stats */}"
@@ -247,7 +250,7 @@ export function InteractivePortfolio() {
                 {/* Hover Effect Overlay */}"
                 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"/>
               </div>
-            </div>))}
+            </div>) ) }
         </div>
 
         {/* CTA Section */}"
@@ -305,14 +308,14 @@ export function InteractivePortfolio() {
                   <div className="flex flex-wrap gap-2 mb-6">"
                     {selectedProject.technologies.map((tech, index) => (<span key={index} className="px-3 py-2 bg-zion-cyan/10 text-zion-cyan rounded-lg text-sm font-medium">
                         {tech}
-                      </span>))}
+                      </span>) ) }
                   </div>
 "
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Tags</h3>"
                   <div className="flex flex-wrap gap-2">"
                     {selectedProject.tags.map((tag, index) => (<span key={index} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm">
                         #{tag}
-                      </span>))}
+                      </span>) ) }
                   </div>
                 </div>
 
@@ -350,7 +353,7 @@ export function InteractivePortfolio() {
                     {selectedProject.githubUrl && (<a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-zion-slate text-white rounded-lg hover:bg-zion-slate-light transition-all duration-200">"
                         <Github className="w-4 h-4"/>
                         View Source Code
-                      </a>)}
+                      </a>) }
                   </div>
                 </div>
               </div>

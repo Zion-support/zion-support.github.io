@@ -17,8 +17,8 @@ import { Brain,
   Lock'
   } from 'lucide-react.ts';'
 import { SEO   } from '../../components/SEO';
-
-const AICyberThreatIntelligence = () => {
+;
+const AICyberThreatIntelligence = (...args: unknown[]): unknown => {
   const features = [
     {
 
@@ -222,7 +222,7 @@ const AICyberThreatIntelligence = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)   => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -286,7 +286,7 @@ const AICyberThreatIntelligence = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index)   => (
+            {services.map(service: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -387,7 +387,7 @@ const AICyberThreatIntelligence = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)   => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -459,7 +459,7 @@ const AICyberThreatIntelligence = () => {
           </motion.div>
 "
           <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6 max-w-4xl mx-auto">
-            {technologies.map((tech, index)   => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {

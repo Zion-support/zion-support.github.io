@@ -58,7 +58,6 @@ import {
   Rocket'
 } from 'lucide-react';
 
-export default function ITConsulting() {
   const features = [
     {
 
@@ -142,21 +141,11 @@ export default function ITConsulting() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -177,32 +166,17 @@ export default function ITConsulting() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.8,
   delay: 0.3 
-
-
-
-
-
 
 }}
             >
@@ -294,7 +268,7 @@ export default function ITConsulting() {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {consultingServices.map((service, index) => (;
+            {consultingServices.map ( (service, index) => (;
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -318,11 +292,9 @@ export default function ITConsulting() {
                     <li key={featureIndex} className="flex items-center gap-3 text-zion-slate-light text-sm">"
                       <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                       {feature}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -337,21 +309,11 @@ export default function ITConsulting() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -373,7 +335,7 @@ export default function ITConsulting() {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {benefits.map((benefit, index) => (;
+            {benefits.map ( (benefit, index) => (;
               <motion.div
                 key={index}"
                 className="text-center"
@@ -417,7 +379,7 @@ export default function ITConsulting() {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {industries.map((industry, index) => (;
+            {industries.map ( (industry, index) => (;
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -442,21 +404,11 @@ export default function ITConsulting() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -479,7 +431,6 @@ export default function ITConsulting() {
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

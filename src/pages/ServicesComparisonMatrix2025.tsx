@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';
 import { Brain, 
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data / innovativeMicroSaasServices2025';
+import { motion  } from 'framer - motion.ts';
+
+
   Zap, 
   Shield, 
   TrendingUp, 
@@ -88,11 +92,11 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
         default:
           return 0;
       }
-    });
+    }) ;
 
-  const toggleServiceSelection = (serviceId: anystring)  => {;
-    if (selectedServices.includes(serviceId)) {;
-      setSelectedServices(selectedServices.filter(id => id !== serviceId));
+  const toggleServiceSelection = (serviceId: anystring) => {;
+    if (selectedServices.includes (serviceId) ) {;
+      setSelectedServices (selectedServices.filter (id => id !== serviceId) ) ;
     } else {
 
       if (selectedServices.length < 5) {
@@ -102,9 +106,9 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     }
   };
 
-  const toggleFeatureExpansion = (feature: anystring)  => {;
-    if (expandedFeatures.includes(feature)) {;
-      setExpandedFeatures(expandedFeatures.filter(f => f !== feature));
+  const toggleFeatureExpansion = (feature: anystring) => {;
+    if (expandedFeatures.includes (feature) ) {;
+      setExpandedFeatures (expandedFeatures.filter (f => f !== feature) ) ;
     } else {
 
       setExpandedFeatures([...expandedFeatures, feature]);
@@ -140,9 +144,8 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
     return 'text-purple-600 bg-purple-100 border-purple-200';
   };
 
-  const selectedServicesData = selectedServices.map(id => ;
-    INNOVATIVE_MICRO_SAAS_SERVICES_2025.find(service => service.id === id);
-  ).filter(Boolean);
+  const selectedServicesData = selectedServices.map (id => ;
+    INNOVATIVE_MICRO_SAAS_SERVICES_2025.find (service => service.id === id) ;) .filter (Boolean) ;
 
   const allFeatures = Array.from(new Set()
     selectedServicesData.flatMap(service => 
@@ -265,11 +268,8 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                 onChange={(e) => setSelectedCategory(e.target.value)}"
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                {categories.map(category  => (
-                  <option key={category.id} value={category.id}>
-                    {category.name} ({category.count})
-                  </option>
-                ))}
+                {categories.map (category  => (<option key={category.id} value={category.id}>
+                    {category.name} ({category.count}) </option>) ) }
               </select>
               
               <select
@@ -340,8 +340,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                     >"
                       <X className="w-4 h-4" />
                     </button>
-                  </div>
-                ))}
+                  </div>) ) }
               </div>
             </div>
           )}
@@ -397,8 +396,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                     {service.innovationLevel}
                   </span>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -448,8 +446,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                       <div className={`px-2 py-1 rounded-full text-xs font-medium border ${getInnovationColor(service?.innovationLevel || '')}`}>
                         {service?.innovationLevel}
                       </div>
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
 
                 {/* Pricing & ROI */}"
@@ -486,8 +483,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                           </div>
                         ))}
                       </div>
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
 
                 {/* Benefits */}"
@@ -505,8 +501,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                           </div>
                         ))}
                       </div>
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
 
                 {/* Technical Specifications */}
@@ -520,10 +515,10 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                         {service?.technicalSpecs ? ("
                           <div className="space-y-2 text-xs">
                             <div>
-                              <strong>Uptime:</strong> {service.technicalSpecs.uptime}
+                              <strong > Uptime:</strong> {service.technicalSpecs.uptime}
                             </div>
                             <div>
-                              <strong>API Endpoints:</strong> {service.technicalSpecs.apiEndpoints}
+                              <strong > API Endpoints:</strong> {service.technicalSpecs.apiEndpoints}
                             </div>
                             <div>'
                               <strong>Security:</strong> {service.technicalSpecs.security.slice(0, 2).join(', ')}
@@ -577,8 +572,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                           <Phone className="w-3 h-3" />
                         </a>
                       </div>
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
               </div>
             </div>
@@ -637,8 +631,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">"
                               <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                               <span>{feature}</span>
-                            </li>
-                          ))}
+                            </li>) ) }
                         </ul>
                       </div>
                       <div>"
@@ -648,8 +641,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">"
                               <Star className="w-4 h-4 text-yellow-500 flex-shrink-0" />
                               <span>{benefit}</span>
-                            </li>
-                          ))}
+                            </li>) ) }
                         </ul>
                       </div>
                     </div>
@@ -696,12 +688,9 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
                       </a>
                     </div>
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          )}
-        </section>
-      )}
+                </motion.div>) ) }
+            </div>) }
+        </section>) }
 
       {/* CTA Section */}"
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white">"
@@ -820,8 +809,7 @@ const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>) ;
 };
 
 export default ServicesComparisonMatrix2025;'"`

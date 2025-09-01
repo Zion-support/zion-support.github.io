@@ -4,6 +4,7 @@ import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } fro
 import { GradientHeading } from './ui/GradientHeading';
 
 interface Benefit {
+
   title: string;
   description: string;
   icon: React.ReactNode;
@@ -11,7 +12,7 @@ interface Benefit {
   bgColor: string;
   stats: string;
   features: string[];
-
+;
 const benefits: Benefit[] = [;
   {
 
@@ -27,7 +28,8 @@ const benefits: Benefit[] = [;
       "Expert talent matching","
       "Personalized recommendations"
     ]
-  },
+  
+},
   {
 "
     title: "Global Availability","
@@ -75,8 +77,7 @@ const benefits: Benefit[] = [;
 
 ];
 
-export function BenefitsSection() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState < number | null> (null) ;
 
   const containerVariants = {
 
@@ -88,7 +89,6 @@ export function BenefitsSection() {
 
         staggerChildren: 0.2,
         delayChildren: 0.1
-
 
   };
 
@@ -165,7 +165,7 @@ export function BenefitsSection() {
           whileInView="visible"
           viewport={{ once: true }}
 
-          {stats.map((stat, index) => (;
+          {stats.map ( (stat, index) => (;
             <motion.div
               key={index}
               variants={statsVariants}"
@@ -202,8 +202,8 @@ export function BenefitsSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                onHoverStart={() => setHoveredIndex(index)}
-                onHoverEnd={() => setHoveredIndex(null)}
+                onHoverStart={ () => setHoveredIndex (index) }
+                onHoverEnd={ () => setHoveredIndex (null) }
               >
                 {/* Connection point */}"
                 <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full transform -translate-x-1/2 -translate-y-1/2 hidden lg:block">"
@@ -240,8 +240,7 @@ export function BenefitsSection() {
                       <li key={featureIndex} className="flex items-center gap-3 text-zion-slate-light">"
                         <div className="w-2 h-2 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"></div>
                         {feature}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
 
                   {/* Hover effect overlay */}
@@ -253,12 +252,10 @@ export function BenefitsSection() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                      />
-                    )}
+                      />) }
                   </AnimatePresence>
                 </motion.div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </motion.div>"
                   {React.createElement(stat.icon, { className: "w-10 h-10 text-white" })}
@@ -293,13 +290,10 @@ export function BenefitsSection() {
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>) ;
 </div>};
 
-export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}
       </div>
-    </section>
-  );
+    </section>) ;
 }
 '"`

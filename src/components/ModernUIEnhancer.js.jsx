@@ -9,7 +9,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     const [deviceType, setDeviceType] = useState('desktop');
     const scrollToTopRef = useRef(null);
     // Detect device type
-    useEffect(() => {
+    useEffect ( () => {
         const updateDeviceType = () => {
             const width = window.innerWidth;
             if (width < 768) {
@@ -26,12 +26,11 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
         window.addEventListener('resize', updateDeviceType);'
         return () => window.removeEventListener('resize', updateDeviceType)}, []);
     // Scroll effects
-    useEffect(() => {
-        if (!enableScrollEffects)
-            return;
+    useEffect ( () => {
+        if (!enableScrollEffects) return;
         const handleScroll = () => {
             const scrollTop = window.pageYOffset;
-            setShowScrollToTop(scrollTop > 300);
+            setShowScrollToTop (scrollTop > 300) ;
             // Parallax effect for background elements
             const scrolled = window.pageYOffset;'
             const parallaxElements = document.querySelectorAll('[data-parallax]');
@@ -70,10 +69,10 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
             root.classList.toggle('dark', theme === 'dark')}'
         localStorage.setItem('theme', theme)};'
     const themes = ['light', 'dark', 'auto'];
-        const currentIndex = themes.indexOf(currentTheme);
-        const nextTheme = themes[(currentIndex + 1) % themes.length];
-        setCurrentTheme(nextTheme);
-        applyTheme(nextTheme)};
+        const currentIndex = themes.indexOf (currentTheme) ;
+        const nextTheme = themes[ (currentIndex + 1) % themes.length];
+        setCurrentTheme (nextTheme) ;
+        applyTheme (nextTheme) };
     const scrollToTop = () => {
         window.scrollTo({
 
@@ -88,46 +87,46 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
       .fade-in {
 
         opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out}
+        transform: translateY (30px) ;
+        transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
       .fade-in-visible {
 
         opacity: 1;
-        transform: translateY(0)}
+        transform: translateY (0) }
       
       .slide-in-left {
 
         opacity: 0;
-        transform: translateX(-50px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out}
+        transform: translateX (-50px) ;
+        transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
       .slide-in-left-visible {
 
         opacity: 1;
-        transform: translateX(0)}
+        transform: translateX (0) }
       
       .slide-in-right {
 
         opacity: 0;
-        transform: translateX(50px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out}
+        transform: translateX (50px) ;
+        transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
       .slide-in-right-visible {
 
         opacity: 1;
-        transform: translateX(0)}
+        transform: translateX (0) }
       
       .scale-in {
 
         opacity: 0;
-        transform: scale(0.8);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out}
+        transform: scale (0.8) ;
+        transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
       .scale-in-visible {
 
         opacity: 1;
-        transform: scale(1)}
+        transform: scale (1) }
       
       .bounce-in {
 
@@ -138,18 +137,18 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
         0% {
 
           opacity: 0;
-          transform: scale(0.3)}
+          transform: scale (0.3) }
         50% {
 
           opacity: 1;
-          transform: scale(1.05)}
+          transform: scale (1.05) }
         70% {
 
           transform: scale(0.9)}
         100% {
 
           opacity: 1;
-          transform: scale(1)}
+          transform: scale (1) }
       }
       
       .floating {
@@ -216,9 +215,9 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1)}`
     `;
-        document.head.appendChild(style);
+        document.head.appendChild (style) ;
         return () => {
-            document.head.removeChild(style)}}, [enableAnimations]);
+            document.head.removeChild (style) }}, [enableAnimations]) ;
     // Add intersection observer for scroll animations
     useEffect(() => {
         if (!enableScrollEffects)
@@ -313,7 +312,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
                 <Monitor className="w-5 h-5 text-gray-600 dark:text-gray-400"/>
               </motion.div>)}
           </AnimatePresence>
-        </motion.button>)}
+        </motion.button>) }
 
       {/* Device Type Indicator */}
       {enableResponsiveDesign && (<motion.div initial = {
@@ -333,7 +332,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
             {deviceType === 'mobile' && <Smartphone className="w-4 h-4 text-purple-500"/>}"
             <span className="text-gray-700 dark:text-gray-300 capitalize">{deviceType}</span>
           </div>
-        </motion.div>)}
+        </motion.div>) }
 
       {/* Scroll to Top Button */}
       <AnimatePresence>
@@ -461,7 +460,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
                 </div>
               </div>
             </div>
-          </motion.div>)}
+          </motion.div>) }
       </AnimatePresence>
 
       {/* Background Particles */}"
@@ -477,7 +476,6 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
                     y[0, -100, 0],;
                     opacity[0.2, 0.5, 0.2],;
-  
 
 }} transition = {
 

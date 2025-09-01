@@ -19,7 +19,8 @@ contactInfo: {
     phone: string;
     email: string;
     website: string;
-    address: string};
+    address: string
+};
   competitors: string[];
   roi: string;
   setupTime: string;
@@ -47,10 +48,10 @@ export const enhancedInnovativeServices2027Categories = ['
   'Edge AI Solutions',;'
   'Federated Learning Solutions';
 ];
-
-export const getEnhancedInnovativeServices2027 = () => enhancedInnovativeServices2027;
-export const getEnhancedInnovativeServices2027ByCategory = (category: string) =>
+;
+export const getEnhancedInnovativeServices2027 = : unknown enhancedInnovativeServices2027;
+export const getEnhancedInnovativeServices2027ByCategory = category: string
   enhancedInnovativeServices2027.filter(service => service.category === category);
-export const getEnhancedInnovativeServices2027ById = (id: string) =>
+export const getEnhancedInnovativeServices2027ById = id: string
   enhancedInnovativeServices2027.find(service => service.id === id);
 '

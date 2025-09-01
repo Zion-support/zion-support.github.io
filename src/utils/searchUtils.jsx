@@ -1,3 +1,15 @@
+import React from 'react';
+export const calculateRelevanceScore = (result, searchTerm) => {
+export const debounceSearch = (func, delay) => {
+export const filterSearchResults = (results, filters) => {
+export const getSearchSuggestions = (searchHistory = [],
+export const highlightSearchTerms = (text, searchTerm) => {
+export const matchesSearchTerm = (text, searchTerm) => {
+export const performSearch = (data,
+export const sortSearchResults = (results, sortBy, searchTerm) => {
+export default {
+
+
 /**
  * Highlight search terms in text with HTML mark tags
  */

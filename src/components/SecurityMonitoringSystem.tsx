@@ -40,6 +40,7 @@ interface SecurityThreat {
   status: 'active' | 'resolved' | 'investigating';
   affectedSystems: string[];
   recommendations: string[];
+
 }
 
 interface VulnerabilityAssessment {
@@ -52,6 +53,7 @@ interface VulnerabilityAssessment {
   affectedComponents: string[];
   remediation: string;
   estimatedTime: string;
+
 }
 
 interface ComplianceStatus {
@@ -66,15 +68,18 @@ interface ComplianceStatus {
     compliant: number;
     nonCompliant: number;
     pending: number;
-  };
+  
+};
 }
 
 interface SecurityMonitoringSystemProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showRealTime?: boolean;
   autoScan?: boolean;
-  onThreatDetected?: (threat: SecurityThreat) => void;
-}
+  onThreatDetected?: threat: SecurityThreat void;
 
 export function SecurityMonitoringSystem({
 
@@ -268,10 +273,10 @@ export function SecurityMonitoringSystem({
 
       startSecurityScan();
     }
-  }, [autoScan, isOpen, scanComplete, startSecurityScan]);
+  }, [autoScan, isOpen, scanComplete, startSecurityScan]) ;
 
-  // Setup real-time updates
-  useEffect(() => {
+  // Setup real - time updates
+  useEffect ( () => {
     if (showRealTime && isOpen && scanComplete) {
 
       scanIntervalRef.current = setInterval(() => {
@@ -522,8 +527,7 @@ export function SecurityMonitoringSystem({
                           <span className="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-full text-xs">
                             {count}
                           </span>
-                        </button>
-                      ))}
+                        </button>) ) }
                     </div>
 
                     {/* Threats View */}'
@@ -598,8 +602,7 @@ export function SecurityMonitoringSystem({
                                           )
                                         )}
                                       </ul>
-                                    </div>
-                                  )}
+                                    </div>) }
                                 </div>
 "
                                 <div className="text-right text-sm text-gray-500 dark:text-gray-400">
@@ -611,11 +614,9 @@ export function SecurityMonitoringSystem({
                                   </div>
                                 </div>
                               </div>
-                            </motion.div>
-                          ))}
+                            </motion.div>) ) }
                         </div>
-                      </div>
-                    )}
+                      </div>) }
 
                     {/* Vulnerabilities View */}'
                     {selectedView === 'vulnerabilities' && ("
@@ -669,11 +670,9 @@ export function SecurityMonitoringSystem({
                                   </div>
                                 </div>
                               </div>
-                            </motion.div>
-                          ))}
+                            </motion.div>) ) }
                         </div>
-                      </div>
-                    )}
+                      </div>) }
 
                     {/* Compliance View */}'
                     {selectedView === 'compliance' && ("
@@ -742,11 +741,9 @@ export function SecurityMonitoringSystem({
                                   </span>
                                 </div>
                               </div>
-                            </motion.div>
-                          ))}
+                            </motion.div>) ) }
                         </div>
-                      </div>
-                    )}
+                      </div>) }
 
                     {/* Action Buttons */}"
                     <div className="flex items-center justify-center space-x-4 pt-6">"
@@ -781,12 +778,10 @@ export function SecurityMonitoringSystem({
                     >
                       Start Security Scan
                     </button>
-                  </div>
-                )}
+                  </div>) }
               </div>
             </motion.div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
     </>
   );

@@ -116,7 +116,7 @@ const InteractiveServiceShowcase = () => {
     ];'
     const filteredServices = activeCategory === 'all'
         ? services
-        : services.filter(service => service.category === activeCategory);
+        : services.filter (service => service.category === activeCategory) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -127,17 +127,11 @@ const InteractiveServiceShowcase = () => {
 
                 staggerChildren: 0.1
 
-
     };
     const itemVariants = {
 
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -149,17 +143,11 @@ const InteractiveServiceShowcase = () => {
                 duration: 0.5,
                 ease: "easeOut"
 
-
     };
     const categoryVariants = {
 
   hidden: { scale: 0.8,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -180,11 +168,6 @@ const InteractiveServiceShowcase = () => {
 
   { opacity: 0,
   y: 30 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -215,20 +198,10 @@ const InteractiveServiceShowcase = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           {categories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${activeCategory === category.id'
@@ -241,7 +214,7 @@ const InteractiveServiceShowcase = () => {
                 : 'bg-zion-cyan/20 text-zion-cyan'}`}>
                 {category.count}
               </span>
-            </button>))}
+            </button>) ) }
         </motion.div>
 
         {/* Services Grid */}"
@@ -255,7 +228,7 @@ const InteractiveServiceShowcase = () => {
                     ? 'bg-gradient-to-r from-zion-orange to-zion-yellow''`
                     : 'bg-gradient-to-r from-zion-purple to-zion-cyan'}`}>'
                         {service.isPopular ? '🔥 Popular' : '✨ New'}
-                      </div>)}
+                      </div>) }
 
                     {/* Service Icon */}`
                     <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}>"
@@ -284,7 +257,7 @@ const InteractiveServiceShowcase = () => {
                           </div>))}"
                         {service.features.length > 3 && (<div className="text-zion-cyan/60 text-xs">
                             +{service.features.length - 3} more features
-                          </div>)}
+                          </div>) }
                       </div>
 
                       {/* CTA Button */}"
@@ -298,7 +271,7 @@ const InteractiveServiceShowcase = () => {
                     <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
                   </div>
                 </Link>
-              </motion.div>))}
+              </motion.div>) ) }
           </AnimatePresence>
         </motion.div>
 
@@ -308,20 +281,10 @@ const InteractiveServiceShowcase = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 

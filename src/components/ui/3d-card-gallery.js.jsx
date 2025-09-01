@@ -406,7 +406,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             </motion.div>
           </motion.div>)}
       </AnimatePresence>
-    </div>)}
+    </div>)};
 function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, getComplexityColor, getCategoryIcon, isCarousel = false }) {
 
     const [isHovered, setIsHovered] = useState(false);

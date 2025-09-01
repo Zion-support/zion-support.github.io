@@ -23,11 +23,11 @@ export default function OrdersPage() {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Order #</TableHead>
-              <TableHead>Date</TableHead>
-              <TableHead>Total</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead>View</TableHead>
+              <TableHead > Order #</TableHead>
+              <TableHead > Date</TableHead>
+              <TableHead > Total</TableHead>
+              <TableHead > Status</TableHead>
+              <TableHead > View</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -62,11 +62,11 @@ export default function OrdersPage() {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Order #</TableHead>
-              <TableHead>Date</TableHead>
-              <TableHead>Total</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead>View</TableHead>
+              <TableHead > Order #</TableHead>
+              <TableHead > Date</TableHead>
+              <TableHead > Total</TableHead>
+              <TableHead > Status</TableHead>
+              <TableHead > View</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

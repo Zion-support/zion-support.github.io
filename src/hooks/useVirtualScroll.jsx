@@ -190,7 +190,7 @@ export const useVirtualScroll = (items, options) => {
         isItemVisible,
         state
     }};
-// Enhanced virtual scroll with search and filtering
+// Enhanced virtual scroll with search and filtering;
 export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, options) => {
 
     const [filteredItems, setFilteredItems] = useState(items);
@@ -241,7 +241,7 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
         searchResults,
         originalItems: items
     }};
-// Virtual scroll with dynamic item heights
+// Virtual scroll with dynamic item heights;
 export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
 
     const [itemHeights, setItemHeights] = useState(new Map());

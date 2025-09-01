@@ -22,6 +22,7 @@ import {
   VolumeX} from 'lucide-react';
 
 interface Notification {
+
   id: string;
   title: string;
   message: string;'
@@ -33,16 +34,19 @@ interface Notification {
   category: string;
   actionUrl?: string;
   metadata?: Record<string, any>;
+
 }
 
 interface AdvancedNotificationCenterProps {
+  // Add your props here
+
+
   maxNotifications?: number;
   autoDismiss?: boolean;
   dismissDelay?: number;
   showUnreadCount?: boolean;
   enableSound?: boolean;'
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-}
 
 const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 
@@ -121,12 +125,12 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
     );
   }, []);
 
-  useEffect(() => {
+  useEffect(: unknown {
     setNotifications(generateMockNotifications());
   }, [generateMockNotifications]);
 
   // Auto-dismiss notifications
-  useEffect(() => {
+  useEffect(: unknown {
     if (!autoDismiss) return;
 
     const interval = setInterval(() => {
@@ -213,7 +217,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
   }, []);
 
   // Clear all notifications
-  const clearAll = useCallback(() => {
+  const clearAll = useCallback(: unknown {
     setNotifications([]);
   }, []);
 
@@ -275,7 +279,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
     }
   };
 
-  const getPositionClasses = () => {
+  const getPositionClasses = (...args: unknown[]): unknown => {
     switch (position) {
 '
       case 'top-left':'
@@ -321,7 +325,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 
       {/* Notification Panel */}
       <AnimatePresence>
-        {isOpen && (
+        {isOpen && 
           <motion.div
             initial={{ opacity: 0, y: -20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}

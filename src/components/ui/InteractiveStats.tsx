@@ -1,11 +1,14 @@
 import React from 'react';
 
 interface Stat {
+
   label: string;
   value: string;
   description: string;
 
 interface InteractiveStatsProps {
+  // Add your props here
+
   stats: Stat[];
   className?: string;
 
@@ -13,7 +16,7 @@ const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = 
 
   return()
     <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 ${className}`}>
-      {stats.map((stat, index) => (
+      {stats.map((stat, index (
         <div
           key={index}"
           className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300"

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, Users, ArrowRight, Star, Building, Globe, Zap, Shield const caseStudies = [
+
+
     {
 '
         id: 'healthcare-ai','
@@ -118,9 +120,8 @@ const industries = ['"
     { name: 'Education', count: 12, icon: <Users className="w-5 h-5"/> },'"
     { name: 'Government', count: 8, icon: <Building className="w-5 h-5"/> }
 ];
-export function CaseStudiesSection() {
-    const [selectedCase, setSelectedCase] = useState(null);
-    const [hoveredCase, setHoveredCase] = useState(null);
+    const [selectedCase, setSelectedCase] = useState (null) ;
+    const [hoveredCase, setHoveredCase] = useState (null) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -132,17 +133,11 @@ export function CaseStudiesSection() {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
 
-
     };
     const itemVariants = {
 
   hidden: { y: 30,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -171,11 +166,6 @@ export function CaseStudiesSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -202,20 +192,10 @@ export function CaseStudiesSection() {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -302,7 +282,7 @@ export function CaseStudiesSection() {
                       </span>))}"
                     {caseStudy.technologies.length > 3 && (<span className="text-zion-cyan/60 text-xs">
                         +{caseStudy.technologies.length - 3} more
-                      </span>)}
+                      </span>) }
                   </div>
                 </div>
 
@@ -321,20 +301,10 @@ export function CaseStudiesSection() {
   { opacity: 0, height: 0,
   y: 10 
 
-
-
-
-
-
 }} animate = {
 "
   { opacity: 1, height: "auto",
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -353,11 +323,6 @@ export function CaseStudiesSection() {
 
   { opacity: 0,
   x: -10 
-
-
-
-
-
 
 }} animate = {
 
@@ -391,10 +356,10 @@ export function CaseStudiesSection() {
                           </div>
                         </div>
                       </div>
-                    </motion.div>)}
+                    </motion.div>) }
                 </AnimatePresence>
               </div>
-            </motion.div>))}
+            </motion.div>) ) }
         </motion.div>
 
         {/* Call to action */}"
@@ -403,20 +368,10 @@ export function CaseStudiesSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 

@@ -165,8 +165,7 @@ const featuredListings = [
     link: '/services/iot-smart-city'},
 ];
 
-export function FeaturedListingsSection() {
-  const [hoveredListing, setHoveredListing] = useState(null);
+  const [hoveredListing, setHoveredListing] = useState (null) ;
 
   const containerVariants = {
 
@@ -219,8 +218,7 @@ export function FeaturedListingsSection() {
           viewport={{ once: true }}"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {featuredListings.map((listing, index) => (
-            <motion.div
+          {featuredListings.map ( (listing, index) => (<motion.div
               key={listing.id}
               variants={itemVariants}"
               className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
@@ -312,8 +310,7 @@ export function FeaturedListingsSection() {
                     {listing.technologies.length > 3 && ("
                       <Badge variant="outline" className="text-xs">
                         +{listing.technologies.length - 3} more
-                      </Badge>
-                    )}
+                      </Badge>) }
                   </div>
                 </div>
 
@@ -357,8 +354,7 @@ export function FeaturedListingsSection() {
 
               {/* Hover Effect Overlay */}
               <AnimatePresence>
-                {hoveredListing === listing.id && (
-                  <motion.div
+                {hoveredListing === listing.id && (<motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}"
@@ -381,11 +377,9 @@ export function FeaturedListingsSection() {
                         </Link>
                       </Button>
                     </div>
-                  </motion.div>
-                )}
+                  </motion.div>) }
               </AnimatePresence>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </motion.div>
 
         {/* CTA Section */}

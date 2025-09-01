@@ -49,6 +49,6 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
     </div>
   );
 };
-
+;
 export { Badge };
 '"`

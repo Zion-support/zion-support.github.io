@@ -391,7 +391,7 @@ export function TechnologyStackSection() {
                 : 'bg-zion-blue-dark/40 text-zion-slate-light hover:bg-zion-blue-dark/60 hover:text-white border border-zion-blue-light/30'}`}>
                 {category.icon}
                 <span>{category.name}</span>
-              </button>))}
+              </button>) ) }
           </div>
         </motion.div>
 
@@ -474,7 +474,7 @@ export function TechnologyStackSection() {
                         </span>))}"
                       {tech.features.length > 2 && (<span className="text-zion-cyan/60 text-xs">
                           +{tech.features.length - 2} more
-                        </span>)}
+                        </span>) }
                     </div>
                   </div>
 
@@ -510,7 +510,7 @@ export function TechnologyStackSection() {
                           <div className="flex flex-wrap gap-1">"
                             {tech.features.map((feature, idx) => (<span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                                 {feature}
-                              </span>))}
+                              </span>) ) }
                           </div>
                         </div>
 
@@ -527,10 +527,10 @@ export function TechnologyStackSection() {
                           <div className="text-zion-cyan font-bold text-sm">{tech.expertise} Level</div>"
                           <div className="text-zion-slate-light text-xs">Proven in {tech.projects} projects</div>
                         </div>
-                      </motion.div>)}
+                      </motion.div>) }
                   </AnimatePresence>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 

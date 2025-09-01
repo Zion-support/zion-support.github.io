@@ -17,7 +17,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
     // Initialize chatbot
-    useEffect(() => {
+    useEffect ( () => {
         if (isOpen && messages.length === 0) {
 
             addBotMessage(welcomeMessage, {
@@ -61,13 +61,13 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 
             const updated = [...prev, newMessage];
             // Keep only the last maxMessages
-            return updated.slice(-maxMessages)});
+            return updated.slice (-maxMessages) }) ;
         // Update conversation context
         if (enableContext && message.content.length > 10) {
 
             // setConversationContext(prev => [...prev.slice(-4), message.content]); // This line was removed
         }
-        return newMessage}, [maxMessages, enableContext]);
+        return newMessage}, [maxMessages, enableContext]) ;
     // Add bot message with typing effect
     const addBotMessage = useCallback((content, metadata) => {
 
@@ -83,13 +83,13 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             messageId: message.id,
             intent: metadata?.intent,
             confidence: metadata?.confidence
-        });
-        return message}, [addMessage, trackChatbotInteraction]);
+        }) ;
+        return message}, [addMessage, trackChatbotInteraction]) ;
     // Simulate AI processing
     const simulateAIProcessing = useCallback(async (userInput) => {
 
         // Simulate processing delay
-        await new Promise(resolve => setTimeout(resolve, responseDelay));
+        await new Promise (resolve => setTimeout (resolve, responseDelay) ) ;
         // Simple AI logic - in production, this would connect to a real AI service
         const input = userInput.toLowerCase();
         // Intent recognition'
@@ -132,7 +132,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         setIsTyping(true);
         try {
             // Get AI response
-            const response = await simulateAIProcessing(input);
+            const response = await simulateAIProcessing (input) ;
             // Add bot response
             addBotMessage(response, {
 '
@@ -150,7 +150,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 
                 userInput: input,
                 responseLength: response.length
-            })}
+            }) }
         catch (error) {
             // Handle error'"
             addBotMessage("I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly.", {
@@ -161,7 +161,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             trackChatbotInteraction('conversation_error', {
 '
                 error: error instanceof Error ? error.message : 'Unknown error'
-            })}
+            }) }
         finally {
 
             setIsTyping(false)}
@@ -205,11 +205,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
   { opacity: 0,
   y: 10 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -223,8 +218,8 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 }} className="flex flex-wrap gap-2 mt-3">"
       {suggestions.map((suggestion, index) => (<button key={index} onClick={() => handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">
           {suggestion}
-        </button>))}
-    </motion.div>);
+        </button>) ) }
+    </motion.div>) ;
     return (<>
       {/* Chatbot Toggle Button */}"
       <motion.button onClick={toggleChatbot} className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Open AI chatbot">"
@@ -241,20 +236,10 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
   { opacity: 0, scale: 0.9,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1, scale: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -298,11 +283,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
   { opacity: 0,'
   x: message.type === 'user' ? 20 : -20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -336,7 +316,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                           {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/>)}
                         </div>
                       </div>
-                    </motion.div>))}
+                    </motion.div>) ) }
 
                   {/* Typing Indicator */}
                   {isTyping && <TypingIndicator />}
@@ -362,8 +342,8 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                     <span>{messages.length} messages</span>
                   </div>
                 </div>
-              </>)}
-          </motion.div>)}
+              </>) }
+          </motion.div>) }
       </AnimatePresence>
     </>)};
 '"`

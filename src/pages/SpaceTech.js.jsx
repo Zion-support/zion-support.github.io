@@ -54,10 +54,10 @@ const SpaceTech = () => {
                     {tech.applications.map((app, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">"
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
                         {app}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
-              </div>))}
+              </div>) ) }
           </div>
           "
           <div className="text-center">"

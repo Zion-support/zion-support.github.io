@@ -225,5 +225,6 @@ const HealthcareSolutions = () => {
     </div>
   );
 };
+export { HealthcareSolutions };
 export default HealthcareSolutions;
 '"

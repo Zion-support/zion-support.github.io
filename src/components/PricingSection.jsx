@@ -1,6 +1,9 @@
 import React, { useState } from 'react';'
 import { motion } from 'framer-motion';
 import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building const plans = [
+import { motion } from 'framer - motion';
+
+
     {
 
         name: "Starter",
@@ -123,17 +126,11 @@ export function PricingSection() {
                 staggerChildren: 0.2,
                 delayChildren: 0.1
 
-
     };
     const itemVariants = {
 
   hidden: { y: 30,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -161,11 +158,6 @@ export function PricingSection() {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -267,7 +259,7 @@ export function PricingSection() {
                   <ArrowRight className="w-4 h-4 inline ml-2"/>
                 </button>
               </div>
-            </motion.div>))}
+            </motion.div>) ) }
         </motion.div>
 
         {/* Add-ons Section */}"
@@ -276,20 +268,10 @@ export function PricingSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -343,14 +325,14 @@ export function PricingSection() {
                   {addon.features.map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm">"
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                       <span>{feature}</span>
-                    </div>))}
+                    </div>) ) }
                 </div>
 "
                 <button className="w-full py-2 px-4 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-lg text-sm font-medium transition-all duration-300">
                   Add to Plan
                 </button>
               </div>
-            </motion.div>))}
+            </motion.div>) ) }
         </motion.div>
 
         {/* FAQ Section */}"
@@ -359,20 +341,10 @@ export function PricingSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 

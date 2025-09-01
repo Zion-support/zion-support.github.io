@@ -184,8 +184,7 @@ export function ComprehensiveServicesShowcase() {
 
 }}
         >
-          {serviceCategories.map((category) => (
-            <button
+          {serviceCategories.map ( (category) => (<button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
               className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
@@ -197,8 +196,7 @@ export function ComprehensiveServicesShowcase() {
             >
               {category.icon}
               <span>{category.name}</span>
-            </button>
-          ))}
+            </button>) ) }
         </motion.div>
 
         {/* Services Grid */}
@@ -213,7 +211,7 @@ export function ComprehensiveServicesShowcase() {
               key={service.id}"
               className="group cursor-pointer"
               variants={itemVariants}
-              onClick={() => setSelectedService(service)}
+              onClick={ () => setSelectedService (service) }
             >
               <motion.div"
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 h-full"
@@ -235,8 +233,7 @@ export function ComprehensiveServicesShowcase() {
                   {service.popular && ("
                     <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium">
                       Popular
-                    </div>
-                  )}
+                    </div>) }
                 </div>
 
                 {/* Service Info */}"
@@ -275,8 +272,7 @@ export function ComprehensiveServicesShowcase() {
                     {service.features.length > 3 && ("
                       <span className="bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full">
                         +{service.features.length - 3} more
-                      </span>
-                    )}
+                      </span>) }
                   </div>
                 </div>
 
@@ -306,8 +302,7 @@ export function ComprehensiveServicesShowcase() {
                   </div>
                 </div>
               </motion.div>
-            </motion.div>;
-          ))}
+            </motion.div>;) ) }
         </motion.div>
 
         {/* Call to Action */}
@@ -366,7 +361,7 @@ export function ComprehensiveServicesShowcase() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setSelectedService(null)}
+            onClick={ () => setSelectedService (null) }
           >
             <motion.div"
               className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
@@ -465,8 +460,7 @@ export function ComprehensiveServicesShowcase() {
                 </div>
               </div>
             </motion.div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
     </section>
   )}

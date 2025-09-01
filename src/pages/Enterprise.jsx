@@ -132,7 +132,7 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
                     {feature.description}
                   </CardDescription>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -174,7 +174,7 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
                     {plan.name === "Enterprise" ? "Contact Sales" : "Get Started"}
                   </Button>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>

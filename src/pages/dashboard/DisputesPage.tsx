@@ -1,8 +1,9 @@
+import React from 'react';
 
 import SEO from '@/components/SEO';'
 import { DisputeDashboard } from '@/components/disputes';'
 import { ProtectedRoute } from '@/components/ProtectedRoute';
-
+;
 function DisputesPage(...args[]):  {
 
   return()
@@ -25,9 +26,10 @@ function DisputesPage(...args[]):  {
     </ProtectedRoute>;
   );
 }
-
+;
+export { DisputesPage };
 export default DisputesPage;
-
+;
 export default DisputesPage;
 export default DisputesPage;
 export default DisputesPage;

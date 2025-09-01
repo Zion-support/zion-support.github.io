@@ -28,7 +28,6 @@ const mockUser = {
             description: "Provided 10 accepted answers","
             icon: "Award","
   color: "#10B981"
-        
 
 },
         {
@@ -51,7 +50,7 @@ const mockUser = {
     isVerified: true,
     isModerator: false
 };
-// Mock posts by this user
+// Mock posts by this user;
 const userPosts = [
     {
 "
@@ -115,16 +114,16 @@ export default function CommunityProfilePage() {
     useEffect(() => {
         // In a real app, we would fetch the user data here'
         // For now, we'll just use the mock data
-        setUser(mockUser);
-        setPosts(userPosts);
-        setIsLoading(false)}, [userId]);
+        setUser (mockUser) ;
+        setPosts (userPosts) ;
+        setIsLoading (false) }, [userId]) ;
     if (isLoading) {
 "
         return (<div className="container py-8">"
           <div className="flex justify-center items-center h-64">"
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
-        </div>)}
+        </div>) }
     if (!user) {
 "
         return (<div className="container py-8">
@@ -158,7 +157,7 @@ export default function CommunityProfilePage() {
                 <div className="flex justify-center mb-4">"
                   <Avatar className="h-24 w-24">
                     <AvatarImage src={user.avatar}/>
-                    <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
+                    <AvatarFallback>{user.name.charAt (0) }</AvatarFallback>
                   </Avatar>
                 </div>"
                 <CardTitle className="text-2xl flex items-center justify-center gap-2">
@@ -224,7 +223,7 @@ export default function CommunityProfilePage() {
                     <CardContent className="p-6 text-center">'"
                       <p className="text-muted-foreground">This user hasn't created  posts yet.</p>
                     </CardContent>
-                  </Card>)}
+                  </Card>) }
               </TabsContent>
               "
               <TabsContent value="activity" className="mt-6">"

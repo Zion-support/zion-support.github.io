@@ -9,8 +9,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);'
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const getFilteredServices = () => {;
-    let services: any[] = [];
+  const getFilteredServices = (...args: unknown[]): unknown => {;
+    let services: unknown[] = [];
     
     switch (activeTab) {
 '
@@ -41,8 +41,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
 ;
     return services};
 
-  const getCategories = () => {;
-    let services: any[] = [];
+  const getCategories = (...args: unknown[]): unknown => {;
+    let services: unknown[] = [];
     
     switch (activeTab) {
 '
@@ -59,8 +59,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
     const categories = [...new Set(services.map(service => service.category))];
     return categories};
 
-  const getPriceRange = () => {;
-    let services: any[] = [];
+  const getPriceRange = (...args: unknown[]): unknown => {;
+    let services: unknown[] = [];
     
     switch (activeTab) {
 '
@@ -509,7 +509,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
 "
                     <option value="all">All Categories</option>
-                    {getCategories().map((category) => (
+                    {getCategories().map(category: unknown (
                       <option key={category} value={category}>{category}</option>
                     ))}
                   </select>

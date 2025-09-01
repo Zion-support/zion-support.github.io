@@ -16,7 +16,7 @@ import { CheckCircle,
   Brain,
   Globe'
  } from 'lucide-react';
-
+;
 const caseStudies = [
   {
 
@@ -178,7 +178,8 @@ const caseStudies = [
 '
 const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];'
 const technologies = ['All', 'AI/ML', 'Cloud Computing', 'Cybersecurity', 'IoT', 'Data Analytics', 'DevOps'];
-
+;
+export { function };
 export default function CaseStudies(...args[]):  {
 '
   const [selectedIndustry, setSelectedIndustry] = useState('All');'
@@ -290,7 +291,7 @@ export default function CaseStudies(...args[]):  {
       <section className="py-16">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {filteredCaseStudies.map((study, index)  => (
+            {filteredCaseStudies.map(study: unknown, index: unknown (
               <motion.div
                 key={study.id}
                 initial = {

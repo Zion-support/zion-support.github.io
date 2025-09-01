@@ -40,17 +40,11 @@ export default function NextGenInnovativeServices() {
 
                 staggerChildren: 0.1
 
-
     };
     const itemVariants = {
 
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -72,11 +66,6 @@ export default function NextGenInnovativeServices() {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -163,7 +152,7 @@ export default function NextGenInnovativeServices() {
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="bg-white/10 border border-blue-400/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">"
                 {categories.map(category => (<option key={category} value={category} className="bg-gray-800 text-white">'
                     {category === 'all' ? 'All Categories' : category}
-                  </option>))}
+                  </option>) ) }
               </select>
             </div>
 
@@ -210,7 +199,7 @@ export default function NextGenInnovativeServices() {
                   </span>))}"
                 {service.tags.length > 4 && (<span className="text-xs px-2 py-1 bg-white/10 text-gray-300 rounded-full">
                     +{service.tags.length - 4} more
-                  </span>)}
+                  </span>) }
               </div>
 
               {/* Quick Info */}"
@@ -238,7 +227,7 @@ export default function NextGenInnovativeServices() {
                   </a>
                 </div>
               </div>
-            </motion.div>))}
+            </motion.div>) ) }
         </motion.div>
 
         {/* No Results */}"
@@ -250,7 +239,7 @@ export default function NextGenInnovativeServices() {
                 setSelectedCategory('all')}} className="text-blue-400 hover:text-blue-300 transition-colors">
               Clear filters
             </button>
-          </div>)}
+          </div>) }
       </div>
 
       {/* Service Detail Modal */}"
@@ -260,20 +249,10 @@ export default function NextGenInnovativeServices() {
   { opacity: 0,
   scale: 0.9 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }} exit = {
 
@@ -364,7 +343,7 @@ export default function NextGenInnovativeServices() {
                     {selectedService.features.map((feature, index) => (<li key={index} className="flex items-start text-gray-300">"
                         <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
                         {feature}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
 
@@ -377,7 +356,7 @@ export default function NextGenInnovativeServices() {
                     {selectedService.benefits.map((benefit, index) => (<li key={index} className="flex items-start text-gray-300">"
                         <div className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
                         {benefit}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
               </div>
@@ -389,7 +368,7 @@ export default function NextGenInnovativeServices() {
                   <div className="flex flex-wrap gap-2">"
                     {selectedService.useCases.map((useCase, index) => (<span key={index} className="px-3 py-1 bg-purple-400/20 text-purple-400 rounded-full text-sm">
                         {useCase}
-                      </span>))}
+                      </span>) ) }
                   </div>
                 </div>
 
@@ -398,7 +377,7 @@ export default function NextGenInnovativeServices() {
                   <div className="flex flex-wrap gap-2">"
                     {selectedService.targetAudience.map((audience, index) => (<span key={index} className="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-sm">
                         {audience}
-                      </span>))}
+                      </span>) ) }
                   </div>
                 </div>
               </div>
@@ -425,11 +404,11 @@ export default function NextGenInnovativeServices() {
                 {selectedService.demoUrl && (<a href={selectedService.demoUrl} target="_blank" rel="noopener noreferrer" className="flex-1 border-2 border-blue-400 text-blue-400 px-6 py-3 rounded-lg text-center font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center justify-center">"
                     <ExternalLink size={20} className="mr-2"/>
                     View Demo
-                  </a>)}
+                  </a>) }
               </div>
             </div>
           </motion.div>
-        </div>)}
+        </div>) }
 
       {/* Contact CTA */}"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
@@ -438,20 +417,10 @@ export default function NextGenInnovativeServices() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 

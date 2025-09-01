@@ -52,7 +52,7 @@ import { Home, ArrowLeft, AlertTriangle const NotFound = () => {
           </div>
         </div>
       </div>
-    </div>)};
+    </div>) };
 const ServerError = () => {
 "
     return (<div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100 flex items-center justify-center">"
@@ -84,7 +84,7 @@ const ServerError = () => {
           </div>
         </div>
       </div>
-    </div>)};
+    </div>) };
 const ErrorRoutes = () => {
     const location = useLocation();'
     // Check if it's a 500 error (you can implement your own logic here)'

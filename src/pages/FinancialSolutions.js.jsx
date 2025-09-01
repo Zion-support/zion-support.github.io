@@ -143,9 +143,9 @@ export default function FinancialSolutions() {
                   {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-300">"
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
                       {feature}
-                    </li>))}
+                    </li>) ) }
                 </ul>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>

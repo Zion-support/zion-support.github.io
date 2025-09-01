@@ -2,6 +2,9 @@ import React from 'react.ts';'
 import { motion   } from 'framer-motion.ts';'
 import { Link   } from 'react-router-dom.ts';
 import { Bot, 
+import { motion   } from 'framer - motion.ts';
+
+
   Zap, 
   Shield, 
   TrendingUp, 
@@ -397,8 +400,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
                     <p className="font-semibold text-white">{testimonial.name}</p>"
                     <p className="text-gray-400 text-sm">{testimonial.role}</p>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>

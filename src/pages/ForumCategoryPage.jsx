@@ -20,12 +20,6 @@ const categoriesInfo = {
         postCount: 45,
         adminOnly: false,"
   icon: "Briefcase"
-    
-
-
-
-
-
 
 },"
     "project-help": {
@@ -72,12 +66,6 @@ const iconMap = {
     "Code": Code,"
     "FileText": FileText,"
   "Megaphone": Megaphone
-
-
-
-
-
-
 
 };
 function CategoryContent({ categoryId, category, IconComponent, user}) {
@@ -128,11 +116,10 @@ function CategoryContent({ categoryId, category, IconComponent, user}) {
           <p className="text-muted-foreground mb-6">Be the first to start a discussion in this category!</p>
 
           {canCreatePost && <CreatePostButton categoryId={categoryId}/>}
-        </div>)}
-    </div>)}
-export default function ForumCategoryPage() {
-    const { categoryId } = useParams();
-    const { user } = useAuth();
+        </div>) }
+    </div>) }
+    const { categoryId } = useParams () ;
+    const { user } = useAuth () ;
     if (!categoryId || !categoriesInfo[categoryId]) {
 
         return <NotFound />}
@@ -144,6 +131,7 @@ export default function ForumCategoryPage() {
   `community, forum,
   ${category.id
 
+}, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com / community / category/${categoryId}`}/>
 
 
 

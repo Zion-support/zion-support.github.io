@@ -20,7 +20,6 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
                 addressRegion: 'DE','
                 postalCode: '19801','
   addressCountry: 'US'
-            
 
 },
             contactPoint: {
@@ -127,7 +126,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
             const metaTag = document.createElement('meta');
             metaTag.name = meta.name;
             metaTag.content = meta.content;
-            document.head.appendChild(metaTag)});
+            document.head.appendChild (metaTag) }) ;
         // Add resource hints
         const resourceHints = ['
             { rel: 'preconnect', href: 'https://fonts.googleapis.com' },'
@@ -140,9 +139,8 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
             const link = document.createElement('link');
             link.rel = hint.rel;
             link.href = hint.href;
-            if (hint.crossorigin)
-                link.crossOrigin = hint.crossorigin;
-            document.head.appendChild(link)});
+            if (hint.crossorigin) link.crossOrigin = hint.crossorigin;
+            document.head.appendChild (link) }) ;
         return () => {
             // Cleanup on unmount'"
             const addedScript = document.querySelector('script[type="application/ld+json"]');

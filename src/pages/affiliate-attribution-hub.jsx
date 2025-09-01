@@ -137,7 +137,7 @@ const AffiliateAttributionHub = () => {
                     <span className="text-sm text-blue-400 font-medium">Best for:</span>"
                     <span className="text-sm text-gray-300 ml-2">{model.useCase}</span>
                   </div>
-                </div>))}
+                </div>) ) }
             </div>
           </div>
 
@@ -151,9 +151,9 @@ const AffiliateAttributionHub = () => {
                     {category.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">"
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {feature}
-                      </li>))}
+                      </li>) ) }
                   </ul>
-                </div>))}
+                </div>) ) }
             </div>
           </div>
 

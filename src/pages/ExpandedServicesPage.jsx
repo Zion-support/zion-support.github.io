@@ -74,7 +74,7 @@ export default function ExpandedServicesPage() {
               </div>"
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-zion-purple">"
                 <option value="all">All Categories</option>
-                {SERVICE_CATEGORIES.map(category => (<option key={category.id} value={category.name}>
+                {SERVICE_CATEGORIES.map (category => (<option key={category.id} value={category.name}>
                     {category.name}
                   </option>))}
               </select>"
@@ -163,7 +163,7 @@ export default function ExpandedServicesPage() {
                         </Badge>))}"
                       {service.features.length > 3 && (<Badge variant="outline" className="text-xs">
                           +{service.features.length - 3} more
-                        </Badge>)}
+                        </Badge>) }
                     </div>
                   </div>
 
@@ -174,7 +174,7 @@ export default function ExpandedServicesPage() {
                       {service.benefits.slice(0, 2).map((benefit, index) => (<li key={index} className="flex items-start space-x-2 text-sm text-gray-600">"
                           <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0"/>
                           <span>{benefit}</span>
-                        </li>))}
+                        </li>) ) }
                     </ul>
                   </div>
 
@@ -208,7 +208,7 @@ export default function ExpandedServicesPage() {
                     </Button>
                   </div>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
 "
           {filteredServices.length === 0 && (<div className="text-center py-16">"
@@ -240,7 +240,7 @@ export default function ExpandedServicesPage() {
                     View Services
                   </Button>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>

@@ -135,7 +135,7 @@ export const AccessibilityProvider = ({ children }) => {
     return (<AccessibilityContext.Provider value={value}>
       {children}
     </AccessibilityContext.Provider>)};
-// Accessibility toolbar component
+// Accessibility toolbar component;
 export const AccessibilityToolbar = () => {
     const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText} = useAccessibility();"
     return (<div className="fixed bottom-4 left-4 z-50 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-4 shadow-2xl shadow-zion-cyan/20">"
@@ -168,7 +168,7 @@ export const AccessibilityToolbar = () => {
         </div>
       </div>
     </div>)};
-// Skip to main content link
+// Skip to main content link;
 export const SkipToMainContent = () => {
 "
     return (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark">

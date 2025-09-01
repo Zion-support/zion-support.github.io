@@ -99,10 +99,10 @@ export default function UltimateInnovativeServices2026(...args[]):  {
   ];
 
         return 0}
-  });
+  }) ;
 
   const toggleServiceExpansion = (serviceId: string) => {;
-    setExpandedService(expandedService === serviceId ? null : serviceId);
+    setExpandedService (expandedService === serviceId ? null : serviceId) ;
   };
 
   return ("
@@ -123,21 +123,11 @@ export default function UltimateInnovativeServices2026(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -210,8 +200,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 {categories.map(category  => ("
                   <option key={category.id} value={category.id} className="bg-zion-slate-800 text-white">
                     {category.name}
-                  </option>
-                ))}
+                  </option>) ) }
               </select>
             </div>
 
@@ -225,8 +214,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 {priceRanges.map(range  => ("
                   <option key={range.id} value={range.id} className="bg-zion-slate-800 text-white">
                     {range.name}
-                  </option>
-                ))}
+                  </option>) ) }
               </select>
             </div>
           </div>
@@ -246,8 +234,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                 }`}
 
                 {option.name}
-              </button>
-            ))}
+              </button>) ) }
           </div>
         </div>
       </section>
@@ -266,18 +253,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-              {sortedServices.map((service, index)  => (
-                <motion.div
+              {sortedServices.map ( (service, index) => (<motion.div
                   key={service.id}
                   initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
                   animate = {
@@ -285,21 +266,11 @@ export default function UltimateInnovativeServices2026(...args[]):  {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   exit = {
 
   { opacity: 0,
   y: -20 
-
-
-
-
-
 
 }}
                   transition = {
@@ -372,8 +343,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                       {service.tags.length > 3 && ("
                         <span className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-400 text-xs rounded-md">
                           +{service.tags.length - 3}
-                        </span>
-                      )}
+                        </span>) }
                     </div>
 
                     {/* Expand/Collapse Button */}
@@ -390,23 +360,16 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                         <>"
                           <Eye className="w-4 h-4" />
                           Learn More
-                        </>
-                      )}
+                        </>) }
                     </button>
 
                     {/* Expanded Service Details */}
                     <AnimatePresence>
-                      {expandedService === service.id && (
-                        <motion.div
+                      {expandedService === service.id && (<motion.div
                           initial = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                           animate = {
@@ -414,21 +377,11 @@ export default function UltimateInnovativeServices2026(...args[]):  {
   { opacity: 1,'
   height: 'auto' 
 
-
-
-
-
-
 }}
                           exit = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                           transition={{ duration: 0.3 }}"
@@ -442,8 +395,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                                 <li key={featureIndex} className="flex items-start gap-2 text-xs text-zion-slate-300">"
                                   <CheckCircle className="w-3 h-3 text-zion-cyan mt-0.5 flex-shrink-0" />
                                   {feature}
-                                </li>
-                              ))}
+                                </li>) ) }
                             </ul>
                           </div>
 
@@ -455,8 +407,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                                 <li key={benefitIndex} className="flex items-start gap-2 text-xs text-zion-slate-300">"
                                   <ZapIcon className="w-3 h-3 text-yellow-400 mt-0.5 flex-shrink-0" />
                                   {benefit}
-                                </li>
-                              ))}
+                                </li>) ) }
                             </ul>
                           </div>
 
@@ -482,12 +433,10 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                               Get Started
                             </Link>
                           </div>
-                        </motion.div>
-                      )}
+                        </motion.div>) }
                     </AnimatePresence>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </AnimatePresence>
           </div>
 
@@ -509,8 +458,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
               >
                 Clear Filters
               </button>
-            </div>;
-          )}
+            </div>;) }
         </div>
       </section>
 
@@ -523,21 +471,11 @@ export default function UltimateInnovativeServices2026(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -573,7 +511,6 @@ export default function UltimateInnovativeServices2026(...args[]):  {
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

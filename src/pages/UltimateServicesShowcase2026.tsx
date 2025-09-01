@@ -291,8 +291,7 @@ export default function UltimateServicesShowcase2026(...args: any[]): any {
                             className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full"
                           >
                             {feature}
-                          </span>
-                        ))}
+                          </span>) ) }
                       </div>
                       <a
                         href={service.href}"
@@ -300,11 +299,9 @@ export default function UltimateServicesShowcase2026(...args: any[]): any {
                       >"
                         Learn More <ArrowRight className="w-4 h-4 ml-1" />
                       </a>
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>

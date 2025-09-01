@@ -55,7 +55,7 @@ const categories = [
     features: ['Latest Tech', 'AI Solutions', 'Future-Ready'],'
     stats: '100+ Innovations'},
 ];
-
+;
 const specialServices = [
   {
 '

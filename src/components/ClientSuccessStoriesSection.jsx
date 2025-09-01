@@ -1,6 +1,8 @@
 import React, { useState } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trophy, TrendingUp, Users, DollarSign, Clock, Star, ArrowRight, Building const successStories = [
+
+
     {
 
         id: 1,
@@ -204,9 +206,8 @@ const overallStats = ["
     { icon: <DollarSign className="w-6 h-6"/>, value: "320%", label: "Average ROI" },"
     { icon: <Clock className="w-6 h-6"/>, value: "12 months", label: "Avg. Delivery Time" }
 ];
-export function ClientSuccessStoriesSection() {
-    const [selectedStory, setSelectedStory] = useState(null);
-    const [hoveredIndustry, setHoveredIndustry] = useState(null);
+    const [selectedStory, setSelectedStory] = useState (null) ;
+    const [hoveredIndustry, setHoveredIndustry] = useState (null) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -218,17 +219,11 @@ export function ClientSuccessStoriesSection() {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
 
-
     };
     const itemVariants = {
 
   hidden: { y: 30,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -257,11 +252,6 @@ export function ClientSuccessStoriesSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -288,20 +278,10 @@ export function ClientSuccessStoriesSection() {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -329,20 +309,10 @@ export function ClientSuccessStoriesSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -365,26 +335,18 @@ export function ClientSuccessStoriesSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
   delay: index * 0.1 
 
+}} onHoverStart={ () => setHoveredIndustry (index) } onHoverEnd={ () => setHoveredIndustry (null) } whileHover={{ y: -4 }} className="p - 6 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 20">
+                <h4 className="text - xl font - bold text - white mb - 4">{stat.industry}</h4>
 
 
 
@@ -407,7 +369,7 @@ export function ClientSuccessStoriesSection() {
                     <div className="text-zion-slate-light text-xs">Avg ROI</div>
                   </div>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -417,20 +379,10 @@ export function ClientSuccessStoriesSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -453,20 +405,10 @@ export function ClientSuccessStoriesSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -495,7 +437,7 @@ export function ClientSuccessStoriesSection() {
                     </div>"
                     {story.featured && (<div className="px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold rounded-full">
                         FEATURED
-                      </div>)}
+                      </div>) }
                   </div>
 
                   {/* Challenge & Solution */}"
@@ -544,30 +486,15 @@ export function ClientSuccessStoriesSection() {
   { opacity: 0, height: 0,
   y: 10 
 
-
-
-
-
-
 }} animate = {
 "
   { opacity: 1, height: "auto",
   y: 0 
 
-
-
-
-
-
 }} exit = {
 
   { opacity: 0, height: 0,
   y: 10 
-
-
-
-
-
 
 }} transition={{ duration: 0.3 }}>
                         {/* Detailed Metrics */}"
@@ -582,7 +509,7 @@ export function ClientSuccessStoriesSection() {
                                   <span className="text-zion-cyan font-semibold">{metric.after}</span>"
                                   <span className="text-zion-purple font-bold">({metric.improvement})</span>
                                 </div>
-                              </div>))}
+                              </div>) ) }
                           </div>
                         </div>
 
@@ -592,7 +519,7 @@ export function ClientSuccessStoriesSection() {
                           <div className="flex flex-wrap gap-1">"
                             {story.technologies.map((tech, idx) => (<span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                                 {tech}
-                              </span>))}
+                              </span>) ) }
                           </div>
                         </div>
 
@@ -609,10 +536,10 @@ export function ClientSuccessStoriesSection() {
                             </div>
                           </div>
                         </div>
-                      </motion.div>)}
+                      </motion.div>) }
                   </AnimatePresence>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -622,20 +549,10 @@ export function ClientSuccessStoriesSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 

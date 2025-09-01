@@ -26,8 +26,7 @@ export const EnterpriseDashboard = () => {
             trend: 'stable',
             change: 2,
             threshold: { warning: 70, critical: 90 },
-            lastUpdated: new Date()
-        },
+            lastUpdated: new Date () },
         {
 '
             id: 'memory','
@@ -38,8 +37,7 @@ export const EnterpriseDashboard = () => {
             trend: 'up',
             change: 8,
             threshold: { warning: 75, critical: 90 },
-            lastUpdated: new Date()
-        },
+            lastUpdated: new Date () },
         {
 '
             id: 'disk','
@@ -50,8 +48,7 @@ export const EnterpriseDashboard = () => {
             trend: 'stable',
             change: 1,
             threshold: { warning: 80, critical: 95 },
-            lastUpdated: new Date()
-        },
+            lastUpdated: new Date () },
         {
 '
             id: 'network','
@@ -62,10 +59,8 @@ export const EnterpriseDashboard = () => {
             trend: 'down',
             change: -5,
             threshold: { warning: 100, critical: 150 },
-            lastUpdated: new Date()
-
-    ]);
-    const [serviceStatuses] = useState([
+            lastUpdated: new Date () ]) ;
+    const [serviceStatuses] = useState ([
         {
 '
             id: 'web-server','
@@ -102,8 +97,8 @@ export const EnterpriseDashboard = () => {
             responseTime: 2,
             errorRate: 0.001
 
-    ]);
-    const [securityAlerts] = useState([
+    ]) ;
+    const [securityAlerts] = useState ([
         {
 '
             id: 'alert-1','
@@ -128,8 +123,8 @@ export const EnterpriseDashboard = () => {
             affected['user-789'],;'
             source: 'Access Control System'
 
-    ]);
-    const [userActivities] = useState([
+    ]) ;
+    const [userActivities] = useState ([
         {
 '
             id: 'activity-1','
@@ -154,10 +149,10 @@ export const EnterpriseDashboard = () => {
             userAgent: 'Firefox/89.0.2','
             status: 'success'
 
-    ]);
+    ]) ;
     // Refresh data
-    const refreshData = useCallback(async () => {
-        setIsRefreshing(true);
+    const refreshData = useCallback (async () => {
+        setIsRefreshing (true) ;
         try {
             // Simulate API call
             await new Promise(resolve => setTimeout(resolve, 1000));
@@ -168,7 +163,7 @@ export const EnterpriseDashboard = () => {
 
                 tab: activeTab,
                 dateRange
-            });
+            }) ;
 
         catch (error) {
 '
@@ -176,7 +171,7 @@ export const EnterpriseDashboard = () => {
             trackEvent('enterprise_dashboard', 'refresh_failed', 'error', undefined, {
 '
                 error: error instanceof Error ? error.message : 'Unknown error'
-            });
+            }) ;
 
         finally {
 
@@ -187,14 +182,14 @@ export const EnterpriseDashboard = () => {
 
                 tab: activeTab,
                 dateRange
-            })}
+            }) }
         catch (error) {
 '
             // console.error('Failed to refresh data:', error);'
             trackEvent('enterprise_dashboard', 'refresh_failed', 'error', null, {
 '
                 error: error instanceof Error ? error.message : 'Unknown error'
-            })}
+            }) }
         finally {
 
             setIsRefreshing(false)}
@@ -215,7 +210,7 @@ export const EnterpriseDashboard = () => {
                 alert.type.toLowerCase().includes(searchQuery.toLowerCase()));
 
         return filtered;
-    }, [securityAlerts, filterStatus, searchQuery]);
+    }, [securityAlerts, filterStatus, searchQuery]) ;
     const filtered = userActivities;
         if (searchQuery) {
 
@@ -305,7 +300,7 @@ export const EnterpriseDashboard = () => {
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>"
               <Icon className="w-4 h-4"/>
               {label}
-            </button>))}
+            </button>) ) }
         </nav>
       </div>
 
@@ -317,20 +312,10 @@ export const EnterpriseDashboard = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -349,11 +334,6 @@ export const EnterpriseDashboard = () => {
 
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
 
 }} animate = {
 
@@ -391,7 +371,7 @@ export const EnterpriseDashboard = () => {
                         {metric.lastUpdated.toLocaleTimeString()}
                       </span>
                     </div>
-                  </motion.div>))}
+                  </motion.div>) ) }
               </div>
 
               {/* Service Status Overview */}"
@@ -421,7 +401,7 @@ export const EnterpriseDashboard = () => {
                           {service.errorRate}% errors
                         </div>
                       </div>
-                    </div>))}
+                    </div>) ) }
                 </div>
               </div>
 
@@ -461,7 +441,7 @@ export const EnterpriseDashboard = () => {
                           </span>
                         </div>
                       </div>
-                    </div>))}
+                    </div>) ) }
                 </div>
               </div>
             </motion.div>)}
@@ -471,20 +451,10 @@ export const EnterpriseDashboard = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -536,20 +506,10 @@ export const EnterpriseDashboard = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -582,11 +542,6 @@ export const EnterpriseDashboard = () => {
 
   { opacity: 0,
   x: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -639,7 +594,7 @@ export const EnterpriseDashboard = () => {
                         </span>
                       </div>
                     </div>
-                  </motion.div>))}
+                  </motion.div>) ) }
               </div>
             </motion.div>)}
 '"
@@ -648,20 +603,10 @@ export const EnterpriseDashboard = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -693,11 +638,6 @@ export const EnterpriseDashboard = () => {
 
   { opacity: 0,
   x: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -745,7 +685,7 @@ export const EnterpriseDashboard = () => {
                         <span className="font-medium">Time:</span> {activity.timestamp.toLocaleString()}
                       </div>
                     </div>
-                  </motion.div>))}
+                  </motion.div>) ) }
               </div>
             </motion.div>)}
 '"
@@ -754,20 +694,10 @@ export const EnterpriseDashboard = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -796,11 +726,6 @@ export const EnterpriseDashboard = () => {
 
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
 
 }} animate = {
 
@@ -850,8 +775,8 @@ export const EnterpriseDashboard = () => {
                         <div className="text-xs text-yellow-700 dark:text-yellow-300">
                           {service.lastIncident.type} - {service.lastIncident.timestamp.toLocaleDateString()}
                         </div>
-                      </div>)}
-                  </motion.div>))}
+                      </div>) }
+                  </motion.div>) ) }
               </div>
             </motion.div>)}
 '"
@@ -860,20 +785,10 @@ export const EnterpriseDashboard = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -918,7 +833,7 @@ export const EnterpriseDashboard = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>)}
+            </motion.div>) }
         </AnimatePresence>
       </div>
     </div>)};

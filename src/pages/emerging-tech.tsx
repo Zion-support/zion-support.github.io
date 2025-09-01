@@ -179,8 +179,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
                     >"
                       <Star className="w-3 h-3 text-cyan-400" />
                       <span>{feature}</span>
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
               </div>
 
@@ -191,8 +190,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
                 <span className="font-medium">Learn More</span>"
                 <Zap className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </div>
 
@@ -227,8 +225,7 @@ const EmergingTech: React.FC = (): JSX.Element => {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default EmergingTech;

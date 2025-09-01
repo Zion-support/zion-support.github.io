@@ -1,3 +1,6 @@
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle, } from "lucide - react";
+import { Link } from 'react - router - dom';
+import { useNavigate } from 'react - router - dom';
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';'
 import { useNavigate } from 'react-router-dom';"
@@ -30,17 +33,16 @@ function ProjectDetailsContent() {
     const [isSubmittingNote, setIsSubmittingNote] = useState(false);"
     const [activeTab, setActiveTab] = useState("details");
     // Load project data
-    useEffect(() => {
-        async function loadProject() {
-            if (!projectId)
-                return;
-            setIsLoading(true);
-            const projectData = await getProjectById(projectId);
+    useEffect ( () => {
+        async function loadProject () {
+            if (!projectId) return;
+            setIsLoading (true) ;
+            const projectData = await getProjectById (projectId) ;
             if (projectData) {
 
                 setProject(projectData);
                 // Now fetch notes
-                fetchProjectNotes(projectId)}
+                fetchProjectNotes (projectId) }
             else {
 
                 toast({
@@ -51,10 +53,10 @@ function ProjectDetailsContent() {
                 router("/dashboard");"
                 navigate("/dashboard");
             }
-            setIsLoading(false);
+            setIsLoading (false) ;
 
-        loadProject();
-    }, [projectId]);
+        loadProject () ;
+    }, [projectId]) ;
     const fetchProjectNotes = async (projectId) => {
 
         try {
@@ -70,15 +72,14 @@ function ProjectDetailsContent() {
                 throw error;"
             // // // // // // // // console.error("Error fetching project notes:", err);
         }
-            setNotes(data || [])}
+            setNotes (data || []) }
         catch (err) {
 "
             // console.error("Error fetching project notes:", err)}
     };
     const handleSubmitNote = async () => {
-        if (!newNote.trim() || !project || !user)
-            return;
-        setIsSubmittingNote(true);
+        if (!newNote.trim () || !project || !user) return;
+        setIsSubmittingNote (true) ;
         try {
             const { data, error } = await supabase"
                 .from("project_notes")
@@ -157,7 +158,7 @@ function ProjectDetailsContent() {
             <p>Loading project details...</p>
           </div>
         </div>
-      </div>)}
+      </div>) }
     if (!project) {
 "
         return (<div className="container mx-auto py-8">
@@ -174,7 +175,7 @@ function ProjectDetailsContent() {
             </Button>
           </CardContent>
         </Card>
-      </div>)}
+      </div>) }
     // Check if user is either the client or the talent
     const isTalent = user?.id === project.talent_id;
     if (!isClient && !isTalent) {
@@ -211,9 +212,8 @@ function ProjectDetailsContent() {
                     </AlertDialogTrigger>
                     <AlertDialogContent>
                       <AlertDialogHeader>
-                        <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle>
-                        <AlertDialogDescription>
-                          By accepting this offer, you agree to the project terms and timeline.
+                        <AlertDialogTitle > Accept Project Offer?</AlertDialogTitle>
+                        <AlertDialogDescription > By accepting this offer, you agree to the project terms and timeline.
                           This will initiate the contract and start the project.
                         </AlertDialogDescription>
                       </AlertDialogHeader>
@@ -239,9 +239,8 @@ function ProjectDetailsContent() {
                   </AlertDialogTrigger>
                   <AlertDialogContent>
                     <AlertDialogHeader>
-                      <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle>
-                      <AlertDialogDescription>
-                        This will finalize the project and mark it as complete.
+                      <AlertDialogTitle > Mark Project as Completed?</AlertDialogTitle>
+                      <AlertDialogDescription > This will finalize the project and mark it as complete.
                         Make sure all deliverables have been provided and approved.
                       </AlertDialogDescription>
                     </AlertDialogHeader>
@@ -289,9 +288,8 @@ function ProjectDetailsContent() {
               <TabsContent value="details">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Project Scope</CardTitle>
-                    <CardDescription>
-                      Project details and expectations
+                    <CardTitle > Project Scope</CardTitle>
+                    <CardDescription > Project details and expectations
                     </CardDescription>
                   </CardHeader>
                   <CardContent>"
@@ -324,9 +322,8 @@ function ProjectDetailsContent() {
               <TabsContent value="timeline">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Project Timeline</CardTitle>
-                    <CardDescription>
-                      Key dates and milestones
+                    <CardTitle > Project Timeline</CardTitle>
+                    <CardDescription > Key dates and milestones
                     </CardDescription>
                   </CardHeader>
                   <CardContent>"
@@ -356,9 +353,8 @@ function ProjectDetailsContent() {
               <TabsContent value="documents">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Project Documents</CardTitle>
-                    <CardDescription>
-                      Agreements and relevant files
+                    <CardTitle > Project Documents</CardTitle>
+                    <CardDescription > Agreements and relevant files
                     </CardDescription>
                   </CardHeader>
                   <CardContent>"
@@ -383,7 +379,7 @@ function ProjectDetailsContent() {
                         <p className="text-sm text-muted-foreground">
                           No documents have been uploaded to this project.
                         </p>
-                      </div>)}
+                      </div>) }
                   </CardContent>
                 </Card>
               </TabsContent>
@@ -391,9 +387,8 @@ function ProjectDetailsContent() {
               <TabsContent value="notes">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Project Notes</CardTitle>
-                    <CardDescription>
-                      Shared notes and updates
+                    <CardTitle > Project Notes</CardTitle>
+                    <CardDescription > Shared notes and updates
                     </CardDescription>
                   </CardHeader>
                   <CardContent>"
@@ -417,7 +412,7 @@ function ProjectDetailsContent() {
                             <p className="text-muted-foreground">
                               No notes yet. Add the first note to this project.
                             </p>
-                          </div>)}
+                          </div>) }
                       </div>
 
                       {isOfferAccepted && (<div>"
@@ -425,7 +420,7 @@ function ProjectDetailsContent() {
                           <Button onClick={handleSubmitNote} disabled={!newNote.trim() || isSubmittingNote}>"
                             {isSubmittingNote ? "Posting..." : "Post Note"}
                           </Button>
-                        </div>)}
+                        </div>) }
                     </div>
                   </CardContent>
                 </Card>
@@ -440,7 +435,7 @@ function ProjectDetailsContent() {
           <div className="order-1 lg:order-2 lg:col-span-1">
             <Card>
               <CardHeader>
-                <CardTitle>Project Participants</CardTitle>
+                <CardTitle > Project Participants</CardTitle>
               </CardHeader>
               <CardContent>"
                 <div className="space-y-6">"
@@ -484,7 +479,7 @@ function ProjectDetailsContent() {
             {/* Project Status Card */}"
             <Card className="mt-6">
               <CardHeader>
-                <CardTitle>Project Status</CardTitle>
+                <CardTitle > Project Status</CardTitle>
               </CardHeader>
               <CardContent>"
                 <div className="space-y-2">"
@@ -536,14 +531,13 @@ function ProjectDetailsContent() {
                   <p className="text-sm text-red-600 flex items-center gap-1">"
                     <XCircle className="h-4 w-4"/> This project has been canceled.
                   </p>
-                </CardFooter>)}
+                </CardFooter>) }
             </Card>
           </div>
         </div>
       </main>
       
-    </>)}
-export default function ProjectDetails() {
+    </>) }
     return (<ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>)}

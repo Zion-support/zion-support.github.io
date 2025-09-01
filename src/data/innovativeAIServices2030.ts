@@ -1,6 +1,6 @@
 // Innovative AI Services 2030 - Zion Tech Group
 // Cutting-edge AI solutions for modern businesses
-
+;
 export interface AIService {
   id: string;
   title: string;
@@ -14,7 +14,8 @@ pricing: {
     custom: string;
     currency: string;
     pricingModel: string;
-    marketPrice: string};
+    marketPrice: string
+};
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -50,7 +51,7 @@ pricing: {
   featured: boolean;
   trending: boolean}
 
-// Zion Tech Group Contact Information
+// Zion Tech Group Contact Information;
 const zionContact = {
 
   phone: "+1 302 464 0950","
@@ -69,7 +70,7 @@ const zionContact = {
 
 
 };
-
+;
 export const innovativeAIServices2030: AIService[] = [
   {
 "

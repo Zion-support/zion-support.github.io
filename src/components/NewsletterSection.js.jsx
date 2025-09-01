@@ -58,7 +58,6 @@ export function NewsletterSection() {
 
             backgroundImage: `radial-gradient(circle at 25% 75%, currentColor 1px, transparent 1px)`,'
   backgroundSize: '50px 50px'
-        
 
 }}/>
       </div>
@@ -289,7 +288,7 @@ export function NewsletterSection() {
               <button onClick={handleUnsubscribe} className="ml-4 text-green-400 hover:text-green-300 transition-colors">"
                 <X className="w-5 h-5"/>
               </button>
-            </motion.div>)}
+            </motion.div>) }
           
           {/* Privacy notice */}"
           <motion.div className="text-center" initial = {

@@ -30,7 +30,7 @@ export const FuturisticFooter: React.FC = () => {;
   const scrollToTop = () => {;'
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date () .getFullYear () ;
   const footerSections = [
     {
 
@@ -111,21 +111,11 @@ export const FuturisticFooter: React.FC = () => {;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}
@@ -166,18 +156,12 @@ export const FuturisticFooter: React.FC = () => {;
               </motion.div>
             </div>
             {/* Footer Links */}
-            {footerSections.map((section, index) => (
-              <div key={section.title}>
+            {footerSections.map ( (section, index) => (<div role="button" key={section.title}>
                 <motion.div
                   initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
                   whileInView = {
@@ -185,22 +169,12 @@ export const FuturisticFooter: React.FC = () => {;
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   viewport={{ once: true }}
                   transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 >"
@@ -220,12 +194,10 @@ export const FuturisticFooter: React.FC = () => {;
 
                           {link.name}
                         </Link>
-                      </li>;
-                    ))}
+                      </li>;) ) }
                   </ul>
                 </motion.div>
-              </div>;
-            ))}
+              </div>;) ) }
           </div>
           {/* Additional Quick Access Section */}
           <motion.div
@@ -234,21 +206,11 @@ export const FuturisticFooter: React.FC = () => {;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             viewport={{ once: true }}
@@ -315,21 +277,11 @@ export const FuturisticFooter: React.FC = () => {;
   { opacity: 0,
   y: 20 ;
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 ;
-
-
-
-
-
 
 }}
             viewport={{ once: true }}

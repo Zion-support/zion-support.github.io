@@ -52,7 +52,7 @@ const valueMetrics = [
     color: "from-red-500 to-pink-600"
   }
 ];
-
+;
 const competitiveAdvantages = [
   {
 "
@@ -83,7 +83,7 @@ const competitiveAdvantages = [
     color: "from-orange-500 to-red-600"
   }
 ];
-
+;
 const marketComparison = [
   {
 "
@@ -113,7 +113,7 @@ const marketComparison = [
     advantage: "AI-powered detection, comprehensive zero-trust implementation"
   }
 ];
-
+;
 const successStories = [
   {
 "
@@ -144,7 +144,6 @@ const successStories = [
   }
 ];
 
-export function ValuePropositionShowcase() {
   const containerVariants = {
 
     hidden: { opacity: 0 },
@@ -238,7 +237,7 @@ export function ValuePropositionShowcase() {
               variants={itemVariants}
             >
               <motion.div
-                className={`w-20 h-20 bg-gradient-to-r ${metric.color} rounded-2xl flex items-center justify-center mx-auto mb-4 text-white`}
+                className={`w - 20 h - 20 bg - gradient - to - r ${metric.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4 text - white`}
                 variants={cardVariants}
                 whileHover={{ scale: 1.1 }}
               >
@@ -366,8 +365,7 @@ export function ValuePropositionShowcase() {
                     <p className="text-white text-sm">{comparison.advantage}</p>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -426,8 +424,7 @@ export function ValuePropositionShowcase() {
                     <div className="text-green-300 text-sm">Return on Investment</div>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 

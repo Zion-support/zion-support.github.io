@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 
 interface AccessibilityEnhancerProps {
+  // Add your props here
+
+
   children: React.ReactNode;
   role?: string;'
   'aria-label'?: string;'
@@ -9,11 +12,10 @@ interface AccessibilityEnhancerProps {
   'aria-controls'?: string;'
   'aria-haspopup'?: boolean;
   tabIndex?: number;
-  onKeyDown?: (event: React.KeyboardEvent) => void;
+  onKeyDown?: event: React.KeyboardEvent void;
   className?: string;
   focusable?: boolean;
   skipToContent?: boolean;
-}
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
@@ -33,7 +35,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (skipToContent && ref.current) {
 
       ref.current.focus();

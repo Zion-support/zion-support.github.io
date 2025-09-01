@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface SearchResult {
+
   id: string;
   title: string;
   description: string;'
@@ -9,23 +10,25 @@ interface SearchResult {
   url: string;
   tags: string[];
   relevance: number;
+
 }
 
 interface SearchFilter {
+
   type: string[];
   tags: string[];
   dateRange: {
 
     start: Date | null;
     end: Date | null;
-  };
+  
+};
 }
 
 interface SearchSuggestion {
   text: string;'
   type: 'recent' | 'popular' | 'related';
   count?: number;
-}
 
 export default function AdvancedSearch() {
 '
@@ -39,11 +42,11 @@ export default function AdvancedSearch() {
     dateRange: { start: null, end: null }
   });
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [showFilters, setShowFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState<typeof false>(false);
   const [selectedResult, setSelectedResult] = useState<number>(-1);
 
   // Mock data - in production, this would come from your backend
-  const mockData = useMemo<SearchResult[]>(() => [
+  const mockData = useMemo<SearchResult[]>(: unknown [
     {
 '
       id: '1','
@@ -117,7 +120,7 @@ export default function AdvancedSearch() {
     tags: ['SaaS', 'AI', 'Cloud', 'Security', 'Development', 'React', 'Next.js', 'AWS', 'Azure', 'GCP']
   };
 
-  const performSearch = useCallback(async () => {
+  const performSearch = useCallbackasync (: unknown {
     setIsSearching(true);
     
     // Simulate API call
@@ -140,7 +143,7 @@ export default function AdvancedSearch() {
     });
     
     // Sort by relevance
-    const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance);
+    const sortedResults = filteredResults.sort(a: unknown, b: unknown b.relevance - a.relevance);
     
     setResults(sortedResults);
     
@@ -154,8 +157,8 @@ export default function AdvancedSearch() {
   }, [query, filters, mockData, searchSuggestions]);
 
   // Debounced search
-  useEffect(() => {
-    const timer = setTimeout(() => {
+  useEffect(: unknown {
+    const timer = setTimeout(: unknown {
       if (query.trim()) {
 
         performSearch();
@@ -166,7 +169,7 @@ export default function AdvancedSearch() {
       }
     }, 300);
 
-    return () => clearTimeout(timer);
+    return : unknown clearTimeout(timer);
   }, [query, filters, performSearch]);
 
   const handleSearch = (searchQuery: string) => {
@@ -215,7 +218,7 @@ export default function AdvancedSearch() {
     }));
   };
 
-  const clearFilters = () => {
+  const clearFilters = (...args: unknown[]): unknown => {
     setFilters({
 
       type: [],
@@ -244,7 +247,7 @@ export default function AdvancedSearch() {
           <input"
             type="text"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e: unknown setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
             onFocus={() => setShowFilters(true)}"
             placeholder="Search for services, technologies, or content...""
@@ -263,15 +266,14 @@ export default function AdvancedSearch() {
 
         {/* Search Suggestions */}
         <AnimatePresence>
-          {suggestions.length > 0 && query && (
+          {suggestions.length > 0 && query && 
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}"
               className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-10"
             >
-              {suggestions.map((suggestion, index) => (
-                <button
+              {suggestions.map((suggestion, index <button
                   key={index}
                   onClick={() => handleSearch(suggestion.text)}"
                   className="w-full px-4 py-3 text-left hover:bg-gray-50 transition-colors flex items-center justify-between"
@@ -375,7 +377,7 @@ export default function AdvancedSearch() {
               )}
             </div>
 
-            {results.map((result, index) => (
+            {results.map(result: unknown, index: unknown 
               <motion.div
                 key={result.id}
                 initial={{ opacity: 0, x: -20 }}

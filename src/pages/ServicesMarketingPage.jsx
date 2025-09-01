@@ -134,7 +134,7 @@ const ServicesMarketingPage = () => {
               <ul className="text-gray-400 space-y-2">
                 <li>• 10x faster processing</li>
                 <li>• 95% accuracy improvements</li>
-                <li>• 24/7 autonomous operation</li>
+                <li>• 24 / 7 autonomous operation</li>
               </ul>
             </div>
 "

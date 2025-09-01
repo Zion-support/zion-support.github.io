@@ -20,7 +20,8 @@ import { TrendingUp,
   AlertTriangle,
   Target'
  } from 'lucide-react';
-
+;
+export { function };
 export default function AIFinancialTradingRiskManagement(...args[]):  {
 
   const features = [
@@ -250,7 +251,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
             </motion.div>
 "
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+              {features.map(feature: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -338,7 +339,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
             </motion.div>
 "
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {servicePackages.map((pkg, index)  => (
+              {servicePackages.map(pkg: unknown, index: unknown 
                 <motion.div
                   key={index}
                   initial = {
@@ -438,7 +439,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
             </motion.div>
 "
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {supportedAssets.map((asset, index)  => (
+              {supportedAssets.map(asset: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -523,7 +524,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
             </motion.div>
 "
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index)  => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -610,7 +611,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
             </motion.div>
 "
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-              {technologies.map((tech, index)  => (
+              {technologies.map(tech: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {

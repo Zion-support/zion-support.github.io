@@ -24,7 +24,8 @@ import { Shield,
   Monitor,
   Activity'
  } from 'lucide-react';
-
+;
+export { function };
 export default function AICybersecuritySuite(...args[]):  {
 
   const features = [
@@ -419,7 +420,7 @@ export default function AICybersecuritySuite(...args[]):  {
           </motion.div>
 "
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {securityMetrics.map((metric, index) => (
+            {securityMetrics.map((metric, index (
               <motion.div
                 key={index}
                 initial = {
@@ -508,7 +509,7 @@ export default function AICybersecuritySuite(...args[]):  {
           </motion.div>
 "
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -595,7 +596,7 @@ export default function AICybersecuritySuite(...args[]):  {
           </motion.div>
 "
           <div className="grid md: grid-cols-2 gap-8">
-            {services.map((service, index)  => (
+            {services.map(service: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -693,7 +694,7 @@ export default function AICybersecuritySuite(...args[]):  {
           </motion.div>
 "
           <div className="grid md: grid-cols-2 gap-8">
-            {securityModules.map((module, index)  => (
+            {securityModules.map(module: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -775,7 +776,7 @@ export default function AICybersecuritySuite(...args[]):  {
           </motion.div>
 "
           <div className="grid md: grid-cols-2 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -837,7 +838,7 @@ export default function AICybersecuritySuite(...args[]):  {
           </motion.div>
 "
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index)  => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {

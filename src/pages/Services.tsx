@@ -1,4 +1,6 @@
 import React from 'react';
+export default Services;
+
 
   const categories = ['
     { id: 'all', name: 'All Services', icon: Settings, count: allServices.length },'
@@ -17,9 +19,9 @@ import React from 'react';
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());'
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  });
+  }) ;
 
-  const featuredServices = allServices.filter(service => service.featured);
+  const featuredServices = allServices.filter (service => service.featured) ;
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">"
@@ -209,8 +211,7 @@ import React from 'react';
           </a>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default Services;

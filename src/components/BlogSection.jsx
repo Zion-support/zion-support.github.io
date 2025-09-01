@@ -39,7 +39,7 @@ export function BlogSection() {
                 <span>{post.date}</span>
                 <span>{post.readTime}</span>
               </div>
-            </article>))}
+            </article>) ) }
         </div>
       </div>
     </section>)}

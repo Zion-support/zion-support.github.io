@@ -6,8 +6,9 @@ export interface EquipmentItem {
   category: string;
   image: string;
   specs: string[];
-  availability: boolean}
-
+  availability: boolean
+}
+;
 export const EQUIPMENT_DETAILS: EquipmentItem[] = [
   {
 

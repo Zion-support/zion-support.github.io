@@ -23,11 +23,6 @@ const AdvancedServices = () => {
   { opacity: 0,
   y: 50 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -74,20 +69,10 @@ const AdvancedServices = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -131,11 +116,6 @@ const AdvancedServices = () => {
   { opacity: 0,
   y: 50 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -168,20 +148,10 @@ const AdvancedServices = () => {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }} transition = {
 
@@ -211,11 +181,6 @@ const AdvancedServices = () => {
 
   { opacity: 0,
   y: 50 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -285,20 +250,10 @@ const AdvancedServices = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -328,11 +283,6 @@ const AdvancedServices = () => {
 
   { opacity: 0,
   y: 50 
-
-
-
-
-
 
 }} whileInView = {
 

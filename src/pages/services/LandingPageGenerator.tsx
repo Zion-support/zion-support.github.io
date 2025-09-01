@@ -83,6 +83,7 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { LandingPageGenerator };
 export default LandingPageGenerator;
 '"

@@ -37,7 +37,6 @@ import {
   TrendingUp,'
   BarChart3} from 'lucide-react';
 
-export default function Compliance() {
   const complianceFrameworks = [
     {
 '
@@ -328,8 +327,7 @@ export default function Compliance() {
                     </ul>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -411,8 +409,7 @@ export default function Compliance() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -460,13 +457,11 @@ export default function Compliance() {
                       </span>
                     </div>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 }
 '"`

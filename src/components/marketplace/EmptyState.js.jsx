@@ -81,8 +81,11 @@ export function EmptyState({ type, title, description, action, icon }) {
             </Link>
             .
           </p>
-        </div>)}
-    </div>)}
+        </div>
+      )}
+    </div>
+  );
+}
 // Specific empty state variants for quick use
 export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = false }) {
 

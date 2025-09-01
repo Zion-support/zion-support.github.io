@@ -95,7 +95,7 @@ const AdvancedCybersecuritySuite = () => {
             </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive cybersecurity protection for modern enterprises. Our advanced suite 
-              combines AI-powered threat detection, automated compliance, and expert security 
+              combines AI - powered threat detection, automated compliance, and expert security 
               management to protect your digital assets.
             </p>
           </div>
@@ -124,9 +124,9 @@ const AdvancedCybersecuritySuite = () => {
                     {module.features.map((feature, idx) => (<div key={idx} className="flex items-center text-gray-300">"
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {feature}
-                      </div>))}
+                      </div>) ) }
                   </div>
-                </div>))}
+                </div>) ) }
             </div>
           </div>
           

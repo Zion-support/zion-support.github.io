@@ -92,7 +92,8 @@ interface Project {
   tasks: Task[];
   budget: number;
   client: string;
-  tags: string[]}
+  tags: string[]
+}
 
 interface Task {
   id: string;
@@ -106,7 +107,8 @@ interface Task {
   actualHours: number;
   dependencies: string[];
   tags: string[];
-  comments: Comment[]}
+  comments: Comment[]
+}
 
 interface Comment {
   id: string;
@@ -114,7 +116,8 @@ interface Comment {
   content: string;
   timestamp: string;
   likes: number;
-  replies: Comment[]}
+  replies: Comment[]
+}
 
 interface Message {
   id: string;
@@ -124,6 +127,7 @@ interface Message {
   type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[];
   reactions: { type: string; count: number 
+
 }[];
   isRead: boolean}
 
@@ -138,7 +142,8 @@ interface FileItem {
   tags: string[];
   sharedWith: string[];'
   permissions: 'view' | 'edit' | 'admin';
-  version: string}
+  version: string
+}
 
 interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
 
@@ -169,7 +174,7 @@ showProjects:  true,;
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
 
   // Sample data
-  useEffect(() => {
+  useEffect ( () => {
     const sampleFiles: FileItem[] = [
       {
 '
@@ -215,10 +220,10 @@ showProjects:  true,;
 
     ];
 
-    setTeamMembers(sampleTeamMembers);
-    setProjects(sampleProjects);
-    setMessages(sampleMessages);
-    setFiles(sampleFiles)}, []);
+    setTeamMembers (sampleTeamMembers) ;
+    setProjects (sampleProjects) ;
+    setMessages (sampleMessages) ;
+    setFiles (sampleFiles) }, []) ;
 
   // Get status color and icon'
       default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className = "w-2 h-2 bg-zinc-400 rounded-full"></div> }};
@@ -241,7 +246,7 @@ showProjects:  true,;
 
           msg.reactions.push({ type: reactionType, count: 1 })}
       }
-      return msg}))};
+      return msg}) ) };
 
   return ("
     <div className = "w-full max-w-7xl mx-auto p-6">
@@ -272,8 +277,7 @@ showProjects:  true,;
 
               {tab.icon}
               {tab.label}
-            </button>
-          ))}
+            </button>) ) }
         </div>
       </div>
 
@@ -284,11 +288,6 @@ showProjects:  true,;
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
           animate = {
@@ -311,11 +310,6 @@ showProjects:  true,;
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
               animate = {
@@ -341,21 +335,11 @@ showProjects:  true,;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ delay: 0.1 }}"
@@ -373,21 +357,11 @@ showProjects:  true,;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ delay: 0.2 }}"
@@ -405,21 +379,11 @@ showProjects:  true,;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ delay: 0.3 }}"
@@ -442,21 +406,11 @@ showProjects:  true,;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition={{ delay: index * 0.1 }}"
@@ -490,7 +444,7 @@ showProjects:  true,;
                     member.availability === 'busy' ? 'text-yellow-400 bg-yellow-400/20' :'
                     'text-red-400 bg-red-400/20'`
                   }`}>
-                    {member.availability.charAt(0).toUpperCase() + member.availability.slice(1)}
+                    {member.availability.charAt (0) .toUpperCase () + member.availability.slice (1) }
                   </span>
                 </div>;
 
@@ -509,8 +463,7 @@ showProjects:  true,;
                     {member.skills.length > 3 && ("
                       <span className="px-2 py-1 bg-zinc-800/50 text-zinc-400 text-xs rounded-full">
                         +{member.skills.length - 3} more
-                      </span>
-                    )}
+                      </span>) }
                   </div>
                 </div>
 
@@ -521,8 +474,7 @@ showProjects:  true,;
                     {member.projects.slice(0, 2).map((project) => ("
                       <div key={project} className="text-xs text-zinc-400">
                         • {project}
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
                 </div>
 
@@ -543,11 +495,9 @@ showProjects:  true,;
                     </button>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
-        </motion.div>
-      )}
+        </motion.div>) }
 
       {/* Projects Tab */}'
       {activeTab === 'projects' && showProjects && (
@@ -556,11 +506,6 @@ showProjects:  true,;
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
           animate = {
@@ -583,11 +528,6 @@ showProjects:  true,;
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
               animate = {
@@ -613,21 +553,11 @@ showProjects:  true,;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ delay: 0.1 }}"
@@ -645,21 +575,11 @@ showProjects:  true,;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ delay: 0.2 }}"
@@ -677,21 +597,11 @@ showProjects:  true,;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ delay: 0.3 }}"
@@ -714,21 +624,11 @@ showProjects:  true,;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition={{ delay: index * 0.1 }}"
@@ -821,11 +721,9 @@ showProjects:  true,;
                       className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
 
                       {tag}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
 
           {/* Add Project Button */}"
@@ -838,8 +736,7 @@ showProjects:  true,;
               Add New Project
             </button>
           </div>
-        </motion.div>
-      )}
+        </motion.div>) }
 
       {/* Communication Tab */}'
       {activeTab === 'communication' && showCommunication && (
@@ -848,11 +745,6 @@ showProjects:  true,;
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
           animate = {
@@ -875,11 +767,6 @@ showProjects:  true,;
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
               animate = {
@@ -905,21 +792,11 @@ showProjects:  true,;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ delay: 0.1 }}"
@@ -937,21 +814,11 @@ showProjects:  true,;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ delay: 0.2 }}"
@@ -974,21 +841,11 @@ showProjects:  true,;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition={{ delay: index * 0.1 }}`
@@ -1009,8 +866,7 @@ showProjects:  true,;
                       {!message.isRead && ("
                         <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
                           New
-                        </span>
-                      )}
+                        </span>) }
                     </div>
 "
                     <p className="text-zinc-300 mb-3">{message.content}</p>
@@ -1037,8 +893,7 @@ showProjects:  true,;
                           {reaction.type === 'check' && <CheckCircle className="w-3 h-3 inline mr-1" />}'"
                           {reaction.type === 'star' && <Star className="w-3 h-3 inline mr-1" />}
                           {reaction.count}
-                        </button>
-                      ))}
+                        </button>) ) }
                     </div>
                   </div>
 "
@@ -1054,8 +909,7 @@ showProjects:  true,;
                     </button>
                   </div>
                 </div>;
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
 
           {/* New Message Input */}"
@@ -1079,8 +933,7 @@ showProjects:  true,;
               </button>
             </div>
           </div>
-        </motion.div>
-      )}
+        </motion.div>) }
 
       {/* File Sharing Tab */}'
       {activeTab === 'files' && showFileSharing && (
@@ -1089,11 +942,6 @@ showProjects:  true,;
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
           animate = {
@@ -1116,11 +964,6 @@ showProjects:  true,;
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
               animate = {
@@ -1146,21 +989,11 @@ showProjects:  true,;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ delay: 0.1 }}"
@@ -1178,21 +1011,11 @@ showProjects:  true,;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ delay: 0.2 }}"
@@ -1210,21 +1033,11 @@ showProjects:  true,;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ delay: 0.3 }}"
@@ -1247,21 +1060,11 @@ showProjects:  true,;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition={{ delay: index * 0.1 }}"
@@ -1289,8 +1092,7 @@ showProjects:  true,;
                           className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
 
                           {tag}
-                        </span>
-                      ))}
+                        </span>) ) }
                     </div>
                   </div>
 "
@@ -1306,8 +1108,7 @@ showProjects:  true,;
                     </button>
                   </div>
                 </div>;
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
 
           {/* Upload Files */}"
@@ -1321,9 +1122,7 @@ showProjects:  true,;
               </button>
             </div>;
           </div>;
-        </motion.div>;
-      )};
-    </div>;
-  );
+        </motion.div>;) };
+    </div>;) ;
 };
 '"`

@@ -21,8 +21,7 @@ import {
   MessageCircle'
 } from 'lucide-react';
 
-export default function AccessibilityPage() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date () .getFullYear () ;
 
   const accessibilityFeatures = [
     {
@@ -229,11 +228,9 @@ export default function AccessibilityPage() {
                       <li key={idx} className="flex items-center text-gray-300">"
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {item}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
-                </div>
-              ))}
+                </div>) ) }
             </div>
           </div>
 
@@ -351,7 +348,6 @@ export default function AccessibilityPage() {
           </div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"

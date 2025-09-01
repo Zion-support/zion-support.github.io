@@ -10,11 +10,11 @@ interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
 export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
   const [isFavorited, setIsFavorited] = useState(false);
 
-  const handleToggleFavorite = (e: React.MouseEvent) => {;
-    e.stopPropagation();
-    setIsFavorited(!isFavorited);
+  const handleToggleFavorite = useCallback ( (e: React.MouseEvent) => {;
+    e.stopPropagation () ;
+    setIsFavorited (!isFavorited) ;
 
-    // Here you would typically make an API call to save/remove from favorites
+    // Here you would typically make an API call to save / remove from favorites
     if (isFavorited) {
 
       // Remove from favorites
@@ -53,7 +53,6 @@ className: {`w-4 h-4 transition-all duration-300 ${;'
           isFavorited ? 'fill-current' : '';`
         }`} ;
       />;
-    </button>;
-  );
+    </button>;) ;
 }
 '`

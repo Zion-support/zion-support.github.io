@@ -193,7 +193,7 @@ export function CategoriesSection({ showTitle = true }) {
                     {category.features.map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm">"
                         <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                         <span>{feature}</span>
-                      </div>))}
+                      </div>) ) }
                   </div>
 
                   {/* Stats */}"
@@ -210,7 +210,7 @@ export function CategoriesSection({ showTitle = true }) {
                   </div>
                 </motion.div>
               </Link>
-            </motion.div>))}
+            </motion.div>) ) }
         </motion.div>
         
         {/* Enhanced featured services section */}"
@@ -261,7 +261,7 @@ export function CategoriesSection({ showTitle = true }) {
                     </p>
                   </div>
                 </Link>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
           
           {/* View all services button */}"

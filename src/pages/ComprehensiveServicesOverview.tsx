@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react.ts';'
 import { Link  } from 'react-router-dom.ts';'
 import { motion  } from 'framer-motion.ts';
 import { Brain,
+import { motion  } from 'framer - motion.ts';
+
 
   Cloud,
   Shield,

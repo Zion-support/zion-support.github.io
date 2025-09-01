@@ -66,7 +66,7 @@ const securityFeatures = [
     color: "from-teal-500 to-green-600";
   };
 ];
-
+;
 const complianceFeatures = [
   {
 "
@@ -111,21 +111,11 @@ export function SecurityComplianceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -160,7 +150,7 @@ export function SecurityComplianceSection() {
 }}"
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >;
-          {securityMetrics.map((metric, index)  => {;
+          {securityMetrics.map ( (metric, index) => {;
             const IconComponent = metric.icon;
             return ("
               <div key = {metric.label} className="text-center">"
@@ -178,21 +168,11 @@ export function SecurityComplianceSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               viewport={{ once: true }}
@@ -200,11 +180,6 @@ export function SecurityComplianceSection() {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
             >"
@@ -225,8 +200,7 @@ export function SecurityComplianceSection() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
 
         {/* Compliance Features */}
@@ -237,21 +211,11 @@ export function SecurityComplianceSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -259,11 +223,6 @@ export function SecurityComplianceSection() {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}
         >"
@@ -285,8 +244,7 @@ export function SecurityComplianceSection() {
                     </li>
                   ))}
                 </ul>
-              </div>
-            ))}
+              </div>) ) }
           </div>
         </motion.div>
 
@@ -298,21 +256,11 @@ export function SecurityComplianceSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -320,11 +268,6 @@ export function SecurityComplianceSection() {
 
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
 
 }}
         >"
@@ -362,21 +305,11 @@ export function SecurityComplianceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -384,11 +317,6 @@ export function SecurityComplianceSection() {
 
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
 
 }}
         >"
@@ -413,16 +341,14 @@ export function SecurityComplianceSection() {
           </div>
         </motion.div>
       </div>;
-    </section>;
-  )};
+    </section>;) };
 
 export default SecurityComplianceSection;"
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 }
 
 export default SecurityComplianceSection;

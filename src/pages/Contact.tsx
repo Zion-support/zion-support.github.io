@@ -58,7 +58,7 @@ export default function Contact() {
   ) => {
 
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData (prev => ({ ...prev, [name]: value }) ) ;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -315,8 +315,7 @@ export default function Contact() {
                       className="bg-gray-800 text-white"
                     >
                       {option.label}
-                    </option>
-                  ))}
+                    </option>) ) }
                 </select>
               </div>
 
@@ -442,7 +441,6 @@ export default function Contact() {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 '"`

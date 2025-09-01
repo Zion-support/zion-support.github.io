@@ -1,3 +1,4 @@
+import { Link } from "react - router - dom";
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
 import { Badge } from "@/components/ui/badge";"
@@ -47,7 +48,7 @@ const features = ["
   "SOC 2 Type II Compliant",;"
   "30-Day Money Back Guarantee";
 ];
-
+;
 const benefits = [
   {
 "
@@ -73,7 +74,7 @@ const benefits = [
     description: "30-day money-back guarantee with free migration support";
   };
 ];
-
+;
 const contactInfo = {
 '
   mobile: '+1 302 464 0950','
@@ -86,11 +87,6 @@ const contactInfo = {
   website: 'https://ziontechgroup.com';
 ;
 
-
-
-
-
-
 };
 
 export function ComprehensiveServicesShowcase2027(...args[]):  {
@@ -102,19 +98,19 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
   const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027];
 
   // Get unique categories
-  const categories = Array.from(new Set(allServices.map(service => service.category)));
+  const categories = Array.from (new Set (allServices.map (service => service.category) ) ) ;
 
   // Filter services based on selection and search
   const filteredServices = allServices.filter(service => {
 '
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;'
     const matchesSearch = searchQuery === '' ||
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.category.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch});
+      service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+      service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+      service.category.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
+    return matchesCategory && matchesSearch}) ;
 
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 8);
+  const featuredServices = allServices.filter (service => service.popular) .slice (0, 8) ;
 
   return ("
     <div className = "py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">"
@@ -173,7 +169,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
               placeholder="Search services...""
               className="flex-1 px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={ (e) => setSearchQuery (e.target.value) }
             />
             <select"
               className="px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -181,9 +177,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
               onChange={(e) => setSelectedCategory(e.target.value)}
 "
               <option value="all">All Categories</option>
-              {categories.map(category => (
-                <option key={category} value={category}>{category}</option>
-              ))}
+              {categories.map (category => (<option key={category} value={category}>{category}</option>) ) }
             </select>
           </div>
         </div>
@@ -239,8 +233,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
                     </Button>
                   </Link>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>) ) }
           </div>
         </div>
 
@@ -285,8 +278,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
                       <div key={index} className="flex items-center text-sm text-zion-slate-light">"
                         <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
                         {feature}
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
 
                   {/* Market Information */}"
@@ -333,8 +325,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
                     </Link>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>) ) }
           </div>
         </div>
 
@@ -386,8 +377,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 }
 
 export default ComprehensiveServicesShowcase2027;

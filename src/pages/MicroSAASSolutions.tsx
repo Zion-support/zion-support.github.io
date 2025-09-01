@@ -195,7 +195,7 @@ export default function MicroSAASSolutions(...args[]):  {
 "
               <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
                 Transform your business with custom Micro SAAS solutions. From development to deployment,
-                we deliver scalable, secure, and efficient software-as-a-service applications.
+                we deliver scalable, secure, and efficient software - as - a-service applications.
               </p>
 "
               <div className="flex flex-wrap justify-center gap-4 text-sm">"
@@ -247,8 +247,7 @@ export default function MicroSAASSolutions(...args[]):  {
                       </div>
                     ))}
                   </div>
-                </div>;
-              ))}
+                </div>;) ) }
             </div>
           </div>
         </section>
@@ -336,8 +335,7 @@ export default function MicroSAASSolutions(...args[]):  {
                   <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                     {step.duration}
                   </span>
-                </div>
-              ))}
+                </div>) ) }
             </div>
           </div>
         </section>

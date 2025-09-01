@@ -265,8 +265,7 @@ const InnovativeServicesOverview2025 = () => {
                   <ArrowRight className="w-5 h-5 mr-2" />
                   Learn More
                 </a>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -312,8 +311,7 @@ const InnovativeServicesOverview2025 = () => {
                 >
                   View Details
                 </a>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -371,8 +369,7 @@ const InnovativeServicesOverview2025 = () => {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 };
 
 export default InnovativeServicesOverview2025;

@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { Route, Routes  } from 'react-router-dom.ts';'
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
@@ -247,6 +248,7 @@ const DashboardRoutes = () => {
     </Routes>;
   );
 };
-
+;
+export { DashboardRoutes };
 export default DashboardRoutes;
 }}}}'"

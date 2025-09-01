@@ -78,7 +78,8 @@ function ReviewsModerationContent() {
         </Card>
       </main>
       
-    </>)}
+    </>)};
+export { function };
 export default function ReviewsModeration() {
     return (<ProtectedRoute>
       <ReviewsModerationContent />

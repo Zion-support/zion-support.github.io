@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-// Read the file
+// Read the file;
 const filePath = 'data/2027-cutting-edge-comprehensive-services.ts';
 let content = fs.readFileSync(filePath, 'utf8');
 

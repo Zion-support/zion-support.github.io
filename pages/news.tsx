@@ -2,7 +2,8 @@ import React from 'react.ts''
 import { Link  } from 'react-router-dom.ts''
 import { Calendar, Clock, ArrowRight, Tag, User  } from 'lucide-react'
 
-
+;
+export { function };
 export default function News(...args[]):  {
 
 	const newsArticles = [
@@ -96,7 +97,7 @@ export default function News(...args[]):  {
 			<section className="py-12 border-b border-gray-200">"
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="flex flex-wrap gap-4 justify-center">
-						{categories.map((category) => (
+						{categories.map((category (
 							<button
 								key={category}"
 								className="px-4 py-2 rounded-full text-sm font-medium transition-colors hover:bg-blue-50 hover:text-blue-600"

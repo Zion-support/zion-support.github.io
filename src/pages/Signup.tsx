@@ -25,6 +25,7 @@ import {
   Award} from 'lucide-react';
 
 interface SignupForm {
+
   firstName: string;
   lastName: string;
   email: string;
@@ -36,7 +37,6 @@ interface SignupForm {
   confirmPassword: string;
   agreeToTerms: boolean;
   agreeToMarketing: boolean;
-}
 
 const Signup: React.FC = () => {
   const navigate = useNavigate();
@@ -168,7 +168,7 @@ const Signup: React.FC = () => {
     return { score: 4, label: 'Strong', color: 'text-green-400' };
   };
 
-  const passwordStrength = getPasswordStrength(formData.password);
+  const passwordStrength = getPasswordStrength (formData.password) ;
 
   const benefits = [
     {
@@ -225,28 +225,24 @@ const Signup: React.FC = () => {
             </p>
           </motion.div>
 
-          {/* Error/Success Messages */}
-          {error && (
-            <motion.div
+          {/* Error / Success Messages */}
+          {error && (<motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}"
               className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3 text-red-400"
             >"
               <AlertCircle className="w-5 h-5" />
               {error}
-            </motion.div>
-          )}
+            </motion.div>) }
 
-          {success && (
-            <motion.div
+          {success && (<motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}"
               className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3 text-green-400"
             >"
               <CheckCircle className="w-5 h-5" />
               {success}
-            </motion.div>
-          )}
+            </motion.div>) }
 
           {/* Signup Form */}
           <motion.form
@@ -443,8 +439,7 @@ const Signup: React.FC = () => {
                     <p className={`text-xs ${passwordStrength.color}`}>
                       {passwordStrength.label}
                     </p>
-                  </div>
-                )}
+                  </div>) }
               </div>
 
               <div>"
@@ -597,8 +592,7 @@ const Signup: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.8 }}"
               className="space-y-6 mb-8"
             >
-              {benefits.map((benefit, index) => (
-                <motion.div
+              {benefits.map ( (benefit, index) => (<motion.div
                   key={benefit.title}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -616,8 +610,7 @@ const Signup: React.FC = () => {
                       {benefit.description}
                     </p>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </motion.div>
 
             <motion.div
@@ -626,8 +619,7 @@ const Signup: React.FC = () => {
               transition={{ duration: 0.8, delay: 1.2 }}"
               className="grid grid-cols-2 gap-6"
             >
-              {stats.map((stat, index) => (
-                <motion.div
+              {stats.map ( (stat, index) => (<motion.div
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -662,8 +654,7 @@ const Signup: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default Signup;

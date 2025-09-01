@@ -15,9 +15,13 @@ interface PerformanceMetrics {
   fid: number; // First Input Delay
   cls: number; // Cumulative Layout Shift
   ttfb: number; // Time to First Byte
+
 }
 
 interface PerformanceMonitorProps {
+  // Add your props here
+
+
   showDetails?: boolean;
   threshold?: {
 
@@ -26,7 +30,8 @@ interface PerformanceMonitorProps {
     fid: number;
     cls: number;
     ttfb: number;
-  };
+  
+};
 }
 
 export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
@@ -208,10 +213,10 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }
 
       return () => {
-        fcpObserver.disconnect();
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
+        fcpObserver.disconnect () ;
+        lcpObserver.disconnect () ;
+        fidObserver.disconnect () ;
+        clsObserver.disconnect () ;
       };
     }
   }, []);
@@ -222,13 +227,13 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const score = calculatePerformanceScore(metrics);
       setPerformanceScore(score);
     }
-  }, [metrics, calculatePerformanceScore]);
+  }, [metrics, calculatePerformanceScore]) ;
 
-  useEffect(() => {
+  useEffect ( () => {
     // Show monitor after 3 seconds
-    const timer = setTimeout(() => setIsVisible(true), 3000);
-    return () => clearTimeout(timer);
-  }, []);
+    const timer = setTimeout ( () => setIsVisible (true) , 3000) ;
+    return () => clearTimeout (timer) ;
+  }, []) ;
 
   if (!isVisible || !showDetails) return null;
 
@@ -347,8 +352,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </span>
         </div>
       </div>
-    </motion.div>
-  );
+    </motion.div>) ;
 };
 
 export default PerformanceMonitor;

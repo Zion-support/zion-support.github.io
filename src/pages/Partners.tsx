@@ -1,4 +1,6 @@
 import React from 'react';
+export default Partners;
+
 
 const Partners = () => {
   return()
@@ -50,8 +52,7 @@ const Partners = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default Partners;

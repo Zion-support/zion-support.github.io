@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Brain, 
+import { EMERGING_TECH_SERVICES_2025 } from "../data / emergingTechServices2025";
+import { motion, AnimatePresence  } from 'framer - motion.ts';
+
+
   Cpu, 
   Atom, 
   Zap, 
@@ -53,9 +57,9 @@ const EmergingTechShowcase2025: React.FC = () => {;'
 '
     const filteredServices = selectedCategory === 'all';
     ? EMERGING_TECH_SERVICES_2025;
-    : EMERGING_TECH_SERVICES_2025.filter(service => service.category === selectedCategory);
+    : EMERGING_TECH_SERVICES_2025.filter (service => service.category === selectedCategory) ;
 
-  useEffect(() => {
+  useEffect ( () => {
     if (autoPlay) {
 
       const interval = setInterval(() => {;
@@ -63,10 +67,10 @@ const EmergingTechShowcase2025: React.FC = () => {;'
       }, 5000);
       return () => clearInterval(interval);
 
-  }, [autoPlay, filteredServices.length]);
+  }, [autoPlay, filteredServices.length]) ;
 
   const getCategoryIcon = (category: string) => {;
-    const categoryData = categories.find(cat => cat.id === category);
+    const categoryData = categories.find (cat => cat.id === category) ;
     return categoryData ? categoryData.icon : Globe};
 
           "
@@ -79,32 +83,17 @@ const EmergingTechShowcase2025: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 whileHover={{ y: -10 }}"
@@ -148,8 +137,7 @@ const EmergingTechShowcase2025: React.FC = () => {;'
 
                   {service.ctaLabel}
                 </motion.button>;
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -206,8 +194,7 @@ const EmergingTechShowcase2025: React.FC = () => {;'
 
       {/* Service Detail Modal */}
       <AnimatePresence>
-        {selectedService && (
-          <motion.div
+        {selectedService && (<motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}"
@@ -220,29 +207,17 @@ const EmergingTechShowcase2025: React.FC = () => {;'
   { scale: 0.9,
   opacity: 0 
 
-
-
-
-
-
 }}
               animate = {
 
   { scale: 1,
   opacity: 1 
 
-
-
-
-
-
 }}
               exit = {
 
   { scale: 0.9,
   opacity: 0 
-
-
 
 ;
 ;
@@ -251,8 +226,8 @@ const EmergingTechShowcase2025: React.FC = () => {;'
               className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto";
               onClick={(e) => e.stopPropagation()};
             >;
-              {(() => {;
-                const service = EMERGING_TECH_SERVICES_2025.find(s => s.id === selectedService);
+              { ( () => {;
+                const service = EMERGING_TECH_SERVICES_2025.find (s => s.id === selectedService) ;
                 if (!service) return null;
 
                 return()
@@ -287,8 +262,7 @@ const EmergingTechShowcase2025: React.FC = () => {;'
                             <div key={index} className="flex items-center gap-2 text-gray-300">"
                               <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                               <span>{feature}</span>
-                            </div>
-                          ))}
+                            </div>) ) }
                         </div>
                       </div>
 
@@ -299,8 +273,7 @@ const EmergingTechShowcase2025: React.FC = () => {;'
                             <div key={index} className="flex items-center gap-2 text-gray-300">"
                               <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                               <span>{benefit}</span>
-                            </div>
-                          ))}
+                            </div>) ) }
                         </div>
                       </div>
                     </div>
@@ -340,12 +313,10 @@ const EmergingTechShowcase2025: React.FC = () => {;'
                         Close;
                       </motion.button>;
                     </div>;
-                  </div>;
-                );
-              })()}
+                  </div>;) ;
+              }) () }
             </motion.div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
     </div>
   )};

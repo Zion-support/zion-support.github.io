@@ -150,11 +150,6 @@ const AdvancedServiceInnovationHub = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -195,11 +190,6 @@ const AdvancedServiceInnovationHub = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -217,7 +207,7 @@ const AdvancedServiceInnovationHub = () => {
                 <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">
                   {categories.map(category => (<option key={category.id} value={category.id}>
                       {category.name}
-                    </option>))}
+                    </option>) ) }
                 </select>
               </div>
 
@@ -255,11 +245,6 @@ const AdvancedServiceInnovationHub = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -275,11 +260,6 @@ const AdvancedServiceInnovationHub = () => {
 
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -307,7 +287,7 @@ const AdvancedServiceInnovationHub = () => {
                             <Badge className={getImpactColor(trend.impact)}>
                               {trend.impact} Impact
                             </Badge>
-                            <Badge className={getStatusColor(trend.status)}>
+                            <Badge className={getStatusColor (trend.status) }>
                               {trend.status}
                             </Badge>
                           </div>
@@ -347,7 +327,7 @@ const AdvancedServiceInnovationHub = () => {
                         <div className="flex flex-wrap gap-1 mt-1">"
                           {trend.technologies.slice(0, 3).map((tech, idx) => (<Badge key={idx} variant="outline" className="text-xs">
                               {tech}
-                            </Badge>))}
+                            </Badge>) ) }
                         </div>
                       </div>
 
@@ -356,26 +336,21 @@ const AdvancedServiceInnovationHub = () => {
                         <div className="flex flex-wrap gap-1 mt-1">"
                           {trend.keyPlayers.slice(0, 3).map((player, idx) => (<Badge key={idx} variant="outline" className="text-xs">
                               {player}
-                            </Badge>))}
+                            </Badge>) ) }
                         </div>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>))}
+              </motion.div>) ) }
           </motion.div>
-        </>)}
+        </>) }
 
       {/* Future Roadmap View */}'
       {viewMode === 'roadmap' && (<motion.div initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -392,11 +367,6 @@ const AdvancedServiceInnovationHub = () => {
 
   { opacity: 0,
   x: -20 
-
-
-
-
-
 
 }} animate = {
 
@@ -451,7 +421,7 @@ const AdvancedServiceInnovationHub = () => {
                         {roadmap.milestones.map((milestone, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">"
                             <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
                             {milestone}
-                          </li>))}
+                          </li>) ) }
                       </ul>
                     </div>
 
@@ -464,7 +434,7 @@ const AdvancedServiceInnovationHub = () => {
                         {roadmap.challenges.map((challenge, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">"
                             <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                             {challenge}
-                          </li>))}
+                          </li>) ) }
                       </ul>
                     </div>
 
@@ -477,25 +447,20 @@ const AdvancedServiceInnovationHub = () => {
                         {roadmap.opportunities.map((opportunity, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">"
                             <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
                             {opportunity}
-                          </li>))}
+                          </li>) ) }
                       </ul>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>))}
-        </motion.div>)}
+            </motion.div>) ) }
+        </motion.div>) }
 
       {/* Strategic Insights View */}'
       {viewMode === 'insights' && (<motion.div initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -645,18 +610,13 @@ const AdvancedServiceInnovationHub = () => {
               </div>
             </CardContent>
           </Card>
-        </motion.div>)}
+        </motion.div>) }
 
       {/* CTA Section */}
       <motion.div initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 

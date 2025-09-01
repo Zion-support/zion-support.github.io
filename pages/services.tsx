@@ -4,7 +4,8 @@ import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart
 '
 import { additionalEnhancedServices } from '../data/additional-real-services''
 import { enhancedServices2025 } from '../data/enhanced-services-2025'
-
+;
+export { function };
 export default function Services(...args[]):  {
 '
 	const [searchTerm, setSearchTerm] = useState('')'
@@ -54,7 +55,7 @@ export default function Services(...args[]):  {
 	const currentServices = filteredServices.slice(startIndex, endIndex)
 
 	// Reset to first page when filters change
-	React.useEffect(() => {
+	React.useEffect(: unknown {
 		setCurrentPage(1)
 	}, [searchTerm, selectedCategory, sortBy])
 
@@ -65,14 +66,14 @@ export default function Services(...args[]):  {
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
 
-	const goToNextPage = () => {
+	const goToNextPage = (...args: unknown[]): unknown => {
 		if (currentPage < totalPages) {
 
 			goToPage(currentPage + 1)
 		}
 	}
 
-	const goToPreviousPage = () => {
+	const goToPreviousPage = (...args: unknown[]): unknown => {
 		if (currentPage > 1) {
 
 			goToPage(currentPage - 1)
@@ -354,8 +355,7 @@ export default function Services(...args[]):  {
 							>"
 								<ChevronLeft className="h-5 w-5" />
 							</button>
-							{Array.from({ length: totalPages }, (_, i) => (
-								<button
+							{Array.from({ length: totalPages }, (_, i <button
 									key={i + 1}
 									onClick={() => goToPage(i + 1)}'`
 									className={`p-2 rounded-full text-gray-600 hover:bg-gray-100 transition-all duration-200 ${currentPage === i + 1 ? 'bg-blue-600 text-white' : ''}`}

@@ -221,7 +221,7 @@ const AILegalDocumentAnalyzer = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}"
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
@@ -262,7 +262,7 @@ const AILegalDocumentAnalyzer = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}"
                 className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50"
@@ -303,7 +303,7 @@ const AILegalDocumentAnalyzer = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 className={`relative rounded-xl p-8 ${

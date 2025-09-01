@@ -82,8 +82,7 @@ export function NotFoundPage(...args: any[]): any {
                       {page.name}
                     </span>
                   </Link>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
 
@@ -118,13 +117,13 @@ export function NotFoundPage(...args: any[]): any {
                   to="/contact""
                   className="inline-flex items-center space-x-2 px-6 py-3 bg-cyan-500/20 text-cyan-400 rounded-lg hover:bg-cyan-500/30 transition-colors border border-cyan-500/30"
                 >
-                  <span>Contact Support</span>
+                  <span > Contact Support</span>
                 </Link>
                 <a"
                   href="mailto:contact@ziontechgroup.com""
                   className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-700 text-gray-300 rounded-lg hover:bg-gray-600 transition-colors"
                 >
-                  <span>Send Email</span>
+                  <span > Send Email</span>
                 </a>
               </div>
             </div>

@@ -119,9 +119,8 @@ const industries = ['"
     { name: 'Education', count: 12, icon: <Users className="w-5 h-5"/> },'"
     { name: 'Government', count: 8, icon: <Building className="w-5 h-5"/> }
 ];
-export function CaseStudiesSection() {
-    const [selectedCase, setSelectedCase] = useState(null);
-    const [hoveredCase, setHoveredCase] = useState(null);
+    const [selectedCase, setSelectedCase] = useState (null) ;
+    const [hoveredCase, setHoveredCase] = useState (null) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -268,7 +267,7 @@ export function CaseStudiesSection() {
                       </span>))}"
                     {caseStudy.technologies.length > 3 && (<span className="text-zion-cyan/60 text-xs">
                         +{caseStudy.technologies.length - 3} more
-                      </span>)}
+                      </span>) }
                   </div>
                 </div>
 
@@ -332,10 +331,10 @@ export function CaseStudiesSection() {
                           </div>
                         </div>
                       </div>
-                    </motion.div>)}
+                    </motion.div>) }
                 </AnimatePresence>
               </div>
-            </motion.div>))}
+            </motion.div>) ) }
         </motion.div>
 
         {/* Call to action */}"

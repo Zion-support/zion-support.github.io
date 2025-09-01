@@ -24,8 +24,9 @@ import {
   Monitor,'
   Smartphone} from 'lucide-react';'
 import { SEO } from '@/components/SEO';
-
-export default function DigitalTransformation() {
+;
+export { function };
+export default function DigitalTransformation(...args: unknown[]): unknown {
   const services = [
     {
 '
@@ -193,7 +194,7 @@ export default function DigitalTransformation() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -233,7 +234,7 @@ export default function DigitalTransformation() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+            {services.map(service: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -278,7 +279,7 @@ export default function DigitalTransformation() {
 "
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
             <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
+              {benefits.slice(0, 3).map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -292,7 +293,7 @@ export default function DigitalTransformation() {
               ))}
             </div>"
             <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
+              {benefits.slice(3).map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index + 3}
                   initial={{ opacity: 0, x: 20 }}
@@ -327,7 +328,7 @@ export default function DigitalTransformation() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}"
                 className="text-center"

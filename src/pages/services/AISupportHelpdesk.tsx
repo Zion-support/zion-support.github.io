@@ -3,7 +3,8 @@ import { motion  } from 'framer-motion.ts';'
 import { Link  } from 'react-router-dom.ts';'
 import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone  } from 'lucide-react';'
 import { SEO  } from '@/components/SEO';
-
+;
+export { function };
 export default function AISupportHelpdesk(...args[]):  {
 
   const features = [
@@ -279,7 +280,7 @@ export default function AISupportHelpdesk(...args[]):  {
             </div>
             "
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+              {features.map((feature, index (
                 <motion.div
                   key={index}
                   initial = {
@@ -341,7 +342,7 @@ export default function AISupportHelpdesk(...args[]):  {
             </div>
             "
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiCapabilities.map((capability, index)  => (
+              {aiCapabilities.map(capability: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -403,7 +404,7 @@ export default function AISupportHelpdesk(...args[]):  {
             </div>
             "
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {supportChannels.map((channel, index)  => (
+              {supportChannels.map(channel: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -465,7 +466,7 @@ export default function AISupportHelpdesk(...args[]):  {
             </div>
             "
             <div className="grid md: grid-cols-2 gap-8">
-              {benefits.map((benefit, index)  => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -529,7 +530,7 @@ export default function AISupportHelpdesk(...args[]):  {
             </div>
             "
             <div className="grid md: grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
+              {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {

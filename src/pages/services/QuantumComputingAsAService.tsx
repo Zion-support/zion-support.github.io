@@ -238,7 +238,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
           "
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map((benefit, index (
               <motion.div
                 key={index}
                 initial = {
@@ -300,7 +300,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
           "
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -362,7 +362,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
           "
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index)  => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -461,7 +461,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
           "
           <div className="grid md: grid-cols-3 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -528,7 +528,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
           "
           <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index)  => (
+            {integrations.map(integration: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {

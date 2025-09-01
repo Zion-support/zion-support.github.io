@@ -88,7 +88,7 @@ export default function Services2028(...args: any[]): any {
       (selectedPriceRange === 'high' && service.price >= 5000);
 
     return matchesSearch && matchesCategory && matchesPrice;
-  });
+  }) ;
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -102,11 +102,11 @@ export default function Services2028(...args: any[]): any {
       case 'rating':
         return b.rating - a.rating;'
       case 'name':
-        return a.title.localeCompare(b.title);
+        return a.title.localeCompare (b.title) ;
       default:
         return b.featured ? 1 : -1;
     }
-  });
+  }) ;
 
   const contactInfo = {
 '
@@ -229,8 +229,7 @@ export default function Services2028(...args: any[]): any {
                   {categories.map(category => (
                     <option key={category} value={category}>'
                       {category === 'all' ? 'All Categories' : category}
-                    </option>
-                  ))}
+                    </option>) ) }
                 </select>
               </div>
 
@@ -363,8 +362,7 @@ export default function Services2028(...args: any[]): any {
                     {service.features.length > 3 && ("
                       <div className="text-neon-cyan/70 text-sm">
                         +{service.features.length - 3} more features
-                      </div>
-                    )}
+                      </div>) }
                   </div>
                 </div>
 
@@ -392,11 +390,9 @@ export default function Services2028(...args: any[]): any {
                       className="px-2 py-1 bg-neon-cyan/10 border border-neon-cyan/20 rounded text-neon-cyan text-xs"
                     >
                       {tag}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>

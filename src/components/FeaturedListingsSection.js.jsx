@@ -135,7 +135,7 @@ export function FeaturedListingsSection() {
     const [showFilters, setShowFilters] = useState(false);"
     const filteredListings = selectedCategory === "All"
         ? featuredListings
-        : featuredListings.filter(listing => listing.category === selectedCategory);
+        : featuredListings.filter (listing => listing.category === selectedCategory) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -164,7 +164,6 @@ export function FeaturedListingsSection() {
 
             backgroundImage: `radial-gradient(circle at 75% 25%, currentColor 1px, transparent 1px)`,'
   backgroundSize: '60px 60px'
-        
 
 }}/>
       </div>
@@ -238,7 +237,7 @@ export function FeaturedListingsSection() {
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg''`
                 : 'bg-zion-blue-dark/40 text-zion-slate-light hover:bg-zion-blue-dark/60 hover:text-white border border-zion-blue-light/30'}`}>
               {category}
-            </button>))}
+            </button>) ) }
         </motion.div>
         "
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -250,7 +249,7 @@ export function FeaturedListingsSection() {
                       <Award className="w-3 h-3 inline mr-1"/>
                       Featured
                     </div>
-                  </div>)}
+                  </div>) }
 
                 {/* Image */}"
                 <div className="relative h-48 overflow-hidden">"
@@ -298,7 +297,7 @@ export function FeaturedListingsSection() {
                       </span>))}"
                     {listing.tags.length > 3 && (<span className="text-zion-cyan/60 text-xs">
                         +{listing.tags.length - 3} more
-                      </span>)}
+                      </span>) }
                   </div>
                   
                   {/* Stats */}"
@@ -378,8 +377,7 @@ export function FeaturedListingsSection() {
                             >"
                               <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                               <span>{highlight}</span>
-                            </motion.div>
-                          ))}
+                            </motion.div>) ) }
                         </div>
 "
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Technologies:</h4>"
@@ -403,11 +401,9 @@ export function FeaturedListingsSection() {
                               transition={{ delay: idx * 0.1 }}
                             >
                               {tech}
-                            </motion.span>
-                          ))}
+                            </motion.span>) ) }
                         </div>
-                      </motion.div>
-                    )}
+                      </motion.div>) }
                   </AnimatePresence>
                 </div>
               </div>
@@ -417,8 +413,7 @@ export function FeaturedListingsSection() {
                   Get Started
                 </Link>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </motion.div>
       </div>
       

@@ -312,7 +312,8 @@ export function TalentRegistrationForm() {
         <CardHeader>"
           <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle>"
           <CardDescription className="text-zion-slate">
-            Showcase your skills and experience to potential clients and employers.
+            Showcase your skills and experience to potential clients and
+            employers.
           </CardDescription>
         </CardHeader>
 
@@ -395,7 +396,8 @@ export function TalentRegistrationForm() {
                     </label>
                   </div>"
                   <p className="text-sm text-zion-slate">
-                    For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.
+                    For best results, use an image at least 400x400 pixels in
+                    JPG, PNG, or GIF format.
                   </p>
                 </div>
               </div>
@@ -424,7 +426,8 @@ export function TalentRegistrationForm() {
                           AI Profile Enhancement
                         </FormLabel>"
                         <FormDescription className="text-zion-slate-light">
-                          Let AI help optimize your profile for better visibility and engagement
+                          Let AI help optimize your profile for better
+                          visibility and engagement
                         </FormDescription>
                       </div>
                       <FormControl>"
@@ -437,7 +440,8 @@ export function TalentRegistrationForm() {
                       <Sparkles className="mr-2 h-4 w-4"/>"
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
                     </Button>
-                  </div>)}
+                  </div>
+                )}
 
                 {/* Generated Content Display */}"
                 {generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">"
@@ -467,13 +471,17 @@ export function TalentRegistrationForm() {
                                 <div className="flex flex-wrap gap-1">"
                                   {skills.map((skill) => (<Badge key={skill} className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">
                                       {skill}
-                                    </Badge>))}
+                                    </Badge>
+                                  ))}
                                 </div>
-                              </div>))}
+                              </div>
+                            ))}
                           </div>
-                        </div>)}
+                        </div>
+                      )}
                     </div>
-                  </div>)}
+                  </div>
+                )}
               </div>
 "
               <Separator className="bg-zion-blue-light/50"/>

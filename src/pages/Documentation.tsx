@@ -191,7 +191,7 @@ const Documentation: React.FC = () => {
       activeCategory === 'all' || item.category === activeCategory;
 
     return matchesSearch && matchesCategory;
-  });
+  }) ;
 
   // Update counts
   categories.forEach(cat => {
@@ -205,7 +205,7 @@ const Documentation: React.FC = () => {
         item => item.category === cat.id
       ).length;
     }
-  });
+  }) ;
 
   return()
     <>
@@ -340,16 +340,14 @@ const Documentation: React.FC = () => {
                         className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded"
                       >
                         {tag}
-                      </span>
-                    ))}
+                      </span>) ) }
                   </div>
 "
                   <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">"
                     <FileText className="w-4 h-4" />
                     Read More
                   </button>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
 
             {filteredItems.length === 0 && ("
@@ -406,14 +404,12 @@ const Documentation: React.FC = () => {
                     <ExternalLink className="w-4 h-4" />
                     Visit Resource
                   </button>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>
       </div>
-    </>
-  );
+    </>) ;
 };
 
 export default Documentation;

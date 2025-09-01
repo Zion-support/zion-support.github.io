@@ -34,6 +34,12 @@ import EnhancedPerformanceMetrics from '../components/EnhancedPerformanceMetrics
 import EnhancedSecurityDashboard from '../components/EnhancedSecurityDashboard';'
 import AdvancedDataVisualization from '../components/AdvancedDataVisualization';'
 import AdvancedNotificationCenter from '../components/AdvancedNotificationCenter';
+;
+export { function };
+export default function HomePage(...args: unknown[]): unknown {
+  const [_isMenuOpen, _setIsMenuOpen] = useState<typeof false>(false);
+  const [_activeSection, _setActiveSection] = useState<typeof 'hero'>('hero');
+  const [_isLoaded, _setIsLoaded] = useState<typeof false>(false);
 
 export default function HomePage() {
   const [_isMenuOpen, _setIsMenuOpen] = useState(false);'
@@ -45,7 +51,7 @@ export default function HomePage() {
   }, []);
 
 
-
+;
 export default function Index(...args[]):  {
 
 	const features = [

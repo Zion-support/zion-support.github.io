@@ -40,20 +40,24 @@ import {
   DollarSign} from 'lucide-react';
 
 interface SitemapSection {
+
   title: string;
   icon: unknown;
   color: string;
   pages: SitemapPage[];
+
 }
 
 interface SitemapPage {
+
   name: string;
   href: string;
   description: string;
   featured?: boolean;
-}
 
-const Sitemap: React.FC = () => {
+}
+;
+const Sitemap: React.FC = props {
   const sitemapSections: SitemapSection[] = [
     {
 '
@@ -681,11 +685,9 @@ const Sitemap: React.FC = () => {
                         </div>
                       </div>
                     </Link>
-                  </div>
-                ))}
+                  </div>) ) }
               </div>
-            </div>
-          ))}
+            </div>) ) }
         </div>
 
         {/* CTA Section */}"

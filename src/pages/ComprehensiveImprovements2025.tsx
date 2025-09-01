@@ -57,7 +57,6 @@ import {
 } from 'lucide-react';
 import EnhancedSEOManager from "../components/EnhancedSEOManager";
 
-export default function ComprehensiveImprovements2025() {
   const improvements = [
     {
 '
@@ -240,11 +239,6 @@ export default function ComprehensiveImprovements2025() {
   ['platform improvements', 'AI services', 'technology enhancements', 'digital transformation','
   'Zion Tech Group']
 
-
-
-
-
-
 }
       />
       
@@ -259,21 +253,11 @@ export default function ComprehensiveImprovements2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -291,7 +275,7 @@ export default function ComprehensiveImprovements2025() {
             </h1>"
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
               Experience the future of business technology with our revolutionary platform enhancements. 
-              From advanced AI services to cutting-edge performance analytics, discover how Zion Tech Group 
+              From advanced AI services to cutting - edge performance analytics, discover how Zion Tech Group 
               is transforming the digital landscape.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -323,21 +307,11 @@ export default function ComprehensiveImprovements2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -362,32 +336,17 @@ export default function ComprehensiveImprovements2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}"
@@ -413,8 +372,7 @@ export default function ComprehensiveImprovements2025() {
                       <li key={itemIndex} className="flex items-start text-sm text-gray-300">"
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                         <span>{item}</span>
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>
 
@@ -435,21 +393,11 @@ export default function ComprehensiveImprovements2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -474,32 +422,17 @@ export default function ComprehensiveImprovements2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}"
@@ -539,21 +472,11 @@ export default function ComprehensiveImprovements2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -578,32 +501,17 @@ export default function ComprehensiveImprovements2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}"
@@ -643,21 +551,11 @@ export default function ComprehensiveImprovements2025() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -689,7 +587,6 @@ export default function ComprehensiveImprovements2025() {
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

@@ -48,7 +48,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             status: 'pending_review','
             requirements['Requirement 1', 'Requirement 2'],;
   violations[];
-        
 
 };
         addComplianceRule(newRule);'
@@ -155,7 +154,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`}>"
             <Icon className="w-4 h-4"/>
             <span>{label}</span>
-          </button>))}
+          </button>) ) }
       </div>
 
       {/* Content */}"
@@ -244,7 +243,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                           {event.timestamp.toLocaleTimeString()}
                         </span>
                       </div>
-                    </div>))}
+                    </div>) ) }
                 </div>
               </div>
             </motion.div>)}
@@ -379,10 +378,10 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                           {rule.requirements.map((req, index) => (<li key={index} className="text-sm text-gray-600 dark:text-gray-400 flex items-center space-x-2">"
                               <CheckCircle className="w-3 h-3 text-green-500"/>
                               <span>{req}</span>
-                            </li>))}
+                            </li>) ) }
                         </ul>
-                      </div>)}
-                  </div>))}
+                      </div>) }
+                  </div>) ) }
               </div>
             </motion.div>)}
 '"
@@ -492,7 +491,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                   </button>
                 </div>
               </div>
-            </motion.div>)}
+            </motion.div>) }
         </AnimatePresence>
       </div>
 
@@ -534,7 +533,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                 </label>
               </div>
             </div>
-          </motion.div>)}
+          </motion.div>) }
       </AnimatePresence>
     </div>)};
 '"`

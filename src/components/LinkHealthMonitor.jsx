@@ -49,9 +49,9 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             linkText: 'Email'
 
     ];
-    useEffect(() => {
-        setLinkStatuses(sampleLinks);
-        generateReport(sampleLinks)}, []);
+    useEffect ( () => {
+        setLinkStatuses (sampleLinks) ;
+        generateReport (sampleLinks) }, []) ;
     const generateReport = (links) => {
 
         const totalLinks = links.length;'
@@ -66,13 +66,12 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             brokenLinks,
             externalLinks,
             averageResponseTime: avgResponseTime,
-            lastUpdated: new Date()
-        })};
+            lastUpdated: new Date () }) };
     const startMonitoring = async () => {
-        setIsMonitoring(true);
+        setIsMonitoring (true) ;
         // Simulate link checking
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        setIsMonitoring(false)};
+        await new Promise (resolve => setTimeout (resolve, 2000) ) ;
+        setIsMonitoring (false) };
     const getStatusIcon = (status) => {
 
         switch (status) {
@@ -117,20 +116,10 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
   { scale: 0.9,
   opacity: 0 
 
-
-
-
-
-
 }} animate = {
 
   { scale: 1,
   opacity: 1 
-
-
-
-
-
 
 }} exit = {
 
@@ -179,7 +168,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                     <div className="text-2xl font-bold text-blue-400">{report.externalLinks}</div>"
                     <div className="text-blue-400 text-sm">External</div>
                   </div>
-                </div>)}
+                </div>) }
 
               {/* Actions */}"
               <div className="flex items-center justify-between">"
@@ -253,7 +242,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                               </a>"
                               {link.linkText && (<div className="text-xs text-gray-400 mt-1">
                                   Text: {link.linkText}
-                                </div>)}
+                                </div>) }
                             </div>
                           </td>"
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">'
@@ -265,7 +254,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
                             {link.lastChecked.toLocaleDateString()}
                           </td>
-                        </tr>))}
+                        </tr>) ) }
                     </tbody>
                   </table>
                 </div>

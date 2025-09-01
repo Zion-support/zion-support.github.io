@@ -256,7 +256,7 @@ export default function AIComplianceAssistant() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -310,7 +310,7 @@ export default function AIComplianceAssistant() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -364,7 +364,7 @@ export default function AIComplianceAssistant() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regulations.map((regulation, index) => (
+            {regulations.map(regulation: unknown, index: unknown (
               <motion.div
                 key={regulation.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -418,7 +418,7 @@ export default function AIComplianceAssistant() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}

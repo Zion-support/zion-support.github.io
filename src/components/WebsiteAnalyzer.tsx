@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react.ts';'
 import { LinkChecker, LinkInfo, PageInfo  } from '../utils/linkChecker';
 import { CheckCircle, 
+import { LinkChecker, LinkInfo, PageInfo  } from '../utils / linkChecker';
+
+
   XCircle, 
   AlertTriangle, 
   ExternalLink, 
@@ -18,6 +21,7 @@ summary: {
     missingPages: number;
     externalLinks: number;
   
+
 };
   pages: PageInfo[];
   brokenLinks: LinkInfo[];
@@ -95,26 +99,25 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
       for (let i = 0; i < pagesToAnalyze.length; i++) {
 
         const page = pagesToAnalyze[i];
-        setCurrentPage(page);
-        setProgress((i / pagesToAnalyze.length) * 100);
+        setCurrentPage (page) ;
+        setProgress ( (i / pagesToAnalyze.length) * 100) ;
 
         try {
-          // Simulate page content analysis (in real implementation, this would fetch actual page content)
-          const mockContent = `<html><head><title>${page}</title></head><body><a href="/services">Services</a><a href="/about">About</a></body></html>`;
-          const pageResult = await linkChecker.checkPageLinks(page, mockContent);
-          results.push(pageResult);
+          // Simulate page content analysis (in real implementation, this would fetch actual page content) const mockContent = `<html><head><title>${page}</title></head><body><a href="/services">Services</a><a href="/about">About</a></body></html>`;
+          const pageResult = await linkChecker.checkPageLinks (page, mockContent) ;
+          results.push (pageResult) ;
         } catch (error) {
 `
           // console.error(`Error analyzing ${page}:`, error);
         }
 
         // Add delay to prevent overwhelming the server
-        await new Promise(resolve => setTimeout(resolve, 100));
+        await new Promise (resolve => setTimeout (resolve, 100) ) ;
       }
 
-      const summary = linkChecker.getSummary();
-      const brokenLinks = linkChecker.getBrokenLinks();
-      const missingPages = linkChecker.getMissingPages();
+      const summary = linkChecker.getSummary () ;
+      const brokenLinks = linkChecker.getBrokenLinks () ;
+      const missingPages = linkChecker.getMissingPages () ;
 
       setAnalysisResult({
 
@@ -122,7 +125,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
         pages: results,
         brokenLinks,
         missingPages
-      });
+      }) ;
     } catch (error) {
 '
       // console.error('Analysis failed:', error);
@@ -134,7 +137,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     }
   };
 
-  const exportReport = () => {
+  const exportReport = (...args: unknown[]): unknown => {
     if (!analysisResult) return;
 
     const report = {
@@ -221,8 +224,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
               >"
                 <Download className="w-4 h-4 mr-2" />
                 Export Report
-              </button>
-            )}
+              </button>) }
           </div>
         </div>
 
@@ -310,11 +312,9 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                       <span className="px-2 py-1 text-xs font-medium rounded-full bg-red-100 text-red-800">
                         Broken
                       </span>
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
-              </div>
-            )}
+              </div>) }
 
             {/* Missing Pages */}
             {analysisResult.missingPages.length > 0 && ("
@@ -332,11 +332,9 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                       <span className="px-2 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800">
                         Missing
                       </span>
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
-              </div>
-            )}
+              </div>) }
 
             {/* Page Analysis */}"
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">"
@@ -369,11 +367,9 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                 ))}
               </div>
             </div>
-          </div>
-        )}
+          </div>) }
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default WebsiteAnalyzer;'"`

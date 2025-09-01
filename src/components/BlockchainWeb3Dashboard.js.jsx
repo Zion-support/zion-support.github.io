@@ -25,8 +25,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
         to: '','
         value: '','
         data: ''
-    });
-    const handleConnectWallet = useCallback(async () => {
+    }) ;
+    const handleConnectWallet = useCallback (async () => {
         try {
             await connectWallet();'
             trackEvent('blockchain', 'dashboard', 'wallet_connected')}
@@ -67,7 +67,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 '
                 // console.error('Failed to send transaction:', error)}
         }
-    }, [transactionForm, wallet, sendTransaction, trackEvent]);
+    }, [transactionForm, wallet, sendTransaction, trackEvent]) ;
     const getStatusColor = (status) => {
 
         switch (status) {
@@ -223,7 +223,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                         </span>
                       </div>
                     </div>
-                  </div>))}
+                  </div>) ) }
               </div>
             </motion.div>)}
 '"
@@ -284,7 +284,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                           </div>)}
                       </div>
                     </div>
-                  </div>))}
+                  </div>) ) }
               </div>
             </motion.div>)}
 '"
@@ -363,7 +363,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                         </span>
                       </div>
                     </div>
-                  </div>))}
+                  </div>) ) }
               </div>
             </motion.div>)}
 '"
@@ -453,9 +453,9 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                         </div>
                       </div>
                     </div>
-                  </div>))}
+                  </div>) ) }
               </div>
-            </motion.div>)}
+            </motion.div>) }
         </AnimatePresence>
       </div>
 
@@ -528,7 +528,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 </button>
               </div>
             </motion.div>
-          </motion.div>)}
+          </motion.div>) }
       </AnimatePresence>
 
       {/* Send Transaction Modal */}
@@ -600,7 +600,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 </button>
               </div>
             </motion.div>
-          </motion.div>)}
+          </motion.div>) }
       </AnimatePresence>
     </div>)};
 '"`

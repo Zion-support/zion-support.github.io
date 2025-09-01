@@ -126,7 +126,7 @@ export const checkAuthStatus = createAsyncThunk('
     }
   }
 );
-
+;
 const initialState = {
 
   user: null,

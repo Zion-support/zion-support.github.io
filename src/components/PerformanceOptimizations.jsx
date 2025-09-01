@@ -40,7 +40,7 @@ const MemoizedDataGrid = memo(({ data, onItemClick }) => {
   );
 });'
 MemoizedDataGrid.displayName = 'MemoizedDataGrid';
-// Virtual scrolling component for large lists
+// Virtual scrolling component for large lists;
 const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
 
   const [scrollTop, setScrollTop] = React.useState(0);

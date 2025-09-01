@@ -225,7 +225,7 @@ export function AdvancedDataVisualization() {
                         <div className="text-xs text-zion-slate-light">{type.description}</div>
                       </div>
                     </div>
-                  </button>))}
+                  </button>) ) }
               </div>
             </div>
 
@@ -235,7 +235,7 @@ export function AdvancedDataVisualization() {
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
                 {categories.map(category => (<option key={category} value={category}>'
                     {category === 'all' ? 'All Categories' : category}
-                  </option>))}
+                  </option>) ) }
               </select>
             </div>
 
@@ -249,7 +249,7 @@ export function AdvancedDataVisualization() {
                     <div className="flex gap-1">"
                       {palette.map((color, colorIndex) => (<div key={colorIndex} className="w-4 h-4 rounded" style={{ backgroundColor: color }}/>))}
                     </div>
-                  </button>))}
+                  </button>) ) }
               </div>
             </div>
 
@@ -300,7 +300,7 @@ export function AdvancedDataVisualization() {
                   </>) : (<>"
                     <RefreshCw className="w-4 h-4"/>
                     Refresh Data
-                  </>)}
+                  </>) }
               </button>
               "
               <div className="grid grid-cols-3 gap-2">'"

@@ -116,7 +116,7 @@ const InteractiveServiceShowcase = () => {
     ];'
     const filteredServices = activeCategory === 'all'
         ? services
-        : services.filter(service => service.category === activeCategory);
+        : services.filter (service => service.category === activeCategory) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -211,7 +211,7 @@ const InteractiveServiceShowcase = () => {
                 : 'bg-zion-cyan/20 text-zion-cyan'}`}>
                 {category.count}
               </span>
-            </button>))}
+            </button>) ) }
         </motion.div>
 
         {/* Services Grid */}"
@@ -225,7 +225,7 @@ const InteractiveServiceShowcase = () => {
                     ? 'bg-gradient-to-r from-zion-orange to-zion-yellow''`
                     : 'bg-gradient-to-r from-zion-purple to-zion-cyan'}`}>'
                         {service.isPopular ? '🔥 Popular' : '✨ New'}
-                      </div>)}
+                      </div>) }
 
                     {/* Service Icon */}`
                     <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}>"
@@ -254,7 +254,7 @@ const InteractiveServiceShowcase = () => {
                           </div>))}"
                         {service.features.length > 3 && (<div className="text-zion-cyan/60 text-xs">
                             +{service.features.length - 3} more features
-                          </div>)}
+                          </div>) }
                       </div>
 
                       {/* CTA Button */}"
@@ -268,7 +268,7 @@ const InteractiveServiceShowcase = () => {
                     <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
                   </div>
                 </Link>
-              </motion.div>))}
+              </motion.div>) ) }
           </AnimatePresence>
         </motion.div>
 

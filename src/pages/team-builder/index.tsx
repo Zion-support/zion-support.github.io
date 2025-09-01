@@ -17,7 +17,7 @@ import { toast   } from 'sonner.ts'; // Or use-toast if that's the project's sta
 import { Loader2   } from 'lucide-react.ts';'
 import { TeamRecommendationDisplay   } from '@/components/team-builder/TeamRecommendationDisplay'; // New import
 
-// Define Zod schema for form validation
+// Define Zod schema for form validation;
 const projectBriefSchema = z.object({
 '
   projectName: z.string().min(3, 'Project name must be at least 3 characters'),'
@@ -36,8 +36,8 @@ const projectBriefSchema = z.object({
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 
 // const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type for inference;
-  const [currentStep, setCurrentStep] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
+  const [currentStep, setCurrentStep] = useState<typeof 0>(0);
+  const [isLoading, setIsLoading] = useState<typeof false>(false);
   const [teamRecommendation, setTeamRecommendation] = useState<any>(null);
   const [projectBriefSubmitted, setProjectBriefSubmitted] = useState<any>(null);
 
@@ -64,7 +64,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     { name: 'Review & Submit', fields: [] }, // No fields, just review;
   ];
 
-  const handleNextStep = async () => {;
+  const handleNextStep = async : unknown {;
     const currentStepFields = steps[currentStep].fields as (keyof ProjectBriefFormData)[];
     const isValid = await trigger(currentStepFields);
     if (isValid) {
@@ -73,8 +73,8 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     }
   };
 
-  const handlePreviousStep = () => {;
-    setCurrentStep((prev) => prev - 1);
+  const handlePreviousStep = (...args: unknown[]): unknown => {;
+    setCurrentStep(prev: unknown prev - 1);
   };
 
   const onSubmit: SubmitHandler<ProjectBriefFormData> = async (data) => {
@@ -115,7 +115,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       const recommendationResult = await response.json();
       setTeamRecommendation(recommendationResult);'
       toast.success('Team recommendation generated successfully!');
-      // setCurrentStep((prev) => prev + 1); // No longer using steps for display, display immediately
+      // setCurrentStep(prev: unknown prev + 1); // No longer using steps for display, display immediately
     } catch (error: ) {
 '
       // console.error('Error submitting project brief:', error);'
@@ -126,7 +126,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     }
   };
 
-  const handleInviteTalent = async (talentId: anystring, roleTitle: string)   => {;
+  const handleInviteTalent = async talentId: anystring, roleTitle: string {;
     if (!projectBriefSubmitted) {;
       toast.error("Cannot send invite without a project context.");
       return;
@@ -173,7 +173,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     }
   };
 
-  const renderRecommendation = () => {;
+  const renderRecommendation = (...args: unknown[]): unknown => {;
     if (!teamRecommendation || !projectBriefSubmitted) return null; // Ensure projectBriefSubmitted is also available
     return()
       <TeamRecommendationDisplay
@@ -207,11 +207,11 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 
         {!isLoading && teamRecommendation && projectBriefSubmitted && renderRecommendation()}
 
-        {!isLoading && !teamRecommendation && ( // Show form if no recommendation yet and not loading
+        {!isLoading && !teamRecommendation && // Show form if no recommendation yet and not loading
           <Card>
             <CardHeader>"
                <Steps currentStep={currentStep} className="mb-6">
-                {steps.map((step, index) => (
+                {steps.map((step: unknown, index: unknown (
                   <Step key={index} label={step.name} />
                 ))}
               </Steps>
@@ -383,6 +383,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     </AppLayout>;
   );
 };
-
+;
+export { TeamBuilderPage };
 export default TeamBuilderPage;
 '"`

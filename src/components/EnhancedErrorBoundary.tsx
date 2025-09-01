@@ -10,20 +10,22 @@ import {
   Send} from 'lucide-react';
 
 interface Props {
+
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: error: Error, errorInfo: ErrorInfo void;
   showReportButton?: boolean;
+
 }
 
 interface State {
+
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
   isReporting: boolean;
   reportSent: boolean;
-}
 
 export class EnhancedErrorBoundary extends Component<Props, State> {
 
@@ -63,7 +65,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     }
 
     // Send error to error reporting service
-    this.reportError(error, errorInfo);
+    this.reportError (error, errorInfo) ;
   }
 
   private async reportError(error: Error, errorInfo: ErrorInfo) {
@@ -113,7 +115,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   private handleGoBack = () => {
-    window.history.back();
+    window.history.back () ;
   };
 
   private handleReportError = async () => {
@@ -124,9 +126,9 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       this.setState({ reportSent: true });
 
       // Reset report status after 3 seconds
-      setTimeout(() => {
-        this.setState({ reportSent: false });
-      }, 3000);
+      setTimeout ( () => {
+        this.setState ({ reportSent: false }) ;
+      }, 3000) ;
     } catch (error) {
 '
       // console.error('Failed to report error:', error);
@@ -146,8 +148,8 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       showDetails: false,
       isRecovering: true});
 
-    // Force a re-render of children
-    this.forceUpdate();
+    // Force a re - render of children
+    this.forceUpdate () ;
   };
 
   private handleGoHome = () => {
@@ -155,7 +157,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
-  private handleCopyError = async () => {
+  private handleCopyError = async : unknown {
     if (this.state.error) {
 `
       const errorText = `
@@ -169,7 +171,7 @@ Timestamp: ${new Date().toISOString()}`
       `;
 
       try {
-        await navigator.clipboard.writeText(errorText);
+        await navigator.clipboard.writeText (errorText) ;
         // You could show a toast notification here
       } catch (err) {
 '
@@ -179,10 +181,10 @@ Timestamp: ${new Date().toISOString()}`
   };
 
   private toggleDetails = () => {
-    this.setState(prev => ({ showDetails: !prev.showDetails }));
+    this.setState (prev => ({ showDetails: !prev.showDetails }) ) ;
   };
 
-  render() {
+  render () {
     if (this.state.hasError) {
 
       // Custom fallback UI
@@ -215,7 +217,7 @@ Timestamp: ${new Date().toISOString()}`
               transition={{ delay: 0.3 }}"
               className="text-3xl font-bold text-white mb-4"
             >
-              Oops! Something went wrong
+              Oops ! Something went wrong
             </motion.h1>
 
             <motion.p
@@ -290,8 +292,7 @@ Timestamp: ${new Date().toISOString()}`
             </motion.div>
 
             {/* Error Reporting */}
-            {this.props.showReportButton && (
-              <motion.div
+            {this.props.showReportButton && (<motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.7 }}"
@@ -346,8 +347,7 @@ Timestamp: ${new Date().toISOString()}`
               </p>
             </motion.div>
           </div>
-        </motion.div>
-      );
+        </motion.div>) ;
     }
 
     return this.props.children;

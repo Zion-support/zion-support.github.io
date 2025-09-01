@@ -349,7 +349,7 @@ const UltimatePricing2025 = () => {
                       {plan.features.map((feature, idx) => (<li key={idx} className="text-gray-300 flex items-start">"
                           <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
                           {feature}
-                        </li>))}
+                        </li>) ) }
                     </ul>
                   </div>
 "
@@ -359,7 +359,7 @@ const UltimatePricing2025 = () => {
                       {plan.benefits.map((benefit, idx) => (<li key={idx} className="text-gray-300 flex items-start">"
                           <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
                           {benefit}
-                        </li>))}
+                        </li>) ) }
                     </ul>
                   </div>
 "
@@ -380,10 +380,10 @@ const UltimatePricing2025 = () => {
                       Get Started
                     </Link>
                   </div>
-                </div>))}
+                </div>) ) }
             </div>
           </div>
-        </section>))}
+        </section>) ) }
 
       {/* Value Proposition Section */}"
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"

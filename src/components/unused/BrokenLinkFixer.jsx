@@ -527,5 +527,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         }`
       `}</style>
     </>)};
+export { BrokenLinkFixer };
 export default BrokenLinkFixer;
 }}}}}}}}}}}}'"`

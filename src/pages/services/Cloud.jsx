@@ -67,5 +67,6 @@ const CloudServices = () => {
         </div>
       </section>
     </div>)};
+export { CloudServices };
 export default CloudServices;
 }'"

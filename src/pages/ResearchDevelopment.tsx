@@ -1,4 +1,5 @@
 import React from 'react';
+export default React.memo (function ResearchDevelopment () {
 
 export default function ResearchDevelopment() {
   return()
@@ -10,7 +11,6 @@ export default function ResearchDevelopment() {
           emerging tech.
         </p>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 '"

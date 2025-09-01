@@ -177,21 +177,11 @@ import {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -237,21 +227,11 @@ import {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -282,8 +262,7 @@ import {
                     </div>
                   ))}
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -311,21 +290,11 @@ import {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                   transition = {
@@ -343,7 +312,7 @@ import {
 '
                     selectedPhase === index ? 'border-zion-cyan' : 'border-zion-cyan/20'`
                   }`}
-                  onClick={() => setSelectedPhase(index)}
+                  onClick={ () => setSelectedPhase (index) }
 
                   {/* Phase Number */}"
                   <div className="absolute -top-4 left-6">"
@@ -362,28 +331,17 @@ import {
                     </div>
 
                     {/* Activities */}
-                    {selectedPhase === index && (
-                      <motion.div
+                    {selectedPhase === index && (<motion.div
                         initial = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                         animate = {
 
   { opacity: 1,'
   height: 'auto' 
-
-
-
-
-
 
 }}
                         transition={{ duration: 0.3 }}"
@@ -394,13 +352,10 @@ import {
                           <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">"
                             <Check className="w-3 h-3 text-zion-cyan" />
                             {activity}
-                          </div>
-                        ))}
-                      </motion.div>
-                    )}
+                          </div>) ) }
+                      </motion.div>) }
                   </div>
-                </motion.div>;
-              ))}
+                </motion.div>;) ) }
             </div>
           </div>
         </div>
@@ -427,21 +382,11 @@ import {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -469,8 +414,7 @@ import {
                   <div className="font-semibold text-white">{testimonial.name}</div>"
                   <div className="text-zion-slate-light text-sm">{testimonial.role}</div>
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -496,8 +440,7 @@ import {
           </div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default DigitalTransformation;}}}}'"`

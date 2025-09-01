@@ -5,6 +5,7 @@ import { SEO } from '@/components/SEO';'
 import { GradientHeading } from '@/components/GradientHeading';'
 import { Button } from '@/components/ui/button';'
 import Link from 'next/link';
+export { function };
 export default function SearchFeature() {
   const schema = {
 '

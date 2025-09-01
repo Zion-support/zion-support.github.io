@@ -20,7 +20,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;'
     return subcats}, [selectedCategory]);
 
   // Filter services based on search and filters
-  const filteredServices = useMemo(() => {;
+  const filteredServices = useMemo(: unknown {;
     return ALL_EXPANDED_SERVICES_PRICING.filter(service => {;
       const matchesSearch = service.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -134,7 +134,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;'
 
         {/* Services Pricing Grid */}"
         <div className="grid gap-8">
-          {filteredServices.map((service) => (
+          {filteredServices.map(service: unknown (
             <div
               key={service.serviceId}"
               className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20"

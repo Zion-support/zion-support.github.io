@@ -53,7 +53,7 @@ variant:  'default',;
 
     return()
       <div className="space-y-2">
-        {Array.from({ length: lines }).map((_, index)  => (
+        {Array.from({ length: lines }).map(_: unknown, index: unknown (
           <motion.div
             key={index}
             className = {
@@ -143,8 +143,8 @@ variant:  'default',;
   );
 };
 
-// Specialized skeleton components
-export const CardSkeleton: React.FC<{ className?: string }> = ({ className }) => (
+// Specialized skeleton components;
+export const CardSkeleton: React.FC<{ className?: string }> = { className }: unknown (
   <div className = {
 '
   cn('p-6 space-y-4',
@@ -227,7 +227,7 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
     ))};
   </div>;
 );
-
+;
 export const GridSkeleton: React.FC<{
 
   rows?: number;

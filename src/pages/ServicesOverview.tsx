@@ -245,12 +245,12 @@ export default function ServicesOverview() {
           );
         }
         return false;
-      }).length;
+      }) .length;
       return { ...cat, count };
-    });
-  }, []);
+    }) ;
+  }, []) ;
 
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo ( () => {
     let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
     // Filter by search query
@@ -293,7 +293,7 @@ export default function ServicesOverview() {
           default:
             return true;
         }
-      });
+      }) ;
     }
 
     // Sort services
@@ -308,14 +308,14 @@ export default function ServicesOverview() {
         case 'price-high':
           return b.price - a.price;'
         case 'category':
-          return a.category.localeCompare(b.category);
+          return a.category.localeCompare (b.category) ;
         default:
           return 0;
       }
-    });
+    }) ;
 
     return filtered;
-  }, [searchQuery, selectedCategory, priceRange, sortBy]);
+  }, [searchQuery, selectedCategory, priceRange, sortBy]) ;
 
   const contactInfo = {
 '
@@ -458,8 +458,7 @@ export default function ServicesOverview() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -608,8 +607,7 @@ export default function ServicesOverview() {
                         {service.subcategory && ("
                           <span className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full">
                             {service.subcategory}
-                          </span>
-                        )}
+                          </span>) }
                       </div>
                     </div>
 
@@ -636,8 +634,7 @@ export default function ServicesOverview() {
                         {service.features.length > 3 && ("
                           <div className="text-xs text-gray-400">
                             +{service.features.length - 3} more features
-                          </div>
-                        )}
+                          </div>) }
                       </div>
                     </div>
 
@@ -797,8 +794,7 @@ export default function ServicesOverview() {
               >
                 Clear all filters
               </button>
-            </div>
-          )}
+            </div>) }
         </div>
       </section>
 

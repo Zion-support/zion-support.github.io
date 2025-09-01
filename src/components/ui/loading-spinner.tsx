@@ -8,7 +8,7 @@ interface LoadingSpinnerProps {
   text?: string;
   showText?: boolean;
   className?: string;
-
+;
 const sizeClasses = {
 '
   sm: 'w-8 h-8','
@@ -26,8 +26,9 @@ const sizeClasses = {
 
 
 
-};
 
+};
+;
 const colorClasses = {
 '
   primary: 'border-cyan-400','
@@ -141,7 +142,7 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
   </div>;
 );
 
-// Full-screen loading overlay
+// Full-screen loading overlay;
 export const FullScreenLoader: React.FC<{
 
   text?: string;
@@ -170,7 +171,7 @@ export const FullScreenLoader: React.FC<{
   </div>;
 );
 
-// Skeleton loading component
+// Skeleton loading component;
 export const SkeletonLoader: React.FC<{
 
   className?: string;
@@ -181,7 +182,7 @@ export const SkeletonLoader: React.FC<{
   lines = 3;
 }) => (`
   <div className={`animate-pulse ${className}`}>
-    {Array.from({ length: lines }).map((_, index) => (
+    {Array.from({ length: lines }).map(_: unknown, index: unknown (
       <div
         key={index};`
         className={`h-4 bg-gray-300 rounded mb-2 ${;'

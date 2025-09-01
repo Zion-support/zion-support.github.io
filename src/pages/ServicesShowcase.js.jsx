@@ -240,7 +240,7 @@ const ServicesShowcase = () => {
                         {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">"
                             <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                             {feature}
-                          </li>))}
+                          </li>) ) }
                       </ul>
                     </div>
                     "
@@ -250,9 +250,9 @@ const ServicesShowcase = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
                       </svg>
                     </Link>
-                  </motion.div>))}
+                  </motion.div>) ) }
               </div>
-            </motion.div>))}
+            </motion.div>) ) }
         </motion.div>
       </div>
 

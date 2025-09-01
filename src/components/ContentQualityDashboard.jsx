@@ -84,8 +84,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
         // Auto-analyze pages when component mounts
         analyzeAllPages()}, [analyzeAllPages]);
     const getFilteredPages = () => {
-        if (!report)
-            return [];
+        if (!report) return [];
         let filtered = report.pageMetrics;
         // Apply search filter
         if (searchTerm) {
@@ -107,7 +106,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                         return page.overallScore < 40;
                     default:
                         return true}
-            })}
+            }) }
         return filtered};
     const getStatusColor = (score) => {
 
@@ -132,7 +131,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
             return;
         const csvContent = ['
             ['Page URL', 'Title', 'Word Count', 'SEO Score', 'Overall Score', 'Issues', 'Recommendations'],
-            ...report.pageMetrics.map(page => [
+            ...report.pageMetrics.map (page => [
                 page.pageUrl,
                 page.title,
                 page.wordCount.toString(),
@@ -188,7 +187,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                   <div className="text-2xl font-bold">{report.pagesWithIssues}</div>"
                   <div className="text-sm text-red-100">Need Fixes</div>
                 </div>
-              </div>)}
+              </div>) }
           </div>
 
           {/* Content */}"
@@ -224,9 +223,9 @@ const ContentQualityDashboard = ({ className = '' }) => {
                     <div className="space-y-1">"
                       {report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className="text-sm text-yellow-700 dark:text-yellow-300">
                           • {issue}
-                        </div>))}
+                        </div>) ) }
                     </div>
-                  </div>)}
+                  </div>) }
 
                 {/* Pages Table */}"
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden">"
@@ -275,7 +274,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                                 {getStatusText(page.overallScore)}
                               </span>
                             </td>
-                          </tr>))}
+                          </tr>) ) }
                       </tbody>
                     </table>
                   </div>
@@ -319,9 +318,9 @@ const ContentQualityDashboard = ({ className = '' }) => {
                               {selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dark:text-red-400">"
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"/>
                                   <span>{issue}</span>
-                                </div>))}
+                                </div>) ) }
                             </div>
-                          </div>)}
+                          </div>) }
 
                         {selectedPage.recommendations.length > 0 && (<div>"
                             <h4 className="font-medium text-green-600 dark:text-green-400 mb-2">Recommendations</h4>"
@@ -329,15 +328,15 @@ const ContentQualityDashboard = ({ className = '' }) => {
                               {selectedPage.recommendations.map((rec, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dark:text-green-400">"
                                   <Zap className="w-4 h-4 mt-0.5 flex-shrink-0"/>
                                   <span>{rec}</span>
-                                </div>))}
+                                </div>) ) }
                             </div>
-                          </div>)}
+                          </div>) }
                       </div>
                     </div>
                   </div>)}"
               </div>) : (<div className="text-center py-8 text-gray-500">
                 No content quality data available
-              </div>)}
+              </div>) }
           </div>
 
           {/* Footer Actions */}"

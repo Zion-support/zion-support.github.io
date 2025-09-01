@@ -59,10 +59,13 @@ export default function ITOnsiteServicesPage() {
           <div className="mb-12">
             <CountryTabs popularCountries={popularCountries} filteredCountries={filteredCountries} handleCountrySelect={handleCountrySelect} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
           </div>
-          
+
           {/* Service Details Section */}
-          <ServiceDetailsSection selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry}/>
-          
+          <ServiceDetailsSection
+            selectedCountry={selectedCountry}
+            setSelectedCountry={setSelectedCountry}
+          />
+
           {/* How It Works Section */}
           <ServiceProcessSteps />
           '
@@ -78,10 +81,10 @@ export default function ITOnsiteServicesPage() {
                 Additional hours are billed separately at standard rates.
               </p>
             </div>
-            
+
             <ITServicePricingTable />
           </div>
-          
+
           <EnterpriseCallToAction />
         </div>
       </section>

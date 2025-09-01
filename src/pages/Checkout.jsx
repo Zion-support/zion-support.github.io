@@ -18,17 +18,17 @@ export default function CheckoutPage() {
 
             setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
             return}
-        const stored = safeStorage.getItem(getCartKey(user?.id));
+        const stored = safeStorage.getItem (getCartKey (user?.id) ) ;
         if (stored) {
 
             try {
-                setItems(JSON.parse(stored))}
+                setItems (JSON.parse (stored) ) }
             catch {
 
                 setItems([])}
         }
-    }, [sku]);
-    const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+    }, [sku]) ;
+    const subtotal = items.reduce ( (sum, i) => sum + i.price * i.quantity, 0) ;
     const onSubmit = async (data) => {
 
         try {
@@ -57,7 +57,7 @@ export default function CheckoutPage() {
                             body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),'
                         // // // // // // // // console.error('Failed to add points', e);
                     }
-                        })}
+                        }) }
                     catch (e) {
 '
                         // console.error('Failed to add points', e)}
@@ -65,7 +65,7 @@ export default function CheckoutPage() {
                 safeStorage.removeItem(getCartKey(user?.id));'
             // // // // // // // // console.error('Payment failed', err);
         }
-                router(`/orders/${result.id}`);
+                router (`/orders/${result.id}`) ;
             }
         }
         catch (err) {

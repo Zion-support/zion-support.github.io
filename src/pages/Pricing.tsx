@@ -100,6 +100,7 @@ import {
 '
   const savings = billingCycle === 'annual' ? 20 : 0;
 interface PricingTier {
+
   name: string;
   description: string;
   price: string;
@@ -110,8 +111,9 @@ interface PricingTier {
   icon: unknown;
   cta: string;
   ctaLink: string;
-}
 
+}
+;
 const pricingTiers: PricingTier[] = [
   {
 '
@@ -188,7 +190,7 @@ const pricingTiers: PricingTier[] = [
     ctaLink: '/contact'
   }
 ];
-
+;
 const servicePricing = [
   {
 '
@@ -369,8 +371,7 @@ const servicePricing = [
                       <li key={featureIndex} className="flex items-center text-gray-300">"
                         <Check className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
 
                   <button
@@ -426,8 +427,7 @@ const servicePricing = [
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">"
                       <Check className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                       {feature}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
 
                 <Link"
@@ -437,8 +437,7 @@ const servicePricing = [
                   Get Quote"
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -515,8 +514,7 @@ const servicePricing = [
                 question: "Do you offer discounts for nonprofits?","
                 answer: "Yes, we offer special pricing for qualified nonprofit organizations. Contact us for more details about our nonprofit discount program."
               }
-            ].map((faq, index) => (
-              <motion.div
+            ].map ( (faq, index) => (<motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -572,8 +570,7 @@ const servicePricing = [
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
 
         {/* Service Pricing */}
@@ -623,11 +620,9 @@ const servicePricing = [
                         Learn More
                       </Link>
                     </div>
-                  </motion.div>
-                ))}
+                  </motion.div>) ) }
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </section>
 
@@ -843,8 +838,7 @@ const servicePricing = [
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 
 export default Pricing;

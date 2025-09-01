@@ -188,6 +188,40 @@ export default function Signup() {
 
 
 
+              <div className="bg - zion - blue - dark rounded - lg p - 6">
+                <Form {...form}>
+                  {form.formState.errors.root && (<Alert variant="destructive" className="mb - 4">
+                      <AlertDescription>
+                        {form.formState.errors.root.message}
+                      </AlertDescription>
+                    </Alert>) }
+                  <form
+                    onSubmit={form.handleSubmit (onSubmit, onInvalid) }
+                    className="space - y-6"
+                    noValidate
+                  >
+                    <FormField
+                      control={form.control}
+                      name="displayName"
+                      render={ ({ field }) => (<FormItem>
+                          <FormLabel className="text - zion - slate - light">
+                            Full Name
+                          </FormLabel>
+                          <FormControl>
+                            <div className="relative">
+                              <Input
+                                placeholder="John Doe"
+                                className="bg - zion - blue pl - 10 placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple"
+                                {...field}
+                                aria - autocomplete="none"
+                                autoComplete="off"
+                              />
+                              <User className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate h - 4 w - 4" />
+                            </div>
+                          </FormControl>
+                          <FormMessage className="text - red - 400" />
+                        </FormItem>) }
+                    />
 
 "
 } className="space-y-6" noValidate>"
@@ -330,9 +364,7 @@ export default function Signup() {
             </div>
           </div>
         </div>
-      </div>
-
-    </>);
-    };
+      </>) ;
+  };
 }
 '"

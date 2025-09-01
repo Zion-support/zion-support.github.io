@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2 const testimonials = [
+
+
     {
 '
         id: '1','
@@ -80,17 +82,16 @@ export function InteractiveTestimonials() {
     const [likedTestimonials, setLikedTestimonials] = useState(new Set());'
     const filteredTestimonials = selectedCategory === 'All'
         ? testimonials
-        : testimonials.filter(testimonial => testimonial.category === selectedCategory);
-    useEffect(() => {
-        if (!isAutoPlaying)
-            return;
-        const interval = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)}, 5000);
-        return () => clearInterval(interval)}, [isAutoPlaying, filteredTestimonials.length]);
+        : testimonials.filter (testimonial => testimonial.category === selectedCategory) ;
+    useEffect ( () => {
+        if (!isAutoPlaying) return;
+        const interval = setInterval ( () => {
+            setCurrentIndex ( (prev) => (prev + 1) % filteredTestimonials.length) }, 5000) ;
+        return () => clearInterval (interval) }, [isAutoPlaying, filteredTestimonials.length]) ;
     const nextTestimonial = () => {
-        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)};
+        setCurrentIndex ( (prev) => (prev + 1) % filteredTestimonials.length) };
     const prevTestimonial = () => {
-        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length)};
+        setCurrentIndex ( (prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length) };
     const toggleLike = (testimonialId) => {
 
         setLikedTestimonials(prev => {
@@ -117,17 +118,11 @@ export function InteractiveTestimonials() {
                 staggerChildren: 0.1,
                 delayChildren: 0.2
 
-
     };
     const itemVariants = {
 
   hidden: { opacity: 0, y: 20,
   scale: 0.95 
-
-
-
-
-
 
 },
         visible: {
@@ -156,11 +151,6 @@ export function InteractiveTestimonials() {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -196,20 +186,10 @@ export function InteractiveTestimonials() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -229,34 +209,19 @@ export function InteractiveTestimonials() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.5,
   delay: index * 0.1 
 
-
-
-
-
-
 }}>
               {category}
-            </motion.button>))}
+            </motion.button>) ) }
         </motion.div>
 
         {/* Main Testimonial Display */}"
@@ -267,20 +232,10 @@ export function InteractiveTestimonials() {
   { opacity: 0,
   x: 100 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -324,7 +279,7 @@ export function InteractiveTestimonials() {
                   </div>"
                   {filteredTestimonials[currentIndex]?.verified && (<div className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
                       ✓ Verified
-                    </div>)}
+                    </div>) }
                 </div>
 
                 {/* Category and date */}"
@@ -407,7 +362,7 @@ export function InteractiveTestimonials() {
                   </div>"
                   {testimonial.verified && (<div className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
                       ✓
-                    </div>)}
+                    </div>) }
                 </div>
 
                 {/* Rating */}"
@@ -428,7 +383,7 @@ export function InteractiveTestimonials() {
                   <span>{testimonial.date}</span>
                 </div>
               </div>
-            </motion.div>))}
+            </motion.div>) ) }
         </motion.div>
 
         {/* Enhanced CTA Section */}"
@@ -437,20 +392,10 @@ export function InteractiveTestimonials() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 

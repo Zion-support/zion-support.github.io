@@ -18,7 +18,8 @@ description?: string;
 features: string[];
 icon?: string;
 color?: string;
-textColor?: string}
+textColor?: string
+};
 function collectAllServices(): ServiceItem[] {
 
 }
@@ -42,7 +43,7 @@ export default function ServiceDetail(...args[]):  {
 					<section className="mt-8">"
 						<h2 className="text-xl font-medium">Key features</h2>"
 						<ul className="mt-2 list-disc pl-5 text-gray-700">
-							{service.features.slice(0, 10).map((f, idx) => (<li key={idx}>{f}</li>))}
+							{service.features.slice(0, 10).map(f: unknown, idx: unknown (<li key={idx}>{f}</li>))}
 						</ul>
 					</section>
 				)}"

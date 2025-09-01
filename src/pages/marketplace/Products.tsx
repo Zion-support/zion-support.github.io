@@ -64,7 +64,7 @@ export default function MarketplaceProducts() {
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');'
   const [sortBy, setSortBy] = useState('featured');'
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [showFilters, setShowFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState<typeof false>(false);
 
   const categories = ['
     { id: 'all', name: 'All Products', icon: Package, count: 156 },'
@@ -541,7 +541,7 @@ export default function MarketplaceProducts() {
           </div>
 
           {/* Expanded Filters */}
-          {showFilters && (
+          {showFilters && 
             <motion.div
               initial={{ opacity: 0, height: 0 }}'
               animate={{ opacity: 1, height: 'auto' }}

@@ -1,6 +1,6 @@
 import React from 'react';'
 import { motion } from 'framer-motion';
-
+;
 const features = [
   {
 
@@ -137,7 +137,7 @@ export function FeatureHighlights() {
         </motion.div>
 "
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+          {features.map((feature, index (
             <motion.div
               key={index}
               variants={itemVariants}

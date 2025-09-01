@@ -83,21 +83,11 @@ export function TeamExpertiseSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -108,7 +98,7 @@ export function TeamExpertiseSection() {
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our team of certified professionals brings decades of combined experience
-            in cutting-edge technologies and proven methodologies.
+            in cutting - edge technologies and proven methodologies.
           </p>
         </motion.div>
 
@@ -132,7 +122,7 @@ export function TeamExpertiseSection() {
 }}"
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >;
-          {stats.map((stat, index)  => {;
+          {stats.map ( (stat, index) => {;
             const IconComponent = stat.icon;
             return ("
               <div key = {stat.label} className="text-center">"
@@ -170,8 +160,7 @@ export function TeamExpertiseSection() {
               <p className="text-gray-400 text-sm leading-relaxed">
                 {expertise.description}
               </p>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
 
         <motion.div "
@@ -181,21 +170,11 @@ export function TeamExpertiseSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -203,11 +182,6 @@ export function TeamExpertiseSection() {
 
   { duration: 0.6,
   delay: 0.3 
-
-
-
-
-
 
 }}
         >"
@@ -232,16 +206,14 @@ export function TeamExpertiseSection() {
           </div>
         </motion.div>
       </div>;
-    </section>;
-  )};
+    </section>;) };
 
 export default TeamExpertiseSection;"
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 }
 
 export default TeamExpertiseSection;

@@ -99,7 +99,7 @@ export function CategoryListingPage({ title, description, listings: initialListi
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">"
                   {sortOptions.map((option) => (<SelectItem key={option.value} value={option.value} className="text-white">
                       {option.label}
-                    </SelectItem>))}
+                    </SelectItem>) ) }
                 </SelectContent>
               </Select>
 
@@ -115,7 +115,7 @@ export function CategoryListingPage({ title, description, listings: initialListi
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">"
                   {filterOptions.map((option) => (<SelectItem key={option.value} value={option.value} className="text-white">
                       {option.label}
-                    </SelectItem>))}
+                    </SelectItem>) ) }
                 </SelectContent>
               </Select>
             </div>
@@ -143,7 +143,7 @@ export function CategoryListingPage({ title, description, listings: initialListi
                 setSelectedFilter(filterOptions[0].value)}} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
                 Clear all filters
               </Button>
-            </div>)}
+            </div>) }
         </div>
       </div>
       <Footer />

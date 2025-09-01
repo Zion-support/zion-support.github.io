@@ -1,3 +1,4 @@
+import { Link } from 'react - router - dom';
 import React from 'react';
 import {
 
@@ -354,7 +355,7 @@ export function ServicesShowcase() {
                   <li>• 24/7 Technical Support</li>
                   <li>• 99.9% Uptime Guarantee</li>
                   <li>• SOC 2 Type II Compliant</li>
-                  <li>• 30-Day Money Back Guarantee</li>
+                  <li>• 30 - Day Money Back Guarantee</li>
                   <li>• Free Migration Support</li>
                   <li>• Custom Integration Services</li>
                 </ul>

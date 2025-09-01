@@ -1,6 +1,9 @@
 import React, { useState, useMemo } from 'react.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Search, 
+import { zionTechGroup2025Services, ZionService, getServicesByCategory, getServicesByPriceRange, searchServices  } from '../data / zionTechGroup2025ComprehensiveServices';
+
+
   Filter, 
   Star, 
   Shield, 
@@ -28,7 +31,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
   const [sortBy, setSortBy] = useState<any>('name');
   const [expandedService, setExpandedService] = useState<any>(null);
 
-  const filteredServices = useMemo(() => {;
+  const filteredServices = useMemo ( () => {;
     let services = zionTechGroup2025Services;
 
     // Apply search filter
@@ -44,7 +47,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
     }
 
     // Apply price filter
-    services = getServicesByPriceRange(priceRange[0], priceRange[1]);
+    services = getServicesByPriceRange (priceRange[0], priceRange[1]) ;
 
     // Apply sorting
     services = [...services].sort((a, b) => {;
@@ -52,14 +55,14 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
         case 'price':;'
           return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));'
         case 'category':;
-          return a.category.localeCompare(b.category);
+          return a.category.localeCompare (b.category) ;
         default:;
-          return a.title.localeCompare(b.title);
+          return a.title.localeCompare (b.title) ;
       }
-    });
+    }) ;
 
     return services;
-  }, [searchQuery, selectedCategory, priceRange, sortBy]);
+  }, [searchQuery, selectedCategory, priceRange, sortBy]) ;
 
   const categories = ['
     { id: 'all', name: 'All Services', icon: Globe, color: 'bg-gray-500' },;'
@@ -71,8 +74,8 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
     { id: 'Emerging Tech', name: 'Emerging Tech', icon: Lightbulb, color: 'bg-indigo-500' };
   ];
 
-  const getCategoryIcon = (category: anystring)  => {;
-    const categoryData = categories.find(cat => cat.id === category);
+  const getCategoryIcon = (category: anystring) => {;
+    const categoryData = categories.find (cat => cat.id === category) ;
     if (categoryData) {
 
       const IconComponent = categoryData.icon;
@@ -98,21 +101,11 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -132,21 +125,11 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -162,8 +145,8 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
 }}"
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
           >
-            Discover our cutting-edge suite of AI-powered micro SAAS solutions, 
-            enterprise-grade cybersecurity, and innovative emerging technology services 
+            Discover our cutting - edge suite of AI - powered micro SAAS solutions, 
+            enterprise - grade cybersecurity, and innovative emerging technology services 
             designed to transform your business and drive innovation.
           </motion.p>
           <motion.div 
@@ -172,21 +155,11 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -243,8 +216,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
                 >"
                   <option value="all">All Categories</option>
-                  {categories.slice(1).map((category) => (
-                    <option key={category.id} value={category.id}>
+                  {categories.slice (1) .map ( (category) => (<option key={category.id} value={category.id}>
                       {category.name}
                     </option>
                   ))}
@@ -313,18 +285,12 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
         <div className="max-w-7xl mx-auto">"
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
-              {filteredServices.map((service, index)  => (
-                <motion.div
+              {filteredServices.map ( (service, index) => (<motion.div
                   key={service.id}
                   initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
                   animate = {
@@ -332,21 +298,11 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   exit = {
 
   { opacity: 0,
   y: -20 
-
-
-
-
-
 
 }}
                   transition = {
@@ -397,8 +353,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
                       {service.features.length > 3 && ("
                         <div className="text-sm text-gray-400">
                           +{service.features.length - 3} more features
-                        </div>
-                      )}
+                        </div>) }
                     </div>
                   </div>
 
@@ -410,8 +365,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
                         <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">"
                           <TrendingUp className="w-4 h-4 text-blue-400" />
                           <span>{benefit}</span>
-                        </div>
-                      ))}
+                        </div>) ) }
                     </div>
                   </div>
 
@@ -422,8 +376,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
                       {service.targetAudience.slice(0, 3).map((audience, idx) => ("
                         <span key={idx} className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
                           {audience}
-                        </span>
-                      ))}
+                        </span>) ) }
                     </div>
                   </div>
 
@@ -452,17 +405,11 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
 
                   {/* Expanded Details */}
                   <AnimatePresence>
-                    {expandedService === service.id && (
-                      <motion.div
+                    {expandedService === service.id && (<motion.div
                         initial = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                         animate = {
@@ -470,21 +417,11 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
   { opacity: 1,'
   height: 'auto' 
 
-
-
-
-
-
 }}
                         exit = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                         transition={{ duration: 0.3 }}"
@@ -498,8 +435,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
                               <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">"
                                 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                                 <span>{feature}</span>
-                              </div>
-                            ))}
+                              </div>) ) }
                           </div>
                         </div>
 
@@ -511,8 +447,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
                               <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">"
                                 <TrendingUp className="w-4 h-4 text-blue-400 flex-shrink-0" />
                                 <span>{benefit}</span>
-                              </div>
-                            ))}
+                              </div>) ) }
                           </div>
                         </div>
 
@@ -524,8 +459,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
                               <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">"
                                 <Target className="w-4 h-4 text-orange-400 flex-shrink-0" />
                                 <span>{useCase}</span>
-                              </div>
-                            ))}
+                              </div>) ) }
                           </div>
                         </div>
 
@@ -558,17 +492,14 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
                             </div>
                           </div>
                         </div>
-                      </motion.div>
-                    )}
+                      </motion.div>) }
                   </AnimatePresence>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </AnimatePresence>
           </div>
 
           {/* No Results */}
-          {filteredServices.length === 0 && (
-            <motion.div
+          {filteredServices.length === 0 && (<motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}"
               className="text-center py-20"
@@ -598,8 +529,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
               >
                 Clear Filters
               </button>
-            </motion.div>;
-          )}
+            </motion.div>;) }
         </div>
       </section>;
 
@@ -637,8 +567,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;'
           </div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default ZionTechGroup2025ComprehensiveShowcase;'"`

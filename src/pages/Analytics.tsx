@@ -142,21 +142,11 @@ const Analytics: React.FC = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -178,7 +168,7 @@ const Analytics: React.FC = () => {
 "
             <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
               Transform your raw data into actionable insights with our comprehensive analytics platform.
-              Monitor performance, track trends, and make informed decisions with real-time data.
+              Monitor performance, track trends, and make informed decisions with real - time data.
             </p>
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -212,21 +202,11 @@ const Analytics: React.FC = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -263,21 +243,11 @@ const Analytics: React.FC = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -301,21 +271,11 @@ const Analytics: React.FC = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -352,21 +312,11 @@ const Analytics: React.FC = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -390,21 +340,11 @@ const Analytics: React.FC = () => {
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -432,8 +372,7 @@ const Analytics: React.FC = () => {
                     <div key={featureIndex} className="flex items-center text-slate-400">"
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                       {feature}
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
 
                 <Link
@@ -443,8 +382,7 @@ const Analytics: React.FC = () => {
                   Learn More"
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>;
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -458,21 +396,11 @@ const Analytics: React.FC = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -496,21 +424,11 @@ const Analytics: React.FC = () => {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
                 transition = {
@@ -544,21 +462,11 @@ const Analytics: React.FC = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -589,8 +497,7 @@ const Analytics: React.FC = () => {
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default Analytics;}}}'"`

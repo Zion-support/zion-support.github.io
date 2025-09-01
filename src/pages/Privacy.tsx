@@ -268,8 +268,7 @@ const Privacy: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>
@@ -376,14 +375,12 @@ const Privacy: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </a>
-              ))}
+                </a>) ) }
             </div>
           </div>
         </section>
       </div>
-    </>
-  );
+    </>) ;
 };
 
 export default Privacy;

@@ -10,7 +10,6 @@ import {
   Wrench,'
   Headphones} from 'lucide-react';
 
-export default function ITServices() {
   const offerings = [
     {
 

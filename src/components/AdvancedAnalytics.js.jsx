@@ -44,9 +44,9 @@ export function AdvancedAnalytics() {
                     { device: 'Mobile', percentage: 35 },'
                     { device: 'Tablet', percentage: 5 }
                 ]
-            });
-            setIsLoading(false)};
-        fetchData()}, [timeRange]);
+            }) ;
+            setIsLoading (false) };
+        fetchData () }, [timeRange]) ;
     const formatNumber = (num) => {
 
         if (num >= 1000000)'
@@ -60,7 +60,7 @@ export function AdvancedAnalytics() {
 '
             style: 'currency','
             currency: 'USD'
-        }).format(num)};
+        }) .format (num) };
     if (isLoading) {
 
         return (<div className="flex items-center justify-center h-64">"
@@ -81,7 +81,7 @@ export function AdvancedAnalytics() {
                 ? 'bg-zion-cyan text-white''`
                 : 'bg-zion-slate/10 text-zion-slate-light hover:bg-zion-slate/20'}`}>
               {range}
-            </button>))}
+            </button>) ) }
         </div>
       </div>
 
@@ -190,7 +190,7 @@ export function AdvancedAnalytics() {
                 <span className="text-zion-cyan font-semibold">
                   {formatNumber(page.views)}
                 </span>
-              </div>))}
+              </div>) ) }
           </div>
         </motion.div>
 
@@ -218,7 +218,7 @@ export function AdvancedAnalytics() {
                 <div className="w-full bg-zion-slate/20 rounded-full h-2">"`
                   <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full transition-all duration-1000" style={{ width: `${source.percentage}%` }}></div>
                 </div>
-              </div>))}
+              </div>) ) }
           </div>
         </motion.div>
       </div>
@@ -249,7 +249,7 @@ export function AdvancedAnalytics() {
                   <div className="bg-gradient-to-r from-zion-blue to-zion-purple h-3 rounded-full transition-all duration-1000" style={{ width: `${device.percentage}%` }}></div>
                 </div>
               </div>
-            </div>))}
+            </div>) ) }
         </div>
       </motion.div>
 
@@ -273,8 +273,8 @@ export function AdvancedAnalytics() {
             <h4 className="text-zion-cyan font-semibold mb-2">Optimization Opportunities</h4>"
             <ul className="text-zion-slate text-sm space-y-1">
               <li>• Mobile conversion rate can be improved by 15%</li>
-              <li>• Page load speed optimization needed for /services</li>
-              <li>• A/B testing recommended for pricing page</li>
+              <li>• Page load speed optimization needed for / services</li>
+              <li>• A / B testing recommended for pricing page</li>
             </ul>
           </div>
           <div>"

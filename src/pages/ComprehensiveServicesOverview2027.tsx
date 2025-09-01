@@ -113,7 +113,7 @@ import SEO from '@/components/SEO';'
 import { Button } from '@/components/ui/button';'
 import { Badge } from '@/components/ui/badge';
 
-// Sample data for demonstration
+// Sample data for demonstration;
 const MICRO_SAAS_SERVICES = [
   {
 '
@@ -222,33 +222,22 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
         case 'aiScore':
           return b.aiScore - a.aiScore;'
         case 'newest':
-          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+          return new Date (b.createdAt) .getTime () - new Date (a.createdAt) .getTime () ;
         default:
           return 0}
-    });
-    setFilteredServices(filtered)}, [selectedCategory, selectedPricing, searchQuery, sortBy]);
-  const ServiceCard = ({ service }: { service})  => (
-    <motion.div
+    }) ;
+    setFilteredServices (filtered) }, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
+  const ServiceCard = ({ service }: { service}) => (<motion.div
       initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
       animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
       transition={{ duration: 0.5 }}"
@@ -320,8 +309,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               {expandedService === service.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
             </Button>
           </div>
-          {expandedService === service.id && (
-            <motion.div
+          {expandedService === service.id && (<motion.div
               initial = {
 
   { opacity: 0,
@@ -379,8 +367,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           </Link>;
         </Button>;
       </div>;
-    </motion.div>;
-  );
+    </motion.div>;) ;
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -410,21 +397,11 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -440,7 +417,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
 }}"
             className="text-xl text-zion-slate-light max-w-3xl mx-auto"
           >
-            Discover our complete portfolio of cutting-edge technology solutions, from AI-powered innovations to enterprise-grade infrastructure services.
+            Discover our complete portfolio of cutting - edge technology solutions, from AI - powered innovations to enterprise - grade infrastructure services.
           </motion.p>
         </div>
 
@@ -563,8 +540,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                   className={selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'}
 
                   {pricing.name}
-                </Button>
-              ))}
+                </Button>) ) }
             </div>
           </div>
           {/* Services Grid */}`
@@ -588,8 +564,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                 className = "bg-zion-cyan hover:bg-zion-cyan-light"
               >
                 {pricing.name}
-              </Button>
-            ))}
+              </Button>) ) }
           </div>
         </div>
         {/* Services Grid */}`
@@ -599,9 +574,8 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
             ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' '
             : 'grid-cols-1'`
         }`}>
-          {filteredServices.map((service) => (;
-            <ServiceCard key={service.id} service={service} />
-          ))};
+          {filteredServices.map ( (service) => (;
+            <ServiceCard key={service.id} service={service} />) ) };
         </div>;
         {filteredServices.length === 0 && (;"
           <div className="text-center py-16">;"
@@ -616,8 +590,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
             >
               Clear Filters
             </Button>
-          </div>
-        )}
+          </div>) }
       </div>
       {/* CTA Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20">;"
@@ -644,7 +617,6 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           </div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

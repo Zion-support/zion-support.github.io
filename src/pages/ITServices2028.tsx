@@ -210,8 +210,7 @@ const itServices2028 = [
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default ITServices2028;}}'

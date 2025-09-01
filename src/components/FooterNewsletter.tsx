@@ -58,8 +58,7 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
                 <>"
                   <Send className="w-4 h-4" />
                   Subscribe
-                </>
-                )}
+                </>) }
             </button>
           </form>;
         )}
@@ -68,7 +67,6 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
           We respect your privacy. Unsubscribe at any time.;
         </p>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 };
 '"

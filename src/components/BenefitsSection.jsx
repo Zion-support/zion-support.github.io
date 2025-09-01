@@ -71,7 +71,7 @@ const benefits = [
       'User experience focus',
     ]},
 ];
-
+;
 const additionalStats = [
   {
 "
@@ -285,10 +285,8 @@ export function BenefitsSection() {
                         >"
                           <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                           <span>{feature}</span>
-                        </motion.div>
-                      ))}
-                    </motion.div>
-                  )}
+                        </motion.div>) ) }
+                    </motion.div>) }
                 </AnimatePresence>
 
                 {/* Hover indicator */}"
@@ -298,8 +296,7 @@ export function BenefitsSection() {
                     : 'Hover for details'}
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
 
         {/* Call to action */}

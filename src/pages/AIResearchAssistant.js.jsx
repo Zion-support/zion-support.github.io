@@ -90,9 +90,9 @@ export default function AIResearchAssistant() {
                 {feature.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-gray-300">"
                     <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                     {benefit}
-                  </li>))}
+                  </li>) ) }
               </ul>
-            </div>))}
+            </div>) ) }
         </div>
 
         {/* Use Cases */}"
@@ -104,9 +104,9 @@ export default function AIResearchAssistant() {
                 <ul className="space-y-2">"
                   {useCase.applications.map((application, appIndex) => (<li key={appIndex} className="text-sm text-gray-300">
                       • {application}
-                    </li>))}
+                    </li>) ) }
                 </ul>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
 
@@ -123,7 +123,7 @@ export default function AIResearchAssistant() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                   </svg>
                 </a>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
 

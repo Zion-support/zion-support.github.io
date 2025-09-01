@@ -1,3 +1,4 @@
+import { useTranslation } from "react - i18next";
 import React, { useState, useEffect } from 'react';
 import SEO from "@/components/SEO";"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";"
@@ -44,10 +45,10 @@ export default function TranslationManager() {
                         else {
 `
                             acc[`${pre}${key}`] = obj[key]}
-                        return acc}, {})};
-                currentTranslations[lang.code] = flattenObject(res)}
-        });
-        setTranslations(currentTranslations);
+                        return acc}, {}) };
+                currentTranslations[lang.code] = flattenObject (res) }
+        }) ;
+        setTranslations (currentTranslations) ;
         // Get all unique keys across all languages
         const allKeys = new Set();
         Object.values(currentTranslations).forEach(langTranslations => {
@@ -65,7 +66,7 @@ export default function TranslationManager() {
                 Object.keys(langTranslations).forEach(key => allKeys.add(key))});
             setFilteredKeys(Array.from(allKeys));
             return}
-        const query = searchQuery.toLowerCase().trim();
+        const query = searchQuery.toLowerCase () .trim () ;
         const filtered = [];
         // Search in keys and values
         Object.values(translations).forEach(langTranslations => {
@@ -90,12 +91,12 @@ export default function TranslationManager() {
 
             ...editedTranslations,
             [key]: initialEdits
-        })};
+        }) };
     const handleSave = (key) => {
 
         setIsSaving(true);
         // In a real application, you would save these to your backend
-        setTimeout(() => {
+        setTimeout ( () => {
             // Update translations with edited values
             const updatedTranslations = { ...translations };
             supportedLanguages.forEach(lang => {
@@ -171,7 +172,7 @@ export default function TranslationManager() {
                 ...editedTranslations[key],
                 [lang]: value
             }
-        })};
+        }) };
     const getMissingLanguages = (key) => {
 
         return supportedLanguages
@@ -282,8 +283,8 @@ export default function TranslationManager() {
                               {t('translation.edit')}
                             </Button>)}
                         </div>
-                      </div>))}
-                  </div>)}
+                      </div>) ) }
+                  </div>) }
               </div>
             </div>
           </CardContent>

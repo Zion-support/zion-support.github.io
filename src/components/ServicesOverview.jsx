@@ -1,7 +1,10 @@
+import { Link } from "react - router - dom";
 import React from 'react';
 import { Button } from "@/components/ui/button";"
 import { Link } from "react-router-dom";
 import { Zap, Shield, Cloud, Database, Code, ShoppingCart, BarChart3, Link as LinkIcon, Network, Monitor, Smartphone, CheckCircle, Star, Clock, Users, Globe // Service categories with detailed information
+
+
 const serviceCategories = [
     {
 "
@@ -283,7 +286,7 @@ const serviceCategories = [
         link: "/micro-saas-services"
 
 ];
-// Why choose Zion Tech Group
+// Why choose Zion Tech Group;
 const whyChooseUs = [
     {
 "
@@ -350,7 +353,7 @@ export function ServicesOverview() {
                         {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light text-sm">"
                             <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"/>
                             {feature}
-                          </li>))}
+                          </li>) ) }
                       </ul>
                     </div>
 
@@ -360,10 +363,10 @@ export function ServicesOverview() {
                         {service.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-zion-slate-light text-sm">"
                             <Star className="w-4 h-4 text-zion-purple mr-2 flex-shrink-0"/>
                             {benefit}
-                          </li>))}
+                          </li>) ) }
                       </ul>
                     </div>
-                  </div>))}
+                  </div>) ) }
               </div>
 "
               <div className="flex items-center justify-between mb-4 text-sm">"
@@ -380,7 +383,7 @@ export function ServicesOverview() {
                   View {category.title}
                 </Button>
               </Link>
-            </div>))}
+            </div>) ) }
         </div>
 
         {/* Why Choose Us */}"

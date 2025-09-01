@@ -64,12 +64,12 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;'
         case 'price':
           return a.price - b.price;'
         case 'delivery':
-          return a.estimatedDelivery.localeCompare(b.estimatedDelivery);
+          return a.estimatedDelivery.localeCompare (b.estimatedDelivery) ;
         default:
           return 0}
-    });
+    }) ;
 
-    return filtered}, [searchTerm, selectedCategory, sortBy]);
+    return filtered}, [searchTerm, selectedCategory, sortBy]) ;
 
   const containerVariants = {
 
@@ -86,11 +86,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;'
 
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
 
 },
     visible: {
@@ -120,32 +115,17 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;'
   { y: -50,
   opacity: 0 
 
-
-
-
-
-
 }}
             animate = {
 
   { y: 0,
   opacity: 1 
 
-
-
-
-
-
 }}
             transition = {
 
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
 
 }}
           >
@@ -158,32 +138,17 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;'
   { y: 50,
   opacity: 0 
 
-
-
-
-
-
 }}
             animate = {
 
   { y: 0,
   opacity: 1 
 
-
-
-
-
-
 }}
             transition = {
 
   { duration: 0.8,
   delay: 0.4 
-
-
-
-
-
 
 }}
           >
@@ -196,32 +161,17 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;'
   { scale: 0.8,
   opacity: 0 
 
-
-
-
-
-
 }}
             animate = {
 
   { scale: 1,
   opacity: 1 
 
-
-
-
-
-
 }}
             transition = {
 
   { duration: 0.8,
   delay: 0.6 
-
-
-
-
-
 
 }}
           >"
@@ -249,32 +199,17 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
         animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
         transition = {
 
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
 
 }}
       >"
@@ -344,11 +279,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;'
   { y: -5,
   scale: 1.02 
 
-
-
-
-
-
 }}
             >
               {/* Service Header */}"
@@ -411,8 +341,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;'
                   {service.features.length > 3 && ("
                     <span className="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-300">
                       +{service.features.length - 3} more
-                    </span>
-                  )}
+                    </span>) }
                 </div>
               </div>
 
@@ -434,8 +363,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;'
                   Learn More <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
-            </motion.div>;
-          ))}
+            </motion.div>;) ) }
         </div>
 
         {filteredServices.length === 0 && (;
@@ -459,32 +387,17 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;'
   { opacity: 0,
   y: 50 ;
 
-
-
-
-
-
 }}
         animate = {
 
   { opacity: 1,
   y: 0 ;
 
-
-
-
-
-
 }}
         transition = {
 
   { duration: 0.8,
   delay: 1 ;
-
-
-
-
-
 
 }}
       >"
@@ -542,8 +455,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;'
           </div>;
         </div>;
       </motion.div>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default AdvancedInnovativeServicesShowcase2026;}}}}}}}}'"

@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';'
 import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone } from 'lucide-react';'
 import SEO from '@/components/SEO';'
 import { Link as RouterLink } from 'react-router-dom';
-
+;
+export { function };
 export default function Blockchain(...args[]):  {
 
   const features = [
@@ -215,7 +216,7 @@ export default function Blockchain(...args[]):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -349,7 +350,7 @@ export default function Blockchain(...args[]):  {
             </motion.div>
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
+              {useCases.map(useCase: unknown, index: unknown 
                 <motion.div
                   key={index}"
                   className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300"
@@ -446,7 +447,7 @@ export default function Blockchain(...args[]):  {
             </motion.div>
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map(feature: unknown, index: unknown (
                 <motion.div
                   key={index}"
                   className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300"
@@ -535,7 +536,7 @@ export default function Blockchain(...args[]):  {
             </motion.div>
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricing.map((plan, index) => (
+              {pricing.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   className={`relative p-8 rounded-2xl ${
@@ -661,7 +662,7 @@ export default function Blockchain(...args[]):  {
             </motion.div>
 "
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}"
                   className="flex items-start space-x-4 p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm"

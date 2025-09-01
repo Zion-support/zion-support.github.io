@@ -46,21 +46,11 @@ import {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -109,8 +99,7 @@ import {
           </div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default BlockchainServicesPage;

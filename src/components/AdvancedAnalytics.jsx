@@ -93,8 +93,7 @@ export function AdvancedAnalytics() {
               }`}
             >
               {range}
-            </button>
-          ))}
+            </button>) ) }
         </div>
       </div>
 
@@ -280,8 +279,8 @@ export function AdvancedAnalytics() {
             </h4>"
             <ul className="text-zion-slate text-sm space-y-1">
               <li>• Mobile conversion rate can be improved by 15%</li>
-              <li>• Page load speed optimization needed for /services</li>
-              <li>• A/B testing recommended for pricing page</li>
+              <li>• Page load speed optimization needed for / services</li>
+              <li>• A / B testing recommended for pricing page</li>
             </ul>
           </div>
           <div>"
@@ -296,8 +295,7 @@ export function AdvancedAnalytics() {
           </div>
         </div>
       </motion.div>
-    </div>
-  );
+    </div>) ;
 }
 
 export default AdvancedAnalytics;

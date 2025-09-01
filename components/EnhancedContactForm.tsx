@@ -95,7 +95,7 @@ const EnhancedContactForm: React.FC = () => {
     { value: '12-plus-months', label: '12+ Months' },
   ];
 
-  const validateForm = () => {
+  const validateForm = (...args: unknown[]): unknown => {
     const newErrors: Record<string, string> = {};
 
     if (!formData.name.trim()) {
@@ -143,7 +143,7 @@ const EnhancedContactForm: React.FC = () => {
     setIsSubmitted(true);
 
     // Reset form after successful submission
-    setTimeout(() => {
+    setTimeout(: unknown {
       setIsSubmitted(false);
       setFormData({
 '

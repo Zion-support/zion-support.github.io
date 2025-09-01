@@ -20,7 +20,8 @@ function withAuth(Component) {
         return <Component {...props}/>;
     };
     return Wrapped;
-
+;
+export { withAuth };
 export default withAuth;
 }}}'
                 router('/login?next=/community/new');
@@ -30,9 +31,9 @@ export default withAuth;
 
             return null}
         return <Component {...props}/>};
-    return Wrapped}
+    return Wrapped};
 export default withAuth;
-
+;
 export default withAuth;
 export default withAuth;
 export default withAuth;

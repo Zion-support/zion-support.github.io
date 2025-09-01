@@ -29,5 +29,6 @@ const ServicePortfolioDashboard = () => {
     </div>
   );
 };
+export { ServicePortfolioDashboard };
 export default ServicePortfolioDashboard;
 '"

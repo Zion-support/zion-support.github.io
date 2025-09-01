@@ -305,7 +305,7 @@ export default function NewServicesOverview() {
                           {service.features.map((feature, featureIndex) => (<div key={featureIndex} className="flex items-center text-sm text-gray-400">"
                               <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
                               {feature}
-                            </div>))}
+                            </div>) ) }
                         </div>
                       </div>
 "
@@ -313,9 +313,9 @@ export default function NewServicesOverview() {
                         Learn More"
                         <ArrowRight className="ml-2 h-4 w-4"/>
                       </Link>
-                    </div>))}
+                    </div>) ) }
                 </div>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </div>

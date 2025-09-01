@@ -19,6 +19,7 @@ import {
   Pause} from 'lucide-react';
 
 interface HeroSlide {
+
   id: string;
   title: string;
   subtitle: string;
@@ -28,10 +29,10 @@ interface HeroSlide {
   path: string;
   features: string[];
   gradient: string;
-  icon: React.ComponentType<any>;
-  stats: { label: string; value: string; icon: React.ComponentType<any> }[];
+  icon: React.ComponentType < any>;
+  stats: { label: string; value: string; icon: React.ComponentType < any> }[];
 }
-
+;
 const heroSlides: HeroSlide[] = [
   {
 '
@@ -104,7 +105,7 @@ const heroSlides: HeroSlide[] = [
       { label: 'Cost Reduction', value: '40%', icon: Rocket },
     ]},
 ];
-
+;
 const slideVariants = {
 
   enter: (direction: number) => ({
@@ -128,14 +129,13 @@ const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
 
-export default function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [direction, setDirection] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState (0) ;
+  const [isAutoPlaying, setIsAutoPlaying] = useState (true) ;
+  const [direction, setDirection] = useState (0) ;
+  const [isLoading, setIsLoading] = useState (true) ;
 
-  // Memoize slides to prevent unnecessary re-renders
-  const memoizedSlides = useMemo(() => heroSlides, []);
+  // Memoize slides to prevent unnecessary re - renders
+  const memoizedSlides = useMemo ( () => heroSlides, []) ;
 
   // Optimized slide navigation with useCallback
   const nextSlide = useCallback(() => {
@@ -171,11 +171,11 @@ export default function HeroSection() {
       setCurrentSlide(prev => (prev + 1) % memoizedSlides.length);
     }, 6000);
 
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, memoizedSlides.length]);
+    return () => clearInterval (interval) ;
+  }, [isAutoPlaying, memoizedSlides.length]) ;
 
   // Handle keyboard navigation
-  useEffect(() => {
+  useEffect ( () => {
     const handleKeyDown = (e: KeyboardEvent) => {
 '
       if (e.key === 'ArrowLeft') prevSlide();'
@@ -192,7 +192,7 @@ export default function HeroSection() {
   }, [prevSlide, nextSlide, isAutoPlaying]);
 
   // Handle image loading
-  useEffect(() => {
+  useEffect ( () => {
     const preloadImages = async () => {
       const imagePromises = memoizedSlides.map(slide => {
 
@@ -202,15 +202,15 @@ export default function HeroSection() {
           img.onload = resolve;
           img.onerror = resolve;
           img.src = slide.image;
-        });
-      });
+        }) ;
+      }) ;
 
-      await Promise.all(imagePromises);
-      setIsLoading(false);
+      await Promise.all (imagePromises) ;
+      setIsLoading (false) ;
     };
 
-    preloadImages();
-  }, [memoizedSlides]);
+    preloadImages () ;
+  }, [memoizedSlides]) ;
 
   const currentSlideData = memoizedSlides[currentSlide];
 
@@ -224,8 +224,7 @@ export default function HeroSection() {
             Loading amazing experiences...
           </p>
         </div>
-      </div>
-    );
+      </div>) ;
   }
 
   return ("
@@ -411,8 +410,7 @@ export default function HeroSection() {
       >"
         <ChevronRight className="w-6 h-6" />
       </button>
-    </section>
-  );
+    </section>) ;
 }
 
 export { HeroSection };

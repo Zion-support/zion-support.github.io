@@ -269,7 +269,7 @@ const AICodeReviewSecurityScanner = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {vulnerabilityTypes.map((vulnType, index)  => (
+            {vulnerabilityTypes.map((vulnType, index 
               <motion.div
                 key={index}
                 initial = {
@@ -372,7 +372,7 @@ const AICodeReviewSecurityScanner = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map(feature: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -468,7 +468,7 @@ const AICodeReviewSecurityScanner = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -594,7 +594,7 @@ const AICodeReviewSecurityScanner = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {

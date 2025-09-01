@@ -1,6 +1,9 @@
 import React, { useState, useMemo } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';
 import { Search, 
+import { zion2026AIMarketplaceServices  } from '../../data / zion - 2026 - ai - marketplace - services';
+
+
   Filter, 
   Grid3X3, 
   List, 
@@ -32,8 +35,8 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
                            service.description.toLowerCase().includes(searchTerm.toLowerCase());'
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
-    });
-  }, [searchTerm, selectedCategory]);
+    }) ;
+  }, [searchTerm, selectedCategory]) ;
 
   const getCategoryIcon = (category: anystring)  => {;
     switch (category) {;'
@@ -68,21 +71,11 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -166,8 +159,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
                   {categories.map(category  => (
                     <option key={category} value={category}>'
                       {category === 'all' ? 'All Categories' : category}
-                    </option>
-                  ))}
+                    </option>) ) }
                 </select>
               </div>
 
@@ -217,29 +209,18 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
               ? 'grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8''
               : 'space-y-6'
             }>
-              {filteredServices.map((service, index)  => (
-                <motion.div
+              {filteredServices.map ( (service, index) => (<motion.div
                   key={service.id}
                   initial = {
 
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                   transition = {
@@ -293,8 +274,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
                           <li key={idx} className="text-sm text-gray-400 flex items-center">"
                             <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2" />
                             {benefit}
-                          </li>
-                        ))}
+                          </li>) ) }
                       </ul>
                     </div>
 
@@ -322,10 +302,8 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
                       </button>
                     </div>
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          )}
+                </motion.div>) ) }
+            </div>) }
         </div>
       </section>
 
@@ -338,21 +316,11 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -397,8 +365,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;'
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default Zion2026AIMarketplaceShowcase;'"`

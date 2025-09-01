@@ -28,10 +28,10 @@ import {
   Code'
 } from 'lucide-react';
 
-    integrations["E-commerce", "POS Systems", "Mobile Apps", "CRM"]
+    integrations["E - commerce", "POS Systems", "Mobile Apps", "CRM"]
   }
 ];
-
+;
 const retailTrends = [
   {
 "
@@ -62,7 +62,7 @@ const retailTrends = [
     impact: "High"
 
 ];
-
+;
 const successStories = [
   {
 
@@ -95,7 +95,7 @@ const successStories = [
     logo: "HG"
 
 ];
-
+;
 const processSteps = [
   {
 
@@ -140,7 +140,7 @@ export default function RetailSolutions() {
 '
   const filteredSolutions = selectedCategory === 'All'
     ? retailSolutions
-    : retailSolutions.filter(solution => solution.category === selectedCategory);
+    : retailSolutions.filter (solution => solution.category === selectedCategory) ;
 
   return ("
     <div className="min-h-screen bg-futuristic">
@@ -159,21 +159,11 @@ export default function RetailSolutions() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -185,21 +175,11 @@ export default function RetailSolutions() {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
               transition = {
@@ -256,21 +236,11 @@ export default function RetailSolutions() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -291,21 +261,11 @@ export default function RetailSolutions() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -338,8 +298,7 @@ export default function RetailSolutions() {
                 }`}>
                   {trend.impact} Impact
                 </span>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -353,21 +312,11 @@ export default function RetailSolutions() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -388,21 +337,11 @@ export default function RetailSolutions() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -432,8 +371,7 @@ export default function RetailSolutions() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -447,21 +385,11 @@ export default function RetailSolutions() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -487,8 +415,7 @@ export default function RetailSolutions() {
                 }`}
 
                 {category}
-              </button>
-            ))}
+              </button>) ) }
           </div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -500,21 +427,11 @@ export default function RetailSolutions() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -554,8 +471,7 @@ export default function RetailSolutions() {
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
 
                       {integration}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
 "
                 <div className="flex items-center justify-between mb-4">"
@@ -572,8 +488,7 @@ export default function RetailSolutions() {
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -587,21 +502,11 @@ export default function RetailSolutions() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -622,21 +527,11 @@ export default function RetailSolutions() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -683,8 +578,7 @@ export default function RetailSolutions() {
                   ))}"
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -698,21 +592,11 @@ export default function RetailSolutions() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"

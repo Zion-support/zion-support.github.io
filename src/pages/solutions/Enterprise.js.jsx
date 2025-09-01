@@ -327,5 +327,6 @@ const EnterpriseSolutions = () => {
     </div>
   );
 };
+export { EnterpriseSolutions };
 export default EnterpriseSolutions;
 '"

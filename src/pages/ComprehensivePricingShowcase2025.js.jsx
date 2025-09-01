@@ -176,7 +176,7 @@ const ComprehensivePricingShowcase2025 = () => {
                 <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">"
                   {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">'
                       {category === 'all' ? 'All Categories' : category}
-                    </option>))}
+                    </option>) ) }
                 </select>
               </div>
 
@@ -186,7 +186,7 @@ const ComprehensivePricingShowcase2025 = () => {
                 <select value={priceRange} onChange={(e) => setPriceRange(e.target.value)} className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">"
                   {priceRanges.map(range => (<option key={range.value} value={range.value} className="bg-slate-800 text-white">
                       {range.label}
-                    </option>))}
+                    </option>) ) }
                 </select>
               </div>
             </div>
@@ -250,9 +250,9 @@ const ComprehensivePricingShowcase2025 = () => {
                         </li>))}"
                       {service.features.length > 3 && (<li className="text-xs text-gray-500">
                           +{service.features.length - 3} more features
-                        </li>)}
+                        </li>) }
                     </ul>
-                  </div>)}
+                  </div>) }
 
                 {/* Market Position */}"
                 {service.marketPosition && (<div className="mb-4 p-3 bg-white/5 rounded-lg">"
@@ -272,7 +272,7 @@ const ComprehensivePricingShowcase2025 = () => {
                         {service.benefits.slice(0, 2).join(', ')}'
                         {service.benefits.length > 2 && '...'}
                       </span>
-                    </div>)}
+                    </div>) }
                 </div>
 
                 {/* Trial and Setup Info */}"
@@ -301,7 +301,7 @@ const ComprehensivePricingShowcase2025 = () => {
                     </a>
                   </div>
                 </div>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>

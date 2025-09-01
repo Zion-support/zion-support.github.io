@@ -27,8 +27,8 @@ const frequencies = [;'
   const [status, setStatus] = useState<any>('idle');
   const [errors, setErrors] = useState<Partial<NewsletterFormData>>({});
 
-  const validateForm = (): boolean => {;
-    const newErrors: Partial<NewsletterFormData> = {};
+  const validateForm = () : boolean => {;
+    const newErrors: Partial < NewsletterFormData> = {};
 
     if (!formData.email) {
 '
@@ -44,8 +44,8 @@ const frequencies = [;'
       newErrors.interests = 'Please select at least one interest';
     }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0};
+    setErrors (newErrors) ;
+    return Object.keys (newErrors) .length === 0};
 
       return}
 '
@@ -53,7 +53,7 @@ const frequencies = [;'
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise (resolve => setTimeout (resolve, 2000) ) ;
 
       // Here you would typically send the data to your newsletter service'
       // // // // // // // // console.log('Newsletter subscription:', formData);
@@ -79,12 +79,12 @@ const frequencies = [;'
       // console.error('Newsletter subscription error:', error)}
   };
 
-      setErrors(prev => ({ ...prev, interests: null }));
+      setErrors (prev => ({ ...prev, interests: null }) ) ;
     }
   };
 
-  const handleInputChange = (field: keyof NewsletterFormData, value: string | string[]) => {;
-    setFormData(prev => ({ ...prev, [field]: value }));
+  const handleInputChange = useCallback ( (field: keyof NewsletterFormData, value: string | string[]) => {;
+    setFormData (prev => ({ ...prev, [field]: value }) ) ;
 
     // Clear error when user starts typing
     if (errors[field]) {
@@ -102,21 +102,11 @@ const frequencies = [;'
   { opacity: 0,
   scale: 0.95 
 
-
-
-
-
-
 }}
         animate = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
         className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl p-8 text-center border border-green-200 dark:border-green-800"
@@ -132,8 +122,7 @@ const frequencies = [;'
           <Mail className="h-4 w-4" />;
           <span>Check your email for a confirmation message</span>;
         </div>;
-      </motion.div>;
-    );
+      </motion.div>;) ;
   }
 
   return ("
@@ -164,21 +153,11 @@ const frequencies = [;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ delay: 0.2 }}"
@@ -193,21 +172,11 @@ const frequencies = [;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ delay: 0.3 }}"
@@ -223,21 +192,11 @@ const frequencies = [;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
         animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
         transition={{ delay: 0.4 }}
@@ -277,8 +236,7 @@ const frequencies = [;'
               <p className="mt-1 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">"
                 <AlertCircle className="h-4 w-4" />
                 {errors.firstName}
-              </p>
-            )}
+              </p>) }
           </div>
 
           <div>"
@@ -312,8 +270,7 @@ const frequencies = [;'
               <p className="mt-1 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">"
                 <AlertCircle className="h-4 w-4" />
                 {errors.email}
-              </p>
-            )}
+              </p>) }
           </div>
         </div>
 
@@ -325,7 +282,7 @@ const frequencies = [;'
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
             {interests.map((interest) => {;
               const Icon = interest.icon;
-              const isSelected = formData.interests.includes(interest.id);
+              const isSelected = formData.interests.includes (interest.id) ;
 
               return()
                 <motion.button
@@ -351,8 +308,7 @@ const frequencies = [;'
             <p className = "mt-2 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">"
               <AlertCircle className="h-4 w-4" />
               {errors.interests}
-            </p>
-          )}
+            </p>) }
         </div>
 
         {/* Frequency Selection */}
@@ -405,8 +361,7 @@ const frequencies = [;'
                 }`}>
                   {freq.description}
                 </span>
-              </label>;
-            ))}
+              </label>;) ) }
           </div>
         </div>
 
@@ -432,8 +387,7 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
             <>"
               <Send className="h-5 w-5" />
               Subscribe to Newsletter
-            </>
-          )}
+            </>) }
         </motion.button>
 
         {/* Error Message */}'
@@ -443,11 +397,6 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
 
   { opacity: 0,
   y: 10 
-
-
-
-
-
 
 }}
             animate = {
@@ -467,8 +416,7 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
               <AlertCircle className="h-4 w-4" />
               Something went wrong. Please try again later.
             </p>
-          </motion.div>;
-        )}
+          </motion.div>;) }
 
         {/* Privacy Notice */}"
         <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
@@ -476,7 +424,6 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
           You can unsubscribe at any time. We respect your privacy and will never share your information.;
         </p>;
       </motion.form>;
-    </div>;
-  );
+    </div>;) ;
 };
 '"`

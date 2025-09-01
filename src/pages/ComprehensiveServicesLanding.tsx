@@ -295,11 +295,9 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
                         >
                           Learn More
                         </Link>
-                      </motion.div>
-                    ))}
+                      </motion.div>) ) }
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>
@@ -352,8 +350,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
                   url: "/services/ai-customer-experience-analytics","
                   cta: "Analyze Customer Data"
                 }
-              ].map((service, index)   => (
-                <motion.div
+              ].map ( (service, index) => (<motion.div
                   key={service.title}
                   initial = {
 
@@ -386,8 +383,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
                         <li key={benefitIndex} className="text-blue-300 flex items-center">"
                           <span className="text-green-400 mr-2">✓</span>
                           {benefit}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
                   "
@@ -410,8 +406,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
                       Contact Sales
                     </Link>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>

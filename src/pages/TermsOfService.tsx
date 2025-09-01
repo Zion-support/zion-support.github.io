@@ -203,21 +203,11 @@ const TermsOfService = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.6 }}"
@@ -231,11 +221,9 @@ const TermsOfService = () => {;'
                 <p>"
                   These Terms of Service ("Terms") govern your use of the {compName} website located at {website} and  related services provided by {compName} ("we," "our," or "us").
                 </p>
-                <p>
-                  By accessing or using our website and services, you agree to be bound by these Terms. If you disagree with  part of these terms, you may not access our website or use our services.
+                <p > By accessing or using our website and services, you agree to be bound by these Terms. If you disagree with  part of these terms, you may not access our website or use our services.
                 </p>
-                <p>
-                  These Terms apply to all visitors, users, and others who access or use our website and services.
+                <p > These Terms apply to all visitors, users, and others who access or use our website and services.
                 </p>
               </div>
             </motion.div>
@@ -279,8 +267,7 @@ const TermsOfService = () => {;'
                     Technology strategy and advisory services
                   </li>
                 </ul>
-                <p>
-                  We reserve the right to modify, suspend, or discontinue any part of our services at any time without notice.
+                <p > We reserve the right to modify, suspend, or discontinue any part of our services at any time without notice.
                 </p>
               </div>
             </motion.div>
@@ -369,8 +356,7 @@ const TermsOfService = () => {;'
                     Use our services for commercial purposes without authorization
                   </li>
                 </ul>
-                <p>
-                  Violation of this policy may result in termination of your access to our services.
+                <p > Violation of this policy may result in termination of your access to our services.
                 </p>
               </div>
             </motion.div>
@@ -410,11 +396,9 @@ const TermsOfService = () => {;'
                     Copyrighted materials and designs
                   </li>
                 </ul>
-                <p>
-                  You may not copy, reproduce, distribute, or create derivative works from our content without our express written permission.
+                <p > You may not copy, reproduce, distribute, or create derivative works from our content without our express written permission.
                 </p>
-                <p>
-                  Any content you submit to our services remains your property, but you grant us a license to use, modify, and distribute such content in connection with our services.
+                <p > Any content you submit to our services remains your property, but you grant us a license to use, modify, and distribute such content in connection with our services.
                 </p>
               </div>
             </motion.div>
@@ -436,11 +420,9 @@ const TermsOfService = () => {;'
                 <p>
                   Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference.
                 </p>
-                <p>
-                  By using our services, you consent to the collection and use of information as outlined in our Privacy Policy.
+                <p > By using our services, you consent to the collection and use of information as outlined in our Privacy Policy.
                 </p>
-                <p>
-                  We implement appropriate security measures to protect your data, but no method of transmission over the internet is 100% secure.
+                <p > We implement appropriate security measures to protect your data, but no method of transmission over the internet is 100% secure.
                 </p>
               </div>
             </motion.div>
@@ -480,8 +462,7 @@ const TermsOfService = () => {;'
                     Third-party actions or content
                   </li>
                 </ul>
-                <p>
-                  Our total liability to you for any claims arising from these Terms or your use of our services shall not exceed the amount you paid us in the 12 months preceding the claim.
+                <p > Our total liability to you for any claims arising from these Terms or your use of our services shall not exceed the amount you paid us in the 12 months preceding the claim.
                 </p>
               </div>
             </motion.div>
@@ -524,8 +505,7 @@ const TermsOfService = () => {;'
                     The results obtained from using our services will be accurate or reliable
                   </li>
                 </ul>
-                <p>
-                  We disclaim all warranties, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.
+                <p > We disclaim all warranties, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non - infringement.
                 </p>
               </div>
             </motion.div>
@@ -585,11 +565,9 @@ const TermsOfService = () => {;'
                 <p>
                   We may terminate or suspend your access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms.
                 </p>
-                <p>
-                  Upon termination, your right to use our services will cease immediately. If you wish to terminate your account, you may simply discontinue using our services.
+                <p > Upon termination, your right to use our services will cease immediately. If you wish to terminate your account, you may simply discontinue using our services.
                 </p>
-                <p>
-                  All provisions of these Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.
+                <p > All provisions of these Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.
                 </p>
               </div>
             </motion.div>
@@ -611,11 +589,9 @@ const TermsOfService = () => {;'
                 <p>
                   These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.
                 </p>
-                <p>
-                  Any disputes arising from these Terms or your use of our services shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.
+                <p > Any disputes arising from these Terms or your use of our services shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.
                 </p>
-                <p>
-                  The arbitration shall be conducted in English and the seat of arbitration shall be in the United States.
+                <p > The arbitration shall be conducted in English and the seat of arbitration shall be in the United States.
                 </p>
               </div>
             </motion.div>
@@ -637,11 +613,9 @@ const TermsOfService = () => {;'
                 <p>
                   We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect.
                 </p>
-                <p>
-                  What constitutes a material change will be determined at our sole discretion.
+                <p > What constitutes a material change will be determined at our sole discretion.
                 </p>
-                <p>
-                  By continuing to access or use our services after any revisions become effective, you agree to be bound by the revised terms.
+                <p > By continuing to access or use our services after any revisions become effective, you agree to be bound by the revised terms.
                 </p>
               </div>
             </motion.div>
@@ -705,32 +679,17 @@ const TermsOfService = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
 
 }}
             >"
@@ -748,21 +707,11 @@ const TermsOfService = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                     animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                     transition = {
@@ -799,32 +748,17 @@ const TermsOfService = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}
             >"
@@ -841,21 +775,11 @@ const TermsOfService = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                     animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                     transition = {
@@ -892,32 +816,17 @@ const TermsOfService = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
 
 }}
             >
@@ -933,8 +842,7 @@ const TermsOfService = () => {;'
                   <div className="prose prose-slate max-w-none">"
                     <p className="text-lg text-slate-700 leading-relaxed">{section.content}</p>
                   </div>
-                </div>
-              ))}
+                </div>) ) }
             </motion.div>
           </div>
         </section>
@@ -948,32 +856,17 @@ const TermsOfService = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
 
 }}
             >"
@@ -990,21 +883,11 @@ const TermsOfService = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                     animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                     transition = {
@@ -1041,32 +924,17 @@ const TermsOfService = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.6,
   delay: 1.0 
-
-
-
-
-
 
 }}
             >"

@@ -310,8 +310,7 @@ const SupplyChain = () => {
                       >"
                         <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
                         {feature}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>
 "
@@ -321,8 +320,7 @@ const SupplyChain = () => {
                   </span>"
                   <span className="text-gray-400">{solution.timeline}</span>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -391,8 +389,7 @@ const SupplyChain = () => {
                   ))}"
                   <span className="text-gray-300 text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -432,8 +429,7 @@ const SupplyChain = () => {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 };
 
 export default SupplyChain;

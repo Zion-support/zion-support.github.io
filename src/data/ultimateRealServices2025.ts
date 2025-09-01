@@ -1,5 +1,5 @@
 import { ProductListing } from "@/types/listings";
-
+;
 export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
 "
   "AI Development": {
@@ -87,7 +87,7 @@ export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
     count: 1;
   };
 };
-
+;
 export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
 "
   "Chatbots": { icon: "💬",
@@ -116,7 +116,7 @@ export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
   "Cryptography": { icon: "🔑", count: 1 },;"
   "Content Generation": { icon: "✍️", count: 1 };
 };
-
+;
 export const ULTIMATE_PRICING_TIERS_2025 = {
 "
   "Starter": {
@@ -145,7 +145,7 @@ export const ULTIMATE_PRICING_TIERS_2025 = {
     features: ["Full functionality", "24/7 support", "All integrations", "Custom development", "Dedicated account manager", "SLA guarantees"];
   };
 };
-
+;
 export const ULTIMATE_CONTACT_INFO_2025 = {
 "
   phone: "+1 302 464 0950","
@@ -166,7 +166,7 @@ export const ULTIMATE_CONTACT_INFO_2025 = {
 
 
 };
-
+;
 export const ULTIMATE_SERVICE_GUARANTEES_2025 = {
 "
   quality: "100% satisfaction guarantee with 30-day money-back policy","

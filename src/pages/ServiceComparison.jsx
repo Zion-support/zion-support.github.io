@@ -52,11 +52,6 @@ const ServiceComparison = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -106,11 +101,6 @@ const ServiceComparison = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -137,20 +127,10 @@ const ServiceComparison = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -178,7 +158,7 @@ const ServiceComparison = () => {
                     </p>
                   </CardContent>
                 </Card>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -190,11 +170,6 @@ const ServiceComparison = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -221,20 +196,10 @@ const ServiceComparison = () => {
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -261,11 +226,6 @@ const ServiceComparison = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -298,11 +258,6 @@ const ServiceComparison = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 

@@ -17,12 +17,12 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
     { id: 'it-services', name: 'IT Services', icon: '🖥️', color: 'from-gray-600 to-slate-600' };
   ];
 
-  const filteredServices = ultimateZionServices2025.filter(service => {;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+  const filteredServices = ultimateZionServices2025.filter (service => {;
+    const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+      service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+      service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   const containerVariants = {
 
@@ -40,10 +40,6 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
 
   hidden: { opacity: 0,
   y: 20 
-
-
-
-
 
 ;
 },;
@@ -66,21 +62,11 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} 
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} 
             transition={{ duration: 0.6 }}
@@ -102,21 +88,11 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} 
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} 
             transition = {
@@ -124,15 +100,10 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
   { duration: 0.6,
   delay: 0.2 
 
-
-
-
-
-
 }}
           >
-            Discover our revolutionary portfolio of cutting-edge micro SAAS services, quantum computing solutions, 
-            blockchain innovations, space technology, and AI-powered services designed to transform industries and 
+            Discover our revolutionary portfolio of cutting - edge micro SAAS services, quantum computing solutions, 
+            blockchain innovations, space technology, and AI - powered services designed to transform industries and 
             create unprecedented value for your business.
           </motion.p>
           
@@ -144,32 +115,17 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} 
             whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }} 
             transition = {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}
           >"
@@ -213,32 +169,17 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} 
             whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }} 
             transition = {
 
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
 
 }}
           >
@@ -263,8 +204,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
                 >"
                   <span className="mr-2">{category.icon}</span>
                   {category.name}
-                </button>
-              ))}
+                </button>) ) }
             </div>
           </motion.div>
         </div>
@@ -280,8 +220,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
             whileInView="visible" 
             viewport={{ once: anytrue }}
           >
-            {filteredServices.map((service, index)  => (
-              <motion.div 
+            {filteredServices.map ( (service, index) => (<motion.div 
                 key={service.id} 
                 variants={itemVariants} "
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
@@ -344,8 +283,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
                       <div key={idx} className="flex items-center text-sm text-gray-300">"
                         <span className="text-green-400 mr-2">✓</span>
                         {benefit}
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
                 </div>
 
@@ -356,8 +294,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
                     {service.technology.slice(0, 4).map((tech, idx) => ("
                       <span key={idx} className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
                         {tech}
-                      </span>
-                    ))}
+                      </span>) ) }
                   </div>
                 </div>
 
@@ -370,8 +307,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
                         Market Size: {service.marketSize}
                       </p>
                     </div>
-                  </div>
-                )}
+                  </div>) }
 
                 {/* Trial and Setup */}"
                 <div className="flex justify-between items-center mb-6 text-sm">"
@@ -406,8 +342,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
                     </a>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -422,21 +357,11 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -463,8 +388,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;'
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default UltimateZionServicesShowcase;'"`

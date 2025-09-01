@@ -68,7 +68,7 @@ import {
   type ExpandedServicePricing'
 } from '@/data/expandedServicesPricing2027';
 
-      pricing = pricing.filter(p => p.category === selectedCategory)}
+      pricing = pricing.filter (p => p.category === selectedCategory) }
     if (searchQuery) {
 
       pricing = pricing.filter(p =>
@@ -83,14 +83,13 @@ import {
     switch (category) {
 '
       case 'Cybersecurity':;
-      pricing = pricing.filter(p => ;
-        p.serviceName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        p.subcategory.toLowerCase().includes(searchQuery.toLowerCase());
-      );
+      pricing = pricing.filter (p => ;
+        p.serviceName.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
+        p.category.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
+        p.subcategory.toLowerCase () .includes (searchQuery.toLowerCase () ) ;) ;
 
-    setFilteredPricing(pricing);
-  }, [selectedCategory, searchQuery]);
+    setFilteredPricing (pricing) ;
+  }, [selectedCategory, searchQuery]) ;
 
   const getCategoryIcon = (category: string) => {;
     switch (category) {;'
@@ -120,8 +119,7 @@ import {
             </div>;
           </div>;
         </div>;
-      </motion.div>;
-    );
+      </motion.div>;) ;
   };
 
   return()
@@ -142,21 +140,11 @@ import {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.8 }}"
@@ -173,21 +161,11 @@ import {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -214,21 +192,11 @@ import {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -299,11 +267,9 @@ import {
                 onChange={(e) => setSelectedCategory(e.target.value)}"
                 className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
-                {categories.map((category)  => (
-                  <option key={category} value={category}>
+                {categories.map ( (category) => (<option key={category} value={category}>
                     {category}
-                  </option>
-                ))}
+                  </option>) ) }
               </select>
             </div>
           </div>
@@ -330,8 +296,7 @@ import {
             <p className="text-gray-600 dark:text-gray-300">
               Try adjusting your search criteria or category filter
             </p>
-          </div>
-        )}
+          </div>) }
       </div>
 
       {/* CTA Section */}"
@@ -362,8 +327,7 @@ import {
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default ExpandedServicesPricingGuide2027;}}}}}}'"

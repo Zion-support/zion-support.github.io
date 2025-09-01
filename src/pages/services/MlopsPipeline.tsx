@@ -1,6 +1,6 @@
 import React from 'react.ts';'
 import { SEO   } from '@/components/SEO';
-
+;
 const MlopsPipeline: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">"
     <SEO title="MLOps Pipeline - Zion Tech Group" description="Automated training, evaluation, deployment, and monitoring for ML models." />"
@@ -40,7 +40,8 @@ const MlopsPipeline: React.FC = (): JSX.Element => (
     </section>;
   </div>;
 );
-
+;
+export { MlopsPipeline };
 export default MlopsPipeline;
 
 '"

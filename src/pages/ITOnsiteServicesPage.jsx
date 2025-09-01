@@ -61,7 +61,10 @@ export default function ITOnsiteServicesPage() {
           </div>
 
           {/* Service Details Section */}
-          <ServiceDetailsSection selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry}/>
+          <ServiceDetailsSection
+            selectedCountry={selectedCountry}
+            setSelectedCountry={setSelectedCountry}
+          />
 
           {/* How It Works Section */}
           <ServiceProcessSteps />

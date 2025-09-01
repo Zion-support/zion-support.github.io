@@ -3,7 +3,7 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';'
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell  } from 'lucide-react';
 '
 export type NotificationType = 'success' | 'error' | 'warning' | 'info';
-
+;
 export interface Notification {
   id: string;
   type: NotificationType;
@@ -13,7 +13,8 @@ export interface Notification {
 action?: {
 
     label: string;
-    onClick: ()  => void}}
+    onClick: : unknown void
+}}
 
 interface NotificationContextType {
   notifications: Notification[];'
@@ -21,9 +22,15 @@ interface NotificationContextType {
   removeNotification: (id: string)  => void;
   clearAll: ()  => void}
 
+  notifications: Notification[];
+  addNotification: notification: Omit<Notification, 'id'> void;
+  removeNotification: id: string void;
+  clearAll: : unknown void
+}
+;
 const NotificationContext = createContext<NotificationContextType | null>(null);
-
-export const useNotifications = () => {;
+;
+export const useNotifications = (...args: unknown[]): unknown => {;
   const context = useContext(NotificationContext);
   if (!context) {
 '
@@ -41,11 +48,11 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
         removeNotification(id)}, notification.duration || 5000)}
   };
 
-  const removeNotification = (id: string) => {;
+  const removeNotification = (...args: unknown[]): unknown => {;
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
 
-  const clearAll = () => {;
+  const clearAll = (...args: unknown[]): unknown => {;
     setNotifications([]);
   };
 
@@ -66,8 +73,8 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     </NotificationContext.Provider>;
   );
 };
-
-const NotificationContainer: React.FC = () => {;
+;
+const NotificationContainer: React.FC = props {;
   const { notifications, removeNotification, clearAll } = useNotifications();
 
   if (notifications.length === 0) return null;
@@ -75,7 +82,7 @@ const NotificationContainer: React.FC = () => {;
   return()
     <div className = "fixed top-4 right-4 z-[9999] space-y-2 max-w-sm">"
       <AnimatePresence mode="popLayout">
-        {notifications.map((notification, index) => (
+        {notifications.map((notification: unknown, index: unknown (
           <motion.div
             key={notification.id}
             initial={{ opacity: 0, x: 300, scale: 0.8 }}
@@ -190,7 +197,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
   );
 };
 
-// Utility functions for easy notification creation
+// Utility functions for easy notification creation;
 export const notify = {
 
   success: (title: string, message: string, options?: Partial<Notification>)  => {

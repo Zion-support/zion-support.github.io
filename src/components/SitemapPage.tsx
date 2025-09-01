@@ -82,11 +82,9 @@ export function SitemapPage(...args: any[]): any {
                     >
                       {link.name}
                     </a>
-                  </li>
-                ))}
+                  </li>) ) }
               </ul>
-            </div>
-          ))}
+            </div>) ) }
         </div>
 "
         <div className="mt-16 text-center">"
@@ -99,7 +97,6 @@ export function SitemapPage(...args: any[]): any {
           </p>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"

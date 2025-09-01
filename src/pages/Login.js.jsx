@@ -22,7 +22,7 @@ export default function Login() {
     }
   }, [location.search, location.pathname, navigate]);
 
-  useEffect(() => {
+  useEffect ( () => {
     if (!isLoading && isAuthenticated) {
 
       reduxDispatch(setLoggedIn(true));

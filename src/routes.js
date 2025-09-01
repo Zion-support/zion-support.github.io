@@ -1,5 +1,5 @@
 // routes.ts - Route configurations for the application
-// Auth routes
+// Auth routes;
 export const AuthRoutes = {
 
   login: '/login','

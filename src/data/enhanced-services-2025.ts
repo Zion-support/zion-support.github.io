@@ -9,7 +9,8 @@ pricing: {
     monthly: string;
     yearly: string;
     enterprise: string;
-    setup: string};
+    setup: string
+};
   features: string[];
   benefits: string[];
   technology: string[];
@@ -29,7 +30,7 @@ pricing: {
     mobile: string;
     email: string;
     address: string;
-    website: string}}
+    website: string}};
 export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
   // AI-Powered Autonomous Services
   {
@@ -71,7 +72,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
         address: string;
         website: string;
     };
-
+;
 const CONTACT = {
 '
   mobile: '+1 302 464 0950','
@@ -90,7 +91,7 @@ const CONTACT = {
 
 
 };
-
+;
 export const enhancedServices2025: EnhancedService[] = [
     {
 '

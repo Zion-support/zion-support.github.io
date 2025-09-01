@@ -1,6 +1,6 @@
 // Specialized Healthcare AI Services 2025 - Zion Tech Group
 // Advanced AI-powered healthcare technology solutions
-
+;
 export interface HealthcareAIService {
   id: number;
   name: string;
@@ -27,9 +27,10 @@ contactInfo: {
     phone: string;
     email: string;
     website: string;
-    address: string}}
+    address: string
+}}
 
-// Zion Tech Group Contact Information
+// Zion Tech Group Contact Information;
 const zionContact = {
 
   phone: "+1 302 464 0950","
@@ -48,7 +49,7 @@ const zionContact = {
 
 
 };
-
+;
 export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
   {
 

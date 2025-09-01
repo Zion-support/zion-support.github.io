@@ -1,6 +1,8 @@
 import React, { useState } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, Award const securityStandards = [
+
+
     {
 
         name: "ISO 27001","
@@ -104,10 +106,9 @@ const securityStats = ["
     { icon: <Users className="w-6 h-6"/>, value: "0", label: "Security Breaches" },"
     { icon: <Award className="w-6 h-6"/>, value: "100%", label: "Compliance" }
 ];
-export function SecurityComplianceSection() {
-    const [selectedStandard, setSelectedStandard] = useState(null);
-    const [selectedFramework, setSelectedFramework] = useState(null);
-    const [selectedFeature, setSelectedFeature] = useState(null);
+    const [selectedStandard, setSelectedStandard] = useState (null) ;
+    const [selectedFramework, setSelectedFramework] = useState (null) ;
+    const [selectedFeature, setSelectedFeature] = useState (null) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -119,17 +120,11 @@ export function SecurityComplianceSection() {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
 
-
     };
     const itemVariants = {
 
   hidden: { y: 30,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -158,11 +153,6 @@ export function SecurityComplianceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -189,20 +179,10 @@ export function SecurityComplianceSection() {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -230,20 +210,10 @@ export function SecurityComplianceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -265,20 +235,10 @@ export function SecurityComplianceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -336,7 +296,7 @@ export function SecurityComplianceSection() {
                         </span>))}"
                       {standard.features.length > 2 && (<span className="text-zion-cyan/60 text-xs">
                           +{standard.features.length - 2} more
-                        </span>)}
+                        </span>) }
                     </div>
                   </div>
 
@@ -355,30 +315,15 @@ export function SecurityComplianceSection() {
   { opacity: 0, height: 0,
   y: 10 
 
-
-
-
-
-
 }} animate = {
 "
   { opacity: 1, height: "auto",
   y: 0 
 
-
-
-
-
-
 }} exit = {
 
   { opacity: 0, height: 0,
   y: 10 
-
-
-
-
-
 
 }} transition={{ duration: 0.3 }}>
                         {/* All Features */}"
@@ -387,7 +332,7 @@ export function SecurityComplianceSection() {
                           <div className="flex flex-wrap gap-1">"
                             {standard.features.map((feature, idx) => (<span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                                 {feature}
-                              </span>))}
+                              </span>) ) }
                           </div>
                         </div>
 
@@ -404,10 +349,10 @@ export function SecurityComplianceSection() {
                           <div className="text-zion-cyan font-bold text-sm">{standard.status}</div>"
                           <div className="text-zion-slate-light text-xs">Valid until {standard.validUntil}</div>
                         </div>
-                      </motion.div>)}
+                      </motion.div>) }
                   </AnimatePresence>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -417,20 +362,10 @@ export function SecurityComplianceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -452,20 +387,10 @@ export function SecurityComplianceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -523,7 +448,7 @@ export function SecurityComplianceSection() {
                         </span>))}"
                       {framework.controls.length > 2 && (<span className="text-zion-cyan/60 text-xs">
                           +{framework.controls.length - 2} more
-                        </span>)}
+                        </span>) }
                     </div>
                   </div>
 
@@ -542,30 +467,15 @@ export function SecurityComplianceSection() {
   { opacity: 0, height: 0,
   y: 10 
 
-
-
-
-
-
 }} animate = {
 "
   { opacity: 1, height: "auto",
   y: 0 
 
-
-
-
-
-
 }} exit = {
 
   { opacity: 0, height: 0,
   y: 10 
-
-
-
-
-
 
 }} transition={{ duration: 0.3 }}>
                         {/* All Controls */}"
@@ -574,7 +484,7 @@ export function SecurityComplianceSection() {
                           <div className="flex flex-wrap gap-1">"
                             {framework.controls.map((control, idx) => (<span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                                 {control}
-                              </span>))}
+                              </span>) ) }
                           </div>
                         </div>
 
@@ -591,10 +501,10 @@ export function SecurityComplianceSection() {
                           <div className="text-zion-cyan font-bold text-sm">{framework.implementation}</div>"
                           <div className="text-zion-slate-light text-xs">Maturity: {framework.maturity}</div>
                         </div>
-                      </motion.div>)}
+                      </motion.div>) }
                   </AnimatePresence>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -604,20 +514,10 @@ export function SecurityComplianceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -639,20 +539,10 @@ export function SecurityComplianceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -688,7 +578,7 @@ export function SecurityComplianceSection() {
                         </span>))}"
                       {feature.features.length > 2 && (<span className="text-zion-cyan/60 text-xs">
                           +{feature.features.length - 2} more
-                        </span>)}
+                        </span>) }
                     </div>
                   </div>
 
@@ -706,30 +596,15 @@ export function SecurityComplianceSection() {
   { opacity: 0, height: 0,
   y: 10 
 
-
-
-
-
-
 }} animate = {
 "
   { opacity: 1, height: "auto",
   y: 0 
 
-
-
-
-
-
 }} exit = {
 
   { opacity: 0, height: 0,
   y: 10 
-
-
-
-
-
 
 }} transition={{ duration: 0.3 }}>
                         {/* All Features */}"
@@ -738,7 +613,7 @@ export function SecurityComplianceSection() {
                           <div className="flex flex-wrap gap-1">"
                             {feature.features.map((feat, idx) => (<span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                                 {feat}
-                              </span>))}
+                              </span>) ) }
                           </div>
                         </div>
 
@@ -749,10 +624,10 @@ export function SecurityComplianceSection() {
                             {feature.benefits.join(", ")}
                           </div>
                         </div>
-                      </motion.div>)}
+                      </motion.div>) }
                   </AnimatePresence>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -762,20 +637,10 @@ export function SecurityComplianceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 

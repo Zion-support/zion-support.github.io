@@ -25,8 +25,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
         to: '','
         value: '','
         data: ''
-    });
-    const handleConnectWallet = useCallback(async () => {
+    }) ;
+    const handleConnectWallet = useCallback (async () => {
         try {
             await connectWallet();'
             // // // // // // // // console.error('Failed to connect wallet:', error);
@@ -78,7 +78,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 '
                 // console.error('Failed to send transaction:', error)}
         }
-    }, [transactionForm, wallet, sendTransaction, trackEvent]);
+    }, [transactionForm, wallet, sendTransaction, trackEvent]) ;
     const getStatusColor = (status) => {
 
         switch (status) {
@@ -97,8 +97,6 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 functions: ['function1', 'function2'],'
                 events: ['Event1','
   'Event2']
-            
-
 
 
 "
@@ -142,7 +140,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                         </span>
                       </div>
                     </div>
-                  </div>))}
+                  </div>) ) }
               </div>
             </motion.div>)}
 '"
@@ -151,20 +149,10 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -218,7 +206,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                           </div>)}
                       </div>
                     </div>
-                  </div>))}
+                  </div>) ) }
               </div>
             </motion.div>)}
 '"
@@ -227,20 +215,10 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -265,10 +243,6 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 amount: '1000',
                 apy: 12.5,'
   rewards: '125'
-            
-
-
-
 
 
 "
@@ -317,7 +291,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                         </span>
                       </div>
                     </div>
-                  </div>))}
+                  </div>) ) }
               </div>
             </motion.div>)}
 '"
@@ -326,20 +300,10 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -422,9 +386,9 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                         </div>
                       </div>
                     </div>
-                  </div>))}
+                  </div>) ) }
               </div>
-            </motion.div>)}
+            </motion.div>) }
         </AnimatePresence>
       </div>;
 
@@ -436,26 +400,18 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   { scale: 0.9,
   opacity: 0 
 
-
-
-
-
-
 }} animate = {
 
   { scale: 1,
   opacity: 1 
-
-
-
-
-
 
 }} exit = {
 
   { scale: 0.9,
   opacity: 0 
 
+}} className="bg - white dark:bg - gray - 800 rounded - lg p - 6 w - full max - w-md mx - 4">
+              <h3 className="text - lg font - semibold text - gray - 900 dark:text - white mb - 4">Mint New NFT</h3>
 
 
 
@@ -527,7 +483,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 </button>
               </div>
             </motion.div>
-          </motion.div>)}
+          </motion.div>) }
       </AnimatePresence>
 
       {/* Send Transaction Modal */}
@@ -538,26 +494,18 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   { scale: 0.9,
   opacity: 0 
 
-
-
-
-
-
 }} animate = {
 
   { scale: 1,
   opacity: 1 
-
-
-
-
-
 
 }} exit = {
 
   { scale: 0.9,
   opacity: 0 
 
+}} className="bg - white dark:bg - gray - 800 rounded - lg p - 6 w - full max - w-md mx - 4">
+              <h3 className="text - lg font - semibold text - gray - 900 dark:text - white mb - 4">Send Transaction</h3>
 
 
 
@@ -629,7 +577,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 </button>
               </div>
             </motion.div>
-          </motion.div>)}
+          </motion.div>) }
       </AnimatePresence>
     </div>)};
 '"`

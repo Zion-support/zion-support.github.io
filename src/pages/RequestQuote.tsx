@@ -56,12 +56,12 @@ export default function RequestQuote() {
     services: [] as string[],'
     urgency: 'medium','
     preferredContact: 'email'
-  });
+  }) ;
 
-  const [formStep, setFormStep] = useState(1);
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [isSubmitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [formStep, setFormStep] = useState (1) ;
+  const [expandedService, setExpandedService] = useState < string | null> (null) ;
+  const [isSubmitting, setSubmitting] = useState (false) ;
+  const [submitted, setSubmitted] = useState (false) ;
 
   const companySizes = ['
     '1-10 employees','
@@ -305,7 +305,7 @@ export default function RequestQuote() {
 
       ...prev,
       [field]: value
-    }));
+    }) ) ;
   };
 
   const toggleService = (serviceId: string) => {
@@ -313,10 +313,8 @@ export default function RequestQuote() {
     setFormData(prev => ({
 
       ...prev,
-      services: prev.services.includes(serviceId)
-        ? prev.services.filter(id => id !== serviceId)
-        : [...prev.services, serviceId]
-    }));
+      services: prev.services.includes (serviceId) ? prev.services.filter (id => id !== serviceId) : [...prev.services, serviceId]
+    }) ) ;
   };
 
   const toggleServiceExpansion = (serviceId: string) => {
@@ -324,14 +322,14 @@ export default function RequestQuote() {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
-  const nextStep = () => {
+  const nextStep = (...args: unknown[]): unknown => {
     if (formStep < 3) {
 
       setFormStep(formStep + 1);
     }
   };
 
-  const prevStep = () => {
+  const prevStep = (...args: unknown[]): unknown => {
     if (formStep > 1) {
 
       setFormStep(formStep - 1);
@@ -339,14 +337,14 @@ export default function RequestQuote() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault();
-    setSubmitting(true);
+    e.preventDefault () ;
+    setSubmitting (true) ;
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise (resolve => setTimeout (resolve, 2000) ) ;
     
-    setSubmitting(false);
-    setSubmitted(true);
+    setSubmitting (false) ;
+    setSubmitted (true) ;
   };
 
   const resetForm = () => {
@@ -365,9 +363,9 @@ export default function RequestQuote() {
       services: [],'
       urgency: 'medium','
       preferredContact: 'email'
-    });
-    setFormStep(1);
-    setSubmitted(false);
+    }) ;
+    setFormStep (1) ;
+    setSubmitted (false) ;
   };
 
   if (submitted) {
@@ -396,7 +394,7 @@ export default function RequestQuote() {
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Thank you for your interest in Zion Tech Group. Our team has received your 
             request and will review it carefully. You can expect a detailed proposal 
-            within 24-48 hours.
+            within 24 - 48 hours.
           </p>
           "
           <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 mb-8">"
@@ -441,8 +439,7 @@ export default function RequestQuote() {
             </a>
           </div>
         </motion.div>
-      </div>
-    );
+      </div>) ;
   }
 
   return ("
@@ -536,8 +533,7 @@ export default function RequestQuote() {
 
                   <form onSubmit={handleSubmit}>
                     {/* Step 1: Basic Information */}
-                    {formStep === 1 && (
-                      <motion.div
+                    {formStep === 1 && (<motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}"
@@ -605,9 +601,7 @@ export default function RequestQuote() {
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >"
                               <option value="">Select company size</option>
-                              {companySizes.map((size) => (
-                                <option key={size} value={size}>{size}</option>
-                              ))}
+                              {companySizes.map ( (size) => (<option key={size} value={size}>{size}</option>) ) }
                             </select>
                           </div>
                           
@@ -619,18 +613,14 @@ export default function RequestQuote() {
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >"
                               <option value="">Select industry</option>
-                              {industries.map((industry) => (
-                                <option key={industry} value={industry}>{industry}</option>
-                              ))}
+                              {industries.map ( (industry) => (<option key={industry} value={industry}>{industry}</option>) ) }
                             </select>
                           </div>
                         </div>
-                      </motion.div>
-                    )}
+                      </motion.div>) }
 
                     {/* Step 2: Project Details */}
-                    {formStep === 2 && (
-                      <motion.div
+                    {formStep === 2 && (<motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}"
@@ -647,9 +637,7 @@ export default function RequestQuote() {
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >"
                               <option value="">Select project type</option>
-                              {projectTypes.map((type) => (
-                                <option key={type} value={type}>{type}</option>
-                              ))}
+                              {projectTypes.map ( (type) => (<option key={type} value={type}>{type}</option>) ) }
                             </select>
                           </div>
                           
@@ -661,9 +649,7 @@ export default function RequestQuote() {
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >"
                               <option value="">Select budget range</option>
-                              {budgets.map((budget) => (
-                                <option key={budget} value={budget}>{budget}</option>
-                              ))}
+                              {budgets.map ( (budget) => (<option key={budget} value={budget}>{budget}</option>) ) }
                             </select>
                           </div>
                         </div>
@@ -677,9 +663,7 @@ export default function RequestQuote() {
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >"
                               <option value="">Select timeline</option>
-                              {timelines.map((timeline) => (
-                                <option key={timeline} value={timeline}>{timeline}</option>
-                              ))}
+                              {timelines.map ( (timeline) => (<option key={timeline} value={timeline}>{timeline}</option>) ) }
                             </select>
                           </div>
                           
@@ -690,11 +674,9 @@ export default function RequestQuote() {
                               onChange={(e) => handleInputChange('urgency', e.target.value)}"
                               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >
-                              {urgencyLevels.map((level) => (
-                                <option key={level.value} value={level.value}>
+                              {urgencyLevels.map ( (level) => (<option key={level.value} value={level.value}>
                                   {level.label} - {level.description}
-                                </option>
-                              ))}
+                                </option>) ) }
                             </select>
                           </div>
                         </div>
@@ -710,12 +692,10 @@ export default function RequestQuote() {
                             placeholder="Describe your project requirements, goals, and any specific features you need..."
                           />
                         </div>
-                      </motion.div>
-                    )}
+                      </motion.div>) }
 
                     {/* Step 3: Services & Preferences */}
-                    {formStep === 3 && (
-                      <motion.div
+                    {formStep === 3 && (<motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}"
@@ -755,8 +735,7 @@ export default function RequestQuote() {
                                     </div>
                                   </div>
                                 </label>
-                              </div>
-                            ))}
+                              </div>) ) }
                           </div>
                         </div>
 
@@ -789,12 +768,10 @@ export default function RequestQuote() {
                                     <div className="text-gray-300 text-sm mt-1">{method.description}</div>
                                   </div>
                                 </label>
-                              </div>
-                            ))}
+                              </div>) ) }
                           </div>
                         </div>
-                      </motion.div>
-                    )}
+                      </motion.div>) }
 
                     {/* Navigation Buttons */}"
                     <div className="flex justify-between mt-8">
@@ -824,8 +801,7 @@ export default function RequestQuote() {
                             className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                           >'
                             {isSubmitting ? 'Submitting...' : 'Submit Quote Request'}
-                          </button>
-                        )}
+                          </button>) }
                       </div>
                     </div>
                   </form>
@@ -893,10 +869,8 @@ export default function RequestQuote() {
                                   <span className="text-blue-400 font-medium">{service.timeline}</span>
                                 </div>
                               </div>
-                            </motion.div>
-                          )}
-                        </div>
-                      ))}
+                            </motion.div>) }
+                        </div>) ) }
                     </div>
                   </div>
 "
@@ -974,7 +948,7 @@ export default function RequestQuote() {
                   href="tel:+13024640950""
                   className="text-green-400 hover:text-green-300 transition-colors duration-200"
                 >
-                  +1 (302) 464-0950
+                  +1 (302) 464 - 0950
                 </a>
               </div>
               "
@@ -992,13 +966,11 @@ export default function RequestQuote() {
           </motion.div>
         </div>
       </section>
-    </div>
-  )};
+    </div>) };
             </div>;
           </div>;
         </motion.div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

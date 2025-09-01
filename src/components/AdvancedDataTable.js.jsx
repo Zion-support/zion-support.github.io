@@ -246,7 +246,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     </select>
                   </div>))}
               </div>
-            </motion.div>)}
+            </motion.div>) }
         </AnimatePresence>
       </div>
 
@@ -264,7 +264,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                   <span className="font-medium text-gray-700 dark:text-gray-300 text-sm">
                     {column.header}
                   </span>
-                  {column.sortable !== false && getSortIcon(column.key)}
+                  {column.sortable !== false && getSortIcon (column.key) }
                 </button>
               </div>))}
             "
@@ -316,8 +316,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     <button className="p-1 text-gray-400 hover:text-red-500 transition-colors">"
                       <Trash2 className="w-4 h-4"/>
                     </button>
-                  </div>)}
-              </motion.div>))}
+                  </div>) }
+              </motion.div>) ) }
           </div>
         </div>
       </div>

@@ -101,11 +101,6 @@ const ServiceInnovationHub = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -155,11 +150,6 @@ const ServiceInnovationHub = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -186,20 +176,10 @@ const ServiceInnovationHub = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -238,12 +218,12 @@ const ServiceInnovationHub = () => {
                       <div className="flex flex-wrap gap-1">"
                         {area.trends.map((trend, idx) => (<Badge key={idx} variant="outline" className="text-xs">
                             {trend}
-                          </Badge>))}
+                          </Badge>) ) }
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -255,11 +235,6 @@ const ServiceInnovationHub = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -286,20 +261,10 @@ const ServiceInnovationHub = () => {
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -337,7 +302,7 @@ const ServiceInnovationHub = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -349,11 +314,6 @@ const ServiceInnovationHub = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -386,11 +346,6 @@ const ServiceInnovationHub = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 

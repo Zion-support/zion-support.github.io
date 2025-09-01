@@ -33,7 +33,7 @@ const categories = [
     link: "/all-services","
     color: "from-emerald-500 to-green-600"},
 ];
-
+;
 const specialServices = [
   {
 "
@@ -53,9 +53,13 @@ const specialServices = [
 ];
 
 interface CategoriesSectionProps {
-  showTitle?: boolean;
-}
+  // Add your props here
 
+
+  showTitle?: boolean;
+
+}
+;
 const containerVariants = {
 
   hidden: { opacity: 0 },
@@ -69,7 +73,7 @@ const containerVariants = {
     }
   }
 };
-
+;
 const itemVariants = {
 
   hidden: { y: 20, opacity: 0 },
@@ -113,8 +117,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             <p className="text-gray-300 text-lg mt-4 max-w-2xl mx-auto">
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
             </p>
-          </motion.div>;
-        )}
+          </motion.div>;) }
         
         <motion.div "
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
@@ -123,8 +126,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {categories.map((category, index) => (
-            <motion.div
+          {categories.map ( (category, index) => (<motion.div
               key={category.title}
               variants={itemVariants}"
               className="group block"
@@ -140,8 +142,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                   <p className="text-gray-300 text-sm">{category.description}</p>
                 </div>
               </Link>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </motion.div>
         
         <motion.div "

@@ -71,10 +71,10 @@ export default function InnovativeServicesShowcase2026() {
         default:
           return 0;
 
-    });
+    }) ;
 
     return filtered;
-  }, [searchQuery, selectedCategory, sortBy]);
+  }, [searchQuery, selectedCategory, sortBy]) ;
 
   const getCategoryIcon = (category: string) => {;
     switch (category) {;'
@@ -98,7 +98,7 @@ export default function InnovativeServicesShowcase2026() {
         return <Leaf className="w-5 h-5" />;
       default:
         return 0}
-  });
+  }) ;
   const containerVariants = {
 
     hidden: { opacity: 0 },
@@ -125,18 +125,12 @@ export default function InnovativeServicesShowcase2026() {
   'Cutting-Edge': 'bg-gradient-to-r from-green-600 to-emerald-600';
     ;
 
-
-
-
-
-
 };
 
     return()
       <span className = {`${colors[level as keyof typeof colors] || colors.Advanced} text-white text-xs px-2 py-1 rounded-full font-semibold`}>;
         {level};
-      </span>;
-    );
+      </span>;) ;
   };
 
   return ("
@@ -171,8 +165,8 @@ export default function InnovativeServicesShowcase2026() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Discover cutting-edge micro SAAS solutions that transform industries and drive innovation.
-            From AI-powered platforms to quantum-safe cybersecurity, we deliver the future of technology.
+            Discover cutting - edge micro SAAS solutions that transform industries and drive innovation.
+            From AI - powered platforms to quantum - safe cybersecurity, we deliver the future of technology.
           </motion.p>
           {/* Contact Information */}
           <motion.div"
@@ -225,9 +219,7 @@ export default function InnovativeServicesShowcase2026() {
                   onChange={(e) => setSelectedCategory(e.target.value)}"
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
-                  {categories.map(category  => (
-                    <option key={category.id} value={category.id}>{category.name}</option>
-                  ))}
+                  {categories.map (category  => (<option key={category.id} value={category.id}>{category.name}</option>) ) }
                 </select>
               </div>
 
@@ -266,21 +258,11 @@ export default function InnovativeServicesShowcase2026() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -333,8 +315,7 @@ export default function InnovativeServicesShowcase2026() {
                     {service.features.length > 3 && ("
                       <span className="text-xs text-slate-400 px-2 py-1">
                         +{service.features.length - 3} more
-                      </span>
-                    )}
+                      </span>) }
                   </div>
                 </div>
 
@@ -362,8 +343,7 @@ export default function InnovativeServicesShowcase2026() {
                       <li key={idx} className="text-xs text-slate-300 flex items-start gap-2">"
                         <span className="text-cyan-400 mt-1">•</span>
                         {benefit}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>
 
@@ -375,8 +355,7 @@ export default function InnovativeServicesShowcase2026() {
                       className="text-xs bg-cyan-400/10 text-cyan-300 px-2 py-1 rounded-full"
 
                       {tag}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
 
                 {/* Contact and CTA */}"
@@ -405,8 +384,7 @@ export default function InnovativeServicesShowcase2026() {
                     </button>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </motion.div>
@@ -441,8 +419,7 @@ export default function InnovativeServicesShowcase2026() {
                 <Mail className="w-5 h-5" />
                 Email Us
               </a>
-            </div>
-          )}
+            </div>) }
         </div>
       </section>
 
@@ -455,21 +432,11 @@ export default function InnovativeServicesShowcase2026() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -558,8 +525,7 @@ export default function InnovativeServicesShowcase2026() {
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default InnovativeServicesShowcase2026;

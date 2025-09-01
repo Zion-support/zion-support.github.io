@@ -1,6 +1,7 @@
 import React from 'react';'
 import SEO from '@/components/SEO';
-
+;
+export { function };
 export default function AIComplianceCopilot(...args[]):  {
 
   return()

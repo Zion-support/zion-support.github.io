@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+export function ProjectManagementDashboard () {
 import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChart3, Search, Edit, Trash2, Eye, X const mockProjects = [;
+
+
     {
 '
         id: '1','
@@ -96,9 +99,9 @@ export function ProjectManagementDashboard() {
 '
         const statusMatch = filterStatus === 'all' || project.status === filterStatus;'
         const priorityMatch = filterPriority === 'all' || project.priority === filterPriority;
-        const searchMatch = project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            project.description.toLowerCase().includes(searchQuery.toLowerCase());
-        return statusMatch && priorityMatch && searchMatch});
+        const searchMatch = project.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+            project.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
+        return statusMatch && priorityMatch && searchMatch}) ;
     const getStatusIcon = (status) => {
 
         switch (status) {
@@ -256,8 +259,8 @@ export function ProjectManagementDashboard() {
                     {calculateProjectHealth(project)} project health
                   </span>
                 </div>
-              </div>))}
-          </div>)}
+              </div>) ) }
+          </div>) }
 
         {/* List View */}'"
         {viewMode === 'list' && (<div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl overflow-hidden">"
@@ -324,11 +327,11 @@ export function ProjectManagementDashboard() {
                           </button>
                         </div>
                       </td>
-                    </tr>))}
+                    </tr>) ) }
                 </tbody>
               </table>
             </div>
-          </div>)}
+          </div>) }
 
         {/* Gantt View */}'"
         {viewMode === 'gantt' && (<div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">"
@@ -353,9 +356,9 @@ export function ProjectManagementDashboard() {
                       {new Date(project.startDate).toLocaleDateString()} - {new Date(project.endDate).toLocaleDateString()}
                     </div>
                   </div>
-                </div>))}
+                </div>) ) }
             </div>
-          </div>)}
+          </div>) }
       </div>
 
       {/* Project Detail Modal */}"
@@ -408,9 +411,9 @@ export function ProjectManagementDashboard() {
                         </div>"
                         <div className="flex items-center justify-between text-sm text-zion-slate-light">
                           <span>{task.assignee}</span>
-                          <span>Due: {new Date(task.dueDate).toLocaleDateString()}</span>
+                          <span > Due: {new Date (task.dueDate) .toLocaleDateString () }</span>
                         </div>
-                      </div>))}
+                      </div>) ) }
                   </div>
                 </div>
               </div>

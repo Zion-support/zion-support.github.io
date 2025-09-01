@@ -124,7 +124,7 @@ const News = () => {
     const matchesCategory ='
       selectedCategory === 'All' || item.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  });
+  }) ;
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"
@@ -223,8 +223,7 @@ const News = () => {
                     </div>
                   ))}
               </div>
-            </div>
-          )}
+            </div>) }
 
           {/* All News */}
           <div>"
@@ -267,8 +266,7 @@ const News = () => {
                       </button>
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>) ) }
             </div>
           </div>
 

@@ -14,7 +14,7 @@ import { X, Sparkles, Upload, Check, Briefcase, MapPin, UserRound, Globe import 
 import { useAuth } from "@/hooks/useAuth";"
 import { supabase } from "@/integrations/supabase/client";"
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-// Define form schema
+// Define form schema;
 const serviceProfileSchema = z.object({
 "
     name: z.string().min(2, "Name must be at least 2 characters long"),"

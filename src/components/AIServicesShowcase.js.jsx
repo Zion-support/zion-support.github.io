@@ -110,7 +110,7 @@ export function AIServicesShowcase() {
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);'
     const filteredServices = selectedCategory === 'All'
         ? aiServices
-        : aiServices.filter(service => service.category === selectedCategory);
+        : aiServices.filter (service => service.category === selectedCategory) ;
     const getStatusBadge = (status) => {
 
         const statusConfig = {
@@ -123,9 +123,9 @@ export function AIServicesShowcase() {
             new: { color: 'bg-blue-500', text: 'New' }
         };
         const config = statusConfig[status];
-        return (<span className={`${config.color} text-white text-xs px-2 py-1 rounded-full font-medium`}>
+        return (<span className={`${config.color} text - white text - xs px - 2 py - 1 rounded - full font - medium`}>
         {config.text}
-      </span>)};
+      </span>) };
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -234,7 +234,7 @@ export function AIServicesShowcase() {
 
 }}>
               {category}
-            </motion.button>))}
+            </motion.button>) ) }
         </motion.div>
 
         {/* Services Grid */}"
@@ -262,7 +262,7 @@ export function AIServicesShowcase() {
                         <div className="text-zion-slate-light text-sm">{service.category}</div>
                       </div>
                     </div>
-                    {getStatusBadge(service.status)}
+                    {getStatusBadge (service.status) }
                   </div>
 "
                   <p className="text-zion-slate-light mb-4">{service.description}</p>
@@ -271,7 +271,7 @@ export function AIServicesShowcase() {
                     {service.features.slice(0, 4).map((feature, i) => (<div key={i} className="flex items-center gap-2 text-sm text-zion-slate-light">"
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
                         {feature}
-                      </div>))}
+                      </div>) ) }
                   </div>
 "
                   <div className="flex items-center justify-between">"
@@ -281,7 +281,7 @@ export function AIServicesShowcase() {
                     </Link>
                   </div>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </AnimatePresence>
         </motion.div>
 

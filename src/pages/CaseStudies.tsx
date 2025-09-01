@@ -195,7 +195,7 @@ export default function CaseStudies() {
         cs => cs.industry === industry.id
       ).length;
     }
-  });
+  }) ;
 
   services.forEach(service => {
 '
@@ -208,7 +208,7 @@ export default function CaseStudies() {
         cs => cs.service === service.id
       ).length;
     }
-  });
+  }) ;
 
   const filteredCaseStudies = caseStudies.filter(cs => {
 
@@ -221,7 +221,7 @@ export default function CaseStudies() {
       cs.company.toLowerCase().includes(searchQuery.toLowerCase()) ||
       cs.challenge.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesIndustry && matchesService && matchesSearch;
-  });
+  }) ;
 
   const stats = ['
     { label: 'Projects Completed', value: '150+', icon: CheckCircle },'
@@ -278,22 +278,16 @@ export default function CaseStudies() {
                 onChange={e => setSelectedIndustry(e.target.value)}"
                 className="px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               >
-                {industries.map(industry => (
-                  <option key={industry.id} value={industry.id}>
-                    {industry.name} ({industry.count})
-                  </option>
-                ))}
+                {industries.map (industry => (<option key={industry.id} value={industry.id}>
+                    {industry.name} ({industry.count}) </option>) ) }
               </select>
               <select
                 value={selectedService}
                 onChange={e => setSelectedService(e.target.value)}"
                 className="px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               >
-                {services.map(service => (
-                  <option key={service.id} value={service.id}>
-                    {service.name} ({service.count})
-                  </option>
-                ))}
+                {services.map (service => (<option key={service.id} value={service.id}>
+                    {service.name} ({service.count}) </option>) ) }
               </select>
             </div>
           </div>
@@ -353,8 +347,7 @@ export default function CaseStudies() {
                   </motion.article>
                 ))}
             </div>
-          </div>
-        )}
+          </div>) }
 
         {/* All Case Studies */}
         <div>"
@@ -482,7 +475,6 @@ export default function CaseStudies() {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 '"`

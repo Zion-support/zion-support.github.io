@@ -22,7 +22,7 @@ export default function WishlistPage() {
     if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
         return null; // Or a loading spinner
     }
-    const { items, dispatch } = useCart();
+    const { items, dispatch } = useCart () ;
     const addToCart = (item) => {
 
         const stored = safeStorage.getItem(getCartKey(user?.id));

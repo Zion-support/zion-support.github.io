@@ -300,7 +300,7 @@ export function AICybersecurityPlatform() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">"
         <div className="max-w-7xl mx-auto">"
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {securityMetrics.map((item, index) => (
+            {securityMetrics.map((item, index (
               <motion.div
                 key={item.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -337,7 +337,7 @@ export function AICybersecurityPlatform() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature: unknown, index: unknown 
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -386,7 +386,7 @@ export function AICybersecurityPlatform() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityFeatures.map((feature, index) => (
+            {securityFeatures.map(feature: unknown, index: unknown 
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -441,7 +441,7 @@ export function AICybersecurityPlatform() {
           </motion.div>
 "
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {complianceFrameworks.map((framework, index) => (
+            {complianceFrameworks.map(framework: unknown, index: unknown (
               <motion.div
                 key={framework}
                 initial={{ opacity: 0, y: 20 }}
@@ -478,7 +478,7 @@ export function AICybersecurityPlatform() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}

@@ -107,7 +107,7 @@ import {
     platforms["IAM", "VPC", "Security Groups", "WAF"]
   }
 ];
-
+;
 const cloudPlatforms = [
   {
 "
@@ -140,7 +140,7 @@ const cloudPlatforms = [
     features["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"];
   }
 ];
-
+;
 const successStories = [
   {
 
@@ -173,7 +173,7 @@ const successStories = [
     logo: "FS"
 
 ];
-
+;
 const processSteps = [
   {
 
@@ -218,7 +218,7 @@ export default function CloudDevOps() {
 '
   const filteredSolutions = selectedCategory === 'All'
     ? cloudDevOpsSolutions
-    : cloudDevOpsSolutions.filter(solution => solution.category === selectedCategory);
+    : cloudDevOpsSolutions.filter (solution => solution.category === selectedCategory) ;
 
   return ("
     <div className="min-h-screen bg-futuristic">
@@ -237,21 +237,11 @@ export default function CloudDevOps() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -263,21 +253,11 @@ export default function CloudDevOps() {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
               transition = {
@@ -333,21 +313,11 @@ export default function CloudDevOps() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -368,21 +338,11 @@ export default function CloudDevOps() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -410,11 +370,9 @@ export default function CloudDevOps() {
                     <div key={featureIndex} className="flex items-center gap-2 text-zion-slate-light text-sm">"
                       <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                       <span>{feature}</span>
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -428,21 +386,11 @@ export default function CloudDevOps() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -463,21 +411,11 @@ export default function CloudDevOps() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -507,8 +445,7 @@ export default function CloudDevOps() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -522,21 +459,11 @@ export default function CloudDevOps() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -562,8 +489,7 @@ export default function CloudDevOps() {
                 }`}
 
                 {category}
-              </button>
-            ))}
+              </button>) ) }
           </div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -575,21 +501,11 @@ export default function CloudDevOps() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -629,8 +545,7 @@ export default function CloudDevOps() {
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
 
                       {platform}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
 "
                 <div className="flex items-center justify-between mb-4">"
@@ -647,8 +562,7 @@ export default function CloudDevOps() {
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -662,21 +576,11 @@ export default function CloudDevOps() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -697,21 +601,11 @@ export default function CloudDevOps() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -758,8 +652,7 @@ export default function CloudDevOps() {
                   ))}"
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -773,21 +666,11 @@ export default function CloudDevOps() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"

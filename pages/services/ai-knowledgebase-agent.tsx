@@ -1,6 +1,7 @@
 import Head from 'next/head.ts';'
 import Link from 'next/link.ts';
-
+;
+export { function };
 export default function AIKnowledgebaseAgent(...args[]):  {
 
   return()

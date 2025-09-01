@@ -14,7 +14,7 @@ export default function ComprehensiveContact() {
         phone: '','
         service: '','
         message: ''
-    });
+    }) ;
     const handleSubmit = (e) => {
 
         e.preventDefault();
@@ -208,7 +208,7 @@ export default function ComprehensiveContact() {
                     View Services
                   </Button>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </div>
@@ -321,8 +321,8 @@ export default function ComprehensiveContact() {
               <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>"
               <div className="space-y-2 text-zion-cyan-light">
                 <p>+1 302 464 0950</p>
-                <p>kleber@ziontechgroup.com</p>
-                <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <p > kleber@ziontechgroup.com</p>
+                <p > 364 E Main St STE 1008 < br />Middletown DE 19709</p>
               </div>
             </div>
             <div>"

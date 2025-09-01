@@ -214,21 +214,11 @@ export default function Community(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -248,6 +238,7 @@ import { Users, MessageCircle, TrendingUp, Star, Clock, Search, Filter, Plus, He
 import { Link } from 'react-router-dom';
 
 interface CommunityPost {
+
   id: string;
   title: string;
   content: string;
@@ -257,7 +248,8 @@ interface CommunityPost {
     avatar: string;
     role: string;
     verified: boolean;
-  };
+  
+};
   category: string;
   tags: string[];
   likes: number;
@@ -269,6 +261,7 @@ interface CommunityPost {
 }
 
 interface CommunityCategory {
+
   id: string;
   name: string;
   description: string;
@@ -276,7 +269,6 @@ interface CommunityCategory {
   color: string;
   postCount: number;
   topics: string[];
-}
 
 const Community: React.FC = () => {
 '
@@ -462,7 +454,7 @@ const Community: React.FC = () => {
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));'
     const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  });
+  }) ;
 
   const sortedPosts = [...filteredPosts].sort((a, b) => {
 
@@ -479,7 +471,7 @@ const Community: React.FC = () => {
       default:
         return 0;
     }
-  });
+  }) ;
 
   const getCategoryColor = (categoryId: string) => {
 
@@ -527,21 +519,11 @@ const Community: React.FC = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition = {
@@ -569,21 +551,11 @@ const Community: React.FC = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -643,8 +615,7 @@ const Community: React.FC = () => {
                   </div>
                 </div>
               </Link>;
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </div>
 
@@ -657,21 +628,11 @@ const Community: React.FC = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -699,21 +660,11 @@ const Community: React.FC = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -791,8 +742,7 @@ const Community: React.FC = () => {
                 {communityCategories.map((category) => ("
                   <option key={category.id} value={category.id} className="bg-slate-800 text-white">
                     {category.name}
-                  </option>
-                ))}
+                  </option>) ) }
               </select>
             </div>
 
@@ -837,12 +787,10 @@ const Community: React.FC = () => {
                       className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
                     >
                       {topic}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
 
         {/* Community Posts */}"
@@ -896,8 +844,7 @@ const Community: React.FC = () => {
                         className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full hover:bg-white/20 transition-colors cursor-pointer"
                       >
                         {tag}
-                      </span>
-                    ))}
+                      </span>) ) }
                   </div>
 "
           <div className="flex flex-wrap justify-center gap-4">"
@@ -953,8 +900,7 @@ const Community: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
 
         {/* No Results */}
@@ -1022,13 +968,17 @@ const Community: React.FC = () => {
           </div>
         </div>
       </div>;
-    </div>
-  )};
+    </div>) };
             </Link>;
           </div>;
         </motion.div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
+}
+
+
+
+}
+
 }
 '"`

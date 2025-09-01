@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from '../
 import { Badge   } from '../../components/ui/badge';'
 import { Button   } from '../../components/ui/button';'
 import { CheckCircle, Truck, Globe, TrendingUp, Zap, Shield, Users, Clock, BarChart3   } from 'lucide-react.ts';
-
+;
 const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
 
   const features = [

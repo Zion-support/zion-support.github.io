@@ -18,8 +18,10 @@ import {
 } from 'lucide-react';
 
 interface FloatingAction {
+
   id: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: React.ComponentType<{ size?: number; className?: string 
+}>;
   label: string;
   action: () => void;
   color: string;'
@@ -33,7 +35,6 @@ interface FloatingActionButtonProps {
   showScrollToTop?: boolean;
   showContactActions?: boolean;
   showUtilityActions?: boolean;
-}
 
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
@@ -68,12 +69,12 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
       setCurrentTheme(theme);
     }
-  }, [theme]);
+  }, [theme]) ;
 
   // Show scroll to top button when scrolled down
-  useEffect(() => {
+  useEffect ( () => {
     const handleScroll = () => {
-      setShowScrollButton(window.scrollY > 300);
+      setShowScrollButton (window.scrollY > 300) ;
     };
 '
     window.addEventListener('scroll', handleScroll);'
@@ -223,7 +224,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     ] : []),
     
     // Custom actions
-    ...actions
+    ...actions,
   ];
 
   // Sort actions by priority
@@ -231,12 +232,12 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
     const priorityOrder = { high: 3, medium: 2, low: 1 };
     return priorityOrder[b.priority] - priorityOrder[a.priority];
-  });
+  }) ;
 
   // Toggle expansion
-  const toggleExpansion = useCallback(() => {
-    setIsExpanded(prev => !prev);
-  }, []);
+  const toggleExpansion = useCallback ( () => {
+    setIsExpanded (prev => !prev) ;
+  }, []) ;
 
   // Scroll to top
   const scrollToTop = useCallback(() => {
@@ -254,9 +255,9 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       transform translate-x-full transition-transform duration-300 ease-in-out`
     `;
     notification.textContent = message;
-    
-    document.body.appendChild(notification);
-    
+
+    document.body.appendChild (notification) ;
+
     // Animate in
     setTimeout(() => {
 '
@@ -274,7 +275,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   }, []);
 
   // Get position classes
-  const getPositionClasses = () => {
+  const getPositionClasses = (...args: unknown[]): unknown => {
     switch (position) {
 '
       case 'bottom-left':'
@@ -322,11 +323,9 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                   <span className="whitespace-nowrap text-sm font-medium">
                     {action.label}
                   </span>
-                </div>
-              ))}
-            </div>
-          )}
-          
+                </div>) ) }
+            </div>) }
+
           {/* Main Button */}
           <button
             onClick={toggleExpansion}`
@@ -357,8 +356,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           aria-label="Scroll to top"
         >
           <ArrowUp size={24} />
-        </button>
-      )}
+        </button>) }
 
       {/* CSS Animations */}`
       <style jsx>{`
@@ -367,15 +365,15 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           from {
 
             opacity: 0;
-            transform: translateY(20px) scale(0.75);
+            transform: translateY (20px) scale (0.75) ;
           }
           to {
 
             opacity: 1;
-            transform: translateY(0) scale(1);
+            transform: translateY (0) scale (1) ;
           }
         }
-        
+
         @keyframes bounce {
 
           0%, 20%, 53%, 80%, 100% {
@@ -401,8 +399,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           animation: bounce 2s infinite;
         }`
       `}</style>
-    </>
-  );
+    </>) ;
 };
 
 export default FloatingActionButton;

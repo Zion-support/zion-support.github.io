@@ -218,5 +218,6 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
       </section>
     </div>);
 };
+export { QuantumComputing };
 export default QuantumComputing;
 }}}'"

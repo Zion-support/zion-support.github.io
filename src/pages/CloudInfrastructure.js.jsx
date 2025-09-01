@@ -189,7 +189,7 @@ export default function CloudInfrastructure() {
                     </ul>
                   </div>
                 </div>
-              </motion.button>))}
+              </motion.button>) ) }
           </div>
 
           {/* Provider Details */}
@@ -224,7 +224,7 @@ export default function CloudInfrastructure() {
                   <ul className="space-y-2">"
                     {service.features.map((feature, idx) => (<li key={idx} className="text-xs text-gray-400">• {feature}</li>))}
                   </ul>
-                </div>))}
+                </div>) ) }
             </div>
           </motion.div>
         </div>

@@ -1,3 +1,5 @@
+import { Link } from "react - router - dom";
+import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide - react";
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";"
 import { Button } from "../ui/button";"
@@ -5,6 +7,8 @@ import { Badge } from "../ui/badge";"
 import { Link } from "react-router-dom";"
 import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";"
 import { TrustedBySection } from "../TrustedBySection";
+
+
 const blockchainBenefits = [
     {
 "
@@ -180,7 +184,7 @@ export default function BlockchainServicesPage() {
                     {service.features.slice(0, 3).map((feature, index) => (<li key={index} className="flex items-center gap-2 text-sm">"
                         <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0"/>
                         <span>{feature}</span>
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </CardContent>"
                 <CardContent className="pt-0">"
@@ -191,7 +195,7 @@ export default function BlockchainServicesPage() {
                     </Link>
                   </Button>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>

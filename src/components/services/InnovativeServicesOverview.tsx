@@ -22,7 +22,7 @@ maxServices:  6,;
     { id: 'development', label: 'Development', count: getServicesByCategory('Development').length };
   ];
 
-  const filteredServices = useMemo(() => {;
+  const filteredServices = useMemo(: unknown {;
     let services = INNOVATIVE_SERVICES_2025;
 
     if (category) {
@@ -105,8 +105,8 @@ maxServices:  6,;
     </div>;
   );
 
-  const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
-  const avgRating = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.rating, 0) / totalServices;
+  const totalValue = INNOVATIVE_SERVICES_2025.reduce(sum: unknown, service: unknown sum + service.price, 0);
+  const avgRating = INNOVATIVE_SERVICES_2025.reduce(sum: unknown, service: unknown sum + service.rating, 0) / totalServices;
 
   return ("
     <div className = "bg-gray-50 py-16">"
@@ -163,10 +163,9 @@ maxServices:  6,;
         {!category && ("
           <div className="mb-8">"
             <div className="flex flex-wrap justify-center gap-2">
-              {tabs.map((tab) => (
-                <button
+              {tabs.map((tab: unknown <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
+                  onClick={(: unknown setActiveTab(tab.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
 
                     activeTab === tab.id'
@@ -184,7 +183,7 @@ maxServices:  6,;
 
         {/* Services Grid */}"
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {filteredServices.map((service)  => (
+          {filteredServices.map(service: unknown (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>

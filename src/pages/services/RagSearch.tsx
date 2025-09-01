@@ -1,6 +1,6 @@
 import React from 'react.ts';'
 import { SEO   } from '@/components/SEO';
-
+;
 const RagSearch: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">"
     <SEO title="RAG Search - Zion Tech Group" description="AI search over your documents and data with citations and guardrails." />"
@@ -40,7 +40,8 @@ const RagSearch: React.FC = (): JSX.Element => (
     </section>;
   </div>;
 );
-
+;
+export { RagSearch };
 export default RagSearch;
 
 '"

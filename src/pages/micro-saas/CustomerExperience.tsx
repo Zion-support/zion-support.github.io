@@ -1,7 +1,8 @@
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap  } from 'lucide-react';
-
+;
+export { function };
 export default function CustomerExperience(...args[]):  {
 
   const features = [
@@ -155,7 +156,7 @@ export default function CustomerExperience(...args[]):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -244,7 +245,7 @@ export default function CustomerExperience(...args[]):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {capabilities.map((capability, index)  => (
+            {capabilities.map(capability: unknown, index: unknown (
               <motion.div
                 key={capability.title}
                 initial = {

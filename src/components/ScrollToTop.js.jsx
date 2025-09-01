@@ -1,6 +1,12 @@
+import React from 'react';
+export default ScrollToTop;
+export default ScrollToTop;
+export default ScrollToTop;
 export function ScrollToTop = () => {
-        const [isVisible, setIsVisible] = useState(false);
-        useEffect(() => {
+
+
+        const [isVisible, setIsVisible] = useState (false) ;
+        useEffect ( () => {
             const toggleVisibility = () => {
                 if (window.pageYOffset > 300) {
 

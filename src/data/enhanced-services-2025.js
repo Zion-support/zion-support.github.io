@@ -184,6 +184,6 @@ export const enhancedServices2025 = [
     technologies["IoT Sensors", "Machine Learning", "Cloud Computing", "Data Analytics"]
   }
 ];
-
+;
 export const EnhancedService2025 = enhancedServices2025[0]; // Default export for compatibility
 "

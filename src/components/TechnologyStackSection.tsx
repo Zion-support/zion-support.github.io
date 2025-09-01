@@ -88,21 +88,11 @@ export function TechnologyStackSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -155,11 +145,6 @@ export function TechnologyStackSection() {
   { duration: 1,
   delay: 0.8 + techIndex * 0.1 
 
-
-
-
-
-
 }}
                         />
                       </div>"
@@ -167,11 +152,9 @@ export function TechnologyStackSection() {
                         {tech.proficiency}%
                       </span>
                     </div>
-                  </div>
-                ))}
+                  </div>) ) }
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
 
         {/* Emerging Technologies */}
@@ -182,21 +165,11 @@ export function TechnologyStackSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -204,11 +177,6 @@ export function TechnologyStackSection() {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}
         >"
@@ -241,21 +209,11 @@ export function TechnologyStackSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -263,11 +221,6 @@ export function TechnologyStackSection() {
 
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
 
 }}
         >"
@@ -311,21 +264,11 @@ export function TechnologyStackSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -333,11 +276,6 @@ export function TechnologyStackSection() {
 
   { duration: 0.6,
   delay: 1.0 
-
-
-
-
-
 
 }}
         >"
@@ -362,16 +300,14 @@ export function TechnologyStackSection() {
           </div>
         </motion.div>
       </div>;
-    </section>;
-  )};
+    </section>;) };
 
 export default TechnologyStackSection;"
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 }
 
 export default TechnologyStackSection;

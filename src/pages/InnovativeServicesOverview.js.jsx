@@ -46,11 +46,10 @@ const InnovativeServicesOverview = () => {
                 'finance'['Finance', 'Trading'],;'
                 'sustainability'['Energy', 'Climate', 'Sustainability',;'
   'Green Tech']
-            
 
 };
             const targetKeywords = categoryMappings[selectedCategory] || [category.name];
-            return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase()))});
+            return targetKeywords.some (keyword => service.category.toLowerCase () .includes (keyword.toLowerCase () ) ) }) ;
     const fadeInUp = {
 
   initial: { opacity: 0,
@@ -200,7 +199,7 @@ const InnovativeServicesOverview = () => {
                     Learn More
                   </a>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -282,28 +281,28 @@ const InnovativeServicesOverview = () => {
                   {selectedService.features.map((feature, index) => (<li key={index} className="flex items-center">"
                       <span className="text-cyan-400 mr-2">✓</span>
                       {feature}
-                    </li>))}
+                    </li>) ) }
                 </ul>
 "
                 <h3 className="text-xl font-bold mb-4">Technology Stack</h3>"
                 <div className="flex flex-wrap gap-2 mb-6">"
                   {selectedService.technology.map((tech, index) => (<span key={index} className="bg-blue-600/20 text-blue-300 px-2 py-1 rounded text-sm">
                       {tech}
-                    </span>))}
+                    </span>) ) }
                 </div>
 "
                 <h3 className="text-xl font-bold mb-4">Use Cases</h3>"
                 <div className="flex flex-wrap gap-2 mb-6">"
                   {selectedService.useCases.map((useCase, index) => (<span key={index} className="bg-green-600/20 text-green-300 px-2 py-1 rounded text-sm">
                       {useCase}
-                    </span>))}
+                    </span>) ) }
                 </div>
 "
                 <h3 className="text-xl font-bold mb-4">Competitors</h3>"
                 <div className="flex flex-wrap gap-2 mb-6">"
                   {selectedService.competitors.map((competitor, index) => (<span key={index} className="bg-red-600/20 text-red-300 px-2 py-1 rounded text-sm">
                       {competitor}
-                    </span>))}
+                    </span>) ) }
                 </div>
               </div>
             </div>
@@ -317,7 +316,7 @@ const InnovativeServicesOverview = () => {
               </a>
             </div>
           </motion.div>
-        </div>)}
+        </div>) }
 
       {/* Footer CTA */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"

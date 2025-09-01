@@ -1,6 +1,8 @@
 import React from 'react';'
 import { Link } from 'react-router-dom';
 import { Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText, Search, CheckCircle const AIAutonomousLegalResearchAssistant = () => {
+
+
     const features = [
         "Autonomous case law analysis","
         "Statute interpretation & updates","
@@ -209,7 +211,7 @@ import { Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText
                   <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>"
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -298,7 +300,7 @@ import { Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText
                 : 'bg-gray-700/50 text-white hover:bg-gray-600/50 border border-gray-600/50'}`}>
                   Get Started
                 </Link>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>

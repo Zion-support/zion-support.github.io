@@ -1,4 +1,7 @@
 import React from 'react';
+export default Soc2ComplianceAutomation;
+
+
 const Soc2ComplianceAutomation = () => {
     const features = [
         {
@@ -118,7 +121,7 @@ const Soc2ComplianceAutomation = () => {
             </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Streamline your SOC 2 compliance journey with our automated platform.
-              Continuous monitoring, automated evidence collection, and real-time
+              Continuous monitoring, automated evidence collection, and real - time
               compliance insights to maintain your SOC 2 certification effortlessly.
             </p>
           </div>
@@ -148,9 +151,9 @@ const Soc2ComplianceAutomation = () => {
                     {criteria.controls.map((control, idx) => (<div key={idx} className="flex items-center text-gray-300">"
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {control}
-                      </div>))}
+                      </div>) ) }
                   </div>
-                </div>))}
+                </div>) ) }
             </div>
           </div>
 
@@ -176,9 +179,9 @@ const Soc2ComplianceAutomation = () => {
                     {category.tools.map((tool, idx) => (<li key={idx} className="flex items-center text-gray-300">"
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {tool}
-                      </li>))}
+                      </li>) ) }
                   </ul>
-                </div>))}
+                </div>) ) }
             </div>
           </div>
 
@@ -302,7 +305,7 @@ const Soc2ComplianceAutomation = () => {
           </div>
         </div>
       </section>
-    </div>);
+    </div>) ;
 };
 export default Soc2ComplianceAutomation;
 }}}}'"

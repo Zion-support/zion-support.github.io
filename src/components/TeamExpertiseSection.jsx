@@ -173,9 +173,8 @@ const stats = ["
     { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Average Rating" },"
     { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" }
 ];
-export function TeamExpertiseSection() {
-    const [selectedMember, setSelectedMember] = useState(null);
-    const [hoveredExpertise, setHoveredExpertise] = useState(null);
+    const [selectedMember, setSelectedMember] = useState (null) ;
+    const [hoveredExpertise, setHoveredExpertise] = useState (null) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -323,7 +322,7 @@ export function TeamExpertiseSection() {
                     <div className="text-zion-slate-light text-xs">Success</div>
                   </div>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -392,7 +391,7 @@ export function TeamExpertiseSection() {
                         </span>))}"
                       {member.skills.length > 3 && (<span className="text-zion-cyan/60 text-xs">
                           +{member.skills.length - 3} more
-                        </span>)}
+                        </span>) }
                     </div>
                   </div>
 
@@ -439,7 +438,7 @@ export function TeamExpertiseSection() {
 }} transition={{ delay: idx * 0.1 }}>"
                               <CheckCircle className="w-3 h-3 text-zion-cyan"/>
                               <span>{achievement}</span>
-                            </motion.div>))}
+                            </motion.div>) ) }
                         </div>
 "
                         <div className="flex items-center justify-between">"
@@ -464,10 +463,10 @@ export function TeamExpertiseSection() {
                             </a>
                           </div>
                         </div>
-                      </motion.div>)}
+                      </motion.div>) }
                   </AnimatePresence>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 

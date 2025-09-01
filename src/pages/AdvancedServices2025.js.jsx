@@ -363,7 +363,7 @@ const AdvancedServices2025 = () => {
                         {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">"
                             <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
                             {feature}
-                          </li>))}
+                          </li>) ) }
                       </ul>
                     </div>
 "
@@ -378,7 +378,7 @@ const AdvancedServices2025 = () => {
                         {service.benefits.map((benefit, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">"
                             <span className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>
                             {benefit}
-                          </li>))}
+                          </li>) ) }
                       </ul>
                     </div>
 "
@@ -398,9 +398,9 @@ const AdvancedServices2025 = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
                       </svg>
                     </Link>
-                  </div>))}
+                  </div>) ) }
               </div>
-            </div>))}
+            </div>) ) }
         </div>
       </section>
 

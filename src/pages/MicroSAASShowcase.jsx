@@ -114,7 +114,7 @@ export default function MicroSAASShowcase() {
                     <div className="flex flex-wrap gap-2">"
                       {service.tags.slice(0, 4).map((tag, index) => (<Badge key={index} variant="secondary" className="text-xs bg-zion-cyan-light text-zion-blue">
                           {tag}
-                        </Badge>))}
+                        </Badge>) ) }
                     </div>
                   </div>
 
@@ -164,7 +164,7 @@ export default function MicroSAASShowcase() {
                     </Link>
                   </div>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>

@@ -101,7 +101,7 @@ function CategoryContent({ categoryId, category, IconComponent, user}) {
           </div>
         </div>
 
-        {canCreatePost && <CreatePostButton categoryId={categoryId}/>}
+        {canCreatePost && <CreatePostButton categoryId={categoryId} />}
       </div>
 "
       <div className="mb-6">"

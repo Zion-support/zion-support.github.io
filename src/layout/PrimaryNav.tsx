@@ -25,11 +25,11 @@ import type { RootState } from '@/store';
       // // // // // console.log('PrimaryNav search submit:', query);`
       router.push(`/search/${slugify(query)}`);'
       setQuery('')}
-// Theme toggle component
-const ModeToggle = () => {;
-  const [isDark, setIsDark] = useState(false);
+// Theme toggle component;
+const ModeToggle = (...args: unknown[]): unknown => {;
+  const [isDark, setIsDark] = useState<typeof false>(false);
 
-  const toggleTheme = () => {;
+  const toggleTheme = (...args: unknown[]): unknown => {;
     setIsDark(!isDark);
     // Add theme switching logic here
   };
@@ -161,7 +161,7 @@ const ModeToggle = () => {;
 
         {/* Mobile Navigation */}
         <AnimatePresence>
-          {isOpen && (
+          {isOpen && 
             <motion.div
               initial = {
 
@@ -206,12 +206,12 @@ const ModeToggle = () => {;
                       {category.category}
                     </h3>"
                     <div className="space-y-2 ml-4">
-                      {category.items.map((service, serviceIndex) => (
+                      {category.items.map((service: unknown, serviceIndex: unknown 
                         <Link
                           key={serviceIndex}
                           to={service.path}"
                           className="block text-gray-300 hover:text-white transition-colors duration-200"
-                          onClick={() => setIsOpen(false)}
+                          onClick={( setIsOpen(false)}
                         >
                           {service.name}
                         </Link>
@@ -224,28 +224,28 @@ const ModeToggle = () => {;
                   <Link "
                     to="/solutions" "
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={() => setIsOpen(false)}
+                    onClick={: unknown setIsOpen(false)}
                   >
                     Solutions
                   </Link>
                   <Link "
                     to="/about" "
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={() => setIsOpen(false)}
+                    onClick={: unknown setIsOpen(false)}
                   >
                     About
                   </Link>
                   <Link "
                     to="/blog" "
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={() => setIsOpen(false)}
+                    onClick={: unknown setIsOpen(false)}
                   >
                     Blog
                   </Link>
                   <Link "
                     to="/contact" "
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={() => setIsOpen(false)}
+                    onClick={: unknown setIsOpen(false)}
                   >
                     Contact
                   </Link>

@@ -1,4 +1,5 @@
 export interface InnovativeService {
+
   id: string;
   name: string;
   tagline: string;
@@ -33,7 +34,8 @@ export interface InnovativeService {
     mobile: string;
     email: string;
     address: string;
-  };
+  
+};
   link: string;
   icon: string;
   color: string;
@@ -44,7 +46,7 @@ export interface InnovativeService {
   useCases: string[];
   technicalSpecs: string[];
 }
-
+;
 export const innovativeServices2025: InnovativeService[] = [
   // AI & Machine Learning Services
   {
@@ -733,6 +735,7 @@ export const innovativeServices2025: InnovativeService[] = [
     color: 'from-orange-600 to-red-700',
     featured: true},
 ];
-
+;
+export { innovativeServices2025 };
 export default innovativeServices2025;
 '

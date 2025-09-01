@@ -25,7 +25,8 @@ author: {
     name: string;
     id: string;
     avatarUrl?: string;
-    verified: boolean};
+    verified: boolean
+};
   images: string[];
   createdAt: string;
   technologyStack: string[];
@@ -33,7 +34,7 @@ author: {
   integrations: string[];
   compliance: string[];
   support: string[]}
-
+;
 export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   // Blockchain & DeFi Platform
   {

@@ -31,9 +31,9 @@ export default function AccountSettings() {
             // console.error('Error loading account settings', e)}
     }, []);
     const handleSave = () => {
-        setIsSubmitting(true);
+        setIsSubmitting (true) ;
         // Simulate API call
-        setTimeout(() => {
+        setTimeout ( () => {
             try {
 '
                 localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup }));'
@@ -63,11 +63,11 @@ export default function AccountSettings() {
 '
                 method: 'personal_sign',
                 params[address, message];
-            });
-            // Auto-set DID handle if ENS is available
+            }) ;
+            // Auto - set DID handle if ENS is available
             try {
-                const provider = new window.ethers.providers.Web3Provider(ethereum);
-                const ensName = await provider.lookupAddress(address);
+                const provider = new window.ethers.providers.Web3Provider (ethereum) ;
+                const ensName = await provider.lookupAddress (address) ;
                 if (ensName) {
 
                     setDidHandle(ensName)}
@@ -104,7 +104,7 @@ export default function AccountSettings() {
                   <Input id="didHandle" value={didHandle} onChange={(e) => setDidHandle(e.target.value)} placeholder="ENS / Lens / Ceramic / Farcaster"/>"
                   <Button variant="outline" onClick={handleConnectWallet} type="button" className="flex items-center gap-1">
                     <Wallet connected</span>
-                  </div>)}
+                  </div>) }
               </div>
               
               <div>"

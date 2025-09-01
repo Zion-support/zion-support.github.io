@@ -24,13 +24,13 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                 const parsed = JSON.parse(savedSettings);'
                 // // // // // // // // console.error('Failed to parse accessibility settings:', error);
             }
-                setSettings(prev => ({ ...prev, ...parsed }))}
+                setSettings (prev => ({ ...prev, ...parsed }) ) }
             catch (error) {
 '
                 // console.error('Failed to parse accessibility settings:', error)}
         }
-    }, []);
-    useEffect(() => {
+    }, []) ;
+    useEffect ( () => {
         // Apply settings to document
         applySettings(settings);
         // Save to localStorage'

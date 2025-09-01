@@ -31,7 +31,7 @@ import {
   MapPin,
   Globe as GlobeIcon,
   Atom,
-  // Blockchain icon removed - not available in lucide-react
+  // Blockchain icon removed - not available in lucide - react
   Heart,
   Scale,
   Factory,
@@ -57,6 +57,7 @@ import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeSer
 import { comprehensiveServices } from '../data/comprehensiveServices';
 
 interface Service {
+
   id: string;
   name: string;
   category: string;
@@ -70,7 +71,8 @@ interface Service {
     enterprise: number;
     currency: string;
     billingCycle: string;
-  };
+  
+};
   rating: number;
   reviewCount: number;
   launchDate: string;
@@ -96,7 +98,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   // Combine services from multiple sources
-  const allServices: Service[] = useMemo(() => {
+  const allServices: Service[] = useMemo ( () => {
     const services: Service[] = [];
 
     // Add services from ULTIMATE_INNOVATIVE_SERVICES_2026
@@ -176,7 +178,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       const matchesCategory ='
         selectedCategory === 'All' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
-    });
+    }) ;
 
     // Sort services
     switch (sortBy) {
@@ -199,7 +201,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
     }
 
     return filtered;
-  }, [allServices, searchTerm, selectedCategory, sortBy]);
+  }, [allServices, searchTerm, selectedCategory, sortBy]) ;
 
   const getCategoryIcon = (category: string) => {
 
@@ -343,8 +345,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">"
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
-            {filteredServices.map((service, index) => (
-              <motion.div
+            {filteredServices.map ( (service, index) => (<motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -416,8 +417,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                     {service.features.length > 3 && ("
                       <span className="px-2 py-1 bg-gray-500/20 text-gray-300 text-xs rounded-full">
                         +{service.features.length - 3} more
-                      </span>
-                    )}
+                      </span>) }
                   </div>
                 </div>
 
@@ -430,14 +430,12 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                     <Eye className="w-4 h-4" />
                   </button>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </AnimatePresence>
         </div>
 
         {/* No Results */}
-        {filteredServices.length === 0 && (
-          <motion.div
+        {filteredServices.length === 0 && (<motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}"
             className="text-center py-16"
@@ -455,8 +453,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
 
       {/* Service Detail Modal */}
       <AnimatePresence>
-        {selectedService && (
-          <motion.div
+        {selectedService && (<motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}"
@@ -514,8 +511,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                         >"
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           {feature}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
 "
                     <h3 className="text-xl font-semibold text-white mb-4">
@@ -529,8 +525,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                         >"
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                           {benefit}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
 
@@ -631,8 +626,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                             {selectedService.contactInfo.address}
                           </div>
                         </div>
-                      </div>
-                    )}
+                      </div>) }
                   </div>
                 </div>
 
@@ -650,8 +644,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
 
       {/* Contact Section */}"
@@ -696,8 +689,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default ComprehensiveServicesShowcase2027;

@@ -213,8 +213,7 @@ export function PricingPage() {
                         <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                           Most Popular
                         </span>
-                      </div>
-                    )}
+                      </div>) }
 
                     {/* Tier Header */}"
                     <div className="text-center mb-6">"
@@ -249,8 +248,7 @@ export function PricingPage() {
                     <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
                       Get Started
                     </button>
-                  </motion.div>
-                ))}
+                  </motion.div>) ) }
               </div>
 
               {/* Market Information */}"
@@ -305,8 +303,7 @@ export function PricingPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
 
         {/* Call to Action */}
@@ -342,8 +339,7 @@ export function PricingPage() {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 
 export default PricingPage;

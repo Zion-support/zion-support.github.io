@@ -6,7 +6,6 @@ interface LoadingSpinnerProps {
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
   fullScreen?: boolean;
-}
 
 export default function LoadingSpinner({
 '
@@ -99,7 +98,7 @@ export function LoadingSkeleton({ lines = 3, className = '' }: { lines?: number;
 
   return()`
     <div className={`animate-pulse ${className}`}>
-      {Array.from({ length: lines }).map((_, i) => (
+      {Array.from({ length: lines }).map(_: unknown, i: unknown (
         <div
           key={i}`
           className={`h-4 bg-gray-200 rounded mb-3 ${

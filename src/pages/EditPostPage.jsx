@@ -25,12 +25,6 @@ const mockPost = {
     isAnswered: true,
   isFeatured: true
 
-
-
-
-
-
-
 };
 export default function EditPostPage() {
     const { postId } = useParams();
@@ -42,14 +36,14 @@ export default function EditPostPage() {
     useEffect(() => {
         // In a real app, we would fetch the post data here'
         // For now, we'll just use the mock data
-        setIsLoading(false)}, [postId]);
+        setIsLoading (false) }, [postId]) ;
     if (isLoading) {
 "
         return (<div className="container py-8">"
           <div className="flex justify-center items-center h-64">"
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
-        </div>)}
+        </div>) }
     if (!post) {
 "
         return (<div className="container py-8">
@@ -66,9 +60,9 @@ export default function EditPostPage() {
           <h1 className="text-2xl font-bold mb-4">Permission Denied</h1>'"
           <p className="mb-4">You don't have permission to edit this post.</p>
           <Button asChild>
-            <Link to={`/community/post/${postId}`}>Back to Post</Link>
+            <Link to={`/community / post/${postId}`}>Back to Post</Link>
           </Button>
-        </div>)}
+        </div>) }
     const initialValues = {
 
   title: post.title,

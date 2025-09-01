@@ -183,7 +183,7 @@ export default function AIServicesPage() {
                 : "border-zion-purple text-zion-purple hover:bg-zion-purple/10"}`}>
               {category.icon}
               {category.name}
-            </Button>))}
+            </Button>) ) }
         </div>
 
         {/* Services Grid */}"
@@ -214,7 +214,7 @@ export default function AIServicesPage() {
                   {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">"
                       <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
                       {feature}
-                    </li>))}
+                    </li>) ) }
                 </ul>
               </CardContent>"
               <div className="px-6 pb-6">"
@@ -224,7 +224,7 @@ export default function AIServicesPage() {
                   </Link>
                 </Button>
               </div>
-            </Card>))}
+            </Card>) ) }
         </div>
 
         {/* CTA Section */}"

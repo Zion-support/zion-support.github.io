@@ -1,3 +1,4 @@
+import { Check, Star, Zap, Shield, TrendingUp, Users, Cloud, Brain, Code, Database, Globe, Smartphone, Server, Lock, BarChart3, Settings, Phone, Mail, MapPin, ExternalLink, DollarSign, Target, Award } from 'lucide - react';
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";"
 import { Badge } from "../components/ui/badge";"
@@ -140,7 +141,7 @@ const ComprehensivePricing = () => {
                 {service.features.slice(0, 5).map((feature, index) => (<div key={index} className="flex items-center text-sm text-blue-200">"
                     <Check className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
                     {feature}
-                  </div>))}
+                  </div>) ) }
               </div>
             </div>"
             <div className="space-y-2">"
@@ -149,7 +150,7 @@ const ComprehensivePricing = () => {
                 {service.technologies.slice(0, 3).map((tech, index) => (<div key={index} className="flex items-center text-sm text-blue-200">"
                     <Code className="h-4 w-4 text-blue-400 mr-2 flex-shrink-0"/>
                     {tech}
-                  </div>))}
+                  </div>) ) }
               </div>
             </div>"
             <div className="pt-4 border-t border-blue-600/30">"
@@ -249,7 +250,7 @@ const ComprehensivePricing = () => {
               {renderAIPricing()}
             </TabsContent>"
             <TabsContent value="it">
-              {renderITPricing()}
+              {renderITPricing () }
             </TabsContent>
           </Tabs>
         </div>

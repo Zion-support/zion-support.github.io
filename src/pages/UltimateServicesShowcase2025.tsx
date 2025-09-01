@@ -1,3 +1,4 @@
+import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 import SEO from "@/components/SEO";'
 import { Link } from 'react-router-dom';
@@ -32,12 +33,12 @@ export default function UltimateServicesShowcase2025() {
 '
   const categories = ['all', ...Object.keys(ULTIMATE_SERVICE_CATEGORIES_2025)];
 
-  const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter (service => {;
+    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   const getCategoryIcon = (category: string) => {;'"
     if (category === 'all') return <Rocket className="w-6 h-6" />;
@@ -156,8 +157,7 @@ export default function UltimateServicesShowcase2025() {
                 {categories.map(category => (;"
                   <option key={category} value={category} className="bg-slate-800 text-white">'
                     {category === 'all' ? 'All Categories' : category}
-                  </option>
-                ))}
+                  </option>) ) }
               </select>
             </div>
           </div>
@@ -243,8 +243,7 @@ export default function UltimateServicesShowcase2025() {
 
                   Get Started
                 </Link>
-              </div>;
-            ))}
+              </div>;) ) }
           </div>
         </div>
       </div>
@@ -273,8 +272,7 @@ export default function UltimateServicesShowcase2025() {
                 {service.featured && ("
                   <span className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-semibold rounded-full">
                     Featured
-                  </span>
-                )}
+                  </span>) }
               </div>
 
               {/* Description */}"
@@ -291,8 +289,7 @@ export default function UltimateServicesShowcase2025() {
                       className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-md border border-blue-400/30"
 
                       {tag}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
               </div>
 
@@ -323,8 +320,7 @@ export default function UltimateServicesShowcase2025() {
                       className="px-2 py-1 bg-green-500/20 text-green-300 text-xs rounded-md border border-green-400/30"
 
                       {integration}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
               </div>
 
@@ -388,8 +384,7 @@ export default function UltimateServicesShowcase2025() {
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            </div>) ) }
         </div>
 
         {/* No Results Message */}
@@ -407,8 +402,7 @@ export default function UltimateServicesShowcase2025() {
             >
               Clear Filters
             </button>
-          </div>
-        )}
+          </div>) }
       </div>
 
       {/* Call to Action Section */}"
@@ -505,8 +499,7 @@ export default function UltimateServicesShowcase2025() {
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 
 // Search icon component
 const Search = ({ className }: { className?: string }) => (;"

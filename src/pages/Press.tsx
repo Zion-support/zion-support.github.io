@@ -273,9 +273,7 @@ export default function Press() {
                     : 'bg-zion-blue-dark/50 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40 hover:text-white'`
                 }`}
               >
-                {category.name} ({category.count})
-              </button>
-            ))}
+                {category.name} ({category.count}) </button>) ) }
           </div>
         </div>
       </section>

@@ -3,6 +3,7 @@ import Head from 'next/head.ts';
 '
 import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin  } from 'lucide-react';'
 import Link from 'next/link.ts';
+export { function };
 export default function ServicesAdvertisingPage(...args[]):  {
 
   const contact = {

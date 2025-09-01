@@ -13,11 +13,11 @@ export default function OrdersPage() {
       {isLoading ? (<Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Order #</TableHead>
-              <TableHead>Date</TableHead>
-              <TableHead>Total</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead>View</TableHead>
+              <TableHead > Order #</TableHead>
+              <TableHead > Date</TableHead>
+              <TableHead > Total</TableHead>
+              <TableHead > Status</TableHead>
+              <TableHead > View</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -32,11 +32,11 @@ export default function OrdersPage() {
         </Table>) : orders.length === 0 ? (<EmptyState icon={<FileText className="h-10 w-10"/>} title="No Orders" description="You haven't purchased thing yet."/>) : (<Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Order #</TableHead>
-              <TableHead>Date</TableHead>
-              <TableHead>Total</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead>View</TableHead>
+              <TableHead > Order #</TableHead>
+              <TableHead > Date</TableHead>
+              <TableHead > Total</TableHead>
+              <TableHead > Status</TableHead>
+              <TableHead > View</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -50,7 +50,7 @@ export default function OrdersPage() {
                     View
                   </Link>
                 </TableCell>
-              </TableRow>))}
+              </TableRow>) ) }
           </TableBody>
         </Table>)}
     </div>)}

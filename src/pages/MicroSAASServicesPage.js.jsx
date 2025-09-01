@@ -1,3 +1,4 @@
+import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart } from "lucide - react";
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";"
 import { Button } from "../ui/button";"
@@ -445,7 +446,7 @@ export default function MicroSAASServicesPage() {
                 ? "bg-zion-purple text-white""`
                 : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"}`}>
                 {category}
-              </Button>))}
+              </Button>) ) }
           </div>
         </div>
       </div>
@@ -515,7 +516,7 @@ export default function MicroSAASServicesPage() {
                     </a>
                   </Button>
                 </CardFooter>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </div>

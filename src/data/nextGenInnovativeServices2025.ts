@@ -1,3 +1,4 @@
+import React from 'react';
 export interface NextGenInnovativeService {
   id: string;
   title: string;
@@ -21,7 +22,8 @@ contactInfo: {
 
     phone: string;
     email: string;
-    website: string};
+    website: string
+};
   technicalSpecs: {
 
     technology: string[];
@@ -33,7 +35,7 @@ contactInfo: {
   marketSize?: string;
   demoUrl?: string;
   documentationUrl?: string}
-
+;
 export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
   // Quantum Computing Solutions
   {

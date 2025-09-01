@@ -2,17 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { WifiOff, RefreshCw, Home, Signal } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-
-const OfflinePage: React.FC = () => {
-  const handleRetry = () => {
+;
+const OfflinePage: React.FC = props {
+  const handleRetry = (...args: unknown[]): unknown => {
     window.location.reload();
   };
 
-  const handleGoHome = () => {
+  const handleGoHome = (...args: unknown[]): unknown => {
     window.location.href = '/';
   };
 
-  const handleCheckConnection = () => {
+  const handleCheckConnection = (...args: unknown[]): unknown => {
     // Check if we're back online
     if (navigator.onLine) {
       window.location.reload();
@@ -34,7 +34,7 @@ const OfflinePage: React.FC = () => {
       notification.textContent = 'You are still offline. Please check your internet connection.';
       document.body.appendChild(notification);
       
-      setTimeout(() => {
+      setTimeout(: unknown {
         if (document.body.contains(notification)) {
           document.body.removeChild(notification);
         }
@@ -43,8 +43,9 @@ const OfflinePage: React.FC = () => {
   };
 
   return (
-
-export default function OfflinePage() {
+;
+export { function };
+export default function OfflinePage(...args: unknown[]): unknown {
   return (
     <>
         <SEOHead 
@@ -201,4 +202,5 @@ export default function OfflinePage() {
   );
 
   );
+}
 }

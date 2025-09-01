@@ -96,7 +96,6 @@ import {
   BookOpen as BookOpenIcon5'
 } from 'lucide-react';
 
-export const EnhancedFuturisticFooter: React.FC = () => {
   Search,
   BookOpen,
   MessageCircle,
@@ -116,8 +115,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   Settings'
 } from 'lucide-react';
 
-export const EnhancedFuturisticFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date () .getFullYear () ;
 
   const footerSections = [
     {
@@ -272,8 +270,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         className="block text-sm text-slate-300 hover:text-cyan-400 transition-colors"
       >
         {name};
-      </Link>;
-    );
+      </Link>;) ;
   };
 
   return ("
@@ -378,7 +375,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             "
             <p className="text-gray-300 mb-6 max-w-md">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
-              and digital transformation services. Transforming businesses with cutting-edge technology.
+              and digital transformation services. Transforming businesses with cutting - edge technology.
             </p>
 
             {/* Footer Sections */}
@@ -399,11 +396,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                         {link.name}"
                         <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
                       </Link>
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
 
           {/* Additional Links Grid */}"
@@ -420,8 +415,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                     >
                       {link.name}
                     </Link>
-                  </li>
-                ))}
+                  </li>) ) }
               </ul>
             </div>
 
@@ -437,8 +431,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                     >
                       {link.name}
                     </Link>
-                  </li>
-                ))}
+                  </li>) ) }
               </ul>
             </div>
 
@@ -454,8 +447,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                     >
                       {link.name}
                     </Link>
-                  </li>
-                ))}
+                  </li>) ) }
               </ul>
             </div>
 
@@ -752,7 +744,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           </div>;
         </div>;
       </div>;
-    </footer>;
-  );
+    </footer>;) ;
 };
 '"`

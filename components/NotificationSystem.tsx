@@ -8,8 +8,9 @@ import React, {
 import { motion, AnimatePresence } from 'framer-motion';
 '
 export type NotificationType = 'success' | 'error' | 'warning' | 'info';
-
+;
 export interface Notification {
+
   id: string;
   type: NotificationType;
   title: string;
@@ -18,8 +19,9 @@ export interface Notification {
   action?: {
 
     label: string;
-    onClick: () => void;
-  };
+    onClick: : unknown void;
+  
+};
   dismissible?: boolean;
 }
 
@@ -46,9 +48,11 @@ export const useNotifications = () => {
 };
 
 interface NotificationProviderProps {
+  // Add your props here
+
+
   children: React.ReactNode;
   maxNotifications?: number;
-}
 
 export function NotificationProvider({
 
@@ -94,7 +98,7 @@ export function NotificationProvider({
     [maxNotifications, removeNotification]
   );
 
-  const clearAll = useCallback(() => {
+  const clearAll = useCallback(: unknown {
     setNotifications([]);
   }, []);
 
@@ -107,8 +111,8 @@ export function NotificationProvider({
     </NotificationContext.Provider>
   );
 }
-
-function NotificationContainer() {
+;
+function NotificationContainer(...args: unknown[]): unknown {
   const { notifications, removeNotification, clearAll } = useNotifications();
 
   if (notifications.length === 0) return null;
@@ -141,9 +145,11 @@ function NotificationContainer() {
 }
 
 interface NotificationItemProps {
+  // Add your props here
+
+
   notification: Notification;
-  onRemove: (id: string) => void;
-}
+  onRemove: id: string void;
 
 function NotificationItem({ notification, onRemove }: NotificationItemProps) {
 
@@ -257,8 +263,8 @@ function NotificationItem({ notification, onRemove }: NotificationItemProps) {
   );
 }
 
-// Hook for easy notification creation
-export const useNotificationActions = () => {
+// Hook for easy notification creation;
+export const useNotificationActions = (...args: unknown[]): unknown => {
   const { addNotification } = useNotifications();
 
   const showSuccess = useCallback()

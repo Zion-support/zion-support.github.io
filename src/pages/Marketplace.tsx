@@ -342,7 +342,7 @@ const Marketplace: React.FC = () => {
       solution.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       solution.vendor.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   const sortedSolutions = [...filteredSolutions].sort((a, b) => {
 
@@ -362,7 +362,7 @@ const Marketplace: React.FC = () => {
       default:
         return b.reviews - a.reviews; // popularity
     }
-  });
+  }) ;
 
   const getTypeColor = (type: string) => {
 
@@ -397,7 +397,7 @@ const Marketplace: React.FC = () => {
   const renderStars = (rating: number) => {
 
     const stars = [];
-    const fullStars = Math.floor(rating);
+    const fullStars = Math.floor (rating) ;
     const hasHalfStar = rating % 1 !== 0;
 
     for (let i = 0; i < fullStars; i++) {
@@ -698,10 +698,8 @@ const Marketplace: React.FC = () => {
                         </div>
                       </CardContent>
                     </Card>
-                  </motion.div>
-                ))}
-              </div>
-            )}
+                  </motion.div>) ) }
+              </div>) }
           </div>
         </section>
 
@@ -740,8 +738,7 @@ const Marketplace: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>) ;
 };
 
 export default Marketplace;

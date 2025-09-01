@@ -12,8 +12,8 @@ interface OptimizedImageProps extends React.PropsWithChildren<{}> {
   priority?: boolean;'
   placeholder?: 'blur' | 'shimmer' | 'none';
   fallbackSrc?: string;
-  onLoad?: ()  => void;
-  onError?: (error: anyError)  => void;
+  onLoad?: () => void;
+  onError?: (error: anyError) => void;
   lazy?: boolean;
   quality?: number;
   sizes?: string;'
@@ -51,11 +51,11 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const [isIntersecting, setIsIntersecting] = useState(priority);
   const [isLoaded, setIsLoaded] = useState(false);
   
-  const imgRef = useRef<HTMLImageElement>(null);
-  const observerRef = useRef<IntersectionObserver | null>(null);
+  const imgRef = useRef < HTMLImageElement> (null) ;
+  const observerRef = useRef < IntersectionObserver | null> (null) ;
 
   // Intersection Observer for lazy loading
-  useEffect(() => {
+  useEffect ( () => {
     if (priority || !lazy) {
 
       setIsIntersecting(true);
@@ -77,10 +77,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 '
         rootMargin: any'50px',;
         threshold: 0.1
-      }
-    );
+      }) ;
 
-    observerRef.current.observe(imgRef.current);
+    observerRef.current.observe (imgRef.current) ;
 
     return () => {
       if (observerRef.current) {
@@ -88,17 +87,17 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         observerRef.current.disconnect();
       }
     };
-  }, [priority, lazy]);
+  }, [priority, lazy]) ;
 
   // Handle image load
-  const handleImageLoad = () => {
-    setIsLoading(false);
-    setIsLoaded(true);
-    onLoad?.();
+  const handleImageLoad = useCallback ( () => {
+    setIsLoading (false) ;
+    setIsLoaded (true) ;
+    onLoad?. () ;
   };
 
   // Handle image error
-  const handleImageError = () => {
+  const handleImageError = useCallback ( () => {
     if (imageSrc !== fallbackSrc) {
 
       setImageSrc(fallbackSrc);
@@ -120,7 +119,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         observerRef.current.disconnect();
       }
     };
-  }, []);
+  }, []) ;
 
   // Generate optimized src with quality parameter
   const getOptimizedSrc = (src: anystring)  => {
@@ -145,7 +144,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     }
   };
 
-  const optimizedSrc = getOptimizedSrc(imageSrc);
+  const optimizedSrc = getOptimizedSrc (imageSrc) ;
 
   // Base classes
   const baseClasses = ['
@@ -172,8 +171,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         <div className="w-full h-full flex items-center justify-center">"
           <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />
         </div>
-      </div>
-    );
+      </div>) ;
   }
 
   // Error state
@@ -188,16 +186,14 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <AlertCircle className="w-12 h-12 text-gray-400 mx-auto mb-2" />"
           <p className="text-sm text-gray-500 dark:text-gray-400">Image failed to load</p>
         </div>
-      </div>
-    );
+      </div>) ;
   }
 
   return ("
     <div className="relative" style={{ width, height }}>
       {/* Loading overlay */}
       <AnimatePresence>
-        {isLoading && (
-          <motion.div
+        {isLoading && (<motion.div
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}"
             className="absolute inset-0 bg-gray-200 dark:bg-gray-700 flex items-center justify-center z-10"
@@ -206,8 +202,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
               <Loader2 className="w-8 h-8 text-gray-400 animate-spin mx-auto mb-2" />"
               <p className="text-xs text-gray-500">Loading...</p>
             </div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
 
       {/* Placeholder */}'
@@ -262,8 +257,7 @@ export const AvatarImage: React.FC<Omit<OptimizedImageProps, 'rounded' | 'object
       className={`${sizeClasses[size]} rounded-full object-cover ${props.className || ''}`}
       rounded={false}"
       objectFit="cover"
-    />
-  );
+    />) ;
 };
 
 export const CardImage: React.FC<OptimizedImageProps> = (props) => (
@@ -274,8 +268,7 @@ export const CardImage: React.FC<OptimizedImageProps> = (props) => (
     rounded
     shadow
     hover
-  />
-);
+  />) ;
 
 export const HeroImage: React.FC<OptimizedImageProps> = (props) => (
   <OptimizedImage

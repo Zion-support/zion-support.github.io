@@ -6,9 +6,11 @@ import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';'
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface AppHeaderProps {
-  onSidebarToggle?: () => void;
+  // Add your props here
+
+
+  onSidebarToggle?: : unknown void;
   isSidebarOpen?: boolean;
-}
 
 export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
 
@@ -22,8 +24,8 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
   const [isSearching, setIsSearching] = useState(false);
   const [activeNav, setActiveNav] = useState<any>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
+  useEffect(: unknown {
+    const handleScroll = (...args: unknown[]): unknown => {
       setScrolled(window.scrollY > 10);
     };
 '
@@ -485,7 +487,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     }
   };
 
-  const closeAllDropdowns = () => {
+  const closeAllDropdowns = (...args: unknown[]): unknown => {
     setServicesDropdownOpen(false);
     setSolutionsDropdownOpen(false);
     setCompanyDropdownOpen(false);
@@ -565,7 +567,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                                   <h3 className="text-lg font-semibold text-white">{category.title}</h3>
                                 </div>"
                                 <div className="space-y-2">
-                                  {category.services.map((service) => (
+                                  {category.services.map((service: unknown (
                                     <Link
                                       key={service.name}
                                       to={service.href}"
@@ -614,7 +616,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                         <div className="absolute top-full left-0 mt-2 w-80 bg-slate-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-2xl shadow-2xl shadow-cyan-400/10 p-6">"
                           <div className="space-y-4">"
                             <h3 className="text-lg font-semibold text-white mb-4">Industry Solutions</h3>
-                            {solutions.map((solution) => (
+                            {solutions.map((solution: unknown (
                               <Link
                                 key={solution.name}
                                 to={solution.href}"
@@ -652,7 +654,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                         <div className="absolute top-full left-0 mt-2 w-80 bg-slate-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-2xl shadow-2xl shadow-cyan-400/10 p-6">"
                           <div className="space-y-4">"
                             <h3 className="text-lg font-semibold text-white mb-4">Resources & Support</h3>
-                            {resources.map((resource) => (
+                            {resources.map((resource: unknown (
                               <Link
                                 key={resource.name}
                                 to={resource.href}"
@@ -764,12 +766,12 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
 
                 {/* Mobile Navigation */}"
                 <nav className="space-y-4">
-                  {navigation.map((item) => (
+                  {navigation.map(item: unknown 
                     <div key={item.name}>
                       <Link
                         to={item.href}"
                         className="block text-slate-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-                        onClick={() => setMobileMenuOpen(false)}
+                        onClick={( setMobileMenuOpen(false)}
                       >
                         {item.name}
                       </Link>
@@ -781,7 +783,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                 <div className="space-y-4">"
                   <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider">Quick Links</h3>"
                   <div className="grid grid-cols-2 gap-4">
-                    {quickLinks.slice(0, 6).map((link) => (
+                    {quickLinks.slice(0, 6).map(link: unknown 
                       <Link
                         key={link.name}
                         to={link.href}"
@@ -814,7 +816,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                 <Link"
                   to="/contact""
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={: unknown setMobileMenuOpen(false)}
                 >
                   Get Started
                 </Link>

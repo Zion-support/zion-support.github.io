@@ -63,9 +63,9 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
       ),
     ];
     return cats;
-  }, []);
+  }, []) ;
 
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo ( () => {
     let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2031;
 
     if (searchQuery) {
@@ -112,12 +112,12 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
             ] || 0)
           );
         default:
-          return a.name.localeCompare(b.name);
+          return a.name.localeCompare (b.name) ;
       }
-    });
+    }) ;
 
     return filtered;
-  }, [searchQuery, selectedCategory, sortBy]);
+  }, [searchQuery, selectedCategory, sortBy]) ;
 
   const getCategoryIcon = (category: string) => {
 
@@ -252,8 +252,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                   }`}
                 >
                   {category}
-                </button>
-              ))}
+                </button>) ) }
             </div>
 
             {/* Sort */}"
@@ -347,8 +346,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                           className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
                         >
                           {tag}
-                        </span>
-                      ))}
+                        </span>) ) }
                     </div>
 
                     {/* Market Info */}"
@@ -392,8 +390,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                               >"
                                 <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                                 <span>{feature}</span>
-                              </div>
-                            ))}
+                              </div>) ) }
                           </div>
                         </div>
 
@@ -411,8 +408,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                               >"
                                 <div className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
                                 <span>{benefit}</span>
-                              </div>
-                            ))}
+                              </div>) ) }
                           </div>
                         </div>
 
@@ -459,8 +455,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                                 className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full"
                               >
                                 {audience}
-                              </span>
-                            ))}
+                              </span>) ) }
                           </div>
                         </div>
 
@@ -477,8 +472,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                                 className="px-3 py-1 bg-orange-500/20 text-orange-300 text-xs rounded-full"
                               >
                                 {tech}
-                              </span>
-                            ))}
+                              </span>) ) }
                           </div>
                         </div>
 
@@ -493,11 +487,9 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
                           </a>
                         </div>
                       </div>
-                    </motion.div>
-                  )}
-                </motion.div>
-              );
-            })}
+                    </motion.div>) }
+                </motion.div>) ;
+            }) }
           </div>
 
           {filteredServices.length === 0 && ("
@@ -550,8 +542,7 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 };
 
 export default ZionCuttingEdgeServices2031;

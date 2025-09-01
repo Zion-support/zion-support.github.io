@@ -8,9 +8,8 @@ export async function createJob(...args: any[]): any {
     .select()
     .single();
 
-  if (error) throw error;
-  return data;
-}
+    const { data, error } = await supabase
+      .from ('jobs') .update (jobData) .eq ('id', jobId) .select () .single () ;
 
 export async function updateJob(...args: any[]): any {
 

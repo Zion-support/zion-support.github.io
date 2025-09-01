@@ -2,6 +2,9 @@ import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { SEO  } from '@/components/SEO';
 import { Brain, 
+import { motion  } from 'framer - motion.ts';
+
+
   Shield, 
   Activity, 
   TrendingUp, 
@@ -156,21 +159,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.6 }}
@@ -211,21 +204,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.6 }}"
@@ -249,21 +232,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                   transition = {
@@ -302,8 +275,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">"
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
-                        </div>
-                      ))}
+                        </div>) ) }
                     </div>
                   </div>
 
@@ -313,8 +285,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
                     Learn More
                   </Link>;
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>
@@ -328,21 +299,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.6 }}"
@@ -366,21 +327,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                   transition = {
@@ -416,21 +367,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.6 }}"
@@ -454,21 +395,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                   transition = {
@@ -501,21 +432,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.6 }}"
@@ -529,21 +450,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -560,7 +471,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
               className="text-xl text-cyan-100 mb-8"
 
               Join leading organizations that have already revolutionized
-              their operations with AI-powered solutions
+              their operations with AI - powered solutions
             </motion.p>
             <motion.div
               initial = {
@@ -568,21 +479,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -625,21 +526,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.6 }}"
@@ -661,21 +552,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition={{ duration: 0.6 }}"
@@ -692,21 +573,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -733,21 +604,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -775,21 +636,11 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {

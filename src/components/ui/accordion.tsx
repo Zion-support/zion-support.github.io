@@ -43,7 +43,7 @@ export function Accordion({
           return React.cloneElement(child, {
 
             isOpen: openItems.includes(child.props.value),
-            onToggle: ()  => handleToggle(child.props.value)
+            onToggle: : unknown handleToggle(child.props.value)
           })}
         return child})}
 export function Accordion({
@@ -79,7 +79,7 @@ export function Accordion({
           return React.cloneElement(child, {
 
             isOpen: openItems.includes(child.props.value),
-            onToggle: () => handleToggle(child.props.value)
+            onToggle: : unknown handleToggle(child.props.value)
           });
 
         return child;
@@ -104,7 +104,7 @@ export function AccordionItem({
 }: AccordionItemProps) {;
   return (;`
     <div className={`border-b border-gray-200 ${className}`}>;
-      {React.Children.map(children, (child) => {;
+      {React.Children.map(children: unknown, (child: unknown {;
         if (React.isValidElement(child)) {;
           return React.cloneElement(child, { isOpen, onToggle });
 

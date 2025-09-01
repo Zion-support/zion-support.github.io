@@ -35,5 +35,6 @@ const TransformationServices = () => {
     </div>
   );
 };
+export { TransformationServices };
 export default TransformationServices;
 '"

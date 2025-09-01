@@ -22,11 +22,13 @@ export default function Privacy() {
           </div>"
           <div className="space-y-6 text-zion-slate-light text-lg">
             <p>
+              {' '}
               We collect personal information you provide when creating an
               account or using our services. This may include your name, email,
               and other details required to deliver our marketplace features.
             </p>
             <p>
+              {' '}
               Zion Tech Group uses this data solely to operate and improve our
               platform. We do not sell your personal information to third
               parties.

@@ -39,7 +39,7 @@ import { FlaskConical,
   Satellite,
   Telescope'
  } from 'lucide-react';
-
+;
 const researchAreas = [
   {
 '
@@ -156,7 +156,7 @@ const researchAreas = [
     projects: 16;
   };
 ];
-
+;
 const researchProjects = [
   {
 
@@ -273,7 +273,7 @@ const researchProjects = [
     color: 'from-purple-500 to-indigo-600';
   };
 ];
-
+;
 const publications = [
   {
 
@@ -331,7 +331,7 @@ const publications = [
     abstract: 'This paper introduces security-first design patterns for cloud-native applications...';
   };
 ];
-
+;
 const patents = [
   {
 
@@ -389,7 +389,8 @@ const patents = [
     description: 'A security architecture pattern for cloud-native applications.';
   };
 ];
-
+;
+export { function };
 export default function ResearchDevelopment(...args[]):  {
 '
   const [selectedArea, setSelectedArea] = useState('All');'
@@ -538,7 +539,7 @@ export default function ResearchDevelopment(...args[]):  {
           </motion.div>;
 ;"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {researchAreas.map((area, index) => {;
+            {researchAreas.map(area: unknown, index: unknown {;
               const IconComponent = area.icon;
               return()
                 <motion.div
@@ -653,7 +654,7 @@ export default function ResearchDevelopment(...args[]):  {
           </motion.div>;
 ;"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {filteredProjects.map((project, index) => {;
+            {filteredProjects.map(project: unknown, index: unknown {;
               const IconComponent = getAreaIcon(project.area);
               const areaColor = getAreaColor(project.area);
               return()
@@ -811,7 +812,7 @@ export default function ResearchDevelopment(...args[]):  {
           </motion.div>
 "
           <div className="space-y-6">
-            {publications.map((pub, index) => (
+            {publications.map(pub: unknown, index: unknown (
               <motion.div
                 key={pub.id}
                 initial = {
@@ -929,7 +930,7 @@ export default function ResearchDevelopment(...args[]):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {patents.map((patent, index)  => (
+            {patents.map(patent: unknown, index: unknown (
               <motion.div
                 key={patent.id}
                 initial = {

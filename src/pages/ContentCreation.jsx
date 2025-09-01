@@ -122,7 +122,7 @@ import {
     technologies["CDN", "Edge Computing", "Load Balancing", "Performance Monitoring"]
   }
 ];
-
+;
 const contentTechnologies = [
   {
 "
@@ -157,7 +157,7 @@ const contentTechnologies = [
     reliability: "High"
 
 ];
-
+;
 const successStories = [
   {
 
@@ -190,7 +190,7 @@ const successStories = [
     logo: "EB"
 
 ];
-
+;
 const processSteps = [
   {
 
@@ -225,7 +225,7 @@ const processSteps = [
     duration: "Ongoing"
 
 ];
-
+;
 const contentBenefits = [
   {
 "
@@ -266,7 +266,7 @@ export default function ContentCreation() {
 '
   const filteredSolutions = selectedCategory === 'All'
     ? contentCreationSolutions
-    : contentCreationSolutions.filter(solution => solution.category === selectedCategory);
+    : contentCreationSolutions.filter (solution => solution.category === selectedCategory) ;
 
   return ("
     <div className="min-h-screen bg-futuristic">
@@ -285,21 +285,11 @@ export default function ContentCreation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -311,21 +301,11 @@ export default function ContentCreation() {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
               transition = {
@@ -381,21 +361,11 @@ export default function ContentCreation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -416,21 +386,11 @@ export default function ContentCreation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -462,8 +422,7 @@ export default function ContentCreation() {
                     </div>
                   ))}
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -477,21 +436,11 @@ export default function ContentCreation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -512,21 +461,11 @@ export default function ContentCreation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -560,8 +499,7 @@ export default function ContentCreation() {
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -575,21 +513,11 @@ export default function ContentCreation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -610,21 +538,11 @@ export default function ContentCreation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -654,8 +572,7 @@ export default function ContentCreation() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -669,21 +586,11 @@ export default function ContentCreation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -709,8 +616,7 @@ export default function ContentCreation() {
                 }`}
 
                 {category}
-              </button>
-            ))}
+              </button>) ) }
           </div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -722,21 +628,11 @@ export default function ContentCreation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -776,8 +672,7 @@ export default function ContentCreation() {
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
 
                       {tech}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
 "
                 <div className="flex items-center justify-between mb-4">"
@@ -794,8 +689,7 @@ export default function ContentCreation() {
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -809,21 +703,11 @@ export default function ContentCreation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -844,21 +728,11 @@ export default function ContentCreation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -905,8 +779,7 @@ export default function ContentCreation() {
                   ))}"
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -920,21 +793,11 @@ export default function ContentCreation() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"

@@ -34,7 +34,8 @@ interface ReportData {
   author: string;
   views: number;
   downloads: number;
-  rating: number}
+  rating: number
+}
 
 interface ReportMetrics {
   totalReports: number;
@@ -42,8 +43,8 @@ interface ReportMetrics {
   totalViews: number;
   totalDownloads: number;
   averageRating: number;
-  topCategories: Array<any>;
-  recentActivity: Array<any>}
+  topCategories: Array < any>;
+  recentActivity: Array < any>}
 
 interface AdvancedReportingDashboardProps extends React.PropsWithChildren<{}> {
 
@@ -73,7 +74,7 @@ showMetrics:  true,;
   const [sortOrder, setSortOrder] = useState<any>('desc');
 
   // Sample report data
-  useEffect(() => {
+  useEffect ( () => {
     const sampleReports: ReportData[] = [
       {
 '
@@ -197,8 +198,8 @@ showMetrics:  true,;
 
     ];
 
-    setReports(sampleReports);
-    setFilteredReports(sampleReports)}, []);
+    setReports (sampleReports) ;
+    setFilteredReports (sampleReports) }, []) ;
 
   // Filter and sort reports
   useEffect(() => {
@@ -260,18 +261,13 @@ showMetrics:  true,;
   ;
   critical: 4 ;
 
-
-
-
-
-
 };
           aValue = priorityOrder[a.priority as keyof typeof priorityOrder];
           bValue = priorityOrder[b.priority as keyof typeof priorityOrder];
           break;'
         case 'title':;
-          aValue = a.title.toLowerCase();
-          bValue = b.title.toLowerCase();
+          aValue = a.title.toLowerCase () ;
+          bValue = b.title.toLowerCase () ;
           break;
         default:
           aValue = 0;
@@ -283,9 +279,9 @@ showMetrics:  true,;
 
         return aValue < bValue ? 1 : -1;
       }
-    });
+    }) ;
 
-    setFilteredReports(filtered.slice(0, maxReports))}, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]);
+    setFilteredReports (filtered.slice (0, maxReports) ) }, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]) ;
 
   // Calculate report metrics
   const reportMetrics = {

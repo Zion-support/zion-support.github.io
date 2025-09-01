@@ -1,3 +1,5 @@
+import { Link } from "react - router - dom";
+import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, Users, Briefcase, Zap, Globe, Shield } from "lucide - react";
 import React from 'react';
 import { SEO } from "@/components/SEO";"
 import { GradientHeading } from "@/components/GradientHeading";"
@@ -176,7 +178,7 @@ export default function HowItWorks() {
                       {step.description}
                     </CardDescription>
                   </CardContent>
-                </Card>))}
+                </Card>) ) }
             </div>
           </div>
 
@@ -198,7 +200,7 @@ export default function HowItWorks() {
                       {step.description}
                     </CardDescription>
                   </CardContent>
-                </Card>))}
+                </Card>) ) }
             </div>
           </div>
 
@@ -218,7 +220,7 @@ export default function HowItWorks() {
                       {feature.description}
                     </CardDescription>
                   </CardContent>
-                </Card>))}
+                </Card>) ) }
             </div>
           </div>
 
@@ -241,7 +243,7 @@ export default function HowItWorks() {
                         </li>))}
                     </ul>
                   </CardContent>
-                </Card>))}
+                </Card>) ) }
             </div>
           </div>
 

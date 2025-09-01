@@ -1,4 +1,5 @@
 import React from 'react';
+export { function };
 export default function TermsOfService() {
   return()
     <div className="max-w-4xl mx-auto">"

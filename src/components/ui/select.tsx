@@ -5,7 +5,7 @@ interface SelectProps extends React.PropsWithChildren<{}> {
   children: React.ReactNode;
   className?: string;
   value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLSelectElement>)  => void;
+  onChange?: e: React.ChangeEvent<HTMLSelectElement> void;
   disabled?: boolean}
 
 export function Select({
@@ -33,7 +33,7 @@ export function Select({
 
   children: React.ReactNode;
   value: string}
-
+;
 export function SelectItem(...args[]):  {
 
   return()
@@ -51,7 +51,7 @@ export function SelectItem(...args[]):  {
 interface SelectValueProps extends React.PropsWithChildren<{}> {
 
   placeholder?: string}
-
+;
 export function SelectContent(...args[]):  {
 
   return <div className="relative">{children}</div>};

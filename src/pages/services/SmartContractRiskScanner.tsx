@@ -32,7 +32,8 @@ import {
   Users,
   TrendingUp'
  } from 'lucide-react';
-
+;
+export { function };
 export default function SmartContractRiskScanner(...args: []):  {
 
   const features = [
@@ -274,7 +275,7 @@ export default function SmartContractRiskScanner(...args: []):  {
       <section className="py-16 px-4">;"
         <div className="container mx-auto max-w-7xl">"
           <div className="grid grid-cols-1 md: grid-cols-5 gap-6">
-            {Object.entries(marketInfo).map(([key, value])  => (
+            {Object.entries(marketInfo).map([key: unknown, value]: unknown (
               <motion.div
                 key={key}
                 initial = {
@@ -351,7 +352,7 @@ export default function SmartContractRiskScanner(...args: []):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {features.map((feature, index)  => (
+            {features.map(feature: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -451,7 +452,7 @@ export default function SmartContractRiskScanner(...args: []):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {scanningCapabilities.map((capability, index)  => (
+            {scanningCapabilities.map(capability: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -551,7 +552,7 @@ export default function SmartContractRiskScanner(...args: []):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {supportedNetworks.map((network, index)  => (
+            {supportedNetworks.map(network: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -638,7 +639,7 @@ export default function SmartContractRiskScanner(...args: []):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {securityStandards.map((standard, index)  => (
+            {securityStandards.map(standard: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -725,7 +726,7 @@ export default function SmartContractRiskScanner(...args: []):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {

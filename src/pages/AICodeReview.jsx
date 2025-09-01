@@ -68,11 +68,6 @@ import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -95,20 +90,10 @@ import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -130,20 +115,10 @@ import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -165,20 +140,10 @@ import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -209,11 +174,6 @@ import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -240,20 +200,10 @@ import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -284,11 +234,6 @@ import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -314,20 +259,10 @@ import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -355,11 +290,6 @@ import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -385,20 +315,10 @@ import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }} transition = {
 
@@ -425,11 +345,6 @@ import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 

@@ -40,10 +40,11 @@ function PodcastTranscription() {
       </section>;
     </div>;
   );
-
+;
+export { PodcastTranscription };
 export default PodcastTranscription;
 
-
+;
 export default PodcastTranscription;
 export default PodcastTranscription;
 export default PodcastTranscription;

@@ -408,7 +408,7 @@ const AISupplyChainOptimization: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {performanceStats.map((stat, index) => (
+            {performanceStats.map((stat, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -448,7 +448,7 @@ const AISupplyChainOptimization: React.FC = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -490,7 +490,7 @@ const AISupplyChainOptimization: React.FC = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {supplyChainModules.map((module, index) => (
+            {supplyChainModules.map(module: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -537,7 +537,7 @@ const AISupplyChainOptimization: React.FC = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {industries.map((industry, index) => (
+            {industries.map(industry: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -584,7 +584,7 @@ const AISupplyChainOptimization: React.FC = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -634,7 +634,7 @@ const AISupplyChainOptimization: React.FC = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map(tier: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -727,7 +727,7 @@ const AISupplyChainOptimization: React.FC = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

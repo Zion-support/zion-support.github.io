@@ -1,3 +1,5 @@
+import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3 } from "lucide - react";
+import { Link } from "react - router - dom";
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
 import { Button } from "@/components/ui/button";"
@@ -199,7 +201,7 @@ export default function CloudMigrationServices() {
                     {service.description}
                   </CardDescription>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -231,10 +233,10 @@ export default function CloudMigrationServices() {
                   <div className="flex flex-wrap justify-center gap-2">"
                     {platform.features.map((feature, featureIndex) => (<Badge key={featureIndex} variant="secondary" className="bg-zion-purple/20 text-zion-cyan">
                         {feature}
-                      </Badge>))}
+                      </Badge>) ) }
                   </div>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -337,7 +339,7 @@ export default function CloudMigrationServices() {
                     </Link>
                   </Button>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -366,7 +368,7 @@ export default function CloudMigrationServices() {
                     <p className="text-sm text-zion-slate-light">{testimonial.role}</p>
                   </div>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>

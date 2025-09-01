@@ -202,10 +202,11 @@ function ProjectDetailsContent() {
                     </AlertDialogTrigger>
                     <AlertDialogContent>
                       <AlertDialogHeader>
-                        <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle>
-                        <AlertDialogDescription>
-                          By accepting this offer, you agree to the project terms and timeline. 
-                          This will initiate the contract and start the project.
+                        <AlertDialogTitle > Accept Project Offer?
+                        </AlertDialogTitle>
+                        <AlertDialogDescription > By accepting this offer, you agree to the project
+                          terms and timeline. This will initiate the contract
+                          and start the project.
                         </AlertDialogDescription>
                       </AlertDialogHeader>
                       <AlertDialogFooter>
@@ -230,10 +231,11 @@ function ProjectDetailsContent() {
                   </AlertDialogTrigger>
                   <AlertDialogContent>
                     <AlertDialogHeader>
-                      <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle>
-                      <AlertDialogDescription>
-                        This will finalize the project and mark it as complete. 
-                        Make sure all deliverables have been provided and approved.
+                      <AlertDialogTitle > Mark Project as Completed?
+                      </AlertDialogTitle>
+                      <AlertDialogDescription > This will finalize the project and mark it as complete.
+                        Make sure all deliverables have been provided and
+                        approved.
                       </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
@@ -278,9 +280,8 @@ function ProjectDetailsContent() {
               <TabsContent value="details">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Project Scope</CardTitle>
-                    <CardDescription>
-                      Project details and expectations
+                    <CardTitle > Project Scope</CardTitle>
+                    <CardDescription > Project details and expectations
                     </CardDescription>
                   </CardHeader>
                   <CardContent>"
@@ -313,10 +314,8 @@ function ProjectDetailsContent() {
               <TabsContent value="timeline">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Project Timeline</CardTitle>
-                    <CardDescription>
-                      Key dates and milestones
-                    </CardDescription>
+                    <CardTitle > Project Timeline</CardTitle>
+                    <CardDescription > Key dates and milestones</CardDescription>
                   </CardHeader>
                   <CardContent>"
                     <div className="space-y-4">"
@@ -345,9 +344,8 @@ function ProjectDetailsContent() {
               <TabsContent value="documents">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Project Documents</CardTitle>
-                    <CardDescription>
-                      Agreements and relevant files
+                    <CardTitle > Project Documents</CardTitle>
+                    <CardDescription > Agreements and relevant files
                     </CardDescription>
                   </CardHeader>
                   <CardContent>"
@@ -372,7 +370,7 @@ function ProjectDetailsContent() {
                         <p className="text-sm text-muted-foreground">
                           No documents have been uploaded to this project.
                         </p>
-                      </div>)}
+                      </div>) }
                   </CardContent>
                 </Card>
               </TabsContent>
@@ -380,10 +378,8 @@ function ProjectDetailsContent() {
               <TabsContent value="notes">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Project Notes</CardTitle>
-                    <CardDescription>
-                      Shared notes and updates
-                    </CardDescription>
+                    <CardTitle > Project Notes</CardTitle>
+                    <CardDescription > Shared notes and updates</CardDescription>
                   </CardHeader>
                   <CardContent>"
                     <div className="space-y-4">"
@@ -406,7 +402,7 @@ function ProjectDetailsContent() {
                             <p className="text-muted-foreground">
                               No notes yet. Add the first note to this project.
                             </p>
-                          </div>)}
+                          </div>) }
                       </div>
                       
                       {isOfferAccepted && (<div>"
@@ -414,14 +410,14 @@ function ProjectDetailsContent() {
                           <Button onClick={handleSubmitNote} disabled={!newNote.trim() || isSubmittingNote}>"
                             {isSubmittingNote ? "Posting..." : "Post Note"}
                           </Button>
-                        </div>)}
+                        </div>) }
                     </div>
                   </CardContent>
                 </Card>
               </TabsContent>
               "
               <TabsContent value="reviews">
-                <ProjectReviewSection project={project}/>
+                <ProjectReviewSection project={project} />
               </TabsContent>
             </Tabs>
           </div>
@@ -429,7 +425,7 @@ function ProjectDetailsContent() {
           <div className="order-1 lg:order-2 lg:col-span-1">
             <Card>
               <CardHeader>
-                <CardTitle>Project Participants</CardTitle>
+                <CardTitle > Project Participants</CardTitle>
               </CardHeader>
               <CardContent>"
                 <div className="space-y-6">"
@@ -471,7 +467,7 @@ function ProjectDetailsContent() {
             {/* Project Status Card */}"
             <Card className="mt-6">
               <CardHeader>
-                <CardTitle>Project Status</CardTitle>
+                <CardTitle > Project Status</CardTitle>
               </CardHeader>
               <CardContent>"
                 <div className="space-y-2">"
@@ -522,15 +518,14 @@ function ProjectDetailsContent() {
                   <p className="text-sm text-red-600 flex items-center gap-1">"
                     <XCircle className="h-4 w-4"/> This project has been canceled.
                   </p>
-                </CardFooter>)}
+                </CardFooter>) }
             </Card>
           </div>
         </div>
       </main>
-      
-    </>)}
-export default function ProjectDetails() {
-    return (<ProtectedRoute>
+    </>) ;
+}
+  return (<ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>)}
 '"`

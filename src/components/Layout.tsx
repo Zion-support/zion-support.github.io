@@ -1,7 +1,12 @@
 import React, { useState } from 'react';'
 import { ReactNode } from 'react';
+import React, { useState } from 'react';
+export default React.memo (function Layout (...args[]) :  {
+
+
 interface LayoutProps {
-  children: ReactNode;
+  // Add your props here
+
 
 const navigation: NavItem[] = [;'
   { label: 'Home', href: '/' },
@@ -33,7 +38,7 @@ export default function Layout(...args[]):  {
   const location = useLocation();
   const isActive = (href: string) => location.pathname === href;
   const toggleSidebarDropdown = (label: string) => {;
-    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
+    setSidebarDropdownOpen (sidebarDropdownOpen === label ? null : label) ;
   };
 
   return()
@@ -122,10 +127,8 @@ export default function Layout(...args[]):  {
 "
                       {item.icon && <item.icon className="w-4 h-4" />}
                       <span>{item.label}</span>
-                    </a>;
-                  )}
-                </div>
-              ))}
+                    </a>;) }
+                </div>) ) }
             </nav>
           </div>
         </aside>
@@ -134,7 +137,6 @@ export default function Layout(...args[]):  {
           {children};
         </main>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

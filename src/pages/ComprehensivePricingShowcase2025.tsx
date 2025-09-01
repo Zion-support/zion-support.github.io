@@ -2,6 +2,8 @@ import React, { useState, useMemo } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { Helmet  } from 'react-helmet-async.ts';
 import { Search, 
+
+
     Filter, 
     TrendingUp, 
     Shield, 
@@ -44,7 +46,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
         { id: any'IT Services', name: 'IT Services', icon: Shield, count: comprehensivePricingGuide2025.filter(s  => s.category === 'IT Services').length }
     ];
 
-    const filteredServices = useMemo(() => {
+    const filteredServices = useMemo ( () => {
         let filtered = comprehensivePricingGuide2025;
 
         if (searchTerm) {
@@ -62,7 +64,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
         }
 
         return filtered;
-    }, [searchTerm, selectedCategory]);
+    }, [searchTerm, selectedCategory]) ;
 
     const getCategoryColor = (category: anystring)  => {
 
@@ -192,11 +194,8 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                 onChange={(e) => setSelectedCategory(e.target.value)}"
                                 className="px-4 py-3 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-blue-500 focus:border-transparent"
                             >
-                                {categories.map(category  => (
-                                    <option key={category.id} value={category.id}>
-                                        {category.name} ({category.count})
-                                    </option>
-                                ))}
+                                {categories.map (category  => (<option key={category.id} value={category.id}>
+                                        {category.name} ({category.count}) </option>) ) }
                             </select>
                         </div>
                     </div>
@@ -302,8 +301,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                         <span>Get Started</span>"
                                                         <ArrowRight className="w-4 h-4" />
                                                     </button>
-                                                </div>
-                                            ))}
+                                                </div>) ) }
                                         </div>
 
                                         {/* Key Features and Benefits */}"
@@ -318,8 +316,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                         <li key={idx} className="flex items-center space-x-2 text-gray-600">"
                                                             <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                                                             <span>{feature}</span>
-                                                        </li>
-                                                    ))}
+                                                        </li>) ) }
                                                 </ul>
                                             </div>
                                             <div>"
@@ -332,8 +329,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                         <li key={idx} className="flex items-center space-x-2 text-gray-600">"
                                                             <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                                                             <span>{benefit}</span>
-                                                        </li>
-                                                    ))}
+                                                        </li>) ) }
                                                 </ul>
                                             </div>
                                         </div>
@@ -345,15 +341,12 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                 {service.competitors.map((competitor, idx) => ("
                                                     <span key={idx} className="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm text-gray-600">
                                                         {competitor}
-                                                    </span>
-                                                ))}
+                                                    </span>) ) }
                                             </div>
                                         </div>
                                     </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    )}
+                                </motion.div>) ) }
+                        </div>) }
                 </div>
             </section>
 
@@ -411,7 +404,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                             <h3 className="text-lg font-semibold mb-4">Services</h3>"
                             <div className="space-y-2 text-sm text-gray-400">
                                 <p>• Micro SAAS Solutions</p>
-                                <p>• AI-Powered Services</p>
+                                <p>• AI - Powered Services</p>
                                 <p>• IT Infrastructure</p>
                                 <p>• Emerging Technologies</p>
                             </div>
@@ -422,8 +415,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                     </div>
                 </div>
             </footer>
-        </div>
-    );
+        </div>) ;
 };
 
 export default ComprehensivePricingShowcase2025;'"`

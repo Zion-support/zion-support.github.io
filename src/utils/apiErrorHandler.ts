@@ -1,4 +1,6 @@
-import { toast } from '@/hooks/use-toast';
+import { toast } from '@/hooks / use - toast';
+  export const handleApiError = (error: unknown, fallbackMessage?: string) => {
+export const showApiError = (error: unknown, fallbackMessage?: string) => {
 
 export const showApiError = (error: any, fallbackMessage?: string) => {
 

@@ -11,12 +11,12 @@
  * 4. Provides comprehensive reporting and analytics
  * 5. Integrates with PM2 for process management
  */
-
+;
 const BrowserErrorMonitor = require('./browser-error-monitor');
 const BrowserErrorFixer = require('./browser-error-fixer');
 const fs = require('fs').promises;
 const path = require('path');
-
+;
 class IntegratedMonitor {
   constructor() {
     this.browserMonitor = new BrowserErrorMonitor();
@@ -195,7 +195,7 @@ class IntegratedMonitor {
 
 
 
-// PM2 process management
+// PM2 process management;
 const integratedMonitor = new IntegratedMonitor();
 
 // Handle process signals

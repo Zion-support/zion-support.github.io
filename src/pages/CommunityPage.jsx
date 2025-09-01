@@ -70,7 +70,7 @@ const featuredPosts = [
         authorRole: "Verified Talent"
 
 ];
-// Mock data for recent posts
+// Mock data for recent posts;
 const recentPosts = [
     {
 "

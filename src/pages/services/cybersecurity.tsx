@@ -12,6 +12,9 @@ import { Shield,
   AlertTriangle,
   Eye'
  } from 'lucide-react.ts';
+;
+export { function };
+export default function Cybersecurity(...args: unknown[]): unknown {
 
 export default function Cybersecurity(...args: any[]): any {
 
@@ -90,7 +93,7 @@ export default function Cybersecurity(...args: any[]): any {
             </p>
           </div>"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {cyberServices.map((service, index) => (
+            {cyberServices.map((service, index 
               <div
                 key={index}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -141,7 +144,7 @@ export default function Cybersecurity(...args: any[]): any {
             </p>
           </div>"
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {securityTechnologies.map((tech, index) => (
+            {securityTechnologies.map(tech: unknown, index: unknown (
               <div
                 key={index}"
                 className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
@@ -168,7 +171,7 @@ export default function Cybersecurity(...args: any[]): any {
             </p>
           </div>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index) => (
+            {complianceFrameworks.map(framework: unknown, index: unknown (
               <div
                 key={index}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"

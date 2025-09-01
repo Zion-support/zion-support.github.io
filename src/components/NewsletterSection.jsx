@@ -125,8 +125,7 @@ export function NewsletterSection() {
             Subscribe Another Email
           </motion.button>
         </motion.div>
-      </section>
-    );
+      </section>) ;
   }
 
   return ("
@@ -260,7 +259,6 @@ export function NewsletterSection() {
           </motion.div>
         </div>
       </motion.div>
-    </section>
-  );
+    </section>) ;
 }
 '"

@@ -30,17 +30,11 @@ const EnhancedServicesShowcase = () => {
                 staggerChildren: 0.1,
                 delayChildren: 0.2
 
-
     };
     const itemVariants = {
 
   hidden: { opacity: 0,
   y: 20 
-
-
-
-
-
 
 },
         visible: {
@@ -59,20 +53,10 @@ const EnhancedServicesShowcase = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition={{ duration: 0.6 }}>
             Comprehensive"
@@ -85,34 +69,19 @@ const EnhancedServicesShowcase = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
   { duration: 0.6,
   delay: 0.2 
 
-
-
-
-
-
 }}>
             Discover our extensive portfolio of innovative micro SAAS services, enterprise IT solutions, 
-            cutting-edge AI services, and emerging technology solutions designed to transform your business.
+            cutting - edge AI services, and emerging technology solutions designed to transform your business.
           </motion.p>
 
           {/* Contact Information */}"
@@ -121,20 +90,10 @@ const EnhancedServicesShowcase = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -169,20 +128,10 @@ const EnhancedServicesShowcase = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -202,7 +151,7 @@ const EnhancedServicesShowcase = () => {
                 : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40'}`}>"
                   <span className="mr-2">{category.icon}</span>
                   {category.name}
-                </button>))}
+                </button>) ) }
             </div>
           </motion.div>
         </div>
@@ -242,7 +191,7 @@ const EnhancedServicesShowcase = () => {
                     {service.features.slice(0, 4).map((feature, idx) => (<li key={idx} className="text-xs text-gray-300 flex items-center">"
                         <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span>
                         {feature}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
 
@@ -253,7 +202,7 @@ const EnhancedServicesShowcase = () => {
                     {service.benefits.slice(0, 3).map((benefit, idx) => (<li key={idx} className="text-xs text-gray-300 flex items-center">"
                         <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2"></span>
                         {benefit}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
 
@@ -274,7 +223,7 @@ const EnhancedServicesShowcase = () => {
                     </svg>
                   </Link>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </motion.div>
 
           {/* No Results Message */}"
@@ -286,7 +235,7 @@ const EnhancedServicesShowcase = () => {
                 setSearchTerm('')}} className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
                 View All Services
               </button>
-            </motion.div>)}
+            </motion.div>) }
         </div>
       </section>
 
@@ -298,20 +247,10 @@ const EnhancedServicesShowcase = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition={{ duration: 0.6 }}>
             Ready to Transform Your Business?
@@ -321,20 +260,10 @@ const EnhancedServicesShowcase = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -355,20 +284,10 @@ const EnhancedServicesShowcase = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -394,20 +313,10 @@ const EnhancedServicesShowcase = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -445,11 +354,6 @@ const EnhancedServicesShowcase = () => {
 
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
 
 }}>
             <p>Email: kleber@ziontechgroup.com</p>

@@ -464,8 +464,7 @@ export default function ComprehensiveServices() {
           parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 5000);
 
       return matchesCategory && matchesSearch && matchesPrice;
-    })
-  );
+    }) ) ;
 
   const containerVariants = {
 
@@ -613,9 +612,7 @@ export default function ComprehensiveServices() {
               >
                 Clear Filters
               </button>
-            </motion.div>
-          ) : (
-            <>
+            </motion.div>) : (<>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -636,8 +633,7 @@ export default function ComprehensiveServices() {
                 initial="hidden""
                 animate="visible"
               >
-                {filteredServices.map((service, index) => (
-                  <motion.div
+                {filteredServices.map ( (service, index) => (<motion.div
                     key={index}
                     variants={itemVariants}"
                     className="group"
@@ -666,8 +662,7 @@ export default function ComprehensiveServices() {
                             }`}
                           >
                             {service.badge}
-                          </span>
-                        )}
+                          </span>) }
                       </div>
 
                       {/* Content */}"
@@ -719,8 +714,7 @@ export default function ComprehensiveServices() {
                           >"
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                             {feature}
-                          </div>
-                        ))}
+                          </div>) ) }
                       </div>
 
                       {/* Benefits */}"
@@ -735,8 +729,7 @@ export default function ComprehensiveServices() {
                           >"
                             <TrendingUp className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                             {benefit}
-                          </div>
-                        ))}
+                          </div>) ) }
                       </div>
 
                       {/* CTA */}
@@ -748,11 +741,9 @@ export default function ComprehensiveServices() {
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                       </Link>
                     </div>
-                  </motion.div>
-                ))}
+                  </motion.div>) ) }
               </motion.div>
-            </>
-          )}
+            </>) }
         </div>
       </section>
 
@@ -943,7 +934,6 @@ export default function ComprehensiveServices() {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 }
 '"`

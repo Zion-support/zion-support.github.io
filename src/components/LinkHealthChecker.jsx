@@ -33,7 +33,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
 
                     url,'
                     status: 'healthy',
-                    responseTime: Date.now() - startTime
+                    responseTime: Date.now () - startTime
                 }}
             // For external links, we could implement actual health checking'
             // For now, we'll mark them as external
@@ -41,7 +41,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
 
                 url,'
                 status: 'external',
-                responseTime: Date.now() - startTime
+                responseTime: Date.now () - startTime
             }}
         catch (error) {
             return {
@@ -123,7 +123,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             </>) : (<>"
               <CheckCircle className="w-4 h-4"/>
               Recheck
-            </>)}
+            </>) }
         </button>
       </div>
 
@@ -165,9 +165,9 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 </div>"
                 {status.responseTime && (<div className="text-xs text-gray-400">
                     {status.responseTime}ms
-                  </div>)}
+                  </div>) }
               </div>
-            </div>)})}
+            </div>) }) }
       </div>
 
       {/* Recommendations */}"

@@ -30,9 +30,9 @@ export default function EquipmentDetail() {
           </div>
         </div>
         <Footer />
-      </>)}
+      </>) }
     const handleAddToCart = () => {
-        setIsAdding(true);
+        setIsAdding (true) ;
         // Simulate API call
         setTimeout(() => {
             setIsAdding(false);
@@ -46,7 +46,7 @@ export default function EquipmentDetail() {
             router(`/login?next=/equipment/${equipmentId}`);
             return;
         }
-        setIsAdding(true);
+        setIsAdding (true) ;
         try {
 '
             const response = await fetch('/checkout/create-session', {
@@ -114,7 +114,7 @@ export default function EquipmentDetail() {
                               <span className="text-zion-slate-light">{spec.name}</span>"
                               <span className="text-white font-medium">{spec.value}</span>
                             </div>
-                          </div>))}
+                          </div>) ) }
                       </div>
                     </div>
                   </TabsContent>"
@@ -141,7 +141,7 @@ export default function EquipmentDetail() {
                   </Badge>"
                   {equipment.subcategory && (<Badge variant="outline" className="text-zion-slate-light border-zion-blue-light">
                       {equipment.subcategory}
-                    </Badge>)}
+                    </Badge>) }
                 </div>
                 {/* Product Title */}"
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment.name}</h1>"
@@ -232,7 +232,7 @@ export default function EquipmentDetail() {
                         <p className="text-white text-sm font-medium">Returns</p>"
                         <p className="text-xs">{equipment.returnPolicy}</p>
                       </div>
-                    </div>)}
+                    </div>) }
                 </div>
               </div>
             </div>

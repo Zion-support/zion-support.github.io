@@ -1,5 +1,7 @@
-
 export class SEOOptimizer {
+export const seoOptimizer = new SEOOptimizer () ;
+
+
     static DEFAULT_META_DESCRIPTIONS = {
 
   '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.','
@@ -19,12 +21,6 @@ export class SEOOptimizer {
         '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.','
         '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant,'
   and innovative IT services for the healthcare industry.';
-    
-
-
-
-
-
 
 };
     static KEYWORD_MAPPINGS = {
@@ -46,12 +42,6 @@ export class SEOOptimizer {
         '/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'],'
         '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions','
   'medical technology']
-    
-
-
-
-
-
 
 };
     static generateSEOData(path) {
@@ -183,7 +173,7 @@ export class SEOOptimizer {
                 issue: 'missing-title','
                 severity: 'high','
                 suggestedFix: 'Add a descriptive title tag with relevant keywords'
-            });
+            }) ;
 
         // Check for missing meta description'"
         if (!content.includes('name="description"')) {
@@ -194,7 +184,7 @@ export class SEOOptimizer {
                 issue: 'missing-description','
                 severity: 'high','
                 suggestedFix: 'Add a meta description tag with compelling content'
-            });
+            }) ;
 
         // Check for short meta description"
         const descMatch = content.match(/name="description" content="([^"]+)"/);
@@ -217,7 +207,7 @@ export class SEOOptimizer {
                 issue: 'no-headings','
                 severity: 'medium','
                 suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization'
-            });
+            }) ;
 
         // Check for minimal content'
         const textContent = content.replace(/<[^>]*>/g, '').trim();
@@ -229,7 +219,7 @@ export class SEOOptimizer {
                 issue: 'minimal-content','
                 severity: 'medium','
                 suggestedFix: 'Add more relevant content to improve user experience and SEO value'
-            });
+            }) ;
 
         return issues;
 

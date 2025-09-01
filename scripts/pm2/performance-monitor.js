@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
+;
 class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -371,7 +371,7 @@ class PerformanceMonitor {
 
 
 
-// Run the performance monitor
+// Run the performance monitor;
 const monitor = new PerformanceMonitor();
 monitor.run().catch(error => {
   process.exit(1);

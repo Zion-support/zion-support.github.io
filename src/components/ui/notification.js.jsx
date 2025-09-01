@@ -11,7 +11,7 @@ import {
 import { Button } from './button';
 // Context
 const NotificationContext = createContext(null);
-// Hook
+// Hook;
 export function useNotifications() {
   const context = useContext(NotificationContext);
   if (!context) {

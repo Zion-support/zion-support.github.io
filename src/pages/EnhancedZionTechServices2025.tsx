@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data/enhancedZionTechServices2025";
+export default EnhancedZionTechServices2025;}
+import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data / enhancedZionTechServices2025";
+
 
 const EnhancedZionTechServices2025: React.FC = () => {;'
   const [selectedCategory, setSelectedCategory] = useState<string>('All');'
@@ -8,12 +10,12 @@ const EnhancedZionTechServices2025: React.FC = () => {;'
 '
   const categories = ['All', ...getEnhancedServiceCategories()];
   
-  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter (service => {;
+    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;'
@@ -24,9 +26,9 @@ const EnhancedZionTechServices2025: React.FC = () => {;'
       case 'aiScore':;
         return b.aiScore - a.aiScore;
       default:;
-        return a.title.localeCompare(b.title);
+        return a.title.localeCompare (b.title) ;
 
-  });
+  }) ;
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -112,9 +114,8 @@ const EnhancedZionTechServices2025: React.FC = () => {;'
               onChange={(e) => setSelectedCategory(e.target.value)}"
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
 
-              {categories.map(category => (;
-                <option key={category} value={category}>{category}</option>
-              ))}
+              {categories.map (category => (;
+                <option key={category} value={category}>{category}</option>) ) }
             </select>
             <select
               value={sortBy}
@@ -170,8 +171,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;'
                     <li key={index} className="text-xs text-gray-400 flex items-center">"
                       <span className="text-green-400 mr-2">✓</span>
                       {feature}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
               </div>
 
@@ -183,8 +183,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;'
                     <li key={index} className="text-xs text-gray-400 flex items-center">"
                       <span className="text-blue-400 mr-2">→</span>
                       {benefit}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
               </div>
 
@@ -207,8 +206,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;'
                   {service.tags.slice(0, 3).map((tag, index) => ("
                     <span key={index} className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">
                       {tag}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
               </div>
 
@@ -231,8 +229,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;'
                   </a>
                 </div>
               </div>;
-            </div>
-          ))}
+            </div>) ) }
         </div>
 
         {/* Contact Section */}"
@@ -288,8 +285,7 @@ const EnhancedZionTechServices2025: React.FC = () => {;'
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default EnhancedZionTechServices2025;}'"`

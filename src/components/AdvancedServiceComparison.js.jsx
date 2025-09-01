@@ -182,7 +182,7 @@ export const AdvancedServiceComparison = () => {
 "
 }))} className="w-full p-2 border border-zion-slate-light rounded-md">"
               <option value="all">All Levels</option>
-              {COMPLEXITY_LEVELS.map(level => (<option key={level} value={level}>{level}</option>))}
+              {COMPLEXITY_LEVELS.map (level => (<option key={level} value={level}>{level}</option>) ) }
             </select>
           </div>
 
@@ -195,7 +195,7 @@ export const AdvancedServiceComparison = () => {
 "
 }))} className="w-full p-2 border border-zion-slate-light rounded-md">"
               <option value="all">All Prices</option>
-              {PRICE_RANGES.map(range => (<option key={range} value={range}>{range}</option>))}
+              {PRICE_RANGES.map (range => (<option key={range} value={range}>{range}</option>) ) }
             </select>
           </div>
 
@@ -307,7 +307,7 @@ export const AdvancedServiceComparison = () => {
                       {service.features.slice(0, 3).map((feature, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-center gap-2">"
                           <Check className="w-3 h-3 text-green-500"/>
                           {feature}
-                        </li>))}
+                        </li>) ) }
                     </ul>
                   </div>
 
@@ -319,7 +319,7 @@ export const AdvancedServiceComparison = () => {
                     <div className="flex flex-wrap gap-1">"
                       {service.targetAudience.slice(0, 2).map((audience, idx) => (<Badge key={idx} variant="outline" className="text-xs">
                           {audience}
-                        </Badge>))}
+                        </Badge>) ) }
                     </div>
                   </div>
 "
@@ -336,7 +336,7 @@ export const AdvancedServiceComparison = () => {
                 </div>
               </CardContent>
             </Card>
-          </motion.div>))}
+          </motion.div>) ) }
       </motion.div>
 
       {/* Comparison Summary */}
@@ -386,7 +386,7 @@ export const AdvancedServiceComparison = () => {
               Get Detailed Comparison
             </Button>
           </div>
-        </motion.div>)}
+        </motion.div>) }
 
       {/* CTA Section */}
       <motion.div initial = {

@@ -41,7 +41,7 @@ export function AdvancedCollaborationPlatform() {
         setIsScreenSharing(!isScreenSharing);'
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isScreenSharing: !isScreenSharing } : p))};
     const toggleRecording = () => {
-        setIsRecording(!isRecording)};
+        setIsRecording (!isRecording) };
     const sendChatMessage = () => {
         if (chatMessage.trim()) {
 

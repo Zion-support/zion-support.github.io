@@ -13,7 +13,8 @@ import { Handshake,
   Lock,
   Rocket'
  } from 'lucide-react'
-
+;
+export { function };
 export default function Partners(...args[]):  {
 '
   const title = 'Partners — Zion Tech Group''
@@ -167,7 +168,7 @@ export default function Partners(...args[]):  {
             </motion.div>
             "
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index)  => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={benefit.title}
                   initial = {
@@ -254,7 +255,7 @@ export default function Partners(...args[]):  {
             </motion.div>
 "
             <div className="space-y-12">
-              {partnerCategories.map((category, categoryIndex) => (
+              {partnerCategories.map(category: unknown, categoryIndex: unknown 
                 <motion.div
                   key={category.title}
                   initial = {
@@ -304,7 +305,7 @@ export default function Partners(...args[]):  {
                   </div>
                   "
                   <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">
-                    {category.partners.map((partner, partnerIndex)  => (
+                    {category.partners.map((partner, partnerIndex (
                       <motion.div
                         key={partner.name}
                         initial = {
@@ -401,7 +402,7 @@ export default function Partners(...args[]):  {
             </motion.div>
             "
             <div className="grid md: grid-cols-3 gap-8">
-              {partnershipLevels.map((level, index)  => (
+              {partnershipLevels.map(level: unknown, index: unknown 
                 <motion.div
                   key={level.name}
                   initial = {

@@ -56,7 +56,6 @@ export function HeroSection() {
                 duration: 4,
                 repeat: Infinity,"
   ease: "easeInOut"
-            
 
 }
         }
@@ -72,7 +71,6 @@ export function HeroSection() {
                 duration: 2,
                 repeat: Infinity,"
   ease: "easeInOut"
-            
 
 }
         }

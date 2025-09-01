@@ -34,7 +34,7 @@ export default function ComprehensivePricing2027(...args[]):  {
 '
       if (sortBy === 'price') return a.price - b.price;'
       if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
-      return b.rating - a.rating});
+      return b.rating - a.rating}) ;
 
   const containerVariants = {
 
@@ -52,11 +52,6 @@ export default function ComprehensivePricing2027(...args[]):  {
   hidden: { y: 20,
   opacity: 0 
 
-
-
-
-
-
 },
     visible: {
 
@@ -73,11 +68,6 @@ export default function ComprehensivePricing2027(...args[]):  {
 
   hidden: { scale: 0.8,
   opacity: 0 
-
-
-
-
-
 
 },
     visible: {
@@ -106,32 +96,17 @@ export default function ComprehensivePricing2027(...args[]):  {
   { opacity: 0,
   scale: 0.8 ;
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   scale: 1 ;
 
-
-
-
-
-
 }}
             transition = {
 
   { duration: 0.8,
   delay: 0.2 ;
-
-
-
-
-
 
 }}
           >
@@ -144,21 +119,11 @@ export default function ComprehensivePricing2027(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -166,14 +131,9 @@ export default function ComprehensivePricing2027(...args[]):  {
   { duration: 0.8,
   delay: 0.4 
 
-
-
-
-
-
 }}
           >
-            Transparent pricing for our cutting-edge technology services.
+            Transparent pricing for our cutting - edge technology services.
             Choose the perfect solution for your business needs and budget.
           </motion.p>
 
@@ -185,32 +145,17 @@ export default function ComprehensivePricing2027(...args[]):  {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
             transition = {
 
   { duration: 0.8,
   delay: 0.6 
-
-
-
-
-
 
 }}
           >
@@ -240,32 +185,17 @@ export default function ComprehensivePricing2027(...args[]):  {
   { opacity: 0,
   y: 20 ;
 
-
-
-
-
-
 }}
         animate = {
 
   { opacity: 1,
   y: 0 ;
 
-
-
-
-
-
 }}
         transition = {
 
   { duration: 0.8,
   delay: 0.8 ;
-
-
-
-
-
 
 }}
       >"
@@ -352,32 +282,17 @@ export default function ComprehensivePricing2027(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 exit = {
 
   { opacity: 0,
   y: -20 
-
-
-
-
-
 
 }}
                 transition={{ duration: 0.3 }}
@@ -393,7 +308,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                         className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
                         variants={cardVariants}"
                         whileHover="hover"
-                        onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
+                        onClick={ () => setExpandedService (expandedService === service.id ? null : service.id) }
 
                         {/* Service Header */}"
                         <div className="flex items-start justify-between mb-4">"
@@ -427,8 +342,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                               className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
 
                               {tag}
-                            </span>
-                          ))}
+                            </span>) ) }
                         </div>
 
                         {/* Stats */}"
@@ -459,34 +373,22 @@ export default function ComprehensivePricing2027(...args[]):  {
                             <>"
                               <ChevronDown className="w-4 h-4" />
                               View Details
-                            </>
-                          )}
+                            </>) }
                         </button>
 
                         {/* Expanded Content */}
                         <AnimatePresence>
-                          {expandedService === service.id && (
-                            <motion.div
+                          {expandedService === service.id && (<motion.div
                               initial = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                               animate = {
 
   { opacity: 1,'
   height: 'auto' 
-
-
-
-
-
 
 }}
                               exit = {
@@ -510,8 +412,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                                     <li key={featureIndex} className="flex items-center gap-2 text-xs text-gray-300">"
                                       <Check className="w-3 h-3 text-green-500 flex-shrink-0" />
                                       {feature}
-                                    </li>
-                                  ))}
+                                    </li>) ) }
                                 </ul>
                               </div>
 
@@ -523,8 +424,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                                     <li key={benefitIndex} className="flex items-center gap-2 text-xs text-gray-300">"
                                       <Zap className="w-3 h-3 text-yellow-500 flex-shrink-0" />
                                       {benefit}
-                                    </li>
-                                  ))}
+                                    </li>) ) }
                                 </ul>
                               </div>
 
@@ -535,8 +435,7 @@ export default function ComprehensivePricing2027(...args[]):  {
 
                                 Get Started
                               </button>
-                            </motion.div>
-                          )}
+                            </motion.div>) }
                         </AnimatePresence>
                       </motion.div>
                     ) : ("
@@ -590,8 +489,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                                   className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
 
                                   {tag}
-                                </span>
-                              ))}
+                                </span>) ) }
                             </div>
 
                             <button'
@@ -631,32 +529,17 @@ export default function ComprehensivePricing2027(...args[]):  {
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
         animate = {
 
   { opacity: 1,
   y: 0 ;
 
-
-
-
-
-
 }}
         transition = {
 
   { duration: 0.8,
   delay: 1.2 ;
-
-
-
-
-
 
 }}
       >"
@@ -679,13 +562,12 @@ export default function ComprehensivePricing2027(...args[]):  {
                 href="tel:+13024640950""
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-black transition-all duration-300"
 
-                Call +1 302 464 0950
+                Call + 1 302 464 0950
               </a>
             </div>;
           </div>;
         </div>;
       </motion.section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

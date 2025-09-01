@@ -110,7 +110,7 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
     'Authorization': 'Bearer YOUR_API_KEY',;'
     'Content-Type': 'application/json';
   };
-});
+}) ;
 
 const data = await response.json();`
 // // // // // console.log(data);`,
@@ -191,21 +191,11 @@ const data = await response.json();`
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -228,21 +218,11 @@ const data = await response.json();`
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -297,21 +277,11 @@ const data = await response.json();`
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -353,8 +323,7 @@ const data = await response.json();`
                     View Docs
                   </button>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -396,8 +365,7 @@ const data = await response.json();`
                     Copy Code
                   </button>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -423,21 +391,11 @@ const data = await response.json();`
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -491,8 +449,7 @@ const data = await response.json();`
                     View Resource
                   </button>
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -506,21 +463,11 @@ const data = await response.json();`
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -540,21 +487,11 @@ const data = await response.json();`
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -624,14 +561,12 @@ const data = await response.json();`
           </div>
         </div>
       </section>;
-    </div>;
-  )};
+    </div>;) };
             </div>;
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default DeveloperPortal;

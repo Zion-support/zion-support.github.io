@@ -156,21 +156,11 @@ const MobileLaunch: React.FC = () => {
   { opacity: 0,
   x: -30 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.8 }}
@@ -218,21 +208,11 @@ const MobileLaunch: React.FC = () => {
   { opacity: 0,
   x: 30 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -314,21 +294,11 @@ const MobileLaunch: React.FC = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -339,7 +309,7 @@ const MobileLaunch: React.FC = () => {
             </h2>"
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">'
               Experience the full power of Zion Tech Group's services in the palm of your hand
-              with our feature-rich mobile application.
+              with our feature - rich mobile application.
             </p>
           </motion.div>
 "
@@ -352,21 +322,11 @@ const MobileLaunch: React.FC = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -403,21 +363,11 @@ const MobileLaunch: React.FC = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -440,21 +390,11 @@ const MobileLaunch: React.FC = () => {
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -482,11 +422,9 @@ const MobileLaunch: React.FC = () => {
                     <div key={featureIndex} className="flex items-center text-slate-400">"
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                       {feature}
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -500,21 +438,11 @@ const MobileLaunch: React.FC = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -537,21 +465,11 @@ const MobileLaunch: React.FC = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -588,8 +506,7 @@ const MobileLaunch: React.FC = () => {
                   Download"
                   <Download className="ml-2 w-4 h-4" />
                 </Link>;
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -603,21 +520,11 @@ const MobileLaunch: React.FC = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -640,21 +547,11 @@ const MobileLaunch: React.FC = () => {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
                 transition = {
@@ -687,21 +584,11 @@ const MobileLaunch: React.FC = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -733,8 +620,7 @@ const MobileLaunch: React.FC = () => {
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default MobileLaunch;}}}}'"`

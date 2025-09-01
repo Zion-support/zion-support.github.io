@@ -73,7 +73,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                 "https://twitter.com/ziontechgroup","
                 "https://github.com/ziontechgroup"
             ]
-        })}
+        }) }
       </script>
       
       {/* Article specific structured data */}'"

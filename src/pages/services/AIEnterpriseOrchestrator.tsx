@@ -24,7 +24,8 @@ import { Brain,
   Rocket,
   Sparkles'
  } from 'lucide-react';
-
+;
+export { function };
 export default function AIEnterpriseOrchestrator(...args[]):  {
 
   const features = [
@@ -290,7 +291,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
           </motion.div>
 "
           <div className="grid md: grid-cols-2 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index 
               <motion.div
                 key={index}
                 initial = {
@@ -390,7 +391,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
           </motion.div>
 "
           <div className="grid md: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -516,7 +517,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
           </motion.div>
 "
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {

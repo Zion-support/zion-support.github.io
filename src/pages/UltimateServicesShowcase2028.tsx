@@ -64,9 +64,9 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
           return a.innovationLevel === 'revolutionary' ? 1 : -1;'
         case 'name':
         default:
-          return a.title.localeCompare(b.title);
+          return a.title.localeCompare (b.title) ;
       }
-    });
+    }) ;
 
   const getCategoryIcon = (category: anystring)  => {
 
@@ -281,8 +281,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
               : 'space-y-6'
             }
           >
-            {filteredServices.map((service)  => (
-              <motion.div
+            {filteredServices.map (service => (<motion.div
                 key={service.id}
                 variants={itemVariants}`
                 className={`bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 ${
@@ -337,8 +336,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                           className="px-2 py-1 text-xs bg-slate-700/50 text-cyan-400 rounded-lg"
                         >
                           {tag}
-                        </span>
-                      ))}
+                        </span>) ) }
                     </div>
 "
                     <div className="flex items-center justify-between">
@@ -392,8 +390,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                               </ul>
                             </div>
                           </div>
-                        </motion.div>
-                      )}
+                        </motion.div>) }
                     </AnimatePresence>
                   </div>
                 ) : (
@@ -446,8 +443,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                             className="px-3 py-1 text-sm bg-slate-700/50 text-cyan-400 rounded-lg"
                           >
                             {tag}
-                          </span>
-                        ))}
+                          </span>) ) }
                       </div>
                       <Link`
                         to={`/services/${service.id}`}"
@@ -457,10 +453,8 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
                         <ArrowRight className="w-5 h-5" />
                       </Link>
                     </div>
-                  </div>
-                )}
-              </motion.div>
-            ))}
+                  </div>) }
+              </motion.div>) ) }
           </motion.div>
 
           {filteredServices.length === 0 && ("
@@ -504,8 +498,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 };
 
 export default UltimateServicesShowcase2028;

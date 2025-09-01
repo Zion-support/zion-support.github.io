@@ -22,7 +22,7 @@ export function FooterNewsletter() {
 
     e.preventDefault();
     if (!email) return;
-    setIsLoading(true);
+    setIsLoading (true) ;
     // Simulate API call
     setTimeout(() => {
       setIsSubscribed(true);
@@ -81,8 +81,7 @@ export function FooterNewsletter() {
   );
 }
 
-export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date () .getFullYear () ;
 
   const socialLinks = [
     {
@@ -251,13 +250,12 @@ export function Footer() {
                   href={social.url}"
                   target="_blank""
                   rel="noopener noreferrer"
-                  className={`w-10 h-10 bg-zinc-800/50 border border-zinc-700/50 rounded-lg flex items-center justify-center text-lg transition-all duration-300 ${social.color} hover:scale-110`}
+                  className={`w - 10 h - 10 bg - zinc - 800 / 50 border border - zinc - 700 / 50 rounded - lg flex items - center justify - center text - lg transition - all duration - 300 ${social.color} hover:scale - 110`}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   {social.icon}
-                </motion.a>
-              ))}
+                </motion.a>) ) }
             </div>
           </div>
 
@@ -276,11 +274,9 @@ export function Footer() {
                     >
                       {link.label}
                     </Link>
-                  </li>
-                ))}
+                  </li>) ) }
               </ul>
-            </div>
-          ))}
+            </div>) ) }
         </div>
 
         {/* Newsletter Section */}"
@@ -304,8 +300,7 @@ export function Footer() {
                 <p className="text-zinc-400 text-sm">{contact.label}</p>"
                 <p className="text-white font-medium">{contact.value}</p>
               </div>
-            </motion.a>
-          ))}
+            </motion.a>) ) }
         </div>
       </div>
 

@@ -598,8 +598,7 @@ const InnovativeServices2025 = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 };
 
 export default InnovativeServices2025;

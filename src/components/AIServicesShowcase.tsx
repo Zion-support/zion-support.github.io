@@ -43,8 +43,7 @@ export const AIServicesShowcase = () => {
           </div>;
         </div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 };
 
 export default AIServicesShowcase;'"

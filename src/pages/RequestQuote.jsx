@@ -215,7 +215,6 @@ export default function RequestQuote() {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>) ;
 }
 '"

@@ -1,5 +1,10 @@
 "use client";"
 import * as React from "react";
+export const ThemeProvider ({ children }) {
+export const useTheme = () => {
+
+
+"use client";
 const initialState = {
 "
   theme: "dark",

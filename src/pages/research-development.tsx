@@ -158,7 +158,7 @@ const researchAreas = [
     projects: 16;
   };
 ];
-
+;
 const researchProjects = [
   {
 
@@ -275,7 +275,7 @@ const researchProjects = [
     color: 'from-purple-500 to-indigo-600';
   };
 ];
-
+;
 const publications = [
   {
 
@@ -333,7 +333,7 @@ const publications = [
     abstract: 'This paper introduces security-first design patterns for cloud-native applications...';
   };
 ];
-
+;
 const patents = [
   {
 
@@ -401,12 +401,12 @@ export default function ResearchDevelopment(...args[]):  {
   const areas = ['All', ...researchAreas.map(area => area.name)];'
   const statuses = ['All', 'Active', 'Completed', 'Planning'];
 
-  const filteredProjects = researchProjects.filter(project => {;
-    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         project.description.toLowerCase().includes(searchTerm.toLowerCase());
+  const filteredProjects = researchProjects.filter (project => {;
+    const matchesSearch = project.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         project.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
 
     return matchesArea && matchesStatus && matchesSearch;
-  });
+  }) ;
 
     }
   };
@@ -422,21 +422,11 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -483,9 +473,7 @@ export default function ResearchDevelopment(...args[]):  {
                   onChange={(e) => setSelectedArea(e.target.value)}"
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {areas.map(area  => (
-                    <option key={area} value={area}>{area}</option>
-                  ))}
+                  {areas.map (area  => (<option key={area} value={area}>{area}</option>) ) }
                 </select>
               </div>
 
@@ -496,9 +484,7 @@ export default function ResearchDevelopment(...args[]):  {
                   onChange={(e) => setSelectedStatus(e.target.value)}"
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {statuses.map(status  => (
-                    <option key={status} value={status}>{status}</option>
-                  ))}
+                  {statuses.map (status  => (<option key={status} value={status}>{status}</option>) ) }
                 </select>
               </div>
             </div>
@@ -515,21 +501,11 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -551,32 +527,17 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                   viewport={{ once: true }}"
@@ -595,8 +556,7 @@ export default function ResearchDevelopment(...args[]):  {
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
                           <CheckCircle className="w-3 h-3 text-green-400" />
                           <span>{focus}</span>
-                        </div>
-                      ))}
+                        </div>) ) }
                     </div>
                   </div>
 "
@@ -614,9 +574,8 @@ export default function ResearchDevelopment(...args[]):  {
                       <div className="text-xs text-zion-slate-light">Projects</div>;
                     </div>;
                   </div>;
-                </motion.div>;
-              );
-            })}
+                </motion.div>;) ;
+            }) }
           </div>
         </div>
       </section>
@@ -630,21 +589,11 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -667,32 +616,17 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                   viewport={{ once: true }}"
@@ -740,8 +674,7 @@ export default function ResearchDevelopment(...args[]):  {
                       {project.team.map((member, idx) => ("
                         <span key={idx} className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full">
                           {member}
-                        </span>
-                      ))}
+                        </span>) ) }
                     </div>
                   </div>
 
@@ -753,8 +686,7 @@ export default function ResearchDevelopment(...args[]):  {
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
                           <Star className="w-3 h-3 text-yellow-400" />
                           <span>{outcome}</span>
-                        </div>
-                      ))}
+                        </div>) ) }
                     </div>
                   </div>
 
@@ -772,9 +704,8 @@ export default function ResearchDevelopment(...args[]):  {
                       <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                     </div>;
                   </div>;
-                </motion.div>;
-              );
-            })}
+                </motion.div>;) ;
+            }) }
           </div>
         </div>
       </section>
@@ -788,21 +719,11 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -822,32 +743,17 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}"
@@ -891,8 +797,7 @@ export default function ResearchDevelopment(...args[]):  {
                     </Link>
                   </div>
                 </div>;
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -906,21 +811,11 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -940,32 +835,17 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}"
@@ -1017,8 +897,7 @@ export default function ResearchDevelopment(...args[]):  {
                     <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
                   </div>
                 </div>;
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -1032,21 +911,11 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -1078,7 +947,6 @@ export default function ResearchDevelopment(...args[]):  {
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

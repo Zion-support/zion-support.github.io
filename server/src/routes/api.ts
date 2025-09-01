@@ -1,10 +1,10 @@
 import express from 'express';
 import { body, validationResult } from 'express-validator';
-
+;
 const router = express.Router();
 
-// Validation middleware
-const validate = (req: any, res: any, next: any) => {
+// Validation middleware;
+const validate = (...args: unknown[]): unknown => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({
@@ -16,7 +16,7 @@ const validate = (req: any, res: any, next: any) => {
 };
 
 // GET /api/health
-router.get('/health', (req, res) => {
+router.get'/health': unknown, (req: unknown, res: unknown {
   res.json({
     success: true,
     message: 'API is healthy',
@@ -25,7 +25,7 @@ router.get('/health', (req, res) => {
 });
 
 // GET /api/users
-router.get('/users', async (req, res) => {
+router.get'/users': unknown, async (req: unknown, res: unknown {
   try {
     // Example users list - replace with actual database query
     const users = [
@@ -91,7 +91,7 @@ router.post(
 );
 
 // GET /api/users/:id
-router.get('/users/:id', async (req, res) => {
+router.get'/users/:id', async (req, res {
   try {
     const { id } = req.params;
 
@@ -158,7 +158,7 @@ router.put(
 );
 
 // DELETE /api/users/:id
-router.delete('/users/:id', async (req, res) => {
+router.delete'/users/:id', async (req, res {
   try {
     const { id } = req.params;
 

@@ -24,6 +24,7 @@ import {
   Activity} from 'lucide-react';
 
 interface UserPreference {
+
   id: string;
   name: string;
   value: string | boolean | number;'
@@ -31,24 +32,27 @@ interface UserPreference {
   options?: string[];'
   category: 'appearance' | 'accessibility' | 'performance' | 'language';
   description: string;
+
 }
 
 interface UserActivity {
+
   id: string;
   action: string;
   timestamp: Date;
   duration?: number;
   success: boolean;'
   category: 'navigation' | 'interaction' | 'search' | 'purchase';
+
 }
 
 interface AccessibilityFeature {
+
   id: string;
   name: string;
   enabled: boolean;
   description: string;'
   impact: 'high' | 'medium' | 'low';
-}
 
 const InteractiveUserExperience: React.FC = () => {
   const [preferences, setPreferences] = useState<UserPreference[]>([]);
@@ -60,7 +64,7 @@ const InteractiveUserExperience: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   // Initialize sample data
-  useEffect(() => {
+  useEffect ( () => {
     const samplePreferences: UserPreference[] = [
       {
 '
@@ -104,7 +108,7 @@ const InteractiveUserExperience: React.FC = () => {
 '
         id: '1','
         action: 'Page Navigation',
-        timestamp: new Date(Date.now() - 300000),
+        timestamp: new Date (Date.now () - 300000) ,
         duration: 2,
         success: true,'
         category: 'navigation'},
@@ -112,7 +116,7 @@ const InteractiveUserExperience: React.FC = () => {
 '
         id: '2','
         action: 'Form Submission',
-        timestamp: new Date(Date.now() - 600000),
+        timestamp: new Date (Date.now () - 600000) ,
         duration: 15,
         success: true,'
         category: 'interaction'},
@@ -120,7 +124,7 @@ const InteractiveUserExperience: React.FC = () => {
 '
         id: '3','
         action: 'Search Query',
-        timestamp: new Date(Date.now() - 900000),
+        timestamp: new Date (Date.now () - 900000) ,
         duration: 5,
         success: true,'
         category: 'search'},
@@ -239,8 +243,7 @@ const InteractiveUserExperience: React.FC = () => {
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>"
           <p className="text-gray-600">Loading user experience settings...</p>
         </div>
-      </div>
-    );
+      </div>) ;
   }
 
   return ("
@@ -317,8 +320,7 @@ const InteractiveUserExperience: React.FC = () => {
                     />
                   )}
                 </CardContent>
-              </Card>
-            ))}
+              </Card>) ) }
           </div>
         </TabsContent>
 
@@ -356,11 +358,9 @@ const InteractiveUserExperience: React.FC = () => {
                       {activity.duration && ("
                         <p className="text-sm text-gray-500 mt-1">
                           {activity.duration}s
-                        </p>
-                      )}
+                        </p>) }
                     </div>
-                  </div>
-                ))}
+                  </div>) ) }
               </div>
             </CardContent>
           </Card>
@@ -400,13 +400,11 @@ const InteractiveUserExperience: React.FC = () => {
                     </Badge>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>) ) }
           </div>
         </TabsContent>
       </Tabs>
-    </div>
-  );
+    </div>) ;
 };
 
 export { InteractiveUserExperience };

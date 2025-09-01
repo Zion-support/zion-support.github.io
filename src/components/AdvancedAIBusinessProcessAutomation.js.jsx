@@ -212,8 +212,8 @@ export function AdvancedAIBusinessProcessAutomation() {
 
         setIsExecuting(true);
         // Simulate process execution
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        setIsExecuting(false);
+        await new Promise (resolve => setTimeout (resolve, 2000) ) ;
+        setIsExecuting (false) ;
         // Update process status
         setBusinessProcesses(prev => prev.map(p => p.id === processId'
             ? { ...p, lastExecuted: new Date(), status: 'active' }
@@ -233,7 +233,7 @@ export function AdvancedAIBusinessProcessAutomation() {
         <div className="absolute -top-2 -right-2 bg-zion-cyan text-zion-slate text-xs px-2 py-1 rounded-full font-bold">
           NEW
         </div>
-      </button>)}
+      </button>) }
     if (isMinimized) {
 "
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">"
@@ -383,7 +383,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                             <span className="text-zion-slate">{insight}</span>
                           </div>))}
                       </div>
-                    </div>))}
+                    </div>) ) }
                 </div>
               </div>
 "
@@ -410,7 +410,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                           {process.executionHistory[0]?.duration || 0}s
                         </span>
                       </div>
-                    </div>))}
+                    </div>) ) }
                 </div>
               </div>
             </div>
@@ -481,7 +481,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                           <span className="text-zion-slate">{insight}</span>
                         </div>))}
                     </div>
-                  </div>)}
+                  </div>) }
 
                 {showAutomation && (<div>"
                     <h4 className="font-medium text-sm mb-2 flex items-center gap-2">"
@@ -508,7 +508,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                               Triggered: {rule.triggerCount} times
                             </span>
                           </div>
-                        </div>))}
+                        </div>) ) }
                     </div>
                   </div>)}
               </div>))}
@@ -577,7 +577,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                         <Edit3 className="w-4 h-4"/>
                       </button>
                     </div>
-                  </div>))}
+                  </div>) ) }
               </div>
             </div>
           </div>)}
@@ -673,8 +673,8 @@ export function AdvancedAIBusinessProcessAutomation() {
                         <button className="px-4 py-2 bg-zion-blue text-white rounded-lg hover:bg-zion-blue-dark text-sm">
                           Apply AI Optimization
                         </button>
-                      </div>)}
-                  </div>))}
+                      </div>) }
+                  </div>) ) }
               </div>
             </div>
 "
@@ -710,7 +710,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                 </div>
               </div>
             </div>
-          </div>)}
+          </div>) }
       </div>
     </div>)}
 '"`

@@ -49,7 +49,7 @@ const MicroSAASServicesPage = () => {
             {categories.map((category) => (
               <Button
                 key={category}
-                onClick={() => setSelectedCategory(category)}
+                onClick={ () => setSelectedCategory (category) }
                 className={`${
 
                   selectedCategory === category"
@@ -58,8 +58,7 @@ const MicroSAASServicesPage = () => {
                 }`}
               >
                 {category}
-              </Button>
-            ))}
+              </Button>) ) }
           </div>
         </div>
       </div>
@@ -137,8 +136,7 @@ const MicroSAASServicesPage = () => {
                     </a>
                   </Button>
                 </CardFooter>
-              </Card>
-            ))}
+              </Card>) ) }
           </div>
         </div>
       </div>
@@ -164,7 +162,6 @@ const MicroSAASServicesPage = () => {
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

@@ -67,7 +67,6 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
 
                 duration: 0.3,"
   ease: "easeOut"
-            
 
 }
         }
@@ -100,7 +99,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
           <div className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-pulse">
             ⭐ Most Popular
           </div>
-        </motion.div>)}
+        </motion.div>) }
 
       {/* Enhanced New Badge */}"
       {isNew && (<motion.div className="absolute -top-3 right-4 z-10" initial = {
@@ -168,9 +167,9 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
                 {features.slice(0, 3).map((feature, index) => (<motion.li key={index} className="flex items-center gap-3 text-sm text-zion-slate-light group-hover:text-white transition-colors duration-300" variants={featureVariants} whileHover="hover">"
                     <span className="w-2 h-2 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex-shrink-0 group-hover:scale-125 transition-transform duration-300"/>
                     {feature}
-                  </motion.li>))}
+                  </motion.li>) ) }
               </ul>
-            </div>)}
+            </div>) }
 
           {/* Enhanced Price */}"
           <div className="text-center mb-6">"

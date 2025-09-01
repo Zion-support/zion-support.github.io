@@ -4,7 +4,12 @@ import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucid
 import { Button } from "../ui/button";
 const AccessibilityContext = createContext(null);
 export const useAccessibility = () => {
-    const context = useContext(AccessibilityContext);
+import { Button } from "../ui / button";
+import { motion, AnimatePresence } from 'framer - motion';
+
+
+const AccessibilityContext = createContext (null) ;
+    const context = useContext (AccessibilityContext) ;
     if (!context) {
 '
         throw new Error('useAccessibility must be used within an AccessibilityProvider')}
@@ -29,7 +34,7 @@ export const AccessibilityProvider = ({ children }) => {
             setColorBlindMode(settings.colorBlindMode || 'none')}
     }, []);
     // Save settings to localStorage
-    useEffect(() => {
+    useEffect ( () => {
         const settings = {
 
   highContrast,

@@ -161,5 +161,6 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
         
 
 }}/>)};
+export { FuturisticAnimatedBackground2029 };
 export default FuturisticAnimatedBackground2029;
 '"`

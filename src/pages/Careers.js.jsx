@@ -201,8 +201,8 @@ export default function Careers() {
                           </Button>
                         </div>
                       </CardContent>
-                    </Card>))}
-                </TabsContent>))}
+                    </Card>) ) }
+                </TabsContent>) ) }
             </Tabs>
           </div>
           "

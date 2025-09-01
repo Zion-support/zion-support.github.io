@@ -52,7 +52,7 @@ const highlights = [
     bgColor: 'bg-zion-blue/10','
     borderColor: 'border-zion-blue/20'},
 ];
-
+;
 const achievements = [
   {
 
@@ -88,7 +88,7 @@ const technologies = ['
   'Cybersecurity','
   'Data Analytics',
 ];
-
+;
 export function FeatureHighlights() {
   const containerVariants = {
 

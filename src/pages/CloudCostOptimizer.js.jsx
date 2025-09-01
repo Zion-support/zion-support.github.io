@@ -1,3 +1,5 @@
+import { Check, Cloud, BarChart3, Globe, Settings } from "lucide - react";
+import { Link } from "react - router - dom";
 import React from 'react';
 import { SEO } from "@/components/SEO";"
 import { Button } from "@/components/ui/button";"
@@ -187,7 +189,7 @@ export default function CloudCostOptimizer() {
                   <h3 className="text-lg font-semibold mb-2 text-white">{saving.metric}</h3>"
                   <p className="text-zion-slate-light text-sm">{saving.description}</p>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -213,7 +215,7 @@ export default function CloudCostOptimizer() {
                   <h3 className="text-lg font-semibold mb-2 text-white">{service.title}</h3>"
                   <p className="text-zion-slate-light text-sm">{service.description}</p>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -236,7 +238,7 @@ export default function CloudCostOptimizer() {
                   <Cloud className="h-6 w-6 text-blue-400 mx-auto mb-2"/>"
                   <span className="text-sm text-zion-slate-light">{cloud}</span>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -261,7 +263,7 @@ export default function CloudCostOptimizer() {
                     <span className="text-zion-slate-light">{feature}</span>
                   </div>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -304,7 +306,7 @@ export default function CloudCostOptimizer() {
                     Get Started
                   </Button>
                 </div>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>

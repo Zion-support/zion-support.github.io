@@ -16,6 +16,7 @@ import {
   Smartphone} from 'lucide-react';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -24,10 +25,8 @@ interface AccessibilitySettings {
   keyboardNavigation: boolean;
   focusIndicator: boolean;
   zoomLevel: number;
-}
 
-export const EnhancedAccessibilityEnhancer: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState (false) ;
 
   const [settings, setSettings] = useState<AccessibilitySettings>({
 
@@ -40,7 +39,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
     focusIndicator: true,
     zoomLevel: 100});
 
-  const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
+  const [currentFocus, setCurrentFocus] = useState < HTMLElement | null> (null) ;
 
   // Apply accessibility settings
   const applySettings = useCallback()
@@ -98,10 +97,10 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
       setSettings(parsedSettings);
       applySettings(parsedSettings);
     }
-  }, [applySettings]);
+  }, [applySettings]) ;
 
   // Enhanced keyboard navigation
-  useEffect(() => {
+  useEffect ( () => {
     if (!settings.keyboardNavigation) return;
 
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -146,11 +145,11 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
   }, [settings.keyboardNavigation]);
 
   // Enhanced focus management
-  useEffect(() => {
+  useEffect ( () => {
     const handleFocusChange = (event: FocusEvent) => {
 
       const target = event.target as HTMLElement;
-      setCurrentFocus(target);
+      setCurrentFocus (target) ;
 
       if (settings.focusIndicator) {
 '
@@ -177,7 +176,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
       document.removeEventListener('focusin', handleFocusChange);'
       document.removeEventListener('focusout', handleFocusOut);
     };
-  }, [settings.focusIndicator]);
+  }, [settings.focusIndicator]) ;
 
   // Screen reader announcements
   const announceToScreenReader = useCallback()
@@ -257,8 +256,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-        {isVisible && (
-          <motion.div
+        {isVisible && (<motion.div
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}"
@@ -498,11 +496,9 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
                     {currentFocus.textContent?.substring(0, 50) ||'
                       'No text content'}
                   </p>
-                </div>
-              )}
+                </div>) }
             </div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
 
       {/* Screen Reader Only Styles */}`
@@ -515,8 +511,8 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
           padding: 0;
           margin: -1px;
           overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
+          clip: rect (0, 0, 0, 0) ;
+          white - space: nowrap;
           border: 0;
         }
 
@@ -537,8 +533,7 @@ export const EnhancedAccessibilityEnhancer: React.FC = () => {
           transition-duration: 0.01ms !important;
         }`
       `}</style>
-    </>
-  );
+    </>) ;
 };
 
 export default EnhancedAccessibilityEnhancer;

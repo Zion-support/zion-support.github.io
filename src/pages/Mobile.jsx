@@ -1,4 +1,8 @@
+import React from 'react';
+export default Mobile;
 import SEO from "../SEO";
+
+
 const Mobile = () => {
     const mobileStats = [
         {
@@ -62,9 +66,9 @@ const Mobile = () => {
                       {feature.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="text-blue-200 text-sm flex items-center">"
                           <span className="text-green-400 mr-2">✓</span>
                           {benefit}
-                        </li>))}
+                        </li>) ) }
                     </ul>
-                  </div>))}
+                  </div>) ) }
               </div>
             </div>
 
@@ -86,9 +90,9 @@ const Mobile = () => {
                       {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="text-blue-200 text-sm flex items-center">"
                           <span className="text-green-400 mr-2">✓</span>
                           {feature}
-                        </li>))}
+                        </li>) ) }
                     </ul>
-                  </div>))}
+                  </div>) ) }
               </div>
             </div>
 
@@ -108,7 +112,7 @@ const Mobile = () => {
                     <p className="text-blue-100 text-sm">
                       {stat.description}
                     </p>
-                  </div>))}
+                  </div>) ) }
               </div>
             </div>
 
@@ -126,7 +130,7 @@ const Mobile = () => {
                     <p className="text-blue-100 text-sm">
                       {benefit.description}
                     </p>
-                  </div>))}
+                  </div>) ) }
               </div>
             </div>
 

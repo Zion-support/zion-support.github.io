@@ -1,7 +1,7 @@
 import React from 'react.ts';'
 import { SEO   } from '../../components/SEO';'
 import { motion   } from 'framer-motion.ts';
-
+;
 const AICodeReviewSecurity: React.FC = (): JSX.Element => {
 
   return()
@@ -116,7 +116,7 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
                   description: "Instant feedback and continuous monitoring with configurable security policies and compliance checks.","
                   icon: "⚡"
                 }
-              ].map((feature, index)   => (
+              ].map((feature, index (
                 <motion.div
                   key={index}
                   initial = {
@@ -203,7 +203,7 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
                   description: "Combines SAST and DAST approaches to provide real-time security analysis during application execution.","
                   benefits: ["Real-time analysis", "Accurate vulnerability detection", "Minimal false positives"]
                 }
-              ].map((approach, index)   => (
+              ].map(approach: unknown, index: unknown 
                 <motion.div
                   key={index}
                   initial = {
@@ -279,7 +279,7 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
                 { metric: "60%", description: "Reduction in security incidents" },"
                 { metric: "95%", description: "Code coverage accuracy" },"
                 { metric: "50%", description: "Faster time to market" }
-              ].map((benefit, index)   => (
+              ].map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -365,7 +365,7 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
                   description: "Secure government applications, citizen portals, and critical infrastructure systems.","
                   features: ["FedRAMP compliance", "FISMA compliance", "National security standards"]
                 }
-              ].map((useCase, index)   => (
+              ].map(useCase: unknown, index: unknown 
                 <motion.div
                   key={index}
                   initial = {
@@ -437,7 +437,7 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               {["
                 "SonarQube", "Snyk", "CodeQL", "Veracode", "Checkmarx", "Fortify", "Coverity", "Bandit","
                 "ESLint", "SonarLint", "GitHub Security", "GitLab Security", "Bitbucket Security", "Jenkins", "GitLab CI/CD", "GitHub Actions"
-              ].map((tech, index)   => (
+              ].map(tech: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -550,7 +550,7 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
                   ],
                   popular: false
                 }
-              ].map((plan, index)   => (
+              ].map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {

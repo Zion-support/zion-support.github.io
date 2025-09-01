@@ -559,5 +559,6 @@ const ITServices = () => {
     </div>
   );
 };
+export { ITServices };
 export default ITServices;
 '"

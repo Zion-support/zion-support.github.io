@@ -268,7 +268,7 @@ export default function ServicesPricing() {
                     <ArrowRight className="w-4 h-4 ml-2"/>
                   </Button>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </div>
@@ -317,9 +317,9 @@ export default function ServicesPricing() {
                               {service[selectedTier]?.toLocaleString()}
                             </span>
                           </div>
-                        </div>))}
+                        </div>) ) }
                     </div>
-                  </div>))}
+                  </div>) ) }
               </div>
             </TabsContent>
           </Tabs>

@@ -79,10 +79,10 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
-  const togglePlayPause = () => setIsPlaying(!isPlaying);
-  const toggleMute = () => setIsMuted(!isMuted);
+  const togglePlayPause = () => setIsPlaying (!isPlaying) ;
+  const toggleMute = () => setIsMuted (!isMuted) ;
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -226,8 +226,7 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
                     }`}
                   >
                     {category}
-                  </button>
-                ))}
+                  </button>) ) }
               </div>
 
               {/* View Mode Toggle */}"
@@ -312,8 +311,7 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
                         {service.popular && ("
                           <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium rounded-full">
                             Popular
-                          </span>
-                        )}
+                          </span>) }
                       </div>
 "
                       <p className="text-gray-300 mb-4 leading-relaxed">
@@ -361,8 +359,7 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
                             >"
                               <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
                               {feature}
-                            </div>
-                          ))}
+                            </div>) ) }
                         </div>
                       </div>
 
@@ -407,14 +404,12 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
                       </div>
                     </div>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </AnimatePresence>
           </motion.div>
 
           {/* No Results */}
-          {filteredServices.length === 0 && (
-            <motion.div
+          {filteredServices.length === 0 && (<motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}"
               className="text-center py-20"
@@ -468,7 +463,6 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
           </motion.div>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 '"`

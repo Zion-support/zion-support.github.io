@@ -1,3 +1,5 @@
+import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart, Shield, Zap } from "lucide - react";
+import {Link} from 'react - router - dom';
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";"
 import { Button } from "../ui/button";"
@@ -689,7 +691,7 @@ export default function MicroSAASServicesPage() {
                 case 'aiScore':
                     return b.aiScore - a.aiScore;'
                 case 'newest':
-                    return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+                    return new Date (b.createdAt) .getTime () - new Date (a.createdAt) .getTime () ;
                 default:
                     return 0;
             }
@@ -700,7 +702,7 @@ export default function MicroSAASServicesPage() {
       {/* Featured Badge */}"
       {service.featured && (<div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-3 py-1 rounded-full">
           Featured
-        </div>)}
+        </div>) }
 
       {/* Service Image */}"
       <div className="relative mb-6 overflow-hidden rounded-xl">"
@@ -752,12 +754,12 @@ export default function MicroSaasServicesPage() { /* empty */ }'
   const [selectedCategory, setSelectedCategory] = useState<string>('all');'
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const filteredServices = MICRO_SAAS_SERVICES.filter(service => {}
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+  const filteredServices = MICRO_SAAS_SERVICES.filter (service => {}
+    const matchesSearch = service.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+                         service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+                         service.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }'
     if (model === 'monthly') return `${currency}${price}/month`;'`
@@ -862,7 +864,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
               </Badge>))}"
             {service.features.length > 3 && (<Badge variant="outline" className="text-xs border-zion-purple/30 text-zion-purple">
                 +{service.features.length - 3} more
-              </Badge>)}
+              </Badge>) }
           </div>
         </div>
 
@@ -883,7 +885,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
           <div className="flex flex-wrap gap-2">"
             {service.targetAudience.slice(0, 3).map((audience, index) => (<Badge key={index} variant="outline" className="text-xs border-zion-cyan/30 text-zion-cyan">
                 {audience}
-              </Badge>))}
+              </Badge>) ) }
           </div>
         </div>
 
@@ -903,8 +905,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
           </Button>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">"
@@ -962,7 +963,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
                 ? "bg-zion-purple text-white""`
                 : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"}`}>
                 {category}
-              </Button>))}
+              </Button>) ) }
           </div>
         </div>
       </div>
@@ -1032,7 +1033,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
                     </a>
                   </Button>
                 </CardFooter>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </div>

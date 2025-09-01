@@ -83,7 +83,7 @@ export function EmptyState({ type, title, description, action, icon }) {
           </p>
         </div>)}
     </div>)}
-// Specific empty state variants for quick use
+// Specific empty state variants for quick use;
 export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = false }) {
 
     const action = onAddProduct;
@@ -112,7 +112,7 @@ export function CategoriesEmptyState({ onRetry }) {
 
 
 } : null}/>);
-}
+};
 export function TalentEmptyState({ onRetry }) {
 "
     return (<EmptyState type="talent" action = {
@@ -126,7 +126,7 @@ export function TalentEmptyState({ onRetry }) {
 
 
 } : null}/>);
-}
+};
 export function EquipmentEmptyState({ onRetry }) {
 "
     return (<EmptyState type="equipment" action = {
@@ -140,7 +140,7 @@ export function EquipmentEmptyState({ onRetry }) {
 
 
 } : null}/>);
-}
+};
 export function SearchEmptyState({ onRetry }) {
 "
     return (<EmptyState type="search" action = {
@@ -154,7 +154,7 @@ export function SearchEmptyState({ onRetry }) {
 
 
 } : null}/>);
-}
+};
 export function NetworkErrorState({ onRetry }) {
 "
     return (<EmptyState type="network" action = {
@@ -168,7 +168,7 @@ export function NetworkErrorState({ onRetry }) {
 
 
 } : null}/>);
-}
+};
 export function ServerErrorState({ onRetry }) {
 "
     return (<EmptyState type="error" action = {

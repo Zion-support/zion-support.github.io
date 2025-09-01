@@ -358,8 +358,7 @@ export function SolutionsPage(...args: any[]): any {
                   <span>Learn More</span>"
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
 
@@ -401,11 +400,9 @@ export function SolutionsPage(...args: any[]): any {
                     >"
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                       <span>{solution}</span>
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
 
@@ -438,7 +435,7 @@ export function SolutionsPage(...args: any[]): any {
                 to="/contact""
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
               >
-                <span>Contact Sales</span>
+                <span > Contact Sales</span>
               </Link>
             </div>
           </motion.div>
@@ -472,7 +469,7 @@ export function SolutionsPage(...args: any[]): any {
                 to="/request-quote""
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
               >
-                <span>Request a Quote</span>
+                <span > Request a Quote</span>
               </Link>
             </div>
 "

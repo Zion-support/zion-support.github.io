@@ -22,21 +22,11 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.5 }}"
@@ -58,8 +48,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
             </button>;
           </motion.div>;
         </div>;
-      </section>;
-    );
+      </section>;) ;
   }
 
   return ("
@@ -73,21 +62,11 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
   { opacity: 0,
   x: -30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -109,21 +88,11 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
                   transition = {
@@ -146,8 +115,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
                     <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}</h3>"
                     <p className="text-gray-400">{benefit.description}</p>
                   </div>
-                </motion.div>;
-              ))}
+                </motion.div>;) ) }
             </div>
 "
             <div className="flex items-center text-sm text-gray-400">"
@@ -163,32 +131,17 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
   { opacity: 0,
   x: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   x: 0 
 
-
-
-
-
-
 }}
             transition = {
 
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
 
 }}
           >"
@@ -252,8 +205,7 @@ import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-re
           </motion.div>;
         </div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 };
 
 export default NewsletterSection;}}}'"

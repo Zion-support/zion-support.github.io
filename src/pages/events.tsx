@@ -203,7 +203,7 @@ export default function Events(...args: any[]): any {
       );
 
     return matchesType && matchesCategory && matchesStatus && matchesSearch;
-  });
+  }) ;
 
   const upcomingEvents = filteredEvents.filter('
     event => event.status === 'upcoming'
@@ -458,8 +458,7 @@ export default function Events(...args: any[]): any {
                           >"
                             <CheckCircle className="w-3 h-3 text-green-400" />
                             <span>{highlight}</span>
-                          </div>
-                        ))}
+                          </div>) ) }
                       </div>
                     </div>
 
@@ -475,8 +474,7 @@ export default function Events(...args: any[]): any {
                             className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full"
                           >
                             {speaker}
-                          </span>
-                        ))}
+                          </span>) ) }
                       </div>
                     </div>
 
@@ -498,13 +496,11 @@ export default function Events(...args: any[]): any {
                         </div>
                       </div>
                     </div>
-                  </motion.div>
-                );
-              })}
+                  </motion.div>) ;
+              }) }
             </div>
           </div>
-        </section>
-      )}
+        </section>) }
 
       {/* Past Events */}
       {pastEvents.length > 0 && ("
@@ -593,13 +589,11 @@ export default function Events(...args: any[]): any {
                         </div>
                       </div>
                     </div>
-                  </motion.div>
-                );
-              })}
+                  </motion.div>) ;
+              }) }
             </div>
           </div>
-        </section>
-      )}
+        </section>) }
 
       {/* CTA Section */}"
       <section className="py-16">"

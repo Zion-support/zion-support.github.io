@@ -56,6 +56,7 @@ interface AIConversation {
   messages: AIMessage[];
   insights: AIInsight[];
   actions: AIAction[];
+
 }
 
 interface AIMessage {
@@ -65,9 +66,11 @@ interface AIMessage {
   timestamp: string;
   confidence?: number;
   suggestions?: string[];
+
 }
 
 interface AIInsight {
+
   id: string;
   title: string;
   description: string;'
@@ -76,9 +79,11 @@ interface AIInsight {
   confidence: number;
   data: Record<string, string | number | boolean>;
   createdAt: string;
+
 }
 
 interface AIAction {
+
   id: string;
   name: string;
   description: string;'
@@ -87,9 +92,11 @@ interface AIAction {
   priority: number;
   estimatedTime: number;
   createdAt: string;
+
 }
 
 interface AIFeature {
+
   id: string;
   name: string;
   description: string;
@@ -97,8 +104,9 @@ interface AIFeature {
   status: 'active' | 'beta' | 'coming-soon';
   usage: number;
   accuracy: number;
-}
 
+}
+;
 const aiConversations: AIConversation[] = [
   {
 '
@@ -225,7 +233,7 @@ const aiConversations: AIConversation[] = [
         createdAt: '2025-01-27 09:15'},
     ]},
 ];
-
+;
 const aiFeatures: AIFeature[] = [
   {
 '
@@ -283,7 +291,7 @@ const aiFeatures: AIFeature[] = [
     usage: 68,
     accuracy: 85},
 ];
-
+;
 const aiInsights: AIInsight[] = [
   {
 '
@@ -323,7 +331,7 @@ const aiInsights: AIInsight[] = [
     data: { improvement: 12, aiContribution: 8, trend: 'positive' },'
     createdAt: '2025-01-27 15:30'},
 ];
-
+;
 const statusColors = {
 '
   active: 'from-green-500 to-emerald-500','

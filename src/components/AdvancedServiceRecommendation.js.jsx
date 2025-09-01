@@ -139,11 +139,11 @@ const AdvancedServiceRecommendation = () => {
         else if (profile.technologyMaturity === 'Early Adopter' && ['basic-services', 'consulting'].includes(service.category))
             score += 20;
         // Goal alignment
-        const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some((benefit) => benefit.toLowerCase().includes(goal.toLowerCase()))).length;
+        const goalMatches = profile.primaryGoals.filter (goal => service.benefits.some ( (benefit) => benefit.toLowerCase () .includes (goal.toLowerCase () ) ) ) .length;
         score += (goalMatches / profile.primaryGoals.length) * 20;
-        return Math.min(100, score)};
+        return Math.min (100, score) };
     const generateRecommendations = () => {
-        setIsAnalyzing(true);
+        setIsAnalyzing (true) ;
         // Simulate analysis time
         setTimeout(() => {
             const recs = mockServices.map(service => {
@@ -182,10 +182,10 @@ const AdvancedServiceRecommendation = () => {
                     implementationComplexity: complexity,
                     expectedROI,
                     timeToValue
-                }}).sort((a, b) => b.matchScore - a.matchScore);
-            setRecommendations(recs);
-            setIsAnalyzing(false);
-            setShowResults(true)}, 2000)};
+                }}) .sort ( (a, b) => b.matchScore - a.matchScore) ;
+            setRecommendations (recs) ;
+            setIsAnalyzing (false) ;
+            setShowResults (true) }, 2000) };
     const getPriorityColor = (priority) => {
 
         switch (priority) {
@@ -257,7 +257,7 @@ const AdvancedServiceRecommendation = () => {
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
               <option value="">Select Industry</option>
-              {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>))}
+              {industries.map (industry => (<option key={industry} value={industry}>{industry}</option>) ) }
             </select>
           </div>
           
@@ -270,7 +270,7 @@ const AdvancedServiceRecommendation = () => {
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
               <option value="">Select Comp Size</option>
-              {compSizes.map(size => (<option key={size} value={size}>{size}</option>))}
+              {compSizes.map (size => (<option key={size} value={size}>{size}</option>) ) }
             </select>
           </div>
           
@@ -283,7 +283,7 @@ const AdvancedServiceRecommendation = () => {
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
               <option value="">Select Budget Range</option>
-              {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>))}
+              {budgets.map (budget => (<option key={budget} value={budget}>{budget}</option>) ) }
             </select>
           </div>
           
@@ -296,7 +296,7 @@ const AdvancedServiceRecommendation = () => {
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
               <option value="">Select Timeline</option>
-              {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>))}
+              {timelines.map (timeline => (<option key={timeline} value={timeline}>{timeline}</option>) ) }
             </select>
           </div>
           
@@ -309,7 +309,7 @@ const AdvancedServiceRecommendation = () => {
 "
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"
               <option value="">Select Technology Maturity</option>
-              {technologyMaturityLevels.map(level => (<option key={level} value={level}>{level}</option>))}
+              {technologyMaturityLevels.map (level => (<option key={level} value={level}>{level}</option>) ) }
             </select>
           </div>
         </div>
@@ -327,7 +327,7 @@ const AdvancedServiceRecommendation = () => {
                     setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,;
   goal] ;
 
-}))}
+}) ) }
                 else {
 
                     setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}"
@@ -350,7 +350,7 @@ const AdvancedServiceRecommendation = () => {
                     setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,;
   challenge] ;
 
-}))}
+}) ) }
                 else {
 
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}"
@@ -368,7 +368,7 @@ const AdvancedServiceRecommendation = () => {
               </>) : (<>"
                 <Brain className="w-5 h-5 mr-2"/>
                 Get AI Recommendations
-              </>)}
+              </>) }
           </Button>
         </div>
       </motion.div>
@@ -416,7 +416,7 @@ const AdvancedServiceRecommendation = () => {
                           <Badge className={getPriorityColor(rec.priority)}>
                             Priority: {rec.priority}
                           </Badge>
-                          <Badge className={getComplexityColor(rec.implementationComplexity)}>
+                          <Badge className={getComplexityColor (rec.implementationComplexity) }>
                             Complexity: {rec.implementationComplexity}
                           </Badge>"
                           <Badge className="bg-zion-cyan/10 text-zion-cyan">
@@ -447,7 +447,7 @@ const AdvancedServiceRecommendation = () => {
                           {rec.reasoning.map((reason, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">"
                               <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"/>
                               {reason}
-                            </li>))}
+                            </li>) ) }
                         </ul>
                       </div>
                       
@@ -488,7 +488,7 @@ const AdvancedServiceRecommendation = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
           
           {/* CTA Section */}

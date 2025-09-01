@@ -1,6 +1,6 @@
 import React from 'react';'
 import { motion } from 'framer-motion';
-
+;
 const Tabs = ({ tabs, activeTab, onTabChange }) => {
 
   return()
@@ -33,6 +33,7 @@ const Tabs = ({ tabs, activeTab, onTabChange }) => {
     </div>
   );
 };
-
+;
+export { Tabs };
 export default Tabs;
 '"`

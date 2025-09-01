@@ -235,11 +235,9 @@ const News: React.FC = () => {
                 >"
                   Read More <ArrowRight className="w-4 h-4 ml-1" />
                 </a>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
-          {filteredArticles.length === 0 && (
-            <motion.div
+          {filteredArticles.length === 0 && (<motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}"
@@ -282,8 +280,7 @@ const News: React.FC = () => {
           </div>
         </motion.div>
       </div>
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default News;

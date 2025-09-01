@@ -24,7 +24,6 @@ import {
 } from 'lucide-react';'
 import SEO from '../components/SEO';
 
-export default function Leadership() {
   const leadershipTeam = [
     {
 '
@@ -185,8 +184,7 @@ export default function Leadership() {
                             className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20"
 
                             {skill}
-                          </span>
-                        ))}
+                          </span>) ) }
                       </div>
                     </div>
 "
@@ -217,8 +215,7 @@ export default function Leadership() {
                     </div>;
                   </div>
                 </div>
-              </div>;
-            ))}
+              </div>;) ) }
           </div>
         </div>
       </section>

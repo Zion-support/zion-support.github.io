@@ -87,9 +87,9 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
                     {item.icon}
                     <span>{item.label}</span>
                   </Link>
-                </li>))}
+                </li>) ) }
             </ul>
-          </div>))}
+          </div>) ) }
       </nav>
 "
       <div className="mt-8 pt-6 border-t border-zion-blue-light">"

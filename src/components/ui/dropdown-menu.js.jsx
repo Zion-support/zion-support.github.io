@@ -11,7 +11,7 @@ const DropdownMenu({ children }) {
       <div className="relative">
         {children}
       </div>
-    </DropdownMenuContext.Provider>)}
+    </DropdownMenuContext.Provider>)};
 export function DropdownMenuTrigger({ children, asChild = false }) {
 
     const context = useContext(DropdownMenuContext);

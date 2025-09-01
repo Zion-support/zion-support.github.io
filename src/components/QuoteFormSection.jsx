@@ -8,9 +8,9 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
     comp: '','
     service: '','
     message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  }) ;
+  const [isSubmitting, setIsSubmitting] = useState (false) ;
+  const [isSubmitted, setIsSubmitted] = useState (false) ;
 
   const services = ['
     'IT Support & Maintenance','
@@ -28,7 +28,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
 
       ...prev,
       [name]: value
-    }))};
+    }) ) };
 
   const handleSubmit = async (e) => {
 
@@ -36,10 +36,10 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
     setIsSubmitting(true);
 
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise (resolve => setTimeout (resolve, 2000) ) ;
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    setIsSubmitting (false) ;
+    setIsSubmitted (true) ;
 
     // Reset form after 5 seconds
     setTimeout(() => {
@@ -52,7 +52,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
         comp: '','
         service: '','
         message: ''
-      })}, 5000)};
+      }) }, 5000) };
 
   if (isSubmitted) {
 
@@ -80,8 +80,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
             </div>
           </div>
         </div>
-      </section>
-    )}
+      </section>) }
 
   return ("
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">"
@@ -94,7 +93,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
             </h2>"
             <p className="text-xl text-gray-600 mb-8">'
               Tell us about your IT needs and we'll provide you with a detailed,
-              no-obligation quote tailored to your business requirements.
+              no - obligation quote tailored to your business requirements.
             </p>
 "
             <div className="space-y-6">"
@@ -137,7 +136,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
               <ul className="space-y-2 text-sm text-gray-600">
                 <li>• 15+ years of IT service experience</li>
                 <li>• Certified technicians and engineers</li>
-                <li>• 24/7 emergency support available</li>
+                <li>• 24 / 7 emergency support available</li>
                 <li>• Competitive pricing with no hidden fees</li>
                 <li>• Satisfaction guaranteed or your money back</li>
               </ul>
@@ -230,9 +229,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
 "
                   <option value="">Select a service</option>
-                  {services.map((service, index) => (
-                    <option key={index} value={service}>{service}</option>
-                  ))}
+                  {services.map ( (service, index) => (<option key={index} value={service}>{service}</option>) ) }
                 </select>
               </div>
 

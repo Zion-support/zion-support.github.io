@@ -54,7 +54,7 @@ const MicroSAAS = () => {
                     {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">"
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
                         {feature}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
                 "
@@ -66,7 +66,7 @@ const MicroSAAS = () => {
                     </svg>
                   </Link>
                 </div>
-              </div>))}
+              </div>) ) }
           </div>
           "
           <div className="text-center">"

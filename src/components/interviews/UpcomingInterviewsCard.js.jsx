@@ -47,7 +47,8 @@ export function UpcomingInterviewsCard() {
                   <div className="h-4 w-3/4 bg-zion-blue-light/30 rounded mb-2"></div>"
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
                 </div>
-              </div>))}
+              </div>
+            ))}
           </div>
         </CardContent>
       </Card>)}
@@ -107,7 +108,9 @@ export function UpcomingInterviewsCard() {
                     {formattedDate} at {formattedTime}
                   </div>
                 </div>
-              </div>)})}
+              </div>
+            );
+          })}
         </div>
         "
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">"

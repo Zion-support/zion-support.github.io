@@ -338,7 +338,7 @@ export default GeneratedComponent;`};
         return `import express from 'express';'
 import cors from 'cors';'
 import helmet from 'helmet';
-
+;
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -365,7 +365,7 @@ app.listen(PORT, () => {
 """
 Generated Python code based on prompt: ${prompt}"
 """
-
+;
 import asyncio
 from typing import Optional, List, Dict, Any
 from dataclasses import dataclass
@@ -540,7 +540,7 @@ describe('GeneratedComponent', () => {
 `
         return `import pytest;
 from generated_module import GeneratedClass;
-
+;
 class TestGeneratedClass:;
     def test_initialization(self):;
         instance = GeneratedClass()
@@ -574,7 +574,7 @@ describe('Generated Code Tests', () => {
  * @component
  * @example
  * <GeneratedComponent />
- */
+ */;
 export const GeneratedComponent = () => {
   // Component implementation`
 };`;
@@ -634,7 +634,7 @@ def generated_function():;"
         getCodeMetrics
     };
 };
-
+;
 export default with;
 export default with;
 export default with;

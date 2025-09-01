@@ -2,7 +2,8 @@ export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
-  address: string}
+  address: string
+};
 export interface MicroSaasService {
   id: number;
   name: string;
@@ -23,7 +24,8 @@ export interface MicroSaasService {
   setupTime: string;
   integrations: string[];
   freeTier: boolean;
-  trialPeriod: string}
+  trialPeriod: string
+};
 export interface ITService {
   id: number;
   name: string;
@@ -41,7 +43,8 @@ export interface ITService {
   sla: string;
   certifications: string[];
   deliveryTime: string;
-  support: string}
+  support: string
+};
 export interface AIService {
   id: number;
   name: string;
@@ -61,7 +64,8 @@ export interface AIService {
   trainingData: string;
   compliance: string[];
   aiScore: number;
-  useCases: string[]}
+  useCases: string[]
+};
 export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services
   {
@@ -948,5 +952,6 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     trialPeriod: "7 days";
   };
 ];
+export { ENHANCED_INNOVATIVE_SERVICES_2025 };
 export default ENHANCED_INNOVATIVE_SERVICES_2025;
 }}}}}"

@@ -6,6 +6,9 @@ import { Sun, Moon, Monitor  } from 'lucide-react';
 type Theme = 'dark' | 'light' | 'system';
 
 interface ThemeToggleProps {
+  // Add your props here
+
+
   className?: string;
 }
 '
@@ -20,9 +23,9 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
 
       setTheme(savedTheme);
     }
-  }, []);
+  }, []) ;
 
-  useEffect(() => {
+  useEffect ( () => {
     if (!mounted) return;
 '
       root.classList.toggle('dark', theme === 'dark');
@@ -58,20 +61,17 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       </button>
 
       <AnimatePresence>
-        {isOpen && (
-          <motion.div
+        {isOpen && (<motion.div
             initial={{ opacity: 0, y: -10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.15 }}"
             className="absolute top-full right-0 mt-2 w-32 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50"
           >
-            {themes.map((themeOption) => (
-              <button
-                key={themeOption.value}
-                onClick={() => {
-                  setTheme(themeOption.value);
-                  setIsOpen(false);
+            {themes.map ( (themeOption) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={themeOption.value}
+                onClick={ () => {
+                  setTheme (themeOption.value) ;
+                  setIsOpen (false) ;
                 }}
                 className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
 
@@ -82,13 +82,10 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
               >"
                 <themeOption.icon className="w-4 h-4" />
                 <span>{themeOption.label}</span>
-              </button>
-            ))}
-          </motion.div>
-        )}
+              </button>) ) }
+          </motion.div>) }
       </AnimatePresence>
-    </div>
-  );
+    </div>) ;
 };
     const root = document.documentElement;'
     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';'
@@ -158,7 +155,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              aria-label={themeOption.label}
+              aria - label={themeOption.label}
               title={themeOption.label}
             >"
               <Icon className="w-4 h-4" />
@@ -167,14 +164,11 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
                   className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500""
                   layoutId="activeTheme""
                   transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                />
-              )}
-            </motion.button>
-          );
-        })}
+                />) }
+            </motion.button>) ;
+        }) }
       </motion.div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default ThemeToggle;

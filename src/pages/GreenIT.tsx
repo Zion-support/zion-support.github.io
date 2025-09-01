@@ -720,9 +720,7 @@ export default function GreenIT() {
                     : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'`
                 }`}
               >
-                {category.name} ({category.count})
-              </button>
-            ))}
+                {category.name} ({category.count}) </button>) ) }
           </div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -816,8 +814,7 @@ export default function GreenIT() {
                               >"
                                 <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                                 {feature}
-                              </li>
-                            ))}
+                              </li>) ) }
                           </ul>
                         </div>
 "
@@ -833,16 +830,13 @@ export default function GreenIT() {
                               >"
                                 <Star className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
                                 {benefit}
-                              </li>
-                            ))}
+                              </li>) ) }
                           </ul>
                         </div>
-                      </motion.div>
-                    )}
+                      </motion.div>) }
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -952,8 +946,7 @@ export default function GreenIT() {
                         >"
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                           {result}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
 "
@@ -972,8 +965,7 @@ export default function GreenIT() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -1016,7 +1008,6 @@ export default function GreenIT() {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 }
 '"`

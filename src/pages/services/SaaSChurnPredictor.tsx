@@ -1,6 +1,6 @@
 import React from 'react.ts';'
 import { SEO   } from '@/components/SEO';
-
+;
 const SaaSChurnPredictor: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">"
     <SEO title="SaaS Churn Predictor - Zion Tech Group" description="Predict churn risk, explain drivers, and trigger retention plays across your lifecycle stack." />"
@@ -41,7 +41,8 @@ const SaaSChurnPredictor: React.FC = (): JSX.Element => (
     </section>;
   </div>;
 );
-
+;
+export { SaaSChurnPredictor };
 export default SaaSChurnPredictor;
 
 '"

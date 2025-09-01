@@ -57,13 +57,13 @@ export function AdvancedBusinessIntelligence() {
     ];'
     const filteredMetrics = selectedCategory === 'all'
         ? data
-        : data.filter(metric => metric.category === selectedCategory);
+        : data.filter (metric => metric.category === selectedCategory) ;
     const refreshData = async () => {
-        setIsRefreshing(true);
+        setIsRefreshing (true) ;
         // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        setIsRefreshing(false)};
-    useEffect(() => {
+        await new Promise (resolve => setTimeout (resolve, 1500) ) ;
+        setIsRefreshing (false) };
+    useEffect ( () => {
         if (autoRefresh) {
 
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
@@ -210,7 +210,7 @@ export function AdvancedBusinessIntelligence() {
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>"
               <Icon className="w-4 h-4"/>
               {tab.label}
-            </button>)})}
+            </button>) }) }
       </div>
 
       {/* Content */}"
@@ -239,8 +239,8 @@ export function AdvancedBusinessIntelligence() {
                       <div className="text-xs text-zion-slate-light">
                         AI Prediction: {formatValue(metric.value * (1 + metric.change / 100), metric.unit)}
                       </div>
-                    </div>)}
-                </div>))}
+                    </div>) }
+                </div>) ) }
             </div>
 
             {/* Quick Actions */}"
@@ -261,7 +261,7 @@ export function AdvancedBusinessIntelligence() {
                 return (<button key={index} onClick={item.action} className="p-3 bg-white dark:bg-zion-slate rounded-lg border border-zion-slate-light hover:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hover:text-zion-cyan">"
                       <Icon className="w-4 h-4 mx-auto mb-2"/>
                       {item.label}
-                    </button>)})}
+                    </button>) }) }
               </div>
             </div>
           </div>)}
@@ -288,9 +288,9 @@ export function AdvancedBusinessIntelligence() {
                         <div className="flex flex-wrap gap-2">"
                           {insight.actions.map((action, index) => (<span key={index} className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm border border-zion-cyan/20">
                               {action}
-                            </span>))}
+                            </span>) ) }
                         </div>
-                      </div>)}
+                      </div>) }
                   </div>
                 </div>
               </div>))}
@@ -337,7 +337,7 @@ export function AdvancedBusinessIntelligence() {
               <h3 className="text-lg font-semibold mb-2">Advanced Analytics</h3>
               <p>Detailed analytics and custom reports coming soon...</p>
             </div>
-          </div>)}
+          </div>) }
       </div>
     </div>)}
 '"`

@@ -108,7 +108,7 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, U
                   <a href={method.link} className="text-zion-cyan hover:text-white transition-colors duration-300 font-medium">
                     {method.contact}
                   </a>
-                </div>))}
+                </div>) ) }
             </div>
           </div>
 

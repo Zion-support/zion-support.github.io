@@ -240,12 +240,10 @@ const FinancialSolutions: React.FC = (): JSX.Element => {
                     >"
                       <Star className="w-3 h-3 text-cyan-400" />
                       <span>{feature}</span>
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </div>
 
@@ -280,8 +278,7 @@ const FinancialSolutions: React.FC = (): JSX.Element => {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default FinancialSolutions;

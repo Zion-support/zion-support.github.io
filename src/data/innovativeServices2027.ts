@@ -14,7 +14,8 @@ export interface InnovativeService2027 {
   rating: number;
   reviews: number;
   launchDate: string;
-  status: 'active' | 'beta' | 'coming-soon'}
+  status: 'active' | 'beta' | 'coming-soon'
+};
 export const innovativeServices2027: InnovativeService2027[] = [
   {
 '

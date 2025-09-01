@@ -250,8 +250,7 @@ export default function Help() {
                 <button className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium">
                   Read Article →
                 </button>
-              </div>
-            ))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -304,8 +303,7 @@ export default function Help() {
                             <span>Read Article</span>"
                             <ArrowRight className="w-4 h-4" />
                           </Link>
-                        </div>
-                      ))}
+                        </div>) ) }
                     </div>
                   </div>
                 )}
@@ -321,8 +319,7 @@ export default function Help() {
                   Try adjusting your search terms or contact our support team
                   directly.
                 </p>
-              </div>
-            )}
+              </div>) }
           </div>
         </div>
       </section>

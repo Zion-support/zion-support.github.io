@@ -326,7 +326,7 @@ const Research: React.FC = () => {
     const matchesType = activeType === 'all' || project.type === activeType;
 
     return matchesSearch && matchesCategory && matchesStatus && matchesType;
-  });
+  }) ;
 
   // Update counts
   categories.forEach(cat => {
@@ -340,7 +340,7 @@ const Research: React.FC = () => {
         project => project.category === cat.id
       ).length;
     }
-  });
+  }) ;
 
   statuses.forEach(status => {
 '
@@ -353,7 +353,7 @@ const Research: React.FC = () => {
         project => project.status === status.id
       ).length;
     }
-  });
+  }) ;
 
   types.forEach(type => {
 '
@@ -366,7 +366,7 @@ const Research: React.FC = () => {
         project => project.type === type.id
       ).length;
     }
-  });
+  }) ;
 
   return()
     <>
@@ -527,8 +527,7 @@ const Research: React.FC = () => {
                     {project.featured && ("
                       <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-medium">
                         Featured
-                      </span>
-                    )}
+                      </span>) }
                   </div>
 
                   {/* Description */}"
@@ -597,8 +596,7 @@ const Research: React.FC = () => {
                           </div>
                         ))}
                       </div>
-                    </div>
-                  )}
+                    </div>) }
 
                   {/* Tags */}"
                   <div className="flex flex-wrap gap-1 mb-4">
@@ -608,8 +606,7 @@ const Research: React.FC = () => {
                         className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded"
                       >
                         {tag}
-                      </span>
-                    ))}
+                      </span>) ) }
                   </div>
 
                   {/* Action Buttons */}"
@@ -621,8 +618,7 @@ const Research: React.FC = () => {
                       <Download className="w-4 h-4" />
                     </button>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
 
             {filteredProjects.length === 0 && ("
@@ -639,8 +635,7 @@ const Research: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>) ;
 };
 
 export default Research;

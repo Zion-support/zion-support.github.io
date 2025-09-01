@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { LinkValidator } from "../utils/linkValidator";
 export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true }) => {
 
     const [brokenLinks, setBrokenLinks] = useState([]);
@@ -28,13 +27,13 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                         await fixBrokenLink(href, result)}
                 }
                 // Update progress
-                setScanProgress(((i + 1) / links.length) * 100);
+                setScanProgress ( ( (i + 1) / links.length) * 100) ;
                 // Small delay to prevent overwhelming the browser
-                await new Promise(resolve => setTimeout(resolve, 10))}
+                await new Promise (resolve => setTimeout (resolve, 10) ) }
         }
-        setBrokenLinks(results);
-        setLastScanTime(new Date());
-        setIsScanning(false);
+        setBrokenLinks (results) ;
+        setLastScanTime (new Date () ) ;
+        setIsScanning (false) ;
         // Notify parent component of issues
         results.forEach(result => {
 

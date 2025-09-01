@@ -225,10 +225,10 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 '
   const filteredCategories = selectedCategory === 'all'
     ? serviceCategories
-    : serviceCategories.filter(cat => cat.id === selectedCategory);
+    : serviceCategories.filter (cat => cat.id === selectedCategory) ;
 
   const toggleCategoryExpansion = (categoryId: string) => {;
-    setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
+    setExpandedCategory (expandedCategory === categoryId ? null : categoryId) ;
   };
 '
   const totalMarketSize = '$3.2+ trillion';'
@@ -252,21 +252,11 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -342,8 +332,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                 }`}
 
                 {category.name}
-              </button>
-            ))}
+              </button>) ) }
           </div>
         </div>
       </section>
@@ -362,18 +351,12 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 "
           <div className="space-y-8">
             <AnimatePresence>
-              {filteredCategories.map((category, index) => (
-                <motion.div
+              {filteredCategories.map ( (category, index) => (<motion.div
                   key={category.id}
                   initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
                   animate = {
@@ -381,21 +364,11 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   exit = {
 
   { opacity: 0,
   y: -20 
-
-
-
-
-
 
 }}
                   transition = {
@@ -467,8 +440,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                           </div>"
                           <div className="text-sm text-zion-slate-400">More Services</div>
                         </div>
-                      </div>
-                    )}
+                      </div>) }
                   </div>
 
                   {/* Expand/Collapse Button */}
@@ -485,23 +457,16 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                       <>"
                         <Eye className="w-4 h-4" />
                         View All Services
-                      </>
-                    )}
+                      </>) }
                   </button>
 
                   {/* Expanded Services Details */}
                   <AnimatePresence>
-                    {expandedCategory === category.id && (
-                      <motion.div
+                    {expandedCategory === category.id && (<motion.div
                         initial = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                         animate = {
@@ -509,21 +474,11 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
   { opacity: 1,'
   height: 'auto' 
 
-
-
-
-
-
 }}
                         exit = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                         transition={{ duration: 0.3 }}"
@@ -569,8 +524,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                                     className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-md"
 
                                     {tag}
-                                  </span>
-                                ))}
+                                  </span>) ) }
                               </div>
 
                               <Link"
@@ -580,14 +534,11 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
                                 <MessageCircle className="w-4 h-4" />
                                 Get Started;
                               </Link>;
-                            </div>
-                          ))}
+                            </div>) ) }
                         </div>
-                      </motion.div>
-                    )}
+                      </motion.div>) }
                   </AnimatePresence>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </AnimatePresence>
           </div>
         </div>
@@ -602,21 +553,11 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -652,7 +593,6 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

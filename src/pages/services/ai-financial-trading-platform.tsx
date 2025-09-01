@@ -22,7 +22,8 @@ import { TrendingUp,
   Eye,
   PieChart'
  } from 'lucide-react';
-
+;
+export { function };
 export default function AIFinancialTradingPlatform(...args: []):  {
 
   const features = [
@@ -244,7 +245,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
         <div className="max-w-7xl mx-auto">"
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
-            {performanceMetrics.map((item, index)  => (
+            {performanceMetrics.map((item, index (
               <motion.div
                 key={index}
                 initial = {
@@ -330,7 +331,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -419,7 +420,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -508,7 +509,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {tradingMarkets.map((market, index)  => (
+            {tradingMarkets.map(market: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -597,7 +598,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {

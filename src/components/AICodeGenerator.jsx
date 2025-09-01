@@ -27,7 +27,7 @@ export const AICodeGenerator = () => {
         includeErrorHandling: false,
         includeLogging: false,
         includeMetrics: false
-    });
+    }) ;
     // Handle form submission
     const handleSubmit = useCallback(async (e) => {
 
@@ -41,7 +41,7 @@ export const AICodeGenerator = () => {
             style: form.style,
             target: form.target,
             quality: form.quality
-        })}, [form, generateCode, trackEvent]);
+        }) }, [form, generateCode, trackEvent]) ;
     // Handle custom code analysis
     const handleAnalyzeCustomCode = useCallback(async () => {
         if (!customCode.trim())
@@ -54,7 +54,7 @@ export const AICodeGenerator = () => {
         if (!generatedCode && !customCode)
             return;
         const codeToOptimize = generatedCode || customCode;
-        const optimizedCode = await optimizeCode(codeToOptimize, focus);
+        const optimizedCode = await optimizeCode (codeToOptimize, focus) ;
         if (generatedCode) {
 
             // Update generated code'
@@ -62,9 +62,8 @@ export const AICodeGenerator = () => {
         }'
         trackEvent('ai_code_generator', 'code_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);
     // Handle test generation
-    const handleGenerateTests = useCallback(async () => {
-        if (!generatedCode && !customCode)
-            return;
+    const handleGenerateTests = useCallback (async () => {
+        if (!generatedCode && !customCode) return;
         const codeToTest = generatedCode || customCode;
         const testCode = await generateTests(codeToTest, form.language);'
         // In a real implementation, you'd want to display the test code'
@@ -74,9 +73,8 @@ export const AICodeGenerator = () => {
         // console.log('Generated tests:', testCode);'
         trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation
-    const handleGenerateDocs = useCallback(async () => {
-        if (!generatedCode && !customCode)
-            return;
+    const handleGenerateDocs = useCallback (async () => {
+        if (!generatedCode && !customCode) return;
         const codeToDoc = generatedCode || customCode;
         const docs = await generateDocs(codeToDoc, form.language);'
         // In a real implementation, you'd want to display the documentation'
@@ -107,7 +105,7 @@ export const AICodeGenerator = () => {
 
             suggestionId: suggestion.id,
             impact: suggestion.impact
-        })}, [applySuggestion, trackEvent]);
+        }) }, [applySuggestion, trackEvent]) ;
     // Clear history
     const handleClearHistory = useCallback(() => {
         clearHistory();'
@@ -148,7 +146,7 @@ export const AICodeGenerator = () => {
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>"
               <Icon className="w-4 h-4"/>
               {label}
-            </button>))}
+            </button>) ) }
         </nav>
       </div>
 
@@ -160,20 +158,10 @@ export const AICodeGenerator = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -316,20 +304,10 @@ export const AICodeGenerator = () => {
   { opacity: 0,
   height: 0 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,'
   height: 'auto' 
-
-
-
-
-
 
 }} exit = {
 
@@ -354,6 +332,11 @@ export const AICodeGenerator = () => {
   (e) => setForm(prev => ({ ...prev,
   [key]: e.target.checked 
 
+}) ) } className="w - 4 h - 4 text - purple - 600 bg - gray - 100 border - gray - 300 rounded focus:ring - purple - 500 dark:focus:ring - purple - 600 dark:ring - offset - gray - 800 focus:ring - 2 dark:bg - gray - 700 dark:border - gray - 600"/>
+                        <Icon className="w - 4 h - 4 text - gray - 600 dark:text - gray - 400"/>
+                        <span className="text - sm text - gray - 700 dark:text - gray - 300">{label}</span>
+                      </label>) ) }
+                  </motion.div>) }
 
 
 
@@ -372,7 +355,7 @@ export const AICodeGenerator = () => {
                     </>) : (<>"
                       <Sparkles className="w-5 h-5"/>
                       Generate Code
-                    </>)}
+                    </>) }
                 </button>
               </form>
 
@@ -381,11 +364,6 @@ export const AICodeGenerator = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -427,20 +405,10 @@ export const AICodeGenerator = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -467,7 +435,7 @@ export const AICodeGenerator = () => {
                   </>) : (<>"
                     <Eye className="w-5 h-5"/>
                     Analyze Code
-                  </>)}
+                  </>) }
               </button>
 
               {/* Analysis Results */}
@@ -475,11 +443,6 @@ export const AICodeGenerator = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -524,7 +487,7 @@ export const AICodeGenerator = () => {
                           <div className="text-gray-600 dark:text-gray-400 capitalize">'
                             {key.replace(/([A-Z])/g, ' $1').trim()}
                           </div>
-                        </div>))}
+                        </div>) ) }
                     </div>
                   </div>
 
@@ -542,9 +505,9 @@ export const AICodeGenerator = () => {
                               </div>"
                               {issue.line && (<div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
                                   Line {issue.line}
-                                </div>)}
+                                </div>) }
                             </div>
-                          </div>))}
+                          </div>) ) }
                       </div>
                     </div>)}
                 </motion.div>)}
@@ -555,20 +518,10 @@ export const AICodeGenerator = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -611,20 +564,10 @@ export const AICodeGenerator = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -658,20 +601,10 @@ export const AICodeGenerator = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -698,7 +631,7 @@ export const AICodeGenerator = () => {
                 <FileText className="w-5 h-5"/>
                 Generate Documentation
               </button>
-            </motion.div>)}
+            </motion.div>) }
         </AnimatePresence>
 
         {/* Suggestions Panel */}
@@ -706,11 +639,6 @@ export const AICodeGenerator = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -731,11 +659,6 @@ export const AICodeGenerator = () => {
 
   { opacity: 0,
   x: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -786,20 +709,15 @@ export const AICodeGenerator = () => {
                       Copy Code
                     </button>
                   </div>
-                </motion.div>))}
+                </motion.div>) ) }
             </div>
-          </motion.div>)}
+          </motion.div>) }
 
         {/* History Panel */}
         {history.length > 0 && (<motion.div initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -848,9 +766,9 @@ export const AICodeGenerator = () => {
                       Export
                     </button>
                   </div>
-                </div>))}
+                </div>) ) }
             </div>
-          </motion.div>)}
+          </motion.div>) }
       </div>
     </div>)};
 '"`

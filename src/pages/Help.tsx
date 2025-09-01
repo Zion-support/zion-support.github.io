@@ -124,14 +124,12 @@ export default function Help() {
     { day: 'Sunday', hours: 'Emergency Support Only', available: false }
   ];
 
-  const filteredCategories = helpCategories.filter(category =>
-    category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    category.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    category.articles.some(article =>
-      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  );
+  const filteredCategories = helpCategories.filter (category =>
+    category.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+    category.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+    category.articles.some (article =>
+      article.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+      article.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ) ;
 
   return()
     <div className="min-h-screen bg-slate-900 text-white">
@@ -232,8 +230,7 @@ export default function Help() {
                       <span className="block text-xs text-orange-400">24/7 Emergency Support Available</span>
                     )}
                   </div>
-                </div>
-              ))}
+                </div>) ) }
             </div>
           </div>
         </div>
@@ -327,8 +324,7 @@ export default function Help() {
                 url: '/help/downloads','
                 color: 'from-purple-500 to-purple-600'
               }
-            ].map((resource, index) => (
-              <motion.a
+            ].map ( (resource, index) => (<motion.a
                 key={index}
                 href={resource.url}
                 initial={{ opacity: 0, y: 20 }}

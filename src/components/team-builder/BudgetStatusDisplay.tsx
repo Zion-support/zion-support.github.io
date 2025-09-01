@@ -11,7 +11,7 @@ estimatedCost: { // From TeamRecommendation;
     min: number;
     max: number}}
 
-// Helper to parse budget string (very basic, needs improvement for production)
+// Helper to parse budget string (very basic, needs improvement for production);
 const parseBudget = (budgetString: string): { min: number | null; max: number | null }  => {
 '
   budgetString = budgetString.toLowerCase().replace(/[^0-9-\s$k,]/g, ''); // Clean string
@@ -46,8 +46,8 @@ const parseBudget = (budgetString: string): { min: number | null; max: number | 
 
   return { min, max }};
 
-
-export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: BudgetStatusDisplayProps) => {;
+;
+export const BudgetStatusDisplay = (...args: unknown[]): unknown => {;
   const userBudget = parseBudget(projectBriefBudget);
   const estimatedAvgCost = (estimatedCost.min + estimatedCost.max) / 2;
 '

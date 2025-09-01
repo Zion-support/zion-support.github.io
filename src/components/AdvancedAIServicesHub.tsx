@@ -17,6 +17,7 @@ import {
 import { Link } from 'react-router-dom';
 
 interface AIService {
+
   id: string;
   name: string;
   description: string;
@@ -122,11 +123,11 @@ const AdvancedAIServicesHub: React.FC = () => {;'
     { id: 'security', name: 'Cybersecurity', icon: Shield };
   ];
 
-  const filteredServices = aiServices.filter(service => {;
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
+  const filteredServices = aiServices.filter (service => {;
+    const matchesSearch = service.name.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
+                         service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;'
@@ -139,7 +140,7 @@ const AdvancedAIServicesHub: React.FC = () => {;'
       default:
         return 0;
 
-  });
+  }) ;
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
@@ -150,11 +151,6 @@ const AdvancedAIServicesHub: React.FC = () => {;'
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
           animate = {
@@ -185,21 +181,11 @@ const AdvancedAIServicesHub: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ delay: 0.2 }}"
@@ -238,21 +224,11 @@ const AdvancedAIServicesHub: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ delay: 0.3 }}"
@@ -272,8 +248,7 @@ const AdvancedAIServicesHub: React.FC = () => {;'
               >"
                 <category.icon className="w-5 h-5" />
                 {category.name}
-              </button>
-            ))}
+              </button>) ) }
           </div>
         </motion.div>
 
@@ -284,39 +259,23 @@ const AdvancedAIServicesHub: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
           transition={{ delay: 0.4 }}"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence>
-            {sortedServices.map((service, index) => (
-              <motion.div
+            {sortedServices.map ( (service, index) => (<motion.div
                 key={service.id}
                 initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
                 animate = {
@@ -324,21 +283,11 @@ const AdvancedAIServicesHub: React.FC = () => {;'
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 exit = {
 
   { opacity: 0,
   y: -20 
-
-
-
-
-
 
 }}
                 transition={{ delay: index * 0.1 }}"
@@ -379,8 +328,7 @@ const AdvancedAIServicesHub: React.FC = () => {;'
                       <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">"
                         <CheckCircle className="w-4 h-4 text-green-400" />
                         {feature}
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
                 </div>
 
@@ -401,8 +349,7 @@ const AdvancedAIServicesHub: React.FC = () => {;'
                   Explore Service"
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </AnimatePresence>
         </motion.div>
 
@@ -413,21 +360,11 @@ const AdvancedAIServicesHub: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ delay: 0.6 }}"
@@ -453,8 +390,7 @@ const AdvancedAIServicesHub: React.FC = () => {;'
           </div>;
         </motion.div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default AdvancedAIServicesHub;}}}}}}'"`

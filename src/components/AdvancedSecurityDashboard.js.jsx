@@ -42,13 +42,13 @@ export function AdvancedSecurityDashboard() {
     const severities = ['all', 'critical', 'high', 'medium', 'low', 'info'];'
     const filteredCompliance = selectedFramework === 'all'
         ? complianceRequirements
-        : complianceRequirements.filter(req => req.framework === selectedFramework);
+        : complianceRequirements.filter (req => req.framework === selectedFramework) ;
     const refreshData = async () => {
-        setIsRefreshing(true);
+        setIsRefreshing (true) ;
         // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        setIsRefreshing(false)};
-    useEffect(() => {
+        await new Promise (resolve => setTimeout (resolve, 1500) ) ;
+        setIsRefreshing (false) };
+    useEffect ( () => {
         if (autoRefresh) {
 
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
@@ -209,7 +209,7 @@ export function AdvancedSecurityDashboard() {
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>"
               <Icon className="w-4 h-4"/>
               {tab.label}
-            </button>)})}
+            </button>) }) }
       </div>
 
       {/* Content */}"
@@ -234,7 +234,7 @@ export function AdvancedSecurityDashboard() {
                       Target: {metric.target}{metric.unit}
                     </span>
                   </div>
-                </div>))}
+                </div>) ) }
             </div>
 
             {/* Quick Security Status */}"
@@ -254,7 +254,7 @@ export function AdvancedSecurityDashboard() {
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severity)}`}>
                         {event.severity}
                       </span>
-                    </div>))}
+                    </div>) ) }
                 </div>
               </div>
 "
@@ -275,7 +275,7 @@ export function AdvancedSecurityDashboard() {
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>'
                         {req.status.replace('_', ' ')}
                       </span>
-                    </div>))}
+                    </div>) ) }
                 </div>
               </div>
             </div>
@@ -331,7 +331,7 @@ export function AdvancedSecurityDashboard() {
                       <div className="flex flex-wrap gap-2">"
                         {req.controls.map((control, index) => (<span key={index} className="px-2 py-1 bg-zion-blue/10 text-zion-blue rounded-full text-xs border border-zion-blue/20">
                             {control}
-                          </span>))}
+                          </span>) ) }
                       </div>
                     </div>"
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light">
@@ -365,7 +365,7 @@ export function AdvancedSecurityDashboard() {
                       <div className="flex flex-wrap gap-2">"
                         {threat.affectedSystems.map((system, index) => (<span key={index} className="px-2 py-1 bg-zion-red/10 text-zion-red rounded-full text-xs border border-zion-red/20">
                             {system}
-                          </span>))}
+                          </span>) ) }
                       </div>
                     </div>"
                     <div className="mb-3">"
@@ -374,7 +374,7 @@ export function AdvancedSecurityDashboard() {
                         {threat.mitigationSteps.map((step, index) => (<div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">"
                             <span className="w-1.5 h-1.5 bg-zion-red rounded-full"></span>
                             {step}
-                          </div>))}
+                          </div>) ) }
                       </div>
                     </div>"
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light">
@@ -392,7 +392,7 @@ export function AdvancedSecurityDashboard() {
               <h3 className="text-lg font-semibold mb-2">Security Analytics</h3>
               <p>Advanced security analytics and threat intelligence reports coming soon...</p>
             </div>
-          </div>)}
+          </div>) }
       </div>
     </div>)}
 '"`

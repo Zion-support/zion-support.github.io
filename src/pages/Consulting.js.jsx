@@ -170,9 +170,9 @@ const Consulting = () => {
                   {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">"
                       <div className="w-1.5 h-1.5 bg-orange-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {feature}
-                    </li>))}
+                    </li>) ) }
                 </ul>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -218,7 +218,7 @@ const Consulting = () => {
                 {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">"
                     <div className="w-2 h-2 bg-orange-400 rounded-full mr-3"></div>
                     {benefit}
-                  </li>))}
+                  </li>) ) }
               </ul>
             </div>"
             <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl p-8 border border-orange-500/30">"

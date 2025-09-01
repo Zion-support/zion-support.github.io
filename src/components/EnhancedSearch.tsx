@@ -17,27 +17,33 @@ interface SearchResult {
   category: string;
   tags: string[];
   relevance: number}
-  icon?: React.ComponentType<any>;
+  icon?: React.ComponentType < any>;
 }
 
 interface SearchFilter {
   type: string[];
   category: string[];
   tags: string[];
+
 }
 
 interface SearchSuggestion {
   text: string;'
   type: 'recent' | 'trending' | 'ai';
+
 }
 
 interface EnhancedSearchProps {
+  // Add your props here
+
+
   className?: string;
   placeholder?: string;
   onSearch?: (query: string) => void;'
   variant?: 'default' | 'futuristic' | 'minimal';
-}
 
+}
+;
 const searchData: SearchResult[] = [
   // Services
   {
@@ -136,9 +142,9 @@ export function EnhancedSearch({
     type: [],
     category: [],
     tags: []
-  });
-  const [showFilters, setShowFilters] = useState(false);
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
+  }) ;
+  const [showFilters, setShowFilters] = useState (false) ;
+  const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
   
 // Mock suggestions
 const mockSuggestions: SearchSuggestion[] = ['
@@ -167,11 +173,11 @@ export function EnhancedSearch({
     type: [],
     category: [],
     tags: []
-  });
+  }) ;
   
-  const searchRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const navigate = useNavigate();
+  const searchRef = useRef < HTMLDivElement> (null) ;
+  const inputRef = useRef < HTMLInputElement> (null) ;
+  const navigate = useNavigate () ;
 
   // Handle keyboard navigation
   useEffect(() => {
@@ -222,15 +228,13 @@ export function EnhancedSearch({
                            item.description.toLowerCase().includes(debouncedQuery.toLowerCase()) ||;
                            item.tags.some(tag => tag.toLowerCase().includes(debouncedQuery.toLowerCase()));
         
-        const matchesFilters = filters.type.length === 0 || filters.type.includes(item.type) &&;
-                              filters.category.length === 0 || filters.category.includes(item.category) &&;
-                              filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes(tag));
+        const matchesFilters = filters.type.length === 0 || filters.type.includes (item.type) &&;
+                              filters.category.length === 0 || filters.category.includes (item.category) &&;
+                              filters.tags.length === 0 || filters.tags.some (tag => item.tags.includes (tag) ) ;
         
-        return matchesQuery && matchesFilters})
-      .sort((a, b) => b.relevance - a.relevance)
-      .slice(0, 10);
+        return matchesQuery && matchesFilters}) .sort ( (a, b) => b.relevance - a.relevance) .slice (0, 10) ;
 
-    setResults(searchResults)}, [debouncedQuery, filters]);
+    setResults (searchResults) }, [debouncedQuery, filters]) ;
 
   // Handle click outside
   useEffect(() => {
@@ -240,20 +244,20 @@ export function EnhancedSearch({
 
         setIsOpen(false)}
       try {;
-        setRecentSearches(JSON.parse(saved));
+        setRecentSearches (JSON.parse (saved) ) ;
       } catch (error) {
 '
         // console.error('Failed to parse recent searches:', error);
       }
     }
-  }, []);
+  }, []) ;
 
   // Handle click outside
-  useEffect(() => {
+  useEffect ( () => {
     const handleClickOutside = (event: MouseEvent) => {;
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {;
-        setIsOpen(false);
-        setSelectedIndex(-1);
+      if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {;
+        setIsOpen (false) ;
+        setSelectedIndex (-1) ;
       }
     };
 '
@@ -261,8 +265,8 @@ export function EnhancedSearch({
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
   // Handle keyboard navigation
-  useEffect(() => {
-        inputRef.current?.focus()}
+  useEffect ( () => {
+        inputRef.current?.focus () }
     };
 '
     document.addEventListener('keydown', handleKeyDown);'
@@ -281,9 +285,9 @@ export function EnhancedSearch({
       setQuery('')}
   }, [recentSearches]);
 
-  const handleResultClick = (result: SearchResult)  => {;
-    handleSearch(result.title);
-    router(result.url);
+  const handleResultClick = (result: SearchResult) => {;
+    handleSearch (result.title) ;
+    router (result.url) ;
     const handleKeyDown = (event: KeyboardEvent) => {;
       if (!isOpen) return;
 
@@ -300,7 +304,7 @@ export function EnhancedSearch({
           setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
           break;'
         case 'Enter':;
-          event.preventDefault();
+          event.preventDefault () ;
           if (selectedIndex >= 0 && results[selectedIndex]) {
 
             handleResultClick(results[selectedIndex]);
@@ -310,8 +314,8 @@ export function EnhancedSearch({
           }
           break;'
         case 'Escape':;
-          setIsOpen(false);
-          setSelectedIndex(-1);
+          setIsOpen (false) ;
+          setSelectedIndex (-1) ;
           break;
       }
     };
@@ -320,26 +324,24 @@ export function EnhancedSearch({
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, results, selectedIndex, query]);
 
-  const handleSearch = useCallback(async () => {;
-    if (!query.trim()) return;
+  const handleSearch = useCallback (async () => {;
+    if (!query.trim () ) return;
 
-    setIsLoading(true);
+    setIsLoading (true) ;
     
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 300));
+    await new Promise (resolve => setTimeout (resolve, 300) ) ;
 
     // Filter search results based on query and filters
-    const searchResults = searchData.filter(result => {;
-      const matchesQuery = result.title.toLowerCase().includes(query.toLowerCase()) ||;
-                          result.description.toLowerCase().includes(query.toLowerCase()) ||;
-                          result.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()));
+    const searchResults = searchData.filter (result => {;
+      const matchesQuery = result.title.toLowerCase () .includes (query.toLowerCase () ) ||;
+                          result.description.toLowerCase () .includes (query.toLowerCase () ) ||;
+                          result.tags.some (tag => tag.toLowerCase () .includes (query.toLowerCase () ) ) ;
       
-      const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type)) &&;
-                            (filters.category.length === 0 || filters.category.includes(result.category)) &&;
-                            (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes(tag)));
+      const matchesFilters = (filters.type.length === 0 || filters.type.includes (result.type) ) &&; (filters.category.length === 0 || filters.category.includes (result.category) ) &&; (filters.tags.length === 0 || filters.tags.some (tag => result.tags.includes (tag) ) ) ;
 
       return matchesQuery && matchesFilters;
-    });
+    }) ;
 
   const handleResultClick = (result: SearchResult) => {
 
@@ -354,19 +356,19 @@ export function EnhancedSearch({
   };
 
   const clearFilters = () => {;
-    setFilters({ type[], category[], tags[] })};
+    setFilters ({ type[], category[], tags[] }) };
 
   const toggleFilter = (filterType: keyof SearchFilter, value: string) => {;
-setFilters(prev: > ({;
+setFilters (prev: > ({;
       ...prev,;
-      [filterType]: prev[filterType].includes(value);
-        ? prev[filterType].filter(v => v !== value);
+      [filterType]: prev[filterType].includes (value) ;
+        ? prev[filterType].filter (v => v !== value) ;
         : [...prev[filterType], value];
-    }));
+    }) ) ;
   };
 
   const clearFilters = () => {;
-    setFilters({ type: [], category: [], tags: [] });
+    setFilters ({ type: [], category: [], tags: [] }) ;
   };
 
   const getTypeIcon = (type: string) => {;
@@ -390,7 +392,7 @@ setFilters(prev: > ({;
     setSelectedIndex(-1);
   };
 
-  const getVariantStyles = () => {
+  const getVariantStyles = (...args: unknown[]): unknown => {
     switch (variant) {
 '
       case 'futuristic':'
@@ -465,28 +467,17 @@ setFilters(prev: > ({;
       </div>
 
       <AnimatePresence>
-        {isOpen && (
-          <motion.div
+        {isOpen && (<motion.div
             initial = {
 
   { opacity: 0,
   y: -10 
-
-
-
-
-
 
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             exit = {
@@ -517,34 +508,22 @@ setFilters(prev: > ({;
                   className="text-sm text-red-500 hover:text-red-600 transition-colors"
                 >
                   Clear all
-                </button>
-              )}
+                </button>) }
             </div>
 
             {/* Filters Panel */}
             <AnimatePresence>
-              {showFilters && (
-                <motion.div
+              {showFilters && (<motion.div
                   initial = {
 
   { height: 0,
   opacity: 0 
-
-
-
-
-
 
 }}
                   animate = {
 '
   { height: 'auto',
   opacity: 1 
-
-
-
-
-
 
 }}
                   exit = {
@@ -586,9 +565,8 @@ setFilters(prev: > ({;
                                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'`
                             }`}
                           >
-                            {type.charAt(0).toUpperCase() + type.slice(1)}
-                          </button>
-                        ))}
+                            {type.charAt (0) .toUpperCase () + type.slice (1) }
+                          </button>) ) }
                       </div>
                     </div>
 
@@ -618,13 +596,11 @@ setFilters(prev: > ({;
                             }`}
                           >
                             {category.name}
-                          </button>
-                        ))}
+                          </button>) ) }
                       </div>
                     </div>
                   </div>
-                </motion.div>
-              )}
+                </motion.div>) }
             </AnimatePresence>
 
             {/* Search Results */}"
@@ -649,11 +625,9 @@ setFilters(prev: > ({;
                             className = "w-full text-left p-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
                           >
                             {search}
-                          </button>
-                        ))}
+                          </button>) ) }
                       </div>
-                    </div>;
-                  )}
+                    </div>;) }
 
                   {/* Popular Searches */}
                   <div>"
@@ -672,8 +646,7 @@ setFilters(prev: > ({;
                           className = "px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors"
                         >
                           {search}
-                        </button>
-                      ))}
+                        </button>) ) }
                     </div>
                   </div>
                 </div>
@@ -726,13 +699,10 @@ setFilters(prev: > ({;
                   <p className="text-gray-600">
                     Try adjusting your search terms or filters
                   </p>
-                </div>
-              )}
+                </div>) }
             </div>;
-          </motion.div>;
-        )};
+          </motion.div>;) };
       </AnimatePresence>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

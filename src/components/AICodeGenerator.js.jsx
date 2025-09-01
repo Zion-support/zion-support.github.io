@@ -140,7 +140,7 @@ export const AICodeGenerator = () => {
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>"
               <Icon className="w-4 h-4"/>
               {label}
-            </button>))}
+            </button>) ) }
         </nav>
       </div>
 
@@ -304,7 +304,7 @@ export const AICodeGenerator = () => {
                     </>) : (<>"
                       <Sparkles className="w-5 h-5"/>
                       Generate Code
-                    </>)}
+                    </>) }
                 </button>
               </form>
 
@@ -374,7 +374,7 @@ export const AICodeGenerator = () => {
                   </>) : (<>"
                     <Eye className="w-5 h-5"/>
                     Analyze Code
-                  </>)}
+                  </>) }
               </button>
 
               {/* Analysis Results */}
@@ -439,9 +439,9 @@ export const AICodeGenerator = () => {
                               </div>"
                               {issue.line && (<div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
                                   Line {issue.line}
-                                </div>)}
+                                </div>) }
                             </div>
-                          </div>))}
+                          </div>) ) }
                       </div>
                     </div>)}
                 </motion.div>)}
@@ -550,7 +550,7 @@ export const AICodeGenerator = () => {
                 <FileText className="w-5 h-5"/>
                 Generate Documentation
               </button>
-            </motion.div>)}
+            </motion.div>) }
         </AnimatePresence>
 
         {/* Suggestions Panel */}
@@ -618,9 +618,9 @@ export const AICodeGenerator = () => {
                       Copy Code
                     </button>
                   </div>
-                </motion.div>))}
+                </motion.div>) ) }
             </div>
-          </motion.div>)}
+          </motion.div>) }
 
         {/* History Panel */}
         {history.length > 0 && (<motion.div initial = {
@@ -670,9 +670,9 @@ export const AICodeGenerator = () => {
                       Export
                     </button>
                   </div>
-                </div>))}
+                </div>) ) }
             </div>
-          </motion.div>)}
+          </motion.div>) }
       </div>
     </div>)};
 '"`

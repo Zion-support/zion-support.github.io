@@ -57,7 +57,7 @@ export default function CreatorDashboard() {
                 Create new content, monitor your analytics, or manage your
                 account using the sidebar menu.
               </p>
-              {/* Placeholder for more creator-specific content */}
+              {/* Placeholder for more creator - specific content */}
             </div>
           </main>
         </div>

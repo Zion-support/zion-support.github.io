@@ -8,7 +8,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;'
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const allServices = [
-    // AI-Powered Micro SAAS Services
+    // AI - Powered Micro SAAS Services
     {
 '
       id: 'ai-code-review-security','
@@ -181,7 +181,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;'
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());'
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory});
+    return matchesSearch && matchesCategory}) ;
 
   return()
     <>
@@ -240,8 +240,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;'
                       {categories.map(category   => ("
                         <option key={category} value={category} className="bg-gray-800 text-white">'
                           {category === 'all' ? 'All Categories' : category}
-                        </option>
-                      ))}
+                        </option>) ) }
                     </select>
                   </div>
                 </div>
@@ -264,8 +263,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;'
                       }`}
                     >'
                       {category === 'all' ? 'All' : category}
-                    </button>
-                  ))}
+                    </button>) ) }
                 </div>
               </div>
             </motion.div>
@@ -342,8 +340,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;'
                           <li key={featureIndex} className="text-blue-300 text-sm flex items-center">"
                             <span className="text-green-400 mr-2">✓</span>
                             {feature}
-                          </li>
-                        ))}
+                          </li>) ) }
                       </ul>
                     </div>
                     "
@@ -354,8 +351,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;'
                           <li key={benefitIndex} className="text-green-300 text-sm flex items-center">"
                             <span className="text-green-400 mr-2">🚀</span>
                             {benefit}
-                          </li>
-                        ))}
+                          </li>) ) }
                       </ul>
                     </div>
                     "
@@ -378,10 +374,8 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;'
                         Contact Sales
                       </Link>
                     </div>
-                  </motion.div>
-                ))}
-              </div>
-            )}
+                  </motion.div>) ) }
+              </div>) }
           </div>
         </section>
 

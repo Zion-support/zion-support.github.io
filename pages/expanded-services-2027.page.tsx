@@ -21,7 +21,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;'
     return subcats}, [selectedCategory]);
 
   // Filter services based on search and filters
-  const filteredServices = useMemo(() => {;
+  const filteredServices = useMemo(: unknown {;
     return ALL_EXPANDED_SERVICES_2027.filter(service => {;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -152,7 +152,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;'
 
         {/* Services Grid/List */}'`
         <div className={`grid gap-6 ${viewMode === 'grid' ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
-          {filteredServices.map((service)  => (
+          {filteredServices.map(service: unknown (
             <div
               key={service.id}`
               className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 ${

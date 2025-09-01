@@ -2,6 +2,9 @@ import React, { useState } from 'react.ts';'
 import { Link  } from 'react-router-dom.ts';'
 import { motion  } from 'framer-motion.ts';
 import { Mail, 
+import { motion  } from 'framer - motion.ts';
+
+
   ArrowLeft, 
   CheckCircle, 
   AlertCircle, 
@@ -100,28 +103,17 @@ import { Mail,
     };
   ];
 
-  const renderEmailStep = () => (
-    <motion.div
+  const renderEmailStep = () => (<motion.div
       initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
       animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
       transition={{ duration: 0.6 }}
@@ -174,31 +166,19 @@ import { Mail,
           )};
         </button>;
       </form>;
-    </motion.div>;
-  );
+    </motion.div>;) ;
 
-  const renderVerificationStep = () => (
-    <motion.div
+  const renderVerificationStep = () => (<motion.div
       initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
       animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
       transition={{ duration: 0.6 }}
@@ -282,31 +262,19 @@ import { Mail,
           </button>;
         </div>;
       </form>;
-    </motion.div>;
-  );
+    </motion.div>;) ;
 
-  const renderResetStep = () => (
-    <motion.div
+  const renderResetStep = () => (<motion.div
       initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
       animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
       transition={{ duration: 0.6 }}
@@ -374,8 +342,7 @@ import { Mail,
               <p className={`text-xs ${passwordStrength.color}`}>
                 {passwordStrength.label}
               </p>
-            </div>
-          )}
+            </div>) }
         </div>
 
         <div>"
@@ -420,8 +387,7 @@ import { Mail,
           )};
         </button>;
       </form>;
-    </motion.div>;
-  );
+    </motion.div>;) ;
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex">
@@ -435,21 +401,11 @@ import { Mail,
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -461,18 +417,12 @@ import { Mail,
             </Link>
           </motion.div>
 
-          {/* Error/Success Messages */}
-          {error && (
-            <motion.div
+          {/* Error / Success Messages */}
+          {error && (<motion.div
               initial = {
 
   { opacity: 0,
   y: 10 
-
-
-
-
-
 
 }}
               animate = {
@@ -490,20 +440,13 @@ import { Mail,
 "
               <AlertCircle className="w-5 h-5" />
               {error}
-            </motion.div>
-          )}
+            </motion.div>) }
 
-          {success && (
-            <motion.div
+          {success && (<motion.div
               initial = {
 
   { opacity: 0,
   y: 10 
-
-
-
-
-
 
 }}
               animate = {
@@ -521,8 +464,7 @@ import { Mail,
 "
               <CheckCircle className="w-5 h-5" />
               {success}
-            </motion.div>
-          )}
+            </motion.div>) }
 
           {/* Form Container */}"
           <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">'
@@ -538,21 +480,11 @@ import { Mail,
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -568,7 +500,7 @@ import { Mail,
 }}"
             className="mt-8 space-y-4"
 
-            {securityFeatures.map((feature, index) => (;
+            {securityFeatures.map ( (feature, index) => (;
               <motion.div
                 key={feature.title}
                 initial = {
@@ -576,21 +508,11 @@ import { Mail,
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -613,8 +535,7 @@ import { Mail,
                   <h4 className="text-sm font-medium text-white">{feature.title}</h4>"
                   <p className="text-xs text-slate-400">{feature.description}</p>
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </motion.div>
         </div>
       </div>
@@ -631,21 +552,11 @@ import { Mail,
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
               transition = {
@@ -680,21 +591,11 @@ import { Mail,
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -719,21 +620,11 @@ import { Mail,
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -749,7 +640,7 @@ import { Mail,
 }}"
               className="space-y-6 mb-8"
 
-              {benefits.map((benefit, index) => (;
+              {benefits.map ( (benefit, index) => (;
                 <motion.div
                   key={benefit.title}
                   initial = {
@@ -757,21 +648,11 @@ import { Mail,
   { opacity: 0,
   x: 20 
 
-
-
-
-
-
 }}
                   animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
                   transition = {
@@ -798,8 +679,7 @@ import { Mail,
                       {benefit.description}
                     </p>
                   </div>
-                </motion.div>;
-              ))}
+                </motion.div>;) ) }
             </motion.div>
 
             <motion.div
@@ -808,21 +688,11 @@ import { Mail,
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -851,8 +721,7 @@ import { Mail,
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default ForgotPassword;}}}}}}}}}}'"`

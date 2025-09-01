@@ -1,4 +1,3 @@
-// Simple production logger utility
 export const logErrorToProduction = (message, error) => {
 
   // In production, you might want to send this to a logging service

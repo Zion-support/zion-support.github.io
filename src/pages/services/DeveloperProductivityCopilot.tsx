@@ -82,6 +82,7 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { DeveloperProductivityCopilot };
 export default DeveloperProductivityCopilot;
 '"

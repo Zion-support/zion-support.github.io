@@ -117,7 +117,7 @@ const startupSolutions = [
     timeline: '3-5 weeks','
     category: 'Marketing'},
 ];
-
+;
 const successStories = [
   {
 '
@@ -152,7 +152,7 @@ const successStories = [
     results:'
       'App launched in 8 weeks, 50% increase in mobile conversions, 4.8-star rating.'},
 ];
-
+;
 const StartupSolutions = () => {
 '
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -229,8 +229,7 @@ const StartupSolutions = () => {
                 }`}
               >
                 {category}
-              </button>
-            ))}
+              </button>) ) }
           </div>
         </div>
       </section>
@@ -275,8 +274,7 @@ const StartupSolutions = () => {
                       >"
                         <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
                         {feature}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>
 "
@@ -286,8 +284,7 @@ const StartupSolutions = () => {
                   </span>"
                   <span className="text-gray-400">{solution.timeline}</span>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -356,8 +353,7 @@ const StartupSolutions = () => {
                   ))}"
                   <span className="text-gray-300 text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -397,8 +393,7 @@ const StartupSolutions = () => {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 };
 
 export default StartupSolutions;

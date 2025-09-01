@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
+const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
+const glob = require('glob');
 
 console.log('🔧 Starting TypeScript error fixer automation...');
 
@@ -37,8 +39,9 @@ async function runTypeScriptErrorFixer() {
     // 5. Run TypeScript compiler to check for remaining errors
     console.log('🔧 Running TypeScript compiler check...');
     try {
-      execSync('npm run type-check', { stdio: 'pipe' });
-      console.log('✅ TypeScript compilation successful');
+      const result = await this.runCommand('npm', { args: ['run', 'type-check'] });
+      this.log('No TypeScript errors detected');
+      return [];
     } catch (error) {
       console.log(
         '⚠️  TypeScript compilation still has issues, but fixes were applied'
@@ -67,7 +70,6 @@ async function runTypeScriptErrorFixer() {
   } catch (error) {
     console.error('❌ TypeScript error fixer failed:', error.message);
   }
-}
 
 async function fixTypeScriptCompilationErrors() {
   let fixes = 0;
@@ -386,6 +388,14 @@ async function fixImportExportErrors() {
       } catch (error) {
         console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
       }
+      
+      const report = this.generateReport();
+      this.log('TypeScript Error Fixer completed successfully');
+      
+      return report;
+    } catch (error) {
+      this.log(`TypeScript Error Fixer failed: ${error.message}`, 'error');
+      throw error;
     }
   }
 

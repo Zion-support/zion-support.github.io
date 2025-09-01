@@ -125,11 +125,6 @@ export default function DigitalTransformation() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -177,20 +172,10 @@ export default function DigitalTransformation() {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }} transition = {
 
@@ -220,11 +205,6 @@ export default function DigitalTransformation() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -252,20 +232,10 @@ export default function DigitalTransformation() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -298,7 +268,7 @@ export default function DigitalTransformation() {
                     Learn More"
                     <ArrowRight className="w-4 h-4"/>
                   </Link>
-                </motion.div>)})}
+                </motion.div>) }) }
           </div>
         </div>
       </section>
@@ -309,11 +279,6 @@ export default function DigitalTransformation() {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -339,20 +304,10 @@ export default function DigitalTransformation() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -382,11 +337,6 @@ export default function DigitalTransformation() {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -440,20 +390,10 @@ export default function DigitalTransformation() {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -475,7 +415,7 @@ export default function DigitalTransformation() {
                       <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>
                     </div>
                   </div>
-                </motion.div>)})}
+                </motion.div>) }) }
           </div>
         </div>
       </section>
@@ -486,11 +426,6 @@ export default function DigitalTransformation() {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -516,20 +451,10 @@ export default function DigitalTransformation() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -552,7 +477,7 @@ export default function DigitalTransformation() {
                   <div className="font-semibold text-white">{testimonial.name}</div>"
                   <div className="text-zion-cyan text-sm">{testimonial.role}</div>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -563,11 +488,6 @@ export default function DigitalTransformation() {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 

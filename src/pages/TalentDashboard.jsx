@@ -103,7 +103,7 @@ function TalentDashboardContent() {
             <TalentOnboardingSteps />"
             {showAdvanced && (<div className="mt-6">
                 <AdvancedOnboardingSteps />
-              </div>)}
+              </div>) }
 
             {/* Upcoming Interviews Card */}"
             <div className="mt-8">
@@ -180,8 +180,7 @@ function TalentDashboardContent() {
         </div>
       </main>
       
-    </>)}
-export default function TalentDashboard() {
+    </>) }
     return (<ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>)}

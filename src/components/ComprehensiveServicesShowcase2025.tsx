@@ -407,6 +407,7 @@ import {
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
 
 interface ServiceContact {
+
   mobile: string;
   email: string;
   address: string;
@@ -453,7 +454,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
     const matchesInnovation = innovationLevel === 'all' || service.innovationLevel === innovationLevel;
 
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation;
-  });
+  }) ;
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;'
@@ -472,20 +473,15 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
   ;'
   'Revolutionary': 3 ;
 
-
-
-
-
-
 };
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);'
       case 'category':;
-        return a.category.localeCompare(b.category);
+        return a.category.localeCompare (b.category) ;
       default:;
         return 0;
 
-  });
+  }) ;
 
     hidden: { opacity: 0 },;
     visible: {
@@ -500,11 +496,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
 
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
 
 },
     visible: {
@@ -562,21 +553,11 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -611,21 +592,11 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -662,7 +633,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                   onChange={(e) => setActiveCategory(e.target.value)}"
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
 
-                  {categories.map((category) => (;
+                  {categories.map ( (category) => (;
                     <option key={category.id} value={category.id}>
                       {category.icon} {category.name} ({category.count})
                     </option>
@@ -678,7 +649,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                   onChange={(e) => setInnovationLevel(e.target.value)}"
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
 
-                  {innovationLevels.map((level) => (;
+                  {innovationLevels.map ( (level) => (;
                     <option key={level.id} value={level.id}>
                       {level.icon} {level.name}
                     </option>
@@ -787,7 +758,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
             </p>
           </div>
 
-          {/* Services Grid/List */}
+          {/* Services Grid / List */}
           <motion.div
             variants={containerVariants}"
             initial="hidden""
@@ -796,7 +767,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
               ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6''
               : 'space-y-4'
 
-            {sortedServices.map((service) => (;
+            {sortedServices.map ( (service) => (;
               <motion.div
                 key={service.id}
                 variants={itemVariants}`
@@ -820,7 +791,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                           <p className="text-sm text-zion-slate-400">{service.category}</p>
                         </div>
                       </div>
-                      {getInnovationIcon(service.innovationLevel)}
+                      {getInnovationIcon (service.innovationLevel) }
                     </div>
 
                     {/* Description */}"
@@ -836,8 +807,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                           className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg"
 
                           {tag}
-                        </span>
-                      ))}
+                        </span>) ) }
                     </div>
 
                     {/* Price and Features */}"
@@ -865,8 +835,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                       Learn More"
                       <ArrowRight className="w-4 h-4" />
                     </button>
-                  </>
-                ) : (;
+                  </>) : (;
                   // List View
                   <>"
                     <div className="flex-1">"
@@ -880,7 +849,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                             <p className="text-zion-slate-400">{service.category}</p>
                           </div>
                         </div>
-                        {getInnovationIcon(service.innovationLevel)}
+                        {getInnovationIcon (service.innovationLevel) }
                       </div>
 "
                       <p className="text-zion-slate-300 mb-3">
@@ -894,8 +863,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                             className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg"
 
                             {tag}
-                          </span>
-                        ))}
+                          </span>) ) }
                       </div>
                     </div>
 "
@@ -909,15 +877,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                         <ArrowRight className="w-4 h-4" />
                       </button>
                     </div>
-                  </>
-                )}
-              </motion.div>
-            ))}
+                  </>) }
+              </motion.div>) ) }
           </motion.div>
 
           {/* No Results */}
-          {filteredServices.length === 0 && (
-            <motion.div
+          {filteredServices.length === 0 && (<motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}"
               className="text-center py-20"
@@ -927,9 +892,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
               <p className="text-zion-slate-400 mb-6">
                 Try adjusting your search criteria or filters
               </p>
-              <button
-                onClick = {;
-  ;
+              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = {;
   ;
   ;
   ;
@@ -952,15 +915,13 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
               >
                 Clear All Filters;
               </button>
-            </motion.div>
-          )}
+            </motion.div>) }
         </div>
       </section>
 
       {/* Service Detail Modal */}
       <AnimatePresence>
-        {selectedService && (
-          <motion.div
+        {selectedService && (<motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}"
@@ -973,21 +934,11 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
   { scale: 0.9,
   opacity: 0 
 
-
-
-
-
-
 }}
               animate = {
 
   { scale: 1,
   opacity: 1 
-
-
-
-
-
 
 }}
               exit = {
@@ -1061,8 +1012,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">"
                           <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0" />
                           {feature}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
                   <div>"
@@ -1075,8 +1025,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">"
                           <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0" />
                           {benefit}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
                 </div>
@@ -1093,8 +1042,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">"
                           <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0" />
                           {useCase}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
                   <div>"
@@ -1107,8 +1055,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">"
                           <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0" />
                           {audience}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
                 </div>
@@ -1127,8 +1074,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                           {selectedService.technicalSpecs.technology.map((tech, index) => ("
                             <span key={index} className="px-3 py-1 bg-zion-slate-800 text-zion-cyan text-sm rounded-lg">
                               {tech}
-                            </span>
-                          ))}
+                            </span>) ) }
                         </div>
                       </div>
                       <div>"
@@ -1137,13 +1083,11 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                           {selectedService.technicalSpecs.integrations.map((integration, index) => ("
                             <span key={index} className="px-3 py-1 bg-zion-slate-800 text-zion-purple text-sm rounded-lg">
                               {integration}
-                            </span>
-                          ))}
+                            </span>) ) }
                         </div>
                       </div>
                     </div>
-                  </div>
-                )}
+                  </div>) }
 
                 {/* Contact and CTA */}"
                 <div className="border-t border-zion-slate-700 pt-6">"
@@ -1167,11 +1111,9 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;'
                 </div>;
               </div>;
             </motion.div>;
-          </motion.div>;
-        )};
+          </motion.div>;) };
       </AnimatePresence>;
-    </div>;
-  );
+    </div>;) ;
 </div></div></div></div></div></div></div>};
 
 export default ComprehensiveServicesShowcase2025;}}}}}}}}}}'"`

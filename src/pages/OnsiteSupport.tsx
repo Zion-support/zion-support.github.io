@@ -2,6 +2,8 @@ import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from "../components/SEO";
 import { Wrench, 
+
+
   Clock, 
   Shield, 
   Zap, 
@@ -219,21 +221,11 @@ export default function OnsiteSupport(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -276,21 +268,11 @@ export default function OnsiteSupport(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition = {
@@ -326,21 +308,11 @@ export default function OnsiteSupport(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -374,21 +346,11 @@ export default function OnsiteSupport(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -414,11 +376,9 @@ export default function OnsiteSupport(...args[]):  {
                     <li key={idx} className="flex items-center text-sm text-slate-400">"
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                       {feature}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -431,21 +391,11 @@ export default function OnsiteSupport(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition = {
@@ -473,21 +423,11 @@ export default function OnsiteSupport(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -527,8 +467,7 @@ export default function OnsiteSupport(...args[]):  {
                   <div className="text-slate-300 font-medium">{area.responseTime}</div>
                 </div>
               </div>
-            </motion.div>;
-          ))}
+            </motion.div>;) ) }
         </div>
       </div>
 
@@ -541,21 +480,11 @@ export default function OnsiteSupport(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -589,21 +518,11 @@ export default function OnsiteSupport(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -638,21 +557,11 @@ export default function OnsiteSupport(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition = {
@@ -680,21 +589,11 @@ export default function OnsiteSupport(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -729,21 +628,11 @@ export default function OnsiteSupport(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -817,21 +706,11 @@ export default function OnsiteSupport(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition = {
@@ -859,21 +738,11 @@ export default function OnsiteSupport(...args[]):  {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -920,8 +789,7 @@ export default function OnsiteSupport(...args[]):  {
                   </div>
                 </div>
               </div>
-            </motion.div>;
-          ))}
+            </motion.div>;) ) }
         </div>
       </div>
 
@@ -933,21 +801,11 @@ export default function OnsiteSupport(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition = {
@@ -976,7 +834,6 @@ export default function OnsiteSupport(...args[]):  {
           </button>;
         </motion.div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

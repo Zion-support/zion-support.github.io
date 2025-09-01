@@ -22,7 +22,8 @@ import { Shield,
   Brain,
   Users'
  } from 'lucide-react';
-
+;
+export { function };
 export default function AICybersecurityThreatDetection(...args: []):  {
 
   const features = [
@@ -281,7 +282,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -370,7 +371,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -459,7 +460,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {threatTypes.map((threat, index)  => (
+            {threatTypes.map(threat: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -548,7 +549,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
           </motion.div>
 "
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">
-            {complianceFrameworks.map((framework, index)  => (
+            {complianceFrameworks.map(framework: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -634,7 +635,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {

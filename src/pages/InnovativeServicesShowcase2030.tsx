@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';
 import { Brain, 
+import { innovativeAIServices2030 } from "../data / innovativeAIServices2030";
+import { innovativeCloudDevOpsServices2030 } from "../data / innovativeCloudDevOpsServices2030";
+import { innovativeCybersecurityServices2030 } from "../data / innovativeCybersecurityServices2030";
+import { motion  } from 'framer - motion.ts';
+
+
   Shield, 
   Cloud, 
   Zap, 
@@ -32,11 +38,11 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
     ...innovativeCloudDevOpsServices2030;
   ];
 
-  const filteredServices = allServices.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch});
+  const filteredServices = allServices.filter (service => {;
+    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
+    return matchesCategory && matchesSearch}) ;
 
   const categories = [;'
     { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;'
@@ -56,21 +62,11 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -152,8 +148,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                     {category.count}
                   </span>
-                </button>;
-              ))}
+                </button>;) ) }
             </div>
           </div>
         </div>
@@ -171,21 +166,11 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -244,8 +229,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
                     {service.features.length > 3 && ("
                       <div className="text-purple-300 text-sm">
                         +{service.features.length - 3} more features
-                      </div>
-                    )}
+                      </div>) }
                   </div>
                 </div>
 
@@ -260,8 +244,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
                       <div key={idx} className="text-gray-300 text-sm flex items-center gap-2">"
                         <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
                         {benefit}
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
                 </div>
 
@@ -274,8 +257,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
                         className="px-2 py-1 bg-white/10 text-white text-xs rounded-full border border-white/20"
 
                         {tag}
-                      </span>
-                    ))}
+                      </span>) ) }
                   </div>
                 </div>
 
@@ -315,8 +297,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
                     Contact
                   </a>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>;
 ;
           {filteredServices.length === 0 && (;"
@@ -331,8 +312,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
               >
                 Clear Filters
               </button>
-            </div>
-          )}
+            </div>) }
         </div>
       </section>
 
@@ -345,21 +325,11 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -400,18 +370,12 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
                 title: "24/7 Support","
                 description: "Round-the-clock technical support and consultation"
               }
-            ].map((feature, index)  => (
-              <motion.div
+            ].map ( (feature, index) => (<motion.div
                 key={index}
                 initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }}
                 whileInView = {
@@ -419,21 +383,11 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}"
@@ -459,21 +413,11 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -552,8 +496,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
           </div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default InnovativeServicesShowcase2030;}}'"`

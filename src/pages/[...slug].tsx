@@ -67,7 +67,7 @@ export default function GenericPage() {
           <li>Micro SaaS solutions tailored to your workflow</li>
           <li>Applied AI: assistants, RAG, and automation</li>
 
-          <li>Cloud, DevOps, data, and cybersecurity services</li>
+          <li > Cloud, DevOps, data, and cybersecurity services</li>
         </ul>
         <p style={{ marginTop: 8 }}>'
           Have questions about {title.toLowerCase()}?{' '}'"

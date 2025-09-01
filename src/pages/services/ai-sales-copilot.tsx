@@ -185,7 +185,7 @@ export default function AISalesCopilot() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -226,7 +226,7 @@ export default function AISalesCopilot() {
 "
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
             <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
+              {benefits.slice(0, 3).map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -243,7 +243,7 @@ export default function AISalesCopilot() {
             </div>
 "
             <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
+              {benefits.slice(3).map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index + 3}
                   initial={{ opacity: 0, x: 20 }}
@@ -281,7 +281,7 @@ export default function AISalesCopilot() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

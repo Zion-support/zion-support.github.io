@@ -139,9 +139,9 @@ export default function HelpCenter() {
                   {expandedCategories.includes(key) && (<div className="space-y-2">"
                       {category.articles.map((article, index) => (<Link key={index} to={article.href} className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-2 px-3 rounded-lg hover:bg-zion-blue-light/10">
                           {article.title}
-                        </Link>))}
-                    </div>)}
-                </div>))}
+                        </Link>) ) }
+                    </div>) }
+                </div>) ) }
             </div>
           </div>
         </section>
@@ -162,7 +162,7 @@ export default function HelpCenter() {
                     Read Article"
                     <ArrowRight className="w-4 h-4 ml-2"/>
                   </Link>
-                </div>))}
+                </div>) ) }
             </div>
           </div>
         </section>

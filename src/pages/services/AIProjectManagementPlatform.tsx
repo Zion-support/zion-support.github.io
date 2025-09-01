@@ -1,4 +1,4 @@
-import { Calendar, Users, Check, ExternalLink, Phone, Mail, Brain, Target, TrendingUp, BarChart3, Clock, Zap, FolderOpen } from 'lucide-react';
+import React from 'react';
 
 export default function AIProjectManagementPlatform() {
   const features = ['
@@ -50,7 +50,7 @@ export default function AIProjectManagementPlatform() {
       name: 'Enterprise', '
       price: '$8,999/mo', '
       details: ['Unlimited team members', 'Custom AI models', 'Dedicated support', 'White-label solution'] 
-    },
+    }
   ];
 
   const projectTools = ['
@@ -107,7 +107,7 @@ export default function AIProjectManagementPlatform() {
                   <div className="text-lg font-semibold mb-1">{t.name}</div>"
                   <div className="text-2xl font-bold text-indigo-600 mb-2">{t.price}</div>"
                   <ul className="text-sm text-zion-slate-dark space-y-1">
-                    {t.details.map((d) => (<li key={d}>{d}</li>))}
+                    {t.details.map((d: unknown (<li key={d}>{d}</li>))}
                   </ul>
                 </div>
               ))}

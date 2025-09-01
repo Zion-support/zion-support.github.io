@@ -57,7 +57,7 @@ const InnovativeServicesShowcase: React.FC = () => {;'
         filtered.sort((a, b) => a.price - b.price);
         break;'
       case 'launchDate':
-        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
+        filtered.sort(a: unknown, b: unknown new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
         break}
     return filtered}, [searchTerm, selectedCategory, priceRange, sortBy]);
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => ("
@@ -237,7 +237,7 @@ const InnovativeServicesShowcase: React.FC = () => {;'
         </div>
         {/* Services Grid */}"
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service)  => (
+          {filteredServices.map(service: unknown (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
@@ -269,5 +269,6 @@ const InnovativeServicesShowcase: React.FC = () => {;'
     </div>;
   );
 };
+export { InnovativeServicesShowcase };
 export default InnovativeServicesShowcase;
 '"

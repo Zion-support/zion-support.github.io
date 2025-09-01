@@ -72,23 +72,12 @@ export function LoadingSpinner({
                   'linear-gradient(45deg, #0ea5e9, #8b5cf6,'
   #0ea5e9)';
                 ]
-              
-
-
-
-
-
 
 }}
               transition = {
 
   { duration: 3,
   repeat: Infinity 
-
-
-
-
-
 
 }}
             />"
@@ -103,21 +92,11 @@ export function LoadingSpinner({
   { opacity: [0.3, 0.6,
   0.3] 
 
-
-
-
-
-
 }}
             transition = {
 
   { duration: 2,
   repeat: Infinity 
-
-
-
-
-
 
 }}
           />
@@ -131,21 +110,11 @@ export function LoadingSpinner({
   { opacity: [0.5, 1,
   0.5] 
 
-
-
-
-
-
 }}
           transition = {
 
   { duration: 1.5,
   repeat: Infinity 
-
-
-
-
-
 
 }}
         >
@@ -165,12 +134,6 @@ export function LoadingSpinner({
                 scale: [1, 1.5, 1],
                 opacity: [0.5, 1,
   0.5]
-              
-
-
-
-
-
 
 }}
               transition = {
@@ -180,20 +143,13 @@ export function LoadingSpinner({
                 duration: 1.5,
                 repeat: Infinity,
   delay: index * 0.2
-              
-
-
-
-
 
 ;
 }};
-            />;
-          ))};
+            />;) ) };
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 }
 
 interface PageLoaderProps extends React.PropsWithChildren<{}> {
@@ -216,23 +172,12 @@ export function PageLoader(...args[]):  {
               scale: [1, 1.5, 1],
               opacity: [0.3, 0.6,
   0.3]
-            
-
-
-
-
-
 
 }}
             transition = {
 
   { duration: 4,
   repeat: Infinity 
-
-
-
-
-
 
 }}
           />
@@ -245,23 +190,12 @@ export function PageLoader(...args[]):  {
               scale: [1.5, 1, 1.5],
               opacity: [0.6, 0.3,
   0.6]
-            
-
-
-
-
-
 
 }}
             transition = {
 
   { duration: 4, repeat: Infinity,
   delay: 1 
-
-
-
-
-
 
 }}
           />
@@ -274,21 +208,11 @@ export function PageLoader(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ duration: 0.5 }}"
@@ -304,11 +228,6 @@ export function PageLoader(...args[]):  {
   { duration: 1, repeat: Infinity,"
   ease: "linear" 
 
-
-
-
-
-
 }}
             />"
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-xl">
@@ -323,21 +242,11 @@ export function PageLoader(...args[]):  {
   { opacity: [0.7, 1,
   0.7] 
 
-
-
-
-
-
 }}
             transition = {
 
   { duration: 2,
   repeat: Infinity 
-
-
-
-
-
 
 }}
           >
@@ -351,21 +260,11 @@ export function PageLoader(...args[]):  {
   { opacity: [0.5, 1,
   0.5] 
 
-
-
-
-
-
 }}
             transition = {
 
   { duration: 2, repeat: Infinity,
   delay: 0.5 
-
-
-
-
-
 
 }}
           >
@@ -384,19 +283,13 @@ export function PageLoader(...args[]):  {
   { duration: 3,"
   ease: "easeInOut" 
 
-
-
-
-
-
 }}
               />
             </div>;
           </div>;
         </motion.div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 }
 
   lines?: number;
@@ -417,12 +310,6 @@ export function SkeletonLoader(...args[]):  {
             opacity: [0.5, 1, 0.5],'
             backgroundPosition: ['200% 0','
   '-200% 0']
-          
-
-
-
-
-
 
 }}
           transition = {
@@ -432,12 +319,6 @@ export function SkeletonLoader(...args[]):  {
             duration: 1.5,
             repeat: Infinity,
   delay: index * 0.1
-          
-
-
-
-
-
 
 }}
           style = {

@@ -496,5 +496,6 @@ const IncidentResponsePlatform = () => {
     </>
   );
 };
+export { IncidentResponsePlatform };
 export default IncidentResponsePlatform;
 '"`

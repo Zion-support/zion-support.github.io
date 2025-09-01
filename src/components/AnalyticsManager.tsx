@@ -16,13 +16,15 @@ import {
   Monitor} from 'lucide-react';
 
 interface AnalyticsData {
+
   pageViews: number;
   uniqueVisitors: number;
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
-  topPages: Array<{ path: string; views: number }>;
-  userAgents: Array<{ device: string; count: number }>;
+  topPages: { path: string; views: number 
+}[];
+  userAgents: { device: string; count: number }[];
   performance: {
 
     fcp: number;
@@ -30,15 +32,17 @@ interface AnalyticsData {
     fid: number;
     cls: number;
   };
-  events: Array<{ name: string; count: number; timestamp: string }>;
+  events: { name: string; count: number; timestamp: string }[];
 }
 
 interface UserSession {
+
   id: string;
   startTime: number;
   lastActivity: number;
   pageViews: string[];
-  events: Array<{ name: string; timestamp: number; data?: any }>;
+  events: { name: string; timestamp: number; data?: unknown 
+}[];
   userAgent: string;
   referrer: string;
 }
@@ -70,8 +74,8 @@ export function AnalyticsManager() {
     const session: UserSession = {
 
       id: sessionId,
-      startTime: Date.now(),
-      lastActivity: Date.now(),
+      startTime: Date.now () ,
+      lastActivity: Date.now () ,
       pageViews: [window.location.pathname],
       events: [],
       userAgent: navigator.userAgent,
@@ -114,10 +118,10 @@ export function AnalyticsManager() {
 
       saveSessionData(currentSession);
     }
-  }, [currentSession]);
+  }, [currentSession]) ;
 
   const generateSessionId = () => {
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    return `session_${Date.now () }_${Math.random () .toString (36) .substr (2, 9) }`;
   };
 
   const setupEventListeners = useCallback(() => {
@@ -171,9 +175,9 @@ export function AnalyticsManager() {
         name: (target as HTMLInputElement).name,
         id: target.id});
     }
-  }, []);
+  }, []) ;
 
-  const handleScroll = useCallback(() => {
+  const handleScroll = useCallback ( () => {
     // Track scroll depth
     const scrollDepth = Math.round()
       (window.scrollY /
@@ -186,9 +190,9 @@ export function AnalyticsManager() {
       // Track at 25%, 50%, 75%, 100%'
       trackEvent('scroll_depth', { depth: scrollDepth });
     }
-  }, []);
+  }, []) ;
 
-  const handleBeforeUnload = useCallback(() => {
+  const handleBeforeUnload = useCallback ( () => {
     // Track session end
     if (currentSession) {
 '
@@ -197,7 +201,7 @@ export function AnalyticsManager() {
         duration: Date.now() - currentSession.startTime,
         pageViews: currentSession.pageViews.length});
     }
-  }, [currentSession]);
+  }, [currentSession]) ;
 
   const setupPerformanceMonitoring = useCallback(() => {
 '
@@ -254,21 +258,21 @@ export function AnalyticsManager() {
       });'
       clsObserver.observe({ entryTypes: ['layout-shift'] });
     }
-  }, []);
+  }, []) ;
 
-  const setupSessionTracking = useCallback(() => {
+  const setupSessionTracking = useCallback ( () => {
     // Update last activity every 30 seconds
-    const activityInterval = setInterval(() => {
+    const activityInterval = setInterval ( () => {
       if (currentSession) {
 
         setCurrentSession(prev =>
           prev ? { ...prev, lastActivity: Date.now() } : null
         );
       }
-    }, 30000);
+    }, 30000) ;
 
-    return () => clearInterval(activityInterval);
-  }, [currentSession]);
+    return () => clearInterval (activityInterval) ;
+  }, [currentSession]) ;
 
   const trackPageView = useCallback()
     (path: string) => {
@@ -371,10 +375,10 @@ export function AnalyticsManager() {
     [sendAnalyticsData]
   );
 
-  const generateAnalyticsReport = useCallback(() => {
+  const generateAnalyticsReport = useCallback ( () => {
     if (!currentSession) return null;
 
-    const sessionDuration = Date.now() - currentSession.startTime;
+    const sessionDuration = Date.now () - currentSession.startTime;
     const pageViews = currentSession.pageViews.length;
     const events = currentSession.events.length;
 
@@ -391,7 +395,7 @@ export function AnalyticsManager() {
 
       pageViews,
       uniqueVisitors: 1, // Single session
-      sessionDuration: Math.round(sessionDuration / 1000), // in seconds
+      sessionDuration: Math.round (sessionDuration / 1000) , // in seconds
       bounceRate,
       conversionRate: Math.round(conversionRate),
       topPages: currentSession.pageViews.reduce()
@@ -428,13 +432,13 @@ export function AnalyticsManager() {
   };
 
   // Update analytics data when session changes
-  useEffect(() => {
+  useEffect ( () => {
     if (currentSession) {
 
       const report = generateAnalyticsReport();
       setAnalyticsData(report);
     }
-  }, [currentSession, generateAnalyticsReport]);
+  }, [currentSession, generateAnalyticsReport]) ;
 
   if (!showAnalytics) {
 

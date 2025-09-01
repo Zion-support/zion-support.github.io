@@ -177,8 +177,7 @@ const CaseStudies = () => {
                 }`}
               >
                 {industry}
-              </button>
-            ))}
+              </button>) ) }
           </div>
         </div>
       </section>
@@ -251,8 +250,7 @@ const CaseStudies = () => {
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -291,8 +289,7 @@ const CaseStudies = () => {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 };
 
 export default CaseStudies;

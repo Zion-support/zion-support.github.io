@@ -1,3 +1,4 @@
+import React from 'react';
 import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, Shield, Zap, BarChart3 export default function AIDocumentIntelligence() {
   const features = [
     'Advanced OCR with 99.5% accuracy across 50+ languages','
@@ -84,7 +85,7 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
                   <div className="text-lg font-semibold mb-1">{t.name}</div>"
                   <div className="text-2xl font-bold text-emerald-600 mb-2">{t.price}</div>"
                   <ul className="text-sm text-gray-600 space-y-1">
-                    {t.details.map((d) => (<li key={d}>{d}</li>))}
+                    {t.details.map((d (<li key={d}>{d}</li>))}
                   </ul>
                 </div>
               ))}

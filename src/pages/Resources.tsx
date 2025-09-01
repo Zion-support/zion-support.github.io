@@ -293,11 +293,6 @@ const Resources: React.FC = (): JSX.Element => {;'
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
 
-
-
-
-
-
 };
 
   return()
@@ -311,21 +306,11 @@ const Resources: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -407,8 +392,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                     <ExternalLink className="w-4 h-4 text-cyan-500 group-hover:text-cyan-400 transition-colors" />
                   </div>
                 </Link>;
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </motion.div>;
 
@@ -514,12 +498,10 @@ const Resources: React.FC = (): JSX.Element => {;'
                         </div>
                       </div>
                     </div>
-                  </motion.article>
-                )})}
+                  </motion.article>) }) }
             </div>
           </div>;
-        </section>
-      )}
+        </section>) }
 
       {/* Regular Resources Grid */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8">"
@@ -530,21 +512,11 @@ const Resources: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -568,32 +540,17 @@ const Resources: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}"
@@ -648,8 +605,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                       </div>;
                     </div>
                   </div>
-                </motion.article>;
-              )})}
+                </motion.article>;) }) }
           </div>
         </div>
 
@@ -662,21 +618,11 @@ const Resources: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -702,32 +648,17 @@ const Resources: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.6,
   delay: index * 0.05 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}"
@@ -750,8 +681,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                       <span className="text-gray-500 text-xs">
                         {item.readTime || item.duration}
                       </span>
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
                 "
                 <div className="flex items-center justify-between">"
@@ -760,8 +690,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                   </span>"
                   <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -775,21 +704,11 @@ const Resources: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -814,32 +733,17 @@ const Resources: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}"
@@ -864,8 +768,7 @@ const Resources: React.FC = (): JSX.Element => {;'
                   Access Resource"
                   <ExternalLink className="w-4 h-4" />
                 </Link>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -879,21 +782,11 @@ const Resources: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -967,7 +860,6 @@ const Resources: React.FC = (): JSX.Element => {;'
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

@@ -1,3 +1,4 @@
+import React from 'react';
 
 import type { NextPage } from 'next';'
 import Head from 'next/head';'
@@ -162,7 +163,7 @@ import { motion } from 'framer-motion';
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {contactMethods.map((method, index) => (
+            {contactMethods.map((method, index (
               <motion.div
                 key={method.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -304,7 +305,7 @@ import { motion } from 'framer-motion';
                   className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >"
                   <option value="">Select a service</option>
-                  {services.map((service) => (
+                  {services.map(service: unknown (
                     <option key={service} value={service}>{service}</option>
                   ))}
                 </select>
@@ -323,7 +324,7 @@ import { motion } from 'framer-motion';
                   className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >"
                   <option value="">Select budget range</option>
-                  {budgets.map((budget) => (
+                  {budgets.map(budget: unknown (
                     <option key={budget} value={budget}>{budget}</option>
                   ))}
                 </select>
@@ -343,7 +344,7 @@ import { motion } from 'framer-motion';
                 className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >"
                 <option value="">Select timeline</option>
-                {timelines.map((timeline) => (
+                {timelines.map(timeline: unknown (
                   <option key={timeline} value={timeline}>{timeline}</option>
                 ))}
               </select>
@@ -444,7 +445,8 @@ import { motion } from 'framer-motion';
     </div>
   );
 };
-
+;
+export { Contact };
 export default Contact;
 
 '"

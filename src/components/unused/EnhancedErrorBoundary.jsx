@@ -222,6 +222,7 @@ class EnhancedErrorBoundary extends Component {
 
   return children;
 };
-
+;
+export { EnhancedErrorBoundary };
 export default EnhancedErrorBoundary;
 }}}}}}}}}}}}}'"`

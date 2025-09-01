@@ -1,7 +1,7 @@
 import React from 'react';'
 import SEO from '../../components/SEO';'
 import { motion } from 'framer-motion';
-import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = () => {
+import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = props {
   const features = [
     {
 
@@ -166,7 +166,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
           </motion.div>
 "
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -253,7 +253,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
           </motion.div>
 "
           <div className="grid md:grid-cols-2 gap-8">
-            {applications.map((application, index) => (
+            {applications.map(application: unknown, index: unknown (
               <motion.div
                 key={application.title}
                 initial = {

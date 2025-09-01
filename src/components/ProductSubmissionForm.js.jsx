@@ -58,8 +58,8 @@ export function ProductSubmissionForm() {
             form.setValue("image", file);
             const reader = new FileReader();
             reader.onloadend = () => {
-                setImagePreview(reader.result)};
-            reader.readAsDataURL(file)}
+                setImagePreview (reader.result) };
+            reader.readAsDataURL (file) }
     };
     const handleVideoChange = (e) => {
 
@@ -75,7 +75,7 @@ export function ProductSubmissionForm() {
 "
             form.setValue("model", file)}
     };
-    // Apply AI-generated content to the form
+    // Apply AI - generated content to the form
     const handleApplyGenerated = (content) => {
 "
         form.setValue("description", content.description);"
@@ -96,7 +96,7 @@ export function ProductSubmissionForm() {
                 description: "You must be logged in to publish products","
                 variant: "destructive"});
             return}
-        setIsSubmitting(true);
+        setIsSubmitting (true) ;
         try {
             // Create the product listing
             const productData = {
@@ -106,7 +106,7 @@ export function ProductSubmissionForm() {
                 price: parseFloat(values.price),
                 category: values.category,"
                 currency: "USD", // Default currency
-                tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) [],;
+                tags: values.tags ? values.tags.split (',') .map (tag => tag.trim () ) [],;
                 author: {
 "
                     name: user.displayName || "Anonymous Creator",
@@ -224,8 +224,7 @@ export function ProductSubmissionForm() {
                   <FormControl>"
                     <Input placeholder="Enter product title" {...field}/>
                   </FormControl>
-                  <FormDescription>
-                    Create a compelling title that describes your product
+                  <FormDescription > Create a compelling title that describes your product
                   </FormDescription>
                   <FormMessage />
                 </FormItem>)}/>
@@ -247,8 +246,7 @@ export function ProductSubmissionForm() {
                     <FormControl>"
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field}/>
                     </FormControl>
-                    <FormDescription>
-                      Set your price in USD
+                    <FormDescription > Set your price in USD
                     </FormDescription>
                     <FormMessage />
                   </FormItem>)}/>
@@ -267,7 +265,7 @@ export function ProductSubmissionForm() {
                       </select>
                     </FormControl>
                     <FormMessage />
-                  </FormItem>)}/>
+                  </FormItem>) }/>
             </div>
 "
             <FormField control={form.control} name="tags" render={({ field }) => (<FormItem>
@@ -275,9 +273,7 @@ export function ProductSubmissionForm() {
                   <FormControl>"
                     <Input placeholder="Enter tags separated by commas" {...field}/>
                   </FormControl>
-                  <FormDescription>
-                    Add relevant tags to help users find your product (e.g., ai, productivity, design)
-                  </FormDescription>
+                  <FormDescription > Add relevant tags to help users find your product (e.g., ai, productivity, design) </FormDescription>
                   <FormMessage />
                 </FormItem>)}/>
 "
@@ -286,9 +282,7 @@ export function ProductSubmissionForm() {
                   <FormControl>"
                     <Input type="file" accept="image/*" onChange={handleImageChange} className="cursor-pointer"/>
                   </FormControl>
-                  <FormDescription>
-                    Upload a high-quality image of your product (recommended size: 1200x800px)
-                  </FormDescription>
+                  <FormDescription > Upload a high - quality image of your product (recommended size: 1200x800px) </FormDescription>
                   <FormMessage />
                   "
                   {imagePreview && (<div className="mt-2 w-full max-w-md border rounded overflow-hidden">
@@ -303,8 +297,7 @@ export function ProductSubmissionForm() {
                   <FormControl>"
                     <Input type="file" accept="video/mp4" onChange={handleVideoChange} className="cursor-pointer"/>
                   </FormControl>
-                  <FormDescription>
-                    Optional video demonstrating your product
+                  <FormDescription > Optional video demonstrating your product
                   </FormDescription>
                   <FormMessage />
                 </FormItem>)}/>
@@ -319,8 +312,7 @@ export function ProductSubmissionForm() {
 "
 } className="cursor-pointer"/>
                   </FormControl>
-                  <FormDescription>
-                    Upload a 3D model for interactive viewing
+                  <FormDescription > Upload a 3D model for interactive viewing
                   </FormDescription>
                   <FormMessage />
                 </FormItem>)}/>

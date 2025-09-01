@@ -17,7 +17,7 @@ const SidebarProvider({ children }) {
 
 }}>
       {children}
-    </SidebarContext.Provider>)}
+    </SidebarContext.Provider>)};
 export function useSidebar() {
     const context = useContext(SidebarContext);
     if (context === null) {

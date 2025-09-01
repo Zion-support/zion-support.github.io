@@ -295,8 +295,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
                       {link.description}
                     </p>
                   </Link>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>
@@ -408,8 +407,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
                               <li key={featureIndex} className="text-blue-300 text-sm flex items-center">"
                                 <span className="text-green-400 mr-2">✓</span>
                                 {feature}
-                              </li>
-                            ))}
+                              </li>) ) }
                           </ul>
                         </div>
                         
@@ -419,11 +417,9 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
                         >
                           Learn More
                         </Link>
-                      </motion.div>
-                    ))}
+                      </motion.div>) ) }
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>

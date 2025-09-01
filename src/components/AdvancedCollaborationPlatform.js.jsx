@@ -41,7 +41,7 @@ export function AdvancedCollaborationPlatform() {
         setIsScreenSharing(!isScreenSharing);'
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isScreenSharing: !isScreenSharing } : p))};
     const toggleRecording = () => {
-        setIsRecording(!isRecording)};
+        setIsRecording (!isRecording) };
     const sendChatMessage = () => {
         if (chatMessage.trim()) {
 
@@ -54,7 +54,6 @@ export function AdvancedCollaborationPlatform() {
                 timestamp: new Date().toISOString(),'
                 type: 'text',
   reactions[];
-            
 
 };
             setChatMessages(prev => [...prev, newMessage]);'
@@ -171,7 +170,7 @@ export function AdvancedCollaborationPlatform() {
                       {participant.isScreenSharing && <Monitor className="w-3 h-3"/>}"
                       {participant.hasRaisedHand && <Hand className="w-3 h-3 text-yellow-500"/>}
                     </div>
-                  </div>))}
+                  </div>) ) }
               </div>
             </div>
 
@@ -192,7 +191,7 @@ export function AdvancedCollaborationPlatform() {
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>"
                       <Icon className="w-4 h-4"/>
                       {tab.label}
-                    </button>)})}
+                    </button>) }) }
               </div>
 
               {/* Tab Content */}"
@@ -248,9 +247,9 @@ export function AdvancedCollaborationPlatform() {
                           {message.reactions.length > 0 && (<div className="flex gap-1 mt-2">"
                               {message.reactions.map((reaction, index) => (<span key={index} className="px-2 py-1 bg-white dark:bg-zion-slate rounded-full text-xs">
                                   {reaction.emoji} {reaction.count}
-                                </span>))}
-                            </div>)}
-                        </div>))}
+                                </span>) ) }
+                            </div>) }
+                        </div>) ) }
                     </div>
                     "
                     <div className="flex gap-2">'"
@@ -285,7 +284,7 @@ export function AdvancedCollaborationPlatform() {
                               <MoreVertical className="w-4 h-4 text-zion-slate-light"/>
                             </button>
                           </div>
-                        </div>))}
+                        </div>) ) }
                     </div>
                   </div>)}
 '"
@@ -313,9 +312,9 @@ export function AdvancedCollaborationPlatform() {
                     participant.status === 'away' ? 'bg-yellow-500' : 'bg-red-500'}`}/>
                             </div>
                           </div>
-                        </div>))}
+                        </div>) ) }
                     </div>
-                  </div>)}
+                  </div>) }
               </div>
             </div>
           </div>

@@ -90,7 +90,7 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
                   <span>{t("general.explore")}</span>'`
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`}/>
                 </div>
-              </Link>))}
+              </Link>) ) }
           </div>
         </div>
       </section>

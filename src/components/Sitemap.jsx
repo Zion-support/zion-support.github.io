@@ -67,7 +67,7 @@ const Sitemap = () => {
                     <div className="font-medium text-slate-900">{item.label}</div>"
                     <div className="text-sm text-slate-600">{item.description}</div>
                   </Link>
-                </li>))}
+                </li>) ) }
             </ul>
           </div>
 
@@ -80,7 +80,7 @@ const Sitemap = () => {
                     <div className="font-medium text-slate-900">{item.label}</div>"
                     <div className="text-sm text-slate-600">{item.description}</div>
                   </Link>
-                </li>))}
+                </li>) ) }
             </ul>
           </div>
 
@@ -93,7 +93,7 @@ const Sitemap = () => {
                     <div className="font-medium text-slate-900">{item.label}</div>"
                     <div className="text-sm text-slate-600">{item.description}</div>
                   </Link>
-                </li>))}
+                </li>) ) }
             </ul>
           </div>
 
@@ -112,7 +112,7 @@ const Sitemap = () => {
                     <div className="font-medium text-slate-900">{item.label}</div>"
                     <div className="text-sm text-slate-600">{item.description}</div>
                   </Link>
-                </li>))}
+                </li>) ) }
             </ul>
           </div>
 

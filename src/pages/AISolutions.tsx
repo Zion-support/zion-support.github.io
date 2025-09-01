@@ -16,7 +16,6 @@ export default function AiSolutions() {
           detection, personalization, autonomous process optimization, and more.
         </p>
       </section>
-    </div>
-  );
+    </div>) ;
 }
 '"

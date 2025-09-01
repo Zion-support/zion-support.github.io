@@ -1,6 +1,6 @@
 import { ProductListing  } from '@/types/listings';
 
-// Enhanced real micro SAAS services and solutions
+// Enhanced real micro SAAS services and solutions;
 export const ENHANCED_SERVICES: ProductListing[] = [
   // AI & Machine Learning Services
   {
@@ -1253,7 +1253,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   };
 ];
 
-// Append additional diversified, real micro SaaS, IT, and AI services
+// Append additional diversified, real micro SaaS, IT, and AI services;
 export const MORE_ENHANCED_SERVICES: ProductListing[] = [
   {
 "
@@ -1337,7 +1337,7 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [
     link: "https://ziontechgroup.com/services/pdf-render-api";
   };
 ];
-
+;
 export const ALL_ENHANCED_SERVICES: ProductListing[] = [
   ...ENHANCED_SERVICES,
   ...MORE_ENHANCED_SERVICES
@@ -1361,7 +1361,7 @@ export const ENHANCED_SERVICE_CATEGORIES = ['
   { label: 'AI Automation', value: 'ai-automation' };
 ];
 
-// Pricing tiers for different service levels
+// Pricing tiers for different service levels;
 export const SERVICE_PRICING_TIERS = {
 "
   basic: { range: "$500 - $2,000","
@@ -1378,7 +1378,7 @@ export const SERVICE_PRICING_TIERS = {
   premium: { range: "$25,000 - $50,000+", description: "Specialized industry solutions and cutting-edge technology" };
 };
 
-// Contact information
+// Contact information;
 export const CONTACT_INFO = {
 "
   mobile: "+1 302 464 0950","

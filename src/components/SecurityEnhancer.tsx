@@ -36,6 +36,7 @@ import {
   ChevronDown} from 'lucide-react';
 
 interface SecurityStatus {
+
   csp: boolean;
   hsts: boolean;
   xss: boolean;
@@ -43,6 +44,7 @@ interface SecurityStatus {
   contentType: boolean;
   referrerPolicy: boolean;
   permissionsPolicy: boolean;
+
 }
 
 interface SecurityEvent {
@@ -53,16 +55,17 @@ interface SecurityEvent {
   source: string;'
   severity: 'low' | 'medium' | 'high' | 'critical';
   details?: string;
+
 }
 
 interface SecurityMetrics {
+
   totalRequests: number;
   blockedRequests: number;
   suspiciousActivity: number;
   lastScan: Date;
   vulnerabilities: number;
   complianceScore: number;
-}
 
 export function SecurityEnhancer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -78,16 +81,16 @@ export function SecurityEnhancer() {
   const [searchTerm, setSearchTerm] = useState('');
 
   // Initialize security monitoring
-  useEffect(() => {
+  useEffect ( () => {
     if (isVisible) {
 
       initializeSecurityMonitoring();
       runSecurityScan();
     }
-  }, [isVisible]);
+  }, [isVisible]) ;
 
   // Initialize security monitoring
-  const initializeSecurityMonitoring = useCallback(() => {
+  const initializeSecurityMonitoring = useCallback ( () => {
     // Set up security headers
     setSecurityHeaders();
 
@@ -150,12 +153,12 @@ export function SecurityEnhancer() {
       const metaTag = document.createElement('meta');
       metaTag.name = tag.name;
       metaTag.content = tag.content;
-      document.head.appendChild(metaTag);
-    });
-  }, []);
+      document.head.appendChild (metaTag) ;
+    }) ;
+  }, []) ;
 
   // Setup security event listeners
-  const setupSecurityEventListeners = useCallback(() => {
+  const setupSecurityEventListeners = useCallback ( () => {
     // Monitor for potential XSS attempts
     const originalInnerHTML = Element.prototype.innerHTML;
     Element.prototype.innerHTML = function (value: string) {
@@ -172,7 +175,7 @@ export function SecurityEnhancer() {
           'medium'
         );
       }
-      return originalInnerHTML.call(this, value);
+      return originalInnerHTML.call (this, value) ;
     };
 
     // Monitor for suspicious network requests
@@ -190,7 +193,7 @@ export function SecurityEnhancer() {
         );'
         return Promise.reject(new Error('Suspicious request blocked'));
       }
-      return originalFetch.call(this, input, init);
+      return originalFetch.call (this, input, init) ;
     };
 
     // Monitor for console access attempts
@@ -208,9 +211,9 @@ export function SecurityEnhancer() {
           'medium'
         );
       }
-      return originalConsoleLog.apply(this, args);
+      return originalConsoleLog.apply (this, args) ;
     };
-  }, []);
+  }, []) ;
 
   // Log security events
   const logSecurityEvent = useCallback()
@@ -231,7 +234,7 @@ export function SecurityEnhancer() {
   );
 
   // Check security status
-  const checkSecurityStatus = useCallback(() => {
+  const checkSecurityStatus = useCallback ( () => {
     try {
       const status: SecurityStatus = {
 
@@ -256,7 +259,7 @@ export function SecurityEnhancer() {
 '
       // console.error('Failed to check security status:', error);
     }
-  }, []);
+  }, []) ;
 
   // Run security scan
   const runSecurityScan = useCallback(async () => {
@@ -296,7 +299,7 @@ export function SecurityEnhancer() {
 
       setIsScanning(false);
     }
-  }, [logSecurityEvent]);
+  }, [logSecurityEvent]) ;
 
   // Filter events
   const filteredEvents = securityEvents.filter(event => {
@@ -307,7 +310,7 @@ export function SecurityEnhancer() {
     const matchesFilter =
       activeFilters.length === 0 || activeFilters.includes(event.type);
     return matchesSearch && matchesFilter;
-  });
+  }) ;
 
   // Get status icon
   const getStatusIcon = (status: boolean) => {
@@ -371,8 +374,7 @@ export function SecurityEnhancer() {
 
       {/* Security Panel */}
       <AnimatePresence>
-        {isVisible && (
-          <motion.div
+        {isVisible && (<motion.div
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}"
@@ -440,8 +442,7 @@ export function SecurityEnhancer() {
                       </div>
                     ))}
                   </div>
-                </div>
-              )}
+                </div>) }
 
               {/* Security Metrics */}
               {securityMetrics && ("
@@ -483,8 +484,7 @@ export function SecurityEnhancer() {
                       </p>
                     </div>
                   </div>
-                </div>
-              )}
+                </div>) }
 
               {/* Security Events */}"
               <div className="mb-6">"
@@ -532,8 +532,7 @@ export function SecurityEnhancer() {
                         }`}
                       >
                         {type}
-                      </button>
-                    ))}
+                      </button>) ) }
                   </div>
                   <input"
                     type="text""
@@ -572,8 +571,7 @@ export function SecurityEnhancer() {
                             {event.details && ("
                               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
                                 {event.details}
-                              </p>
-                            )}
+                              </p>) }
                           </div>
                         </div>
                       </div>
@@ -581,8 +579,7 @@ export function SecurityEnhancer() {
                   ) : ("
                     <div className="text-center py-4 text-gray-500 dark:text-gray-400">
                       No events found
-                    </div>
-                  )}
+                    </div>) }
                 </div>
               </div>
 
@@ -625,14 +622,13 @@ export function SecurityEnhancer() {
                 <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                   <p>• Keep your browser and extensions updated</p>
                   <p>• Use strong, unique passwords for each account</p>
-                  <p>• Enable two-factor authentication when available</p>
+                  <p>• Enable two - factor authentication when available</p>
                   <p>• Be cautious of suspicious links and downloads</p>
                   <p>• Regularly review your security settings</p>
                 </div>
               </div>
             </div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
     </>
   );

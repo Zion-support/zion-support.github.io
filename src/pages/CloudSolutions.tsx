@@ -104,10 +104,6 @@ export default function CloudSolutions(...args[]):  {
   hidden: { opacity: 0,
   y: 20 
 
-
-
-
-
 ;
 },;
     visible: {
@@ -133,21 +129,11 @@ export default function CloudSolutions(...args[]):  {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -170,32 +156,17 @@ export default function CloudSolutions(...args[]):  {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.8,
   delay: 0.3 
-
-
-
-
-
 
 }}
             >
@@ -230,21 +201,11 @@ export default function CloudSolutions(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -266,7 +227,7 @@ export default function CloudSolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {cloudServices.map((service, index) => (;
+            {cloudServices.map ( (service, index) => (;
               <motion.div
                 key={index}"
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -275,11 +236,6 @@ export default function CloudSolutions(...args[]):  {
 
   { y: -5,
   scale: 1.02 
-
-
-
-
-
 
 }}
               >"
@@ -295,11 +251,9 @@ export default function CloudSolutions(...args[]):  {
                     <li key={featureIndex} className="flex items-center gap-3 text-zion-slate-light text-sm">"
                       <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                       {feature}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -314,21 +268,11 @@ export default function CloudSolutions(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -350,7 +294,7 @@ export default function CloudSolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {benefits.map((benefit, index) => (;
+            {benefits.map ( (benefit, index) => (;
               <motion.div
                 key={index}"
                 className="text-center"
@@ -377,21 +321,11 @@ export default function CloudSolutions(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -413,7 +347,7 @@ export default function CloudSolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {technologies.map((tech, index) => (;
+            {technologies.map ( (tech, index) => (;
               <motion.div
                 key={index}"
                 className="text-center group"
@@ -440,21 +374,11 @@ export default function CloudSolutions(...args[]):  {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -477,7 +401,6 @@ export default function CloudSolutions(...args[]):  {
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"

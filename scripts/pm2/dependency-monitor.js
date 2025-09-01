@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
+;
 class DependencyMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -292,7 +292,7 @@ class DependencyMonitor {
 
 
 
-// Run the dependency monitor
+// Run the dependency monitor;
 const monitor = new DependencyMonitor();
 monitor.run().catch(error => {
   process.exit(1);

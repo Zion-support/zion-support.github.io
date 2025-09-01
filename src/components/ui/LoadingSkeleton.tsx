@@ -28,7 +28,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 
     return()
       <>
-        {Array.from({ length: anycount }).map((_, index)  => (
+        {Array.from({ length: anycount }).map(_: unknown, index: unknown (
           <motion.div
             key={index}`
             className={`animate-pulse ${baseClasses}`}
@@ -49,7 +49,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   
   return()
     <>
-      {Array.from({ length: count }).map((_, index)  => (
+      {Array.from({ length: count }).map(_: unknown, index: unknown (
         <div
           key={index}`
           className={`animate-pulse ${baseClasses}`}
@@ -127,7 +127,7 @@ export function TableSkeleton(...args: any[]): any {
         {Array.from({ length: rows }).map((_, rowIndex)  => ("
           <div key={rowIndex} className="px-6 py-4">"
             <div className="flex space-x-4">
-              {Array.from({ length: anycolumns }).map((_, colIndex)  => (
+              {Array.from({ length: anycolumns }).map(_: unknown, colIndex: unknown (
                 <Skeleton 
                   key={colIndex} '`
                   className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} 
@@ -181,7 +181,7 @@ export function GridSkeleton(...args: any[]): any {
 
   return()`
     <div className={`grid grid-cols-1 sm: anygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
-      {Array.from({ length: items }).map((_, index)  => (
+      {Array.from({ length: items }).map(_: unknown, index: unknown (
         <CardSkeleton 
           key={index} 
         />

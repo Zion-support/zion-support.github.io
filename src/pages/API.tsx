@@ -108,7 +108,7 @@ const api = axios.create({
 '
     baseURL: 'https://api.ziontechgroup.com/v1/cloud','
     headers: {'Authorization': 'Bearer YOUR_API_KEY'}
-});
+}) ;
 
 const createInstance = async () => {
 '
@@ -168,21 +168,11 @@ export default function API() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -225,21 +215,11 @@ export default function API() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -262,21 +242,11 @@ export default function API() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -312,21 +282,11 @@ export default function API() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -349,21 +309,11 @@ export default function API() {
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -415,21 +365,11 @@ export default function API() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -452,21 +392,11 @@ export default function API() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -494,8 +424,7 @@ export default function API() {
                     Docs
                   </button>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -509,21 +438,11 @@ export default function API() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -546,8 +465,7 @@ export default function API() {
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default API;

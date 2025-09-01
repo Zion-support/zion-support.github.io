@@ -223,6 +223,7 @@ const IoTServices = () => {
     </div>;
   );
 };
-
+;
+export { IoTServices };
 export default IoTServices;
 }}}'"

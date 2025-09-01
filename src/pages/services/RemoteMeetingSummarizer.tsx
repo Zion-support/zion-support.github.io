@@ -1,5 +1,5 @@
 import React from 'react.ts';
-
+;
 const RemoteMeetingSummarizer: React.FC = (): JSX.Element => {
 
   return()

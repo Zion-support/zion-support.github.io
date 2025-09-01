@@ -340,7 +340,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">"`
             <motion.div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>
           </div>
-        </div>)}
+        </div>) }
 
       {/* Form */}"
       <form onSubmit={handleSubmit} className="p-6 space-y-6">"
@@ -358,7 +358,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             </>) : (<>"
               <Send className="w-5 h-5"/>
               {submitText}
-            </>)}
+            </>) }
         </motion.button>
 
         {/* Form Status */}
@@ -382,7 +382,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
               <p className="text-sm text-red-600 dark:text-red-400">
                 Please fix the errors above before submitting the form.
               </p>
-            </motion.div>)}
+            </motion.div>) }
         </AnimatePresence>
       </form>
     </motion.div>)};

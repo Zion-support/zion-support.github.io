@@ -35,21 +35,11 @@ export function ContactSection(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ duration: 0.8 }}
@@ -72,32 +62,17 @@ export function ContactSection(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
               viewport={{ once: true }}"
@@ -120,21 +95,11 @@ export function ContactSection(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ duration: 0.8 }}
@@ -150,10 +115,8 @@ export function ContactSection(...args[]):  {
           </Link>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 }
-export default ContactSection;
 
 export default ContactSection;
 export default ContactSection;

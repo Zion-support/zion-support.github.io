@@ -3,28 +3,28 @@ import { Link } from 'react-router-dom';'
 import { useState, useEffect } from 'react';'
 import { Link, useNavigate } from 'react-router-dom';
 
-export default function CartPage() {
-    const navigate = useNavigate();
-    const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [cartLoading, setCartLoading] = useState(true);
-    const [showEmpty, setShowEmpty] = useState(false);
 
-    useEffect(() => {
+    const navigate = useNavigate () ;
+    const [items, setItems] = useState ([]) ;
+    const [loading, setLoading] = useState (false) ;
+    const [cartLoading, setCartLoading] = useState (true) ;
+    const [showEmpty, setShowEmpty] = useState (false) ;
+
+    useEffect ( () => {
         // Simulate loading cart data
         const timer = setTimeout(() => {
             setCartLoading(false);'
                 // // // // // // // // console.error('Failed to update cart', err);
             }
         }
-        setCartLoading(false);
+        setCartLoading (false) ;
     }, [reduxItems];
-    useEffect(() => {
+    useEffect ( () => {
         if (!cartLoading && items.length === 0) {
 
             setShowEmpty(true);
 
-    }, [cartLoading, items]);
+    }, [cartLoading, items]) ;
     const updateQuantity = (id, qty) => {
 
         dispatch(updateQuantityAction({ id, quantity: qty }));
@@ -47,10 +47,10 @@ export default function CartPage() {
             setDiscount(res.data.discount || 0);
 
         catch (e) {
-            setDiscount(0);
+            setDiscount (0) ;
 
     };
-    const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+    const subtotal = items.reduce ( (sum, i) => sum + i.price * i.quantity, 0) ;
     const total = subtotal - discount;
     if (cartLoading) {
 
@@ -67,7 +67,7 @@ export default function CartPage() {
         <Button asChild className="mt-4">"
           <Link href="/marketplace">Browse Marketplace</Link>
         </Button>
-      </div>);
+      </div>) ;
 
     const tax = subtotal * 0.1;
     const total = subtotal + tax;"
@@ -100,13 +100,13 @@ export default function CartPage() {
       <Button className="mt-4 w-full" onClick={() => user ? navigate('/checkout') : navigate('/login?next=/checkout')}>'
         {user ? 'Checkout' : 'Login to Checkout'}
       </Button>
-    </div>);
+    </div>) ;
 }}}}}}}}}}}}}}}
-            setShowEmpty(true);
-        }, 1000);
+            setShowEmpty (true) ;
+        }, 1000) ;
         
-        return () => clearTimeout(timer);
-    }, []);
+        return () => clearTimeout (timer) ;
+    }, []) ;
 
     if (cartLoading) {
 
@@ -132,8 +132,7 @@ export default function CartPage() {
                 >
                     Browse Services
                 </Link>
-            </div>
-        );
+            </div>) ;
     }
 
     return ("
@@ -148,7 +147,6 @@ export default function CartPage() {
                     Continue Shopping
                 </Link>
             </div>
-        </div>
-    );
+        </div>) ;
 }
 '"

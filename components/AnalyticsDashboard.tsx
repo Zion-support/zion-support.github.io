@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';'
 import { motion } from 'framer-motion';
 
 interface AnalyticsData {
+
   pageViews: number;
   uniqueVisitors: number;
   bounceRate: number;
   avgSessionDuration: number;
-  topPages: Array<{ path: string; views: number }>;
+  topPages: { path: string; views: number 
+}[];
   performance: {
 
     fcp: number;
@@ -32,9 +34,9 @@ export default function AnalyticsDashboard() {
     '7d'
   );
 
-  useEffect(() => {
+  useEffect(: unknown {
     // Simulate fetching analytics data
-    const fetchAnalytics = async () => {
+    const fetchAnalytics = async : unknown {
       setIsLoading(true);
       await new Promise(resolve => setTimeout(resolve, 1500));
 

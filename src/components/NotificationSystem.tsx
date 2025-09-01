@@ -70,26 +70,26 @@ enableSound:  true,;
     position,
     maxNotifications,
     defaultDuration
-  });
-  const [showSettings, setShowSettings] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [unreadCount, setUnreadCount] = useState(0);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  }) ;
+  const [showSettings, setShowSettings] = useState (false) ;
+  const [isOpen, setIsOpen] = useState (false) ;
+  const [unreadCount, setUnreadCount] = useState (0) ;
+  const audioRef = useRef < HTMLAudioElement | null> (null) ;
 
   // Initialize audio for notification sounds
-  useEffect(() => {
+  useEffect ( () => {
     if (settings.sound) {
 '
       audioRef.current = new Audio('/notification-sound.mp3'); // You can add a custom sound file
       audioRef.current.volume = 0.3};
-  }, [settings.sound]);
+  }, [settings.sound]) ;
 
   // Update unread count
-  useEffect(() => {
-    setUnreadCount(notifications.filter(n => !n.read).length)}, [notifications]);
+  useEffect ( () => {
+    setUnreadCount (notifications.filter (n => !n.read) .length) }, [notifications]) ;
 
-  // Auto-dismiss notifications
-  useEffect(() => {
+  // Auto - dismiss notifications
+  useEffect ( () => {
     if (!settings.autoDismiss) return;
 
     const timeouts: NodeJS.Timeout[] = [];
@@ -103,22 +103,22 @@ enableSound:  true,;
         }, notification.duration || settings.defaultDuration);
         timeouts.push(timeout);
       }
-    });
+    }) ;
 
     return () => {
-      timeouts.forEach(timeout => clearTimeout(timeout))}}, [notifications, settings.autoDismiss, settings.defaultDuration]);
+      timeouts.forEach (timeout => clearTimeout (timeout) ) }}, [notifications, settings.autoDismiss, settings.defaultDuration]) ;
 
   // Play notification sound'
         // // // // // // // // console.warn('Could not play notification sound:', error);
       }
     }
-  }, [settings.sound]);
+  }, [settings.sound]) ;
 
   // Trigger vibration'
         // // // // // // // // console.warn('Could not trigger vibration:', error);
       }
     }
-  }, [settings.vibration]);
+  }, [settings.vibration]) ;
 
   // Add notification'
   const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read'>)  => {
@@ -126,9 +126,7 @@ enableSound:  true,;
     const newNotification: Notification = {
 
   ...notification,
-  id: `notification-${Date.now()
-
-;
+  id: `notification-${Date.now () ;
 ;
 ;
 
@@ -139,18 +137,18 @@ enableSound:  true,;
       duration: notification.duration ?? settings.defaultDuration;
     };
 
-    setNotifications(prev = > {;
+    setNotifications (prev = > {;
       const updated = [newNotification, ...prev];
-      return updated.slice(0, settings.maxNotifications)});
+      return updated.slice (0, settings.maxNotifications) }) ;
 
     // Play sound and vibrate
-    playSound();
-    triggerVibration()}, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]);
+    playSound () ;
+    triggerVibration () }, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]) ;
 
   // Dismiss notification
-  const dismissNotification = useCallback((id: string) => {;
-    setNotifications(prev => prev.filter(n => n.id !== id));
-  }, []);
+  const dismissNotification = useCallback ( (id: string) => {;
+    setNotifications (prev => prev.filter (n => n.id !== id) ) ;
+  }, []) ;
 
   // Mark notification as read
   const markAsRead = useCallback((id: string) => {
@@ -161,18 +159,18 @@ enableSound:  true,;
   }, []);
 
   // Mark all as read
-  const markAllAsRead = useCallback(() => {;
-    setNotifications(prev => prev.map(n => ({ ...n, read: true })));
-  }, []);
+  const markAllAsRead = useCallback ( () => {;
+    setNotifications (prev => prev.map (n => ({ ...n, read: true }) ) ) ;
+  }, []) ;
 
   // Clear all notifications
-  const clearAll = useCallback(() => {;
-    setNotifications([]);
-  }, []);
+  const clearAll = useCallback ( () => {;
+    setNotifications ([]) ;
+  }, []) ;
 
   // Get notification icon
   const getNotificationIcon = (type: NotificationType, priority: string) => {;
-    const iconProps = { className: "w-5 h-5" };
+    const iconProps = { className: "w - 5 h - 5" };
 
     switch (type) {
 '
@@ -210,15 +208,14 @@ enableSound:  true,;
   };
 
   // Update settings
-  const updateSettings = useCallback((newSettings: Partial<NotificationSettings>) => {;
-    setSettings(prev => ({ ...prev, ...newSettings }));
-  }, []);
+  const updateSettings = useCallback ( (newSettings: Partial < NotificationSettings>) => {;
+    setSettings (prev => ({ ...prev, ...newSettings }) ) ;
+  }, []) ;
 
   // Expose addNotification method globally for external use
-  useEffect(() => {
-    (window as ).addNotification = addNotification;
+  useEffect ( () => { (window as) .addNotification = addNotification;
     return () => {
-      delete (window as ).addNotification}}, [addNotification]);
+      delete (window as) .addNotification}}, [addNotification]) ;
 
   return()
     <>
@@ -232,15 +229,13 @@ enableSound:  true,;
           <Bell className="w-6 h-6 text-zion-slate-dark" />
 
           {/* Unread count badge */}
-          {unreadCount > 0 && (
-            <motion.div
+          {unreadCount > 0 && (<motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}"
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center"
 '
               {unreadCount > 99 ? '99+' : unreadCount}
-            </motion.div>
-          )}
+            </motion.div>) }
         </button>
 
         {/* Settings button */}
@@ -255,28 +250,17 @@ enableSound:  true,;
 
       {/* Settings Panel */}
       <AnimatePresence>
-        {showSettings && (
-          <motion.div
+        {showSettings && (<motion.div
             initial = {
 
   { opacity: 0, scale: 0.9,
   y: -10 
-
-
-
-
-
 
 }}
             animate = {
 
   { opacity: 1, scale: 1,
   y: 0 
-
-
-
-
-
 
 }}
             exit = {
@@ -352,34 +336,22 @@ enableSound:  true,;
                 </button>
               </div>
             </div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
 
       {/* Notifications Panel */}
       <AnimatePresence>
-        {isOpen && (
-          <motion.div
+        {isOpen && (<motion.div
             initial = {
 
   { opacity: 0, scale: 0.9,
   y: -10 
-
-
-
-
-
 
 }}
             animate = {
 
   { opacity: 1, scale: 1,
   y: 0 
-
-
-
-
-
 
 }}
             exit = {
@@ -409,8 +381,7 @@ enableSound:  true,;
             {/* Notifications List */}"
             <div className="space-y-2 max-h-80 overflow-y-auto">
               <AnimatePresence>
-                {notifications.length === 0 ? (
-                  <motion.div
+                {notifications.length === 0 ? (<motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}"
                     className="text-center py-8 text-zion-slate/60"
@@ -428,32 +399,17 @@ enableSound:  true,;
   { opacity: 0,
   x: 50 
 
-
-
-
-
-
 }}
                       animate = {
 
   { opacity: 1,
   x: 0 
 
-
-
-
-
-
 }}
                       exit = {
 
   { opacity: 0, x: -50,
   height: 0 
-
-
-
-
-
 
 }}
                       layout
@@ -515,8 +471,7 @@ enableSound:  true,;
                                   className = "text-xs px-2 py-1 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded transition-colors"
                                 >
                                   {notification.action.label}
-                                </button>
-                              )}
+                                </button>) }
 
                               {!notification.read && (
                                 <button
@@ -524,19 +479,15 @@ enableSound:  true,;
                                   className="text-xs px-2 py-1 bg-zion-slate/10 hover:bg-zion-slate/20 text-zion-slate rounded transition-colors"
 
                                   Mark read
-                                </button>
-                              )}
+                                </button>) }
                             </div>
                           </div>
                         </div>
                       </div>
-                    </motion.div>
-                  ))
-                )}
+                    </motion.div>) ) ) }
               </AnimatePresence>
             </div>;
-          </motion.div>;
-        )};
+          </motion.div>;) };
       </AnimatePresence>;
     </>
   );
@@ -548,7 +499,7 @@ export const useNotifications = () => {;'
     if ((window as any).addNotification) {;
       (window as any).addNotification(notification);
     }
-  }, []);
+  }, []) ;
 
   return { addNotification }};
 
@@ -565,7 +516,6 @@ export const notificationUtils = {
         title,
         message,
   ...options
-      
 
 })};'
         priority: 'medium',;
@@ -574,10 +524,7 @@ export const notificationUtils = {
   ...options;
       ;
 
-
-
-
-});
+}) ;
     }
   },
 
@@ -592,7 +539,7 @@ export const notificationUtils = {
         message,'
         priority: 'medium',
         ...options
-      })}
+      }) }
   },
 
   error: (title: string, message: string, options?: Partial<Notification>)  => {
@@ -606,7 +553,7 @@ export const notificationUtils = {
         message,'
         priority: 'high',
         ...options
-      })}
+      }) }
   },
 
   info: (title: string, message: string, options?: Partial<Notification>)  => {
@@ -620,7 +567,7 @@ export const notificationUtils = {
         message,'
         priority: 'low',
         ...options
-      })}
+      }) }
   },
 
   achievement: (title: string, message: string, options?: Partial<Notification>)  => {
@@ -634,7 +581,7 @@ export const notificationUtils = {
         message,'
         priority: 'high',
         ...options
-      })}
+      }) }
   }
 };
 '"`

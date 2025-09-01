@@ -80,10 +80,10 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
 
   const getServicesByCategory = (categoryId: anystring)  => {;'
     if (categoryId === 'all') return ultimateZionServices2025;
-    return ultimateZionServices2025.filter(service => service.category === categoryId);
+    return ultimateZionServices2025.filter (service => service.category === categoryId) ;
   };
 
-  const selectedServices = getServicesByCategory(selectedCategory);
+  const selectedServices = getServicesByCategory (selectedCategory) ;
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -97,21 +97,11 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} 
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} 
             transition={{ duration: 0.6 }}
@@ -130,21 +120,11 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} 
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} 
             transition = {
@@ -152,15 +132,10 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
   { duration: 0.6,
   delay: 0.2 
 
-
-
-
-
-
 }}
           >
-            Leading the future with revolutionary quantum computing, AI-powered solutions, blockchain innovations, 
-            and cutting-edge technology services that transform industries and create unprecedented value.
+            Leading the future with revolutionary quantum computing, AI - powered solutions, blockchain innovations, 
+            and cutting - edge technology services that transform industries and create unprecedented value.
           </motion.p>
 
           {/* Comp Highlights */}
@@ -171,32 +146,17 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} 
             whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }} 
             transition = {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}
           >"
@@ -230,32 +190,17 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} 
             whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }} 
             transition = {
 
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
 
 }}
           >"
@@ -303,21 +248,11 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} 
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} 
             transition={{ duration: any0.6 }}
@@ -335,8 +270,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
               >"
                 <span className="mr-2 text-lg">{category.icon}</span>
                 {category.name}
-              </button>
-            ))}
+              </button>) ) }
           </motion.div>
         </div>
       </section>;
@@ -357,21 +291,11 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                   transition={{ duration: 0.6 }}
@@ -395,12 +319,10 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
                       </div>;
                     </div>;
                   </div>;
-                </motion.div>;
-              );
-            })()}
+                </motion.div>;) ;
+            }) () }
           </div>
-        </section>
-      )}
+        </section>) }
 
       {/* Services Grid */}"
       <section className = "py-20 px-4 sm:px-6 lg:px-8">"
@@ -412,21 +334,11 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -453,8 +365,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
             whileInView="visible" 
             viewport={{ once: anytrue }}
           >
-            {selectedServices.map((service, index)  => (
-              <motion.div 
+            {selectedServices.map ( (service, index) => (<motion.div 
                 key={service.id} 
                 variants = {
 
@@ -462,11 +373,6 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
 
                   hidden: { opacity: 0,
   y: 20 
-
-
-
-
-
 
 },
                   visible: {
@@ -536,8 +442,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
                       <div key={idx} className="flex items-center text-sm text-gray-300">"
                         <span className="text-green-400 mr-2">✓</span>
                         {benefit}
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
                 </div>
 
@@ -548,8 +453,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
                     {service.technology.slice(0, 4).map((tech, idx) => ("
                       <span key={idx} className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
                         {tech}
-                      </span>
-                    ))}
+                      </span>) ) }
                   </div>
                 </div>
 
@@ -562,8 +466,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
                         Market Size: {service.marketSize}
                       </p>
                     </div>
-                  </div>
-                )}
+                  </div>) }
 
                 {/* Trial and Setup */}"
                 <div className="flex justify-between items-center mb-6 text-sm">"
@@ -598,8 +501,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
                     </a>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -614,21 +516,11 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -651,13 +543,12 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;'
             <div className="mt-6 text-sm text-gray-400">
               <p>🌟 Trusted by Fortune 500 companies worldwide</p>
               <p>🔒 SOC 2 Type II certified • HIPAA compliant • GDPR ready</p>;
-              <p>🌍 Global support • 24/7 availability • Enterprise-grade security</p>;
+              <p>🌍 Global support • 24 / 7 availability • Enterprise - grade security</p>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default UltimateZionServicesMarketing;'"`

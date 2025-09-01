@@ -75,7 +75,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
     const matchesCategory ='
       selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  });
+  }) ;
 
   const sortedServices = [...filteredServices].sort((a, b) => {
 
@@ -98,7 +98,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
       default:
         return b.popular ? 1 : -1;
     }
-  });
+  }) ;
 
   const getCategoryIcon = (category: anystring) => {
 
@@ -252,8 +252,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
                     className="bg-slate-800 text-white"
                   >'
                     {category === 'all' ? 'All Categories' : category}
-                  </option>
-                ))}
+                  </option>) ) }
               </select>
             </div>
 
@@ -303,8 +302,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
                   {service.popular && ("
                     <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
                       Popular
-                    </span>
-                  )}
+                    </span>) }
                 </div>
 
                 {/* Title and Category */}"
@@ -383,8 +381,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
                       >"
                         <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
                         {benefit}
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
                 </div>
 
@@ -419,8 +416,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
                   </button>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </div>
 

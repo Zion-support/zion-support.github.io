@@ -18,8 +18,8 @@ export function ChatAssistantTrigger() {
                 body: JSON.stringify({
 "
                     messages[{ role: "user", content: message }];
-                }),;
-            });
+                }) ,;
+            }) ;
             if (!response.ok) {
 "
             // // // // // // // // console.error("Error in AI chat:", error);

@@ -163,7 +163,7 @@ export default function AIAutonomousVehiclePlatform() {
               </p>
             </div>"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {tiers.map((tier, index) => (
+              {tiers.map(tier: unknown, index: unknown (
                 <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 '
                   index === 1 ? 'border-blue-400/50 scale-105' : 'border-white/10'`

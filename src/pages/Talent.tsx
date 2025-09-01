@@ -723,7 +723,7 @@ export default function Talent() {
       );
     }
     return true;
-  });
+  }) ;
 
   const getCategoryColor = (category: string) => {
 
@@ -779,8 +779,7 @@ export default function Talent() {
             ? 'text-yellow-400 fill-current''
             : 'text-gray-400'`
         }`}
-      />
-    ));
+      />) ) ;
   };
 
   return()
@@ -1222,8 +1221,7 @@ export default function Talent() {
                           {talent.featured && ("
                             <span className="px-3 py-1 rounded-full text-xs font-medium bg-yellow-500/20 text-yellow-400">
                               Featured
-                            </span>
-                          )}
+                            </span>) }
                         </div>
 "
                         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-200 mb-2">
@@ -1295,10 +1293,8 @@ export default function Talent() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          )}
+                </motion.div>) ) }
+            </div>) }
         </div>
       </section>
 

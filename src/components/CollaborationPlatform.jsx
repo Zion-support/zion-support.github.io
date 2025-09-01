@@ -31,9 +31,9 @@ export function CollaborationPlatform() {
             setMeetingDuration(prev => prev + 1)}, 1000);
         return () => clearInterval(interval)}, []);
     const toggleMute = () => {
-        setLocalUser(prev => ({ ...prev, isMuted: !prev.isMuted }))};
+        setLocalUser (prev => ({ ...prev, isMuted: !prev.isMuted }) ) };
     const toggleRecording = () => {
-        setIsRecording(!isRecording)};
+        setIsRecording (!isRecording) };
     const sendMessage = () => {
         if (newMessage.trim()) {
 
@@ -61,7 +61,7 @@ export function CollaborationPlatform() {
         const secs = seconds % 60;'
         return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`};
     const toggleChat = () => {
-        setActiveChat(!activeChat)};
+        setActiveChat (!activeChat) };
     if (!isOpen) {
 
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-20 p-3 bg-zion-purple hover:bg-zion-purple-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Start Collaboration Session">"
@@ -199,7 +199,7 @@ export function CollaborationPlatform() {
                   <p className="text-zion-slate text-sm bg-zion-slate-light/10 p-2 rounded-lg">
                     {message.message}
                   </p>
-                </div>))}
+                </div>) ) }
             </div>
 "
             <div className="p-4 border-t border-zion-slate-light">"
@@ -210,7 +210,7 @@ export function CollaborationPlatform() {
                 </button>
               </div>
             </div>
-          </div>)}
+          </div>) }
       </div>
     </div>)}
 '"`

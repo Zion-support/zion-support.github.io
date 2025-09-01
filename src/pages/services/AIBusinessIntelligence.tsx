@@ -45,8 +45,8 @@ import {
   DollarSign,
   Lightbulb'
  } from 'lucide-react';
-
-const AIBusinessIntelligence: React.FC = () => {
+;
+const AIBusinessIntelligence: React.FC = props {
   const features = [
     {
 
@@ -130,8 +130,9 @@ const AIBusinessIntelligence: React.FC = () => {
       ],'
       cta: 'Contact Sales',
       popular: false
-
-export default function AIBusinessIntelligence() {
+;
+export { function };
+export default function AIBusinessIntelligence(...args: unknown[]): unknown {
   const features = [;
     {
 
@@ -414,7 +415,7 @@ export default function AIBusinessIntelligence() {
           </motion.div>;
           "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index 
               <motion.div
                 key={feature.title}
                 initial = {
@@ -476,7 +477,7 @@ export default function AIBusinessIntelligence() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -588,7 +589,7 @@ export default function AIBusinessIntelligence() {
             <div className="space-y-6">"
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>"
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (
+                {benefits.map(benefit: unknown, index: unknown (
                   <motion.div
                     key={index}
                     initial = {
@@ -717,7 +718,7 @@ export default function AIBusinessIntelligence() {
           </motion.div>;
           "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index)  => (
+            {useCases.map((useCase, index 
               <motion.div
                 key={useCase.industry}
                 initial = {
@@ -772,7 +773,7 @@ export default function AIBusinessIntelligence() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCase, index 
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
@@ -820,7 +821,7 @@ export default function AIBusinessIntelligence() {
           </div>
 "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <div key={index} className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
 '
                 plan.popular ? 'border-blue-500 ring-4 ring-blue-500/20' : 'border-gray-200'`
@@ -978,6 +979,6 @@ export default function AIBusinessIntelligence() {
                 Contact Sales
               </motion.button>
 };
-
+;
 export default AIBusinessIntelligence;
 '"`

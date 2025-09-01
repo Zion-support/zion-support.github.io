@@ -71,11 +71,6 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -121,11 +116,6 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -141,11 +131,6 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -178,11 +163,6 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -205,11 +185,6 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -238,7 +213,7 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
                     </ul>
                   </div>
                 </div>
-              </motion.button>))}
+              </motion.button>) ) }
           </div>
 
           {/* Provider Details */}
@@ -246,11 +221,6 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -283,7 +253,7 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
                   <ul className="space-y-2">"
                     {service.features.map((feature, idx) => (<li key={idx} className="text-xs text-gray-400">• {feature}</li>))}
                   </ul>
-                </div>))}
+                </div>) ) }
             </div>
           </motion.div>
         </div>
@@ -296,11 +266,6 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -324,11 +289,6 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -358,11 +318,6 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -402,11 +357,6 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -430,11 +380,6 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -457,11 +402,6 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 

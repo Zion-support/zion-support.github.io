@@ -33,7 +33,8 @@ import { Brain,
   Award,
   Lightbulb'
  } from 'lucide-react';
-
+;
+export { function };
 export default function AIEducationPlatform(...args[]):  {
 
   const features = [
@@ -233,7 +234,7 @@ export default function AIEducationPlatform(...args[]):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -319,7 +320,7 @@ export default function AIEducationPlatform(...args[]):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -405,7 +406,7 @@ export default function AIEducationPlatform(...args[]):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -491,7 +492,7 @@ export default function AIEducationPlatform(...args[]):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {

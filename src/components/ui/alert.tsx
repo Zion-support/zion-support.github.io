@@ -2,16 +2,27 @@ import React from 'react';'
 import { cn } from '../../lib/utils';
 
 interface AlertProps {
+  // Add your props here
+
+
   children: React.ReactNode;
   className?: string;
+
 }
 
 interface AlertTitleProps {
+  // Add your props here
+
+
   children: React.ReactNode;
   className?: string;
+
 }
 
 interface AlertDescriptionProps {
+  // Add your props here
+
+
   children: React.ReactNode;
   className?: string;
 }

@@ -11,8 +11,8 @@ function InterviewsContent() {
     useEffect(() => {
         // Modified to handle Promise<Interview[]> return type
         const loadInterviews = async () => {
-            await fetchInterviews()};
-        loadInterviews()}, []);
+            await fetchInterviews () };
+        loadInterviews () }, []) ;
     // Filter interviews based on status and date
     const now = new Date();
     const today = startOfDay(now);
@@ -36,10 +36,10 @@ function InterviewsContent() {
             if (!grouped[dateKey]) {
 
                 grouped[dateKey] = []}
-            grouped[dateKey].push(interview)});
+            grouped[dateKey].push (interview) }) ;
         return grouped};
-    const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
-    const pastGrouped = groupInterviewsByDate(pastInterviews);
+    const upcomingGrouped = groupInterviewsByDate (upcomingInterviews) ;
+    const pastGrouped = groupInterviewsByDate (pastInterviews) ;
     const renderInterviewGroups = (groupedInterviews) => {
 
         return Object.entries(groupedInterviews)
@@ -115,8 +115,7 @@ function InterviewsContent() {
         </Tabs>
       </main>
       
-    </>)}
-export default function Interviews() {
+    </>) }
     return (<ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>)}

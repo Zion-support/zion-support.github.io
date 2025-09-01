@@ -121,20 +121,20 @@ const AdvancedServicePortfolioDashboard = () => {
         const activeServices = portfolioData.filter(s => s.status === 'Active');
         const totalClients = portfolioData.reduce((sum, s) => sum + s.clientCount, 0);
         const avgPerformance = activeServices.length > 0
-            ? activeServices.reduce((sum, s) => sum + s.performance, 0) / activeServices.length
+            ? activeServices.reduce ( (sum, s) => sum + s.performance, 0) / activeServices.length
             : 0;
         const portfolioGrowth = portfolioData.length > 0
-            ? portfolioData.reduce((sum, s) => sum + s.growth, 0) / portfolioData.length
+            ? portfolioData.reduce ( (sum, s) => sum + s.growth, 0) / portfolioData.length
             : 0;
         return {
 
             totalServices: portfolioData.length,
             totalRevenue,
             activeClients: totalClients,
-            averagePerformance: Math.round(avgPerformance),
-            portfolioGrowth: Math.round(portfolioGrowth),
-            marketCoverage: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services
-        }}, [portfolioData]);
+            averagePerformance: Math.round (avgPerformance) ,
+            portfolioGrowth: Math.round (portfolioGrowth) ,
+            marketCoverage: Math.round ( (portfolioData.length / 50) * 100) // Assuming 50 total possible services
+        }}, [portfolioData]) ;
     const getStatusColor = (status) => {
 
         switch (status) {
@@ -190,11 +190,6 @@ const AdvancedServicePortfolioDashboard = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -232,11 +227,6 @@ const AdvancedServicePortfolioDashboard = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -352,11 +342,6 @@ const AdvancedServicePortfolioDashboard = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -425,11 +410,6 @@ const AdvancedServicePortfolioDashboard = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -474,11 +454,6 @@ const AdvancedServicePortfolioDashboard = () => {
 
   { opacity: 0,
   x: -20 
-
-
-
-
-
 
 }} animate = {
 
@@ -532,7 +507,7 @@ const AdvancedServicePortfolioDashboard = () => {
                           {service.marketDemand}
                         </Badge>
                       </td>
-                    </motion.tr>))}
+                    </motion.tr>) ) }
                 </tbody>
               </table>
             </div>
@@ -545,11 +520,6 @@ const AdvancedServicePortfolioDashboard = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -576,11 +546,6 @@ const AdvancedServicePortfolioDashboard = () => {
 
   { opacity: 0,
   x: -20 
-
-
-
-
-
 
 }} animate = {
 
@@ -611,7 +576,7 @@ const AdvancedServicePortfolioDashboard = () => {
                     </div>"
                     <span className="text-sm font-medium text-zion-slate-light">{category.count}</span>
                   </div>
-                </motion.div>))}
+                </motion.div>) ) }
             </div>
           </CardContent>
         </Card>
@@ -665,11 +630,6 @@ const AdvancedServicePortfolioDashboard = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 

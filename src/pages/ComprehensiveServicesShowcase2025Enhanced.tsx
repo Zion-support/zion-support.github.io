@@ -2,6 +2,8 @@ import React, { useState, useMemo } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { Helmet  } from 'react-helmet-async.ts';
 import { Search, 
+
+
     Filter, 
     TrendingUp, 
     Shield, 
@@ -43,7 +45,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
         { id: any'emerging-tech', name: 'Emerging Tech', icon: TrendingUp, count: comprehensiveServices2025Enhanced.filter(s  => s.category === 'emerging-tech').length }
     ];
 
-    const filteredServices = useMemo(() => {
+    const filteredServices = useMemo ( () => {
         let filtered = comprehensiveServices2025Enhanced;
 
         if (searchTerm) {
@@ -72,12 +74,12 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                 case 'popularity':
                     return b.trialDays - a.trialDays; // More trial days = more popular
                 default:
-                    return a.name.localeCompare(b.name);
+                    return a.name.localeCompare (b.name) ;
             }
-        });
+        }) ;
 
         return filtered;
-    }, [searchTerm, selectedCategory, sortBy]);
+    }, [searchTerm, selectedCategory, sortBy]) ;
 
     const getCategoryColor = (category: anystring)  => {
 
@@ -209,11 +211,8 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                                 onChange={(e) => setSelectedCategory(e.target.value)}"
                                 className="px-4 py-3 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-blue-500 focus:border-transparent"
                             >
-                                {categories.map(category  => (
-                                    <option key={category.id} value={category.id}>
-                                        {category.name} ({category.count})
-                                    </option>
-                                ))}
+                                {categories.map (category  => (<option key={category.id} value={category.id}>
+                                        {category.name} ({category.count}) </option>) ) }
                             </select>
                         </div>
 
@@ -298,8 +297,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                                                     <li key={idx} className="flex items-center space-x-2 text-sm text-gray-600">"
                                                         <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                                                         <span>{benefit}</span>
-                                                    </li>
-                                                ))}
+                                                    </li>) ) }
                                             </ul>
                                         </div>
 
@@ -326,10 +324,8 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                                             <ArrowRight className="w-4 h-4" />
                                         </a>
                                     </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    )}
+                                </motion.div>) ) }
+                        </div>) }
                 </div>
             </section>
 
@@ -387,7 +383,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                             <h3 className="text-lg font-semibold mb-4">Services</h3>"
                             <div className="space-y-2 text-sm text-gray-400">
                                 <p>• Micro SAAS Solutions</p>
-                                <p>• AI-Powered Services</p>
+                                <p>• AI - Powered Services</p>
                                 <p>• IT Infrastructure</p>
                                 <p>• Emerging Technologies</p>
                             </div>
@@ -398,8 +394,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
                     </div>
                 </div>
             </footer>
-        </div>
-    );
+        </div>) ;
 };
 
 export default ComprehensiveServicesShowcase2025Enhanced;'"`

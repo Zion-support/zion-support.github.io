@@ -38,6 +38,7 @@ const navigationItems = [
         description: 'Get in touch with us'
     }
 ];
+export { function };
 export default function FuturisticNavigation() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);

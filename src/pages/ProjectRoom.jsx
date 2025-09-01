@@ -19,7 +19,7 @@ export default function ProjectRoom() {
             isVideoEnabled: true,
             isMuted: false
 
-    ]);
+    ]) ;
     const startVideoCall = () => {
         setIsInCall(true);
         toast.success("Video call started", {
@@ -36,7 +36,7 @@ export default function ProjectRoom() {
         toast.info("Video call ended", {
 "
             description: "Call duration and participants will be logged"
-        })};
+        }) };
     const simulateUserJoining = () => {
         // This is just for demo purposes - in a real app, this would be handled by the video call service
         const mockUsers = ['
@@ -153,7 +153,7 @@ export default function ProjectRoom() {
                       <p>Recent calls:</p>
                       <p>No recent calls for this project</p>
                     </div>
-                  </div>)}
+                  </div>) }
               </CardContent>
             </Card>
           </TabsContent>

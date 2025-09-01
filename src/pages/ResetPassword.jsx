@@ -19,7 +19,7 @@ export default function ResetPasswordPage() {
             setError('Invalid or missing reset token.');
             // Consider redirecting to an error page or login page
 
-    }, [token]);
+    }, [token]) ;
     const handleSubmit = async (e) => {
 
         e.preventDefault();'
@@ -33,7 +33,7 @@ export default function ResetPasswordPage() {
 '
             setError('Password must be at least 8 characters long.');
             return}
-        setIsLoading(true);
+        setIsLoading (true) ;
         try {
             await resetPassword(token, password);'
             toast.success('Password has been reset successfully!');'
@@ -42,14 +42,14 @@ export default function ResetPasswordPage() {
         catch (err) {
             // Ensure err.message is a string.'
             const errorMessage = err instanceof Error ? err.message : 'Failed to reset password. Please try again.';
-            setError(errorMessage);
-            toast.error(errorMessage)}
+            setError (errorMessage) ;
+            toast.error (errorMessage) }
         finally {
 
             setIsLoading(false)}
     };
     if (error && !token) { // If token was invalid from the start
-        return (<div className="flex min-h-screen items-center justify-center p-4 text-red-500">
+        return (<div className="flex min - h-screen items - center justify - center p - 4 text - red - 500">
         <p>{error}</p>
       </div>)}"
     return (<div className="flex min-h-screen items-center justify-center p-4">"

@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const EnhancedHero = () => {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const [isPlaying, setIsPlaying] = useState(true);
-    const [isMuted, setIsMuted] = useState(false);
-    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+import { motion, AnimatePresence } from 'framer - motion';
+
+
+    const [currentSlide, setCurrentSlide] = useState (0) ;
+    const [isPlaying, setIsPlaying] = useState (true) ;
+    const [isMuted, setIsMuted] = useState (false) ;
+    const [isAutoPlaying, setIsAutoPlaying] = useState (true) ;
     const heroSlides = [
         {
 
@@ -40,24 +43,23 @@ import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const Enhanced
             icon: "☁️"
 
     ];
-    useEffect(() => {
-        if (!isAutoPlaying)
-            return;
-        const interval = setInterval(() => {
+    useEffect ( () => {
+        if (!isAutoPlaying) return;
+        const interval = setInterval ( () => {
             if (isPlaying) {
 
                 setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
         }, 5000);
         return () => clearInterval(interval)}, [isPlaying, isAutoPlaying, heroSlides.length]);
     const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % heroSlides.length)};
+        setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) };
     const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)};
+        setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length) };
     const goToSlide = (index) => {
 
         setCurrentSlide(index)};
     const toggleAutoPlay = () => {
-        setIsAutoPlaying(!isAutoPlaying);
+        setIsAutoPlaying (!isAutoPlaying) ;
         if (!isAutoPlaying) {
 
             setIsPlaying(true)}
@@ -77,20 +79,10 @@ import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const Enhanced
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -109,20 +101,10 @@ import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const Enhanced
   { scale: 0,
   rotate: -180 
 
-
-
-
-
-
 }} animate = {
 
   { scale: 1,
   rotate: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -144,20 +126,10 @@ import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const Enhanced
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -179,20 +151,10 @@ import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const Enhanced
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -214,20 +176,10 @@ import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const Enhanced
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -249,20 +201,10 @@ import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const Enhanced
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -281,11 +223,6 @@ import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const Enhanced
 
   { x: [0, 5,
   0] 
-
-
-
-
-
 
 }} transition = {
 

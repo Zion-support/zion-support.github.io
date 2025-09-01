@@ -7,7 +7,6 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: string;
   text?: string;
-}
 
 export default function LoadingSpinner({
 '
@@ -101,7 +100,7 @@ export function LoadingDots({
   return()`
     <div className={`flex flex-col items-center justify-center ${className}`}>"
       <div className="flex space-x-2">
-        {[0, 1, 2].map((index) => (
+        {[0: unknown, 1: unknown, 2].map((index: unknown (
           <motion.div
             key={index}`
             className={`${dotSizes[size]} ${color} rounded-full`}
@@ -150,7 +149,7 @@ export function LoadingSkeleton({
 
   return()`
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: lines }).map(_: unknown, index: unknown (
         <motion.div
           key={index}"
           className="h-4 bg-gray-300 rounded animate-pulse"
@@ -271,7 +270,7 @@ export function ContentPlaceholder({
     <div className={`${variants[variant]} ${className}`}>'
       {variant === 'card' ? (
         // Card placeholders
-        Array.from({ length: 6 }).map((_, index) => (
+        Array.from({ length: 6 }).map(_: unknown, index: unknown (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -286,7 +285,7 @@ export function ContentPlaceholder({
         ));'
       ) : variant === 'list' ? (
         // List placeholders
-        Array.from({ length: 5 }).map((_, index) => (
+        Array.from({ length: 5 }).map(_: unknown, index: unknown (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
@@ -300,7 +299,7 @@ export function ContentPlaceholder({
         ))'
       ) : variant === 'grid' ? (;
         // Grid placeholders
-        Array.from({ length: 8 }).map((_, index) => (
+        Array.from({ length: 8 }).map(_: unknown, index: unknown (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -314,7 +313,7 @@ export function ContentPlaceholder({
         ))
       ) : (;
         // Default placeholders
-        Array.from({ length: 4 }).map((_, index) => (
+        Array.from({ length: 4 }).map(_: unknown, index: unknown (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}
@@ -343,7 +342,7 @@ export function AppLoadingSpinner() {
         </div>
 
         {/* Floating icons */}
-        {icons.map((icon, index) => (
+        {icons.map((icon, index (
           <motion.div
             key={index}"
             className="absolute text-2xl"
@@ -393,7 +392,7 @@ export function AppLoadingSpinner() {
 
       {/* Progress dots */}"
       <div className="flex gap-2 mt-6">;
-        {[0, 1, 2].map((i) => (;
+        {[0, 1, 2].map(i: unknown (;
           <motion.div
             key={i}"
             className="w-2 h-2 bg-cyan-400 rounded-full"

@@ -62,7 +62,7 @@ import { Cpu,
   Umbrella,
   MapPin'
  } from 'lucide-react';
-
+;
 const EdgeComputingPlatform: React.FC = (): JSX.Element => {
 
   const features = [
@@ -340,7 +340,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
           </div>
           "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -404,7 +404,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
           </div>
           "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -467,7 +467,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
           </div>
           "
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -536,7 +536,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
           </div>
           "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {edgeLocations.map((location, index)  => (
+            {edgeLocations.map(location: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -606,7 +606,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
           </div>
           "
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {

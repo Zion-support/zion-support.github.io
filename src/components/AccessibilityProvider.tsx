@@ -4,22 +4,21 @@ import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react
 
 interface AccessibilityContextType {
   highContrast: boolean;
-  toggleHighContrast: ()  => void;
+  toggleHighContrast: () => void;
   reducedMotion: boolean;
-  toggleReducedMotion: ()  => void;
+  toggleReducedMotion: () => void;
   fontSize: number;
-  increaseFontSize: ()  => void;
-  decreaseFontSize: ()  => void;
-  resetFontSize: ()  => void;
+  increaseFontSize: () => void;
+  decreaseFontSize: () => void;
+  resetFontSize: () => void;
   showSkipLinks: boolean;
-  setShowSkipLinks: (show: boolean)  => void;
+  setShowSkipLinks: (show: boolean) => void;
   voiceNavigation: boolean;
-  toggleVoiceNavigation: ()  => void}
+  toggleVoiceNavigation: () => void}
 
-const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
+const AccessibilityContext = createContext < AccessibilityContextType | null> (null) ;
 
-export const useAccessibility = () => {;
-  const context = useContext(AccessibilityContext);
+  const context = useContext (AccessibilityContext) ;
   if (!context) {
 '
     throw new Error('useAccessibility must be used within an AccessibilityProvider')}
@@ -42,13 +41,13 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 '
     const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === 'true';
 
-    setHighContrast(savedHighContrast);
-    setReducedMotion(savedReducedMotion);
-    setFontSize(savedFontSize ? parseInt(savedFontSize) : 16);
-    setVoiceNavigation(savedVoiceNavigation)}, []);
+    setHighContrast (savedHighContrast) ;
+    setReducedMotion (savedReducedMotion) ;
+    setFontSize (savedFontSize ? parseInt (savedFontSize) : 16) ;
+    setVoiceNavigation (savedVoiceNavigation) }, []) ;
 
   // Apply accessibility settings to document
-  useEffect(() => {
+  useEffect ( () => {
     const root = document.documentElement;
 
     // Apply high contrast
@@ -66,7 +65,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       root.classList.remove('reduce-motion')}
 
     // Apply font size
-    root.style.fontSize = `${fontSize}px`}, [highContrast, reducedMotion, fontSize]);
+    root.style.fontSize = `${fontSize}px`}, [highContrast, reducedMotion, fontSize]) ;
 
   // Keyboard navigation support
   useEffect(() => {
@@ -83,19 +82,19 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
         increaseFontSize();
       }'
       if (event.altKey && event.key = == '-') {;
-        event.preventDefault();
-        decreaseFontSize()}
+        event.preventDefault () ;
+        decreaseFontSize () }
     };
 '
     document.addEventListener('keydown', handleKeyDown);'
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
-  const toggleHighContrast = () => {;
+  const toggleHighContrast = (...args: unknown[]): unknown => {;
     const newValue = !highContrast;
     setHighContrast(newValue);'
     localStorage.setItem('zion-high-contrast', newValue.toString())};
 
-  const toggleReducedMotion = () => {;
+  const toggleReducedMotion = (...args: unknown[]): unknown => {;
     const newValue = !reducedMotion;
     setReducedMotion(newValue);'
     localStorage.setItem('zion-reduced-motion', newValue.toString())};
@@ -114,7 +113,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     setFontSize(16);'
     localStorage.setItem('zion-font-size', '16')};
 
-  const toggleVoiceNavigation = () => {;
+  const toggleVoiceNavigation = (...args: unknown[]): unknown => {;
     const newValue = !voiceNavigation;
     setVoiceNavigation(newValue);'
     localStorage.setItem('zion-voice-navigation', newValue.toString())};
@@ -140,28 +139,17 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   ;
   ;
 
-
-
-
-
-
 };
 
   return()
     <AccessibilityContext.Provider value = {value}>
       {/* Skip Links */}
       <AnimatePresence>
-        {showSkipLinks && (
-          <motion.div
+        {showSkipLinks && (<motion.div
             initial = {
 
   { opacity: 0,
   y: -20 
-
-
-
-
-
 
 }}
             animate = {
@@ -169,21 +157,11 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
             exit = {
 
   { opacity: 0,
   y: -20 
-
-
-
-
-
 
 }}
             className="fixed top-0 left-0 right-0 z-50 bg-zion-cyan text-black p-4 text-center"
@@ -208,8 +186,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
                 Close
               </button>
             </div>;
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
 
       {/* Accessibility Controls */}"
@@ -219,11 +196,6 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   { opacity: 0,
   x: -20 
-
-
-
-
-
 
 }}
           animate = {
@@ -295,8 +267,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       </div>;
 ;
       {children};
-    </AccessibilityContext.Provider>;
-  );
+    </AccessibilityContext.Provider>;) ;
 };
 
 // Focus trap component for modals
@@ -308,7 +279,7 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
 
   const [focusedElement, setFocusedElement] = useState<HTMLElement | null>(null);
 
-  useEffect(() => {
+  useEffect ( () => {
     if (!isActive) return;
 
     const focusableElements = document.querySelectorAll(;'"
@@ -318,12 +289,12 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-          lastElement.focus()}
+          lastElement.focus () }
       } else {
 
         if (document.activeElement = == lastElement) {;
-          event.preventDefault();
-          firstElement.focus()}
+          event.preventDefault () ;
+          firstElement.focus () }
       }
     };
 '

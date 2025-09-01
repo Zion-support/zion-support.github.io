@@ -20,7 +20,6 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
             "addressRegion": "DE","
             "postalCode": "19709","
   "addressCountry": "US"
-        
 
 },"
         "contactPoint": {

@@ -79,10 +79,9 @@ const industries = ["
     { name: "Technology", projects: 150, countries: 25, satisfaction: "99%" },"
     { name: "Education", projects: 65, countries: 12, satisfaction: "96%" }
 ];
-export function GlobalPresenceSection() {
-    const [selectedOffice, setSelectedOffice] = useState(null);
-    const [selectedPartnership, setSelectedPartnership] = useState(null);
-    const [hoveredIndustry, setHoveredIndustry] = useState(null);
+    const [selectedOffice, setSelectedOffice] = useState (null) ;
+    const [selectedPartnership, setSelectedPartnership] = useState (null) ;
+    const [hoveredIndustry, setHoveredIndustry] = useState (null) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -94,17 +93,11 @@ export function GlobalPresenceSection() {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
 
-
     };
     const itemVariants = {
 
   hidden: { y: 30,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -133,11 +126,6 @@ export function GlobalPresenceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -164,20 +152,10 @@ export function GlobalPresenceSection() {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -205,20 +183,10 @@ export function GlobalPresenceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -241,20 +209,10 @@ export function GlobalPresenceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -303,7 +261,7 @@ export function GlobalPresenceSection() {
                     <div className="flex flex-wrap gap-1">"
                       {office.specialties.map((specialty, idx) => (<span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                           {specialty}
-                        </span>))}
+                        </span>) ) }
                     </div>
                   </div>
 
@@ -322,20 +280,10 @@ export function GlobalPresenceSection() {
   { opacity: 0, height: 0,
   y: 10 
 
-
-
-
-
-
 }} animate = {
 "
   { opacity: 1, height: "auto",
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -366,10 +314,10 @@ export function GlobalPresenceSection() {
                             <span>{office.rating} rating</span>
                           </div>
                         </div>
-                      </motion.div>)}
+                      </motion.div>) }
                   </AnimatePresence>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -379,20 +327,10 @@ export function GlobalPresenceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -415,20 +353,10 @@ export function GlobalPresenceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -477,20 +405,10 @@ export function GlobalPresenceSection() {
   { opacity: 0, height: 0,
   y: 10 
 
-
-
-
-
-
 }} animate = {
 "
   { opacity: 1, height: "auto",
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -507,10 +425,10 @@ export function GlobalPresenceSection() {
                           <CheckCircle className="w-4 h-4"/>
                           <span>Partnership Active</span>
                         </div>
-                      </motion.div>)}
+                      </motion.div>) }
                   </AnimatePresence>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -520,20 +438,10 @@ export function GlobalPresenceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -556,26 +464,18 @@ export function GlobalPresenceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.4,
   delay: index * 0.1 
 
+}} onHoverStart={ () => setHoveredIndustry (index) } onHoverEnd={ () => setHoveredIndustry (null) } whileHover={{ y: -4 }} className="p - 6 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 20">
+                <h4 className="text - xl font - bold text - white mb - 4">{industry.name}</h4>
 
 
 
@@ -598,7 +498,7 @@ export function GlobalPresenceSection() {
                     <div className="text-zion-slate-light text-xs">Satisfaction</div>
                   </div>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -608,20 +508,10 @@ export function GlobalPresenceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 

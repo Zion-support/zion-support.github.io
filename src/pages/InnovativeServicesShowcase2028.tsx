@@ -602,8 +602,7 @@ export default function InnovativeServicesShowcase2028() {
                   }`}
                 >
                   {category.name}
-                </button>
-              ))}
+                </button>) ) }
             </div>
           </div>
         </div>
@@ -645,8 +644,7 @@ export default function InnovativeServicesShowcase2028() {
                         }`}
                       >
                         {service.badge}
-                      </span>
-                    )}
+                      </span>) }
                   </div>
 
                   {/* Content */}"
@@ -688,8 +686,7 @@ export default function InnovativeServicesShowcase2028() {
                       >"
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
 
                   {/* Benefits */}"
@@ -704,8 +701,7 @@ export default function InnovativeServicesShowcase2028() {
                       >"
                         <TrendingUp className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {benefit}
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
 
                   {/* CTA */}
@@ -717,8 +713,7 @@ export default function InnovativeServicesShowcase2028() {
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -910,7 +905,6 @@ export default function InnovativeServicesShowcase2028() {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 }
 '"`

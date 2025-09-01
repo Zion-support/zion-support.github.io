@@ -37,7 +37,6 @@ const ServiceCard = ({ service, index, isVisible }) => {
                 x[0, Math.random() * 100 - 50],;
                 y[0, Math.random() * 100 - 50],;
                 opacity[0.6, 0.2, 0.6],;
-  
 
 }} transition = {
 
@@ -88,7 +87,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
               {service.features.slice(0, 6).map((feature, idx) => (<div key={idx} className="flex items-center space-x-2 text-xs text-gray-400">"
                   <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>"
                   <span className="truncate">{feature}</span>
-                </div>))}
+                </div>) ) }
             </div>
 
             {/* Benefits */}"
@@ -98,7 +97,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
                 {service.benefits.slice(0, 3).map((benefit, idx) => (<div key={idx} className="flex items-center space-x-2 text-xs text-gray-300">"
                     <div className="w-1 h-1 bg-green-400 rounded-full"></div>
                     <span>{benefit}</span>
-                  </div>))}
+                  </div>) ) }
               </div>
             </div>
 
@@ -123,9 +122,9 @@ const ServiceCard = ({ service, index, isVisible }) => {
                 <div className="flex flex-wrap gap-1">"
                   {service.technologyStack.slice(0, 4).map((tech, idx) => (<span key={idx} className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded border border-purple-500/30">
                       {tech}
-                    </span>))}
+                    </span>) ) }
                 </div>
-              </div>)}
+              </div>) }
 
             {/* Contact Info */}"
             <div className="mt-4 pt-4 border-t border-gray-700/50">"
@@ -219,7 +218,7 @@ export const FuturisticServicesShowcase = () => {
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30''`
                 : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20'}`}>'
                   {category === 'all' ? 'All Services' : category}
-                </button>))}
+                </button>) ) }
             </div>
           </div>
         </motion.div>
@@ -227,7 +226,7 @@ export const FuturisticServicesShowcase = () => {
         {/* Services Grid */}"
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           <AnimatePresence>
-            {filteredServices.map((service, index) => (<ServiceCard key={service.id} service={service} index={index} isVisible={visibleServices.has(index)}/>))}
+            {filteredServices.map ( (service, index) => (<ServiceCard key={service.id} service={service} index={index} isVisible={visibleServices.has (index) }/>) ) }
           </AnimatePresence>
         </div>
 

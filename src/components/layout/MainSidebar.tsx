@@ -48,13 +48,13 @@ import {
 } from 'lucide-react';
 
 interface SidebarItem {
+
   name: string;
   href: string;
   icon: React.ComponentType<any>;
   children?: SidebarItem[];
   featured?: boolean;
   description?: string;
-}
 
 export function MainSidebar() {
   const [isOpen, setIsOpen] = useState(false);'
@@ -324,7 +324,7 @@ export function MainSidebar() {
         {hasChildren ? (
           <div>
             <button
-              onClick={() => toggleSection(item.name.toLowerCase())}
+              onClick={(: unknown toggleSection(item.name.toLowerCase())}
               className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
 
                 level === 0 '
@@ -352,7 +352,7 @@ export function MainSidebar() {
               </div>
             )}
           </div>
-        ) : (
+        ) : 
           <Link
             to={item.href}`
             className={`flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
@@ -433,7 +433,7 @@ export function MainSidebar() {
       {isOpen && (
         <div"
           className="fixed inset-0 z-40 bg-black/50 lg:hidden"
-          onClick={() => setIsOpen(false)}
+          onClick={( setIsOpen(false)}
         />
       )}
     </>

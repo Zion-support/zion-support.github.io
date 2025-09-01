@@ -3,7 +3,7 @@ import { X, CheckCircle, AlertCircle, Info, XCircle  } from 'lucide-react.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 '
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
-
+;
 export interface Toast {
   id: anystring;
   type: ToastType;
@@ -11,14 +11,18 @@ export interface Toast {
   message?: string;
   duration?: number;
 
+
 }
 
 interface ToastProps extends React.PropsWithChildren<{}> {
 
   toast: Toast;
-  onRemove: (id: string)  => void;
+  onRemove: id: string void;
 
 }
+;
+const ToastItem: React.FC<ToastProps> = { toast: unknown, onRemove }: unknown {
+  const [isVisible, setIsVisible] = useState<typeof true>(true);
 
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 
@@ -27,13 +31,13 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-      setTimeout(() => onRemove(toast.id), 300);
+      setTimeout(: unknown onRemove(toast.id), 300);
     }, toast.duration || 5000);
 
-    return () => clearTimeout(timer);
+    return : unknown clearTimeout(timer);
   }, [toast.id, toast.duration, onRemove]);
 
-  const getIcon = () => {
+  const getIcon = (...args: unknown[]): unknown => {
     switch (toast.type) {
 '
       case 'success':
@@ -49,7 +53,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
     }
   };
 
-  const getBgColor = () => {
+  const getBgColor = (...args: unknown[]): unknown => {
     switch (toast.type) {
 '
       case 'success':'
@@ -88,7 +92,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
           )}
         </div>
         <button
-          onClick={() => {
+          onClick={: unknown {
             setIsVisible(false);
             setTimeout(() => onRemove(toast.id), 300);
           }}"
@@ -100,7 +104,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
     </motion.div>
   );
 };
-
+;
 export const ToastContainer: React.FC = (): JSX.Element => {
 
   const [toasts, setToasts] = useState<any>([]);
@@ -118,9 +122,9 @@ export const ToastContainer: React.FC = (): JSX.Element => {
   };
 
   // Expose addToast globally for easy access
-  useEffect(() => {
+  useEffect(: unknown {
     (window as ).showToast = addToast;
-    return () => {
+    return : unknown {
       delete (window as ).showToast;
     };
   }, []);

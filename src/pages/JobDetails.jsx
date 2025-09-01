@@ -13,12 +13,12 @@ import SEO from '@/components/SEO';'
 import { useWhitelabel } from '@/context/WhitelabelContext';
 export default function JobDetails() {
     // Cast to specify the expected route param type since useParams may be untyped
-    const { jobId } = useParams();
-    const { job, isLoading, error } = useJobDetails(jobId);
-    const { user, isAuthenticated } = useAuth();
-    const navigate = useNavigate();
-    const { isWhitelabel, brandName } = useWhitelabel();
-    const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+    const { jobId } = useParams () ;
+    const { job, isLoading, error } = useJobDetails (jobId) ;
+    const { user, isAuthenticated } = useAuth () ;
+    const navigate = useNavigate () ;
+    const { isWhitelabel, brandName } = useWhitelabel () ;
+    const [isApplyModalOpen, setIsApplyModalOpen] = useState (false) ;
     if (isLoading) {
 
         return (<div className="flex items-center justify-center min-h-screen">"
@@ -34,7 +34,7 @@ export default function JobDetails() {
           <Button onClick={() => router('/jobs')}>View All Jobs</Button>
         </div>
         
-      </>)}
+      </>) }
     const handleApply = () => {
         if (!isAuthenticated) {
 "
@@ -46,7 +46,7 @@ export default function JobDetails() {
 "
             toast.error("Only job seekers can apply for jobs");
             return}
-        setIsApplyModalOpen(true)};
+        setIsApplyModalOpen (true) };
     const handleApplySuccess = async (appliedJobId) => {
 "
         toast.success("Application submitted successfully!");
@@ -105,7 +105,7 @@ export default function JobDetails() {
                   <div className="flex flex-wrap gap-2">"
                     {job.skills?.map((skill, i) => (<Badge key={i} variant="secondary">
                         {skill}
-                      </Badge>))}
+                      </Badge>) ) }
                   </div>
                 </div>
               </CardContent>

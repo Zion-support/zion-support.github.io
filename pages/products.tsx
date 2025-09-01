@@ -254,12 +254,12 @@ const Products: NextPage = () => {;'
       {/* Category Filter */};"
       <div className="container mx-auto px-4 py-16">;"
         <div className="flex flex-wrap justify-center gap-4 mb-16">;
-          {productCategories.map((category) => {;
+          {productCategories.map(category: unknown {;
             const IconComponent = category.icon;
             return()
               <button
                 key = {category.id}
-                onClick={() => setActiveCategory(category.id)}
+                onClick={(: unknown setActiveCategory(category.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
 
                   activeCategory === category.id`
@@ -276,7 +276,7 @@ const Products: NextPage = () => {;'
 
         {/* Products Grid */}"
         <div className = "grid lg:grid-cols-2 gap-8">;
-          {filteredProducts.map((product) => {;
+          {filteredProducts.map(product: unknown {;
             const IconComponent = product.icon;
             return()
               <div

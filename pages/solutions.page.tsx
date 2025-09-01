@@ -33,7 +33,7 @@ import { Brain,
   Search,
   Filter'
  } from 'lucide-react';
-
+;
 const solutionCategories = [
   {
 '
@@ -132,7 +132,7 @@ const solutionCategories = [
     ];
   };
 ];
-
+;
 const industrySolutions = [
   {
 '
@@ -219,7 +219,7 @@ const industrySolutions = [
     color: 'from-gray-500 to-slate-600';
   };
 ];
-
+;
 const featuredSolutions = [
   {
 
@@ -297,7 +297,8 @@ const featuredSolutions = [
     color: 'from-blue-500 to-cyan-600';
   };
 ];
-
+;
+export { function };
 export default function Solutions(...args[]):  {
 '
   const [selectedCategory, setSelectedCategory] = useState('All');'
@@ -443,7 +444,7 @@ export default function Solutions(...args[]):  {
           </motion.div>;
 ;"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {solutionCategories.map((category, index) => {;
+            {solutionCategories.map(category: unknown, index: unknown {;
               const IconComponent = category.icon;
               return()
                 <motion.div
@@ -547,7 +548,7 @@ export default function Solutions(...args[]):  {
           </motion.div>;
 ;"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {industrySolutions.map((industry, index) => {;
+            {industrySolutions.map(industry: unknown, index: unknown {;
               const IconComponent = industry.icon;
               return()
                 <motion.div
@@ -651,7 +652,7 @@ export default function Solutions(...args[]):  {
           </motion.div>;
 ;"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {filteredSolutions.map((solution, index) => {;
+            {filteredSolutions.map(solution: unknown, index: unknown {;
               const IconComponent = solution.icon;
               return()
                 <motion.div

@@ -1,0 +1,16 @@
+import { render, screen } from '@testing - library / react';
+import React from 'react';
+import UltimateZionServicesShowcase from './UltimateZionServicesShowcase';
+
+
+describe ('UltimateZionServicesShowcase', () => {
+  it ('renders without crashing', () => {
+    render (<UltimateZionServicesShowcase />) ;
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
+  }) ;
+
+  it ('displays expected content', () => {
+    render (<UltimateZionServicesShowcase />) ;
+    // Add specific test assertions based on component content
+  }) ;
+}) ;

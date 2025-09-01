@@ -122,7 +122,6 @@ import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025';'
 import { INNOVATIVE_IT_INFRASTRUCTURE_2025 } from '../data/innovativeITInfrastructure2025';'
 import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBlockchainWeb3Services2025';
 
-export default function ComprehensivePricingGuide2027() {
   const serviceCategories = [
     {
 
@@ -413,8 +412,7 @@ export default function ComprehensivePricingGuide2027() {
               </p>
             </motion.div>
 
-            {serviceCategories.map((category, categoryIndex) => (
-              <motion.div
+            {serviceCategories.map ( (category, categoryIndex) => (<motion.div
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -463,8 +461,7 @@ export default function ComprehensivePricingGuide2027() {
                           <li key={idx} className="flex items-center text-zion-slate-300">"
                             <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                             {feature}
-                          </li>
-                        ))}
+                          </li>) ) }
                       </ul>
                       
                       <Link to={service.link}>
@@ -481,11 +478,9 @@ export default function ComprehensivePricingGuide2027() {
                           Learn More
                         </motion.button>
                       </Link>
-                    </motion.div>
-                  ))}
+                    </motion.div>) ) }
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </section>
 
@@ -544,8 +539,7 @@ export default function ComprehensivePricingGuide2027() {
                       <li key={idx} className="flex items-center text-zion-slate-300">"
                         <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
                         {feature}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                   
                   <motion.button
@@ -560,8 +554,7 @@ export default function ComprehensivePricingGuide2027() {
                   >
                     Get Started
                   </motion.button>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>
@@ -673,8 +666,7 @@ export default function ComprehensivePricingGuide2027() {
           </div>
         </section>
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default ComprehensivePricingGuide2027;

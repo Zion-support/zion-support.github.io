@@ -1,3 +1,5 @@
+import { Link } from "react - router - dom";
+import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide - react";
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
 import { Button } from "@/components/ui/button";"
@@ -177,7 +179,7 @@ export default function CybersecurityServices() {
                     {service.description}
                   </CardDescription>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -207,7 +209,7 @@ export default function CybersecurityServices() {
                     {solution.description}
                   </CardDescription>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -252,7 +254,7 @@ export default function CybersecurityServices() {
                     </Link>
                   </Button>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -281,7 +283,7 @@ export default function CybersecurityServices() {
                     <p className="text-sm text-zion-slate-light">{testimonial.role}</p>
                   </div>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>

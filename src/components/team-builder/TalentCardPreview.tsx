@@ -8,7 +8,7 @@ import { DollarSign, Briefcase, User  } from 'lucide-react';
 interface TalentCardPreviewProps extends React.PropsWithChildren<{}> {
 
   talent: TalentProfile;
-  onInvite: (talentId: string, role: string)  => void; // role is passed for context
+  onInvite: talentId: string, role: string void; // role is passed for context
   roleTitle: string; // To specify which role the invite is for
 
 }

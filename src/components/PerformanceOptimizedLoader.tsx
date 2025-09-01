@@ -29,11 +29,6 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
   lg: 'w-16 h-16';
   ;
 
-
-
-
-
-
 };
   const textSizes = {
 '

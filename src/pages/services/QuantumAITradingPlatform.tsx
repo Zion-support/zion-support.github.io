@@ -115,7 +115,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
 
         {/* Floating particles with neon glow */}"
         <div className="absolute inset-0">
-          {[...Array(25)].map((_, i) => (
+          {[...Array(25)].map(_: unknown, i: unknown (
             <motion.div
               key={i}"
               className="absolute w-1 h-1 bg-purple-400 rounded-full opacity-80 shadow-lg shadow-purple-400/50"

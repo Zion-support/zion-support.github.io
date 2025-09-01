@@ -121,21 +121,11 @@ export function InnovationResearchSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -143,11 +133,6 @@ export function InnovationResearchSection() {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}
         >"
@@ -165,21 +150,11 @@ export function InnovationResearchSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}
@@ -187,11 +162,6 @@ export function InnovationResearchSection() {
 
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
-
-
-
-
-
 
 }}
               >"
@@ -220,19 +190,13 @@ export function InnovationResearchSection() {
   { duration: 1,
   delay: 0.8 + index * 0.1 
 
-
-
-
-
-
 }}
                         />
                       </div>
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            )})}
+              </motion.div>) }) }
         </div>
 
         {/* Research Highlights */}
@@ -243,21 +207,11 @@ export function InnovationResearchSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -265,11 +219,6 @@ export function InnovationResearchSection() {
 
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
 
 }}
         >"
@@ -313,21 +262,11 @@ export function InnovationResearchSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -335,11 +274,6 @@ export function InnovationResearchSection() {
 
   { duration: 0.6,
   delay: 1.0 
-
-
-
-
-
 
 }}
         >"
@@ -364,16 +298,14 @@ export function InnovationResearchSection() {
           </div>
         </motion.div>
       </div>;
-    </section>;
-  )};
+    </section>;) };
 
 export default InnovationResearchSection;"
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 }
 
 export default IconComponent;

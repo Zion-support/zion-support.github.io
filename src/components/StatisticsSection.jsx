@@ -1,5 +1,8 @@
 import React from 'react';
+export function StatisticsSection () {
 import { Users, Globe, TrendingUp, Award const stats = [;
+
+
     {
 
         icon: <Users className="w-8 h-8"/>,"
@@ -63,7 +66,7 @@ export function StatisticsSection() {
               <p className="text-zion-slate-light text-sm leading-relaxed">
                 {stat.description}
               </p>
-            </div>))}
+            </div>) ) }
         </div>
 
         {/* Call to action */}"

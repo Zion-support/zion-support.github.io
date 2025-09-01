@@ -107,6 +107,7 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: '2023-12-13T11:25:00Z','
     category: 'profile'},
 ];
+export { function };
 export default function SupportRequests() {
 '
   const [searchQuery, setSearchQuery] = useState('');

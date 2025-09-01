@@ -23,12 +23,6 @@ const mockPost = {
         name: "Alex Johnson","
         avatar: "https://i.pravatar.cc/150?img=3","
   role: "Verified Talent"
-    
-
-
-
-
-
 
 },"
     authorId: "user1","
@@ -50,7 +44,7 @@ const mockPost = {
     authorAvatar: "https://i.pravatar.cc/150?img=3","
     authorRole: "Verified Talent"
 };
-// Mock data for replies
+// Mock data for replies;
 const mockReplies = [
     {
 "
@@ -146,7 +140,7 @@ export default function ForumPostPage() {
         <Button asChild className="mt-4">"
           <Link to="/community">Back to Community</Link>
         </Button>
-      </div>)}
+      </div>) }
     const handleUpvote = () => {
         if (!user) {
 
@@ -195,8 +189,8 @@ export default function ForumPostPage() {
                 avatar: user.avatarUrl || 'https://i.pravatar.cc/150?img=1','
                 role: user.role || 'user'
             },
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString(),
+            createdAt: new Date () .toISOString () ,
+            updatedAt: new Date () .toISOString () ,
             likes: 0,
             isSolution: false,
             isAnswer: false
@@ -217,7 +211,7 @@ export default function ForumPostPage() {
                 title: "Permission denied","
                 description: "Only the original poster or moderators can mark answers","
                 variant: "destructive"
-            });
+            }) ;
             return}
         // Update the replies
         const updatedReplies = replies.map(reply => ({
@@ -303,13 +297,13 @@ export default function ForumPostPage() {
               <div className="flex items-center gap-4">"
                 <Avatar className="h-12 w-12">
                   <AvatarImage src={post.authorAvatar}/>
-                  <AvatarFallback>{post.authorName.charAt(0)}</AvatarFallback>
+                  <AvatarFallback>{post.authorName.charAt (0) }</AvatarFallback>
                 </Avatar>
                 <div>"
                   <div className="font-medium text-lg">{post.authorName}</div>"
                   {post.authorRole && (<Badge variant="outline" className="mt-1">
                       {post.authorRole}
-                    </Badge>)}
+                    </Badge>) }
                 </div>
               </div>
 "
@@ -326,7 +320,7 @@ export default function ForumPostPage() {
             <div className="flex flex-wrap gap-2 mb-6">"
               {post.tags.map(tag => (<Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
                   {tag}
-                </Badge>))}
+                </Badge>) ) }
             </div>
 "
             <div className="prose dark:prose-invert max-w-none mb-6">'
@@ -351,7 +345,7 @@ export default function ForumPostPage() {
                       <Edit className="h-4 w-4 mr-1"/>
                       Edit
                     </Link>
-                  </Button>)}
+                  </Button>) }
 
                 {isAdminOrMod && (<>"
                     <Button variant="ghost" size="sm" onClick={handlePinPost}>"
@@ -402,8 +396,7 @@ export default function ForumPostPage() {
 "
           <div className="space-y-6">
             {replies
-            .filter(reply => !reply.isAnswer)
-            .map(reply => (<ReplyCard key={reply.id} reply={reply} onMarkAnswer={() => handleMarkAsAnswer(reply.id)} canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}/>))}
+            .filter (reply => !reply.isAnswer) .map (reply => (<ReplyCard key={reply.id} reply={reply} onMarkAnswer={ () => handleMarkAsAnswer (reply.id) } canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod) }/>) ) }
           </div>
         </div>
       </div>

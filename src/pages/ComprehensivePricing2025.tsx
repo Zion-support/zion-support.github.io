@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+export default ComprehensivePricing2025;
+
 
 const ComprehensivePricing2025 = () => {
 '
@@ -136,7 +138,7 @@ const ComprehensivePricing2025 = () => {
     const industryMatch ='
       selectedIndustry === 'All' || item.industry === selectedIndustry;
     return categoryMatch && industryMatch;
-  });
+  }) ;
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24">"
@@ -203,6 +205,22 @@ const ComprehensivePricing2025 = () => {
                   <span className="bg-zion-cyan text-white px-4 py-1 rounded-full text-sm font-medium">
                     Most Popular
                   </span>
+                </div>) }
+
+              <div className="text - center mb - 6">
+                <div className="text - 4xl mb - 2">{item.icon}</div>
+                <h3 className="text - xl font - bold text - white mb - 2">
+                  {item.name}
+                </h3>
+                <p className="text - gray - 300 text - sm mb - 4">
+                  {item.description}
+                </p>
+
+                <div className="mb - 4">
+                  <span className="text - 3xl font - bold text - white">
+                    ${item.price}
+                  </span>
+                  <span className="text - gray - 300">/{item.period}</span>
                 </div>
               )}
 "
@@ -230,8 +248,7 @@ const ComprehensivePricing2025 = () => {
                 {item.annualDiscount > 0 && ("
                   <div className="text-yellow-400 text-sm mb-4">
                     Save {item.annualDiscount}% with annual billing
-                  </div>
-                )}
+                  </div>) }
               </div>
 "
               <ul className="space-y-2 mb-6">
@@ -239,19 +256,16 @@ const ComprehensivePricing2025 = () => {
                   <li key={index} className="flex items-center text-gray-300">"
                     <span className="text-green-400 mr-2">✓</span>
                     {feature}
-                  </li>
-                ))}
+                  </li>) ) }
               </ul>
 "
               <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white py-3 rounded-lg font-medium hover:scale-105 transition-transform">
                 Get Started
               </button>
-            </div>
-          ))}
+            </div>) ) }
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default ComprehensivePricing2025;

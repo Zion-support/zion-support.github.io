@@ -9,7 +9,6 @@ import {
 } from 'lucide-react';'
 import { SEO } from '@/components/SEO';
 
-export default function InnovativeServicesShowcase2025() {
   const services = [
     {
 '
@@ -223,7 +222,7 @@ export default function InnovativeServicesShowcase2025() {
     }
   ];
 
-  const categories = [...new Set(services.map(service => service.category))];
+  const categories = [...new Set (services.map (service => service.category) ) ];
 
   return()
     <div className="min-h-screen bg-white">
@@ -256,7 +255,7 @@ export default function InnovativeServicesShowcase2025() {
             transition={{ duration: 0.6, delay: 0.2 }}"
             className="text-zion-slate-light text-xl"
           >
-            Discover our cutting-edge AI-powered micro SAAS services that are revolutionizing industries and transforming businesses worldwide.
+            Discover our cutting - edge AI - powered micro SAAS services that are revolutionizing industries and transforming businesses worldwide.
           </motion.p>
         </div>
       </section>
@@ -268,8 +267,7 @@ export default function InnovativeServicesShowcase2025() {
             {categories.map((category) => ("
               <span key={category} className="px-4 py-2 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm font-medium">
                 {category}
-              </span>
-            ))}
+              </span>) ) }
           </div>
         </div>
 "
@@ -308,8 +306,7 @@ export default function InnovativeServicesShowcase2025() {
                     <li key={idx} className="flex items-start text-sm text-zion-slate-dark">"
                       <Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span>{feature}</span>
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
               </div>
 "
@@ -320,8 +317,7 @@ export default function InnovativeServicesShowcase2025() {
                     <li key={idx} className="flex items-start text-sm text-zion-slate-dark">"
                       <Zap className="w-4 h-4 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span>{benefit}</span>
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
               </div>
 "
@@ -333,8 +329,7 @@ export default function InnovativeServicesShowcase2025() {
                   Learn More <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </section>
       {/* Contact Information Banner */}"
@@ -398,9 +393,7 @@ export default function InnovativeServicesShowcase2025() {
                   className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >"
                   <option value="all">All Categories</option>
-                  {categories.map(category => (
-                    <option key={category} value={category}>{category}</option>
-                  ))}
+                  {categories.map (category => (<option key={category} value={category}>{category}</option>) ) }
                 </select>
               </div>
               {/* Price Range Filter */}
@@ -477,8 +470,7 @@ export default function InnovativeServicesShowcase2025() {
                       {service.subcategory && ("
                         <span className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-full">
                           {service.subcategory}
-                        </span>
-                      )}
+                        </span>) }
                     </div>
                   </div>
                   {/* Description */}"
@@ -498,8 +490,7 @@ export default function InnovativeServicesShowcase2025() {
                       {service.features.length > 3 && ("
                         <div className="text-xs text-gray-400">
                           +{service.features.length - 3} more features
-                        </div>
-                      )}
+                        </div>) }
                     </div>
                   </div>
                   {/* Benefits */}"
@@ -526,8 +517,7 @@ export default function InnovativeServicesShowcase2025() {
                       {service.technicalSpecs?.technology.length > 3 && ("
                         <span className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded">
                           +{service.technicalSpecs.technology.length - 3}
-                        </span>
-                      )}
+                        </span>) }
                     </div>
                   </div>
                   {/* Market Info */}"
@@ -573,8 +563,7 @@ export default function InnovativeServicesShowcase2025() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -648,11 +637,9 @@ export default function InnovativeServicesShowcase2025() {
                     Learn More
                   </motion.button>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 }
 '"`

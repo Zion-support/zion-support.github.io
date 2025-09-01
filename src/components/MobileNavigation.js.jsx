@@ -9,10 +9,10 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
     const location = useLocation();
     const menuRef = useRef(null);
     // Close menu when route changes
-    useEffect(() => {
-        onToggle()}, [location.pathname]);
+    useEffect ( () => {
+        onToggle () }, [location.pathname]) ;
     // Close menu when clicking outside
-    useEffect(() => {
+    useEffect ( () => {
         const handleClickOutside = (event) => {
 
             if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -95,7 +95,6 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
 
                 duration: 0.3,'
   ease: 'easeInOut'
-            
 
 }
         },
@@ -120,7 +119,6 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
 
                 duration: 0.2,'
   ease: 'easeInOut'
-            
 
 }
         },
@@ -138,7 +136,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
     return (<AnimatePresence>
       {isOpen && (<>
           {/* Backdrop */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40" onClick={onToggle}/>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset - 0 bg - black / 50 backdrop - blur - sm z - 40" onClick={onToggle}/>
 
           {/* Mobile Menu */}"
           <motion.div ref={menuRef} variants={menuVariants} initial="closed" animate="open" exit="closed" className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-zion-blue-dark border-l border-zion-cyan/30 z-50 overflow-hidden">
@@ -188,14 +186,14 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
                               <div className="ml-4 space-y-1">"
                                 {item.children.map((child) => (<Link key={child.href} to={child.href} className="block py-2 px-4 text-zion-slate-light hover:text-white hover:bg-white/5 rounded-lg transition-colors">
                                     {child.label}
-                                  </Link>))}
+                                  </Link>) ) }
                               </div>
                             </motion.div>)}
                         </AnimatePresence>"
                       </div>) : (<Link to={item.href} className="block py-3 px-4 text-white hover:bg-white/10 rounded-lg transition-colors">
                         {item.label}
-                      </Link>)}
-                  </div>))}
+                      </Link>) }
+                  </div>) ) }
               </nav>
 
               {/* Quick Actions */}"

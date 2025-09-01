@@ -1,4 +1,11 @@
 export class SitemapGenerator {
+export const defaultSitemapConfig = {
+export const generator = new SitemapGenerator (config) ;
+export default SitemapGenerator;
+export default to;
+export default to;
+
+
     config;
     constructor(config) {
 
@@ -6,7 +13,6 @@ export class SitemapGenerator {
 
   outputPath: './public/sitemap.xml',
   ...config
-        
 
 };
     }
@@ -53,19 +59,11 @@ Allow: /
 Sitemap: ${baseUrl}/sitemap.xml
 
 # Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
+Disallow: /admin / Disallow: /private / Disallow: /api / Disallow: /_next/
 
 # Allow important pages
 Allow: /
-Allow: /services/
-Allow: /solutions/
-Allow: /about/
-Allow: /contact/
-Allow: /blog/
-Allow: /careers/
+Allow: /services / Allow: /solutions / Allow: /about / Allow: /contact / Allow: /blog / Allow: /careers/
 
 # Crawl delay (optional)`
 Crawl-delay: 1`;
@@ -73,7 +71,7 @@ Crawl-delay: 1`;
     /**
      * Generate JSON sitemap for JavaScript applications
      */
-    generateJSON() {
+    generateJSON () {
         const { baseUrl, urls } = this.config;
         const jsonSitemap = {
 
@@ -84,10 +82,8 @@ Crawl-delay: 1`;
   fullUrl: `${baseUrl
 `
 }${url.url}`,
-                lastmod: url.lastmod || new Date().toISOString()
-            }))
-        };
-        return JSON.stringify(jsonSitemap, null, 2);
+                lastmod: url.lastmod || new Date () .toISOString () }) ) };
+        return JSON.stringify (jsonSitemap, null, 2) ;
     }
     /**
      * Generate HTML sitemap for users
@@ -101,18 +97,17 @@ Crawl-delay: 1`;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitemap - Zion Tech Group</title>"
     <meta name="description" content="Complete sitemap of Zion Tech Group website">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        h1 { color: #00e5ff; border-bottom: 2px solid #00e5ff; padding-bottom: 10px; }
-        .sitemap-section { margin: 30px 0; }
-        .sitemap-section h2 { color: #333; margin-bottom: 15px; }
-        .sitemap-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .sitemap-link { padding: 10px; border: 1px solid #ddd; border-radius: 5px; text-decoration: none; color: #333; }
-        .sitemap-link:hover { background-color: #f5f5f5; border-color: #00e5ff; }
-        .priority-high { border-left: 4px solid #00e5ff; }
-        .priority-medium { border-left: 4px solid #ff9800; }
-        .priority-low { border-left: 4px solid #4caf50; }
+    <style > body { font - family: Arial, sans - serif; margin: 40px; line - height: 1.6; }
+        .container { max - width: 1200px; margin: 0 auto; }
+        h1 { color: #00e5ff; border - bottom: 2px solid #00e5ff; padding - bottom: 10px; }
+        .sitemap - section { margin: 30px 0; }
+        .sitemap - section h2 { color: #333; margin - bottom: 15px; }
+        .sitemap - links { display: grid; grid - template - columns: repeat (auto - fit, minmax (300px, 1fr) ) ; gap: 20px; }
+        .sitemap - link { padding: 10px; border: 1px solid #ddd; border - radius: 5px; text - decoration: none; color: #333; }
+        .sitemap - link:hover { background - color: #f5f5f5; border - color: #00e5ff; }
+        .priority - high { border - left: 4px solid #00e5ff; }
+        .priority - medium { border - left: 4px solid #ff9800; }
+        .priority - low { border - left: 4px solid #4caf50; }
     </style>
 </head>
 <body>"
@@ -230,16 +225,15 @@ export const defaultSitemapConfig = {
     ]
 };
 // Utility function to generate all sitemap files
-export const generator = new SitemapGenerator(config);
     try {
         // Generate XML sitemap
-        const xmlSitemap = generator.generateXML();
+        const xmlSitemap = generator.generateXML () ;
         // Generate robots.txt
-        const robotsTxt = generator.generateRobotsTxt();
+        const robotsTxt = generator.generateRobotsTxt () ;
         // Generate HTML sitemap
-        const htmlSitemap = generator.generateHTML();
+        const htmlSitemap = generator.generateHTML () ;
         // Generate JSON sitemap
-        const jsonSitemap = generator.generateJSON();
+        const jsonSitemap = generator.generateJSON () ;
         return {
 
             xml: xmlSitemap,

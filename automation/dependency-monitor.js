@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
-
+;
 class DependencyMonitor {
   constructor() {
     this.projectRoot = process.cwd();

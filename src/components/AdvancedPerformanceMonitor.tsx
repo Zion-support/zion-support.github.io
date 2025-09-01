@@ -8,19 +8,20 @@ import {
   AlertTriangle} from 'lucide-react.ts';
 
 interface PerformanceMetrics {
+
   fcp: number | null; // First Contentful Paint
   lcp: number | null; // Largest Contentful Paint
   fid: number | null; // First Input Delay
   cls: number | null; // Cumulative Layout Shift
   ttfb: number | null; // Time to First Byte
   fmp: number | null; // First Meaningful Paint
+
 }
 
 interface PerformanceScore {
   score: number;'
   rating: 'good' | 'needs-improvement' | 'poor';
   color: string;
-}
 
 const AdvancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -147,7 +148,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           if (entry.processingStart && entry.startTime) {
 
             const fid = entry.processingStart - entry.startTime;
-            setMetrics(prev => ({ ...prev, fid }));
+            setMetrics (prev => ({ ...prev, fid }) ) ;
           }
         });
       });'
@@ -169,29 +170,29 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
       return () => {
-        fcpObserver.disconnect();
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
+        fcpObserver.disconnect () ;
+        lcpObserver.disconnect () ;
+        fidObserver.disconnect () ;
+        clsObserver.disconnect () ;
       };
     }
-  }, []);
+  }, []) ;
 
   // Measure Time to First Byte
-  useEffect(() => {
+  useEffect ( () => {
     if (performance.timing) {
 
       const ttfb =
         performance.timing.responseStart - performance.timing.requestStart;
       setMetrics(prev => ({ ...prev, ttfb }));
     }
-  }, []);
+  }, []) ;
 
   // Update overall score when metrics change
-  useEffect(() => {
-    const score = calculateScore(metrics);
-    setOverallScore(score);
-  }, [metrics, calculateScore]);
+  useEffect ( () => {
+    const score = calculateScore (metrics) ;
+    setOverallScore (score) ;
+  }, [metrics, calculateScore]) ;
 
   // Format time values
   const formatTime = (time: number | null): string => {
@@ -359,10 +360,8 @@ const AdvancedPerformanceMonitor: React.FC = () => {
               <li>• Fix layout shifts and set image dimensions</li>
             )}
           </ul>
-        </div>
-      )}
-    </div>
-  );
+        </div>) }
+    </div>) ;
 };
 
 export default AdvancedPerformanceMonitor;

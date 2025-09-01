@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight const testimonials = [;
+import { motion, AnimatePresence } from 'framer - motion';
+
+
     {
 
         id: 1,'
@@ -74,16 +77,15 @@ import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight const testimonials =
         project: 'Cloud Infrastructure'
 
 ];
-export function TestimonialCarousel() {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [direction, setDirection] = useState(0);
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setDirection(1);
-            setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-        }, 5000);
-        return () => clearInterval(timer);
-    }, []);
+    const [currentIndex, setCurrentIndex] = useState (0) ;
+    const [direction, setDirection] = useState (0) ;
+    useEffect ( () => {
+        const timer = setInterval ( () => {
+            setDirection (1) ;
+            setCurrentIndex ( (prev) => (prev + 1) % testimonials.length) ;
+        }, 5000) ;
+        return () => clearInterval (timer) ;
+    }, []) ;
     const swipePower = (offset, velocity) => {
 
         return Math.abs(offset) * velocity};
@@ -109,11 +111,6 @@ export function TestimonialCarousel() {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -144,11 +141,6 @@ export function TestimonialCarousel() {
             x: { type: "spring", stiffness: 300,
   damping: 30 
 
-
-
-
-
-
 },
             opacity: { duration: 0.2 }"
         }} drag="x" dragConstraints = {
@@ -165,11 +157,6 @@ export function TestimonialCarousel() {
 
   (e, { offset,
   velocity 
-
-
-
-
-
 
 }) => {
 
@@ -253,20 +240,10 @@ export function TestimonialCarousel() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 

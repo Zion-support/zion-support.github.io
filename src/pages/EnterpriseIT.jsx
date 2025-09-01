@@ -32,11 +32,6 @@ import { Building2, Server, Shield, Zap, Users, Globe, ArrowRight export default
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -62,20 +57,10 @@ import { Building2, Server, Shield, Zap, Users, Globe, ArrowRight export default
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -102,20 +87,10 @@ import { Building2, Server, Shield, Zap, Users, Globe, ArrowRight export default
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -142,20 +117,10 @@ import { Building2, Server, Shield, Zap, Users, Globe, ArrowRight export default
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -182,20 +147,10 @@ import { Building2, Server, Shield, Zap, Users, Globe, ArrowRight export default
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -222,20 +177,10 @@ import { Building2, Server, Shield, Zap, Users, Globe, ArrowRight export default
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 

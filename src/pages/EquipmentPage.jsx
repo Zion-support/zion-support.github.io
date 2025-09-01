@@ -19,10 +19,10 @@ const EquipmentPage = () => {
   const brandOptions = ['Dell', 'HP', 'Cisco', 'IBM', 'Lenovo'];'
   const availabilityOptions = ['In Stock', 'Low Stock', 'Out of Stock'];
 
-  useEffect(() => {
+  useEffect ( () => {
     // Simulate loading
-    setTimeout(() => {
-      setLoading(false)}, 1000)}, []);
+    setTimeout ( () => {
+      setLoading (false) }, 1000) }, []) ;
 
   const EquipmentCard = ({ equipment }) => (
     <Card className="h-full hover:shadow-lg transition-shadow">"
@@ -60,8 +60,7 @@ const EquipmentPage = () => {
           </Button>
         </div>
       </CardContent>
-    </Card>
-  );
+    </Card>) ;
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">"
@@ -127,15 +126,12 @@ const EquipmentPage = () => {
                 reviewCount: 156,"
                 description: "Reliable 2U server with excellent performance and enterprise support."
 
-            ].map((equipment, index) => (;
-              <EquipmentCard key={index} equipment={equipment} />
-            ))
-          )}
+            ].map ( (equipment, index) => (;
+              <EquipmentCard key={index} equipment={equipment} />) ) ) }
         </div>
       </div>
       <Footer />
-    </div>
-  )};
+    </div>) };
 
 export default EquipmentPage;
 }}'"

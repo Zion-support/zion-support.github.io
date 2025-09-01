@@ -14,7 +14,7 @@ import { TrendingDown,
   Clock,
   DollarSign'
  } from 'lucide-react';
-
+;
 const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 
   const features = [
@@ -192,7 +192,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
           </motion.div>
           "
           <div className="grid md: grid-cols-2 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -281,7 +281,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
           </motion.div>
           "
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={benefit}
                 initial = {
@@ -369,7 +369,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
           </motion.div>
           "
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6">
-            {integrations.map((integration, index)  => (
+            {integrations.map(integration: unknown, index: unknown (
               <motion.div
                 key={integration}
                 initial = {
@@ -454,7 +454,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
           </motion.div>
           "
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={plan.plan}
                 initial = {

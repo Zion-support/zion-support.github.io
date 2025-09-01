@@ -66,21 +66,11 @@ export function GlobalPresenceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -91,7 +81,7 @@ export function GlobalPresenceSection() {
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Serving clients worldwide with local expertise and global reach.
-            Our distributed team ensures 24/7 support and cultural understanding.
+            Our distributed team ensures 24 / 7 support and cultural understanding.
           </p>
         </motion.div>
 
@@ -103,21 +93,11 @@ export function GlobalPresenceSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -126,14 +106,9 @@ export function GlobalPresenceSection() {
   { duration: 0.6,
   delay: 0.2 
 
-
-
-
-
-
 }}
         >;
-          {globalStats.map((stat, index)  => {;
+          {globalStats.map ( (stat, index) => {;
             const IconComponent = stat.icon;
             return ("
               <div key = {stat.label} className="text-center">"
@@ -167,21 +142,11 @@ export function GlobalPresenceSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -189,11 +154,6 @@ export function GlobalPresenceSection() {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}
         >"
@@ -211,21 +171,11 @@ export function GlobalPresenceSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}
@@ -233,11 +183,6 @@ export function GlobalPresenceSection() {
 
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
-
-
-
-
-
 
 }}
               >"
@@ -267,21 +212,11 @@ export function GlobalPresenceSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -289,11 +224,6 @@ export function GlobalPresenceSection() {
 
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
 
 }}
         >"
@@ -316,21 +246,11 @@ export function GlobalPresenceSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -338,11 +258,6 @@ export function GlobalPresenceSection() {
 
   { duration: 0.6,
   delay: 1.0 
-
-
-
-
-
 
 }}
         >"
@@ -367,16 +282,14 @@ export function GlobalPresenceSection() {
           </div>
         </motion.div>
       </div>;
-    </section>;
-  )};
+    </section>;) };
 
 export default GlobalPresenceSection;"
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 }
 
 export default GlobalPresenceSection;

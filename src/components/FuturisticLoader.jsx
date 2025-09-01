@@ -1,3 +1,4 @@
+import React from 'react';
 export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant = 'matrix' }) => {
 
     const sizeClasses = {
@@ -11,6 +12,10 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
 
 
 
+    const sizeClasses = {
+  small: 'w - 8 h - 8',
+        medium: 'w - 16 h - 16',
+  large: 'w - 24 h - 24'
 
 };
     const textSizes = {
@@ -44,11 +49,6 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
 '
   { animationDirection: 'reverse','
   animationDuration: '3s' 
-
-
-
-
-
 
 }}></div>
           </div>);'
@@ -124,13 +124,8 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
   { animationDirection: 'reverse','
   animationDuration: '2s' 
 
-
-
-
-
-
 }}></div>
-          </div>);
+          </div>) ;
         }
     };"
     return (<div className="flex flex-col items-center justify-center space-y-4">

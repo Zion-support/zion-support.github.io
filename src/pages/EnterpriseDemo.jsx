@@ -1,3 +1,4 @@
+import { ArrowRight, Calendar, CheckCircle, Clock, Star, Users import { Link } from "react - router - dom";
 import React from 'react';
 import SEO from "@/components/SEO";"
 import { GradientHeading } from "@/components/GradientHeading";"
@@ -40,8 +41,7 @@ export default function EnterpriseDemo() {
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">"
                   <CheckCircle className="w-6 h-6 text-zion-cyan"/>
                 </div>
-                                <CardTitle>
-                  Interactive Demo
+                                <CardTitle > Interactive Demo
                 </CardTitle>
                 </CardHeader>
               <CardContent>"
@@ -56,8 +56,7 @@ export default function EnterpriseDemo() {
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">"
                   <Star className="w-6 h-6 text-zion-cyan"/>
                 </div>
-                <CardTitle>
-                  Expert Guidance
+                <CardTitle > Expert Guidance
                 </CardTitle>
               </CardHeader>
               <CardContent>"

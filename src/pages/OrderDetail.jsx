@@ -18,13 +18,12 @@ export default function OrderDetailPage() {
         const link = document.createElement('a');
         link.href = url;
         link.download = `invoice-${order.orderId}.pdf`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url)};
+        document.body.appendChild (link) ;
+        link.click () ;
+        document.body.removeChild (link) ;
+        URL.revokeObjectURL (url) };
     const handleResend = async () => {
-        if (!order || !user?.email)
-            return;
+        if (!order || !user?.email) return;
         try {
 '
             await supabase.functions.invoke('send-email', {
@@ -54,8 +53,8 @@ export default function OrderDetailPage() {
         <ul className="space-y-1">"
           {order.items.map((item, idx) => (<li key={idx} className="flex justify-between">
               <span>{item.name} x {item.quantity}</span>
-              <span>${item.price.toFixed(2)}</span>
-            </li>))}
+              <span>${item.price.toFixed (2) }</span>
+            </li>) ) }
         </ul>
       </div>
 

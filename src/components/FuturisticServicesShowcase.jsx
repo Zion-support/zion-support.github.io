@@ -113,7 +113,6 @@ const ServiceCard = ({ service, index, isVisible }) => {
                   </div>
                 ))}
               </div>
-            </div>
 
             {/* Pricing and Contact */}"
             <div className="flex items-center justify-between pt-4 border-t border-gray-700/50">

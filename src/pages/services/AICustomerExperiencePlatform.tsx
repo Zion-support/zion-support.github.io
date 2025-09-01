@@ -27,7 +27,8 @@ import { Users,
   Bot,
   Headphones'
  } from 'lucide-react';
-
+;
+export { function };
 export default function AICustomerExperiencePlatform(...args[]):  {
 
   const features = ['
@@ -126,7 +127,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                   <div className="text-lg font-semibold mb-1">{t.name}</div>"
                   <div className="text-2xl font-bold text-pink-600 mb-2">{t.price}</div>"
                   <ul className="text-sm text-gray-600 space-y-1">
-                    {t.details.map((d) => (<li key={d}>{d}</li>))}
+                    {t.details.map((d (<li key={d}>{d}</li>))}
                   </ul>
                 </div>
               ))}
@@ -214,7 +215,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           </motion.div>
 "
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -275,7 +276,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           </motion.div>
 "
           <div className="grid md: grid-cols-2 gap-8">
-            {services.map((service, index)  => (
+            {services.map(service: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -342,7 +343,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           </motion.div>
 "
           <div className="grid md: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -408,7 +409,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           </motion.div>
 "
           <div className="grid md: grid-cols-2 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {

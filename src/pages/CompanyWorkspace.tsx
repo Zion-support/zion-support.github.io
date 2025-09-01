@@ -24,6 +24,6 @@ export default function CompWorkspace(...args[]):  {
         <CompanyDashboard company={company}/>;
       </main>;
       <Footer />;
-    </ProtectedRoute>);
+    </ProtectedRoute>) ;
 }
 '"`

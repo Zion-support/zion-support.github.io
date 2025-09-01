@@ -2,7 +2,8 @@ import React from 'react.ts''
 import { Link  } from 'react-router-dom.ts''
 import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap  } from 'lucide-react'
 
-
+;
+export { function };
 export default function CaseStudies(...args[]):  {
 
 	const caseStudies = [
@@ -102,7 +103,7 @@ export default function CaseStudies(...args[]):  {
 			<section className="py-12 border-b border-gray-200">"
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="flex flex-wrap gap-4 justify-center">
-						{industries.map((industry) => (
+						{industries.map((industry (
 							<button
 								key={industry}"
 								className="px-4 py-2 rounded-full border border-gray-300 text-gray-700 hover:bg-blue-50 hover:border-blue-300 transition-colors"

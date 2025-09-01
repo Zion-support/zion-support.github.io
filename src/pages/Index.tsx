@@ -1,3 +1,5 @@
+import { Link } from "react - router - dom";
+import { useTranslation } from "react - i18next";
 import React from 'react';
 
 import { Footer } from "@/components/Footer";"
@@ -31,9 +33,8 @@ import {
   Smartphone"
 } from "lucide-react";
 
-export default function Index() {
-  const { t } = useTranslation();
-  const { isRTL } = useLanguage();
+  const { t } = useTranslation () ;
+  const { isRTL } = useLanguage () ;
 
   // Tools and features showcase
   const toolsFeatures = [
@@ -126,8 +127,7 @@ export default function Index() {
                   <span>{t("general.explore")}</span>'`
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
                 </div>
-              </Link>
-            ))}
+              </Link>) ) }
           </div>
         </div>
       </section>
@@ -150,14 +150,12 @@ export default function Index() {
       <WaitlistSection />
       <FloatingCTA />
       <Footer />
-    </div>
-  )};
+    </div>) };
             </a>;
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default Home;

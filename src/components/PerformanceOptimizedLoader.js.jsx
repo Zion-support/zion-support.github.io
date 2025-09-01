@@ -27,7 +27,6 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
                 duration: 1,
                 repeat: Infinity,
   ease: "linear"
-            
 
 }
         }
@@ -43,7 +42,6 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
                 duration: 2,
                 repeat: Infinity,"
   ease: "easeInOut"
-            
 
 }
         }
@@ -57,8 +55,8 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
       "
       {text && (<motion.p variants={pulseVariants} animate="animate" className="text-zion-slate-light text-center font-medium">
           {text}
-        </motion.p>)}
-    </div>);
+        </motion.p>) }
+    </div>) ;
     if (fullScreen) {
 "
         return (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-zion-blue-dark/95 backdrop-blur-sm flex items-center justify-center z-50">

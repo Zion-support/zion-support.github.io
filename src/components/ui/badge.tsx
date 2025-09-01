@@ -12,7 +12,6 @@ interface BadgeProps {
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
   className?: string;
-}
 
 const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
   ('
@@ -58,6 +57,6 @@ const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
 );
 '
 Badge.displayName = 'Badge';
-
+;
 export { Badge };
 '

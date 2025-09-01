@@ -1,3 +1,4 @@
+import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 '
 import { motion, AnimatePresence } from 'framer-motion';
@@ -18,13 +19,16 @@ import {
 import { Link } from 'react-router-dom';
 
 interface FAQItem {
+
   id: string;
   question: string;
   answer: string;
   category: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType < any>;
 }
 
+}
+;
 const faqData: FAQItem[] = [
   {
 '
@@ -138,7 +142,7 @@ export default function FAQ() {
       faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   const toggleItem = (id: string) => {
 
@@ -197,8 +201,7 @@ export default function FAQ() {
                 }`}
               >
                 {category}
-              </button>
-            ))}
+              </button>) ) }
           </div>
         </motion.div>
 
@@ -210,8 +213,7 @@ export default function FAQ() {
           className="max-w-4xl mx-auto space-y-4"
         >
           <AnimatePresence>
-            {filteredFAQs.map((faq, index) => (
-              <motion.div
+            {filteredFAQs.map ( (faq, index) => (<motion.div
                 key={faq.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -259,11 +261,9 @@ export default function FAQ() {
                           </p>
                         </div>
                       </div>
-                    </motion.div>
-                  )}
+                    </motion.div>) }
                 </AnimatePresence>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </AnimatePresence>
         </motion.div>
 
@@ -315,7 +315,6 @@ export default function FAQ() {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 '"`

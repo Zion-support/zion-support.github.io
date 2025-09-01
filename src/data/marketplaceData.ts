@@ -20,7 +20,7 @@ seller: {
   availability: 'available' | 'limited' | 'out-of-stock';
   deliveryTime: string;
   warranty: string}
-
+;
 export const marketplaceItems: MarketplaceItem[] = [
   {
 '
@@ -173,7 +173,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     warranty: 'N/A';
   };
 ];
-
+;
 export const marketplaceCategories = [
   {
 '
@@ -206,7 +206,7 @@ export const marketplaceCategories = [
     count: marketplaceItems.filter(item => item.category === 'services').length;
   };
 ];
-
+;
 export const marketplaceFilters = [
   {
 '

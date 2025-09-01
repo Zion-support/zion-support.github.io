@@ -19,9 +19,9 @@ export default function ForgotPassword() {
             return;
         setIsLoading(true);
         // Simulate API call
-        setTimeout(() => {
-            setIsSubmitted(true);
-            setIsLoading(false)}, 2000)};
+        setTimeout ( () => {
+            setIsSubmitted (true) ;
+            setIsLoading (false) }, 2000) };
     if (isSubmitted) {
 
         return (<>"
@@ -48,7 +48,7 @@ export default function ForgotPassword() {
             </div>
           </div>
         </div>
-      </>)}
+      </>) }
     return (<>
 "
       <div className="flex min-h-screen bg-zion-blue">"
@@ -100,7 +100,7 @@ export default function ForgotPassword() {
                       </Link>
                     </div>
                   </form>
-                </Form>)}
+                </Form>) }
             </div>
           </div>
 "

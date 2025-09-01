@@ -318,7 +318,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
         feature.toLowerCase().includes(searchTerm.toLowerCase())
       );
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   const contactInfo = {
 '
@@ -416,8 +416,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
                     {category.icon}
                     <span>{category.name}</span>
                   </div>
-                </button>
-              ))}
+                </button>) ) }
             </div>
           </div>
         </div>
@@ -504,12 +503,10 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
 
-          {filteredServices.length === 0 && (
-            <motion.div
+          {filteredServices.length === 0 && (<motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}"
               className="text-center py-20"
@@ -533,8 +530,7 @@ export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
               >
                 Clear Filters
               </button>
-            </motion.div>
-          )}
+            </motion.div>) }
         </div>
       </section>
 

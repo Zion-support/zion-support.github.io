@@ -53,7 +53,7 @@ interface ResourceStats {
   totalCapacity: number;
   currentUtilization: number;
   averageCost: number;
-  topDepartments: Array<any>}
+  topDepartments: Array < any>}
 
 interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
 
@@ -80,7 +80,7 @@ showStats:  true,;
   const [editingResource, setEditingResource] = useState<any>(null);
 
   // Sample resource data
-  useEffect(() => {
+  useEffect ( () => {
     const sampleResources: Resource[] = [
       {
 '
@@ -179,8 +179,8 @@ showStats:  true,;
 
     ];
 
-    setResources(sampleResources);
-    setFilteredResources(sampleResources)}, []);
+    setResources (sampleResources) ;
+    setFilteredResources (sampleResources) }, []) ;
 
   // Filter resources
   useEffect(() => {
@@ -214,7 +214,7 @@ showStats:  true,;
       );
     }
 
-    setFilteredResources(filtered.slice(0, maxResources))}, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]);
+    setFilteredResources (filtered.slice (0, maxResources) ) }, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]) ;
 
   // Calculate resource stats
   const resourceStats = {

@@ -46,7 +46,7 @@ import { CUTTING_EDGE_2025_SERVICES } from '@/data/2025-cutting-edge-innovations
 import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '@/data/2025-specialized-industry-solutions.jsx';'
 import { INNOVATIVE_MICRO_SAAS_2025 } from '@/data/2025-innovative-micro-saas-expansion.jsx';
 
-// Combine all services
+// Combine all services;
 const ALL_SERVICES = [
   ...MICRO_SAAS_SERVICES,
   ...CUTTING_EDGE_2025_SERVICES,
@@ -124,7 +124,7 @@ const SERVICE_CATEGORIES = ['
     ).length},
 ];
 
-// Contact information
+// Contact information;
 const CONTACT_INFO = {
 '
   phone: '+1 302 464 0950','
@@ -134,7 +134,7 @@ const CONTACT_INFO = {
   supportHours: '24/7','
   responseTime: '< 2 hours'};
 
-// Benefits section
+// Benefits section;
 const BENEFITS = [
   {
 

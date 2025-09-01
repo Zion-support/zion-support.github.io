@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 
 interface PerformanceMetric {
+
   id: string;
   name: string;
   value: number;
@@ -29,14 +30,17 @@ interface PerformanceMetric {
   status: 'excellent' | 'good' | 'warning' | 'critical';
   icon: React.ComponentType<any>;
   description: string;
+
 }
 
 interface PerformanceMetricsProps {
+  // Add your props here
+
+
   title?: string;
   subtitle?: string;
   showCharts?: boolean;
   autoRefresh?: boolean;
-}
 
 const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
 
@@ -130,10 +134,10 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
   const [selectedMetric, setSelectedMetric] = useState<string | null>(null);'
   const [timeRange, setTimeRange] = useState<'1h' | '6h' | '24h' | '7d'>('1h');
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (!autoRefresh) return;
 
-    const interval = setInterval(() => {
+    const interval = setInterval(: unknown {
       setMetrics(prevMetrics => 
         prevMetrics.map(metric => ({
 
@@ -144,7 +148,7 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
       );
     }, 5000);
 
-    return () => clearInterval(interval);
+    return : unknown clearInterval(interval);
   }, [autoRefresh]);
 
   const getStatusColor = (status: string) => {
@@ -222,7 +226,7 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
             {(['1h', '6h', '24h', '7d'] as const).map((range) => (
               <button
                 key={range}
-                onClick={() => setTimeRange(range)}
+                onClick={(: unknown setTimeRange(range)}
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
 
                   timeRange === range'

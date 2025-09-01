@@ -139,7 +139,7 @@ export default function Dashboard() {
               href="tel:+13024640950""
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
             >
-              📞 Call +1 (302) 464-0950
+              📞 Call + 1 (302) 464 - 0950
             </a>
             <a"
               href="/contact""
@@ -150,7 +150,6 @@ export default function Dashboard() {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 }
 '"

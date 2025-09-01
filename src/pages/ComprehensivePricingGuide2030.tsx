@@ -2,6 +2,12 @@ import React, { useState, useMemo } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { Link  } from 'react-router-dom.ts';
 import { CheckCircle, 
+import { innovativeAIServices2030 } from "../data / innovativeAIServices2030";
+import { innovativeCloudDevOpsServices2030 } from "../data / innovativeCloudDevOpsServices2030";
+import { innovativeCybersecurityServices2030 } from "../data / innovativeCybersecurityServices2030";
+import { motion  } from 'framer - motion.ts';
+
+
   Star, 
   Zap, 
   Shield, 
@@ -39,12 +45,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
     ...innovativeCloudDevOpsServices2030;
   ];
 
-  const filteredServices = allServices.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredServices = allServices.filter (service => {;
+    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   const categories = [;'
     { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;'
@@ -175,21 +181,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -271,8 +267,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                     {category.count}
                   </span>
-                </button>;
-              ))}
+                </button>;) ) }
             </div>
           </div>
         </div>
@@ -287,21 +282,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -318,32 +303,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}`
@@ -378,21 +348,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                   transition = {
@@ -460,8 +420,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
                         <div key={idx} className="flex items-center text-xs text-slate-300">"
                           <TrendingUp className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
                           {benefit}
-                        </div>
-                      ))}
+                        </div>) ) }
                     </div>
                   </div>
 
@@ -482,9 +441,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
                       Get Quote;
                     </a>;
                   </div>;
-                </motion.div>;
-              );
-            })}
+                </motion.div>;) ;
+            }) }
           </div>
 
           {filteredServices.length = == 0 && (;"
@@ -499,8 +457,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
               >
                 Clear all filters
               </button>
-            </div>
-          )}
+            </div>) }
         </div>
       </section>
 
@@ -513,21 +470,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -580,7 +527,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
                 title: "24/7 Support","
                 description: "Round-the-clock support included in all plans. No additional support fees."
 
-            ].map((benefit, index) => (;
+            ].map ( (benefit, index) => (;
               <motion.div
                 key={index}
                 initial = {
@@ -588,32 +535,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}"
@@ -653,21 +585,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -834,8 +756,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
           </div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default ComprehensivePricingGuide2030;}}'"`

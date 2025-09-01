@@ -169,9 +169,9 @@ export function AIChatAssistant() {
                 <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
               </div>
             </div>
-          </div>)}
+          </div>) }
 
-        <div ref={messagesEndRef}/>
+        <div ref={messagesEndRef} />
       </div>
 
       {/* Input Area */}"

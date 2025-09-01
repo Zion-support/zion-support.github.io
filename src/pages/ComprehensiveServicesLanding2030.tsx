@@ -1,6 +1,12 @@
 import React, { useState } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';
 import { ArrowRight,
+import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030 } from "../data / comprehensivePricingGuide2030";
+import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030 } from "../data / comprehensiveServicesIndex2030";
+import { motion  } from 'framer - motion.ts';
+import { SEO } from "../components / SEO";
+
+
   Brain,
   Cloud,
   Database,
@@ -32,12 +38,12 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
   const [showModal, setShowModal] = useState(false);
 
   // Filter services based on category, search, price, and AI score
-  const filteredServices = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredServices = COMPREHENSIVE_SERVICES_INDEX_2030.filter (service => {;
+    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     const matchesAiScore = service.aiScore >= aiScoreRange[0] && service.aiScore <= aiScoreRange[1];
-    return matchesCategory && matchesSearch && matchesPrice && matchesAiScore});
+    return matchesCategory && matchesSearch && matchesPrice && matchesAiScore}) ;
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {;
@@ -50,7 +56,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
         return b.aiScore - a.aiScore;
       default:;
         return 0}
-  });
+  }) ;
 
   const getCategoryIcon = (category: string)  => {
 
@@ -112,8 +118,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
     setAiScoreRange([80, 100])};
 
             </motion.div>;
-          </motion.div>;
-        )};
+          </motion.div>;) };
       </div>;
     </>
   );

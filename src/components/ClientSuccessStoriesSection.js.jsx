@@ -205,9 +205,8 @@ const overallStats = ["
     { icon: <DollarSign className="w-6 h-6"/>, value: "320%", label: "Average ROI" },"
     { icon: <Clock className="w-6 h-6"/>, value: "12 months", label: "Avg. Delivery Time" }
 ];
-export function ClientSuccessStoriesSection() {
-    const [selectedStory, setSelectedStory] = useState(null);
-    const [hoveredIndustry, setHoveredIndustry] = useState(null);
+    const [selectedStory, setSelectedStory] = useState (null) ;
+    const [hoveredIndustry, setHoveredIndustry] = useState (null) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -348,7 +347,7 @@ export function ClientSuccessStoriesSection() {
                     <div className="text-zion-slate-light text-xs">Avg ROI</div>
                   </div>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -406,7 +405,7 @@ export function ClientSuccessStoriesSection() {
                     </div>"
                     {story.featured && (<div className="px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold rounded-full">
                         FEATURED
-                      </div>)}
+                      </div>) }
                   </div>
 
                   {/* Challenge & Solution */}"
@@ -478,7 +477,7 @@ export function ClientSuccessStoriesSection() {
                                   <span className="text-zion-cyan font-semibold">{metric.after}</span>"
                                   <span className="text-zion-purple font-bold">({metric.improvement})</span>
                                 </div>
-                              </div>))}
+                              </div>) ) }
                           </div>
                         </div>
 
@@ -488,7 +487,7 @@ export function ClientSuccessStoriesSection() {
                           <div className="flex flex-wrap gap-1">"
                             {story.technologies.map((tech, idx) => (<span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                                 {tech}
-                              </span>))}
+                              </span>) ) }
                           </div>
                         </div>
 
@@ -505,10 +504,10 @@ export function ClientSuccessStoriesSection() {
                             </div>
                           </div>
                         </div>
-                      </motion.div>)}
+                      </motion.div>) }
                   </AnimatePresence>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 

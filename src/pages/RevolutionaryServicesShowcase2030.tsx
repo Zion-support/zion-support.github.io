@@ -1,6 +1,11 @@
 import React, { useState } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';
 import { ArrowRight,
+import { motion  } from 'framer - motion.ts';
+import { REVOLUTIONARY_SERVICES_2030 } from "../data / revolutionaryServices2030";
+import { SEO } from "../components / SEO";
+
+
   ChevronLeft,
   ChevronRight,
   Mail as MailIcon,
@@ -62,14 +67,14 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   const categories = ['all', ...Array.from(new Set(REVOLUTIONARY_SERVICES_2030.map(service => service.category)))];
 
   // Filter and sort services
-  const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredServices = REVOLUTIONARY_SERVICES_2030.filter (service => {;
+    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     
-    return matchesCategory && matchesSearch});
+    return matchesCategory && matchesSearch}) ;
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  const sortedServices = [...filteredServices].sort ( (a, b) => {;
     let comparison = 0;
     switch (sortBy) {
 '
@@ -97,17 +102,17 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
         comparison = 0};'
     return sortOrder === 'asc' ? comparison : -comparison});
 
-  const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
+  const totalPages = Math.ceil (sortedServices.length / itemsPerPage) ;
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const currentServices = sortedServices.slice(startIndex, endIndex);
+  const currentServices = sortedServices.slice (startIndex, endIndex) ;
 
-  const handleServiceSelect = (service: any) => {;
-    setSelectedService(service);
+  const handleServiceSelect = useCallback ( (service: any) => {;
+    setSelectedService (service) ;
   };
 
   const closeModal = () => {;
-    setSelectedService(null);
+    setSelectedService (null) ;
   };
 
   const getCategoryIcon = (category: string)  => {
@@ -206,21 +211,11 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.8 }}"
@@ -352,8 +347,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     }`}
 '
                     {category === 'all' ? 'All Categories' : category}
-                  </button>
-                ))}
+                  </button>) ) }
               </div>
 
               {/* Results Summary */}"
@@ -385,21 +379,11 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                   transition = {
@@ -468,8 +452,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                           className="px-3 py-1 bg-white/10 rounded-full text-xs text-white"
 
                           {tag}
-                        </span>
-                      ))}
+                        </span>) ) }
                     </div>
 "
                     <div className="flex items-center justify-between">"
@@ -479,8 +462,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                       <ArrowUpRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </div>
                   </div>;
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
 
             {/* Pagination */}
@@ -507,8 +489,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                       }`}
 
                       {page}
-                    </button>
-                  ))}
+                    </button>) ) }
 
                   <button
                     onClick={() => handlePageChange(currentPage + 1)}
@@ -518,8 +499,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     <ChevronRight className="w-5 h-5" />
                   </button>
                 </div>
-              </div>
-            )}
+              </div>) }
           </div>
         </section>
 
@@ -532,21 +512,11 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.8 }}"
@@ -569,21 +539,11 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
                 transition={{ duration: 0.8 }}"
@@ -640,21 +600,11 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   { opacity: 0,
   x: 20 ;
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   x: 0 ;
-
-
-
-
-
 
 }}
                 transition={{ duration: 0.8 }}"
@@ -727,21 +677,11 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   { opacity: 0,
   scale: 0.9 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
             exit = {
@@ -835,8 +775,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                       className="px-3 py-1 bg-white/10 rounded-full text-sm text-white"
 
                       {integration}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
               </div>
 "
@@ -849,8 +788,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                       className="px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-sm text-red-300"
 
                       {competitor}
-                  </span>
-                  ))}
+                  </span>) ) }
                 </div>
               </div>;
 "

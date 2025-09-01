@@ -3,7 +3,6 @@ import React from 'react';'
 import { motion } from 'framer-motion';'
 import { BarChart3, CheckCircle, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
-export default function ServicesComparisonPage() {
   const services = [
     {
 '
@@ -74,8 +73,7 @@ export default function ServicesComparisonPage() {
                 </tr>
               </thead>
               <tbody>
-                {services.map((service, index) => (
-                  <motion.tr
+                {services.map ( (service, index) => (<motion.tr
                     key={service.name}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -144,8 +142,7 @@ export default function ServicesComparisonPage() {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 
 '"

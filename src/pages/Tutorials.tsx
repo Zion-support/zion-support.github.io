@@ -141,7 +141,7 @@ const Tutorials = () => {
       selectedCategory === 'all' ||
       tutorial.category.toLowerCase() === selectedCategory.toLowerCase();
     return matchesSearch && matchesCategory;
-  });
+  }) ;
 
   const sortedTutorials = [...filteredTutorials].sort((a, b) => {
 
@@ -162,7 +162,7 @@ const Tutorials = () => {
           parseInt(a.students.replace('k', '000'))
         );
     }
-  });
+  }) ;
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
@@ -339,8 +339,7 @@ const Tutorials = () => {
                   </button>
                 </div>
               </div>
-            </div>
-          ))}
+            </div>) ) }
         </div>
 
         {/* Load More */}
@@ -349,8 +348,7 @@ const Tutorials = () => {
             <button className="bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 px-8 py-3 rounded-lg border border-slate-300 dark:border-slate-600 font-medium transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
               Load More Tutorials
             </button>
-          </div>
-        )}
+          </div>) }
 
         {/* Empty State */}
         {sortedTutorials.length === 0 && ("
@@ -374,11 +372,9 @@ const Tutorials = () => {
             >
               Clear Filters
             </button>
-          </div>
-        )}
+          </div>) }
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default Tutorials;

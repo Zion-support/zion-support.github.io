@@ -1,7 +1,7 @@
 import React from 'react.ts';'
 import { SEO   } from '../../components/SEO';'
 import { motion   } from 'framer-motion.ts';
-
+;
 const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
 
   return()
@@ -116,7 +116,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
                   description: "Built-in security scanning, compliance checks, and vulnerability assessment throughout the deployment pipeline.","
                   icon: "🔒"
                 }
-              ].map((feature, index)   => (
+              ].map(feature: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -185,7 +185,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
                 { metric: "85%", description: "Reduction in manual tasks" },"
                 { metric: "70%", description: "Improvement in resource utilization" },"
                 { metric: "95%", description: "Increase in deployment success rate" }
-              ].map((benefit, index)   => (
+              ].map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -271,7 +271,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
                   description: "IoT-focused DevOps automation for industrial applications with edge computing support.","
                   features: ["Edge deployment", "IoT integration", "Real-time monitoring"]
                 }
-              ].map((useCase, index)   => (
+              ].map(useCase: unknown, index: unknown 
                 <motion.div
                   key={index}
                   initial = {
@@ -343,7 +343,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
               {["
                 "Kubernetes", "Docker", "Terraform", "Jenkins", "GitLab CI/CD", "GitHub Actions", "AWS", "Azure","
                 "GCP", "Ansible", "Helm", "ArgoCD", "Prometheus", "Grafana", "ELK Stack", "Istio"
-              ].map((tech, index)   => (
+              ].map(tech: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -456,7 +456,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
                   ],
                   popular: false
                 }
-              ].map((plan, index)   => (
+              ].map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {

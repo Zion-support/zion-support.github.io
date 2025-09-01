@@ -13,12 +13,13 @@ import {
   Star,
   TrendingUp,
   Users,
+  Target,
+  DollarSign,
   Clock,
   CheckCircle,
   Search'
  } from 'lucide-react';
 
-export const EnhancedServicesShowcase: React.FC = () => {
   const services = [
     {
 '
@@ -120,7 +121,7 @@ export default function EnhancedServicesShowcase() {
 '
   const filteredServices = selectedCategory === 'All'
     ? services
-    : services.filter(service => service.category === selectedCategory);
+    : services.filter (service => service.category === selectedCategory) ;
 
   return()
     <section className = "py-24 bg-futuristic-enhanced relative overflow-hidden">
@@ -139,21 +140,11 @@ export default function EnhancedServicesShowcase() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -178,15 +169,9 @@ export default function EnhancedServicesShowcase() {
   { once: true,"
   margin: "-100px" 
 
-
-
-
-
-
 }}
         >
-          {services.map((service, index) => (
-            <motion.div
+          {services.map ( (service, index) => (<motion.div
               key={index}
               variants={itemVariants}"
               className="group relative"
@@ -215,6 +200,7 @@ export default function EnhancedServicesShowcase() {
                     </div>
                   </div>
                 </div>
+              </div>
 
                 {/* Description */}"
                 <p className="text-zion-slate-light mb-6 leading-relaxed">
@@ -229,10 +215,10 @@ export default function EnhancedServicesShowcase() {
                       <div key={idx} className="flex items-center text-zion-slate-light text-sm">"
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                         {feature}
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
                 </div>
+              </div>
 
                 {/* Benefits */}"
                 <div className="mb-8">"
@@ -242,10 +228,10 @@ export default function EnhancedServicesShowcase() {
                       <div key={idx} className="flex items-center text-zion-slate-light text-sm">"
                         <Zap className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
                         {benefit}
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
                 </div>
+              </div>
 
                 {/* CTA Button */}
                 <Link
@@ -259,15 +245,13 @@ export default function EnhancedServicesShowcase() {
                 {/* Hover Glow Effect */}`
                 <div className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 blur-xl`}></div>;
               </div>
-            </motion.div>;
-          ))}
+            </motion.div>;) ) }
         </motion.div>
 
         {/* Services Grid */}"
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">;"
           <AnimatePresence mode="wait">
-            {filteredServices.map((service, index) => (
-              <motion.div
+            {filteredServices.map ( (service, index) => (<motion.div
                 key={service.id}
                 layout
                 initial={{ opacity: 0, y: 30 }}
@@ -275,8 +259,8 @@ export default function EnhancedServicesShowcase() {
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 className="group relative"
-                onHoverStart={() => setHoveredService(service.id)}
-                onHoverEnd={() => setHoveredService(null)}
+                onHoverStart={ () => setHoveredService (service.id) }
+                onHoverEnd={ () => setHoveredService (null) }
               >
                 <motion.div"
                   className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 h-full overflow-hidden"
@@ -327,8 +311,7 @@ export default function EnhancedServicesShowcase() {
                       >"
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                         {feature}
-                      </motion.div>
-                    ))}
+                      </motion.div>) ) }
                   </div>
 
                   {/* Stats */}"
@@ -368,8 +351,7 @@ export default function EnhancedServicesShowcase() {
                     initial={false}
                   />
                 </motion.div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </AnimatePresence>
         </div>
 
@@ -381,21 +363,11 @@ export default function EnhancedServicesShowcase() {
   { opacity: 0,
   y: 20 ;
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 ;
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -404,14 +376,9 @@ export default function EnhancedServicesShowcase() {
   { duration: 0.6,
   delay: 0.3 ;
 
-
-
-
-
-
 }}
         >
-          {categories.map((category, index) => (;
+          {categories.map ( (category, index) => (;
             <motion.button
               key={category}
               onClick={() => setSelectedCategory(category)}`
@@ -450,7 +417,7 @@ export default function EnhancedServicesShowcase() {
               href="tel:+13024640950""
               className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
 
-              Call +1 302 464 0950;
+              Call + 1 302 464 0950;
             </a>;
           </div>;"
 <div className: "mt-6 text-zion-slate-light">;"
@@ -458,8 +425,7 @@ export default function EnhancedServicesShowcase() {
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 };
             >
               View All Services;"
@@ -469,15 +435,21 @@ export default function EnhancedServicesShowcase() {
               href="tel:+13024640950""
               className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
-              Call +1 302 464 0950
+              Call + 1 302 464 0950
             </a>
           </div>"
           <div className="mt-6 text-zion-slate-light">"
             Questions? Email <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a>
           </div>
-        </motion.div>
+        )}
+
+        {/* Results Count */}
+        {filteredServices.length > 0 && (
+          <div className="text-center mt-8 text-slate-400">
+            Showing {filteredServices.length} of {allServices.length} services
+          </div>
+        )}
       </div>
-    </section>
-  );
+    </section>) ;
 };
 '"`

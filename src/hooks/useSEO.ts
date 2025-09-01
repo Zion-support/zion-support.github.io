@@ -9,15 +9,17 @@ interface SEOData {
   ogType?: string;
   twitterCard?: string;
   noindex?: boolean;
-  structuredData?: object}
+  structuredData?: object
+}
 
 interface UseSEOOptions {
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
   enablePerformanceTracking?: boolean;
-  enableAnalytics?: boolean}
-
-export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
+  enableAnalytics?: boolean
+}
+;
+export const useSEO = (...args: unknown[]): unknown => {;
   const {;
     enableAutoTitle = true,;
     enableStructuredData = true,;

@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     // Main application
     {
-      name: 'zion-app',
+      name: 'bolt-app',
       script: 'npm',
       args: 'start',
       cwd: './',
@@ -20,10 +20,10 @@ module.exports = {
       },
     },
 
-    // AI-Powered Code Analyzer - Intelligent code analysis and auto-fixing
+    // MASTER ERROR FIXING AUTOMATIONS (HIGHEST PRIORITY)
     {
-      name: 'ai-code-analyzer',
-      script: './scripts/automation/ai-code-analyzer.cjs',
+      name: 'master-error-fixer',
+      script: './scripts/automation/master-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -40,14 +40,14 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Smart Performance Optimizer - Bundle and runtime optimization
+    // TypeScript error fixer - runs every 15 minutes (HIGH PRIORITY)
     {
-      name: 'smart-performance-optimizer',
-      script: './scripts/automation/smart-performance-optimizer.cjs',
+      name: 'typescript-error-fixer',
+      script: './scripts/automation/typescript-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
         PERFORMANCE_OPTIMIZATION_MODE: 'true',
@@ -60,10 +60,10 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Intelligent Dependency Manager - Dependency analysis and management
+    // ESLint error fixer - runs every 20 minutes (HIGH PRIORITY)
     {
-      name: 'intelligent-dependency-manager',
-      script: './scripts/automation/intelligent-dependency-manager.cjs',
+      name: 'eslint-error-fixer',
+      script: './scripts/automation/eslint-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -80,14 +80,14 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Smart Deployment Automation - Intelligent deployment management
+    // Console error fixer - runs every 10 minutes (HIGHEST PRIORITY)
     {
-      name: 'smart-deployment-automation',
-      script: './scripts/automation/smart-deployment-automation.cjs',
+      name: 'console-error-fixer',
+      script: './scripts/automation/console-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
         DEPLOYMENT_AUTOMATION_MODE: 'true',
@@ -100,14 +100,14 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Enhanced CI/CD Automation - Comprehensive CI/CD pipeline
+    // Comprehensive error fixer - runs every 45 minutes (HIGH PRIORITY)
     {
-      name: 'enhanced-ci-cd-automation',
-      script: './scripts/automation/enhanced-ci-cd-automation.cjs',
+      name: 'comprehensive-error-fixer',
+      script: './scripts/automation/comprehensive-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
         CI_CD_MODE: 'true',
@@ -120,10 +120,10 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Enhanced Security Automation - Advanced security monitoring
+    // JSX error fixer - runs every 25 minutes (HIGH PRIORITY)
     {
-      name: 'enhanced-security-automation',
-      script: './scripts/automation/enhanced-security-automation.cjs',
+      name: 'jsx-error-fixer',
+      script: './scripts/automation/jsx-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -140,14 +140,14 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Enhanced Testing Automation - Intelligent testing and quality assurance
+    // ERROR PREVENTION AND MONITORING
     {
-      name: 'enhanced-testing-automation',
-      script: './scripts/automation/enhanced-testing-automation.cjs',
+      name: 'error-prevention-monitor',
+      script: './scripts/automation/error-prevention-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
         TESTING_MODE: 'true',
@@ -160,10 +160,9 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Project Health Monitor - Comprehensive project health monitoring
     {
-      name: 'project-health-monitor',
-      script: './scripts/automation/project-health-monitor.cjs',
+      name: 'typescript-error-monitor',
+      script: './scripts/automation/typescript-error-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -180,10 +179,10 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // PM2 Sync Automation - Core synchronization system
+    // BUILD AND TEST AUTOMATIONS
     {
-      name: 'pm2-sync-automation',
-      script: './scripts/automation/pm2-sync-automation.cjs',
+      name: 'daily-build-test',
+      script: './scripts/automation/daily-build-test.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -200,10 +199,9 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // PM2 Sync Monitor - Monitoring and alerting system
     {
-      name: 'pm2-sync-monitor',
-      script: './scripts/automation/pm2-sync-monitor.cjs',
+      name: 'build-error-detector',
+      script: './scripts/automation/build-error-detector.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -220,10 +218,10 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Link Checker Automation - Link integrity monitoring
+    // DEPENDENCY AND SECURITY AUTOMATIONS
     {
-      name: 'link-checker-automation',
-      script: './scripts/automation/link-checker-automation.cjs',
+      name: 'dependency-updates',
+      script: './scripts/automation/dependency-updates.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -240,14 +238,13 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // TypeScript Syntax Fixer - Code quality automation
     {
-      name: 'typescript-syntax-fixer',
-      script: './scripts/automation/typescript-syntax-fixer.cjs',
+      name: 'security-audit',
+      script: './scripts/automation/security-audit.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '256M',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
         SYNTAX_FIXING_MODE: 'true',
@@ -260,14 +257,13 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Console Error Fixer - Runtime error automation
     {
-      name: 'console-error-fixer',
-      script: './scripts/automation/console-error-fixer.cjs',
+      name: 'smart-dependency-intelligence',
+      script: './scripts/automation/smart-dependency-intelligence.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '256M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
         ERROR_FIXING_MODE: 'true',
@@ -280,10 +276,10 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Dependency Manager - Advanced dependency management
+    // QUALITY AND PERFORMANCE AUTOMATIONS
     {
-      name: 'dependency-manager',
-      script: './scripts/automation/dependency-manager.cjs',
+      name: 'quality-checks',
+      script: './scripts/automation/quality-checks.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -300,7 +296,6 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Performance Monitor - Real-time performance monitoring
     {
       name: 'performance-monitor',
       script: './scripts/automation/performance-monitor.cjs',
@@ -320,10 +315,9 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Front Maximizer - Frontend optimization automation
     {
-      name: 'front-maximizer',
-      script: './scripts/automation/front-maximizer.cjs',
+      name: 'continuous-improvement',
+      script: './scripts/automation/continuous-improvement.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -340,14 +334,63 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Sitemap Runner - SEO and sitemap automation
+    // INTELLIGENT AUTOMATION SYSTEMS
     {
-      name: 'sitemap-runner',
-      script: './scripts/automation/sitemap-runner.cjs',
+      name: 'ai-code-review-automation',
+      script: './scripts/automation/ai-code-review-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '256M',
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      log_file: './automation/logs/ai-code-review-automation.log',
+      error_file: './automation/logs/ai-code-review-automation-error.log',
+      out_file: './automation/logs/ai-code-review-automation-out.log'
+    },
+
+    {
+      name: 'predictive-issue-detection',
+      script: './scripts/automation/predictive-issue-detection.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */3 * * *', // Every 3 hours
+      log_file: './automation/logs/predictive-issue-detection.log',
+      error_file: './automation/logs/predictive-issue-detection-error.log',
+      out_file: './automation/logs/predictive-issue-detection-out.log'
+    },
+
+    {
+      name: 'intelligent-build-pipeline',
+      script: './scripts/automation/intelligent-build-pipeline.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */8 * * *', // Every 8 hours
+      log_file: './automation/logs/intelligent-build-pipeline.log',
+      error_file: './automation/logs/intelligent-build-pipeline-error.log',
+      out_file: './automation/logs/intelligent-build-pipeline-out.log'
+    },
+
+    // MONITORING AND DASHBOARDS
+    {
+      name: 'error-analytics-dashboard',
+      script: './scripts/automation/error-analytics-dashboard.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
         SITEMAP_MODE: 'true',
@@ -360,14 +403,13 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Quality Checks - Code quality automation
     {
-      name: 'quality-checks',
-      script: './scripts/automation/quality-checks.cjs',
+      name: 'project-health-dashboard',
+      script: './scripts/automation/project-health-dashboard.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '256M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
         QUALITY_CHECK_MODE: 'true',
@@ -380,10 +422,27 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Security Audit - Security scanning automation
     {
-      name: 'security-audit',
-      script: './scripts/automation/security-audit.cjs',
+      name: 'unified-automation-dashboard',
+      script: './scripts/automation/unified-automation-dashboard.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      },
+      cron_restart: '*/5 * * * *', // Every 5 minutes
+      log_file: './automation/logs/unified-automation-dashboard.log',
+      error_file: './automation/logs/unified-automation-dashboard-error.log',
+      out_file: './automation/logs/unified-automation-dashboard-out.log'
+    },
+
+    // RECOVERY AND MAINTENANCE
+    {
+      name: 'auto-recovery-manager',
+      script: './scripts/automation/auto-recovery-manager.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -400,14 +459,13 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Continuous Improvement - Continuous optimization automation
     {
-      name: 'continuous-improvement',
-      script: './scripts/automation/continuous-improvement.cjs',
+      name: 'critical-error-alert-system',
+      script: './scripts/automation/critical-error-alert-system.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '256M',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
         CONTINUOUS_IMPROVEMENT_MODE: 'true',
@@ -420,10 +478,10 @@ module.exports = {
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Daily Build Test - Automated build testing
+    // UTILITY AUTOMATIONS
     {
-      name: 'daily-build-test',
-      script: './scripts/automation/daily-build-test.cjs',
+      name: 'link-checker',
+      script: './scripts/automation/link-checker.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -443,7 +501,7 @@ module.exports = {
 
   deploy: {
     production: {
-      user: 'miami2',
+      user: 'root',
       host: 'localhost',
       ref: 'origin/main',
       repo: 'https://github.com/Zion-Holdings/zion.app.git',

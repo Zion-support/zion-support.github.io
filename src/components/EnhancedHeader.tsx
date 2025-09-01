@@ -89,8 +89,8 @@ export function EnhancedHeader() {
 
       setIsSearching(true);
       try {
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+        await new Promise (resolve => setTimeout (resolve, 1000) ) ;
+        window.location.href = `/search?q=${encodeURIComponent (searchQuery.trim () ) }`;
       } finally {
 
         setIsSearching(false);
@@ -426,7 +426,7 @@ export function EnhancedHeader() {
   return()
     <>
       {/* Matrix Rain Background */}
-      <div className="matrix-rain"></div>
+      <div role="button" className="matrix - rain"></div>
       {/* Enhanced Header */}
       <motion.header`
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -477,8 +477,7 @@ export function EnhancedHeader() {
                   }`}
                 >
                   {item.name}
-                </Link>
-              ))}
+                </Link>) ) }
 
               {/* Enhanced Services Mega Menu */}"
               <div className="relative group">
@@ -499,8 +498,8 @@ export function EnhancedHeader() {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: -20, scale: 0.95 }}
                       transition={{ duration: 0.3 }}
-                      onMouseEnter={() => setServicesDropdownOpen(true)}
-                      onMouseLeave={() => setServicesDropdownOpen(false)}
+                      onMouseEnter={ () => setServicesDropdownOpen (true) }
+                      onMouseLeave={ () => setServicesDropdownOpen (false) }
                     >
                       {/* Featured Services */}"
                       <div className="mb-8">"
@@ -597,8 +596,7 @@ export function EnhancedHeader() {
                                 </Link>
                               )}
                             </div>
-                          </div>
-                        ))}
+                          </div>) ) }
                       </div>
 
                       {/* View All Services Link */}"
@@ -614,14 +612,13 @@ export function EnhancedHeader() {
                           <div className="flex items-center space-x-4 text-sm text-gray-400">
                             <span>50+ Services Available</span>
                             <span>•</span>
-                            <span>Proven ROI</span>
+                            <span > Proven ROI</span>
                             <span>•</span>
-                            <span>24/7 Support</span>
+                            <span > 24 / 7 Support</span>
                           </div>
                         </div>
                       </div>
-                    </motion.div>
-                  )}
+                    </motion.div>) }
                 </AnimatePresence>
               </div>
 
@@ -638,8 +635,7 @@ export function EnhancedHeader() {
                   }`}
                 >
                   {item.name}
-                </Link>
-              ))}
+                </Link>) ) }
             </nav>
 
             {/* Right Side Actions */}"
@@ -794,12 +790,10 @@ export function EnhancedHeader() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          )}
+            </motion.div>) }
         </AnimatePresence>
       </motion.header>
-    </>
-  );
+    </>) ;
 }
 
 export default EnhancedHeader;

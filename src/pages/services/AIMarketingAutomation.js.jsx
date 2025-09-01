@@ -432,5 +432,6 @@ const AIMarketingAutomation = () => {
         </motion.div>
       </div>
     </div>)};
+export { AIMarketingAutomation };
 export default AIMarketingAutomation;
 '"

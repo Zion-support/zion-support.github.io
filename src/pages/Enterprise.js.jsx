@@ -133,7 +133,7 @@ export default function Enterprise() {
                     {feature.description}
                   </CardDescription>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -175,7 +175,7 @@ export default function Enterprise() {
                     {plan.name === "Enterprise" ? "Contact Sales" : "Get Started"}
                   </Button>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>

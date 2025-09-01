@@ -14,7 +14,7 @@ export default function BlogPost() {
     const [showShareMenu, setShowShareMenu] = useState(false);
     useEffect(() => {
         // Find the current post by slug
-        const currentPost = BLOG_POSTS.find(p => p.slug === slug);
+        const currentPost = BLOG_POSTS.find (p => p.slug === slug) ;
         if (currentPost) {
 
             setPost(currentPost);
@@ -28,7 +28,7 @@ export default function BlogPost() {
             // Post not found"
             router("/blog", { replace: true })}
         // Scroll to top when post changes
-        window.scrollTo(0, 0)}, [slug, navigate]);
+        window.scrollTo (0, 0) }, [slug, navigate]) ;
     if (!post) {
 "
         return (<div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">"
@@ -117,7 +117,7 @@ export default function BlogPost() {
                         <Linkedin className="h-4 w-4 mr-2"/>
                         <span>LinkedIn</span>
                       </a>
-                    </div>)}
+                    </div>) }
                 </div>
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function BlogPost() {
             <div className="flex flex-wrap gap-2 mt-12">"
               {post.tags.map(tag => (<span key={tag} className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full">
                   #{tag}
-                </span>))}
+                </span>) ) }
             </div>
             "
             <Separator className="my-12 bg-zion-blue-light"/>
@@ -161,9 +161,9 @@ export default function BlogPost() {
                         <span className="text-xs text-zion-cyan">{relatedPost.category}</span>"
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
                       </div>
-                    </Link>))}
+                    </Link>) ) }
                 </div>
-              </div>)}
+              </div>) }
             
             {/* Navigation */}"
             <div className="flex justify-between items-center mt-12">"

@@ -83,7 +83,6 @@ import {
   DollarSign as DollarSignIcon2} from 'lucide-react';'
 import { SEO } from '../components/SEO';
 
-export default function ComprehensiveServicesShowcase2031() {
   const featuredServices = [
     {
 '
@@ -404,8 +403,7 @@ export default function ComprehensiveServicesShowcase2031() {
                     <div className="inline-flex items-center px-2 py-1 bg-yellow-500/20 text-yellow-300 text-xs font-medium rounded-full">"
                       <Star className="w-3 h-3 mr-1" />
                       Featured
-                    </div>
-                  )}
+                    </div>) }
                 </div>
 "
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -444,8 +442,7 @@ export default function ComprehensiveServicesShowcase2031() {
                   Learn More"
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -499,8 +496,7 @@ export default function ComprehensiveServicesShowcase2031() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -578,8 +574,7 @@ export default function ComprehensiveServicesShowcase2031() {
                 >
                   Get Started
                 </a>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>

@@ -5,7 +5,8 @@ export interface Message {
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
-  read?: boolean}
+  read?: boolean
+};
 export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
 
   isOpen?: boolean;
@@ -29,7 +30,7 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
     setMessages(prev => [...prev, userMessage]);'
     setInputMessage('');
     // Simulate AI response
-    setTimeout(() => {
+    setTimeout(: unknown {
       const aiMessage: Message = {
 
   id: (Date.now() + 1).toString(),'
@@ -48,14 +49,14 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
       setMessages(prev => [...prev, aiMessage]);
     }, 1000);
   };
-  const handleSubmit = (e: React.FormEvent) => {;
+  const handleSubmit = (...args: unknown[]): unknown => {;
     e.preventDefault();
     handleSendMessage(inputMessage);
   };
-  const toggleChat = () => {;
+  const toggleChat = (...args: unknown[]): unknown => {;
     setIsChatOpen(!isChatOpen);
   };
-  const closeChat = () => {;
+  const closeChat = (...args: unknown[]): unknown => {;
     setIsChatOpen(false);
     if (onClose) onClose()};
   if (!isChatOpen) {
@@ -90,8 +91,7 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
           <div className="text-center text-gray-500 mt-8">
             <p>How can we help you today?</p>
           </div>
-        ) : (
-          messages.map((message) => (
+        ) : messages.map((message: unknown (
             <div
               key={message.id}'
               className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}

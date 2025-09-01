@@ -152,7 +152,7 @@ import {
  } from 'lucide-react';
 
 const microSAASServices2028 = [
-  // AI-Powered Content Creation
+  // AI - Powered Content Creation
   {
 '
     id: 'ai-content-creator-pro','
@@ -372,7 +372,7 @@ const microSAASServices2028 = [
     customers: 123
   },
 
-  // AI E-commerce Optimizer
+  // AI E - commerce Optimizer
   {
 '
     id: 'ai-ecommerce-optimizer','
@@ -506,7 +506,7 @@ const microSAASServices2028 = [
 ];
 
           return b.popular ? 1 : -1}
-    });
+    }) ;
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -570,8 +570,7 @@ const microSAASServices2028 = [
 "
                   <category.icon className="w-4 h-4" />
                   {category.name}
-                </motion.button>;
-              ))}
+                </motion.button>;) ) }
             </div>
 
             {/* Search and Sort */}"
@@ -613,21 +612,11 @@ const microSAASServices2028 = [
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -647,8 +636,7 @@ const microSAASServices2028 = [
                 {service.popular && (;"
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
                     Popular
-                  </div>
-                )}
+                  </div>) }
 
                 {/* Service Icon */}`
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>"
@@ -683,8 +671,7 @@ const microSAASServices2028 = [
                   {service.features.length > 3 && ("
                     <div className="text-sm text-zion-slate-light">
                       +{service.features.length - 3} more features
-                    </div>
-                  )}
+                    </div>) }
                 </div>
 
                 {/* Stats */}"
@@ -718,8 +705,7 @@ const microSAASServices2028 = [
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -766,8 +752,7 @@ const microSAASServices2028 = [
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default MicroSAASServices2028;}}}'"`

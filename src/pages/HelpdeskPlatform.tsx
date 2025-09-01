@@ -276,11 +276,9 @@ export default function HelpdeskPlatform(...args: any[]): any {
                     >"
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {benefit}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>

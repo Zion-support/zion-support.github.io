@@ -9,14 +9,14 @@ import { HireNowCTA } from "@/components/profile/HireNowCTA";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage() {
     // useParams may be untyped in this environment, so avoid passing a
     // type argument and cast the result instead to prevent TS2347 errors.
-    const { profileId } = useParams();
-    const [profileData, setProfileData] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [isError, setIsError] = useState(false);
-    useEffect(() => {
+    const { profileId } = useParams () ;
+    const [profileData, setProfileData] = useState (null) ;
+    const [isLoading, setIsLoading] = useState (true) ;
+    const [isError, setIsError] = useState (false) ;
+    useEffect ( () => {
         const fetchProfile = async () => {
-            setIsLoading(true);
-            setIsError(false);
+            setIsLoading (true) ;
+            setIsError (false) ;
             try {
                 const { data, error } = await supabase"
                     .from("talent_profiles")"
@@ -26,7 +26,7 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
                 if (error) {
 
                     throw error}
-                setProfileData(data)}
+                setProfileData (data) }
             catch (error) {
 "
                 // // // // // // // // console.error("Error fetching profile:", error);
@@ -81,7 +81,7 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
                       <h1 className="text-2xl font-bold text-white">{profileData.full_name}</h1>"
                       <p className="text-zion-cyan font-medium">{profileData.professional_title}</p>
                     </div>
-                    {/* Add Save/Unsave Button Here */}
+                    {/* Add Save / Unsave Button Here */}
                   </div>
 
                   {/* Location & Availability */}"
@@ -93,7 +93,7 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
                     {profileData.availability && (<div className="flex items-center text-zion-slate-light">"
                         <Clock className="h-4 w-4 mr-1"/>
                         <span>{profileData.availability}</span>
-                      </div>)}
+                      </div>) }
                   </div>
                 </div>
               </div>
@@ -104,7 +104,7 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
                   <div className="flex flex-wrap gap-2">"
                     {profileData.skills.map((skill, index) => (<Badge key={index} variant="secondary">{skill}</Badge>))}
                   </div>
-                </div>)}
+                </div>) }
             </div>
 
             {/* Bio Section */}"
@@ -157,12 +157,6 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
             full_name: profileData?.full_name || '','
             professional_title: profileData?.professional_title || '',
   hourly_rate: profileData?.hourly_rate || 0
-        
-
-
-
-
-
 
 }}/>
             {/* Placeholder for other sidebar elements */}

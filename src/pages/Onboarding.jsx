@@ -41,7 +41,7 @@ export default function Onboarding() {
             return;
         }
         // Continue with the onboarding flow for clients
-        setCurrentStep(1)};
+        setCurrentStep (1) };
     const handleProfileComplete = async (data) => {
 
         if (!user || !userType) {
@@ -54,7 +54,7 @@ export default function Onboarding() {
             router('/login');
             return;
         }
-        const dbUserType = mapUserTypeToDatabase(userType);
+        const dbUserType = mapUserTypeToDatabase (userType) ;
         try {
             await updateProfile({
 
@@ -81,7 +81,7 @@ export default function Onboarding() {
                 ? "/client-dashboard""
                 : "/talent-dashboard";
             // Redirect to dashboard
-            router(dashboardRoute);
+            router (dashboardRoute) ;
         }
         catch (error) {
 '
@@ -131,7 +131,7 @@ export default function Onboarding() {
                 <Button variant="outline" className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light" onClick={() => setCurrentStep(0)}>
                   Back to Role Selection
                 </Button>
-              </div>)}
+              </div>) }
           </div>
         </div>
       </div>

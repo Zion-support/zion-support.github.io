@@ -31,7 +31,7 @@ export default function Cookies() {
     analytics: false,
     marketing: false,
     functional: false
-  });
+  }) ;
 
   const cookieTypes = [
     {
@@ -157,7 +157,7 @@ export default function Cookies() {
 
       ...prev,
       [type]: enabled
-    }));
+    }) ) ;
   };
 
   const savePreferences = () => {
@@ -174,8 +174,8 @@ export default function Cookies() {
       analytics: true,
       marketing: true,
       functional: true
-    });
-    savePreferences();
+    }) ;
+    savePreferences () ;
   };
 
   const rejectAll = () => {
@@ -185,8 +185,8 @@ export default function Cookies() {
       analytics: false,
       marketing: false,
       functional: false
-    });
-    savePreferences();
+    }) ;
+    savePreferences () ;
   };
 
   return()
@@ -316,12 +316,10 @@ export default function Cookies() {
                           <li key={index} className="flex items-center text-gray-300 text-sm">"
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                             {example}
-                          </li>
-                        ))}
+                          </li>) ) }
                       </ul>
                     </div>
-                  </div>
-                ))}
+                  </div>) ) }
               </div>
 "
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -335,7 +333,7 @@ export default function Cookies() {
                   onClick={rejectAll}"
                   className="px-8 py-3 bg-slate-700/50 text-gray-300 font-semibold rounded-lg hover:bg-slate-600/50 transition-all duration-200"
                 >
-                  Reject Non-Essential
+                  Reject Non - Essential
                 </button>
                 <button
                   onClick={savePreferences}"
@@ -390,13 +388,11 @@ export default function Cookies() {
                         <li key={exampleIndex} className="flex items-center text-gray-300 text-xs">"
                           <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
                           {example}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -451,8 +447,7 @@ export default function Cookies() {
                           {cookie.type}
                         </span>
                       </div>
-                    </motion.div>
-                  ))}
+                    </motion.div>) ) }
                 </div>
               </div>
             </motion.div>
@@ -613,8 +608,7 @@ export default function Cookies() {
                         className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full font-mono"
                       >
                         {cookie}
-                      </span>
-                    ))}
+                      </span>) ) }
                   </div>
                 </div>
                 "
@@ -643,14 +637,11 @@ export default function Cookies() {
                         <>"
                           <EyeOff className="w-4 h-4 mr-2" />
                           Disabled
-                        </>
-                      )}
-                    </button>
-                  )}
+                        </>) }
+                    </button>) }
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
 
         {/* Cookie Management */}"
@@ -758,7 +749,7 @@ export default function Cookies() {
               </h3>"
               <p className="text-gray-300">
                 Yes, you can delete cookies through your browser settings. However, this may affect 
-                the functionality of our website and you may need to re-enter certain information.
+                the functionality of our website and you may need to re - enter certain information.
               </p>
             </div>
             "
@@ -814,7 +805,6 @@ export default function Cookies() {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>) ;
 }
 '"`

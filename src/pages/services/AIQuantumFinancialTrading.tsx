@@ -22,8 +22,8 @@ import {
   Mail,
   MapPin'
 } from 'lucide-react';
-
-const AIQuantumFinancialTrading = () => {
+;
+const AIQuantumFinancialTrading = (...args: unknown[]): unknown => {
   const features = [
     {
 
@@ -320,7 +320,7 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -423,7 +423,7 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index)  => (
+            {services.map(service: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -478,7 +478,7 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -535,7 +535,7 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
 "
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {

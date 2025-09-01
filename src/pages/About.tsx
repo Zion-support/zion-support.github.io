@@ -23,7 +23,6 @@ import {
   Lock,'
   Database} from 'lucide-react';
 
-export default function About() {
   const stats = [
     {
 '
@@ -208,8 +207,7 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.2 }}"
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
         >
-          {stats.map((stat, index) => (
-            <motion.div
+          {stats.map ( (stat, index) => (<motion.div
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -360,8 +358,7 @@ export default function About() {
                       className="text-xs text-gray-400 bg-white/5 rounded px-2 py-1"
                     >
                       {skill}
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
               </motion.div>
             ))}
@@ -442,7 +439,6 @@ export default function About() {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 '"`

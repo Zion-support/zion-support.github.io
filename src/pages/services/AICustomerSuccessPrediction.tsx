@@ -34,7 +34,7 @@ import {
   Star'
 } from 'lucide-react';
 import { SEO } from "../../components/SEO";
-
+;
 const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
   const features = [
@@ -334,7 +334,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
           </div>
           "
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial = {
@@ -422,7 +422,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
           </div>
           "
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index)  => (
+            {pricingPlans.map(plan: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -520,7 +520,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
           </div>
           "
           <div className="grid md: grid-cols-3 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -618,7 +618,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
           </div>
           "
           <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index)  => (
+            {integrations.map(integration: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -706,7 +706,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -853,7 +853,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 title: 'Launch','
                 description: 'Go live with monitoring and ongoing optimization support'
 
-            ].map((phase, index) => (;
+            ].map(phase: unknown, index: unknown (;
               <motion.div
                 key={index}
                 initial = {

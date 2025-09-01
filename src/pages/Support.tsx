@@ -269,8 +269,7 @@ const Support = () => {
                       </Link>
                     ))}
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
 
             {/* FAQ Section */}"
@@ -295,8 +294,7 @@ const Support = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
-        )}
+          </motion.div>) }
 
         {/* Contact Support Tab */}'
         {activeTab === 'contact' && (
@@ -339,8 +337,7 @@ const Support = () => {
                     <CheckCircle className="w-4 h-4 text-green-400" />
                     <span>{method.response}</span>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
 "
             <div className="text-center mt-12">
@@ -352,8 +349,7 @@ const Support = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
-          </motion.div>
-        )}
+          </motion.div>) }
 
         {/* Resources Tab */}'
         {activeTab === 'resources' && (
@@ -397,11 +393,9 @@ const Support = () => {
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
                   </Link>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
-          </motion.div>
-        )}
+          </motion.div>) }
 
         {/* System Status Tab */}'
         {activeTab === 'status' && (
@@ -483,8 +477,7 @@ const Support = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </div>
     </div>
   );

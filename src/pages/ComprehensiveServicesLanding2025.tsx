@@ -98,8 +98,8 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 
   };
 
-  const categories = Array.from(new Set(INNOVATIVE_SERVICES_2025.map(service => service.category)));
-  const servicesByCategory = categories.map(category => ({;
+  const categories = Array.from (new Set (INNOVATIVE_SERVICES_2025.map (service => service.category) ) ) ;
+  const servicesByCategory = categories.map (category => ({;
     category,;
     services: INNOVATIVE_SERVICES_2025.filter(service => service.category === category),;
     icon: getCategoryIcon(category),;
@@ -128,21 +128,11 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -220,21 +210,11 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -263,8 +243,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                     {category.services.length > 3 && ("
                       <div className="text-xs text-slate-400">
                         +{category.services.length - 3} more services
-                      </div>
-                    )}
+                      </div>) }
                   </div>
 
                   <Link
@@ -275,8 +254,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                     <ChevronRight className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -339,8 +317,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                       {categoryData.services.length > 3 && ("
                         <div className="text-sm text-blue-400">
                           +{categoryData.services.length - 3} more services
-                        </div>
-                      )}
+                        </div>) }
                     </div>
 "
                     <div className="flex items-center justify-center text-blue-400 group-hover:text-blue-300 transition-colors">"
@@ -349,8 +326,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                     </div>
                   </div>
                 </Link>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -376,21 +352,11 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -436,8 +402,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                     <div key={idx} className="flex items-center text-xs text-gray-400">"
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       <span>{feature}</span>
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
 "
                 <div className="flex items-center justify-between text-xs text-gray-400 mb-4">"
@@ -460,8 +425,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>;
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
 "
           <div className="text-center mt-12">
@@ -515,7 +479,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 title: 'Enterprise Security','
                 description: 'Bank-grade security with compliance certifications and best practices'
 
-            ].map((feature, index) => (;
+            ].map ( (feature, index) => (;
               <motion.div
                 key={index}
                 initial = {
@@ -523,21 +487,11 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -573,21 +527,11 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -638,8 +582,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default ComprehensiveServicesLanding2025;}}}}'"`

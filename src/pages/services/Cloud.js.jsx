@@ -122,5 +122,6 @@ const CloudServices = () => {
     </div>
   );
 };
+export { CloudServices };
 export default CloudServices;
 '"

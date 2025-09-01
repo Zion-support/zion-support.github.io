@@ -82,21 +82,11 @@ export function TechSolutionsSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -121,21 +111,11 @@ export function TechSolutionsSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               viewport={{ once: true }}
@@ -143,11 +123,6 @@ export function TechSolutionsSection() {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
             >
@@ -186,8 +161,7 @@ export function TechSolutionsSection() {
                     <li key={featureIndex} className="flex items-center text-sm text-gray-700">"
                       <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
                       {feature}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
 
                 <Link"
@@ -197,8 +171,7 @@ export function TechSolutionsSection() {
                   Learn More"
                   <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                 </Link>
-              </motion.div>
-            )})}
+              </motion.div>) }) }
         </div>
 
         <motion.div "
@@ -208,21 +181,11 @@ export function TechSolutionsSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -230,11 +193,6 @@ export function TechSolutionsSection() {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}
         >"
@@ -265,16 +223,14 @@ export function TechSolutionsSection() {
           </div>
         </motion.div>;
       </div>;
-    </section>;
-  )};
+    </section>;) };
 
 export default TechSolutionsSection;"
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 }
 
 export default TechSolutionsSection;

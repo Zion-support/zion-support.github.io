@@ -19,7 +19,6 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
                 scaleY[1, 1.5, 1],;
                 opacity[0.5, 1,;
   0.5]
-            
 
 }} transition = {
 
@@ -28,10 +27,9 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
                 duration: 1.2,
                 repeat: Infinity,
   delay: i * 0.1
-            
 
-}}/>))}
-    </div>);
+}}/>) ) }
+    </div>) ;
     const renderVariant = () => {
         switch (variant) {
 '
@@ -40,7 +38,7 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
             case 'pulse':
                 return renderPulse();'
             case 'bars':
-                return renderBars();
+                return renderBars () ;
             default:
                 return renderSpinner()}
     };`

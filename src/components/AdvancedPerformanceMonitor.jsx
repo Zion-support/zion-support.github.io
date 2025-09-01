@@ -140,23 +140,23 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
   const [systemHealth, setSystemHealth] = useState('good');
   const [optimizationSuggestions, setOptimizationSuggestions] = useState([]);
 
-  const containerRef = useRef(null);
+  const containerRef = useRef (null) ;
 
-  useEffect(() => {
+  useEffect ( () => {
     if (!enabled) return;
 
-    const interval = setInterval(() => {
-      refreshMetrics();
-    }, refreshInterval);
+    const interval = setInterval ( () => {
+      refreshMetrics () ;
+    }, refreshInterval) ;
 
-    return () => clearInterval(interval);
-  }, [enabled, refreshInterval]);
+    return () => clearInterval (interval) ;
+  }, [enabled, refreshInterval]) ;
 
   const refreshMetrics = async () => {
-    setIsRefreshing(true);
+    setIsRefreshing (true) ;
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setIsRefreshing(false);
+    await new Promise (resolve => setTimeout (resolve, 1000) ) ;
+    setIsRefreshing (false) ;
   };
 
   const getStatusColor = status => {
@@ -218,8 +218,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
         >"
           <Maximize2 className="w-5 h-5" />
         </button>
-      </div>
-    );
+      </div>) ;
   }
 
   return()
@@ -325,8 +324,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
                   {metric.change}%
                 </span>
               </div>
-            </div>
-          ))}
+            </div>) ) }
         </div>
 
         {/* Alerts */}
@@ -369,10 +367,8 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
                     {alert.severity}
                   </span>
                 </div>
-              </div>
-            ))}
-          </div>
-        )}
+              </div>) ) }
+          </div>) }
 
         {/* Expanded View */}
         {isExpanded && ("
@@ -395,14 +391,11 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
                       </span>
                       {getStatusIcon(metric.status)}
                     </div>
-                  </div>
-                ))}
+                  </div>) ) }
               </div>
             </div>
-          </div>
-        )}
+          </div>) }
       </div>
-    </div>
-  );
+    </div>) ;
 }
 '"`

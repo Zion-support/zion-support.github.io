@@ -9,7 +9,6 @@ import {
 } from 'lucide-react';'
 import SEO from '@/components/SEO';
 
-export default function InnovativeAIServicesShowcase() {
   const services = [
     {
 '
@@ -114,21 +113,11 @@ export default function InnovativeAIServicesShowcase() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -144,21 +133,11 @@ export default function InnovativeAIServicesShowcase() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -186,21 +165,11 @@ export default function InnovativeAIServicesShowcase() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -216,7 +185,7 @@ export default function InnovativeAIServicesShowcase() {
 }}"
             className="text-xl text-slate-300 max-w-3xl mx-auto mb-8"
 
-            Discover our comprehensive suite of AI-powered micro SaaS solutions designed to revolutionize
+            Discover our comprehensive suite of AI - powered micro SaaS solutions designed to revolutionize
             how businesses operate, scale, and succeed in the digital age.
           </motion.p>
         </div>;
@@ -234,21 +203,11 @@ export default function InnovativeAIServicesShowcase() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -283,8 +242,7 @@ export default function InnovativeAIServicesShowcase() {
                       <li key={featureIndex} className="flex items-start text-xs text-slate-300">"
                         <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         {feature}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>
 "
@@ -294,8 +252,7 @@ export default function InnovativeAIServicesShowcase() {
                     {service.benefits.map((benefit, benefitIndex) => ("
                       <li key={benefitIndex} className="text-xs text-slate-300">
                         • {benefit}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>
 "
@@ -310,8 +267,7 @@ export default function InnovativeAIServicesShowcase() {
 "
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>;
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>

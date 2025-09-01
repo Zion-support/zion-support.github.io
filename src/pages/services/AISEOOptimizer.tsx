@@ -1,5 +1,5 @@
 import React from 'react.ts';
-
+;
 const AISEOOptimizer: React.FC = (): JSX.Element => {
 
   return()

@@ -248,7 +248,7 @@ export function PricingSection() {
                   <ArrowRight className="w-4 h-4 inline ml-2"/>
                 </button>
               </div>
-            </motion.div>))}
+            </motion.div>) ) }
         </motion.div>
 
         {/* Add-ons Section */}"
@@ -304,14 +304,14 @@ export function PricingSection() {
                   {addon.features.map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm">"
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                       <span>{feature}</span>
-                    </div>))}
+                    </div>) ) }
                 </div>
 "
                 <button className="w-full py-2 px-4 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-lg text-sm font-medium transition-all duration-300">
                   Add to Plan
                 </button>
               </div>
-            </motion.div>))}
+            </motion.div>) ) }
         </motion.div>
 
         {/* FAQ Section */}"

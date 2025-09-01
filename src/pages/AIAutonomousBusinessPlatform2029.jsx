@@ -304,7 +304,7 @@ const AIAutonomousBusinessPlatform2029 = () => {
                 <li>✓ Full 2029 Platform</li>
                 <li>✓ Complete Business Autonomy</li>
                 <li>✓ Custom AI Training</li>
-                <li>✓ 24/7 Quantum Support</li>
+                <li>✓ 24 / 7 Quantum Support</li>
                 <li>✓ Future Updates Included</li>
               </ul>"
               <button className="w-full py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-lg hover:from-purple-400 hover:to-pink-400 transition-all duration-300">

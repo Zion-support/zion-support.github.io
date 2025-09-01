@@ -21,7 +21,8 @@ contactInfo: {
 
     phone: string;
     email: string;
-    website: string};
+    website: string
+};
   technicalSpecs?: {
 
     technology: string[];
@@ -31,7 +32,7 @@ contactInfo: {
     security: string[]};
   competitors?: string[];
   caseStudies?: string[]}
-
+;
 export const ADVANCED_INNOVATIVE_SERVICES_2026: AdvancedInnovativeService2026[] = [
   {
 

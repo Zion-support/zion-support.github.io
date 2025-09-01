@@ -107,7 +107,7 @@ export default function InnovativeServices2027() {
       default:
         return 0;
     }
-  });
+  }) ;
 
   return()
     <div className="min-h-screen bg-futuristic">
@@ -139,7 +139,7 @@ export default function InnovativeServices2027() {
                 whileHover={{ scale: 1.05 }}"
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold shadow-lg"
               >
-                🚀 Cutting-Edge Innovation
+                🚀 Cutting - Edge Innovation
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}"
@@ -178,8 +178,7 @@ export default function InnovativeServices2027() {
                   }`}
                 >'
                   {category === 'all' ? 'All Services' : category}
-                </motion.button>
-              ))}
+                </motion.button>) ) }
             </div>
 
             {/* Search and Sort */}"
@@ -217,8 +216,7 @@ export default function InnovativeServices2027() {
               transition={{ duration: 0.5 }}"
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {sortedServices.map((service, index) => (
-                <motion.div
+              {sortedServices.map ( (service, index) => (<motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -291,8 +289,7 @@ export default function InnovativeServices2027() {
                           >"
                             <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
                             {feature}
-                          </li>
-                        ))}
+                          </li>) ) }
                       </ul>
                     </div>
 
@@ -309,8 +306,7 @@ export default function InnovativeServices2027() {
                           >"
                             <TrendingUp className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                             {benefit}
-                          </li>
-                        ))}
+                          </li>) ) }
                       </ul>
                     </div>
 
@@ -323,8 +319,7 @@ export default function InnovativeServices2027() {
                             className="px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-full"
                           >
                             {tag}
-                          </span>
-                        ))}
+                          </span>) ) }
                       </div>
                     </div>
 
@@ -361,14 +356,12 @@ export default function InnovativeServices2027() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </motion.div>
           </AnimatePresence>
 
           {/* No Results */}
-          {sortedServices.length === 0 && (
-            <motion.div
+          {sortedServices.length === 0 && (<motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}"
               className="text-center py-16"
@@ -386,8 +379,7 @@ export default function InnovativeServices2027() {
               >
                 View All Services
               </button>
-            </motion.div>
-          )}
+            </motion.div>) }
         </div>
       </section>
 

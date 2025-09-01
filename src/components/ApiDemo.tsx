@@ -16,15 +16,15 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
   const [healthStatus, setHealthStatus] = useState<any>('Checking...');
 
   // Check API health on component mount
-  useEffect(() => {
-    checkHealth();
-    fetchUsers();
-  }, []);
+  useEffect ( () => {
+    checkHealth () ;
+    fetchUsers () ;
+  }, []) ;
 
-  const checkHealth = async () => {;
+  const checkHealth = async : unknown {;
     try {;
-      const response = await api.health();
-      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`);
+      const response = await api.health () ;
+      setHealthStatus (`✅ API Healthy - ${response.data?.environment} mode`) ;
     } catch (err) {
 '
       setHealthStatus('❌ API Unhealthy');
@@ -32,11 +32,11 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
   };
 
   const fetchUsers = async () => {;
-    setLoading(true);
-    setError(null);
+    setLoading (true) ;
+    setError (null) ;
 
     try {
-      const response = await api.getUsers();
+      const response = await api.getUsers () ;
       if (response.success && response.data) {
 
         setUsers(response.data);
@@ -50,19 +50,19 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
 
   };
 
-  const handleCreateUser = async (e: anyReact.FormEvent)  => {;
-    e.preventDefault();
+  const handleCreateUser = async (e: anyReact.FormEvent) => {;
+    e.preventDefault () ;
 
     if (!newUser.name.trim() || !newUser.email.trim()) {
 '
       setError('Name and email are required');
       return;
 
-    setLoading(true);
-    setError(null);
+    setLoading (true) ;
+    setError (null) ;
 
     try {
-      const response = await api.createUser(newUser);
+      const response = await api.createUser (newUser) ;
       if (response.success && response.data) {
 
         setUsers(prev => [...prev, response.data!]);'
@@ -185,10 +185,8 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
                   <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
                     ID: {user.id}
                   </span>
-                </div>
-              ))}
-            </div>
-          )}
+                </div>) ) }
+            </div>) }
         </div>
 
         {/* Architecture Info */}"
@@ -202,8 +200,7 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default ApiDemo;}}}}}}}'"`

@@ -237,21 +237,11 @@ const AIServicesPage: React.FC = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                   transition = {
@@ -274,11 +264,9 @@ const AIServicesPage: React.FC = () => {
                       <li key={idx} className="flex items-center text-sm text-gray-300">"
                         <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
                         {benefit}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
-                </motion.div>;
-              ))}
+                </motion.div>;) ) }
             </div>
           </div>
 
@@ -294,21 +282,11 @@ const AIServicesPage: React.FC = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                   transition = {
@@ -342,13 +320,11 @@ const AIServicesPage: React.FC = () => {
                           <li key={idx} className="flex items-center">"
                             <CheckCircle className="w-3 h-3 text-purple-400 mr-2" />
                             {result}
-                          </li>
-                        ))}
+                          </li>) ) }
                       </ul>
                     </div>
                   </div>
-                </motion.div>;
-              ))}
+                </motion.div>;) ) }
             </div>
           </div>
 

@@ -39,8 +39,7 @@ export const UltimateServicesShowcase2027 = () => {
           </div>;
         </div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 };
 export default UltimateServicesShowcase2027;
 '"

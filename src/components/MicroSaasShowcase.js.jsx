@@ -157,7 +157,7 @@ export function MicroSaasShowcase() {
                 : 'bg-white/10 backdrop-blur-sm text-zion-slate-light border border-white/20 hover:bg-white/20 hover:border-white/40'}`}>
               {category.icon}
               {category.name}
-            </button>))}
+            </button>) ) }
         </div>
 
         {/* Services Grid */}"
@@ -188,7 +188,7 @@ export function MicroSaasShowcase() {
                   {service.features.slice(0, 2).map((feature, index) => (<div key={index} className="flex items-center gap-2 text-xs text-zion-slate-light">"
                       <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
                       {feature}
-                    </div>))}
+                    </div>) ) }
                 </div>
               </div>
 
@@ -206,7 +206,7 @@ export function MicroSaasShowcase() {
                 Learn More"
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform"/>
               </Link>
-            </div>))}
+            </div>) ) }
         </div>
 
         {/* View All Button */}"

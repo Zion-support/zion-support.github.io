@@ -1,39 +1,30 @@
 # Error Automation System
 
-A comprehensive automated error fixing and monitoring system for the Zion Tech Group project.
+This project includes a comprehensive PM2-based automation system that continuously monitors and automatically fixes common project errors.
 
 ## 🚀 Quick Start
 
 ### Start the Automation System
 
 ```bash
-npm run automation:start
+./start-error-automation.sh start
 ```
 
 ### Manual Error Fixing
 
 ```bash
-# Run comprehensive error fixing
-npm run automation:comprehensive
-
-# Run basic error fixing
-npm run automation:error-fix
+./start-error-automation.sh status
 ```
 
 ### Monitor the System
 
 ```bash
-# Check status
-npm run automation:status
+./start-error-automation.sh logs
+```
 
-# View logs
-npm run automation:logs
-
-# Restart all processes
-npm run automation:restart
-
-# Stop all processes
-npm run automation:stop
+### Stop the System
+```bash
+./start-error-automation.sh stop
 ```
 
 ## 📋 What This System Does
@@ -78,21 +69,24 @@ npm run automation:stop
 ## 📁 File Structure
 
 ```
-scripts/
-├── automation/
-│   ├── error-fixer-automation.cjs          # Basic error fixing
-│   ├── comprehensive-error-automation.cjs  # Full automation orchestrator
-│   └── console-error-fixer.cjs            # Console error handling
-├── start-error-automation.sh               # Startup script
-└── ...
-
-reports/
-├── automation-reports/                     # Comprehensive reports
-├── error-reports/                         # Error fixing reports
-└── logs/                                  # Process logs
+├── scripts/automation/
+│   ├── comprehensive-error-fixer.cjs      # Main error fixing orchestrator
+│   ├── continuous-error-monitor.cjs       # Continuous monitoring system
+│   ├── typescript-error-fixer.cjs         # TypeScript-specific fixes
+│   ├── eslint-error-fixer.cjs             # ESLint-specific fixes
+│   ├── import-export-fixer.cjs            # Import/export fixes
+│   ├── syntax-error-fixer.cjs             # Syntax error fixes
+│   ├── dependency-error-fixer.cjs         # Dependency management
+│   ├── error-report-generator.cjs         # Report generation
+│   ├── build-health-monitor.cjs           # Build monitoring
+│   └── code-quality-monitor.cjs           # Code quality analysis
+├── ecosystem-error-automation.config.cjs  # PM2 configuration
+├── start-error-automation.sh              # Management script
+├── error-reports/                         # Generated error reports
+└── automation/logs/                       # Process logs
 ```
 
-## 🔧 Configuration
+## 🛠️ Management Commands
 
 ### PM2 Ecosystem Configuration
 
@@ -123,14 +117,12 @@ The system uses `ecosystem.config.cjs` to manage PM2 processes:
 ### Real-time Monitoring
 
 ```bash
-# View all processes
-pm2 status
+./start-error-automation.sh stop
+```
 
-# View specific process logs
-pm2 logs comprehensive-error-fixer
-
-# Monitor in real-time
-pm2 monit
+### Restart Automation
+```bash
+./start-error-automation.sh restart
 ```
 
 ### Generated Reports
@@ -169,33 +161,44 @@ pm2 monit
 }
 ```
 
-## 🛠️ Troubleshooting
+### View Logs
+```bash
+# View all logs
+./start-error-automation.sh logs
 
-### Common Issues
+# View specific process logs
+./start-error-automation.sh logs continuous-error-monitor
+```
 
 #### PM2 Not Installed
 
 ```bash
-npm install -g pm2
+./start-error-automation.sh fix
 ```
 
 #### Permission Issues
 
 ```bash
-sudo chmod +x scripts/start-error-automation.sh
+./start-error-automation.sh help
 ```
 
 #### Process Not Starting
 
 ```bash
-# Check PM2 logs
+# View all processes
+pm2 list
+
+# View logs
 pm2 logs
 
-# Restart processes
-pm2 restart all
+# Restart specific process
+pm2 restart continuous-error-monitor
 
-# Check system resources
-pm2 monit
+# Stop all processes
+pm2 stop all
+
+# Delete all processes
+pm2 delete all
 ```
 
 #### High Memory Usage
@@ -204,9 +207,9 @@ pm2 monit
 # Increase memory limit in ecosystem.config.cjs
 max_memory_restart: '2G'
 
-# Restart processes
-pm2 restart all
-```
+### Environment Variables
+- `AUTOMATION_INTERVAL` - Override default intervals (in milliseconds)
+- `NODE_ENV` - Set to 'production' for production mode
 
 ### Debug Mode
 
@@ -214,9 +217,10 @@ pm2 restart all
 # Run with debug logging
 DEBUG=* npm run automation:comprehensive
 
-# View detailed logs
-pm2 logs --lines 100
-```
+- Process intervals
+- Memory limits
+- Log file locations
+- Environment variables
 
 ## 🔄 Integration with CI/CD
 
@@ -245,20 +249,17 @@ jobs:
 ### Pre-commit Hooks
 
 ```bash
-#!/bin/sh
-# .git/hooks/pre-commit
+# Run comprehensive error fixer
+node scripts/automation/comprehensive-error-fixer.cjs
 
-# Run error fixing before commit
-npm run automation:error-fix
+# Run TypeScript fixer
+node scripts/automation/typescript-error-fixer.cjs
 
-# Check if any files were modified
-if git diff --cached --name-only | grep -q .; then
-  echo "Error fixes applied. Please review changes before committing."
-  exit 1
-fi
+# Run ESLint fixer
+node scripts/automation/eslint-error-fixer.cjs
 ```
 
-## 📚 Advanced Usage
+## 📈 Performance Monitoring
 
 ### Custom Error Fixing Rules
 
@@ -326,6 +327,11 @@ For issues or questions:
 - Check PM2 status: `npm run automation:status`
 - Restart system: `npm run automation:restart`
 
-## 📄 License
+1. Check the logs: `./start-error-automation.sh logs`
+2. Review error reports in `error-reports/`
+3. Check PM2 status: `pm2 list`
+4. Run manual fixes if needed
+
+---
 
 This automation system is part of the Zion Tech Group project and follows the same licensing terms.

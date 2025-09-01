@@ -77,21 +77,11 @@ export function CaseStudiesSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -116,21 +106,11 @@ export function CaseStudiesSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               viewport={{ once: true }}
@@ -138,11 +118,6 @@ export function CaseStudiesSection() {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
             >"
@@ -173,8 +148,7 @@ export function CaseStudiesSection() {
                     <li key={resultIndex} className="flex items-center text-sm text-gray-700">"
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                       {result}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
               </div>
 "
@@ -186,8 +160,7 @@ export function CaseStudiesSection() {
                   <span>Verified Results</span>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
 
         <motion.div "
@@ -197,21 +170,11 @@ export function CaseStudiesSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -219,11 +182,6 @@ export function CaseStudiesSection() {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}
         >"
@@ -254,16 +212,14 @@ export function CaseStudiesSection() {
           </div>
         </motion.div>;
       </div>;
-    </section>;
-  )};
+    </section>;) };
 
 export default CaseStudiesSection;"
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 }
 
 export default CaseStudiesSection;

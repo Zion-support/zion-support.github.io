@@ -219,10 +219,6 @@ export default function CybersecuritySolutions(...args[]):  {
   hidden: { opacity: 0,
   y: 20 
 
-
-
-
-
 ;
 },;
     visible: {
@@ -234,7 +230,7 @@ export default function CybersecuritySolutions(...args[]):  {
 '
   const filteredThreats = selectedThreat === 'all'
     ? securityThreats
-    : securityThreats.filter(threat => threat.type === selectedThreat);
+    : securityThreats.filter (threat => threat.type === selectedThreat) ;
 
   return ("
     <div className = "min-h-screen bg-futuristic">
@@ -252,21 +248,11 @@ export default function CybersecuritySolutions(...args[]):  {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -314,21 +300,11 @@ export default function CybersecuritySolutions(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -350,7 +326,7 @@ export default function CybersecuritySolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {securityServices.map((service, index) => (;
+            {securityServices.map ( (service, index) => (;
               <motion.div
                 key={index}"
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -359,11 +335,6 @@ export default function CybersecuritySolutions(...args[]):  {
 
   { y: -5,
   scale: 1.02 
-
-
-
-
-
 
 }}
               >
@@ -379,11 +350,9 @@ export default function CybersecuritySolutions(...args[]):  {
                     <li key={idx} className="flex items-center text-zion-slate-light">"
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                       {feature}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -398,21 +367,11 @@ export default function CybersecuritySolutions(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -438,18 +397,11 @@ export default function CybersecuritySolutions(...args[]):  {
   { opacity: 0,
   y: 20 ;
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
 
 ;
 ;
@@ -458,7 +410,7 @@ export default function CybersecuritySolutions(...args[]):  {
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
           >;
-            {threatTypes.map((threat) => {;
+            {threatTypes.map ( (threat) => {;
               const Icon = threat.icon;
               return()
                 <button
@@ -473,9 +425,8 @@ export default function CybersecuritySolutions(...args[]):  {
                 >;"
                   <Icon className="w-5 h-5" />;
                   {threat.name};
-                </button>;
-              );
-            })}
+                </button>;) ;
+            }) }
           </motion.div>
 
           {/* Threats Grid */}
@@ -495,11 +446,6 @@ export default function CybersecuritySolutions(...args[]):  {
 
   { y: -5,
   scale: 1.02 
-
-
-
-
-
 
 }}
               >"
@@ -529,12 +475,10 @@ export default function CybersecuritySolutions(...args[]):  {
                       <li key={idx} className="text-zion-slate-light text-sm flex items-center">"
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></div>
                         {solution}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -549,21 +493,11 @@ export default function CybersecuritySolutions(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -585,7 +519,7 @@ export default function CybersecuritySolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {complianceFrameworks.map((framework, index) => (;
+            {complianceFrameworks.map ( (framework, index) => (;
               <motion.div
                 key={index}"
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -594,11 +528,6 @@ export default function CybersecuritySolutions(...args[]):  {
 
   { y: -5,
   scale: 1.02 
-
-
-
-
-
 
 }}
               >"
@@ -616,12 +545,10 @@ export default function CybersecuritySolutions(...args[]):  {
                       <li key={idx} className="text-zion-slate-light text-sm flex items-center">"
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></div>
                         {req}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -636,21 +563,11 @@ export default function CybersecuritySolutions(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -672,7 +589,7 @@ export default function CybersecuritySolutions(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {securityMetrics.map((metric, index) => (;
+            {securityMetrics.map ( (metric, index) => (;
               <motion.div
                 key={index}"
                 className="text-center"
@@ -699,21 +616,11 @@ export default function CybersecuritySolutions(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -764,7 +671,7 @@ export default function CybersecuritySolutions(...args[]):  {
                 description: "Continuous security monitoring and regular updates",
                 icon: Monitor
 
-            ].map((phase, index) => (;
+            ].map ( (phase, index) => (;
               <motion.div
                 key={index}"
                 className="relative"
@@ -799,21 +706,11 @@ export default function CybersecuritySolutions(...args[]):  {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -842,7 +739,6 @@ export default function CybersecuritySolutions(...args[]):  {
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

@@ -407,7 +407,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
             </h2>"
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our platform leverages the latest advancements in AI, machine learning, 
-              and cloud computing to deliver enterprise-grade performance.
+              and cloud computing to deliver enterprise - grade performance.
             </p>
           </div>
           "
@@ -455,8 +455,8 @@ export default function AutonomousBusinessOperationsPlatform() {}
               <ul className="space-y-2 text-gray-300">
                 <li>• SOC 2 Type II</li>
                 <li>• GDPR Compliance</li>
-                <li>• End-to-end Encryption</li>
-                <li>• Role-based Access Control</li>
+                <li>• End - to - end Encryption</li>
+                <li>• Role - based Access Control</li>
               </ul>
             </div>
       {/* Features Section */}"
@@ -997,9 +997,9 @@ export default function AutonomousBusinessOperationsPlatform() {}
                     {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">"
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2"/>
                         {benefit}
-                      </li>))}
+                      </li>) ) }
                   </ul>
-                </div>))}
+                </div>) ) }
             </div>
           </div>
         </section>
@@ -1030,7 +1030,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
                       </div>
                     </div>
                   </div>
-                </div>))}
+                </div>) ) }
             </div>
           </div>
         </section>
@@ -1129,7 +1129,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
             "
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business operations with our revolutionary autonomous platform. 
-              Let AI manage your business 24/7 with intelligent automation and decision-making.
+              Let AI manage your business 24 / 7 with intelligent automation and decision - making.
             </p>
             "
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">"
@@ -1191,11 +1191,11 @@ export default function AutonomousBusinessOperationsPlatform() {}
                       {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-gray-300">"
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"/>
                           {benefit}
-                        </li>))}
+                        </li>) ) }
                     </ul>
                   </div>
                 </div>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -1219,9 +1219,9 @@ export default function AutonomousBusinessOperationsPlatform() {}
                   {capability.items.map((item, idx) => (<li key={idx} className="flex items-start text-gray-300">"
                       <Target className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0"/>
                       {item}
-                    </li>))}
+                    </li>) ) }
                 </ul>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -1261,7 +1261,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
                   {plan.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">"
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
                       {feature}
-                    </li>))}
+                    </li>) ) }
                 </ul>
                 `
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${plan.popular'
@@ -1269,7 +1269,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
                                                                 : 'border border-green-400/50 text-green-400 hover:bg-green-400/20'}`}>
                   Get Started
                 </button>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -1382,8 +1382,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
           </div>
         </div>
       </section>
-    </div>
-  )};
+    </div>) };
 
 export default AutonomousBusinessOperationsPlatform;
 '"`

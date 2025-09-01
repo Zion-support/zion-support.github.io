@@ -67,6 +67,7 @@ const modules = [
         icon: TrendingUp
 
 ];
+export { function };
 export default function AIAutonomousBusinessPlatform() {
 "
     return (<div className="min-h-screen bg-background relative overflow-hidden">"

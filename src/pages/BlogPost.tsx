@@ -1,8 +1,7 @@
 import React from 'react';'
 import { SEO } from '@/components/SEO';
 
-export default function BlogPost() {
-  const { slug } = useParams();
+  const { slug } = useParams () ;
 
   // Mock blog post data - in a real app, this would come from an API
   const blogPost = {
@@ -21,8 +20,8 @@ export default function BlogPost() {
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">The Evolution of Business Intelligence</h2>"
       <p class="mb-6 text-gray-300 leading-relaxed">
         Traditional business intelligence relied heavily on historical data analysis and manual reporting processes. 
-        Today, AI-powered BI systems can process real-time data streams, identify patterns invisible to human analysts, 
-        and provide predictive insights that drive proactive decision-making.
+        Today, AI - powered BI systems can process real - time data streams, identify patterns invisible to human analysts, 
+        and provide predictive insights that drive proactive decision - making.
       </p>
 "
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">Key Trends Shaping AI-Powered BI</h2>
@@ -44,7 +43,7 @@ export default function BlogPost() {
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">3. Automated Insights Generation</h3>"
       <p class="mb-4 text-gray-300 leading-relaxed">
         Instead of manually creating reports, AI systems automatically identify significant changes, anomalies, 
-        and opportunities in your data, delivering actionable insights directly to decision-makers.
+        and opportunities in your data, delivering actionable insights directly to decision - makers.
       </p>
 "
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">Real-World Applications</h2>
@@ -59,7 +58,7 @@ export default function BlogPost() {
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Financial Services</h3>"
       <p class="mb-4 text-gray-300 leading-relaxed">
         Banks and financial institutions use AI BI for fraud detection, credit risk assessment, and 
-        investment portfolio optimization. The real-time processing capabilities enable immediate 
+        investment portfolio optimization. The real - time processing capabilities enable immediate 
         response to market changes and emerging risks.
       </p>
 "
@@ -82,7 +81,7 @@ export default function BlogPost() {
       <h3 class="text-xl font-semibold text-cyan-400 mb-3 mt-6">Change Management</h3>"
       <p class="mb-4 text-gray-300 leading-relaxed">
         Implementing AI BI requires cultural change within organizations. Teams must be trained to 
-        trust and effectively use AI-generated insights. Successful implementations often include 
+        trust and effectively use AI - generated insights. Successful implementations often include 
         comprehensive training programs and change management strategies.
       </p>
 "
@@ -90,7 +89,7 @@ export default function BlogPost() {
       <p class="mb-4 text-gray-300 leading-relaxed">
         As AI systems make more decisions, organizations must ensure transparency, fairness, and 
         accountability. This includes regular audits of AI models and clear documentation of 
-        decision-making processes.
+        decision - making processes.
       </p>
 "
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">Looking Ahead: The Future of AI-Powered BI</h2>"
@@ -246,8 +245,7 @@ export default function BlogPost() {
               {blogPost.featured && ("
                 <span className="px-4 py-2 bg-yellow-500/20 text-yellow-400 text-sm rounded-full font-medium">
                   Featured Article
-                </span>
-              )}
+                </span>) }
             </div>
 
             {/* Title */}"
@@ -345,8 +343,7 @@ export default function BlogPost() {
                     className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-sm rounded-full border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-200"
                   >
                     {tag}
-                  </span>
-                ))}
+                  </span>) ) }
               </div>
             </div>
           </div>
@@ -439,8 +436,7 @@ export default function BlogPost() {
                     </div>
                   </div>
                 </div>
-              </motion.article>
-            ))}
+              </motion.article>) ) }
           </div>
         </div>
       </section>
@@ -478,7 +474,6 @@ export default function BlogPost() {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 }
 '"`

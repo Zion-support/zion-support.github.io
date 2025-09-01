@@ -41,11 +41,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
   hidden: { y: 20,
   opacity: 0 
 
-
-
-
-
-
 },
     visible: {
 
@@ -61,11 +56,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
   hidden: { scale: 0.8,
   opacity: 0 
-
-
-
-
-
 
 },
     visible: {
@@ -105,8 +95,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                 animationDelay: `${Math.random() * 3}s`,`
                 animationDuration: `${3 + Math.random() * 2}s`
               }}
-            />
-          ))}
+            />) ) }
         </div>
       </div>
       {/* Header Section */}
@@ -117,21 +106,11 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
   { opacity: 0,
   y: -50 
 
-
-
-
-
-
 }}
         animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
         transition={{ duration: 0.8 }}
@@ -144,32 +123,17 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   scale: 1 
 
-
-
-
-
-
 }}
             transition = {
 
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
 
 }}
           >
@@ -182,21 +146,11 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -204,14 +158,9 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
   { duration: 0.8,
   delay: 0.4 
 
-
-
-
-
-
 }}
           >
-            Discover the future of technology with our cutting-edge micro SAAS services,
+            Discover the future of technology with our cutting - edge micro SAAS services,
             featuring quantum computing, AI, blockchain, and emerging technologies
           </motion.p>
           {/* Stats */}
@@ -222,32 +171,17 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
             transition = {
 
   { duration: 0.8,
   delay: 0.6 
-
-
-
-
-
 
 }}
           >
@@ -276,32 +210,17 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
         animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
         transition = {
 
   { duration: 0.8,
   delay: 0.8 
-
-
-
-
-
 
 }}
       >"
@@ -384,32 +303,17 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 exit = {
 
   { opacity: 0,
   y: -20 
-
-
-
-
-
 
 }}
                 transition={{ duration: 0.3 }}
@@ -451,8 +355,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                             <div className="absolute top-4 left-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">"
                               <Star className="w-4 h-4" />
                               Featured
-                            </div>
-                          )}
+                            </div>) }
                         </div>
                         {/* Service Content */}"
                         <div className="space-y-4">"
@@ -470,8 +373,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                                 className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
 
                                 {tag}
-                              </span>
-                            ))}
+                              </span>) ) }
                           </div>
                           {/* Stats */}"
                           <div className="flex items-center justify-between pt-4 border-t border-zion-purple/20">"
@@ -542,8 +444,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                                   className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
 
                                   {tag}
-                                </span>
-                              ))}
+                                </span>) ) }
                             </div>
                             <button'
                               onClick={() => window.open(service.website, '_blank')}"
@@ -582,32 +483,17 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
         animate = {
 
   { opacity: 1,
   y: 0 ;
 
-
-
-
-
-
 }}
         transition = {
 
   { duration: 0.8,
   delay: 1.2 ;
-
-
-
-
-
 
 }}
       >"
@@ -630,13 +516,12 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                 href="tel:+13024640950""
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-black transition-all duration-300"
 
-                Call +1 302 464 0950
+                Call + 1 302 464 0950
               </a>
             </div>;
           </div>;
         </div>;
       </motion.section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

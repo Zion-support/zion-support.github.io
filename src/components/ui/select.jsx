@@ -16,7 +16,7 @@ export function SelectTrigger({ children, className = '', ...props }) {
     </button>
   );
 }
-
+;
 export function SelectValue({ placeholder }) {
 '
   return <span className="text-sm">{placeholder || 'Select an option'}</span>;

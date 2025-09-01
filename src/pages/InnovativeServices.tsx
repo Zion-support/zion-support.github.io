@@ -168,21 +168,11 @@ const InnovativeServices: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -227,21 +217,11 @@ const InnovativeServices: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -277,21 +257,11 @@ const InnovativeServices: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -315,21 +285,11 @@ const InnovativeServices: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -365,8 +325,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
                         <li key={idx} className="flex items-center text-zion-slate-light">"
                           <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
                           {feature}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
 "
@@ -377,8 +336,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
                         <li key={idx} className="flex items-center text-zion-slate-light">"
                           <TrendingUp className="w-4 h-4 text-zion-green mr-3" />
                           {benefit}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
 
@@ -390,8 +348,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
                     Learn More
                   </motion.button>
                 </div>;
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -405,21 +362,11 @@ const InnovativeServices: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -449,8 +396,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default InnovativeServices;}}'"`

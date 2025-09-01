@@ -4,16 +4,17 @@ import { useAuth } from "@/hooks/useAuth";"
 import { Button } from "@/components/ui/button";"
 import { useNavigate } from "react-router-dom";"
 import { toast } from "sonner";
-export default function Profile() {
-    const { user, isLoading, logout } = useAuth();
-    const navigate = useNavigate();
-    useEffect(() => {
+
+
+    const { user, isLoading, logout } = useAuth () ;
+    const navigate = useNavigate () ;
+    useEffect ( () => {
         if (!isLoading && !user) {
 "
             toast.error("Please log in to view your profile");"
             router("/login?redirect=/profile");
         }
-    }, [user, isLoading, navigate]);
+    }, [user, isLoading, navigate]) ;
     if (isLoading) {
 
         return (<>
@@ -22,7 +23,7 @@ export default function Profile() {
           <div className="animate-pulse text-white">Loading profile...</div>
         </div>
         
-      </>)}
+      </>) }
     if (!user) {
 
         return (<>
@@ -37,7 +38,7 @@ export default function Profile() {
           </div>
         </div>
         
-      </>)}
+      </>) }
     return (<>
 "
       <div className="min-h-screen bg-zion-blue">"
@@ -65,7 +66,7 @@ export default function Profile() {
         </div>
       </div>
       
-    </>)}
+    </>) }
 ;
 export default Profile;
 }}}}'"

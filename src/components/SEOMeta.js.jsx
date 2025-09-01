@@ -21,7 +21,6 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
             "addressRegion": "DE","
             "postalCode": "19709","
   "addressCountry": "US"
-        
 
 },"
         "contactPoint": {

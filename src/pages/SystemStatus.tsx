@@ -18,6 +18,7 @@ import {
   RefreshCw} from 'lucide-react';
 
 interface ServiceStatus {
+
   id: string;
   name: string;'
   status: 'operational' | 'degraded' | 'outage' | 'maintenance';
@@ -25,10 +26,11 @@ interface ServiceStatus {
   responseTime: number;
   lastUpdated: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType < any>;
 }
 
 interface Incident {
+
   id: string;
   title: string;
   description: string;'
@@ -37,8 +39,9 @@ interface Incident {
   startTime: string;
   endTime?: string;
   affectedServices: string[];
-}
 
+}
+;
 const services: ServiceStatus[] = [
   {
 '
@@ -101,7 +104,7 @@ const services: ServiceStatus[] = [
     description: 'Data analytics and reporting services',
     icon: BarChart3},
 ];
-
+;
 const incidents: Incident[] = [
   {
 '
@@ -115,17 +118,21 @@ const incidents: Incident[] = [
     endTime: '2025-08-27T04:00:00Z','
     affectedServices: ['database']},
 ];
+;
+const SystemStatus: React.FC = props {
+  const [lastUpdated, setLastUpdated] = useState<typeof new Date(>(new Date());
+  const [isRefreshing, setIsRefreshing] = useState<typeof false>(false);
 
 const SystemStatus: React.FC = () => {
-  const [lastUpdated, setLastUpdated] = useState(new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState (new Date () ) ;
+  const [isRefreshing, setIsRefreshing] = useState (false) ;
 
   const refreshData = () => {
-    setIsRefreshing(true);
-    setTimeout(() => {
-      setLastUpdated(new Date());
-      setIsRefreshing(false);
-    }, 1000);
+    setIsRefreshing (true) ;
+    setTimeout ( () => {
+      setLastUpdated (new Date () ) ;
+      setIsRefreshing (false) ;
+    }, 1000) ;
   };
 
   const getStatusColor = (status: string) => {
@@ -305,8 +312,7 @@ const SystemStatus: React.FC = () => {
                     </span>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -470,18 +476,14 @@ const SystemStatus: React.FC = () => {
                             >"
                               <service.icon className="w-3 h-3 mr-1" />
                               {service.name}
-                            </span>
-                          ) : null;
-                        })}
+                            </span>) : null;
+                        }) }
                       </div>
-                    </div>
-                  )}
-                </motion.div>
-              ))}
+                    </div>) }
+                </motion.div>) ) }
             </div>
           </div>
-        </section>
-      )}
+        </section>) }
 
       {/* Contact Section */}"
       <section className="py-20 bg-slate-800/30">"
@@ -517,8 +519,7 @@ const SystemStatus: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 };
 
 export default SystemStatus;

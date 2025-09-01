@@ -1,3 +1,5 @@
+import { Check, Shield, AlertTriangle, Eye } from "lucide - react";
+import { Link } from "react - router - dom";
 import React from 'react';
 import { SEO } from "@/components/SEO";"
 import { Button } from "@/components/ui/button";"
@@ -163,7 +165,7 @@ export default function CybersecuritySuite() {
                   <h3 className="text-lg font-semibold mb-2 text-white">{service.title}</h3>"
                   <p className="text-zion-slate-light text-sm">{service.description}</p>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -188,7 +190,7 @@ export default function CybersecuritySuite() {
                     <span className="text-zion-slate-light">{feature}</span>
                   </div>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -211,7 +213,7 @@ export default function CybersecuritySuite() {
                   <Check className="h-5 w-5 text-red-400 mx-auto mb-2"/>"
                   <span className="text-sm text-zion-slate-light">{framework}</span>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -254,7 +256,7 @@ export default function CybersecuritySuite() {
                     Get Started
                   </Button>
                 </div>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>

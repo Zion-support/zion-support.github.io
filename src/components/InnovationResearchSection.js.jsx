@@ -181,9 +181,8 @@ const researchLabs = [
         researchers: 5
     }
 ];
-export function InnovationResearchSection() {
-    const [selectedResearch, setSelectedResearch] = useState(null);
-    const [hoveredLab, setHoveredLab] = useState(null);
+    const [selectedResearch, setSelectedResearch] = useState (null) ;
+    const [hoveredLab, setHoveredLab] = useState (null) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -347,7 +346,7 @@ export function InnovationResearchSection() {
                         </div>))}"
                       {area.highlights.length > 2 && (<div className="text-zion-cyan/60 text-xs">
                           +{area.highlights.length - 2} more areas
-                        </div>)}
+                        </div>) }
                     </div>
                   </div>
 
@@ -393,7 +392,7 @@ export function InnovationResearchSection() {
                           <div className="flex flex-wrap gap-1">"
                             {area.technologies.map((tech, idx) => (<span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                                 {tech}
-                              </span>))}
+                              </span>) ) }
                           </div>
                         </div>
 "
@@ -408,10 +407,10 @@ export function InnovationResearchSection() {
                           <div className="text-zion-cyan font-bold text-sm">{area.funding}</div>"
                           <div className="text-zion-slate-light text-xs">Research Funding</div>
                         </div>
-                      </motion.div>)}
+                      </motion.div>) }
                   </AnimatePresence>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -475,7 +474,7 @@ export function InnovationResearchSection() {
                 <div className="text-zion-slate-light/80 text-xs">
                   <strong>Equipment:</strong> {lab.equipment}
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 

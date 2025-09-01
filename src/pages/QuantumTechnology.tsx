@@ -212,10 +212,6 @@ export default function QuantumTechnology(...args[]):  {
   hidden: { opacity: 0,
   y: 20 
 
-
-
-
-
 ;
 },;
     visible: {
@@ -227,7 +223,7 @@ export default function QuantumTechnology(...args[]):  {
 '
   const filteredApplications = selectedApplication === 'all'
     ? quantumApplications
-    : quantumApplications.filter(app => app.category === selectedApplication);
+    : quantumApplications.filter (app => app.category === selectedApplication) ;
 
   return ("
     <div className = "min-h-screen bg-futuristic">
@@ -245,21 +241,11 @@ export default function QuantumTechnology(...args[]):  {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -307,21 +293,11 @@ export default function QuantumTechnology(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -343,7 +319,7 @@ export default function QuantumTechnology(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {quantumServices.map((service, index) => (;
+            {quantumServices.map ( (service, index) => (;
               <motion.div
                 key={index}"
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -352,11 +328,6 @@ export default function QuantumTechnology(...args[]):  {
 
   { y: -5,
   scale: 1.02 
-
-
-
-
-
 
 }}
               >
@@ -372,11 +343,9 @@ export default function QuantumTechnology(...args[]):  {
                     <li key={idx} className="flex items-center text-zion-slate-light">"
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                       {feature}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -391,21 +360,11 @@ export default function QuantumTechnology(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -431,18 +390,11 @@ export default function QuantumTechnology(...args[]):  {
   { opacity: 0,
   y: 20 ;
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
 
 ;
 ;
@@ -451,7 +403,7 @@ export default function QuantumTechnology(...args[]):  {
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
           >;
-            {applications.map((app) => {;
+            {applications.map ( (app) => {;
               const Icon = app.icon;
               return()
                 <button
@@ -466,9 +418,8 @@ export default function QuantumTechnology(...args[]):  {
                 >;"
                   <Icon className="w-5 h-5" />;
                   {app.name};
-                </button>;
-              );
-            })}
+                </button>;) ;
+            }) }
           </motion.div>
 
           {/* Applications Grid */}
@@ -489,11 +440,6 @@ export default function QuantumTechnology(...args[]):  {
   { y: -5,
   scale: 1.02 
 
-
-
-
-
-
 }}
               >"
                 <div className="flex items-center gap-4 mb-4">"
@@ -512,12 +458,10 @@ export default function QuantumTechnology(...args[]):  {
                       <li key={idx} className="text-zion-slate-light text-sm flex items-center">"
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></div>
                         {benefit}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -532,21 +476,11 @@ export default function QuantumTechnology(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -568,7 +502,7 @@ export default function QuantumTechnology(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {quantumTechnologies.map((tech, index) => (;
+            {quantumTechnologies.map ( (tech, index) => (;
               <motion.div
                 key={index}"
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -577,11 +511,6 @@ export default function QuantumTechnology(...args[]):  {
 
   { y: -5,
   scale: 1.02 
-
-
-
-
-
 
 }}
               >"
@@ -599,12 +528,10 @@ export default function QuantumTechnology(...args[]):  {
                       <li key={idx} className="text-zion-slate-light text-sm flex items-center">"
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></div>
                         {advantage}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -619,21 +546,11 @@ export default function QuantumTechnology(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -655,7 +572,7 @@ export default function QuantumTechnology(...args[]):  {
             whileInView="visible"
             viewport={{ once: true }}
 
-            {quantumAdvantages.map((advantage, index) => (;
+            {quantumAdvantages.map ( (advantage, index) => (;
               <motion.div
                 key={index}"
                 className="text-center"
@@ -682,21 +599,11 @@ export default function QuantumTechnology(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -747,7 +654,7 @@ export default function QuantumTechnology(...args[]):  {
                 description: "Implement and continuously improve quantum solutions",
                 icon: Rocket
 
-            ].map((phase, index) => (;
+            ].map ( (phase, index) => (;
               <motion.div
                 key={index}"
                 className="relative"
@@ -782,21 +689,11 @@ export default function QuantumTechnology(...args[]):  {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}
@@ -825,7 +722,6 @@ export default function QuantumTechnology(...args[]):  {
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

@@ -22,8 +22,9 @@ interface Testimonial {
   rating: number;
   industry: string;
   results: string[];
-  avatar: string}
-
+  avatar: string
+}
+;
 const testimonials: Testimonial[] = [
   {
 '
@@ -97,32 +98,27 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  useEffect(() => {
+  useEffect ( () => {
     if (!isAutoPlaying) return;
 
-    const interval = setInterval(() => {;
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 8000);
+    const interval = setInterval ( () => {;
+      setCurrentTestimonial ( (prev) => (prev + 1) % testimonials.length) ;
+    }, 8000) ;
 
-    return () => clearInterval(interval)}, [isAutoPlaying, testimonials.length]);
+    return () => clearInterval (interval) }, [isAutoPlaying, testimonials.length]) ;
 
   const nextTestimonial = () => {;
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    setIsAutoPlaying(false)};
+    setCurrentTestimonial ( (prev) => (prev + 1) % testimonials.length) ;
+    setIsAutoPlaying (false) };
 
   const prevTestimonial = () => {;
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-    setIsAutoPlaying(false)};
+    setCurrentTestimonial ( (prev) => (prev - 1 + testimonials.length) % testimonials.length) ;
+    setIsAutoPlaying (false) };
 
                   animate = {
 
   { rotate: [0,
   360] 
-
-
-
-
-
 
 }}
                   transition = {
@@ -130,14 +126,9 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   { duration: 20,
   repeat: Infinity ;
 
-
-
-
-
-
 }}
                 >
-                  <Quote className="w-8 h-8 text-zion-cyan" />
+                  <Quote className="w - 8 h - 8 text - zion - cyan" />
                 </motion.div>
 "
                 <div className="relative z-10">
@@ -170,21 +161,11 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                         animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                         transition={{ delay: 0.3 + index * 0.1 }}"
@@ -242,8 +223,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                       : 'bg-white/30 hover:bg-white/50'`
                   }`}
                   whileHover={{ scale: 1.2 }}
-                />
-              ))}
+                />) ) }
             </div>
 
             <motion.button
@@ -264,21 +244,11 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 ;
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -305,29 +275,18 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                 { icon: Award, label: '15+ Awards', value: 'Industry Recognition' },'
                 { icon: Globe, label: '50+ Countries', value: 'Worldwide Service' },'
                 { icon: Building, label: '99.9% Uptime', value: 'Reliability' }
-              ].map((indicator, index)  => (
-                <motion.div
+              ].map ( (indicator, index) => (<motion.div
                   key={indicator.label}
                   initial = {
 
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                   viewport={{ once: true }}
@@ -362,21 +321,11 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 ;
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -417,7 +366,6 @@ export default function EnhancedTestimonialsSection(...args[]):  {
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 }
 '"`

@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
+;
 class CodeQualityMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -289,7 +289,7 @@ class CodeQualityMonitor {
 
 
 
-// Run the code quality monitor
+// Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
 monitor.run().catch(error => {
   process.exit(1);

@@ -1,12 +1,13 @@
 // Innovative Services 2031 - Zion Tech Group
 // Cutting-edge Micro SAAS, IT Infrastructure, and AI Services
-
+;
 export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
-  address: string}
-
+  address: string
+}
+;
 export interface MicroSaasService {
   id: number;
   name: string;
@@ -30,8 +31,9 @@ export interface MicroSaasService {
   trialPeriod: string;
   innovationLevel: string;
   marketSize: string;
-  growthRate: string}
-
+  growthRate: string
+}
+;
 export interface ITService {
   id: number;
   name: string;
@@ -52,8 +54,9 @@ export interface ITService {
   support: string;
   innovationLevel: string;
   marketSize: string;
-  compliance: string[]}
-
+  compliance: string[]
+}
+;
 export interface AIService {
   id: number;
   name: string;
@@ -75,9 +78,10 @@ export interface AIService {
   useCases: string[];
   innovationLevel: string;
   marketSize: string;
-  ethicalAI: string[]}
+  ethicalAI: string[]
+}
 
-// Zion Tech Group Contact Information
+// Zion Tech Group Contact Information;
 const zionContact: ServiceContact = {
 
   phone: "+1 302 464 0950","
@@ -97,7 +101,7 @@ const zionContact: ServiceContact = {
 
 };
 
-// Innovative Micro SAAS Services 2031
+// Innovative Micro SAAS Services 2031;
 export const innovativeMicroSaasServices2031: MicroSaasService[] = [
   {
 
@@ -336,7 +340,7 @@ export const innovativeMicroSaasServices2031: MicroSaasService[] = [
 
 ];
 
-// Innovative IT Infrastructure Services 2031
+// Innovative IT Infrastructure Services 2031;
 export const innovativeITInfrastructureServices2031: ITService[] = [
   {
 
@@ -560,7 +564,7 @@ export const innovativeITInfrastructureServices2031: ITService[] = [
   }
 ];
 
-// Innovative AI Services 2031
+// Innovative AI Services 2031;
 export const innovativeAIServices2031: AIService[] = [
   {
 
@@ -819,7 +823,7 @@ export const innovativeAIServices2031: AIService[] = [
   }
 ];
 
-// Export all services
+// Export all services;
 export const allInnovativeServices2031 = {
 
   microSaas: innovativeMicroSaasServices2031,

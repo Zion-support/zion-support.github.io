@@ -455,5 +455,6 @@ const QuantumTechnology = () => {
     </div>
   );
 };
+export { QuantumTechnology };
 export default QuantumTechnology;
 '"

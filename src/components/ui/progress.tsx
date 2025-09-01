@@ -6,9 +6,9 @@ interface ProgressProps extends React.PropsWithChildren<{}> {
   value: number;
   max?: number;
   className?: string;
-
-const Progress: React.FC<ProgressProps> = ({ value, max = 100, className;
-}) => {;
+;
+const Progress: React.FC<ProgressProps> = { value: unknown, max = 100: unknown, className;
+}: unknown {;
   const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
 
   return()
@@ -30,6 +30,6 @@ const Progress: React.FC<ProgressProps> = ({ value, max = 100, className;
     </div>;
   );
 };
-
+;
 export { Progress </div>};
 }'"`

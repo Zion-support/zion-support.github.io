@@ -8,7 +8,11 @@ import { Link, useLocation  } from 'react-router-dom.ts';
       newExpanded.add(section)}
     setExpandedSections(newExpanded)};
 
-  const isActive = (path: string)  => location.pathname === path;
+      newExpanded.delete (section) } else {
+      newExpanded.add (section) }
+    setExpandedSections (newExpanded) };
+
+  const isActive = (path: string) => location.pathname === path;
 
   const navigationSections = [
     {
@@ -78,8 +82,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
 
       {/* Mobile Sidebar Overlay */}
       <AnimatePresence>
-        {isOpen && (
-          <>
+        {isOpen && (<>
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -142,32 +145,17 @@ import { Link, useLocation  } from 'react-router-dom.ts';
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }}
                         animate = {
 
   { opacity: 1,
   x: 0 
 
-
-
-
-
-
 }}
                         transition = {
 
   { duration: 0.3,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                       >
@@ -184,8 +172,7 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                           <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"
                           <span className="font-medium">{action.name}</span>
                         </Link>
-                      </motion.div>;
-                    ))}
+                      </motion.div>;) ) }
                   </div>
                 </div>
 
@@ -199,32 +186,17 @@ import { Link, useLocation  } from 'react-router-dom.ts';
   { opacity: 0,
   y: -20 
 
-
-
-
-
-
 }}
                       animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                       transition = {
 
   { duration: 0.5,
   delay: sectionIndex * 0.1 
-
-
-
-
-
 
 }}
                     >
@@ -244,17 +216,11 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                       </button>
 
                       <AnimatePresence>
-                        {expandedSections.has(section.title) && (
-                          <motion.div
+                        {expandedSections.has (section.title) && (<motion.div
                             initial = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                             animate = {
@@ -262,27 +228,17 @@ import { Link, useLocation  } from 'react-router-dom.ts';
   { opacity: 1,'
   height: 'auto' 
 
-
-
-
-
-
 }}
                             exit = {
 
   { opacity: 0,
   height: 0 
 
-
-
-
-
-
 }}
                             transition={{ duration: 0.3 }}"
                             className="ml-7 mt-2 space-y-1"
 
-                            {section.items.map((item, itemIndex) => (;
+                            {section.items.map ( (item, itemIndex) => (;
                               <motion.div
                                 key={item.name}
                                 initial = {
@@ -290,32 +246,17 @@ import { Link, useLocation  } from 'react-router-dom.ts';
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }}
                                 animate = {
 
   { opacity: 1,
   x: 0 
 
-
-
-
-
-
 }}
                                 transition = {
 
   { duration: 0.2,
   delay: itemIndex * 0.05 
-
-
-
-
-
 
 }}
                               >
@@ -332,13 +273,10 @@ import { Link, useLocation  } from 'react-router-dom.ts';
                                   <item.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-300" />"
                                   <span className="text-sm">{item.name}</span>
                                 </Link>
-                              </motion.div>;
-                            ))}
-                          </motion.div>
-                        )}
+                              </motion.div>;) ) }
+                          </motion.div>) }
                       </AnimatePresence>
-                    </motion.div>
-                  ))}
+                    </motion.div>) ) }
                 </div>
 
                 {/* Contact Info */}"

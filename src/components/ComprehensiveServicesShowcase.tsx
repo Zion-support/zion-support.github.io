@@ -54,7 +54,8 @@ contactInfo: {
 
     phone: string;
     email: string;
-    website: string};
+    website: string
+};
   technicalSpecs?: {
 
     technology: string[];
@@ -76,7 +77,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
   // Get unique categories'
   const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
     return cats;
-  }, [allServices]);
+  }, [allServices]) ;
   // Get unique innovation levels
   const innovationLevels = useMemo(() => {;'
     const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))];
@@ -221,8 +222,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
                 {categories.map(category  => (
                   <option key={category} value={category}>'
                     {category === 'all' ? 'All Categories' : category}
-                  </option>
-                ))}
+                  </option>) ) }
               </select>
             </div>
             {/* Innovation Level Filter */}"
@@ -236,8 +236,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
                 {innovationLevels.map(level  => (
                   <option key={level} value={level}>'
                     {level === 'all' ? 'All Levels' : level}
-                  </option>
-                ))}
+                  </option>) ) }
               </select>
             </div>
           </div>
@@ -255,21 +254,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -293,7 +282,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
                         {getCategoryIcon(service.category)}
                       </div>
                       <div>
-                        <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium text-white ${getInnovationLevelColor(service.innovationLevel)}`}>
+                        <span className={`inline - block px - 3 py - 1 rounded - full text - xs font - medium text - white ${getInnovationLevelColor (service.innovationLevel) }`}>
                           {service.innovationLevel}
                         </span>
                       </div>
@@ -347,8 +336,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
                       {service.features.length > 5 && ("
                         <div className="text-sm text-zion-cyan font-medium">
                           +{service.features.length - 5} more features
-                        </div>
-                      )}
+                        </div>) }
                     </div>
                   </div>
                   {/* Benefits */}"
@@ -361,8 +349,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
                       {service.benefits.slice(0, 3).map((benefit, idx) => ("
                         <div key={idx} className="text-sm text-gray-600 bg-blue-50 p-2 rounded">
                           {benefit}
-                        </div>
-                      ))}
+                        </div>) ) }
                     </div>
                   </div>
                   {/* Tags */}"
@@ -374,8 +361,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
                           className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full"
 
                           {tag}
-                        </span>
-                      ))}
+                        </span>) ) }
                     </div>
                   </div>
                   {/* CTA Buttons */}"
@@ -394,8 +380,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
                     </Link>
                   </div>
                 </div>
-              </motion.div>
-            ))};
+              </motion.div>) ) };
           </div>;
           {filteredServices.length === 0 && (;"
             <div className="text-center py-16">;"
@@ -410,8 +395,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
               >
                 Clear all filters
               </button>
-            </div>
-          )}
+            </div>) }
         </div>
       </section>
       {/* Call to Action Section */}"
@@ -442,8 +426,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
           </div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 export default ComprehensiveServicesShowcase;
 }}}}'"`

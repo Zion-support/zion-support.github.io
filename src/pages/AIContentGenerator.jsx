@@ -1,3 +1,5 @@
+import { Link } from "react - router - dom";
+import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide - react";
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
 import { Button } from "@/components/ui/button";"
@@ -6,7 +8,6 @@ import SEO from "@/components/SEO";"
 import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";"
 import { Link } from "react-router-dom";
 
-export default function AIContentGenerator() {
     const features = [
         {
 "
@@ -186,7 +187,7 @@ export default function AIContentGenerator() {
                         </h2>"
                         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                             Our AI content generator provides everything you need to create engaging,
-                            high-quality content that drives results.
+                            high - quality content that drives results.
                         </p>
                     </div>
 "
@@ -200,8 +201,7 @@ export default function AIContentGenerator() {
                                     <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"
                                     <p className="text-gray-400">{feature.description}</p>
                                 </CardContent>
-                            </Card>
-                        ))}
+                            </Card>) ) }
                     </div>
                 </div>
             </section>
@@ -228,8 +228,7 @@ export default function AIContentGenerator() {
                                     <h3 className="text-xl font-semibold text-white mb-2">{type.title}</h3>"
                                     <p className="text-gray-400">{type.description}</p>
                                 </CardContent>
-                            </Card>
-                        ))}
+                            </Card>) ) }
                     </div>
                 </div>
             </section>
@@ -257,6 +256,12 @@ export default function AIContentGenerator() {
                                         <Badge className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2">
                                             Most Popular
                                         </Badge>
+                                    </div>) }
+                                <CardHeader className="text - center pb - 4">
+                                    <CardTitle className="text - 2xl font - bold text - white">{plan.name}</CardTitle>
+                                    <div className="mt - 4">
+                                        <span className="text - 4xl font - bold text - cyan - 400">{plan.price}</span>
+                                        <span className="text - gray - 400">{plan.period}</span>
                                     </div>
                                 )}"
                                 <CardHeader className="text-center pb-4">"
@@ -280,8 +285,7 @@ export default function AIContentGenerator() {
                                         Get Started
                                     </Button>
                                 </CardContent>
-                            </Card>
-                        ))}
+                            </Card>) ) }
                     </div>
                 </div>
             </section>

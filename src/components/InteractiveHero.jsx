@@ -34,17 +34,11 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
                 duration: 0.8,
                 staggerChildren: 0.2
 
-
     };
     const itemVariants = {
 
   hidden: { opacity: 0,
   y: 30 
-
-
-
-
-
 
 },
         visible: {
@@ -55,7 +49,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
                 duration: 0.6,
                 ease: "easeOut"
-
 
     };
     const floatingVariants = {

@@ -2,7 +2,8 @@ import React from 'react.ts''
 import { Link  } from 'react-router-dom.ts''
 import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket  } from 'lucide-react'
 
-
+;
+export { function };
 export default function ResearchDevelopment(...args[]):  {
 
 	const researchAreas = [

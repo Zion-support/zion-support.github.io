@@ -1,6 +1,6 @@
 import React from 'react.ts';
+export default React.memo (function AiSolutions (...args: any[]) : any {
 
-export default function AiSolutions(...args: any[]): any {
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -71,8 +71,7 @@ export default function AiSolutions(...args: any[]): any {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {aiServices.map((service, index) => (
-              <motion.div
+            {aiServices.map ( (service, index) => (<motion.div
                 key={index}
                 variants={itemVariants}"
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -94,11 +93,9 @@ export default function AiSolutions(...args: any[]): any {
                     >"
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {feature}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -136,8 +133,7 @@ export default function AiSolutions(...args: any[]): any {
               >"
                 <industry.icon className="w-5 h-5 inline mr-2" />
                 {industry.name}
-              </button>
-            ))}
+              </button>) ) }
           </div>
 
           {/* Solutions Grid */}
@@ -148,8 +144,7 @@ export default function AiSolutions(...args: any[]): any {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {filteredSolutions.map((solution, index) => (
-              <motion.div
+            {filteredSolutions.map ( (solution, index) => (<motion.div
                 key={index}
                 variants={itemVariants}"
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -169,11 +164,9 @@ export default function AiSolutions(...args: any[]): any {
                     >"
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {benefit}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -203,8 +196,7 @@ export default function AiSolutions(...args: any[]): any {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {successMetrics.map((metric, index) => (
-              <motion.div
+            {successMetrics.map ( (metric, index) => (<motion.div
                 key={index}
                 variants={itemVariants}"
                 className="text-center"
@@ -271,12 +263,10 @@ export default function AiSolutions(...args: any[]): any {
                       >"
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
                         {app}
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -396,7 +386,6 @@ export default function AiSolutions(...args: any[]): any {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 }
 '"`

@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 
 interface InteractiveSearchProps {
+  // Add your props here
+
+
   placeholder?: string;
-  onSearch: (query: string) => void;
+  onSearch: query: string void;
   className?: string;
 
 const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
@@ -13,7 +16,10 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
 }) => {;'
   const [query, setQuery] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {;
+}: unknown {;
+  const [query, setQuery] = useState<typeof ''>('');
+
+  const handleSubmit = (...args: unknown[]): unknown => {;
     e.preventDefault();
     if (query.trim()) {
 

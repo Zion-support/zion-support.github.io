@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input";"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";"
 import { Link } from "react-router-dom";"
 import { LoadingOverlay } from "@/components/LoadingOverlay";
-// Form validation schema
+// Form validation schema;
 const loginSchema = z.object({
 "
     email: z.string().email("Please enter a valid email").min(1, "Email is required"),"
@@ -91,8 +91,9 @@ function LoginForm() {
         </Button>
       </form>
       <LoadingOverlay visible={isLoading || isSubmitting}/>
-    </Form>)}
+    </Form>)};
+export { LoginForm };
 export default LoginForm;
-
+;
 export default LoginForm;
 export default LoginForm;"

@@ -35,9 +35,11 @@ interface ContentAnalysis {
   priority: 'high' | 'medium' | 'low';
   impact: number;
   category: string;
+
 }
 
 interface OptimizationSuggestion {
+
   id: string;
   title: string;
   description: string;'
@@ -47,14 +49,17 @@ interface OptimizationSuggestion {
   impact: number;
   implementation: string;
   estimatedTime: string;
+
 }
 
 interface AIContentOptimizerProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showRealTime?: boolean;
   autoAnalyze?: boolean;
-  onOptimizationComplete?: (suggestions: OptimizationSuggestion[]) => void;
-}
+  onOptimizationComplete?: suggestions: OptimizationSuggestion[] void;
 
 export function AIContentOptimizer({
 
@@ -118,7 +123,7 @@ export function AIContentOptimizer({
   }, []);
 
   // Generate optimization suggestions
-  const generateOptimizationSuggestions = useCallback(() => {
+  const generateOptimizationSuggestions = useCallback ( () => {
     const suggestions: OptimizationSuggestion[] = [
       {
 '
@@ -194,16 +199,16 @@ export function AIContentOptimizer({
     onOptimizationComplete,
   ]);
 
-  // Auto-analyze when component opens
-  useEffect(() => {
+  // Auto - analyze when component opens
+  useEffect ( () => {
     if (autoAnalyze && isOpen && !analysisComplete) {
 
       startAnalysis();
     }
-  }, [autoAnalyze, isOpen, analysisComplete, startAnalysis]);
+  }, [autoAnalyze, isOpen, analysisComplete, startAnalysis]) ;
 
-  // Setup real-time updates
-  useEffect(() => {
+  // Setup real - time updates
+  useEffect ( () => {
     if (showRealTime && isOpen && analysisComplete) {
 
       analysisIntervalRef.current = setInterval(() => {
@@ -217,7 +222,7 @@ export function AIContentOptimizer({
         }
       };
     }
-  }, [showRealTime, isOpen, analysisComplete, generateContentAnalysis]);
+  }, [showRealTime, isOpen, analysisComplete, generateContentAnalysis]) ;
 
   // Get priority color
   const getPriorityColor = (priority: string) => {
@@ -440,8 +445,7 @@ export function AIContentOptimizer({
                               ></div>
                             </div>
                           </div>
-                        </motion.div>
-                      ))}
+                        </motion.div>) ) }
                     </div>
 
                     {/* Optimization Suggestions */}"
@@ -510,9 +514,9 @@ export function AIContentOptimizer({
                                   >
                                     {suggestion.priority} priority
                                   </span>
-                                  <span>Impact: +{suggestion.impact}%</span>
-                                  <span>Effort: {suggestion.effort}</span>
-                                  <span>Time: {suggestion.estimatedTime}</span>
+                                  <span > Impact: +{suggestion.impact}%</span>
+                                  <span > Effort: {suggestion.effort}</span>
+                                  <span > Time: {suggestion.estimatedTime}</span>
                                 </div>
 
                                 {showAdvanced && ("
@@ -523,8 +527,7 @@ export function AIContentOptimizer({
                                     <p className="text-sm text-gray-600 dark:text-gray-400">
                                       {suggestion.implementation}
                                     </p>
-                                  </div>
-                                )}
+                                  </div>) }
                               </div>
 "
                               <div className="flex items-center space-x-2">"
@@ -536,8 +539,7 @@ export function AIContentOptimizer({
                                 </button>
                               </div>
                             </div>
-                          </motion.div>
-                        ))}
+                          </motion.div>) ) }
                       </div>
                     </div>
 
@@ -575,12 +577,10 @@ export function AIContentOptimizer({
                     >
                       Start Analysis
                     </button>
-                  </div>
-                )}
+                  </div>) }
               </div>
             </motion.div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
     </>
   );

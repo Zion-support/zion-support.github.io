@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';'
 import { Link, useLocation } from 'react-router-dom';'
 import { Menu, X, ChevronDown, Search, User, Bell } from 'lucide-react';
 import ThemeToggle from "./ThemeToggle";
-export function MainNavigation() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [activeDropdown, setActiveDropdown] = useState(null);
-    const location = useLocation();
-    useEffect(() => {
+
+
+    const [isOpen, setIsOpen] = useState (false) ;
+    const [isScrolled, setIsScrolled] = useState (false) ;
+    const [activeDropdown, setActiveDropdown] = useState (null) ;
+    const location = useLocation () ;
+    useEffect ( () => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20)};'
         window.addEventListener('scroll', handleScroll);'
@@ -110,9 +111,9 @@ export function MainNavigation() {
                 {activeDropdown === item.name && (<div className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-md border border-gray-200/20 rounded-xl shadow-2xl py-2 opacity-0 translate-y-2 animate-in slide-in-from-top-2 duration-300">"
                     {item.dropdown.map((subItem) => (<Link key={subItem.name} to={subItem.href} className="block px-4 py-3 text-zion-slate-dark hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors duration-200" onClick={() => setActiveDropdown(null)}>
                         {subItem.name}
-                      </Link>))}
-                  </div>)}
-              </div>))}
+                      </Link>) ) }
+                  </div>) }
+              </div>) ) }
           </div>
 
           {/* Right Side Actions */}"
@@ -188,9 +189,9 @@ export function MainNavigation() {
                             setActiveDropdown(null);
                             setIsOpen(false)}}>
                           {subItem.name}
-                        </Link>))}
-                    </div>)}
-                </div>))}
+                        </Link>) ) }
+                    </div>) }
+                </div>) ) }
               
               {/* Mobile CTA */}"
               <div className="px-4 pt-4 border-t border-gray-200/20">"
@@ -199,7 +200,7 @@ export function MainNavigation() {
                 </Link>
               </div>
             </div>
-          </div>)}
+          </div>) }
       </div>
     </nav>)}
 '"`

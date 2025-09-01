@@ -1,6 +1,6 @@
 // Expanded Innovative Services 2027 - Zion Tech Group
 // Additional Micro SAAS, IT Infrastructure, and AI Services
-
+;
 export interface ExpandedService2027 {
   id: string;
   name: string;
@@ -21,7 +21,8 @@ pricingTiers: {
       starter: number;
       professional: number;
       enterprise: number;
-      custom: string};
+      custom: string
+};
     freeTier: boolean;
     trialPeriod: string};
   marketPrice: string;
@@ -52,7 +53,7 @@ pricingTiers: {
   launchDate: string;
   status: 'active' | 'beta' | 'coming-soon'}
 
-// 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE
+// 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE;
 export const advancedCybersecurityServices: ExpandedService2027[] = [
   {
 '
@@ -228,7 +229,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
 
 ];
 
-// 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE
+// 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
 export const advancedDataAnalyticsServices: ExpandedService2027[] = [
   {
 '
@@ -404,7 +405,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
 
 ];
 
-// 3. ADVANCED CLOUD & DEVOPS SOLUTIONS
+// 3. ADVANCED CLOUD & DEVOPS SOLUTIONS;
 export const advancedCloudDevOpsServices: ExpandedService2027[] = [
   {
 '
@@ -580,7 +581,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
 
 ];
 
-// 4. ADVANCED IOT & EDGE COMPUTING
+// 4. ADVANCED IOT & EDGE COMPUTING;
 export const advancedIoTServices: ExpandedService2027[] = [
   {
 '
@@ -756,7 +757,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
 
 ];
 
-// 5. ADVANCED FINANCIAL TECHNOLOGY
+// 5. ADVANCED FINANCIAL TECHNOLOGY;
 export const advancedFinTechServices: ExpandedService2027[] = [
   {
 '
@@ -932,7 +933,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
 
 ];
 
-// 6. ADVANCED HEALTHCARE TECHNOLOGY
+// 6. ADVANCED HEALTHCARE TECHNOLOGY;
 export const advancedHealthcareServices: ExpandedService2027[] = [
   {
 '
@@ -1108,7 +1109,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
 
 ];
 
-// Export all expanded services
+// Export all expanded services;
 export const ALL_EXPANDED_SERVICES_2027 = [;
   ...advancedCybersecurityServices,;
   ...advancedDataAnalyticsServices,;
@@ -1137,12 +1138,12 @@ export const getExpandedServicesByCategory = (category: string): ExpandedService
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category);
 };
 
-// Helper function to get services by subcategory
+// Helper function to get services by subcategory;
 export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] => {;
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory);
 };
 
-// Helper function to search services
+// Helper function to search services;
 export const searchExpandedServices = (query: string): ExpandedService2027[] => {;
   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_2027.filter(service =>

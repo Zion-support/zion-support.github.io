@@ -1,8 +1,11 @@
+export default authService;
+
+
 // Mock authentication service
 // In a real application, this would connect to your backend API
-
+;
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://api.zion.com';
-
+;
 class AuthService {
   constructor() {
 '
@@ -15,7 +18,7 @@ class AuthService {
 
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
       // Mock validation
       if (!credentials.email || !credentials.password) {
@@ -56,7 +59,7 @@ class AuthService {
 
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
       // Mock validation
       if (!userData.email || !userData.password || !userData.name) {
@@ -93,10 +96,10 @@ class AuthService {
   }
 
   // Logout user
-  async logout() {
+  async logout () {
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 500));
+      await new Promise (resolve => setTimeout (resolve, 500) ) ;
 
       // Clear localStorage
       this.token = null;
@@ -112,25 +115,25 @@ class AuthService {
   }
 
   // Get current user
-  getCurrentUser() {
+  getCurrentUser () {
     return this.user;
   }
 
   // Check if user is authenticated
-  isAuthenticated() {
+  isAuthenticated () {
     return !!this.token && !!this.user;
   }
 
   // Get token
-  getToken() {
+  getToken () {
     return this.token;
   }
 
   // Refresh token
-  async refreshToken() {
+  async refreshToken () {
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 500));
+      await new Promise (resolve => setTimeout (resolve, 500) ) ;
 
       if (!this.token) {
 '
@@ -154,7 +157,7 @@ class AuthService {
 
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
       if (!this.user) {
 '
@@ -177,7 +180,7 @@ class AuthService {
 
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
       if (!this.user) {
 '
@@ -202,7 +205,7 @@ class AuthService {
 
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
       if (!email) {
 '
@@ -222,7 +225,7 @@ class AuthService {
 
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
       if (!token || !newPassword) {
 '

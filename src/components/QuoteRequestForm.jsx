@@ -43,9 +43,9 @@ export const QuoteRequestForm = () => {
     agreeToTerms: false,
     agreeToMarketing: false});
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState (false) ;
+  const [isSubmitted, setIsSubmitted] = useState (false) ;
+  const [errors, setErrors] = useState ({}) ;
 
   const serviceTypes = ['
     { value: 'ai-services', label: 'AI & Machine Learning Services' },'
@@ -116,8 +116,8 @@ export const QuoteRequestForm = () => {
     if (!formData.agreeToTerms)'
       newErrors.agreeToTerms = 'You must agree to the terms and conditions';
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    setErrors (newErrors) ;
+    return Object.keys (newErrors) .length === 0;
   };
 
   const handleSubmit = async e => {
@@ -129,7 +129,7 @@ export const QuoteRequestForm = () => {
       return;
     }
 
-    setIsSubmitting(true);
+    setIsSubmitting (true) ;
 
     try {
       // Simulate API call
@@ -174,12 +174,11 @@ export const QuoteRequestForm = () => {
             Thank you for your interest. Our team will review your request and
             get back to you within 24 hours.
           </p>
-          <Button onClick={() => setIsSubmitted(false)}>
+          <Button onClick={ () => setIsSubmitted (false) }>
             Submit Another Request
           </Button>
         </CardContent>
-      </Card>
-    );
+      </Card>) ;
   }
 
   return ("
@@ -291,8 +290,7 @@ export const QuoteRequestForm = () => {
                   {serviceTypes.map(service => (
                     <SelectItem key={service.value} value={service.value}>
                       {service.label}
-                    </SelectItem>
-                  ))}
+                    </SelectItem>) ) }
                 </SelectContent>
               </Select>
               {errors.serviceType && ("
@@ -317,8 +315,7 @@ export const QuoteRequestForm = () => {
                   {timelineOptions.map(timeline => (
                     <SelectItem key={timeline.value} value={timeline.value}>
                       {timeline.label}
-                    </SelectItem>
-                  ))}
+                    </SelectItem>) ) }
                 </SelectContent>
               </Select>
             </div>
@@ -340,8 +337,7 @@ export const QuoteRequestForm = () => {
                   {budgetRanges.map(budget => (
                     <SelectItem key={budget.value} value={budget.value}>
                       {budget.label}
-                    </SelectItem>
-                  ))}
+                    </SelectItem>) ) }
                 </SelectContent>
               </Select>
             </div>
@@ -361,8 +357,7 @@ export const QuoteRequestForm = () => {
                   {urgencyLevels.map(urgency => (
                     <SelectItem key={urgency.value} value={urgency.value}>
                       {urgency.label}
-                    </SelectItem>
-                  ))}
+                    </SelectItem>) ) }
                 </SelectContent>
               </Select>
             </div>
@@ -461,13 +456,11 @@ export const QuoteRequestForm = () => {
                 <>"
                   <Send className="w-5 h-5 mr-2" />
                   Submit Quote Request
-                </>
-              )}
+                </>) }
             </Button>
           </div>
         </form>
       </CardContent>
-    </Card>
-  );
+    </Card>) ;
 };
 '"

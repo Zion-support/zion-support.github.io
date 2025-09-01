@@ -67,10 +67,11 @@ function ReturnsManagement() {
       </section>;
     </div>;
   );
-
+;
+export { ReturnsManagement };
 export default ReturnsManagement;
 
-
+;
 export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;

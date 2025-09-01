@@ -118,7 +118,7 @@ export default function AllServicesLandingPage() {
               {SERVICE_CATEGORIES.map((category) => (<TabsTrigger key={category.id} value={category.id} className="flex items-center space-x-2">"
                   <span className="text-lg">{getCategoryIcon(category.name)}</span>"
                   <span className="hidden sm:inline">{category.name}</span>
-                </TabsTrigger>))}
+                </TabsTrigger>) ) }
             </TabsList>
 "
             {SERVICE_CATEGORIES.map((category) => (<TabsContent key={category.id} value={category.id} className="space-y-8">"
@@ -186,7 +186,7 @@ export default function AllServicesLandingPage() {
                               </Badge>))}"
                             {service.features.length > 3 && (<Badge variant="outline" className="text-xs">
                                 +{service.features.length - 3} more
-                              </Badge>)}
+                              </Badge>) }
                           </div>
                         </div>
 
@@ -197,7 +197,7 @@ export default function AllServicesLandingPage() {
                             {service.benefits.slice(0, 2).map((benefit, index) => (<li key={index} className="flex items-start space-x-2 text-sm text-gray-600">"
                                 <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0"/>
                                 <span>{benefit}</span>
-                              </li>))}
+                              </li>) ) }
                           </ul>
                         </div>
 
@@ -247,9 +247,9 @@ export default function AllServicesLandingPage() {
                           </Button>
                         </div>
                       </CardContent>
-                    </Card>))}
+                    </Card>) ) }
                 </div>
-              </TabsContent>))}
+              </TabsContent>) ) }
           </Tabs>
         </div>
       </section>

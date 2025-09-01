@@ -3,6 +3,9 @@ import React, { useState } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { Link  } from 'react-router-dom.ts';
 import { Calendar,
+import { motion  } from 'framer - motion.ts';
+
+
   Clock,
   MapPin,
   Users,
@@ -164,6 +167,12 @@ const events = [
 const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];'
 const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];'
 const statuses = ['All', 'upcoming', 'past'];
+;
+export { function };
+export default function Events(...args: unknown[]): unknown {
+  const [selectedType, setSelectedType] = useState<typeof 'All'>('All');
+  const [selectedCategory, setSelectedCategory] = useState<typeof 'All'>('All');
+  const [selectedStatus, setSelectedStatus] = useState<typeof 'All'>('All');
 
 export default function Events(...args: any[]): any {
 '
@@ -393,10 +402,10 @@ export default function Events(...args: any[]): any {
     const matchesType = selectedType === 'all' || event.type === selectedType;
     
     return matchesSearch && matchesCategory && matchesType;
-  });
+  }) ;
 
-  const upcomingEvents = events.filter(event => new Date(event.date) >= new Date()).slice(0, 3);
-  const featuredEvents = events.filter(event => event.featured);
+  const upcomingEvents = events.filter (event => new Date (event.date) >= new Date () ) .slice (0, 3) ;
+  const featuredEvents = events.filter (event => event.featured) ;
 
   const formatDate = (dateString: anystring)  => {
 
@@ -407,7 +416,7 @@ export default function Events(...args: any[]): any {
       year: 'numeric', '
       month: 'long', '
       day: 'numeric' 
-    });
+    }) ;
   };
 
 
@@ -522,9 +531,7 @@ export default function Events(...args: any[]): any {
                   onChange={(e) => setSelectedType(e.target.value)}"
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {eventTypes.map(type  => (
-                    <option key={type} value={type}>{type}</option>
-                  ))}
+                  {eventTypes.map (type  => (<option key={type} value={type}>{type}</option>) ) }
                 </select>
               </div>
 
@@ -535,9 +542,7 @@ export default function Events(...args: any[]): any {
                   onChange={(e) => setSelectedCategory(e.target.value)}"
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {categories.map(category  => (
-                    <option key={category} value={category}>{category}</option>
-                  ))}
+                  {categories.map (category  => (<option key={category} value={category}>{category}</option>) ) }
                 </select>
               </div>
 
@@ -551,8 +556,7 @@ export default function Events(...args: any[]): any {
                   {statuses.map(status  => (
                     <option key={status} value={status}>'
                       {status === 'upcoming' ? 'Upcoming' : status === 'past' ? 'Past' : status}
-                    </option>
-                  ))}
+                    </option>) ) }
                 </select>
               </div>
             </div>
@@ -664,12 +668,10 @@ export default function Events(...args: any[]): any {
                       </button>
                     </div>
                   </div>
-                </motion.div>;
-              ))}
+                </motion.div>;) ) }
             </div>
           </div>
-        </section>;
-      )}
+        </section>;) }
 
       {/* Main Content */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8">"
@@ -725,8 +727,7 @@ export default function Events(...args: any[]): any {
                   >
                     Clear all filters
                   </button>
-                </div>;
-              )}
+                </div>;) }
 
               {/* Load More Button */}
               {filteredEvents.length > 6 && ("
@@ -734,8 +735,7 @@ export default function Events(...args: any[]): any {
                   <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:-translate-y-1">
                     Load More Events
                   </button>
-                </div>
-              )}
+                </div>) }
             </div>
           </div>
         </div>

@@ -2,6 +2,9 @@ import React, { useEffect, useMemo } from 'react';'
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
+  // Add your props here
+
+
   title?: string;
   description?: string;
   keywords?: string;
@@ -35,7 +38,8 @@ interface SEOProps {
     as: string;
     type?: string;
     crossorigin?: boolean;
-  }>;
+  
+}[];
   prefetch?: string[];
   dnsPrefetch?: string[];
   preconnect?: string[];
@@ -132,10 +136,10 @@ export function SEO({
             background: linear-gradient(135deg, #22ddd2 0%, #8c15e9 100%);
             min-height: 100vh;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align - items: center;
+            justify - content: center;
             color: white;
-            text-align: center;
+            text - align: center;
           }
           
           /* Optimize font loading */
@@ -197,11 +201,10 @@ export function SEO({
                   window.gtag('event', 'timing_complete', {
 '
                     name: 'load',
-                    value: Math.round(loadTime)
-                  });
+                    value: Math.round (loadTime) }) ;
                 }
               }
-            });
+            }) ;
           }
           
           // Core Web Vitals monitoring'
@@ -218,7 +221,6 @@ export function SEO({
           }`
         `}
       </script>
-    </Helmet>
-  );
+    </Helmet>) ;
 }
 '"`

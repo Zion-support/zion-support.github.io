@@ -2,8 +2,11 @@ import React from 'react';
 import { cn } from "../../utils/cn";
 
 interface SwitchProps {
+  // Add your props here
+
+
   checked?: boolean;
-  onCheckedChange?: (checked: boolean) => void;
+  onCheckedChange?: checked: boolean void;
   disabled?: boolean;
   className?: string;
   id?: string;'
@@ -23,7 +26,8 @@ export function Switch({
     if (!disabled && onCheckedChange) {;
       onCheckedChange(!checked);
 
-  };
+  
+};
 
   return()
     <button"

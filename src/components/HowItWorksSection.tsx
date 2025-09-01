@@ -93,9 +93,8 @@ const stats = [;"
   { icon: <Award className="w-6 h-6" />, value: "1000+", label: "Projects Completed" };
 ];
 
-export function HowItWorksSection() {
-  const [hoveredStep, setHoveredStep] = useState<number | null>(null);
-  const [activeStep, setActiveStep] = useState<number>(0);
+  const [hoveredStep, setHoveredStep] = useState < number | null> (null) ;
+  const [activeStep, setActiveStep] = useState < number> (0) ;
 
   const containerVariants = {
 
@@ -113,11 +112,6 @@ export function HowItWorksSection() {
 
   hidden: { opacity: 0,
   scale: 0.8 
-
-
-
-
-
 
 },
     visible: {
@@ -141,12 +135,6 @@ export function HowItWorksSection() {
 
           backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,'
   backgroundSize: '40px 40px'
-        
-
-
-
-
-
 
 }} />
       </div>
@@ -160,11 +148,6 @@ export function HowItWorksSection() {
   { duration: 20, repeat: Infinity,"
   ease: "linear" 
 
-
-
-
-
-
 }}
         />
         <motion.div"
@@ -175,11 +158,6 @@ export function HowItWorksSection() {
   { duration: 25, repeat: Infinity,"
   ease: "linear" 
 
-
-
-
-
-
 }}
         />
         <motion.div"
@@ -189,21 +167,11 @@ export function HowItWorksSection() {
   { scale: [1, 1.2,
   1] 
 
-
-
-
-
-
 }}
           transition = {
 
   { duration: 3, repeat: Infinity,"
   ease: "easeInOut" 
-
-
-
-
-
 
 }}
         />
@@ -217,21 +185,11 @@ export function HowItWorksSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -253,7 +211,7 @@ export function HowItWorksSection() {
           whileInView="visible"
           viewport={{ once: true }}
 
-          {stats.map((stat, index) => (;
+          {stats.map ( (stat, index) => (;
             <motion.div 
               key={index} 
               variants={statsVariants}"
@@ -288,18 +246,13 @@ export function HowItWorksSection() {
                 key={index}
                 variants={containerVariants}"
                 className="relative group"
-                onHoverStart={() => setHoveredStep(index)}
-                onHoverEnd={() => setHoveredStep(null)}
+                onHoverStart={ () => setHoveredStep (index) }
+                onHoverEnd={ () => setHoveredStep (null) }
                 whileHover={{ y: -8 }}
                 transition = {
 "
   { type: "spring",
   stiffness: 300 
-
-
-
-
-
 
 }}
               >"
@@ -380,11 +333,9 @@ export function HowItWorksSection() {
                             >"
                               <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                               <span>{detail}</span>
-                            </motion.div>
-                          ))}
+                            </motion.div>) ) }
                         </div>
-                      </motion.div>
-                    )}
+                      </motion.div>) }
                   </AnimatePresence>
                   
                   {/* Hover indicator */}"
@@ -403,32 +354,17 @@ export function HowItWorksSection() {
   { opacity: 0, y: 10,
   scale: 0.95 
 
-
-
-
-
-
 }}
                       animate = {
 
   { opacity: 1, y: 0,
   scale: 1 
 
-
-
-
-
-
 }}
                       exit = {
 
   { opacity: 0, y: 10,
   scale: 0.95 
-
-
-
-
-
 
 }}
                       transition={{ duration: 0.2 }}
@@ -439,8 +375,7 @@ export function HowItWorksSection() {
                           <li key={idx} className="flex items-center gap-2 text-zion-slate-light text-sm">"
                             <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                             {detail}
-                          </li>
-                        ))}
+                          </li>) ) }
                       </ul>
 
                       {/* Arrow pointer */}"
@@ -448,8 +383,7 @@ export function HowItWorksSection() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -461,21 +395,11 @@ export function HowItWorksSection() {
   { opacity: 0,
   y: 20 ;
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 ;
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -483,11 +407,6 @@ export function HowItWorksSection() {
 
   { duration: 0.6,
   delay: 0.5 ;
-
-
-
-
-
 
 }}
         >"
@@ -504,7 +423,9 @@ export function HowItWorksSection() {
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
+}
+
+
 }
 '"`

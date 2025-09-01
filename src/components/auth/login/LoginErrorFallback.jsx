@@ -1,3 +1,4 @@
+import React from 'react';
 const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
 
   return()
@@ -30,5 +31,6 @@ const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
       </div>
     </div>
   )};
+export { LoginErrorFallback };
 export default LoginErrorFallback;
 "

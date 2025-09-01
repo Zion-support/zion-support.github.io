@@ -27,8 +27,9 @@ import {
   BarChart3'
 } from 'lucide-react';'
 import SEO from '../../components/SEO';
-
-export default function GreenIT() {
+;
+export { function };
+export default function GreenIT(...args: unknown[]): unknown {
   const features = [
     {
 
@@ -434,7 +435,7 @@ export default function GreenIT() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -522,7 +523,7 @@ export default function GreenIT() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
+            {solutions.map(solution: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -620,7 +621,7 @@ export default function GreenIT() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -718,7 +719,7 @@ export default function GreenIT() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -830,7 +831,7 @@ export default function GreenIT() {
                 title: 'Optimization','
                 description: 'Monitor performance and continuously improve sustainability metrics'
 
-            ].map((phase, index) => (;
+            ].map(phase: unknown, index: unknown (;
               <motion.div
                 key={index}
                 initial = {

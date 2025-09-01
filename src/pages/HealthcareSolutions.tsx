@@ -16,8 +16,7 @@ const HealthcareSolutions: React.FC = (): JSX.Element => {
           interoperable health systems.
         </p>
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default HealthcareSolutions;

@@ -116,7 +116,7 @@ export default function ServicesPricingPage() {
                     Get Started
                   </Button>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </div>
@@ -159,9 +159,9 @@ export default function ServicesPricingPage() {
                           <span className="text-white text-sm">{service.rating}</span>
                         </div>
                       </div>
-                    </div>))}
+                    </div>) ) }
                 </div>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </div>

@@ -3,7 +3,8 @@ import { motion  } from 'framer-motion.ts';'
 import { Link  } from 'react-router-dom.ts';'
 import { Activity, AlertTriangle, Clock, CheckCircle, Shield, Zap, BarChart3, Globe, Smartphone, Monitor, Server, Wifi, Database, Cloud, Bell, TrendingUp, Users, Target  } from 'lucide-react';'
 import { SEO  } from '@/components/SEO';
-
+;
+export { function };
 export default function UptimeSLAMonitor(...args: []):  {
 
   const features = [
@@ -241,7 +242,7 @@ export default function UptimeSLAMonitor(...args: []):  {
             </div>
             "
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+              {features.map((feature, index (
                 <motion.div
                   key={index}
                   initial = {
@@ -303,7 +304,7 @@ export default function UptimeSLAMonitor(...args: []):  {
             </div>
             "
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {monitoringTypes.map((type, index)  => (
+              {monitoringTypes.map(type: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -365,7 +366,7 @@ export default function UptimeSLAMonitor(...args: []):  {
             </div>
             "
             <div className="grid md: grid-cols-2 gap-8">
-              {benefits.map((benefit, index)  => (
+              {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -429,7 +430,7 @@ export default function UptimeSLAMonitor(...args: []):  {
             </div>
             "
             <div className="grid md: grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
+              {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {

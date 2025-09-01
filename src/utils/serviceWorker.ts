@@ -33,7 +33,6 @@ export function registerServiceWorker(): void {
         // console.error('SW registration failed: ', registrationError);
       });
   }
-}
 
 export function unregisterServiceWorker(): void {
 '

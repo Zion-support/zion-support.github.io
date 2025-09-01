@@ -48,7 +48,7 @@ export function LoadingSkeleton({ className, count = 1, height = "h-4", width = 
 "
                 backgroundSize: "200% 100%"
             }}/>))}
-    </>)}
+    </>)};
 export function CardSkeleton({ className }) {
 
     return (<div className = {
@@ -74,7 +74,7 @@ export function CardSkeleton({ className }) {
         <LoadingSkeleton height="h-3" width="w-5/6"/>"
         <LoadingSkeleton height="h-3" width="w-4/6"/>
       </div>
-    </div>)}
+    </div>)};
 export function GridSkeleton({ columns = 3, className }) {
 
     return (<div className = {
@@ -89,7 +89,7 @@ export function GridSkeleton({ columns = 3, className }) {
 
 }>
       {Array.from({ length: columns }).map((_, index) => (<CardSkeleton key={index}/>))}
-    </div>)}
+    </div>)};
 export function HeroSkeleton({ className }) {
 
     return (<div className = {

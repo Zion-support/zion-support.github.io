@@ -27,7 +27,6 @@ function HiringTrackerContent() {
               Track and manage your candidates through the hiring process
             </p>
           </div>
-        </div>
 
         <Tabs"
           defaultValue="kanban"

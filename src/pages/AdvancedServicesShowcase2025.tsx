@@ -14,11 +14,11 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
     ...ADVANCED_AI_SERVICES_2025.map(service => ({ ...service, source: 'AI Solutions' }));
   ];
 
-  const filteredServices = allServices.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch});
+  const filteredServices = allServices.filter (service => {;
+    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
+    return matchesCategory && matchesSearch}) ;
 
   const categories = [;'
     { id: 'all', name: 'All Services', count: allServices.length },;'
@@ -55,7 +55,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
                 href="tel:+13024640950""
                 className="inline-flex items-center px-8 py-4 border border-gray-300 text-lg font-medium rounded-lg text-gray-300 hover:text-white hover:border-white transition-colors duration-200"
 
-                Call +1 302 464 0950
+                Call + 1 302 464 0950
               </a>
             </div>
           </div>
@@ -157,9 +157,8 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
                       : 'bg-slate-700 text-gray-300 hover:bg-slate-600'`
                   }`}
 
-                  {category.name} ({category.count});
-                </button>;
-              ))}
+                  {category.name} ({category.count}) ;
+                </button>;) ) }
             </div>
           </div>
         </div>
@@ -194,8 +193,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
                     <li key={index} className="text-sm text-gray-300 flex items-center gap-2">"
                       <span className="text-green-400">✓</span>
                       {feature}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
               </div>
 "
@@ -206,8 +204,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
                     <li key={index} className="text-sm text-gray-300 flex items-center gap-2">"
                       <span className="text-blue-400">→</span>
                       {benefit}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
               </div>
 "
@@ -230,8 +227,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
                 {service.tags.slice(0, 4).map((tag, index) => ("
                   <span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">
                     {tag}
-                  </span>
-                ))}
+                  </span>) ) }
               </div>
 "
               <div className="space-y-3">
@@ -248,8 +244,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
                   Call Now
                 </a>
               </div>;
-            </div>
-          ))}
+            </div>) ) }
         </div>;
 ;
         {filteredServices.length === 0 && (;"
@@ -264,8 +259,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
             >
               Clear filters
             </button>
-          </div>
-        )}
+          </div>) }
       </div>
 
       {/* Call to Action */}"
@@ -287,7 +281,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
               href="tel:+13024640950""
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200"
 
-              Call +1 302 464 0950
+              Call + 1 302 464 0950
             </a>
           </div>
         </div>
@@ -303,7 +297,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
                 <p>📞 +1 302 464 0950</p>
                 <p>✉️ kleber@ziontechgroup.com</p>
                 <p>📍 364 E Main St STE 1008</p>
-                <p>Middletown DE 19709</p>
+                <p > Middletown DE 19709</p>
               </div>
             </div>
             <div>"
@@ -321,14 +315,13 @@ const AdvancedServicesShowcase2025: React.FC = () => {;'
                 <p>✓ Expert Team</p>
                 <p>✓ Proven Results</p>
                 <p>✓ Competitive Pricing</p>
-                <p>✓ 24/7 Support</p>
+                <p>✓ 24 / 7 Support</p>
               </div>
             </div>;
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default AdvancedServicesShowcase2025;'"`

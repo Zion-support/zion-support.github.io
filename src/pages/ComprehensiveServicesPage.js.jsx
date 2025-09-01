@@ -16,7 +16,7 @@ export default function ComprehensiveServicesPage() {
         return COMPREHENSIVE_SERVICES.filter(service => {
 '
             const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
-            return matchesSearch && matchesCategory && matchesPricing})}, [searchTerm, selectedCategory, selectedPricingTier]);
+            return matchesSearch && matchesCategory && matchesPricing}) }, [searchTerm, selectedCategory, selectedPricingTier]) ;
     const getServiceTypeColor = (type) => {
 
         const colorMap = {
@@ -97,7 +97,7 @@ export default function ComprehensiveServicesPage() {
               </SelectTrigger>"
               <SelectContent className="bg-zion-blue border-zion-blue-light">"
                 <SelectItem value="all">All Categories</SelectItem>
-                {SERVICE_CATEGORIES.map(category => (<SelectItem key={category} value={category}>{category}</SelectItem>))}
+                {SERVICE_CATEGORIES.map (category => (<SelectItem key={category} value={category}>{category}</SelectItem>) ) }
               </SelectContent>
             </Select>
             <Select value={selectedPricingTier} onValueChange={setSelectedPricingTier}>"
@@ -106,7 +106,7 @@ export default function ComprehensiveServicesPage() {
               </SelectTrigger>"
               <SelectContent className="bg-zion-blue border-zion-blue-light">"
                 <SelectItem value="all">All Tiers</SelectItem>
-                {Object.keys(PRICING_TIERS).map(tier => (<SelectItem key={tier} value={tier}>{tier}</SelectItem>))}
+                {Object.keys (PRICING_TIERS) .map (tier => (<SelectItem key={tier} value={tier}>{tier}</SelectItem>) ) }
               </SelectContent>
             </Select>
           </div>
@@ -137,7 +137,7 @@ export default function ComprehensiveServicesPage() {
                   <div className="flex flex-wrap gap-2">"
                     {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
                         {tag}
-                      </Badge>))}
+                      </Badge>) ) }
                   </div>
 
                   {/* Pricing and Rating */}"
@@ -164,7 +164,7 @@ export default function ComprehensiveServicesPage() {
                         </div>"
                         <span className="text-zion-cyan font-medium">{service.aiScore}%</span>
                       </div>
-                    </div>)}
+                    </div>) }
 
                   {/* Availability and Location */}"
                   <div className="flex items-center justify-between text-sm text-zion-slate-light">"
@@ -189,7 +189,7 @@ export default function ComprehensiveServicesPage() {
                     </Button>
                   </div>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
 "
           {filteredServices.length === 0 && (<div className="text-center py-12">"
@@ -203,7 +203,7 @@ export default function ComprehensiveServicesPage() {
                 setSelectedPricingTier('all')}} variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
                 Clear Filters
               </Button>
-            </div>)}
+            </div>) }
         </div>
       </div>
 

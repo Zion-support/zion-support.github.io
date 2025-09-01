@@ -1,7 +1,6 @@
 import React from 'react';'
 import { Link } from 'react-router-dom';
 
-export default function Webinars() {
   const webinars = [
     {
 '
@@ -163,8 +162,7 @@ export default function Webinars() {
                     />
                   </svg>
                 </Link>
-              </div>
-            ))}
+              </div>) ) }
           </div>
 "
           <div className="text-center">"
@@ -184,7 +182,6 @@ export default function Webinars() {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 }
 '"

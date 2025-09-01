@@ -21,9 +21,9 @@ export default function SearchResultsPage() {
         enabled: !!query,
         initialPageParam: 1,
         getNextPageParam: (lastPage, pages) => lastPage.length < LIMIT ? null : pages.length + 1
-    });
+    }) ;
     // Refetch when the URL param changes
-    useEffect(() => {
+    useEffect ( () => {
         if (initialQuery !== query) {
 
             setQuery(initialQuery);
@@ -55,7 +55,7 @@ export default function SearchResultsPage() {
           <ul className="flex flex-wrap justify-center gap-2 mt-2">"
             {suggestions.map((s) => (<li key={s.text} className="bg-zion-blue-light px-2 py-1 rounded">
                 {s.text}
-              </li>))}
+              </li>) ) }
           </ul>
         </div>)}"
       {allResults.length > 0 && (<div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">`

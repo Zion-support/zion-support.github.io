@@ -2,9 +2,10 @@ import React, { useState } from 'react.ts';'
 import { Link  } from 'react-router-dom.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 
-const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<any>(null);
+
+const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
+  const [isOpen, setIsOpen] = useState (false) ;
+  const [activeCategory, setActiveCategory] = useState < any> (null) ;
 
   const serviceCategories = [
     {
@@ -176,7 +177,7 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
       >"
         <span className="flex items-center gap-2">
           <span>🚀</span>
-          <span>Services</span>
+          <span > Services</span>
           <motion.span
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
@@ -188,8 +189,7 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
 
       {/* Services Dropdown */}
       <AnimatePresence>
-        {isOpen && (
-          <motion.div
+        {isOpen && (<motion.div
             initial = {
 
   { opacity: 0, y: -10,
@@ -246,8 +246,8 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
 
 }}"
                     className="relative group"
-                    onMouseEnter={() => setActiveCategory(category.name)}
-                    onMouseLeave={() => setActiveCategory(null)}
+                    onMouseEnter={ () => setActiveCategory (category.name) }
+                    onMouseLeave={ () => setActiveCategory (null) }
                   >
                     <div className={`p-6 rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover:scale-105`}>"
                       <div className="flex items-center gap-3 mb-4">"
@@ -289,12 +289,10 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
                             <div className="text-right">"
                               <div className="text-xs font-semibold">{service.pricing}</div>
                             </div>
-                          </motion.div>
-                        ))}
+                          </motion.div>) ) }
                       </div>
                     </div>
-                  </motion.div>
-                ))}
+                  </motion.div>) ) }
               </div>
 
               {/* Quick Links */}"
@@ -340,8 +338,7 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
                           {link.description}
                         </div>
                       </Link>
-                    </motion.div>
-                  ))}
+                    </motion.div>) ) }
                 </div>
               </div>
 
@@ -362,13 +359,11 @@ const EnhancedServicesNavigation: React.FC = (): JSX.Element => {;
                 </div>
               </div>
             </div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
 
       {/* Backdrop */}
-      {isOpen && (
-        <motion.div
+      {isOpen && (<motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}"

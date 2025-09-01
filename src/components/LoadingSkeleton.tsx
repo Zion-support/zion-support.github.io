@@ -1,14 +1,13 @@
 import React from 'react.ts';'
 import { motion  } from 'framer-motion.ts';
 
-interface SkeletonProps extends React.PropsWithChildren<{}> {
 
+interface SkeletonProps extends React.PropsWithChildren<{}> {
   className?: string;
   height?: string;
   width?: string;
   rounded?: boolean;
   animated?: boolean;
-
 }
 
 const Skeleton: React.FC<SkeletonProps> = ({
@@ -22,7 +21,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
 '
   const baseClasses = `${height} ${width} bg-gray-200 dark:bg-gray-700 ${rounded ? 'rounded' : ''}`;`
   const classes = `${baseClasses} ${className}`;
-  
+
   if (!animated) {
 
     return <div className={classes} />;
@@ -38,10 +37,9 @@ const Skeleton: React.FC<SkeletonProps> = ({
 
         duration: 1.5,
         repeat: Infinity,
-        ease: "easeInOut"
+        ease: 'easeInOut',
       }}
-    />
-  );
+    />) ;
 };
 
 interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {
@@ -49,7 +47,6 @@ interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {
   type?: 'card' | 'list' | 'hero' | 'table' | 'form';
   count?: number;
   className?: string;
-
 }
 
 export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
@@ -143,11 +140,10 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
               <Skeleton height="h-10" width="w-24" />"
               <Skeleton height="h-10" width="w-24" />
             </div>
-          </div>
-        );
-        
+          </div>) ;
+
       default:
-        return <Skeleton />;
+        return < Skeleton />;
     }
   };
 

@@ -253,9 +253,9 @@ const FiveGEnterpriseSolutions = () => {
                   {solution.applications.map((app, appIndex) => (<li key={appIndex} className="flex items-center text-gray-300">"
                       <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
                       {app}
-                    </li>))}
+                    </li>) ) }
                 </ul>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>

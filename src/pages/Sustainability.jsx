@@ -299,8 +299,7 @@ const Sustainability = () => {
                       >"
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {feature}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>
 "
@@ -310,8 +309,7 @@ const Sustainability = () => {
                   </span>"
                   <span className="text-gray-400">{solution.timeline}</span>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -380,8 +378,7 @@ const Sustainability = () => {
                   ))}"
                   <span className="text-gray-300 text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -421,8 +418,7 @@ const Sustainability = () => {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 };
 
 export default Sustainability;

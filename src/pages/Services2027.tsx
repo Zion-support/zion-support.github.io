@@ -2,6 +2,8 @@ import React, { useState, useMemo } from 'react.ts';'
 import { Link  } from 'react-router-dom.ts';'
 import { motion  } from 'framer-motion.ts';
 import { Search, 
+
+
   ArrowRight, 
   DollarSign, 
   ExternalLink, 
@@ -57,7 +59,7 @@ import { Search,
  } from 'lucide-react.ts';'
 import { SEO  } from '@/components/SEO';
 
-// Mock data for 2027 services
+// Mock data for 2027 services;
 const SERVICES_2027 = [
   {
 
@@ -183,7 +185,7 @@ const Services2027: React.FC = (): JSX.Element => {
     { id: any'IoT', name: 'IoT', icon: Network, count: SERVICES_2027.filter(s  => s.category === 'IoT').length }
   ];
 
-  const filteredAndSorted = useMemo(() => {
+  const filteredAndSorted = useMemo ( () => {
     let filtered = SERVICES_2027;
     
     // Filter by search query
@@ -220,7 +222,7 @@ const Services2027: React.FC = (): JSX.Element => {
           const aROI = parseInt(a.roi.split('-')[0]);'
           const bROI = parseInt(b.roi.split('-')[0]);
           return bROI - aROI;
-        });
+        }) ;
       default:
         return filtered;
     }
@@ -301,11 +303,8 @@ const Services2027: React.FC = (): JSX.Element => {
                   onChange={(e) => setSelectedCategory(e.target.value)}"
                   className="px-4 py-3 bg-white/5 border border-purple-400/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-purple-400/50"
                 >
-                  {categories.map((category)  => (
-                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
-                    </option>
-                  ))}
+                  {categories.map ( (category) => (<option key={category.id} value={category.id}>
+                      {category.name} ({category.count}) </option>) ) }
                 </select>
               </div>
 
@@ -388,8 +387,7 @@ const Services2027: React.FC = (): JSX.Element => {
                   <span>Learn More</span>"
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -443,8 +441,7 @@ const Services2027: React.FC = (): JSX.Element => {
                   <span>View Details</span>"
                   <ArrowRight className="w-3 h-3" />
                 </Link>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -483,8 +480,7 @@ const Services2027: React.FC = (): JSX.Element => {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 };
 
 export default Services2027;'"`

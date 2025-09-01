@@ -1,3 +1,4 @@
+import React from 'react';
 import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, Shield, Users, BarChart3 export default function AIVideoAnalytics() {
   const features = [
     'Real-time video analysis with AI-powered object detection','
@@ -93,7 +94,7 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
                   <div className="text-lg font-semibold mb-1">{t.name}</div>"
                   <div className="text-2xl font-bold text-blue-600 mb-2">{t.price}</div>"
                   <ul className="text-sm text-gray-600 space-y-1">
-                    {t.details.map((d) => (<li key={d}>{d}</li>))}
+                    {t.details.map((d (<li key={d}>{d}</li>))}
                   </ul>
                 </div>
               ))}

@@ -26,7 +26,7 @@ const Dialog({ children, open, onOpenChange }) {
       <div className="relative">
         {children}
       </div>
-    </DialogContext.Provider>)}
+    </DialogContext.Provider>)};
 export function DialogTrigger({ children, asChild = false }) {
 
     const context = useContext(DialogContext);

@@ -295,15 +295,13 @@ const Terms: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                  </a>
-                ))}
+                  </a>) ) }
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </>
-  );
+    </>) ;
 };
 
 export default Terms;

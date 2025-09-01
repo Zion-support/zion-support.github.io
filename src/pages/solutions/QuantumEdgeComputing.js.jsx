@@ -295,5 +295,6 @@ import { Zap, Target, TrendingUp, Shield, Globe, Cpu, Lightbulb, Atom, Wifi cons
       </section>
     </div>);
 };
+export { QuantumEdgeComputing };
 export default QuantumEdgeComputing;
 }}}}'"

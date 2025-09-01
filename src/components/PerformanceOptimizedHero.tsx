@@ -16,6 +16,9 @@ import {
   Globe,
   Rocket
 interface HeroProps {
+  // Add your props here
+
+
   title?: string;
   subtitle?: string;
   description?: string;
@@ -42,15 +45,15 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
     { icon: Zap, text: "Digital Transformation", color: "from-yellow-500 to-orange-500" };
   ];
 }) => {;
-  const [currentFeature, setCurrentFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState (0) ;
+  const [isVisible, setIsVisible] = useState (false) ;
 
-  useEffect(() => {
-    setIsVisible(true);
+  useEffect ( () => {
+    setIsVisible (true) ;
     
-    const interval = setInterval(() => {;
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 3000);
+    const interval = setInterval ( () => {;
+      setCurrentFeature ( (prev) => (prev + 1) % features.length) ;
+    }, 3000) ;
 
     return () => clearInterval(interval);
   }, [features.length]);
@@ -65,11 +68,6 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 
   hidden: { opacity: 0,
   y: 50 
-
-
-
-
-
 
 },
     visible: {
@@ -91,9 +89,6 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 ;
 ;
 
-
-
-
 },;
     visible: { opacity: 1, y: 0 };
   };
@@ -105,9 +100,6 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   scale: 0.8 ;
 ;
 ;
-
-
-
 
 },;
     visible: { opacity: 1, scale: 1 };
@@ -182,10 +174,9 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
           variants={itemVariants}
 
-          {features.map((feature, index) => (
-            <motion.div
+          {features.map ( (feature, index) => (<motion.div
               key={index}
-              className={`relative p-6 rounded-2xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-white/10 backdrop-blur-sm hover:scale-105 transition-transform duration-300`}
+              className={`relative p - 6 rounded - 2xl bg - gradient - to - br ${feature.color} bg - opacity - 10 border border - white / 10 backdrop - blur - sm hover:scale - 105 transition - transform duration - 300`}
               variants={featureVariants}
               whileHover={{ y: -5 }}
 `
@@ -196,8 +187,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
               <p className="text-gray-300 text-sm">
                 Cutting-edge solutions for modern businesses
               </p>
-            </motion.div>;
-          ))}
+            </motion.div>;) ) }
         </motion.div>
 
         {/* Stats */}
@@ -237,12 +227,6 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
             duration: 2,
             repeat: Infinity,"
   ease: "easeInOut"
-          
-
-
-
-
-
 
 }}
         />
@@ -262,18 +246,15 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
             repeat: Infinity,"
             ease: "easeInOut",
   delay: 1
-          
 
 ;
 ;
 ;
-
 
 }};
         />;
       </AnimatePresence>;
-    </section>;
-  );
+    </section>;) ;
 </div></div></div></div>};
 
 export default React.memo(PerformanceOptimizedHero);}}}</motion.div>}'"`

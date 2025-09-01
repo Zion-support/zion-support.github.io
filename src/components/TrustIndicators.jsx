@@ -68,7 +68,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
               <p className="text-zion-slate-light text-sm leading-relaxed">
                 {indicator.description}
               </p>
-            </div>))}
+            </div>) ) }
         </div>
 
         {/* Stats Section */}"
@@ -84,9 +84,9 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
                   <div className="text-zion-slate-light text-sm">
                     {stat.label}
                   </div>
-                </div>))}
+                </div>) ) }
             </div>
-          </div>)}
+          </div>) }
 
         {/* Certifications Section */}"
         {showCertifications && (<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">"
@@ -103,7 +103,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
                   <div className="text-zion-slate-light text-xs">{cert.year}</div>
                 </div>))}
             </div>
-          </div>)}
+          </div>) }
 
         {/* Customer Testimonials Preview */}"
         <div className="mt-16 text-center">"
@@ -116,7 +116,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
           <p className="text-white font-medium">- Sarah Chen, CTO at TechCorp</p>
         </div>
       </div>
-    </section>)}
+    </section>) }
 // Compact version for smaller spaces
 export function TrustIndicatorsCompact({ className }) {
 '`

@@ -1,3 +1,4 @@
+import React from 'react';
 export interface AdvancedMicroSaasService {
   id: string;
   title: string;
@@ -22,7 +23,8 @@ export interface AdvancedMicroSaasService {
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
   technicalSpecs?: {
 
     technology: string[];
@@ -34,7 +36,7 @@ export interface AdvancedMicroSaasService {
   competitors?: string[];
   marketSize?: string;
 }
-
+;
 export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
   // AI-Powered Financial Services
   {
@@ -472,5 +474,6 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
     competitors: ['Hired', 'Pymetrics', 'HireVue', 'Mya Systems', 'Paradox'],'
     marketSize: '$18.9 billion by 2025'},
 ];
+export { ADVANCED_MICRO_SAAS_SERVICES_2025 };
 export default ADVANCED_MICRO_SAAS_SERVICES_2025;
 '

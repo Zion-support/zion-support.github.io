@@ -13,7 +13,6 @@ interface Service {
 }
 
 interface ServicesGridProps extends React.PropsWithChildren<{}> {
-
   services: Service[];
 }
 
@@ -58,8 +57,7 @@ export function ServicesGrid(...args: any[]): any {
               >"
                 <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />"
                 <span className="truncate">{feature}</span>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
 
           <Link
@@ -72,10 +70,8 @@ export function ServicesGrid(...args: any[]): any {
               <ArrowRight className="w-4 h-4" />
             </motion.div>
           </Link>
-        </motion.div>
-      ))}
-    </div>
-  );
+        </motion.div>) ) }
+    </div>) ;
 }
 
 export default ServicesGrid;

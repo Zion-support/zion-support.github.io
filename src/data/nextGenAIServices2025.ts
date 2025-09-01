@@ -14,7 +14,8 @@ pricing: {
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string};
+    custom: string
+};
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -23,7 +24,7 @@ pricing: {
   contactLink: string;'
   status: 'active' | 'beta' | 'coming-soon';'
   researchLevel: 'production' | 'research' | 'experimental';
-  ethicalCompliance: string[]}
+  ethicalCompliance: string[]};
 export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
   {
 '

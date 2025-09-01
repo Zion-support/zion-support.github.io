@@ -1,6 +1,6 @@
 import React from 'react.ts';'
 import { SEO   } from '@/components/SEO';
-
+;
 const GDPRCookieCompliance: React.FC = (): JSX.Element => (
   <div className="min-h-screen bg-slate-900 text-white">"
     <SEO title="GDPR & Cookie Compliance - Zion Tech Group" description="Automated cookie consent banners, policy generation, and compliance audits for GDPR/CCPA/CPRA." />"
@@ -40,7 +40,8 @@ const GDPRCookieCompliance: React.FC = (): JSX.Element => (
     </section>;
   </div>;
 );
-
+;
+export { GDPRCookieCompliance };
 export default GDPRCookieCompliance;
 
 '"

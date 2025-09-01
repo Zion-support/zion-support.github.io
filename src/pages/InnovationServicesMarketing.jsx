@@ -3,8 +3,8 @@ import { cuttingEdgeInnovations2025 } from "../data/2025-cutting-edge-innovation
 import { specializedIndustrySolutions2025 } from "../data/2025-specialized-industry-solutions";
 const InnovationServicesMarketing = () => {
     const allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
-    const categories = Array.from(new Set(allServices.map(service => service.category)));
-    const industries = Array.from(new Set(specializedIndustrySolutions2025.map(service => service.industry)));
+    const categories = Array.from (new Set (allServices.map (service => service.category) ) ) ;
+    const industries = Array.from (new Set (specializedIndustrySolutions2025.map (service => service.industry) ) ) ;
     const formatPrice = (price, model) => {
 '
         if (model === 'percentage of revenue') {
@@ -128,9 +128,9 @@ const InnovationServicesMarketing = () => {
                       </div>))}"
                     {categoryServices.length > 3 && (<div className="text-gray-400 text-sm">
                         +{categoryServices.length - 3} more services
-                      </div>)}
+                      </div>) }
                   </div>
-                </div>)})}
+                </div>) }) }
           </div>
         </div>
 
@@ -156,9 +156,9 @@ const InnovationServicesMarketing = () => {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                         {service.name}
-                      </div>))}
+                      </div>) ) }
                   </div>
-                </div>)})}
+                </div>) }) }
           </div>
         </div>
 
@@ -194,7 +194,7 @@ const InnovationServicesMarketing = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                           </svg>
                           {feature}
-                        </li>))}
+                        </li>) ) }
                     </ul>
                   </div>
                   <div>"
@@ -205,7 +205,7 @@ const InnovationServicesMarketing = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
                           </svg>
                           {benefit}
-                        </li>))}
+                        </li>) ) }
                     </ul>
                   </div>
                 </div>
@@ -230,7 +230,7 @@ const InnovationServicesMarketing = () => {
                     Get Started with {service.name}
                   </a>
                 </div>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
 

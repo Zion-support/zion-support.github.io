@@ -58,17 +58,11 @@ export function HomepagePromotion() {
 
                 staggerChildren: 0.2
 
-
     };
     const itemVariants = {
 
   hidden: { y: 30,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -96,11 +90,6 @@ export function HomepagePromotion() {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -168,7 +157,7 @@ export function HomepagePromotion() {
                   {service.features.map((feature, index) => (<li key={index} className="text-zion-slate-light text-xs flex items-start">"
                       <span className="text-zion-cyan mr-2">•</span>
                       {feature}
-                    </li>))}
+                    </li>) ) }
                 </ul>
               </div>
 
@@ -179,14 +168,14 @@ export function HomepagePromotion() {
                   {service.benefits.map((benefit, index) => (<li key={index} className="text-green-400 text-xs flex items-start">"
                       <span className="text-green-400 mr-2">✓</span>
                       {benefit}
-                    </li>))}
+                    </li>) ) }
                 </ul>
               </div>
 "
               <Link to={service.link} className="block w-full bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark font-semibold py-2 px-4 rounded-lg text-center transition-colors">
                 Learn More
               </Link>
-            </motion.div>))}
+            </motion.div>) ) }
         </motion.div>
 
         {/* Call to Action Section */}
@@ -194,11 +183,6 @@ export function HomepagePromotion() {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 

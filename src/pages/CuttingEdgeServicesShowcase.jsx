@@ -167,7 +167,7 @@ const CuttingEdgeServicesShowcase = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                       </svg>
                       {feature}
-                    </div>))}
+                    </div>) ) }
                 </div>
               </div>
 
@@ -180,7 +180,7 @@ const CuttingEdgeServicesShowcase = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
                       </svg>
                       {benefit}
-                    </div>))}
+                    </div>) ) }
                 </div>
               </div>
 
@@ -211,7 +211,7 @@ const CuttingEdgeServicesShowcase = () => {
                 <div className="flex flex-wrap gap-2">"
                   {service.tags.slice(0, 4).map((tag, idx) => (<span key={idx} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded-full">
                       {tag}
-                    </span>))}
+                    </span>) ) }
                 </div>
               </div>
 
@@ -224,7 +224,7 @@ const CuttingEdgeServicesShowcase = () => {
                   Contact us for pricing and demo
                 </p>
               </div>
-            </div>))}
+            </div>) ) }
         </div>
 
         {/* Call to Action */}"

@@ -74,6 +74,7 @@ const modules = [
     description: 'AI-driven project planning and resource allocation.',
     icon: TrendingUp},
 ];
+export { function };
 export default function AIAutonomousBusinessPlatform() {
   return()
     <div className="min-h-screen bg-background relative overflow-hidden">

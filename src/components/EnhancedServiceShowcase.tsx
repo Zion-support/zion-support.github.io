@@ -25,7 +25,8 @@ interface Service {
   id: string;
   title: string;
   description: string;
-icon: React.ComponentType<{ className?: string}>;
+icon: React.ComponentType<{ className?: string
+}>;
   category: string;
   features: string[];
   pricing: string;
@@ -34,7 +35,7 @@ icon: React.ComponentType<{ className?: string}>;
   color: string;
   popular?: boolean;
   link: string}
-
+;
 const services: Service[] = [
   {
 '
@@ -178,7 +179,7 @@ const categories = ['
 '
   const filteredServices = selectedCategory === 'All Services'
     ? services
-    : services.filter(service => service.category === selectedCategory);
+    : services.filter (service => service.category === selectedCategory) ;
 
   const renderStars = (rating: number)  => {
 
@@ -197,8 +198,7 @@ const categories = ['
             ? 'text-yellow-400 fill-current' ;'
             : 'text-gray-400';`
         }`};
-      />;
-    ));
+      />;) ) ;
   };
 
   return()
@@ -211,21 +211,11 @@ const categories = ['
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   isVisible ? { opacity: 1,
   y: 0 
-
-
-
-
-
 
 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}"
@@ -238,7 +228,7 @@ const categories = ['
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Comprehensive technology solutions designed to drive your business forward with
-            cutting-edge AI, cybersecurity, and innovative digital transformation services.
+            cutting - edge AI, cybersecurity, and innovative digital transformation services.
           </p>
         </motion.div>
 
@@ -249,21 +239,11 @@ const categories = ['
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   isVisible ? { opacity: 1,
   y: 0 
-
-
-
-
-
 
 } : { opacity: 0, y: 20 }}
           transition = {
@@ -291,8 +271,7 @@ const categories = ['
               }`}
 
               {category}
-            </button>
-          ))}
+            </button>) ) }
         </motion.div>
 
         {/* Services Grid */}
@@ -313,8 +292,7 @@ const categories = ['
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 "
           <AnimatePresence mode="wait">
-            {filteredServices.map((service, index) => (
-              <motion.div
+            {filteredServices.map ( (service, index) => (<motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -325,12 +303,6 @@ const categories = ['
                   delay: index * 0.1,"
                   type: "spring",
   stiffness: 100
-                
-
-
-
-
-
 
 }}
                 whileHover={{ y: -10 }}
@@ -344,8 +316,7 @@ const categories = ['
                     {service.popular && ("
                       <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-black px-4 py-1 rounded-full text-sm font-bold">
                         Popular
-                      </div>
-                    )}
+                      </div>) }
 
                     {/* Service Icon */}`
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;"
@@ -373,8 +344,7 @@ const categories = ['
                         {service.features.length > 3 && ("
                           <div className="text-sm text-zion-cyan">
                             +{service.features.length - 3} more features
-                          </div>
-                        )}
+                          </div>) }
                       </div>
 
                       {/* Pricing & Rating */}"
@@ -400,8 +370,7 @@ const categories = ['
                     </div>
                   </div>
                 </Link>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </AnimatePresence>
         </motion.div>
 
@@ -412,21 +381,11 @@ const categories = ['
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   isVisible ? { opacity: 1,
   y: 0 
-
-
-
-
-
 
 } : { opacity: 0, y: 20 }}
           transition = {
@@ -469,7 +428,6 @@ const categories = ['
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 };
 '"`

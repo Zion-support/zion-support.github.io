@@ -1,3 +1,4 @@
+import { Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink } from 'lucide - react';
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";"
 import { Button } from "./ui/button";'
@@ -114,7 +115,7 @@ export function ServicesBenefitsShowcase() {
           </h2>"
           <p className="text-xl text-slate-300 max-w-4xl mx-auto">
             Discover the unique advantages and proven benefits that make our services the preferred choice
-            for businesses worldwide. From cutting-edge AI to enterprise IT solutions, we deliver results.
+            for businesses worldwide. From cutting - edge AI to enterprise IT solutions, we deliver results.
           </p>
         </div>
 
@@ -150,7 +151,7 @@ export function ServicesBenefitsShowcase() {
                     {service.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="text-slate-300 text-sm flex items-start gap-2">"
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"/>
                         {benefit}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
 
@@ -164,7 +165,7 @@ export function ServicesBenefitsShowcase() {
                     {service.useCases.map((useCase, useCaseIndex) => (<li key={useCaseIndex} className="text-slate-300 text-sm flex items-start gap-2">"
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"/>
                         {useCase}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
 
@@ -194,7 +195,7 @@ export function ServicesBenefitsShowcase() {
                   <ArrowRight className="w-4 h-4 ml-2"/>
                 </Button>
               </CardContent>
-            </Card>))}
+            </Card>) ) }
         </div>
 
         {/* Competitive Advantages */}"

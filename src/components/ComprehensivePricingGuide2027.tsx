@@ -34,7 +34,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
   const [sortBy, setSortBy] = useState<any>('name');
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
+  useEffect ( () => {
         }
       },;
       { threshold: 0.1 }
@@ -45,7 +45,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
 
       observer.observe(element)}
 
-    return () => observer.disconnect()}, []);
+    return () => observer.disconnect () }, []) ;
 
   // Combine all services
   const allServices = [
@@ -65,7 +65,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
       features: service.features || [],;'
       ctaLabel: service.ctaLabel || 'Get Started',;'
       href: service.href || '/contact';
-    }));
+    }) ) ;
   ];
 
   // Filter services based on search and category
@@ -81,7 +81,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
       (priceRange === 'Medium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 100 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 1000) ||'
       (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 1000);
 
-    return matchesSearch && matchesCategory && matchesPrice});
+    return matchesSearch && matchesCategory && matchesPrice}) ;
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {;
@@ -91,7 +91,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
       case 'price':;'
         return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));'
       case 'category':;
-        return a.category.localeCompare(b.category);
+        return a.category.localeCompare (b.category) ;
       default:;
         return 0}
   });
@@ -109,8 +109,6 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
   ;'
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
-
-
 
 ;
 ;
@@ -169,21 +167,11 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
           animate = {
 
   isVisible ? { opacity: 1,
   y: 0 
-
-
-
-
-
 
 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}"
@@ -215,21 +203,11 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   isVisible ? { opacity: 1,
   y: 0 
-
-
-
-
-
 
 } : { opacity: 0, y: 20 }}
           transition = {
@@ -268,8 +246,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
                 {categories.map(category  => ("
                   <option key={category} value={category} className="bg-zion-slate-dark text-white">
                     {category}
-                  </option>
-                ))}
+                  </option>) ) }
               </select>
 
               {/* Price Range Filter */}
@@ -281,8 +258,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
                 {priceRanges.map(range  => ("
                   <option key={range} value={range} className="bg-zion-slate-dark text-white">
                     {range}
-                  </option>
-                ))}
+                  </option>) ) }
               </select>
 
               {/* Sort By */}
@@ -305,8 +281,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
               {searchQuery && ("
                 <span className="text-gray-400 ml-2">"
                   for "{searchQuery}"
-                </span>
-              )}
+                </span>) }
             </div>
           </div>
         </motion.div>;
@@ -318,21 +293,11 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           animate = {
 
   isVisible ? { opacity: 1,;
   y: 0 ;
-
-
-
-
-
 
 } : { opacity: 0, y: 30 }}
           transition = {
@@ -348,7 +313,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
 }}"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {sortedServices.map((service, index)  => (;
+          {sortedServices.map ( (service, index) => (;
             <motion.div
               key={`${service.source}-${service.id}`}
               initial = {
@@ -356,21 +321,11 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   isVisible ? { opacity: 1,
   y: 0 
-
-
-
-
-
 
 } : { opacity: 0, y: 20 }}
               transition = {
@@ -418,11 +373,9 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
                       {service.features.length > 3 && ("
                         <span className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full border border-zion-purple/30">
                           +{service.features.length - 3}
-                        </span>
-                      )}
+                        </span>) }
                     </div>
-                  </div>;
-                )}
+                  </div>;) }
 
                 {/* Pricing & Billing */}"
                 <div className="mb-4">"
@@ -450,8 +403,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
                       <div className="text-zion-purple font-bold text-sm">{service.roi}</div>"
                       <div className="text-gray-400 text-xs">ROI</div>
                     </div>
-                  </div>
-                )}
+                  </div>) }
 
                 {/* CTA Button */}
                 <a
@@ -465,8 +417,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
                   {service.external && <ExternalLink className="w-4 h-4" />}
                 </a>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </motion.div>
 
         {/* Contact Section */}
@@ -476,21 +427,11 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           animate = {
 
   isVisible ? { opacity: 1,;
   y: 0 ;
-
-
-
-
-
 
 } : { opacity: 0, y: 30 }}
           transition = {
@@ -551,7 +492,6 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 };
 '"`

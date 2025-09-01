@@ -1,7 +1,8 @@
 import Head from 'next/head';'
 import Link from 'next/link';'
 import { servicesCatalog } from '../../src/data/servicesCatalog';
-
+;
+export { function };
 export default function ServicesIndex(...args[]):  {
 
   return()
@@ -49,9 +50,9 @@ export default function ServicesIndex(...args[]):  {
           <h2 className="mb-6 text-2xl font-bold">More Services</h2>"
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {servicesCatalog
-              .flatMap((c) => c.items.map((item) => ({...item, categoryName: c.name})))
+              .flatMap(c: unknown c.items.map(item: unknown ({...item, categoryName: c.name})))
               .slice(0, 18)
-              .map((item) => (
+              .map(item: unknown (
                 <a
                   key={item.id}
                   href={item.href}'
@@ -67,7 +68,7 @@ export default function ServicesIndex(...args[]):  {
                   <p className="mt-1 text-sm text-white/75">{item.description}</p>"
                   <div className="mt-4 text-sm text-white/80">Starting at <span className="font-semibold">{item.price}</span>/{item.billing}</div>"
                   <ul className="mt-3 list-disc space-y-1 pl-5 text-xs text-white/70">
-                    {item.features.slice(0,4).map((f, i) => (
+                    {item.features.slice(0,4).map(f: unknown, i: unknown (
                       <li key={i}>{f}</li>
                     ))}
                   </ul>"

@@ -41,6 +41,7 @@ const benefits = ["
     "Scale operations seamlessly","
     "Gain competitive advantage"
 ];
+export { function };
 export default function AIAutonomousEducationProfessor() {
 "
     return (<div className="min-h-screen bg-background relative overflow-hidden">"

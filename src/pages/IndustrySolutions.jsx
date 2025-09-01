@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+export default IndustrySolutions;
 import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope const IndustrySolutions = () => {
 '
     const [searchTerm, setSearchTerm] = useState('');'
@@ -10,7 +11,7 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
     const filteredSolutions = industrySolutions.filter(solution => {
 '
         const matchesSolutionType = selectedSolutionType === 'all' || solution.solutionType === selectedSolutionType;
-        return matchesSearch && matchesIndustry && matchesSolutionType});
+        return matchesSearch && matchesIndustry && matchesSolutionType}) ;
     const formatPrice = (price, model) => {
 
         switch (model) {
@@ -70,13 +71,13 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
             <select value={selectedIndustry} onChange={(e) => setSelectedIndustry(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">"
               {industries.map(industry => (<option key={industry} value={industry} className="bg-gray-800 text-white">'
                   {industry === 'all' ? 'All Industries' : industry}
-                </option>))}
+                </option>) ) }
             </select>
 "
             <select value={selectedSolutionType} onChange={(e) => setSelectedSolutionType(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">"
               {solutionTypes.map(type => (<option key={type} value={type} className="bg-gray-800 text-white">'
                   {type === 'all' ? 'All Solution Types' : type}
-                </option>))}
+                </option>) ) }
             </select>
           </div>
         </div>
@@ -117,7 +118,7 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
                 <div className="flex flex-wrap gap-2">"
                   {solution.features.slice(0, 3).map((feature, index) => (<span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">
                       {feature}
-                    </span>))}
+                    </span>) ) }
                 </div>
               </div>
 "
@@ -126,7 +127,7 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
                 <div className="flex flex-wrap gap-2">"
                   {solution.compliance.slice(0, 3).map((compliance, index) => (<span key={index} className="px-2 py-1 text-xs bg-green-500/20 text-green-300 rounded">
                       {compliance}
-                    </span>))}
+                    </span>) ) }
                 </div>
               </div>
 "
@@ -138,7 +139,7 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
                   </a>
                 </div>
               </div>
-            </div>))}
+            </div>) ) }
         </div>
 
         {/* Contact Information */}"

@@ -226,7 +226,7 @@ const Training: React.FC = () => {
       activeFormat === 'all' || program.format === activeFormat;
 
     return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
-  });
+  }) ;
 
   // Update counts
   categories.forEach(cat => {
@@ -240,7 +240,7 @@ const Training: React.FC = () => {
         program => program.category === cat.id
       ).length;
     }
-  });
+  }) ;
 
   levels.forEach(level => {
 '
@@ -253,7 +253,7 @@ const Training: React.FC = () => {
         program => program.level === level.id
       ).length;
     }
-  });
+  }) ;
 
   formats.forEach(format => {
 '
@@ -266,7 +266,7 @@ const Training: React.FC = () => {
         program => program.format === format.id
       ).length;
     }
-  });
+  }) ;
 
   return()
     <>
@@ -482,8 +482,7 @@ const Training: React.FC = () => {
                         className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded"
                       >
                         {tag}
-                      </span>
-                    ))}
+                      </span>) ) }
                   </div>
 
                   {/* Features */}"
@@ -499,8 +498,7 @@ const Training: React.FC = () => {
                         >"
                           <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
                           {feature}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
 
@@ -514,8 +512,7 @@ const Training: React.FC = () => {
                       <Download className="w-4 h-4" />
                     </button>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
 
             {filteredPrograms.length === 0 && ("
@@ -532,8 +529,7 @@ const Training: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>) ;
 };
 
 export default Training;

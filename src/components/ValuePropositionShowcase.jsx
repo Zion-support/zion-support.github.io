@@ -15,7 +15,7 @@ import {
   DollarSign,
   Clock,
   Users,
-  BarChart3
+  BarChart3;
 const valueMetrics = [;
   {
 
@@ -50,7 +50,7 @@ const valueMetrics = [;
     color: "from-red-500 to-pink-600"
 
 ];
-
+;
 const competitiveAdvantages = [
   {
 "
@@ -81,7 +81,7 @@ const competitiveAdvantages = [
     color: "from-orange-500 to-red-600"
 
 ];
-
+;
 const marketComparison = [
   {
 "
@@ -111,7 +111,7 @@ const marketComparison = [
     advantage: "AI-powered detection, comprehensive zero-trust implementation"
 
 ];
-
+;
 const successStories = [
   {
 "
@@ -142,7 +142,6 @@ const successStories = [
 
 ];
 
-export function ValuePropositionShowcase() {
   const containerVariants = {
 
     hidden: { opacity: 0 },
@@ -154,18 +153,12 @@ export function ValuePropositionShowcase() {
         staggerChildren: 0.2,
         delayChildren: 0.1
 
-
   };
 
   const itemVariants = {
 
   hidden: { y: 30,
   opacity: 0 
-
-
-
-
-
 
 },
     visible: {
@@ -177,18 +170,12 @@ export function ValuePropositionShowcase() {
         duration: 0.6,"
         ease: "easeOut"
 
-
   };
 
   const cardVariants = {
 
   hidden: { scale: 0.95,
   opacity: 0 
-
-
-
-
-
 
 },
     visible: {
@@ -199,7 +186,6 @@ export function ValuePropositionShowcase() {
 
         duration: 0.4,"
         ease: "easeOut"
-
 
   };
 
@@ -214,21 +200,11 @@ export function ValuePropositionShowcase() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ duration: 0.6 }}
@@ -249,14 +225,14 @@ export function ValuePropositionShowcase() {
           initial="hidden";"
           animate="visible";
 
-          {valueMetrics.map((metric, index) => (;
+          {valueMetrics.map ( (metric, index) => (;
             <motion.div
               key={index}"
               className="text-center"
               variants={itemVariants}
 
               <motion.div
-                className={`w-20 h-20 bg-gradient-to-r ${metric.color} rounded-2xl flex items-center justify-center mx-auto mb-4 text-white`}
+                className={`w - 20 h - 20 bg - gradient - to - r ${metric.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4 text - white`}
                 variants={cardVariants}
                 whileHover={{ scale: 1.1 }}
 
@@ -277,32 +253,17 @@ export function ValuePropositionShowcase() {
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 ;
 
-
-
-
-
-
 }}
           transition = {
 
   { duration: 0.6,
   delay: 0.3 ;
-
-
-
-
-
 
 }}
         >"
@@ -345,32 +306,17 @@ export function ValuePropositionShowcase() {
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 ;
 
-
-
-
-
-
 }}
           transition = {
 
   { duration: 0.6,
   delay: 0.5 ;
-
-
-
-
-
 
 }}
         >"
@@ -419,8 +365,7 @@ export function ValuePropositionShowcase() {
                     <p className="text-white text-sm">{comparison.advantage}</p>
                   </div>
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </motion.div>
 
@@ -432,32 +377,17 @@ export function ValuePropositionShowcase() {
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 ;
 
-
-
-
-
-
 }}
           transition = {
 
   { duration: 0.6,
   delay: 0.7 ;
-
-
-
-
-
 
 }}
         >"
@@ -494,8 +424,7 @@ export function ValuePropositionShowcase() {
                     <div className="text-green-300 text-sm">Return on Investment</div>
                   </div>
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </motion.div>
 
@@ -507,32 +436,17 @@ export function ValuePropositionShowcase() {
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 ;
 
-
-
-
-
-
 }}
           transition = {
 
   { duration: 0.6,
   delay: 0.9 ;
-
-
-
-
-
 
 }}
         >"

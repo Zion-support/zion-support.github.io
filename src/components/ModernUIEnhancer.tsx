@@ -1,8 +1,12 @@
 import React, { useEffect, useCallback, useState } from 'react';
+export const ModernUIEnhancer: React.FC < ModernUIEnhancerProps> = ({
+
 
 interface ModernUIEnhancerProps {
+  // Add your props here
+
+
   enabled?: boolean;
-}
 
 export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
 
@@ -12,7 +16,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
   const [isDarkMode, setIsDarkMode] = useState(false);'
   const [accentColor, setAccentColor] = useState('#0ea5e9');
 
-  const enhanceTypography = useCallback(() => {
+  const enhanceTypography = useCallback ( () => {
     if (!enabled) return;
 
     // Add modern font loading'
@@ -20,7 +24,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     fontLink.rel = 'preload';'
     fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';'
     fontLink.as = 'style';
-    document.head.appendChild(fontLink);
+    document.head.appendChild (fontLink) ;
 
     // Apply modern typography
     const root = document.documentElement;'
@@ -36,7 +40,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     if (!enabled) return;
 
     const root = document.documentElement;
-    
+
     // Modern color palette
     const colors = {
 
@@ -74,14 +78,14 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
           root.style.setProperty(`--color-${key}-${shade}`, colorValue);
         });
       }
-    });
+    }) ;
 
     // Apply accent color variations'`
     root.style.setProperty('--color-primary-light', `${accentColor}20`);'`
     root.style.setProperty('--color-primary-dark', `${accentColor}80`);
   }, [enabled, accentColor]);
 
-  const enhanceSpacing = useCallback(() => {
+  const enhanceSpacing = useCallback ( () => {
     if (!enabled) return;
 
     const root = document.documentElement;
@@ -115,11 +119,11 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     });
   }, [enabled]);
 
-  const enhanceShadows = useCallback(() => {
+  const enhanceShadows = useCallback ( () => {
     if (!enabled) return;
 
     const root = document.documentElement;
-    
+
     // Modern shadow system
     const shadows = {
 '
@@ -138,11 +142,11 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     });
   }, [enabled]);
 
-  const enhanceTransitions = useCallback(() => {
+  const enhanceTransitions = useCallback ( () => {
     if (!enabled) return;
 
     const root = document.documentElement;
-    
+
     // Modern transition system
     const transitions = {
 '
@@ -160,11 +164,11 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     });
   }, [enabled]);
 
-  const enhanceBorderRadius = useCallback(() => {
+  const enhanceBorderRadius = useCallback ( () => {
     if (!enabled) return;
 
     const root = document.documentElement;
-    
+
     // Modern border radius system
     const radius = {
 '
@@ -184,11 +188,11 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     });
   }, [enabled]);
 
-  const enhanceDarkMode = useCallback(() => {
+  const enhanceDarkMode = useCallback ( () => {
     if (!enabled) return;
 
     const root = document.documentElement;
-    
+
     if (isDarkMode) {
 '
       root.classList.add('dark');'
@@ -206,9 +210,9 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       root.style.setProperty('--text-secondary', '#475569');'
       root.style.setProperty('--border-color', '#e2e8f0');
     }
-  }, [enabled, isDarkMode]);
+  }, [enabled, isDarkMode]) ;
 
-  const enhanceComponents = useCallback(() => {
+  const enhanceComponents = useCallback ( () => {
     if (!enabled) return;
 
     // Add modern button styles'"
@@ -225,7 +229,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
           box-shadow: var(--shadow-sm);`
         `;
       }
-    });
+    }) ;
 
     // Add modern card styles'"
     const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]');
@@ -241,20 +245,20 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
           border: 1px solid var(--border-color);`
         `;
       }
-    });
-  }, [enabled]);
+    }) ;
+  }, [enabled]) ;
 
-  useEffect(() => {
+  useEffect ( () => {
     if (!enabled) return;
 
-    enhanceTypography();
-    enhanceColorScheme();
-    enhanceSpacing();
-    enhanceShadows();
-    enhanceTransitions();
-    enhanceBorderRadius();
-    enhanceDarkMode();
-    enhanceComponents();
+    enhanceTypography () ;
+    enhanceColorScheme () ;
+    enhanceSpacing () ;
+    enhanceShadows () ;
+    enhanceTransitions () ;
+    enhanceBorderRadius () ;
+    enhanceDarkMode () ;
+    enhanceComponents () ;
   }, [
     enabled,
     enhanceTypography,

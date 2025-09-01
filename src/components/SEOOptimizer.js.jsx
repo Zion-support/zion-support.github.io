@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';'
 import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react';
 const SEOOptimizer = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isAnalyzing, setIsAnalyzing] = useState(false);
-    const [report, setReport] = useState(null);
-    const [selectedPage, setSelectedPage] = useState(null);
-    const analyzeSEO = useCallback(async () => {
-        setIsAnalyzing(true);
+    const [isOpen, setIsOpen] = useState (false) ;
+    const [isAnalyzing, setIsAnalyzing] = useState (false) ;
+    const [report, setReport] = useState (null) ;
+    const [selectedPage, setSelectedPage] = useState (null) ;
+    const analyzeSEO = useCallback (async () => {
+        setIsAnalyzing (true) ;
         try {
             // Simulate analyzing all pages for SEO
             const samplePages = [
@@ -58,10 +58,10 @@ const SEOOptimizer = () => {
                     score,
                     issues,
                     recommendations
-                }});
+                }}) ;
             const totalPages = pageAnalyses.length;
-            const averageScore = Math.round(pageAnalyses.reduce((sum, page) => sum + page.score, 0) / totalPages);
-            const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0).length;
+            const averageScore = Math.round (pageAnalyses.reduce ( (sum, page) => sum + page.score, 0) / totalPages) ;
+            const pagesWithIssues = pageAnalyses.filter (page => page.issues.length > 0) .length;
             // Collect all issues and count frequency
             const issueCounts = {};
             pageAnalyses.forEach(page => {
@@ -82,7 +82,7 @@ const SEOOptimizer = () => {
                 topIssues,
                 pageAnalyses,
                 summary
-            })}
+            }) }
         catch (error) {
 '
             // console.error('Error analyzing SEO:', error)}
@@ -97,48 +97,42 @@ const SEOOptimizer = () => {
 
         let score = 0;
         let maxScore = 0;
-        // Title optimization (0-20 points)
-        maxScore += 20;
+        // Title optimization (0 - 20 points) maxScore += 20;
         if (page.title.length >= 30 && page.title.length <= 60) {
 
             score += 20}
         else if (page.title.length > 0) {
 
             score += 10}
-        // Meta description (0-15 points)
-        maxScore += 15;
+        // Meta description (0 - 15 points) maxScore += 15;
         if (page.metaDescription.length >= 120 && page.metaDescription.length <= 160) {
 
             score += 15}
         else if (page.metaDescription.length > 0) {
 
             score += 8}
-        // Headings (0-15 points)
-        maxScore += 15;
+        // Headings (0 - 15 points) maxScore += 15;
         if (page.headings.length >= 3) {
 
             score += 15}
         else if (page.headings.length >= 1) {
 
             score += 10}
-        // Images (0-10 points)
-        maxScore += 10;
+        // Images (0 - 10 points) maxScore += 10;
         if (page.images.length >= 2) {
 
             score += 10}
         else if (page.images.length >= 1) {
 
             score += 5}
-        // Internal links (0-15 points)
-        maxScore += 15;
+        // Internal links (0 - 15 points) maxScore += 15;
         if (page.links.length >= 3) {
 
             score += 15}
         else if (page.links.length >= 1) {
 
             score += 10}
-        // Keywords (0-10 points)
-        maxScore += 10;
+        // Keywords (0 - 10 points) maxScore += 10;
         if (page.keywords.length >= 3) {
 
             score += 10}
@@ -153,7 +147,7 @@ const SEOOptimizer = () => {
         else if (page.url.length > 0) {
 
             score += 8}
-        return Math.round((score / maxScore) * 100)};
+        return Math.round ( (score / maxScore) * 100) };
     const issues = [];
         if (!page.title || page.title.length < 30) {
 '
@@ -214,9 +208,9 @@ const SEOOptimizer = () => {
     const generateSummary = (pageAnalyses, topIssues) => {
 
         const totalPages = pageAnalyses.length;
-        const excellentPages = pageAnalyses.filter(page => page.score >= 80).length;
-        const goodPages = pageAnalyses.filter(page => page.score >= 60).length;
-        const poorPages = pageAnalyses.filter(page => page.score < 40).length;
+        const excellentPages = pageAnalyses.filter (page => page.score >= 80) .length;
+        const goodPages = pageAnalyses.filter (page => page.score >= 60) .length;
+        const poorPages = pageAnalyses.filter (page => page.score < 40) .length;
         let summary = `Analyzed ${totalPages} pages for SEO. `;
         if (excellentPages > 0) {
 `
@@ -236,7 +230,7 @@ const SEOOptimizer = () => {
             return;
         const csvContent = ['
             ['Page URL', 'Title', 'SEO Score', 'Issues', 'Recommendations'],
-            ...report.pageAnalyses.map(page => [
+            ...report.pageAnalyses.map (page => [
                 page.pageUrl,
                 page.title,
                 page.score.toString(),'
@@ -303,7 +297,7 @@ const SEOOptimizer = () => {
                   <div className="text-2xl font-bold">{report.pagesWithIssues}</div>"
                   <div className="text-sm text-pink-100">Need Optimization</div>
                 </div>
-              </div>)}
+              </div>) }
           </div>
 
           {/* Content */}"
@@ -321,9 +315,9 @@ const SEOOptimizer = () => {
                     <div className="space-y-1">"
                       {report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className="text-sm text-yellow-700 dark:text-yellow-300">
                           • {issue}
-                        </div>))}
+                        </div>) ) }
                     </div>
-                  </div>)}
+                  </div>) }
 
                 {/* Pages Analysis */}"
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden">"
@@ -366,7 +360,7 @@ const SEOOptimizer = () => {
                             <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">
                               {page.issues.length} issues
                             </td>
-                          </tr>))}
+                          </tr>) ) }
                       </tbody>
                     </table>
                   </div>
@@ -410,9 +404,9 @@ const SEOOptimizer = () => {
                               {selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dark:text-red-400">"
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"/>
                                   <span>{issue}</span>
-                                </div>))}
+                                </div>) ) }
                             </div>
-                          </div>)}
+                          </div>) }
 
                         {selectedPage.recommendations.length > 0 && (<div>"
                             <h4 className="font-medium text-green-600 dark:text-green-400 mb-2">SEO Recommendations</h4>"
@@ -420,15 +414,15 @@ const SEOOptimizer = () => {
                               {selectedPage.recommendations.map((rec, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dark:text-green-400">"
                                   <Zap className="w-4 h-4 mt-0.5 flex-shrink-0"/>
                                   <span>{rec}</span>
-                                </div>))}
+                                </div>) ) }
                             </div>
-                          </div>)}
+                          </div>) }
                       </div>
                     </div>
                   </div>)}"
               </div>) : (<div className="text-center py-8 text-gray-500">
                 No SEO analysis data available
-              </div>)}
+              </div>) }
           </div>
 
           {/* Footer Actions */}"

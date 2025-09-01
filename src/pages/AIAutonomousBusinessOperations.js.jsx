@@ -140,9 +140,9 @@ const AIAutonomousBusinessOperations = () => {
                     {area.capabilities.map((capability, idx) => (<li key={idx} className="flex items-center text-gray-300">"
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {capability}
-                      </li>))}
+                      </li>) ) }
                   </ul>
-                </div>))}
+                </div>) ) }
             </div>
           </div>
           

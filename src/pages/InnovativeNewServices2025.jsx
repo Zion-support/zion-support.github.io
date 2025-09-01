@@ -114,7 +114,7 @@ const InnovativeNewServices2025 = () => {
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-cyan-500 focus:outline-none">
                 {categories.map(category => (<option key={category} value={category}>'
                     {category === 'all' ? 'All Categories' : category}
-                  </option>))}
+                  </option>) ) }
               </select>
             </div>
 "
@@ -123,7 +123,7 @@ const InnovativeNewServices2025 = () => {
               <select value={selectedPriceRange} onChange={(e) => setSelectedPriceRange(e.target.value)} className="bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-cyan-500 focus:outline-none">
                 {priceRanges.map(range => (<option key={range.value} value={range.value}>
                     {range.label}
-                  </option>))}
+                  </option>) ) }
               </select>
             </div>
           </div>
@@ -164,7 +164,7 @@ const InnovativeNewServices2025 = () => {
                         {service.features.slice(0, 4).map((feature, idx) => (<li key={idx} className="flex items-center text-sm text-gray-300">"
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"/>
                             {feature}
-                          </li>))}
+                          </li>) ) }
                       </ul>
                     </div>
 
@@ -175,7 +175,7 @@ const InnovativeNewServices2025 = () => {
                         {service.benefits.slice(0, 3).map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-300">"
                             <Star className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"/>
                             {benefit}
-                          </li>))}
+                          </li>) ) }
                       </ul>
                     </div>
 
@@ -212,7 +212,7 @@ const InnovativeNewServices2025 = () => {
                       </div>
                     </div>
                   </div>
-                </div>)})}
+                </div>) }) }
           </div>
 "
           {filteredServices.length === 0 && (<div className="text-center py-20">"
@@ -224,7 +224,7 @@ const InnovativeNewServices2025 = () => {
                 setSelectedPriceRange('all')}} className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors">
                 Clear Filters
               </button>
-            </div>)}
+            </div>) }
         </div>
       </section>
 

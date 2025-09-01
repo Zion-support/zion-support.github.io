@@ -68,7 +68,7 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
                     : 'text-zion-slate-light hover:text-white hover:bg-white/10'}`}>"
                   <Icon className="w-4 h-4"/>
                   <span>{item.name}</span>
-                </Link>)})}
+                </Link>) }) }
 
             {/* Services Dropdown */}"
             <div className="relative">"
@@ -86,12 +86,12 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
                           <div className="space-y-1">"
                             {category.services.map((service) => (<Link key={service.name} to={service.href} className="block px-3 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 rounded-lg transition-colors" onClick={() => setIsServicesOpen(false)}>
                                 {service.name}
-                              </Link>))}
+                              </Link>) ) }
                           </div>
-                        </div>))}
+                        </div>) ) }
                     </div>
                   </div>
-                </div>)}
+                </div>) }
             </div>
 
             {/* Contact Button */}"
@@ -121,7 +121,7 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
                         : 'text-zion-slate-light hover:text-white hover:bg-white/10'}`} onClick={() => setIsOpen(false)}>"
                   <Icon className="w-5 h-5"/>
                   <span>{item.name}</span>
-                </Link>)})}
+                </Link>) }) }
 
             {/* Mobile Services */}"
             <div className="px-3 py-2">"
@@ -132,9 +132,9 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
                     <div className="space-y-1">"
                       {category.services.map((service) => (<Link key={service.name} to={service.href} className="block px-3 py-1 text-sm text-zion-slate-light hover:text-white rounded transition-colors" onClick={() => setIsOpen(false)}>
                           {service.name}
-                        </Link>))}
+                        </Link>) ) }
                     </div>
-                  </div>))}
+                  </div>) ) }
               </div>
             </div>
 

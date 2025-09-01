@@ -7,8 +7,8 @@ export const BundleAnalyzer = () => {
     const [isAnalyzing, setIsAnalyzing] = useState(false);'
     const [activeTab, setActiveTab] = useState('overview');
     // Analyze bundle size from build output
-    const analyzeBundle = useCallback(async () => {
-        setIsAnalyzing(true);
+    const analyzeBundle = useCallback (async () => {
+        setIsAnalyzing (true) ;
         try {
             // Simulate bundle analysis based on build output
             // In a real implementation, this would fetch actual bundle stats
@@ -25,7 +25,6 @@ export const BundleAnalyzer = () => {
                         gzipSize: 55000,'
                         type: 'vendor','
   optimization: 'good'
-                    
 
 },
                     {
@@ -93,9 +92,8 @@ export const BundleAnalyzer = () => {
                     'Add bundle size monitoring to CI/CD pipeline'
                 ],;
                 score: 78,
-                lastUpdated: new Date()
-            };
-            setAnalysis(mockAnalysis)}
+                lastUpdated: new Date () };
+            setAnalysis (mockAnalysis) }
         catch (error) {
 '
             // console.error('Bundle analysis failed:', error)}
@@ -145,8 +143,7 @@ export const BundleAnalyzer = () => {
             case 'critical': return <AlertTriangle className="w-4 h-4"/>;"
             default: return <Info className="w-4 h-4"/>}
     };
-    if (!analysis)
-        return null;
+    if (!analysis) return null;
     return (<>
       {/* Bundle Analyzer Button */}"
       <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed top-4 right-4 z-50 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} aria-label="Bundle analyzer" aria-expanded={isOpen}>"
@@ -203,7 +200,7 @@ export const BundleAnalyzer = () => {
                     : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}`} aria-selected={activeTab === id} role="tab">"
                   <Icon className="w-4 h-4"/>
                   {label}
-                </button>))}
+                </button>) ) }
             </div>
 
             {/* Tab Content */}"
@@ -262,7 +259,7 @@ export const BundleAnalyzer = () => {
                       {isAnalyzing ? 'Analyzing...' : 'Refresh Analysis'}
                     </button>
                   </div>
-                </div>)}
+                </div>) }
 
               {/* Chunks Tab */}'"
               {activeTab === 'chunks' && (<div className="space-y-3">"
@@ -294,9 +291,9 @@ export const BundleAnalyzer = () => {
                             ? 'Empty chunk - consider removing''
                             : 'Consider optimization'}
                           </span>
-                        </div>)}
-                    </div>))}
-                </div>)}
+                        </div>) }
+                    </div>) ) }
+                </div>) }
 
               {/* Recommendations Tab */}'"
               {activeTab === 'recommendations' && (<div className="space-y-3">"
@@ -319,7 +316,7 @@ export const BundleAnalyzer = () => {
                       </div>
                     </div>
                   </div>
-                </div>)}
+                </div>) }
             </div>
 
             {/* Footer */}"
@@ -328,7 +325,7 @@ export const BundleAnalyzer = () => {
                 Last updated: {analysis.lastUpdated.toLocaleTimeString()}
               </div>
             </div>
-          </motion.div>)}
+          </motion.div>) }
       </AnimatePresence>
     </>)};
 '"`

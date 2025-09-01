@@ -359,10 +359,10 @@ const PricingComparison: React.FC = (): JSX.Element => {;'
     };
   ];
 
-  const calculateSavings = (monthlyPrice: anynumber, yearlyPrice: number)   => {;
+  const calculateSavings = (monthlyPrice: anynumber, yearlyPrice: number) => {;
     const monthlyTotal = monthlyPrice * 12;
     const yearlyTotal = yearlyPrice * 12;
-    const savingsPercent = Math.round((savings / monthlyTotal) * 100);
+    const savingsPercent = Math.round ( (savings / monthlyTotal) * 100) ;
     return { savings, savingsPercent }};
 
   return()
@@ -546,8 +546,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;'
                                 {selectedPlan === 'yearly' && ("
                                   <div className="text-sm text-green-400">
                                     Save ${savings.savings} ({savings.savingsPercent}%) annually
-                                  </div>
-                                )}
+                                  </div>) }
                               </div>
 "
                               <ul className="space-y-3 mb-8">
@@ -555,8 +554,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;'
                                   <li key={featureIndex} className="flex items-center text-gray-300">"
                                     <span className="text-green-400 mr-3">✓</span>
                                     {feature}
-                                  </li>
-                                ))}
+                                  </li>) ) }
                               </ul>
 "
                               <div className="space-y-3">
@@ -583,14 +581,11 @@ const PricingComparison: React.FC = (): JSX.Element => {;'
                                   Learn More
                                 </Link>
                               </div>
-                            </motion.div>
-                          )})}
+                            </motion.div>) }) }
                       </div>
-                    </motion.div>
-                  ))}
+                    </motion.div>) ) }
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </section>
 

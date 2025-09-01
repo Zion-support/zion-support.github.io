@@ -1,4 +1,5 @@
 import React from 'react.ts';
+export default Products;
 
 const Products: React.FC = (): JSX.Element => {
 
@@ -29,8 +30,7 @@ const Products: React.FC = (): JSX.Element => {
           </a>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default Products;'"

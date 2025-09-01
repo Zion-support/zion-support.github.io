@@ -16,8 +16,7 @@ const EnterpriseSolutions: React.FC = (): JSX.Element => {
           enterprise needs across multiple industries.
         </p>
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default EnterpriseSolutions;

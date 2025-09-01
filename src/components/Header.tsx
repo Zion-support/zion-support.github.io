@@ -69,8 +69,10 @@ import { MainNavigation } from './header/MainNavigation';'
 import { cn } from '@/lib/utils';
 
 interface HeaderProps {
+  // Add your props here
+
+
   className?: string;
-}
 
 export function Header({ className }: HeaderProps) {
 
@@ -151,13 +153,13 @@ export function Header({ className }: HeaderProps) {
 '
       name: 'Contact','
       href: '/contact',
-      icon: Phone
-    }
+      icon: Phone,
+    },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+  useEffect ( () => {
+    const handleScroll = useCallback ( () => {
+      setIsScrolled (window.scrollY > 10) ;
     };
 
 '
@@ -172,11 +174,11 @@ export function Header({ className }: HeaderProps) {
   };
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileMenuOpen (!isMobileMenuOpen) ;
   };
 
   const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
+    setIsMobileMenuOpen (false) ;
   };
 
   const handleSearch = (e: React.FormEvent) => {
@@ -268,8 +270,7 @@ export function Header({ className }: HeaderProps) {
               </button>
 
               <AnimatePresence>
-                {isUserMenuOpen && (
-                  <motion.div
+                {isUserMenuOpen && (<motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}"
@@ -316,15 +317,14 @@ export function Header({ className }: HeaderProps) {
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-red-400 hover:bg-gray-800 transition-colors w-full text-left"
                         onClick={() => {
                           // Add logout logic here
-                          setIsUserMenuOpen(false);
+                          setIsUserMenuOpen (false) ;
                         }}
                       >"
                         <LogOut className="w-4 h-4" />
                         <span>Logout</span>
                       </button>
                     </div>
-                  </motion.div>
-                )}
+                  </motion.div>) }
               </AnimatePresence>
             </div>
 
@@ -378,8 +378,7 @@ export function Header({ className }: HeaderProps) {
                 </div>
               </form>
             </div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
 
       {/* Enhanced Mobile Menu */}
@@ -574,10 +573,8 @@ export function Header({ className }: HeaderProps) {
                 </Link>
               </div>
             </div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
-    </header>
-  );
+    </header>) ;
 }
 '"

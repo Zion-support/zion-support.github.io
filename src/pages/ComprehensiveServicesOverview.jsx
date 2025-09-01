@@ -100,10 +100,10 @@ export default function ComprehensiveServicesOverview() {
                     filtered = filtered.filter(service => {
 '
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price > 3000});
+                        return price > 3000}) ;
                     break}
         }
-    });
+    }) ;
     const getServicePrice = (service) => {
 '
         if (typeof service.price === 'number') {
@@ -169,7 +169,7 @@ export default function ComprehensiveServicesOverview() {
                 </SelectTrigger>
                 <SelectContent>"
                   <SelectItem value="all">All Categories</SelectItem>
-                  {categories.map((category) => (<SelectItem key={category} value={category}>{category}</SelectItem>))}
+                  {categories.map ( (category) => (<SelectItem key={category} value={category}>{category}</SelectItem>) ) }
                 </SelectContent>
               </Select>
 
@@ -240,11 +240,6 @@ export default function ComprehensiveServicesOverview() {
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -292,7 +287,7 @@ export default function ComprehensiveServicesOverview() {
                           {service.marketPrice && (<div className="flex items-center gap-2 text-zion-slate-light">"
                               <Target className="h-4 w-4"/>
                               <span>{service.marketPrice}</span>
-                            </div>)}
+                            </div>) }
                         </div>
 "
                         {service.features && service.features.length > 0 && (<div className="space-y-2">"
@@ -303,7 +298,7 @@ export default function ComprehensiveServicesOverview() {
                                 </Badge>))}"
                               {service.features.length > 3 && (<Badge variant="secondary" className="bg-white/10 text-zion-slate-light border-white/20">
                                   +{service.features.length - 3} more
-                                </Badge>)}
+                                </Badge>) }
                             </div>
                           </div>)}
 '"
@@ -315,9 +310,9 @@ export default function ComprehensiveServicesOverview() {
                                 </Badge>))}"
                               {service.technologyStack.length > 4 && (<Badge variant="outline" className="border-zion-cyan/30 text-zion-cyan">
                                   +{service.technologyStack.length - 4}
-                                </Badge>)}
+                                </Badge>) }
                             </div>
-                          </div>)}
+                          </div>) }
                       </CardContent>
 "
                       <CardFooter className="pt-0">"
@@ -341,13 +336,13 @@ export default function ComprehensiveServicesOverview() {
                                   <BookOpen className="mr-2 h-4 w-4"/>
                                   Docs
                                 </a>
-                              </Button>)}
+                              </Button>) }
                           </div>
                         </div>
                       </CardFooter>
                     </Card>
-                  </motion.div>))}
-              </div>)}
+                  </motion.div>) ) }
+              </div>) }
           </div>
 
           {/* Contact Section */}"

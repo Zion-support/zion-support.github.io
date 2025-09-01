@@ -21,12 +21,6 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
             "addressRegion": "DE","
             "postalCode": "19709","
   "addressCountry": "US"
-        
-
-
-
-
-
 
 },"
         "contactPoint": {
@@ -67,7 +61,6 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
                         "@type": "Service","
                         "name": "Quantum AI Fusion Platform","
                         "description": "Revolutionary platform combining quantum computing with artificial intelligence"
-
 
             ];
 

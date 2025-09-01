@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 
 interface AccessibilitySettings {
+
   fontSize: number;
   highContrast: boolean;
   largeText: boolean;
@@ -24,15 +25,20 @@ interface AccessibilitySettings {
   fontSize: number;
   lineHeight: number;
   letterSpacing: number;
+
 }
 
 interface AccessibilityEnhancerProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showSettings?: boolean;
+
 }
 
   // Keyboard navigation support
-  useEffect(() => {
+  useEffect ( () => {
     const handleKeyDown = (event: KeyboardEvent) => {;
       // Skip if not in keyboard navigation mode;
       if (!settings.keyboardNavigation) return;
@@ -50,11 +56,11 @@ interface AccessibilityEnhancerProps {
         const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
         if (event.shiftKey && target = == firstElement) {;
-          event.preventDefault();
-          lastElement.focus();
+          event.preventDefault () ;
+          lastElement.focus () ;
         } else if (!event.shiftKey && target = == lastElement) {;
-          event.preventDefault();
-          firstElement.focus();
+          event.preventDefault () ;
+          firstElement.focus () ;
         }
       }
 
@@ -91,7 +97,7 @@ interface AccessibilityEnhancerProps {
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     )).filter(el => !(el as HTMLElement).hidden);
 
-    const currentIndex = focusableElements.findIndex(el => el === document.activeElement);
+    const currentIndex = focusableElements.findIndex (el => el === document.activeElement) ;
     let nextIndex = currentIndex;
 
     switch (direction) {
@@ -104,9 +110,7 @@ interface AccessibilityEnhancerProps {
       case 'ArrowUp':
         nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
         break;
-    }
-
-    (focusableElements[nextIndex] as HTMLElement)?.focus();
+    } (focusableElements[nextIndex] as HTMLElement) ?.focus () ;
   };
 
   // Screen reader announcements'
@@ -116,20 +120,20 @@ interface AccessibilityEnhancerProps {
       announcement.className = 'sr-only';
       announcement.textContent = message;
       
-      document.body.appendChild(announcement);
+      document.body.appendChild (announcement) ;
       
-      setTimeout(() => {
-        document.body.removeChild(announcement);
-      }, 1000);
+      setTimeout ( () => {
+        document.body.removeChild (announcement) ;
+      }, 1000) ;
     }
-  }, [settings.screenReader]);
+  }, [settings.screenReader]) ;
 
   // Add accessibility attributes to interactive elements
   useEffect(() => {
 '
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
     
-interactiveElements.forEach(element:  > {;
+interactiveElements.forEach (element:  > {;
       const el = element as HTMLElement;
       
       // Add role if missing'
@@ -152,8 +156,8 @@ interactiveElements.forEach(element:  > {;
 '
         el.classList.add('focus-visible');
       }
-    });
-  }, [settings.focusIndicator]);
+    }) ;
+  }, [settings.focusIndicator]) ;
 
   // Add CSS for accessibility features
   useEffect(() => {
@@ -161,13 +165,13 @@ interactiveElements.forEach(element:  > {;
     const style = document.createElement('style');
     style.textContent = `
       /* High contrast mode */;
-      .high-contrast {;
-        --text-primary: #ffffff !important;
-        --text-secondary: #e5e7eb !important;
-        --bg-primary: #000000 !important;
-        --bg-secondary: #1f2937 !important;
-        --accent: #ffff00 !important;
-        --border: #ffffff !important;
+      .high - contrast {;
+        --text - primary: #ffffff ! important;
+        --text - secondary: #e5e7eb ! important;
+        --bg - primary: #000000 ! important;
+        --bg - secondary: #1f2937 ! important;
+        --accent: #ffff00 ! important;
+        --border: #ffffff ! important;
       }
       
       .high-contrast * {
@@ -183,10 +187,10 @@ interactiveElements.forEach(element:  > {;
         font-size: 1.2em !important;
       }
       
-      .large-text h1 { font-size: 2.5em !important; }
-      .large-text h2 { font-size: 2em !important; }
-      .large-text h3 { font-size: 1.75em !important; }
-      .large-text p { font-size: 1.3em !important; }
+      .large - text h1 { font - size: 2.5em ! important; }
+      .large - text h2 { font - size: 2em ! important; }
+      .large - text h3 { font - size: 1.75em ! important; }
+      .large - text p { font - size: 1.3em ! important; }
       
       /* Reduced motion */
       .reduced-motion *,
@@ -234,8 +238,8 @@ interactiveElements.forEach(element:  > {;
         background: #000;
         color: white;
         padding: 8px;
-        text-decoration: none;
-        z-index: 1000;
+        text - decoration: none;
+        z - index: 1000;
       }
       
       .skip-link:focus {
@@ -243,12 +247,12 @@ interactiveElements.forEach(element:  > {;
         top: 6px;
       }`
     `;
-    document.head.appendChild(style);
+    document.head.appendChild (style) ;
 
     return () => {
-      document.head.removeChild(style);
+      document.head.removeChild (style) ;
     };
-  }, []);
+  }, []) ;
 
   // Apply accessibility settings to the document
   const applySettings = (newSettings: AccessibilitySettings) => {
@@ -319,7 +323,7 @@ interactiveElements.forEach(element:  > {;
   ) => {
 
     const newSettings = { ...settings, [key]: value };
-    saveSettings(newSettings);
+    saveSettings (newSettings) ;
     
     // Show notification'`
     const notification = `Updated ${key.replace(/([A-Z])/g, ' $1').toLowerCase()}`;
@@ -330,7 +334,7 @@ interactiveElements.forEach(element:  > {;
   };
 
   // Reset to default settings
-  const resetSettings = () => {
+  const resetSettings = (...args: unknown[]): unknown => {
     const defaultSettings: AccessibilitySettings = {
 
       highContrast: false,
@@ -388,11 +392,11 @@ interactiveElements.forEach(element:  > {;
   // Font size controls
   const fontSizes = [12, 14, 16, 18, 20, 24, 28, 32];
 
-  useEffect(() => {
+  useEffect ( () => {
     // Show accessibility panel after page load
-    const timer = setTimeout(() => setIsVisible(true), 3000);
-    return () => clearTimeout(timer);
-  }, []);
+    const timer = setTimeout ( () => setIsVisible (true) , 3000) ;
+    return () => clearTimeout (timer) ;
+  }, []) ;
 
   if (!enabled || !isVisible) return null;
 
@@ -416,8 +420,7 @@ interactiveElements.forEach(element:  > {;
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-        {isExpanded && (
-          <motion.div
+        {isExpanded && (<motion.div
             initial={{ opacity: 0, x: -100, scale: 0.9 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: -100, scale: 0.9 }}"
@@ -460,8 +463,7 @@ interactiveElements.forEach(element:  > {;
                         <action.icon className="w-5 h-5" />"
                         <span className="text-xs font-medium text-center">{action.name}</span>
                       </div>
-                    </button>
-                  ))}
+                    </button>) ) }
                 </div>
               </div>
 
@@ -506,8 +508,7 @@ interactiveElements.forEach(element:  > {;
                       }`}
                     >
                       Line Height: {height}
-                    </button>
-                  ))}
+                    </button>) ) }
                 </div>
               </div>
 
@@ -527,8 +528,7 @@ interactiveElements.forEach(element:  > {;
                       }`}
                     >
                       Letter Spacing: {spacing}px
-                    </button>
-                  ))}
+                    </button>) ) }
                 </div>
               </div>
 
@@ -587,17 +587,14 @@ interactiveElements.forEach(element:  > {;
                           <div className="text-gray-300">{issue.description}</div>
                         </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-              )}
+                    </div>) ) }
+                </div>) }
 
               {issues.length === 0 && !isScanning && ("
                 <div className="text-center py-4 text-gray-400 text-sm">"
                   <CheckCircle className="w-8 h-8 mx-auto mb-2 text-green-400" />
                   No accessibility issues found
-                </div>
-              )}
+                </div>) }
             </div>
 
             {/* Actions */}"
@@ -615,8 +612,7 @@ interactiveElements.forEach(element:  > {;
                 Apply
               </button>
             </div>
-          </motion.div>
-        ) : (;
+          </motion.div>) : (;
           <motion.button
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -658,15 +654,15 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (savedSettings) {
 
       try {
-        const parsed = JSON.parse(savedSettings);
-        setSettings({ ...DEFAULT_SETTINGS, ...parsed });
-        applySettings({ ...DEFAULT_SETTINGS, ...parsed });
+        const parsed = JSON.parse (savedSettings) ;
+        setSettings ({ ...DEFAULT_SETTINGS, ...parsed }) ;
+        applySettings ({ ...DEFAULT_SETTINGS, ...parsed }) ;
       } catch (error) {
 '
         // console.warn('Failed to parse accessibility settings:', error);
       }
     }
-  }, []);
+  }, []) ;
 
   const applySettings = useCallback((newSettings: AccessibilitySettings) => {
 
@@ -723,7 +719,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 '
       document.body.classList.remove('keyboard-navigation');
     }
-  }, []);
+  }, []) ;
 
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
 
@@ -804,7 +800,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setIsOpen(false)}
+            onClick={ () => setIsOpen (false) }
           >
             <motion.div"
               className="fixed bottom-24 right-6 w-96 max-h-[80vh] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden"
@@ -812,7 +808,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}"
               transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-              onClick={(e) => e.stopPropagation()}
+              onClick={ (e) => e.stopPropagation () }
             >
               {/* Header */}"
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">"
@@ -851,9 +847,8 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                     >"
                       <Icon className="w-4 h-4" />
                       <span>{tab.label}</span>
-                    </button>
-                  );
-                })}
+                    </button>) ;
+                }) }
               </div>
 
               {/* Content */}"
@@ -916,7 +911,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                             settings.screenReader ? 'bg-cyan-500' : 'bg-gray-200 dark:bg-gray-700'`
                           }`}"
                           role="switch"
-                          aria-checked={settings.screenReader}
+                          aria - checked={settings.screenReader}
                         >
                           <span`
                             className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
@@ -957,7 +952,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                             settings.highContrast ? 'bg-cyan-500' : 'bg-gray-200 dark:bg-gray-700'`
                           }`}"
                           role="switch"
-                          aria-checked={settings.highContrast}
+                          aria - checked={settings.highContrast}
                         >
                           <span`
                             className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
@@ -988,7 +983,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                             settings.reducedMotion ? 'bg-cyan-500' : 'bg-gray-200 dark:bg-gray-700'`
                           }`}"
                           role="switch"
-                          aria-checked={settings.reducedMotion}
+                          aria - checked={settings.reducedMotion}
                         >
                           <span`
                             className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
@@ -1029,7 +1024,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                             settings.keyboardNavigation ? 'bg-cyan-500' : 'bg-gray-200 dark:bg-gray-700'`
                           }`}"
                           role="switch"
-                          aria-checked={settings.keyboardNavigation}
+                          aria - checked={settings.keyboardNavigation}
                         >
                           <span`
                             className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
@@ -1060,7 +1055,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                             settings.focusIndicator ? 'bg-cyan-500' : 'bg-gray-200 dark:bg-gray-700'`
                           }`}"
                           role="switch"
-                          aria-checked={settings.focusIndicator}
+                          aria - checked={settings.focusIndicator}
                         >
                           <span`
                             className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
@@ -1070,8 +1065,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                           />
                         </button>
                       </div>
-                    </motion.div>
-                  )}
+                    </motion.div>) }
                 </AnimatePresence>
 
                 {/* Reset Button */}"
@@ -1085,17 +1079,14 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                 </div>
               </div>
             </motion.div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
-    </>
-  );
+    </>) ;
 };
       {/* Notifications */}"
       <div className="fixed top-4 right-4 z-50 space-y-2">
         <AnimatePresence>
-          {notifications.map((notification, index) => (
-            <motion.div
+          {notifications.map ( (notification, index) => (<motion.div
               key={index}
               initial={{ opacity: 0, x: 100, scale: 0.9 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
@@ -1108,7 +1099,6 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           ))}
         </AnimatePresence>
       </div>
-    </>
-  );
+    </>) ;
 }
 '"`

@@ -162,21 +162,11 @@ export function ServicesOverview(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ duration: 0.6 }}
@@ -188,7 +178,7 @@ export function ServicesOverview(...args[]):  {
           </h1>"
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
             Discover our complete range of innovative micro SAAS services, IT solutions, and AI platforms.
-            From cutting-edge quantum computing to practical business applications, we provide the technology
+            From cutting - edge quantum computing to practical business applications, we provide the technology
             solutions your business needs to thrive in the digital age.
           </p>
         </motion.div>
@@ -204,32 +194,17 @@ export function ServicesOverview(...args[]):  {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
               whileHover={{ y: -10 }}
@@ -266,8 +241,7 @@ export function ServicesOverview(...args[]):  {
                   </div>
                 </div>
               </Link>
-            </motion.div>;
-          ))}
+            </motion.div>;) ) }
         </div>
 
         {/* Featured Services */}
@@ -278,21 +252,11 @@ export function ServicesOverview(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ duration: 0.6 }}
@@ -311,32 +275,17 @@ export function ServicesOverview(...args[]):  {
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   x: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 whileHover={{ y: -5 }}
@@ -400,8 +349,7 @@ export function ServicesOverview(...args[]):  {
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>;
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -413,21 +361,11 @@ export function ServicesOverview(...args[]):  {
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 ;
-
-
-
-
-
 
 }}
           transition={{ duration: 0.8 }}
@@ -487,7 +425,6 @@ export function ServicesOverview(...args[]):  {
           </div>;
         </motion.div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

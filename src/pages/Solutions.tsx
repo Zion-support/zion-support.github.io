@@ -16,8 +16,7 @@ const Solutions: React.FC = () => {
           <Link to="/solutions/healthcare" className="p-6 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-cyan-400 transition">Healthcare</Link>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default Solutions;
@@ -158,7 +157,7 @@ const solutionCategories = [
     ];
   };
 ];
-
+;
 const industrySolutions = [
   {
 '
@@ -245,7 +244,7 @@ const industrySolutions = [
     color: 'from-gray-500 to-slate-600';
   };
 ];
-
+;
 const featuredSolutions = [
   {
 
@@ -324,7 +323,6 @@ const featuredSolutions = [
   };
 ];
 
-export default function Solutions() {
   const industrySolutions = [
     {
 '
@@ -523,12 +521,12 @@ export default function Solutions() {
     }
   ];
 
-  const filteredSolutions = featuredSolutions.filter(solution => {;
-    const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         solution.description.toLowerCase().includes(searchTerm.toLowerCase());
+  const filteredSolutions = featuredSolutions.filter (solution => {;
+    const matchesSearch = solution.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         solution.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
     
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -541,21 +539,11 @@ export default function Solutions() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -585,16 +573,13 @@ export default function Solutions() {
                 >"
                   <industry.icon className="w-5 h-5 mr-2" />
                   {industry.name}
-                </button>
-              ))}
+                </button>) ) }
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}"
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {categories.map(category => (
-                    <option key={category} value={category}>{category}</option>
-                  ))}
+                  {categories.map (category => (<option key={category} value={category}>{category}</option>) ) }
                 </select>
               </div>
 
@@ -605,9 +590,7 @@ export default function Solutions() {
                   onChange={(e) => setSelectedIndustry(e.target.value)}"
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {industries.map(industry => (
-                    <option key={industry} value={industry}>{industry}</option>
-                  ))}
+                  {industries.map (industry => (<option key={industry} value={industry}>{industry}</option>) ) }
                 </select>
               </div>
             </div>
@@ -663,9 +646,8 @@ export default function Solutions() {
                       </div>
                     </div>
                   </Link>
-                </motion.div>
-              );
-            })}
+                </motion.div>) ;
+            }) }
           </div>
         </div>
       </section>
@@ -718,9 +700,8 @@ export default function Solutions() {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
-                </motion.div>
-              );
-            })}
+                </motion.div>) ;
+            }) }
           </div>
         </div>
       </section>
@@ -780,8 +761,7 @@ export default function Solutions() {
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
                           <CheckCircle className="w-3 h-3 text-green-400" />
                           <span>{feature}</span>
-                        </div>
-                      ))}
+                        </div>) ) }
                     </div>
                   </div>
 
@@ -793,8 +773,7 @@ export default function Solutions() {
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
                           <Star className="w-3 h-3 text-yellow-400" />
                           <span>{benefit}</span>
-                        </div>
-                      ))}
+                        </div>) ) }
                     </div>
                   </div>
 
@@ -814,9 +793,8 @@ export default function Solutions() {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
-                </motion.div>
-              );
-            })}
+                </motion.div>) ;
+            }) }
           </div>
         </div>
       </section>
@@ -865,21 +843,11 @@ export default function Solutions() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -901,32 +869,17 @@ export default function Solutions() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                   viewport={{ once: true }}"
@@ -953,9 +906,8 @@ export default function Solutions() {
                       </div>;
                     </div>;
                   </Link>;
-                </motion.div>;
-              );
-            })}
+                </motion.div>;) ;
+            }) }
           </div>
         </div>
       </section>
@@ -969,21 +921,11 @@ export default function Solutions() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -1005,32 +947,17 @@ export default function Solutions() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                   viewport={{ once: true }}"
@@ -1057,9 +984,8 @@ export default function Solutions() {
                       <ArrowRight className="ml-2 h-4 w-4" />;
                     </Link>;
                   </div>;
-                </motion.div>;
-              );
-            })}
+                </motion.div>;) ;
+            }) }
           </div>
         </div>
       </section>;
@@ -1073,21 +999,11 @@ export default function Solutions() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -1109,32 +1025,17 @@ export default function Solutions() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                   viewport={{ once: true }}"
@@ -1155,8 +1056,7 @@ export default function Solutions() {
                         <div key={idx} className="flex items-center space-x-2 text-gray-300 text-sm">"
                           <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
                           <span>{feature}</span>
-                        </div>
-                      ))}
+                        </div>) ) }
                     </div>
                   </div>
 
@@ -1168,8 +1068,7 @@ export default function Solutions() {
                         <li key={idx} className="flex items-start space-x-2 text-gray-300 text-sm">"
                           <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                           <span>{benefit}</span>
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
 
@@ -1185,8 +1084,7 @@ export default function Solutions() {
                       {solution.trial && ("
                         <button className="px-4 py-2 border border-blue-600 text-blue-400 text-sm font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-300">
                           Start Trial
-                        </button>
-                      )}
+                        </button>) }
                     </div>
                     <Link`
                       to={`/solutions/${solution.id}`}"
@@ -1196,9 +1094,8 @@ export default function Solutions() {
                       <ArrowRight className="ml-2 h-4 w-4" />;
                     </Link>;
                   </div>;
-                </motion.div>;
-              );
-            })}
+                </motion.div>;) ;
+            }) }
           </div>
         </motion.div>
 
@@ -1211,21 +1108,11 @@ export default function Solutions() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -1261,11 +1148,9 @@ export default function Solutions() {
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }
       </div>
-    </>
-  );
+    </>) ;
 }
 '"`

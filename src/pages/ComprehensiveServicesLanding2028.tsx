@@ -2,6 +2,10 @@ import React, { useState } from 'react.ts';'
 import { motion  } from 'framer-motion.ts';'
 import { Link  } from 'react-router-dom.ts';
 import { Brain, 
+import { motion  } from 'framer - motion.ts';
+import { revolutionaryMicroSaasServices2028, 
+
+
   Cloud, 
   Shield, 
   Rocket, 
@@ -92,14 +96,14 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       'from-teal-600 to-blue-600',;'
       'from-pink-600 to-red-600';
     ];
-    return colors[Math.abs(category.length) % colors.length]};
+    return colors[Math.abs (category.length) % colors.length]};
 
   const nextTestimonial = () => {;
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    setCurrentTestimonial ( (prev) => (prev + 1) % testimonials.length) ;
   };
 
   const prevTestimonial = () => {;
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentTestimonial ( (prev) => (prev - 1 + testimonials.length) % testimonials.length) ;
   };
 
   return ("
@@ -121,21 +125,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -152,21 +146,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -191,21 +175,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -252,21 +226,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -302,21 +266,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -337,21 +291,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -414,8 +358,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                   {service.tags.slice(0, 3).map((tag, tagIndex) => ("
                     <Badge key={tagIndex} variant="outline" className="text-xs border-zion-cyan/30 text-zion-cyan">
                       {tag}
-                    </Badge>
-                  ))}
+                    </Badge>) ) }
                 </div>
 
                 <Button"
@@ -424,8 +367,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
                   View Details
                 </Button>;
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
 
           <motion.div 
@@ -434,21 +376,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -485,21 +417,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -519,21 +441,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   x: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.5 }}"
@@ -582,8 +494,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 '
                       index === currentTestimonial ? 'bg-zion-cyan' : 'bg-white/30'`
                     }`}
-                  />
-                ))}
+                  />) ) }
               </div>
 
               <Button"
@@ -608,21 +519,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -641,21 +542,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -686,21 +577,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -731,21 +612,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -776,21 +647,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -821,21 +682,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -866,21 +717,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -917,21 +758,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   scale: 0.9 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
             exit = {
@@ -979,8 +810,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                       <li key={index} className="flex items-center gap-2 text-zion-slate-light">"
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                         {feature}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
 "
                   <h3 className="text-lg font-semibold text-white mb-3">Benefits</h3>"
@@ -989,8 +819,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                       <li key={index} className="flex items-center gap-2 text-zion-slate-light">"
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                         {benefit}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>
 
@@ -1037,8 +866,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                       {selectedService.targetAudience.map((audience, index) => ("
                         <Badge key={index} variant="secondary" className="bg-zion-cyan/20 text-zion-cyan">
                           {audience}
-                        </Badge>
-                      ))}
+                        </Badge>) ) }
                     </div>
                   </div>
 
@@ -1049,11 +877,9 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                         {selectedService.integrations.map((integration, index) => ("
                           <Badge key={index} variant="outline" className="border-zion-cyan/30 text-zion-cyan">
                             {integration}
-                          </Badge>
-                        ))}
+                          </Badge>) ) }
                       </div>
-                    </div>
-                  )}
+                    </div>) }
                 </div>
               </div>
 "
@@ -1067,8 +893,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               </div>
             </div>
           </motion.div>;
-        </div>
-      )}
+        </div>) }
 
       {/* Contact Section */}"
       <section id="contact-section" className="py-20 bg-white/5 backdrop-blur-sm">"
@@ -1079,21 +904,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -1112,21 +927,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -1161,21 +966,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -1210,21 +1005,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -1258,21 +1043,11 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition = {
@@ -1298,7 +1073,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

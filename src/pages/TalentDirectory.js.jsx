@@ -1,3 +1,4 @@
+import { Search, MapPin, Briefcase, Star } from 'lucide - react';
 import React from 'react';
 import { SEO } from "@/components/SEO";'
 import { Search, MapPin, Briefcase, Star } from 'lucide-react';
@@ -125,7 +126,7 @@ const TalentDirectory = () => {
   delay: 0.2 
 
 }}>
-            Connect with world-class technology professionals and experts in AI, cloud computing, 
+            Connect with world - class technology professionals and experts in AI, cloud computing, 
             cybersecurity, and more. Find the perfect talent for your next project.
           </motion.p>
           <motion.div initial = {
@@ -161,7 +162,7 @@ const TalentDirectory = () => {
                 ? 'bg-violet-600 text-white''`
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>
                 {category}
-              </button>))}
+              </button>) ) }
           </div>
         </div>
       </section>
@@ -230,7 +231,7 @@ const TalentDirectory = () => {
                   <div className="flex flex-wrap gap-2">"
                     {talent.skills.map((skill, skillIndex) => (<span key={skillIndex} className="px-3 py-1 bg-violet-100 text-violet-700 text-xs rounded-full font-medium">
                         {skill}
-                      </span>))}
+                      </span>) ) }
                   </div>
                 </div>
 
@@ -238,7 +239,7 @@ const TalentDirectory = () => {
                 <button className="w-full bg-gradient-to-r from-violet-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">'
                   Connect with {talent.name.split(' ')[0]}
                 </button>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>

@@ -148,8 +148,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {
                 <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />"
                 <p className="text-gray-200">{b}</p>
               </div>
-            </div>
-          ))}
+            </div>) ) }
         </div>
       </section>
 "
@@ -237,8 +236,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 };
 
 export default ServicesAdvertising;

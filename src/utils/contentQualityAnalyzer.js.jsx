@@ -1,3 +1,4 @@
+import React from 'react';
 export class ContentQualityAnalyzer {
   static instance;
   analyzedPages = new Map();

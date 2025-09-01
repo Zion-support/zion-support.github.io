@@ -369,7 +369,7 @@ export default function AISupplyChainOptimization() {
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {keyMetrics.map((metric, index) => (
+            {keyMetrics.map((metric, index (
               <motion.div
                 key={metric.metric}
                 initial={{ opacity: 0, y: 20 }}
@@ -412,7 +412,7 @@ export default function AISupplyChainOptimization() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map(feature: unknown, index: unknown (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -465,7 +465,7 @@ export default function AISupplyChainOptimization() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {optimizationAreas.map((category, index) => (
+            {optimizationAreas.map(category: unknown, index: unknown 
               <motion.div
                 key={category.category}
                 initial={{ opacity: 0, y: 20 }}
@@ -514,7 +514,7 @@ export default function AISupplyChainOptimization() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -568,7 +568,7 @@ export default function AISupplyChainOptimization() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -651,7 +651,7 @@ export default function AISupplyChainOptimization() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
@@ -705,7 +705,7 @@ export default function AISupplyChainOptimization() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {integrations.map((integration, index) => (
+            {integrations.map(integration: unknown, index: unknown 
               <motion.div
                 key={integration.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -718,7 +718,7 @@ export default function AISupplyChainOptimization() {
                   {integration.name}
                 </h3>"
                 <div className="flex flex-wrap gap-2">
-                  {integration.platforms.map((platform, platformIndex) => (
+                  {integration.platforms.map((platform, platformIndex (
                     <span
                       key={platformIndex}"
                       className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"

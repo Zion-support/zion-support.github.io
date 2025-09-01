@@ -202,10 +202,10 @@ export const FuturisticNavigation: React.FC = () => {;'
 
   };
   const toggleDropdown = (dropdown: string) => {;
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+    setActiveDropdown (activeDropdown === dropdown ? null : dropdown) ;
   };
-  const toggleDropdown = (dropdown: string)  => {;
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
+  const toggleDropdown = (dropdown: string) => {;
+    setActiveDropdown (activeDropdown === dropdown ? null : dropdown) };
   // Enhanced service categories with better organization
   const serviceCategories = [
     {
@@ -295,21 +295,11 @@ export const FuturisticNavigation: React.FC = () => {;'
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.5 }}
@@ -339,32 +329,17 @@ export const FuturisticNavigation: React.FC = () => {;'
   { opacity: 0,
   y: -20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.5,
   delay: 0.1 
-
-
-
-
-
 
 }}
               >
@@ -382,32 +357,17 @@ export const FuturisticNavigation: React.FC = () => {;'
   { opacity: 0,
   y: -20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.5,
   delay: 0.15 
-
-
-
-
-
 
 }}
               >
@@ -428,32 +388,17 @@ export const FuturisticNavigation: React.FC = () => {;'
   { opacity: 0,
   y: -20 
 
-
-
-
-
-
 }}
                     animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                     transition = {
 
   { duration: 0.5,
   delay: (index + 2) * 0.1 
-
-
-
-
-
 
 }}
                     onClick={() => toggleDropdown(category.name)}`
@@ -473,17 +418,12 @@ export const FuturisticNavigation: React.FC = () => {;'
                   </motion.button>
                   {/* Enhanced Dropdown Menu */}
                   <AnimatePresence>
-                    {activeDropdown === category.name && (;
+                    {activeDropdown === category.name && ;
                       <motion.div
                         initial = {
 
   { opacity: 0, y: -10,
   scale: 0.95 
-
-
-
-
-
 
 }}
                         animate = {
@@ -491,21 +431,11 @@ export const FuturisticNavigation: React.FC = () => {;'
   { opacity: 1, y: 0,
   scale: 1 
 
-
-
-
-
-
 }}
                         exit = {
 
   { opacity: 0, y: -10,
   scale: 0.95 
-
-
-
-
-
 
 }}
                         transition={{ duration: 0.2 }}"
@@ -525,32 +455,17 @@ export const FuturisticNavigation: React.FC = () => {;'
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }}
                                 animate = {
 
   { opacity: 1,
   x: 0 
 
-
-
-
-
-
 }}
                                 transition = {
 
   { duration: 0.3,
   delay: subIndex * 0.05 
-
-
-
-
-
 
 }}
                               >
@@ -567,15 +482,12 @@ export const FuturisticNavigation: React.FC = () => {;'
                                     </h4>
                                   </div>
                                 </Link>
-                              </motion.div>;
-                            ))}
+                              </motion.div>;) ) }
                           </div>
                         </div>;
-                      </motion.div>
-                    )}
+                      </motion.div>) }
                   </AnimatePresence>
-                </div>
-              ))}
+                </div>) ) }
             </nav>
             {/* Right side actions */}"
             <div className="flex items-center space-x-4">;

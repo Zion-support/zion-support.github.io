@@ -1,7 +1,7 @@
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { Helmet } from 'react-helmet-async';
-
+;
 const ITInfrastructure = () => {
   const features = [
     {
@@ -336,6 +336,7 @@ const ITInfrastructure = () => {
     </>
   );
 };
-
+;
+export { ITInfrastructure };
 export default ITInfrastructure;
 '"

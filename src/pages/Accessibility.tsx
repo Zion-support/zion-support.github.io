@@ -243,8 +243,7 @@ const Accessibility: React.FC = () => {
                   >
                     {standard.status}
                   </span>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>
@@ -290,11 +289,9 @@ const Accessibility: React.FC = () => {
                         className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded"
                       >
                         {example}
-                      </span>
-                    ))}
+                      </span>) ) }
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>
@@ -309,7 +306,7 @@ const Accessibility: React.FC = () => {
               transition={{ duration: 0.6 }}"
               className="text-3xl font-bold text-white mb-12 text-center"
             >
-              Built-in Accessibility Tools
+              Built - in Accessibility Tools
             </motion.h2>
 "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -336,8 +333,7 @@ const Accessibility: React.FC = () => {
                       {tool.shortcut}
                     </span>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>
@@ -381,8 +377,7 @@ const Accessibility: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>
@@ -424,8 +419,7 @@ const Accessibility: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>) ;
 };
 
 export default Accessibility;

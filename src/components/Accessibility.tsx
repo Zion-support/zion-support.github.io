@@ -15,6 +15,7 @@ import {
   Moon,
   Settings
 interface AccessibilitySettings {
+
   fontSize: number;
   highContrast: boolean;
   reducedMotion: boolean;
@@ -30,7 +31,7 @@ export function Accessibility() {
     reducedMotion: false,
     soundEnabled: true,'
     theme: 'auto'
-  });
+  }) ;
 
   useEffect(() => {
     // Load settings from localStorage'
@@ -42,7 +43,7 @@ export function Accessibility() {
       applySettings(parsed);
 
     // Add keyboard shortcuts
-    const handleKeyDown = (e: KeyboardEvent) => {;
+    const handleKeyDown = useCallback ( (e: KeyboardEvent) => {;
       if (e.ctrlKey) {;
         switch (e.key) {;'
           case '=':;'
@@ -55,10 +56,9 @@ export function Accessibility() {
             decreaseFontSize();
             break;'
           case '0':;
-            e.preventDefault();
-            resetSettings();
+            e.preventDefault () ;
+            resetSettings () ;
             break;
-
 
     };
 '
@@ -66,7 +66,7 @@ export function Accessibility() {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const applySettings = (newSettings: AccessibilitySettings) => {;
+  const applySettings = (...args: unknown[]): unknown => {;
     const root = document.documentElement;
 
     // Apply font size
@@ -113,11 +113,6 @@ export function Accessibility() {
   ;
   [key]: value ;
 
-
-
-
-
-
 };
     setSettings(newSettings);
     applySettings(newSettings);'
@@ -136,7 +131,7 @@ export function Accessibility() {
 
   };
 
-  const resetSettings = () => {
+  const resetSettings = (...args: unknown[]): unknown => {
     const defaultSettings: AccessibilitySettings = {
 
   fontSize: 16,
@@ -149,11 +144,6 @@ export function Accessibility() {
   ;'
   theme: 'auto';
     ;
-
-
-
-
-
 
 };
     setSettings(defaultSettings);
@@ -175,17 +165,11 @@ export function Accessibility() {
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-        {isOpen && (
-          <motion.div
+        {isOpen && (<motion.div
             initial = {
 
   { opacity: 0,
   x: -400 
-
-
-
-
-
 
 }}
             animate = {
@@ -193,21 +177,11 @@ export function Accessibility() {
   { opacity: 1,
   x: 0 
 
-
-
-
-
-
 }}
             exit = {
 
   { opacity: 0,
   x: -400 
-
-
-
-
-
 
 }}
             transition = {
@@ -439,8 +413,7 @@ export function Accessibility() {
                 Reset to Defaults;
               </button>;
             </div>;
-          </motion.div>;
-        )};
+          </motion.div>;) };
       </AnimatePresence>;
     </>
   );

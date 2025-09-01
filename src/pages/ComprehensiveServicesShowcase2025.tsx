@@ -80,6 +80,7 @@ import {
 import { SEO } from '@/components/SEO';
 
 interface Service {
+
   id: string;
   name: string;
   description: string;
@@ -91,13 +92,14 @@ interface Service {
     starter: string;
     professional: string;
     enterprise: string;
-  };
+  
+};
   benefits: string[];
   useCases: string[];
   link: string;'
   status: 'available' | 'coming-soon' | 'beta';
 }
-
+;
 const services: Service[] = [
   // AI Services
   {
@@ -468,7 +470,7 @@ export default function ComprehensiveServicesShowcase2025() {
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   const handleServiceClick = (service: Service) => {
 
@@ -476,7 +478,7 @@ export default function ComprehensiveServicesShowcase2025() {
   };
 
   const closeModal = () => {
-    setSelectedService(null);
+    setSelectedService (null) ;
   };
 
   return()
@@ -707,8 +709,7 @@ export default function ComprehensiveServicesShowcase2025() {
                     {service.features.length > 3 && ("
                       <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded">
                         +{service.features.length - 3} more
-                      </span>
-                    )}
+                      </span>) }
                   </div>
                 </div>
 
@@ -726,8 +727,7 @@ export default function ComprehensiveServicesShowcase2025() {
                   </span>"
                   <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform duration-300" />
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
 
           {filteredServices.length === 0 && ("
@@ -737,8 +737,7 @@ export default function ComprehensiveServicesShowcase2025() {
               <p className="text-zion-slate-light">
                 Try adjusting your search or filter criteria.
               </p>
-            </div>
-          )}
+            </div>) }
         </div>
       </section>
 
@@ -765,7 +764,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 href="tel:+13024640950""
                 className="border-2 border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
-                Call +1 302 464 0950
+                Call + 1 302 464 0950
               </a>
             </div>
           </div>
@@ -774,8 +773,7 @@ export default function ComprehensiveServicesShowcase2025() {
 
       {/* Service Detail Modal */}
       <AnimatePresence>
-        {selectedService && (
-          <motion.div
+        {selectedService && (<motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}"
@@ -890,10 +888,8 @@ export default function ComprehensiveServicesShowcase2025() {
                 </Link>
               </div>
             </motion.div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
-    </div>
-  );
+    </div>) ;
 }
 '"`

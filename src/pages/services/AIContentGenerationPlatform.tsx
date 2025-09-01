@@ -24,7 +24,8 @@ import {
   Target,
   Award'
  } from 'lucide-react';
-
+;
+export { function };
 export default function AIContentGenerationPlatform(...args[]):  {
 
   const features = [
@@ -378,7 +379,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index 
               <motion.div
                 key={index}
                 initial = {
@@ -476,7 +477,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial = {
@@ -577,7 +578,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -668,7 +669,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </motion.div>
 "
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-4">
-            {technologies.map((tech, index)  => (
+            {technologies.map(tech: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {
@@ -754,7 +755,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index)  => (
+            {pricing.map(plan: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial = {

@@ -1,4 +1,6 @@
 import React, { useEffect, useCallback, useState } from 'react.ts';
+export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({ 
+
 
 interface BundleAnalyzerProps extends React.PropsWithChildren<{}> {
 
@@ -14,6 +16,7 @@ largestChunk: {
     name: string;
     size: number;
   
+
 };
   averageChunkSize: number;
   gzipSavings: number;
@@ -32,9 +35,9 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     largestChunk: { name: '', size: 0 },
     averageChunkSize: 0,
     gzipSavings: 0
-  });
+  }) ;
 
-  const analyzeBundle = useCallback(() => {
+  const analyzeBundle = useCallback ( () => {
     if (!enabled) return;
 
     try {
@@ -60,7 +63,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
             largestChunk = { name: entry.name, size };
           }
         }
-      });
+      }) ;
 
       const averageChunkSize = chunkCount > 0 ? totalSize / chunkCount : 0;
       const gzipSavings = totalSize * 0.7; // Estimate 70% savings with gzip
@@ -72,7 +75,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
         largestChunk,
         averageChunkSize,
         gzipSavings
-      });
+      }) ;
 
       // Log performance insights'
       console.group('🚀 Bundle Analysis');
@@ -96,14 +99,14 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
         // console.warn('⚠️ Largest chunk is too big. Consider splitting it further.');
       }
       
-      console.groupEnd();
+      console.groupEnd () ;
     } catch (error) {
 '
       // console.error('Bundle analysis failed:', error);
     }
-  }, [enabled]);
+  }, [enabled]) ;
 
-  const optimizeBundle = useCallback(() => {
+  const optimizeBundle = useCallback ( () => {
     if (!enabled) return;
 
     // Implement bundle optimization strategies
@@ -135,22 +138,22 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     });
 
     return optimizations;
-  }, [enabled, metrics]);
+  }, [enabled, metrics]) ;
 
   useEffect(() => {
     if (!enabled) return;
 
     // Analyze bundle after page load
-    const timer = setTimeout(analyzeBundle, 2000);
+    const timer = setTimeout (analyzeBundle, 2000) ;
     
-    return () => clearTimeout(timer);
-  }, [enabled, analyzeBundle]);
+    return () => clearTimeout (timer) ;
+  }, [enabled, analyzeBundle]) ;
 
-  useEffect(() => {
+  useEffect ( () => {
     if (!enabled) return;
 
     // Run optimization analysis
-    const optimizations = optimizeBundle();
+    const optimizations = optimizeBundle () ;
     
     if (optimizations && optimizations.length > 0) {
 '

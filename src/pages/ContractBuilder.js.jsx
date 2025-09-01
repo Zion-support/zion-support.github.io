@@ -11,11 +11,6 @@ function ContractBuilderPage() {
         <main className="container mx-auto py-10 px-4">
           <ContractBuilderContent />
         </main>
-        
-        
-      </>
-    </ProtectedRoute>)}
-export default ContractBuilderPage;
 
 export default ContractBuilderPage;
 export default ContractBuilderPage;'"

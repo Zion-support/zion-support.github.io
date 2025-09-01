@@ -1,4 +1,4 @@
-// Real, market-competitive micro SAAS services and IT solutions
+// Real, market-competitive micro SAAS services and IT solutions;
 export const EXPANDED_SERVICES = [
     // AI & Machine Learning Services
     {
@@ -500,7 +500,7 @@ export const EXPANDED_SERVICES = [
         aiScore: 94
 
 ];
-// Service categories for filtering
+// Service categories for filtering;
 export const EXPANDED_SERVICE_CATEGORIES = [
     { label: 'AI Development', value: 'ai-development' },'
     { label: 'Cloud Services', value: 'cloud-services' },'
@@ -515,6 +515,6 @@ export const EXPANDED_SERVICE_CATEGORIES = [
     { label: 'Business Automation', value: 'business-automation' },'
     { label: 'Business Solutions', value: 'business-solutions' }
 ];
-// Service subcategories for detailed filtering
+// Service subcategories for detailed filtering;
 export const EXPANDED_SERVICE_SUBCATEGORIES = {
 '"

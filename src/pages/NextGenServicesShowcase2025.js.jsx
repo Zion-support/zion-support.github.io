@@ -226,7 +226,7 @@ export default function NextGenServicesShowcase2025() {
                     {service.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">"
                         <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
                         {feature}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
 "
@@ -236,7 +236,7 @@ export default function NextGenServicesShowcase2025() {
                     {service.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-gray-300">"
                         <TrendingUp className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0"/>
                         {benefit}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
 "
@@ -255,7 +255,7 @@ export default function NextGenServicesShowcase2025() {
                     </Link>
                   </div>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -312,7 +312,7 @@ export default function NextGenServicesShowcase2025() {
                     {service.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300 text-sm">"
                         <CheckCircle className="h-3 w-3 text-green-400 mr-2 flex-shrink-0"/>
                         {feature}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
 "
@@ -325,7 +325,7 @@ export default function NextGenServicesShowcase2025() {
                     Get Started
                   </Link>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -382,7 +382,7 @@ export default function NextGenServicesShowcase2025() {
                     {service.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300 text-sm">"
                         <Shield className="h-3 w-3 text-purple-400 mr-2 flex-shrink-0"/>
                         {feature}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
 "
@@ -395,7 +395,7 @@ export default function NextGenServicesShowcase2025() {
                     Learn More
                   </Link>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>

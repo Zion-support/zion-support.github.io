@@ -117,9 +117,9 @@ export default function AgenticRagHelpdesk() {
                   {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-slate-300">"
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"/>
                       {benefit}
-                    </li>))}
+                    </li>) ) }
                 </ul>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -149,9 +149,9 @@ export default function AgenticRagHelpdesk() {
                   {useCase.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-slate-300">"
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"/>
                       {benefit}
-                    </li>))}
+                    </li>) ) }
                 </ul>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>

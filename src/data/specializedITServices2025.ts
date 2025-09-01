@@ -21,7 +21,8 @@ contactInfo: {
 
     phone: string;
     email: string;
-    website: string};
+    website: string
+};
   technicalSpecs?: {
 
     technology: string[];
@@ -31,7 +32,7 @@ contactInfo: {
     security: string[]};
   competitors?: string[];
   marketSize?: string}
-
+;
 export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
   // Zero Trust Network Architecture
   {

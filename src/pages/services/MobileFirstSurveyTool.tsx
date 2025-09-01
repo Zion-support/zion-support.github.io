@@ -1,5 +1,5 @@
 import React from 'react.ts';
-
+;
 const MobileFirstSurveyTool: React.FC = (): JSX.Element => {
 
   return()

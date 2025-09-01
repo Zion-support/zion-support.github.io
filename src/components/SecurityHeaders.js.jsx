@@ -130,7 +130,6 @@ export function SecurityHeaders({ className }) {
               </div>
             ))}
           </div>
-        </div>
 
         {/* Security Metrics */}"
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">"
@@ -148,7 +147,6 @@ export function SecurityHeaders({ className }) {
             <div className="text-4xl font-bold text-zion-cyan mb-2">24/7</div>"
             <div className="text-zion-slate-light">Security Monitoring</div>
           </div>
-        </div>
 
         {/* Trust Indicators */}"
         <div className="text-center">"
@@ -169,6 +167,15 @@ export function SecurityHeaders({ className }) {
             of security
           </p>
         </div>
+      </section>) ;
+  }
+  // Compact version for smaller spaces
+  return (<div
+      className={`flex flex - wrap justify - center gap - 6 ${className || ''}`}
+    >
+      <div className="flex items - center gap - 2 text - zion - cyan text - sm">
+        <Shield className="w - 4 h - 4" />
+        <span > SOC 2 Certified</span>
       </div>
     </section>
   );

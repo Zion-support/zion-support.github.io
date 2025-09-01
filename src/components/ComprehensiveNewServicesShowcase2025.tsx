@@ -63,7 +63,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
       if (sortBy === 'price-low') return parseFloat(a.pricing.monthly.replace(/[^0-9]/g, '')) - parseFloat(b.pricing.monthly.replace(/[^0-9]/g, ''));'
       if (sortBy === 'price-high') return parseFloat(b.pricing.monthly.replace(/[^0-9]/g, '')) - parseFloat(a.pricing.monthly.replace(/[^0-9]/g, ''));
       return 0;
-    });
+    }) ;
 
   const getCategoryIcon = (category: anystring)  => {
 
@@ -138,8 +138,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
                 >"
                   <category.icon className="w-4 h-4" />
                   <span>{category.name}</span>
-                </button>
-              ))}
+                </button>) ) }
             </div>
 
             {/* Sort */}
@@ -221,8 +220,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
                   {service.features.length > 3 && ("
                     <div className="text-xs text-gray-500">
                       +{service.features.length - 3} more features
-                    </div>
-                  )}
+                    </div>) }
                 </div>
               </div>
 
@@ -234,8 +232,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
                     <div key={benefitIndex} className="flex items-center space-x-2 text-xs text-gray-300">"
                       <TrendingUp className="w-3 h-3 text-green-400 flex-shrink-0" />
                       <span>{benefit}</span>
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
               </div>
 
@@ -287,8 +284,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
                   Contact Sales
                 </a>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
 
         {/* Contact Information Section */}
@@ -415,8 +411,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 
 export default ComprehensiveNewServicesShowcase2025;'"`

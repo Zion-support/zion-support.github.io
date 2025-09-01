@@ -52,7 +52,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
       filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel);
 
     return filtered;
-  }, [searchTerm, selectedCategory, selectedInnovationLevel]);
+  }, [searchTerm, selectedCategory, selectedInnovationLevel]) ;
   const getCategoryIcon = (category: string) => {;
     switch (category) {;'"
       case 'Quantum Computing': return <Cpu className="w-5 h-5" />;'"
@@ -72,7 +72,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
       case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';'
       default: return 'bg-gray-600';
     }
-    return `$${price.toLocaleString()}`;
+    return `$${price.toLocaleString () }`;
   };
 
   return()
@@ -153,8 +153,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
                   {categories.map(category => (;"
                     <option key={category} value={category} className="bg-zinc-800 text-white">'
                       {category === 'all' ? 'All Categories' : category}
-                    </option>
-                  ))}
+                    </option>) ) }
                 </select>
                 {/* Innovation Level Filter */}
                 <select
@@ -165,8 +164,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
                   {innovationLevels.map(level => (;"
                     <option key={level} value={level} className="bg-zinc-800 text-white">'
                       {level === 'all' ? 'All Innovation Levels' : level}
-                    </option>
-                  ))}
+                    </option>) ) }
                 </select>
               </div>
             </div>
@@ -184,21 +182,11 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                   transition = {
@@ -219,8 +207,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
                   <span className="bg-white/20 px-2 py-1 rounded-full text-sm">
                     {category.count}
                   </span>
-                </motion.button>
-              ))}
+                </motion.button>) ) }
             </div>
             {filteredServices.length === 0 && (;"
               <div className="text-center py-12">;"
@@ -235,8 +222,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;'
                 >
                   Clear Filters
                 </button>
-              </div>
-            )}
+              </div>) }
           </div>
         </section>
         {/* Contact CTA Section */}"

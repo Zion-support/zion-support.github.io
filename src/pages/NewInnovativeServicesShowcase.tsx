@@ -171,8 +171,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                     Proven Results
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -342,8 +341,7 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>

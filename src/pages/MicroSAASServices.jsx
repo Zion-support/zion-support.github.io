@@ -1,3 +1,5 @@
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, CheckCircle, Star, TrendingUp, Zap, Users } from "lucide - react";
+import { Link } from "react - router - dom";
 import React, { useState } from 'react';
 import { TrustedBySection } from "@/components/TrustedBySection";"
 import { Button } from "@/components/ui/button";"
@@ -17,12 +19,6 @@ const categoryIcons = {
     'HealthTech': Heart,'
     'E-commerce': ShoppingCart,'
   'EdTech': GraduationCap
-
-
-
-
-
-
 
 };
 const benefits = [

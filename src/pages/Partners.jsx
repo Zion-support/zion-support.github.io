@@ -190,11 +190,9 @@ export default function Partners() {
                     >"
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {benefit}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
-              </div>
-            ))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -259,8 +257,7 @@ export default function Partners() {
                     Learn More
                   </button>
                 </div>
-              </div>
-            ))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -341,7 +338,6 @@ export default function Partners() {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 }
 '"

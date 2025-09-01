@@ -49,12 +49,10 @@ export function StatsSection(...args: any[]): any {
               <div className="text-sm text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {stat.description}
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </div>
-    </section>
-  );
+    </section>) ;
 }
 
 export default StatsSection;

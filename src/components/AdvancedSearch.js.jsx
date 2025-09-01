@@ -19,7 +19,7 @@ export function AdvancedSearch() {
     const [showSuggestions, setShowSuggestions] = useState(false);
     const searchRef = useRef(null);'
     const categories = ['AI & ML', 'DevOps', 'Mobile', 'Web3', 'Data Science', 'Security', 'Frontend', 'Backend'];
-    useEffect(() => {
+    useEffect ( () => {
         const handleClickOutside = (event) => {
 
             if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -55,7 +55,7 @@ export function AdvancedSearch() {
             ? prev.filter(f => f !== category)
             [...prev, category])};
     const clearFilters = () => {
-        setSelectedFilters([])};
+        setSelectedFilters ([]) };
     const getSuggestionIcon = (type) => {
 
         switch (type) {
@@ -98,7 +98,7 @@ export function AdvancedSearch() {
             <h3 className="text-sm font-medium text-zion-slate">Filter by Category</h3>"
             {selectedFilters.length > 0 && (<button onClick={clearFilters} className="text-xs text-zion-cyan hover:text-zion-cyan-light transition-colors">
                 Clear All
-              </button>)}
+              </button>) }
           </div>
           "
           <div className="flex flex-wrap gap-2">
@@ -106,9 +106,9 @@ export function AdvancedSearch() {
                     ? 'bg-zion-cyan text-white border-zion-cyan''`
                     : 'bg-transparent text-zion-slate border-zion-slate-light hover:border-zion-cyan hover:text-zion-cyan'}`}>
                 {category}
-              </button>))}
+              </button>) ) }
           </div>
-        </div>)}
+        </div>) }
 
       {/* Search Suggestions */}"
       {showSuggestions && suggestions.length > 0 && (<div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50 max-h-96 overflow-y-auto">"
@@ -142,7 +142,7 @@ export function AdvancedSearch() {
               AI-powered suggestions based on your query
             </div>
           </div>
-        </div>)}
+        </div>) }
 
       {/* No Results */}"
       {showSuggestions && query.trim() && suggestions.length === 0 && (<div className="absolute top-full left-0 right-0 mt-2 p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50 text-center">"

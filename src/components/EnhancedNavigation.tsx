@@ -2,6 +2,9 @@ import React, { useState, useEffect, useCallback } from 'react.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';'
 import { Link, useLocation  } from 'react-router-dom.ts';
 import { Menu, 
+import { motion, AnimatePresence  } from 'framer - motion.ts';
+
+
   X, 
   ChevronDown, 
   Search, 
@@ -34,6 +37,7 @@ interface NavigationItem {
   icon?: React.ReactNode;
   children?: NavigationItem[];
   featured?: boolean;
+
 
 }
 
@@ -202,9 +206,9 @@ className:  '',;
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
-  useEffect(() => {
+  useEffect ( () => {
     const handleScroll = () => {;
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled (window.scrollY > 10) ;
     };
 '
     window.addEventListener('scroll', handleScroll);'
@@ -240,7 +244,7 @@ className:  '',;
   };
 
   const closeDropdown = () => {
-    setActiveDropdown(null);
+    setActiveDropdown (null) ;
   };
 
   const contactInfo = {
@@ -290,23 +294,15 @@ className:  '',;
                     className="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   >
                     {item.label}
-                  </Link>
-                )}
+                  </Link>) }
 
                 {/* Dropdown Menu */}
-                {item.children && (
-                  <AnimatePresence>
-                    {activeDropdown === item.label && (
-                      <motion.div
+                {item.children && (<AnimatePresence>
+                    {activeDropdown === item.label && (<motion.div
                         initial = {
 
   { opacity: 0,
   y: -10 
-
-
-
-
-
 
 }}
                         animate = {
@@ -314,21 +310,11 @@ className:  '',;
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                         exit = {
 
   { opacity: 0,
   y: -10 
-
-
-
-
-
 
 }}
                         transition={{ duration: 0.2 }}"
@@ -352,12 +338,9 @@ className:  '',;
                             </Link>
                           ))}
                         </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                )}
-              </div>
-            ))}
+                      </motion.div>) }
+                  </AnimatePresence>) }
+              </div>) ) }
           </div>
 
           {/* Right Side Actions */}"
@@ -452,16 +435,14 @@ className:  '',;
                                 }`} />
                               </button>
                               
-                              {activeDropdown === item.label && (
-                                <motion.div
+                              {activeDropdown === item.label && (<motion.div
                                   initial={{ opacity: 0, y: -10 }}
                                   animate={{ opacity: 1, y: 0 }}
                                   exit={{ opacity: 0, y: -10 }}
                                   transition={{ duration: 0.2 }}"
                                   className="ml-4 mt-2 space-y-2 border-l border-slate-700/50 pl-4"
                                 >
-                                  {item.children.map((child) => (
-                                    <Link
+                                  {item.children.map ( (child) => (<Link
                                       key={child.href}
                                       to={child.href}"
                                       className="block text-slate-400 hover:text-white px-3 py-2 rounded-md text-sm transition-colors duration-200 flex items-center space-x-2"
@@ -479,10 +460,8 @@ className:  '',;
                               className="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
                             >
                               {item.label}
-                            </Link>
-                          )}
-                        </div>
-                      ))}
+                            </Link>) }
+                        </div>) ) }
 
               {/* Mobile Actions */}"
               <div className="pt-4 border-t border-slate-700/50 space-y-3">"
@@ -507,8 +486,7 @@ className:  '',;
                 </Link>
               </div>
             </div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
     </nav>
   );

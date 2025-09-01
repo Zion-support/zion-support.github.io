@@ -47,7 +47,7 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
     const [isVisible, setIsVisible] = useState(true);
     const styles = notificationStyles[type];
     const Icon = styles.icon;
-    useEffect(() => {
+    useEffect ( () => {
         if (duration > 0) {
 
             const timer = setTimeout(() => {

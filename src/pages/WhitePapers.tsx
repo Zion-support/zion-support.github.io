@@ -223,7 +223,7 @@ export default function WhitePapers() {
 
       return whitePapers.length;
     }
-    return whitePapers.filter(paper => paper.category === categoryId).length;
+    return whitePapers.filter (paper => paper.category === categoryId) .length;
   };
 
   // Update counts
@@ -245,7 +245,7 @@ export default function WhitePapers() {
       activeCategory === 'all' || paper.category === activeCategory;
 
     return matchesSearch && matchesCategory;
-  });
+  }) ;
 
   const formatDate = (dateString: string) => {
 '
@@ -265,7 +265,7 @@ export default function WhitePapers() {
 '
       return (downloads / 1000).toFixed(1) + 'K';
     }
-    return downloads.toString();
+    return downloads.toString () ;
   };
 
   return ("
@@ -325,8 +325,7 @@ export default function WhitePapers() {
                     <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
                       {category.count}
                     </span>
-                  </button>
-                ))}
+                  </button>) ) }
               </div>
 
               {/* Sort Options */}"
@@ -340,8 +339,7 @@ export default function WhitePapers() {
                   {sortOptions.map(option => (
                     <option key={option.value} value={option.value}>
                       {option.label}
-                    </option>
-                  ))}
+                    </option>) ) }
                 </select>
               </div>
             </div>
@@ -385,8 +383,7 @@ export default function WhitePapers() {
                   <span className="ml-1 px-2 py-1 bg-slate-600 rounded-full text-xs">
                     {category.count}
                   </span>
-                </motion.button>
-              ))}
+                </motion.button>) ) }
             </div>
           </div>
         </div>
@@ -418,8 +415,7 @@ export default function WhitePapers() {
                   Read More"
                   <ArrowRight className="w-4 h-4" />
                 </a>
-              </div>
-            ))}
+              </div>) ) }
           </div>
         </div>
       </div>
@@ -472,8 +468,7 @@ export default function WhitePapers() {
                         className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
                       >
                         {tag}
-                      </span>
-                    ))}
+                      </span>) ) }
                   </div>
 "
                   <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">"
@@ -522,8 +517,7 @@ export default function WhitePapers() {
               <p className="text-zion-slate-light">
                 Try adjusting your search terms or browse all categories
               </p>
-            </div>
-          )}
+            </div>) }
         </div>
       </div>
 
@@ -547,7 +541,6 @@ export default function WhitePapers() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 '"`

@@ -18,7 +18,6 @@ import {
   Gauge,'
   HelpCircle} from 'lucide-react';
 
-export function ServicesShowcase() {
   const services = [
     {
 
@@ -206,8 +205,7 @@ export function ServicesShowcase() {
           viewport={{ once: true, margin: '-50px' }}"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
-          {services.map((service, index) => (
-            <motion.div
+          {services.map ( (service, index) => (<motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}"
@@ -246,8 +244,7 @@ export function ServicesShowcase() {
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                 </div>
               </Link>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </motion.div>
 
         {/* CTA Section */}
@@ -271,7 +268,6 @@ export function ServicesShowcase() {
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>) ;
 }
 '"`

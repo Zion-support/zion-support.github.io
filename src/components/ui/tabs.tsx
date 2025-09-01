@@ -4,6 +4,10 @@ interface TabsContextType {
   activeTab: string;
   setActiveTab: (tab: string)  => void}
 
+  activeTab: string;
+  setActiveTab: tab: string void
+}
+;
 const TabsContext = createContext<TabsContextType | null>(null);
 
 interface TabsProps extends React.PropsWithChildren<{}> {
@@ -11,7 +15,7 @@ interface TabsProps extends React.PropsWithChildren<{}> {
   children: ReactNode;
   defaultValue?: string;
   value?: string;
-  onValueChange?: (value: string)  => void;
+  onValueChange?: value: string void;
   className?: string}
 '
 export function Tabs({ children, defaultValue, value, onValueChange, className = '' }: TabsProps) {;'
@@ -53,7 +57,7 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
   className?: string}
 
       } ${className}`};
-      onClick={() => context.setActiveTab(value)};
+      onClick={: unknown context.setActiveTab(value)};
     >;
       {children};
     </button>;

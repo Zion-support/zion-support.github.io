@@ -124,6 +124,7 @@ if (typeof window !== 'null') {
                 window.gc()}
         }
     }
+  }
 }
 export default PerformanceOptimizer;
 '"

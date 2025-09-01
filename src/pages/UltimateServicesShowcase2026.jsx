@@ -143,13 +143,14 @@ const UltimateServicesShowcase2026 = () => {
             <h3 className="text-2xl font-bold mb-4 text-cyan-400">Contact Zion Tech Group</h3>"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div>
-                <strong>Mobile:</strong> +1 302 464 0950
+                <strong > Mobile:</strong> +1 302 464 0950
               </div>
               <div>
-                <strong>Email:</strong> kleber@ziontechgroup.com
+                <strong > Email:</strong > kleber@ziontechgroup.com
               </div>
               <div>
-                <strong>Address:</strong> 364 E Main St STE 1008 Middletown DE 19709
+                <strong > Address:</strong > 364 E Main St STE 1008 Middletown DE
+                19709
               </div>
             </div>"
             <div className="mt-4">"
@@ -186,7 +187,7 @@ const UltimateServicesShowcase2026 = () => {
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400">"
                 {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">'
                     {category === 'all' ? 'All Categories' : category}
-                  </option>))}
+                  </option>) ) }
               </select>
             </div>
 
@@ -234,7 +235,7 @@ const UltimateServicesShowcase2026 = () => {
                     <div className="text-4xl">{service.icon}</div>"
                     {service.popular && (<span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
                         Popular
-                      </span>)}
+                      </span>) }
                   </div>
 
                   {/* Service Info */}"
@@ -265,7 +266,7 @@ const UltimateServicesShowcase2026 = () => {
                       {service.features.slice(0, 3).map((feature, idx) => (<li key={idx} className="flex items-center gap-2">"
                           <span className="text-cyan-400">✓</span>
                           {feature}
-                        </li>))}
+                        </li>) ) }
                     </ul>
                   </div>
 
@@ -307,7 +308,7 @@ const UltimateServicesShowcase2026 = () => {
                     </span>
                   </div>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </motion.div>
 
           {/* No Results */}"
@@ -392,8 +393,7 @@ const UltimateServicesShowcase2026 = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 };
 
 export default UltimateServicesShowcase2026;'"

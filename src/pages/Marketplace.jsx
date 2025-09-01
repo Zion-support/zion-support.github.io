@@ -15,8 +15,8 @@ export default function Marketplace() {
   const [view, setView] = useState('grid');
 
   // Sample data for demonstration
-  useEffect(() => {
-    setListings([
+  useEffect ( () => {
+    setListings ([
       {
 
         id: 1,'
@@ -89,7 +89,7 @@ export default function Marketplace() {
       return false;
     }
     return true;
-  });
+  }) ;
 
   return()
     <main className="flex-grow container mx-auto px-4 py-8">"
@@ -208,12 +208,9 @@ export default function Marketplace() {
                 >
                   Clear Filters
                 </Button>
-              </div>
-            )}
-          </div>
-        )}
+              </div>) }
+          </div>) }
       </div>
-    </main>
-  );
+    </main>) ;
 }
 '"`

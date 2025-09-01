@@ -247,7 +247,7 @@ export default function Pricing() {
                     </Link>
                   </Button>
                 </CardFooter>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </div>
@@ -283,11 +283,11 @@ export default function Pricing() {
                         {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="text-sm text-zion-cyan/70 flex items-center gap-2">"
                             <Check className="h-3 w-3 text-zion-purple"/>
                             {feature}
-                          </li>))}
+                          </li>) ) }
                       </ul>
-                    </div>))}
+                    </div>) ) }
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </div>
@@ -391,7 +391,7 @@ export default function Pricing() {
               <CardContent>"
                 <p className="text-zion-cyan/80">
                   All plans include email support. Professional and Business plans include priority support, 
-                  while Enterprise plans include 24/7 dedicated support.
+                  while Enterprise plans include 24 / 7 dedicated support.
                 </p>
               </CardContent>
             </Card>

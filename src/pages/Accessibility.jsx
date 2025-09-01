@@ -16,7 +16,6 @@ import {
   Shield,'
   Heart} from 'lucide-react';
 
-export default function Accessibility() {
   const accessibilityFeatures = [
     {
 
@@ -238,8 +237,7 @@ export default function Accessibility() {
                     </li>
                   ))}
                 </ul>
-              </div>
-            ))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -313,8 +311,7 @@ export default function Accessibility() {
                   Learn More"
                   <Info className="w-4 h-4 ml-1" />
                 </a>
-              </div>
-            ))}
+              </div>) ) }
           </div>
         </div>
       </section>
@@ -391,8 +388,7 @@ export default function Accessibility() {
                       </span>
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>) ) }
             </div>
           </div>
         </div>

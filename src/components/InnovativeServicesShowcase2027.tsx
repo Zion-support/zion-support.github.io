@@ -47,11 +47,10 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
   const [expandedService, setExpandedService] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
+  useEffect ( () => {
+    const observer = new IntersectionObserver (; ([entry]) => {;
         if (entry.isIntersecting) {;
-          setIsVisible(true);
+          setIsVisible (true) ;
         }
       },
       { threshold: 0.1 }
@@ -66,10 +65,10 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
 '
   const filteredServices = selectedCategory === 'All'
     ? innovativeServices2027
-    : getServicesByCategory(selectedCategory);
+    : getServicesByCategory (selectedCategory) ;
 
   const toggleServiceExpansion = (serviceId: string) => {;
-    setExpandedService(expandedService === serviceId ? null : serviceId);
+    setExpandedService (expandedService === serviceId ? null : serviceId) ;
   };
 
   const contactInfo = {
@@ -82,11 +81,6 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
   ;'
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
-
-
-
-
-
 
 };
 
@@ -107,21 +101,11 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
           animate = {
 
   isVisible ? { opacity: 1,
   y: 0 
-
-
-
-
-
 
 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}"
@@ -153,21 +137,11 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   isVisible ? { opacity: 1,
   y: 0 
-
-
-
-
-
 
 } : { opacity: 0, y: 20 }}
           transition = {
@@ -195,7 +169,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
             >;
               All Categories;
             </button>;
-            {serviceCategories2027.map((category) => {;
+            {serviceCategories2027.map ( (category) => {;
               const Icon = categoryIcons[category];
               return()
                 <button
@@ -210,9 +184,8 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
                 >;"
                   {Icon && <Icon className="w-4 h-4" />};
                   {category};
-                </button>;
-              );
-            })}
+                </button>;) ;
+            }) }
           </div>
         </motion.div>
 
@@ -223,21 +196,11 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           animate = {
 
   isVisible ? { opacity: 1,;
   y: 0 ;
-
-
-
-
-
 
 } : { opacity: 0, y: 30 }}
           transition = {
@@ -253,7 +216,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
 }}"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {filteredServices.map((service, index)  => (;
+          {filteredServices.map ( (service, index) => (;
             <motion.div
               key={service.id}
               initial = {
@@ -261,21 +224,11 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   isVisible ? { opacity: 1,
   y: 0 
-
-
-
-
-
 
 } : { opacity: 0, y: 20 }}
               transition = {
@@ -317,8 +270,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
                   {service.technology.length > 3 && ("
                     <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full border border-zion-purple/30">
                       +{service.technology.length - 3} more
-                    </span>
-                  )}
+                    </span>) }
                 </div>
 
                 {/* Key Metrics */}"
@@ -347,17 +299,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
 
                 {/* Expanded Service Details */}
                 <AnimatePresence>
-                  {expandedService === service.id && (;
+                  {expandedService === service.id && ;
                     <motion.div
                       initial = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                       animate = {
@@ -365,21 +312,11 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
   { opacity: 1,'
   height: 'auto' 
 
-
-
-
-
-
 }}
                       exit = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                       transition={{ duration: 0.3 }}"
@@ -394,8 +331,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
                               <li key={featureIndex} className="text-gray-300 text-sm flex items-start gap-2">"
                                 <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
                                 {feature}
-                              </li>
-                            ))}
+                              </li>) ) }
                           </ul>
                         </div>
 
@@ -407,8 +343,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
                               <li key={benefitIndex} className="text-gray-300 text-sm flex items-start gap-2">"
                                 <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0"></div>
                                 {benefit}
-                              </li>
-                            ))}
+                              </li>) ) }
                           </ul>
                         </div>
 
@@ -436,12 +371,10 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
                           {service.external && <ExternalLink className="w-4 h-4" />}
                         </a>
                       </div>;
-                    </motion.div>
-                  )}
+                    </motion.div>) }
                 </AnimatePresence>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </motion.div>
 
         {/* Contact Section */}
@@ -451,21 +384,11 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           animate = {
 
   isVisible ? { opacity: 1,;
   y: 0 ;
-
-
-
-
-
 
 } : { opacity: 0, y: 30 }}
           transition = {
@@ -526,7 +449,6 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;'
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 };
 '"`

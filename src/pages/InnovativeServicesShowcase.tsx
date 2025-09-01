@@ -1,5 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../data/innovativeServices2025";
+export default InnovativeServicesShowcase;}}}}}
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../data / innovativeServices2025";
+
 
 const InnovativeServicesShowcase: React.FC = () => {;'
   const [searchTerm, setSearchTerm] = useState('');'
@@ -44,7 +46,7 @@ const InnovativeServicesShowcase: React.FC = () => {;'
     if (priceRange !== 'all') {;'
       const [min, max] = priceRange.split('-').map(Number);'
       if (priceRange = == '3000+') {;
-        filtered = filtered.filter(service => service.price >= 3000);
+        filtered = filtered.filter (service => service.price >= 3000) ;
       } else {
 
         filtered = filtered.filter(service => service.price >= min && service.price <= max);
@@ -64,10 +66,10 @@ const InnovativeServicesShowcase: React.FC = () => {;'
         filtered.sort((a, b) => a.price - b.price);
         break;'
       case 'launchDate':
-        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
+        filtered.sort ( (a, b) => new Date (b.launchDate) .getTime () - new Date (a.launchDate) .getTime () ) ;
         break}
 
-    return filtered}, [searchTerm, selectedCategory, priceRange, sortBy]);
+    return filtered}, [searchTerm, selectedCategory, priceRange, sortBy]) ;
 
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => ("
     <div className = "bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">"
@@ -96,8 +98,7 @@ const InnovativeServicesShowcase: React.FC = () => {;'
             <li key={index} className="flex items-center">"
               <span className="text-green-500 mr-2">✓</span>
               {feature}
-            </li>
-          ))}
+            </li>) ) }
         </ul>
       </div>
 "
@@ -108,8 +109,7 @@ const InnovativeServicesShowcase: React.FC = () => {;'
             <li key={index} className="flex items-center">"
               <span className="text-blue-500 mr-2">→</span>
               {benefit}
-            </li>
-          ))}
+            </li>) ) }
         </ul>
       </div>
 "
@@ -119,8 +119,7 @@ const InnovativeServicesShowcase: React.FC = () => {;'
           {service.technology.map((tech, index) => ("
             <span key={index} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
               {tech}
-            </span>
-          ))}
+            </span>) ) }
         </div>
       </div>
 "
@@ -139,8 +138,7 @@ const InnovativeServicesShowcase: React.FC = () => {;'
           </button>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 
   return ("
     <div className = "min-h-screen bg-gray-50">
@@ -213,8 +211,7 @@ const InnovativeServicesShowcase: React.FC = () => {;'
                 {categories.map(category  => (
                   <option key={category} value={category}>'
                     {category === 'all' ? 'All Categories' : category}
-                  </option>
-                ))}
+                  </option>) ) }
               </select>
             </div>
 
@@ -225,9 +222,7 @@ const InnovativeServicesShowcase: React.FC = () => {;'
                 onChange={(e) => setPriceRange(e.target.value)}"
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
               >
-                {priceRanges.map(range  => (
-                  <option key={range.value} value={range.value}>{range.label}</option>
-                ))}
+                {priceRanges.map (range  => (<option key={range.value} value={range.value}>{range.label}</option>) ) }
               </select>
             </div>
 
@@ -238,9 +233,7 @@ const InnovativeServicesShowcase: React.FC = () => {;'
                 onChange={(e) => setSortBy(e.target.value)}"
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
               >
-                {sortOptions.map(option  => (
-                  <option key={option.value} value={option.value}>{option.label}</option>
-                ))}
+                {sortOptions.map (option  => (<option key={option.value} value={option.value}>{option.label}</option>) ) }
               </select>
             </div>
           </div>
@@ -286,8 +279,7 @@ const InnovativeServicesShowcase: React.FC = () => {;'
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default InnovativeServicesShowcase;}}}}}'"

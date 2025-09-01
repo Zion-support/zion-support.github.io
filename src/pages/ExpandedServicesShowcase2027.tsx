@@ -67,8 +67,8 @@ import {
   type ExpandedService2027'
 } from '@/data/expandedInnovativeServices2027';
 
-      services = searchExpandedServices(searchQuery)};
-    setFilteredServices(services)}, [selectedCategory, searchQuery]);
+      services = searchExpandedServices (searchQuery) };
+    setFilteredServices (services) }, [selectedCategory, searchQuery]) ;
 
         return Rocket}
   };
@@ -80,12 +80,12 @@ import {
     if (pricing.model === 'Transaction Fees + Governance') {;'
       return 'Free + Transaction Fees';
 
-    return `$${pricing.basePrice.toLocaleString()}/month`;
+    return `$${pricing.basePrice.toLocaleString () }/month`;
   };
 
   const renderServiceCard = (service: ExpandedService2027) => {;
-    const CategoryIcon = getCategoryIcon(service.category);
-    const categoryColor = getCategoryColor(service.category);
+    const CategoryIcon = getCategoryIcon (service.category) ;
+    const categoryColor = getCategoryColor (service.category) ;
 
     return()
       <motion.div
@@ -95,25 +95,15 @@ import {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
         animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
         transition={{ duration: 0.5 }}
-        className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-slate-700 overflow-hidden"
+        className="bg - white dark:bg - slate - 800 rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 border border - gray - 200 dark:border - slate - 700 overflow - hidden"
 
         {/* Header */}`
         <div className={`bg-gradient-to-r ${categoryColor} p-6 text-white`}>"
@@ -174,35 +164,23 @@ import {
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
 '`
                   {expandedService === service.id ? 'Show less' : `+${service.features.length - 3} more features`}
-                </button>
-              )}
+                </button>) }
             </div>
           </div>
 
           {/* Expanded Features */}
           <AnimatePresence>
-            {expandedService === service.id && (
-              <motion.div
+            {expandedService === service.id && (<motion.div
                 initial = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                 animate = {
 
   { opacity: 1,'
   height: 'auto' 
-
-
-
-
-
 
 }}
                 exit = {
@@ -226,8 +204,7 @@ import {
                     </div>
                   ))}
                 </div>
-              </motion.div>;
-            )}
+              </motion.div>;) }
           </AnimatePresence>
 
           {/* Benefits */}"
@@ -240,8 +217,7 @@ import {
                   <span className="text-xs text-gray-600 dark:text-gray-300 line-clamp-2">
                     {benefit}
                   </span>
-                </div>
-              ))}
+                </div>) ) }
             </div>
           </div>
 
@@ -285,7 +261,7 @@ import {
                 service.status === 'beta' ? 'bg-yellow-100 text-yellow-800' :'
                 'bg-gray-100 text-gray-800'`
               }`}>
-                {service.status.toUpperCase()}
+                {service.status.toUpperCase () }
               </span>
             </div>
 "
@@ -309,13 +285,12 @@ import {
             </div>;
           </div>;
         </div>;
-      </motion.div>;
-    );
+      </motion.div>;) ;
   };
 
   const renderServiceList = (service: ExpandedService2027) => {;
-    const CategoryIcon = getCategoryIcon(service.category);
-    const categoryColor = getCategoryColor(service.category);
+    const CategoryIcon = getCategoryIcon (service.category) ;
+    const categoryColor = getCategoryColor (service.category) ;
 
     return()
       <motion.div
@@ -325,21 +300,11 @@ import {
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }}
         animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
         transition={{ duration: 0.5 }}"
@@ -391,7 +356,7 @@ import {
                   service.status === 'beta' ? 'bg-yellow-100 text-yellow-800' :'
                   'bg-gray-100 text-gray-800'`
                 }`}>
-                  {service.status.toUpperCase()}
+                  {service.status.toUpperCase () }
                 </span>
               </div>
             </div>
@@ -417,8 +382,7 @@ import {
             </div>;
           </div>;
         </div>;
-      </motion.div>;
-    );
+      </motion.div>;) ;
   };
 
   return ("
@@ -439,21 +403,11 @@ import {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.8 }}"
@@ -470,21 +424,11 @@ import {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -501,7 +445,7 @@ import {
               className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
             >
               Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services.
-              From quantum cybersecurity to healthcare AI, explore cutting-edge solutions that drive innovation and growth.
+              From quantum cybersecurity to healthcare AI, explore cutting - edge solutions that drive innovation and growth.
             </motion.p>
 
             {/* Contact Info */}
@@ -511,21 +455,11 @@ import {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -596,11 +530,9 @@ import {
                 onChange={(e) => setSelectedCategory(e.target.value)}"
                 className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
-                {EXPANDED_SERVICE_CATEGORIES.map((category)  => (
-                  <option key={category} value={category}>
+                {EXPANDED_SERVICE_CATEGORIES.map ( (category) => (<option key={category} value={category}>
                     {category}
-                  </option>
-                ))}
+                  </option>) ) }
               </select>
 
               {/* View Mode Toggle */}"
@@ -655,8 +587,7 @@ import {
             <p className="text-gray-600 dark:text-gray-300">
               Try adjusting your search criteria or category filter
             </p>
-          </div>
-        )}
+          </div>) }
       </div>
 
       {/* CTA Section */}"
@@ -687,8 +618,7 @@ import {
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default ExpandedServicesShowcase2027;}}}}}'"`

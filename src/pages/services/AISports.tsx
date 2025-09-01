@@ -1,3 +1,4 @@
+import React from 'react';
 import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AISports() {
   const features = [
     'AI-powered performance analysis and optimization','
@@ -93,7 +94,7 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
                   <div className="text-lg font-semibold mb-1">{t.name}</div>"
                   <div className="text-2xl font-bold text-green-600 mb-2">{t.price}</div>"
                   <ul className="text-sm text-gray-600 space-y-1">
-                    {t.details.map((d) => (<li key={d}>{d}</li>))}
+                    {t.details.map((d (<li key={d}>{d}</li>))}
                   </ul>
                 </div>
               ))}

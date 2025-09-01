@@ -52,7 +52,7 @@ const contactMethods = [
     action: null,'
     color: 'from-orange-500 to-red-500'},
 ];
-
+;
 const socialLinks = [
   {
 '
@@ -85,7 +85,7 @@ const socialLinks = [
     url: 'https://github.com/ziontechgroup','
     color: 'hover:text-gray-400'},
 ];
-
+;
 const contactFormFields = [
   {
 '
@@ -168,10 +168,10 @@ export default function Contact() {
     setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise (resolve => setTimeout (resolve, 2000) ) ;
 
-    setIsSubmitting(false);
-    setSubmitSuccess(true);
+    setIsSubmitting (false) ;
+    setSubmitSuccess (true) ;
 
     // Reset form after 3 seconds
     setTimeout(() => {
@@ -312,8 +312,7 @@ export default function Contact() {
                 we can help.
               </p>
 
-              {submitSuccess ? (
-                <motion.div
+              {submitSuccess ? (<motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}"
                   className="bg-green-500/20 border border-green-500/40 rounded-2xl p-8 text-center"
@@ -351,8 +350,7 @@ export default function Contact() {
                           placeholder={field.placeholder}"
                           className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors duration-300"
                         />
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
 "
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -377,8 +375,7 @@ export default function Contact() {
                           placeholder={field.placeholder}"
                           className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none transition-colors duration-300"
                         />
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
 "
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -451,8 +448,7 @@ export default function Contact() {
                   >'
                     {isSubmitting ? 'Sending Message...' : 'Send Message'}
                   </button>
-                </form>
-              )}
+                </form>) }
             </motion.div>
 
             {/* Comp Info */}
@@ -567,7 +563,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>) ;
 }
 '"`

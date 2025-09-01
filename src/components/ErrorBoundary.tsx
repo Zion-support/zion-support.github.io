@@ -1,4 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+export default ErrorBoundary;
+import {
 
 import {
 
@@ -11,18 +13,19 @@ import {
   ArrowLeft} from 'lucide-react';
 
 interface Props {
+
   children: ReactNode;
   fallback?: ReactNode;
 }
 
 interface State {
+
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
 
   errorId: string;
   showDetails: boolean;
-}
 
 class ErrorBoundary extends Component<Props, State> {
 
@@ -62,7 +65,7 @@ class ErrorBoundary extends Component<Props, State> {
     }
 
     // In production, you would send this to your error reporting service
-    // Example: Sentry.captureException(error, { extra: errorInfo });
+    // Example: Sentry.captureException (error, { extra: errorInfo }) ;
   }
 
   handleRetry = () => {
@@ -81,7 +84,7 @@ class ErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
-  handleReportError = () => {
+  handleReportError = : unknown {
     const { error, errorInfo, errorId } = this.state;
     const errorReport = {
 
@@ -102,10 +105,10 @@ class ErrorBoundary extends Component<Props, State> {
   };
 
   toggleDetails = () => {
-    this.setState(prev => ({ showDetails: !prev.showDetails }));
+    this.setState (prev => ({ showDetails: !prev.showDetails }) ) ;
   };
 
-  render() {
+  render () {
     if (this.state.hasError) {
 
       const { error, errorInfo, errorId, showDetails } = this.state;
@@ -210,11 +213,9 @@ class ErrorBoundary extends Component<Props, State> {
                         <pre className="text-xs text-gray-300 bg-black/30 p-3 rounded overflow-x-auto">
                           {errorInfo.componentStack}
                         </pre>
-                      </div>
-                    )}
+                      </div>) }
                   </div>
-                </div>
-              )}
+                </div>) }
 
               {/* Help Section */}"
               <div className="mt-6 p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">"

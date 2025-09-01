@@ -719,7 +719,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
       growthRate: 'Strong'},
   ];
 
-  const categories = [...new Set(newServices.map(service => service.category))];
+  const categories = [...new Set (newServices.map (service => service.category) ) ];
 
   return()
     <div className="min-h-screen py-8">"
@@ -750,8 +750,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
                   className="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 font-medium"
                 >
                   {category}
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </motion.div>
         </div>
@@ -798,8 +797,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
                           {service.popular && ("
                             <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">
                               Popular
-                            </span>
-                          )}
+                            </span>) }
                         </div>
                       </div>
                     </div>
@@ -843,8 +841,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
                       {service.features.length > 3 && ("
                         <div className="text-sm text-gray-500 text-center">
                           +{service.features.length - 3} more features
-                        </div>
-                      )}
+                        </div>) }
                     </div>
 
                     {/* Technology Stack */}"
@@ -866,8 +863,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
                         {service.technology.length > 3 && ("
                           <span className="px-2 py-1 bg-gray-700 text-gray-500 text-xs rounded border border-gray-600">
                             +{service.technology.length - 3} more
-                          </span>
-                        )}
+                          </span>) }
                       </div>
                     </div>
 
@@ -904,11 +900,9 @@ export function EnhancedNewServices2025(...args: any[]): any {
                         Contact Sales
                       </Link>
                     </div>
-                  </motion.div>
-                ))}
+                  </motion.div>) ) }
             </div>
-          </div>
-        ))}
+          </div>) ) }
 
         {/* CTA Section */}"
         <div className="text-center mt-16">
@@ -939,7 +933,7 @@ export function EnhancedNewServices2025(...args: any[]): any {
                 to="/request-quote""
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
               >
-                <span>Request a Quote</span>
+                <span > Request a Quote</span>
               </Link>
             </div>
           </motion.div>

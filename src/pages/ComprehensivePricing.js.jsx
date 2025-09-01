@@ -410,7 +410,7 @@ const ComprehensivePricing = () => {
             </TabsList>
 "
             <TabsContent value="microsaas">
-              {renderMicroSaasPricing()}
+              {renderMicroSaasPricing () }
             </TabsContent>
 "
             <TabsContent value="ai">{renderAIPricing()}</TabsContent>

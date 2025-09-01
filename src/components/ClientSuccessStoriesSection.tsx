@@ -90,21 +90,11 @@ export function ClientSuccessStoriesSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -139,7 +129,7 @@ export function ClientSuccessStoriesSection() {
 }}"
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >;
-          {successMetrics.map((metric, index)  => {;
+          {successMetrics.map ( (metric, index) => {;
             const IconComponent = metric.icon;
             return ("
               <div key = {metric.label} className="text-center">"
@@ -169,21 +159,11 @@ export function ClientSuccessStoriesSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               viewport={{ once: true }}
@@ -191,11 +171,6 @@ export function ClientSuccessStoriesSection() {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
             >"
@@ -261,8 +236,7 @@ export function ClientSuccessStoriesSection() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
 
         {/* Success Metrics */}
@@ -273,21 +247,11 @@ export function ClientSuccessStoriesSection() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -295,11 +259,6 @@ export function ClientSuccessStoriesSection() {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}
         >"
@@ -336,21 +295,11 @@ export function ClientSuccessStoriesSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           viewport={{ once: true }}
@@ -358,11 +307,6 @@ export function ClientSuccessStoriesSection() {
 
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
 
 }}
         >"
@@ -387,16 +331,14 @@ export function ClientSuccessStoriesSection() {
           </div>
         </motion.div>
       </div>;
-    </section>;
-  )};
+    </section>;) };
 
 export default ClientSuccessStoriesSection;"
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
       </div>;
-    </section>;
-  );
+    </section>;) ;
 }
 
 export default ClientSuccessStoriesSection;

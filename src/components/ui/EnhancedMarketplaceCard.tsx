@@ -1,9 +1,15 @@
 import React from 'react';
 
 interface EnhancedMarketplaceCardProps {
+  // Add your props here
+
+
   title: string;
   description: string;
   className?: string;
+;
+const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = { 
+  title: unknown, description: unknown, className = "" ;
 
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
 

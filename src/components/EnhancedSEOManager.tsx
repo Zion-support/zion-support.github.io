@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';'
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
+
   title: string;
   description: string;
   keywords: string[];
@@ -11,6 +12,8 @@ interface SEOData {
   structuredData?: object;
 
 interface EnhancedSEOManagerProps {
+  // Add your props here
+
   seoData: SEOData;
   children: React.ReactNode;
 
@@ -18,7 +21,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 
   useEffect(() => {
     // Update meta tags dynamically
-    const updateMetaTags = () => {;
+    const updateMetaTags = (...args: unknown[]): unknown => {;
       // Update title;
       document.title = seoData.title;
 
@@ -100,11 +103,11 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
           script.setAttribute('type', 'application/ld+json');
           document.head.appendChild(script);
         }
-        script.textContent = JSON.stringify(seoData.structuredData);
+        script.textContent = JSON.stringify (seoData.structuredData) ;
       }
     };
     
-    updateMetaTags();
+    updateMetaTags () ;
     
     // Cleanup function
     return () => {
@@ -112,7 +115,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       const dynamicTags = document.querySelectorAll('meta[property^="og:"], meta[name^="twitter:"], link[rel="canonical"]');
       dynamicTags.forEach(tag => tag.remove());
     };
-  }, [seoData]);
+  }, [seoData]) ;
   
   return()
     <>

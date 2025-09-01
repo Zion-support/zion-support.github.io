@@ -404,7 +404,7 @@ export default function Solutions(...args: any[]): any {
           </motion.div>
 "
           <div className="space-y-12">
-            {solutionCategories.map((category, categoryIndex) => (
+            {solutionCategories.map(category: unknown, categoryIndex: unknown 
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 20 }}

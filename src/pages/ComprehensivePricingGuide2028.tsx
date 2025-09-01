@@ -33,10 +33,6 @@ const pricingData2028 = {
       features: ['Quantum consciousness mapping', 'Ethical boundary testing', 'Real-time monitoring'],'
       targetAudience: 'AI research institutions, Government agencies,'
   Ethics committees';
-    
-
-
-
 
 },;
     {
@@ -200,13 +196,13 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'
     else if (priceRange === 'high') matchesPrice = price > 10000;
 
     return matchesCategory && matchesPrice;
-  });
+  }) ;
 
   const calculateROI = (roi: string) => {;'
     return parseInt(roi.replace('%', ''));
   };
 
-  const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi));
+  const sortedServices = filteredServices.sort ( (a, b) => calculateROI (b.roi) - calculateROI (a.roi) ) ;
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -325,8 +321,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'
 "
                   <category.icon className="w-4 h-4" />
                   {category.name}
-                </motion.button>;
-              ))}
+                </motion.button>;) ) }
             </div>
 
             {/* Price Range Filter */}"
@@ -345,8 +340,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'
                   }`}
 
                   {range.name}
-                </motion.button>
-              ))}
+                </motion.button>) ) }
             </div>
           </div>
         </div>
@@ -364,21 +358,11 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -445,8 +429,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'
                       <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"
                         <CheckCircle className="w-4 h-4 text-zion-cyan" />
                         {feature}
-                      </div>
-                    ))}
+                      </div>) ) }
                   </div>
                 </div>
 
@@ -463,8 +446,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -579,8 +561,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default ComprehensivePricingGuide2028;

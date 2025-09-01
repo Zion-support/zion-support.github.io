@@ -50,7 +50,7 @@ export default function UpdatePassword() {
 "
             setError("No access token found. Please request a new password reset link.")}
         // Clean up auth state to prevent issues
-        cleanupAuthState()}, [location]);
+        cleanupAuthState () }, [location]) ;
     // Form submission handler
     const onSubmit = async (data) => {
 
@@ -58,7 +58,7 @@ export default function UpdatePassword() {
 "
             setError("No access token found. Please request a new password reset link.");
             return}
-        setIsLoading(true);
+        setIsLoading (true) ;
         try {
             // Set the session with the access token
             await supabase.auth.setSession({
@@ -175,7 +175,7 @@ export default function UpdatePassword() {
                       </Button>
                     </div>
                   </form>
-                </Form>)}
+                </Form>) }
             </div>
           </div>
         </div>"

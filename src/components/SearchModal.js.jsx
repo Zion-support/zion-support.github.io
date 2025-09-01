@@ -60,7 +60,7 @@ export function SearchModal({ isOpen, onClose }) {
             tags['Security', 'Cybersecurity', 'Enterprise', 'Protection'];
         }
     ];
-    useEffect(() => {
+    useEffect ( () => {
         if (isOpen && searchInputRef.current) {
 
             searchInputRef.current.focus()}
@@ -74,16 +74,16 @@ export function SearchModal({ isOpen, onClose }) {
             setResults([])}
     }, [query, activeFilter]);
     const performSearch = async () => {
-        setIsLoading(true);
+        setIsLoading (true) ;
         // Simulate API call delay
-        await new Promise(resolve => setTimeout(resolve, 300));
+        await new Promise (resolve => setTimeout (resolve, 300) ) ;
         // Filter results based on query and active filter
         const filteredResults = mockSearchResults.filter(result => {
 '
             const matchesFilter = activeFilter === 'all' || result.type === activeFilter;
-            return matchesQuery && matchesFilter});
-        setResults(filteredResults);
-        setIsLoading(false)};
+            return matchesQuery && matchesFilter}) ;
+        setResults (filteredResults) ;
+        setIsLoading (false) };
     const handleSearch = (searchQuery) => {
 
         if (searchQuery.trim()) {

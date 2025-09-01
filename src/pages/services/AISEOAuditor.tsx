@@ -83,6 +83,7 @@ const AISEOAuditor: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
+;
+export { AISEOAuditor };
 export default AISEOAuditor;
 '"

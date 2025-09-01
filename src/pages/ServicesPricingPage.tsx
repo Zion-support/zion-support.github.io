@@ -289,8 +289,7 @@ const ServicesPricingPage: React.FC = () => {
                       <li key={idx} className="flex items-center text-gray-300">"
                         <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
 
                   <button"
@@ -303,8 +302,7 @@ const ServicesPricingPage: React.FC = () => {
                   >
                     Get Started
                   </button>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>
@@ -353,11 +351,9 @@ const ServicesPricingPage: React.FC = () => {
                       >"
                         <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {service}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </section>
@@ -393,8 +389,7 @@ const ServicesPricingPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>) ;
 };
 
 export default ServicesPricingPage;

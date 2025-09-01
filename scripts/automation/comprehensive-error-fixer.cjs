@@ -1,10 +1,26 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync, spawn } = require('child_process');
+const glob = require('glob');
 
-console.log('🔧 Starting comprehensive error fixer automation...');
+class ComprehensiveErrorFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.errorReport = {
+      timestamp: new Date().toISOString(),
+      duration: 0,
+      fixesApplied: [],
+      errorsFound: [],
+      summary: {
+        totalErrors: 0,
+        fixedErrors: 0,
+        remainingErrors: 0
+      }
+    };
+    this.startTime = Date.now();
+  }
 
 // Get automation interval from environment variable (default: 30 minutes)
 const AUTOMATION_INTERVAL =
@@ -41,10 +57,42 @@ async function runComprehensiveErrorFixer() {
     // 6. Run auto-fix
     console.log('🔧 Running auto-fix...');
     try {
-      execSync('npm run lint -- --fix', { stdio: 'pipe' });
-      console.log('✅ Auto-fix completed');
+      // Step 1: Fix merge conflicts
+      await this.fixMergeConflicts();
+      
+      // Step 2: Fix TypeScript errors
+      await this.fixTypeScriptErrors();
+      
+      // Step 3: Fix ESLint errors
+      await this.fixESLintErrors();
+      
+      // Step 4: Fix import/export issues
+      await this.fixImportExportIssues();
+      
+      // Step 5: Fix file extension issues
+      await this.fixFileExtensionIssues();
+      
+      // Step 6: Fix syntax errors
+      await this.fixSyntaxErrors();
+      
+      // Step 7: Fix dependency issues
+      await this.fixDependencyIssues();
+      
+      // Step 8: Generate error report
+      await this.generateErrorReport();
+      
+      this.log('Comprehensive error fixing completed successfully!');
+      
     } catch (error) {
-      console.log('⚠️  Auto-fix had issues but continuing...');
+      this.log(`Error during automation: ${error.message}`);
+      this.errorReport.errorsFound.push({
+        type: 'automation_error',
+        message: error.message,
+        stack: error.stack
+      });
+    } finally {
+      this.errorReport.duration = Date.now() - this.startTime;
+      await this.saveErrorReport();
     }
 
     // Generate comprehensive error fixer report
@@ -69,7 +117,6 @@ async function runComprehensiveErrorFixer() {
   } catch (error) {
     console.error('❌ Comprehensive error fixer failed:', error.message);
   }
-}
 
 async function fixTypeScriptErrors() {
   let fixes = 0;
@@ -111,7 +158,7 @@ async function fixTypeScriptErrors() {
           console.log(`  ✅ Fixed TypeScript errors in ${filePath}`);
         }
       } catch (error) {
-        console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
+        this.log(`Error fixing merge conflicts in ${file}: ${error.message}`);
       }
     }
   }
@@ -152,9 +199,10 @@ async function fixJSXErrors() {
           fixes++;
           console.log(`  ✅ Fixed JSX errors in ${filePath}`);
         }
-      } catch (error) {
-        console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
       }
+    } catch (error) {
+      // TypeScript check failed, which is expected if there are errors
+      this.log('TypeScript check completed with errors (expected)');
     }
   }
 
@@ -202,7 +250,7 @@ async function fixLintingErrors() {
           console.log(`  ✅ Fixed linting errors in ${filePath}`);
         }
       } catch (error) {
-        console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
+        this.log(`Error fixing import/export in ${file}: ${error.message}`);
       }
     }
   }
@@ -279,7 +327,7 @@ async function fixUnusedImports() {
           console.log(`  ✅ Fixed unused imports in ${filePath}`);
         }
       } catch (error) {
-        console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
+        this.log(`Error fixing file extension for ${file}: ${error.message}`);
       }
     }
   }
@@ -316,7 +364,7 @@ async function fixConsoleStatements() {
           console.log(`  ✅ Fixed console statements in ${filePath}`);
         }
       } catch (error) {
-        console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
+        this.log(`Error fixing syntax in ${file}: ${error.message}`);
       }
     }
   }
@@ -343,16 +391,45 @@ async function runContinuous() {
   );
 }
 
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
+  async generateErrorReport() {
+    this.log('Generating error report...');
+    
+    try {
+      // Run final checks
+      const typeCheckResult = execSync('npx tsc --noEmit --pretty false 2>&1', { 
+        encoding: 'utf8' 
+      });
+      
+      const lintResult = execSync('npx eslint . --ext .js,.jsx,.ts,.tsx 2>&1', { 
+        encoding: 'utf8' 
+      });
+      
+      this.errorReport.summary.totalErrors = 
+        (typeCheckResult.match(/error TS\d+/g) || []).length +
+        (lintResult.match(/error/g) || []).length;
+      
+      this.errorReport.summary.fixedErrors = this.errorReport.fixesApplied.length;
+      this.errorReport.summary.remainingErrors = this.errorReport.summary.totalErrors;
+      
+    } catch (error) {
+      this.log(`Error generating report: ${error.message}`);
+    }
+  }
 
-process.on('SIGTERM', () => {
-  console.log('🛑 Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
+  async saveErrorReport() {
+    const timestamp = Date.now();
+    const reportPath = path.join(this.projectRoot, 'error-reports', `error-fixer-report-${timestamp}.json`);
+    
+    // Ensure directory exists
+    const dir = path.dirname(reportPath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    
+    fs.writeFileSync(reportPath, JSON.stringify(this.errorReport, null, 2));
+    this.log(`Error report saved to: ${reportPath}`);
+  }
+}
 
 // Start the comprehensive error fixer
 runContinuous().catch(error => {

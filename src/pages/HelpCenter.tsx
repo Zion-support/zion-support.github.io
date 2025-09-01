@@ -37,6 +37,7 @@ import {
 } from 'lucide-react';
 
 interface HelpSection {
+
   id: string;
   title: string;
   icon: unknown;
@@ -49,15 +50,18 @@ interface HelpSection {
     external?: boolean;'
     difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
     readTime: string;
-  }>;
+  
+}[];
 }
 
 interface FAQItem {
+
   question: string;
   answer: string;
   category: string;
-}
 
+}
+;
 const helpSections: HelpSection[] = [
   {
 '
@@ -305,7 +309,7 @@ const helpSections: HelpSection[] = [
     ]
   }
 ];
-
+;
 const faqData: FAQItem[] = [
   {
 '
@@ -359,12 +363,11 @@ export function HelpCenter() {
       setFilteredFAQs(faqData);
       return;
 
-    const filtered = faqData.filter(faq =>
-      faq.question.toLowerCase().includes(query.toLowerCase()) ||
-      faq.answer.toLowerCase().includes(query.toLowerCase()) ||
-      faq.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
-    );
-    setFilteredFAQs(filtered);
+    const filtered = faqData.filter (faq =>
+      faq.question.toLowerCase () .includes (query.toLowerCase () ) ||
+      faq.answer.toLowerCase () .includes (query.toLowerCase () ) ||
+      faq.tags.some (tag => tag.toLowerCase () .includes (query.toLowerCase () ) ) ) ;
+    setFilteredFAQs (filtered) ;
   };
 '
   const filteredFAQ = selectedCategory === 'All' 
@@ -438,8 +441,7 @@ export function HelpCenter() {
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </Link>;
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -472,8 +474,7 @@ export function HelpCenter() {
                     {option.action}
                   </div>
                 </Link>;
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -512,8 +513,7 @@ export function HelpCenter() {
                   }`}
 
                   {category.title}
-                </button>
-              ))}
+                </button>) ) }
             </div>
           </motion.div>
         </div>
@@ -627,16 +627,12 @@ export function HelpCenter() {
                                         {article.readTime}
                                       </span>
                                     </div>
-                                  </div>
-                                )}
-                              </motion.div>
-                            ))}
+                                  </div>) }
+                              </motion.div>) ) }
                           </div>
-                        </motion.div>
-                      )}
+                        </motion.div>) }
                     </AnimatePresence>
-                  </motion.div>
-                ))}
+                  </motion.div>) ) }
               </div>
             </motion.div>
           </div>
@@ -672,13 +668,11 @@ export function HelpCenter() {
                     </span>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 
 export default HelpCenter;

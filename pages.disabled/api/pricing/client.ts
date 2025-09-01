@@ -2,8 +2,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import type { ClientBudgetRequest } from '@/utils/api/aiPricing';
 import { generateClientBudgetSuggestion } from '@/utils/api/aiPricing';
 import { logPricingAnalytics } from '@/utils/data/pricingAnalytics';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+;
+export { async };
+export default async function handler(...args: unknown[]): unknown {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method Not Allowed' });
@@ -11,8 +12,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const body = req.body as Partial
-
-export default function ClientPage() {
+;
+export default function ClientPage(...args: unknown[]): unknown {
   return (
     <ClientBudgetRequest>;
     if (!body || !body.title || !body.category) {
@@ -24,7 +25,7 @@ export default function ClientPage() {
       category: String(body.category),
       timelineWeeks: typeof body.timelineWeeks === 'number' ? body.timelineWeeks : undefined,
       scope: body.scope ? String(body.scope) : undefined,
-      experienceLevel: body.experienceLevel as ClientBudgetRequest['experienceLevel'],
+      experienceLevel: body.experienceLevel as ClientBudgetRequest['experienceLevel']
     };
 
     const suggestion = await generateClientBudgetSuggestion(input);

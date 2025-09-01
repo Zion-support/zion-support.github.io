@@ -33,7 +33,7 @@ const FloatingActionButton = ({ className = '' }) => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="absolute bottom-16 right-0 mb-2 space-y-3"
+            className="absolute bottom - 16 right - 0 mb - 2 space - y-3"
           >
             {actionItems.map((item, index) => (
               <motion.div
@@ -97,8 +97,7 @@ const FloatingActionButton = ({ className = '' }) => {
           )}
         </AnimatePresence>
       </motion.button>
-    </div>
-  );
+    </div>) ;
 };
 
 export default FloatingActionButton;

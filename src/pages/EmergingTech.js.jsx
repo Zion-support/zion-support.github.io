@@ -279,7 +279,7 @@ const EmergingTech = () => {
                       <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">
                         {tech.name}
                       </h3>
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(tech.status)}`}>
+                      <span className={`px - 3 py - 1 rounded - full text - xs font - medium ${getStatusColor (tech.status) }`}>
                         {tech.status}
                       </span>
                     </div>
@@ -294,7 +294,7 @@ const EmergingTech = () => {
                         {tech.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">"
                             <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
                             {feature}
-                          </li>))}
+                          </li>) ) }
                       </ul>
                     </div>
                     "
@@ -304,9 +304,9 @@ const EmergingTech = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
                       </svg>
                     </Link>
-                  </motion.div>))}
+                  </motion.div>) ) }
               </div>
-            </motion.div>))}
+            </motion.div>) ) }
         </motion.div>
       </div>
 
@@ -366,7 +366,7 @@ const EmergingTech = () => {
                     <div className="bg-gradient-to-r from-purple-600 to-pink-600 h-2 rounded-full transition-all duration-1000" style={{ width: `${area.progress}%` }}></div>
                   </div>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </div>

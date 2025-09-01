@@ -6,8 +6,8 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
     const [isAnalyzing, setIsAnalyzing] = useState(false);'
     const [activeTab, setActiveTab] = useState('overview');
     // Analyze bundle size from build output
-    const analyzeBundle = useCallback(async () => {
-        setIsAnalyzing(true);
+    const analyzeBundle = useCallback (async () => {
+        setIsAnalyzing (true) ;
         try {
             // Simulate bundle analysis based on build output
             // In a real implementation, this would fetch actual bundle stats
@@ -24,12 +24,6 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                         gzipSize: 55000,'
                         type: 'vendor','
   optimization: 'good'
-                    
-
-
-
-
-
 
 },
                     {
@@ -105,7 +99,7 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
 
             setIsAnalyzing(false);
 
-            setAnalysis(mockAnalysis)}
+            setAnalysis (mockAnalysis) }
         catch (error) {
 '
             // console.error('Bundle analysis failed:', error)}
@@ -155,8 +149,7 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
             case 'critical': return <AlertTriangle className="w-4 h-4"/>;"
             default: return <Info className="w-4 h-4"/>}
     };
-    if (!analysis)
-        return null;
+    if (!analysis) return null;
     return (<>
       {/* Bundle Analyzer Button */}"
       <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed top-4 right-4 z-50 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} aria-label="Bundle analyzer" aria-expanded={isOpen}>"
@@ -170,30 +163,15 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
   { opacity: 0, y: 20,
   scale: 0.9 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1, y: 0,
   scale: 1 
 
-
-
-
-
-
 }} exit = {
 
   { opacity: 0, y: 20,
   scale: 0.9 
-
-
-
-
-
 
 }} transition = {
 "
@@ -233,7 +211,7 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                     : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}`} aria-selected={activeTab === id} role="tab">"
                   <Icon className="w-4 h-4"/>
                   {label}
-                </button>))}
+                </button>) ) }
             </div>
 
             {/* Tab Content */}"
@@ -292,7 +270,7 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                       {isAnalyzing ? 'Analyzing...' : 'Refresh Analysis'}
                     </button>
                   </div>
-                </div>)}
+                </div>) }
 
               {/* Chunks Tab */}'"
               {activeTab === 'chunks' && (<div className="space-y-3">"
@@ -324,9 +302,9 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                             ? 'Empty chunk - consider removing''
                             : 'Consider optimization'}
                           </span>
-                        </div>)}
-                    </div>))}
-                </div>)}
+                        </div>) }
+                    </div>) ) }
+                </div>) }
 
               {/* Recommendations Tab */}'"
               {activeTab === 'recommendations' && (<div className="space-y-3">"
@@ -349,7 +327,7 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                       </div>
                     </div>
                   </div>
-                </div>)}
+                </div>) }
             </div>
 
             {/* Footer */}"
@@ -358,7 +336,7 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                 Last updated: {analysis.lastUpdated.toLocaleTimeString()}
               </div>
             </div>
-          </motion.div>)}
+          </motion.div>) }
       </AnimatePresence>
     </>)};
 '"`

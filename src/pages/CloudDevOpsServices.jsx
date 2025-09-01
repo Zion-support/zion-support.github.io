@@ -11,7 +11,7 @@ const CloudDevOpsServices = () => {
     const filteredServices = cloudDevOpsServices.filter(service => {
 '
         const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
-        return matchesSearch && matchesCategory && matchesPricing});
+        return matchesSearch && matchesCategory && matchesPricing}) ;
     const getCategoryIcon = (category) => {
 
         switch (category) {
@@ -56,13 +56,13 @@ const CloudDevOpsServices = () => {
             <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">"
               {categories.map(category => (<option key={category} value={category} className="bg-gray-800 text-white">'
                   {category === 'all' ? 'All Categories' : category}
-                </option>))}
+                </option>) ) }
             </select>
 "
             <select value={selectedPricing} onChange={(e) => setSelectedPricing(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">"
               {pricingOptions.map(pricing => (<option key={pricing} value={pricing} className="bg-gray-800 text-white">'
                   {pricing === 'all' ? 'All Pricing Tiers' : pricing}
-                </option>))}
+                </option>) ) }
             </select>
           </div>
         </div>
@@ -103,7 +103,7 @@ const CloudDevOpsServices = () => {
                 <div className="flex flex-wrap gap-2">"
                   {service.features.slice(0, 3).map((feature, index) => (<span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">
                       {feature}
-                    </span>))}
+                    </span>) ) }
                 </div>
               </div>
 "
@@ -112,7 +112,7 @@ const CloudDevOpsServices = () => {
                 <div className="flex flex-wrap gap-2">"
                   {service.targetAudience.slice(0, 2).map((audience, index) => (<span key={index} className="px-2 py-1 text-xs bg-cyan-500/20 text-cyan-300 rounded">
                       {audience}
-                    </span>))}
+                    </span>) ) }
                 </div>
               </div>
 "
@@ -124,7 +124,7 @@ const CloudDevOpsServices = () => {
                   </a>
                 </div>
               </div>
-            </div>))}
+            </div>) ) }
         </div>
 
         {/* Contact Information */}"

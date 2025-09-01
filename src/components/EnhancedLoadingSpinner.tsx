@@ -11,19 +11,20 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
   showProgress?: boolean;
   progress?: number;
 
-
 }
 
 interface EnhancedLoadingSpinnerProps {
+  // Add your props here
+
+
   enabled?: boolean;
   showProgress?: boolean;
   showEstimatedTime?: boolean;'
   size?: 'small' | 'medium' | 'large';'
   variant?: 'default' | 'futuristic' | 'minimal' | 'themed';
-  onComplete?: () => void;
+  onComplete?: : unknown void;
   autoComplete?: boolean;
   autoCompleteDelay?: number;
-}
 
 export function EnhancedLoadingSpinner({
 
@@ -43,10 +44,10 @@ export function EnhancedLoadingSpinner({
     message: 'Loading...',
     progress: 0,
     estimatedTime: 3
-  });
+  }) ;
 
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentStep, setCurrentStep] = useState(0);
+  const [isVisible, setIsVisible] = useState (true) ;
+  const [currentStep, setCurrentStep] = useState (0) ;
 
   // Size configurations
   const sizeConfig = {
@@ -67,7 +68,7 @@ export function EnhancedLoadingSpinner({
   ];
 
   // Progress simulation
-  useEffect(() => {
+  useEffect ( () => {
     if (!enabled || !showProgress) return;
 
     const interval = setInterval(() => {
@@ -85,18 +86,18 @@ export function EnhancedLoadingSpinner({
                 message: 'Ready!',
                 progress: 100,
                 estimatedTime: 0
-              });
-              setTimeout(() => {
-                setIsVisible(false);
-                onComplete?.();
-              }, 1000);
-            }, autoCompleteDelay);
+              }) ;
+              setTimeout ( () => {
+                setIsVisible (false) ;
+                onComplete?. () ;
+              }, 1000) ;
+            }, autoCompleteDelay) ;
           }
           return prev;
         }
 
-        const newProgress = Math.min(prev.progress! + Math.random() * 15, 100);
-        const newEstimatedTime = Math.max(0, prev.estimatedTime! - 0.1);
+        const newProgress = Math.min (prev.progress! + Math.random () * 15, 100) ;
+        const newEstimatedTime = Math.max (0, prev.estimatedTime! - 0.1) ;
 
         return {
 
@@ -104,11 +105,11 @@ export function EnhancedLoadingSpinner({
           progress: newProgress,
           estimatedTime: newEstimatedTime
         };
-      });
-    }, 200);
+      }) ;
+    }, 200) ;
 
-    return () => clearInterval(interval);
-  }, [enabled, showProgress, autoComplete, autoCompleteDelay, onComplete]);
+    return () => clearInterval (interval) ;
+  }, [enabled, showProgress, autoComplete, autoCompleteDelay, onComplete]) ;
 
   // Step progression for themed variant
   useEffect(() => {
@@ -124,14 +125,14 @@ export function EnhancedLoadingSpinner({
           return prev;
         }
         return prev + 1;
-      });
-    }, 1000);
+      }) ;
+    }, 1000) ;
 
-    return () => clearInterval(stepInterval);
-  }, [variant]);
+    return () => clearInterval (stepInterval) ;
+  }, [variant]) ;
 
-  // Auto-complete effect
-  useEffect(() => {
+  // Auto - complete effect
+  useEffect ( () => {
     if (autoComplete && enabled) {
 
       const timer = setTimeout(() => {
@@ -141,21 +142,21 @@ export function EnhancedLoadingSpinner({
           message: 'Loading complete!',
           progress: 100,
           estimatedTime: 0
-        });
+        }) ;
         
-        setTimeout(() => {
-          setIsVisible(false);
-          onComplete?.();
-        }, 1000);
-      }, autoCompleteDelay);
+        setTimeout ( () => {
+          setIsVisible (false) ;
+          onComplete?. () ;
+        }, 1000) ;
+      }, autoCompleteDelay) ;
 
-      return () => clearTimeout(timer);
+      return () => clearTimeout (timer) ;
     }
-  }, [autoComplete, enabled, autoCompleteDelay, onComplete]);
+  }, [autoComplete, enabled, autoCompleteDelay, onComplete]) ;
 
   if (!enabled || !isVisible) return null;
 
-  const renderSpinner = () => {
+  const renderSpinner = (...args: unknown[]): unknown => {
     switch (variant) {
 '
       case 'futuristic':
@@ -237,11 +238,10 @@ export function EnhancedLoadingSpinner({
                 transition={{ duration: 0.3 }}"
                 className="text-white text-xs font-bold"
               >
-                {loadingSteps[currentStep].icon && React.createElement(loadingSteps[currentStep].icon, { size: 16 })}
+                {loadingSteps[currentStep].icon && React.createElement (loadingSteps[currentStep].icon, { size: 16 }) }
               </motion.div>
             </motion.div>
-          </div>
-        );
+          </div>) ;
 
       default:
         return()
@@ -249,8 +249,7 @@ export function EnhancedLoadingSpinner({
             className="w-full h-full border-2 border-zion-cyan border-t-transparent rounded-full"
             animate={{ rotate: 360 }}"
             transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-          />
-        );
+          />) ;
     }
   };
 
@@ -265,11 +264,10 @@ export function EnhancedLoadingSpinner({
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -20 }}
           transition={{ duration: 0.3 }}
-          className={`text-center ${loadingSteps[currentStep].color} font-medium`}
+          className={`text - center ${loadingSteps[currentStep].color} font - medium`}
         >
           {loadingSteps[currentStep].message}
-        </motion.div>
-      );
+        </motion.div>) ;
     }
 
     return()
@@ -280,11 +278,10 @@ export function EnhancedLoadingSpinner({
         className="text-center text-zion-slate-600 dark:text-zion-slate-400 font-medium"
       >
         {loadingState.message}
-      </motion.div>
-    );
+      </motion.div>) ;
   };
 
-  const renderProgress = () => {
+  const renderProgress = (...args: unknown[]): unknown => {
     if (!showProgress || loadingState.progress === undefined) return null;
 
     return ("
@@ -301,11 +298,10 @@ export function EnhancedLoadingSpinner({
             transition={{ duration: 0.3, ease: "easeOut" }}
           />
         </div>
-      </div>
-    );
+      </div>) ;
   };
 
-  const renderEstimatedTime = () => {
+  const renderEstimatedTime = (...args: unknown[]): unknown => {
     if (!showEstimatedTime || loadingState.estimatedTime === undefined) return null;
 
     return()
@@ -334,10 +330,6 @@ export function EnhancedLoadingSpinner({
     const config = iconConfig[loadingState.type];
     if (!config) return null;
 
-
-
-
-
 };
   };
 };
@@ -355,11 +347,6 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
   lg: 'w-16 h-16';
   ;
 
-
-
-
-
-
 };
 
   const textSizes = {
@@ -372,11 +359,6 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
   ;'
   lg: 'text-lg';
   ;
-
-
-
-
-
 
 };
 
@@ -429,9 +411,9 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
             aria-label="Loading content""
             aria-live="polite"
           >
-            {renderSpinner()}
+            {renderSpinner () }
           </div>
-          {renderStatusIcon()}
+          {renderStatusIcon () }
         </div>
 
         {/* Loading message */}`
@@ -440,10 +422,10 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
         </div>
 
         {/* Progress bar */}
-        {renderProgress()}
+        {renderProgress () }
 
         {/* Estimated time */}
-        {renderEstimatedTime()}
+        {renderEstimatedTime () }
 
         {/* Loading steps for themed variant */}'
         {variant === 'themed' && ("
@@ -455,10 +437,8 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
 '
                   index <= currentStep ? 'bg-zion-cyan' : 'bg-zion-slate-300 dark:bg-zion-slate-600'`
                 }`}
-              />
-            ))}
-          </div>
-        )}
+              />) ) }
+          </div>) }
 
         {/* Accessibility announcement */}"
         <div className="sr-only" aria-live="polite">'`
@@ -469,12 +449,10 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
           {showProgress && loadingState.progress !== undefined && `Progress: ${Math.round(loadingState.progress)}%`}
         </div>
       </motion.div>
-    </AnimatePresence>
-  );
+    </AnimatePresence>) ;
 }
 
 // Export as ZionLoadingSpinner for backward compatibility
-export const ZionLoadingSpinner = EnhancedLoadingSpinner;
 
 export default EnhancedLoadingSpinner;
 '"`

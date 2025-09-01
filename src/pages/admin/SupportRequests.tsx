@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";"
 import { Search, Filter } from "lucide-react";"
 import SEO from "@/components/SEO";
 
-// Mock data for support requests
+// Mock data for support requests;
 const MOCK_SUPPORT_REQUESTS = [
   {
 "

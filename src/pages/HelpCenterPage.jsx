@@ -113,14 +113,14 @@ export default function HelpCenterPage() {
                       <ul className="space-y-2">"
                         {category.articles.map((article, idx) => (<li key={idx} className="text-zion-slate-light hover:text-zion-cyan transition-colors cursor-pointer">
                             • {article}
-                          </li>))}
+                          </li>) ) }
                       </ul>
                     </div>"
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80 text-zion-blue-dark">
                       Browse {category.title}
                     </Button>
                   </CardContent>
-                </Card>))}
+                </Card>) ) }
             </div>
           </section>
 
@@ -135,7 +135,7 @@ export default function HelpCenterPage() {
                   <CardContent>"
                     <p className="text-zion-slate-light">{faq.answer}</p>
                   </CardContent>
-                </Card>))}
+                </Card>) ) }
             </div>
           </section>
 

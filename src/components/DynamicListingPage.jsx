@@ -18,6 +18,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
 
 
 
+  min: 0,
+  max: 10000 
 
 }, detailBasePath = '/marketplace/listing' }) {
 
@@ -37,11 +39,11 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
             setPriceRange({ min: 0, max });
             setCurrentPriceFilter([0, max]);
 
-    }, [allListings]);
-    const [currentPriceFilter, setCurrentPriceFilter] = useState([
+    }, [allListings]) ;
+    const [currentPriceFilter, setCurrentPriceFilter] = useState ([
         0,
         initialPrice.max
-    ]);
+    ]) ;
     const handleSliderChange = (values) => {
 
         setCurrentPriceFilter([values[0], values[1]]);
@@ -86,6 +88,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                             category: listing.category,
                             image: listing.images?.[0]
 
+                }) ;
 
                 });
 
@@ -134,7 +137,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                     <SelectItem value="all" className="text-white">All Categories</SelectItem>"
                     {categoryFilters.map((filter) => (<SelectItem key={filter.value} value={filter.value} className="text-white">
                         {filter.label}
-                      </SelectItem>))}
+                      </SelectItem>) ) }
                   </SelectContent>
                 </Select>
               </div>
@@ -322,8 +325,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
 }} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
                   Clear all filters
                 </Button>
-              </div>
-            )}
+              </div>) }
 
             {totalPages > 1 && ("
               <div className="mt-8">"
@@ -376,8 +378,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                     </PaginationItem>
                   </PaginationContent>
                 </Pagination>
-              </div>
-            )}
+              </div>) }
           </div>
         </div>
       </div>

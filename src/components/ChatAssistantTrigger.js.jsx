@@ -19,8 +19,8 @@ export function ChatAssistantTrigger() {
                 body: JSON.stringify({
 "
                     messages[{ role: "user", content: message }];
-                }),;
-            });
+                }) ,;
+            }) ;
             if (!response.ok) {
 "
                 throw new Error("Failed to get response from AI assistant")}
@@ -43,7 +43,6 @@ export function ChatAssistantTrigger() {
                 name: 'AI Assistant','
                 avatarUrl: 'https://placehold.co/64x64?text=AI','
   role: 'Virtual Assistant'
-            
 
 }} onSendMessage={handleSendMessage}/>)}
     </>)}

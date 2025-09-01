@@ -240,7 +240,7 @@ export default function Careers() {
         job.location.includes('San Francisco'));
 
     return matchesSearch && matchesDepartment && matchesLocation;
-  });
+  }) ;
 
   const toggleJob = (jobId: string) => {
 
@@ -431,8 +431,7 @@ export default function Careers() {
                             >"
                               <Star className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
                               <span>{req}</span>
-                            </li>
-                          ))}
+                            </li>) ) }
                         </ul>
                       </div>
 
@@ -450,8 +449,7 @@ export default function Careers() {
                             >"
                               <Star className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
                               <span>{benefit}</span>
-                            </li>
-                          ))}
+                            </li>) ) }
                         </ul>
                       </div>
 
@@ -461,12 +459,9 @@ export default function Careers() {
                           Apply for this Position
                         </button>
                       </div>
-                    </motion.div>
-                  )}
+                    </motion.div>) }
                 </div>
-              </motion.div>
-            ))
-          )}
+              </motion.div>) ) ) }
         </motion.div>
 
         {/* Why Work With Us */}
@@ -560,8 +555,7 @@ export default function Careers() {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 
 // Missing Search component

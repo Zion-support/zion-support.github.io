@@ -39,24 +39,23 @@ export function AdvancedDataVisualization() {
     const categories = ['all', ...Array.from(new Set(data.map(item => item.category)))];'
     const filteredData = data.filter(item => selectedCategory === 'all' || item.category === selectedCategory);
     const refreshData = async () => {
-        setIsRefreshing(true);
+        setIsRefreshing (true) ;
         // Simulate data refresh
         setTimeout(() => {
             const newData = data.map(item => ({
 
                 ...item,
-                value: item.value + Math.floor(Math.random() * 100000 - 50000)
-            }));
-            setData(newData);
-            setIsRefreshing(false)}, 1000)};
-    useEffect(() => {
+                value: item.value + Math.floor (Math.random () * 100000 - 50000) }) ) ;
+            setData (newData) ;
+            setIsRefreshing (false) }, 1000) };
+    useEffect ( () => {
         if (autoRefresh) {
 
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
         // // // // // // // // console.log(`Downloading chart as ${format}`);
     };
-            return () => clearInterval(interval)}
-    }, [autoRefresh]);
+            return () => clearInterval (interval) }
+    }, [autoRefresh]) ;
     const downloadChart = (format) => {
 
         // Simulate chart download`
@@ -73,12 +72,12 @@ export function AdvancedDataVisualization() {
             case 'area':
                 return renderAreaChart();'
             case 'scatter':
-                return renderScatterChart();
+                return renderScatterChart () ;
             default:
-                return renderBarChart()}
+                return renderBarChart () }
     };
     const renderBarChart = () => {
-        const maxValue = Math.max(...filteredData.map(item => item.value));
+        const maxValue = Math.max (...filteredData.map (item => item.value) ) ;
         const colors = colorPalettes[selectedColorPalette];
         return (<div className="h-80 flex items-end justify-center gap-4 p-6">"
         {filteredData.map((item, index) => (<div key={item.id} className="flex flex-col items-center">"
@@ -91,8 +90,8 @@ export function AdvancedDataVisualization() {
               <div className="text-xs font-medium text-zion-slate">{item.name}</div>"
               <div className="text-xs text-zion-slate-light">{item.value.toLocaleString()}</div>
             </div>
-          </div>))}
-      </div>)};
+          </div>) ) }
+      </div>) };
     const renderLineChart = () => {
         const maxValue = Math.max(...filteredData.map(item => item.value));
         const colors = colorPalettes[selectedColorPalette];"
@@ -114,7 +113,7 @@ export function AdvancedDataVisualization() {
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
         </div>
-      </div>)};
+      </div>) };
     const renderPieChart = () => {
         const total = filteredData.reduce((sum, item) => sum + item.value, 0);
         const colors = colorPalettes[selectedColorPalette];"
@@ -149,7 +148,7 @@ export function AdvancedDataVisualization() {
             </div>
           </div>
         </div>
-      </div>)};
+      </div>) };
     const renderAreaChart = () => {
         const maxValue = Math.max(...filteredData.map(item => item.value));
         const colors = colorPalettes[selectedColorPalette];"
@@ -170,7 +169,7 @@ export function AdvancedDataVisualization() {
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
         </div>
-      </div>)};
+      </div>) };
     const renderScatterChart = () => {
         const maxValue = Math.max(...filteredData.map(item => item.value));
         const colors = colorPalettes[selectedColorPalette];"
@@ -181,7 +180,7 @@ export function AdvancedDataVisualization() {
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
         </div>
-      </div>)};
+      </div>) };
     if (!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-68 p-3 bg-zion-cyan hover:bg-zion-cyan-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Advanced Data Visualization">"
@@ -241,7 +240,7 @@ export function AdvancedDataVisualization() {
                         <div className="text-xs text-zion-slate-light">{type.description}</div>
                       </div>
                     </div>
-                  </button>))}
+                  </button>) ) }
               </div>
             </div>
 
@@ -251,7 +250,7 @@ export function AdvancedDataVisualization() {
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
                 {categories.map(category => (<option key={category} value={category}>'
                     {category === 'all' ? 'All Categories' : category}
-                  </option>))}
+                  </option>) ) }
               </select>
             </div>
 
@@ -265,7 +264,7 @@ export function AdvancedDataVisualization() {
                     <div className="flex gap-1">"
                       {palette.map((color, colorIndex) => (<div key={colorIndex} className="w-4 h-4 rounded" style={{ backgroundColor: color }}/>))}
                     </div>
-                  </button>))}
+                  </button>) ) }
               </div>
             </div>
 
@@ -331,7 +330,7 @@ export function AdvancedDataVisualization() {
                   </>) : (<>"
                     <RefreshCw className="w-4 h-4"/>
                     Refresh Data
-                  </>)}
+                  </>) }
               </button>
 "
               <div className="grid grid-cols-3 gap-2">'"

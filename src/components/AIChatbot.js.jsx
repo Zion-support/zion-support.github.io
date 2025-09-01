@@ -295,13 +295,13 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                           {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/>)}
                         </div>
                       </div>
-                    </motion.div>))}
-                  
+                    </motion.div>) ) }
+
                   {/* Typing Indicator */}
                   {isTyping && <TypingIndicator />}
-                  
+
                   {/* Scroll anchor */}
-                  <div ref={messagesEndRef}/>
+                  <div ref={messagesEndRef} />
                 </div>
 
                 {/* Input Area */}"
@@ -321,8 +321,8 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                     <span>{messages.length} messages</span>
                   </div>
                 </div>
-              </>)}
-          </motion.div>)}
+              </>) }
+          </motion.div>) }
       </AnimatePresence>
     </>)};
 '"`

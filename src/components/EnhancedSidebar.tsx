@@ -120,7 +120,7 @@ export const EnhancedSidebar: React.FC = () => {;'
       newExpanded.add(section)}
     setExpandedSections(newExpanded)};
 
-  const isActive = (path: string)  => location.pathname === path;
+  const isActive = (path: string) => location.pathname === path;
 
   const navigationSections = [
     {
@@ -210,21 +210,11 @@ export const EnhancedSidebar: React.FC = () => {;'
   { opacity: 0,
   y: -20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ duration: 0.5 }}
@@ -247,32 +237,17 @@ export const EnhancedSidebar: React.FC = () => {;'
   { opacity: 0,
   y: -20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
           transition = {
 
   { duration: 0.5,
   delay: 0.1 
-
-
-
-
-
 
 }}
         >"
@@ -286,32 +261,17 @@ export const EnhancedSidebar: React.FC = () => {;'
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   x: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.3,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
               >
@@ -327,8 +287,7 @@ export const EnhancedSidebar: React.FC = () => {;'
                   <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"
                   <span className="font-medium">{action.name}</span>
                 </Link>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </motion.div>
 
@@ -342,32 +301,17 @@ export const EnhancedSidebar: React.FC = () => {;'
   { opacity: 0,
   y: -20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition = {
 
   { duration: 0.5,
   delay: sectionIndex * 0.1 
-
-
-
-
-
 
 }}
             >
@@ -390,17 +334,11 @@ export const EnhancedSidebar: React.FC = () => {;'
               </button>
 
               <AnimatePresence>
-                {expandedSections.has(section.title) && (
-                  <motion.div
+                {expandedSections.has (section.title) && (<motion.div
                     initial = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                     animate = {
@@ -408,38 +346,22 @@ export const EnhancedSidebar: React.FC = () => {;'
   { opacity: 1,'
   height: 'auto' 
 
-
-
-
-
-
 }}
                     exit = {
 
   { opacity: 0,
   height: 0 
 
-
-
-
-
-
 }}
                     transition={{ duration: 0.3 }}"
                     className="ml-7 mt-2 space-y-1"
                   >
-                    {section.items.map((item) => (
-                      <Link
+                    {section.items.map ( (item) => (<Link
                         key={item.name}
                         initial = {
 
   { opacity: 0,
   x: -20 
-
-
-
-
-
 
 }}
                         animate = {
@@ -447,21 +369,11 @@ export const EnhancedSidebar: React.FC = () => {;'
   { opacity: 1,
   x: 0 
 
-
-
-
-
-
 }}
                         transition = {
 
   { duration: 0.2,
   delay: itemIndex * 0.05 
-
-
-
-
-
 
 }}
                       >"
@@ -475,8 +387,7 @@ export const EnhancedSidebar: React.FC = () => {;'
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
-          ))}
+            </div>) ) }
         </nav>
 
         {/* Contact Info */}
@@ -487,32 +398,17 @@ export const EnhancedSidebar: React.FC = () => {;'
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
           transition = {
 
   { duration: 0.5,
   delay: 0.5 
-
-
-
-
-
 
 }}
         >"
@@ -533,7 +429,6 @@ export const EnhancedSidebar: React.FC = () => {;'
           </div>;
         </motion.div>;
       </div>;
-    </aside>;
-  );
+    </aside>;) ;
 };
 '"`

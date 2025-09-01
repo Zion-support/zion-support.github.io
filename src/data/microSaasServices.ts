@@ -30,9 +30,10 @@ author: {
     name: string;
     id: string;
     avatarUrl?: string;
-    verified: boolean};
+    verified: boolean
+};
   images: string[];
-  createdAt: string}
+  createdAt: string};
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   // AI & Machine Learning Services
   {

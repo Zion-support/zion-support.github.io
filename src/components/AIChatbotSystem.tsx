@@ -42,7 +42,8 @@ metadata?: {
     confidence?: number;
     suggestions?: string[];
     relatedServices?: string[];
-    estimatedResponseTime?: number}}
+    estimatedResponseTime?: number
+}}
 
 interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
 
@@ -70,13 +71,13 @@ showHeader:  true,;
     language: 'en','
     theme: 'dark','
     responseSpeed: 'normal'
-  });
-  const [isListening, setIsListening] = useState(false);
-  const [chatHistory, setChatHistory] = useState<any>([]);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  }) ;
+  const [isListening, setIsListening] = useState (false) ;
+  const [chatHistory, setChatHistory] = useState < any> ([]) ;
+  const messagesEndRef = useRef < HTMLDivElement> (null) ;
 
   // Sample welcome message
-  useEffect(() => {
+  useEffect ( () => {
     if (isOpen && messages.length = == 0) {
 
       const welcomeMessage: ChatMessage = {
@@ -96,12 +97,10 @@ showHeader:  true,;
         ;
 ;
 
-
-
 };
       };
-      setMessages([welcomeMessage])}
-  }, [isOpen, messages.length]);
+      setMessages ([welcomeMessage]) }
+  }, [isOpen, messages.length]) ;
 
   // Auto-scroll to bottom
   useEffect(() => {
@@ -121,7 +120,7 @@ showHeader:  true,;
       };
     ];
 
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+    const randomResponse = responses[Math.floor (Math.random () * responses.length) ];
 
     const botMessage: ChatMessage = {
 
@@ -138,28 +137,24 @@ showHeader:  true,;
         relatedServices: randomResponse.relatedServices,;
   ;
   ;
-  estimatedResponseTime: 1 + Math.random() * 2;
+  estimatedResponseTime: 1 + Math.random () * 2;
       ;
 ;
-
-
-
-
 
 };
     };
 
-    setMessages(prev => [...prev, botMessage]);
-    setIsTyping(false);
+    setMessages (prev => [...prev, botMessage]) ;
+    setIsTyping (false) ;
   };
 
   // Handle message submission
-      setMessages(prev = > [...prev, fileMessage])};
+      setMessages (prev = > [...prev, fileMessage]) };
   };
 
   // Handle suggestion click
-  const handleSuggestionClick = (suggestion: string) => {;
-    setInputValue(suggestion);
+  const handleSuggestionClick = useCallback ( (suggestion: string) => {;
+    setInputValue (suggestion) ;
   };
 
   // Rate response'
@@ -168,14 +163,13 @@ showHeader:  true,;
     setMessages(prev => prev.map(msg =>
       msg.id === messageId
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }
-        : msg
-    ));
+        : msg) ) ;
   };
 
   // Clear chat
   const clearChat = () => {;
-    setMessages([]);
-    setChatHistory([])};
+    setMessages ([]) ;
+    setChatHistory ([]) };
 
   return()
     <>
@@ -192,17 +186,11 @@ showHeader:  true,;
 
       {/* Chat Window */}
       <AnimatePresence>
-        {isOpen && (
-          <motion.div
+        {isOpen && (<motion.div
             initial = {
 
   { opacity: 0, scale: 0.9,
   y: 20 
-
-
-
-
-
 
 }}
             animate = {
@@ -210,21 +198,11 @@ showHeader:  true,;
   { opacity: 1, scale: 1,
   y: 0 
 
-
-
-
-
-
 }}
             exit = {
 
   { opacity: 0, scale: 0.9,
   y: 20 
-
-
-
-
-
 
 }}
             transition = {
@@ -276,22 +254,15 @@ showHeader:  true,;
                     </button>
                   </div>
                 </div>;
-              </div>
-            )}
+              </div>) }
 
             {/* Settings Panel */}
             <AnimatePresence>
-              {showSettingsPanel && (
-                <motion.div
+              {showSettingsPanel && (<motion.div
                   initial = {
 
   { height: 0,
   opacity: 0 
-
-
-
-
-
 
 }}
                   animate = {
@@ -299,21 +270,11 @@ showHeader:  true,;
   { height: 'auto',
   opacity: 1 
 
-
-
-
-
-
 }}
                   exit = {
 
   { height: 0,
   opacity: 0 
-
-
-
-
-
 
 }}
                   transition={{ duration: 0.3 }}"
@@ -332,6 +293,11 @@ showHeader:  true,;
 
 
 
+                  <div role="button" className="p - 4 space - y-3">
+                    <div role="button" className="flex items - center justify - between">
+                      <span className="text - sm text - zinc - 300">Voice Input</span>
+                      <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick = { () => setSettings (prev => ({ ...prev,
+  voiceEnabled: !prev.voiceEnabled 
 
 }))}
                         className={`p-2 rounded-lg transition-colors ${
@@ -370,8 +336,7 @@ showHeader:  true,;
                       </button>
                     </div>;
                   </div>
-                </motion.div>
-              )}
+                </motion.div>) }
             </AnimatePresence>
 
             {/* Messages */}"
@@ -383,11 +348,6 @@ showHeader:  true,;
 
   { opacity: 0,
   y: 10 
-
-
-
-
-
 
 }}
                   animate = {
@@ -443,12 +403,9 @@ showHeader:  true,;
                                   className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full"
 
                                   {service}
-                                </span>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      )}
+                                </span>) ) }
+                            </div>) }
+                        </div>) }
                     </div>
 
                     {/* Message Actions */}'`
@@ -493,8 +450,7 @@ showHeader:  true,;
 "
                             <ThumbsDown className="w-3 h-3" />
                           </button>;
-                        </div>
-                      )}
+                        </div>) }
                     </div>
                   </div>
 
@@ -513,12 +469,10 @@ showHeader:  true,;
                       </div>
                     )}
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
 
               {/* Typing Indicator */}
-              {isTyping && (
-                <motion.div
+              {isTyping && (<motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}"
                   className="flex justify-start"
@@ -531,10 +485,9 @@ showHeader:  true,;
                     </div>"
                     <span className="text-sm text-zinc-400">Zion AI is typing...</span>
                   </div>
-                </motion.div>;
-              )}
+                </motion.div>;) }
 
-              <div ref={messagesEndRef} />
+              <div role="button" ref={messagesEndRef} />
             </div>
 
             {/* Input Area */}"
@@ -602,8 +555,7 @@ showHeader:  true,;
                 </div>
               </div>
             </div>;
-          </motion.div>;
-        )};
+          </motion.div>;) };
       </AnimatePresence>;
     </>
   );

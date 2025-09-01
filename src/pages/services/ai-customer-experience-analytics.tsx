@@ -1,7 +1,7 @@
 import React from 'react.ts';'
 import { SEO   } from '../../components/SEO';'
 import { motion   } from 'framer-motion.ts';
-
+;
 const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
 
   return()
@@ -116,7 +116,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   description: "Dynamic content personalization based on real-time customer behavior and preferences.","
                   icon: "🎯"
                 }
-              ].map((feature, index)   => (
+              ].map((feature, index (
                 <motion.div
                   key={index}
                   initial = {
@@ -185,7 +185,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                 { metric: "60%", description: "Faster customer issue resolution" },"
                 { metric: "45%", description: "Increase in customer engagement" },"
                 { metric: "30%", description: "Boost in customer retention rates" }
-              ].map((benefit, index)   => (
+              ].map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {
@@ -271,7 +271,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   description: "Improve patient experiences with personalized care plans and proactive health monitoring.","
                   features: ["Patient journey optimization", "Care plan personalization", "Health outcome tracking"]
                 }
-              ].map((useCase, index)   => (
+              ].map(useCase: unknown, index: unknown 
                 <motion.div
                   key={index}
                   initial = {
@@ -393,7 +393,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   ],
                   popular: false
                 }
-              ].map((plan, index)   => (
+              ].map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
                   initial = {

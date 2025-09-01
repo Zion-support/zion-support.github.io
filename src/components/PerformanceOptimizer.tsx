@@ -11,26 +11,27 @@ import {
   Settings} from 'lucide-react';
 
 interface PerformanceMetrics {
+
   fcp: number; // First Contentful Paint
   lcp: number; // Largest Contentful Paint
   fid: number; // First Input Delay
   cls: number; // Cumulative Layout Shift
   ttfb: number; // Time to First Byte
   score: number; // Overall performance score
+
 }
 
 interface OptimizationSuggestion {
+
   id: string;
   title: string;
   description: string;'
   impact: 'high' | 'medium' | 'low';'
   category: 'images' | 'javascript' | 'css' | 'fonts' | 'caching' | 'server';
   implemented: boolean;
-}
 
 const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-
+  const [metrics, setMetrics] = useState < PerformanceMetrics> ({
     fcp: 0,
     lcp: 0,
     fid: 0,
@@ -39,7 +40,7 @@ const PerformanceOptimizer: React.FC = () => {
     ttfb: 0,
     score: 0});
 
-  const [suggestions, setSuggestions] = useState<OptimizationSuggestion[]>([
+  const [suggestions, setSuggestions] = useState < OptimizationSuggestion[]> ([
     {
 '
       id: 'image-optimization','
@@ -90,11 +91,11 @@ const PerformanceOptimizer: React.FC = () => {
       implemented: false},
   ]);
 
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [history, setHistory] = useState<PerformanceMetrics[]>([]);
+  const [isMonitoring, setIsMonitoring] = useState (false) ;
+  const [history, setHistory] = useState < PerformanceMetrics[]> ([]) ;
 
   // Simulate performance monitoring
-  const measurePerformance = useCallback(() => {
+  const measurePerformance = useCallback ( () => {
     const newMetrics: PerformanceMetrics = {
 
       fcp: Math.random() * 2000 + 500, // 500-2500ms
@@ -112,18 +113,18 @@ const PerformanceOptimizer: React.FC = () => {
     if (newMetrics.cls > 0.1) score -= 15;
     if (newMetrics.ttfb > 600) score -= 20;
 
-    newMetrics.score = Math.max(0, score);
-    setMetrics(newMetrics);
-    setHistory(prev => [...prev.slice(-9), newMetrics]);
-  }, []);
+    newMetrics.score = Math.max (0, score) ;
+    setMetrics (newMetrics) ;
+    setHistory (prev => [...prev.slice (-9) , newMetrics]) ;
+  }, []) ;
 
-  useEffect(() => {
+  useEffect ( () => {
     if (isMonitoring) {
 
       const interval = setInterval(measurePerformance, 5000);
       return () => clearInterval(interval);
     }
-  }, [isMonitoring, measurePerformance]);
+  }, [isMonitoring, measurePerformance]) ;
 
   const getScoreColor = (score: number) => {
 '
@@ -156,9 +157,7 @@ const PerformanceOptimizer: React.FC = () => {
       prev.map(suggestion =>
         suggestion.id === id
           ? { ...suggestion, implemented: !suggestion.implemented }
-          : suggestion
-      )
-    );
+          : suggestion) ) ;
   };
 
   return ("
@@ -282,7 +281,7 @@ const PerformanceOptimizer: React.FC = () => {
                   <div className="flex items-center gap-4 text-xs text-gray-400">"
                     <span className="capitalize">{suggestion.category}</span>
                     <span>•</span>
-                    <span>Estimated improvement: 15-25%</span>
+                    <span > Estimated improvement: 15 - 25%</span>
                   </div>
                 </div>
                 <button
@@ -297,8 +296,7 @@ const PerformanceOptimizer: React.FC = () => {
                   {suggestion.implemented ? 'Implemented' : 'Implement'}
                 </button>
               </div>
-            </div>
-          ))}
+            </div>) ) }
         </div>
       </div>
 
@@ -327,10 +325,8 @@ const PerformanceOptimizer: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
-      )}
-    </div>
-  );
+        </div>) }
+    </div>) ;
 };
 
 export default PerformanceOptimizer;

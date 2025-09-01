@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/Button";"
 import { Link } from "react-router-dom";
 // This component handles deep linking to the mobile app
 const OpenAppRedirect = () => {
-    const navigate = useNavigate();
-    const [status, setStatus] = useState('redirecting');
-    useEffect(() => {
+    const navigate = useNavigate () ;
+    const [status, setStatus] = useState ('redirecting') ;
+    useEffect ( () => {
         const attemptAppOpen = async () => {
             const isAndroid = /Android/.test(navigator.userAgent);'
             // App scheme URLs (these would be your actual app's URL schemes)"
@@ -29,7 +29,7 @@ const OpenAppRedirect = () => {
                     else if (isiOS) {
 
                         window.location.href = iosAppUrl}
-                }, 2500); // Wait 2.5 seconds before redirecting to store
+                }, 2500) ; // Wait 2.5 seconds before redirecting to store
                 // Try to open the app
                 window.location.href = appScheme}
             else {

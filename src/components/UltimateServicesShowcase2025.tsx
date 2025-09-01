@@ -1,3 +1,4 @@
+import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 import { SEO } from "@/components/SEO";'
 import { Link } from 'react-router-dom';
@@ -36,12 +37,12 @@ export default function UltimateServicesShowcase2025() {
   const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter(service => {
 '
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
+                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
+                         service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
+                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch;
-  });
+  }) ;
 
   const getCategoryIcon = (category: string) => {
 '"
@@ -173,15 +174,14 @@ export default function UltimateServicesShowcase2025() {
             initial="hidden""
             animate="visible"
           >
-            {sortedServices.map((service, index) => (
-              <motion.div
+            {sortedServices.map ( (service, index) => (<motion.div
                 key={service.id}
                 variants={itemVariants}'
                 className={viewMode === 'grid' "
                   ? "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer group""
                   : "glass rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 cursor-pointer group"
                 }
-                onClick={() => handleServiceClick(service)}
+                onClick={ () => handleServiceClick (service) }
                 whileHover={{ y: -5 }}
               >"
                 <div className="flex items-start justify-between mb-4">"
@@ -224,8 +224,7 @@ export default function UltimateServicesShowcase2025() {
                       <li className="text-sm text-gray-400 flex items-center">"
                         <span className="w-3 h-3 bg-gray-400 rounded-full mr-2 flex-shrink-0"></span>
                         +{service.features.length - 3} more features
-                      </li>
-                    )}
+                      </li>) }
                   </ul>
                 </div>
 "
@@ -238,8 +237,7 @@ export default function UltimateServicesShowcase2025() {
                     Learn More <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>
@@ -292,8 +290,7 @@ export default function UltimateServicesShowcase2025() {
 
       {/* Service Modal */}
       <AnimatePresence>
-        {selectedService && (
-          <motion.div
+        {selectedService && (<motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}"
@@ -330,8 +327,7 @@ export default function UltimateServicesShowcase2025() {
                       <li key={idx} className="text-gray-300 flex items-center">"
                         <CheckCircle className="w-4 h-4 text-zion-green mr-2 flex-shrink-0" />
                         {feature}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>
                 
@@ -342,8 +338,7 @@ export default function UltimateServicesShowcase2025() {
                       <li key={idx} className="text-gray-300 flex items-center">"
                         <TrendingUp className="w-4 h-4 text-zion-green mr-2 flex-shrink-0" />
                         {benefit}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>
               </div>
@@ -367,8 +362,7 @@ export default function UltimateServicesShowcase2025() {
                 {selectedService.tags.map((tag, idx) => ("
                   <span key={idx} className="px-3 py-1 bg-zion-blue/20 text-zion-blue text-sm rounded-full border border-zion-blue/30">
                     {tag}
-                  </span>
-                ))}
+                  </span>) ) }
               </div>
 "
               <div className="flex flex-col sm:flex-row gap-4">"
@@ -380,11 +374,9 @@ export default function UltimateServicesShowcase2025() {
                 </button>
               </div>
             </motion.div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
-    </div>
-  );
+    </div>) ;
 };
 
 export default UltimateServicesShowcase2025;'"`

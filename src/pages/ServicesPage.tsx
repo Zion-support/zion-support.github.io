@@ -150,7 +150,7 @@ export default function ServicesPage() {
       (selectedPriceRange === 'enterprise' && service.price > 5000);
 
     return matchesSearch && matchesCategory && matchesPrice;
-  });
+  }) ;
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -169,7 +169,7 @@ export default function ServicesPage() {
       default:
         return 0;
     }
-  });
+  }) ;
 
   const getCategoryIcon = (category: string) => {
 
@@ -305,8 +305,7 @@ export default function ServicesPage() {
               >"
                 <category.icon className="w-4 h-4" />
                 {category.name}
-              </button>
-            ))}
+              </button>) ) }
           </motion.div>
 
           {/* Advanced Filters */}
@@ -453,8 +452,7 @@ export default function ServicesPage() {
                             >"
                               <CheckCircle className="w-3 h-3 text-zion-cyan" />
                               {feature}
-                            </div>
-                          ))}
+                            </div>) ) }
                         </div>
                       </div>
                     </div>
@@ -508,8 +506,7 @@ export default function ServicesPage() {
                 >
                   View All Services
                 </button>
-              </motion.div>
-            )}
+              </motion.div>) }
           </AnimatePresence>
         </div>
       </section>
@@ -564,8 +561,7 @@ export default function ServicesPage() {
                 >
                   Explore Solution
                 </Link>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -627,7 +623,6 @@ export default function ServicesPage() {
           </motion.div>
         </div>
       </section>
-    </>
-  );
+    </>) ;
 }
 '"`

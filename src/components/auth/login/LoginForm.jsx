@@ -17,7 +17,7 @@ import {
   FormMessage} from '@/components/ui/form';'
 import { Link } from 'react-router-dom';
 
-// Form validation schema
+// Form validation schema;
 const loginSchema = z.object({
 
   email: z
@@ -186,6 +186,7 @@ function LoginForm() {
     </Form>
   );
 }
-
+;
+export { LoginForm };
 export default LoginForm;
 '"

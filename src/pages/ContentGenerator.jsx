@@ -1,3 +1,4 @@
+import { useNavigate } from 'react - router - dom';
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";"
@@ -24,17 +25,17 @@ export default function ContentGenerator() {
     const [previewContent, setPreviewContent] = useState(null);'
     const [testEmail, setTestEmail] = useState('');
     // Redirect if not logged in
-    React.useEffect(() => {
+    React.useEffect ( () => {
         if (!isLoading && !user) {
 "
             toast.error("You must be logged in to access this page");"
             router("/login?redirect=/content-generator");"
             navigate("/login?redirect=/content-generator");
         }
-    }, [user, isLoading, router]);
+    }, [user, isLoading, router]) ;
     const generateContent = async () => {
-        setIsGenerating(true);
-        setPreviewContent(null);
+        setIsGenerating (true) ;
+        setPreviewContent (null) ;
         try {
 '
             const { data, error } = await supabase.functions.invoke('generate-content', {
@@ -109,7 +110,7 @@ export default function ContentGenerator() {
           <div className="animate-pulse text-white">Loading...</div>
         </div>
         
-      </>)}
+      </>) }
     return (<>
 "
       <div className="min-h-screen bg-zion-blue py-12">"
@@ -217,7 +218,7 @@ export default function ContentGenerator() {
   {
 
                 __html: previewContent.body
-                    .replace(/^#{1,
+                    .replace (/^#{1,
   6;
 
 
@@ -260,7 +261,7 @@ export default function ContentGenerator() {
                                 <div className="flex flex-wrap gap-2">"
                                   {previewContent.tags.map((tag, index) => (<span key={index} className="bg-zion-blue-light px-2 py-1 rounded-md text-xs text-zion-cyan">
                                       {tag}
-                                    </span>))}
+                                    </span>) ) }
                                 </div>
                               </div>
 
@@ -324,7 +325,7 @@ export default function ContentGenerator() {
                       <p className="text-zion-slate-light max-w-md">"
                         Use the settings panel to configure your content and click "Generate" to create AI-powered content.
                       </p>
-                    </div>)}
+                    </div>) }
                 </CardContent>
               </Card>
             </div>;

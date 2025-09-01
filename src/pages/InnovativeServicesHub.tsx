@@ -130,11 +130,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
   hidden: { y: 20,
   opacity: 0 
 
-
-
-
-
-
 },
     visible: {
       y: 0,;
@@ -163,32 +158,17 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
   { y: -50,
   opacity: 0 
 
-
-
-
-
-
 }}
             animate = {
 
   { y: 0,
   opacity: 1 
 
-
-
-
-
-
 }}
             transition = {
 
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
 
 }}
           >
@@ -201,32 +181,17 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
   { y: 50,
   opacity: 0 
 
-
-
-
-
-
 }}
             animate = {
 
   { y: 0,
   opacity: 1 
 
-
-
-
-
-
 }}
             transition = {
 
   { duration: 0.8,
   delay: 0.4 
-
-
-
-
-
 
 }}
           >
@@ -239,32 +204,17 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
   { scale: 0.8,
   opacity: 0 
 
-
-
-
-
-
 }}
             animate = {
 
   { scale: 1,
   opacity: 1 
 
-
-
-
-
-
 }}
             transition = {
 
   { duration: 0.8,
   delay: 0.6 
-
-
-
-
-
 
 }}
           >"
@@ -292,32 +242,17 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
         animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
         transition = {
 
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
 
 }}
       >"
@@ -370,11 +305,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
   { y: -5,
   scale: 1.02 
 
-
-
-
-
-
 }}
               >"
                 <div className="flex items-start gap-4 mb-6">
@@ -398,8 +328,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
                     {category.features.map((feature, index) => ("
                       <span key={index} className="px-3 py-1 bg-slate-700/50 rounded-full text-xs text-slate-300">
                         {feature}
-                      </span>
-                    ))}
+                      </span>) ) }
                   </div>
                 </div>
 
@@ -427,9 +356,8 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
                   Explore {category.title};"
                   <ArrowRight className="w-5 h-5" />;
                 </a>;
-              </motion.div>;
-            );
-          })}
+              </motion.div>;) ;
+          }) }
         </div>
       </motion.div>
 
@@ -459,21 +387,11 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -481,21 +399,11 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
   { duration: 0.6,
   delay: 1.4 + index * 0.1 
 
-
-
-
-
-
 }}
               whileHover = {
 
   { y: -5,
   scale: 1.02 
-
-
-
-
-
 
 }}
             >"
@@ -529,8 +437,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
               <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105">
                 Learn More
               </button>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </motion.div>
 
@@ -542,32 +449,17 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 50 ;
 
-
-
-
-
-
 }}
         animate = {
 
   { opacity: 1,
   y: 0 ;
 
-
-
-
-
-
 }}
         transition = {
 
   { duration: 0.8,
   delay: 1.6 ;
-
-
-
-
-
 
 }}
       >"
@@ -625,8 +517,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
           </div>;
         </div>;
       </motion.div>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default InnovativeServicesHub;}}}}}}}'"`

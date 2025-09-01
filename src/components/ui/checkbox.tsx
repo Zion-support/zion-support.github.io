@@ -3,11 +3,11 @@ import React from 'react.ts';
 interface CheckboxProps extends React.PropsWithChildren<{}> {
 
   checked: boolean;
-  onChange: (checked: boolean)  => void;
+  onChange: checked: boolean void;
   label?: string;
   disabled?: boolean;
   className?: string}
-
+;
 export function Checkbox(...args[]):  {
 
   return ('

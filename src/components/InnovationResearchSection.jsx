@@ -1,6 +1,9 @@
 import React, { useState } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp, Users, Star, Globe, Shield, Cpu, Network const researchAreas = [
+import { motion, AnimatePresence } from 'framer - motion';
+
+
     {
 
         id: 1,
@@ -180,9 +183,8 @@ const researchLabs = [
         researchers: 5
 
 ];
-export function InnovationResearchSection() {
-    const [selectedResearch, setSelectedResearch] = useState(null);
-    const [hoveredLab, setHoveredLab] = useState(null);
+    const [selectedResearch, setSelectedResearch] = useState (null) ;
+    const [hoveredLab, setHoveredLab] = useState (null) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -194,17 +196,11 @@ export function InnovationResearchSection() {
                 staggerChildren: 0.15,
                 delayChildren: 0.1
 
-
     };
     const itemVariants = {
 
   hidden: { y: 30,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -233,11 +229,6 @@ export function InnovationResearchSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -264,20 +255,10 @@ export function InnovationResearchSection() {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -305,20 +286,10 @@ export function InnovationResearchSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -341,20 +312,10 @@ export function InnovationResearchSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -406,7 +367,7 @@ export function InnovationResearchSection() {
                         </div>))}"
                       {area.highlights.length > 2 && (<div className="text-zion-cyan/60 text-xs">
                           +{area.highlights.length - 2} more areas
-                        </div>)}
+                        </div>) }
                     </div>
                   </div>
 
@@ -425,20 +386,10 @@ export function InnovationResearchSection() {
   { opacity: 0, height: 0,
   y: 10 
 
-
-
-
-
-
 }} animate = {
 "
   { opacity: 1, height: "auto",
   y: 0 
-
-
-
-
-
 
 }} exit = {
 
@@ -467,7 +418,7 @@ export function InnovationResearchSection() {
                           <div className="flex flex-wrap gap-1">"
                             {area.technologies.map((tech, idx) => (<span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                                 {tech}
-                              </span>))}
+                              </span>) ) }
                           </div>
                         </div>
 "
@@ -482,10 +433,10 @@ export function InnovationResearchSection() {
                           <div className="text-zion-cyan font-bold text-sm">{area.funding}</div>"
                           <div className="text-zion-slate-light text-xs">Research Funding</div>
                         </div>
-                      </motion.div>)}
+                      </motion.div>) }
                   </AnimatePresence>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -495,20 +446,10 @@ export function InnovationResearchSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -531,20 +472,10 @@ export function InnovationResearchSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -579,7 +510,7 @@ export function InnovationResearchSection() {
                 <div className="text-zion-slate-light/80 text-xs">
                   <strong>Equipment:</strong> {lab.equipment}
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -589,20 +520,10 @@ export function InnovationResearchSection() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 

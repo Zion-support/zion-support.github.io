@@ -8,15 +8,15 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
         enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true
-    });
-    const [formData, setFormData] = useState({ /* empty */ });
-    const [validation, setValidation] = useState({ /* empty */ });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    const [showPassword, setShowPassword] = useState({ /* empty */ });
-    const [progress, setProgress] = useState(0);
+    }) ;
+    const [formData, setFormData] = useState ({ /* empty */ }) ;
+    const [validation, setValidation] = useState ({ /* empty */ }) ;
+    const [isSubmitting, setIsSubmitting] = useState (false) ;
+    const [isSubmitted, setIsSubmitted] = useState (false) ;
+    const [showPassword, setShowPassword] = useState ({ /* empty */ }) ;
+    const [progress, setProgress] = useState (0) ;
     // Initialize form data and validation
-    useEffect(() => {
+    useEffect ( () => {
         const initialValidation = {};
         fields.forEach(field => {
 '
@@ -26,15 +26,15 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 isValid: !field.required,'
                 message: '',
                 isTouched: false
-            }});
-        setFormData(initialData);
-        setValidation(initialValidation)}, [fields]);
+            }}) ;
+        setFormData (initialData) ;
+        setValidation (initialValidation) }, [fields]) ;
     // Update progress based on filled fields
     useEffect(() => {
 '
         const filledFields = Object.values(formData).filter(value => typeof value === 'boolean' ? value : value.toString().trim() !== '').length;
         const totalFields = fields.length;
-        setProgress((filledFields / totalFields) * 100)}, [formData, fields.length]);
+        setProgress ( (filledFields / totalFields) * 100) }, [formData, fields.length]) ;
     // Validate field
     const validateField = useCallback((name, value) => {
 
@@ -93,7 +93,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 if (customError)
                     return customError}
         }
-        return null}, [fields]);
+        return null}, [fields]) ;
     // Handle field change
     const handleFieldChange = useCallback((name, value) => {
 
@@ -109,13 +109,13 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 message: error || '',
                 isTouched: true
 
-        }));
+        }) ) ;
         // Track form interaction
         if (enableAnalytics) {
 '
             trackEvent('form', 'field_changed', name, null, { fieldName: name, value: String(value) });
         }
-    }, [validateField, enableAnalytics, trackEvent]);
+    }, [validateField, enableAnalytics, trackEvent]) ;
     // Handle field blur
     const handleFieldBlur = useCallback((name) => {
 
@@ -131,10 +131,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 message: error || '',
                 isTouched: true
             }
-        }))}, [formData, validateField]);
+        }) ) }, [formData, validateField]) ;
     // Check if form is valid
-    const isFormValid = useCallback(() => {
-        return Object.values(validation).every(v => v.isValid)}, [validation]);
+    const isFormValid = useCallback ( () => {
+        return Object.values (validation) .every (v => v.isValid) }, [validation]) ;
     // Handle form submission
     const handleSubmit = useCallback(async (e) => {
 
@@ -149,7 +149,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                     errors: Object.values(validation).filter(v => !v.isValid).length
                 })}
             return}
-        setIsSubmitting(true);
+        setIsSubmitting (true) ;
         try {
             // Track form submission start
             if (enableAnalytics) {
@@ -163,11 +163,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 trackConversion('form_submission', 1, { formType: title })}
             setIsSubmitted(true);
             // Reset form after successful submission
-            setTimeout(() => {
-                setIsSubmitted(false);
-                setFormData({});
-                setValidation({});
-                setProgress(0)}, 5000)}
+            setTimeout ( () => {
+                setIsSubmitted (false) ;
+                setFormData ({}) ;
+                setValidation ({}) ;
+                setProgress (0) }, 5000) }
         catch (error) {
             // Track submission error
             if (enableAnalytics) {
@@ -212,11 +212,6 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -271,7 +266,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                         : 'border-red-500 focus:ring-red-200''`
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}>"
               <option value="">Select an option</option>
-              {field.options?.map(option => (<option key={option.value} value={option.value}>
+              {field.options?.map (option => (<option key={option.value} value={option.value}>
                   {option.label}
                 </option>))}'"
             </select>) : field.type === 'checkbox' ? (<div className="flex items-center space-x-3">"
@@ -322,11 +317,6 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   { opacity: 0,
   height: 0 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,'
@@ -339,19 +329,14 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 "
 }} className="text-sm text-red-600 dark:text-red-400">
             {fieldValidation.message}
-          </motion.p>)}
-      </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);
+          </motion.p>) }
+      </motion.div>) }, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]) ;
     if (isSubmitted) {
 
         return (<motion.div initial = {
 
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
 
 }} animate = {
 
@@ -371,17 +356,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         <p className="text-green-600 dark:text-green-300">'
           Your message has been sent successfully. We'll get back to you soon!
         </p>
-      </motion.div>);
+      </motion.div>) ;
     }
     return (<motion.div initial = {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -409,7 +389,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">"`
             <motion.div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>
           </div>
-        </div>)}
+        </div>) }
 
       {/* Form */}"
       <form onSubmit={handleSubmit} className="p-6 space-y-6">"
@@ -427,7 +407,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             </>) : (<>"
               <Send className="w-5 h-5"/>
               {submitText}
-            </>)}
+            </>) }
         </motion.button>
 
         {/* Form Status */}
@@ -437,20 +417,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   { opacity: 0,
   height: 0 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,'
   height: 'auto' 
-
-
-
-
-
 
 }} exit = {
 
@@ -466,7 +436,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
               <p className="text-sm text-red-600 dark:text-red-400">
                 Please fix the errors above before submitting the form.
               </p>
-            </motion.div>)}
+            </motion.div>) }
         </AnimatePresence>
       </form>
     </motion.div>)};

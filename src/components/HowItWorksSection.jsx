@@ -96,7 +96,7 @@ const steps = [
     duration: 'Ongoing','
     success: '100% client retention'},
 ];
-
+;
 const stats = [
   {
 "

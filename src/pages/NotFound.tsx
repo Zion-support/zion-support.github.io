@@ -229,8 +229,7 @@ export default function NotFound() {
                     </Link>
                   ))}
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -302,7 +301,6 @@ export default function NotFound() {
           </p>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 }
 '"

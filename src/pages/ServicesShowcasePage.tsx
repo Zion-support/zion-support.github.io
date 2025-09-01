@@ -193,7 +193,7 @@ export function ServicesShowcasePage() {
       default:
         return 0;
     }
-  });
+  }) ;
 
   const getCategoryIcon = (category: string) => {
 
@@ -305,8 +305,7 @@ export function ServicesShowcasePage() {
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name}
-                </option>
-              ))}
+                </option>) ) }
             </select>
 
             {/* Price Filter */}
@@ -318,8 +317,7 @@ export function ServicesShowcasePage() {
               {priceRanges.map(range => (
                 <option key={range.id} value={range.id}>
                   {range.name}
-                </option>
-              ))}
+                </option>) ) }
             </select>
 
             {/* Sort By */}
@@ -331,8 +329,7 @@ export function ServicesShowcasePage() {
               {sortOptions.map(option => (
                 <option key={option.id} value={option.id}>
                   {option.name}
-                </option>
-              ))}
+                </option>) ) }
             </select>
           </div>
         </div>
@@ -403,8 +400,7 @@ export function ServicesShowcasePage() {
                   {service.features.length > 3 && ("
                     <div className="text-sm text-cyan-400">
                       +{service.features.length - 3} more features
-                    </div>
-                  )}
+                    </div>) }
                 </div>
               </div>
 
@@ -473,8 +469,7 @@ export function ServicesShowcasePage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
 
         {/* Call to Action */}
@@ -510,8 +505,7 @@ export function ServicesShowcasePage() {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 
 export default ServicesShowcasePage;

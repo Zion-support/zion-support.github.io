@@ -1,4 +1,7 @@
-export function FeaturesGuideSection() {
+import React from 'react';
+export function FeaturesGuideSection () {
+
+
     const features = [
         {
 
@@ -39,7 +42,7 @@ export function FeaturesGuideSection() {
               <p className="text-zion-slate-light">
                 {feature.description}
               </p>
-            </div>))}
+            </div>) ) }
         </div>
       </div>
     </section>)}

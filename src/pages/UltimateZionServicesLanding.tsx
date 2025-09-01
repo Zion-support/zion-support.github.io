@@ -1,12 +1,12 @@
 import React from 'react.ts';'
 import UltimateZionServicesShowcase from '../components/UltimateZionServicesShowcase';
 
-const UltimateZionServicesLanding: React.FC = (): JSX.Element => {;
+
+const UltimateZionServicesLanding: React.FC = () : JSX.Element => {;
   return (;
     <div>;
       <UltimateZionServicesShowcase />;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default UltimateZionServicesLanding;'

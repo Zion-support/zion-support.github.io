@@ -29,10 +29,10 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     attendees: '1-5',;
     services: [],;'
     message: '';
-  });
+  }) ;
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState (false) ;
+  const [isSubmitted, setIsSubmitted] = useState (false) ;
 
   const timeSlots = [;'
     '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',;'
@@ -75,11 +75,6 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
 
 }}
           animate = {
@@ -140,8 +135,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
             </a>;
           </div>;
         </motion.div>;
-      </div>;
-    );
+      </div>;) ;
   }
 
   return ("
@@ -161,21 +155,11 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -219,21 +203,11 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -420,9 +394,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
 "
                         <option value="">Select time</option>
-                        {timeSlots.map(time => (
-                          <option key={time} value={time}>{time}</option>
-                        ))}
+                        {timeSlots.map (time => (<option key={time} value={time}>{time}</option>) ) }
                       </select>
                     </div>
                   </div>
@@ -438,6 +410,8 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
   (e) => setFormData(prev => ({ ...prev,
   attendees: e.target.value 
 
+}) ) }
+                      className="w - full px - 4 py - 3 bg - slate - 700 / 50 border border - slate - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent"
 
 
 
@@ -471,8 +445,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                             <service.icon className="w-4 h-4 text-cyan-400" />"
                             <span className="text-sm text-white">{service.name}</span>
                           </div>
-                        </label>
-                      ))}
+                        </label>) ) }
                     </div>
                   </div>
 
@@ -529,21 +502,11 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
   { opacity: 0,
   x: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -632,8 +595,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
           </div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default ScheduleDemo;}}}}'"

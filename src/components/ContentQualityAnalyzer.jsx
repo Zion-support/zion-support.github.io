@@ -54,9 +54,9 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             status: 'open'
 
     ];
-    useEffect(() => {
-        setContentIssues(sampleIssues);
-        generateReport(sampleIssues)}, []);
+    useEffect ( () => {
+        setContentIssues (sampleIssues) ;
+        generateReport (sampleIssues) }, []) ;
     const generateReport = (issues) => {
 
         const totalPages = 79; // From analysis report
@@ -74,13 +74,12 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             averageContentLength: 5000, // Sample data
             pagesWithImages: 45, // Sample data
             pagesWithMetaDescriptions: 32, // Sample data
-            lastUpdated: new Date()
-        })};
+            lastUpdated: new Date () }) };
     const startAnalysis = async () => {
-        setIsAnalyzing(true);
+        setIsAnalyzing (true) ;
         // Simulate content analysis
-        await new Promise(resolve => setTimeout(resolve, 3000));
-        setIsAnalyzing(false)};
+        await new Promise (resolve => setTimeout (resolve, 3000) ) ;
+        setIsAnalyzing (false) };
     const getSeverityIcon = (severity) => {
 
         switch (severity) {
@@ -155,20 +154,10 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
   { scale: 0.9,
   opacity: 0 
 
-
-
-
-
-
 }} animate = {
 
   { scale: 1,
   opacity: 1 
-
-
-
-
-
 
 }} exit = {
 
@@ -217,7 +206,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                     <div className="text-2xl font-bold text-blue-400">{report.pagesWithMetaDescriptions}</div>"
                     <div className="text-blue-400 text-sm">With Meta Descriptions</div>
                   </div>
-                </div>)}
+                </div>) }
 
               {/* Actions */}"
               <div className="flex items-center justify-between">"
@@ -335,7 +324,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
                               </button>
                             </div>
                           </td>
-                        </tr>))}
+                        </tr>) ) }
                     </tbody>
                   </table>
                 </div>

@@ -83,11 +83,6 @@ const MicroSAASPage = () => {
   hidden: { opacity: 0,
   y: 20 
 
-
-
-
-
-
 },
     visible: {
       opacity: 1,;
@@ -107,21 +102,11 @@ const MicroSAASPage = () => {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ duration: 0.8 }}"
@@ -162,8 +147,7 @@ const MicroSAASPage = () => {
           animate="visible""
           className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-16"
         >
-          {saasServices.map((service, index)  => (
-            <motion.div
+          {saasServices.map ( (service, index) => (<motion.div
               key={service.id}
               variants={itemVariants}"
               className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10"
@@ -191,8 +175,7 @@ const MicroSAASPage = () => {
                     <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">"
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {feature}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
               </div>;
               {/* Use Cases */}"
@@ -205,8 +188,7 @@ const MicroSAASPage = () => {
                       className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
 
                       {useCase}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
               </div>
               {/* CTA Button */}
@@ -217,8 +199,7 @@ to: {`/micro-saas/${service.id}`}"
                 Learn More"
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />;
               </Link>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </motion.div>
         {/* SAAS Benefits */}
         <motion.div
@@ -227,21 +208,11 @@ to: {`/micro-saas/${service.id}`}"
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 ;
-
-
-
-
-
 
 }}
           transition = {
@@ -275,21 +246,11 @@ to: {`/micro-saas/${service.id}`}"
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
                 transition = {
@@ -317,21 +278,11 @@ to: {`/micro-saas/${service.id}`}"
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 ;
-
-
-
-
-
 
 }}
           transition = {
@@ -389,21 +340,11 @@ to: {`/micro-saas/${service.id}`}"
   { opacity: 0,
   y: 30 ;
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 ;
-
-
-
-
-
 
 }}
           transition = {
@@ -442,8 +383,7 @@ to: {`/micro-saas/${service.id}`}"
           </div>;
         </motion.div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 };
 export default MicroSAASPage;
 }}}}}}'"`

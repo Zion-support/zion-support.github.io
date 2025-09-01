@@ -10,17 +10,18 @@ interface Testimonial {
   content: string;
   rating: number;
   avatar: string;
-  industry: string}
+  industry: string
+}
 
-  const nextTestimonial = () => {;
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  const nextTestimonial = (...args: unknown[]): unknown => {;
+    setCurrentIndex(prev: unknown (prev + 1) % testimonials.length);
   };
 
-  const prevTestimonial = () => {;
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const prevTestimonial = (...args: unknown[]): unknown => {;
+    setCurrentIndex(prev: unknown (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const goToTestimonial = (index: number) => {;
+  const goToTestimonial = (...args: unknown[]): unknown => {;
     setCurrentIndex(index);
   };
 
@@ -166,10 +167,10 @@ interface Testimonial {
 
         {/* Dots Indicator */}"
         <div className="flex justify-center mt-8 space-x-2">;
-          {testimonials.map((_, index) => (;
+          {testimonials.map(_: unknown, index: unknown ;
             <button
               key={index}
-              onClick={() => goToTestimonial(index)}
+              onClick={(: unknown goToTestimonial(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
 
                 index === currentIndex'

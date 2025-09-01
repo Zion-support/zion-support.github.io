@@ -9,8 +9,8 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
   const [searchTerm, setSearchTerm] = useState('');'
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const getFilteredServices = () => {;
-    let services: any[] = [];
+  const getFilteredServices = (...args: unknown[]): unknown => {;
+    let services: unknown[] = [];
     
     switch (activeTab) {
 '
@@ -39,8 +39,8 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
 ;
     return services};
 
-  const getCategories = () => {;
-    let services: any[] = [];
+  const getCategories = (...args: unknown[]): unknown => {;
+    let services: unknown[] = [];
     
     switch (activeTab) {
 '
@@ -54,7 +54,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
         services = comprehensiveAIServices2030;
         break}
 
-    const categories = [...new Set(services.map(service => service.category))];
+    const categories = [...new Set (services.map (service => service.category) ) ];
     return categories};
 
   const renderServiceCard = (service)  => {
@@ -93,8 +93,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                   <div key={index} className="flex items-center text-sm text-gray-600">"
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                     {feature}
-                  </div>
-                ))}
+                  </div>) ) }
               </div>
             </div>
 "
@@ -105,8 +104,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                   <div key={index} className="flex items-center text-sm text-gray-600">"
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     {benefit}
-                  </div>
-                ))}
+                  </div>) ) }
               </div>
             </div>
 "
@@ -116,8 +114,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                 {service.targetAudience.slice(0, 3).map((audience: string, index: number)  => ("
                   <span key={index} className="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">
                     {audience}
-                  </span>
-                ))}
+                  </span>) ) }
               </div>
             </div>
 "
@@ -127,8 +124,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                 {service.technologies.slice(0, 5).map((tech: string, index: number)  => ("
                   <span key={index} className="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">
                     {tech}
-                  </span>
-                ))}
+                  </span>) ) }
               </div>
             </div>
 "
@@ -205,8 +201,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                   <div key={index} className="flex items-center text-sm text-gray-600">"
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     {feature}
-                  </div>
-                ))}
+                  </div>) ) }
               </div>
             </div>
 "
@@ -217,8 +212,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                   <div key={index} className="flex items-center text-sm text-gray-600">"
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                     {benefit}
-                  </div>
-                ))}
+                  </div>) ) }
               </div>
             </div>
 "
@@ -228,20 +222,19 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                 {service.technologies.slice(0, 5).map((tech: string, index: number)  => ("
                   <span key={index} className="px-2 py-1 text-xs bg-green-100 text-green-700 rounded-full">
                     {tech}
-                  </span>
-                ))}
+                  </span>) ) }
               </div>
             </div>
 "
             <div className="border-t pt-4">"
               <div className="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
                 <div>
-                  <strong>Response Time:</strong> {service.responseTime}<br />
-                  <strong>SLA:</strong> {service.sla}
+                  <strong > Response Time:</strong> {service.responseTime}<br />
+                  <strong > SLA:</strong> {service.sla}
                 </div>
                 <div>
-                  <strong>Delivery Time:</strong> {service.deliveryTime}<br />
-                  <strong>Support:</strong> {service.support}
+                  <strong > Delivery Time:</strong> {service.deliveryTime}<br />
+                  <strong > Support:</strong> {service.support}
                 </div>
               </div>
 "
@@ -266,8 +259,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
               </div>;
             </div>;
           </div>;
-        </div>;
-      );
+        </div>;) ;
     } else {
 
       return ("
@@ -309,8 +301,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                 {service.aiModels.slice(0, 4).map((model: string, index: number)  => ("
                   <span key={index} className="px-2 py-1 text-xs bg-purple-100 text-purple-700 rounded-full">
                     {model}
-                  </span>
-                ))}
+                  </span>) ) }
               </div>
             </div>
 "
@@ -321,8 +312,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                   <div key={index} className="flex items-center text-sm text-gray-600">"
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
                     {feature}
-                  </div>
-                ))}
+                  </div>) ) }
               </div>
             </div>
 "
@@ -332,8 +322,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                 {service.useCases.slice(0, 4).map((useCase: string, index: number)  => ("
                   <span key={index} className="px-2 py-1 text-xs bg-pink-100 text-pink-700 rounded-full">
                     {useCase}
-                  </span>
-                ))}
+                  </span>) ) }
               </div>
             </div>
 "
@@ -343,20 +332,19 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                 {service.technologies.slice(0, 5).map((tech: string, index: number)  => ("
                   <span key={index} className="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">
                     {tech}
-                  </span>
-                ))}
+                  </span>) ) }
               </div>
             </div>
 "
             <div className="border-t pt-4">"
               <div className="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
                 <div>
-                  <strong>Setup Time:</strong> {service.setupTime}<br />
-                  <strong>Innovation Level:</strong> {service.innovationLevel}
+                  <strong > Setup Time:</strong> {service.setupTime}<br />
+                  <strong > Innovation Level:</strong> {service.innovationLevel}
                 </div>
                 <div>
-                  <strong>Market Size:</strong> {service.marketSize}<br />
-                  <strong>Training Data:</strong> {service.trainingData}
+                  <strong > Market Size:</strong> {service.marketSize}<br />
+                  <strong > Training Data:</strong> {service.trainingData}
                 </div>
               </div>
 "
@@ -381,8 +369,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
               </div>;
             </div>;
           </div>;
-        </div>;
-      );
+        </div>;) ;
     }
   };
 
@@ -447,7 +434,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">"
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                 </svg>
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                <span > 364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
           </div>
@@ -473,9 +460,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                 className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
 "
                 <option value="all">All Categories</option>
-                {getCategories().map((category) => (
-                  <option key={category} value={category}>{category}</option>
-                ))}
+                {getCategories () .map ( (category) => (<option key={category} value={category}>{category}</option>) ) }
               </select>
             </div>
           </div>
@@ -514,8 +499,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`
                 }`}
 
-                AI Services ({comprehensiveAIServices2030.length})
-              </button>
+                AI Services ({comprehensiveAIServices2030.length}) </button>
             </div>
           </div>
 
@@ -537,8 +521,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;'
               >
                 Clear Filters
               </button>
-            </div>
-          )}
+            </div>) }
 
           {/* Contact CTA */}"
           <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">"

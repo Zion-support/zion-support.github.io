@@ -1,3 +1,5 @@
+import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from 'lucide - react';
+import { Link } from 'react - router - dom';
 import React from 'react';
 import { SEO } from "@/components/SEO";'
 import { Link } from 'react-router-dom';'
@@ -20,17 +22,11 @@ export default function ServicesOverview() {
 
                 staggerChildren: 0.1
 
-
     };
     const itemVariants = {
 
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -112,7 +108,7 @@ export default function ServicesOverview() {
                             <ArrowRight className="w-4 h-4 ml-1"/>
                           </Link>
                         </div>
-                      </div>))}
+                      </div>) ) }
                   </div>
 "
                   <div className="mt-8 text-center">`
@@ -122,7 +118,7 @@ export default function ServicesOverview() {
                     </Link>
                   </div>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </motion.div>
         </div>
       </section>

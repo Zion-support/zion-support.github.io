@@ -2,6 +2,9 @@ import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { motion } from 'framer-motion';
 import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech = () => {
+import { motion } from 'framer - motion';
+
+
     const technologies = [
         {
 
@@ -188,17 +191,11 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
 
                 staggerChildren: 0.1
 
-
     };
     const itemVariants = {
 
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
 
 },
         visible: {
@@ -208,7 +205,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             transition: {
 
                 duration: 0.5
-
 
     };
     const getStatusColor = (status) => {
@@ -236,11 +232,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} animate = {
 
@@ -293,7 +284,7 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
                       <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">
                         {tech.name}
                       </h3>
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(tech.status)}`}>
+                      <span className={`px - 3 py - 1 rounded - full text - xs font - medium ${getStatusColor (tech.status) }`}>
                         {tech.status}
                       </span>
                     </div>
@@ -308,7 +299,7 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
                         {tech.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">"
                             <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
                             {feature}
-                          </li>))}
+                          </li>) ) }
                       </ul>
                     </div>
 "
@@ -318,9 +309,9 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
                       </svg>
                     </Link>
-                  </motion.div>))}
+                  </motion.div>) ) }
               </div>
-            </motion.div>))}
+            </motion.div>) ) }
         </motion.div>
       </div>
 
@@ -331,11 +322,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -363,20 +349,10 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} viewport={{ once: true }} transition = {
 
@@ -405,7 +381,7 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
                     <div className="bg-gradient-to-r from-purple-600 to-pink-600 h-2 rounded-full transition-all duration-1000" style={{ width: `${area.progress}%` }}></div>
                   </div>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </div>
@@ -416,11 +392,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 

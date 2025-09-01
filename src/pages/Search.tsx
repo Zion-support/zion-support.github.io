@@ -105,15 +105,15 @@ const Search: React.FC = () => {
       date: '2024-11-20'},
   ];
 
-  useEffect(() => {
+  useEffect ( () => {
     if (searchQuery) {
 
       performSearch();
     }
-  }, [searchQuery, activeCategory, sortBy]);
+  }, [searchQuery, activeCategory, sortBy]) ;
 
   const performSearch = async () => {
-    setLoading(true);
+    setLoading (true) ;
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 500));
 
@@ -131,7 +131,7 @@ const Search: React.FC = () => {
         activeCategory === 'all' || result.type === activeCategory;
 
       return matchesQuery && matchesCategory;
-    });
+    }) ;
 
     // Sort results
     filteredResults.sort((a, b) => {
@@ -155,10 +155,10 @@ const Search: React.FC = () => {
         default:
           return 0;
       }
-    });
+    }) ;
 
-    setResults(filteredResults);
-    setLoading(false);
+    setResults (filteredResults) ;
+    setLoading (false) ;
   };
 
   const handleSearch = (e: React.FormEvent) => {
@@ -301,8 +301,7 @@ const Search: React.FC = () => {
                           }`}
                         >
                           {option.name}
-                        </button>
-                      ))}
+                        </button>) ) }
                     </div>
                   </div>
                 </div>
@@ -335,8 +334,7 @@ const Search: React.FC = () => {
                               {result.featured && ("
                                 <span className="inline-block px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded ml-2">
                                   Featured
-                                </span>
-                              )}
+                                </span>) }
                             </div>
                           </div>"
                           <div className="flex items-center gap-2">"
@@ -427,8 +425,7 @@ const Search: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>) ;
 };
 
 export default Search;

@@ -55,7 +55,7 @@ const ComprehensivePricingShowcase2025 = () => {
 
                 return price >= range.min}
         }
-        return true});
+        return true}) ;
     const getServiceTypeColor = (type) => {
 
         switch (type) {

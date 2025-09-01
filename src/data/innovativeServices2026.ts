@@ -24,7 +24,7 @@ export type InnovativeService = {;
   enterprise?: boolean;
   startup?: boolean;
   smb?: boolean};
-
+;
 export const innovativeServices2026: InnovativeService[] = [
   // MICRO SAAS SERVICES
   {
@@ -619,7 +619,7 @@ export const innovativeServices2026: InnovativeService[] = [
     smb: true
 
 ];
-
+;
 export const serviceCategories = [
   {
 '

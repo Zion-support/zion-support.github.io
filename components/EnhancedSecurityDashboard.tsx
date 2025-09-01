@@ -38,9 +38,11 @@ interface SecurityThreat {
   status: 'active' | 'blocked' | 'investigating' | 'resolved';
   description: string;
   impact: string;
+
 }
 
 interface SecurityMetric {
+
   id: string;
   name: string;
   value: number;
@@ -49,14 +51,17 @@ interface SecurityMetric {
   changeType: 'increase' | 'decrease';'
   status: 'secure' | 'warning' | 'critical';
   icon: React.ComponentType<any>;
+
 }
 
 interface EnhancedSecurityDashboardProps {
+  // Add your props here
+
+
   title?: string;
   subtitle?: string;
   showThreats?: boolean;
   autoRefresh?: boolean;
-}
 
 const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
 
@@ -155,10 +160,10 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
   const [selectedThreat, setSelectedThreat] = useState<string | null>(null);'
   const [timeRange, setTimeRange] = useState<'1h' | '6h' | '24h' | '7d'>('24h');
 
-  useEffect(() => {
+  useEffect(: unknown {
     if (!autoRefresh) return;
 
-    const interval = setInterval(() => {
+    const interval = setInterval(: unknown {
       // Simulate new threats
       if (Math.random() > 0.7) {
 '
@@ -182,7 +187,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       }
     }, 10000);
 
-    return () => clearInterval(interval);
+    return : unknown clearInterval(interval);
   }, [autoRefresh]);
 
   const getThreatTypeIcon = (type: string) => {
@@ -362,7 +367,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
         </motion.div>
 
         {/* Security Threats */}
-        {showThreats && (
+        {showThreats && 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -381,7 +386,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
             </div>
 "
             <div className="space-y-4">
-              {threats.map((threat) => (
+              {threats.map((threat 
                 <motion.div
                   key={threat.id}
                   initial={{ opacity: 0, x: -20 }}

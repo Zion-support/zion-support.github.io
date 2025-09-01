@@ -349,7 +349,7 @@ const InnovativeServices2025 = () => {
                           {service.features.map((feature, idx) => (<li key={idx} className="text-gray-300 flex items-start">"
                               <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
                               {feature}
-                            </li>))}
+                            </li>) ) }
                         </ul>
                       </div>
 "
@@ -359,7 +359,7 @@ const InnovativeServices2025 = () => {
                           {service.benefits.map((benefit, idx) => (<li key={idx} className="text-gray-300 flex items-start">"
                               <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
                               {benefit}
-                            </li>))}
+                            </li>) ) }
                         </ul>
                       </div>
                     </div>
@@ -399,10 +399,10 @@ const InnovativeServices2025 = () => {
                       </div>
                     </div>
                   </div>
-                </div>))}
+                </div>) ) }
             </div>
           </div>
-        </section>))}
+        </section>) ) }
 
       {/* Enhanced CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"

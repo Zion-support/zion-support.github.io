@@ -16,12 +16,13 @@ import { QuoteStatusCards,
   QuotesFilter,
   QuotesTable'
  } from '@/components/admin/quotes';
+export { function };
 export default function QuoteManager(...args[]):  {
 
   const { user } = useAuth();'
   const isAdmin = user?.userType === 'admin';
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState<typeof false>(false);
   const {
 
     quotes,

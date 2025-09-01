@@ -294,11 +294,9 @@ export function AboutPage(...args: any[]): any {
                     >"
                       <CheckCircle className="w-4 h-4 text-cyan-400" />
                       <span>{skill}</span>
-                    </div>
-                  ))}
+                    </div>) ) }
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
 
@@ -340,8 +338,7 @@ export function AboutPage(...args: any[]): any {
                       <p className="text-gray-400">{milestone.description}</p>
                     </div>
                   </div>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </div>
           </div>
         </div>
@@ -374,7 +371,7 @@ export function AboutPage(...args: any[]): any {
                 to="/careers""
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
               >
-                <span>Join Our Team</span>
+                <span > Join Our Team</span>
               </Link>
             </div>
 

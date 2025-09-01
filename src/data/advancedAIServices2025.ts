@@ -1,3 +1,4 @@
+import React from 'react';
 export interface AdvancedAIService {
   id: string;
   title: string;
@@ -23,7 +24,8 @@ contactInfo: {
     email: string;
     website: string;
     address: string;
-  };
+  
+};
   technicalSpecs: {
 
     technology: string[];
@@ -33,7 +35,7 @@ contactInfo: {
     security: string[]};
   competitors?: string[];
   marketSize?: string}
-
+;
 export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
   // AI-Powered Autonomous Business Operations
   {

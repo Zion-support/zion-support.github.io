@@ -2,6 +2,9 @@ import React, { useState, useEffect, memo } from 'react.ts';'
 import { motion, AnimatePresence  } from 'framer-motion.ts';'
 import { Link  } from 'react-router-dom.ts';
 import { ArrowRight, 
+import { motion, AnimatePresence  } from 'framer - motion.ts';
+
+
   Play, 
   Star, 
   CheckCircle, 
@@ -26,8 +29,8 @@ interface HeroSlide {
   path: string;
   features: string[];
   gradient: string;
-  icon: React.ComponentType<any>;
-  stats: { label: string; value: string; icon: React.ComponentType<any> 
+  icon: React.ComponentType < any>;
+  stats: { label: string; value: string; icon: React.ComponentType < any> 
 }[]}
 
 const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
@@ -92,19 +95,19 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   useEffect(() => {
     if (!isAutoPlaying) return;
 
-    const interval = setInterval(() => {;
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 6000);
+    const interval = setInterval ( () => {;
+      setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) ;
+    }, 6000) ;
 
-    return () => clearInterval(interval)}, [isAutoPlaying, heroSlides.length]);
+    return () => clearInterval (interval) }, [isAutoPlaying, heroSlides.length]) ;
 
   const nextSlide = () => {;
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    setIsAutoPlaying(false)};
+    setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) ;
+    setIsAutoPlaying (false) };
 
   const prevSlide = () => {;
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-    setIsAutoPlaying(false)};
+    setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ;
+    setIsAutoPlaying (false) };
 
             scale: [1, 1.1, 1]
           }}
@@ -147,21 +150,11 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   { opacity: 0,
   x: -50 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -175,32 +168,17 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 exit = {
 
   { opacity: 0,
   y: -20 
-
-
-
-
-
 
 }}
                 transition={{ duration: 0.5 }}
@@ -241,21 +219,11 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }}
                       animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
                       transition={{ delay: index * 0.1 }}"
@@ -263,8 +231,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 "
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {feature}
-                    </motion.div>;
-                  ))}
+                    </motion.div>;) ) }
                 </div>
 
                 {/* CTA Button */}
@@ -296,21 +263,11 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   { opacity: 0,
   x: 50 ;
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   x: 0 ;
-
-
-
-
-
 
 }}
             transition = {
@@ -343,21 +300,11 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   { rotate: [0,
   360] 
 
-
-
-
-
-
 }}
                       transition = {
 
   { duration: 20,
   repeat: Infinity 
-
-
-
-
-
 
 }}
                     >"
@@ -379,21 +326,11 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                   transition={{ delay: 0.5 + index * 0.1 }}"
@@ -408,8 +345,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                       <p className="text-xs text-gray-300">{stat.label}</p>
                     </div>
                   </div>
-                </motion.div>;
-              ))}
+                </motion.div>;) ) }
             </div>
 
             {/* Rating card */}
@@ -419,21 +355,11 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   { opacity: 0,
   y: 20 ;
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 ;
-
-
-
-
-
 
 }}
               transition={{ delay: 0.8 }}"
@@ -475,8 +401,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                     : 'bg-white/30 hover:bg-white/50'`
                 }`}
                 whileHover={{ scale: 1.2 }}
-              />
-            ))}
+              />) ) }
           </div>
 
           <motion.button
@@ -503,11 +428,6 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   { y: [0, 10,
   0] 
 
-
-
-
-
-
 }}
           transition = {
 
@@ -528,11 +448,6 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   { y: [0, 12,
   0] 
 
-
-
-
-
-
 }}
             transition = {
 
@@ -550,10 +465,9 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
         </motion.div>;"
         <p className="text-xs text-zion-cyan/70 text-center mt-2">Scroll to explore</p>;
       </motion.div>;
-    </section>;
-  );
+    </section>;) ;
 }
-});
+}) ;
 
 export default EnhancedHeroSection;
 '"`

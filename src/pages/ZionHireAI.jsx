@@ -49,8 +49,7 @@ const ZionHireAI = () => {
                 <div className="text-zion-slate-light">
                   {item.label}
                 </div>
-              </div>
-            ))}
+              </div>) ) }
           </div>
 
           {/* Demo Section */}"
@@ -106,8 +105,7 @@ const ZionHireAI = () => {
         </div>
       </main>
       <Footer />
-    </>
-  )};
+    </>) };
 
 export default ZionHireAI;
 }'"

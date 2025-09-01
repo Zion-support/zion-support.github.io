@@ -23,8 +23,8 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
   const execute = async () => {
     try {
-      setLoading(true);
-      setError(null);
+      setLoading (true) ;
+      setError (null) ;
       
       const response = await fetch(url, {
 
@@ -82,10 +82,9 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     background: linear-gradient()
       90deg,
       transparent,
-      rgba(255, 255, 255, 0.4),
-      transparent
-    );
-    background-size: 200% 100%;
+      rgba (255, 255, 255, 0.4) ,
+      transparent) ;
+    background - size: 200% 100%;
     animation: shimmer 1.5s infinite}
 }
 
@@ -128,13 +127,12 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       validateOnSubmit: true,
       showErrors: true,
   ...options
-    
 
 };
     
-    this.rules = new Map();
-    this.errors = new Map();
-    this.init()}
+    this.rules = new Map () ;
+    this.errors = new Map () ;
+    this.init () }
 
   addRule(field, rule) {
 
@@ -148,20 +146,20 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     const value = this.form[field]?.value;
     const fieldErrors = [];
 
-    for (const result = rule(value, this.form);
+    for (const result = rule (value, this.form) ;
       if (result !== true) {
 
         fieldErrors.push(result)}
     }
 
-    this.errors.set(field, fieldErrors);
-    this.updateFieldUI(field);
+    this.errors.set (field, fieldErrors) ;
+    this.updateFieldUI (field) ;
     return fieldErrors.length === 0}
 
-  validateForm() {
+  validateForm () {
     let isValid = true;
     for (const fieldElement = this.form[field];
-    const errors = this.errors.get(field) || [];
+    const errors = this.errors.get (field) || [];
     
     if (errors.length > 0) {
 '
@@ -182,7 +180,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     // Implementation for hiding field-specific errors
   }
 
-  init() {
+  init () {
     if (this.options.validateOnBlur) {
 '
       this.form.addEventListener('blur', (e) => {
@@ -225,7 +223,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
 `
       // console.error(\`Error reading localStorage key "\${key}":\`, error);
       return initialValue}
-  });
+  }) ;
 
   const setValue = (value: T | ((val: T) => T)) => {
 
@@ -281,11 +279,10 @@ export function AdvancedAICodeGenerator() {
             return 'text-yellow-500';'
         return 'text-red-500'};
     const generateCode = async () => {
-        if (!aiPrompt.trim())
-            return;
-        setIsGenerating(true);
+        if (!aiPrompt.trim () ) return;
+        setIsGenerating (true) ;
         // Simulate AI code generation
-        setTimeout(() => {
+        setTimeout ( () => {
             const newGeneration = {
 
   id: Date.now().toString(),
@@ -300,11 +297,10 @@ export function AdvancedAICodeGenerator() {
                     'Alternative 2: Class-based approach','
                     'Alternative 3: Async/await pattern'
                 ],;
-                timestamp: new Date().toISOString()
-            };
-            setAiGenerations(prev => [newGeneration, ...prev]);
-            setGeneratedCode(newGeneration.generatedCode);
-            setIsGenerating(false)}, 2000)};
+                timestamp: new Date () .toISOString () };
+            setAiGenerations (prev => [newGeneration, ...prev]) ;
+            setGeneratedCode (newGeneration.generatedCode) ;
+            setIsGenerating (false) }, 2000) };
     const copyToClipboard = (text) => {
 
         navigator.clipboard.writeText(text)};
@@ -489,6 +485,8 @@ export function AdvancedAICodeGenerator() {
                       <span className="text-gray-500 dark:text-gray-400">
                         ⭐ {snippet.rating} ({snippet.usageCount} uses)
                       </span>
+                      <span className="text - gray - 500 dark:text - gray - 400">
+                        ⭐ {snippet.rating} ({snippet.usageCount} uses) </span>
                     </div>
                   </div>"
                   <div className="flex items-center space-x-2">"
@@ -614,9 +612,9 @@ export function AdvancedAICodeGenerator() {
                         <ul className="space-y-1">"
                           {analysis.suggestions.map((suggestion, index) => (<li key={index} className="text-sm text-green-600 dark:text-green-300">
                               • {suggestion}
-                            </li>))}
+                            </li>) ) }
                         </ul>
-                      </div>)}
+                      </div>) }
                     
                     {analysis.warnings.length > 0 && (<div>"
                         <h5 className="text-sm font-medium text-yellow-700 dark:text-yellow-400 mb-2">"
@@ -626,10 +624,10 @@ export function AdvancedAICodeGenerator() {
                         <ul className="space-y-1">"
                           {analysis.warnings.map((warning, index) => (<li key={index} className="text-sm text-yellow-600 dark:text-yellow-300">
                               • {warning}
-                            </li>))}
+                            </li>) ) }
                         </ul>
-                      </div>)}
-                  </div>)})}
+                      </div>) }
+                  </div>) }) }
             </div>
           </div>)}
 '"
@@ -677,11 +675,11 @@ export function AdvancedAICodeGenerator() {
                     <ul className="space-y-1">"
                       {generation.alternatives.map((alternative, index) => (<li key={index} className="text-sm text-gray-600 dark:text-gray-400">
                           • {alternative}
-                        </li>))}
+                        </li>) ) }
                     </ul>
-                  </div>)}
-              </div>))}
-          </div>)}
+                  </div>) }
+              </div>) ) }
+          </div>) }
       </div>
     </div>)}
 '"`

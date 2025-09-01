@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-// Environment variable schemas
+// Environment variable schemas;
 const EnvironmentSchema = z.object({
   NODE_ENV: z
     .enum(['development', 'production', 'test'])
@@ -88,7 +88,7 @@ const EnvironmentSchema = z.object({
     .default(true),
 });
 
-// Feature flags configuration
+// Feature flags configuration;
 const FeatureFlagsSchema = z.object({
   analytics: z.boolean().default(true),
   notifications: z.boolean().default(true),
@@ -97,29 +97,29 @@ const FeatureFlagsSchema = z.object({
   errorTracking: z.boolean().default(true),
   csrfProtection: z.boolean().default(true),
   rateLimiting: z.boolean().default(true),
-  botProtection: z.boolean().default(true),
+  botProtection: z.boolean().default(true)
 });
 
-// App configuration
+// App configuration;
 const AppConfigSchema = z.object({
   name: z.string(),
   version: z.string(),
   url: z.string().url(),
   environment: z.enum(['development', 'production', 'test']),
   debug: z.boolean(),
-  features: FeatureFlagsSchema,
+  features: FeatureFlagsSchema
 });
 
-// Runtime configuration
+// Runtime configuration;
 const RuntimeConfigSchema = z.object({
   isProduction: z.boolean(),
   isDevelopment: z.boolean(),
   isTest: z.boolean(),
   isClient: z.boolean(),
-  isServer: z.boolean(),
+  isServer: z.boolean()
 });
 
-// Configuration class
+// Configuration class;
 class Configuration {
   private static instance: Configuration;
   private config: z.infer<typeof AppConfigSchema>;
@@ -173,8 +173,8 @@ class Configuration {
         errorTracking: env.NEXT_PUBLIC_ENABLE_ERROR_TRACKING,
         csrfProtection: env.NEXT_PUBLIC_ENABLE_CSRF_PROTECTION,
         rateLimiting: env.NEXT_PUBLIC_ENABLE_RATE_LIMITING,
-        botProtection: env.NEXT_PUBLIC_ENABLE_BOT_PROTECTION,
-      },
+        botProtection: env.NEXT_PUBLIC_ENABLE_BOT_PROTECTION
+      }
     };
   }
 
@@ -187,7 +187,7 @@ class Configuration {
       isDevelopment: this.config.environment === 'development',
       isTest: this.config.environment === 'test',
       isClient,
-      isServer,
+      isServer
     };
   }
 
@@ -259,19 +259,19 @@ class Configuration {
         name: this.config.name,
         version: this.config.version,
         environment: this.config.environment,
-        debug: this.config.debug,
+        debug: this.config.debug
       },
       runtime: this.runtime,
       features: this.features,
-      validation: this.validate(),
+      validation: this.validate()
     };
   }
 }
 
-// Export singleton instance
+// Export singleton instance;
 export const config = Configuration.getInstance();
 
-// Export types
+// Export types;
 export type AppConfig = z.infer<typeof AppConfigSchema>;
 export type RuntimeConfig = z.infer<typeof RuntimeConfigSchema>;
 export type FeatureFlags = z.infer<typeof FeatureFlagsSchema>;
@@ -285,31 +285,31 @@ export {
   FeatureFlagsSchema,
 };
 
-// Utility functions
+// Utility functions;
 export function getConfig(): Configuration {
   return config;
 }
-
+;
 export function isFeatureEnabled(feature: keyof FeatureFlags): boolean {
   return config.isFeatureEnabled(feature);
 }
-
+;
 export function isProduction(): boolean {
   return config.isProduction();
 }
-
+;
 export function isDevelopment(): boolean {
   return config.isDevelopment();
 }
-
+;
 export function isTest(): boolean {
   return config.isTest();
 }
-
+;
 export function isClient(): boolean {
   return config.isClient();
 }
-
+;
 export function isServer(): boolean {
   return config.isServer();
 }

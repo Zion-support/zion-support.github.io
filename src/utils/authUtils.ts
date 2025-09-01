@@ -52,9 +52,9 @@ export const getAuthToken = (): string | null => {
 '
     // console.error('Error getting auth token:', error);
 
-    return null;
-  }
-};
+      return null;
+    }
+  };
 
 export const getUserData = (): any => {
 

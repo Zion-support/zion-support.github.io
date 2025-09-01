@@ -19,7 +19,7 @@ import { motion } from 'framer-motion';
 export default function Dashboard(...args[]):  {
 
   const stats = [
-      icon: <TrendingUp className="h-6 w-6 text-orange-500" />;
+      icon: <TrendingUp className="h - 6 w - 6 text - orange - 500" />;
     };
   ];
 
@@ -328,21 +328,11 @@ export default function Dashboard() {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ delay: index * 0.1 }}"
@@ -427,11 +417,6 @@ export default function Dashboard() {
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }}
                     animate = {
 
@@ -496,21 +481,11 @@ export default function Dashboard() {
   { opacity: 0,
   scale: 0.9 
 
-
-
-
-
-
 }}
                     animate = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
                     transition={{ delay: index * 0.1 }}`
@@ -567,8 +542,7 @@ export default function Dashboard() {
                         ></div>
                       </div>
                     </div>
-                  </motion.div>
-                ))}
+                  </motion.div>) ) }
               </div>
             </div>
           </div>
@@ -589,8 +563,7 @@ export default function Dashboard() {
                   >"
                     <action.icon className="h-5 w-5 mb-1" />
                     {action.name}
-                  </motion.button>
-                ))}
+                  </motion.button>) ) }
               </div>
             </div>
 
@@ -606,21 +579,11 @@ export default function Dashboard() {
   { opacity: 0,
   y: 10 
 
-
-
-
-
-
 }}
                     animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                     transition={{ delay: index * 0.1 }}"
@@ -742,8 +705,7 @@ export default function Dashboard() {
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 }
 }
 '"`

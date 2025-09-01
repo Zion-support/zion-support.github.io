@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 '
 import { motion, AnimatePresence } from 'framer-motion';
@@ -8,8 +7,11 @@ import {
   X, 
   Send, 
 
-  Bot, 
-  User, 
+  MessageCircle,
+  X,
+  Send,
+  Bot,
+  User,
   Sparkles,
   Settings,
   Mic,
@@ -37,6 +39,7 @@ import {
 } from 'lucide-react';
 
 interface Message {
+
   id: string;
   text: string;'
   sender: 'user' | 'assistant';
@@ -49,7 +52,8 @@ interface Message {
     url: string;
     name: string;
     size?: string;
-  }>;
+  
+}[];
   metadata?: {
 
     confidence?: number;
@@ -90,12 +94,12 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   const [inputValue, setInputValue] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
 
-  const [currentTheme, setCurrentTheme] = useState(theme);
-  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState (theme) ;
+  const [showSuggestions, setShowSuggestions] = useState (false) ;
 
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const recognitionRef = useRef<any>(null);
+  const messagesEndRef = useRef < HTMLDivElement> (null) ;
+  const inputRef = useRef < HTMLInputElement> (null) ;
+  const recognitionRef = useRef < any> (null) ;
 
   // Auto-scroll to bottom when new messages arrive
   const scrollToBottom = useCallback(() => {
@@ -103,9 +107,9 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, []);
 
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages, scrollToBottom]);
+  useEffect ( () => {
+    scrollToBottom () ;
+  }, [messages, scrollToBottom]) ;
 
   // Theme management
   useEffect(() => {
@@ -126,10 +130,10 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
       setCurrentTheme(theme);
     }
-  }, [theme]);
+  }, [theme]) ;
 
   // Initialize with welcome message
-  useEffect(() => {
+  useEffect ( () => {
     if (messages.length === 0) {
 
       const welcomeMessage: Message = {
@@ -147,9 +151,9 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
           ]
         }
       };
-      setMessages([welcomeMessage]);
+      setMessages ([welcomeMessage]) ;
     }
-  }, []);
+  }, []) ;
 
   const handleSendMessage = async (content: string) => {
 
@@ -159,8 +163,8 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
       id: Date.now().toString(),'
       type: 'user',
-      content: content.trim(),
-      timestamp: new Date()
+      content: content.trim () ,
+      timestamp: new Date () ,
     };
 
     setMessages(prev => [...prev, userMessage]);'
@@ -168,7 +172,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     setIsTyping(true);
 
     // Simulate AI response
-    setTimeout(() => {
+    setTimeout ( () => {
       const aiMessage: Message = {
 
         id: (Date.now() + 1).toString(),'
@@ -185,9 +189,9 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
           ]
         }
       };
-      setMessages(prev => [...prev, aiMessage]);
-      setIsTyping(false);
-    }, 1500);
+      setMessages (prev => [...prev, aiMessage]) ;
+      setIsTyping (false) ;
+    }, 1500) ;
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -200,7 +204,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   };
 
   const toggleChat = () => {
-    setIsOpen(!isOpen);
+    setIsOpen (!isOpen) ;
     if (!isOpen) {
 
       inputRef.current?.focus();
@@ -208,10 +212,10 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   };
 
   const toggleMinimize = () => {
-    setIsMinimized(!isMinimized);
+    setIsMinimized (!isMinimized) ;
   };
 
-  const getPositionClasses = () => {
+  const getPositionClasses = (...args: unknown[]): unknown => {
     switch (position) {
 '
       case 'bottom-left':'
@@ -238,8 +242,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     <div className={`fixed ${getPositionClasses()} z-50`}>
 
       {/* Chat Toggle Button */}
-      {!isOpen && (
-        <motion.button
+      {!isOpen && (<motion.button
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           whileHover={{ scale: 1.1 }}
@@ -255,8 +258,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
       {/* Chat Window */}
       <AnimatePresence>
-        {isOpen && (
-          <motion.div
+        {isOpen && (<motion.div
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -334,9 +336,8 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
                         </div>
                       </div>
-                    </div>
-                  )}
-                  <div ref={messagesEndRef} />
+                    </div>) }
+                  <div role="button" ref={messagesEndRef} />
                 </div>
 
 
@@ -364,14 +365,10 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                     </button>
                   </div>
                 </div>
-              </>
-            )}
-          </motion.div>
-        )}
+              </>) }
+          </motion.div>) }
       </AnimatePresence>
-    </div>
-  );
-
+    </div>) ;
 };
 
 '"`

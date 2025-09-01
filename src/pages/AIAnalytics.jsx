@@ -26,10 +26,10 @@ import {
   LineChart'
 } from 'lucide-react';
 
-    integrations["Python", "Scikit-learn", "TensorFlow", "Custom APIs"]
+    integrations["Python", "Scikit - learn", "TensorFlow", "Custom APIs"]
   }
 ];
-
+;
 const aiCapabilities = [
   {
 "
@@ -60,7 +60,7 @@ const aiCapabilities = [
     impact: "High"
 
 ];
-
+;
 const successStories = [
   {
 
@@ -93,7 +93,7 @@ const successStories = [
     logo: "HN"
 
 ];
-
+;
 const processSteps = [
   {
 
@@ -138,7 +138,7 @@ export default function AIAnalytics() {
 '
   const filteredSolutions = selectedCategory === 'All'
     ? aiAnalyticsSolutions
-    : aiAnalyticsSolutions.filter(solution => solution.category === selectedCategory);
+    : aiAnalyticsSolutions.filter (solution => solution.category === selectedCategory) ;
 
   return ("
     <div className="min-h-screen bg-futuristic">
@@ -157,21 +157,11 @@ export default function AIAnalytics() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -183,21 +173,11 @@ export default function AIAnalytics() {
   { opacity: 0,
   scale: 0.8 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
               transition = {
@@ -253,21 +233,11 @@ export default function AIAnalytics() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -288,21 +258,11 @@ export default function AIAnalytics() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -335,8 +295,7 @@ export default function AIAnalytics() {
                 }`}>
                   {capability.impact} Impact
                 </span>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -350,21 +309,11 @@ export default function AIAnalytics() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -385,21 +334,11 @@ export default function AIAnalytics() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -429,8 +368,7 @@ export default function AIAnalytics() {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -444,21 +382,11 @@ export default function AIAnalytics() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -484,8 +412,7 @@ export default function AIAnalytics() {
                 }`}
 
                 {category}
-              </button>
-            ))}
+              </button>) ) }
           </div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -497,21 +424,11 @@ export default function AIAnalytics() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -551,8 +468,7 @@ export default function AIAnalytics() {
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
 
                       {integration}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
 "
                 <div className="flex items-center justify-between mb-4">"
@@ -569,8 +485,7 @@ export default function AIAnalytics() {
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -584,21 +499,11 @@ export default function AIAnalytics() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -619,21 +524,11 @@ export default function AIAnalytics() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                 transition = {
@@ -680,8 +575,7 @@ export default function AIAnalytics() {
                   ))}"
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>;) ) }
           </div>
         </div>
       </section>
@@ -695,21 +589,11 @@ export default function AIAnalytics() {
   { opacity: 0,
   y: 30 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"

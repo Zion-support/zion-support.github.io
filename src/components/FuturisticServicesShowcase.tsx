@@ -21,7 +21,7 @@ interface ServiceShowcase {
 	id: string;
 	title: string;
 	description: string;
-	icon: React.ComponentType<any>;
+	icon: React.ComponentType < any>;
 	color: string;
 	features: string[];
 	price: string;'
@@ -100,11 +100,11 @@ export default function FuturisticServicesShowcase(...args[]):  {
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
 		if (!isPlaying) return;
-		const interval = setInterval(() => {;
-			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
-		}, 5000);
-		return () => clearInterval(interval);
-	}, [isPlaying]);
+		const interval = setInterval ( () => {;
+			setCurrentService ( (prev) => (prev + 1) % futuristicServices.length) ;
+		}, 5000) ;
+		return () => clearInterval (interval) ;
+	}, [isPlaying]) ;
 	const getStatusColor = (status: string) => {;
 		switch (status) {;'
 			case 'new': return 'bg-green-500';'
@@ -161,8 +161,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 												? 'bg-zion-cyan scale-125''
 												: 'bg-white/30 hover:bg-white/50'`
 										}`}
-									/>
-								))}
+									/>) ) }
 							</div>
 						</div>
 					</div>
@@ -175,32 +174,17 @@ export default function FuturisticServicesShowcase(...args[]):  {
   { opacity: 0,
   x: 100 
 
-
-
-
-
-
 }}
 							animate = {
 
   { opacity: 1,
   x: 0 
 
-
-
-
-
-
 }}
 							exit = {
 
   { opacity: 0,
   x: -100 
-
-
-
-
-
 
 }}
 							transition={{ duration: 0.5 }}"
@@ -236,21 +220,11 @@ export default function FuturisticServicesShowcase(...args[]):  {
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }}
 													animate = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }}
 													transition={{ delay: index * 0.1 }}"
@@ -258,8 +232,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 "
 													<Star className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
 													{feature}
-												</motion.li>;
-											))}
+												</motion.li>;) ) }
 										</ul>
 									</div>
 									<a"
@@ -318,21 +291,11 @@ export default function FuturisticServicesShowcase(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
 								whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
 								transition = {
@@ -366,12 +329,10 @@ export default function FuturisticServicesShowcase(...args[]):  {
 								<div className="text-zion-cyan font-semibold">
 									{service.price}
 								</div>
-							</motion.div>;
-						))};
+							</motion.div>;) ) };
 					</div>;
 				</div>;
 			</div>;
-		</div>;
-	);
+		</div>;) ;
 }
 '"`

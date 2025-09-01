@@ -240,17 +240,17 @@ const ApiPlayground: React.FC = () => {
     setResponseData('');
   };
 
-  const handleTestApi = async () => {
+  const handleTestApi = async : unknown {
     if (!selectedApi) return;
 
     setIsLoading(true);'
     setResponseData('');
 
     // Simulate API call
-    setTimeout(() => {
-      setResponseData(JSON.stringify(selectedApi.responseExample, null, 2));
-      setIsLoading(false);
-    }, 2000);
+    setTimeout ( () => {
+      setResponseData (JSON.stringify (selectedApi.responseExample, null, 2) ) ;
+      setIsLoading (false) ;
+    }, 2000) ;
   };
 
   const copyToClipboard = (text: string) => {
@@ -345,11 +345,9 @@ const ApiPlayground: React.FC = () => {
                           {api.featured && ("
                             <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded text-xs">
                               Featured
-                            </span>
-                          )}
+                            </span>) }
                         </div>
-                      </motion.div>
-                    ))}
+                      </motion.div>) ) }
                   </div>
                 </div>
               </div>
@@ -453,8 +451,7 @@ const ApiPlayground: React.FC = () => {
                                 <>"
                                   <Play className="w-5 h-5" />
                                   Test API
-                                </>
-                              )}
+                                </>) }
                             </button>
 
                             {/* Response */}
@@ -585,8 +582,7 @@ const ApiPlayground: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>) ;
 };
 
 export default ApiPlayground;

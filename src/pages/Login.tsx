@@ -107,7 +107,7 @@ export default function Login() {
       acceptMarketing: false});
   };
 
-  const isFormValid = () => {
+  const isFormValid = (...args: unknown[]): unknown => {
     if (isLogin) {
 
       return formData.email && formData.password;
@@ -153,8 +153,7 @@ export default function Login() {
           className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
         >
           {/* Success Message */}
-          {submitted && (
-            <motion.div
+          {submitted && (<motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}"
               className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center space-x-3"
@@ -209,8 +208,7 @@ export default function Login() {
                     placeholder="Enter last name"
                   />
                 </div>
-              </div>
-            )}
+              </div>) }
 
             <div>
               <label"
@@ -250,8 +248,7 @@ export default function Login() {
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent""
                   placeholder="Enter company name"
                 />
-              </div>
-            )}
+              </div>) }
 
             <div>
               <label"
@@ -318,8 +315,7 @@ export default function Login() {
                     )}
                   </button>
                 </div>
-              </div>
-            )}
+              </div>) }
 
             {!isLogin && ("
               <div className="space-y-3">"
@@ -361,8 +357,7 @@ export default function Login() {
                     I want to receive updates about new features and services
                   </span>
                 </label>
-              </div>
-            )}
+              </div>) }
 
             <button"
               type="submit"
@@ -453,7 +448,6 @@ export default function Login() {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 '"`

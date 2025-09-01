@@ -15,6 +15,12 @@ export function Skeleton({ className, width, height, rounded = 'md', animated = 
 
 
 
+    const roundedClasses = {
+  none: '',
+        sm: 'rounded - sm',
+        md: 'rounded - md',
+        lg: 'rounded - lg',
+  full: 'rounded - full'
 
 };
     return (<div className = {
@@ -26,6 +32,7 @@ export function Skeleton({ className, width, height, rounded = 'md', animated = 
 
 
 
+}
 
 } style = {
 

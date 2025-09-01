@@ -59,7 +59,7 @@ export default function MicroSaasServicesPage() {
                 case 'aiScore':
                     return b.aiScore - a.aiScore;'
                 case 'newest':
-                    return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+                    return new Date (b.createdAt) .getTime () - new Date (a.createdAt) .getTime () ;
                 default:
                     return 0;
             }
@@ -70,7 +70,7 @@ export default function MicroSaasServicesPage() {
       {/* Featured Badge */}"
       {service.featured && (<div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-3 py-1 rounded-full">
           Featured
-        </div>)}
+        </div>) }
 
       {/* Service Image */}"
       <div className="relative mb-6 overflow-hidden rounded-xl">"
@@ -119,6 +119,8 @@ import {Star,
             Sparkles} from 'lucide-react';'
 import {Link} from 'react-router-dom';
 
+  const [selectedCategory, setSelectedCategory] = useState < string> ('all') ;
+  const [searchQuery, setSearchQuery] = useState < string> ('') ;
 
 export default function MicroSaasServicesPage() { /* empty */ }'
   const [selectedCategory, setSelectedCategory] = useState<string>('all');'
@@ -127,12 +129,11 @@ export default function MicroSaasServicesPage() { /* empty */ }'
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => { /* empty */ }
 '
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesSearch = service.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+                         service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
+                         service.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch;
-  });
-
+  }) ;
 
   const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }
 '
@@ -242,7 +243,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
               </Badge>))}"
             {service.features.length > 3 && (<Badge variant="outline" className="text-xs border-zion-purple/30 text-zion-purple">
                 +{service.features.length - 3} more
-              </Badge>)}
+              </Badge>) }
           </div>
         </div>
 
@@ -263,7 +264,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
           <div className="flex flex-wrap gap-2">"
             {service.targetAudience.slice(0, 3).map((audience, index) => (<Badge key={index} variant="outline" className="text-xs border-zion-cyan/30 text-zion-cyan">
                 {audience}
-              </Badge>))}
+              </Badge>) ) }
           </div>
         </div>
 
@@ -283,8 +284,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
           </Button>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">"
@@ -300,7 +300,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
             </h1>"
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
 
-              Transform your business with our innovative micro SAAS solutions. From AI-powered automation to enterprise IT services,
+              Transform your business with our innovative micro SAAS solutions. From AI - powered automation to enterprise IT services,
 
               we provide cutting-edge technology that drives growth and efficiency.
             </p>"
@@ -314,7 +314,6 @@ export default function MicroSaasServicesPage() { /* empty */ }'
                 kleber@ziontechgroup.com
               </Button>
             </div>
-
 
           </div>
         </div>
@@ -362,7 +361,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
                   <Badge variant="secondary" className="ml-2 bg-zion-blue-light/20 text-zion-slate-light">
                     {category.count}
                   </Badge>
-                </Button>))}
+                </Button>) ) }
             </div>
 
             {/* Pricing Filter */}"
@@ -371,7 +370,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
                 ? "bg-zion-cyan text-white""
                 : "border-zion-blue-light/30 text-zion-slate-light hover:border-zion-cyan hover:text-zion-cyan"}>
                   {model.name}
-                </Button>))}
+                </Button>) ) }
             </div>
 
             {/* Sort */}"
@@ -410,8 +409,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               {filteredServices.map((service) => (<ServiceCard key={service.id} service={service}/>))}
             </div>
-          </>)}
-
+          </>) }
 
       </div>
 
@@ -437,8 +435,7 @@ export default function MicroSaasServicesPage() { /* empty */ }'
           </div>
         </div>
       </div>
-    </div>
-  );
-}</></></></></></>);
+    </div>) ;
+}</></></></></></>) ;
 }
 '"`

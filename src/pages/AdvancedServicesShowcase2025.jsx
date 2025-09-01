@@ -49,8 +49,8 @@ const AdvancedServicesShowcase2025 = () => {
                 return a.category.localeCompare(b.category);'
             case 'name':
             default:
-                return a.name.localeCompare(b.name)}
-    });
+                return a.name.localeCompare (b.name) }
+    }) ;
     const getCategoryIcon = (category) => {
 
         const icons = {

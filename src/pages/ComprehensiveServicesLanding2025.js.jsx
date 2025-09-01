@@ -27,7 +27,6 @@ const ComprehensiveServicesLanding2025 = () => {
             'logistics'['Logistics & Transportation'],;'
             'legal'['Legal Tech & AI'],;'
   'marketing'['Marketing & AI'];
-        
 
 };
         return allEnhancedServices.filter(service => industryMap[industry]?.includes(service.category))};
@@ -131,7 +130,7 @@ const ComprehensiveServicesLanding2025 = () => {
                       {service.features.slice(0, 3).map((feature, index) => (<div key={index} className="text-xs text-gray-300 flex items-center">"
                           <span className="text-green-400 mr-2">✓</span>
                           {feature}
-                        </div>))}
+                        </div>) ) }
                     </div>
                   </div>
 
@@ -155,7 +154,7 @@ const ComprehensiveServicesLanding2025 = () => {
                     </a>
                   </div>
                 </div>
-              </div>))}
+              </div>) ) }
           </div>
         </div>
       </section>

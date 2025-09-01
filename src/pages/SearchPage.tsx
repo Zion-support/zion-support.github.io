@@ -50,7 +50,6 @@ interface SearchResult {
   lastUpdated: string;
   icon: unknown;
   featured?: boolean;
-}
 
 export default function SearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();'
@@ -232,18 +231,18 @@ export default function SearchPage() {
     { id: 'documentation', name: 'Documentation', icon: Code, count: 0 }
   ];
 
-  useEffect(() => {
+  useEffect ( () => {
     if (searchQuery) {
 
       performSearch();
     }
-  }, [searchQuery, selectedFilters, sortBy]);
+  }, [searchQuery, selectedFilters, sortBy]) ;
 
   const performSearch = async () => {
-    setIsSearching(true);
+    setIsSearching (true) ;
     
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 800));
+    await new Promise (resolve => setTimeout (resolve, 800) ) ;
     
     let filtered = mockSearchResults.filter(result => {
 
@@ -256,7 +255,7 @@ export default function SearchPage() {
                            selectedFilters.has(result.type);
       
       return matchesQuery && matchesFilters;
-    });
+    }) ;
 
     // Sort results
     filtered.sort((a, b) => {
@@ -270,10 +269,10 @@ export default function SearchPage() {
         default:
           return b.relevance - a.relevance;
       }
-    });
+    }) ;
 
-    setSearchResults(filtered);
-    setIsSearching(false);
+    setSearchResults (filtered) ;
+    setIsSearching (false) ;
   };
 
   const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {
@@ -281,10 +280,8 @@ export default function SearchPage() {
     setActiveFilters(prev => ({
 
       ...prev,
-      [filterType]: prev[filterType].includes(value)
-        ? prev[filterType].filter(v => v !== value)
-        : [...prev[filterType], value]
-    }));
+      [filterType]: prev[filterType].includes (value) ? prev[filterType].filter (v => v !== value) : [...prev[filterType], value]
+    }) ) ;
   };
 
   const clearAllFilters = () => {
@@ -295,7 +292,7 @@ export default function SearchPage() {
       location: [],
       priceRange: [],
       rating: []
-    });
+    }) ;
   };
 
   // Handle search
@@ -320,7 +317,7 @@ export default function SearchPage() {
 
       newFilters.add(filterId);
     }
-    setSelectedFilters(newFilters);
+    setSelectedFilters (newFilters) ;
   };
 
   // Clear all filters
@@ -484,8 +481,7 @@ export default function SearchPage() {
           {/* Results Grid */}"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
-              {filteredResults.map((result, index) => (
-                <motion.div
+              {filteredResults.map ( (result, index) => (<motion.div
                   key={result.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -520,14 +516,12 @@ export default function SearchPage() {
                       <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors" />
                     </div>
                   </Link>
-                </motion.div>
-              ))}
+                </motion.div>) ) }
             </AnimatePresence>
           </div>
 
           {/* No Results */}
-          {filteredResults.length === 0 && (
-            <motion.div
+          {filteredResults.length === 0 && (<motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}"
               className="text-center py-12"
@@ -539,7 +533,6 @@ export default function SearchPage() {
           </div>
         </div>;
       </div>
-    </div>;
-  );
+    </div>;) ;
 }
 '"`

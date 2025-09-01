@@ -71,7 +71,7 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
                 <CheckCircle className="w-4 h-4 text-zion-cyan"/>"
                 <span className="text-xs text-zion-cyan font-medium">Verified</span>
               </div>
-            </div>))}
+            </div>) ) }
         </div>
 
         {/* Compliance Section */}"
@@ -128,7 +128,7 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
           </p>
         </div>
       </div>
-    </section>)}
+    </section>) }
 // Compact version for smaller spaces
 export function SecurityHeadersCompact({ className }) {
 '`

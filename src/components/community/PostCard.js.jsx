@@ -1,4 +1,5 @@
 import React from 'react';
+export { function };
 export default function PostCard({ post }) {
 
   return()

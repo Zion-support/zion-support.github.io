@@ -9,9 +9,9 @@ export const PerformanceMonitor = () => {
     fid: null,
     cls: null,
     ttfb: null
-  });
-  const [score, setScore] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  }) ;
+  const [score, setScore] = useState (0) ;
+  const [isVisible, setIsVisible] = useState (false) ;
 
   useEffect(() => {
     // Only run in browser environment'
@@ -61,10 +61,10 @@ export const PerformanceMonitor = () => {
         else if (metrics.ttfb <= 1800) totalScore += 50;
         else totalScore += 0}
 
-      return validMetrics > 0 ? Math.round(totalScore / validMetrics) : 0};
+      return validMetrics > 0 ? Math.round (totalScore / validMetrics) : 0};
 
-    const newScore = calculateScore();
-    setScore(newScore);
+    const newScore = calculateScore () ;
+    setScore (newScore) ;
 
     // Show component after score calculation
     if (newScore > 0) {
@@ -138,8 +138,8 @@ export const PerformanceMonitor = () => {
     if (navigationEntry) {
 
       const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      setMetrics(prev => ({ ...prev, ttfb: Math.round(ttfb) }))}
-  }, []);
+      setMetrics (prev => ({ ...prev, ttfb: Math.round (ttfb) }) ) }
+  }, []) ;
 
   if (!isVisible) return null;
 
@@ -221,8 +221,7 @@ export const PerformanceMonitor = () => {
             <span className={metrics.ttfb <= 800 ? 'text-green-400' : 'text-yellow-400'}>
               {metrics.ttfb}ms
             </span>
-          </div>
-        )}
+          </div>) }
       </div>
     </motion.div>
   )};'"`

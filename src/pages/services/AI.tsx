@@ -24,7 +24,8 @@ import {
   Factory,
   ShoppingCart'
  } from 'lucide-react';
-
+;
+export { function };
 export default function AIServices(...args[]):  {
 
   const aiServices = [
@@ -174,7 +175,7 @@ export default function AIServices(...args[]):  {
           </div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {aiServices.map((service, index) => (
+            {aiServices.map((service, index 
               <div
                 key={index}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -229,7 +230,7 @@ export default function AIServices(...args[]):  {
           </div>
 "
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {aiTechnologies.map((tech, index) => (
+            {aiTechnologies.map(tech: unknown, index: unknown (
               <div
                 key={index}"
                 className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
@@ -258,7 +259,7 @@ export default function AIServices(...args[]):  {
           </div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown 
               <div
                 key={index}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"

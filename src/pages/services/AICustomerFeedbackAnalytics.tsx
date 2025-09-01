@@ -342,7 +342,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -445,7 +445,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
+            {benefits.map(benefit: unknown, index: unknown (
               <motion.div
                 key={benefit.title}
                 initial = {
@@ -548,7 +548,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+            {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div
                 key={plan.name}
                 initial = {
@@ -671,7 +671,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index)  => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={useCase.industry}
                 initial = {
@@ -774,7 +774,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
           </motion.div>
 "
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {integrations.map((integration, index)  => (
+            {integrations.map(integration: unknown, index: unknown 
               <motion.div
                 key={integration.name}
                 initial = {
@@ -817,7 +817,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
                   {integration.name}
                 </h3>"
                 <div className="flex flex-wrap gap-2">
-                  {integration.platforms.map((platform, platformIndex) => (
+                  {integration.platforms.map((platform, platformIndex (
                     <span
                       key={platformIndex}"
                       className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"

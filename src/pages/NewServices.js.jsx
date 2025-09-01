@@ -165,7 +165,7 @@ export function NewServices() {
                 ? 'bg-zion-cyan text-zion-blue-dark shadow-lg shadow-zion-cyan/30''`
                 : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30 border border-zion-cyan/30'}`}>'
                 {category === 'all' ? 'All Services' : category}
-              </button>))}
+              </button>) ) }
           </div>
         </motion.div>
 
@@ -222,7 +222,7 @@ export function NewServices() {
                       </li>))}"
                     {service.features.length > 3 && (<li className="text-zion-slate-light text-sm text-center">
                         +{service.features.length - 3} more features
-                      </li>)}
+                      </li>) }
                   </ul>
                 </div>
 
@@ -233,7 +233,7 @@ export function NewServices() {
                     {service.benefits.slice(0, 2).map((benefit, index) => (<li key={index} className="text-zion-slate-light text-sm flex items-center">"
                         <span className="text-zion-cyan mr-2">→</span>
                         {benefit}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
 
@@ -258,9 +258,9 @@ export function NewServices() {
                 {'tags' in service && service.tags && (<div className="mt-4 flex flex-wrap gap-2">'"
                     {('tags' in service ? service.tags []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">;
                         {tag}
-                      </span>))}
-                  </div>)}
-              </motion.div>))}
+                      </span>) ) }
+                  </div>) }
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -301,7 +301,7 @@ export function NewServices() {
                       </li>))}"
                     {service.features.length > 3 && (<li className="text-zion-slate-light text-sm text-center">
                         +{service.features.length - 3} more features
-                      </li>)}
+                      </li>) }
                   </ul>
                 </div>
 
@@ -312,7 +312,7 @@ export function NewServices() {
                     {service.benefits.slice(0, 2).map((benefit, index) => (<li key={index} className="text-zion-slate-light text-sm flex items-center">"
                         <span className="text-zion-cyan mr-2">→</span>
                         {benefit}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
 
@@ -337,9 +337,9 @@ export function NewServices() {
                 {'tags' in service && service.tags && (<div className="mt-4 flex flex-wrap gap-2">'"
                     {('tags' in service ? service.tags []).slice(0, 4).map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full">;
                         {tag}
-                      </span>))}
-                  </div>)}
-              </motion.div>))}
+                      </span>) ) }
+                  </div>) }
+              </motion.div>) ) }
           </div>
         </motion.div>
 
@@ -354,7 +354,7 @@ export function NewServices() {
                 setSelectedCategory('all')}} className="px-6 py-3 bg-zion-cyan text-zion-blue-dark rounded-lg font-medium hover:bg-zion-cyan/90 transition-colors">
               Clear Filters
             </button>
-          </motion.div>)}
+          </motion.div>) }
 
         {/* Service Count */}"
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="text-center mt-16 text-zion-slate-light">"
@@ -467,7 +467,7 @@ export function NewServices() {
                     {selectedService.features.map((feature, index) => (<li key={index} className="text-zion-slate-light text-sm flex items-center">"
                         <span className="text-zion-cyan mr-2">✓</span>
                         {feature}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
 "
@@ -477,7 +477,7 @@ export function NewServices() {
                     {selectedService.benefits.map((benefit, index) => (<li key={index} className="text-zion-slate-light text-sm flex items-center">"
                         <span className="text-zion-cyan mr-2">→</span>
                         {benefit}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
 "
@@ -487,7 +487,7 @@ export function NewServices() {
                     {selectedService.useCases.map((useCase, index) => (<li key={index} className="text-zion-slate-light text-sm flex items-center">"
                         <span className="text-zion-cyan mr-2">•</span>
                         {useCase}
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </div>
               </div>

@@ -18,7 +18,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     const [currentPage, setCurrentPage] = useState(1);
     const [showFilters, setShowFilters] = useState(false);
     // Process data based on search, filters, and sorting
-    const processedData = useMemo(() => {
+    const processedData = useMemo ( () => {
         let result = [...data];
         // Apply search
         if (searchQuery.trim()) {
@@ -53,7 +53,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                             return false}
                     default:
                         return true}
-            })});
+            }) }) ;
         // Apply sorting
         if (sortConfig) {
 
@@ -78,7 +78,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         itemHeight: 60,
         containerHeight: height - 120, // Account for header and controls
         overscan: 5
-    });
+    }) ;
     // Handle sorting
     const handleSort = useCallback((key) => {
 
@@ -134,7 +134,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             onSelectionChange?.([])}
     }, [paginatedData, onSelectionChange]);
     // Export data
-    const handleExport = useCallback(() => {
+    const handleExport = useCallback ( () => {
         if (onExport) {
 
             onExport(processedData)}
@@ -161,8 +161,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         const a = document.createElement('a');
         a.href = url;
         a.download = filename;
-        a.click();
-        window.URL.revokeObjectURL(url)};
+        a.click () ;
+        window.URL.revokeObjectURL (url) };
     // Get sort icon
     const getSortIcon = (key) => {
 
@@ -218,20 +218,10 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
   { opacity: 0,
   height: 0 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,'
   height: 'auto' 
-
-
-
-
-
 
 }} exit = {
 
@@ -267,9 +257,9 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                       <option value="starts_with">Starts with</option>"
                       <option value="ends_with">Ends with</option>
                     </select>
-                  </div>))}
+                  </div>) ) }
               </div>
-            </motion.div>)}
+            </motion.div>) }
         </AnimatePresence>
       </div>
 
@@ -287,7 +277,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                   <span className="font-medium text-gray-700 dark:text-gray-300 text-sm">
                     {column.header}
                   </span>
-                  {column.sortable !== false && getSortIcon(column.key)}
+                  {column.sortable !== false && getSortIcon (column.key) }
                 </button>
               </div>))}
 "
@@ -305,17 +295,21 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
   y: 0 
 
+}} className={`flex items - center px - 4 py - 3 border - b border - gray - 100 dark:border - gray - 600 hover:bg - gray - 50 dark:hover:bg - gray - 700 transition - colors ${onRowClick ? 'cursor - pointer' : ''} ${selectedItems.has (String (item.id || JSON.stringify (item) ) ) ? 'bg - blue - 50 dark:bg - blue - 900 / 20' : ''}`} onClick = { () => onRowClick?. (item,
+  index) }>
+                {enableSelection && (<div className="w - 8 mr - 2">
+                    <input type="checkbox" checked={selectedItems.has (String (item.id || JSON.stringify (item) ) ) } onChange = { (e) => handleSelectionChange (item,
+  e.target.checked) } onClick={ (e) => e.stopPropagation () } className="w - 4 h - 4 text - blue - 600 border - gray - 300 rounded focus:ring - blue - 500"/>
+                  </div>) }
 
+                {columns.map (column => (<div key={String (column.key) } className={`flex - 1 px - 2 py - 1 ${column.width ? `w-${column.width}` : ''}`} style={{ width: column.width }}>
+                    {renderCell (column, item, index) }
+                  </div>) ) }
 
 
 
@@ -359,8 +353,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     <button className="p-1 text-gray-400 hover:text-red-500 transition-colors">"
                       <Trash2 className="w-4 h-4"/>
                     </button>
-                  </div>)}
-              </motion.div>))}
+                  </div>) }
+              </motion.div>) ) }
           </div>
         </div>
       </div>
@@ -394,7 +388,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                         ? 'bg-blue-500 text-white''`
                         : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>
                     {page}
-                  </button>)})}
+                  </button>) }) }
               
               <button onClick = {
 

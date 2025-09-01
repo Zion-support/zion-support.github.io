@@ -653,5 +653,6 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
           transition: all 0.3s ease !important}`
       `}</style>
     </>)};
+export { ContentQualityEnhancer };
 export default ContentQualityEnhancer;
 }}}}}}}}}'"`

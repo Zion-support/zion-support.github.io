@@ -84,11 +84,6 @@ const ServicePortfolioDashboard = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} animate = {
 
   { opacity: 1,
@@ -138,11 +133,6 @@ const ServicePortfolioDashboard = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
@@ -169,20 +159,10 @@ const ServicePortfolioDashboard = () => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -213,7 +193,7 @@ const ServicePortfolioDashboard = () => {
                     </p>
                   </CardContent>
                 </Card>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -225,11 +205,6 @@ const ServicePortfolioDashboard = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -256,20 +231,10 @@ const ServicePortfolioDashboard = () => {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -299,7 +264,7 @@ const ServicePortfolioDashboard = () => {
                     </p>
                   </CardContent>
                 </Card>
-              </motion.div>))}
+              </motion.div>) ) }
           </div>
         </div>
       </section>
@@ -311,11 +276,6 @@ const ServicePortfolioDashboard = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -342,20 +302,10 @@ const ServicePortfolioDashboard = () => {
   { opacity: 0,
   x: -20 
 
-
-
-
-
-
 }} whileInView = {
 
   { opacity: 1,
   x: 0 
-
-
-
-
-
 
 }} transition = {
 
@@ -382,11 +332,6 @@ const ServicePortfolioDashboard = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 
@@ -419,11 +364,6 @@ const ServicePortfolioDashboard = () => {
 
   { opacity: 0,
   y: 20 
-
-
-
-
-
 
 }} whileInView = {
 

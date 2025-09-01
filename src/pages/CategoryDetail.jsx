@@ -18,9 +18,9 @@ const AUTO_SERVICE_TITLES = ["
 function generateInnovationListing(index) {
 
     const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length];
-    const price = Math.floor(Math.random() * 9500) + 500; // $500 - $10,000
-    const rating = Math.floor(Math.random() * 2) + 4; // 4-5 stars
-    const reviewCount = Math.floor(Math.random() * 50) + 10;
+    const price = Math.floor (Math.random () * 9500) + 500; // $500 - $10,000
+    const rating = Math.floor (Math.random () * 2) + 4; // 4 - 5 stars
+    const reviewCount = Math.floor (Math.random () * 50) + 10;
     return {
 
         id: `innovation-auto-${index}`,
@@ -41,9 +41,8 @@ function generateInnovationListing(index) {
         reviewCount,"
         location: "Global","
         availability: "Immediate",
-        aiScore: Math.floor(Math.random() * 20) + 80
+        aiScore: Math.floor (Math.random () * 20) + 80
     }}
-export default function CategoryDetail() {
     // Cast to specify the expected route param type since useParams may be untyped
     const { slug } = useParams();
     const navigate = useNavigate();
@@ -139,8 +138,8 @@ export default function CategoryDetail() {
             icon: <Briefcase className="w-6 h-6"/>
 
     };
-    useEffect(() => {
-        setIsLoading(true);
+    useEffect ( () => {
+        setIsLoading (true) ;
         // Find the category data based on slug
         const currentCategory = categoryData[slug] || {
 '"
@@ -148,7 +147,7 @@ export default function CategoryDetail() {
             description: "Explore our collection in this category","
             icon: <Bot className="w-6 h-6"/>
         };
-        setCategory(currentCategory);
+        setCategory (currentCategory) ;
         innovationCounterRef.current = 0;
         // Filter listings by category
         const categoryTitle = currentCategory.title;
@@ -183,11 +182,11 @@ export default function CategoryDetail() {
             return;
         const interval = setInterval(() => {
             innovationCounterRef.current += 1;
-            setListings((prev) => [
-                generateInnovationListing(innovationCounterRef.current),
+            setListings ( (prev) => [
+                generateInnovationListing (innovationCounterRef.current) ,
                 ...prev,
-            ])}, 120000); // every 2 minutes
-        return () => clearInterval(interval)}, [slug]);
+            ]) }, 120000) ; // every 2 minutes
+        return () => clearInterval (interval) }, [slug]) ;
     // Handle requesting a quote
     const handleRequestQuote = (listingId) => {
 
@@ -213,7 +212,7 @@ export default function CategoryDetail() {
                         image: listing.images?.[0]
                     }
                 }
-            })}
+            }) }
     };
     return (<>
 "

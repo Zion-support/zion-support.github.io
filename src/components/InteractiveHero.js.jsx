@@ -63,7 +63,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
                 duration: 3,
                 repeat: Infinity,"
   ease: "easeInOut"
-            
 
 }
         }
@@ -80,7 +79,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             y[0, -50, 0],;
             scale[1, 1.2,;
   1]
-        
 
 }} transition = {
 
@@ -89,7 +87,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             duration: 20,
             repeat: Infinity,"
   ease: "linear"
-        
 
 }}/>"
         <motion.div className="absolute top-40 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" animate = {
@@ -100,7 +97,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             y[0, 60, 0],;
             scale[1, 0.8,;
   1]
-        
 
 }} transition = {
 
@@ -109,7 +105,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             duration: 25,
             repeat: Infinity,"
   ease: "linear"
-        
 
 }}/>"
         <motion.div className="absolute bottom-20 left-1/2 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl" animate = {
@@ -120,7 +115,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             y[0, -40, 0],;
             scale[1, 1.1,;
   1]
-        
 
 }} transition = {
 
@@ -129,7 +123,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             duration: 18,
             repeat: Infinity,"
   ease: "linear"
-        
 
 }}/>
       </div>
@@ -145,7 +138,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)`
           `,'
   backgroundSize: '50px 50px'
-        
 
 }}/>
       </div>
@@ -176,8 +168,8 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 }}>'"
                 {word === 'Zion' ? (<span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                     {word}
-                  </span>) : (word)}
-              </motion.span>))}
+                  </span>) : (word) }
+              </motion.span>) ) }
           </motion.h1>
 
           {/* Description */}"
@@ -214,7 +206,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
                 <div className="text-gray-400 text-sm group-hover:text-white transition-colors duration-300">
                   {stat.label}
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </motion.div>
         </motion.div>
       </div>
@@ -227,7 +219,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             y[0, -20, 0],;
             rotate[0, 180,;
   360]
-        
 
 }} transition = {
 
@@ -236,7 +227,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             duration: 8,
             repeat: Infinity,"
   ease: "easeInOut"
-        
 
 }}/>
 "
@@ -247,7 +237,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             y[0, 30, 0],;
             x[0, 20,;
   0]
-        
 
 }} transition = {
 
@@ -256,7 +245,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             duration: 12,
             repeat: Infinity,"
   ease: "easeInOut"
-        
 
 }}/>
 
@@ -268,7 +256,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             x: mousePosition.x - 8,
             y: mousePosition.y - 8,
   scale: isHovered ? 2 : 1
-        
 
 }} transition = {
 
@@ -277,7 +264,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             type: "spring",
             stiffness: 500,
   damping: 30
-        
 
 }}/>
     </section>)};

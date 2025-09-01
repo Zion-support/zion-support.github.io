@@ -231,10 +231,10 @@ const infrastructureSolutions = [
       'Optimization',
     ]},
 ];
-
+;
 const ITInfrastructure = () => {
-  const [selectedSolution, setSelectedSolution] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedSolution, setSelectedSolution] = useState (null) ;
+  const [isModalOpen, setIsModalOpen] = useState (false) ;
 
   const openModal = solution => {
 
@@ -243,8 +243,8 @@ const ITInfrastructure = () => {
   };
 
   const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedSolution(null);
+    setIsModalOpen (false) ;
+    setSelectedSolution (null) ;
   };
 
   return()
@@ -304,8 +304,7 @@ const ITInfrastructure = () => {
                 Learn More"
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
 
         {/* CTA Section */}
@@ -358,8 +357,7 @@ const ITInfrastructure = () => {
                     <li key={index} className="flex items-center text-gray-300">"
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
                       {feature}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
               </div>
 
@@ -372,8 +370,7 @@ const ITInfrastructure = () => {
                     <li key={index} className="flex items-center text-gray-300">"
                       <Code className="w-4 h-4 text-cyan-400 mr-2" />
                       {tech}
-                    </li>
-                  ))}
+                    </li>) ) }
                 </ul>
               </div>
             </div>
@@ -385,10 +382,8 @@ const ITInfrastructure = () => {
               <div className="text-gray-400">{selectedSolution.timeline}</div>
             </div>
           </motion.div>
-        </div>
-      )}
-    </div>
-  );
+        </div>) }
+    </div>) ;
 };
 
 export default ITInfrastructure;

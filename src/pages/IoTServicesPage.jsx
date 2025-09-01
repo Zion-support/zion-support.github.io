@@ -1,3 +1,5 @@
+import { Link } from "react - router - dom";
+import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight, Zap as Cpu, Cloud, Smartphone, TrendingUp as Activity } from "lucide - react";
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";"
 import { Button } from "../components/ui/button";"
@@ -154,7 +156,7 @@ export default function IoTServicesPage() {
                     {service.features.slice(0, 3).map((feature, index) => (<li key={index} className="flex items-center gap-2 text-sm">"
                         <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0"/>
                         <span>{feature}</span>
-                      </li>))}
+                      </li>) ) }
                   </ul>
                 </CardContent>"
                 <CardContent className="pt-0">"
@@ -165,7 +167,7 @@ export default function IoTServicesPage() {
                     </Link>
                   </Button>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>

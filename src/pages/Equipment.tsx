@@ -125,7 +125,7 @@ const Equipment: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Equipment Grid/List */}
+        {/* Equipment Grid / List */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -215,12 +215,10 @@ const Equipment: React.FC = () => {
               >
                 Clear Search
               </button>
-            </div>
-          )}
+            </div>) }
         </motion.div>
       </div>
-    </div>
-  );
+    </div>) ;
 };
 
 export default Equipment;

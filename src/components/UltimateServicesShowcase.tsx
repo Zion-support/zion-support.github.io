@@ -59,7 +59,8 @@ contactInfo: {
     mobile: string;
     email: string;
     address: string;
-    website: string};
+    website: string
+};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -70,7 +71,7 @@ contactInfo: {
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
   marketDisruption: string}
-
+;
 const contact = {
 '
   mobile: '+1 302 464 0950','
@@ -83,13 +84,8 @@ const contact = {
   website: 'https://ziontechgroup.com';
 ;
 
-
-
-
-
-
 };
-
+;
 const categories = [
   {
 '
@@ -119,7 +115,7 @@ const categories = [
     services: innovativeMicroSaasSolutions2025;
   };
 ];
-
+;
 const innovationLevelColors = {
 '
   'Revolutionary': 'from-red-600 to-pink-700','
@@ -132,13 +128,8 @@ const innovationLevelColors = {
   'Emerging': 'from-green-600 to-emerald-700';
 ;
 
-
-
-
-
-
 };
-
+;
 const patentStatusColors = {
 '
   'Patented': 'from-green-600 to-emerald-700','
@@ -150,11 +141,6 @@ const patentStatusColors = {
   ;'
   'Open Source': 'from-purple-600 to-violet-700';
 ;
-
-
-
-
-
 
 };
 
@@ -171,7 +157,7 @@ export function UltimateServicesShowcase(...args[]):  {
 '
   const filteredServices = selectedCategory === 'all'
     ? allServices
-    : categories.find(cat => cat.id === selectedCategory)?.services || [];
+    : categories.find (cat => cat.id === selectedCategory) ?.services || [];
 
   const containerVariants = {
 
@@ -189,11 +175,6 @@ export function UltimateServicesShowcase(...args[]):  {
 
   hidden: { opacity: 0,
   y: 20 
-
-
-
-
-
 
 },
     visible: {
@@ -218,21 +199,11 @@ export function UltimateServicesShowcase(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
           transition={{ duration: 0.8 }}
@@ -246,7 +217,7 @@ export function UltimateServicesShowcase(...args[]):  {
           </h1>"
           <p className="text-xl text-zion-gray-light max-w-4xl mx-auto leading-relaxed">
             Discover our revolutionary AI, IT infrastructure, and micro SAAS solutions that are transforming industries worldwide.
-            Each service is backed by cutting-edge technology and proven results.
+            Each service is backed by cutting - edge technology and proven results.
           </p>
 
           {/* Contact Information */}"
@@ -274,32 +245,17 @@ export function UltimateServicesShowcase(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
           transition = {
 
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
 
 }}
         >
@@ -325,9 +281,8 @@ export function UltimateServicesShowcase(...args[]):  {
                   : 'bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white'`
               }`}
 
-              {category.name} ({category.services.length});
-            </button>;
-          ))}
+              {category.name} ({category.services.length}) ;
+            </button>;) ) }
         </motion.div>
 
         {/* Services Grid */}
@@ -337,8 +292,7 @@ export function UltimateServicesShowcase(...args[]):  {
           initial="hidden""
           animate="visible"
 
-          {filteredServices.map((service) => (
-            <motion.div
+          {filteredServices.map ( (service) => (<motion.div
               key={service.id}
               variants={itemVariants}"
               className="group relative"
@@ -395,8 +349,7 @@ export function UltimateServicesShowcase(...args[]):  {
                       <li key={index} className="flex items-center gap-2 text-sm text-zion-gray-light">"
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                         {feature}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
                 </div>
 
@@ -440,8 +393,7 @@ export function UltimateServicesShowcase(...args[]):  {
                   </Link>
                 </div>;
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </motion.div>
 
         {/* Call to Action */}
@@ -452,32 +404,17 @@ export function UltimateServicesShowcase(...args[]):  {
   { opacity: 0,
   y: 20 ;
 
-
-
-
-
-
 }}
           animate = {
 
   { opacity: 1,
   y: 0 ;
 
-
-
-
-
-
 }}
           transition = {
 
   { duration: 0.8,
   delay: 0.4 ;
-
-
-
-
-
 
 }}
         >"
@@ -546,8 +483,7 @@ export function UltimateServicesShowcase(...args[]):  {
                       <li key={index} className="flex items-center gap-2 text-zion-gray-light">"
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                         {feature}
-                      </li>
-                    ))}
+                      </li>) ) }
                   </ul>
 "
                   <h3 className="text-xl font-bold text-white mb-3">AI Capabilities</h3>"
@@ -555,8 +491,7 @@ export function UltimateServicesShowcase(...args[]):  {
                     {selectedService.aiCapabilities.map((capability, index) => ("
                       <span key={index} className="bg-zion-cyan text-white text-sm px-3 py-1 rounded-full">
                         {capability}
-                      </span>
-                    ))}
+                      </span>) ) }
                   </div>
                 </div>
 
@@ -589,8 +524,7 @@ export function UltimateServicesShowcase(...args[]):  {
                         {selectedService.technology.map((tech, index) => ("
                           <span key={index} className="bg-zion-slate text-zion-cyan text-xs px-2 py-1 rounded">
                             {tech}
-                          </span>
-                        ))}
+                          </span>) ) }
                       </div>
                     </div>
                     <div>"
@@ -599,8 +533,7 @@ export function UltimateServicesShowcase(...args[]):  {
                         {selectedService.integrations.map((integration, index) => ("
                           <span key={index} className="bg-zion-slate text-zion-cyan text-xs px-2 py-1 rounded">
                             {integration}
-                          </span>
-                        ))}
+                          </span>) ) }
                       </div>
                     </div>
                   </div>
@@ -625,10 +558,8 @@ export function UltimateServicesShowcase(...args[]):  {
               </div>
             </div>;
           </div>;
-        </div>;
-      )};
-    </section>;
-  );
+        </div>;) };
+    </section>;) ;
 }
 
 export default UltimateServicesShowcase;

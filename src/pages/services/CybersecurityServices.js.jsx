@@ -258,5 +258,6 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
       </section>
     </div>);
 };
+export { CybersecurityServices };
 export default CybersecurityServices;
 }}'"

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { Button } from "./ui/Button";
+export default ContactForm;
+import { Button } from "./ui / Button";
+
+
 const ContactForm = () => {
     const [formData, setFormData] = useState({
 '
@@ -20,7 +23,7 @@ const ContactForm = () => {
 
             ...prev,
             [name]: value
-        }))};
+        }) ) };
     const handleSubmit = async (e) => {
 
         e.preventDefault();
@@ -28,7 +31,7 @@ const ContactForm = () => {
         setSubmitStatus('idle');
         try {
             // Simulate API call
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            await new Promise (resolve => setTimeout (resolve, 2000) ) ;
             // Reset form on success
             setFormData({
 '

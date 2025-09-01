@@ -161,9 +161,8 @@ const industries = ['"
     { name: 'Education', icon: <Users className="w-5 h-5"/>, projects: 60 },'"
     { name: 'Government', icon: <Lock className="w-5 h-5"/>, projects: 45 }
 ];
-export function TechSolutionsSection() {
-    const [selectedSolution, setSelectedSolution] = useState(null);
-    const [hoveredSolution, setHoveredSolution] = useState(null);
+    const [selectedSolution, setSelectedSolution] = useState (null) ;
+    const [hoveredSolution, setHoveredSolution] = useState (null) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -316,7 +315,7 @@ export function TechSolutionsSection() {
                     </div>))}"
                   {solution.features.length > 3 && (<div className="text-zion-cyan/60 text-xs text-center">
                       +{solution.features.length - 3} more features
-                    </div>)}
+                    </div>) }
                 </div>
 
                 {/* CTA */}"
@@ -360,7 +359,7 @@ export function TechSolutionsSection() {
 }} transition={{ delay: idx * 0.1 }}>"
                             <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                             <span>{benefit}</span>
-                          </motion.div>))}
+                          </motion.div>) ) }
                       </div>
 "
                       <h4 className="text-zion-cyan font-semibold text-sm mb-3">Use Cases:</h4>"
@@ -377,12 +376,12 @@ export function TechSolutionsSection() {
 
 }} transition={{ delay: idx * 0.1 }}>
                             {useCase}
-                          </motion.span>))}
+                          </motion.span>) ) }
                       </div>
-                    </motion.div>)}
+                    </motion.div>) }
                 </AnimatePresence>
               </div>
-            </motion.div>))}
+            </motion.div>) ) }
         </motion.div>
 
         {/* Call to action */}"

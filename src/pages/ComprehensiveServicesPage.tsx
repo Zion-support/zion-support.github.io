@@ -304,8 +304,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
                   {service.features.length > 3 && ("
                     <div className="text-sm text-gray-500">
                       +{service.features.length - 3} more features
-                    </div>
-                  )}
+                    </div>) }
                 </div>
 
                 {/* Benefits */}"
@@ -365,8 +364,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
                     Get Started
                   </Link>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>) ) }
           </div>
         </div>
 
@@ -399,7 +397,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
                 to="/request-quote""
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
               >
-                <span>Request a Quote</span>
+                <span > Request a Quote</span>
               </Link>
             </div>
 
@@ -421,8 +419,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
           </motion.div>
         </div>
       </div>
-    </div>
-  );
+    </div>) ;
 }
 
 export default ComprehensiveServicesPage;

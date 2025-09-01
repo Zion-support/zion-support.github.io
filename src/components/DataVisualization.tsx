@@ -27,7 +27,8 @@ datasets: {
     data: number[];
     backgroundColor: string[];
     borderColor: string[];
-    borderWidth: number}[]}
+    borderWidth: number
+}[]}
 
 interface MetricCard {
   title: string;
@@ -35,7 +36,8 @@ interface MetricCard {
   change: number;'
   changeType: 'increase' | 'decrease' | 'neutral';
   icon: React.ReactNode;
-  color: string}
+  color: string
+}
 
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {
 
@@ -67,9 +69,9 @@ title:  "Data Analytics Dashboard",;
       borderColor['rgba(34, 221, 210, 1)'],;
       borderWidth: 2
     }]
-  });
+  }) ;
 
-  const [metrics, setMetrics] = useState<any>([
+  const [metrics, setMetrics] = useState < any> ([
     {
 '
       title: 'Total Revenue','
@@ -106,22 +108,22 @@ title:  "Data Analytics Dashboard",;
       icon: <Activity className="w-5 h-5" />,;'
       color: 'text-purple-400';
     };
-  ]);
+  ]) ;
 
   // Simulate data refresh
   const refreshData = async () => {;
-    setIsLoading(true);
+    setIsLoading (true) ;
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise (resolve => setTimeout (resolve, 1000) ) ;
 
     // Update chart data with new random values
-setChartData(prev:  > ({;
+setChartData (prev:  > ({;
       ...prev,;
       datasets: [{;
         ...prev.datasets[0],;
-        data: prev.datasets[0].data.map(() => Math.floor(Math.random() * 100) + 20);
+        data: prev.datasets[0].data.map ( () => Math.floor (Math.random () * 100) + 20) ;
       }];
-    }));
+    }) ) ;
 
     // Update metrics with new random values
     setMetrics(prev => prev.map(metric => ({
@@ -134,7 +136,7 @@ setChartData(prev:  > ({;
                  Math.random() > 0.3 ? 'decrease' : 'neutral'
     })));
 
-    setIsLoading(false)};
+    setIsLoading (false) };
 
   // Get change icon and color'
   labels: ['AI Services', 'Cloud Solutions', 'Security', 'Consulting', 'Development'],
@@ -160,10 +162,6 @@ setChartData(prev:  > ({;
   borderWidth: 2;
     ;
 ;
-
-
-
-
 
 }];
   };

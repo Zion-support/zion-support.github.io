@@ -41,10 +41,10 @@ const UltimateServicesShowcase2025 = () => {
             case 'name':
                 return a.title.localeCompare(b.title);'
             case 'category':
-                return a.category.localeCompare(b.category);
+                return a.category.localeCompare (b.category) ;
             default:
                 return 0}
-    });
+    }) ;
     const formatPrice = (price) => {
 
         if (price >= 1000) {
@@ -109,7 +109,7 @@ const UltimateServicesShowcase2025 = () => {
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
                 {categories.map(category => (<option key={category} value={category}>'
                     {category === 'all' ? 'All Categories' : category}
-                  </option>))}
+                  </option>) ) }
               </select>
             </div>
             <div>"
@@ -155,7 +155,7 @@ const UltimateServicesShowcase2025 = () => {
                 <div className="flex flex-wrap gap-2 mb-3">"
                   {service.tags.slice(0, 3).map((tag, index) => (<span key={index} className="px-2 py-1 bg-blue-900/50 text-blue-300 text-xs rounded-full border border-blue-700/50">
                       {tag}
-                    </span>))}
+                    </span>) ) }
                 </div>
               </div>
 
@@ -166,7 +166,7 @@ const UltimateServicesShowcase2025 = () => {
                   {service.features.slice(0, 3).map((feature, index) => (<li key={index} className="flex items-start">"
                       <span className="text-cyan-400 mr-2">•</span>
                       {feature}
-                    </li>))}
+                    </li>) ) }
                 </ul>
               </div>
 
@@ -177,7 +177,7 @@ const UltimateServicesShowcase2025 = () => {
                   {service.benefits.slice(0, 2).map((benefit, index) => (<li key={index} className="flex items-start">"
                       <span className="text-green-400 mr-2">✓</span>
                       {benefit}
-                    </li>))}
+                    </li>) ) }
                 </ul>
               </div>
 
@@ -188,7 +188,7 @@ const UltimateServicesShowcase2025 = () => {
                     <span className="text-yellow-400 mr-2">📈</span>
                     {service.roi}
                   </div>
-                </div>)}
+                </div>) }
 
               {/* Technology */}"
               {service.technology && (<div className="mb-4">"
@@ -196,9 +196,9 @@ const UltimateServicesShowcase2025 = () => {
                   <div className="flex flex-wrap gap-1">"
                     {service.technology.slice(0, 4).map((tech, index) => (<span key={index} className="px-2 py-1 bg-purple-900/30 text-purple-300 text-xs rounded border border-purple-700/50">
                         {tech}
-                      </span>))}
+                      </span>) ) }
                   </div>
-                </div>)}
+                </div>) }
 
               {/* Market Price Comparison */}"
               <div className="mb-4 p-3 bg-gray-700/50 rounded-lg">"
@@ -221,7 +221,7 @@ const UltimateServicesShowcase2025 = () => {
                   </div>
                 </div>
               </div>
-            </div>))}
+            </div>) ) }
         </div>
 
         {/* Summary Statistics */}"

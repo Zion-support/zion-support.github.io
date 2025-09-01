@@ -1,3 +1,4 @@
+import React from 'react';
 export const ChatMessage = ({ message }) => {
 
   const isUser = message.sender === 'user';

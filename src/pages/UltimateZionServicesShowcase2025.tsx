@@ -129,8 +129,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
                           {benefit}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
 "
@@ -138,8 +137,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                     {service.tags.slice(0, 4).map((tag, index) => ("
                       <span key={index} className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
                         {tag}
-                      </span>
-                    ))}
+                      </span>) ) }
                   </div>
 "
                   <div className="space-y-3">
@@ -156,8 +154,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                       Learn More
                     </a>
                   </div>;
-                </div>
-              ))}
+                </div>) ) }
             </div>
           </div>
         </section>
@@ -199,8 +196,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
                           {feature}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
 "
@@ -224,8 +220,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                       Schedule Consultation
                     </a>
                   </div>;
-                </div>
-              ))}
+                </div>) ) }
             </div>
           </div>
         </section>
@@ -270,8 +265,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                       {service.aiModels.slice(0, 3).map((model, index) => ("
                         <span key={index} className="px-2 py-1 bg-green-700 text-green-100 text-xs rounded">
                           {model}
-                        </span>
-                      ))}
+                        </span>) ) }
                     </div>
                   </div>
 "
@@ -284,8 +278,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
                           {useCase}
-                        </li>
-                      ))}
+                        </li>) ) }
                     </ul>
                   </div>
 "
@@ -303,8 +296,7 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
                       AI Consultation
                     </a>
                   </div>;
-                </div>
-              ))}
+                </div>) ) }
             </div>
           </div>
         </section>

@@ -266,5 +266,6 @@ const AIAutonomousEcosystem = () => {
       </section>
     </div>);
 };
+export { AIAutonomousEcosystem };
 export default AIAutonomousEcosystem;
 }}}}'"

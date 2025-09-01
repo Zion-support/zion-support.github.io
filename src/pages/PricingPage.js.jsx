@@ -1,3 +1,4 @@
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, CheckCircle, X, Phone, Mail, MapPin, Globe, ArrowRight, Zap, Users, TrendingUp import { Link } from "react - router - dom";
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
 import { Badge } from "@/components/ui/badge";"
@@ -15,7 +16,6 @@ const categoryIcons = {
     'HealthTech': Heart,'
     'E-commerce': ShoppingCart,'
   'EdTech': GraduationCap
-
 
 };
 const pricingFeatures = {
@@ -46,7 +46,6 @@ const pricingFeatures = {
         "Custom contracts","
   "Dedicated infrastructure"
     ]
-
 
 };
 const comparisonFeatures = ["
@@ -82,7 +81,7 @@ export default function PricingPage() {
           </h1>"
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
             Choose the perfect plan for your business. All our micro SAAS services come with
-            enterprise-grade features at startup-friendly prices.
+            enterprise - grade features at startup - friendly prices.
           </p>
 
           {/* Billing Toggle */}"
@@ -140,7 +139,7 @@ export default function PricingPage() {
                     Get Started
                   </Button>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -212,7 +211,7 @@ export default function PricingPage() {
                         </Button>
                       </div>
                     </CardContent>
-                  </Card>))}
+                  </Card>) ) }
               </div>
             </TabsContent>
           </Tabs>
@@ -253,7 +252,7 @@ export default function PricingPage() {
                     <td className="p-4 text-center">"
                       <CheckCircle className="h-5 w-5 text-green-500 mx-auto"/>
                     </td>
-                  </tr>))}
+                  </tr>) ) }
               </tbody>
             </table>
           </div>
@@ -308,7 +307,7 @@ export default function PricingPage() {
                 <CardContent className="text-center">"
                   <p className="text-zion-slate-light">{benefit.description}</p>
                 </CardContent>
-              </Card>))}
+              </Card>) ) }
           </div>
         </div>
       </section>
@@ -388,7 +387,7 @@ export default function PricingPage() {
                   <li>• 24/7 Technical Support</li>
                   <li>• 99.9% Uptime Guarantee</li>
                   <li>• SOC 2 Type II Compliant</li>
-                  <li>• 30-Day Money Back Guarantee</li>
+                  <li>• 30 - Day Money Back Guarantee</li>
                   <li>• Free Migration Support</li>
                   <li>• Custom Integration Services</li>
                 </ul>

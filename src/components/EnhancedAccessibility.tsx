@@ -34,13 +34,18 @@ import {
 } from 'lucide-react';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
-  keyboardNavigation: boolean}
+  keyboardNavigation: boolean
+}
 
-interface EnhancedAccessibilityProps {;
+interface EnhancedAccessibilityProps {
+  // Add your props here
+
+;
   enabled?: boolean;
   showControls?: boolean;
   className?: string;
@@ -70,15 +75,15 @@ export const EnhancedAccessibility: React.FC = () => {
     focusIndicator: true,'
     colorBlindness: 'normal','
     fontSize: 'medium'
-  });
+  }) ;
 
   // Apply accessibility settings to document
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {;
-  const [isVisible, setIsVisible] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const applySettings = useCallback ( (newSettings: AccessibilitySettings) => {;
+  const [isVisible, setIsVisible] = useState (false) ;
+  const timeoutRef = useRef < NodeJS.Timeout> () ;
 
-  // Auto-hide accessibility panel
-  useEffect(() => {
+  // Auto - hide accessibility panel
+  useEffect ( () => {
     if (isOpen) {
 
       setIsVisible(true);
@@ -87,10 +92,10 @@ export const EnhancedAccessibility: React.FC = () => {
 
       timeoutRef.current = setTimeout(() => setIsVisible(false), 300);
     }
-  }, [isOpen]);
+  }, [isOpen]) ;
 
   // Apply accessibility settings
-  useEffect(() => {
+  useEffect ( () => {
     const root = document.documentElement;
 
     // High contrast
@@ -135,7 +140,7 @@ export const EnhancedAccessibility: React.FC = () => {
     };
     root.style.fontSize = fontSizeMap[settings.fontSize];
 
-  }, [settings]);
+  }, [settings]) ;
 
     }
 
@@ -168,7 +173,7 @@ export const EnhancedAccessibility: React.FC = () => {
 
       ...prev,;
       [key]: !prev[key];
-    }))};
+    }) ) };
 
   // Screen reader announcements'
   const announcement = document.createElement('div');'
@@ -177,21 +182,21 @@ export const EnhancedAccessibility: React.FC = () => {
     announcement.className = 'sr-only';
     announcement.textContent = message;
 
-    document.body.appendChild(announcement);
+    document.body.appendChild (announcement) ;
 
     // Remove after announcement
-    setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
+    setTimeout ( () => {
+      document.body.removeChild (announcement) ;
+    }, 1000) ;
 
-    setAnnouncements(prev => [...prev, message]);
-  }, []);
+    setAnnouncements (prev => [...prev, message]) ;
+  }, []) ;
 
   // Enhanced keyboard navigation
-  useEffect(() => {
+  useEffect ( () => {
     if (!settings.keyboardNavigation) return;
 
-    const handleKeyDown = (e: KeyboardEvent) => {;
+    const handleKeyDown = (...args: unknown[]): unknown => {;
       const target = e.target as HTMLElement;
 
       // Skip if in input/textarea'
@@ -209,7 +214,7 @@ export const EnhancedAccessibility: React.FC = () => {
 '
             target.style.outline = '';'
             target.style.outlineOffset = '';
-          }, 2000);
+          }, 2000) ;
           break;
 '
         case 'Enter':'
@@ -228,11 +233,11 @@ modals.forEach(modal:  > {;'
             if (modal.getAttribute('aria-hidden') === 'false') {;
               (modal as HTMLElement).click();
 
-          });
+          }) ;
           break;
 
   // Keyboard navigation support
-  useEffect(() => {
+  useEffect ( () => {
     if (!settings.keyboardNavigation) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -285,7 +290,7 @@ modals.forEach(modal:  > {;'
       document.removeEventListener('focusin', handleFocusIn);'
       document.removeEventListener('focusout', handleFocusOut);
     };
-  }, [settings.focusIndicator, settings.screenReader, announce]);
+  }, [settings.focusIndicator, settings.screenReader, announce]) ;
 
   // Skip to main content link
   useEffect(() => {
@@ -295,15 +300,15 @@ modals.forEach(modal:  > {;'
     skipLink.textContent = 'Skip to main content';'
     skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
 
-    document.body.insertBefore(skipLink, document.body.firstChild);
+    document.body.insertBefore (skipLink, document.body.firstChild) ;
 
-    return () => {
+    return : unknown {
       if (skipLink.parentNode) {
 
         skipLink.parentNode.removeChild(skipLink);
 
     };
-  }, []);
+  }, []) ;
 
   // Quick accessibility actions
   const quickActions = [
@@ -311,7 +316,7 @@ modals.forEach(modal:  > {;'
 
       icon: Contrast,'
       label: 'Toggle High Contrast',
-      action: () => {
+      action: : unknown {
         const newSettings = {
 
   ...settings,;
@@ -321,11 +326,6 @@ modals.forEach(modal:  > {;'
   ;
   ;
   highContrast: !settings.highContrast ;
-
-
-
-
-
 
 };
         applySettings(newSettings);'`
@@ -337,7 +337,7 @@ modals.forEach(modal:  > {;'
 
       icon: Type,'
       label: 'Toggle Large Text',
-      action: () => {
+      action: : unknown {
         const newSettings = {
 
   ...settings,;
@@ -347,11 +347,6 @@ modals.forEach(modal:  > {;'
   ;
   ;
   largeText: !settings.largeText ;
-
-
-
-
-
 
 };
         applySettings(newSettings);'`
@@ -407,18 +402,18 @@ modals.forEach(modal:  > {;'
       announcement.setAttribute('aria-atomic', 'true');'
       announcement.className = 'sr-only';
       announcement.textContent = message;
-      document.body.appendChild(announcement);
+      document.body.appendChild (announcement) ;
       
-      setTimeout(() => {
-        document.body.removeChild(announcement);
-      }, 1000);
+      setTimeout ( () => {
+        document.body.removeChild (announcement) ;
+      }, 1000) ;
     }
   };
 
   const toggleSetting = (key: keyof AccessibilitySettings, value?: any) => {
 
     const newValue = value !== undefined ? value : !settings[key];
-    setSettings(prev => ({ ...prev, [key]: newValue }));
+    setSettings (prev => ({ ...prev, [key]: newValue }) ) ;
     
     // Announce changes to screen readers
     const settingNames = {
@@ -489,11 +484,6 @@ modals.forEach(modal:  > {;'
   ;
   [key]: !value ;
 
-
-
-
-
-
 };
                           applySettings(newSettings);'`
                           announce(`${label} ${newSettings[key as keyof AccessibilitySettings] ? 'enabled' : 'disabled'}`);
@@ -512,9 +502,8 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                           }`};
                         />;
                       </button>;
-                    </div>;
-                  );
-                })}
+                    </div>;) ;
+                }) }
               </div>
 
               {/* Quick Tips */}"
@@ -551,7 +540,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                     onChange={() => toggleSetting('highContrast')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
-                  <span>High Contrast</span>
+                  <span > High Contrast</span>
                 </label>
 "
                 <label className="flex items-center space-x-3 cursor-pointer">
@@ -561,7 +550,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                     onChange={() => toggleSetting('largeText')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
-                  <span>Large Text</span>
+                  <span > Large Text</span>
                 </label>
 "
                 <div className="space-y-2">"
@@ -607,7 +596,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                     onChange={() => toggleSetting('reducedMotion')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
-                  <span>Reduced Motion</span>
+                  <span > Reduced Motion</span>
                 </label>
               </div>
 
@@ -625,7 +614,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                     onChange={() => toggleSetting('keyboardNavigation')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
-                  <span>Enhanced Keyboard Navigation</span>
+                  <span > Enhanced Keyboard Navigation</span>
                 </label>
 "
                 <label className="flex items-center space-x-3 cursor-pointer">
@@ -635,7 +624,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                     onChange={() => toggleSetting('focusIndicator')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
-                  <span>Focus Indicator</span>
+                  <span > Focus Indicator</span>
                 </label>
               </div>
 
@@ -653,7 +642,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                     onChange={() => toggleSetting('screenReader')}"
                     className="w-4 h-4 text-zion-cyan bg-zion-slate border-zion-cyan rounded focus:ring-zion-cyan focus:ring-2"
                   />
-                  <span>Enhanced Screen Reader Support</span>
+                  <span > Enhanced Screen Reader Support</span>
                 </label>
               </div>
 
@@ -667,8 +656,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 </div>
               </div>
             </div>
-          </motion.div>
-        )}
+          </motion.div>) }
       </AnimatePresence>
 
       {/* Screen reader only content */}"
@@ -682,8 +670,7 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
 };
         Accessibility settings panel opened
       </div>
-    </>
-  );
+    </>) ;
 };
 
 // CSS for accessibility features`
@@ -696,8 +683,8 @@ const accessibilityStyles = `
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
+    clip: rect (0, 0, 0, 0) ;
+    white - space: nowrap;
     border: 0;
   }
 
@@ -761,7 +748,7 @@ if (typeof document !== 'undefined') {
 '
   const style = document.createElement('style');
   style.textContent = accessibilityStyles;
-  document.head.appendChild(style);
+  document.head.appendChild (style) ;
 }
 
 export default EnhancedAccessibility;

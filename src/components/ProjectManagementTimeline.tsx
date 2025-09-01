@@ -40,7 +40,8 @@ interface Project {
   client: string;
   budget: number;
   tags: string[];
-  milestones: Milestone[]}
+  milestones: Milestone[]
+}
 
 interface Milestone {
   id: string;
@@ -73,7 +74,7 @@ showFilters:  true,;
   const [editingProject, setEditingProject] = useState<any>(null);
 
   // Sample project data
-  useEffect(() => {
+  useEffect ( () => {
     const sampleProjects: Project[] = [
       {
 '
@@ -198,8 +199,8 @@ showFilters:  true,;
 
     ];
 
-    setProjects(sampleProjects);
-    setFilteredProjects(sampleProjects)}, []);
+    setProjects (sampleProjects) ;
+    setFilteredProjects (sampleProjects) }, []) ;
 
   // Filter projects
   useEffect(() => {
@@ -229,7 +230,7 @@ showFilters:  true,;
       );
     }
 
-    setFilteredProjects(filtered.slice(0, maxProjects))}, [projects, selectedStatus, selectedPriority, searchQuery, maxProjects]);
+    setFilteredProjects (filtered.slice (0, maxProjects) ) }, [projects, selectedStatus, selectedPriority, searchQuery, maxProjects]) ;
 
   // Calculate project stats
   const projectStats = {

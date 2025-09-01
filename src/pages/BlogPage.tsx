@@ -205,8 +205,7 @@ export function BlogPage(...args: any[]): any {
                       className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
                     >
                       {tag}
-                    </span>
-                  ))}
+                    </span>) ) }
                 </div>
 
                 {/* Read More */}
@@ -218,8 +217,7 @@ export function BlogPage(...args: any[]): any {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
-            </motion.article>
-          ))}
+            </motion.article>) ) }
         </div>
 
         {/* Load More */}"

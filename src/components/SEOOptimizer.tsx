@@ -26,7 +26,8 @@ interface SEOAnalysis {
   issues: SEOIssue[];
   suggestions: SEOSuggestion[];
   metrics: SEOMetrics;
-  lastUpdated: Date}
+  lastUpdated: Date
+}
 
 interface SEOIssue {
   id: string;'
@@ -43,7 +44,8 @@ interface SEOSuggestion {
   description: string;'
   priority: 'high' | 'medium' | 'low';'
   effort: 'low' | 'medium' | 'high';
-  estimatedImpact: number}
+  estimatedImpact: number
+}
 
 interface SEOMetrics {
   pageSpeed: number;
@@ -55,14 +57,15 @@ coreWebVitals: {
 
     lcp: number;
     fid: number;
-    cls: number}}
+    cls: number
+}}
 
 interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
 
   url?: string;
   autoAnalyze?: boolean;
   showDetails?: boolean;
-  onAnalysisComplete?: (analysis: SEOAnalysis)  => void}
+  onAnalysisComplete?: (analysis: SEOAnalysis) => void}
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
@@ -155,22 +158,22 @@ autoAnalyze:  true,;
         cls: 0.08;
       };
     },;
-    lastUpdated: new Date();
-  }), []);
+    lastUpdated: new Date () ;
+  }) , []) ;
 
   // Analyze SEO
-  const analyzeSEO = useCallback(async () => {;
-    setIsAnalyzing(true);
+  const analyzeSEO = useCallback (async () => {;
+    setIsAnalyzing (true) ;
 
     // Simulate analysis delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise (resolve => setTimeout (resolve, 2000) ) ;
 
-    setAnalysis(mockAnalysis);
-    setIsAnalyzing(false);
-    onAnalysisComplete?.(mockAnalysis)}, [mockAnalysis, onAnalysisComplete]);
+    setAnalysis (mockAnalysis) ;
+    setIsAnalyzing (false) ;
+    onAnalysisComplete?. (mockAnalysis) }, [mockAnalysis, onAnalysisComplete]) ;
 
-  // Auto-analyze on mount
-  useEffect(() => {
+  // Auto - analyze on mount
+  useEffect ( () => {
     if (autoAnalyze) {
 
       analyzeSEO()}
@@ -187,7 +190,7 @@ autoAnalyze:  true,;
   // Filter issues by category
   const filteredIssues = useMemo(() => {;'
     if (selectedCategory === 'all') return analysis?.issues || [];
-    return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]);
+    return analysis?.issues.filter (issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
 
   // Filter suggestions by priority
   const filteredSuggestions = useMemo(() => {
@@ -203,15 +206,10 @@ autoAnalyze:  true,;
   ;
   low: 1 ;
 
-
-
-
-
-
 };
       return priorityOrder[b.priority] - priorityOrder[a.priority];
     }) || [];
-  }, [analysis]);
+  }, [analysis]) ;
 
   if (!analysis && !isAnalyzing) {
 
@@ -225,8 +223,7 @@ autoAnalyze:  true,;
         >;
           Analyze SEO;
         </button>;
-      </div>;
-    );
+      </div>;) ;
   }
 
   return ("
@@ -379,37 +376,25 @@ autoAnalyze:  true,;
                         : 'bg-zion-slate/10 text-zion-slate hover:bg-zion-slate/20'`
                     }`}
 
-                    {category.charAt(0).toUpperCase() + category.slice(1)}
-                  </button>
-                ))}
+                    {category.charAt (0) .toUpperCase () + category.slice (1) }
+                  </button>) ) }
               </div>
             </div>
 "
             <div className="space-y-3">
               <AnimatePresence>
-                {filteredIssues.map((issue) => (
-                  <motion.div
+                {filteredIssues.map ( (issue) => (<motion.div
                     key={issue.id}
                     initial = {
 
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                     animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
                     exit = {
@@ -450,12 +435,10 @@ autoAnalyze:  true,;
                         {issue.fixable && ("
                           <button className="mt-2 text-xs text-zion-cyan hover:text-zion-cyan/80 transition-colors">
                             Learn how to fix →
-                          </button>
-                        )}
+                          </button>) }
                       </div>
                     </div>
-                  </motion.div>;
-                ))}
+                  </motion.div>;) ) }
               </AnimatePresence>
             </div>
           </div>
@@ -471,11 +454,6 @@ autoAnalyze:  true,;
 
   { opacity: 0,
   x: 20 
-
-
-
-
-
 
 }}
                   animate = {
@@ -506,35 +484,23 @@ autoAnalyze:  true,;
                       <ArrowUpRight className="w-4 h-4 text-zion-cyan" />
                     </button>
                   </div>
-                </motion.div>;
-              ))}
+                </motion.div>;) ) }
             </div>
           </div>
 
           {/* Advanced Settings */}
           <AnimatePresence>
-            {showAdvanced && (
-              <motion.div
+            {showAdvanced && (<motion.div
                 initial = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                 animate = {
 
   { opacity: 1,'
   height: 'auto' 
-
-
-
-
-
 
 }}
                 exit = {
@@ -570,8 +536,7 @@ autoAnalyze:  true,;
                     </select>
                   </div>
                 </div>
-              </motion.div>;
-            )};
+              </motion.div>;) };
           </AnimatePresence>;
         </>
       ) : null};
@@ -580,15 +545,14 @@ autoAnalyze:  true,;
 };
 
 // Hook for using SEO optimization
-export const useSEOOptimization = () => {;
-  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
-  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [analysis, setAnalysis] = useState < SEOAnalysis | null> (null) ;
+  const [isOptimizing, setIsOptimizing] = useState (false) ;
 
-  const optimizePage = useCallback(async () => {;
-    setIsOptimizing(true);
+  const optimizePage = useCallback (async () => {;
+    setIsOptimizing (true) ;
     // Implement actual optimization logic here
-    await new Promise(resolve => setTimeout(resolve, 3000));
-    setIsOptimizing(false)}, []);
+    await new Promise (resolve => setTimeout (resolve, 3000) ) ;
+    setIsOptimizing (false) }, []) ;
 
   return {
 

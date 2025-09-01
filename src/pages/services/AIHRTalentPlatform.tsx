@@ -1,3 +1,4 @@
+import React from 'react';
 import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform() {
   const features = [
     'AI-powered candidate screening and matching','
@@ -193,7 +194,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           </div>
 "
           <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+            {pricing.map(plan: unknown, index: unknown (
               <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${
 '
                 plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-gray-200'`

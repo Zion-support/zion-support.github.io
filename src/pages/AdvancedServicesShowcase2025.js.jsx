@@ -49,8 +49,8 @@ const AdvancedServicesShowcase2025 = () => {
                 return a.category.localeCompare(b.category);'
             case 'name':
             default:
-                return a.name.localeCompare(b.name)}
-    });
+                return a.name.localeCompare (b.name) }
+    }) ;
     const getCategoryIcon = (category) => {
 
         const icons = {
@@ -73,7 +73,6 @@ const AdvancedServicesShowcase2025 = () => {
             'Data Quality & Analytics': '📊','
             'API Management': '🔌','
   'Network Security': '🛡️'
-        
 
 };'
         return icons[category] || '🚀'};
@@ -114,7 +113,6 @@ const AdvancedServicesShowcase2025 = () => {
             description: "Discover our comprehensive collection of 20+ advanced real micro SAAS, IT, and AI services. Market-ready solutions with proven ROI and competitive pricing.","
             keywords: "advanced services, micro SAAS, AI services, IT solutions, real services, enterprise solutions,"
   Zion Tech Group";
-        
 
 }}/>;
 
@@ -154,7 +152,7 @@ const AdvancedServicesShowcase2025 = () => {
 
 }}>
             Discover our comprehensive collection of {allServices.length}+ advanced real micro SAAS, IT, and AI services. 
-            Each solution is market-ready with proven ROI, competitive pricing, and enterprise-grade support.
+            Each solution is market - ready with proven ROI, competitive pricing, and enterprise - grade support.
           </motion.p>
           
           {/* Contact Information */}"
@@ -251,7 +249,7 @@ const AdvancedServicesShowcase2025 = () => {
                 <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">"
                   {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">'
                       {category === 'all' ? 'All Categories' : category}
-                    </option>))}
+                    </option>) ) }
                 </select>
               </div>
 
@@ -347,7 +345,7 @@ const AdvancedServicesShowcase2025 = () => {
                       </span>))}"
                     {service.technology.length > 3 && (<span className="text-xs bg-gray-500/20 text-gray-300 px-2 py-1 rounded">
                         +{service.technology.length - 3} more
-                      </span>)}
+                      </span>) }
                   </div>
                 </div>
 
@@ -360,7 +358,7 @@ const AdvancedServicesShowcase2025 = () => {
                     Contact Sales
                   </a>
                 </div>
-              </motion.div>))}
+              </motion.div>) ) }
           </motion.div>
 
           {/* No Results */}"

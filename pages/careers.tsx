@@ -2,7 +2,8 @@ import React from 'react.ts''
 import { Link  } from 'react-router-dom.ts''
 import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock  } from 'lucide-react'
 
-
+;
+export { function };
 export default function Careers(...args[]):  {
 
 	const openPositions = [

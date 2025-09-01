@@ -1,6 +1,6 @@
 // Security Headers Configuration
 // This file provides security headers for the Zion Tech Group application
-
+;
 const securityHeaders = {
   // Content Security Policy
   'Content-Security-Policy': [
@@ -59,7 +59,7 @@ const securityHeaders = {
   'Origin-Agent-Cluster': '?1',
 };
 
-// Function to apply security headers
+// Function to apply security headers;
 function applySecurityHeaders() {
   if (typeof window !== 'undefined') {
     // Client-side security measures

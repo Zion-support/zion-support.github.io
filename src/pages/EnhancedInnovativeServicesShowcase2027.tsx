@@ -108,7 +108,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
     const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
     
     return matchesSearch && matchesCategory && matchesInnovation;
-  });
+  }) ;
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;'
@@ -122,7 +122,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
       default:;
         return 0}
-  });
+  }) ;
 
   const getCategoryIcon = (category: string) => {;
     switch (category) {;'"
@@ -149,20 +149,20 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
     }
   };
 
-  const handleServiceClick = (service: EnhancedInnovativeService2027) => {;
-    setSelectedService(service);
-    setCurrentSlide(0);
+  const handleServiceClick = useCallback ( (service: EnhancedInnovativeService2027) => {;
+    setSelectedService (service) ;
+    setCurrentSlide (0) ;
   };
 
-  const nextSlide = () => {;
+  const nextSlide = (...args: unknown[]): unknown => {;
     if (selectedService) {;
-      setCurrentSlide((prev) => (prev + 1) % 4);
+      setCurrentSlide ( (prev) => (prev + 1) % 4) ;
     }
   };
 
-  const prevSlide = () => {;
+  const prevSlide = (...args: unknown[]): unknown => {;
     if (selectedService) {;
-      setCurrentSlide((prev) => (prev - 1 + 4) % 4);
+      setCurrentSlide ( (prev) => (prev - 1 + 4) % 4) ;
     }
   };
 
@@ -178,21 +178,11 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.8 }}"
@@ -270,8 +260,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                   }`}
 
                   {category}
-                </button>
-              ))}
+                </button>) ) }
             </div>
             {/* View Mode and Sort */}"
             <div className="flex items-center gap-4">"
@@ -310,7 +299,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
       </div>"
             className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8";
           >
-            {sortedServices.map((service)  => (;
+            {sortedServices.map ( (service) => (;
               <motion.div
                 key={service.id}
                 variants={itemVariants}"
@@ -349,8 +338,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                       {service.features.length > 4 && ("
                         <div className="text-sm text-zion-slate-light/70">
                           +{service.features.length - 4} more features
-                        </div>
-                      )}
+                        </div>) }
                     </div>
                   </div>
                   {/* Innovation Level */}"
@@ -395,21 +383,11 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition = {
@@ -466,8 +444,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 {service.tags.length > 3 && ("
                   <span className="px-2 py-1 bg-zion-slate-dark text-zion-gray-light text-xs rounded-full">
                     +{service.tags.length - 3}
-                  </span>
-                )}
+                  </span>) }
               </div>
 "
               <div className="flex items-center justify-between">"
@@ -477,8 +454,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                 </div>"
                 <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform" />
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </div>;
 
@@ -491,21 +467,11 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   { opacity: 0,
   scale: 0.9 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   scale: 1 
-
-
-
-
-
 
 }}
             exit = {
@@ -553,24 +519,17 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                     }`}
                   >
                     {tab}
-                  </button>
-                ))}
+                  </button>) ) }
               </div>
 
               {/* Content Slides */}"
               <div className="relative">
                 {/* Overview Slide */}
-                {currentSlide === 0 && (
-                  <motion.div
+                {currentSlide === 0 && (<motion.div
                     initial = {
 
   { opacity: 0,
   x: 20 
-
-
-
-
-
 
 }}
                     animate = {
@@ -602,8 +561,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                             <li key={index} className="text-zion-gray-light flex items-start space-x-2">"
                               <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                               <span>{benefit}</span>
-                            </li>
-                          ))}
+                            </li>) ) }
                         </ul>
                       </div>
 "
@@ -619,26 +577,18 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                               className="px-3 py-1 bg-zion-slate-light text-zion-gray-light text-sm rounded-full"
                             >
                               {audience}
-                            </span>
-                          ))}
+                            </span>) ) }
                         </div>
                       </div>
                     </div>
-                  </motion.div>
-                )}
+                  </motion.div>) }
 
                 {/* Features Slide */}
-                {currentSlide === 1 && (
-                  <motion.div
+                {currentSlide === 1 && (<motion.div
                     initial = {
 
   { opacity: 0,
   x: 20 
-
-
-
-
-
 
 }}
                     animate = {
@@ -665,8 +615,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                             <li key={index} className="text-zion-gray-light flex items-start space-x-2">"
                               <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                               <span>{feature}</span>
-                            </li>
-                          ))}
+                            </li>) ) }
                         </ul>
                       </div>
 "
@@ -680,26 +629,18 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                             <li key={index} className="text-zion-gray-light flex items-start space-x-2">"
                               <ArrowRight className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                               <span>{useCase}</span>
-                            </li>
-                          ))}
+                            </li>) ) }
                         </ul>
                       </div>
                     </div>
-                  </motion.div>
-                )}
+                  </motion.div>) }
 
                 {/* Technical Specs Slide */}
-                {currentSlide === 2 && selectedService.technicalSpecs && (
-                  <motion.div
+                {currentSlide === 2 && selectedService.technicalSpecs && (<motion.div
                     initial = {
 
   { opacity: 0,
   x: 20 
-
-
-
-
-
 
 }}
                     animate = {
@@ -728,8 +669,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                               className="px-3 py-1 bg-blue-400/20 text-blue-300 text-sm rounded-full"
                             >
                               {tech}
-                            </span>
-                          ))}
+                            </span>) ) }
                         </div>
                       </div>
 "
@@ -745,8 +685,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                               className="px-3 py-1 bg-green-400/20 text-green-300 text-sm rounded-full"
                             >
                               {integration}
-                            </span>
-                          ))}
+                            </span>) ) }
                         </div>
                       </div>
                     </div>
@@ -775,8 +714,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                               className="px-2 py-1 bg-red-400/20 text-red-300 text-xs rounded-full"
                             >
                               {security}
-                            </span>
-                          ))}
+                            </span>) ) }
                         </div>
                       </div>
 "
@@ -789,26 +727,18 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                               className="px-2 py-1 bg-purple-400/20 text-purple-300 text-xs rounded-full"
                             >
                               {compliance}
-                            </span>
-                          ))}
+                            </span>) ) }
                         </div>
                       </div>
                     </div>
-                  </motion.div>
-                )}
+                  </motion.div>) }
 
                 {/* Contact Slide */}
-                {currentSlide === 3 && (
-                  <motion.div
+                {currentSlide === 3 && (<motion.div
                     initial = {
 
   { opacity: 0,
   x: 20 
-
-
-
-
-
 
 }}
                     animate = {
@@ -904,8 +834,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                         </motion.button>
                       </div>
                     </div>
-                  </motion.div>
-                )}
+                  </motion.div>) }
               </div>
 
               {/* Navigation Arrows */}"
@@ -927,8 +856,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 '
                         currentSlide === index ? 'bg-zion-cyan' : 'bg-zion-gray-dark'`
                       }`}
-                    />
-                  ))}
+                    />) ) }
                 </div>
 
                 <button
@@ -941,8 +869,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
               </div>
             </div>
           </motion.div>
-        </div>
-      )}
+        </div>) }
 
       {/* Contact Section */}"
       <div id="contact" className="container mx-auto px-4 py-16">"
@@ -993,8 +920,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
           </motion.button>;
         </div>;
       </div>;
-    </div>;
-  );
+    </div>;) ;
 };
 
 export default EnhancedInnovativeServicesShowcase2027;

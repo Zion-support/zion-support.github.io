@@ -56,8 +56,9 @@ import {
   MapPin'
 } from 'lucide-react';'
 import { SEO } from '../../components/SEO';
-
-export default function AIAutonomousResearchAssistant() {
+;
+export { function };
+export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {
   const features = [
     {
 
@@ -205,6 +206,10 @@ export default function AIAutonomousResearchAssistant() {
   Mail,
   MapPin'
 } from 'lucide-react';
+;
+export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {
+  const [activeTab, setActiveTab] = useState<typeof 'overview'>('overview');
+  const [isVisible, setIsVisible] = useState<typeof false>(false);
 
 export default function AIAutonomousResearchAssistant() {
 '
@@ -421,7 +426,7 @@ export default function AIAutonomousResearchAssistant() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -467,7 +472,7 @@ export default function AIAutonomousResearchAssistant() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {researchCapabilities.map((capability, index) => (
+            {researchCapabilities.map(capability: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -507,7 +512,7 @@ export default function AIAutonomousResearchAssistant() {
           </motion.div>
 "
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map(tier: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -583,7 +588,7 @@ export default function AIAutonomousResearchAssistant() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+            {useCases.map(useCase: unknown, index: unknown (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -623,7 +628,7 @@ export default function AIAutonomousResearchAssistant() {
           </motion.div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map(benefit: unknown, index: unknown 
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -745,7 +750,7 @@ export default function AIAutonomousResearchAssistant() {
                 </div>
 "
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {features.map((feature, index) => (
+                  {features.map((feature, index (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}

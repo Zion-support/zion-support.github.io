@@ -10,7 +10,7 @@ export const toast = ({ title, description, variant = 'default' }) => {
   // You can replace this with your preferred toast implementation
   return Date.now();
 };
-
+;
 export const useToast = () => {
   const [toasts, setToasts] = useState([]);
 '
