@@ -5,460 +5,325 @@ import { useState } from "react";
 interface Service {
   id: string;
   name: string;
-  category: "AI Services" | "IT Services" | "Micro SAAS" | "Digital Economy";
+  category: string;
   description: string;
   features: string[];
-  pricing: string;
-  startingPrice: number;
-  contactLink: string;
-  icon: string;
-  popular?: boolean;
+  benefits: string[];
+  pricing: {
+    starter: string;
+    professional: string;
+    enterprise: string;
+    custom?: string;
+  };
+  status: "available" | "coming-soon" | "beta";
+  link: string;
 }
 
 const services: Service[] = [
-  // AI Services
+  // Existing Core Services
+  {
+    id: "zion-os",
+    name: "Zion OS Platform",
+    category: "Core Platform",
+    description: "Unified deployment protocol for sovereign AI-powered digital economies with one-click deployment.",
+    features: ["Instance deployment", "Feature toggles", "Multi-vertical support", "Governance systems", "API management"],
+    benefits: ["Reduce deployment time from months to minutes", "Built-in compliance and governance", "Scalable architecture", "Multi-region support"],
+    pricing: {
+      starter: "$99/month",
+      professional: "$299/month", 
+      enterprise: "$999/month",
+      custom: "Contact for custom pricing"
+    },
+    status: "available",
+    link: "/multiverse/launch"
+  },
   {
     id: "zion-gpt",
     name: "ZionGPT Core",
     category: "AI Services",
-    description: "Enterprise-grade AI assistant with custom knowledge base integration, multi-language support, and advanced reasoning capabilities.",
-    features: [
-      "Custom knowledge base training",
-      "Multi-language support (100+ languages)",
-      "Advanced reasoning and problem-solving",
-      "API integration and webhooks",
-      "Real-time learning and adaptation",
-      "Enterprise security and compliance"
-    ],
-    pricing: "Starting at $299/month",
-    startingPrice: 299,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=ZionGPT%20Core%20Inquiry",
-    icon: "🤖"
+    description: "Advanced AI language model optimized for business applications, compliance, and industry-specific knowledge.",
+    features: ["Custom fine-tuning", "Multi-language support", "Industry-specific models", "API access", "Enterprise security"],
+    benefits: ["Improve customer service efficiency by 60%", "Reduce content creation time", "Ensure compliance accuracy", "Multi-language global reach"],
+    pricing: {
+      starter: "$49/month",
+      professional: "$149/month",
+      enterprise: "$499/month"
+    },
+    status: "available",
+    link: "/services/zion-gpt"
   },
   {
     id: "resume-ai",
     name: "Resume Builder + Proposal AI",
     category: "AI Services",
-    description: "AI-powered resume creation and business proposal generation with industry-specific templates and optimization.",
-    features: [
-      "AI-powered content generation",
-      "Industry-specific templates",
-      "ATS optimization",
-      "Real-time collaboration",
-      "Export to multiple formats",
-      "Performance analytics"
-    ],
-    pricing: "Starting at $49/month",
-    startingPrice: 49,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Resume%20AI%20Inquiry",
-    icon: "📝"
+    description: "Intelligent resume creation and proposal generation powered by AI with industry-specific optimization.",
+    features: ["AI-powered resume building", "Proposal templates", "ATS optimization", "Industry customization", "Real-time feedback"],
+    benefits: ["Increase interview success rate by 40%", "Save 5+ hours per proposal", "Professional presentation", "Industry-specific optimization"],
+    pricing: {
+      starter: "$19/month",
+      professional: "$49/month",
+      enterprise: "$129/month"
+    },
+    status: "available",
+    link: "/services/resume-ai"
   },
   {
-    id: "ai-moderation",
-    name: "AI Content Moderation",
-    category: "AI Services",
-    description: "Automated content moderation system for platforms, ensuring compliance and maintaining community standards.",
-    features: [
-      "Real-time content analysis",
-      "Multi-language detection",
-      "Custom policy configuration",
-      "Bias detection and mitigation",
-      "Audit trails and reporting",
-      "API integration"
-    ],
-    pricing: "Starting at $199/month",
-    startingPrice: 199,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Moderation%20Inquiry",
-    icon: "🛡️"
-  },
-  {
-    id: "ai-analytics",
-    name: "AI Business Intelligence",
-    category: "AI Services",
-    description: "Advanced analytics and business intelligence powered by AI, providing actionable insights and predictive modeling.",
-    features: [
-      "Predictive analytics",
-      "Natural language queries",
-      "Automated reporting",
-      "Real-time dashboards",
-      "Data visualization",
-      "Custom ML models"
-    ],
-    pricing: "Starting at $399/month",
-    startingPrice: 399,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Analytics%20Inquiry",
-    icon: "📊"
+    id: "marketplace",
+    name: "Digital Marketplace Platform",
+    category: "E-commerce & Services",
+    description: "Complete marketplace solution for jobs, talent, projects, and services with integrated payment processing.",
+    features: ["Job posting & matching", "Talent marketplace", "Project management", "Payment processing", "Rating system"],
+    benefits: ["Launch marketplace in 24 hours", "Reduce operational costs by 30%", "Increase revenue through commissions", "Built-in trust mechanisms"],
+    pricing: {
+      starter: "$79/month",
+      professional: "$199/month",
+      enterprise: "$599/month"
+    },
+    status: "available",
+    link: "/services/marketplace"
   },
 
-  // IT Services
+  // New AI-Powered Services
+  {
+    id: "ai-content-hub",
+    name: "AI Content Hub",
+    category: "AI Services",
+    description: "Comprehensive content creation and management platform powered by advanced AI for blogs, social media, and marketing.",
+    features: ["AI content generation", "SEO optimization", "Multi-platform publishing", "Content calendar", "Performance analytics"],
+    benefits: ["Generate 10x more content", "Improve SEO rankings", "Save 20+ hours per week", "Increase engagement rates"],
+    pricing: {
+      starter: "$39/month",
+      professional: "$99/month",
+      enterprise: "$299/month"
+    },
+    status: "available",
+    link: "/services/ai-content-hub"
+  },
+  {
+    id: "ai-customer-support",
+    name: "AI Customer Support Suite",
+    category: "AI Services",
+    description: "Intelligent customer support automation with chatbots, ticket routing, and sentiment analysis.",
+    features: ["AI chatbots", "Smart ticket routing", "Sentiment analysis", "Knowledge base", "24/7 availability"],
+    benefits: ["Reduce support costs by 50%", "Improve response time by 80%", "Increase customer satisfaction", "Handle 10x more inquiries"],
+    pricing: {
+      starter: "$29/month",
+      professional: "$79/month",
+      enterprise: "$199/month"
+    },
+    status: "available",
+    link: "/services/ai-customer-support"
+  },
+  {
+    id: "ai-data-analytics",
+    name: "AI Data Analytics Platform",
+    category: "AI Services",
+    description: "Advanced business intelligence and analytics platform with AI-powered insights and predictive modeling.",
+    features: ["Real-time dashboards", "Predictive analytics", "Custom reports", "Data visualization", "API integration"],
+    benefits: ["Make data-driven decisions", "Identify trends before competitors", "Optimize business processes", "Increase ROI by 25%"],
+    pricing: {
+      starter: "$59/month",
+      professional: "$149/month",
+      enterprise: "$399/month"
+    },
+    status: "available",
+    link: "/services/ai-data-analytics"
+  },
+
+  // New IT Services
   {
     id: "cloud-migration",
-    name: "Cloud Migration & DevOps",
+    name: "Cloud Migration Services",
     category: "IT Services",
-    description: "End-to-end cloud migration services with DevOps implementation, ensuring smooth transitions and optimal performance.",
-    features: [
-      "Multi-cloud strategy planning",
-      "Infrastructure as Code (IaC)",
-      "CI/CD pipeline setup",
-      "Performance optimization",
-      "Security and compliance",
-      "24/7 monitoring and support"
-    ],
-    pricing: "Starting at $5,000",
-    startingPrice: 5000,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Cloud%20Migration%20Inquiry",
-    icon: "☁️"
+    description: "Professional cloud migration and optimization services for businesses looking to modernize their infrastructure.",
+    features: ["Infrastructure assessment", "Migration planning", "Data migration", "Performance optimization", "24/7 support"],
+    benefits: ["Reduce infrastructure costs by 40%", "Improve scalability", "Enhanced security", "Better disaster recovery"],
+    pricing: {
+      starter: "$2,500",
+      professional: "$7,500",
+      enterprise: "$15,000+",
+      custom: "Project-based pricing"
+    },
+    status: "available",
+    link: "/services/cloud-migration"
   },
   {
-    id: "cybersecurity",
-    name: "Cybersecurity & Compliance",
+    id: "cybersecurity-audit",
+    name: "Cybersecurity Audit & Compliance",
     category: "IT Services",
-    description: "Comprehensive cybersecurity solutions including penetration testing, compliance audits, and security infrastructure setup.",
-    features: [
-      "Penetration testing",
-      "Security audits and assessments",
-      "Compliance frameworks (SOC2, ISO27001)",
-      "Incident response planning",
-      "Security awareness training",
-      "Ongoing monitoring and support"
-    ],
-    pricing: "Starting at $3,500",
-    startingPrice: 3500,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Cybersecurity%20Inquiry",
-    icon: "🔒"
+    description: "Comprehensive security assessments and compliance consulting for businesses of all sizes.",
+    features: ["Security assessment", "Penetration testing", "Compliance audit", "Security training", "Incident response planning"],
+    benefits: ["Protect against cyber threats", "Meet compliance requirements", "Reduce security risks", "Build customer trust"],
+    pricing: {
+      starter: "$1,500",
+      professional: "$4,500",
+      enterprise: "$9,000+",
+      custom: "Project-based pricing"
+    },
+    status: "available",
+    link: "/services/cybersecurity-audit"
   },
   {
-    id: "network-infrastructure",
-    name: "Network Infrastructure",
+    id: "devops-automation",
+    name: "DevOps Automation & CI/CD",
     category: "IT Services",
-    description: "Design, implementation, and maintenance of enterprise-grade network infrastructure and connectivity solutions.",
-    features: [
-      "Network design and planning",
-      "Hardware procurement and setup",
-      "Wireless network optimization",
-      "VPN and remote access",
-      "Network security implementation",
-      "Ongoing maintenance and support"
-    ],
-    pricing: "Starting at $2,500",
-    startingPrice: 2500,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Network%20Infrastructure%20Inquiry",
-    icon: "🌐"
-  },
-  {
-    id: "it-consulting",
-    name: "IT Strategy & Consulting",
-    category: "IT Services",
-    description: "Strategic IT consulting services to help organizations align technology with business objectives and digital transformation goals.",
-    features: [
-      "Technology roadmap planning",
-      "Digital transformation strategy",
-      "Vendor selection and management",
-      "Cost optimization analysis",
-      "Risk assessment and mitigation",
-      "Change management support"
-    ],
-    pricing: "Starting at $150/hour",
-    startingPrice: 150,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=IT%20Consulting%20Inquiry",
-    icon: "💡"
+    description: "Streamline development and deployment processes with automated DevOps pipelines and infrastructure as code.",
+    features: ["CI/CD pipelines", "Infrastructure as code", "Monitoring & alerting", "Automated testing", "Deployment automation"],
+    benefits: ["Reduce deployment time by 80%", "Improve code quality", "Faster time to market", "Reduce human errors"],
+    pricing: {
+      starter: "$89/month",
+      professional: "$199/month",
+      enterprise: "$499/month"
+    },
+    status: "available",
+    link: "/services/devops-automation"
   },
 
-  // Micro SAAS
+  // New Micro SAAS Solutions
   {
-    id: "marketplace-platform",
-    name: "Digital Marketplace Platform",
-    category: "Micro SAAS",
-    description: "White-label marketplace solution for jobs, talent, and projects with integrated payment processing and governance.",
-    features: [
-      "Custom branding and theming",
-      "Multi-currency support",
-      "Integrated payment gateways",
-      "User management and roles",
-      "Analytics and reporting",
-      "Mobile-responsive design"
-    ],
-    pricing: "Starting at $999/month",
-    startingPrice: 999,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Marketplace%20Platform%20Inquiry",
-    icon: "🏪"
+    id: "invoice-automation",
+    name: "Invoice Automation System",
+    category: "Business Automation",
+    description: "Automate invoice processing, payment tracking, and financial reporting for small to medium businesses.",
+    features: ["Automated invoice processing", "Payment tracking", "Financial reporting", "Integration with accounting software", "Mobile app"],
+    benefits: ["Save 15+ hours per month", "Reduce payment delays", "Improve cash flow", "Better financial visibility"],
+    pricing: {
+      starter: "$25/month",
+      professional: "$59/month",
+      enterprise: "$129/month"
+    },
+    status: "available",
+    link: "/services/invoice-automation"
   },
   {
-    id: "token-system",
-    name: "Token Economy Platform",
-    category: "Micro SAAS",
-    description: "Complete token system with rewards, governance, and economic incentives for community engagement and loyalty.",
-    features: [
-      "Custom token creation",
-      "Reward distribution system",
-      "Governance voting mechanisms",
-      "Staking and liquidity pools",
-      "Multi-chain support",
-      "Analytics and reporting"
-    ],
-    pricing: "Starting at $799/month",
-    startingPrice: 799,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Token%20System%20Inquiry",
-    icon: "🪙"
+    id: "hr-management",
+    name: "HR Management Platform",
+    category: "Business Automation",
+    description: "Complete HR solution for employee management, time tracking, and performance evaluation.",
+    features: ["Employee database", "Time tracking", "Performance reviews", "Leave management", "Payroll integration"],
+    benefits: ["Streamline HR processes", "Improve employee satisfaction", "Reduce administrative overhead", "Better compliance"],
+    pricing: {
+      starter: "$35/month",
+      professional: "$79/month",
+      enterprise: "$179/month"
+    },
+    status: "available",
+    link: "/services/hr-management"
   },
   {
-    id: "kyc-aml",
-    name: "KYC/AML Verification System",
-    category: "Micro SAAS",
-    description: "Comprehensive identity verification and compliance system for financial services and regulated industries.",
-    features: [
-      "Document verification",
-      "Biometric authentication",
-      "Compliance reporting",
-      "Risk scoring",
-      "Multi-jurisdiction support",
-      "API integration"
-    ],
-    pricing: "Starting at $299/month",
-    startingPrice: 299,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=KYC%20AML%20Inquiry",
-    icon: "🆔"
-  },
-  {
-    id: "dao-platform",
-    name: "DAO Governance Platform",
-    category: "Micro SAAS",
-    description: "Complete DAO platform with proposal creation, voting mechanisms, and treasury management for decentralized organizations.",
-    features: [
-      "Proposal creation and management",
-      "Multiple voting mechanisms",
-      "Treasury management",
-      "Member onboarding",
-      "Governance analytics",
-      "Integration with major wallets"
-    ],
-    pricing: "Starting at $599/month",
-    startingPrice: 599,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=DAO%20Platform%20Inquiry",
-    icon: "🏛️"
+    id: "project-management",
+    name: "Project Management Suite",
+    category: "Business Automation",
+    description: "Comprehensive project management solution with task tracking, team collaboration, and resource management.",
+    features: ["Task management", "Team collaboration", "Resource allocation", "Time tracking", "Reporting & analytics"],
+    benefits: ["Improve project delivery by 30%", "Better team collaboration", "Resource optimization", "Real-time project visibility"],
+    pricing: {
+      starter: "$45/month",
+      professional: "$99/month",
+      enterprise: "$249/month"
+    },
+    status: "available",
+    link: "/services/project-management"
   },
 
-  // Digital Economy
+  // New Blockchain & Web3 Services
   {
-    id: "zion-os",
-    name: "Zion OS - Digital Economy Platform",
-    category: "Digital Economy",
-    description: "Complete sovereign digital economy platform with marketplace, governance, identity, and AI-powered tools.",
-    features: [
-      "One-click deployment",
-      "Custom vertical markets",
-      "Multi-language support",
-      "Regional customization",
-      "AI-powered tools",
-      "White-label solutions"
-    ],
-    pricing: "Starting at $1,999/month",
-    startingPrice: 1999,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Zion%20OS%20Inquiry",
-    icon: "🚀",
-    popular: true
+    id: "smart-contract-audit",
+    name: "Smart Contract Audit Services",
+    category: "Blockchain & Web3",
+    description: "Professional smart contract security audits and optimization for DeFi and NFT projects.",
+    features: ["Security audit", "Code review", "Vulnerability assessment", "Gas optimization", "Documentation"],
+    benefits: ["Ensure contract security", "Reduce risk of exploits", "Optimize gas costs", "Build investor confidence"],
+    pricing: {
+      starter: "$3,000",
+      professional: "$8,000",
+      enterprise: "$20,000+",
+      custom: "Project-based pricing"
+    },
+    status: "available",
+    link: "/services/smart-contract-audit"
   },
   {
-    id: "incubator-grants",
-    name: "Incubator & Grants Platform",
-    category: "Digital Economy",
-    description: "Platform for managing startup incubators, grant programs, and funding distribution with transparent governance.",
-    features: [
-      "Application management",
-      "Review and scoring systems",
-      "Fund distribution tracking",
-      "Progress monitoring",
-      "Impact measurement",
-      "Reporting and analytics"
-    ],
-    pricing: "Starting at $899/month",
-    startingPrice: 899,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Incubator%20Grants%20Inquiry",
-    icon: "🌱"
+    id: "nft-marketplace",
+    name: "NFT Marketplace Platform",
+    category: "Blockchain & Web3",
+    description: "White-label NFT marketplace solution with minting, trading, and royalty distribution capabilities.",
+    features: ["NFT minting", "Marketplace trading", "Royalty distribution", "Multi-chain support", "Analytics dashboard"],
+    benefits: ["Launch NFT platform in days", "Generate revenue from trading fees", "Build engaged community", "Multi-chain flexibility"],
+    pricing: {
+      starter: "$99/month",
+      professional: "$299/month",
+      enterprise: "$799/month"
+    },
+    status: "available",
+    link: "/services/nft-marketplace"
   },
   {
-    id: "academy-platform",
-    name: "Zion Academy Platform",
-    category: "Digital Economy",
-    description: "Comprehensive learning management system with AI-powered content creation, assessment, and certification.",
-    features: [
-      "AI content generation",
-      "Interactive assessments",
-      "Certification tracking",
-      "Learning analytics",
-      "Multi-format support",
-      "Mobile learning"
-    ],
-    pricing: "Starting at $399/month",
-    startingPrice: 399,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Academy%20Platform%20Inquiry",
-    icon: "🎓"
+    id: "defi-protocol",
+    name: "DeFi Protocol Development",
+    category: "Blockchain & Web3",
+    description: "Custom DeFi protocol development including lending, staking, and yield farming solutions.",
+    features: ["Custom protocol design", "Smart contract development", "Security audit", "Frontend development", "Deployment support"],
+    benefits: ["Launch innovative DeFi products", "Generate sustainable yields", "Build loyal user base", "Competitive advantage"],
+    pricing: {
+      starter: "$15,000",
+      professional: "$35,000",
+      enterprise: "$75,000+",
+      custom: "Project-based pricing"
+    },
+    status: "available",
+    link: "/services/defi-protocol"
+  },
+
+  // New Industry-Specific Solutions
+  {
+    id: "healthcare-compliance",
+    name: "Healthcare Compliance Platform",
+    category: "Industry Solutions",
+    description: "HIPAA-compliant healthcare management system with patient records, scheduling, and billing automation.",
+    features: ["HIPAA compliance", "Patient management", "Appointment scheduling", "Billing automation", "Electronic health records"],
+    benefits: ["Ensure HIPAA compliance", "Improve patient care", "Reduce administrative costs", "Better patient experience"],
+    pricing: {
+      starter: "$199/month",
+      professional: "$499/month",
+      enterprise: "$1,299/month"
+    },
+    status: "available",
+    link: "/services/healthcare-compliance"
   },
   {
-    id: "blockchain-identity",
-    name: "Blockchain Identity & Credentials",
-    category: "Digital Economy",
-    description: "Self-sovereign identity solution with verifiable credentials, zero-knowledge proofs, and cross-platform compatibility.",
-    features: [
-      "Self-sovereign identity",
-      "Verifiable credentials",
-      "Zero-knowledge proofs",
-      "Cross-platform compatibility",
-      "Privacy-preserving verification",
-      "Multi-chain support"
-    ],
-    pricing: "Starting at $699/month",
-    startingPrice: 699,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Blockchain%20Identity%20Inquiry",
-    icon: "🆔"
+    id: "legal-document-automation",
+    name: "Legal Document Automation",
+    category: "Industry Solutions",
+    description: "AI-powered legal document generation and contract management system for law firms and businesses.",
+    features: ["Document templates", "AI generation", "Contract management", "E-signature integration", "Compliance checking"],
+    benefits: ["Reduce document creation time by 70%", "Ensure legal compliance", "Improve accuracy", "Better client service"],
+    pricing: {
+      starter: "$79/month",
+      professional: "$179/month",
+      enterprise: "$399/month"
+    },
+    status: "available",
+    link: "/services/legal-document-automation"
   },
   {
-    id: "ai-legal-assistant",
-    name: "AI Legal Assistant",
-    category: "AI Services",
-    description: "Intelligent legal research, document analysis, and contract review powered by advanced AI and legal knowledge bases.",
-    features: [
-      "Legal research automation",
-      "Contract analysis and review",
-      "Compliance checking",
-      "Legal document generation",
-      "Case law research",
-      "Regulatory updates"
-    ],
-    pricing: "Starting at $599/month",
-    startingPrice: 599,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Legal%20Assistant%20Inquiry",
-    icon: "⚖️"
-  },
-  {
-    id: "quantum-computing",
-    name: "Quantum Computing Solutions",
-    category: "AI Services",
-    description: "Quantum computing consulting, algorithm development, and hybrid quantum-classical solutions for complex optimization problems.",
-    features: [
-      "Quantum algorithm development",
-      "Hybrid quantum-classical solutions",
-      "Optimization problem solving",
-      "Quantum machine learning",
-      "Performance benchmarking",
-      "Expert consultation"
-    ],
-    pricing: "Starting at $2,999/month",
-    startingPrice: 2999,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Quantum%20Computing%20Inquiry",
-    icon: "⚛️"
-  },
-  {
-    id: "edge-computing",
-    name: "Edge Computing Infrastructure",
-    category: "IT Services",
-    description: "Edge computing solutions for IoT, real-time processing, and distributed computing with low-latency performance.",
-    features: [
-      "Edge node deployment",
-      "Real-time data processing",
-      "IoT integration",
-      "Low-latency networking",
-      "Distributed computing",
-      "Edge AI deployment"
-    ],
-    pricing: "Starting at $1,500/month",
-    startingPrice: 1500,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Edge%20Computing%20Inquiry",
-    icon: "🌐"
-  },
-  {
-    id: "metaverse-platform",
-    name: "Metaverse Development Platform",
-    category: "Digital Economy",
-    description: "Complete metaverse platform with 3D environments, virtual events, NFT integration, and social interaction tools.",
-    features: [
-      "3D environment creation",
-      "Virtual event hosting",
-      "NFT integration",
-      "Social interaction tools",
-      "Cross-platform compatibility",
-      "Custom avatars and assets"
-    ],
-    pricing: "Starting at $1,799/month",
-    startingPrice: 1799,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Metaverse%20Platform%20Inquiry",
-    icon: "🌌"
-  },
-  {
-    id: "ai-healthcare",
-    name: "AI Healthcare Solutions",
-    category: "AI Services",
-    description: "AI-powered healthcare solutions including diagnostic assistance, patient monitoring, and medical research automation.",
-    features: [
-      "Medical image analysis",
-      "Patient data analytics",
-      "Diagnostic assistance",
-      "Drug discovery support",
-      "Clinical trial optimization",
-      "Healthcare compliance"
-    ],
-    pricing: "Starting at $899/month",
-    startingPrice: 899,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=AI%20Healthcare%20Inquiry",
-    icon: "🏥"
-  },
-  {
-    id: "fintech-platform",
-    name: "FinTech Platform Solutions",
-    category: "Micro SAAS",
-    description: "Complete financial technology platform with payment processing, lending, investment management, and regulatory compliance.",
-    features: [
-      "Payment processing",
-      "Lending automation",
-      "Investment management",
-      "Regulatory compliance",
-      "Risk assessment",
-      "Multi-currency support"
-    ],
-    pricing: "Starting at $1,299/month",
-    startingPrice: 1299,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=FinTech%20Platform%20Inquiry",
-    icon: "💰"
-  },
-  {
-    id: "supply-chain-ai",
-    name: "AI-Powered Supply Chain",
-    category: "AI Services",
-    description: "Intelligent supply chain optimization with demand forecasting, inventory management, and logistics automation.",
-    features: [
-      "Demand forecasting",
-      "Inventory optimization",
-      "Logistics automation",
-      "Supplier management",
-      "Risk assessment",
-      "Performance analytics"
-    ],
-    pricing: "Starting at $799/month",
-    startingPrice: 799,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=Supply%20Chain%20AI%20Inquiry",
-    icon: "📦"
-  },
-  {
-    id: "iot-platform",
-    name: "IoT Platform & Analytics",
-    category: "IT Services",
-    description: "Comprehensive IoT platform with device management, data collection, real-time analytics, and automation capabilities.",
-    features: [
-      "Device management",
-      "Data collection",
-      "Real-time analytics",
-      "Automation workflows",
-      "Security protocols",
-      "Scalable infrastructure"
-    ],
-    pricing: "Starting at $699/month",
-    startingPrice: 699,
-    contactLink: "mailto:kleber@ziontechgroup.com?subject=IoT%20Platform%20Inquiry",
-    icon: "🔌"
+    id: "education-lms",
+    name: "Education LMS Platform",
+    category: "Industry Solutions",
+    description: "Complete learning management system for educational institutions and corporate training programs.",
+    features: ["Course creation", "Student management", "Assessment tools", "Progress tracking", "Mobile learning"],
+    benefits: ["Deliver engaging learning experiences", "Track student progress", "Reduce administrative overhead", "Improve learning outcomes"],
+    pricing: {
+      starter: "$49/month",
+      professional: "$129/month",
+      enterprise: "$299/month"
+    },
+    status: "available",
+    link: "/services/education-lms"
   }
 ];
 
-const categories = ["All", "AI Services", "IT Services", "Micro SAAS", "Digital Economy"];
+const categories = ["All", "Core Platform", "AI Services", "IT Services", "Business Automation", "Blockchain & Web3", "Industry Solutions"];
 
 export default function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -466,209 +331,151 @@ export default function ServicesPage() {
 
   const filteredServices = services.filter(service => {
     const matchesCategory = selectedCategory === "All" || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
-  const sortedServices = filteredServices.sort((a, b) => a.startingPrice - b.startingPrice);
-
   return (
     <div className="space-y-8">
-      {/* Header */}
       <div className="text-center space-y-4">
         <h1 className="text-4xl font-bold">Our Services & Solutions</h1>
         <p className="text-xl opacity-80 max-w-3xl mx-auto">
-          Comprehensive micro SAAS, IT services, and AI solutions to power your digital transformation. 
-          From enterprise AI to complete digital economy platforms.
+          Discover our comprehensive suite of micro SAAS services, IT solutions, and AI-powered tools designed to transform your business operations.
         </p>
       </div>
 
-      {/* Contact Info */}
-      <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-6 border border-white/10">
+      {/* Contact Information */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 text-white">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
           <div>
-            <div className="font-semibold text-blue-400">📱 Contact Us</div>
-            <div className="text-sm opacity-80">+1 302 464 0950</div>
+            <h3 className="font-semibold">Contact Us</h3>
+            <p className="text-sm opacity-90">+1 302 464 0950</p>
           </div>
           <div>
-            <div className="font-semibold text-purple-400">✉️ Email</div>
-            <div className="text-sm opacity-80">kleber@ziontechgroup.com</div>
+            <h3 className="font-semibold">Email</h3>
+            <p className="text-sm opacity-90">kleber@ziontechgroup.com</p>
           </div>
           <div>
-            <div className="font-semibold text-green-400">📍 Location</div>
-            <div className="text-sm opacity-80">364 E Main St STE 1008<br />Middletown DE 19709</div>
+            <h3 className="font-semibold">Address</h3>
+            <p className="text-sm opacity-90">364 E Main St STE 1008<br />Middletown DE 19709</p>
           </div>
         </div>
       </div>
 
-      {/* Service Category Navigation */}
-      <div className="space-y-6">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">Explore Our Service Categories</h2>
-          <p className="opacity-80">Click on a category to explore specialized solutions</p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <a href="/services/ai-solutions" className="p-6 rounded-lg border border-white/10 bg-gradient-to-br from-blue-600/10 to-purple-600/10 hover:from-blue-600/20 hover:to-purple-600/20 transition-all text-center">
-            <div className="text-4xl mb-3">🤖</div>
-            <h3 className="font-semibold mb-2">AI Solutions</h3>
-            <p className="text-sm opacity-80">Advanced AI services and automation</p>
-          </a>
-          <a href="/services/it-solutions" className="p-6 rounded-lg border border-white/10 bg-gradient-to-br from-green-600/10 to-blue-600/10 hover:from-green-600/20 hover:to-blue-600/20 transition-all text-center">
-            <div className="text-4xl mb-3">💻</div>
-            <h3 className="font-semibold mb-2">IT Solutions</h3>
-            <p className="text-sm opacity-80">Enterprise IT and infrastructure</p>
-          </a>
-          <a href="/services/micro-saas" className="p-6 rounded-lg border border-white/10 bg-gradient-to-br from-purple-600/10 to-pink-600/10 hover:from-purple-600/20 hover:to-pink-600/20 transition-all text-center">
-            <div className="text-4xl mb-3">🚀</div>
-            <h3 className="font-semibold mb-2">Micro SAAS</h3>
-            <p className="text-sm opacity-80">Innovative software solutions</p>
-          </a>
-          <a href="/services" className="p-6 rounded-lg border border-white/10 bg-gradient-to-br from-orange-600/10 to-red-600/10 hover:from-orange-600/20 hover:to-red-600/20 transition-all text-center">
-            <div className="text-4xl mb-3">🌟</div>
-            <h3 className="font-semibold mb-2">All Services</h3>
-            <p className="text-sm opacity-80">Complete service overview</p>
-          </a>
-        </div>
-      </div>
-
-      {/* Filters */}
-      <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
-        <div className="flex gap-2 flex-wrap">
-          {categories.map(category => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm transition-colors ${
-                selectedCategory === category
-                  ? "bg-blue-600 text-white"
-                  : "bg-white/10 text-white/80 hover:bg-white/20"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+      {/* Search and Filter */}
+      <div className="flex flex-col md:flex-row gap-4">
         <input
           type="text"
           placeholder="Search services..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-blue-500"
+          className="flex-1 p-3 bg-zinc-900 border border-white/10 rounded"
         />
+        <select
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+          className="p-3 bg-zinc-900 border border-white/10 rounded"
+        >
+          {categories.map(category => (
+            <option key={category} value={category}>{category}</option>
+          ))}
+        </select>
       </div>
 
       {/* Services Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {sortedServices.map(service => (
-          <div
-            key={service.id}
-            className={`relative rounded-lg border p-6 transition-all hover:scale-105 ${
-              service.popular
-                ? "border-blue-500/50 bg-gradient-to-br from-blue-600/10 to-purple-600/10"
-                : "border-white/10 bg-white/5 hover:border-white/20"
-            }`}
-          >
-            {service.popular && (
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                  Most Popular
-                </span>
-              </div>
-            )}
-            
-            <div className="text-4xl mb-4">{service.icon}</div>
-            <div className="mb-2">
-              <span className="text-xs px-2 py-1 rounded-full bg-white/10 text-white/60">
-                {service.category}
+        {filteredServices.map(service => (
+          <div key={service.id} className="border border-white/10 rounded-lg p-6 hover:border-white/20 transition-colors">
+            <div className="flex items-start justify-between mb-4">
+              <h3 className="text-xl font-semibold">{service.name}</h3>
+              <span className={`px-2 py-1 rounded text-xs ${
+                service.status === 'available' ? 'bg-green-600 text-white' :
+                service.status === 'beta' ? 'bg-yellow-600 text-white' :
+                'bg-gray-600 text-white'
+              }`}>
+                {service.status === 'available' ? 'Available' :
+                 service.status === 'beta' ? 'Beta' : 'Coming Soon'}
               </span>
             </div>
-            <h3 className="text-xl font-semibold mb-2">{service.name}</h3>
+            
             <p className="text-sm opacity-80 mb-4">{service.description}</p>
             
-            <div className="space-y-3 mb-4">
-              <div className="text-sm">
-                <span className="font-semibold text-blue-400">Key Features:</span>
-                <ul className="mt-2 space-y-1">
-                  {service.features.slice(0, 3).map((feature, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <span className="text-green-400">✓</span>
-                      <span className="text-xs opacity-80">{feature}</span>
-                    </li>
-                  ))}
-                  {service.features.length > 3 && (
-                    <li className="text-xs opacity-60">+{service.features.length - 3} more features</li>
-                  )}
-                </ul>
-              </div>
+            <div className="mb-4">
+              <h4 className="font-semibold mb-2">Key Features:</h4>
+              <ul className="text-sm space-y-1">
+                {service.features.slice(0, 3).map((feature, index) => (
+                  <li key={index} className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    {feature}
+                  </li>
+                ))}
+                {service.features.length > 3 && (
+                  <li className="text-xs opacity-60">+{service.features.length - 3} more features</li>
+                )}
+              </ul>
             </div>
 
-            <div className="border-t border-white/10 pt-4 space-y-3">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-400">{service.pricing}</div>
-                <div className="text-xs opacity-60">Starting price</div>
-              </div>
-              
-              <a
-                href={service.contactLink}
-                className="w-full block text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold"
-              >
-                Get Started
-              </a>
-              
-              <a
-                href={`https://ziontechgroup.com/services/${service.id}`}
-                className="w-full block text-center text-blue-400 hover:text-blue-300 text-sm underline"
-              >
-                Learn More
-              </a>
+            <div className="mb-4">
+              <h4 className="font-semibold mb-2">Benefits:</h4>
+              <ul className="text-sm space-y-1">
+                {service.benefits.slice(0, 2).map((benefit, index) => (
+                  <li key={index} className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
             </div>
+
+            <div className="mb-4">
+              <h4 className="font-semibold mb-2">Pricing:</h4>
+              <div className="grid grid-cols-3 gap-2 text-xs">
+                <div>
+                  <div className="font-medium">Starter</div>
+                  <div className="opacity-80">{service.pricing.starter}</div>
+                </div>
+                <div>
+                  <div className="font-medium">Professional</div>
+                  <div className="opacity-80">{service.pricing.professional}</div>
+                </div>
+                <div>
+                  <div className="font-medium">Enterprise</div>
+                  <div className="opacity-80">{service.pricing.enterprise}</div>
+                </div>
+              </div>
+              {service.pricing.custom && (
+                <div className="text-xs opacity-80 mt-1">{service.pricing.custom}</div>
+              )}
+            </div>
+
+            <a
+              href={service.link}
+              className="block w-full text-center py-2 px-4 bg-blue-600 hover:bg-blue-700 rounded transition-colors"
+            >
+              Learn More
+            </a>
           </div>
         ))}
       </div>
 
-      {/* CTA Section */}
-      <div className="text-center space-y-6 py-12 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-lg border border-white/10">
-        <h2 className="text-3xl font-bold">Ready to Transform Your Business?</h2>
-        <p className="text-xl opacity-80 max-w-2xl mx-auto">
-          Let's discuss how our services can help you achieve your digital transformation goals. 
-          Get in touch for a personalized consultation and custom solution.
-        </p>
+      {/* Call to Action */}
+      <div className="text-center space-y-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8">
+        <h2 className="text-2xl font-bold">Ready to Transform Your Business?</h2>
+        <p className="opacity-90">Get started with our services today and experience the power of AI-driven innovation.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=Service%20Consultation%20Request"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold text-lg"
+            href="/multiverse/launch"
+            className="px-6 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Schedule Consultation
+            Launch Your Instance
           </a>
           <a
-            href="tel:+13024640950"
-            className="border border-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all font-semibold text-lg"
+            href="mailto:kleber@ziontechgroup.com"
+            className="px-6 py-3 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
           >
-            Call Now: +1 302 464 0950
+            Contact Sales
           </a>
-        </div>
-      </div>
-
-      {/* Pricing Comparison */}
-      <div className="space-y-6">
-        <h2 className="text-3xl font-bold text-center">Service Pricing Overview</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {categories.slice(1).map(category => {
-            const categoryServices = services.filter(s => s.category === category);
-            const avgPrice = categoryServices.reduce((sum, s) => sum + s.startingPrice, 0) / categoryServices.length;
-            const minPrice = Math.min(...categoryServices.map(s => s.startingPrice));
-            
-            return (
-              <div key={category} className="text-center p-4 rounded-lg bg-white/5 border border-white/10">
-                <h3 className="font-semibold mb-2">{category}</h3>
-                <div className="text-2xl font-bold text-blue-400">${Math.round(avgPrice)}</div>
-                <div className="text-sm opacity-60">Average starting price</div>
-                <div className="text-xs opacity-40 mt-1">From ${minPrice}/month</div>
-              </div>
-            );
-          })}
         </div>
       </div>
     </div>
