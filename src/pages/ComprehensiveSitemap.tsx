@@ -1,28 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-
-export default function ComprehensiveSitemap() {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Comprehensive Sitemap
-          </h1>
-          <p className="text-xl text-gray-600 mb-12">
-            Welcome to our comprehensivesitemap page
-          </p>
-        </div>
-        
-        <div className="text-center">
-          <Link 
-            to="/contact" 
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300"
-          >
-            Get Started
-          </Link>
-=======
 import {
   Home,
   Rocket,
@@ -54,10 +31,11 @@ import {
   Settings,
   Star,
   Award,
-  TrendingUp
+  TrendingUp,
+  BarChart3
 } from 'lucide-react';
 
-export function ComprehensiveSitemap() {
+export default function ComprehensiveSitemap() {
   const siteStructure = [
     {
       title: 'Main Pages',
@@ -153,130 +131,185 @@ export function ComprehensiveSitemap() {
     }
   ];
 
-  const quickLinks = [
-    { name: 'Get Started', href: '/request-quote', icon: ArrowRight, color: 'from-cyan-500 to-blue-600' },
-    { name: 'Contact Us', href: '/contact', icon: Phone, color: 'from-green-500 to-emerald-600' },
-    { name: 'View Services', href: '/services', icon: Rocket, color: 'from-purple-500 to-pink-600' },
-    { name: 'Read Blog', href: '/blog', icon: FileText, color: 'from-orange-500 to-red-600' }
-  ];
-
-  const serviceHighlights = [
+  const serviceCategories = [
     {
       category: 'AI & Machine Learning',
       icon: Brain,
-      services: ['AI Analytics', 'Natural Language Processing', 'Computer Vision', 'Predictive Modeling'],
+      services: [
+        'AI Business Intelligence',
+        'Machine Learning Models',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'AI Automation'
+      ],
       href: '/services/ai'
     },
     {
       category: 'Cybersecurity',
       icon: Shield,
-      services: ['Threat Detection', 'Penetration Testing', 'Security Auditing', 'Incident Response'],
+      services: [
+        'Threat Detection',
+        'Security Audits',
+        'Compliance Management',
+        'Incident Response',
+        'Security Monitoring',
+        'Access Control'
+      ],
       href: '/services/cybersecurity'
     },
     {
-      category: 'Cloud & DevOps',
+      category: 'Cloud & Infrastructure',
       icon: Cloud,
-      services: ['Cloud Migration', 'DevOps Automation', 'Container Orchestration', 'Infrastructure as Code'],
+      services: [
+        'Cloud Migration',
+        'DevOps Automation',
+        'Infrastructure as Code',
+        'Container Orchestration',
+        'Serverless Computing',
+        'Multi-cloud Management'
+      ],
       href: '/services/cloud'
+    },
+    {
+      category: 'Data & Analytics',
+      icon: BarChart3,
+      services: [
+        'Business Intelligence',
+        'Data Warehousing',
+        'Real-time Analytics',
+        'Predictive Modeling',
+        'Data Visualization',
+        'Data Governance'
+      ],
+      href: '/services/data'
     },
     {
       category: 'Digital Transformation',
       icon: Workflow,
-      services: ['Process Optimization', 'Legacy Modernization', 'Digital Strategy', 'Change Management'],
+      services: [
+        'Process Optimization',
+        'Technology Integration',
+        'Change Management',
+        'Digital Strategy',
+        'Legacy Modernization',
+        'Innovation Consulting'
+      ],
       href: '/services/digital'
+    },
+    {
+      category: 'Micro SAAS Solutions',
+      icon: Package,
+      services: [
+        'Custom Software Development',
+        'API Development',
+        'Integration Services',
+        'Maintenance & Support',
+        'Scalability Solutions',
+        'Performance Optimization'
+      ],
+      href: '/services/micro-saas'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-            <Globe className="w-10 h-10 text-white" />
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Comprehensive
-            </span>
-            <br />
-            Website Sitemap
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Navigate through our complete website structure and discover all the services, 
-            solutions, and resources available at Zion Tech Group.
-          </p>
-        </div>
-      </div>
-
-      {/* Quick Links */}
-      <div className="py-16 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Quick Navigation</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickLinks.map((link) => (
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Comprehensive
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Sitemap
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+              Navigate through our complete website structure and discover all the services, 
+              solutions, and resources available at Zion Tech Group.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                key={link.name}
-                to={link.href}
-                className="group bg-gray-900 rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                <div className={`w-12 h-12 bg-gradient-to-r ${link.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200`}>
-                  <link.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold group-hover:text-cyan-400 transition-colors">
-                  {link.name}
-                </h3>
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-            ))}
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 hover:text-white hover:border-cyan-500 font-semibold rounded-lg transition-all duration-200"
+              >
+                <Rocket className="w-5 h-5 mr-2" />
+                Explore Services
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Main Sitemap */}
+      {/* Site Structure */}
       <div className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-16">Complete Website Structure</h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Complete Site Structure</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Explore our organized website structure with detailed information about each section
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {siteStructure.map((section) => (
-              <div key={section.title} className="space-y-6">
-                <div className="flex items-center space-x-3 mb-6">
+              <div
+                key={section.title}
+                className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300"
+              >
+                <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <section.icon className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold">{section.title}</h3>
+                  <h3 className="text-xl font-bold">{section.title}</h3>
                 </div>
                 
-                <div className="space-y-3">
+                <div className="space-y-2 mb-4">
                   {section.pages.map((page) => (
-                    <Link
-                      key={page.name}
-                      to={page.href}
-                      className="group flex items-center justify-between p-4 bg-gray-800 rounded-lg border border-gray-700 hover:border-cyan-500 transition-all duration-200 hover:shadow-lg"
-                    >
-                      <div className="flex-1">
-                        <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors">
-                          {page.name}
-                        </h4>
-                        <p className="text-sm text-gray-400 mt-1">{page.description}</p>
-                      </div>
-                      <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
-                    </Link>
+                    <div key={page.name} className="flex items-center space-x-2 text-sm text-gray-300">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                      <span>{page.name}</span>
+                    </div>
                   ))}
                 </div>
+                
+                <Link
+                  to={section.pages[0]?.href || '#'}
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
+                >
+                  Learn More
+                  <ArrowRight className="ml-1 w-4 h-4" />
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Service Highlights */}
+      {/* Service Categories */}
       <div className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-16">Service Categories</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {serviceHighlights.map((category) => (
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Service Categories</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Detailed breakdown of our service offerings across different technology domains
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {serviceCategories.map((category) => (
               <div
                 key={category.category}
                 className="bg-gray-900 rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300"
@@ -285,7 +318,7 @@ export function ComprehensiveSitemap() {
                   <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <category.icon className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold">{category.category}</h3>
+                  <h3 className="text-lg font-bold">{category.category}</h3>
                 </div>
                 
                 <div className="space-y-2 mb-4">
@@ -365,16 +398,8 @@ export function ComprehensiveSitemap() {
               </Link>
             </div>
           </div>
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
-
-export default ComprehensiveSitemap;
-
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9

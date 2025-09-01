@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from "@/components/SEO";
+import { SEO } from "@/components/SEO";
 import {
   Users,
   Award,
@@ -241,4 +241,4 @@ export default function AboutPage() {
     </div>
   );
 }
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
+

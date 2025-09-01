@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
-<<<<<<< HEAD
- * SEO function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function SEO({
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
-=======
-type SEOProps = {
->>>>>>> main
   title?: string;
   description?: string;
   url?: string;
   image?: string;
-<<<<<<< HEAD
-  url?: string;
   type?: 'website' | 'article' | 'product' | 'service';
   author?: string;
   publishedTime?: string;
@@ -42,19 +29,18 @@ type SEOProps = {
   preconnect?: string[];
   dnsPrefetch?: string[];
   preload?: Array<{
-
     href: string;
     as: string;
     type?: string;
-    crossorigin?: boolean}[];
+    crossorigin?: boolean;
+  }>;
   prefetch?: string[];
-  dnsPrefetch?: string[];
-  preconnect?: string[]}
+  canonical?: string;
+}
 
 export function SEO({
-
   title = 'Zion Tech Group - AI-Powered Enterprise Solutions & Cybersecurity',
-  description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity platforms, and enterprise technology services.Leading the future of digital transformation.",
+  description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity platforms, and enterprise technology services. Leading the future of digital transformation.",
   keywords = 'AI solutions, cybersecurity, enterprise technology, quantum computing, healthcare AI, supply chain optimization, Zion Tech Group',
   image = '/images/zion-tech-group-og.jpg',
   url = 'https://ziontechgroup.com',
@@ -64,28 +50,71 @@ export function SEO({
   modifiedTime,
   section,
   tags = [],
-  canonical}: SEOProps) {
-
-  // Structured data for organization
-  
-  // Structured data for website
-  
-  return ()
-=======
-};
-
-export function SEO({
-  title = 'Zion Tech Group - Technology Solutions',
-  description = 'Zion Tech Group delivers AI, cloud, cybersecurity and digital transformation services.',
-  url = 'https://ziontechgroup.com',
-  image = '/og-image.jpg'
+  canonical
 }: SEOProps) {
-  return (>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  const metaTags = [
+    { name: 'description', content: description },
+    { name: 'keywords', content: keywords },
+    { name: 'author', content: author },
+    { property: 'og:title', content: title },
+    { property: 'og:description', content: description },
+    { property: 'og:type', content: type },
+    { property: 'og:url', content: url },
+    { property: 'og:image', content: image },
+    { property: 'og:site_name', content: 'Zion Tech Group' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: title },
+    { name: 'twitter:description', content: description },
+    { name: 'twitter:image', content: image },
+    { name: 'robots', content: 'index, follow' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { charset: 'utf-8' }
+  ];
+
+  const linkTags = [
+    { rel: 'canonical', href: canonical || url },
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+    { rel: 'manifest', href: '/manifest.json' }
+  ];
+
+  const scriptTags = [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Zion Tech Group',
+        url: 'https://ziontechgroup.com',
+        logo: 'https://ziontechgroup.com/images/logo.png',
+        description: 'Leading provider of innovative AI, IT, and Micro SAAS solutions',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '364 E Main St STE 1008',
+          addressLocality: 'Middletown',
+          addressRegion: 'DE',
+          postalCode: '19709',
+          addressCountry: 'US'
+        },
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: '+1-302-464-0950',
+          contactType: 'customer service',
+          email: 'kleber@ziontechgroup.com'
+        },
+        sameAs: [
+          'https://linkedin.com/company/ziontechgroup',
+          'https://twitter.com/ziontechgroup',
+          'https://github.com/Zion-Holdings'
+        ]
+      })
+    }
+  ];
+
+  return (
     <Helmet>
       <title>{title}</title>
-<<<<<<< HEAD
-      <html lang={language} />
-
+      
       {/* Meta tags */}
       {metaTags.map((tag, index) => (
         <meta key={index} {...tag} />
@@ -100,154 +129,6 @@ export function SEO({
       {scriptTags.map((script, index) => (
         <script key={index} {...script} />
       ))}
-
-      {/* Additional performance optimizations */}
-      <style>`
-        {`
-          /* Critical CSS for above-the-fold content */
-          .hero-section {
-
-            background: linear-gradient(135deg, #22ddd2 0%, #8c15e9 100%);
-            min-height: 100vh;
-            display: flex;
-            align - items: center;
-            justify - content: center;
-            color: white;
-<<<<<<< HEAD
-            text-align: center;
-          }
-
-          /* Optimize font loading */
-          @font - face {
-            font - family: 'Orbitron';
-            font - display: swap;
-            src: url('/fonts / orbitron - v16 - latin - 400.woff2') format('woff2') ;
-            font - weight: 400;
-            font - style: normal;
-          }
-
-          @font - face {
-            font - family: 'Orbitron';
-            font - display: swap;
-            src: url('/fonts / orbitron - v16 - latin - 600.woff2') format('woff2') ;
-            font - weight: 600;
-            font - style: normal;
-          }
-
-          /* Reduce layout shift */
-          img {
-            max - width: 100%;
-            height: auto;
-          }
-
-=======
-            text-align: center}
-          
-          /* Optimize font loading */
-          @font-face {
-
-            font-family: 'Orbitron';
-            font-display: swap;
-            src: url('/fonts/orbitron-v16-latin-400.woff2') format('woff2');
-            font-weight: 400;
-            font-style: normal}
-          
-          @font-face {
-
-            font-family: 'Orbitron';
-            font-display: swap;
-            src: url('/fonts/orbitron-v16-latin-600.woff2') format('woff2');
-            font-weight: 600;
-            font-style: normal}
-          
-          /* Reduce layout shift */
-          img {
-
-            max-width: 100%;
-            height: auto}
-          
->>>>>>> main
-          /* Optimize animations */
-          @media(prefers-reduced-motion: reduce) {
-
-            *, *::before, *::after {
-
-              animation-duration: 0.01ms !important;
-              animation-iteration-count: 1 !important;
-              transition-duration: 0.01ms !important}
-          }`
-        `}
-      </style>
-
-      {/* Performance monitoring */}
-      <script>`
-        {`
-          // Performance monitoring'
-          if('performance' in window) {
-
-            window.addEventListener('load', () => {
-
-              if(navigation) {
-<<<<<<< HEAD
-                const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-                console.log('Page load time:', loadTime + 'ms') ;
-
-=======
-
-                // console.log('Page load time:', loadTime + 'ms');
-                
->>>>>>> main
-                // Send to analytics if available
-                if(window.gtag) {
-
-                  window.gtag('event',timing_complete', {
-
-                    name: 'load',
-                    value: Math.round (loadTime) }) }
-              }
-<<<<<<< HEAD
-            }) ;
-          }
-
-          // Core Web Vitals monitoring
-          if('web - vital' in window) {
-              getCLS(console.log) ;
-              getFID(console.log) ;
-              getFCP(console.log) ;
-              getLCP(console.log) ;
-              getTTFB(console.log) ;
-            }) ;
-          }
-=======
-            }) }
-          
-          // Core Web Vitals monitoring'
-          if('web-vital' in window) {
-
-            import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-
-              getCLS(console.log);
-              getFID(console.log);
-              getFCP(console.log);
-              getLCP(console.log);
-              getTTFB(console.log)})}`
->>>>>>> main
-        `}
-      </script>
-    </Helmet>) }
-'"`
-=======
-      <meta name="description" content={description} />
-      <link rel="canonical" href={url} />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
     </Helmet>
-  )}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  );
+}

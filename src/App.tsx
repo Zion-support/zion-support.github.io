@@ -1,10 +1,10 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
-import { LoadingSpinner } from './components/ui/loading-spinner';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { Sidebar } from './components/Sidebar';
+import LoadingSpinner from './components/ui/loading-spinner';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (
@@ -38,10 +38,10 @@ const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase20
 const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025'));
 const PricingPage = lazy(() => import('./pages/PricingPage'));
 
-// Service Pages
-const AISolutions = lazy(() => import('./pages/services/ai-business-intelligence'));
-const QuantumComputing = lazy(() => import('./pages/services/quantum-computing-solutions'));
-const Cybersecurity = lazy(() => import('./pages/services/cybersecurity'));
+// Service Pages - Commented out until files are created
+// const AISolutions = lazy(() => import('./pages/services/ai-business-intelligence'));
+// const QuantumComputing = lazy(() => import('./pages/services/quantum-computing-solutions'));
+// const Cybersecurity = lazy(() => import('./pages/services/cybersecurity'));
 
 // Loading component
 const PageLoader = () => (
@@ -95,9 +95,10 @@ function App() {
                 <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
                 <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
                 <Route path="/enhanced-new-services-2025" element={<EnhancedNewServices2025 />} />
-                <Route path="/ai-solutions" element={<AISolutions />} />
-                <Route path="/quantum-computing" element={<QuantumComputing />} />
-                <Route path="/cybersecurity" element={<Cybersecurity />} />
+                {/* Service routes commented out until files are created */}
+                {/* <Route path="/ai-solutions" element={<AISolutions />} /> */}
+                {/* <Route path="/quantum-computing" element={<QuantumComputing />} /> */}
+                {/* <Route path="/cybersecurity" element={<Cybersecurity />} /> */}
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </Suspense>

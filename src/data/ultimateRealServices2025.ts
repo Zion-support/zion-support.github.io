@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ProductListing } from '@/types/listings';
 
 export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
@@ -770,8 +769,6 @@ export const ULTIMATE_CONTACT_INFO_2025 = {
   emergencySupport: "24/7 available for critical issues"
 };
 
-=======
->>>>>>> main
 export const ULTIMATE_SERVICE_GUARANTEES_2025 = {
   quality: "100% satisfaction guarantee with 30-day money-back policy",
   support: "Comprehensive technical support and maintenance included",
@@ -780,8 +777,3 @@ export const ULTIMATE_SERVICE_GUARANTEES_2025 = {
   scalability: "Built to scale with your business growth",
   integration: "Seamless integration with existing systems and workflows"
 };
-=======
-  ;"
-  integration: "Seamless integration with existing systems and workflows"};
-"
->>>>>>> main

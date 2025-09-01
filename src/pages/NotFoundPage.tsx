@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from "@/components/SEO";
+import { SEO } from "@/components/SEO";
 import { Home, ArrowLeft } from 'lucide-react';
 
 export default function NotFoundPage() {
@@ -37,8 +37,5 @@ export default function NotFoundPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
+
