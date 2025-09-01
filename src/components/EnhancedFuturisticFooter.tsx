@@ -135,6 +135,19 @@ import { motion } from 'framer - motion';
       ]
     },
     {
+      title: 'Revolutionary Services 2030',
+      icon: Rocket,
+      color: 'from-indigo-600 to-purple-600',
+      links: [
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
+        { name: 'Space Mission Planning', href: '/services/ai-space-mission-planning' },
+        { name: 'Climate Prediction AI', href: '/services/ai-climate-prediction-platform' },
+        { name: 'Healthcare Predictive Analytics', href: '/services/ai-healthcare-predictive-analytics' },
+        { name: 'Financial Trading Risk Management', href: '/services/ai-financial-trading-risk-management' },
+        { name: 'Legal Document Automation', href: '/services/ai-legal-document-automation' }
+      ]
+    },
+    {
       title: 'Cloud & DevOps',
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
@@ -329,21 +342,126 @@ import { motion } from 'framer - motion';
             </div>
           </div>
 
-          {/* Footer Sections */}
-          {footerSections.map((section, index) => (
-            <div key={section.title}>
-              <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                {section.featured && <Star className="w-4 h-4 text-yellow-400 mr-2" />}
-                {section.title}
-              </h4>
-              <ul className="space-y-2">
-                {section.links.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      to={link.href}
-                      className={`text-gray-400 hover:text-cyan-400 transition-colors text-sm flex items-center ${
-                        link.featured ? 'font-medium text-cyan-400' : ''
-                      }`}
+          {/* Services grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
+            {footerSections.map((section, index) => (
+              <motion.div
+                key={section.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="space-y-4"
+              >
+                <div className="flex items-center space-x-2">
+                  {section.icon && (
+                    <div className={`p-2 rounded-lg bg-gradient-to-r ${section.color}`}>
+                      <section.icon className="w-5 h-5 text-white" />
+                    </div>
+                  )}
+                  <h3 className="text-lg font-semibold text-white">{section.title}</h3>
+                </div>
+                <ul className="space-y-2">
+                  {section.links.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        to={link.href}
+                        className="text-gray-300 hover:text-white transition-colors duration-200 text-sm flex items-center group"
+                      >
+                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Quick Links Section */}
+          <div className="mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <h3 className="text-2xl font-bold text-white mb-8">Quick Links</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <Link to="/comprehensive-services-showcase-2030" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Services 2030
+                </Link>
+                <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Pricing
+                </Link>
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Contact
+                </Link>
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  About
+                </Link>
+                <Link to="/blog" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Blog
+                </Link>
+                <Link to="/faq" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  FAQ
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Contact and social section */}
+          <div className="border-t border-gray-700 pt-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Contact information */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="space-y-4"
+              >
+                <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <Phone className="w-5 h-5 text-blue-400" />
+                    <a href={`tel:${contactInfo.phone}`} className="text-gray-300 hover:text-white transition-colors">
+                      {contactInfo.phone}
+                    </a>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Mail className="w-5 h-5 text-green-400" />
+                    <a href={`mailto:${contactInfo.email}`} className="text-gray-300 hover:text-white transition-colors">
+                      {contactInfo.email}
+                    </a>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <MapPin className="w-5 h-5 text-red-400" />
+                    <span className="text-gray-300">{contactInfo.address}</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Globe className="w-5 h-5 text-purple-400" />
+                    <a href={contactInfo.website} className="text-gray-300 hover:text-white transition-colors">
+                      {contactInfo.website}
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Social links */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="space-y-4"
+              >
+                <h3 className="text-2xl font-bold text-white mb-6">Follow Us</h3>
+                <div className="flex flex-wrap gap-4">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors duration-200 group"
                     >
                       {link.featured && <ArrowRight className="w-3 h-3 mr-2" />}
                       {link.name}

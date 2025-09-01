@@ -159,10 +159,18 @@ export function AppHeader(...args: unknown[]): unknown {
       ]
     },
     { 
-      name: 'Micro SaaS Solutions', 
-      href: '/services/micro-saas', 
-      icon: ShoppingCart, 
-      description: 'Innovative SaaS Platforms',
+      name: 'Revolutionary Services 2030', 
+      href: '/comprehensive-services-showcase-2030', 
+      icon: Rocket, 
+      description: 'Future Technology Solutions',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Innovative Micro SAAS 2025', 
+      href: '/innovative-micro-saas-services-2025', 
+      icon: Rocket, 
+      description: 'Cutting-edge AI Services',
       featured: true,
       color: 'from-blue-500 to-cyan-500'
     },
