@@ -1,22 +1,22 @@
-name: "CodeQL Config"
+name: 'CodeQL Config'
 
 paths:
-  - "src/**"
-  - "components/**"
-  - "pages/**"
-  - "utils/**"
-  - "hooks/**"
-  - "types/**"
+  - 'src/**'
+  - 'components/**'
+  - 'pages/**'
+  - 'utils/**'
+  - 'hooks/**'
+  - 'types/**'
 
 paths-ignore:
-  - "**/*.test.ts"
-  - "**/*.test.tsx"
-  - "**/*.spec.ts"
-  - "**/*.spec.tsx"
-  - "**/node_modules/**"
-  - "**/dist/**"
-  - "**/build/**"
-  - "**/*.d.ts"
+  - '**/*.test.ts'
+  - '**/*.test.tsx'
+  - '**/*.spec.ts'
+  - '**/*.spec.tsx'
+  - '**/node_modules/**'
+  - '**/dist/**'
+  - '**/build/**'
+  - '**/*.d.ts'
 
 queries:
   - uses: security-extended

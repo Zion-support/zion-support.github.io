@@ -1,5 +1,10 @@
-// LinkedIn automation placeholder - implement actual functionality
-    // // // // // // // console.log("LinkedIn automation placeholder - implement actual functionality");
-  }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
+// LinkedIn automation placeholder - implement actual functionality;
+export const linkedinAutomation = {
+  run: () => {
+    console.log(
+      'LinkedIn automation placeholder - implement actual functionality'
+    );
+  },
+};
+
+export default linkedinAutomation;

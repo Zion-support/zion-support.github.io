@@ -9,7 +9,6 @@ import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe,
   HelpCircle, BookOpen, Target, TrendingUp, Star
              } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface SidebarItem {
 
 
@@ -47,7 +46,6 @@ category?: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const sidebarSections = [
   {
@@ -270,7 +268,6 @@ const sidebarSections = [
 ];
 
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   isOpen: boolean;
   onClose: ()              => void}
@@ -282,7 +279,6 @@ export default function EnhancedSidebar2025(...args[]: any):  {
       newExpanded.delete(sectionTitle)} else {
       newExpanded.add(sectionTitle)}
     setExpandedSections(newExpanded)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const filteredServices = sidebarSections.flatMap(section =>;
     section.items.flatMap(item =>;
@@ -304,7 +300,6 @@ export default function EnhancedSidebar2025(...args[]: any):  {
 ;
     return () => {;
       document.body.style.overflow = 'unset'}}, [isOpen]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanystring)              => router.pathname === href;
 
@@ -570,5 +565,3 @@ export default function EnhancedSidebar2025(...args[]: any):  {
     </>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
