@@ -1,10 +1,9 @@
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { addToWishlist, loadWishlistFromDB, removeFromWishlist, getApiUrl } from '@/store/wishlistSlice';
+import { loadWishlistFromDB, removeFromWishlist, getApiUrl } from '@/store/wishlistSlice';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { toast } from 'sonner';
 
 export default function Wishlist() {
   const dispatch = useAppDispatch();
@@ -21,9 +20,9 @@ export default function Wishlist() {
     void dispatch(loadWishlistFromDB(user.id!));
   }, [user, dispatch, navigate, location]);
 
-  const handleRemove = (id: string) => {
+  const handleRemove = (id: string, type: string) => {
     dispatch(removeFromWishlist({ id }));
-    fetch(`${getApiUrl()}/wishlist/${id}`, { method: 'DELETE' }).catch(() => {});
+    fetch(`${getApiUrl()}/wishlist/${id}?type=${type}`, { method: 'DELETE' }).catch(() => {});
   };
 
   const pathForItem = (item: { id: string; type: string }) => {
@@ -53,7 +52,7 @@ export default function Wishlist() {
                 <Link to={pathForItem(item)} className="text-zion-cyan underline">
                   Go to item
                 </Link>
-                <Button size="sm" variant="outline" onClick={() => handleRemove(item.id)}>
+                <Button size="sm" variant="outline" onClick={() => handleRemove(item.id, item.type)}>
                   Remove
                 </Button>
               </div>
