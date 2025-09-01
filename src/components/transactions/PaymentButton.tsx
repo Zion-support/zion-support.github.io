@@ -12,6 +12,10 @@ import { useAnalytics } from "@/context/AnalyticsContext";
 import { event as gtagEvent } from "@/lib/gtag";
 import { captureException } from "@/lib/sentry";
 
+const stripePromise = loadStripe(
+  import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || ""
+);
+
 interface PaymentButtonProps {
   amount: number;
   serviceId: string;
@@ -62,14 +66,13 @@ export function PaymentButton({
       const { data, error } = await supabase.functions.invoke(
         "checkout-sessions",
         {
-          body: {
-            amount,
-            serviceId,
-            providerId,
-            userId: user?.id,
-            successUrl: redirectUrl || window.location.href,
-            cancelUrl: window.location.href,
-          },
+        body: {
+          amount,
+          serviceId,
+          providerId,
+          userId: user?.id,
+          successUrl: redirectUrl || window.location.href,
+          cancelUrl: window.location.href,
         },
       );
 
