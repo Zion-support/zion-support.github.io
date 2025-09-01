@@ -37,8 +37,13 @@ export default function FrontLanding() {
       </header>
 
       {/* Hero */}
-      <main className="relative z-10">
-        <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24">
+      <div className="relative z-10">
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
+        >
           <div className="text-center">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -205,6 +210,41 @@ export default function FrontLanding() {
             </Link>
           </div>
         </motion.section>
+
+        {/* Auto-Promoted Features (auto-generated) */}
+        <section className="mx-auto max-w-7xl px-6 pb-14">
+          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              <Link href="/automation"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+  <div className="text-base font-semibold">Automation Hub</div>
+  <div className="mt-1 text-sm text-white/75">Live agents & workflows</div>
+  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+              <Link href="/site-health"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+  <div className="text-base font-semibold">Site Health</div>
+  <div className="mt-1 text-sm text-white/75">A11y, performance, links</div>
+  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+              <Link href="/reports/seo"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+  <div className="text-base font-semibold">AI SEO Auditor</div>
+  <div className="mt-1 text-sm text-white/75">On‑site improvements</div>
+  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+              <Link href="/reports/ai-trends"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+  <div className="text-base font-semibold">AI Trends Radar</div>
+  <div className="mt-1 text-sm text-white/75">Signals powering strategy</div>
+  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+              <Link href="/newsroom"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+  <div className="text-base font-semibold">Newsroom</div>
+  <div className="mt-1 text-sm text-white/75">Product evolution</div>
+  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+              <a href="https://github.com/Zion-Holdings/zion.app/tree/main/docs" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+  <div className="text-base font-semibold">Docs & Guides</div>
+  <div className="mt-1 text-sm text-white/75">Technical notes</div>
+  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
+              <a href="https://github.com/Zion-Holdings/zion.app/blob/main/docs/CHANGELOG_AI.md" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+  <div className="text-base font-semibold">AI Changelog</div>
+  <div className="mt-1 text-sm text-white/75">Summarized updates</div>
+  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
+          </div>
+        </section>
+        {/* AUTO-GENERATED: FRONT_ADS_END */}
 
         {/* Floating Quick-Nav Dock */}
         <aside className="fixed left-4 top-1/2 z-30 hidden -translate-y-1/2 lg:block">
@@ -556,7 +596,357 @@ export default function FrontLanding() {
               </motion.article>
             ))}
           </div>
-        </section>
+        </motion.section>
+
+        {/* Outcomes */}
+        <motion.section
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-7xl px-6 pb-14"
+        >
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Outcomes</h2>
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">
+            Tangible, measurable wins delivered by autonomous cloud agents.
+          </p>
+          <div className="relative mx-auto mt-6 max-w-6xl overflow-hidden">
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-950/90 to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-slate-950/90 to-transparent" />
+            <div className="marquee">
+              <div className="marquee__track">
+                {[
+                  { label: 'Accessibility fixes', href: '/site-health' },
+                  { label: 'Performance boosts', href: '/site-health' },
+                  { label: 'SEO improvements', href: '/reports/seo' },
+                  { label: 'Safer main merges', href: '/automation' },
+                  { label: 'Cleaner codebase', href: '/automation' },
+                  { label: 'Better content curation', href: '/newsroom' },
+                  { label: 'Operational visibility', href: '/site-health' },
+                  { label: 'Experiment velocity', href: '/automation' },
+                ]
+                  .flatMap((item) => [item, item])
+                  .map((item, idx) => (
+                    <Link key={`${item.label}-${idx}`} href={item.href}>
+                      <a className="mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">
+                        <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {item.label}
+                      </a>
+                    </Link>
+                  ))}
+              </div>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Feature Map */}
+        <motion.section
+          id="feature-map"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-7xl px-6 pb-14"
+        >
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Map</h2>
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">
+            A fast overview of what you can explore right now across the platform.
+          </p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { label: 'Automation Hub', desc: 'Live agents & workflows', href: '/automation' },
+              { label: 'Repo Sync to Main', desc: 'Safe, incremental edits', href: '/automation' },
+              { label: 'Zero‑Ops Cloud', desc: 'Fully managed execution', href: '/automation' },
+              { label: 'Safety Guardrails', desc: 'Defense‑in‑depth checks', href: '/site-health' },
+              { label: 'Observability', desc: 'Dashboards & artifacts', href: '/site-health' },
+              { label: 'Composable Systems', desc: 'Higher‑order workflows', href: '/automation' },
+              { label: 'AI SEO Auditor', desc: 'On‑site improvements', href: '/reports/seo' },
+              { label: 'AI Trends Radar', desc: 'Intelligence signals', href: '/reports/ai-trends' },
+              { label: 'Deep Indexing', desc: 'Smart linking & PRs', href: '/newsroom' },
+              { label: 'Live Dashboards', desc: 'Impact at a glance', href: '/site-health' },
+              { label: 'Health Monitors', desc: 'A11y, perf, links', href: '/site-health' },
+              { label: 'Docs & Guides', desc: 'Technical notes', href: 'https://github.com/Zion-Holdings/zion.app/tree/main/docs', external: true },
+            ].map((item) => (
+              item.external ? (
+                <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <div className="text-base font-semibold">{item.label}</div>
+                  <div className="mt-1 text-sm text-white/75">{item.desc}</div>
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
+                </a>
+              ) : (
+                <Link key={item.label} href={item.href as string}>
+                  <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+                    <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                    <div className="text-base font-semibold">{item.label}</div>
+                    <div className="mt-1 text-sm text-white/75">{item.desc}</div>
+                    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+                  </a>
+                </Link>
+              )
+            ))}
+          </div>
+        </motion.section>
+
+        {/* AUTO: catalog injection for automated advertising */}
+        {/* AUTO:FRONT_INDEX_DIRECTORY_START */}
+<section id="auto-catalog" className="mx-auto max-w-7xl px-6 pb-16">
+  <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Catalog</h2>
+  <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Auto‑discovered features, capabilities, and resources. Kept fresh by in‑repo Node tools.</p>
+  <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <Link href="/automation"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Automation Hub</div><div className="mt-1 text-sm text-white/75">Factories, agents, and live workflows</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+          <Link href="/automation#features"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Automation Features</div><div className="mt-1 text-sm text-white/75">Deep dive into what agents can do</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+          <Link href="/automation#capabilities"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Capabilities</div><div className="mt-1 text-sm text-white/75">What the platform can automate</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+          <Link href="/automation#benefits"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Benefits</div><div className="mt-1 text-sm text-white/75">Outcomes and ROI from autonomous agents</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+          <Link href="/automation#feature-factories"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Feature Factories</div><div className="mt-1 text-sm text-white/75">Generators for product features</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+          <Link href="/site-health"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Site Health</div><div className="mt-1 text-sm text-white/75">A11y, performance, and link dashboards</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+          <Link href="/reports/seo"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">AI SEO Auditor</div><div className="mt-1 text-sm text-white/75">Continuous on‑site SEO improvements</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+          <Link href="/reports/ai-trends"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">AI Trends Radar</div><div className="mt-1 text-sm text-white/75">Signals that inspire new automations</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+          <Link href="/newsroom"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Newsroom</div><div className="mt-1 text-sm text-white/75">Curated updates and product evolution highlights</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+          <Link href="/main/front"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Front Systems Hub</div><div className="mt-1 text-sm text-white/75">Curated, futuristic front experience</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+          <a href="https://github.com/Zion-Holdings/zion.app/tree/main/docs" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Docs & Guides</div><div className="mt-1 text-sm text-white/75">Technical notes and architecture</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
+          <a href="https://github.com/Zion-Holdings/zion.app/blob/main/docs/CHANGELOG_AI.md" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">AI Changelog</div><div className="mt-1 text-sm text-white/75">Summarized autonomous changes</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
+          <a href="https://github.com/Zion-Holdings/zion.app/actions" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Live Pipelines</div><div className="mt-1 text-sm text-white/75">CI logs & artifacts 24/7</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
+          <a href="https://ziontechgroup.com" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring"><div className="text-base font-semibold">Zion Cloud</div><div className="mt-1 text-sm text-white/75">Deployments and cloud platform</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
+
+  </div>
+</section>
+{/* AUTO:FRONT_INDEX_DIRECTORY_END */}
+
+        {/* Platform Modules */}
+        <motion.section
+           id="modules"
+           initial={{ opacity: 0, y: 24 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true, amount: 0.2 }}
+           transition={{ duration: 0.5 }}
+           className="mx-auto max-w-7xl px-6 pb-16"
+         >
+           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Platform Modules</h2>
+          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { Icon: Rocket, title: 'Autonomous Factories', desc: 'Composable, domain‑specific automation factories.', href: '/automation' },
+              { Icon: ShieldCheck, title: 'Guardrails', desc: 'Defense‑in‑depth validations and policy enforcement.', href: '/site-health' },
+              { Icon: Gauge, title: 'Observability', desc: 'Dashboards, artifacts, and live CI telemetry.', href: '/site-health' },
+              { Icon: Activity, title: 'SEO Ops', desc: 'Continuous audits and safe, suggested diffs.', href: '/reports/seo' },
+              { Icon: Globe, title: 'AI Intelligence', desc: 'Trends radar to guide new automation ideas.', href: '/reports/ai-trends' },
+              { Icon: Layers, title: 'Workflow Composer', desc: 'Chain factories into higher‑order systems.', href: '/automation' },
+              { Icon: GitBranch, title: 'Main Sync Engine', desc: 'Small, reviewable edits merged continuously.', href: '/automation' },
+              { Icon: Cpu, title: 'Zero‑Ops Runtime', desc: 'Cloud‑native execution with no servers to manage.', href: '/automation' },
+              { Icon: BarChart3, title: 'Impact Analytics', desc: 'Track outcomes and ROI from automations.', href: '/site-health' },
+            ].map(({ Icon, title, desc, href }) => (
+              <Link key={title} href={href}>
+                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <div className="flex items-center gap-3">
+                    <Icon className="h-5 w-5 text-cyan-300" />
+                    <h3 className="text-lg font-semibold">{title}</h3>
+                  </div>
+                  <p className="mt-2 text-sm text-white/75">{desc}</p>
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <Link2 className="h-3.5 w-3.5" /></div>
+                </a>
+              </Link>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Neural Feature Matrix */}
+        <motion.section
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-7xl px-6 pb-14"
+        >
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Neural Feature Matrix</h2>
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A denser, at-a-glance atlas of what Zion ships autonomously. Every tile links to the live hub, report, or docs.</p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { label: 'Automation Hub', desc: 'Factories, agents, workflows', href: '/automation' },
+              { label: 'Main Sync Engine', desc: 'Safe diffs to main', href: '/automation' },
+              { label: 'Zero‑Ops Cloud', desc: 'Run in the cloud, no servers', href: '/automation' },
+              { label: 'Guardrails', desc: 'Policy + safety gates', href: '/site-health' },
+              { label: 'Site Health', desc: 'A11y, performance, links', href: '/site-health' },
+              { label: 'AI SEO Auditor', desc: 'Continuous on‑site SEO', href: '/reports/seo' },
+              { label: 'AI Trends Radar', desc: 'Signals powering strategy', href: '/reports/ai-trends' },
+              { label: 'Content Curation', desc: 'Promos and deep links', href: '/newsroom' },
+              { label: 'Factories Library', desc: 'Composable building blocks', href: '/automation' },
+              { label: 'Impact Dashboards', desc: 'Artifacts and telemetry', href: '/site-health' },
+              { label: 'Link Integrity', desc: 'Broken links defender', href: '/site-health' },
+              { label: 'Design Evolution', desc: 'Futuristic UI upgrades', href: '/newsroom' },
+              { label: 'Docs & Guides', desc: 'Technical notes', href: 'https://github.com/Zion-Holdings/zion.app/tree/main/docs', external: true },
+              { label: 'AI Changelog', desc: 'Summarized updates', href: 'https://github.com/Zion-Holdings/zion.app/blob/main/docs/CHANGELOG_AI.md', external: true },
+                             { label: 'Cloud Automations', desc: 'Netlify scheduled functions', href: '/automation' },
+               { label: 'Roadmap & Issues', desc: "What's next", href: 'https://github.com/Zion-Holdings/zion.app/issues', external: true }
+            ].map((item) => (
+              item.external ? (
+                <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <div className="text-base font-semibold">{item.label}</div>
+                  <div className="mt-1 text-sm text-white/75">{item.desc}</div>
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
+                </a>
+              ) : (
+                <Link key={item.label} href={item.href as string}>
+                  <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">
+                    <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                    <div className="text-base font-semibold">{item.label}</div>
+                    <div className="mt-1 text-sm text-white/75">{item.desc}</div>
+                    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+                  </a>
+                </Link>
+              )
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Extended Feature Directory */}
+        <motion.section
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-7xl px-6 pb-14"
+        >
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Extended Feature Directory</h2>
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A broader tour of autonomous capabilities. Each card links to the relevant hub, report, or live workflow.</p>
+          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { Icon: GitBranch, title: 'Automated Changelogs', desc: 'AI-authored CHANGELOG with continuous updates.', href: 'https://github.com/Zion-Holdings/zion.app/blob/main/docs/CHANGELOG_AI.md', external: true },
+              { Icon: Rocket, title: 'Content Curation', desc: 'Homepage promos and deep links generated on the fly.', href: '/newsroom' },
+              { Icon: Search, title: 'Deep Site Index', desc: 'Smarter internal linking and content discovery.', href: '/newsroom' },
+              { Icon: ShieldCheck, title: 'Policy & Compliance', desc: 'Safety rails and audits before changes ship.', href: '/site-health' },
+              { Icon: BarChart3, title: 'Impact Dashboards', desc: 'Real-time visibility into outcomes and ROI.', href: '/site-health' },
+              { Icon: Layers, title: 'Factories Library', desc: 'Composable building blocks for new automations.', href: '/automation' },
+              { Icon: Activity, title: 'Health Monitors', desc: 'A11y, links, and performance monitored 24/7.', href: '/site-health' },
+              { Icon: Cpu, title: 'Zero-Ops Runtime', desc: 'Fully managed cloud execution with no servers.', href: '/automation' },
+              { Icon: Globe, title: 'Intelligence Signals', desc: 'AI + cloud trend tracking fueling new ideas.', href: '/reports/ai-trends' },
+            ].map(({ Icon, title, desc, href, external }) => (
+              external ? (
+                <a key={title} href={href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <div className="flex items-center gap-3"><Icon className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">{title}</h3></div>
+                  <p className="mt-1 text-sm text-white/75">{desc}</p>
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
+                </a>
+              ) : (
+                <Link key={title} href={href as string}>
+                  <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">
+                    <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                    <div className="flex items-center gap-3"><Icon className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">{title}</h3></div>
+                    <p className="mt-1 text-sm text-white/75">{desc}</p>
+                    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+                  </a>
+                </Link>
+              )
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Capability Deep Links */}
+        <motion.section
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-7xl px-6 pb-16"
+        >
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capability Deep Links</h2>
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Jump directly to the systems that deliver each capability.</p>
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              ['SEO Automation', 'On-site scans and safe diffs to improve visibility', '/reports/seo'],
+              ['Site Health', 'A11y, performance, and resilient links at a glance', '/site-health'],
+              ['Automation Hub', 'Factories and live autonomous workflows', '/automation'],
+              ['AI Trends Radar', 'Signals inspiring new factories and experiments', '/reports/ai-trends'],
+              ['Newsroom', 'Curated updates and product evolution highlights', '/newsroom'],
+              ['Live Pipelines', 'Observe CI pipelines, logs, and artifacts', 'https://github.com/Zion-Holdings/zion.app/actions'],
+              ['Documentation', 'Technical notes, guides, and changelog', 'https://github.com/Zion-Holdings/zion.app/tree/main/docs'],
+              ['AI Changelog', 'Summarized autonomous changes and highlights', 'https://github.com/Zion-Holdings/zion.app/blob/main/docs/CHANGELOG_AI.md'],
+            ].map(([label, desc, href]) => (
+              (href as string).startsWith('http') ? (
+                <a key={label as string} href={href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <div className="text-base font-semibold">{label as string}</div>
+                  <div className="mt-1 text-sm text-white/75">{desc as string}</div>
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
+                </a>
+              ) : (
+                <Link key={label as string} href={href as string}>
+                  <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">
+                    <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                    <div className="text-base font-semibold">{label as string}</div>
+                    <div className="mt-1 text-sm text-white/75">{desc as string}</div>
+                    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+                  </a>
+                </Link>
+              )
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Use Cases */}
+        <motion.section
+          id="use-cases"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-7xl px-6 pb-14"
+        >
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Use Cases</h2>
+          <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              { title: 'AI SEO Auditor', desc: 'Continuously scans pages and proposes SEO improvements with safe diffs.' },
+              { title: 'Design Beautifier', desc: 'Upgrades UI components with modern, cohesive visual language.' },
+              { title: 'Content Curator', desc: 'Surfaces and promotes high‑value content with links and metadata.' },
+              { title: 'Performance Tuner', desc: 'Optimizes bundles, images, and scripts for faster loads.' },
+              { title: 'A11y Guardian', desc: 'Catches and fixes accessibility issues before they ship.' },
+              { title: 'Growth Experiments', desc: 'Spins up micro‑experiments and measures impact automatically.' },
+            ].map((u) => (
+              <article key={u.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold">{u.title}</h3>
+                <p className="mt-1 text-sm text-white/75">{u.desc}</p>
+              </article>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Stats */}
+        <motion.section
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-7xl px-6 pb-14"
+        >
+          <div className="neon-divider mx-auto mb-8 h-px w-full max-w-5xl" />
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Live Impact</h2>
+          <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+            {[
+              { label: 'Workflows', value: '1,200+', href: 'https://github.com/Zion-Holdings/zion.app/actions', external: true },
+              { label: 'Commits Synced', value: '800+', href: '/automation' },
+              { label: 'Automated Edits', value: '3,500+', href: '/automation' },
+              { label: 'Uptime', value: '99.95%', href: '/site-health' },
+              { label: 'A11y Checks', value: '20k+', href: '/site-health' },
+              { label: 'SEO Fixes', value: '4.2k+', href: '/reports/seo' },
+            ].map((item) => (
+              item.external ? (
+                <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover:border-cyan-400/30">
+                  <div className="text-2xl font-extrabold tracking-tight">{item.value}</div>
+                  <div className="mt-1 text-xs text-white/70">{item.label}</div>
+                </a>
+              ) : (
+                <Link key={item.label} href={item.href as string}>
+                  <a className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover:border-cyan-400/30">
+                    <div className="text-2xl font-extrabold tracking-tight">{item.value}</div>
+                    <div className="mt-1 text-xs text-white/70">{item.label}</div>
+                  </a>
+                </Link>
+              )
+            ))}
+          </div>
+        </motion.section>
 
         {/* Capabilities */}
         <section className="mx-auto max-w-7xl px-6 pb-14">
@@ -640,9 +1030,49 @@ export default function FrontLanding() {
             <Link href="/contact"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Contact — discuss your use‑case</span></a></Link>
           </div>
         </section>
-        {/* AUTO-GENERATED: FRONT_ADS_END */}
+        /* AUTO-GENERATED: FRONT_ADS_END */
 
-      </main>
+        {/* Feature Highlights (new) */}
+        <motion.section
+          id="feature-highlights"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-7xl px-6 pb-14"
+        >
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Highlights</h2>
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Explore deep links across the app that showcase our capabilities and benefits.</p>
+          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { title: 'SEO Audit', desc: 'Continuous on‑site improvements and artifacts.', href: '/reports/seo' },
+              { title: 'AI Trends', desc: 'Signals that inspire new automation factories.', href: '/reports/ai-trends' },
+              { title: 'Site Health', desc: 'A11y, performance and link integrity.', href: '/site-health' },
+              { title: 'Automation Hub', desc: 'Factories, agents and live workflows.', href: '/automation' },
+              { title: 'Newsroom', desc: 'Autonomous updates and product evolution.', href: '/newsroom' },
+              { title: 'Front Systems Hub', desc: 'Futuristic templates, effects and layouts.', href: '/main/front' },
+            ].map((card) => (
+              <a key={card.title} href={card.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold">{card.title}</h3>
+                <p className="mt-1 text-sm text-white/75">{card.desc}</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+              </a>
+            ))}
+          </div>
+        </motion.section>
+
+      </div>
+      {/* Back to top */}
+      {showToTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-24 right-4 z-40 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-2 text-xs font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]"
+          aria-label="Scroll to top"
+        >
+          ↑ Top
+        </button>
+      )}
     </div>
   );
 }

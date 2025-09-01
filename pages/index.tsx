@@ -291,9 +291,21 @@ export default function HomePage() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">These run entirely in the cloud, commit changes, and keep your repo evergreen, without any servers or human interaction.</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: 'Dependencies Guardian (hourly)', desc: 'Upgrades dependencies safely and pushes updates.', href: '/.netlify/functions/dependencies-guardian' },
-              { title: 'AI Innovator (6h)', desc: 'Researches AI trends, updates the newsroom, and refreshes graphs.', href: '/.netlify/functions/ai-innovator' },
-              { title: 'Self‑Healing Guardian (30m)', desc: 'Scans for issues, auto‑fixes, and heals deployments.', href: '/.netlify/functions/self-healing-guardian' },
+              { title: 'Frontpage Enhancer', desc: 'Auto‑advertises features and refreshes homepage content hourly.', href: '/.netlify/functions/frontpage-enhancer' },
+              { title: 'Link & Health Scheduler', desc: 'Runs link checks, health scans, and sitemap updates every 6h.', href: '/.netlify/functions/link-and-health-scheduler' },
+              { title: 'Marketing & Features Promo', desc: 'Regenerates homepage promos and deep links every 2h.', href: '/.netlify/functions/marketing-and-features-promo' },
+              { title: 'Front Enhancer (fast)', desc: 'Runs front improvements every 10 minutes.', href: '/.netlify/functions/front-enhancer' },
+              { title: 'Homepage Advertiser', desc: 'Pushes fresh highlights every 15 minutes.', href: '/.netlify/functions/homepage_advertiser' },
+              { title: 'Cloud Orchestrator', desc: 'Coordinates broader agents on a 4h cadence.', href: '/.netlify/functions/cloud_orchestrator' },
+              { title: 'Fast Orchestrator (1m)', desc: 'Continuously refreshes front + homepage and commits to main every minute.', href: '/.netlify/functions/fast-orchestrator' },
+              { title: 'Continuous Orchestrator (5m)', desc: 'Runs a lightweight pipeline including sitemap and UI futurizer.', href: '/.netlify/functions/continuous-orchestrator' },
+              { title: 'Front Maximizer', desc: 'High‑frequency auto‑advertising and futurizing every 5m.', href: '/.netlify/functions/front-maximizer' },
+              { title: 'Continuous Front Runner', desc: 'Ultra‑fast subset runner every 3m.', href: '/.netlify/functions/continuous-front-runner' },
+              { title: 'README Advertiser', desc: 'Refresh README and docs indexes every 6h.', href: '/.netlify/functions/readme-advertiser' },
+              { title: 'Features/Capabilities/Benefits Advertiser (2m)', desc: 'Continuously advertises new features with deep links on the front pages.', href: '/.netlify/functions/features-capabilities-benefits-advertiser' },
+              { title: 'Hyper Front Index Accelerator (1m)', desc: 'Ultra-fast front index futurizer and directory builder.', href: '/.netlify/functions/hyper-front-index-accelerator' },
+              { title: 'Autonomous Research Inventor (7m)', desc: 'Researches, invents and drafts changes; syncs to main.', href: '/.netlify/functions/autonomous-research-inventor' },
+              { title: 'Autonomous Quality Guardian (11m)', desc: 'Scans dead code, links, security, and heals; syncs to main.', href: '/.netlify/functions/autonomous-quality-guardian' },
             ].map((tool) => (
               <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />

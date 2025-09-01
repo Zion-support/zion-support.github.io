@@ -95,25 +95,9 @@
   schedule = "*/1 * * * *" # every minute
 
 [[scheduled.functions]]
-  name = "innovation-scout"
-  schedule = "*/2 * * * *"
+  name = "autonomous-research-inventor"
+  schedule = "*/7 * * * *" # every 7 minutes
 
 [[scheduled.functions]]
-  name = "knowledge-graph-orchestrator"
-  schedule = "*/10 * * * *"
-
-[[scheduled.functions]]
-  name = "content-curator"
-  schedule = "*/3 * * * *"
-
-[[scheduled.functions]]
-  name = "code-health-orchestrator"
-  schedule = "*/15 * * * *"
-
-[[scheduled.functions]]
-  name = "security-audit-runner"
-  schedule = "0 */2 * * *"
-
-[[scheduled.functions]]
-  name = "media-orchestrator"
-  schedule = "*/20 * * * *"
+  name = "autonomous-quality-guardian"
+  schedule = "*/11 * * * *" # every 11 minutes
