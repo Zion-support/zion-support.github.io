@@ -1,32 +1,34 @@
-import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
 
-export default function Automation() {
+export async function getStaticProps() {
+  const file = path.join(process.cwd(), 'data', 'reports', 'autonomous-cloud', 'latest.json');
+  let data: any = null;
+  try {
+    data = JSON.parse(fs.readFileSync(file, 'utf8'));
+  } catch {}
+  return { props: { data } };
+}
+
+export default function Automation({ data }: { data: any }) {
   return (
-    <div className="py-10 space-y-6">
-      <h1 className="text-2xl font-semibold">Automation Dashboard</h1>
-      <p className="text-gray-600 dark:text-gray-300">Autonomous systems running in the cloud.</p>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>
-          <Link href="/reports/performance/">
-            <a className="text-blue-600 dark:text-blue-400">Lighthouse Mobile Reports</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/reports/security/">
-            <a className="text-blue-600 dark:text-blue-400">Security Audit Reports</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/reports/images/">
-            <a className="text-blue-600 dark:text-blue-400">Image Audit Reports</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/reports/links/">
-            <a className="text-blue-600 dark:text-blue-400">Link Checker Reports</a>
-          </Link>
-        </li>
-      </ul>
+    <div className="py-8">
+      <h1 className="text-2xl font-semibold mb-4">Automation Dashboard</h1>
+      {!data && <p>No recent automation run found. The cloud job runs every 30 minutes.</p>}
+      {data && (
+        <div className="space-y-2">
+          <div>Started: {data.startedAt}</div>
+          <div>Ended: {data.endedAt}</div>
+          <div>Tasks:</div>
+          <ul className="list-disc list-inside">
+            {data.tasks?.map((t: any, i: number) => (
+              <li key={i}>
+                {t.name}: {t.success ? 'SUCCESS' : 'FAIL'} in {t.durationMs}ms
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

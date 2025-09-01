@@ -1,7 +1,1 @@
-export default function AiPoweredBusinessSolutionsDiscussion() {
-  return (
-    <div className="py-10">
-      <h1 className="text-2xl font-semibold">AI-Powered Business Solutions</h1>
-    </div>
-  );
-}
+export default function Page() { return <div className="py-8">AI Business Solutions</div>; }
