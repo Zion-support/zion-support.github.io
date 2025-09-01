@@ -96,7 +96,7 @@ const signupSchema = z;
           // Set the session directly if verification is not required;
           const { error: sessionError } = await supabase.auth.setSession (resData.session) ;
           if (sessionError) {;
-            // // // // // // // console.error ("Error setting session:", sessionError) ;
+            console.error ('Error setting session:', sessionError) ;
             form.setError ('root', {;
               message:;
                 sessionError.message ||;
@@ -109,10 +109,11 @@ const signupSchema = z;
           // updating user state and navigating if necessary for other cases.;
           // For direct signup with session, we can navigate.;
           toast.success ('Welcome to ZionAI 🎉') ;
-          router ('/dashboard') ;"
-        } else {;""
-          // This case might indicate an unexpected response from the API";""
-          // // // // // // // console.error ("Registration response did not include session or emailVerificationRequired flag.", resData) ;
+          navigate ('/dashboard') ;
+        } else {;
+          // This case might indicate an unexpected response from the API;
+          console.error ('Registration response did not include session or emailVerificationRequired flag.',;
+            resData) ;
           form.setError ('root', {;
             message:;
               'Registration complete, but an unexpected issue occurred. Please try logging in.'}) ;
@@ -129,7 +130,7 @@ const signupSchema = z;
               mergeFields: { FNAME: data.displayName }}) ;
             await mailchimpService.sendWelcomeEmail (data.email, 'NEW10') ;
           } catch (err) {;
-            // // // // // // // console.error ('Mailchimp subscription failed', err) ;
+            console.error ('Mailchimp subscription failed', err) ;
             // Non - critical error, don't block user flow;
           };
         };
@@ -137,7 +138,6 @@ const signupSchema = z;
         // If emailVerificationRequired, no toast / navigation here, message is shown;
       };
       try {;
-        /* empty */;
       } catch (err) {;
         const message = err.message ?? 'Registration failed';
         form.setError ('root', { message }) ;
@@ -146,7 +146,6 @@ const signupSchema = z;
         setIsSubmitting (false) ;
       };
     } finally {;
-      /* empty */;
     };
     const onInvalid = errors => {;
       const firstError = Object.keys (errors) [0];
@@ -154,8 +153,8 @@ const signupSchema = z;
         form.setFocus (firstError) ;
       };
     };
-    // Redirect if user is already logged in and has completed profile;"
-    if (isAuthenticated && user?.profileComplete) {;";""
+    // Redirect if user is already logged in and has completed profile;
+    if (isAuthenticated && user?.profileComplete) {;
       return < Navigate to="/" />;
     };
     // Redirect to onboarding if user is authenticated but hasn't completed profile;"

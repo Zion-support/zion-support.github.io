@@ -86,7 +86,7 @@ export default function Signup() {
                     const { error: sessionError } = await supabase.auth.setSession(resData.session);
                     if (sessionError) {
 "
-                        // console.error("Error setting session:", sessionError);"
+                        // // // // // // // // console.error("Error setting session:", sessionError);"
                         form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." });"
                         toast.error(sessionError.message || "Failed to set session. Please try logging in.");
                         return;
@@ -95,12 +95,12 @@ export default function Signup() {
                     // updating user state and navigating if necessary for other cases.
                     // For direct signup with session, we can navigate."
                     toast.success("Welcome to ZionAI 🎉");"
-                    navigate("/dashboard");
+                    router("/dashboard");
                 }
                 else {
 
                     // This case might indicate an unexpected response from the API"
-                    // console.error("Registration response did not include session or emailVerificationRequired flag.", resData);"
+                    // // // // // // // // console.error("Registration response did not include session or emailVerificationRequired flag.", resData);"
                     form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });"
                     toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
                     // Potentially navigate to login or show a more specific error
@@ -119,14 +119,14 @@ export default function Signup() {
                     }
                     catch (err) {
 
-                        // console.error('Mailchimp subscription failed', err);
+                        // // // // // // // // console.error('Mailchimp subscription failed', err);
                         // Non-critical error, don't block user flow
                     }
                 }
                 // Toast and navigation are handled above if session is present
                 // If emailVerificationRequired, no toast/navigation here, message is shown
             }
-            try { }
+            try { /* empty */ }
             catch (err) {
 "
                 const message = err.message ?? "Registration failed";"
@@ -138,7 +138,7 @@ export default function Signup() {
                 setIsSubmitting(false);
             }
         }
-        finally { }
+        finally { /* empty */ }
         ;
         const onInvalid = (errors) => {
 
@@ -159,7 +159,7 @@ export default function Signup() {
             return <Navigate to="/onboarding"/>;
         }
         return (<>
-      "
+"
       <div className="flex min-h-screen bg-zion-blue">"
         <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">"
           <div className="mx-auto w-full max-w-sm lg:w-96">"
@@ -179,8 +179,52 @@ export default function Signup() {
               <Form {...form}>"
                 {form.formState.errors.root && (<Alert variant="destructive" className="mb-4">
                     <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
-                  </Alert>)}"
-                <form onSubmit={form.handleSubmit(onSubmit, onInvalid)} className="space-y-6" noValidate>"
+                  </Alert>)}
+                <form onSubmit = {
+
+  form.handleSubmit(onSubmit,
+  onInvalid)
+
+
+
+
+              <div className="bg - zion - blue - dark rounded - lg p - 6">
+                <Form {...form}>
+                  {form.formState.errors.root && (<Alert variant="destructive" className="mb - 4">
+                      <AlertDescription>
+                        {form.formState.errors.root.message}
+                      </AlertDescription>
+                    </Alert>) }
+                  <form
+                    onSubmit={form.handleSubmit (onSubmit, onInvalid) }
+                    className="space - y-6"
+                    noValidate
+                  >
+                    <FormField
+                      control={form.control}
+                      name="displayName"
+                      render={ ({ field }) => (<FormItem>
+                          <FormLabel className="text - zion - slate - light">
+                            Full Name
+                          </FormLabel>
+                          <FormControl>
+                            <div className="relative">
+                              <Input
+                                placeholder="John Doe"
+                                className="bg - zion - blue pl - 10 placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple"
+                                {...field}
+                                aria - autocomplete="none"
+                                autoComplete="off"
+                              />
+                              <User className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate h - 4 w - 4" />
+                            </div>
+                          </FormControl>
+                          <FormMessage className="text - red - 400" />
+                        </FormItem>) }
+                    />
+
+"
+} className="space-y-6" noValidate>"
                   <FormField control={form.control} name="displayName" render={({ field }) => (<FormItem>"
                         <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                         <FormControl>"

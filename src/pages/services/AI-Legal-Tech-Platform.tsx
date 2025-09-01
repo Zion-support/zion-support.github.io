@@ -1,217 +1,264 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ; Scale,; FileText,; Brain,; Shield,; Clock,; DollarSign,; CheckCircle,; ArrowRight,; Star,; Zap,; Users,; Database,; Network,; Cpu,; Server,; Globe,; Target,; TrendingUp,; Activity,; Fingerprint,; Key,; Search,; Gavel,; BookOpen,; Briefcase,; Award,; Phone,; Mail,; MapPin; } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { motion } from 'framer-motion';
+import { ; Brain,; Scale,; FileText,; Search,; Shield,; Zap,; CheckCircle,; ArrowRight,; Building,; Users,; Clock,; DollarSign,; TrendingUp,; AlertTriangle,; BookOpen,; Gavel,; Lock,; Eye,; BarChart3,; Target; } from 'lucide-react';
 ;
 export default function AILegalTechPlatform() {;
   const features = [;
     {;
-      icon: Brain,;
-      title: "AI-Powered Document Analysis",";""
-      description: "Advanced NLP algorithms that analyze legal documents with 99.2% accuracy";
-    },;"
-    {;""
-      icon: Scale,";""
-      title: "Intelligent Contract Review",";""
-      description: "Automated contract analysis with risk assessment and compliance checking";
-    },;"
-    {;""
-      icon: Clock,";""
-      title: "24/7 Legal Research",";""
-      description: "Instant access to case law, statutes, and legal precedents worldwide";
-    },;"
-    {;""
-      icon: Shield,";""
-      title: "Compliance Automation",";""
-      description: "Automated compliance monitoring and regulatory updates across jurisdictions";
+      title: 'AI Document Analysis',;
+      description: 'Advanced NLP for contract review, legal research, and document classification',;
+      icon: FileText,;
+      benefits: ['Contract analysis', 'Legal research', 'Document classification', 'Risk assessment'];
+    },;
+    {;
+      title: 'Legal Research Automation',;
+      description: 'AI-powered case law research and precedent analysis',;
+      icon: Search,;
+      benefits: ['Case law research', 'Precedent analysis', 'Citation checking', 'Legal trends'];
+    },;
+    {;
+      title: 'Contract Generation',;
+      description: 'Intelligent contract drafting with customizable templates',;
+      icon: BookOpen,;
+      benefits: ['Template library', 'Custom clauses', 'Compliance checking', 'Version control'];
+    },;
+    {;
+      title: 'Compliance Monitoring',;
+      description: 'Automated regulatory compliance and risk management',;
+      icon: Shield,;
+      benefits: ['Regulatory updates', 'Compliance alerts', 'Risk scoring', 'Audit trails'];
     };
   ];
 ;
-  const services = [;"
-    {;";""
-      title: "Contract Intelligence",";""
-      description: "AI-powered contract analysis, risk assessment, and automated clause generation",;""
-      icon: FileText,";""
-      features: ["Smart clause detection", "Risk scoring", "Automated drafting", "Version control"];
-    },;"
-    {;";""
-      title: "Legal Research AI",";""
-      description: "Intelligent legal research with case law analysis and precedent identification",;""
-      icon: BookOpen,";""
-      features: ["Case law search", "Precedent analysis", "Citation checking", "Research automation"];
-    },;"
-    {;";""
-      title: "Compliance Management",";""
-      description: "Automated compliance monitoring and regulatory change management",;""
-      icon: Shield,";""
-      features: ["Regulatory tracking", "Compliance alerts", "Audit trails", "Risk assessment"];
-    },;"
-    {;";""
-      title: "Document Automation",";""
-      description: "Intelligent document generation and workflow automation",;""
-      icon: Briefcase,";""
-      features: ["Template library", "Smart forms", "Workflow automation", "E-signature integration"];
-    };
-  ];"
-;""
-  const technologies = [";"GPT-4 & Claude 3.5 Integration",";"Natural Language Processing (NLP)",";"Machine Learning Algorithms",";"Blockchain for Document Integrity",";"Cloud-Native Architecture",";"API-First Design",";"Multi-jurisdiction Support",";"Real-time Collaboration Tools";
-  ];
-;
-  const pricing = [;"
-    {;";""
-      plan: "Starter",";""
-      price: "$299",";""
-      period: "/month",;""
-      features: [";"Up to 100 documents/month",";"Basic contract analysis",";"Standard legal research",";"Email support",";"Basic compliance alerts";""
-      ],";""
-      cta: "Start Free Trial",;
+  const pricingPlans = [;
+    {;
+      name: 'Solo Practitioner',;
+      price: '$199/month',;
+      description: 'Perfect for individual lawyers and small practices',;
+      features: [;
+        'Basic document analysis',;
+        'Legal research tools',;
+        'Contract templates',;
+        'Email support',;
+        'Up to 100 documents/month';
+      ],;
+      cta: 'Get Started',;
       popular: false;
-    },;"
-    {;";""
-      plan: "Professional",";""
-      price: "$799",";""
-      period: "/month",;""
-      features: [";"Up to 1,000 documents/month",";"Advanced AI analysis",";"Priority legal research",";"Phone & email support",";"Advanced compliance features",";"Custom templates";""
-      ],";""
-      cta: "Get Started",;
+    },;
+    {;
+      name: 'Law Firm',;
+      price: '$599/month',;
+      description: 'Ideal for growing law firms and legal teams',;
+      features: [;
+        'Advanced AI analytics',;
+        'Team collaboration',;
+        'Custom integrations',;
+        'Priority support',;
+        'Unlimited documents',;
+        'API access',;
+        'Advanced reporting';
+      ],;
+      cta: 'Start Free Trial',;
       popular: true;
-    },;"
-    {;";""
-      plan: "Enterprise",";""
-      price: "$2,499",";""
-      period: "/month",;""
-      features: [";"Unlimited documents",";"Custom AI models",";"Dedicated legal research",";"24/7 priority support",";"Full compliance suite",";"Custom integrations",";"White-label options";""
-      ],";""
-      cta: "Contact Sales",;
+    },;
+    {;
+      name: 'Enterprise',;
+      price: 'Custom',;
+      description: 'For large legal departments and corporations',;
+      features: [;
+        'Full platform access',;
+        'Custom AI models',;
+        'Dedicated support',;
+        'White-label solutions',;
+        'Advanced security',;
+        'Custom development';
+      ],;
+      cta: 'Contact Sales',;
       popular: false;
     };
-  ];"
-;""
-  return (";""
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;""
-      <SEO ";""
-        title="AI Legal Tech Platform - Zion Tech Group";""
-        description="Revolutionary AI-powered legal technology platform for contract analysis, legal research, and compliance automation. Transform your legal practice with intelligent automation.";"
-      />;""
+  ];
+;
+  const useCases = [;
+    {;
+      title: 'Contract Review',;
+      description: 'Automate contract analysis and identify key terms and risks',;
+      icon: FileText,;
+      benefits: ['Faster review', 'Risk identification', 'Cost reduction', 'Quality improvement'];
+    },;
+    {;
+      title: 'Legal Research',;
+      description: 'Streamline case law research and precedent analysis',;
+      icon: Search,;
+      benefits: ['Time savings', 'Better insights', 'Comprehensive coverage', 'Citation accuracy'];
+    },;
+    {;
+      title: 'Compliance Management',;
+      description: 'Automate regulatory compliance and risk monitoring',;
+      icon: Shield,;
+      benefits: ['Risk mitigation', 'Compliance automation', 'Audit readiness', 'Cost savings'];
+    },;
+    {;
+      title: 'Document Management',;
+      description: 'Organize and manage legal documents efficiently',;
+      icon: BookOpen,;
+      benefits: ['Better organization', 'Quick retrieval', 'Version control', 'Collaboration'];
+    };
+  ];
+;
+  return (;
+    <div className="min-h-screen bg-futuristic">;""
       {/* Hero Section */}";""
-      <section className="relative overflow-hidden py-20">";""
-        <div className="absolute inset-0">";""
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>";""
-          <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>";""
-          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>;"
-        </div>;";""
-        <div className="relative z-10 container mx-auto px-4">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};"
-            animate={{ opacity: 1, y: 0 }};""
-            transition={{ duration: 0.6 }}";""
-            className="text-center max-w-4xl mx-auto";""
-          >";""
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 rounded-full text-blue-300 text-sm font-medium mb-6">";""
-              <Scale className="w-4 h-4 mr-2" />;
-              AI-Powered Legal Technology;"
-            </div>;";""
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;""
+      <section className="relative pt-32 pb-20 overflow-hidden">";""
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-green-900/20"></div>";""
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">";""
+          <div className="text-center max-w-4xl mx-auto">;
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }};"
+              animate={{ opacity: 1, y: 0 }};""
+              transition={{ duration: 0.8 }}";""
+              className="inline-flex items-center px-4 py-2 bg-purple-600/20 border border-purple-500/30 rounded-full text-purple-400 text-sm font-medium mb-6";""
+            >";""
+              <Brain className="h-4 w-4 mr-2" />;
+              AI-Powered Legal Technology;
+            </motion.div>;
+            <motion.h1;
+              initial={{ opacity: 0, y: 20 }};"
+              animate={{ opacity: 1, y: 0 }};""
+              transition={{ duration: 0.8, delay: 0.1 }}";""
+              className="text-5xl md:text-7xl font-bold text-white mb-6";"
+            >;""
               AI Legal Tech";""
-              <span className="block bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-600 bg-clip-text text-transparent">;
+              <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-green-400 bg-clip-text text-transparent">;
                 Platform;
-              </span>;"
-            </h1>;";""
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">;
-              Revolutionize your legal practice with our AI-powered platform that automates contract analysis,;
-              legal research, and compliance management. Save 40+ hours per week while improving accuracy.;"
-            </p>;";""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
+              </span>;
+            </motion.h1>;
+            <motion.p;
+              initial={{ opacity: 0, y: 20 }};"
+              animate={{ opacity: 1, y: 0 }};""
+              transition={{ duration: 0.8, delay: 0.2 }}";""
+              className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto";
+            >;
+              Transform your legal practice with AI-powered document analysis, legal research automation,;
+              contract generation, and compliance monitoring.;
+            </motion.p>;
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }};"
+              animate={{ opacity: 1, y: 0 }};""
+              transition={{ duration: 0.8, delay: 0.3 }}";""
+              className="flex flex-col sm:flex-row gap-4 justify-center";"
+            >;""
               <Link";""
                 to="/contact";""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20";"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105";"
               >;""
                 Start Free Trial";""
-                <ArrowRight className="w-5 h-5 ml-2" />;"
+                <ArrowRight className="ml-2 h-5 w-5" />;"
               </Link>;""
               <Link";""
-                to="/services";""
-                className="inline-flex items-center px-8 py-4 border border-blue-400/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200";
+                to="#demo";""
+                className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200";
               >;
-                View All Services;
+                Watch Demo;
               </Link>;
-            </div>;
-          </motion.div>;
-        </div>;"
-      </section>;""
-      {/* Features Section */}";""
-      <section className="py-20">";""
-        <div className="container mx-auto px-4">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};"
-            whileInView={{ opacity: 1, y: 0 }};""
-            transition={{ duration: 0.6 }}";""
-            className="text-center mb-16";""
-          >";""
-            <h2 className="text-4xl font-bold text-white mb-4">;"
-              AI Legal Tech Features;""
-            </h2>";""
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">;
-              Our AI-powered legal platform combines cutting-edge technology with legal expertise;
-              to provide comprehensive automation for your legal practice.;
-            </p>;"
-          </motion.div>;";""
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={feature.title};
-                initial={{ opacity: 0, y: 20 }};"
-                whileInView={{ opacity: 1, y: 0 }};""
-                transition={{ duration: 0.6, delay: index * 0.1 }}";""
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 group";""
-              >";""
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-blue-400/40 group-hover:to-purple-500/40 transition-all duration-200">";""
-                  <feature.icon className="w-6 h-6 text-blue-400" />;""
-                </div>";""
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>";""
-                <p className="text-slate-300">{feature.description}</p>;
-              </motion.div>;
-            ))};
+            </motion.div>;
           </div>;
         </div>;"
       </section>;""
-      {/* Services Section */}";""
-      <section className="py-20 bg-slate-900/50">";""
-        <div className="container mx-auto px-4">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};"
-            whileInView={{ opacity: 1, y: 0 }};""
-            transition={{ duration: 0.6 }}";""
-            className="text-center mb-16";""
-          >";""
-            <h2 className="text-4xl font-bold text-white mb-4">;"
-              Comprehensive Legal Services;""
-            </h2>";""
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">;
-              From contract analysis to compliance management, our AI legal platform covers every aspect;
-              of modern legal practice automation.;
+      {/* Key Benefits */}";""
+      <section className="py-20 bg-gray-900/50">";""
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";""
+          <div className="text-center mb-16">";""
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Legal Platform?</h2>";""
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+              Experience the future of legal technology with cutting-edge AI designed for efficiency, accuracy, and cost savings.;
             </p>;"
-          </motion.div>;";""
-          <div className="grid md:grid-cols-2 gap-8">;
-            {services.map((service, index) => (;
+          </div>;";""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }};"
+              transition={{ duration: 0.5 }};""
+              viewport={{ once: true }}";""
+              className="text-center";""
+            >";""
+              <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 mb-4">";""
+                <Clock className="h-8 w-8 text-white" />;""
+              </div>";""
+              <h3 className="text-xl font-semibold text-white mb-3">80% Time Savings</h3>";""
+              <p className="text-gray-400">Automate routine legal tasks</p>;
+            </motion.div>;
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }};"
+              transition={{ duration: 0.5, delay: 0.1 }};""
+              viewport={{ once: true }}";""
+              className="text-center";""
+            >";""
+              <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 mb-4">";""
+                <DollarSign className="h-8 w-8 text-white" />;""
+              </div>";""
+              <h3 className="text-xl font-semibold text-white mb-3">60% Cost Reduction</h3>";""
+              <p className="text-gray-400">Lower legal research costs</p>;
+            </motion.div>;
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }};"
+              transition={{ duration: 0.5, delay: 0.2 }};""
+              viewport={{ once: true }}";""
+              className="text-center";""
+            >";""
+              <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-green-600 to-emerald-600 mb-4">";""
+                <Shield className="h-8 w-8 text-white" />;""
+              </div>";""
+              <h3 className="text-xl font-semibold text-white mb-3">99.9% Accuracy</h3>";""
+              <p className="text-gray-400">AI-powered legal analysis</p>;
+            </motion.div>;
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }};
+              whileInView={{ opacity: 1, y: 0 }};"
+              transition={{ duration: 0.5, delay: 0.3 }};""
+              viewport={{ once: true }}";""
+              className="text-center";""
+            >";""
+              <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-orange-600 to-red-600 mb-4">";""
+                <TrendingUp className="h-8 w-8 text-white" />;""
+              </div>";""
+              <h3 className="text-xl font-semibold text-white mb-3">Increased Efficiency</h3>";""
+              <p className="text-gray-400">Better client service</p>;
+            </motion.div>;
+          </div>;
+        </div>;"
+      </section>;""
+      {/* Features */}";""
+      <section className="py-20">";""
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";""
+          <div className="text-center mb-16">";""
+            <h2 className="text-4xl font-bold text-white mb-4">Platform Features</h2>";""
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+              Comprehensive AI-powered features designed to revolutionize your legal practice.;
+            </p>;"
+          </div>;";""
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
+            {features.map((feature, index) => (;
               <motion.div;
-                key={service.title};
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};"
-                whileInView={{ opacity: 1, x: 0 }};""
-                transition={{ duration: 0.6, delay: index * 0.1 }}";""
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-blue-400/30 transition-all duration-200";""
-              >";""
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">";""
-                  <service.icon className="w-8 h-8 text-blue-400" />;""
+                key={feature.title};
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};
+                whileInView={{ opacity: 1, x: 0 }};"
+                transition={{ duration: 0.6, delay: index * 0.1 }};""
+                viewport={{ once: true }}";""
+                className="bg-gray-800/30 rounded-xl p-8 border border-gray-700 hover:border-purple-500/50 transition-all duration-300";"
+              >;""
+                <div className={`inline-flex p-4 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 mb-6`}>";""
+                  <feature.icon className="h-8 w-8 text-white" />;""
                 </div>";""
-                <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>";""
-                <p className="text-slate-300 text-lg mb-6">{service.description}</p>";""
-                <ul className="space-y-2">;""
-                  {service.features.map((feature, featureIndex) => (";""
-                    <li key={featureIndex} className="flex items-center text-slate-300">";""
-                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
-                      {feature};
+                <h3 className="text-2xl font-semibold text-white mb-4">{feature.title}</h3>";""
+                <p className="text-gray-400 mb-6">{feature.description}</p>";""
+                <ul className="space-y-3">;""
+                  {feature.benefits.map((benefit, idx) => (";""
+                    <li key={idx} className="flex items-center text-gray-300">";""
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />;
+                      {benefit};
                     </li>;
                   ))};
                 </ul>;
@@ -220,63 +267,55 @@ export default function AILegalTechPlatform() {;
           </div>;
         </div>;"
       </section>;""
-      {/* Pricing Section */}";""
-      <section className="py-20">";""
-        <div className="container mx-auto px-4">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};"
-            whileInView={{ opacity: 1, y: 0 }};""
-            transition={{ duration: 0.6 }}";""
-            className="text-center mb-16";""
-          >";""
-            <h2 className="text-4xl font-bold text-white mb-4">;"
-              Transparent Pricing;""
-            </h2>";""
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">;
-              Choose the plan that fits your legal practice needs. All plans include our core AI features.;
+      {/* Pricing */}";""
+      <section className="py-20 bg-gray-900/50">";""
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";""
+          <div className="text-center mb-16">";""
+            <h2 className="text-4xl font-bold text-white mb-4">Transparent Pricing</h2>";""
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+              Choose the plan that fits your legal practice needs.;
             </p>;"
-          </motion.div>;";""
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">;
-            {pricing.map((plan, index) => (;
+          </div>;";""
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">;
+            {pricingPlans.map((plan, index) => (;
               <motion.div;
-                key={plan.plan};
+                key={plan.name};
                 initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.6, delay: index * 0.1 }};
-                className={`relative bg-slate-800/50 border rounded-xl p-8 ${;
+                transition={{ duration: 0.5, delay: index * 0.1 }};
+                viewport={{ once: true }};
+                className={`relative bg-gray-800/50 rounded-xl p-8 border ${;
                   plan.popular;
-                    ? 'border-blue-400/50 bg-gradient-to-b from-blue-500/10 to-slate-800/50';
-                    : 'border-slate-700/50';
-                }`};"
+                    ? 'border-purple-500/50 bg-purple-600/10';
+                    : 'border-gray-700 hover:border-purple-500/50';
+                } transition-all duration-300`};"
               >;""
                 {plan.popular && (";""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";""
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">;
+                    <span className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">;
                       Most Popular;
                     </span>;
                   </div>;"
                 )};";""
                 <div className="text-center mb-8">";""
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.plan}</h3>";""
-                  <div className="flex items-baseline justify-center">";""
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>";""
-                    <span className="text-slate-400 ml-1">{plan.period}</span>;
-                  </div>;"
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>";""
+                  <div className="text-4xl font-bold text-purple-400 mb-2">{plan.price}</div>";""
+                  <p className="text-gray-400">{plan.description}</p>;"
                 </div>;";""
                 <ul className="space-y-4 mb-8">;""
-                  {plan.features.map((feature, featureIndex) => (";""
-                    <li key={featureIndex} className="flex items-center text-slate-300">";""
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
+                  {plan.features.map((feature, idx) => (";""
+                    <li key={idx} className="flex items-center text-gray-300">";""
+                      <CheckCircle className="h-5 w-5 text-purple-400 mr-3 flex-shrink-0" />;
                       {feature};
                     </li>;
-                  ))};"
-                </ul>;""
-                <Link";""
-                  to="/contact";
-                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${;
+                  ))};
+                </ul>;
+                <Link;
+                  to={plan.name === 'Enterprise' ? '/contact' : '/signup'};
+                  className={`block w-full text-center px-6 py-3 rounded-lg font-medium transition-all duration-200 ${;
                     plan.popular;
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-400 hover:to-purple-500';
-                      : 'bg-slate-700 text-white hover:bg-slate-600';
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700';
+                      : 'bg-gray-700 text-white hover:bg-gray-600';
                   }`};
                 >;
                   {plan.cta};
@@ -286,183 +325,72 @@ export default function AILegalTechPlatform() {;
           </div>;
         </div>;"
       </section>;""
-      {/* Technologies Section */}";""
-      <section className="py-20 bg-slate-900/50">";""
-        <div className="container mx-auto px-4">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};"
-            whileInView={{ opacity: 1, y: 0 }};""
-            transition={{ duration: 0.6 }}";""
-            className="text-center mb-16";""
-          >";""
-            <h2 className="text-4xl font-bold text-white mb-4">;"
-              Advanced Legal Technologies;""
-            </h2>";""
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">;
-              Our platform leverages cutting-edge technologies to provide the most advanced legal automation available.;
+      {/* Use Cases */}";""
+      <section className="py-20">";""
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";""
+          <div className="text-center mb-16">";""
+            <h2 className="text-4xl font-bold text-white mb-4">Use Cases</h2>";""
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+              Our AI platform is transforming legal practices across multiple practice areas.;
             </p>;"
-          </motion.div>;";""
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {technologies.map((tech, index) => (;
+          </div>;";""
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
+            {useCases.map((useCase, index) => (;
               <motion.div;
-                key={tech};
-                initial={{ opacity: 0, scale: 0.9 }};"
-                whileInView={{ opacity: 1, scale: 1 }};""
-                transition={{ duration: 0.6, delay: index * 0.1 }}";""
-                className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-blue-400/30 transition-all duration-200";""
+                key={useCase.title};
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};"
+                transition={{ duration: 0.5, delay: index * 0.1 }};""
+                viewport={{ once: true }}";""
+                className="bg-gray-800/30 rounded-xl p-8 border border-gray-700 hover:border-blue-500/50 transition-all duration-300";""
               >";""
-                <Scale className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />";""
-                <span className="text-white text-sm">{tech}</span>;
+                <div className="inline-flex p-4 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 mb-6">";""
+                  <useCase.icon className="h-8 w-8 text-white" />;""
+                </div>";""
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>";""
+                <p className="text-gray-400 mb-6">{useCase.description}</p>";""
+                <ul className="space-y-2">;""
+                  {useCase.benefits.map((benefit, idx) => (";""
+                    <li key={idx} className="flex items-center text-gray-300">";""
+                      <CheckCircle className="h-4 w-4 text-blue-400 mr-2 flex-shrink-0" />;
+                      {benefit};
+                    </li>;
+                  ))};
+                </ul>;
               </motion.div>;
             ))};
           </div>;
         </div>;"
       </section>;""
-      {/* Market Analysis Section */}";""
-      <section className="py-20">";""
-        <div className="container mx-auto px-4">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};"
-            whileInView={{ opacity: 1, y: 0 }};""
-            transition={{ duration: 0.6 }}";""
-            className="text-center mb-16";""
-          >";""
-            <h2 className="text-4xl font-bold text-white mb-4">;"
-              Market Analysis & ROI;""
-            </h2>";""
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">;
-              Understand the market landscape and potential return on investment for AI legal technology.;
-            </p>;"
-          </motion.div>;";""
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};"
-              whileInView={{ opacity: 1, y: 0 }};""
-              transition={{ duration: 0.6 }}";""
-              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center";""
-            >";""
-              <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">";""
-                <TrendingUp className="w-8 h-8 text-green-400" />;""
-              </div>";""
-              <h3 className="text-2xl font-bold text-white mb-2">Market Growth</h3>";""
-              <p className="text-3xl font-bold text-green-400 mb-2">24.3% CAGR</p>";""
-              <p className="text-slate-300">Global legal tech market growing rapidly</p>;
-            </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};"
-              whileInView={{ opacity: 1, y: 0 }};""
-              transition={{ duration: 0.6, delay: 0.1 }}";""
-              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center";""
-            >";""
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">";""
-                <DollarSign className="w-8 h-8 text-blue-400" />;""
-              </div>";""
-              <h3 className="text-2xl font-bold text-white mb-2">Average ROI</h3>";""
-              <p className="text-3xl font-bold text-blue-400 mb-2">340%</p>";""
-              <p className="text-slate-300">Return on investment within 12 months</p>;
-            </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};"
-              whileInView={{ opacity: 1, y: 0 }};""
-              transition={{ duration: 0.6, delay: 0.2 }}";""
-              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center";""
-            >";""
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">";""
-                <Clock className="w-8 h-8 text-purple-400" />;""
-              </div>";""
-              <h3 className="text-2xl font-bold text-white mb-2">Time Savings</h3>";""
-              <p className="text-3xl font-bold text-purple-400 mb-2">40+ hrs</p>";""
-              <p className="text-slate-300">Per week saved with automation</p>;
-            </motion.div>;
-          </div>;
-        </div>;"
-      </section>;""
       {/* CTA Section */}";""
-      <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">";""
-        <div className="container mx-auto px-4 text-center">;
+      <section className="py-20 bg-gradient-to-r from-purple-900/50 to-blue-900/50">";""
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion.div;
             initial={{ opacity: 0, y: 20 }};
-            whileInView={{ opacity: 1, y: 0 }};"
-            transition={{ duration: 0.6 }};""
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};"
+            viewport={{ once: true }};""
           >";""
-            <h2 className="text-4xl font-bold text-white mb-4">;"
-              Ready to Transform Your Legal Practice?;""
-            </h2>";""
-            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">;
-              Join thousands of legal professionals who have already automated their practice with AI technology.;"
-            </p>;";""
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Legal Practice?</h2>";""
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;"
+              Join leading law firms that are already leveraging AI to improve efficiency and client service.;""
+            </p>";""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
               <Link";""
                 to="/contact";""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20";"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105";"
               >;""
                 Start Free Trial";""
-                <ArrowRight className="w-5 h-5 ml-2" />;"
+                <ArrowRight className="ml-2 h-5 w-5" />;"
               </Link>;""
               <Link";""
-                to="/services";""
-                className="inline-flex items-center px-8 py-4 border border-blue-400/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200";
+                to="/contact";""
+                className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200";
               >;
-                Explore All Services;
+                Schedule Demo;
               </Link>;
             </div>;
           </motion.div>;
-        </div>;"
-      </section>;""
-      {/* Contact Information */}";""
-      <section className="py-20 bg-slate-900/50">";""
-        <div className="container mx-auto px-4">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }};"
-            whileInView={{ opacity: 1, y: 0 }};""
-            transition={{ duration: 0.6 }}";""
-            className="text-center mb-16";""
-          >";""
-            <h2 className="text-4xl font-bold text-white mb-4">;"
-              Get in Touch;""
-            </h2>";""
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">;
-              Ready to revolutionize your legal practice? Contact our team for a personalized demo.;
-            </p>;"
-          </motion.div>;";""
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};"
-              whileInView={{ opacity: 1, y: 0 }};""
-              transition={{ duration: 0.6 }}";""
-              className="text-center";""
-            >";""
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">";""
-                <Phone className="w-8 h-8 text-blue-400" />;""
-              </div>";""
-              <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>";""
-              <p className="text-slate-300">+1 302 464 0950</p>;
-            </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};"
-              whileInView={{ opacity: 1, y: 0 }};""
-              transition={{ duration: 0.6, delay: 0.1 }}";""
-              className="text-center";""
-            >";""
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">";""
-                <Mail className="w-8 h-8 text-blue-400" />;""
-              </div>";""
-              <h3 className="text-xl font-semibold text-white mb-2">Email</h3>";""
-              <p className="text-slate-300">kleber@ziontechgroup.com</p>;
-            </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }};"
-              whileInView={{ opacity: 1, y: 0 }};""
-              transition={{ duration: 0.6, delay: 0.2 }}";""
-              className="text-center";""
-            >";""
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">";""
-                <MapPin className="w-8 h-8 text-blue-400" />;""
-              </div>";""
-              <h3 className="text-xl font-semibold text-white mb-2">Address</h3>";""
-              <p className="text-slate-300">364 E Main St STE 1008<br / / / />Middletown DE 19709</p>;
-            </motion.div>;
-          </div>;
         </div>;
       </section>;
     </div>;"
