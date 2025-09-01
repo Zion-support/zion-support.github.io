@@ -39,6 +39,15 @@ const AIThreatIntelligence = lazy(() => import('./backup-pages/src-pages/service
 const BlockchainSupplyChain = lazy(() => import('./backup-pages/src-pages/services/blockchain-supply-chain-platform').then(module => ({ default: module.BlockchainSupplyChainPlatform })));
 const AdvancedServicesShowcase = lazy(() => import('./backup-pages/src-pages/AdvancedServicesShowcase2028').then(module => ({ default: module.AdvancedServicesShowcase2028 })));
 
+// New page imports
+const TeamPage = lazy(() => import('./pages/team').then(module => ({ default: module.default })));
+const ResourcesPage = lazy(() => import('./pages/resources').then(module => ({ default: module.default })));
+const NewsPage = lazy(() => import('./pages/news').then(module => ({ default: module.default })));
+const EventsPage = lazy(() => import('./pages/events').then(module => ({ default: module.default })));
+const PartnersPage = lazy(() => import('./pages/partners').then(module => ({ default: module.default })));
+const AISalesCopilotPage = lazy(() => import('./pages/services/ai-sales-copilot').then(module => ({ default: module.default })));
+const CloudFinOpsOptimizerPage = lazy(() => import('./pages/services/cloud-finops-optimizer').then(module => ({ default: module.default })));
+
 // Loading component
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen bg-gray-900">
@@ -66,6 +75,8 @@ function App() {
                 <Route path="/services/*" element={<ServicesPage />} />
                 <Route path="/services/ai-threat-intelligence" element={<AIThreatIntelligence />} />
                 <Route path="/services/blockchain-supply-chain" element={<BlockchainSupplyChain />} />
+                <Route path="/services/ai-sales-copilot" element={<AISalesCopilotPage />} />
+                <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizerPage />} />
                 <Route path="/advanced-services-2028" element={<AdvancedServicesShowcase />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
                 <Route path="/comprehensive-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
@@ -75,6 +86,11 @@ function App() {
                 <Route path="/solutions/*" element={<SolutionsPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/about/*" element={<AboutPage />} />
+                <Route path="/team" element={<TeamPage />} />
+                <Route path="/resources" element={<ResourcesPage />} />
+                <Route path="/news" element={<NewsPage />} />
+                <Route path="/events" element={<EventsPage />} />
+                <Route path="/partners" element={<PartnersPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/*" element={<BlogPage />} />
