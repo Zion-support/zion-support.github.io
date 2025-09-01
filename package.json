@@ -286,10 +286,9 @@
     "path": "^0.12.7",
     "pdfkit": "^0.15.0",
     "postcss": "^8.4.32",
-    "puppeteer": "^23.7.1",
-    "react": "^17.0.2",
-    "react-datepicker": "^8.4.0",
-    "react-dom": "19.1.1",
+    "react": "18.2.0",
+    "react-datepicker": "^8.5.0",
+    "react-dom": "18.2.0",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
