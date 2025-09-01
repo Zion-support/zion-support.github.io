@@ -1,83 +1,135 @@
 #!/bin/bash
 
-# Error Fixing Automation Startup Script
-# This script starts all PM2 error fixing automations
+echo "🚀 Starting PM2 Error Fixing Automation System..."
 
-set -e
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
 
-echo "🚀 Starting Error Fixing Automation System..."
-echo "=============================================="
+# Function to print colored output
+print_status() {
+    echo -e "${BLUE}[INFO]${NC} $1"
+}
 
-# Check if PM2 is installed
-if ! command -v pm2 &> /dev/null; then
-    echo "❌ PM2 is not installed. Installing PM2..."
-    npm install -g pm2
-fi
+print_success() {
+    echo -e "${GREEN}[SUCCESS]${NC} $1"
+}
+
+print_warning() {
+    echo -e "${YELLOW}[WARNING]${NC} $1"
+}
+
+print_error() {
+    echo -e "${RED}[ERROR]${NC} $1"
+}
 
 # Check if we're in the right directory
-if [ ! -f "ecosystem-error-fixing.config.cjs" ]; then
-    echo "❌ ecosystem-error-fixing.config.cjs not found. Please run this script from the project root."
+if [ ! -f "package.json" ]; then
+    print_error "package.json not found. Please run this script from the project root."
     exit 1
 fi
 
-# Create necessary directories
-echo "📁 Creating necessary directories..."
-mkdir -p logs
-mkdir -p automation-reports
-mkdir -p error-reports
+print_status "Setting up PM2 Error Fixing Automation System..."
+
+# Create logs directory if it doesn't exist
+if [ ! -d "logs" ]; then
+    print_status "Creating logs directory..."
+    mkdir -p logs
+fi
+
+# Create automation logs directory if it doesn't exist
+if [ ! -d "automation/logs" ]; then
+    print_status "Creating automation logs directory..."
+    mkdir -p automation/logs
+fi
+
+# Install dependencies if needed
+if [ ! -d "node_modules" ]; then
+    print_status "Installing dependencies..."
+    npm install
+fi
+
+# Check if PM2 is installed globally
+if ! command -v pm2 &> /dev/null; then
+    print_status "Installing PM2 globally..."
+    npm install -g pm2
+fi
 
 # Stop any existing PM2 processes
-echo "🛑 Stopping existing PM2 processes..."
+print_status "Stopping existing PM2 processes..."
 pm2 stop all 2>/dev/null || true
 pm2 delete all 2>/dev/null || true
 
-# Start the error fixing automation ecosystem
-echo "🚀 Starting Error Fixing Automation Ecosystem..."
-pm2 start ecosystem-error-fixing.config.cjs
+# Install PM2 logrotate module
+print_status "Installing PM2 logrotate module..."
+pm2 install pm2-logrotate || true
 
-# Wait a moment for processes to start
+# Configure PM2 logrotate
+print_status "Configuring PM2 logrotate..."
+pm2 set pm2-logrotate:max_size 10M || true
+pm2 set pm2-logrotate:retain 30 || true
+pm2 set pm2-logrotate:compress true || true
+pm2 set pm2-logrotate:workerInterval 60 || true
+pm2 set pm2-logrotate:rotateInterval '0 0 * * *' || true
+
+# Start the error fixing automation system
+print_status "Starting error fixing automation system..."
+pm2 start ecosystem-error-fixing.config.cjs --update-env
+
+# Check if the processes started successfully
 sleep 3
+pm2_status=$(pm2 status --no-daemon)
 
-# Show status
-echo "📊 PM2 Status:"
+if echo "$pm2_status" | grep -q "online"; then
+    print_success "Error fixing automation system started successfully!"
+else
+    print_error "Failed to start error fixing automation system"
+    pm2 logs --lines 20
+    exit 1
+fi
+
+# Display status
+print_status "PM2 Error Fixing Automation System Status:"
 pm2 status
 
-echo ""
-echo "🎉 Error Fixing Automation System Started!"
-echo "=============================================="
-echo "📋 Available PM2 Applications:"
-echo "  • comprehensive-error-fixer"
-echo "  • typescript-error-monitor"
-echo "  • eslint-error-cleaner"
-echo "  • build-error-detector"
-echo "  • dependency-error-resolver"
-echo "  • config-error-fixer"
-echo "  • error-prevention-monitor"
-echo "  • error-analytics-dashboard"
-echo "  • auto-recovery-manager"
-echo "  • critical-error-alert-system"
-echo ""
-echo "📖 Useful Commands:"
-echo "  • pm2 logs                    - View all logs"
-echo "  • pm2 logs [app-name]         - View specific app logs"
-echo "  • pm2 restart [app-name]      - Restart specific app"
-echo "  • pm2 stop [app-name]         - Stop specific app"
-echo "  • pm2 delete [app-name]       - Delete specific app"
-echo "  • pm2 monit                   - Monitor all processes"
-echo "  • pm2 status                  - Show status"
-echo ""
-echo "📁 Reports and Logs:"
-echo "  • automation-reports/         - Automation reports"
-echo "  • error-reports/              - Error reports"
-echo "  • logs/                       - Process logs"
-echo ""
-echo "🔄 The system will automatically:"
-echo "  • Fix TypeScript errors"
-echo "  • Clean ESLint issues"
-echo "  • Resolve build problems"
-echo "  • Fix dependency conflicts"
-echo "  • Monitor for critical errors"
-echo "  • Generate analytics reports"
-echo "  • Auto-recover from issues"
-echo ""
-echo "✅ Automation system is now running and monitoring your project!"
+# Display running processes
+print_status "Running automation processes:"
+pm2 list
+
+# Show logs for the first few seconds
+print_status "Showing recent logs (press Ctrl+C to stop):"
+echo "----------------------------------------"
+pm2 logs --lines 50
+
+# Keep the script running and show real-time logs
+print_status "Monitoring error fixing automation system..."
+print_status "Press Ctrl+C to stop monitoring (processes will continue running)"
+print_status "Use 'pm2 status' to check process status"
+print_status "Use 'pm2 logs' to view logs"
+print_status "Use 'pm2 stop all' to stop all processes"
+
+# Function to handle script termination
+cleanup() {
+    print_status "Stopping monitoring..."
+    print_success "Error fixing automation system is running in the background"
+    print_status "Use 'pm2 status' to check status"
+    print_status "Use 'pm2 logs' to view logs"
+    print_status "Use 'pm2 stop all' to stop all processes"
+    exit 0
+}
+
+# Set up signal handlers
+trap cleanup SIGINT SIGTERM
+
+# Keep the script running
+while true; do
+    sleep 10
+    # Check if processes are still running
+    if ! pm2 ping >/dev/null 2>&1; then
+        print_error "PM2 daemon is not responding"
+        break
+    fi
+done

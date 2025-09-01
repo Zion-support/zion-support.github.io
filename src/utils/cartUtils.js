@@ -18,7 +18,7 @@ export const validateCartItem = (item) => {
   if (!item || typeof item !== 'object') return false;
   
   const requiredFields = ['id', 'name', 'price', 'quantity'];
-  return requiredFields.every(field => item.hasOwnProperty(field) && item[field] !== null && item[field] !== undefined);
+  return requiredFields.every(field => itemObject.prototype.hasOwnProperty.call(field) && item[field] !== null && item[field] !== undefined);
 };
 
 /**
