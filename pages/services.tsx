@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Footer from '../components/Footer';
 
 export default function ServicesPage() {
   return (
@@ -234,6 +235,7 @@ export default function ServicesPage() {
             </section>
           </div>
         </main>
+        <Footer />
       </div>
     </>
   );
