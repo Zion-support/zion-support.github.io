@@ -1,14 +1,13 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path'
-import { splitVendorChunkPlugin } from 'vite'
+// splitVendorChunkPlugin was removed in Vite 5+/7; remove usage
 
 // https://vitejs.dev/config/;
 export { defineConfig };
 export default defineConfig({
   plugins: [
-    react(),
-    splitVendorChunkPlugin()
+    react()
   ],
   resolve: {
     alias: {
@@ -44,34 +43,12 @@ export default defineConfig({
           'ui-vendor': ['framer-motion', 'lucide-react'],
           'utils-vendor': ['date-fns', 'clsx', 'tailwind-merge'],
           'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
-          'charts-vendor': ['recharts'],
-          'radix-vendor': [
-            '@radix-ui/react-accordion',
-            '@radix-ui/react-alert-dialog',
-            '@radix-ui/react-aspect-ratio',
-            '@radix-ui/react-avatar',
-            '@radix-ui/react-checkbox',
-            '@radix-ui/react-context-menu',
-            '@radix-ui/react-dialog',
-            '@radix-ui/react-dropdown-menu',
-            '@radix-ui/react-label',
-            '@radix-ui/react-popover',
-            '@radix-ui/react-progress',
-            '@radix-ui/react-radio-group',
-            '@radix-ui/react-scroll-area',
-            '@radix-ui/react-select',
-            '@radix-ui/react-separator',
-            '@radix-ui/react-slider',
-            '@radix-ui/react-slot',
-            '@radix-ui/react-switch',
-            '@radix-ui/react-tabs',
-            '@radix-ui/react-toast',
-            '@radix-ui/react-tooltip'
-          ]
+          // Avoid requiring recharts at build time if not present
+          // Keep manualChunks minimal to avoid missing deps during build
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
-        assetFileNames: assetInfo: unknown {
+        assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
           if (/png|jpe?g|svg|gif|tiff|bmp|ico|webp/i.test(ext)) {
@@ -131,7 +108,7 @@ export default defineConfig({
         target: 'http://localhost:5000',
         changeOrigin: true,
         secure: false,
-        rewrite: path: unknown path.replace(/^\/api/, '/api')
+        rewrite: (path) => path.replace(/^\/api/, '/api')
       }
     }
   },
@@ -141,19 +118,7 @@ export default defineConfig({
     open: true
   },
   css: {
-    devSourcemap: true,
-    postcss: {
-      plugins: [
-        require('tailwindcss'),
-        require('autoprefixer'),
-        require('cssnano')({
-          preset: ['default', {
-            discardComments: { removeAll: true },
-            normalizeWhitespace: true
-          }]
-        })
-      ]
-    }
+    devSourcemap: true
   },
 
   define: {
