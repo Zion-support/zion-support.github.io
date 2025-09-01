@@ -584,9 +584,132 @@ const CTASection = () => {
 
 };
 
+// Services Showcase Component
+const ServicesShowcase = React.memo(() => {
+  const services = [
+    {
+      icon: Brain,
+      title: "AI Solutions",
+      description: "Cutting-edge artificial intelligence and machine learning solutions",
+      link: "/services/ai-solutions"
+    },
+    {
+      icon: Cloud,
+      title: "Cloud & DevOps",
+      description: "Scalable cloud infrastructure and automated deployment",
+      link: "/services/cloud-devops"
+    },
+    {
+      icon: Shield,
+      title: "Cybersecurity",
+      description: "Advanced security solutions to protect your business",
+      link: "/services/cybersecurity"
+    }
+  ];
+
+  return (
+    <section className="py-24 bg-gray-900">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Our Services
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to drive your business forward
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="bg-gray-800 p-8 rounded-2xl hover:bg-gray-700 transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+                <service.icon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+              <p className="text-gray-300 mb-6">{service.description}</p>
+              <Link
+                to={service.link}
+                className="text-cyan-400 hover:text-cyan-300 font-semibold"
+              >
+                Learn More →
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+});
+
+// Micro SaaS Products Component
+const MicroSaaSProducts = React.memo(() => {
+  return (
+    <section className="py-24 bg-gradient-to-br from-blue-900 to-indigo-900">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Micro SaaS Solutions
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Specialized software solutions for specific business needs
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+});
+
+// Testimonials Section Component
+const TestimonialsSection = React.memo(() => {
+  return (
+    <section className="py-24 bg-gray-900">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            What Our Clients Say
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Don't just take our word for it - hear from our satisfied clients
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+});
+
 // Main Home component
 export default function Home() {
   return (
+    <>
+      <FuturisticBackground />
+      <div className="relative z-10">
+        {/* Hero Section */}
+        <HeroSection />
 
         {/* Services Showcase */}
         <ServicesShowcase />
@@ -605,7 +728,5 @@ export default function Home() {
       </div>
     </>
   );
-};
-
-export default Home;
+}
 

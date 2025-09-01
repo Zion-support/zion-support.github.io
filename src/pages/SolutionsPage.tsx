@@ -29,7 +29,7 @@ import { Building,
   MapPin
  } from 'lucide-react.ts';
 
-export function SolutionsPage(...args: any[]): any {
+export default function SolutionsPage() {
   const solutions = [
     {
       title: 'Enterprise Solutions',

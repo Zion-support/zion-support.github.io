@@ -19,10 +19,6 @@ import {
   Calendar
 } from 'lucide-react';
 
-      popular: false,
-      icon: Rocket,;
-      color: 'from-orange-500 to-red-500';
-    }
   ];
 
   const servicePackages = [
@@ -91,8 +87,11 @@ import {
     }
   ];
 
+export default function Pricing() {
+  const [billingCycle, setBillingCycle] = useState('monthly');
   const savings = billingCycle === 'annual' ? 20 : 0;
-interface PricingTier {
+
+  interface PricingTier {
   name: string;
   description: string;
   price: string;
